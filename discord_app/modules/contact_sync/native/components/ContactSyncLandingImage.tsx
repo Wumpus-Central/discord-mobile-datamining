@@ -1,13 +1,13 @@
-// === Module 12338: ContactSyncLandingImage ===
+// === Module 12353: ContactSyncLandingImage ===
 
-// Module 12338 (ContactSyncLandingImage)
+// Module 12353 (ContactSyncLandingImage)
 import react2 from "react" /* 576 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12339 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 12340 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12354 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 12355 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

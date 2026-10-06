@@ -1,18 +1,18 @@
-// === Module 13008: EditAvatarDecorationSection ===
+// === Module 13027: EditAvatarDecorationSection ===
 
-// Module 13008 (EditAvatarDecorationSection)
+// Module 13027 (EditAvatarDecorationSection)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1403 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7058 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8468 */;
-import useAvatarDecorationSections from "useAvatarDecorationSections" /* 13003 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13009 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13010 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7071 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8501 */;
+import useAvatarDecorationSections from "useAvatarDecorationSections" /* 13022 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13028 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13029 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

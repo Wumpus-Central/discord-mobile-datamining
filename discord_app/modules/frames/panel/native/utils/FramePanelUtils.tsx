@@ -1,11 +1,11 @@
-// === Module 17541: FramePanelUtils ===
+// === Module 17586: FramePanelUtils ===
 
-// Module 17541 (FramePanelUtils)
+// Module 17586 (FramePanelUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import FramesStore from "FramesStore" /* 8703 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

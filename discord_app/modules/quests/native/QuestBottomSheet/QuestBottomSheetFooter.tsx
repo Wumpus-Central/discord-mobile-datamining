@@ -1,44 +1,44 @@
-// === Module 14926: QuestBottomSheetFooter ===
+// === Module 14941: QuestBottomSheetFooter ===
 
-// Module 14926 (QuestBottomSheetFooter)
+// Module 14941 (QuestBottomSheetFooter)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import ButtonConstants from "ButtonConstants" /* 5600 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6014 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6646 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import captureAdUserAction2 from "captureAdUserAction" /* 7213 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7224 */;
-import IconButton2 from "IconButton" /* 7575 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10010 */;
-import QuestUtils from "QuestUtils" /* 10908 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10911 */;
-import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 10916 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10918 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10941 */;
-import AnalyticsHooks from "AnalyticsHooks" /* 10954 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 10955 */;
-import RefreshIcon from "RefreshIcon" /* 14778 */;
-import QuestHooks from "QuestHooks" /* 14892 */;
-import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14921 */;
-import QuestBottomSheet from "QuestBottomSheet" /* 14923 */;
-import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 14927 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import ButtonConstants from "ButtonConstants" /* 5607 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6021 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6653 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import captureAdUserAction2 from "captureAdUserAction" /* 7226 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7237 */;
+import IconButton2 from "IconButton" /* 7586 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 10023 */;
+import QuestUtils from "QuestUtils" /* 10921 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10924 */;
+import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 10929 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10931 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10954 */;
+import AnalyticsHooks from "AnalyticsHooks" /* 10967 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 10968 */;
+import RefreshIcon from "RefreshIcon" /* 14794 */;
+import QuestHooks from "QuestHooks" /* 14908 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14936 */;
+import QuestBottomSheet from "QuestBottomSheet" /* 14938 */;
+import QuestBottomSheetHooks from "QuestBottomSheetHooks" /* 14942 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import UserStore from "UserStore" /* 1377 */;
-import QuestStore from "QuestStore" /* 7187 */;
+import QuestStore from "QuestStore" /* 7200 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -581,13 +581,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ onBack, sourceQuestContent } = quest);
   ({ onConnectConsoleNext, onDefib, style, withSafeArea } = quest);
   const tmp = useQuestRewardClaimHandler({ quest, sourceQuestContent });
-  let obj = quest(10911);
+  let obj = quest(10924);
   const questTaskDetails = obj.useQuestTaskDetails(quest);
-  const obj2 = quest(10911);
+  const obj2 = quest(10924);
   const isQuestProgressing = obj2.useIsQuestProgressing(quest);
-  const obj3 = quest(10911);
+  const obj3 = quest(10924);
   const first = _slicedToArray(obj3.useTaskPlatformScreen(quest, questTaskDetails), 1)[0];
-  const obj4 = quest(10911);
+  const obj4 = quest(10924);
   const xboxAndPlaystationAccounts = obj4.useConnectedAccounts().xboxAndPlaystationAccounts;
   const items = [quest, xboxAndPlaystationAccounts];
   const memo = react.useMemo(() => {
@@ -598,16 +598,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return null != xboxAndPlaystationAccounts.find((type) => type.type === closure_0);
     });
   }, items);
-  const obj5 = quest(14892);
+  const obj5 = quest(14908);
   const hasWatchVideoOnMobileTasks = obj5.useHasWatchVideoOnMobileTasks(quest.config);
-  const obj6 = quest(14892);
+  const obj6 = quest(14908);
   const mobileActivityQuest = obj6.useMobileActivityQuest(quest);
   ({ isMobileActivityQuest, launchMobileActivity, questApplication } = mobileActivityQuest);
-  const obj7 = quest(10955);
+  const obj7 = quest(10968);
   const primaryCtaCopy = obj7.usePrimaryCtaCopy({ quest, application: questApplication });
   const userStatus = quest.userStatus;
   let completedAt;
-  const obj8 = quest(14927);
+  const obj8 = quest(14942);
   const obj9 = { questId: quest.id, sourceQuestContent, launchMobileActivity };
   const mobileActivityPressHandler = obj8.useMobileActivityPressHandler(obj9);
   if (userStatus != null) {
@@ -619,18 +619,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
   }
-  const tmp2Result = quest(10911);
+  const tmp2Result = quest(10924);
   const isQuestAccessSuspended = tmp2Result.useIsQuestAccessSuspended();
-  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(14921) };
+  const obj10 = { disabled: true, onPressDisabled: xboxAndPlaystationAccounts(14936) };
   let tmp41Result6 = null;
-  if (step !== quest(14923).QuestBottomSheetStep.TASK_SELECT) {
+  if (step !== quest(14938).QuestBottomSheetStep.TASK_SELECT) {
     const obj11 = { onLayout, ctaButton: tmp41Result, backButton: tmp41Result5, style, withSafeArea };
-    if (quest(14923).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
+    if (quest(14938).QuestBottomSheetStep.CONSOLE_CONNECT === step) {
       const obj12 = { onPress: onConnectConsoleNext, disabled: 0 === memo.length };
       tmp41Result = closure_10(closure_16, obj12);
     } else {
       tmp41Result = null;
-      if (quest(14923).QuestBottomSheetStep.TASK_STATUS === step) {
+      if (quest(14938).QuestBottomSheetStep.TASK_STATUS === step) {
         let tmp41Result4;
         if (tmp12) {
           const obj13 = { questId: quest.id, onPress: tmp.claim, disabled: null != claimedAt, loading: isClaiming, sourceQuestContent };
@@ -654,16 +654,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           tmp41Result4 = closure_10(closure_15, obj14);
         } else if (isMobileActivityQuest) {
           const obj15 = { grow: true, size: "lg", onPress: mobileActivityPressHandler, text: primaryCtaCopy, icon: tmp2Result2.getPrimaryCtaIcon(quest) };
-          const Button = tmp2(5594).Button;
+          const Button = tmp2(5601).Button;
           let tmp24 = null;
-          tmp2Result2 = quest(10908);
+          tmp2Result2 = quest(10921);
           if (isQuestAccessSuspended) {
             tmp24 = obj10;
           }
           const merged2 = Object.assign(tmp24);
           tmp41Result4 = closure_10(Button, obj15);
         } else {
-          if (first === quest(5626).TaskPlatformScreen.CONSOLE) {
+          if (first === quest(5633).TaskPlatformScreen.CONSOLE) {
             if (!isQuestProgressing) {
               let tmp18 = null;
               const obj16 = { questId: quest.id, loading: isDefibrilating, disabled: isDefibrilating, onPress: onDefib, sourceQuestContent };
@@ -682,8 +682,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     tmp41Result5 = null != onBack;
     if (tmp41Result5) {
-      const obj18 = { accessibilityLabel: intl.string(quest(1126).t["13/7kX"]), variant: "secondary", icon: closure_10(quest(6014).ArrowLargeLeftIcon, {}), onPress: onBack, size: "lg" };
-      const IconButton = tmp2(7575).IconButton;
+      const obj18 = { accessibilityLabel: intl.string(quest(1126).t["13/7kX"]), variant: "secondary", icon: closure_10(quest(6021).ArrowLargeLeftIcon, {}), onPress: onBack, size: "lg" };
+      const IconButton = tmp2(7586).IconButton;
       intl = tmp2(1126).intl;
       tmp41Result5 = closure_10(IconButton, obj18);
     }
@@ -1000,8 +1000,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp8 = closure_24();
   dependencyMap = tmp8;
   let num = 0;
-  const useSharedValue = tmp(4612).useSharedValue;
-  tmp(4612);
+  const useSharedValue = tmp(4618).useSharedValue;
+  tmp(4618);
   if (null != backButton && false !== backButton) {
     num = 1;
   }
@@ -1015,7 +1015,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp12 = cResult[4];
       }
       const effect = react.useEffect(tmp11, tmp12);
-      const tmpResult3 = tmp(4612);
+      const tmpResult3 = tmp(4618);
       class B {
         constructor() {
           let items;
@@ -1032,7 +1032,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       B.__workletHash = 12824906142404;
       B.__initData = __initData;
       const animatedStyle = tmpResult3.useAnimatedStyle(B);
-      const tmpResult4 = tmp(4612);
+      const tmpResult4 = tmp(4618);
       class N {
         constructor() {
           let interpolate;
@@ -1049,10 +1049,10 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const useAnimatedStyle = tmpResult4.useAnimatedStyle;
-      N.__closure = { interpolate: tmp(4612).interpolate, animation: sharedValue, windowWidth: width, H_PADDING_PX: PX_16, ICON_SIZE_PX: tmp(5600).LARGE_BUTTON_HEIGHT };
+      N.__closure = { interpolate: tmp(4618).interpolate, animation: sharedValue, windowWidth: width, H_PADDING_PX: PX_16, ICON_SIZE_PX: tmp(5607).LARGE_BUTTON_HEIGHT };
       N.__workletHash = 6037256479965;
       N.__initData = __initData2;
-      const obj3 = { interpolate: tmp(4612).interpolate, animation: sharedValue, windowWidth: width, H_PADDING_PX: PX_16, ICON_SIZE_PX: tmp(5600).LARGE_BUTTON_HEIGHT };
+      const obj3 = { interpolate: tmp(4618).interpolate, animation: sharedValue, windowWidth: width, H_PADDING_PX: PX_16, ICON_SIZE_PX: tmp(5607).LARGE_BUTTON_HEIGHT };
       const animatedStyle1 = useAnimatedStyle(N);
       const _Math = Math;
       const bound = Math.max(bottom, closure_9);
@@ -1136,7 +1136,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   return rect;
                 }
               }
-              const tmp32 = closure_10(width(4612).View, obj4);
+              const tmp32 = closure_10(width(4618).View, obj4);
               cResult[15] = animatedStyle1;
               cResult[16] = ctaButton;
               cResult[17] = tmp32;
@@ -1153,7 +1153,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 return rect;
               }
             }
-            const tmp29 = closure_10(width(4612).View, obj5);
+            const tmp29 = closure_10(width(4618).View, obj5);
             cResult[12] = animatedStyle;
             cResult[13] = backButton;
             cResult[14] = tmp29;
@@ -1300,7 +1300,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj4 = { style: items1, onLayout, children: items2 };
   items1[1] = withSafeArea;
   items1[2] = style;
-  items2 = [closure_10(tmp2(4612).View, { style: animatedStyle, children: backButton }), closure_10(tmp2(4612).View, { style: animatedStyle1, children: ctaButton })];
+  items2 = [closure_10(tmp2(4618).View, { style: animatedStyle, children: backButton }), closure_10(tmp2(4618).View, { style: animatedStyle1, children: ctaButton })];
   return closure_11(View, obj4);
 });
 ReactCompilerGating = ReactCompilerGating_mod;

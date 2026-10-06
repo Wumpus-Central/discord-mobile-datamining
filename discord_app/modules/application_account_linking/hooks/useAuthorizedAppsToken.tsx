@@ -1,10 +1,10 @@
-// === Module 6664: useAuthorizedAppsToken ===
+// === Module 6671: useAuthorizedAppsToken ===
 
-// Module 6664 (useAuthorizedAppsToken)
+// Module 6671 (useAuthorizedAppsToken)
 import react2 from "react" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6602 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6665 */;
+import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6609 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6672 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

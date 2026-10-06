@@ -1,6 +1,6 @@
-// === Module 7655: PrivateChannelIntegrationSystemMessageUtils ===
+// === Module 7666: PrivateChannelIntegrationSystemMessageUtils ===
 
-// Module 7655 (PrivateChannelIntegrationSystemMessageUtils)
+// Module 7666 (PrivateChannelIntegrationSystemMessageUtils)
 import intl3 from "intl" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import Constants from "Constants" /* 1085 */;

@@ -1,10 +1,10 @@
-// === Module 7488: ReactionsSpotIllustration ===
+// === Module 7499: ReactionsSpotIllustration ===
 
-// Module 7488 (ReactionsSpotIllustration)
+// Module 7499 (ReactionsSpotIllustration)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef7489 from "module_7489" /* 7489 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import _modDef7500 from "module_7500" /* 7500 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef7489 };
+    const obj2 = { uri: _modDef7500 };
     cResult[0] = obj2;
     first = obj2;
   } else {
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (num3 === undefined) {
     num3 = 1;
   }
-  const obj2 = { uri: _modDef7489 };
+  const obj2 = { uri: _modDef7500 };
   FastImageDefault;
   size = { width: num * num3, height: num2 * num3 };
   const items = [size];

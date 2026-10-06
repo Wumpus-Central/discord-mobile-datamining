@@ -1,8 +1,8 @@
-// === Module 17313: useDrawerToggle ===
+// === Module 17341: useDrawerToggle ===
 
-// Module 17313 (useDrawerToggle)
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
-import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17314 */;
+// Module 17341 (useDrawerToggle)
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
+import trackVoicePanelTabOpened from "trackVoicePanelTabOpened" /* 17342 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 11556: joinOrStartActivityInChannel ===
+// === Module 11569: joinOrStartActivityInChannel ===
 
-// Module 11556 (joinOrStartActivityInChannel)
+// Module 11569 (joinOrStartActivityInChannel)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -65,7 +65,7 @@ let obj = function _joinOrStartActivityInChannel() {
             compositeInstanceId = undefined;
             referrerId = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (applicationId === 1) {

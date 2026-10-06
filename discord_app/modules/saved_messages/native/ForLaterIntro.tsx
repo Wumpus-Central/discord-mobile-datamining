@@ -1,19 +1,19 @@
-// === Module 13132: ForLaterIntro ===
+// === Module 13151: ForLaterIntro ===
 
-// Module 13132 (ForLaterIntro)
+// Module 13151 (ForLaterIntro)
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
-import ClockIcon from "ClockIcon" /* 4849 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6646 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6708 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7495 */;
-import BookmarkIcon from "BookmarkIcon" /* 11337 */;
-import _modDef13135 from "module_13135" /* 13135 */;
+import ClockIcon from "ClockIcon" /* 4855 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6653 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6715 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7506 */;
+import BookmarkIcon from "BookmarkIcon" /* 11350 */;
+import _modDef13154 from "module_13154" /* 13154 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -68,7 +68,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
   const tmp4 = closure_8();
   const tmp5 = type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
   ({ scrollView, pageContainer, container } = tmp4);
-  const tmp6 = importDefault(tmp5 ? 13133 : 13134);
+  const tmp6 = importDefault(tmp5 ? 13152 : 13153);
   if (cResult[0] === tmp4.upsellImage) {
     let tmp7;
     let tmp9;
@@ -212,7 +212,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
   const obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: metroImportDefault(hasOwnProperty, obj2) };
   obj2 = { style: tmp.container, children: items };
   items = [, , ];
-  const obj3 = { source: importDefault(tmp4 ? 13133 : 13134), style: tmp.upsellImage };
+  const obj3 = { source: importDefault(tmp4 ? 13152 : 13153), style: tmp.upsellImage };
   items[0] = metroRequire(_false, obj3);
   const obj4 = { style: tmp.textContainer, children: items1 };
   const obj5 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: string(tmp4 ? t["5Iw19e"] : t["93WOd1"]) };
@@ -259,7 +259,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((isReminder) => 
   const tmp4 = closure_8();
   const demo = tmp4.demo;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13135 };
+    const obj2 = { uri: _modDef13154 };
     cResult[0] = obj2;
     first = obj2;
   } else {
@@ -443,8 +443,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((isReminder) => 
   const obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: items2 };
   const obj2 = { style: tmp.messages, children: items };
   items = [, ];
-  const obj3 = { source: { uri: _modDef13135 }, style: tmp.avatar };
-  ({ uri: _modDef13135 });
+  const obj3 = { source: { uri: _modDef13154 }, style: tmp.avatar };
+  ({ uri: _modDef13154 });
   items[0] = metroRequire(_false, obj3);
   const obj5 = { style: tmp.messageLines, children: items1 };
   const obj6 = { variant: "text-sm/semibold", color: "text-default", children: intl.string(intl7.t.cqpybK) };

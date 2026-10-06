@@ -1,6 +1,6 @@
-// === Module 16273: GuildMediaStateStoreExperiment ===
+// === Module 16313: GuildMediaStateStoreExperiment ===
 
-// Module 16273 (GuildMediaStateStoreExperiment)
+// Module 16313 (GuildMediaStateStoreExperiment)
 import react from "react" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

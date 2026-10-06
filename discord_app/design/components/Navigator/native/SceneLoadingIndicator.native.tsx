@@ -1,13 +1,13 @@
-// === Module 6535: SceneLoadingIndicator ===
+// === Module 6542: SceneLoadingIndicator ===
 
-// Module 6535 (SceneLoadingIndicator)
+// Module 6542 (SceneLoadingIndicator)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5968 */;
-import NavScrim from "NavScrim" /* 6536 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
+import NavScrim from "NavScrim" /* 6543 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

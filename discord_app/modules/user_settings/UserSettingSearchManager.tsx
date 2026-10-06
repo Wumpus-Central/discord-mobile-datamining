@@ -1,8 +1,8 @@
-// === Module 14509: UserSettingSearchManager ===
+// === Module 14525: UserSettingSearchManager ===
 
-// Module 14509 (UserSettingSearchManager)
-import fuzzysearchDefault from "fuzzysearch" /* 5702 */;
-import StringMatchUtils from "StringMatchUtils" /* 14510 */;
+// Module 14525 (UserSettingSearchManager)
+import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
+import StringMatchUtils from "StringMatchUtils" /* 14526 */;
 import size from "module_2" /* 2 */;
 
 let score, set;

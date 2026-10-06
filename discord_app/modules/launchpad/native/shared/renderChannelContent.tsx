@@ -1,20 +1,20 @@
-// === Module 16835: renderChannelContent ===
+// === Module 16856: renderChannelContent ===
 
-// Module 16835 (renderChannelContent)
+// Module 16856 (renderChannelContent)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import WarningIcon from "WarningIcon" /* 4803 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5846 */;
-import LockIcon from "LockIcon" /* 5879 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16056 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16832 */;
-import ChannelTitleDefault from "ChannelTitle" /* 16836 */;
+import WarningIcon from "WarningIcon" /* 4809 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5853 */;
+import LockIcon from "LockIcon" /* 5886 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16095 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16853 */;
+import ChannelTitleDefault from "ChannelTitle" /* 16857 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

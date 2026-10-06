@@ -1,21 +1,21 @@
-// === Module 16905: AutocompleteScreen ===
+// === Module 16930: AutocompleteScreen ===
 
-// Module 16905 (AutocompleteScreen)
+// Module 16930 (AutocompleteScreen)
 import Fragment from "Fragment" /* 21 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11985 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16906 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 16932 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import ChannelStore_mod from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 11970 */;
-import SearchQueryStore from "SearchQueryStore" /* 11967 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 16931 */;
+import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

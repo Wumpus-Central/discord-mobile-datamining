@@ -1,10 +1,10 @@
-// === Module 16302: HomeDrawerTTIFirstContentfulPaint ===
+// === Module 16342: HomeDrawerTTIFirstContentfulPaint ===
 
-// Module 16302 (HomeDrawerTTIFirstContentfulPaint)
+// Module 16342 (HomeDrawerTTIFirstContentfulPaint)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6984 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11507 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6997 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11520 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

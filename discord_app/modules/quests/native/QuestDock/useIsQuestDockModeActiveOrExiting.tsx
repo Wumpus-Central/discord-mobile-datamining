@@ -1,8 +1,8 @@
-// === Module 15005: useIsQuestDockModeActiveOrExiting ===
+// === Module 15020: useIsQuestDockModeActiveOrExiting ===
 
-// Module 15005 (useIsQuestDockModeActiveOrExiting)
-import spring from "spring" /* 5597 */;
-import QuestDockConstants from "QuestDockConstants" /* 14896 */;
+// Module 15020 (useIsQuestDockModeActiveOrExiting)
+import spring from "spring" /* 5604 */;
+import QuestDockConstants from "QuestDockConstants" /* 14912 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

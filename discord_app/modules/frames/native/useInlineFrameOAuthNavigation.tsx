@@ -1,14 +1,14 @@
-// === Module 16593: useInlineFrameOAuthNavigation ===
+// === Module 16631: useInlineFrameOAuthNavigation ===
 
-// Module 16593 (useInlineFrameOAuthNavigation)
+// Module 16631 (useInlineFrameOAuthNavigation)
 import Constants from "Constants" /* 1085 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import Constants2 from "Constants" /* 8710 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import Constants2 from "Constants" /* 8742 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import FramesStore from "FramesStore" /* 8703 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import size from "module_2" /* 2 */;
 
 let c0, closure_1;

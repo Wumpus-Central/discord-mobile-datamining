@@ -1,12 +1,12 @@
-// === Module 16825: guild_channels/ChannelSubtitle ===
+// === Module 16846: guild_channels/ChannelSubtitle ===
 
-// Module 16825 (guild_channels/ChannelSubtitle)
+// Module 16846 (guild_channels/ChannelSubtitle)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11695 */;
-import ChannelListLayout from "ChannelListLayout" /* 11698 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16156 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11709 */;
+import ChannelListLayout from "ChannelListLayout" /* 11712 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16195 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

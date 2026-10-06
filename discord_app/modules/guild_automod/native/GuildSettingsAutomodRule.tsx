@@ -1,19 +1,19 @@
-// === Module 17693: GuildSettingsAutomodRule ===
+// === Module 17739: GuildSettingsAutomodRule ===
 
-// Module 17693 (GuildSettingsAutomodRule)
+// Module 17739 (GuildSettingsAutomodRule)
 import nativeDefault from "native" /* 587 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import NavigatorHeader2 from "NavigatorHeader" /* 6010 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import Constants from "Constants" /* 11474 */;
-import AutomodStore from "AutomodStore" /* 17675 */;
-import AutomodRuleUtils from "AutomodRuleUtils" /* 17678 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import NavigatorHeader2 from "NavigatorHeader" /* 6017 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import Constants from "Constants" /* 11487 */;
+import AutomodStore from "AutomodStore" /* 17721 */;
+import AutomodRuleUtils from "AutomodRuleUtils" /* 17724 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildSettingsAutomodRuleStore from "GuildSettingsAutomodRuleStore" /* 17677 */;
+import GuildSettingsAutomodRuleStore from "GuildSettingsAutomodRuleStore" /* 17723 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

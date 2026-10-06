@@ -1,17 +1,17 @@
-// === Module 15924: MainTabs ===
+// === Module 15963: MainTabs ===
 
-// Module 15924 (MainTabs)
+// Module 15963 (MainTabs)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import native from "native" /* 4589 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4732 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5911 */;
-import useActiveTheme from "useActiveTheme" /* 7509 */;
-import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 15925 */;
+import native from "native" /* 4595 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4738 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
+import useActiveTheme from "useActiveTheme" /* 7520 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 15964 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// === Module 11784: CommandOptionView ===
+// === Module 11798: CommandOptionView ===
 
-// Module 11784 (CommandOptionView)
+// Module 11798 (CommandOptionView)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 1985 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10143 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 11786 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10156 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 11800 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -160,9 +160,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAttachmentOpt
   const items = [AccessibilityStore];
   const obj = option(504);
   const stateFromStores = obj.useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
-  const ReduceMotion = option(4612).ReduceMotion;
+  const ReduceMotion = option(4618).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
-  const tmp2Result = option(11785);
+  const tmp2Result = option(11799);
   const optionEnteringAnimation = tmp2Result.useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   const EnteringAnimation = optionEnteringAnimation.EnteringAnimation;
@@ -170,9 +170,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAttachmentOpt
     if (option.required || isPreSelectedOption) {
       fn = (fn) => fn();
     }
-    const FadeOut = tmp2(4612).FadeOut;
+    const FadeOut = tmp2(4618).FadeOut;
     const reduceMotionResult = FadeOut.reduceMotion(tmp5);
-    const FadeInUp = tmp2(4612).FadeInUp;
+    const FadeInUp = tmp2(4618).FadeInUp;
     const obj2 = { transform: items1 };
     items1 = [{ translateY: -10 }];
     const withInitialValuesResult = FadeInUp.withInitialValues(obj2);
@@ -187,14 +187,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAttachmentOpt
     }
     const hasItem1 = items1.includes(option.type);
     const obj3 = { skipEntering: option.required || isPreSelectedOption, children: closure_5(AwaitAnimationContext, obj4) };
-    const LayoutAnimationConfig = tmp2(4612).LayoutAnimationConfig;
+    const LayoutAnimationConfig = tmp2(4618).LayoutAnimationConfig;
     obj4 = { handleQueuedCallback: fn, children: closure_5(View, obj5) };
-    AwaitAnimationContext = tmp2(11793).AwaitAnimationContext;
+    AwaitAnimationContext = tmp2(11807).AwaitAnimationContext;
     obj5 = {
       collapsable: false,
       entering: EnteringAnimation,
-      exiting: option(11785).ExitingAnimation,
-      layout: option(11785).LayoutAnimation,
+      exiting: option(11799).ExitingAnimation,
+      layout: option(11799).LayoutAnimation,
       onLayout(arg0) {
           importDefault(arg0, option);
         },
@@ -206,7 +206,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAttachmentOpt
     tmp20 = View;
     if (hasItem1) {
       const obj7 = { style: tmp.labelText, variant: "text-sm/semibold", color: "text-subtle", children: option.displayName };
-      tmp17Result = closure_5(tmp2(4886).Text, obj7);
+      tmp17Result = closure_5(tmp2(4892).Text, obj7);
     }
     items2 = [tmp17Result, , , ];
     const obj8 = {
@@ -232,7 +232,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAttachmentOpt
     };
     items2[1] = closure_5(AppLauncherCommandOptionDefault, obj8);
     const obj9 = { style: tmp.optionDescription, variant: "text-xs/medium", color: "text-muted", children: option.displayDescription };
-    items2[2] = closure_5(option(4886).Text, obj9);
+    items2[2] = closure_5(option(4892).Text, obj9);
     if (hasItem) {
       const obj10 = { collapsable: false, entering: reduceMotionResult1, exiting: reduceMotionResult, style: tmp.optionErrorContainer, children: items3 };
       const View2 = ReanimatedRexportDefault.View;
@@ -240,7 +240,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPressAttachmentOpt
       const Icon = tmp2(1188).Icon;
       items3 = [closure_5(Icon, obj11), ];
       const obj12 = { variant: "text-xs/medium", color: "text-feedback-critical", children: optionValidationResults[option.name].error };
-      items3[1] = closure_5(option(4886).Text, obj12);
+      items3[1] = closure_5(option(4892).Text, obj12);
       hasItem = closure_6(View2, obj10);
     }
     items2[3] = hasItem;

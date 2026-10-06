@@ -1,9 +1,9 @@
-// === Module 12435: ForumPlatformHooks ===
+// === Module 12450: ForumPlatformHooks ===
 
-// Module 12435 (ForumPlatformHooks)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 7543 */;
+// Module 12450 (ForumPlatformHooks)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import ForumChannelSeenManagerDefault from "ForumChannelSeenManager" /* 7554 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

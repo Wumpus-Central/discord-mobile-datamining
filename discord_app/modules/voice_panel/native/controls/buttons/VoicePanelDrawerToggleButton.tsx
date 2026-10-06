@@ -1,17 +1,17 @@
-// === Module 17348: VoicePanelDrawerToggleButton ===
+// === Module 17376: VoicePanelDrawerToggleButton ===
 
-// Module 17348 (VoicePanelDrawerToggleButton)
+// Module 17376 (VoicePanelDrawerToggleButton)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import NativeViewDefault from "NativeView" /* 5976 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10844 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13379 */;
-import useDrawerToggleDefault from "useDrawerToggle" /* 17313 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17327 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17328 */;
+import NativeViewDefault from "NativeView" /* 5983 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10857 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13398 */;
+import useDrawerToggleDefault from "useDrawerToggle" /* 17341 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17355 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17356 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

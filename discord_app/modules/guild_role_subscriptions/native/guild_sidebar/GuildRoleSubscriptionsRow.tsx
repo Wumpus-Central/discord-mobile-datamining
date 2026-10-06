@@ -1,18 +1,18 @@
-// === Module 16130: GuildRoleSubscriptionsRow ===
+// === Module 16169: GuildRoleSubscriptionsRow ===
 
-// Module 16130 (GuildRoleSubscriptionsRow)
+// Module 16169 (GuildRoleSubscriptionsRow)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 12016 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12461 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12031 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12476 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let importDefault;
@@ -51,9 +51,9 @@ export default function GuildRoleSubscriptionsRow(selected) {
         obj.hideActionSheet(closure_1_1);
       }
     };
-    obj.openLazy(asyncRequire(16131, dependencyMap.paths), c1, obj2);
+    obj.openLazy(asyncRequire(16170, dependencyMap.paths), c1, obj2);
   }, items1);
-  const ChannelModes = id(12016).ChannelModes;
+  const ChannelModes = id(12031).ChannelModes;
   if (selected) {
     DEFAULT = ChannelModes.SELECTED;
     tmp6 = tmp4;
@@ -64,9 +64,9 @@ export default function GuildRoleSubscriptionsRow(selected) {
   BaseChannelItemDefault;
   const intl = tmp6(1126).intl;
   let obj2 = { name: intl2.string(tmp6(1126).t["KzCF/6"]), mode: DEFAULT };
-  const BaseChannelName = tmp6(12016).BaseChannelName;
+  const BaseChannelName = tmp6(12031).BaseChannelName;
   intl2 = tmp6(1126).intl;
   ({ disableColor: true, mode: DEFAULT, source: AssetRegistryDefault });
-  const BaseChannelIcon = tmp6(12016).BaseChannelIcon;
+  const BaseChannelIcon = tmp6(12031).BaseChannelIcon;
   return <tmp8 onPress={callback} onLongPress={callback1} style={tmp.container} accessible accessibilityLabel={intl.string(tmp6(1126).t["KzCF/6"])} accessibilityState={{ selected }} mode={DEFAULT} name={null} icon={null} />;
 };

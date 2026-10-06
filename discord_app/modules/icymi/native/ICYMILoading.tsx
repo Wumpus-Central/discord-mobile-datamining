@@ -1,15 +1,15 @@
-// === Module 16455: ICYMILoading ===
+// === Module 16495: ICYMILoading ===
 
-// Module 16455 (ICYMILoading)
+// Module 16495 (ICYMILoading)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
-import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12305 */;
-import ICYMIShared from "ICYMIShared" /* 16435 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import useChatPlaceholderAnimatedStylesDefault from "useChatPlaceholderAnimatedStyles" /* 12320 */;
+import ICYMIShared from "ICYMIShared" /* 16475 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16394 */;
+import createICYMIStyles from "createICYMIStyles" /* 16434 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

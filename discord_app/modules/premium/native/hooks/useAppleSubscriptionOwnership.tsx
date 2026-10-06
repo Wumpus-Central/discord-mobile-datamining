@@ -1,12 +1,12 @@
-// === Module 13191: useAppleSubscriptionOwnership ===
+// === Module 13210: useAppleSubscriptionOwnership ===
 
-// Module 13191 (useAppleSubscriptionOwnership)
+// Module 13210 (useAppleSubscriptionOwnership)
 import Constants from "Constants" /* 1085 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import ApplePurchasesStore from "ApplePurchasesStore" /* 13192 */;
+import ApplePurchasesStore from "ApplePurchasesStore" /* 13211 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

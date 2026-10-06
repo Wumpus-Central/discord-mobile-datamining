@@ -1,6 +1,6 @@
-// === Module 8362: useGameProfileHeroBackgroundURL ===
+// === Module 8395: useGameProfileHeroBackgroundURL ===
 
-// Module 8362 (useGameProfileHeroBackgroundURL)
+// Module 8395 (useGameProfileHeroBackgroundURL)
 import react2 from "react" /* 576 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;

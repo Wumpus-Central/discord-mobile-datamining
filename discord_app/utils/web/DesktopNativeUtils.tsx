@@ -1,15 +1,15 @@
-// === Module 5955: DesktopNativeUtils ===
+// === Module 5962: DesktopNativeUtils ===
 
-// Module 5955 (DesktopNativeUtils)
+// Module 5962 (DesktopNativeUtils)
 import logger_Logger from "logger/Logger" /* 4 */;
 import Storage3 from "Storage" /* 510 */;
 import Constants from "Constants" /* 1085 */;
-import flow_Client from "flow/Client" /* 4787 */;
-import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4916 */;
-import DomainMigrationUtils from "DomainMigrationUtils" /* 5956 */;
-import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 5957 */;
-import IPCEvents from "IPCEvents" /* 5958 */;
-import FileExtensionUtils from "FileExtensionUtils" /* 5959 */;
+import flow_Client from "flow/Client" /* 4793 */;
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4922 */;
+import DomainMigrationUtils from "DomainMigrationUtils" /* 5963 */;
+import GameDetectionDebugLevel from "GameDetectionDebugLevel" /* 5964 */;
+import IPCEvents from "IPCEvents" /* 5965 */;
+import FileExtensionUtils from "FileExtensionUtils" /* 5966 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;

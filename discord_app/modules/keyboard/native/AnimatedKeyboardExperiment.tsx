@@ -1,6 +1,6 @@
-// === Module 9770: AnimatedKeyboardExperiment ===
+// === Module 9783: AnimatedKeyboardExperiment ===
 
-// Module 9770 (AnimatedKeyboardExperiment)
+// Module 9783 (AnimatedKeyboardExperiment)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;

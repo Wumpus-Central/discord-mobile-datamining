@@ -1,8 +1,8 @@
-// === Module 8984: ThermalUtils ===
+// === Module 9017: ThermalUtils ===
 
-// Module 8984 (ThermalUtils)
+// Module 9017 (ThermalUtils)
 import react_native from "react-native" /* 17 */;
-import react_nativeDefault from "react-native" /* 8985 */;
+import react_nativeDefault from "react-native" /* 9018 */;
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -33,7 +33,7 @@ let closure_4 = module_570.create((arg0) => {
     const thermalState = obj3.getThermalState();
     rawThermalState = thermalState;
   } else {
-    tmp2(4866);
+    tmp2(4872);
   }
   return { rawThermalState };
 });

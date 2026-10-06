@@ -1,6 +1,6 @@
-// === Module 9144: useDispatchOpenActivity ===
+// === Module 9179: useDispatchOpenActivity ===
 
-// Module 9144 (useDispatchOpenActivity)
+// Module 9179 (useDispatchOpenActivity)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

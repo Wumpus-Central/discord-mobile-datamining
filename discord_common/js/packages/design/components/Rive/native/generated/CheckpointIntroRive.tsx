@@ -1,10 +1,10 @@
-// === Module 4672: CheckpointIntroRive ===
+// === Module 4678: CheckpointIntroRive ===
 
-// Module 4672 (CheckpointIntroRive)
+// Module 4678 (CheckpointIntroRive)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import BaseRive2 from "BaseRive" /* 4606 */;
-import RiveErrorBoundary2 from "RiveErrorBoundary" /* 4659 */;
+import BaseRive2 from "BaseRive" /* 4612 */;
+import RiveErrorBoundary2 from "RiveErrorBoundary" /* 4665 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -268,7 +268,7 @@ let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ?
       }
       const BaseRive = tmp(tmp2[4]).BaseRive;
       let merged = Object.assign(tmp6);
-      const tmp23 = <BaseRive ref={ref} src={require("module_4673")} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={str2} stateMachine={tmp7} renderDataBinding={tmp13} />;
+      const tmp23 = <BaseRive ref={ref} src={require("module_4679")} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={str2} stateMachine={tmp7} renderDataBinding={tmp13} />;
       cResult[11] = str;
       cResult[12] = str2;
       cResult[13] = ref;

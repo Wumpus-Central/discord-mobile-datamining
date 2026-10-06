@@ -1,11 +1,11 @@
-// === Module 15431: InventoryIcon ===
+// === Module 15447: InventoryIcon ===
 
-// Module 15431 (InventoryIcon)
+// Module 15447 (InventoryIcon)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage2 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 15432 */;
+import BaseIconImage2 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 15448 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

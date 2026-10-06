@@ -1,8 +1,8 @@
-// === Module 8679: resolvedValuesFromUserApplicationIdentityProfile ===
+// === Module 8714: resolvedValuesFromUserApplicationIdentityProfile ===
 
-// Module 8679 (resolvedValuesFromUserApplicationIdentityProfile)
-import resolvedValues from "resolvedValues" /* 8597 */;
-import ProfileDataDynamicType from "ProfileDataDynamicType" /* 8680 */;
+// Module 8714 (resolvedValuesFromUserApplicationIdentityProfile)
+import resolvedValues from "resolvedValues" /* 8632 */;
+import ProfileDataDynamicType from "ProfileDataDynamicType" /* 8715 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 11961: CreateGuildContainer ===
+// === Module 11975: CreateGuildContainer ===
 
-// Module 11961 (CreateGuildContainer)
+// Module 11975 (CreateGuildContainer)
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c4, c5, currentUser, set;

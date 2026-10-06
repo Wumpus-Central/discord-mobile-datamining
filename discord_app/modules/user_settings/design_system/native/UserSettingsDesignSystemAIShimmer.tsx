@@ -1,17 +1,17 @@
-// === Module 15694: UserSettingsDesignSystemAIShimmer ===
+// === Module 15708: UserSettingsDesignSystemAIShimmer ===
 
-// Module 15694 (UserSettingsDesignSystemAIShimmer)
+// Module 15708 (UserSettingsDesignSystemAIShimmer)
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import AIShimmer from "AIShimmer" /* 14213 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import AIShimmer from "AIShimmer" /* 14231 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

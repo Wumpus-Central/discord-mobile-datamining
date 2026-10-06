@@ -1,11 +1,11 @@
-// === Module 13596: VoiceMemberEmbeddedActivity ===
+// === Module 13612: VoiceMemberEmbeddedActivity ===
 
-// Module 13596 (VoiceMemberEmbeddedActivity)
+// Module 13612 (VoiceMemberEmbeddedActivity)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import FormConstants from "FormConstants" /* 1192 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6646 */;
-import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9045 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6653 */;
+import handlePressJoinActivityDefault from "handlePressJoinActivity" /* 9081 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
@@ -13,7 +13,7 @@ import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore_mod from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

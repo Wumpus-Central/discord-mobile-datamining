@@ -1,15 +1,15 @@
-// === Module 10113: stickers/StickersUtils ===
+// === Module 10126: stickers/StickersUtils ===
 
-// Module 10113 (stickers/StickersUtils)
+// Module 10126 (stickers/StickersUtils)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import StickersTypes from "StickersTypes" /* 5429 */;
-import StickerPickerStore from "StickerPickerStore" /* 10114 */;
-import StickerCategoryUtils from "StickerCategoryUtils" /* 10115 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10116 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 10117 */;
+import StickersTypes from "StickersTypes" /* 5436 */;
+import StickerPickerStore from "StickerPickerStore" /* 10127 */;
+import StickerCategoryUtils from "StickerCategoryUtils" /* 10128 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10129 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 10130 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -59,7 +59,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp9 = cResult[2];
   }
   dependencyMap = tmp9;
-  const tmpResult2 = tmp(8826);
+  const tmpResult2 = tmp(8856);
   const mobileStickerPickerUpsellRestyleEnabled = tmpResult2.useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
   if (cResult[3] === arg0) {
     if (cResult[4] === stickerPackCategories) {

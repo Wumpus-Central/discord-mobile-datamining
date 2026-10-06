@@ -1,11 +1,11 @@
-// === Module 10889: BadgeUtils ===
+// === Module 10902: BadgeUtils ===
 
-// Module 10889 (BadgeUtils)
+// Module 10902 (BadgeUtils)
 import intl2 from "intl" /* 1126 */;
 import StringUtils from "StringUtils" /* 2018 */;
-import Constants from "Constants" /* 7854 */;
-import BadgeId from "BadgeId" /* 7855 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 7864 */;
+import Constants from "Constants" /* 7865 */;
+import BadgeId from "BadgeId" /* 7866 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 7875 */;
 import size from "module_2" /* 2 */;
 
 let map;

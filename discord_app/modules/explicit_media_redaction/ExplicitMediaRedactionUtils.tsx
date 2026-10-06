@@ -1,23 +1,23 @@
-// === Module 7109: ExplicitMediaRedactionUtils ===
+// === Module 7122: ExplicitMediaRedactionUtils ===
 
-// Module 7109 (ExplicitMediaRedactionUtils)
+// Module 7122 (ExplicitMediaRedactionUtils)
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5102 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
-import MetricEvents from "MetricEvents" /* 5414 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5580 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5581 */;
-import SelfModUtils from "SelfModUtils" /* 6794 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 6799 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
+import MetricEvents from "MetricEvents" /* 5421 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5588 */;
+import SelfModUtils from "SelfModUtils" /* 6804 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6805 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 6809 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 6796 */;
-import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants" /* 7110 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 6806 */;
+import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants" /* 7123 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -300,11 +300,11 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
   }
 };
 export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitMediaScanTimeoutForMessage(message) {
-  const f94227 = (item) => {
+  const f94367 = (item) => {
     item.content_scan_version = -1;
     return item;
   };
-  const f94228 = (components) => {
+  const f94368 = (components) => {
     components.contentScanVersion = -1;
     components = components.components;
     const failOverComponentMedia = closure_1_0(closure_1_2[11]).failOverComponentMedia;
@@ -317,9 +317,9 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
   };
   let attachments = message.attachments;
   let embeds = message.embeds;
-  const attachments1 = attachments.map(f94227);
+  const attachments1 = attachments.map(f94367);
   let components = message.components;
-  const embeds1 = embeds.map(f94228);
+  const embeds1 = embeds.map(f94368);
   let obj = ObscuredMediaUtils;
   let result = obj.failOverComponentMedia(components);
   const messageSnapshots = message.messageSnapshots;
@@ -331,9 +331,9 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
         message = message.message;
         const attachments = message.attachments;
         const embeds = message.embeds;
-        const mapped = attachments.map(f94227);
+        const mapped = attachments.map(f94367);
         let components = message.components;
-        const mapped1 = embeds.map(f94228);
+        const mapped1 = embeds.map(f94368);
         const obj = ObscuredMediaUtils;
         let result = obj.failOverComponentMedia(components);
         const obj2 = { message: message.merge({ attachments: mapped, embeds: mapped1, components }) };

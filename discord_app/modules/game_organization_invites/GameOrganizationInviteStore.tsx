@@ -1,9 +1,9 @@
-// === Module 11083: GameOrganizationInviteStore ===
+// === Module 11096: GameOrganizationInviteStore ===
 
-// Module 11083 (GameOrganizationInviteStore)
+// Module 11096 (GameOrganizationInviteStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11084 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11097 */;
 import size from "module_2" /* 2 */;
 
 let set;

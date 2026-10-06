@@ -1,7 +1,7 @@
-// === Module 6424: ErrorText ===
+// === Module 6431: ErrorText ===
 
-// Module 6424 (ErrorText)
-import shared from "shared" /* 4729 */;
+// Module 6431 (ErrorText)
+import shared from "shared" /* 4735 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -90,7 +90,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   children = children.children;
   let nodeText;
   const style = children.style;
-  const obj = nodeText(4582);
+  const obj = nodeText(4588);
   nodeText = obj.getNodeText(children);
   const items = [nodeText];
   const effect = react.useEffect(() => {
@@ -101,8 +101,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }, items);
   const obj2 = { direction: "horizontal", spacing: 4, align: "flex-start", style, children: items1 };
-  const Stack = nodeText(5593).Stack;
-  items1 = [closure_3(nodeText(4800).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(4886).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
+  const Stack = nodeText(5600).Stack;
+  items1 = [closure_3(nodeText(4806).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(4892).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
   return closure_4(Stack, obj2);
 });
 const result = size.fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");

@@ -1,13 +1,13 @@
-// === Module 17404: ChannelSubtitle ===
+// === Module 17433: ChannelSubtitle ===
 
-// Module 17404 (ChannelSubtitle)
+// Module 17433 (ChannelSubtitle)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11695 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16156 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16832 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11709 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16195 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16853 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

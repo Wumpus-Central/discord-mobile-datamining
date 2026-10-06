@@ -1,28 +1,28 @@
-// === Module 10031: useNativeForumPostHandlers ===
+// === Module 10044: useNativeForumPostHandlers ===
 
-// Module 10031 (useNativeForumPostHandlers)
+// Module 10044 (useNativeForumPostHandlers)
 import _modDef38 from "module_38" /* 38 */;
 import ThreadConstants from "ThreadConstants" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ChatInputUtils from "ChatInputUtils" /* 4745 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import transitionToChannel from "transitionToChannel" /* 4901 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
-import tracking_Tracking from "tracking/Tracking" /* 7263 */;
-import openMediaModal from "openMediaModal" /* 7933 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9854 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9855 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10032 */;
+import ChatInputUtils from "ChatInputUtils" /* 4751 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import transitionToChannel from "transitionToChannel" /* 4907 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
+import tracking_Tracking from "tracking/Tracking" /* 7276 */;
+import openMediaModal from "openMediaModal" /* 7944 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9867 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9868 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10045 */;
 import react from "react" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6780 */;
-import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 6811 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6790 */;
+import ForumPostRecentMessageStore from "ForumPostRecentMessageStore" /* 6821 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
@@ -44,7 +44,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
   threadId = threadId.threadId;
   let NORMAL = threadId.reactionType;
   if (undefined === NORMAL) {
-    NORMAL = tmp(7259).ReactionTypes.NORMAL;
+    NORMAL = tmp(7272).ReactionTypes.NORMAL;
   }
   if (cResult[0] !== threadId) {
     const fn = function h(containerRef) {
@@ -434,7 +434,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((threadId) => {
   let NORMAL = threadId.reactionType;
   if (NORMAL === undefined) {
     let tmp = threadId;
-    NORMAL = threadId(7259).ReactionTypes.NORMAL;
+    NORMAL = threadId(7272).ReactionTypes.NORMAL;
   }
   const items = [threadId];
   const items1 = [threadId];

@@ -1,6 +1,6 @@
-// === Module 16090: useGuildThemeNuxTrigger ===
+// === Module 16129: useGuildThemeNuxTrigger ===
 
-// Module 16090 (useGuildThemeNuxTrigger)
+// Module 16129 (useGuildThemeNuxTrigger)
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
@@ -101,8 +101,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, isNuxOpen) =
             tmp4 = globalThis;
             _setTimeout = setTimeout;
             tmp5 = closure_5;
-            closure_0 = setTimeout(() => { /* body not rendered: F145517 */ }, closure_5);
-            return () => { /* body not rendered: F145518 */ };
+            closure_0 = setTimeout(() => { /* body not rendered: F145727 */ }, closure_5);
+            return () => { /* body not rendered: F145728 */ };
           }
         }
       }

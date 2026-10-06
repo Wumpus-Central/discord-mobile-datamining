@@ -1,8 +1,8 @@
-// === Module 11332: ForwardFailedAlertModal ===
+// === Module 11345: ForwardFailedAlertModal ===
 
-// Module 11332 (ForwardFailedAlertModal)
+// Module 11345 (ForwardFailedAlertModal)
 import Fragment from "Fragment" /* 21 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11306 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11319 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

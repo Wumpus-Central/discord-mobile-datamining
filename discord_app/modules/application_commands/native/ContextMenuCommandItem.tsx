@@ -1,6 +1,6 @@
-// === Module 17049: ContextMenuCommandItem ===
+// === Module 17075: ContextMenuCommandItem ===
 
-// Module 17049 (ContextMenuCommandItem)
+// Module 17075 (ContextMenuCommandItem)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
@@ -8,12 +8,12 @@ import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import Server from "Server" /* 1985 */;
-import SendMessageIcon from "SendMessageIcon" /* 4841 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11860 */;
+import SendMessageIcon from "SendMessageIcon" /* 4847 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11874 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -345,12 +345,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj = { applicationName: name, commandName: item.displayName };
     return formatToPlainString(Pk4Mz3, obj);
   }, items);
-  let obj = item(11860);
+  let obj = item(11874);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   let tmp8Result = null != applicationCommandsIconSource;
-  const TableRow = item(5993).TableRow;
+  const TableRow = item(6000).TableRow;
   if (tmp8Result) {
-    tmp8Result = jsx(section(5974), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+    tmp8Result = jsx(section(5981), { style: tmp.commandIcon, source: applicationCommandsIconSource });
   }
   return <TableRow accessibilityLabel={memo} onPress={onPress} label={item.displayName} icon={tmp8Result} trailing={null} start={start} end={end} />;
 });

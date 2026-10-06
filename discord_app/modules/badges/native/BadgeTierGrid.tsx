@@ -1,11 +1,11 @@
-// === Module 10973: BadgeTierGrid ===
+// === Module 10986: BadgeTierGrid ===
 
-// Module 10973 (BadgeTierGrid)
+// Module 10986 (BadgeTierGrid)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -258,7 +258,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
   }
   if (isViewingOtherUser) {
     let obj2 = { variant: "text-sm/medium", color: "text-default", style: tmp.progressLabel, children: intl.formatToPlainString(badge(1126).t.KyTwIh, obj3) };
-    let Text = badge(4886).Text;
+    let Text = badge(4892).Text;
     intl = badge(1126).intl;
     obj3 = { username: targetUsername };
     isViewingOtherUser = closure_4(Text, obj2);
@@ -345,7 +345,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((badge) => {
     })
   };
   let tiers = badge.tiers;
-  const tmp9 = isViewingOtherUser(9951);
+  const tmp9 = isViewingOtherUser(9964);
   if (tiers == null) {
     tiers = [];
   }

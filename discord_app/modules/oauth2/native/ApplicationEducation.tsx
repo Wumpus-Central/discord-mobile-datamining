@@ -1,22 +1,22 @@
-// === Module 8943: ApplicationEducation ===
+// === Module 8972: ApplicationEducation ===
 
-// Module 8943 (ApplicationEducation)
+// Module 8972 (ApplicationEducation)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl10 from "intl" /* 1126 */;
-import FriendsIcon from "FriendsIcon" /* 4831 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SettingsIcon from "SettingsIcon" /* 6883 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
-import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 8725 */;
-import GameControllerIcon from "GameControllerIcon" /* 8739 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 8944 */;
-import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 8946 */;
+import FriendsIcon from "FriendsIcon" /* 4837 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SettingsIcon from "SettingsIcon" /* 6893 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 8757 */;
+import GameControllerIcon from "GameControllerIcon" /* 8771 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 8973 */;
+import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 8975 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

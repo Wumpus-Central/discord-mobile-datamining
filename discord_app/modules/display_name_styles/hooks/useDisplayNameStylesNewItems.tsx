@@ -1,10 +1,10 @@
-// === Module 15159: useDisplayNameStylesNewItems ===
+// === Module 15174: useDisplayNameStylesNewItems ===
 
-// Module 15159 (useDisplayNameStylesNewItems)
+// Module 15174 (useDisplayNameStylesNewItems)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import react from "react" /* 19 */;
-import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15160 */;
+import DisplayNameStylesSeenStore from "DisplayNameStylesSeenStore" /* 15175 */;
 import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1395 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

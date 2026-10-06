@@ -1,18 +1,18 @@
-// === Module 17904: CreatorHighlightSection ===
+// === Module 17950: CreatorHighlightSection ===
 
-// Module 17904 (CreatorHighlightSection)
+// Module 17950 (CreatorHighlightSection)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9904 */;
-import EmojiIconDefault from "EmojiIcon" /* 15058 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9917 */;
+import EmojiIconDefault from "EmojiIcon" /* 15073 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -173,7 +173,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
   const typeConsolidationEyebrow = obj2.useTypeConsolidationEyebrow("CreatorHighlightSection", "text-xs/semibold");
   const guild_id = highlightedCreatorGuild.guild_id;
   ({ quote, quote_attribution, quote_attribution_title } = highlightedCreatorGuild);
-  const tmp7 = guild_id(17905)(guild_id, 3, 60);
+  const tmp7 = guild_id(17951)(guild_id, 3, 60);
   dependencyMap = tmp7;
   const hasAllImperativeDetails = tmp7.hasAllImperativeDetails;
   if (cResult[0] === tmp7.details) {
@@ -186,7 +186,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
       let tmp68;
       const _Symbol2 = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp67 = closure_6(guild_id(17877), {});
+        const tmp67 = closure_6(guild_id(17923), {});
         cResult[3] = tmp67;
         tmp65 = tmp67;
       } else {
@@ -349,7 +349,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
                           const obj9 = { style: tmp4.emojiSectionContainer, children: items2 };
                           const obj10 = { style: items1, variant: typeConsolidationEyebrow.variant, color: "text-default", children: intl3.string(require("intl").t.wg53L8) };
                           items1 = [tmp4.premiumEmojisTitle, typeConsolidationEyebrow.style];
-                          const Text = tmp(4886).Text;
+                          const Text = tmp(4892).Text;
                           intl3 = tmp(1126).intl;
                           items2 = [closure_6(Text, obj10), ];
                           const obj11 = { style: items3, children: items4 };
@@ -369,7 +369,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
                           if (tmp47Result) {
                             const _HermesInternal = HermesInternal;
                             const obj12 = { style: tmp4.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: "+" + notShownEmojiCount };
-                            const Text2 = tmp(4886).Text;
+                            const Text2 = tmp(4892).Text;
                             tmp47Result = closure_6(Text2, obj12);
                           }
                           items4[1] = tmp47Result;
@@ -449,7 +449,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
         tmp18 = tmp20;
       }
       const obj19 = { style: tmp4.guildIcon, source: tmp11 };
-      const tmp14 = closure_6(guild_id(5974), obj19);
+      const tmp14 = closure_6(guild_id(5981), obj19);
       cResult[8] = tmp4.guildIcon;
       cResult[9] = tmp11;
       cResult[10] = tmp14;
@@ -503,12 +503,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp6 = guild_id(17905)(guild_id, 3, 60);
+  const tmp6 = guild_id(17951)(guild_id, 3, 60);
   dependencyMap = tmp6;
   const hasAllImperativeDetails = tmp6.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp6];
   if (tmp6.isLoading) {
-    const obj2 = { style: tmp.cardContainer, children: closure_6(guild_id(17877), {}) };
+    const obj2 = { style: tmp.cardContainer, children: closure_6(guild_id(17923), {}) };
     return closure_6(closure_4, obj2);
   } else if (hasAllImperativeDetails) {
     const details = tmp6.details;
@@ -518,7 +518,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
     ({ guildName, guildAvatarUrl } = details);
     const obj5 = { style: tmp.guildIcon, source: obj6 };
     obj6 = { uri: guildAvatarUrl };
-    items1 = [closure_6(guild_id(5974), obj5), ];
+    items1 = [closure_6(guild_id(5981), obj5), ];
     const obj7 = { style: tmp.cardHeaderContainer, children: items2 };
     const obj8 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", lineClamp: 1, lineBreakMode: "tail", children: guildName };
     items2 = [closure_6(require("Text/Text").Text, obj8), ];
@@ -533,7 +533,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
     const obj10 = { style: tmp.ownerQuote, variant: "text-md/normal", color: "text-default", children: quote };
     items3[1] = closure_6(require("Text/Text").Text, obj10);
     const obj11 = { style: tmp.ownerUsername, variant: "text-sm/normal", color: "text-default", lineClamp: 1, lineBreakMode: "tail", children: format(m0b6Kj, obj12) };
-    const Text = tmp2(4886).Text;
+    const Text = tmp2(4892).Text;
     const intl = tmp2(1126).intl;
     format = intl.format;
     obj12 = { attributionName: quote_attribution, attributionTitle: quote_attribution_title };
@@ -548,7 +548,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
       const obj13 = { style: tmp.emojiSectionContainer, children: items5 };
       const obj14 = { style: items4, variant: typeConsolidationEyebrow.variant, color: "text-default", children: intl3.string(require("intl").t.wg53L8) };
       items4 = [tmp.premiumEmojisTitle, typeConsolidationEyebrow.style];
-      const Text2 = tmp2(4886).Text;
+      const Text2 = tmp2(4892).Text;
       intl3 = tmp2(1126).intl;
       items5 = [closure_6(Text2, obj14), ];
       const obj15 = { style: items6, children: items7 };
@@ -568,7 +568,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
       if (tmp11Result2) {
         const _HermesInternal = HermesInternal;
         const obj16 = { style: tmp.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: "+" + notShownEmojiCount };
-        const Text3 = tmp2(4886).Text;
+        const Text3 = tmp2(4892).Text;
         tmp11Result2 = closure_6(Text3, obj16);
       }
       items7[1] = tmp11Result2;
@@ -578,7 +578,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((highlightedCre
     items3[3] = tmp9Result;
     const obj17 = { style: tmp.viewServerButtonContainer, children: closure_6(BaseTextButton, obj18) };
     obj18 = { pillStyle: tmp.viewServerButton, text: intl4.string(require("intl").t.mQ2IGa), onPress: tmp7, shrink: true };
-    BaseTextButton = tmp2(5595).BaseTextButton;
+    BaseTextButton = tmp2(5602).BaseTextButton;
     intl4 = tmp2(1126).intl;
     items3[4] = closure_6(closure_4, obj17);
     return closure_7(closure_4, obj3);

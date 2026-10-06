@@ -1,14 +1,14 @@
-// === Module 9230: AddMembersActionSheet ===
+// === Module 9265: AddMembersActionSheet ===
 
-// Module 9230 (AddMembersActionSheet)
+// Module 9265 (AddMembersActionSheet)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import intl9 from "intl" /* 1126 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import RegexUtilsDefault from "RegexUtils" /* 4874 */;
-import GuildUtilsDefault from "GuildUtils" /* 5704 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9215 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import RegexUtilsDefault from "RegexUtils" /* 4880 */;
+import GuildUtilsDefault from "GuildUtils" /* 5711 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9250 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
@@ -18,9 +18,9 @@ import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8077 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8110 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let BottomSheet, c4, c5, closure_1, closure_12, dependencyMap, row, user;
@@ -125,7 +125,7 @@ class AddMembersBody {
     str = tmp7[0];
     react = tmp7[1];
     let obj2 = { isKeyboardAwareOnAndroid: !inActionSheet };
-    const insets = pendingAdditions(6471)(obj2).insets;
+    const insets = pendingAdditions(6478)(obj2).insets;
     let obj3 = PermissionUtilsAll;
     let canEveryoneRoleResult = obj3.canEveryoneRole(Permissions.ADMINISTRATOR, guild);
     let obj4 = guild(504);
@@ -205,11 +205,11 @@ class AddMembersBody {
       return obj;
     });
     if (inActionSheet) {
-      BottomSheetScrollView = guild(6112).BottomSheetScrollView;
+      BottomSheetScrollView = guild(6119).BottomSheetScrollView;
     } else {
       BottomSheetScrollView = num3;
     }
-    const tmp12Result = guild(8371);
+    const tmp12Result = guild(8404);
     const obj9 = { style: tmp4.inputContainer, children: closure_17(tmp8Result, obj10) };
     obj10 = {
       accessibilityLabel: intl5.string(guild(1126).t["5h0QOP"]),
@@ -238,7 +238,7 @@ class AddMembersBody {
       }
     };
     const tmp31 = inActionSheet ? tmp12Result.BottomSheetFlashList : tmp12Result.FlashList;
-    tmp8Result = pendingAdditions(9235);
+    tmp8Result = pendingAdditions(9270);
     intl5 = guild(1126).intl;
     intl6 = guild(1126).intl;
     const items10 = [closure_17(c8, obj9), , ];
@@ -257,7 +257,7 @@ class AddMembersBody {
         if (0 === membersRows.length) {
           const obj13 = { children: closure_17(EmptyState, obj14) };
           const merged1 = Object.assign(merged);
-          obj14 = { Illustration: guild(9240).NoResultsAlt, style: null, bodyStyle: null, body: intl8.format(guild(1126).t.ErpIY3, obj15) };
+          obj14 = { Illustration: guild(9275).NoResultsAlt, style: null, bodyStyle: null, body: intl8.format(guild(1126).t.ErpIY3, obj15) };
           EmptyState = guild(1188).EmptyState;
           ({ emptyState: obj19.style, emptyStateText: obj19.bodyStyle } = tmp4);
           intl8 = guild(1126).intl;
@@ -487,7 +487,7 @@ export default function AddMembersActionSheet(channel) {
     }
     return getGuild(guildId);
   });
-  let str = pendingAdditions(5043)(channel, true);
+  let str = pendingAdditions(5049)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -497,9 +497,9 @@ export default function AddMembersActionSheet(channel) {
     let _Object = Object;
     let num = 0;
     const tmp11 = 0 === Object.keys(pendingAdditions).length;
-    BottomSheet = tmp5(6645).BottomSheet;
+    BottomSheet = tmp5(6652).BottomSheet;
     let obj2 = { title: intl3.string(tmp5(1126).t.dMJ3Y6), subtitle: str, trailing: null };
-    const BottomSheetTitleHeader = tmp5(6644).BottomSheetTitleHeader;
+    const BottomSheetTitleHeader = tmp5(6651).BottomSheetTitleHeader;
     intl3 = tmp5(1126).intl;
     if (canSkip) {
       let obj7;

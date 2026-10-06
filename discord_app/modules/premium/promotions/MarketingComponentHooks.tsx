@@ -1,11 +1,11 @@
-// === Module 10485: MarketingComponentHooks ===
+// === Module 10498: MarketingComponentHooks ===
 
-// Module 10485 (MarketingComponentHooks)
+// Module 10498 (MarketingComponentHooks)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import themes from "themes" /* 4587 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import themes from "themes" /* 4593 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

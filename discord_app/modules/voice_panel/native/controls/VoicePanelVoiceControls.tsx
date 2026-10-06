@@ -1,28 +1,28 @@
-// === Module 17352: VoicePanelVoiceControls ===
+// === Module 17380: VoicePanelVoiceControls ===
 
-// Module 17352 (VoicePanelVoiceControls)
+// Module 17380 (VoicePanelVoiceControls)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import TableRowGroup5 from "TableRowGroup" /* 6074 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9011 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9660 */;
-import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 9672 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
-import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13604 */;
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17190 */;
-import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17215 */;
-import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17353 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import TableRowGroup5 from "TableRowGroup" /* 6081 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9044 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9673 */;
+import UserSettingsVoiceProcessing from "UserSettingsVoiceProcessing" /* 9685 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 13620 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17219 */;
+import MobileGoLiveEntrypointExperiment from "MobileGoLiveEntrypointExperiment" /* 17244 */;
+import VoicePanelVoiceControlsButtons from "VoicePanelVoiceControlsButtons" /* 17381 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

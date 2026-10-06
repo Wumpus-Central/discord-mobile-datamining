@@ -1,6 +1,6 @@
-// === Module 7968: MediaViewerDimensionsContext ===
+// === Module 7978: MediaViewerDimensionsContext ===
 
-// Module 7968 (MediaViewerDimensionsContext)
+// Module 7978 (MediaViewerDimensionsContext)
 import Fragment from "Fragment" /* 21 */;
 import _modDef38 from "module_38" /* 38 */;
 import react2 from "react" /* 576 */;

@@ -1,19 +1,19 @@
-// === Module 12981: ShopNitroUpsellPromoSheet ===
+// === Module 13000: ShopNitroUpsellPromoSheet ===
 
-// Module 12981 (ShopNitroUpsellPromoSheet)
+// Module 13000 (ShopNitroUpsellPromoSheet)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import ButtonGroup2 from "ButtonGroup" /* 5592 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7483 */;
-import PremiumUpsellUtils from "PremiumUpsellUtils" /* 8818 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9644 */;
-import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9645 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9648 */;
-import PromoSheet2 from "PromoSheet" /* 10045 */;
-import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 12982 */;
+import ButtonGroup2 from "ButtonGroup" /* 5599 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7494 */;
+import PremiumUpsellUtils from "PremiumUpsellUtils" /* 8848 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9657 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9658 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9661 */;
+import PromoSheet2 from "PromoSheet" /* 10058 */;
+import DiscountsMegaphoneSpotIllustration from "DiscountsMegaphoneSpotIllustration" /* 13001 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

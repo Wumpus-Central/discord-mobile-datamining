@@ -5,8 +5,8 @@ import telemetry_ring_TelemetryRingLifecycleDefault from "telemetry_ring/Telemet
 import ZoomedInTelemetryDefault from "ZoomedInTelemetry" /* 1990 */;
 import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1991 */;
 import TelemetryRingNative from "TelemetryRingNative" /* 1994 */;
-import SentryTelemetryDefault from "SentryTelemetry" /* 13894 */;
-import NormalTelemetryDefault from "NormalTelemetry" /* 13895 */;
+import SentryTelemetryDefault from "SentryTelemetry" /* 13912 */;
+import NormalTelemetryDefault from "NormalTelemetry" /* 13913 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/index.tsx");

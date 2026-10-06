@@ -1,12 +1,12 @@
-// === Module 7164: PendingReplyStore ===
+// === Module 7177: PendingReplyStore ===
 
-// Module 7164 (PendingReplyStore)
+// Module 7177 (PendingReplyStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import size from "module_2" /* 2 */;
 
 let closure_5, closure_7;

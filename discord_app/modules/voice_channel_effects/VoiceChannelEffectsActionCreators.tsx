@@ -1,11 +1,11 @@
-// === Module 6849: VoiceChannelEffectsActionCreators ===
+// === Module 6859: VoiceChannelEffectsActionCreators ===
 
-// Module 6849 (VoiceChannelEffectsActionCreators)
-import SoundboardConstants from "SoundboardConstants" /* 5682 */;
-import VoiceChannelEffectsConstants from "VoiceChannelEffectsConstants" /* 6851 */;
-import EmojiStore from "EmojiStore" /* 5638 */;
+// Module 6859 (VoiceChannelEffectsActionCreators)
+import SoundboardConstants from "SoundboardConstants" /* 5689 */;
+import VoiceChannelEffectsConstants from "VoiceChannelEffectsConstants" /* 6861 */;
+import EmojiStore from "EmojiStore" /* 5645 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import VoiceChannelEffectsPersistedStore from "VoiceChannelEffectsPersistedStore" /* 6850 */;
+import VoiceChannelEffectsPersistedStore from "VoiceChannelEffectsPersistedStore" /* 6860 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -43,8 +43,8 @@ export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCu
 
   });
   const items = [];
-  const tmp7 = abortController(6875);
-  items[0] = abortController(6681).CHANNEL_CALL;
+  const tmp7 = abortController(6885);
+  items[0] = abortController(6688).CHANNEL_CALL;
   tmp7(items, arg2, sound, require("SoundboardTypes").AnalyticsSoundType.ENTRY);
 };
 export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundboardEffect(id, emojiId, arg2, items, arg4) {
@@ -79,7 +79,7 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
   postResult.then(closure_8, () => {
 
   });
-  const tmp9 = abortController(6875);
+  const tmp9 = abortController(6885);
   if (items == null) {
     items = [];
   }
@@ -103,9 +103,9 @@ export const sendVoiceChannelSoundboardEcho = function sendVoiceChannelSoundboar
 
   });
   const tmp2 = _require;
-  const tmp6 = abortController(6875);
+  const tmp6 = abortController(6885);
   if (arg3 == null) {
     items = [];
   }
-  tmp6(items, arg2, soundId, tmp2(5805).AnalyticsSoundType.ECHO);
+  tmp6(items, arg2, soundId, tmp2(5812).AnalyticsSoundType.ECHO);
 };

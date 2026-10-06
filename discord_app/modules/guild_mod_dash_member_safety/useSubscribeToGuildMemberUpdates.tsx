@@ -1,7 +1,7 @@
-// === Module 16528: useSubscribeToGuildMemberUpdates ===
+// === Module 16568: useSubscribeToGuildMemberUpdates ===
 
-// Module 16528 (useSubscribeToGuildMemberUpdates)
-import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 6815 */;
+// Module 16568 (useSubscribeToGuildMemberUpdates)
+import GuildSubscriptionsActionCreatorsAll from "GuildSubscriptionsActionCreators" /* 6825 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

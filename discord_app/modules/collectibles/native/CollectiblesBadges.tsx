@@ -1,18 +1,18 @@
-// === Module 8486: CollectiblesBadges ===
+// === Module 8519: CollectiblesBadges ===
 
-// Module 8486 (CollectiblesBadges)
+// Module 8519 (CollectiblesBadges)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LockIcon3 from "LockIcon" /* 5879 */;
-import NitroWheelIcon3 from "NitroWheelIcon" /* 8313 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8487 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LockIcon3 from "LockIcon" /* 5886 */;
+import NitroWheelIcon3 from "NitroWheelIcon" /* 8346 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8520 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

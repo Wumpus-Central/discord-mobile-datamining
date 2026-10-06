@@ -1,12 +1,12 @@
-// === Module 10983: CirclePlusIcon ===
+// === Module 10996: CirclePlusIcon ===
 
-// Module 10983 (CirclePlusIcon)
+// Module 10996 (CirclePlusIcon)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage3 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 10984 */;
-import AssetRegistry2 from "AssetRegistry" /* 10985 */;
+import BaseIconImage3 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 10997 */;
+import AssetRegistry2 from "AssetRegistry" /* 10998 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

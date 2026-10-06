@@ -1,14 +1,14 @@
-// === Module 17821: GuildTemplateSettingsUtils ===
+// === Module 17867: GuildTemplateSettingsUtils ===
 
-// Module 17821 (GuildTemplateSettingsUtils)
+// Module 17867 (GuildTemplateSettingsUtils)
 import Constants from "Constants" /* 1085 */;
-import GuildTemplateActionCreatorsDefault from "GuildTemplateActionCreators" /* 6827 */;
+import GuildTemplateActionCreatorsDefault from "GuildTemplateActionCreators" /* 6837 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 6966 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 6979 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

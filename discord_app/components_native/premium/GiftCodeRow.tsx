@@ -1,17 +1,17 @@
-// === Module 13371: GiftCodeRow ===
+// === Module 13390: GiftCodeRow ===
 
-// Module 13371 (GiftCodeRow)
+// Module 13390 (GiftCodeRow)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
-import native2 from "native" /* 4589 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5310 */;
-import showShareActionSheet2 from "showShareActionSheet" /* 8038 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11089 */;
+import native2 from "native" /* 4595 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5317 */;
+import showShareActionSheet2 from "showShareActionSheet" /* 8048 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11102 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let importDefault;
@@ -117,7 +117,7 @@ class GiftCodeRow extends PureComponent {
       const intl2 = tmp6(tmp7[13]).intl;
       format = intl2.format;
       obj11 = {
-        hours: expiresAt.diff(require("module_4461")(), "h"),
+        hours: expiresAt.diff(require("module_4467")(), "h"),
         revokeHook(children, id) {
             let code;
             let items;

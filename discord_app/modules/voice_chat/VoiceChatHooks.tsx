@@ -1,8 +1,8 @@
-// === Module 9054: VoiceChatHooks ===
+// === Module 9090: VoiceChatHooks ===
 
-// Module 9054 (VoiceChatHooks)
+// Module 9090 (VoiceChatHooks)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

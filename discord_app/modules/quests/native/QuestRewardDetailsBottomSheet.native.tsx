@@ -1,24 +1,24 @@
-// === Module 10910: QuestRewardDetailsBottomSheet ===
+// === Module 10923: QuestRewardDetailsBottomSheet ===
 
-// Module 10910 (QuestRewardDetailsBottomSheet)
+// Module 10923 (QuestRewardDetailsBottomSheet)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7192 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 10005 */;
-import QuestUtils from "QuestUtils" /* 10908 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10911 */;
-import QuestRewardTileDefault from "QuestRewardTile" /* 10950 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7205 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 10018 */;
+import QuestUtils from "QuestUtils" /* 10921 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10924 */;
+import QuestRewardTileDefault from "QuestRewardTile" /* 10963 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -343,20 +343,20 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   let obj = quest(504);
   const items2 = [UserStore];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  const obj2 = quest(10005);
+  const obj2 = quest(10018);
   const defaultRewardName = obj2.getDefaultRewardName(quest.config, stateFromStores);
-  BottomSheet = quest(6645).BottomSheet;
+  BottomSheet = quest(6652).BottomSheet;
   const obj3 = { direction: "vertical", spacing: memo(587).space.PX_16, style: tmp.wrapper, children: items5 };
-  const Stack = quest(5593).Stack;
+  const Stack = quest(5600).Stack;
   const obj4 = { align: "center", direction: "horizontal", spacing: memo(587).space.PX_16, children: items3 };
-  const Stack2 = quest(5593).Stack;
-  items3 = [closure_6(memo(10950), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const Stack2 = quest(5600).Stack;
+  items3 = [closure_6(memo(10963), { quest, height: 56, width: 56, withAnimation: true }), ];
   const obj5 = { direction: "vertical", spacing: memo(587).space.PX_4, style: tmp.rewardDetailsCopy, children: items4 };
-  const Stack3 = quest(5593).Stack;
+  const Stack3 = quest(5600).Stack;
   const obj6 = { variant: "eyebrow", color: "text-subtle", children: intl.string(quest(1126).t["jyYgZ+"]) };
-  const Text = quest(4886).Text;
+  const Text = quest(4892).Text;
   intl = quest(1126).intl;
-  items4 = [closure_6(Text, obj6), closure_6(quest(4886).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
+  items4 = [closure_6(Text, obj6), closure_6(quest(4892).Text, { variant: "heading-lg/semibold", color: "text-strong", children: defaultRewardName })];
   items3[1] = closure_7(Stack3, obj5);
   items5 = [closure_7(Stack2, obj4), ];
   let tmp9Result = null != memo1;
@@ -366,7 +366,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
     const obj8 = { style: tmp.separator };
     items6 = [closure_6(View, obj8), ];
     const obj9 = { variant: "text-md/normal", color: "text-subtle", children: memo1 };
-    items6[1] = closure_6(tmp4(4886).Text, obj9);
+    items6[1] = closure_6(tmp4(4892).Text, obj9);
     tmp9Result = closure_7(closure_8, obj7);
   }
   items5[1] = tmp9Result;

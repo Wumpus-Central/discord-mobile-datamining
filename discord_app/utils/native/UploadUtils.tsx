@@ -1,26 +1,26 @@
-// === Module 7274: utils/UploadUtils ===
+// === Module 7287: utils/UploadUtils ===
 
-// Module 7274 (utils/UploadUtils)
+// Module 7287 (utils/UploadUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import react_native from "react-native" /* 17 */;
 import react_nativeDefault from "react-native" /* 1162 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import react_nativeDefault2 from "react-native" /* 1432 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 5099 */;
-import UploadUtils from "UploadUtils" /* 7243 */;
-import UploadPlatform from "UploadPlatform" /* 7247 */;
-import FileUtils from "FileUtils" /* 7270 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7275 */;
-import ImageConversionDecision from "ImageConversionDecision" /* 7292 */;
-import VideoUploadUtils from "VideoUploadUtils" /* 7294 */;
-import UploadLimits from "UploadLimits" /* 7295 */;
-import utils_TimeUtils from "utils/TimeUtils" /* 7302 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 5105 */;
+import UploadUtils from "UploadUtils" /* 7256 */;
+import UploadPlatform from "UploadPlatform" /* 7260 */;
+import FileUtils from "FileUtils" /* 7283 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7288 */;
+import ImageConversionDecision from "ImageConversionDecision" /* 7305 */;
+import VideoUploadUtils from "VideoUploadUtils" /* 7307 */;
+import UploadLimits from "UploadLimits" /* 7308 */;
+import utils_TimeUtils from "utils/TimeUtils" /* 7315 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UnsyncedUserSettingsStore_mod from "UnsyncedUserSettingsStore" /* 1195 */;
-import NetworkStore from "NetworkStore" /* 4939 */;
+import NetworkStore from "NetworkStore" /* 4945 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import size_mod from "module_2" /* 2 */;
@@ -547,7 +547,7 @@ obj = function _mediaManager() {
               closure_3 = tmp;
               c6 = 1;
               c7 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c6) {
             if (arg0 === 1) {
@@ -1334,7 +1334,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != require.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj4 = { uri: require, overrideType: "r" };
+                  const obj4 = { uri: require, overrideType: "Array" };
                   const tmp12Result8 = UploadUtils;
                   isVideo = tmp12Result8.getFile(obj4).isVideo;
                 }
@@ -1360,7 +1360,7 @@ function convertVideo(videoMetadata) {
                 } else {
                   isVideo2 = null != require.match(/^assets-library:\/\/.+&ext=mp4$/i);
                   if (isVideo2) {
-                    obj6 = { uri: require, overrideType: "r" };
+                    obj6 = { uri: require, overrideType: "Array" };
                     const tmp12Result11 = UploadUtils;
                     isVideo2 = tmp12Result11.getFile(obj6).isVideo;
                   }
@@ -1559,7 +1559,7 @@ obj = function _processVideoUpload() {
             encodingConfig = undefined;
             fileSize = 1;
             spoiler = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === fileSize) {
           if (arg0 === 1) {
@@ -1754,7 +1754,7 @@ obj = function _processImageOrFileUpload() {
             closure_26 = undefined;
             i = 1;
             width = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {
@@ -2022,7 +2022,7 @@ obj = function _tryConvertImage() {
               path3 = undefined;
               useJpegliEncoder = 1;
               c7 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
             break;
           }

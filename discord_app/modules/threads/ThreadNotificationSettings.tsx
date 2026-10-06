@@ -1,12 +1,12 @@
-// === Module 11069: ThreadNotificationSettings ===
+// === Module 11082: ThreadNotificationSettings ===
 
-// Module 11069 (ThreadNotificationSettings)
+// Module 11082 (ThreadNotificationSettings)
 import Constants from "Constants" /* 1085 */;
 import ThreadConstants from "ThreadConstants" /* 1125 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

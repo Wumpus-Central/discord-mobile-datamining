@@ -1,7 +1,7 @@
-// === Module 5037: useAudienceRequestToSpeakState ===
+// === Module 5043: useAudienceRequestToSpeakState ===
 
-// Module 5037 (useAudienceRequestToSpeakState)
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+// Module 5043 (useAudienceRequestToSpeakState)
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

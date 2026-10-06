@@ -1,7 +1,8 @@
-// === Module 11242: ApplicationInteractionInfoUtils ===
+// === Module 11255: ApplicationInteractionInfoUtils ===
 
-// Module 11242 (ApplicationInteractionInfoUtils)
+// Module 11255 (ApplicationInteractionInfoUtils)
 import Server from "Server" /* 1985 */;
+import InteractionTypes from "InteractionTypes" /* 5126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
@@ -15,7 +16,7 @@ export const isPrimaryEntryPointCommandMessage = function isPrimaryEntryPointCom
   if (interactionMetadata != null) {
     type = interactionMetadata.type;
   }
-  let tmp4 = type === Server.InteractionTypes.APPLICATION_COMMAND;
+  let tmp4 = type === InteractionTypes.InteractionTypes.APPLICATION_COMMAND;
   if (tmp4) {
     const interactionMetadata2 = message.interactionMetadata;
     let command_type;

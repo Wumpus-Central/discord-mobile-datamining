@@ -1,8 +1,8 @@
-// === Module 10118: StickersSearchUtils ===
+// === Module 10131: StickersSearchUtils ===
 
-// Module 10118 (StickersSearchUtils)
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5621 */;
-import StickerSendability from "StickerSendability" /* 6840 */;
+// Module 10131 (StickersSearchUtils)
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5628 */;
+import StickerSendability from "StickerSendability" /* 6850 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stickers/StickersSearchUtils.tsx");

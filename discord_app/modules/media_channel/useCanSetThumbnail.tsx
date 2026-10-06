@@ -1,6 +1,6 @@
-// === Module 11032: useCanSetThumbnail ===
+// === Module 11045: useCanSetThumbnail ===
 
-// Module 11032 (useCanSetThumbnail)
+// Module 11045 (useCanSetThumbnail)
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,10 +1,10 @@
-// === Module 16676: SnailIllocon ===
+// === Module 16697: SnailIllocon ===
 
-// Module 16676 (SnailIllocon)
+// Module 16697 (SnailIllocon)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef16677 from "module_16677" /* 16677 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import _modDef16698 from "module_16698" /* 16698 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num = size;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef16677 };
+    const obj2 = { uri: _modDef16698 };
     cResult[0] = obj2;
     first = obj2;
   } else {
@@ -65,7 +65,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (num === undefined) {
     num = 64;
   }
-  const obj2 = { uri: _modDef16677 };
+  const obj2 = { uri: _modDef16698 };
   FastImageDefault;
   const items = [{ width: num, height: num }];
   return <tmp fadeDuration={0} source={obj2} style={items} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;

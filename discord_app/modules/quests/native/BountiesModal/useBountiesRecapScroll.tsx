@@ -1,6 +1,6 @@
-// === Module 14820: useBountiesRecapScroll ===
+// === Module 14836: useBountiesRecapScroll ===
 
-// Module 14820 (useBountiesRecapScroll)
+// Module 14836 (useBountiesRecapScroll)
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

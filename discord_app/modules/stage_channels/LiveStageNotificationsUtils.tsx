@@ -1,9 +1,9 @@
-// === Module 9475: LiveStageNotificationsUtils ===
+// === Module 9488: LiveStageNotificationsUtils ===
 
-// Module 9475 (LiveStageNotificationsUtils)
+// Module 9488 (LiveStageNotificationsUtils)
 import Constants from "Constants" /* 1096 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4786 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

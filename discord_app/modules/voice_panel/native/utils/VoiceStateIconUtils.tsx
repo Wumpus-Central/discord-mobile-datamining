@@ -1,9 +1,9 @@
-// === Module 9336: VoiceStateIconUtils ===
+// === Module 9350: VoiceStateIconUtils ===
 
-// Module 9336 (VoiceStateIconUtils)
+// Module 9350 (VoiceStateIconUtils)
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

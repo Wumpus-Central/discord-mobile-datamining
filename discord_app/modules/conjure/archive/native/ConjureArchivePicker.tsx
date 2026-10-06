@@ -1,12 +1,12 @@
-// === Module 16554: ConjureArchivePicker ===
+// === Module 16594: ConjureArchivePicker ===
 
-// Module 16554 (ConjureArchivePicker)
+// Module 16594 (ConjureArchivePicker)
 import intl3 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import ConjureTypes from "ConjureTypes" /* 6747 */;
-import FilePickerUtils from "FilePickerUtils" /* 11020 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import ConjureTypes from "ConjureTypes" /* 6757 */;
+import FilePickerUtils from "FilePickerUtils" /* 11033 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
 import size from "module_2" /* 2 */;
 
 let c3, c4, c5, c6;
@@ -205,7 +205,7 @@ export const describeConjureArchiveRejection = function describeConjureArchiveRe
     const intl = intl3.intl;
     const formatToPlainString = intl.formatToPlainString;
     const obj2 = { size: formatConjureAttachmentLimit(tmpResult2.conjureAttachmentLimit(bytes.contentType)) };
-    const ThxcOX = _modDef3723.ThxcOX;
+    const ThxcOX = _modDef3753.ThxcOX;
     formatConjureAttachmentLimit = ConjureTypes.formatConjureAttachmentLimit;
     ConjureTypes;
     tmpResult2 = ConjureTypes;

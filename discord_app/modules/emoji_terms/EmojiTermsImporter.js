@@ -1,84 +1,84 @@
-// === Module 5648: EmojiTermsImporter ===
+// === Module 5655: EmojiTermsImporter ===
 
-// Module 5648 (EmojiTermsImporter)
+// Module 5655 (EmojiTermsImporter)
 import asyncRequire from "asyncRequire" /* 1987 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
   bg() {
-    return asyncRequire(5649, dependencyMap.paths);
+    return asyncRequire(5656, dependencyMap.paths);
   },
   cs() {
-    return asyncRequire(5650, dependencyMap.paths);
-  },
-  da() {
-    return asyncRequire(5651, dependencyMap.paths);
-  },
-  de() {
-    return asyncRequire(5652, dependencyMap.paths);
-  },
-  el() {
-    return asyncRequire(5653, dependencyMap.paths);
-  },
-  "en-US": () => asyncRequire(5654, dependencyMap.paths),
-  "es-ES": () => asyncRequire(5655, dependencyMap.paths),
-  "es-419": () => asyncRequire(5656, dependencyMap.paths),
-  fi() {
     return asyncRequire(5657, dependencyMap.paths);
   },
-  fr() {
+  da() {
     return asyncRequire(5658, dependencyMap.paths);
   },
-  hr() {
+  de() {
     return asyncRequire(5659, dependencyMap.paths);
   },
-  hu() {
+  el() {
     return asyncRequire(5660, dependencyMap.paths);
   },
-  it() {
-    return asyncRequire(5661, dependencyMap.paths);
-  },
-  ja() {
-    return asyncRequire(5662, dependencyMap.paths);
-  },
-  ko() {
-    return asyncRequire(5663, dependencyMap.paths);
-  },
-  lt() {
+  "en-US": () => asyncRequire(5661, dependencyMap.paths),
+  "es-ES": () => asyncRequire(5662, dependencyMap.paths),
+  "es-419": () => asyncRequire(5663, dependencyMap.paths),
+  fi() {
     return asyncRequire(5664, dependencyMap.paths);
   },
-  nl() {
+  fr() {
     return asyncRequire(5665, dependencyMap.paths);
   },
-  no() {
+  hr() {
     return asyncRequire(5666, dependencyMap.paths);
   },
-  pl() {
+  hu() {
     return asyncRequire(5667, dependencyMap.paths);
   },
-  "pt-BR": () => asyncRequire(5668, dependencyMap.paths),
-  ro() {
+  it() {
+    return asyncRequire(5668, dependencyMap.paths);
+  },
+  ja() {
     return asyncRequire(5669, dependencyMap.paths);
   },
-  ru() {
+  ko() {
     return asyncRequire(5670, dependencyMap.paths);
   },
-  "sv-SE": () => asyncRequire(5671, dependencyMap.paths),
-  th() {
+  lt() {
+    return asyncRequire(5671, dependencyMap.paths);
+  },
+  nl() {
     return asyncRequire(5672, dependencyMap.paths);
   },
-  tr() {
+  no() {
     return asyncRequire(5673, dependencyMap.paths);
   },
-  uk() {
+  pl() {
     return asyncRequire(5674, dependencyMap.paths);
   },
-  vi() {
-    return asyncRequire(5675, dependencyMap.paths);
+  "pt-BR": () => asyncRequire(5675, dependencyMap.paths),
+  ro() {
+    return asyncRequire(5676, dependencyMap.paths);
   },
-  "zh-CN": () => asyncRequire(5676, dependencyMap.paths),
-  hi() {
+  ru() {
     return asyncRequire(5677, dependencyMap.paths);
+  },
+  "sv-SE": () => asyncRequire(5678, dependencyMap.paths),
+  th() {
+    return asyncRequire(5679, dependencyMap.paths);
+  },
+  tr() {
+    return asyncRequire(5680, dependencyMap.paths);
+  },
+  uk() {
+    return asyncRequire(5681, dependencyMap.paths);
+  },
+  vi() {
+    return asyncRequire(5682, dependencyMap.paths);
+  },
+  "zh-CN": () => asyncRequire(5683, dependencyMap.paths),
+  hi() {
+    return asyncRequire(5684, dependencyMap.paths);
   }
 };
 const result = size.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");

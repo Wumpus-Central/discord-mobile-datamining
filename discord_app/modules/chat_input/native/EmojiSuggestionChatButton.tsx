@@ -1,18 +1,18 @@
-// === Module 12072: EmojiSuggestionChatButton ===
+// === Module 12087: EmojiSuggestionChatButton ===
 
-// Module 12072 (EmojiSuggestionChatButton)
+// Module 12087 (EmojiSuggestionChatButton)
 import nativeDefault from "native" /* 587 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import spring from "spring" /* 5597 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12068 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import spring from "spring" /* 5604 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12083 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let set, set2;

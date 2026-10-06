@@ -1,11 +1,11 @@
-// === Module 18036: AVErrorStreamBadNetworkQuality ===
+// === Module 18081: AVErrorStreamBadNetworkQuality ===
 
-// Module 18036 (AVErrorStreamBadNetworkQuality)
+// Module 18081 (AVErrorStreamBadNetworkQuality)
 import Constants from "Constants" /* 1085 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AVError from "AVError" /* 9095 */;
-import AVErrorContext from "AVErrorContext" /* 18029 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import AVError from "AVError" /* 9131 */;
+import AVErrorContext from "AVErrorContext" /* 18074 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
 import size from "module_2" /* 2 */;
 
 const RTCConnectionQuality = Constants.RTCConnectionQuality;

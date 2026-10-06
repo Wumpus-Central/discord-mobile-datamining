@@ -1,20 +1,20 @@
-// === Module 8308: InAppReportsWidgetPreviewElement ===
+// === Module 8341: InAppReportsWidgetPreviewElement ===
 
-// Module 8308 (InAppReportsWidgetPreviewElement)
+// Module 8341 (InAppReportsWidgetPreviewElement)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7113 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7116 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7913 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8309 */;
-import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 8318 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7126 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7129 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7924 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8342 */;
+import UserProfileWidgetsBoard from "UserProfileWidgetsBoard" /* 8351 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

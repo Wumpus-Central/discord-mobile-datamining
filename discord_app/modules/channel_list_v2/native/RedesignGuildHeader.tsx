@@ -1,36 +1,36 @@
-// === Module 16059: RedesignGuildHeader ===
+// === Module 16098: RedesignGuildHeader ===
 
-// Module 16059 (RedesignGuildHeader)
+// Module 16098 (RedesignGuildHeader)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import useToken from "useToken" /* 4580 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4613 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import spring from "spring" /* 5597 */;
-import springPresets from "springPresets" /* 5598 */;
-import ButtonConstants from "ButtonConstants" /* 5600 */;
-import useFontScale from "useFontScale" /* 5602 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5911 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7508 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13720 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16030 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16060 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16061 */;
+import useToken from "useToken" /* 4586 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4619 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import spring from "spring" /* 5604 */;
+import springPresets from "springPresets" /* 5605 */;
+import ButtonConstants from "ButtonConstants" /* 5607 */;
+import useFontScale from "useFontScale" /* 5609 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7519 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10738 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13738 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16069 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16099 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16100 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let set;

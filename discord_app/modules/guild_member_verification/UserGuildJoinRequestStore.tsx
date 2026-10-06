@@ -1,10 +1,10 @@
-// === Module 4700: UserGuildJoinRequestStore ===
+// === Module 4706: UserGuildJoinRequestStore ===
 
-// Module 4700 (UserGuildJoinRequestStore)
+// Module 4706 (UserGuildJoinRequestStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4701 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4707 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

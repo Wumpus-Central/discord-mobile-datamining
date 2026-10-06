@@ -1,7 +1,7 @@
-// === Module 7283: react-native ===
+// === Module 7296: react-native ===
 
-// Module 7283 (react-native)
-import react_nativeDefault from "react-native" /* 6431 */;
+// Module 7296 (react-native)
+import react_nativeDefault from "react-native" /* 6438 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");

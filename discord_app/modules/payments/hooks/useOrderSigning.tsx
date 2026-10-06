@@ -1,9 +1,9 @@
-// === Module 8519: useOrderSigning ===
+// === Module 8552: useOrderSigning ===
 
-// Module 8519 (useOrderSigning)
-import BillingUtils from "BillingUtils" /* 4543 */;
-import BillingErrorDefault from "BillingError" /* 4550 */;
-import PaymentConstants from "PaymentConstants" /* 4869 */;
+// Module 8552 (useOrderSigning)
+import BillingUtils from "BillingUtils" /* 4549 */;
+import BillingErrorDefault from "BillingError" /* 4556 */;
+import PaymentConstants from "PaymentConstants" /* 4875 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -119,7 +119,7 @@ export const useOrderSigning = function useOrderSigning(order) {
               orderSigningError = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c5) {
             if (loadId === 1) {

@@ -1,9 +1,9 @@
-// === Module 8324: useResolveGame ===
+// === Module 8357: useResolveGame ===
 
-// Module 8324 (useResolveGame)
+// Module 8357 (useResolveGame)
 import react2 from "react" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
-import useGame from "useGame" /* 6812 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
+import useGame from "useGame" /* 6822 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

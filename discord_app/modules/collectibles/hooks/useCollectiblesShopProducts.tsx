@@ -1,17 +1,17 @@
-// === Module 8536: useCollectiblesShopProducts ===
+// === Module 8569: useCollectiblesShopProducts ===
 
-// Module 8536 (useCollectiblesShopProducts)
+// Module 8569 (useCollectiblesShopProducts)
 import react2 from "react" /* 576 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 7889 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 8538 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 8539 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 7900 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 8571 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 8572 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8537 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 7890 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7054 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7055 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8570 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 7901 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7067 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7068 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -712,10 +712,10 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
   }, items6);
   const items7 = [memo1];
   const memo2 = memo.useMemo(() => {
-    const f138922 = (item) => "" !== item;
+    const f139142 = (item) => "" !== item;
     const values = Object.values(memo1);
-    const items = [...new Set(values.filter(f138922))];
-    new Set(values.filter(f138922));
+    const items = [...new Set(values.filter(f139142))];
+    new Set(values.filter(f139142));
     return items;
   }, items7);
   const items8 = [flag, memo2.join(",")];

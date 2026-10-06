@@ -1,6 +1,6 @@
-// === Module 17415: NativeAppStartup ===
+// === Module 17444: NativeAppStartup ===
 
-// Module 17415 (NativeAppStartup)
+// Module 17444 (NativeAppStartup)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import Storage4 from "Storage" /* 510 */;
@@ -9,19 +9,19 @@ import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import DatabaseManagerDefault from "DatabaseManager" /* 2095 */;
 import IntlLoaderStore from "IntlLoaderStore" /* 2117 */;
-import timeRequireDefault from "timeRequire" /* 7001 */;
-import Future from "Future" /* 8798 */;
-import react_nativeDefault from "react-native" /* 13448 */;
+import timeRequireDefault from "timeRequire" /* 7014 */;
+import Future from "Future" /* 8830 */;
+import react_nativeDefault from "react-native" /* 13975 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import module_17416 from "module_17416" /* 17416 */;
-import superagentPatch from "superagentPatch" /* 17418 */;
+import module_17445 from "module_17445" /* 17445 */;
+import superagentPatch from "superagentPatch" /* 17447 */;
 import react_native from "react-native" /* 17 */;
-import logThirdPartyImportsDone from "logThirdPartyImportsDone" /* 17439 */;
+import logThirdPartyImportsDone from "logThirdPartyImportsDone" /* 17468 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 6969 */;
-import ManagerRegistry from "ManagerRegistry" /* 17440 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 6982 */;
+import ManagerRegistry from "ManagerRegistry" /* 17469 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -119,10 +119,10 @@ let obj = function _getInitialURLs() {
 function sharedInit() {
   let _true;
   let closure_1;
-  const f148566 = () => _true(handleNotification[31]);
+  const f148791 = () => _true(handleNotification[31]);
   function handleNotification(arg0) {
     if (c0) {
-      timeRequireDefault("receiveNotification", f148566).default(arg0, false);
+      timeRequireDefault("receiveNotification", f148791).default(arg0, false);
       TTITrackerDefault.extraProperties.tapped_notification = true;
     } else {
       closure_1.push(arg0);
@@ -258,7 +258,7 @@ function sharedInit() {
     closure_20.log("Push notification received, the app state is " + state);
     if (state !== constants.ACTIVE) {
       if (c0) {
-        timeRequireDefault("receiveNotification", f148566).default(arg0, false);
+        timeRequireDefault("receiveNotification", f148791).default(arg0, false);
         TTITrackerDefault.extraProperties.tapped_notification = true;
       } else {
         closure_1.push(arg0);
@@ -490,7 +490,7 @@ obj = function _initializeIntl() {
               tmp = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c3) {
             if (arg0 === 1) {

@@ -1,8 +1,8 @@
-// === Module 12922: useUserProfileGameFriendApplicationIds ===
+// === Module 12941: useUserProfileGameFriendApplicationIds ===
 
-// Module 12922 (useUserProfileGameFriendApplicationIds)
+// Module 12941 (useUserProfileGameFriendApplicationIds)
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   }
   const tmpResult = userId(504);
   const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-  const tmpResult2 = userId(12884);
+  const tmpResult2 = userId(12903);
   const gameFriendsForUser = tmpResult2.useGameFriendsForUser(userId);
   if (stateFromStores) {
     tmp9 = closure_5;

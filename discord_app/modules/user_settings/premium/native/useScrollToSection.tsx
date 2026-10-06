@@ -1,6 +1,6 @@
-// === Module 13229: useScrollToSection ===
+// === Module 13248: useScrollToSection ===
 
-// Module 13229 (useScrollToSection)
+// Module 13248 (useScrollToSection)
 import react2 from "react" /* 576 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

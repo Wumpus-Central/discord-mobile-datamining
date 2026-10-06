@@ -1,24 +1,24 @@
-// === Module 13929: Avatar ===
+// === Module 13947: Avatar ===
 
-// Module 13929 (Avatar)
+// Module 13947 (Avatar)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4819 */;
-import IconDefault from "Icon" /* 5596 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 7828 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8468 */;
-import ClipView from "ClipView" /* 8469 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9126 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12851 */;
-import Status_StatusUtils from "Status/StatusUtils" /* 13918 */;
-import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 13919 */;
-import Status from "Status" /* 13920 */;
-import SpeakerPulseDefault from "SpeakerPulse" /* 13930 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4825 */;
+import IconDefault from "Icon" /* 5603 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 7839 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8501 */;
+import ClipView from "ClipView" /* 8502 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9161 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 12870 */;
+import Status_StatusUtils from "Status/StatusUtils" /* 13936 */;
+import getStatusContainerStyleDefault from "getStatusContainerStyle" /* 13937 */;
+import Status from "Status" /* 13938 */;
+import SpeakerPulseDefault from "SpeakerPulse" /* 13948 */;
 import react from "react" /* 19 */;
 import StatusConstants from "StatusConstants" /* 1189 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

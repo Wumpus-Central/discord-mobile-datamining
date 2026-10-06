@@ -1,14 +1,14 @@
-// === Module 15241: AnimateStickersSetting ===
+// === Module 15256: AnimateStickersSetting ===
 
-// Module 15241 (AnimateStickersSetting)
+// Module 15256 (AnimateStickersSetting)
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import StickersConstants from "StickersConstants" /* 2031 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

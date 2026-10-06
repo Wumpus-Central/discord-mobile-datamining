@@ -1,6 +1,6 @@
-// === Module 16216: ChannelAffinitiesV2Constants ===
+// === Module 16256: ChannelAffinitiesV2Constants ===
 
-// Module 16216 (ChannelAffinitiesV2Constants)
+// Module 16256 (ChannelAffinitiesV2Constants)
 import DurationsDefault from "Durations" /* 1102 */;
 import size from "module_2" /* 2 */;
 

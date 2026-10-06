@@ -1,14 +1,14 @@
-// === Module 17965: FormPriceTier ===
+// === Module 18011: FormPriceTier ===
 
-// Module 17965 (FormPriceTier)
+// Module 18011 (FormPriceTier)
 import Fragment from "Fragment" /* 21 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import react from "react" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 17926 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17972 */;
 import size from "module_2" /* 2 */;
 
 let c3;
@@ -83,7 +83,7 @@ export default function FormPriceTier(guildId) {
         selectedItem: price,
         hasIcons: false
       };
-      const tmp3 = asyncRequire(8949, dependencyMap.paths);
+      const tmp3 = asyncRequire(8978, dependencyMap.paths);
       intl = intl4.intl;
       openLazy(tmp3, "GuildRoleSubscriptionPriceTierSelect", obj);
     }} placeholder={intl.string(guildId(onChange[4]).t.nCOuYJ)} />;

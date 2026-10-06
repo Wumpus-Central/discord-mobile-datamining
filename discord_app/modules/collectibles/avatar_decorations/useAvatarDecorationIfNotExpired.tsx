@@ -1,6 +1,6 @@
-// === Module 7930: useAvatarDecorationIfNotExpired ===
+// === Module 7941: useAvatarDecorationIfNotExpired ===
 
-// Module 7930 (useAvatarDecorationIfNotExpired)
+// Module 7941 (useAvatarDecorationIfNotExpired)
 import Constants from "Constants" /* 1085 */;
 import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1972 */;
 import Timers from "Timers" /* 2046 */;

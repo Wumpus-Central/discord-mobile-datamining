@@ -1,22 +1,22 @@
-// === Module 10749: CollectiblesShopGiftPurchaseSection ===
+// === Module 10762: CollectiblesShopGiftPurchaseSection ===
 
-// Module 10749 (CollectiblesShopGiftPurchaseSection)
+// Module 10762 (CollectiblesShopGiftPurchaseSection)
 import react_native from "react-native" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import NativeCheckoutStore from "NativeCheckoutStore" /* 6930 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import NativeCheckoutStore from "NativeCheckoutStore" /* 6943 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
 import Constants from "Constants" /* 1085 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c1, c2;

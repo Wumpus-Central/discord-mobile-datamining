@@ -1,11 +1,11 @@
-// === Module 7900: useProfileThemeOverrideStore ===
+// === Module 7911: useProfileThemeOverrideStore ===
 
-// Module 7900 (useProfileThemeOverrideStore)
+// Module 7911 (useProfileThemeOverrideStore)
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7901 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7912 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

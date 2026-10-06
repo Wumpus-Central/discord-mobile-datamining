@@ -1,14 +1,14 @@
-// === Module 15767: UseDataForQuests3PSetting ===
+// === Module 15804: UseDataForQuests3PSetting ===
 
-// Module 15767 (UseDataForQuests3PSetting)
+// Module 15804 (UseDataForQuests3PSetting)
 import intl2 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14625 */;
-import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 15765 */;
-import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15766 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
+import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 15802 */;
+import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15803 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11129 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

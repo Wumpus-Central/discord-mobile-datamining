@@ -1,12 +1,12 @@
-// === Module 11303: useContentHarmTypes ===
+// === Module 11316: useContentHarmTypes ===
 
-// Module 11303 (useContentHarmTypes)
+// Module 11316 (useContentHarmTypes)
 import react2 from "react" /* 576 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6805 */;
 import react from "react" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -31,7 +31,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   let obj = require("react");
   const cResult = obj.c(18);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = tmp(6795);
+    const tmpResult = tmp(6805);
     const eligibleHarmTypesConfigsForContext = tmpResult.getEligibleHarmTypesConfigsForContext();
     cResult[0] = eligibleHarmTypesConfigsForContext;
     first = eligibleHarmTypesConfigsForContext;
@@ -106,7 +106,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       tmp15 = cResult[9];
     }
     const tmpResult7 = tmp(504);
-    stateFromStores2 = tmpResult7.useStateFromStores(tmp13, tmp14, tmp15, tmp(6803).areSettingsEqual);
+    stateFromStores2 = tmpResult7.useStateFromStores(tmp13, tmp14, tmp15, tmp(6813).areSettingsEqual);
     if (null != stateFromStores1) {
       let tmp25;
       let id;
@@ -179,9 +179,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       }
     }
     if (0 === arr6.length) {
-      NONE = tmp(6798).ContentHarmTypeBitMask.NONE;
+      NONE = tmp(6808).ContentHarmTypeBitMask.NONE;
     } else if (cResult[16] !== arr6) {
-      const tmpResult8 = tmp(6795);
+      const tmpResult8 = tmp(6805);
       const result = tmpResult8.contentHarmTypesToFlags(arr6);
       class S {
         constructor() {
@@ -267,9 +267,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     }
   }, items4);
   if (0 === memo.length) {
-    NONE = tmp(6798).ContentHarmTypeBitMask.NONE;
+    NONE = tmp(6808).ContentHarmTypeBitMask.NONE;
   } else {
-    const tmpResult = tmp(6795);
+    const tmpResult = tmp(6805);
     NONE = tmpResult.contentHarmTypesToFlags(memo);
   }
   return NONE;

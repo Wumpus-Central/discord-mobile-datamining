@@ -1,8 +1,8 @@
-// === Module 7292: ImageConversionDecision ===
+// === Module 7305: ImageConversionDecision ===
 
-// Module 7292 (ImageConversionDecision)
+// Module 7305 (ImageConversionDecision)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import IosImageTypesManagerDefault from "IosImageTypesManager" /* 7293 */;
+import IosImageTypesManagerDefault from "IosImageTypesManager" /* 7306 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");

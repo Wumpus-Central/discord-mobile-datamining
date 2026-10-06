@@ -1,8 +1,8 @@
-// === Module 8937: ApplicationCommandChoiceUtils ===
+// === Module 8966: ApplicationCommandChoiceUtils ===
 
-// Module 8937 (ApplicationCommandChoiceUtils)
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7407 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
+// Module 8966 (ApplicationCommandChoiceUtils)
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7418 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
 import size from "module_2" /* 2 */;
 
 let c2;

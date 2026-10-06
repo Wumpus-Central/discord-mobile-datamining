@@ -1,8 +1,8 @@
-// === Module 14346: userSettings ===
+// === Module 14364: userSettings ===
 
-// Module 14346 (userSettings)
+// Module 14364 (userSettings)
 import Constants from "Constants" /* 1085 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import size from "module_2" /* 2 */;
 

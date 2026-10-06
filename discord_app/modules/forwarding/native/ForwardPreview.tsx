@@ -1,29 +1,29 @@
-// === Module 11320: ForwardPreview ===
+// === Module 11333: ForwardPreview ===
 
-// Module 11320 (ForwardPreview)
+// Module 11333 (ForwardPreview)
 import _mod12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1483 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5136 */;
-import ImageIcon from "ImageIcon" /* 5871 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import RowGeneratorDefault from "RowGenerator" /* 7591 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7809 */;
-import ChatItemDefault from "ChatItem" /* 8303 */;
-import CirclePlayIcon2 from "CirclePlayIcon" /* 8368 */;
-import ClipView from "ClipView" /* 8469 */;
-import AttachmentIcon2 from "AttachmentIcon" /* 10369 */;
-import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11321 */;
-import ImagesIcon2 from "ImagesIcon" /* 11324 */;
-import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 11326 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 5143 */;
+import ImageIcon from "ImageIcon" /* 5878 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import RowGeneratorDefault from "RowGenerator" /* 7602 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7820 */;
+import ChatItemDefault from "ChatItem" /* 8336 */;
+import CirclePlayIcon2 from "CirclePlayIcon" /* 8401 */;
+import ClipView from "ClipView" /* 8502 */;
+import AttachmentIcon2 from "AttachmentIcon" /* 10382 */;
+import ForwardPreviewUtils from "ForwardPreviewUtils" /* 11334 */;
+import ImagesIcon2 from "ImagesIcon" /* 11337 */;
+import CheckpointForwardPreviewDefault from "CheckpointForwardPreview" /* 11339 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -131,7 +131,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
     cResult[5] = fn;
     tmp8 = fn;
   }
-  const tmpResult = attachmentCount(4890);
+  const tmpResult = attachmentCount(4896);
   const tmp7 = tmpResult.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp5);
   cResult[0] = TEXT_SUBTLE;
   cResult[1] = tmp5;
@@ -152,7 +152,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
   } else {
     TEXT_SUBTLE = tmp(587).colors.TEXT_SUBTLE;
   }
-  let obj = attachmentCount(4890);
+  let obj = attachmentCount(4896);
   const tmp4 = obj.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
   importDefault = tmp4;
   const items = [tmp4.seeMoreLabelColor, attachmentCount];

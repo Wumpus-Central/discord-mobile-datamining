@@ -1,15 +1,15 @@
-// === Module 17058: MessageRequestPreview ===
+// === Module 17084: MessageRequestPreview ===
 
-// Module 17058 (MessageRequestPreview)
+// Module 17084 (MessageRequestPreview)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import Constants from "Constants" /* 1085 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import TextStyles_mod from "TextStyles" /* 5915 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import TextStyles_mod from "TextStyles" /* 5922 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -46,7 +46,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((c
   channel = channel.channel;
   const style = channel.style;
   const tmp4 = closure_9();
-  const obj2 = channel(12259);
+  const obj2 = channel(12274);
   const messageRequestPreview = obj2.useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
@@ -649,7 +649,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((c
   channel = channel.channel;
   const style = channel.style;
   const tmp = closure_9();
-  let obj = channel(12259);
+  let obj = channel(12274);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   const message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);
@@ -699,7 +699,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((c
       }
       if (null != content) {
         if ("" !== message.content) {
-          const content1 = message(7531)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
+          const content1 = message(7542)(message, { noStyleAndInteraction: true, allowGameMentions: true }).content;
           const _Array = Array;
           if (!Array.isArray(content1)) {
             flag = true;
@@ -710,7 +710,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((c
         }
       }
       if (null != message) {
-        const tmp2Result = channel(5428);
+        const tmp2Result = channel(5435);
         if (tmp2Result.getMessageStickers(message).length > 0) {
           const intl5 = tmp2(1126).intl;
           let stringResult1 = intl5.string(tmp2(1126).t["zuI+by"]);

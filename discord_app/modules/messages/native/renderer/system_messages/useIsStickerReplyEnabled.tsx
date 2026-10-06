@@ -1,10 +1,10 @@
-// === Module 7657: useIsStickerReplyEnabled ===
+// === Module 7668: useIsStickerReplyEnabled ===
 
-// Module 7657 (useIsStickerReplyEnabled)
+// Module 7668 (useIsStickerReplyEnabled)
 import Constants from "Constants" /* 1085 */;
-import ThreadHooks from "ThreadHooks" /* 6772 */;
+import ThreadHooks from "ThreadHooks" /* 6782 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

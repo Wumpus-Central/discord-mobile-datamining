@@ -1,10 +1,10 @@
-// === Module 14237: NitroGem9Lottie ===
+// === Module 14255: NitroGem9Lottie ===
 
-// Module 14237 (NitroGem9Lottie)
+// Module 14255 (NitroGem9Lottie)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import LottieIcon2 from "LottieIcon" /* 9629 */;
-import AssetRegistry from "AssetRegistry" /* 14238 */;
+import LottieIcon2 from "LottieIcon" /* 9642 */;
+import AssetRegistry from "AssetRegistry" /* 14256 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

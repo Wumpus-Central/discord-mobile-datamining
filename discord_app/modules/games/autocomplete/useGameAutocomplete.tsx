@@ -1,28 +1,32 @@
-// === Module 8564: useGameAutocomplete ===
+// === Module 8598: useGameAutocomplete ===
 
-// Module 8564 (useGameAutocomplete)
+// Module 8598 (useGameAutocomplete)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5893 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5894 */;
-import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8565 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import GameAutocompleteTypes from "GameAutocompleteTypes" /* 5900 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 5901 */;
+import GameAutocompleteActionCreators from "GameAutocompleteActionCreators" /* 8599 */;
+import GameSearchSession from "GameSearchSession" /* 8600 */;
+import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5892 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5899 */;
 import get_initialized from "get initialized" /* 504 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
+const require = globalThis.__r;
+
+let _slicedToArray = _slicedToArray_mod;
 const QueryIds = Constants.QueryIds;
 let obj = {
-  getQueryId(query) {
+  getQueryId(name) {
     let DEFAULT;
     if (DEFAULT === undefined) {
       DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
     }
     const GAME_AUTOCOMPLETE = QueryIds.GAME_AUTOCOMPLETE;
     const obj = GameAutocompleteUtils;
-    return GAME_AUTOCOMPLETE(obj.normalizeGameAutocompleteQuery(query), DEFAULT);
+    return GAME_AUTOCOMPLETE(obj.normalizeGameAutocompleteQuery(name), DEFAULT);
   },
   get(arg0, arg1) {
     let results = GameAutocompleteStore.getResults(arg0, arg1);
@@ -147,116 +151,340 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp2;
 });
 ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((query, arg1) => {
+let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((name, surface) => {
+  let DEFAULT;
+  let closure_2;
   let data;
   let isLoading;
+  let query;
   let tmp10;
+  let tmp11;
   let tmp4;
-  let tmp9;
-  let DEFAULT = arg1;
-  const obj = react2;
-  const cResult = obj.c(6);
-  if (undefined === arg1) {
-    DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
+  let tmp2 = DEFAULT;
+  const obj = surface(DEFAULT[9]);
+  const cResult = obj.c(27);
+  surface = surface.surface;
+  DEFAULT = surface.profile;
+  if (undefined === DEFAULT) {
+    DEFAULT = tmp(tmp2[5]).GameAutocompleteProfile.DEFAULT;
   }
-  if (cResult[0] !== query) {
-    const tmpResult = GameAutocompleteUtils;
-    const result = tmpResult.normalizeGameAutocompleteQuery(query);
-    cResult[0] = query;
+  if (cResult[0] !== name) {
+    const tmpResult = surface(tmp2[6]);
+    const result = tmpResult.normalizeGameAutocompleteQuery(name);
+    cResult[0] = name;
     cResult[1] = result;
     tmp4 = result;
   } else {
     tmp4 = cResult[1];
   }
+  _slicedToArray = tmp4;
   const tmp6 = closure_7(tmp4);
   const tmp7 = fetchStore(tmp6, DEFAULT);
   ({ data, isLoading } = tmp7);
   const error = tmp7.error;
-  [tmp9, tmp10] = react.useState(null);
-  _slicedToArray(react.useState(null), 2);
-  if (null == tmp4) {
-    if (null != tmp9) {
-      tmp10(null);
+  [tmp10, tmp11] = query.useState(null);
+  _slicedToArray(query.useState(null), 2);
+  const tmp8 = _slicedToArray;
+  if (cResult[2] === data) {
+    let tmp12;
+    if (cResult[3] === tmp6) {
+      tmp12 = cResult[4];
     }
-  } else {
-    const tmp11 = null != data && data !== tmp9;
-    if (tmp11) {
-      tmp10(data);
-    }
-  }
-  let tmp14 = null;
-  if (null != tmp4) {
-    if (data == null) {
-      data = tmp9;
-    }
-    tmp14 = data;
-  }
-  if (!isLoading) {
-    isLoading = tmp6 !== tmp4;
-  }
-  let tmp15 = null;
-  if (tmp6 === tmp4) {
-    tmp15 = error;
-  }
-  if (cResult[2] === tmp14) {
-    if (cResult[3] === isLoading) {
-      let tmp16;
-      if (cResult[4] === tmp15) {
-        tmp16 = cResult[5];
+    if (null == tmp4) {
+      if (null != tmp10) {
+        tmp11(null);
       }
-      return tmp16;
+    } else {
+      let tmp14 = null != tmp12;
+      if (tmp14) {
+        let results1;
+        const results = tmp12.results;
+        if (tmp10 != null) {
+          results1 = tmp10.results;
+        }
+        tmp14 = results !== results1;
+      }
+      if (tmp14) {
+        tmp11(tmp12);
+      }
+    }
+    let tmp18 = null;
+    if (null != tmp4) {
+      if (tmp12 == null) {
+        tmp12 = tmp10;
+      }
+      tmp18 = tmp12;
+    }
+    query = undefined;
+    if (tmp18 != null) {
+      query = tmp18.query;
+    }
+    if (query == null) {
+      query = null;
+    }
+    let results2;
+    if (tmp18 != null) {
+      results2 = tmp18.results;
+    }
+    if (results2 == null) {
+      results2 = null;
+    }
+    if (cResult[5] === DEFAULT) {
+      let tmp21;
+      if (cResult[6] === surface) {
+        tmp21 = cResult[7];
+      }
+      const first = tmp8(obj3.useState(tmp21), 1)[0];
+      if (cResult[8] === tmp4) {
+        let tmp23;
+        let tmp24;
+        if (cResult[9] === first) {
+          tmp23 = cResult[10];
+          tmp24 = cResult[11];
+        }
+        const effect = obj3.useEffect(tmp23, tmp24);
+        if (cResult[12] === query) {
+          if (cResult[13] === results2) {
+            let tmp26;
+            let tmp27;
+            let tmp29;
+            if (cResult[14] === first) {
+              tmp26 = cResult[15];
+              tmp27 = cResult[16];
+            }
+            const effect1 = obj3.useEffect(tmp26, tmp27);
+            if (cResult[17] !== first.end) {
+              const fn2 = function q() {
+                return first.end;
+              };
+              cResult[17] = first.end;
+              class F {
+                constructor() {
+                  const tmp2 = null != query && null != results2;
+                  if (tmp2) {
+                    first.onResults(query, results2);
+                  }
+                }
+              }
+              cResult[18] = fn2;
+              tmp29 = fn2;
+            } else {
+              tmp29 = cResult[18];
+            }
+            class F {
+              constructor() {
+                const tmp2 = null != query && null != results2;
+                if (tmp2) {
+                  first.onResults(query, results2);
+                }
+              }
+            }
+            const effect2 = obj3.useEffect(tmp29, tmp30);
+            if (!isLoading) {
+              isLoading = tmp6 !== tmp4;
+            }
+            let tmp32 = null;
+            if (tmp6 === tmp4) {
+              tmp32 = error;
+            }
+            if (cResult[21] === results2) {
+              if (cResult[22] === first.end) {
+                if (cResult[23] === first.select) {
+                  if (cResult[24] === isLoading) {
+                    let tmp33;
+                    if (cResult[25] === tmp32) {
+                      tmp33 = cResult[26];
+                    }
+                    return tmp33;
+                  }
+                }
+              }
+            }
+            const obj2 = { results: results2, isLoading, error: tmp32, onSelect: null, endSession: first.end };
+            class C {
+              constructor() {
+                const gameSearchSession = new GameSearchSession.GameSearchSession(surface, DEFAULT);
+                return gameSearchSession;
+              }
+            }
+            cResult[21] = results2;
+            cResult[22] = first.end;
+            cResult[23] = first.select;
+            cResult[24] = isLoading;
+            cResult[25] = tmp32;
+            cResult[26] = obj2;
+            tmp33 = obj2;
+          }
+        }
+        class F {
+          constructor() {
+            const tmp2 = null != query && null != results2;
+            if (tmp2) {
+              first.onResults(query, results2);
+            }
+          }
+        }
+        const items = [first, query, results2];
+        cResult[12] = query;
+        cResult[13] = results2;
+        class C {
+          constructor() {
+            const gameSearchSession = new GameSearchSession.GameSearchSession(surface, DEFAULT);
+            return gameSearchSession;
+          }
+        }
+        cResult[15] = F;
+        cResult[16] = items;
+        tmp27 = items;
+        tmp26 = F;
+      }
+      const fn = function b() {
+        first.onQuery(closure_2);
+      };
+      const items1 = [first, tmp4];
+      cResult[8] = tmp4;
+      cResult[9] = first;
+      class C {
+        constructor() {
+          const gameSearchSession = new GameSearchSession.GameSearchSession(surface, DEFAULT);
+          return gameSearchSession;
+        }
+      }
+      cResult[10] = fn;
+      cResult[11] = items1;
+      tmp24 = items1;
+      tmp23 = fn;
+    }
+    class C {
+      constructor() {
+        const gameSearchSession = new GameSearchSession.GameSearchSession(surface, DEFAULT);
+        return gameSearchSession;
+      }
+    }
+    cResult[5] = DEFAULT;
+    cResult[6] = surface;
+    cResult[7] = C;
+    tmp21 = C;
+  }
+  let tmp13 = null;
+  if (null != data) {
+    tmp13 = null;
+    if (null != tmp6) {
+      class F {
+        constructor() {
+          const tmp2 = null != query && null != results2;
+          if (tmp2) {
+            first.onResults(query, results2);
+          }
+        }
+      }
     }
   }
-  const obj2 = { results: tmp14, isLoading, error: tmp15 };
-  cResult[2] = tmp14;
-  cResult[3] = isLoading;
-  cResult[4] = tmp15;
-  cResult[5] = obj2;
-  tmp16 = obj2;
-}) : ((query) => {
+  cResult[2] = data;
+  cResult[3] = tmp6;
+  cResult[4] = tmp13;
+  tmp12 = tmp13;
+}) : ((name, arg1) => {
+  let c2;
   let data;
   let isLoading;
-  let tmp13;
-  let tmp7;
+  let profile;
+  let require;
+  let tmp22;
   let tmp8;
-  let DEFAULT = arg1;
-  if (arg1 === undefined) {
-    DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
+  let tmp9;
+  ({ surface: require, profile } = arg1);
+  if (profile === undefined) {
+    let tmp2 = profile;
+    profile = require("GameAutocompleteTypes").GameAutocompleteProfile.DEFAULT;
   }
-  const obj = GameAutocompleteUtils;
-  const result = obj.normalizeGameAutocompleteQuery(query);
+  let query;
+  let results2;
+  let first;
+  const obj = require("GameAutocompleteUtils");
+  const result = obj.normalizeGameAutocompleteQuery(name);
+  _slicedToArray = result;
   const tmp4 = closure_7(result);
-  const tmp5 = fetchStore(tmp4, DEFAULT);
+  const tmp5 = fetchStore(tmp4, profile);
   ({ data, isLoading } = tmp5);
   const error = tmp5.error;
-  [tmp7, tmp8] = react.useState(null);
-  _slicedToArray(react.useState(null), 2);
+  [tmp8, tmp9] = query.useState(null);
+  let tmp10 = null;
+  _slicedToArray(query.useState(null), 2);
+  const tmp6 = _slicedToArray;
+  if (null != data) {
+    tmp10 = null;
+    if (null != tmp4) {
+      tmp10 = { query: tmp4, results: data };
+      const obj3 = { query: tmp4, results: data };
+    }
+  }
   if (null == result) {
-    if (null != tmp7) {
-      tmp8(null);
+    if (null != tmp8) {
+      tmp9(null);
     }
   } else {
-    const tmp9 = null != data && data !== tmp7;
-    if (tmp9) {
-      tmp8(data);
+    let tmp11 = null != tmp10;
+    if (tmp11) {
+      let results1;
+      const results = tmp10.results;
+      if (tmp8 != null) {
+        results1 = tmp8.results;
+      }
+      tmp11 = results !== results1;
+    }
+    if (tmp11) {
+      tmp9(tmp10);
     }
   }
-  let tmp12 = null;
+  let tmp15 = null;
   if (null != result) {
-    if (data == null) {
-      data = tmp7;
+    if (tmp10 == null) {
+      tmp10 = tmp8;
     }
-    tmp12 = data;
+    tmp15 = tmp10;
   }
-  const obj2 = { results: tmp12, isLoading, error: tmp13 };
+  query = undefined;
+  if (tmp15 != null) {
+    query = tmp15.query;
+  }
+  if (query == null) {
+    query = null;
+  }
+  results2 = undefined;
+  if (tmp15 != null) {
+    results2 = tmp15.results;
+  }
+  if (results2 == null) {
+    results2 = null;
+  }
+  first = tmp6(obj2.useState(() => {
+    const gameSearchSession = new GameSearchSession.GameSearchSession(_require, profile);
+    return gameSearchSession;
+  }), 1)[0];
+  const items = [first, result];
+  const effect = obj2.useEffect(() => {
+    first.onQuery(c2);
+  }, items);
+  const items1 = [first, query, results2];
+  const effect1 = obj2.useEffect(() => {
+    const tmp2 = null != query && null != results2;
+    if (tmp2) {
+      first.onResults(query, results2);
+    }
+  }, items1);
+  const items2 = [first];
+  const effect2 = obj2.useEffect(() => first.end, items2);
+  const obj6 = { results: results2, isLoading, error: tmp22, onSelect: null, endSession: null };
   if (!isLoading) {
     isLoading = tmp4 !== result;
   }
-  tmp13 = null;
+  tmp22 = null;
   if (tmp4 === result) {
-    tmp13 = error;
+    tmp22 = error;
   }
-  return obj2;
+  ({ select: obj4.onSelect, end: obj4.endSession } = first);
+  return obj6;
 });
 let result = size.fileFinishedImporting("modules/games/autocomplete/useGameAutocomplete.tsx");
 

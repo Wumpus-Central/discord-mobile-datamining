@@ -1,17 +1,17 @@
-// === Module 12073: ChatInputCharCounter ===
+// === Module 12088: ChatInputCharCounter ===
 
-// Module 12073 (ChatInputCharCounter)
+// Module 12088 (ChatInputCharCounter)
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8818 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 8848 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -61,7 +61,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   }
   const tmpResult = analyticsLocations(504);
   const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-  const tmp9 = stateFromStores(8809)();
+  const tmp9 = stateFromStores(8839)();
   dependencyMap = tmp9;
   let result = tmp9 / 10;
   _slicedToArray = result;
@@ -95,7 +95,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
               const combined = "-" + first;
               if (cResult[13] !== combined) {
                 let obj2 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xxs/semibold", children: combined };
-                const tmp43 = closure_9(analyticsLocations(4886).Text, obj2);
+                const tmp43 = closure_9(analyticsLocations(4892).Text, obj2);
                 cResult[13] = combined;
                 cResult[14] = tmp43;
                 tmp41 = tmp43;
@@ -105,7 +105,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[15] !== stateFromStores) {
                 let tmp45 = null;
                 if (!stateFromStores) {
-                  tmp45 = closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+                  tmp45 = closure_9(analyticsLocations(8346).NitroWheelIcon, { size: "xs", color: "icon-muted" });
                 }
                 cResult[15] = stateFromStores;
                 cResult[16] = tmp45;
@@ -126,7 +126,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
               }
               let obj4 = { onPress: tmp19, style: tmp39, children: items1 };
               items1 = [tmp41, tmp44];
-              const tmp49 = closure_10(analyticsLocations(5909).PressableOpacity, obj4);
+              const tmp49 = closure_10(analyticsLocations(5916).PressableOpacity, obj4);
               cResult[17] = tmp19;
               cResult[18] = tmp39;
               cResult[19] = tmp41;
@@ -149,7 +149,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[25] !== -first) {
                 let obj5 = { color: "text-default", lineClamp: 1, variant: "text-xxs/semibold", children: -first };
-                const tmp32 = closure_9(analyticsLocations(4886).Text, obj5);
+                const tmp32 = closure_9(analyticsLocations(4892).Text, obj5);
                 cResult[25] = -first;
                 cResult[26] = tmp32;
                 tmp30 = tmp32;
@@ -159,7 +159,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[27] !== tmp15) {
                 let tmp34 = null;
                 if (tmp15) {
-                  tmp34 = closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+                  tmp34 = closure_9(analyticsLocations(8346).NitroWheelIcon, { size: "xs", color: "icon-muted" });
                 }
                 cResult[27] = tmp15;
                 cResult[28] = tmp34;
@@ -180,7 +180,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
               }
               let obj6 = { onPress: tmp19, style: tmp28, children: items3 };
               items3 = [tmp30, tmp33];
-              const tmp38 = closure_10(analyticsLocations(5909).PressableOpacity, obj6);
+              const tmp38 = closure_10(analyticsLocations(5916).PressableOpacity, obj6);
               cResult[29] = tmp19;
               cResult[30] = tmp28;
               cResult[31] = tmp30;
@@ -204,7 +204,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const _Symbol = Symbol;
                 if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmp23 = closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+                  const tmp23 = closure_9(analyticsLocations(8346).NitroWheelIcon, { size: "xs", color: "icon-muted" });
                   cResult[37] = tmp23;
                   tmp21 = tmp23;
                 } else {
@@ -218,7 +218,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
                   tmp27 = tmp24;
                 }
                 const obj7 = { onPress: tmp19, style: tmp20, children: tmp21 };
-                const tmp26 = closure_9(analyticsLocations(5909).PressableOpacity, obj7);
+                const tmp26 = closure_9(analyticsLocations(5916).PressableOpacity, obj7);
                 cResult[38] = tmp19;
                 cResult[39] = tmp20;
                 cResult[40] = tmp26;
@@ -307,7 +307,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     const obj = stateFromStores(maxLength[10]);
     return obj.canUseIncreasedMessageLength(currentUser.getCurrentUser());
   });
-  const tmp5 = stateFromStores(8809)();
+  const tmp5 = stateFromStores(8839)();
   dependencyMap = tmp5;
   let result = tmp5 / 10;
   _slicedToArray = result;
@@ -351,35 +351,35 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   if (first > 0) {
     let obj2 = { onPress: callback, style: items2, children: items3 };
     items2 = [tmp.container, style];
-    const PressableOpacity3 = analyticsLocations(5909).PressableOpacity;
+    const PressableOpacity3 = analyticsLocations(5916).PressableOpacity;
     let obj3 = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xxs/semibold", children: "-" + first };
     const _HermesInternal = HermesInternal;
-    const Text = analyticsLocations(4886).Text;
+    const Text = analyticsLocations(4892).Text;
     items3 = [closure_9(Text, obj3), ];
     let tmp20Result = null;
     if (!stateFromStores) {
-      tmp20Result = closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+      tmp20Result = closure_9(analyticsLocations(8346).NitroWheelIcon, { size: "xs", color: "icon-muted" });
     }
     items3[1] = tmp20Result;
     tmp16Result = closure_10(PressableOpacity3, obj2);
   } else if (first >= -result) {
     let obj4 = { onPress: callback, style: items4, children: items5 };
     items4 = [tmp.container, style];
-    const PressableOpacity2 = analyticsLocations(5909).PressableOpacity;
+    const PressableOpacity2 = analyticsLocations(5916).PressableOpacity;
     let obj5 = { color: "text-default", lineClamp: 1, variant: "text-xxs/semibold", children: -first };
-    items5 = [closure_9(analyticsLocations(4886).Text, obj5), ];
+    items5 = [closure_9(analyticsLocations(4892).Text, obj5), ];
     let tmp17Result = null;
     if (tmp11) {
-      tmp17Result = closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" });
+      tmp17Result = closure_9(analyticsLocations(8346).NitroWheelIcon, { size: "xs", color: "icon-muted" });
     }
     items5[1] = tmp17Result;
     tmp16Result = closure_10(PressableOpacity2, obj4);
   } else {
     tmp16Result = null;
     if (tmp11) {
-      let obj6 = { onPress: callback, style: items6, children: closure_9(analyticsLocations(8313).NitroWheelIcon, { size: "xs", color: "icon-muted" }) };
+      let obj6 = { onPress: callback, style: items6, children: closure_9(analyticsLocations(8346).NitroWheelIcon, { size: "xs", color: "icon-muted" }) };
       items6 = [tmp.container, style];
-      const PressableOpacity = analyticsLocations(5909).PressableOpacity;
+      const PressableOpacity = analyticsLocations(5916).PressableOpacity;
       tmp16Result = closure_9(PressableOpacity, obj6);
     }
   }

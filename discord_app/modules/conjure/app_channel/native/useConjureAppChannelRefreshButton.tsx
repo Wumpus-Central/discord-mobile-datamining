@@ -1,8 +1,8 @@
-// === Module 13094: useConjureAppChannelRefreshButton ===
+// === Module 13113: useConjureAppChannelRefreshButton ===
 
-// Module 13094 (useConjureAppChannelRefreshButton)
-import _modDef3723 from "module_3723" /* 3723 */;
-import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 8977 */;
+// Module 13113 (useConjureAppChannelRefreshButton)
+import _modDef3753 from "module_3753" /* 3753 */;
+import restartConjureAppFramesDefault from "restartConjureAppFrames" /* 9010 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -42,14 +42,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) =>
       const _Symbol = Symbol;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef3723["p4B/7M"]);
+        const stringResult = intl.string(_modDef3753["p4B/7M"]);
         cResult[2] = stringResult;
         tmp10 = stringResult;
       } else {
         tmp10 = cResult[2];
       }
       if (cResult[3] !== tmp8) {
-        const obj3 = { source: null, IconComponent: tmp(11364).RetryIcon, onPress: tmp8, accessibilityLabel: tmp10 };
+        const obj3 = { source: null, IconComponent: tmp(11377).RetryIcon, onPress: tmp8, accessibilityLabel: tmp10 };
         cResult[3] = tmp8;
         cResult[4] = obj3;
         tmp13 = obj3;
@@ -73,7 +73,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) =>
     if (!tmp5) {
       const obj2 = {
         source: null,
-        IconComponent: tmp(11364).RetryIcon,
+        IconComponent: tmp(11377).RetryIcon,
         onPress() {
               application_id = application_id.application_id;
               const tmp = restartConjureAppFramesDefault;
@@ -82,7 +82,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((application_id) =>
               }
               return tmp(application_id);
             },
-        accessibilityLabel: intl.string(_modDef3723["p4B/7M"])
+        accessibilityLabel: intl.string(_modDef3753["p4B/7M"])
       };
       intl = tmp(1126).intl;
       tmp6 = obj2;

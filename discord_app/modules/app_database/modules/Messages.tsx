@@ -1,17 +1,17 @@
-// === Module 6986: modules/Messages ===
+// === Module 6999: modules/Messages ===
 
-// Module 6986 (modules/Messages)
+// Module 6999 (modules/Messages)
 import LoggerDefault from "Logger" /* 3 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
 import _mod2079 from "module_2079" /* 2079 */;
-import requireSortedDescending from "requireSortedDescending" /* 5435 */;
-import isReadableChannel from "isReadableChannel" /* 6993 */;
-import KvMessage2 from "KvMessage" /* 6996 */;
+import requireSortedDescending from "requireSortedDescending" /* 5442 */;
+import isReadableChannel from "isReadableChannel" /* 7006 */;
+import KvMessage2 from "KvMessage" /* 7009 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import SaveableChannelsStore from "SaveableChannelsStore" /* 6987 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7000 */;
 import size from "module_2" /* 2 */;
 
 let c2, c3, dependencyMap, importDefault;
@@ -371,18 +371,21 @@ class Messages {
     }
     messagesTransactionResult.trimChannel(guild_id, channelId, SaveableChannelsStore.saveLimit(channelId));
   }
-  replaceChannel(arg0, channelId, arr, database) {
+  replaceChannel(arg0, channelId, arg2, database) {
     let closure_2;
     let closure_0 = arg0;
     importDefault = channelId;
-    const obj = DatabaseDaosDefault;
+    let obj = DatabaseDaosDefault;
     const messagesTransactionResult = obj.messagesTransaction(database);
     dependencyMap = GatewayConnectionStore.lastTimeConnectedChanged();
+    const items = [];
     const saveLimitResult = SaveableChannelsStore.saveLimit(channelId);
-    let substr = arr;
-    if (arr.length > saveLimitResult) {
-      substr = arr.slice(arr.length - saveLimitResult);
-    }
+    HermesBuiltin.arraySpread(items, arg2, 0);
+    const sorted = items.sort((id, id2) => {
+      const obj = channelId(closure_2[11]);
+      return obj.compare(id2.id, id.id);
+    });
+    const substr = sorted.slice(0, saveLimitResult);
     messagesTransactionResult.replaceChannel(arg0, channelId, substr.map((item) => {
       const KvMessage = KvMessage2.KvMessage;
       return KvMessage.fromMessage(closure_0, channelId, item, closure_2);

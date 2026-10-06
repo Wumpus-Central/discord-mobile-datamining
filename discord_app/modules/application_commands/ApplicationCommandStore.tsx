@@ -1,11 +1,11 @@
-// === Module 7408: ApplicationCommandStore ===
+// === Module 7419: ApplicationCommandStore ===
 
-// Module 7408 (ApplicationCommandStore)
+// Module 7419 (ApplicationCommandStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7030 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6783 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6793 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 9717: useMyCurrentStageChannelRole ===
+// === Module 9730: useMyCurrentStageChannelRole ===
 
-// Module 9717 (useMyCurrentStageChannelRole)
+// Module 9730 (useMyCurrentStageChannelRole)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5578 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

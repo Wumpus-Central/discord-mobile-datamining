@@ -1,14 +1,14 @@
-// === Module 12546: MessageRequestNotification ===
+// === Module 12561: MessageRequestNotification ===
 
-// Module 12546 (MessageRequestNotification)
+// Module 12561 (MessageRequestNotification)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12479 */;
-import MessagePreviewText from "MessagePreviewText" /* 12486 */;
-import Notification from "Notification" /* 12516 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12494 */;
+import MessagePreviewText from "MessagePreviewText" /* 12501 */;
+import Notification from "Notification" /* 12531 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -58,7 +58,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((notification) => {
     }
     if (cResult[6] !== author) {
       const Avatar = native.Avatar;
-      const tmp11 = <Avatar user={author} size={native.AvatarSizes.NORMAL} guildId="r" />;
+      const tmp11 = <Avatar user={author} size={native.AvatarSizes.NORMAL} guildId="Array" />;
       cResult[6] = author;
       cResult[7] = tmp11;
       tmp9 = tmp11;
@@ -119,11 +119,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((notification) => {
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
-  const NotificationPressable = author(12516).NotificationPressable;
-  let obj2 = { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "r" };
+  const NotificationPressable = author(12531).NotificationPressable;
+  let obj2 = { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "Array" };
   const Avatar = author(1188).Avatar;
   ({ text: intl.string(author(1126).t["Bx4/Lf"]) });
-  const SystemMessageText = author(12486).SystemMessageText;
+  const SystemMessageText = author(12501).SystemMessageText;
   intl = author(1126).intl;
   return <NotificationPressable icon={null} header={memo} onPress={callback} notification={notification}>{null}</NotificationPressable>;
 });

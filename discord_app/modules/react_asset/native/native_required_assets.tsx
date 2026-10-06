@@ -1,8 +1,8 @@
-// === Module 18101: native_required_assets ===
+// === Module 18146: native_required_assets ===
 
-// Module 18101 (native_required_assets)
-import native_required_assets_icons from "native_required_assets_icons" /* 18102 */;
-import native_required_assets_misc from "native_required_assets_misc" /* 18108 */;
+// Module 18146 (native_required_assets)
+import native_required_assets_icons from "native_required_assets_icons" /* 18147 */;
+import native_required_assets_misc from "native_required_assets_misc" /* 18154 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

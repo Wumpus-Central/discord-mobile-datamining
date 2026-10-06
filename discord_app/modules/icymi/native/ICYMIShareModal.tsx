@@ -1,6 +1,6 @@
-// === Module 16446: ICYMIShareModal ===
+// === Module 16486: ICYMIShareModal ===
 
-// Module 16446 (ICYMIShareModal)
+// Module 16486 (ICYMIShareModal)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,23 +9,23 @@ import intl3 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6471 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import ShareEventUtils from "ShareEventUtils" /* 9264 */;
-import UserRowConstants from "UserRowConstants" /* 10592 */;
-import SearchableDestinationListDefault from "SearchableDestinationList" /* 10714 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11319 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11330 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import ShareEventUtils from "ShareEventUtils" /* 9299 */;
+import UserRowConstants from "UserRowConstants" /* 10605 */;
+import SearchableDestinationListDefault from "SearchableDestinationList" /* 10727 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11332 */;
+import ShareChatInputDefault from "ShareChatInput" /* 11343 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -902,7 +902,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  const Header = title(6019).Header;
+  const Header = title(6026).Header;
   let obj3 = title(1369);
   num = 0;
   const tmp12 = title;
@@ -910,7 +910,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((title) => {
     num = rect.top;
   }
   ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp6);
-  tmp12Result = tmp12(6010);
+  tmp12Result = tmp12(6017);
   items1 = [closure_11(Header, obj4), , ];
   let obj5 = { rowMode: UserRowModes.TOGGLE, onSelectedDestinationChange: tmp2, originDestination: originDestinationId, insetEnd: sum + nativeDefault.space.PX_96, disableGradient: true, disableStickySections: true };
   let tmp7Result = SearchableDestinationListDefault;

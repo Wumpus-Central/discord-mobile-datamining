@@ -1,12 +1,12 @@
-// === Module 9085: IgnoreThermalStateAlert ===
+// === Module 9121: IgnoreThermalStateAlert ===
 
-// Module 9085 (IgnoreThermalStateAlert)
-import AlertDefault from "Alert" /* 5783 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 8993 */;
+// Module 9121 (IgnoreThermalStateAlert)
+import AlertDefault from "Alert" /* 5790 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9026 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -86,7 +86,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
   }
   if (cResult[8] !== tmp9.header) {
     const obj2 = { style: header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp15 };
-    const tmp19 = closure_5(tmp(4886).Text, obj2);
+    const tmp19 = closure_5(tmp(4892).Text, obj2);
     cResult[8] = tmp9.header;
     cResult[9] = tmp19;
     tmp17 = tmp19;
@@ -104,7 +104,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
   }
   if (cResult[11] !== tmp9.text) {
     const obj3 = { style: text, variant: "text-md/medium", children: tmp20 };
-    const tmp24 = closure_5(tmp(4886).Text, obj3);
+    const tmp24 = closure_5(tmp(4892).Text, obj3);
     cResult[11] = tmp9.text;
     cResult[12] = tmp24;
     tmp22 = tmp24;
@@ -159,11 +159,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
   intl = onConfirm(1126).intl;
   intl2 = onConfirm(1126).intl;
   const obj2 = { style: tmp2.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: intl3.string(onConfirm(1126).t.v5X4fZ) };
-  const Text = onConfirm(4886).Text;
+  const Text = onConfirm(4892).Text;
   intl3 = onConfirm(1126).intl;
   items = [closure_5(Text, obj2), ];
   const obj3 = { style: tmp2.text, variant: "text-md/medium", children: intl4.string(onConfirm(1126).t.VOgTjy) };
-  const Text2 = onConfirm(4886).Text;
+  const Text2 = onConfirm(4892).Text;
   intl4 = onConfirm(1126).intl;
   items[1] = closure_5(Text2, obj3);
   return closure_6(tmp3, obj);

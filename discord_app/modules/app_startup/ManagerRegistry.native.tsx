@@ -1,7 +1,7 @@
-// === Module 17440: ManagerRegistry ===
+// === Module 17469: ManagerRegistry ===
 
-// Module 17440 (ManagerRegistry)
-import ManagerRegistryShared from "ManagerRegistryShared" /* 18088 */;
+// Module 17469 (ManagerRegistry)
+import ManagerRegistryShared from "ManagerRegistryShared" /* 18133 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -683,7 +683,7 @@ const obj = {
     neverLoadBeforeConnectionOpen: true
   },
   NativeNotificationsManager: {
-    actions: ["MESSAGE_ACK", "CHANNEL_SELECT", "POST_CONNECTION_OPEN", "EXPERIMENT_OVERRIDE_BUCKET", "EXPERIMENTS_FETCH_SUCCESS", "APP_STATE_UPDATE"],
+    actions: ["MESSAGE_ACK", "CHANNEL_SELECT", "POST_CONNECTION_OPEN", "EXPERIMENT_OVERRIDE_BUCKET", "EXPERIMENTS_FETCH_SUCCESS"],
     inlineRequire() {
       return require("NativeNotificationsManager").default;
     },

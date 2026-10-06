@@ -1,11 +1,11 @@
-// === Module 8886: PremiumGroupWordmark ===
+// === Module 8915: PremiumGroupWordmark ===
 
-// Module 8886 (PremiumGroupWordmark)
+// Module 8915 (PremiumGroupWordmark)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken2 from "useToken" /* 4580 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
+import useToken2 from "useToken" /* 4586 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,8 +1,8 @@
-// === Module 8017: ContentInventoryTypes ===
+// === Module 8027: ContentInventoryTypes ===
 
-// Module 8017 (ContentInventoryTypes)
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7813 */;
-import PlatformType from "PlatformType" /* 8018 */;
+// Module 8027 (ContentInventoryTypes)
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7824 */;
+import PlatformType from "PlatformType" /* 8028 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");

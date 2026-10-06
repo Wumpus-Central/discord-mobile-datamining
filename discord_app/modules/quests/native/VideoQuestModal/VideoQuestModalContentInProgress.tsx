@@ -1,42 +1,42 @@
-// === Module 14934: VideoQuestModalContentInProgress ===
+// === Module 14949: VideoQuestModalContentInProgress ===
 
-// Module 14934 (VideoQuestModalContentInProgress)
+// Module 14949 (VideoQuestModalContentInProgress)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import intl5 from "intl" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import native from "native" /* 4589 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import timing from "timing" /* 4891 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import Pressables from "Pressables" /* 5909 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import captureAdUserAction2 from "captureAdUserAction" /* 7213 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7224 */;
-import MoreHorizontalIcon2 from "MoreHorizontalIcon" /* 7577 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 7941 */;
-import showShareActionSheet2 from "showShareActionSheet" /* 8038 */;
-import AssetUtils from "AssetUtils" /* 10000 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10010 */;
-import QuestUtils from "QuestUtils" /* 10908 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10911 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10940 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 14897 */;
-import VideoQuestPlayer2 from "VideoQuestPlayer" /* 14937 */;
+import native from "native" /* 4595 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import timing from "timing" /* 4897 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import Pressables from "Pressables" /* 5916 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import captureAdUserAction2 from "captureAdUserAction" /* 7226 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7237 */;
+import MoreHorizontalIcon2 from "MoreHorizontalIcon" /* 7588 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 7952 */;
+import showShareActionSheet2 from "showShareActionSheet" /* 8048 */;
+import AssetUtils from "AssetUtils" /* 10013 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 10023 */;
+import QuestUtils from "QuestUtils" /* 10921 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10924 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10953 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 14913 */;
+import VideoQuestPlayer2 from "VideoQuestPlayer" /* 14952 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
 import Fragment from "Fragment" /* 21 */;
 import module_683_mod from "module_683" /* 683 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -165,8 +165,8 @@ let closure_32 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
   }
   const tmp6 = closure_23(first);
   if (cResult[1] !== quest) {
-    const tmpResult7 = isFullscreen(10000);
-    const questAsset = tmpResult7.getQuestAsset(quest, isFullscreen(10000).QuestAssetType.HERO);
+    const tmpResult7 = isFullscreen(10013);
+    const questAsset = tmpResult7.getQuestAsset(quest, isFullscreen(10013).QuestAssetType.HERO);
     cResult[1] = quest;
     cResult[2] = questAsset;
   }
@@ -214,7 +214,7 @@ let closure_32 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
         closure_3(nativeDefault.space.PX_24 + nativeEvent.nativeEvent.layout.height);
       }
     }
-    const md = isFullscreen(14935).QUEST_PROGRESS_DIAMETER_BY_SIZE.md;
+    const md = isFullscreen(14950).QUEST_PROGRESS_DIAMETER_BY_SIZE.md;
     if (tmp14 == null) {
       class J {
         constructor(nativeEvent) {
@@ -224,7 +224,7 @@ let closure_32 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     }
     const sum = md + tmp14;
     const sum1 = sum + 2 * setIsFullscreen(587).space.PX_16;
-    const tmpResult8 = isFullscreen(4612);
+    const tmpResult8 = isFullscreen(4618);
     const sharedValue = tmpResult8.useSharedValue(0);
     if (cResult[8] !== sharedValue) {
       class J {
@@ -253,9 +253,9 @@ let closure_32 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
       const obj2 = { duration };
       return withDelay(c15, obj.withTiming(sharedValue.get(), obj2));
     }
-    let obj2 = { withDelay: isFullscreen(4612).withDelay, LOGO_REWARD_TRANSITION_DELAY_MS, withTiming: isFullscreen(4891).withTiming, isComponentMounted: sharedValue, LOGO_REWARD_TRANSITION_DURATION_MS };
-    const useDerivedValue = isFullscreen(4612).useDerivedValue;
-    isFullscreen(4612);
+    let obj2 = { withDelay: isFullscreen(4618).withDelay, LOGO_REWARD_TRANSITION_DELAY_MS, withTiming: isFullscreen(4897).withTiming, isComponentMounted: sharedValue, LOGO_REWARD_TRANSITION_DURATION_MS };
+    const useDerivedValue = isFullscreen(4618).useDerivedValue;
+    isFullscreen(4618);
     he.__closure = obj2;
     he.__workletHash = 12561024953493;
     he.__initData = __initData;
@@ -268,7 +268,7 @@ let closure_32 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     ge.__closure = obj3;
     ge.__workletHash = 17463485679217;
     ge.__initData = __initData2;
-    const tmpResult10 = isFullscreen(4612);
+    const tmpResult10 = isFullscreen(4618);
     const animatedStyle = tmpResult10.useAnimatedStyle(ge);
     function _e() {
       const obj = { opacity: 1 - derivedValue.get() };
@@ -278,7 +278,7 @@ let closure_32 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     _e.__closure = obj5;
     _e.__workletHash = 9103187579788;
     _e.__initData = __initData3;
-    const tmpResult11 = isFullscreen(4612);
+    const tmpResult11 = isFullscreen(4618);
     const animatedStyle1 = tmpResult11.useAnimatedStyle(_e);
     function ye() {
       let pointerEvents = "none";
@@ -291,7 +291,7 @@ let closure_32 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     ye.__closure = obj6;
     ye.__workletHash = 6340268991801;
     ye.__initData = __initData4;
-    const tmpResult12 = isFullscreen(4612);
+    const tmpResult12 = isFullscreen(4618);
     const animatedProps = tmpResult12.useAnimatedProps(ye);
     setIsFullscreen(1618)();
     if (cResult[11] === isFullscreen) {
@@ -343,7 +343,7 @@ let closure_32 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
           closure_3(nativeDefault.space.PX_24 + nativeEvent.nativeEvent.layout.height);
         }
       }
-      if (diff < isFullscreen(14935).QUEST_PROGRESS_DIAMETER_BY_SIZE.lg + tmp14) {
+      if (diff < isFullscreen(14950).QUEST_PROGRESS_DIAMETER_BY_SIZE.lg + tmp14) {
         class J {
           constructor(nativeEvent) {
             closure_3(nativeDefault.space.PX_24 + nativeEvent.nativeEvent.layout.height);
@@ -1019,7 +1019,7 @@ const memoResult = react.memo(function VideoQuestModalContentInProgress(arg0) {
   let videoQuestClickCtaAndMaybeCloseModal;
   ({ onClose, sourceQuestContent } = arg0);
   ({ contentWidth, isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen } = arg0);
-  let obj = sourceQuestContent(14930);
+  let obj = sourceQuestContent(14945);
   const quest = obj.useVideoQuestModalContext().quest;
   items = [quest];
   items1 = [quest];
@@ -1039,14 +1039,14 @@ const memoResult = react.memo(function VideoQuestModalContentInProgress(arg0) {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     ActionSheetActionCreatorsDefault;
     const obj = { quest };
-    const tmp2 = asyncRequire(14958, dependencyMap.paths);
+    const tmp2 = asyncRequire(14973, dependencyMap.paths);
     openLazy(tmp2, "transcript-" + quest.id, obj);
   }, items2);
-  let obj2 = sourceQuestContent(10916);
+  let obj2 = sourceQuestContent(10929);
   const getQuestImpressionId = obj2.useGetQuestImpressionId();
   [tmp11, _objectWithoutProperties] = videoQuestClickCtaAndMaybeCloseModal.useState(false);
   _slicedToArray(videoQuestClickCtaAndMaybeCloseModal.useState(false), 2);
-  let obj3 = sourceQuestContent(7206);
+  let obj3 = sourceQuestContent(7219);
   const isShareableQuestResult = obj3.isShareableQuest(quest.config);
   _slicedToArray = isShareableQuestResult;
   const items3 = [isShareableQuestResult, quest.id, getQuestImpressionId, sourceQuestContent];
@@ -1082,7 +1082,7 @@ const memoResult = react.memo(function VideoQuestModalContentInProgress(arg0) {
       showShareActionSheet(obj4, "Video Quest Modal - " + tmp5.id);
     }
   }, items3);
-  let obj4 = sourceQuestContent(14959);
+  let obj4 = sourceQuestContent(14974);
   videoQuestClickCtaAndMaybeCloseModal = obj4.useVideoQuestClickCtaAndMaybeCloseModal({ quest, onClose, sourceQuestContent });
   const items4 = [videoQuestClickCtaAndMaybeCloseModal];
   const items5 = [videoQuestClickCtaAndMaybeCloseModal];
@@ -1094,12 +1094,12 @@ const memoResult = react.memo(function VideoQuestModalContentInProgress(arg0) {
     const obj2 = { questId: quest.id };
     const result = obj.openRewardDetailsBottomSheet(obj2);
   }, items6);
-  const obj5 = sourceQuestContent(14960);
+  const obj5 = sourceQuestContent(14975);
   const videoExternallyPaused = obj5.useVideoExternallyPaused(quest.id, tmp11);
-  const tmp19 = quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5631).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+  const tmp19 = quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5638).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   let tmp20 = null == tmp19;
   if (!tmp20) {
-    const tmpResult = sourceQuestContent(10940);
+    const tmpResult = sourceQuestContent(10953);
     tmp20 = "portrait" === tmpResult.getVideoOrientation(tmp19);
   }
   const obj6 = { quest, captionsEnabled: tmp6, contentWidth, handleClose: onClose, handleAdvertiserDetailsPress: callback3, handlePrimaryCtaPress: callback4, handleRewardDetailsPress: callback5, handleShareQuest: callback2, handleOpenTranscript: callback1, handleToggleCaptions: callback, isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen, externallyPaused: videoExternallyPaused, sourceQuestContent, hasCaptionAsset: null != memo, hasTranscriptAsset: null != memo1, isShareable: isShareableQuestResult };

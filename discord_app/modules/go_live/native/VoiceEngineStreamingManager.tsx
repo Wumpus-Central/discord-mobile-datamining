@@ -1,6 +1,6 @@
-// === Module 5031: VoiceEngineStreamingManager ===
+// === Module 5037: VoiceEngineStreamingManager ===
 
-// Module 5031 (VoiceEngineStreamingManager)
+// Module 5037 (VoiceEngineStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import react_native from "react-native" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -12,12 +12,12 @@ import inject from "inject" /* 2001 */;
 import Constants2 from "Constants" /* 2011 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import Timers from "Timers" /* 2046 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import StreamActionCreators from "StreamActionCreators" /* 5032 */;
-import PushNotificationDefault from "PushNotification" /* 8966 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 9631 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import StreamActionCreators from "StreamActionCreators" /* 5038 */;
+import PushNotificationDefault from "PushNotification" /* 8995 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 9644 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import Constants from "Constants" /* 1085 */;

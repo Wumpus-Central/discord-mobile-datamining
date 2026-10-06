@@ -1,6 +1,6 @@
-// === Module 17522: ActionRowLayoutComponent ===
+// === Module 17567: ActionRowLayoutComponent ===
 
-// Module 17522 (ActionRowLayoutComponent)
+// Module 17567 (ActionRowLayoutComponent)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;

@@ -1,12 +1,12 @@
-// === Module 9171: useCanCreateAnEvent ===
+// === Module 9206: useCanCreateAnEvent ===
 
-// Module 9171 (useCanCreateAnEvent)
+// Module 9206 (useCanCreateAnEvent)
 import Constants from "Constants" /* 1085 */;
-import GuildChannelStore2 from "GuildChannelStore" /* 4507 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9169 */;
+import GuildChannelStore2 from "GuildChannelStore" /* 4513 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9204 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

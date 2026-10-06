@@ -1,19 +1,19 @@
-// === Module 13554: ActivityTrackingStore ===
+// === Module 13570: ActivityTrackingStore ===
 
-// Module 13554 (ActivityTrackingStore)
+// Module 13570 (ActivityTrackingStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 5019 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11133 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 5025 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11146 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import DetectableGameStore from "DetectableGameStore" /* 2024 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 6902 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 6912 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import size from "module_2" /* 2 */;
 

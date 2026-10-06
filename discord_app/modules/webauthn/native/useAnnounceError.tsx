@@ -1,7 +1,7 @@
-// === Module 14595: useAnnounceError ===
+// === Module 14611: useAnnounceError ===
 
-// Module 14595 (useAnnounceError)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
+// Module 14611 (useAnnounceError)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

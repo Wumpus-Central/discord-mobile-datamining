@@ -1,15 +1,15 @@
-// === Module 17201: VoicePanelContainer ===
+// === Module 17230: VoicePanelContainer ===
 
-// Module 17201 (VoicePanelContainer)
+// Module 17230 (VoicePanelContainer)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import _slicedToArray from "_slicedToArray" /* 4492 */;
-import native from "native" /* 4589 */;
-import VoicePanelUIDefault from "VoicePanelUI" /* 17202 */;
-import VoicePanelControllerDefault from "VoicePanelController" /* 17363 */;
+import _slicedToArray from "_slicedToArray" /* 4498 */;
+import native from "native" /* 4595 */;
+import VoicePanelUIDefault from "VoicePanelUI" /* 17231 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 17392 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import VoicePanelStore from "VoicePanelStore" /* 5098 */;
+import VoicePanelStore from "VoicePanelStore" /* 5104 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

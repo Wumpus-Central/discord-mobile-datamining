@@ -1,22 +1,22 @@
-// === Module 11822: PortalKeyboardBottomSheet ===
+// === Module 11836: PortalKeyboardBottomSheet ===
 
-// Module 11822 (PortalKeyboardBottomSheet)
+// Module 11836 (PortalKeyboardBottomSheet)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
-import BottomSheetModal from "BottomSheetModal" /* 6112 */;
-import native from "native" /* 8567 */;
-import isChannelFocused from "isChannelFocused" /* 11825 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
+import BottomSheetModal from "BottomSheetModal" /* 6119 */;
+import native from "native" /* 8602 */;
+import isChannelFocused from "isChannelFocused" /* 11839 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import NativeMenuStore from "NativeMenuStore" /* 9612 */;
+import NativeMenuStore from "NativeMenuStore" /* 9625 */;
 import Fragment from "Fragment" /* 21 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

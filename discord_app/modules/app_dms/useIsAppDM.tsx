@@ -1,6 +1,6 @@
-// === Module 11769: useIsAppDM ===
+// === Module 11783: useIsAppDM ===
 
-// Module 11769 (useIsAppDM)
+// Module 11783 (useIsAppDM)
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

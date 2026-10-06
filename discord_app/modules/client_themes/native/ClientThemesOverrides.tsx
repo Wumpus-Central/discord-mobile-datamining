@@ -1,11 +1,11 @@
-// === Module 7507: ClientThemesOverrides ===
+// === Module 7518: ClientThemesOverrides ===
 
-// Module 7507 (ClientThemesOverrides)
+// Module 7518 (ClientThemesOverrides)
 import react2 from "react" /* 576 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4696 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7508 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4702 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7519 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

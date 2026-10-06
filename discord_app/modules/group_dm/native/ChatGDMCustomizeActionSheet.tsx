@@ -1,10 +1,10 @@
-// === Module 10657: ChatGDMCustomizeActionSheet ===
+// === Module 10670: ChatGDMCustomizeActionSheet ===
 
-// Module 10657 (ChatGDMCustomizeActionSheet)
+// Module 10670 (ChatGDMCustomizeActionSheet)
 import Fragment from "Fragment" /* 21 */;
-import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10658 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10661 */;
-import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10663 */;
+import useNavigatorConfirmChangesOnBackDefault from "useNavigatorConfirmChangesOnBack" /* 10671 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10674 */;
+import ChatGDMCustomizeDefault from "ChatGDMCustomize" /* 10676 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

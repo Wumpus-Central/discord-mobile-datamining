@@ -1,14 +1,14 @@
-// === Module 17240: useSoundboardSoundLock ===
+// === Module 17269: useSoundboardSoundLock ===
 
-// Module 17240 (useSoundboardSoundLock)
+// Module 17269 (useSoundboardSoundLock)
 import intl3 from "intl" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4825 */;
-import SoundboardConstants from "SoundboardConstants" /* 5682 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7480 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7483 */;
-import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 17241 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4831 */;
+import SoundboardConstants from "SoundboardConstants" /* 5689 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7491 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7494 */;
+import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 17270 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

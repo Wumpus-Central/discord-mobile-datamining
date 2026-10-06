@@ -1,19 +1,19 @@
-// === Module 8490: LimitedTimeBadge ===
+// === Module 8523: LimitedTimeBadge ===
 
-// Module 8490 (LimitedTimeBadge)
+// Module 8523 (LimitedTimeBadge)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
-import shared from "shared" /* 4729 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useCountdownDefault from "useCountdown" /* 6948 */;
+import shared from "shared" /* 4735 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useCountdownDefault from "useCountdown" /* 6961 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

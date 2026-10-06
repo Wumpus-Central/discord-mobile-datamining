@@ -1,12 +1,12 @@
-// === Module 7084: FeaturedBlockRecord ===
+// === Module 7097: FeaturedBlockRecord ===
 
-// Module 7084 (FeaturedBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7083 */;
-import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord" /* 7085 */;
-import FeaturedSubblockType from "FeaturedSubblockType" /* 7086 */;
+// Module 7097 (FeaturedBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7096 */;
+import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord" /* 7098 */;
+import FeaturedSubblockType from "FeaturedSubblockType" /* 7099 */;
 import size from "module_2" /* 2 */;
 
-const f94193 = (type) => {
+const f94333 = (type) => {
   let fromServerResult;
   if (type.type === FeaturedSubblockType.FeaturedSubblockType.CATEGORY) {
     fromServerResult = closure_1_2.fromServer(type);
@@ -22,7 +22,7 @@ class FeaturedBlockRecord {
     const obj = Object.create(new.target.prototype);
     obj.type = ShopBlockType.ShopBlockType.FEATURED;
     subblocks = subblocks.subblocks;
-    obj.subblocks = subblocks.map(f94193);
+    obj.subblocks = subblocks.map(f94333);
     return obj;
   }
   static fromServer(subblocks) {
@@ -30,7 +30,7 @@ class FeaturedBlockRecord {
       const obj = Object.create(tmp.prototype);
       obj.type = ShopBlockType.ShopBlockType.FEATURED;
       subblocks = subblocks.subblocks;
-      obj.subblocks = subblocks.map(f94193);
+      obj.subblocks = subblocks.map(f94333);
       return obj;
     } else {
       throw new TypeError("Trying to call a non-function");

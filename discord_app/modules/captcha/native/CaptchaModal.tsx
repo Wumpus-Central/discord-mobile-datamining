@@ -1,21 +1,21 @@
-// === Module 17426: CaptchaModal ===
+// === Module 17455: CaptchaModal ===
 
-// Module 17426 (CaptchaModal)
+// Module 17455 (CaptchaModal)
 import intl4 from "intl" /* 1126 */;
 import Link from "Link" /* 1491 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5407 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15867 */;
-import CaptchaUtilsDefault from "CaptchaUtils" /* 17428 */;
-import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 17431 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5414 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
+import CaptchaUtilsDefault from "CaptchaUtils" /* 17457 */;
+import DisguiseSpotIllustration from "DisguiseSpotIllustration" /* 17460 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import RegistrationConstants from "RegistrationConstants" /* 15868 */;
+import RegistrationConstants from "RegistrationConstants" /* 15907 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -121,8 +121,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify) =
         result = obj.emitCaptchaDistributionMetric(userflow);
         obj2 = closure_1(closure_2[12]);
         showCaptchaResult = obj2.showCaptcha(captchaService, sitekey, rqdata);
-        nextPromise = showCaptchaResult.then(() => { /* body not rendered: F148580 */ });
-        catchPromise = nextPromise.catch(() => { /* body not rendered: F148581 */ });
+        nextPromise = showCaptchaResult.then(() => { /* body not rendered: F148805 */ });
+        catchPromise = nextPromise.catch(() => { /* body not rendered: F148806 */ });
         return;
       }
     }
@@ -155,7 +155,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify) =
   let require;
   ({ onCaptchaVerify: require, onReject } = arg0);
   ({ close: dependencyMap, sitekey: react, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
-  const tmp2 = closure_11(onReject(6432)());
+  const tmp2 = closure_11(onReject(6439)());
   let obj = Link;
   navigation = obj.useNavigation();
   const items = [navigation];
@@ -177,7 +177,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onCaptchaVerify) =
     }
     return str;
   }, items);
-  let closure_9 = onReject(17427)({ onReject, analyticsType: memo });
+  let closure_9 = onReject(17456)({ onReject, analyticsType: memo });
   const effect = react.useEffect(() => {
     closure_4.dismiss();
   }, []);

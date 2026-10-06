@@ -1,14 +1,14 @@
-// === Module 16993: useVoiceChannelAppOptions ===
+// === Module 17019: useVoiceChannelAppOptions ===
 
-// Module 16993 (useVoiceChannelAppOptions)
+// Module 17019 (useVoiceChannelAppOptions)
 import react2 from "react" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
-import ConjureUtils from "ConjureUtils" /* 6746 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 8700 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
+import ConjureUtils from "ConjureUtils" /* 6756 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 8735 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 8699 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 8734 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -16,7 +16,7 @@ const require = globalThis.__r;
 const useGetOrFetchApplicationsDefault = useGetOrFetchApplications;
 let _require, importDefault, map, name, set;
 
-const f127899 = (application_id) => application_id.application_id;
+const f128075 = (application_id) => application_id.application_id;
 function voiceChannelAppCandidates(stateFromStoresArray, stateFromStoresArray1, guildId) {
   map = new Map();
   const items = [...stateFromStoresArray1];
@@ -272,7 +272,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function(guildId
             }
           }
           let obj3 = { hasRows: arr8.length > 0, loadFailed: "error" === stateFromStores || tmp31, fetchPhase: str };
-          const tmpResult6 = tmp(16994);
+          const tmpResult6 = tmp(17020);
           const result = tmpResult6.voiceChannelAppListState(obj3);
           cResult[31] = str;
           cResult[32] = "error" === stateFromStores || tmp31;
@@ -294,7 +294,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function(guildId
         const obj = closure_2_0(stateFromStoresArray1[5]);
         return !obj.isEmbeddedApplication(closure_0[index]);
       });
-      const mapped1 = found1.map(f127899);
+      const mapped1 = found1.map(f128075);
       cResult[18] = arr5;
       cResult[19] = tmp21;
       cResult[20] = mapped1;
@@ -351,7 +351,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function(guildId
       const obj = closure_2_0(stateFromStoresArray1[5]);
       return !obj.isEmbeddedApplication(closure_0[index]);
     });
-    return found.map(f127899);
+    return found.map(f128075);
   }, items6);
   const items7 = [memo2];
   const effect1 = react.useEffect(() => {
@@ -608,7 +608,7 @@ function voiceChannelAppIdsToFetch(arr, arg1) {
     const obj = closure_2_0(stateFromStoresArray1[5]);
     return !obj.isEmbeddedApplication(closure_0[index]);
   });
-  return found.map(f127899);
+  return found.map(f128075);
 }
 let result = size.fileFinishedImporting("modules/voice_channel_apps/useVoiceChannelAppOptions.tsx");
 

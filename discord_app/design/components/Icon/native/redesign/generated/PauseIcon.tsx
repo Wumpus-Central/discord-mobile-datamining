@@ -1,11 +1,11 @@
-// === Module 7950: PauseIcon ===
+// === Module 7961: PauseIcon ===
 
-// Module 7950 (PauseIcon)
+// Module 7961 (PauseIcon)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage2 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 7951 */;
+import BaseIconImage2 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 7962 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

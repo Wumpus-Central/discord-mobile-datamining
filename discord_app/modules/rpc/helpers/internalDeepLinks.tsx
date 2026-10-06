@@ -1,8 +1,8 @@
-// === Module 14323: internalDeepLinks ===
+// === Module 14341: internalDeepLinks ===
 
-// Module 14323 (internalDeepLinks)
+// Module 14341 (internalDeepLinks)
 import URLUtilsDefault from "URLUtils" /* 1371 */;
-import openURL from "openURL" /* 4559 */;
+import openURL from "openURL" /* 4565 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

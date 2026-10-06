@@ -1,12 +1,12 @@
-// === Module 6768: MemberSafetyPermissionsUtils ===
+// === Module 6778: MemberSafetyPermissionsUtils ===
 
-// Module 6768 (MemberSafetyPermissionsUtils)
+// Module 6778 (MemberSafetyPermissionsUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
-import MemberSafetyConstants from "MemberSafetyConstants" /* 4513 */;
+import MemberSafetyConstants from "MemberSafetyConstants" /* 4519 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

@@ -1,12 +1,12 @@
-// === Module 11080: useAllowedChatOverlays ===
+// === Module 11093: useAllowedChatOverlays ===
 
-// Module 11080 (useAllowedChatOverlays)
+// Module 11093 (useAllowedChatOverlays)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react from "react" /* 576 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9014 */;
-import ChatOverlayConstants from "ChatOverlayConstants" /* 11078 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9047 */;
+import ChatOverlayConstants from "ChatOverlayConstants" /* 11091 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

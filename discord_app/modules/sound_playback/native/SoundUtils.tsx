@@ -1,6 +1,6 @@
-// === Module 9566: sound_playback/SoundUtils ===
+// === Module 9579: sound_playback/SoundUtils ===
 
-// Module 9566 (sound_playback/SoundUtils)
+// Module 9579 (sound_playback/SoundUtils)
 import react_native from "react-native" /* 17 */;
 import "MetaQuestUtils";
 import MetaQuestUtils_mod from "MetaQuestUtils" /* 1615 */;

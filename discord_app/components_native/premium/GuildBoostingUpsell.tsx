@@ -1,44 +1,44 @@
-// === Module 13328: GuildBoostingUpsell ===
+// === Module 13347: GuildBoostingUpsell ===
 
-// Module 13328 (GuildBoostingUpsell)
+// Module 13347 (GuildBoostingUpsell)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl9 from "intl" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import BoostGemIcon from "BoostGemIcon" /* 4826 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ReactionIcon from "ReactionIcon" /* 8411 */;
-import UploadIcon from "UploadIcon" /* 8878 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 8894 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9232 */;
-import StarIcon from "StarIcon" /* 9943 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 12187 */;
-import StickerIcon from "StickerIcon" /* 12190 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13170 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13179 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 13180 */;
-import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13205 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 13307 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 13329 */;
-import BoostTier3Icon2 from "BoostTier3Icon" /* 13330 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 13332 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 13333 */;
-import AssetRegistryDefault8 from "AssetRegistry" /* 13334 */;
-import AssetRegistryDefault9 from "AssetRegistry" /* 13335 */;
-import AssetRegistryDefault10 from "AssetRegistry" /* 13336 */;
-import AssetRegistryDefault11 from "AssetRegistry" /* 13337 */;
-import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13338 */;
-import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 13342 */;
-import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 13343 */;
-import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 13344 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import BoostGemIcon from "BoostGemIcon" /* 4832 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ReactionIcon from "ReactionIcon" /* 8444 */;
+import UploadIcon from "UploadIcon" /* 8907 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 8923 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9267 */;
+import StarIcon from "StarIcon" /* 9956 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12202 */;
+import StickerIcon from "StickerIcon" /* 12205 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13189 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13198 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 13199 */;
+import useSubscriptionPlansLoaded from "useSubscriptionPlansLoaded" /* 13224 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 13326 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 13348 */;
+import BoostTier3Icon2 from "BoostTier3Icon" /* 13349 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 13351 */;
+import AssetRegistryDefault7 from "AssetRegistry" /* 13352 */;
+import AssetRegistryDefault8 from "AssetRegistry" /* 13353 */;
+import AssetRegistryDefault9 from "AssetRegistry" /* 13354 */;
+import AssetRegistryDefault10 from "AssetRegistry" /* 13355 */;
+import AssetRegistryDefault11 from "AssetRegistry" /* 13356 */;
+import GuildSubscriptionNoGuilds from "GuildSubscriptionNoGuilds" /* 13357 */;
+import PremiumSubscriptionPricingUpsellDefault from "PremiumSubscriptionPricingUpsell" /* 13361 */;
+import GuildBoostingGuildListDefault from "GuildBoostingGuildList" /* 13362 */;
+import PremiumSubscriptionUpsellDefault from "PremiumSubscriptionUpsell" /* 13363 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 11086: PollsInteractionStore ===
+// === Module 11099: PollsInteractionStore ===
 
-// Module 11086 (PollsInteractionStore)
+// Module 11099 (PollsInteractionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import react from "react" /* 576 */;

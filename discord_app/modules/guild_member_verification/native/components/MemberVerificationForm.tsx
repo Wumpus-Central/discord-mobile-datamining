@@ -1,16 +1,16 @@
-// === Module 5983: MemberVerificationForm ===
+// === Module 5990: MemberVerificationForm ===
 
-// Module 5983 (MemberVerificationForm)
+// Module 5990 (MemberVerificationForm)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
-import MemberVerificationFormStore2 from "MemberVerificationFormStore" /* 5963 */;
-import useInitialValueDefault from "useInitialValue" /* 5984 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
+import MemberVerificationFormStore2 from "MemberVerificationFormStore" /* 5970 */;
+import useInitialValueDefault from "useInitialValue" /* 5991 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -46,7 +46,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
     if (tmp4 === phone) {
       tmp7 = cResult[2];
     }
-    return initialVerification(5984)(tmp7);
+    return initialVerification(5991)(tmp7);
   }
   cResult[0] = id.verificationLevel;
   let phone1;

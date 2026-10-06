@@ -1,26 +1,26 @@
-// === Module 17600: ParentalConsentWarningModal ===
+// === Module 17646: ParentalConsentWarningModal ===
 
-// Module 17600 (ParentalConsentWarningModal)
+// Module 17646 (ParentalConsentWarningModal)
 import react_native from "react-native" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2038 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2037 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 5096 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7050 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import ModalDispatchQueueDefault from "ModalDispatchQueue" /* 5102 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7063 */;
 import react from "react" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
-import FamilyCenterConstants from "FamilyCenterConstants" /* 7049 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7062 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -130,7 +130,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       });
     } else {
       const tmp2Result4 = ModalActionCreatorsDefault;
-      tmp2Result4.pushLazy(asyncRequire(17601, dependencyMap.paths));
+      tmp2Result4.pushLazy(asyncRequire(17647, dependencyMap.paths));
     }
   }, items2);
   const intl = daysRemaining(callback[15]).intl;
@@ -162,11 +162,11 @@ export default function ParentalConsentWarningModal(daysRemaining) {
   items4[2] = closure_12(daysRemaining(callback[27]).Text, obj9);
   const obj10 = { spacing: require("native").space.PX_8, children: items5 };
   const Stack2 = tmp4(tmp3[25]).Stack;
-  const obj11 = { size: "lg", variant: "primary", grow: true, text: intl3.string(require("module_2493").Kp7sjX), onPress: callback3 };
+  const obj11 = { size: "lg", variant: "primary", grow: true, text: intl3.string(require("module_2521").Kp7sjX), onPress: callback3 };
   const Button = tmp4(tmp3[28]).Button;
   intl3 = tmp4(tmp3[15]).intl;
   items5 = [closure_12(Button, obj11), ];
-  const obj12 = { size: "lg", variant: "secondary", grow: true, text: intl4.string(require("module_2493").hST5o8), accessibilityHint: intl5.string(require("module_2493")["4fZtHa"]), onPress: callback2 };
+  const obj12 = { size: "lg", variant: "secondary", grow: true, text: intl4.string(require("module_2521").hST5o8), accessibilityHint: intl5.string(require("module_2521")["4fZtHa"]), onPress: callback2 };
   const Button2 = tmp4(tmp3[28]).Button;
   intl4 = tmp4(tmp3[15]).intl;
   intl5 = tmp4(tmp3[15]).intl;

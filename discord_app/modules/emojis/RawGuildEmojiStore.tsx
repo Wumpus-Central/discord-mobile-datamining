@@ -1,10 +1,10 @@
-// === Module 5640: RawGuildEmojiStore ===
+// === Module 5647: RawGuildEmojiStore ===
 
-// Module 5640 (RawGuildEmojiStore)
+// Module 5647 (RawGuildEmojiStore)
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import js_shim_PlainRecord from "js_shim/PlainRecord" /* 2068 */;
 import LibdiscoreStore2 from "LibdiscoreStore" /* 2075 */;
-import EmojiTypes from "EmojiTypes" /* 4526 */;
+import EmojiTypes from "EmojiTypes" /* 4532 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

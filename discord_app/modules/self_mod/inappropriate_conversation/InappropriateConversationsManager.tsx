@@ -1,9 +1,9 @@
-// === Module 18005: InappropriateConversationsManager ===
+// === Module 18050: InappropriateConversationsManager ===
 
-// Module 18005 (InappropriateConversationsManager)
-import clampDefault from "clamp" /* 5015 */;
-import SoundUtils from "SoundUtils" /* 9562 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+// Module 18050 (InappropriateConversationsManager)
+import clampDefault from "clamp" /* 5021 */;
+import SoundUtils from "SoundUtils" /* 9575 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 function fadeIn() {

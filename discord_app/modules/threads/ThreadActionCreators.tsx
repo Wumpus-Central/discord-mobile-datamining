@@ -1,23 +1,23 @@
-// === Module 7261: ThreadActionCreators ===
+// === Module 7274: ThreadActionCreators ===
 
-// Module 7261 (ThreadActionCreators)
+// Module 7274 (ThreadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import intl11 from "intl" /* 1126 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import ArchivedThreadsStore2 from "ArchivedThreadsStore" /* 7262 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7405 */;
-import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 7406 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import ArchivedThreadsStore2 from "ArchivedThreadsStore" /* 7275 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7416 */;
+import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 7417 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
-import ThreadSummaryStore from "ThreadSummaryStore" /* 7404 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
+import ThreadSummaryStore from "ThreadSummaryStore" /* 7415 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -29,7 +29,7 @@ let closure_12;
 let closure_14;
 let closure_15;
 let map1;
-const f94573 = (body) => {
+const f94713 = (body) => {
   const obj = DispatcherDefault;
   const obj2 = { type: "THREAD_UPDATE", channel: closure_4(body.body) };
   obj.dispatch(obj2);
@@ -49,7 +49,7 @@ function patchThread(id, body) {
   const patch = HTTP.patch;
   obj2 = require("HTTPUtils");
   const patchResult = patch(request);
-  return patchResult.then(f94573);
+  return patchResult.then(f94713);
 }
 function dispatchThreadMemberLocalUpdate(id, isJoining) {
   const obj = DispatcherDefault;
@@ -75,7 +75,7 @@ let obj = {
     const patch = HTTP.patch;
     obj3 = require("HTTPUtils");
     const patchResult = patch(request);
-    return patchResult.then(f94573);
+    return patchResult.then(f94713);
   },
   lockThread(channel) {
     let closure_0 = channel;
@@ -436,7 +436,7 @@ let obj = {
     const patch = HTTP.patch;
     obj3 = require("HTTPUtils");
     const patchResult = patch(request);
-    return patchResult.then(f94573);
+    return patchResult.then(f94713);
   },
   joinThread(channel, arg1) {
     let closure_0 = channel;

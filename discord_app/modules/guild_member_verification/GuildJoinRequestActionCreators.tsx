@@ -1,14 +1,14 @@
-// === Module 5931: GuildJoinRequestActionCreators ===
+// === Module 5938: GuildJoinRequestActionCreators ===
 
-// Module 5931 (GuildJoinRequestActionCreators)
+// Module 5938 (GuildJoinRequestActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
-import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5933 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
+import GuildJoinRequestAnalyticUtils from "GuildJoinRequestAnalyticUtils" /* 5940 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5932 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5939 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -80,7 +80,7 @@ let obj = function _fetchGuildJoinRequests() {
             requests = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (guildId === 1) {
@@ -387,7 +387,7 @@ obj = function _updateGuildJoinRequest() {
             tmp = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (guildId === 1) {
@@ -652,7 +652,7 @@ obj = function _createOrEnterJoinRequestInterview() {
             channel = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

@@ -1,7 +1,7 @@
-// === Module 10541: OrderUtils ===
+// === Module 10554: OrderUtils ===
 
-// Module 10541 (OrderUtils)
-import PaymentConstants from "PaymentConstants" /* 4869 */;
+// Module 10554 (OrderUtils)
+import PaymentConstants from "PaymentConstants" /* 4875 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
@@ -58,7 +58,7 @@ let obj = function _discardDraftOrder() {
     }
     await "IconComponent";
     ({ checkoutSucceeded: c0, order: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

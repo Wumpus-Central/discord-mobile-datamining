@@ -1,9 +1,9 @@
-// === Module 5695: SKUStore ===
+// === Module 5702: SKUStore ===
 
-// Module 5695 (SKUStore)
+// Module 5702 (SKUStore)
 import get_initializedAll from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SKURecord from "SKURecord" /* 5696 */;
+import SKURecord from "SKURecord" /* 5703 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import size from "module_2" /* 2 */;
 

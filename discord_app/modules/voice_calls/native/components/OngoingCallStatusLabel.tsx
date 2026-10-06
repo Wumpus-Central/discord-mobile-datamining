@@ -1,13 +1,13 @@
-// === Module 13607: OngoingCallStatusLabel ===
+// === Module 13623: OngoingCallStatusLabel ===
 
-// Module 13607 (OngoingCallStatusLabel)
+// Module 13623 (OngoingCallStatusLabel)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5437 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import CallStore from "CallStore" /* 5444 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

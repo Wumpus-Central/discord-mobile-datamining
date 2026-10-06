@@ -1,12 +1,12 @@
-// === Module 17007: ChannelSettingsPermissionsList ===
+// === Module 17033: ChannelSettingsPermissionsList ===
 
-// Module 17007 (ChannelSettingsPermissionsList)
+// Module 17033 (ChannelSettingsPermissionsList)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Server from "Server" /* 1985 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5702 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -15,7 +15,7 @@ import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

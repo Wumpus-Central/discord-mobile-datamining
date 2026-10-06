@@ -1,11 +1,11 @@
-// === Module 7732: useDiscountOffer ===
+// === Module 7743: useDiscountOffer ===
 
-// Module 7732 (useDiscountOffer)
+// Module 7743 (useDiscountOffer)
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import UserOfferStore from "UserOfferStore" /* 6959 */;
+import UserOfferStore from "UserOfferStore" /* 6972 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -149,7 +149,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
                 num = time - Date.now();
               }
               if (timeout != null) {
-                timeout.start(num, f151302);
+                timeout.start(num, f151536);
               }
             }
           });
@@ -200,7 +200,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   const items2 = [first, stateFromStores];
   const hasItem = CHURN_DISCOUNT_IDS.includes(arg0);
   const effect = obj3.useEffect(function() {
-    const f151303 = () => {
+    const f151537 = () => {
       if (!first) {
         if (stateFromStores.hasExpired()) {
           closure_3(true);
@@ -219,7 +219,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           num = time - Date.now();
         }
         if (timeout != null) {
-          timeout.start(num, f151303);
+          timeout.start(num, f151537);
         }
       }
     };
@@ -243,7 +243,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           let time = expiresAt.getTime();
           num = time - Date.now();
         }
-        timeout.start(num, f151303);
+        timeout.start(num, f151537);
       }
       return () => timeout.stop();
     }

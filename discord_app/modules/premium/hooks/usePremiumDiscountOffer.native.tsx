@@ -1,7 +1,7 @@
-// === Module 10438: hooks/usePremiumDiscountOffer ===
+// === Module 10451: hooks/usePremiumDiscountOffer ===
 
-// Module 10438 (hooks/usePremiumDiscountOffer)
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7731 */;
+// Module 10451 (hooks/usePremiumDiscountOffer)
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7742 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.native.tsx");

@@ -1,7 +1,7 @@
-// === Module 16733: conjurePendingPlan ===
+// === Module 16754: conjurePendingPlan ===
 
-// Module 16733 (conjurePendingPlan)
-import ConjureChatStore from "ConjureChatStore" /* 12905 */;
+// Module 16754 (conjurePendingPlan)
+import ConjureChatStore from "ConjureChatStore" /* 12924 */;
 import size from "module_2" /* 2 */;
 
 let map, set;

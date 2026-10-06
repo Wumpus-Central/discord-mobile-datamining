@@ -1,14 +1,14 @@
-// === Module 9461: getXboxURIForChannel ===
+// === Module 9474: getXboxURIForChannel ===
 
-// Module 9461 (getXboxURIForChannel)
+// Module 9474 (getXboxURIForChannel)
 import intl2 from "intl" /* 1126 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import useChannelName from "useChannelName" /* 5043 */;
+import useChannelName from "useChannelName" /* 5049 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import GameConsoleConstants from "GameConsoleConstants" /* 8749 */;
+import GameConsoleConstants from "GameConsoleConstants" /* 8781 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 9970: EmojiPickerCategoriesBackspaceItem ===
+// === Module 9983: EmojiPickerCategoriesBackspaceItem ===
 
-// Module 9970 (EmojiPickerCategoriesBackspaceItem)
+// Module 9983 (EmojiPickerCategoriesBackspaceItem)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;

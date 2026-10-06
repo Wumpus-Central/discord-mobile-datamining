@@ -1,26 +1,26 @@
-// === Module 15861: MainNavigator ===
+// === Module 15900: MainNavigator ===
 
-// Module 15861 (MainNavigator)
+// Module 15900 (MainNavigator)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
-import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 9611 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10662 */;
-import StartupProfiler from "StartupProfiler" /* 11571 */;
-import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 14270 */;
-import NavigationConstants from "NavigationConstants" /* 15862 */;
-import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 15863 */;
-import AutoAnalytics from "AutoAnalytics" /* 16917 */;
-import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 16969 */;
-import AppComponents from "AppComponents" /* 17145 */;
-import LaunchPadContainerDefault from "LaunchPadContainer" /* 17381 */;
-import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 17412 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
+import GlobalStatusIndicatorDefault from "GlobalStatusIndicator" /* 9624 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10675 */;
+import StartupProfiler from "StartupProfiler" /* 11584 */;
+import createAccessibleNativeStackNavigatorDefault from "createAccessibleNativeStackNavigator" /* 14288 */;
+import NavigationConstants from "NavigationConstants" /* 15901 */;
+import createChatPanelNativeStackNavigatorDefault from "createChatPanelNativeStackNavigator" /* 15902 */;
+import AutoAnalytics from "AutoAnalytics" /* 16943 */;
+import VisualEffectViewTargetDefault from "VisualEffectViewTarget" /* 16995 */;
+import AppComponents from "AppComponents" /* 17174 */;
+import LaunchPadContainerDefault from "LaunchPadContainer" /* 17410 */;
+import ParentalConsentWarningBannerDefault from "ParentalConsentWarningBanner" /* 17441 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,16 +1,16 @@
-// === Module 11844: ForLaterCardHeader ===
+// === Module 11858: ForLaterCardHeader ===
 
-// Module 11844 (ForLaterCardHeader)
+// Module 11858 (ForLaterCardHeader)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import GuildIconDefault from "GuildIcon" /* 5971 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6708 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10648 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import GuildIconDefault from "GuildIcon" /* 5978 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6715 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -142,7 +142,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (null != stateFromStores) {
     let tmp22;
     if (cResult[3] !== stateFromStores) {
-      const obj2 = { guild: stateFromStores, size: channel(5971).GuildIconSizes.XSMALL };
+      const obj2 = { guild: stateFromStores, size: channel(5978).GuildIconSizes.XSMALL };
       const tmp25 = GuildIconDefault;
       const tmp26 = closure_5(tmp25, obj2);
       cResult[3] = stateFromStores;
@@ -174,7 +174,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       let tmp10;
       const _Symbol = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp12 = closure_5(channel(5855).ChatIcon, { size: "xxs" });
+        const tmp12 = closure_5(channel(5862).ChatIcon, { size: "xxs" });
         cResult[7] = tmp12;
         tmp10 = tmp12;
       } else {
@@ -200,7 +200,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const obj = channel(504);
   const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   if (null != stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: channel(5971).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: channel(5978).GuildIconSizes.XSMALL };
     const tmp13 = GuildIconDefault;
     tmp6Result = closure_5(tmp13, obj2);
   } else {
@@ -213,7 +213,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       const tmp10 = GroupDMAvatarDefault;
       tmp6Result = closure_5(tmp10, obj3);
     } else {
-      const obj4 = { style: tmp.dmIcon, children: closure_5(channel(5855).ChatIcon, { size: "xxs" }) };
+      const obj4 = { style: tmp.dmIcon, children: closure_5(channel(5862).ChatIcon, { size: "xxs" }) };
       tmp6Result = closure_5(View, obj4);
     }
   }
@@ -293,7 +293,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               tmp23 = tmp26;
             }
             const obj3 = { style: tmp4.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: tmp15 };
-            const tmp22 = closure_5(channel(4886).Text, obj3);
+            const tmp22 = closure_5(channel(4892).Text, obj3);
             cResult[16] = tmp15;
             cResult[17] = tmp4.channelName;
             cResult[18] = tmp22;
@@ -328,7 +328,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     cResult[8] = isPrivateResult;
     tmp12 = isPrivateResult;
   }
-  const tmpResult2 = channel(5812);
+  const tmpResult2 = channel(5819);
   const channelIconComponentWithGuild = tmpResult2.getChannelIconComponentWithGuild(channel, stateFromStores);
   cResult[3] = channel;
   cResult[4] = stateFromStores;
@@ -342,7 +342,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const obj = channel(504);
   const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
   const tmp5 = useChannelNameDefault(channel, false);
-  const obj2 = channel(5812);
+  const obj2 = channel(5819);
   const channelIconComponentWithGuild = obj2.getChannelIconComponentWithGuild(channel, stateFromStores);
   let formatToPlainStringResult = tmp5;
   const isPrivateResult = channel.isPrivate() || null == channelIconComponentWithGuild;
@@ -359,7 +359,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }
   items1 = [tmp12, ];
   const obj6 = { style: tmp.channelName, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: formatToPlainStringResult };
-  items1[1] = closure_5(channel(4886).Text, obj6);
+  items1[1] = closure_5(channel(4892).Text, obj6);
   return closure_6(View, obj4);
 });
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardHeader.tsx");

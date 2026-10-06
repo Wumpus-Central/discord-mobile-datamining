@@ -1,15 +1,15 @@
-// === Module 10875: useTenureBadging ===
+// === Module 10888: useTenureBadging ===
 
-// Module 10875 (useTenureBadging)
+// Module 10888 (useTenureBadging)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7119 */;
-import useTieredTenureBadgeForUser2 from "useTieredTenureBadgeForUser" /* 10876 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 10877 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7132 */;
+import useTieredTenureBadgeForUser2 from "useTieredTenureBadgeForUser" /* 10889 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 10890 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import UserStore from "UserStore" /* 1377 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

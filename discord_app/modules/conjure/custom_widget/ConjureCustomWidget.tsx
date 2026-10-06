@@ -1,6 +1,6 @@
-// === Module 12902: ConjureCustomWidget ===
+// === Module 12921: ConjureCustomWidget ===
 
-// Module 12902 (ConjureCustomWidget)
+// Module 12921 (ConjureCustomWidget)
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,12 +1,12 @@
-// === Module 4902: useGuildIdForChannelRoute ===
+// === Module 4908: useGuildIdForChannelRoute ===
 
-// Module 4902 (useGuildIdForChannelRoute)
+// Module 4908 (useGuildIdForChannelRoute)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 10435: handlePremiumPurchase ===
+// === Module 10448: handlePremiumPurchase ===
 
-// Module 10435 (handlePremiumPurchase)
+// Module 10448 (handlePremiumPurchase)
 import Constants2 from "Constants" /* 1096 */;
-import GPlayAnalyticsStore from "GPlayAnalyticsStore" /* 8873 */;
+import GPlayAnalyticsStore from "GPlayAnalyticsStore" /* 8902 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -66,7 +66,7 @@ let obj = function _validatePurchase() {
             ({ productId: c0, premiumSubscription: c1, offerId: c2, currency: c3, price: c4, isGift: c5 } = closure_0);
             is_gift = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           let self;
@@ -426,7 +426,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
     flag = premiumSubscription.isOneTimePurchase ?? false;
     flag2 = premiumSubscription.allowPlanChange ?? true;
     ({ applicationId: c9, giftInfoOptions: c10, onPurchaseComplete: c11, onPurchaseError: c12 } = premiumSubscription);
-    return "Set";
+    return "Reflect";
   });
   const items1 = [tmp5, paymentGatewayPlanId, prop, id, premiumTrialOffer, premiumDiscountOffer, stateFromStores, isEligibleForBogoOffer];
   return useCallback(function() {

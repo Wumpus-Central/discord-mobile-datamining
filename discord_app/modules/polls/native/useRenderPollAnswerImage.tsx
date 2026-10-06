@@ -1,17 +1,17 @@
-// === Module 11855: useRenderPollAnswerImage ===
+// === Module 11869: useRenderPollAnswerImage ===
 
-// Module 11855 (useRenderPollAnswerImage)
+// Module 11869 (useRenderPollAnswerImage)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import EmojiTypes from "EmojiTypes" /* 4526 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import EmojiDefault from "Emoji" /* 6625 */;
-import DraftStore from "DraftStore" /* 7031 */;
+import EmojiTypes from "EmojiTypes" /* 4532 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import EmojiDefault from "Emoji" /* 6632 */;
+import DraftStore from "DraftStore" /* 7044 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -90,7 +90,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, mediaA
           tmp25 = cResult[13];
           tmp26 = cResult[14];
         }
-        let str = emoji.type === tmp(4526).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
+        let str = emoji.type === tmp(4532).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
         if (str == null) {
           str = "";
         }
@@ -227,7 +227,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, mediaA
       status = mediaAttachmentState.status;
     }
   }
-  const tmp8 = status === tmp(11835).PollMediaUploadAttachmentStatus.PREPARING;
+  const tmp8 = status === tmp(11849).PollMediaUploadAttachmentStatus.PREPARING;
   closure_7 = tmp8;
   let obj3 = {
     renderImage: obj2.useMemo(() => {

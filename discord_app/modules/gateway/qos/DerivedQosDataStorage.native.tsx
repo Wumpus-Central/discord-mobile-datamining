@@ -1,8 +1,8 @@
-// === Module 13958: DerivedQosDataStorage ===
+// === Module 13976: DerivedQosDataStorage ===
 
-// Module 13958 (DerivedQosDataStorage)
+// Module 13976 (DerivedQosDataStorage)
 import LoggerDefault from "Logger" /* 3 */;
-import react_nativeDefault from "react-native" /* 13448 */;
+import react_nativeDefault from "react-native" /* 13975 */;
 import size from "module_2" /* 2 */;
 
 const logger = new LoggerDefault("DerivedQosDataStorage");

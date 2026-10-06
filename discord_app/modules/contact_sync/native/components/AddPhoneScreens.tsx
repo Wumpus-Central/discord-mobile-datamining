@@ -1,20 +1,20 @@
-// === Module 12352: AddPhoneScreens ===
+// === Module 12367: AddPhoneScreens ===
 
-// Module 12352 (AddPhoneScreens)
+// Module 12367 (AddPhoneScreens)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6534 */;
-import AddPhoneDefault from "AddPhone" /* 6541 */;
-import PhoneActionCreators from "PhoneActionCreators" /* 6542 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12325 */;
-import ContactSyncModalStore from "ContactSyncModalStore" /* 12326 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 6541 */;
+import AddPhoneDefault from "AddPhone" /* 6548 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 6549 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12340 */;
+import ContactSyncModalStore from "ContactSyncModalStore" /* 12341 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -59,7 +59,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[1] !== tmp5.title) {
     const obj3 = { style: title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: first };
-    const tmp10 = closure_9(navigation(4886).Text, obj3);
+    const tmp10 = closure_9(navigation(4892).Text, obj3);
     cResult[1] = tmp5.title;
     cResult[2] = tmp10;
     tmp8 = tmp10;
@@ -77,7 +77,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[4] !== tmp5.subtitle) {
     const obj4 = { style: subtitle, variant: "text-sm/medium", color: "text-default", children: tmp11 };
-    const tmp15 = closure_9(navigation(4886).Text, obj4);
+    const tmp15 = closure_9(navigation(4892).Text, obj4);
     cResult[4] = tmp5.subtitle;
     cResult[5] = tmp15;
     tmp13 = tmp15;
@@ -115,7 +115,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
       }
-      const obj5 = { style: tmp5.container, reason: navigation(6542).ChangePhoneReason.CONTACT_SYNC, header: tmp16, onComplete: P };
+      const obj5 = { style: tmp5.container, reason: navigation(6549).ChangePhoneReason.CONTACT_SYNC, header: tmp16, onComplete: P };
       const tmp22 = AddPhoneDefault;
       cResult[12] = tmp16;
       cResult[13] = tmp5.container;
@@ -338,7 +338,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               result = obj.handlePhoneVerificationComplete(tmp, closure_2);
               nextPromise = result.then(() => {
                 const obj = RunAfterInteractionsUtils;
-                closure_0 = obj.runAfterInteractions(() => { /* body not rendered: F152633 */ });
+                closure_0 = obj.runAfterInteractions(() => { /* body not rendered: F152868 */ });
               });
             }
             return () => {
@@ -368,7 +368,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         result = obj.handlePhoneVerificationComplete(tmp, closure_2);
         nextPromise = result.then(() => {
           const obj = RunAfterInteractionsUtils;
-          closure_0 = obj.runAfterInteractions(() => { /* body not rendered: F152633 */ });
+          closure_0 = obj.runAfterInteractions(() => { /* body not rendered: F152868 */ });
         });
       }
       return () => {

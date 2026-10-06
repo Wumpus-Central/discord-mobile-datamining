@@ -1,6 +1,6 @@
-// === Module 10821: hooks/useHandleUseNow ===
+// === Module 10834: hooks/useHandleUseNow ===
 
-// Module 10821 (hooks/useHandleUseNow)
+// Module 10834 (hooks/useHandleUseNow)
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;

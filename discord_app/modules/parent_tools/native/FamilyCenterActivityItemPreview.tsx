@@ -1,22 +1,22 @@
-// === Module 14711: FamilyCenterActivityItemPreview ===
+// === Module 14727: FamilyCenterActivityItemPreview ===
 
-// Module 14711 (FamilyCenterActivityItemPreview)
+// Module 14727 (FamilyCenterActivityItemPreview)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils from "utils" /* 1977 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import BoostGemIcon from "BoostGemIcon" /* 4826 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 7872 */;
-import ProfileFrameConstants from "ProfileFrameConstants" /* 7893 */;
-import NitroWheelIcon2 from "NitroWheelIcon" /* 8313 */;
-import NameplateUtils from "NameplateUtils" /* 8475 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8478 */;
-import ShopIcon from "ShopIcon" /* 11762 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14710 */;
+import BoostGemIcon from "BoostGemIcon" /* 4832 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 7883 */;
+import ProfileFrameConstants from "ProfileFrameConstants" /* 7904 */;
+import NitroWheelIcon2 from "NitroWheelIcon" /* 8346 */;
+import NameplateUtils from "NameplateUtils" /* 8508 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8511 */;
+import ShopIcon from "ShopIcon" /* 11776 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14726 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 17064: useMessageRequestsCount ===
+// === Module 17090: useMessageRequestsCount ===
 
-// Module 17064 (useMessageRequestsCount)
+// Module 17090 (useMessageRequestsCount)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import MessageRequestStore from "MessageRequestStore" /* 6720 */;
+import MessageRequestStore from "MessageRequestStore" /* 6734 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

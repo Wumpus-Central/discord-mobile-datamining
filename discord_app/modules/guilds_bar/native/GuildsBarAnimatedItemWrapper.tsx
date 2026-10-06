@@ -1,18 +1,18 @@
-// === Module 16234: GuildsBarAnimatedItemWrapper ===
+// === Module 16274: GuildsBarAnimatedItemWrapper ===
 
-// Module 16234 (GuildsBarAnimatedItemWrapper)
+// Module 16274 (GuildsBarAnimatedItemWrapper)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import useToken from "useToken" /* 4580 */;
-import native from "native" /* 4589 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import spring from "spring" /* 5597 */;
-import styleConstants from "styleConstants" /* 5611 */;
+import useToken from "useToken" /* 4586 */;
+import native from "native" /* 4595 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import spring from "spring" /* 5604 */;
+import styleConstants from "styleConstants" /* 5618 */;
 import react from "react" /* 19 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 16222 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 16262 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -187,7 +187,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((sharedId) => {
                     obj1.height = obj5.withSpring(sharedId.targetHeight, closure_11, "animate-always");
                     obj.animations = obj1;
                     obj.initialValues = { height: sharedId.currentHeight, originY: sharedId.currentOriginY, originX: sharedId.currentOriginX };
-                    obj.callback = function callback() { /* body not rendered: F145706 */ };
+                    obj.callback = function callback() { /* body not rendered: F145916 */ };
                     return obj;
                   }
                 }
@@ -211,7 +211,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((sharedId) => {
                   obj1.height = obj5.withSpring(sharedId.targetHeight, closure_11, "animate-always");
                   obj.animations = obj1;
                   obj.initialValues = { height: sharedId.currentHeight, originY: sharedId.currentOriginY, originX: sharedId.currentOriginX };
-                  obj.callback = function callback() { /* body not rendered: F145706 */ };
+                  obj.callback = function callback() { /* body not rendered: F145916 */ };
                   return obj;
                 }
               }

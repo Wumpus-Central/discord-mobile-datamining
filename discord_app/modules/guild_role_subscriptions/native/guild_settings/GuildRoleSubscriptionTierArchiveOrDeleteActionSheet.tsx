@@ -1,22 +1,22 @@
-// === Module 17931: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
+// === Module 17977: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
 
-// Module 17931 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 17977 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import BottomSheetModal from "BottomSheetModal" /* 6112 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17932 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import BottomSheetModal from "BottomSheetModal" /* 6119 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 17978 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

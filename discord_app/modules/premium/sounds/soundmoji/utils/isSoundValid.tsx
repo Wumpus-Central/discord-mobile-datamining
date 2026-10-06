@@ -1,11 +1,11 @@
-// === Module 5803: isSoundValid ===
+// === Module 5810: isSoundValid ===
 
-// Module 5803 (isSoundValid)
+// Module 5810 (isSoundValid)
 import Constants from "Constants" /* 1096 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import SoundboardConstants from "SoundboardConstants" /* 5682 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import SoundboardConstants from "SoundboardConstants" /* 5689 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

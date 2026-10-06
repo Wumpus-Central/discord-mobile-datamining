@@ -1,9 +1,9 @@
-// === Module 15157: DisplayNameStylesFontOrder ===
+// === Module 15172: DisplayNameStylesFontOrder ===
 
-// Module 15157 (DisplayNameStylesFontOrder)
+// Module 15172 (DisplayNameStylesFontOrder)
 import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1395 */;
 import DisplayNameFont from "DisplayNameFont" /* 1397 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9390 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9404 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -16,7 +16,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return obj.useIsDisplayNameStylesFlywheelSettersEnabled("font-order") ? items1 : items;
 }) : (() => {
   let isDisplayNameStylesFlywheelSettersEnabled;
-  const obj = isDisplayNameStylesFlywheelSettersEnabled(9390);
+  const obj = isDisplayNameStylesFlywheelSettersEnabled(9404);
   isDisplayNameStylesFlywheelSettersEnabled = obj.useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
   items = [isDisplayNameStylesFlywheelSettersEnabled];
   return react.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? items1 : items, items);

@@ -1,8 +1,8 @@
-// === Module 11792: useAnimationDelayedAutoFocus ===
+// === Module 11806: useAnimationDelayedAutoFocus ===
 
-// Module 11792 (useAnimationDelayedAutoFocus)
+// Module 11806 (useAnimationDelayedAutoFocus)
 import react2 from "react" /* 576 */;
-import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 11793 */;
+import useAwaitAnimationComplete from "useAwaitAnimationComplete" /* 11807 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

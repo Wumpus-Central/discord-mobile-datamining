@@ -1,23 +1,23 @@
-// === Module 14687: ConnectGuardianBottomSheet ===
+// === Module 14703: ConnectGuardianBottomSheet ===
 
-// Module 14687 (ConnectGuardianBottomSheet)
+// Module 14703 (ConnectGuardianBottomSheet)
 import react_native from "react-native" /* 17 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import _modDef2493 from "module_2493" /* 2493 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import FamilyCenterConstants from "FamilyCenterConstants" /* 7049 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14688 */;
-import ConnectGuardianCard2 from "ConnectGuardianCard" /* 14689 */;
+import _modDef2521 from "module_2521" /* 2521 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7062 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14704 */;
+import ConnectGuardianCard2 from "ConnectGuardianCard" /* 14705 */;
 import react from "react" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -124,7 +124,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           obj.hideActionSheet(closure_1_6);
         }
       }
-      stringResult = obj4.string(_modDef2493.aCUVfL);
+      stringResult = obj4.string(_modDef2521.aCUVfL);
     }
     class A {
       constructor() {
@@ -169,7 +169,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             return FamilyCenterStore.getLinkCodeExpiresAt();
           }
         }
-        formatResult = format(_modDef2493["2O6ltn"], obj2);
+        formatResult = format(_modDef2521["2O6ltn"], obj2);
       }
       class A {
         constructor() {
@@ -261,7 +261,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const Text = Text_Text.Text;
   if (title == null) {
     const intl = intl4.intl;
-    title = intl.string(_modDef2493.aCUVfL);
+    title = intl.string(_modDef2521.aCUVfL);
   }
   items2 = [metroImportDefault(Text, obj5), ];
   const obj6 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: body };
@@ -269,7 +269,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (body == null) {
     const intl2 = intl4.intl;
     const obj7 = { link };
-    body = intl2.format(_modDef2493["2O6ltn"], obj7);
+    body = intl2.format(_modDef2521["2O6ltn"], obj7);
   }
   items2[1] = metroImportDefault(Text2, obj6);
   items3 = [metroImportAll(View, obj4), , ];
@@ -284,7 +284,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj10 = { startExpanded: true, children: metroImportAll(View, obj3) };
   items3[1] = metroImportDefault(View, obj8);
-  const obj11 = { variant: "secondary", size: "md", text: intl3.string(_modDef2493.Hsm5IF), onPress: callback };
+  const obj11 = { variant: "secondary", size: "md", text: intl3.string(_modDef2521.Hsm5IF), onPress: callback };
   const Button = components_Button_Button.Button;
   intl3 = intl4.intl;
   items3[2] = metroImportDefault(Button, obj11);

@@ -1,10 +1,10 @@
-// === Module 10824: ProfileEffectUserPreview ===
+// === Module 10837: ProfileEffectUserPreview ===
 
-// Module 10824 (ProfileEffectUserPreview)
+// Module 10837 (ProfileEffectUserPreview)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10825 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10838 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

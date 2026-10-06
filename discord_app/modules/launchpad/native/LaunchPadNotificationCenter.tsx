@@ -1,11 +1,11 @@
-// === Module 17411: LaunchPadNotificationCenter ===
+// === Module 17440: LaunchPadNotificationCenter ===
 
-// Module 17411 (LaunchPadNotificationCenter)
+// Module 17440 (LaunchPadNotificationCenter)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import notifications_NotificationsDefault from "notifications/Notifications" /* 16343 */;
+import notifications_NotificationsDefault from "notifications/Notifications" /* 16383 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

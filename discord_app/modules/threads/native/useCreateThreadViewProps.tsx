@@ -1,7 +1,7 @@
-// === Module 9778: useCreateThreadViewProps ===
+// === Module 9791: useCreateThreadViewProps ===
 
-// Module 9778 (useCreateThreadViewProps)
-import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 9779 */;
+// Module 9791 (useCreateThreadViewProps)
+import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 9792 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

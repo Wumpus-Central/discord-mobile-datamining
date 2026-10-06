@@ -1,10 +1,10 @@
-// === Module 6961: ReferralTrialStore ===
+// === Module 6974: ReferralTrialStore ===
 
-// Module 6961 (ReferralTrialStore)
+// Module 6974 (ReferralTrialStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 6962 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 6975 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
@@ -136,7 +136,7 @@ let obj = {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      let obj = userTrialOfferId(6962);
+      let obj = userTrialOfferId(6975);
       const referralsRemaining = obj.fetchReferralsRemaining();
     }
     if (!set1.has(userTrialOfferId)) {

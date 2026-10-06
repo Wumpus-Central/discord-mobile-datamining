@@ -1,12 +1,12 @@
-// === Module 12194: useGuildPowerupOnActivate ===
+// === Module 12209: useGuildPowerupOnActivate ===
 
-// Module 12194 (useGuildPowerupOnActivate)
-import BoostingActionCreators from "BoostingActionCreators" /* 5612 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 7666 */;
+// Module 12209 (useGuildPowerupOnActivate)
+import BoostingActionCreators from "BoostingActionCreators" /* 5619 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 7677 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6908 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

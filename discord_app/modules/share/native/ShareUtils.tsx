@@ -1,10 +1,10 @@
-// === Module 13715: ShareUtils ===
+// === Module 13733: ShareUtils ===
 
-// Module 13715 (ShareUtils)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4811 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import DraftStore from "DraftStore" /* 7031 */;
+// Module 13733 (ShareUtils)
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4817 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import DraftStore from "DraftStore" /* 7044 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -57,7 +57,7 @@ let obj = function _sendShareMessage() {
             future = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

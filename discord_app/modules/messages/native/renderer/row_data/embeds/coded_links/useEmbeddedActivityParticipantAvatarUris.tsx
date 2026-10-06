@@ -1,6 +1,6 @@
-// === Module 13055: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 13074: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 13055 (useEmbeddedActivityParticipantAvatarUris)
+// Module 13074 (useEmbeddedActivityParticipantAvatarUris)
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import react from "react" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;

@@ -1,16 +1,16 @@
-// === Module 7816: useHeroColors ===
+// === Module 7827: useHeroColors ===
 
-// Module 7816 (useHeroColors)
+// Module 7827 (useHeroColors)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import _modDef7063 from "module_7063" /* 7063 */;
-import useAvatarColor from "useAvatarColor" /* 7815 */;
-import getFallbackHeroColor from "getFallbackHeroColor" /* 7817 */;
+import _modDef7076 from "module_7076" /* 7076 */;
+import useAvatarColor from "useAvatarColor" /* 7826 */;
+import getFallbackHeroColor from "getFallbackHeroColor" /* 7828 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -155,9 +155,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let obj2 = first(504);
   const items1 = [ThemeStore];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => theme.theme);
-  let obj3 = first(7817);
+  let obj3 = first(7828);
   const fallbackHeroColor = obj3.getFallbackHeroColor(stateFromStores1, stateFromStores);
-  let obj4 = first(7815);
+  let obj4 = first(7826);
   let tmp4 = _slicedToArray(obj4.useAvatarColors(arg0, fallbackHeroColor), 2);
   first = tmp4[0];
   let closure_1 = tmp6;
@@ -228,13 +228,13 @@ export const getHeroColors = function getHeroColors(iconURL) {
   let tmp3 = dependencyMap;
   const saturation = AccessibilityStore.saturation;
   const theme = ThemeStore.theme;
-  let obj = num(7817);
+  let obj = num(7828);
   const fallbackHeroColor = obj.getFallbackHeroColor(theme, saturation);
   num = 1;
   if (AccessibilityStore.desaturateUserColors) {
     num = AccessibilityStore.saturation;
   }
-  const useColorStore = tmp2(7815).useColorStore;
+  const useColorStore = tmp2(7826).useColorStore;
   const arr = useColorStore.getState().palette[iconURL];
   let mapped;
   if (arr != null) {
@@ -246,11 +246,11 @@ export const getHeroColors = function getHeroColors(iconURL) {
       let tmp2;
       let tmp3;
       [tmp, tmp2, tmp3] = item;
-      const obj = _modDef7063({ r: tmp, g: tmp2, b: tmp3 });
+      const obj = _modDef7076({ r: tmp, g: tmp2, b: tmp3 });
       ({ h, s, l } = obj.toHsl());
       const obj2 = { h, s: s * num, l };
       obj.toHsl();
-      const obj3 = _modDef7063(obj2);
+      const obj3 = _modDef7076(obj2);
       return obj3.toHexString();
     });
   }

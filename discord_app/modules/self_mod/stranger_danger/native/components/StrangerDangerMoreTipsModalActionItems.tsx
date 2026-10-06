@@ -1,17 +1,17 @@
-// === Module 9819: StrangerDangerMoreTipsModalActionItems ===
+// === Module 9832: StrangerDangerMoreTipsModalActionItems ===
 
-// Module 9819 (StrangerDangerMoreTipsModalActionItems)
+// Module 9832 (StrangerDangerMoreTipsModalActionItems)
 import Fragment2 from "Fragment" /* 21 */;
 import intl5 from "intl" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 6456 */;
-import EyeIcon from "EyeIcon" /* 6458 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9786 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9798 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 6463 */;
+import EyeIcon from "EyeIcon" /* 6465 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

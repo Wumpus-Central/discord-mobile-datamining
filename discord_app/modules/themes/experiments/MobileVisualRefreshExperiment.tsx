@@ -1,6 +1,6 @@
-// === Module 11813: MobileVisualRefreshExperiment ===
+// === Module 11827: MobileVisualRefreshExperiment ===
 
-// Module 11813 (MobileVisualRefreshExperiment)
+// Module 11827 (MobileVisualRefreshExperiment)
 import react from "react" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

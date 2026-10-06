@@ -1,17 +1,17 @@
-// === Module 12497: NotificationSettingsChannel ===
+// === Module 12512: NotificationSettingsChannel ===
 
-// Module 12497 (NotificationSettingsChannel)
+// Module 12512 (NotificationSettingsChannel)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6609 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6614 */;
-import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 9851 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
+import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 9864 */;
 import react_mod from "react" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -43,7 +43,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   } else {
     first = cResult[0];
   }
-  const tmp7 = first(5043)(channel.channel);
+  const tmp7 = first(5049)(channel.channel);
   dependencyMap = tmp7;
   const tmpResult = require("useNavigation");
   navigation = tmpResult.useNavigation();
@@ -195,7 +195,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   const Form = require("Form").Form;
   if (muted) {
     const obj5 = { style: { marginBottom: 16 }, title: intl2.string(require("intl").t["6MCxAy"]), subtitle: tmpResult.getMuteBannerSubtitleFromConfig(stateFromStoresObject.config), onPressUnmute: callback1 };
-    const NotificationSettingsMuteBanner = tmp(12498).NotificationSettingsMuteBanner;
+    const NotificationSettingsMuteBanner = tmp(12513).NotificationSettingsMuteBanner;
     intl2 = tmp(1126).intl;
     tmpResult = require("NotificationSettingsMuteBanner");
     muted = closure_6(NotificationSettingsMuteBanner, obj5);
@@ -211,14 +211,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   let isForumLikeChannelResult = channel.isForumLikeChannel();
   if (isForumLikeChannelResult) {
     const obj9 = { style: { marginTop: 24 }, channel: channel.channel };
-    isForumLikeChannelResult = closure_6(tmp(12515).NotificationSettingsChannelPost, obj9);
+    isForumLikeChannelResult = closure_6(tmp(12530).NotificationSettingsChannelPost, obj9);
   }
   items3[4] = isForumLikeChannelResult;
   let tmp11Result = !channelPresetInheritance.inherited;
   if (tmp11Result) {
     const obj10 = { style: { marginTop: 24 }, children: closure_6(Button, obj11) };
     obj11 = { variant: "secondary", onPress: callback, text: intl3.string(require("intl").t["3PBFN6"]) };
-    Button = tmp(5594).Button;
+    Button = tmp(5601).Button;
     intl3 = tmp(1126).intl;
     tmp11Result = closure_6(View, obj10);
   }

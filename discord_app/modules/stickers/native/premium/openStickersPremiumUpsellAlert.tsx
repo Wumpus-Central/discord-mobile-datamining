@@ -1,10 +1,10 @@
-// === Module 10135: openStickersPremiumUpsellAlert ===
+// === Module 10148: openStickersPremiumUpsellAlert ===
 
-// Module 10135 (openStickersPremiumUpsellAlert)
+// Module 10148 (openStickersPremiumUpsellAlert)
 import Fragment from "Fragment" /* 21 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5404 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6760 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6770 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;

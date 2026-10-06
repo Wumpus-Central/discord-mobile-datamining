@@ -1,11 +1,11 @@
-// === Module 13786: useGuildHeaderCounts ===
+// === Module 13804: useGuildHeaderCounts ===
 
-// Module 13786 (useGuildHeaderCounts)
+// Module 13804 (useGuildHeaderCounts)
 import _mod12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import react_mod from "react" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
-import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 13787 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4786 */;
+import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 13805 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

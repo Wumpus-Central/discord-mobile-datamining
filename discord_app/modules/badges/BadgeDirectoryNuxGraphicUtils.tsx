@@ -1,7 +1,7 @@
-// === Module 12887: BadgeDirectoryNuxGraphicUtils ===
+// === Module 12906: BadgeDirectoryNuxGraphicUtils ===
 
-// Module 12887 (BadgeDirectoryNuxGraphicUtils)
-import BadgeId from "BadgeId" /* 7855 */;
+// Module 12906 (BadgeDirectoryNuxGraphicUtils)
+import BadgeId from "BadgeId" /* 7866 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

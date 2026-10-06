@@ -1,10 +1,10 @@
-// === Module 16148: SidebarCoachmarkOverlay ===
+// === Module 16187: SidebarCoachmarkOverlay ===
 
-// Module 16148 (SidebarCoachmarkOverlay)
+// Module 16187 (SidebarCoachmarkOverlay)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import useInitialValueDefault from "useInitialValue" /* 5984 */;
-import LayerContext from "LayerContext" /* 6652 */;
+import useInitialValueDefault from "useInitialValue" /* 5991 */;
+import LayerContext from "LayerContext" /* 6659 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;

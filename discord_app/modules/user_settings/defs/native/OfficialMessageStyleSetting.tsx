@@ -1,15 +1,15 @@
-// === Module 15152: OfficialMessageStyleSetting ===
+// === Module 15167: OfficialMessageStyleSetting ===
 
-// Module 15152 (OfficialMessageStyleSetting)
+// Module 15167 (OfficialMessageStyleSetting)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import intl5 from "intl" /* 1126 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14277 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14295 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

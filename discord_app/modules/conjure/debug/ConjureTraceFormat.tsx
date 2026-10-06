@@ -1,8 +1,8 @@
-// === Module 16762: debug/ConjureTraceFormat ===
+// === Module 16783: debug/ConjureTraceFormat ===
 
-// Module 16762 (debug/ConjureTraceFormat)
+// Module 16783 (debug/ConjureTraceFormat)
 import intl6 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
+import _modDef3753 from "module_3753" /* 3753 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/debug/ConjureTraceFormat.tsx");
@@ -39,43 +39,43 @@ export const formatTokens = function formatTokens(promptTokens) {
 export const categoryLabel = function categoryLabel(traceCategoryResult) {
   if ("subagent" === traceCategoryResult) {
     const intl5 = intl6.intl;
-    return intl5.string(_modDef3723.PbKt9r);
+    return intl5.string(_modDef3753.PbKt9r);
   } else if ("context" === traceCategoryResult) {
     const intl4 = intl6.intl;
-    return intl4.string(_modDef3723["tNk/P2"]);
+    return intl4.string(_modDef3753["tNk/P2"]);
   } else if ("tool" === traceCategoryResult) {
     const intl3 = intl6.intl;
-    return intl3.string(_modDef3723.NBOJcw);
+    return intl3.string(_modDef3753.NBOJcw);
   } else if ("delegated" === traceCategoryResult) {
     const intl2 = intl6.intl;
-    return intl2.string(_modDef3723.QgrFdt);
+    return intl2.string(_modDef3753.QgrFdt);
   } else {
     const intl = intl6.intl;
-    return intl.string(_modDef3723.LsLVUy);
+    return intl.string(_modDef3753.LsLVUy);
   }
 };
 export const statusLabel = function statusLabel(status) {
   if ("started" === status) {
     const intl3 = intl6.intl;
-    return intl3.string(_modDef3723["2wyRDK"]);
+    return intl3.string(_modDef3753["2wyRDK"]);
   } else if ("error" === status) {
     const intl2 = intl6.intl;
-    return intl2.string(_modDef3723["2Cu8n+"]);
+    return intl2.string(_modDef3753["2Cu8n+"]);
   } else {
     const intl = intl6.intl;
-    return intl.string(_modDef3723["6kgw6D"]);
+    return intl.string(_modDef3753["6kgw6D"]);
   }
 };
 export const omissionLabel = function omissionLabel(content) {
   if ("prose" === content) {
     const intl3 = intl6.intl;
-    return intl3.string(_modDef3723["6oDpz5"]);
+    return intl3.string(_modDef3753["6oDpz5"]);
   } else if ("content" === content) {
     const intl2 = intl6.intl;
-    return intl2.string(_modDef3723.kSGhxQ);
+    return intl2.string(_modDef3753.kSGhxQ);
   } else {
     const intl = intl6.intl;
-    return intl.string(_modDef3723.JwGtRz);
+    return intl.string(_modDef3753.JwGtRz);
   }
 };
 export const traceRichStatusLabel = function traceRichStatusLabel(conjureTraceDetail) {
@@ -89,11 +89,11 @@ export const traceRichStatusLabel = function traceRichStatusLabel(conjureTraceDe
         const intl = intl6.intl;
         const string = intl.string;
         if ("loading" === conjureTraceDetail.status) {
-          SKbSyo = _modDef3723.SKbSyo;
+          SKbSyo = _modDef3753.SKbSyo;
         } else if ("unavailable" === conjureTraceDetail.status) {
-          SKbSyo = _modDef3723.tdq5Zn;
+          SKbSyo = _modDef3753.tdq5Zn;
         } else {
-          SKbSyo = _modDef3723["Dw1JW/"];
+          SKbSyo = _modDef3753["Dw1JW/"];
         }
         stringResult = string(SKbSyo);
       }

@@ -1,10 +1,10 @@
-// === Module 10836: useSafeAreaAvoidingInputs ===
+// === Module 10849: useSafeAreaAvoidingInputs ===
 
-// Module 10836 (useSafeAreaAvoidingInputs)
+// Module 10849 (useSafeAreaAvoidingInputs)
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensions from "useWindowDimensions" /* 1484 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 6472 */;
-import ViewMeasureUtils from "ViewMeasureUtils" /* 10837 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 6479 */;
+import ViewMeasureUtils from "ViewMeasureUtils" /* 10850 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

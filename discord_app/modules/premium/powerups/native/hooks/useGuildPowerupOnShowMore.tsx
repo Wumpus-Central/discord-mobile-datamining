@@ -1,7 +1,7 @@
-// === Module 12225: useGuildPowerupOnShowMore ===
+// === Module 12240: useGuildPowerupOnShowMore ===
 
-// Module 12225 (useGuildPowerupOnShowMore)
-import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12174 */;
+// Module 12240 (useGuildPowerupOnShowMore)
+import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12189 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

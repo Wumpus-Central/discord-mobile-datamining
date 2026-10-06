@@ -1,16 +1,16 @@
-// === Module 9771: ChatViewWrapperAnimatedKeyboard ===
+// === Module 9784: ChatViewWrapperAnimatedKeyboard ===
 
-// Module 9771 (ChatViewWrapperAnimatedKeyboard)
+// Module 9784 (ChatViewWrapperAnimatedKeyboard)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import timingPresets from "timingPresets" /* 4894 */;
-import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6474 */;
-import LayerScope2 from "LayerScope" /* 6651 */;
-import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 9777 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 9780 */;
-import StickyWrapper2 from "StickyWrapper" /* 9781 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import timingPresets from "timingPresets" /* 4900 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 6481 */;
+import LayerScope2 from "LayerScope" /* 6658 */;
+import useChannelSafeAreaBottomStylesDefault from "useChannelSafeAreaBottomStyles" /* 9790 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 9793 */;
+import StickyWrapper2 from "StickyWrapper" /* 9794 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

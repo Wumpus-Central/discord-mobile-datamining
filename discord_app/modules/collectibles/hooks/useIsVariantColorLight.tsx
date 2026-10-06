@@ -1,6 +1,6 @@
-// === Module 8528: useIsVariantColorLight ===
+// === Module 8561: useIsVariantColorLight ===
 
-// Module 8528 (useIsVariantColorLight)
+// Module 8561 (useIsVariantColorLight)
 import react2 from "react" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import react from "react" /* 19 */;

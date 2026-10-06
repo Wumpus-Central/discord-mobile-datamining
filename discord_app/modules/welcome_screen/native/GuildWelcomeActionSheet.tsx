@@ -1,26 +1,26 @@
-// === Module 12452: GuildWelcomeActionSheet ===
+// === Module 12467: GuildWelcomeActionSheet ===
 
-// Module 12452 (GuildWelcomeActionSheet)
+// Module 12467 (GuildWelcomeActionSheet)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import Constants2 from "Constants" /* 1096 */;
 import router_utils from "router_utils" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import WelcomeScreenStore2 from "WelcomeScreenStore" /* 12449 */;
-import WelcomeScreenConstants from "WelcomeScreenConstants" /* 12453 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import WelcomeScreenStore2 from "WelcomeScreenStore" /* 12464 */;
+import WelcomeScreenConstants from "WelcomeScreenConstants" /* 12468 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import EmojiStore_mod from "EmojiStore" /* 5638 */;
+import EmojiStore_mod from "EmojiStore" /* 5645 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import TextStyles_mod from "TextStyles" /* 5915 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import TextStyles_mod from "TextStyles" /* 5922 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -710,12 +710,12 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     if (null != welcomeScreen) {
       const obj3 = { startExpanded: true, children: closure_18(hasError, obj4) };
       obj4 = { contentContainerStyle: tmp.container, children: items9 };
-      const ActionSheet = tmp2(6701).ActionSheet;
-      const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(12386).Sizes.MEDIUM, textScale: 2 };
-      const tmp17 = onHide(12386);
+      const ActionSheet = tmp2(6708).ActionSheet;
+      const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(12401).Sizes.MEDIUM, textScale: 2 };
+      const tmp17 = onHide(12401);
       items9 = [closure_17(tmp17, obj5), , , , ];
       const obj6 = { style: tmp.header, variant: "heading-xl/extrabold", color: "text-default", children: intl.format(guildId(1126).t["0aydCN"], obj7) };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       intl = tmp2(1126).intl;
       obj7 = {
         guildName: stateFromStores.name,
@@ -726,9 +726,9 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       };
       items9[1] = closure_17(Text, obj6);
       const obj8 = { style: tmp.guildDescription, variant: "text-sm/medium", color: "text-default", children: welcomeScreen.description };
-      items9[2] = closure_17(guildId(4886).Text, obj8);
+      items9[2] = closure_17(guildId(4892).Text, obj8);
       const obj9 = { style: tmp.channelsTitle, variant: "eyebrow", color: "text-default", children: str.toUpperCase() };
-      const Text2 = tmp2(4886).Text;
+      const Text2 = tmp2(4892).Text;
       const intl2 = tmp2(1126).intl;
       str = intl2.string(guildId(1126).t["haj5+i"]);
       items9[3] = closure_17(Text2, obj9);

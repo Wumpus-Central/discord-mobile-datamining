@@ -1,8 +1,8 @@
-// === Module 12082: ChatInputGuardMessageRequest ===
+// === Module 12097: ChatInputGuardMessageRequest ===
 
-// Module 12082 (ChatInputGuardMessageRequest)
+// Module 12097 (ChatInputGuardMessageRequest)
 import Fragment from "Fragment" /* 21 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12090 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12105 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -465,12 +465,12 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((c
   const tmp2 = dependencyMap;
   obj = channel(1490);
   importDefault = obj.useNavigation();
-  let obj2 = channel(12083);
+  let obj2 = channel(12098);
   const isMessageRequestRestrictedViewer = obj2.useIsMessageRequestRestrictedViewer();
   let obj3 = channel(504);
   const items = [obj];
   const stateFromStores = obj3.useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
-  let obj4 = channel(12084);
+  let obj4 = channel(12099);
   let obj5 = {
     user: stateFromStores,
     onError: function handleRequestError() {

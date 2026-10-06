@@ -1,26 +1,26 @@
-// === Module 10752: PremiumGiftBackgroundSelectTile ===
+// === Module 10765: PremiumGiftBackgroundSelectTile ===
 
-// Module 10752 (PremiumGiftBackgroundSelectTile)
+// Module 10765 (PremiumGiftBackgroundSelectTile)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import _modDef2557 from "module_2557" /* 2557 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import PremiumGiftingConstants from "PremiumGiftingConstants" /* 10753 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10754 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 10755 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 10756 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 10757 */;
-import _modDef10758 from "module_10758" /* 10758 */;
-import _modDef10759 from "module_10759" /* 10759 */;
-import _modDef10760 from "module_10760" /* 10760 */;
-import _modDef10761 from "module_10761" /* 10761 */;
-import _modDef10762 from "module_10762" /* 10762 */;
+import _modDef2585 from "module_2585" /* 2585 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import PremiumGiftingConstants from "PremiumGiftingConstants" /* 10766 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10767 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 10768 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 10769 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 10770 */;
+import _modDef10771 from "module_10771" /* 10771 */;
+import _modDef10772 from "module_10772" /* 10772 */;
+import _modDef10773 from "module_10773" /* 10773 */;
+import _modDef10774 from "module_10774" /* 10774 */;
+import _modDef10775 from "module_10775" /* 10775 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -38,19 +38,19 @@ const GIFT_STYLE_DESCRIPTIONS = PremiumGiftingConstants.GIFT_STYLE_DESCRIPTIONS;
 ({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
 const GIFT_STYLE_IMG = { [STANDARD_BOX]: AssetRegistryDefault, [CAKE]: AssetRegistryDefault2, [CHEST]: AssetRegistryDefault3, [COFFEE]: AssetRegistryDefault4 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-let obj2 = { uri: _modDef10758 };
+let obj2 = { uri: _modDef10771 };
 GIFT_STYLE_IMG[PremiumGiftStyles.NITROWEEN_STANDARD] = obj2;
 GIFT_STYLE_IMG[PremiumGiftStyles.SNOWGLOBE] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.BOX] = null;
 GIFT_STYLE_IMG[PremiumGiftStyles.CUP] = null;
-let obj3 = { uri: _modDef10759 };
+let obj3 = { uri: _modDef10772 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CAKE] = obj3;
-let obj4 = { uri: _modDef10760 };
+let obj4 = { uri: _modDef10773 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_CHEST] = obj4;
-let obj5 = { uri: _modDef10761 };
+let obj5 = { uri: _modDef10774 };
 GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_COFFEE] = obj5;
-GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef10762 };
-({ uri: _modDef10762 });
+GIFT_STYLE_IMG[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: _modDef10775 };
+({ uri: _modDef10775 });
 let closure_9 = createStyles.createStyles((arg0) => {
   let num;
   let size1;
@@ -80,7 +80,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
       const intl = intl3.intl;
       const formatToPlainString = intl.formatToPlainString;
       const obj2 = { giftStyle: intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]) };
-      const prop = _modDef2557["+utqaz"];
+      const prop = _modDef2585["+utqaz"];
       intl2 = intl3.intl;
       const formatToPlainStringResult = formatToPlainString(prop, obj2);
       cResult[0] = giftStyle;
@@ -162,7 +162,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((index) => {
     const intl = intl3.intl;
     formatToPlainString = intl.formatToPlainString;
     obj2 = { giftStyle: intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]) };
-    prop = _modDef2557["+utqaz"];
+    prop = _modDef2585["+utqaz"];
     intl2 = intl3.intl;
     if (selected) {
       const obj3 = { style: tmp.selected };

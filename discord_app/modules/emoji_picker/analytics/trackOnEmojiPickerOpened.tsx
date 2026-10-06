@@ -1,15 +1,15 @@
-// === Module 9897: trackOnEmojiPickerOpened ===
+// === Module 9910: trackOnEmojiPickerOpened ===
 
-// Module 9897 (trackOnEmojiPickerOpened)
+// Module 9910 (trackOnEmojiPickerOpened)
 import Constants from "Constants" /* 1085 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4527 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9874 */;
-import useEmojiHotrail from "useEmojiHotrail" /* 9875 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import useTopAndNewlyAddedEmojis from "useTopAndNewlyAddedEmojis" /* 9887 */;
+import useEmojiHotrail from "useEmojiHotrail" /* 9888 */;
 import react from "react" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5638 */;
+import EmojiStore from "EmojiStore" /* 5645 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

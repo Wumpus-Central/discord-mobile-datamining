@@ -1,11 +1,11 @@
-// === Module 4520: MessageRecord ===
+// === Module 4526: MessageRecord ===
 
-// Module 4520 (MessageRecord)
+// Module 4526 (MessageRecord)
 import FlagUtils from "FlagUtils" /* 1390 */;
-import ReactionUtils from "ReactionUtils" /* 4521 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6805 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8708 */;
+import ReactionUtils from "ReactionUtils" /* 4527 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6815 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8740 */;
 import Record from "Record" /* 1392 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

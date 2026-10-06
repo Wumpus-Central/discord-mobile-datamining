@@ -1,24 +1,24 @@
-// === Module 16754: ConjureDebugLogsTab ===
+// === Module 16775: ConjureDebugLogsTab ===
 
-// Module 16754 (ConjureDebugLogsTab)
+// Module 16775 (ConjureDebugLogsTab)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6708 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10844 */;
-import ConjureDebugJson from "ConjureDebugJson" /* 16755 */;
-import ConjureDebugFormat from "ConjureDebugFormat" /* 16756 */;
-import ConjureDebugLabels from "ConjureDebugLabels" /* 16757 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6715 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10857 */;
+import ConjureDebugJson from "ConjureDebugJson" /* 16776 */;
+import ConjureDebugFormat from "ConjureDebugFormat" /* 16777 */;
+import ConjureDebugLabels from "ConjureDebugLabels" /* 16778 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -200,7 +200,7 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
                         style: tmp4.jsonToggle,
                         accessibilityRole: "button",
                         accessibilityState: obj6,
-                        accessibilityLabel: intl2.string(_modDef3723["9CTzyV"]),
+                        accessibilityLabel: intl2.string(_modDef3753["9CTzyV"]),
                         onPress() {
                                               return onToggle(logKey);
                                             },
@@ -216,9 +216,9 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
                       const intl3 = intl6.intl;
                       const formatToPlainString = intl3.formatToPlainString;
                       if ("[\u2026]" === tmp5.marker) {
-                        kUhyUv = _modDef3723.kUhyUv;
+                        kUhyUv = _modDef3753.kUhyUv;
                       } else {
-                        kUhyUv = _modDef3723["N+fphl"];
+                        kUhyUv = _modDef3753["N+fphl"];
                       }
                       const obj8 = { variant: "text-xs/medium", color: "text-muted", children: items3 };
                       const obj9 = { count: tmp5.size };
@@ -266,7 +266,7 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
           }
           let tmp20 = null;
           if (null != entry.kind) {
-            const obj15 = { variant: "text-xxs/semibold", color: "text-feedback-critical", style: tmp4.badge, children: intl.string(_modDef3723.TrC9c8) };
+            const obj15 = { variant: "text-xxs/semibold", color: "text-feedback-critical", style: tmp4.badge, children: intl.string(_modDef3753.TrC9c8) };
             const Text = Text_Text.Text;
             intl = intl6.intl;
             tmp20 = metroImportDefault(Text, obj15);
@@ -326,21 +326,21 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     str = "text-feedback-critical";
   }
   if (expanded) {
-    ChevronSmallRightIcon = tmp3(10844).ChevronSmallDownIcon;
+    ChevronSmallRightIcon = tmp3(10857).ChevronSmallDownIcon;
     tmp6 = tmp3;
   } else {
-    ChevronSmallRightIcon = tmp3(6708).ChevronSmallRightIcon;
+    ChevronSmallRightIcon = tmp3(6715).ChevronSmallRightIcon;
     tmp6 = tmp3;
   }
   let obj = { style: tmp.row, children: items2 };
   const obj2 = { style: tmp.rowHead, children: items1 };
   const obj3 = { variant: "text-xs/normal", color: "text-subtle", children: tmp6Result.formatClockTime(entry.ts) };
-  const Text = tmp6(4886).Text;
-  tmp6Result = tmp6(16756);
+  const Text = tmp6(4892).Text;
+  tmp6Result = tmp6(16777);
   items1 = [closure_7(Text, obj3), , , ];
   const level = entry.level;
   let str2 = "text-feedback-critical";
-  const Text2 = tmp6(4886).Text;
+  const Text2 = tmp6(4892).Text;
   if ("error" !== level) {
     let str3 = "text-muted";
     if ("warn" === level) {
@@ -355,14 +355,14 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     tmp9Result = null;
     if (null != entry.source) {
       const obj5 = { variant: "text-xxs/semibold", color: "text-subtle", style: tmp.badge, children: entry.source };
-      tmp9Result = closure_7(tmp6(4886).Text, obj5);
+      tmp9Result = closure_7(tmp6(4892).Text, obj5);
     }
   }
   items1[2] = tmp9Result;
   let tmp9Result4 = null;
   if (null != entry.kind) {
-    const obj6 = { variant: "text-xxs/semibold", color: "text-feedback-critical", style: tmp.badge, children: intl.string(_modDef3723.TrC9c8) };
-    const Text3 = tmp6(4886).Text;
+    const obj6 = { variant: "text-xxs/semibold", color: "text-feedback-critical", style: tmp.badge, children: intl.string(_modDef3753.TrC9c8) };
+    const Text3 = tmp6(4892).Text;
     intl = tmp6(1126).intl;
     tmp9Result4 = closure_7(Text3, obj6);
   }
@@ -373,32 +373,32 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     let tmp9Result5 = null;
     if ("" !== memo.prefix) {
       const obj7 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.prefix };
-      tmp9Result5 = closure_7(tmp6(4886).Text, obj7);
+      tmp9Result5 = closure_7(tmp6(4892).Text, obj7);
     }
     const items3 = [tmp9Result5, , ];
     const obj8 = {
       style: tmp.jsonToggle,
       accessibilityRole: "button",
       accessibilityState: obj9,
-      accessibilityLabel: intl2.string(_modDef3723["9CTzyV"]),
+      accessibilityLabel: intl2.string(_modDef3753["9CTzyV"]),
       onPress() {
           return dependencyMap(importDefault);
         },
       children: items4
     };
     obj9 = { expanded };
-    const PressableOpacity = tmp6(5909).PressableOpacity;
+    const PressableOpacity = tmp6(5916).PressableOpacity;
     intl2 = tmp6(1126).intl;
     const obj10 = { size: "xs", color: nativeDefault.colors.TEXT_MUTED };
     items4 = [closure_7(ChevronSmallRightIcon, obj10), ];
     const items5 = [memo.marker, " ", ];
-    const Text4 = tmp6(4886).Text;
+    const Text4 = tmp6(4892).Text;
     const intl3 = tmp6(1126).intl;
     const formatToPlainString = intl3.formatToPlainString;
     if ("[\u2026]" === memo.marker) {
-      kUhyUv = _modDef3723.kUhyUv;
+      kUhyUv = _modDef3753.kUhyUv;
     } else {
-      kUhyUv = _modDef3723["N+fphl"];
+      kUhyUv = _modDef3753["N+fphl"];
     }
     const obj11 = { variant: "text-xs/medium", color: "text-muted", children: items5 };
     const obj12 = { count: memo.size };
@@ -407,8 +407,8 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     items3[1] = closure_8(PressableOpacity, obj8);
     let tmp9Result6 = null;
     if (expanded) {
-      const obj13 = { variant: "primary", children: closure_7(tmp6(4886).Text, obj14) };
-      const Card = tmp6(5995).Card;
+      const obj13 = { variant: "primary", children: closure_7(tmp6(4892).Text, obj14) };
+      const Card = tmp6(6002).Card;
       obj14 = { variant: "text-xs/normal", color: str, selectable: true, children: memo.pretty };
       tmp9Result6 = closure_7(Card, obj13);
     }
@@ -417,7 +417,7 @@ let closure_11 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => 
     tmp9Result7 = closure_8(closure_9, obj15);
   } else {
     const obj16 = { variant: "text-xs/normal", color: str, selectable: true, children: entry.message };
-    tmp9Result7 = closure_7(tmp6(4886).Text, obj16);
+    tmp9Result7 = closure_7(tmp6(4892).Text, obj16);
   }
   items2[1] = tmp9Result7;
   return closure_8(View, obj);
@@ -499,7 +499,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         return ConjureProjectStore.getHistoryState(projectId, "logs");
       }
     }
-    const DEBUG_LOG_FILTERS = tmp(16757).DEBUG_LOG_FILTERS;
+    const DEBUG_LOG_FILTERS = tmp(16778).DEBUG_LOG_FILTERS;
     tmp18[1] = DEBUG_LOG_FILTERS.map((id) => {
       let obj2;
       const obj = { id, label: obj2.debugLogFilterLabel(id), page: null };
@@ -521,7 +521,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       }
     }
   }
-  const tmpResult4 = projectId(9282);
+  const tmpResult4 = projectId(9317);
   const segmentedControlState = tmpResult4.useSegmentedControlState(tmp18);
   if (cResult[9] === first1) {
     class L {

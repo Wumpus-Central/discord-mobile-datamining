@@ -1,9 +1,9 @@
-// === Module 11379: UploadActionCreators ===
+// === Module 11392: UploadActionCreators ===
 
-// Module 11379 (UploadActionCreators)
+// Module 11392 (UploadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DraftStore2 from "DraftStore" /* 7031 */;
-import UploadStore from "UploadStore" /* 7466 */;
+import DraftStore2 from "DraftStore" /* 7044 */;
+import UploadStore from "UploadStore" /* 7477 */;
 import size from "module_2" /* 2 */;
 
 const DraftStore = DraftStore2;

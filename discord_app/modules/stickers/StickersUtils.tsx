@@ -1,12 +1,12 @@
-// === Module 5428: StickersUtils ===
+// === Module 5435: StickersUtils ===
 
-// Module 5428 (StickersUtils)
+// Module 5435 (StickersUtils)
 import Constants from "Constants" /* 1085 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
 import ForceSdrEmojisStickersExperiment from "ForceSdrEmojisStickersExperiment" /* 1887 */;
-import StickersTypes from "StickersTypes" /* 5429 */;
+import StickersTypes from "StickersTypes" /* 5436 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import StickersConstants from "StickersConstants" /* 2031 */;
@@ -17,7 +17,7 @@ let c10;
 let closure_4;
 let hasOwnProperty;
 let metroRequire;
-const f90360 = (id) => id.id === cover_sticker_id.cover_sticker_id;
+const f90496 = (id) => id.id === cover_sticker_id.cover_sticker_id;
 function getStickerExtensionFromFormatType(format_type) {
   if (StickersTypes.StickerFormat.PNG === format_type) {
     const SUPPORTS_WEBP = AvatarUtils.SUPPORTS_WEBP;
@@ -56,7 +56,7 @@ export const getStickerPackPreviewSticker = function getStickerPackPreviewSticke
   let closure_0 = cover_sticker_id;
   if (null != cover_sticker_id.cover_sticker_id) {
     const stickers = cover_sticker_id.stickers;
-    const found = stickers.find(f90360);
+    const found = stickers.find(f90496);
     if (null != found) {
       return found;
     }
@@ -224,7 +224,7 @@ export const createStickerPackCategory = function createStickerPackCategory(id) 
     first = id.stickers[0];
   } else {
     const stickers = id.stickers;
-    first = stickers.find(f90360);
+    first = stickers.find(f90496);
   }
   return obj;
 };

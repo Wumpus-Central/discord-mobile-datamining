@@ -1,26 +1,26 @@
-// === Module 16934: NewGroupDMScreen ===
+// === Module 16960: NewGroupDMScreen ===
 
-// Module 16934 (NewGroupDMScreen)
+// Module 16960 (NewGroupDMScreen)
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import UserRowConstants from "UserRowConstants" /* 10592 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11217 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16933 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import UserRowConstants from "UserRowConstants" /* 10605 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11230 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16959 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13565 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13581 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -161,7 +161,7 @@ obj = function _handleInviteUsers() {
             value = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp4) {

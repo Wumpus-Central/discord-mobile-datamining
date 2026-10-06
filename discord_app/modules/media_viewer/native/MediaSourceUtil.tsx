@@ -1,6 +1,6 @@
-// === Module 7939: MediaSourceUtil ===
+// === Module 7950: MediaSourceUtil ===
 
-// Module 7939 (MediaSourceUtil)
+// Module 7950 (MediaSourceUtil)
 import react2 from "react" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import intl3 from "intl" /* 1126 */;
@@ -8,22 +8,22 @@ import FlagUtils from "FlagUtils" /* 1390 */;
 import react_nativeDefault from "react-native" /* 1432 */;
 import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1483 */;
 import Server from "Server" /* 1985 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5114 */;
-import EmbedUtils from "EmbedUtils" /* 5426 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6832 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 7531 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import transformMessageComponents from "transformMessageComponents" /* 7793 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7809 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 7935 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 7940 */;
-import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 7941 */;
-import NativePortalView from "NativePortalView" /* 7942 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5120 */;
+import EmbedUtils from "EmbedUtils" /* 5433 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6805 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6810 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6842 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 7542 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import transformMessageComponents from "transformMessageComponents" /* 7804 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7820 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 7946 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 7951 */;
+import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 7952 */;
+import MediaModalPortal from "MediaModalPortal" /* 7953 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
@@ -35,7 +35,7 @@ let _require, closure_2, dependencyMap, importDefault;
 
 let hasOwnProperty;
 let metroRequire;
-const f95981 = () => {
+const f96122 = () => {
   if (ConstantsIOS.MediaType.IMAGE === VIDEO) {
     const tmp2Result = ToastUtils;
     tmp2Result.presentImageSaved();
@@ -741,7 +741,7 @@ function downloadMediaAssetWithContentType(mediaUrl, VIDEO, contentType) {
     const obj = react_nativeDefault;
     result = obj.downloadMediaAsset(mediaUrl, VIDEO);
   }
-  return result.then(f95981, handleDownloadError);
+  return result.then(f96122, handleDownloadError);
 }
 function isAnimatedWebpSource(sourceURI) {
   let result = null != sourceURI.sourceURI && null != sourceURI.uri;
@@ -1044,7 +1044,7 @@ export const downloadMediaAsset = function downloadMediaAsset(mediaUrl, VIDEO) {
   let closure_0 = VIDEO;
   const obj = react_nativeDefault;
   const downloadMediaAssetResult = obj.downloadMediaAsset(mediaUrl, VIDEO);
-  return downloadMediaAssetResult.then(f95981, handleDownloadError);
+  return downloadMediaAssetResult.then(f96122, handleDownloadError);
 };
 export { downloadMediaAssetWithContentType };
 export const getYoutubeClipVideoIdFromURI = function getYoutubeClipVideoIdFromURI(uri) {
@@ -1102,7 +1102,7 @@ export const getVideoSourceType = function getVideoSourceType(source) {
     return PORTAL;
   }
   if (null != source.portal) {
-    const obj2 = NativePortalView;
+    const obj2 = MediaModalPortal;
     if (!obj2.isPortalExpired(source.portal)) {
       PORTAL = obj.PORTAL;
     }

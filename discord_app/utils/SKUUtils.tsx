@@ -1,11 +1,11 @@
-// === Module 8361: SKUUtils ===
+// === Module 8394: SKUUtils ===
 
-// Module 8361 (SKUUtils)
+// Module 8394 (SKUUtils)
 import intl71 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import matchPathCompat from "matchPathCompat" /* 4704 */;
-import StoreUtils from "StoreUtils" /* 5322 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import matchPathCompat from "matchPathCompat" /* 4710 */;
+import StoreUtils from "StoreUtils" /* 5329 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -287,7 +287,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
       _slicedToArray(items[num], 2);
-      const obj = _modDef4461(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef4467(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

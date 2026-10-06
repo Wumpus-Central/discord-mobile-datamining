@@ -1,9 +1,9 @@
-// === Module 13000: HeadlessCollectiblesPurchaseRunner ===
+// === Module 13019: HeadlessCollectiblesPurchaseRunner ===
 
-// Module 13000 (HeadlessCollectiblesPurchaseRunner)
+// Module 13019 (HeadlessCollectiblesPurchaseRunner)
 import react2 from "react" /* 576 */;
-import NativeCheckoutStore from "NativeCheckoutStore" /* 6930 */;
-import useHandleBuyNowDefault from "useHandleBuyNow" /* 13001 */;
+import NativeCheckoutStore from "NativeCheckoutStore" /* 6943 */;
+import useHandleBuyNowDefault from "useHandleBuyNow" /* 13020 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

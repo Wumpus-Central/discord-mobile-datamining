@@ -1,23 +1,23 @@
-// === Module 11899: VoicePanelChatView ===
+// === Module 11913: VoicePanelChatView ===
 
-// Module 11899 (VoicePanelChatView)
+// Module 11913 (VoicePanelChatView)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import intl2 from "intl" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4796 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5911 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6570 */;
-import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 11897 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4802 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 6577 */;
+import ChatFloatingNavButtonDefault from "ChatFloatingNavButton" /* 11911 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -177,7 +177,7 @@ const memoResult1 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((
               tmp2 = ME;
             }
             preloadResult = preload(tmp2, channelId);
-            return () => { /* body not rendered: F141959 */ };
+            return () => { /* body not rendered: F142165 */ };
           }
         }
         class O {
@@ -216,7 +216,7 @@ const memoResult1 = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((
             tmp2 = ME;
           }
           preloadResult = preload(tmp2, channelId);
-          return () => { /* body not rendered: F141959 */ };
+          return () => { /* body not rendered: F142165 */ };
         }
       }
       tmp12[0] = guildId;

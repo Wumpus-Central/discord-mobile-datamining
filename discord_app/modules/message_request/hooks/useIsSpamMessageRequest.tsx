@@ -1,7 +1,7 @@
-// === Module 9787: useIsSpamMessageRequest ===
+// === Module 9800: useIsSpamMessageRequest ===
 
-// Module 9787 (useIsSpamMessageRequest)
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6721 */;
+// Module 9800 (useIsSpamMessageRequest)
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6735 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

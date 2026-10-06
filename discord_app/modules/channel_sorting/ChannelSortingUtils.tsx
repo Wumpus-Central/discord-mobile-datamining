@@ -1,8 +1,8 @@
-// === Module 10734: ChannelSortingUtils ===
+// === Module 10747: ChannelSortingUtils ===
 
-// Module 10734 (ChannelSortingUtils)
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 6607 */;
-import DragAndDropUtilsDefault from "DragAndDropUtils" /* 10735 */;
+// Module 10747 (ChannelSortingUtils)
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 6614 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 10748 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

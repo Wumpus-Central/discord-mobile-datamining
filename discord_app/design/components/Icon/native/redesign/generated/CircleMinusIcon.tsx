@@ -1,12 +1,12 @@
-// === Module 15132: CircleMinusIcon ===
+// === Module 15147: CircleMinusIcon ===
 
-// Module 15132 (CircleMinusIcon)
+// Module 15147 (CircleMinusIcon)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage3 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 15133 */;
-import AssetRegistry2 from "AssetRegistry" /* 15134 */;
+import BaseIconImage3 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 15148 */;
+import AssetRegistry2 from "AssetRegistry" /* 15149 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

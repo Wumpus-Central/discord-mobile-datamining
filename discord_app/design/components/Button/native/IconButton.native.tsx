@@ -1,15 +1,15 @@
-// === Module 7575: IconButton ===
+// === Module 7586: IconButton ===
 
-// Module 7575 (IconButton)
+// Module 7586 (IconButton)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Button_BaseButton from "Button/BaseButton" /* 5610 */;
-import BaseIconButton3 from "BaseIconButton" /* 7576 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Button_BaseButton from "Button/BaseButton" /* 5617 */;
+import BaseIconButton3 from "BaseIconButton" /* 7587 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

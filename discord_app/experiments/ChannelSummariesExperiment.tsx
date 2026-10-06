@@ -1,6 +1,6 @@
-// === Module 9767: ChannelSummariesExperiment ===
+// === Module 9780: ChannelSummariesExperiment ===
 
-// Module 9767 (ChannelSummariesExperiment)
+// Module 9780 (ChannelSummariesExperiment)
 import ChannelConstants from "ChannelConstants" /* 2058 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;

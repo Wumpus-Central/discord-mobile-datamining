@@ -1,8 +1,8 @@
-// === Module 12959: usePrivateChannelCall ===
+// === Module 12978: usePrivateChannelCall ===
 
-// Module 12959 (usePrivateChannelCall)
+// Module 12978 (usePrivateChannelCall)
 import intl3 from "intl" /* 1126 */;
-import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10603 */;
+import getPrivateChannelCallDefault from "getPrivateChannelCall" /* 10616 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;

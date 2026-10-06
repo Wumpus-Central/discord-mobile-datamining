@@ -1,6 +1,6 @@
-// === Module 13441: GatewaySocket ===
+// === Module 13460: GatewaySocket ===
 
-// Module 13441 (GatewaySocket)
+// Module 13460 (GatewaySocket)
 import LoggerDefault from "Logger" /* 3 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -11,17 +11,16 @@ import DurationsDefault from "Durations" /* 1102 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ClientModDetectionUtils from "ClientModDetectionUtils" /* 1349 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4884 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
-import MetricEvents from "MetricEvents" /* 5414 */;
-import GatewayEncodingDefault from "GatewayEncoding" /* 13442 */;
-import GatewaySocketOpCodes2 from "GatewaySocketOpCodes" /* 13445 */;
-import AltGatewayTrackerDefault from "AltGatewayTracker" /* 13446 */;
-import GatewaySocketDispatcherDefault from "GatewaySocketDispatcher" /* 13449 */;
-import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 13454 */;
-import ConnectionStateDefault from "ConnectionState" /* 13456 */;
-import GatewayCompressionHandler from "GatewayCompressionHandler" /* 13458 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13477 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4890 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
+import MetricEvents from "MetricEvents" /* 5421 */;
+import GatewayEncodingDefault from "GatewayEncoding" /* 13461 */;
+import GatewaySocketOpCodes2 from "GatewaySocketOpCodes" /* 13464 */;
+import GatewaySocketDispatcherDefault from "GatewaySocketDispatcher" /* 13465 */;
+import GatewaySocketAnalytics from "GatewaySocketAnalytics" /* 13470 */;
+import ConnectionStateDefault from "ConnectionState" /* 13472 */;
+import GatewayCompressionHandler from "GatewayCompressionHandler" /* 13474 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13493 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
@@ -68,8 +67,6 @@ class GatewaySocket extends GatewaySocketOpCodes {
     tmp7.identifyCount = 0;
     tmp7.resumeUrl = null;
     tmp7.iosGoingAwayEventCount = 0;
-    new BackoffDefault(1000, MINUTE);
-    tmp7.altGateway = new AltGatewayTrackerDefault();
     tmp7.failedConnectAttempts = 0;
     tmp7.receivedHelloThisAttempt = false;
     tmp7.heartbeatQOSState = { currentPayload: null, upcomingState: null };
@@ -93,7 +90,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
       } catch (err) {
       }
     };
-    new AltGatewayTrackerDefault();
+    new BackoffDefault(1000, MINUTE);
     tmp7.dispatcher = new GatewaySocketDispatcherDefault(tmp7);
     new GatewaySocketDispatcherDefault(tmp7);
     tmp7.gatewayBackoff = new BackoffDefault(1000, 60000);
@@ -194,7 +191,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
         logger.info("Skipping _connect because socket is paused");
       } else {
         const tmp5 = self;
-        self.connectionState = self(13456).CONNECTING;
+        self.connectionState = self(13472).CONNECTING;
         self.nextReconnectIsImmediate = false;
         let compressionHandler = self.compressionHandler;
         const algorithm = compressionHandler.getAlgorithm();
@@ -241,7 +238,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
         const str1 = str11.toString();
         ({ compressionHandler: compressionHandler2, _handleClose } = self);
         let closure_1 = _handleClose.bind(self);
-        const f114797 = (byteLength, compressed_byte_size) => {
+        const f114959 = (byteLength, compressed_byte_size) => {
           let compressionHandler;
           let d;
           let num3;
@@ -253,7 +250,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
           name.unpack(byteLength);
           if (op !== str11(dependencyMap[8]).Opcode.DISPATCH) {
             const _HermesInternal = HermesInternal;
-            const obj2 = self(dependencyMap[15]);
+            const obj2 = self(dependencyMap[14]);
             obj2.mark("\u{1F310}", "GatewaySocket.onMessage " + op + " " + str11(dependencyMap[8]).Opcode[op]);
           }
           if (DeveloperOptionsStore.isLoggingGatewayEvents) {
@@ -269,13 +266,13 @@ class GatewaySocket extends GatewaySocketOpCodes {
           }
           const diff = Date.now() - timestamp;
           if ("READY" === t) {
-            const parseReady = self(dependencyMap[16]).parseReady;
+            const parseReady = self(dependencyMap[15]).parseReady;
             const result = parseReady.set(timestamp, diff);
           } else if ("READY_SUPPLEMENTAL" === t) {
-            const parseReadySupplemental = self(dependencyMap[16]).parseReadySupplemental;
+            const parseReadySupplemental = self(dependencyMap[15]).parseReadySupplemental;
             const result1 = parseReadySupplemental.set(timestamp, diff);
           } else if (diff > 10) {
-            const obj3 = self(dependencyMap[15]);
+            const obj3 = self(dependencyMap[14]);
             obj3.mark("\u{1F310}", `Parse ${t}`, diff);
           }
           if (null != s) {
@@ -314,7 +311,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
         let closure_3 = 0;
         compressionHandler2.dataReady((arg0) => {
           try {
-            f114797(arg0, closure_3);
+            f114959(arg0, closure_3);
             closure_3 = 0;
           } catch (tmp5) {
             closure_3 = 0;
@@ -393,7 +390,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
           }
         }
         if (null == tmp30) {
-          const tmp46 = tmp5(13444)(str1);
+          const tmp46 = tmp5(13463)(str1);
           tmp46.binaryType = "arraybuffer";
           tmp30 = tmp46;
         }
@@ -437,7 +434,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
           const item = messages2.forEach(fn);
         }
         tmp30.onopen = () => {
-          const obj = identify(closure_1_3[15]);
+          const obj = identify(closure_1_3[14]);
           obj.mark("\u{1F310}", "GatewaySocket.onOpen " + identify);
           const diff = Date.now() - self.connectionStartTime;
           logger.info("[CONNECTED] " + str11.toString() + " in " + diff + " ms");
@@ -473,7 +470,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
     const obj = GatewaySocketAnalytics;
     verbose("[HELLO] via " + obj.getConnectionPath(d) + ", heartbeat interval: " + heartbeat_interval + ", took " + diff + " ms");
     const obj2 = GatewaySocketAnalytics;
-    const obj3 = { socket: this, altGateway: this.altGateway, gatewayUrl: this._getGatewayUrl(), now: timestamp };
+    const obj3 = { socket: this, gatewayUrl: this._getGatewayUrl(), now: timestamp };
     obj2.logGatewayConnected(obj3);
     this.receivedHelloThisAttempt = true;
     this.failedConnectAttempts = 0;
@@ -518,8 +515,6 @@ class GatewaySocket extends GatewaySocketOpCodes {
       const gatewayBackoff2 = self.gatewayBackoff;
       gatewayBackoff2.succeed();
       self.iosGoingAwayEventCount = 0;
-      const altGateway2 = self.altGateway;
-      altGateway2.recordSuccess();
       self.setResumeUrl(d.resume_gateway_url);
     } else if ("READY_SUPPLEMENTAL" === type) {
       const _HermesInternal = HermesInternal;
@@ -528,8 +523,6 @@ class GatewaySocket extends GatewaySocketOpCodes {
       const gatewayBackoff = self.gatewayBackoff;
       gatewayBackoff.succeed();
       self.iosGoingAwayEventCount = 0;
-      const altGateway = self.altGateway;
-      altGateway.recordSuccess();
     } else if ("RESUMED" === type) {
       const verbose = closure_9.verbose;
       const obj3 = GatewaySocketAnalytics;
@@ -538,8 +531,6 @@ class GatewaySocket extends GatewaySocketOpCodes {
       const gatewayBackoff3 = self.gatewayBackoff;
       gatewayBackoff3.succeed();
       self.iosGoingAwayEventCount = 0;
-      const altGateway3 = self.altGateway;
-      altGateway3.recordSuccess();
     }
     const dispatcher = self.dispatcher;
     dispatcher.receiveDispatch(d, type, compressionAnalytics);
@@ -552,34 +543,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
     this.hasConnectedOnce = true;
   }
   _getGatewayUrl() {
-    let resumeUrl;
-    const self = this;
-    if (null != this.resumeUrl) {
-      resumeUrl = self.resumeUrl;
-    } else {
-      const altGateway = self.altGateway;
-      resumeUrl = altGateway.getAltGatewayUrl();
-      if (resumeUrl == null) {
-        resumeUrl = GATEWAY_ENDPOINT;
-      }
-    }
-    return resumeUrl;
-  }
-  _maybeFallBackFromAltGateway() {
-    const self = this;
-    const altGateway = this.altGateway;
-    if (altGateway.shouldUseAltGateway()) {
-      const altGateway2 = self.altGateway;
-      altGateway2.recordFailure();
-      const altGateway3 = self.altGateway;
-      const tmp3 = !altGateway3.shouldUseAltGateway();
-      if (tmp3) {
-        const gatewayBackoff = self.gatewayBackoff;
-        gatewayBackoff.succeed();
-        self.setResumeUrl(null);
-        closure_9.warn("[ALT GATEWAY] 3 consecutive failures, falling back to default URL for this session.");
-      }
-    }
+    return null != this.resumeUrl ? this.resumeUrl : GATEWAY_ENDPOINT;
   }
   _handleHeartbeatReceive() {
     const self = this;
@@ -608,10 +572,9 @@ class GatewaySocket extends GatewaySocketOpCodes {
     const self = this;
     this._cleanup((close) => close.close(4000));
     this.connectionState = ConnectionStateDefault.WILL_RECONNECT;
-    const result = this._maybeFallBackFromAltGateway();
     const gatewayBackoff = this.gatewayBackoff;
-    const result1 = gatewayBackoff.fail(() => self._connect()) / 1000;
-    closure_9.warn("[ACK TIMEOUT] reconnecting in " + result1.toFixed(2) + " seconds.");
+    const result = gatewayBackoff.fail(() => self._connect()) / 1000;
+    closure_9.warn("[ACK TIMEOUT] reconnecting in " + result.toFixed(2) + " seconds.");
   }
   _handleClose(wasClean, c13, reason) {
     const self = this;
@@ -628,7 +591,6 @@ class GatewaySocket extends GatewaySocketOpCodes {
       if (!self.receivedHelloThisAttempt) {
         self.failedConnectAttempts = self.failedConnectAttempts + 1;
       }
-      const result1 = self._maybeFallBackFromAltGateway();
       if (self.nextReconnectIsImmediate) {
         const _HermesInternal2 = HermesInternal;
         closure_9.info("[WS CLOSED] (" + (wasClean || false).toString() + ", " + code + ", " + reason + ") retrying immediately.");
@@ -637,10 +599,10 @@ class GatewaySocket extends GatewaySocketOpCodes {
         const gatewayBackoff = self.gatewayBackoff;
         const info = closure_9.info;
         const failResult = gatewayBackoff.fail(() => self._connect());
-        const result2 = failResult / 1000;
+        const result1 = failResult / 1000;
         const _HermesInternal = HermesInternal;
         const str1 = (wasClean || false).toString();
-        info("[WS CLOSED] (" + str1 + ", " + code + ", " + reason + ") retrying in " + result2.toFixed(2) + " seconds.");
+        info("[WS CLOSED] (" + str1 + ", " + code + ", " + reason + ") retrying in " + result1.toFixed(2) + " seconds.");
         if (self.gatewayBackoff.fails > 4) {
           self._reset(wasClean || false, code, reason);
         }
@@ -674,7 +636,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
         const value = HTTP.get(obj2);
         value.then((status) => {
           status = status.status;
-          const obj = self(dependencyMap[21]);
+          const obj = self(dependencyMap[20]);
           obj.track(constants.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: status });
         }, (status) => {
           status = status.status;
@@ -877,30 +839,30 @@ class GatewaySocket extends GatewaySocketOpCodes {
               if (null !== handleIdentifyResult) {
                 let committedVersions;
                 let committedVersions1;
-                self.connectionState = tmp(c3[12]).IDENTIFYING;
+                self.connectionState = tmp(c3[11]).IDENTIFYING;
                 const _Date = Date;
                 timestamp = Date.now();
                 self.identifyStartTime = timestamp;
-                const obj10 = tmp2(c3[24]);
+                const obj10 = tmp2(c3[23]);
                 if (obj10.isCacheEnabled()) {
-                  const obj12 = tmp(c3[25]);
+                  const obj12 = tmp(c3[24]);
                   committedVersions = obj12.getCommittedVersions();
                 } else {
                   committedVersions = {};
                 }
                 const items = [committedVersions, , ];
-                const obj13 = tmp2(c3[24]);
+                const obj13 = tmp2(c3[23]);
                 if (obj13.isCacheEnabled()) {
-                  const obj15 = tmp(c3[26]);
+                  const obj15 = tmp(c3[25]);
                   committedVersions1 = obj15.getCommittedVersions();
                 } else {
                   committedVersions1 = {};
                 }
                 items[1] = committedVersions1;
-                const obj16 = tmp2(c3[24]);
+                const obj16 = tmp2(c3[23]);
                 let canUseGuildVersionsResult = obj16.isCacheEnabled();
                 if (canUseGuildVersionsResult) {
-                  const obj17 = tmp(c3[27]);
+                  const obj17 = tmp(c3[26]);
                   canUseGuildVersionsResult = obj17.canUseGuildVersions();
                 }
                 items[2] = canUseGuildVersionsResult;
@@ -925,7 +887,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
             guild_versions = closure_3[0];
             closure_5 = closure_3[1];
             closure_6 = closure_3[2];
-            const obj21 = tmp2(c3[28]);
+            const obj21 = tmp2(c3[27]);
             qos_token = obj21.buildQosToken(tmp2.userId, closure_129_0.getIsUserActive());
             const tmp105 = closure_6;
             if (tmp105) {
@@ -934,7 +896,7 @@ class GatewaySocket extends GatewaySocketOpCodes {
             } else {
               obj = { guild_versions: {} };
             }
-            if (closure_129_0.connectionState === tmp(c3[12]).IDENTIFYING) {
+            if (closure_129_0.connectionState === tmp(c3[11]).IDENTIFYING) {
               if (closure_129_0.identifyStartTime === timestamp) {
                 token = tmp2.token;
                 properties = tmp2.properties;
@@ -948,18 +910,18 @@ class GatewaySocket extends GatewaySocketOpCodes {
                 closure_1_9.verbose("[IDENTIFY]");
                 obj14 = { token, capabilities: getClientCapabilities(obj18), properties: obj11, presence, compress: compressionHandler.usesLegacyCompression(), client_state: obj, qos_token };
                 obj18 = { useChannelObfuscation: obj6.isChannelMetadataObfuscationEnabled("GatewaySocket") };
-                getClientCapabilities = tmp2(c3[29]).getClientCapabilities;
-                const tmp42 = tmp2(c3[29]);
-                obj6 = tmp2(c3[30]);
+                getClientCapabilities = tmp2(c3[28]).getClientCapabilities;
+                const tmp42 = tmp2(c3[28]);
+                obj6 = tmp2(c3[29]);
                 compressionHandler = closure_129_0.compressionHandler;
                 const _JSON = JSON;
                 length = JSON.stringify(obj14);
                 closure_129_0.identifyUncompressedByteSize = length.length;
-                const obj7 = v1(c3[31]);
+                const obj7 = v1(c3[30]);
                 closure_129_0.identifyCompressedByteSize = obj7.deflate(length).length;
                 closure_129_0.identifyCount = closure_129_0.identifyCount + 1;
                 closure_129_0.send(tmp2(c3[8]).Opcode.IDENTIFY, obj14, false);
-                const obj8 = tmp(c3[21]);
+                const obj8 = tmp(c3[20]);
                 obj8.track(qos_token.SESSION_START_CLIENT, {});
               }
             }
@@ -1062,8 +1024,6 @@ class GatewaySocket extends GatewaySocketOpCodes {
     let flag;
     const self = this;
     if (this.isClosed()) {
-      const altGateway = self.altGateway;
-      altGateway.reset();
       closure_9.verbose(".connect() called, new state is WILL_RECONNECT");
       self.connectionState = ConnectionStateDefault.WILL_RECONNECT;
       self.firstConnectAttemptStartTime = 0;

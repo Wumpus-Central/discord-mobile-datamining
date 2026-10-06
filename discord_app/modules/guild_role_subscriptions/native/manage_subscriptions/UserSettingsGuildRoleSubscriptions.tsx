@@ -1,19 +1,19 @@
-// === Module 15027: UserSettingsGuildRoleSubscriptions ===
+// === Module 15042: UserSettingsGuildRoleSubscriptions ===
 
-// Module 15027 (UserSettingsGuildRoleSubscriptions)
+// Module 15042 (UserSettingsGuildRoleSubscriptions)
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 15028 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15029 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15030 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 15033 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15034 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 15043 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15044 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15045 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 15048 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15049 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

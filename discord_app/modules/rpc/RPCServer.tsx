@@ -1,13 +1,13 @@
-// === Module 14369: RPCServer ===
+// === Module 14387: RPCServer ===
 
-// Module 14369 (RPCServer)
+// Module 14387 (RPCServer)
 import _modDef12 from "module_12" /* 12 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Constants2 from "Constants" /* 5316 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 8975 */;
-import RPCErrorDefault from "RPCError" /* 9026 */;
-import transformUserDefault from "transformUser" /* 9032 */;
-import validateScopeDefault from "validateScope" /* 14343 */;
+import Constants2 from "Constants" /* 5323 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 9008 */;
+import RPCErrorDefault from "RPCError" /* 9059 */;
+import transformUserDefault from "transformUser" /* 9065 */;
+import validateScopeDefault from "validateScope" /* 14361 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

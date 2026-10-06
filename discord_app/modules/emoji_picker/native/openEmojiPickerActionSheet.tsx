@@ -1,10 +1,10 @@
-// === Module 9866: openEmojiPickerActionSheet ===
+// === Module 9879: openEmojiPickerActionSheet ===
 
-// Module 9866 (openEmojiPickerActionSheet)
+// Module 9879 (openEmojiPickerActionSheet)
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 9867 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import emojis_EmojiActionCreators from "emojis/EmojiActionCreators" /* 9880 */;
 import size from "module_2" /* 2 */;
 
 const EmojiInteractionPoint = EmojiConstants.EmojiInteractionPoint;
@@ -16,5 +16,5 @@ export const openEmojiPickerActionSheet = function openEmojiPickerActionSheet(ar
   const obj = emojis_EmojiActionCreators;
   const result = obj.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequire(9868, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
+  obj2.openLazy(asyncRequire(9881, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
 };

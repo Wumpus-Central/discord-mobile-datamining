@@ -1,12 +1,12 @@
-// === Module 17507: MemberVerificationApplicationManager ===
+// === Module 17552: MemberVerificationApplicationManager ===
 
-// Module 17507 (MemberVerificationApplicationManager)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5917 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+// Module 17552 (MemberVerificationApplicationManager)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5924 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 class MemberVerificationApplicationManager extends AutomaticLifecycleManager {

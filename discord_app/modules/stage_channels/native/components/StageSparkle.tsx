@@ -1,17 +1,17 @@
-// === Module 9292: StageSparkle ===
+// === Module 9327: StageSparkle ===
 
-// Module 9292 (StageSparkle)
+// Module 9327 (StageSparkle)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4589 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9293 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9294 */;
+import native from "native" /* 4595 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9328 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9329 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -141,8 +141,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10 = importDefault;
   }
   items1 = [metroRequire(View, obj2), ];
-  const obj5 = { style: tmp3.sparkles, source: tmp10(9294) };
-  const tmp10Result = tmp10(5974);
+  const obj5 = { style: tmp3.sparkles, source: tmp10(9329) };
+  const tmp10Result = tmp10(5981);
   items1[1] = metroRequire(tmp10Result, obj5);
   return metroImportDefault(View, obj);
 });

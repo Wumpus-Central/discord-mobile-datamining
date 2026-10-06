@@ -1,15 +1,15 @@
-// === Module 14349: conjureLivePreview ===
+// === Module 14367: conjureLivePreview ===
 
-// Module 14349 (conjureLivePreview)
-import RPCErrorDefault from "RPCError" /* 9026 */;
-import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14302 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 14350 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
-import FramesStore from "FramesStore" /* 8703 */;
-import Constants_mod from "Constants" /* 5316 */;
+// Module 14367 (conjureLivePreview)
+import RPCErrorDefault from "RPCError" /* 9059 */;
+import validateEmbeddedAppFrameDefault from "validateEmbeddedAppFrame" /* 14320 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 14368 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
+import FramesStore from "FramesStore" /* 9000 */;
+import Constants_mod from "Constants" /* 5323 */;
 import Constants_mod2 from "Constants" /* 1085 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14317 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14335 */;
 import size from "module_2" /* 2 */;
 
 let RPCCommands;

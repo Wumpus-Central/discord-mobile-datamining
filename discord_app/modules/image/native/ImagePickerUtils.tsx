@@ -1,6 +1,6 @@
-// === Module 7286: ImagePickerUtils ===
+// === Module 7299: ImagePickerUtils ===
 
-// Module 7286 (ImagePickerUtils)
+// Module 7299 (ImagePickerUtils)
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
 import size from "module_2" /* 2 */;
 

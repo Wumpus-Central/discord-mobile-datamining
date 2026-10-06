@@ -1,10 +1,10 @@
-// === Module 13265: useYouBarSettingsSafeArea ===
+// === Module 13284: useYouBarSettingsSafeArea ===
 
-// Module 13265 (useYouBarSettingsSafeArea)
+// Module 13284 (useYouBarSettingsSafeArea)
 import react from "react" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6433 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6440 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 5896: useGameProfileObscured ===
+// === Module 5903: useGameProfileObscured ===
 
-// Module 5896 (useGameProfileObscured)
+// Module 5903 (useGameProfileObscured)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import utils from "utils" /* 5897 */;
+import utils from "utils" /* 5904 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,8 +1,8 @@
-// === Module 13630: NetworkQuality ===
+// === Module 13646: NetworkQuality ===
 
-// Module 13630 (NetworkQuality)
-import TimeUtils from "TimeUtils" /* 4919 */;
-import NetworkStore from "NetworkStore" /* 4939 */;
+// Module 13646 (NetworkQuality)
+import TimeUtils from "TimeUtils" /* 4925 */;
+import NetworkStore from "NetworkStore" /* 4945 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 7308: GuildProductAttachmentUploadTarget ===
+// === Module 7319: GuildProductAttachmentUploadTarget ===
 
-// Module 7308 (GuildProductAttachmentUploadTarget)
+// Module 7319 (GuildProductAttachmentUploadTarget)
 import Constants from "Constants" /* 1085 */;
-import GuildProductConstants from "GuildProductConstants" /* 7309 */;
+import GuildProductConstants from "GuildProductConstants" /* 7320 */;
 import size from "module_2" /* 2 */;
 
 let _window;

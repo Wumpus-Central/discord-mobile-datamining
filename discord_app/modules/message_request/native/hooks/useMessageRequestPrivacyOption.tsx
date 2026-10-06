@@ -1,11 +1,11 @@
-// === Module 13722: useMessageRequestPrivacyOption ===
+// === Module 13740: useMessageRequestPrivacyOption ===
 
-// Module 13722 (useMessageRequestPrivacyOption)
+// Module 13740 (useMessageRequestPrivacyOption)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12087 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12102 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -153,8 +153,8 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       cResult[10] = S;
       cResult[11] = tmp6;
       cResult[12] = !tmp6 && !tmp4;
-      cResult[13] = jsx(id(6697).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6 && !tmp4, onValueChange: S, disabled: tmp6 });
-      const tmp17 = jsx(id(6697).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6 && !tmp4, onValueChange: S, disabled: tmp6 });
+      cResult[13] = jsx(id(6704).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6 && !tmp4, onValueChange: S, disabled: tmp6 });
+      const tmp17 = jsx(id(6704).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6 && !tmp4, onValueChange: S, disabled: tmp6 });
     }
     const hasItem = setting1.includes(guild.id);
     cResult[3] = guild.id;
@@ -189,7 +189,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
     const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
     MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
   }, items);
-  const ActionSheetSwitchRow = id(6697).ActionSheetSwitchRow;
+  const ActionSheetSwitchRow = id(6704).ActionSheetSwitchRow;
   const intl = id(1126).intl;
   const intl2 = id(1126).intl;
   return <ActionSheetSwitchRow label={intl.string(id(1126).t["7UgSGP"])} subLabel={intl2.string(id(1126).t.INRaYb)} value={!hasItem1 && !hasItem} onValueChange={callback} disabled={hasItem1} />;

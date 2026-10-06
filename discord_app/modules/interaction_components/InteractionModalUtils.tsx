@@ -1,6 +1,6 @@
-// === Module 17520: InteractionModalUtils ===
+// === Module 17565: InteractionModalUtils ===
 
-// Module 17520 (InteractionModalUtils)
+// Module 17565 (InteractionModalUtils)
 import _modDef38 from "module_38" /* 38 */;
 import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,21 +8,21 @@ import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import Server from "Server" /* 1985 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import stageAttachmentFilesDefault from "stageAttachmentFiles" /* 7472 */;
-import ComponentStateContext from "ComponentStateContext" /* 7795 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 8706 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8812 */;
-import InteractionModalStore2 from "InteractionModalStore" /* 14162 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import stageAttachmentFilesDefault from "stageAttachmentFiles" /* 7483 */;
+import ComponentStateContext from "ComponentStateContext" /* 7806 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8842 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9002 */;
+import InteractionModalStore2 from "InteractionModalStore" /* 14180 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7796 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 7807 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -40,7 +40,7 @@ function validate(arr) {
   return c0;
 }
 function getData(arg0, arr, arg2) {
-  const f130973 = (type) => {
+  const f131191 = (type) => {
     let components;
     let items;
     let mapped;
@@ -52,7 +52,7 @@ function getData(arg0, arr, arg2) {
     let values2;
     type = type.type;
     if (Server.ComponentType.ACTION_ROW === type) {
-      const obj4 = { type: type.type, components: components.map(f130973) };
+      const obj4 = { type: type.type, components: components.map(f131191) };
       components = type.components;
       return obj4;
     } else if (Server.ComponentType.TEXT_INPUT === type) {
@@ -113,7 +113,7 @@ function getData(arg0, arr, arg2) {
               if (Server.ComponentType.TEXT_DISPLAY === type) {
                 return { type: type.type };
               } else if (Server.ComponentType.LABEL === type) {
-                const obj21 = { type: type.type, component: items.map(f130973)[0] };
+                const obj21 = { type: type.type, component: items.map(f131191)[0] };
                 items = [type.component];
                 return obj21;
               } else if (Server.ComponentType.RADIO_GROUP === type) {
@@ -175,7 +175,7 @@ function getData(arg0, arr, arg2) {
   };
   let closure_0 = arg0;
   let closure_1 = arg2;
-  return arr.map(f130973);
+  return arr.map(f131191);
 }
 function getUploadsForModal(id, customId) {
   let closure_0 = customId;
@@ -238,7 +238,7 @@ let obj = function _submitModal() {
               tmp6 = stageAttachmentFilesDefault(arr);
             }
             const obj4 = { data: obj5, preflight: tmp6 };
-            obj5 = { interactionType: require("Server").InteractionTypes.MODAL_SUBMIT, applicationId: closure_0.application.id };
+            obj5 = { interactionType: require("InteractionTypes").InteractionTypes.MODAL_SUBMIT, applicationId: closure_0.application.id };
             const addQueued = require("InteractionActionCreators").addQueued;
             const tmp8 = require("InteractionActionCreators");
             addQueued(nonce, obj4);
@@ -256,7 +256,7 @@ let obj = function _submitModal() {
           return obj;
         } else {
           length = arr.map((item, index) => {
-            obj = closure_1_0(nonce[29]);
+            obj = closure_1_0(nonce[30]);
             return obj.getAttachmentPayload(item, index);
           });
           const obj7 = { uploads: arr };
@@ -271,9 +271,9 @@ let obj = function _submitModal() {
                 aborted = signal.aborted;
               }
               if (!aborted) {
-                const HTTP = closure_0(nonce[30]).HTTP;
+                const HTTP = closure_0(nonce[31]).HTTP;
                 const request = { url: constants.INTERACTIONS, body, signal, rejectWithError: false };
-                body = { type: closure_0(nonce[14]).InteractionTypes.MODAL_SUBMIT, application_id: closure_1_0.application.id, channel_id: null, guild_id: null, data: obj5, session_id: components.getSessionId(), nonce };
+                body = { type: closure_0(nonce[29]).InteractionTypes.MODAL_SUBMIT, application_id: closure_1_0.application.id, channel_id: null, guild_id: null, data: obj5, session_id: components.getSessionId(), nonce };
                 const post = HTTP.post;
                 ({ id: obj2.channel_id, guild_id: obj2.guild_id } = closure_1_3);
                 obj5 = { id: null, custom_id: null, components, attachments: tmp9 };
@@ -286,7 +286,7 @@ let obj = function _submitModal() {
                 postResult.catch((error) => {
                   if (429 === error.status) {
                     const _setTimeout = setTimeout;
-                    const timerId = setTimeout(closure_1_7, error.body.retry_after * signal(nonce[31]).Millis.SECOND);
+                    const timerId = setTimeout(closure_1_7, error.body.retry_after * signal(nonce[32]).Millis.SECOND);
                   } else {
                     obj = closure_2_0(nonce[28]);
                     obj.setFailed(closure_1_2);

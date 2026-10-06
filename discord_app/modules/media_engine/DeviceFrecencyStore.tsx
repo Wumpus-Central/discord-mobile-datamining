@@ -1,14 +1,14 @@
-// === Module 4918: DeviceFrecencyStore ===
+// === Module 4924: DeviceFrecencyStore ===
 
-// Module 4918 (DeviceFrecencyStore)
+// Module 4924 (DeviceFrecencyStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import TimeUtils from "TimeUtils" /* 4919 */;
-import FrecencyDefault from "Frecency" /* 4927 */;
+import TimeUtils from "TimeUtils" /* 4925 */;
+import FrecencyDefault from "Frecency" /* 4933 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 4915 */;
+import Constants from "Constants" /* 4921 */;
 import size from "module_2" /* 2 */;
 
 let hasOwnProperty;

@@ -1,6 +1,6 @@
-// === Module 16260: HomeDrawerGuildVoiceState ===
+// === Module 16300: HomeDrawerGuildVoiceState ===
 
-// Module 16260 (HomeDrawerGuildVoiceState)
+// Module 16300 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
@@ -8,19 +8,19 @@ import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import GuildChannelStore2 from "GuildChannelStore" /* 4507 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9746 */;
-import AvatarPile2 from "AvatarPile" /* 12850 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13522 */;
+import GuildChannelStore2 from "GuildChannelStore" /* 4513 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 9759 */;
+import AvatarPile2 from "AvatarPile" /* 12869 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13538 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -117,7 +117,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const obj3 = { style: tmp5, children: closure_11(AvatarPile, obj4) };
       obj4 = { size: guildId(1188).AvatarSizes.XSMALL, names: tmp6, totalCount: tmp9, children: tmp10 };
-      AvatarPile = guildId(12850).AvatarPile;
+      AvatarPile = guildId(12869).AvatarPile;
       const tmp16 = closure_11(View, obj3);
       cResult[11] = tmp6;
       cResult[12] = tmp10;

@@ -1,12 +1,12 @@
-// === Module 5043: useChannelName ===
+// === Module 5049: useChannelName ===
 
-// Module 5043 (useChannelName)
+// Module 5049 (useChannelName)
 import intl4 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4776 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import ExperimentStore from "ExperimentStore" /* 4782 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -17,7 +17,7 @@ let _require, multiUserDM, nickname;
 
 let metroImportAll;
 let metroImportDefault;
-const f89925 = (id) => {
+const f90063 = (id) => {
   nickname = nickname.getNickname(id.id);
   if (nickname == null) {
     const obj = closure_2_1(closure_2_2[6]);
@@ -81,7 +81,7 @@ function computeChannelName(channel, UserStore, RelationshipStore) {
         _require = RelationshipStore;
         const mapped1 = recipients1.map(UserStore.getUser);
         const found = mapped1.filter(require("GlobalUtils").isNotNullish);
-        const mapped2 = found.map(f89925);
+        const mapped2 = found.map(f90063);
         if (mapped2.length > 0) {
           joined = mapped2.join(", ");
         } else {
@@ -195,7 +195,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           multiUserDM = RelationshipStore;
           const mapped = recipients.map(UserStore.getUser);
           const found = mapped.filter(GlobalUtils.isNotNullish);
-          const mapped1 = found.map(f89925);
+          const mapped1 = found.map(f90063);
           if (mapped1.length > 0) {
             joined = mapped1.join(", ");
           } else {
@@ -235,7 +235,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         closure_0 = RelationshipStore;
         const mapped = recipients.map(UserStore.getUser);
         const found = mapped.filter(GlobalUtils.isNotNullish);
-        const mapped1 = found.map(f89925);
+        const mapped1 = found.map(f90063);
         if (mapped1.length > 0) {
           joined = mapped1.join(", ");
         } else {
@@ -311,7 +311,7 @@ function computeDefaultGroupDmNameFromUserIds(arr, getUser, arg2) {
   _require = arg2;
   const mapped = arr.map(getUser.getUser);
   const found = mapped.filter(require("GlobalUtils").isNotNullish);
-  const mapped1 = found.map(f89925);
+  const mapped1 = found.map(f90063);
   if (mapped1.length > 0) {
     joined = mapped1.join(", ");
   } else {
@@ -332,7 +332,7 @@ function computeDefaultGroupDmName(recipients, getUser, arg2) {
   _require = arg2;
   const mapped = recipients.map(getUser.getUser);
   const found = mapped.filter(require("GlobalUtils").isNotNullish);
-  const mapped1 = found.map(f89925);
+  const mapped1 = found.map(f90063);
   if (mapped1.length > 0) {
     joined = mapped1.join(", ");
   } else {

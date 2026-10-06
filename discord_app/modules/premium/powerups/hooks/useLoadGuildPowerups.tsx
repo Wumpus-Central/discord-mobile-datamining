@@ -1,8 +1,8 @@
-// === Module 12140: useLoadGuildPowerups ===
+// === Module 12155: useLoadGuildPowerups ===
 
-// Module 12140 (useLoadGuildPowerups)
-import GameServerActionCreators from "GameServerActionCreators" /* 12141 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12147 */;
+// Module 12155 (useLoadGuildPowerups)
+import GameServerActionCreators from "GameServerActionCreators" /* 12156 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12162 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,10 +1,10 @@
-// === Module 16873: ThreadChannelUserList ===
+// === Module 16898: ThreadChannelUserList ===
 
-// Module 16873 (ThreadChannelUserList)
+// Module 16898 (ThreadChannelUserList)
 import Fragment from "Fragment" /* 21 */;
 import throttleDefault from "throttle" /* 550 */;
 import Constants from "Constants" /* 1085 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;

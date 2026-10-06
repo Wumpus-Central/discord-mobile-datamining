@@ -1,23 +1,23 @@
-// === Module 17351: VoicePanelControlsDrawer ===
+// === Module 17379: VoicePanelControlsDrawer ===
 
-// Module 17351 (VoicePanelControlsDrawer)
+// Module 17379 (VoicePanelControlsDrawer)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import spring from "spring" /* 5597 */;
-import react3 from "react" /* 5738 */;
-import useRefValueDefault from "useRefValue" /* 5973 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9074 */;
-import VoicePanelChatViewDefault from "VoicePanelChatView" /* 11899 */;
-import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 11909 */;
-import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17352 */;
-import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17362 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import spring from "spring" /* 5604 */;
+import react3 from "react" /* 5745 */;
+import useRefValueDefault from "useRefValue" /* 5980 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9110 */;
+import VoicePanelChatViewDefault from "VoicePanelChatView" /* 11913 */;
+import VoicePanelControlsUtils from "VoicePanelControlsUtils" /* 11923 */;
+import VoicePanelVoiceControlsDefault from "VoicePanelVoiceControls" /* 17380 */;
+import VoicePanelControlsAppLauncherDefault from "VoicePanelControlsAppLauncher" /* 17391 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

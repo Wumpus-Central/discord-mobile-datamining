@@ -1,12 +1,12 @@
-// === Module 6109: NativeTextInput ===
+// === Module 6116: NativeTextInput ===
 
-// Module 6109 (NativeTextInput)
+// Module 6116 (NativeTextInput)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import native from "native" /* 4582 */;
-import native2 from "native" /* 4589 */;
-import useMountEffect from "useMountEffect" /* 5590 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6111 */;
+import native from "native" /* 4588 */;
+import native2 from "native" /* 4595 */;
+import useMountEffect from "useMountEffect" /* 5597 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6118 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1486 */;
@@ -108,7 +108,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((value, arg1) =
         const mountLayoutEffect = tmpResult.useMountLayoutEffect(tmp8);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { value: "Array", defaultValue: "Set" };
+          const obj2 = { value: "start", defaultValue: "unicodeVersion" };
           cResult[8] = obj2;
           tmp11 = obj2;
         } else {
@@ -174,7 +174,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((value, arg1) =
       current.setNativeProps(obj);
     }
   });
-  return { value: "Array", defaultValue: "Set" };
+  return { value: "start", defaultValue: "unicodeVersion" };
 });
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {

@@ -1,6 +1,6 @@
-// === Module 6925: BillingActionCreators ===
+// === Module 6938: BillingActionCreators ===
 
-// Module 6925 (BillingActionCreators)
+// Module 6938 (BillingActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Fragment from "Fragment" /* 21 */;
 import Storage2 from "Storage" /* 510 */;
@@ -10,31 +10,31 @@ import intl4 from "intl" /* 1126 */;
 import _modDef1251 from "module_1251" /* 1251 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import BillingUtils from "BillingUtils" /* 4543 */;
-import BillingError from "BillingError" /* 4550 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5312 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5404 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import ProductIds from "ProductIds" /* 6742 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 6923 */;
-import ACOMExperiments from "ACOMExperiments" /* 8870 */;
-import showSpendingLimitReachedAlert from "showSpendingLimitReachedAlert" /* 10437 */;
-import IAPUtils from "IAPUtils" /* 10783 */;
-import _mod10785 from "module_10785" /* 10785 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11092 */;
-import ErrorUtilsAll from "ErrorUtils" /* 13150 */;
-import purchaseExceptionAlerts from "purchaseExceptionAlerts" /* 13152 */;
-import APBRequestOperations from "APBRequestOperations" /* 13153 */;
-import ACRequestOperations from "ACRequestOperations" /* 13154 */;
+import BillingUtils from "BillingUtils" /* 4549 */;
+import BillingError from "BillingError" /* 4556 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5319 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import ProductIds from "ProductIds" /* 6926 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 6936 */;
+import ACOMExperiments from "ACOMExperiments" /* 8899 */;
+import showSpendingLimitReachedAlert from "showSpendingLimitReachedAlert" /* 10450 */;
+import IAPUtils from "IAPUtils" /* 10796 */;
+import _mod10798 from "module_10798" /* 10798 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11105 */;
+import ErrorUtilsAll from "ErrorUtils" /* 13169 */;
+import purchaseExceptionAlerts from "purchaseExceptionAlerts" /* 13171 */;
+import APBRequestOperations from "APBRequestOperations" /* 13172 */;
+import ACRequestOperations from "ACRequestOperations" /* 13173 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 6926 */;
-import PremiumPlanPurchasedStore from "PremiumPlanPurchasedStore" /* 6927 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 6939 */;
+import PremiumPlanPurchasedStore from "PremiumPlanPurchasedStore" /* 6940 */;
 import UserStore from "UserStore" /* 1377 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -320,7 +320,7 @@ obj = function _clearAndMakeIAPRequest() {
             c6 = 1;
             c7 = 1;
             const obj5 = { value: obj3.clearTransactionIOS(), done: false };
-            obj3 = _mod10785;
+            obj3 = _mod10798;
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -842,7 +842,7 @@ obj = function _createGenericSubscription() {
             originalPurchase = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (request_identifier === 1) {
@@ -1056,7 +1056,7 @@ obj = function _modifyGenericSubscription() {
               originalPurchase = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
             break;
           }
@@ -1350,7 +1350,7 @@ obj = function _resubscribeGenericSubscription() {
             originalPurchase = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (request_identifier === 1) {
@@ -1778,7 +1778,7 @@ obj = function _mobilePurchaseSKU() {
               closure_22 = undefined;
               c8 = 1;
               c9 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
             break;
           }
@@ -2335,7 +2335,7 @@ obj = {
               c4 = 2;
               c5 = 1;
               const obj4 = { value: obj7.initConnection(), done: false };
-              obj7 = _mod10785;
+              obj7 = _mod10798;
               return obj4;
             }
           } else if (1 === c4) {
@@ -3341,9 +3341,9 @@ obj = {
     })();
   }
 };
-let items = [_mod10785.ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [_mod10798.ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 const set = new Set(items);
-const items1 = [_mod10785.ErrorCode.E_UNKNOWN, _mod10785.ErrorCode.E_DEFERRED_PAYMENT];
+const items1 = [_mod10798.ErrorCode.E_UNKNOWN, _mod10798.ErrorCode.E_DEFERRED_PAYMENT];
 const set1 = new Set(items1);
 let obj2 = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 let result = size.fileFinishedImporting("actions/native/BillingActionCreators.tsx");

@@ -1,7 +1,7 @@
-// === Module 15964: usePrivateChannelWave ===
+// === Module 16003: usePrivateChannelWave ===
 
-// Module 15964 (usePrivateChannelWave)
-import MessageConstants from "MessageConstants" /* 4883 */;
+// Module 16003 (usePrivateChannelWave)
+import MessageConstants from "MessageConstants" /* 4889 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -30,7 +30,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id, arg1) => {
     if (cResult[1] === first) {
       tmp6 = cResult[2];
     }
-    const tmpResult = tmp(15965);
+    const tmpResult = tmp(16004);
     const privateChannelWaveEligible = tmpResult.usePrivateChannelWaveEligible(id, arg1);
     if (cResult[3] === tmp6) {
       let tmp9;

@@ -1,7 +1,7 @@
-// === Module 13957: react-native ===
+// === Module 13974: react-native ===
 
-// Module 13957 (react-native)
-import react_nativeDefault from "react-native" /* 13448 */;
+// Module 13974 (react-native)
+import react_nativeDefault from "react-native" /* 13975 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");

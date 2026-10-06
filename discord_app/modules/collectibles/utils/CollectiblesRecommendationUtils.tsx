@@ -1,6 +1,6 @@
-// === Module 13007: CollectiblesRecommendationUtils ===
+// === Module 13026: CollectiblesRecommendationUtils ===
 
-// Module 13007 (CollectiblesRecommendationUtils)
+// Module 13026 (CollectiblesRecommendationUtils)
 import size from "module_2" /* 2 */;
 
 let map;

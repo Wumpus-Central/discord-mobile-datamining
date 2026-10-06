@@ -1,15 +1,15 @@
-// === Module 9414: useGuildProfileCTA ===
+// === Module 9428: useGuildProfileCTA ===
 
-// Module 9414 (useGuildProfileCTA)
+// Module 9428 (useGuildProfileCTA)
 import FlagUtils from "FlagUtils" /* 1390 */;
-import GuildTagUtils from "GuildTagUtils" /* 7836 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8068 */;
-import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 9415 */;
+import GuildTagUtils from "GuildTagUtils" /* 7847 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8078 */;
+import usePendingFolderGuildIds from "usePendingFolderGuildIds" /* 9429 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import InviteStore from "InviteStore" /* 4871 */;
+import InviteStore from "InviteStore" /* 4877 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

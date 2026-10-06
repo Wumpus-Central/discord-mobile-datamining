@@ -1,6 +1,6 @@
-// === Module 12197: useGuildBoostPurchaseHandler ===
+// === Module 12212: useGuildBoostPurchaseHandler ===
 
-// Module 12197 (useGuildBoostPurchaseHandler)
+// Module 12212 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -23,7 +23,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let obj = require("react");
   const cResult = obj.c(5);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = tmp(6912);
+    const tmpResult = tmp(6922);
     const result = tmpResult.isMobileWebRedirectCheckoutEnabled();
     cResult[0] = result;
     first = result;

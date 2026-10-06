@@ -1,13 +1,13 @@
-// === Module 16730: ConjureSettingsRequestCard ===
+// === Module 16751: ConjureSettingsRequestCard ===
 
-// Module 16730 (ConjureSettingsRequestCard)
+// Module 16751 (ConjureSettingsRequestCard)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4854 */;
-import ConjureSettingsSheet from "ConjureSettingsSheet" /* 16572 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
+import ConjureSettingsSheet from "ConjureSettingsSheet" /* 16612 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -45,8 +45,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       const _Symbol = Symbol;
       const card = tmp4.card;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: intl.string(request(3723)["jZjP+I"]) };
-        const Text = tmp(4886).Text;
+        let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: intl.string(request(3753)["jZjP+I"]) };
+        const Text = tmp(4892).Text;
         intl = tmp(1126).intl;
         const tmp10 = closure_5(Text, obj2);
         cResult[4] = tmp10;
@@ -65,13 +65,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
           tmp11 = note;
         }
         const intl2 = tmp(1126).intl;
-        note = intl2.string(request(3723).XuOf5s);
+        note = intl2.string(request(3753).XuOf5s);
       } else {
         tmp11 = cResult[6];
       }
       if (cResult[7] !== tmp11) {
         const obj3 = { variant: "text-sm/normal", color: "text-default", children: tmp11 };
-        const tmp16 = closure_5(tmp(4886).Text, obj3);
+        const tmp16 = closure_5(tmp(4892).Text, obj3);
         cResult[7] = tmp11;
         cResult[8] = tmp16;
         tmp14 = tmp16;
@@ -81,7 +81,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       const _Symbol2 = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = tmp(1126).intl;
-        const stringResult = intl3.string(request(3723).d49riY);
+        const stringResult = intl3.string(request(3753).d49riY);
         cResult[9] = stringResult;
         tmp17 = stringResult;
       } else {
@@ -89,7 +89,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
       }
       if (cResult[10] !== tmp5) {
         const obj4 = { variant: "secondary", size: "sm", onPress: tmp5, text: tmp17 };
-        const tmp22 = closure_5(tmp(5594).Button, obj4);
+        const tmp22 = closure_5(tmp(5601).Button, obj4);
         cResult[10] = tmp5;
         cResult[11] = tmp22;
         tmp20 = tmp22;
@@ -144,8 +144,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     obj2 = { projectId, scopeKeys: request.keys, note: request.note, notifyAgent: true, isPreview: true };
     showActionSheet(obj);
   }, items);
-  let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: intl.string(request(3723)["jZjP+I"]) };
-  const Text = projectId(4886).Text;
+  let obj2 = { variant: "text-xs/semibold", color: "text-muted", children: intl.string(request(3753)["jZjP+I"]) };
+  const Text = projectId(4892).Text;
   intl = projectId(1126).intl;
   const items1 = [closure_5(Text, obj2), , ];
   if (null != request.note) {
@@ -155,15 +155,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     }
     const obj3 = { variant: "text-sm/normal", color: "text-default", children: note };
     items1[1] = closure_5(tmp9, obj3);
-    const obj4 = { variant: "secondary", size: "sm", onPress: callback, text: intl3.string(request(3723).d49riY) };
-    const Button = tmp6(5594).Button;
+    const obj4 = { variant: "secondary", size: "sm", onPress: callback, text: intl3.string(request(3753).d49riY) };
+    const Button = tmp6(5601).Button;
     intl3 = tmp6(1126).intl;
     items1[2] = closure_5(Button, obj4);
     obj.children = items1;
     return closure_6(View, obj);
   }
   const intl2 = tmp6(1126).intl;
-  note = intl2.string(tmp8(3723).XuOf5s);
+  note = intl2.string(tmp8(3753).XuOf5s);
 });
 const result = size.fileFinishedImporting("modules/conjure/settings/native/ConjureSettingsRequestCard.tsx");
 

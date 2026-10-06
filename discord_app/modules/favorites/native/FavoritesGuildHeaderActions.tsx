@@ -1,11 +1,11 @@
-// === Module 16075: FavoritesGuildHeaderActions ===
+// === Module 16114: FavoritesGuildHeaderActions ===
 
-// Module 16075 (FavoritesGuildHeaderActions)
+// Module 16114 (FavoritesGuildHeaderActions)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import IconButton2 from "IconButton" /* 7575 */;
-import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 16076 */;
-import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 16077 */;
+import IconButton2 from "IconButton" /* 7586 */;
+import useFavoritesGuildHeaderActionDefault from "useFavoritesGuildHeaderAction" /* 16115 */;
+import FavoritesGuildAddActionSheet from "FavoritesGuildAddActionSheet" /* 16116 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -19,7 +19,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = obj.c(4);
   ({ isPreview, label, exitPreview } = useFavoritesGuildHeaderActionDefault());
   useFavoritesGuildHeaderActionDefault();
-  const tmp4Result = importDefault(isPreview ? 6018 : 10979);
+  const tmp4Result = importDefault(isPreview ? 6025 : 10992);
   if (!isPreview) {
     exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
   }
@@ -48,7 +48,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (!isPreview) {
     exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
   }
-  return <IconButton variant="secondary" size="sm" icon={importDefault(isPreview ? 6018 : 10979)} onPress={exitPreview} accessibilityLabel={label} maxFontSizeMultiplier={1} />;
+  return <IconButton variant="secondary" size="sm" icon={importDefault(isPreview ? 6025 : 10992)} onPress={exitPreview} accessibilityLabel={label} maxFontSizeMultiplier={1} />;
 });
 const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildHeaderActions.tsx");
 

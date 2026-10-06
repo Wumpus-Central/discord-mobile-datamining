@@ -1,14 +1,14 @@
-// === Module 13269: LargeCountDownPill ===
+// === Module 13288: LargeCountDownPill ===
 
-// Module 13269 (LargeCountDownPill)
+// Module 13288 (LargeCountDownPill)
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4574 */;
-import CircleInformationIcon2 from "CircleInformationIcon" /* 4812 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
+import CircleInformationIcon2 from "CircleInformationIcon" /* 4818 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -91,7 +91,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((countdownText) => {
     }
     if (cResult[7] !== tmp4.iconStyle) {
       let obj2 = { style: tmp4.iconStyle, color: nativeDefault.colors.TEXT_STATUS_IDLE };
-      let CircleInformationIcon = tmp(4812).CircleInformationIcon;
+      let CircleInformationIcon = tmp(4818).CircleInformationIcon;
       const tmp13 = closure_5(CircleInformationIcon, obj2);
       cResult[7] = tmp4.iconStyle;
       cResult[8] = tmp13;

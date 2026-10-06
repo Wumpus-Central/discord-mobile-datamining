@@ -1,9 +1,9 @@
-// === Module 8012: ContentInventoryStore ===
+// === Module 8022: ContentInventoryStore ===
 
-// Module 8012 (ContentInventoryStore)
+// Module 8022 (ContentInventoryStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import matchUtils from "matchUtils" /* 8013 */;
+import matchUtils from "matchUtils" /* 8023 */;
 import size from "module_2" /* 2 */;
 
 let set;

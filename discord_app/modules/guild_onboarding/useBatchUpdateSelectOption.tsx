@@ -1,15 +1,15 @@
-// === Module 11171: useBatchUpdateSelectOption ===
+// === Module 11184: useBatchUpdateSelectOption ===
 
-// Module 11171 (useBatchUpdateSelectOption)
+// Module 11184 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6600 */;
-import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11172 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 6607 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11185 */;
 import react from "react" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6595 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6602 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

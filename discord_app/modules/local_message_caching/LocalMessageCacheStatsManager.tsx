@@ -1,10 +1,10 @@
-// === Module 18083: LocalMessageCacheStatsManager ===
+// === Module 18128: LocalMessageCacheStatsManager ===
 
-// Module 18083 (LocalMessageCacheStatsManager)
+// Module 18128 (LocalMessageCacheStatsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MessageCacheStatsDefault from "MessageCacheStats" /* 6997 */;
+import MessageCacheStatsDefault from "MessageCacheStats" /* 7010 */;
 import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c2;

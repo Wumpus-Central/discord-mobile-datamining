@@ -1,12 +1,12 @@
-// === Module 13588: NUFVoiceChannelsTemplate ===
+// === Module 13604: NUFVoiceChannelsTemplate ===
 
-// Module 13588 (NUFVoiceChannelsTemplate)
+// Module 13604 (NUFVoiceChannelsTemplate)
 import Fragment from "Fragment" /* 21 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1881 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
-import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13578 */;
-import NUFTemplateDefault from "NUFTemplate" /* 13589 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13590 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
+import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13594 */;
+import NUFTemplateDefault from "NUFTemplate" /* 13605 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13606 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

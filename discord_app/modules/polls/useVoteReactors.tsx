@@ -1,9 +1,9 @@
-// === Module 11353: useVoteReactors ===
+// === Module 11366: useVoteReactors ===
 
-// Module 11353 (useVoteReactors)
+// Module 11366 (useVoteReactors)
 import Constants from "Constants" /* 1085 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7258 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7271 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

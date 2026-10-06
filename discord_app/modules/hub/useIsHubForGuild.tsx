@@ -1,6 +1,6 @@
-// === Module 12010: useIsHubForGuild ===
+// === Module 12025: useIsHubForGuild ===
 
-// Module 12010 (useIsHubForGuild)
+// Module 12025 (useIsHubForGuild)
 import Constants from "Constants" /* 1085 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

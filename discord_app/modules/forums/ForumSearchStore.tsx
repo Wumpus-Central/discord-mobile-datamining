@@ -1,6 +1,6 @@
-// === Module 7264: ForumSearchStore ===
+// === Module 7277: ForumSearchStore ===
 
-// Module 7264 (ForumSearchStore)
+// Module 7277 (ForumSearchStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ChannelStore from "ChannelStore" /* 2051 */;

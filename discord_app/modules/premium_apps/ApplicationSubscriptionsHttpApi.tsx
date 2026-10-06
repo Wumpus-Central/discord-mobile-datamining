@@ -1,9 +1,9 @@
-// === Module 9005: ApplicationSubscriptionsHttpApi ===
+// === Module 9038: ApplicationSubscriptionsHttpApi ===
 
-// Module 9005 (ApplicationSubscriptionsHttpApi)
+// Module 9038 (ApplicationSubscriptionsHttpApi)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import APIErrorDefault from "APIError" /* 5313 */;
+import APIErrorDefault from "APIError" /* 5320 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

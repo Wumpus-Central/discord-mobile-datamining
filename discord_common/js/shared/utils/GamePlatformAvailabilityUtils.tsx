@@ -1,7 +1,7 @@
-// === Module 12030: GamePlatformAvailabilityUtils ===
+// === Module 12045: GamePlatformAvailabilityUtils ===
 
-// Module 12030 (GamePlatformAvailabilityUtils)
-import GamePlatformAvailability from "GamePlatformAvailability" /* 12028 */;
+// Module 12045 (GamePlatformAvailabilityUtils)
+import GamePlatformAvailability from "GamePlatformAvailability" /* 12043 */;
 import size from "module_2" /* 2 */;
 
 let set;

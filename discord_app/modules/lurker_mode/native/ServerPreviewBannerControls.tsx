@@ -1,18 +1,18 @@
-// === Module 16102: ServerPreviewBannerControls ===
+// === Module 16141: ServerPreviewBannerControls ===
 
-// Module 16102 (ServerPreviewBannerControls)
+// Module 16141 (ServerPreviewBannerControls)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import AssetRegistryDefault from "AssetRegistry" /* 6015 */;
-import transitionToGuild from "transitionToGuild" /* 6845 */;
-import IconButton2 from "IconButton" /* 7575 */;
-import ServerPreviewPillDefault from "ServerPreviewPill" /* 16103 */;
+import AssetRegistryDefault from "AssetRegistry" /* 6022 */;
+import transitionToGuild from "transitionToGuild" /* 6855 */;
+import IconButton2 from "IconButton" /* 7586 */;
+import ServerPreviewPillDefault from "ServerPreviewPill" /* 16142 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

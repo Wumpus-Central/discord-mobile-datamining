@@ -1,11 +1,11 @@
-// === Module 14591: AuthSessionsUtils ===
+// === Module 14607: AuthSessionsUtils ===
 
-// Module 14591 (AuthSessionsUtils)
+// Module 14607 (AuthSessionsUtils)
 import intl2 from "intl" /* 1126 */;
-import _modDef4461 from "module_4461" /* 4461 */;
+import _modDef4467 from "module_4467" /* 4467 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AuthSessionsStore from "AuthSessionsStore" /* 14592 */;
+import AuthSessionsStore from "AuthSessionsStore" /* 14608 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -104,7 +104,7 @@ export const formatDate = function formatDate(arg0) {
     const intl = intl2.intl;
     stringResult = intl.string(intl2.t.TXCmfL);
   } else {
-    const obj = _modDef4461(arg0);
+    const obj = _modDef4467(arg0);
     stringResult = obj.fromNow();
   }
   return stringResult;

@@ -1,15 +1,15 @@
-// === Module 8952: Checkbox ===
+// === Module 8981: Checkbox ===
 
-// Module 8952 (Checkbox)
+// Module 8981 (Checkbox)
 import react from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import react_native from "react-native" /* 4594 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import FormCheckbox from "FormCheckbox" /* 5991 */;
+import react_native from "react-native" /* 4600 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import FormCheckbox from "FormCheckbox" /* 5998 */;
 import react_native2 from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

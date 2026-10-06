@@ -1,10 +1,10 @@
-// === Module 13380: useFetchGuildBoostSlots ===
+// === Module 13399: useFetchGuildBoostSlots ===
 
-// Module 13380 (useFetchGuildBoostSlots)
+// Module 13399 (useFetchGuildBoostSlots)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6908 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

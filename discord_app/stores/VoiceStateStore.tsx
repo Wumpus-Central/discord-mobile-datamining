@@ -1,19 +1,19 @@
-// === Module 4909: VoiceStateStore ===
+// === Module 4915: VoiceStateStore ===
 
-// Module 4909 (VoiceStateStore)
+// Module 4915 (VoiceStateStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import CallConstants from "CallConstants" /* 4911 */;
+import CallConstants from "CallConstants" /* 4917 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 4910 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 4916 */;
 import size from "module_2" /* 2 */;
 
 let closure_14, closure_16, closure_9, sessionId, set2, set3;
 
-const f89546 = function(merge) {
+const f89684 = function(merge) {
   if (null == guildId.channelId) {
     return null;
   } else {
@@ -158,7 +158,7 @@ function updateVoiceState(arg0, arg1, fn) {
 }
 function mergeVoiceState(guildId, userId) {
   let closure_0 = userId;
-  return updateVoiceState(guildId, userId.userId, f89546);
+  return updateVoiceState(guildId, userId.userId, f89684);
 }
 function handleGuildCreateOrDelete(guild) {
   guild = guild.guild;
@@ -460,7 +460,7 @@ let obj = {
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((acc, guildId) => {
       let flag = acc;
-      const tmp = closure_5(closure_18(guildId.guildId, guildId.userId, f89546), 3);
+      const tmp = closure_5(closure_18(guildId.guildId, guildId.userId, f89684), 3);
       if (tmp[0]) {
         const tmp5 = guildId.sessionId === closure_4 && null != tmp2 && null != tmp[2] && tmp[2].channelId !== tmp2.channelId;
         if (tmp5) {

@@ -1,24 +1,24 @@
-// === Module 13054: EmbeddedActivityInviteEmbed ===
+// === Module 13073: EmbeddedActivityInviteEmbed ===
 
-// Module 13054 (EmbeddedActivityInviteEmbed)
+// Module 13073 (EmbeddedActivityInviteEmbed)
 import react_native from "react-native" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import intl6 from "intl" /* 1126 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import Constants from "Constants" /* 7226 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7821 */;
-import ApplicationAssetsStore2 from "ApplicationAssetsStore" /* 7822 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 10024 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13055 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import Constants from "Constants" /* 7239 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7832 */;
+import ApplicationAssetsStore2 from "ApplicationAssetsStore" /* 7833 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 10037 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13074 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import InviteStore from "InviteStore" /* 4871 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import InviteStore from "InviteStore" /* 4877 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

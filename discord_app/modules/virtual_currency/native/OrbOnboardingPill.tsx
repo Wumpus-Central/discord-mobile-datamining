@@ -1,16 +1,16 @@
-// === Module 15576: OrbOnboardingPill ===
+// === Module 15590: OrbOnboardingPill ===
 
-// Module 15576 (OrbOnboardingPill)
+// Module 15590 (OrbOnboardingPill)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import OrbsIcon from "OrbsIcon" /* 8491 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import OrbsIcon from "OrbsIcon" /* 8524 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c3;

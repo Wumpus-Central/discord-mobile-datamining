@@ -1,9 +1,9 @@
-// === Module 5588: StageChannelParticipantStoreHooks ===
+// === Module 5595: StageChannelParticipantStoreHooks ===
 
-// Module 5588 (StageChannelParticipantStoreHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 5582 */;
+// Module 5595 (StageChannelParticipantStoreHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5575 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

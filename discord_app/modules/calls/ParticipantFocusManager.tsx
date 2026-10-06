@@ -1,9 +1,9 @@
-// === Module 17606: ParticipantFocusManager ===
+// === Module 17652: ParticipantFocusManager ===
 
-// Module 17606 (ParticipantFocusManager)
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+// Module 17652 (ParticipantFocusManager)
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let map;

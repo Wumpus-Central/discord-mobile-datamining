@@ -1,9 +1,9 @@
-// === Module 7046: isOptInEnabled ===
+// === Module 7059: isOptInEnabled ===
 
-// Module 7046 (isOptInEnabled)
+// Module 7059 (isOptInEnabled)
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

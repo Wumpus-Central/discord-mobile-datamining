@@ -1,8 +1,8 @@
-// === Module 14366: voiceSettingsEventHandlers ===
+// === Module 14384: voiceSettingsEventHandlers ===
 
-// Module 14366 (voiceSettingsEventHandlers)
-import NativeRPCHelpers from "NativeRPCHelpers" /* 9030 */;
-import VoiceSettingsEventsFactory from "VoiceSettingsEventsFactory" /* 14367 */;
+// Module 14384 (voiceSettingsEventHandlers)
+import NativeRPCHelpers from "NativeRPCHelpers" /* 9063 */;
+import VoiceSettingsEventsFactory from "VoiceSettingsEventsFactory" /* 14385 */;
 import size from "module_2" /* 2 */;
 
 const importDefaultResultResult = VoiceSettingsEventsFactory(NativeRPCHelpers.getDeprecatedVoiceSettings, NativeRPCHelpers.getVoiceSettings);

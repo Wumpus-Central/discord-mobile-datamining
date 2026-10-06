@@ -1,9 +1,9 @@
-// === Module 6724: useIsNewMember ===
+// === Module 6738: useIsNewMember ===
 
-// Module 6724 (useIsNewMember)
+// Module 6738 (useIsNewMember)
 import DurationsDefault from "Durations" /* 1102 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4495 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4501 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

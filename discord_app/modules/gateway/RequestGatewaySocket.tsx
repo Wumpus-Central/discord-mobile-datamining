@@ -1,6 +1,6 @@
-// === Module 7253: RequestGatewaySocket ===
+// === Module 7266: RequestGatewaySocket ===
 
-// Module 7253 (RequestGatewaySocket)
+// Module 7266 (RequestGatewaySocket)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -143,7 +143,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  let obj2 = combined(6981);
+  let obj2 = combined(6994);
   obj2.requestSafeIdleCallback(() => {
     if (map.has(combined)) {
       const _performance = performance;

@@ -1,8 +1,8 @@
-// === Module 16992: useVoiceChannelApp ===
+// === Module 17018: useVoiceChannelApp ===
 
-// Module 16992 (useVoiceChannelApp)
+// Module 17018 (useVoiceChannelApp)
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

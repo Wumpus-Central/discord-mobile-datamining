@@ -1,9 +1,9 @@
-// === Module 9508: InviteSuggestionsActionCreators ===
+// === Module 9521: InviteSuggestionsActionCreators ===
 
-// Module 9508 (InviteSuggestionsActionCreators)
+// Module 9521 (InviteSuggestionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9509 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9494 */;
+import UserAffinitiesActionCreators from "UserAffinitiesActionCreators" /* 9522 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9507 */;
 import size from "module_2" /* 2 */;
 
 let set;

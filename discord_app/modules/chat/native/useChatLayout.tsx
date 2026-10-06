@@ -1,8 +1,8 @@
-// === Module 4739: useChatLayout ===
+// === Module 4745: useChatLayout ===
 
-// Module 4739 (useChatLayout)
+// Module 4745 (useChatLayout)
 import react2 from "react" /* 576 */;
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4740 */;
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4746 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

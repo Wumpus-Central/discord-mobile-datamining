@@ -1,14 +1,14 @@
-// === Module 6841: SoundboardActionCreators ===
+// === Module 6851: SoundboardActionCreators ===
 
-// Module 6841 (SoundboardActionCreators)
+// Module 6851 (SoundboardActionCreators)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import intl3 from "intl" /* 1126 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
-import SoundboardConstants from "SoundboardConstants" /* 5682 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import SoundboardConstants from "SoundboardConstants" /* 5689 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 5680 */;
+import SoundboardStore from "SoundboardStore" /* 5687 */;
 import Constants from "Constants" /* 1085 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import size from "module_2" /* 2 */;
@@ -137,7 +137,7 @@ function _maybeFetchDefaultSounds() {
 }
 function _maybeFetchGuildSoundboardSounds() {
   let SOUNDBOARD_SOUNDS_RECEIVED;
-  obj = SOUNDBOARD_SOUNDS_RECEIVED(6843);
+  obj = SOUNDBOARD_SOUNDS_RECEIVED(6853);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -252,7 +252,7 @@ obj = function _uploadSound() {
             body = undefined;
             volume = 1;
             emoji_id = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === volume) {
           if (arg0 === 1) {
@@ -345,7 +345,7 @@ obj = function _updateSound() {
             body = undefined;
             volume = 1;
             emoji_id = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === volume) {
           if (arg0 === 1) {

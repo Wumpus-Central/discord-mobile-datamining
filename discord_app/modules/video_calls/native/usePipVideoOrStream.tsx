@@ -1,17 +1,17 @@
-// === Module 9069: usePipVideoOrStream ===
+// === Module 9105: usePipVideoOrStream ===
 
-// Module 9069 (usePipVideoOrStream)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9056 */;
+// Module 9105 (usePipVideoOrStream)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9092 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import VideoSpeakerStore from "VideoSpeakerStore" /* 9070 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import VideoSpeakerStore from "VideoSpeakerStore" /* 9106 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import CallConstants from "CallConstants" /* 4911 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import CallConstants from "CallConstants" /* 4917 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

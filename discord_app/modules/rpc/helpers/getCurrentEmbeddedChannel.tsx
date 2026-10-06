@@ -1,10 +1,10 @@
-// === Module 14312: getCurrentEmbeddedChannel ===
+// === Module 14330: getCurrentEmbeddedChannel ===
 
-// Module 14312 (getCurrentEmbeddedChannel)
-import Constants from "Constants" /* 5316 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14308 */;
-import FramesStore from "FramesStore" /* 8703 */;
+// Module 14330 (getCurrentEmbeddedChannel)
+import Constants from "Constants" /* 5323 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14326 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;
 

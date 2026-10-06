@@ -1,23 +1,23 @@
-// === Module 9614: GlobalStageChannelStatus ===
+// === Module 9627: GlobalStageChannelStatus ===
 
-// Module 9614 (GlobalStageChannelStatus)
+// Module 9627 (GlobalStageChannelStatus)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl8 from "intl" /* 1126 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8074 */;
-import PushNotificationDefault from "PushNotification" /* 8966 */;
-import StatusBarDefault from "StatusBar" /* 9060 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9082 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9606 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8107 */;
+import PushNotificationDefault from "PushNotification" /* 8995 */;
+import StatusBarDefault from "StatusBar" /* 9096 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9118 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9619 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -37,7 +37,7 @@ let obj8;
 let obj9;
 let tmp5;
 let unpackModuleId;
-const useMountEffectDefault = tmp5(5590);
+const useMountEffectDefault = tmp5(5597);
 const View = react_native.View;
 const Fonts = Constants.Fonts;
 ({ jsx: c10, jsxs: unpackModuleId } = Fragment);
@@ -128,8 +128,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     useMountEffectDefault(I);
     [r10071, dependencyMap] = _slicedToArray(react.useState(false), 2);
     const tmp17 = _slicedToArray(react.useState(false), 2);
-    const useStageBlockedUsersCount = tmp(8277).useStageBlockedUsersCount;
-    tmp(8277);
+    const useStageBlockedUsersCount = tmp(8310).useStageBlockedUsersCount;
+    tmp(8310);
     if (channel != null) {
       class S {
         constructor() {
@@ -139,8 +139,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     const stageBlockedUsersCount = useStageBlockedUsersCount(tmp19);
     let tmp22;
-    const useStageIgnoredUsersCount = tmp(8277).useStageIgnoredUsersCount;
-    tmp(8277);
+    const useStageIgnoredUsersCount = tmp(8310).useStageIgnoredUsersCount;
+    tmp(8310);
     if (channel != null) {
       class S {
         constructor() {
@@ -150,8 +150,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     const stageIgnoredUsersCount = useStageIgnoredUsersCount(tmp22);
     let tmp25;
-    const useGetStageRTCPanelHeight = tmp(9604).useGetStageRTCPanelHeight;
-    tmp(9604);
+    const useGetStageRTCPanelHeight = tmp(9617).useGetStageRTCPanelHeight;
+    tmp(9617);
     if (channel != null) {
       class S {
         constructor() {
@@ -613,20 +613,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   [tmp10, c3] = _slicedToArray(react.useState(false), 2);
   let id1;
   const tmp9 = _slicedToArray(react.useState(false), 2);
-  const useStageBlockedUsersCount = channel(8277).useStageBlockedUsersCount;
-  channel(8277);
+  const useStageBlockedUsersCount = channel(8310).useStageBlockedUsersCount;
+  channel(8310);
   if (channel != null) {
     id1 = channel.id;
   }
   const stageBlockedUsersCount = useStageBlockedUsersCount(id1);
   let id2;
-  const useStageIgnoredUsersCount = channel(8277).useStageIgnoredUsersCount;
-  channel(8277);
+  const useStageIgnoredUsersCount = channel(8310).useStageIgnoredUsersCount;
+  channel(8310);
   if (channel != null) {
     id2 = channel.id;
   }
   const stageIgnoredUsersCount = useStageIgnoredUsersCount(id2);
-  channel(9604);
+  channel(9617);
   if (channel != null) {
     let id = channel.id;
   }
@@ -683,7 +683,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       text: intl6.string(channel(1126).t["1YDv7a"]),
       grow: true
     };
-    BaseTextButton = tmp6(5595).BaseTextButton;
+    BaseTextButton = tmp6(5602).BaseTextButton;
     intl6 = tmp6(1126).intl;
     items4 = [closure_10(View, obj12), ];
     const obj14 = { style: tmp.buttonWrapper, children: closure_10(Button, obj15) };
@@ -698,7 +698,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       disabled: tmp10,
       grow: true
     };
-    Button = tmp6(5594).Button;
+    Button = tmp6(5601).Button;
     intl7 = tmp6(1126).intl;
     items4[1] = closure_10(View, obj14);
     items3[2] = closure_11(View, obj11);
@@ -765,7 +765,7 @@ tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalStageChann
   if (!tmp9) {
     let str;
     if (!tmp8) {
-      id(4587);
+      id(4593);
       str = "dark-content";
     }
     if (null != channel) {
@@ -923,7 +923,7 @@ tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalStageChann
             cResult[13] = tmp24;
             tmp22 = tmp24;
           }
-          const tmpResult4 = id(5812);
+          const tmpResult4 = id(5819);
           const channelIconWithGuild = tmpResult4.getChannelIconWithGuild(channel, guild);
           cResult[8] = channel;
           cResult[9] = guild;
@@ -967,7 +967,7 @@ tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalStageChann
   if (!invitedHeaderText) {
     let str;
     if (!tmp7) {
-      id(4587);
+      id(4593);
       str = "dark-content";
     }
     if (null != channel) {
@@ -992,7 +992,7 @@ tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GlobalStageChann
           items2 = [closure_10(StatusBarDefault, obj4), , ];
           const obj5 = { style: activeSpeakerIcon, size: id(1188).Icon.Sizes.REFRESH_SMALL_16, source: tmp8Result2.getChannelIconWithGuild(channel, guild) };
           const Icon = tmp8(1188).Icon;
-          tmp8Result2 = id(5812);
+          tmp8Result2 = id(5819);
           items2[1] = closure_10(Icon, obj5);
           let tmp13Result = "" !== str2;
           const LegacyText = tmp8(1188).LegacyText;

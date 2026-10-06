@@ -1,20 +1,20 @@
-// === Module 12806: AddFriendNicknameModal ===
+// === Module 12825: AddFriendNicknameModal ===
 
-// Module 12806 (AddFriendNicknameModal)
+// Module 12825 (AddFriendNicknameModal)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import TextField2 from "TextField" /* 6100 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import TextField2 from "TextField" /* 6107 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c5, c6, closure_3, dependencyMap;
@@ -167,7 +167,7 @@ export default function AddFriendNicknameModal(arg0) {
   [c2, c3] = _slicedToArray(react.useState(false), 2);
   const tmp4 = dependencyMap;
   const tmp2 = _slicedToArray(react.useState(false), 2);
-  _slicedToArray = showUserProfile(10664)();
+  _slicedToArray = showUserProfile(10677)();
   let obj2 = get_initialized;
   const items = [obj];
   const stateFromStores = obj2.useStateFromStores(items, () => RelationshipStore.getNickname(require));
@@ -209,8 +209,8 @@ export default function AddFriendNicknameModal(arg0) {
     onCancel: callback1,
     children: items3
   };
-  tmp3Result = showUserProfile(6537);
-  tmp3Result3 = showUserProfile(5783);
+  tmp3Result = showUserProfile(6544);
+  tmp3Result3 = showUserProfile(5790);
   intl3 = intl7.intl;
   intl4 = intl7.intl;
   let obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
@@ -222,7 +222,7 @@ export default function AddFriendNicknameModal(arg0) {
   let obj8 = { onChange: callback, autoFocus: true, accessibilityLabel: intl6.string(intl7.t.pqG6GS), placeholder: tmp3Result4.getName(stateFromStores1), defaultValue: stateFromStores, maxLength: 32, clearable: true };
   const TextField = TextField2.TextField;
   intl6 = intl7.intl;
-  tmp3Result4 = showUserProfile(4722);
+  tmp3Result4 = showUserProfile(4728);
   items3[2] = closure_9(TextField, obj8);
   return closure_9(callback1, obj3);
 };

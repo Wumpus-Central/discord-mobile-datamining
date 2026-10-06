@@ -1,12 +1,12 @@
-// === Module 15554: CheckpointHeaderButton ===
+// === Module 15570: CheckpointHeaderButton ===
 
-// Module 15554 (CheckpointHeaderButton)
+// Module 15570 (CheckpointHeaderButton)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckpointConstants from "CheckpointConstants" /* 5115 */;
-import createStyles from "createStyles" /* 4890 */;
+import CheckpointConstants from "CheckpointConstants" /* 5121 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

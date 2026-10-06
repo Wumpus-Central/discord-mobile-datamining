@@ -1,8 +1,8 @@
-// === Module 11122: PresenceActivityFiltering ===
+// === Module 11135: PresenceActivityFiltering ===
 
-// Module 11122 (PresenceActivityFiltering)
+// Module 11135 (PresenceActivityFiltering)
 import Server from "Server" /* 1985 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/rich_presence/PresenceActivityFiltering.tsx");

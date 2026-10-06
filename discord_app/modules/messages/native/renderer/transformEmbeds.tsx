@@ -1,21 +1,21 @@
-// === Module 7789: transformEmbeds ===
+// === Module 7800: transformEmbeds ===
 
-// Module 7789 (transformEmbeds)
+// Module 7800 (transformEmbeds)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import intl6 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import DateUtils from "DateUtils" /* 4552 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5102 */;
-import EmbedUtils from "EmbedUtils" /* 5426 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import MarkupParsers from "MarkupParsers" /* 7761 */;
-import sanitizeMediaDimension from "sanitizeMediaDimension" /* 7790 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7791 */;
-import utils from "utils" /* 7792 */;
+import DateUtils from "DateUtils" /* 4558 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
+import EmbedUtils from "EmbedUtils" /* 5433 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6805 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6810 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import MarkupParsers from "MarkupParsers" /* 7772 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 7801 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7802 */;
+import utils from "utils" /* 7803 */;
 import size from "module_2" /* 2 */;
 
 let borderLeftColor, type;

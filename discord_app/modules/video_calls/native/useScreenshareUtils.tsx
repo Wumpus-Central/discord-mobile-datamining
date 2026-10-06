@@ -1,24 +1,24 @@
-// === Module 9631: useScreenshareUtils ===
+// === Module 9644: useScreenshareUtils ===
 
-// Module 9631 (useScreenshareUtils)
+// Module 9644 (useScreenshareUtils)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
 import inject from "inject" /* 2001 */;
-import Constants2 from "Constants" /* 4915 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import StreamActionCreators from "StreamActionCreators" /* 5032 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7252 */;
-import CallsUtils from "CallsUtils" /* 9299 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9306 */;
-import useHasVideoPermission from "useHasVideoPermission" /* 9626 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 9637 */;
+import Constants2 from "Constants" /* 4921 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import StreamActionCreators from "StreamActionCreators" /* 5038 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7265 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
+import CallsUtils from "CallsUtils" /* 9334 */;
+import useHasVideoPermission from "useHasVideoPermission" /* 9639 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 9650 */;
 import react from "react" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -26,7 +26,7 @@ const require = globalThis.__r;
 const useHasVideoPermissionDefault = useHasVideoPermission;
 let _require, closure_1, dependencyMap, importDefault, obj1, reportAVErrorResult;
 
-const f139949 = (arg0) => {
+const f140155 = (arg0) => {
   const tmp3 = arg0;
   if (tmp3) {
     const tmpResult = require("inject");
@@ -55,7 +55,7 @@ function startStream() {
   const obj = inject;
   if ("android" === obj.getVoiceEngine().platform) {
     const obj2 = ForegroundServiceManagerDefault;
-    const result = obj2.isForegroundServiceRunning(f139949);
+    const result = obj2.isForegroundServiceRunning(f140155);
   } else {
     BroadcastUploadManager.showPicker();
   }
@@ -79,7 +79,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp9;
   const obj = require("react");
   const cResult = obj.c(24);
-  const tmp5 = analyticsLocations(9626)(arg0);
+  const tmp5 = analyticsLocations(9639)(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     cResult[0] = closure_8 >= 12;
     first = tmp8;
@@ -108,7 +108,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     tmp13 = cResult[3];
   }
-  const tmp4Result = analyticsLocations(9637);
+  const tmp4Result = analyticsLocations(9650);
   const showMobileGoLiveUpsell = tmp4Result.useConfig(tmp13).showMobileGoLiveUpsell;
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ApplicationStreamingStore];
@@ -127,7 +127,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmpResult3 = require("get initialized");
   const stateFromStores1 = tmpResult3.useStateFromStores(tmp14, tmp15);
-  analyticsLocations = tmp4(6657)().analyticsLocations;
+  analyticsLocations = tmp4(6664)().analyticsLocations;
   if (cResult[6] === (null != stateFromStores1 && stateFromStores1.state === ApplicationStreamStates.ACTIVE)) {
     if (cResult[7] === showMobileGoLiveUpsell) {
       tmp21 = cResult[8];
@@ -471,7 +471,7 @@ export const tryStartScreenShare = function tryStartScreenShare(channel) {
     const obj2 = inject;
     if ("android" === obj2.getVoiceEngine().platform) {
       const obj3 = ForegroundServiceManagerDefault;
-      let result = obj3.isForegroundServiceRunning(f139949);
+      let result = obj3.isForegroundServiceRunning(f140155);
     } else {
       BroadcastUploadManager.showPicker();
     }

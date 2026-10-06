@@ -1,24 +1,24 @@
-// === Module 14496: SettingsAccountHeader ===
+// === Module 14512: SettingsAccountHeader ===
 
-// Module 14496 (SettingsAccountHeader)
+// Module 14512 (SettingsAccountHeader)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl from "intl" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6007 */;
-import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6494 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import Constants2 from "Constants" /* 8075 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14497 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6014 */;
+import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader" /* 6501 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import Constants2 from "Constants" /* 8108 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14513 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

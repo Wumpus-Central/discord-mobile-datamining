@@ -1,21 +1,21 @@
-// === Module 17288: ActivityShelfItemSummary ===
+// === Module 17317: ActivityShelfItemSummary ===
 
-// Module 17288 (ActivityShelfItemSummary)
+// Module 17317 (ActivityShelfItemSummary)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ButtonPill from "ButtonPill" /* 5603 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5609 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 9738 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17289 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ButtonPill from "ButtonPill" /* 5610 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5616 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 9751 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17318 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import ColorUtils_mod from "ColorUtils" /* 4727 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import ColorUtils_mod from "ColorUtils" /* 4733 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

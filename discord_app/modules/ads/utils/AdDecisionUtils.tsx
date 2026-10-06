@@ -1,8 +1,8 @@
-// === Module 7185: AdDecisionUtils ===
+// === Module 7198: AdDecisionUtils ===
 
-// Module 7185 (AdDecisionUtils)
+// Module 7198 (AdDecisionUtils)
 import DurationsDefault from "Durations" /* 1102 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
 import size from "module_2" /* 2 */;
 
 const result = 6 * DurationsDefault.Millis.HOUR;

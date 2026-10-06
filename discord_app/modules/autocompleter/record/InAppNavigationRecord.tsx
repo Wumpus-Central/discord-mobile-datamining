@@ -1,10 +1,10 @@
-// === Module 5622: InAppNavigationRecord ===
+// === Module 5629: InAppNavigationRecord ===
 
-// Module 5622 (InAppNavigationRecord)
+// Module 5629 (InAppNavigationRecord)
 import Constants from "Constants" /* 1085 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import UserSettingsURLUtils from "UserSettingsURLUtils" /* 5633 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import UserSettingsURLUtils from "UserSettingsURLUtils" /* 5640 */;
 import Record from "Record" /* 1392 */;
 import size from "module_2" /* 2 */;
 

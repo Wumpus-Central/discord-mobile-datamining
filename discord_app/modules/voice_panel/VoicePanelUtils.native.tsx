@@ -1,11 +1,11 @@
-// === Module 9609: VoicePanelUtils ===
+// === Module 9622: VoicePanelUtils ===
 
-// Module 9609 (VoicePanelUtils)
+// Module 9622 (VoicePanelUtils)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react from "react" /* 576 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import VoicePanelStore from "VoicePanelStore" /* 5098 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import VoicePanelStore from "VoicePanelStore" /* 5104 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

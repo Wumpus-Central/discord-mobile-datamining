@@ -1,19 +1,19 @@
-// === Module 10107: GIFPickerCategoryView ===
+// === Module 10120: GIFPickerCategoryView ===
 
-// Module 10107 (GIFPickerCategoryView)
+// Module 10120 (GIFPickerCategoryView)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 9239 */;
-import StarIcon2 from "StarIcon" /* 9943 */;
-import AnalyticsIcon2 from "AnalyticsIcon" /* 10108 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9274 */;
+import StarIcon2 from "StarIcon" /* 9956 */;
+import AnalyticsIcon2 from "AnalyticsIcon" /* 10121 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,19 +1,19 @@
-// === Module 14665: UseDataToCustomizeDiscordSetting ===
+// === Module 14681: UseDataToCustomizeDiscordSetting ===
 
-// Module 14665 (UseDataToCustomizeDiscordSetting)
+// Module 14681 (UseDataToCustomizeDiscordSetting)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import AlertDefault from "Alert" /* 5783 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14625 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14663 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14664 */;
-import ConsentStore from "ConsentStore" /* 6084 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import AlertDefault from "Alert" /* 5790 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14679 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14680 */;
+import ConsentStore from "ConsentStore" /* 6091 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

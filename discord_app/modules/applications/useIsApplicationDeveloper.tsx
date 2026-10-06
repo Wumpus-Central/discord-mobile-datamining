@@ -1,10 +1,10 @@
-// === Module 12255: useIsApplicationDeveloper ===
+// === Module 12270: useIsApplicationDeveloper ===
 
-// Module 12255 (useIsApplicationDeveloper)
-import DeveloperApplicationsConstants from "DeveloperApplicationsConstants" /* 12257 */;
-import DeveloperApplicationsActionCreators from "DeveloperApplicationsActionCreators" /* 12258 */;
+// Module 12270 (useIsApplicationDeveloper)
+import DeveloperApplicationsConstants from "DeveloperApplicationsConstants" /* 12272 */;
+import DeveloperApplicationsActionCreators from "DeveloperApplicationsActionCreators" /* 12273 */;
 import react from "react" /* 19 */;
-import DeveloperApplicationsStore from "DeveloperApplicationsStore" /* 12256 */;
+import DeveloperApplicationsStore from "DeveloperApplicationsStore" /* 12271 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,21 +1,21 @@
-// === Module 14577: TwoFASetupSuccess ===
+// === Module 14593: TwoFASetupSuccess ===
 
-// Module 14577 (TwoFASetupSuccess)
+// Module 14593 (TwoFASetupSuccess)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 6437 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14567 */;
-import AssetRegistry from "AssetRegistry" /* 14578 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6444 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14583 */;
+import AssetRegistry from "AssetRegistry" /* 14594 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -386,7 +386,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
         await "IconComponent";
         ({ ticket: c0, credential: c1 } = closure_0);
-        return "Set";
+        return "Reflect";
       });
       return obj(...arguments);
     };

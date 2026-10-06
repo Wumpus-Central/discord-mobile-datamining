@@ -1,18 +1,18 @@
-// === Module 13259: RewardGrantNotice ===
+// === Module 13278: RewardGrantNotice ===
 
-// Module 13259 (RewardGrantNotice)
+// Module 13278 (RewardGrantNotice)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 6628 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 11000 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13243 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import CheckmarkSmallIcon2 from "CheckmarkSmallIcon" /* 6635 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 11013 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13262 */;
 import react from "react" /* 19 */;
-import Constants from "Constants" /* 13241 */;
+import Constants from "Constants" /* 13260 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

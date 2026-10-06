@@ -1,8 +1,8 @@
-// === Module 4515: AutomodPermissionUtils ===
+// === Module 4521: AutomodPermissionUtils ===
 
-// Module 4515 (AutomodPermissionUtils)
+// Module 4521 (AutomodPermissionUtils)
 import FlagUtils from "FlagUtils" /* 1390 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4495 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4501 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

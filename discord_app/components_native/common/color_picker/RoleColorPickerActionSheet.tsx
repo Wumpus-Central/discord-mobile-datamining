@@ -1,16 +1,16 @@
-// === Module 16231: RoleColorPickerActionSheet ===
+// === Module 16271: RoleColorPickerActionSheet ===
 
-// Module 16231 (RoleColorPickerActionSheet)
+// Module 16271 (RoleColorPickerActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14421 */;
-import ColorBlockDefault from "ColorBlock" /* 14423 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14437 */;
+import ColorBlockDefault from "ColorBlock" /* 14439 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

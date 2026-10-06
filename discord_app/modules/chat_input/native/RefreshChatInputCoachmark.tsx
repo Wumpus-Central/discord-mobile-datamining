@@ -1,11 +1,11 @@
-// === Module 11599: RefreshChatInputCoachmark ===
+// === Module 11613: RefreshChatInputCoachmark ===
 
-// Module 11599 (RefreshChatInputCoachmark)
+// Module 11613 (RefreshChatInputCoachmark)
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 4684 */;
-import useCoachmark from "useCoachmark" /* 9882 */;
+import OmnibuttonCoachmarkRive from "OmnibuttonCoachmarkRive" /* 4690 */;
+import useCoachmark from "useCoachmark" /* 9895 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;

@@ -1,17 +1,17 @@
-// === Module 6702: VerifiedRoleIcon ===
+// === Module 6709: VerifiedRoleIcon ===
 
-// Module 6702 (VerifiedRoleIcon)
+// Module 6709 (VerifiedRoleIcon)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinkIcon from "LinkIcon" /* 4839 */;
-import useRoleIconProps2 from "useRoleIconProps" /* 6685 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 6703 */;
-import RoleIconDefault from "RoleIcon" /* 6704 */;
+import LinkIcon from "LinkIcon" /* 4845 */;
+import useRoleIconProps2 from "useRoleIconProps" /* 6692 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 6710 */;
+import RoleIconDefault from "RoleIcon" /* 6711 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

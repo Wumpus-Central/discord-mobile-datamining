@@ -1,6 +1,6 @@
-// === Module 4790: useCustomThemeDisplaySettings ===
+// === Module 4796: useCustomThemeDisplaySettings ===
 
-// Module 4790 (useCustomThemeDisplaySettings)
+// Module 4796 (useCustomThemeDisplaySettings)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1239 */;
@@ -104,14 +104,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((base_mix) => {
   let tmp5;
   let tmp6;
   let tmpResult;
-  const f89339 = () => {
+  const f89476 = () => {
     const items = [CustomThemeMobileStore.getCustomTheme(), CustomThemeMobileStore.getBaseTheme(), CustomThemeMobileStore.getPreviewTheme()];
     return items;
   };
   let items = [CustomThemeMobileStore];
   const obj = get_initialized;
-  [tmp4, tmp5, tmp6] = obj.useStateFromStoresArray(items, f89339);
-  _slicedToArray(obj.useStateFromStoresArray(items, f89339), 3);
+  [tmp4, tmp5, tmp6] = obj.useStateFromStoresArray(items, f89476);
+  _slicedToArray(obj.useStateFromStoresArray(items, f89476), 3);
   if (undefined !== tmp6) {
     return tmp6;
   } else {

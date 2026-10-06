@@ -1,13 +1,13 @@
-// === Module 13458: GatewayCompressionHandler ===
+// === Module 13474: GatewayCompressionHandler ===
 
-// Module 13458 (GatewayCompressionHandler)
+// Module 13474 (GatewayCompressionHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ProcessArgs2 from "ProcessArgs" /* 6714 */;
-import GatewayZstdUtils from "GatewayZstdUtils" /* 13459 */;
-import react_native2 from "react-native" /* 13460 */;
-import _mod13461 from "module_13461" /* 13461 */;
+import ProcessArgs2 from "ProcessArgs" /* 6721 */;
+import GatewayZstdUtils from "GatewayZstdUtils" /* 13475 */;
+import react_native2 from "react-native" /* 13476 */;
+import _mod13477 from "module_13477" /* 13477 */;
 import size from "module_2" /* 2 */;
 
 let obj;
@@ -104,7 +104,7 @@ class tmp4 extends BaseGatewayCompressionHandler {
     let _inflate;
     let handleFlushEnd;
     const tmp2 = new tmp(arg0, new.target, tmp, this);
-    tmp2._pako = _mod13461;
+    tmp2._pako = _mod13477;
     tmp2._usesZstd = false;
     tmp2._zstdDecoder = null;
     tmp2._zstdStream = null;
@@ -247,7 +247,7 @@ items.push(tmp4);
 class tmp6 extends BaseGatewayCompressionHandler {
   constructor() {
     const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    applyArgumentsResult._pako = _mod13461;
+    applyArgumentsResult._pako = _mod13477;
     return applyArgumentsResult;
   }
   static canUse() {

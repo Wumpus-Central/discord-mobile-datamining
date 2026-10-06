@@ -1,23 +1,23 @@
-// === Module 8805: ApplicationCommandBuiltIns ===
+// === Module 8835: ApplicationCommandBuiltIns ===
 
-// Module 8805 (ApplicationCommandBuiltIns)
+// Module 8835 (ApplicationCommandBuiltIns)
 import Server from "Server" /* 1985 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants" /* 2114 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 6751 */;
-import ThreadHooks from "ThreadHooks" /* 6772 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
-import application_commands_ApplicationCommandBuiltIns from "application_commands/ApplicationCommandBuiltIns" /* 8807 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 8808 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 6761 */;
+import ThreadHooks from "ThreadHooks" /* 6782 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
+import application_commands_ApplicationCommandBuiltIns from "application_commands/ApplicationCommandBuiltIns" /* 8837 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 8838 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
-import DiceRollConstants from "DiceRollConstants" /* 8806 */;
+import DiceRollConstants from "DiceRollConstants" /* 8836 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -611,7 +611,7 @@ let closure_14 = _asyncToGenerator(async (arg0, arg1) => {
             id = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (arg0 === 1) {

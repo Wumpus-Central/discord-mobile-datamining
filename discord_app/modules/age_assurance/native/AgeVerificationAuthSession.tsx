@@ -1,10 +1,10 @@
-// === Module 8101: AgeVerificationAuthSession ===
+// === Module 8134: AgeVerificationAuthSession ===
 
-// Module 8101 (AgeVerificationAuthSession)
+// Module 8134 (AgeVerificationAuthSession)
 import LoggerDefault from "Logger" /* 3 */;
 import react from "react" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_nativeDefault from "react-native" /* 4853 */;
+import react_nativeDefault from "react-native" /* 4859 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

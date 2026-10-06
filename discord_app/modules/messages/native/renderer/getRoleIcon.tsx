@@ -1,8 +1,8 @@
-// === Module 7690: getRoleIcon ===
+// === Module 7701: getRoleIcon ===
 
-// Module 7690 (getRoleIcon)
+// Module 7701 (getRoleIcon)
 import intl2 from "intl" /* 1126 */;
-import useRoleIconProps from "useRoleIconProps" /* 6685 */;
+import useRoleIconProps from "useRoleIconProps" /* 6692 */;
 import size_mod from "module_2" /* 2 */;
 
 let size = size_mod;

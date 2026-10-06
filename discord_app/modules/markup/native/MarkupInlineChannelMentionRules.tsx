@@ -1,10 +1,10 @@
-// === Module 11705: MarkupInlineChannelMentionRules ===
+// === Module 11719: MarkupInlineChannelMentionRules ===
 
-// Module 11705 (MarkupInlineChannelMentionRules)
+// Module 11719 (MarkupInlineChannelMentionRules)
 import Fragment from "Fragment" /* 21 */;
 import native from "native" /* 1188 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 7768 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 7779 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

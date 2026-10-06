@@ -1,14 +1,14 @@
-// === Module 7717: PremiumGroupInviteSystemMessage ===
+// === Module 7728: PremiumGroupInviteSystemMessage ===
 
-// Module 7717 (PremiumGroupInviteSystemMessage)
+// Module 7728 (PremiumGroupInviteSystemMessage)
 import nativeDefault from "native" /* 587 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
-import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 7718 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7722 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
+import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 7729 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7733 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let obj = { iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG };

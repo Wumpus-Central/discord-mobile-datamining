@@ -1,15 +1,15 @@
-// === Module 5790: MarkupLinkRule ===
+// === Module 5797: MarkupLinkRule ===
 
-// Module 5790 (MarkupLinkRule)
+// Module 5797 (MarkupLinkRule)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import LRUCacheDefault from "LRUCache" /* 1444 */;
 import _modDef1936 from "module_1936" /* 1936 */;
-import findCodedLinks from "findCodedLinks" /* 4870 */;
-import MarkupTypes from "MarkupTypes" /* 5785 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5791 */;
-import _modDef5792 from "module_5792" /* 5792 */;
+import findCodedLinks from "findCodedLinks" /* 4876 */;
+import MarkupTypes from "MarkupTypes" /* 5792 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5798 */;
+import _modDef5799 from "module_5799" /* 5799 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 
@@ -174,7 +174,7 @@ function punycodeLink(url) {
           const error1 = new Error("no hostname");
           throw error1;
         }
-        const obj = _modDef5792;
+        const obj = _modDef5799;
         const str6 = uRL.hostname;
         uRL.hostname = obj.toASCII(str6.toLowerCase());
         uRL.username = "";

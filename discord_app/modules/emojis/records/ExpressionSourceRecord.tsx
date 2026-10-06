@@ -1,6 +1,6 @@
-// === Module 5972: ExpressionSourceRecord ===
+// === Module 5979: ExpressionSourceRecord ===
 
-// Module 5972 (ExpressionSourceRecord)
+// Module 5979 (ExpressionSourceRecord)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;

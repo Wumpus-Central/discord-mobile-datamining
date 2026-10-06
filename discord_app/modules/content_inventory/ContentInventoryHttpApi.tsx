@@ -1,10 +1,10 @@
-// === Module 12918: ContentInventoryHttpApi ===
+// === Module 12937: ContentInventoryHttpApi ===
 
-// Module 12918 (ContentInventoryHttpApi)
+// Module 12937 (ContentInventoryHttpApi)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ContentInventoryConstants from "ContentInventoryConstants" /* 8027 */;
+import ContentInventoryConstants from "ContentInventoryConstants" /* 8037 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
@@ -58,7 +58,7 @@ let obj = function _getMyContentInventory() {
             date = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {

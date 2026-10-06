@@ -1,12 +1,12 @@
-// === Module 11232: AppChannelPermissionUtils ===
+// === Module 11245: AppChannelPermissionUtils ===
 
-// Module 11232 (AppChannelPermissionUtils)
+// Module 11245 (AppChannelPermissionUtils)
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4516 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 6749 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4522 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 6759 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

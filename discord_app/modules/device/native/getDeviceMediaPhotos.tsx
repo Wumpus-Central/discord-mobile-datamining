@@ -1,11 +1,11 @@
-// === Module 10376: getDeviceMediaPhotos ===
+// === Module 10389: getDeviceMediaPhotos ===
 
-// Module 10376 (getDeviceMediaPhotos)
+// Module 10389 (getDeviceMediaPhotos)
 import LoggerDefault from "Logger" /* 3 */;
 import react_native from "react-native" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_nativeDefault from "react-native" /* 10377 */;
+import react_nativeDefault from "react-native" /* 10390 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = react_native.NativeModules;

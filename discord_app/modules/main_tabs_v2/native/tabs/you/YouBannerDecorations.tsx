@@ -1,6 +1,6 @@
-// === Module 16955: YouBannerDecorations ===
+// === Module 16981: YouBannerDecorations ===
 
-// Module 16955 (YouBannerDecorations)
+// Module 16981 (YouBannerDecorations)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
@@ -8,17 +8,17 @@ import PremiumConstants from "PremiumConstants" /* 1379 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import IntlLoaderStore from "IntlLoaderStore" /* 2117 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import useTrialOffer from "useTrialOffer" /* 6958 */;
-import QuestUtils from "QuestUtils" /* 10908 */;
-import PromotionsHooks from "PromotionsHooks" /* 13362 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16957 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import useTrialOffer from "useTrialOffer" /* 6971 */;
+import QuestUtils from "QuestUtils" /* 10921 */;
+import PromotionsHooks from "PromotionsHooks" /* 13381 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16983 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -227,7 +227,7 @@ const memoResult = react.memo((navigateToSettings) => {
   }, items4);
   let tmp23 = null;
   if (hasConjureGuild) {
-    let obj2 = { IconComponent: tmp2(gradientSecondaryBackground[33]).MagicWandIcon, accessibilityLabel: intl.string(tmp5(gradientSecondaryBackground[34]).bHcJoe), onPress: tmp22 };
+    let obj2 = { IconComponent: tmp2(gradientSecondaryBackground[33]).MagicWandIcon, accessibilityLabel: intl.string(tmp5(gradientSecondaryBackground[34]).uk6jhJ), onPress: tmp22 };
     const tmp5Result = tmp5(gradientSecondaryBackground[32]);
     intl = tmp2(tmp3[15]).intl;
     tmp23 = closure_10(tmp5Result, obj2, "conjure");

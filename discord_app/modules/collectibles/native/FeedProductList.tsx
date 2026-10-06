@@ -1,14 +1,14 @@
-// === Module 15732: FeedProductList ===
+// === Module 15768: FeedProductList ===
 
-// Module 15732 (FeedProductList)
+// Module 15768 (FeedProductList)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 8418 */;
-import SkeletonCardDefault from "SkeletonCard" /* 8534 */;
-import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15734 */;
+import CollectiblesShopCardV2 from "CollectiblesShopCardV2" /* 8451 */;
+import SkeletonCardDefault from "SkeletonCard" /* 8567 */;
+import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15770 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -32,7 +32,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = obj.c(11);
   ({ loadingCardsNum, accessibilityLabel } = arg0);
   const tmp2 = closure_5();
-  let obj2 = cardWidth(15733);
+  let obj2 = cardWidth(15769);
   const cardLayout = obj2.useCardLayout();
   ({ columns, cardWidth } = cardLayout);
   const rowWidth = cardLayout.rowWidth;

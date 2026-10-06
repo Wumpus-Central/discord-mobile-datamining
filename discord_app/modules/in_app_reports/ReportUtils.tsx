@@ -1,17 +1,17 @@
-// === Module 8283: in_app_reports/ReportUtils ===
+// === Module 8316: in_app_reports/ReportUtils ===
 
-// Module 8283 (in_app_reports/ReportUtils)
+// Module 8316 (in_app_reports/ReportUtils)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import Constants2 from "Constants" /* 8075 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8080 */;
-import MenuTypes from "MenuTypes" /* 8280 */;
-import ReportMenuType from "ReportMenuType" /* 8282 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import Constants2 from "Constants" /* 8108 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8113 */;
+import MenuTypes from "MenuTypes" /* 8313 */;
+import ReportMenuType from "ReportMenuType" /* 8315 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -342,7 +342,7 @@ function genSubmitData(version, name, arr, email_token) {
   if (str == null) {
     str = "en";
   }
-  let obj2 = { channel_id: "unicodeVersion", message_id: "value", stage_instance_id: "getChannel", guild_id: "formatToPlainString", guild_scheduled_event_id: "p", user_id: "Set", email_token: "r", application_id: "unicodeVersion", entrypoint: "opacity", widget_id: "getGuild" };
+  let obj2 = { channel_id: "__initData", message_id: "a", stage_instance_id: "toCharArray$esjava$1", guild_id: "string", guild_scheduled_event_id: "toCharArray$esjava$1", user_id: "r", email_token: "toCharArray$esjava$1", application_id: "index", entrypoint: "l", widget_id: "r" };
   if (name.name !== MenuTypes.ReportNames.MESSAGE) {
     if (name.name !== MenuTypes.ReportNames.FIRST_DM) {
       if (name.name !== MenuTypes.ReportNames.GUILD) {
@@ -511,7 +511,7 @@ export const submitReport = function submitReport(language, name, arr) {
   } else {
     const tmp = language;
     let tmp2 = name;
-    const REPORT_TO_MOD = obj4(8282).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj4(8315).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       obj = {
@@ -553,8 +553,8 @@ export const submitReport = function submitReport(language, name, arr) {
         str2 = "en";
       }
       let tmp15 = null;
-      if (name.name === obj4(8280).ModeratorReportNames.MESSAGE) {
-        let obj2 = { channel_id: "marginBottom", message_id: "unicodeVersion", guild_id: "Reflect" };
+      if (name.name === obj4(8313).ModeratorReportNames.MESSAGE) {
+        let obj2 = { channel_id: "duration", message_id: "toCharArray$esjava$1", guild_id: "toCharArray$esjava$1" };
         obj4 = { name: name.name, channel_id, message_id: id };
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -565,11 +565,11 @@ export const submitReport = function submitReport(language, name, arr) {
       const HTTP2 = tmp4(1282).HTTP;
       const post2 = HTTP2.post;
       const tmp23 = _modDef38;
-      const REPORT_TO_MOD2 = tmp4(8282).ReportMenuTypeSets.REPORT_TO_MOD;
+      const REPORT_TO_MOD2 = tmp4(8315).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       tmp23(hasItem, "Invalid report type " + name.name);
-      if (name.name === obj4(8280).ModeratorReportNames.MESSAGE) {
+      if (name.name === obj4(8313).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp15, rejectWithError: false };
         const post2Result = post2(request);
         resolved = post2Result.then((result) => {
@@ -611,7 +611,7 @@ export const submitReport = function submitReport(language, name, arr) {
       SUBMIT_REPORT_MENU = closure_7.SUBMIT_REPORT_MENU;
       let _Object = Object;
       const tmp8 = _modDef38;
-      const values = Object.values(tmp4(8280).ReportNames);
+      const values = Object.values(tmp4(8313).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       tmp8(hasItem1, "Invalid report type " + name.name);
@@ -781,6 +781,7 @@ export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(
     return tmp;
   });
   if (!someResult) {
+    let tmp2 = null;
     let should_submit_data;
     if (countrySelectElement != null) {
       should_submit_data = countrySelectElement.should_submit_data;
@@ -842,36 +843,56 @@ export const areRequiredElementsUnfilled = function areRequiredElementsUnfilled(
     someResult = tmp10;
   }
   if (!someResult) {
+    let require_all_options;
+    if (multiSelectElement != null) {
+      require_all_options = multiSelectElement.require_all_options;
+    }
+    let someResult1 = true === require_all_options;
+    if (someResult1) {
+      const data = multiSelectElement.data;
+      someResult1 = data.some((item) => {
+        let tmp;
+        [tmp] = item;
+        let tmp2;
+        if (multiSelect != null) {
+          tmp2 = multiSelect[tmp];
+        }
+        return null == tmp2;
+      });
+    }
+    someResult = someResult1;
+  }
+  if (!someResult) {
     let should_submit_data2;
     if (contentUrlInputElement != null) {
       should_submit_data2 = contentUrlInputElement.should_submit_data;
     }
-    let tmp15 = true === should_submit_data2;
-    if (tmp15) {
-      let tmp16;
+    let tmp18 = true === should_submit_data2;
+    if (tmp18) {
+      let tmp19;
       if (textInput != null) {
-        tmp16 = textInput[contentUrlInputElement.name];
+        tmp19 = textInput[contentUrlInputElement.name];
       }
-      let tmp17 = null == tmp16;
-      if (!tmp17) {
+      let tmp20 = null == tmp19;
+      if (!tmp20) {
         let value2;
         if (textInput != null) {
           value2 = textInput[contentUrlInputElement.name].value;
         }
-        tmp17 = "" === value2;
+        tmp20 = "" === value2;
       }
-      if (!tmp17) {
+      if (!tmp20) {
         let isValid;
         if (textInput != null) {
           if (textInput[contentUrlInputElement.name] != null) {
-            isValid = tmp20.isValid;
+            isValid = tmp23.isValid;
           }
         }
-        tmp17 = !isValid;
+        tmp20 = !isValid;
       }
-      tmp15 = tmp17;
+      tmp18 = tmp20;
     }
-    someResult = tmp15;
+    someResult = tmp18;
   }
   return someResult;
 };

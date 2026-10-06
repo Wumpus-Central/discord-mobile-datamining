@@ -1,7 +1,7 @@
-// === Module 5586: useGuildMemberDisplayRole ===
+// === Module 5593: useGuildMemberDisplayRole ===
 
-// Module 5586 (useGuildMemberDisplayRole)
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+// Module 5593 (useGuildMemberDisplayRole)
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,20 +1,20 @@
-// === Module 10925: AppStoreOverlayStatsCarousel ===
+// === Module 10938: AppStoreOverlayStatsCarousel ===
 
-// Module 10925 (AppStoreOverlayStatsCarousel)
+// Module 10938 (AppStoreOverlayStatsCarousel)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 10926 */;
-import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 10927 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils" /* 10939 */;
+import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating" /* 10940 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -334,7 +334,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll) =>
   } else {
     first = cResult[0];
   }
-  const tmpResult = onRatingPress(6140);
+  const tmpResult = onRatingPress(6147);
   const nativeGesture = tmpResult.useNativeGesture(first);
   const tmp7 = stats.length <= 2;
   dependencyMap = length.useRef(0);
@@ -543,7 +543,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll) =>
               obj = { stat: onCarouselScroll, onRatingPress: null };
               tmp3 = undefined;
               tmp = jsx;
-              tmp2 = f56309;
+              tmp2 = f56362;
               if ("rating" === onCarouselScroll.type) {
                 tmp3 = onRatingPress;
               }
@@ -559,7 +559,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onCarouselScroll) =>
               obj = { stat: onCarouselScroll, onRatingPress: null };
               tmp3 = undefined;
               tmp = jsx;
-              tmp2 = f56309;
+              tmp2 = f56362;
               if ("rating" === onCarouselScroll.type) {
                 tmp3 = onRatingPress;
               }

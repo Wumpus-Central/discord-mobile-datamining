@@ -1,8 +1,8 @@
-// === Module 6792: ReportUtils ===
+// === Module 6802: ReportUtils ===
 
-// Module 6792 (ReportUtils)
+// Module 6802 (ReportUtils)
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

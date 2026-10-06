@@ -1,33 +1,33 @@
-// === Module 12994: FractionalNitroCollectedActionSheet ===
+// === Module 13013: FractionalNitroCollectedActionSheet ===
 
-// Module 12994 (FractionalNitroCollectedActionSheet)
+// Module 13013 (FractionalNitroCollectedActionSheet)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl7 from "intl" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Pressables from "Pressables" /* 5909 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6649 */;
-import PremiumPlanActionSheetHeaderDefault from "PremiumPlanActionSheetHeader" /* 6937 */;
-import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7097 */;
-import FractionalNitroCoinIllustration2 from "FractionalNitroCoinIllustration" /* 8500 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10455 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 10456 */;
-import CircleQuestionIcon2 from "CircleQuestionIcon" /* 11015 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 12995 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Pressables from "Pressables" /* 5916 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 6656 */;
+import PremiumPlanActionSheetHeaderDefault from "PremiumPlanActionSheetHeader" /* 6950 */;
+import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7110 */;
+import FractionalNitroCoinIllustration2 from "FractionalNitroCoinIllustration" /* 8533 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10468 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 10469 */;
+import CircleQuestionIcon2 from "CircleQuestionIcon" /* 11028 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 13014 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -435,9 +435,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ onPressExplorePerks, onPressViewCredits } = skuId);
   const tmp = closure_12();
   dependencyMap = tmp;
-  const tmp4 = consumed(4791)();
+  const tmp4 = consumed(4797)();
   react = tmp4;
-  let obj = skuId(7097);
+  let obj = skuId(7110);
   const fetchFractionalPremiumInfo = obj.useFetchFractionalPremiumInfo();
   const isFractionalPremiumActive = fetchFractionalPremiumInfo.isFractionalPremiumActive;
   const expiresAt = fetchFractionalPremiumInfo.expiresAt;
@@ -504,10 +504,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj2 = consumed(description[20]);
     obj2.openURL(articleURL);
   }, []);
-  BottomSheet = skuId(6645).BottomSheet;
+  BottomSheet = skuId(6652).BottomSheet;
   if (consumed) {
     let obj2 = { premiumType: TIER_2.TIER_2 };
-    tmp12Result = closure_9(tmp2(6937), obj2);
+    tmp12Result = closure_9(tmp2(6950), obj2);
     tmp15 = closure_9;
   } else {
     let obj3 = { skuId };
@@ -517,9 +517,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj4 = { children: items2 };
   items2 = [tmp12Result, ];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: tmp15(CircleQuestionIcon, obj6) };
-  const PressableOpacity = tmp5(5909).PressableOpacity;
+  const PressableOpacity = tmp5(5916).PressableOpacity;
   obj6 = { style: tmp.questionIcon, color: consumed(587).colors.WHITE };
-  CircleQuestionIcon = tmp5(11015).CircleQuestionIcon;
+  CircleQuestionIcon = tmp5(11028).CircleQuestionIcon;
   items2[1] = tmp15(PressableOpacity, obj5);
   const items3 = [closure_10(closure_11, obj4), , ];
   const obj7 = { style: tmp.body, children: tmp10Result };
@@ -531,7 +531,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     items4 = [memo, memo1, ];
     const obj10 = { size: "lg", text: null, onPress: null };
     const obj9 = { style: tmp.buttonContainer, children: items5 };
-    const Button = tmp5(5594).Button;
+    const Button = tmp5(5601).Button;
     let intl = tmp5(1126).intl;
     const string = intl.string;
     const t = tmp5(1126).t;
@@ -554,7 +554,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           return obj.hideActionSheet();
         }
     };
-    const Button2 = tmp5(5594).Button;
+    const Button2 = tmp5(5601).Button;
     intl2 = tmp5(1126).intl;
     items5[1] = tmp15(Button2, obj11);
     items4[2] = closure_10(expiresAt, obj9);
@@ -562,7 +562,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj12 = { handleDisabled: true, children: items3 };
   items3[1] = tmp15(expiresAt, obj7);
-  items3[2] = tmp15(skuId(6649).ActionSheetHeaderBar, { variant: "floating" });
+  items3[2] = tmp15(skuId(6656).ActionSheetHeaderBar, { variant: "floating" });
   return closure_10(BottomSheet, obj12);
 });
 size = size_mod;

@@ -1,18 +1,18 @@
-// === Module 6080: ResendEmail ===
+// === Module 6087: ResendEmail ===
 
-// Module 6080 (ResendEmail)
+// Module 6087 (ResendEmail)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6007 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 6014 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -80,7 +80,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmpResult2 = tmp(504);
   const stateFromStores1 = tmpResult2.useStateFromStores(tmp10, tmp11);
   if (cResult[4] !== stateFromStores1) {
-    const obj5 = verified(6081);
+    const obj5 = verified(6088);
     const result = obj5.isEmailReverification(stateFromStores1);
     cResult[4] = stateFromStores1;
     cResult[5] = result;
@@ -210,8 +210,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         open(obj2);
       }
     }
-    cResult[14] = closure_9(tmp(6090).EnvelopeOpenSpotIllustration, { scale: 0.75 });
-    const tmp29 = closure_9(tmp(6090).EnvelopeOpenSpotIllustration, { scale: 0.75 });
+    cResult[14] = closure_9(tmp(6097).EnvelopeOpenSpotIllustration, { scale: 0.75 });
+    const tmp29 = closure_9(tmp(6097).EnvelopeOpenSpotIllustration, { scale: 0.75 });
   } else {
     class L {
       constructor() {
@@ -276,8 +276,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const obj3 = { style: title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp30 };
     cResult[16] = tmp4.title;
-    cResult[17] = closure_9(tmp(4886).Text, obj3);
-    const tmp33 = closure_9(tmp(4886).Text, obj3);
+    cResult[17] = closure_9(tmp(4892).Text, obj3);
+    const tmp33 = closure_9(tmp(4892).Text, obj3);
   } else {
     class L {
       constructor() {
@@ -338,7 +338,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           }
         }
         const obj4 = { text: intl2.string(tmp(1126).t.WnX4J2), variant: "primary", onPress: L, grow: true };
-        const Button = tmp(5594).Button;
+        const Button = tmp(5601).Button;
         intl2 = tmp(1126).intl;
         const tmp42 = closure_9(Button, obj4);
         cResult[24] = tmp42;
@@ -423,7 +423,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
         const obj9 = { style: tmp4.change, children: closure_9(Button2, obj10) };
         obj10 = { text: intl3.string(tmp(1126).t.Vm8akB), variant: "secondary", onPress: tmp27, grow: true };
-        Button2 = tmp(5594).Button;
+        Button2 = tmp(5601).Button;
         intl3 = tmp(1126).intl;
         tmp47 = closure_9(View, obj9);
       }
@@ -435,8 +435,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj11 = { style: tmp4.body, variant: "text-sm/medium", color: "text-default", children: tmp34 };
     cResult[21] = tmp4.body;
     cResult[22] = tmp34;
-    cResult[23] = closure_9(tmp(4886).Text, obj11);
-    const tmp40 = closure_9(tmp(4886).Text, obj11);
+    cResult[23] = closure_9(tmp(4892).Text, obj11);
+    const tmp40 = closure_9(tmp(4892).Text, obj11);
   }
   let intl = tmp(1126).intl;
   if (tmp19) {
@@ -501,7 +501,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const items1 = [UserRequiredActionStore];
   const obj3 = navigation(504);
   const stateFromStores1 = obj3.useStateFromStores(items1, () => action.getAction());
-  const obj4 = verified(6081);
+  const obj4 = verified(6088);
   const result = obj4.isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
   [tmp10, dependencyMap] = ref(react.useState(false), 2);
@@ -523,13 +523,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const callback = react.useCallback(() => {
     navigation.push(VerificationModalScenes.ENTER_EMAIL);
   }, items3);
-  items4 = [closure_9(navigation(6090).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  items4 = [closure_9(navigation(6097).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.string(navigation(1126).t.fUtddV) };
-  const Text = navigation(4886).Text;
+  const Text = navigation(4892).Text;
   intl = navigation(1126).intl;
   items4[1] = closure_9(Text, obj6);
   const obj7 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: formatResult };
-  const Text2 = navigation(4886).Text;
+  const Text2 = navigation(4892).Text;
   const intl2 = navigation(1126).intl;
   if (tmp10) {
     const obj8 = { email };
@@ -555,13 +555,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     },
     grow: true
   };
-  Button = tmp2(5594).Button;
+  Button = tmp2(5601).Button;
   intl3 = tmp2(1126).intl;
   items4[3] = closure_9(View, obj9);
   if (!result) {
     const obj11 = { style: tmp.change, children: closure_9(Button2, obj12) };
     obj12 = { text: intl4.string(navigation(1126).t.Vm8akB), variant: "secondary", onPress: callback, grow: true };
-    Button2 = tmp2(5594).Button;
+    Button2 = tmp2(5601).Button;
     intl4 = tmp2(1126).intl;
     tmp16Result = closure_9(View, obj11);
   }

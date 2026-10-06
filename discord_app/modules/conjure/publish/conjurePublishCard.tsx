@@ -1,7 +1,7 @@
-// === Module 16703: conjurePublishCard ===
+// === Module 16724: conjurePublishCard ===
 
-// Module 16703 (conjurePublishCard)
-import _modDef3723 from "module_3723" /* 3723 */;
+// Module 16724 (conjurePublishCard)
+import _modDef3753 from "module_3753" /* 3753 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishCard.tsx");
@@ -43,23 +43,23 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
     return null;
   }
 };
-export const showsOutdatedNotice = function showsOutdatedNotice(isUpdate) {
-  return null != isUpdate && isUpdate.isUpdate && null == isUpdate.disabledReason && true !== isUpdate.publishing;
+export const showsOutdatedNotice = function showsOutdatedNotice(publish) {
+  return null != publish && publish.isUpdate && null == publish.disabledReason && true !== publish.publishing;
 };
 export const publishNoticeMessage = function publishNoticeMessage(notice) {
   if (notice.update) {
     const surface = notice.surface;
     if ("bot" === surface) {
-      return _modDef3723.zfpeIL;
+      return _modDef3753.zfpeIL;
     } else if ("widget" === surface) {
-      return _modDef3723.DxCfTh;
+      return _modDef3753.DxCfTh;
     } else if ("automod" === surface) {
-      return _modDef3723["8ytGC3"];
+      return _modDef3753["8ytGC3"];
     } else {
-      return _modDef3723.WSmpBT;
+      return _modDef3753.WSmpBT;
     }
   } else {
-    return _modDef3723.MOrR29;
+    return _modDef3753.MOrR29;
   }
 };
 export const withLivePublishCard = function withLivePublishCard(stateFromStores1, stateFromStores2) {

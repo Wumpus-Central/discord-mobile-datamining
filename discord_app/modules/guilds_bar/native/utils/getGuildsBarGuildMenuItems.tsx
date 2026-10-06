@@ -1,17 +1,17 @@
-// === Module 16226: getGuildsBarGuildMenuItems ===
+// === Module 16266: getGuildsBarGuildMenuItems ===
 
-// Module 16226 (getGuildsBarGuildMenuItems)
+// Module 16266 (getGuildsBarGuildMenuItems)
 import Constants from "Constants" /* 1085 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6609 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6614 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12014 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 12015 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13720 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 6616 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 6621 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12029 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 12030 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13738 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -132,7 +132,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
         ActionSheetActionCreatorsDefault;
         const obj = { guildId };
-        const tmp2 = asyncRequire(11064, dependencyMap.paths);
+        const tmp2 = asyncRequire(11077, dependencyMap.paths);
         openLazy(tmp2, "muteSettings" + guildId, obj);
       };
       splice(1, 0, obj5);

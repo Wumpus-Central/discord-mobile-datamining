@@ -1,18 +1,18 @@
-// === Module 7260: ReactionActionCreators ===
+// === Module 7273: ReactionActionCreators ===
 
-// Module 7260 (ReactionActionCreators)
+// Module 7273 (ReactionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import intl4 from "intl" /* 1126 */;
-import EmojiUtils from "EmojiUtils" /* 4527 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
-import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7261 */;
+import EmojiUtils from "EmojiUtils" /* 4533 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
+import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7274 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -174,7 +174,7 @@ let obj = function _getReactors() {
             body = undefined;
             limit = 1;
             after = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === limit) {
           if (channelId === 1) {
@@ -292,7 +292,7 @@ obj = function _addReaction() {
             colors = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (channelId === 1) {
@@ -797,7 +797,7 @@ obj = function _removeReaction() {
       _location = constants.MESSAGE;
     }
     ({ userId: c4, options: c5 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

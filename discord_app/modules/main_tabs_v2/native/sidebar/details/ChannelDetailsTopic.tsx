@@ -1,20 +1,20 @@
-// === Module 16913: ChannelDetailsTopic ===
+// === Module 16939: ChannelDetailsTopic ===
 
-// Module 16913 (ChannelDetailsTopic)
+// Module 16939 (ChannelDetailsTopic)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4877 */;
-import ChannelUtils from "ChannelUtils" /* 5035 */;
-import spring from "spring" /* 5597 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4883 */;
+import ChannelUtils from "ChannelUtils" /* 5041 */;
+import spring from "spring" /* 5604 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10653 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10666 */;
 import Fragment from "Fragment" /* 21 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -457,7 +457,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       tmp8 = tmp10;
     }
     const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", style: tmp9, children: stateFromStores };
-    const tmp12 = closure_11(channel(4886).Text, obj3);
+    const tmp12 = closure_11(channel(4892).Text, obj3);
     cResult[5] = tmp9;
     cResult[6] = stateFromStores;
     cResult[7] = tmp12;
@@ -488,7 +488,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (null != stateFromStores) {
     const obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", style: obj3, children: stateFromStores };
     obj3 = { textAlign };
-    tmp4 = closure_11(tmp(4886).Text, obj2);
+    tmp4 = closure_11(tmp(4892).Text, obj2);
   }
   return tmp4;
 });
@@ -539,7 +539,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       tmp8 = tmp10;
     }
     const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", style: tmp9, children: stateFromStores };
-    const tmp12 = closure_11(channel(4886).Text, obj3);
+    const tmp12 = closure_11(channel(4892).Text, obj3);
     cResult[5] = tmp9;
     cResult[6] = stateFromStores;
     cResult[7] = tmp12;
@@ -561,7 +561,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (null != stateFromStores) {
     const obj2 = { variant: "heading-sm/normal", color: "interactive-text-default", style: obj3, children: stateFromStores };
     obj3 = { textAlign };
-    tmp4 = closure_11(tmp(4886).Text, obj2);
+    tmp4 = closure_11(tmp(4892).Text, obj2);
   }
   return tmp4;
 });

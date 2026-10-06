@@ -1,8 +1,8 @@
-// === Module 17643: VoiceProcessingErrorManager ===
+// === Module 17689: VoiceProcessingErrorManager ===
 
-// Module 17643 (VoiceProcessingErrorManager)
-import ToastUtils from "ToastUtils" /* 4567 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+// Module 17689 (VoiceProcessingErrorManager)
+import ToastUtils from "ToastUtils" /* 4573 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 class VoiceProcessingErrorManager extends AutomaticLifecycleManager {

@@ -1,22 +1,22 @@
-// === Module 15978: MessagesEmptyState ===
+// === Module 16017: MessagesEmptyState ===
 
-// Module 15978 (MessagesEmptyState)
+// Module 16017 (MessagesEmptyState)
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5912 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8422 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14901 */;
-import AssetRegistryDefault from "AssetRegistry" /* 15979 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8455 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14917 */;
+import AssetRegistryDefault from "AssetRegistry" /* 16018 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// === Module 17674: GuildSettingsAutoModeration ===
+// === Module 17720: GuildSettingsAutoModeration ===
 
-// Module 17674 (GuildSettingsAutoModeration)
+// Module 17720 (GuildSettingsAutoModeration)
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5968 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
-import GuildSettingsAutomodRuleStore from "GuildSettingsAutomodRuleStore" /* 17677 */;
-import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17679 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
+import GuildSettingsAutomodRuleStore from "GuildSettingsAutomodRuleStore" /* 17723 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17725 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import AutomodStore from "AutomodStore" /* 17675 */;
+import AutomodStore from "AutomodStore" /* 17721 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

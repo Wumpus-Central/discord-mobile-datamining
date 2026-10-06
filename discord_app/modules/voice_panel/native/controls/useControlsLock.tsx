@@ -1,8 +1,8 @@
-// === Module 17203: useControlsLock ===
+// === Module 17232: useControlsLock ===
 
-// Module 17203 (useControlsLock)
+// Module 17232 (useControlsLock)
 import react2 from "react" /* 576 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

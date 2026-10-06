@@ -1,9 +1,9 @@
-// === Module 12457: NavigationPathUtils ===
+// === Module 12472: NavigationPathUtils ===
 
-// Module 12457 (NavigationPathUtils)
+// Module 12472 (NavigationPathUtils)
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import MemoryRouter from "MemoryRouter" /* 4710 */;
+import MemoryRouter from "MemoryRouter" /* 4716 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

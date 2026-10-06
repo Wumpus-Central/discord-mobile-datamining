@@ -1,12 +1,12 @@
-// === Module 6840: StickerSendability ===
+// === Module 6850: StickerSendability ===
 
-// Module 6840 (StickerSendability)
+// Module 6850 (StickerSendability)
 import Constants from "Constants" /* 1085 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import StickersUtils from "StickersUtils" /* 5428 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import StickersUtils from "StickersUtils" /* 5435 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import StickersPackStore from "StickersPackStore" /* 5689 */;
+import StickersPackStore from "StickersPackStore" /* 5696 */;
 import size from "module_2" /* 2 */;
 
 function getStickerSendability(item10030, currentUser, channel) {

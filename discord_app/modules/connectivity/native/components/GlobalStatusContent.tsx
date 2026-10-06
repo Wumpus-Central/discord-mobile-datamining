@@ -1,25 +1,25 @@
-// === Module 9613: GlobalStatusContent ===
+// === Module 9626: GlobalStatusContent ===
 
-// Module 9613 (GlobalStatusContent)
+// Module 9626 (GlobalStatusContent)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9056 */;
-import StatusBarDefault from "StatusBar" /* 9060 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9082 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9445 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9606 */;
-import ConnectivityConstants from "ConnectivityConstants" /* 9608 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9614 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9092 */;
+import StatusBarDefault from "StatusBar" /* 9096 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9118 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9458 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9619 */;
+import ConnectivityConstants from "ConnectivityConstants" /* 9621 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9627 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import SessionsStore from "SessionsStore" /* 4908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import SessionsStore from "SessionsStore" /* 4914 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

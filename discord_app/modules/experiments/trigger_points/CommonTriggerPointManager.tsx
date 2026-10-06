@@ -1,9 +1,9 @@
-// === Module 17477: CommonTriggerPointManager ===
+// === Module 17504: CommonTriggerPointManager ===
 
-// Module 17477 (CommonTriggerPointManager)
-import OpenUserSettingsTriggerPoint2 from "OpenUserSettingsTriggerPoint" /* 17085 */;
-import VoiceCallTriggerPoint2 from "VoiceCallTriggerPoint" /* 17478 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+// Module 17504 (CommonTriggerPointManager)
+import OpenUserSettingsTriggerPoint2 from "OpenUserSettingsTriggerPoint" /* 17111 */;
+import VoiceCallTriggerPoint2 from "VoiceCallTriggerPoint" /* 17505 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 class CommonTriggerPointManager extends AutomaticLifecycleManager {

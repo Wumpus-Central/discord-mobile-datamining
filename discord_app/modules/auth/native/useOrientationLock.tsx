@@ -1,10 +1,10 @@
-// === Module 15923: useOrientationLock ===
+// === Module 15962: useOrientationLock ===
 
-// Module 15923 (useOrientationLock)
+// Module 15962 (useOrientationLock)
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6432 */;
-import DeviceOrientation from "DeviceOrientation" /* 8008 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
+import DeviceOrientation from "DeviceOrientation" /* 8018 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

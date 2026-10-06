@@ -1,14 +1,14 @@
-// === Module 15953: useMessagesSpecs ===
+// === Module 15992: useMessagesSpecs ===
 
-// Module 15953 (useMessagesSpecs)
+// Module 15992 (useMessagesSpecs)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useFontScale from "useFontScale" /* 5602 */;
-import MessagesHeader from "MessagesHeader" /* 15954 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 15957 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 15969 */;
+import useFontScale from "useFontScale" /* 5609 */;
+import MessagesHeader from "MessagesHeader" /* 15993 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 15996 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16008 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -84,7 +84,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 }) : (() => {
   let fontScale;
   let top;
-  let obj = fontScale(5602);
+  let obj = fontScale(5609);
   fontScale = obj.useFontScale();
   top = top(1618)().top;
   const items = [fontScale, top];

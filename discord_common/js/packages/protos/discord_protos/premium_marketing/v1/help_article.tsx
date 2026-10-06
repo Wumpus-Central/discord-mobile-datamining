@@ -1,8 +1,8 @@
-// === Module 10402: help_article ===
+// === Module 10415: help_article ===
 
-// Module 10402 (help_article)
+// Module 10415 (help_article)
 import _mod1198 from "module_1198" /* 1198 */;
-import localized_string from "localized_string" /* 10401 */;
+import localized_string from "localized_string" /* 10414 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 9140: useStableSafeAreaInsets ===
+// === Module 9175: useStableSafeAreaInsets ===
 
-// Module 9140 (useStableSafeAreaInsets)
+// Module 9175 (useStableSafeAreaInsets)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1618 */;
 import react_nativeDefault from "react-native" /* 1630 */;
-import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9141 */;
+import subscribeToSafeAreaInsetsDefault from "subscribeToSafeAreaInsets" /* 9176 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

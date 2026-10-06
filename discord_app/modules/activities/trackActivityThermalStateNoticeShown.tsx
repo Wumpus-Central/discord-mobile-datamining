@@ -1,11 +1,11 @@
-// === Module 17365: trackActivityThermalStateNoticeShown ===
+// === Module 17394: trackActivityThermalStateNoticeShown ===
 
-// Module 17365 (trackActivityThermalStateNoticeShown)
+// Module 17394 (trackActivityThermalStateNoticeShown)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import size from "module_2" /* 2 */;
 

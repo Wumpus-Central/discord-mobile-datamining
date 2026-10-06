@@ -1,25 +1,25 @@
-// === Module 10893: BadgeDetailsSheet ===
+// === Module 10906: BadgeDetailsSheet ===
 
-// Module 10893 (BadgeDetailsSheet)
+// Module 10906 (BadgeDetailsSheet)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import CircleInformationIcon2 from "CircleInformationIcon" /* 4812 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
-import BadgeUtils from "BadgeUtils" /* 10889 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10892 */;
-import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 10971 */;
+import CircleInformationIcon2 from "CircleInformationIcon" /* 4818 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
+import BadgeUtils from "BadgeUtils" /* 10902 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10905 */;
+import trackBadgeDirectoryActionDefault from "trackBadgeDirectoryAction" /* 10984 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import UserStore from "UserStore" /* 1377 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6646 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6653 */;
 import Fragment_mod from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -46,8 +46,8 @@ let obj8;
 let obj9;
 let size;
 let unpackModuleId;
-const f105513 = (arr) => arr.some((badge_id) => badge_id.badge_id === closure_1_0);
-const f105514 = (badge_id) => badge_id.badge_id;
+const f105665 = (arr) => arr.some((badge_id) => badge_id.badge_id === closure_1_0);
+const f105666 = (badge_id) => badge_id.badge_id;
 let react = react_mod;
 ({ Platform, View: hasOwnProperty } = react_native);
 const UserSettingsSections = Constants.UserSettingsSections;
@@ -1687,10 +1687,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
             items1[0] = owned;
             items1[1] = tmp8;
           }
-          found = items1.find(() => { /* body not rendered: F105513 */ });
+          found = items1.find(() => { /* body not rendered: F105665 */ });
           tmp9 = null;
           if (null != found) {
-            mapped = found.map(() => { /* body not rendered: F105514 */ });
+            mapped = found.map(() => { /* body not rendered: F105666 */ });
           } else {
             mapped = [];
             mapped[0] = tmp;
@@ -1795,9 +1795,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((badgeId) => {
       } else {
         items1 = [owned, tmp8];
       }
-      const found = items1.find(f105513);
+      const found = items1.find(f105665);
       if (null != found) {
-        mapped = found.map(f105514);
+        mapped = found.map(f105666);
       } else {
         mapped = [badgeId];
       }

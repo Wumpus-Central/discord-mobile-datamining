@@ -1,6 +1,6 @@
-// === Module 16180: useIsGuildEligibleForRoleSubscriptionsUpsell ===
+// === Module 16220: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
-// Module 16180 (useIsGuildEligibleForRoleSubscriptionsUpsell)
+// Module 16220 (useIsGuildEligibleForRoleSubscriptionsUpsell)
 import Constants from "Constants" /* 1085 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
 import GuildStore from "GuildStore" /* 2074 */;
@@ -214,7 +214,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (tmp6) {
     tmp6 = isGuildOwner(stateFromStores, tmp5);
   }
-  const tmpResult = tmp(6764);
+  const tmpResult = tmp(6774);
   const isUserInCreatorMonetizationEligibleCountry = tmpResult.useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;

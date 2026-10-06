@@ -1,12 +1,12 @@
-// === Module 7604: getEmbedThemeColors ===
+// === Module 7615: getEmbedThemeColors ===
 
-// Module 7604 (getEmbedThemeColors)
+// Module 7615 (getEmbedThemeColors)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import shared from "shared" /* 4729 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import shared from "shared" /* 4735 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

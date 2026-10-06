@@ -1,20 +1,20 @@
-// === Module 12105: ChannelFollowSuccessAlert ===
+// === Module 12120: ChannelFollowSuccessAlert ===
 
-// Module 12105 (ChannelFollowSuccessAlert)
+// Module 12120 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import intl3 from "intl" /* 1126 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import AlertDefault from "Alert" /* 5783 */;
-import AssetRegistry from "AssetRegistry" /* 12106 */;
-import AssetRegistry2 from "AssetRegistry" /* 12107 */;
-import AssetRegistry3 from "AssetRegistry" /* 12108 */;
-import AssetRegistry4 from "AssetRegistry" /* 12109 */;
-import AssetRegistry5 from "AssetRegistry" /* 12110 */;
-import AssetRegistry6 from "AssetRegistry" /* 12111 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import AlertDefault from "Alert" /* 5790 */;
+import AssetRegistry from "AssetRegistry" /* 12121 */;
+import AssetRegistry2 from "AssetRegistry" /* 12122 */;
+import AssetRegistry3 from "AssetRegistry" /* 12123 */;
+import AssetRegistry4 from "AssetRegistry" /* 12124 */;
+import AssetRegistry5 from "AssetRegistry" /* 12125 */;
+import AssetRegistry6 from "AssetRegistry" /* 12126 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -98,7 +98,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8 = cResult[1];
     tmp9 = cResult[2];
   }
-  const tmpResult = require("module_6949");
+  const tmpResult = require("module_6962");
   const stableMemo = tmpResult.useStableMemo(tmp8, tmp9);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
@@ -120,7 +120,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     tmp12 = cResult[4];
   }
-  const tmpResult2 = require("module_6949");
+  const tmpResult2 = require("module_6962");
   const stableMemo1 = tmpResult2.useStableMemo(S, tmp12);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
@@ -252,12 +252,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp6 = obj.isThemeDark(tmp4) ? items1 : items;
   _require = tmp6;
   items = [tmp6];
-  const tmp5Result = require("module_6949");
+  const tmp5Result = require("module_6962");
   const stableMemo = tmp5Result.useStableMemo(() => {
     const obj = _modDef12;
     return obj.sample(closure_0);
   }, items);
-  const tmp5Result2 = require("module_6949");
+  const tmp5Result2 = require("module_6962");
   const stableMemo1 = tmp5Result2.useStableMemo(() => {
     const obj = _modDef12;
     return obj.sample(items2);
@@ -270,10 +270,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj3 = { source: stableMemo, style: tmp.image };
   items1[0] = closure_4(Image, obj3);
   const obj4 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() };
-  const Text = tmp5(4886).Text;
+  const Text = tmp5(4892).Text;
   items1[1] = closure_4(Text, obj4);
   const obj5 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: intl2.string(require("intl").t["2QbSea"]) };
-  const Text2 = tmp5(4886).Text;
+  const Text2 = tmp5(4892).Text;
   intl2 = tmp5(1126).intl;
   items1[2] = closure_4(Text2, obj5);
   return closure_5(tmp2Result, obj2);

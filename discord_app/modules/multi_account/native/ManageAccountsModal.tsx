@@ -1,29 +1,29 @@
-// === Module 16316: ManageAccountsModal ===
+// === Module 16356: ManageAccountsModal ===
 
-// Module 16316 (ManageAccountsModal)
+// Module 16356 (ManageAccountsModal)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import timing from "timing" /* 4891 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10662 */;
-import MultiAccountStore from "MultiAccountStore" /* 12056 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12059 */;
-import ManageAccountsConstants from "ManageAccountsConstants" /* 16317 */;
+import timing from "timing" /* 4897 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10675 */;
+import MultiAccountStore from "MultiAccountStore" /* 12071 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12074 */;
+import ManageAccountsConstants from "ManageAccountsConstants" /* 16357 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react_mod from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamerModeStore from "StreamerModeStore" /* 4723 */;
+import StreamerModeStore from "StreamerModeStore" /* 4729 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants_mod from "Constants" /* 12057 */;
+import Constants_mod from "Constants" /* 12072 */;
 import Constants_mod2 from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import NativeStackView from "NativeStackView" /* 7556 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import NativeStackView from "NativeStackView" /* 7568 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -140,7 +140,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { color: username(587).colors.ICON_FEEDBACK_CRITICAL };
-            const CircleMinusIcon = tmp(15132).CircleMinusIcon;
+            const CircleMinusIcon = tmp(15147).CircleMinusIcon;
             const tmp24 = closure_20(CircleMinusIcon, obj2);
             cResult[13] = tmp24;
             tmp21 = tmp24;
@@ -149,7 +149,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
           }
           if (cResult[14] !== tmp17) {
             let obj3 = { accessibilityRole: "button", accessibilityLabel: tmp19, onPress: tmp17, children: tmp21 };
-            const tmp27 = closure_20(tmp(5909).PressableOpacity, obj3);
+            const tmp27 = closure_20(tmp(5916).PressableOpacity, obj3);
             cResult[14] = tmp17;
             cResult[15] = tmp27;
             tmp25 = tmp27;
@@ -358,10 +358,10 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         },
       children: closure_20(CircleMinusIcon, obj4)
     };
-    const PressableOpacity = tmp(5909).PressableOpacity;
+    const PressableOpacity = tmp(5916).PressableOpacity;
     intl = tmp(1126).intl;
     obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    CircleMinusIcon = tmp(15132).CircleMinusIcon;
+    CircleMinusIcon = tmp(15147).CircleMinusIcon;
     return closure_20(PressableOpacity, obj3);
   }
 });
@@ -839,7 +839,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
   if (undefined === MANAGE_ACCOUNTS) {
     MANAGE_ACCOUNTS = ManageAccountsScreens.MANAGE_ACCOUNTS;
   }
-  const tmpResult = tmp(6496);
+  const tmpResult = tmp(6503);
   accessibilityNativeStackOptions = tmpResult.useAccessibilityNativeStackOptions();
   [isEditing, closure_2] = react.useState(false);
   if (cResult[0] === accessibilityNativeStackOptions) {

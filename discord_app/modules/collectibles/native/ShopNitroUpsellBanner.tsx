@@ -1,23 +1,23 @@
-// === Module 15710: ShopNitroUpsellBanner ===
+// === Module 15746: ShopNitroUpsellBanner ===
 
-// Module 15710 (ShopNitroUpsellBanner)
+// Module 15746 (ShopNitroUpsellBanner)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import useToken from "useToken" /* 4580 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import XSmallIcon2 from "XSmallIcon" /* 6017 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9648 */;
-import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15709 */;
+import useToken from "useToken" /* 4586 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import XSmallIcon2 from "XSmallIcon" /* 6024 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9661 */;
+import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment" /* 15745 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

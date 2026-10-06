@@ -1,10 +1,10 @@
-// === Module 6753: useRoleSubscriptionsVisibleInGuild ===
+// === Module 6763: useRoleSubscriptionsVisibleInGuild ===
 
-// Module 6753 (useRoleSubscriptionsVisibleInGuild)
+// Module 6763 (useRoleSubscriptionsVisibleInGuild)
 import Constants from "Constants" /* 1085 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6754 */;
-import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6755 */;
-import GuildProductsEligibility from "GuildProductsEligibility" /* 6761 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 6764 */;
+import useHasRoleSubscriptionInGuild from "useHasRoleSubscriptionInGuild" /* 6765 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 6771 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

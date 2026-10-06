@@ -1,8 +1,8 @@
-// === Module 13509: requestReviewModal ===
+// === Module 13525: requestReviewModal ===
 
-// Module 13509 (requestReviewModal)
+// Module 13525 (requestReviewModal)
 import LoggerDefault from "Logger" /* 3 */;
-import react_nativeDefault from "react-native" /* 13510 */;
+import react_nativeDefault from "react-native" /* 13526 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

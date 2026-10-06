@@ -1,8 +1,8 @@
-// === Module 16496: GuildRoleSubscriptionSettingsUtils ===
+// === Module 16536: GuildRoleSubscriptionSettingsUtils ===
 
-// Module 16496 (GuildRoleSubscriptionSettingsUtils)
-import StoreUtils from "StoreUtils" /* 5322 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4502 */;
+// Module 16536 (GuildRoleSubscriptionSettingsUtils)
+import StoreUtils from "StoreUtils" /* 5329 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4508 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionSettingsUtils.tsx");

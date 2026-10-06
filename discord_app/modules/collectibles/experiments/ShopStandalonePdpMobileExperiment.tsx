@@ -1,6 +1,6 @@
-// === Module 7845: ShopStandalonePdpMobileExperiment ===
+// === Module 7856: ShopStandalonePdpMobileExperiment ===
 
-// Module 7845 (ShopStandalonePdpMobileExperiment)
+// Module 7856 (ShopStandalonePdpMobileExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

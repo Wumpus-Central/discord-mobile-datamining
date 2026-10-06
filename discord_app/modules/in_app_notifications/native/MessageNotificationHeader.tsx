@@ -1,22 +1,22 @@
-// === Module 12518: MessageNotificationHeader ===
+// === Module 12533: MessageNotificationHeader ===
 
-// Module 12518 (MessageNotificationHeader)
+// Module 12533 (MessageNotificationHeader)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import ChatIcon from "ChatIcon" /* 5855 */;
-import ThreadIcon2 from "ThreadIcon" /* 5857 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import ChatIcon from "ChatIcon" /* 5862 */;
+import ThreadIcon2 from "ThreadIcon" /* 5864 */;
 import react_mod from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

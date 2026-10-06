@@ -1,8 +1,8 @@
-// === Module 11321: ForwardPreviewUtils ===
+// === Module 11334: ForwardPreviewUtils ===
 
-// Module 11321 (ForwardPreviewUtils)
-import EmbedUtils from "EmbedUtils" /* 5426 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+// Module 11334 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 5433 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

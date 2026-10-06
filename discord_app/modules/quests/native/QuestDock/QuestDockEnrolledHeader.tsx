@@ -1,21 +1,21 @@
-// === Module 14992: QuestDockEnrolledHeader ===
+// === Module 15007: QuestDockEnrolledHeader ===
 
-// Module 14992 (QuestDockEnrolledHeader)
+// Module 15007 (QuestDockEnrolledHeader)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10911 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 10955 */;
-import QuestDockConstants from "QuestDockConstants" /* 14896 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14925 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 14935 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10924 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 10968 */;
+import QuestDockConstants from "QuestDockConstants" /* 14912 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 14940 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 14950 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,28 +1,28 @@
-// === Module 12486: MessagePreviewText ===
+// === Module 12501: MessagePreviewText ===
 
-// Module 12486 (MessagePreviewText)
+// Module 12501 (MessagePreviewText)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1107 */;
 import intl5 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useMessageAuthor from "useMessageAuthor" /* 5304 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6805 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7514 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12477 */;
-import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12487 */;
-import ChannelRowPreview2 from "ChannelRowPreview" /* 12488 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 12489 */;
-import usePreviewableMediaText from "usePreviewableMediaText" /* 12492 */;
-import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12493 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useMessageAuthor from "useMessageAuthor" /* 5311 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6815 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7525 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12492 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 12502 */;
+import ChannelRowPreview2 from "ChannelRowPreview" /* 12503 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 12504 */;
+import usePreviewableMediaText from "usePreviewableMediaText" /* 12507 */;
+import useGetInitialMessagePreview from "useGetInitialMessagePreview" /* 12508 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import InAppNotificationConstants from "InAppNotificationConstants" /* 12478 */;
+import InAppNotificationConstants from "InAppNotificationConstants" /* 12493 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

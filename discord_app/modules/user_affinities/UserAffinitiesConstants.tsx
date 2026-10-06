@@ -1,6 +1,6 @@
-// === Module 7144: UserAffinitiesConstants ===
+// === Module 7157: UserAffinitiesConstants ===
 
-// Module 7144 (UserAffinitiesConstants)
+// Module 7157 (UserAffinitiesConstants)
 import DurationsDefault from "Durations" /* 1102 */;
 import size from "module_2" /* 2 */;
 

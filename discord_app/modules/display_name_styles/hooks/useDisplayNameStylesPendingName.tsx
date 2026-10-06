@@ -1,8 +1,8 @@
-// === Module 15155: useDisplayNameStylesPendingName ===
+// === Module 15170: useDisplayNameStylesPendingName ===
 
-// Module 15155 (useDisplayNameStylesPendingName)
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
+// Module 15170 (useDisplayNameStylesPendingName)
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

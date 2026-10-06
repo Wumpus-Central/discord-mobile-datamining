@@ -1,11 +1,11 @@
-// === Module 4945: BaseConnectionEvent ===
+// === Module 4951: BaseConnectionEvent ===
 
-// Module 4945 (BaseConnectionEvent)
-import MediaEngineNative from "MediaEngineNative" /* 4946 */;
-import MediaEngineEvent from "MediaEngineEvent" /* 4954 */;
-import BaseConnection from "BaseConnection" /* 4958 */;
-import MediaEngineDummy from "MediaEngineDummy" /* 5018 */;
-import Constants from "Constants" /* 4915 */;
+// Module 4951 (BaseConnectionEvent)
+import MediaEngineNative from "MediaEngineNative" /* 4952 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 4960 */;
+import BaseConnection from "BaseConnection" /* 4964 */;
+import MediaEngineDummy from "MediaEngineDummy" /* 5024 */;
+import Constants from "Constants" /* 4921 */;
 import size from "module_2" /* 2 */;
 
 const MediaEngineImplementations = Constants.MediaEngineImplementations;

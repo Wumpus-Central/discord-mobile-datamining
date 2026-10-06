@@ -1,11 +1,11 @@
-// === Module 11284: canForwardMessage ===
+// === Module 11297: canForwardMessage ===
 
-// Module 11284 (canForwardMessage)
+// Module 11297 (canForwardMessage)
 import FlagUtils from "FlagUtils" /* 1390 */;
 import GatedChannelStore from "GatedChannelStore" /* 2104 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

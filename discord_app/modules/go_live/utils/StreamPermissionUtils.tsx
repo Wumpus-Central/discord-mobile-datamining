@@ -1,16 +1,16 @@
-// === Module 7210: StreamPermissionUtils ===
+// === Module 7223: StreamPermissionUtils ===
 
-// Module 7210 (StreamPermissionUtils)
+// Module 7223 (StreamPermissionUtils)
 import Constants from "Constants" /* 1085 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
-import ChannelUtils from "ChannelUtils" /* 5035 */;
-import AgeGateUtils from "AgeGateUtils" /* 5100 */;
-import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5573 */;
-import GameConsoleStore from "GameConsoleStore" /* 4907 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
+import ChannelUtils from "ChannelUtils" /* 5041 */;
+import AgeGateUtils from "AgeGateUtils" /* 5106 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 5580 */;
+import GameConsoleStore from "GameConsoleStore" /* 4913 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

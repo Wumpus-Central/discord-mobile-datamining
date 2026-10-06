@@ -1,15 +1,15 @@
-// === Module 13115: ForumChannelHeader ===
+// === Module 13134: ForumChannelHeader ===
 
-// Module 13115 (ForumChannelHeader)
+// Module 13134 (ForumChannelHeader)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import react_native2 from "react-native" /* 7499 */;
-import ForumChannelSearch from "ForumChannelSearch" /* 13098 */;
-import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13116 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13117 */;
+import react_native2 from "react-native" /* 7510 */;
+import ForumChannelSearch from "ForumChannelSearch" /* 13117 */;
+import useIsForumChannelSearchActive from "useIsForumChannelSearchActive" /* 13135 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 13136 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

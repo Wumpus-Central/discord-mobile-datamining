@@ -1,11 +1,11 @@
-// === Module 12069: useEmojiSuggestions ===
+// === Module 12084: useEmojiSuggestions ===
 
-// Module 12069 (useEmojiSuggestions)
+// Module 12084 (useEmojiSuggestions)
 import react2 from "react" /* 576 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5621 */;
-import EmojiStore2 from "EmojiStore" /* 5638 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5789 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5628 */;
+import EmojiStore2 from "EmojiStore" /* 5645 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5796 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -223,8 +223,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                           sum = num + 500;
                           num3 = 0;
                           _setTimeout = setTimeout;
-                          closure_0 = setTimeout(() => { /* body not rendered: F142194 */ }, Math.max(0, sum - Date.now()));
-                          return () => { /* body not rendered: F142195 */ };
+                          closure_0 = setTimeout(() => { /* body not rendered: F142398 */ }, Math.max(0, sum - Date.now()));
+                          return () => { /* body not rendered: F142399 */ };
                         }
                       }
                       return;
@@ -306,7 +306,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
         }
         const obj2 = { query: null, channel, intention: EmojiIntention.CHAT, maxCount };
-        const obj3 = enabled(5621);
+        const obj3 = enabled(5628);
         class E {
           constructor() {
             return closure_5.loadState;
@@ -386,8 +386,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               sum = num + 500;
               num3 = 0;
               _setTimeout = setTimeout;
-              closure_0 = setTimeout(() => { /* body not rendered: F142194 */ }, Math.max(0, sum - Date.now()));
-              return () => { /* body not rendered: F142195 */ };
+              closure_0 = setTimeout(() => { /* body not rendered: F142398 */ }, Math.max(0, sum - Date.now()));
+              return () => { /* body not rendered: F142399 */ };
             }
           }
           return;

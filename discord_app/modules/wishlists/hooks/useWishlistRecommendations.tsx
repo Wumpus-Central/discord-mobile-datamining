@@ -1,22 +1,22 @@
-// === Module 10526: useWishlistRecommendations ===
+// === Module 10539: useWishlistRecommendations ===
 
-// Module 10526 (useWishlistRecommendations)
+// Module 10539 (useWishlistRecommendations)
 import _mod12 from "module_12" /* 12 */;
 import react2 from "react" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import WishlistRecommendationRecord2 from "WishlistRecommendationRecord" /* 6728 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
-import WishlistFetchSource from "WishlistFetchSource" /* 8437 */;
-import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8438 */;
-import useGetOrFetchStorefrontPrices from "useGetOrFetchStorefrontPrices" /* 8439 */;
-import useWishlistApplicationIds from "useWishlistApplicationIds" /* 10528 */;
-import useWishlistSkuFilter from "useWishlistSkuFilter" /* 10529 */;
+import WishlistRecommendationRecord2 from "WishlistRecommendationRecord" /* 6742 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
+import WishlistFetchSource from "WishlistFetchSource" /* 8470 */;
+import WishlistActionCreatorsDefault from "WishlistActionCreators" /* 8471 */;
+import useGetOrFetchStorefrontPrices from "useGetOrFetchStorefrontPrices" /* 8472 */;
+import useWishlistApplicationIds from "useWishlistApplicationIds" /* 10541 */;
+import useWishlistSkuFilter from "useWishlistSkuFilter" /* 10542 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import WishlistRecommendationsStore from "WishlistRecommendationsStore" /* 10527 */;
+import WishlistRecommendationsStore from "WishlistRecommendationsStore" /* 10540 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -64,7 +64,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[3] === userIdsAndWishlistIds) {
       tmp8 = cResult[4];
     }
-    const tmpResult2 = applicationIdsFilter(8430);
+    const tmpResult2 = applicationIdsFilter(8463);
     const fetchWishlists = tmpResult2.useFetchWishlists(tmp8);
     ({ wishlists, isFetching, errors } = fetchWishlists);
     if (cResult[5] === applicationIdsFilter) {

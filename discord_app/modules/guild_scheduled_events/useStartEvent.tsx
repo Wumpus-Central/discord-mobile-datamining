@@ -1,8 +1,8 @@
-// === Module 9471: useStartEvent ===
+// === Module 9484: useStartEvent ===
 
-// Module 9471 (useStartEvent)
+// Module 9484 (useStartEvent)
 import react2 from "react" /* 576 */;
-import StartEventUtilsAll from "StartEventUtils" /* 9472 */;
+import StartEventUtilsAll from "StartEventUtils" /* 9485 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -245,7 +245,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               aPIError = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c7) {
             if (arg0 === 1) {

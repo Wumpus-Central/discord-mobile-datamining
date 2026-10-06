@@ -1,9 +1,9 @@
-// === Module 12917: maybeFetchContentInventoryOutbox ===
+// === Module 12936: maybeFetchContentInventoryOutbox ===
 
-// Module 12917 (maybeFetchContentInventoryOutbox)
+// Module 12936 (maybeFetchContentInventoryOutbox)
 import DurationsDefault from "Durations" /* 1102 */;
-import ContentInventoryHttpApi from "ContentInventoryHttpApi" /* 12918 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8447 */;
+import ContentInventoryHttpApi from "ContentInventoryHttpApi" /* 12937 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8480 */;
 import size from "module_2" /* 2 */;
 
 const MINUTE = DurationsDefault.Millis.MINUTE;

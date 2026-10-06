@@ -1,9 +1,9 @@
-// === Module 8383: OpenCriticRatingCircle ===
+// === Module 8416: OpenCriticRatingCircle ===
 
-// Module 8383 (OpenCriticRatingCircle)
+// Module 8416 (OpenCriticRatingCircle)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

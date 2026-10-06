@@ -1,16 +1,16 @@
-// === Module 9677: KrispLogo ===
+// === Module 9690: KrispLogo ===
 
-// Module 9677 (KrispLogo)
+// Module 9690 (KrispLogo)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import shared from "shared" /* 4729 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9678 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9679 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import shared from "shared" /* 4735 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9691 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9692 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ThemeStore from "ThemeStore" /* 1193 */;

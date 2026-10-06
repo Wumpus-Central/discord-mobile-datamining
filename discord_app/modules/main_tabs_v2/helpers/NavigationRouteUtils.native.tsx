@@ -1,12 +1,12 @@
-// === Module 4736: NavigationRouteUtils ===
+// === Module 4742: NavigationRouteUtils ===
 
-// Module 4736 (NavigationRouteUtils)
+// Module 4742 (NavigationRouteUtils)
 import v1 from "v1" /* 1266 */;
 import Link from "Link" /* 1491 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import react_nativeDefault from "react-native" /* 4743 */;
-import Types from "Types" /* 4744 */;
-import ChatInputUtils from "ChatInputUtils" /* 4745 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import react_nativeDefault from "react-native" /* 4749 */;
+import Types from "Types" /* 4750 */;
+import ChatInputUtils from "ChatInputUtils" /* 4751 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -753,7 +753,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
   let obj3;
   let screen;
   let tmp2Result4;
-  let obj = icymiScreen(4737);
+  let obj = icymiScreen(4743);
   const rootNavigationRef = obj.getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
@@ -772,15 +772,15 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
           if (forceNavigate) {
             let obj2 = { screen, params: obj3 };
             obj3 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
-            const tmp2Result = icymiScreen(4737);
+            const tmp2Result = icymiScreen(4743);
             const rootNavigationRef1 = tmp2Result.getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
                 if (tmp4) {
                   const rootState = rootNavigationRef1.getRootState();
                   const obj4 = { name: "tabs", key: "tabs-" + tmp2Result4.v4(), params: obj2 };
-                  const wrapRouteForRootNavigator = icymiScreen(4738).wrapRouteForRootNavigator;
-                  icymiScreen(4738);
+                  const wrapRouteForRootNavigator = icymiScreen(4744).wrapRouteForRootNavigator;
+                  icymiScreen(4744);
                   const _HermesInternal = HermesInternal;
                   const items = [obj4];
                   const items1 = [];

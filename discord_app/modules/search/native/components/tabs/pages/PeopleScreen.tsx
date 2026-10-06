@@ -1,14 +1,14 @@
-// === Module 16869: PeopleScreen ===
+// === Module 16894: PeopleScreen ===
 
-// Module 16869 (PeopleScreen)
+// Module 16894 (PeopleScreen)
 import Fragment from "Fragment" /* 21 */;
-import TrackingConstants from "TrackingConstants" /* 7512 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
+import TrackingConstants from "TrackingConstants" /* 7523 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react_mod from "react" /* 19 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 11992 */;
-import SearchQueryStore_mod from "SearchQueryStore" /* 11967 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12009 */;
+import SearchQueryStore_mod from "SearchQueryStore" /* 11994 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

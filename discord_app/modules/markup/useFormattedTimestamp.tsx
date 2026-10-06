@@ -1,6 +1,6 @@
-// === Module 11707: useFormattedTimestamp ===
+// === Module 11721: useFormattedTimestamp ===
 
-// Module 11707 (useFormattedTimestamp)
+// Module 11721 (useFormattedTimestamp)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((format) => {
   const tmp = _require;
   let obj = require("react");
   const cResult = obj.c(7);
-  const obj2 = require("module_6949");
+  const obj2 = require("module_6962");
   const forceUpdate = obj2.useForceUpdate();
   if (cResult[0] === forceUpdate) {
     if (cResult[1] === format.format) {
@@ -39,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((format) => {
       if ("R" === format.format) {
         let tmp9;
         if (cResult[5] !== format.parsed) {
-          const TIMESTAMP_FORMATS = tmp(5807).TIMESTAMP_FORMATS;
+          const TIMESTAMP_FORMATS = tmp(5814).TIMESTAMP_FORMATS;
           const RResult = TIMESTAMP_FORMATS.R(format.parsed);
           cResult[5] = format.parsed;
           cResult[6] = RResult;
@@ -90,7 +90,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((format) => {
   let formatted;
   _require = format;
   const tmp = _require;
-  let obj = require("module_6949");
+  let obj = require("module_6962");
   const forceUpdate = obj.useForceUpdate();
   const items = [forceUpdate, , ];
   ({ format: arr[1], parsed: arr[2] } = format);
@@ -118,7 +118,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((format) => {
     }
   }, items);
   if ("R" === format.format) {
-    const TIMESTAMP_FORMATS = tmp(5807).TIMESTAMP_FORMATS;
+    const TIMESTAMP_FORMATS = tmp(5814).TIMESTAMP_FORMATS;
     formatted = TIMESTAMP_FORMATS.R(format.parsed);
   } else {
     formatted = format.formatted;

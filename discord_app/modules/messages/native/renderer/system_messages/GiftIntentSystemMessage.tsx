@@ -1,13 +1,13 @@
-// === Module 7746: GiftIntentSystemMessage ===
+// === Module 7757: GiftIntentSystemMessage ===
 
-// Module 7746 (GiftIntentSystemMessage)
+// Module 7757 (GiftIntentSystemMessage)
 import nativeDefault from "native" /* 587 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7608 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
-import GiftIntentEmbed from "GiftIntentEmbed" /* 7747 */;
-import EphemeralIndication from "EphemeralIndication" /* 7754 */;
-import createStyles from "createStyles" /* 4890 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7619 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
+import GiftIntentEmbed from "GiftIntentEmbed" /* 7758 */;
+import EphemeralIndication from "EphemeralIndication" /* 7765 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let obj = { iconTintColor: nativeDefault.colors.BACKGROUND_BRAND, iconDividerColor: nativeDefault.colors.ICON_STRONG };

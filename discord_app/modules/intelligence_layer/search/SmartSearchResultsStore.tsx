@@ -1,17 +1,14 @@
-// === Module 11987: SmartSearchResultsStore ===
+// === Module 11984: SmartSearchResultsStore ===
 
-// Module 11987 (SmartSearchResultsStore)
+// Module 11984 (SmartSearchResultsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LRUCacheDefault from "LRUCache" /* 1444 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 11989 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 11985 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import SmartSearchConstants from "SmartSearchConstants" /* 11988 */;
+import SmartSearchConstants from "SmartSearchConstants" /* 11982 */;
 import size from "module_2" /* 2 */;
-
-let set;
 
 let MAX_CACHED_ANSWER_GUILDS;
 let hasOwnProperty;
@@ -19,7 +16,7 @@ function handleReset() {
   closure_6.reset();
 }
 ({ MAX_CACHED_ANSWERS_PER_GUILD: hasOwnProperty, MAX_CACHED_ANSWER_GUILDS } = SmartSearchConstants);
-let obj = { max: MAX_CACHED_ANSWER_GUILDS };
+const obj = { max: MAX_CACHED_ANSWER_GUILDS };
 const metroRequire = new LRUCacheDefault(obj);
 new LRUCacheDefault(obj);
 const Store = get_initializedDefault.Store;
@@ -71,12 +68,13 @@ class SmartSearchResultsStore extends Store {
 const prototype = SmartSearchResultsStore.prototype;
 SmartSearchResultsStore.displayName = "SmartSearchResultsStore";
 let obj2 = {
-  SMART_SEARCH_FETCH_START: function handleFetchStart(guildId) {
+  SMART_SEARCH_FETCH_START: function handleFetchStart(smartSearchQuery) {
     let channelIds;
     let queryText;
     let requestKey;
-    guildId = guildId.guildId;
-    ({ requestKey, queryText, channelIds } = guildId);
+    smartSearchQuery = smartSearchQuery.smartSearchQuery;
+    const guildId = smartSearchQuery.guildId;
+    ({ requestKey, queryText, channelIds } = smartSearchQuery);
     let value = closure_6.get(guildId);
     if (null == value) {
       const self = this;
@@ -89,59 +87,36 @@ let obj2 = {
     const obj3 = { status: SmartSearchTypes.SmartSearchStatus.LOADING, queryText, answerText: "", citations: [], channelIds };
     const result1 = value.set(requestKey, obj3);
   },
-  SMART_SEARCH_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    let ERROR;
-    let blockedOrIgnoredForMessage;
+  SMART_SEARCH_FETCH_SUCCESS: function handleFetchSuccess(smartSearchQuery) {
+    let answerText;
     let channelIds;
-    let guildId;
+    let citations;
+    let queryText;
     let requestKey;
-    let response;
-    ({ guildId, response } = arg0);
-    const message_citations = response.message_citations;
-    ({ requestKey, channelIds } = arg0);
-    const mapped = message_citations.map((sourceId) => {
-      let obj2;
-      const obj = { sourceId: sourceId.source_id, sourceType: sourceId.source_type, guildId: sourceId.guild_id, channelId: sourceId.channel_id, messageId: sourceId.message_id, message: obj2.createMessageRecord(sourceId.message) };
-      obj2 = MessageRecordUtils;
-      return obj;
-    });
-    const found = mapped.filter((message) => !blockedOrIgnoredForMessage.isBlockedOrIgnoredForMessage(message.message));
+    let smartSearchStatus;
+    smartSearchQuery = smartSearchQuery.smartSearchQuery;
+    const guildId = smartSearchQuery.guildId;
+    ({ smartSearchStatus, answerText, citations } = smartSearchQuery);
+    ({ requestKey, queryText, channelIds } = smartSearchQuery);
     let value = closure_6.get(guildId);
     if (null == value) {
-      let obj2 = { max: hasOwnProperty };
       const self = this;
       const self2 = this;
-      const tmp7 = new LRUCacheDefault(obj2);
-      const result = closure_6.set(guildId, tmp7);
-      value = tmp7;
+      const obj2 = { max: hasOwnProperty };
+      const tmp5 = new LRUCacheDefault(obj2);
+      const result = closure_6.set(guildId, tmp5);
+      value = tmp5;
     }
-    const search_status = response.search_status;
-    set = value.set;
-    if ("not_qualified" === search_status) {
-      ERROR = SmartSearchTypes.SmartSearchStatus.NOT_QUALIFIED;
-    } else if ("no_results" === search_status) {
-      ERROR = SmartSearchTypes.SmartSearchStatus.EMPTY;
-    } else if ("success" === search_status) {
-      let EMPTY;
-      if (tmp10 > 0) {
-        EMPTY = SmartSearchTypes.SmartSearchStatus.LOADED;
-      } else {
-        EMPTY = SmartSearchTypes.SmartSearchStatus.EMPTY;
-      }
-      ERROR = EMPTY;
-    } else {
-      ERROR = SmartSearchTypes.SmartSearchStatus.ERROR;
-    }
-    const obj3 = { status: ERROR, queryText: response.query_text, answerText: response.answer_text, citations: found, channelIds };
-    const result1 = set(requestKey, obj3);
+    const result1 = value.set(requestKey, { status: smartSearchStatus, queryText, answerText, citations, channelIds });
   },
-  SMART_SEARCH_FETCH_FAILURE: function handleFetchFailure(guildId) {
+  SMART_SEARCH_FETCH_FAILURE: function handleFetchFailure(smartSearchQuery) {
     let channelIds;
     let queryText;
     let requestKey;
-    let status;
-    guildId = guildId.guildId;
-    ({ requestKey, status, queryText, channelIds } = guildId);
+    smartSearchQuery = smartSearchQuery.smartSearchQuery;
+    const guildId = smartSearchQuery.guildId;
+    const status = smartSearchQuery.status;
+    ({ requestKey, queryText, channelIds } = smartSearchQuery);
     let value = closure_6.get(guildId);
     if (null == value) {
       const self = this;

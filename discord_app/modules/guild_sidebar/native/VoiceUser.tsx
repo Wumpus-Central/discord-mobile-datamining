@@ -1,14 +1,14 @@
-// === Module 16045: VoiceUser ===
+// === Module 16084: VoiceUser ===
 
-// Module 16045 (VoiceUser)
+// Module 16084 (VoiceUser)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 19 */;
 import EmbeddedActivitiesStore_mod from "EmbeddedActivitiesStore" /* 2050 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import SessionsStore from "SessionsStore" /* 4908 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import SessionsStore from "SessionsStore" /* 4914 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

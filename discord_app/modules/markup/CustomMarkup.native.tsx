@@ -1,12 +1,12 @@
-// === Module 5784: CustomMarkup ===
+// === Module 5791: CustomMarkup ===
 
-// Module 5784 (CustomMarkup)
+// Module 5791 (CustomMarkup)
 import _modDef1936 from "module_1936" /* 1936 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4877 */;
-import MarkupReactRules from "MarkupReactRules" /* 4878 */;
-import MarkupTypes from "MarkupTypes" /* 5785 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5786 */;
-import MarkupRulesDefault from "MarkupRules" /* 5787 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4883 */;
+import MarkupReactRules from "MarkupReactRules" /* 4884 */;
+import MarkupTypes from "MarkupTypes" /* 5792 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5793 */;
+import MarkupRulesDefault from "MarkupRules" /* 5794 */;
 import size from "module_2" /* 2 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;

@@ -1,22 +1,22 @@
-// === Module 16433: AnnouncementMessageRow ===
+// === Module 16473: AnnouncementMessageRow ===
 
-// Module 16433 (AnnouncementMessageRow)
+// Module 16473 (AnnouncementMessageRow)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8029 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10651 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11280 */;
-import DesignConstants from "DesignConstants" /* 16434 */;
-import ICYMIShared from "ICYMIShared" /* 16435 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11293 */;
+import DesignConstants from "DesignConstants" /* 16474 */;
+import ICYMIShared from "ICYMIShared" /* 16475 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16394 */;
+import createICYMIStyles from "createICYMIStyles" /* 16434 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

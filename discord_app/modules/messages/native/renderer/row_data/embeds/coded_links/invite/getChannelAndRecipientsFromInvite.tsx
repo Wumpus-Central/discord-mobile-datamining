@@ -1,6 +1,6 @@
-// === Module 10025: getChannelAndRecipientsFromInvite ===
+// === Module 10038: getChannelAndRecipientsFromInvite ===
 
-// Module 10025 (getChannelAndRecipientsFromInvite)
+// Module 10038 (getChannelAndRecipientsFromInvite)
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import size from "module_2" /* 2 */;
 

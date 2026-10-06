@@ -1,17 +1,17 @@
-// === Module 15632: CreateBugReportSetting ===
+// === Module 15646: CreateBugReportSetting ===
 
-// Module 15632 (CreateBugReportSetting)
+// Module 15646 (CreateBugReportSetting)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
 import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1358 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import BugReportManagerDefault from "BugReportManager" /* 12538 */;
-import WrenchIcon from "WrenchIcon" /* 15389 */;
-import BugReporterSetting from "BugReporterSetting" /* 15619 */;
+import BugReportManagerDefault from "BugReportManager" /* 12553 */;
+import WrenchIcon from "WrenchIcon" /* 15404 */;
+import BugReporterSetting from "BugReporterSetting" /* 15633 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {

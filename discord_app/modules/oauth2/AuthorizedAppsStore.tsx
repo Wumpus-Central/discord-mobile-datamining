@@ -1,13 +1,13 @@
-// === Module 6602: AuthorizedAppsStore ===
+// === Module 6609: AuthorizedAppsStore ===
 
-// Module 6602 (AuthorizedAppsStore)
+// Module 6609 (AuthorizedAppsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import ConnectedAppsStore from "ConnectedAppsStore" /* 6603 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import ConnectedAppsStore from "ConnectedAppsStore" /* 6610 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import size from "module_2" /* 2 */;
 
 function recomputeFromAppTokens() {

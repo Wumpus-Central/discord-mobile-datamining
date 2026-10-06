@@ -1,8 +1,8 @@
-// === Module 17624: SettingTreeCacheLifecycleManager ===
+// === Module 17670: SettingTreeCacheLifecycleManager ===
 
-// Module 17624 (SettingTreeCacheLifecycleManager)
-import SettingTreeManagerDefault from "SettingTreeManager" /* 14504 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+// Module 17670 (SettingTreeCacheLifecycleManager)
+import SettingTreeManagerDefault from "SettingTreeManager" /* 14520 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let importDefault;

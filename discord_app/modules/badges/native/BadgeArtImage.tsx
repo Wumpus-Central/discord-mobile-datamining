@@ -1,12 +1,12 @@
-// === Module 10882: BadgeArtImage ===
+// === Module 10895: BadgeArtImage ===
 
-// Module 10882 (BadgeArtImage)
+// Module 10895 (BadgeArtImage)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
-import APNGPlayer from "APNGPlayer" /* 8464 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
+import APNGPlayer from "APNGPlayer" /* 8497 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
@@ -149,7 +149,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           let tmp6Result;
-          const SvgUri = tmp(8136).SvgUri;
+          const SvgUri = tmp(8169).SvgUri;
           if (null != fallbackUrl) {
             tmp6Result = tmp6(fallbackUrl);
           }

@@ -1,8 +1,8 @@
-// === Module 6909: GuildBoostPurchasingUtils ===
+// === Module 6919: GuildBoostPurchasingUtils ===
 
-// Module 6909 (GuildBoostPurchasingUtils)
+// Module 6919 (GuildBoostPurchasingUtils)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import Constants from "Constants" /* 1085 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import size from "module_2" /* 2 */;
@@ -85,7 +85,7 @@ let obj = function _launchGuildBoostFlowOrAlert() {
             mobileBoostingEnabled = undefined;
             onPaymentDismiss = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === onPaymentDismiss) {

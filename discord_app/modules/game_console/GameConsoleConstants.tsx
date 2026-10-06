@@ -1,8 +1,8 @@
-// === Module 8749: GameConsoleConstants ===
+// === Module 8781: GameConsoleConstants ===
 
-// Module 8749 (GameConsoleConstants)
+// Module 8781 (GameConsoleConstants)
 import Constants from "Constants" /* 1085 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
 import size from "module_2" /* 2 */;
 
 const ActivityGamePlatforms = Constants.ActivityGamePlatforms;

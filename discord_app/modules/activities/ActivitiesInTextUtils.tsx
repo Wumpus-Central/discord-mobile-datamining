@@ -1,10 +1,10 @@
-// === Module 9000: ActivitiesInTextUtils ===
+// === Module 9033: ActivitiesInTextUtils ===
 
-// Module 9000 (ActivitiesInTextUtils)
+// Module 9033 (ActivitiesInTextUtils)
 import Constants from "Constants" /* 1096 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

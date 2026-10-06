@@ -1,21 +1,21 @@
-// === Module 11817: AppLauncherChannelListActionSheet ===
+// === Module 11831: AppLauncherChannelListActionSheet ===
 
-// Module 11817 (AppLauncherChannelListActionSheet)
+// Module 11831 (AppLauncherChannelListActionSheet)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5621 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import TextIcon3 from "TextIcon" /* 5864 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11806 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5628 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import TextIcon3 from "TextIcon" /* 5871 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11820 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildStore_mod from "GuildStore" /* 2074 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

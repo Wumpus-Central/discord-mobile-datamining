@@ -1,9 +1,9 @@
-// === Module 7796: LocalInteractionComponentStateStore ===
+// === Module 7807: LocalInteractionComponentStateStore ===
 
-// Module 7796 (LocalInteractionComponentStateStore)
+// Module 7807 (LocalInteractionComponentStateStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LimitedMapDefault from "LimitedMap" /* 7797 */;
+import LimitedMapDefault from "LimitedMap" /* 7808 */;
 import size from "module_2" /* 2 */;
 
 let map;

@@ -1,14 +1,14 @@
-// === Module 12229: GuildPowerupsSinglePerkCard ===
+// === Module 12244: GuildPowerupsSinglePerkCard ===
 
-// Module 12229 (GuildPowerupsSinglePerkCard)
+// Module 12244 (GuildPowerupsSinglePerkCard)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12155 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12159 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12176 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12177 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12225 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12230 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12170 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12174 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12191 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12192 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12240 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12245 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

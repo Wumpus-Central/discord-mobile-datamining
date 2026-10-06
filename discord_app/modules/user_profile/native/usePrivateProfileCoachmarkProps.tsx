@@ -1,6 +1,6 @@
-// === Module 16306: usePrivateProfileCoachmarkProps ===
+// === Module 16346: usePrivateProfileCoachmarkProps ===
 
-// Module 16306 (usePrivateProfileCoachmarkProps)
+// Module 16346 (usePrivateProfileCoachmarkProps)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
@@ -8,10 +8,10 @@ import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 16307 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import PrivateProfileAbstractUI from "PrivateProfileAbstractUI" /* 16347 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -51,7 +51,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
   const cResult = obj.c(15);
   markAsDismissed = markAsDismissed.markAsDismissed;
   const visibleContent = markAsDismissed.visibleContent;
-  let obj2 = markAsDismissed(8294);
+  let obj2 = markAsDismissed(8327);
   let userIsTeen = obj2.useUserIsTeen();
   const ProfileVisibility = markAsDismissed(2028).ProfileVisibility;
   const setting = ProfileVisibility.useSetting();

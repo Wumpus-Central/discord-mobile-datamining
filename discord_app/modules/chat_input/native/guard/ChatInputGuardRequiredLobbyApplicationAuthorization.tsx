@@ -1,13 +1,13 @@
-// === Module 12116: ChatInputGuardRequiredLobbyApplicationAuthorization ===
+// === Module 12131: ChatInputGuardRequiredLobbyApplicationAuthorization ===
 
-// Module 12116 (ChatInputGuardRequiredLobbyApplicationAuthorization)
+// Module 12131 (ChatInputGuardRequiredLobbyApplicationAuthorization)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12090 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12105 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

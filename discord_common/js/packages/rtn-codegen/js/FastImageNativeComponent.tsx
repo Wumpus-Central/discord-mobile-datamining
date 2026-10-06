@@ -1,6 +1,6 @@
-// === Module 5975: FastImageNativeComponent ===
+// === Module 5982: FastImageNativeComponent ===
 
-// Module 5975 (FastImageNativeComponent)
+// Module 5982 (FastImageNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import resolveAssetSource_mod from "resolveAssetSource" /* 81 */;
 import DynamicallyInjectedByGestureHandler from "DynamicallyInjectedByGestureHandler" /* 106 */;

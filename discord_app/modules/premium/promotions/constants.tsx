@@ -1,6 +1,6 @@
-// === Module 10428: promotions/constants ===
+// === Module 10441: promotions/constants ===
 
-// Module 10428 (promotions/constants)
+// Module 10441 (promotions/constants)
 import size from "module_2" /* 2 */;
 
 const items = ["logitech", "call_of_duty", "youtube"];

@@ -1,8 +1,8 @@
-// === Module 5095: getDeprecatedModalData ===
+// === Module 5101: getDeprecatedModalData ===
 
-// Module 5095 (getDeprecatedModalData)
+// Module 5101 (getDeprecatedModalData)
 import Constants from "Constants" /* 1085 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import size from "module_2" /* 2 */;
 
 const ModalAnimation = Constants.ModalAnimation;

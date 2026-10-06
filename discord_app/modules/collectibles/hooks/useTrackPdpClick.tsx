@@ -1,9 +1,9 @@
-// === Module 12965: useTrackPdpClick ===
+// === Module 12984: useTrackPdpClick ===
 
-// Module 12965 (useTrackPdpClick)
+// Module 12984 (useTrackPdpClick)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

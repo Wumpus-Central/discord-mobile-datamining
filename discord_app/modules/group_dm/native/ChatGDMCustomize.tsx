@@ -1,6 +1,6 @@
-// === Module 10663: ChatGDMCustomize ===
+// === Module 10676: ChatGDMCustomize ===
 
-// Module 10663 (ChatGDMCustomize)
+// Module 10676 (ChatGDMCustomize)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -9,7 +9,7 @@ import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c4, c5, channelId, maxLength;

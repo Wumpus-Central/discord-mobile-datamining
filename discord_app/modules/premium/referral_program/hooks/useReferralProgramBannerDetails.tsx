@@ -1,9 +1,9 @@
-// === Module 13242: useReferralProgramBannerDetails ===
+// === Module 13261: useReferralProgramBannerDetails ===
 
-// Module 13242 (useReferralProgramBannerDetails)
+// Module 13261 (useReferralProgramBannerDetails)
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 6961 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 6974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

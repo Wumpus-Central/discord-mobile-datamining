@@ -1,21 +1,21 @@
-// === Module 14452: UserProfileEditTheme ===
+// === Module 14468: UserProfileEditTheme ===
 
-// Module 14452 (UserProfileEditTheme)
+// Module 14468 (UserProfileEditTheme)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import intl7 from "intl" /* 1126 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 6703 */;
-import PencilIcon from "PencilIcon" /* 10058 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14421 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 6710 */;
+import PencilIcon from "PencilIcon" /* 10071 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14437 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -213,7 +213,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   let user;
   let v4X2kc;
   const onPress = () => {
-    const obj = { color: secondaryColor, onSelect: f116873, suggestedColors };
+    const obj = { color: secondaryColor, onSelect: f117031, suggestedColors };
     showCustomColorPickerActionSheetDefault(obj);
   };
   ({ user, onProfileThemeColorsChanged: require, guildId, pendingAvatarSrc, showResetMenu } = pendingThemeColors);
@@ -269,7 +269,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
                       closure_1_0(tmp4);
                     }
                   };
-                  obj.openLazy(asyncRequire(14453, dependencyMap.paths), "Profile Theme", obj2);
+                  obj.openLazy(asyncRequire(14469, dependencyMap.paths), "Profile Theme", obj2);
                 },
           children: closure_4(require("MoreHorizontalIcon").MoreHorizontalIcon, obj6)
         };
@@ -281,13 +281,13 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       items[1] = showResetMenu;
       items1 = [closure_5(secondaryColor, obj3), ];
       const obj7 = { style: tmp.themeColorContainer, children: items2 };
-      const f116872 = (arg0) => {
+      const f117030 = (arg0) => {
         if (arg0 !== closure_1_2) {
           const items = [arg0, secondaryColor];
           let themeColors;
           const tmp4 = closure_1(primaryColor[16]);
-          if (f116872 != null) {
-            themeColors = f116872.themeColors;
+          if (f117030 != null) {
+            themeColors = f117030.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {
@@ -304,13 +304,13 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       v4X2kc = require("intl").t.v4X2kc;
       tmp6Result = require("utils/ColorUtils");
       items2 = [closure_4(closure_9, obj8), ];
-      const f116873 = (arg0) => {
+      const f117031 = (arg0) => {
         if (arg0 !== closure_1_3) {
           const items = [closure_1_2, arg0];
           let themeColors;
           const tmp4 = closure_1(primaryColor[16]);
-          if (f116873 != null) {
-            themeColors = f116873.themeColors;
+          if (f117031 != null) {
+            themeColors = f117031.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {

@@ -1,6 +1,6 @@
-// === Module 5770: useIsScreenReaderEnabled ===
+// === Module 5777: useIsScreenReaderEnabled ===
 
-// Module 5770 (useIsScreenReaderEnabled)
+// Module 5777 (useIsScreenReaderEnabled)
 import react_native from "react-native" /* 17 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

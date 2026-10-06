@@ -1,14 +1,14 @@
-// === Module 10010: QuestCopyUtils ===
+// === Module 10023: QuestCopyUtils ===
 
-// Module 10010 (QuestCopyUtils)
+// Module 10023 (QuestCopyUtils)
 import intl7 from "intl" /* 1126 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import captureAdUserAction2 from "captureAdUserAction" /* 7213 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7224 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import captureAdUserAction2 from "captureAdUserAction" /* 7226 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7237 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
 import size from "module_2" /* 2 */;
 
 let c2;

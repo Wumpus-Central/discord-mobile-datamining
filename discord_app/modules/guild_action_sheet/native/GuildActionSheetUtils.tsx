@@ -1,8 +1,8 @@
-// === Module 13774: GuildActionSheetUtils ===
+// === Module 13792: GuildActionSheetUtils ===
 
-// Module 13774 (GuildActionSheetUtils)
+// Module 13792 (GuildActionSheetUtils)
 import Constants from "Constants" /* 1085 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

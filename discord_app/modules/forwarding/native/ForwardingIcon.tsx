@@ -1,9 +1,9 @@
-// === Module 11315: ForwardingIcon ===
+// === Module 11328: ForwardingIcon ===
 
-// Module 11315 (ForwardingIcon)
+// Module 11328 (ForwardingIcon)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import ArrowAngleRightUpIcon2 from "ArrowAngleRightUpIcon" /* 11316 */;
+import ArrowAngleRightUpIcon2 from "ArrowAngleRightUpIcon" /* 11329 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

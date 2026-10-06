@@ -1,16 +1,16 @@
-// === Module 11037: AddImageDescriptionModal ===
+// === Module 11050: AddImageDescriptionModal ===
 
-// Module 11037 (AddImageDescriptionModal)
+// Module 11050 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10661 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10674 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

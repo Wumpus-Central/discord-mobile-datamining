@@ -1,11 +1,11 @@
-// === Module 14902: useConnectionBannerHeight ===
+// === Module 14918: useConnectionBannerHeight ===
 
-// Module 14902 (useConnectionBannerHeight)
+// Module 14918 (useConnectionBannerHeight)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import ConnectivityIndicatorStateStore2 from "ConnectivityIndicatorStateStore" /* 13497 */;
-import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13498 */;
-import YouBarConstants from "YouBarConstants" /* 14899 */;
+import ConnectivityIndicatorStateStore2 from "ConnectivityIndicatorStateStore" /* 13513 */;
+import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13514 */;
+import YouBarConstants from "YouBarConstants" /* 14915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

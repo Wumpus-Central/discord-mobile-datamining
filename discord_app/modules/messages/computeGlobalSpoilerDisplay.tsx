@@ -1,7 +1,7 @@
-// === Module 7945: computeGlobalSpoilerDisplay ===
+// === Module 7956: computeGlobalSpoilerDisplay ===
 
-// Module 7945 (computeGlobalSpoilerDisplay)
-import PermissionStore from "PermissionStore" /* 4509 */;
+// Module 7956 (computeGlobalSpoilerDisplay)
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

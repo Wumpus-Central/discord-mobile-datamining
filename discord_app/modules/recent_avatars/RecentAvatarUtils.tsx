@@ -1,13 +1,13 @@
-// === Module 7840: RecentAvatarUtils ===
+// === Module 7851: RecentAvatarUtils ===
 
-// Module 7840 (RecentAvatarUtils)
+// Module 7851 (RecentAvatarUtils)
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1437 */;
 import _modDef1478 from "module_1478" /* 1478 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6486 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6493 */;
 import size_mod from "module_2" /* 2 */;
 
 function getArchivedAvatarURL(allowWebp) {

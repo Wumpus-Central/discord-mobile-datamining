@@ -1,30 +1,30 @@
-// === Module 17029: IntegrationsSettingsEditWebhook ===
+// === Module 17055: IntegrationsSettingsEditWebhook ===
 
-// Module 17029 (IntegrationsSettingsEditWebhook)
+// Module 17055 (IntegrationsSettingsEditWebhook)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
-import native from "native" /* 4589 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import AlertDefault from "Alert" /* 5783 */;
-import NavScrim from "NavScrim" /* 6536 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7505 */;
-import openChannelPickerDefault from "openChannelPicker" /* 12102 */;
-import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17022 */;
-import IconLabelBlockDefault from "IconLabelBlock" /* 17030 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
+import native from "native" /* 4595 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import AlertDefault from "Alert" /* 5790 */;
+import NavScrim from "NavScrim" /* 6543 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7516 */;
+import openChannelPickerDefault from "openChannelPicker" /* 12117 */;
+import WebhooksActionCreatorsDefault from "WebhooksActionCreators" /* 17048 */;
+import IconLabelBlockDefault from "IconLabelBlock" /* 17056 */;
 import react from "react" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -279,7 +279,7 @@ class EditWebhook extends PureComponent {
     ({ name, channel, errors } = state);
     const webhookType = props.webhookType;
     ({ avatar, copied } = state);
-    const Text = webhookId(4886).Text;
+    const Text = webhookId(4892).Text;
     const intl = webhookId(1126).intl;
     const string = intl.string;
     const t = webhookId(1126).t;
@@ -291,9 +291,9 @@ class EditWebhook extends PureComponent {
     let obj = { style: tmp.form, contentContainerStyle: items, children: closure_12(Stack, obj2) };
     items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
     const tmp2Result = closure_11(Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
-    const Form = tmp3(8895).Form;
+    const Form = tmp3(8924).Form;
     obj2 = { spacing: nativeDefault.space.PX_24, style: { paddingHorizontal: tmp.row.padding }, children: items1 };
-    Stack = tmp3(5593).Stack;
+    Stack = tmp3(5600).Stack;
     let tmp2Result3 = null;
     if (webhookType !== constants.CHANNEL_FOLLOWER) {
       const obj3 = { iconProps: obj4, label: intl2.string(webhookId(1126).t["7+5GQa"]) };
@@ -315,7 +315,7 @@ class EditWebhook extends PureComponent {
     }
     items1 = [tmp2Result3, , , , ];
     const obj5 = { label: intl3.string(webhookId(1126).t.ukdxuo), value: name, onChange: self.handleNameChange, errorMessage: first };
-    const TextInput = tmp3(6098).TextInput;
+    const TextInput = tmp3(6105).TextInput;
     intl3 = tmp3(1126).intl;
     first = undefined;
     if (undefined !== errors) {
@@ -325,22 +325,22 @@ class EditWebhook extends PureComponent {
     }
     items1[1] = closure_11(TextInput, obj5);
     const obj6 = { title: intl4.string(webhookId(1126).t.GK18KJ), hasIcons: true, children: closure_11(TableRow, obj7) };
-    const TableRowGroup = tmp3(6074).TableRowGroup;
+    const TableRowGroup = tmp3(6081).TableRowGroup;
     intl4 = tmp3(1126).intl;
     obj7 = { label: tmp3Result.computeChannelName(channel, UserStore, RelationshipStore), arrow: true, onPress: self.handleChannelChange, icon: closure_11(Icon, obj8) };
-    TableRow = tmp3(5993).TableRow;
-    tmp3Result = webhookId(5043);
+    TableRow = tmp3(6000).TableRow;
+    tmp3Result = webhookId(5049);
     obj8 = { size: webhookId(1188).Icon.Sizes.CUSTOM, source: tmp3Result3.getChannelIcon(channel), style: tmp.channelIcon };
     Icon = tmp3(1188).Icon;
-    tmp3Result3 = webhookId(5812);
+    tmp3Result3 = webhookId(5819);
     items1[2] = closure_11(TableRowGroup, obj6);
     let tmp2Result4 = null;
     if (null != token) {
       const obj9 = { title: intl5.string(webhookId(1126).t.SFdvF1), hasIcons: false, children: closure_11(TableRow2, obj10) };
-      const TableRowGroup2 = tmp3(6074).TableRowGroup;
+      const TableRowGroup2 = tmp3(6081).TableRowGroup;
       intl5 = tmp3(1126).intl;
       obj10 = { label: "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token), onPress: self.handleCopyUrl, trailing: tmp2Result };
-      TableRow2 = tmp3(5993).TableRow;
+      TableRow2 = tmp3(6000).TableRow;
       const tmp3Result4 = webhookId(1282);
       aPIBaseURL = tmp3Result4.getAPIBaseURL(false);
       const _HermesInternal = HermesInternal;
@@ -348,9 +348,9 @@ class EditWebhook extends PureComponent {
     }
     items1[3] = tmp2Result4;
     const obj11 = { hasIcons: false, children: closure_11(TableRow3, obj12) };
-    const TableRowGroup3 = tmp3(6074).TableRowGroup;
+    const TableRowGroup3 = tmp3(6081).TableRowGroup;
     obj12 = { variant: "danger", onPress: self.handleDeleteWebhook, label: intl6.string(webhookId(1126).t.oyYWHE) };
-    TableRow3 = tmp3(5993).TableRow;
+    TableRow3 = tmp3(6000).TableRow;
     intl6 = tmp3(1126).intl;
     items1[4] = closure_11(TableRowGroup3, obj11);
     return closure_11(Form, obj);

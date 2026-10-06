@@ -1,6 +1,6 @@
-// === Module 7256: SentMessageIntentsHandler ===
+// === Module 7269: SentMessageIntentsHandler ===
 
-// Module 7256 (SentMessageIntentsHandler)
+// Module 7269 (SentMessageIntentsHandler)
 import size from "module_2" /* 2 */;
 
 const obj = {

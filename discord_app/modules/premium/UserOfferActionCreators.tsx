@@ -1,14 +1,14 @@
-// === Module 7733: UserOfferActionCreators ===
+// === Module 7744: UserOfferActionCreators ===
 
-// Module 7733 (UserOfferActionCreators)
+// Module 7744 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 7734 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 6963 */;
-import UserOfferStore from "UserOfferStore" /* 6959 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 7745 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 6976 */;
+import UserOfferStore from "UserOfferStore" /* 6972 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -85,7 +85,7 @@ let obj = function _fetchUserOffer() {
               }
               obj6 = closure_2;
               if (closure_2 === undefined) {
-                obj6 = { offerId: "Array", paymentGatewayOverride: "Set" };
+                obj6 = { offerId: "start", paymentGatewayOverride: "unicodeVersion" };
               }
               offerId = undefined;
               paymentGatewayOverride = undefined;
@@ -98,7 +98,7 @@ let obj = function _fetchUserOffer() {
               error = undefined;
               c12 = 1;
               c13 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c12) {
             if (arg0 === 1) {

@@ -1,27 +1,27 @@
-// === Module 12828: UserProfileActivityBadges ===
+// === Module 12847: UserProfileActivityBadges ===
 
-// Module 12828 (UserProfileActivityBadges)
+// Module 12847 (UserProfileActivityBadges)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import GroupIcon2 from "GroupIcon" /* 5873 */;
-import AppsIcon2 from "AppsIcon" /* 5890 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7229 */;
-import utils from "utils" /* 7818 */;
-import GameControllerIcon from "GameControllerIcon" /* 8739 */;
-import MusicIcon from "MusicIcon" /* 9571 */;
-import TvIcon from "TvIcon" /* 10616 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10621 */;
-import TopicsIcon2 from "TopicsIcon" /* 11276 */;
-import HourglassIcon from "HourglassIcon" /* 12702 */;
-import useTimestampTickedNow from "useTimestampTickedNow" /* 12829 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 12830 */;
-import Badges from "Badges" /* 12831 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import GroupIcon2 from "GroupIcon" /* 5880 */;
+import AppsIcon2 from "AppsIcon" /* 5897 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7242 */;
+import utils from "utils" /* 7829 */;
+import GameControllerIcon from "GameControllerIcon" /* 8771 */;
+import MusicIcon from "MusicIcon" /* 9584 */;
+import TvIcon from "TvIcon" /* 10629 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10634 */;
+import TopicsIcon2 from "TopicsIcon" /* 11289 */;
+import HourglassIcon from "HourglassIcon" /* 12717 */;
+import useTimestampTickedNow from "useTimestampTickedNow" /* 12848 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 12849 */;
+import Badges from "Badges" /* 12850 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

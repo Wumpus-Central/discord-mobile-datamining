@@ -1,26 +1,26 @@
-// === Module 17786: AddMembersActionSheet ===
+// === Module 17832: AddMembersActionSheet ===
 
-// Module 17786 (AddMembersActionSheet)
+// Module 17832 (AddMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import react_native2 from "react-native" /* 4594 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import RegexUtilsDefault from "RegexUtils" /* 4874 */;
-import GuildUtilsDefault from "GuildUtils" /* 5704 */;
-import FormCheckbox from "FormCheckbox" /* 5991 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10680 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17780 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17785 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import react_native2 from "react-native" /* 4600 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import RegexUtilsDefault from "RegexUtils" /* 4880 */;
+import GuildUtilsDefault from "GuildUtils" /* 5711 */;
+import FormCheckbox from "FormCheckbox" /* 5998 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10693 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17826 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17831 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

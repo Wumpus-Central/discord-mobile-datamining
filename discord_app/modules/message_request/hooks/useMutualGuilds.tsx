@@ -1,9 +1,9 @@
-// === Module 17060: useMutualGuilds ===
+// === Module 17086: useMutualGuilds ===
 
-// Module 17060 (useMutualGuilds)
+// Module 17086 (useMutualGuilds)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import react from "react" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 9313: VideoBackgroundStore ===
+// === Module 8086: VideoBackgroundStore ===
 
-// Module 9313 (VideoBackgroundStore)
+// Module 8086 (VideoBackgroundStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;

@@ -1,6 +1,6 @@
-// === Module 6783: ChannelSectionStore ===
+// === Module 6793: ChannelSectionStore ===
 
-// Module 6783 (ChannelSectionStore)
+// Module 6793 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,16 +8,16 @@ import Constants2 from "Constants" /* 1096 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import shared_PlatformUtils from "shared/PlatformUtils" /* 5321 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6785 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6786 */;
-import ExperimentStore from "ExperimentStore" /* 4776 */;
-import SearchMessageStore from "SearchMessageStore" /* 6784 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 5328 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6795 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6796 */;
+import ExperimentStore from "ExperimentStore" /* 4782 */;
+import SearchMessageStore from "SearchMessageStore" /* 6794 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;

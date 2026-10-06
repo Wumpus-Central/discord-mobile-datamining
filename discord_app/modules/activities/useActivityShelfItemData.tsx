@@ -1,8 +1,8 @@
-// === Module 17283: useActivityShelfItemData ===
+// === Module 17312: useActivityShelfItemData ===
 
-// Module 17283 (useActivityShelfItemData)
+// Module 17312 (useActivityShelfItemData)
 import react2 from "react" /* 576 */;
-import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11653 */;
+import useActivityShelfItemsDefault from "useActivityShelfItems" /* 11667 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,16 +1,16 @@
-// === Module 12916: useUserProfileActivityTabContent ===
+// === Module 12935: useUserProfileActivityTabContent ===
 
-// Module 12916 (useUserProfileActivityTabContent)
+// Module 12935 (useUserProfileActivityTabContent)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1085 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8017 */;
-import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 12917 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8027 */;
+import maybeFetchContentInventoryOutboxDefault from "maybeFetchContentInventoryOutbox" /* 12936 */;
 import react_mod from "react" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8447 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8480 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

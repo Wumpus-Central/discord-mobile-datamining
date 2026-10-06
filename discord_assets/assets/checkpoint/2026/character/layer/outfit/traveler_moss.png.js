@@ -1,6 +1,6 @@
-// === Module 5191: ? ===
+// === Module 5198: ? ===
 
-// Module 5191
+// Module 5198
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/traveler_moss.png.js");

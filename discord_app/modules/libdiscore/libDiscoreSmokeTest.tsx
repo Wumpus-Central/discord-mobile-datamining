@@ -1,6 +1,6 @@
-// === Module 18117: libDiscoreSmokeTest ===
+// === Module 18163: libDiscoreSmokeTest ===
 
-// Module 18117 (libDiscoreSmokeTest)
+// Module 18163 (libDiscoreSmokeTest)
 import LoggerDefault from "Logger" /* 3 */;
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import initLibdiscore from "initLibdiscore" /* 566 */;

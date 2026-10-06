@@ -1,22 +1,22 @@
-// === Module 11612: AddMediaToOriginalForumPostActionSheet ===
+// === Module 11626: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 11612 (AddMediaToOriginalForumPostActionSheet)
+// Module 11626 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import tracking_Tracking from "tracking/Tracking" /* 7263 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7274 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import tracking_Tracking from "tracking/Tracking" /* 7276 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7287 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -92,7 +92,7 @@ let obj = function _upload2() {
               anyErrorMessage = undefined;
               c8 = 1;
               c9 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c8) {
             if (arg0 === 1) {

@@ -1,8 +1,8 @@
-// === Module 6707: Constants ===
+// === Module 6714: Constants ===
 
-// Module 6707 (Constants)
+// Module 6714 (Constants)
 import native from "native" /* 1188 */;
-import IconSize from "IconSize" /* 6104 */;
+import IconSize from "IconSize" /* 6111 */;
 import size from "module_2" /* 2 */;
 
 const XXLARGE = native.AvatarSizes.XXLARGE;

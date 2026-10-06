@@ -1,6 +1,6 @@
-// === Module 15729: WishlistButtonCoachmark ===
+// === Module 15765: WishlistButtonCoachmark ===
 
-// Module 15729 (WishlistButtonCoachmark)
+// Module 15765 (WishlistButtonCoachmark)
 import intl3 from "intl" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
@@ -123,7 +123,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((anchorRef) => {
   _slicedToArray = undefined;
   let registerDismiss;
   anchorRef = anchorRef.anchorRef;
-  let obj = hasNeverWishlisted(8424);
+  let obj = hasNeverWishlisted(8457);
   hasNeverWishlisted = obj.useHasNeverWishlisted();
   let items = [hasNeverWishlisted];
   const memo = registerDismiss.useMemo(() => {
@@ -136,12 +136,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((anchorRef) => {
     }
     return items1;
   }, items);
-  const obj2 = hasNeverWishlisted(6891);
+  const obj2 = hasNeverWishlisted(6901);
   const tmp3 = _slicedToArray(obj2.useSelectedDismissibleContent(memo), 2);
   dependencyMap = tmp4;
   const tmp5 = tmp3[0] === hasNeverWishlisted(2036).DismissibleContent.WISHLIST_MOBILE_NUX_PRODUCT_CARD_COACHMARK;
   _slicedToArray = tmp5;
-  const obj3 = hasNeverWishlisted(15716);
+  const obj3 = hasNeverWishlisted(15752);
   registerDismiss = obj3.useCollectiblesCoachmarkScrollDismissContext().registerDismiss;
   let items1 = [tmp5, registerDismiss, tmp3[1]];
   const effect = registerDismiss.useEffect(() => {
@@ -166,7 +166,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((anchorRef) => {
     intl2 = intl3.intl;
     return obj;
   }, items2);
-  const obj4 = hasNeverWishlisted(9882);
+  const obj4 = hasNeverWishlisted(9895);
   const coachmark = obj4.useCoachmark(anchorRef, memo1);
   return null;
 });

@@ -1,6 +1,6 @@
-// === Module 5430: DimensionStore ===
+// === Module 5437: DimensionStore ===
 
-// Module 5430 (DimensionStore)
+// Module 5437 (DimensionStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

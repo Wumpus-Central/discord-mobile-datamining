@@ -1,18 +1,18 @@
-// === Module 17929: GuildSettingsRoleSubscriptionContainer ===
+// === Module 17975: GuildSettingsRoleSubscriptionContainer ===
 
-// Module 17929 (GuildSettingsRoleSubscriptionContainer)
+// Module 17975 (GuildSettingsRoleSubscriptionContainer)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import ErrorBlockDefault from "ErrorBlock" /* 11852 */;
-import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15031 */;
-import WarningNoticeDefault from "WarningNotice" /* 17880 */;
-import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17907 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17921 */;
+import ErrorBlockDefault from "ErrorBlock" /* 11866 */;
+import GroupListingsFetchContext from "GroupListingsFetchContext" /* 15046 */;
+import WarningNoticeDefault from "WarningNotice" /* 17926 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 17953 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17967 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

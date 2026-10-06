@@ -1,25 +1,25 @@
-// === Module 12374: CreationIntent ===
+// === Module 12389: CreationIntent ===
 
-// Module 12374 (CreationIntent)
+// Module 12389 (CreationIntent)
 import nativeDefault from "native" /* 587 */;
 import intl8 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
-import react_native from "react-native" /* 5779 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12332 */;
-import ChairIllocon from "ChairIllocon" /* 12375 */;
-import WorldIllocon from "WorldIllocon" /* 12377 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
+import react_native from "react-native" /* 5786 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12347 */;
+import ChairIllocon from "ChairIllocon" /* 12390 */;
+import WorldIllocon from "WorldIllocon" /* 12392 */;
 import react from "react" /* 19 */;
 import react_native2 from "react-native" /* 17 */;
-import CreateGuildConstants from "CreateGuildConstants" /* 6468 */;
+import CreateGuildConstants from "CreateGuildConstants" /* 6475 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -501,7 +501,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildTemplate) => 
   const obj8 = { hasIcons: true, children: null };
   const obj7 = { style: tmp.sections, children: closure_12(TableRowGroup, tmp15) };
   TableRowGroup = TableRowGroup2.TableRowGroup;
-  const tmp13 = trigger(11960);
+  const tmp13 = trigger(11974);
   const obj9 = { Icon: null, message: null, onPress: null };
   tmp10 = onPress;
   const tmp11 = ref;
@@ -520,7 +520,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildTemplate) => 
           onPress(true);
         }
     };
-    const tmp12Result = trigger(11960);
+    const tmp12Result = trigger(11974);
     intl6 = intl8.intl;
     items4[1] = closure_11(tmp12Result, obj10);
     obj8.children = items4;
@@ -540,7 +540,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildTemplate) => 
           onPress(false);
         }
     };
-    const tmp12Result2 = trigger(11960);
+    const tmp12Result2 = trigger(11974);
     intl4 = intl8.intl;
     items5[1] = closure_11(tmp12Result2, obj11);
     obj8.children = items5;

@@ -1,10 +1,10 @@
-// === Module 13503: ContentInventoryExperiments ===
+// === Module 13519: ContentInventoryExperiments ===
 
-// Module 13503 (ContentInventoryExperiments)
-import ExperimentConstants from "ExperimentConstants" /* 4777 */;
-import ICYMIExperiment from "ICYMIExperiment" /* 8030 */;
+// Module 13519 (ContentInventoryExperiments)
+import ExperimentConstants from "ExperimentConstants" /* 4783 */;
+import ICYMIExperiment from "ICYMIExperiment" /* 8040 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
-import createExperiment from "module_4774" /* 4774 */;
+import createExperiment from "module_4780" /* 4780 */;
 import size from "module_2" /* 2 */;
 
 let items;

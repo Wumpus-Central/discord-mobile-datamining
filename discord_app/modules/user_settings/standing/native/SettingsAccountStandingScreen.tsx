@@ -1,9 +1,9 @@
-// === Module 14550: SettingsAccountStandingScreen ===
+// === Module 14566: SettingsAccountStandingScreen ===
 
-// Module 14550 (SettingsAccountStandingScreen)
+// Module 14566 (SettingsAccountStandingScreen)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 14551 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 14567 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

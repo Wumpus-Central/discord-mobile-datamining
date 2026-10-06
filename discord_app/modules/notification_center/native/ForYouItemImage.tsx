@@ -1,29 +1,29 @@
-// === Module 16365: ForYouItemImage ===
+// === Module 16405: ForYouItemImage ===
 
-// Module 16365 (ForYouItemImage)
+// Module 16405 (ForYouItemImage)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
-import Pressables from "Pressables" /* 5909 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7125 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 7919 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9542 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 16367 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 16368 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 16369 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 16370 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 16371 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 16372 */;
-import AssetRegistryDefault8 from "AssetRegistry" /* 16373 */;
+import Pressables from "Pressables" /* 5916 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7138 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 7930 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9555 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 16407 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 16408 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 16409 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 16410 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 16411 */;
+import AssetRegistryDefault7 from "AssetRegistry" /* 16412 */;
+import AssetRegistryDefault8 from "AssetRegistry" /* 16413 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 16366 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import Constants from "Constants" /* 16406 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

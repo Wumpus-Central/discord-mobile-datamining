@@ -1,9 +1,9 @@
-// === Module 4501: CreatorMonetizationRestrictionsUtils ===
+// === Module 4507: CreatorMonetizationRestrictionsUtils ===
 
-// Module 4501 (CreatorMonetizationRestrictionsUtils)
+// Module 4507 (CreatorMonetizationRestrictionsUtils)
 import Constants from "Constants" /* 1085 */;
-import GuildRoleSubscriptionsStore2 from "GuildRoleSubscriptionsStore" /* 4502 */;
-import CreatorMonetizationReviewConstants from "CreatorMonetizationReviewConstants" /* 4503 */;
+import GuildRoleSubscriptionsStore2 from "GuildRoleSubscriptionsStore" /* 4508 */;
+import CreatorMonetizationReviewConstants from "CreatorMonetizationReviewConstants" /* 4509 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,7 +1,7 @@
-// === Module 11423: UserSettingsExperimentsUtils ===
+// === Module 11436: UserSettingsExperimentsUtils ===
 
-// Module 11423 (UserSettingsExperimentsUtils)
-import flattenDefault from "flatten" /* 5000 */;
+// Module 11436 (UserSettingsExperimentsUtils)
+import flattenDefault from "flatten" /* 5006 */;
 import size from "module_2" /* 2 */;
 
 let id;

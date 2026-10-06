@@ -1,23 +1,23 @@
-// === Module 14536: TinyBroncoAgeGroupHeader ===
+// === Module 14552: TinyBroncoAgeGroupHeader ===
 
-// Module 14536 (TinyBroncoAgeGroupHeader)
+// Module 14552 (TinyBroncoAgeGroupHeader)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import _modDef3077 from "module_3077" /* 3077 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 9421 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9428 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14537 */;
+import _modDef3105 from "module_3105" /* 3105 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 9435 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 9441 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 14553 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -47,9 +47,9 @@ let closure_10 = createStyles(obj);
 let items = [dismissible_content.DismissibleContent.TINY_BRONCO_NOTICE];
 let closure_12 = [];
 let obj5 = {};
-obj5[useAgeGroupPresentation.AgeGroupState.ADULT] = _modDef3077["8TWztV"];
-obj5[useAgeGroupPresentation.AgeGroupState.TEEN] = _modDef3077.qSkhZH;
-obj5[useAgeGroupPresentation.AgeGroupState.UNVERIFIED] = _modDef3077.vGxRDB;
+obj5[useAgeGroupPresentation.AgeGroupState.ADULT] = _modDef3105["8TWztV"];
+obj5[useAgeGroupPresentation.AgeGroupState.TEEN] = _modDef3105.qSkhZH;
+obj5[useAgeGroupPresentation.AgeGroupState.UNVERIFIED] = _modDef3105.vGxRDB;
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
   let closure_0;
@@ -196,12 +196,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
       const obj4 = { style: tmp.noticeIcon, children: closure_8(require("CircleInformationIcon").CircleInformationIcon, { size: "xs", color: "text-link" }) };
       items = [closure_8(View, obj4), , ];
       obj5 = { style: tmp.noticeBody, variant: "text-sm/normal", color: "text-default", children: intl.format(obj5[ageGroup], obj6) };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       intl = tmp2(1126).intl;
       obj6 = { handleOnBlogHook: handleOpenBlog };
       items[1] = closure_8(Text, obj5);
       const obj7 = { style: tmp.noticeDismiss, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: intl2.string(require("intl").t.WAI6xu), hitSlop: 12, onPress: tmp8, children: closure_8(require("XSmallIcon").XSmallIcon, { size: "sm", color: "icon-strong" }) };
-      const PressableOpacity = tmp2(5909).PressableOpacity;
+      const PressableOpacity = tmp2(5916).PressableOpacity;
       intl2 = tmp2(1126).intl;
       items[2] = closure_8(PressableOpacity, obj7);
       tmp9 = closure_9(View, obj3);
@@ -210,9 +210,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
   return tmp9;
 });
 let obj6 = {};
-obj6[useAgeGroupPresentation.AgeGroupState.ADULT] = _modDef3077.t5QjmQ;
-obj6[useAgeGroupPresentation.AgeGroupState.TEEN] = _modDef3077["41MDhK"];
-obj6[useAgeGroupPresentation.AgeGroupState.UNVERIFIED] = _modDef3077.m95jW8;
+obj6[useAgeGroupPresentation.AgeGroupState.ADULT] = _modDef3105.t5QjmQ;
+obj6[useAgeGroupPresentation.AgeGroupState.TEEN] = _modDef3105["41MDhK"];
+obj6[useAgeGroupPresentation.AgeGroupState.UNVERIFIED] = _modDef3105.m95jW8;
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
   let format;
@@ -235,7 +235,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
       const intl3 = intl4.intl;
       format3 = intl3.format;
       obj3 = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
-      gi4ulu = _modDef3077.gi4ulu;
+      gi4ulu = _modDef3105.gi4ulu;
       const tmp20 = metroImportAll(Text3, obj2);
       cResult[0] = tmp20;
       first = tmp20;
@@ -252,7 +252,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
       const intl2 = intl4.intl;
       format2 = intl2.format;
       obj5 = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
-      v221iML = _modDef3077["221iML"];
+      v221iML = _modDef3105["221iML"];
       const tmp15 = metroImportAll(Text2, obj4);
       cResult[1] = tmp15;
       tmp11 = tmp15;
@@ -269,7 +269,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
       const intl = intl4.intl;
       format = intl.format;
       obj7 = { handleOnAgeGatedContentHook: handleOpenUnconfirmedAgeGroupSupportArticle.handleOpenUnconfirmedAgeGroupSupportArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
-      prop = _modDef3077["W0/7DD"];
+      prop = _modDef3105["W0/7DD"];
       const tmp9 = metroImportAll(Text, obj6);
       cResult[2] = tmp9;
       tmp5 = tmp9;
@@ -293,7 +293,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
     const intl3 = intl4.intl;
     format3 = intl3.format;
     obj3 = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
-    gi4ulu = _modDef3077.gi4ulu;
+    gi4ulu = _modDef3105.gi4ulu;
     return metroImportAll(Text3, obj2);
   } else if (useAgeGroupPresentation.AgeGroupState.TEEN === ageGroup) {
     const obj4 = { variant: "text-sm/normal", color: "text-default", children: format2(v221iML, obj5) };
@@ -301,7 +301,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
     const intl2 = intl4.intl;
     format2 = intl2.format;
     obj5 = { handleOnAgeGatedContentHook: useAgeGroupPresentation.handleOpenAgeGatedContentArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
-    v221iML = _modDef3077["221iML"];
+    v221iML = _modDef3105["221iML"];
     return metroImportAll(Text2, obj4);
   } else if (useAgeGroupPresentation.AgeGroupState.UNVERIFIED === ageGroup) {
     const obj = { variant: "text-sm/normal", color: "text-default", children: format(prop, obj6) };
@@ -309,7 +309,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
     const intl = intl4.intl;
     format = intl.format;
     obj6 = { handleOnAgeGatedContentHook: handleOpenUnconfirmedAgeGroupSupportArticle.handleOpenUnconfirmedAgeGroupSupportArticle, handleOnConfirmAgeHook: useAgeGroupPresentation.handleShowAgeVerification };
-    prop = _modDef3077["W0/7DD"];
+    prop = _modDef3105["W0/7DD"];
     return metroImportAll(Text, obj);
   }
 });
@@ -326,7 +326,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
     let first;
     const _Symbol2 = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { grow: true, variant: "secondary", size: "md", text: intl2.string(_modDef3077["+7NlgO"]), onPress: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
+      const obj2 = { grow: true, variant: "secondary", size: "md", text: intl2.string(_modDef3105["+7NlgO"]), onPress: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
       const Button2 = components_Button_Button.Button;
       intl2 = intl4.intl;
       const tmp13 = metroImportAll(Button2, obj2);
@@ -340,7 +340,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
     let tmp5;
     const _Symbol = Symbol;
     if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { grow: true, variant: "secondary", size: "md", text: intl.string(_modDef3077["cI+bc/"]), onPress: useAgeGroupPresentation.handleShowAgeVerification };
+      const obj3 = { grow: true, variant: "secondary", size: "md", text: intl.string(_modDef3105["cI+bc/"]), onPress: useAgeGroupPresentation.handleShowAgeVerification };
       const Button = components_Button_Button.Button;
       intl = intl4.intl;
       const tmp8 = metroImportAll(Button, obj3);
@@ -358,12 +358,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((ageGroup) => {
   if (useAgeGroupPresentation.AgeGroupState.ADULT === ageGroup) {
     return null;
   } else if (useAgeGroupPresentation.AgeGroupState.TEEN === ageGroup) {
-    const obj2 = { grow: true, variant: "secondary", size: "md", text: intl2.string(_modDef3077["+7NlgO"]), onPress: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
+    const obj2 = { grow: true, variant: "secondary", size: "md", text: intl2.string(_modDef3105["+7NlgO"]), onPress: useAgeGroupPresentation.handleOpenAgeGatedContentArticle };
     const Button2 = components_Button_Button.Button;
     intl2 = intl4.intl;
     return metroImportAll(Button2, obj2);
   } else if (useAgeGroupPresentation.AgeGroupState.UNVERIFIED === ageGroup) {
-    const obj = { grow: true, variant: "secondary", size: "md", text: intl.string(_modDef3077["cI+bc/"]), onPress: useAgeGroupPresentation.handleShowAgeVerification };
+    const obj = { grow: true, variant: "secondary", size: "md", text: intl.string(_modDef3105["cI+bc/"]), onPress: useAgeGroupPresentation.handleShowAgeVerification };
     const Button = components_Button_Button.Button;
     intl = intl4.intl;
     return metroImportAll(Button, obj);

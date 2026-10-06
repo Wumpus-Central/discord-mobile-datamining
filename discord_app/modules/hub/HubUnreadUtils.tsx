@@ -1,9 +1,9 @@
-// === Module 16137: HubUnreadUtils ===
+// === Module 16176: HubUnreadUtils ===
 
-// Module 16137 (HubUnreadUtils)
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 11932 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 11940 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+// Module 16176 (HubUnreadUtils)
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 11946 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 11954 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

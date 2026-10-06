@@ -1,7 +1,7 @@
-// === Module 10997: getNavigatorCurrentRoute ===
+// === Module 11010: getNavigatorCurrentRoute ===
 
-// Module 10997 (getNavigatorCurrentRoute)
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
+// Module 11010 (getNavigatorCurrentRoute)
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");

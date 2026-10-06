@@ -1,28 +1,28 @@
-// === Module 16338: ConnectionBanner ===
+// === Module 16378: ConnectionBanner ===
 
-// Module 16338 (ConnectionBanner)
+// Module 16378 (ConnectionBanner)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useToken from "useToken" /* 4580 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import spring from "spring" /* 5597 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import _modDef6052 from "module_6052" /* 6052 */;
-import ConnectivityIndicatorStateStore2 from "ConnectivityIndicatorStateStore" /* 13497 */;
-import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13498 */;
-import ConnectionUnknownIcon2 from "ConnectionUnknownIcon" /* 16339 */;
-import ConnectionFineIcon2 from "ConnectionFineIcon" /* 16341 */;
+import useToken from "useToken" /* 4586 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import spring from "spring" /* 5604 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import _modDef6059 from "module_6059" /* 6059 */;
+import ConnectivityIndicatorStateStore2 from "ConnectivityIndicatorStateStore" /* 13513 */;
+import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment" /* 13514 */;
+import ConnectionUnknownIcon2 from "ConnectionUnknownIcon" /* 16379 */;
+import ConnectionFineIcon2 from "ConnectionFineIcon" /* 16381 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import YouBarConstants from "YouBarConstants" /* 14899 */;
+import YouBarConstants from "YouBarConstants" /* 14915 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -352,7 +352,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
               }
             }
             const obj7 = { style: tmp3.glow, maskElement: tmp17, children: tmp24 };
-            const tmp32 = closure_12(_modDef6052, obj7);
+            const tmp32 = closure_12(_modDef6059, obj7);
             cResult[20] = tmp3.glow;
             cResult[21] = tmp17;
             cResult[22] = tmp24;
@@ -390,7 +390,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
   let token;
   progress = progress.progress;
   const tmp = closure_21();
-  let obj = token(4580);
+  let obj = token(4586);
   token = obj.useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
   let items = [token];
   const memo = react.useMemo(() => {
@@ -412,7 +412,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? ((progress) => {
   obj3 = { style: tmp.glow, maskElement: closure_12(LinearGradientDefault, obj4), children: closure_12(LinearGradientDefault, obj5) };
   obj4 = { style: tmp.glowMaskGradient, colors, locations, start, end };
   obj5 = { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 };
-  tmp4 = _modDef6052;
+  tmp4 = _modDef6059;
   return closure_12(View, obj2);
 });
 ReactCompilerGating = ReactCompilerGating_mod;

@@ -1,6 +1,6 @@
-// === Module 8356: ObscuredSurfaceContext ===
+// === Module 8389: ObscuredSurfaceContext ===
 
-// Module 8356 (ObscuredSurfaceContext)
+// Module 8389 (ObscuredSurfaceContext)
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

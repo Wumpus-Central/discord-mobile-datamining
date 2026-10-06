@@ -1,8 +1,8 @@
-// === Module 12200: useGuildPowerupOnDeactivate ===
+// === Module 12215: useGuildPowerupOnDeactivate ===
 
-// Module 12200 (useGuildPowerupOnDeactivate)
+// Module 12215 (useGuildPowerupOnDeactivate)
 import react2 from "react" /* 576 */;
-import useGuildPowerupOnToggleDefault from "useGuildPowerupOnToggle" /* 12195 */;
+import useGuildPowerupOnToggleDefault from "useGuildPowerupOnToggle" /* 12210 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

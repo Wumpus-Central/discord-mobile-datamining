@@ -173,13 +173,13 @@ export default function connectStores(items, arg1, arg2) {
         applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
         closure_0 = applyArgumentsResult;
         closure_0 = closure_1;
-        memoizedFunction = function memoizedFunction() { /* body not rendered: F81502 */ };
+        memoizedFunction = function memoizedFunction() { /* body not rendered: F81635 */ };
         c1 = null;
         c2 = null;
-        memoizedFunction.getCachedResult = function getCachedResult() { /* body not rendered: F81501 */ };
-        memoizedFunction.clear = function clear() { /* body not rendered: F81503 */ };
+        memoizedFunction.getCachedResult = function getCachedResult() { /* body not rendered: F81634 */ };
+        memoizedFunction.clear = function clear() { /* body not rendered: F81636 */ };
         applyArgumentsResult.memoizedGetStateFromStores = memoizedFunction;
-        batchedStoreListener = new closure_0(closure_2[3]).BatchedStoreListener(closure_0, () => { /* body not rendered: F154041 */ });
+        batchedStoreListener = new closure_0(closure_2[3]).BatchedStoreListener(closure_0, () => { /* body not rendered: F154285 */ });
         applyArgumentsResult.listener = batchedStoreListener;
         return applyArgumentsResult;
       }

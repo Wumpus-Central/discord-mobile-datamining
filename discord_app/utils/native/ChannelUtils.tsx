@@ -1,82 +1,82 @@
-// === Module 5812: utils/ChannelUtils ===
+// === Module 5819: utils/ChannelUtils ===
 
-// Module 5812 (utils/ChannelUtils)
+// Module 5819 (utils/ChannelUtils)
 import Constants from "Constants" /* 1085 */;
-import AssetRegistryDefault from "AssetRegistry" /* 5813 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 5814 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 5815 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 5816 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 5817 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 5818 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 5819 */;
-import AssetRegistryDefault8 from "AssetRegistry" /* 5820 */;
-import AssetRegistryDefault9 from "AssetRegistry" /* 5821 */;
-import AssetRegistryDefault10 from "AssetRegistry" /* 5822 */;
-import AssetRegistryDefault11 from "AssetRegistry" /* 5823 */;
-import AssetRegistryDefault12 from "AssetRegistry" /* 5824 */;
-import AssetRegistryDefault13 from "AssetRegistry" /* 5825 */;
-import AssetRegistryDefault14 from "AssetRegistry" /* 5826 */;
-import AssetRegistryDefault15 from "AssetRegistry" /* 5827 */;
-import AssetRegistryDefault16 from "AssetRegistry" /* 5828 */;
-import AssetRegistryDefault17 from "AssetRegistry" /* 5829 */;
-import AssetRegistryDefault18 from "AssetRegistry" /* 5830 */;
-import AssetRegistryDefault19 from "AssetRegistry" /* 5831 */;
-import AssetRegistryDefault20 from "AssetRegistry" /* 5832 */;
-import AssetRegistryDefault21 from "AssetRegistry" /* 5833 */;
-import AssetRegistryDefault22 from "AssetRegistry" /* 5834 */;
-import AssetRegistryDefault23 from "AssetRegistry" /* 5835 */;
-import AssetRegistryDefault24 from "AssetRegistry" /* 5836 */;
-import AssetRegistryDefault25 from "AssetRegistry" /* 5837 */;
-import AssetRegistryDefault26 from "AssetRegistry" /* 5838 */;
-import AssetRegistryDefault27 from "AssetRegistry" /* 5839 */;
-import AssetRegistryDefault28 from "AssetRegistry" /* 5840 */;
-import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 5841 */;
-import AssetRegistryDefault29 from "AssetRegistry" /* 5844 */;
-import AssetRegistryDefault30 from "AssetRegistry" /* 5845 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5846 */;
-import AssetRegistryDefault31 from "AssetRegistry" /* 5847 */;
-import AssetRegistryDefault32 from "AssetRegistry" /* 5848 */;
-import AssetRegistryDefault33 from "AssetRegistry" /* 5849 */;
-import AssetRegistryDefault34 from "AssetRegistry" /* 5851 */;
-import AssetRegistryDefault35 from "AssetRegistry" /* 5852 */;
-import AssetRegistryDefault36 from "AssetRegistry" /* 5853 */;
-import ExperimentalLfgIcon from "ExperimentalLfgIcon" /* 5854 */;
-import ChatIcon2 from "ChatIcon" /* 5855 */;
-import ThreadLockIcon from "ThreadLockIcon" /* 5856 */;
-import ThreadIcon2 from "ThreadIcon" /* 5857 */;
-import FolderIcon from "FolderIcon" /* 5858 */;
-import BookCheckIcon from "BookCheckIcon" /* 5859 */;
-import TextWarningIcon2 from "TextWarningIcon" /* 5860 */;
-import TextSpoilerIcon2 from "TextSpoilerIcon" /* 5861 */;
-import TextLockIcon2 from "TextLockIcon" /* 5862 */;
-import TextControllerIcon from "TextControllerIcon" /* 5863 */;
-import TextIcon2 from "TextIcon" /* 5864 */;
-import ImageWarningIcon2 from "ImageWarningIcon" /* 5865 */;
-import ForumWarningIcon2 from "ForumWarningIcon" /* 5866 */;
-import ForumSpoilerIcon3 from "ForumSpoilerIcon" /* 5867 */;
-import ExperimentalLfgLockIcon from "ExperimentalLfgLockIcon" /* 5868 */;
-import ImageLockIcon from "ImageLockIcon" /* 5869 */;
-import ForumLockIcon2 from "ForumLockIcon" /* 5870 */;
-import ImageIcon2 from "ImageIcon" /* 5871 */;
-import ForumIcon2 from "ForumIcon" /* 5872 */;
-import GroupIcon from "GroupIcon" /* 5873 */;
-import AtIcon from "AtIcon" /* 5874 */;
-import AnnouncementsWarningIcon2 from "AnnouncementsWarningIcon" /* 5875 */;
-import AnnouncementsSpoilerIcon2 from "AnnouncementsSpoilerIcon" /* 5876 */;
-import AnnouncementsLockIcon from "AnnouncementsLockIcon" /* 5877 */;
-import AnnouncementsIcon2 from "AnnouncementsIcon" /* 5878 */;
-import LockIcon3 from "LockIcon" /* 5879 */;
-import StageLockIcon2 from "StageLockIcon" /* 5880 */;
-import StageIcon2 from "StageIcon" /* 5881 */;
-import VoiceLockIcon3 from "VoiceLockIcon" /* 5882 */;
-import VoiceWarningIcon2 from "VoiceWarningIcon" /* 5883 */;
-import VoiceNormalSpoilerIcon from "VoiceNormalSpoilerIcon" /* 5884 */;
-import VoiceNormalIcon2 from "VoiceNormalIcon" /* 5885 */;
-import HubIcon from "HubIcon" /* 5886 */;
-import AppsWarningIcon2 from "AppsWarningIcon" /* 5887 */;
-import AppsSpoilerIcon2 from "AppsSpoilerIcon" /* 5888 */;
-import AppsLockIcon from "AppsLockIcon" /* 5889 */;
-import AppsIcon2 from "AppsIcon" /* 5890 */;
+import AssetRegistryDefault from "AssetRegistry" /* 5820 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 5821 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 5822 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 5823 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 5824 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 5825 */;
+import AssetRegistryDefault7 from "AssetRegistry" /* 5826 */;
+import AssetRegistryDefault8 from "AssetRegistry" /* 5827 */;
+import AssetRegistryDefault9 from "AssetRegistry" /* 5828 */;
+import AssetRegistryDefault10 from "AssetRegistry" /* 5829 */;
+import AssetRegistryDefault11 from "AssetRegistry" /* 5830 */;
+import AssetRegistryDefault12 from "AssetRegistry" /* 5831 */;
+import AssetRegistryDefault13 from "AssetRegistry" /* 5832 */;
+import AssetRegistryDefault14 from "AssetRegistry" /* 5833 */;
+import AssetRegistryDefault15 from "AssetRegistry" /* 5834 */;
+import AssetRegistryDefault16 from "AssetRegistry" /* 5835 */;
+import AssetRegistryDefault17 from "AssetRegistry" /* 5836 */;
+import AssetRegistryDefault18 from "AssetRegistry" /* 5837 */;
+import AssetRegistryDefault19 from "AssetRegistry" /* 5838 */;
+import AssetRegistryDefault20 from "AssetRegistry" /* 5839 */;
+import AssetRegistryDefault21 from "AssetRegistry" /* 5840 */;
+import AssetRegistryDefault22 from "AssetRegistry" /* 5841 */;
+import AssetRegistryDefault23 from "AssetRegistry" /* 5842 */;
+import AssetRegistryDefault24 from "AssetRegistry" /* 5843 */;
+import AssetRegistryDefault25 from "AssetRegistry" /* 5844 */;
+import AssetRegistryDefault26 from "AssetRegistry" /* 5845 */;
+import AssetRegistryDefault27 from "AssetRegistry" /* 5846 */;
+import AssetRegistryDefault28 from "AssetRegistry" /* 5847 */;
+import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 5848 */;
+import AssetRegistryDefault29 from "AssetRegistry" /* 5851 */;
+import AssetRegistryDefault30 from "AssetRegistry" /* 5852 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5853 */;
+import AssetRegistryDefault31 from "AssetRegistry" /* 5854 */;
+import AssetRegistryDefault32 from "AssetRegistry" /* 5855 */;
+import AssetRegistryDefault33 from "AssetRegistry" /* 5856 */;
+import AssetRegistryDefault34 from "AssetRegistry" /* 5858 */;
+import AssetRegistryDefault35 from "AssetRegistry" /* 5859 */;
+import AssetRegistryDefault36 from "AssetRegistry" /* 5860 */;
+import ExperimentalLfgIcon from "ExperimentalLfgIcon" /* 5861 */;
+import ChatIcon2 from "ChatIcon" /* 5862 */;
+import ThreadLockIcon from "ThreadLockIcon" /* 5863 */;
+import ThreadIcon2 from "ThreadIcon" /* 5864 */;
+import FolderIcon from "FolderIcon" /* 5865 */;
+import BookCheckIcon from "BookCheckIcon" /* 5866 */;
+import TextWarningIcon2 from "TextWarningIcon" /* 5867 */;
+import TextSpoilerIcon2 from "TextSpoilerIcon" /* 5868 */;
+import TextLockIcon2 from "TextLockIcon" /* 5869 */;
+import TextControllerIcon from "TextControllerIcon" /* 5870 */;
+import TextIcon2 from "TextIcon" /* 5871 */;
+import ImageWarningIcon2 from "ImageWarningIcon" /* 5872 */;
+import ForumWarningIcon2 from "ForumWarningIcon" /* 5873 */;
+import ForumSpoilerIcon3 from "ForumSpoilerIcon" /* 5874 */;
+import ExperimentalLfgLockIcon from "ExperimentalLfgLockIcon" /* 5875 */;
+import ImageLockIcon from "ImageLockIcon" /* 5876 */;
+import ForumLockIcon2 from "ForumLockIcon" /* 5877 */;
+import ImageIcon2 from "ImageIcon" /* 5878 */;
+import ForumIcon2 from "ForumIcon" /* 5879 */;
+import GroupIcon from "GroupIcon" /* 5880 */;
+import AtIcon from "AtIcon" /* 5881 */;
+import AnnouncementsWarningIcon2 from "AnnouncementsWarningIcon" /* 5882 */;
+import AnnouncementsSpoilerIcon2 from "AnnouncementsSpoilerIcon" /* 5883 */;
+import AnnouncementsLockIcon from "AnnouncementsLockIcon" /* 5884 */;
+import AnnouncementsIcon2 from "AnnouncementsIcon" /* 5885 */;
+import LockIcon3 from "LockIcon" /* 5886 */;
+import StageLockIcon2 from "StageLockIcon" /* 5887 */;
+import StageIcon2 from "StageIcon" /* 5888 */;
+import VoiceLockIcon3 from "VoiceLockIcon" /* 5889 */;
+import VoiceWarningIcon2 from "VoiceWarningIcon" /* 5890 */;
+import VoiceNormalSpoilerIcon from "VoiceNormalSpoilerIcon" /* 5891 */;
+import VoiceNormalIcon2 from "VoiceNormalIcon" /* 5892 */;
+import HubIcon from "HubIcon" /* 5893 */;
+import AppsWarningIcon2 from "AppsWarningIcon" /* 5894 */;
+import AppsSpoilerIcon2 from "AppsSpoilerIcon" /* 5895 */;
+import AppsLockIcon from "AppsLockIcon" /* 5896 */;
+import AppsIcon2 from "AppsIcon" /* 5897 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
@@ -180,7 +180,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     ignoreTraits3 = ignoreTraits.ignoreTraits;
                   }
                   if (!ignoreTraits3) {
-                    tmp62 = importDefault(isMediaChannelResult ? 5837 : 5834);
+                    tmp62 = importDefault(isMediaChannelResult ? 5844 : 5841);
                   }
                 }
                 if (channel.isSpoilerChannel()) {
@@ -203,7 +203,7 @@ function getChannelIcon(channel, ignoreTraits) {
                     if (channel.isGameInvitesChannel()) {
                       tmp66Result = AssetRegistryDefault32;
                     } else {
-                      tmp66Result = importDefault(isMediaChannelResult ? 5849 : 5850);
+                      tmp66Result = importDefault(isMediaChannelResult ? 5856 : 5857);
                     }
                   }
                   tmp65 = tmp66Result;
@@ -211,7 +211,7 @@ function getChannelIcon(channel, ignoreTraits) {
                 if (channel.isGameInvitesChannel()) {
                   tmp66Result2 = AssetRegistryDefault29;
                 } else {
-                  tmp66Result2 = importDefault(isMediaChannelResult ? 5836 : 5833);
+                  tmp66Result2 = importDefault(isMediaChannelResult ? 5843 : 5840);
                 }
                 tmp66Result = tmp66Result2;
               }

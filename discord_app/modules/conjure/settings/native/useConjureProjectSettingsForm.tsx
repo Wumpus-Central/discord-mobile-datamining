@@ -1,19 +1,19 @@
-// === Module 16573: useConjureProjectSettingsForm ===
+// === Module 16613: useConjureProjectSettingsForm ===
 
-// Module 16573 (useConjureProjectSettingsForm)
+// Module 16613 (useConjureProjectSettingsForm)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4854 */;
-import ConjureTypes from "ConjureTypes" /* 6747 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
+import ConjureTypes from "ConjureTypes" /* 6757 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import GuildRoleStore_mod from "GuildRoleStore" /* 2106 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -390,13 +390,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   let intl = guildId(onSave[15]).intl;
   let formatToPlainString = intl.formatToPlainString;
   let obj2 = { count: first.size, max: guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES };
-  const g5I05P = require("module_3723").g5I05P;
+  const g5I05P = require("module_3753").g5I05P;
   let formatToPlainStringResult = formatToPlainString(g5I05P, obj2);
-  let obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: intl2.string(require("module_3723").un99lK), footer: closure_10(closure_6, obj4), header: closure_10(BottomSheetTitleHeader, obj5), children: items4 };
+  let obj3 = { startExpanded: true, keyboardShouldPersistTaps: "handled", dismissAccessibilityLabel: intl2.string(require("module_3753").un99lK), footer: closure_10(closure_6, obj4), header: closure_10(BottomSheetTitleHeader, obj5), children: items4 };
   const ActionSheet = guildId(onSave[23]).ActionSheet;
   intl2 = guildId(onSave[15]).intl;
   obj4 = { style: tmp.roleListFooter, children: closure_10(guildId(onSave[17]).Text, { variant: "text-xs/normal", color: "text-muted", children: formatToPlainStringResult }) };
-  obj5 = { title: intl3.string(require("module_3723")["pO3+p5"]), trailing: closure_10(ActionSheetHeaderPressableText, obj6) };
+  obj5 = { title: intl3.string(require("module_3753")["pO3+p5"]), trailing: closure_10(ActionSheetHeaderPressableText, obj6) };
   BottomSheetTitleHeader = guildId(onSave[18]).BottomSheetTitleHeader;
   intl3 = guildId(onSave[15]).intl;
   obj6 = { label: intl4.string(guildId(onSave[15]).t.i4jeWR), onPress: callback };
@@ -452,7 +452,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             const intl = guildId(onSave[15]).intl;
             const formatToPlainString = intl.formatToPlainString;
             const obj4 = { max: guildId(onSave[13]).MAX_PROJECT_COLLABORATOR_ROLES };
-            const prop = require("module_3723")["dH7+/Z"];
+            const prop = require("module_3753")["dH7+/Z"];
             formatToPlainStringResult = formatToPlainString(prop, obj4);
           }
           return closure_1_10(TableCheckboxRow, obj2, children.id);
@@ -785,7 +785,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       }
     }
   }), items3);
-  let obj5 = { label: intl.string(require("module_3723").ncxNJT), value: str2, onChange: callback, maxLength: 128, disabled: first2 };
+  let obj5 = { label: intl.string(require("module_3753").ncxNJT), value: str2, onChange: callback, maxLength: 128, disabled: first2 };
   const TextInput = tmp2(tmp3[28]).TextInput;
   intl = tmp2(tmp3[15]).intl;
   items4 = [closure_10(TextInput, obj5), , , , , , ];
@@ -802,8 +802,8 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     let obj8 = { hasIcons: false, children: tmp41(TableCheckboxRow, obj9) };
     const TableRowGroup = tmp2(tmp3[21]).TableRowGroup;
     obj9 = {
-      label: intl2.string(require("module_3723").gchQFO),
-      subLabel: intl3.string(require("module_3723").mD4GBH),
+      label: intl2.string(require("module_3753").gchQFO),
+      subLabel: intl3.string(require("module_3753").mD4GBH),
       checked: isShared,
       disabled: first2,
       onPress(arg0) {
@@ -823,8 +823,8 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
       const obj10 = { hasIcons: false, children: closure_10(TableCheckboxRow2, obj11) };
       const TableRowGroup2 = tmp2(tmp3[21]).TableRowGroup;
       obj11 = {
-        label: intl4.string(require("module_3723").lVvR4E),
-        subLabel: intl5.string(require("module_3723").SQZGoV),
+        label: intl4.string(require("module_3753").lVvR4E),
+        subLabel: intl5.string(require("module_3753").SQZGoV),
         checked: isPublic,
         disabled: first2,
         onPress(arg0) {
@@ -843,7 +843,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
     const obj12 = { hasIcons: false, children: closure_10(TableCheckboxRow3, obj13) };
     const TableRowGroup3 = tmp2(tmp3[21]).TableRowGroup;
     obj13 = {
-      label: intl6.string(require("module_3723").eEo0ye),
+      label: intl6.string(require("module_3753").eEo0ye),
       subLabel: null,
       checked: null,
       disabled: first2,
@@ -861,7 +861,7 @@ export default function useConjureProjectSettingsForm(projectId, arg1) {
   let tmp41Result9 = null;
   if (result1) {
     const TableRowGroup4 = tmp2(tmp3[21]).TableRowGroup;
-    const obj14 = { label: intl7.string(require("module_3723")["pO3+p5"]), subLabel: intl8.string(require("module_3723")["9MdtK9"]), arrow: true, disabled: first2 || !isPublic, accessibilityHint: stringResult, onPress: callback2 };
+    const obj14 = { label: intl7.string(require("module_3753")["pO3+p5"]), subLabel: intl8.string(require("module_3753")["9MdtK9"]), arrow: true, disabled: first2 || !isPublic, accessibilityHint: stringResult, onPress: callback2 };
     const TableRow = tmp2(tmp3[29]).TableRow;
     intl7 = tmp2(tmp3[15]).intl;
     intl8 = tmp2(tmp3[15]).intl;

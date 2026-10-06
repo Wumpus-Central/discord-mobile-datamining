@@ -1,20 +1,19 @@
-// === Module 14919: useQuestForPlacement ===
+// === Module 14935: useQuestForPlacement ===
 
-// Module 14919 (useQuestForPlacement)
+// Module 14935 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1102 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import QuestActionCreators from "QuestActionCreators" /* 9994 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 10015 */;
-import QuestsEligibility from "QuestsEligibility" /* 10912 */;
-import AdRecheckIntervalExperimentDefault from "AdRecheckIntervalExperiment" /* 14920 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import QuestActionCreators from "QuestActionCreators" /* 10007 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 10028 */;
+import QuestsEligibility from "QuestsEligibility" /* 10925 */;
 import react from "react" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7184 */;
-import QuestStore from "QuestStore" /* 7187 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7197 */;
+import QuestStore from "QuestStore" /* 7200 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, clearIntervalResult, dependencyMap, importDefault;
+let _require, dependencyMap;
 
 let c3;
 let closure_4;
@@ -49,8 +48,7 @@ function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA, arg2) {
   }
 }
 ({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = react);
-let closure_8 = 10 * DurationsDefault.Millis.MINUTE;
-let closure_9 = 30 * DurationsDefault.Millis.SECOND;
+let closure_8 = 30 * DurationsDefault.Millis.SECOND;
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let closure_0;
@@ -104,80 +102,32 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return value;
   }, items1);
 });
-let closure_11 = tmp3;
+let closure_10 = tmp3;
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let closure_0;
   let closure_2;
-  let first;
-  let ref;
   _require = arg0;
-  const tmp = dependencyMap;
   const obj = require("react");
-  const cResult = obj.c(6);
-  importDefault = closure_5(null);
-  const tmp3 = closure_11(arg0);
-  dependencyMap = tmp3;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { location: "useQuestForAdPlacement" };
-    cResult[0] = obj2;
-    first = obj2;
-  } else {
-    first = cResult[0];
-  }
-  const obj3 = AdRecheckIntervalExperimentDefault;
-  const enableFastAdRecheck = obj3.useConfig(first).enableFastAdRecheck;
-  if (cResult[1] === enableFastAdRecheck) {
-    if (cResult[2] === arg0) {
-      let tmp5;
-      let tmp6;
-      if (cResult[3] === tmp3) {
-        tmp5 = cResult[4];
-        tmp6 = cResult[5];
-      }
-      enableFastAdRecheck(tmp5, tmp6);
+  const cResult = obj.c(4);
+  const ref = closure_5(null);
+  const tmp2 = closure_10(arg0);
+  dependencyMap = tmp2;
+  if (cResult[0] === arg0) {
+    let tmp3;
+    let tmp4;
+    if (cResult[1] === tmp2) {
+      tmp3 = cResult[2];
+      tmp4 = cResult[3];
     }
+    closure_3(tmp3, tmp4);
   }
-  class S {
-    constructor() {
-      tmp = closure_1;
-      if (null != closure_1.current) {
-        tmp2 = globalThis;
-        _clearInterval = clearInterval;
-        clearIntervalResult = clearInterval(tmp.current);
-      }
-      tmp4 = enableFastAdRecheck ? closure_1_9 : closure_1_8;
-      tmp5 = closure_1_10(closure_2, current, "questBar-open");
-      tmp.current = setInterval(() => { /* body not rendered: F144287 */ }, tmp4);
-      current = tmp.current;
-      return () => { /* body not rendered: F144288 */ };
-    }
-  }
-  const items = [tmp3, arg0, enableFastAdRecheck];
-  cResult[1] = enableFastAdRecheck;
-  cResult[2] = arg0;
-  cResult[3] = tmp3;
-  cResult[4] = S;
-  cResult[5] = items;
-  tmp6 = items;
-  tmp5 = S;
-}) : ((arg0) => {
-  let closure_2;
-  let ref;
-  let closure_0 = arg0;
-  importDefault = closure_5(null);
-  const tmp = closure_11(arg0);
-  dependencyMap = tmp;
-  const obj = AdRecheckIntervalExperimentDefault;
-  const enableFastAdRecheck = obj.useConfig({ location: "useQuestForAdPlacement" }).enableFastAdRecheck;
-  const items = [tmp, arg0, enableFastAdRecheck];
-  const tmp2 = enableFastAdRecheck(() => {
+  const fn = function n() {
     let current;
     if (null != ref.current) {
       let _clearInterval = clearInterval;
       clearInterval(ref.current);
     }
-    const tmp4 = enableFastAdRecheck ? closure_1_9 : closure_1_8;
     maybeRefreshAd(closure_2, current, "questBar-open");
     ref.current = setInterval(() => {
       const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
@@ -186,7 +136,43 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         value = null;
       }
       maybeRefreshAd(value, current, "questBar-interval");
-    }, tmp4);
+    }, closure_1_8);
+    current = ref.current;
+    return () => {
+      if (null != current) {
+        const _clearInterval = clearInterval;
+        clearInterval(tmp);
+      }
+    };
+  };
+  const items = [tmp2, arg0];
+  cResult[0] = arg0;
+  cResult[1] = tmp2;
+  cResult[2] = fn;
+  cResult[3] = items;
+  tmp4 = items;
+  tmp3 = fn;
+}) : ((arg0) => {
+  let closure_0 = arg0;
+  const ref = closure_5(null);
+  const tmp = closure_10(arg0);
+  let closure_2 = tmp;
+  const items = [tmp, arg0];
+  const tmp2 = closure_3(() => {
+    let current;
+    if (null != ref.current) {
+      let _clearInterval = clearInterval;
+      clearInterval(ref.current);
+    }
+    maybeRefreshAd(closure_2, current, "questBar-open");
+    ref.current = setInterval(() => {
+      const deliveryAdDecisionByPlacement = AdDeliveryStore.deliveryAdDecisionByPlacement;
+      let value = deliveryAdDecisionByPlacement.get(current);
+      if (value == null) {
+        value = null;
+      }
+      maybeRefreshAd(value, current, "questBar-interval");
+    }, closure_1_8);
     current = ref.current;
     return () => {
       if (null != current) {
@@ -196,7 +182,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     };
   }, items);
 });
-let closure_12 = tmp4;
+let closure_11 = tmp4;
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   let closure_0;
@@ -237,13 +223,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }
   const tmpResult = tmp(504);
   let stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
-  const tmp9 = closure_11(arg0);
+  const tmp9 = closure_10(arg0);
   let creative;
   if (tmp9 != null) {
     creative = tmp9.creative;
   }
   if (cResult[4] !== creative) {
-    const tmpResult5 = tmp(7185);
+    const tmpResult5 = tmp(7198);
     const deliveredQuestId = tmpResult5.getDeliveredQuestId(creative);
     cResult[4] = creative;
     cResult[5] = deliveredQuestId;
@@ -288,7 +274,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     let tmp19 = null;
     if (null != stateFromStores1) {
       tmp19 = null;
-      const tmpResult7 = tmp(7183);
+      const tmpResult7 = tmp(7196);
       if (!tmpResult7.isQuestExpired(stateFromStores1)) {
         tmp19 = stateFromStores1;
       }
@@ -307,7 +293,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     creative1 = tmp9.creative;
   }
   if (cResult[12] !== creative1) {
-    const tmpResult8 = tmp(7185);
+    const tmpResult8 = tmp(7198);
     const deliveredBounty = tmpResult8.getDeliveredBounty(creative1);
     cResult[12] = creative1;
     cResult[13] = deliveredBounty;
@@ -320,7 +306,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       let tmp25;
       const _Symbol = Symbol;
       if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { type: tmp(5630).AdCreativeType.NO_FILL };
+        const obj2 = { type: tmp(5637).AdCreativeType.NO_FILL };
         cResult[18] = obj2;
         tmp25 = obj2;
       } else {
@@ -330,7 +316,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     } else {
       let tmp24;
       if (cResult[16] !== tmp21) {
-        const obj3 = { type: tmp(5630).AdCreativeType.BOUNTY, bounty: tmp21 };
+        const obj3 = { type: tmp(5637).AdCreativeType.BOUNTY, bounty: tmp21 };
         cResult[16] = tmp21;
         cResult[17] = obj3;
         tmp24 = obj3;
@@ -340,7 +326,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       tmp23 = tmp24;
     }
   } else if (cResult[14] !== stateFromStores) {
-    const obj4 = { type: tmp(5630).AdCreativeType.QUEST, quest: stateFromStores };
+    const obj4 = { type: tmp(5637).AdCreativeType.QUEST, quest: stateFromStores };
     cResult[14] = stateFromStores;
     cResult[15] = obj4;
     tmp23 = obj4;
@@ -358,7 +344,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   const items = [QuestStore];
   const items1 = [arg1];
   stateFromStores = obj.useStateFromStores(items, () => QuestStore.getQuestPreviewOverride(closure_0), items1);
-  const tmp5 = closure_11(arg0);
+  const tmp5 = closure_10(arg0);
   let creative;
   const getDeliveredQuestId = require("AdDecisionUtils").getDeliveredQuestId;
   require("AdDecisionUtils");
@@ -384,7 +370,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   let tmp10 = null;
   if (null != stateFromStores1) {
     tmp10 = null;
-    const tmpResult3 = tmp(tmp2[12]);
+    const tmpResult3 = tmp(tmp2[11]);
     if (!tmpResult3.isQuestExpired(stateFromStores1)) {
       tmp10 = stateFromStores1;
     }
@@ -393,8 +379,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     stateFromStores = tmp10;
   }
   let creative1;
-  const getDeliveredBounty = tmp(tmp2[11]).getDeliveredBounty;
-  tmp(tmp2[11]);
+  const getDeliveredBounty = tmp(tmp2[10]).getDeliveredBounty;
+  tmp(tmp2[10]);
   if (tmp5 != null) {
     creative1 = tmp5.creative;
   }
@@ -423,14 +409,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp = _require;
   const obj = require("react");
   const cResult = obj.c(5);
-  closure_12(arg0);
-  const tmp5 = closure_11(arg0);
+  closure_11(arg0);
+  const tmp5 = closure_10(arg0);
   let creative;
   if (tmp5 != null) {
     creative = tmp5.creative;
   }
   if (cResult[0] !== creative) {
-    const tmpResult = tmp(7185);
+    const tmpResult = tmp(7198);
     const deliveredQuestId = tmpResult.getDeliveredQuestId(creative);
     cResult[0] = creative;
     cResult[1] = deliveredQuestId;
@@ -447,7 +433,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp9 = cResult[2];
   }
   if (cResult[3] !== tmp7) {
-    const fn = function v() {
+    const fn = function f() {
       let tmp2 = null;
       if (null != closure_0) {
         const quests = QuestStore.quests;
@@ -470,7 +456,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp13 = null;
   if (null != stateFromStores) {
     tmp13 = null;
-    const tmpResult4 = tmp(7183);
+    const tmpResult4 = tmp(7196);
     if (!tmpResult4.isQuestExpired(stateFromStores)) {
       tmp13 = stateFromStores;
     }
@@ -478,8 +464,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   return tmp13;
 }) : ((arg0) => {
   let closure_0;
-  const tmp = closure_12(arg0);
-  let tmp2 = closure_11(arg0);
+  const tmp = closure_11(arg0);
+  let tmp2 = closure_10(arg0);
   let creative;
   const getDeliveredQuestId = require("AdDecisionUtils").getDeliveredQuestId;
   require("AdDecisionUtils");

@@ -1,12 +1,12 @@
-// === Module 8515: TestModeStore ===
+// === Module 8548: TestModeStore ===
 
-// Module 8515 (TestModeStore)
+// Module 8548 (TestModeStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import LibraryApplicationStore from "LibraryApplicationStore" /* 6902 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 6912 */;
 import size from "module_2" /* 2 */;
 
 let originURL;

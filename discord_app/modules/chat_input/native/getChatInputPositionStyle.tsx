@@ -1,6 +1,6 @@
-// === Module 11890: getChatInputPositionStyle ===
+// === Module 11904: getChatInputPositionStyle ===
 
-// Module 11890 (getChatInputPositionStyle)
+// Module 11904 (getChatInputPositionStyle)
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;

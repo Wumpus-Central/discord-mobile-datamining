@@ -1,6 +1,6 @@
-// === Module 8072: useStateChannelIsLive ===
+// === Module 8105: useStateChannelIsLive ===
 
-// Module 8072 (useStateChannelIsLive)
+// Module 8105 (useStateChannelIsLive)
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

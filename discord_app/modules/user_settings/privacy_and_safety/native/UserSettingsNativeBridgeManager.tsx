@@ -1,10 +1,10 @@
-// === Module 18018: UserSettingsNativeBridgeManager ===
+// === Module 18063: UserSettingsNativeBridgeManager ===
 
-// Module 18018 (UserSettingsNativeBridgeManager)
+// Module 18063 (UserSettingsNativeBridgeManager)
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let NSUserDefaultsBridge, settings;

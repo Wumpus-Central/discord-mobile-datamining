@@ -1,18 +1,18 @@
-// === Module 14638: ExplicitMediaFiltersGuildsSetting ===
+// === Module 14654: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 14638 (ExplicitMediaFiltersGuildsSetting)
+// Module 14654 (ExplicitMediaFiltersGuildsSetting)
 import react from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6801 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import useUserIsTeen from "useUserIsTeen" /* 8294 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14625 */;
-import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14633 */;
-import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14634 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 6811 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import useUserIsTeen from "useUserIsTeen" /* 8327 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14649 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14650 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

@@ -1,13 +1,13 @@
-// === Module 10640: ? ===
+// === Module 10653: ? ===
 
-// Module 10640
-import _modDef10639 from "module_10639" /* 10639 */;
+// Module 10653
+import _modDef10652 from "module_10652" /* 10652 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export const splitGraphemes = function splitGraphemes(name) {
-  const obj = _modDef10639();
+  const obj = _modDef10652();
   const items = [];
   let match = obj.exec(name);
   let num = 0;

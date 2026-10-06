@@ -1,16 +1,16 @@
-// === Module 10647: GroupDMRow ===
+// === Module 10660: GroupDMRow ===
 
-// Module 10647 (GroupDMRow)
+// Module 10660 (GroupDMRow)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import TableCheckboxRow2 from "TableCheckboxRow" /* 5990 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import UserRowConstants from "UserRowConstants" /* 10592 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10648 */;
-import useRecipientsLabel from "useRecipientsLabel" /* 10649 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import TableCheckboxRow2 from "TableCheckboxRow" /* 5997 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import UserRowConstants from "UserRowConstants" /* 10605 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 10662 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

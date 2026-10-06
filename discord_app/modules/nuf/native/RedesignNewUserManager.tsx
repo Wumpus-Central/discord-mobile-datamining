@@ -1,20 +1,20 @@
-// === Module 17581: RedesignNewUserManager ===
+// === Module 17627: RedesignNewUserManager ===
 
-// Module 17581 (RedesignNewUserManager)
+// Module 17627 (RedesignNewUserManager)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9481 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 17582 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 17585 */;
-import NewUserUtils from "NewUserUtils" /* 17586 */;
-import ContactSyncModalStore from "ContactSyncModalStore" /* 12326 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 17628 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 17631 */;
+import NewUserUtils from "NewUserUtils" /* 17632 */;
+import ContactSyncModalStore from "ContactSyncModalStore" /* 12341 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
-import NewUserStore from "NewUserStore" /* 5949 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import NewUserStore from "NewUserStore" /* 5956 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c3;
@@ -24,7 +24,7 @@ class RedesignNewUserManager extends AutomaticLifecycleManager {
   constructor() {
     let action;
     let id;
-    const f131149 = (item) => {
+    const f131368 = (item) => {
       const obj = closure_1_0(closure_1_2[6]);
       const coerceModalRouteResult = obj.coerceModalRoute(item);
       let key;
@@ -79,7 +79,7 @@ class RedesignNewUserManager extends AutomaticLifecycleManager {
             null == rootNavigationRef || !rootNavigationRef.isReady();
             if (someResult) {
               const routes = rootNavigationRef.getRootState().routes;
-              someResult = routes.some(f131149);
+              someResult = routes.some(f131368);
             }
             if (!someResult) {
               const tmp4Result = NewUserUtils;
@@ -124,7 +124,7 @@ class RedesignNewUserManager extends AutomaticLifecycleManager {
           null == rootNavigationRef || !rootNavigationRef.isReady();
           if (someResult) {
             const routes = rootNavigationRef.getRootState().routes;
-            someResult = routes.some(f131149);
+            someResult = routes.some(f131368);
           }
           if (!someResult) {
             require.startOnboarding();

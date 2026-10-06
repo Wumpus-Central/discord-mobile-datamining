@@ -1,12 +1,12 @@
-// === Module 16594: FrameRenderTarget ===
+// === Module 16632: FrameRenderTarget ===
 
-// Module 16594 (FrameRenderTarget)
+// Module 16632 (FrameRenderTarget)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import WebView from "WebView" /* 7973 */;
-import useFramePoolBorrowDefault from "useFramePoolBorrow" /* 16595 */;
+import WebView from "WebView" /* 7983 */;
+import useFramePoolBorrowDefault from "useFramePoolBorrow" /* 16633 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

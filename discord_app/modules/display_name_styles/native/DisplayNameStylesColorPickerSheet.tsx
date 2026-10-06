@@ -1,22 +1,22 @@
-// === Module 15174: DisplayNameStylesColorPickerSheet ===
+// === Module 15189: DisplayNameStylesColorPickerSheet ===
 
-// Module 15174 (DisplayNameStylesColorPickerSheet)
+// Module 15189 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1394 */;
 import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1395 */;
-import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 4577 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14421 */;
-import ColorPickerConsts from "ColorPickerConsts" /* 15171 */;
+import CheckmarkLargeIcon2 from "CheckmarkLargeIcon" /* 4583 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14437 */;
+import ColorPickerConsts from "ColorPickerConsts" /* 15186 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

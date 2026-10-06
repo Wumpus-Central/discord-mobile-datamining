@@ -1,13 +1,13 @@
-// === Module 8942: BioMarkupUtils ===
+// === Module 8971: BioMarkupUtils ===
 
-// Module 8942 (BioMarkupUtils)
+// Module 8971 (BioMarkupUtils)
 import LRUCacheDefault from "LRUCache" /* 1444 */;
 import _modDef1936 from "module_1936" /* 1936 */;
-import MarkupReactRulesDefault from "MarkupReactRules" /* 4878 */;
-import MarkupRulesDefault from "MarkupRules" /* 5787 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 5786 */;
-import MarkupParser_mod from "MarkupParser" /* 7646 */;
-import MarkupUtils from "MarkupUtils" /* 4877 */;
+import MarkupReactRulesDefault from "MarkupReactRules" /* 4884 */;
+import MarkupRulesDefault from "MarkupRules" /* 5794 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5793 */;
+import MarkupParser_mod from "MarkupParser" /* 7657 */;
+import MarkupUtils from "MarkupUtils" /* 4883 */;
 import module_12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

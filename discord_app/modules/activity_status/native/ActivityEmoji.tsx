@@ -1,11 +1,11 @@
-// === Module 10629: ActivityEmoji ===
+// === Module 10642: ActivityEmoji ===
 
-// Module 10629 (ActivityEmoji)
+// Module 10642 (ActivityEmoji)
 import Fragment from "Fragment" /* 21 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import EmojiDefault from "Emoji" /* 6625 */;
+import EmojiDefault from "Emoji" /* 6632 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let importDefault;
@@ -53,7 +53,7 @@ export default function ActivityEmoji(emoji) {
   if (null != emoji) {
     let tmp11;
     if (null == emoji) {
-      tmp11 = jsx(tmp2(8411).ReactionIcon, { style, size: "sm" });
+      tmp11 = jsx(tmp2(8444).ReactionIcon, { style, size: "sm" });
     } else {
       const items1 = [style, ];
       const size1 = { width: size, height: size };

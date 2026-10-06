@@ -1,14 +1,14 @@
-// === Module 11787: AppLauncherChoicesOption ===
+// === Module 11801: AppLauncherChoicesOption ===
 
-// Module 11787 (AppLauncherChoicesOption)
+// Module 11801 (AppLauncherChoicesOption)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let obj2;
@@ -81,7 +81,7 @@ export default function AppLauncherChoicesOption(option) {
     };
     index = undefined;
     ActionSheetActionCreatorsDefault;
-    const tmp4 = asyncRequire(11788, dependencyMap.paths);
+    const tmp4 = asyncRequire(11802, dependencyMap.paths);
     if (first != null) {
       index = first.index;
     }

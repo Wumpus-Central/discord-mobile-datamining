@@ -1,10 +1,10 @@
-// === Module 6103: useInputAttachments ===
+// === Module 6110: useInputAttachments ===
 
-// Module 6103 (useInputAttachments)
+// Module 6110 (useInputAttachments)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import IconSize from "IconSize" /* 6104 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import IconSize from "IconSize" /* 6111 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
@@ -399,7 +399,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((leadingIcon, leading
   let tmp20;
   let trailingIcon;
   let trailingPressableProps;
-  const f91379 = () => {
+  const f91515 = () => {
     let num = 0;
     if (null != leadingIcon) {
       num = IconSize.ICON_SIZE.xs + tmp;
@@ -463,8 +463,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((leadingIcon, leading
         let trailingIcon2 = inputStyles.trailingText;
       }
       let num = 2;
-      [tmp19, tmp20] = trailingIcon(react.useState(f91379), 2);
-      trailingIcon(react.useState(f91379), 2);
+      [tmp19, tmp20] = trailingIcon(react.useState(f91515), 2);
+      trailingIcon(react.useState(f91515), 2);
       const tmp21 = trailingIcon(react.useState(() => {
         let num = 0;
         if (null != trailingIcon) {

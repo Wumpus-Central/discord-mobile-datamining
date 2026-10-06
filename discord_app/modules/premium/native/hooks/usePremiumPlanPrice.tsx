@@ -1,12 +1,12 @@
-// === Module 8869: usePremiumPlanPrice ===
+// === Module 8898: usePremiumPlanPrice ===
 
-// Module 8869 (usePremiumPlanPrice)
+// Module 8898 (usePremiumPlanPrice)
 import Constants from "Constants" /* 1096 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6760 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6770 */;
 import react_mod from "react" /* 19 */;
-import SubscriptionPlanStore_mod from "SubscriptionPlanStore" /* 4533 */;
-import SubscriptionStore_mod from "SubscriptionStore" /* 4534 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import SubscriptionPlanStore_mod from "SubscriptionPlanStore" /* 4539 */;
+import SubscriptionStore_mod from "SubscriptionStore" /* 4540 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -218,7 +218,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         if (!SubscriptionPlanStore.isFetchingForPremiumSKUs()) {
                           const obj = SubscriptionPlanActionCreators;
                           const premiumSubscriptionPlans = obj.fetchPremiumSubscriptionPlans(country2, undefined, undefined, PaymentGateways.APPLE_ADVANCED_COMMERCE);
-                          premiumSubscriptionPlans.catch(function() { /* body not rendered: F151503 */ });
+                          premiumSubscriptionPlans.catch(function() { /* body not rendered: F151739 */ });
                         }
                       });
                       return () => {

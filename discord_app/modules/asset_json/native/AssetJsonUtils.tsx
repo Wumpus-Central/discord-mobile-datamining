@@ -84,7 +84,7 @@ let jsonAssets = function _loadJsonAsset() {
             value = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {

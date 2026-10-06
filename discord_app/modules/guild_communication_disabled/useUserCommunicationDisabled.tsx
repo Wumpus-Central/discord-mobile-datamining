@@ -1,9 +1,9 @@
-// === Module 7636: useUserCommunicationDisabled ===
+// === Module 7647: useUserCommunicationDisabled ===
 
-// Module 7636 (useUserCommunicationDisabled)
+// Module 7647 (useUserCommunicationDisabled)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4496 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -140,7 +140,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     prop = null;
   }
   const items2 = [prop, ];
-  const tmpResult = tmp(4496);
+  const tmpResult = tmp(4502);
   items2[1] = tmpResult.isMemberCommunicationDisabled(stateFromStores);
   return items2;
 });

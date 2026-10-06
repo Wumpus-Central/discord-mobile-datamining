@@ -1,13 +1,13 @@
-// === Module 8741: TwoWayLinkLanding ===
+// === Module 8773: TwoWayLinkLanding ===
 
-// Module 8741 (TwoWayLinkLanding)
-import Text_Text from "Text/Text" /* 4886 */;
-import TableRow2 from "TableRow" /* 5993 */;
+// Module 8773 (TwoWayLinkLanding)
+import Text_Text from "Text/Text" /* 4892 */;
+import TableRow2 from "TableRow" /* 6000 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

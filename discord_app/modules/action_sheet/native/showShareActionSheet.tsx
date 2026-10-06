@@ -1,10 +1,10 @@
-// === Module 8038: showShareActionSheet ===
+// === Module 8048: showShareActionSheet ===
 
-// Module 8038 (showShareActionSheet)
+// Module 8048 (showShareActionSheet)
 import react_native from "react-native" /* 17 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import react_nativeDefault from "react-native" /* 8039 */;
-import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8040 */;
+import react_nativeDefault from "react-native" /* 8049 */;
+import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8050 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import size from "module_2" /* 2 */;
 
@@ -40,7 +40,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     const obj2 = require("ShowShareActionSheetUtils");
     mediaShareParams = obj2.getMediaShareParams(source.source);
   } else {
-    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "Set" };
+    mediaShareParams = { mediaFallbackUrl: "start", mediaStagingOptions: "unicodeVersion" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

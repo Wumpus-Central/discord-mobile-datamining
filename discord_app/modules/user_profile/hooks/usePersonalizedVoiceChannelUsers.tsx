@@ -1,11 +1,11 @@
-// === Module 12848: usePersonalizedVoiceChannelUsers ===
+// === Module 12867: usePersonalizedVoiceChannelUsers ===
 
-// Module 12848 (usePersonalizedVoiceChannelUsers)
+// Module 12867 (usePersonalizedVoiceChannelUsers)
 import Constants from "Constants" /* 1085 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
-import ConsentStore from "ConsentStore" /* 6084 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
+import ConsentStore from "ConsentStore" /* 6091 */;
 import UserStore from "UserStore" /* 1377 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

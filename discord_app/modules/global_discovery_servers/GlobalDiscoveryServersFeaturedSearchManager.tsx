@@ -1,11 +1,11 @@
-// === Module 18022: GlobalDiscoveryServersFeaturedSearchManager ===
+// === Module 18067: GlobalDiscoveryServersFeaturedSearchManager ===
 
-// Module 18022 (GlobalDiscoveryServersFeaturedSearchManager)
+// Module 18067 (GlobalDiscoveryServersFeaturedSearchManager)
 import Constants from "Constants" /* 1085 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9249 */;
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13517 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9284 */;
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 13533 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let closure_4, constants;
@@ -232,7 +232,7 @@ class GlobalDiscoveryServersFeaturedSearchManager extends AutomaticLifecycleMana
       if (forceRefresh === undefined) {
         forceRefresh = false;
       }
-      return "Set";
+      return "Reflect";
     });
     applyArgumentsResult.fetchCategoryFeaturedGuilds = function() {
       return closure_0(...arguments);

@@ -1,6 +1,6 @@
-// === Module 11102: RevenueError ===
+// === Module 11115: RevenueError ===
 
-// Module 11102 (RevenueError)
+// Module 11115 (RevenueError)
 import size from "module_2" /* 2 */;
 
 class RevenueError extends Error {

@@ -1,9 +1,9 @@
-// === Module 11334: SavedMessageHelpers ===
+// === Module 11347: SavedMessageHelpers ===
 
-// Module 11334 (SavedMessageHelpers)
+// Module 11347 (SavedMessageHelpers)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11283 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11296 */;
 import size from "module_2" /* 2 */;
 
 let obj = function _addOrUpdateSavedMessage() {
@@ -149,7 +149,7 @@ let obj = function _addOrUpdateSavedMessage() {
       closure_2 = tmp4;
       displayToast = displayToast.displayToast;
       tmp = Object.assign(displayToast, Object.assign({ displayToast: 0 }));
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;
@@ -197,7 +197,7 @@ obj = function _removeSavedMessage() {
             ClockIcon = undefined;
             content = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === content) {
           if (arg0 === 1) {

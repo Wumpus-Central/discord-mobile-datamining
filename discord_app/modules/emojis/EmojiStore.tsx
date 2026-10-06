@@ -1,6 +1,6 @@
-// === Module 5638: EmojiStore ===
+// === Module 5645: EmojiStore ===
 
-// Module 5638 (EmojiStore)
+// Module 5645 (EmojiStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -9,34 +9,34 @@ import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
 import TryLoad from "TryLoad" /* 2098 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4499 */;
-import EmojiTypes from "EmojiTypes" /* 4526 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4527 */;
-import RegexUtilsDefault from "RegexUtils" /* 4874 */;
-import EmojiPickerConstants from "EmojiPickerConstants" /* 5642 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5643 */;
-import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5645 */;
-import EmojiTermsDefault from "EmojiTerms" /* 5646 */;
-import IAPEligibility from "IAPEligibility" /* 5678 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4505 */;
+import EmojiTypes from "EmojiTypes" /* 4532 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
+import RegexUtilsDefault from "RegexUtils" /* 4880 */;
+import EmojiPickerConstants from "EmojiPickerConstants" /* 5649 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5650 */;
+import dedupeEmojisByNameOrIdDefault from "dedupeEmojisByNameOrId" /* 5652 */;
+import EmojiTermsDefault from "EmojiTerms" /* 5653 */;
+import IAPEligibility from "IAPEligibility" /* 5685 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 4776 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5639 */;
+import ExperimentStore from "ExperimentStore" /* 4782 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5646 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildMembershipStore from "GuildMembershipStore" /* 2053 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import UserStore from "UserStore" /* 1377 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5640 */;
-import TopEmojiStore from "TopEmojiStore" /* 5641 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5647 */;
+import TopEmojiStore from "TopEmojiStore" /* 5648 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import UnicodeEmojis from "UnicodeEmojis" /* 4523 */;
+import UnicodeEmojis from "UnicodeEmojis" /* 4529 */;
 import SnowflakeUtils from "SnowflakeUtils" /* 11 */;
-import Frecency_mod from "Frecency" /* 4927 */;
+import Frecency_mod from "Frecency" /* 4933 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -1080,7 +1080,7 @@ class EmojiStore extends PersistedStore {
     let closure_2;
     let closure_0 = intention;
     let formatted = query.toLowerCase();
-    obj = formatted(4874);
+    obj = formatted(4880);
     const escapeResult = obj.escape(formatted);
     let orderByResult = locked;
     const tmp2 = formatted;
@@ -1543,8 +1543,8 @@ let obj7 = {
     const guildId = topEmojisMetadata.guildId;
     obj = { emojiIds: topEmojisMetadata.map((emojiId) => emojiId.emojiId), topEmojisTTL: addResult.valueOf() };
     set = map.set;
-    const tmp = _modDef4461;
-    const tmpResult = tmp(_modDef4461());
+    const tmp = _modDef4467;
+    const tmpResult = tmp(_modDef4467());
     addResult = tmpResult.add(1, "days");
     const result = set(guildId, obj);
   },

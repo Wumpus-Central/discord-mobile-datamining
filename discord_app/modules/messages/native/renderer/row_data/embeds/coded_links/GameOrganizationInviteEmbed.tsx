@@ -1,16 +1,16 @@
-// === Module 13065: GameOrganizationInviteEmbed ===
+// === Module 13084: GameOrganizationInviteEmbed ===
 
-// Module 13065 (GameOrganizationInviteEmbed)
+// Module 13084 (GameOrganizationInviteEmbed)
 import nativeDefault from "native" /* 587 */;
 import intl8 from "intl" /* 1126 */;
 import _modDef2391 from "module_2391" /* 2391 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import Constants from "Constants" /* 7226 */;
-import react_native from "react-native" /* 7595 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 10024 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11084 */;
-import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11083 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import Constants from "Constants" /* 7239 */;
+import react_native from "react-native" /* 7606 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 10037 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11097 */;
+import GameOrganizationInviteStore from "GameOrganizationInviteStore" /* 11096 */;
 import size from "module_2" /* 2 */;
 
 const CodedLinkExtendedType = CodedLinksConstants.CodedLinkExtendedType;

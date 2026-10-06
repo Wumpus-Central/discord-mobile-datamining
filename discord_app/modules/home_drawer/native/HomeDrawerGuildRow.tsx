@@ -1,31 +1,31 @@
-// === Module 16257: HomeDrawerGuildRow ===
+// === Module 16297: HomeDrawerGuildRow ===
 
-// Module 16257 (HomeDrawerGuildRow)
+// Module 16297 (HomeDrawerGuildRow)
 import react_native from "react-native" /* 17 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 9813 */;
-import BellZIcon from "BellZIcon" /* 13129 */;
-import StreamingSubtitleDefault from "StreamingSubtitle" /* 16262 */;
-import VoiceSubtitleDefault from "VoiceSubtitle" /* 16263 */;
-import MentionSubtitleDefault from "MentionSubtitle" /* 16264 */;
-import TypingSubtitleDefault from "TypingSubtitle" /* 16266 */;
-import UnreadSubtitleDefault from "UnreadSubtitle" /* 16267 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 9826 */;
+import BellZIcon from "BellZIcon" /* 13148 */;
+import StreamingSubtitleDefault from "StreamingSubtitle" /* 16302 */;
+import VoiceSubtitleDefault from "VoiceSubtitle" /* 16303 */;
+import MentionSubtitleDefault from "MentionSubtitle" /* 16304 */;
+import TypingSubtitleDefault from "TypingSubtitle" /* 16306 */;
+import UnreadSubtitleDefault from "UnreadSubtitle" /* 16307 */;
 import react_mod from "react" /* 19 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7121 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -80,7 +80,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   } else {
     tmp8 = cResult[3];
   }
-  const MobileHomeDrawerExperiment = tmp(4742).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = tmp(4748).MobileHomeDrawerExperiment;
   const enableHome = MobileHomeDrawerExperiment.useConfig(tmp8).enableHome;
   let tmp10 = null;
   if (null != stateFromStores) {
@@ -116,7 +116,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const items = [GuildStore];
   const obj = guildId(504);
   const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const MobileHomeDrawerExperiment = guildId(4742).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = guildId(4748).MobileHomeDrawerExperiment;
   const enableHome = MobileHomeDrawerExperiment.useConfig({ location: "guild-row" }).enableHome;
   let tmp3 = null;
   if (null != stateFromStores) {
@@ -275,8 +275,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
   cResult[12] = guild.name;
   cResult[13] = tmp4.guildNameText;
   cResult[14] = "text-default";
-  cResult[15] = closure_18(tmp(4886).Text, obj3);
-  closure_18(tmp(4886).Text, obj3);
+  cResult[15] = closure_18(tmp(4892).Text, obj3);
+  closure_18(tmp(4892).Text, obj3);
 }) : ((guild) => {
   let closure_3;
   let tmp23Result;

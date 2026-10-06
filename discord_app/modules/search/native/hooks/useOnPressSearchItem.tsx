@@ -1,23 +1,23 @@
-// === Module 16812: useOnPressSearchItem ===
+// === Module 16833: useOnPressSearchItem ===
 
-// Module 16812 (useOnPressSearchItem)
+// Module 16833 (useOnPressSearchItem)
 import intl2 from "intl" /* 1126 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import TrackingConstants from "TrackingConstants" /* 7512 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8047 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11966 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11985 */;
-import SearchNavigatorConstants from "SearchNavigatorConstants" /* 16813 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import TrackingConstants from "TrackingConstants" /* 7523 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8057 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 11980 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
+import SearchNavigatorConstants from "SearchNavigatorConstants" /* 16834 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7108 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7121 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import SearchQueryStore from "SearchQueryStore" /* 11967 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -33,7 +33,7 @@ let closure_15;
 let closure_16;
 let map1;
 let metroImportAll;
-const f146646 = async (arg0) => {
+const f146863 = async (arg0) => {
   let guildId = arg0;
   let c2 = 0;
   let c3 = 0;
@@ -851,7 +851,7 @@ const tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) =>
   const obj2 = searchContext(callback[19]);
   navigation = obj2.useNavigation();
   const useCallback = react.useCallback;
-  let closure_0 = _asyncToGenerator(f146646);
+  let closure_0 = _asyncToGenerator(f146863);
   callback = useCallback(function() {
     return closure_0(...arguments);
   }, []);
@@ -897,7 +897,7 @@ const tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchContext) =>
   obj = searchContext(callback[19]);
   navigation = obj.useNavigation();
   const useCallback = react.useCallback;
-  let closure_0 = _asyncToGenerator(f146646);
+  let closure_0 = _asyncToGenerator(f146863);
   callback = useCallback(function() {
     return closure_0(...arguments);
   }, []);

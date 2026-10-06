@@ -1,16 +1,16 @@
-// === Module 14435: EditUserProfileAvatar ===
+// === Module 14451: EditUserProfileAvatar ===
 
-// Module 14435 (EditUserProfileAvatar)
+// Module 14451 (EditUserProfileAvatar)
 import react_native from "react-native" /* 17 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import timing from "timing" /* 4891 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7837 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import timing from "timing" /* 4897 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7848 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let set;
@@ -111,7 +111,7 @@ export default function EditUserProfileAvatar(user) {
       handleEditAvatarDecorationSelect: fn,
       showRemoveAvatar: tmp3Result.showRemoveAvatar(pendingAvatar, user.avatar)
     };
-    const tmp4 = asyncRequire(14437, dependencyMap.paths);
+    const tmp4 = asyncRequire(14453, dependencyMap.paths);
     if (!flag) {
       fn = () => {
         const obj = user(flag2[16]);

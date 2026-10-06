@@ -1,13 +1,13 @@
-// === Module 11964: GuildDirectoryPlaceholderRow ===
+// === Module 11978: GuildDirectoryPlaceholderRow ===
 
-// Module 11964 (GuildDirectoryPlaceholderRow)
+// Module 11978 (GuildDirectoryPlaceholderRow)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 11965 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 11979 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

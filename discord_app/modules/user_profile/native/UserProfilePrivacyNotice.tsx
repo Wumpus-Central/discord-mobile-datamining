@@ -1,6 +1,6 @@
-// === Module 12931: UserProfilePrivacyNotice ===
+// === Module 12950: UserProfilePrivacyNotice ===
 
-// Module 12931 (UserProfilePrivacyNotice)
+// Module 12950 (UserProfilePrivacyNotice)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,16 +10,16 @@ import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4812 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import XSmallIcon from "XSmallIcon" /* 6017 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6891 */;
-import useUserIsTeen from "useUserIsTeen" /* 8294 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import XSmallIcon from "XSmallIcon" /* 6024 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6901 */;
+import useUserIsTeen from "useUserIsTeen" /* 8327 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -269,7 +269,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     } else {
       tmp21 = cResult[15];
     }
-    const Text = tmp(4886).Text;
+    const Text = tmp(4892).Text;
     const text = tmp4.text;
     const intl = tmp(1126).intl;
     const obj7 = { privacySettingsLink: first1 };

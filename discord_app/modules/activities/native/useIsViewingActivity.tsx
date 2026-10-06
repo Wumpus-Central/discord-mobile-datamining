@@ -1,9 +1,9 @@
-// === Module 9072: useIsViewingActivity ===
+// === Module 9108: useIsViewingActivity ===
 
-// Module 9072 (useIsViewingActivity)
-import ChannelCallModalDefault from "ChannelCallModal" /* 9056 */;
-import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9059 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+// Module 9108 (useIsViewingActivity)
+import ChannelCallModalDefault from "ChannelCallModal" /* 9092 */;
+import useIsActivityFocusedDefault from "useIsActivityFocused" /* 9095 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const tmp = channelId;
   channelId = channelId.channelId;
   let tmp4 = useIsActivityFocusedDefault(channelId);
-  const obj2 = channelId(4736);
+  const obj2 = channelId(4742);
   const isModalOpen = obj2.useIsModalOpen(ChannelCallModalDefault);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore];
@@ -53,7 +53,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
 }) : ((channelId) => {
   channelId = channelId.channelId;
   let tmp = useIsActivityFocusedDefault(channelId);
-  const obj = channelId(4736);
+  const obj = channelId(4742);
   const isModalOpen = obj.useIsModalOpen(ChannelCallModalDefault);
   const items = [ChannelRTCStore];
   const items1 = [channelId];

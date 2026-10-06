@@ -1,29 +1,29 @@
-// === Module 14699: FamilyCenterModalDataTooltip ===
+// === Module 14715: FamilyCenterModalDataTooltip ===
 
-// Module 14699 (FamilyCenterModalDataTooltip)
+// Module 14715 (FamilyCenterModalDataTooltip)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import _modDef2493 from "module_2493" /* 2493 */;
-import FriendsIcon from "FriendsIcon" /* 4831 */;
-import ClockIcon from "ClockIcon" /* 4849 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import ChatIcon from "ChatIcon" /* 5855 */;
-import ThreadIcon from "ThreadIcon" /* 5857 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import FamilyCenterConstants from "FamilyCenterConstants" /* 7049 */;
-import CreditCardIcon from "CreditCardIcon" /* 8127 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8296 */;
-import GiftIcon from "GiftIcon" /* 10766 */;
-import Modal2 from "Modal" /* 10976 */;
-import PhoneIcon from "PhoneIcon" /* 11532 */;
-import ServerGridIcon from "ServerGridIcon" /* 13394 */;
+import _modDef2521 from "module_2521" /* 2521 */;
+import FriendsIcon from "FriendsIcon" /* 4837 */;
+import ClockIcon from "ClockIcon" /* 4855 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import ChatIcon from "ChatIcon" /* 5862 */;
+import ThreadIcon from "ThreadIcon" /* 5864 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7062 */;
+import CreditCardIcon from "CreditCardIcon" /* 8160 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8329 */;
+import GiftIcon from "GiftIcon" /* 10779 */;
+import Modal2 from "Modal" /* 10989 */;
+import PhoneIcon from "PhoneIcon" /* 11545 */;
+import ServerGridIcon from "ServerGridIcon" /* 13413 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -203,9 +203,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp4 = closure_11();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1126).intl;
-    const stringResult = intl.string(_modDef2493.n6LOrh);
+    const stringResult = intl.string(_modDef2521.n6LOrh);
     const intl2 = tmp(1126).intl;
-    const stringResult1 = intl2.string(_modDef2493.JNLpDZ);
+    const stringResult1 = intl2.string(_modDef2521.JNLpDZ);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp5 = stringResult;
@@ -213,7 +213,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const tmpResult = tmp(11531);
+  const tmpResult = tmp(11544);
   const ageSpecificText = tmpResult.useAgeSpecificText(tmp5, tmp6);
   const tmp12 = useIsInAdultAgeGroupDefault();
   _require = tmp12;
@@ -244,9 +244,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const _Symbol = Symbol;
                 if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
                   let obj2 = { children: closure_6(Button, obj3) };
-                  const ModalFooter = tmp(11536).ModalFooter;
+                  const ModalFooter = tmp(11549).ModalFooter;
                   obj3 = { variant: "primary", text: intl3.string(tmp(1126).t["NX+WJN"]), onPress: ModalActionCreatorsDefault.pop };
-                  Button = tmp(5594).Button;
+                  Button = tmp(5601).Button;
                   intl3 = tmp(1126).intl;
                   const tmp32 = closure_6(ModalFooter, obj2);
                   cResult[25] = tmp32;
@@ -290,10 +290,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  const tmpResult2 = tmp(8298);
+  const tmpResult2 = tmp(8331);
   const sortedActivityTypeConfigs = tmpResult2.getSortedActivityTypeConfigs();
-  const ModalScreen = tmp(8095).ModalScreen;
-  const ModalContent = tmp(8096).ModalContent;
+  const ModalScreen = tmp(8128).ModalScreen;
+  const ModalContent = tmp(8129).ModalContent;
   const container = tmp4.container;
   if (cResult[12] === ageSpecificText) {
     let tmp20;
@@ -307,7 +307,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           [tmp2, obj] = tmp;
           obj1 = { IconComponent: closure_8[tmp2], header: obj.tooltipHeader(), description: null };
           tmp3 = jsx;
-          tmp4 = f68323;
+          tmp4 = f68386;
           tmp5 = closure_0;
           tooltipDescription = obj.tooltipDescription;
           obj1.description = tooltipDescription(tmp5);
@@ -323,7 +323,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           [tmp2, obj] = tmp;
           obj1 = { IconComponent: closure_8[tmp2], header: obj.tooltipHeader(), description: null };
           tmp3 = jsx;
-          tmp4 = f68323;
+          tmp4 = f68386;
           tmp5 = closure_0;
           tooltipDescription = obj.tooltipDescription;
           obj1.description = tooltipDescription(tmp5);
@@ -350,7 +350,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp13 = View;
   }
   const obj7 = { style: tmp4.groupHeader, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: ageSpecificText };
-  const tmp21 = closure_6(tmp(4886).Text, obj7);
+  const tmp21 = closure_6(tmp(4892).Text, obj7);
   cResult[12] = ageSpecificText;
   cResult[13] = tmp4.groupHeader;
   cResult[14] = tmp21;
@@ -367,9 +367,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const useAgeSpecificText = require("useAgeSpecificText").useAgeSpecificText;
   require("useAgeSpecificText");
   const intl = require("intl").intl;
-  const stringResult = intl.string(_modDef2493.n6LOrh);
+  const stringResult = intl.string(_modDef2521.n6LOrh);
   const intl2 = require("intl").intl;
-  const ageSpecificText = useAgeSpecificText(stringResult, intl2.string(_modDef2493.JNLpDZ));
+  const ageSpecificText = useAgeSpecificText(stringResult, intl2.string(_modDef2521.JNLpDZ));
   _require = useIsInAdultAgeGroupDefault();
   obj = require("FamilyCenterUtils");
   const sortedActivityTypeConfigs = obj.getSortedActivityTypeConfigs();

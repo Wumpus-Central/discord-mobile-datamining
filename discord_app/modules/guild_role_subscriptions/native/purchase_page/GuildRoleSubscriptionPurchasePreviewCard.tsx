@@ -1,24 +1,24 @@
-// === Module 16501: GuildRoleSubscriptionPurchasePreviewCard ===
+// === Module 16541: GuildRoleSubscriptionPurchasePreviewCard ===
 
-// Module 16501 (GuildRoleSubscriptionPurchasePreviewCard)
+// Module 16541 (GuildRoleSubscriptionPurchasePreviewCard)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
-import LayoutUtils from "LayoutUtils" /* 9953 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15045 */;
-import EmojiIconDefault from "EmojiIcon" /* 15058 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
+import LayoutUtils from "LayoutUtils" /* 9966 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15060 */;
+import EmojiIconDefault from "EmojiIcon" /* 15073 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -197,7 +197,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const substr = emojiIds.slice(0, maxEmojis);
   const diff = emojiIds.length - maxEmojis;
-  const GappedList = guildId(9953).GappedList;
+  const GappedList = guildId(9966).GappedList;
   if (cResult[10] !== guildId) {
     class I {
       constructor(arg0) {
@@ -231,7 +231,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         return jsx(closure_1(closure_3[15]), obj, arg0);
       }
     }
-    const obj4 = { style: tmp4.emojiTruncatedContainer, children: closure_9(guildId(4886).Text, obj5) };
+    const obj4 = { style: tmp4.emojiTruncatedContainer, children: closure_9(guildId(4892).Text, obj5) };
     obj5 = { variant: "text-sm/bold", color: "text-default", children: items };
     items = ["+", diff];
     tmp15 = closure_8(closure_6, obj4, "andMore");
@@ -402,7 +402,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       tmp12 = cResult[5];
     }
     if (cResult[6] !== stateFromStores) {
-      const tmpResult2 = channelId(5812);
+      const tmpResult2 = channelId(5819);
       const channelIcon = tmpResult2.getChannelIcon(stateFromStores);
       cResult[6] = stateFromStores;
       cResult[7] = channelIcon;
@@ -430,7 +430,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     }
     if (cResult[11] !== tmp9) {
       const obj4 = { variant: "text-md/semibold", color: "text-default", children: tmp9 };
-      const tmp23 = closure_8(channelId(4886).Text, obj4);
+      const tmp23 = closure_8(channelId(4892).Text, obj4);
       cResult[11] = tmp9;
       cResult[12] = tmp23;
       tmp21 = tmp23;
@@ -480,10 +480,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     const obj2 = { style: { flexDirection: "row", alignItems: "center" }, children: items2 };
     const obj3 = { size: channelId(1188).Icon.Sizes.REFRESH_SMALL_16, source: tmpResult.getChannelIcon(stateFromStores) };
     const Icon = tmp(1188).Icon;
-    tmpResult = channelId(5812);
+    tmpResult = channelId(5819);
     items2 = [closure_8(Icon, obj3), closure_8(channelId(1188).Spacer, { size: 4 }), ];
     const obj4 = { variant: "text-md/semibold", color: "text-default", children: tmp4 };
-    items2[2] = closure_8(channelId(4886).Text, obj4);
+    items2[2] = closure_8(channelId(4892).Text, obj4);
     title = closure_9(closure_6, obj2);
   }
   return closure_8(closure_15, { title, description });
@@ -589,7 +589,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
   const first2 = _slicedToArray(obj5.useChannelBenefits(listingId), 1)[0];
   const obj6 = GuildRoleSubscriptionListingEditStateUtilsAll;
   const first3 = _slicedToArray(obj6.useIntangibleBenefits(listingId), 1)[0];
-  const obj7 = listingId(16497);
+  const obj7 = listingId(16537);
   const formattedSubscriptionPlan = obj7.useFormattedSubscriptionPlan(listingId);
   const first4 = first2[0];
   const first5 = first3[0];
@@ -630,7 +630,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
       }
       if (cResult[9] !== first) {
         const obj9 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: first };
-        const tmp25 = closure_8(tmp2(4886).Text, obj9);
+        const tmp25 = closure_8(tmp2(4892).Text, obj9);
         cResult[9] = first;
         cResult[10] = tmp25;
         tmp23 = tmp25;
@@ -647,7 +647,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
       }
       if (cResult[12] !== formattedSubscriptionPlan) {
         const obj10 = { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan };
-        const tmp31 = closure_8(tmp2(4886).Text, obj10);
+        const tmp31 = closure_8(tmp2(4892).Text, obj10);
         cResult[12] = formattedSubscriptionPlan;
         cResult[13] = tmp31;
         tmp29 = tmp31;
@@ -677,7 +677,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
             }
             if (cResult[22] !== listingId) {
               const obj11 = { listingId };
-              const tmp46 = closure_8(guildId(16503), obj11);
+              const tmp46 = closure_8(guildId(16543), obj11);
               cResult[22] = listingId;
               cResult[23] = tmp46;
               tmp43 = tmp46;
@@ -737,7 +737,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
                             },
                 children: items4
               };
-              GappedList = tmp2(9953).GappedList;
+              GappedList = tmp2(9966).GappedList;
               if (size > 0) {
                 const obj15 = { children: items2 };
                 const obj16 = { title: intl.string(tmp2(1126).t.ebOU2b), count: size };
@@ -817,7 +817,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
       tmp32 = tmp35;
     }
     const obj54 = { source: tmp14, style: tmp5.image };
-    const tmp18 = closure_8(guildId(5974), obj54);
+    const tmp18 = closure_8(guildId(5981), obj54);
     cResult[5] = tmp5.image;
     cResult[6] = tmp14;
     cResult[7] = tmp18;
@@ -827,7 +827,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     ActionSheetActionCreatorsDefault;
     const obj = { listingId, guildId };
-    const tmp2 = asyncRequire(16502, dependencyMap.paths);
+    const tmp2 = asyncRequire(16542, dependencyMap.paths);
     openLazy(tmp2, "PurchaseCard:" + listingId, obj);
   };
   cResult[0] = guildId;
@@ -868,10 +868,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
   size = first1.size;
   const obj7 = { style: tmp2.container, children: items2 };
   const obj8 = { style: tmp2.header, children: items };
-  const obj6 = listingId(16497);
+  const obj6 = listingId(16537);
   const formattedSubscriptionPlan = obj6.useFormattedSubscriptionPlan(listingId);
   const tmp13 = guildId;
-  const tmp14 = guildId(5974);
+  const tmp14 = guildId(5981);
   if (str == null) {
     str = "";
   }
@@ -880,9 +880,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
   items[0] = closure_8(tmp14, obj9);
   items[1] = closure_8(listingId(1188).Spacer, { size: 16 });
   const obj10 = { children: items1 };
-  items1 = [closure_8(listingId(4886).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: first }), closure_8(listingId(1188).Spacer, { size: 4 }), closure_8(listingId(4886).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
+  items1 = [closure_8(listingId(4892).Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: first }), closure_8(listingId(1188).Spacer, { size: 4 }), closure_8(listingId(4892).Text, { variant: "heading-md/medium", color: "text-default", children: formattedSubscriptionPlan })];
   items[2] = closure_9(closure_6, obj10);
-  items2 = [closure_9(closure_6, obj8), closure_8(listingId(1188).Spacer, { size: 16 }), closure_8(tmp13(16503), { listingId }), ];
+  items2 = [closure_9(closure_6, obj8), closure_8(listingId(1188).Spacer, { size: 16 }), closure_8(tmp13(16543), { listingId }), ];
   let tmp10Result6 = length > 0 || size > 0 || length2 > 0;
   if (tmp10Result6) {
     const items3 = [closure_8(listingId(1188).Spacer, { size: 24 }), , ];
@@ -894,7 +894,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
         },
       children: items6
     };
-    GappedList = tmp6(9953).GappedList;
+    GappedList = tmp6(9966).GappedList;
     if (size > 0) {
       const obj13 = { children: items4 };
       const obj14 = { title: intl.string(listingId(1126).t.ebOU2b), count: size };
@@ -943,7 +943,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((listingId) => {
           const openLazy = ActionSheetActionCreatorsDefault.openLazy;
           ActionSheetActionCreatorsDefault;
           const obj = { listingId, guildId };
-          const tmp2 = asyncRequire(16502, dependencyMap.paths);
+          const tmp2 = asyncRequire(16542, dependencyMap.paths);
           openLazy(tmp2, "PurchaseCard:" + listingId, obj);
         }
     };

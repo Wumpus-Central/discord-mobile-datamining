@@ -1,10 +1,10 @@
-// === Module 8600: schemas ===
+// === Module 8635: schemas ===
 
-// Module 8600 (schemas)
-import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 8598 */;
-import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 8599 */;
-import z18 from "z" /* 8601 */;
-import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 8677 */;
+// Module 8635 (schemas)
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 8633 */;
+import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 8634 */;
+import z18 from "z" /* 8636 */;
+import ApplicationWidgetConfigSurface from "ApplicationWidgetConfigSurface" /* 8712 */;
 import size from "module_2" /* 2 */;
 
 let partialRecord;

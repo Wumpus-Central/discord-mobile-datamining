@@ -1,13 +1,13 @@
-// === Module 10560: UnifiedGiftModalDetailsScreen ===
+// === Module 10573: UnifiedGiftModalDetailsScreen ===
 
-// Module 10560 (UnifiedGiftModalDetailsScreen)
+// Module 10573 (UnifiedGiftModalDetailsScreen)
 import nativeDefault from "native" /* 587 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10559 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10572 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

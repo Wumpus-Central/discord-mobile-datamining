@@ -1,14 +1,14 @@
-// === Module 14211: AIGlyphText ===
+// === Module 14229: AIGlyphText ===
 
-// Module 14211 (AIGlyphText)
+// Module 14229 (AIGlyphText)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import useToken2 from "useToken" /* 4580 */;
-import AIGlyphFont from "AIGlyphFont" /* 14212 */;
+import useToken2 from "useToken" /* 4586 */;
+import AIGlyphFont from "AIGlyphFont" /* 14230 */;
 import react from "react" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import createStyles from "createStyles" /* 4890 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// === Module 9611: GlobalStatusIndicator ===
+// === Module 9624: GlobalStatusIndicator ===
 
-// Module 9611 (GlobalStatusIndicator)
+// Module 9624 (GlobalStatusIndicator)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5097 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9607 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5103 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9620 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import NativeMenuStore from "NativeMenuStore" /* 9612 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import NativeMenuStore from "NativeMenuStore" /* 9625 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

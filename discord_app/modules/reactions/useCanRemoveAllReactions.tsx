@@ -1,8 +1,8 @@
-// === Module 9978: useCanRemoveAllReactions ===
+// === Module 9991: useCanRemoveAllReactions ===
 
-// Module 9978 (useCanRemoveAllReactions)
+// Module 9991 (useCanRemoveAllReactions)
 import Constants from "Constants" /* 1085 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

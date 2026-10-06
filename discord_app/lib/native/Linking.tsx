@@ -1,8 +1,8 @@
-// === Module 4565: Linking ===
+// === Module 4571: Linking ===
 
-// Module 4565 (Linking)
+// Module 4571 (Linking)
 import react_native from "react-native" /* 17 */;
-import handleURL from "handleURL" /* 4560 */;
+import handleURL from "handleURL" /* 4566 */;
 import size from "module_2" /* 2 */;
 
 const Linking = react_native.Linking;

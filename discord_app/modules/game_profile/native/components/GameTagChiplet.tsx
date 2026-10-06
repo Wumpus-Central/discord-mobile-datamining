@@ -1,14 +1,14 @@
-// === Module 17299: GameTagChiplet ===
+// === Module 17327: GameTagChiplet ===
 
-// Module 17299 (GameTagChiplet)
+// Module 17327 (GameTagChiplet)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8319 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8320 */;
-import GuildTag from "GuildTag" /* 9395 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8353 */;
+import GuildTag from "GuildTag" /* 9409 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

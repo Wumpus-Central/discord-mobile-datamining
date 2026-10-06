@@ -1,8 +1,8 @@
-// === Module 6469: useTypeConsolidationTextTransform ===
+// === Module 6476: useTypeConsolidationTextTransform ===
 
-// Module 6469 (useTypeConsolidationTextTransform)
+// Module 6476 (useTypeConsolidationTextTransform)
 import react from "react" /* 576 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, variant) => {
     obj4 = { variant: "experimental/body-sm/medium", style };
     const obj3 = { variant: "experimental/body-sm/medium", style };
   } else {
-    obj4 = { variant, style: "r" };
+    obj4 = { variant, style: "Array" };
   }
   cResult[0] = variant;
   cResult[1] = manaTypeConsolidationExperiment;
@@ -40,7 +40,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, variant) => {
     obj3 = { variant: "experimental/body-sm/medium", style };
     const obj2 = { variant: "experimental/body-sm/medium", style };
   } else {
-    obj3 = { variant, style: "r" };
+    obj3 = { variant, style: "Array" };
   }
   return obj3;
 });

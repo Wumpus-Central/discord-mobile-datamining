@@ -1,8 +1,8 @@
-// === Module 7886: useMaybeFetchEquippedCollectibleProducts ===
+// === Module 7897: useMaybeFetchEquippedCollectibleProducts ===
 
-// Module 7886 (useMaybeFetchEquippedCollectibleProducts)
-import useDisplayProfileDefault from "useDisplayProfile" /* 7857 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 7889 */;
+// Module 7897 (useMaybeFetchEquippedCollectibleProducts)
+import useDisplayProfileDefault from "useDisplayProfile" /* 7868 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 7900 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

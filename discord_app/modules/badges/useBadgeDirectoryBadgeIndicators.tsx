@@ -1,10 +1,10 @@
-// === Module 10890: useBadgeDirectoryBadgeIndicators ===
+// === Module 10903: useBadgeDirectoryBadgeIndicators ===
 
-// Module 10890 (useBadgeDirectoryBadgeIndicators)
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
-import BadgeUtils from "BadgeUtils" /* 10889 */;
+// Module 10903 (useBadgeDirectoryBadgeIndicators)
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
+import BadgeUtils from "BadgeUtils" /* 10902 */;
 import react from "react" /* 19 */;
-import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 10891 */;
+import BadgeDirectorySeenStore from "BadgeDirectorySeenStore" /* 10904 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

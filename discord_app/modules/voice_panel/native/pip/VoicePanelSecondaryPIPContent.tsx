@@ -1,17 +1,17 @@
-// === Module 17309: VoicePanelSecondaryPIPContent ===
+// === Module 17337: VoicePanelSecondaryPIPContent ===
 
-// Module 17309 (VoicePanelSecondaryPIPContent)
+// Module 17337 (VoicePanelSecondaryPIPContent)
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 2011 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
-import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17173 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10738 */;
+import getActivityContainerPIPStylesSpecDefault from "getActivityContainerPIPStylesSpec" /* 17202 */;
 import react from "react" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import FramesStore from "FramesStore" /* 8703 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import createStyles from "createStyles" /* 4890 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

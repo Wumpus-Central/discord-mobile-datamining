@@ -1,14 +1,14 @@
-// === Module 11626: MessageAttachmentUtils ===
+// === Module 11640: MessageAttachmentUtils ===
 
-// Module 11626 (MessageAttachmentUtils)
+// Module 11640 (MessageAttachmentUtils)
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 6799 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7540 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 7945 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6805 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 6809 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6810 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7551 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 7956 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -105,7 +105,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       return tmp9;
     }
   }
-  tmp(6795);
+  tmp(6805);
   if (cResult[7] === stateFromStores) {
     let tmp12;
     if (cResult[8] === setting) {
@@ -134,8 +134,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   });
   const RenderSpoilers = channel(2028).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
-  const obj2 = channel(6795);
-  const enabledHarmTypesBitmaskForChannelType = obj2.getEnabledHarmTypesBitmaskForChannelType(channel(6800).ContentHarmTypeChannel.GUILD);
+  const obj2 = channel(6805);
+  const enabledHarmTypesBitmaskForChannelType = obj2.getEnabledHarmTypesBitmaskForChannelType(channel(6810).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 });
 const result = size.fileFinishedImporting("modules/messages/MessageAttachmentUtils.tsx");

@@ -1,6 +1,6 @@
-// === Module 5795: MarkupTextRule ===
+// === Module 5802: MarkupTextRule ===
 
-// Module 5795 (MarkupTextRule)
+// Module 5802 (MarkupTextRule)
 import _modDef1936 from "module_1936" /* 1936 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 8091: AgeVerificationURLActionCreators ===
+// === Module 8124: AgeVerificationURLActionCreators ===
 
-// Module 8091 (AgeVerificationURLActionCreators)
+// Module 8124 (AgeVerificationURLActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AgeVerificationConstants from "AgeVerificationConstants" /* 8085 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8092 */;
+import AgeVerificationConstants from "AgeVerificationConstants" /* 8118 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
@@ -53,7 +53,7 @@ let obj = function _requestAgeVerification() {
             ({ method: c0, classificationId: c1, vendor: c2 } = closure_0);
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (method === 1) {
@@ -312,7 +312,7 @@ obj = function _initiateSuspendedUserAgeVerification() {
             token = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (from_classification_id === 1) {
@@ -443,7 +443,7 @@ obj = function _requestIncodeSessionBootstrap() {
             }
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {

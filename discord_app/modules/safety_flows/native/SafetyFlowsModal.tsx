@@ -1,13 +1,13 @@
-// === Module 18062: SafetyFlowsModal ===
+// === Module 18107: SafetyFlowsModal ===
 
-// Module 18062 (SafetyFlowsModal)
+// Module 18107 (SafetyFlowsModal)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import Navigator from "Navigator" /* 6496 */;
-import StepModal from "StepModal" /* 14272 */;
-import types from "types" /* 18059 */;
-import SafetyFlowsUtils from "SafetyFlowsUtils" /* 18065 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import Navigator from "Navigator" /* 6503 */;
+import StepModal from "StepModal" /* 14290 */;
+import types from "types" /* 18104 */;
+import SafetyFlowsUtils from "SafetyFlowsUtils" /* 18110 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -369,7 +369,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((initialScreen) => 
     }
   }, items);
   const memo1 = react.useMemo(() => ({ task, setTask }), items1);
-  const Provider = task(18064).SafetyFlowTaskContext.Provider;
+  const Provider = task(18109).SafetyFlowTaskContext.Provider;
   return <Provider value={memo1}>{null}</Provider>;
 });
 const result = size.fileFinishedImporting("modules/safety_flows/native/SafetyFlowsModal.tsx");

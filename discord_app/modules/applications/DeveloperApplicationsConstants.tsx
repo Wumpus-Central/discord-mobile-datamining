@@ -1,6 +1,6 @@
-// === Module 12257: DeveloperApplicationsConstants ===
+// === Module 12272: DeveloperApplicationsConstants ===
 
-// Module 12257 (DeveloperApplicationsConstants)
+// Module 12272 (DeveloperApplicationsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/DeveloperApplicationsConstants.tsx");

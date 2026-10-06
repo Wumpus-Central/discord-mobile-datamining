@@ -1,18 +1,18 @@
-// === Module 7899: useProfileTheme ===
+// === Module 7910: useProfileTheme ===
 
-// Module 7899 (useProfileTheme)
+// Module 7910 (useProfileTheme)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import shims from "shims" /* 586 */;
 import Constants from "Constants" /* 1085 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import useAvatarColor from "useAvatarColor" /* 7815 */;
-import useProfileThemeOverrideStore from "useProfileThemeOverrideStore" /* 7900 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7901 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import useAvatarColor from "useAvatarColor" /* 7826 */;
+import useProfileThemeOverrideStore from "useProfileThemeOverrideStore" /* 7911 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7912 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

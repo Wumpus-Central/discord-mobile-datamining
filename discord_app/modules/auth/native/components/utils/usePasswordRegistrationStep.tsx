@@ -1,8 +1,8 @@
-// === Module 15889: usePasswordRegistrationStep ===
+// === Module 15928: usePasswordRegistrationStep ===
 
-// Module 15889 (usePasswordRegistrationStep)
-import getErrorDefault from "getError" /* 6445 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15867 */;
+// Module 15928 (usePasswordRegistrationStep)
+import getErrorDefault from "getError" /* 6452 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -57,7 +57,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp11 = cResult[3];
   }
   importDefault = tmp11;
-  const tmpResult = tmp(15890);
+  const tmpResult = tmp(15929);
   const passwordScore1 = tmpResult.usePasswordScore(first1);
   const passwordScore = passwordScore1.passwordScore;
   let tmp15 = null == first1;

@@ -1,18 +1,18 @@
-// === Module 5616: SortedGuildStore ===
+// === Module 5623: SortedGuildStore ===
 
-// Module 5616 (SortedGuildStore)
+// Module 5623 (SortedGuildStore)
 import _modDef38 from "module_38" /* 38 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import GuildsTree from "GuildsTree" /* 5619 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
-import LurkingStore from "LurkingStore" /* 4510 */;
+import GuildsTree from "GuildsTree" /* 5626 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
+import LurkingStore from "LurkingStore" /* 4516 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5617 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5624 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import UserStore from "UserStore" /* 1377 */;
 import FunctionUtils_mod from "FunctionUtils" /* 2026 */;
 import size from "module_2" /* 2 */;
@@ -324,7 +324,7 @@ function handleGuildFolderDeleteLocal(targetId) {
   const element = guildsTree.getNode(targetId.targetId);
   let tmp = null != element;
   if (tmp) {
-    const tmp4 = element.type === element(5619).GuildsNodeType.FOLDER;
+    const tmp4 = element.type === element(5626).GuildsNodeType.FOLDER;
     const tmp2 = element;
     if (tmp4) {
       const children = element.children;

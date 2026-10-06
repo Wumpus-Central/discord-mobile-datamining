@@ -1,33 +1,33 @@
-// === Module 18010: QuestMobileEmbedVisibilityManager ===
+// === Module 18055: QuestMobileEmbedVisibilityManager ===
 
-// Module 18010 (QuestMobileEmbedVisibilityManager)
+// Module 18055 (QuestMobileEmbedVisibilityManager)
 import Constants from "Constants" /* 1085 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
 import LRUCacheDefault from "LRUCache" /* 1444 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import CodedLink from "CodedLink" /* 4875 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import useAlertStore2 from "useAlertStore" /* 5709 */;
-import getQuestLogger from "getQuestLogger" /* 7193 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7217 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 10959 */;
-import isChannelFocused from "isChannelFocused" /* 11825 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import CodedLink from "CodedLink" /* 4881 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import useAlertStore2 from "useAlertStore" /* 5716 */;
+import getQuestLogger from "getQuestLogger" /* 7206 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7230 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 10972 */;
+import isChannelFocused from "isChannelFocused" /* 11839 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import ChannelDetailsStore from "ChannelDetailsStore" /* 7511 */;
-import VoicePanelStore from "VoicePanelStore" /* 5098 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ChannelDetailsStore from "ChannelDetailsStore" /* 7522 */;
+import VoicePanelStore from "VoicePanelStore" /* 5104 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import AlertStore from "AlertStore" /* 11162 */;
+import AlertStore from "AlertStore" /* 11175 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import QuestStore from "QuestStore" /* 7187 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import QuestStore from "QuestStore" /* 7200 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let map, questLogger, set;

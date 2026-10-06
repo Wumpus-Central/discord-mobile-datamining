@@ -1,18 +1,18 @@
-// === Module 14661: BaseUpsellActionSheet ===
+// === Module 14677: BaseUpsellActionSheet ===
 
-// Module 14661 (BaseUpsellActionSheet)
+// Module 14677 (BaseUpsellActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4574 */;
-import CircleCheckIcon2 from "CircleCheckIcon" /* 4792 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import GuildIconDefault from "GuildIcon" /* 5971 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14659 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
+import CircleCheckIcon2 from "CircleCheckIcon" /* 4798 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import GuildIconDefault from "GuildIcon" /* 5978 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14675 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -77,7 +77,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const tmpResult = guildId(504);
   const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
   if (cResult[3] !== stateFromStores) {
-    const obj2 = { guild: stateFromStores, size: guildId(5971).GuildIconSizes.XSMALL };
+    const obj2 = { guild: stateFromStores, size: guildId(5978).GuildIconSizes.XSMALL };
     const tmp11 = GuildIconDefault;
     const tmp12 = closure_7(tmp11, obj2);
     cResult[3] = stateFromStores;
@@ -92,7 +92,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const items = [GuildStore];
   const obj = guildId(504);
   const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  const obj2 = { guild: stateFromStores, size: guildId(5971).GuildIconSizes.XSMALL };
+  const obj2 = { guild: stateFromStores, size: guildId(5978).GuildIconSizes.XSMALL };
   const tmp2 = GuildIconDefault;
   return closure_7(tmp2, obj2);
 });
@@ -117,7 +117,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ guildIds, direction, onPress } = arg0);
   const tmp4 = closure_10();
   if (cResult[0] !== guildIds) {
-    const tmpResult = arr(14659);
+    const tmpResult = arr(14675);
     const result = tmpResult.sortGuildIdsByFrecency(guildIds);
     cResult[0] = guildIds;
     cResult[1] = result;
@@ -146,7 +146,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const stateFromStores = tmpResult3.useStateFromStores(tmp6, tmp8);
   if (cResult[5] !== direction) {
     let stringResult;
-    if (direction === arr(14659).ChangeDirection.RESTRICTING) {
+    if (direction === arr(14675).ChangeDirection.RESTRICTING) {
       const intl2 = tmp(1126).intl;
       stringResult = intl2.string(tmp(1126).t.e6Kpa7);
     } else {
@@ -282,8 +282,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const obj3 = { variant: "text-md/semibold", color: "text-strong", children: tmp20 };
     cResult[15] = tmp20;
-    cResult[16] = closure_7(arr(4886).Text, obj3);
-    const tmp23 = closure_7(arr(4886).Text, obj3);
+    cResult[16] = closure_7(arr(4892).Text, obj3);
+    const tmp23 = closure_7(arr(4892).Text, obj3);
   } else {
     class E {
       constructor() {
@@ -302,7 +302,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const statusRow = tmp4.statusRow;
-  if (direction === arr(14659).ChangeDirection.RESTRICTING) {
+  if (direction === arr(14675).ChangeDirection.RESTRICTING) {
     class E {
       constructor() {
         return closure_1.map((item) => {
@@ -395,8 +395,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const obj6 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, style: tmp26, children: tmp27 };
       cResult[23] = tmp4.guildSummary;
       cResult[24] = tmp27;
-      cResult[25] = closure_7(arr(4886).Text, obj6);
-      const tmp31 = closure_7(arr(4886).Text, obj6);
+      cResult[25] = closure_7(arr(4892).Text, obj6);
+      const tmp31 = closure_7(arr(4892).Text, obj6);
     }
     const intl3 = tmp(1126).intl;
     const format = intl3.format;
@@ -409,8 +409,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   cResult[17] = tmp10;
   cResult[18] = "text-muted";
-  cResult[19] = closure_7(arr(4886).Text, { variant: "text-sm/medium", color: "text-muted", children: tmp10 });
-  const tmp25 = closure_7(arr(4886).Text, { variant: "text-sm/medium", color: "text-muted", children: tmp10 });
+  cResult[19] = closure_7(arr(4892).Text, { variant: "text-sm/medium", color: "text-muted", children: tmp10 });
+  const tmp25 = closure_7(arr(4892).Text, { variant: "text-sm/medium", color: "text-muted", children: tmp10 });
 }) : ((guildIds) => {
   let ChevronLargeRightIcon;
   let direction;
@@ -573,7 +573,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
               const _Symbol2 = Symbol;
               if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
                 let obj2 = { variant: "secondary", size: "md", text: intl.string(toastContent(1126).t.X1rGEm), onPress: tmp7 };
-                const Button = toastContent(5594).Button;
+                const Button = toastContent(5601).Button;
                 intl = toastContent(1126).intl;
                 const tmp23 = closure_7(Button, obj2);
                 cResult[17] = tmp23;
@@ -602,7 +602,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
                 let obj3 = { startExpanded: true, children: closure_8(closure_5, obj4) };
                 obj4 = { style: tmp4.container, children: items };
                 items = [tmp8, tmp11, tmp14, tmp24];
-                BottomSheet = toastContent(6645).BottomSheet;
+                BottomSheet = toastContent(6652).BottomSheet;
                 const tmp32 = closure_7(BottomSheet, obj3);
                 cResult[21] = tmp4.container;
                 cResult[22] = tmp8;
@@ -621,7 +621,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
               tmp24 = tmp27;
             }
             const obj6 = { variant: "primary", size: "md", text: confirmText, onPress: tmp5 };
-            const tmp20 = closure_7(toastContent(5594).Button, obj6);
+            const tmp20 = closure_7(toastContent(5601).Button, obj6);
             cResult[14] = confirmText;
             cResult[15] = tmp5;
             cResult[16] = tmp20;
@@ -637,14 +637,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
         tmp14 = tmp17;
       }
       const obj8 = { style: tmp4.description, variant: "text-md/medium", color: "text-default", children: subtitle };
-      const tmp13 = closure_7(toastContent(4886).Text, obj8);
+      const tmp13 = closure_7(toastContent(4892).Text, obj8);
       cResult[7] = tmp4.description;
       cResult[8] = subtitle;
       cResult[9] = tmp13;
       tmp11 = tmp13;
     }
     const obj9 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title };
-    const tmp10 = closure_7(toastContent(4886).Text, obj9);
+    const tmp10 = closure_7(toastContent(4892).Text, obj9);
     cResult[4] = tmp4.title;
     cResult[5] = title;
     cResult[6] = tmp10;
@@ -706,16 +706,16 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirm) => {
   }, []);
   let obj = { startExpanded: true, children: closure_8(closure_5, obj2) };
   obj2 = { style: tmp.container, children: items1 };
-  BottomSheet = toastContent(6645).BottomSheet;
+  BottomSheet = toastContent(6652).BottomSheet;
   let obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", color: "text-strong", children: title };
-  items1 = [closure_7(toastContent(4886).Text, obj3), , , ];
+  items1 = [closure_7(toastContent(4892).Text, obj3), , , ];
   let obj4 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: subtitle };
-  items1[1] = closure_7(toastContent(4886).Text, obj4);
+  items1[1] = closure_7(toastContent(4892).Text, obj4);
   items1[2] = closure_7(closure_12, { guildIds: affectedGuildIds, direction, onPress: onCardPress });
   let obj5 = { style: tmp.buttonsContainer, children: items2 };
-  items2 = [closure_7(toastContent(5594).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
+  items2 = [closure_7(toastContent(5601).Button, { variant: "primary", size: "md", text: confirmText, onPress: callback }), ];
   const obj6 = { variant: "secondary", size: "md", text: intl.string(toastContent(1126).t.X1rGEm), onPress: callback1 };
-  const Button = toastContent(5594).Button;
+  const Button = toastContent(5601).Button;
   intl = toastContent(1126).intl;
   items2[1] = closure_7(Button, obj6);
   items1[3] = closure_8(closure_5, obj5);

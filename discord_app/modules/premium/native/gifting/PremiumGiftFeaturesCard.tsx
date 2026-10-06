@@ -1,37 +1,37 @@
-// === Module 10482: PremiumGiftFeaturesCard ===
+// === Module 10495: PremiumGiftFeaturesCard ===
 
-// Module 10482 (PremiumGiftFeaturesCard)
+// Module 10495 (PremiumGiftFeaturesCard)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import StringUtils from "StringUtils" /* 2018 */;
-import native from "native" /* 4589 */;
-import ClockIcon2 from "ClockIcon" /* 4849 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import TextStylesDefault from "TextStyles" /* 5915 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8487 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 8877 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 8887 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 8889 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 8894 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10469 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10483 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10484 */;
-import MarketingComponentHooks from "MarketingComponentHooks" /* 10485 */;
-import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10486 */;
-import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10487 */;
-import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10488 */;
+import native from "native" /* 4595 */;
+import ClockIcon2 from "ClockIcon" /* 4855 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import TextStylesDefault from "TextStyles" /* 5922 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8520 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 8906 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 8916 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 8918 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 8923 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10482 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10496 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10497 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10498 */;
+import SlayerStorefrontTimeUtils from "SlayerStorefrontTimeUtils" /* 10499 */;
+import PremiumGiftCountdownBadgeDefault from "PremiumGiftCountdownBadge" /* 10500 */;
+import PremiumGiftPromotionDetailsDefault from "PremiumGiftPromotionDetails" /* 10501 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10396 */;
+import PromotionsStore from "PromotionsStore" /* 10409 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Constants from "Constants" /* 1096 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// === Module 11628: ForumPostTimestamp ===
+// === Module 11642: ForumPostTimestamp ===
 
-// Module 11628 (ForumPostTimestamp)
+// Module 11642 (ForumPostTimestamp)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ForumHooks from "ForumHooks" /* 7528 */;
-import ForumChannelStore from "ForumChannelStore" /* 11615 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ForumHooks from "ForumHooks" /* 7539 */;
+import ForumChannelStore from "ForumChannelStore" /* 11629 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

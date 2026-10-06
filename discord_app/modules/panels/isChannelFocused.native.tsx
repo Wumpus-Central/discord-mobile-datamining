@@ -1,15 +1,15 @@
-// === Module 11825: isChannelFocused ===
+// === Module 11839: isChannelFocused ===
 
-// Module 11825 (isChannelFocused)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4738 */;
-import useChatLayout from "useChatLayout" /* 4739 */;
-import NavigationHistoryStore2 from "NavigationHistoryStore" /* 6831 */;
+// Module 11839 (isChannelFocused)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4744 */;
+import useChatLayout from "useChatLayout" /* 4745 */;
+import NavigationHistoryStore2 from "NavigationHistoryStore" /* 6841 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import VoicePanelStore from "VoicePanelStore" /* 5098 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import VoicePanelStore from "VoicePanelStore" /* 5104 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

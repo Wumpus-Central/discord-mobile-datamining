@@ -3420,7 +3420,7 @@ const textAndImagesSettingsType = new TextAndImagesSettings$Type();
 const MessageType19 = _mod1198.MessageType;
 class NotificationSettings$Type extends MessageType19 {
   constructor() {
-    let items = [, , , , , , , , , , , , , , , , , , , , , , , , ];
+    let items = [, , , , , , , , , , , , , , , , , , , , , , , , , ];
     const obj = {
       no: 1,
       name: "show_in_app_notifications",
@@ -3595,16 +3595,24 @@ class NotificationSettings$Type extends MessageType19 {
         return require("wrappers").BoolValue;
       }
     };
-    const obj2 = { no: 24, name: "notify_friends_on_profile_update", kind: "message", T };
+    items[23] = {
+      no: 24,
+      name: "notify_friends_on_profile_update",
+      kind: "message",
+      T() {
+        return require("wrappers").BoolValue;
+      }
+    };
+    const obj2 = { no: 25, name: "notify_friends_on_come_online", kind: "message", T };
     class T {
       constructor() {
         return require("wrappers").BoolValue;
       }
     }
-    items[23] = obj2;
-    items[24] = {
-      no: 25,
-      name: "notify_friends_on_come_online",
+    items[24] = obj2;
+    items[25] = {
+      no: 26,
+      name: "notify_server_members_on_go_live",
       kind: "message",
       T() {
         return require("wrappers").BoolValue;
@@ -3816,6 +3824,14 @@ class NotificationSettings$Type extends MessageType19 {
       const tagResult24 = tag.tag(25, _mod1198.WireType.LengthDelimited);
       const result10 = internalBinaryWrite20(notifyFriendsOnComeOnline, tagResult24.fork(), writeUnknownFields);
       const joined19 = result10.join();
+    }
+    if (showInAppNotifications.notifyServerMembersOnGoLive) {
+      const BoolValue21 = wrappers.BoolValue;
+      internalBinaryWrite21 = BoolValue21.internalBinaryWrite;
+      const notifyServerMembersOnGoLive = showInAppNotifications.notifyServerMembersOnGoLive;
+      const tagResult25 = tag.tag(26, _mod1198.WireType.LengthDelimited);
+      const result11 = internalBinaryWrite21(notifyServerMembersOnGoLive, tagResult25.fork(), writeUnknownFields);
+      const joined20 = result11.join();
     }
     let onWrite = writeUnknownFields.writeUnknownFields;
     if (false !== onWrite) {

@@ -1,16 +1,16 @@
-// === Module 9122: useAvatarSpeakingColor ===
+// === Module 9157: useAvatarSpeakingColor ===
 
-// Module 9122 (useAvatarSpeakingColor)
+// Module 9157 (useAvatarSpeakingColor)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import useToken from "useToken" /* 4580 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import VadColorConstants from "VadColorConstants" /* 9123 */;
-import useVadColorsDefault from "useVadColors" /* 9124 */;
+import useToken from "useToken" /* 4586 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import VadColorConstants from "VadColorConstants" /* 9158 */;
+import useVadColorsDefault from "useVadColors" /* 9159 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

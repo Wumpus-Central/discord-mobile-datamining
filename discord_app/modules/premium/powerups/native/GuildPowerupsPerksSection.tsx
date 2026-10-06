@@ -1,16 +1,16 @@
-// === Module 12228: GuildPowerupsPerksSection ===
+// === Module 12243: GuildPowerupsPerksSection ===
 
-// Module 12228 (GuildPowerupsPerksSection)
+// Module 12243 (GuildPowerupsPerksSection)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import _modDef2525 from "module_2525" /* 2525 */;
-import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12211 */;
-import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 12229 */;
-import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 12231 */;
-import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 12233 */;
+import _modDef2553 from "module_2553" /* 2553 */;
+import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12226 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 12244 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 12246 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 12248 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -35,7 +35,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const listings = guildId.listings;
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { title: intl.string(_modDef2525.TV3Vm8), description: intl2.string(_modDef2525.STx9hp) };
+    let obj2 = { title: intl.string(_modDef2553.TV3Vm8), description: intl2.string(_modDef2553.STx9hp) };
     const tmp8 = GuildPowerupsSectionHeaderDefault;
     intl = tmp(1126).intl;
     intl2 = tmp(1126).intl;
@@ -108,7 +108,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   ({ guildId: require, listings } = arg0);
   let obj = { children: items };
   const tmp = closure_7();
-  let obj2 = { title: intl.string(_modDef2525.TV3Vm8), description: intl2.string(_modDef2525.STx9hp) };
+  let obj2 = { title: intl.string(_modDef2553.TV3Vm8), description: intl2.string(_modDef2553.STx9hp) };
   const tmp2 = GuildPowerupsSectionHeaderDefault;
   intl = intl3.intl;
   intl2 = intl3.intl;

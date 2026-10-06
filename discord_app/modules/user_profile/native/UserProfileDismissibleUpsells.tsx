@@ -1,24 +1,24 @@
-// === Module 12930: UserProfileDismissibleUpsells ===
+// === Module 12949: UserProfileDismissibleUpsells ===
 
-// Module 12930 (UserProfileDismissibleUpsells)
+// Module 12949 (UserProfileDismissibleUpsells)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Pressables from "Pressables" /* 5909 */;
-import XSmallIcon from "XSmallIcon" /* 6017 */;
-import ColorConstants from "ColorConstants" /* 6938 */;
-import Constants from "Constants" /* 7854 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8313 */;
-import ShopIcon from "ShopIcon" /* 11762 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Pressables from "Pressables" /* 5916 */;
+import XSmallIcon from "XSmallIcon" /* 6024 */;
+import ColorConstants from "ColorConstants" /* 6951 */;
+import Constants from "Constants" /* 7865 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
+import ShopIcon from "ShopIcon" /* 11776 */;
 import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

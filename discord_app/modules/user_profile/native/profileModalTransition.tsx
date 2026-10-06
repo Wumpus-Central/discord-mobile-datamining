@@ -1,6 +1,6 @@
-// === Module 16954: profileModalTransition ===
+// === Module 16980: profileModalTransition ===
 
-// Module 16954 (profileModalTransition)
+// Module 16980 (profileModalTransition)
 import react2 from "react" /* 576 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

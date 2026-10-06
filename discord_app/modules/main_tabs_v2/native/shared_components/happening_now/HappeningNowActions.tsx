@@ -1,28 +1,28 @@
-// === Module 16015: HappeningNowActions ===
+// === Module 16054: HappeningNowActions ===
 
-// Module 16015 (HappeningNowActions)
+// Module 16054 (HappeningNowActions)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9214 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9481 */;
-import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 11936 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12442 */;
-import HappeningNowCardDefault from "HappeningNowCard" /* 15115 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 16016 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 16017 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 16018 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9249 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
+import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators" /* 11950 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12457 */;
+import HappeningNowCardDefault from "HappeningNowCard" /* 15130 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 16055 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 16056 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 16057 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15114 */;
+import HappeningNowConstants from "HappeningNowConstants" /* 15129 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,24 +1,24 @@
-// === Module 7202: AnalyticsActions ===
+// === Module 7215: AnalyticsActions ===
 
-// Module 7202 (AnalyticsActions)
+// Module 7215 (AnalyticsActions)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 6970 */;
-import QuestDataUtils from "QuestDataUtils" /* 7183 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7205 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7206 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import captureAdUserAction4 from "captureAdUserAction" /* 7213 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7224 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 6983 */;
+import QuestDataUtils from "QuestDataUtils" /* 7196 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7218 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7219 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import captureAdUserAction4 from "captureAdUserAction" /* 7226 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7237 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7203 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7216 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
-import QuestStore from "QuestStore" /* 7187 */;
+import QuestStore from "QuestStore" /* 7200 */;
 import size from "module_2" /* 2 */;
 
 function trackQuestEvent(questId) {
@@ -261,7 +261,7 @@ let obj = function _getCommonClickEventProperties() {
             closure_6 = undefined;
             impression_id = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === impression_id) {
           if (arg0 === 1) {
@@ -381,7 +381,7 @@ obj = function _trackQuestContentClicked() {
     sourceQuestContent(obj6);
     await "IconComponent";
     ({ questId: c0, questContent: c1, questContentCTA: c2, questContentPosition: c3, questContentRowIndex: c4, impressionId: c5, clickId: c6, trackGuildAndChannelMetadata: c7, sourceQuestContent: c8 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -408,7 +408,7 @@ obj = function _trackAdContentClicked() {
     adCreativeType(obj5);
     await "IconComponent";
     ({ adContentId: c0, relatedQuestId: c1, adCreativeType: c2, questContent: c3, questContentCTA: c4, questContentPosition: c5, questContentRowIndex: c6, impressionId: c7, trackGuildAndChannelMetadata: c8, sourceQuestContent: c9 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

@@ -1,13 +1,13 @@
-// === Module 17837: EnableCommunitySharedNavigation ===
+// === Module 17883: EnableCommunitySharedNavigation ===
 
-// Module 17837 (EnableCommunitySharedNavigation)
+// Module 17883 (EnableCommunitySharedNavigation)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -290,8 +290,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSuccess) => {
             tmp5 = globalThis;
             _setTimeout = setTimeout;
             num = 100;
-            closure_0 = setTimeout(() => { /* body not rendered: F149223 */ }, 100);
-            return () => { /* body not rendered: F149224 */ };
+            closure_0 = setTimeout(() => { /* body not rendered: F149458 */ }, 100);
+            return () => { /* body not rendered: F149459 */ };
           }
         }
       }

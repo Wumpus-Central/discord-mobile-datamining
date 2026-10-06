@@ -1,6 +1,6 @@
-// === Module 10036: FavoritesHooks ===
+// === Module 10049: FavoritesHooks ===
 
-// Module 10036 (FavoritesHooks)
+// Module 10049 (FavoritesHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
@@ -9,9 +9,9 @@ import PremiumConstants from "PremiumConstants" /* 1379 */;
 import PremiumTypeUtilsDefault from "PremiumTypeUtils" /* 1976 */;
 import FavoritesConstants from "FavoritesConstants" /* 2065 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import FavoritesLimits from "FavoritesLimits" /* 10037 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10038 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import FavoritesLimits from "FavoritesLimits" /* 10050 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10051 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

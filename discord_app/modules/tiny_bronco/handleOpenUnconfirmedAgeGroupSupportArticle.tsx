@@ -1,10 +1,10 @@
-// === Module 14537: handleOpenUnconfirmedAgeGroupSupportArticle ===
+// === Module 14553: handleOpenUnconfirmedAgeGroupSupportArticle ===
 
-// Module 14537 (handleOpenUnconfirmedAgeGroupSupportArticle)
+// Module 14553 (handleOpenUnconfirmedAgeGroupSupportArticle)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
-import LocationMetadataStore from "LocationMetadataStore" /* 9039 */;
-import TinyBroncoConstants from "TinyBroncoConstants" /* 9421 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
+import LocationMetadataStore from "LocationMetadataStore" /* 9073 */;
+import TinyBroncoConstants from "TinyBroncoConstants" /* 9435 */;
 import size from "module_2" /* 2 */;
 
 let c3;

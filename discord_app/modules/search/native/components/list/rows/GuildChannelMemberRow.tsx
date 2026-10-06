@@ -1,9 +1,9 @@
-// === Module 16852: GuildChannelMemberRow ===
+// === Module 16873: GuildChannelMemberRow ===
 
-// Module 16852 (GuildChannelMemberRow)
+// Module 16873 (GuildChannelMemberRow)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import UserRowDefault from "UserRow" /* 10602 */;
+import UserRowDefault from "UserRow" /* 10615 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

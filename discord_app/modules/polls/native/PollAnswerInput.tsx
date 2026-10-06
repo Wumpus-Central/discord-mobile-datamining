@@ -1,25 +1,25 @@
-// === Module 11854: PollAnswerInput ===
+// === Module 11868: PollAnswerInput ===
 
-// Module 11854 (PollAnswerInput)
+// Module 11868 (PollAnswerInput)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Pressables from "Pressables" /* 5909 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import PollsUtils from "PollsUtils" /* 7257 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8812 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9866 */;
-import useRenderPollAnswerImageDefault from "useRenderPollAnswerImage" /* 11855 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Pressables from "Pressables" /* 5916 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import PollsUtils from "PollsUtils" /* 7270 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8842 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9879 */;
+import useRenderPollAnswerImageDefault from "useRenderPollAnswerImage" /* 11869 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PollsConstants from "PollsConstants" /* 7457 */;
+import PollsConstants from "PollsConstants" /* 7468 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -360,7 +360,7 @@ export default function PollAnswerInput(answer) {
     openImageInputActionSheet() {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker };
-      obj.openLazy(asyncRequire(11856, dependencyMap.paths), authStore, obj2);
+      obj.openLazy(asyncRequire(11870, dependencyMap.paths), authStore, obj2);
     },
     iconSrc: index(channelId[21]),
     containerStyle: tmp.defaultImageContainer,

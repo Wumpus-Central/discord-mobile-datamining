@@ -1,8 +1,8 @@
-// === Module 16990: getCannotSwapApplicationText ===
+// === Module 17016: getCannotSwapApplicationText ===
 
-// Module 16990 (getCannotSwapApplicationText)
+// Module 17016 (getCannotSwapApplicationText)
 import LocaleStore from "LocaleStore" /* 2116 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

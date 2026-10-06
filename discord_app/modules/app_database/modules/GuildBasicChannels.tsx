@@ -1,19 +1,19 @@
-// === Module 7132: GuildBasicChannels ===
+// === Module 7145: GuildBasicChannels ===
 
-// Module 7132 (GuildBasicChannels)
+// Module 7145 (GuildBasicChannels)
 import LoggerDefault from "Logger" /* 3 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import ChannelStore2 from "ChannelStore" /* 2051 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4518 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4524 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import BasicChannelCacheStore from "BasicChannelCacheStore" /* 2052 */;
 import size from "module_2" /* 2 */;
 

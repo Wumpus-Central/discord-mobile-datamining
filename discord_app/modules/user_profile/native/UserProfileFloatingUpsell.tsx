@@ -1,14 +1,14 @@
-// === Module 14485: UserProfileFloatingUpsell ===
+// === Module 14501: UserProfileFloatingUpsell ===
 
-// Module 14485 (UserProfileFloatingUpsell)
+// Module 14501 (UserProfileFloatingUpsell)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14474 */;
+import UserProfileUpsellCardV2 from "UserProfileUpsellCardV2" /* 14490 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import Constants from "Constants" /* 6707 */;
-import createStyles from "createStyles" /* 4890 */;
+import Constants from "Constants" /* 6714 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

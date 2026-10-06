@@ -1,12 +1,12 @@
-// === Module 10431: GiftCodeRecord ===
+// === Module 10444: GiftCodeRecord ===
 
-// Module 10431 (GiftCodeRecord)
+// Module 10444 (GiftCodeRecord)
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import _modDef4461 from "module_4461" /* 4461 */;
+import _modDef4467 from "module_4467" /* 4467 */;
 import Record from "Record" /* 1392 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 6964 */;
-import PromotionRecord from "PromotionRecord" /* 10397 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4529 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 6977 */;
+import PromotionRecord from "PromotionRecord" /* 10410 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4535 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -37,7 +37,7 @@ class GiftCodeRecord extends Record {
     }
     let tmp5 = null;
     if (null != user.expires_at) {
-      tmp5 = _modDef4461(user.expires_at);
+      tmp5 = _modDef4467(user.expires_at);
     }
     const redeemed = user.redeemed;
     if (null != user.subscription_plan) {
@@ -97,7 +97,7 @@ class GiftCodeRecord extends Record {
     const expiresAt = this.expiresAt;
     let isAfterResult = null != expiresAt;
     if (isAfterResult) {
-      const obj = _modDef4461();
+      const obj = _modDef4467();
       isAfterResult = obj.isAfter(expiresAt);
     }
     return isAfterResult;

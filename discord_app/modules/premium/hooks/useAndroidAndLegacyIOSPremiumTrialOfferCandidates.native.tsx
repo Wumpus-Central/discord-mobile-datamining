@@ -1,11 +1,11 @@
-// === Module 6957: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
+// === Module 6970: useAndroidAndLegacyIOSPremiumTrialOfferCandidates ===
 
-// Module 6957 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
+// Module 6970 (useAndroidAndLegacyIOSPremiumTrialOfferCandidates)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react from "react" /* 576 */;
-import ProductIds from "ProductIds" /* 6742 */;
-import useTrialOffer from "useTrialOffer" /* 6958 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import ProductIds from "ProductIds" /* 6926 */;
+import useTrialOffer from "useTrialOffer" /* 6971 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

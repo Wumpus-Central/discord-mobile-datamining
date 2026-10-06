@@ -1,10 +1,10 @@
-// === Module 13569: HubLinkNoticeStore ===
+// === Module 13585: HubLinkNoticeStore ===
 
-// Module 13569 (HubLinkNoticeStore)
+// Module 13585 (HubLinkNoticeStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import HotspotStore from "hotspot/HotspotStore" /* 6713 */;
+import HotspotStore from "hotspot/HotspotStore" /* 6720 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import size from "module_2" /* 2 */;
 

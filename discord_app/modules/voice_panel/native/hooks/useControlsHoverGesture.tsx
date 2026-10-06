@@ -1,10 +1,10 @@
-// === Module 17209: useControlsHoverGesture ===
+// === Module 17238: useControlsHoverGesture ===
 
-// Module 17209 (useControlsHoverGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
+// Module 17238 (useControlsHoverGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

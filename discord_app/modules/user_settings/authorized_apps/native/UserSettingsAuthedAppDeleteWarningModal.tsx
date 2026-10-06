@@ -1,11 +1,11 @@
-// === Module 12262: UserSettingsAuthedAppDeleteWarningModal ===
+// === Module 12277: UserSettingsAuthedAppDeleteWarningModal ===
 
-// Module 12262 (UserSettingsAuthedAppDeleteWarningModal)
+// Module 12277 (UserSettingsAuthedAppDeleteWarningModal)
 import intl7 from "intl" /* 1126 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
-import InfoBox from "InfoBox" /* 9459 */;
-import isSocialLayerApplication from "isSocialLayerApplication" /* 11148 */;
-import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12263 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
+import InfoBox from "InfoBox" /* 9472 */;
+import isSocialLayerApplication from "isSocialLayerApplication" /* 11161 */;
+import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 12278 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -352,7 +352,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
             let obj3 = { variant: "secondary", text: intl3.string(require("intl").t["ETE/oC"]) };
-            const AlertActionButton = tmp(5713).AlertActionButton;
+            const AlertActionButton = tmp(5720).AlertActionButton;
             intl3 = tmp(1126).intl;
             const tmp23 = closure_3(AlertActionButton, obj3, "cancel");
             cResult[17] = tmp23;

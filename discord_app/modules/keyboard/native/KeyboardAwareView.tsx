@@ -1,9 +1,9 @@
-// === Module 6537: KeyboardAwareView ===
+// === Module 6544: KeyboardAwareView ===
 
-// Module 6537 (KeyboardAwareView)
+// Module 6544 (KeyboardAwareView)
 import Fragment from "Fragment" /* 21 */;
-import useKeyboardDuration from "useKeyboardDuration" /* 6472 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6473 */;
+import useKeyboardDuration from "useKeyboardDuration" /* 6479 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6480 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;

@@ -1,6 +1,6 @@
-// === Module 5022: RobloxSubgamePlatformUtils ===
+// === Module 5028: RobloxSubgamePlatformUtils ===
 
-// Module 5022 (RobloxSubgamePlatformUtils)
+// Module 5028 (RobloxSubgamePlatformUtils)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

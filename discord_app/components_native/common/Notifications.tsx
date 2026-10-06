@@ -1,12 +1,12 @@
-// === Module 12464: common/Notifications ===
+// === Module 12479: common/Notifications ===
 
-// Module 12464 (common/Notifications)
+// Module 12479 (common/Notifications)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import InAppNotificationContainerDefault from "InAppNotificationContainer" /* 12484 */;
+import InAppNotificationContainerDefault from "InAppNotificationContainer" /* 12499 */;
 import react from "react" /* 19 */;
-import InAppNotificationStore from "InAppNotificationStore" /* 12465 */;
+import InAppNotificationStore from "InAppNotificationStore" /* 12480 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

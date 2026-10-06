@@ -1,19 +1,19 @@
-// === Module 7758: GuildSpaceLeaderboardSystemMessage ===
+// === Module 7769: GuildSpaceLeaderboardSystemMessage ===
 
-// Module 7758 (GuildSpaceLeaderboardSystemMessage)
+// Module 7769 (GuildSpaceLeaderboardSystemMessage)
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4497 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7656 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7759 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4503 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 7667 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7770 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let obj = { iconTintColor: nativeDefault.colors.ICON_MUTED };

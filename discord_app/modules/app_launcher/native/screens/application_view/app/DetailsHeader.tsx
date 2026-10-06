@@ -1,17 +1,17 @@
-// === Module 8793: DetailsHeader ===
+// === Module 8825: DetailsHeader ===
 
-// Module 8793 (DetailsHeader)
+// Module 8825 (DetailsHeader)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import timingPresets from "timingPresets" /* 4894 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 8942 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import timingPresets from "timingPresets" /* 4900 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 8971 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -101,7 +101,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   ({ application, viewContainerStyle, mainContainerStyle, hideName } = arg0);
   ref();
   if (cResult[0] !== application) {
-    const tmpResult = tmp(8794);
+    const tmpResult = tmp(8826);
     const isPartnerApplicationResult = tmpResult.isPartnerApplication(application);
     cResult[0] = application;
     cResult[1] = isPartnerApplicationResult;
@@ -117,13 +117,13 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   ({ containerStyle, containerHeight } = closure_15());
   closure_15();
   if (cResult[2] !== application) {
-    const tmpResult5 = tmp(8794);
+    const tmpResult5 = tmp(8826);
     const sectionName = tmpResult5.getSectionName(application);
     cResult[2] = application;
     cResult[3] = sectionName;
   }
   if (cResult[4] !== application) {
-    const tmpResult6 = tmp(8794);
+    const tmpResult6 = tmp(8826);
     const str = tmpResult6.getSectionDescription(application);
     cResult[4] = application;
     cResult[5] = str;
@@ -148,15 +148,15 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   closure_15 = tmp8Result6[1];
   if (null != tmp16) {
     if (cResult[7] !== tmp16) {
-      const tmpResult7 = tmp(8942);
+      const tmpResult7 = tmp(8971);
       let result = tmpResult7.parseBioReactWithCachedAST(tmp16);
       cResult[7] = tmp16;
       cResult[8] = result;
     }
   }
-  const tmpResult8 = tmp(5912);
+  const tmpResult8 = tmp(5919);
   const isScreenLandscape = tmpResult8.useIsScreenLandscape();
-  const tmp29 = first(7946)(isScreenLandscape);
+  const tmp29 = first(7957)(isScreenLandscape);
   closure_17 = tmp29;
   if (cResult[9] === isScreenLandscape) {
     let tmp30;
@@ -436,7 +436,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   let closure_18;
   viewContainerStyle = viewContainerStyle.viewContainerStyle;
   let tmp = ref();
-  let obj = ref(8794);
+  let obj = ref(8826);
   let obj2 = react;
   const isPartnerApplicationResult = obj.isPartnerApplication(application);
   ref = react.useRef(null);
@@ -449,9 +449,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   let closure_5 = react.useRef(true);
   ({ containerHeight: c6, containerStyle } = first2());
   first2();
-  const obj3 = ref(8794);
+  const obj3 = ref(8826);
   const sectionName = obj3.getSectionName(application);
-  const obj4 = ref(8794);
+  const obj4 = ref(8826);
   const str = obj4.getSectionDescription(application);
   let tmp27Result5 = null != str;
   if (tmp27Result5) {
@@ -479,9 +479,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     }
     return result;
   }, items);
-  const tmp2Result = ref(5912);
+  const tmp2Result = ref(5919);
   isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  const tmp23 = first(7946)(isScreenLandscape);
+  const tmp23 = first(7957)(isScreenLandscape);
   closure_18 = tmp23;
   const items1 = [isScreenLandscape, tmp23];
   const effect = obj2.useEffect(() => {
@@ -492,7 +492,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     }
   }, items1);
   let tmp26 = first;
-  first(5973)(ref);
+  first(5980)(ref);
   if (first) {
     tmp26 = !first1;
   }
@@ -515,18 +515,18 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   items3 = [tmp.container, mainContainerStyle];
   let tmp29Result = !hideName;
   const obj7 = { style: tmp.nameContainer, children: items4 };
-  const View = tmp22(4612).View;
+  const View = tmp22(4618).View;
   const tmp28 = num3;
   if (!hideName) {
     const obj8 = { style: tmp.nameText, variant: "heading-lg/bold", color: "text-default", lineClamp: 1, children: sectionName };
-    tmp29Result = tmp29(tmp2(4886).Heading, obj8);
+    tmp29Result = tmp29(tmp2(4892).Heading, obj8);
   }
   items4 = [tmp29Result, ];
   let tmp29Result5 = null;
   if (isPartnerApplicationResult) {
     const obj9 = { style: tmp.partnerLabelWrapper, children: num2(Text, obj10) };
     obj10 = { variant: "text-xs/medium", color: "text-default", children: intl.string(ref(1126).t.LO4f0P) };
-    Text = tmp2(4886).Text;
+    Text = tmp2(4892).Text;
     intl = tmp2(1126).intl;
     tmp29Result5 = tmp29(tmp30, obj9);
   }
@@ -573,7 +573,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
       accessibilityRole: "button",
       children: items10
     };
-    const tmp22Result = first(6052);
+    const tmp22Result = first(6059);
     if (tmp26) {
       const obj13 = { style: absoluteFill, children: items6 };
       obj12.style = tmp.maskFill;
@@ -588,7 +588,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
       const obj16 = { style: tmp.maskFill };
       items8 = [tmp29(closure_5, obj16), , ];
       const obj17 = { start: ref(1105).HorizontalGradient.START, end: ref(1105).HorizontalGradient.END, colors, style: tmp.maskFade };
-      const tmp22Result2 = first(5605);
+      const tmp22Result2 = first(5612);
       items8[1] = num2(tmp22Result2, obj17);
       if (num2 == null) {
         num2 = 0;
@@ -604,7 +604,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
       tmp29Result6 = tmp29(tmp30, obj12);
     }
     const obj20 = { maskElement: tmp29Result6, children: num2(Text2, obj21) };
-    Text2 = tmp2(4886).Text;
+    Text2 = tmp2(4892).Text;
     obj21 = { variant: "text-sm/medium", color: "text-default", lineClamp: num4, children: memo };
     items10 = [tmp29(tmp22Result, obj20), , ];
     let tmp29Result7 = null;
@@ -620,7 +620,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
         color: "text-brand",
         children: items11
       };
-      Text3 = tmp2(4886).Text;
+      Text3 = tmp2(4892).Text;
       const intl2 = tmp2(1126).intl;
       items11 = ["\u2026 ", intl2.string(tmp2(1126).t["OBCR+p"])];
       tmp29Result7 = tmp29(tmp30, obj22);
@@ -631,7 +631,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
       tmp29Result8 = null;
       if (first1) {
         const obj24 = { variant: "text-sm/medium", color: "text-brand", style: tmp.collapseDescriptionCTA, children: intl3.string(ref(1126).t.D5xGUK) };
-        const Text4 = tmp2(4886).Text;
+        const Text4 = tmp2(4892).Text;
         intl3 = tmp2(1126).intl;
         tmp29Result8 = tmp29(Text4, obj24);
       }
@@ -658,7 +658,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     let tmp29Result9 = !hideName;
     if (tmp29Result9) {
       const obj26 = { variant: "heading-lg/bold", color: "text-default", children: sectionName };
-      tmp29Result9 = tmp29(tmp2(4886).Heading, obj26);
+      tmp29Result9 = tmp29(tmp2(4892).Heading, obj26);
     }
     items14 = [tmp29Result9, ];
     if (tmp27Result5) {
@@ -683,9 +683,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
         children: memo
       };
       tmp44 = !hideName && tmp.descriptionContainer;
-      items15 = [tmp29(tmp2(4886).Text, obj28), ];
+      items15 = [tmp29(tmp2(4892).Text, obj28), ];
       const obj29 = { variant: "text-sm/medium", color: "text-brand", style: tmp.collapseDescriptionCTA, children: intl4.string(ref(1126).t.D5xGUK) };
-      const Text5 = tmp2(4886).Text;
+      const Text5 = tmp2(4892).Text;
       intl4 = tmp2(1126).intl;
       items15[1] = num2(Text5, obj29);
       tmp27Result5 = tmp27(tmp30, obj27);

@@ -1,14 +1,14 @@
-// === Module 10464: GiftingPromotionUtils ===
+// === Module 10477: GiftingPromotionUtils ===
 
-// Module 10464 (GiftingPromotionUtils)
+// Module 10477 (GiftingPromotionUtils)
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10469 */;
-import MarketingComponentType from "MarketingComponentType" /* 10470 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10482 */;
+import MarketingComponentType from "MarketingComponentType" /* 10483 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10396 */;
+import PromotionsStore from "PromotionsStore" /* 10409 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

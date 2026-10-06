@@ -1,8 +1,8 @@
-// === Module 10876: useTieredTenureBadgeForUser ===
+// === Module 10889: useTieredTenureBadgeForUser ===
 
-// Module 10876 (useTieredTenureBadgeForUser)
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7119 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+// Module 10889 (useTieredTenureBadgeForUser)
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7132 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

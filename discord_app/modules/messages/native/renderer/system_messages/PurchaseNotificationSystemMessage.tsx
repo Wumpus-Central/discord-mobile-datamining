@@ -1,8 +1,8 @@
-// === Module 7694: PurchaseNotificationSystemMessage ===
+// === Module 7705: PurchaseNotificationSystemMessage ===
 
-// Module 7694 (PurchaseNotificationSystemMessage)
+// Module 7705 (PurchaseNotificationSystemMessage)
 import Server from "Server" /* 1985 */;
-import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 7695 */;
+import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 7706 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");

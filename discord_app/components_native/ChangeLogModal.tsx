@@ -1,6 +1,6 @@
-// === Module 15369: ChangeLogModal ===
+// === Module 15384: ChangeLogModal ===
 
-// Module 15369 (ChangeLogModal)
+// Module 15384 (ChangeLogModal)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,20 +8,20 @@ import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import ChangelogConstants from "ChangelogConstants" /* 2102 */;
-import native from "native" /* 4589 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import NavigatorHeader2 from "NavigatorHeader" /* 6010 */;
-import Navigator from "Navigator" /* 6496 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 7763 */;
-import openMediaModal2 from "openMediaModal" /* 7933 */;
-import common_VideoDefault from "common/Video" /* 7983 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9442 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10123 */;
-import _modDef15370 from "module_15370" /* 15370 */;
+import native from "native" /* 4595 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import NavigatorHeader2 from "NavigatorHeader" /* 6017 */;
+import Navigator from "Navigator" /* 6503 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 7774 */;
+import openMediaModal2 from "openMediaModal" /* 7944 */;
+import common_VideoDefault from "common/Video" /* 7993 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9455 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10136 */;
+import _modDef15385 from "module_15385" /* 15385 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -194,7 +194,7 @@ class ChangeLog extends PureComponent2 {
               },
           useLocalHTML: true
         };
-        items = [closure_7(_modDef15370, obj4), ];
+        items = [closure_7(_modDef15385, obj4), ];
         let tmp6Result = null;
         if (!tmp2) {
           const obj5 = { style: tmp.videoOverlay, source: obj6 };
@@ -231,7 +231,7 @@ class ChangeLog extends PureComponent2 {
     let tmp12Result = null;
     if (null != video) {
       const obj9 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: closure_7(tmp15Result, obj10) };
-      const PressableOpacity = tmp18(5909).PressableOpacity;
+      const PressableOpacity = tmp18(5916).PressableOpacity;
       obj10 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: AssetRegistryDefault, onPress: self.playVideo, style: tmp.playButton, iconSize: self(1188).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
       tmp15Result = TouchableHitBoxDefault;
       tmp12Result = closure_7(PressableOpacity, obj9);

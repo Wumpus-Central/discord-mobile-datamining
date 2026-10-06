@@ -1,9 +1,9 @@
-// === Module 12052: PushNotificationPermissionStore ===
+// === Module 12067: PushNotificationPermissionStore ===
 
-// Module 12052 (PushNotificationPermissionStore)
+// Module 12067 (PushNotificationPermissionStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PushNotificationDefault from "PushNotification" /* 8966 */;
+import PushNotificationDefault from "PushNotification" /* 8995 */;
 import size from "module_2" /* 2 */;
 
 let set;

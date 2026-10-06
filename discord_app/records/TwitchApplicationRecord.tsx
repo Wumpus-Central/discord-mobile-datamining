@@ -1,8 +1,8 @@
-// === Module 13560: TwitchApplicationRecord ===
+// === Module 13576: TwitchApplicationRecord ===
 
-// Module 13560 (TwitchApplicationRecord)
+// Module 13576 (TwitchApplicationRecord)
 import intl2 from "intl" /* 1126 */;
-import PlatformsDefault from "Platforms" /* 5442 */;
+import PlatformsDefault from "Platforms" /* 5449 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import size from "module_2" /* 2 */;
 

@@ -1,27 +1,27 @@
-// === Module 11864: ChatInputActions ===
+// === Module 11878: ChatInputActions ===
 
-// Module 11864 (ChatInputActions)
+// Module 11878 (ChatInputActions)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl8 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import mergeProps from "mergeProps" /* 4585 */;
-import ButtonConstants from "ButtonConstants" /* 5600 */;
-import ImageIcon from "ImageIcon" /* 5871 */;
-import AppsIcon from "AppsIcon" /* 5890 */;
-import ImagePickerUtils from "ImagePickerUtils" /* 7286 */;
-import PollsIcon from "PollsIcon" /* 10367 */;
-import AttachmentIcon from "AttachmentIcon" /* 10369 */;
-import CameraIcon from "CameraIcon" /* 10384 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 11838 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 11866 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11868 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 11869 */;
+import mergeProps from "mergeProps" /* 4591 */;
+import ButtonConstants from "ButtonConstants" /* 5607 */;
+import ImageIcon from "ImageIcon" /* 5878 */;
+import AppsIcon from "AppsIcon" /* 5897 */;
+import ImagePickerUtils from "ImagePickerUtils" /* 7299 */;
+import PollsIcon from "PollsIcon" /* 10380 */;
+import AttachmentIcon from "AttachmentIcon" /* 10382 */;
+import CameraIcon from "CameraIcon" /* 10397 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 11852 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 11880 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11882 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 11883 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChatInputConstants from "ChatInputConstants" /* 11576 */;
+import ChatInputConstants from "ChatInputConstants" /* 11589 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let canStartThreads, closure_12;

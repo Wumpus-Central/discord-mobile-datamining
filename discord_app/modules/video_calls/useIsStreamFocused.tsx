@@ -1,8 +1,8 @@
-// === Module 9152: useIsStreamFocused ===
+// === Module 9187: useIsStreamFocused ===
 
-// Module 9152 (useIsStreamFocused)
-import CallConstants from "CallConstants" /* 4911 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+// Module 9187 (useIsStreamFocused)
+import CallConstants from "CallConstants" /* 4917 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

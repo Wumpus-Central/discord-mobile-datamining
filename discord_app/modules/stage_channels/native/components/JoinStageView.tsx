@@ -1,14 +1,14 @@
-// === Module 9623: JoinStageView ===
+// === Module 9636: JoinStageView ===
 
-// Module 9623 (JoinStageView)
+// Module 9636 (JoinStageView)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5582 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5588 */;
-import StageChannelUtils from "StageChannelUtils" /* 8076 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 9558 */;
-import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 9603 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5595 */;
+import StageChannelUtils from "StageChannelUtils" /* 8109 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 9571 */;
+import StageViewWithPromptsDefault from "StageViewWithPrompts" /* 9616 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,13 +1,13 @@
-// === Module 17478: VoiceCallTriggerPoint ===
+// === Module 17505: VoiceCallTriggerPoint ===
 
-// Module 17478 (VoiceCallTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 4777 */;
-import Helpers from "Helpers" /* 10540 */;
-import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 13022 */;
-import HangoutWindowExperiment from "HangoutWindowExperiment" /* 17011 */;
-import VoiceChannelHoistingExperiment from "VoiceChannelHoistingExperiment" /* 17479 */;
-import PastVcActivityMessagesExperimentDefault from "PastVcActivityMessagesExperiment" /* 17480 */;
-import VoiceCallTriggerPointExperimentDefault from "VoiceCallTriggerPointExperiment" /* 17481 */;
+// Module 17505 (VoiceCallTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4783 */;
+import Helpers from "Helpers" /* 10553 */;
+import VoiceChannelBadgeExperiment from "VoiceChannelBadgeExperiment" /* 13041 */;
+import HangoutWindowExperiment from "HangoutWindowExperiment" /* 17037 */;
+import VoiceChannelHoistingExperiment from "VoiceChannelHoistingExperiment" /* 17506 */;
+import PastVcActivityMessagesExperimentDefault from "PastVcActivityMessagesExperiment" /* 17507 */;
+import VoiceCallTriggerPointExperimentDefault from "VoiceCallTriggerPointExperiment" /* 17508 */;
 import size from "module_2" /* 2 */;
 
 const CommonTriggerPoints = ExperimentConstants.CommonTriggerPoints;

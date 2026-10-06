@@ -1,15 +1,15 @@
-// === Module 17047: ContextMenuCommandNavigator ===
+// === Module 17073: ContextMenuCommandNavigator ===
 
-// Module 17047 (ContextMenuCommandNavigator)
+// Module 17073 (ContextMenuCommandNavigator)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import NativeStackView from "NativeStackView" /* 7556 */;
-import createStyles from "createStyles" /* 4890 */;
+import NativeStackView from "NativeStackView" /* 7568 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -54,7 +54,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     [tmp5, tmp6] = cResult;
   }
   const layoutEffect = react.useLayoutEffect(tmp5, tmp6);
-  const tmpResult = tmp(6496);
+  const tmpResult = tmp(6503);
   const accessibilityNativeStackOptions = tmpResult.useAccessibilityNativeStackOptions();
   ({ left, right } = accessibilityNativeStackOptions(1618)());
   accessibilityNativeStackOptions(1618)();

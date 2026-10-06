@@ -1,28 +1,28 @@
-// === Module 17999: clips/ClipsManager ===
+// === Module 18045: clips/ClipsManager ===
 
-// Module 17999 (clips/ClipsManager)
+// Module 18045 (clips/ClipsManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import DiscordNativeDefault from "DiscordNative" /* 4490 */;
-import Constants2 from "Constants" /* 4932 */;
-import SystemAnalyticsStore from "SystemAnalyticsStore" /* 4935 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
-import isClipsEnabled from "isClipsEnabled" /* 13485 */;
-import ClipsExperiment from "ClipsExperiment" /* 13486 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13487 */;
+import DiscordNativeDefault from "DiscordNative" /* 4496 */;
+import Constants2 from "Constants" /* 4938 */;
+import SystemAnalyticsStore from "SystemAnalyticsStore" /* 4941 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
+import isClipsEnabled from "isClipsEnabled" /* 13501 */;
+import ClipsExperiment from "ClipsExperiment" /* 13502 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13503 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
 import ClipsStore from "ClipsStore" /* 2005 */;
-import ClipsConstants from "ClipsConstants" /* 7231 */;
+import ClipsConstants from "ClipsConstants" /* 7244 */;
 import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 const StreamKeyUtilsAll = StreamKeyUtils;

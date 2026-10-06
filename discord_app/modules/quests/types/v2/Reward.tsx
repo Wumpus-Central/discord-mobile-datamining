@@ -1,8 +1,8 @@
-// === Module 7200: Reward ===
+// === Module 7213: Reward ===
 
-// Module 7200 (Reward)
-import QuestTypes from "QuestTypes" /* 5626 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7192 */;
+// Module 7213 (Reward)
+import QuestTypes from "QuestTypes" /* 5633 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7205 */;
 import size from "module_2" /* 2 */;
 
 function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_platform) {

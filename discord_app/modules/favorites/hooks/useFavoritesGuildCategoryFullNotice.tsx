@@ -1,14 +1,14 @@
-// === Module 16033: useFavoritesGuildCategoryFullNotice ===
+// === Module 16072: useFavoritesGuildCategoryFullNotice ===
 
-// Module 16033 (useFavoritesGuildCategoryFullNotice)
+// Module 16072 (useFavoritesGuildCategoryFullNotice)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
 import FavoritesConstants from "FavoritesConstants" /* 2065 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import _modDef3367 from "module_3367" /* 3367 */;
-import FavoritesHooks from "FavoritesHooks" /* 10036 */;
+import _modDef3395 from "module_3395" /* 3395 */;
+import FavoritesHooks from "FavoritesHooks" /* 10049 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -56,7 +56,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, str) =
               let tmp14;
               const _Symbol = Symbol;
               if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-                const obj2 = { label: intl.string(_modDef3367.WsUrMD), tooltip: intl2.string(_modDef3367.dW9Kov) };
+                const obj2 = { label: intl.string(_modDef3395.WsUrMD), tooltip: intl2.string(_modDef3395.dW9Kov) };
                 intl = intl3.intl;
                 intl2 = intl3.intl;
                 cResult[2] = obj2;
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, str) =
             const formatted = str.toLowerCase();
             tmp6 = null;
             if (formatted === closure_4.toLowerCase()) {
-              const obj2 = { label: intl.string(_modDef3367.WsUrMD), tooltip: intl2.string(_modDef3367.dW9Kov) };
+              const obj2 = { label: intl.string(_modDef3395.WsUrMD), tooltip: intl2.string(_modDef3395.dW9Kov) };
               intl = intl3.intl;
               intl2 = intl3.intl;
               tmp6 = obj2;

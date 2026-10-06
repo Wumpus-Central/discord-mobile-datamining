@@ -1,20 +1,20 @@
-// === Module 9853: ForumPostActionBar ===
+// === Module 9866: ForumPostActionBar ===
 
-// Module 9853 (ForumPostActionBar)
+// Module 9866 (ForumPostActionBar)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import flow_Client from "flow/Client" /* 4787 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9854 */;
+import flow_Client from "flow/Client" /* 4793 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9867 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4510 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import LurkingStore from "LurkingStore" /* 4516 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -70,7 +70,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }
   const tmpResult = tmp(504);
   const stateFromStores = tmpResult.useStateFromStores(first, B);
-  const tmpResult5 = tmp(6807);
+  const tmpResult5 = tmp(6817);
   const firstMessage = tmpResult5.useFirstForumPostMessage(channel).firstMessage;
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class B {
@@ -220,7 +220,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         }
       }
     }
-    const tmpResult8 = tmp(7507);
+    const tmpResult8 = tmp(7518);
     const gradientTop = tmpResult8.useGradientTop();
     if (cResult[20] === gradientTop) {
       class U {
@@ -257,7 +257,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             jumpToMessage(obj);
           }
         }
-        let obj2 = { style: tmp4.reactionRow, children: closure_10(tmp(10027).ForumPostActionBarReactions, obj3) };
+        let obj2 = { style: tmp4.reactionRow, children: closure_10(tmp(10040).ForumPostActionBarReactions, obj3) };
         obj3 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp18 };
         tmp27 = closure_10(View, obj2);
       }
@@ -300,7 +300,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   let obj = channel(504);
   const items = [ChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
-  let obj2 = channel(6807);
+  let obj2 = channel(6817);
   const firstMessage = obj2.useFirstForumPostMessage(channel).firstMessage;
   const items1 = [JoinedThreadsStore];
   const obj3 = channel(504);
@@ -322,11 +322,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }, items3);
   const obj6 = { style: items4, children: items5 };
   items4 = [tmp.actionBarContainer, ];
-  const obj5 = channel(7507);
+  const obj5 = channel(7518);
   items4[1] = obj5.useGradientTop();
   let tmp12 = null != firstMessage;
   if (tmp12) {
-    const obj7 = { style: tmp.reactionRow, children: closure_10(channel(10027).ForumPostActionBarReactions, obj8) };
+    const obj7 = { style: tmp.reactionRow, children: closure_10(channel(10040).ForumPostActionBarReactions, obj8) };
     obj8 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: first };
     tmp12 = closure_10(View, obj7);
   }
@@ -342,7 +342,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       const result = obj.handleToggleFollowForumPost(channel, stateFromStores1);
     }
     const obj10 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-    const PressableOpacity = tmp2(5909).PressableOpacity;
+    const PressableOpacity = tmp2(5916).PressableOpacity;
     const intl = tmp2(1126).intl;
     const string = intl.string;
     const t = tmp2(1126).t;
@@ -350,10 +350,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       obj10.accessibilityLabel = string(t.G3ooHD);
       obj10.style = tmp.actionButton;
       obj10.onPress = handleFollow;
-      const items7 = [closure_10(channel(4577).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
+      const items7 = [closure_10(channel(4583).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
       const obj11 = { style: items8, variant: "text-sm/semibold", color: "text-brand", children: intl3.string(channel(1126).t["OtF+lC"]) };
       items8 = [tmp.buttonText];
-      const Text2 = tmp2(4886).Text;
+      const Text2 = tmp2(4892).Text;
       intl3 = tmp2(1126).intl;
       items7[1] = closure_10(Text2, obj11);
       obj10.children = items7;
@@ -362,9 +362,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       obj10.accessibilityLabel = string(t["DjZ+6E"]);
       obj10.style = tmp.actionButton;
       obj10.onPress = handleFollow;
-      const items9 = [closure_10(channel(9266).BellIcon, { size: "xs" }), ];
+      const items9 = [closure_10(channel(9301).BellIcon, { size: "xs" }), ];
       const obj12 = { style: tmp.buttonText, variant: "text-sm/semibold", color: "interactive-text-default", children: intl2.string(channel(1126).t["0rQinA"]) };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       intl2 = tmp2(1126).intl;
       items9[1] = closure_10(Text, obj12);
       obj10.children = items9;
@@ -385,9 +385,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
         const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj2);
       }
     },
-    children: closure_10(channel(4839).LinkIcon, { size: "xs" })
+    children: closure_10(channel(4845).LinkIcon, { size: "xs" })
   };
-  const PressableOpacity2 = tmp2(5909).PressableOpacity;
+  const PressableOpacity2 = tmp2(5916).PressableOpacity;
   intl4 = tmp2(1126).intl;
   items10[1] = closure_10(PressableOpacity2, obj13);
   const obj14 = {
@@ -402,9 +402,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       obj2 = SnowflakeUtilsDefault;
       jumpToMessage(obj);
     },
-    children: closure_10(channel(11072).ArrowLargeUpIcon, { size: "xs" })
+    children: closure_10(channel(11085).ArrowLargeUpIcon, { size: "xs" })
   };
-  const PressableOpacity3 = tmp2(5909).PressableOpacity;
+  const PressableOpacity3 = tmp2(5916).PressableOpacity;
   intl5 = tmp2(1126).intl;
   items11 = [, ];
   ({ actionButton: arr12[0], lastActionButton: arr12[1] } = tmp);

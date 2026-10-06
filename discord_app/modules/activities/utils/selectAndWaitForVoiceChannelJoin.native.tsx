@@ -1,6 +1,6 @@
-// === Module 9015: selectAndWaitForVoiceChannelJoin ===
+// === Module 9048: selectAndWaitForVoiceChannelJoin ===
 
-// Module 9015 (selectAndWaitForVoiceChannelJoin)
+// Module 9048 (selectAndWaitForVoiceChannelJoin)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import size from "module_2" /* 2 */;
@@ -49,7 +49,7 @@ let obj = function _selectAndWaitForVoiceChannelJoin() {
             promise = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {

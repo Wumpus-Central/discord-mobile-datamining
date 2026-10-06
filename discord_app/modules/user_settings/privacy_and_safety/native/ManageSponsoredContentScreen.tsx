@@ -1,6 +1,6 @@
-// === Module 15771: ManageSponsoredContentScreen ===
+// === Module 15808: ManageSponsoredContentScreen ===
 
-// Module 15771 (ManageSponsoredContentScreen)
+// Module 15808 (ManageSponsoredContentScreen)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,11 +10,11 @@ import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
 import _modDef2161 from "module_2161" /* 2161 */;
-import TableRowGroup3 from "TableRowGroup" /* 6074 */;
+import TableRowGroup3 from "TableRowGroup" /* 6081 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let adTopic, set;
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((adTopic) => {
       }
     }
     const obj2 = { label: tmp9, subLabel: tmp11, value: !tmp4, onValueChange: tmp8 };
-    const tmp18 = closure_5(adTopic(6698).TableSwitchRow, obj2);
+    const tmp18 = closure_5(adTopic(6705).TableSwitchRow, obj2);
     cResult[9] = tmp8;
     cResult[10] = tmp9;
     cResult[11] = tmp11;
@@ -134,7 +134,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((adTopic) => {
       AdTopicOptOuts2.updateSetting(items);
     }
   };
-  const TableSwitchRow = adTopic(6698).TableSwitchRow;
+  const TableSwitchRow = adTopic(6705).TableSwitchRow;
   intl = adTopic(1126).intl;
   const intl2 = adTopic(1126).intl;
   string = intl2.string;

@@ -1,14 +1,14 @@
-// === Module 12283: TabItem ===
+// === Module 12298: TabItem ===
 
-// Module 12283 (TabItem)
+// Module 12298 (TabItem)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;
-import spring from "spring" /* 5597 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
+import spring from "spring" /* 5604 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -121,7 +121,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = obj.c(17);
   ({ count, index, activeIndex, pressed, variant } = arg0);
   const tmp4 = closure_11();
-  let obj2 = sharedValue(4612);
+  let obj2 = sharedValue(4618);
   sharedValue = obj2.useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function n() {
@@ -152,8 +152,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     obj4 = ReanimatedRexport2;
     return obj;
   };
-  const tmpResult = tmp(4612);
-  let obj3 = { withSpring: tmp(5597).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: tmp(4612).interpolate };
+  const tmpResult = tmp(4618);
+  let obj3 = { withSpring: tmp(5604).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: tmp(4618).interpolate };
   fn2.__closure = obj3;
   fn2.__workletHash = 5074862072194;
   fn2.__initData = __initData3;
@@ -191,7 +191,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp17 = tmp20;
           }
           const obj5 = { animated: true, variant: "text-sm/medium", style: tmp12, lineClamp: 1, children: count };
-          const tmp16 = closure_6(tmp(4886).Text, obj5);
+          const tmp16 = closure_6(tmp(4892).Text, obj5);
           cResult[11] = tmp12;
           cResult[12] = count;
           cResult[13] = tmp16;
@@ -223,13 +223,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let sharedValue;
   ({ count, index, activeIndex, pressed, variant } = arg0);
   const tmp = closure_11();
-  let obj = sharedValue(4612);
+  let obj = sharedValue(4618);
   sharedValue = obj.useSharedValue(0);
   let items = [sharedValue];
   const layoutEffect = react.useLayoutEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj2 = sharedValue(4612);
+  let obj2 = sharedValue(4618);
   class I {
     constructor() {
       let items;
@@ -246,12 +246,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return obj;
     }
   }
-  let obj3 = { withSpring: sharedValue(5597).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4612).interpolate };
+  let obj3 = { withSpring: sharedValue(5604).withSpring, countAnimationState: sharedValue, COUNT_SPRING_CONFIG, interpolate: sharedValue(4618).interpolate };
   I.__closure = obj3;
   I.__workletHash = 8384757524453;
   I.__initData = __initData4;
   const animatedStyle = obj2.useAnimatedStyle(I);
-  let obj4 = { style: items1, children: closure_6(sharedValue(4886).Text, { animated: true, variant: "text-sm/medium", style: tmp5, lineClamp: 1, children: count }) };
+  let obj4 = { style: items1, children: closure_6(sharedValue(4892).Text, { animated: true, variant: "text-sm/medium", style: tmp5, lineClamp: 1, children: count }) };
   items1 = [tmp.count, animatedStyle];
   tmp5 = closure_16({ index, activeIndex, pressed, variant });
   const View = ReanimatedRexport.View;

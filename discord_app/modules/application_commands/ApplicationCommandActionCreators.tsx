@@ -1,16 +1,16 @@
-// === Module 7406: ApplicationCommandActionCreators ===
+// === Module 7417: ApplicationCommandActionCreators ===
 
-// Module 7406 (ApplicationCommandActionCreators)
+// Module 7417 (ApplicationCommandActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import Server from "Server" /* 1985 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7030 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
+import InteractionTypes from "InteractionTypes" /* 5126 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7407 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7418 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;
@@ -122,7 +122,7 @@ export const performAutocomplete = function performAutocomplete(c0, c2, data) {
       const request = { url: Endpoints.INTERACTIONS, body: obj4, timeout: 3000, rejectWithError: true };
       const post = HTTP.post;
       const guild = dependencyMap.guild;
-      obj4 = { type: Server.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: _require.applicationId, guild_id: id, channel_id: dependencyMap.channel.id, session_id: AuthenticationStore.getSessionId(), data, nonce: fromTimestampResult };
+      obj4 = { type: InteractionTypes.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE, application_id: _require.applicationId, guild_id: id, channel_id: dependencyMap.channel.id, session_id: AuthenticationStore.getSessionId(), data, nonce: fromTimestampResult };
       id = undefined;
       if (guild != null) {
         id = guild.id;

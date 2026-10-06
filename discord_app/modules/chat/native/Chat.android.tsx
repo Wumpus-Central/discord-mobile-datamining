@@ -1,16 +1,16 @@
-// === Module 11506: Chat ===
+// === Module 11519: Chat ===
 
-// Module 11506 (Chat)
+// Module 11519 (Chat)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import ChatNativeComponentDefault from "ChatNativeComponent" /* 9990 */;
-import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11507 */;
-import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 11510 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import ChatNativeComponentDefault from "ChatNativeComponent" /* 10003 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11520 */;
+import ChatListNativeComponentDefault from "ChatListNativeComponent" /* 11523 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

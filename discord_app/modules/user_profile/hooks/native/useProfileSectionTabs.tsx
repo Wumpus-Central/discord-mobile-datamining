@@ -1,7 +1,7 @@
-// === Module 12926: useProfileSectionTabs ===
+// === Module 12945: useProfileSectionTabs ===
 
-// Module 12926 (useProfileSectionTabs)
-import Constants from "Constants" /* 7854 */;
+// Module 12945 (useProfileSectionTabs)
+import Constants from "Constants" /* 7865 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

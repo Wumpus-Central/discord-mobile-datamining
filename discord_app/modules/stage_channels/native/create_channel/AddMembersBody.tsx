@@ -1,15 +1,15 @@
-// === Module 9244: AddMembersBody ===
+// === Module 9279: AddMembersBody ===
 
-// Module 9244 (AddMembersBody)
+// Module 9279 (AddMembersBody)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import intl6 from "intl" /* 1126 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import RegexUtilsDefault from "RegexUtils" /* 4874 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import GuildUtilsDefault from "GuildUtils" /* 5704 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9215 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import RegexUtilsDefault from "RegexUtils" /* 4880 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import GuildUtilsDefault from "GuildUtils" /* 5711 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9250 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -17,9 +17,9 @@ import react_native from "react-native" /* 17 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import UserStore from "UserStore" /* 1377 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8077 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8110 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let dependencyMap, row, user;
@@ -139,7 +139,7 @@ export default function AddMembersBody(pendingAdditions) {
   dependencyMap = tmp3;
   let tmp5 = dependencyMap;
   let obj = { isKeyboardAwareOnAndroid: !inActionSheet };
-  const insets = pendingAdditions(6471)(obj).insets;
+  const insets = pendingAdditions(6478)(obj).insets;
   let obj2 = guild(504);
   let items = [GuildRoleStore];
   const stateFromStores = obj2.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
@@ -195,12 +195,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    BottomSheetScrollView = guild(6112).BottomSheetScrollView;
+    BottomSheetScrollView = guild(6119).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    BottomSheetSectionList = guild(6112).BottomSheetSectionList;
+    BottomSheetSectionList = guild(6119).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -231,12 +231,12 @@ export default function AddMembersBody(pendingAdditions) {
     },
     autoFocus: true
   };
-  tmp4Result = pendingAdditions(9235);
+  tmp4Result = pendingAdditions(9270);
   intl3 = guild(1126).intl;
   const items5 = [closure_16(closure_7, obj9), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
-    const obj11 = { style: tmp3.inputDescContainer, children: closure_16(guild(4886).Text, obj12) };
+    const obj11 = { style: tmp3.inputDescContainer, children: closure_16(guild(4892).Text, obj12) };
     obj12 = { style: tmp3.inputDescText, variant: "text-xs/medium", color: "text-default", children: inputDesc };
     tmp27Result = closure_16(tmp28, obj11);
   }
@@ -254,7 +254,7 @@ export default function AddMembersBody(pendingAdditions) {
       let tmp27Result2;
       if (0 === membersRows.length) {
         const obj15 = { children: closure_16(EmptyState, obj16) };
-        obj16 = { Illustration: guild(9240).NoResultsAlt, style: null, bodyStyle: null, body: intl5.format(guild(1126).t.ErpIY3, obj17) };
+        obj16 = { Illustration: guild(9275).NoResultsAlt, style: null, bodyStyle: null, body: intl5.format(guild(1126).t.ErpIY3, obj17) };
         EmptyState = guild(1188).EmptyState;
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         intl5 = guild(1126).intl;

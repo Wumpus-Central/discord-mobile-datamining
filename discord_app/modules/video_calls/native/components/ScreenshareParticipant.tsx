@@ -1,19 +1,19 @@
-// === Module 9708: ScreenshareParticipant ===
+// === Module 9721: ScreenshareParticipant ===
 
-// Module 9708 (ScreenshareParticipant)
+// Module 9721 (ScreenshareParticipant)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9090 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9091 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 9631 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9126 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9127 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 9644 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

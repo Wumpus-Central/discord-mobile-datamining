@@ -1,10 +1,10 @@
-// === Module 15054: FastAssetImage ===
+// === Module 15069: FastAssetImage ===
 
-// Module 15054 (FastAssetImage)
+// Module 15069 (FastAssetImage)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import StoreUtils from "StoreUtils" /* 5322 */;
-import FastImageDefault from "FastImage" /* 5974 */;
+import StoreUtils from "StoreUtils" /* 5329 */;
+import FastImageDefault from "FastImage" /* 5981 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

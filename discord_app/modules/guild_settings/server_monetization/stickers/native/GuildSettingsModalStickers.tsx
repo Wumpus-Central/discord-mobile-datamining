@@ -1,25 +1,25 @@
-// === Module 17745: GuildSettingsModalStickers ===
+// === Module 17791: GuildSettingsModalStickers ===
 
-// Module 17745 (GuildSettingsModalStickers)
+// Module 17791 (GuildSettingsModalStickers)
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import StickersConstants from "StickersConstants" /* 2031 */;
-import BoostGemIcon from "BoostGemIcon" /* 4826 */;
-import LockIcon from "LockIcon" /* 5879 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 7666 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 13330 */;
-import BoostGemOutlineIcon from "BoostGemOutlineIcon" /* 17746 */;
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17749 */;
+import BoostGemIcon from "BoostGemIcon" /* 4832 */;
+import LockIcon from "LockIcon" /* 5886 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 7677 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13349 */;
+import BoostGemOutlineIcon from "BoostGemOutlineIcon" /* 17792 */;
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17795 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -40,7 +40,7 @@ let metroImportAll;
 const GuildFeatures = Constants.GuildFeatures;
 const MAX_STICKER_FILE_SIZE = StickersConstants.MAX_STICKER_FILE_SIZE;
 ({ jsx: closure_12, jsxs: map1 } = Fragment);
-let obj = { tier: BoostedGuildTiers.NONE, title: intl.string(intl5.t.tfVXhP), IconComponent: "r" };
+let obj = { tier: BoostedGuildTiers.NONE, title: intl.string(intl5.t.tfVXhP), IconComponent: "Array" };
 intl = intl5.intl;
 let items = [obj, , , ];
 let obj2 = { tier: BoostedGuildTiers.TIER_1, title: intl2.string(intl5.t.nzXtaS), IconComponent: BoostGemOutlineIcon.BoostGemOutlineIcon };

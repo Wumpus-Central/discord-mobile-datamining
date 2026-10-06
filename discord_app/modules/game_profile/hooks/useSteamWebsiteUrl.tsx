@@ -1,9 +1,9 @@
-// === Module 8334: useSteamWebsiteUrl ===
+// === Module 8367: useSteamWebsiteUrl ===
 
-// Module 8334 (useSteamWebsiteUrl)
+// Module 8367 (useSteamWebsiteUrl)
 import Constants from "Constants" /* 1085 */;
 import StringUtils from "StringUtils" /* 2018 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 8335 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 8368 */;
 import GameStore from "GameStore" /* 2007 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

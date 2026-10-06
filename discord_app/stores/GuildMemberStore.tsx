@@ -13,10 +13,10 @@ import mappers from "mappers" /* 1973 */;
 import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1984 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2110 */;
 import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 2113 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4495 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4496 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4497 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4501 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4503 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -26,7 +26,7 @@ import size from "module_2" /* 2 */;
 
 let closure_14, hasOwnProperty;
 
-const f85885 = (member) => member.member;
+const f86019 = (member) => member.member;
 function trackCommunicationDisabled(guildId, tmp10Result) {
   if (null != tmp10Result.communicationDisabledUntil) {
     const obj2 = CommunicationDisabledUtils;
@@ -97,7 +97,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "concat", hoistRoleId: "lj", iconRoleId: "key", highestRoleId: "userId" };
+    return { colorString: null, colorStrings: null, colorRoleId: "concat", hoistRoleId: "TypeError", iconRoleId: "keys", highestRoleId: "ind" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {
@@ -983,7 +983,7 @@ obj = {
         const item = activity_instances.forEach((participants) => {
           let found;
           participants = participants.participants;
-          obj = { id, members: found.map(f85885) };
+          obj = { id, members: found.map(f86019) };
           found = participants.filter(isActivityParticipantValidGuildMemberDefault);
           buildMembers(obj);
         });
@@ -1804,7 +1804,7 @@ obj = {
     let tmp3 = null != embeddedActivityLocationGuildId;
     if (tmp3) {
       const participants = instance.participants;
-      const obj2 = { id: embeddedActivityLocationGuildId, members: found.map(f85885) };
+      const obj2 = { id: embeddedActivityLocationGuildId, members: found.map(f86019) };
       found = participants.filter(isActivityParticipantValidGuildMemberDefault);
       tmp3 = buildMembers(obj2);
     }

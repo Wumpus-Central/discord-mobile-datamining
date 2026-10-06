@@ -1,6 +1,6 @@
-// === Module 8416: navigateToGameAnnouncement ===
+// === Module 8449: navigateToGameAnnouncement ===
 
-// Module 8416 (navigateToGameAnnouncement)
+// Module 8449 (navigateToGameAnnouncement)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;
@@ -60,7 +60,7 @@ let obj = function _navigateToGameAnnouncement() {
             joinedAt = undefined;
             messageId = 1;
             sourceLocationStack = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === messageId) {

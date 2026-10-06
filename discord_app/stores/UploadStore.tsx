@@ -1,9 +1,9 @@
-// === Module 7466: UploadStore ===
+// === Module 7477: UploadStore ===
 
-// Module 7466 (UploadStore)
+// Module 7477 (UploadStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import size_mod from "module_2" /* 2 */;
 
 let cancel, closure_8, item;

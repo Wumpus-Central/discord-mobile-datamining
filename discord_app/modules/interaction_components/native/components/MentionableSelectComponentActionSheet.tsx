@@ -1,25 +1,25 @@
-// === Module 11433: MentionableSelectComponentActionSheet ===
+// === Module 11446: MentionableSelectComponentActionSheet ===
 
-// Module 11433 (MentionableSelectComponentActionSheet)
+// Module 11446 (MentionableSelectComponentActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5122 */;
-import RoleIconUtils from "RoleIconUtils" /* 6686 */;
-import RoleIconDefault from "RoleIcon" /* 6704 */;
-import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 7803 */;
-import ShieldUserIcon2 from "ShieldUserIcon" /* 9232 */;
-import DiscordTagDefault from "DiscordTag" /* 9296 */;
-import UserIcon from "UserIcon" /* 11435 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5129 */;
+import RoleIconUtils from "RoleIconUtils" /* 6693 */;
+import RoleIconDefault from "RoleIcon" /* 6711 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 7814 */;
+import ShieldUserIcon2 from "ShieldUserIcon" /* 9267 */;
+import DiscordTagDefault from "DiscordTag" /* 9331 */;
+import UserIcon from "UserIcon" /* 11448 */;
 import react_mod from "react" /* 19 */;
 import GuildRoleStore_mod from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 11470: BanConfirmModal ===
+// === Module 11483: BanConfirmModal ===
 
-// Module 11470 (BanConfirmModal)
+// Module 11483 (BanConfirmModal)
 import Fragment from "Fragment" /* 21 */;
-import BanConfirmDefault from "BanConfirm" /* 11463 */;
+import BanConfirmDefault from "BanConfirm" /* 11476 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

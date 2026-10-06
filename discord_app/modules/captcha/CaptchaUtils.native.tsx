@@ -1,12 +1,12 @@
-// === Module 17425: captcha/CaptchaUtils ===
+// === Module 17454: captcha/CaptchaUtils ===
 
-// Module 17425 (captcha/CaptchaUtils)
+// Module 17454 (captcha/CaptchaUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5407 */;
-import CaptchaConstants from "CaptchaConstants" /* 5415 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 5414 */;
+import CaptchaConstants from "CaptchaConstants" /* 5422 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -41,7 +41,7 @@ let obj = {
       }
     };
     ActionSheetActionCreatorsDefault;
-    const tmp2 = require("asyncRequire")(17426, dependencyMap.paths);
+    const tmp2 = require("asyncRequire")(17455, dependencyMap.paths);
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options);
     openLazy(tmp2, CAPTCHA_MODAL_KEY, obj2);

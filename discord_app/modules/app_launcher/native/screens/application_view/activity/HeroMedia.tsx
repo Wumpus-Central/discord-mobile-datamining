@@ -1,19 +1,19 @@
-// === Module 11708: HeroMedia ===
+// === Module 11722: HeroMedia ===
 
-// Module 11708 (HeroMedia)
+// Module 11722 (HeroMedia)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
-import common_VideoDefault from "common/Video" /* 7983 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9149 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10995 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11672 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
+import common_VideoDefault from "common/Video" /* 7993 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9184 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11008 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11686 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import createStyles from "createStyles" /* 4890 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

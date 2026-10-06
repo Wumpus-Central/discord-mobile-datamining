@@ -1,10 +1,10 @@
-// === Module 4727: ColorUtils ===
+// === Module 4733: ColorUtils ===
 
-// Module 4727 (ColorUtils)
+// Module 4733 (ColorUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef683 from "module_683" /* 683 */;
 import intl2 from "intl" /* 1126 */;
-import utils_ColorDefault from "utils/Color" /* 4728 */;
+import utils_ColorDefault from "utils/Color" /* 4734 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 11404: useTrackCreateGuildViewed ===
+// === Module 11417: useTrackCreateGuildViewed ===
 
-// Module 11404 (useTrackCreateGuildViewed)
+// Module 11417 (useTrackCreateGuildViewed)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6829 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6839 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

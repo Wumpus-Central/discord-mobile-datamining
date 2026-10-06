@@ -1,14 +1,14 @@
-// === Module 10558: UnifiedGiftModal ===
+// === Module 10571: UnifiedGiftModal ===
 
-// Module 10558 (UnifiedGiftModal)
+// Module 10571 (UnifiedGiftModal)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import Navigator2 from "Navigator" /* 6496 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6657 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10559 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import Navigator2 from "Navigator" /* 6503 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10572 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

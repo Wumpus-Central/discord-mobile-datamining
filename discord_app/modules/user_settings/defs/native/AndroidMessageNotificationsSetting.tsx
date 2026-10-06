@@ -1,16 +1,16 @@
-// === Module 15317: AndroidMessageNotificationsSetting ===
+// === Module 15332: AndroidMessageNotificationsSetting ===
 
-// Module 15317 (AndroidMessageNotificationsSetting)
+// Module 15332 (AndroidMessageNotificationsSetting)
 import react from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import _modDef2819 from "module_2819" /* 2819 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14290 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15311 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15305 */;
+import _modDef2847 from "module_2847" /* 2847 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14308 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15326 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15320 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11129 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 let c3;
@@ -74,11 +74,11 @@ const createToggle2 = SettingBuilders.createToggle;
 const obj3 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.odJXYJ);
+    return intl.string(_modDef2847.odJXYJ);
   },
   useDescription() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819["+jwUmI"]);
+    return intl.string(_modDef2847["+jwUmI"]);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {

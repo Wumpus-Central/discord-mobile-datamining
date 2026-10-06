@@ -1,12 +1,12 @@
-// === Module 8511: VirtualCurrencyActionCreators ===
+// === Module 8544: VirtualCurrencyActionCreators ===
 
-// Module 8511 (VirtualCurrencyActionCreators)
+// Module 8544 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import SKUStore from "SKUStore" /* 5695 */;
+import SKUStore from "SKUStore" /* 5702 */;
 import size from "module_2" /* 2 */;
 
 let c6;
@@ -148,7 +148,7 @@ obj = function _redeemVirtualCurrencyForSKU() {
             billingError = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (skuId === 1) {

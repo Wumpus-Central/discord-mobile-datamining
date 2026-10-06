@@ -1,13 +1,13 @@
-// === Module 7681: NewThreadSystemMessage ===
+// === Module 7692: NewThreadSystemMessage ===
 
-// Module 7681 (NewThreadSystemMessage)
+// Module 7692 (NewThreadSystemMessage)
 import intl2 from "intl" /* 1126 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

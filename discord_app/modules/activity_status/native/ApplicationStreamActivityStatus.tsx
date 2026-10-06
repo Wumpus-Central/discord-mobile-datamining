@@ -1,11 +1,11 @@
-// === Module 10614: ApplicationStreamActivityStatus ===
+// === Module 10627: ApplicationStreamActivityStatus ===
 
-// Module 10614 (ApplicationStreamActivityStatus)
+// Module 10627 (ApplicationStreamActivityStatus)
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10615 */;
-import TvIcon from "TvIcon" /* 10616 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10618 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10628 */;
+import TvIcon from "TvIcon" /* 10629 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10631 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -157,7 +157,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let tmp12 = !hideIcon;
   if (tmp12) {
-    const obj2 = { icon: tmp7(10616).TvIcon, style: iconStyle };
+    const obj2 = { icon: tmp7(10629).TvIcon, style: iconStyle };
     const tmp15 = ActivityStatusIconDefault;
     tmp12 = _false(tmp15, obj2);
   }

@@ -1,11 +1,11 @@
-// === Module 14736: FamilyCenterSettingParentalControlsSetting ===
+// === Module 14752: FamilyCenterSettingParentalControlsSetting ===
 
-// Module 14736 (FamilyCenterSettingParentalControlsSetting)
+// Module 14752 (FamilyCenterSettingParentalControlsSetting)
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef2493 from "module_2493" /* 2493 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import _modDef2521 from "module_2521" /* 2521 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const UserSettingsSections = Constants.UserSettingsSections;
 const obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2493.ahKIJO);
+    return intl.string(_modDef2521.ahKIJO);
   },
   parent: MobileUserSettings.FAMILY_CENTER,
   unsearchable: true,

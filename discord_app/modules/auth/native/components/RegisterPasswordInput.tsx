@@ -1,21 +1,21 @@
-// === Module 15893: RegisterPasswordInput ===
+// === Module 15932: RegisterPasswordInput ===
 
-// Module 15893 (RegisterPasswordInput)
+// Module 15932 (RegisterPasswordInput)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import getErrorDefault from "getError" /* 6445 */;
-import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 14271 */;
-import usePasswordScore from "usePasswordScore" /* 15890 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import getErrorDefault from "getError" /* 6452 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 14289 */;
+import usePasswordScore from "usePasswordScore" /* 15929 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import PhoneStore from "PhoneStore" /* 6430 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15867 */;
+import PhoneStore from "PhoneStore" /* 6437 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -572,8 +572,8 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     cResult[31] = tmp37;
     cResult[32] = tmp43;
     cResult[33] = undefined;
-    cResult[34] = closure_12(onPasswordChange(6098).TextInput, obj4);
-    const tmp47 = closure_12(onPasswordChange(6098).TextInput, obj4);
+    cResult[34] = closure_12(onPasswordChange(6105).TextInput, obj4);
+    const tmp47 = closure_12(onPasswordChange(6105).TextInput, obj4);
   }
   const fn = function q(arg0) {
     if (null != user.password) {

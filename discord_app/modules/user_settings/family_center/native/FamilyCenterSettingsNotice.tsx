@@ -1,12 +1,12 @@
-// === Module 14622: FamilyCenterSettingsNotice ===
+// === Module 14638: FamilyCenterSettingsNotice ===
 
-// Module 14622 (FamilyCenterSettingsNotice)
+// Module 14638 (FamilyCenterSettingsNotice)
 import Fragment from "Fragment" /* 21 */;
-import _modDef2493 from "module_2493" /* 2493 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import LayerActionCreators from "LayerActionCreators" /* 7096 */;
-import Constants from "Constants" /* 8075 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14497 */;
+import _modDef2521 from "module_2521" /* 2521 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import LayerActionCreators from "LayerActionCreators" /* 7109 */;
+import Constants from "Constants" /* 8108 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14513 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -18,7 +18,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp3;
   let obj = activeLinkUserIds(576);
   const cResult = obj.c(5);
-  let obj2 = activeLinkUserIds(8295);
+  let obj2 = activeLinkUserIds(8328);
   activeLinkUserIds = obj2.useActiveLinkUserIds();
   if (cResult[0] !== activeLinkUserIds) {
     const fn = function o() {
@@ -42,17 +42,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return tmp4;
   }
   SafetySettingsNoticeDefault;
-  const tmp6 = <tmp5 label={_modDef2493.i284fU} noticeType={SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE} labelHook={tmp3} count={activeLinkUserIds.length} />;
+  const tmp6 = <tmp5 label={_modDef2521.i284fU} noticeType={SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE} labelHook={tmp3} count={activeLinkUserIds.length} />;
   cResult[2] = tmp3;
   cResult[3] = activeLinkUserIds.length;
   cResult[4] = tmp6;
   tmp4 = tmp6;
 }) : (() => {
   let activeLinkUserIds;
-  let obj = activeLinkUserIds(8295);
+  let obj = activeLinkUserIds(8328);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   SafetySettingsNoticeDefault;
-  return <tmp label={_modDef2493.i284fU} noticeType={SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE} labelHook={function labelHook() {
+  return <tmp label={_modDef2521.i284fU} noticeType={SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE} labelHook={function labelHook() {
     const obj = LayerActionCreators;
     obj.popLayer();
     const obj2 = ChannelActionCreatorsDefault;

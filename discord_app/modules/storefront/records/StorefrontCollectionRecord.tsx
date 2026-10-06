@@ -1,9 +1,9 @@
-// === Module 7071: StorefrontCollectionRecord ===
+// === Module 7084: StorefrontCollectionRecord ===
 
-// Module 7071 (StorefrontCollectionRecord)
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7066 */;
-import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7072 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7073 */;
+// Module 7084 (StorefrontCollectionRecord)
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7079 */;
+import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7085 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7086 */;
 import size from "module_2" /* 2 */;
 
 const AssetDisplayConfigRecord = ShopAssetConfigRecord.AssetDisplayConfigRecord;

@@ -1,9 +1,9 @@
-// === Module 6473: DeprecatedLayoutAnimation ===
+// === Module 6480: DeprecatedLayoutAnimation ===
 
-// Module 6473 (DeprecatedLayoutAnimation)
+// Module 6480 (DeprecatedLayoutAnimation)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import size from "module_2" /* 2 */;
 
 let LayoutAnimation;

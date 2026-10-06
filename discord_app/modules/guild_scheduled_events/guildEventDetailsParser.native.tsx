@@ -1,7 +1,7 @@
-// === Module 9259: guildEventDetailsParser ===
+// === Module 9294: guildEventDetailsParser ===
 
-// Module 9259 (guildEventDetailsParser)
-import MarkupUtils from "MarkupUtils" /* 4877 */;
+// Module 9294 (guildEventDetailsParser)
+import MarkupUtils from "MarkupUtils" /* 4883 */;
 import size from "module_2" /* 2 */;
 
 const reactParserForResult = MarkupUtils.reactParserFor(MarkupUtils.guildEventLocationRules);

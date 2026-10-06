@@ -1,17 +1,17 @@
-// === Module 15115: HappeningNowCard ===
+// === Module 15130: HappeningNowCard ===
 
-// Module 15115 (HappeningNowCard)
+// Module 15130 (HappeningNowCard)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4732 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6433 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4738 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6440 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15114 */;
+import HappeningNowConstants from "HappeningNowConstants" /* 15129 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

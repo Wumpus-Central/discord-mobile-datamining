@@ -1,22 +1,22 @@
-// === Module 11671: useActivityShelfItem ===
+// === Module 11685: useActivityShelfItem ===
 
-// Module 11671 (useActivityShelfItem)
+// Module 11685 (useActivityShelfItem)
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import Server from "Server" /* 1985 */;
 import Constants2 from "Constants" /* 2011 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8726 */;
-import getPlatformDefault from "getPlatform" /* 8933 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 8994 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 9131 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9132 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9149 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11672 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11673 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8758 */;
+import getPlatformDefault from "getPlatform" /* 8962 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 9027 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 9166 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9167 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9184 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11686 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11687 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -51,8 +51,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = customId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6657)().analyticsLocations;
-  closure_14 = context(9132)();
+  analyticsLocations = context(6664)().analyticsLocations;
+  closure_14 = context(9167)();
   obj = canLaunchContextlessFrame;
   closure_15 = obj.canLaunchContextlessFrame(application);
   if (null == application) {

@@ -1,13 +1,13 @@
-// === Module 12080: useChangelogRenderedAnalytics ===
+// === Module 12095: useChangelogRenderedAnalytics ===
 
-// Module 12080 (useChangelogRenderedAnalytics)
+// Module 12095 (useChangelogRenderedAnalytics)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 7765 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 7776 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import ReadStateStore_mod from "ReadStateStore" /* 4905 */;
-import ChangelogStore from "ChangelogStore" /* 4904 */;
+import ReadStateStore_mod from "ReadStateStore" /* 4911 */;
+import ChangelogStore from "ChangelogStore" /* 4910 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

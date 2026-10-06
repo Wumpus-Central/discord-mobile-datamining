@@ -1,7 +1,7 @@
-// === Module 17194: FramePanelStateContext ===
+// === Module 17223: FramePanelStateContext ===
 
-// Module 17194 (FramePanelStateContext)
-import ActivityPanelStateContext from "ActivityPanelStateContext" /* 17168 */;
+// Module 17223 (FramePanelStateContext)
+import ActivityPanelStateContext from "ActivityPanelStateContext" /* 17197 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

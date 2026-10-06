@@ -1,10 +1,10 @@
-// === Module 9394: useGetGameForAppId ===
+// === Module 9408: useGetGameForAppId ===
 
-// Module 9394 (useGetGameForAppId)
+// Module 9408 (useGetGameForAppId)
 import react2 from "react" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
-import useGame from "useGame" /* 6812 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
+import useGame from "useGame" /* 6822 */;
 import react from "react" /* 19 */;
 import GameStore from "GameStore" /* 2007 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -135,7 +135,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 }) : ((arg0) => {
   let closure_0;
   let memo;
-  const tmp = memo(6663)(arg0);
+  const tmp = memo(6670)(arg0);
   _require = tmp;
   const items = [tmp];
   memo = react.useMemo(() => {

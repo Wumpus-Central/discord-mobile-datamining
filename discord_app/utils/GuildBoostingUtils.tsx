@@ -1,22 +1,22 @@
-// === Module 7666: GuildBoostingUtils ===
+// === Module 7677: GuildBoostingUtils ===
 
-// Module 7666 (GuildBoostingUtils)
+// Module 7677 (GuildBoostingUtils)
 import intl52 from "intl" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import _modDef3205 from "module_3205" /* 3205 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import PremiumUtilsAll from "PremiumUtils" /* 4528 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4542 */;
-import FileSizeUtils from "FileSizeUtils" /* 5317 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 7667 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 7668 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 7671 */;
+import _modDef3233 from "module_3233" /* 3233 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import PremiumUtilsAll from "PremiumUtils" /* 4534 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4548 */;
+import FileSizeUtils from "FileSizeUtils" /* 5324 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 7678 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 7679 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 7682 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6908 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import Constants from "Constants" /* 1085 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
@@ -40,7 +40,7 @@ let closure_25;
 let map1;
 let metroImportAll;
 let unpackModuleId;
-const f95365 = (isAvailable) => isAvailable.isAvailable();
+const f95506 = (isAvailable) => isAvailable.isAvailable();
 function getGuildTierFromGuild(arg0) {
   const guild = GuildStore.getGuild(arg0);
   let premiumTier;
@@ -467,8 +467,8 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  const obj = _modDef4461();
-  let num = obj.diff(_modDef4461(arg0), "months");
+  const obj = _modDef4467();
+  let num = obj.diff(_modDef4467(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -476,7 +476,7 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = _modDef4461();
+  const obj = _modDef4467();
   const diffResult = obj.diff(arg0, "months");
   const keys = Object.keys(closure_27);
   for (const item10021 of keys) {
@@ -505,7 +505,7 @@ export const isTierUnlocked = function isTierUnlocked(premiumTier, arg1) {
 export const getAvailableGuildBoostSlots = function getAvailableGuildBoostSlots(boostSlots) {
   const obj = module_12;
   const values = obj.values(boostSlots);
-  return values.filter(f95365);
+  return values.filter(f95506);
 };
 export const generateBlockGuildSubscriptionPurchasesNode = function generateBlockGuildSubscriptionPurchasesNode(fractionalState) {
   fractionalState = fractionalState.fractionalState;
@@ -520,7 +520,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   obj3 = module_12;
   const values = obj3.values(boostSlots);
   let prop;
-  const found = values.filter(f95365);
+  const found = values.filter(f95506);
   if (premiumTypeSubscription != null) {
     prop = premiumTypeSubscription.isPausedOrPausePending;
   }
@@ -540,7 +540,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
     const intl7 = intl52.intl;
     const formatToPlainString = intl7.formatToPlainString;
     const obj = { premiumGroupProductName: closure_26() };
-    const prop1 = _modDef3205["5xN/C1"];
+    const prop1 = _modDef3233["5xN/C1"];
     return formatToPlainString(prop1, obj);
   } else {
     const _Object = Object;
@@ -815,7 +815,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
   let totalAvailableBoostsCount;
-  const obj = totalAvailableBoostsCount(7675);
+  const obj = totalAvailableBoostsCount(7686);
   totalAvailableBoostsCount = obj.getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {

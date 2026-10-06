@@ -1,6 +1,6 @@
-// === Module 7027: AutomodFeedback ===
+// === Module 7040: AutomodFeedback ===
 
-// Module 7027 (AutomodFeedback)
+// Module 7040 (AutomodFeedback)
 import intl3 from "intl" /* 1126 */;
 import size from "module_2" /* 2 */;
 

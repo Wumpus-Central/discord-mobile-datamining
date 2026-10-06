@@ -1,16 +1,16 @@
-// === Module 15941: guilds/Guilds ===
+// === Module 15980: guilds/Guilds ===
 
-// Module 15941 (guilds/Guilds)
+// Module 15980 (guilds/Guilds)
 import react2 from "react" /* 576 */;
-import native from "native" /* 4589 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4732 */;
-import MainTabsConstants from "MainTabsConstants" /* 10820 */;
-import QuestsEligibility from "QuestsEligibility" /* 10912 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14900 */;
-import QuestDockDefault from "QuestDock" /* 14985 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15942 */;
-import MainChannelsDefault from "MainChannels" /* 15943 */;
-import YouBarDefault from "YouBar" /* 16304 */;
+import native from "native" /* 4595 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4738 */;
+import MainTabsConstants from "MainTabsConstants" /* 10833 */;
+import QuestsEligibility from "QuestsEligibility" /* 10925 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14916 */;
+import QuestDockDefault from "QuestDock" /* 15000 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 15981 */;
+import MainChannelsDefault from "MainChannels" /* 15982 */;
+import YouBarDefault from "YouBar" /* 16344 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

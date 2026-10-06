@@ -1,6 +1,6 @@
-// === Module 11548: ContentInventoryPersistedStore ===
+// === Module 11561: ContentInventoryPersistedStore ===
 
-// Module 11548 (ContentInventoryPersistedStore)
+// Module 11561 (ContentInventoryPersistedStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;

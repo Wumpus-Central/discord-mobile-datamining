@@ -1,6 +1,6 @@
-// === Module 9781: StickyWrapper ===
+// === Module 9794: StickyWrapper ===
 
-// Module 9781 (StickyWrapper)
+// Module 9794 (StickyWrapper)
 import react2 from "react" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import react from "react" /* 19 */;

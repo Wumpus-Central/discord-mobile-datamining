@@ -1,6 +1,6 @@
-// === Module 7885: ShopThisLookMobileExperiment ===
+// === Module 7896: ShopThisLookMobileExperiment ===
 
-// Module 7885 (ShopThisLookMobileExperiment)
+// Module 7896 (ShopThisLookMobileExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

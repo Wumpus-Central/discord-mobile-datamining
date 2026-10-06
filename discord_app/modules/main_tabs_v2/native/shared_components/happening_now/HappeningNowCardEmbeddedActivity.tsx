@@ -1,19 +1,19 @@
-// === Module 16010: HappeningNowCardEmbeddedActivity ===
+// === Module 16049: HappeningNowCardEmbeddedActivity ===
 
-// Module 16010 (HappeningNowCardEmbeddedActivity)
+// Module 16049 (HappeningNowCardEmbeddedActivity)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15114 */;
+import HappeningNowConstants from "HappeningNowConstants" /* 15129 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let user;
@@ -127,7 +127,7 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     }
     items1 = [userId];
     track(ACTIVITY_CARD_CLICKED, obj);
-    const promise = asyncRequire(12695, dependencyMap.paths);
+    const promise = asyncRequire(12710, dependencyMap.paths);
     promise.then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);

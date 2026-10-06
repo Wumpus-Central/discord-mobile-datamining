@@ -1,27 +1,27 @@
-// === Module 16785: SwipeForMemberListWrapper ===
+// === Module 16806: SwipeForMemberListWrapper ===
 
-// Module 16785 (SwipeForMemberListWrapper)
+// Module 16806 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import useChatLayout from "useChatLayout" /* 4739 */;
-import ChatInputUtils from "ChatInputUtils" /* 4745 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import useMountEffect from "useMountEffect" /* 5590 */;
-import react_native from "react-native" /* 7499 */;
-import getJankSurfaceName from "getJankSurfaceName" /* 15939 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16324 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import useChatLayout from "useChatLayout" /* 4745 */;
+import ChatInputUtils from "ChatInputUtils" /* 4751 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import useMountEffect from "useMountEffect" /* 5597 */;
+import react_native from "react-native" /* 7510 */;
+import getJankSurfaceName from "getJankSurfaceName" /* 15978 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16364 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native2 from "react-native" /* 17 */;
-import ChannelDetailsStore from "ChannelDetailsStore" /* 7511 */;
+import ChannelDetailsStore from "ChannelDetailsStore" /* 7522 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

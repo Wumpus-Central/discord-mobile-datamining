@@ -1,10 +1,10 @@
-// === Module 8550: getGameProfileWebsiteData ===
+// === Module 8583: getGameProfileWebsiteData ===
 
-// Module 8550 (getGameProfileWebsiteData)
+// Module 8583 (getGameProfileWebsiteData)
 import Fragment from "Fragment" /* 21 */;
 import intl9 from "intl" /* 1126 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8319 */;
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8333 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8366 */;
 import size from "module_2" /* 2 */;
 
 const jsx = Fragment.jsx;

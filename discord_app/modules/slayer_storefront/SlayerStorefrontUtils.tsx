@@ -1,20 +1,20 @@
-// === Module 6727: SlayerStorefrontUtils ===
+// === Module 6741: SlayerStorefrontUtils ===
 
-// Module 6727 (SlayerStorefrontUtils)
+// Module 6741 (SlayerStorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
-import StoreUtils from "StoreUtils" /* 5322 */;
-import _mod5635 from "module_5635" /* 5635 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6728 */;
-import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 6731 */;
-import StorefrontUtils from "StorefrontUtils" /* 6732 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import StoreUtils from "StoreUtils" /* 5329 */;
+import _mod5642 from "module_5642" /* 5642 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6742 */;
+import SocialLayerStorefrontTypes from "SocialLayerStorefrontTypes" /* 6745 */;
+import StorefrontUtils from "StorefrontUtils" /* 6746 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6729 */;
-import SocialLayerStorefrontConstants from "SocialLayerStorefrontConstants" /* 6730 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 6743 */;
+import SocialLayerStorefrontConstants from "SocialLayerStorefrontConstants" /* 6744 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
@@ -138,7 +138,7 @@ function getSKUShareURL(guildId, applicationId) {
     const _location2 = location;
     const _location3 = location;
     applicationId = applicationId.applicationId;
-    const obj = _mod5635;
+    const obj = _mod5642;
     const parsed = obj.parse(search);
     const skuId = parsed.skuId;
     ({ tab, applicationId: applicationId2 } = parsed);
@@ -351,7 +351,7 @@ function isOnCollectiblesShopGameShopPage(arr, search, arg2, arg3) {
   let applicationId;
   let skuId;
   let tab;
-  const obj = _mod5635;
+  const obj = _mod5642;
   const parsed = obj.parse(search);
   ({ tab, applicationId, skuId } = parsed);
   let tmp2 = arr.indexOf(map1.COLLECTIBLES_SHOP) >= 0;
@@ -595,7 +595,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
         let obj3;
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj3 = { primaryIconAsset: "Array", primaryIconLabel: "Set" };
+          obj3 = { primaryIconAsset: "start", primaryIconLabel: "unicodeVersion" };
         } else {
           const toURLSafe = URLUtilsDefault.toURLSafe;
           URLUtilsDefault;
@@ -607,7 +607,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "Set" };
+  return { primaryIconAsset: "start", primaryIconLabel: "unicodeVersion" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(value2) {
   let obj = arg1;
@@ -779,7 +779,7 @@ export const getHasWishlistOrPopularRecommendations = function getHasWishlistOrP
 export const isOnSocialLayerStorefrontPage = function isOnSocialLayerStorefrontPage(arr, search, arg2, arg3) {
   let applicationId;
   let tab;
-  const obj = _mod5635;
+  const obj = _mod5642;
   const parsed = obj.parse(search);
   ({ tab, applicationId } = parsed);
   let tmp2 = arr.indexOf(map1.COLLECTIBLES_SHOP) >= 0;
@@ -808,7 +808,7 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
   }
   ({ guildId, skuId } = applicationId);
   applicationId = applicationId.applicationId;
-  const obj = _mod5635;
+  const obj = _mod5642;
   const parsed = obj.parse(search);
   ({ tab, applicationId: applicationId2, skuId: skuId2 } = parsed);
   let tmp2 = pathname.indexOf(map1.COLLECTIBLES_SHOP) >= 0;

@@ -1,11 +1,11 @@
-// === Module 16669: useConjureRevealedText ===
+// === Module 16688: useConjureRevealedText ===
 
-// Module 16669 (useConjureRevealedText)
-import ConjureStreamReveal from "ConjureStreamReveal" /* 16670 */;
-import conjurePageVisibility from "conjurePageVisibility" /* 16671 */;
+// Module 16688 (useConjureRevealedText)
+import ConjureStreamReveal from "ConjureStreamReveal" /* 16689 */;
+import conjurePageVisibility from "conjurePageVisibility" /* 16690 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import AccessibilityStore_mod from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore_mod from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -481,7 +481,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((target, streaming) =
   let closure_3;
   let length;
   let tmp4;
-  const f126028 = () => ({ target, length: target.length });
+  const f126176 = () => ({ target, length: target.length });
   _require = target;
   streaming = streaming.streaming;
   dependencyMap = undefined;
@@ -497,15 +497,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((target, streaming) =
     streaming = !obj.useStateFromStores(items, () => ref.useReducedMotion);
   }
   let obj2 = react;
-  [arr2, tmp4] = obj4(react.useState(f126028), 2);
+  [arr2, tmp4] = obj4(react.useState(f126176), 2);
   dependencyMap = tmp4;
-  const tmp3 = obj4(react.useState(f126028), 2);
+  const tmp3 = obj4(react.useState(f126176), 2);
   obj4 = arr2;
   let arr3 = arr2;
   if (arr2.target !== target) {
     let obj3 = { target, length };
     if (streaming) {
-      let tmpResult = tmp(16670);
+      let tmpResult = tmp(16689);
       length = tmpResult.reconcileRevealedLength(arr2.target, target, arr2.length);
     } else {
       length = target.length;

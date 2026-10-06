@@ -1,12 +1,12 @@
-// === Module 6619: common/SafeAreaView ===
+// === Module 6626: common/SafeAreaView ===
 
-// Module 6619 (common/SafeAreaView)
+// Module 6626 (common/SafeAreaView)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import _modDef1342 from "module_1342" /* 1342 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import useRefValueDefault from "useRefValue" /* 5973 */;
+import useRefValueDefault from "useRefValue" /* 5980 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

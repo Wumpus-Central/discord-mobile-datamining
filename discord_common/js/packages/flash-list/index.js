@@ -1,17 +1,17 @@
-// === Module 8371: defaultMVCPConfig ===
+// === Module 8404: defaultMVCPConfig ===
 
-// Module 8371 (defaultMVCPConfig)
+// Module 8404 (defaultMVCPConfig)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import BottomSheetModal from "BottomSheetModal" /* 6112 */;
-import BottomSheetFlashListDefault from "BottomSheetFlashList" /* 6336 */;
-import _mod6337 from "module_6337" /* 6337 */;
+import BottomSheetModal from "BottomSheetModal" /* 6119 */;
+import BottomSheetFlashListDefault from "BottomSheetFlashList" /* 6343 */;
+import _mod6344 from "module_6344" /* 6344 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4612 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4618 */;
 import size from "module_2" /* 2 */;
 
 let obj;
@@ -84,7 +84,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     }
     return tmp4;
   }
-  const FlashList = _mod6337.FlashList;
+  const FlashList = _mod6344.FlashList;
   const merged = Object.assign(arg0);
   const tmp6 = <FlashList maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
   cResult[0] = arg0;
@@ -94,12 +94,12 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
 }) : ((arg0, ref) => {
   let maintainVisibleContentPosition;
   maintainVisibleContentPosition = { maintainVisibleContentPosition, ref };
-  const FlashList = _mod6337.FlashList;
+  const FlashList = _mod6344.FlashList;
   const merged = Object.assign(arg0);
   return <FlashList maintainVisibleContentPosition={maintainVisibleContentPosition} ref={ref} />;
 }));
 let ReanimatedRexport = ReanimatedRexport_mod;
-let closure_13 = ReanimatedRexport.createAnimatedComponent(_mod6337.FlashList);
+let closure_13 = ReanimatedRexport.createAnimatedComponent(_mod6344.FlashList);
 const forwardRef2 = react.forwardRef;
 ReactCompilerGating = ReactCompilerGating_mod;
 const forwardRef3 = react.forwardRef;
@@ -146,7 +146,7 @@ const forwardRef3Result = forwardRef3(ReactCompilerGating.isReactCompilerEnabled
     }
     return tmp8;
   }
-  const FlashList = _mod6337.FlashList;
+  const FlashList = _mod6344.FlashList;
   const merged = Object.assign(tmp4);
   const tmp10 = <FlashList ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry />;
   cResult[2] = tmp4;
@@ -157,12 +157,12 @@ const forwardRef3Result = forwardRef3(ReactCompilerGating.isReactCompilerEnabled
   let maintainVisibleContentPosition;
   const merged = Object.assign(arg0, Object.assign({ preventNativeModalDismiss: 0 }));
   maintainVisibleContentPosition = { ref, maintainVisibleContentPosition, masonry: true };
-  const FlashList = _mod6337.FlashList;
+  const FlashList = _mod6344.FlashList;
   const merged1 = Object.assign(merged);
   return <FlashList ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry />;
 }));
 ReanimatedRexport = ReanimatedRexport_mod;
-let closure_14 = ReanimatedRexport.createAnimatedComponent(_mod6337.FlashList);
+let closure_14 = ReanimatedRexport.createAnimatedComponent(_mod6344.FlashList);
 const forwardRef4 = react.forwardRef;
 ReactCompilerGating = ReactCompilerGating_mod;
 const forwardRef5 = react.forwardRef;
@@ -274,8 +274,8 @@ const forwardRef5Result = forwardRef5(ReactCompilerGating.isReactCompilerEnabled
   return <closure_14 ref={ref} maintainVisibleContentPosition={maintainVisibleContentPosition} masonry renderScrollComponent={BottomSheetModal.BottomSheetScrollView} refreshControl={tmp2} />;
 }));
 const result = size.fileFinishedImporting("../discord_common/js/packages/flash-list/index.js");
-for (const key10093 in _mod6337) {
-  exports[key10093] = _mod6337[key10093];
+for (const key10093 in _mod6344) {
+  exports[key10093] = _mod6344[key10093];
   continue;
 }
 const FlashList_export = forwardRefResult;

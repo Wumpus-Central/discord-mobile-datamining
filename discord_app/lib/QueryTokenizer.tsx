@@ -1,6 +1,6 @@
-// === Module 11975: QueryTokenizer ===
+// === Module 11986: QueryTokenizer ===
 
-// Module 11975 (QueryTokenizer)
+// Module 11986 (QueryTokenizer)
 import size from "module_2" /* 2 */;
 
 let map;

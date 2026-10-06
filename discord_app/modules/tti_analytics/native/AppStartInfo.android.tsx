@@ -1,8 +1,8 @@
-// === Module 7157: AppStartInfo ===
+// === Module 7170: AppStartInfo ===
 
-// Module 7157 (AppStartInfo)
-import react_nativeDefault from "react-native" /* 4743 */;
-import react_nativeDefault2 from "react-native" /* 7158 */;
+// Module 7170 (AppStartInfo)
+import react_nativeDefault from "react-native" /* 4749 */;
+import react_nativeDefault2 from "react-native" /* 7171 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;

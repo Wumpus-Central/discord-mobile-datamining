@@ -1,8 +1,8 @@
-// === Module 10483: usePremiumProductPricingString ===
+// === Module 10496: usePremiumProductPricingString ===
 
-// Module 10483 (usePremiumProductPricingString)
+// Module 10496 (usePremiumProductPricingString)
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

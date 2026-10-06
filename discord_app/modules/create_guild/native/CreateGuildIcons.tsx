@@ -1,20 +1,20 @@
-// === Module 12360: CreateGuildIcons ===
+// === Module 12375: CreateGuildIcons ===
 
-// Module 12360 (CreateGuildIcons)
-import AssetRegistryDefault from "AssetRegistry" /* 11953 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 11954 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 11955 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 11956 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 11957 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 11958 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 11959 */;
-import PencilIllocon from "PencilIllocon" /* 12361 */;
-import ControllerIllocon from "ControllerIllocon" /* 12362 */;
-import HeartIllocon from "HeartIllocon" /* 12364 */;
-import AppleIllocon from "AppleIllocon" /* 12366 */;
-import BookIllocon from "BookIllocon" /* 12368 */;
-import PaintIllocon from "PaintIllocon" /* 12370 */;
-import LeafIllocon from "LeafIllocon" /* 12372 */;
+// Module 12375 (CreateGuildIcons)
+import AssetRegistryDefault from "AssetRegistry" /* 11967 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 11968 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 11969 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 11970 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 11971 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 11972 */;
+import AssetRegistryDefault7 from "AssetRegistry" /* 11973 */;
+import PencilIllocon from "PencilIllocon" /* 12376 */;
+import ControllerIllocon from "ControllerIllocon" /* 12377 */;
+import HeartIllocon from "HeartIllocon" /* 12379 */;
+import AppleIllocon from "AppleIllocon" /* 12381 */;
+import BookIllocon from "BookIllocon" /* 12383 */;
+import PaintIllocon from "PaintIllocon" /* 12385 */;
+import LeafIllocon from "LeafIllocon" /* 12387 */;
 import size from "module_2" /* 2 */;
 
 const obj = { CREATE: AssetRegistryDefault, GAMING: AssetRegistryDefault5, FRIENDS: AssetRegistryDefault3, STUDY: AssetRegistryDefault4, CLUBS: AssetRegistryDefault6, CREATORS: AssetRegistryDefault7, LOCAL_COMMUNITY: AssetRegistryDefault2, SCHOOL_CLUB: AssetRegistryDefault6 };

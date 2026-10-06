@@ -1,21 +1,21 @@
-// === Module 18074: ParentalConsentConnectionScreen ===
+// === Module 18119: ParentalConsentConnectionScreen ===
 
-// Module 18074 (ParentalConsentConnectionScreen)
+// Module 18119 (ParentalConsentConnectionScreen)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import _modDef2787 from "module_2787" /* 2787 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import FamilyCenterConstants from "FamilyCenterConstants" /* 7049 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14686 */;
+import _modDef2815 from "module_2815" /* 2815 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7062 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14702 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c4, closure_2;
@@ -231,9 +231,9 @@ export default function ParentalConsentConnectionScreen() {
     let intl2;
     let obj2;
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-    const obj = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: intl.string(_modDef2787.dMMSA0), body: intl2.format(_modDef2787["6GaRTu"], obj2) };
+    const obj = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: intl.string(_modDef2815.dMMSA0), body: intl2.format(_modDef2815["6GaRTu"], obj2) };
     ActionSheetActionCreatorsDefault;
-    const tmp2 = asyncRequire(14687, dependencyMap.paths);
+    const tmp2 = asyncRequire(14703, dependencyMap.paths);
     intl = intl5.intl;
     intl2 = intl5.intl;
     obj2 = { link };

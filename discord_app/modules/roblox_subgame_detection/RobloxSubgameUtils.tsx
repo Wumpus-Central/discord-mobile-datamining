@@ -1,9 +1,9 @@
-// === Module 5020: RobloxSubgameUtils ===
+// === Module 5026: RobloxSubgameUtils ===
 
-// Module 5020 (RobloxSubgameUtils)
+// Module 5026 (RobloxSubgameUtils)
 import _modDef12 from "module_12" /* 12 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 5021 */;
-import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 5022 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 5027 */;
+import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 5028 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

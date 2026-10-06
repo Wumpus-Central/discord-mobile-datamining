@@ -1,10 +1,10 @@
-// === Module 10819: useHandleUseNow ===
+// === Module 10832: useHandleUseNow ===
 
-// Module 10819 (useHandleUseNow)
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import MainTabsConstants from "MainTabsConstants" /* 10820 */;
+// Module 10832 (useHandleUseNow)
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import MainTabsConstants from "MainTabsConstants" /* 10833 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

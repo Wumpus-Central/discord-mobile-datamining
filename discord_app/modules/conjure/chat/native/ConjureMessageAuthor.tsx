@@ -1,22 +1,22 @@
-// === Module 16657: ConjureMessageAuthor ===
+// === Module 16673: ConjureMessageAuthor ===
 
-// Module 16657 (ConjureMessageAuthor)
+// Module 16673 (ConjureMessageAuthor)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AppsIcon2 from "AppsIcon" /* 5890 */;
-import Pressables from "Pressables" /* 5909 */;
-import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 16654 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 16658 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 16659 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 16660 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AppsIcon2 from "AppsIcon" /* 5897 */;
+import Pressables from "Pressables" /* 5916 */;
+import ConjureNativeStatusLine from "ConjureNativeStatusLine" /* 16670 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 16674 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 16675 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 16676 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -316,7 +316,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const at = arg0.at;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = intl2.intl;
-    const stringResult = intl.string(_modDef3723.uk6jhJ);
+    const stringResult = intl.string(_modDef3753.uk6jhJ);
     cResult[0] = stringResult;
     first = stringResult;
   } else {
@@ -335,7 +335,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 }) : ((arg0) => {
   let at;
   let intl;
-  const obj = { name: intl.string(_modDef3723.uk6jhJ), color: "text-brand", at };
+  const obj = { name: intl.string(_modDef3753.uk6jhJ), color: "text-brand", at };
   at = arg0.at;
   intl = intl2.intl;
   return metroRequire(closure_10, obj);
@@ -392,13 +392,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         tmp6 = tmp13;
       }
       const obj2 = { onPress: tmp5, onLongPress: tmp5, accessibilityRole: "button", accessibilityLabel: tmp8, children: tmp10 };
-      const tmp15 = closure_6(tmp(5909).PressableOpacity, obj2);
+      const tmp15 = closure_6(tmp(5916).PressableOpacity, obj2);
       cResult[6] = tmp5;
       cResult[7] = tmp10;
       cResult[8] = tmp15;
       tmp13 = tmp15;
     }
-    const obj3 = { size, user: tmp4, guildId: "r" };
+    const obj3 = { size, user: tmp4, guildId: "Array" };
     const tmp12 = closure_6(tmp(1188).Avatar, obj3);
     cResult[3] = size;
     cResult[4] = tmp4;
@@ -430,7 +430,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let obj = { onPress: callback, onLongPress: callback, accessibilityRole: "button", accessibilityLabel: intl.string(require("intl").t.iXAna6), children: closure_6(require("native").Avatar, obj2) };
     const PressableOpacity = require("Pressables").PressableOpacity;
     intl = require("intl").intl;
-    obj2 = { size: NORMAL, user: tmp3, guildId: "r" };
+    obj2 = { size: NORMAL, user: tmp3, guildId: "Array" };
     tmp5 = closure_6(PressableOpacity, obj);
   }
   return tmp5;

@@ -1,12 +1,12 @@
-// === Module 13542: useHasXboxMonthlyOrbsPerk ===
+// === Module 13558: useHasXboxMonthlyOrbsPerk ===
 
-// Module 13542 (useHasXboxMonthlyOrbsPerk)
+// Module 13558 (useHasXboxMonthlyOrbsPerk)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import PerksStateUtils from "PerksStateUtils" /* 1383 */;
 import user from "user" /* 1385 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

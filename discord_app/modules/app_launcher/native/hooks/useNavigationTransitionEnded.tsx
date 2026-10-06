@@ -1,6 +1,6 @@
-// === Module 11752: useNavigationTransitionEnded ===
+// === Module 11766: useNavigationTransitionEnded ===
 
-// Module 11752 (useNavigationTransitionEnded)
+// Module 11766 (useNavigationTransitionEnded)
 import react2 from "react" /* 576 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
 import Link from "Link" /* 1491 */;

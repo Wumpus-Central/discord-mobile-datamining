@@ -1,7 +1,7 @@
-// === Module 12296: useProvisionalAccountApplication ===
+// === Module 12311: useProvisionalAccountApplication ===
 
-// Module 12296 (useProvisionalAccountApplication)
-import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
+// Module 12311 (useProvisionalAccountApplication)
+import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

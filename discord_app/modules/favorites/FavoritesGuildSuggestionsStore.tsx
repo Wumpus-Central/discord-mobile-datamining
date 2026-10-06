@@ -1,6 +1,6 @@
-// === Module 16127: FavoritesGuildSuggestionsStore ===
+// === Module 16166: FavoritesGuildSuggestionsStore ===
 
-// Module 16127 (FavoritesGuildSuggestionsStore)
+// Module 16166 (FavoritesGuildSuggestionsStore)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
@@ -130,7 +130,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[3] !== tmp9[1]) {
     class I {
       constructor() {
-        obj = { dismiss() { /* body not rendered: F145569 */ } };
+        obj = { dismiss() { /* body not rendered: F145779 */ } };
         setStateResult = closure_8.setState(obj);
         return;
       }
@@ -143,7 +143,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     class I {
       constructor() {
-        obj = { dismiss() { /* body not rendered: F145569 */ } };
+        obj = { dismiss() { /* body not rendered: F145779 */ } };
         setStateResult = closure_8.setState(obj);
         return;
       }
@@ -154,7 +154,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class O {
       constructor() {
-        return () => { /* body not rendered: F145570 */ };
+        return () => { /* body not rendered: F145780 */ };
       }
     }
     const items1 = [];
@@ -164,7 +164,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     class O {
       constructor() {
-        return () => { /* body not rendered: F145570 */ };
+        return () => { /* body not rendered: F145780 */ };
       }
     }
     tmp16 = cResult[7];
@@ -173,7 +173,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[8] === hasAccess) {
     class O {
       constructor() {
-        return () => { /* body not rendered: F145570 */ };
+        return () => { /* body not rendered: F145780 */ };
       }
     }
     return obj3;
@@ -197,7 +197,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (hasAccess) {
     hasAccess = tmp4;
   }
-  const useSelectedDismissibleContent = tmp(6891).useSelectedDismissibleContent;
+  const useSelectedDismissibleContent = tmp(6901).useSelectedDismissibleContent;
   require("useSelectedDismissibleContent");
   if (hasAccess) {
     items = [tmp(2036).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];

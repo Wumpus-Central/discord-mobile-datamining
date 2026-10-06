@@ -1,20 +1,20 @@
-// === Module 17449: ExistingUserAgeGateConfirm ===
+// === Module 17478: ExistingUserAgeGateConfirm ===
 
-// Module 17449 (ExistingUserAgeGateConfirm)
+// Module 17478 (ExistingUserAgeGateConfirm)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import useNavigation from "useNavigation" /* 1490 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -319,13 +319,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   [tmp3, c2] = react.useState(false);
   let obj2 = { top: true, style: tmp.container, children: items };
   _slicedToArray(react.useState(false), 2);
-  const SafeAreaPaddingView = onConfirm(6619).SafeAreaPaddingView;
+  const SafeAreaPaddingView = onConfirm(6626).SafeAreaPaddingView;
   let obj3 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl.format(onConfirm(1126).t.wumolR, { age }) };
-  const Text = onConfirm(4886).Text;
+  const Text = onConfirm(4892).Text;
   intl = onConfirm(1126).intl;
   items = [closure_8(Text, obj3), , ];
   let obj4 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: format(n3QjDE, obj5) };
-  const Text2 = onConfirm(4886).Text;
+  const Text2 = onConfirm(4892).Text;
   const intl2 = onConfirm(1126).intl;
   format = intl2.format;
   obj5 = { helpURL: obj6.getArticleURL(HelpdeskArticles.AGE_GATE) };
@@ -342,7 +342,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     },
     grow: true
   };
-  Button = onConfirm(5594).Button;
+  Button = onConfirm(5601).Button;
   intl3 = onConfirm(1126).intl;
   items[2] = closure_8(View, obj7);
   return closure_9(SafeAreaPaddingView, obj2);

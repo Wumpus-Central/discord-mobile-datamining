@@ -1,23 +1,23 @@
-// === Module 14938: useVideoQuestPlayerAnalytics ===
+// === Module 14953: useVideoQuestPlayerAnalytics ===
 
-// Module 14938 (useVideoQuestPlayerAnalytics)
+// Module 14953 (useVideoQuestPlayerAnalytics)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
-import MetricEvents from "MetricEvents" /* 5414 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import QuestContent from "QuestContent" /* 5628 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7190 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import AdDataUtils from "AdDataUtils" /* 7218 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10940 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 14823 */;
-import AdsVideoUtils from "AdsVideoUtils" /* 14833 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
+import MetricEvents from "MetricEvents" /* 5421 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import QuestContent from "QuestContent" /* 5635 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import DiscordVideoPlayerTypes from "DiscordVideoPlayerTypes" /* 7203 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import AdDataUtils from "AdDataUtils" /* 7231 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10953 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 14839 */;
+import AdsVideoUtils from "AdsVideoUtils" /* 14849 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import NetworkStore from "NetworkStore" /* 4939 */;
+import NetworkStore from "NetworkStore" /* 4945 */;
 import size from "module_2" /* 2 */;
 
 let c7, c8, closure_5;

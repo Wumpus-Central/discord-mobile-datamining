@@ -1,6 +1,6 @@
-// === Module 4741: useBaseAppContainerDimensions ===
+// === Module 4747: useBaseAppContainerDimensions ===
 
-// Module 4741 (useBaseAppContainerDimensions)
+// Module 4747 (useBaseAppContainerDimensions)
 import react2 from "react" /* 576 */;
 import useWindowDimensions from "useWindowDimensions" /* 1484 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1618 */;

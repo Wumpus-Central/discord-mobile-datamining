@@ -1,15 +1,15 @@
-// === Module 16881: BaseMessagesScreen ===
+// === Module 16906: BaseMessagesScreen ===
 
-// Module 16881 (BaseMessagesScreen)
+// Module 16906 (BaseMessagesScreen)
 import Fragment from "Fragment" /* 21 */;
-import TrackingConstants from "TrackingConstants" /* 7512 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;
-import SearchUtils from "SearchUtils" /* 11968 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 16883 */;
+import TrackingConstants from "TrackingConstants" /* 7523 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
+import SearchUtils from "SearchUtils" /* 11987 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 16908 */;
 import react from "react" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6784 */;
-import SearchQueryStore from "SearchQueryStore" /* 11967 */;
+import SearchMessageStore from "SearchMessageStore" /* 6794 */;
+import SearchQueryStore from "SearchQueryStore" /* 11994 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

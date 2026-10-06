@@ -1,17 +1,17 @@
-// === Module 16608: AppLauncherActionSheet ===
+// === Module 16646: AppLauncherActionSheet ===
 
-// Module 16608 (AppLauncherActionSheet)
+// Module 16646 (AppLauncherActionSheet)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import reactDefault from "react" /* 6647 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
-import AppLauncherContext from "AppLauncherContext" /* 10994 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10995 */;
-import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 11693 */;
-import getAppDMApplication from "getAppDMApplication" /* 11826 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import reactDefault from "react" /* 6654 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
+import AppLauncherContext from "AppLauncherContext" /* 11007 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11008 */;
+import AppLauncherNavigatorDefault from "AppLauncherNavigator" /* 11707 */;
+import getAppDMApplication from "getAppDMApplication" /* 11840 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -221,7 +221,6 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((chatInputRef) =
 }) : ((arg0) => {
   let channel;
   let closure_129_0;
-  let logger;
   let name;
   ({ chatInputRef: closure_129_0, channel } = arg0);
   const ref = react.useRef(null);

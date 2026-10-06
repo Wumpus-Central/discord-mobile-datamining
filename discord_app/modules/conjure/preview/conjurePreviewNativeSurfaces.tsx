@@ -1,8 +1,8 @@
-// === Module 8974: conjurePreviewNativeSurfaces ===
+// === Module 9007: conjurePreviewNativeSurfaces ===
 
-// Module 8974 (conjurePreviewNativeSurfaces)
+// Module 9007 (conjurePreviewNativeSurfaces)
 import Constants from "Constants" /* 1085 */;
-import RpcCommandInterception from "RpcCommandInterception" /* 8975 */;
+import RpcCommandInterception from "RpcCommandInterception" /* 9008 */;
 import size from "module_2" /* 2 */;
 
 function asString(str) {
@@ -55,7 +55,7 @@ function answerFor(cmd) {
   } else if (null == obj[cmd.cmd]) {
     return null;
   } else {
-    const tmp11Result = obj[cmd.cmd](cmd, found.answers);
+    const tmp11Result = obj[cmd.cmd](cmd);
     ({ options, subject } = tmp11Result);
     const result = tmp11Result.result;
     if (found.recorded.length < 20) {
@@ -85,68 +85,26 @@ function answerFor(cmd) {
 }
 const RPCCommands = Constants.RPCCommands;
 let obj = {
-  [RPCCommands.OPEN_CONTEXT_MENU]: (args, contextMenuSelect) => {
-    let items;
-    if ("custom" === args.args.type) {
-      items = menuOptionIds(args.args.items);
-    } else {
-      items = [];
-    }
-    if ("custom" === args.args.type) {
-      contextMenuSelect = contextMenuSelect.contextMenuSelect;
-    }
-    if ("custom" === args.args.type) {
-      let tmp6;
-      if (null == contextMenuSelect) {
-        tmp6 = { result: { opened: true, selected_id: null }, answered: "dismissed", options: items };
-        const obj2 = { result: { opened: true, selected_id: null }, answered: "dismissed", options: items };
-      } else {
-        const obj3 = { result: null, answered: null, options: null };
-        const obj4 = { opened: true, selected_id: null };
-        if (items.includes(contextMenuSelect)) {
-          obj4.selected_id = contextMenuSelect;
-          obj3.result = obj4;
-          const _HermesInternal2 = HermesInternal;
-          obj3.answered = "selected \"" + contextMenuSelect + "\"";
-          obj3.options = items;
-          tmp6 = obj3;
-        } else {
-          obj3.result = obj4;
-          const _HermesInternal = HermesInternal;
-          obj3.answered = "dismissed \u2014 no item with id \"" + contextMenuSelect + "\"";
-          obj3.options = items;
-          tmp6 = obj3;
-        }
-      }
-      obj = tmp6;
-    } else {
+  [RPCCommands.OPEN_CONTEXT_MENU]: (args) => {
+    if ("custom" !== args.args.type) {
       obj = { result: { opened: true }, answered: "opened, no selection to make" };
+      const obj2 = { result: { opened: true }, answered: "opened, no selection to make" };
+    } else {
+      obj = { result: { opened: true, selected_id: null }, answered: "dismissed", options: menuOptionIds(args.args.items) };
     }
     return obj;
   },
-  [RPCCommands.SHOW_CONFIRM_MODAL]: (args, confirm) => {
-    let result;
-    let str;
-    const title = args.args.title;
+  [RPCCommands.SHOW_CONFIRM_MODAL]: (args) => {
     let tmp;
-    const _confirm = confirm.confirm;
+    const title = args.args.title;
+    obj = { result: "confirm" === args.args.type ? { confirmed: false } : { acknowledged: false }, answered: "dismissed", subject: tmp };
+    tmp = undefined;
     if (typeof title === "string") {
       if ("" !== title) {
         tmp = title;
       }
     }
-    if ("confirm" === args.args.type) {
-      result = { confirmed: true === _confirm };
-      const obj2 = { confirmed: true === _confirm };
-    } else {
-      result = { acknowledged: true === _confirm };
-    }
-    const obj3 = { result, answered: str, subject: tmp };
-    str = "dismissed";
-    if (true === _confirm) {
-      str = "confirmed";
-    }
-    return obj3;
+    return obj;
   },
   [RPCCommands.OPEN_EXTERNAL_LINK]: (args) => {
     let tmp;
@@ -188,8 +146,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "unicodeVersion", answered: "ripple" }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "unicodeVersion", answered: "ripple" })
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "unicodeVersion", answered: true }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "unicodeVersion", answered: true })
 };
 let closure_5 = {
   drain() {
@@ -205,39 +163,35 @@ const keys = Object.keys(obj);
 let result = size.fileFinishedImporting("modules/conjure/preview/conjurePreviewNativeSurfaces.tsx");
 
 export const ANSWERED_NATIVE_COMMANDS = keys;
-export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSessionForFrame(iframeId, native, beneathBatches) {
+export const beginNativeSurfaceSessionForFrame = function beginNativeSurfaceSessionForFrame(iframeId, beneathBatches) {
   if (null == iframeId) {
     return closure_5;
   } else {
     let arr;
-    let answers = native;
-    const obj3 = { iframeId, answers, recorded: [] };
-    if (native == null) {
-      answers = {};
-    }
+    const obj2 = { iframeId, recorded: [] };
     beneathBatches = undefined;
     if (beneathBatches != null) {
       beneathBatches = beneathBatches.beneathBatches;
     }
     if (true === beneathBatches) {
-      closure_6.push(obj3);
+      closure_6.push(obj2);
       arr = closure_6;
     } else {
       arr = closure_6;
-      closure_6.unshift(obj3);
+      closure_6.unshift(obj2);
     }
     if (1 === arr.length) {
-      const obj2 = obj3(8975);
-      let result = obj2.setRpcCommandInterceptor(answerFor);
+      obj = obj2(9008);
+      let result = obj.setRpcCommandInterceptor(answerFor);
     }
     return {
       iframeId,
       drain() {
-          const recorded = obj3.recorded;
-          return recorded.splice(0, obj3.recorded.length);
+          const recorded = obj2.recorded;
+          return recorded.splice(0, obj2.recorded.length);
         },
       end() {
-          const index = closure_6.indexOf(obj3);
+          const index = closure_6.indexOf(obj2);
           if (-1 !== index) {
             closure_6.splice(index, 1);
             if (0 === closure_6.length) {

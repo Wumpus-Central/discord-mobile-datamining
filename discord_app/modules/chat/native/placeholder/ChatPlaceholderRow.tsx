@@ -1,15 +1,15 @@
-// === Module 12307: ChatPlaceholderRow ===
+// === Module 12322: ChatPlaceholderRow ===
 
-// Module 12307 (ChatPlaceholderRow)
+// Module 12322 (ChatPlaceholderRow)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 11965 */;
-import getChatPlaceholderRowHeight from "getChatPlaceholderRowHeight" /* 12306 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 11979 */;
+import getChatPlaceholderRowHeight from "getChatPlaceholderRowHeight" /* 12321 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

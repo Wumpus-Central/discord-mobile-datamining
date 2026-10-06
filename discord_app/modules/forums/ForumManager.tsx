@@ -1,10 +1,10 @@
-// === Module 17497: ForumManager ===
+// === Module 17542: ForumManager ===
 
-// Module 17497 (ForumManager)
+// Module 17542 (ForumManager)
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 6807 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 6817 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 const isStaticChannelRoute = ChannelConstants.isStaticChannelRoute;

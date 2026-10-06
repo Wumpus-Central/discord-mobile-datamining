@@ -1,8 +1,8 @@
-// === Module 12822: conjurePresenceActivityImage ===
+// === Module 12841: conjurePresenceActivityImage ===
 
-// Module 12822 (conjurePresenceActivityImage)
-import AssetRegistryDefault from "AssetRegistry" /* 12823 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 12824 */;
+// Module 12841 (conjurePresenceActivityImage)
+import AssetRegistryDefault from "AssetRegistry" /* 12842 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 12843 */;
 import size from "module_2" /* 2 */;
 
 const obj = { light: AssetRegistryDefault, dark: AssetRegistryDefault2 };

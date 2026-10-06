@@ -1,16 +1,16 @@
-// === Module 18031: AVErrorStreamViewLowFPS ===
+// === Module 18076: AVErrorStreamViewLowFPS ===
 
-// Module 18031 (AVErrorStreamViewLowFPS)
+// Module 18076 (AVErrorStreamViewLowFPS)
 import Constants from "Constants" /* 1085 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import AVError from "AVError" /* 9095 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 9102 */;
-import AVErrorContext from "AVErrorContext" /* 18029 */;
-import AVErrorUtils from "AVErrorUtils" /* 18032 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 8101 */;
+import AVError from "AVError" /* 9131 */;
+import AVErrorContext from "AVErrorContext" /* 18074 */;
+import AVErrorUtils from "AVErrorUtils" /* 18077 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
 import size from "module_2" /* 2 */;
 
 let getParticipant, getRTCConnection;

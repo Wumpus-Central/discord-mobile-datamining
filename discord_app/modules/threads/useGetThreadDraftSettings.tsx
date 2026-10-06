@@ -1,8 +1,8 @@
-// === Module 9779: useGetThreadDraftSettings ===
+// === Module 9792: useGetThreadDraftSettings ===
 
-// Module 9779 (useGetThreadDraftSettings)
+// Module 9792 (useGetThreadDraftSettings)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DraftStore from "DraftStore" /* 7031 */;
+import DraftStore from "DraftStore" /* 7044 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

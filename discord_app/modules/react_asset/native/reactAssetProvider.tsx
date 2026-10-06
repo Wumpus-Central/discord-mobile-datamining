@@ -1,8 +1,8 @@
-// === Module 18099: reactAssetProvider ===
+// === Module 18144: reactAssetProvider ===
 
-// Module 18099 (reactAssetProvider)
-import react_nativeDefault from "react-native" /* 18100 */;
-import native_required_assets from "native_required_assets" /* 18101 */;
+// Module 18144 (reactAssetProvider)
+import react_nativeDefault from "react-native" /* 18145 */;
+import native_required_assets from "native_required_assets" /* 18146 */;
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;

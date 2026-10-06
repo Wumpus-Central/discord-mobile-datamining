@@ -1,16 +1,16 @@
-// === Module 11771: FrecencyCommandsSection ===
+// === Module 11785: FrecencyCommandsSection ===
 
-// Module 11771 (FrecencyCommandsSection)
+// Module 11785 (FrecencyCommandsSection)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
-import AppDetailContent from "AppDetailContent" /* 11753 */;
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 11772 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
+import AppDetailContent from "AppDetailContent" /* 11767 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 11786 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -239,7 +239,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((context) => {
     let obj = { style: tmp.container, children: items1 };
     const obj2 = { style: tmp.header, children: arr(Heading, obj3) };
     obj3 = { variant: "text-md/medium", color: "text-default", children: intl.string(context(1126).t.acSE0h) };
-    Heading = context(4886).Heading;
+    Heading = context(4892).Heading;
     intl = context(1126).intl;
     items1 = [
       arr(View, obj2),

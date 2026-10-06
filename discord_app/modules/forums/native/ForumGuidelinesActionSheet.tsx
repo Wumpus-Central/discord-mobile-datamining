@@ -1,19 +1,19 @@
-// === Module 10076: ForumGuidelinesActionSheet ===
+// === Module 10089: ForumGuidelinesActionSheet ===
 
-// Module 10076 (ForumGuidelinesActionSheet)
+// Module 10089 (ForumGuidelinesActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import LinkUtils from "LinkUtils" /* 5044 */;
-import ForumConstants from "ForumConstants" /* 6776 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10062 */;
-import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10078 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import LinkUtils from "LinkUtils" /* 5050 */;
+import ForumConstants from "ForumConstants" /* 6786 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 10075 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10091 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -377,7 +377,7 @@ export const openForumGuidelinesActionSheet = function openForumGuidelinesAction
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   const obj = {};
   ActionSheetActionCreatorsDefault;
-  const tmp2 = asyncRequire(10076, dependencyMap.paths);
+  const tmp2 = asyncRequire(10089, dependencyMap.paths);
   const merged = Object.assign(arg0);
   openLazy(tmp2, closure_6, obj);
 };

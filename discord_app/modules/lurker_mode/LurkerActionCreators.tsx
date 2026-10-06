@@ -1,11 +1,11 @@
-// === Module 6825: LurkerActionCreators ===
+// === Module 6835: LurkerActionCreators ===
 
-// Module 6825 (LurkerActionCreators)
+// Module 6835 (LurkerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import LurkingStore from "LurkingStore" /* 4510 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import LurkingStore from "LurkingStore" /* 4516 */;
 import size from "module_2" /* 2 */;
 
 let c0, c3, closure_3, closure_4, lurkingSource, map;
@@ -204,7 +204,7 @@ obj = function _stopLurking() {
       tmp18 = null;
     }
     c0 = tmp18;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

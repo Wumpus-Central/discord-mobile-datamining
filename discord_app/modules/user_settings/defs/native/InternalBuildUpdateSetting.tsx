@@ -1,17 +1,17 @@
-// === Module 15623: InternalBuildUpdateSetting ===
+// === Module 15637: InternalBuildUpdateSetting ===
 
-// Module 15623 (InternalBuildUpdateSetting)
+// Module 15637 (InternalBuildUpdateSetting)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import DownloadIcon from "DownloadIcon" /* 4845 */;
-import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13719 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14650 */;
-import RefreshIcon2 from "RefreshIcon" /* 14778 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14158 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import DownloadIcon from "DownloadIcon" /* 4851 */;
+import MobileNativeUpdateUtilsAll from "MobileNativeUpdateUtils" /* 13737 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14666 */;
+import RefreshIcon2 from "RefreshIcon" /* 14794 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14176 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const jsx = Fragment.jsx;
@@ -66,7 +66,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (null != stateFromStores1) {
       let tmp12;
       if (cResult[4] !== stateFromStores1) {
-        const obj4 = _modDef4461(stateFromStores1);
+        const obj4 = _modDef4467(stateFromStores1);
         const fromNowResult = obj4.fromNow();
         cResult[4] = stateFromStores1;
         cResult[5] = fromNowResult;
@@ -101,7 +101,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     str = "Never refreshed";
     if (null != stateFromStores1) {
       const _HermesInternal = HermesInternal;
-      const obj3 = _modDef4461(stateFromStores1);
+      const obj3 = _modDef4467(stateFromStores1);
       str = "Last refreshed " + obj3.fromNow();
     }
   }

@@ -1,10 +1,10 @@
-// === Module 10427: guild_boost_tab_banner ===
+// === Module 10440: guild_boost_tab_banner ===
 
-// Module 10427 (guild_boost_tab_banner)
+// Module 10440 (guild_boost_tab_banner)
 import _mod1198 from "module_1198" /* 1198 */;
-import localized_string from "localized_string" /* 10401 */;
-import help_article from "help_article" /* 10402 */;
-import theme_aware_asset from "theme_aware_asset" /* 10411 */;
+import localized_string from "localized_string" /* 10414 */;
+import help_article from "help_article" /* 10415 */;
+import theme_aware_asset from "theme_aware_asset" /* 10424 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

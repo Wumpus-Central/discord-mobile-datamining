@@ -1,9 +1,9 @@
-// === Module 13485: isClipsEnabled ===
+// === Module 13501: isClipsEnabled ===
 
-// Module 13485 (isClipsEnabled)
+// Module 13501 (isClipsEnabled)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import ClipsExperiment from "ClipsExperiment" /* 13486 */;
+import ClipsExperiment from "ClipsExperiment" /* 13502 */;
 import ClipsStore from "ClipsStore" /* 2005 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

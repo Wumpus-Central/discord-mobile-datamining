@@ -1,9 +1,9 @@
-// === Module 13459: GatewayZstdUtils ===
+// === Module 13475: GatewayZstdUtils ===
 
-// Module 13459 (GatewayZstdUtils)
+// Module 13475 (GatewayZstdUtils)
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_nativeDefault from "react-native" /* 13460 */;
+import react_nativeDefault from "react-native" /* 13476 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = react_native.NativeModules;

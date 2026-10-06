@@ -1,8 +1,8 @@
-// === Module 14482: GuildProfileEmptyStateSvg ===
+// === Module 14498: GuildProfileEmptyStateSvg ===
 
-// Module 14482 (GuildProfileEmptyStateSvg)
+// Module 14498 (GuildProfileEmptyStateSvg)
 import react2 from "react" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,18 +1,18 @@
-// === Module 11805: AppLauncherRoleListActionSheet ===
+// === Module 11819: AppLauncherRoleListActionSheet ===
 
-// Module 11805 (AppLauncherRoleListActionSheet)
+// Module 11819 (AppLauncherRoleListActionSheet)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5702 */;
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6624 */;
-import ShieldUserIcon2 from "ShieldUserIcon" /* 9232 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11806 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6631 */;
+import ShieldUserIcon2 from "ShieldUserIcon" /* 9267 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 11820 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import GuildRoleMemberCountStore_mod from "GuildRoleMemberCountStore" /* 6623 */;
+import GuildRoleMemberCountStore_mod from "GuildRoleMemberCountStore" /* 6630 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -215,7 +215,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildRole) => {
         }
       }
       const obj4 = { label: tmp21, icon: tmp24, trailing: tmp28 };
-      const TableRow = tmp(5993).TableRow;
+      const TableRow = tmp(6000).TableRow;
       const merged = Object.assign(tmp6);
       const tmp38 = closure_12(TableRow, obj4, tmp5.id);
       cResult[20] = tmp5.id;
@@ -241,7 +241,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildRole) => {
       tmp30 = null;
       if (null != stateFromStores) {
         const obj5 = { variant: "text-sm/normal", color: "text-muted", children: items2 };
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         items2 = [closure_12(require("GroupIcon").GroupIcon, { size: "xxs", color: "text-muted" }), " ", stateFromStores];
         tmp30 = closure_13(Text, obj5);
       }
@@ -298,16 +298,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildRole) => {
     const obj = GuildRoleMemberActionCreatorsAll;
     const memberCounts = obj.fetchMemberCounts(guildId);
   }, items1);
-  const obj2 = { label: closure_12(guildRole(4886).Text, obj3), icon: closure_12(closure_15, { role: guildRole }), trailing: tmp8 };
-  const TableRow = guildRole(5993).TableRow;
+  const obj2 = { label: closure_12(guildRole(4892).Text, obj3), icon: closure_12(closure_15, { role: guildRole }), trailing: tmp8 };
+  const TableRow = guildRole(6000).TableRow;
   tmp8 = null;
   obj3 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildRole.name };
   if (!tmp5) {
     tmp8 = null;
     if (null != stateFromStores) {
       const obj4 = { variant: "text-sm/normal", color: "text-muted", children: items2 };
-      const Text = tmp2(4886).Text;
-      items2 = [closure_12(tmp2(5873).GroupIcon, { size: "xxs", color: "text-muted" }), " ", stateFromStores];
+      const Text = tmp2(4892).Text;
+      items2 = [closure_12(tmp2(5880).GroupIcon, { size: "xxs", color: "text-muted" }), " ", stateFromStores];
       tmp8 = closure_13(Text, obj4);
     }
   }

@@ -1,13 +1,13 @@
-// === Module 16706: ConjureIdeasOffer ===
+// === Module 16727: ConjureIdeasOffer ===
 
-// Module 16706 (ConjureIdeasOffer)
+// Module 16727 (ConjureIdeasOffer)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 16667 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import ConjureNativeMarkdownDefault from "ConjureNativeMarkdown" /* 16686 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -29,7 +29,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = obj.c(9);
   ({ style, attribution, onAsk } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: intl.string(_modDef3723.s96AWB) };
+    const obj2 = { source: intl.string(_modDef3753.s96AWB) };
     const tmp7 = ConjureNativeMarkdownDefault;
     intl = intl3.intl;
     const tmp8 = React3(tmp7, obj2);
@@ -40,7 +40,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl2 = intl3.intl;
-    const stringResult = intl2.string(_modDef3723["U/bLzU"]);
+    const stringResult = intl2.string(_modDef3753["U/bLzU"]);
     cResult[1] = stringResult;
     tmp10 = stringResult;
   } else {
@@ -85,13 +85,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   onAsk = onAsk.onAsk;
   const obj = { style: onAsk.style, children: items };
   items = [onAsk.attribution, , ];
-  const obj2 = { source: intl.string(_modDef3723.s96AWB) };
+  const obj2 = { source: intl.string(_modDef3753.s96AWB) };
   const tmp = ConjureNativeMarkdownDefault;
   intl = intl3.intl;
   items[1] = React3(tmp, obj2);
   const obj3 = { direction: "horizontal", children: React3(Button, obj4) };
   const Stack = Stack_Stack.Stack;
-  obj4 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: intl2.string(_modDef3723["U/bLzU"]) };
+  obj4 = { variant: "secondary", size: "sm", disabled: null == onAsk, onPress: onAsk, text: intl2.string(_modDef3753["U/bLzU"]) };
   Button = components_Button_Button.Button;
   intl2 = intl3.intl;
   items[2] = React3(Stack, obj3);

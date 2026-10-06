@@ -1,21 +1,21 @@
-// === Module 10081: ExpressionPickerActionSheet ===
+// === Module 10094: ExpressionPickerActionSheet ===
 
-// Module 10081 (ExpressionPickerActionSheet)
+// Module 10094 (ExpressionPickerActionSheet)
 import get_initialized from "get initialized" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import useKeyboardType from "useKeyboardType" /* 4747 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6646 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9893 */;
-import StickerPickerConstants from "StickerPickerConstants" /* 10082 */;
-import react_native from "react-native" /* 10083 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 10084 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import useKeyboardType from "useKeyboardType" /* 4753 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6653 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9906 */;
+import StickerPickerConstants from "StickerPickerConstants" /* 10095 */;
+import react_native from "react-native" /* 10096 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10097 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;

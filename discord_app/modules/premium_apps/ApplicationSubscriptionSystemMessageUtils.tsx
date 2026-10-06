@@ -1,6 +1,6 @@
-// === Module 7654: ApplicationSubscriptionSystemMessageUtils ===
+// === Module 7665: ApplicationSubscriptionSystemMessageUtils ===
 
-// Module 7654 (ApplicationSubscriptionSystemMessageUtils)
+// Module 7665 (ApplicationSubscriptionSystemMessageUtils)
 import intl3 from "intl" /* 1126 */;
 import size from "module_2" /* 2 */;
 

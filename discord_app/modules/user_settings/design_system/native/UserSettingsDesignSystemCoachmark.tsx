@@ -1,15 +1,15 @@
-// === Module 15672: UserSettingsDesignSystemCoachmark ===
+// === Module 15686: UserSettingsDesignSystemCoachmark ===
 
-// Module 15672 (UserSettingsDesignSystemCoachmark)
+// Module 15686 (UserSettingsDesignSystemCoachmark)
 import react2 from "react" /* 576 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import LayerScope2 from "LayerScope" /* 6651 */;
-import _modDef15673 from "module_15673" /* 15673 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import LayerScope2 from "LayerScope" /* 6658 */;
+import _modDef15687 from "module_15687" /* 15687 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -38,7 +38,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   _slicedToArray(react.useState(false), 2);
   [tmp9, r10029] = react.useState(false);
   _slicedToArray(react.useState(false), 2);
-  const obj3 = visible(15670);
+  const obj3 = visible(15684);
   [r10035, r10036] = obj3.useCanRotate();
   _slicedToArray(obj3.useCanRotate(), 2);
   const first1 = _slicedToArray(react.useState(false), 2)[0];
@@ -81,7 +81,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         return closure_1(false);
       }
     }
-    tmp23[0] = _modDef15673;
+    tmp23[0] = _modDef15687;
     cResult[2] = tmp23;
   } else {
     class Y {
@@ -228,8 +228,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       gradientColor: tmp
     };
     str2 = undefined;
-    obj2 = { type: "image", src: { uri: _modDef15673 }, aspectRatio: first5 };
-    ({ uri: _modDef15673 });
+    obj2 = { type: "image", src: { uri: _modDef15687 }, aspectRatio: first5 };
+    ({ uri: _modDef15687 });
     if (first3) {
       str2 = "Button";
     }

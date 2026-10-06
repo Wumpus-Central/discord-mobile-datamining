@@ -1,24 +1,24 @@
-// === Module 17571: PresetAvatarSelect ===
+// === Module 17617: PresetAvatarSelect ===
 
-// Module 17571 (PresetAvatarSelect)
+// Module 17617 (PresetAvatarSelect)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import defaultAvatar1Default from "defaultAvatar1" /* 17572 */;
-import defaultAvatar2Default from "defaultAvatar2" /* 17573 */;
-import defaultAvatar3Default from "defaultAvatar3" /* 17574 */;
-import defaultAvatar4Default from "defaultAvatar4" /* 17575 */;
-import defaultAvatar5Default from "defaultAvatar5" /* 17576 */;
-import defaultAvatar6Default from "defaultAvatar6" /* 17577 */;
-import defaultAvatar7Default from "defaultAvatar7" /* 17578 */;
-import defaultAvatar8Default from "defaultAvatar8" /* 17579 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 17618 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 17619 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 17620 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 17621 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 17622 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 17623 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 17624 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 17625 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -109,7 +109,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((onAvatarSelect) =>
   const container = tmp4.container;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { variant: "text-sm/medium", color: "text-default", children: intl.string(tmp(1126).t.yP28YL) };
-    const Text = tmp(4886).Text;
+    const Text = tmp(4892).Text;
     intl = tmp(1126).intl;
     const tmp7 = closure_4(Text, obj2);
     cResult[0] = tmp7;

@@ -1,6 +1,6 @@
-// === Module 7472: stageAttachmentFiles ===
+// === Module 7483: stageAttachmentFiles ===
 
-// Module 7472 (stageAttachmentFiles)
+// Module 7483 (stageAttachmentFiles)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
@@ -65,7 +65,7 @@ let obj = function _stageAttachmentFiles() {
     await Promise.all(constants);
     await "IconComponent";
     constants = tmp;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

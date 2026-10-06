@@ -1,6 +1,6 @@
-// === Module 11655: useActivityShelfItemsSorting ===
+// === Module 11669: useActivityShelfItemsSorting ===
 
-// Module 11655 (useActivityShelfItemsSorting)
+// Module 11669 (useActivityShelfItemsSorting)
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

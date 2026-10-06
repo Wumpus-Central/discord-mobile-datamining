@@ -1,10 +1,10 @@
-// === Module 16042: ConnectedUserLimit ===
+// === Module 16081: ConnectedUserLimit ===
 
-// Module 16042 (ConnectedUserLimit)
+// Module 16081 (ConnectedUserLimit)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9305 */;
-import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 16043 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9340 */;
+import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 16082 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

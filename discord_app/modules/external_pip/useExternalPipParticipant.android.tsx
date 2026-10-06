@@ -1,15 +1,15 @@
-// === Module 17158: useExternalPipParticipant ===
+// === Module 17187: useExternalPipParticipant ===
 
-// Module 17158 (useExternalPipParticipant)
+// Module 17187 (useExternalPipParticipant)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import CallConstants from "CallConstants" /* 4911 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import CallConstants from "CallConstants" /* 4917 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -135,7 +135,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
                     _setTimeout = setTimeout;
                     num = 3000;
                     closure_0 = setTimeout(() => {
-                      closure_1_3(() => { /* body not rendered: F153637 */ });
+                      closure_1_3(() => { /* body not rendered: F153877 */ });
                     }, 3000);
                     return () => {
                       clearTimeout(closure_0);
@@ -158,7 +158,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
                     _setTimeout = setTimeout;
                     num = 3000;
                     closure_0 = setTimeout(() => {
-                      closure_1_3(() => { /* body not rendered: F153637 */ });
+                      closure_1_3(() => { /* body not rendered: F153877 */ });
                     }, 3000);
                     return () => {
                       clearTimeout(closure_0);
@@ -542,8 +542,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       id2 = tmp6.id;
     }
     if (current !== id2) {
-      obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Set", focusedParticipantType: ref2.current };
-      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Set", focusedParticipantType: ref2.current };
+      obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Reflect", focusedParticipantType: ref2.current };
+      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Reflect", focusedParticipantType: ref2.current };
     } else {
       let type1;
       if (tmp6 != null) {
@@ -629,8 +629,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       id2 = tmp6.id;
     }
     if (current !== id2) {
-      obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Set", focusedParticipantType: ref2.current };
-      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Set", focusedParticipantType: ref2.current };
+      obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Reflect", focusedParticipantType: ref2.current };
+      const obj2 = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "Reflect", focusedParticipantType: ref2.current };
     } else {
       let type1;
       if (tmp6 != null) {

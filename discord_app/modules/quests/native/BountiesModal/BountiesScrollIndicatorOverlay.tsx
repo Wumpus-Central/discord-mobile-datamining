@@ -1,15 +1,15 @@
-// === Module 14852: BountiesScrollIndicatorOverlay ===
+// === Module 14868: BountiesScrollIndicatorOverlay ===
 
-// Module 14852 (BountiesScrollIndicatorOverlay)
+// Module 14868 (BountiesScrollIndicatorOverlay)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import timingPresets from "timingPresets" /* 4894 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import timingPresets from "timingPresets" /* 4900 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -51,7 +51,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
   if (cResult[0] !== enabled) {
     const fn = function o() {
       let timeout;
-      const f153051 = () => {
+      const f153284 = () => {
         importDefault(closure_0);
         closure_0 = !closure_0;
         let num = 5000;
@@ -59,13 +59,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
         if (closure_0) {
           num = closure_2_9;
         }
-        enabled = _setTimeout(f153051, num);
+        enabled = _setTimeout(f153284, num);
       };
       const tmp = timeout;
       if (tmp) {
         let c0 = false;
         let _setTimeout = setTimeout;
-        timeout = setTimeout(f153051, closure_1_9);
+        timeout = setTimeout(f153284, closure_1_9);
         return () => clearTimeout(closure_0);
       }
     };
@@ -105,7 +105,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
   const items = [visible];
   const effect = react.useEffect(() => {
     let timeout;
-    const f153052 = () => {
+    const f153285 = () => {
       importDefault(closure_0);
       closure_0 = !closure_0;
       let num = 5000;
@@ -113,13 +113,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((enabled) => {
       if (closure_0) {
         num = closure_2_9;
       }
-      visible = _setTimeout(f153052, num);
+      visible = _setTimeout(f153285, num);
     };
     const tmp = timeout;
     if (tmp) {
       let c0 = false;
       let _setTimeout = setTimeout;
-      timeout = setTimeout(f153052, closure_1_9);
+      timeout = setTimeout(f153285, closure_1_9);
       return () => clearTimeout(closure_0);
     }
   }, items);

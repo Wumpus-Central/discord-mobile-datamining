@@ -1,23 +1,23 @@
-// === Module 18080: AppStoreParentalRevocationScreen ===
+// === Module 18125: AppStoreParentalRevocationScreen ===
 
-// Module 18080 (AppStoreParentalRevocationScreen)
+// Module 18125 (AppStoreParentalRevocationScreen)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
-import _modDef2787 from "module_2787" /* 2787 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import ModalScreen2 from "ModalScreen" /* 8095 */;
-import ModalContent2 from "ModalContent" /* 8096 */;
-import LinkExternalSmallIcon2 from "LinkExternalSmallIcon" /* 8263 */;
-import ModalActionButton2 from "ModalActionButton" /* 10729 */;
-import ModalFooter2 from "ModalFooter" /* 11536 */;
-import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18066 */;
+import _modDef2815 from "module_2815" /* 2815 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import ModalScreen2 from "ModalScreen" /* 8128 */;
+import ModalContent2 from "ModalContent" /* 8129 */;
+import LinkExternalSmallIcon2 from "LinkExternalSmallIcon" /* 8296 */;
+import ModalActionButton2 from "ModalActionButton" /* 10742 */;
+import ModalFooter2 from "ModalFooter" /* 11549 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 18111 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -68,7 +68,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   ({ content, upperHalf, text } = tmp4);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = intl5.intl;
-    const stringResult = intl.string(_modDef2787.Z87TFb);
+    const stringResult = intl.string(_modDef2815.Z87TFb);
     cResult[1] = stringResult;
     tmp6 = stringResult;
   } else {
@@ -86,7 +86,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   ({ body, text: text2 } = tmp4);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const intl2 = intl5.intl;
-    const stringResult1 = intl2.string(_modDef2787.VS98dM);
+    const stringResult1 = intl2.string(_modDef2815.VS98dM);
     cResult[4] = stringResult1;
     tmp12 = stringResult1;
   } else {
@@ -104,7 +104,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const text3 = tmp4.text;
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     const intl3 = intl5.intl;
-    const stringResult2 = intl3.string(_modDef2787.BaI6L4);
+    const stringResult2 = intl3.string(_modDef2815.BaI6L4);
     cResult[7] = stringResult2;
     tmp18 = stringResult2;
   } else {
@@ -167,7 +167,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 const obj6 = { children: items };
                 items = [tmp43, ];
                 const ModalFooter = ModalFooter2.ModalFooter;
-                const obj7 = { variant: "primary", text: intl4.string(_modDef2787["6FXIU6"]), icon: hasOwnProperty(LinkExternalSmallIcon, obj8), iconPosition: "end", onPress: first };
+                const obj7 = { variant: "primary", text: intl4.string(_modDef2815["6FXIU6"]), icon: hasOwnProperty(LinkExternalSmallIcon, obj8), iconPosition: "end", onPress: first };
                 const ModalActionButton = ModalActionButton2.ModalActionButton;
                 intl4 = intl5.intl;
                 obj8 = { color: nativeDefault.colors.WHITE };
@@ -257,17 +257,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const ModalContent = ModalContent2.ModalContent;
   obj5 = { align: "center", spacing: nativeDefault.space.PX_16, children: items };
   Stack = Stack_Stack.Stack;
-  const obj6 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.text, children: intl.string(_modDef2787.Z87TFb) };
+  const obj6 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.text, children: intl.string(_modDef2815.Z87TFb) };
   const Text = Text_Text.Text;
   intl = intl5.intl;
   items = [hasOwnProperty(Text, obj6), ];
   const obj7 = { align: "center", spacing: nativeDefault.space.PX_16, style: tmp.body, children: items1 };
   const Stack2 = Stack_Stack.Stack;
-  const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: intl2.string(_modDef2787.VS98dM) };
+  const obj8 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: intl2.string(_modDef2815.VS98dM) };
   const Text2 = Text_Text.Text;
   intl2 = intl5.intl;
   items1 = [hasOwnProperty(Text2, obj8), ];
-  const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: intl3.string(_modDef2787.BaI6L4) };
+  const obj9 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: intl3.string(_modDef2815.BaI6L4) };
   const Text3 = Text_Text.Text;
   intl3 = intl5.intl;
   items1[1] = hasOwnProperty(Text3, obj9);
@@ -279,7 +279,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj11 = { children: items4 };
   const ModalFooter = ModalFooter2.ModalFooter;
   items4 = [hasOwnProperty(LogOutDisclaimerDefault, {}), ];
-  const obj12 = { variant: "primary", text: intl4.string(_modDef2787["6FXIU6"]), icon: hasOwnProperty(LinkExternalSmallIcon, obj13), iconPosition: "end", onPress: callback };
+  const obj12 = { variant: "primary", text: intl4.string(_modDef2815["6FXIU6"]), icon: hasOwnProperty(LinkExternalSmallIcon, obj13), iconPosition: "end", onPress: callback };
   const ModalActionButton = ModalActionButton2.ModalActionButton;
   intl4 = intl5.intl;
   obj13 = { color: nativeDefault.colors.WHITE };

@@ -1,6 +1,6 @@
-// === Module 4898: TypographyVariantRemap ===
+// === Module 4904: TypographyVariantRemap ===
 
-// Module 4898 (TypographyVariantRemap)
+// Module 4904 (TypographyVariantRemap)
 import size from "module_2" /* 2 */;
 
 let items;

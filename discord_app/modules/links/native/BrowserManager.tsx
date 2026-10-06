@@ -1,13 +1,13 @@
-// === Module 4851: BrowserManager ===
+// === Module 4857: BrowserManager ===
 
-// Module 4851 (BrowserManager)
+// Module 4857 (BrowserManager)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import react_native2 from "react-native" /* 4852 */;
-import react_nativeDefault2 from "react-native" /* 4853 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import react_native2 from "react-native" /* 4858 */;
+import react_nativeDefault2 from "react-native" /* 4859 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import module_570 from "module_570" /* 570 */;

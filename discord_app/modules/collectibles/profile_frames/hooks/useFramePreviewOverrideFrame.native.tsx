@@ -1,11 +1,11 @@
-// === Module 7873: useFramePreviewOverrideFrame ===
+// === Module 7884: useFramePreviewOverrideFrame ===
 
-// Module 7873 (useFramePreviewOverrideFrame)
+// Module 7884 (useFramePreviewOverrideFrame)
 import react2 from "react" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import FramePreviewOverrideStore from "FramePreviewOverrideStore" /* 7874 */;
+import FramePreviewOverrideStore from "FramePreviewOverrideStore" /* 7885 */;
 import react from "react" /* 19 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7060 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7073 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

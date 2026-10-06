@@ -1,12 +1,12 @@
-// === Module 15882: useInitialRegistrationStep ===
+// === Module 15921: useInitialRegistrationStep ===
 
-// Module 15882 (useInitialRegistrationStep)
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15866 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15867 */;
+// Module 15921 (useInitialRegistrationStep)
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15905 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConsentStore from "ConsentStore" /* 6084 */;
+import ConsentStore from "ConsentStore" /* 6091 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

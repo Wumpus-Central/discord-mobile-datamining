@@ -1,6 +1,6 @@
-// === Module 13652: visibleInlineChannels ===
+// === Module 13668: visibleInlineChannels ===
 
-// Module 13652 (visibleInlineChannels)
+// Module 13668 (visibleInlineChannels)
 import size from "module_2" /* 2 */;
 
 let set;

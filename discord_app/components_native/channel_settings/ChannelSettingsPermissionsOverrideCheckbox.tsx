@@ -1,15 +1,15 @@
-// === Module 17014: ChannelSettingsPermissionsOverrideCheckbox ===
+// === Module 17040: ChannelSettingsPermissionsOverrideCheckbox ===
 
-// Module 17014 (ChannelSettingsPermissionsOverrideCheckbox)
+// Module 17040 (ChannelSettingsPermissionsOverrideCheckbox)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import PermissionUtils from "PermissionUtils" /* 4514 */;
-import DenyIcon2 from "DenyIcon" /* 7588 */;
-import CheckmarkLargeBoldIcon2 from "CheckmarkLargeBoldIcon" /* 8451 */;
-import SlashIcon2 from "SlashIcon" /* 17015 */;
+import PermissionUtils from "PermissionUtils" /* 4520 */;
+import DenyIcon2 from "DenyIcon" /* 7599 */;
+import CheckmarkLargeBoldIcon2 from "CheckmarkLargeBoldIcon" /* 8484 */;
+import SlashIcon2 from "SlashIcon" /* 17041 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

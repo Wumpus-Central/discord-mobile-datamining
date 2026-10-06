@@ -1,18 +1,18 @@
-// === Module 15502: WebAuthnScreen ===
+// === Module 15518: WebAuthnScreen ===
 
-// Module 15502 (WebAuthnScreen)
+// Module 15518 (WebAuthnScreen)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import react_nativeDefault from "react-native" /* 6089 */;
-import NativeCeremoniesDefault from "NativeCeremonies" /* 6437 */;
-import buttonDefault from "button" /* 15503 */;
-import MfaOptionScreenDefault from "MfaOptionScreen" /* 15504 */;
+import react_nativeDefault from "react-native" /* 6096 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6444 */;
+import buttonDefault from "button" /* 15519 */;
+import MfaOptionScreenDefault from "MfaOptionScreen" /* 15520 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -172,7 +172,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const stringResult = intl.string(finish(1126).t.saHocI);
         const intl2 = finish(1126).intl;
         const stringResult1 = intl2.string(finish(1126).t.YpMrqM);
-        const tmp28 = jsx(finish(14596).KeyImage, {});
+        const tmp28 = jsx(finish(14612).KeyImage, {});
         cResult[7] = stringResult;
         cResult[8] = stringResult1;
         cResult[9] = tmp28;
@@ -350,7 +350,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     });
     catchPromise.finally(() => _undefined(false));
   }, items1);
-  obj3 = { headerText: intl.string(finish(1126).t.saHocI), subtitle: intl2.string(finish(1126).t.YpMrqM), headerImage: challenge(finish(14596).KeyImage, {}), content: shouldDisplayAndroidFidoSelector, submit: challenge(tmp17Result, obj5), screenProps: { mfaChallenge, finish }, mfaMethod: "webauthn", error: first };
+  obj3 = { headerText: intl.string(finish(1126).t.saHocI), subtitle: intl2.string(finish(1126).t.YpMrqM), headerImage: challenge(finish(14612).KeyImage, {}), content: shouldDisplayAndroidFidoSelector, submit: challenge(tmp17Result, obj5), screenProps: { mfaChallenge, finish }, mfaMethod: "webauthn", error: first };
   const tmp18 = MfaOptionScreenDefault;
   intl = finish(1126).intl;
   intl2 = finish(1126).intl;

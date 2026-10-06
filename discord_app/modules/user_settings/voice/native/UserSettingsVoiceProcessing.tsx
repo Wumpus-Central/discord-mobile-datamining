@@ -1,24 +1,24 @@
-// === Module 9672: UserSettingsVoiceProcessing ===
+// === Module 9685: UserSettingsVoiceProcessing ===
 
-// Module 9672 (UserSettingsVoiceProcessing)
+// Module 9685 (UserSettingsVoiceProcessing)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl8 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import TableRadioRow4 from "TableRadioRow" /* 6071 */;
-import TableRadioGroup2 from "TableRadioGroup" /* 6072 */;
-import TableSwitchRow4 from "TableSwitchRow" /* 6698 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9306 */;
-import UserSettingsVoice from "UserSettingsVoice" /* 9657 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 9673 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 9674 */;
-import KrispLogoDefault from "KrispLogo" /* 9677 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import TableRadioRow4 from "TableRadioRow" /* 6078 */;
+import TableRadioGroup2 from "TableRadioGroup" /* 6079 */;
+import TableSwitchRow4 from "TableSwitchRow" /* 6705 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
+import UserSettingsVoice from "UserSettingsVoice" /* 9670 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 9686 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 9687 */;
+import KrispLogoDefault from "KrispLogo" /* 9690 */;
 import react from "react" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -475,9 +475,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[4] !== echoCancellation) {
     let obj2 = { title: tmp8, hasIcons: false, children: closure_5(TableSwitchRow, obj3) };
-    const UserSettingsTableRowGroup = inputMode(9657).UserSettingsTableRowGroup;
-    obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(9673).handleEchoCancellationChange };
-    TableSwitchRow = inputMode(6698).TableSwitchRow;
+    const UserSettingsTableRowGroup = inputMode(9670).UserSettingsTableRowGroup;
+    obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(9686).handleEchoCancellationChange };
+    TableSwitchRow = inputMode(6705).TableSwitchRow;
     const tmp14 = closure_5(UserSettingsTableRowGroup, obj2);
     cResult[4] = echoCancellation;
     cResult[5] = tmp14;
@@ -506,8 +506,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp20 = cResult[8];
   }
   if (cResult[9] !== automaticGainControl) {
-    const obj4 = { label: tmp19, subLabel: tmp20, value: automaticGainControl, onValueChange: inputMode(9673).handleAutomaticGainControlChange };
-    const TableSwitchRow2 = inputMode(6698).TableSwitchRow;
+    const obj4 = { label: tmp19, subLabel: tmp20, value: automaticGainControl, onValueChange: inputMode(9686).handleAutomaticGainControlChange };
+    const TableSwitchRow2 = inputMode(6705).TableSwitchRow;
     const tmp25 = closure_5(TableSwitchRow2, obj4);
     cResult[9] = automaticGainControl;
     cResult[10] = tmp25;
@@ -543,7 +543,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
       const obj6 = { hasIcons: false, children: items2 };
       items2 = [tmp23, tmp26];
-      const tmp31 = closure_6(inputMode(9657).UserSettingsTableRowGroup, obj6);
+      const tmp31 = closure_6(inputMode(9670).UserSettingsTableRowGroup, obj6);
       cResult[15] = tmp23;
       cResult[16] = tmp26;
       cResult[17] = tmp31;
@@ -562,7 +562,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return obj.setMode(inputMode, obj2);
         }
     };
-    const TableSwitchRow3 = inputMode(6698).TableSwitchRow;
+    const TableSwitchRow3 = inputMode(6705).TableSwitchRow;
     intl5 = inputMode(1126).intl;
     intl6 = inputMode(1126).intl;
     tmp27 = closure_5(TableSwitchRow3, obj7);

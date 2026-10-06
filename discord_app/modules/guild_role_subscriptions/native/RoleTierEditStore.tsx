@@ -1,11 +1,11 @@
-// === Module 17926: RoleTierEditStore ===
+// === Module 17972: RoleTierEditStore ===
 
-// Module 17926 (RoleTierEditStore)
+// Module 17972 (RoleTierEditStore)
 import react from "react" /* 576 */;
 import react_native from "react-native" /* 1259 */;
-import _slicedToArray2 from "_slicedToArray" /* 4492 */;
-import GuildRoleSubscriptionsHttpApiAll from "GuildRoleSubscriptionsHttpApi" /* 6759 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15030 */;
+import _slicedToArray2 from "_slicedToArray" /* 4498 */;
+import GuildRoleSubscriptionsHttpApiAll from "GuildRoleSubscriptionsHttpApi" /* 6769 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15045 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import module_1254 from "module_1254" /* 1254 */;
@@ -198,7 +198,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   } else {
     first = cResult[0];
   }
-  const tmp5 = _slicedToArray(withEqualityFn(first, tmp(4492).shallow), 3);
+  const tmp5 = _slicedToArray(withEqualityFn(first, tmp(4498).shallow), 3);
   const first1 = tmp5[0];
   let closure_2 = tmp7;
   dependencyMap = tmp8;
@@ -214,7 +214,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         if (cResult[6] === tmp9) {
           tmp10 = cResult[7];
         }
-        first1(5590)(tmp10);
+        first1(5597)(tmp10);
         class G {
           constructor() {
             closure_4(guildId);
@@ -259,7 +259,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     return items;
   }, require("_slicedToArray").shallow);
   let closure_2 = tmp3;
-  tiers(5590)(() => {
+  tiers(5597)(() => {
     const tmp2 = null == first && closure_2 !== obj.LOADING;
     if (tmp2) {
       closure_3(guildId);

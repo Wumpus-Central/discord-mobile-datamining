@@ -1,9 +1,9 @@
-// === Module 10920: AppStoreOverlayContent ===
+// === Module 10933: AppStoreOverlayContent ===
 
-// Module 10920 (AppStoreOverlayContent)
-import openURL from "openURL" /* 4559 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import AppStoreMetadataActionCreators from "AppStoreMetadataActionCreators" /* 10921 */;
+// Module 10933 (AppStoreOverlayContent)
+import openURL from "openURL" /* 4565 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import AppStoreMetadataActionCreators from "AppStoreMetadataActionCreators" /* 10934 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

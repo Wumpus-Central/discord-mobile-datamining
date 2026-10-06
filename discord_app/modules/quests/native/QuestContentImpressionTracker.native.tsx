@@ -1,16 +1,16 @@
-// === Module 10958: QuestContentImpressionTracker ===
+// === Module 10971: QuestContentImpressionTracker ===
 
-// Module 10958 (QuestContentImpressionTracker)
+// Module 10971 (QuestContentImpressionTracker)
 import react2 from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react3 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7217 */;
-import usePreviousDefault from "usePrevious" /* 7946 */;
-import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 10916 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 10959 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7230 */;
+import usePreviousDefault from "usePrevious" /* 7957 */;
+import ContentImpressionTrackerHooks from "ContentImpressionTrackerHooks" /* 10929 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 10972 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -138,7 +138,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVis
   } else {
     tmp6 = cResult[3];
   }
-  const tmpResult = tmp(8371);
+  const tmpResult = tmp(8404);
   const tmp9 = _slicedToArray(tmpResult.useRecyclingState(false, tmp6), 2)[1];
   dependencyMap = tmp9;
   if (cResult[4] === adContentIds) {
@@ -153,7 +153,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVis
       if (overrideVisibility == null) {
         overrideVisibility = tmp8;
       }
-      const tmp16 = overrideVisibility !== visibilityRef(7946)(overrideVisibility);
+      const tmp16 = overrideVisibility !== visibilityRef(7957)(overrideVisibility);
       if (cResult[9] === overrideVisibility) {
         let tmp18;
         if (cResult[10] === tmp16) {
@@ -207,7 +207,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVis
   const visibilityRef = adContentIds.visibilityRef;
   let overrideVisibility = adContentIds.overrideVisibility;
   const joined = adContentIds.join("_");
-  let obj = adContentIds(8371);
+  let obj = adContentIds(8404);
   const items = [joined];
   [first, tmp5] = obj.useRecyclingState(false, items);
   dependencyMap = tmp5;
@@ -238,7 +238,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVis
   if (overrideVisibility == null) {
     overrideVisibility = first;
   }
-  const obj2 = { visible: overrideVisibility, visibleChanged: overrideVisibility !== visibilityRef(7946)(overrideVisibility) };
+  const obj2 = { visible: overrideVisibility, visibleChanged: overrideVisibility !== visibilityRef(7957)(overrideVisibility) };
   return obj2;
 });
 ReactCompilerGating = ReactCompilerGating_mod;

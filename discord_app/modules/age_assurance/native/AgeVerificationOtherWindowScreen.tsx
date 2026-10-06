@@ -1,18 +1,18 @@
-// === Module 8132: AgeVerificationOtherWindowScreen ===
+// === Module 8165: AgeVerificationOtherWindowScreen ===
 
-// Module 8132 (AgeVerificationOtherWindowScreen)
+// Module 8165 (AgeVerificationOtherWindowScreen)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import _modDef3045 from "module_3045" /* 3045 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import MobilePhoneIcon2 from "MobilePhoneIcon" /* 6448 */;
-import ModalScreen2 from "ModalScreen" /* 8095 */;
-import ModalContent2 from "ModalContent" /* 8096 */;
+import _modDef3073 from "module_3073" /* 3073 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import MobilePhoneIcon2 from "MobilePhoneIcon" /* 6455 */;
+import ModalScreen2 from "ModalScreen" /* 8128 */;
+import ModalContent2 from "ModalContent" /* 8129 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -47,7 +47,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
     }
     if (title1 == null) {
       const intl = intl3.intl;
-      title1 = intl.string(_modDef3045.MLPgsX);
+      title1 = intl.string(_modDef3073.MLPgsX);
     }
     let title2;
     if (copy != null) {
@@ -71,7 +71,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
     }
     if (description1 == null) {
       const intl2 = intl3.intl;
-      description1 = intl2.string(_modDef3045.VcZF1q);
+      description1 = intl2.string(_modDef3073.VcZF1q);
     }
     let description2;
     if (copy != null) {
@@ -162,7 +162,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
   }
   if (title == null) {
     const intl = intl3.intl;
-    title = intl.string(_modDef3045.MLPgsX);
+    title = intl.string(_modDef3073.MLPgsX);
   }
   let description;
   if (copy != null) {
@@ -170,7 +170,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((copy) => {
   }
   if (description == null) {
     const intl2 = intl3.intl;
-    description = intl2.string(_modDef3045.VcZF1q);
+    description = intl2.string(_modDef3073.VcZF1q);
   }
   const obj = { children: _false(ModalContent, obj2) };
   const ModalScreen = ModalScreen2.ModalScreen;

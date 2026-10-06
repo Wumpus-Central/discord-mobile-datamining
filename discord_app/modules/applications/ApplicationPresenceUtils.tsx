@@ -1,6 +1,6 @@
-// === Module 7903: ApplicationPresenceUtils ===
+// === Module 7914: ApplicationPresenceUtils ===
 
-// Module 7903 (ApplicationPresenceUtils)
+// Module 7914 (ApplicationPresenceUtils)
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;
 

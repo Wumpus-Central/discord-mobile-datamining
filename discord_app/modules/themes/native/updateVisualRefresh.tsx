@@ -1,7 +1,7 @@
-// === Module 17143: react-native ===
+// === Module 17172: react-native ===
 
-// Module 17143 (react-native)
-import react_nativeDefault from "react-native" /* 14279 */;
+// Module 17172 (react-native)
+import react_nativeDefault from "react-native" /* 14297 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/themes/native/updateVisualRefresh.tsx");

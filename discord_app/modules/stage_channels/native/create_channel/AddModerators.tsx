@@ -1,16 +1,16 @@
-// === Module 9243: AddModerators ===
+// === Module 9278: AddModerators ===
 
-// Module 9243 (AddModerators)
+// Module 9278 (AddModerators)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import HeaderActionButton from "HeaderActionButton" /* 6880 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8077 */;
+import HeaderActionButton from "HeaderActionButton" /* 6890 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8110 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react_mod from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

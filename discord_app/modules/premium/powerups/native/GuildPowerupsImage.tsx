@@ -1,14 +1,14 @@
-// === Module 12180: GuildPowerupsImage ===
+// === Module 12195: GuildPowerupsImage ===
 
-// Module 12180 (GuildPowerupsImage)
+// Module 12195 (GuildPowerupsImage)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8465 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import createStyles from "createStyles" /* 4890 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8498 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,24 +1,24 @@
-// === Module 14437: ChangeAvatarActionSheet ===
+// === Module 14453: ChangeAvatarActionSheet ===
 
-// Module 14437 (ChangeAvatarActionSheet)
+// Module 14453 (ChangeAvatarActionSheet)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl10 from "intl" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import TableRow6 from "TableRow" /* 5993 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
-import ActionSheet2 from "ActionSheet" /* 6701 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8313 */;
-import Form from "Form" /* 8895 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14420 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import TableRow6 from "TableRow" /* 6000 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import ActionSheet2 from "ActionSheet" /* 6708 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
+import Form from "Form" /* 8924 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14436 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

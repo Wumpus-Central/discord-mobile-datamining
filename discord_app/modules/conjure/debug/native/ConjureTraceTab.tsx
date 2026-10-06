@@ -1,27 +1,27 @@
-// === Module 16760: ConjureTraceTab ===
+// === Module 16781: ConjureTraceTab ===
 
-// Module 16760 (ConjureTraceTab)
+// Module 16781 (ConjureTraceTab)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
 import v1 from "v1" /* 1266 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import FileManagerUtils from "FileManagerUtils" /* 7876 */;
-import ConjureTraceFormat from "ConjureTraceFormat" /* 16761 */;
-import debug_ConjureTraceFormat from "debug/ConjureTraceFormat" /* 16762 */;
-import ConjureTraceUtils from "ConjureTraceUtils" /* 16763 */;
-import ConjureTimeFormat from "ConjureTimeFormat" /* 16765 */;
-import ConjureTraceDetailSheet from "ConjureTraceDetailSheet" /* 16766 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import FileManagerUtils from "FileManagerUtils" /* 7887 */;
+import ConjureTraceFormat from "ConjureTraceFormat" /* 16782 */;
+import debug_ConjureTraceFormat from "debug/ConjureTraceFormat" /* 16783 */;
+import ConjureTraceUtils from "ConjureTraceUtils" /* 16784 */;
+import ConjureTimeFormat from "ConjureTimeFormat" /* 16786 */;
+import ConjureTraceDetailSheet from "ConjureTraceDetailSheet" /* 16787 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -387,7 +387,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
       const intl = intl7.intl;
       const formatToPlainString = intl.formatToPlainString;
       const obj13 = { tokens: tmpResult5.formatTokens(entry.promptTokens) };
-      const v6GQUgQ = _modDef3723["6GQUgQ"];
+      const v6GQUgQ = _modDef3753["6GQUgQ"];
       tmpResult5 = debug_ConjureTraceFormat;
       formatToPlainStringResult = formatToPlainString(v6GQUgQ, obj13);
     }
@@ -424,7 +424,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((entry) => {
       const intl = intl7.intl;
       const formatToPlainString = intl.formatToPlainString;
       const obj3 = { tokens: tmp2Result.formatTokens(entry.promptTokens) };
-      const v6GQUgQ = _modDef3723["6GQUgQ"];
+      const v6GQUgQ = _modDef3753["6GQUgQ"];
       tmp2Result = debug_ConjureTraceFormat;
       formatToPlainStringResult = formatToPlainString(v6GQUgQ, obj3);
     }
@@ -597,7 +597,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entries) => {
           const Text = Text_Text.Text;
           obj4 = debug_ConjureTraceFormat;
           items1[1] = metroImportAll(Text, obj3);
-          const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: intl.formatToPlainString(_modDef3723["3dQ1ly"], { percent: num2 }) };
+          const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: intl.formatToPlainString(_modDef3753["3dQ1ly"], { percent: num2 }) };
           const Text2 = Text_Text.Text;
           intl = intl7.intl;
           items1[2] = metroImportAll(Text2, obj5);
@@ -605,7 +605,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entries) => {
           const intl2 = intl7.intl;
           const formatToPlainString = intl2.formatToPlainString;
           let num4;
-          const Ow0k34 = _modDef3723.Ow0k34;
+          const Ow0k34 = _modDef3753.Ow0k34;
           if (found != null) {
             num4 = found.calls;
           }
@@ -673,7 +673,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entries) => {
   let tmp = closure_10();
   let closure_1 = tmp;
   const tmp2 = entries;
-  let obj = entries(16761);
+  let obj = entries(16782);
   dependencyMap = obj.useTraceCategoryFillStyles();
   let items = [entries];
   const memo = react.useMemo(() => {
@@ -732,7 +732,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entries) => {
       const Text = Text_Text.Text;
       obj4 = debug_ConjureTraceFormat;
       items1[1] = metroImportAll(Text, obj3);
-      const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: intl.formatToPlainString(_modDef3723["3dQ1ly"], { percent: num2 }) };
+      const obj5 = { variant: "text-xs/normal", color: "text-subtle", children: intl.formatToPlainString(_modDef3753["3dQ1ly"], { percent: num2 }) };
       const Text2 = Text_Text.Text;
       intl = intl7.intl;
       items1[2] = metroImportAll(Text2, obj5);
@@ -740,7 +740,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entries) => {
       const intl2 = intl7.intl;
       const formatToPlainString = intl2.formatToPlainString;
       let num4;
-      const Ow0k34 = _modDef3723.Ow0k34;
+      const Ow0k34 = _modDef3753.Ow0k34;
       if (found != null) {
         num4 = found.calls;
       }
@@ -760,7 +760,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((entries) => {
       return React4(View, obj, item);
     })
   };
-  TRACE_CATEGORIES = tmp2(16763).TRACE_CATEGORIES;
+  TRACE_CATEGORIES = tmp2(16784).TRACE_CATEGORIES;
   items1[1] = closure_8(View, obj4);
   return closure_9(View, obj2);
 });
@@ -1186,7 +1186,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         turnId = index;
       }
       const _HermesInternal = HermesInternal;
-      const obj2 = { kind: "group", key: "group-" + turnId, label: intl.formatToPlainString(_modDef3723.gPwGYA, obj3), started: tmpResult.formatClockTime(turnId.startedAt), spanMs: turnId.spanMs };
+      const obj2 = { kind: "group", key: "group-" + turnId, label: intl.formatToPlainString(_modDef3753.gPwGYA, obj3), started: tmpResult.formatClockTime(turnId.startedAt), spanMs: turnId.spanMs };
       intl = intl7.intl;
       obj3 = { number: index + 1 };
       tmpResult = ConjureTimeFormat;
@@ -1260,7 +1260,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
           turnId = index;
         }
         const _HermesInternal = HermesInternal;
-        const obj2 = { kind: "group", key: "group-" + turnId, label: intl.formatToPlainString(_modDef3723.gPwGYA, obj3), started: tmpResult.formatClockTime(turnId.startedAt), spanMs: turnId.spanMs };
+        const obj2 = { kind: "group", key: "group-" + turnId, label: intl.formatToPlainString(_modDef3753.gPwGYA, obj3), started: tmpResult.formatClockTime(turnId.startedAt), spanMs: turnId.spanMs };
         intl = intl7.intl;
         obj3 = { number: index + 1 };
         tmpResult = ConjureTimeFormat;

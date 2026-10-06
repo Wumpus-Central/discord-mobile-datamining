@@ -1,7 +1,7 @@
-// === Module 12951: useFriendRequestActions ===
+// === Module 12970: useFriendRequestActions ===
 
-// Module 12951 (useFriendRequestActions)
-import PeopleUtilsDefault from "PeopleUtils" /* 10604 */;
+// Module 12970 (useFriendRequestActions)
+import PeopleUtilsDefault from "PeopleUtils" /* 10617 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

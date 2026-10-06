@@ -1,20 +1,20 @@
-// === Module 13359: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 13378: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 13359 (PremiumPlanSelectYearlyUpsellModal)
+// Module 13378 (PremiumPlanSelectYearlyUpsellModal)
 import Constants from "Constants" /* 1096 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import AlertDefault from "Alert" /* 5783 */;
-import TextStylesDefault from "TextStyles" /* 5915 */;
-import PremiumPlanSelectStore from "PremiumPlanSelectStore" /* 13348 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13360 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import AlertDefault from "Alert" /* 5790 */;
+import TextStylesDefault from "TextStyles" /* 5922 */;
+import PremiumPlanSelectStore from "PremiumPlanSelectStore" /* 13367 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13379 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -242,7 +242,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefaul
   const tmp2 = usePremiumPlanSelectStore((isPurchasing) => isPurchasing.isPurchasing);
   [tmp4, c3] = _slicedToArray(react.useState(null), 2);
   const tmp3 = _slicedToArray(react.useState(null), 2);
-  const obj2 = productId(6915);
+  const obj2 = productId(6925);
   const premiumBundledItemsFromProductId = obj2.getPremiumBundledItemsFromProductId(productId);
   let items = [LocaleStore];
   const obj3 = productId(504);
@@ -285,7 +285,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefaul
     format = intl.format;
     obj9 = { discountPercentage: formatPercentResult, planName: tmp5Result2.getPremiumTypeDisplayName(premiumTier) };
     LQCVfK = productId(1126).t.LQCVfK;
-    tmp5Result2 = productId(4528);
+    tmp5Result2 = productId(4534);
     items2[1] = closure_11(LegacyText, obj8);
     const obj10 = { style: tmp.description, children: intl2.format(productId(1126).t["7chOVL"], obj11) };
     const LegacyText2 = productId(1188).LegacyText;
@@ -303,7 +303,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefaul
       disabled: tmp2 || tmp9[1],
       loading: "upsell" === tmp4 && tmp2
     };
-    Button = productId(5594).Button;
+    Button = productId(5601).Button;
     intl3 = productId(1126).intl;
     obj14 = { price: orderPriceString };
     items2[3] = closure_11(closure_6, obj12);
@@ -318,12 +318,12 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((continueWithDefaul
       disabled: tmp2 || tmp9[1],
       loading: "default" === tmp4 && tmp2
     };
-    Button2 = productId(5594).Button;
+    Button2 = productId(5601).Button;
     intl4 = productId(1126).intl;
     items2[4] = closure_11(closure_6, obj15);
     const obj17 = { style: tmp.cancelButton, children: closure_11(Button3, obj18) };
     obj18 = { variant: "tertiary", text: intl5.string(productId(1126).t.cpT0Cq), onPress: onClose };
-    Button3 = productId(5594).Button;
+    Button3 = productId(5601).Button;
     intl5 = productId(1126).intl;
     items2[5] = closure_11(closure_6, obj17);
     return closure_11(tmp19, obj5);

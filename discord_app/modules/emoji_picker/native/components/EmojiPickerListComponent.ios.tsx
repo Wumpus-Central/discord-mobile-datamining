@@ -1,9 +1,9 @@
-// === Module 9929: components/EmojiPickerListComponent ===
+// === Module 9942: components/EmojiPickerListComponent ===
 
-// Module 9929 (components/EmojiPickerListComponent)
+// Module 9942 (components/EmojiPickerListComponent)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 19 */;
-import EmojiPickerListConstants from "EmojiPickerListConstants" /* 9869 */;
+import EmojiPickerListConstants from "EmojiPickerListConstants" /* 9882 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 15229: YouBarNameplateAccessibilitySetting ===
+// === Module 15244: YouBarNameplateAccessibilitySetting ===
 
-// Module 15229 (YouBarNameplateAccessibilitySetting)
+// Module 15244 (YouBarNameplateAccessibilitySetting)
 import get_initialized from "get initialized" /* 504 */;
 import intl2 from "intl" /* 1126 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14277 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14295 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

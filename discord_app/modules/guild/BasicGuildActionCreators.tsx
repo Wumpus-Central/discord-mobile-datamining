@@ -1,12 +1,12 @@
-// === Module 18020: BasicGuildActionCreators ===
+// === Module 18065: BasicGuildActionCreators ===
 
-// Module 18020 (BasicGuildActionCreators)
+// Module 18065 (BasicGuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import BasicGuildStore from "BasicGuildStore" /* 7614 */;
+import BasicGuildStore from "BasicGuildStore" /* 7625 */;
 import size from "module_2" /* 2 */;
 
 let closure_1, closure_2, closure_3;

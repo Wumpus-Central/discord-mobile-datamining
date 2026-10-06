@@ -1,12 +1,12 @@
-// === Module 17756: GuildSettingsModalStickerInfoActionSheet ===
+// === Module 17802: GuildSettingsModalStickerInfoActionSheet ===
 
-// Module 17756 (GuildSettingsModalStickerInfoActionSheet)
-import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17749 */;
+// Module 17802 (GuildSettingsModalStickerInfoActionSheet)
+import showGuildSettingsStickerCreateModalDefault from "showGuildSettingsStickerCreateModal" /* 17795 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import StickersStore from "StickersStore" /* 5687 */;
+import StickersStore from "StickersStore" /* 5694 */;
 import Fragment from "Fragment" /* 21 */;
 import size from "module_2" /* 2 */;
 

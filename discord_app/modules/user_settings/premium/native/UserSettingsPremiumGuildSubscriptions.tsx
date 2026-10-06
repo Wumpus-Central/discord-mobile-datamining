@@ -1,33 +1,33 @@
-// === Module 13305: UserSettingsPremiumGuildSubscriptions ===
+// === Module 13324: UserSettingsPremiumGuildSubscriptions ===
 
-// Module 13305 (UserSettingsPremiumGuildSubscriptions)
+// Module 13324 (UserSettingsPremiumGuildSubscriptions)
 import intl3 from "intl" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import user from "user" /* 1385 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import native from "native" /* 4589 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5404 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6487 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6760 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 7668 */;
-import GuildBoostSlotsInventoryDefault from "GuildBoostSlotsInventory" /* 13306 */;
-import BoostingUnavailablePillDefault from "BoostingUnavailablePill" /* 13320 */;
-import BoostingCountDownPillDefault from "BoostingCountDownPill" /* 13322 */;
-import TopPattern from "TopPattern" /* 13324 */;
-import GuildBoostingUpsellDefault from "GuildBoostingUpsell" /* 13328 */;
+import native from "native" /* 4595 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6494 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 6770 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 7679 */;
+import GuildBoostSlotsInventoryDefault from "GuildBoostSlotsInventory" /* 13325 */;
+import BoostingUnavailablePillDefault from "BoostingUnavailablePill" /* 13339 */;
+import BoostingCountDownPillDefault from "BoostingCountDownPill" /* 13341 */;
+import TopPattern from "TopPattern" /* 13343 */;
+import GuildBoostingUpsellDefault from "GuildBoostingUpsell" /* 13347 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
-import BillingInfoStore from "BillingInfoStore" /* 4530 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6908 */;
-import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4533 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import BillingInfoStore from "BillingInfoStore" /* 4536 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4539 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment_mod from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -343,12 +343,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   if (flag == null) {
     flag = true;
   }
-  ({ fractionalState: c2, endsAt } = flag(6898)({ forceFetch: true }));
-  flag(6898)({ forceFetch: true });
+  ({ fractionalState: c2, endsAt } = flag(6908)({ forceFetch: true }));
+  flag(6908)({ forceFetch: true });
   const tmpResult = require("ReverseTrialUtils");
   isInReverseTrial = tmpResult.useIsInReverseTrial();
-  const tmp4 = flag(13267);
-  fpDurationText = tmp4(endsAt, tmp(13267).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp4 = flag(13286);
+  fpDurationText = tmp4(endsAt, tmp(13286).CountDownMessageTypes.LONG_TIME_LEFT);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const tmpResult6 = require("get initialized");
   const stateFromStoresObject = tmpResult6.useStateFromStoresObject(items, () => {

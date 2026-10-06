@@ -1,14 +1,14 @@
-// === Module 6595: GuildOnboardingPromptsStore ===
+// === Module 6602: GuildOnboardingPromptsStore ===
 
-// Module 6595 (GuildOnboardingPromptsStore)
+// Module 6602 (GuildOnboardingPromptsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import GuildOnboardingStore2 from "GuildOnboardingStore" /* 6591 */;
-import GuildOnboardingPromptsConstants from "GuildOnboardingPromptsConstants" /* 6596 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 6597 */;
+import GuildOnboardingStore2 from "GuildOnboardingStore" /* 6598 */;
+import GuildOnboardingPromptsConstants from "GuildOnboardingPromptsConstants" /* 6603 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 6604 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;

@@ -1,8 +1,8 @@
-// === Module 9874: useTopAndNewlyAddedEmojis ===
+// === Module 9887: useTopAndNewlyAddedEmojis ===
 
-// Module 9874 (useTopAndNewlyAddedEmojis)
+// Module 9887 (useTopAndNewlyAddedEmojis)
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import EmojiStore from "EmojiStore" /* 5638 */;
+import EmojiStore from "EmojiStore" /* 5645 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

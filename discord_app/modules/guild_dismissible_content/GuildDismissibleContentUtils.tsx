@@ -1,6 +1,6 @@
-// === Module 12153: GuildDismissibleContentUtils ===
+// === Module 12168: GuildDismissibleContentUtils ===
 
-// Module 12153 (GuildDismissibleContentUtils)
+// Module 12168 (GuildDismissibleContentUtils)
 import Constants from "Constants" /* 1085 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -13,7 +13,7 @@ import size from "module_2" /* 2 */;
 const require = globalThis.__r;
 let _require, dependencyMap, importDefault;
 
-const f110804 = (dismissedGuildContent) => {
+const f110959 = (dismissedGuildContent) => {
   dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(guildId);
   let hasBitResult = null != dismissedGuildContent;
   if (hasBitResult) {
@@ -100,7 +100,7 @@ export const markContentAsDismissed = function markContentAsDismissed(dc, guildI
   importDefault = dc;
   dependencyMap = guildId;
   const obj = require("UserSettingsProtoActionCreators");
-  const result = obj.updateUserGuildSettings(guildId, f110804, UserSettingsDelay.INFREQUENT_USER_ACTION);
+  const result = obj.updateUserGuildSettings(guildId, f110959, UserSettingsDelay.INFREQUENT_USER_ACTION);
   const tmp = _require;
   const tmp4 = arg2;
   if (tmp4) {
@@ -121,5 +121,5 @@ export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, gu
   let closure_1 = dc;
   dependencyMap = guildId;
   let obj = require("UserSettingsProtoActionCreators");
-  const result = obj.updateUserGuildSettings(guildId, f110804, UserSettingsDelay.FREQUENT_USER_ACTION);
+  const result = obj.updateUserGuildSettings(guildId, f110959, UserSettingsDelay.FREQUENT_USER_ACTION);
 };

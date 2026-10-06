@@ -1,6 +1,6 @@
-// === Module 15056: GuildRoleSubscriptionMemberPreview ===
+// === Module 15071: GuildRoleSubscriptionMemberPreview ===
 
-// Module 15056 (GuildRoleSubscriptionMemberPreview)
+// Module 15071 (GuildRoleSubscriptionMemberPreview)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
@@ -9,15 +9,15 @@ import utils_ColorUtilsAll from "utils/ColorUtils" /* 1103 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import RoleIconUtils from "RoleIconUtils" /* 6686 */;
-import RoleIconDefault from "RoleIcon" /* 6704 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import RoleIconUtils from "RoleIconUtils" /* 6693 */;
+import RoleIconDefault from "RoleIcon" /* 6711 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

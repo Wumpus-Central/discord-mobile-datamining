@@ -1,6 +1,6 @@
-// === Module 11213: GroupDMNitroUpsellModel ===
+// === Module 11226: GroupDMNitroUpsellModel ===
 
-// Module 11213 (GroupDMNitroUpsellModel)
+// Module 11226 (GroupDMNitroUpsellModel)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;

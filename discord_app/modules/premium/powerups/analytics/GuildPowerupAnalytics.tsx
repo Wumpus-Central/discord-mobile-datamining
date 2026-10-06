@@ -1,6 +1,6 @@
-// === Module 12202: GuildPowerupAnalytics ===
+// === Module 12217: GuildPowerupAnalytics ===
 
-// Module 12202 (GuildPowerupAnalytics)
+// Module 12217 (GuildPowerupAnalytics)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import react from "react" /* 19 */;

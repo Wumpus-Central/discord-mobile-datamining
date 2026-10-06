@@ -1,9 +1,9 @@
-// === Module 7619: useAuthorWithProcessedColor ===
+// === Module 7630: useAuthorWithProcessedColor ===
 
-// Module 7619 (useAuthorWithProcessedColor)
+// Module 7630 (useAuthorWithProcessedColor)
 import react_native from "react-native" /* 17 */;
-import useMessageAuthor from "useMessageAuthor" /* 5304 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7620 */;
+import useMessageAuthor from "useMessageAuthor" /* 5311 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7631 */;
 import size from "module_2" /* 2 */;
 
 const processColor = react_native.processColor;

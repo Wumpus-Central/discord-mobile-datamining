@@ -1,6 +1,6 @@
-// === Module 4886: Text/Text ===
+// === Module 4892: Text/Text ===
 
-// Module 4886 (Text/Text)
+// Module 4892 (Text/Text)
 import _modDef12 from "module_12" /* 12 */;
 import Fragment from "Fragment" /* 21 */;
 import NativeText2 from "NativeText" /* 299 */;
@@ -8,17 +8,17 @@ import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import TextVariants from "TextVariants" /* 4887 */;
-import PlainTextExperimentContext from "PlainTextExperimentContext" /* 4895 */;
-import useTypographyVariantRemap from "useTypographyVariantRemap" /* 4896 */;
-import PlainTextEligibility from "PlainTextEligibility" /* 4899 */;
-import _modDef4900 from "module_4900" /* 4900 */;
+import TextVariants from "TextVariants" /* 4893 */;
+import PlainTextExperimentContext from "PlainTextExperimentContext" /* 4901 */;
+import useTypographyVariantRemap from "useTypographyVariantRemap" /* 4902 */;
+import PlainTextEligibility from "PlainTextEligibility" /* 4905 */;
+import _modDef4906 from "module_4906" /* 4906 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import useManaTextMigrationHighlight from "useManaTextMigrationHighlight" /* 4888 */;
-import createStyles from "createStyles" /* 4890 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import useManaTextMigrationHighlight from "useManaTextMigrationHighlight" /* 4894 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -172,7 +172,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     ({ color: color2, fontSize, fontFamily, fontStyle, textAlign, textDecorationLine, lineHeight } = plainTextEligibility);
     let StringResult;
     const tmp2Result = _objectWithoutProperties(plainTextEligibility, closure_4);
-    _modDef4900;
+    _modDef4906;
     if (null != fontWeight) {
       const _String = String;
       StringResult = String(fontWeight);
@@ -267,7 +267,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     ({ color: color2, fontSize, fontFamily, fontStyle, textAlign, textDecorationLine, lineHeight } = plainTextEligibility);
     let StringResult;
     const tmp21 = _objectWithoutProperties(plainTextEligibility, closure_5);
-    _modDef4900;
+    _modDef4906;
     if (null != fontWeight) {
       const _String = String;
       StringResult = String(fontWeight);

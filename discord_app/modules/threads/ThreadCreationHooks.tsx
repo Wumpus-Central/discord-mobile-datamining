@@ -1,21 +1,21 @@
-// === Module 8810: ThreadCreationHooks ===
+// === Module 8840: ThreadCreationHooks ===
 
-// Module 8810 (ThreadCreationHooks)
+// Module 8840 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import ThreadHooks from "ThreadHooks" /* 6772 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6777 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import MessageParserDefault from "MessageParser" /* 7166 */;
-import SlowmodeStore from "SlowmodeStore" /* 7171 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import ThreadHooks from "ThreadHooks" /* 6782 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6787 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import MessageParserDefault from "MessageParser" /* 7179 */;
+import SlowmodeStore from "SlowmodeStore" /* 7184 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 6808 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 6818 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import ThreadConstants from "ThreadConstants" /* 1125 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

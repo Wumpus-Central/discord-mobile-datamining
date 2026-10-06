@@ -1,6 +1,6 @@
-// === Module 5602: useFontScale ===
+// === Module 5609: useFontScale ===
 
-// Module 5602 (useFontScale)
+// Module 5609 (useFontScale)
 import react2 from "react" /* 576 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
 import react from "react" /* 19 */;

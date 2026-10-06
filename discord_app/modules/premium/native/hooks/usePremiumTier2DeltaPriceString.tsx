@@ -1,15 +1,15 @@
-// === Module 13357: usePremiumTier2DeltaPriceString ===
+// === Module 13376: usePremiumTier2DeltaPriceString ===
 
-// Module 13357 (usePremiumTier2DeltaPriceString)
+// Module 13376 (usePremiumTier2DeltaPriceString)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import BillingUtils from "BillingUtils" /* 4543 */;
-import PriceUtils from "PriceUtils" /* 6736 */;
-import ProductIds from "ProductIds" /* 6742 */;
-import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 6915 */;
-import NativeCheckoutStore from "NativeCheckoutStore" /* 6930 */;
+import BillingUtils from "BillingUtils" /* 4549 */;
+import PriceUtils from "PriceUtils" /* 6750 */;
+import PremiumBundledPlansUtils from "PremiumBundledPlansUtils" /* 6925 */;
+import ProductIds from "ProductIds" /* 6926 */;
+import NativeCheckoutStore from "NativeCheckoutStore" /* 6943 */;
 import react from "react" /* 19 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -378,7 +378,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((premiumTier, subsc
         const tmp18 = getViewerProductId(subscription);
         let tmp20 = null;
         if (null != tmp18) {
-          tmp20 = tmp(6742).AppStorePremiumProductIdsToPremiumBundledItems[tmp18];
+          tmp20 = tmp(6926).AppStorePremiumProductIdsToPremiumBundledItems[tmp18];
         }
         flag = null != tmp20 && tmp20.basePlanId === premiumTier.basePlanId && tmp20.numPremiumGuild < premiumTier.numPremiumGuild;
       }
@@ -438,7 +438,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((premiumTier, subsc
         const tmp2Result = getViewerProductId(subscription);
         let tmp11 = null;
         if (null != tmp2Result) {
-          tmp11 = tmp4(6742).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
+          tmp11 = tmp4(6926).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
         }
         flag = null != tmp11 && tmp11.basePlanId === premiumTier.basePlanId && tmp11.numPremiumGuild < premiumTier.numPremiumGuild;
       }

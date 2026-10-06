@@ -1,6 +1,6 @@
-// === Module 8690: ApplicationAssetsV2Store ===
+// === Module 8725: ApplicationAssetsV2Store ===
 
-// Module 8690 (ApplicationAssetsV2Store)
+// Module 8725 (ApplicationAssetsV2Store)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
@@ -8,14 +8,14 @@ import size from "module_2" /* 2 */;
 const require = globalThis.__r;
 let _require, resolved_assets, set;
 
-const f98295 = (application_id) => application_id.application_id;
+const f98489 = (application_id) => application_id.application_id;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {
   let c0;
   const values = Object.values(configs.configs);
   _require = false;
   const flatResult = values.flat();
   const obj2 = require("module_12");
-  const entries1 = entries(obj2.groupBy(flatResult, f98295));
+  const entries1 = entries(obj2.groupBy(flatResult, f98489));
   const mapped = entries1.map((item) => {
     let obj;
     let tmp;
@@ -88,7 +88,7 @@ let obj = {
     _require = false;
     configs = configs.configs;
     let obj = require("module_12");
-    const entries1 = entries(obj.groupBy(configs, f98295));
+    const entries1 = entries(obj.groupBy(configs, f98489));
     const mapped = entries1.map((item) => {
       let obj;
       let tmp;

@@ -1,10 +1,10 @@
-// === Module 5913: openQuarantineModeInfoModal ===
+// === Module 5920: openQuarantineModeInfoModal ===
 
-// Module 5913 (openQuarantineModeInfoModal)
+// Module 5920 (openQuarantineModeInfoModal)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import ChatInputUtils from "ChatInputUtils" /* 4745 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
+import ChatInputUtils from "ChatInputUtils" /* 4751 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

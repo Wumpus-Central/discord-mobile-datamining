@@ -1,10 +1,10 @@
-// === Module 5967: usePreviewDisabledGuild ===
+// === Module 5974: usePreviewDisabledGuild ===
 
-// Module 5967 (usePreviewDisabledGuild)
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5937 */;
+// Module 5974 (usePreviewDisabledGuild)
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5944 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5963 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5970 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

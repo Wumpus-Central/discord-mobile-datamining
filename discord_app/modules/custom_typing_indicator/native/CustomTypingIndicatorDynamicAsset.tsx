@@ -1,11 +1,11 @@
-// === Module 11586: CustomTypingIndicatorDynamicAsset ===
+// === Module 11599: CustomTypingIndicatorDynamicAsset ===
 
-// Module 11586 (CustomTypingIndicatorDynamicAsset)
+// Module 11599 (CustomTypingIndicatorDynamicAsset)
 import react_native from "react-native" /* 17 */;
-import FastImageDefault from "FastImage" /* 5974 */;
+import FastImageDefault from "FastImage" /* 5981 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

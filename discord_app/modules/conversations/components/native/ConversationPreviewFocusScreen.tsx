@@ -1,10 +1,10 @@
-// === Module 17041: ConversationPreviewFocusScreen ===
+// === Module 17067: ConversationPreviewFocusScreen ===
 
-// Module 17041 (ConversationPreviewFocusScreen)
+// Module 17067 (ConversationPreviewFocusScreen)
 import Fragment from "Fragment" /* 21 */;
-import ConversationFocusViewDefault from "ConversationFocusView" /* 13092 */;
+import ConversationFocusViewDefault from "ConversationFocusView" /* 13111 */;
 import react from "react" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7108 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7121 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

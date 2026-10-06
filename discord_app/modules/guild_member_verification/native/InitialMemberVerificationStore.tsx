@@ -1,6 +1,6 @@
-// === Module 5966: InitialMemberVerificationStore ===
+// === Module 5973: InitialMemberVerificationStore ===
 
-// Module 5966 (InitialMemberVerificationStore)
+// Module 5973 (InitialMemberVerificationStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;

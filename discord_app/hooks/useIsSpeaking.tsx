@@ -1,10 +1,10 @@
-// === Module 9018: useIsSpeaking ===
+// === Module 9051: useIsSpeaking ===
 
-// Module 9018 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 5680 */;
+// Module 9051 (useIsSpeaking)
+import SoundboardStore from "SoundboardStore" /* 5687 */;
 import SelectedChannelStore_mod from "SelectedChannelStore" /* 2103 */;
-import SpeakingStore_mod from "SpeakingStore" /* 5576 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import SpeakingStore_mod from "SpeakingStore" /* 5583 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

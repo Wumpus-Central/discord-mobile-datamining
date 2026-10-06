@@ -1,6 +1,6 @@
-// === Module 15799: DoubleTapEmojiSetting ===
+// === Module 15836: DoubleTapEmojiSetting ===
 
-// Module 15799 (DoubleTapEmojiSetting)
+// Module 15836 (DoubleTapEmojiSetting)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,14 +9,14 @@ import intl2 from "intl" /* 1126 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import EmojiDefault from "Emoji" /* 6625 */;
-import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7627 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
+import EmojiDefault from "Emoji" /* 6632 */;
+import DoubleTapToReactUtils from "DoubleTapToReactUtils" /* 7638 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;

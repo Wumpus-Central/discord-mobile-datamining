@@ -1,16 +1,16 @@
-// === Module 12809: ShopThisLookMarketingCoachmark ===
+// === Module 12828: ShopThisLookMarketingCoachmark ===
 
-// Module 12809 (ShopThisLookMarketingCoachmark)
+// Module 12828 (ShopThisLookMarketingCoachmark)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import Constants from "Constants" /* 6707 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 12804 */;
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 12810 */;
+import Constants from "Constants" /* 6714 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 12823 */;
+import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 12829 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

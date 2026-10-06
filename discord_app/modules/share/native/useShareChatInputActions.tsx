@@ -1,8 +1,8 @@
-// === Module 11319: useShareChatInputActions ===
+// === Module 11332: useShareChatInputActions ===
 
-// Module 11319 (useShareChatInputActions)
+// Module 11332 (useShareChatInputActions)
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import openEmojiPickerActionSheet2 from "openEmojiPickerActionSheet" /* 9866 */;
+import openEmojiPickerActionSheet2 from "openEmojiPickerActionSheet" /* 9879 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

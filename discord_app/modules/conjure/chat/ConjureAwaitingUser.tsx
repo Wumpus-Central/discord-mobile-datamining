@@ -1,7 +1,7 @@
-// === Module 16711: ConjureAwaitingUser ===
+// === Module 16732: ConjureAwaitingUser ===
 
-// Module 16711 (ConjureAwaitingUser)
-import ConjureChatStore from "ConjureChatStore" /* 12905 */;
+// Module 16732 (ConjureAwaitingUser)
+import ConjureChatStore from "ConjureChatStore" /* 12924 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = ConjureChatStore.turnSettled;

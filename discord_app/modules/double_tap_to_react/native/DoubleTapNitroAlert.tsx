@@ -1,17 +1,17 @@
-// === Module 7633: DoubleTapNitroAlert ===
+// === Module 7644: DoubleTapNitroAlert ===
 
-// Module 7633 (DoubleTapNitroAlert)
+// Module 7644 (DoubleTapNitroAlert)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4800 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
-import DoubleTapToRaectConstants from "DoubleTapToRaectConstants" /* 7628 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
+import DoubleTapToRaectConstants from "DoubleTapToRaectConstants" /* 7639 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

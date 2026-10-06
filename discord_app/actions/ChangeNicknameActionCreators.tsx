@@ -1,9 +1,9 @@
-// === Module 8808: ChangeNicknameActionCreators ===
+// === Module 8838: ChangeNicknameActionCreators ===
 
-// Module 8808 (ChangeNicknameActionCreators)
+// Module 8838 (ChangeNicknameActionCreators)
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

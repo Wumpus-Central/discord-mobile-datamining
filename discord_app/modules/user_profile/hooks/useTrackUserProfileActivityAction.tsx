@@ -1,9 +1,9 @@
-// === Module 12843: useTrackUserProfileActivityAction ===
+// === Module 12862: useTrackUserProfileActivityAction ===
 
-// Module 12843 (useTrackUserProfileActivityAction)
+// Module 12862 (useTrackUserProfileActivityAction)
 import react from "react" /* 19 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7862 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8447 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7873 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8480 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

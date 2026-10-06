@@ -1,13 +1,13 @@
-// === Module 17972: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
+// === Module 18018: GuildRoleSubscriptionTierTemplateSelectedActionSheet ===
 
-// Module 17972 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
+// Module 18018 (GuildRoleSubscriptionTierTemplateSelectedActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -64,7 +64,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: intl.string(markAsDismissed(1126).t.Y0PTc0) };
-    const Text = tmp(4886).Text;
+    const Text = tmp(4892).Text;
     intl = tmp(1126).intl;
     const tmp10 = closure_5(Text, obj3);
     const tmp11 = closure_5(markAsDismissed(1188).Spacer, { size: 12 });
@@ -78,7 +78,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { variant: "text-sm/normal", color: "text-default", children: intl2.string(markAsDismissed(1126).t["YSI/1/"]) };
-    const Text2 = tmp(4886).Text;
+    const Text2 = tmp(4892).Text;
     intl2 = tmp(1126).intl;
     const tmp15 = closure_5(Text2, obj4);
     const tmp16 = closure_5(markAsDismissed(1188).Spacer, { size: 48 });
@@ -140,7 +140,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
           return tmp29;
         }
         const obj5 = { backdropOpacity: 0.8, onDismiss: tmp5, children: tmp25 };
-        const tmp31 = closure_5(markAsDismissed(6645).BottomSheet, obj5);
+        const tmp31 = closure_5(markAsDismissed(6652).BottomSheet, obj5);
         cResult[20] = tmp5;
         cResult[21] = tmp25;
         cResult[22] = tmp31;
@@ -156,14 +156,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
     items = [tmp7, tmp8, tmp12, tmp13, tmp20];
     cResult[14] = tmp20;
     cResult[15] = tmp6;
-    cResult[16] = closure_6(markAsDismissed(6112).BottomSheetScrollView, obj7);
-    const tmp24 = closure_6(markAsDismissed(6112).BottomSheetScrollView, obj7);
+    cResult[16] = closure_6(markAsDismissed(6119).BottomSheetScrollView, obj7);
+    const tmp24 = closure_6(markAsDismissed(6119).BottomSheetScrollView, obj7);
   }
   const obj8 = { text: tmp17, pillStyle: tmp4.button, onPress: T, grow: true };
   cResult[11] = tmp4.button;
   cResult[12] = T;
-  cResult[13] = closure_5(markAsDismissed(5595).BaseTextButton, obj8);
-  const tmp21 = closure_5(markAsDismissed(5595).BaseTextButton, obj8);
+  cResult[13] = closure_5(markAsDismissed(5602).BaseTextButton, obj8);
+  const tmp21 = closure_5(markAsDismissed(5602).BaseTextButton, obj8);
 }) : ((markAsDismissed) => {
   let BottomSheetScrollView;
   let intl;
@@ -183,15 +183,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
     children: closure_5(View, obj2)
   };
   obj2 = { style: tmp.container, children: closure_6(BottomSheetScrollView, obj3) };
-  BottomSheet = markAsDismissed(6645).BottomSheet;
+  BottomSheet = markAsDismissed(6652).BottomSheet;
   obj3 = { contentContainerStyle: { paddingBottom: bottom }, children: items };
-  BottomSheetScrollView = markAsDismissed(6112).BottomSheetScrollView;
+  BottomSheetScrollView = markAsDismissed(6119).BottomSheetScrollView;
   const obj4 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: intl.string(markAsDismissed(1126).t.Y0PTc0) };
-  const Text = markAsDismissed(4886).Text;
+  const Text = markAsDismissed(4892).Text;
   intl = markAsDismissed(1126).intl;
   items = [closure_5(Text, obj4), closure_5(markAsDismissed(1188).Spacer, { size: 12 }), , , ];
   const obj5 = { variant: "text-sm/normal", color: "text-default", children: intl2.string(markAsDismissed(1126).t["YSI/1/"]) };
-  const Text2 = markAsDismissed(4886).Text;
+  const Text2 = markAsDismissed(4892).Text;
   intl2 = markAsDismissed(1126).intl;
   items[2] = closure_5(Text2, obj5);
   items[3] = closure_5(markAsDismissed(1188).Spacer, { size: 48 });
@@ -203,7 +203,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) => 
     },
     grow: true
   };
-  const BaseTextButton = markAsDismissed(5595).BaseTextButton;
+  const BaseTextButton = markAsDismissed(5602).BaseTextButton;
   intl3 = markAsDismissed(1126).intl;
   items[4] = closure_5(BaseTextButton, obj6);
   return closure_5(BottomSheet, obj);

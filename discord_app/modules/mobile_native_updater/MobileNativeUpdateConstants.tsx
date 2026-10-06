@@ -1,14 +1,14 @@
-// === Module 4868: MobileNativeUpdateConstants ===
+// === Module 4874: MobileNativeUpdateConstants ===
 
-// Module 4868 (MobileNativeUpdateConstants)
+// Module 4874 (MobileNativeUpdateConstants)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
-import module_4461 from "module_4461" /* 4461 */;
+import module_4467 from "module_4467" /* 4467 */;
 import react_native_mod from "react-native" /* 1368 */;
 import size from "module_2" /* 2 */;
 
 let tmp3 = null;
-const durationResult = module_4461.duration(6, "hours");
+const durationResult = module_4467.duration(6, "hours");
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {
   const _process = process;
   tmp3 = null;

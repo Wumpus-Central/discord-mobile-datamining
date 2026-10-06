@@ -1,6 +1,6 @@
-// === Module 8987: closeVoicePanels ===
+// === Module 9020: closeVoicePanels ===
 
-// Module 8987 (closeVoicePanels)
+// Module 9020 (closeVoicePanels)
 import Constants from "Constants" /* 1085 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import size from "module_2" /* 2 */;

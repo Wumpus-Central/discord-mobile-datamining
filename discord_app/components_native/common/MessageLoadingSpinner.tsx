@@ -1,12 +1,12 @@
-// === Module 9113: MessageLoadingSpinner ===
+// === Module 9148: MessageLoadingSpinner ===
 
-// Module 9113 (MessageLoadingSpinner)
+// Module 9148 (MessageLoadingSpinner)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken2 from "useToken" /* 4580 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5968 */;
+import useToken2 from "useToken" /* 4586 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
 import react from "react" /* 19 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

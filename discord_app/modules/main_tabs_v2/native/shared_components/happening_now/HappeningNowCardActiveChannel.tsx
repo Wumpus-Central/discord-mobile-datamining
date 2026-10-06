@@ -1,21 +1,21 @@
-// === Module 16013: HappeningNowCardActiveChannel ===
+// === Module 16052: HappeningNowCardActiveChannel ===
 
-// Module 16013 (HappeningNowCardActiveChannel)
+// Module 16052 (HappeningNowCardActiveChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import router_utils from "router_utils" /* 1112 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ActiveChannelsStore2 from "ActiveChannelsStore" /* 13518 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15114 */;
+import ActiveChannelsStore2 from "ActiveChannelsStore" /* 13534 */;
+import HappeningNowConstants from "HappeningNowConstants" /* 15129 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import TypingStore from "TypingStore" /* 11579 */;
+import TypingStore from "TypingStore" /* 11592 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

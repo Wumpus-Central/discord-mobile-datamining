@@ -1,6 +1,6 @@
-// === Module 13198: BillingInformation ===
+// === Module 13217: BillingInformation ===
 
-// Module 13198 (BillingInformation)
+// Module 13217 (BillingInformation)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -158,7 +158,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((isPurchasedViaApple,
   if (null == subscriptionPeriodStart) {
     return null;
   } else {
-    const tmp2Result = tmp2(4528);
+    const tmp2Result = tmp2(4534);
     const billingInformationString = tmp2Result.getBillingInformationString(isPurchasedViaApple, subscriptionPeriodStart, tmp, flag, fractionalPremiumInfo);
     let formatResult = billingInformationString;
     const tmp2Result2 = tmp2(1370);

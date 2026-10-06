@@ -1,16 +1,16 @@
-// === Module 16876: GroupDMNitroCapBanner ===
+// === Module 16901: GroupDMNitroCapBanner ===
 
-// Module 16876 (GroupDMNitroCapBanner)
+// Module 16901 (GroupDMNitroCapBanner)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import NitroWheelIcon2 from "NitroWheelIcon" /* 8313 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13224 */;
+import useToken from "useToken" /* 4586 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import NitroWheelIcon2 from "NitroWheelIcon" /* 8346 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13243 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

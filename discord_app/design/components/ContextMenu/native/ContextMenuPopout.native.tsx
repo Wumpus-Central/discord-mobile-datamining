@@ -1,19 +1,19 @@
-// === Module 14259: ContextMenuPopout ===
+// === Module 14277: ContextMenuPopout ===
 
-// Module 14259 (ContextMenuPopout)
+// Module 14277 (ContextMenuPopout)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4589 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import spring from "spring" /* 5597 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import ContextMenuState from "ContextMenuState" /* 7580 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 7581 */;
+import native from "native" /* 4595 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import spring from "spring" /* 5604 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import ContextMenuState from "ContextMenuState" /* 7591 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 7592 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -88,11 +88,11 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     value = visible.get();
     return obj;
   };
-  const obj2 = visible(4612);
-  fn.__closure = { withSpring: visible(5597).withSpring, visible, CONTEXT_MENU_SPRING: visible(7581).CONTEXT_MENU_SPRING };
+  const obj2 = visible(4618);
+  fn.__closure = { withSpring: visible(5604).withSpring, visible, CONTEXT_MENU_SPRING: visible(7592).CONTEXT_MENU_SPRING };
   fn.__workletHash = 6862317967896;
   fn.__initData = __initData2;
-  ({ withSpring: visible(5597).withSpring, visible, CONTEXT_MENU_SPRING: visible(7581).CONTEXT_MENU_SPRING });
+  ({ withSpring: visible(5604).withSpring, visible, CONTEXT_MENU_SPRING: visible(7592).CONTEXT_MENU_SPRING });
   const animatedStyle = obj2.useAnimatedStyle(fn);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let stringResult;
@@ -121,7 +121,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const obj4 = { blur: "none", style: animatedStyle, accessibleDismissStyle: tmp4.accessibleDismiss, onDismiss: onPress, accessibilityLabel: first };
-  const tmp10 = closure_6(visible(5771).Backdrop, obj4);
+  const tmp10 = closure_6(visible(5778).Backdrop, obj4);
   cResult[1] = animatedStyle;
   cResult[2] = onPress;
   cResult[3] = tmp4.accessibleDismiss;
@@ -132,7 +132,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   visible = visible.visible;
   const onPress = visible.onPress;
   const tmp = closure_15();
-  let obj = visible(4612);
+  let obj = visible(4618);
   const fn = function n() {
     let value;
     let withSpring;
@@ -142,13 +142,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     value = visible.get();
     return obj;
   };
-  fn.__closure = { withSpring: visible(5597).withSpring, visible, CONTEXT_MENU_SPRING: visible(7581).CONTEXT_MENU_SPRING };
+  fn.__closure = { withSpring: visible(5604).withSpring, visible, CONTEXT_MENU_SPRING: visible(7592).CONTEXT_MENU_SPRING };
   fn.__workletHash = 7758377027899;
   fn.__initData = __initData3;
-  ({ withSpring: visible(5597).withSpring, visible, CONTEXT_MENU_SPRING: visible(7581).CONTEXT_MENU_SPRING });
+  ({ withSpring: visible(5604).withSpring, visible, CONTEXT_MENU_SPRING: visible(7592).CONTEXT_MENU_SPRING });
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj3 = { blur: "none", style: animatedStyle, accessibleDismissStyle: tmp.accessibleDismiss, onDismiss: onPress, accessibilityLabel: stringResult };
-  const Backdrop = visible(5771).Backdrop;
+  const Backdrop = visible(5778).Backdrop;
   const obj4 = visible(1369);
   const isAndroidResult = obj4.isAndroid();
   const intl = visible(1126).intl;

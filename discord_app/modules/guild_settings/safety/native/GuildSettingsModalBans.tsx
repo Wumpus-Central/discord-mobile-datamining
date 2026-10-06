@@ -1,21 +1,21 @@
-// === Module 17824: GuildSettingsModalBans ===
+// === Module 17870: GuildSettingsModalBans ===
 
-// Module 17824 (GuildSettingsModalBans)
+// Module 17870 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5702 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
-import showSimpleActionSheet2 from "showSimpleActionSheet" /* 6693 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import showSimpleActionSheet2 from "showSimpleActionSheet" /* 6700 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let bans, bansVersion, props;

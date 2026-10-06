@@ -1,15 +1,15 @@
-// === Module 15957: MessagesItemChannel ===
+// === Module 15996: MessagesItemChannel ===
 
-// Module 15957 (MessagesItemChannel)
+// Module 15996 (MessagesItemChannel)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import defaultMVCPConfig from "defaultMVCPConfig" /* 8371 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
-import MessagesItemChannelBase from "MessagesItemChannelBase" /* 15958 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15967 */;
-import LegendList from "LegendList" /* 15968 */;
+import defaultMVCPConfig from "defaultMVCPConfig" /* 8404 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
+import MessagesItemChannelBase from "MessagesItemChannelBase" /* 15997 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16006 */;
+import LegendList from "LegendList" /* 16007 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;

@@ -1,11 +1,11 @@
-// === Module 8804: ApplicationCommandFrecencyHooks ===
+// === Module 8834: ApplicationCommandFrecencyHooks ===
 
-// Module 8804 (ApplicationCommandFrecencyHooks)
+// Module 8834 (ApplicationCommandFrecencyHooks)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import react from "react" /* 19 */;
-import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore" /* 8797 */;
+import ApplicationCommandFrecencyStore_mod from "ApplicationCommandFrecencyStore" /* 8829 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

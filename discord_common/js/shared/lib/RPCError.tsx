@@ -1,6 +1,6 @@
-// === Module 9027: shared/RPCError ===
+// === Module 9060: shared/RPCError ===
 
-// Module 9027 (shared/RPCError)
+// Module 9060 (shared/RPCError)
 import size from "module_2" /* 2 */;
 
 class RPCError extends Error {

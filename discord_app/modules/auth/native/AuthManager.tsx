@@ -1,18 +1,18 @@
-// === Module 15919: AuthManager ===
+// === Module 15958: AuthManager ===
 
-// Module 15919 (AuthManager)
+// Module 15958 (AuthManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 5099 */;
-import transitionToGuild from "transitionToGuild" /* 6845 */;
-import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 7256 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9481 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12052 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12055 */;
-import NUFActionCreators from "NUFActionCreators" /* 12353 */;
-import NUFConstants from "NUFConstants" /* 12354 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12415 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 5105 */;
+import transitionToGuild from "transitionToGuild" /* 6855 */;
+import SentMessageIntentsHandlerDefault from "SentMessageIntentsHandler" /* 7269 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12067 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12070 */;
+import NUFActionCreators from "NUFActionCreators" /* 12368 */;
+import NUFConstants from "NUFConstants" /* 12369 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12430 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react_native from "react-native" /* 17 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;

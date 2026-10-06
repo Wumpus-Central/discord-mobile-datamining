@@ -1,6 +1,6 @@
-// === Module 18058: openSafetyFlow ===
+// === Module 18103: openSafetyFlow ===
 
-// Module 18058 (openSafetyFlow)
+// Module 18103 (openSafetyFlow)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
@@ -136,7 +136,7 @@ let obj = function _openSafetyFlow() {
       obj5 = {};
     }
     requiredAction = obj5.requiredAction;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

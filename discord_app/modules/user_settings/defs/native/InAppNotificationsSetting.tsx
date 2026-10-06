@@ -1,18 +1,18 @@
-// === Module 15310: InAppNotificationsSetting ===
+// === Module 15325: InAppNotificationsSetting ===
 
-// Module 15310 (InAppNotificationsSetting)
+// Module 15325 (InAppNotificationsSetting)
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import _modDef2819 from "module_2819" /* 2819 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import FocusModeUtils from "FocusModeUtils" /* 12473 */;
-import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14290 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15311 */;
+import _modDef2847 from "module_2847" /* 2847 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import FocusModeUtils from "FocusModeUtils" /* 12488 */;
+import notifications_NotificationSettingsUtils from "notifications/NotificationSettingsUtils" /* 14308 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15326 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11129 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
@@ -85,7 +85,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (focusModeEnabled) {
       stringResult = string(intl2.t.cIRG0s);
     } else {
-      stringResult = string(_modDef2819["T/zMdV"]);
+      stringResult = string(_modDef2847["T/zMdV"]);
     }
     cResult[0] = focusModeEnabled;
     cResult[1] = stringResult;
@@ -103,7 +103,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (focusModeEnabled) {
     stringResult = string(intl2.t.cIRG0s);
   } else {
-    stringResult = string(_modDef2819["T/zMdV"]);
+    stringResult = string(_modDef2847["T/zMdV"]);
   }
   return stringResult;
 });
@@ -128,7 +128,7 @@ const createToggle2 = SettingBuilders.createToggle;
 const obj3 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.sH5mu9);
+    return intl.string(_modDef2847.sH5mu9);
   },
   useDescription: tmp4,
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,

@@ -1,11 +1,11 @@
-// === Module 12458: useIsViewingPremiumMemberships ===
+// === Module 12473: useIsViewingPremiumMemberships ===
 
-// Module 12458 (useIsViewingPremiumMemberships)
+// Module 12473 (useIsViewingPremiumMemberships)
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import MemoryRouter from "MemoryRouter" /* 4710 */;
-import RouteUtils from "RouteUtils" /* 4717 */;
+import MemoryRouter from "MemoryRouter" /* 4716 */;
+import RouteUtils from "RouteUtils" /* 4723 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

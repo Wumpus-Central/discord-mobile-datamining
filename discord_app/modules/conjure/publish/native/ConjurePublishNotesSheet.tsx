@@ -1,24 +1,24 @@
-// === Module 16549: ConjurePublishNotesSheet ===
+// === Module 16589: ConjurePublishNotesSheet ===
 
-// Module 16549 (ConjurePublishNotesSheet)
+// Module 16589 (ConjurePublishNotesSheet)
 import nativeDefault from "native" /* 587 */;
 import intl14 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import GuildChannelStore2 from "GuildChannelStore" /* 4507 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4854 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import ConjureUtils from "ConjureUtils" /* 6746 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12103 */;
-import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 16550 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import GuildChannelStore2 from "GuildChannelStore" /* 4513 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4860 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import ConjureUtils from "ConjureUtils" /* 6756 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12118 */;
+import ConjurePatchNotesChannel from "ConjurePatchNotesChannel" /* 16590 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const GuildChannelStore = GuildChannelStore2;
@@ -254,7 +254,7 @@ export default function ConjurePublishNotesSheet(guildId) {
         closure_1_10(id.id);
       }
     };
-    obj3 = { title: intl.string(_modDef3723.Gd63Fl) };
+    obj3 = { title: intl.string(_modDef3753.Gd63Fl) };
     tmp2 = ChannelPickerActionSheetDefault;
     intl = intl14.intl;
     showActionSheet(obj);

@@ -1,15 +1,15 @@
-// === Module 9459: InfoBox ===
+// === Module 9472: InfoBox ===
 
-// Module 9459 (InfoBox)
+// Module 9472 (InfoBox)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CircleErrorIcon2 from "CircleErrorIcon" /* 4800 */;
-import CircleInformationIcon2 from "CircleInformationIcon" /* 4812 */;
-import Text_Text from "Text/Text" /* 4886 */;
+import CircleErrorIcon2 from "CircleErrorIcon" /* 4806 */;
+import CircleInformationIcon2 from "CircleInformationIcon" /* 4818 */;
+import Text_Text from "Text/Text" /* 4892 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

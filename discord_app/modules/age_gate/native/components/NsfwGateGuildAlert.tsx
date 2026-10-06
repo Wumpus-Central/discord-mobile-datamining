@@ -1,11 +1,11 @@
-// === Module 9422: NsfwGateGuildAlert ===
+// === Module 9436: NsfwGateGuildAlert ===
 
-// Module 9422 (NsfwGateGuildAlert)
+// Module 9436 (NsfwGateGuildAlert)
 import Fragment from "Fragment" /* 21 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 8801 */;
-import Constants2 from "Constants" /* 9423 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import Constants2 from "Constants" /* 6726 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 6727 */;
 import react from "react" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -212,7 +212,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         track(GUILD_NSFW_GATE_VIEWED, obj);
       }
     }
-    const AlertActionButton = tmp(5713).AlertActionButton;
+    const AlertActionButton = tmp(5720).AlertActionButton;
     const intl2 = tmp(1126).intl;
     const tmp15 = <AlertActionButton key="help-center" text={intl2.string(tmp(1126).t.wi6hPV)} onPress={function onPress() {
       const openURL = first(dependencyMap[12]).openURL;
@@ -286,8 +286,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
     const items1 = [tmp14, ];
-    const AlertModal = tmp(5713).AlertModal;
-    const AlertActionButton2 = tmp(5713).AlertActionButton;
+    const AlertModal = tmp(5720).AlertModal;
+    const AlertActionButton2 = tmp(5720).AlertActionButton;
     const intl3 = tmp(1126).intl;
     items1[1] = <AlertActionButton2 key="dismiss" variant="secondary" text={intl3.string(tmp(1126).t.WAI6xu)} />;
     const tmp17 = <AlertModal title={tmp10} content={tmp11} actions={items1} />;
@@ -358,10 +358,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     track(GUILD_NSFW_GATE_VIEWED, obj);
   }, items);
-  const AlertModal = guildId(5713).AlertModal;
+  const AlertModal = guildId(5720).AlertModal;
   const intl = guildId(1126).intl;
   const intl2 = guildId(1126).intl;
-  const AlertActionButton = guildId(5713).AlertActionButton;
+  const AlertActionButton = guildId(5720).AlertActionButton;
   const intl3 = guildId(1126).intl;
   const items1 = [
     <AlertActionButton key="help-center" text={intl3.string(guildId(1126).t.wi6hPV)} onPress={function onPress() {
@@ -372,7 +372,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }} />,
 
   ];
-  const AlertActionButton2 = guildId(5713).AlertActionButton;
+  const AlertActionButton2 = guildId(5720).AlertActionButton;
   const intl4 = guildId(1126).intl;
   items1[1] = <AlertActionButton2 key="dismiss" variant="secondary" text={intl4.string(guildId(1126).t.WAI6xu)} />;
   return <AlertModal title={intl.string(guildId(1126).t.JqfHGt)} content={intl2.string(guildId(1126).t.EdXn1A)} actions={items1} />;

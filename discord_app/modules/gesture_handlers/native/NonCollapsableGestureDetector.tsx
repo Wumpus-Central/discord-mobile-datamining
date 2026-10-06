@@ -1,10 +1,10 @@
-// === Module 16303: NonCollapsableGestureDetector ===
+// === Module 16343: NonCollapsableGestureDetector ===
 
-// Module 16303 (NonCollapsableGestureDetector)
+// Module 16343 (NonCollapsableGestureDetector)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

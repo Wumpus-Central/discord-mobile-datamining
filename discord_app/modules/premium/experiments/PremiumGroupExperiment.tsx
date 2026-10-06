@@ -1,6 +1,6 @@
-// === Module 8533: PremiumGroupExperiment ===
+// === Module 8566: PremiumGroupExperiment ===
 
-// Module 8533 (PremiumGroupExperiment)
+// Module 8566 (PremiumGroupExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

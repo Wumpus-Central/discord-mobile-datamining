@@ -1,10 +1,10 @@
-// === Module 9316: LastUsedVideoBackgroundOption ===
+// === Module 8089: LastUsedVideoBackgroundOption ===
 
-// Module 9316 (LastUsedVideoBackgroundOption)
+// Module 8089 (LastUsedVideoBackgroundOption)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import VideoBackgroundUtils from "VideoBackgroundUtils" /* 9317 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import VideoBackgroundUtils from "VideoBackgroundUtils" /* 8090 */;
 import react from "react" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;

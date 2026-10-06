@@ -1,6 +1,6 @@
-// === Module 9037: createWebViewHtmlFile ===
+// === Module 9070: createWebViewHtmlFile ===
 
-// Module 9037 (createWebViewHtmlFile)
+// Module 9070 (createWebViewHtmlFile)
 import react_native from "react-native" /* 17 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
@@ -187,7 +187,7 @@ let obj = function _createWebViewHtmlFile() {
               closure_7 = undefined;
               messageForDisallowedNavigationError = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {

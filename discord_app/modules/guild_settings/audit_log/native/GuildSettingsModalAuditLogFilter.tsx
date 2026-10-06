@@ -1,24 +1,24 @@
-// === Module 17717: GuildSettingsModalAuditLogFilter ===
+// === Module 17763: GuildSettingsModalAuditLogFilter ===
 
-// Module 17717 (GuildSettingsModalAuditLogFilter)
+// Module 17763 (GuildSettingsModalAuditLogFilter)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl6 from "intl" /* 1126 */;
-import react_native2 from "react-native" /* 4594 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5702 */;
-import FormRadio from "FormRadio" /* 6075 */;
-import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10680 */;
-import AuditLogUtils from "AuditLogUtils" /* 17715 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 17718 */;
+import react_native2 from "react-native" /* 4600 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5709 */;
+import FormRadio from "FormRadio" /* 6082 */;
+import DetailedGuildIdentityUserRowDefault from "DetailedGuildIdentityUserRow" /* 10693 */;
+import AuditLogUtils from "AuditLogUtils" /* 17761 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 17764 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17713 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17759 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -344,7 +344,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                           return tmp4(TableRadioRow, obj8);
                         }
                       }
-                      const tmp25 = closure_9(filterType(6547).SearchField, obj5);
+                      const tmp25 = closure_9(filterType(6554).SearchField, obj5);
                       cResult[25] = tmp20;
                       cResult[26] = tmp25;
                       tmp23 = tmp25;

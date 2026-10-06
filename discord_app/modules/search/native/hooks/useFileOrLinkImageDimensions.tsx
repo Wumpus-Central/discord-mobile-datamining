@@ -1,9 +1,9 @@
-// === Module 16887: useFileOrLinkImageDimensions ===
+// === Module 16912: useFileOrLinkImageDimensions ===
 
-// Module 16887 (useFileOrLinkImageDimensions)
+// Module 16912 (useFileOrLinkImageDimensions)
 import react2 from "react" /* 576 */;
 import react from "react" /* 19 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

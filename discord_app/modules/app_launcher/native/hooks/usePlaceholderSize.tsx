@@ -1,6 +1,6 @@
-// === Module 11668: usePlaceholderSize ===
+// === Module 11682: usePlaceholderSize ===
 
-// Module 11668 (usePlaceholderSize)
+// Module 11682 (usePlaceholderSize)
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

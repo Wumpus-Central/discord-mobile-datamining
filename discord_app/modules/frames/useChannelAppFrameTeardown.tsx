@@ -1,13 +1,13 @@
-// === Module 16780: useChannelAppFrameTeardown ===
+// === Module 16801: useChannelAppFrameTeardown ===
 
-// Module 16780 (useChannelAppFrameTeardown)
+// Module 16801 (useChannelAppFrameTeardown)
 import Constants from "Constants" /* 1085 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import getFramesManagerDefault from "getFramesManager" /* 9040 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import getFramesManagerDefault from "getFramesManager" /* 9076 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import FramesStore from "FramesStore" /* 8703 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

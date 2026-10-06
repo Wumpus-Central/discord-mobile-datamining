@@ -1,15 +1,15 @@
-// === Module 4730: design/shared ===
+// === Module 4736: design/shared ===
 
-// Module 4730 (design/shared)
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4590 */;
-import ThemeContext from "ThemeContext" /* 4593 */;
-import react from "react" /* 4596 */;
-import ThemeUtils from "ThemeUtils" /* 4598 */;
-import ThemeContextProvider from "ThemeContextProvider" /* 4601 */;
-import ThemeContextProvider_ThemeTypes from "ThemeContextProvider/ThemeTypes" /* 4602 */;
-import ThemeContextFlags from "ThemeContextFlags" /* 4603 */;
+// Module 4736 (design/shared)
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4596 */;
+import ThemeContext from "ThemeContext" /* 4599 */;
+import react from "react" /* 4602 */;
+import ThemeUtils from "ThemeUtils" /* 4604 */;
+import ThemeContextProvider from "ThemeContextProvider" /* 4607 */;
+import ThemeContextProvider_ThemeTypes from "ThemeContextProvider/ThemeTypes" /* 4608 */;
+import ThemeContextFlags from "ThemeContextFlags" /* 4609 */;
 import size from "module_2" /* 2 */;
-import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4597 */;
+import AccessibilityConstants from "AccessibilityPreferencesContext/AccessibilityConstants" /* 4603 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/shared.tsx");
 for (const key10018 in AccessibilityAnnouncer) {

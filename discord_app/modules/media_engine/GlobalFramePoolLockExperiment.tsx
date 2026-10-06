@@ -1,6 +1,6 @@
-// === Module 13825: GlobalFramePoolLockExperiment ===
+// === Module 13843: GlobalFramePoolLockExperiment ===
 
-// Module 13825 (GlobalFramePoolLockExperiment)
+// Module 13843 (GlobalFramePoolLockExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import size from "module_2" /* 2 */;
 

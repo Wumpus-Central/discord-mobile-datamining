@@ -1,13 +1,13 @@
-// === Module 9317: VideoBackgroundUtils ===
+// === Module 8090: VideoBackgroundUtils ===
 
-// Module 9317 (VideoBackgroundUtils)
+// Module 8090 (VideoBackgroundUtils)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6484 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6491 */;
 import size from "module_2" /* 2 */;
 
 let hasOwnProperty;

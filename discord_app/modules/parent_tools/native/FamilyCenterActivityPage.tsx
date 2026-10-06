@@ -1,19 +1,19 @@
-// === Module 14680: FamilyCenterActivityPage ===
+// === Module 14696: FamilyCenterActivityPage ===
 
-// Module 14680 (FamilyCenterActivityPage)
+// Module 14696 (FamilyCenterActivityPage)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import useUserLinks from "useUserLinks" /* 8295 */;
-import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 11530 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14681 */;
-import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 14683 */;
-import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 14693 */;
-import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 14697 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import useUserLinks from "useUserLinks" /* 8328 */;
+import FamilyCenterDataConfirmationDefault from "FamilyCenterDataConfirmation" /* 11543 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14697 */;
+import FamilyCenterActivityBannerDefault from "FamilyCenterActivityBanner" /* 14699 */;
+import FamilyCenterFeatureRowDefault from "FamilyCenterFeatureRow" /* 14709 */;
+import FamilyCenterActivityCardDefault from "FamilyCenterActivityCard" /* 14713 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

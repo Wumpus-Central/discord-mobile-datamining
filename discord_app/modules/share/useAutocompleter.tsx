@@ -1,8 +1,8 @@
-// === Module 10722: useAutocompleter ===
+// === Module 10735: useAutocompleter ===
 
-// Module 10722 (useAutocompleter)
-import useInitialValueDefault from "useInitialValue" /* 5984 */;
-import _modDef9496 from "module_9496" /* 9496 */;
+// Module 10735 (useAutocompleter)
+import useInitialValueDefault from "useInitialValue" /* 5991 */;
+import _modDef9509 from "module_9509" /* 9509 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -33,7 +33,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchOptions) => {
   _slicedToArray(react.useState(first), 2);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o() {
-      let obj = new _modDef9496((results, query) => {
+      let obj = new _modDef9509((results, query) => {
         const obj = { results, query };
         closure_1_1(obj);
       });
@@ -144,7 +144,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((searchOptions) => {
   let tmp = _slicedToArray(react.useState({ results: [], query: "" }), 2);
   [tmp2, c1] = tmp;
   const tmp3 = useInitialValueDefault(() => {
-    let obj = new _modDef9496((results, query) => {
+    let obj = new _modDef9509((results, query) => {
       const obj = { results, query };
       closure_1_1(obj);
     });

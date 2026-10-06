@@ -1,6 +1,6 @@
-// === Module 4940: RTCRegionStore ===
+// === Module 4946: RTCRegionStore ===
 
-// Module 4940 (RTCRegionStore)
+// Module 4946 (RTCRegionStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

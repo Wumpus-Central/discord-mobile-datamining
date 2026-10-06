@@ -1,6 +1,6 @@
-// === Module 12329: ContactSyncUtils ===
+// === Module 12344: ContactSyncUtils ===
 
-// Module 12329 (ContactSyncUtils)
+// Module 12344 (ContactSyncUtils)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
@@ -10,14 +10,14 @@ import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import ContactSyncManager from "ContactSyncManager" /* 12330 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import ContactSyncManager from "ContactSyncManager" /* 12345 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
-import ContactSyncPersistedStore from "ContactSyncPersistedStore" /* 12328 */;
-import ContactSyncConstants from "ContactSyncConstants" /* 12327 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
+import ContactSyncPersistedStore from "ContactSyncPersistedStore" /* 12343 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 12342 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -78,7 +78,7 @@ let obj = function _uploadContacts() {
             body = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

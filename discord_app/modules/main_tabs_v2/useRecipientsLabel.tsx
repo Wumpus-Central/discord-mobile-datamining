@@ -1,6 +1,6 @@
-// === Module 10649: useRecipientsLabel ===
+// === Module 10662: useRecipientsLabel ===
 
-// Module 10649 (useRecipientsLabel)
+// Module 10662 (useRecipientsLabel)
 import intl5 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import react from "react" /* 19 */;

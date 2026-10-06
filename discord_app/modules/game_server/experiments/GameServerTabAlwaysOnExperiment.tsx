@@ -1,6 +1,6 @@
-// === Module 16194: GameServerTabAlwaysOnExperiment ===
+// === Module 16234: GameServerTabAlwaysOnExperiment ===
 
-// Module 16194 (GameServerTabAlwaysOnExperiment)
+// Module 16234 (GameServerTabAlwaysOnExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

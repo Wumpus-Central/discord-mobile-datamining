@@ -1,28 +1,28 @@
-// === Module 12355: NUFGuildTemplates ===
+// === Module 12370: NUFGuildTemplates ===
 
-// Module 12355 (NUFGuildTemplates)
+// Module 12370 (NUFGuildTemplates)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import router_utils from "router_utils" /* 1112 */;
 import intl2 from "intl" /* 1126 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import Navigator2 from "Navigator" /* 6496 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12332 */;
-import create_guild_CreateGuildConstants from "create_guild/CreateGuildConstants" /* 12356 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12357 */;
-import GuildTemplatesDefault from "GuildTemplates" /* 12359 */;
-import CreationIntentDefault from "CreationIntent" /* 12374 */;
-import components_JoinServerDefault from "components/JoinServer" /* 12381 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12382 */;
-import HubEmailConnectionModalDefault from "HubEmailConnectionModal" /* 12394 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import Navigator2 from "Navigator" /* 6503 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12347 */;
+import create_guild_CreateGuildConstants from "create_guild/CreateGuildConstants" /* 12371 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12372 */;
+import GuildTemplatesDefault from "GuildTemplates" /* 12374 */;
+import CreationIntentDefault from "CreationIntent" /* 12389 */;
+import components_JoinServerDefault from "components/JoinServer" /* 12396 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12397 */;
+import HubEmailConnectionModalDefault from "HubEmailConnectionModal" /* 12409 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4703 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4709 */;
 import Constants from "Constants" /* 1085 */;
-import CreateGuildConstants from "CreateGuildConstants" /* 6468 */;
+import CreateGuildConstants from "CreateGuildConstants" /* 6475 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

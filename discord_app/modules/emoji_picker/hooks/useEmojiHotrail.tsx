@@ -1,8 +1,8 @@
-// === Module 9875: useEmojiHotrail ===
+// === Module 9888: useEmojiHotrail ===
 
-// Module 9875 (useEmojiHotrail)
+// Module 9888 (useEmojiHotrail)
 import react2 from "react" /* 576 */;
-import EmojiPickerConstants from "EmojiPickerConstants" /* 5642 */;
+import EmojiPickerConstants from "EmojiPickerConstants" /* 5649 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

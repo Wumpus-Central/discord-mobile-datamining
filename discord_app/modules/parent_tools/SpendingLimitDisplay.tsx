@@ -1,16 +1,16 @@
-// === Module 14717: SpendingLimitDisplay ===
+// === Module 14733: SpendingLimitDisplay ===
 
-// Module 14717 (SpendingLimitDisplay)
+// Module 14733 (SpendingLimitDisplay)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import _modDef2493 from "module_2493" /* 2493 */;
-import PriceUtils from "PriceUtils" /* 6736 */;
-import utils_PriceUtils from "utils/PriceUtils" /* 6737 */;
-import SpendingLimitUtils from "SpendingLimitUtils" /* 14628 */;
+import _modDef2521 from "module_2521" /* 2521 */;
+import PriceUtils from "PriceUtils" /* 6750 */;
+import utils_PriceUtils from "utils/PriceUtils" /* 6751 */;
+import SpendingLimitUtils from "SpendingLimitUtils" /* 14644 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -43,7 +43,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
         const intl = intl2.intl;
         formatToPlainString = intl.formatToPlainString;
         obj4 = { amount: tmp6Result.formatPrice(diff, currency) };
-        prop = _modDef2493["+Q+bU1"];
+        prop = _modDef2521["+Q+bU1"];
         obj = obj3;
         tmp6Result = PriceUtils;
       } else {

@@ -1,17 +1,17 @@
-// === Module 11715: RecommendationsBannerCard ===
+// === Module 11729: RecommendationsBannerCard ===
 
-// Module 11715 (RecommendationsBannerCard)
+// Module 11729 (RecommendationsBannerCard)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11670 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11710 */;
-import RecommendationsBannerDefault from "RecommendationsBanner" /* 11716 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11684 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11724 */;
+import RecommendationsBannerDefault from "RecommendationsBanner" /* 11730 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -66,7 +66,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp6 = cResult[2];
     }
     if (cResult[3] !== application) {
-      const tmpResult = application(8794);
+      const tmpResult = application(8826);
       const shelfBadgeTypeIfActive = tmpResult.getShelfBadgeTypeIfActive(application);
       cResult[3] = application;
       cResult[4] = shelfBadgeTypeIfActive;
@@ -184,7 +184,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               return;
             }
           }
-          tmp23Result2 = closure_6(application(11694).BaseAppRow, obj2);
+          tmp23Result2 = closure_6(application(11708).BaseAppRow, obj2);
         } else {
           let tmp23Result;
           const items1 = [tmp5.container, , ];
@@ -204,7 +204,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           let num12 = 8;
-          const PressableOpacity = application(5909).PressableOpacity;
+          const PressableOpacity = application(5916).PressableOpacity;
           if (isFirst) {
             num12 = 0;
           }
@@ -216,7 +216,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           const obj8 = { applicationBot: application.bot, isActivity: tmpResult3.isActivityApp(application), applicationId: null, applicationIcon: icon, overrideImageUrl };
           const tmp27 = RecommendationsBannerDefault;
           ({ id: obj9.applicationId, icon } = application);
-          tmpResult3 = application(8794);
+          tmpResult3 = application(8826);
           items2 = [closure_6(tmp27, obj8), ];
           if (tmp6) {
             const obj10 = { style: tmp5.notifsContainer, children: items3 };
@@ -287,11 +287,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           items5 = [null != tmp19, , ];
           const obj16 = { style: tmp5.appDetails, children: items6 };
           const obj17 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name };
-          items6 = [closure_6(application(4886).Text, obj17), ];
+          items6 = [closure_6(application(4892).Text, obj17), ];
           const obj18 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: application.description };
-          items6[1] = closure_6(application(4886).Text, obj18);
+          items6[1] = closure_6(application(4892).Text, obj18);
           items5[1] = closure_7(View, obj16);
-          items5[2] = closure_6(application(6000).TableRowArrow, {});
+          items5[2] = closure_6(application(6007).TableRowArrow, {});
           items4[1] = closure_7(View, obj14);
           tmp23Result2 = closure_7(PressableOpacity, obj6);
         }
@@ -337,7 +337,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   let result = tmp4;
   if (!result) {
-    const tmpResult4 = application(8794);
+    const tmpResult4 = application(8826);
     result = tmpResult4.isPromotedApplication(application);
   }
   cResult[0] = application;
@@ -371,10 +371,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const overrideImageUrl = application.overrideImageUrl;
   let tmp = closure_8();
   if (!showsPromoted) {
-    const obj = application(8794);
+    const obj = application(8826);
     showsPromoted = obj.isPromotedApplication(application);
   }
-  const obj2 = application(8794);
+  const obj2 = application(8826);
   const shelfBadgeTypeIfActive = obj2.getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
@@ -400,13 +400,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const applicationIconSource = obj3.getApplicationIconSource(obj4);
   if (isLandscape) {
     const obj5 = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    tmp12Result2 = closure_6(tmp4(11694).BaseAppRow, obj5);
+    tmp12Result2 = closure_6(tmp4(11708).BaseAppRow, obj5);
   } else {
     let tmp12Result;
     const items1 = [tmp.container, , ];
     let num = 8;
     let num2 = 8;
-    const PressableOpacity = tmp4(5909).PressableOpacity;
+    const PressableOpacity = tmp4(5916).PressableOpacity;
     if (isFirst) {
       num2 = 0;
     }
@@ -421,7 +421,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj10 = { applicationBot: application.bot, isActivity: tmp4Result.isActivityApp(application), applicationId: null, applicationIcon: icon, overrideImageUrl };
     const tmp10Result = RecommendationsBannerDefault;
     ({ id: obj8.applicationId, icon } = application);
-    tmp4Result = application(8794);
+    tmp4Result = application(8826);
     items2 = [closure_6(tmp10Result, obj10), ];
     if (showsPromoted) {
       const obj11 = { style: tmp.notifsContainer, children: items3 };
@@ -430,7 +430,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (showsPromoted) {
         const obj13 = { style: tmp.promotedLabelWrapper, children: closure_6(Text, obj14) };
         obj14 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: intl.string(application(1126).t["/eVltv"]) };
-        Text = tmp4(4886).Text;
+        Text = tmp4(4892).Text;
         intl = tmp4(1126).intl;
         showsPromoted = closure_6(View, obj13);
       }
@@ -450,11 +450,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     items5 = [tmp14Result, , ];
     const obj17 = { style: tmp.appDetails, children: items6 };
     const obj18 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: application.name };
-    items6 = [closure_6(application(4886).Text, obj18), ];
+    items6 = [closure_6(application(4892).Text, obj18), ];
     const obj19 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: application.description };
-    items6[1] = closure_6(application(4886).Text, obj19);
+    items6[1] = closure_6(application(4892).Text, obj19);
     items5[1] = closure_7(View, obj17);
-    items5[2] = closure_6(application(6000).TableRowArrow, {});
+    items5[2] = closure_6(application(6007).TableRowArrow, {});
     items4[1] = closure_7(View, obj15);
     tmp12Result2 = closure_7(PressableOpacity, obj7);
   }

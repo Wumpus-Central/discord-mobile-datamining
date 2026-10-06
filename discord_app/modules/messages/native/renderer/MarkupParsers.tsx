@@ -1,15 +1,15 @@
-// === Module 7761: MarkupParsers ===
+// === Module 7772: MarkupParsers ===
 
-// Module 7761 (MarkupParsers)
+// Module 7772 (MarkupParsers)
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4877 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 7531 */;
-import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 7762 */;
-import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 7763 */;
-import trackMarkdownParse2 from "trackMarkdownParse" /* 7775 */;
-import parseNativeMarkupDefault from "parseNativeMarkup" /* 7777 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4883 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 7542 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 7773 */;
+import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 7774 */;
+import trackMarkdownParse2 from "trackMarkdownParse" /* 7786 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 7788 */;
 import LRUCache_mod from "LRUCache" /* 1444 */;
 import size from "module_2" /* 2 */;
 

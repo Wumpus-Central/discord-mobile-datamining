@@ -1,20 +1,20 @@
-// === Module 12181: GuildPowerupsCardFooter ===
+// === Module 12196: GuildPowerupsCardFooter ===
 
-// Module 12181 (GuildPowerupsCardFooter)
+// Module 12196 (GuildPowerupsCardFooter)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef2525 from "module_2525" /* 2525 */;
-import CircleCheckIcon2 from "CircleCheckIcon" /* 4792 */;
-import CircleErrorIcon2 from "CircleErrorIcon" /* 4800 */;
-import BoostGemIcon2 from "BoostGemIcon" /* 4826 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12157 */;
-import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12182 */;
+import _modDef2553 from "module_2553" /* 2553 */;
+import CircleCheckIcon2 from "CircleCheckIcon" /* 4798 */;
+import CircleErrorIcon2 from "CircleErrorIcon" /* 4806 */;
+import BoostGemIcon2 from "BoostGemIcon" /* 4832 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12172 */;
+import entitlementExpirationDateToStringDefault from "entitlementExpirationDateToString" /* 12197 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -100,7 +100,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((dateString) => {
     const intl = intl2.intl;
     const formatToMarkdownString = intl.formatToMarkdownString;
     const obj3 = { dateString: entitlementExpirationDateToStringDefault(dateString) };
-    const prop = _modDef2525["ol/ao/"];
+    const prop = _modDef2553["ol/ao/"];
     const result = formatToMarkdownString(prop, obj3);
     cResult[1] = dateString;
     cResult[2] = result;
@@ -146,7 +146,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((dateString) => {
   const intl = intl2.intl;
   formatToMarkdownString = intl.formatToMarkdownString;
   obj4 = { dateString: entitlementExpirationDateToStringDefault(dateString) };
-  prop = _modDef2525["ol/ao/"];
+  prop = _modDef2553["ol/ao/"];
   items[1] = React3(Text, obj3);
   return hasOwnProperty(View, obj);
 });
@@ -175,7 +175,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((removingAt) => {
     const intl = intl2.intl;
     const formatToPlainString = intl.formatToPlainString;
     const obj3 = { dateString: getGuildPowerupFormattedDateStringDefault(removingAt) };
-    const v6e2ry1 = _modDef2525["6e2ry1"];
+    const v6e2ry1 = _modDef2553["6e2ry1"];
     const formatToPlainStringResult = formatToPlainString(v6e2ry1, obj3);
     cResult[1] = removingAt;
     cResult[2] = formatToPlainStringResult;
@@ -221,7 +221,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((removingAt) => {
   const intl = intl2.intl;
   formatToPlainString = intl.formatToPlainString;
   obj4 = { dateString: getGuildPowerupFormattedDateStringDefault(removingAt) };
-  v6e2ry1 = _modDef2525["6e2ry1"];
+  v6e2ry1 = _modDef2553["6e2ry1"];
   items[1] = React3(Text, obj3);
   return hasOwnProperty(View, obj);
 });

@@ -1,18 +1,18 @@
-// === Module 16182: ChannelsEmpty ===
+// === Module 16222: ChannelsEmpty ===
 
-// Module 16182 (ChannelsEmpty)
+// Module 16222 (ChannelsEmpty)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9214 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import AssetRegistryDefault from "AssetRegistry" /* 16183 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 16184 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9249 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import AssetRegistryDefault from "AssetRegistry" /* 16223 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 16224 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -103,7 +103,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
       }
     }
   }
-  const tmpResult2 = guild(14901);
+  const tmpResult2 = guild(14917);
   const youBarTotalHeight = tmpResult2.useYouBarTotalHeight(16);
   if (cResult[8] !== youBarTotalHeight) {
     class S {
@@ -148,7 +148,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
       }
       const obj2 = { style: tmp4.personalizeButtonWrapper, children: closure_8(RowButton, obj3) };
       obj3 = { icon: closure_8(Icon, obj4), label: intl.string(guild(1126).t["Yhi9/N"]), onPress: tmp10 };
-      RowButton = tmp(8897).RowButton;
+      RowButton = tmp(8926).RowButton;
       obj4 = { source: AssetRegistryDefault, disableColor: true };
       Icon = tmp(1188).Icon;
       intl = tmp(1126).intl;
@@ -202,13 +202,13 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
   }, items3);
   const obj3 = { style: items4, children: items5 };
   items4 = [tmp.wrapper, ];
-  const obj2 = guild(14901);
+  const obj2 = guild(14917);
   items4[1] = { paddingBottom: obj2.useYouBarTotalHeight(16) };
   ({ paddingBottom: obj2.useYouBarTotalHeight(16) });
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: closure_8(RowButton, obj6) };
     obj6 = { icon: closure_8(Icon, obj7), label: intl.string(guild(1126).t["Yhi9/N"]), onPress: callback };
-    RowButton = tmp2(8897).RowButton;
+    RowButton = tmp2(8926).RowButton;
     obj7 = { source: AssetRegistryDefault, disableColor: true };
     Icon = tmp2(1188).Icon;
     intl = tmp2(1126).intl;
@@ -222,17 +222,17 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: items7, children: intl2.string(guild(1126).t.o4s29v) };
   items7 = [, ];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);
-  const Text = tmp2(4886).Text;
+  const Text = tmp2(4892).Text;
   intl2 = tmp2(1126).intl;
   items6[1] = closure_8(Text, obj10);
   const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: intl3.string(guild(1126).t.iypvFu) };
-  const Text2 = tmp2(4886).Text;
+  const Text2 = tmp2(4892).Text;
   intl3 = tmp2(1126).intl;
   items6[2] = closure_8(Text2, obj11);
   if (canCreateChannel) {
     const obj12 = { style: tmp.buttonWrapper, children: closure_8(BaseTextButton, obj13) };
     obj13 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: intl4.string(guild(1126).t["63PyJQ"]), onPress: callback1 };
-    BaseTextButton = tmp2(5595).BaseTextButton;
+    BaseTextButton = tmp2(5602).BaseTextButton;
     intl4 = tmp2(1126).intl;
     canCreateChannel = closure_8(closure_4, obj12);
   }

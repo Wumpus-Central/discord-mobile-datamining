@@ -1,20 +1,20 @@
-// === Module 17591: RedesignDiscoverabilityLanding ===
+// === Module 17637: RedesignDiscoverabilityLanding ===
 
-// Module 17591 (RedesignDiscoverabilityLanding)
+// Module 17637 (RedesignDiscoverabilityLanding)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12329 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12419 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12344 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12434 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

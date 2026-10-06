@@ -1,11 +1,11 @@
-// === Module 17734: GuildSettingsEmojiStore ===
+// === Module 17780: GuildSettingsEmojiStore ===
 
-// Module 17734 (GuildSettingsEmojiStore)
+// Module 17780 (GuildSettingsEmojiStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import EmojiRecord from "EmojiRecord" /* 17735 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import EmojiRecord from "EmojiRecord" /* 17781 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import LRUCache from "LRUCache" /* 1444 */;
 import size from "module_2" /* 2 */;
 

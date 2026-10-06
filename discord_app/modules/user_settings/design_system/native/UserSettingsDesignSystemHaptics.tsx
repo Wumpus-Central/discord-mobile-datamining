@@ -1,17 +1,17 @@
-// === Module 15690: UserSettingsDesignSystemHaptics ===
+// === Module 15704: UserSettingsDesignSystemHaptics ===
 
-// Module 15690 (UserSettingsDesignSystemHaptics)
+// Module 15704 (UserSettingsDesignSystemHaptics)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import Patterns from "Patterns" /* 4857 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import Card_Card from "Card/Card" /* 5995 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import Patterns from "Patterns" /* 4863 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import Card_Card from "Card/Card" /* 6002 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -48,7 +48,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
     }
     return tmp5;
   }
-  const tmp6 = closure_3(tmp(5594).Button, { variant: "secondary", onPress: tmp4, text: label });
+  const tmp6 = closure_3(tmp(5601).Button, { variant: "secondary", onPress: tmp4, text: label });
   cResult[2] = label;
   cResult[3] = tmp4;
   cResult[4] = tmp6;
@@ -63,7 +63,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
     },
     text: text.label
   };
-  return closure_3(type(5594).Button, obj);
+  return closure_3(type(5601).Button, obj);
 });
 let obj = { type: haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT, label: "IMPACT_LIGHT" };
 let items = [obj, , , , , , , , ];

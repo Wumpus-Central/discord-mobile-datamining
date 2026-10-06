@@ -1,10 +1,10 @@
-// === Module 12217: useGetExpiringGuildPowerups ===
+// === Module 12232: useGetExpiringGuildPowerups ===
 
-// Module 12217 (useGetExpiringGuildPowerups)
+// Module 12232 (useGetExpiringGuildPowerups)
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12152 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12167 */;
 import react from "react" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

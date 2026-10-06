@@ -1,8 +1,8 @@
-// === Module 9729: StageChannelListStore ===
+// === Module 9742: StageChannelListStore ===
 
-// Module 9729 (StageChannelListStore)
+// Module 9742 (StageChannelListStore)
 import react2 from "react" /* 576 */;
-import _slicedToArray2 from "_slicedToArray" /* 4492 */;
+import _slicedToArray2 from "_slicedToArray" /* 4498 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import module_1254 from "module_1254" /* 1254 */;

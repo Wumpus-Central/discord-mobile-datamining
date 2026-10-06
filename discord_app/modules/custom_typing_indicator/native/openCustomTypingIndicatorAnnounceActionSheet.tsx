@@ -1,8 +1,8 @@
-// === Module 11582: openCustomTypingIndicatorAnnounceActionSheet ===
+// === Module 11595: openCustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 11582 (openCustomTypingIndicatorAnnounceActionSheet)
+// Module 11595 (openCustomTypingIndicatorAnnounceActionSheet)
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import size from "module_2" /* 2 */;
 
 const CustomTypingIndicatorAnnounceActionSheet = "CustomTypingIndicatorAnnounceActionSheet";
@@ -16,5 +16,5 @@ export const openCustomTypingIndicatorAnnounceActionSheet = function openCustomT
       return obj.hideActionSheet(CustomTypingIndicatorAnnounceActionSheet);
     }
   };
-  obj.openLazy(asyncRequire(11583, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, obj2);
+  obj.openLazy(asyncRequire(11596, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, obj2);
 };

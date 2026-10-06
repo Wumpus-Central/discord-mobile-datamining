@@ -1,6 +1,6 @@
-// === Module 4916: discord_common/DiscordNative ===
+// === Module 4922: discord_common/DiscordNative ===
 
-// Module 4916 (discord_common/DiscordNative)
+// Module 4922 (discord_common/DiscordNative)
 import size from "module_2" /* 2 */;
 
 class SystemServiceNotAvailableError extends Error {

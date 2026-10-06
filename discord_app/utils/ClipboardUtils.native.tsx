@@ -1,7 +1,7 @@
-// === Module 6688: ClipboardUtils ===
+// === Module 6695: ClipboardUtils ===
 
-// Module 6688 (ClipboardUtils)
-import _modDef6689 from "module_6689" /* 6689 */;
+// Module 6695 (ClipboardUtils)
+import _modDef6696 from "module_6696" /* 6696 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
@@ -35,7 +35,7 @@ let obj = function _copy() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj2 = _modDef6689;
+            const obj2 = _modDef6696;
             obj2.setString(closure_0);
             if (closure_1 != null) {
               closure_1();
@@ -71,6 +71,6 @@ export const copy = function copy() {
   return obj(...arguments);
 };
 export const getString = function getString() {
-  obj = _modDef6689;
+  obj = _modDef6696;
   return obj.getString();
 };

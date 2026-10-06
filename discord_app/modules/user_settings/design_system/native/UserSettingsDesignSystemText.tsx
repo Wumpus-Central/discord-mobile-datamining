@@ -1,15 +1,15 @@
-// === Module 15636: UserSettingsDesignSystemText ===
+// === Module 15650: UserSettingsDesignSystemText ===
 
-// Module 15636 (UserSettingsDesignSystemText)
+// Module 15650 (UserSettingsDesignSystemText)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import TextVariants from "TextVariants" /* 4887 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
+import useToken from "useToken" /* 4586 */;
+import TextVariants from "TextVariants" /* 4893 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

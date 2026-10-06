@@ -1,13 +1,13 @@
-// === Module 7467: CloudUploader ===
+// === Module 7478: CloudUploader ===
 
-// Module 7467 (CloudUploader)
+// Module 7478 (CloudUploader)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import UploadPlatform from "UploadPlatform" /* 7247 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import UploadPlatform from "UploadPlatform" /* 7260 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import Constants from "Constants" /* 1085 */;
-import UploaderBase from "UploaderBase" /* 7468 */;
+import UploaderBase from "UploaderBase" /* 7479 */;
 import size from "module_2" /* 2 */;
 
 let _self, c2, c4, closure_0, constants, set, uri;

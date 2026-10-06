@@ -1,6 +1,6 @@
-// === Module 4874: RegexUtils ===
+// === Module 4880: RegexUtils ===
 
-// Module 4874 (RegexUtils)
+// Module 4880 (RegexUtils)
 import size from "module_2" /* 2 */;
 
 const obj = {

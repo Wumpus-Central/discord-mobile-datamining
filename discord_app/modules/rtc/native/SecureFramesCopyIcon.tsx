@@ -1,9 +1,9 @@
-// === Module 9382: SecureFramesCopyIcon ===
+// === Module 9396: SecureFramesCopyIcon ===
 
-// Module 9382 (SecureFramesCopyIcon)
+// Module 9396 (SecureFramesCopyIcon)
 import Fragment from "Fragment" /* 21 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

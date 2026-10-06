@@ -1,9 +1,9 @@
-// === Module 14155: installSystrace ===
+// === Module 14173: installSystrace ===
 
-// Module 14155 (installSystrace)
+// Module 14173 (installSystrace)
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_native2 from "react-native" /* 14156 */;
+import react_native2 from "react-native" /* 14174 */;
 import size from "module_2" /* 2 */;
 
 const Systrace = react_native.Systrace;

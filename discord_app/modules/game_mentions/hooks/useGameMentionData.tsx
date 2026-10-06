@@ -1,10 +1,10 @@
-// === Module 5891: useGameMentionData ===
+// === Module 5898: useGameMentionData ===
 
-// Module 5891 (useGameMentionData)
+// Module 5898 (useGameMentionData)
 import shallowEqualDefault from "shallowEqual" /* 568 */;
-import useGameProfileObscured from "useGameProfileObscured" /* 5896 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 5903 */;
 import GameStore from "GameStore" /* 2007 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5892 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5899 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

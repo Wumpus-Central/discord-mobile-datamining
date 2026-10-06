@@ -1,20 +1,20 @@
-// === Module 10668: GroupDMInviteManagementScreen ===
+// === Module 10681: GroupDMInviteManagementScreen ===
 
-// Module 10668 (GroupDMInviteManagementScreen)
+// Module 10681 (GroupDMInviteManagementScreen)
 import _modDef12 from "module_12" /* 12 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import InviteRecord from "InviteRecord" /* 8056 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 10063 */;
+import InviteRecord from "InviteRecord" /* 8066 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 10076 */;
 import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -58,9 +58,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   if (cResult[1] !== channelId) {
     class T {
       constructor() {
-        closure_0 = closure_3(function() { /* body not rendered: F152268 */ });
-        promise = (function fetchInvites() { /* body not rendered: F152269 */ })();
-        catchPromise = promise.catch(() => { /* body not rendered: F140619 */ });
+        closure_0 = closure_3(function() { /* body not rendered: F152500 */ });
+        promise = (function fetchInvites() { /* body not rendered: F152501 */ })();
+        catchPromise = promise.catch(() => { /* body not rendered: F140825 */ });
         return;
       }
     }
@@ -69,31 +69,31 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   } else {
     class T {
       constructor() {
-        closure_0 = closure_3(function() { /* body not rendered: F152268 */ });
-        promise = (function fetchInvites() { /* body not rendered: F152269 */ })();
-        catchPromise = promise.catch(() => { /* body not rendered: F140619 */ });
+        closure_0 = closure_3(function() { /* body not rendered: F152500 */ });
+        promise = (function fetchInvites() { /* body not rendered: F152501 */ })();
+        catchPromise = promise.catch(() => { /* body not rendered: F140825 */ });
         return;
       }
     }
   }
-  const tmp12 = first1(5590)(T);
+  const tmp12 = first1(5597)(T);
   const tmp6Result = _slicedToArray(react.useState(21), 2);
   [tmp14, _slicedToArray] = tmp6Result;
   if (cResult[3] !== first1) {
     class T {
       constructor() {
-        closure_0 = closure_3(function() { /* body not rendered: F152268 */ });
-        promise = (function fetchInvites() { /* body not rendered: F152269 */ })();
-        catchPromise = promise.catch(() => { /* body not rendered: F140619 */ });
+        closure_0 = closure_3(function() { /* body not rendered: F152500 */ });
+        promise = (function fetchInvites() { /* body not rendered: F152501 */ })();
+        catchPromise = promise.catch(() => { /* body not rendered: F140825 */ });
         return;
       }
     }
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       class T {
         constructor() {
-          closure_0 = closure_3(function() { /* body not rendered: F152268 */ });
-          promise = (function fetchInvites() { /* body not rendered: F152269 */ })();
-          catchPromise = promise.catch(() => { /* body not rendered: F140619 */ });
+          closure_0 = closure_3(function() { /* body not rendered: F152500 */ });
+          promise = (function fetchInvites() { /* body not rendered: F152501 */ })();
+          catchPromise = promise.catch(() => { /* body not rendered: F140825 */ });
           return;
         }
       }
@@ -101,9 +101,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
     } else {
       class T {
         constructor() {
-          closure_0 = closure_3(function() { /* body not rendered: F152268 */ });
-          promise = (function fetchInvites() { /* body not rendered: F152269 */ })();
-          catchPromise = promise.catch(() => { /* body not rendered: F140619 */ });
+          closure_0 = closure_3(function() { /* body not rendered: F152500 */ });
+          promise = (function fetchInvites() { /* body not rendered: F152501 */ })();
+          catchPromise = promise.catch(() => { /* body not rendered: F140825 */ });
           return;
         }
       }
@@ -115,9 +115,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   } else {
     class T {
       constructor() {
-        closure_0 = closure_3(function() { /* body not rendered: F152268 */ });
-        promise = (function fetchInvites() { /* body not rendered: F152269 */ })();
-        catchPromise = promise.catch(() => { /* body not rendered: F140619 */ });
+        closure_0 = closure_3(function() { /* body not rendered: F152500 */ });
+        promise = (function fetchInvites() { /* body not rendered: F152501 */ })();
+        catchPromise = promise.catch(() => { /* body not rendered: F140825 */ });
         return;
       }
     }
@@ -185,7 +185,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
         return channelId.code;
       }
     }
-    tmp26 = jsx(tmp(6535).SceneLoadingIndicator, {});
+    tmp26 = jsx(tmp(6542).SceneLoadingIndicator, {});
   } else {
     class H {
       constructor(arg0) {
@@ -201,7 +201,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
       const EmptyState = tmp(1188).EmptyState;
       const intl = tmp(1126).intl;
       const intl2 = tmp(1126).intl;
-      tmp26 = <EmptyState lightSource={tmp11(10687)} darkSource={tmp11(10688)} title={intl.string(tmp(1126).t["+nLJkZ"])} body={intl2.string(tmp(1126).t.F53CAc)} />;
+      tmp26 = <EmptyState lightSource={tmp11(10700)} darkSource={tmp11(10701)} title={intl.string(tmp(1126).t["+nLJkZ"])} body={intl2.string(tmp(1126).t.F53CAc)} />;
     } else {
       class H {
         constructor(arg0) {
@@ -234,7 +234,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   const tmp = closure_12();
   [first, dependencyMap] = react.useState([]);
   [first1, closure_3] = react.useState(true);
-  first(5590)(() => {
+  first(5597)(() => {
     function fetchInvites() {
       return obj(...arguments);
     }
@@ -335,12 +335,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   [][0] = first;
   const callback = react.useCallback((code) => code.code, []);
   if (first1) {
-    tmp16 = jsx(channelId(6535).SceneLoadingIndicator, {});
+    tmp16 = jsx(channelId(6542).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
     const EmptyState = channelId(1188).EmptyState;
     const intl = channelId(1126).intl;
     const intl2 = channelId(1126).intl;
-    tmp16 = <EmptyState lightSource={tmp5(10687)} darkSource={tmp5(10688)} title={intl.string(channelId(1126).t["+nLJkZ"])} body={intl2.string(channelId(1126).t.F53CAc)} />;
+    tmp16 = <EmptyState lightSource={tmp5(10700)} darkSource={tmp5(10701)} title={intl.string(channelId(1126).t["+nLJkZ"])} body={intl2.string(channelId(1126).t.F53CAc)} />;
   } else {
     tmp16 = <closure_7 style={tmp.list} data={memo} keyExtractor={callback} renderItem={tmp13} initialNumToRender={10} windowSize={first2} />;
   }
@@ -363,7 +363,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (function
       tmp4 = cResult[2];
     }
     if (cResult[3] !== tmp4) {
-      const tmp8 = jsx(channelId(6496).Navigator, { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+      const tmp8 = jsx(channelId(6503).Navigator, { screens: tmp4, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
       cResult[3] = tmp4;
       cResult[4] = tmp8;
       tmp5 = tmp8;
@@ -389,7 +389,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (function
   cResult[1] = onClose;
   cResult[2] = obj3;
   tmp4 = obj3;
-  tmpResult = channelId(6010);
+  tmpResult = channelId(6017);
 }) : (function GroupDMInviteManagementScreen(channelId) {
   channelId = channelId.channelId;
   const onClose = channelId.onClose;
@@ -414,7 +414,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? (function
     obj3 = NavigatorHeader;
     return obj;
   }, items);
-  return jsx(channelId(6496).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(6503).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 }));
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx");
 

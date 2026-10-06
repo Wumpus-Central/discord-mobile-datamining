@@ -1,12 +1,12 @@
-// === Module 17510: HolidayEventsConfig ===
+// === Module 17555: HolidayEventsConfig ===
 
-// Module 17510 (HolidayEventsConfig)
+// Module 17555 (HolidayEventsConfig)
 import intl14 from "intl" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import Constants from "Constants" /* 9564 */;
-import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17511 */;
-import AssetRegistryDefault from "AssetRegistry" /* 17512 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 17513 */;
+import Constants from "Constants" /* 9577 */;
+import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment" /* 17556 */;
+import AssetRegistryDefault from "AssetRegistry" /* 17557 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 17558 */;
 import size from "module_2" /* 2 */;
 
 let Soundpacks;

@@ -1,10 +1,10 @@
-// === Module 7914: useBadges ===
+// === Module 7925: useBadges ===
 
-// Module 7914 (useBadges)
+// Module 7925 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react from "react" /* 576 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import StreamerModeStore from "StreamerModeStore" /* 4723 */;
+import StreamerModeStore from "StreamerModeStore" /* 4729 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

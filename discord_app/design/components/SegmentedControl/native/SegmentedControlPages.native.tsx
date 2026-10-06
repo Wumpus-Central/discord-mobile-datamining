@@ -1,13 +1,13 @@
-// === Module 10974: SegmentedControlPages ===
+// === Module 10987: SegmentedControlPages ===
 
-// Module 10974 (SegmentedControlPages)
+// Module 10987 (SegmentedControlPages)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;
-import react_native2 from "react-native" /* 5779 */;
-import MathUtils from "MathUtils" /* 10975 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
+import react_native2 from "react-native" /* 5786 */;
+import MathUtils from "MathUtils" /* 10988 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -928,7 +928,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
     reportedPageIndex = tmp9;
     closure_5 = cResult[7];
   }
-  const tmpResult = tmp(4612);
+  const tmpResult = tmp(4618);
   class P {
     constructor() {
       let tmp2 = Math.floor(closure_3.get()) === closure_2;
@@ -946,7 +946,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
   P.__workletHash = 2724531395868;
   P.__initData = __initData13;
   const derivedValue = tmpResult.useDerivedValue(P);
-  const tmpResult3 = tmp(4612);
+  const tmpResult3 = tmp(4618);
   class O {
     constructor() {
       let pointerEvents = "box-none";
@@ -1087,7 +1087,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled() ? ((reportedPageIn
     fn.__closure = obj5;
     fn.__workletHash = 6740536171688;
     fn.__initData = __initData17;
-    const tmpResult4 = tmp(4612);
+    const tmpResult4 = tmp(4618);
     const animatedStyle = tmpResult4.useAnimatedStyle(fn);
     if (cResult[15] === tmp4) {
       class H {

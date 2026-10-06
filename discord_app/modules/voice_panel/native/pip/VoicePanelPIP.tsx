@@ -1,35 +1,35 @@
-// === Module 17306: VoicePanelPIP ===
+// === Module 17334: VoicePanelPIP ===
 
-// Module 17306 (VoicePanelPIP)
+// Module 17334 (VoicePanelPIP)
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
-import native from "native" /* 4589 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import spring from "spring" /* 5597 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8986 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 8993 */;
-import ExternalPipDefault from "ExternalPip" /* 9110 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11908 */;
-import triggerIOSHapticDefault from "triggerIOSHaptic" /* 17204 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17205 */;
-import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17206 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17207 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17307 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
+import native from "native" /* 4595 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import spring from "spring" /* 5604 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 9026 */;
+import ExternalPipDefault from "ExternalPip" /* 9145 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 11922 */;
+import triggerIOSHapticDefault from "triggerIOSHaptic" /* 17233 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17234 */;
+import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17235 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17236 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 17335 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import FramesStore from "FramesStore" /* 8703 */;
-import VoicePanelStore from "VoicePanelStore" /* 5098 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
+import FramesStore from "FramesStore" /* 9000 */;
+import VoicePanelStore from "VoicePanelStore" /* 5104 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

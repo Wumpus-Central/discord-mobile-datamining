@@ -1,8 +1,8 @@
-// === Module 7073: StorefrontProductRecord ===
+// === Module 7086: StorefrontProductRecord ===
 
-// Module 7073 (StorefrontProductRecord)
-import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7072 */;
-import SKURecord from "SKURecord" /* 5696 */;
+// Module 7086 (StorefrontProductRecord)
+import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7085 */;
+import SKURecord from "SKURecord" /* 5703 */;
 import size from "module_2" /* 2 */;
 
 let sku_ids;

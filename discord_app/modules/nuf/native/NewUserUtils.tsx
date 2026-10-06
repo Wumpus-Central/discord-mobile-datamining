@@ -1,21 +1,21 @@
-// === Module 17586: NewUserUtils ===
+// === Module 17632: NewUserUtils ===
 
-// Module 17586 (NewUserUtils)
+// Module 17632 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import Link from "Link" /* 1491 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 5099 */;
-import react_nativeDefault from "react-native" /* 7282 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9481 */;
-import ContactSyncConstants from "ContactSyncConstants" /* 12327 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12332 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12415 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 17585 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 5105 */;
+import react_nativeDefault from "react-native" /* 7295 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 12342 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 12347 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 12430 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 17631 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 15879 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 15918 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -155,7 +155,7 @@ obj = function _getNextOnboardingStep() {
             transitionStep = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (arg0 === 1) {

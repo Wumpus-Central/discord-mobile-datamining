@@ -1,6 +1,6 @@
-// === Module 7065: CollectiblesUtils ===
+// === Module 7078: CollectiblesUtils ===
 
-// Module 7065 (CollectiblesUtils)
+// Module 7078 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1096 */;
 import intl5 from "intl" /* 1126 */;
@@ -9,13 +9,13 @@ import PerksStateUtils from "PerksStateUtils" /* 1383 */;
 import user from "user" /* 1385 */;
 import NameplateRecord from "NameplateRecord" /* 1978 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import PriceUtils from "PriceUtils" /* 6736 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7058 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7059 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7060 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7066 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import PriceUtils from "PriceUtils" /* 6750 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7071 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7072 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7073 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7079 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -29,7 +29,7 @@ let closure_12;
 let map1;
 let metroImportAll;
 let unpackModuleId;
-const f94171 = (arr, type) => {
+const f94311 = (arr, type) => {
   let closure_0 = type;
   if (null != type) {
     if (type.type === require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP) {
@@ -96,7 +96,7 @@ function getItemRecordsFromCategories(arr, PROFILE_EFFECT) {
   items = [...arr.values()];
   const flatMapResult = obj.flatMap(items, "products");
   obj2 = _mod12;
-  const uniqByResult = obj2.uniqBy(flatMapResult.reduce(f94171, []), "storeListingId");
+  const uniqByResult = obj2.uniqBy(flatMapResult.reduce(f94311, []), "storeListingId");
   if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     let tmpResult = _mod12;
     const flatMapResult1 = tmpResult.flatMap(uniqByResult, "items");
@@ -541,7 +541,7 @@ export const isFreeCollectiblesProduct = function isFreeCollectiblesProduct(prod
   return 0 === amount;
 };
 export const extendVariantsProducts = function extendVariantsProducts(items) {
-  return items.reduce(f94171, []);
+  return items.reduce(f94311, []);
 };
 export const getProductsFromCategories = function getProductsFromCategories(arr, arg1) {
   items = [...arr.values()];
@@ -551,7 +551,7 @@ export const getProductsFromCategories = function getProductsFromCategories(arr,
   const uniqBy = _mod12.uniqBy;
   _mod12;
   if (arg1) {
-    reduced = flatMapResult.reduce(f94171, []);
+    reduced = flatMapResult.reduce(f94311, []);
   }
   return uniqBy(reduced, "storeListingId");
 };

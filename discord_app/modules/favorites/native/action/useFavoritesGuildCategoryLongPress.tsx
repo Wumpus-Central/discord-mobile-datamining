@@ -1,10 +1,10 @@
-// === Module 16034: useFavoritesGuildCategoryLongPress ===
+// === Module 16073: useFavoritesGuildCategoryLongPress ===
 
-// Module 16034 (useFavoritesGuildCategoryLongPress)
+// Module 16073 (useFavoritesGuildCategoryLongPress)
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import openFavoritesGuildCategoryActionSheetDefault from "openFavoritesGuildCategoryActionSheet" /* 16035 */;
+import openFavoritesGuildCategoryActionSheetDefault from "openFavoritesGuildCategoryActionSheet" /* 16074 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 16188: react ===
+// === Module 16228: react ===
 
-// Module 16188 (react)
+// Module 16228 (react)
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

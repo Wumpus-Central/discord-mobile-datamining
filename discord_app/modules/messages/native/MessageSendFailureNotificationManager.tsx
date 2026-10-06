@@ -1,17 +1,17 @@
-// === Module 18011: MessageSendFailureNotificationManager ===
+// === Module 18056: MessageSendFailureNotificationManager ===
 
-// Module 18011 (MessageSendFailureNotificationManager)
+// Module 18056 (MessageSendFailureNotificationManager)
 import intl3 from "intl" /* 1126 */;
-import Constants2 from "Constants" /* 8707 */;
-import PushNotificationDefault from "PushNotification" /* 8966 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 12477 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12479 */;
+import Constants2 from "Constants" /* 8739 */;
+import PushNotificationDefault from "PushNotification" /* 8995 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 12492 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 12494 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
 import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let metroImportAll;

@@ -1,11 +1,11 @@
-// === Module 9392: usePlayingGameActivities ===
+// === Module 9406: usePlayingGameActivities ===
 
-// Module 9392 (usePlayingGameActivities)
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9393 */;
+// Module 9406 (usePlayingGameActivities)
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9407 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

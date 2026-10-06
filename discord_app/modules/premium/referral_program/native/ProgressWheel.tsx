@@ -1,18 +1,18 @@
-// === Module 13256: ProgressWheel ===
+// === Module 13275: ProgressWheel ===
 
-// Module 13256 (ProgressWheel)
+// Module 13275 (ProgressWheel)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13242 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13257 */;
-import _modDef13258 from "module_13258" /* 13258 */;
+import useToken from "useToken" /* 4586 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13261 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13276 */;
+import _modDef13277 from "module_13277" /* 13277 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -69,7 +69,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           tmp23 = cResult[10];
         }
         if (altImage == null) {
-          altImage = _modDef13258;
+          altImage = _modDef13277;
         }
         if (cResult[11] !== altImage) {
           const obj5 = { uri: altImage };
@@ -165,7 +165,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   items[1] = hasOwnProperty(tmp4Result3, size);
   const tmp4Result4 = FastImageDefault;
   if (altImage == null) {
-    altImage = _modDef13258;
+    altImage = _modDef13277;
   }
   const obj6 = { source: { uri: altImage }, style: tmp.progressCircleImage };
   items[2] = React3(tmp4Result4, obj6);

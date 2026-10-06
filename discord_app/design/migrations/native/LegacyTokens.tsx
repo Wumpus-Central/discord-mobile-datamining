@@ -1,11 +1,11 @@
-// === Module 5620: LegacyTokens ===
+// === Module 5627: LegacyTokens ===
 
-// Module 5620 (LegacyTokens)
+// Module 5627 (LegacyTokens)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import shared from "shared" /* 4729 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import shared from "shared" /* 4735 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let theme;

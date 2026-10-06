@@ -1,6 +1,6 @@
-// === Module 16980: UserProfileYourFriendsCard ===
+// === Module 17006: UserProfileYourFriendsCard ===
 
-// Module 16980 (UserProfileYourFriendsCard)
+// Module 17006 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
@@ -9,10 +9,10 @@ import native from "native" /* 1188 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

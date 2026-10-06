@@ -1,9 +1,9 @@
-// === Module 4953: Camera ===
+// === Module 4959: Camera ===
 
-// Module 4953 (Camera)
+// Module 4959 (Camera)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import VideoDefault from "Video" /* 4949 */;
+import VideoDefault from "Video" /* 4955 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

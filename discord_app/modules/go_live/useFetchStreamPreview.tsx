@@ -1,12 +1,12 @@
-// === Module 9746: useFetchStreamPreview ===
+// === Module 9759: useFetchStreamPreview ===
 
-// Module 9746 (useFetchStreamPreview)
+// Module 9759 (useFetchStreamPreview)
 import Constants from "Constants" /* 1096 */;
-import StreamActionCreators from "StreamActionCreators" /* 5032 */;
+import StreamActionCreators from "StreamActionCreators" /* 5038 */;
 import react_mod from "react" /* 19 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 5034 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 5040 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -202,7 +202,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
     }
     return obj5;
   }
-  obj5 = { previewUrl: "Set", isLoading: true };
+  obj5 = { previewUrl: "Reflect", isLoading: true };
 });
 const result = size.fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
 

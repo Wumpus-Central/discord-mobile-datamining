@@ -1,6 +1,6 @@
-// === Module 12494: InAppNotificationContext ===
+// === Module 12509: InAppNotificationContext ===
 
-// Module 12494 (InAppNotificationContext)
+// Module 12509 (InAppNotificationContext)
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

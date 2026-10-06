@@ -1,6 +1,6 @@
-// === Module 11581: CustomTypingIndicatorExperiment ===
+// === Module 11594: CustomTypingIndicatorExperiment ===
 
-// Module 11581 (CustomTypingIndicatorExperiment)
+// Module 11594 (CustomTypingIndicatorExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

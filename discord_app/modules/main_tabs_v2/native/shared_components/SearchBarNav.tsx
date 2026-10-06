@@ -1,20 +1,20 @@
-// === Module 6879: SearchBarNav ===
+// === Module 6889: SearchBarNav ===
 
-// Module 6879 (SearchBarNav)
+// Module 6889 (SearchBarNav)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6014 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import SearchField2 from "SearchField" /* 6547 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6021 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import SearchField2 from "SearchField" /* 6554 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

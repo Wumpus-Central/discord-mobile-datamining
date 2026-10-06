@@ -1,12 +1,12 @@
-// === Module 16207: OneColumnGuildUpsellList ===
+// === Module 16247: OneColumnGuildUpsellList ===
 
-// Module 16207 (OneColumnGuildUpsellList)
+// Module 16247 (OneColumnGuildUpsellList)
 import Fragment from "Fragment" /* 21 */;
-import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16208 */;
+import GameCommunityMultiGuildUpsellCardDefault from "GameCommunityMultiGuildUpsellCard" /* 16248 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15450 */;
-import createStyles from "createStyles" /* 4890 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15466 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

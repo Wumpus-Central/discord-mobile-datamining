@@ -1,6 +1,6 @@
-// === Module 8537: StorefrontCollectionStore ===
+// === Module 8570: StorefrontCollectionStore ===
 
-// Module 8537 (StorefrontCollectionStore)
+// Module 8570 (StorefrontCollectionStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
@@ -355,10 +355,10 @@ let obj = {
     closure_4[requestKey] = { state: "loading", collectionIds };
   },
   STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS: function handleCollectionsAfterFetchSuccess(collections) {
-    const f97560 = (id) => id.id;
+    const f97741 = (id) => id.id;
     collections = collections.collections;
-    closure_4[collections.requestKey] = { state: "success", collectionIds: collections.map(f97560), fetchedAt: Date.now() };
-    ({ state: "success", collectionIds: collections.map(f97560), fetchedAt: Date.now() });
+    closure_4[collections.requestKey] = { state: "success", collectionIds: collections.map(f97741), fetchedAt: Date.now() };
+    ({ state: "success", collectionIds: collections.map(f97741), fetchedAt: Date.now() });
     const item = collections.forEach((id) => {
       closure_1_5[id.id] = id;
     });

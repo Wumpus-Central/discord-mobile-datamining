@@ -1,15 +1,15 @@
-// === Module 17031: IntegrationsSettingsEditLinkedLobby ===
+// === Module 17057: IntegrationsSettingsEditLinkedLobby ===
 
-// Module 17031 (IntegrationsSettingsEditLinkedLobby)
+// Module 17057 (IntegrationsSettingsEditLinkedLobby)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

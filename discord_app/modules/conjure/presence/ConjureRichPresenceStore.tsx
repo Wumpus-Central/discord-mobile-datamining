@@ -1,15 +1,15 @@
-// === Module 11118: ConjureRichPresenceStore ===
+// === Module 11131: ConjureRichPresenceStore ===
 
-// Module 11118 (ConjureRichPresenceStore)
+// Module 11131 (ConjureRichPresenceStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10621 */;
-import IdleStore from "IdleStore" /* 5567 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10634 */;
+import IdleStore from "IdleStore" /* 5574 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import size from "module_2" /* 2 */;
 
 let _null, c10, c12, c9;
@@ -19,7 +19,7 @@ function updateActivity(withGracePeriod) {
   let obj3;
   let timeout;
   let timeout2;
-  const f106495 = () => {
+  const f106647 = () => {
     let found;
     let timeout = null;
     if (null != _null) {
@@ -37,7 +37,7 @@ function updateActivity(withGracePeriod) {
         timeout = null;
       }
       const _setTimeout = setTimeout;
-      timeout = setTimeout(f106495, closure_1_8);
+      timeout = setTimeout(f106647, closure_1_8);
       conjureRichPresenceStore.emitChange();
     }
   };
@@ -167,7 +167,7 @@ function updateActivity(withGracePeriod) {
           timeout2 = null;
         }
         let _setTimeout = setTimeout;
-        timeout2 = setTimeout(f106495, c8);
+        timeout2 = setTimeout(f106647, c8);
         flag = true;
       }
     }

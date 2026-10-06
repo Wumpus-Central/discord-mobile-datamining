@@ -1,10 +1,10 @@
-// === Module 17102: VADPermission ===
+// === Module 17128: VADPermission ===
 
-// Module 17102 (VADPermission)
+// Module 17128 (VADPermission)
 import Fragment from "Fragment" /* 21 */;
 import intl3 from "intl" /* 1126 */;
-import AlertDefault from "Alert" /* 5783 */;
-import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 17099 */;
+import AlertDefault from "Alert" /* 5790 */;
+import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 17125 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

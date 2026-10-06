@@ -1,17 +1,17 @@
-// === Module 8951: BotPermissions ===
+// === Module 8980: BotPermissions ===
 
-// Module 8951 (BotPermissions)
+// Module 8980 (BotPermissions)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import XSmallIcon from "XSmallIcon" /* 6017 */;
-import permissions from "permissions" /* 8730 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import XSmallIcon from "XSmallIcon" /* 6024 */;
+import permissions from "permissions" /* 8762 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

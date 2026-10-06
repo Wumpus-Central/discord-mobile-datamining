@@ -1,6 +1,6 @@
-// === Module 4904: ChangelogStore ===
+// === Module 4910: ChangelogStore ===
 
-// Module 4904 (ChangelogStore)
+// Module 4910 (ChangelogStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

@@ -1,14 +1,14 @@
-// === Module 5971: GuildIcon ===
+// === Module 5978: GuildIcon ===
 
-// Module 5971 (GuildIcon)
+// Module 5978 (GuildIcon)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import ExpressionSourceRecord from "ExpressionSourceRecord" /* 5972 */;
+import ExpressionSourceRecord from "ExpressionSourceRecord" /* 5979 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let metroImportDefault;
@@ -296,7 +296,7 @@ const memoResult = react.memo(function GuildIconInner(guild) {
       const tmp14Result = icon(flag[12]);
       tmp41Result = tmp41(tmp14Result, obj4);
     } else {
-      const obj6 = { style: wrapperStyle, source: tmp16, onLoadEnd: tmp43, progressiveRenderingEnabled: true, fade: false };
+      const obj6 = { style: wrapperStyle, source: tmp16, onLoadEnd: tmp43, fade: false };
       tmp43 = undefined;
       const tmp14Result2 = icon(flag[11]);
       if (null != loadingStyle) {

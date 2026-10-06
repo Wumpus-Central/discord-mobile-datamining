@@ -1,11 +1,11 @@
-// === Module 7620: enhanced_role_colors/EnhancedRoleColorUtils ===
+// === Module 7631: enhanced_role_colors/EnhancedRoleColorUtils ===
 
-// Module 7620 (enhanced_role_colors/EnhancedRoleColorUtils)
+// Module 7631 (enhanced_role_colors/EnhancedRoleColorUtils)
 import react_native from "react-native" /* 17 */;
 import _modDef683 from "module_683" /* 683 */;
 import Constants from "Constants" /* 1096 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5793 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5800 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;

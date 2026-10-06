@@ -1,11 +1,11 @@
-// === Module 12093: ChatInputGuardQuarantineDM ===
+// === Module 12108: ChatInputGuardQuarantineDM ===
 
-// Module 12093 (ChatInputGuardQuarantineDM)
+// Module 12108 (ChatInputGuardQuarantineDM)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12090 */;
-import QuarantineConstants from "QuarantineConstants" /* 12094 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12105 */;
+import QuarantineConstants from "QuarantineConstants" /* 12109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

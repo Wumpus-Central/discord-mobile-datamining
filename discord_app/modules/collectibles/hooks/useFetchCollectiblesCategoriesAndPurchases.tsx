@@ -1,13 +1,13 @@
-// === Module 10465: useFetchCollectiblesCategoriesAndPurchases ===
+// === Module 10478: useFetchCollectiblesCategoriesAndPurchases ===
 
-// Module 10465 (useFetchCollectiblesCategoriesAndPurchases)
+// Module 10478 (useFetchCollectiblesCategoriesAndPurchases)
 import react2 from "react" /* 576 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10466 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10479 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ExperimentStore_mod from "ExperimentStore" /* 4776 */;
-import CollectiblesPurchaseStore_mod from "CollectiblesPurchaseStore" /* 7068 */;
+import ExperimentStore_mod from "ExperimentStore" /* 4782 */;
+import CollectiblesPurchaseStore_mod from "CollectiblesPurchaseStore" /* 7081 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

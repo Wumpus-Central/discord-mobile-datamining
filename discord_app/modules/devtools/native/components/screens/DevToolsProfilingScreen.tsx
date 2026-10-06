@@ -1,19 +1,19 @@
-// === Module 15490: DevToolsProfilingScreen ===
+// === Module 15506: DevToolsProfilingScreen ===
 
-// Module 15490 (DevToolsProfilingScreen)
+// Module 15506 (DevToolsProfilingScreen)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import TableRowGroup3 from "TableRowGroup" /* 6074 */;
-import ComponentProfiler from "ComponentProfiler" /* 12534 */;
-import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15491 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import TableRowGroup3 from "TableRowGroup" /* 6081 */;
+import ComponentProfiler from "ComponentProfiler" /* 12549 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15507 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -92,7 +92,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (arr.length > 0) {
       let obj2 = { children: items };
       let obj3 = { title: "Component Profiler", hasIcons: false, children: closure_5(require("TableRow").TableRow, obj4) };
-      const TableRowGroup2 = tmp(6074).TableRowGroup;
+      const TableRowGroup2 = tmp(6081).TableRowGroup;
       obj4 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: first };
       items = [closure_5(TableRowGroup2, obj3), ];
       const _Object2 = Object;
@@ -130,11 +130,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       tmp12 = closure_7(closure_6, obj2);
     } else {
       const obj5 = { title: "Component Profiler", hasIcons: false, children: closure_5(TableRow, obj6) };
-      let TableRowGroup = tmp(6074).TableRowGroup;
+      let TableRowGroup = tmp(6081).TableRowGroup;
       obj6 = { label: "No components rendered yet.", subLabel: closure_7(Text, obj7) };
-      TableRow = tmp(5993).TableRow;
+      TableRow = tmp(6000).TableRow;
       obj7 = { variant: "text-xs/medium", color: "text-subtle", children: items1 };
-      Text = tmp(4886).Text;
+      Text = tmp(4892).Text;
       const obj8 = { variant: "text-xs/semibold", style: tmp5.monospace, children: "<ComponentProfiler />" };
       items1 = ["Make sure you wrap your component in ", closure_5(require("Text/Text").Text, obj8), " to enable measurements."];
       tmp12 = closure_5(TableRowGroup, obj5);

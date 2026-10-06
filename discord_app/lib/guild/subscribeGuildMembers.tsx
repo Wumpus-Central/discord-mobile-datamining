@@ -1,13 +1,13 @@
-// === Module 6814: subscribeGuildMembers ===
+// === Module 6824: subscribeGuildMembers ===
 
-// Module 6814 (subscribeGuildMembers)
+// Module 6824 (subscribeGuildMembers)
 import _modDef12 from "module_12" /* 12 */;
 import Fragment from "Fragment" /* 21 */;
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import react2 from "react" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5583 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5590 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

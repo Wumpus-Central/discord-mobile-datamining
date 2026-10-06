@@ -1,15 +1,15 @@
-// === Module 6723: OnboardingHomeUtils ===
+// === Module 6737: OnboardingHomeUtils ===
 
-// Module 6723 (OnboardingHomeUtils)
+// Module 6737 (OnboardingHomeUtils)
 import ChannelConstants from "ChannelConstants" /* 2058 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 5079 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6601 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 6724 */;
+import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 5085 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 6608 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 6738 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5077 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

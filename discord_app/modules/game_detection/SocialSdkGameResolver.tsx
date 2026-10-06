@@ -1,6 +1,6 @@
-// === Module 11121: SocialSdkGameResolver ===
+// === Module 11134: SocialSdkGameResolver ===
 
-// Module 11121 (SocialSdkGameResolver)
+// Module 11134 (SocialSdkGameResolver)
 import DetectableGameStore from "DetectableGameStore" /* 2024 */;
 import size from "module_2" /* 2 */;
 

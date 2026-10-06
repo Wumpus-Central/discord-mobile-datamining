@@ -1,6 +1,6 @@
-// === Module 17788: GuildSettingsModalRolesActionCreators ===
+// === Module 17834: GuildSettingsModalRolesActionCreators ===
 
-// Module 17788 (GuildSettingsModalRolesActionCreators)
+// Module 17834 (GuildSettingsModalRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -62,7 +62,7 @@ let obj = function _updateGuildRole() {
             value = undefined;
             c4 = 1;
             hoist = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

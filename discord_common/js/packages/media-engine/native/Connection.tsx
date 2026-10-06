@@ -1,20 +1,20 @@
-// === Module 4957: Connection ===
+// === Module 4963: Connection ===
 
-// Module 4957 (Connection)
+// Module 4963 (Connection)
 import inject from "inject" /* 2001 */;
-import VideoQualityManager from "VideoQualityManager" /* 4959 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 4962 */;
-import cloneDeepDefault from "cloneDeep" /* 4963 */;
-import VideoCodecUtils from "VideoCodecUtils" /* 5006 */;
-import transformStatsDefault from "transformStats" /* 5008 */;
-import isEqualDefault from "isEqual" /* 5010 */;
-import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 5011 */;
-import reduceDefault from "reduce" /* 5012 */;
-import clampDefault from "clamp" /* 5015 */;
+import VideoQualityManager from "VideoQualityManager" /* 4965 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 4968 */;
+import cloneDeepDefault from "cloneDeep" /* 4969 */;
+import VideoCodecUtils from "VideoCodecUtils" /* 5012 */;
+import transformStatsDefault from "transformStats" /* 5014 */;
+import isEqualDefault from "isEqual" /* 5016 */;
+import discord_common_VoiceEngine from "discord_common/VoiceEngine" /* 5017 */;
+import reduceDefault from "reduce" /* 5018 */;
+import clampDefault from "clamp" /* 5021 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import Constants_mod from "Constants" /* 4915 */;
-import Constants_mod2 from "Constants" /* 4947 */;
-import BaseConnection from "BaseConnection" /* 4958 */;
+import Constants_mod from "Constants" /* 4921 */;
+import Constants_mod2 from "Constants" /* 4953 */;
+import BaseConnection from "BaseConnection" /* 4964 */;
 import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -842,7 +842,7 @@ class Connection extends BaseConnection {
       resolved = Promise.resolve(null);
     } else {
       const tmp = self;
-      const tmp3 = self(5007);
+      const tmp3 = self(5013);
       self = this;
       const self2 = this;
       const timeout = tmp3.timeout;
@@ -861,7 +861,7 @@ class Connection extends BaseConnection {
           const stats1 = voiceEngine.getStats((arg0) => closure_0(transformStatsDefault(self.mediaEngineConnectionId, arg0, self.remoteVideoSinkWants, self.localVideoSinkWants)));
         }
       });
-      const timeoutResult = timeout(promise, self(4956).STATS_INTERVAL);
+      const timeoutResult = timeout(promise, self(4962).STATS_INTERVAL);
       resolved = timeoutResult.catch((error) => {
         if (!(error instanceof self(dependencyMap[8]).TimeoutError)) {
           throw error;

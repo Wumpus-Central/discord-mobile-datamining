@@ -1,6 +1,6 @@
-// === Module 4955: pollConnectionStats ===
+// === Module 4961: pollConnectionStats ===
 
-// Module 4955 (pollConnectionStats)
+// Module 4961 (pollConnectionStats)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

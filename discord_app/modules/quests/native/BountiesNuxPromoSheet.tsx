@@ -1,18 +1,18 @@
-// === Module 14870: BountiesNuxPromoSheet ===
+// === Module 14886: BountiesNuxPromoSheet ===
 
-// Module 14870 (BountiesNuxPromoSheet)
+// Module 14886 (BountiesNuxPromoSheet)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import PromoSheet2 from "PromoSheet" /* 10045 */;
-import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 14869 */;
-import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 14871 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import PromoSheet2 from "PromoSheet" /* 10058 */;
+import openBountiesNuxPromoSheet from "openBountiesNuxPromoSheet" /* 14885 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 14887 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

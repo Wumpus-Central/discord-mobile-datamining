@@ -1,12 +1,12 @@
-// === Module 15058: EmojiIcon ===
+// === Module 15073: EmojiIcon ===
 
-// Module 15058 (EmojiIcon)
+// Module 15073 (EmojiIcon)
 import Fragment from "Fragment" /* 21 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import EmojiDefault from "Emoji" /* 6625 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9904 */;
-import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15059 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import EmojiDefault from "Emoji" /* 6632 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9917 */;
+import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15074 */;
 import react from "react" /* 19 */;
 import size_mod from "module_2" /* 2 */;
 

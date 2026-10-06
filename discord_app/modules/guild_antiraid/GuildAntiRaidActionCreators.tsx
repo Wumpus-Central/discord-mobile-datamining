@@ -1,13 +1,13 @@
-// === Module 11441: GuildAntiRaidActionCreators ===
+// === Module 11454: GuildAntiRaidActionCreators ===
 
-// Module 11441 (GuildAntiRaidActionCreators)
+// Module 11454 (GuildAntiRaidActionCreators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 7686 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 11442 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import GuildAntiRaidConstants from "GuildAntiRaidConstants" /* 7697 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 11455 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;
@@ -107,7 +107,7 @@ obj = function _setGuildIncidentActions() {
     }
     let toISOStringResult = null;
     if (tmp4) {
-      const obj3 = _modDef4461();
+      const obj3 = _modDef4467();
       const addResult = obj3.add(closure_4, "hours");
       toISOStringResult = addResult.toISOString();
     }

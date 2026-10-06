@@ -1,6 +1,6 @@
-// === Module 15093: SettingsAppearanceThemeSelectorItem ===
+// === Module 15108: SettingsAppearanceThemeSelectorItem ===
 
-// Module 15093 (SettingsAppearanceThemeSelectorItem)
+// Module 15108 (SettingsAppearanceThemeSelectorItem)
 import react_native from "react-native" /* 17 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react2 from "react" /* 576 */;
@@ -9,19 +9,19 @@ import Constants from "Constants" /* 1096 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import useToken from "useToken" /* 4580 */;
-import themes from "themes" /* 4587 */;
-import react_native2 from "react-native" /* 4594 */;
-import utils_ColorDefault from "utils/Color" /* 4728 */;
-import Pressables from "Pressables" /* 5909 */;
-import ThemedGradient from "ThemedGradient" /* 5911 */;
-import AssetRegistryDefault from "AssetRegistry" /* 15094 */;
-import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 15095 */;
+import useToken from "useToken" /* 4586 */;
+import themes from "themes" /* 4593 */;
+import react_native2 from "react-native" /* 4600 */;
+import utils_ColorDefault from "utils/Color" /* 4734 */;
+import Pressables from "Pressables" /* 5916 */;
+import ThemedGradient from "ThemedGradient" /* 5918 */;
+import AssetRegistryDefault from "AssetRegistry" /* 15109 */;
+import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 15110 */;
 import react from "react" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15092 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15107 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

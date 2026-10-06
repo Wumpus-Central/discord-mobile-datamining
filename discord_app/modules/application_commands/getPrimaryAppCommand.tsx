@@ -1,15 +1,15 @@
-// === Module 9001: getPrimaryAppCommand ===
+// === Module 9034: getPrimaryAppCommand ===
 
-// Module 9001 (getPrimaryAppCommand)
+// Module 9034 (getPrimaryAppCommand)
 import react2 from "react" /* 576 */;
 import Server from "Server" /* 1985 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8708 */;
-import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 8799 */;
-import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 8803 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8740 */;
+import ApplicationCommandIndexActionCreators from "ApplicationCommandIndexActionCreators" /* 8831 */;
+import ApplicationCommandQueryTypes from "ApplicationCommandQueryTypes" /* 8833 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 8795 */;
+import ApplicationCommandIndexStore_mod from "ApplicationCommandIndexStore" /* 8827 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

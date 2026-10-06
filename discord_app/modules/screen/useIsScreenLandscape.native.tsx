@@ -1,6 +1,6 @@
-// === Module 5912: useIsScreenLandscape ===
+// === Module 5919: useIsScreenLandscape ===
 
-// Module 5912 (useIsScreenLandscape)
+// Module 5919 (useIsScreenLandscape)
 import react2 from "react" /* 576 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
 import react from "react" /* 19 */;

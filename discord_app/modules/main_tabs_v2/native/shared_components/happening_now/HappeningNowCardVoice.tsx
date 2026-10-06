@@ -1,6 +1,6 @@
-// === Module 16011: HappeningNowCardVoice ===
+// === Module 16050: HappeningNowCardVoice ===
 
-// Module 16011 (HappeningNowCardVoice)
+// Module 16050 (HappeningNowCardVoice)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
@@ -8,14 +8,14 @@ import intl3 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15114 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import HappeningNowConstants from "HappeningNowConstants" /* 15129 */;
 import react from "react" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
 import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,18 +1,18 @@
-// === Module 13408: GuildBoostingMarketingTopPerksCards ===
+// === Module 13427: GuildBoostingMarketingTopPerksCards ===
 
-// Module 13408 (GuildBoostingMarketingTopPerksCards)
+// Module 13427 (GuildBoostingMarketingTopPerksCards)
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5920 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13409 */;
-import _mod13410 from "module_13410" /* 13410 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13411 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5927 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13428 */;
+import _mod13429 from "module_13429" /* 13429 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13430 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -59,7 +59,7 @@ let items = [
       return intl.string(intl2.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13410, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13429, autoPlay: !AccessibilityStore.useReducedMotion, style };
       const tmp = LottieAnimationViewDefault;
       return metroRequire(tmp, obj);
     }

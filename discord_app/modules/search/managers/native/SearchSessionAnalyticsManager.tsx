@@ -1,9 +1,9 @@
-// === Module 11983: SearchSessionAnalyticsManager ===
+// === Module 12002: SearchSessionAnalyticsManager ===
 
-// Module 11983 (SearchSessionAnalyticsManager)
-import TrackingConstants from "TrackingConstants" /* 7512 */;
-import SearchUtils from "SearchUtils" /* 11968 */;
-import AbstractSearchSessionAnalyticsManager from "AbstractSearchSessionAnalyticsManager" /* 11984 */;
+// Module 12002 (SearchSessionAnalyticsManager)
+import TrackingConstants from "TrackingConstants" /* 7523 */;
+import SearchUtils from "SearchUtils" /* 11987 */;
+import AbstractSearchSessionAnalyticsManager from "AbstractSearchSessionAnalyticsManager" /* 12003 */;
 import size from "module_2" /* 2 */;
 
 const React2 = TrackingConstants.SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB;

@@ -1,10 +1,10 @@
-// === Module 16602: useConjureControlBar ===
+// === Module 16640: useConjureControlBar ===
 
-// Module 16602 (useConjureControlBar)
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
+// Module 16640 (useConjureControlBar)
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ConjureChatStore from "ConjureChatStore" /* 12905 */;
+import ConjureChatStore from "ConjureChatStore" /* 12924 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

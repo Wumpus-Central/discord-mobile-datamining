@@ -1,19 +1,19 @@
-// === Module 11986: SearchTabsLayoutStore ===
+// === Module 12006: SearchTabsLayoutStore ===
 
-// Module 11986 (SearchTabsLayoutStore)
+// Module 12006 (SearchTabsLayoutStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SearchUtils from "SearchUtils" /* 11968 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 11989 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 11997 */;
-import SmartSearchResultsStore from "SmartSearchResultsStore" /* 11987 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 11983 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 11985 */;
+import SearchUtils from "SearchUtils" /* 11987 */;
+import SmartSearchResultsStore from "SmartSearchResultsStore" /* 11984 */;
 import ChannelStore_mod from "ChannelStore" /* 2051 */;
-import SearchMessageStore from "SearchMessageStore" /* 6784 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 11990 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 11991 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 11992 */;
-import SearchQueryStore from "SearchQueryStore" /* 11967 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SearchMessageStore from "SearchMessageStore" /* 6794 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12007 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12008 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12009 */;
+import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

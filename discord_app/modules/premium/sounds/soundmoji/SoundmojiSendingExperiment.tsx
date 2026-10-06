@@ -1,6 +1,6 @@
-// === Module 9876: SoundmojiSendingExperiment ===
+// === Module 9889: SoundmojiSendingExperiment ===
 
-// Module 9876 (SoundmojiSendingExperiment)
+// Module 9889 (SoundmojiSendingExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

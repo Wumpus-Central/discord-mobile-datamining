@@ -1,6 +1,6 @@
-// === Module 8568: ActionSheetDragHandleConstants ===
+// === Module 8603: ActionSheetDragHandleConstants ===
 
-// Module 8568 (ActionSheetDragHandleConstants)
+// Module 8603 (ActionSheetDragHandleConstants)
 import nativeDefault from "native" /* 587 */;
 import size from "module_2" /* 2 */;
 

@@ -1,21 +1,21 @@
-// === Module 16026: MessagesFastestList ===
+// === Module 16065: MessagesFastestList ===
 
-// Module 16026 (MessagesFastestList)
+// Module 16065 (MessagesFastestList)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6559 */;
-import FastestListItemTypeDefault from "FastestListItemType" /* 6561 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 15957 */;
-import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 15967 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 15969 */;
-import useMessagesData from "useMessagesData" /* 15972 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 15982 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16019 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 16020 */;
-import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16021 */;
-import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 16022 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6566 */;
+import FastestListItemTypeDefault from "FastestListItemType" /* 6568 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 15996 */;
+import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder" /* 16006 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 16008 */;
+import useMessagesData from "useMessagesData" /* 16011 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 16021 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16058 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 16059 */;
+import MessagesItemSuggestedFriendsHeaderDefault from "MessagesItemSuggestedFriendsHeader" /* 16060 */;
+import MessagesItemAddFriendsWidget from "MessagesItemAddFriendsWidget" /* 16061 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

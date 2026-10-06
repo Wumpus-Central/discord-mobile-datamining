@@ -1,7 +1,7 @@
-// === Module 9325: isVideoBackgroundSupported ===
+// === Module 8099: isVideoBackgroundSupported ===
 
-// Module 9325 (isVideoBackgroundSupported)
-import Constants from "Constants" /* 4915 */;
+// Module 8099 (isVideoBackgroundSupported)
+import Constants from "Constants" /* 4921 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import size from "module_2" /* 2 */;
 

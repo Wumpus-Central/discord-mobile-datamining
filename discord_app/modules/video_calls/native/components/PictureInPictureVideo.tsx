@@ -1,36 +1,36 @@
-// === Module 9086: PictureInPictureVideo ===
+// === Module 9122: PictureInPictureVideo ===
 
-// Module 9086 (PictureInPictureVideo)
+// Module 9122 (PictureInPictureVideo)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useToken2 from "useToken" /* 4580 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4808 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import useAvatarColorDefault from "useAvatarColor" /* 7815 */;
-import transitionToActivityDefault from "transitionToActivity" /* 9049 */;
-import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9068 */;
-import usePipDimensionsDefault from "usePipDimensions" /* 9071 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9072 */;
-import VideoRenderer from "VideoRenderer" /* 9105 */;
-import UserTileDefault from "UserTile" /* 9120 */;
-import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 9122 */;
+import useToken2 from "useToken" /* 4586 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4814 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import useAvatarColorDefault from "useAvatarColor" /* 7826 */;
+import transitionToActivityDefault from "transitionToActivity" /* 9085 */;
+import useShouldForcePipOrientation from "useShouldForcePipOrientation" /* 9104 */;
+import usePipDimensionsDefault from "usePipDimensions" /* 9107 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 9108 */;
+import VideoRenderer from "VideoRenderer" /* 9140 */;
+import UserTileDefault from "UserTile" /* 9155 */;
+import useAvatarSpeakingColor from "useAvatarSpeakingColor" /* 9157 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SpeakingStore from "SpeakingStore" /* 5576 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9065 */;
-import ChannelCallStore from "ChannelCallStore" /* 9050 */;
+import SpeakingStore from "SpeakingStore" /* 5583 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9101 */;
+import ChannelCallStore from "ChannelCallStore" /* 9086 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import native_mod from "native" /* 1188 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
@@ -789,7 +789,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   let reactingToThermalState;
   let speaking;
   let tmp3;
-  const f99342 = () => {
+  const f99530 = () => {
     const items = [ChannelRTCStore.getParticipants(channelId), ChannelRTCStore.getVideoParticipants(channelId), ChannelRTCStore.getParticipantsVersion(channelId)];
     return items;
   };
@@ -802,8 +802,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => 
   const items1 = [ChannelRTCStore];
   const items2 = [channelId];
   const obj2 = channelId(leadingEdgeDebounce[22]);
-  [arr4, tmp3] = obj2.useStateFromStores(items1, f99342, items2, areParticipantsEqual);
-  _slicedToArray(obj2.useStateFromStores(items1, f99342, items2, areParticipantsEqual), 2);
+  [arr4, tmp3] = obj2.useStateFromStores(items1, f99530, items2, areParticipantsEqual);
+  _slicedToArray(obj2.useStateFromStores(items1, f99530, items2, areParticipantsEqual), 2);
   const items3 = [SpeakingStore];
   const items4 = [selfParticipant];
   const obj3 = channelId(leadingEdgeDebounce[22]);
@@ -1047,7 +1047,7 @@ let closure_23 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =>
   let obj9;
   let tmp5;
   let tmp6;
-  const f99347 = () => {
+  const f99535 = () => {
     const items = [ChannelCallLifecycleStore.consumedRequestToRespondToSeriousThermalState(), ChannelCallLifecycleStore.isReactingToThermalState()];
     return items;
   };
@@ -1057,8 +1057,8 @@ let closure_23 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =>
   let items = [ChannelCallLifecycleStore];
   const obj = get_initialized;
   const obj2 = { channelId: channel.id, selfParticipant };
-  [tmp5, tmp6] = obj.useStateFromStoresArray(items, f99347);
-  _slicedToArray(obj.useStateFromStoresArray(items, f99347), 2);
+  [tmp5, tmp6] = obj.useStateFromStoresArray(items, f99535);
+  _slicedToArray(obj.useStateFromStoresArray(items, f99535), 2);
   const tmp7 = closure_22(obj2);
   let avatarURL;
   const obj3 = useToken2;

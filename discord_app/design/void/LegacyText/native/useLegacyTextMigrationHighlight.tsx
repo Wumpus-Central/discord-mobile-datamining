@@ -1,11 +1,11 @@
-// === Module 8913: useLegacyTextMigrationHighlight ===
+// === Module 8942: useLegacyTextMigrationHighlight ===
 
-// Module 8913 (useLegacyTextMigrationHighlight)
+// Module 8942 (useLegacyTextMigrationHighlight)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
-import createStyles from "createStyles" /* 4890 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

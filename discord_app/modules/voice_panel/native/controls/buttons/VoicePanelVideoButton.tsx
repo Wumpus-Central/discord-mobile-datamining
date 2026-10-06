@@ -1,26 +1,26 @@
-// === Module 17339: VoicePanelVideoButton ===
+// === Module 17367: VoicePanelVideoButton ===
 
-// Module 17339 (VoicePanelVideoButton)
+// Module 17367 (VoicePanelVideoButton)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import CameraRive2 from "CameraRive" /* 4666 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 4823 */;
-import Constants from "Constants" /* 4915 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7210 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9084 */;
-import CallsUtils from "CallsUtils" /* 9299 */;
-import VideoIcon from "VideoIcon" /* 11234 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13103 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17340 */;
+import CameraRive2 from "CameraRive" /* 4672 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 4829 */;
+import Constants from "Constants" /* 4921 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7223 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9120 */;
+import CallsUtils from "CallsUtils" /* 9334 */;
+import VideoIcon from "VideoIcon" /* 11247 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13122 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 17368 */;
 import react from "react" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9065 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9101 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

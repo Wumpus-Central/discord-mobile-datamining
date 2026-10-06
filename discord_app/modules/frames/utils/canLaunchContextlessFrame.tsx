@@ -1,11 +1,11 @@
-// === Module 8994: canLaunchContextlessFrame ===
+// === Module 9027: canLaunchContextlessFrame ===
 
-// Module 8994 (canLaunchContextlessFrame)
+// Module 9027 (canLaunchContextlessFrame)
 import Constants from "Constants" /* 1085 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2016 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8726 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 8794 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8758 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 8826 */;
 import size from "module_2" /* 2 */;
 
 const ApplicationFlags = Constants.ApplicationFlags;

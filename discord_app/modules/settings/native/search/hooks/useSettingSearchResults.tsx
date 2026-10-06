@@ -1,12 +1,12 @@
-// === Module 14508: useSettingSearchResults ===
+// === Module 14524: useSettingSearchResults ===
 
-// Module 14508 (useSettingSearchResults)
+// Module 14524 (useSettingSearchResults)
 import debounceDefault from "debounce" /* 551 */;
-import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 14509 */;
+import UserSettingSearchManagerDefault from "UserSettingSearchManager" /* 14525 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14501 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 14408 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 14424 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -30,7 +30,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
     const self = this;
     const self2 = this;
     const tmp6 = UserSettingSearchManagerDefault;
-    const tmpResult = tmp(14503);
+    const tmpResult = tmp(14519);
     const tmp62 = new tmp6(tmpResult.getSettingSearchableTitles());
     cResult[0] = tmp62;
     first = tmp62;

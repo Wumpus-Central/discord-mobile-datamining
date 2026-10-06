@@ -1,9 +1,9 @@
-// === Module 16049: useShallowArrayMemo ===
+// === Module 16088: useShallowArrayMemo ===
 
-// Module 16049 (useShallowArrayMemo)
+// Module 16088 (useShallowArrayMemo)
 import shallowEqual from "shallowEqual" /* 568 */;
 import react from "react" /* 576 */;
-import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 16050 */;
+import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 16089 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

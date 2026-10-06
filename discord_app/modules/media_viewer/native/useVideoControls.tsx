@@ -1,15 +1,15 @@
-// === Module 7936: useVideoControls ===
+// === Module 7947: useVideoControls ===
 
-// Module 7936 (useVideoControls)
+// Module 7947 (useVideoControls)
 import Fragment from "Fragment" /* 21 */;
 import react_native from "react-native" /* 1259 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 7934 */;
-import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 7937 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 7945 */;
+import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 7948 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import module_570 from "module_570" /* 570 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -18,7 +18,7 @@ let _require, importDefault;
 
 let _slicedToArray = _slicedToArray_mod;
 const jsx = Fragment.jsx;
-const useVideoStateStore = module_570.create(() => ({ controls: "Set", paused: true }));
+const useVideoStateStore = module_570.create(() => ({ controls: "Reflect", paused: true }));
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, portal, controls) => {
   let closure_0;
@@ -214,7 +214,7 @@ export const initVideoStateStore = function initVideoStateStore() {
   let state;
   const obj = react_native;
   obj.batchUpdates(() => {
-    state.setState({ controls: "Set", paused: true });
+    state.setState({ controls: "Reflect", paused: true });
   });
 };
 export const setMuted = function setMuted(isMuted) {

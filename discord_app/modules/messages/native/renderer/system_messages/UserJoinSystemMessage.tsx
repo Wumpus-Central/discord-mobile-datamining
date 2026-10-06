@@ -1,15 +1,15 @@
-// === Module 7644: UserJoinSystemMessage ===
+// === Module 7655: UserJoinSystemMessage ===
 
-// Module 7644 (UserJoinSystemMessage)
+// Module 7655 (UserJoinSystemMessage)
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7645 */;
-import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 7657 */;
-import transformSticker2 from "transformSticker" /* 7658 */;
-import WelcomeCTAUtils from "WelcomeCTAUtils" /* 7661 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7656 */;
+import useIsStickerReplyEnabled from "useIsStickerReplyEnabled" /* 7668 */;
+import transformSticker2 from "transformSticker" /* 7669 */;
+import WelcomeCTAUtils from "WelcomeCTAUtils" /* 7672 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import size from "module_2" /* 2 */;

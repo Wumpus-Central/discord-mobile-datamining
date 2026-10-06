@@ -1,8 +1,8 @@
-// === Module 13631: SystemResponsiveness ===
+// === Module 13647: SystemResponsiveness ===
 
-// Module 13631 (SystemResponsiveness)
+// Module 13647 (SystemResponsiveness)
 import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/SystemResponsiveness.tsx");
@@ -29,7 +29,7 @@ class SystemResponsiveness {
       }
     };
     obj.connection = connection;
-    const histogram = new obj(7233).Histogram();
+    const histogram = new obj(7246).Histogram();
     obj.pttQueueLatencyHistogram = histogram;
     return obj;
   }

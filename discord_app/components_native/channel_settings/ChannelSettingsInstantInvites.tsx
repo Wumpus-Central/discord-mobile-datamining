@@ -1,21 +1,21 @@
-// === Module 16998: ChannelSettingsInstantInvites ===
+// === Module 17024: ChannelSettingsInstantInvites ===
 
-// Module 16998 (ChannelSettingsInstantInvites)
+// Module 17024 (ChannelSettingsInstantInvites)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import FastestListDefault from "FastestList" /* 6552 */;
-import InstantInvite from "InstantInvite" /* 10669 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10687 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 10688 */;
-import InstantInviteSelfMeasurerDefault from "InstantInviteSelfMeasurer" /* 16999 */;
+import FastestListDefault from "FastestList" /* 6559 */;
+import InstantInvite from "InstantInvite" /* 10682 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10700 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 10701 */;
+import InstantInviteSelfMeasurerDefault from "InstantInviteSelfMeasurer" /* 17025 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 10063 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 10076 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

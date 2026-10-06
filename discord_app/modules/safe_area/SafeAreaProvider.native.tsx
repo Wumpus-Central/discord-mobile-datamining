@@ -1,6 +1,6 @@
-// === Module 14404: SafeAreaProvider ===
+// === Module 14420: SafeAreaProvider ===
 
-// Module 14404 (SafeAreaProvider)
+// Module 14420 (SafeAreaProvider)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;

@@ -1,10 +1,10 @@
-// === Module 12945: useAddToWishlistGridItems ===
+// === Module 12964: useAddToWishlistGridItems ===
 
-// Module 12945 (useAddToWishlistGridItems)
+// Module 12964 (useAddToWishlistGridItems)
 import react2 from "react" /* 576 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import useWishlistRecommendations from "useWishlistRecommendations" /* 10526 */;
-import WishlistUtils from "WishlistUtils" /* 12924 */;
+import useWishlistRecommendations from "useWishlistRecommendations" /* 10539 */;
+import WishlistUtils from "WishlistUtils" /* 12943 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

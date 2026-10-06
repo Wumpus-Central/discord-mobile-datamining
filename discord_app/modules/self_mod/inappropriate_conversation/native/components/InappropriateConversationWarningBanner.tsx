@@ -1,14 +1,14 @@
-// === Module 9821: InappropriateConversationWarningBanner ===
+// === Module 9834: InappropriateConversationWarningBanner ===
 
-// Module 9821 (InappropriateConversationWarningBanner)
+// Module 9834 (InappropriateConversationWarningBanner)
 import Fragment from "Fragment" /* 21 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9786 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9798 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 9799 */;
-import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 9825 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 9812 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 9838 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import size from "module_2" /* 2 */;
 
 class InappropriateConversationWarningBanner {

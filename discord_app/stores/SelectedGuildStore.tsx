@@ -1,14 +1,14 @@
-// === Module 4699: SelectedGuildStore ===
+// === Module 4705: SelectedGuildStore ===
 
-// Module 4699 (SelectedGuildStore)
+// Module 4705 (SelectedGuildStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
-import matchPathCompat from "matchPathCompat" /* 4704 */;
-import RouteUtils from "RouteUtils" /* 4717 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
+import matchPathCompat from "matchPathCompat" /* 4710 */;
+import RouteUtils from "RouteUtils" /* 4723 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DefaultRouteStore from "DefaultRouteStore" /* 4703 */;
+import DefaultRouteStore from "DefaultRouteStore" /* 4709 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

@@ -1,19 +1,19 @@
-// === Module 17343: VoicePanelScreenshareButton ===
+// === Module 17371: VoicePanelScreenshareButton ===
 
-// Module 17343 (VoicePanelScreenshareButton)
+// Module 17371 (VoicePanelScreenshareButton)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import ScreenArrowIcon from "ScreenArrowIcon" /* 12189 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13103 */;
-import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 17344 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import ScreenArrowIcon from "ScreenArrowIcon" /* 12204 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13122 */;
+import MobilePhoneShareIcon2 from "MobilePhoneShareIcon" /* 17372 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

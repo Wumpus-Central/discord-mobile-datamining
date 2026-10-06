@@ -1,13 +1,13 @@
-// === Module 18066: LogOutDisclaimer ===
+// === Module 18111: LogOutDisclaimer ===
 
-// Module 18066 (LogOutDisclaimer)
+// Module 18111 (LogOutDisclaimer)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef2787 from "module_2787" /* 2787 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
-import ModalDisclaimer2 from "ModalDisclaimer" /* 14274 */;
+import _modDef2815 from "module_2815" /* 2815 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
+import ModalDisclaimer2 from "ModalDisclaimer" /* 14292 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = obj.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const ModalDisclaimer = ModalDisclaimer2.ModalDisclaimer;
-    ({ variant: "text-xs/medium", children: intl.format(_modDef2787["0DHxym"], obj4) });
+    ({ variant: "text-xs/medium", children: intl.format(_modDef2815["0DHxym"], obj4) });
     const Text = Text_Text.Text;
     intl = intl2.intl;
     const tmp7 = <ModalDisclaimer>{null}</ModalDisclaimer>;
@@ -39,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 }) : (() => {
   let intl;
   const ModalDisclaimer = ModalDisclaimer2.ModalDisclaimer;
-  ({ variant: "text-xs/medium", children: intl.format(_modDef2787["0DHxym"], obj3) });
+  ({ variant: "text-xs/medium", children: intl.format(_modDef2815["0DHxym"], obj3) });
   const Text = Text_Text.Text;
   intl = intl2.intl;
   return <ModalDisclaimer>{null}</ModalDisclaimer>;

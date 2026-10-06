@@ -1,6 +1,6 @@
-// === Module 13010: CollectiblesEditUserProfileListItems ===
+// === Module 13029: CollectiblesEditUserProfileListItems ===
 
-// Module 13010 (CollectiblesEditUserProfileListItems)
+// Module 13029 (CollectiblesEditUserProfileListItems)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
@@ -8,22 +8,22 @@ import nativeDefault from "native" /* 587 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 7844 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 8486 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13011 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 7855 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 8519 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13030 */;
 import _objectWithoutProperties_mod from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -133,7 +133,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
           const obj3 = { style: tmp4.pressable, disabled: isSelected, onPress: tmp5, onLongPress, accessibilityRole: str, accessibilityLabel, accessibilityState: tmp6, children: tmp10 };
-          const tmp16 = closure_10(onPress(5909).PressableOpacity, obj3);
+          const tmp16 = closure_10(onPress(5916).PressableOpacity, obj3);
           cResult[14] = accessibilityLabel;
           cResult[15] = str;
           cResult[16] = tmp5;
@@ -310,7 +310,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSource) => 
   }
   const tmp9 = closure_12();
   const tmp10 = analyticsLocations;
-  analyticsLocations = analyticsLocations(6657)(tmp4).analyticsLocations;
+  analyticsLocations = analyticsLocations(6664)(tmp4).analyticsLocations;
   if (cResult[3] === analyticsLocations) {
     let tmp11;
     let tmp13;
@@ -323,7 +323,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSource) => 
     const _Symbol = Symbol;
     const optionCell = tmp9.optionCell;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      let obj2 = { source: tmp10(13012), size: require("native").IconSizes.LARGE };
+      let obj2 = { source: tmp10(13031), size: require("native").IconSizes.LARGE };
       const Icon = tmp(1188).Icon;
       const tmp15 = closure_10(Icon, obj2);
       cResult[6] = tmp15;
@@ -402,7 +402,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSource) => 
   const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
   let analyticsLocations;
   const tmp2 = closure_12();
-  analyticsLocations = analyticsLocations(6657)(analyticsSource).analyticsLocations;
+  analyticsLocations = analyticsLocations(6664)(analyticsSource).analyticsLocations;
   const items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
@@ -417,15 +417,15 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((analyticsSource) => 
     children: items1
   };
   const merged1 = Object.assign(merged);
-  let obj2 = { source: analyticsLocations(13012), size: analyticsSource(1188).IconSizes.LARGE };
+  let obj2 = { source: analyticsLocations(13031), size: analyticsSource(1188).IconSizes.LARGE };
   const Icon = analyticsSource(1188).Icon;
   items1 = [closure_10(Icon, obj2), , ];
   let obj3 = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: intl.string(analyticsSource(1126).t.pWG4ze) };
-  const Text = analyticsSource(4886).Text;
+  const Text = analyticsSource(4892).Text;
   intl = analyticsSource(1126).intl;
   items1[1] = closure_10(Text, obj3);
   const obj4 = { style: tmp2.newIcon };
-  items1[2] = closure_10(analyticsSource(8486).NewBadge, obj4);
+  items1[2] = closure_10(analyticsSource(8519).NewBadge, obj4);
   return closure_11(closure_13, obj);
 });
 ReactCompilerGating = ReactCompilerGating_mod;

@@ -1,8 +1,8 @@
-// === Module 4740: useWindowSizeClassifier ===
+// === Module 4746: useWindowSizeClassifier ===
 
-// Module 4740 (useWindowSizeClassifier)
+// Module 4746 (useWindowSizeClassifier)
 import react from "react" /* 576 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4741 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4747 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

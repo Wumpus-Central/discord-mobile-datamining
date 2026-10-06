@@ -1,16 +1,16 @@
-// === Module 7516: SidebarActionCreators ===
+// === Module 7527: SidebarActionCreators ===
 
-// Module 7516 (SidebarActionCreators)
+// Module 7527 (SidebarActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import flow_Client from "flow/Client" /* 4787 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 6785 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import MessageManagerDefault from "MessageManager" /* 7517 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 7521 */;
+import flow_Client from "flow/Client" /* 4793 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 6795 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import MessageManagerDefault from "MessageManager" /* 7528 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 7532 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;
 

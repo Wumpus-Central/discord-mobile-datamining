@@ -1,10 +1,10 @@
-// === Module 9988: computeScrollData ===
+// === Module 10001: computeScrollData ===
 
-// Module 9988 (computeScrollData)
-import flow_Client from "flow/Client" /* 4787 */;
-import NativeChatUtils from "NativeChatUtils" /* 9989 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7592 */;
+// Module 10001 (computeScrollData)
+import flow_Client from "flow/Client" /* 4793 */;
+import NativeChatUtils from "NativeChatUtils" /* 10002 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7603 */;
 import size from "module_2" /* 2 */;
 
 let c3;

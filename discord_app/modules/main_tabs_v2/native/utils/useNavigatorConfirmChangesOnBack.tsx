@@ -1,9 +1,9 @@
-// === Module 10658: useNavigatorConfirmChangesOnBack ===
+// === Module 10671: useNavigatorConfirmChangesOnBack ===
 
-// Module 10658 (useNavigatorConfirmChangesOnBack)
+// Module 10671 (useNavigatorConfirmChangesOnBack)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import useNavigatorBackHandlerDefault from "useNavigatorBackHandler" /* 10660 */;
+import useNavigatorBackHandlerDefault from "useNavigatorBackHandler" /* 10673 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

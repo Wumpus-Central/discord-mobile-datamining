@@ -1,15 +1,15 @@
-// === Module 9933: MessageEmojiActionSheet ===
+// === Module 9946: MessageEmojiActionSheet ===
 
-// Module 9933 (MessageEmojiActionSheet)
+// Module 9946 (MessageEmojiActionSheet)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import StandardEmojiContentDefault from "StandardEmojiContent" /* 9934 */;
-import CustomEmojiContentDefault from "CustomEmojiContent" /* 9941 */;
+import StandardEmojiContentDefault from "StandardEmojiContent" /* 9947 */;
+import CustomEmojiContentDefault from "CustomEmojiContent" /* 9954 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -96,7 +96,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
     }
     return tmp11;
   }
-  BottomSheet = tmp(6645).BottomSheet;
+  BottomSheet = tmp(6652).BottomSheet;
   tmp11 = <BottomSheet startExpanded onDismiss={S}>{null}</BottomSheet>;
   cResult[4] = tmp4.contentWrapper;
   cResult[5] = tmp8;
@@ -182,7 +182,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
                 }
                 return tmp15;
               }
-              BottomSheet = tmp(6645).BottomSheet;
+              BottomSheet = tmp(6652).BottomSheet;
               const tmp18 = <BottomSheet startExpanded onDismiss={tmp10}>{null}</BottomSheet>;
               cResult[11] = tmp4.contentWrapper;
               cResult[12] = tmp11;
@@ -216,7 +216,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((emojiNode) => {
     const tmp2Result = require("v1");
     const v4Result = tmp2Result.v4();
     _require = v4Result;
-    BottomSheet = tmp2(6645).BottomSheet;
+    BottomSheet = tmp2(6652).BottomSheet;
     return <BottomSheet startExpanded onDismiss={function onDismiss() {
       const obj = AnalyticsUtilsDefault;
       const obj2 = { nonce };

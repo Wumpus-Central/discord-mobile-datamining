@@ -1,10 +1,10 @@
-// === Module 5804: getSoundFromMessage ===
+// === Module 5811: getSoundFromMessage ===
 
-// Module 5804 (getSoundFromMessage)
+// Module 5811 (getSoundFromMessage)
 import MessageReferenceTypes from "MessageReferenceTypes" /* 1108 */;
-import SoundboardConstants from "SoundboardConstants" /* 5682 */;
-import SoundboardTypes from "SoundboardTypes" /* 5805 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import SoundboardConstants from "SoundboardConstants" /* 5689 */;
+import SoundboardTypes from "SoundboardTypes" /* 5812 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import size from "module_2" /* 2 */;
 
 function getSoundFromSounds(arr, arg1) {

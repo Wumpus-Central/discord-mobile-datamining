@@ -1,14 +1,14 @@
-// === Module 14316: invites ===
+// === Module 14334: invites ===
 
-// Module 14316 (invites)
+// Module 14334 (invites)
 import Constants2 from "Constants" /* 1085 */;
-import Constants3 from "Constants" /* 5316 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
+import Constants3 from "Constants" /* 5323 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1096 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14317 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14335 */;
 import size from "module_2" /* 2 */;
 
 let userId;

@@ -1,24 +1,24 @@
-// === Module 15384: CopyClientInfoSetting ===
+// === Module 15399: CopyClientInfoSetting ===
 
-// Module 15384 (CopyClientInfoSetting)
+// Module 15399 (CopyClientInfoSetting)
 import react from "react" /* 576 */;
 import intl8 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import CopyIcon from "CopyIcon" /* 4843 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
-import ClipboardListIcon from "ClipboardListIcon" /* 5928 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import ActionSheetRow7 from "ActionSheetRow" /* 6697 */;
-import ActionSheet2 from "ActionSheet" /* 6701 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11399 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11082 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import CopyIcon from "CopyIcon" /* 4849 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
+import ClipboardListIcon from "ClipboardListIcon" /* 5935 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import ActionSheetRow7 from "ActionSheetRow" /* 6704 */;
+import ActionSheet2 from "ActionSheet" /* 6708 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11412 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11095 */;
 import Fragment from "Fragment" /* 21 */;
 import react_native from "react-native" /* 1368 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 let closure_4;

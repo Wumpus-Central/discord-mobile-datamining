@@ -1,36 +1,36 @@
-// === Module 18086: QuestProgressManager ===
+// === Module 18131: QuestProgressManager ===
 
-// Module 18086 (QuestProgressManager)
+// Module 18131 (QuestProgressManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 5019 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 5020 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 5021 */;
-import QuestVariants from "QuestVariants" /* 5624 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5631 */;
-import QuestDataUtils from "QuestDataUtils" /* 7183 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7206 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 9041 */;
-import QuestActionCreators from "QuestActionCreators" /* 9994 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 5025 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 5026 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 5027 */;
+import QuestVariants from "QuestVariants" /* 5631 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5638 */;
+import QuestDataUtils from "QuestDataUtils" /* 7196 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7219 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 9077 */;
+import QuestActionCreators from "QuestActionCreators" /* 10007 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import FramesStore from "FramesStore" /* 8703 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import DetectableGameStore from "DetectableGameStore" /* 2024 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
-import QuestStore from "QuestStore" /* 7187 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17185 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import getQuestLogger from "getQuestLogger" /* 7193 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import QuestStore from "QuestStore" /* 7200 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17214 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import getQuestLogger from "getQuestLogger" /* 7206 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let map, set;
@@ -395,7 +395,7 @@ class QuestProgressManager extends AutomaticLifecycleManager {
       await "IconComponent";
       closure_2 = tmp4;
       applicationId = closure_0.applicationId;
-      return "Set";
+      return "Reflect";
     });
     applyArgumentsResult.actions = obj2;
     return applyArgumentsResult;

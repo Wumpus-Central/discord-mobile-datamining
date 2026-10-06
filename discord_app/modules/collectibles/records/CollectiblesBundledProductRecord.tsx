@@ -1,6 +1,6 @@
-// === Module 7056: CollectiblesBundledProductRecord ===
+// === Module 7069: CollectiblesBundledProductRecord ===
 
-// Module 7056 (CollectiblesBundledProductRecord)
+// Module 7069 (CollectiblesBundledProductRecord)
 import size from "module_2" /* 2 */;
 
 class CollectiblesBundledProductRecord {

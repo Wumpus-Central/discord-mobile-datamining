@@ -1,29 +1,29 @@
-// === Module 8357: GameProfileView ===
+// === Module 8390: GameProfileView ===
 
-// Module 8357 (GameProfileView)
+// Module 8390 (GameProfileView)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6657 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import GameProfileConstants from "GameProfileConstants" /* 8358 */;
-import useGameProfileInvite from "useGameProfileInvite" /* 8359 */;
-import GameProfileHeaderDefault from "GameProfileHeader" /* 8360 */;
-import GameProfileMediaDefault from "GameProfileMedia" /* 8366 */;
-import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 8373 */;
-import GameProfileReviewsDefault from "GameProfileReviews" /* 8374 */;
-import GameProfileSummaryDefault from "GameProfileSummary" /* 8384 */;
-import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 8385 */;
-import GameProfileCommunityDefault from "GameProfileCommunity" /* 8391 */;
-import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 8404 */;
-import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 8417 */;
-import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 8540 */;
-import GameProfileDetailsDefault from "GameProfileDetails" /* 8542 */;
-import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 8561 */;
-import GameProfileReportButtonDefault from "GameProfileReportButton" /* 8562 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import GameProfileConstants from "GameProfileConstants" /* 8391 */;
+import useGameProfileInvite from "useGameProfileInvite" /* 8392 */;
+import GameProfileHeaderDefault from "GameProfileHeader" /* 8393 */;
+import GameProfileMediaDefault from "GameProfileMedia" /* 8399 */;
+import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 8406 */;
+import GameProfileReviewsDefault from "GameProfileReviews" /* 8407 */;
+import GameProfileSummaryDefault from "GameProfileSummary" /* 8417 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 8418 */;
+import GameProfileCommunityDefault from "GameProfileCommunity" /* 8424 */;
+import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 8437 */;
+import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 8450 */;
+import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 8573 */;
+import GameProfileDetailsDefault from "GameProfileDetails" /* 8575 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 8594 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 8595 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

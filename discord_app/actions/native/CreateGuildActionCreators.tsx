@@ -1,8 +1,8 @@
-// === Module 12413: CreateGuildActionCreators ===
+// === Module 12428: CreateGuildActionCreators ===
 
-// Module 12413 (CreateGuildActionCreators)
+// Module 12428 (CreateGuildActionCreators)
 import Constants from "Constants" /* 1085 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import size from "module_2" /* 2 */;
 
 const InstantInviteSources = Constants.InstantInviteSources;

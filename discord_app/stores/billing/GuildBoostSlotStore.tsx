@@ -1,9 +1,9 @@
-// === Module 6908: GuildBoostSlotStore ===
+// === Module 6918: GuildBoostSlotStore ===
 
-// Module 6908 (GuildBoostSlotStore)
+// Module 6918 (GuildBoostSlotStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import size from "module_2" /* 2 */;
 
 let closure_3;

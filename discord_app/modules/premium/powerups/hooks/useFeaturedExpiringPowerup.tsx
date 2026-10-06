@@ -1,10 +1,10 @@
-// === Module 12165: useFeaturedExpiringPowerup ===
+// === Module 12180: useFeaturedExpiringPowerup ===
 
-// Module 12165 (useFeaturedExpiringPowerup)
-import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
+// Module 12180 (useFeaturedExpiringPowerup)
+import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
 import react from "react" /* 19 */;
-import GameServerStore from "GameServerStore" /* 7672 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
+import GameServerStore from "GameServerStore" /* 7683 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

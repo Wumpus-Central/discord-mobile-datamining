@@ -1,16 +1,16 @@
-// === Module 8440: StorefrontActionCreators ===
+// === Module 8473: StorefrontActionCreators ===
 
-// Module 8440 (StorefrontActionCreators)
+// Module 8473 (StorefrontActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import BillingInfoStore from "BillingInfoStore" /* 4530 */;
-import SKUPricesStore from "SKUPricesStore" /* 6733 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8441 */;
-import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8442 */;
-import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8443 */;
+import BillingInfoStore from "BillingInfoStore" /* 4536 */;
+import SKUPricesStore from "SKUPricesStore" /* 6747 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 8474 */;
+import StorefrontPromotionStore from "StorefrontPromotionStore" /* 8475 */;
+import StorefrontPromotionRecord from "StorefrontPromotionRecord" /* 8476 */;
 import size from "module_2" /* 2 */;
 
 let apiError, c1, closure_4, promotions;
@@ -287,7 +287,7 @@ obj = function _fetchStorefrontPricesForApplicationId() {
       await closure_130_18(obj5);
       await "IconComponent";
       applicationId = applicationId.applicationId;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;
@@ -306,7 +306,7 @@ obj = function _fetchStorefrontPricesForSkuIds() {
       await closure_130_18(obj5);
       await "IconComponent";
       skuIds = skuIds.skuIds;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

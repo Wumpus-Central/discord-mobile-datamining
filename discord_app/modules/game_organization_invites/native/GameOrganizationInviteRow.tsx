@@ -1,14 +1,14 @@
-// === Module 13777: GameOrganizationInviteRow ===
+// === Module 13795: GameOrganizationInviteRow ===
 
-// Module 13777 (GameOrganizationInviteRow)
+// Module 13795 (GameOrganizationInviteRow)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import Constants from "Constants" /* 7226 */;
-import DiscordTagDefault from "DiscordTag" /* 9296 */;
-import InviteButtonDefault from "InviteButton" /* 9556 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import Constants from "Constants" /* 7239 */;
+import DiscordTagDefault from "DiscordTag" /* 9331 */;
+import InviteButtonDefault from "InviteButton" /* 9569 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

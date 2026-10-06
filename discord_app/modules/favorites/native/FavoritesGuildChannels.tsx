@@ -1,18 +1,18 @@
-// === Module 16211: FavoritesGuildChannels ===
+// === Module 16251: FavoritesGuildChannels ===
 
-// Module 16211 (FavoritesGuildChannels)
+// Module 16251 (FavoritesGuildChannels)
 import react2 from "react" /* 576 */;
-import useFontScale from "useFontScale" /* 5602 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 6546 */;
-import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 16027 */;
-import RedesignChannelList from "RedesignChannelList" /* 16029 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16061 */;
-import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 16126 */;
-import FavoritesGuildSuggestionsStore from "FavoritesGuildSuggestionsStore" /* 16127 */;
-import useShouldRenderChannelList from "useShouldRenderChannelList" /* 16199 */;
-import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 16212 */;
-import FavoritesGuildSuggestionsLoaderDefault from "FavoritesGuildSuggestionsLoader" /* 16213 */;
-import FavoritesGuildSidebarHeaderDefault from "FavoritesGuildSidebarHeader" /* 16218 */;
+import useFontScale from "useFontScale" /* 5609 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 6553 */;
+import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 16066 */;
+import RedesignChannelList from "RedesignChannelList" /* 16068 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16100 */;
+import FavoritesGuildSuggestedChannels from "FavoritesGuildSuggestedChannels" /* 16165 */;
+import FavoritesGuildSuggestionsStore from "FavoritesGuildSuggestionsStore" /* 16166 */;
+import useShouldRenderChannelList from "useShouldRenderChannelList" /* 16239 */;
+import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 16252 */;
+import FavoritesGuildSuggestionsLoaderDefault from "FavoritesGuildSuggestionsLoader" /* 16253 */;
+import FavoritesGuildSidebarHeaderDefault from "FavoritesGuildSidebarHeader" /* 16258 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,6 +1,6 @@
-// === Module 16318: FadeInOut ===
+// === Module 16358: FadeInOut ===
 
-// Module 16318 (FadeInOut)
+// Module 16358 (FadeInOut)
 import Fragment from "Fragment" /* 21 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -25,9 +25,9 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   const cResult = obj.c(10);
   ({ children, duration } = style);
   style = style.style;
-  let obj2 = duration(4612);
+  let obj2 = duration(4618);
   const sharedValue = obj2.useSharedValue(0);
-  const obj3 = duration(4612);
+  const obj3 = duration(4618);
   let fn = function l() {
     const obj = { opacity: sharedValue.get() };
     return obj;
@@ -68,7 +68,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp10;
       }
-      const tmp13 = jsx(sharedValue(4612).View, { style: tmp9, children });
+      const tmp13 = jsx(sharedValue(4618).View, { style: tmp9, children });
       cResult[7] = children;
       cResult[8] = tmp9;
       cResult[9] = tmp13;

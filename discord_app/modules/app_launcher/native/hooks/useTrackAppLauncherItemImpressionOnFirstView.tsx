@@ -1,8 +1,8 @@
-// === Module 11725: useTrackAppLauncherItemImpressionOnFirstView ===
+// === Module 11739: useTrackAppLauncherItemImpressionOnFirstView ===
 
-// Module 11725 (useTrackAppLauncherItemImpressionOnFirstView)
+// Module 11739 (useTrackAppLauncherItemImpressionOnFirstView)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useTrackImpression from "useTrackImpression" /* 8422 */;
+import useTrackImpression from "useTrackImpression" /* 8455 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -18,7 +18,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
   let tmp9;
   let obj = entrypoint(576);
   const cResult = obj.c(6);
-  let obj2 = entrypoint(10994);
+  let obj2 = entrypoint(11007);
   const tmp = entrypoint;
   entrypoint = obj2.useAppLauncherContext().entrypoint;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -85,7 +85,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
   let entrypoint;
   let items;
   let ref;
-  let obj = entrypoint(10994);
+  let obj = entrypoint(11007);
   entrypoint = obj.useAppLauncherContext().entrypoint;
   const useRef = react.useRef;
   set = new Set();

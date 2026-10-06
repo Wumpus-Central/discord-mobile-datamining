@@ -1,12 +1,12 @@
-// === Module 17949: FormChannelPicker ===
+// === Module 17995: FormChannelPicker ===
 
-// Module 17949 (FormChannelPicker)
+// Module 17995 (FormChannelPicker)
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -49,7 +49,7 @@ export default function FormChannelPicker(channelId) {
       const obj = { guildId: importDefault, selectedChannelId: id, onChannelSelected: onChange };
       id = undefined;
       ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequire(17950, dependencyMap.paths);
+      const tmp2 = asyncRequire(17996, dependencyMap.paths);
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }

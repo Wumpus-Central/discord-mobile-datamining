@@ -1,10 +1,10 @@
-// === Module 7828: avatar_decorations/AvatarDecorationUtils ===
+// === Module 7839: avatar_decorations/AvatarDecorationUtils ===
 
-// Module 7828 (avatar_decorations/AvatarDecorationUtils)
+// Module 7839 (avatar_decorations/AvatarDecorationUtils)
 import native from "native" /* 1188 */;
 import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1403 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = AvatarDecorationConstants.DECORATION_TO_AVATAR_RATIO;
@@ -53,5 +53,5 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   const obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequire(7829, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  obj2.openLazy(asyncRequire(7840, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

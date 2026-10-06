@@ -1,9 +1,9 @@
-// === Module 12819: useEntryActivityAndApplication ===
+// === Module 12838: useEntryActivityAndApplication ===
 
-// Module 12819 (useEntryActivityAndApplication)
+// Module 12838 (useEntryActivityAndApplication)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 12820 */;
+import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 12839 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -50,7 +50,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((extra) => {
     if (cResult[4] === application_id1) {
       tmp10 = cResult[5];
     }
-    const tmp13 = _slicedToArray(first1(6663)(tmp10), 2);
+    const tmp13 = _slicedToArray(first1(6670)(tmp10), 2);
     first1 = tmp13[0];
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
@@ -132,7 +132,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((extra) => {
   const stateFromStores = obj.useStateFromStores(items, () => ContentInventoryActivityStore.getMatchingActivity(extra));
   let application_id;
   const tmp = _require;
-  const tmp4 = activityApplication(6663);
+  const tmp4 = activityApplication(6670);
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
   }

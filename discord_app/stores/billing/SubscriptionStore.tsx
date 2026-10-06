@@ -1,10 +1,10 @@
-// === Module 4534: SubscriptionStore ===
+// === Module 4540: SubscriptionStore ===
 
-// Module 4534 (SubscriptionStore)
+// Module 4540 (SubscriptionStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4529 */;
-import SubscriptionRecord2 from "SubscriptionRecord" /* 4535 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4535 */;
+import SubscriptionRecord2 from "SubscriptionRecord" /* 4541 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1378 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import Constants from "Constants" /* 1085 */;
@@ -261,7 +261,7 @@ obj = {
     });
   },
   BILLING_SUBSCRIPTION_UPDATE_SUCCESS: function handleSubscriptionUpdate(subscription) {
-    const f88643 = (id) => id.id === fromServer.id;
+    const f88780 = (id) => id.id === fromServer.id;
     subscription = subscription.subscription;
     if (subscription.user_id === AuthenticationStore.getId()) {
       const fromServer = SubscriptionRecord.createFromServer(subscription);
@@ -276,7 +276,7 @@ obj = {
       const tmp7 = null != items3 && fromServer.type === hasOwnProperty.GUILD;
       if (tmp7) {
         let tmp15;
-        const findIndexResult = items3.findIndex(f88643);
+        const findIndexResult = items3.findIndex(f88780);
         if (-1 === findIndexResult) {
           const items = [fromServer];
           HermesBuiltin.arraySpread(items, items3, 1);
@@ -298,7 +298,7 @@ obj = {
       const tmp20 = null != _null && fromServer.type === hasOwnProperty.APPLICATION;
       if (tmp20) {
         let tmp28;
-        const findIndexResult1 = _null.findIndex(f88643);
+        const findIndexResult1 = _null.findIndex(f88780);
         if (-1 === findIndexResult1) {
           const items2 = [fromServer];
           HermesBuiltin.arraySpread(items2, _null, 1);

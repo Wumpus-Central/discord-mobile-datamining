@@ -1,9 +1,9 @@
-// === Module 6622: useGuildRoleMemberCounts ===
+// === Module 6629: useGuildRoleMemberCounts ===
 
-// Module 6622 (useGuildRoleMemberCounts)
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6624 */;
+// Module 6629 (useGuildRoleMemberCounts)
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6631 */;
 import react from "react" /* 19 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6623 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6630 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

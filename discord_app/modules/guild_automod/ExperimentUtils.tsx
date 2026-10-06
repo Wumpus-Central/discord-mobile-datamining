@@ -1,9 +1,9 @@
-// === Module 17680: guild_automod/ExperimentUtils ===
+// === Module 17726: guild_automod/ExperimentUtils ===
 
-// Module 17680 (guild_automod/ExperimentUtils)
+// Module 17726 (guild_automod/ExperimentUtils)
 import react from "react" /* 576 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6748 */;
-import AutomodExperiment from "AutomodExperiment" /* 17681 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6758 */;
+import AutomodExperiment from "AutomodExperiment" /* 17727 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 10955: QuestCopyHooks ===
+// === Module 10968: QuestCopyHooks ===
 
-// Module 10955 (QuestCopyHooks)
+// Module 10968 (QuestCopyHooks)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
@@ -9,25 +9,25 @@ import PremiumConstants from "PremiumConstants" /* 1379 */;
 import NumberUtils from "NumberUtils" /* 1888 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7206 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
-import QuestType from "QuestType" /* 7211 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8319 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8320 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9044 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 10005 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10010 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10911 */;
-import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10941 */;
-import SponsoredQuestUtils from "SponsoredQuestUtils" /* 10956 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 10957 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7219 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
+import QuestType from "QuestType" /* 7224 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8353 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9080 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 10018 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 10023 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10924 */;
+import MobileQuestVideoWatchCtaCopy from "MobileQuestVideoWatchCtaCopy" /* 10954 */;
+import SponsoredQuestUtils from "SponsoredQuestUtils" /* 10969 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 10970 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import UserStore from "UserStore" /* 1377 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -2196,7 +2196,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
     }
     return subtitle;
   }, items);
-  obj2 = quest(10010);
+  obj2 = quest(10023);
   return obj;
 });
 let result = size.fileFinishedImporting("modules/quests/hooks/QuestCopyHooks.tsx");

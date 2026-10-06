@@ -1,9 +1,9 @@
-// === Module 7884: useMaybeTrackProfileFrameViewed ===
+// === Module 7895: useMaybeTrackProfileFrameViewed ===
 
-// Module 7884 (useMaybeTrackProfileFrameViewed)
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7862 */;
+// Module 7895 (useMaybeTrackProfileFrameViewed)
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7873 */;
 import react from "react" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
 import size from "module_2" /* 2 */;
 
 let c2;

@@ -1,6 +1,6 @@
-// === Module 8595: createCompactNumberFormat ===
+// === Module 8630: createCompactNumberFormat ===
 
-// Module 8595 (createCompactNumberFormat)
+// Module 8630 (createCompactNumberFormat)
 import size from "module_2" /* 2 */;
 
 let map1, set;

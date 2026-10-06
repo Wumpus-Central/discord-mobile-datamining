@@ -1,15 +1,15 @@
-// === Module 13301: PremiumMarketingFloatingSubscribeButton ===
+// === Module 13320: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 13301 (PremiumMarketingFloatingSubscribeButton)
+// Module 13320 (PremiumMarketingFloatingSubscribeButton)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import Constants from "Constants" /* 1085 */;
-import timing from "timing" /* 4891 */;
+import timing from "timing" /* 4897 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -60,9 +60,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => 
   }
   const tmpResult = isVisible(504);
   stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
-  const tmp5Result = stateFromStores(13299);
-  ({ openPayment, buttonText } = tmp5Result(stateFromStores(6681).PREMIUM_MARKETING_FLOATING_CTA));
-  tmp5Result(stateFromStores(6681).PREMIUM_MARKETING_FLOATING_CTA);
+  const tmp5Result = stateFromStores(13318);
+  ({ openPayment, buttonText } = tmp5Result(stateFromStores(6688).PREMIUM_MARKETING_FLOATING_CTA));
+  tmp5Result(stateFromStores(6688).PREMIUM_MARKETING_FLOATING_CTA);
   if (cResult[2] !== backgroundColor) {
     const obj3 = tmp5(683)(backgroundColor);
     let num3 = 0;
@@ -80,7 +80,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => 
     if (cResult[5] === tmp12) {
       tmp14 = cResult[6];
     }
-    const tmpResult3 = isVisible(4612);
+    const tmpResult3 = isVisible(4618);
     class F {
       constructor() {
         let items;
@@ -110,7 +110,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => 
         return obj2;
       }
     }
-    let obj2 = { withTiming: isVisible(4891).withTiming, isVisible, useReducedMotion: stateFromStores, FADE_DURATION_MS, ENTER_TRANSLATE_PX: 12 };
+    let obj2 = { withTiming: isVisible(4897).withTiming, isVisible, useReducedMotion: stateFromStores, FADE_DURATION_MS, ENTER_TRANSLATE_PX: 12 };
     const useAnimatedStyle = tmpResult3.useAnimatedStyle;
     F.__closure = obj2;
     F.__workletHash = 4035217753570;
@@ -133,7 +133,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => 
     fn2.__closure = obj4;
     fn2.__workletHash = 3205490118921;
     fn2.__initData = __initData2;
-    const tmpResult4 = isVisible(4612);
+    const tmpResult4 = isVisible(4618);
     const animatedProps = tmpResult4.useAnimatedProps(fn2);
     if (cResult[7] === animatedStyle) {
       let tmp21;
@@ -338,7 +338,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => 
                 }
                 const obj6 = { animatedProps, style: tmp21, children: items2 };
                 items2 = [tmp24, tmp34];
-                const tmp38 = closure_8(stateFromStores(4612).View, obj6);
+                const tmp38 = closure_8(stateFromStores(4618).View, obj6);
                 cResult[26] = animatedProps;
                 cResult[27] = tmp34;
                 cResult[28] = tmp21;
@@ -412,7 +412,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => 
               }
             }
             const obj9 = { onPress: openPayment, text: buttonText };
-            const tmp33 = closure_7(stateFromStores(9648), obj9);
+            const tmp33 = closure_7(stateFromStores(9661), obj9);
             cResult[20] = buttonText;
             cResult[21] = openPayment;
             cResult[22] = tmp33;
@@ -428,7 +428,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((backgroundColor) => 
       }
       const obj10 = { pointerEvents: "none", style: tmp4.gradient, colors: tmp14, locations: tmp23, start: null, end: null };
       ({ START: obj8.start, END: obj8.end } = VerticalGradient);
-      const tmp27 = closure_7(stateFromStores(5605), obj10);
+      const tmp27 = closure_7(stateFromStores(5612), obj10);
       cResult[11] = tmp14;
       cResult[12] = tmp4.gradient;
       cResult[13] = tmp27;

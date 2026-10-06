@@ -1,6 +1,6 @@
-// === Module 5788: ApplicationCommandConstants ===
+// === Module 5795: ApplicationCommandConstants ===
 
-// Module 5788 (ApplicationCommandConstants)
+// Module 5795 (ApplicationCommandConstants)
 import intl10 from "intl" /* 1126 */;
 import Server from "Server" /* 1985 */;
 import size from "module_2" /* 2 */;

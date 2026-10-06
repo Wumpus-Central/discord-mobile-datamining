@@ -1,14 +1,14 @@
-// === Module 14988: QuestDockContentExpanded ===
+// === Module 15003: QuestDockContentExpanded ===
 
-// Module 14988 (QuestDockContentExpanded)
+// Module 15003 (QuestDockContentExpanded)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import spring from "spring" /* 5597 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import QuestDockUtils from "QuestDockUtils" /* 14895 */;
-import QuestDockConstants from "QuestDockConstants" /* 14896 */;
+import spring from "spring" /* 5604 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import QuestDockUtils from "QuestDockUtils" /* 14911 */;
+import QuestDockConstants from "QuestDockConstants" /* 14912 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

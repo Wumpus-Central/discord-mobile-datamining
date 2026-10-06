@@ -1,18 +1,18 @@
-// === Module 16328: YouBarAvatarDefault ===
+// === Module 16368: YouBarAvatarDefault ===
 
-// Module 16328 (YouBarAvatarDefault)
+// Module 16368 (YouBarAvatarDefault)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
-import useToken from "useToken" /* 4580 */;
-import ReactionIcon2 from "ReactionIcon" /* 8411 */;
-import ClipView from "ClipView" /* 8469 */;
+import useToken from "useToken" /* 4586 */;
+import ReactionIcon2 from "ReactionIcon" /* 8444 */;
+import ClipView from "ClipView" /* 8502 */;
 import react from "react" /* 19 */;
-import YouBarConstants from "YouBarConstants" /* 14899 */;
+import YouBarConstants from "YouBarConstants" /* 14915 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

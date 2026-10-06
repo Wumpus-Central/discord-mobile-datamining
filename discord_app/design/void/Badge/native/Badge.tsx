@@ -1,6 +1,6 @@
-// === Module 13943: Badge/Badge ===
+// === Module 13961: Badge/Badge ===
 
-// Module 13943 (Badge/Badge)
+// Module 13961 (Badge/Badge)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
@@ -8,13 +8,13 @@ import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import NumberUtils from "NumberUtils" /* 1888 */;
-import shared from "shared" /* 4729 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8912 */;
+import shared from "shared" /* 4735 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8941 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import BadgeConstants from "BadgeConstants" /* 1190 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

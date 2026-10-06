@@ -1,19 +1,19 @@
-// === Module 7500: PressableNavigatorBackIcon ===
+// === Module 7511: PressableNavigatorBackIcon ===
 
-// Module 7500 (PressableNavigatorBackIcon)
+// Module 7511 (PressableNavigatorBackIcon)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7501 */;
-import MaskedBadgeDefault from "MaskedBadge" /* 7502 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7504 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7512 */;
+import MaskedBadgeDefault from "MaskedBadge" /* 7513 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7515 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7121 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -127,12 +127,12 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
       tmp18 = tmp19;
     }
   }
-  const tmpResult3 = tmp(4580);
+  const tmpResult3 = tmp(4586);
   let backgroundColor = tmpResult3.useToken(tmp4);
-  const useGradientValue = tmp(4696).useGradientValue;
-  tmp(4696);
+  const useGradientValue = tmp(4702).useGradientValue;
+  tmp(4702);
   if (backgroundColor == null) {
-    backgroundColor = useGradientValue(tmp(4696).GradientPercentage.START);
+    backgroundColor = useGradientValue(tmp(4702).GradientPercentage.START);
   }
   if (backgroundColor == null) {
     backgroundColor = tmp11.maskStroke.backgroundColor;
@@ -200,7 +200,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
             const obj7 = { children: closure_11(PressableOpacity, obj8) };
             obj8 = { ref, accessibilityRole: "button", accessibilityLabel: tmp23, onPress: tmp22, style: tmp11.actionButtonPressable, children: tmp35 };
             const tmp43 = PressableNavigatorButtonWrapperDefault;
-            PressableOpacity = tmp(5909).PressableOpacity;
+            PressableOpacity = tmp(5916).PressableOpacity;
             const merged = Object.assign(tmp7);
             const tmp47 = closure_11(tmp43, obj7);
             cResult[24] = tmp22;

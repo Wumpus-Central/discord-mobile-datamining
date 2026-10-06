@@ -1,21 +1,21 @@
-// === Module 9805: MoreTipsModal ===
+// === Module 9818: MoreTipsModal ===
 
-// Module 9805 (MoreTipsModal)
+// Module 9818 (MoreTipsModal)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
-import MetricEvents from "MetricEvents" /* 5414 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9798 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 9806 */;
-import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 9809 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
+import MetricEvents from "MetricEvents" /* 5421 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 9819 */;
+import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 9822 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9786 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

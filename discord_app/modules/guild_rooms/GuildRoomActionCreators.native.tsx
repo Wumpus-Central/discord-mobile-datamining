@@ -1,7 +1,7 @@
-// === Module 5046: GuildRoomActionCreators ===
+// === Module 5052: GuildRoomActionCreators ===
 
-// Module 5046 (GuildRoomActionCreators)
-import guildRoomConnect2 from "guildRoomConnect" /* 5047 */;
+// Module 5052 (GuildRoomActionCreators)
+import guildRoomConnect2 from "guildRoomConnect" /* 5053 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

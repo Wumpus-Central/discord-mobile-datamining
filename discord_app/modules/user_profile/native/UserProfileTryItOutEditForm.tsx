@@ -1,31 +1,31 @@
-// === Module 15698: UserProfileTryItOutEditForm ===
+// === Module 15734: UserProfileTryItOutEditForm ===
 
-// Module 15698 (UserProfileTryItOutEditForm)
+// Module 15734 (UserProfileTryItOutEditForm)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import native from "native" /* 4589 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import UserProfileActionCreators from "UserProfileActionCreators" /* 7838 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 7840 */;
-import useDisplayProfileDefault from "useDisplayProfile" /* 7857 */;
-import useProfileThemeDefault from "useProfileTheme" /* 7899 */;
-import useUserProfileColors from "useUserProfileColors" /* 7910 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7913 */;
-import useBadgesDefault from "useBadges" /* 7914 */;
-import userSettingToActivity from "userSettingToActivity" /* 10826 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10827 */;
-import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 10842 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10843 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 14429 */;
-import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 14435 */;
-import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 14485 */;
-import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 15699 */;
+import native from "native" /* 4595 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import UserProfileActionCreators from "UserProfileActionCreators" /* 7849 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 7851 */;
+import useDisplayProfileDefault from "useDisplayProfile" /* 7868 */;
+import useProfileThemeDefault from "useProfileTheme" /* 7910 */;
+import useUserProfileColors from "useUserProfileColors" /* 7921 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7924 */;
+import useBadgesDefault from "useBadges" /* 7925 */;
+import userSettingToActivity from "userSettingToActivity" /* 10839 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 10840 */;
+import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 10855 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10856 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 14445 */;
+import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 14451 */;
+import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 14501 */;
+import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 15735 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -43,20 +43,20 @@ function EditableBanner(user) {
   user = user.user;
   const merged = Object.assign(user, Object.assign({ user: 0 }));
   let analyticsLocations;
-  let tmp2 = analyticsLocations(6657);
-  analyticsLocations = tmp2(analyticsLocations(6681).EDIT_BANNER).analyticsLocations;
+  let tmp2 = analyticsLocations(6664);
+  analyticsLocations = tmp2(analyticsLocations(6688).EDIT_BANNER).analyticsLocations;
   const items = [analyticsLocations, user];
   const callback = react.useCallback(() => {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     const obj = { user, analyticsLocations, onBannerChange: UserProfileActionCreators.setTryItOutBanner, isTryItOut: true };
     ActionSheetActionCreatorsDefault;
-    const tmp2 = asyncRequire(14418, dependencyMap.paths);
+    const tmp2 = asyncRequire(14434, dependencyMap.paths);
     openLazy(tmp2, "Change Banner", obj);
   }, items);
   let obj = { value: analyticsLocations, children: closure_7(tmp4, obj2) };
-  const AnalyticsLocationProvider = user(6657).AnalyticsLocationProvider;
+  const AnalyticsLocationProvider = user(6664).AnalyticsLocationProvider;
   obj2 = { user, onPressEdit: callback, editButtonAccessibilityLabel: intl.string(user(1126).t.VqsHy0), bannerSafeArea: 12, isUserProfileEditingRefresh: true };
-  tmp4 = analyticsLocations(14416);
+  tmp4 = analyticsLocations(14432);
   const merged1 = Object.assign(merged);
   intl = user(1126).intl;
   return closure_7(AnalyticsLocationProvider, obj);

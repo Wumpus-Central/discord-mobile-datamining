@@ -1,17 +1,17 @@
-// === Module 9045: handlePressJoinActivity ===
+// === Module 9081: handlePressJoinActivity ===
 
-// Module 9045 (handlePressJoinActivity)
+// Module 9081 (handlePressJoinActivity)
 import intl9 from "intl" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 9013 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9046 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 9046 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9082 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import size from "module_2" /* 2 */;
 
@@ -202,7 +202,7 @@ let obj = function _maybeJoinEmbeddedActivity() {
       });
       return obj(...arguments);
     };
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

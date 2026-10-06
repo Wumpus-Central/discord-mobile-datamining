@@ -1,7 +1,7 @@
-// === Module 13714: resolveShareSendOutcome ===
+// === Module 13732: resolveShareSendOutcome ===
 
-// Module 13714 (resolveShareSendOutcome)
-import formatResults from "formatResults" /* 10711 */;
+// Module 13732 (resolveShareSendOutcome)
+import formatResults from "formatResults" /* 10724 */;
 import size from "module_2" /* 2 */;
 
 let set;
@@ -37,7 +37,7 @@ export const withoutSentDestinations = function withoutSentDestinations(arr, arr
     const _Set = Set;
     const self = this;
     const self2 = this;
-    set = new Set(arr2.map(set(10711).destinationKey));
+    set = new Set(arr2.map(set(10724).destinationKey));
     return arr.filter((item) => {
       const has = set.has;
       const obj = formatResults;

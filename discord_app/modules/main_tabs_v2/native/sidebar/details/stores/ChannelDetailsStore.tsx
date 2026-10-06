@@ -1,6 +1,6 @@
-// === Module 7511: ChannelDetailsStore ===
+// === Module 7522: ChannelDetailsStore ===
 
-// Module 7511 (ChannelDetailsStore)
+// Module 7522 (ChannelDetailsStore)
 import react from "react" /* 576 */;
 import react_native from "react-native" /* 1259 */;
 import module_570 from "module_570" /* 570 */;

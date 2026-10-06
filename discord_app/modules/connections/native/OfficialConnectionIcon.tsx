@@ -1,19 +1,19 @@
-// === Module 11183: OfficialConnectionIcon ===
+// === Module 11196: OfficialConnectionIcon ===
 
-// Module 11183 (OfficialConnectionIcon)
+// Module 11196 (OfficialConnectionIcon)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import native from "native" /* 1188 */;
-import useRoleIconProps2 from "useRoleIconProps" /* 6685 */;
-import RoleIconDefault from "RoleIcon" /* 6704 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11184 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 11185 */;
+import useRoleIconProps2 from "useRoleIconProps" /* 6692 */;
+import RoleIconDefault from "RoleIcon" /* 6711 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11197 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 11198 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 11781: application_commands/ApplicationCommandValidationUtils ===
+// === Module 11795: application_commands/ApplicationCommandValidationUtils ===
 
-// Module 11781 (application_commands/ApplicationCommandValidationUtils)
+// Module 11795 (application_commands/ApplicationCommandValidationUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandValidationUtils.tsx");

@@ -1,6 +1,6 @@
-// === Module 15526: CheckpointNavigation ===
+// === Module 15542: CheckpointNavigation ===
 
-// Module 15526 (CheckpointNavigation)
+// Module 15542 (CheckpointNavigation)
 import size from "module_2" /* 2 */;
 
 const obj = { HOME: "home", INTRODUCTION: "introduction", VOICE_STATS: "voice_stats", VOICE_GENERAL: "voice_general", VOICE_FACE: "voice_face", MESSAGES_STATS: "messages_stats", MESSAGES_GENERAL: "messages_general", MESSAGES_OUTFIT: "messages_outfit", SERVERS_STATS: "servers_stats", SERVERS_HEADWEAR: "servers_headwear", EMOJI_STATS: "emoji_stats", EMOJI_GENERAL: "emoji_general", EMOJI_SHOES: "emoji_shoes", GAMES_STATS: "games_stats", GAMES_GENERAL: "games_general", GAMES_WEARABLE: "games_wearable", GAME_TIME_STATS: "game_time_stats", GAME_TIME_GENERAL: "game_time_general", GAME_TIME_AURA: "game_time_aura", SQUAD: "squad", SIDEKICK: "sidekick", FINALIZE_CHARACTER: "finalize_character", SUMMARY: "summary", PROFILE_WIDGET: "profile_widget" };
@@ -14,8 +14,8 @@ const result = size.fileFinishedImporting("modules/checkpoint/CheckpointNavigati
 
 export const CheckpointFlow = { SHARED_DATA: "shared_data", NO_SHARED_DATA: "no_shared_data" };
 export const CheckpointRoute = obj;
-export const isCheckpointCustomizationRoute = function isCheckpointCustomizationRoute(arg0) {
-  return set.has(arg0);
+export const isCheckpointCustomizationRoute = function isCheckpointCustomizationRoute(activeRoute) {
+  return set.has(activeRoute);
 };
 export const CheckpointCharacterStage = obj2;
 export const CheckpointStatsScreen = obj3;

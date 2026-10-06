@@ -1,6 +1,6 @@
-// === Module 10063: ChannelSettingsStore ===
+// === Module 10076: ChannelSettingsStore ===
 
-// Module 10063 (ChannelSettingsStore)
+// Module 10076 (ChannelSettingsStore)
 import _mod12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -10,10 +10,10 @@ import ChannelRecord from "ChannelRecord" /* 2055 */;
 import ThreadSortOrder from "ThreadSortOrder" /* 2061 */;
 import ForumLayout from "ForumLayout" /* 2062 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import ReactionUtils from "ReactionUtils" /* 4521 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4523 */;
-import InviteRecord from "InviteRecord" /* 8056 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import ReactionUtils from "ReactionUtils" /* 4527 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4529 */;
+import InviteRecord from "InviteRecord" /* 8066 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
@@ -26,13 +26,13 @@ let FormStates;
 let closure_14;
 let closure_15;
 let map1;
-const f102548 = (body) => {
+const f102700 = (body) => {
   c21 = false;
   const obj = DispatcherDefault;
   const obj2 = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
   obj.dispatch(obj2);
 };
-const f102549 = () => {
+const f102701 = () => {
   c21 = false;
   return false;
 };
@@ -108,7 +108,7 @@ function normalizeChannelPropertyForCompare(item, toJSResult, type) {
 function _createInvite(code) {
   let fromInviteGuildResult;
   let tmp2;
-  const obj = { code: code.code, temporary: code.temporary, revoked: code.revoked, inviter: tmp2, channel: closure_9(code.channel), guild: fromInviteGuildResult, uses: null, maxUses: null, maxAge: null, createdAt: _modDef4461(code.created_at), type: null, roles: null };
+  const obj = { code: code.code, temporary: code.temporary, revoked: code.revoked, inviter: tmp2, channel: closure_9(code.channel), guild: fromInviteGuildResult, uses: null, maxUses: null, maxAge: null, createdAt: _modDef4467(code.created_at), type: null, roles: null };
   tmp2 = null;
   if (null != code.inviter) {
     const self = this;
@@ -296,7 +296,7 @@ invites = {
         let obj2 = { url: closure_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
         const get = HTTP.get;
         const value = get(obj2);
-        value.then(f102548, f102549);
+        value.then(f102700, f102701);
       }
       return true;
     }
@@ -463,7 +463,7 @@ invites = {
       const get = HTTP.get;
       const obj = { url: closure_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
       const value = get(obj);
-      value.then(f102548, f102549);
+      value.then(f102700, f102701);
     }
   },
   CHANNEL_SETTINGS_LOADED_INVITES: function handleLoadedInvites(invites) {

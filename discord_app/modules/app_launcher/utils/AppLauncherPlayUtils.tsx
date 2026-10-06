@@ -1,6 +1,6 @@
-// === Module 10945: AppLauncherPlayUtils ===
+// === Module 10958: AppLauncherPlayUtils ===
 
-// Module 10945 (AppLauncherPlayUtils)
+// Module 10958 (AppLauncherPlayUtils)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
@@ -56,7 +56,7 @@ let obj = function _launchActivityInBotDM() {
             channelId = undefined;
             customId = 1;
             referrerId = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === customId) {
           if (arg0 === 1) {

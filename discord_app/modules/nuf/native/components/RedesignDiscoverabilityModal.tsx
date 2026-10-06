@@ -1,19 +1,19 @@
-// === Module 17590: RedesignDiscoverabilityModal ===
+// === Module 17636: RedesignDiscoverabilityModal ===
 
-// Module 17590 (RedesignDiscoverabilityModal)
+// Module 17636 (RedesignDiscoverabilityModal)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import ContactSyncModalStore from "ContactSyncModalStore" /* 12326 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12333 */;
-import NUFActionCreators from "NUFActionCreators" /* 12353 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import ContactSyncModalStore from "ContactSyncModalStore" /* 12341 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12348 */;
+import NUFActionCreators from "NUFActionCreators" /* 12368 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -221,7 +221,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) =>
       cResult[11] = tmp18;
       tmp15 = tmp18;
     }
-    const tmp14 = jsx(allowPhone(12346), { onNext: tmp9, loading: false, initialName: name });
+    const tmp14 = jsx(allowPhone(12361), { onNext: tmp9, loading: false, initialName: name });
     cResult[6] = tmp9;
     cResult[7] = name;
     cResult[8] = tmp14;
@@ -259,7 +259,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onComplete) =>
     const result = obj.startContactSyncForDiscoverability(arg0);
     onComplete();
   }, items1);
-  allowPhone(12346);
+  allowPhone(12361);
   if (name == null) {
     name = "";
   }
@@ -349,7 +349,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     }
     return tmp10;
   }
-  const Navigator = tmp(6496).Navigator;
+  const Navigator = tmp(6503).Navigator;
   const tmp11 = <Navigator headerStyle={header} screens={tmp7} initialRouteName={require("ConstantsIOS").DiscoverabilityScenes.LANDING} headerBackTitle={tmp8} />;
   cResult[5] = tmp4.header;
   cResult[6] = tmp7;
@@ -359,7 +359,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   const onComplete = route.route.params.onComplete;
   let tmp = closure_8();
   const items = [onComplete];
-  const Navigator = onComplete(6496).Navigator;
+  const Navigator = onComplete(6503).Navigator;
   const intl = onComplete(1126).intl;
   return <Navigator headerStyle={tmp.header} screens={react.useMemo(() => {
     if (null == onComplete) {

@@ -1,13 +1,13 @@
-// === Module 7897: FramePreviewOverrideFrame ===
+// === Module 7908: FramePreviewOverrideFrame ===
 
-// Module 7897 (FramePreviewOverrideFrame)
+// Module 7908 (FramePreviewOverrideFrame)
 import Fragment from "Fragment" /* 21 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import Constants from "Constants" /* 6707 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import Constants from "Constants" /* 6714 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ProfileFrameConstants from "ProfileFrameConstants" /* 7893 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import ProfileFrameConstants from "ProfileFrameConstants" /* 7904 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

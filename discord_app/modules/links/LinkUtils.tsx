@@ -1,11 +1,11 @@
-// === Module 5044: LinkUtils ===
+// === Module 5050: LinkUtils ===
 
-// Module 5044 (LinkUtils)
+// Module 5050 (LinkUtils)
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import RegexUtilsDefault from "RegexUtils" /* 4874 */;
+import RegexUtilsDefault from "RegexUtils" /* 4880 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

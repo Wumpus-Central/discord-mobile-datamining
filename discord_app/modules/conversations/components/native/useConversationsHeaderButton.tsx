@@ -1,13 +1,13 @@
-// === Module 7547: useConversationsHeaderButton ===
+// === Module 7558: useConversationsHeaderButton ===
 
-// Module 7547 (useConversationsHeaderButton)
+// Module 7558 (useConversationsHeaderButton)
 import intl2 from "intl" /* 1126 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7550 */;
-import PaperIcon from "PaperIcon" /* 7553 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7561 */;
+import PaperIcon from "PaperIcon" /* 7565 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7103 */;
-import ConversationConstants from "ConversationConstants" /* 7105 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7116 */;
+import ConversationConstants from "ConversationConstants" /* 7118 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

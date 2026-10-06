@@ -1,15 +1,15 @@
-// === Module 11798: ChatInputExpressionButton ===
+// === Module 11812: ChatInputExpressionButton ===
 
-// Module 11798 (ChatInputExpressionButton)
+// Module 11812 (ChatInputExpressionButton)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import useToken from "useToken" /* 4580 */;
-import Pressables from "Pressables" /* 5909 */;
+import useToken from "useToken" /* 4586 */;
+import Pressables from "Pressables" /* 5916 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -74,7 +74,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     } else {
       tmp17 = cResult[7];
     }
-    const tmp5Result = importDefault(showKeyboardIcon ? 11059 : 8412);
+    const tmp5Result = importDefault(showKeyboardIcon ? 11072 : 8445);
     if (cResult[8] === tmp9.expressionButtonIconTint) {
       if (cResult[9] === token1) {
         let tmp19;
@@ -146,7 +146,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     tmp12 = bound;
   }
   const intl = intl2.intl;
-  ({ size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11059 : 8412) });
+  ({ size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11072 : 8445) });
   const Icon = native.Icon;
   return <PressableOpacity ref={react.useRef(null)} style={items1} hitSlop={tmp12} accessibilityRole="button" accessibilityLabel={intl.string(intl2.t.iZ7Mz9)} accessibilityState={{ expanded: flag }} onPress={callback}>{null}</PressableOpacity>;
 }));

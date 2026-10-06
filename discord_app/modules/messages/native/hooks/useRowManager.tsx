@@ -1,13 +1,13 @@
-// === Module 11561: useRowManager ===
+// === Module 11574: useRowManager ===
 
-// Module 11561 (useRowManager)
+// Module 11574 (useRowManager)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import flow_Client from "flow/Client" /* 4787 */;
-import computeScrollDataDefault from "computeScrollData" /* 9988 */;
-import NativeChatUtils from "NativeChatUtils" /* 9989 */;
-import createChannelStreamDefault from "createChannelStream" /* 11562 */;
-import createConversationHeader from "createConversationHeader" /* 11563 */;
+import flow_Client from "flow/Client" /* 4793 */;
+import computeScrollDataDefault from "computeScrollData" /* 10001 */;
+import NativeChatUtils from "NativeChatUtils" /* 10002 */;
+import createChannelStreamDefault from "createChannelStream" /* 11575 */;
+import createConversationHeader from "createConversationHeader" /* 11576 */;
 import size from "module_2" /* 2 */;
 
 const NativeChatUtilsDefault = NativeChatUtils;

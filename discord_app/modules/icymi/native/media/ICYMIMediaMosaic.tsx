@@ -1,31 +1,31 @@
-// === Module 16439: ICYMIMediaMosaic ===
+// === Module 16479: ICYMIMediaMosaic ===
 
-// Module 16439 (ICYMIMediaMosaic)
+// Module 16479 (ICYMIMediaMosaic)
 import _mod12 from "module_12" /* 12 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 7939 */;
-import common_VideoDefault from "common/Video" /* 7983 */;
-import ICYMITypes from "ICYMITypes" /* 8024 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8029 */;
-import ICYMIContext from "ICYMIContext" /* 16395 */;
-import ThumbhashUtils from "ThumbhashUtils" /* 16440 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 7950 */;
+import common_VideoDefault from "common/Video" /* 7993 */;
+import ICYMITypes from "ICYMITypes" /* 8034 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
+import ICYMIContext from "ICYMIContext" /* 16435 */;
+import ThumbhashUtils from "ThumbhashUtils" /* 16480 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import ICYMIStore from "ICYMIStore" /* 8011 */;
+import ICYMIStore from "ICYMIStore" /* 8021 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -198,16 +198,16 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((isSpoiler) => 
     const obj = { opacity: withTiming(num, { duration: 150 }) };
     return obj;
   };
-  const obj2 = imageFinishedLoading(4612);
-  fn.__closure = { withTiming: imageFinishedLoading(4891).withTiming, imageFinishedLoading };
+  const obj2 = imageFinishedLoading(4618);
+  fn.__closure = { withTiming: imageFinishedLoading(4897).withTiming, imageFinishedLoading };
   fn.__workletHash = 7803531897566;
   fn.__initData = __initData;
-  ({ withTiming: imageFinishedLoading(4891).withTiming, imageFinishedLoading });
+  ({ withTiming: imageFinishedLoading(4897).withTiming, imageFinishedLoading });
   const animatedStyle = obj2.useAnimatedStyle(fn);
   if (null != source.placeholder) {
     let tmp9;
     if (cResult[0] !== source.placeholder) {
-      const tmpResult = tmp(16440);
+      const tmpResult = tmp(16480);
       const thumbhashImageFromPlaceholder = tmpResult.createThumbhashImageFromPlaceholder(source.placeholder);
       let num = 0;
       cResult[0] = source.placeholder;
@@ -332,7 +332,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((isSpoiler) => 
   const isSpoiler = source.isSpoiler;
   const tmp = closure_18();
   [imageFinishedLoading, dependencyMap] = react.useState(false);
-  let obj = source(4612);
+  let obj = source(4618);
   const fn = function h() {
     let num = 1;
     const withTiming = timing.withTiming;
@@ -343,7 +343,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((isSpoiler) => 
     const obj = { opacity: withTiming(num, { duration: 150 }) };
     return obj;
   };
-  let obj2 = { withTiming: source(4891).withTiming, imageFinishedLoading };
+  let obj2 = { withTiming: source(4897).withTiming, imageFinishedLoading };
   fn.__closure = obj2;
   fn.__workletHash = 8852576862173;
   fn.__initData = __initData2;
@@ -359,9 +359,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((isSpoiler) => 
       return size;
     }
   }, items);
-  const obj3 = { style: items1, children: closure_15(imageFinishedLoading(5974), obj4) };
+  const obj3 = { style: items1, children: closure_15(imageFinishedLoading(5981), obj4) };
   items1 = [animatedStyle, tmp.thumbhashMedia];
-  const View = imageFinishedLoading(4612).View;
+  const View = imageFinishedLoading(4618).View;
   obj4 = { source: memo, style: items2 };
   items2 = [style, tmp.media, dimensions];
   const items3 = [closure_15(View, obj3), ];
@@ -375,7 +375,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? ((isSpoiler) => 
   };
   items4 = [tmp.media, style, dimensions];
   num = 0;
-  const Image = imageFinishedLoading(4612).Image;
+  const Image = imageFinishedLoading(4618).Image;
   if (isSpoiler) {
     num = 100;
   }
@@ -995,7 +995,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((end) => {
             class R {
               constructor(arg0, arg1) {
                 obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-                return jsx(f73915, obj, arg1);
+                return jsx(f74018, obj, arg1);
               }
             }
             const obj2 = { style: tmp7, children: tmp8 };
@@ -1015,7 +1015,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((end) => {
           class R {
             constructor(arg0, arg1) {
               obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-              return jsx(f73915, obj, arg1);
+              return jsx(f74018, obj, arg1);
             }
           }
           cResult[8] = handlePressMedia;
@@ -1026,7 +1026,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? ((end) => {
         class R {
           constructor(arg0, arg1) {
             obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-            return jsx(f73915, obj, arg1);
+            return jsx(f74018, obj, arg1);
           }
         }
         cResult[11] = tmp6;

@@ -1,14 +1,14 @@
-// === Module 15973: useSuggestedFriends ===
+// === Module 16012: useSuggestedFriends ===
 
-// Module 15973 (useSuggestedFriends)
+// Module 16012 (useSuggestedFriends)
 import _modDef12 from "module_12" /* 12 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react2 from "react" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import FriendsScreenConstants from "FriendsScreenConstants" /* 12348 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import FriendsScreenConstants from "FriendsScreenConstants" /* 12363 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7146 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7159 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

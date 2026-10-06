@@ -1,6 +1,6 @@
-// === Module 17908: useCreateCreatorMonetizationEnableRequest ===
+// === Module 17954: useCreateCreatorMonetizationEnableRequest ===
 
-// Module 17908 (useCreateCreatorMonetizationEnableRequest)
+// Module 17954 (useCreateCreatorMonetizationEnableRequest)
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;

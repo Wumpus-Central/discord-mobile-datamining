@@ -1,8 +1,8 @@
-// === Module 13072: getApplicationFromMessage ===
+// === Module 13091: getApplicationFromMessage ===
 
-// Module 13072 (getApplicationFromMessage)
-import SpotifyConstants from "SpotifyConstants" /* 8016 */;
-import SpotifyApplicationRecord from "SpotifyApplicationRecord" /* 13069 */;
+// Module 13091 (getApplicationFromMessage)
+import SpotifyConstants from "SpotifyConstants" /* 8026 */;
+import SpotifyApplicationRecord from "SpotifyApplicationRecord" /* 13088 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import size from "module_2" /* 2 */;
 

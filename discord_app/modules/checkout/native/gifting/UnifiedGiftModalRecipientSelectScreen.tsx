@@ -1,13 +1,13 @@
-// === Module 10591: UnifiedGiftModalRecipientSelectScreen ===
+// === Module 10604: UnifiedGiftModalRecipientSelectScreen ===
 
-// Module 10591 (UnifiedGiftModalRecipientSelectScreen)
+// Module 10604 (UnifiedGiftModalRecipientSelectScreen)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10559 */;
-import UserRowConstants from "UserRowConstants" /* 10592 */;
+import UnifiedGiftModalTypes from "UnifiedGiftModalTypes" /* 10572 */;
+import UserRowConstants from "UserRowConstants" /* 10605 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -45,7 +45,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((setRecipientUser) 
     cResult[5] = tmp10;
     tmp7 = tmp10;
   }
-  const tmp6 = jsx(navigation(10593), {
+  const tmp6 = jsx(navigation(10606), {
     onSelectUser(arg0) {
       setRecipientUser(arg0);
       navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL, undefined, { pop: true });

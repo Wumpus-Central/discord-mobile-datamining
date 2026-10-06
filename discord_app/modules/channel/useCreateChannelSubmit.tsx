@@ -1,7 +1,7 @@
-// === Module 9212: useCreateChannelSubmit ===
+// === Module 9247: useCreateChannelSubmit ===
 
-// Module 9212 (useCreateChannelSubmit)
-import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9213 */;
+// Module 9247 (useCreateChannelSubmit)
+import CreateChannelActionCreatorsDefault from "CreateChannelActionCreators" /* 9248 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -84,7 +84,7 @@ export default function useCreateChannelSubmit(arg0) {
             guild_id = undefined;
             c7 = 1;
             applicationId = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (permissionOverwrites === 1) {

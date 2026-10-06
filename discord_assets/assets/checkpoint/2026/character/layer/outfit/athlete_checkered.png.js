@@ -1,6 +1,6 @@
-// === Module 5204: ? ===
+// === Module 5211: ? ===
 
-// Module 5204
+// Module 5211
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/outfit/athlete_checkered.png.js");

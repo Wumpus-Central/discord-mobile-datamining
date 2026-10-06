@@ -1,25 +1,25 @@
-// === Module 14460: EditProfileFrameActionSheet ===
+// === Module 14476: EditProfileFrameActionSheet ===
 
-// Module 14460 (EditProfileFrameActionSheet)
+// Module 14476 (EditProfileFrameActionSheet)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7060 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 7835 */;
-import useShopProductItems from "useShopProductItems" /* 7842 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 7844 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
-import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 10998 */;
-import EditProfileFrameSection from "EditProfileFrameSection" /* 14462 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7073 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 7846 */;
+import useShopProductItems from "useShopProductItems" /* 7853 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 7855 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 11011 */;
+import EditProfileFrameSection from "EditProfileFrameSection" /* 14478 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -60,16 +60,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ user, currentProfileFrame, guildId } = arg0);
   const tmp4 = closure_12();
   let str = user.id;
-  const tmp6 = selectedProfileFrame(7857);
+  const tmp6 = selectedProfileFrame(7868);
   if (str == null) {
     str = "";
   }
   const tmp6Result = tmp6(str);
   [selectedProfileFrame, tmp9] = react.useState(currentProfileFrame);
-  const tmpResult = guildId(7841);
+  const tmpResult = guildId(7852);
   const bottomSheetRef = tmpResult.useBottomSheetRef().bottomSheetRef;
-  const tmp5Result = selectedProfileFrame(6657);
-  const analyticsLocations = tmp5Result(tmp5(6681).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
+  const tmp5Result = selectedProfileFrame(6664);
+  const analyticsLocations = tmp5Result(tmp5(6688).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
   if (cResult[0] !== tmp6Result) {
     let tmp12 = null != tmp6Result;
     if (tmp12) {
@@ -354,7 +354,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[8] = selectedProfileFrame;
     cResult[9] = T;
   }
-  const obj5 = { type: selectedProfileFrame(6681).EDIT_PROFILE_FRAME_SHEET, guild_id: guildId, profile_has_nitro_customization: tmp11 };
+  const obj5 = { type: selectedProfileFrame(6688).EDIT_PROFILE_FRAME_SHEET, guild_id: guildId, profile_has_nitro_customization: tmp11 };
   cResult[2] = guildId;
   cResult[3] = tmp11;
   cResult[4] = obj5;
@@ -870,7 +870,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((previewSkuId) 
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
   const tmp = closure_12();
-  const tmp2 = purchase(7844)(previewSkuId);
+  const tmp2 = purchase(7855)(previewSkuId);
   const product = tmp2.product;
   let c0 = product;
   purchase = tmp2.purchase;
@@ -894,10 +894,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? ((previewSkuId) 
     }
     return tmp3;
   }, items);
-  items1 = [closure_9(purchase(10998), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
+  items1 = [closure_9(purchase(11011), { user, guildId, profileFrame: memo, maxWidth: 280 }), ];
   const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: items2 };
   items2 = [, ];
-  const tmp4 = purchase(5605);
+  const tmp4 = purchase(5612);
   items2[0] = "" + tmp.previewGradient.color + "00";
   items2[1] = tmp.previewGradient.color;
   items1[1] = closure_9(tmp4, obj2);

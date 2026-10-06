@@ -1,15 +1,15 @@
-// === Module 15130: DefaultGuildThemePreferenceSetting ===
+// === Module 15145: DefaultGuildThemePreferenceSetting ===
 
-// Module 15130 (DefaultGuildThemePreferenceSetting)
+// Module 15145 (DefaultGuildThemePreferenceSetting)
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4772 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4778 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;

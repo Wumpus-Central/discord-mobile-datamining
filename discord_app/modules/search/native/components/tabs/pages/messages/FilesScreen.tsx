@@ -1,11 +1,11 @@
-// === Module 16886: FilesScreen ===
+// === Module 16911: FilesScreen ===
 
-// Module 16886 (FilesScreen)
+// Module 16911 (FilesScreen)
 import Fragment from "Fragment" /* 21 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11966 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 16881 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 11980 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 16906 */;
 import react from "react" /* 19 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

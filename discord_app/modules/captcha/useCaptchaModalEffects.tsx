@@ -1,6 +1,6 @@
-// === Module 17427: useCaptchaModalEffects ===
+// === Module 17456: useCaptchaModalEffects ===
 
-// Module 17427 (useCaptchaModalEffects)
+// Module 17456 (useCaptchaModalEffects)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import react from "react" /* 19 */;
@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onReject) => {
   } else {
     tmp3 = cResult[1];
   }
-  str(5590)(tmp3);
+  str(5597)(tmp3);
   if (cResult[2] !== str) {
     const fn2 = function o() {
       let ref;
@@ -89,7 +89,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onReject) => {
     analyticsType = "Guild Join Captcha";
   }
   dependencyMap = react.useRef(true);
-  const tmp = analyticsType(5590)(() => {
+  const tmp = analyticsType(5597)(() => {
     let ref;
     return () => {
       if (ref.current) {

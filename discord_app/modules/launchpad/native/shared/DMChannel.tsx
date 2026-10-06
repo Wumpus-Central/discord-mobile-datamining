@@ -1,27 +1,27 @@
-// === Module 17406: shared/DMChannel ===
+// === Module 17435: shared/DMChannel ===
 
-// Module 17406 (shared/DMChannel)
+// Module 17435 (shared/DMChannel)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 4901 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import useFontScale from "useFontScale" /* 5602 */;
-import Pressables from "Pressables" /* 5909 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7514 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10651 */;
-import ChannelRowPreview2 from "ChannelRowPreview" /* 12488 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15137 */;
-import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16285 */;
-import renderChannelItemDefault from "renderChannelItem" /* 16831 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16832 */;
-import UnreadBadgeDefault from "UnreadBadge" /* 17398 */;
-import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17400 */;
+import transitionToChannel from "transitionToChannel" /* 4907 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import useFontScale from "useFontScale" /* 5609 */;
+import Pressables from "Pressables" /* 5916 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7525 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
+import ChannelRowPreview2 from "ChannelRowPreview" /* 12503 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15152 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 16325 */;
+import renderChannelItemDefault from "renderChannelItem" /* 16852 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16853 */;
+import UnreadBadgeDefault from "UnreadBadge" /* 17427 */;
+import renderChannelPressableWrapperDefault from "renderChannelPressableWrapper" /* 17429 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

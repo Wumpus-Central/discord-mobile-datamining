@@ -1,10 +1,10 @@
-// === Module 11816: AppLauncherChannelOption ===
+// === Module 11830: AppLauncherChannelOption ===
 
-// Module 11816 (AppLauncherChannelOption)
+// Module 11830 (AppLauncherChannelOption)
 import Fragment from "Fragment" /* 21 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 11817 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 11831 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -81,7 +81,7 @@ export default function AppLauncherChannelOption(option) {
         },
         onActionSheetDismiss: _slicedToArray
       };
-      const tmp4 = asyncRequire(11817, dependencyMap.paths);
+      const tmp4 = asyncRequire(11831, dependencyMap.paths);
       openLazy(tmp4, AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, obj);
     },
     autoFocus

@@ -1,16 +1,16 @@
-// === Module 13119: AppDMOptionsBottomSheet ===
+// === Module 13138: AppDMOptionsBottomSheet ===
 
-// Module 13119 (AppDMOptionsBottomSheet)
+// Module 13138 (AppDMOptionsBottomSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
 import react from "react" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6602 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6609 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

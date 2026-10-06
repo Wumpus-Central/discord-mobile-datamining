@@ -1,12 +1,12 @@
-// === Module 15010: useIsQuestDockContentVisible ===
+// === Module 15025: useIsQuestDockContentVisible ===
 
-// Module 15010 (useIsQuestDockContentVisible)
+// Module 15025 (useIsQuestDockContentVisible)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import reactDefault from "react" /* 14984 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import reactDefault from "react" /* 14999 */;
 import react from "react" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 14894 */;
+import QuestDockStore from "QuestDockStore" /* 14910 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

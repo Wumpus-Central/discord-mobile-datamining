@@ -1,6 +1,6 @@
-// === Module 11149: storefrontCodedLink ===
+// === Module 11162: storefrontCodedLink ===
 
-// Module 11149 (storefrontCodedLink)
+// Module 11162 (storefrontCodedLink)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

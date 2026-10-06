@@ -1,9 +1,9 @@
-// === Module 4943: VideoStreamStats ===
+// === Module 4949: VideoStreamStats ===
 
-// Module 4943 (VideoStreamStats)
+// Module 4949 (VideoStreamStats)
 import Constants from "Constants" /* 1085 */;
-import TimeUtils from "TimeUtils" /* 4919 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4936 */;
+import TimeUtils from "TimeUtils" /* 4925 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
 import size from "module_2" /* 2 */;
 
 const StreamLayouts = Constants.StreamLayouts;

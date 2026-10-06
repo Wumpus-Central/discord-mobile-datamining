@@ -1,12 +1,12 @@
-// === Module 8801: AgeRestrictedContentSettingsUtils ===
+// === Module 6727: AgeRestrictedContentSettingsUtils ===
 
-// Module 8801 (AgeRestrictedContentSettingsUtils)
+// Module 6727 (AgeRestrictedContentSettingsUtils)
 import react from "react" /* 576 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5102 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5580 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5581 */;
-import useNSFWAllowed from "useNSFWAllowed" /* 8802 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5588 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 6728 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

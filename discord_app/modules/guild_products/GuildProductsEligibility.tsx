@@ -1,6 +1,6 @@
-// === Module 6761: GuildProductsEligibility ===
+// === Module 6771: GuildProductsEligibility ===
 
-// Module 6761 (GuildProductsEligibility)
+// Module 6771 (GuildProductsEligibility)
 import Constants from "Constants" /* 1085 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

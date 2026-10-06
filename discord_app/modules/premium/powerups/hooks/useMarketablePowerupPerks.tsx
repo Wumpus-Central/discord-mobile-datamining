@@ -1,11 +1,11 @@
-// === Module 13383: useMarketablePowerupPerks ===
+// === Module 13402: useMarketablePowerupPerks ===
 
-// Module 13383 (useMarketablePowerupPerks)
-import Powerups from "Powerups" /* 4771 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12235 */;
+// Module 13402 (useMarketablePowerupPerks)
+import Powerups from "Powerups" /* 4777 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12250 */;
 import react from "react" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -125,7 +125,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12235)(arg0);
+  let tmp2 = stateFromStores(12250)(arg0);
   dependencyMap = tmp2;
   const obj2 = require("ServerThemeExperiment");
   const serverThemeRollbackEnabled = obj2.useServerThemeRollbackEnabled(arg0, "useMarketablePowerupPerks");

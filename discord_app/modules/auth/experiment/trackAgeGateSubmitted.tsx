@@ -1,9 +1,9 @@
-// === Module 15880: trackAgeGateSubmitted ===
+// === Module 15919: trackAgeGateSubmitted ===
 
-// Module 15880 (trackAgeGateSubmitted)
+// Module 15919 (trackAgeGateSubmitted)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import _modDef4461 from "module_4461" /* 4461 */;
+import _modDef4467 from "module_4467" /* 4467 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;
@@ -14,7 +14,7 @@ export default function trackAgeGateSubmitted(format, section) {
   const AGE_GATE_SUBMITTED = AnalyticEvents.AGE_GATE_SUBMITTED;
   AnalyticsUtilsDefault;
   let formatResult = null;
-  const obj = _modDef4461();
+  const obj = _modDef4467();
   if (obj.diff(format, "years") < 18) {
     formatResult = format.format("YYYY-MM-DD");
   }

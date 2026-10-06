@@ -1,19 +1,19 @@
-// === Module 16171: GuildRoleSubscriptionsUpsellActionSheet ===
+// === Module 16211: GuildRoleSubscriptionsUpsellActionSheet ===
 
-// Module 16171 (GuildRoleSubscriptionsUpsellActionSheet)
+// Module 16211 (GuildRoleSubscriptionsUpsellActionSheet)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import AssetRegistryDefault from "AssetRegistry" /* 16172 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import AssetRegistryDefault from "AssetRegistry" /* 16212 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -59,8 +59,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: markAsDismissed(16172) };
-      const tmp11 = markAsDismissed(5974);
+      const obj2 = { source: markAsDismissed(16212) };
+      const tmp11 = markAsDismissed(5981);
       const tmp12 = closure_6(tmp11, obj2);
       cResult[5] = tmp12;
       tmp8 = tmp12;
@@ -79,7 +79,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     if (cResult[7] !== tmp4.title) {
       const obj3 = { style: title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp13 };
-      const tmp17 = closure_6(guildId(4886).Text, obj3);
+      const tmp17 = closure_6(guildId(4892).Text, obj3);
       cResult[7] = tmp4.title;
       cResult[8] = tmp17;
       tmp15 = tmp17;
@@ -98,7 +98,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     if (cResult[10] !== tmp4.description) {
       const obj4 = { style: description, variant: "text-sm/medium", color: "text-default", children: tmp18 };
-      const tmp22 = closure_6(guildId(4886).Text, obj4);
+      const tmp22 = closure_6(guildId(4892).Text, obj4);
       cResult[10] = tmp4.description;
       cResult[11] = tmp22;
       tmp20 = tmp22;
@@ -116,7 +116,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
     if (cResult[13] !== tmp5) {
       const obj5 = { onPress: tmp5, text: tmp23 };
-      const tmp27 = closure_6(guildId(5594).Button, obj5);
+      const tmp27 = closure_6(guildId(5601).Button, obj5);
       cResult[13] = tmp5;
       cResult[14] = tmp27;
       tmp25 = tmp27;
@@ -164,8 +164,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
       const obj7 = { onPress: R, text: tmp29, variant: "secondary" };
       cResult[18] = R;
-      cResult[19] = closure_6(guildId(5594).Button, obj7);
-      const tmp32 = closure_6(guildId(5594).Button, obj7);
+      cResult[19] = closure_6(guildId(5601).Button, obj7);
+      const tmp32 = closure_6(guildId(5601).Button, obj7);
     } else {
       class R {
         constructor() {
@@ -193,8 +193,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       cResult[25] = tmp6;
       cResult[26] = tmp15;
       cResult[27] = tmp20;
-      cResult[28] = closure_7(guildId(6645).BottomSheet, obj8);
-      const tmp39 = closure_7(guildId(6645).BottomSheet, obj8);
+      cResult[28] = closure_7(guildId(6652).BottomSheet, obj8);
+      const tmp39 = closure_7(guildId(6652).BottomSheet, obj8);
     }
     const obj9 = { style: dismissButton, children: tmp31 };
     cResult[20] = tmp4.dismissButton;

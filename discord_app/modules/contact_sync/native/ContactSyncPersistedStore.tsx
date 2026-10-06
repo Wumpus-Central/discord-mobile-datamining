@@ -1,6 +1,6 @@
-// === Module 12328: ContactSyncPersistedStore ===
+// === Module 12343: ContactSyncPersistedStore ===
 
-// Module 12328 (ContactSyncPersistedStore)
+// Module 12343 (ContactSyncPersistedStore)
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import react_native from "react-native" /* 1259 */;
@@ -10,7 +10,7 @@ import size from "module_2" /* 2 */;
 const require = globalThis.__r;
 let _require;
 
-const f111403 = () => {
+const f111558 = () => {
   const obj = DispatcherDefault;
   const obj2 = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
   return obj.dispatch(obj2);
@@ -36,7 +36,7 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", async (arg0) => {
     });
   });
   let obj2 = DispatcherDefault;
-  obj2.wait(f111403);
+  obj2.wait(f111558);
 });
 const useContactSyncStore = module_570.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
 let Storage2 = Storage4.Storage;
@@ -86,7 +86,7 @@ export const setStoredContacts = function setStoredContacts(arg0) {
     });
   });
   const obj2 = DispatcherDefault;
-  obj2.wait(f111403);
+  obj2.wait(f111558);
 };
 export const deleteStoredContacts = function deleteStoredContacts() {
   let state;

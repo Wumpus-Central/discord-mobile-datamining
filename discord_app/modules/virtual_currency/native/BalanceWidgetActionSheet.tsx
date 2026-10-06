@@ -1,21 +1,21 @@
-// === Module 11011: BalanceWidgetActionSheet ===
+// === Module 11024: BalanceWidgetActionSheet ===
 
-// Module 11011 (BalanceWidgetActionSheet)
+// Module 11024 (BalanceWidgetActionSheet)
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
-import _mod11012 from "module_11012" /* 11012 */;
-import _mod11013 from "module_11013" /* 11013 */;
-import _mod11014 from "module_11014" /* 11014 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+import _mod11025 from "module_11025" /* 11025 */;
+import _mod11026 from "module_11026" /* 11026 */;
+import _mod11027 from "module_11027" /* 11027 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -97,7 +97,7 @@ export default function _default(balance) {
     let intl;
     let tmp = null;
     if (num > 4100) {
-      const obj = { backgroundVideo: _mod11012.default, backgroundImage: _mod11013.default, bannerImage: _mod11014.default, bannerText: intl.string(intl3.t.LaMEFL) };
+      const obj = { backgroundVideo: _mod11025.default, backgroundImage: _mod11026.default, bannerImage: _mod11027.default, bannerText: intl.string(intl3.t.LaMEFL) };
       intl = intl3.intl;
       tmp = obj;
     }

@@ -1,8 +1,8 @@
-// === Module 14390: TouchEventAnalyticsManager ===
+// === Module 14408: TouchEventAnalyticsManager ===
 
-// Module 14390 (TouchEventAnalyticsManager)
+// Module 14408 (TouchEventAnalyticsManager)
 import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 1991 */;
-import react_nativeDefault from "react-native" /* 14391 */;
+import react_nativeDefault from "react-native" /* 14409 */;
 import UserStore from "UserStore" /* 1377 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;

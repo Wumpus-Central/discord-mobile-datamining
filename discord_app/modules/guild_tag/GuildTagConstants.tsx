@@ -1,8 +1,8 @@
-// === Module 7603: GuildTagConstants ===
+// === Module 7614: GuildTagConstants ===
 
-// Module 7603 (GuildTagConstants)
+// Module 7614 (GuildTagConstants)
 import Constants from "Constants" /* 1085 */;
-import Powerups from "Powerups" /* 4771 */;
+import Powerups from "Powerups" /* 4777 */;
 import size from "module_2" /* 2 */;
 
 let GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES;

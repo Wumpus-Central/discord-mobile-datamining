@@ -1,10 +1,10 @@
-// === Module 14571: TwoFASetupStyles ===
+// === Module 14587: TwoFASetupStyles ===
 
-// Module 14571 (TwoFASetupStyles)
+// Module 14587 (TwoFASetupStyles)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import TextStyles from "TextStyles" /* 5915 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import TextStyles from "TextStyles" /* 5922 */;
 import size from "module_2" /* 2 */;
 
 let obj2;

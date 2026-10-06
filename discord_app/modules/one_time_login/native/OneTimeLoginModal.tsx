@@ -1,6 +1,6 @@
-// === Module 13674: OneTimeLoginModal ===
+// === Module 13690: OneTimeLoginModal ===
 
-// Module 13674 (OneTimeLoginModal)
+// Module 13690 (OneTimeLoginModal)
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import ClientThemesConstants from "ClientThemesConstants" /* 1240 */;
@@ -8,10 +8,10 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4800 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5911 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
@@ -19,7 +19,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -701,28 +701,28 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((token) => {
   }, items5);
   let obj = { style: memo, children: items6 };
   let obj2 = { absolute: true, wide: true, tall: true, gradientOverride: closure_12[5], mix: true, angleOverride: 0, mixAmount: obj3 };
-  obj3 = { dark: token(4696).OverlayOpacity.LEVEL_1 };
+  obj3 = { dark: token(4702).OverlayOpacity.LEVEL_1 };
   const tmp11 = ThemedGradientDefault;
   items6 = [closure_13(tmp11, obj2), ];
   let obj4 = { style: tmp.container, children: items9 };
   let obj5 = { style: tmp.centerContent, children: items7 };
-  let obj6 = { source: token(13675), style: tmp.logo };
+  let obj6 = { source: token(13691), style: tmp.logo };
   items7 = [closure_13(callback3, obj6), ];
   let obj7 = { style: tmp.loadingContainer, children: items8 };
   items8 = [closure_13(callback2, {}), ];
   let obj8 = { variant: "text-lg/semibold", children: intl.string(token(1126).t.W9uNdG) };
-  const Text = token(4886).Text;
+  const Text = token(4892).Text;
   intl = token(1126).intl;
   items8[1] = closure_13(Text, obj8);
   items7[1] = closure_14(callback1, obj7);
   items9 = [closure_14(callback1, obj5), ];
   let obj9 = { style: tmp.bottomContent, children: items10 };
   let obj10 = { variant: "text-sm/normal", children: intl2.string(token(1126).t["ZXe5/Y"]) };
-  const Text2 = token(4886).Text;
+  const Text2 = token(4892).Text;
   intl2 = token(1126).intl;
   items10 = [closure_13(Text2, obj10), ];
   let obj11 = { textColor: "text-default", text: intl3.string(token(1126).t.FIEwfG), variant: "text-sm/medium", onPress, textStyle: tmp.link };
-  const LinkButton = token(6429).LinkButton;
+  const LinkButton = token(6436).LinkButton;
   intl3 = token(1126).intl;
   items10[1] = closure_13(LinkButton, obj11);
   items9[1] = closure_14(callback1, obj9);

@@ -1,11 +1,11 @@
-// === Module 11008: BalanceCounter ===
+// === Module 11021: BalanceCounter ===
 
-// Module 11008 (BalanceCounter)
+// Module 11021 (BalanceCounter)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import react3 from "react" /* 4596 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import spring from "spring" /* 5597 */;
+import react3 from "react" /* 4602 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import spring from "spring" /* 5604 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -18,7 +18,7 @@ let hasOwnProperty;
 let metroImportDefault;
 let metroRequire;
 let tmp;
-const Text_Text = tmp(4886);
+const Text_Text = tmp(4892);
 let react = react_mod;
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: metroImportDefault } = react);
 react = react_mod;
@@ -264,7 +264,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((value) => {
     const items1 = [tmp14, ];
     const obj5 = { minWidth: 7 * first };
     items1[1] = obj5;
-    const View = onValueChange(4612).View;
+    const View = onValueChange(4618).View;
     ({ variant: "text-sm/semibold", style, maxFontSizeMultiplier: 2, children: obj2.toFixed(0) });
     const Text = Text_Text.Text;
     tmp15 = <View style={items1}>{null}</View>;

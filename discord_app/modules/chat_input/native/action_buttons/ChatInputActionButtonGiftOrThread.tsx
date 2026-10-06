@@ -1,18 +1,18 @@
-// === Module 11875: ChatInputActionButtonGiftOrThread ===
+// === Module 11889: ChatInputActionButtonGiftOrThread ===
 
-// Module 11875 (ChatInputActionButtonGiftOrThread)
+// Module 11889 (ChatInputActionButtonGiftOrThread)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import native from "native" /* 4589 */;
-import ChatInputConstants from "ChatInputConstants" /* 11576 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11868 */;
-import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11876 */;
-import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 11878 */;
+import useToken from "useToken" /* 4586 */;
+import native from "native" /* 4595 */;
+import ChatInputConstants from "ChatInputConstants" /* 11589 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 11882 */;
+import ChatInputActionButtonTransitionItemDefault from "ChatInputActionButtonTransitionItem" /* 11890 */;
+import ChatInputActionButtonGiftDefault from "ChatInputActionButtonGift" /* 11892 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -31,7 +31,7 @@ function renderChatInputActionButtonGiftAndThread(id, styleButton, state, cleanu
   if (shouldShowThread) {
     ChatInputActionButtonDefault;
     const intl = onPress(1126).intl;
-    tmpResult = <tmp2Result accessible={accessible} accessibilityLabel={intl.string(onPress(1126).t["4WNcpu"])} disabled={!canStartThreads} IconComponent={onPress(11866).ThreadPlusIcon} onPress={function onPress(arg0) {
+    tmpResult = <tmp2Result accessible={accessible} accessibilityLabel={intl.string(onPress(1126).t["4WNcpu"])} disabled={!canStartThreads} IconComponent={onPress(11880).ThreadPlusIcon} onPress={function onPress(arg0) {
       return onPress(arg0, ChatInputActionType.THREAD);
     }} style={styleButton} />;
   } else {

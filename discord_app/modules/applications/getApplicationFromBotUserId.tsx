@@ -1,8 +1,8 @@
-// === Module 12254: getApplicationFromBotUserId ===
+// === Module 12269: getApplicationFromBotUserId ===
 
-// Module 12254 (getApplicationFromBotUserId)
+// Module 12269 (getApplicationFromBotUserId)
 import Constants from "Constants" /* 1085 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

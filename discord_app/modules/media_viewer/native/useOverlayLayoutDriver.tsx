@@ -1,9 +1,9 @@
-// === Module 12763: useOverlayLayoutDriver ===
+// === Module 12778: useOverlayLayoutDriver ===
 
-// Module 12763 (useOverlayLayoutDriver)
+// Module 12778 (useOverlayLayoutDriver)
 import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -21,9 +21,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let width;
   let obj = sharedValue(576);
   const cResult = obj.c(6);
-  let obj2 = sharedValue(4612);
+  let obj2 = sharedValue(4618);
   sharedValue = obj2.useSharedValue(0);
-  const obj3 = sharedValue(7968);
+  const obj3 = sharedValue(7978);
   const mediaViewerDimensions = obj3.useMediaViewerDimensions();
   ({ height, width } = mediaViewerDimensions);
   if (cResult[0] !== sharedValue) {
@@ -57,9 +57,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp5 = items;
 }) : (() => {
   let sharedValue;
-  let obj = sharedValue(4612);
+  let obj = sharedValue(4618);
   sharedValue = obj.useSharedValue(0);
-  let obj2 = sharedValue(7968);
+  let obj2 = sharedValue(7978);
   const mediaViewerDimensions = obj2.useMediaViewerDimensions();
   const items = [sharedValue, , ];
   ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);

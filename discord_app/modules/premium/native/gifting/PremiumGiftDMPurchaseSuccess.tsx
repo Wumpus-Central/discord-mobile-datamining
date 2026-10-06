@@ -1,17 +1,17 @@
-// === Module 10811: PremiumGiftDMPurchaseSuccess ===
+// === Module 10824: PremiumGiftDMPurchaseSuccess ===
 
-// Module 10811 (PremiumGiftDMPurchaseSuccess)
+// Module 10824 (PremiumGiftDMPurchaseSuccess)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10393 */;
-import NativeGiftContext from "NativeGiftContext" /* 10430 */;
-import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10562 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10406 */;
+import NativeGiftContext from "NativeGiftContext" /* 10443 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 10575 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

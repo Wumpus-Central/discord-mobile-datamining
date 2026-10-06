@@ -1,19 +1,19 @@
-// === Module 15364: UploadIntlDataSetting ===
+// === Module 15379: UploadIntlDataSetting ===
 
-// Module 15364 (UploadIntlDataSetting)
+// Module 15379 (UploadIntlDataSetting)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
 import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
 import AssetRegistry from "AssetRegistry" /* 1164 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14650 */;
-import FileUpIcon from "FileUpIcon" /* 15365 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14666 */;
+import FileUpIcon from "FileUpIcon" /* 15380 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import Constants from "Constants" /* 1085 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 let c4, c5;
@@ -282,7 +282,7 @@ const jsx = Fragment.jsx;
 let closure_9 = module_570.create(() => ({ isDisabled: false, isUploading: false }));
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const f70407 = () => {
+const f70470 = () => {
 
 };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -292,7 +292,7 @@ const fn = () => closure_9().isDisabled;
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj = react;
   const cResult = obj.c(2);
-  if (typeof f70407 === "function") {
+  if (typeof f70470 === "function") {
     let tmp3;
     const isUploading = closure_9().isUploading;
     if (cResult[0] !== isUploading) {
@@ -311,7 +311,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     throw new TypeError("Trying to call a non-function");
   }
 }) : (() => {
-  if (typeof f70407 === "function") {
+  if (typeof f70470 === "function") {
     let tmp2 = null;
     if (closure_9().isUploading) {
       tmp2 = <ActivityIndicator />;

@@ -1,14 +1,14 @@
-// === Module 12722: InAppReportsExternalLinkElement ===
+// === Module 12737: InAppReportsExternalLinkElement ===
 
-// Module 12722 (InAppReportsExternalLinkElement)
+// Module 12737 (InAppReportsExternalLinkElement)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -131,7 +131,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((elements) => {
 }) : ((elements) => {
   let items1;
   let stringResult;
-  const f112721 = (data) => data.data.is_header_hidden;
+  const f112876 = (data) => data.data.is_header_hidden;
   elements = elements.elements;
   const tmp = closure_6();
   let obj = useTypeConsolidationTextTransform;
@@ -139,9 +139,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((elements) => {
   if (null != elements) {
     if (0 !== elements.length) {
       if (null != elements.find((data) => data.data.is_localized)) {
-        let tmp5Result = !elements.some(f112721);
+        let tmp5Result = !elements.some(f112876);
         const obj2 = { style: tmp.linksContainer, children: items1 };
-        const someResult = elements.some(f112721);
+        const someResult = elements.some(f112876);
         if (tmp5Result) {
           let headerText;
           const Text = Text_Text.Text;
@@ -201,8 +201,8 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
     }
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { IconComponent: url(12723).LinkExternalMediumIcon };
-      const TableRowIcon = tmp(5999).TableRowIcon;
+      const obj2 = { IconComponent: url(12738).LinkExternalMediumIcon };
+      const TableRowIcon = tmp(6006).TableRowIcon;
       const tmp9 = closure_4(TableRowIcon, obj2);
       cResult[2] = tmp9;
       tmp7 = tmp9;
@@ -219,7 +219,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
       }
     }
     const obj3 = { label: link_text, subLabel: link_description, trailing: tmp7, onPress: tmp5, arrow: false, accessibilityRole: "link" };
-    const tmp12 = closure_4(url(8897).RowButton, obj3);
+    const tmp12 = closure_4(url(8926).RowButton, obj3);
     cResult[3] = link_description;
     cResult[4] = link_text;
     cResult[5] = tmp5;
@@ -246,9 +246,9 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((data) => {
       arrow: false,
       accessibilityRole: "link"
     };
-    const RowButton = url(8897).RowButton;
-    obj2 = { IconComponent: url(12723).LinkExternalMediumIcon };
-    TableRowIcon = url(5999).TableRowIcon;
+    const RowButton = url(8926).RowButton;
+    obj2 = { IconComponent: url(12738).LinkExternalMediumIcon };
+    TableRowIcon = url(6006).TableRowIcon;
     tmp3 = closure_4(RowButton, obj);
   }
   return tmp3;

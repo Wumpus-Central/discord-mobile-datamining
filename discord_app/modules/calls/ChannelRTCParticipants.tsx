@@ -1,28 +1,28 @@
-// === Module 9016: ChannelRTCParticipants ===
+// === Module 9049: ChannelRTCParticipants ===
 
-// Module 9016 (ChannelRTCParticipants)
+// Module 9049 (ChannelRTCParticipants)
 import _mod12 from "module_12" /* 12 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4504 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5585 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 7887 */;
-import useIsSpeaking from "useIsSpeaking" /* 9018 */;
-import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 9019 */;
-import ContentClassificationReference from "ContentClassificationReference" /* 9020 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4510 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5592 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 7898 */;
+import useIsSpeaking from "useIsSpeaking" /* 9051 */;
+import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment" /* 9052 */;
+import ContentClassificationReference from "ContentClassificationReference" /* 9053 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5437 */;
+import CallStore from "CallStore" /* 5444 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import SpeakingStore from "SpeakingStore" /* 5576 */;
+import SpeakingStore from "SpeakingStore" /* 5583 */;
 import UserStore from "UserStore" /* 1377 */;
-import VideoStreamStore from "VideoStreamStore" /* 9017 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
-import CallConstants from "CallConstants" /* 4911 */;
+import VideoStreamStore from "VideoStreamStore" /* 9050 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import CallConstants from "CallConstants" /* 4917 */;
 import Constants_mod from "Constants" /* 1085 */;
-import Constants_mod2 from "Constants" /* 4915 */;
+import Constants_mod2 from "Constants" /* 4921 */;
 import size from "module_2" /* 2 */;
 
 let set;

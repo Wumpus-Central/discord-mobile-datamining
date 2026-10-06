@@ -1,10 +1,10 @@
-// === Module 12193: useCanGuildPowerupBeToggled ===
+// === Module 12208: useCanGuildPowerupBeToggled ===
 
-// Module 12193 (useCanGuildPowerupBeToggled)
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12159 */;
+// Module 12208 (useCanGuildPowerupBeToggled)
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12174 */;
 import react from "react" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

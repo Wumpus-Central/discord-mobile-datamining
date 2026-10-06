@@ -1,17 +1,17 @@
-// === Module 7030: ApplicationCommandUtils ===
+// === Module 7043: ApplicationCommandUtils ===
 
-// Module 7030 (ApplicationCommandUtils)
+// Module 7043 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef14 from "module_14" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
 import Constants2 from "Constants" /* 1096 */;
 import Server from "Server" /* 1985 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7033 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7046 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;
@@ -33,7 +33,7 @@ function buildCommand(arg0) {
   let rootCommand;
   let subCommandPath;
   let useKeyedPermissions;
-  const f93938 = (choices) => {
+  const f94078 = (choices) => {
     let description;
     let mapped;
     let mapped1;
@@ -59,7 +59,7 @@ function buildCommand(arg0) {
     const options = choices.options;
     mapped1 = undefined;
     if (options != null) {
-      mapped1 = options.map(f93938);
+      mapped1 = options.map(f94078);
     }
     ({ name_localized: obj.serverLocalizedName, name_localized } = choices);
     if (name_localized == null) {
@@ -142,7 +142,7 @@ function buildCommand(arg0) {
   ({ description: obj3.untranslatedDescription, options } = command);
   mapped2 = undefined;
   if (options != null) {
-    mapped2 = options.map(f93938);
+    mapped2 = options.map(f94078);
   }
   deserializeResult = undefined;
   if (null != rootCommand.default_member_permissions) {

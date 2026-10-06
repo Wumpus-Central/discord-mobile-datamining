@@ -1,11 +1,11 @@
-// === Module 4720: NewUserDismissibleContentRegistry ===
+// === Module 4726: NewUserDismissibleContentRegistry ===
 
-// Module 4720 (NewUserDismissibleContentRegistry)
+// Module 4726 (NewUserDismissibleContentRegistry)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 4721 */;
+import DcfNewUserCooldownExperiment from "DcfNewUserCooldownExperiment" /* 4727 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2040 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 2039 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -21,7 +21,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arr) => {
   const tmp = dcfNewUserCooldown;
   let obj = dcfNewUserCooldown(576);
   const cResult = obj.c(9);
-  const obj2 = dcfNewUserCooldown(4721);
+  const obj2 = dcfNewUserCooldown(4727);
   dcfNewUserCooldown = obj2.useDcfNewUserCooldown();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AuthenticationStore, DismissibleContentFrameworkStore];

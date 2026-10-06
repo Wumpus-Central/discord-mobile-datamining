@@ -1,24 +1,24 @@
-// === Module 10848: TieredTenureBadgeActionSheet ===
+// === Module 10861: TieredTenureBadgeActionSheet ===
 
-// Module 10848 (TieredTenureBadgeActionSheet)
+// Module 10861 (TieredTenureBadgeActionSheet)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7119 */;
-import showUserProfileActionSheet from "showUserProfileActionSheet" /* 7850 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 10849 */;
-import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 10874 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7132 */;
+import showUserProfileActionSheet from "showUserProfileActionSheet" /* 7861 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 10862 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 10887 */;
 import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -663,7 +663,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                   const mapped = arr3.map((arr, index) => {
                     let premiumSince;
                     let user;
-                    const f140761 = (item) => {
+                    const f140967 = (item) => {
                       let id;
                       if (user != null) {
                         id = user.id;
@@ -671,8 +671,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
                       return item === id;
                     };
                     const items = [closure_1.rowContainer, ];
-                    const rowContainerWithUsersBadge = arr.some(f140761) && closure_1.rowContainerWithUsersBadge;
-                    const someResult = arr.some(f140761);
+                    const rowContainerWithUsersBadge = arr.some(f140967) && closure_1.rowContainerWithUsersBadge;
+                    const someResult = arr.some(f140967);
                     let obj = {
                       style: items,
                       children: arr.map((badge, index) => {
@@ -899,7 +899,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   items6[1] = memo.map((arr, index) => {
     let premiumSince;
     let user;
-    const f140763 = (item) => {
+    const f140969 = (item) => {
       let id;
       if (user != null) {
         id = user.id;
@@ -907,8 +907,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       return item === id;
     };
     const items = [closure_1.rowContainer, ];
-    const rowContainerWithUsersBadge = arr.some(f140763) && closure_1.rowContainerWithUsersBadge;
-    const someResult = arr.some(f140763);
+    const rowContainerWithUsersBadge = arr.some(f140969) && closure_1.rowContainerWithUsersBadge;
+    const someResult = arr.some(f140969);
     let obj = {
       style: items,
       children: arr.map((badge, index) => {

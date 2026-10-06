@@ -1,6 +1,6 @@
-// === Module 5110: MessageStore ===
+// === Module 5116: MessageStore ===
 
-// Module 5110 (MessageStore)
+// Module 5116 (MessageStore)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -9,30 +9,31 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import Server from "Server" /* 1985 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
-import ReactionUtils from "ReactionUtils" /* 4521 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
-import ChannelMessagesDefault from "ChannelMessages" /* 5431 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5434 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
-import MessageQueue from "MessageQueue" /* 7462 */;
-import canEditMessageDefault from "canEditMessage" /* 11378 */;
-import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13574 */;
+import ReactionUtils from "ReactionUtils" /* 4527 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
+import InteractionTypes from "InteractionTypes" /* 5126 */;
+import ChannelMessagesDefault from "ChannelMessages" /* 5438 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5441 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
+import MessageQueue from "MessageQueue" /* 7473 */;
+import canEditMessageDefault from "canEditMessage" /* 11391 */;
+import GuildAutomodMessageStoreUtils from "GuildAutomodMessageStoreUtils" /* 13590 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
-import EphemeralMessageStore from "EphemeralMessageStore" /* 5111 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 5117 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import DimensionStore from "DimensionStore" /* 5430 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import DimensionStore from "DimensionStore" /* 5437 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -467,7 +468,7 @@ class MessageStore extends Store {
       if (interaction != null) {
         type = interaction.type;
       }
-      let tmp4 = type === Server.InteractionTypes.APPLICATION_COMMAND;
+      let tmp4 = type === InteractionTypes.InteractionTypes.APPLICATION_COMMAND;
       if (tmp4) {
         const interactionData = interaction.interactionData;
         let type1;
@@ -1075,7 +1076,7 @@ obj = {
     ids = ids.ids;
     let mutation;
     const channelId = ids.channelId;
-    obj = mutation(5431);
+    obj = mutation(5438);
     const orCreate = obj.getOrCreate(channelId);
     if (null == orCreate) {
       return false;
@@ -1127,7 +1128,7 @@ obj = {
             mutation = removeManyResult.mutate({ revealedMessageId: null });
           }
         }
-        const tmpResult2 = mutation(5431);
+        const tmpResult2 = mutation(5438);
         tmpResult2.commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);

@@ -1,9 +1,9 @@
-// === Module 14611: BlockedUserRowV2 ===
+// === Module 14627: BlockedUserRowV2 ===
 
-// Module 14611 (BlockedUserRowV2)
+// Module 14627 (BlockedUserRowV2)
 import Fragment from "Fragment" /* 21 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -19,7 +19,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
   let obj = userRecord(576);
   const cResult = obj.c(29);
   userRecord = userRecord.userRecord;
-  analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
   if (cResult[0] === userRecord.globalName) {
     let tmp4;
     if (cResult[1] === userRecord.username) {
@@ -122,16 +122,16 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
               cResult[25] = tmp20;
               cResult[26] = tmp8;
               cResult[27] = tmp14;
-              cResult[28] = jsx(userRecord(5993).TableRow, { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 });
-              const tmp25 = jsx(userRecord(5993).TableRow, { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 });
+              cResult[28] = jsx(userRecord(6000).TableRow, { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 });
+              const tmp25 = jsx(userRecord(6000).TableRow, { accessible: false, icon: tmp8, label: tmp14, onPress: tmp6, trailing: tmp20 });
             }
             cResult[21] = S;
             cResult[22] = tmp4;
-            cResult[23] = jsx(userRecord(5594).Button, { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: S });
-            const tmp22 = jsx(userRecord(5594).Button, { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: S });
+            cResult[23] = jsx(userRecord(5601).Button, { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: S });
+            const tmp22 = jsx(userRecord(5601).Button, { size: "sm", variant: "secondary", text: tmp17, accessibilityLabel: tmp4, onPress: S });
           }
         }
-        const tmp16 = jsx(userRecord(14612).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
+        const tmp16 = jsx(userRecord(14628).RestrictedUserRowLabel, { userRecord, accessibilityActions: tmp13, onAccessibilityAction: tmp7 });
         cResult[14] = tmp7;
         cResult[15] = tmp13;
         cResult[16] = userRecord;
@@ -184,7 +184,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
   let intl2;
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+  analyticsLocations = analyticsLocations(6664)().analyticsLocations;
   const intl = userRecord(1126).intl;
   const formatToPlainString = intl.formatToPlainString;
   let username = userRecord.globalName;
@@ -197,7 +197,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
     showUserProfileActionSheetDefault(obj);
   }
   const formatToPlainStringResult = formatToPlainString(izBDZN, { name: username });
-  const TableRow = tmp2(5993).TableRow;
+  const TableRow = tmp2(6000).TableRow;
   let obj2 = { user: userRecord, guildId: "Array", size: userRecord(1188).AvatarSizes.REFRESH_MEDIUM_32 };
   const Avatar = tmp2(1188).Avatar;
   const items = [{ name: "activate" }, { name: "unblock", label: formatToPlainStringResult }];
@@ -212,7 +212,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((userRecord) => 
       obj.unblockUser(id, { location: "blocked-users-list-mobile-v2" });
     }
   });
-  const Button = tmp2(5594).Button;
+  const Button = tmp2(5601).Button;
   intl2 = tmp2(1126).intl;
   return <TableRow accessible={false} icon={null} label={null} onPress={handleOpenProfile} trailing={null} />;
 });

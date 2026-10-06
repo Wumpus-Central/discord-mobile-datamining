@@ -1,18 +1,18 @@
-// === Module 17491: EntityVersionsManager ===
+// === Module 17518: EntityVersionsManager ===
 
-// Module 17491 (EntityVersionsManager)
+// Module 17518 (EntityVersionsManager)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 7135 */;
-import EmojiStore from "EmojiStore" /* 5638 */;
-import StickersStore from "StickersStore" /* 5687 */;
+import GuildsRequiringDeletedIdsSyncDefault from "GuildsRequiringDeletedIdsSync" /* 7148 */;
+import EmojiStore from "EmojiStore" /* 5645 */;
+import StickersStore from "StickersStore" /* 5694 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let importDefault, set, set2, set3, socket, sortedRoles;
@@ -41,7 +41,7 @@ function handleDeletedEntityIds(guild_id) {
         let obj3;
         if (!set.has(id)) {
           const obj2 = { type: "CHANNEL_DELETE", channel: obj3 };
-          obj3 = { guild_id: guild_id2, id, parent_id: "r" };
+          obj3 = { guild_id: guild_id2, id, parent_id: "Array" };
           const obj = guild_id(closure_2_1[8]);
           obj.dispatch(obj2);
         }
@@ -49,7 +49,6 @@ function handleDeletedEntityIds(guild_id) {
     }
     if (null != guild_id.roles) {
       guild_id = tmp.guild_id;
-      let tmp2 = globalThis;
       const _Set = Set;
       const self = this;
       const self2 = this;
@@ -202,8 +201,8 @@ function handleGuildCreate(guild) {
     }, Math.ceil(2000 * Math.random()));
   }
 }
-let tmp2 = new LoggerDefault("EntityVersionsManager");
-let closure_8 = tmp2;
+let closure_8 = new LoggerDefault("EntityVersionsManager");
+const tmp2 = new LoggerDefault("EntityVersionsManager");
 class EntityVersionsManager extends AutomaticLifecycleManager {
   constructor() {
     const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);

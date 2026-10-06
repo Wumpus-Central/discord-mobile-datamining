@@ -1,7 +1,7 @@
-// === Module 8541: useSimilarGames ===
+// === Module 8574: useSimilarGames ===
 
-// Module 8541 (useSimilarGames)
-import SimilarGamesConstants from "SimilarGamesConstants" /* 8415 */;
+// Module 8574 (useSimilarGames)
+import SimilarGamesConstants from "SimilarGamesConstants" /* 8448 */;
 import GameStore from "GameStore" /* 2007 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -33,7 +33,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp4 = cResult[1];
   }
   const tmp7 = !tmp4;
-  let tmpResult = tmp(8414);
+  let tmpResult = tmp(8447);
   const similarGameIds = tmpResult.useSimilarGameIds(arg0, tmp7);
   ({ data, isLoading, error } = similarGameIds);
   if (tmp4) {
@@ -42,7 +42,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10 = data;
   }
   data = tmp10;
-  const tmpResult4 = tmp(6812);
+  const tmpResult4 = tmp(6822);
   const games = tmpResult4.useGames(tmp10);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GameStore];
@@ -54,7 +54,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[3] !== tmp10) {
     class S {
       constructor() {
-        return data.some(() => { /* body not rendered: F138927 */ });
+        return data.some(() => { /* body not rendered: F139147 */ });
       }
     }
     const items1 = [tmp10];
@@ -65,7 +65,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class S {
       constructor() {
-        return data.some(() => { /* body not rendered: F138927 */ });
+        return data.some(() => { /* body not rendered: F139147 */ });
       }
     }
     tmp15 = cResult[5];
@@ -75,7 +75,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
       constructor() {
-        return data.some(() => { /* body not rendered: F138927 */ });
+        return data.some(() => { /* body not rendered: F139147 */ });
       }
     }
     const items2 = [GameStore, UserStore];
@@ -84,14 +84,14 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class S {
       constructor() {
-        return data.some(() => { /* body not rendered: F138927 */ });
+        return data.some(() => { /* body not rendered: F139147 */ });
       }
     }
   }
   if (cResult[7] !== tmp10) {
     class S {
       constructor() {
-        return data.some(() => { /* body not rendered: F138927 */ });
+        return data.some(() => { /* body not rendered: F139147 */ });
       }
     }
     const items3 = [tmp10];
@@ -102,7 +102,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class S {
       constructor() {
-        return data.some(() => { /* body not rendered: F138927 */ });
+        return data.some(() => { /* body not rendered: F139147 */ });
       }
     }
     tmp20 = cResult[9];
@@ -112,13 +112,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (tmp4) {
     class S {
       constructor() {
-        return data.some(() => { /* body not rendered: F138927 */ });
+        return data.some(() => { /* body not rendered: F139147 */ });
       }
     }
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
       class S {
         constructor() {
-          return data.some(() => { /* body not rendered: F138927 */ });
+          return data.some(() => { /* body not rendered: F139147 */ });
         }
       }
       tmp26[1] = closure_6;
@@ -126,7 +126,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     } else {
       class S {
         constructor() {
-          return data.some(() => { /* body not rendered: F138927 */ });
+          return data.some(() => { /* body not rendered: F139147 */ });
         }
       }
     }
@@ -134,13 +134,13 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     class S {
       constructor() {
-        return data.some(() => { /* body not rendered: F138927 */ });
+        return data.some(() => { /* body not rendered: F139147 */ });
       }
     }
     if (cResult[11] === stateFromStoresArray) {
       class S {
         constructor() {
-          return data.some(() => { /* body not rendered: F138927 */ });
+          return data.some(() => { /* body not rendered: F139147 */ });
         }
       }
       return tmp24;
@@ -160,7 +160,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp7;
   const hasItem = set.has(arg0);
   const tmp2 = !hasItem;
-  let obj = data(8414);
+  let obj = data(8447);
   const similarGameIds = obj.useSimilarGameIds(arg0, tmp2);
   ({ data, isLoading, error } = similarGameIds);
   if (hasItem) {
@@ -169,7 +169,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp7 = data;
   }
   data = tmp7;
-  const tmp3Result = data(6812);
+  const tmp3Result = data(6822);
   const games = tmp3Result.useGames(tmp7);
   const items = [GameStore];
   const items1 = [tmp7];

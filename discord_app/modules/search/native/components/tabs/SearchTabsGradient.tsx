@@ -1,12 +1,12 @@
-// === Module 16900: SearchTabsGradient ===
+// === Module 16925: SearchTabsGradient ===
 
-// Module 16900 (SearchTabsGradient)
+// Module 16925 (SearchTabsGradient)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import TabsGradientDefault from "TabsGradient" /* 12425 */;
+import useToken from "useToken" /* 4586 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import TabsGradientDefault from "TabsGradient" /* 12440 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -44,7 +44,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp7 = items;
 }) : (() => {
   let token;
-  let obj = token(4580);
+  let obj = token(4586);
   token = obj.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   let items = [token];
   return react.useMemo(() => {

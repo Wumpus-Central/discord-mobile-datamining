@@ -1,6 +1,6 @@
-// === Module 13828: LowLatencyRateControlExperiment ===
+// === Module 13846: LowLatencyRateControlExperiment ===
 
-// Module 13828 (LowLatencyRateControlExperiment)
+// Module 13846 (LowLatencyRateControlExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import size from "module_2" /* 2 */;
 

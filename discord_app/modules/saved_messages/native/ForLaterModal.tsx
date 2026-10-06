@@ -1,15 +1,15 @@
-// === Module 7497: ForLaterModal ===
+// === Module 7508: ForLaterModal ===
 
-// Module 7497 (ForLaterModal)
+// Module 7508 (ForLaterModal)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import ForLaterScreenDefault from "ForLaterScreen" /* 13123 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 13142 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -133,7 +133,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
     }
   }
   const obj4 = { title: tmp6, headerTitle: tmp9, headerTitleAlign: "center", headerStatusBarHeight: sum, headerLeft: tmp12, headerLeftContainerStyle: tmp4.headerLeftContainer, headerRightContainerStyle: tmp4.headerRightContainer };
-  const tmp15 = closure_4(require("module_6019").Header, obj4);
+  const tmp15 = closure_4(require("module_6026").Header, obj4);
   cResult[7] = tmp4.headerLeftContainer;
   cResult[8] = tmp4.headerRightContainer;
   cResult[9] = tmp9;
@@ -173,7 +173,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((type) => {
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null
   };
-  const Header = tmp4(6019).Header;
+  const Header = tmp4(6026).Header;
   num = 0;
   const tmp4Result = require("PlatformUtils");
   if (!tmp4Result.isIOS()) {

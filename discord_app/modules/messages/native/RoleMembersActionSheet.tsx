@@ -1,18 +1,18 @@
-// === Module 11209: RoleMembersActionSheet ===
+// === Module 11222: RoleMembersActionSheet ===
 
-// Module 11209 (RoleMembersActionSheet)
+// Module 11222 (RoleMembersActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 6624 */;
-import ChannelMemberStore from "ChannelMemberStore" /* 6782 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 6631 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 6792 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -96,7 +96,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
       const obj4 = roleId(11);
       const result = obj4.castGuildIdAsEveryoneGuildRoleId(guildId);
-      const tmp22 = roleId(6622)(guildId);
+      const tmp22 = roleId(6629)(guildId);
       class I {
         constructor() {
           const obj = SnowflakeUtilsDefault;
@@ -134,8 +134,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           let obj2 = { variant: "text-sm/semibold", style: tmp4.headerText, children: name };
           cResult[15] = tmp4.headerText;
           cResult[16] = name;
-          cResult[17] = closure_8(guildId(4886).Text, obj2);
-          closure_8(guildId(4886).Text, obj2);
+          cResult[17] = closure_8(guildId(4892).Text, obj2);
+          closure_8(guildId(4892).Text, obj2);
           class I {
             constructor() {
               const obj = SnowflakeUtilsDefault;
@@ -238,7 +238,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   closure_4 = tmp6;
   let obj3 = roleId(11);
   const result = obj3.castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(6622)(guildId);
+  const tmp11 = roleId(6629)(guildId);
   let tmp12 = null;
   const tmp9 = roleId;
   if (roleId !== result) {
@@ -256,9 +256,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   let tmp16Result = null;
   if (null != stateFromStores) {
     let obj4 = { scrollable: true, header: tmp14, children: closure_8(tmp9Result, obj5) };
-    BottomSheet = tmp3(6645).BottomSheet;
+    BottomSheet = tmp3(6652).BottomSheet;
     obj5 = { guildId, channelId, roleId, headerShown: false, inActionSheet: true, disableStickySections: true, disableThemedGradient: true };
-    tmp9Result = tmp9(11210);
+    tmp9Result = tmp9(11223);
     if (channelId == null) {
       channelId = EVERYONE_CHANNEL_ID;
     }

@@ -1,12 +1,12 @@
-// === Module 17191: ActivityPanelSystemUIManager ===
+// === Module 17220: ActivityPanelSystemUIManager ===
 
-// Module 17191 (ActivityPanelSystemUIManager)
+// Module 17220 (ActivityPanelSystemUIManager)
 import react2 from "react" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import StatusBarDefault from "StatusBar" /* 9060 */;
-import HomeIndicatorDefault from "HomeIndicator" /* 9062 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17168 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import StatusBarDefault from "StatusBar" /* 9096 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 9098 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17197 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

@@ -1,20 +1,20 @@
-// === Module 4509: PermissionStore ===
+// === Module 4515: PermissionStore ===
 
-// Module 4509 (PermissionStore)
+// Module 4515 (PermissionStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import MemberSafetyConstants from "MemberSafetyConstants" /* 4513 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4517 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4518 */;
+import MemberSafetyConstants from "MemberSafetyConstants" /* 4519 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4523 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4524 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
-import LurkingStore from "LurkingStore" /* 4510 */;
+import LurkingStore from "LurkingStore" /* 4516 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
 import UserRecord from "UserRecord" /* 1391 */;

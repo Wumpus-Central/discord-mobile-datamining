@@ -1,7 +1,7 @@
-// === Module 14167: ReactotronConfig ===
+// === Module 14185: ReactotronConfig ===
 
-// Module 14167 (ReactotronConfig)
-import reactNativeCorePlugins from "reactNativeCorePlugins" /* 14168 */;
+// Module 14185 (ReactotronConfig)
+import reactNativeCorePlugins from "reactNativeCorePlugins" /* 14186 */;
 import size from "module_2" /* 2 */;
 
 const configureResult = reactNativeCorePlugins.configure({});

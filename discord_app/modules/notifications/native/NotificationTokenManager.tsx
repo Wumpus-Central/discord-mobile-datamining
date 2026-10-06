@@ -1,6 +1,6 @@
-// === Module 14283: NotificationTokenManager ===
+// === Module 14301: NotificationTokenManager ===
 
-// Module 14283 (NotificationTokenManager)
+// Module 14301 (NotificationTokenManager)
 import react_native from "react-native" /* 17 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
@@ -8,16 +8,16 @@ import intl32 from "intl" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import _modDef2819 from "module_2819" /* 2819 */;
-import PushNotificationDefault from "PushNotification" /* 8966 */;
-import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12055 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14284 */;
-import NotifSettingsExperiments from "NotifSettingsExperiments" /* 14287 */;
-import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 14288 */;
-import react_nativeDefault from "react-native" /* 14289 */;
+import _modDef2847 from "module_2847" /* 2847 */;
+import PushNotificationDefault from "PushNotification" /* 8995 */;
+import PushNotificationActionCreatorsDefault from "PushNotificationActionCreators" /* 12070 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14302 */;
+import NotifSettingsExperiments from "NotifSettingsExperiments" /* 14305 */;
+import NotifSettingsUtilsDefault from "NotifSettingsUtils" /* 14306 */;
+import react_nativeDefault from "react-native" /* 14307 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import MultiAccountStore from "MultiAccountStore" /* 12056 */;
-import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13440 */;
+import MultiAccountStore from "MultiAccountStore" /* 12071 */;
+import MultiAccountSwitchStore from "MultiAccountSwitchStore" /* 13459 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;
@@ -209,7 +209,7 @@ class NotificationTokenManager extends LifecycleManager {
     const registerNotificationCategories = NativeModules.DCDNotificationCategoryUtils.registerNotificationCategories;
     const registerNotificationCategoriesAndGroups = NativeModules.DCDNotificationCategoryUtils.registerNotificationCategoriesAndGroups;
     if (null != registerNotificationCategoriesAndGroups) {
-      const obj = { calls: intl.string(_modDef2819["IUH/Oe"]), mediaConnections: intl2.string(_modDef2819.VeBD1N), messages: intl3.string(_modDef2819["4qWUAO"]), directMessages: intl4.string(_modDef2819.NGdNZb), friendRequests: intl5.string(_modDef2819.NxgGZA), polls: intl6.string(_modDef2819.MOjygY), social: intl7.string(_modDef2819["UzRF+8"]), stageLive: intl8.string(_modDef2819["4n388K"]), guildEventLive: intl9.string(_modDef2819["40TIqW"]), guildHighlights: intl10.string(intl32.t.p5jg9S), forumThreadCreated: intl11.string(_modDef2819.HibKoy), systemMessages: intl12.string(_modDef2819.zJlwvV), other: intl13.string(_modDef2819.kIrLfg), default: intl14.string(_modDef2819["T+79Eo"]), reactions: intl15.string(intl32.t.gHp0C4) };
+      const obj = { calls: intl.string(_modDef2847["IUH/Oe"]), mediaConnections: intl2.string(_modDef2847.VeBD1N), messages: intl3.string(_modDef2847["4qWUAO"]), directMessages: intl4.string(_modDef2847.NGdNZb), friendRequests: intl5.string(_modDef2847.NxgGZA), polls: intl6.string(_modDef2847.MOjygY), social: intl7.string(_modDef2847["UzRF+8"]), stageLive: intl8.string(_modDef2847["4n388K"]), guildEventLive: intl9.string(_modDef2847["40TIqW"]), guildHighlights: intl10.string(intl32.t.p5jg9S), forumThreadCreated: intl11.string(_modDef2847.HibKoy), systemMessages: intl12.string(_modDef2847.zJlwvV), other: intl13.string(_modDef2847.kIrLfg), default: intl14.string(_modDef2847["T+79Eo"]), reactions: intl15.string(intl32.t.gHp0C4) };
       intl = intl32.intl;
       intl2 = intl32.intl;
       intl3 = intl32.intl;
@@ -225,7 +225,7 @@ class NotificationTokenManager extends LifecycleManager {
       intl13 = intl32.intl;
       intl14 = intl32.intl;
       intl15 = intl32.intl;
-      const obj2 = { realtime: intl16.string(_modDef2819.S5cB9e), social: intl17.string(_modDef2819["UzRF+8"]), server: intl18.string(_modDef2819.zRKbpz), other: intl19.string(_modDef2819.q5M7HV) };
+      const obj2 = { realtime: intl16.string(_modDef2847.S5cB9e), social: intl17.string(_modDef2847["UzRF+8"]), server: intl18.string(_modDef2847.zRKbpz), other: intl19.string(_modDef2847.q5M7HV) };
       intl16 = intl32.intl;
       intl17 = intl32.intl;
       intl18 = intl32.intl;

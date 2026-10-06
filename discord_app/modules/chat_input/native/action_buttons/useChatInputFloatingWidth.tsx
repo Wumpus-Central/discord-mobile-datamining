@@ -1,9 +1,9 @@
-// === Module 11889: useChatInputFloatingWidth ===
+// === Module 11903: useChatInputFloatingWidth ===
 
-// Module 11889 (useChatInputFloatingWidth)
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import ChatInputConstants from "ChatInputConstants" /* 11576 */;
+// Module 11903 (useChatInputFloatingWidth)
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import ChatInputConstants from "ChatInputConstants" /* 11589 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

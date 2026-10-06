@@ -1,7 +1,7 @@
-// === Module 16485: NavigationTTIDebugFreeze ===
+// === Module 16525: NavigationTTIDebugFreeze ===
 
-// Module 16485 (NavigationTTIDebugFreeze)
-import react_native from "react-native" /* 4743 */;
+// Module 16525 (NavigationTTIDebugFreeze)
+import react_native from "react-native" /* 4749 */;
 import size from "module_2" /* 2 */;
 
 let target;

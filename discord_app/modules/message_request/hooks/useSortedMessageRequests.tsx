@@ -1,10 +1,10 @@
-// === Module 17061: useSortedMessageRequests ===
+// === Module 17087: useSortedMessageRequests ===
 
-// Module 17061 (useSortedMessageRequests)
+// Module 17087 (useSortedMessageRequests)
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
-import MessageRequestStore from "MessageRequestStore" /* 6720 */;
+import MessageRequestStore from "MessageRequestStore" /* 6734 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

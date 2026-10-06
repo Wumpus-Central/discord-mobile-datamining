@@ -1,14 +1,14 @@
-// === Module 14543: AgeGroupResetSetting ===
+// === Module 14559: AgeGroupResetSetting ===
 
-// Module 14543 (AgeGroupResetSetting)
+// Module 14559 (AgeGroupResetSetting)
 import Fragment from "Fragment" /* 21 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef3045 from "module_3045" /* 3045 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14540 */;
-import SettingsAgeGroupResetAlert from "SettingsAgeGroupResetAlert" /* 14544 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import _modDef3073 from "module_3073" /* 3073 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import AgeGroupScreenRowProps from "AgeGroupScreenRowProps" /* 14556 */;
+import SettingsAgeGroupResetAlert from "SettingsAgeGroupResetAlert" /* 14560 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
@@ -16,12 +16,12 @@ const jsx = Fragment.jsx;
 const obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef3045["bD//cU"]);
+    return intl.string(_modDef3073["bD//cU"]);
   },
   parent: MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
     const intl = intl2.intl;
-    return intl.string(_modDef3045.Gn0SAj);
+    return intl.string(_modDef3073.Gn0SAj);
   },
   onPress() {
     SettingsAgeGroupResetAlert.default;

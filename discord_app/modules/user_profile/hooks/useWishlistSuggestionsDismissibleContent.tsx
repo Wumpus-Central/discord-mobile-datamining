@@ -1,11 +1,11 @@
-// === Module 12944: useWishlistSuggestionsDismissibleContent ===
+// === Module 12963: useWishlistSuggestionsDismissibleContent ===
 
-// Module 12944 (useWishlistSuggestionsDismissibleContent)
+// Module 12963 (useWishlistSuggestionsDismissibleContent)
 import DurationsDefault from "Durations" /* 1102 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,19 +1,19 @@
-// === Module 14462: EditProfileFrameSection ===
+// === Module 14478: EditProfileFrameSection ===
 
-// Module 14462 (EditProfileFrameSection)
+// Module 14478 (EditProfileFrameSection)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7060 */;
-import ProfileFrameConstants from "ProfileFrameConstants" /* 7893 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8478 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13009 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13010 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 14461 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7073 */;
+import ProfileFrameConstants from "ProfileFrameConstants" /* 7904 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8511 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13028 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13029 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 14477 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

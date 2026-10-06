@@ -1,11 +1,11 @@
-// === Module 12783: MediaViewerItem ===
+// === Module 12802: MediaViewerItem ===
 
-// Module 12783 (MediaViewerItem)
+// Module 12802 (MediaViewerItem)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import useMediaViewerSources from "useMediaViewerSources" /* 7934 */;
-import useEntranceAnimation from "useEntranceAnimation" /* 12785 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import useMediaViewerSources from "useMediaViewerSources" /* 7945 */;
+import useEntranceAnimation from "useEntranceAnimation" /* 12804 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;

@@ -1,8 +1,8 @@
-// === Module 7751: PremiumGiftingUtils ===
+// === Module 7762: PremiumGiftingUtils ===
 
-// Module 7751 (PremiumGiftingUtils)
-import MessageConstants from "MessageConstants" /* 4883 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
+// Module 7762 (PremiumGiftingUtils)
+import MessageConstants from "MessageConstants" /* 4889 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;

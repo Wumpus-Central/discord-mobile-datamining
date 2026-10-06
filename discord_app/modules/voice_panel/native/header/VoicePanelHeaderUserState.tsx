@@ -1,18 +1,18 @@
-// === Module 17220: VoicePanelHeaderUserState ===
+// === Module 17249: VoicePanelHeaderUserState ===
 
-// Module 17220 (VoicePanelHeaderUserState)
+// Module 17249 (VoicePanelHeaderUserState)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import timing from "timing" /* 4891 */;
-import NativeViewDefault from "NativeView" /* 5976 */;
-import native from "native" /* 8567 */;
-import useStableParticipant from "useStableParticipant" /* 17219 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17221 */;
+import timing from "timing" /* 4897 */;
+import NativeViewDefault from "NativeView" /* 5983 */;
+import native from "native" /* 8602 */;
+import useStableParticipant from "useStableParticipant" /* 17248 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17250 */;
 import react from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -163,7 +163,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((i
   let obj = isHeaderHidden(576);
   const cResult = obj.c(9);
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
-  const context = react.useContext(channelId(11901));
+  const context = react.useContext(channelId(11915));
   const tmp4 = channelId;
   channelId = context.channelId;
   const guildId = context.guildId;
@@ -193,7 +193,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((i
   }
   const tmpResult = tmp(504);
   const stateFromStores = tmpResult.useStateFromStores(first, tmp9);
-  const tmp11 = closure_9(tmp4(17219)(stateFromStores, channelId, guildId), guildId);
+  const tmp11 = closure_9(tmp4(17248)(stateFromStores, channelId, guildId), guildId);
   const fn2 = function w() {
     const withTiming = timing.withTiming;
     let num = 0;
@@ -204,11 +204,11 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((i
     const obj = { opacity: withTiming(num, OPACITY_TIMING) };
     return obj;
   };
-  const tmpResult2 = tmp(4612);
-  fn2.__closure = { withTiming: tmp(4891).withTiming, isHeaderHidden, OPACITY_TIMING };
+  const tmpResult2 = tmp(4618);
+  fn2.__closure = { withTiming: tmp(4897).withTiming, isHeaderHidden, OPACITY_TIMING };
   fn2.__workletHash = 7032221979181;
   fn2.__initData = __initData;
-  ({ withTiming: tmp(4891).withTiming, isHeaderHidden, OPACITY_TIMING });
+  ({ withTiming: tmp(4897).withTiming, isHeaderHidden, OPACITY_TIMING });
   const animatedStyle = tmpResult2.useAnimatedStyle(fn2);
   let tmp13 = null;
   if (null != tmp11) {
@@ -240,7 +240,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((i
 }) : ((isHeaderHidden) => {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   let channelId;
-  const context = react.useContext(channelId(11901));
+  const context = react.useContext(channelId(11915));
   channelId = context.channelId;
   const guildId = context.guildId;
   const tmp2 = closure_8();
@@ -254,8 +254,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((i
     }
     return id;
   });
-  const tmp4 = closure_9(channelId(17219)(stateFromStores, channelId, guildId), guildId);
-  isHeaderHidden(4612);
+  const tmp4 = closure_9(channelId(17248)(stateFromStores, channelId, guildId), guildId);
+  isHeaderHidden(4618);
   const fn = function f() {
     const withTiming = timing.withTiming;
     let num = 0;
@@ -266,11 +266,11 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((i
     const obj = { opacity: withTiming(num, OPACITY_TIMING) };
     return obj;
   };
-  fn.__closure = { withTiming: isHeaderHidden(4891).withTiming, isHeaderHidden, OPACITY_TIMING };
+  fn.__closure = { withTiming: isHeaderHidden(4897).withTiming, isHeaderHidden, OPACITY_TIMING };
   fn.__workletHash = 1281074829646;
   fn.__initData = __initData2;
   let tmp7 = null;
-  ({ withTiming: isHeaderHidden(4891).withTiming, isHeaderHidden, OPACITY_TIMING });
+  ({ withTiming: isHeaderHidden(4897).withTiming, isHeaderHidden, OPACITY_TIMING });
   if (null != tmp4) {
     const items1 = [tmp2.container, tmp6];
     tmp7 = <closure_6 blurTheme="dark" style={items1} pointerEvents="none">{tmp4}</closure_6>;

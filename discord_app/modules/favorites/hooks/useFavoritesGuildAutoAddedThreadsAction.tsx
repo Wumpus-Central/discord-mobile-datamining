@@ -1,7 +1,7 @@
-// === Module 16066: useFavoritesGuildAutoAddedThreadsAction ===
+// === Module 16105: useFavoritesGuildAutoAddedThreadsAction ===
 
-// Module 16066 (useFavoritesGuildAutoAddedThreadsAction)
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10035 */;
+// Module 16105 (useFavoritesGuildAutoAddedThreadsAction)
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10048 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
@@ -19,7 +19,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp8;
   let obj = hasAccess(576);
   const cResult = obj.c(13);
-  const obj2 = hasAccess(10036);
+  const obj2 = hasAccess(10049);
   hasAccess = obj2.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
@@ -105,7 +105,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let hasAccess;
   let intl;
   let intl2;
-  let obj = hasAccess(10036);
+  let obj = hasAccess(10049);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [UserStore];
   const obj2 = hasAccess(504);
@@ -126,7 +126,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmpResult = hasAccess(504);
   const stateFromStores = tmpResult.useStateFromStores(items1, () => autoAddJoinedThreads.autoAddJoinedThreads);
   const items2 = [hasAccess, stateFromStores];
-  const obj3 = { isAvailable: hasAccess, isEnabled: stateFromStores, label: intl.string(stateFromStores(3367).DIyQIF), subLabel: intl2.string(stateFromStores(3367).g2vHYJ), toggle: callback };
+  const obj3 = { isAvailable: hasAccess, isEnabled: stateFromStores, label: intl.string(stateFromStores(3395).DIyQIF), subLabel: intl2.string(stateFromStores(3395).g2vHYJ), toggle: callback };
   callback = react.useCallback(() => {
     if (hasAccess) {
       const obj = FavoritesActionCreators;

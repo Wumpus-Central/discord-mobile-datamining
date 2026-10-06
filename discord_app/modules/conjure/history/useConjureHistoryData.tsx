@@ -1,22 +1,22 @@
-// === Module 16626: useConjureHistoryData ===
+// === Module 16663: useConjureHistoryData ===
 
-// Module 16626 (useConjureHistoryData)
+// Module 16663 (useConjureHistoryData)
 import react2 from "react" /* 576 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 16621 */;
-import ConjureRestorePanelOp from "ConjureRestorePanelOp" /* 16627 */;
-import _slicedToArray_mod from "_slicedToArray" /* 32 */;
-import react from "react" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 16658 */;
+import ConjureRestorePanelOp from "ConjureRestorePanelOp" /* 16664 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
+import react_mod from "react" /* 19 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
-let _require, all, map, set;
+let _require, dependencyMap, map, set;
 
 let closure_4;
 let hasOwnProperty;
 let metroRequire;
-let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
 ({ fetchDatabaseRestorePoints: closure_4, fetchDatabaseRestoreWindow: hasOwnProperty, fetchVersionHistory: metroRequire } = ConjureConnectionStore);
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
@@ -170,267 +170,549 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 let closure_8 = [];
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0, arg1) {
-  let closure_0;
-  let closure_2;
-  let environment;
-  let obj2;
+  let arr;
+  let refresh3;
   let tmp11;
-  let tmp12;
-  let tmp15;
+  let tmp14;
+  let tmp9;
   _require = arg0;
   let tmp = _require;
-  const obj = require("react");
-  const cResult = obj.c(28);
+  let obj = require("react");
+  const cResult = obj.c(38);
   const tmp2 = _require;
-  const tmp4 = environment;
   if (cResult[0] !== arg1) {
-    const tmp2Result = tmp2(tmp4[5]);
+    const tmp2Result = tmp2(16664);
     const result = tmp2Result.restorePanelEnvironments(arg1);
     cResult[0] = arg1;
     cResult[1] = result;
-    obj2 = result;
+    arr = result;
   } else {
-    obj2 = cResult[1];
+    arr = cResult[1];
   }
-  [environment, tmp11] = react.useState("stable");
-  if (cResult[2] !== arg0) {
-    const fn = function h() {
+  if (cResult[2] !== arr) {
+    const hasItem = arr.includes("preview");
+    cResult[2] = arr;
+    cResult[3] = hasItem;
+    tmp9 = hasItem;
+  } else {
+    tmp9 = cResult[3];
+  }
+  dependencyMap = tmp9;
+  if (cResult[4] !== arg0) {
+    const fn = function b() {
       return metroRequire(closure_0);
     };
-    cResult[2] = arg0;
-    cResult[3] = fn;
-    tmp12 = fn;
+    cResult[4] = arg0;
+    cResult[5] = fn;
+    tmp11 = fn;
   } else {
-    tmp12 = cResult[3];
+    tmp11 = cResult[5];
   }
-  const tmp14 = closure_7(tmp12);
-  if (cResult[4] !== obj2) {
-    const hasItem = obj2.includes("preview");
-    cResult[4] = obj2;
-    cResult[5] = hasItem;
-    tmp15 = hasItem;
+  const tmp13 = refresh3(tmp11);
+  if (cResult[6] !== arg0) {
+    const fn2 = function k() {
+      const items = [React3(closure_0, "stable"), hasOwnProperty(closure_0, "stable")];
+      const allResult = all(items);
+      return allResult.then((result) => {
+        let tmp;
+        let tmp2;
+        [tmp, tmp2] = result;
+        return { points, window: _window };
+      });
+    };
+    cResult[6] = arg0;
+    cResult[7] = fn2;
+    tmp14 = fn2;
   } else {
-    tmp15 = cResult[5];
+    tmp14 = cResult[7];
   }
-  _slicedToArray = tmp15;
-  if (cResult[6] === tmp15) {
-    let tmp17;
-    if (cResult[7] === arg0) {
-      tmp17 = cResult[8];
+  const tmp12Result = refresh3(tmp14);
+  let closure_2 = tmp12Result;
+  if (cResult[8] === tmp9) {
+    let tmp16;
+    if (cResult[9] === arg0) {
+      tmp16 = cResult[10];
     }
-    const tmp13Result = closure_7(tmp17);
-    if (cResult[9] === environment) {
-      let tmp19;
-      if (cResult[10] === arg0) {
-        tmp19 = cResult[11];
+    const tmp12Result3 = refresh3(tmp16);
+    react = tmp12Result3;
+    if (cResult[11] === tmp9) {
+      let tmp18;
+      if (cResult[12] === arg0) {
+        tmp18 = cResult[13];
       }
-      const tmp13Result2 = closure_7(tmp19);
-      const refresh = tmp13Result2.refresh;
-      class B {
+      const tmp12Result4 = refresh3(tmp18);
+      let state2 = tmp12Result4;
+      const refresh = tmp12Result.refresh;
+      class M {
         constructor() {
-          all = Promise.all;
-          items = [, ];
-          items[0] = closure_4(closure_0, closure_1);
-          items[1] = closure_5(closure_0, closure_1);
-          allResult = all(items);
-          return allResult.then((result) => {
-            const tmp = closure_1_2(result, 2);
-            return { points: tmp[0], window: tmp[1] };
-          });
+          let resolved;
+          if (closure_1) {
+            resolved = hasOwnProperty(closure_0, "preview");
+          } else {
+            resolved = Promise.resolve(null);
+          }
+          return resolved;
         }
       }
-      const refresh2 = tmp13Result.refresh;
-      if (cResult[12] === refresh) {
-        let tmp21;
-        if (cResult[13] === refresh2) {
-          tmp21 = cResult[14];
-        }
-        const state = tmp14.state;
-        if (cResult[15] === state.data) {
-          let tmp22;
-          let data;
-          let _window;
-          if (cResult[16] === state.status) {
-            tmp22 = cResult[17];
+      const refresh2 = tmp12Result3.refresh;
+      refresh3 = tmp12Result4.refresh;
+      if (cResult[14] === refresh) {
+        if (cResult[15] === refresh2) {
+          let tmp20;
+          let tmp21;
+          if (cResult[16] === refresh3) {
+            tmp20 = cResult[17];
           }
-          if ("loaded" === tmp13Result.state.status) {
-            data = tmp13Result.state.data;
-          } else {
-            data = closure_8;
-          }
-          class B {
-            constructor() {
-              all = Promise.all;
-              items = [, ];
-              items[0] = closure_4(closure_0, closure_1);
-              items[1] = closure_5(closure_0, closure_1);
-              allResult = all(items);
-              return allResult.then((result) => {
-                const tmp = closure_1_2(result, 2);
-                return { points: tmp[0], window: tmp[1] };
-              });
-            }
-          }
-          const status = tmp13Result.state.status;
-          if ("loaded" === tmp13Result2.state.status) {
-            _window = tmp13Result2.state.data.window;
-          }
-          class D {
-            constructor() {
-              react();
-              refresh2();
-            }
-          }
-          if (cResult[18] === tmp13Result2) {
-            if (cResult[19] === environment) {
-              if (cResult[20] === obj2) {
-                if (cResult[21] === tmp21) {
-                  if (cResult[22] === data) {
-                    if (cResult[23] === tmp27) {
-                      if (cResult[24] === _window) {
-                        if (cResult[25] === tmp22) {
-                          let tmp28;
-                          if (cResult[26] === tmp14) {
-                            tmp28 = cResult[27];
+          if (cResult[18] === arr) {
+            if (cResult[19] === tmp12Result) {
+              if (cResult[20] === tmp12Result3) {
+                if (cResult[21] === tmp12Result4) {
+                  tmp21 = cResult[22];
+                }
+                let state = tmp13.state;
+                if (cResult[27] === state.data) {
+                  let tmp24;
+                  if (cResult[28] === state.status) {
+                    tmp24 = cResult[29];
+                  }
+                  state2 = tmp12Result3.state;
+                  class T {
+                    constructor(environment) {
+                      let obj3;
+                      let tmp;
+                      const obj = { environment, backups: tmp };
+                      if ("preview" === environment) {
+                        closure_0 = state;
+                        closure_1 = state2;
+                        state = state.state;
+                        state2 = state2.state;
+                        if ("failed" !== state.status) {
+                          let obj2;
+                          if ("failed" !== state2.status) {
+                            if ("loading" !== state.status) {
+                              if ("loading" !== state2.status) {
+                                if (null == state2.data) {
+                                  obj2 = { status: "failed" };
+                                } else {
+                                  obj2 = { status: "loaded", data: obj3, nowMs: state.nowMs };
+                                  obj3 = { points: state.data, window: state2.data };
+                                }
+                              }
+                            }
+                            obj2 = { status: "loading" };
                           }
-                          return tmp28;
+                          tmp = {
+                            state: obj2,
+                            retry() {
+                                  closure_0.retry();
+                                  closure_1.retry();
+                                },
+                            refresh() {
+                                  closure_0.refresh();
+                                  closure_1.refresh();
+                                }
+                          };
+                          const obj4 = {
+                            state: obj2,
+                            retry() {
+                                  closure_0.retry();
+                                  closure_1.retry();
+                                },
+                            refresh() {
+                                  closure_0.refresh();
+                                  closure_1.refresh();
+                                }
+                          };
+                        }
+                        obj2 = { status: "failed" };
+                      } else {
+                        tmp = closure_2;
+                      }
+                      return obj;
+                    }
+                  }
+                  class M {
+                    constructor() {
+                      let resolved;
+                      if (closure_1) {
+                        resolved = hasOwnProperty(closure_0, "preview");
+                      } else {
+                        resolved = Promise.resolve(null);
+                      }
+                      return resolved;
+                    }
+                  }
+                  if (cResult[30] === tmp21) {
+                    if (cResult[31] === tmp20) {
+                      if (cResult[32] === "loading" === state2.status) {
+                        if (cResult[33] === !tmp9) {
+                          if (cResult[34] === tmp30) {
+                            if (cResult[35] === tmp24) {
+                              let tmp32;
+                              if (cResult[36] === tmp13) {
+                                tmp32 = cResult[37];
+                              }
+                              return tmp32;
+                            }
+                          }
                         }
                       }
                     }
                   }
+                  let obj2 = { sharedDatabase: !tmp9, versions: tmp13, databases: tmp21, previewBackups: tmp30, previewBackupsLoading: "loading" === state2.status, refreshAllBackups: tmp20, versionTitles: tmp24 };
+                  cResult[30] = tmp21;
+                  cResult[31] = tmp20;
+                  cResult[32] = "loading" === state2.status;
+                  cResult[33] = !tmp9;
+                  cResult[34] = tmp30;
+                  cResult[35] = tmp24;
+                  cResult[36] = tmp13;
+                  cResult[37] = obj2;
+                  tmp32 = obj2;
                 }
+                class T {
+                  constructor(environment) {
+                    let obj3;
+                    let tmp;
+                    const obj = { environment, backups: tmp };
+                    if ("preview" === environment) {
+                      closure_0 = state;
+                      closure_1 = state2;
+                      state = state.state;
+                      state2 = state2.state;
+                      if ("failed" !== state.status) {
+                        let obj2;
+                        if ("failed" !== state2.status) {
+                          if ("loading" !== state.status) {
+                            if ("loading" !== state2.status) {
+                              if (null == state2.data) {
+                                obj2 = { status: "failed" };
+                              } else {
+                                obj2 = { status: "loaded", data: obj3, nowMs: state.nowMs };
+                                obj3 = { points: state.data, window: state2.data };
+                              }
+                            }
+                          }
+                          obj2 = { status: "loading" };
+                        }
+                        tmp = {
+                          state: obj2,
+                          retry() {
+                                closure_0.retry();
+                                closure_1.retry();
+                              },
+                          refresh() {
+                                closure_0.refresh();
+                                closure_1.refresh();
+                              }
+                        };
+                        const obj4 = {
+                          state: obj2,
+                          retry() {
+                                closure_0.retry();
+                                closure_1.retry();
+                              },
+                          refresh() {
+                                closure_0.refresh();
+                                closure_1.refresh();
+                              }
+                        };
+                      }
+                      obj2 = { status: "failed" };
+                    } else {
+                      tmp = closure_2;
+                    }
+                    return obj;
+                  }
+                }
+                class M {
+                  constructor() {
+                    let resolved;
+                    if (closure_1) {
+                      resolved = hasOwnProperty(closure_0, "preview");
+                    } else {
+                      resolved = Promise.resolve(null);
+                    }
+                    return resolved;
+                  }
+                }
+                const self = this;
+                const self2 = this;
+                map = new Map();
+                if ("loaded" === state.status) {
+                  const entries = state.data.entries;
+                  class T {
+                    constructor(environment) {
+                      let obj3;
+                      let tmp;
+                      const obj = { environment, backups: tmp };
+                      if ("preview" === environment) {
+                        closure_0 = state;
+                        closure_1 = state2;
+                        state = state.state;
+                        state2 = state2.state;
+                        if ("failed" !== state.status) {
+                          let obj2;
+                          if ("failed" !== state2.status) {
+                            if ("loading" !== state.status) {
+                              if ("loading" !== state2.status) {
+                                if (null == state2.data) {
+                                  obj2 = { status: "failed" };
+                                } else {
+                                  obj2 = { status: "loaded", data: obj3, nowMs: state.nowMs };
+                                  obj3 = { points: state.data, window: state2.data };
+                                }
+                              }
+                            }
+                            obj2 = { status: "loading" };
+                          }
+                          tmp = {
+                            state: obj2,
+                            retry() {
+                                  closure_0.retry();
+                                  closure_1.retry();
+                                },
+                            refresh() {
+                                  closure_0.refresh();
+                                  closure_1.refresh();
+                                }
+                          };
+                          const obj4 = {
+                            state: obj2,
+                            retry() {
+                                  closure_0.retry();
+                                  closure_1.retry();
+                                },
+                            refresh() {
+                                  closure_0.refresh();
+                                  closure_1.refresh();
+                                }
+                          };
+                        }
+                        obj2 = { status: "failed" };
+                      } else {
+                        tmp = closure_2;
+                      }
+                      return obj;
+                    }
+                  }
+                }
+                cResult[27] = state.data;
+                cResult[28] = state.status;
+                cResult[29] = map;
+                tmp24 = map;
               }
             }
           }
-          const obj3 = { environments: obj2, environment, setEnvironment: tmp11, versions: tmp14, previewBackups: data, previewBackupsLoading: tmp27, backups: tmp13Result2, restoreWindow: _window, refreshAllBackups: tmp21, versionTitles: tmp22 };
-          cResult[18] = tmp13Result2;
-          cResult[19] = environment;
-          cResult[20] = obj2;
-          cResult[21] = tmp21;
-          cResult[22] = data;
-          cResult[23] = tmp27;
-          cResult[24] = _window;
-          cResult[25] = tmp22;
-          cResult[26] = tmp14;
-          cResult[27] = obj3;
-          tmp28 = obj3;
-        }
-        class B {
-          constructor() {
-            all = Promise.all;
-            items = [, ];
-            items[0] = closure_4(closure_0, closure_1);
-            items[1] = closure_5(closure_0, closure_1);
-            allResult = all(items);
-            return allResult.then((result) => {
-              const tmp = closure_1_2(result, 2);
-              return { points: tmp[0], window: tmp[1] };
-            });
-          }
-        }
-        const _Map = Map;
-        const self = this;
-        const self2 = this;
-        class D {
-          constructor() {
-            react();
-            refresh2();
-          }
-        }
-        if ("loaded" === state.status) {
-          const entries = state.data.entries;
-          class B {
-            constructor() {
-              all = Promise.all;
-              items = [, ];
-              items[0] = closure_4(closure_0, closure_1);
-              items[1] = closure_5(closure_0, closure_1);
-              allResult = all(items);
-              return allResult.then((result) => {
-                const tmp = closure_1_2(result, 2);
-                return { points: tmp[0], window: tmp[1] };
-              });
+          if (cResult[23] === tmp12Result) {
+            if (cResult[24] === tmp12Result3) {
+              let tmp22;
+              if (cResult[25] === tmp12Result4) {
+                tmp22 = cResult[26];
+              }
+              const mapped = arr.map(tmp22);
+              class T {
+                constructor(environment) {
+                  let obj3;
+                  let tmp;
+                  const obj = { environment, backups: tmp };
+                  if ("preview" === environment) {
+                    closure_0 = state;
+                    closure_1 = state2;
+                    state = state.state;
+                    state2 = state2.state;
+                    if ("failed" !== state.status) {
+                      let obj2;
+                      if ("failed" !== state2.status) {
+                        if ("loading" !== state.status) {
+                          if ("loading" !== state2.status) {
+                            if (null == state2.data) {
+                              obj2 = { status: "failed" };
+                            } else {
+                              obj2 = { status: "loaded", data: obj3, nowMs: state.nowMs };
+                              obj3 = { points: state.data, window: state2.data };
+                            }
+                          }
+                        }
+                        obj2 = { status: "loading" };
+                      }
+                      tmp = {
+                        state: obj2,
+                        retry() {
+                              closure_0.retry();
+                              closure_1.retry();
+                            },
+                        refresh() {
+                              closure_0.refresh();
+                              closure_1.refresh();
+                            }
+                      };
+                      const obj4 = {
+                        state: obj2,
+                        retry() {
+                              closure_0.retry();
+                              closure_1.retry();
+                            },
+                        refresh() {
+                              closure_0.refresh();
+                              closure_1.refresh();
+                            }
+                      };
+                    }
+                    obj2 = { status: "failed" };
+                  } else {
+                    tmp = closure_2;
+                  }
+                  return obj;
+                }
+              }
+              class M {
+                constructor() {
+                  let resolved;
+                  if (closure_1) {
+                    resolved = hasOwnProperty(closure_0, "preview");
+                  } else {
+                    resolved = Promise.resolve(null);
+                  }
+                  return resolved;
+                }
+              }
+              cResult[19] = tmp12Result;
+              cResult[20] = tmp12Result3;
+              cResult[21] = tmp12Result4;
+              cResult[22] = mapped;
+              tmp21 = mapped;
             }
           }
+          class T {
+            constructor(environment) {
+              let obj3;
+              let tmp;
+              const obj = { environment, backups: tmp };
+              if ("preview" === environment) {
+                closure_0 = state;
+                closure_1 = state2;
+                state = state.state;
+                state2 = state2.state;
+                if ("failed" !== state.status) {
+                  let obj2;
+                  if ("failed" !== state2.status) {
+                    if ("loading" !== state.status) {
+                      if ("loading" !== state2.status) {
+                        if (null == state2.data) {
+                          obj2 = { status: "failed" };
+                        } else {
+                          obj2 = { status: "loaded", data: obj3, nowMs: state.nowMs };
+                          obj3 = { points: state.data, window: state2.data };
+                        }
+                      }
+                    }
+                    obj2 = { status: "loading" };
+                  }
+                  tmp = {
+                    state: obj2,
+                    retry() {
+                          closure_0.retry();
+                          closure_1.retry();
+                        },
+                    refresh() {
+                          closure_0.refresh();
+                          closure_1.refresh();
+                        }
+                  };
+                  const obj4 = {
+                    state: obj2,
+                    retry() {
+                          closure_0.retry();
+                          closure_1.retry();
+                        },
+                    refresh() {
+                          closure_0.refresh();
+                          closure_1.refresh();
+                        }
+                  };
+                }
+                obj2 = { status: "failed" };
+              } else {
+                tmp = closure_2;
+              }
+              return obj;
+            }
+          }
+          class M {
+            constructor() {
+              let resolved;
+              if (closure_1) {
+                resolved = hasOwnProperty(closure_0, "preview");
+              } else {
+                resolved = Promise.resolve(null);
+              }
+              return resolved;
+            }
+          }
+          cResult[23] = tmp12Result;
+          cResult[24] = tmp12Result3;
+          cResult[25] = tmp12Result4;
+          cResult[26] = T;
+          tmp22 = T;
         }
-        cResult[15] = state.data;
-        cResult[16] = state.status;
-        cResult[17] = tmp23;
-        tmp22 = tmp23;
       }
-      class D {
-        constructor() {
-          react();
-          refresh2();
-        }
-      }
-      cResult[12] = refresh;
-      cResult[13] = refresh2;
-      cResult[14] = D;
-      tmp21 = D;
+      const fn4 = function _() {
+        closure_1_5();
+        refresh2();
+        refresh3();
+      };
+      cResult[14] = refresh;
+      cResult[15] = refresh2;
+      cResult[16] = refresh3;
+      cResult[17] = fn4;
+      tmp20 = fn4;
     }
-    class B {
+    class M {
       constructor() {
-        all = Promise.all;
-        items = [, ];
-        items[0] = closure_4(closure_0, closure_1);
-        items[1] = closure_5(closure_0, closure_1);
-        allResult = all(items);
-        return allResult.then((result) => {
-          const tmp = closure_1_2(result, 2);
-          return { points: tmp[0], window: tmp[1] };
-        });
+        let resolved;
+        if (closure_1) {
+          resolved = hasOwnProperty(closure_0, "preview");
+        } else {
+          resolved = Promise.resolve(null);
+        }
+        return resolved;
       }
     }
-    cResult[9] = environment;
-    cResult[11] = B;
-    tmp19 = B;
+    cResult[11] = tmp9;
+    cResult[12] = arg0;
+    cResult[13] = M;
+    tmp18 = M;
   }
-  const fn2 = function _() {
+  const fn3 = function y() {
     let resolved;
-    if (closure_2) {
+    if (closure_1) {
       resolved = React3(closure_0, "preview");
     } else {
       resolved = Promise.resolve(closure_8);
     }
     return resolved;
   };
-  cResult[6] = tmp15;
-  cResult[7] = arg0;
-  cResult[8] = fn2;
-  tmp17 = fn2;
+  cResult[8] = tmp9;
+  cResult[9] = arg0;
+  cResult[10] = fn3;
+  tmp16 = fn3;
 }) : ((arg0, arg1) => {
-  let _window;
-  let data;
-  let environment;
-  let hasItem;
-  let memo1;
+  let closure_3;
+  let refresh2;
   let closure_0 = arg0;
   let closure_1 = arg1;
   let items = [arg1];
-  const memo = hasItem.useMemo(() => {
+  const memo = react.useMemo(() => {
     const obj = ConjureRestorePanelOp;
     return obj.restorePanelEnvironments(closure_1);
   }, items);
-  const tmp = environment(hasItem.useState("stable"), 2);
-  environment = tmp[0];
+  const hasItem = memo.includes("preview");
   const items1 = [arg0];
-  const tmp3 = tmp[1];
-  const tmp4 = closure_7(hasItem.useCallback(() => metroRequire(closure_0), items1));
-  hasItem = memo.includes("preview");
-  const items2 = [arg0, hasItem];
-  const tmp6 = closure_7(hasItem.useCallback(() => {
-    let resolved;
-    if (hasItem) {
-      resolved = React3(closure_0, "preview");
-    } else {
-      resolved = Promise.resolve(closure_8);
-    }
-    return resolved;
-  }, items2));
-  const items3 = [arg0, environment];
-  const tmp7 = closure_7(hasItem.useCallback(() => {
-    const items = [React3(closure_0, first), hasOwnProperty(closure_0, first)];
+  const tmp2 = refresh2(react.useCallback(() => metroRequire(closure_0), items1));
+  const items2 = [arg0];
+  const tmp3 = refresh2(react.useCallback(() => {
+    const items = [React3(closure_0, "stable"), hasOwnProperty(closure_0, "stable")];
     const allResult = all(items);
     return allResult.then((result) => {
       let tmp;
@@ -438,40 +720,115 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0, arg1) 
       [tmp, tmp2] = result;
       return { points, window: _window };
     });
+  }, items2));
+  react = tmp3;
+  const items3 = [arg0, hasItem];
+  const tmp4 = refresh2(react.useCallback(() => {
+    let resolved;
+    if (hasItem) {
+      resolved = React3(closure_0, "preview");
+    } else {
+      resolved = Promise.resolve(closure_8);
+    }
+    return resolved;
   }, items3));
-  const refresh = tmp7.refresh;
-  const refresh2 = tmp6.refresh;
-  const items4 = [refresh, refresh2];
-  const state = tmp4.state;
-  const items5 = [state];
-  const callback = hasItem.useCallback(() => {
+  const items4 = [arg0, hasItem];
+  const tmp5 = refresh2(react.useCallback(() => {
+    let resolved;
+    if (hasItem) {
+      resolved = hasOwnProperty(closure_0, "preview");
+    } else {
+      resolved = Promise.resolve(null);
+    }
+    return resolved;
+  }, items4));
+  const refresh = tmp3.refresh;
+  refresh2 = tmp4.refresh;
+  const refresh3 = tmp5.refresh;
+  const items5 = [refresh, refresh2, refresh3];
+  const callback = react.useCallback(() => {
     refresh();
     refresh2();
-  }, items4);
-  let obj = { environments: memo, environment, setEnvironment: tmp3, versions: tmp4, previewBackups: data, previewBackupsLoading: "loading" === tmp6.state.status, backups: tmp7, restoreWindow: _window, refreshAllBackups: callback, versionTitles: memo1 };
-  memo1 = hasItem.useMemo(() => {
-    map = new Map();
-    if ("loaded" === state.status) {
-      const entries = state.data.entries;
-      for (const item10015 of entries) {
-        set = map.set;
-        let sha = item10015.sha;
-        let obj = ConjureHistoryFormat;
-        let result = set(sha, obj.versionTitle(item10015.subject).short);
-        continue;
-      }
-    }
-    return map;
+    refresh3();
   }, items5);
-  if ("loaded" === tmp6.state.status) {
-    data = tmp6.state.data;
-  } else {
-    data = closure_8;
-  }
-  _window = null;
-  if ("loaded" === tmp7.state.status) {
-    _window = tmp7.state.data.window;
-  }
+  let state = tmp2.state;
+  const items6 = [state];
+  const mapped = memo.map((environment) => {
+    let obj3;
+    let tmp;
+    const obj = { environment, backups: tmp };
+    if ("preview" === environment) {
+      closure_0 = state;
+      closure_1 = state2;
+      state = state.state;
+      state2 = state2.state;
+      if ("failed" !== state.status) {
+        let obj2;
+        if ("failed" !== state2.status) {
+          if ("loading" !== state.status) {
+            if ("loading" !== state2.status) {
+              if (null == state2.data) {
+                obj2 = { status: "failed" };
+              } else {
+                obj2 = { status: "loaded", data: obj3, nowMs: state.nowMs };
+                obj3 = { points: state.data, window: state2.data };
+              }
+            }
+          }
+          obj2 = { status: "loading" };
+        }
+        tmp = {
+          state: obj2,
+          retry() {
+                closure_0.retry();
+                closure_1.retry();
+              },
+          refresh() {
+                closure_0.refresh();
+                closure_1.refresh();
+              }
+        };
+        const obj4 = {
+          state: obj2,
+          retry() {
+                closure_0.retry();
+                closure_1.retry();
+              },
+          refresh() {
+                closure_0.refresh();
+                closure_1.refresh();
+              }
+        };
+      }
+      obj2 = { status: "failed" };
+    } else {
+      tmp = closure_3;
+    }
+    return obj;
+  });
+  let state2 = tmp4.state;
+  let obj = {
+    sharedDatabase: !hasItem,
+    versions: tmp2,
+    databases: mapped,
+    previewBackups: "loaded" === state2.status ? state2.data : refresh3,
+    previewBackupsLoading: "loading" === state2.status,
+    refreshAllBackups: callback,
+    versionTitles: react.useMemo(() => {
+      map = new Map();
+      if ("loaded" === state.status) {
+        const entries = state.data.entries;
+        for (const item10015 of entries) {
+          set = map.set;
+          let sha = item10015.sha;
+          let obj = ConjureHistoryFormat;
+          let result = set(sha, obj.versionTitle(item10015.subject).short);
+          continue;
+        }
+      }
+      return map;
+    }, items6)
+  };
   return obj;
 });
 let result = size.fileFinishedImporting("modules/conjure/history/useConjureHistoryData.tsx");

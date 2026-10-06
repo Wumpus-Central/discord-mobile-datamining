@@ -1,10 +1,10 @@
-// === Module 12960: ConfirmStartCall ===
+// === Module 12979: ConfirmStartCall ===
 
-// Module 12960 (ConfirmStartCall)
+// Module 12979 (ConfirmStartCall)
 import react2 from "react" /* 576 */;
 import intl5 from "intl" /* 1126 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

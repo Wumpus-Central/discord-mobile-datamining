@@ -1,9 +1,9 @@
-// === Module 14397: DiscordGestureHandlerRootView ===
+// === Module 14413: DiscordGestureHandlerRootView ===
 
-// Module 14397 (DiscordGestureHandlerRootView)
+// Module 14413 (DiscordGestureHandlerRootView)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import DiscordGestureHandlerRootViewNativeComponentDefault from "DiscordGestureHandlerRootViewNativeComponent" /* 14398 */;
+import DiscordGestureHandlerRootViewNativeComponentDefault from "DiscordGestureHandlerRootViewNativeComponent" /* 14414 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

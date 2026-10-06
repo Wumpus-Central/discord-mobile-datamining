@@ -1,10 +1,10 @@
-// === Module 10638: PerLetterEffect ===
+// === Module 10651: PerLetterEffect ===
 
-// Module 10638 (PerLetterEffect)
+// Module 10651 (PerLetterEffect)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let closure_4;
@@ -52,7 +52,7 @@ export default function PerLetterEffect(name) {
       return <hasOwnProperty key={index} style={tmp7}>{children}</hasOwnProperty>;
     });
   }, items);
-  const Text = name(4886).Text;
+  const Text = name(4892).Text;
   const merged = Object.assign(textProps);
   let accessibilityLabel = textProps.accessibilityLabel;
   if (accessibilityLabel == null) {

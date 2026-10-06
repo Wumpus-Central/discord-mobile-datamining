@@ -1,14 +1,14 @@
-// === Module 10144: useStickerPickerListData ===
+// === Module 10157: useStickerPickerListData ===
 
-// Module 10144 (useStickerPickerListData)
+// Module 10157 (useStickerPickerListData)
 import _modDef12 from "module_12" /* 12 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
-import StickersTypes from "StickersTypes" /* 5429 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9899 */;
-import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 9908 */;
-import StickerPickerStore from "StickerPickerStore" /* 10114 */;
+import StickersTypes from "StickersTypes" /* 5436 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 9912 */;
+import PremiumUpsellSectionDivider from "PremiumUpsellSectionDivider" /* 9921 */;
+import StickerPickerStore from "StickerPickerStore" /* 10127 */;
 import react from "react" /* 19 */;
-import StickerPickerConstants from "StickerPickerConstants" /* 10082 */;
+import StickerPickerConstants from "StickerPickerConstants" /* 10095 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

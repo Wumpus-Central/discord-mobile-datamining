@@ -1,18 +1,18 @@
-// === Module 16445: GamingLikeEntryRow ===
+// === Module 16485: GamingLikeEntryRow ===
 
-// Module 16445 (GamingLikeEntryRow)
+// Module 16485 (GamingLikeEntryRow)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7813 */;
-import utils from "utils" /* 7818 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8029 */;
-import BadgesAll from "Badges" /* 12831 */;
-import TrendingType from "TrendingType" /* 12836 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7824 */;
+import utils from "utils" /* 7829 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
+import BadgesAll from "Badges" /* 12850 */;
+import TrendingType from "TrendingType" /* 12855 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16394 */;
+import createICYMIStyles from "createICYMIStyles" /* 16434 */;
 import size_mod from "module_2" /* 2 */;
 
 let Badge, GameShareModal;
@@ -156,7 +156,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = react.useCallback(() => {
-    const promise = asyncRequire(16446, dependencyMap.paths);
+    const promise = asyncRequire(16486, dependencyMap.paths);
     promise.then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {

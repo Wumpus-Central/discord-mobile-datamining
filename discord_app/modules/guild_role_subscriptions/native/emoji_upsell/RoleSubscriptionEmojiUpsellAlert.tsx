@@ -1,12 +1,12 @@
-// === Module 9901: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 9914: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 9901 (RoleSubscriptionEmojiUpsellAlert)
+// Module 9914 (RoleSubscriptionEmojiUpsellAlert)
 import Fragment from "Fragment" /* 21 */;
 import intl4 from "intl" /* 1126 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8819 */;
-import CreatorRevenueButton2 from "CreatorRevenueButton" /* 9902 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8849 */;
+import CreatorRevenueButton2 from "CreatorRevenueButton" /* 9915 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -60,7 +60,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     name = stateFromStores.name;
   }
   if (cResult[3] !== name) {
-    const obj2 = { image: onClose(8819), title: intl.string(tmp(1126).t.cBjkcx), description: intl2.formatToPlainString(tmp(1126).t["h0u/Hi"], obj3) };
+    const obj2 = { image: onClose(8849), title: intl.string(tmp(1126).t.cBjkcx), description: intl2.formatToPlainString(tmp(1126).t["h0u/Hi"], obj3) };
     intl = tmp(1126).intl;
     intl2 = tmp(1126).intl;
     obj3 = { serverName: name };
@@ -113,14 +113,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           return tmp19;
         }
       }
-      const tmp21 = jsx(onClose(5783), { cancelText: tmp13, onClose, renderConfirmButton: tmp15, children: tmp16 });
+      const tmp21 = jsx(onClose(5790), { cancelText: tmp13, onClose, renderConfirmButton: tmp15, children: tmp16 });
       cResult[14] = onClose;
       cResult[15] = tmp15;
       cResult[16] = tmp16;
       cResult[17] = tmp21;
       tmp19 = tmp21;
     }
-    const tmp18 = jsx(tmp(8827).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
+    const tmp18 = jsx(tmp(8857).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
     cResult[11] = diff;
     cResult[12] = tmp11;
     cResult[13] = tmp18;

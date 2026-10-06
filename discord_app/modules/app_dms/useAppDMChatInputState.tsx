@@ -1,14 +1,14 @@
-// === Module 13102: useAppDMChatInputState ===
+// === Module 13121: useAppDMChatInputState ===
 
-// Module 13102 (useAppDMChatInputState)
+// Module 13121 (useAppDMChatInputState)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import Server from "Server" /* 1985 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8827 */;
 import react from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

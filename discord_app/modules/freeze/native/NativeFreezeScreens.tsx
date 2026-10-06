@@ -1,14 +1,14 @@
-// === Module 16220: NativeFreezeScreens ===
+// === Module 16260: NativeFreezeScreens ===
 
-// Module 16220 (NativeFreezeScreens)
+// Module 16260 (NativeFreezeScreens)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import _modDef38 from "module_38" /* 38 */;
-import enableScreens from "enableScreens" /* 5715 */;
+import enableScreens from "enableScreens" /* 5722 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let dependencyMap, importDefault, tmp, tmp6, tmp7;
@@ -118,7 +118,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   }
                 }
                 const obj2 = { enabled: undefined === detachInactiveScreens || detachInactiveScreens, hasTwoStates: true, style: screens, nativeID: "native-freeze-screens-container", children: tmp23 };
-                const tmp28 = first(tmp2(5715).ScreenContainer, obj2);
+                const tmp28 = first(tmp2(5722).ScreenContainer, obj2);
                 cResult[23] = undefined === detachInactiveScreens || detachInactiveScreens;
                 cResult[24] = tmp10.screens;
                 cResult[25] = tmp23;

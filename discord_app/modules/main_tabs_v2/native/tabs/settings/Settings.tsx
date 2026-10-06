@@ -1,17 +1,17 @@
-// === Module 17082: Settings ===
+// === Module 17108: Settings ===
 
-// Module 17082 (Settings)
+// Module 17108 (Settings)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6433 */;
-import profileModalTransition from "profileModalTransition" /* 16954 */;
-import SettingsNavigatorDefault from "SettingsNavigator" /* 17083 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6440 */;
+import profileModalTransition from "profileModalTransition" /* 16980 */;
+import SettingsNavigatorDefault from "SettingsNavigator" /* 17109 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

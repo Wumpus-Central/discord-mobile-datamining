@@ -1,10 +1,10 @@
-// === Module 9793: useSafetyAlertsSettingOrDefault ===
+// === Module 9806: useSafetyAlertsSettingOrDefault ===
 
-// Module 9793 (useSafetyAlertsSettingOrDefault)
+// Module 9806 (useSafetyAlertsSettingOrDefault)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import useUserIsTeen from "useUserIsTeen" /* 8294 */;
-import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 9794 */;
+import useUserIsTeen from "useUserIsTeen" /* 8327 */;
+import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 9807 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

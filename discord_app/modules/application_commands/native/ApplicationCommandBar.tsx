@@ -1,23 +1,23 @@
-// === Module 12046: ApplicationCommandBar ===
+// === Module 12061: ApplicationCommandBar ===
 
-// Module 12046 (ApplicationCommandBar)
+// Module 12061 (ApplicationCommandBar)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import Pressables from "Pressables" /* 5909 */;
-import usePreviousDefault from "usePrevious" /* 7946 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11860 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 12047 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import Pressables from "Pressables" /* 5916 */;
+import usePreviousDefault from "usePrevious" /* 7957 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 11874 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 12062 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -327,7 +327,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -343,7 +343,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -358,7 +358,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -375,7 +375,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -392,7 +392,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -407,7 +407,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -421,7 +421,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
           c1 = false;
           options = command.options;
           if (options != null) {
-            item = options.forEach(() => { /* body not rendered: F142101 */ });
+            item = options.forEach(() => { /* body not rendered: F142305 */ });
           }
           tmp2 = closure_9(c0);
           tmp3 = closure_10(c1);
@@ -449,7 +449,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -464,7 +464,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -492,7 +492,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -508,7 +508,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
         c1 = false;
         options = command.options;
         if (options != null) {
-          item = options.forEach(() => { /* body not rendered: F142101 */ });
+          item = options.forEach(() => { /* body not rendered: F142305 */ });
         }
         tmp2 = closure_9(c0);
         tmp3 = closure_10(c1);
@@ -522,7 +522,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
           c1 = false;
           options = command.options;
           if (options != null) {
-            item = options.forEach(() => { /* body not rendered: F142101 */ });
+            item = options.forEach(() => { /* body not rendered: F142305 */ });
           }
           tmp2 = closure_9(c0);
           tmp3 = closure_10(c1);
@@ -548,7 +548,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
             c1 = false;
             options = command.options;
             if (options != null) {
-              item = options.forEach(() => { /* body not rendered: F142101 */ });
+              item = options.forEach(() => { /* body not rendered: F142305 */ });
             }
             tmp2 = closure_9(c0);
             tmp3 = closure_10(c1);
@@ -575,7 +575,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
             c1 = false;
             options = command.options;
             if (options != null) {
-              item = options.forEach(() => { /* body not rendered: F142101 */ });
+              item = options.forEach(() => { /* body not rendered: F142305 */ });
             }
             tmp2 = closure_9(c0);
             tmp3 = closure_10(c1);
@@ -590,7 +590,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
             c1 = false;
             options = command.options;
             if (options != null) {
-              item = options.forEach(() => { /* body not rendered: F142101 */ });
+              item = options.forEach(() => { /* body not rendered: F142305 */ });
             }
             tmp2 = closure_9(c0);
             tmp3 = closure_10(c1);
@@ -617,7 +617,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
               c1 = false;
               options = command.options;
               if (options != null) {
-                item = options.forEach(() => { /* body not rendered: F142101 */ });
+                item = options.forEach(() => { /* body not rendered: F142305 */ });
               }
               tmp2 = closure_9(c0);
               tmp3 = closure_10(c1);
@@ -1048,11 +1048,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
   const tmp21 = ref;
   if (tmp22) {
     const obj4 = { style: tmp.applicationIcon, source: memo };
-    tmp22 = c10(section(5974), obj4);
+    tmp22 = c10(section(5981), obj4);
   }
   items5 = [tmp22, , , ];
   const obj5 = { style: tmp.applicationName, lineClamp: 1, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: `/ ${command.displayName}` };
-  items5[1] = c10(command(4886).Text, obj5);
+  items5[1] = c10(command(4892).Text, obj5);
   let options = command.options;
   let mapped;
   if (options != null) {
@@ -1092,7 +1092,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
     items6[1] = applicationOptionalOptionsDividerWithNoRequired;
     const items7 = [c10(ref, obj6), , ];
     const obj7 = { style: tmp.applicationOptionalOptionsIndicator, lineClamp: 1, variant: "eyebrow", color: "text-muted", children: intl.string(command(1126).t.U19GM3) };
-    const Text = tmp12(4886).Text;
+    const Text = tmp12(4892).Text;
     intl = tmp12(1126).intl;
     items7[1] = c10(Text, obj7);
     const options1 = command.options;
@@ -1124,10 +1124,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((command) => {
   items5[3] = tmp19Result;
   items8 = [closure_12(tmp21, obj3), , , ];
   const obj9 = { style: tmp.applicationDescriptionDivider };
-  items8[1] = c10(command(8895).FormDivider, obj9);
+  items8[1] = c10(command(8924).FormDivider, obj9);
   items8[2] = c10(closure_15, { command, option: currentOption, optionState: tmp17 });
   const obj10 = { style: tmp.applicationDescriptionDivider };
-  items8[3] = c10(command(8895).FormDivider, obj10);
+  items8[3] = c10(command(8924).FormDivider, obj10);
   return closure_12(ref, obj2);
 });
 ReactCompilerGating = ReactCompilerGating_mod;

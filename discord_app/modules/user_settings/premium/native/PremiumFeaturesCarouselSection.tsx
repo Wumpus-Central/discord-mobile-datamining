@@ -1,6 +1,6 @@
-// === Module 13276: PremiumFeaturesCarouselSection ===
+// === Module 13295: PremiumFeaturesCarouselSection ===
 
-// Module 13276 (PremiumFeaturesCarouselSection)
+// Module 13295 (PremiumFeaturesCarouselSection)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
@@ -10,21 +10,21 @@ import native from "native" /* 1188 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import ColorConstants from "ColorConstants" /* 6938 */;
-import PaginationDefault from "Pagination" /* 10491 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13277 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13278 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 13279 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 13280 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import ColorConstants from "ColorConstants" /* 6951 */;
+import PaginationDefault from "Pagination" /* 10504 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13296 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13297 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 13298 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 13299 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -589,7 +589,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   const cResult = obj.c(18);
   style = style.style;
   const tmp4 = closure_14();
-  analyticsLocations = first(6657)().analyticsLocations;
+  analyticsLocations = first(6664)().analyticsLocations;
   [first, dependencyMap] = react.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const tmpResult = analyticsLocations(1484);
@@ -653,8 +653,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
         }
         const obj3 = { style: headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: tmp15 };
         cResult[9] = tmp4.headerText;
-        cResult[10] = closure_10(analyticsLocations(4886).Text, obj3);
-        const tmp18 = closure_10(analyticsLocations(4886).Text, obj3);
+        cResult[10] = closure_10(analyticsLocations(4892).Text, obj3);
+        const tmp18 = closure_10(analyticsLocations(4892).Text, obj3);
       } else {
         class M {
           constructor(arg0) {
@@ -731,7 +731,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
   _slicedToArray = undefined;
   style = style.style;
   const tmp = closure_14();
-  const analyticsLocations = first(6657)().analyticsLocations;
+  const analyticsLocations = first(6664)().analyticsLocations;
   [first, dependencyMap] = react.useState(false);
   const useState = react.useState;
   let obj = analyticsLocations(1484);
@@ -754,7 +754,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((style) => {
     }
   }, items);
   const obj3 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: intl.string(analyticsLocations(1126).t.RGadQR) };
-  const Text = analyticsLocations(4886).Text;
+  const Text = analyticsLocations(4892).Text;
   intl = analyticsLocations(1126).intl;
   items2 = [closure_10(Text, obj3), closure_10(closure_20, { width: first1, onEndReached: callback })];
   return closure_11(closure_6, obj2);

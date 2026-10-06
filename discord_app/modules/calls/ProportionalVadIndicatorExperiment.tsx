@@ -1,6 +1,6 @@
-// === Module 5577: ProportionalVadIndicatorExperiment ===
+// === Module 5584: ProportionalVadIndicatorExperiment ===
 
-// Module 5577 (ProportionalVadIndicatorExperiment)
+// Module 5584 (ProportionalVadIndicatorExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import size from "module_2" /* 2 */;
 

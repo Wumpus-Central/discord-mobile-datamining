@@ -1,6 +1,6 @@
-// === Module 7134: Guilds ===
+// === Module 7147: Guilds ===
 
-// Module 7134 (Guilds)
+// Module 7147 (Guilds)
 import LoggerDefault from "Logger" /* 3 */;
 import GuildRecordUtilsAll from "GuildRecordUtils" /* 2066 */;
 import GuildRecord from "GuildRecord" /* 2070 */;

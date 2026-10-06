@@ -1,10 +1,10 @@
-// === Module 10007: QuestOrbMultiplierHooks ===
+// === Module 10020: QuestOrbMultiplierHooks ===
 
-// Module 10007 (QuestOrbMultiplierHooks)
+// Module 10020 (QuestOrbMultiplierHooks)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10008 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10021 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

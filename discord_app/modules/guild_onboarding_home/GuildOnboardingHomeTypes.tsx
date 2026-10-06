@@ -1,8 +1,8 @@
-// === Module 7522: GuildOnboardingHomeTypes ===
+// === Module 7533: GuildOnboardingHomeTypes ===
 
-// Module 7522 (GuildOnboardingHomeTypes)
+// Module 7533 (GuildOnboardingHomeTypes)
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

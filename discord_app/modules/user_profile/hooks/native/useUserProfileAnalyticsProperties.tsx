@@ -1,8 +1,8 @@
-// === Module 7870: useUserProfileAnalyticsProperties ===
+// === Module 7881: useUserProfileAnalyticsProperties ===
 
-// Module 7870 (useUserProfileAnalyticsProperties)
+// Module 7881 (useUserProfileAnalyticsProperties)
 import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 7854 */;
+import Constants from "Constants" /* 7865 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

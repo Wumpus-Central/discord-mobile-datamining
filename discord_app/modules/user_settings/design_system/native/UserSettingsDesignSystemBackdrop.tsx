@@ -1,18 +1,18 @@
-// === Module 15677: UserSettingsDesignSystemBackdrop ===
+// === Module 15691: UserSettingsDesignSystemBackdrop ===
 
-// Module 15677 (UserSettingsDesignSystemBackdrop)
+// Module 15691 (UserSettingsDesignSystemBackdrop)
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import spring from "spring" /* 5597 */;
-import springPresets from "springPresets" /* 5598 */;
-import Card_Card from "Card/Card" /* 5995 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import spring from "spring" /* 5604 */;
+import springPresets from "springPresets" /* 5605 */;
+import Card_Card from "Card/Card" /* 6002 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -175,11 +175,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj = { opacity: withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
     return obj;
   };
-  const obj2 = showBackdrop(4612);
-  fn.__closure = { withSpring: showBackdrop(5597).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5598).SUBTLE_SPRING };
+  const obj2 = showBackdrop(4618);
+  fn.__closure = { withSpring: showBackdrop(5604).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5605).SUBTLE_SPRING };
   fn.__workletHash = 7978288613287;
   fn.__initData = __initData;
-  ({ withSpring: showBackdrop(5597).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5598).SUBTLE_SPRING });
+  ({ withSpring: showBackdrop(5604).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5605).SUBTLE_SPRING });
   const animatedStyle = obj2.useAnimatedStyle(fn);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function s() {
@@ -194,7 +194,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { spacing: 24, children: items };
     const obj5 = { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp5[1], setBlurAmount: tmp10 };
-    const Stack = tmp(5593).Stack;
+    const Stack = tmp(5600).Stack;
     items = [closure_6(closure_9, obj5), , ];
     const obj6 = { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp5[1], setBlurAmount: tmp10 };
     items[1] = closure_6(closure_9, obj6);
@@ -233,12 +233,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp19 = showBackdrop;
   if (tmp19) {
     const obj9 = { onDismiss: first1, children: items2 };
-    const Dialog = tmp(5766).Dialog;
+    const Dialog = tmp(5773).Dialog;
     const obj10 = { style: animatedStyle, blur: tmp9, onDismiss: first1 };
-    items2 = [closure_6(tmp(5771).Backdrop, obj10), ];
+    items2 = [closure_6(tmp(5778).Backdrop, obj10), ];
     const obj11 = { style: tmp4.backdropContent, pointerEvents: "box-none", children: closure_6(Card, obj12) };
-    obj12 = { children: closure_7(showBackdrop(4886).Text, obj13) };
-    Card = tmp(5995).Card;
+    obj12 = { children: closure_7(showBackdrop(4892).Text, obj13) };
+    Card = tmp(6002).Card;
     obj13 = { variant: "text-md/normal", children: items3 };
     items3 = ["blur style: ", tmp9];
     items2[1] = closure_6(closure_5, obj11);
@@ -267,7 +267,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   dependencyMap = tmp4;
   [tmp6, tmp7] = react.useState("none");
   _slicedToArray(react.useState("none"), 2);
-  let obj = showBackdrop(4612);
+  let obj = showBackdrop(4618);
   const fn = function n() {
     let num = 0;
     const withSpring = spring.withSpring;
@@ -278,14 +278,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj = { opacity: withSpring(num, springPresets.SUBTLE_SPRING, "animate-always") };
     return obj;
   };
-  fn.__closure = { withSpring: showBackdrop(5597).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5598).SUBTLE_SPRING };
+  fn.__closure = { withSpring: showBackdrop(5604).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5605).SUBTLE_SPRING };
   fn.__workletHash = 5659195678596;
   fn.__initData = __initData2;
   const obj3 = { contentContainerStyle: tmp.container, children: items1 };
-  ({ withSpring: showBackdrop(5597).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5598).SUBTLE_SPRING });
+  ({ withSpring: showBackdrop(5604).withSpring, showBackdrop, SUBTLE_SPRING: showBackdrop(5605).SUBTLE_SPRING });
   const animatedStyle = obj.useAnimatedStyle(fn);
   const obj4 = { spacing: 24, children: items };
-  const Stack = showBackdrop(5593).Stack;
+  const Stack = showBackdrop(5600).Stack;
   items = [closure_6(closure_9, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(closure_9, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), closure_6(closure_9, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 })];
   items1 = [closure_7(Stack, obj4), ];
   if (showBackdrop) {
@@ -293,12 +293,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       closure_1(false);
     }
     const obj5 = { onDismiss: handleClose, children: items2 };
-    const Dialog = tmp8(5766).Dialog;
+    const Dialog = tmp8(5773).Dialog;
     const obj6 = { style: animatedStyle, blur: tmp6, onDismiss: handleClose };
-    items2 = [closure_6(showBackdrop(5771).Backdrop, obj6), ];
+    items2 = [closure_6(showBackdrop(5778).Backdrop, obj6), ];
     const obj7 = { style: tmp.backdropContent, pointerEvents: "box-none", children: closure_6(Card, obj8) };
-    obj8 = { children: closure_7(showBackdrop(4886).Text, obj9) };
-    Card = tmp8(5995).Card;
+    obj8 = { children: closure_7(showBackdrop(4892).Text, obj9) };
+    Card = tmp8(6002).Card;
     obj9 = { variant: "text-md/normal", children: items3 };
     items3 = ["blur style: ", tmp6];
     items2[1] = closure_6(closure_5, obj7);

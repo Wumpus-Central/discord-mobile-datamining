@@ -1,6 +1,6 @@
-// === Module 12475: StatusUtils ===
+// === Module 12490: StatusUtils ===
 
-// Module 12475 (StatusUtils)
+// Module 12490 (StatusUtils)
 import intl from "intl" /* 1126 */;
 import size from "module_2" /* 2 */;
 

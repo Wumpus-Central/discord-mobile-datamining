@@ -1,21 +1,21 @@
-// === Module 16841: SearchListCard ===
+// === Module 16862: SearchListCard ===
 
-// Module 16841 (SearchListCard)
+// Module 16862 (SearchListCard)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import ForumIcon from "ForumIcon" /* 5872 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10648 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import ForumIcon from "ForumIcon" /* 5879 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10661 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

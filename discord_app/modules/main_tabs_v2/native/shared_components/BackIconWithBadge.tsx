@@ -1,21 +1,21 @@
-// === Module 16345: BackIconWithBadge ===
+// === Module 16385: BackIconWithBadge ===
 
-// Module 16345 (BackIconWithBadge)
+// Module 16385 (BackIconWithBadge)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import XLargeIcon from "XLargeIcon" /* 4795 */;
-import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6014 */;
-import XSmallIcon from "XSmallIcon" /* 6017 */;
-import ClipView from "ClipView" /* 8469 */;
-import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16336 */;
+import XLargeIcon from "XLargeIcon" /* 4801 */;
+import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 6021 */;
+import XSmallIcon from "XSmallIcon" /* 6024 */;
+import ClipView from "ClipView" /* 8502 */;
+import useNotificationsTabBadgeDefault from "useNotificationsTabBadge" /* 16376 */;
 import react from "react" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7121 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -219,7 +219,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj = require("get initialized");
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   let num = 0;
-  const value = memo(16336)().value;
+  const value = memo(16376)().value;
   const tmp5 = memo;
   if (null != stateFromStores) {
     num = stateFromStores;
@@ -255,7 +255,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const obj2 = { style: size, children: closure_7(View, obj3) };
   obj3 = { style: tmp.backIcon, children: items5 };
-  const tmp5Result = tmp5(8469);
+  const tmp5Result = tmp5(8502);
   if (null != memo1) {
     const items3 = [memo1];
     items4 = items3;

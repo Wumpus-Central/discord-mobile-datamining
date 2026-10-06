@@ -1,9 +1,9 @@
-// === Module 9131: useCurrentEmbeddedApplication ===
+// === Module 9166: useCurrentEmbeddedApplication ===
 
-// Module 9131 (useCurrentEmbeddedApplication)
+// Module 9166 (useCurrentEmbeddedApplication)
 import react from "react" /* 576 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6663 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9132 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6670 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9167 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

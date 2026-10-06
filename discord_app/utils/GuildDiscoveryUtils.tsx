@@ -1,12 +1,12 @@
-// === Module 6844: GuildDiscoveryUtils ===
+// === Module 6854: GuildDiscoveryUtils ===
 
-// Module 6844 (GuildDiscoveryUtils)
+// Module 6854 (GuildDiscoveryUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef1478 from "module_1478" /* 1478 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4510 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
+import LurkingStore from "LurkingStore" /* 4516 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4786 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -149,7 +149,7 @@ let obj = function _startLurking() {
     if (closure_2 === undefined) {
       obj4 = {};
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

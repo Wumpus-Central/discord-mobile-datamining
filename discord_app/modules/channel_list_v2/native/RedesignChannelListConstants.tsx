@@ -1,8 +1,8 @@
-// === Module 11697: RedesignChannelListConstants ===
+// === Module 11711: RedesignChannelListConstants ===
 
-// Module 11697 (RedesignChannelListConstants)
+// Module 11711 (RedesignChannelListConstants)
 import react_native from "react-native" /* 17 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import size from "module_2" /* 2 */;
 

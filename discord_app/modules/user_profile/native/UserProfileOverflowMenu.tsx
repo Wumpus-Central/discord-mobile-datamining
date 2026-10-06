@@ -1,38 +1,38 @@
-// === Module 12789: UserProfileOverflowMenu ===
+// === Module 12808: UserProfileOverflowMenu ===
 
-// Module 12789 (UserProfileOverflowMenu)
+// Module 12808 (UserProfileOverflowMenu)
 import react_native from "react-native" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import Constants2 from "Constants" /* 6707 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8080 */;
-import ReportModals from "ReportModals" /* 8279 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 9433 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
-import getApplicationInstallURL2 from "getApplicationInstallURL" /* 11756 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12286 */;
-import GuildInviteUtils from "GuildInviteUtils" /* 12790 */;
-import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 12800 */;
-import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 12804 */;
-import BotReportChooser from "BotReportChooser" /* 12807 */;
-import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 12808 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import Constants2 from "Constants" /* 6714 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8113 */;
+import ReportModals from "ReportModals" /* 8312 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9446 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+import getApplicationInstallURL2 from "getApplicationInstallURL" /* 11770 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12301 */;
+import GuildInviteUtils from "GuildInviteUtils" /* 12809 */;
+import openShopThisLookActionSheet from "openShopThisLookActionSheet" /* 12819 */;
+import ShopThisLookAnalyticsUtils from "ShopThisLookAnalyticsUtils" /* 12823 */;
+import BotReportChooser from "BotReportChooser" /* 12826 */;
+import openUserContextMenuCommandsDefault from "openUserContextMenuCommands" /* 12827 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import Constants from "Constants" /* 1085 */;
-import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 9816 */;
+import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 9829 */;
 import Fragment from "Fragment" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -293,7 +293,7 @@ export default function UserProfileOverflowMenu(user) {
               trackUserProfileAction(obj);
               const obj2 = ModalActionCreatorsDefault;
               const obj3 = { userId: id2, showUserProfile };
-              obj2.pushLazy(asyncRequire(12806, dependencyMap.paths), obj3);
+              obj2.pushLazy(asyncRequire(12825, dependencyMap.paths), obj3);
               const obj4 = ActionSheetActionCreatorsDefault;
               obj4.hideActionSheet();
             }
@@ -379,7 +379,7 @@ export default function UserProfileOverflowMenu(user) {
                     impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION
                   };
                   id = undefined;
-                  const tmp4 = asyncRequire(9817, dependencyMap.paths);
+                  const tmp4 = asyncRequire(9830, dependencyMap.paths);
                   if (channel != null) {
                     id = channel.id;
                   }
@@ -403,7 +403,7 @@ export default function UserProfileOverflowMenu(user) {
                       trackUserProfileAction(obj);
                       if (user.bot) {
                         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-                        const tmp19 = asyncRequire(12807, dependencyMap.paths);
+                        const tmp19 = asyncRequire(12826, dependencyMap.paths);
                         const BOT_REPORT_CHOOSER_KEY = BotReportChooser.BOT_REPORT_CHOOSER_KEY;
                         const obj4 = { user, entrypoint: "UserProfileOverflowMenu", contextualGuildId: guildId1, contextualChannelId: id };
                         id = undefined;
@@ -481,7 +481,7 @@ export default function UserProfileOverflowMenu(user) {
                 impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION
               };
               id = undefined;
-              const tmp4 = asyncRequire(9818, dependencyMap.paths);
+              const tmp4 = asyncRequire(9831, dependencyMap.paths);
               if (channel != null) {
                 id = channel.id;
               }

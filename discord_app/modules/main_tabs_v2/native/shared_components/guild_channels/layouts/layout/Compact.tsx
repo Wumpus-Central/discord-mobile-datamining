@@ -1,11 +1,11 @@
-// === Module 11701: Compact ===
+// === Module 11715: Compact ===
 
-// Module 11701 (Compact)
+// Module 11715 (Compact)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import GameIcon from "GameIcon" /* 6667 */;
-import deepmergeDefault from "deepmerge" /* 11700 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import GameIcon from "GameIcon" /* 6674 */;
+import deepmergeDefault from "deepmerge" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 let items;

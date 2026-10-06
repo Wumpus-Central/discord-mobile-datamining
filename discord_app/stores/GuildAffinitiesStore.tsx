@@ -1,9 +1,9 @@
-// === Module 8021: GuildAffinitiesStore ===
+// === Module 8031: GuildAffinitiesStore ===
 
-// Module 8021 (GuildAffinitiesStore)
+// Module 8031 (GuildAffinitiesStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8022 */;
+import GuildAffinitiesActionCreators from "GuildAffinitiesActionCreators" /* 8032 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 17065: useSpamMessageRequestsCount ===
+// === Module 17091: useSpamMessageRequestsCount ===
 
-// Module 17065 (useSpamMessageRequestsCount)
+// Module 17091 (useSpamMessageRequestsCount)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6721 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6735 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

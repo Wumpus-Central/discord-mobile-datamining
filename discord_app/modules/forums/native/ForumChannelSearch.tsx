@@ -1,14 +1,14 @@
-// === Module 13098: ForumChannelSearch ===
+// === Module 13117: ForumChannelSearch ===
 
-// Module 13098 (ForumChannelSearch)
+// Module 13117 (ForumChannelSearch)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import tracking_Tracking from "tracking/Tracking" /* 7263 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 7541 */;
+import tracking_Tracking from "tracking/Tracking" /* 7276 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 7552 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import ForumSearchStore from "ForumSearchStore" /* 7264 */;
-import createStyles from "createStyles" /* 4890 */;
+import ForumSearchStore from "ForumSearchStore" /* 7277 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -158,7 +158,7 @@ const memo2Result = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((chann
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
   closure_8();
-  let obj2 = channelId(13099);
+  let obj2 = channelId(13118);
   const canSearchForumPostsByChannelId = obj2.useCanSearchForumPostsByChannelId(channelId);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ForumSearchStore];
@@ -299,7 +299,7 @@ const memo2Result = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((chann
   ({ guildId: importDefault, placeholder } = channelId);
   let tmp2 = channelId;
   const tmp = closure_8();
-  let obj = channelId(13099);
+  let obj = channelId(13118);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   let obj2 = channelId(504);
   const items = [ForumSearchStore];
@@ -317,7 +317,7 @@ const memo2Result = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((chann
   if (canSearchForumPostsByChannelId) {
     tmp8Result = null;
     if (null != stateFromStores) {
-      const SearchField = tmp2(6547).SearchField;
+      const SearchField = tmp2(6554).SearchField;
       if (null == placeholder) {
         const intl = tmp2(1126).intl;
         const string = intl.string;

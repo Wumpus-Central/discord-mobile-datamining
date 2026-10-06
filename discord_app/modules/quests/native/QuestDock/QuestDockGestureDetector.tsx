@@ -1,15 +1,15 @@
-// === Module 14990: QuestDockGestureDetector ===
+// === Module 15005: QuestDockGestureDetector ===
 
-// Module 14990 (QuestDockGestureDetector)
+// Module 15005 (QuestDockGestureDetector)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import QuestDockUtils from "QuestDockUtils" /* 14895 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import QuestDockUtils from "QuestDockUtils" /* 14911 */;
 import react from "react" /* 19 */;
-import QuestDockConstants from "QuestDockConstants" /* 14896 */;
+import QuestDockConstants from "QuestDockConstants" /* 14912 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

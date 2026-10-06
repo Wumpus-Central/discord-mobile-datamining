@@ -1,6 +1,6 @@
-// === Module 4510: LurkingStore ===
+// === Module 4516: LurkingStore ===
 
-// Module 4510 (LurkingStore)
+// Module 4516 (LurkingStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildRecord from "GuildRecord" /* 2070 */;

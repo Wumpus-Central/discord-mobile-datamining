@@ -1,15 +1,15 @@
-// === Module 17455: AppIconPremiumManager ===
+// === Module 17482: AppIconPremiumManager ===
 
-// Module 17455 (AppIconPremiumManager)
+// Module 17482 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AppIconConstants from "AppIconConstants" /* 8828 */;
-import AppIconTypes from "AppIconTypes" /* 8829 */;
+import AppIconConstants from "AppIconConstants" /* 8858 */;
+import AppIconTypes from "AppIconTypes" /* 8859 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserStore from "UserStore" /* 1377 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

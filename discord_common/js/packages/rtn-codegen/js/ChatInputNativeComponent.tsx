@@ -1,6 +1,6 @@
-// === Module 11603: ChatInputNativeComponent ===
+// === Module 11617: ChatInputNativeComponent ===
 
-// Module 11603 (ChatInputNativeComponent)
+// Module 11617 (ChatInputNativeComponent)
 import _mod26 from "module_26" /* 26 */;
 import renderElement from "renderElement" /* 114 */;
 import DynamicallyInjectedByGestureHandler from "DynamicallyInjectedByGestureHandler" /* 106 */;

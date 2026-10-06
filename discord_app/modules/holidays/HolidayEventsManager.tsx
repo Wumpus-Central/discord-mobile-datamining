@@ -1,15 +1,15 @@
-// === Module 17509: HolidayEventsManager ===
+// === Module 17554: HolidayEventsManager ===
 
-// Module 17509 (HolidayEventsManager)
-import Constants from "Constants" /* 9564 */;
-import getSoundsForPackDefault from "getSoundsForPack" /* 9565 */;
-import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 17510 */;
-import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 17514 */;
-import SoundpackActions from "SoundpackActions" /* 17515 */;
-import react_native from "react-native" /* 17516 */;
+// Module 17554 (HolidayEventsManager)
+import Constants from "Constants" /* 9577 */;
+import getSoundsForPackDefault from "getSoundsForPack" /* 9578 */;
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 17555 */;
+import HolidayEventsUtilsDefault from "HolidayEventsUtils" /* 17559 */;
+import SoundpackActions from "SoundpackActions" /* 17560 */;
+import react_native from "react-native" /* 17561 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
-import SoundpackStore from "SoundpackStore" /* 9563 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import SoundpackStore from "SoundpackStore" /* 9576 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let map;

@@ -1,6 +1,6 @@
-// === Module 17886: useEnableMFAHook ===
+// === Module 17932: useEnableMFAHook ===
 
-// Module 17886 (useEnableMFAHook)
+// Module 17932 (useEnableMFAHook)
 import size from "module_2" /* 2 */;
 
 function passthrough(arg0) {

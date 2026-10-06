@@ -1,6 +1,6 @@
-// === Module 5079: guildHasOnboardingHome ===
+// === Module 5085: guildHasOnboardingHome ===
 
-// Module 5079 (guildHasOnboardingHome)
+// Module 5085 (guildHasOnboardingHome)
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 17797: RoleIconUploadUtils ===
+// === Module 17843: RoleIconUploadUtils ===
 
-// Module 17797 (RoleIconUploadUtils)
+// Module 17843 (RoleIconUploadUtils)
 import Constants from "Constants" /* 1085 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;

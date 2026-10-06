@@ -1,6 +1,6 @@
-// === Module 5901: DiscordContentClassificationFlags ===
+// === Module 5908: DiscordContentClassificationFlags ===
 
-// Module 5901 (DiscordContentClassificationFlags)
+// Module 5908 (DiscordContentClassificationFlags)
 import "BigFlagUtils";
 import BigFlagUtils_mod from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;

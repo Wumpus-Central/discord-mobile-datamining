@@ -1,10 +1,10 @@
-// === Module 15936: getScreenAnalyticsName ===
+// === Module 15975: getScreenAnalyticsName ===
 
-// Module 15936 (getScreenAnalyticsName)
+// Module 15975 (getScreenAnalyticsName)
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import AcceptInviteConstants from "AcceptInviteConstants" /* 7155 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import AcceptInviteConstants from "AcceptInviteConstants" /* 7168 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 9315: VideoFilterImageError ===
+// === Module 8088: VideoFilterImageError ===
 
-// Module 9315 (VideoFilterImageError)
+// Module 8088 (VideoFilterImageError)
 import intl3 from "intl" /* 1126 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import size from "module_2" /* 2 */;

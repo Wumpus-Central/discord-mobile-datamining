@@ -1,13 +1,13 @@
-// === Module 17796: RoleIconActionSheet ===
+// === Module 17842: RoleIconActionSheet ===
 
-// Module 17796 (RoleIconActionSheet)
+// Module 17842 (RoleIconActionSheet)
 import Constants from "Constants" /* 1085 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17793 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import GuildSettingsRolesActionCreators from "GuildSettingsRolesActionCreators" /* 17839 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17781 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17827 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -274,7 +274,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }
       }
       let obj2 = { title: intl.string(tmp(1126).t.B9grJw) };
-      const BottomSheetTitleHeader = tmp(6644).BottomSheetTitleHeader;
+      const BottomSheetTitleHeader = tmp(6651).BottomSheetTitleHeader;
       intl = tmp(1126).intl;
       const tmp13 = closure_7(BottomSheetTitleHeader, obj2);
       cResult[11] = tmp13;
@@ -300,7 +300,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }
       }
       let obj3 = { variant: "text-sm/medium", color: "text-muted", children: intl2.string(tmp(1126).t.I3YQeV) };
-      const Text = tmp(4886).Text;
+      const Text = tmp(4892).Text;
       intl2 = tmp(1126).intl;
       const tmp15 = closure_7(Text, obj3);
       cResult[12] = tmp15;
@@ -353,7 +353,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }
       }
       let obj4 = { label: tmp17, subLabel: tmp16, onPress: tmp9 };
-      const tmp21 = closure_7(tmp(5993).TableRow, obj4);
+      const tmp21 = closure_7(tmp(6000).TableRow, obj4);
       cResult[15] = tmp9;
       cResult[16] = tmp21;
       tmp20 = tmp21;
@@ -400,7 +400,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }
       }
       let obj6 = { label: tmp22, onPress: tmp10 };
-      const tmp25 = closure_7(tmp(5993).TableRow, obj6);
+      const tmp25 = closure_7(tmp(6000).TableRow, obj6);
       cResult[18] = tmp10;
       cResult[19] = tmp25;
       tmp24 = tmp25;
@@ -435,10 +435,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
       let obj8 = { children: items2 };
       items2 = [tmp12, tmp14, ];
-      const ActionSheet = tmp(6701).ActionSheet;
+      const ActionSheet = tmp(6708).ActionSheet;
       let obj9 = { hasIcons: false, children: items3 };
       items3 = [tmp20, tmp24, tmp26];
-      items2[2] = closure_8(tmp(6074).TableRowGroup, obj9);
+      items2[2] = closure_8(tmp(6081).TableRowGroup, obj9);
       const tmp30 = closure_8(ActionSheet, obj8);
       cResult[23] = tmp20;
       cResult[24] = tmp24;
@@ -456,7 +456,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         }
       }
       const obj10 = { variant: "danger", label: intl4.string(tmp(1126).t["uY+Nk/"]), onPress: T };
-      const TableRow = tmp(5993).TableRow;
+      const TableRow = tmp(6000).TableRow;
       intl4 = tmp(1126).intl;
       tmp27 = closure_7(TableRow, obj10);
     }

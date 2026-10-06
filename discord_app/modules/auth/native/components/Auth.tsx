@@ -1,31 +1,31 @@
-// === Module 15864: Auth ===
+// === Module 15903: Auth ===
 
-// Module 15864 (Auth)
+// Module 15903 (Auth)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1632 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6432 */;
-import MFAUtils from "MFAUtils" /* 6439 */;
-import react3 from "react" /* 6461 */;
-import BackgroundImageDefault from "BackgroundImage" /* 6463 */;
-import Navigator3 from "Navigator" /* 6496 */;
-import _mod6498 from "module_6498" /* 6498 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 15865 */;
-import RegistrationUtils from "RegistrationUtils" /* 15875 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15917 */;
-import AssetRegistry from "AssetRegistry" /* 15918 */;
-import AuthManagerDefault from "AuthManager" /* 15919 */;
-import useOrientationLockDefault from "useOrientationLock" /* 15923 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
+import MFAUtils from "MFAUtils" /* 6446 */;
+import react3 from "react" /* 6468 */;
+import BackgroundImageDefault from "BackgroundImage" /* 6470 */;
+import Navigator3 from "Navigator" /* 6503 */;
+import _mod6505 from "module_6505" /* 6505 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 15904 */;
+import RegistrationUtils from "RegistrationUtils" /* 15914 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15956 */;
+import AssetRegistry from "AssetRegistry" /* 15957 */;
+import AuthManagerDefault from "AuthManager" /* 15958 */;
+import useOrientationLockDefault from "useOrientationLock" /* 15962 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import MultiAccountStore from "MultiAccountStore" /* 12056 */;
+import MultiAccountStore from "MultiAccountStore" /* 12071 */;
 import Fragment from "Fragment" /* 21 */;
-import RegistrationStepsUtils_mod from "RegistrationStepsUtils" /* 15866 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import RegistrationStepsUtils_mod from "RegistrationStepsUtils" /* 15905 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -107,8 +107,8 @@ const screens = fromEntries(RegistrationStepsUtils.map((item) => {
   let tmp8 = null;
   set = new Set(items1);
   if (set.has(tmp)) {
-    tmp8 = { cardStyleInterpolator: _mod6498.CardStyleInterpolators.forFadeFromCenter };
-    const obj4 = { cardStyleInterpolator: _mod6498.CardStyleInterpolators.forFadeFromCenter };
+    tmp8 = { cardStyleInterpolator: _mod6505.CardStyleInterpolators.forFadeFromCenter };
+    const obj4 = { cardStyleInterpolator: _mod6505.CardStyleInterpolators.forFadeFromCenter };
   }
   const merged3 = Object.assign(tmp8);
   items[1] = obj;

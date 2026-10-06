@@ -1,16 +1,16 @@
-// === Module 16585: useUserApplicationWidgetData ===
+// === Module 16623: useUserApplicationWidgetData ===
 
-// Module 16585 (useUserApplicationWidgetData)
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7115 */;
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
-import UserApplicationIdentityStore2 from "UserApplicationIdentityStore" /* 8691 */;
-import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 8692 */;
-import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 8693 */;
-import ApplicationWidgetConfigStore2 from "ApplicationWidgetConfigStore" /* 8694 */;
+// Module 16623 (useUserApplicationWidgetData)
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7128 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
+import UserApplicationIdentityStore2 from "UserApplicationIdentityStore" /* 8726 */;
+import UserApplicationIdentityActionCreatorsDefault from "UserApplicationIdentityActionCreators" /* 8727 */;
+import useApplicationWidgetConfigsDefault from "useApplicationWidgetConfigs" /* 8728 */;
+import ApplicationWidgetConfigStore2 from "ApplicationWidgetConfigStore" /* 8729 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

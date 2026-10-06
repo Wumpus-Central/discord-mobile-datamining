@@ -1,26 +1,26 @@
-// === Module 16106: ChannelsUnreadBars ===
+// === Module 16145: ChannelsUnreadBars ===
 
-// Module 16106 (ChannelsUnreadBars)
+// Module 16145 (ChannelsUnreadBars)
 import debounceDefault from "debounce" /* 551 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import useFontScale from "useFontScale" /* 5602 */;
-import FastList from "FastList" /* 6569 */;
-import ChannelListState from "ChannelListState" /* 7039 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import useFontScale from "useFontScale" /* 5609 */;
+import FastList from "FastList" /* 6576 */;
+import ChannelListState from "ChannelListState" /* 7052 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7121 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let StyleSheet;

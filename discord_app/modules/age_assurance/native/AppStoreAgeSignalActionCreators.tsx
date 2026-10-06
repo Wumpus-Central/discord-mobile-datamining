@@ -1,6 +1,6 @@
-// === Module 8252: AppStoreAgeSignalActionCreators ===
+// === Module 8285: AppStoreAgeSignalActionCreators ===
 
-// Module 8252 (AppStoreAgeSignalActionCreators)
+// Module 8285 (AppStoreAgeSignalActionCreators)
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -150,7 +150,7 @@ obj = function _submitAgeSignal() {
             }
             c8 = 1;
             c9 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           let toSubmitOutcome;

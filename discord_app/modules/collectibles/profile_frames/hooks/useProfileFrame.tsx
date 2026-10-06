@@ -1,9 +1,9 @@
-// === Module 7883: useProfileFrame ===
+// === Module 7894: useProfileFrame ===
 
-// Module 7883 (useProfileFrame)
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7060 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
+// Module 7894 (useProfileFrame)
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7073 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

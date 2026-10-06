@@ -1,11 +1,11 @@
-// === Module 13285: PremiumTier2LogoSmall ===
+// === Module 13304: PremiumTier2LogoSmall ===
 
-// Module 13285 (PremiumTier2LogoSmall)
+// Module 13304 (PremiumTier2LogoSmall)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
+import useToken from "useToken" /* 4586 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,12 +1,12 @@
-// === Module 10468: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 10481: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 10468 (useMaybeFetchCollectiblesCategoriesShared)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7098 */;
+// Module 10481 (useMaybeFetchCollectiblesCategoriesShared)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7111 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ExperimentStore_mod from "ExperimentStore" /* 4776 */;
-import CollectiblesCategoryStore_mod from "CollectiblesCategoryStore" /* 7053 */;
+import ExperimentStore_mod from "ExperimentStore" /* 4782 */;
+import CollectiblesCategoryStore_mod from "CollectiblesCategoryStore" /* 7066 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

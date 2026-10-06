@@ -1,18 +1,18 @@
-// === Module 15382: LogoutSetting ===
+// === Module 15397: LogoutSetting ===
 
-// Module 15382 (LogoutSetting)
+// Module 15397 (LogoutSetting)
 import Storage2 from "Storage" /* 510 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import intl5 from "intl" /* 1126 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6487 */;
-import PushNotificationDefault from "PushNotification" /* 8966 */;
-import DoorExitIcon from "DoorExitIcon" /* 9576 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6494 */;
+import PushNotificationDefault from "PushNotification" /* 8995 */;
+import DoorExitIcon from "DoorExitIcon" /* 9589 */;
 import Fragment from "Fragment" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 let set;

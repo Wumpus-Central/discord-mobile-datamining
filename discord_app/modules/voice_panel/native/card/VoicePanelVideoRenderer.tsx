@@ -1,23 +1,23 @@
-// === Module 17272: VoicePanelVideoRenderer ===
+// === Module 17301: VoicePanelVideoRenderer ===
 
-// Module 17272 (VoicePanelVideoRenderer)
+// Module 17301 (VoicePanelVideoRenderer)
 import react_native from "react-native" /* 17 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import spring from "spring" /* 5597 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import cheapWorkletShallowEqual2 from "cheapWorkletShallowEqual" /* 9074 */;
-import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9114 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11903 */;
-import VideoActionCreators from "VideoActionCreators" /* 17157 */;
-import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17206 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import spring from "spring" /* 5604 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import cheapWorkletShallowEqual2 from "cheapWorkletShallowEqual" /* 9110 */;
+import DCDVideoRendererDefault from "DCDVideoRenderer" /* 9149 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11917 */;
+import VideoActionCreators from "VideoActionCreators" /* 17186 */;
+import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17235 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

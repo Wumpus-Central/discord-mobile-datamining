@@ -1,6 +1,6 @@
-// === Module 8802: useNSFWAllowed ===
+// === Module 6728: useNSFWAllowed ===
 
-// Module 8802 (useNSFWAllowed)
+// Module 6728 (useNSFWAllowed)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import UserStore from "UserStore" /* 1377 */;

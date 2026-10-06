@@ -1,6 +1,6 @@
-// === Module 8015: OAuth2Scopes ===
+// === Module 8025: OAuth2Scopes ===
 
-// Module 8015 (OAuth2Scopes)
+// Module 8025 (OAuth2Scopes)
 import size from "module_2" /* 2 */;
 
 let obj2;

@@ -1,8 +1,8 @@
-// === Module 10529: useWishlistSkuFilter ===
+// === Module 10542: useWishlistSkuFilter ===
 
-// Module 10529 (useWishlistSkuFilter)
+// Module 10542 (useWishlistSkuFilter)
 import Constants from "Constants" /* 1085 */;
-import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6728 */;
+import WishlistRecommendationRecord from "WishlistRecommendationRecord" /* 6742 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

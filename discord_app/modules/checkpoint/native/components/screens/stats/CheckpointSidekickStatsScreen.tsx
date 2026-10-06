@@ -1,9 +1,9 @@
-// === Module 15550: CheckpointSidekickStatsScreen ===
+// === Module 15566: CheckpointSidekickStatsScreen ===
 
-// Module 15550 (CheckpointSidekickStatsScreen)
+// Module 15566 (CheckpointSidekickStatsScreen)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15543 */;
+import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15559 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

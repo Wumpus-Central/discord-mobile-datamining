@@ -1,6 +1,6 @@
-// === Module 9676: WindowsEffectsExperiment ===
+// === Module 9689: WindowsEffectsExperiment ===
 
-// Module 9676 (WindowsEffectsExperiment)
+// Module 9689 (WindowsEffectsExperiment)
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

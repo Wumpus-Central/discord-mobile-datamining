@@ -1,16 +1,16 @@
-// === Module 9757: ActiveSpeakerTooltip ===
+// === Module 9770: ActiveSpeakerTooltip ===
 
-// Module 9757 (ActiveSpeakerTooltip)
+// Module 9770 (ActiveSpeakerTooltip)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 9738 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 9751 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import StageChannelListStore from "StageChannelListStore" /* 9729 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import StageChannelListStore from "StageChannelListStore" /* 9742 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -74,7 +74,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel
     tmp8 = cResult[3];
   }
   const tmpResult = channel(504);
-  const first1 = _slicedToArray(tmpResult.useStateFromStores(first, tmp7, tmp8, tmp(5589).isVersionEqual), 1)[0];
+  const first1 = _slicedToArray(tmpResult.useStateFromStores(first, tmp7, tmp8, tmp(5596).isVersionEqual), 1)[0];
   const first2 = _slicedToArray(closure_7(), 1)[0];
   const tmp10 = _slicedToArray(closure_6(), 2)[1];
   if (0 !== first1.length) {
@@ -140,7 +140,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel
                         }
                       }
                       const obj3 = { accessibilityRole: "button", style: container, onPress: tmp10, children: tmp30 };
-                      const tmp36 = closure_8(channel(5909).PressableOpacity, obj3);
+                      const tmp36 = closure_8(channel(5916).PressableOpacity, obj3);
                       cResult[26] = tmp10;
                       cResult[27] = tmp4.container;
                       cResult[28] = tmp30;
@@ -165,7 +165,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel
                 tmp26 = tmp29;
               }
               const obj6 = { style: participantNameplateSpeakingText, variant: "text-xs/medium", color: "text-default", children: tmp21 };
-              const tmp25 = closure_8(channel(4886).Text, obj6);
+              const tmp25 = closure_8(channel(4892).Text, obj6);
               cResult[16] = tmp4.participantNameplateSpeakingText;
               cResult[17] = tmp21;
               cResult[18] = tmp25;
@@ -209,7 +209,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel
     const speakingParticipants = ChannelRTCStore.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), ChannelRTCStore.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(5589).isVersionEqual), 1)[0];
+  }, items1, channel(5596).isVersionEqual), 1)[0];
   const first1 = _slicedToArray(closure_7(), 1)[0];
   let tmp6 = null;
   if (0 !== first.length) {
@@ -218,13 +218,13 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel
       const obj2 = { accessibilityRole: "button", style: tmp.container, onPress: tmp5, children: closure_9(View, obj3) };
       obj3 = { style: tmp.participantItemContainer, children: items2 };
       const obj4 = { style: tmp.participantAvatarContainer, children: closure_8(tmp11, obj5) };
-      const PressableOpacity = tmp2(5909).PressableOpacity;
+      const PressableOpacity = tmp2(5916).PressableOpacity;
       obj5 = { namesStyle: tmp.participantAvatarText, users: first, withNames: true, channelId: channel.id, guildId: channel.getGuildId() };
       tmp11 = UserSummaryItemDefault;
       items2 = [closure_8(View, obj4), ];
       const obj6 = { style: tmp.participantNameplateContainer, children: closure_8(Text, obj7) };
       obj7 = { style: tmp.participantNameplateSpeakingText, variant: "text-xs/medium", color: "text-default", children: intl.format(channel(1126).t["+dia6l"], obj8) };
-      Text = tmp2(4886).Text;
+      Text = tmp2(4892).Text;
       intl = tmp2(1126).intl;
       obj8 = { count: first.length };
       items2[1] = closure_8(View, obj6);

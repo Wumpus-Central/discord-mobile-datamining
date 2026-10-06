@@ -1,10 +1,10 @@
-// === Module 13517: GlobalDiscoveryServersSearchResultsStore ===
+// === Module 13533: GlobalDiscoveryServersSearchResultsStore ===
 
-// Module 13517 (GlobalDiscoveryServersSearchResultsStore)
+// Module 13533 (GlobalDiscoveryServersSearchResultsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5312 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9249 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5319 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9284 */;
 import size from "module_2" /* 2 */;
 
 let set;

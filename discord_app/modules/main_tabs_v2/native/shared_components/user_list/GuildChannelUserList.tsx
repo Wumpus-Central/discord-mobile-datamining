@@ -1,17 +1,17 @@
-// === Module 11210: GuildChannelUserList ===
+// === Module 11223: GuildChannelUserList ===
 
-// Module 11210 (GuildChannelUserList)
+// Module 11223 (GuildChannelUserList)
 import react_native from "react-native" /* 17 */;
 import intl2 from "intl" /* 1126 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import GuildUtilsDefault from "GuildUtils" /* 5704 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import _mod9496 from "module_9496" /* 9496 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import GuildUtilsDefault from "GuildUtils" /* 5711 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import _mod9509 from "module_9509" /* 9509 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelMemberStore_mod from "ChannelMemberStore" /* 6782 */;
+import ChannelMemberStore_mod from "ChannelMemberStore" /* 6792 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
@@ -22,7 +22,7 @@ import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const _modDef9496 = _mod9496;
+const _modDef9509 = _mod9509;
 let closure_12;
 
 let closure_15;
@@ -60,8 +60,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   if (cResult[0] !== guildId) {
     const fn = function l() {
       let obj2;
-      const tmp = _modDef9496;
-      const items = [_mod9496.AutocompleterResultTypes.USER];
+      const tmp = _modDef9509;
+      const items = [_mod9509.AutocompleterResultTypes.USER];
       const obj = { userFilters: obj2 };
       obj2 = { guild: guildId, strict: true };
       const tmp2 = new tmp((arg0, str) => {
@@ -335,8 +335,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   let closure_8 = tmp3[1];
   const first1 = ref(str.useState(() => {
     let obj2;
-    const tmp = _modDef9496;
-    const items = [_mod9496.AutocompleterResultTypes.USER];
+    const tmp = _modDef9509;
+    const items = [_mod9509.AutocompleterResultTypes.USER];
     const obj = { userFilters: obj2 };
     obj2 = { guild: guildId, strict: true };
     const tmp2 = new tmp((arg0, str) => {

@@ -1,10 +1,10 @@
-// === Module 14895: QuestDockUtils ===
+// === Module 14911: QuestDockUtils ===
 
-// Module 14895 (QuestDockUtils)
+// Module 14911 (QuestDockUtils)
 import react_native from "react-native" /* 17 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import spring from "spring" /* 5597 */;
-import QuestDockConstants from "QuestDockConstants" /* 14896 */;
+import spring from "spring" /* 5604 */;
+import QuestDockConstants from "QuestDockConstants" /* 14912 */;
 import size_mod from "module_2" /* 2 */;
 
 const PixelRatio = react_native.PixelRatio;

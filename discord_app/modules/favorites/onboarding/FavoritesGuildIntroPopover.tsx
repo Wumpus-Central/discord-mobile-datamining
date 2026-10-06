@@ -1,12 +1,12 @@
-// === Module 10048: FavoritesGuildIntroPopover ===
+// === Module 10061: FavoritesGuildIntroPopover ===
 
-// Module 10048 (FavoritesGuildIntroPopover)
+// Module 10061 (FavoritesGuildIntroPopover)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import FavoritesHooks from "FavoritesHooks" /* 10036 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10049 */;
+import FavoritesHooks from "FavoritesHooks" /* 10049 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10062 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import DismissibleContentShownStateStore_mod from "DismissibleContentShownStateStore" /* 2042 */;

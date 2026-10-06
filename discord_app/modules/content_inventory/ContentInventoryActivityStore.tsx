@@ -1,16 +1,16 @@
-// === Module 12820: ContentInventoryActivityStore ===
+// === Module 12839: ContentInventoryActivityStore ===
 
-// Module 12820 (ContentInventoryActivityStore)
+// Module 12839 (ContentInventoryActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7813 */;
-import utils from "utils" /* 7818 */;
-import matchUtils from "matchUtils" /* 8013 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8017 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8012 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7824 */;
+import utils from "utils" /* 7829 */;
+import matchUtils from "matchUtils" /* 8023 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8027 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8022 */;
 import size from "module_2" /* 2 */;
 
 let _require;

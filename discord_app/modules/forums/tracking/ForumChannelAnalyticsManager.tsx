@@ -1,6 +1,6 @@
-// === Module 7400: ForumChannelAnalyticsManager ===
+// === Module 7411: ForumChannelAnalyticsManager ===
 
-// Module 7400 (ForumChannelAnalyticsManager)
+// Module 7411 (ForumChannelAnalyticsManager)
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// === Module 16826: guild_channels/VoiceOrStageSummaryRow ===
+// === Module 16847: guild_channels/VoiceOrStageSummaryRow ===
 
-// Module 16826 (guild_channels/VoiceOrStageSummaryRow)
+// Module 16847 (guild_channels/VoiceOrStageSummaryRow)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
+import Text_Text from "Text/Text" /* 4892 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -50,7 +50,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     num = max;
   }
   if (cResult[0] !== layout) {
-    const tmpResult = guildId(11698);
+    const tmpResult = guildId(11712);
     const layoutStyles = tmpResult.getLayoutStyles(layout);
     cResult[0] = layout;
     cResult[1] = layoutStyles;
@@ -334,11 +334,11 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                   obj5 = { style: items2, children: items3 };
                   items2 = [, ];
                   ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp7);
-                  let obj6 = { size: guildId(1188).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: num(16827) };
+                  let obj6 = { size: guildId(1188).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: num(16848) };
                   const Icon = guildId(1188).Icon;
                   items3 = [closure_4(Icon, obj6), ];
                   let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-                  items3[1] = closure_4(guildId(4886).Text, obj7);
+                  items3[1] = closure_4(guildId(4892).Text, obj7);
                   tmp17Result = closure_4(bound, obj4);
                 }
                 cResult[22] = audienceCount;

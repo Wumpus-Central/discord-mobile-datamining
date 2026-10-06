@@ -1,23 +1,23 @@
-// === Module 11304: EditAttachmentActionSheet ===
+// === Module 11317: EditAttachmentActionSheet ===
 
-// Module 11304 (EditAttachmentActionSheet)
+// Module 11317 (EditAttachmentActionSheet)
 import Constants from "Constants" /* 1085 */;
 import intl7 from "intl" /* 1126 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import TableCheckboxRow2 from "TableCheckboxRow" /* 5990 */;
-import TextArea2 from "TextArea" /* 6580 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
-import ActionSheet2 from "ActionSheet" /* 6701 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 7841 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import TableCheckboxRow2 from "TableCheckboxRow" /* 5997 */;
+import TextArea2 from "TextArea" /* 6587 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import ActionSheet2 from "ActionSheet" /* 6708 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 7852 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -507,7 +507,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
   const bottomSheetRef1 = obj.useBottomSheetRef();
   ({ bottomSheetClose: c2, bottomSheetRef } = bottomSheetRef1);
   const filename = attachment.filename;
-  const tmp5 = attachment(7940)(attachment);
+  const tmp5 = attachment(7951)(attachment);
   const startsWithResult = filename.startsWith(c7);
   let obj2 = first2;
   let str = attachment.description;

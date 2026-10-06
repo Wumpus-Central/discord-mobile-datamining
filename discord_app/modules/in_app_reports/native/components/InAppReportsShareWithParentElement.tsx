@@ -1,9 +1,9 @@
-// === Module 12714: InAppReportsShareWithParentElement ===
+// === Module 12729: InAppReportsShareWithParentElement ===
 
-// Module 12714 (InAppReportsShareWithParentElement)
+// Module 12729 (InAppReportsShareWithParentElement)
 import Fragment from "Fragment" /* 21 */;
-import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7050 */;
-import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12713 */;
+import FamilyCenterActionCreators from "FamilyCenterActionCreators" /* 7063 */;
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12728 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -83,7 +83,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((parents) => {
                       }
                       const _Symbol = Symbol;
                       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                        const tmp58 = jsx(tmp(12715).ShareIcon, {});
+                        const tmp58 = jsx(tmp(12730).ShareIcon, {});
                         const intl3 = tmp(1126).intl;
                         const stringResult = intl3.string(tmp(1126).t["5l/hlt"]);
                         cResult[15] = tmp58;

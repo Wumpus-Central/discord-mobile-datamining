@@ -1,7 +1,7 @@
-// === Module 9145: WakeLock ===
+// === Module 9180: WakeLock ===
 
-// Module 9145 (WakeLock)
-import react_nativeDefault from "react-native" /* 9146 */;
+// Module 9180 (WakeLock)
+import react_nativeDefault from "react-native" /* 9181 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

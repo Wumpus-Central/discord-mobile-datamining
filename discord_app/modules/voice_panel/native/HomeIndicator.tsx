@@ -1,6 +1,6 @@
-// === Module 9062: HomeIndicator ===
+// === Module 9098: HomeIndicator ===
 
-// Module 9062 (HomeIndicator)
+// Module 9098 (HomeIndicator)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 19 */;
 import module_570 from "module_570" /* 570 */;

@@ -1,11 +1,11 @@
-// === Module 9600: useIsVoiceChannelFull ===
+// === Module 9613: useIsVoiceChannelFull ===
 
-// Module 9600 (useIsVoiceChannelFull)
+// Module 9613 (useIsVoiceChannelFull)
 import Constants from "Constants" /* 1096 */;
-import ChannelUtils from "ChannelUtils" /* 5035 */;
+import ChannelUtils from "ChannelUtils" /* 5041 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

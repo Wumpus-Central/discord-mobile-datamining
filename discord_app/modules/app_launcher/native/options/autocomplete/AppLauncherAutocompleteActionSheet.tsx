@@ -1,6 +1,6 @@
-// === Module 11795: AppLauncherAutocompleteActionSheet ===
+// === Module 11809: AppLauncherAutocompleteActionSheet ===
 
-// Module 11795 (AppLauncherAutocompleteActionSheet)
+// Module 11809 (AppLauncherAutocompleteActionSheet)
 import react_native from "react-native" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
 import react2 from "react" /* 576 */;
@@ -8,20 +8,20 @@ import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import merged5 from "merged5" /* 5075 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import TableRow from "TableRow" /* 5993 */;
-import executeCommandDefault from "executeCommand" /* 8934 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11790 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import merged5 from "merged5" /* 5081 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import TableRow from "TableRow" /* 6000 */;
+import executeCommandDefault from "executeCommand" /* 8963 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11804 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7407 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7418 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Fragment from "Fragment" /* 21 */;
 import module_12 from "module_12" /* 12 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

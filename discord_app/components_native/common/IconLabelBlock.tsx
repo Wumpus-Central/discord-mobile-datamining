@@ -1,17 +1,17 @@
-// === Module 17030: IconLabelBlock ===
+// === Module 17056: IconLabelBlock ===
 
-// Module 17030 (IconLabelBlock)
+// Module 17056 (IconLabelBlock)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import native2 from "native" /* 4589 */;
-import shared from "shared" /* 4729 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import IconUploaderDefault from "IconUploader" /* 10665 */;
+import native2 from "native" /* 4595 */;
+import shared from "shared" /* 4735 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import IconUploaderDefault from "IconUploader" /* 10678 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let hasOwnProperty;

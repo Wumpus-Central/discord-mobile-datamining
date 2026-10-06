@@ -1,16 +1,16 @@
-// === Module 7966: useMediaViewerSyncer ===
+// === Module 7976: useMediaViewerSyncer ===
 
-// Module 7966 (useMediaViewerSyncer)
+// Module 7976 (useMediaViewerSyncer)
 import react2 from "react" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import spring from "spring" /* 5597 */;
-import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 7935 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 7939 */;
-import portraitThumbnailHelpers from "portraitThumbnailHelpers" /* 7969 */;
-import resolveSelectedIndex from "resolveSelectedIndex" /* 7970 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import spring from "spring" /* 5604 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 7946 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 7950 */;
+import portraitThumbnailHelpers from "portraitThumbnailHelpers" /* 7979 */;
+import resolveSelectedIndex from "resolveSelectedIndex" /* 7980 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import Constants from "Constants" /* 7967 */;
+import Constants from "Constants" /* 7977 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

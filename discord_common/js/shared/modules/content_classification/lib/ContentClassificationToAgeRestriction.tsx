@@ -1,16 +1,16 @@
-// === Module 5898: ContentClassificationToAgeRestriction ===
+// === Module 5905: ContentClassificationToAgeRestriction ===
 
-// Module 5898 (ContentClassificationToAgeRestriction)
+// Module 5905 (ContentClassificationToAgeRestriction)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import AgeRestrictionSource from "AgeRestrictionSource" /* 5899 */;
-import AgeRestrictionStatus9 from "AgeRestrictionStatus" /* 5900 */;
-import DiscordContentClassificationFlags from "DiscordContentClassificationFlags" /* 5901 */;
-import ContentRatingESRBRating from "ContentRatingESRBRating" /* 5902 */;
-import ContentRatingPEGIRating from "ContentRatingPEGIRating" /* 5903 */;
-import ContentRatingGOPClassification from "ContentRatingGOPClassification" /* 5904 */;
-import ContentRatingIGDBTheme from "ContentRatingIGDBTheme" /* 5905 */;
-import ContentRatingAppleRating from "ContentRatingAppleRating" /* 5906 */;
-import AgeRestrictionUtilsAll from "AgeRestrictionUtils" /* 5907 */;
+import AgeRestrictionSource from "AgeRestrictionSource" /* 5906 */;
+import AgeRestrictionStatus9 from "AgeRestrictionStatus" /* 5907 */;
+import DiscordContentClassificationFlags from "DiscordContentClassificationFlags" /* 5908 */;
+import ContentRatingESRBRating from "ContentRatingESRBRating" /* 5909 */;
+import ContentRatingPEGIRating from "ContentRatingPEGIRating" /* 5910 */;
+import ContentRatingGOPClassification from "ContentRatingGOPClassification" /* 5911 */;
+import ContentRatingIGDBTheme from "ContentRatingIGDBTheme" /* 5912 */;
+import ContentRatingAppleRating from "ContentRatingAppleRating" /* 5913 */;
+import AgeRestrictionUtilsAll from "AgeRestrictionUtils" /* 5914 */;
 import size from "module_2" /* 2 */;
 
 function contentClassificationToAgeRestrictionConclusion(data) {
@@ -158,7 +158,7 @@ function contentClassificationToAgeRestrictionConclusion(data) {
           EVERYONE = AgeRestrictionStatus4.EVERYONE;
           tmp24 = require;
         }
-        const obj8 = { source: tmp24(5899).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
+        const obj8 = { source: tmp24(5906).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
         push7(obj8);
       }
       if (null != data.agency_ratings.apple) {

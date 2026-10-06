@@ -1,6 +1,6 @@
-// === Module 11137: ChatUpdatesQueue ===
+// === Module 11150: ChatUpdatesQueue ===
 
-// Module 11137 (ChatUpdatesQueue)
+// Module 11150 (ChatUpdatesQueue)
 import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 

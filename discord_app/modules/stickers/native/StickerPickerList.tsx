@@ -1,27 +1,27 @@
-// === Module 10142: StickerPickerList ===
+// === Module 10155: StickerPickerList ===
 
-// Module 10142 (StickerPickerList)
+// Module 10155 (StickerPickerList)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6559 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 9908 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9909 */;
-import StickerPickerStore from "StickerPickerStore" /* 10114 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10126 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10143 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 10144 */;
-import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10145 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 6566 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 9921 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9922 */;
+import StickerPickerStore from "StickerPickerStore" /* 10127 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10139 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10156 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 10157 */;
+import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell" /* 10158 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import StickersStore from "StickersStore" /* 5687 */;
-import StickerPickerConstants from "StickerPickerConstants" /* 10082 */;
+import StickersStore from "StickersStore" /* 5694 */;
+import StickerPickerConstants from "StickerPickerConstants" /* 10095 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

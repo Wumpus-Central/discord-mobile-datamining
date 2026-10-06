@@ -1,17 +1,17 @@
-// === Module 5047: guildRoomConnect ===
+// === Module 5053: guildRoomConnect ===
 
-// Module 5047 (guildRoomConnect)
+// Module 5053 (guildRoomConnect)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 5049 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 5050 */;
-import GuildRoomAnalytics from "GuildRoomAnalytics" /* 5069 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 5090 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 5055 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 5056 */;
+import GuildRoomAnalytics from "GuildRoomAnalytics" /* 5075 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 5096 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 5048 */;
+import GuildRoomStore from "GuildRoomStore" /* 5054 */;
 import size from "module_2" /* 2 */;
 
 let closure_3, closure_4, closure_5, closure_6, closure_8, originalRoom, originalRoomObjects, originalRoomUsers, pendingPosition, pendingSeat, room, update;

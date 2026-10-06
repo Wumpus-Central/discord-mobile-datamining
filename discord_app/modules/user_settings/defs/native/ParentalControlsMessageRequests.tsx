@@ -1,18 +1,18 @@
-// === Module 15804: ParentalControlsMessageRequests ===
+// === Module 15841: ParentalControlsMessageRequests ===
 
-// Module 15804 (ParentalControlsMessageRequests)
+// Module 15841 (ParentalControlsMessageRequests)
 import intl2 from "intl" /* 1126 */;
-import _modDef2493 from "module_2493" /* 2493 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8086 */;
-import useSelectedTeen from "useSelectedTeen" /* 8297 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14625 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14626 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15790 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import _modDef2521 from "module_2521" /* 2521 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
+import useSelectedTeen from "useSelectedTeen" /* 8330 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14641 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14642 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15827 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
@@ -57,7 +57,7 @@ let obj = {
   },
   useDescription() {
     const intl = intl2.intl;
-    return intl.string(_modDef2493["7aYkh1"]);
+    return intl.string(_modDef2521["7aYkh1"]);
   },
   parent: MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: tmp2,

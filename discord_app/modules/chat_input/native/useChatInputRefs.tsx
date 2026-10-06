@@ -1,25 +1,25 @@
-// === Module 11601: useChatInputRefs ===
+// === Module 11615: useChatInputRefs ===
 
-// Module 11601 (useChatInputRefs)
+// Module 11615 (useChatInputRefs)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ChatInputUtils from "ChatInputUtils" /* 4745 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import StickersUtils from "StickersUtils" /* 5428 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5789 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import DraftStore2 from "DraftStore" /* 7031 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7405 */;
-import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9064 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11290 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11292 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11602 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 11611 */;
+import ChatInputUtils from "ChatInputUtils" /* 4751 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import StickersUtils from "StickersUtils" /* 5435 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5796 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import DraftStore2 from "DraftStore" /* 7044 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7416 */;
+import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9100 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11303 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11305 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11616 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 11625 */;
 import react_mod from "react" /* 19 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7408 */;
-import StickersStore from "StickersStore" /* 5687 */;
-import EditMessageStore from "EditMessageStore" /* 7165 */;
-import SlowmodeStore from "SlowmodeStore" /* 7171 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7419 */;
+import StickersStore from "StickersStore" /* 5694 */;
+import EditMessageStore from "EditMessageStore" /* 7178 */;
+import SlowmodeStore from "SlowmodeStore" /* 7184 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
@@ -51,7 +51,7 @@ export default function useChatInputRefs(chatInputProps) {
   const useRef = react.useRef;
   map = new Map();
   const chatInputTextFlushedResponses = useRef(map);
-  const tmp2 = chatInputTextFieldHeight(5984)(() => {
+  const tmp2 = chatInputTextFieldHeight(5991)(() => {
     const obj = ChatInputUtils;
     return obj.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex);
   });
@@ -81,7 +81,7 @@ export default function useChatInputRefs(chatInputProps) {
       closure_1_12.handleRef(null, channel.channel.id);
     };
   }, items2);
-  const state = react.useRef(chatInputTextFieldHeight(5984)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
+  const state = react.useRef(chatInputTextFieldHeight(5991)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
   const ref = react.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = react.useMemo(() => {

@@ -1,17 +1,17 @@
-// === Module 16538: JoinRequestOtherApplications ===
+// === Module 16578: JoinRequestOtherApplications ===
 
-// Module 16538 (JoinRequestOtherApplications)
+// Module 16578 (JoinRequestOtherApplications)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DateUtils from "DateUtils" /* 4552 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
-import CircleCheckIcon2 from "CircleCheckIcon" /* 4792 */;
-import CircleXIcon2 from "CircleXIcon" /* 4797 */;
-import Text_Text from "Text/Text" /* 4886 */;
+import DateUtils from "DateUtils" /* 4558 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
+import CircleCheckIcon2 from "CircleCheckIcon" /* 4798 */;
+import CircleXIcon2 from "CircleXIcon" /* 4803 */;
+import Text_Text from "Text/Text" /* 4892 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment_mod from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -234,7 +234,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   if (0 !== otherGuildJoinRequestsForUser.length) {
     let obj2 = { children: items };
     let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: intl.string(tmp2(1126).t["hxa+G3"]) };
-    let Text = tmp2(4886).Text;
+    let Text = tmp2(4892).Text;
     intl = tmp2(1126).intl;
     items = [closure_6(Text, obj3), ];
     let obj4 = {

@@ -1,6 +1,6 @@
-// === Module 8310: PersonalWidgetExpandCollapseContext ===
+// === Module 8343: PersonalWidgetExpandCollapseContext ===
 
-// Module 8310 (PersonalWidgetExpandCollapseContext)
+// Module 8343 (PersonalWidgetExpandCollapseContext)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;

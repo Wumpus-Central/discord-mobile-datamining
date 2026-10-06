@@ -1,6 +1,6 @@
-// === Module 8475: NameplateUtils ===
+// === Module 8508: NameplateUtils ===
 
-// Module 8475 (NameplateUtils)
+// Module 8508 (NameplateUtils)
 import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1974 */;
 import size from "module_2" /* 2 */;
 

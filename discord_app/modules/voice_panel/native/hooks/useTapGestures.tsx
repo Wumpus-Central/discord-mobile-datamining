@@ -1,8 +1,8 @@
-// === Module 17276: useTapGestures ===
+// === Module 17305: useTapGestures ===
 
-// Module 17276 (useTapGestures)
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
+// Module 17305 (useTapGestures)
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
 import react_mod from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -20,7 +20,7 @@ export default function useTapGestures(onSingleTap) {
   let closure_3;
   let isFocusedVideoZoomed;
   let current = onSingleTap;
-  isFocusedVideoZoomed = react.useContext(isFocusedVideoZoomed(11901)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = react.useContext(isFocusedVideoZoomed(11915)).isFocusedVideoZoomed;
   dependencyMap = react.useRef(onSingleTap);
   react = tmp;
   __initData = tmp2;

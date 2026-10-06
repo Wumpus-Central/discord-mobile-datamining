@@ -1,9 +1,9 @@
-// === Module 11156: useChannelLoading ===
+// === Module 11169: useChannelLoading ===
 
-// Module 11156 (useChannelLoading)
-import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 5591 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9854 */;
-import ChannelLatestMessageLoadingStatsManagerDefault from "ChannelLatestMessageLoadingStatsManager" /* 11157 */;
+// Module 11169 (useChannelLoading)
+import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 5598 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9867 */;
+import ChannelLatestMessageLoadingStatsManagerDefault from "ChannelLatestMessageLoadingStatsManager" /* 11170 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

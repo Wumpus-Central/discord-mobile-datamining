@@ -1,10 +1,10 @@
-// === Module 13707: useFilteredGuilds ===
+// === Module 13725: useFilteredGuilds ===
 
-// Module 13707 (useFilteredGuilds)
+// Module 13725 (useFilteredGuilds)
 import _modDef38 from "module_38" /* 38 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

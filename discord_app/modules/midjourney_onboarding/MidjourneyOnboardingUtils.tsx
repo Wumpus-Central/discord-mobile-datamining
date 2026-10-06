@@ -1,11 +1,11 @@
-// === Module 13672: MidjourneyOnboardingUtils ===
+// === Module 13688: MidjourneyOnboardingUtils ===
 
-// Module 13672 (MidjourneyOnboardingUtils)
+// Module 13688 (MidjourneyOnboardingUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import MidjourneyOnboardingConstants from "MidjourneyOnboardingConstants" /* 13673 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import MidjourneyOnboardingConstants from "MidjourneyOnboardingConstants" /* 13689 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

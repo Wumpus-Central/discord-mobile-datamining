@@ -1,10 +1,10 @@
-// === Module 9782: ChatViewWrapperBase ===
+// === Module 9795: ChatViewWrapperBase ===
 
-// Module 9782 (ChatViewWrapperBase)
+// Module 9795 (ChatViewWrapperBase)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import LayerScope2 from "LayerScope" /* 6651 */;
-import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 9780 */;
+import LayerScope2 from "LayerScope" /* 6658 */;
+import useChatViewPointerEventsDefault from "useChatViewPointerEvents" /* 9793 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

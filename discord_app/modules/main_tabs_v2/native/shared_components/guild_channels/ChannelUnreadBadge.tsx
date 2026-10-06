@@ -1,15 +1,15 @@
-// === Module 15960: ChannelUnreadBadge ===
+// === Module 15999: ChannelUnreadBadge ===
 
-// Module 15960 (ChannelUnreadBadge)
+// Module 15999 (ChannelUnreadBadge)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import useFontScale from "useFontScale" /* 5602 */;
-import shared_components_Badge from "shared_components/Badge" /* 7503 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
-import ChannelListLayout from "ChannelListLayout" /* 11698 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import useFontScale from "useFontScale" /* 5609 */;
+import shared_components_Badge from "shared_components/Badge" /* 7514 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
+import ChannelListLayout from "ChannelListLayout" /* 11712 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

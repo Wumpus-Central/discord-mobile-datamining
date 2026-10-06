@@ -1,15 +1,15 @@
-// === Module 5977: GuildBadge ===
+// === Module 5984: GuildBadge ===
 
-// Module 5977 (GuildBadge)
+// Module 5984 (GuildBadge)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import AssetRegistryDefault from "AssetRegistry" /* 5978 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 5979 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 5980 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 5981 */;
+import AssetRegistryDefault from "AssetRegistry" /* 5985 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 5986 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 5987 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 5988 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

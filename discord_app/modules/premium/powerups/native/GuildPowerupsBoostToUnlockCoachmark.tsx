@@ -1,9 +1,9 @@
-// === Module 16095: GuildPowerupsBoostToUnlockCoachmark ===
+// === Module 16134: GuildPowerupsBoostToUnlockCoachmark ===
 
-// Module 16095 (GuildPowerupsBoostToUnlockCoachmark)
+// Module 16134 (GuildPowerupsBoostToUnlockCoachmark)
 import react2 from "react" /* 576 */;
-import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12154 */;
-import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 16096 */;
+import GuildPowerupsNotification from "GuildPowerupsNotification" /* 12169 */;
+import useGuildPowerupsCoachmarkDefault from "useGuildPowerupsCoachmark" /* 16135 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -38,7 +38,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     const obj = { type: GuildPowerupsNotification.GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK, powerup, markAsDismissed };
     return obj;
   }, items);
-  markAsDismissed(16096)(targetRef, guildId, memo);
+  markAsDismissed(16135)(targetRef, guildId, memo);
   return null;
 });
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx");

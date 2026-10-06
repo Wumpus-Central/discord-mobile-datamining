@@ -1,23 +1,23 @@
-// === Module 15659: UserSettingsDesignSystemTabs ===
+// === Module 15673: UserSettingsDesignSystemTabs ===
 
-// Module 15659 (UserSettingsDesignSystemTabs)
+// Module 15673 (UserSettingsDesignSystemTabs)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import TableSwitchRow from "TableSwitchRow" /* 6698 */;
-import SegmentedControlState from "SegmentedControlState" /* 9282 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 10974 */;
-import Tabs from "Tabs" /* 12282 */;
-import TabsGradientDefault from "TabsGradient" /* 12425 */;
+import useToken from "useToken" /* 4586 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import TableSwitchRow from "TableSwitchRow" /* 6705 */;
+import SegmentedControlState from "SegmentedControlState" /* 9317 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 10987 */;
+import Tabs from "Tabs" /* 12297 */;
+import TabsGradientDefault from "TabsGradient" /* 12440 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

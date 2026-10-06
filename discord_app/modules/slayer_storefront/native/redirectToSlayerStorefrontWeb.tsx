@@ -1,6 +1,6 @@
-// === Module 10537: redirectToSlayerStorefrontWeb ===
+// === Module 10550: redirectToSlayerStorefrontWeb ===
 
-// Module 10537 (redirectToSlayerStorefrontWeb)
+// Module 10550 (redirectToSlayerStorefrontWeb)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -55,7 +55,7 @@ let obj = function _redirectToSlayerStorefrontWeb() {
             closure_3 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {

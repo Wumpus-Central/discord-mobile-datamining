@@ -1,7 +1,7 @@
-// === Module 12081: useChangelogIdFromChannel ===
+// === Module 12096: useChangelogIdFromChannel ===
 
-// Module 12081 (useChangelogIdFromChannel)
-import MessageStore from "MessageStore" /* 5110 */;
+// Module 12096 (useChangelogIdFromChannel)
+import MessageStore from "MessageStore" /* 5116 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

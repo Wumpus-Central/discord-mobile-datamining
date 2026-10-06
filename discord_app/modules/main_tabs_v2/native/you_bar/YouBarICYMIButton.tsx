@@ -1,17 +1,17 @@
-// === Module 16332: YouBarICYMIButton ===
+// === Module 16372: YouBarICYMIButton ===
 
-// Module 16332 (YouBarICYMIButton)
+// Module 16372 (YouBarICYMIButton)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import FlashIcon2 from "FlashIcon" /* 12834 */;
-import YouBarConstants from "YouBarConstants" /* 14899 */;
-import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16333 */;
-import YouBarButtonDefault from "YouBarButton" /* 16334 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import FlashIcon2 from "FlashIcon" /* 12853 */;
+import YouBarConstants from "YouBarConstants" /* 14915 */;
+import useICYMITabBadgeDefault from "useICYMITabBadge" /* 16373 */;
+import YouBarButtonDefault from "YouBarButton" /* 16374 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 8809: useMessageMaxLength ===
+// === Module 8839: useMessageMaxLength ===
 
-// Module 8809 (useMessageMaxLength)
+// Module 8839 (useMessageMaxLength)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

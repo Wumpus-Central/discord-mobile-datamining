@@ -1,19 +1,19 @@
-// === Module 10767: GiftingBadgeProgress ===
+// === Module 10780: GiftingBadgeProgress ===
 
-// Module 10767 (GiftingBadgeProgress)
+// Module 10780 (GiftingBadgeProgress)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef2589 from "module_2589" /* 2589 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10475 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10481 */;
+import _modDef2617 from "module_2617" /* 2617 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10488 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10494 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let percent;
@@ -274,7 +274,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const labels = tmp4.labels;
         let tmp37 = null != nextTier;
         if (tmp37) {
-          const obj8 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(_modDef2589.iIpfQe, obj9) };
+          const obj8 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(_modDef2617.iIpfQe, obj9) };
           const Text = Text_Text.Text;
           intl = intl2.intl;
           obj9 = { count: progress, threshold: tmp21 };
@@ -379,7 +379,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const obj8 = { style: tmp.labels, children: tmp17Result };
   tmp17Result = null != nextTier;
   if (tmp17Result) {
-    const obj9 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(_modDef2589.iIpfQe, obj10) };
+    const obj9 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(_modDef2617.iIpfQe, obj10) };
     const Text = Text_Text.Text;
     intl = intl2.intl;
     obj10 = { count: progress, threshold: tmp7 };

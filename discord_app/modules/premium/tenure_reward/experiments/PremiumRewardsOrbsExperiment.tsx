@@ -1,6 +1,6 @@
-// === Module 13541: PremiumRewardsOrbsExperiment ===
+// === Module 13557: PremiumRewardsOrbsExperiment ===
 
-// Module 13541 (PremiumRewardsOrbsExperiment)
+// Module 13557 (PremiumRewardsOrbsExperiment)
 import react from "react" /* 576 */;
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,23 +1,23 @@
-// === Module 11135: MessagesHooks ===
+// === Module 11148: MessagesHooks ===
 
-// Module 11135 (MessagesHooks)
+// Module 11148 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import shallowEqual from "shallowEqual" /* 568 */;
 import react2 from "react" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6658 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7225 */;
-import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9064 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9854 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11136 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11137 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6665 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7238 */;
+import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9100 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9867 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11149 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11150 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10023 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10036 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

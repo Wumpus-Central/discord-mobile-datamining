@@ -1,17 +1,17 @@
-// === Module 12233: GuildPowerupsGameServerCard ===
+// === Module 12248: GuildPowerupsGameServerCard ===
 
-// Module 12233 (GuildPowerupsGameServerCard)
+// Module 12248 (GuildPowerupsGameServerCard)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12225 */;
-import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12230 */;
-import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12234 */;
-import useGameServerPerkDefault from "useGameServerPerk" /* 12235 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12240 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12245 */;
+import useGameServerPowerupStatusDefault from "useGameServerPowerupStatus" /* 12249 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 12250 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import GameServerStore from "GameServerStore" /* 7672 */;
-import createStyles from "createStyles" /* 4890 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import GameServerStore from "GameServerStore" /* 7683 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -84,7 +84,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
             return useReducedMotion.useReducedMotion;
           }
         }
-        const tmp20 = jsx(guildId(4678).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: obj3 });
+        const tmp20 = jsx(guildId(4684).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: obj3 });
         cResult[5] = stateFromStores1;
         cResult[6] = tmp20;
         tmp18 = tmp20;

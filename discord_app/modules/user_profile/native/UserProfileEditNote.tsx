@@ -1,13 +1,13 @@
-// === Module 12877: UserProfileEditNote ===
+// === Module 12896: UserProfileEditNote ===
 
-// Module 12877 (UserProfileEditNote)
+// Module 12896 (UserProfileEditNote)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -161,13 +161,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
       setOptions = closure_4.setOptions;
       obj2 = closure_0(closure_2[10]);
       obj.headerLeft = obj2.getHeaderConditionalBackButton(() => {
-        const promise = new Promise(() => { /* body not rendered: F152747 */ });
+        const promise = new Promise(() => { /* body not rendered: F152980 */ });
         return promise;
       });
       obj.headerRight = function headerRight(arg0) {
         let intl;
         let str;
-        let obj = { label: intl.string(userId(onClose[14]).t["R3BPH+"]), disabled: str === first, onPress() { /* body not rendered: F152748 */ } };
+        let obj = { label: intl.string(userId(onClose[14]).t["R3BPH+"]), disabled: str === first, onPress() { /* body not rendered: F152981 */ } };
         const HeaderTextButton = userId(onClose[13]).HeaderTextButton;
         const merged = Object.assign(arg0);
         intl = userId(onClose[14]).intl;

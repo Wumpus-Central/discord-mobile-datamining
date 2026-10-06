@@ -1,12 +1,12 @@
-// === Module 10093: gif_picker/GIFPickerUtils ===
+// === Module 10106: gif_picker/GIFPickerUtils ===
 
-// Module 10093 (gif_picker/GIFPickerUtils)
+// Module 10106 (gif_picker/GIFPickerUtils)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 7518 */;
-import FavoriteGIFHooks from "FavoriteGIFHooks" /* 10094 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 7529 */;
+import FavoriteGIFHooks from "FavoriteGIFHooks" /* 10107 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -100,7 +100,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp4 = tmp5;
 }) : (() => {
   let sortedFavoriteGIFs;
-  let obj = sortedFavoriteGIFs(10094);
+  let obj = sortedFavoriteGIFs(10107);
   sortedFavoriteGIFs = obj.useSortedFavoriteGIFs(transformFavoriteGifUrl);
   const items = [sortedFavoriteGIFs];
   const obj2 = {

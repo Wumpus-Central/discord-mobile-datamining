@@ -1,10 +1,10 @@
-// === Module 9763: isSelectedFromHomeChannel ===
+// === Module 9776: isSelectedFromHomeChannel ===
 
-// Module 9763 (isSelectedFromHomeChannel)
+// Module 9776 (isSelectedFromHomeChannel)
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6783 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6793 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// === Module 12204: GuildPowerupsDisabledWarning ===
+// === Module 12219: GuildPowerupsDisabledWarning ===
 
-// Module 12204 (GuildPowerupsDisabledWarning)
+// Module 12219 (GuildPowerupsDisabledWarning)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import WarningIcon2 from "WarningIcon" /* 4803 */;
-import Text_Text from "Text/Text" /* 4886 */;
+import WarningIcon2 from "WarningIcon" /* 4809 */;
+import Text_Text from "Text/Text" /* 4892 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

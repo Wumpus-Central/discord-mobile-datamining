@@ -1,10 +1,10 @@
-// === Module 12292: UserProfileConfirmThreadRemove ===
+// === Module 12307: UserProfileConfirmThreadRemove ===
 
-// Module 12292 (UserProfileConfirmThreadRemove)
+// Module 12307 (UserProfileConfirmThreadRemove)
 import react2 from "react" /* 576 */;
 import intl5 from "intl" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

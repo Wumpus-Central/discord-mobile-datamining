@@ -1,19 +1,19 @@
-// === Module 10075: ForumComposerHeader ===
+// === Module 10088: ForumComposerHeader ===
 
-// Module 10075 (ForumComposerHeader)
+// Module 10088 (ForumComposerHeader)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import BookCheckIcon from "BookCheckIcon" /* 5859 */;
-import ForumIcon from "ForumIcon" /* 5872 */;
-import Pressables from "Pressables" /* 5909 */;
-import XSmallIcon from "XSmallIcon" /* 6017 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import BookCheckIcon from "BookCheckIcon" /* 5866 */;
+import ForumIcon from "ForumIcon" /* 5879 */;
+import Pressables from "Pressables" /* 5916 */;
+import XSmallIcon from "XSmallIcon" /* 6024 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

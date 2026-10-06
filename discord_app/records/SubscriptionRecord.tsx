@@ -1,13 +1,13 @@
-// === Module 4535: SubscriptionRecord ===
+// === Module 4541: SubscriptionRecord ===
 
-// Module 4535 (SubscriptionRecord)
+// Module 4541 (SubscriptionRecord)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import PremiumSubscription from "PremiumSubscription" /* 4540 */;
+import PremiumSubscription from "PremiumSubscription" /* 4546 */;
 import Record from "Record" /* 1392 */;
-import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 4536 */;
-import InvoiceRecord from "InvoiceRecord" /* 4537 */;
+import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 4542 */;
+import InvoiceRecord from "InvoiceRecord" /* 4543 */;
 import Constants from "Constants" /* 1085 */;
-import BillingConstants from "BillingConstants" /* 4539 */;
+import BillingConstants from "BillingConstants" /* 4545 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import size from "module_2" /* 2 */;
 

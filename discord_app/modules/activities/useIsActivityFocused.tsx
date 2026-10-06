@@ -1,8 +1,8 @@
-// === Module 9059: useIsActivityFocused ===
+// === Module 9095: useIsActivityFocused ===
 
-// Module 9059 (useIsActivityFocused)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9016 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+// Module 9095 (useIsActivityFocused)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9049 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

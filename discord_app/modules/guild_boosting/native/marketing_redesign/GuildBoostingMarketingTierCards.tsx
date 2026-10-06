@@ -1,43 +1,43 @@
-// === Module 13393: GuildBoostingMarketingTierCards ===
+// === Module 13412: GuildBoostingMarketingTierCards ===
 
-// Module 13393 (GuildBoostingMarketingTierCards)
+// Module 13412 (GuildBoostingMarketingTierCards)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import LinkIcon from "LinkIcon" /* 4839 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import timing from "timing" /* 4891 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import StageIcon from "StageIcon" /* 5881 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5885 */;
-import Pressables from "Pressables" /* 5909 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6473 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 7666 */;
-import ReactionIcon from "ReactionIcon" /* 8411 */;
-import UploadIcon from "UploadIcon" /* 8878 */;
-import GifIcon from "GifIcon" /* 10105 */;
-import ScreenArrowIcon from "ScreenArrowIcon" /* 12189 */;
-import StickerIcon from "StickerIcon" /* 12190 */;
-import GuildBoostingMarketingProgressBar from "GuildBoostingMarketingProgressBar" /* 13388 */;
-import ServerGridIcon from "ServerGridIcon" /* 13394 */;
-import ServerBoostStreamQualityMarketingExperiment from "ServerBoostStreamQualityMarketingExperiment" /* 13396 */;
-import ChevronLargeUpIcon from "ChevronLargeUpIcon" /* 13397 */;
-import ChevronLargeDownIcon2 from "ChevronLargeDownIcon" /* 13399 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13401 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13402 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import LinkIcon from "LinkIcon" /* 4845 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import timing from "timing" /* 4897 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import StageIcon from "StageIcon" /* 5888 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5892 */;
+import Pressables from "Pressables" /* 5916 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6480 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 7677 */;
+import ReactionIcon from "ReactionIcon" /* 8444 */;
+import UploadIcon from "UploadIcon" /* 8907 */;
+import GifIcon from "GifIcon" /* 10118 */;
+import ScreenArrowIcon from "ScreenArrowIcon" /* 12204 */;
+import StickerIcon from "StickerIcon" /* 12205 */;
+import GuildBoostingMarketingProgressBar from "GuildBoostingMarketingProgressBar" /* 13407 */;
+import ServerGridIcon from "ServerGridIcon" /* 13413 */;
+import ServerBoostStreamQualityMarketingExperiment from "ServerBoostStreamQualityMarketingExperiment" /* 13415 */;
+import ChevronLargeUpIcon from "ChevronLargeUpIcon" /* 13416 */;
+import ChevronLargeDownIcon2 from "ChevronLargeDownIcon" /* 13418 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13420 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13421 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -1451,7 +1451,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild) => {
       return React4(closure_18, obj, tier);
     })
   };
-  const MarketingCardsScroller = guild(12227).MarketingCardsScroller;
+  const MarketingCardsScroller = guild(12242).MarketingCardsScroller;
   let closure_0 = Math.min(BoostedGuildTiers.TIER_3, guild.premiumTier + 1);
   let findIndexResult = items1.findIndex((tier) => tier.tier === closure_0);
   num = 0;

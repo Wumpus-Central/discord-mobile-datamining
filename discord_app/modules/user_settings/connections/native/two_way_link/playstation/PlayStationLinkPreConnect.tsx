@@ -1,11 +1,11 @@
-// === Module 8769: PlayStationLinkPreConnect ===
+// === Module 8801: PlayStationLinkPreConnect ===
 
-// Module 8769 (PlayStationLinkPreConnect)
+// Module 8801 (PlayStationLinkPreConnect)
 import Fragment from "Fragment" /* 21 */;
-import PlayStationLinkConstants from "PlayStationLinkConstants" /* 8766 */;
-import _modDef8770 from "module_8770" /* 8770 */;
+import PlayStationLinkConstants from "PlayStationLinkConstants" /* 8798 */;
+import _modDef8802 from "module_8802" /* 8802 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -47,7 +47,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((platformType) => {
     tmp7 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { uri: _modDef8770 };
+    const obj3 = { uri: _modDef8802 };
     cResult[4] = obj3;
     tmp8 = obj3;
   } else {
@@ -78,7 +78,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((platformType) => {
       }
     }
   }
-  const tmp15 = jsx(navigation(8746).TwoWayLinkPreConnect, { platformType, onError: tmp7, onNext: tmp6, img: tmp8, imgStyle: image, title: tmp10, body: tmp11 });
+  const tmp15 = jsx(navigation(8778).TwoWayLinkPreConnect, { platformType, onError: tmp7, onNext: tmp6, img: tmp8, imgStyle: image, title: tmp10, body: tmp11 });
   cResult[7] = tmp7;
   cResult[8] = tmp6;
   cResult[9] = platformType;
@@ -100,10 +100,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((platformType) => {
     navigation.push(constants.ERROR, {});
   }, items1);
   const memo = react.useMemo(() => {
-    const obj = { uri: _modDef8770 };
+    const obj = { uri: _modDef8802 };
     return obj;
   }, []);
-  const TwoWayLinkPreConnect = navigation(8746).TwoWayLinkPreConnect;
+  const TwoWayLinkPreConnect = navigation(8778).TwoWayLinkPreConnect;
   const intl = navigation(1126).intl;
   const intl2 = navigation(1126).intl;
   return <TwoWayLinkPreConnect platformType={platformType} onError={callback1} onNext={callback} img={memo} imgStyle={tmp.image} title={intl.string(navigation(1126).t["6n+UPR"])} body={intl2.string(navigation(1126).t.JaaqIf)} />;

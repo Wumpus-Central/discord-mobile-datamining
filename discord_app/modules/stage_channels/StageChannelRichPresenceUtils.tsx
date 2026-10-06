@@ -1,13 +1,13 @@
-// === Module 10626: StageChannelRichPresenceUtils ===
+// === Module 10639: StageChannelRichPresenceUtils ===
 
-// Module 10626 (StageChannelRichPresenceUtils)
+// Module 10639 (StageChannelRichPresenceUtils)
 import Constants from "Constants" /* 1085 */;
-import StageChannelsConstants from "StageChannelsConstants" /* 5571 */;
+import StageChannelsConstants from "StageChannelsConstants" /* 5578 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5578 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
 import size from "module_2" /* 2 */;
 
 function unpackStageChannelParty(activity) {

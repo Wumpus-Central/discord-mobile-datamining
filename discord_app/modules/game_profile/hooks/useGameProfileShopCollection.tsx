@@ -1,11 +1,11 @@
-// === Module 8535: useGameProfileShopCollection ===
+// === Module 8568: useGameProfileShopCollection ===
 
-// Module 8535 (useGameProfileShopCollection)
+// Module 8568 (useGameProfileShopCollection)
 import react2 from "react" /* 576 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8414 */;
-import useCollectiblesShopProducts from "useCollectiblesShopProducts" /* 8536 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8447 */;
+import useCollectiblesShopProducts from "useCollectiblesShopProducts" /* 8569 */;
 import react from "react" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 8327 */;
+import GameProfileStore from "GameProfileStore" /* 8360 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

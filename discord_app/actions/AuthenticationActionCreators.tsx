@@ -1,23 +1,23 @@
-// === Module 6082: AuthenticationActionCreators ===
+// === Module 6089: AuthenticationActionCreators ===
 
-// Module 6082 (AuthenticationActionCreators)
+// Module 6089 (AuthenticationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import TokenManagerAll from "TokenManager" /* 1111 */;
 import router_utils from "router_utils" /* 1112 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4884 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5312 */;
-import PromoEmailConsentStore from "PromoEmailConsentStore" /* 6083 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4890 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5319 */;
+import PromoEmailConsentStore from "PromoEmailConsentStore" /* 6090 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConsentStore from "ConsentStore" /* 6084 */;
+import ConsentStore from "ConsentStore" /* 6091 */;
 import Constants from "Constants" /* 1085 */;
-import PushNotificationConstants from "PushNotificationConstants" /* 6085 */;
+import PushNotificationConstants from "PushNotificationConstants" /* 6092 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -30,7 +30,7 @@ let closure_14;
 let closure_15;
 let map1;
 let unpackModuleId;
-const f91319 = (error) => {
+const f91455 = (error) => {
   logger.error("Error while dispatching LOGOUT", error);
   if (DiscordErrors != null) {
     DiscordErrors.softCrash(error);
@@ -50,7 +50,7 @@ function handleLogout(source) {
   const merged = Object.assign(undefined);
   const tmp2Result = DispatcherDefault;
   const dispatchResult = tmp2Result.dispatch(obj2);
-  dispatchResult.catch(f91319);
+  dispatchResult.catch(f91455);
   if (null != DEFAULT_LOGGED_OUT) {
     const obj8 = RootNavigationRef;
     const rootNavigationRef = obj8.getRootNavigationRef();
@@ -164,7 +164,7 @@ let obj2 = {
             const merged = Object.assign({ isSwitchingAccount: true });
             const tmp21Result = DispatcherDefault;
             const dispatchResult = tmp21Result.dispatch(obj2);
-            dispatchResult.catch(f91319);
+            dispatchResult.catch(f91455);
           }
           const body3 = body.body;
           let suspended_user_token1;
@@ -229,7 +229,7 @@ let obj2 = {
     let self = this;
     ({ isMultiAccount: require, loginInstanceId } = arg0);
     ({ code, ticket, source, giftCodeSKUId, mfaType } = arg0);
-    const tmp2 = self(5083);
+    const tmp2 = self(5089);
     const request = { url: closure_9.LOGIN_MFA(mfaType), body, retries: 2, oldFormErrors: true, trackedActionData: obj2, rejectWithError: true };
     const post = tmp2.post;
     body = { code, ticket, login_source: source, gift_code_sku_id: giftCodeSKUId, login_instance_id: loginInstanceId };
@@ -425,7 +425,7 @@ let obj2 = {
     let self = this;
     isMultiAccount = isMultiAccount.isMultiAccount;
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
-    obj = self(5083);
+    obj = self(5089);
     const request = { url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN, body: { credential, ticket, source, giftCodeSKUId }, retries: 1, trackedActionData: obj2, rejectWithError: true };
     obj2 = { event: isMultiAccount(1260).NetworkActionNames.USER_LOGIN_PASSWORDLESS };
     const postResult = obj.post(request);
@@ -611,7 +611,7 @@ let obj2 = {
     const merged = Object.assign(arg0);
     const tmpResult = DispatcherDefault;
     const dispatchResult = tmpResult.dispatch(obj2);
-    dispatchResult.catch(f91319);
+    dispatchResult.catch(f91455);
   },
   logout(TTI_test) {
     let Storage;
@@ -626,7 +626,7 @@ let obj2 = {
     }
     importAll = id;
     const request = { url: closure_9.LOGOUT, body, oldFormErrors: true, trackedActionData: { event: require("discord_common/AnalyticsUtils").NetworkActionNames.USER_LOGOUT, properties: { logout_source: TTI_test } }, rejectWithError: tmp4Result.rejectWithMigratedError() };
-    const tmp3 = DEFAULT_LOGGED_OUT(5083);
+    const tmp3 = DEFAULT_LOGGED_OUT(5089);
     body = { provider: closure_15(), token: Storage.get(closure_10), voip_provider, voip_token: Storage2.get(closure_11) };
     const post = tmp3.post;
     Storage = require("Storage").Storage;
@@ -671,7 +671,7 @@ let obj2 = {
     const merged = Object.assign(obj2);
     const tmp3Result = DispatcherDefault;
     const dispatchResult = tmp3Result.dispatch(obj4);
-    dispatchResult.catch(f91319);
+    dispatchResult.catch(f91455);
     const loginTokenResult = this.loginToken(token, true);
     return loginTokenResult.then(() => {
       const tmp = token === AuthenticationStore.getToken();

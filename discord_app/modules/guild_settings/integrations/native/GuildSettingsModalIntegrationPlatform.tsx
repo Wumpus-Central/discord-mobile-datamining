@@ -1,28 +1,28 @@
-// === Module 17771: GuildSettingsModalIntegrationPlatform ===
+// === Module 17817: GuildSettingsModalIntegrationPlatform ===
 
-// Module 17771 (GuildSettingsModalIntegrationPlatform)
+// Module 17817 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import shared from "shared" /* 4729 */;
-import PlatformsDefault from "Platforms" /* 5442 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import AlertDefault from "Alert" /* 5783 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
-import TableSwitchRow2 from "TableSwitchRow" /* 6698 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 6880 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import IntegrationTypes from "IntegrationTypes" /* 17702 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17732 */;
+import shared from "shared" /* 4735 */;
+import PlatformsDefault from "Platforms" /* 5449 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import AlertDefault from "Alert" /* 5790 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
+import TableSwitchRow2 from "TableSwitchRow" /* 6705 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6890 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import IntegrationTypes from "IntegrationTypes" /* 17748 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17778 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -213,7 +213,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
   const cResult = obj.c(50);
   ({ contentContainerStyle, platformType } = closeGuildSettings);
   closeGuildSettings = closeGuildSettings.closeGuildSettings;
-  let obj2 = platformType(4580);
+  let obj2 = platformType(4586);
   const token = obj2.useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
   const tmp6 = closure_14();
   dependencyMap = tmp6;
@@ -237,7 +237,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
   const submitting = stateFromStoresObject.submitting;
   const hasChanges = stateFromStoresObject.hasChanges;
   guild = stateFromStoresObject.guild;
-  const tmp12 = closeGuildSettings(4791)();
+  const tmp12 = closeGuildSettings(4797)();
   const theme = tmp12;
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [guild];
@@ -339,7 +339,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
           return tmp3;
         }
     };
-    const tmp4Result = closeGuildSettings(5442);
+    const tmp4Result = closeGuildSettings(5449);
     const value = tmp4Result.get(platformType);
     name = undefined;
     if (value != null) {
@@ -427,9 +427,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
         tmp44 = tmp43;
       }
     }
-    const Form = platformType(8895).Form;
+    const Form = platformType(8924).Form;
     const form = tmp6.form;
-    const Stack = platformType(5593).Stack;
+    const Stack = platformType(5600).Stack;
     if (cResult[32] !== token) {
       class K {
         constructor() {
@@ -523,7 +523,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
     }
   }
   const contentContainerStyle = platformType.contentContainerStyle;
-  let obj = platformType(4580);
+  let obj = platformType(4586);
   let tmp3 = closeGuildSettings;
   const token = obj.useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_14();
@@ -538,7 +538,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
   });
   const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  const theme = closeGuildSettings(4791)();
+  const theme = closeGuildSettings(4797)();
   const items1 = [guild];
   const obj4 = platformType(504);
   const stateFromStores = obj4.useStateFromStores(items1, () => guild.getProps().integrations);
@@ -574,7 +574,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
           return tmp3;
         }
     };
-    const tmp3Result = tmp3(5442);
+    const tmp3Result = tmp3(5449);
     const value = tmp3Result.get(platformType);
     name = undefined;
     if (value != null) {
@@ -603,10 +603,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
       formatResult = format2(ro1jEN, obj7);
     }
     const obj8 = { style: tmp5.form, contentContainerStyle, children: closure_12(Stack, obj9) };
-    const Form = tmp(8895).Form;
+    const Form = tmp(8924).Form;
     obj9 = { style: obj10, spacing: tmp3(587).space.PX_24, children: items2 };
     obj10 = { paddingHorizontal: token };
-    Stack = tmp(5593).Stack;
+    Stack = tmp(5600).Stack;
     let mapped;
     if (found != null) {
       mapped = found.map((integration, index) => {
@@ -627,8 +627,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((closeGuildSettings) 
     items2 = [mapped, ];
     const obj11 = { children: items3 };
     const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_11(platformType(4886).Text, obj12);
-    items3 = [closure_11(Form, obj8), closure_11(tmp(6536).NavScrim, {})];
+    items2[1] = closure_11(platformType(4892).Text, obj12);
+    items3 = [closure_11(Form, obj8), closure_11(tmp(6543).NavScrim, {})];
     return closure_12(closure_13, obj11);
   }
 });

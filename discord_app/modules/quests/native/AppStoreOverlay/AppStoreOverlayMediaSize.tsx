@@ -1,6 +1,6 @@
-// === Module 10929: AppStoreOverlayMediaSize ===
+// === Module 10942: AppStoreOverlayMediaSize ===
 
-// Module 10929 (AppStoreOverlayMediaSize)
+// Module 10942 (AppStoreOverlayMediaSize)
 import react_native from "react-native" /* 17 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2022 */;

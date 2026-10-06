@@ -1,6 +1,6 @@
-// === Module 14874: Shopfront ===
+// === Module 14890: Shopfront ===
 
-// Module 14874 (Shopfront)
+// Module 14890 (Shopfront)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
@@ -49,7 +49,7 @@ let obj = function _search() {
             aPIError = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (query === 1) {

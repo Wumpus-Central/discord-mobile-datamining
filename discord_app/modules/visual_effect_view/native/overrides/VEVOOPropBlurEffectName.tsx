@@ -1,11 +1,11 @@
-// === Module 15845: VEVOOPropBlurEffectName ===
+// === Module 15884: VEVOOPropBlurEffectName ===
 
-// Module 15845 (VEVOOPropBlurEffectName)
+// Module 15884 (VEVOOPropBlurEffectName)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import VEVOOStore from "VEVOOStore" /* 5774 */;
+import VEVOOStore from "VEVOOStore" /* 5781 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

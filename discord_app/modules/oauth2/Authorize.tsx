@@ -1,14 +1,14 @@
-// === Module 8719: Authorize ===
+// === Module 8751: Authorize ===
 
-// Module 8719 (Authorize)
+// Module 8751 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import QueryStringUtils from "QueryStringUtils" /* 4873 */;
-import _mod5635 from "module_5635" /* 5635 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
-import scopes from "scopes" /* 8720 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import QueryStringUtils from "QueryStringUtils" /* 4879 */;
+import _mod5642 from "module_5642" /* 5642 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
+import scopes from "scopes" /* 8752 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -39,7 +39,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       return guild_id;
     }
   }
-  const obj = _mod5635;
+  const obj = _mod5642;
   const parsed = obj.parse(query, { arrayFormat: "bracket" });
   let NONE = PermissionUtilsAll.NONE;
   try {

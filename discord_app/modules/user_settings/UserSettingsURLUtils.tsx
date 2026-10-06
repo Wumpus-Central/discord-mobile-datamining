@@ -1,10 +1,10 @@
-// === Module 5633: UserSettingsURLUtils ===
+// === Module 5640: UserSettingsURLUtils ===
 
-// Module 5633 (UserSettingsURLUtils)
+// Module 5640 (UserSettingsURLUtils)
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserSettingsKeys from "UserSettingsKeys" /* 5634 */;
-import _mod5635 from "module_5635" /* 5635 */;
+import UserSettingsKeys from "UserSettingsKeys" /* 5641 */;
+import _mod5642 from "module_5642" /* 5642 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -111,8 +111,8 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
     tmp8 = tmp9;
   }
   const obj2 = { target: tmp8, path: joined, params: parse(search) };
-  parse = _mod5635.parse;
-  _mod5635;
+  parse = _mod5642.parse;
+  _mod5642;
   if (search == null) {
     const _location = location;
     search = location.search;

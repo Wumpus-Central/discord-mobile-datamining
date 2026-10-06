@@ -1,9 +1,9 @@
-// === Module 11808: UsernameText ===
+// === Module 11822: UsernameText ===
 
-// Module 11808 (UsernameText)
+// Module 11822 (UsernameText)
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import NicknameUtils from "NicknameUtils" /* 5042 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import NicknameUtils from "NicknameUtils" /* 5048 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

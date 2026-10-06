@@ -1,6 +1,6 @@
-// === Module 18055: IntentsBindings ===
+// === Module 18100: IntentsBindings ===
 
-// Module 18055 (IntentsBindings)
+// Module 18100 (IntentsBindings)
 import size from "module_2" /* 2 */;
 
 const obj = {

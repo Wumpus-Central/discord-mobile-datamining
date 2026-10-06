@@ -1,7 +1,7 @@
-// === Module 16705: conjureIdeasOffer ===
+// === Module 16726: conjureIdeasOffer ===
 
-// Module 16705 (conjureIdeasOffer)
-import ConjureChatStore from "ConjureChatStore" /* 12905 */;
+// Module 16726 (conjureIdeasOffer)
+import ConjureChatStore from "ConjureChatStore" /* 12924 */;
 import size from "module_2" /* 2 */;
 
 const turnSettled = ConjureChatStore.turnSettled;

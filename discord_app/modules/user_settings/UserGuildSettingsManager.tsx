@@ -1,13 +1,13 @@
-// === Module 6611: UserGuildSettingsManager ===
+// === Module 6618: UserGuildSettingsManager ===
 
-// Module 6611 (UserGuildSettingsManager)
+// Module 6618 (UserGuildSettingsManager)
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 6612 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 6619 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let channel, closure_1, closure_2, closure_4, closure_5, collapsedCategories;

@@ -1,11 +1,11 @@
-// === Module 9006: confirmActivityChangeAlert ===
+// === Module 9039: confirmActivityChangeAlert ===
 
-// Module 9006 (confirmActivityChangeAlert)
+// Module 9039 (confirmActivityChangeAlert)
 import intl7 from "intl" /* 1126 */;
 import StringUtils from "StringUtils" /* 2018 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

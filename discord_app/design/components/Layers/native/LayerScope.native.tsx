@@ -1,10 +1,10 @@
-// === Module 6651: LayerScope ===
+// === Module 6658: LayerScope ===
 
-// Module 6651 (LayerScope)
+// Module 6658 (LayerScope)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import useInitialValueDefault from "useInitialValue" /* 5984 */;
-import LayerContext from "LayerContext" /* 6652 */;
+import useInitialValueDefault from "useInitialValue" /* 5991 */;
+import LayerContext from "LayerContext" /* 6659 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
@@ -23,7 +23,7 @@ function Layer(zIndex) {
   let closure_3;
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = react.useContext(zIndex(6652).LayerContext);
+  const context = react.useContext(zIndex(6659).LayerContext);
   dependencyMap = _slicedToArray(react.useState({}), 2)[1];
   _slicedToArray = react.useRef(null);
   const items = [context];

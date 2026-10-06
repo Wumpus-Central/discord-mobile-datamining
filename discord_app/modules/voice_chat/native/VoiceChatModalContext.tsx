@@ -1,6 +1,6 @@
-// === Module 9087: VoiceChatModalContext ===
+// === Module 9123: VoiceChatModalContext ===
 
-// Module 9087 (VoiceChatModalContext)
+// Module 9123 (VoiceChatModalContext)
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,8 +1,8 @@
-// === Module 14505: useHighlightSettingItem ===
+// === Module 14521: useHighlightSettingItem ===
 
-// Module 14505 (useHighlightSettingItem)
+// Module 14521 (useHighlightSettingItem)
 import react from "react" /* 576 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14501 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

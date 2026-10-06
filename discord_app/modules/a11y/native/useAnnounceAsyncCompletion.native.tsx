@@ -1,6 +1,6 @@
-// === Module 10664: useAnnounceAsyncCompletion ===
+// === Module 10677: useAnnounceAsyncCompletion ===
 
-// Module 10664 (useAnnounceAsyncCompletion)
+// Module 10677 (useAnnounceAsyncCompletion)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,15 +1,15 @@
-// === Module 18076: AgeUpdateFooter ===
+// === Module 18121: AgeUpdateFooter ===
 
-// Module 18076 (AgeUpdateFooter)
+// Module 18121 (AgeUpdateFooter)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef2787 from "module_2787" /* 2787 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8086 */;
+import _modDef2815 from "module_2815" /* 2815 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -31,7 +31,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return obj.showAgeVerificationGetStartedModal(obj2);
         }
     };
-    const formatResult = intl.format(_modDef2787.ifObbX, obj2);
+    const formatResult = intl.format(_modDef2815.ifObbX, obj2);
     cResult[0] = formatResult;
     first = formatResult;
   } else {
@@ -57,7 +57,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return obj.showAgeVerificationGetStartedModal(obj2);
     }
   };
-  return <Text variant="text-md/medium" color="text-muted" style={closure_4().text}>{intl.format(_modDef2787.ifObbX, obj2)}</Text>;
+  return <Text variant="text-md/medium" color="text-muted" style={closure_4().text}>{intl.format(_modDef2815.ifObbX, obj2)}</Text>;
 });
 const result = size.fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
 

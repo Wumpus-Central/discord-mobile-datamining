@@ -1,24 +1,24 @@
-// === Module 12238: GuildPowerupsRecentActivitySection ===
+// === Module 12253: GuildPowerupsRecentActivitySection ===
 
-// Module 12238 (GuildPowerupsRecentActivitySection)
+// Module 12253 (GuildPowerupsRecentActivitySection)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import DateUtils from "DateUtils" /* 4552 */;
-import BoostGemIcon from "BoostGemIcon" /* 4826 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7620 */;
-import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12239 */;
-import BoostTier1Icon from "BoostTier1Icon" /* 12241 */;
-import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12243 */;
-import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12245 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import DateUtils from "DateUtils" /* 4558 */;
+import BoostGemIcon from "BoostGemIcon" /* 4832 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7631 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 12254 */;
+import BoostTier1Icon from "BoostTier1Icon" /* 12256 */;
+import BoostGemSlashIcon2 from "BoostGemSlashIcon" /* 12258 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 12260 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

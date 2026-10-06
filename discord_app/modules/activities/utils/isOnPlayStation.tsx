@@ -1,6 +1,6 @@
-// === Module 12826: isOnPlayStation ===
+// === Module 12845: isOnPlayStation ===
 
-// Module 12826 (isOnPlayStation)
+// Module 12845 (isOnPlayStation)
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

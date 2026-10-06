@@ -1,14 +1,14 @@
-// === Module 15702: CollectiblesShopScreen ===
+// === Module 15738: CollectiblesShopScreen ===
 
-// Module 15702 (CollectiblesShopScreen)
+// Module 15738 (CollectiblesShopScreen)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6490 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 6888 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 15703 */;
-import CollectiblesShopV22 from "CollectiblesShopV2" /* 15704 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6497 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 6898 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 15739 */;
+import CollectiblesShopV22 from "CollectiblesShopV2" /* 15740 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

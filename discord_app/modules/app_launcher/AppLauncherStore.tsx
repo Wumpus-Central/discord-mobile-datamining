@@ -1,9 +1,9 @@
-// === Module 8931: AppLauncherStore ===
+// === Module 8960: AppLauncherStore ===
 
-// Module 8931 (AppLauncherStore)
+// Module 8960 (AppLauncherStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
 import size from "module_2" /* 2 */;
 
 function handleDismissWithDismissed() {

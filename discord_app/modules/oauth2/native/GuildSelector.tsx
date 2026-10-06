@@ -1,15 +1,15 @@
-// === Module 8948: GuildSelector ===
+// === Module 8977: GuildSelector ===
 
-// Module 8948 (GuildSelector)
+// Module 8977 (GuildSelector)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let metroImportAll;
@@ -57,7 +57,7 @@ export default function GuildSelector(onGuildChange) {
       selectedItem: selectedGuildId,
       hasIcons: false
     };
-    const tmp2 = asyncRequire(8949, dependencyMap.paths);
+    const tmp2 = asyncRequire(8978, dependencyMap.paths);
     intl = intl4.intl;
     found = guilds.filter((permissions) => {
       const obj = guilds(closure_1_3[10]);
@@ -68,7 +68,7 @@ export default function GuildSelector(onGuildChange) {
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: items1 };
   const obj2 = { variant: "eyebrow", color: "text-default", children: intl.string(selectedGuildId(1126).t["1DXFFd"]) };
-  const Text = selectedGuildId(4886).Text;
+  const Text = selectedGuildId(4892).Text;
   intl = selectedGuildId(1126).intl;
   items1 = [closure_7(Text, obj2), , , ];
   let tmp6Result = null;
@@ -81,7 +81,7 @@ export default function GuildSelector(onGuildChange) {
   }
   items1[1] = tmp6Result;
   let name;
-  const FormRow = selectedGuildId(8895).FormRow;
+  const FormRow = selectedGuildId(8924).FormRow;
   if (found != null) {
     name = found.name;
   }
@@ -89,7 +89,7 @@ export default function GuildSelector(onGuildChange) {
     const intl2 = selectedGuildId(1126).intl;
     name = intl2.string(selectedGuildId(1126).t.oM4E1A);
   }
-  const obj4 = { label: name, disabled, trailing: closure_7(selectedGuildId(8895).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback };
+  const obj4 = { label: name, disabled, trailing: closure_7(selectedGuildId(8924).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback };
   items1[2] = closure_7(FormRow, obj4);
   const obj5 = { style: tmp.label, children: intl3.format(selectedGuildId(1126).t.t9Jm9o, {}) };
   const LegacyText = selectedGuildId(1188).LegacyText;

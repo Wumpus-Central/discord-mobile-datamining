@@ -1,22 +1,22 @@
-// === Module 15949: useHomeDrawerGesture ===
+// === Module 15988: useHomeDrawerGesture ===
 
-// Module 15949 (useHomeDrawerGesture)
+// Module 15988 (useHomeDrawerGesture)
 import Constants from "Constants" /* 1085 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import timing from "timing" /* 4891 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4893 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11125 */;
-import HomeDrawerStore2 from "HomeDrawerStore" /* 15944 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 15945 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import timing from "timing" /* 4897 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4899 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11138 */;
+import HomeDrawerStore2 from "HomeDrawerStore" /* 15983 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 15984 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 15950 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 15989 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReanimatedHelperTypes";
-import ReanimatedHelperTypes_mod from "ReanimatedHelperTypes" /* 6571 */;
+import ReanimatedHelperTypes_mod from "ReanimatedHelperTypes" /* 6578 */;
 import size from "module_2" /* 2 */;
 
 let navigation, set, set2, set3, str2;
@@ -297,7 +297,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp2 = "main" === name;
             }
             let closure_0 = tmp2;
-            closure_23(() => { /* body not rendered: F153284 */ });
+            closure_23(() => { /* body not rendered: F153520 */ });
           };
           tmp6 = closure_23((isOnMain) => {
             let tmp = isOnMain;
@@ -355,7 +355,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp2 = "main" === name;
             }
             let closure_0 = tmp2;
-            closure_23(() => { /* body not rendered: F153284 */ });
+            closure_23(() => { /* body not rendered: F153520 */ });
           };
           tmp6 = closure_23((isOnMain) => {
             let tmp = isOnMain;
@@ -418,7 +418,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp2 = "main" === name;
             }
             let closure_0 = tmp2;
-            closure_23(() => { /* body not rendered: F153284 */ });
+            closure_23(() => { /* body not rendered: F153520 */ });
           };
           tmp6 = closure_23((isOnMain) => {
             let tmp = isOnMain;
@@ -474,7 +474,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp2 = "main" === name;
             }
             let closure_0 = tmp2;
-            closure_23(() => { /* body not rendered: F153284 */ });
+            closure_23(() => { /* body not rendered: F153520 */ });
           };
           tmp6 = closure_23((isOnMain) => {
             let tmp = isOnMain;
@@ -531,7 +531,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 tmp2 = "main" === name;
               }
               let closure_0 = tmp2;
-              closure_23(() => { /* body not rendered: F153284 */ });
+              closure_23(() => { /* body not rendered: F153520 */ });
             };
             tmp6 = closure_23((isOnMain) => {
               let tmp = isOnMain;
@@ -585,7 +585,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   tmp2 = "main" === name;
                 }
                 let closure_0 = tmp2;
-                closure_23(() => { /* body not rendered: F153284 */ });
+                closure_23(() => { /* body not rendered: F153520 */ });
               };
               tmp6 = closure_23((isOnMain) => {
                 let tmp = isOnMain;
@@ -639,7 +639,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                     tmp2 = "main" === name;
                   }
                   let closure_0 = tmp2;
-                  closure_23(() => { /* body not rendered: F153284 */ });
+                  closure_23(() => { /* body not rendered: F153520 */ });
                 };
                 tmp6 = closure_23((isOnMain) => {
                   let tmp = isOnMain;
@@ -694,7 +694,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                     tmp2 = "main" === name;
                   }
                   let closure_0 = tmp2;
-                  closure_23(() => { /* body not rendered: F153284 */ });
+                  closure_23(() => { /* body not rendered: F153520 */ });
                 };
                 tmp6 = closure_23((isOnMain) => {
                   let tmp = isOnMain;
@@ -756,7 +756,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp2 = "main" === name;
             }
             let closure_0 = tmp2;
-            closure_23(() => { /* body not rendered: F153284 */ });
+            closure_23(() => { /* body not rendered: F153520 */ });
           };
           tmp6 = closure_23((isOnMain) => {
             let tmp = isOnMain;
@@ -812,7 +812,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp2 = "main" === name;
             }
             let closure_0 = tmp2;
-            closure_23(() => { /* body not rendered: F153284 */ });
+            closure_23(() => { /* body not rendered: F153520 */ });
           };
           tmp6 = closure_23((isOnMain) => {
             let tmp = isOnMain;
@@ -866,7 +866,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 tmp2 = "main" === name;
               }
               let closure_0 = tmp2;
-              closure_23(() => { /* body not rendered: F153284 */ });
+              closure_23(() => { /* body not rendered: F153520 */ });
             };
             tmp6 = closure_23((isOnMain) => {
               let tmp = isOnMain;
@@ -920,7 +920,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   tmp2 = "main" === name;
                 }
                 let closure_0 = tmp2;
-                closure_23(() => { /* body not rendered: F153284 */ });
+                closure_23(() => { /* body not rendered: F153520 */ });
               };
               tmp6 = closure_23((isOnMain) => {
                 let tmp = isOnMain;
@@ -976,7 +976,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                 tmp2 = "main" === name;
               }
               let closure_0 = tmp2;
-              closure_23(() => { /* body not rendered: F153284 */ });
+              closure_23(() => { /* body not rendered: F153520 */ });
             };
             tmp6 = closure_23((isOnMain) => {
               let tmp = isOnMain;
@@ -1034,7 +1034,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp2 = "main" === name;
             }
             let closure_0 = tmp2;
-            closure_23(() => { /* body not rendered: F153284 */ });
+            closure_23(() => { /* body not rendered: F153520 */ });
           };
           tmp6 = closure_23((isOnMain) => {
             let tmp = isOnMain;
@@ -1090,7 +1090,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               tmp2 = "main" === name;
             }
             let closure_0 = tmp2;
-            closure_23(() => { /* body not rendered: F153284 */ });
+            closure_23(() => { /* body not rendered: F153520 */ });
           };
           tmp6 = closure_23((isOnMain) => {
             let tmp = isOnMain;

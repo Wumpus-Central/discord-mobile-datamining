@@ -1,21 +1,21 @@
-// === Module 9777: useChannelSafeAreaBottomStyles ===
+// === Module 9790: useChannelSafeAreaBottomStyles ===
 
-// Module 9777 (useChannelSafeAreaBottomStyles)
+// Module 9790 (useChannelSafeAreaBottomStyles)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import useToken from "useToken" /* 4580 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 7507 */;
+import useToken from "useToken" /* 4586 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 7518 */;
 import react from "react" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
-import LurkingStore from "LurkingStore" /* 4510 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
+import LurkingStore from "LurkingStore" /* 4516 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import createStyles from "createStyles" /* 4890 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -338,9 +338,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let closure_1;
   let closure_2;
   let gradientBottom;
-  let obj = gradientBottom(4580);
+  let obj = gradientBottom(4586);
   const token = obj.useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-  let obj2 = gradientBottom(7507);
+  let obj2 = gradientBottom(7518);
   gradientBottom = obj2.useGradientBottom();
   let backgroundColor1;
   if (gradientBottom != null) {

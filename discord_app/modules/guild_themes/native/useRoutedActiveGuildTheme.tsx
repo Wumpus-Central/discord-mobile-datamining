@@ -1,12 +1,12 @@
-// === Module 4735: useRoutedActiveGuildTheme ===
+// === Module 4741: useRoutedActiveGuildTheme ===
 
-// Module 4735 (useRoutedActiveGuildTheme)
+// Module 4741 (useRoutedActiveGuildTheme)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import reactDefault from "react" /* 4762 */;
-import GuildThemeResolver from "GuildThemeResolver" /* 4763 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import reactDefault from "react" /* 4768 */;
+import GuildThemeResolver from "GuildThemeResolver" /* 4769 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

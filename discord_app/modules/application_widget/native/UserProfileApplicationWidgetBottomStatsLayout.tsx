@@ -1,15 +1,15 @@
-// === Module 8686: UserProfileApplicationWidgetBottomStatsLayout ===
+// === Module 8721: UserProfileApplicationWidgetBottomStatsLayout ===
 
-// Module 8686 (UserProfileApplicationWidgetBottomStatsLayout)
+// Module 8721 (UserProfileApplicationWidgetBottomStatsLayout)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import _mod8594 from "module_8594" /* 8594 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8681 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8682 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import _mod8629 from "module_8629" /* 8629 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 8716 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8717 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -98,8 +98,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((bottomConfig) => {
     }
   }
   const mapped1 = first.map((item) => {
-    const resolveStatComponentValues = _mod8594.resolveStatComponentValues;
-    _mod8594;
+    const resolveStatComponentValues = _mod8629.resolveStatComponentValues;
+    _mod8629;
     return resolveStatComponentValues(bottomConfig.components["stat_" + item], resolveFieldValue, numberFormat, UserProfileApplicationWidgetFieldUtils.formatDurationNarrow, true);
   });
   cResult[1] = bottomConfig;
@@ -114,8 +114,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((bottomConfig) => {
   const stat = tmp;
   let items = [1, 2, 3, 4, 5, 6];
   const mapped = items.map((item) => {
-    const resolveStatComponentValues = _mod8594.resolveStatComponentValues;
-    _mod8594;
+    const resolveStatComponentValues = _mod8629.resolveStatComponentValues;
+    _mod8629;
     return resolveStatComponentValues(require.components["stat_" + item], dependencyMap, View, UserProfileApplicationWidgetFieldUtils.formatDurationNarrow, true);
   });
   let obj = {

@@ -1,32 +1,32 @@
-// === Module 7111: UserProfileStore ===
+// === Module 7124: UserProfileStore ===
 
-// Module 7111 (UserProfileStore)
+// Module 7124 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
 import Timers from "Timers" /* 2046 */;
-import WidgetType from "WidgetType" /* 7112 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7113 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7115 */;
-import UserProfilePersonalWidget2 from "UserProfilePersonalWidget" /* 7116 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7118 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7119 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7120 */;
+import WidgetType from "WidgetType" /* 7125 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7126 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7128 */;
+import UserProfilePersonalWidget2 from "UserProfilePersonalWidget" /* 7129 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7131 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7132 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7133 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1084 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 let _require, c24, set2, set3;
 
-const f94239 = (user) => {
+const f94379 = (user) => {
   const str = user.user.username;
   return str.toLowerCase();
 };
@@ -283,7 +283,7 @@ function handleMutualFriendsFetchSuccess(userId) {
     new UserRecord(obj2);
     return obj;
   });
-  const iter = mapped.sortBy(f94239);
+  const iter = mapped.sortBy(f94379);
   const result = set(userId, iter.value());
   const result1 = map4.set(userId.userId, userId.mutualFriends.length);
 }
@@ -364,7 +364,7 @@ function handleProfileFetch(arg0) {
       new UserRecord(obj2);
       return obj;
     });
-    const iter = mapped.sortBy(f94239);
+    const iter = mapped.sortBy(f94379);
     set3(id3, iter.value());
     const result3 = map4.set(userProfile.user.id, userProfile.mutual_friends.length);
   }
@@ -582,8 +582,8 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   let value4 = map1.get(userId);
   if (value4 == null) {
-    value4 = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "unicodeVersion" };
-    const obj2 = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "unicodeVersion" };
+    value4 = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "code" };
+    const obj2 = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "code" };
   }
   const timestamp = Date.now();
   value4.fetchStartedAt = fetchStartedAt;

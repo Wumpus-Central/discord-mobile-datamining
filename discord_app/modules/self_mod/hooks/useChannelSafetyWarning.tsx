@@ -1,7 +1,7 @@
-// === Module 9789: useChannelSafetyWarning ===
+// === Module 9802: useChannelSafetyWarning ===
 
-// Module 9789 (useChannelSafetyWarning)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9786 */;
+// Module 9802 (useChannelSafetyWarning)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

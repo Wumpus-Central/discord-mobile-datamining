@@ -1,17 +1,17 @@
-// === Module 6644: BottomSheetTitleHeader ===
+// === Module 6651: BottomSheetTitleHeader ===
 
-// Module 6644 (BottomSheetTitleHeader)
+// Module 6651 (BottomSheetTitleHeader)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useToken from "useToken" /* 4580 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6011 */;
+import useToken from "useToken" /* 4586 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 6018 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

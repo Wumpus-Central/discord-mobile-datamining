@@ -1,6 +1,6 @@
-// === Module 6754: useIsCreatorMonetizationEnabledGuild ===
+// === Module 6764: useIsCreatorMonetizationEnabledGuild ===
 
-// Module 6754 (useIsCreatorMonetizationEnabledGuild)
+// Module 6764 (useIsCreatorMonetizationEnabledGuild)
 import Constants from "Constants" /* 1085 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

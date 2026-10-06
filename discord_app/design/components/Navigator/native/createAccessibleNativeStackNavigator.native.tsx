@@ -1,11 +1,11 @@
-// === Module 14270: createAccessibleNativeStackNavigator ===
+// === Module 14288: createAccessibleNativeStackNavigator ===
 
-// Module 14270 (createAccessibleNativeStackNavigator)
+// Module 14288 (createAccessibleNativeStackNavigator)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import Link from "Link" /* 1491 */;
-import Navigator from "Navigator" /* 6496 */;
-import NativeStackView2 from "NativeStackView" /* 7556 */;
+import Navigator from "Navigator" /* 6503 */;
+import NativeStackView2 from "NativeStackView" /* 7568 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

@@ -1,28 +1,28 @@
-// === Module 12774: MediaMessagePreview ===
+// === Module 12789: MediaMessagePreview ===
 
-// Module 12774 (MediaMessagePreview)
+// Module 12789 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7260 */;
-import RowGeneratorDefault from "RowGenerator" /* 7591 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 7809 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9854 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11164 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11239 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 12775 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7273 */;
+import RowGeneratorDefault from "RowGenerator" /* 7602 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 7820 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9867 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11177 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11252 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 12790 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6780 */;
-import SearchMessageStore from "SearchMessageStore" /* 6784 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6790 */;
+import SearchMessageStore from "SearchMessageStore" /* 6794 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
-import MessagePreviewStore from "MessagePreviewStore" /* 8037 */;
+import MessageStore from "MessageStore" /* 5116 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8047 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

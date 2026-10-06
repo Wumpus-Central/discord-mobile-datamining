@@ -1,26 +1,26 @@
-// === Module 12090: ChatInputGuard ===
+// === Module 12105: ChatInputGuard ===
 
-// Module 12090 (ChatInputGuard)
+// Module 12105 (ChatInputGuard)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Radius from "Radius" /* 681 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ButtonGroup2 from "ButtonGroup" /* 5592 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import ThemedGradientDefault from "ThemedGradient" /* 5911 */;
-import TableRow from "TableRow" /* 5993 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7508 */;
-import IconButton2 from "IconButton" /* 7575 */;
-import native from "native" /* 8567 */;
-import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9064 */;
-import CountDownDefault from "CountDown" /* 10667 */;
-import ArrowSmallRightIcon2 from "ArrowSmallRightIcon" /* 10672 */;
-import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 11890 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11896 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ButtonGroup2 from "ButtonGroup" /* 5599 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5918 */;
+import TableRow from "TableRow" /* 6000 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7519 */;
+import IconButton2 from "IconButton" /* 7586 */;
+import native from "native" /* 8602 */;
+import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9100 */;
+import CountDownDefault from "CountDown" /* 10680 */;
+import ArrowSmallRightIcon2 from "ArrowSmallRightIcon" /* 10685 */;
+import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 11904 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11910 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -73,7 +73,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenIndex) => {
   screenIndex = screenIndex.screenIndex;
   ({ channelId, onJumpToPresent, children } = screenIndex);
   const tmp5 = useIsUsingClientThemeDefault();
-  const obj2 = screenIndex(11891);
+  const obj2 = screenIndex(11905);
   const chatInputFloatingOverlayStyle = obj2.useChatInputFloatingOverlayStyle();
   const tmp7 = closure_9(tmp5);
   if (cResult[0] !== screenIndex) {
@@ -102,7 +102,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenIndex) => {
     tmp11 = cResult[4];
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp14 = closure_7(screenIndex(11891).ChatInputScrimGradient, {});
+    const tmp14 = closure_7(screenIndex(11905).ChatInputScrimGradient, {});
     cResult[5] = tmp14;
     tmp12 = tmp14;
   } else {
@@ -221,7 +221,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenIndex) => {
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
   const tmp3 = useIsUsingClientThemeDefault();
-  const obj = screenIndex(11891);
+  const obj = screenIndex(11905);
   const chatInputFloatingOverlayStyle = obj.useChatInputFloatingOverlayStyle();
   const tmp6 = closure_9(tmp3);
   const items = [screenIndex];
@@ -230,7 +230,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((screenIndex) => {
     closure_6(screenIndex, nativeEvent.nativeEvent.layout.height);
   }, items);
   items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
-  items2 = [closure_7(screenIndex(11891).ChatInputScrimGradient, {}), ];
+  items2 = [closure_7(screenIndex(11905).ChatInputScrimGradient, {}), ];
   let tmp10Result = null;
   const obj3 = { style: tmp6.container, children: items3 };
   const tmp4 = screenIndex;

@@ -1,9 +1,9 @@
-// === Module 5965: MemberVerificationModalHooks ===
+// === Module 5972: MemberVerificationModalHooks ===
 
-// Module 5965 (MemberVerificationModalHooks)
+// Module 5972 (MemberVerificationModalHooks)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import InitialMemberVerificationStore2 from "InitialMemberVerificationStore" /* 5966 */;
+import InitialMemberVerificationStore2 from "InitialMemberVerificationStore" /* 5973 */;
 import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

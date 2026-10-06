@@ -1,10 +1,10 @@
-// === Module 16832: getLayoutStyles ===
+// === Module 16853: getLayoutStyles ===
 
-// Module 16832 (getLayoutStyles)
+// Module 16853 (getLayoutStyles)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import GameIcon from "GameIcon" /* 6667 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import GameIcon from "GameIcon" /* 6674 */;
 import size from "module_2" /* 2 */;
 
 let items;

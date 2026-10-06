@@ -1,6 +1,6 @@
-// === Module 7852: UserActionCreators ===
+// === Module 7863: UserActionCreators ===
 
-// Module 7852 (UserActionCreators)
+// Module 7863 (UserActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,7 +8,7 @@ import Constants from "Constants" /* 1085 */;
 import RouteConstants from "RouteConstants" /* 1086 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import AnalyticsSchema from "AnalyticsSchema" /* 1346 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -84,7 +84,7 @@ let obj = function _fetchProfile() {
             closure_12 = undefined;
             join_request_id = 1;
             signal = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === join_request_id) {
           if (userId === 1) {

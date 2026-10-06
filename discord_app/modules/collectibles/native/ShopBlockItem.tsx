@@ -1,19 +1,19 @@
-// === Module 15714: ShopBlockItem ===
+// === Module 15750: ShopBlockItem ===
 
-// Module 15714 (ShopBlockItem)
+// Module 15750 (ShopBlockItem)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ShopBlockType from "ShopBlockType" /* 7083 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8421 */;
-import FeaturedBlockDefault from "FeaturedBlock" /* 15736 */;
-import FeedBlockDefault from "FeedBlock" /* 15738 */;
-import ShelfBlockDefault from "ShelfBlock" /* 15745 */;
+import ShopBlockType from "ShopBlockType" /* 7096 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8454 */;
+import FeaturedBlockDefault from "FeaturedBlock" /* 15772 */;
+import FeedBlockDefault from "FeedBlock" /* 15774 */;
+import ShelfBlockDefault from "ShelfBlock" /* 15781 */;
 import react from "react" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
-import createStyles from "createStyles" /* 4890 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

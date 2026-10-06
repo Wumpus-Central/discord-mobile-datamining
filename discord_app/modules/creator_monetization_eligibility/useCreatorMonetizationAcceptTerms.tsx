@@ -1,6 +1,6 @@
-// === Module 17881: useCreatorMonetizationAcceptTerms ===
+// === Module 17927: useCreatorMonetizationAcceptTerms ===
 
-// Module 17881 (useCreatorMonetizationAcceptTerms)
+// Module 17927 (useCreatorMonetizationAcceptTerms)
 import GuildRecord from "GuildRecord" /* 2070 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;

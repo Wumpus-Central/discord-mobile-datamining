@@ -1,11 +1,11 @@
-// === Module 16258: isHomeDrawerChannelMuted ===
+// === Module 16298: isHomeDrawerChannelMuted ===
 
-// Module 16258 (isHomeDrawerChannelMuted)
+// Module 16298 (isHomeDrawerChannelMuted)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

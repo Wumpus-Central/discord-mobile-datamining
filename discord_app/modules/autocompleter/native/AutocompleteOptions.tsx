@@ -1,21 +1,21 @@
-// === Module 10152: AutocompleteOptions ===
+// === Module 10165: AutocompleteOptions ===
 
-// Module 10152 (AutocompleteOptions)
+// Module 10165 (AutocompleteOptions)
 import intl2 from "intl" /* 1126 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5621 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import executeCommandDefault from "executeCommand" /* 8934 */;
-import StickersActionCreators from "StickersActionCreators" /* 10112 */;
-import channel_text_area_ChannelAutocompleteConstants from "channel_text_area/ChannelAutocompleteConstants" /* 10153 */;
-import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7407 */;
-import ApplicationCommandStore from "ApplicationCommandStore" /* 7408 */;
-import GameAutocompleteStore from "GameAutocompleteStore" /* 5892 */;
-import StickersStore from "StickersStore" /* 5687 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5628 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import executeCommandDefault from "executeCommand" /* 8963 */;
+import StickersActionCreators from "StickersActionCreators" /* 10125 */;
+import channel_text_area_ChannelAutocompleteConstants from "channel_text_area/ChannelAutocompleteConstants" /* 10166 */;
+import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7418 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7419 */;
+import GameAutocompleteStore from "GameAutocompleteStore" /* 5899 */;
+import StickersStore from "StickersStore" /* 5694 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5789 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5796 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import module_12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -130,7 +130,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       if (IncludeGameMentionsInAutocomplete.getSetting()) {
         if (0 !== query.length) {
           const tmpResult = channel(flag2[16]);
-          let result = tmpResult.queryGamesAutocomplete(query);
+          let result = tmpResult.queryGamesAutocomplete(query, channel(flag2[17]).GameSearchSurface.CHAT_MENTION);
           if (result == null) {
             result = [];
           }
@@ -147,10 +147,10 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
   items1 = [GameAutocompleteStore];
   let obj3 = {
     queryResults(str) {
-      const TimestampAutocompleteMobileExperiment = channel(flag2[17]).TimestampAutocompleteMobileExperiment;
+      const TimestampAutocompleteMobileExperiment = channel(flag2[18]).TimestampAutocompleteMobileExperiment;
       const items = [];
       if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamps autocomplete" }).enabled) {
-        const tmpResult = channel(flag2[18]);
+        const tmpResult = channel(flag2[19]);
         const result = tmpResult.queryTimestampSuggestions(str.trim());
         const iter = result[Symbol.iterator]();
         const nextResult = iter.next();
@@ -237,7 +237,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               const stickerPacks = obj4.fetchStickerPacks();
             }
             const items2 = [query];
-            const items3 = [channel, (arg0, arg1) => arg1 === channel(flag2[20]).StickerSendability.SENDABLE];
+            const items3 = [channel, (arg0, arg1) => arg1 === channel(flag2[21]).StickerSendability.SENDABLE];
             flag2 = true;
             const tmp3Result = AutocompleteUtilsDefault;
             items1 = tmp3Result.queryStickers(items2, true, items3);
@@ -255,7 +255,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
             if (null != name.id) {
               const obj4 = { id: null, animated: null, size };
               ({ id: obj3.id, animated: obj3.animated } = name);
-              const obj2 = flag(flag2[21]);
+              const obj2 = flag(flag2[22]);
               url = obj2.getEmojiURL(obj4);
             } else {
               url = name.url;

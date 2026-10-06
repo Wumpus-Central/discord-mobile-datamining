@@ -1,14 +1,14 @@
-// === Module 15041: useManageSubscriptionCardData ===
+// === Module 15056: useManageSubscriptionCardData ===
 
-// Module 15041 (useManageSubscriptionCardData)
+// Module 15056 (useManageSubscriptionCardData)
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import PriceUtils from "PriceUtils" /* 6736 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import PriceUtils from "PriceUtils" /* 6750 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildStore_mod from "GuildStore" /* 2074 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4502 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4508 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -22,13 +22,13 @@ function computeSubscriptionInfo(subscription) {
   let stringResult;
   subscription = subscription.subscription;
   let str = "";
-  const obj = _modDef4461(subscription.currentPeriodEnd);
+  const obj = _modDef4467(subscription.currentPeriodEnd);
   const formatResult = obj.format("M/D/YY");
   if (null != subscription.price) {
     const obj2 = PriceUtils;
     str = obj2.formatPrice(subscription.price, subscription.currency);
   }
-  const obj3 = _modDef4461(subscription.createdAt);
+  const obj3 = _modDef4467(subscription.createdAt);
   const obj4 = { memberSince: obj3.format("M/D/YY"), nextRenewalDate: formatResult, nextRenewalLabel: stringResult, subscriptionPrice: str, isCancelled: subscription.status === SubscriptionStatusTypes.CANCELED, isPastDue: status === PAST_DUE, isTrial: hasActiveTrial };
   status = subscription.status;
   PAST_DUE = SubscriptionStatusTypes.PAST_DUE;

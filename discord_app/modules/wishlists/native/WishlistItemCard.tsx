@@ -1,12 +1,12 @@
-// === Module 10769: WishlistItemCard ===
+// === Module 10782: WishlistItemCard ===
 
-// Module 10769 (WishlistItemCard)
+// Module 10782 (WishlistItemCard)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 10770 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 10772 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 10773 */;
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 10783 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 10785 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 10786 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

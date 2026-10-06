@@ -1,6 +1,6 @@
-// === Module 5050: GuildRoomSeats ===
+// === Module 5056: GuildRoomSeats ===
 
-// Module 5050 (GuildRoomSeats)
+// Module 5056 (GuildRoomSeats)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildRoomSeats.tsx");

@@ -1,6 +1,6 @@
-// === Module 17807: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 17853: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 17807 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 17853 (GuildSettingsRoleEditConnectionConfiguration)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,21 +8,21 @@ import Constants2 from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import PlatformsDefault from "Platforms" /* 5442 */;
-import Pressables from "Pressables" /* 5909 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import XSmallIcon from "XSmallIcon" /* 6017 */;
-import TableRowGroup3 from "TableRowGroup" /* 6074 */;
-import useGetOrFetchApplicationBatched2 from "useGetOrFetchApplicationBatched" /* 11180 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17808 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import PlatformsDefault from "Platforms" /* 5449 */;
+import Pressables from "Pressables" /* 5916 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import XSmallIcon from "XSmallIcon" /* 6024 */;
+import TableRowGroup3 from "TableRowGroup" /* 6081 */;
+import useGetOrFetchApplicationBatched2 from "useGetOrFetchApplicationBatched" /* 11193 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17854 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import Constants from "Constants" /* 6679 */;
+import Constants from "Constants" /* 6686 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -166,7 +166,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     if (cResult[0] !== bot) {
-      const obj2 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
+      const obj2 = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
       const Avatar2 = native.Avatar;
       const tmp26 = onChangeText(Avatar2, obj2);
       cResult[0] = bot;
@@ -189,7 +189,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       if (null != bot1) {
         let tmp19;
         if (cResult[2] !== getOrFetchApplicationBatched.bot) {
-          const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+          const obj3 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
           const Avatar = native.Avatar;
           const tmp21 = onChangeText(Avatar, obj3);
           cResult[2] = getOrFetchApplicationBatched.bot;
@@ -345,7 +345,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     application2 = integration.application;
   }
   if (null != application2) {
-    const obj = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "r" };
+    const obj = { size: native.AvatarSizes.XSMALL, user: bot, guildId: "Array" };
     const Avatar2 = native.Avatar;
     bot = undefined;
     if (integration != null) {
@@ -366,7 +366,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       let tmp13;
       if (null != bot1) {
-        const obj2 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "r" };
+        const obj2 = { size: native.AvatarSizes.XSMALL, user: getOrFetchApplicationBatched.bot, guildId: "Array" };
         const Avatar = native.Avatar;
         tmp13 = onChangeText(Avatar, obj2);
       }
@@ -551,7 +551,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((existingPendin
     }
   };
   value = undefined;
-  const TableSwitchRow = metadataField(6698).TableSwitchRow;
+  const TableSwitchRow = metadataField(6705).TableSwitchRow;
   if (existingPendingConfiguration != null) {
     value = existingPendingConfiguration.configuration.value;
   }
@@ -1357,7 +1357,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((existingPendin
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(17808);
+  let obj = metadataField(17854);
   const realizedOperatorForResult = obj.realizedOperatorFor(operator);
   c7 = realizedOperatorForResult;
   value = undefined;
@@ -1366,7 +1366,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((existingPendin
       value = iter.value;
     }
   }
-  const tmp2Result = metadataField(17808);
+  const tmp2Result = metadataField(17854);
   const str = tmp2Result.displayedValueFor(value, realizedOperatorForResult);
   str1 = str.toString();
   [value] = react.useState(str1);
@@ -1430,7 +1430,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((existingPendin
     items[1] = numericalInputDisabled;
     items1 = [onInputValueChange(closure_5, obj5, "_numericalInputContainer"), ];
     const obj7 = { variant: "text-md/semibold", style: tmp.appNumericalInputText, children: fieldText };
-    items1[1] = onInputValueChange(metadataField(4886).Text, obj7);
+    items1[1] = onInputValueChange(metadataField(4892).Text, obj7);
     tmp19Result = tmp19(tmp20, obj4);
   }
   const obj8 = {
@@ -1467,7 +1467,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((existingPendin
       _slicedToArray(tmp3, num);
     }
   };
-  return onInputValueChange(metadataField(6698).TableSwitchRow, obj8, metadataField);
+  return onInputValueChange(metadataField(6705).TableSwitchRow, obj8, metadataField);
 });
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {

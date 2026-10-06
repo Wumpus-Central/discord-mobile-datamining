@@ -1,27 +1,27 @@
-// === Module 16256: GuildsBarGuild ===
+// === Module 16296: GuildsBarGuild ===
 
-// Module 16256 (GuildsBarGuild)
+// Module 16296 (GuildsBarGuild)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl10 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import spring from "spring" /* 5597 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 16222 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16225 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16226 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16249 */;
-import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 16279 */;
+import spring from "spring" /* 5604 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 16262 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16265 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16266 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 16289 */;
+import getGuildsBarGuildAccessibilityActionsDefault from "getGuildsBarGuildAccessibilityActions" /* 16319 */;
 import react_mod from "react" /* 19 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7121 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

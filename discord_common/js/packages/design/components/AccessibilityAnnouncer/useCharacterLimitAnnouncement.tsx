@@ -1,7 +1,7 @@
-// === Module 6582: useCharacterLimitAnnouncement ===
+// === Module 6589: useCharacterLimitAnnouncement ===
 
-// Module 6582 (useCharacterLimitAnnouncement)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
+// Module 6589 (useCharacterLimitAnnouncement)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

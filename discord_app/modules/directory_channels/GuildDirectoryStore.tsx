@@ -1,10 +1,10 @@
-// === Module 11940: GuildDirectoryStore ===
+// === Module 11954: GuildDirectoryStore ===
 
-// Module 11940 (GuildDirectoryStore)
+// Module 11954 (GuildDirectoryStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 11932 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 11933 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 11946 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 11947 */;
 import size from "module_2" /* 2 */;
 
 let set;

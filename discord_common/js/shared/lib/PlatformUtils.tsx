@@ -1,6 +1,6 @@
-// === Module 5321: shared/PlatformUtils ===
+// === Module 5328: shared/PlatformUtils ===
 
-// Module 5321 (shared/PlatformUtils)
+// Module 5328 (shared/PlatformUtils)
 import module_1351_mod from "module_1351" /* 1351 */;
 import size from "module_2" /* 2 */;
 

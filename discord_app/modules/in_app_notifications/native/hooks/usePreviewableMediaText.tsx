@@ -1,9 +1,9 @@
-// === Module 12492: usePreviewableMediaText ===
+// === Module 12507: usePreviewableMediaText ===
 
-// Module 12492 (usePreviewableMediaText)
+// Module 12507 (usePreviewableMediaText)
 import react2 from "react" /* 576 */;
 import intl21 from "intl" /* 1126 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 12489 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 12504 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

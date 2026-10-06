@@ -1,10 +1,10 @@
-// === Module 6610: LastMentionTimestampStore ===
+// === Module 6617: LastMentionTimestampStore ===
 
-// Module 6610 (LastMentionTimestampStore)
+// Module 6617 (LastMentionTimestampStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

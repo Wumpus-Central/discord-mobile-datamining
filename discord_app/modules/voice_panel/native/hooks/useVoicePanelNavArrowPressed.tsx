@@ -1,7 +1,7 @@
-// === Module 17218: useVoicePanelNavArrowPressed ===
+// === Module 17247: useVoicePanelNavArrowPressed ===
 
-// Module 17218 (useVoicePanelNavArrowPressed)
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
+// Module 17247 (useVoicePanelNavArrowPressed)
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

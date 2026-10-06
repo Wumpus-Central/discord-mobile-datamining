@@ -1,13 +1,13 @@
-// === Module 7837: ProfileCustomizationUtils ===
+// === Module 7848: ProfileCustomizationUtils ===
 
-// Module 7837 (ProfileCustomizationUtils)
+// Module 7848 (ProfileCustomizationUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
-import shared from "shared" /* 4729 */;
+import shared from "shared" /* 4735 */;
 import react from "react" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

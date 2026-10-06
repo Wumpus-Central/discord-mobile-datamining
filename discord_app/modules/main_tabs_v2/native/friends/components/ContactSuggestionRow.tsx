@@ -1,14 +1,14 @@
-// === Module 16941: ContactSuggestionRow ===
+// === Module 16967: ContactSuggestionRow ===
 
-// Module 16941 (ContactSuggestionRow)
+// Module 16967 (ContactSuggestionRow)
 import Fragment from "Fragment" /* 21 */;
 import intl3 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15971 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16010 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -58,7 +58,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((suggestedFriend) =
     if (cResult[6] === tmp7.user) {
       tmp11 = cResult[7];
     }
-    const tmpResult = tmp(4612);
+    const tmpResult = tmp(4618);
     sharedValue = tmpResult.useSharedValue(false);
     if (cResult[8] === tmp4) {
       let tmp13;
@@ -138,7 +138,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((suggestedFriend) =
               const result = sharedValue.set(closure_0);
             }
           }
-          const tmpResult4 = tmp(15970);
+          const tmpResult4 = tmp(16009);
           const suggestedContactNameForSuggestion = tmpResult4.getSuggestedContactNameForSuggestion(tmp11, tmp7);
           cResult[20] = tmp7;
           cResult[21] = tmp11;

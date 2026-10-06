@@ -1,6 +1,6 @@
-// === Module 16586: conjurePreviewModes ===
+// === Module 16624: conjurePreviewModes ===
 
-// Module 16586 (conjurePreviewModes)
+// Module 16624 (conjurePreviewModes)
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -99,3 +99,6 @@ export const requiresPermissionReview = function requiresPermissionReview(arg0) 
   }
   return tmp3;
 };
+export function permissionReviewBlocksMode(activeMode, result) {
+  return result && "bot" === activeMode;
+}

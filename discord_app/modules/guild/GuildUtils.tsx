@@ -1,21 +1,23 @@
-// === Module 9948: guild/GuildUtils ===
+// === Module 9961: guild/GuildUtils ===
 
-// Module 9948 (guild/GuildUtils)
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
+// Module 9961 (guild/GuildUtils)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
 import size from "module_2" /* 2 */;
 
-let importDefault;
+const require = globalThis.__r;
+let _require;
 
 let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
 export const handleJoinGuild = function handleJoinGuild(guildId) {
-  importDefault = guildId;
+  _require = guildId;
   if (null != guildId) {
     let obj = GuildActionCreatorsDefault;
     const joinGuildResult = obj.joinGuild(guildId);
-    joinGuildResult.then(() => {
+    const nextPromise = joinGuildResult.then(() => {
       const obj = GuildActionCreatorsDefault;
       const result = obj.transitionToGuildSync(guildId);
     });
+    nextPromise.catch(require("JoinGuildRefusedError").ignoreJoinGuildRefused);
   }
 };

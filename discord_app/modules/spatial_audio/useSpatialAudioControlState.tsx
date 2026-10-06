@@ -1,12 +1,12 @@
-// === Module 13638: useSpatialAudioControlState ===
+// === Module 13654: useSpatialAudioControlState ===
 
-// Module 13638 (useSpatialAudioControlState)
+// Module 13654 (useSpatialAudioControlState)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13639 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13655 */;
 import react from "react" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import Constants from "Constants" /* 4915 */;
+import Constants from "Constants" /* 4921 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

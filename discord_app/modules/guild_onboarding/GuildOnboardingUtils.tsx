@@ -1,20 +1,20 @@
-// === Module 6601: GuildOnboardingUtils ===
+// === Module 6608: GuildOnboardingUtils ===
 
-// Module 6601 (GuildOnboardingUtils)
+// Module 6608 (GuildOnboardingUtils)
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import FlagUtilsAll from "FlagUtils" /* 1390 */;
 import StringUtils from "StringUtils" /* 2018 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4495 */;
-import GuildChannelStore2 from "GuildChannelStore" /* 4507 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5846 */;
-import GuildOnboardingPromptsConstants from "GuildOnboardingPromptsConstants" /* 6596 */;
-import DefaultChannelUtils from "DefaultChannelUtils" /* 6597 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4501 */;
+import GuildChannelStore2 from "GuildChannelStore" /* 4513 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5853 */;
+import GuildOnboardingPromptsConstants from "GuildOnboardingPromptsConstants" /* 6603 */;
+import DefaultChannelUtils from "DefaultChannelUtils" /* 6604 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -25,7 +25,7 @@ let _require, application_id, authStore, navigation, provider_id, set;
 
 let closure_12;
 let unpackModuleId;
-const f92533 = (isCategory) => {
+const f92669 = (isCategory) => {
   const isCategoryResult = isCategory.isCategory();
   const tmp2 = !isCategoryResult && !isCategory.isThread() && !isRoleRequiredDefault(isCategory);
   return tmp2;
@@ -228,7 +228,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arr, arr2) => 
     });
   });
   const item1 = arr2.forEach((item) => set.add(item));
-  const found = mapped.filter(f92533);
+  const found = mapped.filter(f92669);
   const items1 = [
     found.filter((id) => {
       let hasItem = set.has(id.id);
@@ -274,7 +274,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arr, arr2) => 
     });
   });
   const item1 = arr2.forEach((item) => set.add(item));
-  const found = mapped.filter(f92533);
+  const found = mapped.filter(f92669);
   const items1 = [
     found.filter((id) => {
       let hasItem = set.has(id.id);
@@ -589,7 +589,7 @@ export const getChannelCoverageForOnboarding = function getChannelCoverageForOnb
     });
   });
   const item1 = defaultChannelIds.forEach((item) => set.add(item));
-  const found = mapped.filter(f92533);
+  const found = mapped.filter(f92669);
   const items = [
     found.filter((id) => {
       let hasItem = set.has(id.id);

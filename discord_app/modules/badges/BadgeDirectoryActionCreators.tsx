@@ -1,6 +1,6 @@
-// === Module 7868: BadgeDirectoryActionCreators ===
+// === Module 7879: BadgeDirectoryActionCreators ===
 
-// Module 7868 (BadgeDirectoryActionCreators)
+// Module 7879 (BadgeDirectoryActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -134,7 +134,7 @@ let obj = function _fetchBadgeDirectory() {
     if (closure_1 === undefined) {
       obj5 = {};
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

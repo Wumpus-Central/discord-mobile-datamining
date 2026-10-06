@@ -1,15 +1,15 @@
-// === Module 8687: UserProfileApplicationWidgetBottomProgressLayout ===
+// === Module 8722: UserProfileApplicationWidgetBottomProgressLayout ===
 
-// Module 8687 (UserProfileApplicationWidgetBottomProgressLayout)
+// Module 8722 (UserProfileApplicationWidgetBottomProgressLayout)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import _mod8594 from "module_8594" /* 8594 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8682 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import _mod8629 from "module_8629" /* 8629 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8717 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -192,15 +192,15 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             }
           }
         }
-        const items3 = [_mod8594.ResolvedValueType.NUMBER];
+        const items3 = [_mod8629.ResolvedValueType.NUMBER];
         const iter = resolveFieldValue(current, items3);
         let max1;
         if (progress != null) {
           max1 = progress.fields.max;
         }
-        const items4 = [_mod8594.ResolvedValueType.NUMBER];
+        const items4 = [_mod8629.ResolvedValueType.NUMBER];
         const iter2 = resolveFieldValue(max1, items4);
-        _mod8594;
+        _mod8629;
         const root = tmp4.root;
         if (cResult[35] === tmp6) {
           let tmp28;
@@ -269,7 +269,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                         combined1 = "" + iter.value + "/" + iter2.value;
                       } else {
                         const _HermesInternal2 = HermesInternal;
-                        const tmpResult4 = _mod8594;
+                        const tmpResult4 = _mod8629;
                         combined1 = "" + tmpResult4.decimalToClampedPercentage(iter.value) + "%";
                       }
                       tmp39Result4 = React3(Text, obj7);
@@ -370,21 +370,21 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[37] = tmp30;
         tmp28 = tmp30;
       }
-      const tmpResult5 = _mod8594;
+      const tmpResult5 = _mod8629;
       const singleStringOrSkeleton = tmpResult5.resolveSingleStringOrSkeleton(objective, "description", resolveFieldValue);
       cResult[6] = objective;
       cResult[7] = resolveFieldValue;
       cResult[8] = singleStringOrSkeleton;
       tmp10 = singleStringOrSkeleton;
     }
-    const tmpResult6 = _mod8594;
+    const tmpResult6 = _mod8629;
     const singleStringOrSkeleton1 = tmpResult6.resolveSingleStringOrSkeleton(objective, "name", resolveFieldValue);
     cResult[3] = objective;
     cResult[4] = resolveFieldValue;
     cResult[5] = singleStringOrSkeleton1;
     tmp8 = singleStringOrSkeleton1;
   }
-  const items7 = [_mod8594.ResolvedValueType.MEDIA];
+  const items7 = [_mod8629.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items7);
   cResult[0] = resolveFieldValue;
   cResult[1] = image;
@@ -415,27 +415,27 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (objective != null) {
     image = objective.fields.image;
   }
-  const items = [_mod8594.ResolvedValueType.MEDIA];
+  const items = [_mod8629.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  const obj = _mod8594;
+  const obj = _mod8629;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(objective, "name", resolveFieldValue);
-  const obj2 = _mod8594;
+  const obj2 = _mod8629;
   const singleStringOrSkeleton1 = obj2.resolveSingleStringOrSkeleton(objective, "description", resolveFieldValue);
   const progress = bottomConfig.components.progress;
   let current;
   if (progress != null) {
     current = progress.fields.current;
   }
-  const items1 = [_mod8594.ResolvedValueType.NUMBER];
+  const items1 = [_mod8629.ResolvedValueType.NUMBER];
   const iter = resolveFieldValue(current, items1);
   let max;
   if (progress != null) {
     max = progress.fields.max;
   }
-  const items2 = [_mod8594.ResolvedValueType.NUMBER];
+  const items2 = [_mod8629.ResolvedValueType.NUMBER];
   const iter2 = resolveFieldValue(max, items2);
   const obj3 = { style: tmp.root, children: items3 };
-  const tmp3Result = _mod8594;
+  const tmp3Result = _mod8629;
   const progressPercentage = tmp3Result.resolveProgressPercentage(iter, iter2);
   if (null != fieldValue) {
     const obj4 = { source: obj5, style: tmp.image, resizeMode: "contain" };
@@ -494,7 +494,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       combined = "" + iter.value + "/" + iter2.value;
     } else {
       const _HermesInternal = HermesInternal;
-      const tmp3Result2 = _mod8594;
+      const tmp3Result2 = _mod8629;
       combined = "" + tmp3Result2.decimalToClampedPercentage(iter.value) + "%";
     }
     tmp15Result4 = tmp15(Text, obj15);

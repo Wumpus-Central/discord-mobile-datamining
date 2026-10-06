@@ -1,16 +1,16 @@
-// === Module 8790: IntegrationTypeSelector ===
+// === Module 8822: IntegrationTypeSelector ===
 
-// Module 8790 (IntegrationTypeSelector)
+// Module 8822 (IntegrationTypeSelector)
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import UserPlusIcon from "UserPlusIcon" /* 4833 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8708 */;
-import ServerIcon from "ServerIcon" /* 8791 */;
+import UserPlusIcon from "UserPlusIcon" /* 4839 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8740 */;
+import ServerIcon from "ServerIcon" /* 8823 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

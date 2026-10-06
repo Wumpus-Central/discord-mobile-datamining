@@ -1,10 +1,10 @@
-// === Module 15971: AddFriendsScreenUtils ===
+// === Module 16010: AddFriendsScreenUtils ===
 
-// Module 15971 (AddFriendsScreenUtils)
+// Module 16010 (AddFriendsScreenUtils)
 import Constants from "Constants" /* 1085 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10604 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10617 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;
@@ -103,7 +103,7 @@ let obj = function _sendWave() {
     if (closure_1 === undefined) {
       flag = true;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

@@ -1,13 +1,13 @@
-// === Module 15543: CheckpointStatsScreen ===
+// === Module 15559: CheckpointStatsScreen ===
 
-// Module 15543 (CheckpointStatsScreen)
+// Module 15559 (CheckpointStatsScreen)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckpointTextDefault from "CheckpointText" /* 15539 */;
-import CheckpointScreenDefault from "CheckpointScreen" /* 15541 */;
+import CheckpointTextDefault from "CheckpointText" /* 15555 */;
+import CheckpointScreenDefault from "CheckpointScreen" /* 15557 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

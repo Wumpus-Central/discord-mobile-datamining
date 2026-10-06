@@ -1,10 +1,10 @@
-// === Module 17190: useIsConnectedToVoiceChannel ===
+// === Module 17219: useIsConnectedToVoiceChannel ===
 
-// Module 17190 (useIsConnectedToVoiceChannel)
+// Module 17219 (useIsConnectedToVoiceChannel)
 import Constants from "Constants" /* 1085 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

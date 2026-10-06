@@ -1,8 +1,8 @@
-// === Module 9168: useCurrentUserStageRoles ===
+// === Module 9203: useCurrentUserStageRoles ===
 
-// Module 9168 (useCurrentUserStageRoles)
+// Module 9203 (useCurrentUserStageRoles)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5578 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

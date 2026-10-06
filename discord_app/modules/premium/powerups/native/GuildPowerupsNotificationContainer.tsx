@@ -1,18 +1,18 @@
-// === Module 12214: GuildPowerupsNotificationContainer ===
+// === Module 12229: GuildPowerupsNotificationContainer ===
 
-// Module 12214 (GuildPowerupsNotificationContainer)
+// Module 12229 (GuildPowerupsNotificationContainer)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef2525 from "module_2525" /* 2525 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12215 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12216 */;
-import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12219 */;
+import _modDef2553 from "module_2553" /* 2553 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12230 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12231 */;
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12234 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -108,7 +108,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = intl2.intl;
-    const stringResult = intl.string(_modDef2525["3FRirU"]);
+    const stringResult = intl.string(_modDef2553["3FRirU"]);
     cResult[0] = stringResult;
     first = stringResult;
   } else {
@@ -200,7 +200,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     if (manaTypeConsolidationExperiment) {
       str = "text-strong";
     }
-    const obj3 = { color: str, variant: str2, children: intl.string(_modDef2525["3FRirU"]) };
+    const obj3 = { color: str, variant: str2, children: intl.string(_modDef2553["3FRirU"]) };
     str2 = "eyebrow";
     if (manaTypeConsolidationExperiment) {
       str2 = "experimental/heading-lg/semibold";

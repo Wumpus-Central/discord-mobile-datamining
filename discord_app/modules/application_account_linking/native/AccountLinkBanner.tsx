@@ -1,17 +1,17 @@
-// === Module 16119: AccountLinkBanner ===
+// === Module 16158: AccountLinkBanner ===
 
-// Module 16119 (AccountLinkBanner)
+// Module 16158 (AccountLinkBanner)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import ButtonConstants from "ButtonConstants" /* 5600 */;
-import GameIcon from "GameIcon" /* 6667 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
+import ButtonConstants from "ButtonConstants" /* 5607 */;
+import GameIcon from "GameIcon" /* 6674 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -244,7 +244,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((startAuthoriza
     const obj9 = { style: tmp.ellipsisDot };
     items3[2] = closure_6(View, obj9);
     items2[1] = closure_7(View, obj6);
-    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "r" };
+    const obj10 = { user: stateFromStores, size: require("native").AvatarSizes.LARGE_48, guildId: "Array" };
     const Avatar = require("native").Avatar;
     items2[2] = closure_6(Avatar, obj10);
     items1[1] = closure_7(View, obj4);

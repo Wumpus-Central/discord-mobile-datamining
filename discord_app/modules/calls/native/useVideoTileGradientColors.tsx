@@ -1,10 +1,10 @@
-// === Module 7925: useVideoTileGradientColors ===
+// === Module 7936: useVideoTileGradientColors ===
 
-// Module 7925 (useVideoTileGradientColors)
+// Module 7936 (useVideoTileGradientColors)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7901 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 7912 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

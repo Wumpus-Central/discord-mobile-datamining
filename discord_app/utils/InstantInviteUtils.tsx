@@ -1,18 +1,18 @@
-// === Module 9483: InstantInviteUtils ===
+// === Module 9496: InstantInviteUtils ===
 
-// Module 9483 (InstantInviteUtils)
+// Module 9496 (InstantInviteUtils)
 import Constants from "Constants" /* 1085 */;
 import intl6 from "intl" /* 1126 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5621 */;
-import Constants2 from "Constants" /* 7226 */;
-import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9484 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5628 */;
+import Constants2 from "Constants" /* 7239 */;
+import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9497 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6719 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 6733 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -360,7 +360,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       ({ rows: c0, counts: c1 } = obj10);
       if (obj10.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
         let obj2 = AutocompleteUtilsDefault;
-        const obj12 = { query: tmp44, limit: 3, guildId: "filter" };
+        const obj12 = { query: tmp44, limit: 3, guildId: "__initData" };
         const queryChannelsResult = obj2.queryChannels(obj12);
         let item = queryChannelsResult.forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };

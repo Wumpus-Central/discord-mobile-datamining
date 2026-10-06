@@ -1,14 +1,14 @@
-// === Module 11946: useAvailableAndAddedGuilds ===
+// === Module 11960: useAvailableAndAddedGuilds ===
 
-// Module 11946 (useAvailableAndAddedGuilds)
+// Module 11960 (useAvailableAndAddedGuilds)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 11940 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 11954 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -189,7 +189,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   }
   class R {
     constructor() {
-      tmp = closure_4(function() { /* body not rendered: F141994 */ })();
+      tmp = closure_4(function() { /* body not rendered: F142200 */ })();
       return;
     }
   }

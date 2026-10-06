@@ -1,17 +1,17 @@
-// === Module 14657: IOSConversationSuggestionsSetting ===
+// === Module 14673: IOSConversationSuggestionsSetting ===
 
-// Module 14657 (IOSConversationSuggestionsSetting)
+// Module 14673 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import _slicedToArray from "_slicedToArray" /* 4492 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
+import _slicedToArray from "_slicedToArray" /* 4498 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
 import react from "react" /* 19 */;
 import module_1254 from "module_1254" /* 1254 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 let conversationSuggestionsEnabled;

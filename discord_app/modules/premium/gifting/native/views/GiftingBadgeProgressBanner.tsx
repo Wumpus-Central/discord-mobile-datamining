@@ -1,19 +1,19 @@
-// === Module 10490: GiftingBadgeProgressBanner ===
+// === Module 10503: GiftingBadgeProgressBanner ===
 
-// Module 10490 (GiftingBadgeProgressBanner)
+// Module 10503 (GiftingBadgeProgressBanner)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import _modDef2589 from "module_2589" /* 2589 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8422 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10481 */;
+import _modDef2617 from "module_2617" /* 2617 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8455 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10494 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -127,7 +127,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
         const intl = intl2.intl;
         const obj6 = { giftsRemaining: giftsToNextTier, nextTier: nextTierName };
-        const formatToPlainStringResult = intl.formatToPlainString(_modDef2589["0+xfd9"], obj6);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef2617["0+xfd9"], obj6);
         cResult[12] = giftsToNextTier;
         cResult[13] = nextTierName;
         cResult[14] = formatToPlainStringResult;
@@ -177,7 +177,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp10Result = React3(GiftingBadgeIconDefault, obj4);
   }
   items2 = [React3(View, obj3), ];
-  const obj5 = { variant: "text-md/semibold", children: intl.formatToPlainString(_modDef2589["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName }) };
+  const obj5 = { variant: "text-md/semibold", children: intl.formatToPlainString(_modDef2617["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName }) };
   const Text = Text_Text.Text;
   intl = intl2.intl;
   items2[1] = React3(Text, obj5);

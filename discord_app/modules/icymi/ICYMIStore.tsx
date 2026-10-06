@@ -1,28 +1,28 @@
-// === Module 8011: ICYMIStore ===
+// === Module 8021: ICYMIStore ===
 
-// Module 8011 (ICYMIStore)
+// Module 8021 (ICYMIStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ICYMITypes from "ICYMITypes" /* 8024 */;
-import isItemUnreadInChannel from "isItemUnreadInChannel" /* 8026 */;
-import ContentInventoryConstants from "ContentInventoryConstants" /* 8027 */;
-import ICYMIUtils from "ICYMIUtils" /* 8028 */;
+import ICYMITypes from "ICYMITypes" /* 8034 */;
+import isItemUnreadInChannel from "isItemUnreadInChannel" /* 8036 */;
+import ContentInventoryConstants from "ContentInventoryConstants" /* 8037 */;
+import ICYMIUtils from "ICYMIUtils" /* 8038 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import ContentInventoryStore from "ContentInventoryStore" /* 8012 */;
-import ExperimentStore from "ExperimentStore" /* 4776 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7037 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8022 */;
+import ExperimentStore from "ExperimentStore" /* 4782 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7050 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8021 */;
+import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8031 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import MessageStore from "MessageStore" /* 5110 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
-import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8023 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8025 */;
+import MessageStore from "MessageStore" /* 5116 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
+import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8033 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8035 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -35,7 +35,7 @@ let closure_23;
 let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-const f96167 = (id) => id.id;
+const f96308 = (id) => id.id;
 function filterStaffGuild(data) {
   if (ICYMIFiltersStore.filterStaffContent()) {
     obj = ICYMIUtils;
@@ -413,7 +413,7 @@ function getNewUnreadItems(arr9, channelId) {
 }
 function maybeFilterChannelItems(channelId, score) {
   let closure_27;
-  const f96182 = (data) => {
+  const f96323 = (data) => {
     obj = channelId(dependencyMap[18]);
     const isGuildItemResult = obj.isGuildItem(data);
     let tmp2 = !isGuildItemResult;
@@ -426,17 +426,17 @@ function maybeFilterChannelItems(channelId, score) {
   const numberToCustomScoreResult = obj.numberToCustomScore(score);
   if (numberToCustomScoreResult === require("ICYMIUtils").ICYMICustomScore.MUTED) {
     let tmp2 = channelId;
-    dehydratedItems = dehydratedItems.filter(f96182);
-    closure_45 = closure_45.filter(f96182);
-    closure_46 = closure_46.filter(f96182);
-    closure_30 = closure_30.filter(f96182);
+    dehydratedItems = dehydratedItems.filter(f96323);
+    closure_45 = closure_45.filter(f96323);
+    closure_46 = closure_46.filter(f96323);
+    closure_30 = closure_30.filter(f96323);
     _require = channelId;
-    closure_31 = closure_31.filter(f96182);
+    closure_31 = closure_31.filter(f96323);
   }
 }
 function maybeFilterGuildItems(guildId, guildScore) {
   let closure_27;
-  const f96183 = (data) => {
+  const f96324 = (data) => {
     obj = guildId(dependencyMap[18]);
     const isGuildItemResult = obj.isGuildItem(data);
     let tmp2 = !isGuildItemResult;
@@ -449,12 +449,12 @@ function maybeFilterGuildItems(guildId, guildScore) {
   const numberToCustomScoreResult = obj.numberToCustomScore(guildScore);
   if (numberToCustomScoreResult === require("ICYMIUtils").ICYMICustomScore.MUTED) {
     let tmp2 = guildId;
-    dehydratedItems = dehydratedItems.filter(f96183);
-    closure_45 = closure_45.filter(f96183);
-    closure_46 = closure_46.filter(f96183);
-    closure_30 = closure_30.filter(f96183);
+    dehydratedItems = dehydratedItems.filter(f96324);
+    closure_45 = closure_45.filter(f96324);
+    closure_46 = closure_46.filter(f96324);
+    closure_30 = closure_30.filter(f96324);
     _require = guildId;
-    closure_31 = closure_31.filter(f96183);
+    closure_31 = closure_31.filter(f96324);
   }
 }
 function handleReaction(colors) {
@@ -552,7 +552,7 @@ function handleAck(channelId) {
         const _Set = Set;
         const self = this;
         const self2 = this;
-        new Set(items1.map(f96167));
+        new Set(items1.map(f96308));
         const substr = closure_30.slice(0, 20);
         flag = substr.filter((id) => set1.has(id.id)).length >= 3;
       }
@@ -931,7 +931,7 @@ obj = {
     let tmp = set;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
     const self = this;
-    set = new Set(set(8024).SUPPORTED_ITEM_TYPES);
+    set = new Set(set(8034).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set.has(type.type));
     const found1 = found.filter(filterStaffGuild);
     closure_30 = found1.map((type) => {
@@ -1036,16 +1036,16 @@ obj = {
           if (c38 > 0) {
             let c43 = null;
           }
-          let tmp9 = arr11.length > tmp(8024).MIN_ITEMS_FOR_NEW_PILL;
+          let tmp9 = arr11.length > tmp(8034).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp9;
           }
           if (tmp9) {
             const items6 = [];
-            const hydrateItems = tmp(8028).hydrateItems;
-            const tmpResult = tmp(8028);
+            const hydrateItems = tmp(8038).hydrateItems;
+            const tmpResult = tmp(8038);
             HermesBuiltin.arraySpread(items6, arr10, HermesBuiltin.arraySpread(items6, arr9, 0));
-            hydrateItems(items6, 0, tmp(8024).ICYMI_PAGE_SIZE, closure_34);
+            hydrateItems(items6, 0, tmp(8034).ICYMI_PAGE_SIZE, closure_34);
             if (arr9.length + arr10.length === 0) {
               c54 = true;
             }
@@ -1053,8 +1053,8 @@ obj = {
         }
         const obj2 = { newTrackingProps, hasNewContent, unreadFeedItems: arr9, readFeedItems: arr10, homeSessionId: str };
         str = "background_load";
-        const trackFeedLoaded = tmp(8036).trackFeedLoaded;
-        tmp(8036);
+        const trackFeedLoaded = tmp(8046).trackFeedLoaded;
+        tmp(8046);
         if (focused) {
           str = "foreground_load";
         }
@@ -1071,7 +1071,7 @@ obj = {
         const _Set = Set;
         const self2 = this;
         const self3 = this;
-        const set1 = new Set(arr9.map(f96167));
+        const set1 = new Set(arr9.map(f96308));
         const substr = arr13.slice(0, 20);
         flag = substr.filter((id) => set1.has(id.id)).length >= 3;
       }

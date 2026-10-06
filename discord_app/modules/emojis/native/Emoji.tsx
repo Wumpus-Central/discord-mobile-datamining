@@ -1,16 +1,16 @@
-// === Module 6625: Emoji ===
+// === Module 6632: Emoji ===
 
-// Module 6625 (Emoji)
+// Module 6632 (Emoji)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4527 */;
-import shared from "shared" /* 4729 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import AssetRegistryDefault from "AssetRegistry" /* 6626 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 6627 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
+import shared from "shared" /* 4735 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import AssetRegistryDefault from "AssetRegistry" /* 6633 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 6634 */;
 import react from "react" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

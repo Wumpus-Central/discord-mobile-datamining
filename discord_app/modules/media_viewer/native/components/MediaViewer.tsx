@@ -1,12 +1,12 @@
-// === Module 12781: MediaViewer ===
+// === Module 12800: MediaViewer ===
 
-// Module 12781 (MediaViewer)
+// Module 12800 (MediaViewer)
 import react2 from "react" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import useVideoControls from "useVideoControls" /* 7936 */;
-import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 7968 */;
-import MediaViewerItem2 from "MediaViewerItem" /* 12783 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import useVideoControls from "useVideoControls" /* 7947 */;
+import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 7978 */;
+import MediaViewerItem2 from "MediaViewerItem" /* 12802 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
@@ -60,8 +60,8 @@ function MediaViewer(arg0) {
   ({ onLongPress, originLayout, renderMedia, renderOverlay, swipeVelocityThreshold } = arg0);
   ({ useViewerProps, zoomed } = syncer);
   let tmp = height;
-  const tmp3 = height(6657);
-  let items = [height(6681).MEDIA_VIEWER];
+  const tmp3 = height(6664);
+  let items = [height(6688).MEDIA_VIEWER];
   const analyticsLocations = tmp3(items).analyticsLocations;
   const tmp4 = sharedValue(sharedValue1.useState(true), 2);
   [tmp5, tmp6] = tmp4;
@@ -69,7 +69,7 @@ function MediaViewer(arg0) {
   let obj = require("MediaViewerDimensionsContext");
   const mediaViewerDimensions = obj.useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(12787)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(12806)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj2 = require("ReanimatedRexport");
   sharedValue = obj2.useSharedValue(0);
@@ -232,22 +232,22 @@ function MediaViewer(arg0) {
   items5 = [, , , , ];
   const obj17 = { barStyle: "light-content", hidden: !tmp5 };
   const tmp28 = translatePos(ref2, { entranceAnimationDriver: sharedValue, onContentSizeChange, onScroll, onLongPress, originLayout, panGestureConfig: mediaViewerPanGestureConfig, ref, renderMedia, sources, useItemVisible, windowHeight: height, windowWidth: width, index, zoomed });
-  items5[0] = translatePos(height(9060), obj17);
-  items5[1] = translatePos(height(4612).View, { style: animatedStyle });
-  items5[2] = translatePos(height(4613), { ref: animatedRef, style: animatedStyle2, children: tmp28 });
+  items5[0] = translatePos(height(9096), obj17);
+  items5[1] = translatePos(height(4618).View, { style: animatedStyle });
+  items5[2] = translatePos(height(4619), { ref: animatedRef, style: animatedStyle2, children: tmp28 });
   const obj18 = { style: items6, pointerEvents: str, children: renderOverlay(dismiss, overlayEnabled) };
   items6 = [first, animatedStyle1];
   str = "none";
   const tmp29 = isClosing;
   const tmp30 = animatedRef;
-  const tmp31 = height(4613);
+  const tmp31 = height(4619);
   if (tmp5) {
     str = "box-none";
   }
   items5[3] = translatePos(tmp31, obj18);
-  items5[4] = translatePos(tmp(9062), {});
+  items5[4] = translatePos(tmp(9098), {});
   const children = tmp29(tmp30, obj16);
-  return translatePos(tmp7(6657).AnalyticsLocationProvider, { value: analyticsLocations, children });
+  return translatePos(tmp7(6664).AnalyticsLocationProvider, { value: analyticsLocations, children });
 }
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = react_native);
 ({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);

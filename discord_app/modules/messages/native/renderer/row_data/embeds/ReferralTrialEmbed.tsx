@@ -1,27 +1,27 @@
-// === Module 7737: ReferralTrialEmbed ===
+// === Module 7748: ReferralTrialEmbed ===
 
-// Module 7737 (ReferralTrialEmbed)
+// Module 7748 (ReferralTrialEmbed)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl12 from "intl" /* 1126 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import createStyles from "createStyles" /* 4890 */;
-import ProductIds from "ProductIds" /* 6742 */;
-import useTrialOffer from "useTrialOffer" /* 6958 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7722 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 7726 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 7738 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 7739 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import createStyles from "createStyles" /* 4896 */;
+import ProductIds from "ProductIds" /* 6926 */;
+import useTrialOffer from "useTrialOffer" /* 6971 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7733 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 7737 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 7749 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 7750 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
-import UserOfferStore from "UserOfferStore" /* 6959 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import UserOfferStore from "UserOfferStore" /* 6972 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import size from "module_2" /* 2 */;
 
 const PremiumUtilsDefault = PremiumUtils;

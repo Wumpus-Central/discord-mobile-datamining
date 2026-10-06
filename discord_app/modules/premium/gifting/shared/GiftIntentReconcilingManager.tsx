@@ -1,17 +1,17 @@
-// === Module 17608: GiftIntentReconcilingManager ===
+// === Module 17654: GiftIntentReconcilingManager ===
 
-// Module 17608 (GiftIntentReconcilingManager)
+// Module 17654 (GiftIntentReconcilingManager)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10472 */;
-import EphemeralMessageStore from "EphemeralMessageStore" /* 5111 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10485 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 5117 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 7748 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 7759 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let set;

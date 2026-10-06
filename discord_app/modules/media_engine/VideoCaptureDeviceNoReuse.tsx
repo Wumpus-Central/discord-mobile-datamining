@@ -1,6 +1,6 @@
-// === Module 13891: VideoCaptureDeviceNoReuse ===
+// === Module 13909: VideoCaptureDeviceNoReuse ===
 
-// Module 13891 (VideoCaptureDeviceNoReuse)
+// Module 13909 (VideoCaptureDeviceNoReuse)
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 

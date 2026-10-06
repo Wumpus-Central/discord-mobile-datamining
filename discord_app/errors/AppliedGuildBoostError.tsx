@@ -1,10 +1,10 @@
-// === Module 5318: AppliedGuildBoostError ===
+// === Module 5325: AppliedGuildBoostError ===
 
-// Module 5318 (AppliedGuildBoostError)
+// Module 5325 (AppliedGuildBoostError)
 import DurationsDefault from "Durations" /* 1102 */;
 import intl from "intl" /* 1126 */;
-import DateUtils from "DateUtils" /* 4552 */;
-import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4551 */;
+import DateUtils from "DateUtils" /* 4558 */;
+import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4557 */;
 import size from "module_2" /* 2 */;
 
 class AppliedGuildBoostError extends V6OrEarlierAPIError {

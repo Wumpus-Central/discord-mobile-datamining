@@ -1,10 +1,10 @@
-// === Module 10044: FavoritesGuildAnalytics ===
+// === Module 10057: FavoritesGuildAnalytics ===
 
-// Module 10044 (FavoritesGuildAnalytics)
+// Module 10057 (FavoritesGuildAnalytics)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

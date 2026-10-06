@@ -1,10 +1,10 @@
-// === Module 12474: setUserStatus ===
+// === Module 12489: setUserStatus ===
 
-// Module 12474 (setUserStatus)
+// Module 12489 (setUserStatus)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 6610 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 6617 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
 import size from "module_2" /* 2 */;
 
 let closure_2, statusCreatedAtMs;
@@ -101,7 +101,7 @@ let obj = function _setUserStatus() {
     if (disableTracking === undefined) {
       disableTracking = false;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

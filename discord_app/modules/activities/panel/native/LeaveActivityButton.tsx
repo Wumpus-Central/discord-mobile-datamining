@@ -1,13 +1,13 @@
-// === Module 17189: LeaveActivityButton ===
+// === Module 17218: LeaveActivityButton ===
 
-// Module 17189 (LeaveActivityButton)
+// Module 17218 (LeaveActivityButton)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8991 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9577 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9024 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9590 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

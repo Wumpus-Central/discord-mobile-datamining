@@ -1,15 +1,15 @@
-// === Module 4745: ChatInputUtils ===
+// === Module 4751: ChatInputUtils ===
 
-// Module 4745 (ChatInputUtils)
+// Module 4751 (ChatInputUtils)
 import KeyboardUIStore from "KeyboardUIStore" /* 1488 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4746 */;
-import useKeyboardType from "useKeyboardType" /* 4747 */;
-import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4748 */;
+import ScreenIndexFrozen from "ScreenIndexFrozen" /* 4752 */;
+import useKeyboardType from "useKeyboardType" /* 4753 */;
+import PortalKeyboardUIStore from "PortalKeyboardUIStore" /* 4754 */;
 import size from "module_2" /* 2 */;
 
-const f89232 = (item) => {
+const f89369 = (item) => {
   let tmp = typeof item === "number";
   if (typeof item === "number") {
     const obj = ScreenIndexFrozen;
@@ -30,7 +30,7 @@ function getBestActiveInput() {
           if (!map1.has("conjure-preview")) {
             const _Array = Array;
             const arr = Array.from(map1.keys());
-            const found = arr.filter(f89232);
+            const found = arr.filter(f89369);
             if (0 !== found.length) {
               const _Math = Math;
               const items = [];
@@ -155,7 +155,7 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
     } else {
       const _Array = Array;
       const arr = Array.from(obj.keys());
-      const found = arr.filter(f89232);
+      const found = arr.filter(f89369);
       if (0 !== found.length) {
         const _Math = Math;
         const items = [];
@@ -199,7 +199,7 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
               if (!obj2.has("conjure-preview")) {
                 const _Array = Array;
                 const arr = Array.from(obj2.keys());
-                const found = arr.filter(f89232);
+                const found = arr.filter(f89369);
                 if (0 !== found.length) {
                   const _Math = Math;
                   const items = [];

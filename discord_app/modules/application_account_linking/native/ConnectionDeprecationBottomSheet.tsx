@@ -1,22 +1,22 @@
-// === Module 17121: ConnectionDeprecationBottomSheet ===
+// === Module 17150: ConnectionDeprecationBottomSheet ===
 
-// Module 17121 (ConnectionDeprecationBottomSheet)
+// Module 17150 (ConnectionDeprecationBottomSheet)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import themes from "themes" /* 4587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Icon from "Icon" /* 5596 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 6660 */;
-import GameIcon from "GameIcon" /* 6667 */;
-import AccountLinkManager from "AccountLinkManager" /* 17122 */;
+import themes from "themes" /* 4593 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Icon from "Icon" /* 5603 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 6667 */;
+import GameIcon from "GameIcon" /* 6674 */;
+import AccountLinkManager from "AccountLinkManager" /* 17151 */;
 import react from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -195,8 +195,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((deprecatedPlatform
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp6);
   ({ fetchingConnections, matchingPlatform } = stateFromStoresObject);
   let replacedBy;
-  const useGetOrFetchApplication = deprecatedPlatformTypes(6663).useGetOrFetchApplication;
-  deprecatedPlatformTypes(6663);
+  const useGetOrFetchApplication = deprecatedPlatformTypes(6670).useGetOrFetchApplication;
+  deprecatedPlatformTypes(6670);
   if (matchingPlatform != null) {
     let migrationData = matchingPlatform.migrationData;
     if (migrationData != null) {
@@ -249,8 +249,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((deprecatedPlatform
   });
   ({ fetchingConnections, matchingPlatform } = stateFromStoresObject);
   let replacedBy;
-  const useGetOrFetchApplication = deprecatedPlatformTypes(6663).useGetOrFetchApplication;
-  deprecatedPlatformTypes(6663);
+  const useGetOrFetchApplication = deprecatedPlatformTypes(6670).useGetOrFetchApplication;
+  deprecatedPlatformTypes(6670);
   if (matchingPlatform != null) {
     let migrationData = matchingPlatform.migrationData;
     if (migrationData != null) {

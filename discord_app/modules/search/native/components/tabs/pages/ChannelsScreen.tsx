@@ -1,16 +1,16 @@
-// === Module 16877: ChannelsScreen ===
+// === Module 16902: ChannelsScreen ===
 
-// Module 16877 (ChannelsScreen)
+// Module 16902 (ChannelsScreen)
 import Fragment from "Fragment" /* 21 */;
 import intl3 from "intl" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import TrackingConstants from "TrackingConstants" /* 7512 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import TrackingConstants from "TrackingConstants" /* 7523 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
 import react from "react" /* 19 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 11990 */;
-import SearchQueryStore from "SearchQueryStore" /* 11967 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12007 */;
+import SearchQueryStore from "SearchQueryStore" /* 11994 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

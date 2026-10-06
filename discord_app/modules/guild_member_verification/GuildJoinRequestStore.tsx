@@ -1,14 +1,14 @@
-// === Module 5932: GuildJoinRequestStore ===
+// === Module 5939: GuildJoinRequestStore ===
 
-// Module 5932 (GuildJoinRequestStore)
+// Module 5939 (GuildJoinRequestStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4504 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4701 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4510 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4707 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
@@ -17,12 +17,12 @@ function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatu
     if (null != DELETED) {
       if (DELETED === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         closure_6[guildId] = closure_6[guildId] + 1;
-        const result = map.set(guildId, _modDef4461());
+        const result = map.set(guildId, _modDef4467());
       }
       if (applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         closure_6[guildId] = Math.max(0, closure_6[guildId] - 1);
-        const result1 = map.set(guildId, _modDef4461());
+        const result1 = map.set(guildId, _modDef4467());
       }
     }
   }
@@ -145,7 +145,7 @@ class GuildJoinRequestStoreV2 extends Store {
       const value = map.get(arg0);
       let tmp3 = null != value;
       if (tmp3) {
-        const obj2 = _modDef4461();
+        const obj2 = _modDef4467();
         tmp3 = obj2.diff(value, "seconds") < closure_20;
       }
       return tmp3;
@@ -222,7 +222,7 @@ let obj = {
     ({ status, total } = arg0);
     if (status === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       closure_6[guildId] = total;
-      let result = map.set(guildId, _modDef4461());
+      let result = map.set(guildId, _modDef4467());
     }
     const item = requests.forEach((joinRequestId) => {
       closure_1_19[joinRequestId.joinRequestId] = joinRequestId;

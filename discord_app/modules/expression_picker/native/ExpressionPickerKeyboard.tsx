@@ -1,12 +1,12 @@
-// === Module 16613: ExpressionPickerKeyboard ===
+// === Module 16651: ExpressionPickerKeyboard ===
 
-// Module 16613 (ExpressionPickerKeyboard)
+// Module 16651 (ExpressionPickerKeyboard)
 import Fragment from "Fragment" /* 21 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import native from "native" /* 4589 */;
-import PortalKeyboardConstants from "PortalKeyboardConstants" /* 11650 */;
-import getEmojiTextDefault from "getEmojiText" /* 12070 */;
+import native from "native" /* 4595 */;
+import PortalKeyboardConstants from "PortalKeyboardConstants" /* 11664 */;
+import getEmojiTextDefault from "getEmojiText" /* 12085 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

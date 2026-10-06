@@ -1,6 +1,6 @@
-// === Module 13934: PassthroughTouchNativeComponent ===
+// === Module 13952: PassthroughTouchNativeComponent ===
 
-// Module 13934 (PassthroughTouchNativeComponent)
+// Module 13952 (PassthroughTouchNativeComponent)
 import DynamicallyInjectedByGestureHandler from "DynamicallyInjectedByGestureHandler" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

@@ -1,7 +1,7 @@
-// === Module 7675: useGuildPowerupsBoostLevelProgress ===
+// === Module 7686: useGuildPowerupsBoostLevelProgress ===
 
-// Module 7675 (useGuildPowerupsBoostLevelProgress)
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 7671 */;
+// Module 7686 (useGuildPowerupsBoostLevelProgress)
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 7682 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

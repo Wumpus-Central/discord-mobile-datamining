@@ -1,6 +1,6 @@
-// === Module 4548: importWithRetry ===
+// === Module 4554: importWithRetry ===
 
-// Module 4548 (importWithRetry)
+// Module 4554 (importWithRetry)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
@@ -87,7 +87,7 @@ let obj = function _importWithRetry() {
     performance.mark("importWithRetry:start", obj10);
     await c0();
     ({ createPromise: c0, webpackId: c1, name: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

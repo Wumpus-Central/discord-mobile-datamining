@@ -1,10 +1,10 @@
-// === Module 10150: HorizontalAutocompleteWrapper ===
+// === Module 10163: HorizontalAutocompleteWrapper ===
 
-// Module 10150 (HorizontalAutocompleteWrapper)
+// Module 10163 (HorizontalAutocompleteWrapper)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
-import timing from "timing" /* 4891 */;
+import timing from "timing" /* 4897 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

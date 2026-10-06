@@ -1,9 +1,9 @@
-// === Module 16380: ChannelPressableWrapper ===
+// === Module 16420: ChannelPressableWrapper ===
 
-// Module 16380 (ChannelPressableWrapper)
+// Module 16420 (ChannelPressableWrapper)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import ChannelListLayout from "ChannelListLayout" /* 11698 */;
+import ChannelListLayout from "ChannelListLayout" /* 11712 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

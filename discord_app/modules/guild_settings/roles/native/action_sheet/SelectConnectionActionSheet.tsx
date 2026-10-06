@@ -1,24 +1,24 @@
-// === Module 17809: SelectConnectionActionSheet ===
+// === Module 17855: SelectConnectionActionSheet ===
 
-// Module 17809 (SelectConnectionActionSheet)
+// Module 17855 (SelectConnectionActionSheet)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import TableRowGroup from "TableRowGroup" /* 6074 */;
-import BottomSheetModal from "BottomSheetModal" /* 6112 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
-import ActionSheet2 from "ActionSheet" /* 6701 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7012 */;
-import SegmentedControlState from "SegmentedControlState" /* 9282 */;
-import SegmentedControl from "SegmentedControl" /* 9283 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11180 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import TableRowGroup from "TableRowGroup" /* 6081 */;
+import BottomSheetModal from "BottomSheetModal" /* 6119 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import ActionSheet2 from "ActionSheet" /* 6708 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7025 */;
+import SegmentedControlState from "SegmentedControlState" /* 9317 */;
+import SegmentedControl from "SegmentedControl" /* 9318 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11193 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
@@ -49,7 +49,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (cResult[0] !== bot) {
       let tmp6 = null;
       if (null != bot) {
-        const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
+        const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
         const Avatar = native.Avatar;
         tmp6 = metroRequire(Avatar, obj3);
       }
@@ -97,7 +97,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let tmp6Result = null;
     const TableRow = TableRow2.TableRow;
     if (null != bot) {
-      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
+      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
       const Avatar = native.Avatar;
       tmp6Result = metroRequire(Avatar, obj2);
     }
@@ -195,7 +195,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((addConnection) => 
                   }
               };
               const TableRow = addConnection(excludedApplications[8]).TableRow;
-              obj2 = { user: application.bot, size: addConnection(excludedApplications[7]).AvatarSizes.XSMALL, guildId: "r" };
+              obj2 = { user: application.bot, size: addConnection(excludedApplications[7]).AvatarSizes.XSMALL, guildId: "Array" };
               Avatar = addConnection(excludedApplications[7]).Avatar;
               description = undefined;
               if ("" !== application.description) {
@@ -525,7 +525,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((addConnection) => 
             }
         };
         const TableRow = TableRow2.TableRow;
-        obj2 = { user: application.bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
+        obj2 = { user: application.bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
         Avatar = native.Avatar;
         description = undefined;
         if ("" !== application.description) {

@@ -1,6 +1,6 @@
-// === Module 13079: MessageActivityInviteCoverImageStore ===
+// === Module 13098: MessageActivityInviteCoverImageStore ===
 
-// Module 13079 (MessageActivityInviteCoverImageStore)
+// Module 13098 (MessageActivityInviteCoverImageStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LRUCacheDefault from "LRUCache" /* 1444 */;

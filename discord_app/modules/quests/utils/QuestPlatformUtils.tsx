@@ -1,24 +1,24 @@
-// === Module 10918: QuestPlatformUtils ===
+// === Module 10931: QuestPlatformUtils ===
 
-// Module 10918 (QuestPlatformUtils)
+// Module 10931 (QuestPlatformUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import intl from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import openURLDefault from "openURL" /* 4559 */;
-import BrowserManager from "BrowserManager" /* 4851 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5631 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
-import captureAdUserAction2 from "captureAdUserAction" /* 7213 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7224 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 8732 */;
-import apexExperiment from "apexExperiment" /* 10914 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10919 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 10936 */;
+import openURLDefault from "openURL" /* 4565 */;
+import BrowserManager from "BrowserManager" /* 4857 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5638 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
+import captureAdUserAction2 from "captureAdUserAction" /* 7226 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7237 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 8764 */;
+import apexExperiment from "apexExperiment" /* 10927 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 10932 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 10949 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -333,17 +333,17 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != tmp) {
     url = tmp;
   }
-  let obj = adContentId(7224);
-  if (obj.shouldMigrateToAdAnalyticsInterface(adContentId(7224).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
-    let obj2 = { type: adContentId(7223).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, adCreativeType, adCreativeId: adContentId, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
-    const captureAdUserAction = adContentId(7213).captureAdUserAction;
-    adContentId(7213);
+  let obj = adContentId(7237);
+  if (obj.shouldMigrateToAdAnalyticsInterface(adContentId(7237).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
+    let obj2 = { type: adContentId(7236).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, adCreativeType, adCreativeId: adContentId, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
+    const captureAdUserAction = adContentId(7226).captureAdUserAction;
+    adContentId(7226);
     ({ ctaContent: obj4.questContentCTA, content: obj4.surfaceId, sourceQuestContent: obj4.sourceQuestContent, position: obj4.questContentPosition, impressionId: obj4.impressionId } = impressionId);
     captureAdUserAction(obj2);
   } else {
     const obj5 = { adContentId, adCreativeType, questContent: null, questContentCTA: null, questContentPosition: null, impressionId: null, sourceQuestContent: null };
     ({ content: obj3.questContent, ctaContent: obj3.questContentCTA, position: obj3.questContentPosition, impressionId: obj3.impressionId, sourceQuestContent: obj3.sourceQuestContent } = impressionId);
-    const tmp2Result3 = adContentId(7202);
+    const tmp2Result3 = adContentId(7215);
     const result = tmp2Result3.trackAdContentClicked(obj5);
   }
   const ComponentDispatch = tmp2(1121).ComponentDispatch;
@@ -353,8 +353,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != impressionId) {
     const ios = cta.ios;
     let iosAppId;
-    const getIosAttributionClickFramework = adContentId(10934).getIosAttributionClickFramework;
-    adContentId(10934);
+    const getIosAttributionClickFramework = adContentId(10947).getIosAttributionClickFramework;
+    adContentId(10947);
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
@@ -373,7 +373,7 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   }
   if (preferExternalAppStore) {
     if (null == fn) {
-      adCreativeType(4559)(url);
+      adCreativeType(4565)(url);
     }
   }
   const obj8 = {

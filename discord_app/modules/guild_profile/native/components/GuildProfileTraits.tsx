@@ -1,16 +1,16 @@
-// === Module 9411: GuildProfileTraits ===
+// === Module 9425: GuildProfileTraits ===
 
-// Module 9411 (GuildProfileTraits)
+// Module 9425 (GuildProfileTraits)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4527 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import EmojiDefault from "Emoji" /* 6625 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import EmojiDefault from "Emoji" /* 6632 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

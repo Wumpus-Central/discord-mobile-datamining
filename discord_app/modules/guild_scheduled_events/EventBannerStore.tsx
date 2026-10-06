@@ -1,6 +1,6 @@
-// === Module 17223: EventBannerStore ===
+// === Module 17252: EventBannerStore ===
 
-// Module 17223 (EventBannerStore)
+// Module 17252 (EventBannerStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;

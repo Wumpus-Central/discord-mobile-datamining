@@ -1,26 +1,26 @@
-// === Module 9369: SecureFramesUserVerificationModal ===
+// === Module 9384: SecureFramesUserVerificationModal ===
 
-// Module 9369 (SecureFramesUserVerificationModal)
+// Module 9384 (SecureFramesUserVerificationModal)
 import nativeDefault from "native" /* 587 */;
 import intl8 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import FormConstants from "FormConstants" /* 1192 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import showShareActionSheet from "showShareActionSheet" /* 8038 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9364 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9375 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import showShareActionSheet from "showShareActionSheet" /* 8048 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9378 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9382 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
-import SecureFramesConstants from "SecureFramesConstants" /* 9366 */;
+import SecureFramesConstants from "SecureFramesConstants" /* 9380 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -185,7 +185,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   let tmp18;
   let tmp19;
   let tmp24Result2;
-  const f100364 = () => {
+  const f100516 = () => {
     let items1;
     const intl = intl8.intl;
     const string = intl.string;
@@ -298,9 +298,9 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const alertIfSecureFramesKeyInconsistent = obj10.useAlertIfSecureFramesKeyInconsistent(obj11);
   const items6 = [isUserSecureFramesVerified];
   const items7 = [isCurrentUserKeyPersistent, isOtherUserKeyPersistent, name];
-  [tmp18, tmp19] = fingerprint(fingerprintUserKey.useMemo(f100364, items6), 2);
+  [tmp18, tmp19] = fingerprint(fingerprintUserKey.useMemo(f100516, items6), 2);
   const items8 = [channelId, userId];
-  fingerprint(fingerprintUserKey.useMemo(f100364, items6), 2);
+  fingerprint(fingerprintUserKey.useMemo(f100516, items6), 2);
   const memo = fingerprintUserKey.useMemo(() => {
     const obj = SecureFramesUtils;
     const obj2 = { isCurrentUserKeyPersistent, isOtherUserKeyPersistent, otherUserNickname: name };

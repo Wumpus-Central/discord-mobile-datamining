@@ -1,7 +1,7 @@
-// === Module 8281: showReportModal ===
+// === Module 8314: showReportModal ===
 
-// Module 8281 (showReportModal)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+// Module 8314 (showReportModal)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
@@ -49,7 +49,7 @@ let obj = function _showReportModal() {
             menu = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (reportType === 1) {

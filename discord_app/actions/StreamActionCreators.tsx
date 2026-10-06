@@ -1,30 +1,30 @@
-// === Module 5032: StreamActionCreators ===
+// === Module 5038: StreamActionCreators ===
 
-// Module 5032 (StreamActionCreators)
+// Module 5038 (StreamActionCreators)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import Constants2 from "Constants" /* 4932 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import ChannelUtils from "ChannelUtils" /* 5035 */;
-import GuildRoomActionCreators from "GuildRoomActionCreators" /* 5046 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5083 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import transitionToStreamDefault from "transitionToStream" /* 5092 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 9102 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 9433 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import Constants2 from "Constants" /* 4938 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import ChannelUtils from "ChannelUtils" /* 5041 */;
+import GuildRoomActionCreators from "GuildRoomActionCreators" /* 5052 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 5089 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import transitionToStreamDefault from "transitionToStream" /* 5098 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 8101 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9446 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GameConsoleStore from "GameConsoleStore" /* 4907 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 5033 */;
-import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 5034 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import GameConsoleStore from "GameConsoleStore" /* 4913 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 5039 */;
+import ApplicationStreamPreviewStore from "ApplicationStreamPreviewStore" /* 5040 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

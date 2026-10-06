@@ -1,14 +1,14 @@
-// === Module 15179: CustomTypingIndicatorEditScreen ===
+// === Module 15194: CustomTypingIndicatorEditScreen ===
 
-// Module 15179 (CustomTypingIndicatorEditScreen)
+// Module 15194 (CustomTypingIndicatorEditScreen)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import user from "user" /* 1385 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1398 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8914 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11587 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8943 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11600 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -16,7 +16,7 @@ import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c3, c4;
@@ -157,12 +157,12 @@ export default function CustomTypingIndicatorEditScreen() {
   const callback1 = first1.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { initialValue: first2, onChange };
-    obj.openLazy(asyncRequire(15180, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", obj2);
+    obj.openLazy(asyncRequire(15195, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", obj2);
   }, items4);
   const callback2 = first1.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { emojis: memo, initialAnimation: first3, onChange: onChange2 };
-    obj.openLazy(asyncRequire(15181, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", obj2);
+    obj.openLazy(asyncRequire(15196, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", obj2);
   }, items5);
   const ref = first1.useRef(null);
   const callback3 = first1.useCallback(() => {

@@ -1,12 +1,12 @@
-// === Module 4812: CircleInformationIcon ===
+// === Module 4818: CircleInformationIcon ===
 
-// Module 4812 (CircleInformationIcon)
+// Module 4818 (CircleInformationIcon)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage3 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 4813 */;
-import AssetRegistry2 from "AssetRegistry" /* 4814 */;
+import BaseIconImage3 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 4819 */;
+import AssetRegistry2 from "AssetRegistry" /* 4820 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

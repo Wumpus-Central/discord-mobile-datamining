@@ -1,15 +1,15 @@
-// === Module 7555: ConversationNavigator ===
+// === Module 7567: ConversationNavigator ===
 
-// Module 7555 (ConversationNavigator)
+// Module 7567 (ConversationNavigator)
 import nativeDefault from "native" /* 587 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7550 */;
-import useSelectedConversationDefault from "useSelectedConversation" /* 7566 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7561 */;
+import useSelectedConversationDefault from "useSelectedConversation" /* 7578 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7103 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7116 */;
 import Fragment from "Fragment" /* 21 */;
-import NativeStackView from "NativeStackView" /* 7556 */;
+import NativeStackView from "NativeStackView" /* 7568 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -57,9 +57,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   }
   const first = _slicedToArray(react.useState(tmp6), 1)[0];
   if (null != first) {
-    LIST = tmp(7568).ConversationNavigatorScreens.FOCUS;
+    LIST = tmp(7579).ConversationNavigatorScreens.FOCUS;
   } else {
-    LIST = tmp(7568).ConversationNavigatorScreens.LIST;
+    LIST = tmp(7579).ConversationNavigatorScreens.LIST;
   }
   if (cResult[2] === channelId) {
     let tmp8;
@@ -91,7 +91,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
     }
     if (cResult[7] !== tmp8) {
       const Screen = closure_8.Screen;
-      const obj3 = { initialParams: tmp8, name: tmp(7568).ConversationNavigatorScreens.LIST, options: tmp10, getComponent: tmp11 };
+      const obj3 = { initialParams: tmp8, name: tmp(7579).ConversationNavigatorScreens.LIST, options: tmp10, getComponent: tmp11 };
       const tmp15 = closure_6(Screen, obj3);
       cResult[7] = tmp8;
       cResult[8] = tmp15;
@@ -146,7 +146,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
             }
           }
           const Screen2 = closure_8.Screen;
-          const obj4 = { name: tmp(7568).ConversationNavigatorScreens.FOCUS, initialParams: tmp16, options: T, getComponent: tmp23 };
+          const obj4 = { name: tmp(7579).ConversationNavigatorScreens.FOCUS, initialParams: tmp16, options: T, getComponent: tmp23 };
           cResult[15] = tmp16;
           cResult[16] = closure_6(Screen2, obj4);
           const tmp26 = closure_6(Screen2, obj4);
@@ -238,14 +238,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   let obj2 = { id: "conversation-navigator", screenOptions: accessibilityNativeStackOptions, initialRouteName: LIST, children: items };
   const Navigator = closure_8.Navigator;
   if (null != first) {
-    LIST = tmp(7568).ConversationNavigatorScreens.FOCUS;
+    LIST = tmp(7579).ConversationNavigatorScreens.FOCUS;
   } else {
-    LIST = tmp(7568).ConversationNavigatorScreens.LIST;
+    LIST = tmp(7579).ConversationNavigatorScreens.LIST;
   }
   items = [, ];
   const obj3 = {
     initialParams: { channelId, guildId },
-    name: tmp(7568).ConversationNavigatorScreens.LIST,
+    name: tmp(7579).ConversationNavigatorScreens.LIST,
     options(arg0) {
       let route;
       ({ route, navigation } = arg0);
@@ -260,7 +260,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((route) => {
   items[0] = closure_6(closure_8.Screen, obj3);
   const Screen = closure_8.Screen;
   const obj4 = {
-    name: tmp(7568).ConversationNavigatorScreens.FOCUS,
+    name: tmp(7579).ConversationNavigatorScreens.FOCUS,
     initialParams: tmp8,
     options(arg0) {
       let route;

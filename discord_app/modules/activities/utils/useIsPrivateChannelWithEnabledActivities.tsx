@@ -1,6 +1,6 @@
-// === Module 9081: useIsPrivateChannelWithEnabledActivities ===
+// === Module 9117: useIsPrivateChannelWithEnabledActivities ===
 
-// Module 9081 (useIsPrivateChannelWithEnabledActivities)
+// Module 9117 (useIsPrivateChannelWithEnabledActivities)
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

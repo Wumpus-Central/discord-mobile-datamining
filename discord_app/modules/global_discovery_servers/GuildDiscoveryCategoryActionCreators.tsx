@@ -1,11 +1,11 @@
-// === Module 16413: GuildDiscoveryCategoryActionCreators ===
+// === Module 16453: GuildDiscoveryCategoryActionCreators ===
 
-// Module 16413 (GuildDiscoveryCategoryActionCreators)
+// Module 16453 (GuildDiscoveryCategoryActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16414 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16454 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -254,7 +254,7 @@ obj = function _saveGuildMetadata() {
             about = undefined;
             partner_application_timestamp = 1;
             is_published = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === partner_application_timestamp) {
           if (guildId === 1) {

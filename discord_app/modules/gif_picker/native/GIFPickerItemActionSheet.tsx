@@ -1,18 +1,18 @@
-// === Module 10104: GIFPickerItemActionSheet ===
+// === Module 10117: GIFPickerItemActionSheet ===
 
-// Module 10104 (GIFPickerItemActionSheet)
+// Module 10117 (GIFPickerItemActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10090 */;
-import GifIcon from "GifIcon" /* 10105 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10103 */;
+import GifIcon from "GifIcon" /* 10118 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -42,7 +42,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   item = item.item;
   const tmp4 = closure_7();
   if (cResult[0] !== item.url) {
-    const tmpResult = item(10090);
+    const tmpResult = item(10103);
     const gifUrlKeyResult = tmpResult.gifUrlKey(item.url);
     cResult[0] = item.url;
     cResult[1] = gifUrlKeyResult;
@@ -50,7 +50,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   } else {
     tmp5 = cResult[1];
   }
-  const tmpResult2 = item(10094);
+  const tmpResult2 = item(10107);
   const isFavoriteGIF = tmpResult2.useIsFavoriteGIF(tmp5);
   ({ width, height } = isFavoriteGIF(1484)());
   isFavoriteGIF(1484)();
@@ -322,7 +322,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
                       }
                     }
                   }
-                  BottomSheet = tmp(6645).BottomSheet;
+                  BottomSheet = tmp(6652).BottomSheet;
                   const tmp41 = closure_5(BottomSheet, obj4);
                   cResult[34] = tmp4.contentWrapper;
                   cResult[35] = tmp34;
@@ -409,7 +409,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
             }
             const obj6 = { children: items1 };
             items1 = [tmp25, tmp29];
-            const tmp33 = closure_6(item(5592).ButtonGroup, obj6);
+            const tmp33 = closure_6(item(5599).ButtonGroup, obj6);
             cResult[27] = tmp25;
             cResult[28] = tmp29;
             cResult[29] = tmp33;

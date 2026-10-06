@@ -1,15 +1,15 @@
-// === Module 8688: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 8723: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 8688 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 8723 (UserProfileApplicationWidgetBottomCollectionLayout)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import _mod8594 from "module_8594" /* 8594 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8682 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import _mod8629 from "module_8629" /* 8629 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 8717 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -148,21 +148,21 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         cResult[11] = tmp14;
         tmp12 = tmp14;
       }
-      const tmpResult = _mod8594;
+      const tmpResult = _mod8629;
       const singleStringOrSkeleton = tmpResult.resolveSingleStringOrSkeleton(componentConfig, "description", resolveFieldValue);
       cResult[6] = componentConfig;
       cResult[7] = resolveFieldValue;
       cResult[8] = singleStringOrSkeleton;
       tmp10 = singleStringOrSkeleton;
     }
-    const tmpResult2 = _mod8594;
+    const tmpResult2 = _mod8629;
     const singleStringOrSkeleton1 = tmpResult2.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
     cResult[3] = componentConfig;
     cResult[4] = resolveFieldValue;
     cResult[5] = singleStringOrSkeleton1;
     tmp8 = singleStringOrSkeleton1;
   }
-  const items2 = [_mod8594.ResolvedValueType.MEDIA];
+  const items2 = [_mod8629.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items2);
   cResult[0] = resolveFieldValue;
   cResult[1] = image;
@@ -184,11 +184,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (componentConfig != null) {
     image = componentConfig.fields.image;
   }
-  const items = [_mod8594.ResolvedValueType.MEDIA];
+  const items = [_mod8629.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  const obj = _mod8594;
+  const obj = _mod8629;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
-  const obj2 = _mod8594;
+  const obj2 = _mod8629;
   const singleStringOrSkeleton1 = obj2.resolveSingleStringOrSkeleton(componentConfig, "description", resolveFieldValue);
   const obj3 = { style: tmp.item, children: items1 };
   if (null != fieldValue) {

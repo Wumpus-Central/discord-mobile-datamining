@@ -1,6 +1,6 @@
-// === Module 12034: useDebouncedSetChatInputState ===
+// === Module 12049: useDebouncedSetChatInputState ===
 
-// Module 12034 (useDebouncedSetChatInputState)
+// Module 12049 (useDebouncedSetChatInputState)
 import react2 from "react" /* 576 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,8 +1,8 @@
-// === Module 10070: usePressHorizontalAutocompleteItemHandler ===
+// === Module 10083: usePressHorizontalAutocompleteItemHandler ===
 
-// Module 10070 (usePressHorizontalAutocompleteItemHandler)
+// Module 10083 (usePressHorizontalAutocompleteItemHandler)
 import Constants from "Constants" /* 1085 */;
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10071 */;
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10084 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

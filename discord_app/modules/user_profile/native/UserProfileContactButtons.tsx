@@ -1,23 +1,23 @@
-// === Module 12956: UserProfileContactButtons ===
+// === Module 12975: UserProfileContactButtons ===
 
-// Module 12956 (UserProfileContactButtons)
+// Module 12975 (UserProfileContactButtons)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 10996 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12286 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 12960 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11009 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12301 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 12979 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -149,8 +149,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const cResult = obj.c(23);
   user = user.user;
   ({ hasCustomProfileTheme, location: _location, ButtonComponent } = user);
-  const newestAnalyticsLocation = trackUserProfileAction(6657)().newestAnalyticsLocation;
-  let obj2 = user(7861);
+  const newestAnalyticsLocation = trackUserProfileAction(6664)().newestAnalyticsLocation;
+  let obj2 = user(7872);
   const tmp4 = trackUserProfileAction;
   trackUserProfileAction = obj2.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (_location == null) {
@@ -165,7 +165,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     tmp5 = cResult[1];
   }
   dependencyMap = tmp5;
-  const tmpResult = user(12884);
+  const tmpResult = user(12903);
   const gameFriendsForUser = tmpResult.useGameFriendsForUser(user.id);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [RelationshipStore];
@@ -186,7 +186,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   }
   const tmpResult2 = user(504);
   const stateFromStores = tmpResult2.useStateFromStores(tmp6, tmp8);
-  const tmp4Result = tmp4(4722);
+  const tmp4Result = tmp4(4728);
   const name = tmp4Result.useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
@@ -199,9 +199,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         let tmp12;
         let tmp14;
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          UserPlusIcon = tmp(12957).UserClockIcon;
+          UserPlusIcon = tmp(12976).UserClockIcon;
         } else {
-          UserPlusIcon = tmp(4833).UserPlusIcon;
+          UserPlusIcon = tmp(4839).UserPlusIcon;
         }
         if (cResult[5] !== (stateFromStores === RelationshipTypes.PENDING_OUTGOING)) {
           let stringResult;
@@ -418,20 +418,20 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   let stateFromStores;
   userDisplayName = undefined;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
-  const newestAnalyticsLocation = trackUserProfileAction(6657)().newestAnalyticsLocation;
-  let obj = user(7861);
+  const newestAnalyticsLocation = trackUserProfileAction(6664)().newestAnalyticsLocation;
+  let obj = user(7872);
   const tmp = trackUserProfileAction;
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   if (_location == null) {
     _location = newestAnalyticsLocation;
   }
   dependencyMap = { location: _location };
-  const tmp3Result = user(12884);
+  const tmp3Result = user(12903);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   const items = [RelationshipStore];
   const tmp3Result2 = user(504);
   stateFromStores = tmp3Result2.useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
-  const tmpResult = tmp(4722);
+  const tmpResult = tmp(4728);
   userDisplayName = tmpResult.useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== RelationshipTypes.BLOCKED) {
@@ -444,9 +444,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         let stringResult;
         let string2Result;
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          UserPlusIcon = tmp3(12957).UserClockIcon;
+          UserPlusIcon = tmp3(12976).UserClockIcon;
         } else {
-          UserPlusIcon = tmp3(4833).UserPlusIcon;
+          UserPlusIcon = tmp3(4839).UserPlusIcon;
         }
         const intl = tmp3(1126).intl;
         const string = intl.string;
@@ -516,7 +516,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const cResult = obj.c(88);
   user = user.user;
   ({ disableMessage, disableCalls, location: _location, hasCustomProfileTheme, style } = user);
-  let obj2 = user(7861);
+  let obj2 = user(7872);
   const trackUserProfileAction = obj2.useUserProfileAnalyticsContext().trackUserProfileAction;
   closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -538,7 +538,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   }
   const tmpResult = user(504);
   const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-  const tmpResult2 = user(12884);
+  const tmpResult2 = user(12903);
   const gameFriendsForUser = tmpResult2.useGameFriendsForUser(user.id);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function x() {
@@ -578,7 +578,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
         }
       }
     }
-    const tmp14 = trackUserProfileAction(12959)(user.id, false, O);
+    const tmp14 = trackUserProfileAction(12978)(user.id, false, O);
     const handlePress = tmp14.handlePress;
     ({ text, inCall, accessibilityHint } = tmp14);
     if (hasCustomProfileTheme) {
@@ -681,8 +681,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       }
       const obj3 = { color: tmp15, size: "xs" };
       cResult[57] = tmp15;
-      cResult[58] = closure_8(user(5855).ChatIcon, obj3);
-      const tmp26 = closure_8(user(5855).ChatIcon, obj3);
+      cResult[58] = closure_8(user(5862).ChatIcon, obj3);
+      const tmp26 = closure_8(user(5862).ChatIcon, obj3);
     } else {
       class O {
         constructor() {
@@ -720,7 +720,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
       const formatToPlainString = tmp30.formatToPlainString;
       const obj4 = { name: tmp13Result.getName(user) };
       const zFfSFQ = tmp(1126).t.zFfSFQ;
-      tmp13Result = trackUserProfileAction(4722);
+      tmp13Result = trackUserProfileAction(4728);
       cResult[60] = user;
       cResult[61] = formatToPlainString(zFfSFQ, obj4);
       const formatToPlainStringResult = formatToPlainString(zFfSFQ, obj4);
@@ -751,7 +751,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
     }
     tmp35[0] = tmp22;
     const obj6 = { text: tmp23, icon: tmp25, accessibilityLabel: tmp27, accessibilityHint: tmp29, variant: "secondary", size: "md", grow: true, onPress: tmp11, disabled: disableMessage };
-    tmp35[1] = closure_8(user(5594).Button, obj6);
+    tmp35[1] = closure_8(user(5601).Button, obj6);
     cResult[62] = disableMessage;
     cResult[63] = tmp11;
     cResult[64] = tmp25;

@@ -1,19 +1,19 @@
-// === Module 8907: FormSwitchRow ===
+// === Module 8936: FormSwitchRow ===
 
-// Module 8907 (FormSwitchRow)
+// Module 8936 (FormSwitchRow)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import RedesignCompat from "RedesignCompat" /* 6073 */;
-import FormRowDefault from "FormRow" /* 6633 */;
-import FormLabelDefault from "FormLabel" /* 6635 */;
-import TableSwitchRow2 from "TableSwitchRow" /* 6698 */;
-import Form_FormSwitchDefault from "Form/FormSwitch" /* 8905 */;
+import RedesignCompat from "RedesignCompat" /* 6080 */;
+import FormRowDefault from "FormRow" /* 6640 */;
+import FormLabelDefault from "FormLabel" /* 6642 */;
+import TableSwitchRow2 from "TableSwitchRow" /* 6705 */;
+import Form_FormSwitchDefault from "Form/FormSwitch" /* 8934 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 15024: useUserRoleSubscriptionRelationship ===
+// === Module 15039: useUserRoleSubscriptionRelationship ===
 
-// Module 15024 (useUserRoleSubscriptionRelationship)
+// Module 15039 (useUserRoleSubscriptionRelationship)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15023 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5639 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15038 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5646 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

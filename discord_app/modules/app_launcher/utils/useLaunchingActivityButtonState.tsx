@@ -1,9 +1,9 @@
-// === Module 11765: useLaunchingActivityButtonState ===
+// === Module 11779: useLaunchingActivityButtonState ===
 
-// Module 11765 (useLaunchingActivityButtonState)
+// Module 11779 (useLaunchingActivityButtonState)
 import react from "react" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import FramesStore from "FramesStore" /* 8703 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

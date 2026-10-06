@@ -1,10 +1,10 @@
-// === Module 16922: usePostableChannelCount ===
+// === Module 16948: usePostableChannelCount ===
 
-// Module 16922 (usePostableChannelCount)
+// Module 16948 (usePostableChannelCount)
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import GuildChannelStore2 from "GuildChannelStore" /* 4507 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import GuildChannelStore2 from "GuildChannelStore" /* 4513 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

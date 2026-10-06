@@ -1,14 +1,14 @@
-// === Module 17732: GuildSettingsModalIntegrations ===
+// === Module 17778: GuildSettingsModalIntegrations ===
 
-// Module 17732 (GuildSettingsModalIntegrations)
+// Module 17778 (GuildSettingsModalIntegrations)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import react from "react" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

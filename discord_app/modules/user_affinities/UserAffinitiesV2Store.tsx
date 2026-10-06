@@ -1,21 +1,21 @@
-// === Module 7143: UserAffinitiesV2Store ===
+// === Module 7156: UserAffinitiesV2Store ===
 
-// Module 7143 (UserAffinitiesV2Store)
+// Module 7156 (UserAffinitiesV2Store)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import UserAffinitiesConstants from "UserAffinitiesConstants" /* 7144 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserAffinitiesConstants from "UserAffinitiesConstants" /* 7157 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import size from "module_2" /* 2 */;
 
-const f94409 = (otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId);
-const f94410 = (otherUserId) => {
+const f94549 = (otherUserId) => !blockedOrIgnored.isBlockedOrIgnored(otherUserId.otherUserId);
+const f94550 = (otherUserId) => {
   const items = [otherUserId.otherUserId, otherUserId];
   return items;
 };
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
-  const found = userAffinities.filter(f94409);
-  map = new Map(found.map(f94410));
+  const found = userAffinities.filter(f94549);
+  map = new Map(found.map(f94550));
 }
 const USER_AFFINITY_TTL = UserAffinitiesConstants.USER_AFFINITY_TTL;
 let map = new Map();
@@ -37,10 +37,10 @@ class UserAffinitiesV2Store extends PersistedStore {
       obj.lastFetched = userAffinities.lastFetched;
       const _Map = Map;
       const userAffinities1 = obj.userAffinities;
-      const found = userAffinities1.filter(f94409);
+      const found = userAffinities1.filter(f94549);
       const self2 = this;
       const self3 = this;
-      new Map(found.map(f94410));
+      new Map(found.map(f94550));
     }
     const items = [RelationshipStore];
     self.syncWith(items, recomputeAffinities);
@@ -130,8 +130,8 @@ const obj2 = {
     c3 = false;
     obj.userAffinities = affineUsers;
     const userAffinities = obj.userAffinities;
-    const found = userAffinities.filter(f94409);
-    map = new Map(found.map(f94410));
+    const found = userAffinities.filter(f94549);
+    map = new Map(found.map(f94550));
   },
   LOAD_USER_AFFINITIES_V2_FAILURE: function handleLoadUserAffinitiesFailure() {
     c3 = false;

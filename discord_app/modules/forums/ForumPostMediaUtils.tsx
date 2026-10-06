@@ -1,18 +1,18 @@
-// === Module 7540: ForumPostMediaUtils ===
+// === Module 7551: ForumPostMediaUtils ===
 
-// Module 7540 (ForumPostMediaUtils)
+// Module 7551 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react2 from "react" /* 576 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5114 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5120 */;
 import react from "react" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 6809 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 6819 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

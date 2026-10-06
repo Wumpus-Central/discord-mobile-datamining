@@ -1,8 +1,8 @@
-// === Module 7291: DiscordMd5Native ===
+// === Module 7304: DiscordMd5Native ===
 
-// Module 7291 (DiscordMd5Native)
+// Module 7304 (DiscordMd5Native)
 import react_nativeDefault from "react-native" /* 1162 */;
-import DiscordMd5 from "DiscordMd5" /* 6479 */;
+import DiscordMd5 from "DiscordMd5" /* 6486 */;
 import size from "module_2" /* 2 */;
 
 class DiscordMd5Native extends DiscordMd5 {

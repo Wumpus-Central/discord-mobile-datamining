@@ -1,6 +1,6 @@
-// === Module 4866: DeviceUtils ===
+// === Module 4872: DeviceUtils ===
 
-// Module 4866 (DeviceUtils)
+// Module 4872 (DeviceUtils)
 import Storage3 from "Storage" /* 510 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import react_native from "react-native" /* 1353 */;

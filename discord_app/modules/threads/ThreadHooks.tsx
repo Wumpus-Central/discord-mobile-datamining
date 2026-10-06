@@ -1,21 +1,21 @@
-// === Module 6772: ThreadHooks ===
+// === Module 6782: ThreadHooks ===
 
-// Module 6772 (ThreadHooks)
+// Module 6782 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import react from "react" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import AgeGateUtils from "AgeGateUtils" /* 5100 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6773 */;
-import useIsRemoteDefault from "useIsRemote" /* 6774 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6775 */;
+import AgeGateUtils from "AgeGateUtils" /* 5106 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6783 */;
+import useIsRemoteDefault from "useIsRemote" /* 6784 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6785 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import createExperiment from "createExperiment" /* 4775 */;
+import createExperiment from "createExperiment" /* 4781 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5691 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5698 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

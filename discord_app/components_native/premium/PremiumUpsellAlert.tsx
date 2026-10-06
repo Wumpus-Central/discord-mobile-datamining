@@ -1,35 +1,35 @@
-// === Module 8827: PremiumUpsellAlert ===
+// === Module 8857: PremiumUpsellAlert ===
 
-// Module 8827 (PremiumUpsellAlert)
+// Module 8857 (PremiumUpsellAlert)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
-import native from "native" /* 4589 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import FileSizeUtils from "FileSizeUtils" /* 5317 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import TableSwitchRow2 from "TableSwitchRow" /* 6698 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6956 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8809 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8819 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 8820 */;
-import AppIconConstants from "AppIconConstants" /* 8828 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 8855 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 8856 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 8857 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 8858 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 8859 */;
-import AssetRegistryDefault8 from "AssetRegistry" /* 8860 */;
-import AssetRegistryDefault9 from "AssetRegistry" /* 8861 */;
-import AssetRegistryDefault10 from "AssetRegistry" /* 8862 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8863 */;
-import PremiumFeatureUtils from "PremiumFeatureUtils" /* 8864 */;
-import AssetRegistryDefault11 from "AssetRegistry" /* 8865 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
+import native from "native" /* 4595 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import FileSizeUtils from "FileSizeUtils" /* 5324 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import TableSwitchRow2 from "TableSwitchRow" /* 6705 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6969 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8091 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8839 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8849 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 8850 */;
+import AppIconConstants from "AppIconConstants" /* 8858 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 8885 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 8886 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 8887 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 8888 */;
+import AssetRegistryDefault7 from "AssetRegistry" /* 8889 */;
+import AssetRegistryDefault8 from "AssetRegistry" /* 8890 */;
+import AssetRegistryDefault9 from "AssetRegistry" /* 8891 */;
+import AssetRegistryDefault10 from "AssetRegistry" /* 8892 */;
+import PremiumFeatureUtils from "PremiumFeatureUtils" /* 8893 */;
+import AssetRegistryDefault11 from "AssetRegistry" /* 8894 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
@@ -38,7 +38,7 @@ import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

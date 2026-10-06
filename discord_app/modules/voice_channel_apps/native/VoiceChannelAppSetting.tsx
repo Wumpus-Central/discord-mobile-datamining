@@ -1,12 +1,12 @@
-// === Module 16991: VoiceChannelAppSetting ===
+// === Module 17017: VoiceChannelAppSetting ===
 
-// Module 16991 (VoiceChannelAppSetting)
+// Module 17017 (VoiceChannelAppSetting)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import useVoiceChannelApp from "useVoiceChannelApp" /* 16992 */;
-import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet" /* 16995 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import useVoiceChannelApp from "useVoiceChannelApp" /* 17018 */;
+import VoiceChannelAppActionSheet from "VoiceChannelAppActionSheet" /* 17021 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -43,7 +43,7 @@ function VoiceChannelAppRow(guildId) {
       const openLazy = ActionSheetActionCreatorsDefault.openLazy;
       ActionSheetActionCreatorsDefault;
       const obj = { guildId, selectedApplicationId: application_id, onChange };
-      const tmp2 = asyncRequire(16995, dependencyMap.paths);
+      const tmp2 = asyncRequire(17021, dependencyMap.paths);
       openLazy(tmp2, VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, obj);
     },
     arrow: true

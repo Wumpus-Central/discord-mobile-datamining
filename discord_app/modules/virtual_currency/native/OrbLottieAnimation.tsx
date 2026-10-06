@@ -1,12 +1,12 @@
-// === Module 11003: OrbLottieAnimation ===
+// === Module 11016: OrbLottieAnimation ===
 
-// Module 11003 (OrbLottieAnimation)
+// Module 11016 (OrbLottieAnimation)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import shared from "shared" /* 4729 */;
-import useTheme from "useTheme" /* 4791 */;
-import SpendEarnOrbsLightThemeLottie from "SpendEarnOrbsLightThemeLottie" /* 11004 */;
-import SpendEarnOrbsLottie2 from "SpendEarnOrbsLottie" /* 11006 */;
+import shared from "shared" /* 4735 */;
+import useTheme from "useTheme" /* 4797 */;
+import SpendEarnOrbsLightThemeLottie from "SpendEarnOrbsLightThemeLottie" /* 11017 */;
+import SpendEarnOrbsLottie2 from "SpendEarnOrbsLottie" /* 11019 */;
 import "react";
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

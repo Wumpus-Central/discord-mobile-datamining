@@ -1,6 +1,6 @@
-// === Module 4721: DcfNewUserCooldownExperiment ===
+// === Module 4727: DcfNewUserCooldownExperiment ===
 
-// Module 4721 (DcfNewUserCooldownExperiment)
+// Module 4727 (DcfNewUserCooldownExperiment)
 import react from "react" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;

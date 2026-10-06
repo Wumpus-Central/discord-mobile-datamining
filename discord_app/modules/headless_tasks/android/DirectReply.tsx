@@ -1,9 +1,9 @@
-// === Module 18131: DirectReply ===
+// === Module 18177: DirectReply ===
 
-// Module 18131 (DirectReply)
+// Module 18177 (DirectReply)
 import LoggerDefault from "Logger" /* 3 */;
 import react_native from "react-native" /* 17 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

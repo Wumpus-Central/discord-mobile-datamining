@@ -1,12 +1,12 @@
-// === Module 17040: SearchNavigatorPreviewScreen ===
+// === Module 17066: SearchNavigatorPreviewScreen ===
 
-// Module 17040 (SearchNavigatorPreviewScreen)
+// Module 17066 (SearchNavigatorPreviewScreen)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -8,7 +8,7 @@ import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import getSystemThemeDefault from "getSystemTheme" /* 1230 */;
 import resolveThemeDefault from "resolveTheme" /* 1237 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
-import updateBackgroundColorDefault from "updateBackgroundColor" /* 13898 */;
+import updateBackgroundColorDefault from "updateBackgroundColor" /* 13916 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;

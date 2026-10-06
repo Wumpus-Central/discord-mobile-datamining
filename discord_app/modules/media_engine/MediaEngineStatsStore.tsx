@@ -1,11 +1,11 @@
-// === Module 4928: MediaEngineStatsStore ===
+// === Module 4934: MediaEngineStatsStore ===
 
-// Module 4928 (MediaEngineStatsStore)
+// Module 4934 (MediaEngineStatsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
 import size from "module_2" /* 2 */;
 
 function updateAveragedStatsHelper(minVersion, arr5, arg2, arr, arr2) {

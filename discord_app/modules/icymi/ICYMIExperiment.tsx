@@ -1,9 +1,9 @@
-// === Module 8030: ICYMIExperiment ===
+// === Module 8040: ICYMIExperiment ===
 
-// Module 8030 (ICYMIExperiment)
+// Module 8040 (ICYMIExperiment)
 import react from "react" /* 576 */;
-import useLabFeatureDefault from "useLabFeature" /* 8033 */;
-import LabFeatureStore from "LabFeatureStore" /* 8031 */;
+import useLabFeatureDefault from "useLabFeature" /* 8043 */;
+import LabFeatureStore from "LabFeatureStore" /* 8041 */;
 import ApexExperiment_mod from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 8463: ProfileEffectLayer ===
+// === Module 8496: ProfileEffectLayer ===
 
-// Module 8463 (ProfileEffectLayer)
+// Module 8496 (ProfileEffectLayer)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 8460 */;
-import APNGPlayer2 from "APNGPlayer" /* 8464 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 8493 */;
+import APNGPlayer2 from "APNGPlayer" /* 8497 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

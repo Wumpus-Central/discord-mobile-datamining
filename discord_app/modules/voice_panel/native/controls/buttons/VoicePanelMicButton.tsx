@@ -1,33 +1,33 @@
-// === Module 17326: VoicePanelMicButton ===
+// === Module 17354: VoicePanelMicButton ===
 
-// Module 17326 (VoicePanelMicButton)
+// Module 17354 (VoicePanelMicButton)
 import LoggerDefault from "Logger" /* 3 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import useMuteStates from "useMuteStates" /* 6848 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9341 */;
-import MediaEngineActionCreators from "MediaEngineActionCreators" /* 9620 */;
-import VoiceActionUtils from "VoiceActionUtils" /* 9687 */;
-import VoicePanelRiveMicButton2 from "VoicePanelRiveMicButton" /* 9688 */;
-import useDeafStates from "useDeafStates" /* 9702 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
-import VoicePanelStyles from "VoicePanelStyles" /* 17327 */;
-import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17328 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import useMuteStates from "useMuteStates" /* 6858 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9355 */;
+import MediaEngineActionCreators from "MediaEngineActionCreators" /* 9633 */;
+import VoiceActionUtils from "VoiceActionUtils" /* 9700 */;
+import VoicePanelRiveMicButton2 from "VoicePanelRiveMicButton" /* 9701 */;
+import useDeafStates from "useDeafStates" /* 9715 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17355 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17356 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import GameConsoleStore from "GameConsoleStore" /* 4907 */;
+import GameConsoleStore from "GameConsoleStore" /* 4913 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

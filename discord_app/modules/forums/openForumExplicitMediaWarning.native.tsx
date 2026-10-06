@@ -1,9 +1,9 @@
-// === Module 8916: openForumExplicitMediaWarning ===
+// === Module 8945: openForumExplicitMediaWarning ===
 
-// Module 8916 (openForumExplicitMediaWarning)
+// Module 8945 (openForumExplicitMediaWarning)
 import Fragment from "Fragment" /* 21 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
 import size from "module_2" /* 2 */;
 
 let importDefault;
@@ -20,7 +20,7 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
     importer() {
       let channelId;
       let messageId;
-      const promise = asyncRequire(8917, dependencyMap.paths);
+      const promise = asyncRequire(8946, dependencyMap.paths);
       return promise.then((result) => {
         closure_0 = result.default;
         return (arg0) => {

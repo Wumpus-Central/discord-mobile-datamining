@@ -1,6 +1,6 @@
-// === Module 5317: FileSizeUtils ===
+// === Module 5324: FileSizeUtils ===
 
-// Module 5317 (FileSizeUtils)
+// Module 5324 (FileSizeUtils)
 import intl3 from "intl" /* 1126 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 7889: StorefrontProductActionCreators ===
+// === Module 7900: StorefrontProductActionCreators ===
 
-// Module 7889 (StorefrontProductActionCreators)
+// Module 7900 (StorefrontProductActionCreators)
 import Constants from "Constants" /* 1085 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 7891 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 7902 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 7890 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7073 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 7901 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7086 */;
 import size from "module_2" /* 2 */;
 
 let obj = function _maybeFetchProductsWithSkus() {
@@ -87,7 +87,7 @@ let obj = function _maybeFetchProductsWithSkus() {
     if (ignoreCache === undefined) {
       ignoreCache = false;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -184,7 +184,7 @@ obj = function _maybeFetchProductsBySkuIds() {
     if (ignoreCache === undefined) {
       ignoreCache = false;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

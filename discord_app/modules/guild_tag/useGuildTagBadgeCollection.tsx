@@ -1,10 +1,10 @@
-// === Module 17762: useGuildTagBadgeCollection ===
+// === Module 17808: useGuildTagBadgeCollection ===
 
-// Module 17762 (useGuildTagBadgeCollection)
+// Module 17808 (useGuildTagBadgeCollection)
 import react from "react" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
-import GuildTagConstants from "GuildTagConstants" /* 7603 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GuildTagConstants from "GuildTagConstants" /* 7614 */;
 import size from "module_2" /* 2 */;
 
 let hasOwnProperty;

@@ -1,22 +1,22 @@
-// === Module 16296: UnreadBars ===
+// === Module 16336: UnreadBars ===
 
-// Module 16296 (UnreadBars)
+// Module 16336 (UnreadBars)
 import get_initialized from "get initialized" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import native2 from "native" /* 4589 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import TransitionGroup2 from "TransitionGroup" /* 12065 */;
+import native2 from "native" /* 4595 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import TransitionGroup2 from "TransitionGroup" /* 12080 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
-import TextStyles from "TextStyles" /* 5915 */;
-import ColorUtils_mod from "ColorUtils" /* 4727 */;
+import createStyles from "createStyles" /* 4896 */;
+import TextStyles from "TextStyles" /* 5922 */;
+import ColorUtils_mod from "ColorUtils" /* 4733 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -278,7 +278,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((scrollToLocation) 
                   tmp20[0] = react.Fragment;
                   const items1 = [tmp11, tmp16];
                   tmp20[1] = items1;
-                  const tmp22 = closure_9(scrollToLocation(12065).TransitionGroup, tmp20);
+                  const tmp22 = closure_9(scrollToLocation(12080).TransitionGroup, tmp20);
                   cResult[18] = tmp11;
                   cResult[19] = tmp16;
                   cResult[20] = tmp22;

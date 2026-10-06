@@ -1,23 +1,23 @@
-// === Module 9765: SummaryStore ===
+// === Module 9778: SummaryStore ===
 
-// Module 9765 (SummaryStore)
+// Module 9778 (SummaryStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import _mod9496 from "module_9496" /* 9496 */;
-import SummaryConstants from "SummaryConstants" /* 9766 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 9767 */;
-import Summary from "Summary" /* 9768 */;
+import _mod9509 from "module_9509" /* 9509 */;
+import SummaryConstants from "SummaryConstants" /* 9779 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 9780 */;
+import Summary from "Summary" /* 9781 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4776 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 9495 */;
+import ExperimentStore from "ExperimentStore" /* 4782 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9508 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ let closure_18, dependencyMap, findIndexResult, flag, startId;
 function handleQuickSwitcherUpdate() {
   const results = QuickSwitcherStore.getProps().results;
   const found = results.filter((type) => {
-    const tmp = type.type === _mod9496.AutocompleterResultTypes.TEXT_CHANNEL && 0 === type.record.type;
+    const tmp = type.type === _mod9509.AutocompleterResultTypes.TEXT_CHANNEL && 0 === type.record.type;
     return tmp;
   });
   closure_24 = found.map((record) => record.record.id);

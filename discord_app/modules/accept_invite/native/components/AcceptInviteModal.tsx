@@ -1,10 +1,10 @@
-// === Module 17442: AcceptInviteModal ===
+// === Module 17471: AcceptInviteModal ===
 
-// Module 17442 (AcceptInviteModal)
+// Module 17471 (AcceptInviteModal)
 import Fragment from "Fragment" /* 21 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4872 */;
-import CreateGuildConstants from "CreateGuildConstants" /* 6468 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4878 */;
+import CreateGuildConstants from "CreateGuildConstants" /* 6475 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

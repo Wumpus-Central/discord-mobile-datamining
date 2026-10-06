@@ -1,14 +1,14 @@
-// === Module 13629: VoiceQuality ===
+// === Module 13645: VoiceQuality ===
 
-// Module 13629 (VoiceQuality)
+// Module 13645 (VoiceQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
-import Histogram from "Histogram" /* 7233 */;
-import SystemResourcesDefault from "SystemResources" /* 7239 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13630 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
+import Histogram from "Histogram" /* 7246 */;
+import SystemResourcesDefault from "SystemResources" /* 7252 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13646 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4948 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4954 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

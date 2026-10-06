@@ -1,16 +1,16 @@
-// === Module 13633: VideoQuality ===
+// === Module 13649: VideoQuality ===
 
-// Module 13633 (VideoQuality)
+// Module 13649 (VideoQuality)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import TimeUtils from "TimeUtils" /* 4919 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
-import VideoQualityStats from "VideoQualityStats" /* 7232 */;
-import Histogram from "Histogram" /* 7233 */;
-import NetworkQualityDefault from "NetworkQuality" /* 13630 */;
-import VideoBackgroundStore_mod from "VideoBackgroundStore" /* 9313 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4948 */;
+import TimeUtils from "TimeUtils" /* 4925 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
+import VideoQualityStats from "VideoQualityStats" /* 7245 */;
+import Histogram from "Histogram" /* 7246 */;
+import NetworkQualityDefault from "NetworkQuality" /* 13646 */;
+import VideoBackgroundStore_mod from "VideoBackgroundStore" /* 8086 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4954 */;
 import size from "module_2" /* 2 */;
 
 let dependencyMap, importDefault, map, map1, set, vmafHistogram;
@@ -1348,10 +1348,10 @@ class VideoQuality extends TypedEventEmitter {
     self.updateSendState({ receivers: num });
     let value = self.cameraDuration.value;
     const cameraDuration = self.cameraDuration;
-    cameraDuration.value = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT && null != transport.camera;
+    cameraDuration.value = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT && null != transport.camera;
     const cameraOpportunityDuration = self.cameraOpportunityDuration;
-    const tmp7 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT && null != transport.camera;
-    let tmp9 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT;
+    const tmp7 = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT && null != transport.camera;
+    let tmp9 = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT;
     if (tmp9) {
       let tmp10 = null;
       tmp9 = null != transport.camera;
@@ -1361,7 +1361,7 @@ class VideoQuality extends TypedEventEmitter {
     }
     cameraOpportunityDuration.value = tmp9;
     const cameraSendDuration = self.cameraSendDuration;
-    let tmp11 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT && null != transport.camera;
+    let tmp11 = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT && null != transport.camera;
     if (tmp11) {
       tmp11 = num > 0;
     }
@@ -1371,7 +1371,7 @@ class VideoQuality extends TypedEventEmitter {
       self.cameraToggles = self.cameraToggles + 1;
     }
     const videoBackgroundEnabledDuration = self.videoBackgroundEnabledDuration;
-    let liveBackgroundEnabled = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT;
+    let liveBackgroundEnabled = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT;
     if (liveBackgroundEnabled) {
       liveBackgroundEnabled = null != transport.camera;
     }

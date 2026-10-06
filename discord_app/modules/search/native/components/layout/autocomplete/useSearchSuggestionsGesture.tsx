@@ -1,9 +1,9 @@
-// === Module 16789: useSearchSuggestionsGesture ===
+// === Module 16810: useSearchSuggestionsGesture ===
 
-// Module 16789 (useSearchSuggestionsGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;
+// Module 16810 (useSearchSuggestionsGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

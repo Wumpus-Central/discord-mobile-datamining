@@ -1,9 +1,9 @@
-// === Module 15450: MobileGameCommunitiesStore ===
+// === Module 15466: MobileGameCommunitiesStore ===
 
-// Module 15450 (MobileGameCommunitiesStore)
+// Module 15466 (MobileGameCommunitiesStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 6844 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 6854 */;
 import size from "module_2" /* 2 */;
 
 let dismissedGuildIds;

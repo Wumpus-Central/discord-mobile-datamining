@@ -1,6 +1,6 @@
-// === Module 6680: getConnectionsRoles ===
+// === Module 6687: getConnectionsRoles ===
 
-// Module 6680 (getConnectionsRoles)
+// Module 6687 (getConnectionsRoles)
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;

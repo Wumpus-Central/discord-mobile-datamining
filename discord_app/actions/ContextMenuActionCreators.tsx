@@ -1,6 +1,6 @@
-// === Module 5943: ContextMenuActionCreators ===
+// === Module 5950: ContextMenuActionCreators ===
 
-// Module 5943 (ContextMenuActionCreators)
+// Module 5950 (ContextMenuActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import size_mod from "module_2" /* 2 */;
@@ -109,7 +109,7 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
     const self = this;
     const self2 = this;
     dOMRect = new DOMRect(tmp3, sum1, 0, 0);
-    const obj3 = contextMenu(5944);
+    const obj3 = contextMenu(5951);
     let APP = obj3.getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
@@ -128,7 +128,7 @@ function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) 
       const tmp14Result = contextMenu(1369);
       if (tmp14Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
-          const tmp14Result2 = contextMenu(5947);
+          const tmp14Result2 = contextMenu(5954);
           importDefault = tmp14Result2.addResultListener(() => {
             closure_1();
             contextMenu = DispatcherDefault;

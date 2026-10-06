@@ -1,21 +1,21 @@
-// === Module 14621: SettingsScreenNotices ===
+// === Module 14637: SettingsScreenNotices ===
 
-// Module 14621 (SettingsScreenNotices)
+// Module 14637 (SettingsScreenNotices)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5102 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5580 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5581 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8298 */;
-import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 14622 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 14623 */;
-import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 14630 */;
-import SensitiveContentFiltersNotices from "SensitiveContentFiltersNotices" /* 14631 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5588 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8331 */;
+import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 14638 */;
+import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 14639 */;
+import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 14646 */;
+import SensitiveContentFiltersNotices from "SensitiveContentFiltersNotices" /* 14647 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

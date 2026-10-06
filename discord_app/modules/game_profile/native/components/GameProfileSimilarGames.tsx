@@ -1,25 +1,25 @@
-// === Module 8540: GameProfileSimilarGames ===
+// === Module 8573: GameProfileSimilarGames ===
 
-// Module 8540 (GameProfileSimilarGames)
+// Module 8573 (GameProfileSimilarGames)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8319 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8325 */;
-import GameProfileConstants from "GameProfileConstants" /* 8358 */;
-import defaultMVCPConfig from "defaultMVCPConfig" /* 8371 */;
-import GameProfileHorizontalScrollViewDefault from "GameProfileHorizontalScrollView" /* 8372 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 8386 */;
-import GameProfileSectionDefault from "GameProfileSection" /* 8388 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 8405 */;
-import SimilarGamesConstants from "SimilarGamesConstants" /* 8415 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 8541 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8358 */;
+import GameProfileConstants from "GameProfileConstants" /* 8391 */;
+import defaultMVCPConfig from "defaultMVCPConfig" /* 8404 */;
+import GameProfileHorizontalScrollViewDefault from "GameProfileHorizontalScrollView" /* 8405 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 8419 */;
+import GameProfileSectionDefault from "GameProfileSection" /* 8421 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 8438 */;
+import SimilarGamesConstants from "SimilarGamesConstants" /* 8448 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 8574 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -130,14 +130,14 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((game) => 
       const tmp13 = _slicedToArray(shouldOpenGameProfile.useState(undefined), 2);
       _slicedToArray = tmp13[1];
       if (cResult[6] !== game.id) {
-        let obj2 = { gameId: game.id, source: tmp(8319).GameProfileSources.SimilarGames };
+        let obj2 = { gameId: game.id, source: tmp(8352).GameProfileSources.SimilarGames };
         cResult[6] = game.id;
         cResult[7] = obj2;
         tmp16 = obj2;
       } else {
         tmp16 = cResult[7];
       }
-      const tmp18 = trackAction(8321)(tmp16);
+      const tmp18 = trackAction(8354)(tmp16);
       shouldOpenGameProfile = tmp18.shouldOpenGameProfile;
       const gameId = tmp18.gameId;
       const tmp17 = trackAction;
@@ -231,8 +231,8 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((game) => 
                       return;
                     }
                   }
-                  const obj5 = { style: tmp4.coverArtPlaceholder, children: closure_10(tmp17(8386), obj6) };
-                  const GameProfileSkeletonContainer = tmp(8386).GameProfileSkeletonContainer;
+                  const obj5 = { style: tmp4.coverArtPlaceholder, children: closure_10(tmp17(8419), obj6) };
+                  const GameProfileSkeletonContainer = tmp(8419).GameProfileSkeletonContainer;
                   obj6 = { style: tmp4.coverArt };
                   tmp32 = closure_10(GameProfileSkeletonContainer, obj5);
                 }
@@ -276,7 +276,7 @@ let closure_19 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((game) => 
                     return;
                   }
                 }
-                const obj9 = { style: items2, children: closure_10(game(4886).Text, obj10) };
+                const obj9 = { style: items2, children: closure_10(game(4892).Text, obj10) };
                 items2 = [tmp4.coverArtFallback, tmp6];
                 obj10 = { variant: "text-xs/medium", color: "text-overlay-light", lineClamp: 3, children: game.name };
                 tmp29Result = closure_10(closure_7, obj9);
@@ -558,7 +558,7 @@ let closure_21 = memo3(ReactCompilerGating.isReactCompilerEnabled() ? ((cardWidt
       }
     }
     const obj2 = { style: container, headerStyle: header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: tmp8 };
-    const tmp12 = closure_10(tmp(8388).GameProfileSectionSkeleton, obj2);
+    const tmp12 = closure_10(tmp(8421).GameProfileSectionSkeleton, obj2);
     cResult[5] = tmp4.container;
     cResult[6] = tmp4.header;
     cResult[7] = tmp8;
@@ -576,7 +576,7 @@ let closure_21 = memo3(ReactCompilerGating.isReactCompilerEnabled() ? ((cardWidt
   cardWidth = cardWidth.cardWidth;
   const tmp = closure_16();
   let obj = { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: closure_10(tmp2, obj2) };
-  const GameProfileSectionSkeleton = cardWidth(8388).GameProfileSectionSkeleton;
+  const GameProfileSectionSkeleton = cardWidth(8421).GameProfileSectionSkeleton;
   obj2 = {
     contentContainerStyle: tmp.skeletonCards,
     children: Array.from({ length: 4 }, (arg0, arg1) => {
@@ -668,7 +668,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const obj4 = { horizontal: true, renderScrollComponent: GameProfileHorizontalScrollViewDefault, data: null, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum };
-      const FlashList = trackAction(8371).FlashList;
+      const FlashList = trackAction(8404).FlashList;
       class L {
         constructor(arg0) {
           obj = { game: arg0.item, trackAction, cardWidth: closure_1 };

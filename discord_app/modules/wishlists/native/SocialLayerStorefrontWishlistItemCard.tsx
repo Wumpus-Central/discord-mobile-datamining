@@ -1,15 +1,15 @@
-// === Module 10773: SocialLayerStorefrontWishlistItemCard ===
+// === Module 10786: SocialLayerStorefrontWishlistItemCard ===
 
-// Module 10773 (SocialLayerStorefrontWishlistItemCard)
+// Module 10786 (SocialLayerStorefrontWishlistItemCard)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8481 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8514 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import SentGiftsStore from "SentGiftsStore" /* 10771 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import SentGiftsStore from "SentGiftsStore" /* 10784 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

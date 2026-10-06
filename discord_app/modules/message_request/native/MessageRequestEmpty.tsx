@@ -1,10 +1,10 @@
-// === Module 17066: MessageRequestEmpty ===
+// === Module 17092: MessageRequestEmpty ===
 
-// Module 17066 (MessageRequestEmpty)
+// Module 17092 (MessageRequestEmpty)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;
-import Pending from "Pending" /* 17067 */;
+import Pending from "Pending" /* 17093 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

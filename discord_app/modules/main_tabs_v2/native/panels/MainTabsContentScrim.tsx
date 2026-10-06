@@ -1,11 +1,11 @@
-// === Module 16471: MainTabsContentScrim ===
+// === Module 16511: MainTabsContentScrim ===
 
-// Module 16471 (MainTabsContentScrim)
+// Module 16511 (MainTabsContentScrim)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -37,11 +37,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((translateX) => {
     items = [maxWidth, 0];
     return obj;
   };
-  const obj2 = translateX(4612);
-  fn.__closure = { interpolate: translateX(4612).interpolate, translateX, maxWidth, Extrapolation: translateX(4612).Extrapolation };
+  const obj2 = translateX(4618);
+  fn.__closure = { interpolate: translateX(4618).interpolate, translateX, maxWidth, Extrapolation: translateX(4618).Extrapolation };
   fn.__workletHash = 7933670426250;
   fn.__initData = __initData;
-  ({ interpolate: translateX(4612).interpolate, translateX, maxWidth, Extrapolation: translateX(4612).Extrapolation });
+  ({ interpolate: translateX(4618).interpolate, translateX, maxWidth, Extrapolation: translateX(4618).Extrapolation });
   const animatedStyle = obj2.useAnimatedStyle(fn);
   if (cResult[0] === animatedStyle) {
     let tmp5;
@@ -51,7 +51,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((translateX) => {
     return tmp5;
   }
   let items = [tmp3.scrim, animatedStyle];
-  const tmp6 = jsx(maxWidth(4612).View, { style: items, pointerEvents: "none" });
+  const tmp6 = jsx(maxWidth(4618).View, { style: items, pointerEvents: "none" });
   cResult[0] = animatedStyle;
   cResult[1] = tmp3.scrim;
   cResult[2] = tmp6;
@@ -60,7 +60,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((translateX) => {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
   const tmp = closure_4();
-  let obj = translateX(4612);
+  let obj = translateX(4618);
   const fn = function c() {
     let interpolate;
     let items;
@@ -72,13 +72,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((translateX) => {
     items = [maxWidth, 0];
     return obj;
   };
-  fn.__closure = { interpolate: translateX(4612).interpolate, translateX, maxWidth, Extrapolation: translateX(4612).Extrapolation };
+  fn.__closure = { interpolate: translateX(4618).interpolate, translateX, maxWidth, Extrapolation: translateX(4618).Extrapolation };
   fn.__workletHash = 9902483670729;
   fn.__initData = __initData2;
-  ({ interpolate: translateX(4612).interpolate, translateX, maxWidth, Extrapolation: translateX(4612).Extrapolation });
+  ({ interpolate: translateX(4618).interpolate, translateX, maxWidth, Extrapolation: translateX(4618).Extrapolation });
   const animatedStyle = obj.useAnimatedStyle(fn);
   let items = [tmp.scrim, animatedStyle];
-  return jsx(maxWidth(4612).View, { style: items, pointerEvents: "none" });
+  return jsx(maxWidth(4618).View, { style: items, pointerEvents: "none" });
 });
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
 

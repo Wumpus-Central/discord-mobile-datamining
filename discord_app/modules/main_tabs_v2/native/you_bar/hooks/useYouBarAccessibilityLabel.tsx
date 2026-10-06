@@ -1,19 +1,19 @@
-// === Module 16309: useYouBarAccessibilityLabel ===
+// === Module 16349: useYouBarAccessibilityLabel ===
 
-// Module 16309 (useYouBarAccessibilityLabel)
+// Module 16349 (useYouBarAccessibilityLabel)
 import intl5 from "intl" /* 1126 */;
-import UserUtils from "UserUtils" /* 4722 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10611 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10612 */;
-import isGameActivityDefault from "isGameActivity" /* 10619 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10622 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import UserUtils from "UserUtils" /* 4728 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10624 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10625 */;
+import isGameActivityDefault from "isGameActivity" /* 10632 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10635 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -138,7 +138,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
               } else {
                 found1 = undefined;
                 if (activities != null) {
-                  found1 = activities.find(() => { /* body not rendered: F145801 */ });
+                  found1 = activities.find(() => { /* body not rendered: F146011 */ });
                 }
                 if (null != found1) {
                   tmp17 = closure_1;
@@ -181,7 +181,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
         tmp22 = tag;
         items1[1] = tag;
         items1[2] = text;
-        found2 = items1.filter(() => { /* body not rendered: F145802 */ });
+        found2 = items1.filter(() => { /* body not rendered: F146012 */ });
         str2 = ", ";
         return found2.join(", ");
       } else {
@@ -199,7 +199,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   let closure_0;
   let closure_2;
   const tmp = dependencyMap;
-  let obj = id(4722);
+  let obj = id(4728);
   _require = obj.useName(id);
   id = undefined;
   if (id != null) {

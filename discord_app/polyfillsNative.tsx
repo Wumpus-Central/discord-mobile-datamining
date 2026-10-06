@@ -1,14 +1,14 @@
-// === Module 14057: polyfillsNative ===
+// === Module 14075: polyfillsNative ===
 
-// Module 14057 (polyfillsNative)
+// Module 14075 (polyfillsNative)
 import _mod1248 from "module_1248" /* 1248 */;
 import Buffer from "Buffer" /* 1263 */;
-import _mod14152 from "module_14152" /* 14152 */;
+import _mod14170 from "module_14170" /* 14170 */;
 import Logger from "Logger" /* 3 */;
-import module_14058 from "module_14058" /* 14058 */;
-import react_native from "react-native" /* 14128 */;
-import getPluralRules from "getPluralRules" /* 14146 */;
-import module_14149 from "module_14149" /* 14149 */;
+import module_14076 from "module_14076" /* 14076 */;
+import react_native from "react-native" /* 14146 */;
+import getPluralRules from "getPluralRules" /* 14164 */;
+import module_14167 from "module_14167" /* 14167 */;
 import size from "module_2" /* 2 */;
 
 if (typeof process === "undefined") {
@@ -23,7 +23,7 @@ if (!global.self) {
   global.self = global;
 }
 if (null == window.crypto) {
-  const _module5 = _mod14152;
+  const _module5 = _mod14170;
   const _window = window;
   window.crypto = global.crypto;
 }

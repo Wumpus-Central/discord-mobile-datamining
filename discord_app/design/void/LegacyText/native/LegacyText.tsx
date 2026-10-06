@@ -1,14 +1,14 @@
-// === Module 8912: LegacyText/LegacyText ===
+// === Module 8941: LegacyText/LegacyText ===
 
-// Module 8912 (LegacyText/LegacyText)
+// Module 8941 (LegacyText/LegacyText)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8913 */;
+import useLegacyTextMigrationHighlight from "useLegacyTextMigrationHighlight" /* 8942 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

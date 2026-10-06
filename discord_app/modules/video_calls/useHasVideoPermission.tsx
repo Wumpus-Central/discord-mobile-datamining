@@ -1,9 +1,9 @@
-// === Module 9626: useHasVideoPermission ===
+// === Module 9639: useHasVideoPermission ===
 
-// Module 9626 (useHasVideoPermission)
-import StreamPermissionUtils from "StreamPermissionUtils" /* 7210 */;
+// Module 9639 (useHasVideoPermission)
+import StreamPermissionUtils from "StreamPermissionUtils" /* 7223 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

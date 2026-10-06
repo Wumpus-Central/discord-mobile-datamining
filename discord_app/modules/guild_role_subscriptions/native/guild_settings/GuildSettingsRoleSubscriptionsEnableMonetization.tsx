@@ -1,9 +1,9 @@
-// === Module 17915: GuildSettingsRoleSubscriptionsEnableMonetization ===
+// === Module 17961: GuildSettingsRoleSubscriptionsEnableMonetization ===
 
-// Module 17915 (GuildSettingsRoleSubscriptionsEnableMonetization)
+// Module 17961 (GuildSettingsRoleSubscriptionsEnableMonetization)
 import Fragment from "Fragment" /* 21 */;
-import UnavailableNoticeDefault from "UnavailableNotice" /* 16490 */;
-import PlaceholderDefault from "Placeholder" /* 17877 */;
+import UnavailableNoticeDefault from "UnavailableNotice" /* 16530 */;
+import PlaceholderDefault from "Placeholder" /* 17923 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

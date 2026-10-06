@@ -1,8 +1,8 @@
-// === Module 8826: MobileStickerPickerUpsellRestyleExperiment ===
+// === Module 8856: MobileStickerPickerUpsellRestyleExperiment ===
 
-// Module 8826 (MobileStickerPickerUpsellRestyleExperiment)
+// Module 8856 (MobileStickerPickerUpsellRestyleExperiment)
 import react from "react" /* 576 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7483 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7494 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

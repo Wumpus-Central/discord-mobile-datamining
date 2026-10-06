@@ -1,6 +1,6 @@
-// === Module 16767: ConjureTraceSections ===
+// === Module 16788: ConjureTraceSections ===
 
-// Module 16767 (ConjureTraceSections)
+// Module 16788 (ConjureTraceSections)
 import size from "module_2" /* 2 */;
 
 let set;

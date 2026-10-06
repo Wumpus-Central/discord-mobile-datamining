@@ -1,6 +1,6 @@
-// === Module 9182: LazyAPIPromise ===
+// === Module 9217: LazyAPIPromise ===
 
-// Module 9182 (LazyAPIPromise)
+// Module 9217 (LazyAPIPromise)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;

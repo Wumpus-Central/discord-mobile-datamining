@@ -1,12 +1,12 @@
-// === Module 14876: useFilteredAndSortedProducts ===
+// === Module 14892: useFilteredAndSortedProducts ===
 
-// Module 14876 (useFilteredAndSortedProducts)
+// Module 14892 (useFilteredAndSortedProducts)
 import react2 from "react" /* 576 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import useBadBundleFilter from "useBadBundleFilter" /* 14877 */;
-import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 14878 */;
-import usePurchasedProductsSort from "usePurchasedProductsSort" /* 14879 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import useBadBundleFilter from "useBadBundleFilter" /* 14893 */;
+import useAndroidUnsyncedFilter from "useAndroidUnsyncedFilter" /* 14894 */;
+import usePurchasedProductsSort from "usePurchasedProductsSort" /* 14895 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

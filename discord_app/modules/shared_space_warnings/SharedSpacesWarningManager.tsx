@@ -1,16 +1,16 @@
-// === Module 13544: SharedSpacesWarningManager ===
+// === Module 13560: SharedSpacesWarningManager ===
 
-// Module 13544 (SharedSpacesWarningManager)
+// Module 13560 (SharedSpacesWarningManager)
 import DurationsDefault from "Durations" /* 1102 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
-import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13546 */;
-import showVoiceChannelBlockedUserWarning2 from "showVoiceChannelBlockedUserWarning" /* 13550 */;
+import showGdmBlockedUserModal from "showGdmBlockedUserModal" /* 13562 */;
+import showVoiceChannelBlockedUserWarning2 from "showVoiceChannelBlockedUserWarning" /* 13566 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
-import SharedSpacesWarningStore from "SharedSpacesWarningStore" /* 13545 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13543 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
+import SharedSpacesWarningStore from "SharedSpacesWarningStore" /* 13561 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 13559 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let set;
@@ -20,7 +20,7 @@ let hasOwnProperty;
 let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-const f114978 = (item) => {
+const f115140 = (item) => {
   let flag = false;
   {
     let num = closure_1_6(item);
@@ -86,7 +86,7 @@ function handleAppStateChanged(state) {
           if (!everyResult) {
             const _Array = Array;
             const arr = Array.from(set);
-            everyResult = arr.every(f114978);
+            everyResult = arr.every(f115140);
           }
           if (!everyResult) {
             const items1 = [];
@@ -155,7 +155,7 @@ export const voiceBlockedWarningInCooldownForUsers = function voiceBlockedWarnin
   if (!everyResult) {
     const _Array = Array;
     const arr = Array.from(arg0);
-    everyResult = arr.every(f114978);
+    everyResult = arr.every(f115140);
   }
   return everyResult;
 };

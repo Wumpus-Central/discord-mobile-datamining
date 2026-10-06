@@ -1,9 +1,9 @@
-// === Module 16236: useHomeDrawerToggleAccessibilityAction ===
+// === Module 16276: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 16236 (useHomeDrawerToggleAccessibilityAction)
+// Module 16276 (useHomeDrawerToggleAccessibilityAction)
 import intl2 from "intl" /* 1126 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 16929: getFriendStatusCounts ===
+// === Module 16955: getFriendStatusCounts ===
 
-// Module 16929 (getFriendStatusCounts)
+// Module 16955 (getFriendStatusCounts)
 import Constants from "Constants" /* 1085 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import size from "module_2" /* 2 */;
 
 const StatusTypes = Constants.StatusTypes;

@@ -1,12 +1,12 @@
-// === Module 14403: ThemedStatusBar ===
+// === Module 14419: ThemedStatusBar ===
 
-// Module 14403 (ThemedStatusBar)
+// Module 14419 (ThemedStatusBar)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import StatusBarDefault from "StatusBar" /* 9060 */;
-import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9607 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import StatusBarDefault from "StatusBar" /* 9096 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 9620 */;
 import react from "react" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

@@ -1,6 +1,6 @@
-// === Module 12996: useHandleClaim ===
+// === Module 13015: useHandleClaim ===
 
-// Module 12996 (useHandleClaim)
+// Module 13015 (useHandleClaim)
 import react2 from "react" /* 576 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;

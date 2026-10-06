@@ -1,17 +1,17 @@
-// === Module 14321: validateOpenInviteDialog ===
+// === Module 14339: validateOpenInviteDialog ===
 
-// Module 14321 (validateOpenInviteDialog)
+// Module 14339 (validateOpenInviteDialog)
 import Constants from "Constants" /* 1085 */;
-import Constants2 from "Constants" /* 5316 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import RPCErrorDefault from "RPCError" /* 9026 */;
-import canViewInviteModal from "canViewInviteModal" /* 9263 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14308 */;
-import FramesStore from "FramesStore" /* 8703 */;
+import Constants2 from "Constants" /* 5323 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import RPCErrorDefault from "RPCError" /* 9059 */;
+import canViewInviteModal from "canViewInviteModal" /* 9298 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14326 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import size from "module_2" /* 2 */;
 
 const TransportTypes = Constants2.TransportTypes;
@@ -34,7 +34,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp36.surface;
       const type = surface.type;
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        return { frame: tmp36, channel: "Array", guild: "toCharArray$esjava$1" };
+        return { frame: tmp36, channel: "Array", guild: "parent" };
       } else {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {

@@ -1,14 +1,14 @@
-// === Module 14497: SafetySettingsNotice ===
+// === Module 14513: SafetySettingsNotice ===
 
-// Module 14497 (SafetySettingsNotice)
+// Module 14513 (SafetySettingsNotice)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Constants from "Constants" /* 8075 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 14498 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Constants from "Constants" /* 8108 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14514 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

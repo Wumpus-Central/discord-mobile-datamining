@@ -1,7 +1,7 @@
-// === Module 15952: useDrawerState ===
+// === Module 15991: useDrawerState ===
 
-// Module 15952 (useDrawerState)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
+// Module 15991 (useDrawerState)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

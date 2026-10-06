@@ -1,17 +1,17 @@
-// === Module 16145: ChannelBadge ===
+// === Module 16184: ChannelBadge ===
 
-// Module 16145 (ChannelBadge)
+// Module 16184 (ChannelBadge)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react2 from "react" /* 576 */;
 import NumberUtils from "NumberUtils" /* 1888 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import NewBadgeDefault from "NewBadge" /* 11924 */;
-import MentionsBadgeDefault from "MentionsBadge" /* 16146 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import NewBadgeDefault from "NewBadge" /* 11938 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 16185 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// === Module 9753: AudienceTile ===
+// === Module 9766: AudienceTile ===
 
-// Module 9753 (AudienceTile)
+// Module 9766 (AudienceTile)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5037 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8069 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5043 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8102 */;
 import react from "react" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -74,7 +74,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((rtsState) => {
       cResult[8] = tmp14;
       tmp11 = tmp14;
     }
-    const obj3 = { style: tmp4.raisedHand, source: tmp6(9599), color: PRIMARY_800 };
+    const obj3 = { style: tmp4.raisedHand, source: tmp6(9612), color: PRIMARY_800 };
     const Icon = native.Icon;
     const tmp10 = hasOwnProperty(Icon, obj3);
     cResult[3] = PRIMARY_800;
@@ -109,7 +109,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((rtsState) => {
   }
   items[1] = activeBackground;
   const obj = { style: items, children: hasOwnProperty(Icon, obj2) };
-  obj2 = { style: tmp.raisedHand, source: tmp5(9599), color: PRIMARY_800 };
+  obj2 = { style: tmp.raisedHand, source: tmp5(9612), color: PRIMARY_800 };
   Icon = native.Icon;
   return hasOwnProperty(View, obj);
 });
@@ -164,7 +164,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel
     const tmpResult = tmp(504);
     const stateFromStores = tmpResult.useStateFromStores(tmp9, tmp11, tmp12);
     if (cResult[7] !== rtsState) {
-      const tmpResult2 = tmp(5582);
+      const tmpResult2 = tmp(5589);
       const result = tmpResult2.isRequestedToSpeakAll(rtsState);
       cResult[7] = rtsState;
       class H {
@@ -235,7 +235,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((channel
           }
         }
       }
-      const tmp5Result = tmp5(5042);
+      const tmp5Result = tmp5(5048);
       const name = tmp5Result.getName(tmp7, channel.id, user);
       const tmp22 = blocked || ignored;
       class H {

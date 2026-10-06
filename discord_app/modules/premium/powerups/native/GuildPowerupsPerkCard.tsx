@@ -1,23 +1,23 @@
-// === Module 12230: GuildPowerupsPerkCard ===
+// === Module 12245: GuildPowerupsPerkCard ===
 
-// Module 12230 (GuildPowerupsPerkCard)
+// Module 12245 (GuildPowerupsPerkCard)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12180 */;
-import GuildPowerupsCardFooter2 from "GuildPowerupsCardFooter" /* 12181 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12226 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12195 */;
+import GuildPowerupsCardFooter2 from "GuildPowerupsCardFooter" /* 12196 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12241 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

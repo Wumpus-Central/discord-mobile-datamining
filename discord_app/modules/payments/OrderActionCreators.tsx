@@ -1,11 +1,11 @@
-// === Module 6745: OrderActionCreators ===
+// === Module 6755: OrderActionCreators ===
 
-// Module 6745 (OrderActionCreators)
+// Module 6755 (OrderActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import BillingError_mod from "BillingError" /* 4550 */;
+import BillingError_mod from "BillingError" /* 4556 */;
 import size from "module_2" /* 2 */;
 
 let c11, c12, length;
@@ -62,7 +62,7 @@ let obj = function _signOrder() {
             body = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {

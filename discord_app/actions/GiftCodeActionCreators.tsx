@@ -1,16 +1,16 @@
-// === Module 11089: GiftCodeActionCreators ===
+// === Module 11102: GiftCodeActionCreators ===
 
-// Module 11089 (GiftCodeActionCreators)
+// Module 11102 (GiftCodeActionCreators)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4551 */;
-import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7061 */;
-import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11090 */;
-import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 11091 */;
+import errors_V6OrEarlierAPIErrorDefault from "errors/V6OrEarlierAPIError" /* 4557 */;
+import UnknownCollectiblesItemRecord from "UnknownCollectiblesItemRecord" /* 7074 */;
+import CodedLinkActionCreatorsDefault from "CodedLinkActionCreators" /* 11103 */;
+import actions_GiftCodeActionCreators from "actions/GiftCodeActionCreators" /* 11104 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -75,7 +75,7 @@ let obj = function _resolveGiftCode() {
             product = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (code === 1) {

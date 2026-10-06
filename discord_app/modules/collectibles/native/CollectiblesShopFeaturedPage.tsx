@@ -1,16 +1,16 @@
-// === Module 15713: CollectiblesShopFeaturedPage ===
+// === Module 15749: CollectiblesShopFeaturedPage ===
 
-// Module 15713 (CollectiblesShopFeaturedPage)
+// Module 15749 (CollectiblesShopFeaturedPage)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import generated_NoResults from "generated/NoResults" /* 7904 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 15714 */;
+import generated_NoResults from "generated/NoResults" /* 7915 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 15750 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

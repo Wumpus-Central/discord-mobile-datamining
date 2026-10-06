@@ -1,7 +1,7 @@
-// === Module 4537: InvoiceRecord ===
+// === Module 4543: InvoiceRecord ===
 
-// Module 4537 (InvoiceRecord)
-import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4538 */;
+// Module 4543 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4544 */;
 import Record from "Record" /* 1392 */;
 import size from "module_2" /* 2 */;
 

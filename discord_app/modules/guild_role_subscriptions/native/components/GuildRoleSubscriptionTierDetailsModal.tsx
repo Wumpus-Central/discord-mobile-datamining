@@ -1,23 +1,23 @@
-// === Module 17964: GuildRoleSubscriptionTierDetailsModal ===
+// === Module 18010: GuildRoleSubscriptionTierDetailsModal ===
 
-// Module 17964 (GuildRoleSubscriptionTierDetailsModal)
+// Module 18010 (GuildRoleSubscriptionTierDetailsModal)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl8 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import Form from "Form" /* 8895 */;
-import FormHeaderDefault from "FormHeader" /* 9477 */;
-import FormStylesDefault from "FormStyles" /* 13710 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15030 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15045 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17921 */;
-import FormImagePicker from "FormImagePicker" /* 17927 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17928 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 17944 */;
-import FormPriceTierDefault from "FormPriceTier" /* 17965 */;
+import Form from "Form" /* 8924 */;
+import FormHeaderDefault from "FormHeader" /* 9490 */;
+import FormStylesDefault from "FormStyles" /* 13728 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15045 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15060 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 17967 */;
+import FormImagePicker from "FormImagePicker" /* 17973 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17974 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 17990 */;
+import FormPriceTierDefault from "FormPriceTier" /* 18011 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15023 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15038 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

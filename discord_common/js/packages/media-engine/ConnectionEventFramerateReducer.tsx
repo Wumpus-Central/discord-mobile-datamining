@@ -1,8 +1,8 @@
-// === Module 4961: ConnectionEventFramerateReducer ===
+// === Module 4967: ConnectionEventFramerateReducer ===
 
-// Module 4961 (ConnectionEventFramerateReducer)
+// Module 4967 (ConnectionEventFramerateReducer)
 import logger_Logger from "logger/Logger" /* 4 */;
-import Constants from "Constants" /* 4915 */;
+import Constants from "Constants" /* 4921 */;
 import size from "module_2" /* 2 */;
 
 let c2;
@@ -29,8 +29,8 @@ class ConnectionEventFramerateReducer {
     obj.connection = connection;
     obj.sinkWants = sinkWants;
     logger.enableNativeLogger(true);
-    connection.on(obj(4962).BaseConnectionEvent.Speaking, obj.handleSpeaking);
-    connection.on(obj(4962).BaseConnectionEvent.Mute, obj.handleSelfMute);
+    connection.on(obj(4968).BaseConnectionEvent.Speaking, obj.handleSpeaking);
+    connection.on(obj(4968).BaseConnectionEvent.Mute, obj.handleSelfMute);
     obj.initialize();
     return obj;
   }

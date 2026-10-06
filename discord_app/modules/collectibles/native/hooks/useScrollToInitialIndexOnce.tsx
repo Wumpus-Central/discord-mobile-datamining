@@ -1,6 +1,6 @@
-// === Module 15712: useScrollToInitialIndexOnce ===
+// === Module 15748: useScrollToInitialIndexOnce ===
 
-// Module 15712 (useScrollToInitialIndexOnce)
+// Module 15748 (useScrollToInitialIndexOnce)
 import react2 from "react" /* 576 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

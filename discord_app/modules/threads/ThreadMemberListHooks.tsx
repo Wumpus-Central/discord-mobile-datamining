@@ -1,13 +1,13 @@
-// === Module 16874: ThreadMemberListHooks ===
+// === Module 16899: ThreadMemberListHooks ===
 
-// Module 16874 (ThreadMemberListHooks)
+// Module 16899 (ThreadMemberListHooks)
 import Constants from "Constants" /* 1096 */;
 import intl3 from "intl" /* 1126 */;
-import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6789 */;
-import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6815 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 6799 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 6825 */;
 import react from "react" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 9498 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 9511 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

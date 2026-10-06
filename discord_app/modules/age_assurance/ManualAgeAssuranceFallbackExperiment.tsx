@@ -1,8 +1,8 @@
-// === Module 8112: ManualAgeAssuranceFallbackExperiment ===
+// === Module 8145: ManualAgeAssuranceFallbackExperiment ===
 
-// Module 8112 (ManualAgeAssuranceFallbackExperiment)
-import SafetyHubUtils from "SafetyHubUtils" /* 8092 */;
-import SafetyHubStore from "SafetyHubStore" /* 8106 */;
+// Module 8145 (ManualAgeAssuranceFallbackExperiment)
+import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
+import SafetyHubStore from "SafetyHubStore" /* 8139 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import size from "module_2" /* 2 */;
 

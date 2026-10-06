@@ -1,19 +1,19 @@
-// === Module 10646: UserNameplateRow ===
+// === Module 10659: UserNameplateRow ===
 
-// Module 10646 (UserNameplateRow)
+// Module 10659 (UserNameplateRow)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import TableRowDivider from "TableRowDivider" /* 5988 */;
-import TableRow from "TableRow" /* 5993 */;
-import react3 from "react" /* 5994 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import NameplateDefault from "Nameplate" /* 8474 */;
+import useToken from "useToken" /* 4586 */;
+import TableRowDivider from "TableRowDivider" /* 5995 */;
+import TableRow from "TableRow" /* 6000 */;
+import react3 from "react" /* 6001 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import NameplateDefault from "Nameplate" /* 8507 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

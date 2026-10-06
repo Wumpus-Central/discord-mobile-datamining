@@ -1,17 +1,17 @@
-// === Module 12436: ForumChannelEmptyState ===
+// === Module 12451: ForumChannelEmptyState ===
 
-// Module 12436 (ForumChannelEmptyState)
+// Module 12451 (ForumChannelEmptyState)
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import shared from "shared" /* 4729 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12437 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 12438 */;
+import shared from "shared" /* 4735 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12452 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 12453 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

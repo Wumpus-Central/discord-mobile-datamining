@@ -1,6 +1,6 @@
-// === Module 8462: useClock ===
+// === Module 8495: useClock ===
 
-// Module 8462 (useClock)
+// Module 8495 (useClock)
 import _modDef38 from "module_38" /* 38 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;

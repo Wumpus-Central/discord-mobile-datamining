@@ -1,16 +1,16 @@
-// === Module 8266: AgeVerificationEmbeddedIntroScreen ===
+// === Module 8299: AgeVerificationEmbeddedIntroScreen ===
 
-// Module 8266 (AgeVerificationEmbeddedIntroScreen)
+// Module 8299 (AgeVerificationEmbeddedIntroScreen)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import _modDef3045 from "module_3045" /* 3045 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
-import AgeVerificationGetStartedModal from "AgeVerificationGetStartedModal" /* 8260 */;
-import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 8267 */;
+import _modDef3073 from "module_3073" /* 3073 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
+import AgeVerificationGetStartedModal from "AgeVerificationGetStartedModal" /* 8293 */;
+import useAgeVerificationMethodsDefault from "useAgeVerificationMethods" /* 8300 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -37,7 +37,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = obj.c(32);
   ({ onClose, modalSessionId, classificationId, entryPoint, navigation } = arg0);
   const tmp4 = closure_7();
-  const obj2 = navigation(8092);
+  const obj2 = navigation(8125);
   const isSuspendedUser = obj2.useIsSuspendedUser();
   if (cResult[0] !== navigation) {
     const fn = function l() {
@@ -61,14 +61,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       const ageVerificationMethods = useAgeVerificationMethodsDefault(tmp7).ageVerificationMethods;
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp12 = closure_5(navigation(8097).ShieldSpotIllustration, { height: 100, width: 177 });
+        const tmp12 = closure_5(navigation(8130).ShieldSpotIllustration, { height: 100, width: 177 });
         cResult[6] = tmp12;
         tmp10 = tmp12;
       } else {
         tmp10 = cResult[6];
       }
       if (cResult[7] !== entryPoint) {
-        const tmpResult = navigation(5102);
+        const tmpResult = navigation(5108);
         const ageVerificationGetStartedTitle = tmpResult.getAgeVerificationGetStartedTitle(entryPoint);
         cResult[7] = entryPoint;
         cResult[8] = ageVerificationGetStartedTitle;
@@ -78,7 +78,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       if (cResult[9] !== tmp13) {
         const obj3 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: tmp13 };
-        const tmp17 = closure_5(navigation(4886).Text, obj3);
+        const tmp17 = closure_5(navigation(4892).Text, obj3);
         cResult[9] = tmp13;
         cResult[10] = tmp17;
         tmp15 = tmp17;
@@ -124,7 +124,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                                       openUrl(obj.getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
                                     }
                   };
-                  const formatResult = intl.format(_modDef3045.lG69e1, obj4);
+                  const formatResult = intl.format(_modDef3073.lG69e1, obj4);
                   cResult[26] = formatResult;
                   tmp33 = formatResult;
                 } else {
@@ -132,7 +132,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                 }
                 if (cResult[27] !== tmp4.helpLink) {
                   const obj5 = { variant: "text-xs/medium", color: "text-muted", style: helpLink, children: tmp33 };
-                  const tmp37 = closure_5(navigation(4886).Text, obj5);
+                  const tmp37 = closure_5(navigation(4892).Text, obj5);
                   cResult[27] = tmp4.helpLink;
                   cResult[28] = tmp37;
                   tmp35 = tmp37;
@@ -146,8 +146,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   }
                   return tmp38;
                 }
-                const obj6 = { children: closure_6(navigation(8096).ModalContent, obj7) };
-                const ModalScreen = navigation(8095).ModalScreen;
+                const obj6 = { children: closure_6(navigation(8129).ModalContent, obj7) };
+                const ModalScreen = navigation(8128).ModalScreen;
                 obj7 = { children: items };
                 items = [tmp30, tmp35];
                 const tmp41 = closure_5(ModalScreen, obj6);
@@ -158,14 +158,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
               const obj8 = { align: "center", justify: "center", spacing: 24, children: items1 };
               items1 = [tmp24, tmp27];
-              const tmp32 = closure_6(navigation(5593).Stack, obj8);
+              const tmp32 = closure_6(navigation(5600).Stack, obj8);
               cResult[23] = tmp27;
               cResult[24] = tmp24;
               cResult[25] = tmp32;
               tmp30 = tmp32;
             }
             const obj9 = { ageVerificationMethods, modalSessionId };
-            const tmp29 = closure_5(navigation(8269).AgeVerificationMethodsContainer, obj9);
+            const tmp29 = closure_5(navigation(8302).AgeVerificationMethodsContainer, obj9);
             cResult[20] = ageVerificationMethods;
             cResult[21] = modalSessionId;
             cResult[22] = tmp29;
@@ -173,10 +173,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           }
           const obj10 = { align: "center", justify: "center", spacing: 16, children: items2 };
           items2 = [tmp10, ];
-          const Stack = navigation(5593).Stack;
+          const Stack = navigation(5600).Stack;
           const obj11 = { align: "center", justify: "center", spacing: 8, children: items3 };
           items3 = [tmp15, tmp21];
-          items2[1] = closure_6(navigation(5593).Stack, obj11);
+          items2[1] = closure_6(navigation(5600).Stack, obj11);
           const tmp26 = closure_6(Stack, obj10);
           cResult[17] = tmp15;
           cResult[18] = tmp21;
@@ -184,13 +184,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           tmp24 = tmp26;
         }
         const obj12 = { variant: "text-md/medium", color: "text-strong", style: tmp18, children: tmp19 };
-        const tmp23 = closure_5(navigation(4886).Text, obj12);
+        const tmp23 = closure_5(navigation(4892).Text, obj12);
         cResult[14] = tmp4.header;
         cResult[15] = tmp19;
         cResult[16] = tmp23;
         tmp21 = tmp23;
       }
-      const tmpResult2 = navigation(5102);
+      const tmpResult2 = navigation(5108);
       const ageVerificationGetStartedSubtitle = tmpResult2.getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser);
       cResult[11] = entryPoint;
       cResult[12] = isSuspendedUser;
@@ -222,7 +222,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ entryPoint, navigation } = arg0);
   ({ onClose, modalSessionId, classificationId } = arg0);
   const tmp = closure_7();
-  let obj = navigation(8092);
+  let obj = navigation(8125);
   const items = [navigation];
   const isSuspendedUser = obj.useIsSuspendedUser();
   const callback = react.useCallback(() => {
@@ -230,29 +230,29 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items);
   const ageVerificationMethods = useAgeVerificationMethodsDefault({ onClose, classificationId, onGoogleWalletSelect: callback }).ageVerificationMethods;
   const obj2 = { children: closure_6(ModalContent, obj3) };
-  const ModalScreen = navigation(8095).ModalScreen;
+  const ModalScreen = navigation(8128).ModalScreen;
   obj3 = { children: items4 };
-  ModalContent = navigation(8096).ModalContent;
+  ModalContent = navigation(8129).ModalContent;
   const obj4 = { align: "center", justify: "center", spacing: 24, children: items3 };
-  const Stack = navigation(5593).Stack;
+  const Stack = navigation(5600).Stack;
   const obj5 = { align: "center", justify: "center", spacing: 16, children: items1 };
-  const Stack2 = navigation(5593).Stack;
-  items1 = [closure_5(navigation(8097).ShieldSpotIllustration, { height: 100, width: 177 }), ];
+  const Stack2 = navigation(5600).Stack;
+  items1 = [closure_5(navigation(8130).ShieldSpotIllustration, { height: 100, width: 177 }), ];
   const obj6 = { align: "center", justify: "center", spacing: 8, children: items2 };
-  const Stack3 = navigation(5593).Stack;
+  const Stack3 = navigation(5600).Stack;
   const obj7 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: obj8.getAgeVerificationGetStartedTitle(entryPoint) };
-  const Text = navigation(4886).Text;
-  obj8 = navigation(5102);
+  const Text = navigation(4892).Text;
+  obj8 = navigation(5108);
   items2 = [closure_5(Text, obj7), ];
   const obj9 = { variant: "text-md/medium", color: "text-strong", style: tmp.header, children: obj10.getAgeVerificationGetStartedSubtitle(entryPoint, undefined, isSuspendedUser) };
-  const Text2 = navigation(4886).Text;
-  obj10 = navigation(5102);
+  const Text2 = navigation(4892).Text;
+  obj10 = navigation(5108);
   items2[1] = closure_5(Text2, obj9);
   items1[1] = closure_6(Stack3, obj6);
-  items3 = [closure_6(Stack2, obj5), closure_5(navigation(8269).AgeVerificationMethodsContainer, { ageVerificationMethods, modalSessionId })];
+  items3 = [closure_6(Stack2, obj5), closure_5(navigation(8302).AgeVerificationMethodsContainer, { ageVerificationMethods, modalSessionId })];
   items4 = [closure_6(Stack, obj4), ];
-  const obj11 = { variant: "text-xs/medium", color: "text-muted", style: tmp.helpLink, children: intl.format(_modDef3045.lG69e1, obj12) };
-  const Text3 = navigation(4886).Text;
+  const obj11 = { variant: "text-xs/medium", color: "text-muted", style: tmp.helpLink, children: intl.format(_modDef3073.lG69e1, obj12) };
+  const Text3 = navigation(4892).Text;
   intl = navigation(1126).intl;
   obj12 = {
     handleOnHelpUrlHook() {

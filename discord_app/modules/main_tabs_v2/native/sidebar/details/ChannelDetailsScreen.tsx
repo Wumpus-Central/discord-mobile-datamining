@@ -1,11 +1,11 @@
-// === Module 17038: ChannelDetailsScreen ===
+// === Module 17064: ChannelDetailsScreen ===
 
-// Module 17038 (ChannelDetailsScreen)
+// Module 17064 (ChannelDetailsScreen)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import Link from "Link" /* 1491 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4741 */;
-import ChannelDetailsDefault from "ChannelDetails" /* 16788 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4747 */;
+import ChannelDetailsDefault from "ChannelDetails" /* 16809 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

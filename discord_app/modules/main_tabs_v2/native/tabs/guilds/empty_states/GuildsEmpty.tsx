@@ -1,25 +1,25 @@
-// === Module 16209: GuildsEmpty ===
+// === Module 16249: GuildsEmpty ===
 
-// Module 16209 (GuildsEmpty)
+// Module 16249 (GuildsEmpty)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import getInitialNavigationState from "getInitialNavigationState" /* 4738 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12357 */;
-import AssetRegistryDefault from "AssetRegistry" /* 16210 */;
+import getInitialNavigationState from "getInitialNavigationState" /* 4744 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import CreateGuildModalActionCreatorsDefault from "CreateGuildModalActionCreators" /* 12372 */;
+import AssetRegistryDefault from "AssetRegistry" /* 16250 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -349,7 +349,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((s
   } else {
     tmp11 = cResult[2];
   }
-  selectedGuildId(8422)(tmp11);
+  selectedGuildId(8455)(tmp11);
   if (cResult[3] === tmp10) {
     let tmp13;
     let tmp14;
@@ -358,9 +358,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((s
       tmp14 = cResult[6];
     }
     const effect = react.useEffect(tmp13, tmp14);
-    const tmpResult3 = navigation(5912);
+    const tmpResult3 = navigation(5919);
     const isScreenLandscape = tmpResult3.useIsScreenLandscape();
-    const tmpResult4 = navigation(14901);
+    const tmpResult4 = navigation(14917);
     const youBarTotalHeight = tmpResult4.useYouBarTotalHeight();
     let tmp19 = null;
     if (stateFromStores) {
@@ -374,7 +374,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((s
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: intl.string(navigation(1126).t["7hB4kg"]) };
-          const Text = tmp(4886).Text;
+          const Text = tmp(4892).Text;
           intl = tmp(1126).intl;
           const tmp23 = closure_13(Text, obj4);
           cResult[10] = tmp23;
@@ -518,7 +518,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((s
   }
   selectedGuildId = tmp6;
   let obj3 = { type: navigation(1260).ImpressionTypes.VIEW, name: navigation(1260).ImpressionNames.GUILDS_EMPTY_NUX };
-  const tmp7 = selectedGuildId(8422);
+  const tmp7 = selectedGuildId(8455);
   tmp7(obj3);
   const items1 = [tmp6, navigation];
   const effect = react.useEffect(() => {
@@ -553,9 +553,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((s
       }
     }
   }, items1);
-  const tmp2Result = navigation(5912);
+  const tmp2Result = navigation(5919);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  navigation(14901);
+  navigation(14917);
   let tmp14Result = null;
   if (stateFromStores) {
     const obj4 = { style: items2, children: items3 };
@@ -563,7 +563,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((s
     const obj5 = { style: tmp.headerTitle, children: closure_13(closure_6, obj6) };
     obj6 = { style: tmp.headerInner, children: closure_13(Text, obj7) };
     obj7 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: intl.string(navigation(1126).t["7hB4kg"]) };
-    Text = tmp2(4886).Text;
+    Text = tmp2(4892).Text;
     intl = tmp2(1126).intl;
     items3 = [closure_13(closure_6, obj5), ];
     let tmp18;

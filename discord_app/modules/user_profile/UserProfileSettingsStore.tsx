@@ -1,12 +1,12 @@
-// === Module 7831: UserProfileSettingsStore ===
+// === Module 7842: UserProfileSettingsStore ===
 
-// Module 7831 (UserProfileSettingsStore)
+// Module 7842 (UserProfileSettingsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import RouteConstants from "RouteConstants" /* 1086 */;
 import FavoritesConstants from "FavoritesConstants" /* 2065 */;
-import NotificationsInboxConstants from "NotificationsInboxConstants" /* 7832 */;
-import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 7833 */;
+import NotificationsInboxConstants from "NotificationsInboxConstants" /* 7843 */;
+import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 7844 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -233,16 +233,21 @@ let obj2 = {
     customTypingIndicatorStyle = customTypingIndicatorStyle.customTypingIndicatorStyle;
     const merged = Object.assign(obj);
   },
-  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function handleSetTryItOutPreset(avatarDecoration) {
+  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function handleSetTryItOutPreset(arg0) {
+    let avatarDecoration;
     let banner;
     let displayNameStyles;
+    let lastPreset;
     let themeColors;
-    let tryItOutAvatarDecoration = avatarDecoration.avatarDecoration;
-    obj = { tryItOutBanner: banner, tryItOutThemeColors: themeColors, tryItOutAvatarDecoration, tryItOutDisplayNameStyles: displayNameStyles };
-    ({ banner, themeColors, displayNameStyles } = avatarDecoration);
+    ({ lastPreset, avatarDecoration } = arg0);
+    obj = { tryItOutLastPreset: lastPreset, tryItOutBanner: banner, tryItOutThemeColors: themeColors, tryItOutAvatarDecoration: avatarDecoration, tryItOutDisplayNameStyles: displayNameStyles };
+    ({ banner, themeColors, displayNameStyles } = arg0);
     const merged = Object.assign(obj);
-    if (undefined === tryItOutAvatarDecoration) {
-      tryItOutAvatarDecoration = obj.tryItOutAvatarDecoration;
+    if (undefined === lastPreset) {
+      lastPreset = obj.tryItOutLastPreset;
+    }
+    if (undefined === avatarDecoration) {
+      avatarDecoration = obj.tryItOutAvatarDecoration;
     }
   },
   USER_PROFILE_SETTINGS_CLEAR_ERRORS: function handleResetErrors() {

@@ -1,13 +1,13 @@
-// === Module 16864: SmartSearchTip ===
+// === Module 16888: SmartSearchTip ===
 
-// Module 16864 (SmartSearchTip)
+// Module 16888 (SmartSearchTip)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import _modDef3919 from "module_3919" /* 3919 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -83,7 +83,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   }
   if (cResult[3] !== tmp4.title) {
     const obj2 = { variant: "text-sm/semibold", color: "text-subtle", lineClamp: 1, style: title, accessibilityRole: "header", children: tmp7 };
-    const tmp12 = closure_5(guildId(4886).Text, obj2);
+    const tmp12 = closure_5(guildId(4892).Text, obj2);
     cResult[3] = tmp4.title;
     cResult[4] = tmp12;
     tmp10 = tmp12;
@@ -92,7 +92,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: intl2.string(_modDef3919.QIdSmb) };
-    const Text = guildId(4886).Text;
+    const Text = guildId(4892).Text;
     intl2 = guildId(1126).intl;
     const tmp16 = closure_5(Text, obj3);
     cResult[5] = tmp16;
@@ -119,7 +119,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
           }
           if (cResult[16] !== answerText) {
             const obj4 = { variant: "text-md/normal", color: "text-default", children: answerText };
-            const tmp28 = closure_5(guildId(4886).Text, obj4);
+            const tmp28 = closure_5(guildId(4892).Text, obj4);
             cResult[16] = answerText;
             cResult[17] = tmp28;
             tmp26 = tmp28;
@@ -166,7 +166,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
               return hasOwnProperty(Avatar, obj, user.id);
             })
       };
-      const AvatarPile = guildId(12850).AvatarPile;
+      const AvatarPile = guildId(12869).AvatarPile;
       substr = arr.slice(0, 3);
       tmp20 = closure_5(AvatarPile, obj7);
     }
@@ -199,11 +199,11 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   const obj2 = { style: tmp.header, children: items2 };
   const obj3 = { style: tmp.titleContainer, children: items1 };
   const obj4 = { variant: "text-sm/semibold", color: "text-subtle", lineClamp: 1, style: tmp.title, accessibilityRole: "header", children: intl.string(guildId(3919).ydAwWi) };
-  const Text = citations(4886).Text;
+  const Text = citations(4892).Text;
   intl = citations(1126).intl;
   items1 = [closure_5(Text, obj4), ];
   const obj5 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: intl2.string(guildId(3919).QIdSmb) };
-  const Text2 = citations(4886).Text;
+  const Text2 = citations(4892).Text;
   intl2 = citations(1126).intl;
   items1[1] = closure_5(Text2, obj5);
   items2 = [closure_6(View, obj3), ];
@@ -219,12 +219,12 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
           return hasOwnProperty(Avatar, obj, user.id);
         })
     };
-    const AvatarPile = tmp5(12850).AvatarPile;
+    const AvatarPile = tmp5(12869).AvatarPile;
     substr = memo.slice(0, 3);
     tmp4Result = closure_5(AvatarPile, obj6);
   }
   items2[1] = tmp4Result;
-  items3 = [closure_6(View, obj2), closure_5(citations(4886).Text, { variant: "text-md/normal", color: "text-default", children: answerText })];
+  items3 = [closure_6(View, obj2), closure_5(citations(4892).Text, { variant: "text-md/normal", color: "text-default", children: answerText })];
   return closure_6(View, obj);
 }));
 const result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchTip.tsx");

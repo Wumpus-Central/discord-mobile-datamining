@@ -1,6 +1,6 @@
-// === Module 15869: Welcome ===
+// === Module 15908: Welcome ===
 
-// Module 15869 (Welcome)
+// Module 15908 (Welcome)
 import _modDef38 from "module_38" /* 38 */;
 import Storage2 from "Storage" /* 510 */;
 import react2 from "react" /* 576 */;
@@ -9,29 +9,29 @@ import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import Link from "Link" /* 1491 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 6433 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
-import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6829 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6984 */;
-import Constants2 from "Constants" /* 7226 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 12386 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13058 */;
-import AssetRegistry from "AssetRegistry" /* 13675 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15866 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6440 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
+import GuildTemplatesConstants from "GuildTemplatesConstants" /* 6839 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6997 */;
+import Constants2 from "Constants" /* 7239 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 12401 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13077 */;
+import AssetRegistry from "AssetRegistry" /* 13691 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15905 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AgeGateStore from "AgeGateStore" /* 15870 */;
-import ExperimentStore from "ExperimentStore" /* 4776 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 6966 */;
-import MultiAccountStore from "MultiAccountStore" /* 12056 */;
+import AgeGateStore from "AgeGateStore" /* 15909 */;
+import ExperimentStore from "ExperimentStore" /* 4782 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 6979 */;
+import MultiAccountStore from "MultiAccountStore" /* 12071 */;
 import UserRecord from "UserRecord" /* 1391 */;
-import InviteStore from "InviteStore" /* 4871 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8393 */;
+import InviteStore from "InviteStore" /* 4877 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8426 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -130,7 +130,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) 
         tmp21 = cResult[4];
       }
       if (cResult[5] !== tmp21) {
-        const obj4 = { user: tmp21, guildId: "r" };
+        const obj4 = { user: tmp21, guildId: "Array" };
         const tmp28 = closure_21(native.Avatar, obj4);
         cResult[5] = tmp21;
         cResult[6] = tmp28;
@@ -174,7 +174,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) 
         tmp6 = cResult[11];
       }
       if (cResult[12] !== tmp6) {
-        const obj5 = { user: tmp6, guildId: "r" };
+        const obj5 = { user: tmp6, guildId: "Array" };
         const tmp13 = closure_21(native.Avatar, obj5);
         cResult[12] = tmp6;
         cResult[13] = tmp13;
@@ -298,7 +298,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) 
       _modDef38(null != inviter, "Null inviter");
       const self = this;
       const self2 = this;
-      const obj = { user: tmp10, guildId: "r" };
+      const obj = { user: tmp10, guildId: "Array" };
       const Avatar = native.Avatar;
       tmp10 = new UserRecord(inviter);
       tmp12 = closure_21(Avatar, obj);
@@ -313,7 +313,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) 
     } else {
       const self3 = this;
       const self4 = this;
-      const obj4 = { user: tmp29, guildId: "r" };
+      const obj4 = { user: tmp29, guildId: "Array" };
       const Avatar2 = native.Avatar;
       tmp29 = new UserRecord(inviter);
       const tmp31 = closure_21(Avatar2, obj4);
@@ -330,9 +330,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) 
     items1 = [tmp12, ];
     const obj6 = { style: tmp.text, children: items2 };
     const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: stringResult };
-    items2 = [tmp16(tmp15(4886).Text, obj7), ];
+    items2 = [tmp16(tmp15(4892).Text, obj7), ];
     const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-    items2[1] = tmp16(tmp15(4886).Text, obj8);
+    items2[1] = tmp16(tmp15(4892).Text, obj8);
     items1[1] = afk(React3, obj6);
     return afk(React3, obj5);
   }

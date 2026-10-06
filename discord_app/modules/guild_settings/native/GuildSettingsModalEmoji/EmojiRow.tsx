@@ -1,25 +1,25 @@
-// === Module 17736: GuildSettingsModalEmoji/EmojiRow ===
+// === Module 17782: GuildSettingsModalEmoji/EmojiRow ===
 
-// Module 17736 (GuildSettingsModalEmoji/EmojiRow)
+// Module 17782 (GuildSettingsModalEmoji/EmojiRow)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4527 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
-import Pressables from "Pressables" /* 5909 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9939 */;
-import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 17737 */;
-import AssetRegistryDefault from "AssetRegistry" /* 17739 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
+import Pressables from "Pressables" /* 5916 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9952 */;
+import showEmojiOverflowActionSheetDefault from "showEmojiOverflowActionSheet" /* 17783 */;
+import AssetRegistryDefault from "AssetRegistry" /* 17785 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

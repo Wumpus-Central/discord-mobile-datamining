@@ -1,6 +1,6 @@
-// === Module 13001: useHandleBuyNow ===
+// === Module 13020: useHandleBuyNow ===
 
-// Module 13001 (useHandleBuyNow)
+// Module 13020 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -102,7 +102,7 @@ function useHandleBuyNow(product) {
     },
     orderId
   };
-  const tmp3 = onBuySettled(10750)(obj);
+  const tmp3 = onBuySettled(10763)(obj);
   react = tmp3;
   let obj2 = {
     handleBuyNow: react.useCallback(isBuying(function*() {

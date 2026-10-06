@@ -1,44 +1,44 @@
-// === Module 14448: CustomizeBadgesSheet ===
+// === Module 14464: CustomizeBadgesSheet ===
 
-// Module 14448 (CustomizeBadgesSheet)
+// Module 14464 (CustomizeBadgesSheet)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import CircleInformationIcon2 from "CircleInformationIcon" /* 4812 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import timing from "timing" /* 4891 */;
-import timingPresets from "timingPresets" /* 4894 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import EyeSlashIcon2 from "EyeSlashIcon" /* 6456 */;
-import EyeIcon from "EyeIcon" /* 6458 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6646 */;
-import ContextMenu2 from "ContextMenu" /* 7579 */;
-import ContextMenuState from "ContextMenuState" /* 7580 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 7581 */;
-import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7862 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
-import native from "native" /* 8567 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8867 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8914 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10881 */;
-import BadgeUtils from "BadgeUtils" /* 10889 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 12923 */;
-import BadgeGrid from "BadgeGrid" /* 14449 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import CircleInformationIcon2 from "CircleInformationIcon" /* 4818 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import timing from "timing" /* 4897 */;
+import timingPresets from "timingPresets" /* 4900 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import EyeSlashIcon2 from "EyeSlashIcon" /* 6463 */;
+import EyeIcon from "EyeIcon" /* 6465 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6653 */;
+import ContextMenu2 from "ContextMenu" /* 7590 */;
+import ContextMenuState from "ContextMenuState" /* 7591 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 7592 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 7873 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
+import native from "native" /* 8602 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8896 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8943 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10738 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10894 */;
+import BadgeUtils from "BadgeUtils" /* 10902 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 12942 */;
+import BadgeGrid from "BadgeGrid" /* 14465 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
 import UserStore from "UserStore" /* 1377 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -524,7 +524,7 @@ let closure_24 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badge) =>
                             obj.onLongPress = fn;
                             obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                             obj.style = closure_5;
-                            obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
+                            obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
                             return tmp(PressableScale, obj);
                           }
                         }
@@ -604,7 +604,7 @@ let closure_24 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badge) =>
                           obj.onLongPress = fn;
                           obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                           obj.style = closure_5;
-                          obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
+                          obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
                           return tmp(PressableScale, obj);
                         }
                       }
@@ -670,7 +670,7 @@ let closure_24 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badge) =>
                         obj.onLongPress = fn;
                         obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                         obj.style = closure_5;
-                        obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
+                        obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
                         return tmp(PressableScale, obj);
                       }
                     }
@@ -738,7 +738,7 @@ let closure_24 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badge) =>
                 obj.onLongPress = fn;
                 obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
                 obj.style = closure_5;
-                obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
+                obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
                 return tmp(PressableScale, obj);
               }
             }
@@ -838,7 +838,7 @@ let closure_24 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((badge) =>
         obj.onLongPress = fn;
         obj.delayLongPress = tmp2(tmp3[12]).CONTEXT_MENU_LONG_PRESS_DURATION_MS;
         obj.style = closure_5;
-        obj.children = tmp(f67446, { badge: tmp5, alwaysVisible: tmp7 });
+        obj.children = tmp(f67509, { badge: tmp5, alwaysVisible: tmp7 });
         return tmp(PressableScale, obj);
       }
     }

@@ -1,9 +1,9 @@
-// === Module 9674: NoiseCancellationUtils ===
+// === Module 9687: NoiseCancellationUtils ===
 
-// Module 9674 (NoiseCancellationUtils)
+// Module 9687 (NoiseCancellationUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 9675 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 9688 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

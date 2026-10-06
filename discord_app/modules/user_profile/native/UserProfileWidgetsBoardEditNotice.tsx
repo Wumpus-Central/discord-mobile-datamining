@@ -1,19 +1,19 @@
-// === Module 12900: UserProfileWidgetsBoardEditNotice ===
+// === Module 12919: UserProfileWidgetsBoardEditNotice ===
 
-// Module 12900 (UserProfileWidgetsBoardEditNotice)
+// Module 12919 (UserProfileWidgetsBoardEditNotice)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import CircleInformationIcon2 from "CircleInformationIcon" /* 4812 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import XSmallIcon from "XSmallIcon" /* 6017 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7913 */;
+import CircleInformationIcon2 from "CircleInformationIcon" /* 4818 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import XSmallIcon from "XSmallIcon" /* 6024 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7924 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ let hasOwnProperty;
 let metroRequire;
 let obj2;
 let tmp5;
-const SelectedDismissibleContentDefault = tmp5(10354);
+const SelectedDismissibleContentDefault = tmp5(10367);
 const View = react_native.View;
 const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);

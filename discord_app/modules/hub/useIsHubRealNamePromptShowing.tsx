@@ -1,11 +1,11 @@
-// === Module 12444: useIsHubRealNamePromptShowing ===
+// === Module 12459: useIsHubRealNamePromptShowing ===
 
-// Module 12444 (useIsHubRealNamePromptShowing)
+// Module 12459 (useIsHubRealNamePromptShowing)
 import Constants from "Constants" /* 1085 */;
-import Constants2 from "Constants" /* 12446 */;
-import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12447 */;
+import Constants2 from "Constants" /* 12461 */;
+import GuildPromptsActionCreatorsDefault from "GuildPromptsActionCreators" /* 12462 */;
 import react from "react" /* 19 */;
-import GuildPromptsStore from "GuildPromptsStore" /* 12445 */;
+import GuildPromptsStore from "GuildPromptsStore" /* 12460 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;

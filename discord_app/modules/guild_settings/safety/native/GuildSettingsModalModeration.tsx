@@ -1,27 +1,27 @@
-// === Module 17673: GuildSettingsModalModeration ===
+// === Module 17719: GuildSettingsModalModeration ===
 
-// Module 17673 (GuildSettingsModalModeration)
+// Module 17719 (GuildSettingsModalModeration)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import native from "native" /* 4589 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import TableRadioRow2 from "TableRadioRow" /* 6071 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
-import NavScrim from "NavScrim" /* 6536 */;
-import TableSwitchRow2 from "TableSwitchRow" /* 6698 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 6880 */;
-import useUserIsTeen from "useUserIsTeen" /* 8294 */;
-import Form2 from "Form" /* 8895 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
+import native from "native" /* 4595 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import TableRadioRow2 from "TableRadioRow" /* 6078 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
+import NavScrim from "NavScrim" /* 6543 */;
+import TableSwitchRow2 from "TableSwitchRow" /* 6705 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6890 */;
+import useUserIsTeen from "useUserIsTeen" /* 8327 */;
+import Form2 from "Form" /* 8924 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
 import react from "react" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -263,10 +263,10 @@ class GuildSettingsModalModeration extends PureComponent {
         return authStore(TableRadioRow, obj, "level-" + value);
       })
     };
-    const TableRadioGroup = self(6072).TableRadioGroup;
+    const TableRadioGroup = self(6079).TableRadioGroup;
     intl = self(1126).intl;
     intl2 = self(1126).intl;
-    let obj2 = self(14645);
+    let obj2 = self(14661);
     const features = guild.features;
     verificationLevelOptions = obj2.generateVerificationLevelOptions(features.has(constants.COMMUNITY));
     return closure_10(TableRadioGroup, obj, "level-section");
@@ -305,7 +305,7 @@ class GuildSettingsModalModeration extends PureComponent {
         return authStore(TableRadioRow, obj, "filter-" + value);
       })
     };
-    const TableRadioGroup = self(6072).TableRadioGroup;
+    const TableRadioGroup = self(6079).TableRadioGroup;
     intl = self(1126).intl;
     const intl2 = self(1126).intl;
     format = intl2.format;
@@ -313,7 +313,7 @@ class GuildSettingsModalModeration extends PureComponent {
     BI4ukC = self(1126).t.BI4ukC;
     const features = guild.features;
     obj3 = HelpdeskUtilsDefault;
-    const obj4 = self(14645);
+    const obj4 = self(14661);
     contentFilterOptions = obj4.generateContentFilterOptions(features.has(constants.COMMUNITY));
     return closure_10(TableRadioGroup, obj, "filter-section");
   }

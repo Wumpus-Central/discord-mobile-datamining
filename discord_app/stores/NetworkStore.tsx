@@ -1,6 +1,6 @@
-// === Module 4939: NetworkStore ===
+// === Module 4945: NetworkStore ===
 
-// Module 4939 (NetworkStore)
+// Module 4945 (NetworkStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import NetworkUtilsDefault from "NetworkUtils" /* 1468 */;

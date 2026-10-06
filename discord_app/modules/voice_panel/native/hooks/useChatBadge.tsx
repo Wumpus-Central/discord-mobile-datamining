@@ -1,7 +1,7 @@
-// === Module 17269: useChatBadge ===
+// === Module 17298: useChatBadge ===
 
-// Module 17269 (useChatBadge)
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+// Module 17298 (useChatBadge)
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

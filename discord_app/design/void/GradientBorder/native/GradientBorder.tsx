@@ -1,11 +1,11 @@
-// === Module 13906: GradientBorder ===
+// === Module 13924: GradientBorder ===
 
-// Module 13906 (GradientBorder)
+// Module 13924 (GradientBorder)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import merged5 from "merged5" /* 5075 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
+import merged5 from "merged5" /* 5081 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

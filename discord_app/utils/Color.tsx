@@ -1,6 +1,6 @@
-// === Module 4728: utils/Color ===
+// === Module 4734: utils/Color ===
 
-// Module 4728 (utils/Color)
+// Module 4734 (utils/Color)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

@@ -1,22 +1,22 @@
-// === Module 16925: FriendsScreen ===
+// === Module 16951: FriendsScreen ===
 
-// Module 16925 (FriendsScreen)
+// Module 16951 (FriendsScreen)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import SendMessageIcon from "SendMessageIcon" /* 4841 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import NoResultsDefault from "NoResults" /* 10726 */;
-import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 14917 */;
-import AssetRegistryDefault from "AssetRegistry" /* 16384 */;
+import SendMessageIcon from "SendMessageIcon" /* 4847 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import NoResultsDefault from "NoResults" /* 10739 */;
+import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 14933 */;
+import AssetRegistryDefault from "AssetRegistry" /* 16424 */;
 import react from "react" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

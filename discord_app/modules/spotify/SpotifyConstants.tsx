@@ -1,8 +1,8 @@
-// === Module 8016: SpotifyConstants ===
+// === Module 8026: SpotifyConstants ===
 
-// Module 8016 (SpotifyConstants)
+// Module 8026 (SpotifyConstants)
 import Constants from "Constants" /* 1085 */;
-import Platforms from "Platforms" /* 5442 */;
+import Platforms from "Platforms" /* 5449 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 

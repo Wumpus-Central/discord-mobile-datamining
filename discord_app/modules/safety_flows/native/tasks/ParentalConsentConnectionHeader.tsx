@@ -1,20 +1,20 @@
-// === Module 18073: ParentalConsentConnectionHeader ===
+// === Module 18118: ParentalConsentConnectionHeader ===
 
-// Module 18073 (ParentalConsentConnectionHeader)
+// Module 18118 (ParentalConsentConnectionHeader)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import _modDef2787 from "module_2787" /* 2787 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
+import _modDef2815 from "module_2815" /* 2815 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -81,7 +81,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return obj.logout("safety_flows_parental_consent_connection");
     };
     const intl = intl2.intl;
-    const stringResult = intl.string(_modDef2787["3HuGuY"]);
+    const stringResult = intl.string(_modDef2815["3HuGuY"]);
     cResult[4] = fn2;
     cResult[5] = stringResult;
     tmp12 = stringResult;
@@ -167,7 +167,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const obj = AuthenticationActionCreatorsDefault;
       return obj.logout("safety_flows_parental_consent_connection");
     },
-    children: intl.string(_modDef2787["3HuGuY"])
+    children: intl.string(_modDef2815["3HuGuY"])
   };
   const Text = Text_Text.Text;
   intl = intl2.intl;

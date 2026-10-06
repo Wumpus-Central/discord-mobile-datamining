@@ -1,6 +1,6 @@
-// === Module 7486: hasForLaterPremiumType ===
+// === Module 7497: hasForLaterPremiumType ===
 
-// Module 7486 (hasForLaterPremiumType)
+// Module 7497 (hasForLaterPremiumType)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;

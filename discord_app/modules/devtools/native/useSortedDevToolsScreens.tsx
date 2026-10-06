@@ -1,16 +1,16 @@
-// === Module 15626: useSortedDevToolsScreens ===
+// === Module 15640: useSortedDevToolsScreens ===
 
-// Module 15626 (useSortedDevToolsScreens)
+// Module 15640 (useSortedDevToolsScreens)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import DevToolsActionCreators from "DevToolsActionCreators" /* 15404 */;
-import DevToolsScreens from "DevToolsScreens" /* 15408 */;
+import DevToolsActionCreators from "DevToolsActionCreators" /* 15420 */;
+import DevToolsScreens from "DevToolsScreens" /* 15424 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7203 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7216 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-const f121023 = (item) => {
+const f121186 = (item) => {
   let obj;
   [, obj] = item;
   const tmp = null == obj.predicate || obj.predicate();
@@ -22,7 +22,7 @@ function getSortedDevToolsScreens() {
     sortedScreenKeys = DevToolsSettingsStore.sortedScreenKeys;
   }
   const entries = Object.entries(DevToolsScreens.DevToolsScreens);
-  const found = entries.filter(f121023);
+  const found = entries.filter(f121186);
   return found.sort((arg0, arg1) => {
     let num2;
     let tmp;
@@ -74,7 +74,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     const _Object = Object;
     const entries = Object.entries(DevToolsScreens.DevToolsScreens);
-    const found = entries.filter(f121023);
+    const found = entries.filter(f121186);
     const sorted = found.sort((arg0, arg1) => {
       let num2;
       let tmp;
@@ -114,7 +114,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     sortedScreenKeys = DevToolsSettingsStore.sortedScreenKeys;
   }
   const entries = Object.entries(DevToolsScreens.DevToolsScreens);
-  const found = entries.filter(f121023);
+  const found = entries.filter(f121186);
   return found.sort((arg0, arg1) => {
     let num2;
     let tmp;

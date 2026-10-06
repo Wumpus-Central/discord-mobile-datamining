@@ -1,6 +1,6 @@
-// === Module 7282: react-native ===
+// === Module 7295: react-native ===
 
-// Module 7282 (react-native)
+// Module 7295 (react-native)
 import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 

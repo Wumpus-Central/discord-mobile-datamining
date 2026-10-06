@@ -1,17 +1,17 @@
-// === Module 4527: EmojiUtils ===
+// === Module 4533: EmojiUtils ===
 
-// Module 4527 (EmojiUtils)
+// Module 4533 (EmojiUtils)
 import Constants from "Constants" /* 1085 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import ImageUtils from "ImageUtils" /* 1481 */;
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4501 */;
-import EmojiTypes from "EmojiTypes" /* 4526 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5643 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7411 */;
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4507 */;
+import EmojiTypes from "EmojiTypes" /* 4532 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 5650 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 7422 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import size from "module_2" /* 2 */;

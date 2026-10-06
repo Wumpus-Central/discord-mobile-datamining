@@ -1,9 +1,9 @@
-// === Module 15635: DesignSystemsTextSetting ===
+// === Module 15649: DesignSystemsTextSetting ===
 
-// Module 15635 (DesignSystemsTextSetting)
+// Module 15649 (DesignSystemsTextSetting)
 import Constants from "Constants" /* 1085 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,6 +1,6 @@
-// === Module 17906: useFetchHighlightedCreatorGuildDetails ===
+// === Module 17952: useFetchHighlightedCreatorGuildDetails ===
 
-// Module 17906 (useFetchHighlightedCreatorGuildDetails)
+// Module 17952 (useFetchHighlightedCreatorGuildDetails)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;

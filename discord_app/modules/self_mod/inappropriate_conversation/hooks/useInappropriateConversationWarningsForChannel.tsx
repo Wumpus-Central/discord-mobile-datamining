@@ -1,7 +1,7 @@
-// === Module 9790: useInappropriateConversationWarningsForChannel ===
+// === Module 9803: useInappropriateConversationWarningsForChannel ===
 
-// Module 9790 (useInappropriateConversationWarningsForChannel)
-import ChannelSafetyWarningsStore2 from "ChannelSafetyWarningsStore" /* 9786 */;
+// Module 9803 (useInappropriateConversationWarningsForChannel)
+import ChannelSafetyWarningsStore2 from "ChannelSafetyWarningsStore" /* 9799 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

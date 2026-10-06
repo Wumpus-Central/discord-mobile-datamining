@@ -1,10 +1,10 @@
-// === Module 11405: AcceptGuildTemplateActionCreators ===
+// === Module 11418: AcceptGuildTemplateActionCreators ===
 
-// Module 11405 (AcceptGuildTemplateActionCreators)
+// Module 11418 (AcceptGuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import transitionToGuild from "transitionToGuild" /* 6845 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import transitionToGuild from "transitionToGuild" /* 6855 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import size from "module_2" /* 2 */;
 

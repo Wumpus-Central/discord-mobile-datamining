@@ -1,6 +1,6 @@
-// === Module 12854: getReactNativeSVGImageSource ===
+// === Module 12873: getReactNativeSVGImageSource ===
 
-// Module 12854 (getReactNativeSVGImageSource)
+// Module 12873 (getReactNativeSVGImageSource)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 

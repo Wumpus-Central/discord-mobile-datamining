@@ -1,9 +1,9 @@
-// === Module 16285: useChannelUnreadBadgeState ===
+// === Module 16325: useChannelUnreadBadgeState ===
 
-// Module 16285 (useChannelUnreadBadgeState)
-import NewChannelsStore from "NewChannelsStore" /* 7043 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5071 */;
+// Module 16325 (useChannelUnreadBadgeState)
+import NewChannelsStore from "NewChannelsStore" /* 7056 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 5077 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

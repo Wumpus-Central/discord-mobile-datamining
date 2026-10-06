@@ -1,6 +1,6 @@
-// === Module 10530: WishlistBannerUtils ===
+// === Module 10543: WishlistBannerUtils ===
 
-// Module 10530 (WishlistBannerUtils)
+// Module 10543 (WishlistBannerUtils)
 import react from "react" /* 19 */;
 import react2 from "react" /* 576 */;
 import intl5 from "intl" /* 1126 */;

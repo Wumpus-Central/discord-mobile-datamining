@@ -1,10 +1,10 @@
-// === Module 7453: BurstReactionAnimationPreview ===
+// === Module 7464: BurstReactionAnimationPreview ===
 
-// Module 7453 (BurstReactionAnimationPreview)
+// Module 7464 (BurstReactionAnimationPreview)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
-import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7454 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
+import BurstReactionAnimationDefault from "BurstReactionAnimation" /* 7465 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

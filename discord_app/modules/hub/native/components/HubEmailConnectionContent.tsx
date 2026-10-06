@@ -1,23 +1,23 @@
-// === Module 12398: HubEmailConnectionContent ===
+// === Module 12413: HubEmailConnectionContent ===
 
-// Module 12398 (HubEmailConnectionContent)
+// Module 12413 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl8 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12394 */;
-import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 12400 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12409 */;
+import InkQuillSpotIllustration from "InkQuillSpotIllustration" /* 12415 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import HubConstants from "HubConstants" /* 12385 */;
+import HubConstants from "HubConstants" /* 12400 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -241,7 +241,7 @@ export default function HubEmailConnectionContent(arg0) {
   [first1, _slicedToArray] = react.useState(false);
   [obj2, c5] = react.useState(null);
   _slicedToArray(react.useState(null), 2);
-  const insets = invite(6471)().insets;
+  const insets = invite(6478)().insets;
   const ref = react.useRef(null);
   const intl = intl8.intl;
   const stringResult = intl.string(intl8.t.H1jCHH);
@@ -316,7 +316,7 @@ export default function HubEmailConnectionContent(arg0) {
       }, 100);
     }
   };
-  const tmp10Result = invite(6097);
+  const tmp10Result = invite(6104);
   intl4 = intl8.intl;
   intl5 = intl8.intl;
   intl6 = intl8.intl;

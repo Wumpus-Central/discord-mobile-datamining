@@ -1,6 +1,6 @@
-// === Module 9209: CreateChannelModal ===
+// === Module 9244: CreateChannelModal ===
 
-// Module 9209 (CreateChannelModal)
+// Module 9244 (CreateChannelModal)
 import _modDef38 from "module_38" /* 38 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,45 +10,45 @@ import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 126
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import react_native from "react-native" /* 4594 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ChannelUtils from "ChannelUtils" /* 5035 */;
-import TextLockIcon from "TextLockIcon" /* 5862 */;
-import TextIcon from "TextIcon" /* 5864 */;
-import ImageLockIcon from "ImageLockIcon" /* 5869 */;
-import ForumLockIcon from "ForumLockIcon" /* 5870 */;
-import ImageIcon from "ImageIcon" /* 5871 */;
-import ForumIcon from "ForumIcon" /* 5872 */;
-import AnnouncementsLockIcon from "AnnouncementsLockIcon" /* 5877 */;
-import AnnouncementsIcon from "AnnouncementsIcon" /* 5878 */;
-import StageLockIcon from "StageLockIcon" /* 5880 */;
-import StageIcon from "StageIcon" /* 5881 */;
-import VoiceLockIcon from "VoiceLockIcon" /* 5882 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5885 */;
-import AppsLockIcon from "AppsLockIcon" /* 5889 */;
-import AppsIcon from "AppsIcon" /* 5890 */;
-import useInitialValueDefault from "useInitialValue" /* 5984 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import FormRadio from "FormRadio" /* 6075 */;
-import HeaderActionButton from "HeaderActionButton" /* 6880 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8077 */;
-import Form from "Form" /* 8895 */;
-import useCreateChannelSubmitDefault from "useCreateChannelSubmit" /* 9212 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9214 */;
-import sanitizeChannelNameDefault from "sanitizeChannelName" /* 9218 */;
-import AddModeratorsDefault from "AddModerators" /* 9243 */;
+import react_native from "react-native" /* 4600 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ChannelUtils from "ChannelUtils" /* 5041 */;
+import TextLockIcon from "TextLockIcon" /* 5869 */;
+import TextIcon from "TextIcon" /* 5871 */;
+import ImageLockIcon from "ImageLockIcon" /* 5876 */;
+import ForumLockIcon from "ForumLockIcon" /* 5877 */;
+import ImageIcon from "ImageIcon" /* 5878 */;
+import ForumIcon from "ForumIcon" /* 5879 */;
+import AnnouncementsLockIcon from "AnnouncementsLockIcon" /* 5884 */;
+import AnnouncementsIcon from "AnnouncementsIcon" /* 5885 */;
+import StageLockIcon from "StageLockIcon" /* 5887 */;
+import StageIcon from "StageIcon" /* 5888 */;
+import VoiceLockIcon from "VoiceLockIcon" /* 5889 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5892 */;
+import AppsLockIcon from "AppsLockIcon" /* 5896 */;
+import AppsIcon from "AppsIcon" /* 5897 */;
+import useInitialValueDefault from "useInitialValue" /* 5991 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import FormRadio from "FormRadio" /* 6082 */;
+import HeaderActionButton from "HeaderActionButton" /* 6890 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8110 */;
+import Form from "Form" /* 8924 */;
+import useCreateChannelSubmitDefault from "useCreateChannelSubmit" /* 9247 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9249 */;
+import sanitizeChannelNameDefault from "sanitizeChannelName" /* 9253 */;
+import AddModeratorsDefault from "AddModerators" /* 9278 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native2 from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore_mod from "PermissionStore" /* 4509 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PermissionStore_mod from "PermissionStore" /* 4515 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -1341,7 +1341,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
                     tmp43[1] = tmp6;
                     tmp43[2] = first;
                     tmp43[3] = tmp26;
-                    const tmp44 = closure_20(tmp(9230).AddMembersBody, tmp43);
+                    const tmp44 = closure_20(tmp(9265).AddMembersBody, tmp43);
                     cResult[24] = tmp6;
                     cResult[25] = first;
                     cResult[26] = tmp44;
@@ -1673,7 +1673,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     return tmp6;
   }
-  const tmp7 = closure_20(tmp(6496).Navigator, { screens, initialRouteStack: initialStack });
+  const tmp7 = closure_20(tmp(6503).Navigator, { screens, initialRouteStack: initialStack });
   cResult[2] = initialStack;
   cResult[3] = screens;
   cResult[4] = tmp7;
@@ -1682,7 +1682,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let closure_0;
   let initialStack;
   let screens;
-  const f99835 = () => {
+  const f100013 = () => {
     let obj2;
     const obj = { name: constants.CREATE_CHANNEL, params: obj2 };
     obj2 = {};
@@ -1692,8 +1692,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return obj3;
   };
   _require = arg0;
-  ({ screens, initialStack } = useInitialValueDefault(f99835));
-  useInitialValueDefault(f99835);
+  ({ screens, initialStack } = useInitialValueDefault(f100013));
+  useInitialValueDefault(f100013);
   return closure_20(require("Navigator").Navigator, { screens, initialRouteStack });
 });
 let result = size.fileFinishedImporting("components_native/CreateChannelModal.tsx");

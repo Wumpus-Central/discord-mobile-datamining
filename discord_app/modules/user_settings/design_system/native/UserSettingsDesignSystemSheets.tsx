@@ -1,27 +1,27 @@
-// === Module 15685: UserSettingsDesignSystemSheets ===
+// === Module 15699: UserSettingsDesignSystemSheets ===
 
-// Module 15685 (UserSettingsDesignSystemSheets)
+// Module 15699 (UserSettingsDesignSystemSheets)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import TextInput_TextInput from "TextInput/TextInput" /* 6098 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
-import ActionSheetCloseButton from "ActionSheetCloseButton" /* 6696 */;
-import ActionSheetRow from "ActionSheetRow" /* 6697 */;
-import ActionSheet2 from "ActionSheet" /* 6701 */;
-import ActionSheetHeaderPressableText from "ActionSheetHeaderPressableText" /* 9195 */;
-import PromoSheet2 from "PromoSheet" /* 10045 */;
-import _modDef15686 from "module_15686" /* 15686 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import TextInput_TextInput from "TextInput/TextInput" /* 6105 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 6703 */;
+import ActionSheetRow from "ActionSheetRow" /* 6704 */;
+import ActionSheet2 from "ActionSheet" /* 6708 */;
+import ActionSheetHeaderPressableText from "ActionSheetHeaderPressableText" /* 9230 */;
+import PromoSheet2 from "PromoSheet" /* 10058 */;
+import _modDef15700 from "module_15700" /* 15700 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -338,7 +338,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { graphic: obj4, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: first };
     obj4 = { type: "image", src: obj5, aspectRatio: "16/9" };
-    obj5 = { uri: _modDef15686 };
+    obj5 = { uri: _modDef15700 };
     const PromoSheet = PromoSheet2.PromoSheet;
     const tmp10 = metroImportDefault(PromoSheet, obj3);
     cResult[1] = tmp10;
@@ -364,7 +364,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   intl = intl2.intl;
   const obj2 = { graphic: obj3, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: tmp };
   obj3 = { type: "image", src: obj4, aspectRatio: "16/9" };
-  obj4 = { uri: _modDef15686 };
+  obj4 = { uri: _modDef15700 };
   tmp = metroImportDefault(Button, obj);
   const PromoSheet = PromoSheet2.PromoSheet;
   return metroImportDefault(PromoSheet, obj2);

@@ -1,13 +1,13 @@
-// === Module 16255: FavoritesGuildCoachmarkGraphic ===
+// === Module 16295: FavoritesGuildCoachmarkGraphic ===
 
-// Module 16255 (FavoritesGuildCoachmarkGraphic)
+// Module 16295 (FavoritesGuildCoachmarkGraphic)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10042 */;
+import FavoritesSpotIllustration from "FavoritesSpotIllustration" /* 10055 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

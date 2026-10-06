@@ -1,13 +1,13 @@
-// === Module 9052: useIsPrivateAudioOnlyCall ===
+// === Module 9088: useIsPrivateAudioOnlyCall ===
 
-// Module 9052 (useIsPrivateAudioOnlyCall)
-import CallConstants from "CallConstants" /* 4911 */;
+// Module 9088 (useIsPrivateAudioOnlyCall)
+import CallConstants from "CallConstants" /* 4917 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

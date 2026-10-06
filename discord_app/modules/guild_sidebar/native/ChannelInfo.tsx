@@ -1,25 +1,25 @@
-// === Module 16157: ChannelInfo ===
+// === Module 16196: ChannelInfo ===
 
-// Module 16157 (ChannelInfo)
+// Module 16196 (ChannelInfo)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import StageMediaHooks from "StageMediaHooks" /* 5574 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11673 */;
-import useShowConnectedUserLimitDefault from "useShowConnectedUserLimit" /* 11922 */;
-import Badges from "Badges" /* 12831 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16056 */;
-import ChannelBadgeDefault from "ChannelBadge" /* 16145 */;
-import showChannelBadgeDefault from "showChannelBadge" /* 16158 */;
-import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16160 */;
-import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 16161 */;
+import StageMediaHooks from "StageMediaHooks" /* 5581 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11687 */;
+import useShowConnectedUserLimitDefault from "useShowConnectedUserLimit" /* 11936 */;
+import Badges from "Badges" /* 12850 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16095 */;
+import ChannelBadgeDefault from "ChannelBadge" /* 16184 */;
+import showChannelBadgeDefault from "showChannelBadge" /* 16197 */;
+import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16199 */;
+import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 16200 */;
 import react from "react" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 7043 */;
+import NewChannelsStore from "NewChannelsStore" /* 7056 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -67,7 +67,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp8);
     ({ guild, mentionsCount, isMentionLowImportance, isNewChannel } = stateFromStoresObject);
     const tmp11 = useEmbeddedAppsForChannelDefault(channel);
-    const tmpResult4 = channel(7528);
+    const tmpResult4 = channel(7539);
     const unreadThreadsCountForParent = tmpResult4.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
     const obj2 = { mentionsCount, isNewChannel, postsWithUnreadsCount: unreadThreadsCountForParent, muted };
     if (showChannelBadgeDefault(obj2)) {
@@ -115,7 +115,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             hasItem = features.has(constants.COMMUNITY);
           }
           if (hasItem) {
-            const tmpResult5 = channel(5036);
+            const tmpResult5 = channel(5042);
             if (tmpResult5.hasStream(voiceStates)) {
               let tmp26;
               const _Symbol = Symbol;
@@ -133,7 +133,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       }
       if (null != enableActivities) {
         if (enableActivities) {
-          const tmpResult6 = channel(16159);
+          const tmpResult6 = channel(16198);
           if (tmpResult6.showChannelItemEmbeddedActivities(tmp11)) {
             if (cResult[14] === tmp11) {
               let tmp23;
@@ -227,7 +227,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const isMentionLowImportance = stateFromStoresObject.isMentionLowImportance;
   const tmp5 = useEmbeddedAppsForChannelDefault(channel);
-  const obj2 = channel(7528);
+  const obj2 = channel(7539);
   const postsWithUnreadsCount = obj2.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     let tmp18 = null;
@@ -245,7 +245,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           hasItem = features.has(constants.COMMUNITY);
         }
         if (hasItem) {
-          const tmpResult = channel(5036);
+          const tmpResult = channel(5042);
           if (tmpResult.hasStream(voiceStates)) {
             tmp11Result = jsx(tmp(1188).LiveTag, {});
           }
@@ -254,7 +254,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        const tmpResult2 = channel(16159);
+        const tmpResult2 = channel(16198);
         if (tmpResult2.showChannelItemEmbeddedActivities(tmp5)) {
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
         }
@@ -344,7 +344,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
               return tmp16;
             }
           }
-          const tmp18 = jsx(channel(16042).ConnectedUserLimit, { userCount: voiceStatesCount, video: hasVideo, channel });
+          const tmp18 = jsx(channel(16081).ConnectedUserLimit, { userCount: voiceStatesCount, video: hasVideo, channel });
           cResult[8] = channel;
           cResult[9] = hasVideo;
           cResult[10] = voiceStatesCount;
@@ -402,7 +402,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp5 = hasMedia;
   }
   if (tmp4(obj2)) {
-    const ConnectedUserLimit = tmp(16042).ConnectedUserLimit;
+    const ConnectedUserLimit = tmp(16081).ConnectedUserLimit;
     if (!hasVideo) {
       hasVideo = hasMedia;
     }

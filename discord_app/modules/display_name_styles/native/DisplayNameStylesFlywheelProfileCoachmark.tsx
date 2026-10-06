@@ -1,16 +1,16 @@
-// === Module 16972: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 16998: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 16972 (DisplayNameStylesFlywheelProfileCoachmark)
+// Module 16998 (DisplayNameStylesFlywheelProfileCoachmark)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import _modDef2883 from "module_2883" /* 2883 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 16973 */;
+import _modDef2911 from "module_2911" /* 2911 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 16999 */;
 import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -62,7 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let stringResult;
     const intl = markAsDismissed(1126).intl;
     const string = intl.string;
-    const tmp13 = _modDef2883;
+    const tmp13 = _modDef2911;
     if (tmp8) {
       stringResult = string(tmp13.h6sykk);
     } else {
@@ -78,7 +78,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let string2Result;
     const intl2 = markAsDismissed(1126).intl;
     const string2 = intl2.string;
-    const tmp17 = _modDef2883;
+    const tmp17 = _modDef2911;
     if (tmp8) {
       string2Result = string2(tmp17.TyUdka);
     } else {
@@ -142,11 +142,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const items = [UserStore];
   const obj = visible(504);
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = markAsDismissed(4528);
+  const obj2 = markAsDismissed(4534);
   const result = obj2.canUsePremiumProfileCustomization(stateFromStores);
   const intl = visible(1126).intl;
   const string = intl.string;
-  const tmp6 = markAsDismissed(2883);
+  const tmp6 = markAsDismissed(2911);
   const tmp4 = markAsDismissed;
   if (result) {
     stringResult = string(tmp6.h6sykk);
@@ -156,7 +156,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   dependencyMap = stringResult;
   const intl2 = tmp(1126).intl;
   const string2 = intl2.string;
-  const tmp4Result = tmp4(2883);
+  const tmp4Result = tmp4(2911);
   if (result) {
     string2Result = string2(tmp4Result.TyUdka);
   } else {
@@ -178,7 +178,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const tmpResult = visible(9882);
+  const tmpResult = visible(9895);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return null;
 });

@@ -1,8 +1,8 @@
-// === Module 11170: useSortedOnboardingPrompts ===
+// === Module 11183: useSortedOnboardingPrompts ===
 
-// Module 11170 (useSortedOnboardingPrompts)
+// Module 11183 (useSortedOnboardingPrompts)
 import react from "react" /* 19 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6595 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 6602 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

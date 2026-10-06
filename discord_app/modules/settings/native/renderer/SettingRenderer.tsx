@@ -1,38 +1,38 @@
-// === Module 14502: SettingRenderer ===
+// === Module 14518: SettingRenderer ===
 
-// Module 14502 (SettingRenderer)
+// Module 14518 (SettingRenderer)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1881 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import useToken from "useToken" /* 4580 */;
-import react3 from "react" /* 4596 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import TableRadioGroup2 from "TableRadioGroup" /* 6072 */;
-import Tracking from "Tracking" /* 6493 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import TableSwitchRow2 from "TableSwitchRow" /* 6698 */;
-import FormSwitch from "FormSwitch" /* 6699 */;
-import VolumeSliderDefault from "VolumeSlider" /* 9666 */;
-import ClydeIcon from "ClydeIcon" /* 10547 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14503 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 14505 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14506 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import useToken from "useToken" /* 4586 */;
+import react3 from "react" /* 4602 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import TableRadioGroup2 from "TableRadioGroup" /* 6079 */;
+import Tracking from "Tracking" /* 6500 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import TableSwitchRow2 from "TableSwitchRow" /* 6705 */;
+import FormSwitch from "FormSwitch" /* 6706 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9679 */;
+import ClydeIcon from "ClydeIcon" /* 10560 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14519 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 14521 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14522 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties_mod from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14501 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import SettingRendererConstants from "SettingRendererConstants" /* 11130 */;
+import SettingRendererConstants from "SettingRendererConstants" /* 11143 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -730,7 +730,7 @@ let closure_27 = react.memo((arg0) => {
   let trailing;
   const tmp = trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14505);
+  let obj = trailing(14521);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
@@ -756,19 +756,19 @@ let closure_27 = react.memo((arg0) => {
   }, items);
   let obj2 = { label: title, subLabel: description, onPress: tmp12, variant, disabled: isDisabled, icon: tmp11Result, trailing: tmp11Result2, start, end };
   tmp12 = null;
-  const TableRow = tmp(5993).TableRow;
+  const TableRow = tmp(6000).TableRow;
   if (null != trailing) {
     tmp12 = callback;
   }
   tmp11Result = null;
   if (null != IconComponent) {
     const obj3 = { IconComponent, variant };
-    tmp11Result = closure_14(tmp(5993).TableRow.Icon, obj3);
+    tmp11Result = closure_14(tmp(6000).TableRow.Icon, obj3);
   }
   tmp11Result2 = null;
   if (null != trailing) {
     const obj4 = { text: trailing };
-    tmp11Result2 = closure_14(tmp(5993).TableRow.TrailingText, obj4);
+    tmp11Result2 = closure_14(tmp(6000).TableRow.TrailingText, obj4);
   }
   const children = [closure_14(TableRow, obj2), ];
   if (highlightSettingItem) {

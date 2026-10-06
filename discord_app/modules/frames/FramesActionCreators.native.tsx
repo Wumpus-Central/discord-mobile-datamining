@@ -1,9 +1,9 @@
-// === Module 8986: FramesActionCreators ===
+// === Module 9019: FramesActionCreators ===
 
-// Module 8986 (FramesActionCreators)
-import launchFrameAll from "launchFrame" /* 8988 */;
+// Module 9019 (FramesActionCreators)
+import launchFrameAll from "launchFrame" /* 9021 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import size from "module_2" /* 2 */;
 
 let c1, value;

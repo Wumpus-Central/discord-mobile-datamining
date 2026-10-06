@@ -1,16 +1,16 @@
-// === Module 11634: ForumPostContainer ===
+// === Module 11648: ForumPostContainer ===
 
-// Module 11634 (ForumPostContainer)
+// Module 11648 (ForumPostContainer)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10031 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10044 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
-import ReanimatedHelperTypes from "ReanimatedHelperTypes" /* 6571 */;
+import createStyles from "createStyles" /* 4896 */;
+import ReanimatedHelperTypes from "ReanimatedHelperTypes" /* 6578 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

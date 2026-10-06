@@ -1,6 +1,6 @@
-// === Module 16683: ? ===
+// === Module 16704: ? ===
 
-// Module 16683
+// Module 16704
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BunnyIllocon-2x.png.js");

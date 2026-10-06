@@ -1,9 +1,9 @@
-// === Module 7251: BackgroundTaskManager ===
+// === Module 7264: BackgroundTaskManager ===
 
-// Module 7251 (BackgroundTaskManager)
+// Module 7264 (BackgroundTaskManager)
 import react_native from "react-native" /* 17 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7252 */;
-import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 7254 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7265 */;
+import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 7267 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;

@@ -1,14 +1,14 @@
-// === Module 16206: MobileGameCommunitiesActionCreators ===
+// === Module 16246: MobileGameCommunitiesActionCreators ===
 
-// Module 16206 (MobileGameCommunitiesActionCreators)
+// Module 16246 (MobileGameCommunitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _modDef1478 from "module_1478" /* 1478 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13524 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15450 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13540 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15466 */;
 import get_initialized from "get initialized" /* 504 */;
 import size from "module_2" /* 2 */;
 

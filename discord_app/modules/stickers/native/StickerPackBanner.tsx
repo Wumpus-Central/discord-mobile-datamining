@@ -1,9 +1,9 @@
-// === Module 10125: StickerPackBanner ===
+// === Module 10138: StickerPackBanner ===
 
-// Module 10125 (StickerPackBanner)
+// Module 10138 (StickerPackBanner)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import StickersUtils from "StickersUtils" /* 5428 */;
+import StickersUtils from "StickersUtils" /* 5435 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,6 +1,6 @@
-// === Module 8041: SharePreparingModalConstants ===
+// === Module 8051: SharePreparingModalConstants ===
 
-// Module 8041 (SharePreparingModalConstants)
+// Module 8051 (SharePreparingModalConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/share/native/SharePreparingModalConstants.tsx");

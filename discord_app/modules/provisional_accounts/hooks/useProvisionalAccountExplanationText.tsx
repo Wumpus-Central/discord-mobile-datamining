@@ -1,11 +1,11 @@
-// === Module 12295: useProvisionalAccountExplanationText ===
+// === Module 12310: useProvisionalAccountExplanationText ===
 
-// Module 12295 (useProvisionalAccountExplanationText)
+// Module 12310 (useProvisionalAccountExplanationText)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12296 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 12311 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

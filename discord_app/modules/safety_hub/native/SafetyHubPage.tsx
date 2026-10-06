@@ -1,6 +1,6 @@
-// === Module 14551: SafetyHubPage ===
+// === Module 14567: SafetyHubPage ===
 
-// Module 14551 (SafetyHubPage)
+// Module 14567 (SafetyHubPage)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,26 +8,26 @@ import intl7 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import _modDef3109 from "module_3109" /* 3109 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
-import MetricEvents from "MetricEvents" /* 5414 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8093 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8274 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11493 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11495 */;
-import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14552 */;
-import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 14553 */;
+import _modDef3137 from "module_3137" /* 3137 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
+import MetricEvents from "MetricEvents" /* 5421 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8126 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8307 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11506 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11508 */;
+import useAvailableAgeVerificationMethods from "useAvailableAgeVerificationMethods" /* 14568 */;
+import useShouldShowInitialGoogleWalletBanner from "useShouldShowInitialGoogleWalletBanner" /* 14569 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import SafetyHubStore from "SafetyHubStore" /* 8106 */;
+import SafetyHubStore from "SafetyHubStore" /* 8139 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -166,7 +166,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "secondary", size: "sm", text: intl.string(require("intl").t.IcA9iD), onPress: handleRetryClick };
-    const Button = tmp(5594).Button;
+    const Button = tmp(5601).Button;
     intl = tmp(1126).intl;
     const tmp8 = closure_12(Button, obj2);
     cResult[0] = tmp8;
@@ -182,7 +182,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return closure_12(Text_Text.Text, obj, arg1);
         }
     };
-    const formatResult = intl2.format(_modDef3109.vPoM8y, obj3);
+    const formatResult = intl2.format(_modDef3137.vPoM8y, obj3);
     cResult[1] = tmp4;
     cResult[2] = formatResult;
     tmp9 = formatResult;
@@ -208,7 +208,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj2;
   let obj3;
   _require = closure_22();
-  let obj = { messageType: require("native").HelpMessageTypes.ERROR, button: closure_12(Button, obj2), children: intl2.format(_modDef3109.vPoM8y, obj3) };
+  let obj = { messageType: require("native").HelpMessageTypes.ERROR, button: closure_12(Button, obj2), children: intl2.format(_modDef3137.vPoM8y, obj3) };
   const HelpMessage = require("native").HelpMessage;
   obj2 = { variant: "secondary", size: "sm", text: intl.string(require("intl").t.IcA9iD), onPress: handleRetryClick };
   Button = require("components/Button/Button").Button;
@@ -604,7 +604,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         const obj2 = ActionSheetActionCreatorsDefault;
-        obj2.openLazy(asyncRequire(14555, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        obj2.openLazy(asyncRequire(14571, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     const obj = ActionSheetActionCreatorsDefault;

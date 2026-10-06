@@ -1,6 +1,6 @@
-// === Module 16763: ConjureTraceUtils ===
+// === Module 16784: ConjureTraceUtils ===
 
-// Module 16763 (ConjureTraceUtils)
+// Module 16784 (ConjureTraceUtils)
 import size from "module_2" /* 2 */;
 
 let NEGATIVE_INFINITY, POSITIVE_INFINITY;

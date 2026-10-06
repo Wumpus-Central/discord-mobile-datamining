@@ -1,7 +1,7 @@
-// === Module 10806: iapProducts ===
+// === Module 10819: iapProducts ===
 
-// Module 10806 (iapProducts)
-import billing_iapProducts from "billing/iapProducts" /* 10807 */;
+// Module 10819 (iapProducts)
+import billing_iapProducts from "billing/iapProducts" /* 10820 */;
 import size from "module_2" /* 2 */;
 
 const obj = {

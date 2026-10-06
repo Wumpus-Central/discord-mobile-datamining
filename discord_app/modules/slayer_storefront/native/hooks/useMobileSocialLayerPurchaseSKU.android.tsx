@@ -1,9 +1,9 @@
-// === Module 10543: useMobileSocialLayerPurchaseSKU ===
+// === Module 10556: useMobileSocialLayerPurchaseSKU ===
 
-// Module 10543 (useMobileSocialLayerPurchaseSKU)
+// Module 10556 (useMobileSocialLayerPurchaseSKU)
 import Constants from "Constants" /* 1085 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 8872 */;
-import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10544 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 8901 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10557 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

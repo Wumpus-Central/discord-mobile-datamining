@@ -1,22 +1,22 @@
-// === Module 13668: AddFriendById ===
+// === Module 13684: AddFriendById ===
 
-// Module 13668 (AddFriendById)
+// Module 13684 (AddFriendById)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import TextField2 from "TextField" /* 6100 */;
-import FriendsUtils from "FriendsUtils" /* 9438 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13669 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import TextField2 from "TextField" /* 6107 */;
+import FriendsUtils from "FriendsUtils" /* 9451 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13685 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -813,12 +813,12 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     items6 = [, , ];
     ({ messageLabel: arr7[0], inputHeaderText: arr7[1] } = tmp);
     items6[2] = headerTextStyle;
-    const Text = sourcePage(4886).Text;
+    const Text = sourcePage(4892).Text;
     intl = sourcePage(1126).intl;
     const items7 = [closure_9(Text, obj6), , ];
     const obj7 = { returnKeyType: "done", submitBehavior: "submit", value: first2, maxLength: 120, onSubmitEditing: handleSubmitEditing, onChange: callback1, status: str2 };
     str2 = undefined;
-    const TextArea = sourcePage(6580).TextArea;
+    const TextArea = sourcePage(6587).TextArea;
     if (first1.field === constants2.MESSAGE) {
       if (first1.status === constants.ERROR) {
         str2 = "error";
@@ -836,7 +836,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
       enabled = closure_10(tmp16, obj5);
     }
     const obj9 = { style: tmp.messageFooterText, variant: "text-xs/medium", color: "text-muted", children: intl2.string(sourcePage(1126).t.UtfQNw) };
-    const Text2 = sourcePage(4886).Text;
+    const Text2 = sourcePage(4892).Text;
     intl2 = sourcePage(1126).intl;
     tmp17Result = closure_9(Text2, obj9);
   }
@@ -846,7 +846,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
   const obj11 = { style: tmp.redesignGrow };
   items8[1] = closure_9(first1, obj11);
   const obj12 = { size: "lg", text: intl3.string(sourcePage(1126).t["PMsq/b"]), disabled: length <= 0, onPress: handleSubmitEditing, loading: first1.status === constants.LOADING, grow: false };
-  const Button = sourcePage(5594).Button;
+  const Button = sourcePage(5601).Button;
   intl3 = sourcePage(1126).intl;
   items8[2] = closure_9(Button, obj12);
   return closure_10(closure_11, obj10);

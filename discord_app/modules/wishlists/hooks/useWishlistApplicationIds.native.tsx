@@ -1,6 +1,6 @@
-// === Module 10528: useWishlistApplicationIds ===
+// === Module 10541: useWishlistApplicationIds ===
 
-// Module 10528 (useWishlistApplicationIds)
+// Module 10541 (useWishlistApplicationIds)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import react from "react" /* 19 */;

@@ -1,10 +1,10 @@
-// === Module 9166: useEventSchedule ===
+// === Module 9201: useEventSchedule ===
 
-// Module 9166 (useEventSchedule)
+// Module 9201 (useEventSchedule)
 import react from "react" /* 576 */;
-import ScheduleUtils from "ScheduleUtils" /* 9163 */;
-import useEventException from "useEventException" /* 9167 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
+import ScheduleUtils from "ScheduleUtils" /* 9198 */;
+import useEventException from "useEventException" /* 9202 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

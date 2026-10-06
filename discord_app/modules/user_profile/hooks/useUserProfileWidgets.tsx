@@ -1,9 +1,9 @@
-// === Module 12705: useUserProfileWidgets ===
+// === Module 12720: useUserProfileWidgets ===
 
-// Module 12705 (useUserProfileWidgets)
+// Module 12720 (useUserProfileWidgets)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
-import WidgetStore from "WidgetStore" /* 8588 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
+import WidgetStore from "WidgetStore" /* 8623 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

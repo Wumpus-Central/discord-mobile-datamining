@@ -1,8 +1,8 @@
-// === Module 13384: orderMarketablePerksForDisplay ===
+// === Module 13403: orderMarketablePerksForDisplay ===
 
-// Module 13384 (orderMarketablePerksForDisplay)
-import GameServerConstants from "GameServerConstants" /* 4769 */;
-import Powerups from "Powerups" /* 4771 */;
+// Module 13403 (orderMarketablePerksForDisplay)
+import GameServerConstants from "GameServerConstants" /* 4775 */;
+import Powerups from "Powerups" /* 4777 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

@@ -1,7 +1,7 @@
-// === Module 8439: useGetOrFetchStorefrontPrices ===
+// === Module 8472: useGetOrFetchStorefrontPrices ===
 
-// Module 8439 (useGetOrFetchStorefrontPrices)
-import StorefrontActionCreators from "StorefrontActionCreators" /* 8440 */;
+// Module 8472 (useGetOrFetchStorefrontPrices)
+import StorefrontActionCreators from "StorefrontActionCreators" /* 8473 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

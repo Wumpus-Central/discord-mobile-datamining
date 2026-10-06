@@ -1,9 +1,9 @@
-// === Module 7860: DisplayProfile ===
+// === Module 7871: DisplayProfile ===
 
-// Module 7860 (DisplayProfile)
+// Module 7871 (DisplayProfile)
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7837 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 7848 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,16 +1,16 @@
-// === Module 17760: GuildSettingsServerTagColorPickerActionSheet ===
+// === Module 17806: GuildSettingsServerTagColorPickerActionSheet ===
 
-// Module 17760 (GuildSettingsServerTagColorPickerActionSheet)
+// Module 17806 (GuildSettingsServerTagColorPickerActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14424 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14440 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildTagConstants from "GuildTagConstants" /* 7603 */;
+import GuildTagConstants from "GuildTagConstants" /* 7614 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,19 +1,19 @@
-// === Module 11675: BannerBase ===
+// === Module 11689: BannerBase ===
 
-// Module 11675 (BannerBase)
+// Module 11689 (BannerBase)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import spring from "spring" /* 5597 */;
-import ApplicationsImage from "ApplicationsImage" /* 11664 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import spring from "spring" /* 5604 */;
+import ApplicationsImage from "ApplicationsImage" /* 11678 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -291,7 +291,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   ({ bannerMeasured: sharedValue, withDelay: require("ReanimatedRexport").withDelay, withSpring: require("spring").withSpring, SPRING_CONFIG });
   const animatedStyle = obj5.useAnimatedStyle(fn);
   const items2 = [tmp.banner, , ];
-  View = sharedValue(4612).View;
+  View = sharedValue(4618).View;
   if (tmp3 > 0) {
     num = 1;
   }
@@ -314,10 +314,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   items2[2] = animatedStyle;
   const obj8 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: items3 };
   items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
-  items4 = [closure_7(sharedValue(5605), obj8), , ];
+  items4 = [closure_7(sharedValue(5612), obj8), , ];
   const obj9 = { style: tmp.imageContainer, children: items5 };
-  const obj10 = { style: tmp.trinketsLottie, source: require("module_11676"), autoPlay: !stateFromStores };
-  const tmp7Result = sharedValue(5920);
+  const obj10 = { style: tmp.trinketsLottie, source: require("module_11690"), autoPlay: !stateFromStores };
+  const tmp7Result = sharedValue(5927);
   items5 = [closure_7(tmp7Result, obj10), image];
   items4[1] = closure_8(View, obj9);
   const obj11 = { style: tmp.bannerTextContainer, children: closure_7(require("Text/Text").Text, obj12) };

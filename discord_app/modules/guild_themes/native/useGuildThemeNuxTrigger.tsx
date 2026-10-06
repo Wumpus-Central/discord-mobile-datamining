@@ -1,10 +1,10 @@
-// === Module 16084: useGuildThemeNuxTrigger ===
+// === Module 16123: useGuildThemeNuxTrigger ===
 
-// Module 16084 (useGuildThemeNuxTrigger)
+// Module 16123 (useGuildThemeNuxTrigger)
 import get_initialized from "get initialized" /* 504 */;
-import useGuildThemeNuxTriggerDefault from "useGuildThemeNuxTrigger" /* 16090 */;
+import useGuildThemeNuxTriggerDefault from "useGuildThemeNuxTrigger" /* 16129 */;
 import react from "react" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

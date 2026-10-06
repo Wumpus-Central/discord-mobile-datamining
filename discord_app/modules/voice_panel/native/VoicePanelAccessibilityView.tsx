@@ -1,11 +1,11 @@
-// === Module 17211: VoicePanelAccessibilityView ===
+// === Module 17240: VoicePanelAccessibilityView ===
 
-// Module 17211 (VoicePanelAccessibilityView)
+// Module 17240 (VoicePanelAccessibilityView)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import AccessibilityView from "AccessibilityView" /* 5767 */;
-import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17206 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17207 */;
+import AccessibilityView from "AccessibilityView" /* 5774 */;
+import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17235 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17236 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

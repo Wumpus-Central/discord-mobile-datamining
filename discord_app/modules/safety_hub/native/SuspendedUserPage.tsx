@@ -1,23 +1,23 @@
-// === Module 17088: SuspendedUserPage ===
+// === Module 17114: SuspendedUserPage ===
 
-// Module 17088 (SuspendedUserPage)
+// Module 17114 (SuspendedUserPage)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4809 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import IconButton2 from "IconButton" /* 7575 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 14551 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4815 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import IconButton2 from "IconButton" /* 7586 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 14567 */;
 import react from "react" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8106 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8093 */;
+import SafetyHubStore from "SafetyHubStore" /* 8139 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8126 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

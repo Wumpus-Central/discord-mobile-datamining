@@ -1,15 +1,15 @@
-// === Module 10050: FavoritesDismissibleContent ===
+// === Module 10063: FavoritesDismissibleContent ===
 
-// Module 10050 (FavoritesDismissibleContent)
+// Module 10063 (FavoritesDismissibleContent)
 import react2 from "react" /* 576 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6891 */;
-import useGetDismissibleContent from "useGetDismissibleContent" /* 6892 */;
-import FavoritesHooks from "FavoritesHooks" /* 10036 */;
-import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10038 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10048 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10049 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6901 */;
+import useGetDismissibleContent from "useGetDismissibleContent" /* 6902 */;
+import FavoritesHooks from "FavoritesHooks" /* 10049 */;
+import FavoritesGuildExperiment from "FavoritesGuildExperiment" /* 10051 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10061 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10062 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

@@ -1,11 +1,11 @@
-// === Module 9555: InviteQueue ===
+// === Module 9568: InviteQueue ===
 
-// Module 9555 (InviteQueue)
+// Module 9568 (InviteQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import Queue from "Queue" /* 7463 */;
+import Queue from "Queue" /* 7474 */;
 import size from "module_2" /* 2 */;
 
 let dependencyMap;
@@ -37,7 +37,7 @@ function drain(location, sum) {
   if (self.GROUP_DM !== type) {
     if (self.CHANNEL !== type) {
       if (self.USER === type) {
-        const obj = inviteAnalyticsMetadata(4903);
+        const obj = inviteAnalyticsMetadata(4909);
         const ensurePrivateChannelResult = obj.ensurePrivateChannel(location.user.id);
         ensurePrivateChannelResult.then((result) => {
           const channel = ChannelStore.getChannel(result);

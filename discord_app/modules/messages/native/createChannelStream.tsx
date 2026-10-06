@@ -1,15 +1,15 @@
-// === Module 11562: createChannelStream ===
+// === Module 11575: createChannelStream ===
 
-// Module 11562 (createChannelStream)
+// Module 11575 (createChannelStream)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Constants from "Constants" /* 1085 */;
-import createConversationHeader from "createConversationHeader" /* 11563 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 11565 */;
-import tryInjectMessage from "tryInjectMessage" /* 11566 */;
-import PushFeedbackStore_mod from "PushFeedbackStore" /* 11087 */;
-import EditMessageStore from "EditMessageStore" /* 7165 */;
-import UploadStore from "UploadStore" /* 7466 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7592 */;
+import createConversationHeader from "createConversationHeader" /* 11576 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 11578 */;
+import tryInjectMessage from "tryInjectMessage" /* 11579 */;
+import PushFeedbackStore_mod from "PushFeedbackStore" /* 11100 */;
+import EditMessageStore from "EditMessageStore" /* 7178 */;
+import UploadStore from "UploadStore" /* 7477 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7603 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

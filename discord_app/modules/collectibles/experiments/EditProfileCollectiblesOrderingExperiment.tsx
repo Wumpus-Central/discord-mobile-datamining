@@ -1,6 +1,6 @@
-// === Module 13006: EditProfileCollectiblesOrderingExperiment ===
+// === Module 13025: EditProfileCollectiblesOrderingExperiment ===
 
-// Module 13006 (EditProfileCollectiblesOrderingExperiment)
+// Module 13025 (EditProfileCollectiblesOrderingExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

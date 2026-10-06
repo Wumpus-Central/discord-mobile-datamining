@@ -1,12 +1,12 @@
-// === Module 16880: useSearchMessagesLoadingState ===
+// === Module 16905: useSearchMessagesLoadingState ===
 
-// Module 16880 (useSearchMessagesLoadingState)
+// Module 16905 (useSearchMessagesLoadingState)
 import get_initialized from "get initialized" /* 504 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
-import SearchUtils from "SearchUtils" /* 11968 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16816 */;
-import SearchMessageStore from "SearchMessageStore" /* 6784 */;
-import SearchQueryStore from "SearchQueryStore" /* 11967 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
+import SearchUtils from "SearchUtils" /* 11987 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16837 */;
+import SearchMessageStore from "SearchMessageStore" /* 6794 */;
+import SearchQueryStore from "SearchQueryStore" /* 11994 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

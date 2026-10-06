@@ -1,18 +1,18 @@
-// === Module 10127: Sticker ===
+// === Module 10140: Sticker ===
 
-// Module 10127 (Sticker)
+// Module 10140 (Sticker)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import shared from "shared" /* 4729 */;
-import StickersUtils from "StickersUtils" /* 5428 */;
-import StickersTypes from "StickersTypes" /* 5429 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import AssetRegistryDefault from "AssetRegistry" /* 6626 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 6627 */;
-import NativeLottieView from "NativeLottieView" /* 7659 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 10128 */;
+import shared from "shared" /* 4735 */;
+import StickersUtils from "StickersUtils" /* 5435 */;
+import StickersTypes from "StickersTypes" /* 5436 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import AssetRegistryDefault from "AssetRegistry" /* 6633 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 6634 */;
+import NativeLottieView from "NativeLottieView" /* 7670 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 10141 */;
 import react from "react" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

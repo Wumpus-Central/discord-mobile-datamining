@@ -1,18 +1,18 @@
-// === Module 10738: GuildIconWithChannelType ===
+// === Module 10751: GuildIconWithChannelType ===
 
-// Module 10738 (GuildIconWithChannelType)
+// Module 10751 (GuildIconWithChannelType)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import ClipView from "ClipView" /* 8469 */;
-import Pile2 from "Pile" /* 10739 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import ClipView from "ClipView" /* 8502 */;
+import Pile2 from "Pile" /* 10752 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

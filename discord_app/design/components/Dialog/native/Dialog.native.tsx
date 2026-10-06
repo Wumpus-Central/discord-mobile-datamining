@@ -1,10 +1,10 @@
-// === Module 5766: Dialog ===
+// === Module 5773: Dialog ===
 
-// Module 5766 (Dialog)
+// Module 5773 (Dialog)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import AccessibilityView2 from "AccessibilityView" /* 5767 */;
+import AccessibilityView2 from "AccessibilityView" /* 5774 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

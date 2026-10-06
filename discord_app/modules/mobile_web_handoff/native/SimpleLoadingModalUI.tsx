@@ -1,10 +1,10 @@
-// === Module 6822: SimpleLoadingModalUI ===
+// === Module 6832: SimpleLoadingModalUI ===
 
-// Module 6822 (SimpleLoadingModalUI)
+// Module 6832 (SimpleLoadingModalUI)
 import Fragment from "Fragment" /* 21 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

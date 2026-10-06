@@ -1,15 +1,15 @@
-// === Module 16450: ContentInventoryEntryContainer ===
+// === Module 16490: ContentInventoryEntryContainer ===
 
-// Module 16450 (ContentInventoryEntryContainer)
+// Module 16490 (ContentInventoryEntryContainer)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8029 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16394 */;
+import createICYMIStyles from "createICYMIStyles" /* 16434 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

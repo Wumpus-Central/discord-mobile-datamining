@@ -1,18 +1,18 @@
-// === Module 13716: ShareAttachments ===
+// === Module 13734: ShareAttachments ===
 
-// Module 13716 (ShareAttachments)
+// Module 13734 (ShareAttachments)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import timing from "timing" /* 4891 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 7274 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11043 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import timing from "timing" /* 4897 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 7287 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11056 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

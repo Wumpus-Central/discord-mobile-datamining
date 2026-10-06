@@ -1,19 +1,19 @@
-// === Module 16960: YouScreenNavIcon ===
+// === Module 16986: YouScreenNavIcon ===
 
-// Module 16960 (YouScreenNavIcon)
+// Module 16986 (YouScreenNavIcon)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import mergeProps from "mergeProps" /* 4585 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ClipView from "ClipView" /* 8469 */;
-import native from "native" /* 8567 */;
-import getIconSize from "getIconSize" /* 16347 */;
-import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 16961 */;
+import mergeProps from "mergeProps" /* 4591 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ClipView from "ClipView" /* 8502 */;
+import native from "native" /* 8602 */;
+import getIconSize from "getIconSize" /* 16387 */;
+import YouScreenNavIconMeasurer from "YouScreenNavIconMeasurer" /* 16987 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

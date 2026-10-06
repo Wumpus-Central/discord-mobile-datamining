@@ -1,23 +1,23 @@
-// === Module 12405: HubEmailConnectionSubmitSchool ===
+// === Module 12420: HubEmailConnectionSubmitSchool ===
 
-// Module 12405 (HubEmailConnectionSubmitSchool)
+// Module 12420 (HubEmailConnectionSubmitSchool)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl6 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6097 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6471 */;
-import HubConstants from "HubConstants" /* 12385 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12394 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6104 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6478 */;
+import HubConstants from "HubConstants" /* 12400 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12409 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c5, closure_2, dependencyMap;

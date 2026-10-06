@@ -1,7 +1,7 @@
-// === Module 7923: useProfileTileGradient ===
+// === Module 7934: useProfileTileGradient ===
 
-// Module 7923 (useProfileTileGradient)
-import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7858 */;
+// Module 7934 (useProfileTileGradient)
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 7869 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

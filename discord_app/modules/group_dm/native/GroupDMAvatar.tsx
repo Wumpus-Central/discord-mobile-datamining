@@ -1,15 +1,15 @@
-// === Module 10648: GroupDMAvatar ===
+// === Module 10661: GroupDMAvatar ===
 
-// Module 10648 (GroupDMAvatar)
+// Module 10661 (GroupDMAvatar)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ClipView from "ClipView" /* 8469 */;
+import ClipView from "ClipView" /* 8502 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

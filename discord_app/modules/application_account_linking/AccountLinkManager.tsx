@@ -1,13 +1,13 @@
-// === Module 17122: AccountLinkManager ===
+// === Module 17151: AccountLinkManager ===
 
-// Module 17122 (AccountLinkManager)
+// Module 17151 (AccountLinkManager)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6602 */;
-import AccountLinkStore from "AccountLinkStore" /* 17123 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 6609 */;
+import AccountLinkStore from "AccountLinkStore" /* 17152 */;
 import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let metroImportDefault;
@@ -46,7 +46,7 @@ let obj = function _claimIncentivizedAccountLinkingReward() {
     }
     await "IconComponent";
     ({ applicationId: c0, onSuccess: c1, onError: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

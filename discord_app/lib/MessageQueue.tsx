@@ -1,19 +1,19 @@
-// === Module 7462: MessageQueue ===
+// === Module 7473: MessageQueue ===
 
-// Module 7462 (MessageQueue)
+// Module 7473 (MessageQueue)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import NetStats from "NetStats" /* 6968 */;
-import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 7464 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import NetStats from "NetStats" /* 6981 */;
+import getOverlayMessageAnaylticsLocationDefault from "getOverlayMessageAnaylticsLocation" /* 7475 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import NetworkStore from "NetworkStore" /* 4939 */;
+import NetworkStore from "NetworkStore" /* 4945 */;
 import Constants from "Constants" /* 1085 */;
-import Queue from "Queue" /* 7463 */;
+import Queue from "Queue" /* 7474 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -303,7 +303,7 @@ function handleCommand(message, fn) {
   const guildId = message.guildId;
   const nonce = message.nonce;
   ({ attachments, maxSizeCallback: require } = message);
-  const body = { type: require("Server").InteractionTypes.APPLICATION_COMMAND, application_id: applicationId, guild_id: guildId, channel_id: channelId, session_id: AuthenticationStore.getSessionId(), data, nonce, analytics_location, section_name: sectionName, source };
+  const body = { type: require("InteractionTypes").InteractionTypes.APPLICATION_COMMAND, application_id: applicationId, guild_id: guildId, channel_id: channelId, session_id: AuthenticationStore.getSessionId(), data, nonce, analytics_location, section_name: sectionName, source };
   ({ applicationId, channelId, data, analytics_location, sectionName, source } = message);
   const tmp2 = nonce;
   if (null != attachments) {

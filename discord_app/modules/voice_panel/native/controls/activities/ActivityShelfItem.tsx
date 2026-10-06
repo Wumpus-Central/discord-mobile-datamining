@@ -1,6 +1,6 @@
-// === Module 17290: ActivityShelfItem ===
+// === Module 17319: ActivityShelfItem ===
 
-// Module 17290 (ActivityShelfItem)
+// Module 17319 (ActivityShelfItem)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
@@ -8,28 +8,28 @@ import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import FormConstants from "FormConstants" /* 1192 */;
 import react_nativeDefault from "react-native" /* 1885 */;
-import native2 from "native" /* 4589 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import Pressables from "Pressables" /* 5909 */;
-import NativeViewDefault from "NativeView" /* 5976 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
-import TestModeUtils from "TestModeUtils" /* 8512 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8991 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9149 */;
-import useActivityShelfItem from "useActivityShelfItem" /* 11671 */;
-import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11710 */;
-import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11765 */;
-import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 11770 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12460 */;
-import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17287 */;
-import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17288 */;
-import useActivityUsersDefault from "useActivityUsers" /* 17289 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 17291 */;
+import native2 from "native" /* 4595 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import Pressables from "Pressables" /* 5916 */;
+import NativeViewDefault from "NativeView" /* 5983 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
+import TestModeUtils from "TestModeUtils" /* 8545 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9024 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 9184 */;
+import useActivityShelfItem from "useActivityShelfItem" /* 11685 */;
+import ActivityShelfBadgeDefault from "ActivityShelfBadge" /* 11724 */;
+import useLaunchingActivityButtonStateDefault from "useLaunchingActivityButtonState" /* 11779 */;
+import getItemSubtitleForMaxPlayers from "getItemSubtitleForMaxPlayers" /* 11784 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12475 */;
+import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground" /* 17316 */;
+import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary" /* 17317 */;
+import useActivityUsersDefault from "useActivityUsers" /* 17318 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 17320 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import ColorUtils_mod from "ColorUtils" /* 4727 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import ColorUtils_mod from "ColorUtils" /* 4733 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

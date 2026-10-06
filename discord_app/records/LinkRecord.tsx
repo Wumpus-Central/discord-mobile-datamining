@@ -1,6 +1,6 @@
-// === Module 9499: LinkRecord ===
+// === Module 9512: LinkRecord ===
 
-// Module 9499 (LinkRecord)
+// Module 9512 (LinkRecord)
 import Constants from "Constants" /* 1085 */;
 import Record from "Record" /* 1392 */;
 import size from "module_2" /* 2 */;

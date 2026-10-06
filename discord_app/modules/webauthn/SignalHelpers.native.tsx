@@ -1,6 +1,6 @@
-// === Module 6087: SignalHelpers ===
+// === Module 6094: SignalHelpers ===
 
-// Module 6087 (SignalHelpers)
+// Module 6094 (SignalHelpers)
 import LoggerDefault from "Logger" /* 3 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;

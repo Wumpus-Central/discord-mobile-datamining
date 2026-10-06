@@ -1,23 +1,23 @@
-// === Module 13712: ShareScreen ===
+// === Module 13730: ShareScreen ===
 
-// Module 13712 (ShareScreen)
+// Module 13730 (ShareScreen)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import UserRowConstants from "UserRowConstants" /* 10592 */;
-import ForwardConstants from "ForwardConstants" /* 11309 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 13716 */;
-import ShareEmbedDefault from "ShareEmbed" /* 13717 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import UserRowConstants from "UserRowConstants" /* 10605 */;
+import ForwardConstants from "ForwardConstants" /* 11322 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 13734 */;
+import ShareEmbedDefault from "ShareEmbed" /* 13735 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 
@@ -298,7 +298,7 @@ export default function ShareScreen(appEntryKey) {
                                       tmp = undefined;
                                       c5 = 1;
                                       c6 = 1;
-                                      return { value: "Set", done: true };
+                                      return { value: "Reflect", done: true };
                                     }
                                   } else if (1 === c5) {
                                     if (destination === 1) {

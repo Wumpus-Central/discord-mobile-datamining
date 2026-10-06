@@ -1,15 +1,15 @@
-// === Module 14630: AgeConfirmationNotice ===
+// === Module 14646: AgeConfirmationNotice ===
 
-// Module 14630 (AgeConfirmationNotice)
+// Module 14646 (AgeConfirmationNotice)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 14498 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14514 */;
 import react from "react" /* 19 */;
-import Constants from "Constants" /* 8075 */;
+import Constants from "Constants" /* 8108 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -34,7 +34,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp = sensitiveContentFilterHelpArticle;
   let obj = sensitiveContentFilterHelpArticle(576);
   const cResult = obj.c(11);
-  let obj2 = sensitiveContentFilterHelpArticle(6804);
+  let obj2 = sensitiveContentFilterHelpArticle(6814);
   sensitiveContentFilterHelpArticle = obj2.useSensitiveContentFilterHelpArticle();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o() {
@@ -87,7 +87,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     tmp10 = cResult[5];
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-    const Button = tmp(5594).Button;
+    const Button = tmp(5601).Button;
     const intl = tmp(1126).intl;
     const tmp14 = <Button variant="secondary" size="sm" text={intl.string(tmp(1126).t.FDSSia)} onPress={tmp9} />;
     cResult[6] = tmp14;
@@ -125,7 +125,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let intl2;
   let onPress;
   let sensitiveContentFilterHelpArticle;
-  let obj = sensitiveContentFilterHelpArticle(6804);
+  let obj = sensitiveContentFilterHelpArticle(6814);
   sensitiveContentFilterHelpArticle = obj.useSensitiveContentFilterHelpArticle();
   const effect = react.useEffect(() => {
     const obj = sensitiveContentFilterHelpArticle(dependencyMap[7]);
@@ -151,7 +151,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   ({ messageType: sensitiveContentFilterHelpArticle(1188).HelpMessageTypes.INFO, borderRadius: nativeDefault.radii.lg, button: null, children: intl2.format(sensitiveContentFilterHelpArticle(1126).t.mFgsfg, obj6) });
   const HelpMessage = sensitiveContentFilterHelpArticle(1188).HelpMessage;
   ({ variant: "secondary", size: "sm", text: intl.string(sensitiveContentFilterHelpArticle(1126).t.FDSSia), onPress: callback });
-  const Button = sensitiveContentFilterHelpArticle(5594).Button;
+  const Button = sensitiveContentFilterHelpArticle(5601).Button;
   intl = sensitiveContentFilterHelpArticle(1126).intl;
   intl2 = sensitiveContentFilterHelpArticle(1126).intl;
   return <View style={obj3}>{null}</View>;

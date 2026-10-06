@@ -1,26 +1,26 @@
-// === Module 10379: MediaKeyboardItem ===
+// === Module 10392: MediaKeyboardItem ===
 
-// Module 10379 (MediaKeyboardItem)
+// Module 10392 (MediaKeyboardItem)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import timing from "timing" /* 4891 */;
-import ImageIcon from "ImageIcon" /* 5871 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10123 */;
-import AttachmentIcon from "AttachmentIcon" /* 10369 */;
-import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10381 */;
-import CameraIcon from "CameraIcon" /* 10384 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import timing from "timing" /* 4897 */;
+import ImageIcon from "ImageIcon" /* 5878 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10136 */;
+import AttachmentIcon from "AttachmentIcon" /* 10382 */;
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10394 */;
+import CameraIcon from "CameraIcon" /* 10397 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
-import DeviceConstants from "DeviceConstants" /* 10380 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
+import DeviceConstants from "DeviceConstants" /* 10393 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import ColorUtils_mod from "ColorUtils" /* 4727 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import ColorUtils_mod from "ColorUtils" /* 4733 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

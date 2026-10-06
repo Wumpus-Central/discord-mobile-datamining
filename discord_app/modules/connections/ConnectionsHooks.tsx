@@ -1,14 +1,14 @@
-// === Module 7012: ConnectionsHooks ===
+// === Module 7025: ConnectionsHooks ===
 
-// Module 7012 (ConnectionsHooks)
+// Module 7025 (ConnectionsHooks)
 import _modDef12 from "module_12" /* 12 */;
 import react2 from "react" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import PlatformsDefault from "Platforms" /* 5442 */;
-import KeyboardConstants from "KeyboardConstants" /* 7013 */;
+import PlatformsDefault from "Platforms" /* 5449 */;
+import KeyboardConstants from "KeyboardConstants" /* 7026 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -272,7 +272,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function() {
   const sortBy = set(12).sortBy;
   set(12);
   const items1 = [tmp14, tmp15, tmp16, P, E];
-  const arr3 = set(5442);
+  const arr3 = set(5449);
   const sortByResult = sortBy(arr3.filter(tmp8), items1);
   cResult[5] = tmp9;
   cResult[6] = tmp8;

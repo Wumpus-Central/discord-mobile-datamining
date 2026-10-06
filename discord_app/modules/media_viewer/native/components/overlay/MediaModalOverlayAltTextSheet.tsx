@@ -1,17 +1,17 @@
-// === Module 11152: MediaModalOverlayAltTextSheet ===
+// === Module 11165: MediaModalOverlayAltTextSheet ===
 
-// Module 11152 (MediaModalOverlayAltTextSheet)
+// Module 11165 (MediaModalOverlayAltTextSheet)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5912 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11153 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import useMessagePreviewHeight from "useMessagePreviewHeight" /* 11166 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

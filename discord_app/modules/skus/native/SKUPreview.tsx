@@ -1,6 +1,6 @@
-// === Module 8426: SKUPreview ===
+// === Module 8459: SKUPreview ===
 
-// Module 8426 (SKUPreview)
+// Module 8459 (SKUPreview)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
@@ -8,19 +8,19 @@ import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import useToken from "useToken" /* 4580 */;
-import ThemeAwareNitroWishlistingWumpusRive from "ThemeAwareNitroWishlistingWumpusRive" /* 4692 */;
-import CollectiblesItemRecord from "CollectiblesItemRecord" /* 7057 */;
-import useShopProductItems from "useShopProductItems" /* 7842 */;
-import WishlistItemCardBase from "WishlistItemCardBase" /* 8427 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 8453 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8455 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8466 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8478 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8480 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8481 */;
+import useToken from "useToken" /* 4586 */;
+import ThemeAwareNitroWishlistingWumpusRive from "ThemeAwareNitroWishlistingWumpusRive" /* 4698 */;
+import CollectiblesItemRecord from "CollectiblesItemRecord" /* 7070 */;
+import useShopProductItems from "useShopProductItems" /* 7853 */;
+import WishlistItemCardBase from "WishlistItemCardBase" /* 8460 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 8486 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8488 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8499 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8511 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8513 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8514 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -357,7 +357,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(8427).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(8460).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = react.useMemo(() => closure_5(sku), items);

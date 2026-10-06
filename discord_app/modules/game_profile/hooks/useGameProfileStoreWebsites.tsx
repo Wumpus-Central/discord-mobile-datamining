@@ -1,8 +1,8 @@
-// === Module 8332: useGameProfileStoreWebsites ===
+// === Module 8365: useGameProfileStoreWebsites ===
 
-// Module 8332 (useGameProfileStoreWebsites)
-import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8333 */;
-import SteamReleaseStatus from "SteamReleaseStatus" /* 8335 */;
+// Module 8365 (useGameProfileStoreWebsites)
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8366 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 8368 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -18,13 +18,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   const obj = id1(576);
   const cResult = obj.c(8);
   id = undefined;
-  const useSteamWebsiteUrl = id1(8334).useSteamWebsiteUrl;
-  id1(8334);
+  const useSteamWebsiteUrl = id1(8367).useSteamWebsiteUrl;
+  id1(8367);
   if (id != null) {
     id = id.id;
   }
   const steamWebsiteUrl = useSteamWebsiteUrl(id);
-  const tmp7 = steamReleaseStatus(8336)(id);
+  const tmp7 = steamReleaseStatus(8369)(id);
   id1 = undefined;
   if (id != null) {
     id1 = id.id;
@@ -66,10 +66,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
       if (found == null) {
         found = [];
       }
-      const tmp12 = null == steamWebsiteUrl || steamReleaseStatus === id1(8335).SteamReleaseStatus.RETIRED_ABANDONED || found.some((category) => category.category === id1(dependencyMap[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+      const tmp12 = null == steamWebsiteUrl || steamReleaseStatus === id1(8368).SteamReleaseStatus.RETIRED_ABANDONED || found.some((category) => category.category === id1(dependencyMap[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM);
       if (!tmp12) {
         const push = found.push;
-        const obj2 = { category: id1(8333).ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
+        const obj2 = { category: id1(8366).ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
         push(obj2);
       }
       const _Symbol = Symbol;

@@ -1,13 +1,13 @@
-// === Module 10604: PeopleUtils ===
+// === Module 10617: PeopleUtils ===
 
-// Module 10604 (PeopleUtils)
+// Module 10617 (PeopleUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10605 */;
-import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 10606 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10618 */;
+import AcceptFriendRequestModalActionCreators from "AcceptFriendRequestModalActionCreators" /* 10619 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import size from "module_2" /* 2 */;
 
 let onCancel;

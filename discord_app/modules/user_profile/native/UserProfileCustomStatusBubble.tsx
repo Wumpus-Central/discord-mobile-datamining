@@ -1,6 +1,6 @@
-// === Module 10827: UserProfileCustomStatusBubble ===
+// === Module 10840: UserProfileCustomStatusBubble ===
 
-// Module 10827 (UserProfileCustomStatusBubble)
+// Module 10840 (UserProfileCustomStatusBubble)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
@@ -9,21 +9,21 @@ import PlatformUtils from "PlatformUtils" /* 1369 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import EmojiDefault from "Emoji" /* 6625 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import Constants2 from "Constants" /* 6707 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 10828 */;
-import CirclePlusIcon2 from "CirclePlusIcon" /* 10983 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import EmojiDefault from "Emoji" /* 6632 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import Constants2 from "Constants" /* 6714 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 10841 */;
+import CirclePlusIcon2 from "CirclePlusIcon" /* 10996 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -286,7 +286,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isPlaceholderT
               tmp13 = View;
               obj10 = { children: null };
               tmp14 = jsx;
-              tmp15 = f55896;
+              tmp15 = f55949;
               obj11 = { emojiId: null, size: null, animated: null, style: null };
               obj11.emojiId = tmp.id;
               tmp16 = lineHeight;
@@ -297,7 +297,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isPlaceholderT
               num3 = 0.1;
               obj12.marginBottom = 0.1 * -lineHeight;
               obj11.style = obj12;
-              obj10.children = jsx(f55896, obj11);
+              obj10.children = jsx(f55949, obj11);
               items = [, ];
               items[0] = jsx(View, obj10);
               tmp17 = jsx;
@@ -358,7 +358,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isPlaceholderT
             tmp13 = View;
             obj10 = { children: null };
             tmp14 = jsx;
-            tmp15 = f55896;
+            tmp15 = f55949;
             obj11 = { emojiId: null, size: null, animated: null, style: null };
             obj11.emojiId = tmp.id;
             tmp16 = lineHeight;
@@ -369,7 +369,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isPlaceholderT
             num3 = 0.1;
             obj12.marginBottom = 0.1 * -lineHeight;
             obj11.style = obj12;
-            obj10.children = jsx(f55896, obj11);
+            obj10.children = jsx(f55949, obj11);
             items = [, ];
             items[0] = jsx(View, obj10);
             tmp17 = jsx;
@@ -418,8 +418,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isPlaceholderT
       cResult[13] = text;
       cResult[14] = tmp9;
       cResult[15] = textVariant;
-      cResult[16] = closure_10(emoji(4886).Text, obj4);
-      const tmp16 = closure_10(emoji(4886).Text, obj4);
+      cResult[16] = closure_10(emoji(4892).Text, obj4);
+      const tmp16 = closure_10(emoji(4892).Text, obj4);
     }
     class P {
       constructor() {
@@ -436,7 +436,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isPlaceholderT
           tmp13 = View;
           obj10 = { children: null };
           tmp14 = jsx;
-          tmp15 = f55896;
+          tmp15 = f55949;
           obj11 = { emojiId: null, size: null, animated: null, style: null };
           obj11.emojiId = tmp.id;
           tmp16 = lineHeight;
@@ -447,7 +447,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((isPlaceholderT
           num3 = 0.1;
           obj12.marginBottom = 0.1 * -lineHeight;
           obj11.style = obj12;
-          obj10.children = jsx(f55896, obj11);
+          obj10.children = jsx(f55949, obj11);
           items = [, ];
           items[0] = jsx(View, obj10);
           tmp17 = jsx;

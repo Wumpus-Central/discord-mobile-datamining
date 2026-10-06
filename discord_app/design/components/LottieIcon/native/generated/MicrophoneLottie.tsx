@@ -1,10 +1,10 @@
-// === Module 14227: MicrophoneLottie ===
+// === Module 14245: MicrophoneLottie ===
 
-// Module 14227 (MicrophoneLottie)
+// Module 14245 (MicrophoneLottie)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import LottieIcon2 from "LottieIcon" /* 9629 */;
-import AssetRegistry from "AssetRegistry" /* 14228 */;
+import LottieIcon2 from "LottieIcon" /* 9642 */;
+import AssetRegistry from "AssetRegistry" /* 14246 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

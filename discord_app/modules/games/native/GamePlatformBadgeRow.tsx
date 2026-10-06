@@ -1,17 +1,17 @@
-// === Module 12027: GamePlatformBadgeRow ===
+// === Module 12042: GamePlatformBadgeRow ===
 
-// Module 12027 (GamePlatformBadgeRow)
+// Module 12042 (GamePlatformBadgeRow)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6448 */;
-import ScreenIcon from "ScreenIcon" /* 8544 */;
-import GameControllerIcon from "GameControllerIcon" /* 8739 */;
-import GamePlatformAvailability from "GamePlatformAvailability" /* 12028 */;
-import GamePlatformBadges from "GamePlatformBadges" /* 12029 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6455 */;
+import ScreenIcon from "ScreenIcon" /* 8577 */;
+import GameControllerIcon from "GameControllerIcon" /* 8771 */;
+import GamePlatformAvailability from "GamePlatformAvailability" /* 12043 */;
+import GamePlatformBadges from "GamePlatformBadges" /* 12044 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -81,7 +81,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((p
     obj = GamePlatformBadges;
     return obj.sortGamePlatformAvailability(platforms);
   }, items);
-  const Stack = platforms(5593).Stack;
+  const Stack = platforms(5600).Stack;
   return <Stack direction="horizontal" align="center" spacing={nativeDefault.space.PX_4} style={tmp.row}>{memo.map((item) => {
     const obj2 = platforms(dependencyMap[9]);
     return <tmp key={item} size="xs" color="icon-subtle" accessibilityLabel={obj2.getGamePlatformAvailabilityLabel(item)} />;

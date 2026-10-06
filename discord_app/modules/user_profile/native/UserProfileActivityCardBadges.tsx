@@ -1,10 +1,10 @@
-// === Module 12827: UserProfileActivityCardBadges ===
+// === Module 12846: UserProfileActivityCardBadges ===
 
-// Module 12827 (UserProfileActivityCardBadges)
+// Module 12846 (UserProfileActivityCardBadges)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
-import UserProfileActivityBadges from "UserProfileActivityBadges" /* 12828 */;
+import UserProfileActivityBadges from "UserProfileActivityBadges" /* 12847 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

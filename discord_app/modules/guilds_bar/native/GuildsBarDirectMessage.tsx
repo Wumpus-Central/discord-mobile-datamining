@@ -1,21 +1,21 @@
-// === Module 16283: GuildsBarDirectMessage ===
+// === Module 16323: GuildsBarDirectMessage ===
 
-// Module 16283 (GuildsBarDirectMessage)
+// Module 16323 (GuildsBarDirectMessage)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import transitionToChannel from "transitionToChannel" /* 4901 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9260 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10651 */;
+import transitionToChannel from "transitionToChannel" /* 4907 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9295 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5437 */;
+import CallStore from "CallStore" /* 5444 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7121 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7134 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

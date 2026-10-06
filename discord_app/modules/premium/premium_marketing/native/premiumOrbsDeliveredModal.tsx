@@ -1,12 +1,12 @@
-// === Module 13145: premiumOrbsDeliveredModal ===
+// === Module 13164: premiumOrbsDeliveredModal ===
 
-// Module 13145 (premiumOrbsDeliveredModal)
+// Module 13164 (premiumOrbsDeliveredModal)
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
-import VirtualCurrencyConstants from "VirtualCurrencyConstants" /* 13146 */;
-import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 13149 */;
+import VirtualCurrencyConstants from "VirtualCurrencyConstants" /* 13165 */;
+import PremiumOrbsDeliveredModalExperimentDefault from "PremiumOrbsDeliveredModalExperiment" /* 13168 */;
 import react from "react" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 6899 */;
+import EntitlementStore from "EntitlementStore" /* 6909 */;
 import size from "module_2" /* 2 */;
 
 let importDefault;
@@ -78,7 +78,7 @@ export const openOrbsModalIfDelivered = function openOrbsModalIfDelivered() {
                 },
           isDismissable: false
         };
-        const tmp2Result = tmp2(5708);
+        const tmp2Result = tmp2(5715);
         tmp2Result.openLazy(obj2);
       }
     }

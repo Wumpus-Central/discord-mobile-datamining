@@ -1,9 +1,9 @@
-// === Module 7913: UserProfileSharedStyles ===
+// === Module 7924: UserProfileSharedStyles ===
 
-// Module 7913 (UserProfileSharedStyles)
+// Module 7924 (UserProfileSharedStyles)
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 6707 */;
-import createStyles from "createStyles" /* 4890 */;
+import Constants from "Constants" /* 6714 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

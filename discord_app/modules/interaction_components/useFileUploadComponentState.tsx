@@ -1,10 +1,10 @@
-// === Module 17526: useFileUploadComponentState ===
+// === Module 17571: useFileUploadComponentState ===
 
-// Module 17526 (useFileUploadComponentState)
+// Module 17571 (useFileUploadComponentState)
 import Server from "Server" /* 1985 */;
-import DraftStore from "DraftStore" /* 7031 */;
+import DraftStore from "DraftStore" /* 7044 */;
 import react from "react" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;

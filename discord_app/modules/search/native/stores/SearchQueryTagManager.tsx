@@ -1,8 +1,8 @@
-// === Module 11976: SearchQueryTagManager ===
+// === Module 11995: SearchQueryTagManager ===
 
-// Module 11976 (SearchQueryTagManager)
-import TrackingConstants from "TrackingConstants" /* 7512 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+// Module 11995 (SearchQueryTagManager)
+import TrackingConstants from "TrackingConstants" /* 7523 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import size from "module_2" /* 2 */;
 
 let set;
@@ -43,7 +43,7 @@ class SearchQueryTagManager {
     let closure_1 = channelId;
     const tags = this.tags;
     const items = [];
-    items[HermesBuiltin.arraySpread(items, tags.filter((item) => item !== obj && item !== self), 0)] = { type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId };
+    items[HermesBuiltin.arraySpread(items, tags.filter((item) => item !== userId && item !== closure_1_1), 0)] = { type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId };
     this.tags = items;
     ({ type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId });
   }

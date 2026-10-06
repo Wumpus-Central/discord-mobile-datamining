@@ -1,9 +1,9 @@
-// === Module 8496: useProductPurchaseState ===
+// === Module 8529: useProductPurchaseState ===
 
-// Module 8496 (useProductPurchaseState)
+// Module 8529 (useProductPurchaseState)
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import compactDefault from "compact" /* 8497 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
+import compactDefault from "compact" /* 8530 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

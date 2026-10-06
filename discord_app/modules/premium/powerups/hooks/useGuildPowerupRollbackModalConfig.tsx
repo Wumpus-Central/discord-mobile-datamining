@@ -1,14 +1,14 @@
-// === Module 12169: useGuildPowerupRollbackModalConfig ===
+// === Module 12184: useGuildPowerupRollbackModalConfig ===
 
-// Module 12169 (useGuildPowerupRollbackModalConfig)
+// Module 12184 (useGuildPowerupRollbackModalConfig)
 import intl3 from "intl" /* 1126 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import _modDef2525 from "module_2525" /* 2525 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12157 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12170 */;
+import _modDef2553 from "module_2553" /* 2553 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12172 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12185 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ function getGuildThemeRollbackModalConfig(allPowerups) {
   if (null != allPowerups) {
     if (null != storeRemovalDate) {
       const tmp3 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-      const obj = { dismissibleContent: dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_MODAL, header: "" + title + " " + intl.formatToPlainString(_modDef2525["6e2ry1"], obj2), bodies: items, hasCancelButton: false };
+      const obj = { dismissibleContent: dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_MODAL, header: "" + title + " " + intl.formatToPlainString(_modDef2553["6e2ry1"], obj2), bodies: items, hasCancelButton: false };
       title = allPowerups.title;
       intl = intl3.intl;
       const _HermesInternal = HermesInternal;
@@ -35,7 +35,7 @@ function getGuildThemeRollbackModalConfig(allPowerups) {
       const intl2 = intl3.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = allPowerups);
-      items = [intl2.formatToPlainString(_modDef2525.jd8fki, obj5)];
+      items = [intl2.formatToPlainString(_modDef2553.jd8fki, obj5)];
       return obj;
     }
   }
@@ -96,7 +96,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
   if (stateFromStores1 != null) {
     const allPowerups = stateFromStores1.allPowerups;
     if (allPowerups != null) {
-      tmp12 = allPowerups[tmp(undefined, 4771).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+      tmp12 = allPowerups[tmp(undefined, 4777).GUILD_POWERUP_GUILD_THEME_SKU_ID];
     }
   }
   const tmpResult4 = require("guildTheme");

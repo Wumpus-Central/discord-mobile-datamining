@@ -1,16 +1,16 @@
-// === Module 15349: SettingsItemAppIcon ===
+// === Module 15364: SettingsItemAppIcon ===
 
-// Module 15349 (SettingsItemAppIcon)
+// Module 15364 (SettingsItemAppIcon)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AppIconConstants from "AppIconConstants" /* 8828 */;
-import AppIconTypes from "AppIconTypes" /* 8829 */;
-import ClydeIcon from "ClydeIcon" /* 10547 */;
-import AppIconUtils from "AppIconUtils" /* 13261 */;
-import AppIconDefault from "AppIcon" /* 15350 */;
+import AppIconConstants from "AppIconConstants" /* 8858 */;
+import AppIconTypes from "AppIconTypes" /* 8859 */;
+import ClydeIcon from "ClydeIcon" /* 10560 */;
+import AppIconUtils from "AppIconUtils" /* 13280 */;
+import AppIconDefault from "AppIcon" /* 15365 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

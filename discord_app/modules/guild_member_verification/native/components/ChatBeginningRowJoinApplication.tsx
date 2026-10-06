@@ -1,16 +1,16 @@
-// === Module 12297: ChatBeginningRowJoinApplication ===
+// === Module 12312: ChatBeginningRowJoinApplication ===
 
-// Module 12297 (ChatBeginningRowJoinApplication)
+// Module 12312 (ChatBeginningRowJoinApplication)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
-import Text_Text from "Text/Text" /* 4886 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
+import Text_Text from "Text/Text" /* 4892 */;
 import react from "react" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

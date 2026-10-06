@@ -1,39 +1,39 @@
-// === Module 13361: UserSettingsPremiumGifting ===
+// === Module 13380: UserSettingsPremiumGifting ===
 
-// Module 13361 (UserSettingsPremiumGifting)
+// Module 13380 (UserSettingsPremiumGifting)
 import _modDef12 from "module_12" /* 12 */;
 import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import intl9 from "intl" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import _modDef2589 from "module_2589" /* 2589 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 5310 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5968 */;
-import TableRowGroup from "TableRowGroup" /* 6074 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6487 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
-import useStoreConnectionErrorAlertDefault from "useStoreConnectionErrorAlert" /* 6920 */;
-import BadgeId from "BadgeId" /* 7855 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8867 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13363 */;
-import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 13364 */;
-import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 13370 */;
-import PremiumTierCardDefault from "PremiumTierCard" /* 13372 */;
-import GiftPurchaseButtonDefault from "GiftPurchaseButton" /* 13375 */;
-import PremiumUnverifiedWarningDefault from "PremiumUnverifiedWarning" /* 13377 */;
-import UserSettingsGiftingBadgeProgressDefault from "UserSettingsGiftingBadgeProgress" /* 13378 */;
+import _modDef2617 from "module_2617" /* 2617 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 5317 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
+import TableRowGroup from "TableRowGroup" /* 6081 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6494 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
+import useStoreConnectionErrorAlertDefault from "useStoreConnectionErrorAlert" /* 6933 */;
+import BadgeId from "BadgeId" /* 7866 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 8896 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13382 */;
+import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 13383 */;
+import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 13389 */;
+import PremiumTierCardDefault from "PremiumTierCard" /* 13391 */;
+import GiftPurchaseButtonDefault from "GiftPurchaseButton" /* 13394 */;
+import PremiumUnverifiedWarningDefault from "PremiumUnverifiedWarning" /* 13396 */;
+import UserSettingsGiftingBadgeProgressDefault from "UserSettingsGiftingBadgeProgress" /* 13397 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
-import EntitlementStore from "EntitlementStore" /* 6899 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
+import EntitlementStore from "EntitlementStore" /* 6909 */;
 import Constants from "Constants" /* 1085 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -171,9 +171,9 @@ const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEna
     tmp14 = cResult[5];
   }
   react = tmp14;
-  const tmpResult7 = tmp(6923);
+  const tmpResult7 = tmp(6936);
   const isPaymentsBlocked = tmpResult7.useIsPaymentsBlocked();
-  const tmpResult8 = tmp(13362);
+  const tmpResult8 = tmp(13381);
   const outboundPromotions = tmpResult8.useOutboundPromotions();
   const promotionsLoaded = outboundPromotions.promotionsLoaded;
   const activeOutboundPromotions = outboundPromotions.activeOutboundPromotions;
@@ -190,7 +190,7 @@ const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEna
   } else {
     tmp19 = cResult[7];
   }
-  const GiftingBadgeExperiment = tmp(10471).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp(10484).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig(tmp19).enabled;
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     let items1 = [claimedOutboundPromotionCodeMap];
@@ -212,7 +212,7 @@ const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEna
   const tmp24 = navigation(react.useState(false), 2);
   constants = tmp24[0];
   constants2 = tmp24[1];
-  const tmpResult10 = tmp(13205);
+  const tmpResult10 = tmp(13224);
   const subscriptionPlansLoaded = tmpResult10.useSubscriptionPlansLoaded();
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
     class X {
@@ -221,7 +221,7 @@ const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEna
         waitResult = obj.wait(() => {
           const obj = recipientUserId(closure_2[25]);
           const giftableEntitlements = obj.fetchGiftableEntitlements();
-          giftableEntitlements.then(() => { /* body not rendered: F152811 */ });
+          giftableEntitlements.then(() => { /* body not rendered: F153044 */ });
           const obj2 = analyticsLocation(closure_2[26]);
           obj2.init();
         });
@@ -244,7 +244,7 @@ const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEna
         waitResult = obj.wait(() => {
           const obj = recipientUserId(closure_2[25]);
           const giftableEntitlements = obj.fetchGiftableEntitlements();
-          giftableEntitlements.then(() => { /* body not rendered: F152811 */ });
+          giftableEntitlements.then(() => { /* body not rendered: F153044 */ });
           const obj2 = analyticsLocation(closure_2[26]);
           obj2.init();
         });

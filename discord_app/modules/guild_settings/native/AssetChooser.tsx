@@ -1,19 +1,19 @@
-// === Module 17670: AssetChooser ===
+// === Module 17716: AssetChooser ===
 
-// Module 17670 (AssetChooser)
+// Module 17716 (AssetChooser)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import native2 from "native" /* 4589 */;
-import Pressables from "Pressables" /* 5909 */;
-import AssetRegistryDefault from "AssetRegistry" /* 17671 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 17672 */;
+import native2 from "native" /* 4595 */;
+import Pressables from "Pressables" /* 5916 */;
+import AssetRegistryDefault from "AssetRegistry" /* 17717 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 17718 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let c2, c3;

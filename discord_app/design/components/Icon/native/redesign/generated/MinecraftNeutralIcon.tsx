@@ -1,13 +1,13 @@
-// === Module 8348: MinecraftNeutralIcon ===
+// === Module 8381: MinecraftNeutralIcon ===
 
-// Module 8348 (MinecraftNeutralIcon)
+// Module 8381 (MinecraftNeutralIcon)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage4 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 8349 */;
-import AssetRegistry2 from "AssetRegistry" /* 8350 */;
-import AssetRegistry3 from "AssetRegistry" /* 8351 */;
+import BaseIconImage4 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 8382 */;
+import AssetRegistry2 from "AssetRegistry" /* 8383 */;
+import AssetRegistry3 from "AssetRegistry" /* 8384 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

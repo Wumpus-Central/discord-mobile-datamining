@@ -1,18 +1,18 @@
-// === Module 9783: ChatViewStickyHeader ===
+// === Module 9796: ChatViewStickyHeader ===
 
-// Module 9783 (ChatViewStickyHeader)
+// Module 9796 (ChatViewStickyHeader)
 import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 9784 */;
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 9785 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 9791 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 9795 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 9796 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 9815 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 9821 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 9848 */;
-import ForumPostActionBarDefault from "ForumPostActionBar" /* 9853 */;
-import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11074 */;
-import ChatBannerDefault from "ChatBanner" /* 11077 */;
+import Constants from "Constants" /* 9797 */;
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 9798 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 9804 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 9808 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 9809 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 9828 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 9834 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 9861 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 9866 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11087 */;
+import ChatBannerDefault from "ChatBanner" /* 11090 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

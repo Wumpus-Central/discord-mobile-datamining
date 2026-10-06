@@ -1,18 +1,18 @@
-// === Module 14625: useParentalControlSettings ===
+// === Module 14641: useParentalControlSettings ===
 
-// Module 14625 (useParentalControlSettings)
+// Module 14641 (useParentalControlSettings)
 import react2 from "react" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6804 */;
-import Constants from "Constants" /* 8075 */;
-import useUserLinks from "useUserLinks" /* 8295 */;
-import useSelectedTeen from "useSelectedTeen" /* 8297 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14626 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14629 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 6814 */;
+import Constants from "Constants" /* 8108 */;
+import useUserLinks from "useUserLinks" /* 8328 */;
+import useSelectedTeen from "useSelectedTeen" /* 8330 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14642 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14645 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7051 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7064 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -309,9 +309,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp7.mutualGuilds && !tmp7.all;
 }) : (() => {
   let controlledSetting;
-  let obj = controlledSetting(8297);
+  let obj = controlledSetting(8330);
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledFriendSourceFlags = controlledSetting(14626).ParentalControlledFriendSourceFlags;
+  const ParentalControlledFriendSourceFlags = controlledSetting(14642).ParentalControlledFriendSourceFlags;
   let id;
   const useControlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting;
   if (selectedTeen != null) {

@@ -1,8 +1,8 @@
-// === Module 10536: StorefrontNativeUtils ===
+// === Module 10549: StorefrontNativeUtils ===
 
-// Module 10536 (StorefrontNativeUtils)
-import IAPStoreDefault from "IAPStore" /* 6739 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 8872 */;
+// Module 10549 (StorefrontNativeUtils)
+import IAPStoreDefault from "IAPStore" /* 6931 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 8901 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -132,7 +132,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((sku) => {
   const useStateFromStores = require("get initialized").useStateFromStores;
   const items1 = [];
   require("get initialized");
-  items1[0] = stateFromStores(6739);
+  items1[0] = stateFromStores(6931);
   const items2 = [tmp2];
   stateFromStores = useStateFromStores(items1, () => {
     let product = null;

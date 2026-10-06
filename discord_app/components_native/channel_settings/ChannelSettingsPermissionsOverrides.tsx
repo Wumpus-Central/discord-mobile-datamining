@@ -1,6 +1,6 @@
-// === Module 17008: ChannelSettingsPermissionsOverrides ===
+// === Module 17034: ChannelSettingsPermissionsOverrides ===
 
-// Module 17008 (ChannelSettingsPermissionsOverrides)
+// Module 17034 (ChannelSettingsPermissionsOverrides)
 import get_initialized from "get initialized" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
@@ -9,14 +9,14 @@ import native from "native" /* 1188 */;
 import useNavigation from "useNavigation" /* 1490 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 2060 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
-import PermissionUtils from "PermissionUtils" /* 4514 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 6749 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11232 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 17009 */;
+import PermissionUtils from "PermissionUtils" /* 4520 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 6759 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11245 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 17035 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
@@ -24,12 +24,12 @@ import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -343,7 +343,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(Text, obj5);
   if (type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    tmp12Result = closure_19(id(10680), obj6);
+    tmp12Result = closure_19(id(10693), obj6);
   } else {
     let TableRow = TableRow2.TableRow;
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);

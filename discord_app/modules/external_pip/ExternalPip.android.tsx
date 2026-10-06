@@ -1,6 +1,6 @@
-// === Module 9110: ExternalPip ===
+// === Module 9145: ExternalPip ===
 
-// Module 9110 (ExternalPip)
+// Module 9145 (ExternalPip)
 import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 

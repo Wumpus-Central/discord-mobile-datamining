@@ -1,8 +1,8 @@
-// === Module 11711: useViewableAppLauncherHomeItems ===
+// === Module 11725: useViewableAppLauncherHomeItems ===
 
-// Module 11711 (useViewableAppLauncherHomeItems)
+// Module 11725 (useViewableAppLauncherHomeItems)
 import react_mod from "react" /* 19 */;
-import AppLauncherStore from "AppLauncherStore" /* 8931 */;
+import AppLauncherStore from "AppLauncherStore" /* 8960 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,19 +1,19 @@
-// === Module 12128: GuildProgressHooks ===
+// === Module 12143: GuildProgressHooks ===
 
-// Module 12128 (GuildProgressHooks)
+// Module 12143 (GuildProgressHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import react2 from "react" /* 576 */;
-import canViewInviteModal from "canViewInviteModal" /* 9263 */;
+import canViewInviteModal from "canViewInviteModal" /* 9298 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4507 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4513 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4786 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import LayerStore from "LayerStore" /* 12129 */;
-import MessageStore from "MessageStore" /* 5110 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import LayerStore from "LayerStore" /* 12144 */;
+import MessageStore from "MessageStore" /* 5116 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

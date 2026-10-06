@@ -1,9 +1,9 @@
-// === Module 13534: GuildFriendshipStore ===
+// === Module 13550: GuildFriendshipStore ===
 
-// Module 13534 (GuildFriendshipStore)
+// Module 13550 (GuildFriendshipStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
 import size from "module_2" /* 2 */;
 
 let closure_3;

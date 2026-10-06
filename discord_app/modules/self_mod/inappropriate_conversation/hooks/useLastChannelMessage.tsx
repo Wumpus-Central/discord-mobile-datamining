@@ -1,7 +1,7 @@
-// === Module 9824: useLastChannelMessage ===
+// === Module 9837: useLastChannelMessage ===
 
-// Module 9824 (useLastChannelMessage)
-import MessageStore from "MessageStore" /* 5110 */;
+// Module 9837 (useLastChannelMessage)
+import MessageStore from "MessageStore" /* 5116 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

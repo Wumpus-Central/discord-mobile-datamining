@@ -1,15 +1,15 @@
-// === Module 11158: useScrollHandlers ===
+// === Module 11171: useScrollHandlers ===
 
-// Module 11158 (useScrollHandlers)
+// Module 11171 (useScrollHandlers)
 import LoggerDefault from "Logger" /* 3 */;
 import react_native from "react-native" /* 1259 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 9989 */;
-import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 9991 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10717 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 10002 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 10004 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10730 */;
 import react from "react" /* 19 */;
-import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9064 */;
+import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9100 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

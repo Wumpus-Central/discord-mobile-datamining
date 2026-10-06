@@ -1,25 +1,25 @@
-// === Module 15873: AccountSwitcherListItem ===
+// === Module 15912: AccountSwitcherListItem ===
 
-// Module 15873 (AccountSwitcherListItem)
+// Module 15912 (AccountSwitcherListItem)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import react_native from "react-native" /* 4594 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import CircleCheckIcon2 from "CircleCheckIcon" /* 4792 */;
-import CircleInformationIcon2 from "CircleInformationIcon" /* 4812 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import MultiAccountStore from "MultiAccountStore" /* 12056 */;
+import react_native from "react-native" /* 4600 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import CircleCheckIcon2 from "CircleCheckIcon" /* 4798 */;
+import CircleInformationIcon2 from "CircleInformationIcon" /* 4818 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import MultiAccountStore from "MultiAccountStore" /* 12071 */;
 import react from "react" /* 19 */;
 import react_native2 from "react-native" /* 17 */;
 import UserRecord from "UserRecord" /* 1391 */;
-import StreamerModeStore from "StreamerModeStore" /* 4723 */;
+import StreamerModeStore from "StreamerModeStore" /* 4729 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -543,7 +543,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
     const merged = Object.assign(sortHandlers);
     items2 = [leading, , ];
     const obj8 = { style: tmp.accountInfo, children: items3 };
-    const obj9 = { user: obj3, guildId: "r" };
+    const obj9 = { user: obj3, guildId: "Array" };
     items3 = [React4(native.Avatar, obj9), ];
     const obj10 = { style: tmp.accountListTag, children: items5 };
     const obj11 = { style: tmp.tagContainer, children: items4 };

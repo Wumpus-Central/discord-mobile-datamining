@@ -1,17 +1,17 @@
-// === Module 9443: GameActivityIcon ===
+// === Module 9456: GameActivityIcon ===
 
-// Module 9443 (GameActivityIcon)
+// Module 9456 (GameActivityIcon)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import native from "native" /* 4589 */;
-import shared from "shared" /* 4729 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import UnknownGameIcon2 from "UnknownGameIcon" /* 8248 */;
+import native from "native" /* 4595 */;
+import shared from "shared" /* 4735 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import UnknownGameIcon2 from "UnknownGameIcon" /* 8281 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

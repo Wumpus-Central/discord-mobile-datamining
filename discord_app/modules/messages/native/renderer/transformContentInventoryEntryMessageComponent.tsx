@@ -1,26 +1,26 @@
-// === Module 7812: transformContentInventoryEntryMessageComponent ===
+// === Module 7823: transformContentInventoryEntryMessageComponent ===
 
-// Module 7812 (transformContentInventoryEntryMessageComponent)
+// Module 7823 (transformContentInventoryEntryMessageComponent)
 import react_native from "react-native" /* 17 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import intl5 from "intl" /* 1126 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
 import Constants from "Constants" /* 2011 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import AssetRegistryDefault from "AssetRegistry" /* 5817 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 7759 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7813 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 7814 */;
-import useAvatarColor from "useAvatarColor" /* 7815 */;
-import useHeroColors from "useHeroColors" /* 7816 */;
-import utils from "utils" /* 7818 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 7819 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 7820 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7821 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 7823 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 7824 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import AssetRegistryDefault from "AssetRegistry" /* 5824 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 7770 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7824 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 7825 */;
+import useAvatarColor from "useAvatarColor" /* 7826 */;
+import useHeroColors from "useHeroColors" /* 7827 */;
+import utils from "utils" /* 7829 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 7830 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 7831 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 7832 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 7834 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 7835 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;

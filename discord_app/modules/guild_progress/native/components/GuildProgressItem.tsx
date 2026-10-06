@@ -1,12 +1,12 @@
-// === Module 12248: GuildProgressItem ===
+// === Module 12263: GuildProgressItem ===
 
-// Module 12248 (GuildProgressItem)
+// Module 12263 (GuildProgressItem)
 import Fragment from "Fragment" /* 21 */;
-import GuildProgressUtils from "GuildProgressUtils" /* 12130 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12133 */;
-import GuildProgressCircleDefault from "GuildProgressCircle" /* 12250 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12145 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12148 */;
+import GuildProgressCircleDefault from "GuildProgressCircle" /* 12265 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

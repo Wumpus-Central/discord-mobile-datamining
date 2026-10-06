@@ -1,31 +1,31 @@
-// === Module 14306: crossPlatformRPCCommands ===
+// === Module 14324: crossPlatformRPCCommands ===
 
-// Module 14306 (crossPlatformRPCCommands)
-import applicationDefault from "application" /* 14307 */;
-import certifiedDevicesDefault from "certifiedDevices" /* 14309 */;
-import channelsDefault from "channels" /* 14311 */;
-import commands_configDefault from "commands/config" /* 14313 */;
-import guildsDefault from "guilds" /* 14314 */;
-import imagesDefault from "images" /* 14315 */;
-import invitesDefault from "invites" /* 14316 */;
-import linksDefault from "links" /* 14322 */;
-import logsDefault from "logs" /* 14329 */;
-import networkingDefault from "networking" /* 14330 */;
-import providersDefault from "providers" /* 14331 */;
-import relationshipsDefault from "relationships" /* 14332 */;
-import setActivityDefault from "setActivity" /* 14333 */;
-import setOrientationLockStateDefault from "setOrientationLockState" /* 14334 */;
-import merged14Default from "merged14" /* 14335 */;
-import subscriptionsDefault from "subscriptions" /* 14342 */;
-import usersDefault from "users" /* 14345 */;
-import userSettingsDefault from "userSettings" /* 14346 */;
-import platformBehaviorsDefault from "platformBehaviors" /* 14347 */;
-import soundboardDefault from "soundboard" /* 14348 */;
-import conjureLivePreviewDefault from "conjureLivePreview" /* 14349 */;
-import conjureVoiceDefault from "conjureVoice" /* 14351 */;
-import activitiesDefault from "activities" /* 14352 */;
-import questsDefault from "quests" /* 14353 */;
-import voiceChannelChatDefault from "voiceChannelChat" /* 14354 */;
+// Module 14324 (crossPlatformRPCCommands)
+import applicationDefault from "application" /* 14325 */;
+import certifiedDevicesDefault from "certifiedDevices" /* 14327 */;
+import channelsDefault from "channels" /* 14329 */;
+import commands_configDefault from "commands/config" /* 14331 */;
+import guildsDefault from "guilds" /* 14332 */;
+import imagesDefault from "images" /* 14333 */;
+import invitesDefault from "invites" /* 14334 */;
+import linksDefault from "links" /* 14340 */;
+import logsDefault from "logs" /* 14347 */;
+import networkingDefault from "networking" /* 14348 */;
+import providersDefault from "providers" /* 14349 */;
+import relationshipsDefault from "relationships" /* 14350 */;
+import setActivityDefault from "setActivity" /* 14351 */;
+import setOrientationLockStateDefault from "setOrientationLockState" /* 14352 */;
+import merged14Default from "merged14" /* 14353 */;
+import subscriptionsDefault from "subscriptions" /* 14360 */;
+import usersDefault from "users" /* 14363 */;
+import userSettingsDefault from "userSettings" /* 14364 */;
+import platformBehaviorsDefault from "platformBehaviors" /* 14365 */;
+import soundboardDefault from "soundboard" /* 14366 */;
+import conjureLivePreviewDefault from "conjureLivePreview" /* 14367 */;
+import conjureVoiceDefault from "conjureVoice" /* 14369 */;
+import activitiesDefault from "activities" /* 14370 */;
+import questsDefault from "quests" /* 14371 */;
+import voiceChannelChatDefault from "voiceChannelChat" /* 14372 */;
 import size from "module_2" /* 2 */;
 
 const obj = {};

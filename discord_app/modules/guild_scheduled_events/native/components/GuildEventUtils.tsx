@@ -1,10 +1,10 @@
-// === Module 9258: GuildEventUtils ===
+// === Module 9293: GuildEventUtils ===
 
-// Module 9258 (GuildEventUtils)
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import EntityUtils from "EntityUtils" /* 9180 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9190 */;
-import LocationIcon2 from "LocationIcon" /* 9191 */;
+// Module 9293 (GuildEventUtils)
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import EntityUtils from "EntityUtils" /* 9215 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9225 */;
+import LocationIcon2 from "LocationIcon" /* 9226 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventUtils.tsx");

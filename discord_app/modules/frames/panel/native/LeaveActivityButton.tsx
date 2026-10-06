@@ -1,10 +1,10 @@
-// === Module 17199: panel/LeaveActivityButton ===
+// === Module 17228: panel/LeaveActivityButton ===
 
-// Module 17199 (panel/LeaveActivityButton)
+// Module 17228 (panel/LeaveActivityButton)
 import Fragment from "Fragment" /* 21 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 8978 */;
-import LeaveActivityButton from "LeaveActivityButton" /* 17189 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9011 */;
+import LeaveActivityButton from "LeaveActivityButton" /* 17218 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -26,7 +26,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((f
     }
     return tmp4;
   }
-  const tmp5 = jsx(tmp(17189).BaseLeaveActivityButton, {
+  const tmp5 = jsx(tmp(17218).BaseLeaveActivityButton, {
     onPress() {
       let id;
       setMode(ActivityPanelModes.DISCONNECTED);

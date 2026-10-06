@@ -1,8 +1,8 @@
-// === Module 16702: useConjurePublishedAppName ===
+// === Module 16723: useConjurePublishedAppName ===
 
-// Module 16702 (useConjurePublishedAppName)
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+// Module 16723 (useConjurePublishedAppName)
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

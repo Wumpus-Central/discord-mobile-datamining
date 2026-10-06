@@ -1,12 +1,12 @@
-// === Module 14702: useFamilyCenterActivities ===
+// === Module 14718: useFamilyCenterActivities ===
 
-// Module 14702 (useFamilyCenterActivities)
+// Module 14718 (useFamilyCenterActivities)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react from "react" /* 576 */;
-import PriceUtils from "PriceUtils" /* 6736 */;
-import FamilyCenterConstants from "FamilyCenterConstants" /* 7049 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 8298 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import PriceUtils from "PriceUtils" /* 6750 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7062 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 8331 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

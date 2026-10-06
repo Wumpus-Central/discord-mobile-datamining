@@ -1,12 +1,12 @@
-// === Module 8368: CirclePlayIcon ===
+// === Module 8401: CirclePlayIcon ===
 
-// Module 8368 (CirclePlayIcon)
+// Module 8401 (CirclePlayIcon)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage3 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 8369 */;
-import AssetRegistry2 from "AssetRegistry" /* 8370 */;
+import BaseIconImage3 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 8402 */;
+import AssetRegistry2 from "AssetRegistry" /* 8403 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

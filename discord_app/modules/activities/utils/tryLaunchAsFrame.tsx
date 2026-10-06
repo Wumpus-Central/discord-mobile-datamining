@@ -1,10 +1,10 @@
-// === Module 8995: tryLaunchAsFrame ===
+// === Module 9028: tryLaunchAsFrame ===
 
-// Module 8995 (tryLaunchAsFrame)
-import FramesConstants from "FramesConstants" /* 8704 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8986 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 8994 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+// Module 9028 (tryLaunchAsFrame)
+import FramesConstants from "FramesConstants" /* 8738 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 9027 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import size from "module_2" /* 2 */;
 
 const MAIN_SURFACE = FramesConstants.MAIN_SURFACE;

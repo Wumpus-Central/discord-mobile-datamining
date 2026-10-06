@@ -1,11 +1,11 @@
-// === Module 13901: Checkbox/Checkbox ===
+// === Module 13919: Checkbox/Checkbox ===
 
-// Module 13901 (Checkbox/Checkbox)
+// Module 13919 (Checkbox/Checkbox)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13902 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13903 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13920 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13921 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

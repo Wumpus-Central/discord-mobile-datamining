@@ -1,6 +1,6 @@
-// === Module 6886: UserSettingsAccountStore ===
+// === Module 6896: UserSettingsAccountStore ===
 
-// Module 6886 (UserSettingsAccountStore)
+// Module 6896 (UserSettingsAccountStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;

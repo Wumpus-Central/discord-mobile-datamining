@@ -1,12 +1,12 @@
-// === Module 17232: useSortedGuildIdsForSoundboard ===
+// === Module 17261: useSortedGuildIdsForSoundboard ===
 
-// Module 17232 (useSortedGuildIdsForSoundboard)
+// Module 17261 (useSortedGuildIdsForSoundboard)
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
 import react from "react" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -101,7 +101,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id, arg1) =>
   }
   const tmpResult4 = require("useStateFromStores");
   const stateFromStores2 = tmpResult4.useStateFromStores(tmp13, U);
-  const obj5 = guild_id(4528);
+  const obj5 = guild_id(4534);
   if (obj5.canUseSoundboardEverywhere(stateFromStores)) {
     class U {
       constructor() {

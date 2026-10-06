@@ -1,6 +1,6 @@
-// === Module 7895: ProfileFrameLayerPreloadMobileExperiment ===
+// === Module 7906: ProfileFrameLayerPreloadMobileExperiment ===
 
-// Module 7895 (ProfileFrameLayerPreloadMobileExperiment)
+// Module 7906 (ProfileFrameLayerPreloadMobileExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

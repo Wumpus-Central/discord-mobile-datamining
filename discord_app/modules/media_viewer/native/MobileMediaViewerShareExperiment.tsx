@@ -1,6 +1,6 @@
-// === Module 8042: MobileMediaViewerShareExperiment ===
+// === Module 8052: MobileMediaViewerShareExperiment ===
 
-// Module 8042 (MobileMediaViewerShareExperiment)
+// Module 8052 (MobileMediaViewerShareExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

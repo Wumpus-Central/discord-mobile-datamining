@@ -1,11 +1,11 @@
-// === Module 6711: GuildCapUpsellHooks ===
+// === Module 6718: GuildCapUpsellHooks ===
 
-// Module 6711 (GuildCapUpsellHooks)
+// Module 6718 (GuildCapUpsellHooks)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import HotspotStore2 from "HotspotStore" /* 6712 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import HotspotStore2 from "HotspotStore" /* 6719 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

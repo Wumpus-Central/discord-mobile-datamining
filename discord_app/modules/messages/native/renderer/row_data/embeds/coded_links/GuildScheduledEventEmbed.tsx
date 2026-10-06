@@ -1,37 +1,37 @@
-// === Module 13052: GuildScheduledEventEmbed ===
+// === Module 13071: GuildScheduledEventEmbed ===
 
-// Module 13052 (GuildScheduledEventEmbed)
+// Module 13071 (GuildScheduledEventEmbed)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4805 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import Constants from "Constants" /* 7226 */;
-import react_native2 from "react-native" /* 7595 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 7608 */;
-import ScheduleUtils from "ScheduleUtils" /* 9163 */;
-import useEventSchedule from "useEventSchedule" /* 9166 */;
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9178 */;
-import EntityUtils from "EntityUtils" /* 9180 */;
-import GuildEventUtils from "GuildEventUtils" /* 9258 */;
-import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 9262 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9271 */;
-import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 9272 */;
-import ShareDefault from "Share" /* 9518 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 10024 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 13053 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4811 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import Constants from "Constants" /* 7239 */;
+import react_native2 from "react-native" /* 7606 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 7619 */;
+import ScheduleUtils from "ScheduleUtils" /* 9198 */;
+import useEventSchedule from "useEventSchedule" /* 9201 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9213 */;
+import EntityUtils from "EntityUtils" /* 9215 */;
+import GuildEventUtils from "GuildEventUtils" /* 9293 */;
+import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 9297 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9306 */;
+import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 9307 */;
+import ShareDefault from "Share" /* 9531 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 10037 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 13072 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7037 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import MarkupUtils from "MarkupUtils" /* 4877 */;
+import MarkupUtils from "MarkupUtils" /* 4883 */;
 import size from "module_2" /* 2 */;
 
 let hasOwnProperty;
@@ -306,7 +306,7 @@ export const createGuildScheduledEventLinkEmbed = function createGuildScheduledE
   let nextRecurrenceIdInEvent = tmp[2];
   const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(tmp[1]);
   if (nextRecurrenceIdInEvent == null) {
-    const obj2 = first(9163);
+    const obj2 = first(9198);
     nextRecurrenceIdInEvent = obj2.getNextRecurrenceIdInEvent(guildScheduledEvent);
   }
   if (null != guildScheduledEvent) {

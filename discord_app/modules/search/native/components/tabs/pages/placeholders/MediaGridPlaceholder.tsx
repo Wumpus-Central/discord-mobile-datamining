@@ -1,20 +1,20 @@
-// === Module 16817: MediaGridPlaceholder ===
+// === Module 16838: MediaGridPlaceholder ===
 
-// Module 16817 (MediaGridPlaceholder)
+// Module 16838 (MediaGridPlaceholder)
 import _mod12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 11966 */;
-import usePlaceholderStyles from "usePlaceholderStyles" /* 16816 */;
-import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16818 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 11980 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16837 */;
+import GridItemPlaceholderDefault from "GridItemPlaceholder" /* 16839 */;
 import react from "react" /* 19 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import Fragment_mod from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -131,7 +131,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
   } else {
     arr = cResult[3];
   }
-  const tmpResult4 = tmp(16816);
+  const tmpResult4 = tmp(16837);
   const placeholderAnimatedStyle = tmpResult4.usePlaceholderAnimatedStyle(visible);
   if (cResult[4] === placeholderAnimatedStyle) {
     if (cResult[5] === tmp4.container) {
@@ -153,7 +153,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
       }
       if (cResult[9] !== tmp4.sectionText) {
         let obj2 = { style: sectionText, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: tmp13 };
-        const tmp17 = closure_7(tmp(4886).Text, obj2);
+        const tmp17 = closure_7(tmp(4892).Text, obj2);
         cResult[9] = tmp4.sectionText;
         cResult[10] = tmp17;
         tmp15 = tmp17;
@@ -179,7 +179,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
         }
         if (cResult[15] !== tmp4.sectionText) {
           const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: sectionText2, children: tmp22 };
-          const tmp26 = closure_7(tmp(4886).Text, obj3);
+          const tmp26 = closure_7(tmp(4892).Text, obj3);
           cResult[15] = tmp4.sectionText;
           cResult[16] = tmp26;
           tmp24 = tmp26;
@@ -216,7 +216,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
                     class O {
                       constructor(arg0, arg1) {
                         closure_0 = arg1;
-                        obj = { style: closure_1.row, children: size.map(() => { /* body not rendered: F146673 */ }) };
+                        obj = { style: closure_1.row, children: size.map(() => { /* body not rendered: F146890 */ }) };
                         tmp = closure_1_8;
                         Fragment = closure_3.Fragment;
                         tmp2 = closure_1_7;
@@ -254,7 +254,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
                     class O {
                       constructor(arg0, arg1) {
                         closure_0 = arg1;
-                        obj = { style: closure_1.row, children: size.map(() => { /* body not rendered: F146673 */ }) };
+                        obj = { style: closure_1.row, children: size.map(() => { /* body not rendered: F146890 */ }) };
                         tmp = closure_1_8;
                         Fragment = closure_3.Fragment;
                         tmp2 = closure_1_7;
@@ -281,7 +281,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
               class O {
                 constructor(arg0, arg1) {
                   closure_0 = arg1;
-                  obj = { style: closure_1.row, children: size.map(() => { /* body not rendered: F146673 */ }) };
+                  obj = { style: closure_1.row, children: size.map(() => { /* body not rendered: F146890 */ }) };
                   tmp = closure_1_8;
                   Fragment = closure_3.Fragment;
                   tmp2 = closure_1_7;
@@ -372,7 +372,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((size) => {
   items2[2] = placeholderAnimatedStyle;
   const obj3 = { style: tmp.section, children: items3 };
   const obj4 = { style: tmp.sectionItem, children: closure_7(Text, obj5) };
-  View = numRows(4612).View;
+  View = numRows(4618).View;
   obj5 = { style: tmp.sectionText, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: intl.string(intl3.t.LBYpDH) };
   Text = Text_Text.Text;
   intl = intl3.intl;

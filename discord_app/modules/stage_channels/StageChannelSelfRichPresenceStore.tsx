@@ -1,22 +1,22 @@
-// === Module 11119: StageChannelSelfRichPresenceStore ===
+// === Module 11132: StageChannelSelfRichPresenceStore ===
 
-// Module 11119 (StageChannelSelfRichPresenceStore)
+// Module 11132 (StageChannelSelfRichPresenceStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import StageChannelsConstants from "StageChannelsConstants" /* 5571 */;
-import StageMediaHooks from "StageMediaHooks" /* 5574 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5582 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10626 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import StageChannelsConstants from "StageChannelsConstants" /* 5578 */;
+import StageMediaHooks from "StageMediaHooks" /* 5581 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10639 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import UserStore from "UserStore" /* 1377 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5575 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
 import Constants from "Constants" /* 1085 */;
 import size_mod from "module_2" /* 2 */;

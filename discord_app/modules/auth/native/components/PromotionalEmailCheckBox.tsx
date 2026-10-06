@@ -1,11 +1,11 @@
-// === Module 15905: PromotionalEmailCheckBox ===
+// === Module 15944: PromotionalEmailCheckBox ===
 
-// Module 15905 (PromotionalEmailCheckBox)
+// Module 15944 (PromotionalEmailCheckBox)
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import PromoEmailConsentStore from "PromoEmailConsentStore" /* 6083 */;
+import PromoEmailConsentStore from "PromoEmailConsentStore" /* 6090 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

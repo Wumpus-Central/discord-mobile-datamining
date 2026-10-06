@@ -1,9 +1,9 @@
-// === Module 12493: useGetInitialMessagePreview ===
+// === Module 12508: useGetInitialMessagePreview ===
 
-// Module 12493 (useGetInitialMessagePreview)
+// Module 12508 (useGetInitialMessagePreview)
 import react2 from "react" /* 576 */;
-import MessageRecord2 from "MessageRecord" /* 4520 */;
-import isForwardMessageDefault from "isForwardMessage" /* 6805 */;
+import MessageRecord2 from "MessageRecord" /* 4526 */;
+import isForwardMessageDefault from "isForwardMessage" /* 6815 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

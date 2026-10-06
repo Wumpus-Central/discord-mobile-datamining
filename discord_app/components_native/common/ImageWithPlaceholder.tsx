@@ -1,10 +1,10 @@
-// === Module 8409: ImageWithPlaceholder ===
+// === Module 8442: ImageWithPlaceholder ===
 
-// Module 8409 (ImageWithPlaceholder)
+// Module 8442 (ImageWithPlaceholder)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8410 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import ImageWithThumbhashPlaceholderNativeComponentDefault from "ImageWithThumbhashPlaceholderNativeComponent" /* 8443 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;

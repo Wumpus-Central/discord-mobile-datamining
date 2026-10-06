@@ -1,9 +1,9 @@
-// === Module 16731: ConjurePublishCtaCard ===
+// === Module 16752: ConjurePublishCtaCard ===
 
-// Module 16731 (ConjurePublishCtaCard)
+// Module 16752 (ConjurePublishCtaCard)
 import react2 from "react" /* 576 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 16614 */;
-import conjurePublishCard from "conjurePublishCard" /* 16703 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 16652 */;
+import conjurePublishCard from "conjurePublishCard" /* 16724 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Fragment from "Fragment" /* 21 */;
@@ -75,17 +75,17 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
           let tmp12 = null;
           if (null != stateFromStores) {
             const obj2 = { direction: "horizontal", spacing: 4, align: "center", children: items1 };
-            const Stack = tmp(5593).Stack;
-            const obj3 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(guildId(3723)["+HGTlC"]) };
-            const Text = tmp(4886).Text;
+            const Stack = tmp(5600).Stack;
+            const obj3 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(guildId(3753)["+HGTlC"]) };
+            const Text = tmp(4892).Text;
             intl = tmp(1126).intl;
             items1 = [closure_4(Text, obj3), , ];
-            const obj4 = { guild: stateFromStores, size: tmp(5971).GuildIconSizes.XXSMALL };
-            const tmp16 = guildId(5971);
+            const obj4 = { guild: stateFromStores, size: tmp(5978).GuildIconSizes.XXSMALL };
+            const tmp16 = guildId(5978);
             items1[1] = closure_4(tmp16, obj4);
             const obj5 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: tmpResult2.publishCardServerName(stateFromStores.name) };
-            const Text2 = tmp(4886).Text;
-            tmpResult2 = tmp(16703);
+            const Text2 = tmp(4892).Text;
+            tmpResult2 = tmp(16724);
             items1[2] = closure_4(Text2, obj5);
             tmp12 = closure_5(Stack, obj2);
           }
@@ -105,7 +105,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
             let tmp21 = null;
             if (null != publish.disabledReason) {
               const obj6 = { variant: "text-sm/normal", color: "text-muted", children: publish.disabledReason };
-              tmp21 = closure_4(tmp(4886).Text, obj6);
+              tmp21 = closure_4(tmp(4892).Text, obj6);
             }
             cResult[15] = publish.disabledReason;
             cResult[16] = tmp21;
@@ -122,7 +122,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
           }
           const obj7 = { direction: "vertical", spacing: 8, children: items2 };
           items2 = [tmp17, tmp20];
-          const tmp25 = closure_5(tmp(5593).Stack, obj7);
+          const tmp25 = closure_5(tmp(5600).Stack, obj7);
           cResult[17] = tmp17;
           cResult[18] = tmp20;
           cResult[19] = tmp25;
@@ -130,7 +130,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
         }
         const obj8 = { direction: "horizontal", spacing: 8, align: "center", children: items3 };
         items3 = [tmp9, tmp11];
-        const tmp19 = closure_5(tmp(5593).Stack, obj8);
+        const tmp19 = closure_5(tmp(5600).Stack, obj8);
         cResult[12] = tmp9;
         cResult[13] = tmp11;
         cResult[14] = tmp19;
@@ -139,7 +139,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
     }
   }
   const obj9 = { text: publish.label, variant: "primary", size: "sm", loading: publish.publishing, disabled: publish.disabled, onPress: tmp8 };
-  const tmp10 = closure_4(tmp(5594).Button, obj9);
+  const tmp10 = closure_4(tmp(5601).Button, obj9);
   cResult[5] = publish.disabled;
   cResult[6] = publish.label;
   cResult[7] = publish.publishing;
@@ -162,8 +162,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
     }
     return guild;
   });
-  const Stack = publish(5593).Stack;
-  const Stack2 = publish(5593).Stack;
+  const Stack = publish(5600).Stack;
+  const Stack2 = publish(5600).Stack;
   const items1 = [, ];
   const obj2 = {
     text: publish.label,
@@ -175,21 +175,21 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
       return publish.run("card");
     }
   };
-  items1[0] = closure_4(publish(5594).Button, obj2);
+  items1[0] = closure_4(publish(5601).Button, obj2);
   let tmp4Result = null;
   if (null != stateFromStores) {
     const obj3 = { direction: "horizontal", spacing: 4, align: "center", children: items2 };
-    const Stack3 = tmp(5593).Stack;
-    const obj4 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(guildId(3723)["+HGTlC"]) };
-    const Text = tmp(4886).Text;
+    const Stack3 = tmp(5600).Stack;
+    const obj4 = { variant: "text-sm/normal", color: "text-muted", children: intl.string(guildId(3753)["+HGTlC"]) };
+    const Text = tmp(4892).Text;
     intl = tmp(1126).intl;
     items2 = [closure_4(Text, obj4), , ];
-    const obj5 = { guild: stateFromStores, size: tmp(5971).GuildIconSizes.XXSMALL };
-    const tmp8 = guildId(5971);
+    const obj5 = { guild: stateFromStores, size: tmp(5978).GuildIconSizes.XXSMALL };
+    const tmp8 = guildId(5978);
     items2[1] = closure_4(tmp8, obj5);
     const obj6 = { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: tmpResult.publishCardServerName(stateFromStores.name) };
-    const Text2 = tmp(4886).Text;
-    tmpResult = tmp(16703);
+    const Text2 = tmp(4892).Text;
+    tmpResult = tmp(16724);
     items2[2] = closure_4(Text2, obj6);
     tmp4Result = closure_5(Stack3, obj3);
   }
@@ -198,7 +198,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? ((publish) => {
   let tmp5Result = null;
   if (null != publish.disabledReason) {
     const obj7 = { variant: "text-sm/normal", color: "text-muted", children: publish.disabledReason };
-    tmp5Result = closure_4(tmp(4886).Text, obj7);
+    tmp5Result = closure_4(tmp(4892).Text, obj7);
   }
   children[1] = tmp5Result;
   return closure_5(Stack, { direction: "vertical", spacing: 8, children });

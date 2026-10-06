@@ -1,15 +1,15 @@
-// === Module 12222: GuildPowerupsLevelsSection ===
+// === Module 12237: GuildPowerupsLevelsSection ===
 
-// Module 12222 (GuildPowerupsLevelsSection)
+// Module 12237 (GuildPowerupsLevelsSection)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12223 */;
-import MarketingCardsScroller2 from "MarketingCardsScroller" /* 12227 */;
+import GuildPowerupsLevelCardDefault from "GuildPowerupsLevelCard" /* 12238 */;
+import MarketingCardsScroller2 from "MarketingCardsScroller" /* 12242 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -111,7 +111,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         return "singleLevel" === type.type;
       }
     }
-    let obj2 = { title: intl.string(require("module_2525")["TXY/b0"]), description: intl2.string(require("module_2525").aJv4PB) };
+    let obj2 = { title: intl.string(require("module_2553")["TXY/b0"]), description: intl2.string(require("module_2553").aJv4PB) };
     const tmp14 = require("GuildPowerupsSectionHeader");
     intl = tmp(tmp2[9]).intl;
     intl2 = tmp(tmp2[9]).intl;
@@ -162,8 +162,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const callback = memo.useCallback((current) => {
     isScrollingRef.current = current;
   }, []);
-  let obj2 = { title: intl.string(listings(2525)["TXY/b0"]), description: intl2.string(listings(2525).aJv4PB) };
-  const tmp3 = listings(12211);
+  let obj2 = { title: intl.string(listings(2553)["TXY/b0"]), description: intl2.string(listings(2553).aJv4PB) };
+  const tmp3 = listings(12226);
   intl = intl3.intl;
   intl2 = intl3.intl;
   items1 = [closure_5(tmp3, obj2), ];

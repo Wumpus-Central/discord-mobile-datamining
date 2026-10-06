@@ -1,12 +1,12 @@
-// === Module 13719: MobileNativeUpdateUtils ===
+// === Module 13737: MobileNativeUpdateUtils ===
 
-// Module 13719 (MobileNativeUpdateUtils)
+// Module 13737 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Linking from "Linking" /* 4565 */;
-import MobileNativeUpdateConstants from "MobileNativeUpdateConstants" /* 4868 */;
+import Linking from "Linking" /* 4571 */;
+import MobileNativeUpdateConstants from "MobileNativeUpdateConstants" /* 4874 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

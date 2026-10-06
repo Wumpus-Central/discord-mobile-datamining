@@ -1,35 +1,35 @@
-// === Module 12520: MediaPreviewRightAccessory ===
+// === Module 12535: MediaPreviewRightAccessory ===
 
-// Module 12520 (MediaPreviewRightAccessory)
+// Module 12535 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1483 */;
-import useToken from "useToken" /* 4580 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5773 */;
-import ImageWarningIcon from "ImageWarningIcon" /* 5865 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import EyeIcon from "EyeIcon" /* 6458 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6795 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7109 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 7808 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 7939 */;
-import PlayIcon from "PlayIcon" /* 7948 */;
-import common_VideoDefault from "common/Video" /* 7983 */;
-import ClipView from "ClipView" /* 8469 */;
-import StickerDefault from "Sticker" /* 10127 */;
-import useContentHarmTypes from "useContentHarmTypes" /* 11303 */;
-import InAppNotificationConstants from "InAppNotificationConstants" /* 12478 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 12489 */;
+import useToken from "useToken" /* 4586 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5780 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5872 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import EyeIcon from "EyeIcon" /* 6465 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 6805 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6810 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7122 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 7819 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 7950 */;
+import PlayIcon from "PlayIcon" /* 7959 */;
+import common_VideoDefault from "common/Video" /* 7993 */;
+import ClipView from "ClipView" /* 8502 */;
+import StickerDefault from "Sticker" /* 10140 */;
+import useContentHarmTypes from "useContentHarmTypes" /* 11316 */;
+import InAppNotificationConstants from "InAppNotificationConstants" /* 12493 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 12504 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

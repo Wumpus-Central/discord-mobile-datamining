@@ -1,6 +1,6 @@
-// === Module 16003: utils/EmojiColorUtils ===
+// === Module 16042: utils/EmojiColorUtils ===
 
-// Module 16003 (utils/EmojiColorUtils)
+// Module 16042 (utils/EmojiColorUtils)
 import react_native from "react-native" /* 17 */;
 import LRUCacheDefault from "LRUCache" /* 1444 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -54,7 +54,7 @@ let obj = function _getFromCacheOrFallback2() {
             value2 = undefined;
             c2 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c2) {
           if (arg0 === 1) {
@@ -154,7 +154,7 @@ obj = function _getEmojiDominantColors() {
             ({ emoji: c0, emojiSource: c1 } = closure_0);
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

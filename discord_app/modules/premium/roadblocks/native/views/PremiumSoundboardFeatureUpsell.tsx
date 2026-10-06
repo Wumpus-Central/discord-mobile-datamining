@@ -1,16 +1,16 @@
-// === Module 17245: PremiumSoundboardFeatureUpsell ===
+// === Module 17274: PremiumSoundboardFeatureUpsell ===
 
-// Module 17245 (PremiumSoundboardFeatureUpsell)
+// Module 17274 (PremiumSoundboardFeatureUpsell)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7483 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9643 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7494 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9656 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

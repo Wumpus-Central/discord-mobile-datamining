@@ -1,16 +1,16 @@
-// === Module 9473: StartEventPlatformUtils ===
+// === Module 9486: StartEventPlatformUtils ===
 
-// Module 9473 (StartEventPlatformUtils)
+// Module 9486 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
-import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8069 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
+import StageChannelModalActionCreatorsAll from "StageChannelModalActionCreators" /* 8102 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import size from "module_2" /* 2 */;
 
 let c4, c5;

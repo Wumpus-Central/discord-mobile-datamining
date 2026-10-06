@@ -1,6 +1,6 @@
-// === Module 17439: logThirdPartyImportsDone ===
+// === Module 17468: logThirdPartyImportsDone ===
 
-// Module 17439 (logThirdPartyImportsDone)
+// Module 17468 (logThirdPartyImportsDone)
 import LoggerDefault from "Logger" /* 3 */;
 import size from "module_2" /* 2 */;
 

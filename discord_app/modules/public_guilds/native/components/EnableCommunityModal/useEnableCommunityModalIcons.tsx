@@ -1,8 +1,8 @@
-// === Module 17840: useEnableCommunityModalIcons ===
+// === Module 17886: useEnableCommunityModalIcons ===
 
-// Module 17840 (useEnableCommunityModalIcons)
+// Module 17886 (useEnableCommunityModalIcons)
 import Constants from "Constants" /* 1096 */;
-import useThemeDefault from "useTheme" /* 4791 */;
+import useThemeDefault from "useTheme" /* 4797 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

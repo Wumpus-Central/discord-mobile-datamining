@@ -1,6 +1,6 @@
-// === Module 11454: CommunicationDisabledActionCreators ===
+// === Module 11467: CommunicationDisabledActionCreators ===
 
-// Module 11454 (CommunicationDisabledActionCreators)
+// Module 11467 (CommunicationDisabledActionCreators)
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

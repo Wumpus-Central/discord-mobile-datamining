@@ -1,19 +1,19 @@
-// === Module 8083: StageChannelAgeVerificationNotice ===
+// === Module 8116: StageChannelAgeVerificationNotice ===
 
-// Module 8083 (StageChannelAgeVerificationNotice)
+// Module 8116 (StageChannelAgeVerificationNotice)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
-import WarningIcon2 from "WarningIcon" /* 4803 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4812 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5102 */;
-import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5579 */;
+import WarningIcon2 from "WarningIcon" /* 4809 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
+import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5586 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -44,7 +44,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirmPress)
   onConfirmPress = onConfirmPress.onConfirmPress;
   const tmp4 = closure_8();
   let closure_1 = tmp4;
-  let obj2 = onConfirmPress(5102);
+  let obj2 = onConfirmPress(5108);
   const isVerifiedTeen = obj2.useIsVerifiedTeen();
   if (cResult[0] === isVerifiedTeen) {
     if (cResult[1] === onConfirmPress) {
@@ -110,7 +110,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onConfirmPress)
   let formatResult;
   onConfirmPress = onConfirmPress.onConfirmPress;
   let closure_1 = closure_8();
-  let obj = onConfirmPress(5102);
+  let obj = onConfirmPress(5108);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
   const intl = onConfirmPress(1126).intl;
   const format = intl.format;

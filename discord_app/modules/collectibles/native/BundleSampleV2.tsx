@@ -1,22 +1,22 @@
-// === Module 8453: BundleSampleV2 ===
+// === Module 8486: BundleSampleV2 ===
 
-// Module 8453 (BundleSampleV2)
+// Module 8486 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import utils from "utils" /* 1977 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8454 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8455 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8466 */;
-import NameplateDummyUserPreview2 from "NameplateDummyUserPreview" /* 8473 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8487 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8488 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8499 */;
+import NameplateDummyUserPreview2 from "NameplateDummyUserPreview" /* 8506 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let StyleSheet;

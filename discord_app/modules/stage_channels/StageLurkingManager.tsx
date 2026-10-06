@@ -1,11 +1,11 @@
-// === Module 12731: StageLurkingManager ===
+// === Module 12746: StageLurkingManager ===
 
-// Module 12731 (StageLurkingManager)
+// Module 12746 (StageLurkingManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import LurkerActionCreators from "LurkerActionCreators" /* 6825 */;
+import LurkerActionCreators from "LurkerActionCreators" /* 6835 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;
 

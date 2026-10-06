@@ -1,6 +1,6 @@
-// === Module 17980: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 18026: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 17980 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 18026 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,14 +8,14 @@ import Constants from "Constants" /* 1096 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import BaseTextButton2 from "BaseTextButton" /* 5595 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import PriceUtils from "PriceUtils" /* 6736 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15049 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import BaseTextButton2 from "BaseTextButton" /* 5602 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import PriceUtils from "PriceUtils" /* 6750 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15064 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

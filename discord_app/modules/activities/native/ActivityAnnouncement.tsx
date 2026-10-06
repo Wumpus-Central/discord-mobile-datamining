@@ -1,8 +1,8 @@
-// === Module 9008: ActivityAnnouncement ===
+// === Module 9041: ActivityAnnouncement ===
 
-// Module 9008 (ActivityAnnouncement)
+// Module 9041 (ActivityAnnouncement)
 import react2 from "react" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

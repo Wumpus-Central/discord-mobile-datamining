@@ -1,10 +1,10 @@
-// === Module 10049: useCanShowFavoritesGuildOnboarding ===
+// === Module 10062: useCanShowFavoritesGuildOnboarding ===
 
-// Module 10049 (useCanShowFavoritesGuildOnboarding)
+// Module 10062 (useCanShowFavoritesGuildOnboarding)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

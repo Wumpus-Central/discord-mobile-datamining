@@ -1,16 +1,16 @@
-// === Module 15756: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 15792: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 15756 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 15792 (CollectiblesShopViewAllCategoryItemsHeader)
 import react2 from "react" /* 576 */;
 import intl5 from "intl" /* 1126 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7501 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13265 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7512 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 13284 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

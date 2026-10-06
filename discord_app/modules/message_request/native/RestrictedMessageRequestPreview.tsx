@@ -1,15 +1,15 @@
-// === Module 17075: RestrictedMessageRequestPreview ===
+// === Module 17101: RestrictedMessageRequestPreview ===
 
-// Module 17075 (RestrictedMessageRequestPreview)
+// Module 17101 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -181,8 +181,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
           tmp = globalThis;
           _setTimeout = setTimeout;
           num = 1000;
-          closure_0 = setTimeout(() => { /* body not rendered: F147939 */ }, 1000);
-          return () => { /* body not rendered: F147940 */ };
+          closure_0 = setTimeout(() => { /* body not rendered: F148162 */ }, 1000);
+          return () => { /* body not rendered: F148163 */ };
         }
       }
     }
@@ -200,8 +200,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
           tmp = globalThis;
           _setTimeout = setTimeout;
           num = 1000;
-          closure_0 = setTimeout(() => { /* body not rendered: F147939 */ }, 1000);
-          return () => { /* body not rendered: F147940 */ };
+          closure_0 = setTimeout(() => { /* body not rendered: F148162 */ }, 1000);
+          return () => { /* body not rendered: F148163 */ };
         }
       }
     }
@@ -217,8 +217,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
           tmp = globalThis;
           _setTimeout = setTimeout;
           num = 1000;
-          closure_0 = setTimeout(() => { /* body not rendered: F147939 */ }, 1000);
-          return () => { /* body not rendered: F147940 */ };
+          closure_0 = setTimeout(() => { /* body not rendered: F148162 */ }, 1000);
+          return () => { /* body not rendered: F148163 */ };
         }
       }
     }
@@ -313,11 +313,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
       }
       items7[1] = hidden;
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      items8 = [closure_10(tmp2(17076), obj6), ];
+      items8 = [closure_10(tmp2(17102), obj6), ];
       const obj7 = { channelId };
-      items8[1] = closure_10(ref(17078), obj7);
+      items8[1] = closure_10(ref(17104), obj7);
       items9 = [closure_11(tmp15, obj5), ];
-      const obj8 = { style: items10, children: closure_10(ref(12082), obj10) };
+      const obj8 = { style: items10, children: closure_10(ref(12097), obj10) };
       items10 = [tmp.footer, ];
       items10[1] = { paddingBottom: ref(587).space.PX_8 + bottom };
       obj10 = { channel: stateFromStores };

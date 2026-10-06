@@ -1,17 +1,17 @@
-// === Module 6947: PremiumPill ===
+// === Module 6960: PremiumPill ===
 
-// Module 6947 (PremiumPill)
+// Module 6960 (PremiumPill)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
-import useTheme from "useTheme" /* 4791 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useCountdownDefault from "useCountdown" /* 6948 */;
-import MobileTrialUtils from "MobileTrialUtils" /* 6955 */;
+import useTheme from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useCountdownDefault from "useCountdown" /* 6961 */;
+import MobileTrialUtils from "MobileTrialUtils" /* 6968 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

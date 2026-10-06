@@ -1,21 +1,21 @@
-// === Module 11619: ForumPostUsername ===
+// === Module 11633: ForumPostUsername ===
 
-// Module 11619 (ForumPostUsername)
+// Module 11633 (ForumPostUsername)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;
 import ForumLayout from "ForumLayout" /* 2062 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ForumHooks from "ForumHooks" /* 7528 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7620 */;
-import useChatWidthDefault from "useChatWidth" /* 11143 */;
-import ForumChannelStore from "ForumChannelStore" /* 11615 */;
-import ForumPostGridBody from "ForumPostGridBody" /* 11620 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ForumHooks from "ForumHooks" /* 7539 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7631 */;
+import useChatWidthDefault from "useChatWidth" /* 11156 */;
+import ForumChannelStore from "ForumChannelStore" /* 11629 */;
+import ForumPostGridBody from "ForumPostGridBody" /* 11634 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

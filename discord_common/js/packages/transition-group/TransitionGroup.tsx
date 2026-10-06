@@ -1,7 +1,7 @@
-// === Module 12065: TransitionGroup ===
+// === Module 12080: TransitionGroup ===
 
-// Module 12065 (TransitionGroup)
-import react2 from "react" /* 12066 */;
+// Module 12080 (TransitionGroup)
+import react2 from "react" /* 12081 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;

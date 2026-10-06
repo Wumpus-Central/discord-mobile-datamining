@@ -1,6 +1,6 @@
-// === Module 6923: BlockedPaymentsCountryExperiment ===
+// === Module 6936: BlockedPaymentsCountryExperiment ===
 
-// Module 6923 (BlockedPaymentsCountryExperiment)
+// Module 6936 (BlockedPaymentsCountryExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

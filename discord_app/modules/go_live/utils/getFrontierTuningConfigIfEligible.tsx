@@ -1,10 +1,10 @@
-// === Module 5028: getFrontierTuningConfigIfEligible ===
+// === Module 5034: getFrontierTuningConfigIfEligible ===
 
-// Module 5028 (getFrontierTuningConfigIfEligible)
+// Module 5034 (getFrontierTuningConfigIfEligible)
 import Constants from "Constants" /* 1085 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 5029 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import FrontierTuningExperimentDefault from "FrontierTuningExperiment" /* 5035 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import size from "module_2" /* 2 */;
 

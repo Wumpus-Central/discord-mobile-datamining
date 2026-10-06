@@ -1,18 +1,18 @@
-// === Module 7146: FriendSuggestionStore ===
+// === Module 7159: FriendSuggestionStore ===
 
-// Module 7146 (FriendSuggestionStore)
+// Module 7159 (FriendSuggestionStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7147 */;
-import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7148 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7160 */;
+import maybeDispatchDevOnlyDummyFriendSuggestionsDefault from "maybeDispatchDevOnlyDummyFriendSuggestions" /* 7161 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
 let closure_4;
 
-const f94412 = function(contact_names) {
+const f94552 = function(contact_names) {
   let name;
   let tmp7;
   if (null != contact_names.contact_names) {
@@ -33,7 +33,7 @@ const f94412 = function(contact_names) {
     return obj;
   }
 };
-const f94413 = (key) => key.key;
+const f94553 = (key) => key.key;
 const React3 = {};
 let friendSuggestionCount = 0;
 let c6 = false;
@@ -117,8 +117,8 @@ let obj = {
     suggestions = suggestions.suggestions;
     let obj = _modDef12;
     const chainResult = obj.chain(suggestions);
-    const mapped = chainResult.map(f94412);
-    const iter = mapped.keyBy(f94413);
+    const mapped = chainResult.map(f94552);
+    const iter = mapped.keyBy(f94553);
     closure_4 = iter.value();
     const obj3 = _modDef12;
     friendSuggestionCount = obj3.keys(closure_4).length;
@@ -135,7 +135,7 @@ export default friendSuggestionStore;
 export const transformFriendSuggestions = function transformFriendSuggestions(arg0) {
   const obj = _modDef12;
   const chainResult = obj.chain(arg0);
-  const mapped = chainResult.map(f94412);
-  const iter = mapped.keyBy(f94413);
+  const mapped = chainResult.map(f94552);
+  const iter = mapped.keyBy(f94553);
   return iter.value();
 };

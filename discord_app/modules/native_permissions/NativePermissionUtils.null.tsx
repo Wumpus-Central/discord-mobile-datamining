@@ -1,7 +1,7 @@
-// === Module 7277: nativePermissionDesktopNullUtils ===
+// === Module 7290: nativePermissionDesktopNullUtils ===
 
-// Module 7277 (nativePermissionDesktopNullUtils)
-import NativePermissionBaseUtils2 from "NativePermissionBaseUtils" /* 7278 */;
+// Module 7290 (nativePermissionDesktopNullUtils)
+import NativePermissionBaseUtils2 from "NativePermissionBaseUtils" /* 7291 */;
 import size from "module_2" /* 2 */;
 
 const NativePermissionBaseUtils = NativePermissionBaseUtils2.NativePermissionBaseUtils;

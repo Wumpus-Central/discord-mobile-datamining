@@ -1,6 +1,6 @@
-// === Module 12532: serializePushNotifcationLogs ===
+// === Module 12547: serializePushNotifcationLogs ===
 
-// Module 12532 (serializePushNotifcationLogs)
+// Module 12547 (serializePushNotifcationLogs)
 import Storage3 from "Storage" /* 510 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

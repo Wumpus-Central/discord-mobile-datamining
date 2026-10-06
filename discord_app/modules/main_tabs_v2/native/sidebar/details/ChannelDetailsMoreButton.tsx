@@ -1,10 +1,10 @@
-// === Module 16910: ChannelDetailsMoreButton ===
+// === Module 16936: ChannelDetailsMoreButton ===
 
-// Module 16910 (ChannelDetailsMoreButton)
+// Module 16936 (ChannelDetailsMoreButton)
 import Fragment from "Fragment" /* 21 */;
-import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7504 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9290 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10651 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7515 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9325 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10664 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -53,7 +53,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
       if (cResult[3] !== tmp4) {
         ({ accessibilityLabel: tmp7, source: AssetRegistryDefault, onPress: tmp4 });
         PressableNavigatorButtonWrapperDefault;
-        const HeaderIconButton = tmp(7498).HeaderIconButton;
+        const HeaderIconButton = tmp(7509).HeaderIconButton;
         const tmp13 = <tmp12>{null}</tmp12>;
         cResult[3] = tmp4;
         cResult[4] = tmp13;
@@ -77,7 +77,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     if (channel.isDM()) {
       let obj2 = { accessibilityLabel: intl.string(channel(1126).t["UKOtz+"]), source: AssetRegistryDefault, onPress: tmp };
       PressableNavigatorButtonWrapperDefault;
-      const HeaderIconButton = channel(7498).HeaderIconButton;
+      const HeaderIconButton = channel(7509).HeaderIconButton;
       intl = channel(1126).intl;
       tmp2 = <tmp6>{null}</tmp6>;
     } else {

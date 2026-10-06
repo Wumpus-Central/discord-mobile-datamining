@@ -1,26 +1,26 @@
-// === Module 9489: InstantInviteActionSheet ===
+// === Module 9502: InstantInviteActionSheet ===
 
-// Module 9489 (InstantInviteActionSheet)
+// Module 9502 (InstantInviteActionSheet)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4872 */;
-import Constants2 from "Constants" /* 7226 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9481 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9490 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9491 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4878 */;
+import Constants2 from "Constants" /* 7239 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9494 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9503 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9504 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9482 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9495 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

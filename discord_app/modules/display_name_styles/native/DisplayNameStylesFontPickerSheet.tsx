@@ -1,17 +1,17 @@
-// === Module 15162: DisplayNameStylesFontPickerSheet ===
+// === Module 15177: DisplayNameStylesFontPickerSheet ===
 
-// Module 15162 (DisplayNameStylesFontPickerSheet)
+// Module 15177 (DisplayNameStylesFontPickerSheet)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
-import _modDef2883 from "module_2883" /* 2883 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader" /* 15163 */;
+import _modDef2911 from "module_2911" /* 2911 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import DisplayNameStylesSheetHeaderDefault from "DisplayNameStylesSheetHeader" /* 15178 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -146,11 +146,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((displayName) => {
   displayName = displayName.displayName;
   const tmp = closure_10();
   importDefault = tmp;
-  let obj = onSelectFont(7841);
+  let obj = onSelectFont(7852);
   const bottomSheetRef = obj.useBottomSheetRef().bottomSheetRef;
-  let obj2 = onSelectFont(15157);
+  let obj2 = onSelectFont(15172);
   const visibleFontOrder = obj2.useVisibleFontOrder();
-  let obj3 = onSelectFont(15159);
+  let obj3 = onSelectFont(15174);
   const displayNameStylesNewFonts = obj3.useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   [first, closure_5] = first.useState(selectedFontId);
@@ -172,13 +172,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((displayName) => {
     obj2.hideActionSheet();
   }, items);
   const obj5 = { ref: bottomSheetRef, header: closure_8(tmp13, obj6), children: closure_8(closure_5, obj8) };
-  BottomSheet = onSelectFont(6645).BottomSheet;
+  BottomSheet = onSelectFont(6652).BottomSheet;
   const tmp12 = importDefault;
-  obj6 = { title: intl.string(_modDef2883["0JCuGm"]), trailing: closure_8(Button, obj7) };
+  obj6 = { title: intl.string(_modDef2911["0JCuGm"]), trailing: closure_8(Button, obj7) };
   tmp13 = DisplayNameStylesSheetHeaderDefault;
   intl = onSelectFont(1126).intl;
   obj7 = { text: intl2.string(onSelectFont(1126).t.XqMe3N), onPress: callback, variant: "primary", size: "sm" };
-  Button = onSelectFont(5594).Button;
+  Button = onSelectFont(5601).Button;
   intl2 = onSelectFont(1126).intl;
   obj8 = { style: tmp.container, children: closure_9(closure_5, obj9) };
   obj9 = { style: tmp.contentContainer, children: items1 };
@@ -235,16 +235,16 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((displayName) => {
       return closure_1_8(closure_6, obj, item);
     })
   };
-  const Stack = onSelectFont(5593).Stack;
+  const Stack = onSelectFont(5600).Stack;
   items1 = [closure_8(Stack, obj10), ];
   if (tmp15Result) {
     tmp15Result = hasNonLatinLettersResult;
   }
   if (tmp15Result) {
     const obj11 = { style: tmp.nonLatinDisclaimer, children: items2 };
-    items2 = [closure_8(onSelectFont(4812).CircleInformationIcon, { size: "sm" }), ];
-    const obj12 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: intl3.string(_modDef2883["+O1xL2"]) };
-    let Text = onSelectFont(4886).Text;
+    items2 = [closure_8(onSelectFont(4818).CircleInformationIcon, { size: "sm" }), ];
+    const obj12 = { variant: "text-xs/normal", color: "text-subtle", style: tmp.disclaimerText, children: intl3.string(_modDef2911["+O1xL2"]) };
+    let Text = onSelectFont(4892).Text;
     intl3 = onSelectFont(1126).intl;
     items2[1] = closure_8(Text, obj12);
     tmp15Result = closure_9(tmp14, obj11);

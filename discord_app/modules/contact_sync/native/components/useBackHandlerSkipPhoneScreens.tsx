@@ -1,10 +1,10 @@
-// === Module 12344: useBackHandlerSkipPhoneScreens ===
+// === Module 12359: useBackHandlerSkipPhoneScreens ===
 
-// Module 12344 (useBackHandlerSkipPhoneScreens)
+// Module 12359 (useBackHandlerSkipPhoneScreens)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 576 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6016 */;
-import ContactSyncConstants from "ContactSyncConstants" /* 12327 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6023 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 12342 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
     if (cResult[1] === arg0) {
       tmp4 = cResult[2];
     }
-    const tmpResult = tmp(6016);
+    const tmpResult = tmp(6023);
     tmpResult.useNavigatorBackPressHandler(tmp4);
   }
   const fn = function o() {

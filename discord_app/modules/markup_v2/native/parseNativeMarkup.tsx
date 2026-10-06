@@ -1,12 +1,12 @@
-// === Module 7777: parseNativeMarkup ===
+// === Module 7788: parseNativeMarkup ===
 
-// Module 7777 (parseNativeMarkup)
-import _mod7778 from "module_7778" /* 7778 */;
-import transformNativeMarkupNode from "transformNativeMarkupNode" /* 7781 */;
+// Module 7788 (parseNativeMarkup)
+import _mod7789 from "module_7789" /* 7789 */;
+import transformNativeMarkupNode from "transformNativeMarkupNode" /* 7792 */;
 import module_12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = module_12.once(() => _mod7778.parse);
+let closure_2 = module_12.once(() => _mod7789.parse);
 let result = size.fileFinishedImporting("modules/markup_v2/native/parseNativeMarkup.tsx");
 
 export default function parseNativeMarkupToAST(arg0, arg1, channelId) {

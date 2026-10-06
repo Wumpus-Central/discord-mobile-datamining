@@ -1,9 +1,9 @@
-// === Module 5704: GuildUtils ===
+// === Module 5711: GuildUtils ===
 
-// Module 5704 (GuildUtils)
+// Module 5711 (GuildUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 import intl2 from "intl" /* 1126 */;
-import UserUtilsAll from "UserUtils" /* 4722 */;
+import UserUtilsAll from "UserUtils" /* 4728 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
 import LRUCache from "LRUCache" /* 1444 */;
@@ -42,7 +42,7 @@ let obj2 = {
     let closure_4;
     let flag2;
     let timeout;
-    const f90782 = () => {
+    const f90918 = () => {
       items = [];
       if (null == items) {
         const push = items.push;
@@ -117,7 +117,7 @@ let obj2 = {
           clearTimeout(timeout);
         }
         const _setTimeout2 = setTimeout;
-        timeout = setTimeout(f90782, 200);
+        timeout = setTimeout(f90918, 200);
       }
     }
     if (flag2) {
@@ -128,7 +128,7 @@ let obj2 = {
         clearTimeout(timeout);
       }
       const _setTimeout = setTimeout;
-      timeout = setTimeout(f90782, 200);
+      timeout = setTimeout(f90918, 200);
     }
   }
 };

@@ -1,10 +1,10 @@
-// === Module 10557: useSyncGiftOptionsToOrder ===
+// === Module 10570: useSyncGiftOptionsToOrder ===
 
-// Module 10557 (useSyncGiftOptionsToOrder)
+// Module 10570 (useSyncGiftOptionsToOrder)
 import LoggerDefault from "Logger" /* 3 */;
-import BillingUtils from "BillingUtils" /* 4543 */;
-import NativeCheckoutStore from "NativeCheckoutStore" /* 6930 */;
-import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 10432 */;
+import BillingUtils from "BillingUtils" /* 4549 */;
+import NativeCheckoutStore from "NativeCheckoutStore" /* 6943 */;
+import useGiftOptionsSyncDebounceDefault from "useGiftOptionsSyncDebounce" /* 10445 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -251,7 +251,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current) => {
                     closure_1_10((arg0) => arg0 + 1);
                   } else if (ref4.current < 3) {
                     const _setTimeout = setTimeout;
-                    ref8.current = setTimeout(() => closure_1_10(() => { /* body not rendered: F154732 */ }), 500 * 2 ** (ref4.current - 1));
+                    ref8.current = setTimeout(() => closure_1_10(() => { /* body not rendered: F154975 */ }), 500 * 2 ** (ref4.current - 1));
                   } else {
                     resolveSyncs(false);
                   }

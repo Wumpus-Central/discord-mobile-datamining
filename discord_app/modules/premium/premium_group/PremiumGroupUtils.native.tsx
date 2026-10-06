@@ -1,20 +1,20 @@
-// === Module 7720: PremiumGroupUtils ===
+// === Module 7731: PremiumGroupUtils ===
 
-// Module 7720 (PremiumGroupUtils)
+// Module 7731 (PremiumGroupUtils)
 import intl7 from "intl" /* 1126 */;
-import _modDef3205 from "module_3205" /* 3205 */;
-import UserUtils from "UserUtils" /* 4722 */;
-import _mod7721 from "module_7721" /* 7721 */;
+import _modDef3233 from "module_3233" /* 3233 */;
+import UserUtils from "UserUtils" /* 4728 */;
+import _mod7732 from "module_7732" /* 7732 */;
 import UserStore from "UserStore" /* 1377 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4542 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4548 */;
 import size from "module_2" /* 2 */;
 
 let closure_4;
 let hasOwnProperty;
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.native.tsx");
-for (const key10025 in _mod7721) {
-  exports[key10025] = _mod7721[key10025];
+for (const key10025 in _mod7732) {
+  exports[key10025] = _mod7732[key10025];
   continue;
 }
 
@@ -52,7 +52,7 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     }
     let tmp15 = null;
     if (null != tmp8) {
-      const obj2 = { message: intl4.format(_modDef3205.MkcFjx, obj3), header: intl5.formatToPlainString(_modDef3205["5uwv8J"], obj4), body: intl6.formatToPlainString(_modDef3205["AmE0B/"], obj6) };
+      const obj2 = { message: intl4.format(_modDef3233.MkcFjx, obj3), header: intl5.formatToPlainString(_modDef3233["5uwv8J"], obj4), body: intl6.formatToPlainString(_modDef3233["AmE0B/"], obj6) };
       intl4 = intl7.intl;
       obj3 = { receiverName: tmp8, premiumGroupProductName: tmp };
       intl5 = intl7.intl;
@@ -65,7 +65,7 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
   } else {
     const obj = UserUtils;
     const nameFromUserResult1 = obj.nameFromUser(sender);
-    const obj7 = { message: intl.format(_modDef3205["51Kv/4"], obj8), header: intl2.string(_modDef3205.ssge1y), body: intl3.formatToPlainString(_modDef3205.tej76V, obj9) };
+    const obj7 = { message: intl.format(_modDef3233["51Kv/4"], obj8), header: intl2.string(_modDef3233.ssge1y), body: intl3.formatToPlainString(_modDef3233.tej76V, obj9) };
     intl = intl7.intl;
     obj8 = { senderName: nameFromUserResult1, premiumGroupProductName: tmp, helpCenterLink: hasOwnProperty };
     intl2 = intl7.intl;

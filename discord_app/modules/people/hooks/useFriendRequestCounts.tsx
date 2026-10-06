@@ -1,11 +1,11 @@
-// === Module 16926: useFriendRequestCounts ===
+// === Module 16952: useFriendRequestCounts ===
 
-// Module 16926 (useFriendRequestCounts)
+// Module 16952 (useFriendRequestCounts)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

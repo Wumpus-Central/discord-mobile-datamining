@@ -1,6 +1,6 @@
-// === Module 12118: useCommunicationDisabledCountdownCleanup ===
+// === Module 12133: useCommunicationDisabledCountdownCleanup ===
 
-// Module 12118 (useCommunicationDisabledCountdownCleanup)
+// Module 12133 (useCommunicationDisabledCountdownCleanup)
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -104,9 +104,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               tmp8 = globalThis;
               _setTimeout = setTimeout;
               num2 = 1000;
-              closure_4.current = setTimeout(() => { /* body not rendered: F142240 */ }, 1000);
+              closure_4.current = setTimeout(() => { /* body not rendered: F142444 */ }, 1000);
             }
-            return () => { /* body not rendered: F142241 */ };
+            return () => { /* body not rendered: F142445 */ };
           }
         }
       }

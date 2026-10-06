@@ -1,9 +1,9 @@
-// === Module 8031: LabFeatureStore ===
+// === Module 8041: LabFeatureStore ===
 
-// Module 8031 (LabFeatureStore)
+// Module 8041 (LabFeatureStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LabFeaturesDefault from "LabFeatures" /* 8032 */;
+import LabFeaturesDefault from "LabFeatures" /* 8042 */;
 import size from "module_2" /* 2 */;
 
 const React2 = {};

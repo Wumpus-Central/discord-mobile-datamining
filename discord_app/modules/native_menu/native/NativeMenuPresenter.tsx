@@ -1,10 +1,10 @@
-// === Module 17094: NativeMenuPresenter ===
+// === Module 17120: NativeMenuPresenter ===
 
-// Module 17094 (NativeMenuPresenter)
-import useBackPressHandlerDefault from "useBackPressHandler" /* 5780 */;
-import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10381 */;
+// Module 17120 (NativeMenuPresenter)
+import useBackPressHandlerDefault from "useBackPressHandler" /* 5787 */;
+import NativeMenuActionCreatorsDefault from "NativeMenuActionCreators" /* 10394 */;
 import react from "react" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9612 */;
+import NativeMenuStore from "NativeMenuStore" /* 9625 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

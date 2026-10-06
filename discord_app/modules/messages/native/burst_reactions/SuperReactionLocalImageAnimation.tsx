@@ -1,10 +1,10 @@
-// === Module 9864: SuperReactionLocalImageAnimation ===
+// === Module 9877: SuperReactionLocalImageAnimation ===
 
-// Module 9864 (SuperReactionLocalImageAnimation)
+// Module 9877 (SuperReactionLocalImageAnimation)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7412 */;
-import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7455 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7423 */;
+import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7466 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

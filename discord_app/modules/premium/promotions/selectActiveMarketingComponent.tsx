@@ -1,6 +1,6 @@
-// === Module 10429: selectActiveMarketingComponent ===
+// === Module 10442: selectActiveMarketingComponent ===
 
-// Module 10429 (selectActiveMarketingComponent)
+// Module 10442 (selectActiveMarketingComponent)
 import size from "module_2" /* 2 */;
 
 let isTimed;

@@ -1,8 +1,8 @@
-// === Module 5090: GuildRoomsExperiment ===
+// === Module 5096: GuildRoomsExperiment ===
 
-// Module 5090 (GuildRoomsExperiment)
+// Module 5096 (GuildRoomsExperiment)
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import createExperiment from "module_4774" /* 4774 */;
+import createExperiment from "module_4780" /* 4780 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

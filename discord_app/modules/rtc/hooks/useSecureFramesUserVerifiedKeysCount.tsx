@@ -1,9 +1,9 @@
-// === Module 9378: useSecureFramesUserVerifiedKeysCount ===
+// === Module 9392: useSecureFramesUserVerifiedKeysCount ===
 
-// Module 9378 (useSecureFramesUserVerifiedKeysCount)
-import _mod9349 from "module_9349" /* 9349 */;
+// Module 9392 (useSecureFramesUserVerifiedKeysCount)
+import _mod9363 from "module_9363" /* 9363 */;
 import react from "react" /* 19 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9348 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9362 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -24,7 +24,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(userId) {
       const self = this;
       const self2 = this;
       const uint8Array = new Uint8Array(keyToOmit);
-      const tmpResult = userId(9349);
+      const tmpResult = userId(9363);
       const serializeKeyResult = tmpResult.serializeKey(uint8Array);
       let num = 0;
       cResult[0] = keyToOmit;
@@ -83,7 +83,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(userId) {
       const self = this;
       const self2 = this;
       const uint8Array = new Uint8Array(keyToOmit);
-      const obj = _mod9349;
+      const obj = _mod9363;
       return obj.serializeKey(uint8Array);
     }
   }, items);

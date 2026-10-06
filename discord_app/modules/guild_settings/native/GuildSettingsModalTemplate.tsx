@@ -1,32 +1,32 @@
-// === Module 17820: GuildSettingsModalTemplate ===
+// === Module 17866: GuildSettingsModalTemplate ===
 
-// Module 17820 (GuildSettingsModalTemplate)
+// Module 17866 (GuildSettingsModalTemplate)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl9 from "intl" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
-import CircleXIcon2 from "CircleXIcon" /* 4797 */;
-import CopyIcon2 from "CopyIcon" /* 4843 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import AlertModal from "AlertModal" /* 5713 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import Input2 from "Input" /* 6423 */;
-import SceneLoadingIndicator from "SceneLoadingIndicator" /* 6535 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 6880 */;
-import native from "native" /* 8567 */;
-import Form3 from "Form" /* 8895 */;
-import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11402 */;
-import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 17821 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
+import CircleXIcon2 from "CircleXIcon" /* 4803 */;
+import CopyIcon2 from "CopyIcon" /* 4849 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import AlertModal from "AlertModal" /* 5720 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import Input2 from "Input" /* 6430 */;
+import SceneLoadingIndicator from "SceneLoadingIndicator" /* 6542 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6890 */;
+import native from "native" /* 8602 */;
+import Form3 from "Form" /* 8924 */;
+import guild_templates_GuildTemplateActionCreatorsDefault from "guild_templates/GuildTemplateActionCreators" /* 11415 */;
+import GuildTemplateSettingsUtils from "GuildTemplateSettingsUtils" /* 17867 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -1562,7 +1562,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function CopyRo
   items = [, ];
   const obj2 = { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(587).colors.WHITE };
   items[0] = metroImportDefault(CircleXIcon, obj2);
-  items[1] = metroImportDefault(tmp4(4886).Text, { variant: "text-sm/normal", children: label });
+  items[1] = metroImportDefault(tmp4(4892).Text, { variant: "text-sm/normal", children: label });
   return metroImportAll(View, obj);
 });
 const memo2 = react.memo;
@@ -2157,7 +2157,7 @@ let closure_16 = memo2(ReactCompilerGating.isReactCompilerEnabled() ? (function 
     return obj(...arguments);
   };
   [first, _slicedToArray] = react.useState(false);
-  const tmp4 = guildTemplate(17822)(guildTemplate.code);
+  const tmp4 = guildTemplate(17868)(guildTemplate.code);
   react = tmp4;
   obj = { spacing: guildTemplate(587).space.PX_12, children: items };
   const Stack = Stack_Stack.Stack;

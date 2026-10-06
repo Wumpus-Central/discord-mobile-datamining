@@ -1,10 +1,10 @@
-// === Module 13349: TreasureChestBannerSpotIllustration ===
+// === Module 13368: TreasureChestBannerSpotIllustration ===
 
-// Module 13349 (TreasureChestBannerSpotIllustration)
+// Module 13368 (TreasureChestBannerSpotIllustration)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef13350 from "module_13350" /* 13350 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import _modDef13369 from "module_13369" /* 13369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num3 = scale;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef13350 };
+    const obj2 = { uri: _modDef13369 };
     cResult[0] = obj2;
     first = obj2;
   } else {
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (num3 === undefined) {
     num3 = 1;
   }
-  const obj2 = { uri: _modDef13350 };
+  const obj2 = { uri: _modDef13369 };
   FastImageDefault;
   size = { width: num * num3, height: num2 * num3 };
   const items = [size];

@@ -1,10 +1,10 @@
-// === Module 17327: VoicePanelStyles ===
+// === Module 17355: VoicePanelStyles ===
 
-// Module 17327 (VoicePanelStyles)
+// Module 17355 (VoicePanelStyles)
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useStateFromSharedValue from "useStateFromSharedValue" /* 7941 */;
-import createStyles from "createStyles" /* 4890 */;
+import useStateFromSharedValue from "useStateFromSharedValue" /* 7952 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

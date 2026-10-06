@@ -1,8 +1,8 @@
-// === Module 11298: ChannelPinActionCreators ===
+// === Module 11311: ChannelPinActionCreators ===
 
-// Module 11298 (ChannelPinActionCreators)
+// Module 11311 (ChannelPinActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelPinsStore2 from "ChannelPinsStore" /* 11299 */;
+import ChannelPinsStore2 from "ChannelPinsStore" /* 11312 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

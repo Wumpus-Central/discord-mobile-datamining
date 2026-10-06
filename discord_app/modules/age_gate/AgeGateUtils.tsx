@@ -1,6 +1,6 @@
-// === Module 5100: AgeGateUtils ===
+// === Module 5106: AgeGateUtils ===
 
-// Module 5100 (AgeGateUtils)
+// Module 5106 (AgeGateUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
@@ -8,15 +8,15 @@ import AgeGateConstants from "AgeGateConstants" /* 1110 */;
 import intl15 from "intl" /* 1126 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 5102 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5580 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 5581 */;
-import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6710 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6832 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8086 */;
-import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 9427 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 5108 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5587 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5588 */;
+import AgeGateModalActionCreators from "AgeGateModalActionCreators" /* 6717 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6842 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8119 */;
+import getTinyBroncoWarningDescriptions from "getTinyBroncoWarningDescriptions" /* 9440 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5101 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5107 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
@@ -1128,7 +1128,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((guild_id) => {
   const tmpResult4 = require("get initialized");
   const stateFromStores1 = tmpResult4.useStateFromStores(tmp12, tmp13);
   const tmpResult5 = require("RegionalFeatureConfigUtils");
-  let isFeatureAgeGated = tmpResult5.useIsFeatureAgeGated(tmp(5581).AgeGatedFeature.AGE_GATED_SPACES);
+  let isFeatureAgeGated = tmpResult5.useIsFeatureAgeGated(tmp(5588).AgeGatedFeature.AGE_GATED_SPACES);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [];
     class S {
@@ -1435,7 +1435,7 @@ export const maybeOpenAgeGateForVoiceChannel = function maybeOpenAgeGateForVoice
   let flag = shouldShowAgeGateForVoiceChannel(id);
   if (flag) {
     const obj = AgeGateModalActionCreators;
-    obj.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL);
+    obj.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL, id);
     flag = true;
   }
   return flag;

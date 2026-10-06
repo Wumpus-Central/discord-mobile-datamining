@@ -1,6 +1,6 @@
-// === Module 7293: IosImageTypesManager ===
+// === Module 7306: IosImageTypesManager ===
 
-// Module 7293 (IosImageTypesManager)
+// Module 7306 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
 import react_nativeDefault from "react-native" /* 1432 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;

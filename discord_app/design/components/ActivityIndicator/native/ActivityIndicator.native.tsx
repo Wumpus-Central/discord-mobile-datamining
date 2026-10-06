@@ -1,11 +1,11 @@
-// === Module 5968: ActivityIndicator/ActivityIndicator ===
+// === Module 5975: ActivityIndicator/ActivityIndicator ===
 
-// Module 5968 (ActivityIndicator/ActivityIndicator)
+// Module 5975 (ActivityIndicator/ActivityIndicator)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken2 from "useToken" /* 4580 */;
+import useToken2 from "useToken" /* 4586 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

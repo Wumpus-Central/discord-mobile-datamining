@@ -1,6 +1,6 @@
-// === Module 14378: MediaPlayerManager ===
+// === Module 14396: MediaPlayerManager ===
 
-// Module 14378 (MediaPlayerManager)
+// Module 14396 (MediaPlayerManager)
 import LoggerDefault from "Logger" /* 3 */;
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -8,17 +8,17 @@ import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
 import react_native from "react-native" /* 1259 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
 import react_native2 from "react-native" /* 17 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import VoicePanelStore from "VoicePanelStore" /* 5098 */;
+import VoicePanelStore from "VoicePanelStore" /* 5104 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import MessageStore from "MessageStore" /* 5116 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14379 */;
+import MediaPlaybackPanelConstants from "MediaPlaybackPanelConstants" /* 14397 */;
 import module_570 from "module_570" /* 570 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;
@@ -43,19 +43,19 @@ const useMediaPlayerManagerStore = module_570.create((arg0) => {
   let closure_0 = arg0;
   let obj = {
     activeMediaPlayerSource: "IconComponent",
-    mediaSourceMessage: "Symbol",
+    mediaSourceMessage: "Set",
     canAccessMedia: "duration",
     isPlaying: false,
     wasPipClosedByUser: null,
     progress: null,
-    rate: "Set",
-    showPip: "M13 15h2v-1h1v2H4v-1h3v-1h6v1ZM4 15h-1v-1h1v1ZM3 14H2v-1h1v1ZM7 14h-1v-1h1v1ZM15 14h-2v-1h1v-1h1v2ZM2 13H1v-1h1v1ZM6 13h-1v-1h1v1ZM1 12H0V5h1v7ZM16 12h-1V6h1v6ZM6 9h-1v1h-1v-1h-1v-1h3v1ZM5 1h1V0h2v2h-1V1h-1v1h-1v1h-1v1h1v-1h1V2h1v1h6v1H6v1h1v3h-1v-2h-1v-1h-2V2h1V1h-1V0h2v1ZM15 6h-1v-1h1v1ZM2 5H1V2h1v3ZM14 5h-1v-1h1v1ZM3 2H2V1h1v1Z",
+    rate: "Reflect",
+    showPip: "M13 0H3.00002H2.99996H2.00002V2H3.00002V1H13V2H14V0H13Z",
     closePip() {
       const obj = react_native;
       obj.batchUpdates(() => closure_1_0({ showPip: false }));
     },
     displayedMediaItemIdsPerChannel: {},
-    currentlyDisplayedChannelId: "<string:3578855425>"
+    currentlyDisplayedChannelId: "<string:3645964289>"
   };
   return obj;
 });

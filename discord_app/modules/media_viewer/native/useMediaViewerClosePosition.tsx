@@ -1,9 +1,9 @@
-// === Module 12787: useMediaViewerClosePosition ===
+// === Module 12806: useMediaViewerClosePosition ===
 
-// Module 12787 (useMediaViewerClosePosition)
+// Module 12806 (useMediaViewerClosePosition)
 import Constants from "Constants" /* 1085 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 12784 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 12803 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

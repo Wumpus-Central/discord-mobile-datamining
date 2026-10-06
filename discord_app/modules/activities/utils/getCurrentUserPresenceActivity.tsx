@@ -1,6 +1,6 @@
-// === Module 11393: getCurrentUserPresenceActivity ===
+// === Module 11406: getCurrentUserPresenceActivity ===
 
-// Module 11393 (getCurrentUserPresenceActivity)
+// Module 11406 (getCurrentUserPresenceActivity)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");

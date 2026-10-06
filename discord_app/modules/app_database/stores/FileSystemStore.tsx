@@ -1,6 +1,6 @@
-// === Module 6988: FileSystemStore ===
+// === Module 7001: FileSystemStore ===
 
-// Module 6988 (FileSystemStore)
+// Module 7001 (FileSystemStore)
 import LoggerDefault from "Logger" /* 3 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;

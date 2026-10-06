@@ -1,8 +1,8 @@
-// === Module 7403: trackChannelOpenedClickstream ===
+// === Module 7414: trackChannelOpenedClickstream ===
 
-// Module 7403 (trackChannelOpenedClickstream)
+// Module 7414 (trackChannelOpenedClickstream)
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import Clickstream from "Clickstream" /* 6974 */;
+import Clickstream from "Clickstream" /* 6987 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

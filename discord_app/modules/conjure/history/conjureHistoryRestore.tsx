@@ -1,8 +1,8 @@
-// === Module 16622: conjureHistoryRestore ===
+// === Module 16659: conjureHistoryRestore ===
 
-// Module 16622 (conjureHistoryRestore)
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
-import conjureDatabaseLock from "conjureDatabaseLock" /* 16623 */;
+// Module 16659 (conjureHistoryRestore)
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
+import conjureDatabaseLock from "conjureDatabaseLock" /* 16660 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

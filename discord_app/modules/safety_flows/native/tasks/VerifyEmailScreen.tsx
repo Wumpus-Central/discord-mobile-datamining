@@ -1,6 +1,6 @@
-// === Module 18069: VerifyEmailScreen ===
+// === Module 18114: VerifyEmailScreen ===
 
-// Module 18069 (VerifyEmailScreen)
+// Module 18114 (VerifyEmailScreen)
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
@@ -289,19 +289,19 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       callback();
     }
   }, items2);
-  let obj3 = { title: intl.string(require("module_2787")["Qm6K/s"]), action: intl2.string(require("module_2787").wq2RDq), onAction, submitting: first1, children: closure_7(Stack, obj4) };
+  let obj3 = { title: intl.string(require("module_2815")["Qm6K/s"]), action: intl2.string(require("module_2815").wq2RDq), onAction, submitting: first1, children: closure_7(Stack, obj4) };
   const tmp14 = require("SafetyFlowTaskScreen");
   intl = onTaskComplete(value[10]).intl;
   intl2 = onTaskComplete(value[10]).intl;
   obj4 = { spacing: require("native").space.PX_16, children: items3 };
   Stack = onTaskComplete(value[15]).Stack;
-  let obj5 = { variant: "text-sm/medium", color: "text-subtle", children: intl3.string(require("module_2787").aveKoG) };
+  let obj5 = { variant: "text-sm/medium", color: "text-subtle", children: intl3.string(require("module_2815").aveKoG) };
   const Text = onTaskComplete(value[12]).Text;
   intl3 = onTaskComplete(value[10]).intl;
   items3 = [onAction(Text, obj5), ];
   let obj6 = { spacing: require("native").space.PX_8, children: items4 };
   const Stack2 = onTaskComplete(value[15]).Stack;
-  const obj7 = { placeholder: intl4.string(require("module_2787").d9Ykjr), maxLength: 6, returnKeyType: "done", value, onChange: tmp4 };
+  const obj7 = { placeholder: intl4.string(require("module_2815").d9Ykjr), maxLength: 6, returnKeyType: "done", value, onChange: tmp4 };
   const TextInput = onTaskComplete(value[13]).TextInput;
   intl4 = onTaskComplete(value[10]).intl;
   items4 = [onAction(TextInput, obj7), ];

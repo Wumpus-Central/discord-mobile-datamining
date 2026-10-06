@@ -1,25 +1,25 @@
-// === Module 6795: ObscuredMediaUtils ===
+// === Module 6805: ObscuredMediaUtils ===
 
-// Module 6795 (ObscuredMediaUtils)
+// Module 6805 (ObscuredMediaUtils)
 import preloaded_user_settings from "preloaded_user_settings" /* 1197 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
-import HarmTypeConfiguration from "HarmTypeConfiguration" /* 6798 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6800 */;
-import isForwardMessage from "isForwardMessage" /* 6805 */;
+import HarmTypeConfiguration from "HarmTypeConfiguration" /* 6808 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 6810 */;
+import isForwardMessage from "isForwardMessage" /* 6815 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import MessageStore from "MessageStore" /* 5116 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 6796 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 6806 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 const isForwardMessageDefault = isForwardMessage;
 let _require;
 
-const f93285 = (isEligible) => {
+const f93420 = (isEligible) => {
   let tmp = null == isEligible.isEligible;
   if (!tmp) {
     isEligible = isEligible.isEligible;
@@ -31,7 +31,7 @@ const f93285 = (isEligible) => {
   }
   return tmp;
 };
-const f93286 = (harmType) => {
+const f93421 = (harmType) => {
   const tmp = harmType.getUserSettingsWithDefaults()[GUILD];
   let hasItem = null != tmp;
   if (hasItem) {
@@ -44,10 +44,10 @@ const f93286 = (harmType) => {
   }
   return harmType;
 };
-const f93292 = (item) => EXPLICIT(closure_1_2[7]).CONTENT_SCAN_TYPE_REGISTRY[item].obscureReason;
+const f93427 = (item) => EXPLICIT(closure_1_2[7]).CONTENT_SCAN_TYPE_REGISTRY[item].obscureReason;
 function getEligibleHarmTypesConfigsForContext() {
   const values = Object.values(HarmTypeConfiguration.CONTENT_SCAN_TYPE_REGISTRY);
-  return values.filter(f93285);
+  return values.filter(f93420);
 }
 function getEnabledHarmTypesForMessage(message) {
   const channelId = getChannelIdAndAuthorIdFromMessage(message).channelId;
@@ -75,11 +75,11 @@ function getEnabledHarmTypesForChannelAndAuthorId(channelId, id) {
         _require = tmp10;
         const _Object = Object;
         const values = Object.values(require("HarmTypeConfiguration").CONTENT_SCAN_TYPE_REGISTRY);
-        const found = values.filter(f93285);
+        const found = values.filter(f93420);
         if (null == tmp10) {
-          NONE = tmp12(6798).ContentHarmTypeBitMask.NONE;
+          NONE = tmp12(6808).ContentHarmTypeBitMask.NONE;
         } else {
-          const mapped = found.map(f93286);
+          const mapped = found.map(f93421);
           NONE = contentHarmTypesToFlags(mapped.filter(tmp12(1375).isNotNullish));
         }
       }
@@ -106,7 +106,7 @@ function messageHasObscurableMediaForBitmask(firstMessage, EXPLICIT) {
               items = [];
             } else {
               const found = arr.filter((item) => closure_2_17(item, obj));
-              items = found.map(f93292);
+              items = found.map(f93427);
             }
           }
           return items.length > 0;
@@ -129,7 +129,7 @@ function messageHasObscurableMediaForBitmask(firstMessage, EXPLICIT) {
                 items = [];
               } else {
                 const found = arr.filter((item) => closure_2_17(item, obj));
-                items = found.map(f93292);
+                items = found.map(f93427);
               }
             }
             return items.length > 0;
@@ -167,7 +167,7 @@ function messageHasObscurableMediaForBitmask(firstMessage, EXPLICIT) {
   return false;
 }
 function findComponentMedia(components) {
-  const f93289 = (type) => {
+  const f93424 = (type) => {
     type = type.type;
     if (require("Server").ComponentType.MEDIA_GALLERY === type) {
       const items = type.items;
@@ -187,8 +187,8 @@ function findComponentMedia(components) {
         const items2 = [accessory];
         obj = items2;
       }
-      const flatMapResult = obj.flatMap(f93289);
-      HermesBuiltin.arraySpread(items1, flatMapResult.map(f93290), arraySpreadResult);
+      const flatMapResult = obj.flatMap(f93424);
+      HermesBuiltin.arraySpread(items1, flatMapResult.map(f93425), arraySpreadResult);
       return items1;
     } else {
       if (require("Server").ComponentType.ACTION_ROW !== type) {
@@ -200,7 +200,7 @@ function findComponentMedia(components) {
       return components.flatMap(findComponentMedia);
     }
   };
-  const f93290 = (item) => {
+  const f93425 = (item) => {
     let toUnfurledMediaItemResult = item;
     if ("proxy_url" in item) {
       const obj = closure_1_0(closure_1_2[11]);
@@ -213,8 +213,8 @@ function findComponentMedia(components) {
     let items = [components];
     obj = items;
   }
-  let flatMapResult = obj.flatMap(f93289);
-  return flatMapResult.map(f93290);
+  let flatMapResult = obj.flatMap(f93424);
+  return flatMapResult.map(f93425);
 }
 function findMessageComponentMedia(components) {
   const items = [];
@@ -241,7 +241,7 @@ function findMessageComponentMedia(components) {
 function isMediaScanPending(type, NONE) {
   let media;
   const tmp = media;
-  if (NONE === media(6798).ContentHarmTypeBitMask.NONE) {
+  if (NONE === media(6808).ContentHarmTypeBitMask.NONE) {
     return false;
   } else if (DevSettingsStore.get("explicit_media_redaction_ignore_pending_scan")) {
     return false;
@@ -251,7 +251,7 @@ function isMediaScanPending(type, NONE) {
       return false;
     } else {
       type = type.type;
-      if (tmp(6800).ObscuredMediaTypes.Embed === type) {
+      if (tmp(6810).ObscuredMediaTypes.Embed === type) {
         const media3 = type.media;
         let flag3 = false;
         if (0 !== arr.length) {
@@ -327,9 +327,9 @@ function isMediaScanPending(type, NONE) {
                 }
                 let tmp28 = -1 !== content_scan_version;
                 if (tmp28) {
-                  if (!arr.includes(tmp(6798).ContentHarmType.GORE)) {
+                  if (!arr.includes(tmp(6808).ContentHarmType.GORE)) {
                     let tmp29;
-                    if (!arr.includes(tmp(6798).ContentHarmType.SELF_HARM)) {
+                    if (!arr.includes(tmp(6808).ContentHarmType.SELF_HARM)) {
                       tmp29 = null == content_scan_version;
                     }
                     tmp28 = tmp29;
@@ -348,7 +348,7 @@ function isMediaScanPending(type, NONE) {
           }
         }
         return flag3;
-      } else if (tmp(6800).ObscuredMediaTypes.Attachment === type) {
+      } else if (tmp(6810).ObscuredMediaTypes.Attachment === type) {
         const media2 = type.media;
         let tmp10 = 0 !== arr.length;
         if (tmp10) {
@@ -363,9 +363,9 @@ function isMediaScanPending(type, NONE) {
             }
             let tmp15 = -1 !== contentScanVersion;
             if (tmp15) {
-              if (!arr.includes(tmp(6798).ContentHarmType.GORE)) {
+              if (!arr.includes(tmp(6808).ContentHarmType.GORE)) {
                 let tmp16;
-                if (!arr.includes(tmp(6798).ContentHarmType.SELF_HARM)) {
+                if (!arr.includes(tmp(6808).ContentHarmType.SELF_HARM)) {
                   tmp16 = null == contentScanVersion;
                 }
                 tmp15 = tmp16;
@@ -377,7 +377,7 @@ function isMediaScanPending(type, NONE) {
           tmp10 = tmp11;
         }
         return tmp10;
-      } else if (tmp(6800).ObscuredMediaTypes.GenericMedia === type) {
+      } else if (tmp(6810).ObscuredMediaTypes.GenericMedia === type) {
         media = type.media;
         let flag2 = false;
         if (0 !== arr.length) {
@@ -393,9 +393,9 @@ function isMediaScanPending(type, NONE) {
             }
             let tmp7 = -1 !== version;
             if (tmp7) {
-              if (!arr.includes(tmp(6798).ContentHarmType.GORE)) {
+              if (!arr.includes(tmp(6808).ContentHarmType.GORE)) {
                 let tmp8;
-                if (!arr.includes(tmp(6798).ContentHarmType.SELF_HARM)) {
+                if (!arr.includes(tmp(6808).ContentHarmType.SELF_HARM)) {
                   tmp8 = null == version;
                 }
                 tmp7 = tmp8;
@@ -663,11 +663,11 @@ export const getEnabledHarmTypesBitmaskForChannelType = function getEnabledHarmT
   _require = GUILD;
   let tmp = _require;
   const values = Object.values(require("HarmTypeConfiguration").CONTENT_SCAN_TYPE_REGISTRY);
-  const found = values.filter(f93285);
+  const found = values.filter(f93420);
   if (null == GUILD) {
-    NONE = tmp(6798).ContentHarmTypeBitMask.NONE;
+    NONE = tmp(6808).ContentHarmTypeBitMask.NONE;
   } else {
-    const mapped = found.map(f93286);
+    const mapped = found.map(f93421);
     NONE = contentHarmTypesToFlags(mapped.filter(tmp(1375).isNotNullish));
   }
   return NONE;
@@ -717,7 +717,7 @@ export const getUnscannedMediaIds = function getUnscannedMediaIds(message) {
     if (null != message) {
       NONE = getEnabledHarmTypesForChannelAndAuthorId(channelId, tmp2);
     }
-    if (NONE === NONE(6798).ContentHarmTypeBitMask.NONE) {
+    if (NONE === NONE(6808).ContentHarmTypeBitMask.NONE) {
       return { attachmentIds: [], embedIds: [] };
     } else {
       const attachments = message.attachments;
@@ -758,7 +758,7 @@ export const getUnscannedMediaIds = function getUnscannedMediaIds(message) {
       return obj;
     }
   }
-  NONE = NONE(6798).ContentHarmTypeBitMask.NONE;
+  NONE = NONE(6808).ContentHarmTypeBitMask.NONE;
 };
 export const getMediaObscuredReasonFromBitmask = function getMediaObscuredReasonFromBitmask(arg0, enabledContentHarmTypeFlags) {
   let closure_0;
@@ -772,7 +772,7 @@ export const getMediaObscuredReasonFromBitmask = function getMediaObscuredReason
       items = [];
     } else {
       const found = arr.filter((item) => closure_2_17(item, obj));
-      items = found.map(f93292);
+      items = found.map(f93427);
     }
     return items;
   }

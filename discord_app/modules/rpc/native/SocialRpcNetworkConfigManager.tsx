@@ -1,13 +1,13 @@
-// === Module 18016: SocialRpcNetworkConfigManager ===
+// === Module 18061: SocialRpcNetworkConfigManager ===
 
-// Module 18016 (SocialRpcNetworkConfigManager)
+// Module 18061 (SocialRpcNetworkConfigManager)
 import react_native from "react-native" /* 17 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 function updateSocialRpcNetworkConfig() {

@@ -1,6 +1,6 @@
-// === Module 14401: MainNavigationLogger ===
+// === Module 14417: MainNavigationLogger ===
 
-// Module 14401 (MainNavigationLogger)
+// Module 14417 (MainNavigationLogger)
 import LoggerDefault from "Logger" /* 3 */;
 import size from "module_2" /* 2 */;
 

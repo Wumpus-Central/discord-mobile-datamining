@@ -1,6 +1,6 @@
-// === Module 12888: useBadgeDirectoryNuxEntryPoint ===
+// === Module 12907: useBadgeDirectoryNuxEntryPoint ===
 
-// Module 12888 (useBadgeDirectoryNuxEntryPoint)
+// Module 12907 (useBadgeDirectoryNuxEntryPoint)
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

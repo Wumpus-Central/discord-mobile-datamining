@@ -1,14 +1,14 @@
-// === Module 17836: EnableCommunityModal ===
+// === Module 17882: EnableCommunityModal ===
 
-// Module 17836 (EnableCommunityModal)
+// Module 17882 (EnableCommunityModal)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6016 */;
-import Navigator2 from "Navigator" /* 6496 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17835 */;
-import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17837 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6023 */;
+import Navigator2 from "Navigator" /* 6503 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17881 */;
+import EnableCommunitySharedNavigation from "EnableCommunitySharedNavigation" /* 17883 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

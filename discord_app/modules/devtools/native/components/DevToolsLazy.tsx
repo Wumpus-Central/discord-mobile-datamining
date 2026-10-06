@@ -1,14 +1,14 @@
-// === Module 14405: DevToolsLazy ===
+// === Module 14421: DevToolsLazy ===
 
-// Module 14405 (DevToolsLazy)
+// Module 14421 (DevToolsLazy)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import KeyCommands from "KeyCommands" /* 5781 */;
+import KeyCommands from "KeyCommands" /* 5788 */;
 import react from "react" /* 19 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7204 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7203 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7217 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7216 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -22,7 +22,7 @@ let obj = {
   eventName: "keyCommandShowDevTools",
   discoverabilityTitle: "Open DevTools Panel",
   onKeyCommand() {
-    const promise = asyncRequire(14406, dependencyMap.paths);
+    const promise = asyncRequire(14422, dependencyMap.paths);
     promise.then((navigateToDevTools) => {
       navigateToDevTools.navigateToDevTools();
     });
@@ -110,15 +110,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     tmp14 = cResult[7];
   }
-  const tmpResult5 = stateFromStores(5781);
+  const tmpResult5 = stateFromStores(5788);
   const keyCommands = tmpResult5.useKeyCommands(tmp14);
   if (stateFromStores) {
     if (stateFromStores1) {
       let tmp19;
       const _Symbol = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        cResult[8] = stateFromStores(15840);
-        stateFromStores(15840);
+        cResult[8] = stateFromStores(15879);
+        stateFromStores(15879);
         class D {
           constructor() {
             return showDevWidget.showDevWidget;
@@ -167,11 +167,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       });
     }
   });
-  const obj3 = stateFromStores(5781);
+  const obj3 = stateFromStores(5788);
   const keyCommands = obj3.useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15840).default, {});
+      return jsx(tmp(15879).default, {});
     }
   }
   return null;

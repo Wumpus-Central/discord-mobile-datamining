@@ -1,6 +1,6 @@
-// === Module 6838: useGuildOnboardingAvailable ===
+// === Module 6848: useGuildOnboardingAvailable ===
 
-// Module 6838 (useGuildOnboardingAvailable)
+// Module 6848 (useGuildOnboardingAvailable)
 import Constants from "Constants" /* 1085 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

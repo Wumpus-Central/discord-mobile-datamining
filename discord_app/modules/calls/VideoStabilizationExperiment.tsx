@@ -1,6 +1,6 @@
-// === Module 13620: VideoStabilizationExperiment ===
+// === Module 13636: VideoStabilizationExperiment ===
 
-// Module 13620 (VideoStabilizationExperiment)
+// Module 13636 (VideoStabilizationExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// === Module 9730: SpeakerTile ===
+// === Module 9743: SpeakerTile ===
 
-// Module 9730 (SpeakerTile)
+// Module 9743 (SpeakerTile)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8069 */;
-import StageTileTypes from "StageTileTypes" /* 9731 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8102 */;
+import StageTileTypes from "StageTileTypes" /* 9744 */;
 import react from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import ColorUtils_mod from "ColorUtils" /* 4727 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import ColorUtils_mod from "ColorUtils" /* 4733 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

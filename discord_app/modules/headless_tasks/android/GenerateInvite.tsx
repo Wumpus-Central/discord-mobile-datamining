@@ -1,8 +1,8 @@
-// === Module 18133: GenerateInvite ===
+// === Module 18179: GenerateInvite ===
 
-// Module 18133 (GenerateInvite)
+// Module 18179 (GenerateInvite)
 import react_native from "react-native" /* 17 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8054 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8064 */;
 import size from "module_2" /* 2 */;
 
 let RNCClipboard;

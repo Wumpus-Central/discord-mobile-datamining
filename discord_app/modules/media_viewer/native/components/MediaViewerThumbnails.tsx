@@ -1,22 +1,22 @@
-// === Module 12764: MediaViewerThumbnails ===
+// === Module 12779: MediaViewerThumbnails ===
 
-// Module 12764 (MediaViewerThumbnails)
+// Module 12779 (MediaViewerThumbnails)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useToken from "useToken" /* 4580 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4613 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5773 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12765 */;
+import useToken from "useToken" /* 4586 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4619 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5780 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12780 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import Constants from "Constants" /* 7967 */;
+import Constants from "Constants" /* 7977 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let THUMBNAIL_HEIGHT;

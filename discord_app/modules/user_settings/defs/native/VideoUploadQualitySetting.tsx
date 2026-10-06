@@ -1,15 +1,15 @@
-// === Module 15286: VideoUploadQualitySetting ===
+// === Module 15301: VideoUploadQualitySetting ===
 
-// Module 15286 (VideoUploadQualitySetting)
+// Module 15301 (VideoUploadQualitySetting)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import UnsyncedUserSettingsStore2 from "UnsyncedUserSettingsStore" /* 1195 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import UserSettingsText from "UserSettingsText" /* 15285 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import UserSettingsText from "UserSettingsText" /* 15300 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const UnsyncedUserSettingsStore = UnsyncedUserSettingsStore2;

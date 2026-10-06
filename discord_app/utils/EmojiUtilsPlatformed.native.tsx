@@ -1,18 +1,18 @@
-// === Module 7411: EmojiUtilsPlatformed ===
+// === Module 7422: EmojiUtilsPlatformed ===
 
-// Module 7411 (EmojiUtilsPlatformed)
+// Module 7422 (EmojiUtilsPlatformed)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import react_nativeDefault from "react-native" /* 1886 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
-import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7412 */;
-import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 7451 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
+import burst_reactions_BurstReactionEffectUtils from "burst_reactions/BurstReactionEffectUtils" /* 7423 */;
+import BurstReactionFirstSendActionSheet from "BurstReactionFirstSendActionSheet" /* 7462 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import module_4524 from "module_4524" /* 4524 */;
-import MemoizerUtils_mod from "MemoizerUtils" /* 7456 */;
+import module_4530 from "module_4530" /* 4530 */;
+import MemoizerUtils_mod from "MemoizerUtils" /* 7467 */;
 import size from "module_2" /* 2 */;
 
 let closure_1, closure_2, unicodeVersion;
@@ -21,7 +21,7 @@ let MemoizerUtils;
 function getURL(name) {
   let str;
   if (null == name) {
-    const convert = module_4524.convert;
+    const convert = module_4530.convert;
     const _HermesInternal = HermesInternal;
     str = "asset:/emoji-" + convert.toCodePoint(name) + ".png";
   } else {

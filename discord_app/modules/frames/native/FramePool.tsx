@@ -1,20 +1,20 @@
-// === Module 17146: FramePool ===
+// === Module 17175: FramePool ===
 
-// Module 17146 (FramePool)
+// Module 17175 (FramePool)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import v1 from "v1" /* 1266 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8986 */;
-import WebViewContext from "WebViewContext" /* 9139 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 16596 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
+import WebViewContext from "WebViewContext" /* 9174 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 16634 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import FramesStore from "FramesStore" /* 8703 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import createStyles from "createStyles" /* 4890 */;
+import FramesStore from "FramesStore" /* 9000 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -357,7 +357,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
         }
       }
     }
-    const syncExternalStore = react.useSyncExternalStore(first1(16596).subscribe, tmp15);
+    const syncExternalStore = react.useSyncExternalStore(first1(16634).subscribe, tmp15);
     const tmp16 = first1;
     if (cResult[11] !== syncExternalStore) {
       class S {
@@ -406,8 +406,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
     cResult[13] = frame;
     cResult[14] = first1;
     cResult[15] = tmp18;
-    cResult[16] = jsx(tmp16(17147), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 }, first1);
-    const tmp24 = jsx(tmp16(17147), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 }, first1);
+    cResult[16] = jsx(tmp16(17176), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 }, first1);
+    const tmp24 = jsx(tmp16(17176), { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 }, first1);
   }
   const fn2 = function h() {
     let obj = FramePoolManagerDefault;
@@ -457,11 +457,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? ((frame) => {
     const obj = v1;
     closure_2(obj.v4());
   }, []);
-  let syncExternalStore = react.useSyncExternalStore(iframeId(16596).subscribe, () => {
+  let syncExternalStore = react.useSyncExternalStore(iframeId(16634).subscribe, () => {
     const obj = FramePoolManagerDefault;
     return obj.getWinningTargetState(id);
   });
-  iframeId(17147);
+  iframeId(17176);
   if (syncExternalStore == null) {
     let obj2 = { layoutMode: constants.FOCUSED };
     syncExternalStore = obj2;

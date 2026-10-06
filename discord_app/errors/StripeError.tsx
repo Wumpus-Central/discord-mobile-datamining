@@ -1,7 +1,7 @@
-// === Module 5314: StripeError ===
+// === Module 5321: StripeError ===
 
-// Module 5314 (StripeError)
-import BillingError from "BillingError" /* 4550 */;
+// Module 5321 (StripeError)
+import BillingError from "BillingError" /* 4556 */;
 import size from "module_2" /* 2 */;
 
 class StripeError extends BillingError {

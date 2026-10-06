@@ -1,44 +1,44 @@
-// === Module 17774: GuildSettingsRoles ===
+// === Module 17820: GuildSettingsRoles ===
 
-// Module 17774 (GuildSettingsRoles)
+// Module 17820 (GuildSettingsRoles)
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
-import Pressables from "Pressables" /* 5909 */;
-import TableRowGroup from "TableRowGroup" /* 6074 */;
-import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6624 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import ArrowsUpDownIcon2 from "ArrowsUpDownIcon" /* 11775 */;
-import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16070 */;
-import GuildSettingsConstants from "GuildSettingsConstants" /* 17776 */;
-import GuildSettingsRolesManager from "GuildSettingsRolesManager" /* 17777 */;
-import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 17778 */;
-import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17785 */;
-import actions_GuildActionCreators from "actions/GuildActionCreators" /* 17787 */;
-import GuildSettingsModalRolesActionCreatorsDefault from "GuildSettingsModalRolesActionCreators" /* 17788 */;
-import MemberRolesAbstractUI from "MemberRolesAbstractUI" /* 17789 */;
-import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem" /* 17791 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import Pressables from "Pressables" /* 5916 */;
+import TableRowGroup from "TableRowGroup" /* 6081 */;
+import GuildRoleMemberActionCreatorsAll from "GuildRoleMemberActionCreators" /* 6631 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import ArrowsUpDownIcon2 from "ArrowsUpDownIcon" /* 11789 */;
+import GuildSettingsModalChannelsActionCreatorsDefault from "GuildSettingsModalChannelsActionCreators" /* 16109 */;
+import GuildSettingsConstants from "GuildSettingsConstants" /* 17822 */;
+import GuildSettingsRolesManager from "GuildSettingsRolesManager" /* 17823 */;
+import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRoleCreateModalActionCreators" /* 17824 */;
+import GuildSettingsRolesUtils from "GuildSettingsRolesUtils" /* 17831 */;
+import actions_GuildActionCreators from "actions/GuildActionCreators" /* 17833 */;
+import GuildSettingsModalRolesActionCreatorsDefault from "GuildSettingsModalRolesActionCreators" /* 17834 */;
+import MemberRolesAbstractUI from "MemberRolesAbstractUI" /* 17835 */;
+import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem" /* 17837 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4786 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore_mod from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6623 */;
-import GuildSettingsModalRolesStore from "GuildSettingsModalRolesStore" /* 17775 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 6630 */;
+import GuildSettingsModalRolesStore from "GuildSettingsModalRolesStore" /* 17821 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import TextStyles from "TextStyles" /* 5915 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import TextStyles from "TextStyles" /* 5922 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -303,7 +303,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     first = cResult[0];
   }
-  const tmpResult = tmp(17777);
+  const tmpResult = tmp(17823);
   const guildSettingsRolesManagerState = tmpResult.useGuildSettingsRolesManagerState(first);
   if (cResult[1] === arg0) {
     let tmp6;

@@ -1,6 +1,6 @@
-// === Module 11908: VoicePanelPIPHandoff ===
+// === Module 11922: VoicePanelPIPHandoff ===
 
-// Module 11908 (VoicePanelPIPHandoff)
+// Module 11922 (VoicePanelPIPHandoff)
 import react2 from "react" /* 576 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

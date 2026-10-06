@@ -1,20 +1,20 @@
-// === Module 17460: AudioSessionModeManager ===
+// === Module 17487: AudioSessionModeManager ===
 
-// Module 17460 (AudioSessionModeManager)
+// Module 17487 (AudioSessionModeManager)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import VoicePermissionManager from "VoicePermissionManager" /* 17461 */;
+import VoicePermissionManager from "VoicePermissionManager" /* 17488 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5578 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let map;

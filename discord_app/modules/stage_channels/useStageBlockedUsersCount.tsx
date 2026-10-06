@@ -1,8 +1,8 @@
-// === Module 8277: useStageBlockedUsersCount ===
+// === Module 8310: useStageBlockedUsersCount ===
 
-// Module 8277 (useStageBlockedUsersCount)
-import StageChannelParticipants from "StageChannelParticipants" /* 5582 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5575 */;
+// Module 8310 (useStageBlockedUsersCount)
+import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

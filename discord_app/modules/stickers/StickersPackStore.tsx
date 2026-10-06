@@ -1,10 +1,10 @@
-// === Module 5689: StickersPackStore ===
+// === Module 5696: StickersPackStore ===
 
-// Module 5689 (StickersPackStore)
+// Module 5696 (StickersPackStore)
 import DurationsDefault from "Durations" /* 1102 */;
 import js_shim_PlainRecord from "js_shim/PlainRecord" /* 2068 */;
 import LibdiscoreStore2 from "LibdiscoreStore" /* 2075 */;
-import StickersTypes from "StickersTypes" /* 5429 */;
+import StickersTypes from "StickersTypes" /* 5436 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// === Module 11891: ChatInputScrimGradient ===
+// === Module 11905: ChatInputScrimGradient ===
 
-// Module 11891 (ChatInputScrimGradient)
+// Module 11905 (ChatInputScrimGradient)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import useToken2 from "useToken" /* 4580 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4696 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
+import useToken2 from "useToken" /* 4586 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 4702 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

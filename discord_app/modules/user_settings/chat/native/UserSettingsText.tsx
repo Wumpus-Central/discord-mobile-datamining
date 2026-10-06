@@ -1,6 +1,6 @@
-// === Module 15285: UserSettingsText ===
+// === Module 15300: UserSettingsText ===
 
-// Module 15285 (UserSettingsText)
+// Module 15300 (UserSettingsText)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl23 from "intl" /* 1126 */;
@@ -8,21 +8,21 @@ import native from "native" /* 1188 */;
 import UnsyncedUserSettingsStore2 from "UnsyncedUserSettingsStore" /* 1195 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import TableRadioRow4 from "TableRadioRow" /* 6071 */;
-import TableRadioGroup2 from "TableRadioGroup" /* 6072 */;
-import TableRowGroup7 from "TableRowGroup" /* 6074 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6487 */;
-import TableSwitchRow8 from "TableSwitchRow" /* 6698 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8863 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10124 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import TableRadioRow4 from "TableRadioRow" /* 6078 */;
+import TableRadioGroup2 from "TableRadioGroup" /* 6079 */;
+import TableRowGroup7 from "TableRowGroup" /* 6081 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6494 */;
+import TableSwitchRow8 from "TableSwitchRow" /* 6705 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 8091 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10137 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

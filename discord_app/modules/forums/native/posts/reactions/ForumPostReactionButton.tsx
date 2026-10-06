@@ -1,6 +1,6 @@
-// === Module 10030: ForumPostReactionButton ===
+// === Module 10043: ForumPostReactionButton ===
 
-// Module 10030 (ForumPostReactionButton)
+// Module 10043 (ForumPostReactionButton)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,19 +8,19 @@ import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
 import intl2 from "intl" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import ReactionUtils from "ReactionUtils" /* 4521 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import EmojiDefault from "Emoji" /* 6625 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9855 */;
-import useEmojiColorPalette from "useEmojiColorPalette" /* 9977 */;
-import useReactionPermissionsDefault from "useReactionPermissions" /* 10028 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10031 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11070 */;
+import ReactionUtils from "ReactionUtils" /* 4527 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import EmojiDefault from "Emoji" /* 6632 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 9868 */;
+import useEmojiColorPalette from "useEmojiColorPalette" /* 9990 */;
+import useReactionPermissionsDefault from "useReactionPermissions" /* 10041 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10044 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11083 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

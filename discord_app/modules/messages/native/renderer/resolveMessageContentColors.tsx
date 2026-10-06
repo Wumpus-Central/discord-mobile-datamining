@@ -1,9 +1,9 @@
-// === Module 7612: resolveMessageContentColors ===
+// === Module 7623: resolveMessageContentColors ===
 
-// Module 7612 (resolveMessageContentColors)
+// Module 7623 (resolveMessageContentColors)
 import nativeDefault from "native" /* 587 */;
-import shared from "shared" /* 4729 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import shared from "shared" /* 4735 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let theme;

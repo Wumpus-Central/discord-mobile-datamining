@@ -1,6 +1,6 @@
-// === Module 17570: AddAvatarModal ===
+// === Module 17616: AddAvatarModal ===
 
-// Module 17570 (AddAvatarModal)
+// Module 17616 (AddAvatarModal)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
@@ -8,24 +8,24 @@ import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import Navigator from "Navigator" /* 6496 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 7840 */;
-import VideoBackground from "VideoBackground" /* 7920 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 14419 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17568 */;
-import PresetAvatarSelect from "PresetAvatarSelect" /* 17571 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import Navigator from "Navigator" /* 6503 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 7851 */;
+import VideoBackground from "VideoBackground" /* 7931 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 14435 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 17614 */;
+import PresetAvatarSelect from "PresetAvatarSelect" /* 17617 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7831 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 7842 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import TextStyles from "TextStyles" /* 5915 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import TextStyles from "TextStyles" /* 5922 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -335,7 +335,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
                   }
                   if (cResult[37] !== selectedAvatar) {
                     let obj6 = { onAvatarSelect: tmp7[1], selectedAvatar };
-                    const tmp59 = closure_9(selectedAvatar(17571), obj6);
+                    const tmp59 = closure_9(selectedAvatar(17617), obj6);
                     cResult[37] = selectedAvatar;
                     cResult[38] = tmp59;
                     tmp57 = tmp59;
@@ -438,7 +438,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         tmp46 = tmp48;
       }
       const obj13 = { avatarSource: tmp20, showPendingAvatar: null != tmp15, onSelectAvatar: tmp22 };
-      const tmp43 = closure_9(tmp10(17580), obj13);
+      const tmp43 = closure_9(tmp10(17626), obj13);
       cResult[21] = tmp20;
       cResult[22] = null != tmp15;
       cResult[23] = tmp43;
@@ -610,7 +610,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return obj(...arguments);
     }
   };
-  items3[1] = closure_9(selectedAvatar(17580), obj8);
+  items3[1] = closure_9(selectedAvatar(17626), obj8);
   let obj9 = { style: tmp.errorContainer, children: closure_9(LegacyText, obj10) };
   obj10 = { style: tmp.errorText, children: stringResult };
   LegacyText = native.LegacyText;
@@ -619,7 +619,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     stringResult = intl3.string(intl5.t.XyLlVm);
   }
   items3[2] = closure_9(View, obj9);
-  items4 = [closure_10(View, obj4), closure_9(tmp7(17571), { onAvatarSelect: tmp6, selectedAvatar }), ];
+  items4 = [closure_10(View, obj4), closure_9(tmp7(17617), { onAvatarSelect: tmp6, selectedAvatar }), ];
   const obj11 = { style: tmp.buttonContainer, children: closure_9(Button, obj12) };
   obj12 = {
     text: intl4.string(intl5.t.PDTjLN),

@@ -1,21 +1,21 @@
-// === Module 11515: AppealIngestionConfirmSubmission ===
+// === Module 11528: AppealIngestionConfirmSubmission ===
 
-// Module 11515 (AppealIngestionConfirmSubmission)
+// Module 11528 (AppealIngestionConfirmSubmission)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8092 */;
-import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11492 */;
-import AppealIngestionModal from "AppealIngestionModal" /* 11498 */;
-import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11501 */;
-import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11511 */;
-import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11516 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8125 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11505 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 11511 */;
+import AppealIngestionActivitySummaryDefault from "AppealIngestionActivitySummary" /* 11514 */;
+import AppealIngestionPolicySummaryDefault from "AppealIngestionPolicySummary" /* 11524 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11529 */;
 import react from "react" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8106 */;
+import SafetyHubStore from "SafetyHubStore" /* 8139 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

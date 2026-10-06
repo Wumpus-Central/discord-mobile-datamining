@@ -1,15 +1,15 @@
-// === Module 13291: usePremiumGroupFeaturesTableCardText ===
+// === Module 13310: usePremiumGroupFeaturesTableCardText ===
 
-// Module 13291 (usePremiumGroupFeaturesTableCardText)
+// Module 13310 (usePremiumGroupFeaturesTableCardText)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import user from "user" /* 1385 */;
-import _modDef3205 from "module_3205" /* 3205 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 7720 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13292 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4542 */;
+import _modDef3233 from "module_3233" /* 3233 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 7731 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13311 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4548 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -107,7 +107,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
             return closure_1_3.getPremiumGroupSubscription();
           }
         }
-        const Nu9LNm = _modDef3205.Nu9LNm;
+        const Nu9LNm = _modDef3233.Nu9LNm;
         priceString = format(Nu9LNm, obj4);
       }
     }
@@ -142,7 +142,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
         const intl = intl4.intl;
         const format = intl.format;
         const obj3 = { primaryName: tmp4, premiumGroupProductName: React3() };
-        const Nu9LNm = _modDef3205.Nu9LNm;
+        const Nu9LNm = _modDef3233.Nu9LNm;
         priceString = format(Nu9LNm, obj3);
       }
     }
@@ -155,12 +155,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
       const intl3 = intl4.intl;
       const format3 = intl3.format;
       const obj5 = { helpCenterLink: hasOwnProperty, premiumGroupProductName: React3() };
-      const prop = _modDef3205["+R/K74"];
+      const prop = _modDef3233["+R/K74"];
       format3Result = format3(prop, obj5);
     } else {
       const intl2 = intl4.intl;
       const format2 = intl2.format;
-      const tmp3Result = _modDef3205;
+      const tmp3Result = _modDef3233;
       const obj6 = { helpCenterLink: hasOwnProperty };
       format3Result = format2(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj6);
     }

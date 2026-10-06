@@ -1,12 +1,12 @@
-// === Module 17369: calculatePIPState ===
+// === Module 17398: calculatePIPState ===
 
-// Module 17369 (calculatePIPState)
-import CallConstants from "CallConstants" /* 4911 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17205 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+// Module 17398 (calculatePIPState)
+import CallConstants from "CallConstants" /* 4917 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17234 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import size from "module_2" /* 2 */;
 
 let set;

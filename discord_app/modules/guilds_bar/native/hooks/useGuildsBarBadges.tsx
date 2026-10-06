@@ -1,21 +1,21 @@
-// === Module 16269: useGuildsBarBadges ===
+// === Module 16309: useGuildsBarBadges ===
 
-// Module 16269 (useGuildsBarBadges)
+// Module 16309 (useGuildsBarBadges)
 import Fragment from "Fragment" /* 21 */;
 import native from "native" /* 1188 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4701 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16238 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16274 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4707 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16278 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16314 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11160 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11173 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -280,7 +280,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
     }
     const tmpResult6 = require("get initialized");
     const stateFromStores2 = tmpResult6.useStateFromStores(tmp13, U, tmp17);
-    const tmp20 = stateFromStores(16270)(arg0);
+    const tmp20 = stateFromStores(16310)(arg0);
     const tmpResult7 = require("useToken");
     const token = tmpResult7.useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
     const tmpResult8 = require("useToken");

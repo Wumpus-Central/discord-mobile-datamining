@@ -1,24 +1,24 @@
-// === Module 10098: GIFPickerHeader ===
+// === Module 10111: GIFPickerHeader ===
 
-// Module 10098 (GIFPickerHeader)
+// Module 10111 (GIFPickerHeader)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl6 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import timing from "timing" /* 4891 */;
-import timingPresets from "timingPresets" /* 4894 */;
-import Pressables from "Pressables" /* 5909 */;
-import InputTypes from "InputTypes" /* 6106 */;
-import SearchField from "SearchField" /* 6547 */;
-import GifProvider from "GifProvider" /* 10091 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10093 */;
-import ChevronLargeLeftIcon2 from "ChevronLargeLeftIcon" /* 10099 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import timing from "timing" /* 4897 */;
+import timingPresets from "timingPresets" /* 4900 */;
+import Pressables from "Pressables" /* 5916 */;
+import InputTypes from "InputTypes" /* 6113 */;
+import SearchField from "SearchField" /* 6554 */;
+import GifProvider from "GifProvider" /* 10104 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10106 */;
+import ChevronLargeLeftIcon2 from "ChevronLargeLeftIcon" /* 10112 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

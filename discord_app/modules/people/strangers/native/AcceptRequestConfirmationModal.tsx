@@ -1,13 +1,13 @@
-// === Module 10608: AcceptRequestConfirmationModal ===
+// === Module 10621: AcceptRequestConfirmationModal ===
 
-// Module 10608 (AcceptRequestConfirmationModal)
+// Module 10621 (AcceptRequestConfirmationModal)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import AlertDefault from "Alert" /* 5783 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import AlertDefault from "Alert" /* 5790 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -100,8 +100,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const obj3 = { variant: "heading-lg/bold", color: "text-strong", style: text, children: tmp10 };
     cResult[5] = tmp4.text;
-    cResult[6] = closure_4(onConfirm(4886).Text, obj3);
-    const tmp13 = closure_4(onConfirm(4886).Text, obj3);
+    cResult[6] = closure_4(onConfirm(4892).Text, obj3);
+    const tmp13 = closure_4(onConfirm(4892).Text, obj3);
   } else {
     class T {
       constructor() {
@@ -146,8 +146,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const obj5 = { variant: "text-md/medium", color: "text-subtle", style: text2, children: tmp14 };
     cResult[8] = tmp4.text;
-    cResult[9] = closure_4(onConfirm(4886).Text, obj5);
-    const tmp17 = closure_4(onConfirm(4886).Text, obj5);
+    cResult[9] = closure_4(onConfirm(4892).Text, obj5);
+    const tmp17 = closure_4(onConfirm(4892).Text, obj5);
   } else {
     class T {
       constructor() {
@@ -201,11 +201,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   intl2 = onConfirm(1126).intl;
   obj2 = { style: tmp.bodyText, children: items };
   const obj3 = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: intl3.string(onConfirm(1126).t.eJzSDT) };
-  const Text = onConfirm(4886).Text;
+  const Text = onConfirm(4892).Text;
   intl3 = onConfirm(1126).intl;
   items = [closure_4(Text, obj3), ];
   const obj4 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: intl4.string(onConfirm(1126).t.GB4jUw) };
-  const Text2 = onConfirm(4886).Text;
+  const Text2 = onConfirm(4892).Text;
   intl4 = onConfirm(1126).intl;
   items[1] = closure_4(Text2, obj4);
   return closure_4(tmp2, obj);

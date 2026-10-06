@@ -1,9 +1,9 @@
-// === Module 9047: handleJoinEmbeddedActivity ===
+// === Module 9083: handleJoinEmbeddedActivity ===
 
-// Module 9047 (handleJoinEmbeddedActivity)
+// Module 9083 (handleJoinEmbeddedActivity)
 import Constants from "Constants" /* 2011 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -90,7 +90,7 @@ let obj = function _handleJoinEmbeddedActivityInternal() {
             let closure_18;
             analyticsLocations = 1;
             componentId = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === analyticsLocations) {
           if (applicationId === 1) {

@@ -1,18 +1,18 @@
-// === Module 11789: AppLauncherList ===
+// === Module 11803: AppLauncherList ===
 
-// Module 11789 (AppLauncherList)
+// Module 11803 (AppLauncherList)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import mergeProps from "mergeProps" /* 4585 */;
-import SearchField2 from "SearchField" /* 6547 */;
-import AppLauncherFlashList from "AppLauncherFlashList" /* 11726 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11790 */;
+import mergeProps from "mergeProps" /* 4591 */;
+import SearchField2 from "SearchField" /* 6554 */;
+import AppLauncherFlashList from "AppLauncherFlashList" /* 11740 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11804 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -115,7 +115,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     return obj.mergeRefs(appLauncherFlashListProps.scrollerRef, closure_0);
   }, items);
   const items1 = [{ paddingBottom: bottom }, contentContainerStyle.contentContainerStyle];
-  appLauncherFlashListProps(11726);
+  appLauncherFlashListProps(11740);
   const merged = Object.assign(contentContainerStyle);
   ({ onScroll: obj2.animatedOnScroll, gestureRef: obj2.simultaneousHandlers, animatedProps: obj2.animatedProps } = appLauncherFlashListProps);
   return <tmp3 contentContainerStyle={items1} scrollIndicatorInsets={{ bottom }} ref={memo} />;

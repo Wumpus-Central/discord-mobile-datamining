@@ -1,11 +1,11 @@
-// === Module 16553: useConjureAppSlotsLeft ===
+// === Module 16593: useConjureAppSlotsLeft ===
 
-// Module 16553 (useConjureAppSlotsLeft)
+// Module 16593 (useConjureAppSlotsLeft)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 8700 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 8735 */;
 import react from "react" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

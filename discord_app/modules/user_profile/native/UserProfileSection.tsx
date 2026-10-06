@@ -1,18 +1,18 @@
-// === Module 11199: UserProfileSection ===
+// === Module 11212: UserProfileSection ===
 
-// Module 11199 (UserProfileSection)
+// Module 11212 (UserProfileSection)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4589 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 6683 */;
-import FormDivider from "FormDivider" /* 8899 */;
+import native from "native" /* 4595 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 6690 */;
+import FormDivider from "FormDivider" /* 8928 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

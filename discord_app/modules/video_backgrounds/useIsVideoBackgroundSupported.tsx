@@ -1,9 +1,9 @@
-// === Module 9662: useIsVideoBackgroundSupported ===
+// === Module 9675: useIsVideoBackgroundSupported ===
 
-// Module 9662 (useIsVideoBackgroundSupported)
+// Module 9675 (useIsVideoBackgroundSupported)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9325 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 8099 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

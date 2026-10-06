@@ -1,13 +1,13 @@
-// === Module 14752: UserSettingsAuthedAppPermissions ===
+// === Module 14768: UserSettingsAuthedAppPermissions ===
 
-// Module 14752 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 4886 */;
-import disclosures2 from "disclosures" /* 8722 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 14746 */;
+// Module 14768 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 4892 */;
+import disclosures2 from "disclosures" /* 8754 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 14762 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

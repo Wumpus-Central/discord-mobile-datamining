@@ -1,29 +1,29 @@
-// === Module 8286: NodeView ===
+// === Module 8319: NodeView ===
 
-// Module 8286 (NodeView)
+// Module 8319 (NodeView)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants2 from "Constants" /* 1096 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4812 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import CustomMarkupAll from "CustomMarkup" /* 5784 */;
-import useInitialValueDefault from "useInitialValue" /* 5984 */;
-import MenuTypes from "MenuTypes" /* 8280 */;
-import InAppReportsConstants from "InAppReportsConstants" /* 8285 */;
-import MenuConstants from "MenuConstants" /* 8287 */;
-import ArrowDefault from "Arrow" /* 8288 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4818 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import CustomMarkupAll from "CustomMarkup" /* 5791 */;
+import useInitialValueDefault from "useInitialValue" /* 5991 */;
+import MenuTypes from "MenuTypes" /* 8313 */;
+import InAppReportsConstants from "InAppReportsConstants" /* 8318 */;
+import MenuConstants from "MenuConstants" /* 8320 */;
+import ArrowDefault from "Arrow" /* 8321 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -525,16 +525,16 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((child) => {
   const obj2 = { style: tmp.childButton, accessibilityRole: "button", onPress: first, children: closure_19(closure_8, obj3) };
   obj3 = { style: tmp.childContainer, children: items2 };
   const obj4 = { style: tmp.childContent, children: items1 };
-  const PressableHighlight = tmp6(5909).PressableHighlight;
+  const PressableHighlight = tmp6(5916).PressableHighlight;
   items1 = [, ];
   const obj5 = { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp3 };
-  items1[0] = closure_18(child(4886).Text, obj5);
+  items1[0] = closure_18(child(4892).Text, obj5);
   if (stateFromStores) {
     stateFromStores = null != report_type;
   }
   if (stateFromStores) {
     const obj6 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
-    stateFromStores = closure_18(tmp6(4886).Text, obj6);
+    stateFromStores = closure_18(tmp6(4892).Text, obj6);
   }
   items1[1] = stateFromStores;
   items2 = [closure_19(closure_8, obj4), closure_18(ArrowDefault, {})];

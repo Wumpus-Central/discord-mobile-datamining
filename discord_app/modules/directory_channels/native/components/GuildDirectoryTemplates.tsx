@@ -1,14 +1,14 @@
-// === Module 11951: GuildDirectoryTemplates ===
+// === Module 11965: GuildDirectoryTemplates ===
 
-// Module 11951 (GuildDirectoryTemplates)
+// Module 11965 (GuildDirectoryTemplates)
 import native from "native" /* 1188 */;
-import directory_channels_GuildDirectoryConstants from "directory_channels/GuildDirectoryConstants" /* 11938 */;
-import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 11952 */;
+import directory_channels_GuildDirectoryConstants from "directory_channels/GuildDirectoryConstants" /* 11952 */;
+import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 11966 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 11933 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 11947 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -60,7 +60,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildTemplate) => {
       }
     }
     const obj2 = { Icon: tmp3, message: guildTemplate.label, onPress: tmp4 };
-    const tmp8 = closure_9(onGuildTemplatePress(11960), obj2);
+    const tmp8 = closure_9(onGuildTemplatePress(11974), obj2);
     cResult[5] = guildTemplate.label;
     cResult[6] = tmp3;
     cResult[7] = tmp4;
@@ -88,7 +88,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildTemplate) => {
       return onGuildTemplatePress(guildTemplate);
     }
   };
-  return closure_9(onGuildTemplatePress(11960), obj);
+  return closure_9(onGuildTemplatePress(11974), obj);
 });
 let closure_12 = tmp5;
 ReactCompilerGating = ReactCompilerGating_mod;

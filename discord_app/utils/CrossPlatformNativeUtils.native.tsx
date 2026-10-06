@@ -1,6 +1,6 @@
-// === Module 4884: CrossPlatformNativeUtils ===
+// === Module 4890: CrossPlatformNativeUtils ===
 
-// Module 4884 (CrossPlatformNativeUtils)
+// Module 4890 (CrossPlatformNativeUtils)
 import size from "module_2" /* 2 */;
 
 const obj = {

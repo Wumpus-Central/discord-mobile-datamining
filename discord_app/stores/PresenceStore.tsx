@@ -1,12 +1,12 @@
-// === Module 4930: PresenceStore ===
+// === Module 4936: PresenceStore ===
 
-// Module 4930 (PresenceStore)
+// Module 4936 (PresenceStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import hasRichActivityDefault from "hasRichActivity" /* 4931 */;
+import hasRichActivityDefault from "hasRichActivity" /* 4937 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
@@ -19,7 +19,7 @@ let hasOwnProperty;
 let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-const f89725 = (party) => {
+const f89863 = (party) => {
   party = party.party;
   let id;
   const application_id = party.application_id;
@@ -168,7 +168,7 @@ function flattenPresence(id) {
           const self = this;
           const self2 = this;
           const items1 = [];
-          map = new Map(reversed.map(f89725));
+          map = new Map(reversed.map(f89863));
           HermesBuiltin.arraySpread(items1, map.values(), 0);
           tmp7 = items1;
         }
@@ -196,7 +196,7 @@ function flattenPresence(id) {
       const self3 = this;
       const self4 = this;
       const items3 = [];
-      map1 = new Map(reversed1.map(f89725));
+      map1 = new Map(reversed1.map(f89863));
       HermesBuiltin.arraySpread(items3, map1.values(), 0);
       tmp19 = items3;
     }
@@ -277,7 +277,7 @@ function updatePresence(arg0) {
         const self = this;
         const self2 = this;
         const items2 = [];
-        map = new Map(reversed.map(f89725));
+        map = new Map(reversed.map(f89863));
         HermesBuiltin.arraySpread(items2, map.values(), 0);
         tmp14 = items2;
       }
@@ -338,7 +338,7 @@ function updatePresenceInConnectionOpen(arg0) {
         const self = this;
         const self2 = this;
         const items2 = [];
-        map = new Map(reversed.map(f89725));
+        map = new Map(reversed.map(f89863));
         HermesBuiltin.arraySpread(items2, map.values(), 0);
         tmp14 = items2;
       }

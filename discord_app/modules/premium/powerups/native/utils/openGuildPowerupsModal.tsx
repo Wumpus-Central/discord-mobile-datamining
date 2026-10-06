@@ -1,8 +1,8 @@
-// === Module 12138: openGuildPowerupsModal ===
+// === Module 12153: openGuildPowerupsModal ===
 
-// Module 12138 (openGuildPowerupsModal)
+// Module 12153 (openGuildPowerupsModal)
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
 import size from "module_2" /* 2 */;
 
 let c3 = 0;
@@ -21,5 +21,5 @@ export default function openGuildPowerupsModal(navigationParams) {
     tmp2 = obj;
   }
   const obj2 = ModalActionCreatorsDefault;
-  obj2.pushLazy(asyncRequire(12139, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams);
+  obj2.pushLazy(asyncRequire(12154, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams);
 };

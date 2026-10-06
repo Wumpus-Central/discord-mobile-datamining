@@ -1,10 +1,10 @@
-// === Module 10914: apexExperiment ===
+// === Module 10927: apexExperiment ===
 
-// Module 10914 (apexExperiment)
+// Module 10927 (apexExperiment)
 import react from "react" /* 576 */;
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 10007 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10008 */;
-import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 10915 */;
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 10020 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10021 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 10928 */;
 import ApexExperiment_mod from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -14,6 +14,7 @@ let obj14;
 let obj2;
 let obj21;
 let obj23;
+let obj26;
 let obj4;
 let obj6;
 let obj8;
@@ -110,6 +111,11 @@ const apexExperiment11 = ApexExperiment.createApexExperiment(obj22);
 ApexExperiment = ApexExperiment_mod;
 const obj24 = { name: "2026-09-new-orb-reward-visuals", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } };
 const apexExperiment12 = ApexExperiment.createApexExperiment(obj24);
+ApexExperiment = ApexExperiment_mod;
+const obj25 = { name: "2026-09-mobile-quest-reward-button-to-secondary-button", kind: "user", defaultConfig: { enabled: false }, variations: obj26 };
+obj26 = { 1: null };
+obj26[1] = { enabled: true };
+const apexExperiment13 = ApexExperiment.createApexExperiment(obj25);
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -128,3 +134,4 @@ export const QuestHomeLayoutVisualTweakVariant = obj19;
 export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment10;
 export const QuestMobileBarSecondaryCtaExperiment = apexExperiment11;
 export const QuestOrbTierExperiment = apexExperiment12;
+export const MobileQuestRewardButtonToSecondaryButtonExperiment = apexExperiment13;

@@ -1,12 +1,12 @@
-// === Module 11348: buildPlatformPollResources ===
+// === Module 11361: buildPlatformPollResources ===
 
-// Module 11348 (buildPlatformPollResources)
+// Module 11361 (buildPlatformPollResources)
 import nativeDefault from "native" /* 587 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
-import AssetRegistryDefault from "AssetRegistry" /* 5992 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 6640 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import PollStyles from "PollStyles" /* 11349 */;
+import AssetRegistryDefault from "AssetRegistry" /* 5999 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 6647 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import PollStyles from "PollStyles" /* 11362 */;
 import module_12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

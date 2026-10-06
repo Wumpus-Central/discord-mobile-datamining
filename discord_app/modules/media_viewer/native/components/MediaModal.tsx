@@ -1,45 +1,40 @@
-// === Module 7963: MediaModal ===
+// === Module 7974: MediaModal ===
 
-// Module 7963 (MediaModal)
+// Module 7974 (MediaModal)
 import react2 from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
+import Constants from "Constants" /* 1085 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import useVideoControls from "useVideoControls" /* 7936 */;
-import MediaSourceUtil from "MediaSourceUtil" /* 7939 */;
-import NativePortalView from "NativePortalView" /* 7942 */;
-import AndroidMediaViewerFullResolutionExperiment from "AndroidMediaViewerFullResolutionExperiment" /* 7965 */;
-import MediaModalTiktok from "MediaModalTiktok" /* 7971 */;
-import MediaModalWebVideoFile from "MediaModalWebVideoFile" /* 7982 */;
-import common_Video from "common/Video" /* 7983 */;
-import MediaModalOverlayDefault from "MediaModalOverlay" /* 12759 */;
-import MediaModalYoutubeDefault from "MediaModalYoutube" /* 12777 */;
-import MediaModalLoaderDefault from "MediaModalLoader" /* 12779 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import useVideoControls from "useVideoControls" /* 7947 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 7950 */;
+import MediaModalPortal from "MediaModalPortal" /* 7953 */;
+import MediaModalTiktok from "MediaModalTiktok" /* 7981 */;
+import MediaModalWebVideoFile from "MediaModalWebVideoFile" /* 7992 */;
+import common_Video from "common/Video" /* 7993 */;
+import MediaModalOverlayDefault from "MediaModalOverlay" /* 12774 */;
+import MediaModalYoutubeDefault from "MediaModalYoutube" /* 12792 */;
+import MediaModalVideoDefault from "MediaModalVideo" /* 12794 */;
+import MediaModalImageDefault from "MediaModalImage" /* 12798 */;
 import react_native from "react-native" /* 17 */;
-import AppFreezeStore from "AppFreezeStore" /* 7964 */;
+import AppFreezeStore from "AppFreezeStore" /* 7975 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import Constants from "Constants" /* 1085 */;
 import size_mod from "module_2" /* 2 */;
 
-const NativePortalViewDefault = NativePortalView;
+const MediaModalPortalDefault = MediaModalPortal;
 const MediaModalTiktokDefault = MediaModalTiktok;
 const MediaModalWebVideoFileDefault = MediaModalWebVideoFile;
 let closure_1, hasSpoiler;
 
-let closure_12;
 let hasOwnProperty;
-let map1;
-let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-let unpackModuleId;
-({ Image: hasOwnProperty, Modal: metroRequire, StyleSheet: metroImportDefault, View: metroImportAll } = react_native);
-({ Base64JPEGPrefix: unpackModuleId, Base64GIFPrefix: closure_12, AppStates: map1 } = Constants);
-let jsx = Fragment.jsx;
+({ Modal: hasOwnProperty, StyleSheet: metroRequire, View: metroImportDefault } = react_native);
+const AppStates = Constants.AppStates;
+const jsx = Fragment.jsx;
 const createElement = react2.createElement;
 let size = size_mod;
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModal.tsx");
@@ -48,7 +43,6 @@ export default function MediaModal(initialIndex) {
   let obj6;
   let onEndReached;
   let onEndReachedThreshold;
-  let ref;
   let num = initialIndex.initialIndex;
   const originLayout = initialIndex.originLayout;
   if (num === undefined) {
@@ -76,11 +70,11 @@ export default function MediaModal(initialIndex) {
   const contextIcon = initialIndex.contextIcon;
   const onIndexChange = initialIndex.onIndexChange;
   ({ onEndReached, onEndReachedThreshold } = initialIndex);
-  let MediaViewerSourcesStore = num(onCloseCallback[8]).MediaViewerSourcesStore;
+  let MediaViewerSourcesStore = num(onCloseCallback[6]).MediaViewerSourcesStore;
   const field = MediaViewerSourcesStore.useField("sources");
-  let obj = num(onCloseCallback[9]);
+  let obj = num(onCloseCallback[7]);
   const mediaViewerSyncer = obj.useMediaViewerSyncer({ sources: field, initialIndex: num, onEndReached, onEndReachedThreshold });
-  let obj2 = num(onCloseCallback[10]);
+  let obj2 = num(onCloseCallback[8]);
   const videoStateStore = obj2.useVideoStateStore((paused) => paused.paused);
   const items = [onCloseCallback, onClose];
   let callback = flag2.useCallback(() => {
@@ -92,13 +86,13 @@ export default function MediaModal(initialIndex) {
     }
   }, items);
   const effect = flag2.useEffect(() => () => {
-    const MediaViewerSourcesStore = num(onCloseCallback[8]).MediaViewerSourcesStore;
+    const MediaViewerSourcesStore = num(onCloseCallback[6]).MediaViewerSourcesStore;
     MediaViewerSourcesStore.resetState();
   }, []);
-  let obj3 = num(onCloseCallback[11]);
-  const items1 = [onIndexChange];
-  const stateFromStores = obj3.useStateFromStores(items1, () => onIndexChange.getState());
-  jsx = flag2.useRef(stateFromStores);
+  let obj3 = num(onCloseCallback[9]);
+  const items1 = [contextIcon];
+  const stateFromStores = obj3.useStateFromStores(items1, () => contextIcon.getState());
+  const ref = flag2.useRef(stateFromStores);
   const ref2 = flag2.useRef(videoStateStore);
   const id = flag2.useId();
   const items2 = [id];
@@ -108,7 +102,7 @@ export default function MediaModal(initialIndex) {
     let obj = { lockEnabled: true, key: id };
     let freezeLock = state.requestFreezeLock(obj);
     return () => {
-      const state = contextIcon.getState();
+      const state = contextName.getState();
       const obj = { lockEnabled: false, key };
       const freezeLock = state.requestFreezeLock(obj);
     };
@@ -118,12 +112,12 @@ export default function MediaModal(initialIndex) {
     const obj = PlatformUtils;
     if (obj.isIOS()) {
       if (ref.current !== stateFromStores) {
-        if (map1.BACKGROUND === stateFromStores) {
+        if (AppStates.BACKGROUND === stateFromStores) {
           ref2.current = videoStateStore;
           const tmpResult = useVideoControls;
           tmpResult.setPausedState(true);
-        } else if (map1.ACTIVE === stateFromStores) {
-          const tmp6 = ref2.current || ref.current !== map1.BACKGROUND;
+        } else if (AppStates.ACTIVE === stateFromStores) {
+          const tmp6 = ref2.current || ref.current !== AppStates.BACKGROUND;
           if (!tmp6) {
             const tmpResult2 = useVideoControls;
             tmpResult2.setPausedState(false);
@@ -144,7 +138,7 @@ export default function MediaModal(initialIndex) {
     } else {
       let portalControls;
       if (MediaSourceUtil.VideoSourceType.PORTAL === videoSourceType) {
-        const tmpResult = NativePortalView;
+        const tmpResult = MediaModalPortal;
         portalControls = tmpResult.createPortalControls(portal.portal);
       } else if (MediaSourceUtil.VideoSourceType.TIKTOK_IFRAME === videoSourceType) {
         const tmpResult4 = MediaModalTiktok;
@@ -190,12 +184,12 @@ export default function MediaModal(initialIndex) {
     return oldOnLoad;
   }, items4);
   const effect3 = flag2.useEffect(() => {
-    let obj = onClose(onCloseCallback[17]);
+    let obj = onClose(onCloseCallback[16]);
     const result = obj.clearCurrentFocusAndDismissKeyboard();
-    const obj2 = num(onCloseCallback[18]);
+    const obj2 = num(onCloseCallback[17]);
     obj2.unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
     return () => {
-      const obj = num(onCloseCallback[18]);
+      const obj = num(onCloseCallback[17]);
       return obj.lockOrientationForiOS();
     };
   }, []);
@@ -210,12 +204,12 @@ export default function MediaModal(initialIndex) {
         const result = tmp2Result.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
         const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
         const obj3 = ActionSheetActionCreatorsDefault;
-        obj3.openLazy(asyncRequire(8010, dependencyMap.paths), "MediaShareActionSheet", obj2);
+        obj3.openLazy(asyncRequire(8020, dependencyMap.paths), "MediaShareActionSheet", obj2);
       }
     }
   }, items5);
   const callback4 = flag2.useCallback((onClose, overlayEnabled) => jsx(MediaModalOverlayDefault, { syncer: mediaViewerSyncer, getVideoControls: callback1, onClose, shareable: flag2, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, contextName, contextIcon, overlayEnabled, onIndexChange }), items6);
-  const obj4 = num(onCloseCallback[25]);
+  const obj4 = num(onCloseCallback[24]);
   const mediaPlayerMutedStore = obj4.useMediaPlayerMutedStore((isMuted) => isMuted.isMuted);
   const items7 = [callback1, callback2, mediaPlayerMutedStore, videoStateStore];
   const callback5 = flag2.useCallback((hasSpoiler) => {
@@ -223,7 +217,7 @@ export default function MediaModal(initialIndex) {
     let key;
     let pointerEvents;
     let source;
-    let tmp28Result;
+    let tmp32;
     let visible;
     ({ source, index, key, visible, pointerEvents } = hasSpoiler);
     hasSpoiler = hasSpoiler.hasSpoiler;
@@ -242,14 +236,14 @@ export default function MediaModal(initialIndex) {
         MediaModalWebVideoFileDefault;
         const merged1 = Object.assign(merged);
         size = { uri: null, width: null, height: null };
-        ({ videoURI: obj15.uri, width: obj15.width, height: obj15.height } = source);
-        return <tmp54 key={key} visible={visible} style={merged.style} source={size} controls={callback1(index, source)} />;
+        ({ videoURI: obj10.uri, width: obj10.width, height: obj10.height } = source);
+        return <tmp35 key={key} visible={visible} style={merged.style} source={size} controls={callback1(index, source)} />;
       }
     }
     if (null != source.portal) {
-      const tmp4Result = NativePortalView;
+      const tmp4Result = MediaModalPortal;
       if (!tmp4Result.isPortalExpired(source.portal)) {
-        NativePortalViewDefault;
+        MediaModalPortalDefault;
         const merged2 = Object.assign(merged);
         return <tmp9 key={key} pointerEvents={pointerEvents} portal={source.portal} paused={tmp2} muted={mediaPlayerMutedStore || true === source.isGIFV} />;
       }
@@ -275,57 +269,24 @@ export default function MediaModal(initialIndex) {
       }
     }
     if (null != source.videoURI) {
-      MediaModalLoaderDefault;
-      const merged5 = Object.assign(merged);
-      const size3 = { uri: null, width: null, height: null, videoURI: null, messageId: null, channelId: null, mediaIndex: null, description: null, obscure: null, accessoryType: null, attachmentId: null };
-      ({ videoURI: obj13.uri, width: obj13.width, height: obj13.height, videoURI: obj13.videoURI, messageId: obj13.messageId, channelId: obj13.channelId, mediaIndex: obj13.mediaIndex, description: obj13.description, obscure: obj13.obscure, accessoryType: obj13.accessoryType, attachmentId: obj13.attachmentId } = source);
-      tmp28Result = <tmp46 Component={common_Video.VideoComponent} key={key} pointerEvents={pointerEvents} paused={tmp2} controls={callback1(index, source)} muted={tmp3} index={index} onLoad={callback2(index, source, merged.onLoad)} source={size3} />;
+      MediaModalVideoDefault;
+      const _HermesInternal = HermesInternal;
+      tmp32 = <tmp28 key={"" + key + ":" + source.videoURI} controls={callback1(index, source)} index={index} muted={tmp3} onError={merged.onError} onLoad={callback2(index, source, merged.onLoad)} onLoadingVisible={merged.onLoadStart} paused={tmp2} source={source} style={merged.style} />;
     } else {
-      const uri3 = source.uri;
-      if (!uri3.startsWith("assets-library://")) {
-        const uri = source.uri;
-        if (!uri.startsWith(unpackModuleId)) {
-          const uri2 = source.uri;
-          if (!uri2.startsWith(closure_12)) {
-            MediaModalLoaderDefault;
-            const merged6 = Object.assign(merged);
-            let str3;
-            const tmp4Result3 = PlatformUtils;
-            if (tmp4Result3.isAndroid()) {
-              if (0 !== source.width) {
-                if (0 !== source.height) {
-                  if (source.width > 2048) {
-                    if (source.width * source.height <= 16777216) {
-                      const _Math = Math;
-                      const _Math2 = Math;
-                      const bound = Math.max(source.width, source.height);
-                      if (bound / Math.min(source.width, source.height) > 2) {
-                        const tmp4Result4 = AndroidMediaViewerFullResolutionExperiment;
-                        if (tmp4Result4.getAndroidMediaViewerFullResolutionEnabled("MediaModal")) {
-                          str3 = "none";
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            tmp28Result = <tmp30 Component={FastImageDefault} key={key} source={source} index={index} pointerEvents={pointerEvents} resizeMethod={str3} />;
-          }
-        }
-      }
-      MediaModalLoaderDefault;
-      const merged7 = Object.assign(merged);
-      tmp28Result = <tmp39 Component={hasOwnProperty} key={key} source={source} index={index} pointerEvents={pointerEvents} />;
+      ({ fade: obj11.fade, fadeDuration: obj11.fadeDuration } = merged);
+      ({ onError: obj11.onError, onLoad: obj11.onLoad, onLoadStart: obj11.onLoadingVisible } = merged);
+      const _HermesInternal2 = HermesInternal;
+      MediaModalImageDefault;
+      tmp32 = <tmp42 key={"" + key + ":" + source.uri} fade={null} fadeDuration={null} index={index} onError={null} onLoad={null} onLoadingVisible={null} pointerEvents={pointerEvents} source={source} style={merged.style} />;
     }
-    return tmp28Result;
+    return tmp32;
   }, items7);
-  const tmp18 = jsx(initialIndexVideoStartTime(onCloseCallback[29]), { originLayout, swipeVelocityThreshold: num2, onClose: callback, onLongPress: callback3, syncer: mediaViewerSyncer, renderMedia: callback5, renderOverlay: callback4 });
+  const tmp18 = mediaViewerSyncer(initialIndexVideoStartTime(onCloseCallback[28]), { originLayout, swipeVelocityThreshold: num2, onClose: callback, onLongPress: callback3, syncer: mediaViewerSyncer, renderMedia: callback5, renderOverlay: callback4 });
   let tmp17Result = tmp18;
   if (flag) {
-    const obj5 = { transparent: true, animationType: "none", visible: true, onRequestClose: callback, statusBarTranslucent: true, children: tmp17(contextName, obj6) };
-    obj6 = { style: disableMediaOverlayFooter.absoluteFill, children: tmp18 };
-    tmp17Result = tmp17(disableMediaOverlayButton, obj5);
+    const obj5 = { transparent: true, animationType: "none", visible: true, onRequestClose: callback, statusBarTranslucent: true, children: tmp17(disableMediaOverlayFooter, obj6) };
+    obj6 = { style: disableMediaOverlayButton.absoluteFill, children: tmp18 };
+    tmp17Result = tmp17(disableDownload, obj5);
   }
   return tmp17Result;
 };

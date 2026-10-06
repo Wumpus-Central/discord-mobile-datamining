@@ -1,8 +1,8 @@
-// === Module 11785: useOptionAnimations ===
+// === Module 11799: useOptionAnimations ===
 
-// Module 11785 (useOptionAnimations)
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
+// Module 11799 (useOptionAnimations)
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -50,7 +50,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let sharedValue;
   let obj = sharedValue(576);
   const cResult = obj.c(10);
-  let obj2 = sharedValue(4612);
+  let obj2 = sharedValue(4618);
   sharedValue = obj2.useSharedValue(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [];
@@ -94,7 +94,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       constructor() {
         result = closure_0.set(true);
         current = closure_1.current;
-        item = current.forEach(() => { /* body not rendered: F141779 */ });
+        item = current.forEach(() => { /* body not rendered: F141985 */ });
         current1 = closure_1.current;
         spliceResult = current1.splice(0, closure_1.current.length);
         return;
@@ -107,7 +107,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       constructor() {
         result = closure_0.set(true);
         current = closure_1.current;
-        item = current.forEach(() => { /* body not rendered: F141779 */ });
+        item = current.forEach(() => { /* body not rendered: F141985 */ });
         current1 = closure_1.current;
         spliceResult = current1.splice(0, closure_1.current.length);
         return;
@@ -118,7 +118,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[5] !== tmp5) {
     class I {
       constructor() {
-        fn = function n() { /* body not rendered: F141780 */ };
+        fn = function n() { /* body not rendered: F141986 */ };
         obj = { withTiming: closure_0(closure_1[2]).withTiming, Easing: closure_0(closure_1[5]).Easing, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: c4, withDelay: closure_0(closure_1[5]).withDelay, runOnJS: closure_0(closure_1[5]).runOnJS, handleMountAnimationComplete: closure_2 };
         fn.__closure = obj;
         fn.__workletHash = 1048348699475;
@@ -131,7 +131,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else {
     class I {
       constructor() {
-        fn = function n() { /* body not rendered: F141780 */ };
+        fn = function n() { /* body not rendered: F141986 */ };
         obj = { withTiming: closure_0(closure_1[2]).withTiming, Easing: closure_0(closure_1[5]).Easing, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: c4, withDelay: closure_0(closure_1[5]).withDelay, runOnJS: closure_0(closure_1[5]).runOnJS, handleMountAnimationComplete: closure_2 };
         fn.__closure = obj;
         fn.__workletHash = 1048348699475;
@@ -144,7 +144,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[7] === first1) {
     class I {
       constructor() {
-        fn = function n() { /* body not rendered: F141780 */ };
+        fn = function n() { /* body not rendered: F141986 */ };
         obj = { withTiming: closure_0(closure_1[2]).withTiming, Easing: closure_0(closure_1[5]).Easing, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: c4, withDelay: closure_0(closure_1[5]).withDelay, runOnJS: closure_0(closure_1[5]).runOnJS, handleMountAnimationComplete: closure_2 };
         fn.__closure = obj;
         fn.__workletHash = 1048348699475;
@@ -161,7 +161,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 }) : (() => {
   let closure_1;
   let sharedValue;
-  let obj = sharedValue(4612);
+  let obj = sharedValue(4618);
   sharedValue = obj.useSharedValue(false);
   dependencyMap = react.useRef([]);
   let items = [sharedValue];

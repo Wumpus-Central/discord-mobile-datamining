@@ -1,7 +1,7 @@
-// === Module 7085: FeaturedCategorySubblockRecord ===
+// === Module 7098: FeaturedCategorySubblockRecord ===
 
-// Module 7085 (FeaturedCategorySubblockRecord)
-import FeaturedSubblockType from "FeaturedSubblockType" /* 7086 */;
+// Module 7098 (FeaturedCategorySubblockRecord)
+import FeaturedSubblockType from "FeaturedSubblockType" /* 7099 */;
 import size from "module_2" /* 2 */;
 
 class FeaturedCategorySubblockRecord {

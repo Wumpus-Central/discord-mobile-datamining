@@ -1,19 +1,19 @@
-// === Module 11639: ForumPostListFooter ===
+// === Module 11653: ForumPostListFooter ===
 
-// Module 11639 (ForumPostListFooter)
+// Module 11653 (ForumPostListFooter)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6775 */;
-import ForumPostReactions from "ForumPostReactions" /* 10027 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 11580 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 11632 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11633 */;
-import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 11640 */;
+import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 6785 */;
+import ForumPostReactions from "ForumPostReactions" /* 10040 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 11593 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 11646 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11647 */;
+import GameInviteVoiceCountDefault from "GameInviteVoiceCount" /* 11654 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

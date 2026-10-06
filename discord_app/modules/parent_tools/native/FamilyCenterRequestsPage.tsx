@@ -1,26 +1,26 @@
-// === Module 14720: FamilyCenterRequestsPage ===
+// === Module 14736: FamilyCenterRequestsPage ===
 
-// Module 14720 (FamilyCenterRequestsPage)
+// Module 14736 (FamilyCenterRequestsPage)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import _modDef2493 from "module_2493" /* 2493 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import useUserLinks from "useUserLinks" /* 8295 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8296 */;
-import Constants from "Constants" /* 9784 */;
-import useHelpLineVisibility from "useHelpLineVisibility" /* 9827 */;
-import useAgeSpecificText from "useAgeSpecificText" /* 11531 */;
-import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14681 */;
-import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 14721 */;
-import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 14723 */;
-import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 14732 */;
+import _modDef2521 from "module_2521" /* 2521 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import useUserLinks from "useUserLinks" /* 8328 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8329 */;
+import Constants from "Constants" /* 9797 */;
+import useHelpLineVisibility from "useHelpLineVisibility" /* 9840 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11544 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14697 */;
+import FamilyCenterLinkingBannerDefault from "FamilyCenterLinkingBanner" /* 14737 */;
+import FamilyCenterAcceptedLinksDefault from "FamilyCenterAcceptedLinks" /* 14739 */;
+import FamilyCenterPendingLinksDefault from "FamilyCenterPendingLinks" /* 14748 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import FamilyCenterConstants from "FamilyCenterConstants" /* 7049 */;
+import FamilyCenterConstants from "FamilyCenterConstants" /* 7062 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -55,7 +55,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[0] !== tmp7) {
     const intl = intl4.intl;
     const obj3 = { maxConnections: tmp7 };
-    const formatToPlainStringResult = intl.formatToPlainString(_modDef2493["1/PzIj"], obj3);
+    const formatToPlainStringResult = intl.formatToPlainString(_modDef2521["1/PzIj"], obj3);
     cResult[0] = tmp7;
     cResult[1] = formatToPlainStringResult;
     tmp8 = formatToPlainStringResult;
@@ -65,7 +65,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (cResult[2] !== tmp7) {
     const intl2 = intl4.intl;
     const obj4 = { maxConnections: tmp7 };
-    const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2493.RcTgiE, obj4);
+    const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2521.RcTgiE, obj4);
     cResult[2] = tmp7;
     cResult[3] = formatToPlainStringResult1;
     tmp10 = formatToPlainStringResult1;
@@ -109,7 +109,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp6 = useIsInAdultAgeGroupDefault() ? hasOwnProperty : metroRequire;
   useAgeSpecificText;
   const intl = intl4.intl;
-  intl.formatToPlainString(_modDef2493["1/PzIj"], { maxConnections: tmp6 });
+  intl.formatToPlainString(_modDef2521["1/PzIj"], { maxConnections: tmp6 });
   const intl2 = intl4.intl;
   let tmp10 = null;
   if (hasMaxConnections) {
@@ -153,7 +153,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       ({ container, supportHeader } = tmp4);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = intl4.intl;
-        const stringResult = intl3.string(_modDef2493["7/tVhv"]);
+        const stringResult = intl3.string(_modDef2521["7/tVhv"]);
         cResult[3] = stringResult;
         tmp13 = stringResult;
       } else {
@@ -198,13 +198,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (shouldShowHelplineLink) {
     const intl2 = intl4.intl;
-    formatResult = intl2.format(_modDef2493["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
+    formatResult = intl2.format(_modDef2521["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (shouldShowThroughlineLink) {
       const intl = intl4.intl;
       const obj7 = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2493["6tsC8u"], obj7);
+      formatResult = intl.format(_modDef2521["6tsC8u"], obj7);
     }
   }
   cResult[0] = shouldShowHelplineLink;
@@ -221,19 +221,19 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   useHelpLineVisibility;
   if (shouldShowHelplineLink) {
     const intl2 = intl4.intl;
-    formatResult = intl2.format(_modDef2493["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
+    formatResult = intl2.format(_modDef2521["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
   } else {
     formatResult = null;
     if (tmp6) {
       const intl = intl4.intl;
       const obj2 = { helpLink: THROUGHLINE_URL };
-      formatResult = intl.format(_modDef2493["6tsC8u"], obj2);
+      formatResult = intl.format(_modDef2521["6tsC8u"], obj2);
     }
   }
   let tmp11 = null;
   if (null != formatResult) {
     const obj3 = { style: tmp.container, children: items };
-    const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: intl3.string(_modDef2493["7/tVhv"]) };
+    const obj4 = { style: tmp.supportHeader, variant: "heading-sm/semibold", children: intl3.string(_modDef2521["7/tVhv"]) };
     const Text = Text_Text.Text;
     intl3 = intl4.intl;
     items = [metroImportAll(Text, obj4), ];

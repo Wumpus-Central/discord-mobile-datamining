@@ -1,10 +1,10 @@
-// === Module 16321: YouSwitchClientsRadioGroup ===
+// === Module 16361: YouSwitchClientsRadioGroup ===
 
-// Module 16321 (YouSwitchClientsRadioGroup)
+// Module 16361 (YouSwitchClientsRadioGroup)
 import Fragment from "Fragment" /* 21 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import DiscordVariants from "DiscordVariants" /* 16322 */;
-import DiscordVariantTypes from "DiscordVariantTypes" /* 16323 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import DiscordVariants from "DiscordVariants" /* 16362 */;
+import DiscordVariantTypes from "DiscordVariantTypes" /* 16363 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -20,7 +20,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj = value(576);
   const cResult = obj.c(9);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = value(16322);
+    const tmpResult = value(16362);
     const currentVariant = tmpResult.getCurrentVariant();
     cResult[0] = currentVariant;
     value = currentVariant;
@@ -131,7 +131,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               return <TableRadioRow key={value} value={value} label={first(dependencyMap[6]).DISCORD_VARIANTS[value].label} icon={null} />;
             }
           }
-          const tmp15 = jsx(value(6072).TableRadioGroup, { title: "Switch Clients", value, onChange: tmp10, hasIcons: true, children: tmp11 });
+          const tmp15 = jsx(value(6079).TableRadioGroup, { title: "Switch Clients", value, onChange: tmp10, hasIcons: true, children: tmp11 });
           cResult[7] = tmp11;
           cResult[8] = tmp15;
           tmp14 = tmp15;
@@ -192,7 +192,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (null != arr) {
       tmp5 = null;
       if (arr.length >= 2) {
-        const TableRadioGroup = memo(6072).TableRadioGroup;
+        const TableRadioGroup = memo(6079).TableRadioGroup;
         tmp5 = <TableRadioGroup title="Switch Clients" value={memo} onChange={tmp4} hasIcons>{arr.map((value) => {
           const TableRadioRow = memo(dependencyMap[8]).TableRadioRow;
           ({ color: memo(dependencyMap[6]).DISCORD_VARIANTS[value].color });

@@ -1,9 +1,9 @@
-// === Module 9082: useCanSpeakInChannel ===
+// === Module 9118: useCanSpeakInChannel ===
 
-// Module 9082 (useCanSpeakInChannel)
+// Module 9118 (useCanSpeakInChannel)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5037 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5043 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

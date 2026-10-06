@@ -1,10 +1,10 @@
-// === Module 9002: installApplicationOnDemandIfNeeded ===
+// === Module 9035: installApplicationOnDemandIfNeeded ===
 
-// Module 9002 (installApplicationOnDemandIfNeeded)
+// Module 9035 (installApplicationOnDemandIfNeeded)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import size from "module_2" /* 2 */;
 
 let c4;
@@ -59,7 +59,7 @@ let obj = function _installApplicationOnDemandIfNeeded() {
             let scopes;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === c3) {

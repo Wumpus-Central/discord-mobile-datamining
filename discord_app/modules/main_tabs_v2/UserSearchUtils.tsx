@@ -1,12 +1,12 @@
-// === Module 7145: UserSearchUtils ===
+// === Module 7158: UserSearchUtils ===
 
-// Module 7145 (UserSearchUtils)
+// Module 7158 (UserSearchUtils)
 import Constants from "Constants" /* 1085 */;
 import StringUtils from "StringUtils" /* 2018 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7146 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7159 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import size from "module_2" /* 2 */;
 
 const RelationshipTypes = Constants.RelationshipTypes;

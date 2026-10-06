@@ -1,6 +1,6 @@
-// === Module 8932: AppLauncherTypes ===
+// === Module 8961: AppLauncherTypes ===
 
-// Module 8932 (AppLauncherTypes)
+// Module 8961 (AppLauncherTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_launcher/AppLauncherTypes.tsx");

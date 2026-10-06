@@ -1,7 +1,7 @@
-// === Module 13201: PremiumNitroNavigationStore ===
+// === Module 13220: PremiumNitroNavigationStore ===
 
-// Module 13201 (PremiumNitroNavigationStore)
-import ZustandStore from "ZustandStore" /* 4749 */;
+// Module 13220 (PremiumNitroNavigationStore)
+import ZustandStore from "ZustandStore" /* 4755 */;
 import size from "module_2" /* 2 */;
 
 const zustandStore = ZustandStore.createZustandStore(() => ({ scrollToSectionId: "r" }));

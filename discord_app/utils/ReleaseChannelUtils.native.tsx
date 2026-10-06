@@ -1,6 +1,6 @@
-// === Module 5410: ReleaseChannelUtils ===
+// === Module 5417: ReleaseChannelUtils ===
 
-// Module 5410 (ReleaseChannelUtils)
+// Module 5417 (ReleaseChannelUtils)
 import react_native from "react-native" /* 1368 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 11002: useVirtualCurrencyBalanceAnimationData ===
+// === Module 11015: useVirtualCurrencyBalanceAnimationData ===
 
-// Module 11002 (useVirtualCurrencyBalanceAnimationData)
+// Module 11015 (useVirtualCurrencyBalanceAnimationData)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

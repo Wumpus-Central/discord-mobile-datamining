@@ -1,9 +1,9 @@
-// === Module 12218: useGameServerGetExpiringEntitlements ===
+// === Module 12233: useGameServerGetExpiringEntitlements ===
 
-// Module 12218 (useGameServerGetExpiringEntitlements)
-import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12152 */;
+// Module 12233 (useGameServerGetExpiringEntitlements)
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 12167 */;
 import react from "react" /* 19 */;
-import GameServerStore from "GameServerStore" /* 7672 */;
+import GameServerStore from "GameServerStore" /* 7683 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

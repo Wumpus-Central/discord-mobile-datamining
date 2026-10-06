@@ -1,23 +1,23 @@
-// === Module 10678: InstantInviteCode ===
+// === Module 10691: InstantInviteCode ===
 
-// Module 10678 (InstantInviteCode)
+// Module 10691 (InstantInviteCode)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import ClockIcon from "ClockIcon" /* 4849 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import TextIcon2 from "TextIcon" /* 5864 */;
-import CountDownDefault from "CountDown" /* 10667 */;
+import ClockIcon from "ClockIcon" /* 4855 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import TextIcon2 from "TextIcon" /* 5871 */;
+import CountDownDefault from "CountDown" /* 10680 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -260,10 +260,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((invite) => {
   const obj = { style: closure_10().flex, children: closure_9(Stack, obj2) };
   const memo = react.useMemo(() => closure_5(invite.channel), items);
   obj2 = { children: items1 };
-  Stack = invite(5593).Stack;
+  Stack = invite(5600).Stack;
   items1 = [, ];
   const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-  items1[0] = closure_8(invite(4886).Text, obj3);
+  items1[0] = closure_8(invite(4892).Text, obj3);
   const obj4 = { channel: memo, expiresAt: invite.getExpiresAt() };
   items1[1] = closure_8(closure_11, obj4);
   return closure_8(View, obj);

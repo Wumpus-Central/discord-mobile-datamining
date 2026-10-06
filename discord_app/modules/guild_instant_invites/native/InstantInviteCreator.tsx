@@ -1,15 +1,15 @@
-// === Module 10679: InstantInviteCreator ===
+// === Module 10692: InstantInviteCreator ===
 
-// Module 10679 (InstantInviteCreator)
+// Module 10692 (InstantInviteCreator)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import DetailedGuildIdentityUserRow from "DetailedGuildIdentityUserRow" /* 10680 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import DetailedGuildIdentityUserRow from "DetailedGuildIdentityUserRow" /* 10693 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

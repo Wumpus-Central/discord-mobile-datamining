@@ -1,9 +1,9 @@
-// === Module 12872: UserProfileNote ===
+// === Module 12891: UserProfileNote ===
 
-// Module 12872 (UserProfileNote)
+// Module 12891 (UserProfileNote)
 import Fragment from "Fragment" /* 21 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import openEditNoteModalDefault from "openEditNoteModal" /* 12875 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import openEditNoteModalDefault from "openEditNoteModal" /* 12894 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

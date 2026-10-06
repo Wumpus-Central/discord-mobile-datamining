@@ -1,14 +1,14 @@
-// === Module 16606: PortalKeyboardRendererComponent ===
+// === Module 16644: PortalKeyboardRendererComponent ===
 
-// Module 16606 (PortalKeyboardRendererComponent)
+// Module 16644 (PortalKeyboardRendererComponent)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6722 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
-import AppLauncherKeyboardDefault from "AppLauncherKeyboard" /* 11649 */;
-import MediaKeyboardDefault from "MediaKeyboard" /* 16607 */;
-import ExpressionPickerKeyboardDefault from "ExpressionPickerKeyboard" /* 16613 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6736 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
+import AppLauncherKeyboardDefault from "AppLauncherKeyboard" /* 11663 */;
+import MediaKeyboardDefault from "MediaKeyboard" /* 16645 */;
+import ExpressionPickerKeyboardDefault from "ExpressionPickerKeyboard" /* 16651 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

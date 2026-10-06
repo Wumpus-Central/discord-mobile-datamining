@@ -1,14 +1,14 @@
-// === Module 13014: EditCollectiblesPickerList ===
+// === Module 13033: EditCollectiblesPickerList ===
 
-// Module 13014 (EditCollectiblesPickerList)
+// Module 13033 (EditCollectiblesPickerList)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13009 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13028 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

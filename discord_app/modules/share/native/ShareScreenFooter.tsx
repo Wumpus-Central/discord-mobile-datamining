@@ -1,12 +1,12 @@
-// === Module 13718: ShareScreenFooter ===
+// === Module 13736: ShareScreenFooter ===
 
-// Module 13718 (ShareScreenFooter)
+// Module 13736 (ShareScreenFooter)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11319 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11330 */;
-import ShareFooterLayoutDefault from "ShareFooterLayout" /* 11331 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11332 */;
+import ShareChatInputDefault from "ShareChatInput" /* 11343 */;
+import ShareFooterLayoutDefault from "ShareFooterLayout" /* 11344 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

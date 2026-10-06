@@ -1,10 +1,10 @@
-// === Module 11745: ApplicationFrecencyHooks ===
+// === Module 11759: ApplicationFrecencyHooks ===
 
-// Module 11745 (ApplicationFrecencyHooks)
+// Module 11759 (ApplicationFrecencyHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import react_mod from "react" /* 19 */;
-import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 8796 */;
+import ApplicationFrecencyStore from "ApplicationFrecencyStore" /* 8828 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

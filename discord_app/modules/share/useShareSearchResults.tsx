@@ -1,14 +1,14 @@
-// === Module 10715: useShareSearchResults ===
+// === Module 10728: useShareSearchResults ===
 
-// Module 10715 (useShareSearchResults)
-import formatResultsDefault from "formatResults" /* 10711 */;
-import ShareConstants from "ShareConstants" /* 10712 */;
-import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 10716 */;
+// Module 10728 (useShareSearchResults)
+import formatResultsDefault from "formatResults" /* 10724 */;
+import ShareConstants from "ShareConstants" /* 10725 */;
+import QuickSwitcherActionCreators from "QuickSwitcherActionCreators" /* 10729 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import FrecencyStore from "FrecencyStore" /* 5694 */;
+import FrecencyStore from "FrecencyStore" /* 5701 */;
 import size from "module_2" /* 2 */;
 
 const ALLOWED_TYPES = ShareConstants.ALLOWED_TYPES;

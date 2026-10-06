@@ -1,9 +1,9 @@
-// === Module 10733: canManageChannelList ===
+// === Module 10746: canManageChannelList ===
 
-// Module 10733 (canManageChannelList)
+// Module 10746 (canManageChannelList)
 import Constants from "Constants" /* 1085 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

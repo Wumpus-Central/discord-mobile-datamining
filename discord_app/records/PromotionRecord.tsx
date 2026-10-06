@@ -1,9 +1,9 @@
-// === Module 10397: PromotionRecord ===
+// === Module 10410: PromotionRecord ===
 
-// Module 10397 (PromotionRecord)
+// Module 10410 (PromotionRecord)
 import FlagUtils from "FlagUtils" /* 1390 */;
 import Record from "Record" /* 1392 */;
-import MarketingComponentRecord from "MarketingComponentRecord" /* 10398 */;
+import MarketingComponentRecord from "MarketingComponentRecord" /* 10411 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

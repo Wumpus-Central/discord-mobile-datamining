@@ -1,6 +1,6 @@
-// === Module 10987: BioText ===
+// === Module 11000: BioText ===
 
-// Module 10987 (BioText)
+// Module 11000 (BioText)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
@@ -8,12 +8,12 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import isChangelogUserDefault from "isChangelogUser" /* 2101 */;
 import ChangelogConstants from "ChangelogConstants" /* 2102 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 8942 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 8971 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -197,7 +197,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
             const obj4 = { variant: str, color: str3, lineClamp, style: span, children: tmp21 };
-            const tmp25 = closure_8(lineClamp(4886).Text, obj4, "changelog-cta");
+            const tmp25 = closure_8(lineClamp(4892).Text, obj4, "changelog-cta");
             cResult[11] = lineClamp;
             cResult[12] = tmp4.span;
             cResult[13] = str3;
@@ -210,7 +210,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
       const obj5 = { variant: str, color: str4, lineClamp, style: text, children: items1 };
       items1 = [tmp16, "\n"];
-      const tmp20 = closure_7(lineClamp(4886).Text, obj5, "changelog-bio");
+      const tmp20 = closure_7(lineClamp(4892).Text, obj5, "changelog-bio");
       cResult[4] = lineClamp;
       cResult[5] = tmp4.text;
       cResult[6] = str4;
@@ -244,7 +244,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         }
       }
       const obj6 = { variant: str, color: str2, lineClamp, style: tmp4.text, children: tmp5 };
-      const tmp14 = closure_8(lineClamp(4886).Text, obj6);
+      const tmp14 = closure_8(lineClamp(4892).Text, obj6);
       cResult[20] = lineClamp;
       cResult[21] = tmp4.text;
       cResult[22] = str2;
@@ -255,8 +255,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }
   const obj7 = { linkVariant: str, textVariant: str, customEmojiOffsetY: num };
-  const parseBioReact = lineClamp(8942).parseBioReact;
-  lineClamp(8942);
+  const parseBioReact = lineClamp(8971).parseBioReact;
+  lineClamp(8971);
   num = undefined;
   const tmpResult2 = lineClamp(1369);
   if (tmpResult2.isAndroid()) {

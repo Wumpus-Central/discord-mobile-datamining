@@ -1,18 +1,18 @@
-// === Module 17324: VoicePanelVisualEffectView ===
+// === Module 17352: VoicePanelVisualEffectView ===
 
-// Module 17324 (VoicePanelVisualEffectView)
+// Module 17352 (VoicePanelVisualEffectView)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useToken2 from "useToken" /* 4580 */;
-import shared from "shared" /* 4729 */;
-import native from "native" /* 8567 */;
+import useToken2 from "useToken" /* 4586 */;
+import shared from "shared" /* 4735 */;
+import native from "native" /* 8602 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 9272: GuildScheduledEventHeaderUtils ===
+// === Module 9307: GuildScheduledEventHeaderUtils ===
 
-// Module 9272 (GuildScheduledEventHeaderUtils)
+// Module 9307 (GuildScheduledEventHeaderUtils)
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
-import ScheduleUtils from "ScheduleUtils" /* 9163 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9193 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9273 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 9274 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
+import ScheduleUtils from "ScheduleUtils" /* 9198 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9228 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9308 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 9309 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
 import size from "module_2" /* 2 */;
 
 let c3;

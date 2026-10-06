@@ -1,11 +1,11 @@
-// === Module 7171: SlowmodeStore ===
+// === Module 7184: SlowmodeStore ===
 
-// Module 7171 (SlowmodeStore)
+// Module 7184 (SlowmodeStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

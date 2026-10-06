@@ -1,10 +1,10 @@
-// === Module 9463: getConsoleIcon ===
+// === Module 9476: getConsoleIcon ===
 
-// Module 9463 (getConsoleIcon)
+// Module 9476 (getConsoleIcon)
 import Constants from "Constants" /* 1085 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8754 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9464 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8786 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9477 */;
 import size from "module_2" /* 2 */;
 
 let PLAYSTATION;

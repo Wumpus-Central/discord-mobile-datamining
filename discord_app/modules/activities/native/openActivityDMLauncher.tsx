@@ -1,6 +1,6 @@
-// === Module 13796: openActivityDMLauncher ===
+// === Module 13814: openActivityDMLauncher ===
 
-// Module 13796 (openActivityDMLauncher)
+// Module 13814 (openActivityDMLauncher)
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
@@ -58,7 +58,7 @@ let obj = function _openActivityDMLauncher() {
             customId = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (targetApplicationId === 1) {

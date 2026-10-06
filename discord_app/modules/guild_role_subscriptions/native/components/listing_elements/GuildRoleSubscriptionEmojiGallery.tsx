@@ -1,11 +1,11 @@
-// === Module 15057: GuildRoleSubscriptionEmojiGallery ===
+// === Module 15072: GuildRoleSubscriptionEmojiGallery ===
 
-// Module 15057 (GuildRoleSubscriptionEmojiGallery)
+// Module 15072 (GuildRoleSubscriptionEmojiGallery)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import chunkDefault from "chunk" /* 9951 */;
-import LayoutUtils from "LayoutUtils" /* 9953 */;
-import EmojiIconDefault from "EmojiIcon" /* 15058 */;
+import chunkDefault from "chunk" /* 9964 */;
+import LayoutUtils from "LayoutUtils" /* 9966 */;
+import EmojiIconDefault from "EmojiIcon" /* 15073 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -65,7 +65,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((maxPerRow) => {
     }
   }
   const arr = chunkDefault(emojiIds, num);
-  let GappedList = guildId(9953).GappedList;
+  let GappedList = guildId(9966).GappedList;
   if (cResult[7] !== guildId) {
     const fn = function x(arr, key) {
       ({ gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });

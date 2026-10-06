@@ -1,18 +1,18 @@
-// === Module 7767: utils/ChangeLogUtils ===
+// === Module 7778: utils/ChangeLogUtils ===
 
-// Module 7767 (utils/ChangeLogUtils)
+// Module 7778 (utils/ChangeLogUtils)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef1936 from "module_1936" /* 1936 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
-import MarkupRulesUtils from "MarkupRulesUtils" /* 7768 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import MarkupRulesUtils from "MarkupRulesUtils" /* 7779 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import CustomMarkup from "CustomMarkup" /* 5784 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import CustomMarkup from "CustomMarkup" /* 5791 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

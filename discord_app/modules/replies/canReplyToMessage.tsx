@@ -1,12 +1,12 @@
-// === Module 7635: canReplyToMessage ===
+// === Module 7646: canReplyToMessage ===
 
-// Module 7635 (canReplyToMessage)
+// Module 7646 (canReplyToMessage)
 import Constants2 from "Constants" /* 1096 */;
 import MessageTypes from "MessageTypes" /* 1101 */;
-import ThreadHooks from "ThreadHooks" /* 6772 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7636 */;
+import ThreadHooks from "ThreadHooks" /* 6782 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7647 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -40,7 +40,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((getGuildId, hasFla
   } else {
     tmp5 = cResult[1];
   }
-  const tmpResult = tmp(7636);
+  const tmpResult = tmp(7647);
   const tmp8 = _slicedToArray(tmpResult.useCurrentUserCommunicationDisabled(tmp5), 2)[1];
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];

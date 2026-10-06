@@ -1,7 +1,7 @@
-// === Module 16591: useFrameBySurface ===
+// === Module 16629: useFrameBySurface ===
 
-// Module 16591 (useFrameBySurface)
-import FramesStore from "FramesStore" /* 8703 */;
+// Module 16629 (useFrameBySurface)
+import FramesStore from "FramesStore" /* 9000 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

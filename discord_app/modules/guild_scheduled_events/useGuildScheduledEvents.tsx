@@ -1,14 +1,14 @@
-// === Module 9160: useGuildScheduledEvents ===
+// === Module 9195: useGuildScheduledEvents ===
 
-// Module 9160 (useGuildScheduledEvents)
+// Module 9195 (useGuildScheduledEvents)
 import DurationsDefault from "Durations" /* 1102 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7037 */;
-import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9161 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 7050 */;
+import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9196 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

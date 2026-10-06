@@ -1,11 +1,11 @@
-// === Module 5419: StripeUtils ===
+// === Module 5426: StripeUtils ===
 
-// Module 5419 (StripeUtils)
+// Module 5426 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import _mod5420 from "module_5420" /* 5420 */;
+import _mod5427 from "module_5427" /* 5427 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
@@ -22,7 +22,7 @@ function getStripe() {
   if (null != React2) {
     resolved = Promise.resolve(React2);
   } else {
-    obj = _mod5420;
+    obj = _mod5427;
     const stripe = obj.loadStripe(metroImportDefault.STRIPE.KEY);
     resolved = stripe.then((result) => {
       let closure_1_2 = result;

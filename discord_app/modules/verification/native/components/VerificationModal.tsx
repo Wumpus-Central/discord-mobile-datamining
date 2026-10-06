@@ -1,6 +1,6 @@
-// === Module 17646: VerificationModal ===
+// === Module 17692: VerificationModal ===
 
-// Module 17646 (VerificationModal)
+// Module 17692 (VerificationModal)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
@@ -8,26 +8,26 @@ import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import Link from "Link" /* 1491 */;
-import ChatInputUtils from "ChatInputUtils" /* 4745 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import NavigatorHeader from "NavigatorHeader" /* 6010 */;
-import ResendEmailDefault from "ResendEmail" /* 6080 */;
-import ConfirmEmailChangeStartDefault from "ConfirmEmailChangeStart" /* 6092 */;
-import ConfirmEmailChangeCodeDefault from "ConfirmEmailChangeCode" /* 6095 */;
-import EnterEmailDefault from "EnterEmail" /* 6475 */;
-import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 6489 */;
-import Navigator2 from "Navigator" /* 6496 */;
-import VerifyPhoneDefault from "VerifyPhone" /* 6575 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 6880 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9290 */;
-import OverviewDefault from "Overview" /* 17652 */;
+import ChatInputUtils from "ChatInputUtils" /* 4751 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import NavigatorHeader from "NavigatorHeader" /* 6017 */;
+import ResendEmailDefault from "ResendEmail" /* 6087 */;
+import ConfirmEmailChangeStartDefault from "ConfirmEmailChangeStart" /* 6099 */;
+import ConfirmEmailChangeCodeDefault from "ConfirmEmailChangeCode" /* 6102 */;
+import EnterEmailDefault from "EnterEmail" /* 6482 */;
+import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 6496 */;
+import Navigator2 from "Navigator" /* 6503 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 6582 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6890 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9325 */;
+import OverviewDefault from "Overview" /* 17698 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import PhoneVerificationStore from "PhoneVerificationStore" /* 17647 */;
+import PhoneVerificationStore from "PhoneVerificationStore" /* 17693 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -434,7 +434,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) =>
     tmp9 = cResult[2];
   }
   if (cResult[3] !== navigation) {
-    const tmp13 = jsx(navigation(5594).Button, {
+    const tmp13 = jsx(navigation(5601).Button, {
       text: tmp9,
       onPress() {
           let ENTER_EMAIL;
@@ -467,7 +467,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) =>
     return tmp14;
   }
   const EmptyState = tmp(1188).EmptyState;
-  const tmp15 = <EmptyState Illustration={navigation(17648).VerifyPhone} title={tmp5} body={tmp6}>{null}</EmptyState>;
+  const tmp15 = <EmptyState Illustration={navigation(17694).VerifyPhone} title={tmp5} body={tmp6}>{null}</EmptyState>;
   cResult[5] = tmp4.button;
   cResult[6] = tmp11;
   cResult[7] = tmp15;
@@ -498,9 +498,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((navigation) =>
       dispatch(StackActions.push(ENTER_EMAIL));
     }
   });
-  const Button = navigation(5594).Button;
+  const Button = navigation(5601).Button;
   intl3 = navigation(1126).intl;
-  return <EmptyState Illustration={navigation(17648).VerifyPhone} title={intl.string(navigation(1126).t.KLnLIP)} body={intl2.string(navigation(1126).t.XGbCq3)}>{null}</EmptyState>;
+  return <EmptyState Illustration={navigation(17694).VerifyPhone} title={intl.string(navigation(1126).t.KLnLIP)} body={intl2.string(navigation(1126).t.XGbCq3)}>{null}</EmptyState>;
 });
 ReactCompilerGating = ReactCompilerGating_mod;
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
@@ -621,7 +621,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj2 = stateFromStores(dependencyMap[35]);
     obj2.dismissKeyboard();
   }, []);
-  const Navigator = stateFromStores(6496).Navigator;
+  const Navigator = stateFromStores(6503).Navigator;
   const intl = stateFromStores(1126).intl;
   return <Navigator screens={react.useMemo(() => getScreens(), [])} initialRouteStack={memo} headerBackTitle={intl.string(stateFromStores(1126).t["13/7kX"])} />;
 });

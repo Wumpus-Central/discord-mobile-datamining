@@ -1,23 +1,23 @@
-// === Module 14311: channels ===
+// === Module 14329: channels ===
 
-// Module 14311 (channels)
+// Module 14329 (channels)
 import _modDef12 from "module_12" /* 12 */;
 import router_utils from "router_utils" /* 1112 */;
-import ChannelUtils from "ChannelUtils" /* 5035 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8054 */;
-import RPCErrorDefault from "RPCError" /* 9026 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
-import RPCHelpers from "RPCHelpers" /* 9031 */;
-import getCurrentEmbeddedChannelDefault from "getCurrentEmbeddedChannel" /* 14312 */;
+import ChannelUtils from "ChannelUtils" /* 5041 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8064 */;
+import RPCErrorDefault from "RPCError" /* 9059 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9062 */;
+import RPCHelpers from "RPCHelpers" /* 9064 */;
+import getCurrentEmbeddedChannelDefault from "getCurrentEmbeddedChannel" /* 14330 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
-import Constants_mod from "Constants" /* 5316 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import Constants_mod from "Constants" /* 5323 */;
 import Constants_mod2 from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

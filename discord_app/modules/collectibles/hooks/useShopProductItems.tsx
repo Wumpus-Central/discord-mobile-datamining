@@ -1,6 +1,6 @@
-// === Module 7842: useShopProductItems ===
+// === Module 7853: useShopProductItems ===
 
-// Module 7842 (useShopProductItems)
+// Module 7853 (useShopProductItems)
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
 import react from "react" /* 19 */;

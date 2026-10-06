@@ -1,12 +1,12 @@
-// === Module 7270: FileUtils ===
+// === Module 7283: FileUtils ===
 
-// Module 7270 (FileUtils)
+// Module 7283 (FileUtils)
 import _modDef12 from "module_12" /* 12 */;
 import intl2 from "intl" /* 1126 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
-import FileSizeUtils from "FileSizeUtils" /* 5317 */;
-import UploadUtils from "UploadUtils" /* 7243 */;
-import _modDef7271 from "module_7271" /* 7271 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
+import FileSizeUtils from "FileSizeUtils" /* 5324 */;
+import UploadUtils from "UploadUtils" /* 7256 */;
+import _modDef7284 from "module_7284" /* 7284 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
@@ -124,7 +124,7 @@ export const classifyFileName = function classifyFileName(fileName, arg1) {
   return str2;
 };
 export const sizeString = function sizeString(size) {
-  const obj = _modDef7271;
+  const obj = _modDef7284;
   return obj.filesize(size);
 };
 export const maxFileSize = function maxFileSize(guildId) {

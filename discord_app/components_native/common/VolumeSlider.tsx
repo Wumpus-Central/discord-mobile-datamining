@@ -1,20 +1,20 @@
-// === Module 9666: VolumeSlider ===
+// === Module 9679: VolumeSlider ===
 
-// Module 9666 (VolumeSlider)
+// Module 9679 (VolumeSlider)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import useToken2 from "useToken" /* 4580 */;
-import Constants from "Constants" /* 4915 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5683 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5885 */;
-import _modDef7952 from "module_7952" /* 7952 */;
-import VoiceXIcon from "VoiceXIcon" /* 9667 */;
+import useToken2 from "useToken" /* 4586 */;
+import Constants from "Constants" /* 4921 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5690 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5892 */;
+import _modDef7963 from "module_7963" /* 7963 */;
+import VoiceXIcon from "VoiceXIcon" /* 9680 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -193,8 +193,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     cResult[27] = tmp24;
     cResult[28] = L;
     cResult[29] = tmp27;
-    cResult[30] = closure_7(_modDef7952, obj3);
-    const tmp32 = closure_7(_modDef7952, obj3);
+    cResult[30] = closure_7(_modDef7963, obj3);
+    const tmp32 = closure_7(_modDef7963, obj3);
   }
   const items = [tmp15.volumerSlider, tmp8];
   cResult[9] = tmp8;
@@ -246,7 +246,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     },
     onResponderGrant
   };
-  const tmp8Result = _modDef7952;
+  const tmp8Result = _modDef7963;
   tmp5Result = PerceptualVolumeUtils;
   if (accessibilityLabel == null) {
     const intl = intl2.intl;

@@ -1,16 +1,16 @@
-// === Module 9289: GuildEventRecurrence ===
+// === Module 9324: GuildEventRecurrence ===
 
-// Module 9289 (GuildEventRecurrence)
+// Module 9324 (GuildEventRecurrence)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ScheduleUtils from "ScheduleUtils" /* 9163 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9174 */;
+import ScheduleUtils from "ScheduleUtils" /* 9198 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9209 */;
 import react from "react" /* 19 */;
 import ChannelStore_mod from "ChannelStore" /* 2051 */;
 import GuildStore_mod from "GuildStore" /* 2074 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -433,7 +433,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((recurrenceId) => {
   const stateFromStores = obj.useStateFromStores(items, () => GuildScheduledEventStore.getGuildScheduledEvent(guildEventId));
   let id;
   const tmp5 = guildEventId;
-  const tmp6 = guildEventId(9167);
+  const tmp6 = guildEventId(9202);
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
@@ -458,13 +458,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((recurrenceId) => {
     }
     return getChannel(channel_id);
   });
-  const useManageResourcePermissions = tmp2(9169).useManageResourcePermissions;
-  recurrenceId(9169);
+  const useManageResourcePermissions = tmp2(9204).useManageResourcePermissions;
+  recurrenceId(9204);
   if (stateFromStores2 == null) {
     stateFromStores2 = stateFromStores1;
   }
   closure_5 = useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
-  const tmp2Result6 = recurrenceId(9166);
+  const tmp2Result6 = recurrenceId(9201);
   const eventScheduleById = tmp2Result6.useEventScheduleById(guildEventId, recurrenceId);
   let toISOStringResult;
   if (eventScheduleById != null) {
@@ -523,15 +523,15 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((recurrenceId) => {
           }
         },
       style: tmp.eventHeader,
-      children: closure_8(recurrenceId(9261).GuildEventCardHeader, obj5)
+      children: closure_8(recurrenceId(9296).GuildEventCardHeader, obj5)
     };
-    const PressableOpacity = tmp2(5909).PressableOpacity;
+    const PressableOpacity = tmp2(5916).PressableOpacity;
     obj5 = { isActive, event: stateFromStores, showUserCount: false, showCreator: false, recurrenceId };
     items5 = [closure_8(PressableOpacity, obj4), ];
     const obj6 = { style: tmp.actions, children: items6 };
     if (tmp22Result) {
       const obj7 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: intl2.string(recurrenceId(1126).t.fyBVRm) };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       intl2 = tmp2(1126).intl;
       tmp22Result = closure_8(Text, obj7);
     }
@@ -552,10 +552,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((recurrenceId) => {
       style: tmp.secondarySmallButton,
       children: closure_8(Icon, obj9)
     };
-    const PressableOpacity2 = tmp2(5909).PressableOpacity;
+    const PressableOpacity2 = tmp2(5916).PressableOpacity;
     intl3 = tmp2(1126).intl;
     const _HermesInternal3 = HermesInternal;
-    obj9 = { source: tmp5(9290), size: recurrenceId(1188).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
+    obj9 = { source: tmp5(9325), size: recurrenceId(1188).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
     Icon = tmp2(1188).Icon;
     items6[1] = closure_8(PressableOpacity2, obj8);
     items5[1] = closure_9(stateFromStores1, obj6);

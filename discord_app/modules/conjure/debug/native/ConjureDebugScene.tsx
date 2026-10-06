@@ -1,21 +1,21 @@
-// === Module 16751: ConjureDebugScene ===
+// === Module 16772: ConjureDebugScene ===
 
-// Module 16751 (ConjureDebugScene)
+// Module 16772 (ConjureDebugScene)
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import CopyIcon from "CopyIcon" /* 4843 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
-import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 16753 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import CopyIcon from "CopyIcon" /* 4849 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
+import ConjureDebugSnapshot from "ConjureDebugSnapshot" /* 16774 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7204 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 16752 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7217 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 16773 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -233,7 +233,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         ClipboardUtils;
         const obj = ConjureDebugSnapshot;
         copy(obj.conjureDebugSnapshot(projectId));
-        const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+        const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
         const open = ToastActionCreatorsDefault.open;
         ToastActionCreatorsDefault;
         intl = intl5.intl;
@@ -250,7 +250,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         ClipboardUtils;
         const obj = ConjureDebugSnapshot;
         copy(obj.conjureDebugSnapshot(projectId));
-        const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+        const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
         const open = ToastActionCreatorsDefault.open;
         ToastActionCreatorsDefault;
         intl = intl5.intl;
@@ -267,7 +267,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
         ClipboardUtils;
         const obj = ConjureDebugSnapshot;
         copy(obj.conjureDebugSnapshot(projectId));
-        const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+        const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
         const open = ToastActionCreatorsDefault.open;
         ToastActionCreatorsDefault;
         intl = intl5.intl;
@@ -283,7 +283,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
           ClipboardUtils;
           const obj = ConjureDebugSnapshot;
           copy(obj.conjureDebugSnapshot(projectId));
-          const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+          const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
           const open = ToastActionCreatorsDefault.open;
           ToastActionCreatorsDefault;
           intl = intl5.intl;
@@ -302,7 +302,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
           ClipboardUtils;
           const obj = ConjureDebugSnapshot;
           copy(obj.conjureDebugSnapshot(projectId));
-          const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+          const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
           const open = ToastActionCreatorsDefault.open;
           ToastActionCreatorsDefault;
           intl = intl5.intl;
@@ -319,7 +319,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
           ClipboardUtils;
           const obj = ConjureDebugSnapshot;
           copy(obj.conjureDebugSnapshot(projectId));
-          const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+          const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
           const open = ToastActionCreatorsDefault.open;
           ToastActionCreatorsDefault;
           intl = intl5.intl;
@@ -334,7 +334,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
             ClipboardUtils;
             const obj = ConjureDebugSnapshot;
             copy(obj.conjureDebugSnapshot(projectId));
-            const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+            const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
             const open = ToastActionCreatorsDefault.open;
             ToastActionCreatorsDefault;
             intl = intl5.intl;
@@ -350,7 +350,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
             ClipboardUtils;
             const obj = ConjureDebugSnapshot;
             copy(obj.conjureDebugSnapshot(projectId));
-            const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+            const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
             const open = ToastActionCreatorsDefault.open;
             ToastActionCreatorsDefault;
             intl = intl5.intl;
@@ -367,7 +367,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
             ClipboardUtils;
             const obj = ConjureDebugSnapshot;
             copy(obj.conjureDebugSnapshot(projectId));
-            const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+            const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
             const open = ToastActionCreatorsDefault.open;
             ToastActionCreatorsDefault;
             intl = intl5.intl;
@@ -382,7 +382,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
               ClipboardUtils;
               const obj = ConjureDebugSnapshot;
               copy(obj.conjureDebugSnapshot(projectId));
-              const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+              const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
               const open = ToastActionCreatorsDefault.open;
               ToastActionCreatorsDefault;
               intl = intl5.intl;
@@ -403,7 +403,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
               ClipboardUtils;
               const obj = ConjureDebugSnapshot;
               copy(obj.conjureDebugSnapshot(projectId));
-              const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+              const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
               const open = ToastActionCreatorsDefault.open;
               ToastActionCreatorsDefault;
               intl = intl5.intl;
@@ -422,7 +422,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
               ClipboardUtils;
               const obj = ConjureDebugSnapshot;
               copy(obj.conjureDebugSnapshot(projectId));
-              const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+              const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
               const open = ToastActionCreatorsDefault.open;
               ToastActionCreatorsDefault;
               intl = intl5.intl;
@@ -548,7 +548,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     ClipboardUtils;
     const obj = ConjureDebugSnapshot;
     copy(obj.conjureDebugSnapshot(projectId));
-    const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3723.wI6fhl), IconComponent: CopyIcon.CopyIcon };
+    const obj2 = { key: "CONJURE_DEBUG_COPIED", content: intl.string(_modDef3753.wI6fhl), IconComponent: CopyIcon.CopyIcon };
     const open = ToastActionCreatorsDefault.open;
     ToastActionCreatorsDefault;
     intl = intl5.intl;

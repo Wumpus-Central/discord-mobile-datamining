@@ -1,7 +1,7 @@
-// === Module 13116: useIsForumChannelSearchActive ===
+// === Module 13135: useIsForumChannelSearchActive ===
 
-// Module 13116 (useIsForumChannelSearchActive)
-import ForumSearchStore from "ForumSearchStore" /* 7264 */;
+// Module 13135 (useIsForumChannelSearchActive)
+import ForumSearchStore from "ForumSearchStore" /* 7277 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

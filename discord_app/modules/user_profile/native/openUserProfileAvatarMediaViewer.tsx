@@ -1,9 +1,9 @@
-// === Module 7932: openUserProfileAvatarMediaViewer ===
+// === Module 7943: openUserProfileAvatarMediaViewer ===
 
-// Module 7932 (openUserProfileAvatarMediaViewer)
+// Module 7943 (openUserProfileAvatarMediaViewer)
 import Constants from "Constants" /* 1085 */;
-import openMediaModal from "openMediaModal" /* 7933 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import openMediaModal from "openMediaModal" /* 7944 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import size_mod from "module_2" /* 2 */;
 
 const AVATAR_MAX_SIZE = Constants.AVATAR_MAX_SIZE;

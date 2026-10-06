@@ -1,10 +1,10 @@
-// === Module 7727: useIsEligibleSenderForReferralProgram ===
+// === Module 7738: useIsEligibleSenderForReferralProgram ===
 
-// Module 7727 (useIsEligibleSenderForReferralProgram)
+// Module 7738 (useIsEligibleSenderForReferralProgram)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 7728 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 6961 */;
+import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 7739 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 6974 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

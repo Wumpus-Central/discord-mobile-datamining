@@ -1,15 +1,15 @@
-// === Module 17210: VoicePanelSystemUIManager ===
+// === Module 17239: VoicePanelSystemUIManager ===
 
-// Module 17210 (VoicePanelSystemUIManager)
+// Module 17239 (VoicePanelSystemUIManager)
 import react_native from "react-native" /* 1259 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import cheapWorkletShallowEqual2 from "cheapWorkletShallowEqual" /* 9074 */;
-import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11900 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import cheapWorkletShallowEqual2 from "cheapWorkletShallowEqual" /* 9110 */;
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 11914 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import Fragment from "Fragment" /* 21 */;
 import size from "module_2" /* 2 */;
 

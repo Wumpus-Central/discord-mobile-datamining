@@ -1,14 +1,14 @@
-// === Module 11583: CustomTypingIndicatorAnnounceActionSheet ===
+// === Module 11596: CustomTypingIndicatorAnnounceActionSheet ===
 
-// Module 11583 (CustomTypingIndicatorAnnounceActionSheet)
+// Module 11596 (CustomTypingIndicatorAnnounceActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -89,8 +89,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
         }
     };
     cResult[6] = markAsDismissed;
-    cResult[7] = closure_7(markAsDismissed(6649).ActionSheetHeaderBar, obj2);
-    const tmp10 = closure_7(markAsDismissed(6649).ActionSheetHeaderBar, obj2);
+    cResult[7] = closure_7(markAsDismissed(6656).ActionSheetHeaderBar, obj2);
+    const tmp10 = closure_7(markAsDismissed(6656).ActionSheetHeaderBar, obj2);
   } else {
     class C {
       constructor() {
@@ -112,7 +112,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
           markAsDismissed(ContentDismissActionType.USER_DISMISS);
         }
       }
-      const items = [ref(11584), ref(11585), ref(11584)];
+      const items = [ref(11597), ref(11598), ref(11597)];
       cResult[11] = items;
       tmp13 = items;
     } else {
@@ -129,7 +129,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
         }
       }
       const obj3 = { name: "Cap", suggestion: markAsDismissed(1385).TypingSuggestion.UNSPECIFIED, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: tmp13, style: tmp5.outerStack };
-      const tmp16 = ref(11586);
+      const tmp16 = ref(11599);
       cResult[12] = tmp5.outerStack;
       cResult[13] = closure_7(tmp16, obj3);
       const tmp17 = closure_7(tmp16, obj3);
@@ -160,7 +160,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
               markAsDismissed(ContentDismissActionType.USER_DISMISS);
             }
           }
-          const items1 = [ref(11588), ref(11589), ref(11588)];
+          const items1 = [ref(11601), ref(11602), ref(11601)];
           cResult[20] = items1;
           tmp23 = items1;
         } else {
@@ -177,7 +177,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
             }
           }
           const obj4 = { name: "Rose", suggestion: markAsDismissed(1385).TypingSuggestion.YAPPING, emojiSize: 28, spacing: 10, textVariant: "text-lg/medium", textColor: "text-default", lineClamp: 1, style: tmp5.innerStack, emojiSource: tmp23 };
-          const tmp26 = ref(11586);
+          const tmp26 = ref(11599);
           cResult[21] = tmp5.innerStack;
           cResult[22] = closure_7(tmp26, obj4);
           const tmp27 = closure_7(tmp26, obj4);
@@ -208,7 +208,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
                   markAsDismissed(ContentDismissActionType.USER_DISMISS);
                 }
               }
-              const items2 = [ref(11590), ref(11591), ref(11592)];
+              const items2 = [ref(11603), ref(11604), ref(11605)];
               cResult[29] = items2;
               tmp33 = items2;
             } else {
@@ -225,7 +225,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
                 }
               }
               const obj5 = { name: "Loky", suggestion: markAsDismissed(1385).TypingSuggestion.OVERSHARING, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, style: tmp5.outerStack, emojiSource: tmp33 };
-              const tmp36 = ref(11586);
+              const tmp36 = ref(11599);
               cResult[30] = tmp5.outerStack;
               cResult[31] = closure_7(tmp36, obj5);
               const tmp37 = closure_7(tmp36, obj5);
@@ -337,10 +337,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
     markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items2);
   let obj = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: closure_7(SafeAreaPaddingView, obj2) };
-  BottomSheet = markAsDismissed(6645).BottomSheet;
+  BottomSheet = markAsDismissed(6652).BottomSheet;
   obj2 = { bottom: true, children: closure_8(View, obj3) };
   obj3 = { style: tmp2.content, children: items3 };
-  SafeAreaPaddingView = markAsDismissed(6619).SafeAreaPaddingView;
+  SafeAreaPaddingView = markAsDismissed(6626).SafeAreaPaddingView;
   items3 = [, , , , , ];
   const obj4 = {
     onPress() {
@@ -351,49 +351,49 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((markAsDismissed) =
       markAsDismissed(ContentDismissActionType.USER_DISMISS);
     }
   };
-  items3[0] = closure_7(markAsDismissed(6649).ActionSheetHeaderBar, obj4);
+  items3[0] = closure_7(markAsDismissed(6656).ActionSheetHeaderBar, obj4);
   const obj5 = { style: tmp2.examples, children: items6 };
   const obj6 = { style: items4, children: closure_7(tmp6, obj7) };
   items4 = [, ];
   ({ row: arr5[0], outerRow: arr5[1] } = tmp2);
   obj7 = { name: "Cap", suggestion: markAsDismissed(1385).TypingSuggestion.UNSPECIFIED, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, emojiSource: items5, style: tmp2.outerStack };
-  tmp6 = ref(11586);
-  items5 = [ref(11584), ref(11585), ref(11584)];
+  tmp6 = ref(11599);
+  items5 = [ref(11597), ref(11598), ref(11597)];
   items6 = [closure_7(View, obj6), , ];
   const obj8 = { style: items7, children: closure_7(tmp7, obj9) };
   items7 = [, ];
   ({ row: arr8[0], innerRow: arr8[1] } = tmp2);
   obj9 = { name: "Rose", suggestion: markAsDismissed(1385).TypingSuggestion.YAPPING, emojiSize: 28, spacing: 10, textVariant: "text-lg/medium", textColor: "text-default", lineClamp: 1, style: tmp2.innerStack, emojiSource: items8 };
-  tmp7 = ref(11586);
-  items8 = [ref(11588), ref(11589), ref(11588)];
+  tmp7 = ref(11599);
+  items8 = [ref(11601), ref(11602), ref(11601)];
   items6[1] = closure_7(View, obj8);
   const obj10 = { style: items9, children: closure_7(tmp8, obj11) };
   items9 = [, ];
   ({ row: arr10[0], outerRow: arr10[1] } = tmp2);
   obj11 = { name: "Loky", suggestion: markAsDismissed(1385).TypingSuggestion.OVERSHARING, emojiSize: 24, spacing: 8, textVariant: "text-md/medium", textColor: "text-subtle", lineClamp: 1, style: tmp2.outerStack, emojiSource: items10 };
-  tmp8 = ref(11586);
-  items10 = [ref(11590), ref(11591), ref(11592)];
+  tmp8 = ref(11599);
+  items10 = [ref(11603), ref(11604), ref(11605)];
   items6[2] = closure_7(View, obj10);
   items3[1] = closure_8(View, obj5);
   const obj12 = { text: intl.string(markAsDismissed(1126).t.y2b7CA), color: markAsDismissed(1188).BadgeColors.EXPRESSIVE, style: tmp2.newBadge };
   const TextBadge = markAsDismissed(1188).TextBadge;
   intl = markAsDismissed(1126).intl;
   items3[2] = closure_7(TextBadge, obj12);
-  const obj13 = { variant: "heading-lg/medium", style: tmp2.title, color: "text-default", children: intl2.string(ref(3725).uGxDiu) };
-  const Text = markAsDismissed(4886).Text;
+  const obj13 = { variant: "heading-lg/medium", style: tmp2.title, color: "text-default", children: intl2.string(ref(3755).uGxDiu) };
+  const Text = markAsDismissed(4892).Text;
   intl2 = markAsDismissed(1126).intl;
   items3[3] = closure_7(Text, obj13);
-  const obj14 = { variant: "text-md/normal", style: tmp2.body, color: "text-muted", children: intl3.string(ref(3725).yezU3E) };
-  const Text2 = markAsDismissed(4886).Text;
+  const obj14 = { variant: "text-md/normal", style: tmp2.body, color: "text-muted", children: intl3.string(ref(3755).yezU3E) };
+  const Text2 = markAsDismissed(4892).Text;
   intl3 = markAsDismissed(1126).intl;
   items3[4] = closure_7(Text2, obj14);
   const obj15 = { style: tmp2.actions, children: items11 };
-  const obj16 = { text: intl4.string(ref(3725).TswY68), variant: "primary", size: "lg", onPress: callback };
-  const Button = markAsDismissed(5594).Button;
+  const obj16 = { text: intl4.string(ref(3755).TswY68), variant: "primary", size: "lg", onPress: callback };
+  const Button = markAsDismissed(5601).Button;
   intl4 = markAsDismissed(1126).intl;
   items11 = [closure_7(Button, obj16), ];
   const obj17 = { text: intl5.string(markAsDismissed(1126).t.TulDPl), variant: "secondary", size: "lg", onPress: callback1 };
-  const Button2 = markAsDismissed(5594).Button;
+  const Button2 = markAsDismissed(5601).Button;
   intl5 = markAsDismissed(1126).intl;
   items11[1] = closure_7(Button2, obj17);
   items3[5] = closure_8(View, obj15);

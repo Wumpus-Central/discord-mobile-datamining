@@ -1,14 +1,14 @@
-// === Module 5937: MemberVerificationActionCreators ===
+// === Module 5944: MemberVerificationActionCreators ===
 
-// Module 5937 (MemberVerificationActionCreators)
+// Module 5944 (MemberVerificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4872 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4878 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import InviteStore from "InviteStore" /* 4871 */;
+import InviteStore from "InviteStore" /* 4877 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -325,7 +325,7 @@ obj = function _submitVerificationForm() {
             body = undefined;
             c8 = 1;
             c9 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c8) {
           if (guildId === 1) {

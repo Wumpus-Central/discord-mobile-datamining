@@ -1,15 +1,15 @@
-// === Module 8469: ClipView ===
+// === Module 8502: ClipView ===
 
-// Module 8469 (ClipView)
+// Module 8502 (ClipView)
 import react2 from "react" /* 576 */;
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8470 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8472 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8503 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8505 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import size_mod from "module_2" /* 2 */;
 
 let StyleSheet;

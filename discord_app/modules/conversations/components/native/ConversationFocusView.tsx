@@ -1,14 +1,14 @@
-// === Module 13092: ConversationFocusView ===
+// === Module 13111: ConversationFocusView ===
 
-// Module 13092 (ConversationFocusView)
+// Module 13111 (ConversationFocusView)
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7552 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7568 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7564 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7579 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

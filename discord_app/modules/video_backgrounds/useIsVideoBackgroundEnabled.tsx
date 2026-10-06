@@ -1,10 +1,10 @@
-// === Module 9661: useIsVideoBackgroundEnabled ===
+// === Module 9674: useIsVideoBackgroundEnabled ===
 
-// Module 9661 (useIsVideoBackgroundEnabled)
+// Module 9674 (useIsVideoBackgroundEnabled)
 import react from "react" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 9326 */;
-import useIsVideoBackgroundSupportedDefault from "useIsVideoBackgroundSupported" /* 9662 */;
+import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 8100 */;
+import useIsVideoBackgroundSupportedDefault from "useIsVideoBackgroundSupported" /* 9675 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,28 +1,28 @@
-// === Module 17246: SoundboardSoundPickerCategories ===
+// === Module 17275: SoundboardSoundPickerCategories ===
 
-// Module 17246 (SoundboardSoundPickerCategories)
+// Module 17275 (SoundboardSoundPickerCategories)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import ClockIcon from "ClockIcon" /* 4849 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import SoundboardTypes from "SoundboardTypes" /* 5805 */;
-import LockIcon from "LockIcon" /* 5879 */;
-import Pressables from "Pressables" /* 5909 */;
-import GuildIconDefault from "GuildIcon" /* 5971 */;
-import TrophyIcon from "TrophyIcon" /* 8364 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9644 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10116 */;
-import ExpressionPickerStore from "ExpressionPickerStore" /* 17228 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 17244 */;
+import ClockIcon from "ClockIcon" /* 4855 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import SoundboardTypes from "SoundboardTypes" /* 5812 */;
+import LockIcon from "LockIcon" /* 5886 */;
+import Pressables from "Pressables" /* 5916 */;
+import GuildIconDefault from "GuildIcon" /* 5978 */;
+import TrophyIcon from "TrophyIcon" /* 8397 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9657 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10129 */;
+import ExpressionPickerStore from "ExpressionPickerStore" /* 17257 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 17273 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

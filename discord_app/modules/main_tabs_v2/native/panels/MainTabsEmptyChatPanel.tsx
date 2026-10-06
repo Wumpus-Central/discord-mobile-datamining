@@ -1,16 +1,16 @@
-// === Module 16915: MainTabsEmptyChatPanel ===
+// === Module 16941: MainTabsEmptyChatPanel ===
 
-// Module 16915 (MainTabsEmptyChatPanel)
+// Module 16941 (MainTabsEmptyChatPanel)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import FavoritesHooks from "FavoritesHooks" /* 10036 */;
-import useDrawerWidth from "useDrawerWidth" /* 11144 */;
-import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 16916 */;
+import FavoritesHooks from "FavoritesHooks" /* 10049 */;
+import useDrawerWidth from "useDrawerWidth" /* 11157 */;
+import FavoritesEmptyStateDefault from "FavoritesEmptyState" /* 16942 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

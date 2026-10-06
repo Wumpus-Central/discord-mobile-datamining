@@ -1,11 +1,11 @@
-// === Module 14748: AuthorizedAppScreen ===
+// === Module 14764: AuthorizedAppScreen ===
 
-// Module 14748 (AuthorizedAppScreen)
+// Module 14764 (AuthorizedAppScreen)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6490 */;
-import UserSettingsAuthedAppDefault from "UserSettingsAuthedApp" /* 14749 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6497 */;
+import UserSettingsAuthedAppDefault from "UserSettingsAuthedApp" /* 14765 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

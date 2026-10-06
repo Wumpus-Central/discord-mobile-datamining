@@ -1,14 +1,14 @@
-// === Module 7744: FriendRequestAcceptedSystemMessage ===
+// === Module 7755: FriendRequestAcceptedSystemMessage ===
 
-// Module 7744 (FriendRequestAcceptedSystemMessage)
+// Module 7755 (FriendRequestAcceptedSystemMessage)
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import createStyles from "createStyles" /* 4890 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7745 */;
+import createStyles from "createStyles" /* 4896 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7756 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;

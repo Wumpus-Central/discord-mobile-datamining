@@ -1,8 +1,8 @@
-// === Module 5019: GameAnalyticsUtils ===
+// === Module 5025: GameAnalyticsUtils ===
 
-// Module 5019 (GameAnalyticsUtils)
+// Module 5025 (GameAnalyticsUtils)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 5020 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 5026 */;
 import DetectableGameStore from "DetectableGameStore" /* 2024 */;
 import size from "module_2" /* 2 */;
 
@@ -28,7 +28,7 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
   let str3;
   let subgameMetadata;
   if (null == streamApplication) {
-    return { gameName: "toCharArray$esjava$1", gameId: "unicodeVersion", exe: "uri", distributor: "toCharArray$esjava$1", sku: "Array", gameMetadata: "IconComponent", rawExePath: "Set" };
+    return { gameName: "Array", gameId: "unicodeVersion", exe: "PX_16", distributor: "useStateFromStores", sku: "IconComponent", gameMetadata: "emoji", rawExePath: "o" };
   } else {
     const str = "exePath" in streamApplication ? streamApplication.exePath : streamApplication.exe;
     const id = streamApplication.id;

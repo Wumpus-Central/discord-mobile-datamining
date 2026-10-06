@@ -1,17 +1,17 @@
-// === Module 16109: useGuildHasLiveChannelNotice ===
+// === Module 16148: useGuildHasLiveChannelNotice ===
 
-// Module 16109 (useGuildHasLiveChannelNotice)
+// Module 16148 (useGuildHasLiveChannelNotice)
 import Constants from "Constants" /* 1096 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5582 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
 import react from "react" /* 19 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5575 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
-import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 16110 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import LiveChannelNoticesStore from "LiveChannelNoticesStore" /* 16149 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -236,7 +236,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp = activeEventOrStageInstanceChannel;
   const obj = activeEventOrStageInstanceChannel(576);
   const cResult = obj.c(29);
-  const obj2 = activeEventOrStageInstanceChannel(16112);
+  const obj2 = activeEventOrStageInstanceChannel(16151);
   activeEventOrStageInstanceChannel = obj2.useActiveEventOrStageInstanceChannel(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [PermissionStore];
@@ -264,7 +264,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmpResult = tmp(504);
   const stateFromStores = tmpResult.useStateFromStores(first, S);
-  const tmpResult5 = tmp(9160);
+  const tmpResult5 = tmp(9195);
   const guildActiveEvent = tmpResult5.useGuildActiveEvent(arg0);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class S {
@@ -347,8 +347,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   const tmpResult6 = tmp(504);
   const stateFromStores1 = tmpResult6.useStateFromStores(tmp10, tmp12, tmp15);
-  const useActualStageSpeakerCount = tmp(5588).useActualStageSpeakerCount;
-  tmp(5588);
+  const useActualStageSpeakerCount = tmp(5595).useActualStageSpeakerCount;
+  tmp(5595);
   if (activeEventOrStageInstanceChannel != null) {
     class S {
       constructor() {

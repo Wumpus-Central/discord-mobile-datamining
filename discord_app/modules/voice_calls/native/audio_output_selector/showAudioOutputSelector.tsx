@@ -1,11 +1,11 @@
-// === Module 9330: showAudioOutputSelector ===
+// === Module 9344: showAudioOutputSelector ===
 
-// Module 9330 (showAudioOutputSelector)
+// Module 9344 (showAudioOutputSelector)
 import react_native from "react-native" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import VoicePanelHeaderConstants from "VoicePanelHeaderConstants" /* 9331 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import VoicePanelHeaderConstants from "VoicePanelHeaderConstants" /* 9345 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = react_native.NativeModules;
@@ -17,7 +17,7 @@ export const showAudioOutputSelector = function showAudioOutputSelector(channelI
   if (obj.isAndroid()) {
     const obj3 = { channelId, isConnectedToVoiceChannel };
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequire(9332, dependencyMap.paths), closure_4, obj3);
+    obj2.openLazy(asyncRequire(9346, dependencyMap.paths), closure_4, obj3);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {

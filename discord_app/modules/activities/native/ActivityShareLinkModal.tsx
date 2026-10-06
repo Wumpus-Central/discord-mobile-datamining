@@ -1,20 +1,20 @@
-// === Module 14327: ActivityShareLinkModal ===
+// === Module 14345: ActivityShareLinkModal ===
 
-// Module 14327 (ActivityShareLinkModal)
+// Module 14345 (ActivityShareLinkModal)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import LinkIcon from "LinkIcon" /* 4839 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 6880 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import UserRowConstants from "UserRowConstants" /* 10592 */;
-import formatResults from "formatResults" /* 10711 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 11756 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14326 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import LinkIcon from "LinkIcon" /* 4845 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6890 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import UserRowConstants from "UserRowConstants" /* 10605 */;
+import formatResults from "formatResults" /* 10724 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 11770 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14344 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -22,7 +22,7 @@ import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
 import EmbeddedActivitiesStore_mod from "EmbeddedActivitiesStore" /* 2050 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

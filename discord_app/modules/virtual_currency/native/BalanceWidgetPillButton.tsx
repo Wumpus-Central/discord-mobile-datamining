@@ -1,11 +1,11 @@
-// === Module 11010: BalanceWidgetPillButton ===
+// === Module 11023: BalanceWidgetPillButton ===
 
-// Module 11010 (BalanceWidgetPillButton)
+// Module 11023 (BalanceWidgetPillButton)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8492 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8525 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

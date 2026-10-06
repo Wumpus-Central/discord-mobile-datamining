@@ -1,14 +1,14 @@
-// === Module 4788: MobileThemesUtils ===
+// === Module 4794: MobileThemesUtils ===
 
-// Module 4788 (MobileThemesUtils)
+// Module 4794 (MobileThemesUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import _modDef2723 from "module_2723" /* 2723 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4790 */;
+import _modDef2751 from "module_2751" /* 2751 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4796 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import SavedCustomThemeStore from "SavedCustomThemeStore" /* 4789 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 4795 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ClientThemesConstants from "ClientThemesConstants" /* 1240 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -21,7 +21,7 @@ let metroImportDefault;
 let metroRequire;
 function getCustomThemesName() {
   const intl = intl2.intl;
-  return intl.string(_modDef2723.yl1iMm);
+  return intl.string(_modDef2751.yl1iMm);
 }
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: metroRequire, REFRESH_STANDARD_BACKGROUND_THEMES: metroImportDefault } = ClientThemesConstants);
 let ReactCompilerGating = ReactCompilerGating_mod;

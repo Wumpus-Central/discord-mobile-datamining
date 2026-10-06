@@ -1,10 +1,10 @@
-// === Module 6826: GuildTemplateTooltipActionCreators ===
+// === Module 6836: GuildTemplateTooltipActionCreators ===
 
-// Module 6826 (GuildTemplateTooltipActionCreators)
+// Module 6836 (GuildTemplateTooltipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import size from "module_2" /* 2 */;
 
 let c1;

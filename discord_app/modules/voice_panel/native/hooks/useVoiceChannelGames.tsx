@@ -1,12 +1,12 @@
-// === Module 17304: useVoiceChannelGames ===
+// === Module 17332: useVoiceChannelGames ===
 
-// Module 17304 (useVoiceChannelGames)
-import useGameProfileObscured from "useGameProfileObscured" /* 5896 */;
-import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9393 */;
+// Module 17332 (useVoiceChannelGames)
+import useGameProfileObscured from "useGameProfileObscured" /* 5903 */;
+import isPlayingGameActivityDefault from "isPlayingGameActivity" /* 9407 */;
 import react from "react" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

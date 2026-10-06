@@ -1,6 +1,6 @@
-// === Module 14341: GameStoreAsset ===
+// === Module 14359: GameStoreAsset ===
 
-// Module 14341 (GameStoreAsset)
+// Module 14359 (GameStoreAsset)
 import size_mod from "module_2" /* 2 */;
 
 let size = size_mod;

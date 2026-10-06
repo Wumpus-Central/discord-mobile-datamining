@@ -1,6 +1,6 @@
-// === Module 9061: StatusBarManager ===
+// === Module 9097: StatusBarManager ===
 
-// Module 9061 (StatusBarManager)
+// Module 9097 (StatusBarManager)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import react_nativeDefault from "react-native" /* 1630 */;

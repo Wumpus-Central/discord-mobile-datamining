@@ -1,19 +1,19 @@
-// === Module 10488: PremiumGiftPromotionDetails ===
+// === Module 10501: PremiumGiftPromotionDetails ===
 
-// Module 10488 (PremiumGiftPromotionDetails)
+// Module 10501 (PremiumGiftPromotionDetails)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SKUPreview from "SKUPreview" /* 8426 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SKUPreview from "SKUPreview" /* 8459 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

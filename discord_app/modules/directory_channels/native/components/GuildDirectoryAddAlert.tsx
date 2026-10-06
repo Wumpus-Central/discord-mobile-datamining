@@ -1,16 +1,16 @@
-// === Module 11950: GuildDirectoryAddAlert ===
+// === Module 11964: GuildDirectoryAddAlert ===
 
-// Module 11950 (GuildDirectoryAddAlert)
+// Module 11964 (GuildDirectoryAddAlert)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AlertDefault from "Alert" /* 5783 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AlertDefault from "Alert" /* 5790 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

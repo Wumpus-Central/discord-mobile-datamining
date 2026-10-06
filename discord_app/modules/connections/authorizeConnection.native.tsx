@@ -1,10 +1,10 @@
-// === Module 8732: authorizeConnection ===
+// === Module 8764: authorizeConnection ===
 
-// Module 8732 (authorizeConnection)
+// Module 8764 (authorizeConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import Constants2 from "Constants" /* 6679 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import Constants2 from "Constants" /* 6686 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = Constants2.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE;
@@ -33,10 +33,10 @@ export default function authorizeConnection(overrideUrl) {
     _location = "mobile";
   }
   if (platformType === PlatformTypes.XBOX) {
-    const obj15 = overrideUrl(4854);
+    const obj15 = overrideUrl(4860);
     obj15.hideActionSheet();
     const items = [_location];
-    const obj16 = overrideUrl(8733);
+    const obj16 = overrideUrl(8765);
     obj16.showModal(items);
     const tmp23 = overrideUrl;
     if (null != onClose) {
@@ -48,10 +48,10 @@ export default function authorizeConnection(overrideUrl) {
     if (platformType !== PlatformTypes.PLAYSTATION) {
       if (platformType !== PlatformTypes.PLAYSTATION_STAGING) {
         if (platformType === PlatformTypes.CRUNCHYROLL) {
-          const obj11 = overrideUrl(4854);
+          const obj11 = overrideUrl(4860);
           obj11.hideActionSheet();
           const items1 = [_location];
-          const obj12 = overrideUrl(8775);
+          const obj12 = overrideUrl(8807);
           obj12.showModal(items1);
           const tmp15 = overrideUrl;
           if (null != onClose) {
@@ -60,12 +60,12 @@ export default function authorizeConnection(overrideUrl) {
             const subscription1 = tmp15Result.subscribe("MODAL_POP", handleModalClose4);
           }
         } else if (platformType === PlatformTypes.DOMAIN) {
-          const obj8 = overrideUrl(4854);
+          const obj8 = overrideUrl(4860);
           obj8.hideActionSheet();
           let obj = { locationStack: items2 };
           items2 = [_location];
-          const obj9 = overrideUrl(5093);
-          obj9.pushLazy(onClose(1987)(8786, dependencyMap.paths), obj);
+          const obj9 = overrideUrl(5099);
+          obj9.pushLazy(onClose(1987)(8818, dependencyMap.paths), obj);
           const tmp10 = overrideUrl;
           if (null != onClose) {
             const handleModalClose3 = handleModalClose6;
@@ -73,18 +73,18 @@ export default function authorizeConnection(overrideUrl) {
             const subscription2 = tmp10Result.subscribe("MODAL_POP", handleModalClose3);
           }
         } else {
-          const obj18 = overrideUrl(5442);
+          const obj18 = overrideUrl(5449);
           const value = obj18.get(platformType);
           let isFederated;
           if (value != null) {
             isFederated = value.isFederated;
           }
           if (true === isFederated) {
-            const tmp28Result = overrideUrl(4854);
+            const tmp28Result = overrideUrl(4860);
             tmp28Result.hideActionSheet();
             const obj2 = { platformType, location: _location, successRedirect };
-            const tmp28Result4 = overrideUrl(5093);
-            tmp28Result4.pushLazy(onClose(1987)(8788, dependencyMap.paths), obj2);
+            const tmp28Result4 = overrideUrl(5099);
+            tmp28Result4.pushLazy(onClose(1987)(8820, dependencyMap.paths), obj2);
             if (null != onClose) {
               const handleModalClose2 = handleModalClose6;
               const tmp28Result5 = overrideUrl(584);
@@ -101,12 +101,12 @@ export default function authorizeConnection(overrideUrl) {
                                   obj.openURL(overrideUrl);
                                 }
                 };
-                const obj3 = onClose(8047);
+                const obj3 = onClose(8057);
                 obj3.handleClick(obj4);
               }
             }
             const obj5 = { location: _location, successRedirect };
-            const tmp28Result6 = overrideUrl(6677);
+            const tmp28Result6 = overrideUrl(6684);
             const authorizeResult = tmp28Result6.authorize(platformType, obj5);
             authorizeResult.then((body) => {
               const url = body.body.url;
@@ -119,10 +119,10 @@ export default function authorizeConnection(overrideUrl) {
         }
       }
     }
-    const obj13 = overrideUrl(4854);
+    const obj13 = overrideUrl(4860);
     obj13.hideActionSheet();
     const items3 = [_location];
-    const obj14 = overrideUrl(8764);
+    const obj14 = overrideUrl(8796);
     obj14.showModal(items3, platformType);
     const tmp19 = overrideUrl;
     if (null != onClose) {

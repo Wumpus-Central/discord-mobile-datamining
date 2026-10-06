@@ -1,20 +1,20 @@
-// === Module 12969: BundleProductDetailsActionSheetPreview ===
+// === Module 12988: BundleProductDetailsActionSheetPreview ===
 
-// Module 12969 (BundleProductDetailsActionSheetPreview)
+// Module 12988 (BundleProductDetailsActionSheetPreview)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
-import useShopProductItems from "useShopProductItems" /* 7842 */;
-import IndividualProductPreview from "IndividualProductPreview" /* 12971 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
+import useShopProductItems from "useShopProductItems" /* 7853 */;
+import IndividualProductPreview from "IndividualProductPreview" /* 12990 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

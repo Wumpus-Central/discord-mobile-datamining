@@ -1,7 +1,7 @@
-// === Module 4932: Constants ===
+// === Module 4938: Constants ===
 
-// Module 4932 (Constants)
-import Notifications from "Notifications" /* 4933 */;
+// Module 4938 (Constants)
+import Notifications from "Notifications" /* 4939 */;
 import size from "module_2" /* 2 */;
 
 const StreamNotificationsGuildMaxSize = Notifications.Notifications.StreamNotificationsGuildMaxSize;

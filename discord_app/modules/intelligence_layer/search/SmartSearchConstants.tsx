@@ -1,6 +1,6 @@
-// === Module 11988: SmartSearchConstants ===
+// === Module 11982: SmartSearchConstants ===
 
-// Module 11988 (SmartSearchConstants)
+// Module 11982 (SmartSearchConstants)
 import DurationsDefault from "Durations" /* 1102 */;
 import size from "module_2" /* 2 */;
 

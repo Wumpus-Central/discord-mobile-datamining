@@ -1,8 +1,8 @@
-// === Module 7546: useHandleJoinThreadVoice ===
+// === Module 7557: useHandleJoinThreadVoice ===
 
-// Module 7546 (useHandleJoinThreadVoice)
+// Module 7557 (useHandleJoinThreadVoice)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import size from "module_2" /* 2 */;
 
 let c2;

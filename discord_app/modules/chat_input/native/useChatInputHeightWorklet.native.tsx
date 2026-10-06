@@ -1,8 +1,8 @@
-// === Module 11644: useChatInputHeightWorklet ===
+// === Module 11658: useChatInputHeightWorklet ===
 
-// Module 11644 (useChatInputHeightWorklet)
+// Module 11658 (useChatInputHeightWorklet)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useChatInputMaxHeight from "useChatInputMaxHeight" /* 11645 */;
+import useChatInputMaxHeight from "useChatInputMaxHeight" /* 11659 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 7113: UserProfileGameWidgetTypes ===
+// === Module 7126: UserProfileGameWidgetTypes ===
 
-// Module 7113 (UserProfileGameWidgetTypes)
-import GameWidgetLimits from "GameWidgetLimits" /* 5895 */;
-import WidgetType from "WidgetType" /* 7112 */;
-import UserProfileWidgetConstants from "UserProfileWidgetConstants" /* 7114 */;
+// Module 7126 (UserProfileGameWidgetTypes)
+import GameWidgetLimits from "GameWidgetLimits" /* 5902 */;
+import WidgetType from "WidgetType" /* 7125 */;
+import UserProfileWidgetConstants from "UserProfileWidgetConstants" /* 7127 */;
 import size from "module_2" /* 2 */;
 
 let c2;
@@ -42,7 +42,7 @@ class BaseGameWidget {
     return tmp;
   }
   isEqual(type) {
-    const f137979 = (gameId, index) => {
+    const f138186 = (gameId, index) => {
       let c0;
       let flag = false;
       if (gameId.gameId === games1[index].gameId) {
@@ -119,8 +119,8 @@ class BaseGameWidget {
         const games = self.games;
         const games1 = type.games;
         type = self.type;
-        tmp2 = games.length === games1.length && games.every(f137979);
-        const tmp3 = games.length === games1.length && games.every(f137979);
+        tmp2 = games.length === games1.length && games.every(f138186);
+        const tmp3 = games.length === games1.length && games.every(f138186);
       }
       tmp = tmp2;
     }

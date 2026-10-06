@@ -1,6 +1,6 @@
-// === Module 15047: useSubscriptionRole ===
+// === Module 15062: useSubscriptionRole ===
 
-// Module 15047 (useSubscriptionRole)
+// Module 15062 (useSubscriptionRole)
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 13306: GuildBoostSlotsInventory ===
+// === Module 13325: GuildBoostSlotsInventory ===
 
-// Module 13306 (GuildBoostSlotsInventory)
+// Module 13325 (GuildBoostSlotsInventory)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import get_initialized from "get initialized" /* 504 */;
@@ -8,23 +8,23 @@ import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 5404 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 5612 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import useCountdownDefault from "useCountdown" /* 6948 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 7668 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13307 */;
-import SubscriptionPlaceholderPattern from "SubscriptionPlaceholderPattern" /* 13308 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import actions_BillingActionCreatorsAll from "actions/BillingActionCreators" /* 5411 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 5619 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import useCountdownDefault from "useCountdown" /* 6961 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 7679 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13326 */;
+import SubscriptionPlaceholderPattern from "SubscriptionPlaceholderPattern" /* 13327 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6908 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 6918 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import TextStyles from "TextStyles" /* 5915 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import TextStyles from "TextStyles" /* 5922 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -332,9 +332,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function(guildB
                 },
           children: closure_11(Text, obj6)
         };
-        const PressableOpacity = tmp(5909).PressableOpacity;
+        const PressableOpacity = tmp(5916).PressableOpacity;
         obj6 = { variant: "text-md/medium", color: "control-brand-foreground", children: intl2.string(guildBoostSlot(1126).t.jqqLb6) };
-        Text = tmp(4886).Text;
+        Text = tmp(4892).Text;
         intl2 = tmp(1126).intl;
         tmp21 = closure_11(PressableOpacity, obj5);
       }
@@ -418,9 +418,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function(guildB
             },
         children: closure_11(Text, obj6)
       };
-      const PressableOpacity = guildBoostSlot(5909).PressableOpacity;
+      const PressableOpacity = guildBoostSlot(5916).PressableOpacity;
       obj6 = { variant: "text-md/medium", color: "control-brand-foreground", children: intl2.string(guildBoostSlot(1126).t.jqqLb6) };
-      Text = guildBoostSlot(4886).Text;
+      Text = guildBoostSlot(4892).Text;
       intl2 = guildBoostSlot(1126).intl;
       tmp6Result2 = closure_11(PressableOpacity, obj5);
     }
@@ -564,9 +564,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((unusedSlots) =
         },
       children: closure_11(Text, obj6)
     };
-    PressableOpacity = tmp(5909).PressableOpacity;
+    PressableOpacity = tmp(5916).PressableOpacity;
     obj6 = { variant: "text-md/medium", color: "text-link", children: intl2.string(tmp(1126).t["7KyPor"]) };
-    Text = tmp(4886).Text;
+    Text = tmp(4892).Text;
     intl2 = tmp(1126).intl;
     tmp12 = closure_11(closure_17, obj3);
   }
@@ -645,9 +645,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((unusedSlots) =
         },
       children: closure_11(Text, obj5)
     };
-    PressableOpacity = found(5909).PressableOpacity;
+    PressableOpacity = found(5916).PressableOpacity;
     obj5 = { variant: "text-md/medium", color: "text-link", children: intl2.string(found(1126).t["7KyPor"]) };
-    Text = found(4886).Text;
+    Text = found(4892).Text;
     intl2 = found(1126).intl;
     tmp4 = closure_11(closure_17, obj2);
   }
@@ -900,7 +900,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   } else {
     tmp13 = cResult[6];
   }
-  const tmpResult4 = guildId(13308);
+  const tmpResult4 = guildId(13327);
   let subscriptionPlaceholderPatternSource = tmpResult4.useSubscriptionPlaceholderPatternSource();
   if (null != tmp13) {
     subscriptionPlaceholderPatternSource = tmp13;
@@ -1050,7 +1050,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
           tmp28 = tmp30;
         }
         const obj8 = { guild: stateFromStores, theme: stateFromStores1 };
-        const tmp27 = closure_11(guildBoostSlots(13312), obj8);
+        const tmp27 = closure_11(guildBoostSlots(13331), obj8);
         cResult[16] = stateFromStores;
         cResult[17] = stateFromStores1;
         cResult[18] = tmp27;
@@ -1118,7 +1118,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     tmp11Result = closure_11(closure_5, obj8);
   }
   items3[1] = tmp11Result;
-  items3[2] = closure_11(guildBoostSlots(13312), { guild: stateFromStores, theme: stateFromStores1 });
+  items3[2] = closure_11(guildBoostSlots(13331), { guild: stateFromStores, theme: stateFromStores1 });
   items4 = [closure_12(closure_5, obj6), ];
   const obj9 = { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length };
   items4[1] = closure_11(closure_20, obj9);
@@ -1276,7 +1276,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
         let obj2 = { children: items3 };
         const obj3 = { style: tmp4.header, variant: "eyebrow", color: "text-default", children: intl.string(intl3.t.gB9oQ7) };
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         intl = tmp(1126).intl;
         items3 = [
           closure_11(Text, obj3),
@@ -1347,7 +1347,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       if (found.length > 0) {
         const obj6 = { children: items3 };
         const obj7 = { style: tmp.header, variant: "eyebrow", color: "text-default", children: intl.string(intl3.t.gB9oQ7) };
-        const Text = tmp3(4886).Text;
+        const Text = tmp3(4892).Text;
         intl = tmp3(1126).intl;
         items3 = [
           closure_11(Text, obj7),

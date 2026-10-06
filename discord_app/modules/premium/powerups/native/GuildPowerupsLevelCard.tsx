@@ -1,25 +1,25 @@
-// === Module 12223: GuildPowerupsLevelCard ===
+// === Module 12238: GuildPowerupsLevelCard ===
 
-// Module 12223 (GuildPowerupsLevelCard)
+// Module 12238 (GuildPowerupsLevelCard)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BoostGemIcon2 from "BoostGemIcon" /* 4826 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12159 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12176 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12181 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12184 */;
-import GuildBoostingMarketingConstants from "GuildBoostingMarketingConstants" /* 12224 */;
-import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12225 */;
-import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12226 */;
+import BoostGemIcon2 from "BoostGemIcon" /* 4832 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12174 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12191 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12196 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12199 */;
+import GuildBoostingMarketingConstants from "GuildBoostingMarketingConstants" /* 12239 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12240 */;
+import GuildPowerupsCardDefault from "GuildPowerupsCard" /* 12241 */;
 import react from "react" /* 19 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

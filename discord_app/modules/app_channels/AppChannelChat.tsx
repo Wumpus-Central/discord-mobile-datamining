@@ -1,10 +1,10 @@
-// === Module 7515: AppChannelChat ===
+// === Module 7526: AppChannelChat ===
 
-// Module 7515 (AppChannelChat)
-import SidebarActionTypes from "SidebarActionTypes" /* 6785 */;
-import SidebarActionCreatorsDefault from "SidebarActionCreators" /* 7516 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6783 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+// Module 7526 (AppChannelChat)
+import SidebarActionTypes from "SidebarActionTypes" /* 6795 */;
+import SidebarActionCreatorsDefault from "SidebarActionCreators" /* 7527 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6793 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

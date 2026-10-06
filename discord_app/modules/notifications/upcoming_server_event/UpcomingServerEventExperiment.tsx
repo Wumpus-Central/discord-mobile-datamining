@@ -1,6 +1,6 @@
-// === Module 15336: UpcomingServerEventExperiment ===
+// === Module 15351: UpcomingServerEventExperiment ===
 
-// Module 15336 (UpcomingServerEventExperiment)
+// Module 15351 (UpcomingServerEventExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

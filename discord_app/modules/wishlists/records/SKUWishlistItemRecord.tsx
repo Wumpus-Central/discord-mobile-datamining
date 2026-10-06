@@ -1,8 +1,8 @@
-// === Module 8436: SKUWishlistItemRecord ===
+// === Module 8469: SKUWishlistItemRecord ===
 
-// Module 8436 (SKUWishlistItemRecord)
-import SKURecord from "SKURecord" /* 5696 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8433 */;
+// Module 8469 (SKUWishlistItemRecord)
+import SKURecord from "SKURecord" /* 5703 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8466 */;
 import size from "module_2" /* 2 */;
 
 class SKUWishlistItemRecord extends BaseWishlistItemRecord {

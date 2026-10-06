@@ -1,31 +1,31 @@
-// === Module 8717: useOAuth2AuthorizeForm ===
+// === Module 8749: useOAuth2AuthorizeForm ===
 
-// Module 8717 (useOAuth2AuthorizeForm)
+// Module 8749 (useOAuth2AuthorizeForm)
 import react_native from "react-native" /* 17 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5968 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6658 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8708 */;
-import Authorize from "Authorize" /* 8719 */;
-import scopes2 from "scopes" /* 8720 */;
-import react_nativeDefault from "react-native" /* 8721 */;
-import permissions2 from "permissions" /* 8730 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5975 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6665 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8740 */;
+import Authorize from "Authorize" /* 8751 */;
+import scopes2 from "scopes" /* 8752 */;
+import react_nativeDefault from "react-native" /* 8753 */;
+import permissions2 from "permissions" /* 8762 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import module_4524 from "module_4524" /* 4524 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import module_4530 from "module_4530" /* 4530 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants_mod from "Constants" /* 8718 */;
+import Constants_mod from "Constants" /* 8750 */;
 import Constants_mod2 from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let _require, c5, c6, isAuthorized;
@@ -717,7 +717,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
     yield "IconComponent";
     responseType = tmp4;
     ({ isAuthorized: c0, overrideSuccessCallback: c1, canceled: c2 } = clientId);
-    return "Set";
+    return "Reflect";
   });
   const items13 = [first7, callbackWithoutPost, clientId, requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, tmp52, nonce, memo4, first6, first4, first5, first12, dismissOAuthModal, callback, flag5, , , ];
   let application;

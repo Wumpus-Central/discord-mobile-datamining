@@ -1,9 +1,9 @@
-// === Module 11656: useDeveloperActivityShelfItems ===
+// === Module 11670: useDeveloperActivityShelfItems ===
 
-// Module 11656 (useDeveloperActivityShelfItems)
+// Module 11670 (useDeveloperActivityShelfItems)
 import Constants from "Constants" /* 2011 */;
 import react from "react" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8513 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8546 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

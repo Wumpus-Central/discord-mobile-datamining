@@ -1,7 +1,7 @@
-// === Module 4897: typographyVariantRemap ===
+// === Module 4903: typographyVariantRemap ===
 
-// Module 4897 (typographyVariantRemap)
-import TypographyVariantRemap from "TypographyVariantRemap" /* 4898 */;
+// Module 4903 (typographyVariantRemap)
+import TypographyVariantRemap from "TypographyVariantRemap" /* 4904 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

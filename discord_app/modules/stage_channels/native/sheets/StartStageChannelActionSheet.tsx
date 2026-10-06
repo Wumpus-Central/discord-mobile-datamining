@@ -1,6 +1,6 @@
-// === Module 8073: StartStageChannelActionSheet ===
+// === Module 8106: StartStageChannelActionSheet ===
 
-// Module 8073 (StartStageChannelActionSheet)
+// Module 8106 (StartStageChannelActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -9,10 +9,10 @@ import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import StageChannelsConstants from "StageChannelsConstants" /* 5571 */;
+import StageChannelsConstants from "StageChannelsConstants" /* 5578 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -82,7 +82,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   _slicedToArray(react.useState(false), 2);
   [obj4, _asyncToGenerator] = _slicedToArray(react.useState(null), 2);
   const tmp14 = _slicedToArray(react.useState(null), 2);
-  const tmpResult2 = tmp(5579);
+  const tmpResult2 = tmp(5586);
   const shouldAgeVerifyToSpeakForCurrentUser = tmpResult2.useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
   if (cResult[3] === channel.guild_id) {
     let tmp18;
@@ -94,7 +94,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     if (tmp16 === id) {
       tmp18 = cResult[5];
     }
-    stateFromStores(5590)(tmp18);
+    stateFromStores(5597)(tmp18);
     const tmp19 = stateFromStores;
     if (cResult[6] === channel) {
       if (cResult[7] === stateFromStores) {
@@ -243,8 +243,8 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                       cResult[42] = tmp13;
                       cResult[43] = tmp54;
                       cResult[44] = "" === first1;
-                      cResult[45] = closure_13(tmp(5594).Button, obj2);
-                      const tmp58 = closure_13(tmp(5594).Button, obj2);
+                      cResult[45] = closure_13(tmp(5601).Button, obj2);
+                      const tmp58 = closure_13(tmp(5601).Button, obj2);
                     }
                     let tmp52 = null;
                     if (null != obj4) {
@@ -255,7 +255,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                         }
                       }
                       let obj5 = { style: tmp4.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj4.getAnyErrorMessage() };
-                      const Text = tmp(4886).Text;
+                      const Text = tmp(4892).Text;
                       tmp52 = closure_13(Text, obj5);
                     }
                     cResult[35] = obj4;
@@ -265,11 +265,11 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
                   let obj6 = { onConfirmPress: Z, style: tmp4.ageVerificationNotice, channelId: channel.id };
                   cResult[32] = channel.id;
                   cResult[33] = tmp4.ageVerificationNotice;
-                  cResult[34] = closure_13(tmp19(8083), obj6);
-                  const tmp50 = closure_13(tmp19(8083), obj6);
+                  cResult[34] = closure_13(tmp19(8116), obj6);
+                  const tmp50 = closure_13(tmp19(8116), obj6);
                 }
                 let obj7 = { label: tmp39, maxLength, value: first1, placeholder: tmp41, onChange: tmp11, autoFocus: true, returnKeyType: "done", clearable: true, onSubmitEditing: tmp21 };
-                const tmp46 = closure_13(tmp(6098).TextInput, obj7);
+                const tmp46 = closure_13(tmp(6105).TextInput, obj7);
                 cResult[28] = tmp21;
                 cResult[29] = first1;
                 cResult[30] = tmp46;
@@ -284,14 +284,14 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
             cResult[23] = tmp36;
           }
           const obj9 = { style: tmp4.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: tmp28 };
-          const tmp32 = closure_13(tmp(4886).Text, obj9);
+          const tmp32 = closure_13(tmp(4892).Text, obj9);
           cResult[17] = tmp4.headerSubtitle;
           cResult[18] = tmp28;
           cResult[19] = tmp32;
           tmp30 = tmp32;
         }
         const obj10 = { style: tmp4.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: tmp23 };
-        const tmp27 = closure_13(tmp(4886).Text, obj10);
+        const tmp27 = closure_13(tmp(4892).Text, obj10);
         cResult[12] = tmp4.headerTitle;
         cResult[13] = tmp23;
         cResult[14] = tmp27;
@@ -569,9 +569,9 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   obj(react.useState(false), 2);
   [obj3, c4] = obj(react.useState(null), 2);
   const tmp10 = obj(react.useState(null), 2);
-  const tmp2Result = channel(5579);
+  const tmp2Result = channel(5586);
   const shouldAgeVerifyToSpeakForCurrentUser = tmp2Result.useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(5590)(() => {
+  stateFromStores(5597)(() => {
     let id;
     const track = AnalyticsUtilsDefault.track;
     const START_STAGE_OPENED = unpackModuleId.START_STAGE_OPENED;
@@ -584,7 +584,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   });
   let obj4 = { style: tmp.header, children: items1 };
   let obj5 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: stringResult };
-  const Text = tmp2(4886).Text;
+  const Text = tmp2(4892).Text;
   const tmp12 = stateFromStores;
   if (null == stateFromStores) {
     const intl2 = tmp2(1126).intl;
@@ -595,7 +595,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   }
   items1 = [closure_13(Text, obj5), ];
   let obj6 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: stringResult1 };
-  const Text2 = tmp2(4886).Text;
+  const Text2 = tmp2(4892).Text;
   if (null == stateFromStores) {
     const intl4 = tmp2(1126).intl;
     stringResult1 = intl4.string(tmp2(1126).t.bqQIwa);
@@ -613,12 +613,12 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   function handleSave() {
     return obj(...arguments);
   }
-  BottomSheet = tmp2(6645).BottomSheet;
+  BottomSheet = tmp2(6652).BottomSheet;
   let obj7 = { bottom: true, style: tmp.container, children: items2 };
   items2 = [tmp14Result, , , , , ];
-  const SafeAreaPaddingView = tmp2(6619).SafeAreaPaddingView;
+  const SafeAreaPaddingView = tmp2(6626).SafeAreaPaddingView;
   let obj8 = { label: intl6.string(channel(1126).t["5FPBOB"]), maxLength, value, placeholder: intl7.string(channel(1126).t.ZwWruY), onChange: tmp7, autoFocus: true, returnKeyType: "done", clearable: true, onSubmitEditing: handleSave };
-  const TextInput = tmp2(6098).TextInput;
+  const TextInput = tmp2(6105).TextInput;
   intl6 = tmp2(1126).intl;
   intl7 = tmp2(1126).intl;
   items2[1] = closure_13(TextInput, obj8);
@@ -630,16 +630,16 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     style: tmp.ageVerificationNotice,
     channelId: channel.id
   };
-  items2[2] = closure_13(tmp12(8083), obj9);
+  items2[2] = closure_13(tmp12(8116), obj9);
   let tmp16Result = null;
   if (null != obj3) {
     const obj10 = { style: tmp.error, variant: "text-xs/medium", color: "text-feedback-critical", children: obj3.getAnyErrorMessage() };
-    const Text3 = tmp2(4886).Text;
+    const Text3 = tmp2(4892).Text;
     tmp16Result = closure_13(Text3, obj10);
   }
   items2[3] = tmp16Result;
   const obj11 = { style: tmp.startButton, children: closure_13(Button, obj12) };
-  Button = tmp2(5594).Button;
+  Button = tmp2(5601).Button;
   if (null == stateFromStores) {
     const intl9 = tmp2(1126).intl;
     stringResult3 = intl9.string(tmp2(1126).t.s8mM8A);
@@ -652,7 +652,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   let tmp16Result2 = null != stringResult2 && !shouldAgeVerifyToSpeakForCurrentUser;
   if (tmp16Result2) {
     const obj13 = { accessible: false, style: tmp.buttonSubtitle, variant: "text-xs/medium", color: "text-default", children: intl10.string(channel(1126).t.gR66jX) };
-    const Text4 = tmp2(4886).Text;
+    const Text4 = tmp2(4892).Text;
     intl10 = tmp2(1126).intl;
     tmp16Result2 = closure_13(Text4, obj13);
   }

@@ -1,6 +1,6 @@
-// === Module 7006: MemberSafetyElasticSearchQueryTypes ===
+// === Module 7019: MemberSafetyElasticSearchQueryTypes ===
 
-// Module 7006 (MemberSafetyElasticSearchQueryTypes)
+// Module 7019 (MemberSafetyElasticSearchQueryTypes)
 import DurationsDefault from "Durations" /* 1102 */;
 import size from "module_2" /* 2 */;
 

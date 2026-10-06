@@ -1,13 +1,13 @@
-// === Module 6606: GuildCategoryStore ===
+// === Module 6613: GuildCategoryStore ===
 
-// Module 6606 (GuildCategoryStore)
+// Module 6613 (GuildCategoryStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 6607 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 6614 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4507 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4513 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

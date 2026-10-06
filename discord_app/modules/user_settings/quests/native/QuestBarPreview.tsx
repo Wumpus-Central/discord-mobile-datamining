@@ -1,14 +1,14 @@
-// === Module 14983: QuestBarPreview ===
+// === Module 14998: QuestBarPreview ===
 
-// Module 14983 (QuestBarPreview)
+// Module 14998 (QuestBarPreview)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14900 */;
-import reactDefault from "react" /* 14984 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 14916 */;
+import reactDefault from "react" /* 14999 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

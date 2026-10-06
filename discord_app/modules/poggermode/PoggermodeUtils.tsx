@@ -1,8 +1,8 @@
-// === Module 7460: PoggermodeUtils ===
+// === Module 7471: PoggermodeUtils ===
 
-// Module 7460 (PoggermodeUtils)
+// Module 7471 (PoggermodeUtils)
 import shims from "shims" /* 586 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 7163 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7176 */;
 import size from "module_2" /* 2 */;
 
 let LEVEL_3;

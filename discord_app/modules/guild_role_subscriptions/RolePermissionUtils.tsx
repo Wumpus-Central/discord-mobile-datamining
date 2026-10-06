@@ -1,6 +1,6 @@
-// === Module 4500: RolePermissionUtils ===
+// === Module 4506: RolePermissionUtils ===
 
-// Module 4500 (RolePermissionUtils)
+// Module 4506 (RolePermissionUtils)
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;

@@ -1,19 +1,19 @@
-// === Module 9050: ChannelCallStore ===
+// === Module 9086: ChannelCallStore ===
 
-// Module 9050 (ChannelCallStore)
+// Module 9086 (ChannelCallStore)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import react_native from "react-native" /* 1259 */;
 import Constants from "Constants" /* 2011 */;
 import Timers from "Timers" /* 2046 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import DeviceOrientation from "DeviceOrientation" /* 8008 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9052 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 9053 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9055 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import DeviceOrientation from "DeviceOrientation" /* 8018 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9088 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 9089 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9091 */;
 import react_mod from "react" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 9051 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 9087 */;
 import module_570 from "module_570" /* 570 */;
 import module_12 from "module_12" /* 12 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -25,7 +25,7 @@ let _require, dependencyMap, flag, flag2, importDefault, lockOrientationResult, 
 let VoiceCallOverlayType;
 let VoiceChatDrawerState;
 let obj2;
-const f99147 = () => {
+const f99335 = () => {
   const obj = require("react-native");
   obj.batchUpdates(() => state.setState({ focus: false }));
 };
@@ -36,9 +36,9 @@ const ParticipantTypes = CallConstants.ParticipantTypes;
 const timeout = new Timers.Timeout();
 let obj = { focus: true, pipFocus: false, isGestureEnabled: true, voiceChatDrawerState: VoiceChatDrawerState.CLOSED, voiceCallOverlayLayoutStates: obj2 };
 obj2 = {};
-let size = { x: "Array", y: "T", width: "y", height: "IconComponent", screenOrientation: DeviceOrientation.OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: false, isInitialized: null, isVisible: null };
+let size = { x: "Array", y: "Symbol", width: "y", height: "IconComponent", screenOrientation: DeviceOrientation.OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: false, isInitialized: null, isVisible: null };
 obj2[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
-const size1 = { x: "Array", y: "T", width: "y", height: "IconComponent", screenOrientation: DeviceOrientation.OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: false, isInitialized: null, isVisible: null };
+const size1 = { x: "Array", y: "Symbol", width: "y", height: "IconComponent", screenOrientation: DeviceOrientation.OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: false, isInitialized: null, isVisible: null };
 obj2[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 let closure_9 = freeze(obj);
 let obj3 = module_570.create(() => closure_9);
@@ -85,7 +85,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGuildStageVoice) =
     }
     dependencyMap = tmp6;
     const tmp9 = closure_11();
-    const tmpResult = tmp(9054);
+    const tmpResult = tmp(9090);
     const tmp10 = tmp9 || !tmpResult.useIsConnectedToVoiceChannel(isGuildStageVoice);
     react = tmp10;
     const _Symbol = Symbol;
@@ -339,7 +339,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((isGuildStageVoice) =
 });
 function resetFocusTimer() {
   timeout.stop();
-  timeout.start(5000, f99147);
+  timeout.start(5000, f99335);
 }
 size = size_mod;
 let result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallStore.tsx");
@@ -366,7 +366,7 @@ export const resetFocus = function resetFocus() {
   let state;
   if (obj3.getState().focus) {
     timeout.stop();
-    timeout.start(5000, f99147);
+    timeout.start(5000, f99335);
   } else {
     let obj = react_native;
     obj.batchUpdates(() => state.setState({ focus: true }));

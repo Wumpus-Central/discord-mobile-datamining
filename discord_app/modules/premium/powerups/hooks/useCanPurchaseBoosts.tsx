@@ -1,10 +1,10 @@
-// === Module 12164: useCanPurchaseBoosts ===
+// === Module 12179: useCanPurchaseBoosts ===
 
-// Module 12164 (useCanPurchaseBoosts)
+// Module 12179 (useCanPurchaseBoosts)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6898 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 6908 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

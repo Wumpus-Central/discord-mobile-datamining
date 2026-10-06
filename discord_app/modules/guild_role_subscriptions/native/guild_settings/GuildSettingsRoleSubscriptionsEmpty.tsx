@@ -1,13 +1,13 @@
-// === Module 17875: GuildSettingsRoleSubscriptionsEmpty ===
+// === Module 17921: GuildSettingsRoleSubscriptionsEmpty ===
 
-// Module 17875 (GuildSettingsRoleSubscriptionsEmpty)
+// Module 17921 (GuildSettingsRoleSubscriptionsEmpty)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import ApplicationConstants from "ApplicationConstants" /* 1360 */;
 import useNavigation from "useNavigation" /* 1490 */;
-import useGuildApplicationDefault from "useGuildApplication" /* 17876 */;
-import PlaceholderDefault from "Placeholder" /* 17877 */;
-import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 17878 */;
+import useGuildApplicationDefault from "useGuildApplication" /* 17922 */;
+import PlaceholderDefault from "Placeholder" /* 17923 */;
+import GuildSettingsRoleSubscriptionWelcomeViewDefault from "GuildSettingsRoleSubscriptionWelcomeView" /* 17924 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import Constants from "Constants" /* 1085 */;

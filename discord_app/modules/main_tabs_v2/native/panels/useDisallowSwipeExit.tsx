@@ -1,8 +1,8 @@
-// === Module 16592: useDisallowSwipeExit ===
+// === Module 16630: useDisallowSwipeExit ===
 
-// Module 16592 (useDisallowSwipeExit)
+// Module 16630 (useDisallowSwipeExit)
 import react2 from "react" /* 576 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16324 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 16364 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

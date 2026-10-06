@@ -1,6 +1,6 @@
-// === Module 7136: GuildsRequiringChannelSync ===
+// === Module 7149: GuildsRequiringChannelSync ===
 
-// Module 7136 (GuildsRequiringChannelSync)
+// Module 7149 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants2 from "Constants" /* 1096 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
@@ -8,14 +8,14 @@ import v1 from "v1" /* 1266 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 2078 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4499 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4505 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtils from "BigFlagUtils" /* 1097 */;
 import size from "module_2" /* 2 */;

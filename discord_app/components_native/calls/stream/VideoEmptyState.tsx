@@ -1,20 +1,20 @@
-// === Module 9096: VideoEmptyState ===
+// === Module 9132: VideoEmptyState ===
 
-// Module 9096 (VideoEmptyState)
+// Module 9132 (VideoEmptyState)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import StreamActionCreators from "StreamActionCreators" /* 5032 */;
-import useMountEffectDefault from "useMountEffect" /* 5590 */;
-import StreamEnded from "StreamEnded" /* 9097 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import StreamActionCreators from "StreamActionCreators" /* 5038 */;
+import useMountEffectDefault from "useMountEffect" /* 5597 */;
+import StreamEnded from "StreamEnded" /* 9133 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -172,7 +172,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               return metroImportDefault(LegacyText, obj);
             }
           }
-          errorCode = obj2.getErrorInfo(tmp(9095).AVError.STREAM_FAILED_TO_START).errorCode;
+          errorCode = obj2.getErrorInfo(tmp(9131).AVError.STREAM_FAILED_TO_START).errorCode;
         }
       }
       const _Symbol = Symbol;
@@ -242,7 +242,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
             const obj4 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: intl.formatToPlainString(tmp(1126).t.ejOT95, obj5) };
-            const Text = tmp(4886).Text;
+            const Text = tmp(4892).Text;
             intl = tmp(1126).intl;
             obj5 = { errorCode };
             tmp31 = closure_7(Text, obj4);
@@ -275,7 +275,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                           stopStream(obj.encodeStreamKey(channelId));
                         }
             };
-            Button = tmp(5594).Button;
+            Button = tmp(5601).Button;
             intl2 = tmp(1126).intl;
             tmp33 = closure_7(View, obj6);
           }
@@ -356,7 +356,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let tmp10 = !removeSplashImage;
     if (tmp10) {
       let obj2 = { style: tmp2.placeholderImage };
-      tmp10 = closure_7(stream(9097).StreamEnded, obj2);
+      tmp10 = closure_7(stream(9133).StreamEnded, obj2);
     }
     const obj3 = { children: items };
     items = [tmp10, ];
@@ -374,13 +374,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     tmp8Result = null;
   }
   if (null != avError) {
-    const obj6 = stream(9095);
+    const obj6 = stream(9131);
     errorCode = obj6.getErrorInfo(avError).errorCode;
   } else {
     errorCode = null;
     if (type === obj.STREAM_FAILED) {
-      const obj5 = stream(9095);
-      errorCode = obj5.getErrorInfo(stream(9095).AVError.STREAM_FAILED_TO_START).errorCode;
+      const obj5 = stream(9131);
+      errorCode = obj5.getErrorInfo(stream(9131).AVError.STREAM_FAILED_TO_START).errorCode;
     }
   }
   const items1 = [ChannelStore];
@@ -406,7 +406,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp28 = null != errorCode;
   if (tmp28) {
     const obj9 = { variant: "text-sm/semibold", color: "text-muted", selectable: true, children: intl3.formatToPlainString(stream(1126).t.ejOT95, obj10) };
-    const Text = stream(4886).Text;
+    const Text = stream(4892).Text;
     intl3 = stream(1126).intl;
     obj10 = { errorCode };
     tmp28 = closure_7(Text, obj9);
@@ -428,7 +428,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           stopStream(obj.encodeStreamKey(stream));
         }
     };
-    Button = stream(5594).Button;
+    Button = stream(5601).Button;
     intl4 = stream(1126).intl;
     tmp30 = closure_7(View, obj11);
   }

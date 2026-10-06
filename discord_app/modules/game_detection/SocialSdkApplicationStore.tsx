@@ -1,6 +1,6 @@
-// === Module 9042: SocialSdkApplicationStore ===
+// === Module 9078: SocialSdkApplicationStore ===
 
-// Module 9042 (SocialSdkApplicationStore)
+// Module 9078 (SocialSdkApplicationStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;

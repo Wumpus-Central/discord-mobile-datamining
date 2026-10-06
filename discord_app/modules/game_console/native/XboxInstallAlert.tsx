@@ -1,15 +1,15 @@
-// === Module 9462: XboxInstallAlert ===
+// === Module 9475: XboxInstallAlert ===
 
-// Module 9462 (XboxInstallAlert)
+// Module 9475 (XboxInstallAlert)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import AlertDefault from "Alert" /* 5783 */;
-import AssetRegistryDefault from "AssetRegistry" /* 8756 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import AlertDefault from "Alert" /* 5790 */;
+import AssetRegistryDefault from "AssetRegistry" /* 8788 */;
 import react from "react" /* 19 */;
-import GameConsoleConstants from "GameConsoleConstants" /* 8749 */;
-import createStyles from "createStyles" /* 4890 */;
+import GameConsoleConstants from "GameConsoleConstants" /* 8781 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 13344: PremiumSubscriptionUpsell ===
+// === Module 13363: PremiumSubscriptionUpsell ===
 
-// Module 13344 (PremiumSubscriptionUpsell)
+// Module 13363 (PremiumSubscriptionUpsell)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,22 +8,22 @@ import Constants from "Constants" /* 1085 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import intl5 from "intl" /* 1126 */;
 import NumberUtils from "NumberUtils" /* 1888 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4577 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import ColorConstants from "ColorConstants" /* 6938 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 8894 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13345 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13346 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4583 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import ColorConstants from "ColorConstants" /* 6951 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 8923 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13364 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13365 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import UserStore from "UserStore" /* 1377 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

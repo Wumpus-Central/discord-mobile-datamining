@@ -1,9 +1,9 @@
-// === Module 18021: WebAuthnSignalManager ===
+// === Module 18066: WebAuthnSignalManager ===
 
-// Module 18021 (WebAuthnSignalManager)
+// Module 18066 (WebAuthnSignalManager)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c1;

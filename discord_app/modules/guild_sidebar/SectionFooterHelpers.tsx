@@ -1,12 +1,12 @@
-// === Module 16169: SectionFooterHelpers ===
+// === Module 16209: SectionFooterHelpers ===
 
-// Module 16169 (SectionFooterHelpers)
+// Module 16209 (SectionFooterHelpers)
 import Constants from "Constants" /* 1085 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import ChannelListState from "ChannelListState" /* 7039 */;
-import GuildSidebarConstants from "GuildSidebarConstants" /* 7045 */;
-import CategoryCollapseStore from "CategoryCollapseStore" /* 6612 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import ChannelListState from "ChannelListState" /* 7052 */;
+import GuildSidebarConstants from "GuildSidebarConstants" /* 7058 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 6619 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import size from "module_2" /* 2 */;
 
 const ChannelListGuildActionRow = GuildSidebarConstants.ChannelListGuildActionRow;

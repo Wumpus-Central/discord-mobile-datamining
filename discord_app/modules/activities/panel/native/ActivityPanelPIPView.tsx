@@ -1,6 +1,6 @@
-// === Module 17170: ActivityPanelPIPView ===
+// === Module 17199: ActivityPanelPIPView ===
 
-// Module 17170 (ActivityPanelPIPView)
+// Module 17199 (ActivityPanelPIPView)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
@@ -9,23 +9,23 @@ import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import Constants2 from "Constants" /* 2011 */;
-import native2 from "native" /* 4589 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import spring from "spring" /* 5597 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11903 */;
-import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17168 */;
-import ActivityPanelNativeConstants from "ActivityPanelNativeConstants" /* 17171 */;
-import MorphablePanelUtils from "MorphablePanelUtils" /* 17172 */;
+import native2 from "native" /* 4595 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import spring from "spring" /* 5604 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11917 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17197 */;
+import ActivityPanelNativeConstants from "ActivityPanelNativeConstants" /* 17200 */;
+import MorphablePanelUtils from "MorphablePanelUtils" /* 17201 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9156 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import SafeAreaDisabledStore from "SafeAreaDisabledStore" /* 9191 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
 import native from "native" /* 1188 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -1414,7 +1414,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
         }
       }
     }
-    const tmp24 = <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={null != activity} context={applicationId(17168)}>{tmp18}</closure_28>;
+    const tmp24 = <closure_28 transitionState={transitionState} transitionCleanUp={transitionCleanUp} pipOrientationLockState={stateFromStores} hasActivity={null != activity} context={applicationId(17197)}>{tmp18}</closure_28>;
     cResult[11] = stateFromStores;
     cResult[12] = null != activity;
     cResult[13] = tmp18;
@@ -1424,8 +1424,8 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
   }
   cResult[8] = stateFromStores1;
   cResult[9] = landscapeSafeAreasConfig;
-  cResult[10] = jsx(applicationId(9134), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
-  const tmp19 = jsx(applicationId(9134), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
+  cResult[10] = jsx(applicationId(9169), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
+  const tmp19 = jsx(applicationId(9169), { channel: stateFromStores1, layoutMode: ActivityLayoutMode.PIP, portraitSafeAreasConfig, landscapeSafeAreasConfig });
 }) : ((transitionState) => {
   let _undefined;
   let activity;

@@ -1,6 +1,6 @@
-// === Module 13814: VideoQualityModeStore ===
+// === Module 13832: VideoQualityModeStore ===
 
-// Module 13814 (VideoQualityModeStore)
+// Module 13832 (VideoQualityModeStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;

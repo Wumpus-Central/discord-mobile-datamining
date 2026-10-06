@@ -1,8 +1,8 @@
-// === Module 5424: getAnalyticsDataForSKU ===
+// === Module 5431: getAnalyticsDataForSKU ===
 
-// Module 5424 (getAnalyticsDataForSKU)
+// Module 5431 (getAnalyticsDataForSKU)
 import Constants from "Constants" /* 1085 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import size from "module_2" /* 2 */;
 
 const SKUFeatureTypes = Constants.SKUFeatureTypes;

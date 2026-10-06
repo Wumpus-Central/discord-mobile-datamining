@@ -1,6 +1,6 @@
-// === Module 17364: useTransitionToConnectedActivityInVoice ===
+// === Module 17393: useTransitionToConnectedActivityInVoice ===
 
-// Module 17364 (useTransitionToConnectedActivityInVoice)
+// Module 17393 (useTransitionToConnectedActivityInVoice)
 import Constants from "Constants" /* 1085 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -158,7 +158,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onTransition) => {
                   guild_id = undefined;
                   c3 = 1;
                   c4 = 1;
-                  return { value: "Set", done: true };
+                  return { value: "Reflect", done: true };
                 }
               } else {
                 if (1 === c3) {

@@ -1,7 +1,7 @@
-// === Module 6675: useStartProviderConnection ===
+// === Module 6682: useStartProviderConnection ===
 
-// Module 6675 (useStartProviderConnection)
-import LinkingDefault from "Linking" /* 4565 */;
+// Module 6682 (useStartProviderConnection)
+import LinkingDefault from "Linking" /* 4571 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -17,7 +17,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp3;
   let obj = startConnection(576);
   const cResult = obj.c(8);
-  let obj2 = startConnection(6676);
+  let obj2 = startConnection(6683);
   const providerConnection = obj2.useProviderConnection(arg0);
   ({ loading, hasConnection, canConnect, startConnection } = providerConnection);
   const account = providerConnection.account;
@@ -148,7 +148,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let hasConnection;
   let loading;
   let startConnection;
-  let obj = startConnection(6676);
+  let obj = startConnection(6683);
   const providerConnection = obj.useProviderConnection(arg0);
   startConnection = providerConnection.startConnection;
   ({ loading, hasConnection, canConnect, account } = providerConnection);

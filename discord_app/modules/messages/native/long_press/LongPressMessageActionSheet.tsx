@@ -1,25 +1,25 @@
-// === Module 11281: LongPressMessageActionSheet ===
+// === Module 11294: LongPressMessageActionSheet ===
 
-// Module 11281 (LongPressMessageActionSheet)
+// Module 11294 (LongPressMessageActionSheet)
 import Fragment from "Fragment" /* 21 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import MessageRecord from "MessageRecord" /* 4520 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6657 */;
-import ActionSheet2 from "ActionSheet" /* 6701 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11280 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11290 */;
-import EmojiRowUtils from "EmojiRowUtils" /* 11359 */;
-import EmojiRowDefault from "EmojiRow" /* 11360 */;
+import MessageRecord from "MessageRecord" /* 4526 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
+import ActionSheet2 from "ActionSheet" /* 6708 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11293 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11303 */;
+import EmojiRowUtils from "EmojiRowUtils" /* 11372 */;
+import EmojiRowDefault from "EmojiRow" /* 11373 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7597 */;
-import ReportToModStore from "ReportToModStore" /* 11282 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11283 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7608 */;
+import ReportToModStore from "ReportToModStore" /* 11295 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11296 */;
 import AuthenticationStore_mod from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -101,11 +101,11 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   let tmp14;
   let tmp15;
   let user;
-  const f107208 = () => {
+  const f107360 = () => {
     const items = [SavedMessagesStore.isMessageReminder(channel.id, message.id), SavedMessagesStore.isMessageBookmarked(channel.id, message.id)];
     return items;
   };
-  const f107209 = (flags) => {
+  const f107361 = (flags) => {
     let tmp = null == flags.flags;
     if (!tmp) {
       const obj = analyticsLocation(analyticsLocation[27]);
@@ -159,8 +159,8 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   let isForLaterExperimentOn = obj4.useIsForLaterExperimentOn("LongPressMessageActionSheet");
   const obj5 = require("get initialized");
   const items2 = [actionSheetSource];
-  [tmp14, tmp15] = message(obj5.useStateFromStoresArray(items2, f107208), 2);
-  message(obj5.useStateFromStoresArray(items2, f107208), 2);
+  [tmp14, tmp15] = message(obj5.useStateFromStoresArray(items2, f107360), 2);
+  message(obj5.useStateFromStoresArray(items2, f107360), 2);
   const obj6 = require("ForLaterExperiment");
   const hasForLaterAccess = obj6.useHasForLaterAccess("LongPressMessageActionSheet");
   const obj7 = require("ThreadHooks");
@@ -243,8 +243,8 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   const attachments1 = message.attachments;
   let tmp53 = message.author.id === id3;
   if (tmp53) {
-    tmp53 = attachments1.filter(f107209).length > 1 || "" !== message.content;
-    const tmp54 = attachments1.filter(f107209).length > 1 || "" !== message.content;
+    tmp53 = attachments1.filter(f107361).length > 1 || "" !== message.content;
+    const tmp54 = attachments1.filter(f107361).length > 1 || "" !== message.content;
   }
   const items3 = [selectedMedia];
   const tmp8Result23 = tmp8(tmp3[19]);

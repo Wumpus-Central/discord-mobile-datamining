@@ -1,16 +1,16 @@
-// === Module 15126: DarkModeThemeSetting ===
+// === Module 15141: DarkModeThemeSetting ===
 
-// Module 15126 (DarkModeThemeSetting)
+// Module 15141 (DarkModeThemeSetting)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import ThemeConstants from "ThemeConstants" /* 1196 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15124 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15139 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

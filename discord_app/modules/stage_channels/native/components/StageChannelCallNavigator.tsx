@@ -1,23 +1,23 @@
-// === Module 9157: StageChannelCallNavigator ===
+// === Module 9192: StageChannelCallNavigator ===
 
-// Module 9157 (StageChannelCallNavigator)
+// Module 9192 (StageChannelCallNavigator)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4612 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import spring from "spring" /* 5597 */;
-import MessageManagerDefault from "MessageManager" /* 7517 */;
-import participantHasVideoDefault from "participantHasVideo" /* 9119 */;
-import StageActionBarButtons from "StageActionBarButtons" /* 9558 */;
-import JoinStageViewDefault from "JoinStageView" /* 9623 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 9758 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4618 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import spring from "spring" /* 5604 */;
+import MessageManagerDefault from "MessageManager" /* 7528 */;
+import participantHasVideoDefault from "participantHasVideo" /* 9154 */;
+import StageActionBarButtons from "StageActionBarButtons" /* 9571 */;
+import JoinStageViewDefault from "JoinStageView" /* 9636 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 9771 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -271,11 +271,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const obj = { opacity: withSpring(num, viewAnimationConfig) };
     return obj;
   };
-  const obj3 = showOverlay(4612);
-  fn.__closure = { withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig };
+  const obj3 = showOverlay(4618);
+  fn.__closure = { withSpring: showOverlay(5604).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 3866068723381;
   fn.__initData = __initData3;
-  ({ withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig });
+  ({ withSpring: showOverlay(5604).withSpring, showOverlay, viewAnimationConfig });
   const animatedStyle = obj3.useAnimatedStyle(fn);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function s() {
@@ -341,7 +341,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   importDefault = undefined;
   channel = channel.channel;
   [showOverlay, importDefault] = react.useState(false);
-  let obj = showOverlay(4612);
+  let obj = showOverlay(4618);
   const fn = function c() {
     let num = 0;
     const withSpring = spring.withSpring;
@@ -352,10 +352,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     const obj = { opacity: withSpring(num, viewAnimationConfig) };
     return obj;
   };
-  fn.__closure = { withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig };
+  fn.__closure = { withSpring: showOverlay(5604).withSpring, showOverlay, viewAnimationConfig };
   fn.__workletHash = 17555856853074;
   fn.__initData = __initData4;
-  ({ withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig });
+  ({ withSpring: showOverlay(5604).withSpring, showOverlay, viewAnimationConfig });
   const animatedStyle = obj.useAnimatedStyle(fn);
   const effect = react.useEffect(() => {
     let closure_0;

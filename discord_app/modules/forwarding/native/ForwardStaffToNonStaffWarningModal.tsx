@@ -1,9 +1,9 @@
-// === Module 11313: ForwardStaffToNonStaffWarningModal ===
+// === Module 11326: ForwardStaffToNonStaffWarningModal ===
 
-// Module 11313 (ForwardStaffToNonStaffWarningModal)
+// Module 11326 (ForwardStaffToNonStaffWarningModal)
 import react from "react" /* 576 */;
 import intl5 from "intl" /* 1126 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

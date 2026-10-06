@@ -1,16 +1,16 @@
-// === Module 12948: AddToWishlistItemCard ===
+// === Module 12967: AddToWishlistItemCard ===
 
-// Module 12948 (AddToWishlistItemCard)
+// Module 12967 (AddToWishlistItemCard)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import SKUPreviewDefault from "SKUPreview" /* 8426 */;
-import HeartOutlineIcon2 from "HeartOutlineIcon" /* 8494 */;
+import SKUPreviewDefault from "SKUPreview" /* 8459 */;
+import HeartOutlineIcon2 from "HeartOutlineIcon" /* 8527 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c4;

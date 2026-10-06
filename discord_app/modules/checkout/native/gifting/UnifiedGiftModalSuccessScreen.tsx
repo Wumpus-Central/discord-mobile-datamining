@@ -1,15 +1,15 @@
-// === Module 10751: UnifiedGiftModalSuccessScreen ===
+// === Module 10764: UnifiedGiftModalSuccessScreen ===
 
-// Module 10751 (UnifiedGiftModalSuccessScreen)
+// Module 10764 (UnifiedGiftModalSuccessScreen)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let metroImportDefault;
@@ -48,7 +48,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     if (tmp2) {
       const obj2 = { giftBadgeProgress };
       const obj = ModalActionCreatorsDefault;
-      obj.pushLazy(asyncRequire(10763, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
+      obj.pushLazy(asyncRequire(10776, dependencyMap.paths), obj2, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];

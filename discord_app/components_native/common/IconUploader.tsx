@@ -1,17 +1,17 @@
-// === Module 10665: IconUploader ===
+// === Module 10678: IconUploader ===
 
-// Module 10665 (IconUploader)
+// Module 10678 (IconUploader)
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import Pressables from "Pressables" /* 5909 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import AssetRegistryDefault from "AssetRegistry" /* 10666 */;
+import Pressables from "Pressables" /* 5916 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import AssetRegistryDefault from "AssetRegistry" /* 10679 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -99,8 +99,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp14 = tmp18;
           }
         }
-        let obj3 = { style: iconStyle, icon: tmp7, value: name, size: onUpload(5971).GuildIconSizes.XLARGE, animate: true };
-        const tmp21 = onChangeIconPress(5971);
+        let obj3 = { style: iconStyle, icon: tmp7, value: name, size: onUpload(5978).GuildIconSizes.XLARGE, animate: true };
+        const tmp21 = onChangeIconPress(5978);
         const tmp22 = closure_8(tmp21, obj3);
         cResult[8] = tmp7;
         cResult[9] = iconStyle;
@@ -184,7 +184,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
             tmp39 = tmp42;
           }
           let obj6 = { accessibilityRole: "button", accessibilityLabel: tmp34, onPress: tmp10, children: tmp28 };
-          const tmp38 = closure_8(onUpload(5909).PressableOpacity, obj6);
+          const tmp38 = closure_8(onUpload(5916).PressableOpacity, obj6);
           cResult[27] = tmp10;
           cResult[28] = tmp28;
           cResult[29] = tmp38;
@@ -202,7 +202,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     let tmp24 = null;
     if (!tmp4) {
-      const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(10666) };
+      const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(10679) };
       tmp24 = closure_8(closure_6, obj8);
     }
     cResult[20] = tmp4;

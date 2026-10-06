@@ -1,22 +1,22 @@
-// === Module 6985: CacheStore ===
+// === Module 6998: CacheStore ===
 
-// Module 6985 (CacheStore)
+// Module 6998 (CacheStore)
 import LoggerDefault from "Logger" /* 3 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import TryLoad from "TryLoad" /* 2098 */;
-import modules_MessagesDefault from "modules/Messages" /* 6986 */;
-import timeRequireDefault from "timeRequire" /* 7001 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7140 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 7152 */;
+import modules_MessagesDefault from "modules/Messages" /* 6999 */;
+import timeRequireDefault from "timeRequire" /* 7014 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7153 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7165 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -907,7 +907,7 @@ function resumeFluxAndSocket(arg0) {
     let dispatcher;
     let obj3;
     try {
-      f154466();
+      f154710();
       dispatcher = dispatcher.dispatcher;
       if (dispatcher.hasStuffToDispatchNow()) {
         let c2 = true;
@@ -998,7 +998,7 @@ class CacheStoreClass extends Store {
       }
       function dontLoadLateLazyCache() {
         let _true;
-        const f154466 = () => {
+        const f154710 = () => {
           obj = closure_1(c2[23]);
           return obj.dispatch({ type: "CACHE_LOADED_LAZY_NO_CACHE" });
         };
@@ -1009,7 +1009,7 @@ class CacheStoreClass extends Store {
           let dispatcher;
           let obj3;
           try {
-            f154466();
+            f154710();
             dispatcher = dispatcher.dispatcher;
             if (dispatcher.hasStuffToDispatchNow()) {
               let c2 = true;

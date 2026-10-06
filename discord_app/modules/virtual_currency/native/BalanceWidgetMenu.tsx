@@ -1,6 +1,6 @@
-// === Module 15575: BalanceWidgetMenu ===
+// === Module 15589: BalanceWidgetMenu ===
 
-// Module 15575 (BalanceWidgetMenu)
+// Module 15589 (BalanceWidgetMenu)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
@@ -8,17 +8,17 @@ import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import intl3 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import _mod8508 from "module_8508" /* 8508 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10354 */;
-import QuestUtils from "QuestUtils" /* 10908 */;
-import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11010 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import _mod8541 from "module_8541" /* 8541 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10367 */;
+import QuestUtils from "QuestUtils" /* 10921 */;
+import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton" /* 11023 */;
 import react from "react" /* 19 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -30,7 +30,7 @@ function BalanceWidgetMenu() {
   let constants2;
   let constants3;
   let str;
-  let obj = str(8508);
+  let obj = str(8541);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = react.useCallback(() => {
@@ -250,7 +250,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp7;
   const obj = react2;
   const cResult = obj.c(3);
-  const obj2 = _mod8508;
+  const obj2 = _mod8541;
   const balance = obj2.useFetchVirtualCurrencyBalance().balance;
   DismissibleContentUnsafeUtils;
   if (null == balance) {
@@ -292,7 +292,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp7;
 }) : (() => {
   let tmp5Result;
-  const obj = _mod8508;
+  const obj = _mod8541;
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
   DismissibleContentUnsafeUtils;
   if (null == balance) {

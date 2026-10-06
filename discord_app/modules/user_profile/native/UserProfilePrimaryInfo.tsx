@@ -1,39 +1,39 @@
-// === Module 10843: UserProfilePrimaryInfo ===
+// === Module 10856: UserProfilePrimaryInfo ===
 
-// Module 10843 (UserProfilePrimaryInfo)
+// Module 10856 (UserProfilePrimaryInfo)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4574 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import Pressables from "Pressables" /* 5909 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import captureAdUserAction2 from "captureAdUserAction" /* 7213 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7224 */;
-import GuildTagConstants from "GuildTagConstants" /* 7603 */;
-import GuildTagUtils from "GuildTagUtils" /* 7836 */;
-import Constants2 from "Constants" /* 7854 */;
-import BadgeId from "BadgeId" /* 7855 */;
-import Constants3 from "Constants" /* 7865 */;
-import useBadges from "useBadges" /* 7914 */;
-import BotTagDefault from "BotTag" /* 8961 */;
-import GuildTagDefault from "GuildTag" /* 9395 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10633 */;
-import types from "types" /* 10634 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 10886 */;
-import BadgeUtils from "BadgeUtils" /* 10889 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import Pressables from "Pressables" /* 5916 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import captureAdUserAction2 from "captureAdUserAction" /* 7226 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 7237 */;
+import GuildTagConstants from "GuildTagConstants" /* 7614 */;
+import GuildTagUtils from "GuildTagUtils" /* 7847 */;
+import Constants2 from "Constants" /* 7865 */;
+import BadgeId from "BadgeId" /* 7866 */;
+import Constants3 from "Constants" /* 7876 */;
+import useBadges from "useBadges" /* 7925 */;
+import BotTagDefault from "BotTag" /* 8990 */;
+import GuildTagDefault from "GuildTag" /* 9409 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10646 */;
+import types from "types" /* 10647 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 10899 */;
+import BadgeUtils from "BadgeUtils" /* 10902 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants_mod from "Constants" /* 6707 */;
+import Constants_mod from "Constants" /* 6714 */;
 import Constants_mod2 from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -260,21 +260,21 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((user) => {
   const headingVariant = tmp2.headingVariant;
   if (null == onPress) {
     const obj = { children: items };
-    let obj3 = { userId: user.id, guildId, userName: name, variant: headingVariant, effectDisplayType: user(10634).EffectDisplayType.STATIC, lineClamp: 2, pendingDisplayNameStyles, defaultColor: "mobile-text-heading-primary", accessibilityRole: displayNameAccessibilityRole, style: null, containerStyle: null };
+    let obj3 = { userId: user.id, guildId, userName: name, variant: headingVariant, effectDisplayType: user(10647).EffectDisplayType.STATIC, lineClamp: 2, pendingDisplayNameStyles, defaultColor: "mobile-text-heading-primary", accessibilityRole: displayNameAccessibilityRole, style: null, containerStyle: null };
     ({ displayNameText: obj2.style, displayNameText: obj2.containerStyle } = tmp);
     const tmp10 = UsernameWithEffectsDefault;
     items = [closure_14(tmp10, obj3), renderBotTag()];
     tmp12Result = closure_15(closure_5, obj);
   } else {
     const obj7 = { onPress, accessibilityRole: "button", accessibilityLabel: name, accessibilityHint, style: tmp.displayName, children: items1 };
-    const PressableOpacity = user(5909).PressableOpacity;
-    const obj8 = { userId: user.id, guildId, userName: name, variant: headingVariant, effectDisplayType: user(10634).EffectDisplayType.STATIC, lineClamp: 2, pendingDisplayNameStyles, defaultColor: "mobile-text-heading-primary", accessibilityRole: displayNameAccessibilityRole, style: null, containerStyle: null };
+    const PressableOpacity = user(5916).PressableOpacity;
+    const obj8 = { userId: user.id, guildId, userName: name, variant: headingVariant, effectDisplayType: user(10647).EffectDisplayType.STATIC, lineClamp: 2, pendingDisplayNameStyles, defaultColor: "mobile-text-heading-primary", accessibilityRole: displayNameAccessibilityRole, style: null, containerStyle: null };
     ({ displayNameText: obj4.style, displayNameText: obj4.containerStyle } = tmp);
     const tmp17 = UsernameWithEffectsDefault;
     items1 = [closure_14(tmp17, obj8), renderBotTag(), ];
     const tmp13 = user;
     if (showChevron) {
-      showChevron = closure_14(tmp13(10844).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+      showChevron = closure_14(tmp13(10857).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
     }
     items1[2] = showChevron;
     tmp12Result = closure_15(PressableOpacity, obj7);

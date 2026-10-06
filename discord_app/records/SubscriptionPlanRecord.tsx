@@ -1,6 +1,6 @@
-// === Module 4529: SubscriptionPlanRecord ===
+// === Module 4535: SubscriptionPlanRecord ===
 
-// Module 4529 (SubscriptionPlanRecord)
+// Module 4535 (SubscriptionPlanRecord)
 import Record from "Record" /* 1392 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import size from "module_2" /* 2 */;

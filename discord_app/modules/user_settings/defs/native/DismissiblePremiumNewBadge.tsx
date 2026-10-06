@@ -1,16 +1,16 @@
-// === Module 14533: DismissiblePremiumNewBadge ===
+// === Module 14549: DismissiblePremiumNewBadge ===
 
-// Module 14533 (DismissiblePremiumNewBadge)
+// Module 14549 (DismissiblePremiumNewBadge)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import native from "native" /* 1188 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import ColorConstants from "ColorConstants" /* 6938 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10354 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import ColorConstants from "ColorConstants" /* 6951 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10367 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

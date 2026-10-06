@@ -1,9 +1,9 @@
-// === Module 9574: shouldShowEndStageModal ===
+// === Module 9587: shouldShowEndStageModal ===
 
-// Module 9574 (shouldShowEndStageModal)
+// Module 9587 (shouldShowEndStageModal)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5575 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5578 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5582 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
 import size from "module_2" /* 2 */;
 

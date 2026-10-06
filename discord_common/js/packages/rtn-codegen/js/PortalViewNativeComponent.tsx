@@ -1,6 +1,6 @@
-// === Module 7943: PortalViewNativeComponent ===
+// === Module 7954: PortalViewNativeComponent ===
 
-// Module 7943 (PortalViewNativeComponent)
+// Module 7954 (PortalViewNativeComponent)
 import DynamicallyInjectedByGestureHandler from "DynamicallyInjectedByGestureHandler" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

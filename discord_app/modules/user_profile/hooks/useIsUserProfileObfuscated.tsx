@@ -1,7 +1,7 @@
-// === Module 12814: useIsUserProfileObfuscated ===
+// === Module 12833: useIsUserProfileObfuscated ===
 
-// Module 12814 (useIsUserProfileObfuscated)
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+// Module 12833 (useIsUserProfileObfuscated)
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,21 +1,21 @@
-// === Module 15091: SettingsAppearanceThemeCarousel ===
+// === Module 15106: SettingsAppearanceThemeCarousel ===
 
-// Module 15091 (SettingsAppearanceThemeCarousel)
+// Module 15106 (SettingsAppearanceThemeCarousel)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import timing from "timing" /* 4891 */;
-import timingPresets from "timingPresets" /* 4894 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import timing from "timing" /* 4897 */;
+import timingPresets from "timingPresets" /* 4900 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15092 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15107 */;
 import Fragment from "Fragment" /* 21 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -217,8 +217,8 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((themes) => {
   }
   class P {
     constructor() {
-      closure_0 = setTimeout(() => { /* body not rendered: F144573 */ }, 5500);
-      return () => { /* body not rendered: F144574 */ };
+      closure_0 = setTimeout(() => { /* body not rendered: F144777 */ }, 5500);
+      return () => { /* body not rendered: F144778 */ };
     }
   }
   items = [sharedValue, sharedValue1];

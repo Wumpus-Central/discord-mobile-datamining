@@ -1,15 +1,15 @@
-// === Module 16189: useGuildActionRows ===
+// === Module 16229: useGuildActionRows ===
 
-// Module 16189 (useGuildActionRows)
+// Module 16229 (useGuildActionRows)
 import Constants from "Constants" /* 1085 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 6724 */;
-import GuildSidebarConstants from "GuildSidebarConstants" /* 7045 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12009 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12170 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16153 */;
-import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 16190 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 6738 */;
+import GuildSidebarConstants from "GuildSidebarConstants" /* 7058 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 12024 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12185 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 16192 */;
+import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 16230 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5077 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 12992: useVirtualCurrencyBalance ===
+// === Module 13011: useVirtualCurrencyBalance ===
 
-// Module 12992 (useVirtualCurrencyBalance)
+// Module 13011 (useVirtualCurrencyBalance)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8510 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8543 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 11294: useChannelFollowerStats ===
+// === Module 11307: useChannelFollowerStats ===
 
-// Module 11294 (useChannelFollowerStats)
+// Module 11307 (useChannelFollowerStats)
 import DurationsDefault from "Durations" /* 1102 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11296 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11309 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ChannelFollowerStatsStore from "ChannelFollowerStatsStore" /* 11295 */;
+import ChannelFollowerStatsStore from "ChannelFollowerStatsStore" /* 11308 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

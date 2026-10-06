@@ -1,14 +1,14 @@
-// === Module 14897: QuestDockGestureContext ===
+// === Module 14913: QuestDockGestureContext ===
 
-// Module 14897 (QuestDockGestureContext)
+// Module 14913 (QuestDockGestureContext)
 import Fragment from "Fragment" /* 21 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11648 */;
-import QuestDockConstants from "QuestDockConstants" /* 14896 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11662 */;
+import QuestDockConstants from "QuestDockConstants" /* 14912 */;
 import react from "react" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 14894 */;
+import QuestDockStore from "QuestDockStore" /* 14910 */;
 import "ReanimatedHelperTypes";
-import ReanimatedHelperTypes_mod from "ReanimatedHelperTypes" /* 6571 */;
+import ReanimatedHelperTypes_mod from "ReanimatedHelperTypes" /* 6578 */;
 import size_mod from "module_2" /* 2 */;
 
 let ReanimatedHelperTypes;

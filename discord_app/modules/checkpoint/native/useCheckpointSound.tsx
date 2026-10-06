@@ -1,9 +1,9 @@
-// === Module 15529: useCheckpointSound ===
+// === Module 15545: useCheckpointSound ===
 
-// Module 15529 (useCheckpointSound)
-import SoundUtils from "SoundUtils" /* 9562 */;
+// Module 15545 (useCheckpointSound)
+import SoundUtils from "SoundUtils" /* 9575 */;
 import react from "react" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 15524 */;
+import CheckpointStore from "CheckpointStore" /* 15540 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

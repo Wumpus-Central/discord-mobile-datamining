@@ -1,9 +1,9 @@
-// === Module 14387: GameRelationshipManager ===
+// === Module 14405: GameRelationshipManager ===
 
-// Module 14387 (GameRelationshipManager)
+// Module 14405 (GameRelationshipManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 12309: ChannelSafeAreaBottomNoop ===
+// === Module 12324: ChannelSafeAreaBottomNoop ===
 
-// Module 12309 (ChannelSafeAreaBottomNoop)
+// Module 12324 (ChannelSafeAreaBottomNoop)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;

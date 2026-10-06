@@ -1,17 +1,17 @@
-// === Module 14446: UserProfileBadgesEditButton ===
+// === Module 14462: UserProfileBadgesEditButton ===
 
-// Module 14446 (UserProfileBadgesEditButton)
+// Module 14462 (UserProfileBadgesEditButton)
 import nativeDefault from "native" /* 587 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10881 */;
-import BadgeUtils from "BadgeUtils" /* 10889 */;
-import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 14447 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10894 */;
+import BadgeUtils from "BadgeUtils" /* 10902 */;
+import openCustomizeBadgesSheet from "openCustomizeBadgesSheet" /* 14463 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9417 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9431 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

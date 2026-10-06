@@ -1,17 +1,17 @@
-// === Module 16867: SmartSearchExpandButton ===
+// === Module 16891: SmartSearchExpandButton ===
 
-// Module 16867 (SmartSearchExpandButton)
+// Module 16891 (SmartSearchExpandButton)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import _modDef3919 from "module_3919" /* 3919 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10844 */;
-import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13379 */;
-import useSearchHostSurface from "useSearchHostSurface" /* 16866 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10857 */;
+import ChevronSmallUpIcon2 from "ChevronSmallUpIcon" /* 13398 */;
+import useSearchHostSurface from "useSearchHostSurface" /* 16890 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

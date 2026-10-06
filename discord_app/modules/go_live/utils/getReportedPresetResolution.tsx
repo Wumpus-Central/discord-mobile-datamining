@@ -1,9 +1,9 @@
-// === Module 5027: getReportedPresetResolution ===
+// === Module 5033: getReportedPresetResolution ===
 
-// Module 5027 (getReportedPresetResolution)
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5028 */;
+// Module 5033 (getReportedPresetResolution)
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5034 */;
 import UserStore from "UserStore" /* 1377 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4937 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4943 */;
 import size from "module_2" /* 2 */;
 
 let c3;

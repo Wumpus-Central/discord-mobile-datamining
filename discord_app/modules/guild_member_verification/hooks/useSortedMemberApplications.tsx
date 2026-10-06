@@ -1,9 +1,9 @@
-// === Module 16540: useSortedMemberApplications ===
+// === Module 16580: useSortedMemberApplications ===
 
-// Module 16540 (useSortedMemberApplications)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
+// Module 16580 (useSortedMemberApplications)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
 import react from "react" /* 19 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5932 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5939 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

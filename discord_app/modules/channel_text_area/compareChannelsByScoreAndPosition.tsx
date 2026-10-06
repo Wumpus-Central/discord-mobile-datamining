@@ -1,6 +1,6 @@
-// === Module 6839: compareChannelsByScoreAndPosition ===
+// === Module 6849: compareChannelsByScoreAndPosition ===
 
-// Module 6839 (compareChannelsByScoreAndPosition)
+// Module 6849 (compareChannelsByScoreAndPosition)
 import Constants from "Constants" /* 1085 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;

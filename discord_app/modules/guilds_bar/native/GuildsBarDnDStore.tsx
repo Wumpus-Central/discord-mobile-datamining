@@ -1,11 +1,11 @@
-// === Module 16225: GuildsBarDnDStore ===
+// === Module 16265: GuildsBarDnDStore ===
 
-// Module 16225 (GuildsBarDnDStore)
+// Module 16265 (GuildsBarDnDStore)
 import react from "react" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import react_native from "react-native" /* 1259 */;
-import _slicedToArray from "_slicedToArray" /* 4492 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import _slicedToArray from "_slicedToArray" /* 4498 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import module_1254 from "module_1254" /* 1254 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -35,7 +35,7 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
     dragDropInProgress: obj4.makeMutable(false),
     listInsets: obj5.makeMutable({ start: 0, end: 0 }),
     scrollPosition: obj6.makeMutable(0),
-    windowSize: "\u{1F44F}",
+    windowSize: "\u{1F64C}",
     setStateShallow(obj) {
       closure_0 = obj;
       const tmp = closure_1();
@@ -74,7 +74,7 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
       } else {
         const obj4 = dropSpecs(dependencyMap[3]);
         obj4.batchUpdates(() => {
-          const obj = { dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" };
+          const obj = { dropSpecs, dragSpecs: "Array", overSpecs: "parent" };
           return dropSpecs(obj);
         });
         const _clearTimeout = clearTimeout;

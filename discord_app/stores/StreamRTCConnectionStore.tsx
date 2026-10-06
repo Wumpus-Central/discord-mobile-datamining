@@ -1,21 +1,21 @@
-// === Module 4929: StreamRTCConnectionStore ===
+// === Module 4935: StreamRTCConnectionStore ===
 
-// Module 4929 (StreamRTCConnectionStore)
+// Module 4935 (StreamRTCConnectionStore)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import Constants2 from "Constants" /* 4932 */;
-import StreamRTCConnection from "StreamRTCConnection" /* 4934 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7228 */;
-import canSpectateDefault from "canSpectate" /* 13612 */;
+import Constants2 from "Constants" /* 4938 */;
+import StreamRTCConnection from "StreamRTCConnection" /* 4940 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7241 */;
+import canSpectateDefault from "canSpectate" /* 13628 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import Constants from "Constants" /* 1085 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
@@ -25,7 +25,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 let StreamLayouts;
 let c9;
 let obj2;
-const f89713 = (destroy, arg1) => {
+const f89851 = (destroy, arg1) => {
   let str = "receiver-disconnect";
   destroy = destroy.destroy;
   if (destroy.isOwner) {
@@ -202,12 +202,12 @@ if (MediaEngineStore.isSupported()) {
     CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
         sessionId = sessionId.sessionId;
         const arr = _modDef12;
-        const item = arr.forEach(closure_18, f89713);
+        const item = arr.forEach(closure_18, f89851);
       },
     CONNECTION_CLOSED: function handleConnectionClosed() {
         let c3 = null;
         const arr = _modDef12;
-        const item = arr.forEach(closure_18, f89713);
+        const item = arr.forEach(closure_18, f89851);
       },
     RTC_CONNECTION_STATE: handleRtcAction,
     RTC_CONNECTION_PING: handleRtcAction,
@@ -308,7 +308,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
         appContext = appContext.appContext;
         const streamKey = appContext.streamKey;
-        closure_11[streamKey] = { appContext, analyticsLocations: "r" };
+        closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
         const arr = _modDef12;
         const item = arr.forEach(closure_18, (analyticsContext) => {
           analyticsContext = analyticsContext.analyticsContext;

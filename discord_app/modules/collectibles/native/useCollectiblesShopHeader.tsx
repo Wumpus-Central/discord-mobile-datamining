@@ -1,6 +1,6 @@
-// === Module 15746: useCollectiblesShopHeader ===
+// === Module 15782: useCollectiblesShopHeader ===
 
-// Module 15746 (useCollectiblesShopHeader)
+// Module 15782 (useCollectiblesShopHeader)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,19 +8,19 @@ import Constants from "Constants" /* 1085 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import intl4 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
-import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 6628 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import Constants2 from "Constants" /* 7854 */;
-import ShopIcon from "ShopIcon" /* 11762 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
+import CheckmarkSmallIcon3 from "CheckmarkSmallIcon" /* 6635 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import Constants2 from "Constants" /* 7865 */;
+import ShopIcon from "ShopIcon" /* 11776 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

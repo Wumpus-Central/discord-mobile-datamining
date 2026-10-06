@@ -1,10 +1,10 @@
-// === Module 13451: DispatcherWorkScheduler ===
+// === Module 13467: DispatcherWorkScheduler ===
 
-// Module 13451 (DispatcherWorkScheduler)
+// Module 13467 (DispatcherWorkScheduler)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import BasicWorkScheduler2 from "BasicWorkScheduler" /* 13452 */;
-import DispatcherWorkConstants from "DispatcherWorkConstants" /* 13450 */;
+import BasicWorkScheduler2 from "BasicWorkScheduler" /* 13468 */;
+import DispatcherWorkConstants from "DispatcherWorkConstants" /* 13466 */;
 import size from "module_2" /* 2 */;
 
 let importDefault;
@@ -13,7 +13,7 @@ let c2;
 let c3;
 let closure_4;
 let hasOwnProperty;
-const f114823 = (state) => {
+const f114985 = (state) => {
   const result = closure_0._trackAppBackgrounded(state.state === AppStates.BACKGROUND);
 };
 ({ DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: c2, NATIVE_WORK_BACKOFF_MS: c3, NATIVE_WORK_DEADLINE_MS: closure_4, WorkIdleDeadline: hasOwnProperty } = DispatcherWorkConstants);
@@ -25,7 +25,7 @@ class DispatcherWorkScheduler extends BasicWorkScheduler {
     const tmp3 = new DispatcherWorkScheduler(tmp2, tmp, new.target, this, undefined);
     importDefault = tmp3;
     const obj = DispatcherDefault;
-    const subscription = obj.subscribe("APP_STATE_UPDATE", f114823);
+    const subscription = obj.subscribe("APP_STATE_UPDATE", f114985);
     return tmp3;
   }
   _queueIdleCallback() {
@@ -67,7 +67,7 @@ export const createDispatcherWorkScheduler = function createDispatcherWorkSchedu
     const tmp5 = new DispatcherWorkScheduler(tmp2, tmp, tmp3, this, undefined);
     importDefault = tmp5;
     const obj = DispatcherDefault;
-    const subscription = obj.subscribe("APP_STATE_UPDATE", f114823);
+    const subscription = obj.subscribe("APP_STATE_UPDATE", f114985);
     return tmp5;
   } else {
     throw new TypeError("Trying to call a non-function");

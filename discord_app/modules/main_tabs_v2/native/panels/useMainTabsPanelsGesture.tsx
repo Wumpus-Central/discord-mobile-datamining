@@ -1,14 +1,14 @@
-// === Module 15928: useMainTabsPanelsGesture ===
+// === Module 15967: useMainTabsPanelsGesture ===
 
-// Module 15928 (useMainTabsPanelsGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import timingPresets from "timingPresets" /* 4894 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11125 */;
+// Module 15967 (useMainTabsPanelsGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import timingPresets from "timingPresets" /* 4900 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11138 */;
 import react from "react" /* 19 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
-import PanelsConfig from "PanelsConfig" /* 15929 */;
+import PanelsConfig from "PanelsConfig" /* 15968 */;
 import size from "module_2" /* 2 */;
 
 let set;

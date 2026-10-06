@@ -1,18 +1,18 @@
-// === Module 13261: AppIconUtils ===
+// === Module 13280: AppIconUtils ===
 
-// Module 13261 (AppIconUtils)
+// Module 13280 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import useMountEffectDefault from "useMountEffect" /* 5590 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import react_nativeDefault from "react-native" /* 13262 */;
+import useMountEffectDefault from "useMountEffect" /* 5597 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import react_nativeDefault from "react-native" /* 13281 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import AppIconConstants from "AppIconConstants" /* 8828 */;
+import AppIconConstants from "AppIconConstants" /* 8858 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -288,7 +288,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       }
     }
   }
-  first1(5590)(A);
+  first1(5597)(A);
   return first;
 }) : (() => {
   let first;

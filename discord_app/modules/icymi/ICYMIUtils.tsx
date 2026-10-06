@@ -1,20 +1,20 @@
-// === Module 8028: ICYMIUtils ===
+// === Module 8038: ICYMIUtils ===
 
-// Module 8028 (ICYMIUtils)
+// Module 8038 (ICYMIUtils)
 import intl11 from "intl" /* 1126 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7540 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7813 */;
-import ICYMITypes from "ICYMITypes" /* 8024 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8029 */;
-import generateHydrationId from "generateHydrationId" /* 8034 */;
-import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8035 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7551 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7824 */;
+import ICYMITypes from "ICYMITypes" /* 8034 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
+import generateHydrationId from "generateHydrationId" /* 8044 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8045 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8025 */;
+import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8035 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

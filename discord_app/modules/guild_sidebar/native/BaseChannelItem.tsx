@@ -1,21 +1,21 @@
-// === Module 12016: BaseChannelItem ===
+// === Module 12031: BaseChannelItem ===
 
-// Module 12016 (BaseChannelItem)
+// Module 12031 (BaseChannelItem)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1370 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import native2 from "native" /* 8567 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12017 */;
-import TouchableBackgroundDefault from "TouchableBackground" /* 12018 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import native2 from "native" /* 8602 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12032 */;
+import TouchableBackgroundDefault from "TouchableBackground" /* 12033 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -617,7 +617,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp6Result = !hideIcon;
   if (tmp6Result) {
     const obj2 = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: ALL_MESSAGES };
-    const tmp9 = hideIcon(12017);
+    const tmp9 = hideIcon(12032);
     if (mode === obj.UNREAD_LESS_IMPORTANT) {
       ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
     } else {
@@ -628,9 +628,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   items1 = [tmp6Result, !hideIcon && icon, name, channelInfo];
   const tmp3Result = closure_11(View, obj);
   if (flag) {
-    AnimatedPressableHighlight = hideIcon(12018);
+    AnimatedPressableHighlight = hideIcon(12033);
   } else {
-    AnimatedPressableHighlight = mode(8567).AnimatedPressableHighlight;
+    AnimatedPressableHighlight = mode(8602).AnimatedPressableHighlight;
   }
   const obj3 = { children: items2 };
   const merged1 = Object.assign(merged);

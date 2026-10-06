@@ -1,9 +1,9 @@
-// === Module 16740: ConjureStatusLabels ===
+// === Module 16761: ConjureStatusLabels ===
 
-// Module 16740 (ConjureStatusLabels)
+// Module 16761 (ConjureStatusLabels)
 import intl4 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import ConjureTypes from "ConjureTypes" /* 6747 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import ConjureTypes from "ConjureTypes" /* 6757 */;
 import size from "module_2" /* 2 */;
 
 function thinkingLabel(restoring) {
@@ -28,13 +28,13 @@ function thinkingLabel(restoring) {
   }
   const tmp = null != activity && "end" !== activity.phase;
   if (flag3) {
-    xnCAaP = _modDef3723["1jqaAc"];
+    xnCAaP = _modDef3753["1jqaAc"];
   } else if (flag) {
-    xnCAaP = _modDef3723.M4KI5F;
+    xnCAaP = _modDef3753.M4KI5F;
   } else if (flag2) {
     xnCAaP = items[0];
   } else {
-    const tmp4 = _modDef3723;
+    const tmp4 = _modDef3753;
     if (compacting) {
       xnCAaP = tmp4.xnCAaP;
     } else {
@@ -43,7 +43,7 @@ function thinkingLabel(restoring) {
   }
   return xnCAaP;
 }
-const items = [_modDef3723["AX+5lk"], _modDef3723.VAU6A7, _modDef3723["1emysd"], _modDef3723.EXHX3L, _modDef3723.ChslmX];
+const items = [_modDef3753["AX+5lk"], _modDef3753.VAU6A7, _modDef3753["1emysd"], _modDef3753.EXHX3L, _modDef3753.ChslmX];
 const result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureStatusLabels.tsx");
 
 export const INDICATOR_PASS_MS = 1000;
@@ -63,13 +63,13 @@ export const isRecallingLine = function isRecallingLine(current) {
 export const connectionLabel = function connectionLabel(stateFromStores7) {
   if ("connecting" === stateFromStores7) {
     const intl3 = intl4.intl;
-    return intl3.string(_modDef3723["ECl+Dx"]);
+    return intl3.string(_modDef3753["ECl+Dx"]);
   } else if ("closed" === stateFromStores7) {
     const intl2 = intl4.intl;
-    return intl2.string(_modDef3723.mQZSp1);
+    return intl2.string(_modDef3753.mQZSp1);
   } else if ("failed" === stateFromStores7) {
     const intl = intl4.intl;
-    return intl.string(_modDef3723.xzJSZ6);
+    return intl.string(_modDef3753.xzJSZ6);
   }
 };
 export { thinkingLabel };
@@ -84,11 +84,11 @@ export const runesUsedLabels = function runesUsedLabels(projectUsage) {
   let obj3;
   const obj = ConjureTypes;
   const runesFromUsdResult = obj.runesFromUsd(projectUsage.cost_usd);
-  const obj2 = { text: formatToPlainString(gMuw5d, obj3), aria: intl2.formatToPlainString(_modDef3723.Z4LvGa, obj4) };
+  const obj2 = { text: formatToPlainString(gMuw5d, obj3), aria: intl2.formatToPlainString(_modDef3753.Z4LvGa, obj4) };
   const intl = intl4.intl;
   formatToPlainString = intl.formatToPlainString;
   obj3 = { runes: runesFromUsdResult.toLocaleString() };
-  gMuw5d = _modDef3723.gMuw5d;
+  gMuw5d = _modDef3753.gMuw5d;
   intl2 = intl4.intl;
   return obj2;
 };

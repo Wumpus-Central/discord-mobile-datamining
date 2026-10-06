@@ -1,14 +1,14 @@
-// === Module 17287: ActivityShelfItemBackground ===
+// === Module 17316: ActivityShelfItemBackground ===
 
-// Module 17287 (ActivityShelfItemBackground)
+// Module 17316 (ActivityShelfItemBackground)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import NativeViewDefault from "NativeView" /* 5976 */;
-import BrokenImageDefault from "BrokenImage" /* 11709 */;
+import NativeViewDefault from "NativeView" /* 5983 */;
+import BrokenImageDefault from "BrokenImage" /* 11723 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

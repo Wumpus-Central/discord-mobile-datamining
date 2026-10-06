@@ -1,11 +1,11 @@
-// === Module 17195: FramePanelUI ===
+// === Module 17224: FramePanelUI ===
 
-// Module 17195 (FramePanelUI)
+// Module 17224 (FramePanelUI)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import ActivityPanelUI from "ActivityPanelUI" /* 17169 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17194 */;
-import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 17200 */;
+import ActivityPanelUI from "ActivityPanelUI" /* 17198 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17223 */;
+import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 17229 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -13,9 +13,9 @@ import size from "module_2" /* 2 */;
 function renderActivityOrPIP(id, arg1, transitionState, transitionCleanUp) {
   let tmp4;
   if ("pip" === arg1) {
-    tmp4 = 17196;
+    tmp4 = 17225;
   } else {
-    tmp4 = 17197;
+    tmp4 = 17226;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, id);
 }

@@ -1,7 +1,7 @@
-// === Module 16620: ConjureMcpConnectionPanel ===
+// === Module 16657: ConjureMcpConnectionPanel ===
 
-// Module 16620 (ConjureMcpConnectionPanel)
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
+// Module 16657 (ConjureMcpConnectionPanel)
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
@@ -41,6 +41,7 @@ class McpConnectionPanel {
     return this.state;
   }
   mint(dependencyMap) {
+    let logger;
     let closure_0 = dependencyMap;
     const self = this;
     return (async () => {

@@ -1,8 +1,8 @@
-// === Module 16859: EnglishAnalyzer ===
+// === Module 16884: EnglishAnalyzer ===
 
-// Module 16859 (EnglishAnalyzer)
+// Module 16884 (EnglishAnalyzer)
 import _modDef12 from "module_12" /* 12 */;
-import snowballStemmer from "snowballStemmer" /* 16860 */;
+import snowballStemmer from "snowballStemmer" /* 16885 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

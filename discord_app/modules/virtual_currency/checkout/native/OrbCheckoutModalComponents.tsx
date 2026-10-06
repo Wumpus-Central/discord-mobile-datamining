@@ -1,25 +1,25 @@
-// === Module 12991: OrbCheckoutModalComponents ===
+// === Module 13010: OrbCheckoutModalComponents ===
 
-// Module 12991 (OrbCheckoutModalComponents)
+// Module 13010 (OrbCheckoutModalComponents)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4800 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 6743 */;
-import OrbsIcon2 from "OrbsIcon" /* 8491 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 10746 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 10748 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 12990 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 12992 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 6753 */;
+import OrbsIcon2 from "OrbsIcon" /* 8524 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 10759 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 10761 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13009 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 13011 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -362,7 +362,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 }) : (() => {
   let skuId;
   const tmp = closure_8();
-  let obj = skuId(12990);
+  let obj = skuId(13009);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = react.useMemo(() => {
@@ -370,7 +370,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return obj.getOrbCheckoutDisclaimerMessage(skuId);
   }, items);
   const obj2 = { style: tmp.disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo };
-  return closure_6(skuId(4886).Text, obj2);
+  return closure_6(skuId(4892).Text, obj2);
 });
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {

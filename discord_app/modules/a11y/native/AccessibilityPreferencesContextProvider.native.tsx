@@ -1,12 +1,12 @@
-// === Module 15849: AccessibilityPreferencesContextProvider ===
+// === Module 15888: AccessibilityPreferencesContextProvider ===
 
-// Module 15849 (AccessibilityPreferencesContextProvider)
+// Module 15888 (AccessibilityPreferencesContextProvider)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import react3 from "react" /* 4596 */;
+import react3 from "react" /* 4602 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

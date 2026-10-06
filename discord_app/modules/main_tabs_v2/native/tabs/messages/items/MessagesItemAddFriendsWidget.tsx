@@ -1,22 +1,22 @@
-// === Module 16022: MessagesItemAddFriendsWidget ===
+// === Module 16061: MessagesItemAddFriendsWidget ===
 
-// Module 16022 (MessagesItemAddFriendsWidget)
+// Module 16061 (MessagesItemAddFriendsWidget)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8054 */;
-import IconActionButton from "IconActionButton" /* 13097 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13667 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 16023 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8064 */;
+import IconActionButton from "IconActionButton" /* 13116 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13683 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 16062 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

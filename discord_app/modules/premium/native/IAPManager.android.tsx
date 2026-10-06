@@ -1,7 +1,7 @@
-// === Module 17517: IAPManager ===
+// === Module 17562: IAPManager ===
 
-// Module 17517 (IAPManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+// Module 17562 (IAPManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 class IAPManager extends AutomaticLifecycleManager {

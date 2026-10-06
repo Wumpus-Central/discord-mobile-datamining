@@ -1,17 +1,17 @@
-// === Module 14524: AccountPhoneSetting ===
+// === Module 14540: AccountPhoneSetting ===
 
-// Module 14524 (AccountPhoneSetting)
+// Module 14540 (AccountPhoneSetting)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import PhoneConstants from "PhoneConstants" /* 6540 */;
-import PhoneActionCreators from "PhoneActionCreators" /* 6542 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import PhoneConstants from "PhoneConstants" /* 6547 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 6549 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 let currentUser;
@@ -65,7 +65,7 @@ let obj = {
     const pushLazy = ModalActionCreatorsDefault.pushLazy;
     const obj = { allowDeletePhone: true, reason: PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE };
     ModalActionCreatorsDefault;
-    const tmp2 = asyncRequire(6539, dependencyMap.paths);
+    const tmp2 = asyncRequire(6546, dependencyMap.paths);
     pushLazy(tmp2, obj, closure_4);
   },
   withArrow: true

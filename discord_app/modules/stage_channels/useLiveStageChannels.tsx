@@ -1,12 +1,12 @@
-// === Module 16111: useLiveStageChannels ===
+// === Module 16150: useLiveStageChannels ===
 
-// Module 16111 (useLiveStageChannels)
+// Module 16150 (useLiveStageChannels)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

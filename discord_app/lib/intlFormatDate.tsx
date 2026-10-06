@@ -1,6 +1,6 @@
-// === Module 4558: intlFormatDate ===
+// === Module 4564: intlFormatDate ===
 
-// Module 4558 (intlFormatDate)
+// Module 4564 (intlFormatDate)
 import LocaleStore from "LocaleStore" /* 2116 */;
 import size from "module_2" /* 2 */;
 

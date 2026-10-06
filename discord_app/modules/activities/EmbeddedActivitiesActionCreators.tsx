@@ -1,30 +1,30 @@
-// === Module 8993: EmbeddedActivitiesActionCreators ===
+// === Module 9026: EmbeddedActivitiesActionCreators ===
 
-// Module 8993 (EmbeddedActivitiesActionCreators)
+// Module 9026 (EmbeddedActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import ApplicationConstants from "ApplicationConstants" /* 1360 */;
 import Constants2 from "Constants" /* 2011 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2038 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2037 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import Constants3 from "Constants" /* 7226 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9016 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import Constants3 from "Constants" /* 7239 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8827 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9049 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import PopoutWindowStore from "PopoutWindowStore" /* 5033 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import PopoutWindowStore from "PopoutWindowStore" /* 5039 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -163,7 +163,7 @@ let obj = function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
             PRIVATE_CHANNEL = undefined;
             c16 = 1;
             c17 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c16) {
           if (channelId === 1) {
@@ -518,7 +518,7 @@ obj = function _maybeSendPrimaryAppCommand() {
             user = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (applicationId === 1) {
@@ -847,7 +847,7 @@ obj = function _joinEmbeddedActivity() {
             obj32 = undefined;
             guild_id = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === guild_id) {
           if (arg0 === 1) {
@@ -1346,7 +1346,7 @@ obj = function _fetchShelf() {
             assets = undefined;
             c8 = 1;
             c9 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === c8) {
@@ -1546,7 +1546,7 @@ obj = function _sendEmbeddedActivityInvite() {
             code = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -1635,7 +1635,7 @@ obj = function _sendEmbeddedActivityInviteUser() {
             let code;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -1780,14 +1780,17 @@ function createProxyTicket() {
   return obj(...arguments);
 }
 obj = function _createProxyTicket() {
-  obj = _asyncToGenerator(async (arg0, channel_id) => {
+  obj = _asyncToGenerator(async (arg0, channel_id, surface) => {
     let closure_0 = arg0;
+    let c4 = 0;
     let c3 = 0;
-    let c2 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0, value, arg2) => {
       const obj4 = { use_stateless_ticket: true };
       if (null != channel_id) {
         obj4.channel_id = channel_id;
+      }
+      if (null != surface) {
+        obj4.surface = surface;
       }
       const HTTP = HTTPUtils.HTTP;
       const request = { url: closure_2_21.APPLICATION_PROXY_TICKET(closure_0), body: obj4, rejectWithError: true };

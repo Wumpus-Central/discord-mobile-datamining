@@ -1,9 +1,9 @@
-// === Module 17277: useCameraEncodeError ===
+// === Module 17306: useCameraEncodeError ===
 
-// Module 17277 (useCameraEncodeError)
-import AVError from "AVError" /* 9095 */;
+// Module 17306 (useCameraEncodeError)
+import AVError from "AVError" /* 9131 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 9094 */;
+import AVErrorStore from "AVErrorStore" /* 9130 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

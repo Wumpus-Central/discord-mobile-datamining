@@ -1,6 +1,6 @@
-// === Module 6979: sampleWithUserId ===
+// === Module 6992: sampleWithUserId ===
 
-// Module 6979 (sampleWithUserId)
+// Module 6992 (sampleWithUserId)
 import _modDef1251 from "module_1251" /* 1251 */;
 import size from "module_2" /* 2 */;
 

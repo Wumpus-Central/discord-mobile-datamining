@@ -1,9 +1,9 @@
-// === Module 9702: useDeafStates ===
+// === Module 9715: useDeafStates ===
 
-// Module 9702 (useDeafStates)
+// Module 9715 (useDeafStates)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

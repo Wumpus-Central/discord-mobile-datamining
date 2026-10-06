@@ -1,13 +1,13 @@
-// === Module 7764: useCurrentChangelog ===
+// === Module 7775: useCurrentChangelog ===
 
-// Module 7764 (useCurrentChangelog)
+// Module 7775 (useCurrentChangelog)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react2 from "react" /* 576 */;
 import ChangelogConstants from "ChangelogConstants" /* 2102 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 7765 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 7776 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import ChangelogStore from "ChangelogStore" /* 4904 */;
+import ChangelogStore from "ChangelogStore" /* 4910 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 8539: StorefrontCollectionActionCreators ===
+// === Module 8572: StorefrontCollectionActionCreators ===
 
-// Module 8539 (StorefrontCollectionActionCreators)
+// Module 8572 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import StoreUtils from "StoreUtils" /* 5322 */;
-import StorefrontCacheUtils from "StorefrontCacheUtils" /* 7891 */;
+import StoreUtils from "StoreUtils" /* 5329 */;
+import StorefrontCacheUtils from "StorefrontCacheUtils" /* 7902 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8537 */;
-import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7071 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 8570 */;
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7084 */;
 import size from "module_2" /* 2 */;
 
 let collectionPageFetchState, collectionsAfterFetchState, requestKey;
@@ -96,7 +96,7 @@ let obj = function _maybeFetchCollectionsWithProducts() {
     flag = closure_0.includeUnpublishedCollections ?? false;
     flag2 = closure_0.ignoreCache ?? false;
     flag3 = closure_0.includePricing ?? false;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -532,7 +532,7 @@ obj = function _maybeFetchCollectionsForApplication() {
     if (includePricing === undefined) {
       includePricing = false;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

@@ -1,6 +1,6 @@
-// === Module 6905: EntitlementActionCreators ===
+// === Module 6915: EntitlementActionCreators ===
 
-// Module 6905 (EntitlementActionCreators)
+// Module 6915 (EntitlementActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -47,7 +47,7 @@ let obj = function _fetchUserEntitlements() {
       }
       await "IconComponent";
       entitlementType = withSku.entitlementType;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

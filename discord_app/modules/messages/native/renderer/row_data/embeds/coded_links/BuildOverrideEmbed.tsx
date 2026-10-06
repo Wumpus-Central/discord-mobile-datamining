@@ -1,20 +1,20 @@
-// === Module 13059: BuildOverrideEmbed ===
+// === Module 13078: BuildOverrideEmbed ===
 
-// Module 13059 (BuildOverrideEmbed)
+// Module 13078 (BuildOverrideEmbed)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
 import react_nativeAll from "react-native" /* 1368 */;
-import shared from "shared" /* 4729 */;
-import Constants from "Constants" /* 7226 */;
-import react_native2 from "react-native" /* 7595 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
-import BuildOverrideStore2 from "BuildOverrideStore" /* 11082 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11399 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11418 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 11419 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 13058 */;
-import validateBuildOverrideDefault from "validateBuildOverride" /* 13060 */;
+import shared from "shared" /* 4735 */;
+import Constants from "Constants" /* 7239 */;
+import react_native2 from "react-native" /* 7606 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
+import BuildOverrideStore2 from "BuildOverrideStore" /* 11095 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11412 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11431 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 11432 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 13077 */;
+import validateBuildOverrideDefault from "validateBuildOverride" /* 13079 */;
 import size from "module_2" /* 2 */;
 
 const BuildOverrideStore = BuildOverrideStore2;

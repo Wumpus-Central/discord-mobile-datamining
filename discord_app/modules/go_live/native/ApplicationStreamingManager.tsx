@@ -1,16 +1,16 @@
-// === Module 18048: ApplicationStreamingManager ===
+// === Module 18093: ApplicationStreamingManager ===
 
-// Module 18048 (ApplicationStreamingManager)
+// Module 18093 (ApplicationStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Fragment from "Fragment" /* 21 */;
-import Constants from "Constants" /* 4915 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4937 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9306 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 9637 */;
+import Constants from "Constants" /* 4921 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4943 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 9650 */;
 import react from "react" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4936 */;
-import ApplicationStreamingManager2 from "go_live/ApplicationStreamingManager" /* 18049 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
+import ApplicationStreamingManager2 from "go_live/ApplicationStreamingManager" /* 18094 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

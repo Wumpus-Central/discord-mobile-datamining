@@ -1,7 +1,7 @@
-// === Module 5698: getPricesFromServer ===
+// === Module 5705: getPricesFromServer ===
 
-// Module 5698 (getPricesFromServer)
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4529 */;
+// Module 5705 (getPricesFromServer)
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 4535 */;
 import size from "module_2" /* 2 */;
 
 const getPriceFromServer = SubscriptionPlanRecord.getPriceFromServer;

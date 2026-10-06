@@ -1,6 +1,6 @@
-// === Module 16146: MentionsBadge ===
+// === Module 16185: MentionsBadge ===
 
-// Module 16146 (MentionsBadge)
+// Module 16185 (MentionsBadge)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import native from "native" /* 1188 */;

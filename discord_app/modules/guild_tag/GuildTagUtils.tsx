@@ -1,12 +1,12 @@
-// === Module 7836: GuildTagUtils ===
+// === Module 7847: GuildTagUtils ===
 
-// Module 7836 (GuildTagUtils)
+// Module 7847 (GuildTagUtils)
 import Constants from "Constants" /* 1085 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4515 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4521 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
-import GuildTagConstants from "GuildTagConstants" /* 7603 */;
+import GuildTagConstants from "GuildTagConstants" /* 7614 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

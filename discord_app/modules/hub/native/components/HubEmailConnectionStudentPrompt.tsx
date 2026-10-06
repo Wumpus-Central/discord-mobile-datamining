@@ -1,15 +1,15 @@
-// === Module 12395: HubEmailConnectionStudentPrompt ===
+// === Module 12410: HubEmailConnectionStudentPrompt ===
 
-// Module 12395 (HubEmailConnectionStudentPrompt)
+// Module 12410 (HubEmailConnectionStudentPrompt)
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import HubConstants from "HubConstants" /* 12385 */;
+import HubConstants from "HubConstants" /* 12400 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import TextStyles from "TextStyles" /* 5915 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import TextStyles from "TextStyles" /* 5922 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -199,7 +199,7 @@ const tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   dependencyMap = obj.useNavigation();
   let obj2 = { children: closure_8(closure_3, obj3) };
   obj3 = { style: tmp.container, children: items };
-  const HubEmailConnectionScreen = onClose(12394).HubEmailConnectionScreen;
+  const HubEmailConnectionScreen = onClose(12409).HubEmailConnectionScreen;
   const obj4 = { style: tmp.header, children: intl.string(onClose(1126).t["+/Pv0h"]) };
   const LegacyText = onClose(1188).LegacyText;
   intl = onClose(1126).intl;
@@ -207,7 +207,7 @@ const tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
   const obj5 = {
     DEPRECATED_style: tmp.row,
     leading: closure_7(closure_4, obj6),
-    trailing: invite(6633).Arrow,
+    trailing: invite(6640).Arrow,
     label: intl2.string(onClose(1126).t["a7a/D+"]),
     subLabel: intl3.string(onClose(1126).t.Gsegk8),
     onPress() {
@@ -217,14 +217,14 @@ const tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((onClose) => {
       closure_2.push(HubEmailConnectionSteps.VERIFY_EMAIL, obj2);
     }
   };
-  obj6 = { source: invite(12396) };
-  const tmp2 = invite(6633);
+  obj6 = { source: invite(12411) };
+  const tmp2 = invite(6640);
   intl2 = onClose(1126).intl;
   intl3 = onClose(1126).intl;
   items[1] = closure_7(tmp2, obj5);
-  const obj7 = { DEPRECATED_style: tmp.row, leading: closure_7(closure_4, obj8), trailing: invite(6633).Arrow, label: intl4.string(onClose(1126).t.GLG9n4), onPress: onClose };
-  obj8 = { source: invite(12397) };
-  const tmp3 = invite(6633);
+  const obj7 = { DEPRECATED_style: tmp.row, leading: closure_7(closure_4, obj8), trailing: invite(6640).Arrow, label: intl4.string(onClose(1126).t.GLG9n4), onPress: onClose };
+  obj8 = { source: invite(12412) };
+  const tmp3 = invite(6640);
   intl4 = onClose(1126).intl;
   items[2] = closure_7(tmp3, obj7);
   return closure_7(HubEmailConnectionScreen, obj2);

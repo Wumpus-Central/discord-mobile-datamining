@@ -1,8 +1,8 @@
-// === Module 17839: EnableCommunitySharedStyles ===
+// === Module 17885: EnableCommunitySharedStyles ===
 
-// Module 17839 (EnableCommunitySharedStyles)
+// Module 17885 (EnableCommunitySharedStyles)
 import react_native from "react-native" /* 17 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const Platform = react_native.Platform;

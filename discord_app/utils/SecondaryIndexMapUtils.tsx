@@ -1,6 +1,6 @@
-// === Module 5589: SecondaryIndexMapUtils ===
+// === Module 5596: SecondaryIndexMapUtils ===
 
-// Module 5589 (SecondaryIndexMapUtils)
+// Module 5596 (SecondaryIndexMapUtils)
 import _modDef1342 from "module_1342" /* 1342 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// === Module 6888: useGiftCardMobileConsumptionHalfsheet ===
+// === Module 6898: useGiftCardMobileConsumptionHalfsheet ===
 
-// Module 6888 (useGiftCardMobileConsumptionHalfsheet)
+// Module 6898 (useGiftCardMobileConsumptionHalfsheet)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1096 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5404 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import WalletBalanceStore from "WalletBalanceStore" /* 6889 */;
-import PaymentSourceStore from "PaymentSourceStore" /* 4531 */;
+import WalletBalanceStore from "WalletBalanceStore" /* 6899 */;
+import PaymentSourceStore from "PaymentSourceStore" /* 4537 */;
 import size from "module_2" /* 2 */;
 
 let Idle, dependencyMap;
@@ -32,7 +32,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
   let markAsDismissed;
   let ref;
   let tmp = enabled;
-  obj = enabled(6890);
+  obj = enabled(6900);
   enabled = obj.useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
   let obj2 = enabled(504);
   let items = [markAsDismissed];
@@ -95,7 +95,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
     }
     return items1;
   }, items6);
-  const tmpResult = tmp(6891);
+  const tmpResult = tmp(6901);
   const tmp10 = first(tmpResult.useSelectedDismissibleContent(memo, undefined, true), 2);
   first = tmp10[0];
   react = tmp12;
@@ -135,7 +135,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
         let c0 = false;
         obj = DispatcherDefault;
         const subscription = obj.subscribe("SHOW_ACTION_SHEET", handleShow);
-        const promise = asyncRequire(6895, dependencyMap.paths);
+        const promise = asyncRequire(6905, dependencyMap.paths);
         promise.catch(() => {
           const tmp = c0 || Idle !== closure_2_10.Opening;
           if (!tmp) {

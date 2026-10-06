@@ -1,12 +1,12 @@
-// === Module 7716: JoinRequestNotificationSystemMessage ===
+// === Module 7727: JoinRequestNotificationSystemMessage ===
 
-// Module 7716 (JoinRequestNotificationSystemMessage)
+// Module 7727 (JoinRequestNotificationSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Constants from "Constants" /* 1085 */;
 import intl7 from "intl" /* 1126 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5932 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4700 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 5939 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4706 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;

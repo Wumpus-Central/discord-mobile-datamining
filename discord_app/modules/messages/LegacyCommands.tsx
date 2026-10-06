@@ -1,15 +1,15 @@
-// === Module 11610: LegacyCommands ===
+// === Module 11624: LegacyCommands ===
 
-// Module 11610 (LegacyCommands)
+// Module 11624 (LegacyCommands)
 import UserSettings from "UserSettings" /* 2028 */;
-import ReactionUtils from "ReactionUtils" /* 4521 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7260 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 8808 */;
+import ReactionUtils from "ReactionUtils" /* 4527 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7273 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 8838 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import EmojiStore from "EmojiStore" /* 5638 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import EmojiStore from "EmojiStore" /* 5645 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import Constants from "Constants" /* 1085 */;
 import module_1936_mod from "module_1936" /* 1936 */;
 import size from "module_2" /* 2 */;

@@ -1,18 +1,18 @@
-// === Module 10744: CollectiblesShopGiftModal ===
+// === Module 10757: CollectiblesShopGiftModal ===
 
-// Module 10744 (CollectiblesShopGiftModal)
+// Module 10757 (CollectiblesShopGiftModal)
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
 import StringUtils from "StringUtils" /* 2018 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import BadgeId from "BadgeId" /* 7855 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
-import openGiftModal from "openGiftModal" /* 10743 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 10746 */;
-import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 10749 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+import BadgeId from "BadgeId" /* 7866 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
+import openGiftModal from "openGiftModal" /* 10756 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 10759 */;
+import CollectiblesShopGiftPurchaseSectionDefault from "CollectiblesShopGiftPurchaseSection" /* 10762 */;
 import react from "react" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

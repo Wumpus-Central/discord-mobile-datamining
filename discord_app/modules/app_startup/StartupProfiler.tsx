@@ -1,6 +1,6 @@
-// === Module 11571: StartupProfiler ===
+// === Module 11584: StartupProfiler ===
 
-// Module 11571 (StartupProfiler)
+// Module 11584 (StartupProfiler)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 19 */;

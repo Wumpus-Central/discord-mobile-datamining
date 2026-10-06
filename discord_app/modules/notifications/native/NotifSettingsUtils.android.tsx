@@ -1,10 +1,10 @@
-// === Module 14288: NotifSettingsUtils ===
+// === Module 14306: NotifSettingsUtils ===
 
-// Module 14288 (NotifSettingsUtils)
+// Module 14306 (NotifSettingsUtils)
 import intl2 from "intl" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import react_nativeDefault from "react-native" /* 14289 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14284 */;
+import react_nativeDefault from "react-native" /* 14307 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14302 */;
 import size from "module_2" /* 2 */;
 
 let map, map1, notifType;
@@ -119,7 +119,7 @@ function buildChannelsAndMapping() {
       return map;
     }
   }
-  const obj = map(14290);
+  const obj = map(14308);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = computeInheritedImportances(mappings);

@@ -1,17 +1,17 @@
-// === Module 17048: ContextMenuCommandRootScreen ===
+// === Module 17074: ContextMenuCommandRootScreen ===
 
-// Module 17048 (ContextMenuCommandRootScreen)
+// Module 17074 (ContextMenuCommandRootScreen)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import executeCommandDefault from "executeCommand" /* 8934 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import executeCommandDefault from "executeCommand" /* 8963 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 16882: SearchFetchPendingManager ===
+// === Module 16907: SearchFetchPendingManager ===
 
-// Module 16882 (SearchFetchPendingManager)
-import useInitialValueDefault from "useInitialValue" /* 5984 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11966 */;
+// Module 16907 (SearchFetchPendingManager)
+import useInitialValueDefault from "useInitialValue" /* 5991 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 11980 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

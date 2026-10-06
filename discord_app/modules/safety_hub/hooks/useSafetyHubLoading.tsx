@@ -1,9 +1,9 @@
-// === Module 14554: useSafetyHubLoading ===
+// === Module 14570: useSafetyHubLoading ===
 
-// Module 14554 (useSafetyHubLoading)
+// Module 14570 (useSafetyHubLoading)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import SafetyHubStore from "SafetyHubStore" /* 8106 */;
+import SafetyHubStore from "SafetyHubStore" /* 8139 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

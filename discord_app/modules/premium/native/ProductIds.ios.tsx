@@ -1,7 +1,7 @@
-// === Module 6921: premium/ProductIds ===
+// === Module 6934: premium/ProductIds ===
 
-// Module 6921 (premium/ProductIds)
-import AppleProductIds from "AppleProductIds" /* 6922 */;
+// Module 6934 (premium/ProductIds)
+import AppleProductIds from "AppleProductIds" /* 6935 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import size from "module_2" /* 2 */;
 

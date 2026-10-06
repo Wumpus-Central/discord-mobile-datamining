@@ -1,9 +1,9 @@
-// === Module 15531: useCheckpointMusic ===
+// === Module 15547: useCheckpointMusic ===
 
-// Module 15531 (useCheckpointMusic)
+// Module 15547 (useCheckpointMusic)
 import react_native from "react-native" /* 17 */;
 import react from "react" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 15524 */;
+import CheckpointStore from "CheckpointStore" /* 15540 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

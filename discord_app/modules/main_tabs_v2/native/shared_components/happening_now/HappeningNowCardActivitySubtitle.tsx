@@ -1,19 +1,19 @@
-// === Module 16004: HappeningNowCardActivitySubtitle ===
+// === Module 16043: HappeningNowCardActivitySubtitle ===
 
-// Module 16004 (HappeningNowCardActivitySubtitle)
+// Module 16043 (HappeningNowCardActivitySubtitle)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import isStreamingDefault from "isStreaming" /* 7931 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9260 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10625 */;
-import HappeningNowCard from "HappeningNowCard" /* 15115 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import isStreamingDefault from "isStreaming" /* 7942 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9295 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10638 */;
+import HappeningNowCard from "HappeningNowCard" /* 15130 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -145,7 +145,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       cResult[10] = tmp36;
       tmp33 = tmp36;
     }
-    const tmp32 = jsx(voiceState2(15115).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp27, children: tmp26 });
+    const tmp32 = jsx(voiceState2(15130).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp27, children: tmp26 });
     cResult[5] = tmp26;
     cResult[6] = tmp27;
     cResult[7] = tmp32;
@@ -157,7 +157,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     const obj = voiceState2(504);
     const stateFromStores1 = obj.useStateFromStores(items1, () => ChannelStore.getChannel(voiceState2.channelId));
     const tmp9 = useChannelNameDefault(stateFromStores1);
-    const HappeningNowCardSubtitle = voiceState2(15115).HappeningNowCardSubtitle;
+    const HappeningNowCardSubtitle = voiceState2(15130).HappeningNowCardSubtitle;
     if (null != stateFromStores1) {
       const obj7 = { channel: stateFromStores1 };
       const tmp13 = getChannelA11yLabelDefault(obj7);

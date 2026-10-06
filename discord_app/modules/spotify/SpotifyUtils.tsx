@@ -1,16 +1,16 @@
-// === Module 11381: SpotifyUtils ===
+// === Module 11394: SpotifyUtils ===
 
-// Module 11381 (SpotifyUtils)
+// Module 11394 (SpotifyUtils)
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import PlatformsDefault from "Platforms" /* 5442 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11383 */;
-import UserActivityActionCreators from "UserActivityActionCreators" /* 11384 */;
+import PlatformsDefault from "Platforms" /* 5449 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11396 */;
+import UserActivityActionCreators from "UserActivityActionCreators" /* 11397 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11382 */;
-import SpotifyStore from "SpotifyStore" /* 5439 */;
-import SpotifyConstants from "SpotifyConstants" /* 8016 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11395 */;
+import SpotifyStore from "SpotifyStore" /* 5446 */;
+import SpotifyConstants from "SpotifyConstants" /* 8026 */;
 import size from "module_2" /* 2 */;
 
 let TRACK, closure_3, closure_4;
@@ -150,7 +150,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        const obj3 = playableComputerDevices(11383);
+        const obj3 = playableComputerDevices(11396);
         obj3.setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);

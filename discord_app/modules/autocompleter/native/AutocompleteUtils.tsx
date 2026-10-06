@@ -1,24 +1,24 @@
-// === Module 10071: autocompleter/AutocompleteUtils ===
+// === Module 10084: autocompleter/AutocompleteUtils ===
 
-// Module 10071 (autocompleter/AutocompleteUtils)
+// Module 10084 (autocompleter/AutocompleteUtils)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5621 */;
-import TimestampUtils from "TimestampUtils" /* 5807 */;
-import FormDividerDefault from "FormDivider" /* 8899 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5628 */;
+import TimestampUtils from "TimestampUtils" /* 5814 */;
+import FormDividerDefault from "FormDivider" /* 8928 */;
 import react from "react" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
-import ApplicationCommandsConstants from "ApplicationCommandsConstants" /* 10072 */;
-import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5789 */;
-import createStyles from "createStyles" /* 4890 */;
+import ApplicationCommandsConstants from "ApplicationCommandsConstants" /* 10085 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5796 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

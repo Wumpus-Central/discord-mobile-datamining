@@ -1,18 +1,18 @@
-// === Module 9734: SpeakerTileStatuses ===
+// === Module 9747: SpeakerTileStatuses ===
 
-// Module 9734 (SpeakerTileStatuses)
+// Module 9747 (SpeakerTileStatuses)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import AssetRegistryDefault from "AssetRegistry" /* 6457 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9736 */;
+import AssetRegistryDefault from "AssetRegistry" /* 6464 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9749 */;
 import react from "react" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5578 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5585 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -132,7 +132,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId)
           return MediaEngineStore.isLocalMute(userId);
         }
       }
-      tmp15 = channelId(9691);
+      tmp15 = channelId(9704);
     } else {
       class S {
         constructor() {
@@ -191,15 +191,15 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((userId)
     flag2 = false;
   }
   if (stateFromStores) {
-    tmp5 = channelId(9691);
+    tmp5 = channelId(9704);
     flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(9126);
+    tmp5 = channelId(9161);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(4819);
+      tmp5 = channelId(4825);
       flag3 = false;
     }
   }
@@ -238,7 +238,7 @@ const memo2Result = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((userI
     let tmp9;
     const tmpResult = userId(504);
     if (tmpResult.useStateFromStores(first, tmp7, tmp8)) {
-      tmp9 = channelId(9735);
+      tmp9 = channelId(9748);
     }
     let tmp11 = null;
     if (null != tmp9) {
@@ -298,7 +298,7 @@ const memo2Result = memo2(ReactCompilerGating.isReactCompilerEnabled() ? ((userI
   const tmp = closure_8();
   const obj = userId(504);
   if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(9735);
+    tmp4 = channelId(9748);
   }
   let tmp6 = null;
   if (null != tmp4) {

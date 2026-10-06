@@ -1,25 +1,25 @@
-// === Module 15304: SettingsNotificationScreen ===
+// === Module 15319: SettingsNotificationScreen ===
 
-// Module 15304 (SettingsNotificationScreen)
+// Module 15319 (SettingsNotificationScreen)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
-import CircleErrorIcon2 from "CircleErrorIcon" /* 4800 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6470 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12054 */;
-import SettingLayoutDefault from "SettingLayout" /* 14499 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15305 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15306 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15307 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15308 */;
+import CircleErrorIcon2 from "CircleErrorIcon" /* 4806 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 6477 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12069 */;
+import SettingLayoutDefault from "SettingLayout" /* 14515 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15320 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15321 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15322 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15323 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

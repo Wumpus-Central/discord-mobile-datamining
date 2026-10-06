@@ -1,11 +1,11 @@
-// === Module 6662: useAuthorizationApp ===
+// === Module 6669: useAuthorizationApp ===
 
-// Module 6662 (useAuthorizationApp)
+// Module 6669 (useAuthorizationApp)
 import react2 from "react" /* 576 */;
 import ApplicationConstants from "ApplicationConstants" /* 1360 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6663 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 6670 */;
 import react from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

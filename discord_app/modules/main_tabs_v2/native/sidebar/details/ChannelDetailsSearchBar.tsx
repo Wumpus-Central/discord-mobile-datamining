@@ -1,14 +1,14 @@
-// === Module 16790: ChannelDetailsSearchBar ===
+// === Module 16811: ChannelDetailsSearchBar ===
 
-// Module 16790 (ChannelDetailsSearchBar)
+// Module 16811 (ChannelDetailsSearchBar)
 import Fragment from "Fragment" /* 21 */;
-import ChannelDetailsStore from "ChannelDetailsStore" /* 7511 */;
-import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10653 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 11985 */;
-import SearchButton from "SearchButton" /* 12007 */;
+import ChannelDetailsStore from "ChannelDetailsStore" /* 7522 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10666 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12005 */;
+import SearchButton from "SearchButton" /* 12022 */;
 import react from "react" /* 19 */;
-import SearchQueryStore_mod from "SearchQueryStore" /* 11967 */;
-import createStyles from "createStyles" /* 4890 */;
+import SearchQueryStore_mod from "SearchQueryStore" /* 11994 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

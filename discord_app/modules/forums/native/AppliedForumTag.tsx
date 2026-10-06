@@ -1,6 +1,6 @@
-// === Module 10356: AppliedForumTag ===
+// === Module 10369: AppliedForumTag ===
 
-// Module 10356 (AppliedForumTag)
+// Module 10369 (AppliedForumTag)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
@@ -8,14 +8,14 @@ import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import EmojiDefault from "Emoji" /* 6625 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10357 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import EmojiDefault from "Emoji" /* 6632 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10370 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5638 */;
+import EmojiStore from "EmojiStore" /* 5645 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

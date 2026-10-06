@@ -1,18 +1,18 @@
-// === Module 12293: ProvisionalAccountExplainer ===
+// === Module 12308: ProvisionalAccountExplainer ===
 
-// Module 12293 (ProvisionalAccountExplainer)
+// Module 12308 (ProvisionalAccountExplainer)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 4800 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import UserProfileCardDefault from "UserProfileCard" /* 6706 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12294 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 4806 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import UserProfileCardDefault from "UserProfileCard" /* 6713 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12309 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -44,7 +44,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((textVariant) =>
       if (cResult[4] === userId) {
         tmp5 = cResult[5];
       }
-      const tmpResult = iconSize(12295);
+      const tmpResult = iconSize(12310);
       return tmpResult.useProvisionalAccountExplanationText(tmp5);
     }
     const obj2 = { userId, renderApplicationName: tmp4 };
@@ -70,7 +70,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((textVariant) =>
     const obj = { application, textVariant, iconSize };
     return hasOwnProperty(ApplicationIconAndNameDefault, obj, application.id);
   }, items);
-  let obj = iconSize(12295);
+  let obj = iconSize(12310);
   return obj.useProvisionalAccountExplanationText({ userId, renderApplicationName });
 });
 ReactCompilerGating = ReactCompilerGating_mod;

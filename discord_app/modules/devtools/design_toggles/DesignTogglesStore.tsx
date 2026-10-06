@@ -1,6 +1,6 @@
-// === Module 6013: DesignTogglesStore ===
+// === Module 6020: DesignTogglesStore ===
 
-// Module 6013 (DesignTogglesStore)
+// Module 6020 (DesignTogglesStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;

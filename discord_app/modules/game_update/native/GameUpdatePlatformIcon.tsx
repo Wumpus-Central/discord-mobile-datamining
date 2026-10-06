@@ -1,15 +1,15 @@
-// === Module 8543: GameUpdatePlatformIcon ===
+// === Module 8576: GameUpdatePlatformIcon ===
 
-// Module 8543 (GameUpdatePlatformIcon)
+// Module 8576 (GameUpdatePlatformIcon)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import MobilePhoneIcon from "MobilePhoneIcon" /* 6448 */;
-import PlatformType from "PlatformType" /* 8018 */;
-import AppleNeutralIcon from "AppleNeutralIcon" /* 8125 */;
-import XboxNeutralIcon from "XboxNeutralIcon" /* 8352 */;
-import ScreenIcon from "ScreenIcon" /* 8544 */;
-import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 8546 */;
-import NintendoSwitchNeutralIcon from "NintendoSwitchNeutralIcon" /* 8548 */;
+import MobilePhoneIcon from "MobilePhoneIcon" /* 6455 */;
+import PlatformType from "PlatformType" /* 8028 */;
+import AppleNeutralIcon from "AppleNeutralIcon" /* 8158 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 8385 */;
+import ScreenIcon from "ScreenIcon" /* 8577 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 8579 */;
+import NintendoSwitchNeutralIcon from "NintendoSwitchNeutralIcon" /* 8581 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

@@ -1,11 +1,11 @@
-// === Module 15981: useMessagesFlatData ===
+// === Module 16020: useMessagesFlatData ===
 
-// Module 15981 (useMessagesFlatData)
+// Module 16020 (useMessagesFlatData)
 import react2 from "react" /* 576 */;
-import useMessagesData from "useMessagesData" /* 15972 */;
-import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 15982 */;
-import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16019 */;
-import MessagesItemSeparator from "MessagesItemSeparator" /* 16020 */;
+import useMessagesData from "useMessagesData" /* 16011 */;
+import MessagesItemHappeningNow from "MessagesItemHappeningNow" /* 16021 */;
+import MessagesItemEmptyState from "MessagesItemEmptyState" /* 16058 */;
+import MessagesItemSeparator from "MessagesItemSeparator" /* 16059 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

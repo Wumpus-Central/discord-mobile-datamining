@@ -1,11 +1,11 @@
-// === Module 11916: MemberActionUtils ===
+// === Module 11930: MemberActionUtils ===
 
-// Module 11916 (MemberActionUtils)
-import GuildMemberConstants from "GuildMemberConstants" /* 4495 */;
-import useIsNewMemberDefault from "useIsNewMember" /* 6724 */;
+// Module 11930 (MemberActionUtils)
+import GuildMemberConstants from "GuildMemberConstants" /* 4501 */;
+import useIsNewMemberDefault from "useIsNewMember" /* 6738 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5077 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5078 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 5083 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 5084 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

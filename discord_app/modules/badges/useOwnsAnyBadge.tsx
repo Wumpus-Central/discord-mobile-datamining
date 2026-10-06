@@ -1,10 +1,10 @@
-// === Module 16976: useOwnsAnyBadge ===
+// === Module 17002: useOwnsAnyBadge ===
 
-// Module 16976 (useOwnsAnyBadge)
-import useDisplayProfileDefault from "useDisplayProfile" /* 7857 */;
-import useBadgesDefault from "useBadges" /* 7914 */;
+// Module 17002 (useOwnsAnyBadge)
+import useDisplayProfileDefault from "useDisplayProfile" /* 7868 */;
+import useBadgesDefault from "useBadges" /* 7925 */;
 import UserStore from "UserStore" /* 1377 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

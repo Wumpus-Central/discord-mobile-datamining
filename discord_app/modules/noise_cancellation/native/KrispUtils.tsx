@@ -1,6 +1,6 @@
-// === Module 13623: noise_cancellation/KrispUtils ===
+// === Module 13639: noise_cancellation/KrispUtils ===
 
-// Module 13623 (noise_cancellation/KrispUtils)
+// Module 13639 (noise_cancellation/KrispUtils)
 import inject from "inject" /* 2001 */;
 import size from "module_2" /* 2 */;
 

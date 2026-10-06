@@ -1,13 +1,13 @@
-// === Module 16625: ConjureVersionRestoreConfirm ===
+// === Module 16662: ConjureVersionRestoreConfirm ===
 
-// Module 16625 (ConjureVersionRestoreConfirm)
+// Module 16662 (ConjureVersionRestoreConfirm)
 import react2 from "react" /* 576 */;
 import intl7 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
-import TableCheckboxRow2 from "TableCheckboxRow" /* 5990 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
+import TableCheckboxRow2 from "TableCheckboxRow" /* 5997 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
@@ -38,9 +38,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((matchingBackup)
   [first, tmp6] = react.useState(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = intl7.intl;
-    const stringResult = intl.string(_modDef3723.NDY6Zv);
+    const stringResult = intl.string(_modDef3753.NDY6Zv);
     const intl2 = intl7.intl;
-    const stringResult1 = intl2.string(_modDef3723.z2x5zj);
+    const stringResult1 = intl2.string(_modDef3753.z2x5zj);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp7 = stringResult;
@@ -57,7 +57,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((matchingBackup)
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const intl5 = intl7.intl;
-      const stringResult2 = intl5.string(_modDef3723.K3Q49G);
+      const stringResult2 = intl5.string(_modDef3753.K3Q49G);
       cResult[5] = stringResult2;
       tmp16 = stringResult2;
     } else {
@@ -132,7 +132,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((matchingBackup)
   if (null != matchingBackup) {
     const obj6 = { hasIcons: false, children: hasOwnProperty(TableCheckboxRow, obj7) };
     const TableRowGroup = TableRowGroup2.TableRowGroup;
-    obj7 = { label: intl3.string(_modDef3723["+/pFME"]), subLabel: intl4.string(_modDef3723["+I112y"]), checked: first, onPress: tmp6 };
+    obj7 = { label: intl3.string(_modDef3753["+/pFME"]), subLabel: intl4.string(_modDef3753["+I112y"]), checked: first, onPress: tmp6 };
     TableCheckboxRow = TableCheckboxRow2.TableCheckboxRow;
     intl3 = intl7.intl;
     intl4 = intl7.intl;
@@ -160,7 +160,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((matchingBackup)
   const onConfirm = matchingBackup.onConfirm;
   first = undefined;
   [first, tmp3] = react.useState(false);
-  const obj = { title: intl.string(_modDef3723.NDY6Zv), content: intl2.string(_modDef3723.z2x5zj), extraContent: tmp4Result, actions: metroImportDefault(metroRequire, obj4) };
+  const obj = { title: intl.string(_modDef3753.NDY6Zv), content: intl2.string(_modDef3753.z2x5zj), extraContent: tmp4Result, actions: metroImportDefault(metroRequire, obj4) };
   const AlertModal = AlertModal2.AlertModal;
   intl = intl7.intl;
   intl2 = intl7.intl;
@@ -168,7 +168,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((matchingBackup)
   if (null != matchingBackup) {
     const obj2 = { hasIcons: false, children: hasOwnProperty(TableCheckboxRow, obj3) };
     const TableRowGroup = TableRowGroup2.TableRowGroup;
-    obj3 = { label: intl3.string(_modDef3723["+/pFME"]), subLabel: intl4.string(_modDef3723["+I112y"]), checked: first, onPress: tmp3 };
+    obj3 = { label: intl3.string(_modDef3753["+/pFME"]), subLabel: intl4.string(_modDef3753["+I112y"]), checked: first, onPress: tmp3 };
     TableCheckboxRow = TableCheckboxRow2.TableCheckboxRow;
     intl3 = intl7.intl;
     intl4 = intl7.intl;
@@ -177,7 +177,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? ((matchingBackup)
   obj4 = { children: items };
   const obj5 = {
     variant: "primary",
-    text: intl5.string(_modDef3723.K3Q49G),
+    text: intl5.string(_modDef3753.K3Q49G),
     onPress() {
       let tmp2 = null;
       if (first) {

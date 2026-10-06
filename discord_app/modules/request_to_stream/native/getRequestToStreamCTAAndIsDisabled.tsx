@@ -1,11 +1,11 @@
-// === Module 13081: getRequestToStreamCTAAndIsDisabled ===
+// === Module 13100: getRequestToStreamCTAAndIsDisabled ===
 
-// Module 13081 (getRequestToStreamCTAAndIsDisabled)
+// Module 13100 (getRequestToStreamCTAAndIsDisabled)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import intl8 from "intl" /* 1126 */;
-import _modDef2979 from "module_2979" /* 2979 */;
-import isInviteActive from "isInviteActive" /* 11386 */;
-import useCanFulfillStreamRequest from "useCanFulfillStreamRequest" /* 11398 */;
+import _modDef3007 from "module_3007" /* 3007 */;
+import isInviteActive from "isInviteActive" /* 11399 */;
+import useCanFulfillStreamRequest from "useCanFulfillStreamRequest" /* 11411 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import size from "module_2" /* 2 */;
@@ -24,14 +24,14 @@ export default function getRequestToStreamCTAAndIsDisabled(id) {
   const sum = extractTimestampResult + isInviteActive.EMBED_LIFETIME;
   const tmp10 = sum < Date.now();
   const intl = intl8.intl;
-  const stringResult = intl.string(_modDef2979["5+172e"]);
+  const stringResult = intl.string(_modDef3007["5+172e"]);
   if (tmp10) {
     const intl6 = intl8.intl;
-    text = intl6.string(_modDef2979.u4QmWl);
+    text = intl6.string(_modDef3007.u4QmWl);
     isDisabled = true;
   } else if (id.author.id === id) {
     const intl5 = intl8.intl;
-    text = intl5.string(_modDef2979["8HU1M2"]);
+    text = intl5.string(_modDef3007["8HU1M2"]);
     isDisabled = true;
   } else {
     isDisabled = false;
@@ -39,22 +39,22 @@ export default function getRequestToStreamCTAAndIsDisabled(id) {
     if (!first) {
       if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.ALREADY_STREAMING === tmp3[1]) {
         const intl4 = intl8.intl;
-        text = intl4.string(_modDef2979.P0wwmM);
+        text = intl4.string(_modDef3007.P0wwmM);
         isDisabled = true;
       } else if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NOT_RUNNING_GAME === tmp3[1]) {
         const intl3 = intl8.intl;
-        text = intl3.string(_modDef2979["43zohO"]);
+        text = intl3.string(_modDef3007["43zohO"]);
         isDisabled = true;
       } else if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NOT_IN_VOICE_CHANNEL === tmp3[1]) {
         const intl2 = intl8.intl;
-        text = intl2.string(_modDef2979.qRXats);
+        text = intl2.string(_modDef3007.qRXats);
         isDisabled = true;
       } else {
         isDisabled = false;
         text = stringResult;
         if (useCanFulfillStreamRequest.StreamRequestUnfulfillableReason.NO_PERMISSION === tmp3[1]) {
           const intl7 = intl8.intl;
-          text = intl7.string(_modDef2979["fac+eE"]);
+          text = intl7.string(_modDef3007["fac+eE"]);
           isDisabled = true;
         }
       }

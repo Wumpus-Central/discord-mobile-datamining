@@ -1,9 +1,9 @@
-// === Module 16662: useConjureAttachmentImage ===
+// === Module 16678: useConjureAttachmentImage ===
 
-// Module 16662 (useConjureAttachmentImage)
+// Module 16678 (useConjureAttachmentImage)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

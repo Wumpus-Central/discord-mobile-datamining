@@ -1,9 +1,9 @@
-// === Module 8727: oauth2/actions ===
+// === Module 8759: oauth2/actions ===
 
-// Module 8727 (oauth2/actions)
+// Module 8759 (oauth2/actions)
 import utils_PathUtils from "utils/PathUtils" /* 1094 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
@@ -113,7 +113,7 @@ let obj = function _authorize() {
             ({ authorize: c0, clientId: c1, scopes: c2, responseType: c3, redirectUri: c4, codeChallenge: c5, codeChallengeMethod: c6, state: c7, permissions: c8, guildId: c9, channelId: c10, integrationType: c11, connectedAccountProvider: c12, nonce: c13 } = closure_0);
             response_type = 1;
             redirect_uri = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === response_type) {
           if (authorize === 1) {
@@ -228,7 +228,7 @@ obj = function _fetchAuthorization() {
             ({ clientId: c0, scopes: c1, responseType: c2, redirectUri: c3, codeChallenge: c4, codeChallengeMethod: c5, state: c6, integrationType: c7, connectedAccountProvider: c8, nonce: c9, signal: c10 } = closure_0);
             redirect_uri = 1;
             code_challenge = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === redirect_uri) {
           if (client_id === 1) {

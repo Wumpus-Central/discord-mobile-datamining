@@ -1,13 +1,13 @@
-// === Module 15931: ChannelScreenAnimatedFrame ===
+// === Module 15970: ChannelScreenAnimatedFrame ===
 
-// Module 15931 (ChannelScreenAnimatedFrame)
+// Module 15970 (ChannelScreenAnimatedFrame)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import timing from "timing" /* 4891 */;
-import PanelsConfig from "PanelsConfig" /* 15929 */;
+import timing from "timing" /* 4897 */;
+import PanelsConfig from "PanelsConfig" /* 15968 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

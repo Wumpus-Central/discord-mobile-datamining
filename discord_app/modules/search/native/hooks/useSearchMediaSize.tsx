@@ -1,7 +1,7 @@
-// === Module 16815: useSearchMediaSize ===
+// === Module 16836: useSearchMediaSize ===
 
-// Module 16815 (useSearchMediaSize)
-import SearchConstants from "SearchConstants" /* 7513 */;
+// Module 16836 (useSearchMediaSize)
+import SearchConstants from "SearchConstants" /* 7524 */;
 import size from "module_2" /* 2 */;
 
 let _window;

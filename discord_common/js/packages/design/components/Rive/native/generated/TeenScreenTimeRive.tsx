@@ -1,11 +1,11 @@
-// === Module 4690: TeenScreenTimeRive ===
+// === Module 4696: TeenScreenTimeRive ===
 
-// Module 4690 (TeenScreenTimeRive)
+// Module 4696 (TeenScreenTimeRive)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import BaseRive2 from "BaseRive" /* 4606 */;
-import RiveErrorBoundary2 from "RiveErrorBoundary" /* 4659 */;
-import _modDef4691 from "module_4691" /* 4691 */;
+import BaseRive2 from "BaseRive" /* 4612 */;
+import RiveErrorBoundary2 from "RiveErrorBoundary" /* 4665 */;
+import _modDef4697 from "module_4697" /* 4697 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -69,7 +69,7 @@ let closure_9 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
   }
   const BaseRive = BaseRive2.BaseRive;
   const merged = Object.assign(tmp4);
-  const tmp14 = <BaseRive ref={ref} src={_modDef4691} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={tmp11} stateMachine={tmp5} />;
+  const tmp14 = <BaseRive ref={ref} src={_modDef4697} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={tmp11} stateMachine={tmp5} />;
   cResult[5] = str;
   cResult[6] = tmp11;
   cResult[7] = ref;
@@ -94,7 +94,7 @@ let closure_9 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? 
   const tmp2 = _objectWithoutProperties(defaultViewModelInstance, closure_4);
   const BaseRive = BaseRive2.BaseRive;
   const merged = Object.assign(tmp2);
-  return <BaseRive ref={ref} src={_modDef4691} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={tmp} stateMachine={stateMachine} />;
+  return <BaseRive ref={ref} src={_modDef4697} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={tmp} stateMachine={stateMachine} />;
 }));
 ReactCompilerGating = ReactCompilerGating_mod;
 const forwardRefResult = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? ((fallback, ref) => {

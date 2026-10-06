@@ -1,10 +1,10 @@
-// === Module 16196: useDefaultAuthorizationNotifiers ===
+// === Module 16236: useDefaultAuthorizationNotifiers ===
 
-// Module 16196 (useDefaultAuthorizationNotifiers)
+// Module 16236 (useDefaultAuthorizationNotifiers)
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef3237 from "module_3237" /* 3237 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
+import _modDef3265 from "module_3265" /* 3265 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
 import react_mod from "react" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -58,7 +58,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, value, arg2) =
   }
   const tmpResult = tmp(504);
   const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
-  const tmpResult3 = tmp(4851);
+  const tmpResult3 = tmp(4857);
   const isInAppBrowserOpen = tmpResult3.useIsInAppBrowserOpen();
   if (cResult[4] !== arg0) {
     class A {
@@ -85,7 +85,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, value, arg2) =
         return closure_0(arg0);
       }
     }
-    const tmpResult4 = tmp(7946);
+    const tmpResult4 = tmp(7957);
     const previousWhen = tmpResult4.usePreviousWhen(obj3);
     if (cResult[9] === (stateFromStores && !isInAppBrowserOpen)) {
       class A {
@@ -103,7 +103,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, value, arg2) =
             if (state) {
               tmp.current = false;
               if (closure_2) {
-                const obj = { content: intl.string(_modDef3237.uG6teD), key: "account-linked-toast" };
+                const obj = { content: intl.string(_modDef3265.uG6teD), key: "account-linked-toast" };
                 const open = ToastActionCreatorsDefault.open;
                 ToastActionCreatorsDefault;
                 intl = intl2.intl;
@@ -171,7 +171,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, value, arg2) =
           if (stateFromStores) {
             tmp.current = false;
             if (false) {
-              const obj = { content: intl.string(_modDef3237.uG6teD), key: "account-linked-toast" };
+              const obj = { content: intl.string(_modDef3265.uG6teD), key: "account-linked-toast" };
               const open = ToastActionCreatorsDefault.open;
               ToastActionCreatorsDefault;
               intl = intl2.intl;

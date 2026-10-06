@@ -1,9 +1,9 @@
-// === Module 6774: useIsRemote ===
+// === Module 6784: useIsRemote ===
 
-// Module 6774 (useIsRemote)
+// Module 6784 (useIsRemote)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import GameConsoleStore from "GameConsoleStore" /* 4907 */;
+import GameConsoleStore from "GameConsoleStore" /* 4913 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

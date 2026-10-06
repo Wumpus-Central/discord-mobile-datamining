@@ -1,10 +1,10 @@
-// === Module 5101: GuildNSFWAgreeStore ===
+// === Module 5107: GuildNSFWAgreeStore ===
 
-// Module 5101 (GuildNSFWAgreeStore)
+// Module 5107 (GuildNSFWAgreeStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AgeGateUtils from "AgeGateUtils" /* 5100 */;
+import AgeGateUtils from "AgeGateUtils" /* 5106 */;
 import size from "module_2" /* 2 */;
 
 const GuildNSFWAgreeStore_str = "GuildNSFWAgreeStore";

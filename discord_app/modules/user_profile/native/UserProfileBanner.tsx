@@ -1,13 +1,13 @@
-// === Module 7918: UserProfileBanner ===
+// === Module 7929: UserProfileBanner ===
 
-// Module 7918 (UserProfileBanner)
+// Module 7929 (UserProfileBanner)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
-import BannerDefault from "Banner" /* 7926 */;
+import BannerDefault from "Banner" /* 7937 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

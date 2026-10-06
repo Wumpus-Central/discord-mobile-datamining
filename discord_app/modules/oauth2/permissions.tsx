@@ -1,6 +1,6 @@
-// === Module 8730: permissions ===
+// === Module 8762: permissions ===
 
-// Module 8730 (permissions)
+// Module 8762 (permissions)
 import Constants from "Constants" /* 1085 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import intl2 from "intl" /* 1126 */;

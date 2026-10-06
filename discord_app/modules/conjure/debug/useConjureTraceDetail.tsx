@@ -1,6 +1,6 @@
-// === Module 16768: useConjureTraceDetail ===
+// === Module 16789: useConjureTraceDetail ===
 
-// Module 16768 (useConjureTraceDetail)
+// Module 16789 (useConjureTraceDetail)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, detailId) =>
       let tmp9;
       let tmp11;
       if (cResult[4] !== detailId) {
-        const tmpResult = tmp(16764);
+        const tmpResult = tmp(16785);
         const cachedTraceDetailResult = tmpResult.cachedTraceDetail(detailId);
         cResult[4] = detailId;
         cResult[5] = cachedTraceDetailResult;

@@ -1,16 +1,16 @@
-// === Module 10954: AnalyticsHooks ===
+// === Module 10967: AnalyticsHooks ===
 
-// Module 10954 (AnalyticsHooks)
+// Module 10967 (AnalyticsHooks)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import v1 from "v1" /* 1266 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7161 */;
-import QuestDataUtils from "QuestDataUtils" /* 7183 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7214 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7174 */;
+import QuestDataUtils from "QuestDataUtils" /* 7196 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7227 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -25,7 +25,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp3;
   let obj = getQuestImpressionId(576);
   const cResult = obj.c(2);
-  let obj2 = getQuestImpressionId(10916);
+  let obj2 = getQuestImpressionId(10929);
   getQuestImpressionId = obj2.useGetQuestImpressionId();
   if (cResult[0] !== getQuestImpressionId) {
     const fn = function t(properties) {
@@ -47,7 +47,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp3;
 }) : (() => {
   let getQuestImpressionId;
-  let obj = getQuestImpressionId(10916);
+  let obj = getQuestImpressionId(10929);
   getQuestImpressionId = obj.useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return react.useCallback((properties) => {
@@ -231,7 +231,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp3;
   let obj = getQuestImpressionId(576);
   const cResult = obj.c(2);
-  let obj2 = getQuestImpressionId(10916);
+  let obj2 = getQuestImpressionId(10929);
   getQuestImpressionId = obj2.useGetQuestImpressionId();
   if (cResult[0] !== getQuestImpressionId) {
     const fn = function t(properties) {
@@ -253,7 +253,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp3;
 }) : (() => {
   let getQuestImpressionId;
-  let obj = getQuestImpressionId(10916);
+  let obj = getQuestImpressionId(10929);
   getQuestImpressionId = obj.useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return react.useCallback((properties) => {
@@ -489,11 +489,11 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((questHomeHero) => {
   const cResult = obj.c(19);
   questHomeHero = questHomeHero.questHomeHero;
   const shouldShowQuestHomeHeroContent = questHomeHero.shouldShowQuestHomeHeroContent;
-  const QuestContent = questHomeHero(5626).QuestContent;
+  const QuestContent = questHomeHero(5633).QuestContent;
   const tmp4 = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp4;
   if (cResult[0] !== tmp4) {
-    const tmpResult = tmp(7212);
+    const tmpResult = tmp(7225);
     const contentProperties = tmpResult.getContentProperties(tmp4);
     delete tmp6["row_index"];
     cResult[0] = tmp4;
@@ -632,7 +632,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((questHomeHero) => {
   questHomeHero = questHomeHero.questHomeHero;
   const shouldShowQuestHomeHeroContent = questHomeHero.shouldShowQuestHomeHeroContent;
   let memo;
-  const QuestContent = questHomeHero(5626).QuestContent;
+  const QuestContent = questHomeHero(5633).QuestContent;
   const tmp = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp;
   const items = [tmp];

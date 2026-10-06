@@ -1,26 +1,26 @@
-// === Module 17525: FileUploadActionComponent ===
+// === Module 17570: FileUploadActionComponent ===
 
-// Module 17525 (FileUploadActionComponent)
+// Module 17570 (FileUploadActionComponent)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 5114 */;
-import FileSizeUtils from "FileSizeUtils" /* 5317 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import XSmallIcon from "XSmallIcon" /* 6017 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import IconButton2 from "IconButton" /* 7575 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8812 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10364 */;
-import AttachmentPreview from "AttachmentPreview" /* 11043 */;
-import FileUpIcon from "FileUpIcon" /* 15365 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 5120 */;
+import FileSizeUtils from "FileSizeUtils" /* 5324 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import XSmallIcon from "XSmallIcon" /* 6024 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import IconButton2 from "IconButton" /* 7586 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8842 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10377 */;
+import AttachmentPreview from "AttachmentPreview" /* 11056 */;
+import FileUpIcon from "FileUpIcon" /* 15380 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

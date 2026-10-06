@@ -1,15 +1,15 @@
-// === Module 10701: ChannelVoiceChatModal ===
+// === Module 10714: ChannelVoiceChatModal ===
 
-// Module 10701 (ChannelVoiceChatModal)
+// Module 10714 (ChannelVoiceChatModal)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import native from "native" /* 4589 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4732 */;
-import reactDefault from "react" /* 4762 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 9759 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10661 */;
+import native from "native" /* 4595 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4738 */;
+import reactDefault from "react" /* 4768 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 9772 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10674 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -86,7 +86,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     str = "";
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmp11 = jsx(tmp(5881).StageIcon, { size: "sm" });
+    const tmp11 = jsx(tmp(5888).StageIcon, { size: "sm" });
     cResult[3] = tmp11;
     tmp9 = tmp11;
   } else {
@@ -137,7 +137,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   if (tmp2 == null) {
     str = "";
   }
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5881).StageIcon, { size: "sm" })} render={function render() {
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5888).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     const Provider = reactDefault.Provider;
     if (guild_id == null) {

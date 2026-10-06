@@ -1,8 +1,8 @@
-// === Module 11984: AbstractSearchSessionAnalyticsManager ===
+// === Module 12003: AbstractSearchSessionAnalyticsManager ===
 
-// Module 11984 (AbstractSearchSessionAnalyticsManager)
+// Module 12003 (AbstractSearchSessionAnalyticsManager)
 import v1 from "v1" /* 1266 */;
-import SearchUtils from "SearchUtils" /* 11968 */;
+import SearchUtils from "SearchUtils" /* 11987 */;
 import size from "module_2" /* 2 */;
 
 let set;

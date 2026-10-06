@@ -1,7 +1,7 @@
-// === Module 5768: useAccessibilityViewIsModalToggle ===
+// === Module 5775: useAccessibilityViewIsModalToggle ===
 
-// Module 5768 (useAccessibilityViewIsModalToggle)
-import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5769 */;
+// Module 5775 (useAccessibilityViewIsModalToggle)
+import AccessibilityFocusLockManagerDefault from "AccessibilityFocusLockManager" /* 5776 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

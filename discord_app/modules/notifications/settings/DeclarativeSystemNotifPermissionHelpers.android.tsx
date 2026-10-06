@@ -1,12 +1,12 @@
-// === Module 15831: DeclarativeSystemNotifPermissionHelpers ===
+// === Module 15870: DeclarativeSystemNotifPermissionHelpers ===
 
-// Module 15831 (DeclarativeSystemNotifPermissionHelpers)
+// Module 15870 (DeclarativeSystemNotifPermissionHelpers)
 import react_native from "react-native" /* 17 */;
 import react_nativeAll from "react-native" /* 1368 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
-import react_nativeDefault from "react-native" /* 6431 */;
-import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14284 */;
-import react_nativeDefault2 from "react-native" /* 14289 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
+import react_nativeDefault from "react-native" /* 6438 */;
+import NotificationSettingsConstants from "NotificationSettingsConstants" /* 14302 */;
+import react_nativeDefault2 from "react-native" /* 14307 */;
 import size from "module_2" /* 2 */;
 
 let set;

@@ -1,15 +1,15 @@
-// === Module 14954: QuestGameLogotype ===
+// === Module 14969: QuestGameLogotype ===
 
-// Module 14954 (QuestGameLogotype)
+// Module 14969 (QuestGameLogotype)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5597 */;
-import springPresets from "springPresets" /* 5598 */;
-import FastImageDefault from "FastImage" /* 5974 */;
+import spring from "spring" /* 5604 */;
+import springPresets from "springPresets" /* 5605 */;
+import FastImageDefault from "FastImage" /* 5981 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -94,7 +94,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((assetUr
   if (cResult[6] !== assetUrl) {
     class R {
       constructor() {
-        size = Image.getSize(assetUrl, () => { /* body not rendered: F144423 */ });
+        size = Image.getSize(assetUrl, () => { /* body not rendered: F144627 */ });
         return;
       }
     }
@@ -106,14 +106,14 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((assetUr
   } else {
     class R {
       constructor() {
-        size = Image.getSize(assetUrl, () => { /* body not rendered: F144423 */ });
+        size = Image.getSize(assetUrl, () => { /* body not rendered: F144627 */ });
         return;
       }
     }
     tmp12 = cResult[8];
   }
   const effect = react.useEffect(R, tmp12);
-  const tmpResult = tmp(4612);
+  const tmpResult = tmp(4618);
   class W {
     constructor() {
       tmp = closure_0(closure_2[10]);
@@ -126,15 +126,15 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((assetUr
       return obj;
     }
   }
-  W.__closure = { withSpring: tmp(5597).withSpring, logoDimensionStyles: tmp6, SPRING_CONFIG };
+  W.__closure = { withSpring: tmp(5604).withSpring, logoDimensionStyles: tmp6, SPRING_CONFIG };
   W.__workletHash = 13667917221894;
   W.__initData = __initData;
-  ({ withSpring: tmp(5597).withSpring, logoDimensionStyles: tmp6, SPRING_CONFIG });
+  ({ withSpring: tmp(5604).withSpring, logoDimensionStyles: tmp6, SPRING_CONFIG });
   const animatedStyle = tmpResult.useAnimatedStyle(W);
   if (cResult[9] !== assetUrl) {
     class R {
       constructor() {
-        size = Image.getSize(assetUrl, () => { /* body not rendered: F144423 */ });
+        size = Image.getSize(assetUrl, () => { /* body not rendered: F144627 */ });
         return;
       }
     }
@@ -144,7 +144,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((assetUr
   } else {
     class R {
       constructor() {
-        size = Image.getSize(assetUrl, () => { /* body not rendered: F144423 */ });
+        size = Image.getSize(assetUrl, () => { /* body not rendered: F144627 */ });
         return;
       }
     }
@@ -153,14 +153,14 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((assetUr
     let tmp18Result;
     class R {
       constructor() {
-        size = Image.getSize(assetUrl, () => { /* body not rendered: F144423 */ });
+        size = Image.getSize(assetUrl, () => { /* body not rendered: F144627 */ });
         return;
       }
     }
     if (cResult[14] === assetUrl) {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { /* body not rendered: F144423 */ });
+          size = Image.getSize(assetUrl, () => { /* body not rendered: F144627 */ });
           return;
         }
       }
@@ -168,7 +168,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((assetUr
     if (tmp15) {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { /* body not rendered: F144423 */ });
+          size = Image.getSize(assetUrl, () => { /* body not rendered: F144627 */ });
           return;
         }
       }
@@ -178,7 +178,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((assetUr
     } else {
       class R {
         constructor() {
-          size = Image.getSize(assetUrl, () => { /* body not rendered: F144423 */ });
+          size = Image.getSize(assetUrl, () => { /* body not rendered: F144627 */ });
           return;
         }
       }

@@ -1,15 +1,15 @@
-// === Module 10642: LeaderboardWinnerBadge ===
+// === Module 10655: LeaderboardWinnerBadge ===
 
-// Module 10642 (LeaderboardWinnerBadge)
+// Module 10655 (LeaderboardWinnerBadge)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import TrophyIcon2 from "TrophyIcon" /* 8364 */;
-import useActiveLeaderboardWinnerDataDefault from "useActiveLeaderboardWinnerData" /* 10643 */;
-import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10644 */;
+import TrophyIcon2 from "TrophyIcon" /* 8397 */;
+import useActiveLeaderboardWinnerDataDefault from "useActiveLeaderboardWinnerData" /* 10656 */;
+import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10657 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

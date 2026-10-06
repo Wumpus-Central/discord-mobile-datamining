@@ -1,6 +1,6 @@
-// === Module 7876: FileManagerUtils ===
+// === Module 7887: FileManagerUtils ===
 
-// Module 7876 (FileManagerUtils)
+// Module 7887 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import react_nativeDefault from "react-native" /* 1162 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;

@@ -1,19 +1,19 @@
-// === Module 7920: VideoBackground ===
+// === Module 7931: VideoBackground ===
 
-// Module 7920 (VideoBackground)
+// Module 7931 (VideoBackground)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
 import react_nativeDefault from "react-native" /* 1886 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 7922 */;
-import useProfileTileGradientDefault from "useProfileTileGradient" /* 7923 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 7933 */;
+import useProfileTileGradientDefault from "useProfileTileGradient" /* 7934 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import module_12 from "module_12" /* 12 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -36,12 +36,12 @@ function useDominantRGBFromImage(assetImage, cResult) {
     tmp = first;
   }
   const tmp3 = first;
-  const tmp5 = first(7921)();
+  const tmp5 = first(7932)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   const useState = react.useState;
   if (null != assetImage) {
-    hexToRgbResult = tmp3(7922).cachedDominantColors[assetImage];
+    hexToRgbResult = tmp3(7933).cachedDominantColors[assetImage];
   }
   if (hexToRgbResult == null) {
     const obj2 = require("ColorUtils");

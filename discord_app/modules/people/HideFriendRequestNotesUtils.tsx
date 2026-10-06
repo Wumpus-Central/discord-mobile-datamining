@@ -1,9 +1,9 @@
-// === Module 12953: HideFriendRequestNotesUtils ===
+// === Module 12972: HideFriendRequestNotesUtils ===
 
-// Module 12953 (HideFriendRequestNotesUtils)
+// Module 12972 (HideFriendRequestNotesUtils)
 import UserSettings from "UserSettings" /* 2028 */;
-import useUserIsTeen from "useUserIsTeen" /* 8294 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import useUserIsTeen from "useUserIsTeen" /* 8327 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,9 +1,9 @@
-// === Module 7180: useIntersectionObserver ===
+// === Module 7193: useIntersectionObserver ===
 
-// Module 7180 (useIntersectionObserver)
+// Module 7193 (useIntersectionObserver)
 import react2 from "react" /* 576 */;
-import reactDefault from "react" /* 7181 */;
-import InteractionObserverUtils from "InteractionObserverUtils" /* 7182 */;
+import reactDefault from "react" /* 7194 */;
+import InteractionObserverUtils from "InteractionObserverUtils" /* 7195 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -117,7 +117,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, current, arg2)
   const tmp2 = closure_5(null);
   dependencyMap = tmp2;
   let tmp4 = arg1;
-  const tmp3 = flag(7181);
+  const tmp3 = flag(7194);
   if (arg1 == null) {
     tmp4 = closure_7;
   }
@@ -209,7 +209,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) =>
     flag = true;
   }
   const items = [num];
-  const tmp = num(7181)((isIntersecting) => {
+  const tmp = num(7194)((isIntersecting) => {
     closure_0(isIntersecting.isIntersecting);
   });
   return closure_8(tmp.current, closure_4(() => {

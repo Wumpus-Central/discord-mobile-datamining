@@ -1,12 +1,12 @@
-// === Module 8941: ApplicationInstallUtils ===
+// === Module 8970: ApplicationInstallUtils ===
 
-// Module 8941 (ApplicationInstallUtils)
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8708 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
+// Module 8970 (ApplicationInstallUtils)
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8740 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8827 */;
 import size from "module_2" /* 2 */;
 
-const f98863 = (oauth2_install_params) => {
+const f99048 = (oauth2_install_params) => {
   let prop;
   if (oauth2_install_params != null) {
     prop = oauth2_install_params.oauth2_install_params;
@@ -32,7 +32,7 @@ export const canInstallApplication = function canInstallApplication(installAppPr
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some(f98863);
+      someResult = values.some(f99048);
     }
     tmp = someResult;
   }
@@ -46,7 +46,7 @@ export const isAppUserInstallable = function isAppUserInstallable(integrationTyp
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some(f98863);
+      someResult = values.some(f99048);
     }
     tmp = someResult;
   }

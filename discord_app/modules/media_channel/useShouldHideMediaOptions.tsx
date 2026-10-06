@@ -1,6 +1,6 @@
-// === Module 11285: useShouldHideMediaOptions ===
+// === Module 11298: useShouldHideMediaOptions ===
 
-// Module 11285 (useShouldHideMediaOptions)
+// Module 11298 (useShouldHideMediaOptions)
 import ChannelConstants from "ChannelConstants" /* 2058 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

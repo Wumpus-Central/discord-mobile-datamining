@@ -1,8 +1,8 @@
-// === Module 8684: MarkupLiteralImageRule ===
+// === Module 8719: MarkupLiteralImageRule ===
 
-// Module 8684 (MarkupLiteralImageRule)
+// Module 8719 (MarkupLiteralImageRule)
 import _modDef1936 from "module_1936" /* 1936 */;
-import MarkupTypes from "MarkupTypes" /* 5785 */;
+import MarkupTypes from "MarkupTypes" /* 5792 */;
 import size from "module_2" /* 2 */;
 
 let obj = {

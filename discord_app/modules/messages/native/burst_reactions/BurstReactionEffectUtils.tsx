@@ -1,9 +1,9 @@
-// === Module 7412: burst_reactions/BurstReactionEffectUtils ===
+// === Module 7423: burst_reactions/BurstReactionEffectUtils ===
 
-// Module 7412 (burst_reactions/BurstReactionEffectUtils)
+// Module 7423 (burst_reactions/BurstReactionEffectUtils)
 import react_native from "react-native" /* 17 */;
-import EmojiUtils from "EmojiUtils" /* 4527 */;
-import getBurstAnimation from "getBurstAnimation" /* 7413 */;
+import EmojiUtils from "EmojiUtils" /* 4533 */;
+import getBurstAnimation from "getBurstAnimation" /* 7424 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -263,7 +263,7 @@ obj = function _generateAnimationSourceFromLocalImage() {
               b = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c5) {
             if (arg0 === 1) {

@@ -1,12 +1,12 @@
-// === Module 14681: FamilyCenterParentalConsentNotice ===
+// === Module 14697: FamilyCenterParentalConsentNotice ===
 
-// Module 14681 (FamilyCenterParentalConsentNotice)
+// Module 14697 (FamilyCenterParentalConsentNotice)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14682 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14698 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -74,7 +74,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
             return tmp14;
           }
-          const tmp17 = jsx(onPress(14682), { style: tmp4.container, text: tmp10 });
+          const tmp17 = jsx(onPress(14698), { style: tmp4.container, text: tmp10 });
           cResult[6] = tmp4.container;
           cResult[7] = tmp10;
           cResult[8] = tmp17;
@@ -83,11 +83,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         if (0 === daysRemaining) {
           const intl2 = tmp(1126).intl;
           const obj5 = { learnMoreHook: tmp9 };
-          formatResult = intl2.format(onPress(2493).S5kmfO, obj5);
+          formatResult = intl2.format(onPress(2521).S5kmfO, obj5);
         } else {
           const intl = tmp(1126).intl;
           const obj6 = { count: daysRemaining, learnMoreHook: tmp9 };
-          formatResult = intl.format(onPress(2493)["5jm+T3"], obj6);
+          formatResult = intl.format(onPress(2521)["5jm+T3"], obj6);
         }
         cResult[3] = daysRemaining;
         cResult[4] = tmp9;
@@ -128,11 +128,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         if (0 === daysRemaining) {
           const intl2 = tmp2(1126).intl;
           const obj4 = { learnMoreHook };
-          formatResult = intl2.format(tmp9(2493).S5kmfO, obj4);
+          formatResult = intl2.format(tmp9(2521).S5kmfO, obj4);
         } else {
           const intl = tmp2(1126).intl;
           const obj5 = { count: daysRemaining, learnMoreHook };
-          formatResult = intl.format(tmp9(2493)["5jm+T3"], obj5);
+          formatResult = intl.format(tmp9(2521)["5jm+T3"], obj5);
         }
         return <tmp10 style={tmp.container} text={formatResult} />;
       }

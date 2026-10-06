@@ -1,9 +1,9 @@
-// === Module 11282: ReportToModStore ===
+// === Module 11295: ReportToModStore ===
 
-// Module 11282 (ReportToModStore)
+// Module 11295 (ReportToModStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import size from "module_2" /* 2 */;
 
 let map, set;

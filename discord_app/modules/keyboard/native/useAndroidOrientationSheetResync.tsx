@@ -1,6 +1,6 @@
-// === Module 11824: useAndroidOrientationSheetResync ===
+// === Module 11838: useAndroidOrientationSheetResync ===
 
-// Module 11824 (useAndroidOrientationSheetResync)
+// Module 11838 (useAndroidOrientationSheetResync)
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

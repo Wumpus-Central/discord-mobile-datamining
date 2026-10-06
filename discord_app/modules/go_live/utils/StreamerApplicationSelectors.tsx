@@ -1,10 +1,10 @@
-// === Module 7228: StreamerApplicationSelectors ===
+// === Module 7241: StreamerApplicationSelectors ===
 
-// Module 7228 (StreamerApplicationSelectors)
+// Module 7241 (StreamerApplicationSelectors)
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import Constants from "Constants" /* 1085 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7229 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7242 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

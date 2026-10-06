@@ -1,18 +1,18 @@
-// === Module 9312: applyBackgroundOption ===
+// === Module 8085: applyBackgroundOption ===
 
-// Module 9312 (applyBackgroundOption)
+// Module 8085 (applyBackgroundOption)
 import Constants from "Constants" /* 1085 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 9314 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 9316 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9318 */;
-import getFilterImageDefault from "getFilterImage" /* 9323 */;
-import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 9324 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 8087 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 8089 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 8092 */;
+import getFilterImageDefault from "getFilterImage" /* 8097 */;
+import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 8098 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserStore from "UserStore" /* 1377 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 9313 */;
-import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6484 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 8086 */;
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6491 */;
 import size from "module_2" /* 2 */;
 
 let closure_5, closure_6;
@@ -216,7 +216,7 @@ obj = function _applyBackgroundOptionLive() {
       }
       await "IconComponent";
       location = track.location;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;
@@ -245,7 +245,7 @@ obj = function _applyBackgroundOptionPreview() {
       }
       await "IconComponent";
       location = track.location;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

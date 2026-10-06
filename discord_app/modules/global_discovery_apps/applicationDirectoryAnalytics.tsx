@@ -1,10 +1,10 @@
-// === Module 7177: applicationDirectoryAnalytics ===
+// === Module 7190: applicationDirectoryAnalytics ===
 
-// Module 7177 (applicationDirectoryAnalytics)
+// Module 7190 (applicationDirectoryAnalytics)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

@@ -1,6 +1,6 @@
-// === Module 10095: FrecencyUserSettingsHooks ===
+// === Module 10108: FrecencyUserSettingsHooks ===
 
-// Module 10095 (FrecencyUserSettingsHooks)
+// Module 10108 (FrecencyUserSettingsHooks)
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
 import react from "react" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;

@@ -1,13 +1,13 @@
-// === Module 11517: AppealIngestionRequestSent ===
+// === Module 11530: AppealIngestionRequestSent ===
 
-// Module 11517 (AppealIngestionRequestSent)
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11512 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11518 */;
+// Module 11530 (AppealIngestionRequestSent)
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11525 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11531 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8093 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8126 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -40,7 +40,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp8;
   const obj = emitAppealIngestionEvent(576);
   const cResult = obj.c(20);
-  const obj2 = emitAppealIngestionEvent(11500);
+  const obj2 = emitAppealIngestionEvent(11513);
   emitAppealIngestionEvent = obj2.useEmitAppealIngestionEvent();
   const tmp5 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -71,7 +71,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { headerText: first, subHeaderText: tmp8 };
-    const tmp17 = closure_7(emitAppealIngestionEvent(11498).AppealIngestionModalHeader, obj4);
+    const tmp17 = closure_7(emitAppealIngestionEvent(11511).AppealIngestionModalHeader, obj4);
     cResult[4] = tmp17;
     tmp15 = tmp17;
   } else {
@@ -88,7 +88,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[6] !== tmp5.actionsHeader) {
     const obj5 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: actionsHeader, children: tmp18 };
-    const tmp22 = closure_7(emitAppealIngestionEvent(4886).Text, obj5);
+    const tmp22 = closure_7(emitAppealIngestionEvent(4892).Text, obj5);
     cResult[6] = tmp5.actionsHeader;
     cResult[7] = tmp22;
     tmp20 = tmp22;
@@ -157,7 +157,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj8 = { children: closure_8(closure_3, obj9) };
   obj9 = { style: container, children: items };
   items = [tmp10, tmp15, tmp20, tmp25, tmp32];
-  const AppealIngestionModalScreen = tmp(11498).AppealIngestionModalScreen;
+  const AppealIngestionModalScreen = tmp(11511).AppealIngestionModalScreen;
   const tmp38 = closure_7(AppealIngestionModalScreen, obj8);
   cResult[14] = tmp5.container;
   cResult[15] = tmp32;

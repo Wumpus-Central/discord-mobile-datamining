@@ -1,11 +1,11 @@
-// === Module 4507: GuildChannelStore ===
+// === Module 4513: GuildChannelStore ===
 
-// Module 4507 (GuildChannelStore)
+// Module 4513 (GuildChannelStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
-import createFavoritesGuildChannelRecord from "createFavoritesGuildChannelRecord" /* 4508 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
+import createFavoritesGuildChannelRecord from "createFavoritesGuildChannelRecord" /* 4514 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
 import GatedChannelStore from "GatedChannelStore" /* 2104 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
@@ -13,8 +13,8 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

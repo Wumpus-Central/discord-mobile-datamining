@@ -1,9 +1,9 @@
-// === Module 11396: startAuthorizationNoHook ===
+// === Module 11409: startAuthorizationNoHook ===
 
-// Module 11396 (startAuthorizationNoHook)
+// Module 11409 (startAuthorizationNoHook)
 import Constants from "Constants" /* 1085 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import useAuthorizationApp from "useAuthorizationApp" /* 6662 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import useAuthorizationApp from "useAuthorizationApp" /* 6669 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 6980: SessionUtils ===
+// === Module 6993: SessionUtils ===
 
-// Module 6980 (SessionUtils)
+// Module 6993 (SessionUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// === Module 16292: GuildsBarItemEmptyNUX ===
+// === Module 16332: GuildsBarItemEmptyNUX ===
 
-// Module 16292 (GuildsBarItemEmptyNUX)
+// Module 16332 (GuildsBarItemEmptyNUX)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import spring from "spring" /* 5597 */;
-import transitionToGuild from "transitionToGuild" /* 6845 */;
-import MainTabsConstants from "MainTabsConstants" /* 10820 */;
+import spring from "spring" /* 5604 */;
+import transitionToGuild from "transitionToGuild" /* 6855 */;
+import MainTabsConstants from "MainTabsConstants" /* 10833 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 16222 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 16262 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

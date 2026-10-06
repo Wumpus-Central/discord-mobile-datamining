@@ -1,6 +1,6 @@
-// === Module 12825: isOnXbox ===
+// === Module 12844: isOnXbox ===
 
-// Module 12825 (isOnXbox)
+// Module 12844 (isOnXbox)
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 2011 */;
 import size from "module_2" /* 2 */;

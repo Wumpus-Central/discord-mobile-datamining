@@ -1,17 +1,17 @@
-// === Module 15982: MessagesItemHappeningNow ===
+// === Module 16021: MessagesItemHappeningNow ===
 
-// Module 15982 (MessagesItemHappeningNow)
+// Module 16021 (MessagesItemHappeningNow)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8470 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11813 */;
-import HappeningNowDefault from "HappeningNow" /* 15983 */;
+import useToken from "useToken" /* 4586 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8503 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 11827 */;
+import HappeningNowDefault from "HappeningNow" /* 16022 */;
 import react from "react" /* 19 */;
-import HappeningNowConstants from "HappeningNowConstants" /* 15114 */;
-import createStyles from "createStyles" /* 4890 */;
+import HappeningNowConstants from "HappeningNowConstants" /* 15129 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

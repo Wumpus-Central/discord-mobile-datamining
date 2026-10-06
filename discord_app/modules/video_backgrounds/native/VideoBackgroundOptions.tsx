@@ -1,13 +1,13 @@
-// === Module 9681: VideoBackgroundOptions ===
+// === Module 9694: VideoBackgroundOptions ===
 
-// Module 9681 (VideoBackgroundOptions)
+// Module 9694 (VideoBackgroundOptions)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6484 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9318 */;
+import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6491 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 8092 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -47,7 +47,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj2 = { value: none, label: intl.string(require("intl").t.fUdMeO), icon: null };
     intl = tmp2(1126).intl;
     ({ IconComponent: require("DenyIcon").DenyIcon });
-    const TableRowIcon = tmp2(5999).TableRowIcon;
+    const TableRowIcon = tmp2(6006).TableRowIcon;
     cResult[1] = obj2;
     tmp8 = obj2;
   } else {
@@ -57,7 +57,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const obj4 = { value: BLUR_BACKGROUND_OPTION, label: intl2.string(require("intl").t.LhSyL8), icon: null };
     intl2 = tmp2(1126).intl;
     ({ IconComponent: require("BlurBackgroundIcon").BlurBackgroundIcon });
-    const TableRowIcon2 = tmp2(5999).TableRowIcon;
+    const TableRowIcon2 = tmp2(6006).TableRowIcon;
     cResult[2] = obj4;
     tmp11 = obj4;
   } else {

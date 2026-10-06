@@ -1,23 +1,23 @@
-// === Module 16200: GuildUpsellChannelList ===
+// === Module 16240: GuildUpsellChannelList ===
 
-// Module 16200 (GuildUpsellChannelList)
+// Module 16240 (GuildUpsellChannelList)
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 12810 */;
-import MobileGameCommunitiesConstants from "MobileGameCommunitiesConstants" /* 16201 */;
-import ChatControllersSpotIllustration from "ChatControllersSpotIllustration" /* 16202 */;
-import MiniaturesSpotIllustration from "MiniaturesSpotIllustration" /* 16204 */;
-import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16206 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import BumpingFistsSpotIllustration from "BumpingFistsSpotIllustration" /* 12829 */;
+import MobileGameCommunitiesConstants from "MobileGameCommunitiesConstants" /* 16241 */;
+import ChatControllersSpotIllustration from "ChatControllersSpotIllustration" /* 16242 */;
+import MiniaturesSpotIllustration from "MiniaturesSpotIllustration" /* 16244 */;
+import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16246 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13524 */;
-import ConsentStore from "ConsentStore" /* 6084 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13540 */;
+import ConsentStore from "ConsentStore" /* 6091 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -85,7 +85,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     first = cResult[0];
   }
-  const GameCommunityAddServerEntryExperiment = tmp(13527).GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = tmp(13543).GameCommunityAddServerEntryExperiment;
   const cardAction = GameCommunityAddServerEntryExperiment.useConfig(first).cardAction;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     items = [ConsentStore, LocalAppDetectionStore];
@@ -222,7 +222,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
     let obj3 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-    let Text = tmp(4886).Text;
+    let Text = tmp(4892).Text;
     const string = tmp(1126).intl.string;
     class I {
       constructor() {

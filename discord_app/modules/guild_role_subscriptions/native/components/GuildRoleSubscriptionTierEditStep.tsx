@@ -1,20 +1,20 @@
-// === Module 17928: GuildRoleSubscriptionTierEditStep ===
+// === Module 17974: GuildRoleSubscriptionTierEditStep ===
 
-// Module 17928 (GuildRoleSubscriptionTierEditStep)
+// Module 17974 (GuildRoleSubscriptionTierEditStep)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import useNavigation from "useNavigation" /* 1490 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import FormSeparatorDefault from "FormSeparator" /* 15035 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import FormSeparatorDefault from "FormSeparator" /* 15050 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -209,7 +209,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? ((canProceedToNe
     stringResult = intl.string(intl3.t["bm6P5/"]);
     tmp5 = require;
   }
-  const obj = { style: items, children: metroImportAll(tmp5(5594).Button, obj3) };
+  const obj = { style: items, children: metroImportAll(tmp5(5601).Button, obj3) };
   items = [tmp.footerContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   ({ paddingBottom: useSafeAreaInsetsDefault().bottom });
   obj3 = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };

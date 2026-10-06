@@ -1,14 +1,14 @@
-// === Module 12167: useGuildPowerupsNewBadge ===
+// === Module 12182: useGuildPowerupsNewBadge ===
 
-// Module 12167 (useGuildPowerupsNewBadge)
+// Module 12182 (useGuildPowerupsNewBadge)
 import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 2038 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 2037 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12162 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 12177 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

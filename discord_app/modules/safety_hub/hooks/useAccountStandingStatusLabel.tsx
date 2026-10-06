@@ -1,12 +1,12 @@
-// === Module 14547: useAccountStandingStatusLabel ===
+// === Module 14563: useAccountStandingStatusLabel ===
 
-// Module 14547 (useAccountStandingStatusLabel)
+// Module 14563 (useAccountStandingStatusLabel)
 import react from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 11494 */;
-import useSafetyHubInitialized from "useSafetyHubInitialized" /* 11522 */;
-import useSafetyHubFetchError from "useSafetyHubFetchError" /* 14548 */;
-import SafetyHubAccountStandingLabels from "SafetyHubAccountStandingLabels" /* 14549 */;
+import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 11507 */;
+import useSafetyHubInitialized from "useSafetyHubInitialized" /* 11535 */;
+import useSafetyHubFetchError from "useSafetyHubFetchError" /* 14564 */;
+import SafetyHubAccountStandingLabels from "SafetyHubAccountStandingLabels" /* 14565 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,28 +1,28 @@
-// === Module 16039: ThreadChannel ===
+// === Module 16078: ThreadChannel ===
 
-// Module 16039 (ThreadChannel)
+// Module 16078 (ThreadChannel)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import ThreadConstants from "ThreadConstants" /* 1125 */;
-import transitionToChannel from "transitionToChannel" /* 4901 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10032 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16040 */;
+import transitionToChannel from "transitionToChannel" /* 4907 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10045 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16079 */;
 import react_mod from "react" /* 19 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4511 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4517 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
-import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11697 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
+import RedesignChannelListConstants from "RedesignChannelListConstants" /* 11711 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

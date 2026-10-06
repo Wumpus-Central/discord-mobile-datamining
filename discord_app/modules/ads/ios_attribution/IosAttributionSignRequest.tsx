@@ -1,6 +1,6 @@
-// === Module 10939: IosAttributionSignRequest ===
+// === Module 10952: IosAttributionSignRequest ===
 
-// Module 10939 (IosAttributionSignRequest)
+// Module 10952 (IosAttributionSignRequest)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
@@ -52,7 +52,7 @@ let obj = function _fetchIosAttributionSignedPayloads() {
             ({ metadataSealed: c0, impressionId: c1, specs: c2, signal: c3 } = closure_0);
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (metadata_sealed === 1) {

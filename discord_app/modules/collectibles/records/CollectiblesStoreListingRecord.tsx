@@ -1,8 +1,8 @@
-// === Module 7062: CollectiblesStoreListingRecord ===
+// === Module 7075: CollectiblesStoreListingRecord ===
 
-// Module 7062 (CollectiblesStoreListingRecord)
+// Module 7075 (CollectiblesStoreListingRecord)
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import _modDef7063 from "module_7063" /* 7063 */;
+import _modDef7076 from "module_7076" /* 7076 */;
 import Record from "Record" /* 1392 */;
 import size from "module_2" /* 2 */;
 
@@ -37,17 +37,17 @@ class CollectiblesStoreListingRecord extends Record {
     if (null != styles) {
       const obj2 = {
         backgroundColors: background_colors.map((item) => {
-            const tmp = _modDef7063;
+            const tmp = _modDef7076;
             const obj = utils_ColorUtils;
             return tmp(obj.int2hex(item));
           }),
         buttonColors: button_colors.map((item) => {
-            const tmp = _modDef7063;
+            const tmp = _modDef7076;
             const obj = utils_ColorUtils;
             return tmp(obj.int2hex(item));
           }),
         confettiColors: confetti_colors.map((item) => {
-            const tmp = _modDef7063;
+            const tmp = _modDef7076;
             const obj = utils_ColorUtils;
             return tmp(obj.int2hex(item));
           })

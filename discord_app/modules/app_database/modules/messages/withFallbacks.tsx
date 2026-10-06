@@ -1,13 +1,13 @@
-// === Module 6995: withFallbacks ===
+// === Module 7008: withFallbacks ===
 
-// Module 6995 (withFallbacks)
+// Module 7008 (withFallbacks)
 import Constants from "Constants" /* 1085 */;
-import ExtendedMemoryLru from "ExtendedMemoryLru" /* 6989 */;
-import isReadableChannel from "isReadableChannel" /* 6993 */;
-import isLimitedChannel from "isLimitedChannel" /* 6994 */;
+import ExtendedMemoryLru from "ExtendedMemoryLru" /* 7002 */;
+import isReadableChannel from "isReadableChannel" /* 7006 */;
+import isLimitedChannel from "isLimitedChannel" /* 7007 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import size from "module_2" /* 2 */;
 
 function isSaveableChannel(item10025) {

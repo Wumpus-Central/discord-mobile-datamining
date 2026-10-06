@@ -1,21 +1,21 @@
-// === Module 17474: ChannelResyncManager ===
+// === Module 17501: ChannelResyncManager ===
 
-// Module 17474 (ChannelResyncManager)
+// Module 17501 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7136 */;
-import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 13479 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7149 */;
+import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 13495 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,10 +1,10 @@
-// === Module 9220: useAppChannelApplicationOptions ===
+// === Module 9255: useAppChannelApplicationOptions ===
 
-// Module 9220 (useAppChannelApplicationOptions)
+// Module 9255 (useAppChannelApplicationOptions)
 import react2 from "react" /* 576 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6658 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
-import useGuildEmbeddedApplications2 from "useGuildEmbeddedApplications" /* 9221 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6665 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
+import useGuildEmbeddedApplications2 from "useGuildEmbeddedApplications" /* 9256 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

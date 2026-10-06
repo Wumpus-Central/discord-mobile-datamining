@@ -1,18 +1,18 @@
-// === Module 15131: AndroidFontScaleSetting ===
+// === Module 15146: AndroidFontScaleSetting ===
 
-// Module 15131 (AndroidFontScaleSetting)
+// Module 15146 (AndroidFontScaleSetting)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import intl2 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 10983 */;
-import FontScaleStore from "FontScaleStore" /* 15083 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15132 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 10996 */;
+import FontScaleStore from "FontScaleStore" /* 15098 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15147 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const useFontScaleStore = FontScaleStore.useFontScaleStore;

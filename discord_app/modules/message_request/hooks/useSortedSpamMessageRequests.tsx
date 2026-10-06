@@ -1,10 +1,10 @@
-// === Module 17072: useSortedSpamMessageRequests ===
+// === Module 17098: useSortedSpamMessageRequests ===
 
-// Module 17072 (useSortedSpamMessageRequests)
+// Module 17098 (useSortedSpamMessageRequests)
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6721 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6735 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

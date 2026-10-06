@@ -1,6 +1,6 @@
-// === Module 11949: directory_channels/GuildDirectoryUtils ===
+// === Module 11963: directory_channels/GuildDirectoryUtils ===
 
-// Module 11949 (directory_channels/GuildDirectoryUtils)
+// Module 11963 (directory_channels/GuildDirectoryUtils)
 import Fragment from "Fragment" /* 21 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
@@ -39,7 +39,7 @@ let obj = function _onAddDirectoryGuildEntry() {
     obj.openLazy(obj8);
     await "IconComponent";
     ({ directoryChannelId: c0, directoryGuildName: c1, guild: c2, description: c3, category: c4, onClose: c5 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

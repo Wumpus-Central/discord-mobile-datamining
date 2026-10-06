@@ -1,9 +1,9 @@
-// === Module 11420: useExperimentAssignments ===
+// === Module 11433: useExperimentAssignments ===
 
-// Module 11420 (useExperimentAssignments)
-import ExperimentManager from "ExperimentManager" /* 4781 */;
+// Module 11433 (useExperimentAssignments)
+import ExperimentManager from "ExperimentManager" /* 4787 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 4776 */;
+import ExperimentStore from "ExperimentStore" /* 4782 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1246 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

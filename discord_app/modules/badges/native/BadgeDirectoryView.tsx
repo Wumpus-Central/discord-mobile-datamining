@@ -1,20 +1,20 @@
-// === Module 10888: BadgeDirectoryView ===
+// === Module 10901: BadgeDirectoryView ===
 
-// Module 10888 (BadgeDirectoryView)
+// Module 10901 (BadgeDirectoryView)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7868 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10881 */;
-import BadgeUtils from "BadgeUtils" /* 10889 */;
-import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10892 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 7879 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 10894 */;
+import BadgeUtils from "BadgeUtils" /* 10902 */;
+import openBadgeDetailsSheet from "openBadgeDetailsSheet" /* 10905 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9417 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9431 */;
 import UserStore from "UserStore" /* 1377 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -50,7 +50,7 @@ obj8 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault
 let closure_12 = createStyles(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const f56050 = () => {
+const f56103 = () => {
 
 };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -257,7 +257,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const cResult = obj.c(80);
   ({ targetUserId, targetUsername } = arg0);
   const tmp4 = closure_12();
-  if (typeof f56050 === "function") {
+  if (typeof f56103 === "function") {
     let tmp9;
     const diff = stateFromStores(1484)().width - 2 * stateFromStores(587).space.PX_16;
     let result = 3 * stateFromStores(587).space.PX_12;
@@ -589,7 +589,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
               }
             }
           }
-          const tmpResult8 = targetUsername(10890);
+          const tmpResult8 = targetUsername(10903);
           const badgeIndicatorIds = tmpResult8.useBadgeDirectoryBadgeIndicators(tmp42).badgeIndicatorIds;
           class U {
             constructor() {
@@ -700,7 +700,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   targetUserId = undefined;
   let stateFromStoresArray;
   let tmp = closure_12();
-  if (typeof f56050 === "function") {
+  if (typeof f56103 === "function") {
     let tmp2 = stateFromStores;
     const diff = stateFromStores(1484)().width - 2 * stateFromStores(587).space.PX_16;
     let result = 3 * stateFromStores(587).space.PX_12;
@@ -774,7 +774,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     ({ owned, earnable } = memo);
     let obj3 = { badges: stateFromStoresArray, enabled: tmp36Result };
     tmp36Result = !tmp10;
-    const tmp6Result6 = targetUsername(10890);
+    const tmp6Result6 = targetUsername(10903);
     const badgeIndicatorIds = tmp6Result6.useBadgeDirectoryBadgeIndicators(obj3).badgeIndicatorIds;
     if (null != targetUserId && targetUserId !== stateFromStores) {
       let formatToPlainStringResult;
@@ -818,15 +818,15 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (stateFromStores2) {
           const obj5 = { style: tmp.centered, children: items13 };
           const obj7 = { variant: "text-md/semibold", children: intl3.string(targetUsername(1126).t.iufib1) };
-          const Text = targetUsername(4886).Text;
+          const Text = targetUsername(4892).Text;
           intl3 = targetUsername(1126).intl;
           items13 = [closure_10(Text, obj7), , ];
           const obj8 = { variant: "text-md/normal", color: "text-subtle", children: intl4.string(targetUsername(1126).t.eAn6z2) };
-          const Text2 = targetUsername(4886).Text;
+          const Text2 = targetUsername(4892).Text;
           intl4 = targetUsername(1126).intl;
           items13[1] = closure_10(Text2, obj8);
           const obj9 = { variant: "secondary", size: "sm", onPress: callback, text: intl5.string(targetUsername(1126).t["7NqTJn"]) };
-          const Button = targetUsername(5594).Button;
+          const Button = targetUsername(5601).Button;
           intl5 = targetUsername(1126).intl;
           items13[2] = closure_10(Button, obj9);
           tmp28 = closure_11(closure_5, obj5);
@@ -856,7 +856,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         if (null != targetUserId && targetUserId !== stateFromStores) {
           const obj14 = { style: items, children: closure_10(Button3, obj15) };
           obj15 = { variant: "secondary", onPress: callback3, text: intl9.string(targetUsername(1126).t.msyp90) };
-          Button3 = targetUsername(5594).Button;
+          Button3 = targetUsername(5601).Button;
           intl9 = targetUsername(1126).intl;
           tmp36Result2 = closure_10(closure_5, obj14);
         } else {
@@ -864,7 +864,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           if (tmp36Result2) {
             const obj16 = { style: items, children: closure_10(Button2, obj17) };
             obj17 = { variant: "secondary", onPress: callback1, text: intl8.string(targetUsername(1126).t["6CLLyH"]) };
-            Button2 = targetUsername(5594).Button;
+            Button2 = targetUsername(5601).Button;
             intl8 = targetUsername(1126).intl;
             tmp36Result2 = closure_10(closure_5, obj16);
           }
@@ -872,7 +872,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         items15[1] = tmp36Result2;
         tmp33Result = closure_11(closure_5, obj10);
       } else {
-        const obj18 = { style: tmp.centered, children: closure_10(targetUsername(5968).ActivityIndicator, {}) };
+        const obj18 = { style: tmp.centered, children: closure_10(targetUsername(5975).ActivityIndicator, {}) };
         tmp33Result = closure_10(closure_5, obj18);
       }
       tmp28 = tmp33Result;

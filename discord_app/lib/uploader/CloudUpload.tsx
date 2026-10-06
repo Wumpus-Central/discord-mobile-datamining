@@ -1,33 +1,33 @@
-// === Module 7268: CloudUpload ===
+// === Module 7281: CloudUpload ===
 
-// Module 7268 (CloudUpload)
+// Module 7281 (CloudUpload)
 import LoggerDefault from "Logger" /* 3 */;
 import BackoffDefault from "Backoff" /* 569 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import InlineUploaderDefault from "InlineUploader" /* 6478 */;
-import UploadPlatform from "UploadPlatform" /* 7247 */;
-import Upload2 from "Upload" /* 7269 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 7272 */;
+import InlineUploaderDefault from "InlineUploader" /* 6485 */;
+import UploadPlatform from "UploadPlatform" /* 7260 */;
+import Upload2 from "Upload" /* 7282 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 7285 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import NetworkStore from "NetworkStore" /* 4939 */;
+import NetworkStore from "NetworkStore" /* 4945 */;
 import Constants from "Constants" /* 1085 */;
 import size_mod from "module_2" /* 2 */;
 
 const Upload = Upload2;
-let c0, c5, c8;
+let c0, c5, c8, closure_6, createAttachmentURL;
 
 let c10;
 let unpackModuleId;
 let closure_3 = ["Content-Range"];
 ({ AbortCodes: c10, AnalyticEvents: unpackModuleId } = Constants);
 let tmp3 = new LoggerDefault("CloudUpload.tsx");
-let logger = tmp3;
+const logger = tmp3;
 const set = new Set([429]);
 class ResumableUploadError extends Error {
   constructor(phase, arg1) {
@@ -1047,17 +1047,16 @@ class CloudUpload extends Upload {
             return { value: "IconComponent", done: null };
           }
         } else {
+          let tmp221;
           let c6;
-          let createAttachmentURL;
           try {
             let v0;
             let file;
             let tmp4;
             let tmp;
-            let closure_6;
             let maxFileSize;
+            let closure_8;
             let closure_9;
-            let closure_10;
             c9 = 2;
             switch (c8) {
               case 0:
@@ -1072,17 +1071,16 @@ class CloudUpload extends Upload {
                 } else {
                   v0 = undefined;
                   let str;
-                  let config;
                   file = undefined;
+                  closure_3 = undefined;
                   tmp4 = undefined;
                   tmp = undefined;
-                  closure_6 = undefined;
-                  createAttachmentURL = undefined;
                   maxFileSize = undefined;
+                  tmp221 = undefined;
+                  closure_8 = undefined;
                   closure_9 = undefined;
-                  closure_10 = undefined;
-                  if (self.status !== constants2.COMPLETED) {
-                    self.setStatus(constants2.STARTED);
+                  if (self.status !== constants.COMPLETED) {
+                    self.setStatus(constants.STARTED);
                     const _performance = performance;
                     self.startTime = performance.now();
                     self.trackUploadStart();
@@ -1123,42 +1121,31 @@ class CloudUpload extends Upload {
                       if (null != str) {
                         if (closure_133_0.item.platform === v0(closure_2[10]).UploadPlatform.WEB) {
                           if (null != closure_133_0.item.file) {
-                            const tmp162 = null != closure_133_0.mimeType && "" !== closure_133_0.mimeType;
-                            if (!tmp162) {
+                            const tmp188 = null != closure_133_0.mimeType && "" !== closure_133_0.mimeType;
+                            if (!tmp188) {
                               let heicMimeTypeResult;
                               if ("heic" === str) {
-                                const obj18 = v0(closure_2[18]);
-                                heicMimeTypeResult = obj18.heicMimeType(closure_133_0.item.file);
+                                const obj21 = v0(closure_2[18]);
+                                heicMimeTypeResult = obj21.heicMimeType(closure_133_0.item.file);
                               } else {
-                                const obj17 = v0(closure_2[18]);
-                                heicMimeTypeResult = obj17.jxrMimeType(closure_133_0.item.file);
+                                const obj20 = v0(closure_2[18]);
+                                heicMimeTypeResult = obj20.jxrMimeType(closure_133_0.item.file);
                               }
                               closure_133_0.mimeType = heicMimeTypeResult;
                             }
-                            if ("heic" === str) {
-                              const HeicUploadConversionExperiment = v0(closure_2[19]).HeicUploadConversionExperiment;
-                              config = HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.heic" });
-                            } else {
-                              const JxrUploadConversionExperiment = v0(closure_2[20]).JxrUploadConversionExperiment;
-                              config = JxrUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.jxr" });
-                            }
-                            if (config.enabled) {
-                              file = closure_133_0.item.file;
-                              const obj6 = {
-                                file: closure_133_0.item.file,
-                                format: str,
-                                isAborted() {
-                                                          return v0._aborted;
-                                                        },
-                                uploadId: closure_133_0.id,
-                                quality: config.quality,
-                                maxFileSizeBytes: config.maxFileSizeBytes
-                              };
-                              c8 = 3;
-                              c9 = 1;
-                              const obj7 = { value: CloudUpload.tryConvertToJpeg(obj6), done: false };
-                              return obj7;
-                            }
+                            file = closure_133_0.item.file;
+                            const obj6 = {
+                              file: closure_133_0.item.file,
+                              format: str,
+                              isAborted() {
+                                                      return v0._aborted;
+                                                    },
+                              uploadId: closure_133_0.id
+                            };
+                            c8 = 3;
+                            c9 = 1;
+                            const obj7 = { value: CloudUpload.tryConvertToJpeg(obj6), done: false };
+                            return obj7;
                           }
                         }
                       }
@@ -1167,8 +1154,8 @@ class CloudUpload extends Upload {
                       } else {
                         if (closure_133_0.allowOptimization) {
                           if (closure_133_0.item.platform === v0(closure_2[10]).UploadPlatform.WEB) {
-                            const tmp295 = v0;
-                            if (!tmp295) {
+                            const tmp282 = v0;
+                            if (!tmp282) {
                               if (true !== closure_133_0.item.imageConversionEvaluated) {
                                 c8 = 5;
                                 c9 = 1;
@@ -1181,7 +1168,7 @@ class CloudUpload extends Upload {
                         c8 = 6;
                         c9 = 1;
                         const obj9 = { value: _default.getUploadPayload(closure_133_0), done: false };
-                        _default = v0(closure_2[22]).default;
+                        _default = v0(closure_2[20]).default;
                         return obj9;
                       }
                     }
@@ -1195,7 +1182,7 @@ class CloudUpload extends Upload {
               {
                 c6 = 0;
                 if (!closure_133_0.isCancelled()) {
-                  const handleErrorResult = closure_133_0.handleError(constants.INVALID_FILE_ASSET);
+                  const handleErrorResult = closure_133_0.handleError(closure_1_10.INVALID_FILE_ASSET);
                   c9 = 3;
                   const obj11 = { value: undefined, done: true };
                   return obj11;
@@ -1227,26 +1214,26 @@ class CloudUpload extends Upload {
                   const obj13 = { value, done: true };
                   return obj13;
                 } else {
-                  tmp4 = value;
-                  if (null != tmp4) {
+                  closure_3 = value;
+                  if (null != closure_3) {
                     v0 = true;
-                    if (null != tmp4.convertedFile) {
+                    if (null != closure_3.convertedFile) {
                       const tmp113 = null == closure_133_0._originalMd5 && null != file;
                       if (tmp113) {
                         closure_3 = closure_133_0;
-                        const obj10 = status(closure_2[21]);
+                        const obj10 = status(closure_2[19]);
                         c8 = 4;
                         c9 = 1;
                         const obj14 = { value: fromBlobResult.catch(() => null), done: false };
                         fromBlobResult = obj10.fromBlob(file);
                         return obj14;
                       } else {
-                        closure_133_0.item.file = tmp4.convertedFile;
-                        closure_133_0.currentSize = tmp4.convertedFile.size;
-                        closure_133_0.setFilename(tmp4.convertedFile.name);
+                        closure_133_0.item.file = closure_3.convertedFile;
+                        closure_133_0.currentSize = closure_3.convertedFile.size;
+                        closure_133_0.setFilename(closure_3.convertedFile.name);
                       }
                     }
-                    const result = closure_133_0.applyConversionAnalytics(tmp4.analytics);
+                    const result = closure_133_0.applyConversionAnalytics(closure_3.analytics);
                   }
                 }
                 break;
@@ -1258,8 +1245,8 @@ class CloudUpload extends Upload {
                   throw value;
                 } else if (arg0 === 2) {
                   c9 = 3;
-                  const obj20 = { value, done: true };
-                  return obj20;
+                  const obj18 = { value, done: true };
+                  return obj18;
                 } else {
                   closure_3._originalMd5 = value;
                 }
@@ -1272,25 +1259,25 @@ class CloudUpload extends Upload {
                   throw value;
                 } else if (arg0 === 2) {
                   c9 = 3;
-                  const obj21 = { value, done: true };
-                  return obj21;
+                  const obj19 = { value, done: true };
+                  return obj19;
                 } else {
-                  tmp = value;
-                  if (null != tmp) {
-                    if (null != tmp.convertedFile) {
-                      closure_133_0.item.file = tmp.convertedFile;
-                      closure_133_0.currentSize = tmp.convertedFile.size;
+                  tmp4 = value;
+                  if (null != tmp4) {
+                    if (null != tmp4.convertedFile) {
+                      closure_133_0.item.file = tmp4.convertedFile;
+                      closure_133_0.currentSize = tmp4.convertedFile.size;
                     }
-                    if (null != tmp.convertedMimeType) {
-                      closure_133_0.uploadAnalytics.convertedMimeType = tmp.convertedMimeType;
+                    if (null != tmp4.convertedMimeType) {
+                      closure_133_0.uploadAnalytics.convertedMimeType = tmp4.convertedMimeType;
                     }
-                    if (null != tmp.hashTimeMs) {
-                      closure_133_0.uploadAnalytics.timing.hashTimeMs = tmp.hashTimeMs;
+                    if (null != tmp4.hashTimeMs) {
+                      closure_133_0.uploadAnalytics.timing.hashTimeMs = tmp4.hashTimeMs;
                     }
-                    if (null != tmp.conversionFailureReason) {
-                      closure_133_0.uploadAnalytics.conversionFailureReason = tmp.conversionFailureReason;
+                    if (null != tmp4.conversionFailureReason) {
+                      closure_133_0.uploadAnalytics.conversionFailureReason = tmp4.conversionFailureReason;
                     }
-                    closure_133_0.uploadAnalytics.timing.compressTimeMs = tmp.compressTimeMs;
+                    closure_133_0.uploadAnalytics.timing.compressTimeMs = tmp4.compressTimeMs;
                   }
                 }
                 break;
@@ -1305,23 +1292,23 @@ class CloudUpload extends Upload {
                   const obj22 = { value, done: true };
                   return obj22;
                 } else {
-                  closure_6 = value;
-                  const obj28 = v0(closure_2[23]);
-                  createAttachmentURL = obj28.getUploadTarget(closure_133_0.item.target);
-                  if (null != closure_6.filename) {
-                    if ("" !== closure_6.filename) {
+                  tmp = value;
+                  const obj28 = v0(closure_2[21]);
+                  maxFileSize = obj28.getUploadTarget(closure_133_0.item.target);
+                  if (null != tmp.filename) {
+                    if ("" !== tmp.filename) {
                       const currentSize2 = closure_133_0.currentSize;
                       if (0 !== closure_133_0.currentSize) {
-                        maxFileSize = createAttachmentURL.getMaxFileSize(closure_133_0.channelId);
+                        tmp221 = maxFileSize.getMaxFileSize(closure_133_0.channelId);
                         const currentSize = closure_133_0.currentSize;
                         v0 = currentSize;
                         if (currentSize == null) {
                           v0 = 0;
                         }
-                        if (v0 > maxFileSize) {
-                          closure_133_0.handleError(constants.ENTITY_TOO_LARGE);
+                        if (v0 > tmp221) {
+                          closure_133_0.handleError(closure_1_10.ENTITY_TOO_LARGE);
                         } else {
-                          if (createAttachmentURL.get("upload_fail_50")) {
+                          if (tmp221.get("upload_fail_50")) {
                             const _Math = Math;
                             if (Math.random() < 0.5) {
                               const _setTimeout = setTimeout;
@@ -1344,7 +1331,7 @@ class CloudUpload extends Upload {
                                                   const HTTP = v0(closure_2_2[8]).HTTP;
                                                   const request = { url: createAttachmentURL, body: obj4, headers: c0.buildOriginalMd5Headers(), rejectWithError: false };
                                                   obj4 = { files: items };
-                                                  items = [closure_2_6];
+                                                  items = [closure_2_5];
                                                   const post = HTTP.post;
                                                   const merged = Object.assign(c0.createAttachmentUrlRetryOpts());
                                                   await post(request);
@@ -1355,13 +1342,13 @@ class CloudUpload extends Upload {
                           return obj23;
                         }
                       } else {
-                        closure_133_0.handleError(constants.ENTITY_EMPTY);
+                        closure_133_0.handleError(closure_1_10.ENTITY_EMPTY);
                       }
                     }
                   }
                   const _JSON2 = JSON;
-                  logger.error("File does not have a filename.", JSON.stringify(closure_6));
-                  closure_133_0.handleError(constants.INVALID_FILE_ASSET);
+                  logger.error("File does not have a filename.", JSON.stringify(tmp));
+                  closure_133_0.handleError(closure_1_10.INVALID_FILE_ASSET);
                   c9 = 3;
                   const obj24 = { value: undefined, done: true };
                   return obj24;
@@ -1371,32 +1358,32 @@ class CloudUpload extends Upload {
               case 7:
               {
                 c6 = 0;
-                let closure_11 = createAttachmentURL;
+                let closure_10 = tmp221;
                 let code;
-                if (closure_11 != null) {
-                  const body = closure_11.body;
+                if (closure_10 != null) {
+                  const body = closure_10.body;
                   if (body != null) {
                     code = body.code;
                   }
                 }
                 status = code;
                 if (code == null) {
-                  status = closure_11.status;
+                  status = closure_10.status;
                 }
-                closure_10 = status;
-                if (closure_10 !== constants.ENTITY_TOO_LARGE) {
-                  closure_2 = closure_10;
+                closure_9 = status;
+                if (closure_9 !== closure_1_10.ENTITY_TOO_LARGE) {
+                  closure_2 = closure_9;
                   const error = logger.error;
-                  if (closure_10 == null) {
+                  if (closure_9 == null) {
                     const _JSON = JSON;
-                    closure_2 = JSON.stringify(closure_11.body);
+                    closure_2 = JSON.stringify(closure_10.body);
                   }
                   const _HermesInternal2 = HermesInternal;
                   error("Requesting upload url failed with code " + closure_2 + " for " + closure_133_0.id);
-                  const obj3 = status(closure_2[25]);
-                  obj3.captureException(closure_11);
+                  const obj3 = status(closure_2[23]);
+                  obj3.captureException(closure_10);
                 }
-                closure_133_0.handleError(closure_10);
+                closure_133_0.handleError(closure_9);
                 c9 = 3;
                 const obj25 = { value: undefined, done: true };
                 return obj25;
@@ -1404,13 +1391,13 @@ class CloudUpload extends Upload {
               case 8:
               {
                 c6 = 0;
-                logger = createAttachmentURL;
+                status = tmp221;
                 if (closure_133_0.isCancelled()) {
-                  closure_133_0.handleComplete(logger);
+                  closure_133_0.handleComplete(status);
                 } else {
                   const _HermesInternal = HermesInternal;
-                  logger.info("Error: status " + logger.status + " for " + closure_133_0.id);
-                  closure_133_0.handleError(logger);
+                  logger.info("Error: status " + status.status + " for " + closure_133_0.id);
+                  closure_133_0.handleError(status);
                 }
                 break;
               }
@@ -1425,9 +1412,9 @@ class CloudUpload extends Upload {
                   const obj26 = { value, done: true };
                   return obj26;
                 } else {
-                  closure_9 = value;
-                  closure_133_0.setResponseUrl(closure_9.body.attachments[0].upload_url);
-                  closure_133_0.setUploadedFilename(closure_9.body.attachments[0].upload_filename);
+                  closure_8 = value;
+                  closure_133_0.setResponseUrl(closure_8.body.attachments[0].upload_url);
+                  closure_133_0.setUploadedFilename(closure_8.body.attachments[0].upload_filename);
                   c6 = 3;
                   c8 = 10;
                   c9 = 1;
@@ -1454,18 +1441,17 @@ class CloudUpload extends Upload {
                   const obj27 = { value, done: true };
                   return obj27;
                 } else {
-                  closure_133_0.trackUploadFinished(constants2.COMPLETED);
+                  closure_133_0.trackUploadFinished(constants.COMPLETED);
                   closure_133_0.handleComplete(closure_133_0.id);
                   c6 = 0;
                 }
                 break;
               }
             }
-          } catch (tmp226) {
-            createAttachmentURL = tmp226;
+          } catch (tmp221) {
             if (0 === c6) {
               c9 = 3;
-              throw tmp226;
+              throw tmp221;
             } else if (1 === c6) {
               c8 = 1;
             } else if (2 === c6) {
@@ -1492,7 +1478,7 @@ class CloudUpload extends Upload {
         return value;
       }
       let c2 = 0;
-      const obj16 = size(c2[23]);
+      const obj16 = size(c2[21]);
       if (!obj16.getUploadTarget(self.item.target).shouldReactNativeCompressUploads) {
         self.uploadAnalytics.compressAndExtractDisabled = true;
         logger.log("reactNativeCompressAndExtractData() disabled by upload target");
@@ -1510,7 +1496,7 @@ class CloudUpload extends Upload {
         let c1;
         let v0;
         const reactNativeFileIndex = v0.reactNativeFileIndex;
-        const tmp6 = v0(name[26]);
+        const tmp6 = v0(name[24]);
         v0 = reactNativeFileIndex;
         const getAttachmentFile = tmp6.getAttachmentFile;
         const tmp7 = v0;
@@ -1593,7 +1579,7 @@ class CloudUpload extends Upload {
                     const fileSize = size.fileSize;
                     size = fileSize;
                     if (fileSize == null) {
-                      const obj3 = size(c2[27]);
+                      const obj3 = size(c2[25]);
                       let c3 = 2;
                       c4 = 1;
                       const obj9 = { value: obj3.getFileData(uri), done: false };
@@ -1669,7 +1655,7 @@ class CloudUpload extends Upload {
       let sizeBefore;
       let unknown_error;
       let conversionFailureReason = tmp;
-      const obj9 = unknown_error(hashTimeMs[28]);
+      const obj9 = unknown_error(hashTimeMs[26]);
       const imageAttachmentMezzanineV2Config = obj9.getImageAttachmentMezzanineV2Config({ location: "CloudUpload.maybeConvertToWebP" });
       const tmp87 = unknown_error;
       if (!imageAttachmentMezzanineV2Config.enabled) {
@@ -1698,7 +1684,7 @@ class CloudUpload extends Upload {
       const _performance2 = performance;
       closure_2 = performance.now();
       const value = { compressTimeMs: 0 };
-      await tmp87(hashTimeMs[30])(hashTimeMs[29], hashTimeMs.paths);
+      await tmp87(hashTimeMs[28])(hashTimeMs[27], hashTimeMs.paths);
       if (1 === c8) {
         let c7 = 0;
         let closure_7 = closure_6;
@@ -1798,7 +1784,7 @@ class CloudUpload extends Upload {
     })();
   }
   static tryConvertToJpeg(arg0) {
-    ({ file: require, format: importDefault, isAborted: dependencyMap, uploadId: closure_3, quality: _objectWithoutProperties, maxFileSizeBytes: _asyncToGenerator } = arg0);
+    ({ file: require, format: importDefault, isAborted: dependencyMap, uploadId: closure_3 } = arg0);
     return (async () => {
       let closure_0;
       let paths;
@@ -1837,7 +1823,7 @@ class CloudUpload extends Upload {
                   c3 = 1;
                   c4 = 2;
                   c5 = 1;
-                  const obj4 = { value: require("asyncRequire")(paths[31], paths.paths), done: false };
+                  const obj4 = { value: require("asyncRequire")(paths[29], paths.paths), done: false };
                   return obj4;
                 }
               }
@@ -1865,7 +1851,7 @@ class CloudUpload extends Upload {
               convertFileToJpeg = value.convertFileToJpeg;
               c4 = 3;
               c5 = 1;
-              const obj8 = { value: convertFileToJpeg(closure_129_0, closure_129_1, closure_129_4, closure_129_5), done: false };
+              const obj8 = { value: convertFileToJpeg(closure_129_0, closure_129_1), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {
@@ -1887,11 +1873,11 @@ class CloudUpload extends Upload {
             const obj = { value: tmp8, done: true };
             return obj;
           }
-        } catch (tmp29) {
-          paths = tmp29;
+        } catch (tmp27) {
+          paths = tmp27;
           if (0 === c3) {
             c5 = 3;
-            throw tmp29;
+            throw tmp27;
           } else {
             c4 = 1;
           }
@@ -2022,7 +2008,7 @@ class CloudUpload extends Upload {
               const obj4 = { value, done: true };
               return obj4;
             } else if (null != self.uploadedFilename) {
-              const obj2 = v3(c2[23]);
+              const obj2 = v3(c2[21]);
               const uploadTarget = obj2.getUploadTarget(self.item.target);
               c2 = 1;
               const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);
@@ -2112,7 +2098,7 @@ class CloudUpload extends Upload {
                 c4 = 1;
                 c5 = 1;
                 const obj4 = { value: _default.getUploadPayload(self), done: false };
-                _default = response(url[22]).default;
+                _default = response(url[20]).default;
                 return obj4;
               }
             }
@@ -2126,7 +2112,7 @@ class CloudUpload extends Upload {
               return obj5;
             } else {
               closure_1 = value;
-              const obj9 = response(url[23]);
+              const obj9 = response(url[21]);
               const uploadTarget = obj9.getUploadTarget(closure_129_0.item.target);
               url = uploadTarget.getCreateAttachmentURL(closure_129_0.channelId);
               c3 = 1;

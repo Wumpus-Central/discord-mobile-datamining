@@ -1,11 +1,11 @@
-// === Module 11871: ChatInputActionButtonApps ===
+// === Module 11885: ChatInputActionButtonApps ===
 
-// Module 11871 (ChatInputActionButtonApps)
+// Module 11885 (ChatInputActionButtonApps)
 import react_native from "react-native" /* 17 */;
-import react_native2 from "react-native" /* 5779 */;
-import ChatInputConstants from "ChatInputConstants" /* 11576 */;
-import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 11723 */;
-import AppLauncherOnboardingChatInputButtonAnimation from "AppLauncherOnboardingChatInputButtonAnimation" /* 11872 */;
+import react_native2 from "react-native" /* 5786 */;
+import ChatInputConstants from "ChatInputConstants" /* 11589 */;
+import AppLauncherOnboardingActionCreators from "AppLauncherOnboardingActionCreators" /* 11737 */;
+import AppLauncherOnboardingChatInputButtonAnimation from "AppLauncherOnboardingChatInputButtonAnimation" /* 11886 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

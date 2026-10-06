@@ -1,12 +1,12 @@
-// === Module 5048: GuildRoomStore ===
+// === Module 5054: GuildRoomStore ===
 
-// Module 5048 (GuildRoomStore)
+// Module 5054 (GuildRoomStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 5049 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 5055 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import size from "module_2" /* 2 */;
 

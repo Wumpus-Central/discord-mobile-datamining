@@ -1,12 +1,12 @@
-// === Module 8301: InAppReportsTextElement ===
+// === Module 8334: InAppReportsTextElement ===
 
-// Module 8301 (InAppReportsTextElement)
+// Module 8334 (InAppReportsTextElement)
 import react_native from "react-native" /* 17 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import CustomMarkupAll from "CustomMarkup" /* 5784 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import CustomMarkupAll from "CustomMarkup" /* 5791 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let hasOwnProperty;

@@ -1,16 +1,16 @@
-// === Module 12337: NewUserPermissionsOnboarding ===
+// === Module 12352: NewUserPermissionsOnboarding ===
 
-// Module 12337 (NewUserPermissionsOnboarding)
+// Module 12352 (NewUserPermissionsOnboarding)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

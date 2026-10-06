@@ -1,11 +1,11 @@
-// === Module 6820: MobileWebHandoffLinking ===
+// === Module 6830: MobileWebHandoffLinking ===
 
-// Module 6820 (MobileWebHandoffLinking)
+// Module 6830 (MobileWebHandoffLinking)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import FingerprintUtils from "FingerprintUtils" /* 1265 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import SimpleLoadingModal from "SimpleLoadingModal" /* 6821 */;
-import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 6823 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import SimpleLoadingModal from "SimpleLoadingModal" /* 6831 */;
+import MobileWebHandoffUtilsDefault from "MobileWebHandoffUtils" /* 6833 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import Constants from "Constants" /* 1085 */;
@@ -117,7 +117,7 @@ let obj = function _redirectWithHandoffToken() {
     }
     flag2 = obj7.forceExternalBrowser ?? false;
     nonce = Object.assign(obj7, Object.assign({ forceExternalBrowser: 0 }));
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

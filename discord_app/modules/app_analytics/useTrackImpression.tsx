@@ -1,16 +1,16 @@
-// === Module 8422: useTrackImpression ===
+// === Module 8455: useTrackImpression ===
 
-// Module 8422 (useTrackImpression)
+// Module 8455 (useTrackImpression)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtils2 from "AnalyticsUtils" /* 1252 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import uniqueIdDefault from "uniqueId" /* 5094 */;
-import useMountEffectDefault from "useMountEffect" /* 5590 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import uniqueIdDefault from "uniqueId" /* 5100 */;
+import useMountEffectDefault from "useMountEffect" /* 5597 */;
 import react_mod from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore_mod from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import ImpressionStore from "ImpressionStore" /* 1253 */;
 import AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -186,7 +186,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((current, arg1, curre
   react = undefined;
   react = react.useRef(undefined);
   const ref2 = react.useRef(undefined);
-  const tmp = obj(5590)(() => {
+  const tmp = obj(5597)(() => {
     if (obj.trackOnInitialLoad) {
       let fn;
       const tmp6 = _modDef1342(ref.current, current);

@@ -1,12 +1,12 @@
-// === Module 4521: ReactionUtils ===
+// === Module 4527: ReactionUtils ===
 
-// Module 4521 (ReactionUtils)
+// Module 4527 (ReactionUtils)
 import intl2 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import NotificationConstants from "NotificationConstants" /* 4522 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4523 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
+import NotificationConstants from "NotificationConstants" /* 4528 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4529 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

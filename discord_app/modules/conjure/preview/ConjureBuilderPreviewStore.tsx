@@ -1,10 +1,10 @@
-// === Module 14303: ConjureBuilderPreviewStore ===
+// === Module 14321: ConjureBuilderPreviewStore ===
 
-// Module 14303 (ConjureBuilderPreviewStore)
+// Module 14321 (ConjureBuilderPreviewStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 2011 */;
-import FramesStore from "FramesStore" /* 8703 */;
+import FramesStore from "FramesStore" /* 9000 */;
 import size from "module_2" /* 2 */;
 
 const OrientationLockState = Constants.OrientationLockState;

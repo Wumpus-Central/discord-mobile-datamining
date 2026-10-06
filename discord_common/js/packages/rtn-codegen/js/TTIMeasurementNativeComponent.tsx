@@ -1,6 +1,6 @@
-// === Module 11509: TTIMeasurementNativeComponent ===
+// === Module 11522: TTIMeasurementNativeComponent ===
 
-// Module 11509 (TTIMeasurementNativeComponent)
+// Module 11522 (TTIMeasurementNativeComponent)
 import DynamicallyInjectedByGestureHandler from "DynamicallyInjectedByGestureHandler" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

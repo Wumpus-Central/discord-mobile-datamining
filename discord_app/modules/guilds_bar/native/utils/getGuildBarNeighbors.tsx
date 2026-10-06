@@ -1,8 +1,8 @@
-// === Module 16280: getGuildBarNeighbors ===
+// === Module 16320: getGuildBarNeighbors ===
 
-// Module 16280 (getGuildBarNeighbors)
-import GuildsTree from "GuildsTree" /* 5619 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
+// Module 16320 (getGuildBarNeighbors)
+import GuildsTree from "GuildsTree" /* 5626 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");

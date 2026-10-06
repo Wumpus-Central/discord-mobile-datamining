@@ -1,6 +1,6 @@
-// === Module 4536: GooglePlayPriceChangeRecord ===
+// === Module 4542: GooglePlayPriceChangeRecord ===
 
-// Module 4536 (GooglePlayPriceChangeRecord)
+// Module 4542 (GooglePlayPriceChangeRecord)
 import Record from "Record" /* 1392 */;
 import size from "module_2" /* 2 */;
 

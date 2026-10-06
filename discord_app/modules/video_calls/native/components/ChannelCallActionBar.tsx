@@ -1,42 +1,42 @@
-// === Module 9625: ChannelCallActionBar ===
+// === Module 9638: ChannelCallActionBar ===
 
-// Module 9625 (ChannelCallActionBar)
+// Module 9638 (ChannelCallActionBar)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import Constants from "Constants" /* 4915 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import StreamActionCreators from "StreamActionCreators" /* 5032 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 6657 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import useIsRemoteDefault from "useIsRemote" /* 6774 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 8991 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 9054 */;
-import useActionBarHeight from "useActionBarHeight" /* 9075 */;
-import CallBarActionAll from "CallBarAction" /* 9076 */;
-import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 9079 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9084 */;
-import CallsUtils from "CallsUtils" /* 9299 */;
-import CameraLottie2 from "CameraLottie" /* 9627 */;
-import useScreenshareUtilsDefault from "useScreenshareUtils" /* 9631 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9653 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9654 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 9655 */;
-import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 9656 */;
-import ChannelCallMicButton from "ChannelCallMicButton" /* 9686 */;
-import DisconnectRemoteButton from "DisconnectRemoteButton" /* 9696 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import Constants from "Constants" /* 4921 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import StreamActionCreators from "StreamActionCreators" /* 5038 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 6664 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import useIsRemoteDefault from "useIsRemote" /* 6784 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9024 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 9090 */;
+import useActionBarHeight from "useActionBarHeight" /* 9111 */;
+import CallBarActionAll from "CallBarAction" /* 9112 */;
+import useIsFiveButtonLayout from "useIsFiveButtonLayout" /* 9115 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 9120 */;
+import CallsUtils from "CallsUtils" /* 9334 */;
+import CameraLottie2 from "CameraLottie" /* 9640 */;
+import useScreenshareUtilsDefault from "useScreenshareUtils" /* 9644 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9666 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9667 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 9668 */;
+import ChannelCallConnectingScreen from "ChannelCallConnectingScreen" /* 9669 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 9699 */;
+import DisconnectRemoteButton from "DisconnectRemoteButton" /* 9709 */;
 import react from "react" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import GameConsoleStore from "GameConsoleStore" /* 4907 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import GameConsoleStore from "GameConsoleStore" /* 4913 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9065 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9101 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -670,8 +670,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           stopStream(obj2.encodeStreamKey(stateFromStores1));
         }
       }
-      const PrimaryActionButton = stateFromStores1(9076).PrimaryActionButton;
-      tmp20[0] = stateFromStores(9654);
+      const PrimaryActionButton = stateFromStores1(9112).PrimaryActionButton;
+      tmp20[0] = stateFromStores(9667);
       tmp20[1] = tmp14;
       tmp20[2] = isSmallSize;
       tmp20[3] = N;
@@ -743,7 +743,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
           stopStream(obj2.encodeStreamKey(stateFromStores));
         }
     };
-    const PrimaryActionButton = stateFromStores(9076).PrimaryActionButton;
+    const PrimaryActionButton = stateFromStores(9112).PrimaryActionButton;
     intl = tmp(1126).intl;
     tmp4 = closure_15(PrimaryActionButton, obj3);
   }
@@ -937,7 +937,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   let obj = channel(576);
   const cResult = obj.c(15);
   channel = channel.channel;
-  const obj2 = channel(9054);
+  const obj2 = channel(9090);
   const isConnectedToVoiceChannel = obj2.useIsConnectedToVoiceChannel(channel);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ChannelRTCStore, AuthenticationStore];
@@ -1216,7 +1216,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
 }) : ((channel) => {
   let currentEmbeddedActivity;
   channel = channel.channel;
-  let obj = channel(9054);
+  let obj = channel(9090);
   const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   const items = [ChannelRTCStore, AuthenticationStore];
   const obj2 = channel(504);

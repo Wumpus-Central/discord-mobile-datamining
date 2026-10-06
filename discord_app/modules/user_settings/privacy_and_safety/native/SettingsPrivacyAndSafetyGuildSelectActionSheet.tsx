@@ -1,18 +1,18 @@
-// === Module 15779: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
+// === Module 15816: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
 
-// Module 15779 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
+// Module 15816 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 5122 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5621 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 5129 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5628 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import SortedGuildStore from "SortedGuildStore" /* 5616 */;
-import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 15778 */;
-import createStyles from "createStyles" /* 4890 */;
+import SortedGuildStore from "SortedGuildStore" /* 5623 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 15815 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -101,7 +101,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     let tmp10;
     if (null != stateFromStores) {
       if (cResult[4] !== stateFromStores) {
-        const obj2 = { type: selectedGuildId(5122).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
+        const obj2 = { type: selectedGuildId(5129).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
         ({ name: obj3.label, id: obj3.value } = stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = obj2;
@@ -113,7 +113,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     return tmp10;
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { type: selectedGuildId(5122).SelectOptionType.GUILD, guild: dangerouslyConstructGuildRecordFromUntypedObject(obj5), label: intl2.string(selectedGuildId(1126).t["32u1Dx"]), value };
+    const obj4 = { type: selectedGuildId(5129).SelectOptionType.GUILD, guild: dangerouslyConstructGuildRecordFromUntypedObject(obj5), label: intl2.string(selectedGuildId(1126).t["32u1Dx"]), value };
     obj5 = { id: value, name: intl.string(selectedGuildId(1126).t["32u1Dx"]) };
     dangerouslyConstructGuildRecordFromUntypedObject = selectedGuildId(2066).dangerouslyConstructGuildRecordFromUntypedObject;
     selectedGuildId(2066);
@@ -137,12 +137,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (selectedGuildId !== value) {
     let obj3;
     if (null != stateFromStores) {
-      obj3 = { type: selectedGuildId(5122).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
+      obj3 = { type: selectedGuildId(5129).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
       ({ name: obj2.label, id: obj2.value } = stateFromStores);
     }
     return obj3;
   }
-  const obj4 = { type: selectedGuildId(5122).SelectOptionType.GUILD, guild: dangerouslyConstructGuildRecordFromUntypedObject(obj7), label: intl2.string(selectedGuildId(1126).t["32u1Dx"]), value };
+  const obj4 = { type: selectedGuildId(5129).SelectOptionType.GUILD, guild: dangerouslyConstructGuildRecordFromUntypedObject(obj7), label: intl2.string(selectedGuildId(1126).t["32u1Dx"]), value };
   obj7 = { id: value, name: intl.string(selectedGuildId(1126).t["32u1Dx"]) };
   dangerouslyConstructGuildRecordFromUntypedObject = selectedGuildId(2066).dangerouslyConstructGuildRecordFromUntypedObject;
   selectedGuildId(2066);
@@ -357,8 +357,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   cResult[14] = tmp10;
   cResult[15] = tmp4.iconContainer;
   cResult[16] = tmp21;
-  cResult[17] = jsx(L(11432), { onPressOptionItem: tmp14, renderHeaderIcon: P, renderIcon: U, iconContainerStyle: tmp4.iconContainer, selectionActionComponent: first1, options: tmp10, selectedCount: 1, selectedOptions: tmp21, isSelected: tmp16, submitSelection: tmp12, onQueryChange: tmp7, itemAccessibilityLabel: T, allowEmpty: false, expanded: true });
-  jsx(L(11432), { onPressOptionItem: tmp14, renderHeaderIcon: P, renderIcon: U, iconContainerStyle: tmp4.iconContainer, selectionActionComponent: first1, options: tmp10, selectedCount: 1, selectedOptions: tmp21, isSelected: tmp16, submitSelection: tmp12, onQueryChange: tmp7, itemAccessibilityLabel: T, allowEmpty: false, expanded: true });
+  cResult[17] = jsx(L(11445), { onPressOptionItem: tmp14, renderHeaderIcon: P, renderIcon: U, iconContainerStyle: tmp4.iconContainer, selectionActionComponent: first1, options: tmp10, selectedCount: 1, selectedOptions: tmp21, isSelected: tmp16, submitSelection: tmp12, onQueryChange: tmp7, itemAccessibilityLabel: T, allowEmpty: false, expanded: true });
+  jsx(L(11445), { onPressOptionItem: tmp14, renderHeaderIcon: P, renderIcon: U, iconContainerStyle: tmp4.iconContainer, selectionActionComponent: first1, options: tmp10, selectedCount: 1, selectedOptions: tmp21, isSelected: tmp16, submitSelection: tmp12, onQueryChange: tmp7, itemAccessibilityLabel: T, allowEmpty: false, expanded: true });
 }) : (() => {
   let callback;
   let closure_1;

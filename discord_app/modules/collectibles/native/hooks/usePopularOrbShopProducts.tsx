@@ -1,6 +1,6 @@
-// === Module 14873: usePopularOrbShopProducts ===
+// === Module 14889: usePopularOrbShopProducts ===
 
-// Module 14873 (usePopularOrbShopProducts)
+// Module 14889 (usePopularOrbShopProducts)
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;

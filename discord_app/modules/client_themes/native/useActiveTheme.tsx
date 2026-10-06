@@ -1,11 +1,11 @@
-// === Module 7509: useActiveTheme ===
+// === Module 7520: useActiveTheme ===
 
-// Module 7509 (useActiveTheme)
+// Module 7520 (useActiveTheme)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4735 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4741 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1195 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4697 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ThemeConstants from "ThemeConstants" /* 1196 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

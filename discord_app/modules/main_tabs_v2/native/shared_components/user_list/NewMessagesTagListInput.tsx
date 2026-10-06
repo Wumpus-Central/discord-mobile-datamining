@@ -1,16 +1,16 @@
-// === Module 11994: NewMessagesTagListInput ===
+// === Module 12011: NewMessagesTagListInput ===
 
-// Module 11994 (NewMessagesTagListInput)
+// Module 12011 (NewMessagesTagListInput)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4590 */;
-import makeUserListPillDataDefault from "makeUserListPillData" /* 10595 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4596 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10608 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -58,7 +58,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     }
     const mapped = items.map(UserStore.getUser);
     const found = mapped.filter(onSelectUser(1375).isNotNullish);
-    const mapped1 = found.map(tags(10595));
+    const mapped1 = found.map(tags(10608));
     cResult[0] = selectedUserIds;
     cResult[1] = mapped1;
     tags = mapped1;
@@ -86,8 +86,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
           }
           if (cResult[9] !== tmp4.header) {
             cResult[9] = tmp4.header;
-            cResult[10] = jsx(onSelectUser(4886).Text, { style: header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: tmp15 });
-            jsx(onSelectUser(4886).Text, { style: header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: tmp15 });
+            cResult[10] = jsx(onSelectUser(4892).Text, { style: header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: tmp15 });
+            jsx(onSelectUser(4892).Text, { style: header, variant: "text-sm/medium", color: "text-muted", accessible: false, children: tmp15 });
             class F {
               constructor(arg0) {
                 tmp = closure_1[arg0];
@@ -190,7 +190,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                 return;
               }
             }
-            const tmp26 = jsx(tags(9235), { autoFocus, focusOnAdd: true, footer: null, icon: tmp17, onChangeText, onFocus, onRemove: tmp20, placeholder: tmp21, tags, ref: tagListInputRef });
+            const tmp26 = jsx(tags(9270), { autoFocus, focusOnAdd: true, footer: null, icon: tmp17, onChangeText, onFocus, onRemove: tmp20, placeholder: tmp21, tags, ref: tagListInputRef });
             cResult[15] = autoFocus;
             cResult[16] = onChangeText;
             cResult[17] = onFocus;
@@ -234,7 +234,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     tmp12Result = null;
     if (tags.length > 0) {
       let stringResult2;
-      const PressableOpacity = onSelectUser(5909).PressableOpacity;
+      const PressableOpacity = onSelectUser(5916).PressableOpacity;
       let intl = onSelectUser(1126).intl;
       const string = intl.string;
       const t = onSelectUser(1126).t;
@@ -263,9 +263,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
         }
       }
       if (forceSearchResults) {
-        let CirclePlusIcon = onSelectUser(11995).ChevronLargeRightIcon;
+        let CirclePlusIcon = onSelectUser(12012).ChevronLargeRightIcon;
       } else {
-        CirclePlusIcon = onSelectUser(10983).CirclePlusIcon;
+        CirclePlusIcon = onSelectUser(10996).CirclePlusIcon;
       }
       tmp12Result = <PressableOpacity accessibilityRole="button" accessibilityLabel={stringResult2} onPress={onForceSearchResults} style={null}>{null}</PressableOpacity>;
     }

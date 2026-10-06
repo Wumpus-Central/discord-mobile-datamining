@@ -1,17 +1,17 @@
-// === Module 13938: RoleDot ===
+// === Module 13956: RoleDot ===
 
-// Module 13938 (RoleDot)
+// Module 13956 (RoleDot)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import useFontScale from "useFontScale" /* 5602 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5793 */;
+import useFontScale from "useFontScale" /* 5609 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5800 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

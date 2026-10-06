@@ -1,23 +1,23 @@
-// === Module 9335: VoiceStateIcons ===
+// === Module 9349: VoiceStateIcons ===
 
-// Module 9335 (VoiceStateIcons)
+// Module 9349 (VoiceStateIcons)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 4820 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9336 */;
-import HeadphonesDenyIcon2 from "HeadphonesDenyIcon" /* 9337 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9339 */;
-import MicrophoneDenyIcon2 from "MicrophoneDenyIcon" /* 9341 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9343 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9344 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 4826 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9350 */;
+import HeadphonesDenyIcon2 from "HeadphonesDenyIcon" /* 9351 */;
+import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9353 */;
+import MicrophoneDenyIcon2 from "MicrophoneDenyIcon" /* 9355 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9357 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9358 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

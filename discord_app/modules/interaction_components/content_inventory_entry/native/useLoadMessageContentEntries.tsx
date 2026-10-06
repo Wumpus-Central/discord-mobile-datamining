@@ -1,16 +1,16 @@
-// === Module 11146: useLoadMessageContentEntries ===
+// === Module 11159: useLoadMessageContentEntries ===
 
-// Module 11146 (useLoadMessageContentEntries)
+// Module 11159 (useLoadMessageContentEntries)
 import _modDef38 from "module_38" /* 38 */;
 import Server from "Server" /* 1985 */;
 import Constants from "Constants" /* 2011 */;
-import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 7812 */;
-import useAvatarColor from "useAvatarColor" /* 7815 */;
-import utils_FunctionUtils from "utils/FunctionUtils" /* 8696 */;
+import transformContentInventoryEntryMessageComponent from "transformContentInventoryEntryMessageComponent" /* 7823 */;
+import useAvatarColor from "useAvatarColor" /* 7826 */;
+import utils_FunctionUtils from "utils/FunctionUtils" /* 8731 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -767,7 +767,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLoadMessa
   } else {
     tmp19 = cResult[4];
   }
-  const tmpResult = tmp(7815);
+  const tmpResult = tmp(7826);
   const colorStore = tmpResult.useColorStore(tmp19);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     _require = _asyncToGenerator(async (arg0, arg1) => {

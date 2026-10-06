@@ -1,8 +1,8 @@
-// === Module 14269: useAccessibilityNativeStackFocusTracking ===
+// === Module 14287: useAccessibilityNativeStackFocusTracking ===
 
-// Module 14269 (useAccessibilityNativeStackFocusTracking)
-import react_nativeDefault from "react-native" /* 5710 */;
-import react_nativeDefault2 from "react-native" /* 5712 */;
+// Module 14287 (useAccessibilityNativeStackFocusTracking)
+import react_nativeDefault from "react-native" /* 5717 */;
+import react_nativeDefault2 from "react-native" /* 5719 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

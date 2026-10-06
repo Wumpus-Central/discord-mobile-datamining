@@ -1,31 +1,31 @@
-// === Module 7052: CollectiblesActionCreators ===
+// === Module 7065: CollectiblesActionCreators ===
 
-// Module 7052 (CollectiblesActionCreators)
+// Module 7065 (CollectiblesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
-import CollectiblesDebugStore from "CollectiblesDebugStore" /* 7067 */;
-import CollectiblesCategoriesRecord from "CollectiblesCategoriesRecord" /* 7070 */;
-import CollectiblesMarketingRecord from "CollectiblesMarketingRecord" /* 7074 */;
-import CollectiblesShopHomeRecord from "CollectiblesShopHomeRecord" /* 7081 */;
-import LayerActionCreators from "LayerActionCreators" /* 7096 */;
-import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7097 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7098 */;
-import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7099 */;
-import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 7100 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
+import CollectiblesDebugStore from "CollectiblesDebugStore" /* 7080 */;
+import CollectiblesCategoriesRecord from "CollectiblesCategoriesRecord" /* 7083 */;
+import CollectiblesMarketingRecord from "CollectiblesMarketingRecord" /* 7087 */;
+import CollectiblesShopHomeRecord from "CollectiblesShopHomeRecord" /* 7094 */;
+import LayerActionCreators from "LayerActionCreators" /* 7109 */;
+import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7110 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7111 */;
+import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7112 */;
+import CollectiblesMarketingReleaseType from "CollectiblesMarketingReleaseType" /* 7113 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
-import CollectiblesShopStore from "CollectiblesShopStore" /* 7069 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7055 */;
-import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 7080 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
+import CollectiblesShopStore from "CollectiblesShopStore" /* 7082 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7068 */;
+import CollectiblesPurchaseRecord from "CollectiblesPurchaseRecord" /* 7093 */;
 import Constants from "Constants" /* 1085 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7094 */;
-import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7095 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 7107 */;
+import CollectiblesShopHomeStore from "CollectiblesShopHomeStore" /* 7108 */;
 import size from "module_2" /* 2 */;
 
 let c2, closure_4, closure_6, options, recipient_id;
@@ -864,7 +864,7 @@ obj = function _fetchCollectiblesMarketings() {
       await "IconComponent";
       body = tmp;
       PROD = release.release ?? CollectiblesMarketingReleaseType.CollectiblesMarketingReleaseType.PROD;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;
@@ -1093,7 +1093,7 @@ obj = function _maybeFetchCollectiblesShopTabLayout() {
     }
     await "IconComponent";
     ({ tab: c0, abortSignal: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -1110,7 +1110,7 @@ export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   let isCollectiblesShopRoute;
-  obj = isCollectiblesShopRoute(4737);
+  obj = isCollectiblesShopRoute(4743);
   const rootNavigationRef = obj.getRootNavigationRef();
   let tmp2 = !(null == rootNavigationRef || !rootNavigationRef.isReady());
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();

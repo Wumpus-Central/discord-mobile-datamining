@@ -1,18 +1,18 @@
-// === Module 12851: CutoutableAvatarImage ===
+// === Module 12870: CutoutableAvatarImage ===
 
-// Module 12851 (CutoutableAvatarImage)
+// Module 12870 (CutoutableAvatarImage)
 import LoggerDefault from "Logger" /* 3 */;
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import react2 from "react" /* 576 */;
 import v1 from "v1" /* 1266 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import spring from "spring" /* 5597 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
-import ClipView from "ClipView" /* 8469 */;
-import ChannelAnimationConstants from "ChannelAnimationConstants" /* 12852 */;
-import getChannelIcon from "getChannelIcon" /* 12853 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 12854 */;
+import spring from "spring" /* 5604 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
+import ClipView from "ClipView" /* 8502 */;
+import ChannelAnimationConstants from "ChannelAnimationConstants" /* 12871 */;
+import getChannelIcon from "getChannelIcon" /* 12872 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 12873 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
@@ -319,7 +319,7 @@ function CutoutAvatarImage(arg0) {
         tmp18 = metroImportDefault;
       }
       const obj11 = { style, children: metroImportAll(tmp17Result, size12) };
-      tmp17Result = tmp17(8136);
+      tmp17Result = tmp17(8169);
       const Defs = inlineStyles.Defs;
       const size9 = { width: size, height: size, id: v4Result1, children: items2 };
       const Mask = inlineStyles.Mask;
@@ -471,7 +471,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cutout) => {
   const tmp = cutout;
   cutout = cutout.cutout;
   ({ source, style, imageStyle } = cutout);
-  obj2 = cutout(4612);
+  obj2 = cutout(4618);
   const fn = function i() {
     let items;
     let point;
@@ -502,10 +502,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cutout) => {
     items = [point];
     return obj;
   };
-  fn.__closure = { cutout, CutoutShape: cutout(8469).CutoutShape, withSpring: cutout(5597).withSpring, CHANNEL_SPRING_CONFIG };
+  fn.__closure = { cutout, CutoutShape: cutout(8502).CutoutShape, withSpring: cutout(5604).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__workletHash = 12529564164821;
   fn.__initData = __initData;
-  ({ cutout, CutoutShape: cutout(8469).CutoutShape, withSpring: cutout(5597).withSpring, CHANNEL_SPRING_CONFIG });
+  ({ cutout, CutoutShape: cutout(8502).CutoutShape, withSpring: cutout(5604).withSpring, CHANNEL_SPRING_CONFIG });
   const animatedProps = obj2.useAnimatedProps(fn);
   if (cResult[0] !== source) {
     const tmp7 = getReactNativeSVGImageSourceDefault(source);
@@ -538,7 +538,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cutout) => {
       }
     }
     const obj4 = { style, animatedProps, children: tmp10 };
-    const tmp14 = closure_7(tmp(8469).ClipViewAnimated, obj4);
+    const tmp14 = closure_7(tmp(8502).ClipViewAnimated, obj4);
     cResult[7] = animatedProps;
     cResult[8] = style;
     cResult[9] = tmp10;
@@ -558,7 +558,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cutout) => {
   let style;
   cutout = cutout.cutout;
   ({ source, style, imageStyle } = cutout);
-  let obj = cutout(4612);
+  let obj = cutout(4618);
   const fn = function n() {
     let items;
     let point;
@@ -589,14 +589,14 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? ((cutout) => {
     items = [point];
     return obj;
   };
-  obj2 = { cutout, CutoutShape: cutout(8469).CutoutShape, withSpring: cutout(5597).withSpring, CHANNEL_SPRING_CONFIG };
+  obj2 = { cutout, CutoutShape: cutout(8502).CutoutShape, withSpring: cutout(5604).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__closure = obj2;
   fn.__workletHash = 6509713032566;
   fn.__initData = __initData2;
   const animatedProps = obj.useAnimatedProps(fn);
   const obj3 = { style, animatedProps, children: closure_7(FastImageDefault, obj4) };
   const tmp2 = getReactNativeSVGImageSourceDefault(source);
-  const ClipViewAnimated = cutout(8469).ClipViewAnimated;
+  const ClipViewAnimated = cutout(8502).ClipViewAnimated;
   obj4 = { style: items, source: tmp2, usesSmallCache: true };
   items = [obj2.image, imageStyle];
   return closure_7(ClipViewAnimated, obj3);

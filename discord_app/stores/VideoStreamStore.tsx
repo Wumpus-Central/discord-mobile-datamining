@@ -1,10 +1,10 @@
-// === Module 9017: VideoStreamStore ===
+// === Module 9050: VideoStreamStore ===
 
-// Module 9017 (VideoStreamStore)
+// Module 9050 (VideoStreamStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import Constants2 from "Constants" /* 4915 */;
+import Constants2 from "Constants" /* 4921 */;
 import size from "module_2" /* 2 */;
 
 let closure_4, closure_5;

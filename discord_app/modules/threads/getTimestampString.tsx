@@ -1,6 +1,6 @@
-// === Module 7008: getTimestampString ===
+// === Module 7021: getTimestampString ===
 
-// Module 7008 (getTimestampString)
+// Module 7021 (getTimestampString)
 import intl2 from "intl" /* 1126 */;
 import size from "module_2" /* 2 */;
 
@@ -19,8 +19,8 @@ export default function getTimestampString(arg0, fn) {
   }
   importDefault = undefined;
   let time;
-  let obj = require("module_4461")();
-  const diffResult = obj.diff(require("module_4461")(arg0), "s");
+  let obj = require("module_4467")();
+  const diffResult = obj.diff(require("module_4467")(arg0), "s");
   let tmp4;
   const tmp = importDefault;
   if (null != fn) {

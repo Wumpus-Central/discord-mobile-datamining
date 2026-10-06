@@ -1,18 +1,18 @@
-// === Module 14454: UserProfileAvatarDecorationEditButton ===
+// === Module 14470: UserProfileAvatarDecorationEditButton ===
 
-// Module 14454 (UserProfileAvatarDecorationEditButton)
+// Module 14470 (UserProfileAvatarDecorationEditButton)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import native from "native" /* 1188 */;
-import Constants2 from "Constants" /* 6707 */;
-import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 7828 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8468 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13011 */;
+import Constants2 from "Constants" /* 6714 */;
+import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 7839 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8501 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13030 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildMemberStore_mod from "GuildMemberStore" /* 2112 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

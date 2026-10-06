@@ -1,11 +1,11 @@
-// === Module 7671: useGuildPowerupsBoostCount ===
+// === Module 7682: useGuildPowerupsBoostCount ===
 
-// Module 7671 (useGuildPowerupsBoostCount)
-import GameServerExperiment from "GameServerExperiment" /* 4786 */;
+// Module 7682 (useGuildPowerupsBoostCount)
+import GameServerExperiment from "GameServerExperiment" /* 4792 */;
 import react from "react" /* 19 */;
-import GameServerStore from "GameServerStore" /* 7672 */;
+import GameServerStore from "GameServerStore" /* 7683 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

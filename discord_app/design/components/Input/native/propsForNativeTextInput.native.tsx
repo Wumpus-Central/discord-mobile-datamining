@@ -1,6 +1,6 @@
-// === Module 6108: _objectWithoutProperties ===
+// === Module 6115: _objectWithoutProperties ===
 
-// Module 6108 (_objectWithoutProperties)
+// Module 6115 (_objectWithoutProperties)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import size from "module_2" /* 2 */;
 

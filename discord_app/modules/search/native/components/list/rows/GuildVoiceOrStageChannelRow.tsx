@@ -1,20 +1,20 @@
-// === Module 16824: GuildVoiceOrStageChannelRow ===
+// === Module 16845: GuildVoiceOrStageChannelRow ===
 
-// Module 16824 (GuildVoiceOrStageChannelRow)
+// Module 16845 (GuildVoiceOrStageChannelRow)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5582 */;
-import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5588 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
-import ChannelListLayout from "ChannelListLayout" /* 11698 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16825 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 16828 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
+import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5595 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
+import ChannelListLayout from "ChannelListLayout" /* 11712 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16846 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 16849 */;
 import react from "react" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -204,7 +204,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     tmp11 = getVoiceChannelSubtitle(voiceStates, layout);
   }
   const obj3 = { subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id };
-  const tmpResult2 = channel(16825);
+  const tmpResult2 = channel(16846);
   const result = tmpResult2.renderChannelSubtitle(obj3);
   cResult[4] = id;
   cResult[5] = guild_id;

@@ -1,13 +1,13 @@
-// === Module 11874: AppLauncherButtonIcon ===
+// === Module 11888: AppLauncherButtonIcon ===
 
-// Module 11874 (AppLauncherButtonIcon)
+// Module 11888 (AppLauncherButtonIcon)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import useKeyboardTypeDefault from "useKeyboardType" /* 4747 */;
-import AppsIcon2 from "AppsIcon" /* 5890 */;
-import PlusLargeIcon2 from "PlusLargeIcon" /* 10689 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4753 */;
+import AppsIcon2 from "AppsIcon" /* 5897 */;
+import PlusLargeIcon2 from "PlusLargeIcon" /* 10702 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

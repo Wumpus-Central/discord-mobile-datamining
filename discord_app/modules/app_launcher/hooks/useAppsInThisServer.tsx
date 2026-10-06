@@ -1,10 +1,10 @@
-// === Module 11746: useAppsInThisServer ===
+// === Module 11760: useAppsInThisServer ===
 
-// Module 11746 (useAppsInThisServer)
+// Module 11760 (useAppsInThisServer)
 import _modDef12 from "module_12" /* 12 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
-import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 8929 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8827 */;
+import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 8958 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -80,7 +80,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(context) {
   } else {
     tmp15 = cResult[5];
   }
-  const obj6 = reduced(8939);
+  const obj6 = reduced(8968);
   const discovery = obj6.useDiscovery(tmp15);
   ({ commandsByActiveSection, loading } = discovery);
   if (cResult[6] !== commandsByActiveSection) {
@@ -166,7 +166,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(context) {
         }
       }
     }
-    const tmpResult2 = tmp(11745);
+    const tmpResult2 = tmp(11759);
     const sortApplicationsViaFrecency = tmpResult2.useSortApplicationsViaFrecency(tmp25);
     if (cResult[14] === stateFromStores) {
       class I {

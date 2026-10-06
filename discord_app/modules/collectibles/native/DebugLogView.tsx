@@ -1,14 +1,14 @@
-// === Module 15751: DebugLogView ===
+// === Module 15787: DebugLogView ===
 
-// Module 15751 (DebugLogView)
+// Module 15787 (DebugLogView)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
+import Text_Text from "Text/Text" /* 4892 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
-import CollectiblesDebugStore from "CollectiblesDebugStore" /* 7067 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
+import CollectiblesDebugStore from "CollectiblesDebugStore" /* 7080 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -183,8 +183,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
             }
             const obj4 = { variant: "text-xs/bold", style: tmp8.clearButtonText, children: "Clear" };
             cResult[27] = tmp8.clearButtonText;
-            cResult[28] = closure_10(tmp(4886).Text, obj4);
-            const tmp33 = closure_10(tmp(4886).Text, obj4);
+            cResult[28] = closure_10(tmp(4892).Text, obj4);
+            const tmp33 = closure_10(tmp(4892).Text, obj4);
           } else {
             class I {
               constructor() {
@@ -210,8 +210,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         items2 = ["Debug Log (", arr.length, " entries)"];
         cResult[24] = arr.length;
         cResult[25] = tmp26;
-        cResult[26] = closure_9(tmp(4886).Text, obj6);
-        const tmp31 = closure_9(tmp(4886).Text, obj6);
+        cResult[26] = closure_9(tmp(4892).Text, obj6);
+        const tmp31 = closure_9(tmp(4892).Text, obj6);
       }
     }
     return null;
@@ -261,7 +261,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       const obj2 = { style: tmp.debugLogContainer, children: items4 };
       const obj3 = { style: tmp.debugLogHeader, children: items3 };
       obj5 = { color: "#ffffff" };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       const merged = Object.assign(tmp.debugLogText);
       items2 = ["Debug Log (", arr.length, " entries)"];
       items3 = [closure_9(Text, obj4), ];
@@ -270,7 +270,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               closure_1();
             },
         style: tmp.clearButton,
-        children: closure_10(arr(4886).Text, obj7)
+        children: closure_10(arr(4892).Text, obj7)
       };
       obj7 = { variant: "text-xs/bold", style: tmp.clearButtonText, children: "Clear" };
       items3[1] = closure_10(closure_5, obj6);

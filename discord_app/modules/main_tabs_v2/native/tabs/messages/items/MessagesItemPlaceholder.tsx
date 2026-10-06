@@ -1,9 +1,9 @@
-// === Module 15967: MessagesItemPlaceholder ===
+// === Module 16006: MessagesItemPlaceholder ===
 
-// Module 15967 (MessagesItemPlaceholder)
+// Module 16006 (MessagesItemPlaceholder)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9490 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9503 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

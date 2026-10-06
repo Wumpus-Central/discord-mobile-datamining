@@ -1,13 +1,13 @@
-// === Module 10736: useConjureChannelProject ===
+// === Module 10749: useConjureChannelProject ===
 
-// Module 10736 (useConjureChannelProject)
+// Module 10749 (useConjureChannelProject)
 import Constants from "Constants" /* 1085 */;
-import ConjureProjectStore2 from "ConjureProjectStore" /* 8699 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 8700 */;
+import ConjureProjectStore2 from "ConjureProjectStore" /* 8734 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 8735 */;
 import react from "react" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

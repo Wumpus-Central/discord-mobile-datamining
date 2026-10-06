@@ -1,8 +1,8 @@
-// === Module 5041: WebViewWebmSupportTest ===
+// === Module 5047: WebViewWebmSupportTest ===
 
-// Module 5041 (WebViewWebmSupportTest)
+// Module 5047 (WebViewWebmSupportTest)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import DeviceUtils from "DeviceUtils" /* 4866 */;
+import DeviceUtils from "DeviceUtils" /* 4872 */;
 import size from "module_2" /* 2 */;
 
 const ARM64_ = "ARM64_";

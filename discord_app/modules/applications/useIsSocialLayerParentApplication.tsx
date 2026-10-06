@@ -1,9 +1,9 @@
-// === Module 8725: useIsSocialLayerParentApplication ===
+// === Module 8757: useIsSocialLayerParentApplication ===
 
-// Module 8725 (useIsSocialLayerParentApplication)
+// Module 8757 (useIsSocialLayerParentApplication)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8726 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8758 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

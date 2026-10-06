@@ -1,6 +1,6 @@
-// === Module 17305: VoicePanelPreJoinUtils ===
+// === Module 17333: VoicePanelPreJoinUtils ===
 
-// Module 17305 (VoicePanelPreJoinUtils)
+// Module 17333 (VoicePanelPreJoinUtils)
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import size from "module_2" /* 2 */;
 

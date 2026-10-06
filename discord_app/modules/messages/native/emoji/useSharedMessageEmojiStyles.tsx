@@ -1,8 +1,8 @@
-// === Module 9935: useSharedMessageEmojiStyles ===
+// === Module 9948: useSharedMessageEmojiStyles ===
 
-// Module 9935 (useSharedMessageEmojiStyles)
+// Module 9948 (useSharedMessageEmojiStyles)
 import nativeDefault from "native" /* 587 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let size;

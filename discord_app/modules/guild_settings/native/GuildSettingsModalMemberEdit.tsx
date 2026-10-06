@@ -1,41 +1,41 @@
-// === Module 11447: GuildSettingsModalMemberEdit ===
+// === Module 11460: GuildSettingsModalMemberEdit ===
 
-// Module 11447 (GuildSettingsModalMemberEdit)
+// Module 11460 (GuildSettingsModalMemberEdit)
 import react_native from "react-native" /* 17 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4496 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import native2 from "native" /* 4589 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import TableRow6 from "TableRow" /* 5993 */;
-import NavigatorHeader2 from "NavigatorHeader" /* 6010 */;
-import TableRowGroup6 from "TableRowGroup" /* 6074 */;
-import TextInput_TextInput from "TextInput/TextInput" /* 6098 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 6880 */;
-import Form2 from "Form" /* 8895 */;
-import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 8926 */;
-import BotTagDefault from "BotTag" /* 8961 */;
-import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 11450 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11451 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11456 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import native2 from "native" /* 4595 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import TableRow6 from "TableRow" /* 6000 */;
+import NavigatorHeader2 from "NavigatorHeader" /* 6017 */;
+import TableRowGroup6 from "TableRowGroup" /* 6081 */;
+import TextInput_TextInput from "TextInput/TextInput" /* 6105 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6890 */;
+import Form2 from "Form" /* 8924 */;
+import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 8955 */;
+import BotTagDefault from "BotTag" /* 8990 */;
+import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 11463 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11464 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11469 */;
 import react from "react" /* 19 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
-import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 11448 */;
+import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 11461 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -265,7 +265,7 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
           return authStore4(HeaderActionButton, obj);
         };
       } else if (null != onClose) {
-        let obj = self(6010);
+        let obj = self(6017);
         fn = obj.getHeaderCloseButton(onClose);
       }
       let obj2 = {
@@ -758,7 +758,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const obj = require("react");
   const cResult = obj.c(9);
   ({ userId, onClose, onRemove } = guildId);
-  const tmp4 = onClose(5984)(guildId.guildId);
+  const tmp4 = onClose(5991)(guildId.guildId);
   const tmp = _require;
   if (cResult[0] === tmp4) {
     if (cResult[1] === onClose) {
@@ -785,7 +785,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         return tmp8;
       }
       const obj4 = { screens: tmp5, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: tmp6 };
-      const tmp11 = closure_18(tmp(6496).Navigator, obj4);
+      const tmp11 = closure_18(tmp(6503).Navigator, obj4);
       cResult[6] = tmp5;
       cResult[7] = tmp6;
       cResult[8] = tmp11;
@@ -831,7 +831,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  let tmp = onRemove(5984)(guildId);
+  let tmp = onRemove(5991)(guildId);
   let closure_2 = tmp;
   const items = [onClose, onRemove, tmp];
   const memo = react.useMemo(() => {
@@ -869,7 +869,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: items1 };
   items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
   const obj2 = { name: constants3.MEMBER_EDIT, params: { userId } };
-  return closure_18(onClose(6496).Navigator, obj);
+  return closure_18(onClose(6503).Navigator, obj);
 });
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 

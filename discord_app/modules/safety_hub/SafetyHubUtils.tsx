@@ -1,14 +1,14 @@
-// === Module 8092: SafetyHubUtils ===
+// === Module 8125: SafetyHubUtils ===
 
-// Module 8092 (SafetyHubUtils)
+// Module 8125 (SafetyHubUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import intl5 from "intl" /* 1126 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
-import SafetyHubModels from "SafetyHubModels" /* 8094 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
+import SafetyHubModels from "SafetyHubModels" /* 8127 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 8093 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 8126 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -82,8 +82,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  const obj = _modDef4461();
-  return obj.to(_modDef4461(timestamp));
+  const obj = _modDef4467();
+  return obj.to(_modDef4467(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   let num;

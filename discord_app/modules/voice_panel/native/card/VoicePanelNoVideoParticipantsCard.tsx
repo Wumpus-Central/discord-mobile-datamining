@@ -1,14 +1,14 @@
-// === Module 17279: VoicePanelNoVideoParticipantsCard ===
+// === Module 17308: VoicePanelNoVideoParticipantsCard ===
 
-// Module 17279 (VoicePanelNoVideoParticipantsCard)
+// Module 17308 (VoicePanelNoVideoParticipantsCard)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import NativeViewDefault from "NativeView" /* 5976 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11901 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import NativeViewDefault from "NativeView" /* 5983 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 11915 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -63,7 +63,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
   }
   if (cResult[3] !== tmp5.label) {
     const obj2 = { style: label, variant: "text-md/semibold", color: "text-overlay-light", children: tmp7 };
-    const tmp11 = closure_5(channelId(4886).Text, obj2);
+    const tmp11 = closure_5(channelId(4892).Text, obj2);
     cResult[3] = tmp5.label;
     cResult[4] = tmp11;
     tmp9 = tmp11;
@@ -90,7 +90,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
   }
   if (cResult[7] !== tmp5.buttonText) {
     const obj3 = { variant: "text-sm/semibold", style: buttonText, children: tmp14 };
-    const tmp18 = closure_5(channelId(4886).Text, obj3);
+    const tmp18 = closure_5(channelId(4892).Text, obj3);
     cResult[7] = tmp5.buttonText;
     cResult[8] = tmp18;
     tmp16 = tmp18;
@@ -145,13 +145,13 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
   let obj = { style: tmp.container, children: items1 };
   const obj2 = { style: tmp.label, variant: "text-md/semibold", color: "text-overlay-light", children: intl.string(channelId(1126).t["8eBJ73"]) };
   const tmp3 = NativeViewDefault;
-  const Text = channelId(4886).Text;
+  const Text = channelId(4892).Text;
   intl = channelId(1126).intl;
   items1 = [closure_5(Text, obj2), ];
   const obj3 = { style: tmp.button, onPress: callback, accessibilityRole: "button", accessibilityLabel: intl2.string(channelId(1126).t.kLQySL), children: closure_5(Text2, obj4) };
   intl2 = channelId(1126).intl;
   obj4 = { variant: "text-sm/semibold", style: tmp.buttonText, children: intl3.string(channelId(1126).t.kLQySL) };
-  Text2 = channelId(4886).Text;
+  Text2 = channelId(4892).Text;
   intl3 = channelId(1126).intl;
   items1[1] = closure_5(Pressable, obj3);
   return closure_6(tmp3, obj);

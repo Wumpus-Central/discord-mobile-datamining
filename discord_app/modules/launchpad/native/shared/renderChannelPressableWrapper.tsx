@@ -1,9 +1,9 @@
-// === Module 17400: renderChannelPressableWrapper ===
+// === Module 17429: renderChannelPressableWrapper ===
 
-// Module 17400 (renderChannelPressableWrapper)
+// Module 17429 (renderChannelPressableWrapper)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16832 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16853 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

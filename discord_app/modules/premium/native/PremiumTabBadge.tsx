@@ -1,6 +1,6 @@
-// === Module 14790: PremiumTabBadge ===
+// === Module 14806: PremiumTabBadge ===
 
-// Module 14790 (PremiumTabBadge)
+// Module 14806 (PremiumTabBadge)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
@@ -12,28 +12,28 @@ import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 126
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
-import useBadgeTextVariant from "useBadgeTextVariant" /* 4592 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6891 */;
-import ColorConstants from "ColorConstants" /* 6938 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6956 */;
-import ReferralProgramUtils from "ReferralProgramUtils" /* 7726 */;
-import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7727 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7731 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8422 */;
-import MarketingComponentType from "MarketingComponentType" /* 10470 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 13225 */;
-import AssetRegistryDefault from "AssetRegistry" /* 14791 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
+import useBadgeTextVariant from "useBadgeTextVariant" /* 4598 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 6901 */;
+import ColorConstants from "ColorConstants" /* 6951 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6969 */;
+import ReferralProgramUtils from "ReferralProgramUtils" /* 7737 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 7738 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7742 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8455 */;
+import MarketingComponentType from "MarketingComponentType" /* 10483 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 13244 */;
+import AssetRegistryDefault from "AssetRegistry" /* 14807 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

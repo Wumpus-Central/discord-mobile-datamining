@@ -1,10 +1,10 @@
-// === Module 12736: VoicePanelSpoilerAlert ===
+// === Module 12751: VoicePanelSpoilerAlert ===
 
-// Module 12736 (VoicePanelSpoilerAlert)
+// Module 12751 (VoicePanelSpoilerAlert)
 import intl5 from "intl" /* 1126 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

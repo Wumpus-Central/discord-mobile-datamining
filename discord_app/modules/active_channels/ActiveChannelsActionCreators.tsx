@@ -1,6 +1,6 @@
-// === Module 15986: ActiveChannelsActionCreators ===
+// === Module 16025: ActiveChannelsActionCreators ===
 
-// Module 15986 (ActiveChannelsActionCreators)
+// Module 16025 (ActiveChannelsActionCreators)
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
@@ -51,7 +51,7 @@ let obj = function _fetchActiveChannels() {
             channels = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (guildId === 1) {

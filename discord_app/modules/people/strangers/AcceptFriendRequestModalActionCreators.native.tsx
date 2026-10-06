@@ -1,12 +1,12 @@
-// === Module 10606: AcceptFriendRequestModalActionCreators ===
+// === Module 10619: AcceptFriendRequestModalActionCreators ===
 
-// Module 10606 (AcceptFriendRequestModalActionCreators)
+// Module 10619 (AcceptFriendRequestModalActionCreators)
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import Constants2 from "Constants" /* 10607 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import Constants2 from "Constants" /* 10620 */;
 import size from "module_2" /* 2 */;
 
 const type = Constants2.ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID;
@@ -23,7 +23,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
   const obj4 = {
     importer() {
       let onConfirm;
-      const promise = asyncRequire(10608, dependencyMap.paths);
+      const promise = asyncRequire(10621, dependencyMap.paths);
       return promise.then((result) => {
         let closure_0 = result.default;
         return (View) => {

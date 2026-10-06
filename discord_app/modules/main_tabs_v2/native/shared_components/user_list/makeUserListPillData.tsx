@@ -1,9 +1,9 @@
-// === Module 10595: makeUserListPillData ===
+// === Module 10608: makeUserListPillData ===
 
-// Module 10595 (makeUserListPillData)
+// Module 10608 (makeUserListPillData)
 import Fragment from "Fragment" /* 21 */;
 import native from "native" /* 1188 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 17490: TopEmojisDataManager ===
+// === Module 17517: TopEmojisDataManager ===
 
-// Module 17490 (TopEmojisDataManager)
+// Module 17517 (TopEmojisDataManager)
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 9872 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 9885 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 const EmojiInteractionPoint = EmojiConstants.EmojiInteractionPoint;

@@ -1,6 +1,6 @@
-// === Module 15707: useHasExpiredShopBlocks ===
+// === Module 15743: useHasExpiredShopBlocks ===
 
-// Module 15707 (useHasExpiredShopBlocks)
+// Module 15743 (useHasExpiredShopBlocks)
 import Constants from "Constants" /* 1085 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -12,7 +12,7 @@ let _require, dependencyMap;
 
 let c3;
 let closure_4;
-const f121369 = (type) => {
+const f121539 = (type) => {
   const tmp = time1;
   if (type.type === time1(closure_2_1[5]).ShopBlockType.IMMERSIVE_BANNER) {
     let time = null;
@@ -63,7 +63,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
   const fn = function p() {
     let timeout;
     let c0 = null;
-    const item = timeout.forEach(f121369);
+    const item = timeout.forEach(f121539);
     if (!closure_1) {
       if (!closure_2) {
         if (null != c0) {
@@ -105,7 +105,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1, arg2) 
   closure_3(() => {
     let timeout;
     let time1 = null;
-    const item = timeout.forEach(f121369);
+    const item = timeout.forEach(f121539);
     if (!closure_1) {
       if (!closure_2) {
         if (null != time1) {

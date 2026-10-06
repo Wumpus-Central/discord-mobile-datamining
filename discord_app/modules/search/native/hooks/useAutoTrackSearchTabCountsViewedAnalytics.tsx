@@ -1,8 +1,8 @@
-// === Module 16904: useAutoTrackSearchTabCountsViewedAnalytics ===
+// === Module 16929: useAutoTrackSearchTabCountsViewedAnalytics ===
 
-// Module 16904 (useAutoTrackSearchTabCountsViewedAnalytics)
-import SearchConstants from "SearchConstants" /* 7513 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 11982 */;
+// Module 16929 (useAutoTrackSearchTabCountsViewedAnalytics)
+import SearchConstants from "SearchConstants" /* 7524 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12001 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 13933: PassthroughTouchView ===
+// === Module 13951: PassthroughTouchView ===
 
-// Module 13933 (PassthroughTouchView)
+// Module 13951 (PassthroughTouchView)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 13934 */;
+import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 13952 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

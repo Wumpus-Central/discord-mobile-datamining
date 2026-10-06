@@ -1,8 +1,8 @@
-// === Module 5023: DCDSendUtils ===
+// === Module 5029: DCDSendUtils ===
 
-// Module 5023 (DCDSendUtils)
+// Module 5029 (DCDSendUtils)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_nativeDefault from "react-native" /* 5024 */;
+import react_nativeDefault from "react-native" /* 5030 */;
 import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 

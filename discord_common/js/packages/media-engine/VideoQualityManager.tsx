@@ -1,8 +1,8 @@
-// === Module 4959: VideoQualityManager ===
+// === Module 4965: VideoQualityManager ===
 
-// Module 4959 (VideoQualityManager)
-import MediaSinkWantsLadder from "MediaSinkWantsLadder" /* 4960 */;
-import Constants from "Constants" /* 4915 */;
+// Module 4965 (VideoQualityManager)
+import MediaSinkWantsLadder from "MediaSinkWantsLadder" /* 4966 */;
+import Constants from "Constants" /* 4921 */;
 import size_mod from "module_2" /* 2 */;
 
 let framerate;

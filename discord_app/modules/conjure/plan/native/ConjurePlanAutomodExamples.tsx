@@ -1,6 +1,6 @@
-// === Module 16665: ConjurePlanAutomodExamples ===
+// === Module 16684: ConjurePlanAutomodExamples ===
 
-// Module 16665 (ConjurePlanAutomodExamples)
+// Module 16684 (ConjurePlanAutomodExamples)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -8,16 +8,16 @@ import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4792 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import ShieldIcon2 from "ShieldIcon" /* 8923 */;
-import BellIcon from "BellIcon" /* 9266 */;
-import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 16666 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4798 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import ShieldIcon2 from "ShieldIcon" /* 8952 */;
+import BellIcon from "BellIcon" /* 9301 */;
+import ConjurePlanAutomodOutcomes from "ConjurePlanAutomodOutcomes" /* 16685 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -72,7 +72,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(_modDef3723.DnWMLj) };
+    const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(_modDef3753.DnWMLj) };
     const Text = Text_Text.Text;
     intl = intl4.intl;
     const tmp12 = React3(Text, obj3);
@@ -99,7 +99,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj2 = { size: "xs", color: nativeDefault.colors.TEXT_SUBTLE };
   const ShieldIcon = ShieldIcon2.ShieldIcon;
   items = [React3(ShieldIcon, obj2), ];
-  const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(_modDef3723.DnWMLj) };
+  const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(_modDef3753.DnWMLj) };
   const Text = Text_Text.Text;
   intl = intl4.intl;
   items[1] = React3(Text, obj3);
@@ -508,7 +508,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
     tmp8 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3723.z4ZKYG) };
+    const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3753.z4ZKYG) };
     const Text = Text_Text.Text;
     intl2 = intl4.intl;
     const tmp14 = React3(Text, obj3);
@@ -575,7 +575,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
           return closure_1_4(closure_1_11, obj, automod.section);
         }
       }
-      const obj5 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(_modDef3723.bo4MOx) };
+      const obj5 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(_modDef3753.bo4MOx) };
       const Text2 = Text_Text.Text;
       intl3 = intl4.intl;
       const tmp26 = React3(Text2, obj5);
@@ -631,7 +631,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
   obj4 = utils_AvatarUtils;
   intl = intl4.intl;
   items = [React3(Avatar, obj3), ];
-  const obj5 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3723.z4ZKYG) };
+  const obj5 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3753.z4ZKYG) };
   const Text = Text_Text.Text;
   intl2 = intl4.intl;
   items[1] = React3(Text, obj5);
@@ -646,7 +646,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((automod) => {
   const obj7 = ConjurePlanAutomodOutcomes;
   result = obj7.groupPlanAutomodExamples(automod.examples);
   items1[1] = React3(View, obj6);
-  const obj8 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(_modDef3723.bo4MOx) };
+  const obj8 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(_modDef3753.bo4MOx) };
   const Text2 = Text_Text.Text;
   intl3 = intl4.intl;
   items1[2] = React3(Text2, obj8);

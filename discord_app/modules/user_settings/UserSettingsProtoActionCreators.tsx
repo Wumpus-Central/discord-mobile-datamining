@@ -24,7 +24,7 @@ let _require, c5, guildDismissibleContentStates, recurringDismissibleContentStat
 let c9;
 let metroImportAll;
 let metroImportDefault;
-const f135589 = async () => {
+const f135807 = async () => {
   let closure_1;
   let obj11;
   let obj5;
@@ -183,7 +183,7 @@ function updateUserGuildSettings(guildId, arg1, INFREQUENT_USER_ACTION) {
   let closure_1 = arg1;
   return obj.updateAsync("guilds", async (guilds) => {
     obj = closure_0(dependencyMap[10]);
-    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, f85661);
+    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, f85796);
   }, INFREQUENT_USER_ACTION);
 }
 function updateRecurringDismissibleContentState() {
@@ -224,6 +224,32 @@ obj = function _updateGuildDismissedContent() {
   });
   return obj(...arguments);
 };
+obj = function _checkAllDismissedContents() {
+  let paths;
+  obj = _asyncToGenerator(async () => {
+    let c2;
+    let c3;
+    let closure_1;
+    await require("asyncRequire")(paths[19], paths.paths);
+    let closure_0 = value.getDismissedRecurringDismissibleContentState;
+    return closure_129_11.updateAsync("userContent", async (recurringDismissibleContentStates) => {
+      let uint8Array = new Uint8Array();
+      const ALL_DISMISSIBLE_CONTENT = closure_0(c2[21]).ALL_DISMISSIBLE_CONTENT;
+      for (const item10020 of ALL_DISMISSIBLE_CONTENT) {
+        obj = closure_0(c2[21]);
+        if (obj.isSingleUseDismissibleContent(item10020)) {
+          let tmp4Result = closure_0(c2[16]);
+          uint8Array = tmp4Result.addBit(uint8Array, item10020);
+        } else {
+          recurringDismissibleContentStates.recurringDismissibleContentStates[item10020] = closure_1_0(item10020);
+        }
+        continue;
+      }
+      recurringDismissibleContentStates.dismissedContents = uint8Array;
+    }, closure_129_6.INFREQUENT_USER_ACTION);
+  });
+  return obj(...arguments);
+};
 let _asyncToGenerator = _asyncToGenerator_mod;
 const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
 ({ AbortCodes: metroImportDefault, Endpoints: metroImportAll, AnalyticEvents: c9 } = Constants);
@@ -253,7 +279,7 @@ class UserSettingsProtoActionCreators {
     obj = Object.create(new.target.prototype);
     obj.beforeSendCallbacks = [];
     obj.lastSendTime = 0;
-    obj.persistChanges = _asyncToGenerator(f135589);
+    obj.persistChanges = _asyncToGenerator(f135807);
     obj.ProtoClass = ProtoClass;
     obj.type = type;
     obj.logger = new LoggerDefault(obj.ProtoClass.typeName);
@@ -613,16 +639,16 @@ class UserSettingsProtoActionCreators {
 const prototype = UserSettingsProtoActionCreators.prototype;
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   let closure_0 = arg0;
-  return obj.updateAsync("guilds", async (arg0) => f85664(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f85799(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   let closure_0 = id;
-  const f85654 = (arg0) => {
+  const f85788 = (arg0) => {
     arg0.guildThemeSourcePreference = UNSPECIFIED;
   };
   return obj.updateAsync("guilds", async (guilds) => {
     obj = closure_0(dependencyMap[10]);
-    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, f85661);
+    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, f85796);
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 const PreloadedUserSettings = preloaded_user_settings.PreloadedUserSettings;
@@ -630,7 +656,7 @@ const PRELOADED_USER_SETTINGS = UserSettingsTypes.PRELOADED_USER_SETTINGS;
 obj = Object.create(UserSettingsProtoActionCreators.prototype);
 obj.beforeSendCallbacks = [];
 obj.lastSendTime = 0;
-obj.persistChanges = _asyncToGenerator(f135589);
+obj.persistChanges = _asyncToGenerator(f135807);
 obj.ProtoClass = PreloadedUserSettings;
 obj.type = PRELOADED_USER_SETTINGS;
 let tmp10 = new LoggerDefault(obj.ProtoClass.typeName);
@@ -640,11 +666,11 @@ const FRECENCY_AND_FAVORITES_SETTINGS = UserSettingsTypes.FRECENCY_AND_FAVORITES
 let obj2 = Object.create(UserSettingsProtoActionCreators.prototype);
 obj2.beforeSendCallbacks = [];
 obj2.lastSendTime = 0;
-obj2.persistChanges = _asyncToGenerator(f135589);
+obj2.persistChanges = _asyncToGenerator(f135807);
 obj2.ProtoClass = FrecencyUserSettings;
 obj2.type = FRECENCY_AND_FAVORITES_SETTINGS;
-let tmp12 = new LoggerDefault(obj2.ProtoClass.typeName);
-obj2.logger = tmp12;
+obj2.logger = new LoggerDefault(obj2.ProtoClass.typeName);
+const tmp12 = new LoggerDefault(obj2.ProtoClass.typeName);
 let result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoActionCreators.tsx");
 
 export { UserSettingsDelay };
@@ -676,24 +702,24 @@ export const clearGuildThemeSourcePreferenceOverride = function clearGuildThemeS
   let closure_0;
   const UNSPECIFIED = require("preloaded_user_settings").GuildThemeSourcePreference.UNSPECIFIED;
   _require = arg0;
-  const f85654 = (arg0) => {
+  const f85788 = (arg0) => {
     arg0.guildThemeSourcePreference = UNSPECIFIED;
   };
   return obj.updateAsync("guilds", async (guilds) => {
     obj = closure_0(dependencyMap[10]);
-    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, f85661);
+    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, f85796);
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const updateUserChannelSettings = function updateUserChannelSettings(arg0, arg1, arg2, INFREQUENT_USER_ACTION) {
   let closure_1 = arg2;
   let closure_0 = arg0;
-  const f85661 = (channels) => {
+  const f85796 = (channels) => {
     obj = closure_0(dependencyMap[10]);
-    return obj.mutateUserChannelSettingsInternal(channels, closure_0, f85661);
+    return obj.mutateUserChannelSettingsInternal(channels, closure_0, f85796);
   };
   return obj.updateAsync("guilds", async (guilds) => {
     obj = closure_0(dependencyMap[10]);
-    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, f85661);
+    return obj.mutateUserGuildSettingsInternal(guilds, closure_0, f85796);
   }, INFREQUENT_USER_ACTION);
 };
 export const addDismissedContent = function addDismissedContent(CHANNEL_NOTICE_INVITE) {
@@ -747,7 +773,7 @@ export const removeDismissedRecurringContent = function removeDismissedRecurring
   return updateRecurringDismissibleContentState(GUILD_POWERUP_NOTIFICATION, { lastDismissedVersion: 0, lastDismissedAtMs: "0", lastDismissedObjectId: "0", numTimesDismissed: 0 });
 };
 export const clearGuildDismissedContents = function clearGuildDismissedContents() {
-  const f85664 = function(guilds) {
+  const f85799 = function(guilds) {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -764,7 +790,7 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       }
     }
   };
-  return obj.updateAsync("guilds", async (arg0) => f85664(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f85799(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearDismissedContents = function clearDismissedContents() {
   return obj.updateAsync("userContent", async (arg0) => {
@@ -774,21 +800,5 @@ export const clearDismissedContents = function clearDismissedContents() {
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const checkAllDismissedContents = function checkAllDismissedContents() {
-  return obj.updateAsync("userContent", async (recurringDismissibleContentStates) => {
-    let uint8Array = new Uint8Array();
-    const ALL_DISMISSIBLE_CONTENT = require("DismissibleContentTypes").ALL_DISMISSIBLE_CONTENT;
-    for (const item10020 of ALL_DISMISSIBLE_CONTENT) {
-      obj = require("DismissibleContentTypes");
-      if (obj.isSingleUseDismissibleContent(item10020)) {
-        let tmp4Result = require("Uint8ArrayUtils");
-        uint8Array = tmp4Result.addBit(uint8Array, item10020);
-      } else {
-        recurringDismissibleContentStates = recurringDismissibleContentStates.recurringDismissibleContentStates;
-        let tmp4Result2 = require("DismissibleContentUtils");
-        recurringDismissibleContentStates[item10020] = tmp4Result2.getDismissedRecurringDismissibleContentState(item10020);
-      }
-      continue;
-    }
-    recurringDismissibleContentStates.dismissedContents = uint8Array;
-  }, UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj(...arguments);
 };

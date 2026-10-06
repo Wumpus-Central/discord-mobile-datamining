@@ -1,13 +1,13 @@
-// === Module 14389: SessionAdManager ===
+// === Module 14407: SessionAdManager ===
 
-// Module 14389 (SessionAdManager)
+// Module 14407 (SessionAdManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import Timers from "Timers" /* 2046 */;
-import react_native from "react-native" /* 6971 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7205 */;
+import react_native from "react-native" /* 6984 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7218 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import Constants from "Constants" /* 1085 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;

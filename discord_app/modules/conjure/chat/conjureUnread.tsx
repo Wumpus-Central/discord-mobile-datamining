@@ -1,16 +1,16 @@
-// === Module 16142: conjureUnread ===
+// === Module 16181: conjureUnread ===
 
-// Module 16142 (conjureUnread)
+// Module 16181 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import conjureProjectMute from "conjureProjectMute" /* 12906 */;
-import VibegrationsReadStateFlags from "VibegrationsReadStateFlags" /* 16143 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import conjureProjectMute from "conjureProjectMute" /* 12925 */;
+import VibegrationsReadStateFlags from "VibegrationsReadStateFlags" /* 16182 */;
 import react from "react" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -226,7 +226,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
   }
   const tmpResult = tmp(504);
   const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
-  const tmp9 = stateFromStores(16144)();
+  const tmp9 = stateFromStores(16183)();
   dependencyMap = tmp9;
   if (cResult[4] === tmp9) {
     if (cResult[5] === projectId) {
@@ -267,7 +267,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((projectId) => {
     const tmp2 = null != projectId && ReadStateStore.getMentionCount(tmp, ReadStateTypes.CONJURING_PROJECT) > 0;
     return tmp2;
   }, items1);
-  let tmp2 = stateFromStores(16144)();
+  let tmp2 = stateFromStores(16183)();
   dependencyMap = tmp2;
   const items2 = [projectId, stateFromStores, tmp2];
   const effect = react.useEffect(() => {

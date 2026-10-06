@@ -1,26 +1,26 @@
-// === Module 16046: VoiceUserItem ===
+// === Module 16085: VoiceUserItem ===
 
-// Module 16046 (VoiceUserItem)
+// Module 16085 (VoiceUserItem)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 4820 */;
-import AssetRegistryDefault from "AssetRegistry" /* 5817 */;
-import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9337 */;
-import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9339 */;
-import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9341 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 9443 */;
-import getConsoleIcon from "getConsoleIcon" /* 9463 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
-import VideoIcon from "VideoIcon" /* 11234 */;
-import VoiceUserNameItemDefault from "VoiceUserNameItem" /* 16047 */;
+import MicrophoneSlashIcon from "MicrophoneSlashIcon" /* 4826 */;
+import AssetRegistryDefault from "AssetRegistry" /* 5824 */;
+import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9351 */;
+import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9353 */;
+import MicrophoneDenyIcon from "MicrophoneDenyIcon" /* 9355 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 9456 */;
+import getConsoleIcon from "getConsoleIcon" /* 9476 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
+import VideoIcon from "VideoIcon" /* 11247 */;
+import VoiceUserNameItemDefault from "VoiceUserNameItem" /* 16086 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import ChannelListLayout from "ChannelListLayout" /* 11698 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import ChannelListLayout from "ChannelListLayout" /* 11712 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

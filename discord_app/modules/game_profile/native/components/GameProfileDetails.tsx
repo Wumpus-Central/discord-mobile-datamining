@@ -1,18 +1,18 @@
-// === Module 8542: GameProfileDetails ===
+// === Module 8575: GameProfileDetails ===
 
-// Module 8542 (GameProfileDetails)
+// Module 8575 (GameProfileDetails)
 import nativeDefault from "native" /* 587 */;
 import intl13 from "intl" /* 1126 */;
 import Server from "Server" /* 1985 */;
-import DateUtilsAll from "DateUtils" /* 4552 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ContentInventoryConstants from "ContentInventoryConstants" /* 8027 */;
-import SKUUtils from "SKUUtils" /* 8361 */;
+import DateUtilsAll from "DateUtils" /* 4558 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ContentInventoryConstants from "ContentInventoryConstants" /* 8037 */;
+import SKUUtils from "SKUUtils" /* 8394 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -151,7 +151,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
       let joined;
       if (game != null) {
         const genres1 = game.genres;
-        const mapped = genres1.map(trackAction(8361).getGenreText);
+        const mapped = genres1.map(trackAction(8394).getGenreText);
         joined = mapped.join(", ");
       }
       let genres2;
@@ -337,8 +337,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
           const _Date = Date;
           const self = this;
           const self2 = this;
-          const dateFormat = arr(4552).dateFormat;
-          arr(4552);
+          const dateFormat = arr(4558).dateFormat;
+          arr(4558);
           const date = new Date(firstReleaseDate);
           const dateFormatResult = dateFormat(date, "LL");
           cResult[32] = firstReleaseDate;
@@ -700,8 +700,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
       }
       const obj10 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", style: headerText, children: tmp78 };
       cResult[57] = tmp4.headerText;
-      cResult[58] = closure_8(trackAction(4886).Text, obj10);
-      const tmp81 = closure_8(trackAction(4886).Text, obj10);
+      cResult[58] = closure_8(trackAction(4892).Text, obj10);
+      const tmp81 = closure_8(trackAction(4892).Text, obj10);
     } else {
       class Z {
         constructor(icon) {

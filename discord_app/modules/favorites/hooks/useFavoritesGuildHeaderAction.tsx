@@ -1,12 +1,12 @@
-// === Module 16076: useFavoritesGuildHeaderAction ===
+// === Module 16115: useFavoritesGuildHeaderAction ===
 
-// Module 16076 (useFavoritesGuildHeaderAction)
+// Module 16115 (useFavoritesGuildHeaderAction)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef3367 from "module_3367" /* 3367 */;
-import FavoritesHooks from "FavoritesHooks" /* 10036 */;
+import _modDef3395 from "module_3395" /* 3395 */;
+import FavoritesHooks from "FavoritesHooks" /* 10049 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     const intl = intl2.intl;
     const string = intl.string;
     if (hasAccess) {
-      ojM1xJ = _modDef3367.G9fGlP;
+      ojM1xJ = _modDef3395.G9fGlP;
     } else {
       ojM1xJ = intl2.t.ojM1xJ;
     }
@@ -71,7 +71,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const intl = intl2.intl;
   string = intl.string;
   if (hasAccess) {
-    ojM1xJ = _modDef3367.G9fGlP;
+    ojM1xJ = _modDef3395.G9fGlP;
   } else {
     ojM1xJ = intl2.t.ojM1xJ;
   }

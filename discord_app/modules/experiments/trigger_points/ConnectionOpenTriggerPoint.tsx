@@ -1,9 +1,9 @@
-// === Module 13502: ConnectionOpenTriggerPoint ===
+// === Module 13518: ConnectionOpenTriggerPoint ===
 
-// Module 13502 (ConnectionOpenTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 4777 */;
-import Helpers from "Helpers" /* 10540 */;
-import ContentInventoryExperiments from "ContentInventoryExperiments" /* 13503 */;
+// Module 13518 (ConnectionOpenTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4783 */;
+import Helpers from "Helpers" /* 10553 */;
+import ContentInventoryExperiments from "ContentInventoryExperiments" /* 13519 */;
 import size from "module_2" /* 2 */;
 
 const CommonTriggerPoints = ExperimentConstants.CommonTriggerPoints;

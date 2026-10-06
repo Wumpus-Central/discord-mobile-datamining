@@ -1,6 +1,6 @@
-// === Module 17013: permissions/PermissionUtils ===
+// === Module 17039: permissions/PermissionUtils ===
 
-// Module 17013 (permissions/PermissionUtils)
+// Module 17039 (permissions/PermissionUtils)
 import Constants from "Constants" /* 1096 */;
 import intl56 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
@@ -390,7 +390,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   let permissions3;
   let permissions4;
   let permissions7;
-  const f128083 = (isExperimental) => !isExperimental.isExperimental;
+  const f128259 = (isExperimental) => !isExperimental.isExperimental;
   const tmp = getGuildPermissionSpec(showCreatorMonetizationAnalyticsPermission);
   const items = [, , , , , , ];
   ({ VIEW_CHANNEL: arr[0], MANAGE_CHANNELS: arr[1], MANAGE_ROLES: arr[2], CREATE_GUILD_EXPRESSIONS: arr[3], MANAGE_GUILD_EXPRESSIONS: arr[4], VIEW_AUDIT_LOG: arr[5], VIEW_GUILD_ANALYTICS: arr[6] } = Permissions);
@@ -399,13 +399,13 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   }
   items.push(Permissions.MANAGE_WEBHOOKS);
   items.push(Permissions.MANAGE_GUILD);
-  const obj = { title: intl.string(intl56.t["mYck+B"]), permissions: permissions.filter(f128083) };
+  const obj = { title: intl.string(intl56.t["mYck+B"]), permissions: permissions.filter(f128259) };
   intl = intl56.intl;
   permissions = obj.permissions;
   const items1 = [obj, , , , ];
   const items2 = [, , , , , ];
   ({ CREATE_INSTANT_INVITE: arr4[0], CHANGE_NICKNAME: arr4[1], MANAGE_NICKNAMES: arr4[2], KICK_MEMBERS: arr4[3], BAN_MEMBERS: arr4[4], MODERATE_MEMBERS: arr4[5] } = Permissions);
-  const obj2 = { title: intl2.string(intl56.t.Ny49TN), permissions: permissions1.filter(f128083) };
+  const obj2 = { title: intl2.string(intl56.t.Ny49TN), permissions: permissions1.filter(f128259) };
   intl2 = intl56.intl;
   let closure_0 = tmp;
   permissions1 = obj2.permissions;
@@ -416,19 +416,19 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   if (!showCreatorMonetizationAnalyticsPermission.inSoundmojiExperiment) {
     found = items3.filter((item) => item !== constants.USE_EXTERNAL_SOUNDS);
   }
-  const obj3 = { title: intl3.string(intl56.t.cKobO5), permissions: permissions2.filter(f128083) };
+  const obj3 = { title: intl3.string(intl56.t.cKobO5), permissions: permissions2.filter(f128259) };
   intl3 = intl56.intl;
   permissions2 = obj3.permissions;
   items1[2] = obj3;
   const items4 = [, , , , , , , , , , ];
   ({ CONNECT: arr9[0], SPEAK: arr9[1], STREAM: arr9[2], USE_SOUNDBOARD: arr9[3], USE_EXTERNAL_SOUNDS: arr9[4], USE_VAD: arr9[5], PRIORITY_SPEAKER: arr9[6], MUTE_MEMBERS: arr9[7], DEAFEN_MEMBERS: arr9[8], MOVE_MEMBERS: arr9[9], SET_VOICE_CHANNEL_STATUS: arr9[10] } = Permissions);
-  const obj4 = { title: intl4.string(intl56.t["46Ra1b"]), permissions: permissions3.filter(f128083) };
+  const obj4 = { title: intl4.string(intl56.t["46Ra1b"]), permissions: permissions3.filter(f128259) };
   intl4 = intl56.intl;
   permissions3 = obj4.permissions;
   items1[3] = obj4;
   const items5 = [, , ];
   ({ USE_APPLICATION_COMMANDS: arr11[0], USE_EMBEDDED_ACTIVITIES: arr11[1], USE_EXTERNAL_APPS: arr11[2] } = Permissions);
-  const obj5 = { title: intl5.string(intl56.t["rrh/W6"]), permissions: permissions4.filter(f128083) };
+  const obj5 = { title: intl5.string(intl56.t["rrh/W6"]), permissions: permissions4.filter(f128259) };
   intl5 = intl56.intl;
   closure_0 = tmp;
   permissions4 = obj5.permissions;
@@ -445,7 +445,7 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
     }
     if (!flag) {
       const permissions5 = obj6.permissions;
-      obj6.permissions = permissions5.filter(f128083);
+      obj6.permissions = permissions5.filter(f128259);
     }
     push(obj6);
   }
@@ -461,10 +461,10 @@ export const generateGuildPermissionSpec = function generateGuildPermissionSpec(
   }
   if (!flag2) {
     const permissions6 = obj7.permissions;
-    obj7.permissions = permissions6.filter(f128083);
+    obj7.permissions = permissions6.filter(f128259);
   }
   push2(obj7);
-  const obj8 = { title: intl8.string(intl56.t["3uI5CX"]), permissions: permissions7.filter(f128083) };
+  const obj8 = { title: intl8.string(intl56.t["3uI5CX"]), permissions: permissions7.filter(f128259) };
   const push3 = items1.push;
   intl8 = intl56.intl;
   const items8 = [Permissions.ADMINISTRATOR];

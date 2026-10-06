@@ -1,12 +1,12 @@
-// === Module 9345: useIsSecureFramesVerified ===
+// === Module 9359: useIsSecureFramesVerified ===
 
-// Module 9345 (useIsSecureFramesVerified)
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
+// Module 9359 (useIsSecureFramesVerified)
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 9346 */;
-import TransientKeyStore from "TransientKeyStore" /* 9347 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9348 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import SecureFramesVerifiedStore from "SecureFramesVerifiedStore" /* 9360 */;
+import TransientKeyStore from "TransientKeyStore" /* 9361 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9362 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

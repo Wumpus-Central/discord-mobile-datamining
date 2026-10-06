@@ -1,20 +1,20 @@
-// === Module 15921: RedesignNotificationModal ===
+// === Module 15960: RedesignNotificationModal ===
 
-// Module 15921 (RedesignNotificationModal)
+// Module 15960 (RedesignNotificationModal)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12052 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12054 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12055 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 12337 */;
-import AssetRegistryDefault from "AssetRegistry" /* 15922 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12067 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12069 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12070 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 12352 */;
+import AssetRegistryDefault from "AssetRegistry" /* 15961 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import NotificationPermissionConstants from "NotificationPermissionConstants" /* 12053 */;
-import createStyles from "createStyles" /* 4890 */;
+import NotificationPermissionConstants from "NotificationPermissionConstants" /* 12068 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

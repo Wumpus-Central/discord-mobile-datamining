@@ -1,15 +1,15 @@
-// === Module 16800: SearchScreenLayout ===
+// === Module 16821: SearchScreenLayout ===
 
-// Module 16800 (SearchScreenLayout)
+// Module 16821 (SearchScreenLayout)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import AppFreezerDefault from "AppFreezer" /* 16464 */;
-import SearchTabsLayoutDefault from "SearchTabsLayout" /* 16801 */;
-import AutocompleteScreenDefault from "AutocompleteScreen" /* 16905 */;
+import AppFreezerDefault from "AppFreezer" /* 16504 */;
+import SearchTabsLayoutDefault from "SearchTabsLayout" /* 16822 */;
+import AutocompleteScreenDefault from "AutocompleteScreen" /* 16930 */;
 import react from "react" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 11967 */;
+import SearchQueryStore from "SearchQueryStore" /* 11994 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

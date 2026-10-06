@@ -1,27 +1,27 @@
-// === Module 16054: ChannelItem ===
+// === Module 16093: ChannelItem ===
 
-// Module 16054 (ChannelItem)
+// Module 16093 (ChannelItem)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import router_utils from "router_utils" /* 1112 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import BookCheckIcon2 from "BookCheckIcon" /* 5859 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import BaseChannelItem from "BaseChannelItem" /* 12016 */;
-import AssetRegistryDefault from "AssetRegistry" /* 16055 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import BookCheckIcon2 from "BookCheckIcon" /* 5866 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import BaseChannelItem from "BaseChannelItem" /* 12031 */;
+import AssetRegistryDefault from "AssetRegistry" /* 16094 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -272,7 +272,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
     const obj8 = { mode: tmp3, source: tmp13, isChannelLive, style: channelIconLive };
     channelIconLive = undefined;
-    const BaseChannelIcon = tmp10(12016).BaseChannelIcon;
+    const BaseChannelIcon = tmp10(12031).BaseChannelIcon;
     if (isChannelLive) {
       channelIconLive = tmp.channelIconLive;
     }

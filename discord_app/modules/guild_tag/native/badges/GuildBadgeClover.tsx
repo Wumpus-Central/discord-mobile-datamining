@@ -1,9 +1,9 @@
-// === Module 13762: GuildBadgeClover ===
+// === Module 13780: GuildBadgeClover ===
 
-// Module 13762 (GuildBadgeClover)
+// Module 13780 (GuildBadgeClover)
 import react2 from "react" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
-import GuildBadgeUtils from "GuildBadgeUtils" /* 13730 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
+import GuildBadgeUtils from "GuildBadgeUtils" /* 13748 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

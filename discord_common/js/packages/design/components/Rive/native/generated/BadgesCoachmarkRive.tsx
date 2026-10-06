@@ -1,10 +1,10 @@
-// === Module 4605: BadgesCoachmarkRive ===
+// === Module 4611: BadgesCoachmarkRive ===
 
-// Module 4605 (BadgesCoachmarkRive)
+// Module 4611 (BadgesCoachmarkRive)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import BaseRive2 from "BaseRive" /* 4606 */;
-import RiveErrorBoundary2 from "RiveErrorBoundary" /* 4659 */;
+import BaseRive2 from "BaseRive" /* 4612 */;
+import RiveErrorBoundary2 from "RiveErrorBoundary" /* 4665 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -171,7 +171,7 @@ let closure_11 = react.forwardRef(ReactCompilerGating.isReactCompilerEnabled() ?
         }
       }
       let merged = Object.assign(tmp6);
-      const tmp23 = <BaseRive ref={ref} src={require("module_4658")} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={null} stateMachine={tmp7} renderDataBinding={tmp13} />;
+      const tmp23 = <BaseRive ref={ref} src={require("module_4664")} artboard={str} artboardProperties={artboardProperties} artboardViewModelInstances={artboardViewModelInstances} defaultViewModelInstance={null} stateMachine={tmp7} renderDataBinding={tmp13} />;
       cResult[11] = str;
       cResult[12] = str2;
       cResult[13] = ref;

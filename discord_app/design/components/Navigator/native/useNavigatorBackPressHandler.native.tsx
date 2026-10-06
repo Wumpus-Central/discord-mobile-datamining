@@ -1,7 +1,7 @@
-// === Module 6016: useNavigatorBackPressHandler ===
+// === Module 6023: useNavigatorBackPressHandler ===
 
-// Module 6016 (useNavigatorBackPressHandler)
-import useBackPressHandler from "useBackPressHandler" /* 5780 */;
+// Module 6023 (useNavigatorBackPressHandler)
+import useBackPressHandler from "useBackPressHandler" /* 5787 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

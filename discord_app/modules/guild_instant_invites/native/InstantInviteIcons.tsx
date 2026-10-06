@@ -1,6 +1,6 @@
-// === Module 10674: InstantInviteIcons ===
+// === Module 10687: InstantInviteIcons ===
 
-// Module 10674 (InstantInviteIcons)
+// Module 10687 (InstantInviteIcons)
 import react_native from "react-native" /* 17 */;
 import size from "module_2" /* 2 */;
 

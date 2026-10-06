@@ -1,10 +1,10 @@
-// === Module 9071: usePipDimensions ===
+// === Module 9107: usePipDimensions ===
 
-// Module 9071 (usePipDimensions)
+// Module 9107 (usePipDimensions)
 import react2 from "react" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import DeviceOrientation from "DeviceOrientation" /* 8008 */;
-import useIsViewingActivity from "useIsViewingActivity" /* 9072 */;
+import DeviceOrientation from "DeviceOrientation" /* 8018 */;
+import useIsViewingActivity from "useIsViewingActivity" /* 9108 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

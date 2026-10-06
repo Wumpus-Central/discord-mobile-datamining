@@ -1,28 +1,28 @@
-// === Module 11578: TypingIndicator ===
+// === Module 11591: TypingIndicator ===
 
-// Module 11578 (TypingIndicator)
+// Module 11591 (TypingIndicator)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import native from "native" /* 4589 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import spring from "spring" /* 5597 */;
-import springPresets from "springPresets" /* 5598 */;
-import SlowmodeStore from "SlowmodeStore" /* 7171 */;
-import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9064 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 11580 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11587 */;
+import native from "native" /* 4595 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import spring from "spring" /* 5604 */;
+import springPresets from "springPresets" /* 5605 */;
+import SlowmodeStore from "SlowmodeStore" /* 7184 */;
+import useChatBottomManagerUIStore from "useChatBottomManagerUIStore" /* 9100 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 11593 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11600 */;
 import react from "react" /* 19 */;
-import DevSettingsStore from "DevSettingsStore" /* 4889 */;
-import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5640 */;
-import TypingStore from "TypingStore" /* 11579 */;
+import DevSettingsStore from "DevSettingsStore" /* 4895 */;
+import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5647 */;
+import TypingStore from "TypingStore" /* 11592 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let currentUser, set;

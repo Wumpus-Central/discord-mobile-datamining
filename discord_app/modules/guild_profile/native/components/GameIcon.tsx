@@ -1,16 +1,16 @@
-// === Module 9405: components/GameIcon ===
+// === Module 9419: components/GameIcon ===
 
-// Module 9405 (components/GameIcon)
+// Module 9419 (components/GameIcon)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Pressables from "Pressables" /* 5909 */;
-import ClanGameplayActivity from "ClanGameplayActivity" /* 9406 */;
-import FireIcon3 from "FireIcon" /* 9407 */;
+import Pressables from "Pressables" /* 5916 */;
+import ClanGameplayActivity from "ClanGameplayActivity" /* 9420 */;
+import FireIcon3 from "FireIcon" /* 9421 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,15 +1,16 @@
-// === Module 14353: quests ===
+// === Module 14371: quests ===
 
-// Module 14353 (quests)
+// Module 14371 (quests)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
-import RPCErrorDefault from "RPCError" /* 9026 */;
-import RPCHelpers from "RPCHelpers" /* 9031 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 9041 */;
-import QuestStore from "QuestStore" /* 7187 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
+import RPCErrorDefault from "RPCError" /* 9059 */;
+import RPCHelpers from "RPCHelpers" /* 9064 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 9077 */;
+import QuestStore from "QuestStore" /* 7200 */;
 import Constants from "Constants" /* 1085 */;
+import CONTEXT_MENU_ICON_NAMES_mod from "CONTEXT_MENU_ICON_NAMES" /* 14335 */;
 import size from "module_2" /* 2 */;
 
 let RPCCommands;
@@ -17,6 +18,8 @@ let closure_4;
 let hasOwnProperty;
 ({ RPCCommands, RPCErrors: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 let obj = {};
+const GET_QUEST_ENROLLMENT_STATUS = RPCCommands.GET_QUEST_ENROLLMENT_STATUS;
+let CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
 let obj2 = {
   scope: OAuth2Scopes.OAuth2Scopes.IDENTIFY,
   handler(socket) {
@@ -58,7 +61,9 @@ let obj2 = {
     throw tmp82;
   }
 };
-obj[RPCCommands.GET_QUEST_ENROLLMENT_STATUS] = obj2;
+obj[GET_QUEST_ENROLLMENT_STATUS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_QUEST_ENROLLMENT_STATUS, obj2);
+const QUEST_START_TIMER = RPCCommands.QUEST_START_TIMER;
+CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
 let obj3 = {
   scope: OAuth2Scopes.OAuth2Scopes.IDENTIFY,
   handler(socket) {
@@ -103,7 +108,9 @@ let obj3 = {
     throw tmp162;
   }
 };
-obj[RPCCommands.QUEST_START_TIMER] = obj3;
+obj[QUEST_START_TIMER] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.QUEST_START_TIMER, obj3);
+const GET_QUEST = RPCCommands.GET_QUEST;
+CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES_mod;
 let obj4 = {
   scope: OAuth2Scopes.OAuth2Scopes.IDENTIFY,
   handler(socket) {
@@ -172,7 +179,7 @@ let obj4 = {
     }
   }
 };
-obj[RPCCommands.GET_QUEST] = obj4;
+obj[GET_QUEST] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_QUEST, obj4);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/quests.tsx");
 
 export default obj;

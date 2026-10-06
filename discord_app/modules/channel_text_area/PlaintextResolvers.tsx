@@ -1,24 +1,24 @@
-// === Module 8938: PlaintextResolvers ===
+// === Module 8967: PlaintextResolvers ===
 
-// Module 8938 (PlaintextResolvers)
+// Module 8967 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Constants from "Constants" /* 1085 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import GuildChannelStore2 from "GuildChannelStore" /* 4507 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4523 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4527 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import AutocompleteUtils from "AutocompleteUtils" /* 5621 */;
-import SlateUtils from "SlateUtils" /* 7170 */;
+import GuildChannelStore2 from "GuildChannelStore" /* 4513 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4529 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import AutocompleteUtils from "AutocompleteUtils" /* 5628 */;
+import SlateUtils from "SlateUtils" /* 7183 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import EmojiStore from "EmojiStore" /* 5638 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5691 */;
+import EmojiStore from "EmojiStore" /* 5645 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5698 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

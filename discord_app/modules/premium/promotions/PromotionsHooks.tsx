@@ -1,14 +1,14 @@
-// === Module 13362: PromotionsHooks ===
+// === Module 13381: PromotionsHooks ===
 
-// Module 13362 (PromotionsHooks)
+// Module 13381 (PromotionsHooks)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import PromotionUtils from "PromotionUtils" /* 13228 */;
+import PromotionUtils from "PromotionUtils" /* 13247 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import PromotionsStore from "PromotionsStore" /* 10396 */;
+import PromotionsStore from "PromotionsStore" /* 10409 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

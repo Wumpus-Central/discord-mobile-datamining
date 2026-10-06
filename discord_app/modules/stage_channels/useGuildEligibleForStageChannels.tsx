@@ -1,6 +1,6 @@
-// === Module 17010: useGuildEligibleForStageChannels ===
+// === Module 17036: useGuildEligibleForStageChannels ===
 
-// Module 17010 (useGuildEligibleForStageChannels)
+// Module 17036 (useGuildEligibleForStageChannels)
 import Constants from "Constants" /* 1085 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

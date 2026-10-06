@@ -1,11 +1,11 @@
-// === Module 9387: useIsEmptyRTCConnection ===
+// === Module 9401: useIsEmptyRTCConnection ===
 
-// Module 9387 (useIsEmptyRTCConnection)
+// Module 9401 (useIsEmptyRTCConnection)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

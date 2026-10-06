@@ -1,20 +1,20 @@
-// === Module 9183: EditGuildEventModalNavbar ===
+// === Module 9218: EditGuildEventModalNavbar ===
 
-// Module 9183 (EditGuildEventModalNavbar)
+// Module 9218 (EditGuildEventModalNavbar)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4809 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 6880 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9179 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4815 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 6890 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9214 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

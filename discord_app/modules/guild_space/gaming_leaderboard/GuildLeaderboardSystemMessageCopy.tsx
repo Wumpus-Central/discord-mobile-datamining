@@ -1,10 +1,10 @@
-// === Module 7656: GuildLeaderboardSystemMessageCopy ===
+// === Module 7667: GuildLeaderboardSystemMessageCopy ===
 
-// Module 7656 (GuildLeaderboardSystemMessageCopy)
+// Module 7667 (GuildLeaderboardSystemMessageCopy)
 import DurationsDefault from "Durations" /* 1102 */;
 import intl3 from "intl" /* 1126 */;
 import _modDef2425 from "module_2425" /* 2425 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4497 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4503 */;
 import size from "module_2" /* 2 */;
 
 function getLeaderboardSystemMessageValues(value, arg1) {

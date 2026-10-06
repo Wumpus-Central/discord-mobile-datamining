@@ -1,18 +1,18 @@
-// === Module 17086: useAutoSettingsSearchSessionAnalytics ===
+// === Module 17112: useAutoSettingsSearchSessionAnalytics ===
 
-// Module 17086 (useAutoSettingsSearchSessionAnalytics)
-import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6492 */;
-import usePreviousDefault from "usePrevious" /* 7946 */;
+// Module 17112 (useAutoSettingsSearchSessionAnalytics)
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6499 */;
+import usePreviousDefault from "usePrevious" /* 7957 */;
 import react from "react" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14501 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14517 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let importDefault, isFocused, state;
 
 let tmp8;
-const useMountEffectDefault = tmp8(5590);
+const useMountEffectDefault = tmp8(5597);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let closure_1;
   let stateFromStores;

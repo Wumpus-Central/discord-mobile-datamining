@@ -1,16 +1,16 @@
-// === Module 7853: UserProfileSpeedBumpActionSheet ===
+// === Module 7864: UserProfileSpeedBumpActionSheet ===
 
-// Module 7853 (UserProfileSpeedBumpActionSheet)
+// Module 7864 (UserProfileSpeedBumpActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import UserActionCreators from "UserActionCreators" /* 7852 */;
-import Constants2 from "Constants" /* 7854 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7856 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import UserActionCreators from "UserActionCreators" /* 7863 */;
+import Constants2 from "Constants" /* 7865 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7867 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -18,7 +18,7 @@ import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import UserStore_mod from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -77,7 +77,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((speedBumpType)
         stringResult = intl2.string(tmp(1126).t.W6fjkS);
       }
       items[1] = obj3;
-      const TableRowGroup = tmp(6074).TableRowGroup;
+      const TableRowGroup = tmp(6081).TableRowGroup;
       const mapped = items.map((icon, index) => {
         let Icon;
         let obj2;
@@ -146,7 +146,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? ((speedBumpType)
           return closure_12(TableRow, obj, index);
         })
     };
-    const TableRowGroup = tmp4(6074).TableRowGroup;
+    const TableRowGroup = tmp4(6081).TableRowGroup;
     return closure_12(TableRowGroup, obj3);
   } else {
     throw new TypeError("Trying to call a non-function");

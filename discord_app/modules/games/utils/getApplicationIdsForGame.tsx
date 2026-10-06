@@ -1,7 +1,7 @@
-// === Module 9043: getApplicationIdsForGame ===
+// === Module 9079: getApplicationIdsForGame ===
 
-// Module 9043 (getApplicationIdsForGame)
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+// Module 9079 (getApplicationIdsForGame)
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import GameStore from "GameStore" /* 2007 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

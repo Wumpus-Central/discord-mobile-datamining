@@ -1,17 +1,17 @@
-// === Module 7031: DraftStore ===
+// === Module 7044: DraftStore ===
 
-// Module 7031 (DraftStore)
+// Module 7044 (DraftStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import DraftCommand from "DraftCommand" /* 7032 */;
+import DraftCommand from "DraftCommand" /* 7045 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
 import size from "module_2" /* 2 */;
 
 let closure_9;

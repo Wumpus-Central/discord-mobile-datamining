@@ -1,7 +1,7 @@
-// === Module 7527: useIsNsfwGated ===
+// === Module 7538: useIsNsfwGated ===
 
-// Module 7527 (useIsNsfwGated)
-import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5101 */;
+// Module 7538 (useIsNsfwGated)
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 5107 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

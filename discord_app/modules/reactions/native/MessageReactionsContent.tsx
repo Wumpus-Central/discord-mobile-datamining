@@ -1,6 +1,6 @@
-// === Module 9974: MessageReactionsContent ===
+// === Module 9987: MessageReactionsContent ===
 
-// Module 9974 (MessageReactionsContent)
+// Module 9987 (MessageReactionsContent)
 import _modDef12 from "module_12" /* 12 */;
 import get_initialized from "get initialized" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
@@ -13,36 +13,36 @@ import useWindowDimensions from "useWindowDimensions" /* 1484 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import timing from "timing" /* 4891 */;
-import BottomSheetModal from "BottomSheetModal" /* 6112 */;
-import FastListDefault from "FastList" /* 6569 */;
-import EmojiDefault from "Emoji" /* 6625 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7260 */;
-import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7453 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7850 */;
-import generated_NoResults from "generated/NoResults" /* 7904 */;
-import useEmojiColorPalette2 from "useEmojiColorPalette" /* 9977 */;
-import SwipeableFastListDefault from "SwipeableFastList" /* 9981 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import timing from "timing" /* 4897 */;
+import BottomSheetModal from "BottomSheetModal" /* 6119 */;
+import FastListDefault from "FastList" /* 6576 */;
+import EmojiDefault from "Emoji" /* 6632 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7273 */;
+import BurstReactionAnimationPreviewDefault from "BurstReactionAnimationPreview" /* 7464 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 7861 */;
+import generated_NoResults from "generated/NoResults" /* 7915 */;
+import useEmojiColorPalette2 from "useEmojiColorPalette" /* 9990 */;
+import SwipeableFastListDefault from "SwipeableFastList" /* 9994 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7258 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7271 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -70,7 +70,7 @@ let obj7;
 let obj8;
 let obj9;
 let tmp4;
-const ReactionToProfileExperimentDefault = tmp4(9975);
+const ReactionToProfileExperimentDefault = tmp4(9988);
 function RemoveAllButton(channelId) {
   let View;
   let _undefined;
@@ -190,7 +190,7 @@ function EmojiOptionsButton(channelId) {
   const items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(9978)(stateFromStores);
+  const tmp3 = messageId(9991)(stateFromStores);
   const canRemoveReactions = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
@@ -198,17 +198,17 @@ function EmojiOptionsButton(channelId) {
     onPress: react.useCallback(() => {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { channelId, messageId, reaction, canRemoveReactions };
-      obj.openLazy(asyncRequire(9979, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", obj2, "replaceTopSheet");
+      obj.openLazy(asyncRequire(9992, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", obj2, "replaceTopSheet");
     }, items2),
     style: tmp.emojiOptionsButton,
     children: items3
   };
   const obj3 = { variant: "text-xs/semibold", color: "text-subtle", children: intl.string(channelId(1126).t.pCaYID) };
-  const Text = channelId(4886).Text;
+  const Text = channelId(4892).Text;
   intl = channelId(1126).intl;
   items3 = [closure_17(Text, obj3), ];
   const obj4 = { color: messageId(587).colors.ICON_SUBTLE, size: "xs" };
-  const ChevronSmallRightIcon = channelId(6708).ChevronSmallRightIcon;
+  const ChevronSmallRightIcon = channelId(6715).ChevronSmallRightIcon;
   items3[1] = closure_17(ChevronSmallRightIcon, obj4);
   return closure_18(closure_7, obj2);
 }
@@ -1429,7 +1429,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((setReactionSel
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj4 = setReactionSelectedIndex(6687);
+  const obj4 = setReactionSelectedIndex(6694);
   const tidaWebformEnabled = obj4.useExperiment(tmp5, tmp6).tidaWebformEnabled;
   const tmp7 = setReactionSelectedIndex;
   if (cResult[2] === reactionSelectedIndex) {
@@ -1469,8 +1469,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((setReactionSel
       }
     }
     ({ tab: obj5.tabStyle, tabActive: obj5.tabStyleActive, tabSelected: obj5.tabStyleSelected } = tmp4);
-    const obj8 = { tabs: tmp8, tabStyle: null, tabStyleActive: null, tabStyleSelected: null, tabIndexSelected: reactionSelectedIndex, onSelect: T, initialNumTabsToRender: reactionSelectedIndex(4521).MAX_REACTIONS };
-    const tmp7Result = tmp7(9980);
+    const obj8 = { tabs: tmp8, tabStyle: null, tabStyleActive: null, tabStyleSelected: null, tabIndexSelected: reactionSelectedIndex, onSelect: T, initialNumTabsToRender: reactionSelectedIndex(4527).MAX_REACTIONS };
+    const tmp7Result = tmp7(9993);
     cResult[9] = reactionSelectedIndex;
     cResult[10] = tmp4.tab;
     cResult[11] = tmp4.tabActive;
@@ -1515,7 +1515,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((setReactionSel
   const tmp = closure_21();
   ({ reactions, reactionSelectedIndex } = setReactionSelectedIndex);
   setReactionSelectedIndex = setReactionSelectedIndex.setReactionSelectedIndex;
-  let obj = setReactionSelectedIndex(6687);
+  let obj = setReactionSelectedIndex(6694);
   const obj2 = { style: tmp.reactionTab, children: items };
   const tidaWebformEnabled = obj.useExperiment({ location: "ReactionTabs" }, { autoTrackExposure: false }).tidaWebformEnabled;
   const obj4 = {
@@ -1536,15 +1536,15 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? ((setReactionSel
       const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
       setReactionSelectedIndex(arg0);
     },
-    initialNumTabsToRender: reactionSelectedIndex(4521).MAX_REACTIONS
+    initialNumTabsToRender: reactionSelectedIndex(4527).MAX_REACTIONS
   };
   ({ tab: obj3.tabStyle, tabActive: obj3.tabStyleActive, tabSelected: obj3.tabStyleSelected } = tmp);
-  const tmp5 = setReactionSelectedIndex(9980);
-  items = [closure_17(tmp5, obj4), closure_17(setReactionSelectedIndex(8899), { outer: true }), ];
+  const tmp5 = setReactionSelectedIndex(9993);
+  items = [closure_17(tmp5, obj4), closure_17(setReactionSelectedIndex(8928), { outer: true }), ];
   const obj5 = { style: tmp.removeButtonContainer, children: items1 };
   const obj7 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: obj6.getReactionEmojiName(reactions[reactionSelectedIndex].emoji) };
-  const Text = reactionSelectedIndex(4886).Text;
-  obj6 = reactionSelectedIndex(4521);
+  const Text = reactionSelectedIndex(4892).Text;
+  obj6 = reactionSelectedIndex(4527);
   items1 = [closure_17(Text, obj7), ];
   const obj12 = {};
   const tmp6 = tidaWebformEnabled ? EmojiOptionsButton : RemoveAllButton;
@@ -1803,13 +1803,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const reactionSelected = tmp2.reactionSelected;
   ({ reactionSelectedIndex, setReactionSelectedIndex } = tmp2);
   if (null != reactionSelected.me_vote) {
-    NORMAL = channelId(7259).ReactionTypes.VOTE;
+    NORMAL = channelId(7272).ReactionTypes.VOTE;
     tmp5 = channelId;
   } else if (reactionSelected.burst_count > 0) {
-    NORMAL = channelId(7259).ReactionTypes.BURST;
+    NORMAL = channelId(7272).ReactionTypes.BURST;
     tmp5 = channelId;
   } else {
-    NORMAL = channelId(7259).ReactionTypes.NORMAL;
+    NORMAL = channelId(7272).ReactionTypes.NORMAL;
     tmp5 = channelId;
   }
   ({ reactors, reactorsHasMore } = closure_24({ channelId, messageId, reaction: reactionSelected, reactionType: NORMAL }));
@@ -1818,7 +1818,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   const items1 = [channelId];
   const tmp5Result = tmp5(504);
   const stateFromStores = tmp5Result.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp5Result3 = tmp5(6772);
+  const tmp5Result3 = tmp5(6782);
   const isActiveChannelOrUnarchivableThread = tmp5Result3.useIsActiveChannelOrUnarchivableThread(stateFromStores);
   const tmp14 = useSafeAreaInsetsDefault();
   const tmp15 = closure_22(channelId) && !disableManage && isActiveChannelOrUnarchivableThread;
@@ -1835,11 +1835,11 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     const result = Storage.set(MessageReactionsContent_SwipableBounced, true);
   }, []);
   const tmp5Result4 = tmp5(1369);
-  const obj2 = { scrollable: true, backdropOpacity: tmp5(7412).BACKDROP_OPACITY, backdropChildren: tmp18Result, header: tmp18Result3, children: tmp18Result4 };
+  const obj2 = { scrollable: true, backdropOpacity: tmp5(7423).BACKDROP_OPACITY, backdropChildren: tmp18Result, header: tmp18Result3, children: tmp18Result4 };
   const tmp17 = tmp5Result4.isIOS() && tmp15;
-  BottomSheet = tmp5(6645).BottomSheet;
+  BottomSheet = tmp5(6652).BottomSheet;
   tmp18Result = null;
-  if (NORMAL === tmp5(7259).ReactionTypes.BURST) {
+  if (NORMAL === tmp5(7272).ReactionTypes.BURST) {
     const obj3 = { style: closure_8.absoluteFill, pointerEvents: "none", children: closure_17(BurstReactionAnimationPreviewDefault, obj4) };
     obj4 = { emoji: reactionSelected.emoji, reactionType: NORMAL, messageId, channelId };
     tmp18Result = closure_17(closure_9, obj3);

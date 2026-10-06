@@ -1,23 +1,23 @@
-// === Module 12792: GuildInviteActionSheet ===
+// === Module 12811: GuildInviteActionSheet ===
 
-// Module 12792 (GuildInviteActionSheet)
+// Module 12811 (GuildInviteActionSheet)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SearchField2 from "SearchField" /* 6547 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6645 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9483 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12793 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 12794 */;
-import GuildInviteRowDefault from "GuildInviteRow" /* 12795 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SearchField2 from "SearchField" /* 6554 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 6652 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9496 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12812 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 12813 */;
+import GuildInviteRowDefault from "GuildInviteRow" /* 12814 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -95,7 +95,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
   const query = recipientId.query;
   const tmp4 = closure_8();
   dependencyMap = tmp4;
-  const obj2 = recipientId(12790);
+  const obj2 = recipientId(12809);
   [arr, arr2] = obj2.useServerInviteRows(recipientId, query);
   _slicedToArray(obj2.useServerInviteRows(recipientId, query), 2);
   if (cResult[0] === (0 === arr.length && 0 === arr2.length)) {
@@ -159,7 +159,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
             return jsx(closure_1(closure_2[13]), obj);
           }
         }
-        const insets = source(6471)().insets;
+        const insets = source(6478)().insets;
         const tmp12 = source;
         if (0 !== arr.length) {
           class E {
@@ -272,8 +272,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
             cResult[17] = tmp7;
             cResult[18] = tmp15;
             cResult[19] = tmp17;
-            cResult[20] = closure_6(tmp(10841).UserProfileStackedActionSheetSectionList, obj3);
-            const tmp23 = closure_6(tmp(10841).UserProfileStackedActionSheetSectionList, obj3);
+            cResult[20] = closure_6(tmp(10854).UserProfileStackedActionSheetSectionList, obj3);
+            const tmp23 = closure_6(tmp(10854).UserProfileStackedActionSheetSectionList, obj3);
           }
           class T {
             constructor(arg0) {
@@ -352,7 +352,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
   dependencyMap = closure_8();
   let tmp = recipientId;
   let tmp2 = dependencyMap;
-  let obj = recipientId(12790);
+  let obj = recipientId(12809);
   [arr, arr2] = obj.useServerInviteRows(recipientId, query);
   _slicedToArray(obj.useServerInviteRows(recipientId, query), 2);
   if (0 === arr.length) {
@@ -360,7 +360,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
       items = [];
     }
     let tmp5 = 0 === arr.length;
-    const insets = source(6471)().insets;
+    const insets = source(6478)().insets;
     const tmp4 = source;
     if (!tmp5) {
       tmp5 = 0 === arr2.length;
@@ -397,7 +397,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? ((recipientId) =
         },
       ListEmptyComponent
     };
-    const UserProfileStackedActionSheetSectionList = tmp(10841).UserProfileStackedActionSheetSectionList;
+    const UserProfileStackedActionSheetSectionList = tmp(10854).UserProfileStackedActionSheetSectionList;
     if (tmp5) {
       num = 24;
     }

@@ -1,13 +1,13 @@
-// === Module 17260: AudioRouteSwitchingStore ===
+// === Module 17289: AudioRouteSwitchingStore ===
 
-// Module 17260 (AudioRouteSwitchingStore)
+// Module 17289 (AudioRouteSwitchingStore)
 import react_native from "react-native" /* 17 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9301 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9336 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import AudioRouteStore from "AudioRouteStore" /* 9300 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import AudioRouteStore from "AudioRouteStore" /* 9335 */;
 import size from "module_2" /* 2 */;
 
 function handleAudioRouteChanged() {

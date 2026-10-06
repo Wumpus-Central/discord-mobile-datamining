@@ -1,6 +1,6 @@
-// === Module 7519: isChangelogChannel ===
+// === Module 7530: isChangelogChannel ===
 
-// Module 7519 (isChangelogChannel)
+// Module 7530 (isChangelogChannel)
 import ChangelogConstants from "ChangelogConstants" /* 2102 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;

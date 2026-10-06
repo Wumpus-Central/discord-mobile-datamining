@@ -1,6 +1,6 @@
-// === Module 15082: SettingsAppearanceScreen ===
+// === Module 15097: SettingsAppearanceScreen ===
 
-// Module 15082 (SettingsAppearanceScreen)
+// Module 15097 (SettingsAppearanceScreen)
 import Fragment from "Fragment" /* 21 */;
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react2 from "react" /* 576 */;
@@ -8,17 +8,17 @@ import Constants from "Constants" /* 1085 */;
 import intl6 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import _modDef3367 from "module_3367" /* 3367 */;
-import useMountEffectDefault from "useMountEffect" /* 5590 */;
-import HeaderShared from "HeaderShared" /* 7498 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
-import SettingLayoutDefault from "SettingLayout" /* 14499 */;
+import _modDef3395 from "module_3395" /* 3395 */;
+import useMountEffectDefault from "useMountEffect" /* 5597 */;
+import HeaderShared from "HeaderShared" /* 7509 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingLayoutDefault from "SettingLayout" /* 14515 */;
 import react from "react" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4697 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1194 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import FontScaleStore from "FontScaleStore" /* 15083 */;
+import FontScaleStore from "FontScaleStore" /* 15098 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -69,7 +69,7 @@ function getAppearanceSettings() {
   const intl3 = intl6.intl;
   format = intl3.format;
   obj7 = { helpCenterLink: obj8.getArticleURL(HelpdeskArticles.FAVORITES_GUILD) };
-  GR2KOG = _modDef3367.GR2KOG;
+  GR2KOG = _modDef3395.GR2KOG;
   items1[5] = obj6;
   obj8 = HelpdeskUtilsDefault;
   const obj9 = { label: intl4.string(intl6.t.lEde7i), settings: items7 };

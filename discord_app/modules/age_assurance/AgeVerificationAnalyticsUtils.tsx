@@ -1,9 +1,9 @@
-// === Module 8086: AgeVerificationAnalyticsUtils ===
+// === Module 8119: AgeVerificationAnalyticsUtils ===
 
-// Module 8086 (AgeVerificationAnalyticsUtils)
+// Module 8119 (AgeVerificationAnalyticsUtils)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import NsfwSpaceWarningModalType from "NsfwSpaceWarningModalType" /* 8087 */;
+import NsfwSpaceWarningModalType from "NsfwSpaceWarningModalType" /* 8120 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;
 

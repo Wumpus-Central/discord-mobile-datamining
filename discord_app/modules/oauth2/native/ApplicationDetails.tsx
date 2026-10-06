@@ -1,27 +1,27 @@
-// === Module 8953: ApplicationDetails ===
+// === Module 8982: ApplicationDetails ===
 
-// Module 8953 (ApplicationDetails)
+// Module 8982 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
-import LinkIcon from "LinkIcon" /* 4839 */;
-import ClockIcon2 from "ClockIcon" /* 4849 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LockIcon from "LockIcon" /* 5879 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8551 */;
-import scopes from "scopes" /* 8720 */;
-import disclosures from "disclosures" /* 8722 */;
-import Utils from "Utils" /* 8724 */;
-import ShieldIcon from "ShieldIcon" /* 8923 */;
-import EmbedIcon from "EmbedIcon" /* 8954 */;
-import HammerIcon from "HammerIcon" /* 8956 */;
-import RobotIcon from "RobotIcon" /* 8958 */;
+import LinkIcon from "LinkIcon" /* 4845 */;
+import ClockIcon2 from "ClockIcon" /* 4855 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LockIcon from "LockIcon" /* 5886 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8584 */;
+import scopes from "scopes" /* 8752 */;
+import disclosures from "disclosures" /* 8754 */;
+import Utils from "Utils" /* 8756 */;
+import ShieldIcon from "ShieldIcon" /* 8952 */;
+import EmbedIcon from "EmbedIcon" /* 8983 */;
+import HammerIcon from "HammerIcon" /* 8985 */;
+import RobotIcon from "RobotIcon" /* 8987 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

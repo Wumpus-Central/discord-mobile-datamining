@@ -1,6 +1,6 @@
-// === Module 13705: GuildRoleSubscriptionsExperimentUtils ===
+// === Module 13723: GuildRoleSubscriptionsExperimentUtils ===
 
-// Module 13705 (GuildRoleSubscriptionsExperimentUtils)
+// Module 13723 (GuildRoleSubscriptionsExperimentUtils)
 import Constants from "Constants" /* 1085 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

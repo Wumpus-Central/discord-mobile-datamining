@@ -1,12 +1,12 @@
-// === Module 17160: ActivityPanelUtils ===
+// === Module 17189: ActivityPanelUtils ===
 
-// Module 17160 (ActivityPanelUtils)
+// Module 17189 (ActivityPanelUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import ChannelTypes from "ChannelTypes" /* 1106 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4498 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 8705 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9014 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4504 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9001 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9047 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;

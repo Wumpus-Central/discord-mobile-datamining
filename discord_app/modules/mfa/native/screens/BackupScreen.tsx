@@ -1,11 +1,11 @@
-// === Module 15510: BackupScreen ===
+// === Module 15526: BackupScreen ===
 
-// Module 15510 (BackupScreen)
+// Module 15526 (BackupScreen)
 import intl6 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 6432 */;
-import MFA from "MFA" /* 15508 */;
-import ClipboardCopyInputDefault from "ClipboardCopyInput" /* 15509 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 6439 */;
+import MFA from "MFA" /* 15524 */;
+import ClipboardCopyInputDefault from "ClipboardCopyInput" /* 15525 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
@@ -291,7 +291,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       }
     }
   }
-  let obj5 = { label: tmp26, placeholder: tmp27, isValidClipboardCode, maxLength: finish(15508).BACKUP_CODE_MAX_LENGTH, onChangeCode: C, error: tmp10, isDisabled: tmp30, autoFocus: tmp31 };
+  let obj5 = { label: tmp26, placeholder: tmp27, isValidClipboardCode, maxLength: finish(15524).BACKUP_CODE_MAX_LENGTH, onChangeCode: C, error: tmp10, isDisabled: tmp30, autoFocus: tmp31 };
   const tmp4Result = ClipboardCopyInputDefault;
   cResult[12] = tmp10;
   cResult[13] = tmp7 || tmp12;

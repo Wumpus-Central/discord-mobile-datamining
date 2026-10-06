@@ -1,8 +1,8 @@
-// === Module 7152: AuthenticationUtils ===
+// === Module 7165: AuthenticationUtils ===
 
-// Module 7152 (AuthenticationUtils)
+// Module 7165 (AuthenticationUtils)
 import TokenManagerAll from "TokenManager" /* 1111 */;
-import AssetRegistry from "AssetRegistry" /* 7153 */;
+import AssetRegistry from "AssetRegistry" /* 7166 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/AuthenticationUtils.tsx");

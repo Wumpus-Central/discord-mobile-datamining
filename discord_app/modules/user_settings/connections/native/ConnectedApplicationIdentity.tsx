@@ -1,15 +1,15 @@
-// === Module 14770: ConnectedApplicationIdentity ===
+// === Module 14786: ConnectedApplicationIdentity ===
 
-// Module 14770 (ConnectedApplicationIdentity)
+// Module 14786 (ConnectedApplicationIdentity)
 import react_native from "react-native" /* 17 */;
 import intl6 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Icon from "Icon" /* 5596 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import AlertDefault from "Alert" /* 5783 */;
-import InfoBoxDefault from "InfoBox" /* 9459 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Icon from "Icon" /* 5603 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import AlertDefault from "Alert" /* 5790 */;
+import InfoBoxDefault from "InfoBox" /* 9472 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;

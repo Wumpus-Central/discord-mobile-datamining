@@ -1,15 +1,15 @@
-// === Module 8279: ReportModals ===
+// === Module 8312: ReportModals ===
 
-// Module 8279 (ReportModals)
+// Module 8312 (ReportModals)
 import Constants from "Constants" /* 1085 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import MenuTypes from "MenuTypes" /* 8280 */;
-import showReportModal2 from "showReportModal" /* 8281 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8283 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import MenuTypes from "MenuTypes" /* 8313 */;
+import showReportModal2 from "showReportModal" /* 8314 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8316 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import MessageRecord from "MessageRecord" /* 4520 */;
+import MessageRecord from "MessageRecord" /* 4526 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import size from "module_2" /* 2 */;
 
@@ -368,7 +368,7 @@ export const showUnauthenticatedReportModalForMessage = function showUnauthentic
   const IAR_MODAL_OPEN = AnalyticEvents.IAR_MODAL_OPEN;
   obj = { report_type: MESSAGE };
   AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "Array", channel_id: "Set" });
+  const merged = Object.assign({ message_id: "start", channel_id: "unicodeVersion" });
   trackWithMetadata(IAR_MODAL_OPEN, obj);
   const obj2 = showReportModal2;
   const obj3 = { name: MenuTypes.UnauthenticatedReportNames.MESSAGE, record: tmp };

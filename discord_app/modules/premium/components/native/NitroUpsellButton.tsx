@@ -1,14 +1,14 @@
-// === Module 9648: NitroUpsellButton ===
+// === Module 9661: NitroUpsellButton ===
 
-// Module 9648 (NitroUpsellButton)
+// Module 9661 (NitroUpsellButton)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import NitroWheelIcon2 from "NitroWheelIcon" /* 8313 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import NitroWheelIcon2 from "NitroWheelIcon" /* 8346 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

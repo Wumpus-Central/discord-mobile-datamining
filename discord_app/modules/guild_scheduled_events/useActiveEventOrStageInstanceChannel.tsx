@@ -1,9 +1,9 @@
-// === Module 16112: useActiveEventOrStageInstanceChannel ===
+// === Module 16151: useActiveEventOrStageInstanceChannel ===
 
-// Module 16112 (useActiveEventOrStageInstanceChannel)
+// Module 16151 (useActiveEventOrStageInstanceChannel)
 import react from "react" /* 576 */;
-import useGuildScheduledEvents from "useGuildScheduledEvents" /* 9160 */;
-import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16111 */;
+import useGuildScheduledEvents from "useGuildScheduledEvents" /* 9195 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16150 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

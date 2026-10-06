@@ -1,28 +1,28 @@
-// === Module 12905: ConjureChatStore ===
+// === Module 12924: ConjureChatStore ===
 
-// Module 12905 (ConjureChatStore)
+// Module 12924 (ConjureChatStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import intl2 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import ConjureUtils from "ConjureUtils" /* 6746 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 8702 */;
-import SoundUtils from "SoundUtils" /* 9562 */;
-import conjureProjectMute from "conjureProjectMute" /* 12906 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import ConjureUtils from "ConjureUtils" /* 6756 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 8737 */;
+import SoundUtils from "SoundUtils" /* 9575 */;
+import conjureProjectMute from "conjureProjectMute" /* 12925 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7048 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7061 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 12466 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 12481 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import Constants from "Constants" /* 1085 */;
-import size from "module_2" /* 2 */;
+import size_mod from "module_2" /* 2 */;
 
 let closure_15;
 let closure_16;
@@ -1395,7 +1395,7 @@ let obj = {
                 const obj = { provisionalTodo: undefined, steps: items };
                 const merged = Object.assign(disposition);
                 items = [];
-                const obj2 = { type: "step", kind: "terminal_error", message: intl.string(_modDef3723.lmiuFX) };
+                const obj2 = { type: "step", kind: "terminal_error", message: intl.string(_modDef3753.lmiuFX) };
                 const arraySpreadResult = HermesBuiltin.arraySpread(items, disposition.steps, 0);
                 intl = intl2.intl;
                 items[arraySpreadResult] = obj2;
@@ -1466,6 +1466,7 @@ let obj = {
   }
 };
 const conjureChatStore = new ConjureChatStore(DispatcherDefault, obj);
+let size = size_mod;
 let result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatStore.tsx");
 
 export default conjureChatStore;

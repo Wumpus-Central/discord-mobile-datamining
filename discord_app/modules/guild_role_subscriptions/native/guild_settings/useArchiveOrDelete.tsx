@@ -1,9 +1,9 @@
-// === Module 17932: useArchiveOrDelete ===
+// === Module 17978: useArchiveOrDelete ===
 
-// Module 17932 (useArchiveOrDelete)
+// Module 17978 (useArchiveOrDelete)
 import intl13 from "intl" /* 1126 */;
-import ToastUtilsAll from "ToastUtils" /* 4567 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15045 */;
+import ToastUtilsAll from "ToastUtils" /* 4573 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15060 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;

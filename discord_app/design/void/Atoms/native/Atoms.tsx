@@ -1,9 +1,9 @@
-// === Module 13942: Atoms ===
+// === Module 13960: Atoms ===
 
-// Module 13942 (Atoms)
+// Module 13960 (Atoms)
 import react_native from "react-native" /* 17 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8912 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8941 */;
 import size from "module_2" /* 2 */;
 
 const TextInput = react_native.TextInput;

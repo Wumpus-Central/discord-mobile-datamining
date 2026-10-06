@@ -1,9 +1,9 @@
-// === Module 9154: ChannelCallModalManager ===
+// === Module 9189: ChannelCallModalManager ===
 
-// Module 9154 (ChannelCallModalManager)
+// Module 9189 (ChannelCallModalManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;
 

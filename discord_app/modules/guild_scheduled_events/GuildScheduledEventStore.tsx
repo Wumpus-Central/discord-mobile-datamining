@@ -1,10 +1,10 @@
-// === Module 7037: GuildScheduledEventStore ===
+// === Module 7050: GuildScheduledEventStore ===
 
-// Module 7037 (GuildScheduledEventStore)
+// Module 7050 (GuildScheduledEventStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4504 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4510 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;

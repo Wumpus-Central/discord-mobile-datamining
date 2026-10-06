@@ -1,6 +1,6 @@
-// === Module 6933: SubscriptionFacetRecord ===
+// === Module 6946: SubscriptionFacetRecord ===
 
-// Module 6933 (SubscriptionFacetRecord)
+// Module 6946 (SubscriptionFacetRecord)
 import Record from "Record" /* 1392 */;
 import size from "module_2" /* 2 */;
 

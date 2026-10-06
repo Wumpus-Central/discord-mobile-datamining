@@ -1,10 +1,10 @@
-// === Module 12372: LeafIllocon ===
+// === Module 12387: LeafIllocon ===
 
-// Module 12372 (LeafIllocon)
+// Module 12387 (LeafIllocon)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import _modDef12373 from "module_12373" /* 12373 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import _modDef12388 from "module_12388" /* 12388 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -23,7 +23,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     num = size;
   }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef12373 };
+    const obj2 = { uri: _modDef12388 };
     cResult[0] = obj2;
     first = obj2;
   } else {
@@ -65,7 +65,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (num === undefined) {
     num = 64;
   }
-  const obj2 = { uri: _modDef12373 };
+  const obj2 = { uri: _modDef12388 };
   FastImageDefault;
   const items = [{ width: num, height: num }];
   return <tmp fadeDuration={0} source={obj2} style={items} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;

@@ -1,8 +1,8 @@
-// === Module 17466: BlockedDomainManager ===
+// === Module 17493: BlockedDomainManager ===
 
-// Module 17466 (BlockedDomainManager)
+// Module 17493 (BlockedDomainManager)
 import shim from "shim" /* 562 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 class BlockedDomainManager extends AutomaticLifecycleManager {

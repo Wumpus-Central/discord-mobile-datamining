@@ -1,13 +1,13 @@
-// === Module 6663: useGetOrFetchApplications ===
+// === Module 6670: useGetOrFetchApplications ===
 
-// Module 6663 (useGetOrFetchApplications)
+// Module 6670 (useGetOrFetchApplications)
 import _modDef12 from "module_12" /* 12 */;
 import shallowEqual from "shallowEqual" /* 568 */;
 import react2 from "react" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6658 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6665 */;
 import react from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

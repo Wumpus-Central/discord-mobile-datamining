@@ -1,6 +1,6 @@
-// === Module 17317: useShouldDisplayCancelConsoleTransfer ===
+// === Module 17345: useShouldDisplayCancelConsoleTransfer ===
 
-// Module 17317 (useShouldDisplayCancelConsoleTransfer)
+// Module 17345 (useShouldDisplayCancelConsoleTransfer)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

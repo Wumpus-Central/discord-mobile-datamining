@@ -1,20 +1,20 @@
-// === Module 10781: PremiumGiftDuration ===
+// === Module 10794: PremiumGiftDuration ===
 
-// Module 10781 (PremiumGiftDuration)
+// Module 10794 (PremiumGiftDuration)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
-import react_native2 from "react-native" /* 4594 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import TableRow from "TableRow" /* 5993 */;
-import RowButton2 from "RowButton" /* 8897 */;
-import NativeGiftContext from "NativeGiftContext" /* 10430 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10483 */;
+import react_native2 from "react-native" /* 4600 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import TableRow from "TableRow" /* 6000 */;
+import RowButton2 from "RowButton" /* 8926 */;
+import NativeGiftContext from "NativeGiftContext" /* 10443 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10496 */;
 import react from "react" /* 19 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -335,7 +335,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj = planInterval(576);
   const cResult = obj.c(9);
   const tmp4 = closure_11();
-  const obj2 = planInterval(10430);
+  const obj2 = planInterval(10443);
   planInterval = obj2.useNativeGiftContext().planInterval;
   ({ durationContainer, durationTitle } = tmp4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -348,7 +348,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[1] !== tmp4.durationTitle) {
     const obj3 = { style: durationTitle, variant: "text-sm/semibold", children: first };
-    const tmp9 = closure_6(planInterval(4886).Text, obj3);
+    const tmp9 = closure_6(planInterval(4892).Text, obj3);
     cResult[1] = tmp4.durationTitle;
     cResult[2] = tmp9;
     tmp7 = tmp9;
@@ -387,11 +387,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let intl;
   let planInterval;
   const tmp = closure_11();
-  let obj = planInterval(10430);
+  let obj = planInterval(10443);
   planInterval = obj.useNativeGiftContext().planInterval;
   const obj2 = { style: tmp.durationContainer, children: items };
   const obj3 = { style: tmp.durationTitle, variant: "text-sm/semibold", children: intl.string(planInterval(1126).t["8XT6Nf"]) };
-  const Text = planInterval(4886).Text;
+  const Text = planInterval(4892).Text;
   intl = planInterval(1126).intl;
   items = [closure_6(Text, obj3), ];
   items[1] = items.map((planInterval, index) => {

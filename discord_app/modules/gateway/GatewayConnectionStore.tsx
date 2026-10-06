@@ -1,28 +1,28 @@
-// === Module 5436: GatewayConnectionStore ===
+// === Module 5443: GatewayConnectionStore ===
 
-// Module 5436 (GatewayConnectionStore)
+// Module 5443 (GatewayConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 10015 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13439 */;
-import ConnectionStateDefault from "ConnectionState" /* 13456 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13477 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13488 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 10028 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13458 */;
+import ConnectionStateDefault from "ConnectionState" /* 13472 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13493 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13504 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5437 */;
+import CallStore from "CallStore" /* 5444 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import RTCRegionStore from "RTCRegionStore" /* 4940 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import RTCRegionStore from "RTCRegionStore" /* 4946 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -438,7 +438,7 @@ obj = {
           const guildMembers = socket.requestGuildMembers(userIds.guildIds, obj);
         });
       } else {
-        const socket2 = tmp(13439).socket;
+        const socket2 = tmp(13458).socket;
         obj = { query: null, limit: null, presences: userIds.presences };
         ({ query: obj.query, limit: obj.limit } = userIds);
         let guildMembers = socket2.requestGuildMembers(userIds.guildIds, obj);
@@ -542,7 +542,7 @@ obj = {
           }
         });
       }
-      let socket2 = tmp(13439).socket;
+      let socket2 = tmp(13458).socket;
       socket2.streamWatch(streamKey);
     }
     return false;

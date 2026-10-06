@@ -1,29 +1,29 @@
-// === Module 17134: useMainViewTooltipActionSheetEligibilityMap ===
+// === Module 17163: useMainViewTooltipActionSheetEligibilityMap ===
 
-// Module 17134 (useMainViewTooltipActionSheetEligibilityMap)
+// Module 17163 (useMainViewTooltipActionSheetEligibilityMap)
 import get_initialized from "get initialized" /* 504 */;
 import Constants from "Constants" /* 1085 */;
 import UserSettingsConstants from "UserSettingsConstants" /* 1095 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6956 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7731 */;
-import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9390 */;
-import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10469 */;
-import MarketingComponentType from "MarketingComponentType" /* 10470 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10475 */;
-import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 11581 */;
-import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 13225 */;
-import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 17109 */;
-import ConnectionDeprecationBottomSheet from "ConnectionDeprecationBottomSheet" /* 17121 */;
-import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 17135 */;
-import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 17136 */;
-import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 17137 */;
-import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 17138 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 6969 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7742 */;
+import DisplayNameStylesFlywheelExperiment from "DisplayNameStylesFlywheelExperiment" /* 9404 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10482 */;
+import MarketingComponentType from "MarketingComponentType" /* 10483 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10488 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 11594 */;
+import usePromotionMarketingComponent from "usePromotionMarketingComponent" /* 13244 */;
+import RobloxConnectionCoachmark from "RobloxConnectionCoachmark" /* 17138 */;
+import ConnectionDeprecationBottomSheet from "ConnectionDeprecationBottomSheet" /* 17150 */;
+import MainViewTooltipActionSheetsDisabledExperimentDefault from "MainViewTooltipActionSheetsDisabledExperiment" /* 17164 */;
+import PremiumTrialOfferActionSheetKillSwitchExperiment2 from "PremiumTrialOfferActionSheetKillSwitchExperiment" /* 17165 */;
+import useGiftingPromotionAssetsReadyDefault from "useGiftingPromotionAssetsReady" /* 17166 */;
+import useNitroFileUploadMarketingEligible from "useNitroFileUploadMarketingEligible" /* 17167 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 17111 */;
-import PromotionsStore from "PromotionsStore" /* 10396 */;
+import GooglePlayPriceChangeStore from "GooglePlayPriceChangeStore" /* 17140 */;
+import PromotionsStore from "PromotionsStore" /* 10409 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 2044 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
@@ -1365,7 +1365,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp50;
   let tmp8;
   let tmp9;
-  const f128734 = () => {
+  const f128910 = () => {
     const items = [, ];
     ({ shouldShowGooglePlayPriceChange: arr[0], priceChangeRecord: arr[1] } = GooglePlayPriceChangeStore);
     return items;
@@ -1391,8 +1391,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   const items2 = [GooglePlayPriceChangeStore];
   const tmpResult18 = get_initialized;
-  [tmp8, tmp9] = tmpResult18.useStateFromStoresArray(items2, f128734);
-  _slicedToArray(tmpResult18.useStateFromStoresArray(items2, f128734), 2);
+  [tmp8, tmp9] = tmpResult18.useStateFromStoresArray(items2, f128910);
+  _slicedToArray(tmpResult18.useStateFromStoresArray(items2, f128910), 2);
   const tmpResult19 = usePremiumDiscountOffer;
   const premiumDiscountOffer = tmpResult19.usePremiumDiscountOffer();
   const tmpResult20 = usePremiumTrialOffer;

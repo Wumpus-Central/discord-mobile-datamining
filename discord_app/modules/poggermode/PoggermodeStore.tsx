@@ -1,16 +1,16 @@
-// === Module 7459: PoggermodeStore ===
+// === Module 7470: PoggermodeStore ===
 
-// Module 7459 (PoggermodeStore)
+// Module 7470 (PoggermodeStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4504 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 7460 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4510 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 7471 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7162 */;
-import PoggermodeConstants from "PoggermodeConstants" /* 7163 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7175 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7176 */;
 import size from "module_2" /* 2 */;
 
 let hasOwnProperty;

@@ -1,20 +1,20 @@
-// === Module 7843: EditCollectiblesCTAButton ===
+// === Module 7854: EditCollectiblesCTAButton ===
 
-// Module 7843 (EditCollectiblesCTAButton)
+// Module 7854 (EditCollectiblesCTAButton)
 import Fragment from "Fragment" /* 21 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
 import intl4 from "intl" /* 1126 */;
 import MediaKeyboardConstants from "MediaKeyboardConstants" /* 1614 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import spring from "spring" /* 5597 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 7846 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 7847 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import spring from "spring" /* 5604 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+import EditCollectiblesActionCreators from "EditCollectiblesActionCreators" /* 7857 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 7858 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import createStyles from "createStyles" /* 4890 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

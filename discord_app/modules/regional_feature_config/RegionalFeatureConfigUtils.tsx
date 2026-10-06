@@ -1,9 +1,9 @@
-// === Module 5580: RegionalFeatureConfigUtils ===
+// === Module 5587: RegionalFeatureConfigUtils ===
 
-// Module 5580 (RegionalFeatureConfigUtils)
+// Module 5587 (RegionalFeatureConfigUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5104 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5110 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

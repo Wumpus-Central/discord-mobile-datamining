@@ -1,12 +1,12 @@
-// === Module 10097: GIFPickerSearchSuggestions ===
+// === Module 10110: GIFPickerSearchSuggestions ===
 
-// Module 10097 (GIFPickerSearchSuggestions)
+// Module 10110 (GIFPickerSearchSuggestions)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import react from "react" /* 19 */;
-import GIFPickerViewStore from "GIFPickerViewStore" /* 10089 */;
+import GIFPickerViewStore from "GIFPickerViewStore" /* 10102 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -68,7 +68,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((o
     }
     if (cResult[3] !== tmp4.footerSuggestionsTitle) {
       const obj2 = { style: footerSuggestionsTitle, variant: "text-md/medium", color: "text-default", children: tmp8 };
-      const tmp12 = closure_5(onClickSuggestion(4886).Text, obj2);
+      const tmp12 = closure_5(onClickSuggestion(4892).Text, obj2);
       cResult[3] = tmp4.footerSuggestionsTitle;
       cResult[4] = tmp12;
       tmp10 = tmp12;
@@ -160,7 +160,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((o
   if (0 !== stateFromStoresArray.length) {
     const obj2 = { style: tmp.footerSuggestionsContainer, children: items1 };
     const obj3 = { style: tmp.footerSuggestionsTitle, variant: "text-md/medium", color: "text-default", children: intl.string(onClickSuggestion(1126).t["3JGJo2"]) };
-    const Text = tmp2(4886).Text;
+    const Text = tmp2(4892).Text;
     intl = tmp2(1126).intl;
     items1 = [closure_5(Text, obj3), ];
     const obj4 = {

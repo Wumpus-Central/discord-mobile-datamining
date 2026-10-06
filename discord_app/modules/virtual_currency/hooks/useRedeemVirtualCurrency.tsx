@@ -1,8 +1,8 @@
-// === Module 8517: useRedeemVirtualCurrency ===
+// === Module 8550: useRedeemVirtualCurrency ===
 
-// Module 8517 (useRedeemVirtualCurrency)
+// Module 8550 (useRedeemVirtualCurrency)
 import intl3 from "intl" /* 1126 */;
-import useOrderSigning from "useOrderSigning" /* 8519 */;
+import useOrderSigning from "useOrderSigning" /* 8552 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
@@ -29,7 +29,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   [error, _asyncToGenerator] = _slicedToArray(enabled(null), 2);
   const tmp5 = _slicedToArray(enabled(null), 2);
   [isSubmitting, _slicedToArray] = enabled(false);
-  let obj = entitlements(8518);
+  let obj = entitlements(8551);
   enabled = obj.useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {

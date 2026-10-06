@@ -1,8 +1,8 @@
-// === Module 10128: NativeAPNGView ===
+// === Module 10141: NativeAPNGView ===
 
-// Module 10128 (NativeAPNGView)
+// Module 10141 (NativeAPNGView)
 import react_native from "react-native" /* 17 */;
-import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 10129 */;
+import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 10142 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import size from "module_2" /* 2 */;
 

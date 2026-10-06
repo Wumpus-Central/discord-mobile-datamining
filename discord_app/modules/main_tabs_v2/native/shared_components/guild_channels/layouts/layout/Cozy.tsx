@@ -1,12 +1,12 @@
-// === Module 11702: Cozy ===
+// === Module 11716: Cozy ===
 
-// Module 11702 (Cozy)
+// Module 11716 (Cozy)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import GameIcon from "GameIcon" /* 6667 */;
-import Compact from "Compact" /* 11701 */;
-import deepmerge from "deepmerge" /* 11700 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import GameIcon from "GameIcon" /* 6674 */;
+import Compact from "Compact" /* 11715 */;
+import deepmerge from "deepmerge" /* 11714 */;
 import size from "module_2" /* 2 */;
 
 let items;

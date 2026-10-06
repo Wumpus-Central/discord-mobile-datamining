@@ -1,23 +1,23 @@
-// === Module 15846: components_native/ErrorBoundary ===
+// === Module 15885: components_native/ErrorBoundary ===
 
-// Module 15846 (components_native/ErrorBoundary)
+// Module 15885 (components_native/ErrorBoundary)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
-import native2 from "native" /* 4589 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import AppCrash from "AppCrash" /* 9510 */;
+import native2 from "native" /* 4595 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import AppCrash from "AppCrash" /* 9523 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11082 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11095 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -259,7 +259,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
           return obj(...arguments);
         }
     };
-    const Button = tmp3(5594).Button;
+    const Button = tmp3(5601).Button;
     intl = tmp3(1126).intl;
     return closure_9(Button, obj2);
   }

@@ -1,16 +1,16 @@
-// === Module 11799: AppLauncherAttachmentOption ===
+// === Module 11813: AppLauncherAttachmentOption ===
 
-// Module 11799 (AppLauncherAttachmentOption)
+// Module 11813 (AppLauncherAttachmentOption)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 11043 */;
-import FileIcon from "FileIcon" /* 11800 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 11056 */;
+import FileIcon from "FileIcon" /* 11814 */;
 import react from "react" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

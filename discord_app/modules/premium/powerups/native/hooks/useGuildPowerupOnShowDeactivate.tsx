@@ -1,9 +1,9 @@
-// === Module 12198: useGuildPowerupOnShowDeactivate ===
+// === Module 12213: useGuildPowerupOnShowDeactivate ===
 
-// Module 12198 (useGuildPowerupOnShowDeactivate)
+// Module 12213 (useGuildPowerupOnShowDeactivate)
 import Fragment from "Fragment" /* 21 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -12,7 +12,7 @@ const require = globalThis.__r;
 let _require, dependencyMap;
 
 const jsx = Fragment.jsx;
-let closure_4 = react.lazy(() => asyncRequire(12199, dependencyMap.paths));
+let closure_4 = react.lazy(() => asyncRequire(12214, dependencyMap.paths));
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId, powerup) => {
   _require = guildId;
   dependencyMap = powerup;

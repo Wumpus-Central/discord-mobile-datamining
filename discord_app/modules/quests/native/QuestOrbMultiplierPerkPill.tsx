@@ -1,23 +1,23 @@
-// === Module 14967: QuestOrbMultiplierPerkPill ===
+// === Module 14982: QuestOrbMultiplierPerkPill ===
 
-// Module 14967 (QuestOrbMultiplierPerkPill)
+// Module 14982 (QuestOrbMultiplierPerkPill)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import useToken from "useToken" /* 4580 */;
-import themes from "themes" /* 4587 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import useTheme from "useTheme" /* 4791 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8313 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10008 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 10911 */;
-import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 14968 */;
+import useToken from "useToken" /* 4586 */;
+import themes from "themes" /* 4593 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import useTheme from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10021 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 10924 */;
+import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 14983 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -269,7 +269,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((onPress) => {
     const PressableOpacity = Pressables.PressableOpacity;
     if (!tmp13) {
       const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5605), obj18);
+      tmp21Result = tmp21(orbMultiplierEligibility(5612), obj18);
     }
     items4 = [tmp21Result, ];
     const obj19 = { style: tmp.fullGradientContent, children: tmp16Result };

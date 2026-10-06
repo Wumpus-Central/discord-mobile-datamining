@@ -1,14 +1,14 @@
-// === Module 4958: BaseConnection ===
+// === Module 4964: BaseConnection ===
 
-// Module 4958 (BaseConnection)
-import VideoQualityManager from "VideoQualityManager" /* 4959 */;
-import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer" /* 4961 */;
-import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 4962 */;
-import cloneDeepDefault from "cloneDeep" /* 4963 */;
-import flatRestDefault from "flatRest" /* 4992 */;
+// Module 4964 (BaseConnection)
+import VideoQualityManager from "VideoQualityManager" /* 4965 */;
+import ConnectionEventFramerateReducer from "ConnectionEventFramerateReducer" /* 4967 */;
+import discord_common_BaseConnectionEvent from "discord_common/BaseConnectionEvent" /* 4968 */;
+import cloneDeepDefault from "cloneDeep" /* 4969 */;
+import flatRestDefault from "flatRest" /* 4998 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import Constants from "Constants" /* 4915 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4948 */;
+import Constants from "Constants" /* 4921 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4954 */;
 import size_mod from "module_2" /* 2 */;
 
 let set;

@@ -1,6 +1,6 @@
-// === Module 9993: MediaPlaybackFacts ===
+// === Module 10006: MediaPlaybackFacts ===
 
-// Module 9993 (MediaPlaybackFacts)
+// Module 10006 (MediaPlaybackFacts)
 import size_mod from "module_2" /* 2 */;
 
 let set;

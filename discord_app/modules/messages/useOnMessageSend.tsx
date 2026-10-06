@@ -1,6 +1,6 @@
-// === Module 16932: useOnMessageSend ===
+// === Module 16958: useOnMessageSend ===
 
-// Module 16932 (useOnMessageSend)
+// Module 16958 (useOnMessageSend)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import react from "react" /* 19 */;

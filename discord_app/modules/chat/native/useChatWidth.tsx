@@ -1,10 +1,10 @@
-// === Module 11143: useChatWidth ===
+// === Module 11156: useChatWidth ===
 
-// Module 11143 (useChatWidth)
-import useChatLayout from "useChatLayout" /* 4739 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4741 */;
-import useDrawerWidth from "useDrawerWidth" /* 11144 */;
-import reactDefault from "react" /* 11145 */;
+// Module 11156 (useChatWidth)
+import useChatLayout from "useChatLayout" /* 4745 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4747 */;
+import useDrawerWidth from "useDrawerWidth" /* 11157 */;
+import reactDefault from "react" /* 11158 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,31 +1,31 @@
-// === Module 9760: ChatView ===
+// === Module 9773: ChatView ===
 
-// Module 9760 (ChatView)
+// Module 9773 (ChatView)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import ChatInputUtils from "ChatInputUtils" /* 4745 */;
-import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6817 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 9764 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 9769 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 9783 */;
-import MessagesDefault from "Messages" /* 11081 */;
-import ChatInputDefault from "ChatInput" /* 11572 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11896 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 12124 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12303 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 12304 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12308 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12311 */;
+import ChatInputUtils from "ChatInputUtils" /* 4751 */;
+import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 6827 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 9777 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 9782 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 9796 */;
+import MessagesDefault from "Messages" /* 11094 */;
+import ChatInputDefault from "ChatInput" /* 11585 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 11910 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 12139 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12318 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 12319 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12323 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12326 */;
 import react from "react" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
 import ChannelStore_mod from "ChannelStore" /* 2051 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

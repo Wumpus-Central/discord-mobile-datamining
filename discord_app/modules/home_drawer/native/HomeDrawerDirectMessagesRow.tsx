@@ -1,20 +1,20 @@
-// === Module 16250: HomeDrawerDirectMessagesRow ===
+// === Module 16290: HomeDrawerDirectMessagesRow ===
 
-// Module 16250 (HomeDrawerDirectMessagesRow)
+// Module 16290 (HomeDrawerDirectMessagesRow)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4742 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import HomeDrawerShared from "HomeDrawerShared" /* 16246 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4748 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 16286 */;
 import react from "react" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

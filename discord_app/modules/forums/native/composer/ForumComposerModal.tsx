@@ -1,6 +1,6 @@
-// === Module 10060: ForumComposerModal ===
+// === Module 10073: ForumComposerModal ===
 
-// Module 10060 (ForumComposerModal)
+// Module 10073 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
@@ -9,17 +9,17 @@ import intl5 from "intl" /* 1126 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1488 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1881 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import DraftStore2 from "DraftStore" /* 7031 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 7405 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8812 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10059 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import DraftStore2 from "DraftStore" /* 7044 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7416 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 8842 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10072 */;
 import react from "react" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9612 */;
+import NativeMenuStore from "NativeMenuStore" /* 9625 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 7267 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6780 */;
-import createStyles from "createStyles" /* 4890 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 7280 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 6790 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

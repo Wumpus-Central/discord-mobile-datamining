@@ -1,7 +1,7 @@
-// === Module 9999: BountyTypes ===
+// === Module 10012: BountyTypes ===
 
-// Module 9999 (BountyTypes)
-import AssetUtils from "AssetUtils" /* 10000 */;
+// Module 10012 (BountyTypes)
+import AssetUtils from "AssetUtils" /* 10013 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

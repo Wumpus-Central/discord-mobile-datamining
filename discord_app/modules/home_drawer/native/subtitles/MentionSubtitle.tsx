@@ -1,13 +1,13 @@
-// === Module 16264: MentionSubtitle ===
+// === Module 16304: MentionSubtitle ===
 
-// Module 16264 (MentionSubtitle)
+// Module 16304 (MentionSubtitle)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import TextIcon from "TextIcon" /* 5864 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 16265 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import TextIcon from "TextIcon" /* 5871 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 16305 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

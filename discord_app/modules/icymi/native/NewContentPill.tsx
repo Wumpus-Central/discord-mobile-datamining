@@ -1,20 +1,20 @@
-// === Module 16463: NewContentPill ===
+// === Module 16503: NewContentPill ===
 
-// Module 16463 (NewContentPill)
+// Module 16503 (NewContentPill)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5597 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import ICYMITypes from "ICYMITypes" /* 8024 */;
-import ICYMIUtils from "ICYMIUtils" /* 8028 */;
-import ClipView from "ClipView" /* 8469 */;
+import spring from "spring" /* 5604 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import ICYMITypes from "ICYMITypes" /* 8034 */;
+import ICYMIUtils from "ICYMIUtils" /* 8038 */;
+import ClipView from "ClipView" /* 8502 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildStore_mod from "GuildStore" /* 2074 */;
-import ICYMIStore_mod from "ICYMIStore" /* 8011 */;
+import ICYMIStore_mod from "ICYMIStore" /* 8021 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

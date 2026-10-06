@@ -1,9 +1,9 @@
-// === Module 12549: PanGestureAnimations ===
+// === Module 12564: PanGestureAnimations ===
 
-// Module 12549 (PanGestureAnimations)
+// Module 12564 (PanGestureAnimations)
 import native from "native" /* 1188 */;
-import timing from "timing" /* 4891 */;
-import spring from "spring" /* 5597 */;
+import timing from "timing" /* 4897 */;
+import spring from "spring" /* 5604 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

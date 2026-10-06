@@ -1,6 +1,6 @@
-// === Module 7413: getBurstAnimation ===
+// === Module 7424: getBurstAnimation ===
 
-// Module 7413 (getBurstAnimation)
+// Module 7424 (getBurstAnimation)
 import _asyncToGeneratorDefault from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
@@ -9,66 +9,11 @@ let closure_5;
 
 const obj = {
   load() {
-    return require("module_7414");
+    return require("module_7425");
   }
 };
 const items = [
   obj,
-  {
-    load() {
-      return require("module_7415");
-    }
-  },
-  {
-    load() {
-      return require("module_7416");
-    }
-  },
-  {
-    load() {
-      return require("module_7417");
-    }
-  },
-  {
-    load() {
-      return require("module_7418");
-    }
-  },
-  {
-    load() {
-      return require("module_7419");
-    }
-  },
-  {
-    load() {
-      return require("module_7420");
-    }
-  },
-  {
-    load() {
-      return require("module_7421");
-    }
-  },
-  {
-    load() {
-      return require("module_7422");
-    }
-  },
-  {
-    load() {
-      return require("module_7423");
-    }
-  },
-  {
-    load() {
-      return require("module_7424");
-    }
-  },
-  {
-    load() {
-      return require("module_7425");
-    }
-  },
   {
     load() {
       return require("module_7426");
@@ -98,15 +43,12 @@ const items = [
     load() {
       return require("module_7431");
     }
-  }
-];
-const obj2 = {
-  load() {
-    return require("module_7432");
-  }
-};
-const items1 = [
-  obj2,
+  },
+  {
+    load() {
+      return require("module_7432");
+    }
+  },
   {
     load() {
       return require("module_7433");
@@ -156,12 +98,15 @@ const items1 = [
     load() {
       return require("module_7442");
     }
-  },
-  {
-    load() {
-      return require("module_7443");
-    }
-  },
+  }
+];
+const obj2 = {
+  load() {
+    return require("module_7443");
+  }
+};
+const items1 = [
+  obj2,
   {
     load() {
       return require("module_7444");
@@ -190,6 +135,61 @@ const items1 = [
   {
     load() {
       return require("module_7449");
+    }
+  },
+  {
+    load() {
+      return require("module_7450");
+    }
+  },
+  {
+    load() {
+      return require("module_7451");
+    }
+  },
+  {
+    load() {
+      return require("module_7452");
+    }
+  },
+  {
+    load() {
+      return require("module_7453");
+    }
+  },
+  {
+    load() {
+      return require("module_7454");
+    }
+  },
+  {
+    load() {
+      return require("module_7455");
+    }
+  },
+  {
+    load() {
+      return require("module_7456");
+    }
+  },
+  {
+    load() {
+      return require("module_7457");
+    }
+  },
+  {
+    load() {
+      return require("module_7458");
+    }
+  },
+  {
+    load() {
+      return require("module_7459");
+    }
+  },
+  {
+    load() {
+      return require("module_7460");
     }
   }
 ];
@@ -234,7 +234,7 @@ let closure_0 = _asyncToGeneratorDefault((arg0, arg1, arg2) => {
             burstAnimationHash = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (arg0 === 1) {
           c7 = 3;

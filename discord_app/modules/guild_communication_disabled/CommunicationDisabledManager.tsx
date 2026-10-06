@@ -1,11 +1,11 @@
-// === Module 12119: CommunicationDisabledManager ===
+// === Module 12134: CommunicationDisabledManager ===
 
-// Module 12119 (CommunicationDisabledManager)
+// Module 12134 (CommunicationDisabledManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4496 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
 import GuildMemberStore_mod from "GuildMemberStore" /* 2112 */;
 import UserStore from "UserStore" /* 1377 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let communicationDisabledUserMap;

@@ -1,6 +1,6 @@
-// === Module 9474: StartStageChannelModal ===
+// === Module 9487: StartStageChannelModal ===
 
-// Module 9474 (StartStageChannelModal)
+// Module 9487 (StartStageChannelModal)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -10,22 +10,22 @@ import native from "native" /* 1188 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1881 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import Pressables from "Pressables" /* 5909 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import AssetRegistryDefault from "AssetRegistry" /* 6584 */;
-import HotspotStore2 from "HotspotStore" /* 6712 */;
-import Form from "Form" /* 8895 */;
-import StageSparkleDefault from "StageSparkle" /* 9292 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import Pressables from "Pressables" /* 5916 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import AssetRegistryDefault from "AssetRegistry" /* 6591 */;
+import HotspotStore2 from "HotspotStore" /* 6719 */;
+import Form from "Form" /* 8924 */;
+import StageSparkleDefault from "StageSparkle" /* 9327 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import StageChannelsConstants from "StageChannelsConstants" /* 5571 */;
+import StageChannelsConstants from "StageChannelsConstants" /* 5578 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

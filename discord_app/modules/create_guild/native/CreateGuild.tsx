@@ -1,14 +1,14 @@
-// === Module 11962: CreateGuild ===
+// === Module 11976: CreateGuild ===
 
-// Module 11962 (CreateGuild)
+// Module 11976 (CreateGuild)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
-import react_native2 from "react-native" /* 5779 */;
+import react_native2 from "react-native" /* 5786 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -53,7 +53,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     first = cResult[0];
   }
-  const tmpResult = tmp(5770);
+  const tmpResult = tmp(5777);
   isScreenReaderEnabled = tmpResult.useIsScreenReaderEnabled();
   const ref = react.useRef(null);
   if (cResult[1] !== isScreenReaderEnabled) {
@@ -357,20 +357,20 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       cResult[16] = onIconPress;
       cResult[17] = tmp4.contentContainer.backgroundColor;
       cResult[18] = tmp4.iconUploader;
-      cResult[19] = closure_7(ref(11409), obj2);
-      const tmp27 = closure_7(ref(11409), obj2);
+      cResult[19] = closure_7(ref(11422), obj2);
+      const tmp27 = closure_7(ref(11422), obj2);
     }
     const obj3 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: tmp19 };
     cResult[12] = tmp4.description;
     cResult[13] = tmp19;
-    cResult[14] = closure_7(tmp(4886).Text, obj3);
-    const tmp23 = closure_7(tmp(4886).Text, obj3);
+    cResult[14] = closure_7(tmp(4892).Text, obj3);
+    const tmp23 = closure_7(tmp(4892).Text, obj3);
   }
   const obj6 = { ref, style: tmp4.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp16 };
   cResult[7] = tmp4.header;
   cResult[8] = tmp16;
-  cResult[9] = closure_7(tmp(4886).Text, obj6);
-  closure_7(tmp(4886).Text, obj6);
+  cResult[9] = closure_7(tmp(4892).Text, obj6);
+  closure_7(tmp(4892).Text, obj6);
 }) : ((arg0) => {
   let Stack;
   let autoFocus;
@@ -404,7 +404,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     isStaffResult = currentUser.isStaff();
   }
   const tmp3 = !isStaffResult;
-  let obj2 = isScreenReaderEnabled(5770);
+  let obj2 = isScreenReaderEnabled(5777);
   isScreenReaderEnabled = obj2.useIsScreenReaderEnabled();
   ref = react.useRef(null);
   const items = [isScreenReaderEnabled];
@@ -417,25 +417,25 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     }
   }, items);
   let obj = { style: tmp.flex, contentInset: { top: 0 }, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: closure_8(Stack, { children: items1 }) };
-  Stack = isScreenReaderEnabled(5593).Stack;
+  Stack = isScreenReaderEnabled(5600).Stack;
   const obj3 = { ref, style: tmp.header, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: customTitle };
-  const Text = isScreenReaderEnabled(4886).Text;
+  const Text = isScreenReaderEnabled(4892).Text;
   if (customTitle == null) {
     const intl = tmp4(1126).intl;
     customTitle = intl.string(tmp4(1126).t.XioBx6);
   }
   items1 = [closure_7(Text, obj3), , , , , , , ];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: customDescription };
-  const Text2 = tmp4(4886).Text;
+  const Text2 = tmp4(4892).Text;
   if (customDescription == null) {
     const intl2 = tmp4(1126).intl;
     customDescription = intl2.string(tmp4(1126).t["/k/L/j"]);
   }
   items1[1] = closure_7(Text2, obj4);
   const obj5 = { iconBackgroundColor: tmp.contentContainer.backgroundColor, style: tmp.iconUploader, onPress: onIconPress, icon: guild.icon };
-  items1[2] = closure_7(ref(11409), obj5);
+  items1[2] = closure_7(ref(11422), obj5);
   const obj6 = { clearable: true, label: intl3.string(isScreenReaderEnabled(1126).t.dBih7e), errorMessage: firstFieldErrorMessage, value: guild.name, onChange: onNameChange, autoFocus, autoCorrect: false, returnKeyType: "done" };
-  const TextInput = tmp4(6098).TextInput;
+  const TextInput = tmp4(6105).TextInput;
   intl3 = tmp4(1126).intl;
   firstFieldErrorMessage = undefined;
   const tmp12 = ref;
@@ -449,18 +449,18 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   items1[3] = closure_7(TextInput, obj6);
   if (tmp9Result) {
     const obj7 = { onValueChange: onStaffOnlyChange, value: guild.staffOnly, start: true, end: true, label: "Staff Only", subLabel: intl4.string(isScreenReaderEnabled(1126).t.edQ5va) };
-    const TableSwitchRow = tmp4(6698).TableSwitchRow;
+    const TableSwitchRow = tmp4(6705).TableSwitchRow;
     intl4 = tmp4(1126).intl;
     tmp9Result = closure_7(TableSwitchRow, obj7);
   }
   items1[4] = tmp9Result;
   const obj8 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: intl5.format(isScreenReaderEnabled(1126).t["2bprXx"], obj9) };
-  const Text3 = tmp4(4886).Text;
+  const Text3 = tmp4(4892).Text;
   intl5 = tmp4(1126).intl;
   obj9 = { guidelinesURL: MarketingURLs.GUIDELINES };
   items1[5] = closure_7(Text3, obj8);
   const obj10 = { disabled: "" === guild.name, size: "md", grow: true, text: customButtonLabel, onPress: onCreate, loading: submitting };
-  const Button = tmp4(5594).Button;
+  const Button = tmp4(5601).Button;
   if (customButtonLabel == null) {
     const intl6 = tmp4(1126).intl;
     customButtonLabel = intl6.string(tmp4(1126).t["O0p/lS"]);
@@ -485,7 +485,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp9Result2 = null;
       if ("" !== message1) {
         let message2;
-        const tmp12Result = tmp12(6428);
+        const tmp12Result = tmp12(6435);
         if (error != null) {
           message2 = error.message;
         }

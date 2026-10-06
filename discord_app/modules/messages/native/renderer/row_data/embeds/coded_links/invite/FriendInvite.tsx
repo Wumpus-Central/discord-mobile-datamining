@@ -1,13 +1,13 @@
-// === Module 13051: FriendInvite ===
+// === Module 13070: FriendInvite ===
 
-// Module 13051 (FriendInvite)
+// Module 13070 (FriendInvite)
 import react_native from "react-native" /* 17 */;
 import intl4 from "intl" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import Constants from "Constants" /* 7226 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import Constants from "Constants" /* 7239 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import size from "module_2" /* 2 */;
 
 const Image = react_native.Image;

@@ -1,6 +1,6 @@
-// === Module 5567: IdleStore ===
+// === Module 5574: IdleStore ===
 
-// Module 5567 (IdleStore)
+// Module 5574 (IdleStore)
 import _mod2 from "module_2" /* 2 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import debounceDefault from "debounce" /* 551 */;
@@ -8,9 +8,9 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import DiscordNativeDefault from "DiscordNative" /* 4490 */;
-import Constants2 from "Constants" /* 4915 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
+import DiscordNativeDefault from "DiscordNative" /* 4496 */;
+import Constants2 from "Constants" /* 4921 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import Constants from "Constants" /* 1085 */;
 

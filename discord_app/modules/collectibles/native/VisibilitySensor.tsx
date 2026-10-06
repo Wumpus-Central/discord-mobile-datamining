@@ -1,6 +1,6 @@
-// === Module 15735: VisibilitySensor ===
+// === Module 15771: VisibilitySensor ===
 
-// Module 15735 (VisibilitySensor)
+// Module 15771 (VisibilitySensor)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;

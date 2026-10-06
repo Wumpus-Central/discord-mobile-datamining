@@ -1,22 +1,22 @@
-// === Module 7862: UserProfileAnalyticsUtils ===
+// === Module 7873: UserProfileAnalyticsUtils ===
 
-// Module 7862 (UserProfileAnalyticsUtils)
+// Module 7873 (UserProfileAnalyticsUtils)
 import Constants2 from "Constants" /* 1096 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AvatarUtils from "AvatarUtils" /* 1402 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6602 */;
-import Constants3 from "Constants" /* 7854 */;
-import useDisplayProfile from "useDisplayProfile" /* 7857 */;
-import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 7869 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6609 */;
+import Constants3 from "Constants" /* 7865 */;
+import useDisplayProfile from "useDisplayProfile" /* 7868 */;
+import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 7880 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import PresenceStore from "PresenceStore" /* 4930 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PresenceStore from "PresenceStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

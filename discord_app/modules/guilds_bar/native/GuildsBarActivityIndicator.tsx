@@ -1,27 +1,27 @@
-// === Module 16274: GuildsBarActivityIndicator ===
+// === Module 16314: GuildsBarActivityIndicator ===
 
-// Module 16274 (GuildsBarActivityIndicator)
+// Module 16314 (GuildsBarActivityIndicator)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import useToken from "useToken" /* 4580 */;
-import AssetRegistryDefault from "AssetRegistry" /* 5817 */;
-import StageIcon from "StageIcon" /* 5881 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5885 */;
-import AppsIcon from "AppsIcon" /* 5890 */;
-import NativeViewDefault from "NativeView" /* 5976 */;
-import ScreenIcon from "ScreenIcon" /* 8544 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 9193 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 9273 */;
-import CalendarIcon from "CalendarIcon" /* 9275 */;
-import VideoIcon from "VideoIcon" /* 11234 */;
-import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 16270 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 16275 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 16276 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 16277 */;
+import useToken from "useToken" /* 4586 */;
+import AssetRegistryDefault from "AssetRegistry" /* 5824 */;
+import StageIcon from "StageIcon" /* 5888 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5892 */;
+import AppsIcon from "AppsIcon" /* 5897 */;
+import NativeViewDefault from "NativeView" /* 5983 */;
+import ScreenIcon from "ScreenIcon" /* 8577 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 9228 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 9308 */;
+import CalendarIcon from "CalendarIcon" /* 9310 */;
+import VideoIcon from "VideoIcon" /* 11247 */;
+import useGuildsBarGuildMediaStateDefault from "useGuildsBarGuildMediaState" /* 16310 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 16315 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 16316 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 16317 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

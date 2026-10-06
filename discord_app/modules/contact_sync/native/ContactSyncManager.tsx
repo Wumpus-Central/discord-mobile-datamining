@@ -1,15 +1,15 @@
-// === Module 12330: ContactSyncManager ===
+// === Module 12345: ContactSyncManager ===
 
-// Module 12330 (ContactSyncManager)
+// Module 12345 (ContactSyncManager)
 import Storage3 from "Storage" /* 510 */;
 import Constants from "Constants" /* 1085 */;
-import ContactSyncConstants from "ContactSyncConstants" /* 12327 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12329 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 12342 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12344 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import UserStore from "UserStore" /* 1377 */;
-import ContactSyncPersistedStore from "ContactSyncPersistedStore" /* 12328 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import ContactSyncPersistedStore from "ContactSyncPersistedStore" /* 12343 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c5, c6, localAccount, set;

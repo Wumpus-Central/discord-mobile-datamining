@@ -1,9 +1,9 @@
-// === Module 9488: openInstantInviteActionSheet ===
+// === Module 9501: openInstantInviteActionSheet ===
 
-// Module 9488 (openInstantInviteActionSheet)
+// Module 9501 (openInstantInviteActionSheet)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/instant_invite/native/components/openInstantInviteActionSheet.tsx");
@@ -12,7 +12,7 @@ export default function openInstantInviteActionSheet(invite_channel_id) {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   let id = invite_channel_id.vanityURLCode;
-  const tmp4 = asyncRequire(9489, dependencyMap.paths);
+  const tmp4 = asyncRequire(9502, dependencyMap.paths);
   if (id == null) {
     id = invite_channel_id.channel.id;
   }

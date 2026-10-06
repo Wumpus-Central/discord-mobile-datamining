@@ -1,6 +1,6 @@
-// === Module 17273: VoicePanelStreamOutputSinkStack ===
+// === Module 17302: VoicePanelStreamOutputSinkStack ===
 
-// Module 17273 (VoicePanelStreamOutputSinkStack)
+// Module 17302 (VoicePanelStreamOutputSinkStack)
 import react2 from "react" /* 576 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;

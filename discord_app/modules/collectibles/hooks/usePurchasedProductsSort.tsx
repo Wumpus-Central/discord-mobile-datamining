@@ -1,11 +1,11 @@
-// === Module 14879: usePurchasedProductsSort ===
+// === Module 14895: usePurchasedProductsSort ===
 
-// Module 14879 (usePurchasedProductsSort)
+// Module 14895 (usePurchasedProductsSort)
 import react from "react" /* 19 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

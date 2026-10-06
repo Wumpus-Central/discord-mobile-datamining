@@ -1,6 +1,6 @@
-// === Module 7891: StorefrontCacheUtils ===
+// === Module 7902: StorefrontCacheUtils ===
 
-// Module 7891 (StorefrontCacheUtils)
+// Module 7902 (StorefrontCacheUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 import size from "module_2" /* 2 */;
 

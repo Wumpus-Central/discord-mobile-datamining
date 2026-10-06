@@ -1,12 +1,12 @@
-// === Module 16999: InstantInviteSelfMeasurer ===
+// === Module 17025: InstantInviteSelfMeasurer ===
 
-// Module 16999 (InstantInviteSelfMeasurer)
+// Module 17025 (InstantInviteSelfMeasurer)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import InstantInvite from "InstantInvite" /* 10669 */;
+import InstantInvite from "InstantInvite" /* 10682 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

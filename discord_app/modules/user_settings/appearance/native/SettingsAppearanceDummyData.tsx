@@ -1,21 +1,21 @@
-// === Module 15097: SettingsAppearanceDummyData ===
+// === Module 15112: SettingsAppearanceDummyData ===
 
-// Module 15097 (SettingsAppearanceDummyData)
+// Module 15112 (SettingsAppearanceDummyData)
 import Constants from "Constants" /* 1085 */;
 import intl32 from "intl" /* 1126 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12506 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13772 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 15098 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 15099 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 15100 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 15101 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 15102 */;
-import AssetRegistryDefault8 from "AssetRegistry" /* 15103 */;
-import AssetRegistryDefault9 from "AssetRegistry" /* 15104 */;
-import AssetRegistryDefault10 from "AssetRegistry" /* 15105 */;
-import AssetRegistryDefault11 from "AssetRegistry" /* 15106 */;
-import AssetRegistryDefault12 from "AssetRegistry" /* 15107 */;
-import AssetRegistryDefault13 from "AssetRegistry" /* 15108 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12521 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13790 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 15113 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 15114 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 15115 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 15116 */;
+import AssetRegistryDefault7 from "AssetRegistry" /* 15117 */;
+import AssetRegistryDefault8 from "AssetRegistry" /* 15118 */;
+import AssetRegistryDefault9 from "AssetRegistry" /* 15119 */;
+import AssetRegistryDefault10 from "AssetRegistry" /* 15120 */;
+import AssetRegistryDefault11 from "AssetRegistry" /* 15121 */;
+import AssetRegistryDefault12 from "AssetRegistry" /* 15122 */;
+import AssetRegistryDefault13 from "AssetRegistry" /* 15123 */;
 import size from "module_2" /* 2 */;
 
 const StatusTypes = Constants.StatusTypes;

@@ -1,10 +1,10 @@
-// === Module 12316: GuildNSFW ===
+// === Module 12331: GuildNSFW ===
 
-// Module 12316 (GuildNSFW)
+// Module 12331 (GuildNSFW)
 import Fragment from "Fragment" /* 21 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5705 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8084 */;
-import GatedContentDefault from "GatedContent" /* 12317 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5712 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8117 */;
+import GatedContentDefault from "GatedContent" /* 12332 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
@@ -61,8 +61,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   if (cResult[7] !== guildId) {
     const fn2 = function _() {
-      const obj = GuildActionCreatorsDefault;
-      obj.nsfwReturnToSafety(guildId.guildId);
+      if (false !== guildId.returnToSafety) {
+        const obj = GuildActionCreatorsDefault;
+        obj.nsfwReturnToSafety(guildId.guildId);
+      }
       if (guildId.onReturnToSafety != null) {
         guildId.onReturnToSafety();
       }
@@ -88,16 +90,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-    class E {
+    class T {
       constructor() {
         const obj = AgeVerificationActionCreatorsDefault;
         const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
         const result = obj.showAgeVerificationGetStartedModal(obj2);
       }
     }
-    cResult[11] = E;
+    cResult[11] = T;
   } else {
-    class E {
+    class T {
       constructor() {
         const obj = AgeVerificationActionCreatorsDefault;
         const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -106,7 +108,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   if (stateFromStores != null) {
-    class E {
+    class T {
       constructor() {
         const obj = AgeVerificationActionCreatorsDefault;
         const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -116,7 +118,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   const channelId = guildId.channelId;
   if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-    class E {
+    class T {
       constructor() {
         const obj = AgeVerificationActionCreatorsDefault;
         const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -127,7 +129,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     cResult[12] = stringResult;
     tmp19 = stringResult;
   } else {
-    class E {
+    class T {
       constructor() {
         const obj = AgeVerificationActionCreatorsDefault;
         const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -136,7 +138,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     }
   }
   if (cResult[13] === tmp9) {
-    class E {
+    class T {
       constructor() {
         const obj = AgeVerificationActionCreatorsDefault;
         const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -174,8 +176,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     id = stateFromStores.id;
   }
   function handleDisagree() {
-    const obj = GuildActionCreatorsDefault;
-    obj.nsfwReturnToSafety(channelId.guildId);
+    if (false !== channelId.returnToSafety) {
+      const obj = GuildActionCreatorsDefault;
+      obj.nsfwReturnToSafety(channelId.guildId);
+    }
     if (channelId.onReturnToSafety != null) {
       channelId.onReturnToSafety();
     }

@@ -1,9 +1,9 @@
-// === Module 17557: resolveStorefrontCodedLink ===
+// === Module 17602: resolveStorefrontCodedLink ===
 
-// Module 17557 (resolveStorefrontCodedLink)
+// Module 17602 (resolveStorefrontCodedLink)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import SKUStore from "SKUStore" /* 5695 */;
+import SKUStore from "SKUStore" /* 5702 */;
 import size from "module_2" /* 2 */;
 
 let c1, c4, closure_2;
@@ -14,10 +14,10 @@ let result = size.fileFinishedImporting("modules/slayer_storefront/resolveStoref
 export default function resolveStorefrontCodedLink(arg0, code) {
   let obj3;
   const tmp = obj3;
-  let obj = obj3(11149);
+  let obj = obj3(11162);
   const result = obj.parseStorefrontCodedLink(code);
   if (null != result) {
-    if (arg0 === tmp(4875).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (arg0 === tmp(4881).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       let obj2 = { type: "application", applicationId: result.scopeId };
       obj3 = obj2;
     } else {
@@ -31,7 +31,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         let obj5 = { type: "STORE_LISTINGS_FETCH_START", skuId };
         obj4.dispatch(obj5);
         const items = [skuId];
-        const tmpResult = tmp(11149);
+        const tmpResult = tmp(11162);
         const storefrontCodedLink = tmpResult.makeStorefrontCodedLink(items, result.scopeId);
         skuId = _asyncToGenerator(async () => {
           let v1;
@@ -104,7 +104,7 @@ export default function resolveStorefrontCodedLink(arg0, code) {
         });
         if (!set.has(storefrontCodedLink)) {
           set.add(storefrontCodedLink);
-          const tmpResult2 = tmp(17547);
+          const tmpResult2 = tmp(17592);
           const result1 = tmpResult2.queueMessageLinkFetch(_asyncToGenerator(async () => {
             if (c4 === 2) {
               c4 = 3;

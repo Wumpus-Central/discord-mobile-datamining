@@ -1,9 +1,9 @@
-// === Module 8508: ? ===
+// === Module 8541: ? ===
 
-// Module 8508
-import useFetchVirtualCurrencyBalance from "useFetchVirtualCurrencyBalance" /* 8509 */;
-import useFetchVirtualCurrencyTotalRedeemed from "useFetchVirtualCurrencyTotalRedeemed" /* 8516 */;
-import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 8517 */;
+// Module 8541
+import useFetchVirtualCurrencyBalance from "useFetchVirtualCurrencyBalance" /* 8542 */;
+import useFetchVirtualCurrencyTotalRedeemed from "useFetchVirtualCurrencyTotalRedeemed" /* 8549 */;
+import useRedeemVirtualCurrency from "useRedeemVirtualCurrency" /* 8550 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");

@@ -1,8 +1,8 @@
-// === Module 7922: VideoBackgroundManager ===
+// === Module 7933: VideoBackgroundManager ===
 
-// Module 7922 (VideoBackgroundManager)
+// Module 7933 (VideoBackgroundManager)
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 class VideoBackgroundManager extends AutomaticLifecycleManager {

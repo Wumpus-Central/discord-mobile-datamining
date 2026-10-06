@@ -1,17 +1,17 @@
-// === Module 12788: BotUserProfileContent ===
+// === Module 12807: BotUserProfileContent ===
 
-// Module 12788 (BotUserProfileContent)
+// Module 12807 (BotUserProfileContent)
 import react_native from "react-native" /* 17 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6646 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6653 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
 import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 6707 */;
+import Constants from "Constants" /* 6714 */;
 import Fragment from "Fragment" /* 21 */;
 import size from "module_2" /* 2 */;
 
@@ -160,7 +160,7 @@ const memoResult = react.memo(function BotUserProfileContent(user) {
               ActionSheetActionCreatorsDefault;
               const obj = { user, guildId: guild_id, channelId: id };
               id = undefined;
-              const tmp2 = asyncRequire(10839, dependencyMap.paths);
+              const tmp2 = asyncRequire(10852, dependencyMap.paths);
               if (channel != null) {
                 id = channel.id;
               }

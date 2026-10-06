@@ -1,7 +1,7 @@
-// === Module 16774: useFrame ===
+// === Module 16795: useFrame ===
 
-// Module 16774 (useFrame)
-import FramesStore from "FramesStore" /* 8703 */;
+// Module 16795 (useFrame)
+import FramesStore from "FramesStore" /* 9000 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,20 +1,20 @@
-// === Module 14856: BountiesScrollRecapFooter ===
+// === Module 14872: BountiesScrollRecapFooter ===
 
-// Module 14856 (BountiesScrollRecapFooter)
+// Module 14872 (BountiesScrollRecapFooter)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import BountiesScrollGradientRive2 from "BountiesScrollGradientRive" /* 4662 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6469 */;
-import OrbsIcon from "OrbsIcon" /* 8491 */;
+import BountiesScrollGradientRive2 from "BountiesScrollGradientRive" /* 4668 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useTypeConsolidationTextTransform from "useTypeConsolidationTextTransform" /* 6476 */;
+import OrbsIcon from "OrbsIcon" /* 8524 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

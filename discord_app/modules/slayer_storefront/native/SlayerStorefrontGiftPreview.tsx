@@ -1,16 +1,16 @@
-// === Module 11104: SlayerStorefrontGiftPreview ===
+// === Module 11117: SlayerStorefrontGiftPreview ===
 
-// Module 11104 (SlayerStorefrontGiftPreview)
+// Module 11117 (SlayerStorefrontGiftPreview)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl4 from "intl" /* 1126 */;
-import _modDef3593 from "module_3593" /* 3593 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8481 */;
-import InfoBox from "InfoBox" /* 9459 */;
+import _modDef3623 from "module_3623" /* 3623 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8514 */;
+import InfoBox from "InfoBox" /* 9472 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -203,7 +203,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         const intl3 = intl4.intl;
         const formatToPlainString2 = intl3.formatToPlainString;
         let name1;
-        const BMMo2K = _modDef3593.BMMo2K;
+        const BMMo2K = _modDef3623.BMMo2K;
         if (application != null) {
           name1 = application.name;
         }
@@ -320,7 +320,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     if (mobileAccountLinkingDisabled) {
       const formatToPlainString2 = intl.formatToPlainString;
       let name;
-      const BMMo2K = _modDef3593.BMMo2K;
+      const BMMo2K = _modDef3623.BMMo2K;
       if (application != null) {
         name = application.name;
       }

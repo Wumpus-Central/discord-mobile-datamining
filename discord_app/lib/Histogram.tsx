@@ -1,7 +1,7 @@
-// === Module 7233: Histogram ===
+// === Module 7246: Histogram ===
 
-// Module 7233 (Histogram)
-import RBTree from "RBTree" /* 7234 */;
+// Module 7246 (Histogram)
+import RBTree from "RBTree" /* 7247 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/Histogram.tsx");

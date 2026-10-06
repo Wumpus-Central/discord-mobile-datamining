@@ -1,9 +1,9 @@
-// === Module 12481: GuildAntiRaidPermissionsUtils ===
+// === Module 12496: GuildAntiRaidPermissionsUtils ===
 
-// Module 12481 (GuildAntiRaidPermissionsUtils)
+// Module 12496 (GuildAntiRaidPermissionsUtils)
 import Constants from "Constants" /* 1085 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11160 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11173 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -149,7 +149,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items3);
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    const tmpResult = tmp(7685);
+    const tmpResult = tmp(7696);
     hasDetectedActivityResult = tmpResult.hasDetectedActivity(stateFromStores1);
   }
   return !hasDetectedActivityResult && stateFromStores;

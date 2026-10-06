@@ -1,6 +1,6 @@
-// === Module 6438: WebAuthnTypes ===
+// === Module 6445: WebAuthnTypes ===
 
-// Module 6438 (WebAuthnTypes)
+// Module 6445 (WebAuthnTypes)
 import size from "module_2" /* 2 */;
 
 class IgnorableWebAuthnError extends Error {

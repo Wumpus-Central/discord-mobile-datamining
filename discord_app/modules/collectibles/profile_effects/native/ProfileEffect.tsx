@@ -1,22 +1,22 @@
-// === Module 8457: ProfileEffect ===
+// === Module 8490: ProfileEffect ===
 
-// Module 8457 (ProfileEffect)
+// Module 8490 (ProfileEffect)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1105 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import useProfileEffectDefault from "useProfileEffect" /* 7898 */;
-import utils from "utils" /* 8458 */;
-import profile_effects_constants from "profile_effects/constants" /* 8459 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 8460 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8463 */;
+import useProfileEffectDefault from "useProfileEffect" /* 7909 */;
+import utils from "utils" /* 8491 */;
+import profile_effects_constants from "profile_effects/constants" /* 8492 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 8493 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8496 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,25 +1,25 @@
-// === Module 15661: UserSettingsDesignSystemContextMenu ===
+// === Module 15675: UserSettingsDesignSystemContextMenu ===
 
-// Module 15661 (UserSettingsDesignSystemContextMenu)
+// Module 15675 (UserSettingsDesignSystemContextMenu)
 import _mod12 from "module_12" /* 12 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4811 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 4850 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import Card_Card from "Card/Card" /* 5995 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 6589 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 7625 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 11181 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 12442 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 15662 */;
-import AssetRegistryDefault8 from "AssetRegistry" /* 15663 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4817 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 4856 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import Card_Card from "Card/Card" /* 6002 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 6596 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 7636 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 11194 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 12457 */;
+import AssetRegistryDefault7 from "AssetRegistry" /* 15676 */;
+import AssetRegistryDefault8 from "AssetRegistry" /* 15677 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

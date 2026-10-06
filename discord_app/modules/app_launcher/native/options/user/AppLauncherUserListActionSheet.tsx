@@ -1,12 +1,12 @@
-// === Module 11811: AppLauncherUserListActionSheet ===
+// === Module 11825: AppLauncherUserListActionSheet ===
 
-// Module 11811 (AppLauncherUserListActionSheet)
+// Module 11825 (AppLauncherUserListActionSheet)
 import Fragment from "Fragment" /* 21 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import TableRow from "TableRow" /* 5993 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import TableRow from "TableRow" /* 6000 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -258,7 +258,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => {
       }
       tmp14[0] = id;
       tmp14[5] = tmp4;
-      tmp10Result = jsx(tmp11(11812), tmp14);
+      tmp10Result = jsx(tmp11(11826), tmp14);
     } else {
       class U {
         constructor(arg0) {
@@ -296,7 +296,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((onUserPress) => {
       tmp12[1] = guild_id;
       tmp12[3] = U;
       tmp12[6] = tmp4;
-      tmp10Result = jsx(tmp11(11210), tmp12);
+      tmp10Result = jsx(tmp11(11223), tmp12);
     }
     cResult[8] = channel;
     cResult[9] = id;
@@ -398,7 +398,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       return tmp7;
     }
   }
-  const tmp8 = jsx(onPressRow(11789).AppLauncherList, { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" });
+  const tmp8 = jsx(onPressRow(11803).AppLauncherList, { contentContainerStyle: tmp4.emptyState, data: tmp5, renderItem: tmp6, keyboardShouldPersistTaps: "always", keyboardDismissMode: "on-drag" });
   cResult[4] = tmp4.emptyState;
   cResult[5] = tmp5;
   cResult[6] = tmp6;
@@ -409,7 +409,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const query = onPressRow.query;
   const items = [query];
   closure_6();
-  return jsx(onPressRow(11789).AppLauncherList, {
+  return jsx(onPressRow(11803).AppLauncherList, {
     contentContainerStyle: closure_6().emptyState,
     data: items,
     renderItem(label) {

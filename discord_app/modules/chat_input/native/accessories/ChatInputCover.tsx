@@ -1,6 +1,6 @@
-// === Module 11883: ChatInputCover ===
+// === Module 11897: ChatInputCover ===
 
-// Module 11883 (ChatInputCover)
+// Module 11897 (ChatInputCover)
 import Fragment from "Fragment" /* 21 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
 import react_mod from "react" /* 19 */;

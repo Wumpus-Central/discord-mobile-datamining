@@ -1,9 +1,9 @@
-// === Module 17917: useRoleSubscriptionFormat ===
+// === Module 17963: useRoleSubscriptionFormat ===
 
-// Module 17917 (useRoleSubscriptionFormat)
+// Module 17963 (useRoleSubscriptionFormat)
 import Constants from "Constants" /* 1085 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2107 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15023 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15038 */;
 import react from "react" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import GuildStore from "GuildStore" /* 2074 */;

@@ -1,19 +1,19 @@
-// === Module 16044: VoiceUsers ===
+// === Module 16083: VoiceUsers ===
 
-// Module 16044 (VoiceUsers)
+// Module 16083 (VoiceUsers)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7508 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
-import ChannelListLayout from "ChannelListLayout" /* 11698 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 12187 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7519 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
+import ChannelListLayout from "ChannelListLayout" /* 11712 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12202 */;
 import react_mod from "react" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -63,7 +63,7 @@ let closure_12 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((collapsed
   ({ member, voiceState: voiceState2 } = voiceState);
   const isFirst = collapsed.isFirst;
   const tmp4 = user;
-  const tmp5 = closure_11(user(7508)());
+  const tmp5 = closure_11(user(7519)());
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildMemberStore];
     cResult[0] = items;
@@ -133,7 +133,7 @@ let closure_12 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((collapsed
     }
     const obj4 = { user, member, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed, sessionId: voiceState2.sessionId, channel, isGuest };
     ({ mute: obj3.mute, deaf: obj3.deaf, selfVideo: obj3.selfVideo, selfMute: obj3.selfMute, selfDeaf: obj3.selfDeaf, suppress: obj3.suppress } = voiceState2);
-    const tmp15 = closure_6(tmp4(16045), obj4, user.id);
+    const tmp15 = closure_6(tmp4(16084), obj4, user.id);
     cResult[5] = channel;
     cResult[6] = collapsed;
     cResult[7] = isGuest;
@@ -173,7 +173,7 @@ let closure_12 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((collapsed
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   const isFirst = voiceState.isFirst;
-  const tmp3 = closure_11(channel(7508)());
+  const tmp3 = closure_11(channel(7519)());
   let obj = user(504);
   const items = [GuildMemberStore];
   const items1 = [channel.guild_id, user.id];
@@ -192,7 +192,7 @@ let closure_12 = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((collapsed
   }
   const obj2 = { style: userCollapsedOverlap, children: closure_6(tmpResult, obj5, user.id) };
   obj5 = { user, member, mute: null, deaf: null, selfVideo: null, selfMute: null, selfDeaf: null, suppress: null, collapsed, sessionId: voiceState2.sessionId, channel, isGuest };
-  tmpResult = tmp(16045);
+  tmpResult = tmp(16084);
   if (member == null) {
     member = storeMember;
   }
@@ -308,7 +308,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((collapsed) => {
   collapsed = collapsed.collapsed;
   const channel = collapsed.channel;
   ({ voiceStates, audienceCount } = collapsed);
-  const tmp5 = channel(9391)("channel_list");
+  const tmp5 = channel(9405)("channel_list");
   const guild_id = channel.guild_id;
   if (cResult[0] === tmp5) {
     if (cResult[1] === guild_id) {
@@ -316,12 +316,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((collapsed) => {
       if (cResult[2] === voiceStates) {
         tmp6 = cResult[3];
       }
-      const arr2 = channel(16049)(tmp6);
+      const arr2 = channel(16088)(tmp6);
       if (cResult[4] === guild_id) {
         if (cResult[5] === arr2) {
           tmp9 = cResult[6];
         }
-        const tmpResult = collapsed(6814);
+        const tmpResult = collapsed(6824);
         const subscribeGuildMembers = tmpResult.useSubscribeGuildMembers(tmp9, "voice_channel_games");
         if (cResult[7] === channel) {
           let tmp13;
@@ -351,7 +351,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((collapsed) => {
                 }
                 const obj2 = { collapsed, children: items };
                 items = [tmp16, tmp18];
-                const tmp24 = closure_7(channel(16052), obj2);
+                const tmp24 = closure_7(channel(16091), obj2);
                 cResult[16] = collapsed;
                 cResult[17] = tmp16;
                 cResult[18] = tmp18;
@@ -403,7 +403,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((collapsed) => {
   if (tmp5) {
     let mapped1;
     if (null != guild_id) {
-      const substr = voiceStates.slice(0, tmp(6814).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
+      const substr = voiceStates.slice(0, tmp(6824).MAX_GUILD_MEMBER_SUBSCRIPTIONS);
       mapped1 = substr.map((user) => user.user.id);
     }
     cResult[0] = tmp5;

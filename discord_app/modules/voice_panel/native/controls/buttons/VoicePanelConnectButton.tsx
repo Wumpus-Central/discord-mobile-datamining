@@ -1,19 +1,19 @@
-// === Module 17329: VoicePanelConnectButton ===
+// === Module 17357: VoicePanelConnectButton ===
 
-// Module 17329 (VoicePanelConnectButton)
+// Module 17357 (VoicePanelConnectButton)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5568 */;
-import useAlertStore from "useAlertStore" /* 5709 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8069 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12736 */;
-import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17330 */;
-import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17333 */;
-import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17334 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5575 */;
+import useAlertStore from "useAlertStore" /* 5716 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8102 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12751 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17358 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17361 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17362 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

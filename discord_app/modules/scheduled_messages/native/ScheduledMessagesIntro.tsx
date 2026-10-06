@@ -1,17 +1,17 @@
-// === Module 11848: ScheduledMessagesIntro ===
+// === Module 11862: ScheduledMessagesIntro ===
 
-// Module 11848 (ScheduledMessagesIntro)
+// Module 11862 (ScheduledMessagesIntro)
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AttachmentIcon from "AttachmentIcon" /* 10369 */;
-import PlusLargeIcon2 from "PlusLargeIcon" /* 10689 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 11838 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11849 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AttachmentIcon from "AttachmentIcon" /* 10382 */;
+import PlusLargeIcon2 from "PlusLargeIcon" /* 10702 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 11852 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11863 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

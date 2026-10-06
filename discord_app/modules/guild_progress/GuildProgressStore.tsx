@@ -1,10 +1,10 @@
-// === Module 12131: GuildProgressStore ===
+// === Module 12146: GuildProgressStore ===
 
-// Module 12131 (GuildProgressStore)
+// Module 12146 (GuildProgressStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildProgressConstants from "GuildProgressConstants" /* 12125 */;
+import GuildProgressConstants from "GuildProgressConstants" /* 12140 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;

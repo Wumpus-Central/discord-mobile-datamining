@@ -1,10 +1,10 @@
-// === Module 10998: ProfileFrameUserPreview ===
+// === Module 11011: ProfileFrameUserPreview ===
 
-// Module 10998 (ProfileFrameUserPreview)
+// Module 11011 (ProfileFrameUserPreview)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 10825 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 10838 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

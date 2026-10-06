@@ -1,17 +1,17 @@
-// === Module 17303: VoicePanelGamesSection ===
+// === Module 17331: VoicePanelGamesSection ===
 
-// Module 17303 (VoicePanelGamesSection)
+// Module 17331 (VoicePanelGamesSection)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import useGame from "useGame" /* 6812 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8319 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8320 */;
-import FormComponents from "FormComponents" /* 9334 */;
-import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 9391 */;
-import GameActivityIconDefault from "GameActivityIcon" /* 9443 */;
-import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17304 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import useGame from "useGame" /* 6822 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8352 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8353 */;
+import FormComponents from "FormComponents" /* 9348 */;
+import VoiceChannelGamesExperimentDefault from "VoiceChannelGamesExperiment" /* 9405 */;
+import GameActivityIconDefault from "GameActivityIcon" /* 9456 */;
+import useVoiceChannelGamesDefault from "useVoiceChannelGames" /* 17332 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

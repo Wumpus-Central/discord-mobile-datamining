@@ -1,6 +1,6 @@
-// === Module 7342: DiscordImagePng ===
+// === Module 7353: DiscordImagePng ===
 
-// Module 7342 (DiscordImagePng)
+// Module 7353 (DiscordImagePng)
 import _modDef1983 from "module_1983" /* 1983 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;

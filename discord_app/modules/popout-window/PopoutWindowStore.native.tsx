@@ -1,6 +1,6 @@
-// === Module 5033: PopoutWindowStore ===
+// === Module 5039: PopoutWindowStore ===
 
-// Module 5033 (PopoutWindowStore)
+// Module 5039 (PopoutWindowStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;

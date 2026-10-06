@@ -1,24 +1,24 @@
-// === Module 16525: GuildSettingsModalMembersWithTabs ===
+// === Module 16565: GuildSettingsModalMembersWithTabs ===
 
-// Module 16525 (GuildSettingsModalMembersWithTabs)
+// Module 16565 (GuildSettingsModalMembersWithTabs)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4702 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6768 */;
-import ContextMenu2 from "ContextMenu" /* 7579 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16526 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16527 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16529 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16534 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4708 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 6778 */;
+import ContextMenu2 from "ContextMenu" /* 7590 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 16566 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 16567 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 16569 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 16574 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 12008: GuildInvitesDisabledUtils ===
+// === Module 12023: GuildInvitesDisabledUtils ===
 
-// Module 12008 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11160 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+// Module 12023 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11173 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

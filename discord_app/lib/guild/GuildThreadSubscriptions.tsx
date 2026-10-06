@@ -1,6 +1,6 @@
-// === Module 6790: GuildThreadSubscriptions ===
+// === Module 6800: GuildThreadSubscriptions ===
 
-// Module 6790 (GuildThreadSubscriptions)
+// Module 6800 (GuildThreadSubscriptions)
 import LRUCacheDefault from "LRUCache" /* 1444 */;
 import size from "module_2" /* 2 */;
 

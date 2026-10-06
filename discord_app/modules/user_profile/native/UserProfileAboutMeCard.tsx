@@ -1,6 +1,6 @@
-// === Module 10986: UserProfileAboutMeCard ===
+// === Module 10999: UserProfileAboutMeCard ===
 
-// Module 10986 (UserProfileAboutMeCard)
+// Module 10999 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
@@ -10,22 +10,22 @@ import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import useToken from "useToken" /* 4580 */;
-import ChatInputUtils from "ChatInputUtils" /* 4745 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import GuildIconDefault from "GuildIcon" /* 5971 */;
-import UserProfileCardDefault from "UserProfileCard" /* 6706 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8047 */;
-import BioTextDefault from "BioText" /* 10987 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 10988 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 10990 */;
+import useToken from "useToken" /* 4586 */;
+import ChatInputUtils from "ChatInputUtils" /* 4751 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import GuildIconDefault from "GuildIcon" /* 5978 */;
+import UserProfileCardDefault from "UserProfileCard" /* 6713 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8057 */;
+import BioTextDefault from "BioText" /* 11000 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 11001 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11003 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import Constants from "Constants" /* 6707 */;
+import Constants from "Constants" /* 6714 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -499,12 +499,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
         return closure_1_5.locale;
       }
     }
-    const getCreatedAtDate = tmp(6678).getCreatedAtDate;
-    tmp(6678);
+    const getCreatedAtDate = tmp(6685).getCreatedAtDate;
+    tmp(6685);
     const obj5 = guildId(11);
     const createdAtDate = getCreatedAtDate(obj5.extractTimestamp(userId), stateFromStores);
-    const getCreatedAtDate2 = tmp(6678).getCreatedAtDate;
-    tmp(6678);
+    const getCreatedAtDate2 = tmp(6685).getCreatedAtDate;
+    tmp(6685);
     if (stateFromStores2 != null) {
       class R {
         constructor() {
@@ -716,13 +716,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
     }
     return member;
   });
-  const getCreatedAtDate = userId(6678).getCreatedAtDate;
-  userId(6678);
+  const getCreatedAtDate = userId(6685).getCreatedAtDate;
+  userId(6685);
   const obj4 = SnowflakeUtilsDefault;
   const createdAtDate = getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
   let joinedAt;
-  const getCreatedAtDate2 = userId(6678).getCreatedAtDate;
-  userId(6678);
+  const getCreatedAtDate2 = userId(6685).getCreatedAtDate;
+  userId(6685);
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
   }
@@ -732,16 +732,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   const items3 = [closure_11(closure_17, obj5), ];
   const obj6 = { style: items4, children: items5 };
   items4 = [tmp.memberJoinDates, { columnGap }];
-  const obj7 = { themeType, icon: closure_11(userId(10547).ClydeIcon, { size: "xs" }), accessibilityLabel: intl2.formatToPlainString(userId(1126).t["9t7w53"], { date: createdAtDate }), children: createdAtDate };
+  const obj7 = { themeType, icon: closure_11(userId(10560).ClydeIcon, { size: "xs" }), accessibilityLabel: intl2.formatToPlainString(userId(1126).t["9t7w53"], { date: createdAtDate }), children: createdAtDate };
   intl2 = tmp4(1126).intl;
   items5 = [closure_11(closure_18, obj7), ];
   let tmp15Result = null != stateFromStores1 && null != createdAtDate2;
   if (tmp15Result) {
     const obj8 = { children: items6 };
     const obj9 = { variant: textVariant, color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
-    items6 = [closure_11(userId(4886).Text, obj9), ];
+    items6 = [closure_11(userId(4892).Text, obj9), ];
     const obj10 = { themeType, icon: closure_11(tmp10Result, obj11), accessibilityLabel: intl3.formatToPlainString(userId(1126).t.FdLNDK, obj12), children: createdAtDate2 };
-    obj11 = { guild: stateFromStores1, size: userId(5971).GuildIconSizes.XXSMALL };
+    obj11 = { guild: stateFromStores1, size: userId(5978).GuildIconSizes.XXSMALL };
     tmp10Result = GuildIconDefault;
     intl3 = tmp4(1126).intl;
     obj12 = { guildName: stateFromStores1.name, date: createdAtDate2 };
@@ -1050,7 +1050,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled() ? ((url) => {
     cResult[9] = tmp13;
     tmp11 = tmp13;
   }
-  const tmp10 = closure_11(url(4886).Text, { variant: textVariant, color: "text-link", children: label });
+  const tmp10 = closure_11(url(4892).Text, { variant: textVariant, color: "text-link", children: label });
   cResult[4] = label;
   cResult[5] = textVariant;
   cResult[6] = tmp10;

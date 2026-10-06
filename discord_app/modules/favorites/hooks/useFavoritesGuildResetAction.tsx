@@ -1,17 +1,17 @@
-// === Module 16065: useFavoritesGuildResetAction ===
+// === Module 16104: useFavoritesGuildResetAction ===
 
-// Module 16065 (useFavoritesGuildResetAction)
+// Module 16104 (useFavoritesGuildResetAction)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
 import intl3 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
-import _modDef3367 from "module_3367" /* 3367 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10035 */;
-import FavoritesHooks from "FavoritesHooks" /* 10036 */;
+import _modDef3395 from "module_3395" /* 3395 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10048 */;
+import FavoritesHooks from "FavoritesHooks" /* 10049 */;
 import react from "react" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -48,9 +48,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = intl3.intl;
-    const stringResult = intl.string(_modDef3367.YkET6R);
+    const stringResult = intl.string(_modDef3395.YkET6R);
     const intl2 = intl3.intl;
-    const stringResult1 = intl2.string(_modDef3367.ZzcwNk);
+    const stringResult1 = intl2.string(_modDef3395.ZzcwNk);
     cResult[1] = stringResult;
     cResult[2] = stringResult1;
     tmp7 = stringResult1;
@@ -88,7 +88,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   if (setting) {
     setting = hasAccess;
   }
-  const obj2 = { isAvailable: setting, label: intl.string(_modDef3367.YkET6R), subLabel: intl2.string(_modDef3367.ZzcwNk), perform: callback };
+  const obj2 = { isAvailable: setting, label: intl.string(_modDef3395.YkET6R), subLabel: intl2.string(_modDef3395.ZzcwNk), perform: callback };
   intl = intl3.intl;
   intl2 = intl3.intl;
   return obj2;

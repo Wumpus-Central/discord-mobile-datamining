@@ -1,17 +1,17 @@
-// === Module 9705: GestureContainer ===
+// === Module 9718: GestureContainer ===
 
-// Module 9705 (GestureContainer)
+// Module 9718 (GestureContainer)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import ChannelCallStore from "ChannelCallStore" /* 9050 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import ChannelCallStore from "ChannelCallStore" /* 9086 */;
 import react from "react" /* 19 */;
-import Constants from "Constants" /* 9057 */;
-import createStyles from "createStyles" /* 4890 */;
+import Constants from "Constants" /* 9093 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -60,9 +60,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   const tmp6 = useChannelCallStore(S);
   height = sharedValue(1484)().height;
   const tmp7 = sharedValue;
-  const tmpResult = height(4612);
+  const tmpResult = height(4618);
   sharedValue = tmpResult.useSharedValue(0);
-  const Gesture = tmp(6140).Gesture;
+  const Gesture = tmp(6147).Gesture;
   const PanResult = Gesture.Pan();
   const enabledResult = PanResult.enabled(tmp6);
   class L {
@@ -91,7 +91,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       obj2.runOnJS(ModalActionCreatorsDefault.pop)();
     }
   }
-  let obj3 = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: tmp(4612).runOnJS, ModalActionCreators: sharedValue(5093), withTiming: tmp(4891).withTiming, DECELERATED_EASING: tmp(1188).DECELERATED_EASING };
+  let obj3 = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: tmp(4618).runOnJS, ModalActionCreators: sharedValue(5099), withTiming: tmp(4897).withTiming, DECELERATED_EASING: tmp(1188).DECELERATED_EASING };
   C.__closure = obj3;
   C.__workletHash = 4811943867759;
   C.__initData = __initData;
@@ -115,8 +115,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     obj5 = ReanimatedRexport;
     return obj;
   };
-  const tmpResult2 = height(4612);
-  let obj4 = { interpolate: tmp(4612).interpolate, position: sharedValue, height };
+  const tmpResult2 = height(4618);
+  let obj4 = { interpolate: tmp(4618).interpolate, position: sharedValue, height };
   fn.__closure = obj4;
   fn.__workletHash = 16049033434372;
   fn.__initData = __initData3;
@@ -149,22 +149,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     }
     cResult[4] = failOffsetXResult;
     cResult[5] = tmp11;
-    cResult[6] = jsx(height(6140).GestureDetector, { gesture: failOffsetXResult, children: tmp11 });
-    const tmp15 = jsx(height(6140).GestureDetector, { gesture: failOffsetXResult, children: tmp11 });
+    cResult[6] = jsx(height(6147).GestureDetector, { gesture: failOffsetXResult, children: tmp11 });
+    const tmp15 = jsx(height(6147).GestureDetector, { gesture: failOffsetXResult, children: tmp11 });
   }
   cResult[1] = animatedStyle;
   cResult[2] = children;
-  cResult[3] = jsx(tmp7(4612).View, { style: animatedStyle, children });
-  const tmp12 = jsx(tmp7(4612).View, { style: animatedStyle, children });
+  cResult[3] = jsx(tmp7(4618).View, { style: animatedStyle, children });
+  const tmp12 = jsx(tmp7(4618).View, { style: animatedStyle, children });
 }) : ((children) => {
   let sharedValue;
   children = children.children;
   const tmp = closure_8();
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
   const height = sharedValue(1484)().height;
-  let obj = height(4612);
+  let obj = height(4618);
   sharedValue = obj.useSharedValue(0);
-  const Gesture = height(6140).Gesture;
+  const Gesture = height(6147).Gesture;
   const fn = function h(translationY) {
     const result = sharedValue.set(1 - Math.pow(1 - Math.max(Math.min(translationY.translationY, c9), 0) / c9, 3));
   };
@@ -191,7 +191,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       obj2.runOnJS(ModalActionCreatorsDefault.pop)();
     }
   }
-  let obj3 = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(4612).runOnJS, ModalActionCreators: sharedValue(5093), withTiming: height(4891).withTiming, DECELERATED_EASING: height(1188).DECELERATED_EASING };
+  let obj3 = { position: sharedValue, THRESHOLD_VELOCITY, runOnJS: height(4618).runOnJS, ModalActionCreators: sharedValue(5099), withTiming: height(4897).withTiming, DECELERATED_EASING: height(1188).DECELERATED_EASING };
   T.__closure = obj3;
   T.__workletHash = 6850090802761;
   T.__initData = __initData4;
@@ -215,13 +215,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
     return obj;
   };
   const failOffsetXResult = activeOffsetYResult.failOffsetX(items1);
-  const obj9 = height(4612);
-  let obj4 = { interpolate: height(4612).interpolate, position: sharedValue, height };
+  const obj9 = height(4618);
+  let obj4 = { interpolate: height(4618).interpolate, position: sharedValue, height };
   fn2.__closure = obj4;
   fn2.__workletHash = 15988962645633;
   fn2.__initData = __initData6;
   const animatedStyle = obj9.useAnimatedStyle(fn2);
-  const GestureDetector = height(6140).GestureDetector;
+  const GestureDetector = height(6147).GestureDetector;
   return <View style={tmp.background}>{null}</View>;
 });
 let result = size.fileFinishedImporting("modules/video_calls/native/components/GestureContainer.tsx");

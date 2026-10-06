@@ -1,25 +1,25 @@
-// === Module 13062: QuestEmbed ===
+// === Module 13081: QuestEmbed ===
 
-// Module 13062 (QuestEmbed)
+// Module 13081 (QuestEmbed)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import intl14 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import shared from "shared" /* 4729 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import QuestDataUtils from "QuestDataUtils" /* 7183 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7206 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
-import Constants2 from "Constants" /* 7226 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
-import AssetUtils from "AssetUtils" /* 10000 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 10955 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13063 */;
+import shared from "shared" /* 4735 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import QuestDataUtils from "QuestDataUtils" /* 7196 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7219 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
+import Constants2 from "Constants" /* 7239 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
+import AssetUtils from "AssetUtils" /* 10013 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 10968 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13082 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import QuestStore from "QuestStore" /* 7187 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
+import QuestStore from "QuestStore" /* 7200 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
 import size from "module_2" /* 2 */;
 
 let metroImportDefault;

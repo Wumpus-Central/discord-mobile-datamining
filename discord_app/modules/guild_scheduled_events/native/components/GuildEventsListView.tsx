@@ -1,12 +1,12 @@
-// === Module 9467: GuildEventsListView ===
+// === Module 9480: GuildEventsListView ===
 
-// Module 9467 (GuildEventsListView)
+// Module 9480 (GuildEventsListView)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildEventsNoContentDefault from "GuildEventsNoContent" /* 9468 */;
-import GuildEventCardDefault from "GuildEventCard" /* 9469 */;
+import GuildEventsNoContentDefault from "GuildEventsNoContent" /* 9481 */;
+import GuildEventCardDefault from "GuildEventCard" /* 9482 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

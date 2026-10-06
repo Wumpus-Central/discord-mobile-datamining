@@ -1,22 +1,22 @@
-// === Module 16335: YouBarNotificationsButton ===
+// === Module 16375: YouBarNotificationsButton ===
 
-// Module 16335 (YouBarNotificationsButton)
+// Module 16375 (YouBarNotificationsButton)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import spring from "spring" /* 5597 */;
-import ForLaterExperiment from "ForLaterExperiment" /* 7485 */;
-import showForLaterModal from "showForLaterModal" /* 7494 */;
-import SavedMessagesTypes from "SavedMessagesTypes" /* 7495 */;
-import BellIcon2 from "BellIcon" /* 9266 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import spring from "spring" /* 5604 */;
+import ForLaterExperiment from "ForLaterExperiment" /* 7496 */;
+import showForLaterModal from "showForLaterModal" /* 7505 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7506 */;
+import BellIcon2 from "BellIcon" /* 9301 */;
 import react from "react" /* 19 */;
-import SavedMessagesStore from "SavedMessagesStore" /* 11283 */;
-import YouBarConstants from "YouBarConstants" /* 14899 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11296 */;
+import YouBarConstants from "YouBarConstants" /* 14915 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -48,7 +48,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((h
   const cResult = obj.c(39);
   hasNameplate = hasNameplate.hasNameplate;
   const tmp4 = closure_10();
-  const value = isForLaterExperimentOn(16336)().value;
+  const value = isForLaterExperimentOn(16376)().value;
   const require = value;
   let obj2 = ReanimatedRexport;
   const fn = function s() {

@@ -1,8 +1,8 @@
-// === Module 4612: ReanimatedRexport ===
+// === Module 4618: ReanimatedRexport ===
 
-// Module 4612 (ReanimatedRexport)
+// Module 4618 (ReanimatedRexport)
 import _mod1643 from "module_1643" /* 1643 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4613 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4619 */;
 import PlatformUtils from "utils/PlatformUtils" /* 1370 */;
 import size from "module_2" /* 2 */;
 

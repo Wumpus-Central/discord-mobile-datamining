@@ -1,21 +1,21 @@
-// === Module 17976: SelectEmojiRolesActionSheet ===
+// === Module 18022: SelectEmojiRolesActionSheet ===
 
-// Module 17976 (SelectEmojiRolesActionSheet)
+// Module 18022 (SelectEmojiRolesActionSheet)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import FormConstants from "FormConstants" /* 1192 */;
-import Pressables from "Pressables" /* 5909 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6644 */;
-import ActionSheet2 from "ActionSheet" /* 6701 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15030 */;
+import Pressables from "Pressables" /* 5916 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 6651 */;
+import ActionSheet2 from "ActionSheet" /* 6708 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15045 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
-import TextStyles_mod from "TextStyles" /* 5915 */;
+import createStyles_mod from "createStyles" /* 4896 */;
+import TextStyles_mod from "TextStyles" /* 5922 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -107,7 +107,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSave) => {
   } else {
     tmp11 = cResult[2];
   }
-  const tmpResult = tmp(15030);
+  const tmpResult = tmp(15045);
   const subscriptionListingsForGuild = tmpResult.useSubscriptionListingsForGuild(guildId, tmp11);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class P {
@@ -312,7 +312,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled() ? ((onSave) => {
   const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
   intl3 = intl5.intl;
   intl4 = intl5.intl;
-  let obj5 = { scrollable: true, header: closure_6(BottomSheetTitleHeader, obj4), startExpanded: true, onDismiss: onCancel, children: closure_6(emoji(6569), obj6) };
+  let obj5 = { scrollable: true, header: closure_6(BottomSheetTitleHeader, obj4), startExpanded: true, onDismiss: onCancel, children: closure_6(emoji(6576), obj6) };
   closure_6(BottomSheetTitleHeader, obj4);
   const ActionSheet = ActionSheet2.ActionSheet;
   obj6 = {

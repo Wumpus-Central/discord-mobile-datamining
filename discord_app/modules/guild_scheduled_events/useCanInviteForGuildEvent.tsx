@@ -1,16 +1,16 @@
-// === Module 9262: useCanInviteForGuildEvent ===
+// === Module 9297: useCanInviteForGuildEvent ===
 
-// Module 9262 (useCanInviteForGuildEvent)
+// Module 9297 (useCanInviteForGuildEvent)
 import Constants from "Constants" /* 1085 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4514 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7037 */;
-import canViewInviteModal from "canViewInviteModal" /* 9263 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4520 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7050 */;
+import canViewInviteModal from "canViewInviteModal" /* 9298 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

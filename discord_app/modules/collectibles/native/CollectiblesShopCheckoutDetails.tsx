@@ -1,6 +1,6 @@
-// === Module 10746: CollectiblesShopCheckoutDetails ===
+// === Module 10759: CollectiblesShopCheckoutDetails ===
 
-// Module 10746 (CollectiblesShopCheckoutDetails)
+// Module 10759 (CollectiblesShopCheckoutDetails)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
@@ -9,28 +9,28 @@ import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1088 */;
 import intl8 from "intl" /* 1126 */;
 import utils from "utils" /* 1977 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1980 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
-import useShopProductItems from "useShopProductItems" /* 7842 */;
-import useCurrentUser from "useCurrentUser" /* 7849 */;
-import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 7872 */;
-import useProfileEffectDefault from "useProfileEffect" /* 7898 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 8453 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8466 */;
-import NameplateDefault from "Nameplate" /* 8474 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8478 */;
-import _modDef8499 from "module_8499" /* 8499 */;
-import FractionalNitroCoinIllustration2 from "FractionalNitroCoinIllustration" /* 8500 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8506 */;
-import getProductName from "getProductName" /* 8526 */;
-import _modDef10747 from "module_10747" /* 10747 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 10748 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
+import useShopProductItems from "useShopProductItems" /* 7853 */;
+import useCurrentUser from "useCurrentUser" /* 7860 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 7883 */;
+import useProfileEffectDefault from "useProfileEffect" /* 7909 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 8486 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8499 */;
+import NameplateDefault from "Nameplate" /* 8507 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8511 */;
+import _modDef8532 from "module_8532" /* 8532 */;
+import FractionalNitroCoinIllustration2 from "FractionalNitroCoinIllustration" /* 8533 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8539 */;
+import getProductName from "getProductName" /* 8559 */;
+import _modDef10760 from "module_10760" /* 10760 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 10761 */;
 import react from "react" /* 19 */;
-import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8454 */;
+import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8487 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -100,7 +100,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
     let first;
     const _Symbol = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef10747 };
+      const obj2 = { uri: _modDef10760 };
       cResult[0] = obj2;
       first = obj2;
     } else {
@@ -172,7 +172,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? ((item) => {
   if (null != tmp4) {
     const obj = { style: tmp.profileEffectContainer, children: items };
     const obj2 = { source: obj3, accessibilityLabel: tmp4.accessibilityLabel, style: tmp.profileEffect, resizeMode: "cover" };
-    obj3 = { uri: _modDef10747 };
+    obj3 = { uri: _modDef10760 };
     const tmp2Result = FastImageDefault;
     items = [metroImportDefault(tmp2Result, obj2), ];
     const obj4 = { style: tmp.profileEffect, source: obj5, accessibilityLabel: tmp4.title, resizeMode: "cover" };
@@ -552,7 +552,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     let tmp33;
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { uri: _modDef8499 };
+      const obj2 = { uri: _modDef8532 };
       cResult[2] = obj2;
       tmp31 = obj2;
     } else {
@@ -667,7 +667,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
     return metroImportDefault(FractionalNitroCoinIllustration, size);
   } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const obj = { source: obj2, style: tmp.externalProductImage };
-    obj2 = { uri: _modDef8499 };
+    obj2 = { uri: _modDef8532 };
     const tmp18 = FastImageDefault;
     return metroImportDefault(tmp18, obj);
   } else {
@@ -1249,7 +1249,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const tmp2 = closure_10(flag);
   let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
-  let obj2 = flag2(4528);
+  let obj2 = flag2(4534);
   const canUseShopDiscountsResult = obj2.canUseShopDiscounts(currentUser);
   dependencyMap = canUseShopDiscountsResult;
   const items = [product, flag2, canUseShopDiscountsResult];
@@ -1298,7 +1298,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (flag3) {
     const obj5 = { style: tmp.errorContainer, children: closure_7(Text, obj6) };
     obj6 = { variant: "text-xs/semibold", color: "text-feedback-critical", children: intl.string(intl8.t["3YfczA"]) };
-    Text = tmp3(4886).Text;
+    Text = tmp3(4892).Text;
     intl = tmp3(1126).intl;
     flag3 = closure_7(View, obj5);
   }

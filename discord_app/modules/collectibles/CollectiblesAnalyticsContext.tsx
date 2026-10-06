@@ -1,6 +1,6 @@
-// === Module 8421: CollectiblesAnalyticsContext ===
+// === Module 8454: CollectiblesAnalyticsContext ===
 
-// Module 8421 (CollectiblesAnalyticsContext)
+// Module 8454 (CollectiblesAnalyticsContext)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import react from "react" /* 19 */;

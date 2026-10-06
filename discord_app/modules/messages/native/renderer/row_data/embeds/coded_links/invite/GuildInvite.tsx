@@ -1,6 +1,6 @@
-// === Module 13048: invite/GuildInvite ===
+// === Module 13067: invite/GuildInvite ===
 
-// Module 13048 (invite/GuildInvite)
+// Module 13067 (invite/GuildInvite)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl8 from "intl" /* 1126 */;
@@ -9,33 +9,33 @@ import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import react_nativeDefault from "react-native" /* 1885 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 2066 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import shared from "shared" /* 4729 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5812 */;
-import react_native2 from "react-native" /* 7595 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7604 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7605 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8068 */;
-import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8395 */;
-import CodedLinksConstants from "CodedLinksConstants" /* 10024 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10025 */;
-import GuestUtilsDefault from "GuestUtils" /* 10026 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11418 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 11419 */;
-import InviteErrorUtils from "InviteErrorUtils" /* 12391 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 12392 */;
-import getHeaderTextForInvite2 from "getHeaderTextForInvite" /* 13049 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import shared from "shared" /* 4735 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5819 */;
+import react_native2 from "react-native" /* 7606 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7615 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7616 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8078 */;
+import GuildBadgeImageSource from "GuildBadgeImageSource" /* 8428 */;
+import CodedLinksConstants from "CodedLinksConstants" /* 10037 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10038 */;
+import GuestUtilsDefault from "GuestUtils" /* 10039 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11431 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 11432 */;
+import InviteErrorUtils from "InviteErrorUtils" /* 12406 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 12407 */;
+import getHeaderTextForInvite2 from "getHeaderTextForInvite" /* 13068 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import InviteStore from "InviteStore" /* 4871 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import InviteStore from "InviteStore" /* 4877 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants_mod from "Constants" /* 1085 */;
-import Constants_mod2 from "Constants" /* 7226 */;
+import Constants_mod2 from "Constants" /* 7239 */;
 import size from "module_2" /* 2 */;
 
 let closure_14;
@@ -89,7 +89,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
     str = string(t.YVub5y);
     tmp6 = require;
   }
-  tmp6Result = tmp6(7595);
+  tmp6Result = tmp6(7606);
   if (arg1) {
     const intl4 = tmp6(1126).intl;
     stringResult = intl4.string(tmp6(1126).t["F/OLvL"]);
@@ -113,7 +113,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   }
   intl5 = tmp6(1126).intl;
   resolveAssetSource = Image.resolveAssetSource;
-  const tmp6Result2 = tmp6(4729);
+  const tmp6Result2 = tmp6(4735);
   if (tmp6Result2.isThemeDark(theme)) {
     tmpResult2 = AssetRegistryDefault;
   } else {

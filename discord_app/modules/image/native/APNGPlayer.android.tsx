@@ -1,6 +1,6 @@
-// === Module 8464: APNGPlayer ===
+// === Module 8497: APNGPlayer ===
 
-// Module 8464 (APNGPlayer)
+// Module 8497 (APNGPlayer)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -178,7 +178,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     }
     return tmp12;
   }
-  ref(8465);
+  ref(8498);
   const merged = Object.assign(tmp4);
   const tmp15 = <tmp13 ref={ref} onLoad={tmp9} />;
   cResult[6] = tmp9;
@@ -223,7 +223,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   }));
-  ref(8465);
+  ref(8498);
   const merged1 = Object.assign(merged);
   return <tmp5 ref={ref} onLoad={callback} />;
 }));

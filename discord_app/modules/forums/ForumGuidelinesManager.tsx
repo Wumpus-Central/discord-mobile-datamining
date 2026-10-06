@@ -1,8 +1,8 @@
-// === Module 10078: ForumGuidelinesManager ===
+// === Module 10091: ForumGuidelinesManager ===
 
-// Module 10078 (ForumGuidelinesManager)
+// Module 10091 (ForumGuidelinesManager)
 import Storage2 from "Storage" /* 510 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let set;

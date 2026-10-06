@@ -1,11 +1,11 @@
-// === Module 11999: SearchTabsFetchManager ===
+// === Module 12015: SearchTabsFetchManager ===
 
-// Module 11999 (SearchTabsFetchManager)
+// Module 12015 (SearchTabsFetchManager)
 import Constants from "Constants" /* 1085 */;
-import AbstractSearchFetchManager2 from "AbstractSearchFetchManager" /* 12000 */;
-import SearchFetcher from "SearchFetcher" /* 12001 */;
+import AbstractSearchFetchManager2 from "AbstractSearchFetchManager" /* 12016 */;
+import SearchFetcher from "SearchFetcher" /* 12017 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import SearchConstants from "SearchConstants" /* 7513 */;
+import SearchConstants from "SearchConstants" /* 7524 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

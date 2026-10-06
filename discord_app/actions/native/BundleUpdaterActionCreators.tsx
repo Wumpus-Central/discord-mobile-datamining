@@ -1,9 +1,9 @@
-// === Module 18093: BundleUpdaterActionCreators ===
+// === Module 18138: BundleUpdaterActionCreators ===
 
-// Module 18093 (BundleUpdaterActionCreators)
+// Module 18138 (BundleUpdaterActionCreators)
 import react_native from "react-native" /* 17 */;
 import intl5 from "intl" /* 1126 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = react_native.NativeModules;

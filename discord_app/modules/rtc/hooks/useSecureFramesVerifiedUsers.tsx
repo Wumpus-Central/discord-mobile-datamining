@@ -1,9 +1,9 @@
-// === Module 15758: useSecureFramesVerifiedUsers ===
+// === Module 15794: useSecureFramesVerifiedUsers ===
 
-// Module 15758 (useSecureFramesVerifiedUsers)
+// Module 15794 (useSecureFramesVerifiedUsers)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9348 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9362 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

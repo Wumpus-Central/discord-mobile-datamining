@@ -1,12 +1,12 @@
-// === Module 12796: useCanDM ===
+// === Module 12815: useCanDM ===
 
-// Module 12796 (useCanDM)
+// Module 12815 (useCanDM)
 import UserSettings from "UserSettings" /* 2028 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7142 */;
-import LurkingStore from "LurkingStore" /* 4510 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7155 */;
+import LurkingStore from "LurkingStore" /* 4516 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

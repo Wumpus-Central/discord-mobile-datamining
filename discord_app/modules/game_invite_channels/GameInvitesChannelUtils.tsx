@@ -1,17 +1,17 @@
-// === Module 6775: GameInvitesChannelUtils ===
+// === Module 6785: GameInvitesChannelUtils ===
 
-// Module 6775 (GameInvitesChannelUtils)
+// Module 6785 (GameInvitesChannelUtils)
 import react from "react" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import react2 from "react" /* 576 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5693 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6658 */;
-import ForumConstants from "ForumConstants" /* 6776 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6777 */;
-import ForumTagHooks from "ForumTagHooks" /* 6778 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 6807 */;
-import hasFlagDefault from "hasFlag" /* 6816 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 5700 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6665 */;
+import ForumConstants from "ForumConstants" /* 6786 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 6787 */;
+import ForumTagHooks from "ForumTagHooks" /* 6788 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 6817 */;
+import hasFlagDefault from "hasFlag" /* 6826 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
@@ -234,7 +234,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }
   tmp3(isGameInvitesChannelResult, "requires a game invites channel");
   let gameId;
-  const useGame = tmp(6812).useGame;
+  const useGame = tmp(6822).useGame;
   require("useGame");
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
@@ -283,7 +283,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
 }) : ((arg0) => {
   let application;
   const tmp = closure_15(arg0);
-  let obj = application(6658);
+  let obj = application(6665);
   application = obj.useApplication(tmp);
   const items = [application];
   return useMemo(() => {

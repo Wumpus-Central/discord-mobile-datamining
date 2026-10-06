@@ -1,11 +1,11 @@
-// === Module 9203: useGetEventChannelsByType ===
+// === Module 9238: useGetEventChannelsByType ===
 
-// Module 9203 (useGetEventChannelsByType)
-import GuildChannelStore2 from "GuildChannelStore" /* 4507 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9169 */;
+// Module 9238 (useGetEventChannelsByType)
+import GuildChannelStore2 from "GuildChannelStore" /* 4513 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9204 */;
 import StageInstanceStore from "StageInstanceStore" /* 2056 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import PermissionsConstants from "PermissionsConstants" /* 9170 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import PermissionsConstants from "PermissionsConstants" /* 9205 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

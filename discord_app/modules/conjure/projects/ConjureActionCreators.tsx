@@ -1,17 +1,17 @@
-// === Module 8700: ConjureActionCreators ===
+// === Module 8735: ConjureActionCreators ===
 
-// Module 8700 (ConjureActionCreators)
+// Module 8735 (ConjureActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import ConjureTypes from "ConjureTypes" /* 6747 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 8701 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 8702 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import ConjureTypes from "ConjureTypes" /* 6757 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 8736 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 8737 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import UserStore from "UserStore" /* 1377 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 8699 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 8734 */;
 import size from "module_2" /* 2 */;
 
 let c7, closure_10, closure_11, closure_17, currentUser, projectsFetchState, resourceIds;
@@ -714,7 +714,7 @@ obj = function _refreshPublishedProject() {
       obj5.trackConjureDeployed(closure_0, obj13);
       await "IconComponent";
       isPreview = isPreview.isPreview;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

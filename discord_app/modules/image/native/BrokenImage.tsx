@@ -1,9 +1,9 @@
-// === Module 11709: BrokenImage ===
+// === Module 11723: BrokenImage ===
 
-// Module 11709 (BrokenImage)
+// Module 11723 (BrokenImage)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 9180: EntityUtils ===
+// === Module 9215: EntityUtils ===
 
-// Module 9180 (EntityUtils)
+// Module 9215 (EntityUtils)
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 2057 */;
 import size from "module_2" /* 2 */;

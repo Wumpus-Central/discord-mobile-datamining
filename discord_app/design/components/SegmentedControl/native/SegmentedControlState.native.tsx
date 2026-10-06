@@ -1,7 +1,7 @@
-// === Module 9282: SegmentedControlState ===
+// === Module 9317: SegmentedControlState ===
 
-// Module 9282 (SegmentedControlState)
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
+// Module 9317 (SegmentedControlState)
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

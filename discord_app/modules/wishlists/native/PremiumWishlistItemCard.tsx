@@ -1,9 +1,9 @@
-// === Module 10772: PremiumWishlistItemCard ===
+// === Module 10785: PremiumWishlistItemCard ===
 
-// Module 10772 (PremiumWishlistItemCard)
+// Module 10785 (PremiumWishlistItemCard)
 import Fragment from "Fragment" /* 21 */;
-import SKUPreview from "SKUPreview" /* 8426 */;
-import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8427 */;
+import SKUPreview from "SKUPreview" /* 8459 */;
+import WishlistItemCardBaseDefault from "WishlistItemCardBase" /* 8460 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

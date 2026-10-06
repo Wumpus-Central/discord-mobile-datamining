@@ -1,8 +1,8 @@
-// === Module 4590: AccessibilityAnnouncer ===
+// === Module 4596: AccessibilityAnnouncer ===
 
-// Module 4590 (AccessibilityAnnouncer)
+// Module 4596 (AccessibilityAnnouncer)
 import react_native from "react-native" /* 17 */;
-import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4591 */;
+import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4597 */;
 import size from "module_2" /* 2 */;
 
 const AccessibilityInfo = react_native.AccessibilityInfo;

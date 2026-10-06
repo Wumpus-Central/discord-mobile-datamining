@@ -1,6 +1,6 @@
-// === Module 6591: GuildOnboardingStore ===
+// === Module 6598: GuildOnboardingStore ===
 
-// Module 6591 (GuildOnboardingStore)
+// Module 6598 (GuildOnboardingStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;

@@ -1,11 +1,11 @@
-// === Module 7307: UploadTargets ===
+// === Module 7318: UploadTargets ===
 
-// Module 7307 (UploadTargets)
-import UploadUtils from "UploadUtils" /* 7243 */;
-import FileUtilsAll from "FileUtils" /* 7270 */;
-import UploadLimits from "UploadLimits" /* 7295 */;
-import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 7308 */;
-import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 7310 */;
+// Module 7318 (UploadTargets)
+import UploadUtils from "UploadUtils" /* 7256 */;
+import FileUtilsAll from "FileUtils" /* 7283 */;
+import UploadLimits from "UploadLimits" /* 7308 */;
+import GuildProductAttachmentUploadTargetDefault from "GuildProductAttachmentUploadTarget" /* 7319 */;
+import ICYMIAttachmentUploadTargetDefault from "ICYMIAttachmentUploadTarget" /* 7321 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

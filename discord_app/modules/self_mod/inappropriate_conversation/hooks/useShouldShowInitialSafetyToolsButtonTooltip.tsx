@@ -1,7 +1,7 @@
-// === Module 9832: useShouldShowInitialSafetyToolsButtonTooltip ===
+// === Module 9845: useShouldShowInitialSafetyToolsButtonTooltip ===
 
-// Module 9832 (useShouldShowInitialSafetyToolsButtonTooltip)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9786 */;
+// Module 9845 (useShouldShowInitialSafetyToolsButtonTooltip)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 9799 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

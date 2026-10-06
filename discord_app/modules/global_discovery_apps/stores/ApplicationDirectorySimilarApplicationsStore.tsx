@@ -1,6 +1,6 @@
-// === Module 11688: ApplicationDirectorySimilarApplicationsStore ===
+// === Module 11702: ApplicationDirectorySimilarApplicationsStore ===
 
-// Module 11688 (ApplicationDirectorySimilarApplicationsStore)
+// Module 11702 (ApplicationDirectorySimilarApplicationsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import LRUCacheDefault from "LRUCache" /* 1444 */;

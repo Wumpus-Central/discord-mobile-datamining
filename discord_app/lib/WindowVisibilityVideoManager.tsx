@@ -1,12 +1,12 @@
-// === Module 9109: WindowVisibilityVideoManager ===
+// === Module 9144: WindowVisibilityVideoManager ===
 
-// Module 9109 (WindowVisibilityVideoManager)
+// Module 9144 (WindowVisibilityVideoManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import ExternalPipDefault from "ExternalPip" /* 9110 */;
-import WindowVisibilityUtilsDefault from "WindowVisibilityUtils" /* 9111 */;
-import TypedEventEmitter from "TypedEventEmitter" /* 4948 */;
+import ExternalPipDefault from "ExternalPip" /* 9145 */;
+import WindowVisibilityUtilsDefault from "WindowVisibilityUtils" /* 9146 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4954 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

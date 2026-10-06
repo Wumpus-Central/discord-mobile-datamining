@@ -1,25 +1,25 @@
-// === Module 16402: ItemDetailsActionSheet ===
+// === Module 16442: ItemDetailsActionSheet ===
 
-// Module 16402 (ItemDetailsActionSheet)
+// Module 16442 (ItemDetailsActionSheet)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import useChannelNameDefault from "useChannelName" /* 5043 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6012 */;
-import TableRowGroup2 from "TableRowGroup" /* 6074 */;
-import ActionSheet2 from "ActionSheet" /* 6701 */;
-import ICYMIUtils from "ICYMIUtils" /* 8028 */;
-import ActionSheetIconHeader2 from "ActionSheetIconHeader" /* 10737 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16403 */;
+import useChannelNameDefault from "useChannelName" /* 5049 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6019 */;
+import TableRowGroup2 from "TableRowGroup" /* 6081 */;
+import ActionSheet2 from "ActionSheet" /* 6708 */;
+import ICYMIUtils from "ICYMIUtils" /* 8038 */;
+import ActionSheetIconHeader2 from "ActionSheetIconHeader" /* 10750 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16443 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import ICYMIStore from "ICYMIStore" /* 8011 */;
+import ICYMIStore from "ICYMIStore" /* 8021 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

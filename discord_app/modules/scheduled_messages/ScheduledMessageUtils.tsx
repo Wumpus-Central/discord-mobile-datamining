@@ -1,6 +1,6 @@
-// === Module 7475: ScheduledMessageUtils ===
+// === Module 7486: ScheduledMessageUtils ===
 
-// Module 7475 (ScheduledMessageUtils)
+// Module 7486 (ScheduledMessageUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -12,15 +12,15 @@ import GlobalUtils from "GlobalUtils" /* 1375 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import _modDef4461 from "module_4461" /* 4461 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
-import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7168 */;
-import ScheduledMessageTypes from "ScheduledMessageTypes" /* 7477 */;
+import _modDef4467 from "module_4467" /* 4467 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
+import parseContentForSuppressNotifications from "parseContentForSuppressNotifications" /* 7181 */;
+import ScheduledMessageTypes from "ScheduledMessageTypes" /* 7488 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
-import ScheduledMessagesConstants from "ScheduledMessagesConstants" /* 7476 */;
+import ScheduledMessagesConstants from "ScheduledMessagesConstants" /* 7487 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -243,19 +243,19 @@ function canUseScheduledMessages(location) {
   return closure_15.getConfig(obj).enabled;
 }
 function getEarliestScheduledTime() {
-  const obj = _modDef4461();
+  const obj = _modDef4467();
   return obj.add(map1, "seconds");
 }
 function getLatestScheduledTime(dependencyMap) {
-  const obj = _modDef4461();
+  const obj = _modDef4467();
   const addResult = obj.add(unpackModuleId, "seconds");
   if (null == dependencyMap) {
     return addResult;
   } else {
-    const tmpResult = _modDef4461;
+    const tmpResult = _modDef4467;
     const tmpResult3 = SnowflakeUtilsDefault;
     const tmpResultResult = tmpResult(tmpResult3.extractTimestamp(dependencyMap));
-    const tmpResult4 = _modDef4461;
+    const tmpResult4 = _modDef4467;
     return tmpResult4.min(addResult, tmpResultResult.add(authStore, "seconds"));
   }
 }
@@ -334,12 +334,12 @@ export const getPresetScheduledTimes = function getPresetScheduledTimes() {
   let tmp6;
   let tmp7;
   let tmp9;
-  const obj = _modDef4461();
+  const obj = _modDef4467();
   const addResult = obj.add(map1, "seconds");
-  const obj2 = _modDef4461();
+  const obj2 = _modDef4467();
   const startOfResult = obj2.startOf("day");
   const result = startOfResult.set("hours", 9);
-  const obj5 = _modDef4461();
+  const obj5 = _modDef4467();
   const startOfResult1 = obj5.startOf("day");
   const result1 = startOfResult1.set("hours", 13);
   const obj3 = { label: null, value: null };
@@ -376,19 +376,19 @@ export const getPresetScheduledTimes = function getPresetScheduledTimes() {
   items[1] = tmp9;
   const obj6 = { label: intl3.string(tmp6(1126).t["+P5MmK"]), value: addResult1.set("hours", 9) };
   intl3 = tmp6(1126).intl;
-  const obj11 = _modDef4461();
+  const obj11 = _modDef4467();
   const startOfResult2 = obj11.startOf("isoWeek");
   items[2] = obj6;
   addResult1 = startOfResult2.add(1, "week");
   return items;
 };
 export const getDefaultScheduledTime = function getDefaultScheduledTime() {
-  const obj = _modDef4461();
+  const obj = _modDef4467();
   const startOfResult = obj.startOf("hour");
   const addResult = startOfResult.add(1, "hour");
   const isBefore = addResult.isBefore;
   let addResult1 = addResult;
-  const obj4 = _modDef4461();
+  const obj4 = _modDef4467();
   if (isBefore(obj4.add(map1, "seconds"))) {
     addResult1 = addResult.add(1, "hour");
   }
@@ -397,20 +397,20 @@ export const getDefaultScheduledTime = function getDefaultScheduledTime() {
 export const getScheduledTimeError = function getScheduledTimeError(isBefore, arg1) {
   let stringResult;
   isBefore = isBefore.isBefore;
-  const obj = _modDef4461();
+  const obj = _modDef4467();
   if (isBefore(obj.add(map1, "seconds"))) {
     const intl2 = intl7.intl;
     stringResult = intl2.string(intl7.t["w/fgvh"]);
   } else {
     const isAfter = isBefore.isAfter;
-    const obj2 = _modDef4461();
+    const obj2 = _modDef4467();
     const addResult = obj2.add(unpackModuleId, "seconds");
     let minResult = addResult;
     if (null != arg1) {
-      const tmpResult = _modDef4461;
+      const tmpResult = _modDef4467;
       const tmpResult3 = SnowflakeUtilsDefault;
       const tmpResultResult = tmpResult(tmpResult3.extractTimestamp(arg1));
-      const tmpResult4 = _modDef4461;
+      const tmpResult4 = _modDef4467;
       minResult = tmpResult4.min(addResult, tmpResultResult.add(authStore, "seconds"));
     }
     stringResult = null;

@@ -1,7 +1,7 @@
-// === Module 7938: useMediaItemHasSpoiler ===
+// === Module 7949: useMediaItemHasSpoiler ===
 
-// Module 7938 (useMediaItemHasSpoiler)
-import MediaSourceUtil from "MediaSourceUtil" /* 7939 */;
+// Module 7949 (useMediaItemHasSpoiler)
+import MediaSourceUtil from "MediaSourceUtil" /* 7950 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -30,7 +30,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     tmp4 = cResult[1];
   }
-  const MediaViewerSourcesStore = tmp(7934).MediaViewerSourcesStore;
+  const MediaViewerSourcesStore = tmp(7945).MediaViewerSourcesStore;
   const state = MediaViewerSourcesStore.useState(tmp4);
   if (cResult[2] !== arg0) {
     const fn2 = function o(userRevealedIndexes) {
@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     tmp6 = cResult[3];
   }
-  const MediaViewerSourcesStore2 = tmp(7934).MediaViewerSourcesStore;
+  const MediaViewerSourcesStore2 = tmp(7945).MediaViewerSourcesStore;
   const state1 = MediaViewerSourcesStore2.useState(tmp6);
   if (cResult[4] !== state) {
     let flattenSourceResult;

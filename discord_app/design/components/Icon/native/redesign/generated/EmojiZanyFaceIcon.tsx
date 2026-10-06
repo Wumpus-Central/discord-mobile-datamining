@@ -1,11 +1,11 @@
-// === Module 15221: EmojiZanyFaceIcon ===
+// === Module 15236: EmojiZanyFaceIcon ===
 
-// Module 15221 (EmojiZanyFaceIcon)
+// Module 15236 (EmojiZanyFaceIcon)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage2 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 15222 */;
+import BaseIconImage2 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 15237 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

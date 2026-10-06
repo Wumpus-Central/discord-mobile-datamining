@@ -1,13 +1,13 @@
-// === Module 8104: AgeVerificationModal ===
+// === Module 8137: AgeVerificationModal ===
 
-// Module 8104 (AgeVerificationModal)
+// Module 8137 (AgeVerificationModal)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4736 */;
-import AgeVerificationConstants from "AgeVerificationConstants" /* 8085 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4742 */;
+import AgeVerificationConstants from "AgeVerificationConstants" /* 8118 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

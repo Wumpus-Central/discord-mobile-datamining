@@ -1,15 +1,15 @@
-// === Module 17631: SubscriptionManager ===
+// === Module 17677: SubscriptionManager ===
 
-// Module 17631 (SubscriptionManager)
+// Module 17677 (SubscriptionManager)
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1976 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5404 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 5411 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import UserStore from "UserStore" /* 1377 */;
-import BillingInfoStore from "BillingInfoStore" /* 4530 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
-import EntitlementStore from "EntitlementStore" /* 6899 */;
+import BillingInfoStore from "BillingInfoStore" /* 4536 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
+import EntitlementStore from "EntitlementStore" /* 6909 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c1, c2, currentUser, isFetchingMostRecentSubscription;

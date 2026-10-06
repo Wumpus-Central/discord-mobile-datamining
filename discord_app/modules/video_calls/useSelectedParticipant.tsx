@@ -1,7 +1,7 @@
-// === Module 9053: useSelectedParticipant ===
+// === Module 9089: useSelectedParticipant ===
 
-// Module 9053 (useSelectedParticipant)
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+// Module 9089 (useSelectedParticipant)
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

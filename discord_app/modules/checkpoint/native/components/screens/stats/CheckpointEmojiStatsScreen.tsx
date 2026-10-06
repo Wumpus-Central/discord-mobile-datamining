@@ -1,9 +1,9 @@
-// === Module 15546: CheckpointEmojiStatsScreen ===
+// === Module 15562: CheckpointEmojiStatsScreen ===
 
-// Module 15546 (CheckpointEmojiStatsScreen)
+// Module 15562 (CheckpointEmojiStatsScreen)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15543 */;
+import CheckpointStatsScreenDefault from "CheckpointStatsScreen" /* 15559 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

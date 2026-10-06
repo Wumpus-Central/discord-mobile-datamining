@@ -1,12 +1,12 @@
-// === Module 17565: NativeOnDemandResourceManager ===
+// === Module 17611: NativeOnDemandResourceManager ===
 
-// Module 17565 (NativeOnDemandResourceManager)
+// Module 17611 (NativeOnDemandResourceManager)
 import Constants from "Constants" /* 1085 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9306 */;
-import react_nativeDefault from "react-native" /* 17566 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 8079 */;
+import react_nativeDefault from "react-native" /* 17612 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let importDefault;

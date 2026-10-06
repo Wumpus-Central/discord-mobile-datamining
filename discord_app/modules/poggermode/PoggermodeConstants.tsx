@@ -1,6 +1,6 @@
-// === Module 7163: PoggermodeConstants ===
+// === Module 7176: PoggermodeConstants ===
 
-// Module 7163 (PoggermodeConstants)
+// Module 7176 (PoggermodeConstants)
 import size from "module_2" /* 2 */;
 
 let items;

@@ -1,6 +1,6 @@
-// === Module 9311: trackVoiceAndVideoSettingsUpdate ===
+// === Module 8084: trackVoiceAndVideoSettingsUpdate ===
 
-// Module 9311 (trackVoiceAndVideoSettingsUpdate)
+// Module 8084 (trackVoiceAndVideoSettingsUpdate)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import size from "module_2" /* 2 */;

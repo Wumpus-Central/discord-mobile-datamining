@@ -1,10 +1,10 @@
-// === Module 8722: disclosures ===
+// === Module 8754: disclosures ===
 
-// Module 8722 (disclosures)
+// Module 8754 (disclosures)
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import applications from "applications" /* 8723 */;
+import applications from "applications" /* 8755 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

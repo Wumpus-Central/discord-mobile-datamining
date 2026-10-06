@@ -1,20 +1,20 @@
-// === Module 13027: ExecutedCommand ===
+// === Module 13046: ExecutedCommand ===
 
-// Module 13027 (ExecutedCommand)
+// Module 13046 (ExecutedCommand)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1405 */;
-import Server from "Server" /* 1985 */;
-import useMessageAuthor from "useMessageAuthor" /* 5304 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7030 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7620 */;
-import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7622 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 8794 */;
-import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9000 */;
-import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11242 */;
+import InteractionTypes from "InteractionTypes" /* 5126 */;
+import useMessageAuthor from "useMessageAuthor" /* 5311 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7631 */;
+import createDisplayNameStylesMobile from "createDisplayNameStylesMobile" /* 7633 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 8826 */;
+import ActivitiesInTextUtils from "ActivitiesInTextUtils" /* 9033 */;
+import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11255 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;
@@ -89,7 +89,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       type = initialInteractionMetadata.type;
     }
     let tmp25 = null;
-    if (type === Server.InteractionTypes.APPLICATION_COMMAND) {
+    if (type === InteractionTypes.InteractionTypes.APPLICATION_COMMAND) {
       tmp25 = null;
       if (null != initialInteractionMetadata.target_user) {
         const self = this;

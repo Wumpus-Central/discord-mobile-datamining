@@ -1,6 +1,6 @@
-// === Module 9149: useEmbeddedActivityBackground ===
+// === Module 9184: useEmbeddedActivityBackground ===
 
-// Module 9149 (useEmbeddedActivityBackground)
+// Module 9184 (useEmbeddedActivityBackground)
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

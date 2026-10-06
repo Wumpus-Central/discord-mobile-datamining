@@ -1,14 +1,14 @@
-// === Module 12059: MultiAccountActionCreators ===
+// === Module 12074: MultiAccountActionCreators ===
 
-// Module 12059 (MultiAccountActionCreators)
+// Module 12074 (MultiAccountActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import TokenManagerAll from "TokenManager" /* 1111 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MultiAccountStore from "MultiAccountStore" /* 12056 */;
+import MultiAccountStore from "MultiAccountStore" /* 12071 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -134,7 +134,7 @@ export const validateMultiAccountTokens = function validateMultiAccountTokens() 
     closure_3 = tmp;
     closure_2 = tmp4;
     id = closure_0.id;
-    return "Set";
+    return "Reflect";
   });
   const item = forEach(function() {
     return closure_0(...arguments);

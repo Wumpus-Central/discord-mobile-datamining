@@ -1,9 +1,9 @@
-// === Module 11931: GuildDirectorySearchStore ===
+// === Module 11945: GuildDirectorySearchStore ===
 
-// Module 11931 (GuildDirectorySearchStore)
+// Module 11945 (GuildDirectorySearchStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 11932 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 11946 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = [];
@@ -70,7 +70,7 @@ let obj = {
     const obj3 = { results: obj4.orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj2[query] = obj3;
     closure_4[channelId] = obj2;
-    obj4 = items(11932);
+    obj4 = items(11946);
   },
   GUILD_DIRECTORY_SEARCH_FAILURE: function handleSearchFailure(channelId) {
     channelId = channelId.channelId;

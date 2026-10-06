@@ -1,16 +1,16 @@
-// === Module 8961: BotTag ===
+// === Module 8990: BotTag ===
 
-// Module 8961 (BotTag)
+// Module 8990 (BotTag)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import ApplicationConstants from "ApplicationConstants" /* 1360 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import CheckmarkSmallBoldIcon2 from "CheckmarkSmallBoldIcon" /* 8962 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import CheckmarkSmallBoldIcon2 from "CheckmarkSmallBoldIcon" /* 8991 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -264,7 +264,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   items1 = [tmp6, ];
   const obj3 = { variant: "text-xs/semibold", lineClamp: 1, maxFontSizeMultiplier: 2, style: items2, children: tmp3 };
   items2 = [tmp12];
-  items1[1] = hasOwnProperty(tmp17(4886).Text, obj3);
+  items1[1] = hasOwnProperty(tmp17(4892).Text, obj3);
   return metroRequire(View, obj2);
 });
 tmp5.Types = BotTagTypes;

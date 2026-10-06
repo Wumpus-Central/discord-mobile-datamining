@@ -1,16 +1,16 @@
-// === Module 17205: VoicePanelPIPUtils ===
+// === Module 17234: VoicePanelPIPUtils ===
 
-// Module 17205 (VoicePanelPIPUtils)
+// Module 17234 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 587 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import participantHasVideo from "participantHasVideo" /* 9119 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 13802 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import participantHasVideo from "participantHasVideo" /* 9154 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 13820 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
-import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17206 */;
-import MorphablePanelConstants from "MorphablePanelConstants" /* 11903 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
+import VoicePanelPIPConstants from "VoicePanelPIPConstants" /* 17235 */;
+import MorphablePanelConstants from "MorphablePanelConstants" /* 11917 */;
 import size_mod from "module_2" /* 2 */;
 
 let PIPReferenceDimensions;

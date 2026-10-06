@@ -1,23 +1,23 @@
-// === Module 9728: StageChannelCallList ===
+// === Module 9741: StageChannelCallList ===
 
-// Module 9728 (StageChannelCallList)
+// Module 9741 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1484 */;
-import StageChannelsConstants from "StageChannelsConstants" /* 5571 */;
-import StageChannelParticipants from "StageChannelParticipants" /* 5582 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5912 */;
-import SpeakerTile from "SpeakerTile" /* 9730 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 9737 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 9738 */;
-import StageGridRowDefault from "StageGridRow" /* 9739 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 9751 */;
-import useStageChannelGridParticipants from "useStageChannelGridParticipants" /* 9754 */;
+import StageChannelsConstants from "StageChannelsConstants" /* 5578 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5589 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5919 */;
+import SpeakerTile from "SpeakerTile" /* 9743 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 9750 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 9751 */;
+import StageGridRowDefault from "StageGridRow" /* 9752 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 9764 */;
+import useStageChannelGridParticipants from "useStageChannelGridParticipants" /* 9767 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import StageChannelListStore from "StageChannelListStore" /* 9729 */;
+import StageChannelListStore from "StageChannelListStore" /* 9742 */;
 import Fragment_mod from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -811,10 +811,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  let obj = width(9754);
+  let obj = width(9767);
   const throttleDurationForChannel = obj.useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1484)().width;
-  const obj2 = width(5912);
+  const obj2 = width(5919);
   isScreenLandscape = obj2.useIsScreenLandscape();
   const items = [width, isScreenLandscape];
   const memo = react.useMemo(() => {
@@ -830,7 +830,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((channel) => {
     obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
-  const obj3 = width(9754);
+  const obj3 = width(9767);
   const tmp4 = _slicedToArray(obj3.useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   const obj4 = { channel, listSections: tmp4[0], rowsBySection: tmp4[1] };
   return closure_8(closure_12, obj4);

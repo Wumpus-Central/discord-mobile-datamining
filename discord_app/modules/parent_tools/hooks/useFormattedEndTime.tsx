@@ -1,6 +1,6 @@
-// === Module 17436: useFormattedEndTime ===
+// === Module 17465: useFormattedEndTime ===
 
-// Module 17436 (useFormattedEndTime)
+// Module 17465 (useFormattedEndTime)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import intl from "intl" /* 1126 */;

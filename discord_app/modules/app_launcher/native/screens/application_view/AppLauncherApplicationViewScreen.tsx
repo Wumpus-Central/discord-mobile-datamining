@@ -1,15 +1,15 @@
-// === Module 11751: AppLauncherApplicationViewScreen ===
+// === Module 11765: AppLauncherApplicationViewScreen ===
 
-// Module 11751 (AppLauncherApplicationViewScreen)
+// Module 11765 (AppLauncherApplicationViewScreen)
 import Fragment from "Fragment" /* 21 */;
 import KeyboardTypes from "KeyboardTypes" /* 1616 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import AppLauncherContext from "AppLauncherContext" /* 10994 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import AppLauncherContext from "AppLauncherContext" /* 11007 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8827 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

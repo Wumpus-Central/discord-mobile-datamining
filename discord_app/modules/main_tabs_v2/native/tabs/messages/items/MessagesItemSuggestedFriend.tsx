@@ -1,24 +1,24 @@
-// === Module 15969: MessagesItemSuggestedFriend ===
+// === Module 16008: MessagesItemSuggestedFriend ===
 
-// Module 15969 (MessagesItemSuggestedFriend)
+// Module 16008 (MessagesItemSuggestedFriend)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import defaultMVCPConfig from "defaultMVCPConfig" /* 8371 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10723 */;
-import LegendList from "LegendList" /* 15968 */;
-import FriendSuggestionUtils from "FriendSuggestionUtils" /* 15970 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 15971 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import defaultMVCPConfig from "defaultMVCPConfig" /* 8404 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10736 */;
+import LegendList from "LegendList" /* 16007 */;
+import FriendSuggestionUtils from "FriendSuggestionUtils" /* 16009 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16010 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -67,7 +67,7 @@ let closure_12 = react.memo(function MessagesItemSuggestedFriendView(height) {
     return items;
   }, items);
   const callback = react.useCallback(() => {
-    const promise = asyncRequire(7850, dependencyMap.paths);
+    const promise = asyncRequire(7861, dependencyMap.paths);
     promise.then((result) => {
       const obj = { userId: suggestedFriend.user.id, localUser: suggestedFriend.user, location: "Messages Tab User Profile" };
       return result.default(obj);

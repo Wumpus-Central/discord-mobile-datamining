@@ -1,34 +1,34 @@
-// === Module 8505: CollectiblesShopCardCardDetailsV2 ===
+// === Module 8538: CollectiblesShopCardCardDetailsV2 ===
 
-// Module 8505 (CollectiblesShopCardCardDetailsV2)
+// Module 8538 (CollectiblesShopCardCardDetailsV2)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import useToken from "useToken" /* 4580 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7064 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
-import useCurrentUser from "useCurrentUser" /* 7849 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8313 */;
-import useDefaultVariantIndex from "useDefaultVariantIndex" /* 8419 */;
-import OrbsIcon from "OrbsIcon" /* 8491 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8506 */;
-import _mod8508 from "module_8508" /* 8508 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 8523 */;
-import TagIcon from "TagIcon" /* 8524 */;
-import getProductName from "getProductName" /* 8526 */;
-import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 8527 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import useToken from "useToken" /* 4586 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7077 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
+import useCurrentUser from "useCurrentUser" /* 7860 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8346 */;
+import useDefaultVariantIndex from "useDefaultVariantIndex" /* 8452 */;
+import OrbsIcon from "OrbsIcon" /* 8524 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8539 */;
+import _mod8541 from "module_8541" /* 8541 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 8556 */;
+import TagIcon from "TagIcon" /* 8557 */;
+import getProductName from "getProductName" /* 8559 */;
+import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 8560 */;
 import react from "react" /* 19 */;
-import IAPStore from "IAPStore" /* 6739 */;
+import IAPStore from "IAPStore" /* 6931 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -100,7 +100,7 @@ const memoResult = memo(ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) =
               tmp13 = cResult[13];
             }
             const discountPercentage2 = tmp13.discountPercentage;
-            const tmpResult = _mod8508;
+            const tmpResult = _mod8541;
             const balance = tmpResult.useFetchVirtualCurrencyBalance().balance;
             let tmp17 = null;
             if (null != tmp9) {

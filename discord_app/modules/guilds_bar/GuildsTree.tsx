@@ -1,6 +1,6 @@
-// === Module 5619: GuildsTree ===
+// === Module 5626: GuildsTree ===
 
-// Module 5619 (GuildsTree)
+// Module 5626 (GuildsTree)
 import _mod12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import size from "module_2" /* 2 */;
@@ -188,7 +188,7 @@ class GuildsTree {
   }
   sortedGuildNodes() {
     let items1;
-    const f136858 = (type) => {
+    const f137066 = (type) => {
       let items1;
       if (type.type === constants.GUILD) {
         const items = [type];
@@ -197,7 +197,7 @@ class GuildsTree {
         items1 = [];
       } else {
         children = type.children;
-        const mapped = children.map(f136858);
+        const mapped = children.map(f137066);
         items1 = mapped.flat();
       }
       return items1;
@@ -210,7 +210,7 @@ class GuildsTree {
       items1 = [];
     } else {
       children = root.children;
-      let mapped = children.map(f136858);
+      let mapped = children.map(f137066);
       items1 = mapped.flat();
     }
     return items1;

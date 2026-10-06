@@ -1,15 +1,15 @@
-// === Module 11896: JumpToPresentButton ===
+// === Module 11910: JumpToPresentButton ===
 
-// Module 11896 (JumpToPresentButton)
+// Module 11910 (JumpToPresentButton)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 4580 */;
+import useToken from "useToken" /* 4586 */;
 import react from "react" /* 19 */;
-import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9064 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
-import MessageStore from "MessageStore" /* 5110 */;
-import createStyles from "createStyles" /* 4890 */;
+import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9100 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
+import MessageStore from "MessageStore" /* 5116 */;
+import createStyles from "createStyles" /* 4896 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -232,9 +232,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
     }
     return tmp;
   });
-  const obj2 = channelId(9609);
+  const obj2 = channelId(9622);
   const isVoicePanelMounted = obj2.useIsVoicePanelMounted(channelId);
-  const obj3 = channelId(9609);
+  const obj3 = channelId(9622);
   const isVoicePanelOpen = obj3.useIsVoicePanelOpen(channelId);
   const items1 = [MessageStore];
   const obj4 = channelId(504);
@@ -258,10 +258,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((channelId) => {
   }
   const items3 = [tmp.container, tmp10];
   if (tmp5) {
-    screenIndex(11897);
-    tmp12Result = <tmp16 accessibilityLabel={stringResult} icon={screenIndex(11898)} onPress={onJumpToPresent} />;
+    screenIndex(11911);
+    tmp12Result = <tmp16 accessibilityLabel={stringResult} icon={screenIndex(11912)} onPress={onJumpToPresent} />;
   } else {
-    tmp12Result = jsx(tmp3(11899).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(11913).MemoedVoicePanelDismissChatButton, {});
   }
   return <View style={items3}>{tmp12Result}</View>;
 });

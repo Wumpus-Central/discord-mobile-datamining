@@ -1,6 +1,6 @@
-// === Module 11766: useDelayedSwapToActivityActionLeave ===
+// === Module 11780: useDelayedSwapToActivityActionLeave ===
 
-// Module 11766 (useDelayedSwapToActivityActionLeave)
+// Module 11780 (useDelayedSwapToActivityActionLeave)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

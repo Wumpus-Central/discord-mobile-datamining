@@ -1,15 +1,16 @@
-// === Module 7799: InteractionUtils ===
+// === Module 7810: InteractionUtils ===
 
-// Module 7799 (InteractionUtils)
+// Module 7810 (InteractionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Server from "Server" /* 1985 */;
-import interactionCallbackErrorReason from "interactionCallbackErrorReason" /* 5117 */;
-import InteractionActionCreators from "InteractionActionCreators" /* 7800 */;
-import _slicedToArray from "_slicedToArray" /* 7801 */;
+import interactionCallbackErrorReason from "interactionCallbackErrorReason" /* 5123 */;
+import InteractionTypes from "InteractionTypes" /* 5126 */;
+import InteractionActionCreators from "InteractionActionCreators" /* 7811 */;
+import _slicedToArray from "_slicedToArray" /* 7812 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import InteractionStore from "InteractionStore" /* 7600 */;
+import InteractionStore from "InteractionStore" /* 7611 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -79,7 +80,7 @@ let obj = function _executeMessageComponentInteraction() {
           onFailure(code, arg1) {
                 const tmp2 = null == arg1 && null != code;
                 if (tmp2) {
-                  obj = closure_1(message_flags[9]);
+                  obj = closure_1(message_flags[10]);
                   obj.sendClydeError(channel_id, code);
                 }
               }
@@ -119,7 +120,7 @@ let obj = function _executeMessageComponentInteraction() {
     }
     await "IconComponent";
     ({ componentType: c0, messageId: c1, messageFlags: c2, customId: c3, componentId: c4, applicationId: c5, channelId: c6, guildId: c7, localState: c8 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -308,7 +309,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
   if (state2 != null) {
     interactionType = state2.data.interactionType;
   }
-  const tmp19 = interactionType === Server.InteractionTypes.APPLICATION_COMMAND;
+  const tmp19 = interactionType === InteractionTypes.InteractionTypes.APPLICATION_COMMAND;
   const isCommandTypeResult = state.isCommandType();
   if (!tmp19) {
     if (isCommandTypeResult) {

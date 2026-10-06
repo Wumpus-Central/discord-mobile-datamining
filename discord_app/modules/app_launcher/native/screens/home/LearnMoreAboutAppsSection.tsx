@@ -1,20 +1,20 @@
-// === Module 11719: LearnMoreAboutAppsSection ===
+// === Module 11733: LearnMoreAboutAppsSection ===
 
-// Module 11719 (LearnMoreAboutAppsSection)
+// Module 11733 (LearnMoreAboutAppsSection)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import LinkingDefault from "Linking" /* 4565 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11720 */;
+import LinkingDefault from "Linking" /* 4571 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 11734 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 14255: Tag ===
+// === Module 14273: Tag ===
 
-// Module 14255 (Tag)
+// Module 14273 (Tag)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import TagGroupTypes from "TagGroupTypes" /* 14253 */;
-import TagGraphic from "TagGraphic" /* 14256 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import TagGroupTypes from "TagGroupTypes" /* 14271 */;
+import TagGraphic from "TagGraphic" /* 14274 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

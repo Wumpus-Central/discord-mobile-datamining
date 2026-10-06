@@ -1,9 +1,9 @@
-// === Module 13931: AccessibilityFocusView ===
+// === Module 13949: AccessibilityFocusView ===
 
-// Module 13931 (AccessibilityFocusView)
+// Module 13949 (AccessibilityFocusView)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import AccessibilityFocusNativeComponentDefault from "AccessibilityFocusNativeComponent" /* 13932 */;
+import AccessibilityFocusNativeComponentDefault from "AccessibilityFocusNativeComponent" /* 13950 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,6 +1,6 @@
-// === Module 9400: getDevicePixelRatio ===
+// === Module 9414: getDevicePixelRatio ===
 
-// Module 9400 (getDevicePixelRatio)
+// Module 9414 (getDevicePixelRatio)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");

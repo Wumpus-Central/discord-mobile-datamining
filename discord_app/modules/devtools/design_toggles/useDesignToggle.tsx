@@ -1,7 +1,7 @@
-// === Module 6012: useDesignToggle ===
+// === Module 6019: useDesignToggle ===
 
-// Module 6012 (useDesignToggle)
-import DesignTogglesStore from "DesignTogglesStore" /* 6013 */;
+// Module 6019 (useDesignToggle)
+import DesignTogglesStore from "DesignTogglesStore" /* 6020 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

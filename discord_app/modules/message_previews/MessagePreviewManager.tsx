@@ -1,18 +1,18 @@
-// === Module 15139: MessagePreviewManager ===
+// === Module 15154: MessagePreviewManager ===
 
-// Module 15139 (MessagePreviewManager)
+// Module 15154 (MessagePreviewManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Constants from "Constants" /* 1085 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import RemoteFetchData from "RemoteFetchData" /* 15140 */;
+import RemoteFetchData from "RemoteFetchData" /* 15155 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13529 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import MessagePreviewStore from "message_previews/MessagePreviewStore" /* 13545 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c2, c4, c5, c7, c8, closure_2, importDefault, set;
@@ -111,7 +111,7 @@ class MessagePreviewManager extends AutomaticLifecycleManager {
               closure_4 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else {
             let closure_1;

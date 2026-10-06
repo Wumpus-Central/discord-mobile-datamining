@@ -1,14 +1,14 @@
-// === Module 9969: EmojiPickerCategoriesUnicodeShortcutItem ===
+// === Module 9982: EmojiPickerCategoriesUnicodeShortcutItem ===
 
-// Module 9969 (EmojiPickerCategoriesUnicodeShortcutItem)
+// Module 9982 (EmojiPickerCategoriesUnicodeShortcutItem)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import cheapWorkletShallowEqual2 from "cheapWorkletShallowEqual" /* 9074 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import cheapWorkletShallowEqual2 from "cheapWorkletShallowEqual" /* 9110 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

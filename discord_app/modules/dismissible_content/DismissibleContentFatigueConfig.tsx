@@ -1,6 +1,6 @@
-// === Module 2041: DismissibleContentFatigueConfig ===
+// === Module 2040: DismissibleContentFatigueConfig ===
 
-// Module 2041 (DismissibleContentFatigueConfig)
+// Module 2040 (DismissibleContentFatigueConfig)
 import dismissible_content from "dismissible_content" /* 2036 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// === Module 7631: DoubleTapErrorToast ===
+// === Module 7642: DoubleTapErrorToast ===
 
-// Module 7631 (DoubleTapErrorToast)
+// Module 7642 (DoubleTapErrorToast)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import XSmallBoldIcon2 from "XSmallBoldIcon" /* 7632 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import XSmallBoldIcon2 from "XSmallBoldIcon" /* 7643 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -55,9 +55,9 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
   emojiName = emojiName.emojiName;
   const reason = emojiName.reason;
   const tmp = emojiName;
-  let obj = emojiName(4574);
+  let obj = emojiName(4580);
   const designSystemsNotificationComponents = obj.getDesignSystemsNotificationComponents("showDoubleTapErrorToast");
-  const obj2 = reason(4568);
+  const obj2 = reason(4574);
   if (designSystemsNotificationComponents) {
     let stringResult;
     const openMana = obj2.openMana;

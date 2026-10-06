@@ -1,16 +1,16 @@
-// === Module 17328: VoicePanelAnimatedButtonWrapper ===
+// === Module 17356: VoicePanelAnimatedButtonWrapper ===
 
-// Module 17328 (VoicePanelAnimatedButtonWrapper)
+// Module 17356 (VoicePanelAnimatedButtonWrapper)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import timing from "timing" /* 4891 */;
-import spring from "spring" /* 5597 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
+import timing from "timing" /* 4897 */;
+import spring from "spring" /* 5604 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+import createStyles from "createStyles" /* 4896 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 14304: activityInstanceConnectedParticipants ===
+// === Module 14322: activityInstanceConnectedParticipants ===
 
-// Module 14304 (activityInstanceConnectedParticipants)
-import transformUserDefault from "transformUser" /* 9032 */;
+// Module 14322 (activityInstanceConnectedParticipants)
+import transformUserDefault from "transformUser" /* 9065 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import UserStore from "UserStore" /* 1377 */;
-import Constants from "Constants" /* 5316 */;
+import Constants from "Constants" /* 5323 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

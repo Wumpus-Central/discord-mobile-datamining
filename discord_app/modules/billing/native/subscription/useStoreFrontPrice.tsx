@@ -1,9 +1,9 @@
-// === Module 8874: useStoreFrontPrice ===
+// === Module 8903: useStoreFrontPrice ===
 
-// Module 8874 (useStoreFrontPrice)
+// Module 8903 (useStoreFrontPrice)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

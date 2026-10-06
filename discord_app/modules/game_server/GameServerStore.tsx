@@ -1,10 +1,10 @@
-// === Module 7672: GameServerStore ===
+// === Module 7683: GameServerStore ===
 
-// Module 7672 (GameServerStore)
+// Module 7683 (GameServerStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getPowerupEntitlementPriceDefault from "getPowerupEntitlementPrice" /* 7673 */;
-import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 7674 */;
+import getPowerupEntitlementPriceDefault from "getPowerupEntitlementPrice" /* 7684 */;
+import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 7685 */;
 import size from "module_2" /* 2 */;
 
 let sku;

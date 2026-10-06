@@ -1,16 +1,16 @@
-// === Module 16448: useReplyActions ===
+// === Module 16488: useReplyActions ===
 
-// Module 16448 (useReplyActions)
+// Module 16488 (useReplyActions)
 import Fragment from "Fragment" /* 21 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import DraftStore from "DraftStore" /* 7031 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7259 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7813 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8029 */;
-import openEmojiPickerActionSheet2 from "openEmojiPickerActionSheet" /* 9866 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import DraftStore from "DraftStore" /* 7044 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7272 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 7824 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8039 */;
+import openEmojiPickerActionSheet2 from "openEmojiPickerActionSheet" /* 9879 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react_mod from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
@@ -262,7 +262,7 @@ export const useReplyActions = function useReplyActions(cResult) {
             obj2.feedItemActioned(obj3);
             const obj5 = { content, author: tmp, sendMessage, onPressEmoji: callback1 };
             const obj4 = ActionSheetActionCreatorsDefault;
-            obj4.openLazy(asyncRequire(16449, dependencyMap.paths), "ReactActionSheet", obj5);
+            obj4.openLazy(asyncRequire(16489, dependencyMap.paths), "ReactActionSheet", obj5);
           }
         }, items6),
       openEmojiPicker: callback2

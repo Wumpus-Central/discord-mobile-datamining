@@ -1,8 +1,8 @@
-// === Module 8532: OneDayFractionalNitroExperiment ===
+// === Module 8565: OneDayFractionalNitroExperiment ===
 
-// Module 8532 (OneDayFractionalNitroExperiment)
+// Module 8565 (OneDayFractionalNitroExperiment)
 import react from "react" /* 576 */;
-import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 8533 */;
+import PremiumGroupExperimentDefault from "PremiumGroupExperiment" /* 8566 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

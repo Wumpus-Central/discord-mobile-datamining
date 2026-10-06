@@ -1,6 +1,6 @@
-// === Module 7602: useIsFirstMessageInMediaPost ===
+// === Module 7613: useIsFirstMessageInMediaPost ===
 
-// Module 7602 (useIsFirstMessageInMediaPost)
+// Module 7613 (useIsFirstMessageInMediaPost)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,14 +1,14 @@
-// === Module 5409: MonitoringAgent ===
+// === Module 5416: MonitoringAgent ===
 
-// Module 5409 (MonitoringAgent)
+// Module 5416 (MonitoringAgent)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5410 */;
-import ReleaseChannels from "ReleaseChannels" /* 5411 */;
-import react_native2 from "react-native" /* 5412 */;
-import MonitoringAgentUtils from "MonitoringAgentUtils" /* 5413 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 5417 */;
+import ReleaseChannels from "ReleaseChannels" /* 5418 */;
+import react_native2 from "react-native" /* 5419 */;
+import MonitoringAgentUtils from "MonitoringAgentUtils" /* 5420 */;
 import size from "module_2" /* 2 */;
 
 let obj;
@@ -112,7 +112,7 @@ class MonitoringAgent {
       HermesBuiltin.arraySpread(items, self._metrics, 0);
       const HTTP = HTTPUtils.HTTP;
       const request = { url: Endpoints.METRICS_V2, body, retries: 1, rejectWithError: true };
-      body = { metrics: items, client_info: { built_at: "1791177533780", build_number: "35020000000000" } };
+      body = { metrics: items, client_info: { built_at: "1791264304835", build_number: "35020100000000" } };
       const postResult = HTTP.post(request);
       postResult.catch(() => {
         if (self._metrics.length + items.length < 100) {

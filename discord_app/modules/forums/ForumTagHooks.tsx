@@ -1,13 +1,13 @@
-// === Module 6778: ForumTagHooks ===
+// === Module 6788: ForumTagHooks ===
 
-// Module 6778 (ForumTagHooks)
+// Module 6788 (ForumTagHooks)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1096 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import ReportToModUtils from "ReportToModUtils" /* 6779 */;
+import ReportToModUtils from "ReportToModUtils" /* 6789 */;
 import react_mod from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

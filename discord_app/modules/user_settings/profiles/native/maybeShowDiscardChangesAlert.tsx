@@ -1,8 +1,8 @@
-// === Module 10659: maybeShowDiscardChangesAlert ===
+// === Module 10672: maybeShowDiscardChangesAlert ===
 
-// Module 10659 (maybeShowDiscardChangesAlert)
+// Module 10672 (maybeShowDiscardChangesAlert)
 import intl5 from "intl" /* 1126 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -37,8 +37,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
         },
       isDismissable: false
     };
-    const show = onConfirm(5708).show;
-    onConfirm(5708);
+    const show = onConfirm(5715).show;
+    onConfirm(5715);
     intl = intl5.intl;
     intl2 = intl5.intl;
     intl3 = intl5.intl;

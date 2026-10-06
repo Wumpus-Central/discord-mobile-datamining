@@ -1,11 +1,11 @@
-// === Module 9505: createAutocompleterResultForChannelId ===
+// === Module 9518: createAutocompleterResultForChannelId ===
 
-// Module 9505 (createAutocompleterResultForChannelId)
+// Module 9518 (createAutocompleterResultForChannelId)
 import Constants from "Constants" /* 1085 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import autocompleter_AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 5700 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import autocompleter_AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 5707 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

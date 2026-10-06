@@ -1,8 +1,8 @@
-// === Module 13604: useSelectedActiveStream ===
+// === Module 13620: useSelectedActiveStream ===
 
-// Module 13604 (useSelectedActiveStream)
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+// Module 13620 (useSelectedActiveStream)
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

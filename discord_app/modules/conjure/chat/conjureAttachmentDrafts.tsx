@@ -1,12 +1,12 @@
-// === Module 16723: conjureAttachmentDrafts ===
+// === Module 16744: conjureAttachmentDrafts ===
 
-// Module 16723 (conjureAttachmentDrafts)
+// Module 16744 (conjureAttachmentDrafts)
 import intl2 from "intl" /* 1126 */;
-import _modDef3723 from "module_3723" /* 3723 */;
-import ZustandStore from "ZustandStore" /* 4749 */;
-import ConjureTypes from "ConjureTypes" /* 6747 */;
+import _modDef3753 from "module_3753" /* 3753 */;
+import ZustandStore from "ZustandStore" /* 4755 */;
+import ConjureTypes from "ConjureTypes" /* 6757 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 12904 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 12923 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
@@ -17,7 +17,7 @@ let _require, closure_9;
 let closure_4;
 let hasOwnProperty;
 let metroRequire;
-const f126162 = () => {
+const f126323 = () => {
 
 };
 function _toPropertyKey(obj) {
@@ -79,7 +79,7 @@ function discardDraft(projectId, item10010) {
   }
   if (null != item10010.ref) {
     const promise = React3(projectId, item10010.ref.id);
-    promise.catch(f126162);
+    promise.catch(f126323);
   }
 }
 function discardProject(projectId, deleteFromWorker) {
@@ -189,7 +189,7 @@ function conjureAttachmentTooLargeText(contentType) {
   const intl = intl2.intl;
   const formatToPlainString = intl.formatToPlainString;
   const obj = { size: formatConjureAttachmentLimit(obj2.conjureAttachmentLimit(contentType)) };
-  const JZ59Bo = _modDef3723.JZ59Bo;
+  const JZ59Bo = _modDef3753.JZ59Bo;
   formatConjureAttachmentLimit = ConjureTypes.formatConjureAttachmentLimit;
   ConjureTypes;
   obj2 = ConjureTypes;
@@ -228,7 +228,7 @@ export const uploadConjureAttachment = function uploadConjureAttachment(override
     const intl = intl2.intl;
     formatToPlainString = intl.formatToPlainString;
     obj3 = { size: formatConjureAttachmentLimit(tmpResult2.conjureAttachmentLimit(contentType)) };
-    JZ59Bo = _modDef3723.JZ59Bo;
+    JZ59Bo = _modDef3753.JZ59Bo;
     formatConjureAttachmentLimit = ConjureTypes.formatConjureAttachmentLimit;
     ConjureTypes;
     tmpResult2 = ConjureTypes;
@@ -283,7 +283,7 @@ export const removeConjureAttachmentDraft = function removeConjureAttachmentDraf
     }
     if (null != found.ref) {
       const promise = React3(projectId, found.ref.id);
-      promise.catch(f126162);
+      promise.catch(f126323);
     }
     const found1 = tmp2.filter((localId) => localId.localId !== closure_0);
     const draftsByProject = zustandStore.getState().draftsByProject;

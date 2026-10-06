@@ -1,18 +1,18 @@
-// === Module 6543: FormPhoneOrEmail ===
+// === Module 6550: FormPhoneOrEmail ===
 
-// Module 6543 (FormPhoneOrEmail)
+// Module 6550 (FormPhoneOrEmail)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import FreeFormLabelDefault from "FreeFormLabel" /* 6425 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6451 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import FreeFormLabelDefault from "FreeFormLabel" /* 6432 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6458 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -369,7 +369,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
             class G {
               constructor() {
                 obj = { show: closure_5, alpha2: closure_0, countryCode: closure_1, onPress: closure_4 };
-                return jsx(f38117, obj);
+                return jsx(f38164, obj);
               }
             }
             class M {
@@ -403,7 +403,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
             class G {
               constructor() {
                 obj = { show: closure_5, alpha2: closure_0, countryCode: closure_1, onPress: closure_4 };
-                return jsx(f38117, obj);
+                return jsx(f38164, obj);
               }
             }
             class M {
@@ -465,7 +465,7 @@ const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled()
     cResult[19] = M;
     tmp22 = M;
   }
-  const tmpResult = tmp(6451);
+  const tmpResult = tmp(6458);
   const result = tmpResult.shouldShowCountryCodeSelector(tmp7, tmp15);
   cResult[13] = tmp7;
   cResult[14] = tmp15;

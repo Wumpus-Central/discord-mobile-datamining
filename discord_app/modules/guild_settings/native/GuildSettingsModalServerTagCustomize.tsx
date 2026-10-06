@@ -1,19 +1,19 @@
-// === Module 17759: GuildSettingsModalServerTagCustomize ===
+// === Module 17805: GuildSettingsModalServerTagCustomize ===
 
-// Module 17759 (GuildSettingsModalServerTagCustomize)
+// Module 17805 (GuildSettingsModalServerTagCustomize)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import GuildTagConstants from "GuildTagConstants" /* 7603 */;
-import GuildProfileStore from "GuildProfileStore" /* 9227 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9229 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import GuildTagConstants from "GuildTagConstants" /* 7614 */;
+import GuildProfileStore from "GuildProfileStore" /* 9262 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9264 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let c10;

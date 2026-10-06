@@ -1,17 +1,17 @@
-// === Module 11850: NitroLimitUpsellBar ===
+// === Module 11864: NitroLimitUpsellBar ===
 
-// Module 11850 (NitroLimitUpsellBar)
+// Module 11864 (NitroLimitUpsellBar)
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import WarningIcon from "WarningIcon" /* 4803 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import AssetRegistryDefault from "AssetRegistry" /* 9642 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9648 */;
+import WarningIcon from "WarningIcon" /* 4809 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import AssetRegistryDefault from "AssetRegistry" /* 9655 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9661 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

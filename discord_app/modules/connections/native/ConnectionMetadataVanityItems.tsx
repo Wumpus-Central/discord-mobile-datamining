@@ -1,6 +1,6 @@
-// === Module 11192: ConnectionMetadataVanityItems ===
+// === Module 11205: ConnectionMetadataVanityItems ===
 
-// Module 11192 (ConnectionMetadataVanityItems)
+// Module 11205 (ConnectionMetadataVanityItems)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
@@ -8,14 +8,14 @@ import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
 import NumberUtils from "NumberUtils" /* 1888 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ConnectionsUtils from "ConnectionsUtils" /* 6678 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11193 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 11194 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ConnectionsUtils from "ConnectionsUtils" /* 6685 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11206 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 11207 */;
 import react from "react" /* 19 */;
-import Constants from "Constants" /* 6679 */;
+import Constants from "Constants" /* 6686 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

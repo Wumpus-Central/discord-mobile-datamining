@@ -1,26 +1,26 @@
-// === Module 8794: AppLauncherUtils ===
+// === Module 8826: AppLauncherUtils ===
 
-// Module 8794 (AppLauncherUtils)
+// Module 8826 (AppLauncherUtils)
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import Server from "Server" /* 1985 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2016 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7030 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8514 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8726 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
-import getPlatformDefault from "getPlatform" /* 8933 */;
-import ApplicationDirectoryCollectionItemType from "ApplicationDirectoryCollectionItemType" /* 8940 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 8941 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 8547 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8758 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
+import getPlatformDefault from "getPlatform" /* 8962 */;
+import ApplicationDirectoryCollectionItemType from "ApplicationDirectoryCollectionItemType" /* 8969 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 8970 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8795 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 8827 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
-import AppLauncherStore from "AppLauncherStore" /* 8931 */;
+import AppLauncherStore from "AppLauncherStore" /* 8960 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

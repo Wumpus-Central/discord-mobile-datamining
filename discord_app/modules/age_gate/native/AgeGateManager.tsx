@@ -1,15 +1,15 @@
-// === Module 17444: AgeGateManager ===
+// === Module 17473: AgeGateManager ===
 
-// Module 17444 (AgeGateManager)
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import AgeGateUtils from "AgeGateUtils" /* 5100 */;
+// Module 17473 (AgeGateManager)
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import AgeGateUtils from "AgeGateUtils" /* 5106 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import AgeGateConstants from "AgeGateConstants" /* 1110 */;
 import Constants from "Constants" /* 1085 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c10;
@@ -50,6 +50,7 @@ class AgeGateManager extends AutomaticLifecycleManager {
   }
   handleAgeGateModalOpen(source) {
     source = source.source;
+    const channelId = source.channelId;
     let obj = ModalActionCreatorsDefault;
     obj.pushLazy(_asyncToGenerator(async () => {
       let c3;
@@ -62,7 +63,7 @@ class AgeGateManager extends AutomaticLifecycleManager {
         value.modalConfig = obj;
       }
       return value;
-    }), { source }, closure_7);
+    }), { source, channelId }, closure_7);
   }
   handleAgeGateModalClose() {
     const obj = ModalActionCreatorsDefault;

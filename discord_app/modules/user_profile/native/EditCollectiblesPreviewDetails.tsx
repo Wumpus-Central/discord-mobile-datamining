@@ -1,19 +1,19 @@
-// === Module 13013: EditCollectiblesPreviewDetails ===
+// === Module 13032: EditCollectiblesPreviewDetails ===
 
-// Module 13013 (EditCollectiblesPreviewDetails)
+// Module 13032 (EditCollectiblesPreviewDetails)
 import react_native from "react-native" /* 17 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import intl6 from "intl" /* 1126 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import DateUtils from "DateUtils" /* 4552 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7065 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 7844 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import DateUtils from "DateUtils" /* 4558 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7078 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 7855 */;
 import react from "react" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

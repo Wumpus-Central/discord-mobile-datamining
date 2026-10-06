@@ -1,12 +1,12 @@
-// === Module 15383: AppVersionSetting ===
+// === Module 15398: AppVersionSetting ===
 
-// Module 15383 (AppVersionSetting)
+// Module 15398 (AppVersionSetting)
 import intl2 from "intl" /* 1126 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import ClydeIcon from "ClydeIcon" /* 10547 */;
-import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15384 */;
+import ClydeIcon from "ClydeIcon" /* 10560 */;
+import CopyClientInfoSetting from "CopyClientInfoSetting" /* 15399 */;
 import react_native from "react-native" /* 1368 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const constants = react_native.getConstants();

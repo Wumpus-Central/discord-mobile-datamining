@@ -1,19 +1,19 @@
-// === Module 12067: EmojiSuggestionBarLarge ===
+// === Module 12082: EmojiSuggestionBarLarge ===
 
-// Module 12067 (EmojiSuggestionBarLarge)
+// Module 12082 (EmojiSuggestionBarLarge)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 4589 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import EmojiPickerListConstants from "EmojiPickerListConstants" /* 9869 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 9912 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9932 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12068 */;
+import native from "native" /* 4595 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import EmojiPickerListConstants from "EmojiPickerListConstants" /* 9882 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 9925 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 9945 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12083 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

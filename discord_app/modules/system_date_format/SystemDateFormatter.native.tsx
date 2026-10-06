@@ -1,8 +1,8 @@
-// === Module 4555: SystemDateFormatter ===
+// === Module 4561: SystemDateFormatter ===
 
-// Module 4555 (SystemDateFormatter)
+// Module 4561 (SystemDateFormatter)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_nativeDefault from "react-native" /* 4556 */;
+import react_nativeDefault from "react-native" /* 4562 */;
 import size from "module_2" /* 2 */;
 
 let __DiscordCreateDateFormatter;

@@ -1,18 +1,18 @@
-// === Module 10768: GiftingBadgeLevelUpProgress ===
+// === Module 10781: GiftingBadgeLevelUpProgress ===
 
-// Module 10768 (GiftingBadgeLevelUpProgress)
+// Module 10781 (GiftingBadgeLevelUpProgress)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import _modDef2589 from "module_2589" /* 2589 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7863 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10475 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10481 */;
+import _modDef2617 from "module_2617" /* 2617 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 7874 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10488 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10494 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -218,7 +218,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
                   const Text = Text_Text.Text;
                   const intl = intl2.intl;
                   const obj9 = { count: progress, threshold: tmp18 };
-                  const formatResult = intl.format(_modDef2589.iIpfQe, obj9);
+                  const formatResult = intl.format(_modDef2617.iIpfQe, obj9);
                   cResult[6] = tmp6;
                   cResult[7] = newTier;
                   cResult[8] = tmp8;
@@ -345,7 +345,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   items1[2] = tmp15Result;
   items3 = [metroRequire(View, obj3), ];
   const obj9 = { style: tmp.labels, children: hasOwnProperty(Text, obj10) };
-  obj10 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(_modDef2589.iIpfQe, { count: progress, threshold: tmp8 }) };
+  obj10 = { variant: "text-xs/normal", color: "text-muted", children: intl.format(_modDef2617.iIpfQe, { count: progress, threshold: tmp8 }) };
   Text = Text_Text.Text;
   intl = intl2.intl;
   items3[1] = hasOwnProperty(View, obj9);

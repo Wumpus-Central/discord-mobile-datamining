@@ -1,18 +1,18 @@
-// === Module 9494: InviteSuggestionsStore ===
+// === Module 9507: InviteSuggestionsStore ===
 
-// Module 9494 (InviteSuggestionsStore)
+// Module 9507 (InviteSuggestionsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import sortByMatchScoreDefault from "sortByMatchScore" /* 5703 */;
-import Constants2 from "Constants" /* 7226 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9483 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 9495 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7143 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 5710 */;
+import Constants2 from "Constants" /* 7239 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9496 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9508 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7156 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5583 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5590 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

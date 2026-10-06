@@ -1,10 +1,10 @@
-// === Module 8100: AgeVerificationCustomTab ===
+// === Module 8133: AgeVerificationCustomTab ===
 
-// Module 8100 (AgeVerificationCustomTab)
+// Module 8133 (AgeVerificationCustomTab)
 import LoggerDefault from "Logger" /* 3 */;
 import react from "react" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import react_nativeDefault from "react-native" /* 4852 */;
+import react_nativeDefault from "react-native" /* 4858 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;

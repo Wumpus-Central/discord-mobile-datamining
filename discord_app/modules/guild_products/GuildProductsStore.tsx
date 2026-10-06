@@ -1,11 +1,11 @@
-// === Module 13519: GuildProductsStore ===
+// === Module 13535: GuildProductsStore ===
 
-// Module 13519 (GuildProductsStore)
+// Module 13535 (GuildProductsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
-import SecondaryIndexMap from "SecondaryIndexMap" /* 4504 */;
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4510 */;
 import size from "module_2" /* 2 */;
 
 let closure_3, closure_4, closure_5;

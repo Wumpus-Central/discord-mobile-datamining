@@ -1,7 +1,7 @@
-// === Module 8989: leaveCurrentEmbeddedActivity ===
+// === Module 9022: leaveCurrentEmbeddedActivity ===
 
-// Module 8989 (leaveCurrentEmbeddedActivity)
-import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 8990 */;
+// Module 9022 (leaveCurrentEmbeddedActivity)
+import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 9023 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
 import size from "module_2" /* 2 */;
 

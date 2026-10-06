@@ -1,16 +1,16 @@
-// === Module 15997: HappeningNowCardUnifiedVC ===
+// === Module 16036: HappeningNowCardUnifiedVC ===
 
-// Module 15997 (HappeningNowCardUnifiedVC)
+// Module 16036 (HappeningNowCardUnifiedVC)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 15988 */;
-import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 15998 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16010 */;
-import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16011 */;
+import findActivityWithMostParticipantsDefault from "findActivityWithMostParticipants" /* 16027 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 16037 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16049 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16050 */;
 import react from "react" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

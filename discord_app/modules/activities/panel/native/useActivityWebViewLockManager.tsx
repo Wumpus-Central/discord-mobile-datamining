@@ -1,7 +1,7 @@
-// === Module 17166: useActivityWebViewLockManager ===
+// === Module 17195: useActivityWebViewLockManager ===
 
-// Module 17166 (useActivityWebViewLockManager)
-import native from "native" /* 4589 */;
+// Module 17195 (useActivityWebViewLockManager)
+import native from "native" /* 4595 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
@@ -70,7 +70,7 @@ export default function useActivityWebViewLockManager() {
       }, items);
       const items1 = [id, tmp4];
       const layoutEffect = getCanRender.useLayoutEffect(() => {
-        const f153639 = () => {
+        const f153879 = () => {
           let tmp6;
           let tmp8;
           const tmp2 = closure_1_2[Symbol.iterator]();
@@ -92,12 +92,12 @@ export default function useActivityWebViewLockManager() {
         };
         if (null == id) {
           let resolved = Promise.resolve();
-          id = resolved.then(f153639);
+          id = resolved.then(f153879);
         }
         return () => {
           if (null == closure_0) {
             const resolved = Promise.resolve();
-            closure_0 = resolved.then(f153639);
+            closure_0 = resolved.then(f153879);
           }
         };
       }, items1);

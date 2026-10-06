@@ -1,18 +1,18 @@
-// === Module 11737: NoPermsState ===
+// === Module 11751: NoPermsState ===
 
-// Module 11737 (NoPermsState)
+// Module 11751 (NoPermsState)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11665 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11679 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -32,7 +32,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = obj.c(10);
   const tmp4 = closure_7();
   const obj2 = shared;
-  const tmp5Result = importDefault(obj2.isThemeLight(useThemeDefault()) ? 11738 : 11739);
+  const tmp5Result = importDefault(obj2.isThemeLight(useThemeDefault()) ? 11752 : 11753);
   const tmpResult = AppLauncherNativeUtils;
   const logAppLauncherEmptyStateView = tmpResult.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   if (cResult[0] === tmp5Result) {
@@ -90,7 +90,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let items;
   const tmp = closure_7();
   const obj = shared;
-  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 11738 : 11739);
+  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 11752 : 11753);
   const tmp2Result = AppLauncherNativeUtils;
   const logAppLauncherEmptyStateView = tmp2Result.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   const obj2 = { style: tmp.container, children: items };

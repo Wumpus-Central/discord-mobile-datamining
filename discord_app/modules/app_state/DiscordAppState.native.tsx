@@ -1,6 +1,6 @@
-// === Module 10015: DiscordAppState ===
+// === Module 10028: DiscordAppState ===
 
-// Module 10015 (DiscordAppState)
+// Module 10028 (DiscordAppState)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import AppStateStore from "AppStateStore" /* 1986 */;

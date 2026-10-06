@@ -1,6 +1,6 @@
-// === Module 8415: SimilarGamesConstants ===
+// === Module 8448: SimilarGamesConstants ===
 
-// Module 8415 (SimilarGamesConstants)
+// Module 8448 (SimilarGamesConstants)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["700136079562375258", "1402418693958275202", "1402418696126992445", "1417993715611467826"]);

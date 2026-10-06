@@ -1,28 +1,28 @@
-// === Module 13416: PremiumGuildPreview ===
+// === Module 13435: PremiumGuildPreview ===
 
-// Module 13416 (PremiumGuildPreview)
+// Module 13435 (PremiumGuildPreview)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
-import shared from "shared" /* 4729 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import GuildIcon from "GuildIcon" /* 5971 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 7666 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13417 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 13418 */;
-import AssetRegistryDefault3 from "AssetRegistry" /* 13419 */;
-import AssetRegistryDefault4 from "AssetRegistry" /* 13420 */;
-import AssetRegistryDefault5 from "AssetRegistry" /* 13421 */;
-import AssetRegistryDefault6 from "AssetRegistry" /* 13422 */;
-import AssetRegistryDefault7 from "AssetRegistry" /* 13423 */;
-import AssetRegistryDefault8 from "AssetRegistry" /* 13424 */;
+import shared from "shared" /* 4735 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import GuildIcon from "GuildIcon" /* 5978 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 7677 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13436 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 13437 */;
+import AssetRegistryDefault3 from "AssetRegistry" /* 13438 */;
+import AssetRegistryDefault4 from "AssetRegistry" /* 13439 */;
+import AssetRegistryDefault5 from "AssetRegistry" /* 13440 */;
+import AssetRegistryDefault6 from "AssetRegistry" /* 13441 */;
+import AssetRegistryDefault7 from "AssetRegistry" /* 13442 */;
+import AssetRegistryDefault8 from "AssetRegistry" /* 13443 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

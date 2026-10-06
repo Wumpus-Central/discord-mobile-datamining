@@ -1,15 +1,15 @@
-// === Module 10546: SocialLayerStorefrontBadges ===
+// === Module 10559: SocialLayerStorefrontBadges ===
 
-// Module 10546 (SocialLayerStorefrontBadges)
+// Module 10559 (SocialLayerStorefrontBadges)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ClydeIcon2 from "ClydeIcon" /* 10547 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ClydeIcon2 from "ClydeIcon" /* 10560 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import PlatformUtils_mod from "PlatformUtils" /* 1369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

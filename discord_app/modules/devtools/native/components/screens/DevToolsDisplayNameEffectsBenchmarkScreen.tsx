@@ -1,25 +1,25 @@
-// === Module 15609: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 15623: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 15609 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 15623 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import DisplayNameStylesConstants from "DisplayNameStylesConstants" /* 1395 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1396 */;
-import _modDef2883 from "module_2883" /* 2883 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10633 */;
-import types from "types" /* 10634 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10636 */;
-import _mod10640 from "module_10640" /* 10640 */;
+import _modDef2911 from "module_2911" /* 2911 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10646 */;
+import types from "types" /* 10647 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10649 */;
+import _mod10653 from "module_10653" /* 10653 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -36,7 +36,7 @@ function effectName(arg0) {
   const string = intl.string;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef2883.OpWJ3f;
+    OpWJ3f = _modDef2911.OpWJ3f;
   }
   return string(OpWJ3f);
 }
@@ -467,7 +467,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
   const memo1 = first1.useMemo(() => {
-    const obj = _mod10640;
+    const obj = _mod10653;
     return obj.splitGraphemes(memo).length;
   }, items3);
   const items4 = [first];
@@ -590,7 +590,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
               const length = String(Math.max(run.params.rowCount - 1, 0)).length;
               const StringResult = String(id);
               const padStartResult = StringResult.padStart(length, "0");
-              const obj3 = _mod10640;
+              const obj3 = _mod10653;
               const splitGraphemesResult = obj3.splitGraphemes(name);
               sum = padStartResult;
               if (splitGraphemesResult.length > length) {

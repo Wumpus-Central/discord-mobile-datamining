@@ -1,15 +1,15 @@
-// === Module 11845: ForLaterMessageRow ===
+// === Module 11859: ForLaterMessageRow ===
 
-// Module 11845 (ForLaterMessageRow)
+// Module 11859 (ForLaterMessageRow)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import RowGeneratorDefault from "RowGenerator" /* 7591 */;
-import ChatItemDefault from "ChatItem" /* 8303 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import RowGeneratorDefault from "RowGenerator" /* 7602 */;
+import ChatItemDefault from "ChatItem" /* 8336 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -40,8 +40,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
   const tmp6 = useThemeDefault();
   if (cResult[0] !== tmp6) {
     let obj2 = { seeMoreLabelColor: nativeDefault.colors.TEXT_DEFAULT };
-    const createNativeStyleProperties = lineClamp(4890).createNativeStyleProperties;
-    lineClamp(4890);
+    const createNativeStyleProperties = lineClamp(4896).createNativeStyleProperties;
+    lineClamp(4896);
     const tmp9 = createNativeStyleProperties(obj2)(tmp6);
     cResult[0] = tmp6;
     cResult[1] = tmp9;
@@ -91,7 +91,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function(arg0) {
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       const self = this;
       const self2 = this;
-      let obj3 = new tmp5(7591)();
+      let obj3 = new tmp5(7602)();
       const obj4 = { renderEmbeds: tmp12, inlineEmbedMedia: tmp14, inlineAttachmentMedia: tmp16, renderReplies: false, renderExecutedCommands: false, animateEmoji: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, ignoreMentioned: true, shouldDisableInteractiveComponents: true };
       obj3.setOptions(obj4);
       cResult[8] = obj3;

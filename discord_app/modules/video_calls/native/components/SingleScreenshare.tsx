@@ -1,14 +1,14 @@
-// === Module 9707: SingleScreenshare ===
+// === Module 9720: SingleScreenshare ===
 
-// Module 9707 (SingleScreenshare)
+// Module 9720 (SingleScreenshare)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5091 */;
-import useMountEffectDefault from "useMountEffect" /* 5590 */;
-import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 9708 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5097 */;
+import useMountEffectDefault from "useMountEffect" /* 5597 */;
+import ScreenshareParticipantDefault from "ScreenshareParticipant" /* 9721 */;
 import react from "react" /* 19 */;
-import ChannelCallStore from "ChannelCallStore" /* 9050 */;
-import createStyles from "createStyles" /* 4890 */;
+import ChannelCallStore from "ChannelCallStore" /* 9086 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

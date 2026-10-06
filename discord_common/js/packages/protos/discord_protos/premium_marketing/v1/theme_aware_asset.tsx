@@ -1,6 +1,6 @@
-// === Module 10411: theme_aware_asset ===
+// === Module 10424: theme_aware_asset ===
 
-// Module 10411 (theme_aware_asset)
+// Module 10424 (theme_aware_asset)
 import _mod1198 from "module_1198" /* 1198 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;

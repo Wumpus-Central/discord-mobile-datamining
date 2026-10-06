@@ -1,6 +1,6 @@
-// === Module 11387: _slicedToArray ===
+// === Module 11400: _slicedToArray ===
 
-// Module 11387 (_slicedToArray)
+// Module 11400 (_slicedToArray)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

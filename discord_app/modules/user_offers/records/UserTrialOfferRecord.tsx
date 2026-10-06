@@ -1,9 +1,9 @@
-// === Module 6963: UserTrialOfferRecord ===
+// === Module 6976: UserTrialOfferRecord ===
 
-// Module 6963 (UserTrialOfferRecord)
+// Module 6976 (UserTrialOfferRecord)
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import Record from "Record" /* 1392 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 6964 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 6977 */;
 import size from "module_2" /* 2 */;
 
 let closure_1 = PremiumConstants.PREMIUM_TIER_2_REFERRAL_TRIAL_ID;

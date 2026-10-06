@@ -1,23 +1,23 @@
-// === Module 12076: ChatInputGuardWrapper ===
+// === Module 12091: ChatInputGuardWrapper ===
 
-// Module 12076 (ChatInputGuardWrapper)
+// Module 12091 (ChatInputGuardWrapper)
 import Fragment from "Fragment" /* 21 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4496 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4515 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import MemberVerificationUtils from "MemberVerificationUtils" /* 5842 */;
-import PhoneConstants from "PhoneConstants" /* 6540 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9434 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11019 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11186 */;
-import ChatInputConstants from "ChatInputConstants" /* 11576 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4502 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4521 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import MemberVerificationUtils from "MemberVerificationUtils" /* 5849 */;
+import PhoneConstants from "PhoneConstants" /* 6547 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9447 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11032 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11199 */;
+import ChatInputConstants from "ChatInputConstants" /* 11589 */;
 import react from "react" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4510 */;
+import LurkingStore from "LurkingStore" /* 4516 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5570 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5577 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

@@ -1,16 +1,16 @@
-// === Module 4732: useColorThemeBackground ===
+// === Module 4738: useColorThemeBackground ===
 
-// Module 4732 (useColorThemeBackground)
+// Module 4738 (useColorThemeBackground)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import GuildThemePresets from "GuildThemePresets" /* 4733 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4735 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4788 */;
+import GuildThemePresets from "GuildThemePresets" /* 4739 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 4741 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4794 */;
 import react from "react" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4697 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -121,7 +121,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let gradientPreset;
   let stateFromStores;
   let theme;
-  const tmp = stateFromStores(4735)();
+  const tmp = stateFromStores(4741)();
   _require = tmp;
   const items = [ThemeStore];
   const obj = require("useStateFromStores");

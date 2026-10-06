@@ -1,18 +1,18 @@
-// === Module 9954: EmojiPickerCategories ===
+// === Module 9967: EmojiPickerCategories ===
 
-// Module 9954 (EmojiPickerCategories)
+// Module 9967 (EmojiPickerCategories)
 import nativeDefault from "native" /* 587 */;
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1229 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4856 */;
-import EmojiPickerConstants from "EmojiPickerConstants" /* 5642 */;
-import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9955 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4862 */;
+import EmojiPickerConstants from "EmojiPickerConstants" /* 5649 */;
+import EmojiPickerCategoriesItemDefault from "EmojiPickerCategoriesItem" /* 9968 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 let set;

@@ -1,9 +1,9 @@
-// === Module 11180: useGetOrFetchApplicationBatched ===
+// === Module 11193: useGetOrFetchApplicationBatched ===
 
-// Module 11180 (useGetOrFetchApplicationBatched)
+// Module 11193 (useGetOrFetchApplicationBatched)
 import Timers from "Timers" /* 2046 */;
 import react from "react" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

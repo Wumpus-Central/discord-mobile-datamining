@@ -1,6 +1,6 @@
-// === Module 8259: AgeVerificationExpressiveModalEverywhereExperiment ===
+// === Module 8292: AgeVerificationExpressiveModalEverywhereExperiment ===
 
-// Module 8259 (AgeVerificationExpressiveModalEverywhereExperiment)
+// Module 8292 (AgeVerificationExpressiveModalEverywhereExperiment)
 import react from "react" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

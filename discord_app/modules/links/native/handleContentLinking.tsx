@@ -1,8 +1,8 @@
-// === Module 11202: handleContentLinking ===
+// === Module 11215: handleContentLinking ===
 
-// Module 11202 (handleContentLinking)
+// Module 11215 (handleContentLinking)
 import Constants from "Constants" /* 1085 */;
-import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 5948 */;
+import PostConnectionCallbackStore from "PostConnectionCallbackStore" /* 5955 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
@@ -13,7 +13,7 @@ let obj = function _handleContentLinking() {
     let c2;
     let c3;
     let c4;
-    let tmp42;
+    let tmp44;
     let closure_0 = arg0;
     if (c4 === 2) {
       c4 = 3;
@@ -34,6 +34,7 @@ let obj = function _handleContentLinking() {
         let waitForConnection;
         let closure_9;
         let skipMessageFetch;
+        let isAppStartupNavigation;
         c4 = 2;
         if (0 === c3) {
           if (arg0 === 1) {
@@ -54,9 +55,10 @@ let obj = function _handleContentLinking() {
             waitForConnection = undefined;
             closure_9 = undefined;
             skipMessageFetch = undefined;
+            isAppStartupNavigation = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === c3) {
@@ -78,8 +80,9 @@ let obj = function _handleContentLinking() {
               const tmp10 = undefined === waitForConnection || waitForConnection;
               closure_9 = tmp10;
               skipMessageFetch = c2.skipMessageFetch;
-              const tmp14 = closure_9;
-              if (tmp14) {
+              isAppStartupNavigation = c2.isAppStartupNavigation;
+              const tmp15 = closure_9;
+              if (tmp15) {
                 if (closure_130_6 != null) {
                   closure_130_6();
                 }
@@ -88,7 +91,7 @@ let obj = function _handleContentLinking() {
                 const promise = new Promise((arg0, arg1) => {
                   closure_0 = arg0;
                   closure_1 = arg1;
-                  function o() {
+                  function l() {
                     const error = new Error("superseded");
                     return closure_1(error);
                   }
@@ -121,8 +124,8 @@ let obj = function _handleContentLinking() {
               obj = { value, done: true };
               return obj;
             }
-            const tmp30 = null != c1 && null != c4;
-            if (tmp30) {
+            const tmp32 = null != c1 && null != c4;
+            if (tmp32) {
               const obj5 = closure_130_1(closure_130_2[6]);
               obj5.setSelectedSummary(c1, c4);
             }
@@ -130,21 +133,21 @@ let obj = function _handleContentLinking() {
             return { value: "IconComponent", done: null };
           }
           if (safe) {
-            const obj9 = { navigationReplace, openChannel: true, skipMessageFetch };
+            const obj9 = { navigationReplace, openChannel: true, skipMessageFetch, isAppStartupNavigation };
             c3 = 3;
             c4 = 1;
-            const obj10 = { value: tmp42(closure_130_5.CHANNEL(c0, c1, c3), obj9), done: false };
-            tmp42 = closure_130_1(closure_130_2[4]);
+            const obj10 = { value: tmp44(closure_130_5.CHANNEL(c0, c1, c3), obj9), done: false };
+            tmp44 = closure_130_1(closure_130_2[4]);
             return obj10;
           } else {
-            const obj11 = { navigationReplace, openChannel: true, skipMessageFetch };
+            const obj11 = { navigationReplace, openChannel: true, skipMessageFetch, isAppStartupNavigation };
             const obj3 = closure_130_0(closure_130_2[5]);
             obj3.transitionTo(closure_130_5.CHANNEL(c0, c1, c3), obj11);
           }
         }
-      } catch (tmp56) {
+      } catch (tmp59) {
         c4 = 3;
-        throw tmp56;
+        throw tmp59;
       }
     }
   });

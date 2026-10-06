@@ -1,9 +1,9 @@
-// === Module 9769: ChatViewWrapper ===
+// === Module 9782: ChatViewWrapper ===
 
-// Module 9769 (ChatViewWrapper)
-import ChatViewWrapperAnimatedKeyboardDefault from "ChatViewWrapperAnimatedKeyboard" /* 9771 */;
-import ChatViewWrapperBaseDefault from "ChatViewWrapperBase" /* 9782 */;
-import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 9770 */;
+// Module 9782 (ChatViewWrapper)
+import ChatViewWrapperAnimatedKeyboardDefault from "ChatViewWrapperAnimatedKeyboard" /* 9784 */;
+import ChatViewWrapperBaseDefault from "ChatViewWrapperBase" /* 9795 */;
+import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 9783 */;
 import size from "module_2" /* 2 */;
 
 let importDefaultResult;

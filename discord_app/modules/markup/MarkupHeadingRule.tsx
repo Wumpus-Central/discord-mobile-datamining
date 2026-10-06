@@ -1,6 +1,6 @@
-// === Module 5808: MarkupHeadingRule ===
+// === Module 5815: MarkupHeadingRule ===
 
-// Module 5808 (MarkupHeadingRule)
+// Module 5815 (MarkupHeadingRule)
 import _mod1936 from "module_1936" /* 1936 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 4560: handleURL ===
+// === Module 4566: handleURL ===
 
-// Module 4560 (handleURL)
+// Module 4566 (handleURL)
 import LoggerDefault from "Logger" /* 3 */;
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ActionSheetStore from "ActionSheetStore" /* 4561 */;
+import ActionSheetStore from "ActionSheetStore" /* 4567 */;
 import size from "module_2" /* 2 */;
 
 function sanitizeURLPart(str) {
@@ -317,7 +317,7 @@ let obj = function _handleURL() {
           presentFailedToast(intl.string(closure_2_0(closure_2_2[11]).t.XiqzAp));
         }
       };
-      return "Set";
+      return "Reflect";
     })();
     let nextResult = iter.next();
     return iter;

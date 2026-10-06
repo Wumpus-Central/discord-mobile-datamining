@@ -1,12 +1,12 @@
-// === Module 7529: ForumPostUnreadCountStore ===
+// === Module 7540: ForumPostUnreadCountStore ===
 
-// Module 7529 (ForumPostUnreadCountStore)
+// Module 7540 (ForumPostUnreadCountStore)
 import _modDef38 from "module_38" /* 38 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 5692 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 5699 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import size from "module_2" /* 2 */;
 
 let closure_5;

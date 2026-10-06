@@ -1,18 +1,18 @@
-// === Module 13298: Footer ===
+// === Module 13317: Footer ===
 
-// Module 13298 (Footer)
+// Module 13317 (Footer)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
-import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13299 */;
-import AssetRegistryDefault from "AssetRegistry" /* 13300 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
+import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment" /* 13318 */;
+import AssetRegistryDefault from "AssetRegistry" /* 13319 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

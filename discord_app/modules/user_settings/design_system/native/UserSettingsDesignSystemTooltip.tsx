@@ -1,19 +1,19 @@
-// === Module 15670: UserSettingsDesignSystemTooltip ===
+// === Module 15684: UserSettingsDesignSystemTooltip ===
 
-// Module 15670 (UserSettingsDesignSystemTooltip)
+// Module 15684 (UserSettingsDesignSystemTooltip)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import components_Button_Button from "components/Button/Button" /* 5594 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 6619 */;
-import LayerScope2 from "LayerScope" /* 6651 */;
-import TableSwitchRow from "TableSwitchRow" /* 6698 */;
-import DeviceOrientation from "DeviceOrientation" /* 8008 */;
-import useTooltip from "useTooltip" /* 9883 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import components_Button_Button from "components/Button/Button" /* 5601 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 6626 */;
+import LayerScope2 from "LayerScope" /* 6658 */;
+import TableSwitchRow from "TableSwitchRow" /* 6705 */;
+import DeviceOrientation from "DeviceOrientation" /* 8018 */;
+import useTooltip from "useTooltip" /* 9896 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

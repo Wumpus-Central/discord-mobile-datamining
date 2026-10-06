@@ -1,35 +1,35 @@
-// === Module 4696: client_themes/ClientThemesUtils ===
+// === Module 4702: client_themes/ClientThemesUtils ===
 
-// Module 4696 (client_themes/ClientThemesUtils)
+// Module 4702 (client_themes/ClientThemesUtils)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import ClientThemesTypes from "ClientThemesTypes" /* 1241 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import utils_ColorDefault from "utils/Color" /* 4728 */;
-import shared from "shared" /* 4729 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4732 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 4788 */;
-import useThemeDefault from "useTheme" /* 4791 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import utils_ColorDefault from "utils/Color" /* 4734 */;
+import shared from "shared" /* 4735 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4738 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 4794 */;
+import useThemeDefault from "useTheme" /* 4797 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4697 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4703 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1238 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 let dependencyMap, importDefault;
 
-const f89123 = (stop) => stop.stop;
-const f89124 = (item) => nativeDefault.unsafe_rawColors[item.token];
+const f89260 = (stop) => stop.stop;
+const f89261 = (item) => nativeDefault.unsafe_rawColors[item.token];
 function getGradientColorByPercentage(type, MID) {
   let colors;
   let colors2;
   if (type.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     ({ colors, colors: colors2 } = type);
-    const mapped = colors.map(f89124);
-    const mapped1 = colors2.map(f89123);
+    const mapped = colors.map(f89261);
+    const mapped1 = colors2.map(f89260);
     const obj6 = _modDef683;
     const scaleResult = obj6.scale(mapped);
     const obj8 = scaleResult.domain(mapped1)(MID);
@@ -329,8 +329,8 @@ function getClientThemesGradientColorByPercentage(arg0, arg1) {
   let colors;
   let colors2;
   ({ colors, colors: colors2 } = arg0);
-  const mapped = colors.map(f89124);
-  const mapped1 = colors2.map(f89123);
+  const mapped = colors.map(f89261);
+  const mapped1 = colors2.map(f89260);
   const obj = _modDef683;
   const scaleResult = obj.scale(mapped);
   obj3 = scaleResult.domain(mapped1)(arg1);
@@ -339,7 +339,7 @@ function getClientThemesGradientColorByPercentage(arg0, arg1) {
 }
 function getClientThemesGradientHexColors(colors) {
   colors = colors.colors;
-  return colors.map(f89124);
+  return colors.map(f89261);
 }
 function getGradientValue(theme, END) {
   return calculateGradientValueWithOpacity(theme, END, theme.theme);
@@ -368,7 +368,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
       }
       if (gradient.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
         const colors = gradient.colors;
-        mapped = colors.map(f89124);
+        mapped = colors.map(f89261);
       } else {
         mapped = gradient.customThemeSettings.colors;
       }

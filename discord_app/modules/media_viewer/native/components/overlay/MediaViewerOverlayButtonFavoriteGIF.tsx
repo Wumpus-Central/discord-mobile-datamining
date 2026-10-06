@@ -1,13 +1,13 @@
-// === Module 12767: MediaViewerOverlayButtonFavoriteGIF ===
+// === Module 12782: MediaViewerOverlayButtonFavoriteGIF ===
 
-// Module 12767 (MediaViewerOverlayButtonFavoriteGIF)
+// Module 12782 (MediaViewerOverlayButtonFavoriteGIF)
 import Fragment from "Fragment" /* 21 */;
 import intl3 from "intl" /* 1126 */;
 import frecency_user_settings from "frecency_user_settings" /* 1232 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10090 */;
-import GIFPickerUtils from "GIFPickerUtils" /* 10092 */;
-import GifIcon from "GifIcon" /* 10105 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10103 */;
+import GIFPickerUtils from "GIFPickerUtils" /* 10105 */;
+import GifIcon from "GifIcon" /* 10118 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;

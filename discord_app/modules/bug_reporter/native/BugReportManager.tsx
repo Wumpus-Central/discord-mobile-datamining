@@ -1,13 +1,13 @@
-// === Module 12538: BugReportManager ===
+// === Module 12553: BugReportManager ===
 
-// Module 12538 (BugReportManager)
+// Module 12553 (BugReportManager)
 import Constants from "Constants" /* 1085 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 5099 */;
-import react_nativeDefault from "react-native" /* 7282 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 5105 */;
+import react_nativeDefault from "react-native" /* 7295 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react_native from "react-native" /* 17 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1357 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c2, c3, closure_3;

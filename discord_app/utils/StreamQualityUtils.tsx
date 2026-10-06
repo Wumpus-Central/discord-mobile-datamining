@@ -1,21 +1,21 @@
-// === Module 9102: StreamQualityUtils ===
+// === Module 8101: StreamQualityUtils ===
 
-// Module 9102 (StreamQualityUtils)
+// Module 8101 (StreamQualityUtils)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import Constants2 from "Constants" /* 4915 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5026 */;
+import Constants2 from "Constants" /* 4921 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5032 */;
 import react from "react" /* 19 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4936 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import UserStore from "UserStore" /* 1377 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 4937 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4943 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

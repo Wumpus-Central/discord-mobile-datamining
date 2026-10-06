@@ -1,8 +1,8 @@
-// === Module 3657: ? ===
+// === Module 3687: ? ===
 
-// Module 3657
+// Module 3687
 import AssetJsonUtils from "AssetJsonUtils" /* 1130 */;
-import AssetRegistry from "AssetRegistry" /* 3658 */;
+import AssetRegistry from "AssetRegistry" /* 3688 */;
 import module_1165_mod from "module_1165" /* 1165 */;
 import size from "module_2" /* 2 */;
 

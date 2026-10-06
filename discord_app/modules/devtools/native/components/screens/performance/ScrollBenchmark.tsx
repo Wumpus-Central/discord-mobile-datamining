@@ -1,10 +1,10 @@
-// === Module 15617: ScrollBenchmark ===
+// === Module 15631: ScrollBenchmark ===
 
-// Module 15617 (ScrollBenchmark)
+// Module 15631 (ScrollBenchmark)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import TableRow2 from "TableRow" /* 5993 */;
-import useFrameMonitorDefault from "useFrameMonitor" /* 15614 */;
+import TableRow2 from "TableRow" /* 6000 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 15628 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

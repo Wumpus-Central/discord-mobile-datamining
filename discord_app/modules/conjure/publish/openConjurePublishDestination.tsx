@@ -1,15 +1,15 @@
-// === Module 16615: openConjurePublishDestination ===
+// === Module 16653: openConjurePublishDestination ===
 
-// Module 16615 (openConjurePublishDestination)
+// Module 16653 (openConjurePublishDestination)
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import transitionToGuild from "transitionToGuild" /* 6845 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 8986 */;
-import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 8994 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import transitionToGuild from "transitionToGuild" /* 6855 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9019 */;
+import canLaunchContextlessFrame from "canLaunchContextlessFrame" /* 9027 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 7740: VoiceSessionSystemMessage ===
+// === Module 7751: VoiceSessionSystemMessage ===
 
-// Module 7740 (VoiceSessionSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7619 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7621 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7623 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7639 */;
+// Module 7751 (VoiceSessionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7630 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7632 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7634 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7650 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import size from "module_2" /* 2 */;
 

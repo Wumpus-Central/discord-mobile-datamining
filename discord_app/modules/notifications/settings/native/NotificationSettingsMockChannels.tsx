@@ -1,16 +1,16 @@
-// === Module 12511: NotificationSettingsMockChannels ===
+// === Module 12526: NotificationSettingsMockChannels ===
 
-// Module 12511 (NotificationSettingsMockChannels)
+// Module 12526 (NotificationSettingsMockChannels)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ReadStateConstants from "ReadStateConstants" /* 5072 */;
-import TextIcon2 from "TextIcon" /* 5864 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12017 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ReadStateConstants from "ReadStateConstants" /* 5078 */;
+import TextIcon2 from "TextIcon" /* 5871 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 12032 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

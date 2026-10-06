@@ -1,16 +1,16 @@
-// === Module 10878: OrbsBadgeCoachmark ===
+// === Module 10891: OrbsBadgeCoachmark ===
 
-// Module 10878 (OrbsBadgeCoachmark)
+// Module 10891 (OrbsBadgeCoachmark)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
-import useCoachmark from "useCoachmark" /* 9882 */;
-import _modDef10879 from "module_10879" /* 10879 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
+import useCoachmark from "useCoachmark" /* 9895 */;
+import _modDef10892 from "module_10892" /* 10892 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -30,7 +30,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = obj.c(6);
   const tmp3 = closure_9();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef10879 };
+    const obj2 = { uri: _modDef10892 };
     cResult[0] = obj2;
     first = obj2;
   } else {
@@ -58,8 +58,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   tmp10 = tmp11;
 }) : (() => {
   const tmp = closure_9();
-  ({ source: { uri: _modDef10879 }, style: tmp.coachmarkImage });
-  ({ uri: _modDef10879 });
+  ({ source: { uri: _modDef10892 }, style: tmp.coachmarkImage });
+  ({ uri: _modDef10892 });
   return <metroRequire style={tmp.coachmarkImageContainer}>{null}</metroRequire>;
 });
 ReactCompilerGating = ReactCompilerGating_mod;

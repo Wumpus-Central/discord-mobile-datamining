@@ -1,19 +1,19 @@
-// === Module 15871: ChooseAccount ===
+// === Module 15910: ChooseAccount ===
 
-// Module 15871 (ChooseAccount)
+// Module 15910 (ChooseAccount)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl5 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import MultiAccountStore from "MultiAccountStore" /* 12056 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12059 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import MultiAccountStore from "MultiAccountStore" /* 12071 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 12074 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import Constants_mod from "Constants" /* 12057 */;
+import Constants_mod from "Constants" /* 12072 */;
 import Constants_mod2 from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -54,7 +54,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const tmp4 = closure_13();
   let obj2 = navigation(1490);
   navigation = obj2.useNavigation();
-  let obj3 = navigation(15872);
+  let obj3 = navigation(15911);
   const multiAccountUsers = obj3.useMultiAccountUsers().multiAccountUsers;
   if (cResult[0] !== navigation) {
     const fn = function s(tokenStatus) {
@@ -323,7 +323,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
         }
       }
       let obj5 = { variant: "text-sm/medium", color: "text-default", children: intl.string(tmp(1126).t["0M5fN7"]) };
-      const Text = tmp(4886).Text;
+      const Text = tmp(4892).Text;
       intl = tmp(1126).intl;
       const tmp15 = closure_11(Text, obj5);
       cResult[9] = tmp15;
@@ -575,8 +575,8 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   _require = obj.useNavigation();
   let obj2 = require("useMultiAccount");
   const multiAccountUsers = obj2.useMultiAccountUsers().multiAccountUsers;
-  let obj3 = { headerText: intl.string(require("intl").t.bVbB63), subHeader: closure_11(Text, obj4), backgroundImageSource: multiAccountUsers(13677), backgroundImageCover: true, contentStyle: tmp.container, children: closure_12(View, obj5) };
-  const tmp2 = multiAccountUsers(6460);
+  let obj3 = { headerText: intl.string(require("intl").t.bVbB63), subHeader: closure_11(Text, obj4), backgroundImageSource: multiAccountUsers(13693), backgroundImageCover: true, contentStyle: tmp.container, children: closure_12(View, obj5) };
+  const tmp2 = multiAccountUsers(6467);
   intl = require("intl").intl;
   obj4 = { variant: "text-sm/medium", color: "text-default", children: intl2.string(require("intl").t["0M5fN7"]) };
   Text = require("Text/Text").Text;
@@ -679,7 +679,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
   };
   const FormRow = require("Form").FormRow;
-  obj7 = { themedColor: multiAccountUsers(587).colors.TEXT_LINK, size: require("native").Icon.Sizes.SMALL_20, source: multiAccountUsers(15874) };
+  obj7 = { themedColor: multiAccountUsers(587).colors.TEXT_LINK, size: require("native").Icon.Sizes.SMALL_20, source: multiAccountUsers(15913) };
   Icon = require("Form").FormRow.Icon;
   intl3 = require("intl").intl;
   items[1] = closure_11(FormRow, obj6);

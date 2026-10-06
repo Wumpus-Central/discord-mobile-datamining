@@ -1,6 +1,6 @@
-// === Module 9419: GuildIdentityActionCreators ===
+// === Module 9433: GuildIdentityActionCreators ===
 
-// Module 9419 (GuildIdentityActionCreators)
+// Module 9433 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
@@ -74,7 +74,7 @@ let obj = function _saveGuildIdentityChanges() {
             body = undefined;
             c7 = 1;
             vad_colors = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (guildId === 1) {

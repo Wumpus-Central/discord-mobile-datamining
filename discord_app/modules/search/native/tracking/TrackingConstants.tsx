@@ -1,7 +1,7 @@
-// === Module 7512: TrackingConstants ===
+// === Module 7523: TrackingConstants ===
 
-// Module 7512 (TrackingConstants)
-import SearchConstants from "SearchConstants" /* 7513 */;
+// Module 7523 (TrackingConstants)
+import SearchConstants from "SearchConstants" /* 7524 */;
 import size from "module_2" /* 2 */;
 
 let SearchHistoryItemTypes;

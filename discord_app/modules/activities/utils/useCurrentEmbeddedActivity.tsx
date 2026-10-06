@@ -1,6 +1,6 @@
-// === Module 9132: useCurrentEmbeddedActivity ===
+// === Module 9167: useCurrentEmbeddedActivity ===
 
-// Module 9132 (useCurrentEmbeddedActivity)
+// Module 9167 (useCurrentEmbeddedActivity)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;

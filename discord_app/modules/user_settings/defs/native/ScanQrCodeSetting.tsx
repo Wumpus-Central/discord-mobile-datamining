@@ -1,14 +1,14 @@
-// === Module 14788: ScanQrCodeSetting ===
+// === Module 14804: ScanQrCodeSetting ===
 
-// Module 14788 (ScanQrCodeSetting)
+// Module 14804 (ScanQrCodeSetting)
 import intl2 from "intl" /* 1126 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1615 */;
-import NativePermissionConstants from "NativePermissionConstants" /* 5099 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7275 */;
-import QrCodeIcon from "QrCodeIcon" /* 14690 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 5105 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7288 */;
+import QrCodeIcon from "QrCodeIcon" /* 14706 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import module_12 from "module_12" /* 12 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 let c1, c3;

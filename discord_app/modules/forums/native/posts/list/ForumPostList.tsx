@@ -1,18 +1,18 @@
-// === Module 11635: ForumPostList ===
+// === Module 11649: ForumPostList ===
 
-// Module 11635 (ForumPostList)
+// Module 11649 (ForumPostList)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import ChannelConstants from "ChannelConstants" /* 2058 */;
-import ForumTagHooks from "ForumTagHooks" /* 6778 */;
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11617 */;
-import ForumPostAppliedTags from "ForumPostAppliedTags" /* 11627 */;
-import ForumPostListBodyDefault from "ForumPostListBody" /* 11636 */;
-import ForumPostListFooterDefault from "ForumPostListFooter" /* 11639 */;
+import ForumTagHooks from "ForumTagHooks" /* 6788 */;
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 11631 */;
+import ForumPostAppliedTags from "ForumPostAppliedTags" /* 11641 */;
+import ForumPostListBodyDefault from "ForumPostListBody" /* 11650 */;
+import ForumPostListFooterDefault from "ForumPostListFooter" /* 11653 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

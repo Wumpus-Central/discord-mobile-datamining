@@ -1,6 +1,6 @@
-// === Module 16398: ICYMIItemTypes ===
+// === Module 16438: ICYMIItemTypes ===
 
-// Module 16398 (ICYMIItemTypes)
+// Module 16438 (ICYMIItemTypes)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);

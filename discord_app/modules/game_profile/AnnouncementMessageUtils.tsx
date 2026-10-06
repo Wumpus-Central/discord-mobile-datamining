@@ -1,10 +1,10 @@
-// === Module 8406: AnnouncementMessageUtils ===
+// === Module 8439: AnnouncementMessageUtils ===
 
-// Module 8406 (AnnouncementMessageUtils)
+// Module 8439 (AnnouncementMessageUtils)
 import intl2 from "intl" /* 1126 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
-import MessageRecord from "MessageRecord" /* 4520 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8408 */;
+import MessageRecord from "MessageRecord" /* 4526 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8441 */;
 import size from "module_2" /* 2 */;
 
 let reactions;

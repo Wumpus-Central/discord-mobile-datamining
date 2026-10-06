@@ -1,17 +1,17 @@
-// === Module 10620: PresenceActivityStatus ===
+// === Module 10633: PresenceActivityStatus ===
 
-// Module 10620 (PresenceActivityStatus)
+// Module 10633 (PresenceActivityStatus)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
-import AppsIcon2 from "AppsIcon" /* 5890 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7229 */;
-import GameControllerIcon2 from "GameControllerIcon" /* 8739 */;
-import MusicIcon from "MusicIcon" /* 9571 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10615 */;
-import TvIcon from "TvIcon" /* 10616 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10618 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10621 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10622 */;
+import AppsIcon2 from "AppsIcon" /* 5897 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7242 */;
+import GameControllerIcon2 from "GameControllerIcon" /* 8771 */;
+import MusicIcon from "MusicIcon" /* 9584 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10628 */;
+import TvIcon from "TvIcon" /* 10629 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10631 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10634 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10635 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

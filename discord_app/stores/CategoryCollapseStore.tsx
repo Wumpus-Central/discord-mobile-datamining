@@ -1,6 +1,6 @@
-// === Module 6612: CategoryCollapseStore ===
+// === Module 6619: CategoryCollapseStore ===
 
-// Module 6612 (CategoryCollapseStore)
+// Module 6619 (CategoryCollapseStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
@@ -9,8 +9,8 @@ import GlobalUtils from "GlobalUtils" /* 1375 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1231 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5618 */;
-import GuildChannelStore from "GuildChannelStore" /* 4507 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 5625 */;
+import GuildChannelStore from "GuildChannelStore" /* 4513 */;
 import size from "module_2" /* 2 */;
 
 let closure_7, set;

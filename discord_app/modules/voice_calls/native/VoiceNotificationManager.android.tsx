@@ -1,23 +1,23 @@
-// === Module 14293: VoiceNotificationManager ===
+// === Module 14311: VoiceNotificationManager ===
 
-// Module 14293 (VoiceNotificationManager)
+// Module 14311 (VoiceNotificationManager)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
-import useChannelName from "useChannelName" /* 5043 */;
-import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7252 */;
-import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 7254 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 9724 */;
-import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10624 */;
+import useChannelName from "useChannelName" /* 5049 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7265 */;
+import ForegroundServiceManagerTypes from "ForegroundServiceManagerTypes" /* 7267 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 9737 */;
+import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10637 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 2050 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;
@@ -84,7 +84,7 @@ class VoiceNotificationManager {
     let createAction;
     obj = Object.create(new.target.prototype);
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "T", connectionState: "cursor", selfMute: false, deafened: "increasedFileUploadSize", isPushToTalk: null, embeddedActivity: "webcode", isStreaming: "text" };
+    obj.state = { channelId: "Symbol", connectionState: "cursor", selfMute: false, deafened: 2387, isPushToTalk: 2388, embeddedActivity: 2389, isStreaming: 2390 };
     obj.handleVoiceStateChange = handleVoiceStateChange;
     obj.handleMediaEngineStateChange = handleMediaEngineStateChange;
     obj.handleEmbeddedActivityStateChange = handleEmbeddedActivityStateChange;
@@ -239,7 +239,7 @@ class VoiceNotificationManager {
 const prototype = VoiceNotificationManager.prototype;
 let obj = Object.create(VoiceNotificationManager.prototype);
 obj.voiceServiceHandlerId = 9000;
-obj.state = { channelId: "T", connectionState: "cursor", selfMute: false, deafened: "increasedFileUploadSize", isPushToTalk: null, embeddedActivity: "webcode", isStreaming: "text" };
+obj.state = { channelId: "Symbol", connectionState: "cursor", selfMute: false, deafened: 2387, isPushToTalk: 2388, embeddedActivity: 2389, isStreaming: 2390 };
 obj.handleVoiceStateChange = handleVoiceStateChange;
 obj.handleMediaEngineStateChange = handleMediaEngineStateChange;
 obj.handleEmbeddedActivityStateChange = handleEmbeddedActivityStateChange;

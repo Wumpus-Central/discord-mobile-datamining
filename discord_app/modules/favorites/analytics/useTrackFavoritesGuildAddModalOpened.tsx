@@ -1,6 +1,6 @@
-// === Module 10710: useTrackFavoritesGuildAddModalOpened ===
+// === Module 10723: useTrackFavoritesGuildAddModalOpened ===
 
-// Module 10710 (useTrackFavoritesGuildAddModalOpened)
+// Module 10723 (useTrackFavoritesGuildAddModalOpened)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import react from "react" /* 19 */;

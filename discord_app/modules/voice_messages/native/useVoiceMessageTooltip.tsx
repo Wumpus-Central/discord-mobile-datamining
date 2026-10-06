@@ -1,11 +1,11 @@
-// === Module 11888: useVoiceMessageTooltip ===
+// === Module 11902: useVoiceMessageTooltip ===
 
-// Module 11888 (useVoiceMessageTooltip)
+// Module 11902 (useVoiceMessageTooltip)
 import intl2 from "intl" /* 1126 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6110 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 6117 */;
 import react from "react" /* 19 */;
 import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1486 */;
-import VoiceMessagesUIStore from "VoiceMessagesUIStore" /* 11574 */;
+import VoiceMessagesUIStore from "VoiceMessagesUIStore" /* 11587 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

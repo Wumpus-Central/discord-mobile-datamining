@@ -1,6 +1,6 @@
-// === Module 8471: colors ===
+// === Module 8504: colors ===
 
-// Module 8471 (colors)
+// Module 8504 (colors)
 import _modDef683 from "module_683" /* 683 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 13377: PremiumUnverifiedWarning ===
+// === Module 13396: PremiumUnverifiedWarning ===
 
-// Module 13377 (PremiumUnverifiedWarning)
+// Module 13396 (PremiumUnverifiedWarning)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import native2 from "native" /* 4589 */;
+import native2 from "native" /* 4595 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import get_initialized from "get initialized" /* 504 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 9284: SegmentedControlItem ===
+// === Module 9319: SegmentedControlItem ===
 
-// Module 9284 (SegmentedControlItem)
+// Module 9319 (SegmentedControlItem)
 import nativeDefault from "native" /* 587 */;
-import spring from "spring" /* 5597 */;
+import spring from "spring" /* 5604 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 13486: ClipsExperiment ===
+// === Module 13502: ClipsExperiment ===
 
-// Module 13486 (ClipsExperiment)
+// Module 13502 (ClipsExperiment)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import isClientClipsCapableDefault from "isClientClipsCapable" /* 13487 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import isClientClipsCapableDefault from "isClientClipsCapable" /* 13503 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
 import UserStore from "UserStore" /* 1377 */;
 import ApexExperiment from "ApexExperiment" /* 1440 */;

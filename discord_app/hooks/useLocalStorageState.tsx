@@ -1,8 +1,8 @@
-// === Module 9593: useLocalStorageState ===
+// === Module 9606: useLocalStorageState ===
 
-// Module 9593 (useLocalStorageState)
+// Module 9606 (useLocalStorageState)
 import Storage3 from "Storage" /* 510 */;
-import useMountEffectDefault from "useMountEffect" /* 5590 */;
+import useMountEffectDefault from "useMountEffect" /* 5597 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

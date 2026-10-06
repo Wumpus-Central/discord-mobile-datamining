@@ -1,12 +1,12 @@
-// === Module 16524: StandaloneMembersView ===
+// === Module 16564: StandaloneMembersView ===
 
-// Module 16524 (StandaloneMembersView)
+// Module 16564 (StandaloneMembersView)
 import Fragment from "Fragment" /* 21 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9247 */;
-import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 11447 */;
-import KickConfirmDefault from "KickConfirm" /* 11461 */;
-import BanConfirmDefault from "BanConfirm" /* 11463 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16525 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9282 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 11460 */;
+import KickConfirmDefault from "KickConfirm" /* 11474 */;
+import BanConfirmDefault from "BanConfirm" /* 11476 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 16565 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -59,7 +59,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   dependencyMap = tmp9;
   if (cResult[5] !== navigation) {
-    const tmpResult = tmp(6010);
+    const tmpResult = tmp(6017);
     const headerCloseButton = tmpResult.getHeaderCloseButton(() => navigation.goBack());
     cResult[5] = navigation;
     cResult[6] = headerCloseButton;

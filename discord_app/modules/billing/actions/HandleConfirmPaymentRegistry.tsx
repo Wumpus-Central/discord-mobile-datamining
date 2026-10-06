@@ -1,8 +1,8 @@
-// === Module 5423: HandleConfirmPaymentRegistry ===
+// === Module 5430: HandleConfirmPaymentRegistry ===
 
-// Module 5423 (HandleConfirmPaymentRegistry)
+// Module 5430 (HandleConfirmPaymentRegistry)
 import Constants2 from "Constants" /* 1096 */;
-import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5405 */;
+import BillingSharedActionCreators from "BillingSharedActionCreators" /* 5412 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;

@@ -1,12 +1,12 @@
-// === Module 6463: BackgroundImage ===
+// === Module 6470: BackgroundImage ===
 
-// Module 6463 (BackgroundImage)
+// Module 6470 (BackgroundImage)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import shared from "shared" /* 4729 */;
-import useThemeDefault from "useTheme" /* 4791 */;
-import AssetRegistryDefault from "AssetRegistry" /* 6464 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 6465 */;
+import shared from "shared" /* 4735 */;
+import useThemeDefault from "useTheme" /* 4797 */;
+import AssetRegistryDefault from "AssetRegistry" /* 6471 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 6472 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -74,7 +74,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   if (flag === undefined) {
     flag = false;
   }
-  let tmp = flag(4791)();
+  let tmp = flag(4797)();
   dependencyMap = tmp;
   let items = [backgroundImageSource, flag, tmp];
   let obj2 = {};

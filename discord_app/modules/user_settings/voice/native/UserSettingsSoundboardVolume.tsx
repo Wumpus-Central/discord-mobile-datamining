@@ -1,15 +1,15 @@
-// === Module 9669: UserSettingsSoundboardVolume ===
+// === Module 9682: UserSettingsSoundboardVolume ===
 
-// Module 9669 (UserSettingsSoundboardVolume)
+// Module 9682 (UserSettingsSoundboardVolume)
 import react_native from "react-native" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 6841 */;
-import VolumeSliderDefault from "VolumeSlider" /* 9666 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 6851 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9679 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -37,7 +37,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = obj.c(17);
   const tmp4 = closure_8();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = analyticsLocations(6847);
+    const tmpResult = analyticsLocations(6857);
     const amplitudinalSoundboardVolume = tmpResult.getAmplitudinalSoundboardVolume();
     cResult[0] = amplitudinalSoundboardVolume;
     first = amplitudinalSoundboardVolume;
@@ -113,7 +113,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     }
     if (cResult[12] !== tmp4.text) {
       const obj4 = { style: text, variant: "text-sm/medium", children: tmp20 };
-      const tmp25 = closure_5(analyticsLocations(4886).Text, obj4);
+      const tmp25 = closure_5(analyticsLocations(4892).Text, obj4);
       cResult[12] = tmp4.text;
       cResult[13] = tmp25;
       tmp23 = tmp25;
@@ -128,11 +128,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
       return tmp26;
     }
     const obj5 = { title: tmp8, hasIcons: false, children: closure_5(TableRow, obj6) };
-    const UserSettingsTableRowGroup = tmp(9657).UserSettingsTableRowGroup;
+    const UserSettingsTableRowGroup = tmp(9670).UserSettingsTableRowGroup;
     obj6 = { label: tmp10, subLabel: closure_7(closure_6, obj7) };
     obj7 = { children: items };
     items = [tmp18, tmp23];
-    TableRow = tmp(5993).TableRow;
+    TableRow = tmp(6000).TableRow;
     const tmp30 = closure_5(UserSettingsTableRowGroup, obj5);
     cResult[14] = tmp23;
     cResult[15] = tmp18;
@@ -160,14 +160,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj9;
   let tmp3;
   const tmp = closure_8();
-  let obj = analyticsLocations(6847);
+  let obj = analyticsLocations(6857);
   const amplitudinalSoundboardVolume = obj.getAmplitudinalSoundboardVolume();
   analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   const obj2 = { title: intl.string(analyticsLocations(1126).t.xbMc8r), hasIcons: false, children: closure_5(TableRow, obj3) };
-  const UserSettingsTableRowGroup = analyticsLocations(9657).UserSettingsTableRowGroup;
+  const UserSettingsTableRowGroup = analyticsLocations(9670).UserSettingsTableRowGroup;
   intl = analyticsLocations(1126).intl;
   obj3 = { label: intl2.string(analyticsLocations(1126).t.kbFsAD), subLabel: closure_7(closure_6, obj4) };
-  TableRow = analyticsLocations(5993).TableRow;
+  TableRow = analyticsLocations(6000).TableRow;
   intl2 = analyticsLocations(1126).intl;
   obj4 = { children: items };
   const obj5 = { style: tmp.slider, children: closure_5(tmp3, obj6) };
@@ -184,7 +184,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   intl3 = analyticsLocations(1126).intl;
   items = [closure_5(View, obj5), ];
   const obj7 = { style: tmp.text, variant: "text-sm/medium", children: format(BPbGq7, obj8) };
-  const Text = analyticsLocations(4886).Text;
+  const Text = analyticsLocations(4892).Text;
   const intl4 = analyticsLocations(1126).intl;
   format = intl4.format;
   obj8 = { helpCenterArticle: obj9.getArticleURL(HelpdeskArticles.SOUNDBOARD) };

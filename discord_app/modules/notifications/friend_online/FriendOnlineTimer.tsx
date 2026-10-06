@@ -1,15 +1,15 @@
-// === Module 18003: FriendOnlineTimer ===
+// === Module 18048: FriendOnlineTimer ===
 
-// Module 18003 (FriendOnlineTimer)
+// Module 18048 (FriendOnlineTimer)
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import UserSettings from "UserSettings" /* 2028 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5438 */;
-import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 18004 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5445 */;
+import FriendOnlineTimerStore from "FriendOnlineTimerStore" /* 18049 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 let c4, c5, closure_2;

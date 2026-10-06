@@ -1,6 +1,6 @@
-// === Module 9786: ChannelSafetyWarningsStore ===
+// === Module 9799: ChannelSafetyWarningsStore ===
 
-// Module 9786 (ChannelSafetyWarningsStore)
+// Module 9799 (ChannelSafetyWarningsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
@@ -9,7 +9,7 @@ import size from "module_2" /* 2 */;
 
 let closure_4;
 
-const f101655 = function(type) {
+const f101807 = function(type) {
   let tmp2 = (type.type === closure_1_2.INAPPROPRIATE_CONVERSATION_TIER_1 || type.type === tmp.INAPPROPRIATE_CONVERSATION_TIER_2) && null != type.dismiss_timestamp;
   if (tmp2) {
     const _Date = Date;
@@ -29,7 +29,7 @@ function handleConnectionOpen() {
     safetyWarnings = safetyWarnings.safetyWarnings;
     if (null != safetyWarnings) {
       closure_1_4[safetyWarnings.id] = safetyWarnings;
-      if (safetyWarnings.some(f101655)) {
+      if (safetyWarnings.some(f101807)) {
         set.add(safetyWarnings.id);
       } else {
         set.delete(safetyWarnings.id);
@@ -79,7 +79,7 @@ const obj2 = {
     const safetyWarnings = channel.safetyWarnings;
     if (null != safetyWarnings) {
       closure_4[channel.id] = safetyWarnings;
-      if (safetyWarnings.some(f101655)) {
+      if (safetyWarnings.some(f101807)) {
         set.add(channel.id);
       } else {
         set.delete(channel.id);
@@ -105,7 +105,7 @@ const obj2 = {
       safetyWarnings = safetyWarnings.safetyWarnings;
       if (null != safetyWarnings) {
         closure_1_4[safetyWarnings.id] = safetyWarnings;
-        if (safetyWarnings.some(f101655)) {
+        if (safetyWarnings.some(f101807)) {
           set.add(safetyWarnings.id);
         } else {
           set.delete(safetyWarnings.id);

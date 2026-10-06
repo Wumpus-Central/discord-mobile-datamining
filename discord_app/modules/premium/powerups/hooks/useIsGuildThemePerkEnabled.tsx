@@ -1,10 +1,10 @@
-// === Module 16083: useIsGuildThemePerkEnabled ===
+// === Module 16122: useIsGuildThemePerkEnabled ===
 
-// Module 16083 (useIsGuildThemePerkEnabled)
+// Module 16122 (useIsGuildThemePerkEnabled)
 import Constants from "Constants" /* 1085 */;
-import Powerups from "Powerups" /* 4771 */;
+import Powerups from "Powerups" /* 4777 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

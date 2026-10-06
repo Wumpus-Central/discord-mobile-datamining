@@ -1,6 +1,6 @@
-// === Module 7935: MediaViewerAnalyticsManager ===
+// === Module 7946: MediaViewerAnalyticsManager ===
 
-// Module 7935 (MediaViewerAnalyticsManager)
+// Module 7946 (MediaViewerAnalyticsManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
@@ -19,7 +19,7 @@ let obj2 = {
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
   hasMediaOptions: "unicodeVersion",
-  source: null,
+  source: "onDoubleTapMessage",
   incrementableActions: fromEntries(values.map((item) => {
     const items = [item, 0];
     return items;

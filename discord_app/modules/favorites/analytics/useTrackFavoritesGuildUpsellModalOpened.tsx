@@ -1,10 +1,10 @@
-// === Module 10041: useTrackFavoritesGuildUpsellModalOpened ===
+// === Module 10054: useTrackFavoritesGuildUpsellModalOpened ===
 
-// Module 10041 (useTrackFavoritesGuildUpsellModalOpened)
+// Module 10054 (useTrackFavoritesGuildUpsellModalOpened)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6657 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 6681 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 6664 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 6688 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

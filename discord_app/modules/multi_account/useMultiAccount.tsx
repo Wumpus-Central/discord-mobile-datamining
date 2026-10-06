@@ -1,10 +1,10 @@
-// === Module 15872: useMultiAccount ===
+// === Module 15911: useMultiAccount ===
 
-// Module 15872 (useMultiAccount)
+// Module 15911 (useMultiAccount)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MultiAccountStore2 from "MultiAccountStore" /* 12056 */;
+import MultiAccountStore2 from "MultiAccountStore" /* 12071 */;
 import react from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,11 +1,11 @@
-// === Module 17372: MediaPlaybackPanelContainer ===
+// === Module 17401: MediaPlaybackPanelContainer ===
 
-// Module 17372 (MediaPlaybackPanelContainer)
+// Module 17401 (MediaPlaybackPanelContainer)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import react3 from "react" /* 4494 */;
-import MediaPlayerManager from "MediaPlayerManager" /* 14378 */;
-import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17373 */;
+import react3 from "react" /* 4500 */;
+import MediaPlayerManager from "MediaPlayerManager" /* 14396 */;
+import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17402 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

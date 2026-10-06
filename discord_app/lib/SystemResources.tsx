@@ -1,9 +1,9 @@
-// === Module 7239: SystemResources ===
+// === Module 7252: SystemResources ===
 
-// Module 7239 (SystemResources)
+// Module 7252 (SystemResources)
 import ProcessUtilsDefault from "ProcessUtils" /* 1363 */;
-import Histogram from "Histogram" /* 7233 */;
-import DeviceState from "DeviceState" /* 7240 */;
+import Histogram from "Histogram" /* 7246 */;
+import DeviceState from "DeviceState" /* 7253 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

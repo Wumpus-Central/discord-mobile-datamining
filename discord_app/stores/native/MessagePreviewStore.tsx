@@ -1,10 +1,10 @@
-// === Module 8037: MessagePreviewStore ===
+// === Module 8047: MessagePreviewStore ===
 
-// Module 8037 (MessagePreviewStore)
+// Module 8047 (MessagePreviewStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 5112 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 5118 */;
 import size from "module_2" /* 2 */;
 
 let unshift;

@@ -1,6 +1,6 @@
-// === Module 6970: SessionHeartbeatScheduler ===
+// === Module 6983: SessionHeartbeatScheduler ===
 
-// Module 6970 (SessionHeartbeatScheduler)
+// Module 6983 (SessionHeartbeatScheduler)
 import LoggerDefault from "Logger" /* 3 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
@@ -8,18 +8,18 @@ import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import MonotonicClock from "MonotonicClock" /* 6973 */;
-import Clickstream from "Clickstream" /* 6974 */;
-import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 6978 */;
-import SessionUtils from "SessionUtils" /* 6980 */;
+import MonotonicClock from "MonotonicClock" /* 6986 */;
+import Clickstream from "Clickstream" /* 6987 */;
+import SkippedClientHeartbeatUtil from "SkippedClientHeartbeatUtil" /* 6991 */;
+import SessionUtils from "SessionUtils" /* 6993 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5436 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5443 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import IdleStore from "IdleStore" /* 5567 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import IdleStore from "IdleStore" /* 5574 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import Constants from "Constants" /* 1085 */;
-import react_native from "react-native" /* 6971 */;
-import SessionRouteUtils from "SessionRouteUtils" /* 6972 */;
+import react_native from "react-native" /* 6984 */;
+import SessionRouteUtils from "SessionRouteUtils" /* 6985 */;
 import size from "module_2" /* 2 */;
 
 let c3, c6, c7, closure_21, closure_5, monotonicNowMsResult;
@@ -139,7 +139,7 @@ function isActive() {
   return items.length > 0;
 }
 function scheduleHeartbeatTracking() {
-  const f137895 = () => {
+  const f138103 = () => {
     trackHeartbeat();
     obj = {
       type: "interval",
@@ -174,8 +174,8 @@ function scheduleHeartbeatTracking() {
       SentryUtilsDefault;
       addBreadcrumb(obj3);
       const _setTimeout = setTimeout;
-      user = { type: "timeout", id: setTimeout(f137895, num) };
-      const obj4 = { type: "timeout", id: setTimeout(f137895, num) };
+      user = { type: "timeout", id: setTimeout(f138103, num) };
+      const obj4 = { type: "timeout", id: setTimeout(f138103, num) };
     }
   } else {
     let flag = false;
@@ -433,7 +433,7 @@ obj = function _getSession() {
             uuid1 = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp4) {

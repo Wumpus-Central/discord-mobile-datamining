@@ -1,6 +1,6 @@
-// === Module 17137: useGiftingPromotionAssetsReady ===
+// === Module 17166: useGiftingPromotionAssetsReady ===
 
-// Module 17137 (useGiftingPromotionAssetsReady)
+// Module 17166 (useGiftingPromotionAssetsReady)
 import react2 from "react" /* 576 */;
 import react_nativeDefault from "react-native" /* 1886 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
@@ -18,7 +18,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp6;
   let obj = themeAndReducedMotionAwareAssetUrl(576);
   const cResult = obj.c(3);
-  let obj2 = themeAndReducedMotionAwareAssetUrl(10485);
+  let obj2 = themeAndReducedMotionAwareAssetUrl(10498);
   themeAndReducedMotionAwareAssetUrl = obj2.useThemeAndReducedMotionAwareAssetUrl(arg0);
   [tmp4, importDefault] = react.useState(null);
   _slicedToArray(react.useState(null), 2);
@@ -59,7 +59,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let closure_1;
   let first;
   let themeAndReducedMotionAwareAssetUrl;
-  let obj = themeAndReducedMotionAwareAssetUrl(10485);
+  let obj = themeAndReducedMotionAwareAssetUrl(10498);
   themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(arg0);
   [first, closure_1] = react.useState(null);
   const items = [themeAndReducedMotionAwareAssetUrl];

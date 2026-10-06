@@ -1,6 +1,6 @@
-// === Module 9365: SecureFramesPersistedStore ===
+// === Module 9379: SecureFramesPersistedStore ===
 
-// Module 9365 (SecureFramesPersistedStore)
+// Module 9379 (SecureFramesPersistedStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;

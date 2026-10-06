@@ -1,29 +1,29 @@
-// === Module 9941: CustomEmojiContent ===
+// === Module 9954: CustomEmojiContent ===
 
-// Module 9941 (CustomEmojiContent)
+// Module 9954 (CustomEmojiContent)
 import nativeDefault from "native" /* 587 */;
 import intl6 from "intl" /* 1126 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4528 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4568 */;
-import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4574 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 5643 */;
-import openUserSettings from "openUserSettings" /* 6885 */;
-import openPremiumModalDefault from "openPremiumModal" /* 8914 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 9939 */;
-import StarIcon2 from "StarIcon" /* 9943 */;
-import StarOutlineIcon2 from "StarOutlineIcon" /* 9945 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 9948 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4534 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4574 */;
+import DesignSystemsNotificationComponentsExperiment from "DesignSystemsNotificationComponentsExperiment" /* 4580 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 5650 */;
+import openUserSettings from "openUserSettings" /* 6895 */;
+import openPremiumModalDefault from "openPremiumModal" /* 8943 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 9952 */;
+import StarIcon2 from "StarIcon" /* 9956 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 9958 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 9961 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5639 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5646 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import UserStore from "UserStore" /* 1377 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import size_mod from "module_2" /* 2 */;
 
 let c10;
@@ -356,7 +356,7 @@ export default function CustomEmojiContent(emojiNode) {
       handleOpenEmojiOptionsMenu = function handleOpenEmojiOptionsMenu() {
         obj = ActionSheetActionCreatorsDefault;
         const obj2 = { emojiSrc: emojiNode.src };
-        obj.openLazy(asyncRequire(9947, dependencyMap.paths), "EmojiOptionsActionSheet", obj2, "stack");
+        obj.openLazy(asyncRequire(9960, dependencyMap.paths), "EmojiOptionsActionSheet", obj2, "stack");
       };
       intl3 = tmp2(nonce[28]).intl;
       obj23 = { color: expressionSourceGuild(nonce[8]).colors.INTERACTIVE_TEXT_DEFAULT };

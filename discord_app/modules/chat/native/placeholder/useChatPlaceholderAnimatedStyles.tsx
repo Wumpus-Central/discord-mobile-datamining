@@ -1,11 +1,11 @@
-// === Module 12305: useChatPlaceholderAnimatedStyles ===
+// === Module 12320: useChatPlaceholderAnimatedStyles ===
 
-// Module 12305 (useChatPlaceholderAnimatedStyles)
+// Module 12320 (useChatPlaceholderAnimatedStyles)
 import native from "native" /* 1188 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import timingPresets from "timingPresets" /* 4894 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import timingPresets from "timingPresets" /* 4900 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

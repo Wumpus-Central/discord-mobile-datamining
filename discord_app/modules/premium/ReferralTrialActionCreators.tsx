@@ -1,10 +1,10 @@
-// === Module 6962: ReferralTrialActionCreators ===
+// === Module 6975: ReferralTrialActionCreators ===
 
-// Module 6962 (ReferralTrialActionCreators)
+// Module 6975 (ReferralTrialActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 6963 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 6976 */;
 import UserRecord from "UserRecord" /* 1391 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
 import Constants from "Constants" /* 1085 */;
@@ -174,11 +174,11 @@ obj = function _createReferralTrial() {
     await post(obj4);
     const obj6 = closure_130_1(closure_130_2[6]);
     obj6.dispatch({ type: "BILLING_CREATE_REFERRAL_FAIL" });
-    if (tmp44.body.code === closure_130_7.INVALID_MESSAGE_SEND_USER) {
+    if (tmp40.body.code === closure_130_7.INVALID_MESSAGE_SEND_USER) {
       currentlySelectedChannelId = closure_130_6.getCurrentlySelectedChannelId();
       if (null != currentlySelectedChannelId) {
         const obj7 = closure_130_1(closure_130_2[8]);
-        obj7.sendClydeError(currentlySelectedChannelId, tmp44.body.code);
+        obj7.sendClydeError(currentlySelectedChannelId, tmp40.body.code);
       }
     }
     await "IconComponent";

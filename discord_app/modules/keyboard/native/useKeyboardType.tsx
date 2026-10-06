@@ -1,6 +1,6 @@
-// === Module 4747: useKeyboardType ===
+// === Module 4753: useKeyboardType ===
 
-// Module 4747 (useKeyboardType)
+// Module 4753 (useKeyboardType)
 import react2 from "react" /* 576 */;
 import AppEntryKeyContext from "AppEntryKeyContext" /* 1487 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1488 */;
@@ -94,8 +94,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const obj2 = appEntryKey(1487);
   appEntryKey = obj2.useAppEntryKey();
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
-  const useSharedValue = appEntryKey(4612).useSharedValue;
-  appEntryKey(4612);
+  const useSharedValue = appEntryKey(4618).useSharedValue;
+  appEntryKey(4618);
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
   }
@@ -138,8 +138,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let obj = appEntryKey(1487);
   appEntryKey = obj.useAppEntryKey();
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
-  const useSharedValue = appEntryKey(4612).useSharedValue;
-  appEntryKey(4612);
+  const useSharedValue = appEntryKey(4618).useSharedValue;
+  appEntryKey(4618);
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
   }
@@ -186,9 +186,9 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   const cResult = obj.c(4);
   const obj2 = appEntryKey(1487);
   appEntryKey = obj2.useAppEntryKey();
-  const useSharedValue = appEntryKey(4612).useSharedValue;
+  const useSharedValue = appEntryKey(4618).useSharedValue;
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
-  appEntryKey(4612);
+  appEntryKey(4618);
   const SYSTEM = appEntryKey(1616).KeyboardTypes.SYSTEM;
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;
@@ -227,9 +227,9 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let tmp = appEntryKey;
   let obj = appEntryKey(1487);
   appEntryKey = obj.useAppEntryKey();
-  const useSharedValue = appEntryKey(4612).useSharedValue;
+  const useSharedValue = appEntryKey(4618).useSharedValue;
   let DEFAULT_APP_ENTRY_KEY = appEntryKey;
-  appEntryKey(4612);
+  appEntryKey(4618);
   const SYSTEM = appEntryKey(1616).KeyboardTypes.SYSTEM;
   if (appEntryKey === undefined) {
     DEFAULT_APP_ENTRY_KEY = tmp(1487).DEFAULT_APP_ENTRY_KEY;

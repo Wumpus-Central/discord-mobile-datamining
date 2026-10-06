@@ -1,14 +1,14 @@
-// === Module 10145: StickerPickerPremiumSearchUpsell ===
+// === Module 10158: StickerPickerPremiumSearchUpsell ===
 
-// Module 10145 (StickerPickerPremiumSearchUpsell)
+// Module 10158 (StickerPickerPremiumSearchUpsell)
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

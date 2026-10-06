@@ -1,12 +1,12 @@
-// === Module 7815: useAvatarColor ===
+// === Module 7826: useAvatarColor ===
 
-// Module 7815 (useAvatarColor)
+// Module 7826 (useAvatarColor)
 import react2 from "react" /* 576 */;
-import _modDef7063 from "module_7063" /* 7063 */;
+import _modDef7076 from "module_7076" /* 7076 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

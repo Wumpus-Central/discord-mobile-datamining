@@ -1,7 +1,7 @@
-// === Module 15083: FontScaleStore ===
+// === Module 15098: FontScaleStore ===
 
-// Module 15083 (FontScaleStore)
-import react_nativeDefault from "react-native" /* 10724 */;
+// Module 15098 (FontScaleStore)
+import react_nativeDefault from "react-native" /* 10737 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import module_1254 from "module_1254" /* 1254 */;
 import size from "module_2" /* 2 */;

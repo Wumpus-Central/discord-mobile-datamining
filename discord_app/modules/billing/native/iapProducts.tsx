@@ -1,6 +1,6 @@
-// === Module 10807: billing/iapProducts ===
+// === Module 10820: billing/iapProducts ===
 
-// Module 10807 (billing/iapProducts)
+// Module 10820 (billing/iapProducts)
 import size from "module_2" /* 2 */;
 
 let items1;

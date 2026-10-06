@@ -1,19 +1,19 @@
-// === Module 7257: PollsUtils ===
+// === Module 7270: PollsUtils ===
 
-// Module 7257 (PollsUtils)
+// Module 7270 (PollsUtils)
 import DurationsDefault from "Durations" /* 1102 */;
 import intl7 from "intl" /* 1126 */;
 import v1 from "v1" /* 1266 */;
 import utils_StringUtils from "utils/StringUtils" /* 2019 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import useMessageAuthor from "useMessageAuthor" /* 5304 */;
-import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6722 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import useMessageAuthor from "useMessageAuthor" /* 5311 */;
+import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 6736 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import MessageReactionsStore from "MessageReactionsStore" /* 7258 */;
-import MessageStore from "MessageStore" /* 5110 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
-import PollsConstants from "PollsConstants" /* 7457 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7271 */;
+import MessageStore from "MessageStore" /* 5116 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
+import PollsConstants from "PollsConstants" /* 7468 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -25,13 +25,13 @@ let c10;
 let c9;
 let metroImportAll;
 let unpackModuleId;
-const f94558 = (rawName) => "poll_question_text" === rawName.rawName;
+const f94698 = (rawName) => "poll_question_text" === rawName.rawName;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   let blockedOrIgnored;
   let channel;
   const channelId = message.getChannelId();
   const obj = { id, name: "", animated: false };
-  const reactions = MessageReactionsStore.getReactions(channelId, message.id, obj, closure_9, channel(7259).ReactionTypes.VOTE);
+  const reactions = MessageReactionsStore.getReactions(channelId, message.id, obj, closure_9, channel(7272).ReactionTypes.VOTE);
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
   if (null != channel) {
@@ -197,7 +197,7 @@ const result = size.fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
   let obj2;
-  const obj = { text: "Array", image: "Set", localCreationAnswerId: obj2.v4() };
+  const obj = { text: "Array", image: "Reflect", localCreationAnswerId: obj2.v4() };
   obj2 = v1;
   return obj;
 };
@@ -318,7 +318,7 @@ export const getPollResultsReplyPreview = function getPollResultsReplyPreview(me
   if (first != null) {
     const fields = first.fields;
     if (fields != null) {
-      const found = fields.find(f94558);
+      const found = fields.find(f94698);
       if (found != null) {
         str = found.rawValue;
       }
@@ -345,7 +345,7 @@ export const getPollResultsReplyPreviewMobile = function getPollResultsReplyPrev
     if (first != null) {
       const fields = first.fields;
       if (fields != null) {
-        const found = fields.find(f94558);
+        const found = fields.find(f94698);
         if (found != null) {
           str = found.rawValue;
         }

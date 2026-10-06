@@ -1,17 +1,17 @@
-// === Module 9603: StageViewWithPrompts ===
+// === Module 9616: StageViewWithPrompts ===
 
-// Module 9603 (StageViewWithPrompts)
+// Module 9616 (StageViewWithPrompts)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1618 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import StageChannelHeightHooks from "StageChannelHeightHooks" /* 9604 */;
-import FocusedControls from "FocusedControls" /* 9605 */;
-import MicrophoneSpotIllustration from "MicrophoneSpotIllustration" /* 9621 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import StageChannelHeightHooks from "StageChannelHeightHooks" /* 9617 */;
+import FocusedControls from "FocusedControls" /* 9618 */;
+import MicrophoneSpotIllustration from "MicrophoneSpotIllustration" /* 9634 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

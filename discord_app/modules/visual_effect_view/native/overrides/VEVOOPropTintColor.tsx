@@ -1,20 +1,20 @@
-// === Module 15844: VEVOOPropTintColor ===
+// === Module 15883: VEVOOPropTintColor ===
 
-// Module 15844 (VEVOOPropTintColor)
+// Module 15883 (VEVOOPropTintColor)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1103 */;
-import ColorUtils from "ColorUtils" /* 4727 */;
-import FormSwitch from "FormSwitch" /* 6699 */;
-import Form from "Form" /* 8895 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14421 */;
-import VEVOO from "VEVOO" /* 15841 */;
+import ColorUtils from "ColorUtils" /* 4733 */;
+import FormSwitch from "FormSwitch" /* 6706 */;
+import Form from "Form" /* 8924 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14437 */;
+import VEVOO from "VEVOO" /* 15880 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import VEVOOStore from "VEVOOStore" /* 5774 */;
+import VEVOOStore from "VEVOOStore" /* 5781 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -292,7 +292,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
             tmp44 = tmp47;
           }
           const obj6 = { disabled: !tmp8, initialValue: ref, onValueChange: tmp39 };
-          const tmp43 = closure_8(first1(15843), obj6);
+          const tmp43 = closure_8(first1(15882), obj6);
           cResult[23] = !tmp8;
           cResult[24] = tmp39;
           cResult[25] = tmp43;
@@ -434,7 +434,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? (()
   items1 = [tmp.tintColor, { backgroundColor }];
   const FormRow2 = Form.FormRow;
   const items2 = [closure_8(FormRow2, obj5), ];
-  const obj7 = { style: visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal, disabled: !tmp7, label: "Blur Tint Opacity " + str2, subLabel: closure_8(backgroundColor(15843), obj9) };
+  const obj7 = { style: visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal, disabled: !tmp7, label: "Blur Tint Opacity " + str2, subLabel: closure_8(backgroundColor(15882), obj9) };
   str2 = undefined;
   const FormRow3 = Form.FormRow;
   if (first1 != null) {

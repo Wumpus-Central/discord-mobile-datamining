@@ -1,6 +1,6 @@
-// === Module 7658: transformSticker ===
+// === Module 7669: transformSticker ===
 
-// Module 7658 (transformSticker)
+// Module 7669 (transformSticker)
 import intl3 from "intl" /* 1126 */;
 import StickersConstants from "StickersConstants" /* 2031 */;
 import size from "module_2" /* 2 */;
@@ -38,7 +38,7 @@ export const transformSticker = function transformSticker(tmp5Result8) {
   if (str2 == null) {
     str2 = "";
   }
-  NativeLottieRenderMode = tmp(7659).NativeLottieRenderMode;
+  NativeLottieRenderMode = tmp(7670).NativeLottieRenderMode;
   obj3 = {
     expensive() {
       const intl = intl3.intl;

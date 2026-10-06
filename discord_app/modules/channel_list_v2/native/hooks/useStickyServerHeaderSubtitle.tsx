@@ -1,8 +1,8 @@
-// === Module 16060: useStickyServerHeaderSubtitle ===
+// === Module 16099: useStickyServerHeaderSubtitle ===
 
-// Module 16060 (useStickyServerHeaderSubtitle)
+// Module 16099 (useStickyServerHeaderSubtitle)
 import Constants from "Constants" /* 1085 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4780 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4786 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,14 +1,14 @@
-// === Module 17384: useLaunchPadGesture ===
+// === Module 17413: useLaunchPadGesture ===
 
-// Module 17384 (useLaunchPadGesture)
+// Module 17413 (useLaunchPadGesture)
 import PlatformUtils from "PlatformUtils" /* 1369 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9774 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 11647 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 9787 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 11661 */;
 import react from "react" /* 19 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11125 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11138 */;
 import size from "module_2" /* 2 */;
 
 let set, set2;

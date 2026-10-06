@@ -1,10 +1,10 @@
-// === Module 17200: FramePanelSystemUIManager ===
+// === Module 17229: FramePanelSystemUIManager ===
 
-// Module 17200 (FramePanelSystemUIManager)
+// Module 17229 (FramePanelSystemUIManager)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import ActivityPanelSystemUIManager from "ActivityPanelSystemUIManager" /* 17191 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17194 */;
+import ActivityPanelSystemUIManager from "ActivityPanelSystemUIManager" /* 17220 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17223 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

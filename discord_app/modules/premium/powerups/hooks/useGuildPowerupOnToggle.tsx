@@ -1,7 +1,7 @@
-// === Module 12195: useGuildPowerupOnToggle ===
+// === Module 12210: useGuildPowerupOnToggle ===
 
-// Module 12195 (useGuildPowerupOnToggle)
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12147 */;
+// Module 12210 (useGuildPowerupOnToggle)
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12162 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

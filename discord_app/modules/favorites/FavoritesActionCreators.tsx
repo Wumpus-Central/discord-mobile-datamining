@@ -1,6 +1,6 @@
-// === Module 10035: FavoritesActionCreators ===
+// === Module 10048: FavoritesActionCreators ===
 
-// Module 10035 (FavoritesActionCreators)
+// Module 10048 (FavoritesActionCreators)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1096 */;
@@ -10,18 +10,18 @@ import wrappers from "wrappers" /* 1228 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 2033 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 2042 */;
 import ChannelRecord from "ChannelRecord" /* 2055 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import FavoritesHooks from "FavoritesHooks" /* 10036 */;
-import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10039 */;
-import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10044 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10047 */;
-import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10048 */;
-import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10050 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import FavoritesHooks from "FavoritesHooks" /* 10049 */;
+import openFavoritesGuildLimitUpsellDefault from "openFavoritesGuildLimitUpsell" /* 10052 */;
+import FavoritesGuildAnalytics from "FavoritesGuildAnalytics" /* 10057 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10060 */;
+import FavoritesGuildIntroPopover from "FavoritesGuildIntroPopover" /* 10061 */;
+import FavoritesDismissibleContent from "FavoritesDismissibleContent" /* 10063 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import FavoriteStore from "FavoriteStore" /* 2054 */;
 import FavoritesConstants from "FavoritesConstants" /* 2065 */;
 import Constants from "Constants" /* 1085 */;
@@ -388,7 +388,7 @@ let obj = function _addFavoriteChannelsToParent() {
         obj4 = {};
       }
       flag = obj4.silent ?? false;
-      return "Set";
+      return "Reflect";
     })();
     let nextResult = iter.next();
     return iter;
@@ -413,7 +413,7 @@ obj = function _addFavoriteChannels() {
     await closure_131_27(tmp8, obj5, c2);
     await "IconComponent";
     ({ channelIds: c0, parentId: c1, source: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -573,7 +573,7 @@ obj = function _addFavoriteChannelsToCategory() {
     await closure_130_27(c0, obj5, c2);
     await "IconComponent";
     ({ channelIds: c0, categoryName: c1, source: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

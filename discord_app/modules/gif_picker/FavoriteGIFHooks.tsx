@@ -1,9 +1,9 @@
-// === Module 10094: FavoriteGIFHooks ===
+// === Module 10107: FavoriteGIFHooks ===
 
-// Module 10094 (FavoriteGIFHooks)
+// Module 10107 (FavoriteGIFHooks)
 import _modDef12 from "module_12" /* 12 */;
 import react2 from "react" /* 576 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10095 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10108 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

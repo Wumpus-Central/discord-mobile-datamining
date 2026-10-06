@@ -1,15 +1,15 @@
-// === Module 15891: useUsernameRegistrationStep ===
+// === Module 15930: useUsernameRegistrationStep ===
 
-// Module 15891 (useUsernameRegistrationStep)
+// Module 15930 (useUsernameRegistrationStep)
 import intl2 from "intl" /* 1126 */;
 import Link from "Link" /* 1491 */;
-import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14516 */;
-import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15866 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15867 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14532 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15905 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14519 */;
-import RegistrationConstants from "RegistrationConstants" /* 15868 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14535 */;
+import RegistrationConstants from "RegistrationConstants" /* 15907 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

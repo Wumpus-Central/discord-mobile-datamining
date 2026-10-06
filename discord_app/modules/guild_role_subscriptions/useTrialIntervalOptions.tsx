@@ -1,8 +1,8 @@
-// === Module 15050: useTrialIntervalOptions ===
+// === Module 15065: useTrialIntervalOptions ===
 
-// Module 15050 (useTrialIntervalOptions)
+// Module 15065 (useTrialIntervalOptions)
 import PremiumConstants from "PremiumConstants" /* 1379 */;
-import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15023 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15038 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

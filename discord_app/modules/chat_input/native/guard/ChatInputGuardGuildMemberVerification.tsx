@@ -1,22 +1,22 @@
-// === Module 12112: ChatInputGuardGuildMemberVerification ===
+// === Module 12127: ChatInputGuardGuildMemberVerification ===
 
-// Module 12112 (ChatInputGuardGuildMemberVerification)
+// Module 12127 (ChatInputGuardGuildMemberVerification)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5917 */;
-import LottieAnimationViewDefault from "LottieAnimationView" /* 5920 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5960 */;
-import ChatInputConstants from "ChatInputConstants" /* 11576 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 12090 */;
-import AssetRegistryDefault from "AssetRegistry" /* 12113 */;
-import AssetRegistryDefault2 from "AssetRegistry" /* 12114 */;
-import _mod12115 from "module_12115" /* 12115 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import MemberVerificationAlertActionCreators from "MemberVerificationAlertActionCreators" /* 5924 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5927 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5967 */;
+import ChatInputConstants from "ChatInputConstants" /* 11589 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 12105 */;
+import AssetRegistryDefault from "AssetRegistry" /* 12128 */;
+import AssetRegistryDefault2 from "AssetRegistry" /* 12129 */;
+import _mod12130 from "module_12130" /* 12130 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import createStyles from "createStyles" /* 4890 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -228,7 +228,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
   }
   fn3 = function k() {
     LottieAnimationViewDefault;
-    return <tmp style={lottieAnimation.lottieAnimation} source={_mod12115} autoPlay={!stateFromStores} />;
+    return <tmp style={lottieAnimation.lottieAnimation} source={_mod12130} autoPlay={!stateFromStores} />;
   };
   cResult[12] = tmp4.lottieAnimation;
   cResult[13] = stateFromStores;
@@ -242,13 +242,13 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
   guildId = guildId.guildId;
   const tmp = closure_8();
   const tmp2 = guildId;
-  let obj = guildId(5935);
+  let obj = guildId(5942);
   const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
   let applicationStatus;
   if (currentUserGuildJoinRequest != null) {
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
-  if (tmp2(4702).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+  if (tmp2(4708).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
     tmp8 = AssetRegistryDefault;
     const intl3 = tmp2(1126).intl;
     stringResult = intl3.string(tmp2(1126).t.lk30cY);
@@ -262,9 +262,9 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((g
         const result = obj3.openMemberVerificationRejectedAlert(obj4);
       }
     }
-  } else if (tmp2(4702).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+  } else if (tmp2(4708).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
     tmp8 = AssetRegistryDefault2;
-    tmp7 = jsx(tmp2(6017).XSmallIcon, {});
+    tmp7 = jsx(tmp2(6024).XSmallIcon, {});
     const intl2 = tmp2(1126).intl;
     class I {
       constructor() {

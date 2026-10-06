@@ -1,31 +1,31 @@
-// === Module 14362: crossPlatformRPCEventHandlers ===
+// === Module 14380: crossPlatformRPCEventHandlers ===
 
-// Module 14362 (crossPlatformRPCEventHandlers)
+// Module 14380 (crossPlatformRPCEventHandlers)
 import _modDef12 from "module_12" /* 12 */;
 import shallowEqualDefault from "shallowEqual" /* 568 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1097 */;
 import GuildRecord from "GuildRecord" /* 2070 */;
-import AgeGateUtils from "AgeGateUtils" /* 5100 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8015 */;
-import RPCErrorDefault from "RPCError" /* 9026 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9029 */;
-import RPCHelpers from "RPCHelpers" /* 9031 */;
-import transformUserDefault from "transformUser" /* 9032 */;
-import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 14299 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14304 */;
-import transformGuildMemberDefault from "transformGuildMember" /* 14363 */;
-import transformApplicationDefault from "transformApplication" /* 14364 */;
-import ApplicationStore from "ApplicationStore" /* 5118 */;
+import AgeGateUtils from "AgeGateUtils" /* 5106 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8025 */;
+import RPCErrorDefault from "RPCError" /* 9059 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9062 */;
+import RPCHelpers from "RPCHelpers" /* 9064 */;
+import transformUserDefault from "transformUser" /* 9065 */;
+import ConjureVoiceSessionCoordinatorDefault from "ConjureVoiceSessionCoordinator" /* 14317 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14322 */;
+import transformGuildMemberDefault from "transformGuildMember" /* 14381 */;
+import transformApplicationDefault from "transformApplication" /* 14382 */;
+import ApplicationStore from "ApplicationStore" /* 5124 */;
 import RunningGameStore from "RunningGameStore" /* 2006 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildStore from "GuildStore" /* 2074 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import UserStore from "UserStore" /* 1377 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
-import Constants_mod from "Constants" /* 5316 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import Constants_mod from "Constants" /* 5323 */;
 import Constants_mod2 from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 
@@ -419,7 +419,7 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    let obj = socket(14299);
+    let obj = socket(14317);
     const result = obj.validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;

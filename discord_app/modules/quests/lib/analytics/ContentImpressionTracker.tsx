@@ -1,24 +1,24 @@
-// === Module 10959: ContentImpressionTracker ===
+// === Module 10972: ContentImpressionTracker ===
 
-// Module 10959 (ContentImpressionTracker)
+// Module 10972 (ContentImpressionTracker)
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 5409 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import QuestDataUtils from "QuestDataUtils" /* 7183 */;
-import getQuestLogger from "getQuestLogger" /* 7193 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import captureAdUserAction4 from "captureAdUserAction" /* 7213 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7223 */;
-import IosAttributionEligibility from "IosAttributionEligibility" /* 10934 */;
-import IosAttributionNativeModule from "IosAttributionNativeModule" /* 10935 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 10936 */;
-import IosAttributionMetrics from "IosAttributionMetrics" /* 10938 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 5416 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import QuestDataUtils from "QuestDataUtils" /* 7196 */;
+import getQuestLogger from "getQuestLogger" /* 7206 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import captureAdUserAction4 from "captureAdUserAction" /* 7226 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 7236 */;
+import IosAttributionEligibility from "IosAttributionEligibility" /* 10947 */;
+import IosAttributionNativeModule from "IosAttributionNativeModule" /* 10948 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 10949 */;
+import IosAttributionMetrics from "IosAttributionMetrics" /* 10951 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
-import QuestStore from "QuestStore" /* 7187 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7217 */;
+import QuestStore from "QuestStore" /* 7200 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 7230 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -539,16 +539,16 @@ class QuestContentImpression {
     obj4.isQuestEnrollmentBlocked = isQuestEnrollmentBlocked;
     obj4.onImpressionCallback = onImpression;
     obj4.sourceQuestContent = sourceQuestContent;
-    let obj2 = obj4(7224);
-    obj4.migrateQuestContentLoadedToCaptureAdUserAction = obj2.shouldMigrateToAdAnalyticsInterface(obj4(7224).AdAnalyticsInterfaceExperimentStep.STEP_1_LOADED, "quest_content_impression");
-    const tmp4 = obj4(7224);
+    let obj2 = obj4(7237);
+    obj4.migrateQuestContentLoadedToCaptureAdUserAction = obj2.shouldMigrateToAdAnalyticsInterface(obj4(7237).AdAnalyticsInterfaceExperimentStep.STEP_1_LOADED, "quest_content_impression");
+    const tmp4 = obj4(7237);
     const shouldMigrateToAdAnalyticsInterface = tmp4.shouldMigrateToAdAnalyticsInterface;
-    let obj3 = obj4(7183);
+    let obj3 = obj4(7196);
     let result = obj3.isBillableQuestContent(questContent, adCreativeType);
-    const AdAnalyticsInterfaceExperimentStep = obj4(7224).AdAnalyticsInterfaceExperimentStep;
+    const AdAnalyticsInterfaceExperimentStep = obj4(7237).AdAnalyticsInterfaceExperimentStep;
     obj4.migrateQuestContentViewedToCaptureAdUserAction = shouldMigrateToAdAnalyticsInterface(result ? AdAnalyticsInterfaceExperimentStep.STEP_5_VIEWED_IMPRESSION : AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION, "quest_content_impression");
     const tmp2 = obj4;
-    if (adCreativeType === tmp2(5630).AdCreativeType.QUEST) {
+    if (adCreativeType === tmp2(5637).AdCreativeType.QUEST) {
       let obj5 = { adContentIds, adCreativeType };
       obj4.entity = obj5;
     } else {

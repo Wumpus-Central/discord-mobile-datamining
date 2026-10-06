@@ -1,9 +1,9 @@
-// === Module 17012: guild_automod/PermissionUtils ===
+// === Module 17038: guild_automod/PermissionUtils ===
 
-// Module 17012 (guild_automod/PermissionUtils)
-import Constants2 from "Constants" /* 11474 */;
+// Module 17038 (guild_automod/PermissionUtils)
+import Constants2 from "Constants" /* 11487 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,10 +1,10 @@
-// === Module 6615: GuildMemberActionCreators ===
+// === Module 6622: GuildMemberActionCreators ===
 
-// Module 6615 (GuildMemberActionCreators)
+// Module 6622 (GuildMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import ImpersonateActionCreators from "ImpersonateActionCreators" /* 5942 */;
+import ImpersonateActionCreators from "ImpersonateActionCreators" /* 5949 */;
 import ImpersonateStore from "ImpersonateStore" /* 2105 */;
 import size from "module_2" /* 2 */;
 

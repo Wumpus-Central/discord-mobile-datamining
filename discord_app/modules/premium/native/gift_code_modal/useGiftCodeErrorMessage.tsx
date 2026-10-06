@@ -1,9 +1,9 @@
-// === Module 11099: useGiftCodeErrorMessage ===
+// === Module 11112: useGiftCodeErrorMessage ===
 
-// Module 11099 (useGiftCodeErrorMessage)
+// Module 11112 (useGiftCodeErrorMessage)
 import _slicedToArray from "_slicedToArray" /* 32 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
-import GiftCodeStore from "GiftCodeStore" /* 11088 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
+import GiftCodeStore from "GiftCodeStore" /* 11101 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

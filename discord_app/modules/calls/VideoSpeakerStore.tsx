@@ -1,15 +1,15 @@
-// === Module 9070: VideoSpeakerStore ===
+// === Module 9106: VideoSpeakerStore ===
 
-// Module 9070 (VideoSpeakerStore)
+// Module 9106 (VideoSpeakerStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import CallConstants from "CallConstants" /* 4911 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4912 */;
+import CallConstants from "CallConstants" /* 4917 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4918 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import SpeakingStore from "SpeakingStore" /* 5576 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4906 */;
+import SpeakingStore from "SpeakingStore" /* 5583 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4912 */;
 import module_12 from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 9610: useMyCurrentStageChannel ===
+// === Module 9623: useMyCurrentStageChannel ===
 
-// Module 9610 (useMyCurrentStageChannel)
+// Module 9623 (useMyCurrentStageChannel)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import ChannelStore from "ChannelStore" /* 2051 */;

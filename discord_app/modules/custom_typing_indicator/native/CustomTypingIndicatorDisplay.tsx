@@ -1,17 +1,17 @@
-// === Module 11594: CustomTypingIndicatorDisplay ===
+// === Module 11607: CustomTypingIndicatorDisplay ===
 
-// Module 11594 (CustomTypingIndicatorDisplay)
+// Module 11607 (CustomTypingIndicatorDisplay)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Stack_Stack from "Stack/Stack" /* 5593 */;
-import Pressables from "Pressables" /* 5909 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11587 */;
-import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11595 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Stack_Stack from "Stack/Stack" /* 5600 */;
+import Pressables from "Pressables" /* 5916 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11600 */;
+import CustomTypingIndicatorGlyphDefault from "CustomTypingIndicatorGlyph" /* 11608 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 7615: transformReactions ===
+// === Module 7626: transformReactions ===
 
-// Module 7615 (transformReactions)
+// Module 7626 (transformReactions)
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4527 */;
-import getAccessibilityLabelOrCheapFallbackUnsafe2 from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 7610 */;
-import EmojiColorUtils from "EmojiColorUtils" /* 7616 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4533 */;
+import getAccessibilityLabelOrCheapFallbackUnsafe2 from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 7621 */;
+import EmojiColorUtils from "EmojiColorUtils" /* 7627 */;
 import size from "module_2" /* 2 */;
 
 let burst_count, emoji;

@@ -1,6 +1,6 @@
-// === Module 6996: KvMessage ===
+// === Module 7009: KvMessage ===
 
-// Module 6996 (KvMessage)
+// Module 7009 (KvMessage)
 import Constants from "Constants" /* 1085 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;

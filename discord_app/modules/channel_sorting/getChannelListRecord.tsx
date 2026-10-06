@@ -1,10 +1,10 @@
-// === Module 10731: getChannelListRecord ===
+// === Module 10744: getChannelListRecord ===
 
-// Module 10731 (getChannelListRecord)
+// Module 10744 (getChannelListRecord)
 import Constants from "Constants" /* 1085 */;
 import FavoritesUtils from "FavoritesUtils" /* 2077 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4507 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4513 */;
 import size from "module_2" /* 2 */;
 
 let c3;

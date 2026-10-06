@@ -1,13 +1,13 @@
-// === Module 8807: application_commands/ApplicationCommandBuiltIns ===
+// === Module 8837: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 8807 (application_commands/ApplicationCommandBuiltIns)
+// Module 8837 (application_commands/ApplicationCommandBuiltIns)
 import Server from "Server" /* 1985 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4903 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4909 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import size from "module_2" /* 2 */;
 
@@ -31,7 +31,7 @@ let obj = {
     let intl4;
     channel = channel.channel;
     if (null != channel) {
-      const obj4 = channel(5043);
+      const obj4 = channel(5049);
       const channelName = obj4.computeChannelName(channel, UserStore, RelationshipStore);
       const intl5 = channel(1126).intl;
       const obj2 = { name: channelName };

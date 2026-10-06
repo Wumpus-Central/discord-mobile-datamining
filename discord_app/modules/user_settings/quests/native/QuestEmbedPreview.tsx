@@ -1,17 +1,17 @@
-// === Module 14976: QuestEmbedPreview ===
+// === Module 14991: QuestEmbedPreview ===
 
-// Module 14976 (QuestEmbedPreview)
+// Module 14991 (QuestEmbedPreview)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import CodedLink from "CodedLink" /* 4875 */;
-import RowGeneratorDefault from "RowGenerator" /* 7591 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10010 */;
-import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 14975 */;
+import CodedLink from "CodedLink" /* 4881 */;
+import RowGeneratorDefault from "RowGenerator" /* 7602 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 10023 */;
+import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 14990 */;
 import react from "react" /* 19 */;
-import MessageRecord from "MessageRecord" /* 4520 */;
+import MessageRecord from "MessageRecord" /* 4526 */;
 import UserStore from "UserStore" /* 1377 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -144,7 +144,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function(questId) {
   }, items1);
   let tmp6 = null;
   if (null != memo1) {
-    stateFromStores(14975);
+    stateFromStores(14990);
     const intl = tmp2(1126).intl;
     let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
     tmp6 = <tmp9 title={intl.string(tmp2(1126).t["habP/M"])}>{null}</tmp9>;

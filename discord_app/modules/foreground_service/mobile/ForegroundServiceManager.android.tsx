@@ -1,9 +1,9 @@
-// === Module 7252: ForegroundServiceManager ===
+// === Module 7265: ForegroundServiceManager ===
 
-// Module 7252 (ForegroundServiceManager)
+// Module 7265 (ForegroundServiceManager)
 import react_native from "react-native" /* 17 */;
 import _modDef1342 from "module_1342" /* 1342 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7253 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7266 */;
 import LifecycleManager from "LifecycleManager" /* 1989 */;
 import size from "module_2" /* 2 */;
 

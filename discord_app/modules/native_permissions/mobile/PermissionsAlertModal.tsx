@@ -1,9 +1,9 @@
-// === Module 7284: PermissionsAlertModal ===
+// === Module 7297: PermissionsAlertModal ===
 
-// Module 7284 (PermissionsAlertModal)
+// Module 7297 (PermissionsAlertModal)
 import react2 from "react" /* 576 */;
 import intl3 from "intl" /* 1126 */;
-import AlertModal2 from "AlertModal" /* 5713 */;
+import AlertModal2 from "AlertModal" /* 5720 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

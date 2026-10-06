@@ -1,9 +1,9 @@
-// === Module 17772: GuildSettingsModalLobbiesLinked ===
+// === Module 17818: GuildSettingsModalLobbiesLinked ===
 
-// Module 17772 (GuildSettingsModalLobbiesLinked)
+// Module 17818 (GuildSettingsModalLobbiesLinked)
 import Constants from "Constants" /* 1085 */;
 import react from "react" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4519 */;
+import RelationshipStore from "RelationshipStore" /* 4525 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
@@ -118,13 +118,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? ((channels) => {
   const applicationId = channels.applicationId;
   let obj = channels(1490);
   dependencyMap = obj.useNavigation();
-  let obj2 = channels(6663);
+  let obj2 = channels(6670);
   const getOrFetchApplication = obj2.useGetOrFetchApplication(applicationId);
   let tmp5Result = null;
   const tmp = channels;
   if (0 !== channels.length) {
     let name;
-    const TableRowGroup = tmp(6074).TableRowGroup;
+    const TableRowGroup = tmp(6081).TableRowGroup;
     if (getOrFetchApplication != null) {
       name = getOrFetchApplication.name;
     }
@@ -289,7 +289,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
       tmp21 = tmp23;
     }
     const obj8 = { style: tmp15, spacing: arr(587).space.PX_24, children: tmp16 };
-    const Stack = tmp(5593).Stack;
+    const Stack = tmp(5600).Stack;
     const tmp20 = closure_6(Stack, obj8);
     cResult[13] = tmp15;
     cResult[14] = tmp16;

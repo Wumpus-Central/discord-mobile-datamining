@@ -1,14 +1,14 @@
-// === Module 9307: CertifiedDeviceStore ===
+// === Module 8080: CertifiedDeviceStore ===
 
-// Module 9307 (CertifiedDeviceStore)
+// Module 8080 (CertifiedDeviceStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 4915 */;
+import Constants from "Constants" /* 4921 */;
 import size from "module_2" /* 2 */;
 
-const f100236 = (id) => {
+const f96418 = (id) => {
   closure_1_6[id.id] = id;
   return id;
 };
@@ -38,7 +38,7 @@ class CertifiedDeviceStore extends Store {
           });
         }
         closure_1_5[arg1] = closure_1_5[arg1];
-        const item2 = arr.forEach(f100236);
+        const item2 = arr.forEach(f96418);
       });
     }
   }
@@ -122,7 +122,7 @@ const obj = {
       });
     }
     closure_5[applicationId] = devices;
-    const item1 = devices.forEach(f100236);
+    const item1 = devices.forEach(f96418);
     const Storage = Storage2.Storage;
     const result = Storage.set(CertifiedDeviceStore_str, closure_5);
     closure_7 = closure_7 + 1;

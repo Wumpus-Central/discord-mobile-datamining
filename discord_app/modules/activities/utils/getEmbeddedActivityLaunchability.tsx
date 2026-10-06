@@ -1,14 +1,14 @@
-// === Module 9011: getEmbeddedActivityLaunchability ===
+// === Module 9044: getEmbeddedActivityLaunchability ===
 
-// Module 9011 (getEmbeddedActivityLaunchability)
+// Module 9044 (getEmbeddedActivityLaunchability)
 import Constants from "Constants" /* 1085 */;
 import intl4 from "intl" /* 1126 */;
 import Constants2 from "Constants" /* 2011 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9012 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9045 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,24 +1,24 @@
-// === Module 17830: GuildSettingsModalCommunityIntro ===
+// === Module 17876: GuildSettingsModalCommunityIntro ===
 
-// Module 17830 (GuildSettingsModalCommunityIntro)
+// Module 17876 (GuildSettingsModalCommunityIntro)
 import react2 from "react" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import nativeDefault from "native" /* 587 */;
 import intl7 from "intl" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import CircleInformationIcon2 from "CircleInformationIcon" /* 4812 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import LightbulbIcon2 from "LightbulbIcon" /* 9957 */;
-import AnalyticsIcon2 from "AnalyticsIcon" /* 10108 */;
-import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17835 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import CircleInformationIcon2 from "CircleInformationIcon" /* 4818 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import LightbulbIcon2 from "LightbulbIcon" /* 9970 */;
+import AnalyticsIcon2 from "AnalyticsIcon" /* 10121 */;
+import EnableCommunityModalActionCreatorsDefault from "EnableCommunityModalActionCreators" /* 17881 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import PermissionStore from "PermissionStore" /* 4509 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9248 */;
+import PermissionStore from "PermissionStore" /* 4515 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9283 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -391,7 +391,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         tmp5 = closure_1;
         tmp6 = closure_2;
         obj = closure_1(closure_2[18]);
-        waitResult = obj.wait(() => { /* body not rendered: F149221 */ });
+        waitResult = obj.wait(() => { /* body not rendered: F149456 */ });
         tmp8 = closure_2;
         tmp9 = GuildSettingsSections;
         obj1 = { onClose: null };

@@ -1,19 +1,19 @@
-// === Module 10019: MessageImpressionAnalyticsHelpers ===
+// === Module 10032: MessageImpressionAnalyticsHelpers ===
 
-// Module 10019 (MessageImpressionAnalyticsHelpers)
+// Module 10032 (MessageImpressionAnalyticsHelpers)
 import react2 from "react" /* 576 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 4872 */;
-import CodedLink from "CodedLink" /* 4875 */;
-import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6770 */;
-import MessageEmbedConstants from "MessageEmbedConstants" /* 7173 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7225 */;
-import Constants2 from "Constants" /* 7226 */;
-import MessageViewTrackingManager from "MessageViewTrackingManager" /* 10020 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10021 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10022 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 4878 */;
+import CodedLink from "CodedLink" /* 4881 */;
+import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 6780 */;
+import MessageEmbedConstants from "MessageEmbedConstants" /* 7186 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7238 */;
+import Constants2 from "Constants" /* 7239 */;
+import MessageViewTrackingManager from "MessageViewTrackingManager" /* 10033 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 10034 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 10035 */;
 import react from "react" /* 19 */;
-import InviteStore from "InviteStore" /* 4871 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
+import InviteStore from "InviteStore" /* 4877 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

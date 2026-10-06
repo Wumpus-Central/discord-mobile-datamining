@@ -1,25 +1,25 @@
-// === Module 16453: ICYMICustomStatusRow ===
+// === Module 16493: ICYMICustomStatusRow ===
 
-// Module 16453 (ICYMICustomStatusRow)
+// Module 16493 (ICYMICustomStatusRow)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl4 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import TrashIcon from "TrashIcon" /* 4847 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import ReactionIcon from "ReactionIcon" /* 8411 */;
-import PencilIcon from "PencilIcon" /* 10058 */;
-import AssetRegistryDefault from "AssetRegistry" /* 11042 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11366 */;
+import TrashIcon from "TrashIcon" /* 4853 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import ReactionIcon from "ReactionIcon" /* 8444 */;
+import PencilIcon from "PencilIcon" /* 10071 */;
+import AssetRegistryDefault from "AssetRegistry" /* 11055 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11379 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
 import UserStore from "UserStore" /* 1377 */;
-import ICYMIStore from "ICYMIStore" /* 8011 */;
+import ICYMIStore from "ICYMIStore" /* 8021 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
-import createICYMIStyles from "createICYMIStyles" /* 16394 */;
+import createStyles from "createStyles" /* 4896 */;
+import createICYMIStyles from "createICYMIStyles" /* 16434 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -125,7 +125,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   const userId = id.userId;
   ({ customStatusExtra, renderForScreenshot, variant } = id);
   closure_14(renderForScreenshot);
-  const obj2 = id(7507);
+  const obj2 = id(7518);
   const gradientBottom = obj2.useGradientBottom();
   let backgroundColor;
   if (gradientBottom != null) {
@@ -136,7 +136,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((id) => {
   }
   const tmp6Result = closure_13(backgroundColor);
   if (cResult[0] !== tmp6Result.background.backgroundColor) {
-    const tmpResult = id(4727);
+    const tmpResult = id(4733);
     cResult[0] = tmp6Result.background.backgroundColor;
     cResult[1] = tmpResult.hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);
     const hexWithOpacityResult = tmpResult.hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);

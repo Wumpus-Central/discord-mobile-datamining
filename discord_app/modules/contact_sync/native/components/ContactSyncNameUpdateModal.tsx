@@ -1,21 +1,21 @@
-// === Module 14653: ContactSyncNameUpdateModal ===
+// === Module 14669: ContactSyncNameUpdateModal ===
 
-// Module 14653 (ContactSyncNameUpdateModal)
+// Module 14669 (ContactSyncNameUpdateModal)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 5093 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import Navigator from "Navigator" /* 6496 */;
-import ContactSyncConstants from "ContactSyncConstants" /* 12327 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12329 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 5099 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import Navigator from "Navigator" /* 6503 */;
+import ContactSyncConstants from "ContactSyncConstants" /* 12342 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12344 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import NavigatorHeader_mod from "NavigatorHeader" /* 6010 */;
+import NavigatorHeader_mod from "NavigatorHeader" /* 6017 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -176,8 +176,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   }
   cResult[2] = tmp6;
   cResult[3] = undefined;
-  cResult[4] = jsx(onNext(12346), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
-  const tmp12 = jsx(onNext(12346), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
+  cResult[4] = jsx(onNext(12361), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
+  const tmp12 = jsx(onNext(12361), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
 }) : (() => {
   let str;
   function onNext() {

@@ -1,9 +1,9 @@
-// === Module 8387: GameProfileSkeletonPulse ===
+// === Module 8420: GameProfileSkeletonPulse ===
 
-// Module 8387 (GameProfileSkeletonPulse)
+// Module 8420 (GameProfileSkeletonPulse)
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4612 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4618 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -263,7 +263,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const effect1 = react.useEffect(O, tmp13);
   let result = -arg0 % c5 / c5;
   dependencyMap = result;
-  const tmpResult2 = tmp(4612);
+  const tmpResult2 = tmp(4618);
   class T {
     constructor() {
       let tmp7;
@@ -359,7 +359,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   }, items1);
   let result = -arg0 % c5 / c5;
   dependencyMap = result;
-  let obj2 = stateFromStores(4612);
+  let obj2 = stateFromStores(4618);
   const fn = function f() {
     let tmp7;
     const obj = { opacity: null };

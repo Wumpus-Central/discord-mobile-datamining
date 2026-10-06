@@ -1,6 +1,6 @@
-// === Module 9352: _asyncToGenerator ===
+// === Module 9366: _asyncToGenerator ===
 
-// Module 9352 (_asyncToGenerator)
+// Module 9366 (_asyncToGenerator)
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 

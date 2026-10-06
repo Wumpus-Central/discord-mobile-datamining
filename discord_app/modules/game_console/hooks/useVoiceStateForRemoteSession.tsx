@@ -1,11 +1,11 @@
-// === Module 9445: useVoiceStateForRemoteSession ===
+// === Module 9458: useVoiceStateForRemoteSession ===
 
-// Module 9445 (useVoiceStateForRemoteSession)
+// Module 9458 (useVoiceStateForRemoteSession)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
-import GameConsoleStore from "GameConsoleStore" /* 4907 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import GameConsoleStore from "GameConsoleStore" /* 4913 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

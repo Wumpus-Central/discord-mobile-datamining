@@ -1,13 +1,13 @@
-// === Module 6910: PremiumManagementUtils ===
+// === Module 6920: PremiumManagementUtils ===
 
-// Module 6910 (PremiumManagementUtils)
+// Module 6920 (PremiumManagementUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
 import Constants2 from "Constants" /* 1096 */;
 import intl5 from "intl" /* 1126 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5708 */;
-import BillingStandaloneNativeUtils from "BillingStandaloneNativeUtils" /* 6911 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5715 */;
+import BillingStandaloneNativeUtils from "BillingStandaloneNativeUtils" /* 6921 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -114,7 +114,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
             }
             const tmp8 = status === SubscriptionStatusTypes.CANCELED || status === SubscriptionStatusTypes.PAUSE_PENDING || status === SubscriptionStatusTypes.PAST_DUE;
             if (tmp.returnCtaAsComponent) {
-              const LinkButton = tmp13(6914).LinkButton;
+              const LinkButton = tmp13(6924).LinkButton;
               const intl3 = tmp13(1126).intl;
               const string = intl3.string;
               const t = tmp13(1126).t;

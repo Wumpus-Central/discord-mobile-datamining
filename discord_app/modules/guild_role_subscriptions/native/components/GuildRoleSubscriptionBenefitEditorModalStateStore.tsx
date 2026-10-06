@@ -1,14 +1,14 @@
-// === Module 17947: GuildRoleSubscriptionBenefitEditorModalStateStore ===
+// === Module 17993: GuildRoleSubscriptionBenefitEditorModalStateStore ===
 
-// Module 17947 (GuildRoleSubscriptionBenefitEditorModalStateStore)
+// Module 17993 (GuildRoleSubscriptionBenefitEditorModalStateStore)
 import react from "react" /* 576 */;
 import react_native from "react-native" /* 1259 */;
-import _slicedToArray from "_slicedToArray" /* 4492 */;
+import _slicedToArray from "_slicedToArray" /* 4498 */;
 import module_1254 from "module_1254" /* 1254 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
-let closure_2 = Object.freeze({ name: "", emojiId: "backgroundColor", emojiName: "prototype", description: "guildId", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "backgroundColor", emojiName: "text", description: "guild_id", refId: "Array" });
 let closure_3 = module_1254.createWithEqualityFn((arg0) => {
   let closure_0 = arg0;
   let obj = {

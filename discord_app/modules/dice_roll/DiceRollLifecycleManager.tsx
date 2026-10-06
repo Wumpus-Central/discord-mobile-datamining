@@ -1,15 +1,15 @@
-// === Module 17484: DiceRollLifecycleManager ===
+// === Module 17511: DiceRollLifecycleManager ===
 
-// Module 17484 (DiceRollLifecycleManager)
+// Module 17511 (DiceRollLifecycleManager)
 import intl3 from "intl" /* 1126 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
-import MessageParserDefault from "MessageParser" /* 7166 */;
-import DiceRollStore2 from "DiceRollStore" /* 11573 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
+import MessageParserDefault from "MessageParser" /* 7179 */;
+import DiceRollStore2 from "DiceRollStore" /* 11586 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2103 */;
-import DiceRollConstants from "DiceRollConstants" /* 8806 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6613 */;
+import DiceRollConstants from "DiceRollConstants" /* 8836 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 6620 */;
 import size from "module_2" /* 2 */;
 
 const DiceRollStore = DiceRollStore2;

@@ -1,20 +1,20 @@
-// === Module 13019: transformMessageAttachments ===
+// === Module 13038: transformMessageAttachments ===
 
-// Module 13019 (transformMessageAttachments)
+// Module 13038 (transformMessageAttachments)
 import Constants from "Constants" /* 1085 */;
 import intl8 from "intl" /* 1126 */;
 import PlatformUtils from "PlatformUtils" /* 1369 */;
 import FlagUtils from "FlagUtils" /* 1390 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5040 */;
-import _modDef7271 from "module_7271" /* 7271 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 7592 */;
-import sanitizeMediaDimension3 from "sanitizeMediaDimension" /* 7790 */;
-import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7791 */;
-import ExplicitMediaUtils from "ExplicitMediaUtils" /* 7808 */;
-import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 7810 */;
-import getDisplayFilenameDefault from "getDisplayFilename" /* 7940 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 9993 */;
-import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 11323 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 5046 */;
+import _modDef7284 from "module_7284" /* 7284 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 7603 */;
+import sanitizeMediaDimension3 from "sanitizeMediaDimension" /* 7801 */;
+import RowGeneratorUtilsDefault from "RowGeneratorUtils" /* 7802 */;
+import ExplicitMediaUtils from "ExplicitMediaUtils" /* 7819 */;
+import SuspiciousDownloadUtils from "SuspiciousDownloadUtils" /* 7821 */;
+import getDisplayFilenameDefault from "getDisplayFilename" /* 7951 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 10006 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 11336 */;
 import size from "module_2" /* 2 */;
 
 const AttachmentType = RowGeneratorConstants.AttachmentType;
@@ -198,7 +198,7 @@ export default function transformMessageAttachments(arg0) {
           const intl3 = intl8.intl;
           stringResult1 = intl3.string(intl8.t["0PQYk3"]);
         }
-        obj12 = _modDef7271;
+        obj12 = _modDef7284;
         const intl4 = intl8.intl;
         str6 = intl4.string(intl8.t.jCV1Tz);
         intl5 = intl8.intl;

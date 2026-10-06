@@ -1,11 +1,11 @@
-// === Module 12196: useAvailableBoostCountForPowerup ===
+// === Module 12211: useAvailableBoostCountForPowerup ===
 
-// Module 12196 (useAvailableBoostCountForPowerup)
+// Module 12211 (useAvailableBoostCountForPowerup)
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

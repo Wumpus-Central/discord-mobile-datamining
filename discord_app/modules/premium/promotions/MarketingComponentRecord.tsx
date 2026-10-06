@@ -1,10 +1,10 @@
-// === Module 10398: MarketingComponentRecord ===
+// === Module 10411: MarketingComponentRecord ===
 
-// Module 10398 (MarketingComponentRecord)
+// Module 10411 (MarketingComponentRecord)
 import DurationsDefault from "Durations" /* 1102 */;
 import ProtoUtils from "ProtoUtils" /* 1234 */;
 import _modDef1251 from "module_1251" /* 1251 */;
-import premium_marketing_component_properties from "premium_marketing_component_properties" /* 10399 */;
+import premium_marketing_component_properties from "premium_marketing_component_properties" /* 10412 */;
 import Record from "Record" /* 1392 */;
 import size from "module_2" /* 2 */;
 

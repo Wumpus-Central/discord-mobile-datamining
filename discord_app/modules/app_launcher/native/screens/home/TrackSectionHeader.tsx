@@ -1,10 +1,10 @@
-// === Module 11720: TrackSectionHeader ===
+// === Module 11734: TrackSectionHeader ===
 
-// Module 11720 (TrackSectionHeader)
+// Module 11734 (TrackSectionHeader)
 import react from "react" /* 576 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1260 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8422 */;
-import AppLauncherStore from "AppLauncherStore" /* 8931 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8455 */;
+import AppLauncherStore from "AppLauncherStore" /* 8960 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

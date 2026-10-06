@@ -1,6 +1,6 @@
-// === Module 10911: hooks/QuestHooks ===
+// === Module 10924: hooks/QuestHooks ===
 
-// Module 10911 (hooks/QuestHooks)
+// Module 10924 (hooks/QuestHooks)
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
 import DurationsDefault from "Durations" /* 1102 */;
@@ -12,47 +12,47 @@ import GlobalUtils from "GlobalUtils" /* 1375 */;
 import PremiumConstants from "PremiumConstants" /* 1379 */;
 import NumberUtils from "NumberUtils" /* 1888 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2115 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
-import shared from "shared" /* 4729 */;
-import merged5 from "merged5" /* 5075 */;
-import QualtricsActionCreators from "QualtricsActionCreators" /* 5080 */;
-import SurveyActionTypes2 from "SurveyActionTypes" /* 5088 */;
-import QuestTypes from "QuestTypes" /* 5626 */;
-import AdCreativeType from "AdCreativeType" /* 5630 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5631 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6663 */;
-import QuestDataUtils from "QuestDataUtils" /* 7183 */;
-import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 7188 */;
-import AnalyticsActions from "AnalyticsActions" /* 7202 */;
-import utils_QuestUtils from "utils/QuestUtils" /* 7206 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7208 */;
-import QuestType from "QuestType" /* 7211 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7212 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 9041 */;
-import QuestActionCreators from "QuestActionCreators" /* 9994 */;
-import AssetUtils from "AssetUtils" /* 10000 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 10005 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10008 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 10010 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 10015 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10778 */;
-import RenewableEndDateSortExperimentDefault from "RenewableEndDateSortExperiment" /* 10913 */;
-import apexExperiment from "apexExperiment" /* 10914 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 10918 */;
-import VideoQuestUtils from "VideoQuestUtils" /* 10940 */;
-import QuestConsoleStartError from "QuestConsoleStartError" /* 10943 */;
-import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 10944 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
+import shared from "shared" /* 4735 */;
+import merged5 from "merged5" /* 5081 */;
+import QualtricsActionCreators from "QualtricsActionCreators" /* 5086 */;
+import SurveyActionTypes2 from "SurveyActionTypes" /* 5094 */;
+import QuestTypes from "QuestTypes" /* 5633 */;
+import AdCreativeType from "AdCreativeType" /* 5637 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5638 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 6670 */;
+import QuestDataUtils from "QuestDataUtils" /* 7196 */;
+import ConsoleQuestUIStore from "ConsoleQuestUIStore" /* 7201 */;
+import AnalyticsActions from "AnalyticsActions" /* 7215 */;
+import utils_QuestUtils from "utils/QuestUtils" /* 7219 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7221 */;
+import QuestType from "QuestType" /* 7224 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7225 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 9077 */;
+import QuestActionCreators from "QuestActionCreators" /* 10007 */;
+import AssetUtils from "AssetUtils" /* 10013 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 10018 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 10021 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 10023 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 10028 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 10791 */;
+import RenewableEndDateSortExperimentDefault from "RenewableEndDateSortExperiment" /* 10926 */;
+import apexExperiment from "apexExperiment" /* 10927 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 10931 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 10953 */;
+import QuestConsoleStartError from "QuestConsoleStartError" /* 10956 */;
+import useRefocusOrLaunchActivityDefault from "useRefocusOrLaunchActivity" /* 10957 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import AdDeliveryStore_mod from "AdDeliveryStore" /* 7184 */;
+import AdDeliveryStore_mod from "AdDeliveryStore" /* 7197 */;
 import LocaleStore_mod from "LocaleStore" /* 2116 */;
 import ChannelStore_mod from "ChannelStore" /* 2051 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5440 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5447 */;
 import UserStore from "UserStore" /* 1377 */;
-import BountyStore from "BountyStore" /* 7186 */;
-import QuestStore from "QuestStore" /* 7187 */;
-import QuestConstants from "QuestConstants" /* 5623 */;
+import BountyStore from "BountyStore" /* 7199 */;
+import QuestStore from "QuestStore" /* 7200 */;
+import QuestConstants from "QuestConstants" /* 5630 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -895,7 +895,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   const stateFromStoresObject = obj4.useStateFromStoresObject(items2, () => ({ isFetchingCurrentQuests: QuestStore.isFetchingCurrentQuests, lastFetchedCurrentQuests: QuestStore.lastFetchedCurrentQuests }));
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
-  const obj5 = obj(10912);
+  const obj5 = obj(10925);
   isEligibleForQuests = obj5.getIsEligibleForQuests();
   const items3 = [obj.fetchPolicy, isEligibleForQuests, hasFetched, isFetchingCurrentQuests, lastFetchedCurrentQuests, obj.callerSource];
   const effect = isEligibleForQuests.useEffect(() => {
@@ -1669,7 +1669,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, channelId, ar
             claimedAt = userStatus.claimedAt;
           }
           let tmp8 = null != claimedAt;
-          const tmpResult = tmp(7206);
+          const tmpResult = tmp(7219);
           if (tmp8) {
             tmp8 = !tmpResult.isStreamingAndCanWatch(arg1, stateFromStores);
           }
@@ -2210,7 +2210,7 @@ let tmp21 = ReactCompilerGating.isReactCompilerEnabled() ? ((quest) => {
   quest = quest.quest;
   ({ questContent: importDefault, sourceQuestContent: dependencyMap } = quest);
   let closure_3 = closure_56({ quest });
-  let obj = quest(10916);
+  let obj = quest(10929);
   let closure_4 = obj.useGetQuestImpressionId();
   return () => {
     const tmp = QuestPlatformUtils;
@@ -3922,7 +3922,7 @@ const tmp36 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, DARK) => {
       tmp10 = tmp13;
     }
     const tmpResult4 = require("AssetUtils");
-    const questAsset = tmpResult4.getQuestAsset(stateFromStores, tmp(10000).QuestAssetType.COSPONSOR_LOGO_TYPE, tmp11);
+    const questAsset = tmpResult4.getQuestAsset(stateFromStores, tmp(10013).QuestAssetType.COSPONSOR_LOGO_TYPE, tmp11);
     cResult[4] = stateFromStores;
     cResult[5] = tmp11;
     cResult[6] = questAsset;

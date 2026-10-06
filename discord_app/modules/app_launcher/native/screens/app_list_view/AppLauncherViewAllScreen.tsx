@@ -1,21 +1,21 @@
-// === Module 11821: AppLauncherViewAllScreen ===
+// === Module 11835: AppLauncherViewAllScreen ===
 
-// Module 11821 (AppLauncherViewAllScreen)
+// Module 11835 (AppLauncherViewAllScreen)
 import react_native from "react-native" /* 17 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6014 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
-import AppLauncherContext from "AppLauncherContext" /* 10994 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11665 */;
-import AppLauncherBackButton from "AppLauncherBackButton" /* 11755 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import ArrowLargeLeftIcon2 from "ArrowLargeLeftIcon" /* 6021 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
+import AppLauncherContext from "AppLauncherContext" /* 11007 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11679 */;
+import AppLauncherBackButton from "AppLauncherBackButton" /* 11769 */;
 import react from "react" /* 19 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1489 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,10 +1,10 @@
-// === Module 10605: GameRelationshipActionCreators ===
+// === Module 10618: GameRelationshipActionCreators ===
 
-// Module 10605 (GameRelationshipActionCreators)
+// Module 10618 (GameRelationshipActionCreators)
 import intl3 from "intl" /* 1126 */;
-import shared from "shared" /* 4729 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5312 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5707 */;
+import shared from "shared" /* 4735 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 5319 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5714 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -58,7 +58,7 @@ let obj = function _deleteGameRelationship() {
     await "IconComponent";
     let closure_2 = tmp;
     ({ userId: c0, applicationId: c1, onSuccess: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -82,7 +82,7 @@ obj = function _removeGameFriend() {
     await closure_130_7(obj5);
     await "IconComponent";
     ({ userId: c0, applicationId: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -106,7 +106,7 @@ obj = function _cancelGameFriendRequest() {
     await closure_130_7(obj5);
     await "IconComponent";
     ({ userId: c0, applicationId: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

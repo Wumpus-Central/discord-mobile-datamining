@@ -1,15 +1,15 @@
-// === Module 15877: useIdentityRegistrationStep ===
+// === Module 15916: useIdentityRegistrationStep ===
 
-// Module 15877 (useIdentityRegistrationStep)
+// Module 15916 (useIdentityRegistrationStep)
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6451 */;
-import ValidationUtilsDefault from "ValidationUtils" /* 8052 */;
+import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6458 */;
+import ValidationUtilsDefault from "ValidationUtils" /* 8062 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react_mod from "react" /* 19 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15867 */;
-import RegistrationConstants from "RegistrationConstants" /* 15868 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
+import RegistrationConstants from "RegistrationConstants" /* 15907 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

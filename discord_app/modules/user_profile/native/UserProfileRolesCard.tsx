@@ -1,21 +1,21 @@
-// === Module 6684: UserProfileRolesCard ===
+// === Module 6691: UserProfileRolesCard ===
 
-// Module 6684 (UserProfileRolesCard)
+// Module 6691 (UserProfileRolesCard)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 6702 */;
-import RoleIconDefault from "RoleIcon" /* 6704 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 6705 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 6709 */;
+import RoleIconDefault from "RoleIcon" /* 6711 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 6712 */;
 import react from "react" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2112 */;
 import GuildRoleStore from "GuildRoleStore" /* 2106 */;
 import Constants from "Constants" /* 1085 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -113,7 +113,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
     if (cResult[3] === role.id) {
       tmp8 = cResult[4];
     }
-    let tmpResult = tmp(6685);
+    let tmpResult = tmp(6692);
     const roleIconProps = tmpResult.useRoleIconProps(tmp8);
     const tags = role.tags;
     let guild_connections;
@@ -131,7 +131,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
       cResult[5] = obj2;
       cResult[6] = obj3;
     }
-    guildId(6687);
+    guildId(6694);
     if (cResult[7] === tmp5) {
       if (cResult[10] === tmp5) {
         if (cResult[11] === role) {
@@ -145,7 +145,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
               tmp2 = closure_2;
               intl = role(closure_2[15]).intl;
               obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
-              obj.onPress = function onPress() { /* body not rendered: F137639 */ };
+              obj.onPress = function onPress() { /* body not rendered: F137847 */ };
               items = [];
               items[0] = obj;
               if (null != closure_4) {
@@ -161,7 +161,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
                   push = items.push;
                   intl2 = tmp(tmp2[15]).intl;
                   obj1.label = intl2.string(tmp(tmp2[15]).t["8xHmxo"]);
-                  obj1.onPress = function onPress() { /* body not rendered: F137640 */ };
+                  obj1.onPress = function onPress() { /* body not rendered: F137848 */ };
                   arr1 = push(obj1);
                 }
               }
@@ -196,7 +196,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
               } else {
                 tmp5 = colorString;
                 tmp6 = null;
-                tmp4 = f38717;
+                tmp4 = f38764;
                 obj = { color: null };
                 obj.color = tmp5;
                 tmp3Result = tmp3(tmp4, obj);
@@ -247,7 +247,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
           tmp2 = closure_2;
           intl = role(closure_2[15]).intl;
           obj.label = intl.string(role(closure_2[15]).t.sMsaLg);
-          obj.onPress = function onPress() { /* body not rendered: F137639 */ };
+          obj.onPress = function onPress() { /* body not rendered: F137847 */ };
           items = [];
           items[0] = obj;
           if (null != closure_4) {
@@ -263,7 +263,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((role) => {
               push = items.push;
               intl2 = tmp(tmp2[15]).intl;
               obj1.label = intl2.string(tmp(tmp2[15]).t["8xHmxo"]);
-              obj1.onPress = function onPress() { /* body not rendered: F137640 */ };
+              obj1.onPress = function onPress() { /* body not rendered: F137848 */ };
               arr1 = push(obj1);
             }
           }
@@ -566,7 +566,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
           tmp13 = tmp20;
         }
         const obj2 = { title: tmp14, style, children: tmp16 };
-        const tmp23 = closure_9(guildId(6706), obj2);
+        const tmp23 = closure_9(guildId(6713), obj2);
         cResult[11] = style;
         cResult[12] = tmp16;
         cResult[13] = tmp23;
@@ -611,7 +611,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((userId) => {
   let tmp4 = null;
   if (0 !== roles.length) {
     const obj2 = { title: intl.string(userId(1126).t["LPJmL/"]), style, children: closure_9(closure_16, obj3) };
-    const tmp7 = guildId(6706);
+    const tmp7 = guildId(6713);
     intl = tmp(1126).intl;
     obj3 = { guildId, guildMemberRoleIds: roles };
     tmp4 = closure_9(tmp7, obj2);

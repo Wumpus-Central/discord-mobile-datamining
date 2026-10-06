@@ -1,8 +1,8 @@
-// === Module 16596: FramePoolManager ===
+// === Module 16634: FramePoolManager ===
 
-// Module 16596 (FramePoolManager)
-import getFramesManagerDefault from "getFramesManager" /* 9040 */;
-import AbstractFramePoolManager from "AbstractFramePoolManager" /* 16597 */;
+// Module 16634 (FramePoolManager)
+import getFramesManagerDefault from "getFramesManager" /* 9076 */;
+import AbstractFramePoolManager from "AbstractFramePoolManager" /* 16635 */;
 import size from "module_2" /* 2 */;
 
 let tmp2;

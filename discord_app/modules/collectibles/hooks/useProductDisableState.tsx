@@ -1,11 +1,11 @@
-// === Module 8531: useProductDisableState ===
+// === Module 8564: useProductDisableState ===
 
-// Module 8531 (useProductDisableState)
+// Module 8564 (useProductDisableState)
 import get_initialized from "get initialized" /* 504 */;
 import react from "react" /* 576 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1088 */;
 import intl2 from "intl" /* 1126 */;
-import SubscriptionStore from "SubscriptionStore" /* 4534 */;
+import SubscriptionStore from "SubscriptionStore" /* 4540 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

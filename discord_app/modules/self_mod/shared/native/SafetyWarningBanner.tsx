@@ -1,12 +1,12 @@
-// === Module 9802: SafetyWarningBanner ===
+// === Module 9815: SafetyWarningBanner ===
 
-// Module 9802 (SafetyWarningBanner)
+// Module 9815 (SafetyWarningBanner)
 import nativeDefault from "native" /* 587 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 9798 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 9811 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

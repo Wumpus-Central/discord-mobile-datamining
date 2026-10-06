@@ -1,13 +1,13 @@
-// === Module 8588: WidgetStore ===
+// === Module 8623: WidgetStore ===
 
-// Module 8588 (WidgetStore)
+// Module 8623 (WidgetStore)
 import _modDef12 from "module_12" /* 12 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import UserStore from "UserStore" /* 1377 */;
-import UserProfileStore from "UserProfileStore" /* 7111 */;
+import UserProfileStore from "UserProfileStore" /* 7124 */;
 import size from "module_2" /* 2 */;
 
 let map, map1, uniqueKey;

@@ -1,6 +1,6 @@
-// === Module 5984: useInitialValue ===
+// === Module 5991: useInitialValue ===
 
-// Module 5984 (useInitialValue)
+// Module 5991 (useInitialValue)
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

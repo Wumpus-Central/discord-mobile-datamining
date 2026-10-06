@@ -1,11 +1,11 @@
-// === Module 4767: GuildPowerupsStore ===
+// === Module 4773: GuildPowerupsStore ===
 
-// Module 4767 (GuildPowerupsStore)
+// Module 4773 (GuildPowerupsStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
 

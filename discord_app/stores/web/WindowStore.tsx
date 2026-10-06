@@ -1,11 +1,11 @@
-// === Module 13646: WindowStore ===
+// === Module 13662: WindowStore ===
 
-// Module 13646 (WindowStore)
+// Module 13662 (WindowStore)
 import _modDef38 from "module_38" /* 38 */;
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import WindowIdUtils from "WindowIdUtils" /* 5945 */;
+import WindowIdUtils from "WindowIdUtils" /* 5952 */;
 import size_mod from "module_2" /* 2 */;
 
 let c3 = null;

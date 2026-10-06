@@ -1,33 +1,33 @@
-// === Module 4934: StreamRTCConnection ===
+// === Module 4940: StreamRTCConnection ===
 
-// Module 4934 (StreamRTCConnection)
+// Module 4940 (StreamRTCConnection)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4884 */;
-import Constants2 from "Constants" /* 4915 */;
-import SystemAnalyticsStore from "SystemAnalyticsStore" /* 4935 */;
-import SoundshareStatsAggregatorDefault from "SoundshareStatsAggregator" /* 4941 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4942 */;
-import VideoStreamStatsDefault from "VideoStreamStats" /* 4943 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
-import GameAnalyticsUtils from "GameAnalyticsUtils" /* 5019 */;
-import getSoundshareAnalyticsContextDefault from "getSoundshareAnalyticsContext" /* 5025 */;
-import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5026 */;
-import getStreamSourceMetadataDefault from "getStreamSourceMetadata" /* 5030 */;
-import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7156 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4890 */;
+import Constants2 from "Constants" /* 4921 */;
+import SystemAnalyticsStore from "SystemAnalyticsStore" /* 4941 */;
+import SoundshareStatsAggregatorDefault from "SoundshareStatsAggregator" /* 4947 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4948 */;
+import VideoStreamStatsDefault from "VideoStreamStats" /* 4949 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
+import GameAnalyticsUtils from "GameAnalyticsUtils" /* 5025 */;
+import getSoundshareAnalyticsContextDefault from "getSoundshareAnalyticsContext" /* 5031 */;
+import getReportedStreamResolutionDefault from "getReportedStreamResolution" /* 5032 */;
+import getStreamSourceMetadataDefault from "getStreamSourceMetadata" /* 5036 */;
+import getMediaPerformanceClassDefault from "getMediaPerformanceClass" /* 7169 */;
 import ClipsStore from "ClipsStore" /* 2005 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4936 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4942 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import HookErrorStore from "HookErrorStore" /* 4938 */;
+import HookErrorStore from "HookErrorStore" /* 4944 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import NetworkStore from "NetworkStore" /* 4939 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import RTCRegionStore from "RTCRegionStore" /* 4940 */;
+import NetworkStore from "NetworkStore" /* 4945 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import RTCRegionStore from "RTCRegionStore" /* 4946 */;
 import Constants from "Constants" /* 1085 */;
-import RTCConnection from "RTCConnection" /* 4917 */;
+import RTCConnection from "RTCConnection" /* 4923 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -719,12 +719,12 @@ class StreamRTCConnection extends RTCConnection {
         codecUsageStats = getCodecUsageStats("receiver", tmp3);
       }
       let obj = { stream_application_name: _default.getApplicationNames() };
-      _default = obj5(5031).default;
+      _default = obj5(5037).default;
       const tmp5 = obj5;
       if (self.isOwner) {
         let obj2 = { clips_enabled: tmp5Result.isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
         obj3 = obj2;
-        tmp5Result = tmp5(13485);
+        tmp5Result = tmp5(13501);
       } else {
         obj3 = {};
       }

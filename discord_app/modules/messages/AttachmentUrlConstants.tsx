@@ -1,6 +1,6 @@
-// === Module 5800: AttachmentUrlConstants ===
+// === Module 5807: AttachmentUrlConstants ===
 
-// Module 5800 (AttachmentUrlConstants)
+// Module 5807 (AttachmentUrlConstants)
 import size from "module_2" /* 2 */;
 
 const set = new Set(["/attachments/", "/ephemeral-attachments/"]);

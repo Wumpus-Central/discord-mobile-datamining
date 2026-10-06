@@ -1,6 +1,6 @@
-// === Module 18070: ResendVerificationCodeButton ===
+// === Module 18115: ResendVerificationCodeButton ===
 
-// Module 18070 (ResendVerificationCodeButton)
+// Module 18115 (ResendVerificationCodeButton)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import _asyncToGenerator_mod from "_asyncToGenerator" /* 5 */;

@@ -1,18 +1,18 @@
-// === Module 11665: AppLauncherNativeUtils ===
+// === Module 11679: AppLauncherNativeUtils ===
 
-// Module 11665 (AppLauncherNativeUtils)
+// Module 11679 (AppLauncherNativeUtils)
 import Constants from "Constants" /* 1085 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
 import AssetRegistryDefault from "AssetRegistry" /* 1975 */;
 import Server from "Server" /* 1985 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5070 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5788 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7030 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7034 */;
-import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7406 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 8794 */;
-import FrecencySection from "FrecencySection" /* 11666 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5076 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5795 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7043 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7047 */;
+import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7417 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 8826 */;
+import FrecencySection from "FrecencySection" /* 11680 */;
 import react from "react" /* 19 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import UserStore from "UserStore" /* 1377 */;

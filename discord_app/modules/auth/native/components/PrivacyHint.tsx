@@ -1,20 +1,20 @@
-// === Module 15904: PrivacyHint ===
+// === Module 15943: PrivacyHint ===
 
-// Module 15904 (PrivacyHint)
+// Module 15943 (PrivacyHint)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl3 from "intl" /* 1126 */;
-import react_native from "react-native" /* 4594 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import FormCheckbox from "FormCheckbox" /* 5991 */;
-import PromoEmailConsentStore from "PromoEmailConsentStore" /* 6083 */;
-import Form from "Form" /* 8895 */;
-import RegistrationUIStore from "RegistrationUIStore" /* 15867 */;
-import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15905 */;
+import react_native from "react-native" /* 4600 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import FormCheckbox from "FormCheckbox" /* 5998 */;
+import PromoEmailConsentStore from "PromoEmailConsentStore" /* 6090 */;
+import Form from "Form" /* 8924 */;
+import RegistrationUIStore from "RegistrationUIStore" /* 15906 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15944 */;
 import react from "react" /* 19 */;
 import react_native2 from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

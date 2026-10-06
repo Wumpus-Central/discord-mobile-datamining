@@ -1,10 +1,10 @@
-// === Module 10994: AppLauncherContext ===
+// === Module 11007: AppLauncherContext ===
 
-// Module 10994 (AppLauncherContext)
+// Module 11007 (AppLauncherContext)
 import react2 from "react" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 8932 */;
-import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 10995 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 8961 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 11008 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

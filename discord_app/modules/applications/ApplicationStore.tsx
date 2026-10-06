@@ -1,6 +1,6 @@
-// === Module 5118: ApplicationStore ===
+// === Module 5124: ApplicationStore ===
 
-// Module 5118 (ApplicationStore)
+// Module 5124 (ApplicationStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;

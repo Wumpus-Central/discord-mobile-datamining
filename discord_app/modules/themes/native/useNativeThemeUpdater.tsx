@@ -1,6 +1,6 @@
-// === Module 17142: useNativeThemeUpdater ===
+// === Module 17171: useNativeThemeUpdater ===
 
-// Module 17142 (useNativeThemeUpdater)
+// Module 17171 (useNativeThemeUpdater)
 import react from "react" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1193 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

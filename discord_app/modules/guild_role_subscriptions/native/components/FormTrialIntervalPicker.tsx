@@ -1,11 +1,11 @@
-// === Module 17941: FormTrialIntervalPicker ===
+// === Module 17987: FormTrialIntervalPicker ===
 
-// Module 17941 (FormTrialIntervalPicker)
+// Module 17987 (FormTrialIntervalPicker)
 import Fragment from "Fragment" /* 21 */;
 import intl2 from "intl" /* 1126 */;
 import asyncRequire from "asyncRequire" /* 1987 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import FormDropdownDefault from "FormDropdown" /* 13708 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import FormDropdownDefault from "FormDropdown" /* 13726 */;
 import react from "react" /* 19 */;
 import size from "module_2" /* 2 */;
 
@@ -25,7 +25,7 @@ export default function FormTrialIntervalPicker(interval) {
     stringResult = intl.string(interval(1126).t.WZG1BU);
   } else {
     let tmp4 = interval;
-    let obj = interval(15049);
+    let obj = interval(15064);
     stringResult = obj.formatPlanIntervalDuration(interval);
   }
   return <tmp3 label={stringResult} onPress={function onPress() {
@@ -46,7 +46,7 @@ export default function FormTrialIntervalPicker(interval) {
       selectedItem: tmp4,
       hasIcons: false
     };
-    const tmp2 = asyncRequire(8949, dependencyMap.paths);
+    const tmp2 = asyncRequire(8978, dependencyMap.paths);
     intl = intl2.intl;
     tmp4 = interval;
     if (interval == null) {

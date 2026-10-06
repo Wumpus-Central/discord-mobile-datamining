@@ -1,6 +1,6 @@
-// === Module 8930: AgeRestrictedApplicationCommandsExperiment ===
+// === Module 8959: AgeRestrictedApplicationCommandsExperiment ===
 
-// Module 8930 (AgeRestrictedApplicationCommandsExperiment)
+// Module 8959 (AgeRestrictedApplicationCommandsExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import size from "module_2" /* 2 */;
 

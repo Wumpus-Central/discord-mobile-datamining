@@ -1,10 +1,10 @@
-// === Module 8724: Utils ===
+// === Module 8756: Utils ===
 
-// Module 8724 (Utils)
+// Module 8756 (Utils)
 import Constants from "Constants" /* 1085 */;
 import intl5 from "intl" /* 1126 */;
-import utils from "utils" /* 5897 */;
-import useIsSocialLayerParentApplication from "useIsSocialLayerParentApplication" /* 8725 */;
+import utils from "utils" /* 5904 */;
+import useIsSocialLayerParentApplication from "useIsSocialLayerParentApplication" /* 8757 */;
 import size from "module_2" /* 2 */;
 
 const MarketingURLs = Constants.MarketingURLs;

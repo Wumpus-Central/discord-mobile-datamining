@@ -1,11 +1,11 @@
-// === Module 12173: powerupListing ===
+// === Module 12188: powerupListing ===
 
-// Module 12173 (powerupListing)
-import Powerups from "Powerups" /* 4771 */;
+// Module 12188 (powerupListing)
+import Powerups from "Powerups" /* 4777 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 4767 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4773 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,8 +1,8 @@
-// === Module 16300: useGuildsBarSelectedGuildScroller ===
+// === Module 16340: useGuildsBarSelectedGuildScroller ===
 
-// Module 16300 (useGuildsBarSelectedGuildScroller)
+// Module 16340 (useGuildsBarSelectedGuildScroller)
 import react from "react" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4699 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4705 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,15 +1,15 @@
-// === Module 6477: UserSettingsAccountActionCreators ===
+// === Module 6484: UserSettingsAccountActionCreators ===
 
-// Module 6477 (UserSettingsAccountActionCreators)
+// Module 6484 (UserSettingsAccountActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1112 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6082 */;
-import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6485 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6487 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6089 */;
+import trackUserAvatarUpdated from "trackUserAvatarUpdated" /* 6492 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6494 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import Constants from "Constants" /* 1085 */;
-import PushNotificationConstants from "PushNotificationConstants" /* 6085 */;
+import PushNotificationConstants from "PushNotificationConstants" /* 6092 */;
 import size from "module_2" /* 2 */;
 
 let c4, c5;
@@ -65,7 +65,7 @@ let body = function _saveProfileAndAccountRequest() {
             token = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (body === 1) {
@@ -244,8 +244,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
     user.push_voip_provider = push_voip_provider;
     user.push_voip_token = value2;
   }
-  const obj4 = { headers: tmpResult.buildHeadersForMd5({ [avatar(6482).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
-  tmpResult = tmp(6478);
+  const obj4 = { headers: tmpResult.buildHeadersForMd5({ [avatar(6489).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5 }) };
+  tmpResult = tmp(6485);
   const promise = saveProfileAndAccountRequest(user, obj4);
   return promise.then((result) => {
     const obj = DispatcherDefault;

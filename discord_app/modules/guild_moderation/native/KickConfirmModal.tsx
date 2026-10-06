@@ -1,8 +1,8 @@
-// === Module 11468: KickConfirmModal ===
+// === Module 11481: KickConfirmModal ===
 
-// Module 11468 (KickConfirmModal)
+// Module 11481 (KickConfirmModal)
 import Fragment from "Fragment" /* 21 */;
-import KickConfirmDefault from "KickConfirm" /* 11461 */;
+import KickConfirmDefault from "KickConfirm" /* 11474 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

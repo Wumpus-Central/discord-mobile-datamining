@@ -1,7 +1,7 @@
-// === Module 14986: useQuestDockAnimatedBorderRadius ===
+// === Module 15001: useQuestDockAnimatedBorderRadius ===
 
-// Module 14986 (useQuestDockAnimatedBorderRadius)
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
+// Module 15001 (useQuestDockAnimatedBorderRadius)
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

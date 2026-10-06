@@ -1,17 +1,17 @@
-// === Module 8481: SlayerStorefrontItemCard ===
+// === Module 8514: SlayerStorefrontItemCard ===
 
-// Module 8481 (SlayerStorefrontItemCard)
+// Module 8514 (SlayerStorefrontItemCard)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import FastImageDefault from "FastImage" /* 5974 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6727 */;
-import _modDef7063 from "module_7063" /* 7063 */;
-import DominantColorUtils from "DominantColorUtils" /* 8482 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import FastImageDefault from "FastImage" /* 5981 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 6741 */;
+import _modDef7076 from "module_7076" /* 7076 */;
+import DominantColorUtils from "DominantColorUtils" /* 8515 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
@@ -77,7 +77,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
         let tmp16;
         let tmp19;
         if (cResult[11] !== dominantColorFromImage) {
-          const obj6 = _modDef7063(dominantColorFromImage);
+          const obj6 = _modDef7076(dominantColorFromImage);
           const brightenResult = obj6.brighten(20);
           const saturateResult = brightenResult.saturate(30);
           const setAlphaResult = saturateResult.setAlpha(0.8);
@@ -89,7 +89,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
           tmp16 = cResult[12];
         }
         if (cResult[13] !== dominantColorFromImage) {
-          const obj10 = _modDef7063(dominantColorFromImage);
+          const obj10 = _modDef7076(dominantColorFromImage);
           const saturateResult1 = obj10.saturate(50);
           const setAlphaResult1 = saturateResult1.setAlpha(0.9);
           const toRgbStringResult1 = setAlphaResult1.toRgbString();

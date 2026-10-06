@@ -1,12 +1,12 @@
-// === Module 7704: getTagProperties ===
+// === Module 7715: getTagProperties ===
 
-// Module 7704 (getTagProperties)
+// Module 7715 (getTagProperties)
 import react_native from "react-native" /* 17 */;
 import intl7 from "intl" /* 1126 */;
-import MessageConstants from "MessageConstants" /* 4883 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 7705 */;
-import isCrosspostDefault from "isCrosspost" /* 7707 */;
-import AssetRegistryDefault from "AssetRegistry" /* 7709 */;
+import MessageConstants from "MessageConstants" /* 4889 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 7716 */;
+import isCrosspostDefault from "isCrosspost" /* 7718 */;
+import AssetRegistryDefault from "AssetRegistry" /* 7720 */;
 import size from "module_2" /* 2 */;
 
 const Image = react_native.Image;
@@ -93,7 +93,7 @@ export default function getTagProperties(arg0) {
       const intl6 = intl7.intl;
       stringResult3 = intl6.string(intl7.t.fyE8sH);
     }
-    const obj2 = { tagText: stringResult, tagAccessibilityLabel: tmp12, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "unicodeVersion", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult3, opTagTextColor: 27227714, opTagBackgroundColor: 34112000 };
+    const obj2 = { tagText: stringResult, tagAccessibilityLabel: tmp12, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "unicodeVersion", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult3, opTagTextColor: -754169043291420500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, opTagBackgroundColor: 175593249004376850000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 };
     ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
     return obj2;
   }

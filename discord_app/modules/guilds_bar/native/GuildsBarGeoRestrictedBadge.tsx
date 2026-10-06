@@ -1,15 +1,15 @@
-// === Module 16289: GuildsBarGeoRestrictedBadge ===
+// === Module 16329: GuildsBarGeoRestrictedBadge ===
 
-// Module 16289 (GuildsBarGeoRestrictedBadge)
+// Module 16329 (GuildsBarGeoRestrictedBadge)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AssetRegistryDefault from "AssetRegistry" /* 4810 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import FastImageDefault from "FastImage" /* 5974 */;
+import AssetRegistryDefault from "AssetRegistry" /* 4816 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import FastImageDefault from "FastImage" /* 5981 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

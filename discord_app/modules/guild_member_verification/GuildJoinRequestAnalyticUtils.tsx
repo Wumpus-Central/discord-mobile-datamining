@@ -1,6 +1,6 @@
-// === Module 5933: GuildJoinRequestAnalyticUtils ===
+// === Module 5940: GuildJoinRequestAnalyticUtils ===
 
-// Module 5933 (GuildJoinRequestAnalyticUtils)
+// Module 5940 (GuildJoinRequestAnalyticUtils)
 import Constants from "Constants" /* 1085 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

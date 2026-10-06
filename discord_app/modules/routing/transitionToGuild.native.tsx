@@ -1,10 +1,10 @@
-// === Module 6845: transitionToGuild ===
+// === Module 6855: transitionToGuild ===
 
-// Module 6845 (transitionToGuild)
+// Module 6855 (transitionToGuild)
 import Constants from "Constants" /* 1085 */;
 import router_utils from "router_utils" /* 1112 */;
-import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6473 */;
-import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6717 */;
+import DeprecatedLayoutAnimation from "DeprecatedLayoutAnimation" /* 6480 */;
+import getGuildTransitionRoute from "getGuildTransitionRoute" /* 6731 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

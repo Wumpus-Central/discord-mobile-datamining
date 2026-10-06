@@ -1,20 +1,20 @@
-// === Module 7570: ConversationNavigatorMoreMenu ===
+// === Module 7581: ConversationNavigatorMoreMenu ===
 
-// Module 7570 (ConversationNavigatorMoreMenu)
+// Module 7581 (ConversationNavigatorMoreMenu)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import nativeDefault from "native" /* 587 */;
 import intl3 from "intl" /* 1126 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7550 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7552 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 7571 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 7573 */;
-import IconButton2 from "IconButton" /* 7575 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7577 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7561 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7564 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 7582 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 7584 */;
+import IconButton2 from "IconButton" /* 7586 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 7588 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

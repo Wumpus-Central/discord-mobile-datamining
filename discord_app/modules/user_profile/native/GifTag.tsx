@@ -1,13 +1,13 @@
-// === Module 7927: GifTag ===
+// === Module 7938: GifTag ===
 
-// Module 7927 (GifTag)
+// Module 7938 (GifTag)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import module_683 from "module_683" /* 683 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

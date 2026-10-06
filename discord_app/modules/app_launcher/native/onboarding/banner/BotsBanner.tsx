@@ -1,12 +1,12 @@
-// === Module 11679: BotsBanner ===
+// === Module 11693: BotsBanner ===
 
-// Module 11679 (BotsBanner)
+// Module 11693 (BotsBanner)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl2 from "intl" /* 1126 */;
-import ApplicationsImageDefault from "ApplicationsImage" /* 11664 */;
-import BannerBaseDefault from "BannerBase" /* 11675 */;
-import useBannerBots from "useBannerBots" /* 11680 */;
+import ApplicationsImageDefault from "ApplicationsImage" /* 11678 */;
+import BannerBaseDefault from "BannerBase" /* 11689 */;
+import useBannerBots from "useBannerBots" /* 11694 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,25 +1,25 @@
-// === Module 16224: useGuildsBarGesture ===
+// === Module 16264: useGuildsBarGesture ===
 
-// Module 16224 (useGuildsBarGesture)
+// Module 16264 (useGuildsBarGesture)
 import react_native from "react-native" /* 17 */;
 import intl15 from "intl" /* 1126 */;
 import SentryUtilsDefault from "SentryUtils" /* 1242 */;
 import react_native2 from "react-native" /* 1259 */;
-import shared from "shared" /* 4729 */;
-import HapticUtils from "HapticUtils" /* 4855 */;
-import SortedGuildStore2 from "SortedGuildStore" /* 5616 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
-import FastList from "FastList" /* 6569 */;
-import ContextMenuState from "ContextMenuState" /* 7580 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10725 */;
+import shared from "shared" /* 4735 */;
+import HapticUtils from "HapticUtils" /* 4861 */;
+import SortedGuildStore2 from "SortedGuildStore" /* 5623 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6147 */;
+import FastList from "FastList" /* 6576 */;
+import ContextMenuState from "ContextMenuState" /* 7591 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10738 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import react from "react" /* 19 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16225 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 16222 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16265 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 16262 */;
 import "ReanimatedRexport";
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 4612 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 4618 */;
 import debounce from "debounce" /* 551 */;
 import module_12_mod from "module_12" /* 12 */;
 import size_mod from "module_2" /* 2 */;
@@ -675,7 +675,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    setStateShallow({ dragSpecs: "Array", overSpecs: "Set" });
+    setStateShallow({ dragSpecs: "start", overSpecs: "unicodeVersion" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj10 = { mode: null };

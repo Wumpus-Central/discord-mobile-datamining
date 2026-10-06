@@ -1,11 +1,11 @@
-// === Module 13637: VoiceStateAnalytics ===
+// === Module 13653: VoiceStateAnalytics ===
 
-// Module 13637 (VoiceStateAnalytics)
+// Module 13653 (VoiceStateAnalytics)
 import _mod12 from "module_12" /* 12 */;
-import Constants from "Constants" /* 4915 */;
+import Constants from "Constants" /* 4921 */;
 import MediaEngineStore from "MediaEngineStore" /* 1999 */;
-import VoiceStateStore from "VoiceStateStore" /* 4909 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4914 */;
+import VoiceStateStore from "VoiceStateStore" /* 4915 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4920 */;
 import size from "module_2" /* 2 */;
 
 let set;

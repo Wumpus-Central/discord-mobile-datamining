@@ -1,13 +1,13 @@
-// === Module 12718: InAppReportsDeleteMessageElement ===
+// === Module 12733: InAppReportsDeleteMessageElement ===
 
-// Module 12718 (InAppReportsDeleteMessageElement)
+// Module 12733 (InAppReportsDeleteMessageElement)
 import Fragment from "Fragment" /* 21 */;
 import Constants from "Constants" /* 1085 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5070 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 6965 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5076 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 6978 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import MessageStore from "MessageStore" /* 5110 */;
+import MessageStore from "MessageStore" /* 5116 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -97,7 +97,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
     }
     const _Symbol2 = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp23 = jsx(message(4847).TrashIcon, { color: "text-feedback-critical" });
+      const tmp23 = jsx(message(4853).TrashIcon, { color: "text-feedback-critical" });
       cResult[13] = tmp23;
       tmp21 = tmp23;
     } else {
@@ -110,7 +110,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
       }
       return tmp24;
     }
-    const tmp27 = jsx(reportId(12713), { title: tmp15, disabledTitle: tmp16, description: tmp17, disabled: tmp5, variant: "danger", onPress: tmp14, icon: tmp21 });
+    const tmp27 = jsx(reportId(12728), { title: tmp15, disabledTitle: tmp16, description: tmp17, disabled: tmp5, variant: "danger", onPress: tmp14, icon: tmp21 });
     cResult[14] = tmp14;
     cResult[15] = tmp5;
     cResult[16] = tmp27;
@@ -155,7 +155,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((message) => {
     const obj3 = MessageActionCreatorsDefault;
     obj3.deleteMessage(message.getChannelId(), message.id);
   }, items3);
-  reportId(12713);
+  reportId(12728);
   const intl = message(1126).intl;
   const intl2 = message(1126).intl;
   const intl3 = message(1126).intl;

@@ -1,17 +1,17 @@
-// === Module 15951: useHomeDrawerPeekHint ===
+// === Module 15990: useHomeDrawerPeekHint ===
 
-// Module 15951 (useHomeDrawerPeekHint)
+// Module 15990 (useHomeDrawerPeekHint)
 import Constants from "Constants" /* 1085 */;
 import dismissible_content from "dismissible_content" /* 2036 */;
 import DismissibleContentConstants from "DismissibleContentConstants" /* 2048 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4612 */;
-import timing from "timing" /* 4891 */;
-import spring from "spring" /* 5597 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15949 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4618 */;
+import timing from "timing" /* 4897 */;
+import spring from "spring" /* 5604 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 15988 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 15944 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 15983 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -131,7 +131,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           obj = closure_0(closure_1[16]);
           obj1 = { duration: 1500, easing: closure_9 };
           result = set(obj.withTiming(40, obj1));
-          closure_13.current = setTimeout(() => { /* body not rendered: F145290 */ }, 2500);
+          closure_13.current = setTimeout(() => { /* body not rendered: F145500 */ }, 2500);
           return;
         }
       }
@@ -156,7 +156,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           obj = closure_0(closure_1[16]);
           obj1 = { duration: 1500, easing: closure_9 };
           result = set(obj.withTiming(40, obj1));
-          closure_13.current = setTimeout(() => { /* body not rendered: F145290 */ }, 2500);
+          closure_13.current = setTimeout(() => { /* body not rendered: F145500 */ }, 2500);
           return;
         }
       }
@@ -179,7 +179,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, arg1) => {
           obj = closure_0(closure_1[16]);
           obj1 = { duration: 1500, easing: closure_9 };
           result = set(obj.withTiming(40, obj1));
-          closure_13.current = setTimeout(() => { /* body not rendered: F145290 */ }, 2500);
+          closure_13.current = setTimeout(() => { /* body not rendered: F145500 */ }, 2500);
           return;
         }
       }

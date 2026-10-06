@@ -1,6 +1,6 @@
-// === Module 11362: EmojiReactionRowButton ===
+// === Module 11375: EmojiReactionRowButton ===
 
-// Module 11362 (EmojiReactionRowButton)
+// Module 11375 (EmojiReactionRowButton)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
@@ -8,13 +8,13 @@ import nativeDefault from "native" /* 587 */;
 import intl2 from "intl" /* 1126 */;
 import EmojiConstants from "EmojiConstants" /* 1380 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1402 */;
-import EmojiTypes from "EmojiTypes" /* 4526 */;
-import shared from "shared" /* 4729 */;
-import Pressables from "Pressables" /* 5909 */;
-import EmojiDefault from "Emoji" /* 6625 */;
-import ReactionIcon2 from "ReactionIcon" /* 8411 */;
+import EmojiTypes from "EmojiTypes" /* 4532 */;
+import shared from "shared" /* 4735 */;
+import Pressables from "Pressables" /* 5916 */;
+import EmojiDefault from "Emoji" /* 6632 */;
+import ReactionIcon2 from "ReactionIcon" /* 8444 */;
 import react from "react" /* 19 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

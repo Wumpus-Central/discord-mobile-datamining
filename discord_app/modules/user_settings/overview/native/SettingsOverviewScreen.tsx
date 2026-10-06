@@ -1,15 +1,15 @@
-// === Module 17087: SettingsOverviewScreen ===
+// === Module 17113: SettingsOverviewScreen ===
 
-// Module 17087 (SettingsOverviewScreen)
+// Module 17113 (SettingsOverviewScreen)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
 import intl8 from "intl" /* 1126 */;
 import GlobalUtils from "GlobalUtils" /* 1375 */;
-import PremiumUtils from "PremiumUtils" /* 4528 */;
-import SettingsConstants from "SettingsConstants" /* 7634 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
-import SettingListRenderer from "SettingListRenderer" /* 14500 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 15311 */;
+import PremiumUtils from "PremiumUtils" /* 4534 */;
+import SettingsConstants from "SettingsConstants" /* 7645 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
+import SettingListRenderer from "SettingListRenderer" /* 14516 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15326 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -125,7 +125,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   return tmp9;
 }) : (() => {
   let hasPremiumSubscriptionToDisplay;
-  let obj = hasPremiumSubscriptionToDisplay(4528);
+  let obj = hasPremiumSubscriptionToDisplay(4534);
   hasPremiumSubscriptionToDisplay = obj.useHasPremiumSubscriptionToDisplay();
   const items = [hasPremiumSubscriptionToDisplay];
   const node = react.useMemo(() => {
@@ -136,7 +136,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     SettingBuilders;
     return createList(obj);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(14500).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(14516).SearchableSettingsList, { node });
 });
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
 

@@ -1,15 +1,15 @@
-// === Module 18090: handleIncomingURL ===
+// === Module 18135: handleIncomingURL ===
 
-// Module 18090 (handleIncomingURL)
+// Module 18135 (handleIncomingURL)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1252 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5097 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6984 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 13663 */;
-import DeepLinkTypes from "DeepLinkTypes" /* 18089 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 5103 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 6997 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 13679 */;
+import DeepLinkTypes from "DeepLinkTypes" /* 18134 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
 import AppStateStore from "AppStateStore" /* 1986 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -24,8 +24,9 @@ let obj = function _handleIncomingURL() {
   let constants3;
   let logger;
   let state;
-  obj = _asyncToGenerator(async (arg0, is_cold_start) => {
+  obj = _asyncToGenerator(async (arg0, arg1) => {
     let url = arg0;
+    let closure_1 = arg1;
     let c7 = 0;
     let c8 = 0;
     let c6 = 0;
@@ -36,8 +37,8 @@ let obj = function _handleIncomingURL() {
       let obj17;
       let obj19;
       let obj9;
-      let tmp197;
       let tmp198;
+      let tmp199;
       let tmp82;
       if (c8 === 2) {
         c8 = 3;
@@ -162,8 +163,8 @@ let obj = function _handleIncomingURL() {
                       const self4 = this;
                       const _URLSearchParams1 = new _URLSearchParams(str3);
                       value = _URLSearchParams1.get("source");
-                      const tmp163 = "lockScreen" !== value && "dynamicIsland" !== value;
-                      if (!tmp163) {
+                      const tmp164 = "lockScreen" !== value && "dynamicIsland" !== value;
+                      if (!tmp164) {
                         const obj8 = { action: "Open Voice Panel", channel_id: channel.id, surface: value };
                         const obj22 = AnalyticsUtilsDefault;
                         obj22.track(constants2.LIVE_ACTIVITY_INTERACTED, obj8);
@@ -184,21 +185,21 @@ let obj = function _handleIncomingURL() {
                         return { value: "IconComponent", done: null };
                       } else if ("user" !== parts1[0]) {
                         if ("invite" === parts1[0]) {
-                          const obj12 = { payload: obj13 };
+                          const obj12 = { payload: obj13, isAppStartupNavigation };
                           obj13 = { type: constants3.CREATE_VOICE_INVITE, guildId: parts1[1], channelId: parts1[2] };
                           handleSupportedURLDefault(obj12);
                         } else if ("wave" === parts1[0]) {
-                          const obj14 = { payload: obj15 };
+                          const obj14 = { payload: obj15, isAppStartupNavigation };
                           obj15 = { type: constants3.SEND_VOICE_HANGOUT_WAVE, guildId: parts1[1], channelId: parts1[2] };
                           handleSupportedURLDefault(obj14);
                         } else if ("join" === parts1[0]) {
-                          const obj16 = { payload: obj17 };
+                          const obj16 = { payload: obj17, isAppStartupNavigation };
                           obj17 = { type: constants3.CHANNEL, guildId: parts1[1], channelId: parts1[2] };
                           handleSupportedURLDefault(obj16);
                         } else if (2 === parts1.length) {
-                          [tmp197, tmp198] = parts1;
-                          const obj18 = { payload: obj19 };
-                          obj19 = { type: constants3.CHANNEL, guildId: tmp197, channelId: tmp198 };
+                          [tmp198, tmp199] = parts1;
+                          const obj18 = { payload: obj19, isAppStartupNavigation };
+                          obj19 = { type: constants3.CHANNEL, guildId: tmp198, channelId: tmp199 };
                           handleSupportedURLDefault(obj18);
                           c8 = 3;
                           return { value: undefined, done: true };
@@ -257,7 +258,7 @@ let obj = function _handleIncomingURL() {
           }
           const tmp60 = null == fingerprint && null == attemptId && null == inviteCode && null == guildTemplateCode && null == authToken && null == Iterable && null == installationId;
           if (!tmp60) {
-            const obj25 = { invite_code: result1, guild_template_code: guildTemplateCode, has_auth_token: tmp82, is_backgrounded: closure_132_6.getState() === closure_132_7.BACKGROUND, attempt_id: attemptId, deeplink_source: Iterable, link_type: payload.type, is_cold_start, received_installation_id: installationId };
+            const obj25 = { invite_code: result1, guild_template_code: guildTemplateCode, has_auth_token: tmp82, is_backgrounded: closure_132_6.getState() === closure_132_7.BACKGROUND, attempt_id: attemptId, deeplink_source: Iterable, link_type: payload.type, is_cold_start: isAppStartupNavigation, received_installation_id: installationId };
             tmp82 = null != authToken;
             const track = closure_132_1(closure_132_2[9]).track;
             const EXTERNAL_DYNAMIC_LINK_RECEIVED = closure_132_8.EXTERNAL_DYNAMIC_LINK_RECEIVED;
@@ -290,13 +291,13 @@ let obj = function _handleIncomingURL() {
             const result3 = obj11.setRegistrationHandoff();
           }
           closure_132_1(closure_132_2[16])(url);
-          const obj28 = { payload };
+          const obj28 = { payload, isAppStartupNavigation };
           closure_132_1(closure_132_2[10])(obj28);
-        } catch (tmp170) {
-          closure_5 = tmp170;
+        } catch (tmp171) {
+          closure_5 = tmp171;
           if (0 === c6) {
             c8 = 3;
-            throw tmp170;
+            throw tmp171;
           } else {
             c7 = 1;
           }

@@ -1,12 +1,12 @@
-// === Module 4800: CircleErrorIcon ===
+// === Module 4806: CircleErrorIcon ===
 
-// Module 4800 (CircleErrorIcon)
+// Module 4806 (CircleErrorIcon)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage3 from "BaseIconImage" /* 4579 */;
-import AssetRegistry from "AssetRegistry" /* 4801 */;
-import AssetRegistry2 from "AssetRegistry" /* 4802 */;
+import BaseIconImage3 from "BaseIconImage" /* 4585 */;
+import AssetRegistry from "AssetRegistry" /* 4807 */;
+import AssetRegistry2 from "AssetRegistry" /* 4808 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

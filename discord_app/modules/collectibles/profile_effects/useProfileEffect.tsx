@@ -1,11 +1,11 @@
-// === Module 7898: useProfileEffect ===
+// === Module 7909: useProfileEffect ===
 
-// Module 7898 (useProfileEffect)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7052 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7059 */;
+// Module 7909 (useProfileEffect)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7065 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7072 */;
 import react from "react" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7068 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7081 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

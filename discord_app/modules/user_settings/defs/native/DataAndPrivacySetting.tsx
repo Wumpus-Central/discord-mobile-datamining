@@ -1,15 +1,15 @@
-// === Module 15773: DataAndPrivacySetting ===
+// === Module 15810: DataAndPrivacySetting ===
 
-// Module 15773 (DataAndPrivacySetting)
+// Module 15810 (DataAndPrivacySetting)
 import react2 from "react" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import ShieldLockIcon from "ShieldLockIcon" /* 9431 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14663 */;
-import RequestYourDataSetting from "RequestYourDataSetting" /* 14666 */;
+import ShieldLockIcon from "ShieldLockIcon" /* 9444 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14679 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 14682 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

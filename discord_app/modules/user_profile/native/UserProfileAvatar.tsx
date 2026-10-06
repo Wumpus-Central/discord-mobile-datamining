@@ -1,13 +1,13 @@
-// === Module 7928: UserProfileAvatar ===
+// === Module 7939: UserProfileAvatar ===
 
-// Module 7928 (UserProfileAvatar)
+// Module 7939 (UserProfileAvatar)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
-import Constants from "Constants" /* 6707 */;
-import Constants2 from "Constants" /* 7854 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7913 */;
-import HeaderAvatarDefault from "HeaderAvatar" /* 7929 */;
-import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 7932 */;
+import Constants from "Constants" /* 6714 */;
+import Constants2 from "Constants" /* 7865 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7924 */;
+import HeaderAvatarDefault from "HeaderAvatar" /* 7940 */;
+import openUserProfileAvatarMediaViewerDefault from "openUserProfileAvatarMediaViewer" /* 7943 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;

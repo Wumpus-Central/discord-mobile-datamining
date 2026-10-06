@@ -1,9 +1,9 @@
-// === Module 15787: useAllowFriendsFromMutualGuildsOnly ===
+// === Module 15824: useAllowFriendsFromMutualGuildsOnly ===
 
-// Module 15787 (useAllowFriendsFromMutualGuildsOnly)
+// Module 15824 (useAllowFriendsFromMutualGuildsOnly)
 import react2 from "react" /* 576 */;
 import UserSettings from "UserSettings" /* 2028 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6491 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6498 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

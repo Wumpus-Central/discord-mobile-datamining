@@ -1,8 +1,8 @@
-// === Module 10432: useGiftOptionsSyncDebounce ===
+// === Module 10445: useGiftOptionsSyncDebounce ===
 
-// Module 10432 (useGiftOptionsSyncDebounce)
+// Module 10445 (useGiftOptionsSyncDebounce)
 import _modDef12 from "module_12" /* 12 */;
-import useInitialValueDefault from "useInitialValue" /* 5984 */;
+import useInitialValueDefault from "useInitialValue" /* 5991 */;
 import react_mod from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

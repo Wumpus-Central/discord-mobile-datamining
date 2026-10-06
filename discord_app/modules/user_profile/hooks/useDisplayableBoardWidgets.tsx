@@ -1,11 +1,11 @@
-// === Module 12704: useDisplayableBoardWidgets ===
+// === Module 12719: useDisplayableBoardWidgets ===
 
-// Module 12704 (useDisplayableBoardWidgets)
+// Module 12719 (useDisplayableBoardWidgets)
 import react2 from "react" /* 576 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7113 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7115 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7116 */;
-import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 12705 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7126 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7128 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7129 */;
+import useUserProfileWidgetsDefault from "useUserProfileWidgets" /* 12720 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

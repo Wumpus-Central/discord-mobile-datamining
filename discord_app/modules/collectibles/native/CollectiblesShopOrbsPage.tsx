@@ -1,15 +1,15 @@
-// === Module 15750: CollectiblesShopOrbsPage ===
+// === Module 15786: CollectiblesShopOrbsPage ===
 
-// Module 15750 (CollectiblesShopOrbsPage)
+// Module 15786 (CollectiblesShopOrbsPage)
 import react_native from "react-native" /* 17 */;
 import Fragment from "Fragment" /* 21 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1087 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4854 */;
-import openProductDetailsActionSheet2 from "openProductDetailsActionSheet" /* 7847 */;
-import ShopBlockItemDefault from "ShopBlockItem" /* 15714 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4860 */;
+import openProductDetailsActionSheet2 from "openProductDetailsActionSheet" /* 7858 */;
+import ShopBlockItemDefault from "ShopBlockItem" /* 15750 */;
 import react from "react" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7053 */;
-import createStyles from "createStyles" /* 4890 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7066 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

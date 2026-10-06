@@ -1,10 +1,10 @@
-// === Module 15539: CheckpointText ===
+// === Module 15555: CheckpointText ===
 
-// Module 15539 (CheckpointText)
+// Module 15555 (CheckpointText)
 import Fragment from "Fragment" /* 21 */;
 import react from "react" /* 576 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import CheckpointConstants from "CheckpointConstants" /* 5115 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import CheckpointConstants from "CheckpointConstants" /* 5121 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

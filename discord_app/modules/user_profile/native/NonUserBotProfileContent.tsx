@@ -1,21 +1,21 @@
-// === Module 7912: NonUserBotProfileContent ===
+// === Module 7923: NonUserBotProfileContent ===
 
-// Module 7912 (NonUserBotProfileContent)
+// Module 7923 (NonUserBotProfileContent)
 import react_native from "react-native" /* 17 */;
-import ToastUtils from "ToastUtils" /* 4567 */;
-import UserUtilsDefault from "UserUtils" /* 4722 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5042 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 6646 */;
-import ClipboardUtils from "ClipboardUtils" /* 6688 */;
-import useProfileThemeDefault from "useProfileTheme" /* 7899 */;
-import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 7902 */;
-import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7913 */;
-import useBadgesDefault from "useBadges" /* 7914 */;
-import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 7915 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10843 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10986 */;
+import ToastUtils from "ToastUtils" /* 4573 */;
+import UserUtilsDefault from "UserUtils" /* 4728 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5048 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 6653 */;
+import ClipboardUtils from "ClipboardUtils" /* 6695 */;
+import useProfileThemeDefault from "useProfileTheme" /* 7910 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 7913 */;
+import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 7924 */;
+import useBadgesDefault from "useBadges" /* 7925 */;
+import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 7926 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 10856 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 10999 */;
 import react from "react" /* 19 */;
-import Constants from "Constants" /* 6707 */;
+import Constants from "Constants" /* 6714 */;
 import Fragment from "Fragment" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -51,12 +51,12 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   let obj = trackUserProfileAction(576);
   const cResult = obj.c(70);
   ({ user, channel, displayProfile, scrollPosition } = arg0);
-  const tmp5 = userTag(7913)();
-  let obj2 = trackUserProfileAction(7861);
+  const tmp5 = userTag(7924)();
+  let obj2 = trackUserProfileAction(7872);
   trackUserProfileAction = obj2.useUserProfileAnalyticsContext().trackUserProfileAction;
   let guild_id1;
-  const useName = userTag(5042).useName;
-  userTag(5042);
+  const useName = userTag(5048).useName;
+  userTag(5048);
   if (channel != null) {
     guild_id1 = channel.guild_id;
   }
@@ -65,31 +65,31 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
     id = channel.id;
   }
   const name = useName(guild_id1, id, user);
-  const tmp4Result = userTag(4722);
+  const tmp4Result = userTag(4728);
   userTag = tmp4Result.useUserTag(user);
-  const tmp11 = userTag(7914)(displayProfile);
-  const tmp12 = userTag(7902)(ACTION_SHEET_MAX_WIDTH);
+  const tmp11 = userTag(7925)(displayProfile);
+  const tmp12 = userTag(7913)(ACTION_SHEET_MAX_WIDTH);
   if (cResult[0] === tmp12) {
     let tmp13;
     if (cResult[1] === scrollPosition) {
       tmp13 = cResult[2];
     }
-    ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = userTag(7915)(tmp13));
-    userTag(7915)(tmp13);
+    ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = userTag(7926)(tmp13));
+    userTag(7926)(tmp13);
     if (cResult[3] === displayProfile) {
       let tmp16;
       if (cResult[4] === user) {
         tmp16 = cResult[5];
       }
-      ({ theme, primaryColor, secondaryColor } = userTag(7899)(tmp16));
-      userTag(7899)(tmp16);
+      ({ theme, primaryColor, secondaryColor } = userTag(7910)(tmp16));
+      userTag(7910)(tmp16);
       if (cResult[6] === primaryColor) {
         if (cResult[7] === secondaryColor) {
           let tmp18;
           if (cResult[8] === theme) {
             tmp18 = cResult[9];
           }
-          const tmpResult = trackUserProfileAction(7910);
+          const tmpResult = trackUserProfileAction(7921);
           const userProfileColors = tmpResult.useUserProfileColors(tmp18);
           ({ avatarBackground, containerBackground } = userProfileColors);
           if (null == user) {
@@ -237,7 +237,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                                     }
                                   }
                                   const obj5 = { user, guildId: guild_id, displayName: name, pronouns, badges: tmp11, badgeContainerBackground: containerBackground, displayNameAccessibilityHint: tmp33, onPressDisplayName: tmp20, onPressUserTag: tmp20, onPressPronouns: tmp21, showBadgeToastOnPress: true };
-                                  const tmp38 = closure_7(userTag(10843), obj5);
+                                  const tmp38 = closure_7(userTag(10856), obj5);
                                   cResult[34] = tmp11;
                                   cResult[35] = containerBackground;
                                   cResult[36] = name;
@@ -263,8 +263,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
                           cResult[23] = avatarBackground;
                           cResult[24] = guildId;
                           cResult[25] = user;
-                          cResult[26] = closure_7(trackUserProfileAction(7928).OpenableUserProfileAvatar, obj6);
-                          const tmp27 = closure_7(trackUserProfileAction(7928).OpenableUserProfileAvatar, obj6);
+                          cResult[26] = closure_7(trackUserProfileAction(7939).OpenableUserProfileAvatar, obj6);
+                          const tmp27 = closure_7(trackUserProfileAction(7939).OpenableUserProfileAvatar, obj6);
                         }
                       }
                     }
@@ -279,8 +279,8 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
               cResult[19] = displayProfile;
               cResult[20] = showBlur;
               cResult[21] = user;
-              cResult[22] = closure_7(userTag(7916), obj7);
-              const tmp24 = closure_7(userTag(7916), obj7);
+              cResult[22] = closure_7(userTag(7927), obj7);
+              const tmp24 = closure_7(userTag(7927), obj7);
             }
             class F {
               constructor() {
@@ -347,7 +347,7 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   importDefault = undefined;
   scrollPosition = scrollPosition.scrollPosition;
   const tmp3 = UserProfileSharedStylesDefault();
-  let obj = trackUserProfileAction(7861);
+  let obj = trackUserProfileAction(7872);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   let guild_id;
   const useName = NicknameUtilsDefault.useName;
@@ -369,19 +369,19 @@ const memoResult = react.memo(ReactCompilerGating.isReactCompilerEnabled() ? ((a
   const bottom = tmp(1618)().bottom;
   ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
   useProfileThemeDefault({ user, displayProfile });
-  const tmp4Result = trackUserProfileAction(7910);
+  const tmp4Result = trackUserProfileAction(7921);
   const userProfileColors = tmp4Result.useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {
     return null;
   } else {
     let obj2 = { user, displayProfile, bannerHeight: tmp10, bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur };
-    const items = [closure_7(tmp(7916), obj2), ];
+    const items = [closure_7(tmp(7927), obj2), ];
     const obj3 = { style: contentAnimatedStyle, children: items1 };
-    View = tmp(4612).View;
+    View = tmp(4618).View;
     const obj4 = { user, guildId, backgroundColor: tmp14, disableStatus: true };
     guildId = undefined;
-    const OpenableUserProfileAvatar = tmp4(7928).OpenableUserProfileAvatar;
+    const OpenableUserProfileAvatar = tmp4(7939).OpenableUserProfileAvatar;
     if (displayProfile != null) {
       guildId = displayProfile.guildId;
     }

@@ -1,16 +1,16 @@
-// === Module 16664: ConjureNativeCollapsibleSection ===
+// === Module 16683: ConjureNativeCollapsibleSection ===
 
-// Module 16664 (ConjureNativeCollapsibleSection)
+// Module 16683 (ConjureNativeCollapsibleSection)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import Pressables from "Pressables" /* 5909 */;
-import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6708 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10844 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import Pressables from "Pressables" /* 5916 */;
+import ChevronSmallRightIcon2 from "ChevronSmallRightIcon" /* 6715 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 10857 */;
 import react from "react" /* 19 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -215,7 +215,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
   if (flag) {
     const obj2 = { style: tmp.header, children: items };
     const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: title };
-    items = [React3(tmp4(4886).Text, obj3), ];
+    items = [React3(tmp4(4892).Text, obj3), ];
     const obj4 = { style: tmp.headerTrailing, children: items1 };
     items1 = [meta, ];
     let tmp9Result = null;
@@ -224,7 +224,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? ((children) => {
       if (null != onToggleExpanded) {
         const obj5 = { accessibilityRole: "button", accessibilityState: obj6, accessibilityLabel: showLabel, hitSlop: 8, onPress: onToggleExpanded, children: React3(ChevronSmallRightIcon, obj7) };
         obj6 = { expanded: flag3 };
-        const PressableOpacity = tmp4(5909).PressableOpacity;
+        const PressableOpacity = tmp4(5916).PressableOpacity;
         if (flag3) {
           showLabel = hideLabel;
         }

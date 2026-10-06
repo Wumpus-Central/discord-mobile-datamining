@@ -1,6 +1,6 @@
-// === Module 13536: NetworkTtlCache ===
+// === Module 13552: NetworkTtlCache ===
 
-// Module 13536 (NetworkTtlCache)
+// Module 13552 (NetworkTtlCache)
 import size from "module_2" /* 2 */;
 
 let ttlMs;

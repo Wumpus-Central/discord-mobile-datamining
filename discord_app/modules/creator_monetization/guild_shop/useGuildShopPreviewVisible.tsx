@@ -1,7 +1,7 @@
-// === Module 6766: useGuildShopPreviewVisible ===
+// === Module 6776: useGuildShopPreviewVisible ===
 
-// Module 6766 (useGuildShopPreviewVisible)
-import PermissionStore from "PermissionStore" /* 4509 */;
+// Module 6776 (useGuildShopPreviewVisible)
+import PermissionStore from "PermissionStore" /* 4515 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -68,8 +68,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
     tmp11 = cResult[4];
   }
   let id;
-  const useGuildEligibleForGuildProducts = tmp(6761).useGuildEligibleForGuildProducts;
-  tmp(6761);
+  const useGuildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts;
+  tmp(6771);
   if (features != null) {
     id = features.id;
   }
@@ -121,8 +121,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((features) => {
     flag = false;
   }
   let id;
-  const useGuildEligibleForGuildProducts = tmp(6761).useGuildEligibleForGuildProducts;
-  tmp(6761);
+  const useGuildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts;
+  tmp(6771);
   if (features != null) {
     id = features.id;
   }

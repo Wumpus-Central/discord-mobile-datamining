@@ -1,11 +1,11 @@
-// === Module 10062: ChannelSettingsActionCreators ===
+// === Module 10075: ChannelSettingsActionCreators ===
 
-// Module 10062 (ChannelSettingsActionCreators)
+// Module 10075 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
-import RootNavigationRef from "RootNavigationRef" /* 4737 */;
+import RootNavigationRef from "RootNavigationRef" /* 4743 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 10063 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 10076 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Constants from "Constants" /* 1085 */;
 import size from "module_2" /* 2 */;
@@ -197,7 +197,7 @@ let obj = function _saveChannel() {
             channel = undefined;
             flags = 1;
             permission_overwrites = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === flags) {
           if (arg0 === 1) {

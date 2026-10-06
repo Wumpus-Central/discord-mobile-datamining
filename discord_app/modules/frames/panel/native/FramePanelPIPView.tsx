@@ -1,17 +1,17 @@
-// === Module 17196: FramePanelPIPView ===
+// === Module 17225: FramePanelPIPView ===
 
-// Module 17196 (FramePanelPIPView)
+// Module 17225 (FramePanelPIPView)
 import Fragment from "Fragment" /* 21 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 16594 */;
-import FrameStackLevel from "FrameStackLevel" /* 16598 */;
-import ActivityPanelPIPView from "ActivityPanelPIPView" /* 17170 */;
-import ActivityPanelNativeConstants from "ActivityPanelNativeConstants" /* 17171 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17194 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 16632 */;
+import FrameStackLevel from "FrameStackLevel" /* 16636 */;
+import ActivityPanelPIPView from "ActivityPanelPIPView" /* 17199 */;
+import ActivityPanelNativeConstants from "ActivityPanelNativeConstants" /* 17200 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17223 */;
 import react_mod from "react" /* 19 */;
-import FramesStore from "FramesStore" /* 8703 */;
-import FramesConstants from "FramesConstants" /* 8704 */;
+import FramesStore from "FramesStore" /* 9000 */;
+import FramesConstants from "FramesConstants" /* 8738 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

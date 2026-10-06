@@ -1,8 +1,8 @@
-// === Module 11452: GuildDisableCommunicationModal ===
+// === Module 11465: GuildDisableCommunicationModal ===
 
-// Module 11452 (GuildDisableCommunicationModal)
+// Module 11465 (GuildDisableCommunicationModal)
 import Fragment from "Fragment" /* 21 */;
-import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 11453 */;
+import GuildDisableCommunicationDefault from "GuildDisableCommunication" /* 11466 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

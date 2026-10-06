@@ -1,14 +1,14 @@
-// === Module 6092: ConfirmEmailChangeStart ===
+// === Module 6099: ConfirmEmailChangeStart ===
 
-// Module 6092 (ConfirmEmailChangeStart)
-import Text_Text from "Text/Text" /* 4886 */;
+// Module 6099 (ConfirmEmailChangeStart)
+import Text_Text from "Text/Text" /* 4892 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native from "react-native" /* 17 */;
 import UserStore from "UserStore" /* 1377 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -51,11 +51,11 @@ export default function ConfirmEmailChangeStart() {
     let obj3 = { oldEmail: stateFromStores.email };
     let obj4 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: closure_11(closure_6, obj5) };
     obj5 = { style: tmp.container, children: items1 };
-    let obj6 = { style: tmp.image, source: navigation(6094) };
+    let obj6 = { style: tmp.image, source: navigation(6101) };
     const formatResult = intl.format(require("intl").t.oMFSgi, obj3);
     items1 = [closure_10(closure_7, obj6), , , ];
     let obj7 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: intl2.string(require("intl").t.dQ71Wa) };
-    const Text = tmp2(4886).Text;
+    const Text = tmp2(4892).Text;
     intl2 = tmp2(1126).intl;
     items1[1] = closure_10(Text, obj7);
     items1[2] = formatResult.map((children, index) => {
@@ -64,7 +64,7 @@ export default function ConfirmEmailChangeStart() {
     });
     let obj8 = { style: tmp.button, children: closure_10(Button, obj9) };
     obj9 = { text: intl3.string(require("intl").t.rXV81H), onPress: tmp8, loading: first, grow: true };
-    Button = tmp2(5594).Button;
+    Button = tmp2(5601).Button;
     intl3 = tmp2(1126).intl;
     items1[3] = closure_10(closure_6, obj8);
     return closure_10(closure_8, obj4);

@@ -1,7 +1,7 @@
-// === Module 8033: useLabFeature ===
+// === Module 8043: useLabFeature ===
 
-// Module 8033 (useLabFeature)
-import LabFeatureStore from "LabFeatureStore" /* 8031 */;
+// Module 8043 (useLabFeature)
+import LabFeatureStore from "LabFeatureStore" /* 8041 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

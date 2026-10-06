@@ -1,10 +1,10 @@
-// === Module 10842: UserProfileGradientContainer ===
+// === Module 10855: UserProfileGradientContainer ===
 
-// Module 10842 (UserProfileGradientContainer)
+// Module 10855 (UserProfileGradientContainer)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import LinearGradientDefault from "LinearGradient" /* 5605 */;
-import useUserProfileGradientColors from "useUserProfileGradientColors" /* 7911 */;
+import LinearGradientDefault from "LinearGradient" /* 5612 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 7922 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

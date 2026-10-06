@@ -1,9 +1,9 @@
-// === Module 7232: VideoQualityStats ===
+// === Module 7245: VideoQualityStats ===
 
-// Module 7232 (VideoQualityStats)
-import TimeUtils from "TimeUtils" /* 4919 */;
-import Histogram from "Histogram" /* 7233 */;
-import SystemResourcesDefault from "SystemResources" /* 7239 */;
+// Module 7245 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 4925 */;
+import Histogram from "Histogram" /* 7246 */;
+import SystemResourcesDefault from "SystemResources" /* 7252 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import size from "module_2" /* 2 */;
 

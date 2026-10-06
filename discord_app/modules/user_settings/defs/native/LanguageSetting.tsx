@@ -1,12 +1,12 @@
-// === Module 15242: LanguageSetting ===
+// === Module 15257: LanguageSetting ===
 
-// Module 15242 (LanguageSetting)
+// Module 15257 (LanguageSetting)
 import Constants from "Constants" /* 1085 */;
 import intl2 from "intl" /* 1126 */;
-import LanguageIcon from "LanguageIcon" /* 15243 */;
+import LanguageIcon from "LanguageIcon" /* 15258 */;
 import LocaleStore from "LocaleStore" /* 2116 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11129 */;
+import SettingBuilders from "SettingBuilders" /* 11142 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

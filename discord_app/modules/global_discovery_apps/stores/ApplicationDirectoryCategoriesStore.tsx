@@ -1,6 +1,6 @@
-// === Module 11686: ApplicationDirectoryCategoriesStore ===
+// === Module 11700: ApplicationDirectoryCategoriesStore ===
 
-// Module 11686 (ApplicationDirectoryCategoriesStore)
+// Module 11700 (ApplicationDirectoryCategoriesStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;

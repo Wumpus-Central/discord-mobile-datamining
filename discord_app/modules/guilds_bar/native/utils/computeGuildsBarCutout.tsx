@@ -1,10 +1,10 @@
-// === Module 16238: computeGuildsBarCutout ===
+// === Module 16278: computeGuildsBarCutout ===
 
-// Module 16238 (computeGuildsBarCutout)
+// Module 16278 (computeGuildsBarCutout)
 import react_native from "react-native" /* 17 */;
 import native from "native" /* 1188 */;
-import ClipView from "ClipView" /* 8469 */;
-import GuildsBarConstants from "GuildsBarConstants" /* 16222 */;
+import ClipView from "ClipView" /* 8502 */;
+import GuildsBarConstants from "GuildsBarConstants" /* 16262 */;
 import size_mod from "module_2" /* 2 */;
 
 const PixelRatio = react_native.PixelRatio;

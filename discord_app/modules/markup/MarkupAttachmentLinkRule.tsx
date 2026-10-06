@@ -1,8 +1,8 @@
-// === Module 5799: MarkupAttachmentLinkRule ===
+// === Module 5806: MarkupAttachmentLinkRule ===
 
-// Module 5799 (MarkupAttachmentLinkRule)
+// Module 5806 (MarkupAttachmentLinkRule)
 import _modDef1936 from "module_1936" /* 1936 */;
-import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5800 */;
+import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5807 */;
 import size from "module_2" /* 2 */;
 
 function match(arg0) {

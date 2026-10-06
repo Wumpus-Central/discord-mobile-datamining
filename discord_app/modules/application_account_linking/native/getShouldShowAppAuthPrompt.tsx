@@ -1,9 +1,9 @@
-// === Module 11395: getShouldShowAppAuthPrompt ===
+// === Module 11408: getShouldShowAppAuthPrompt ===
 
-// Module 11395 (getShouldShowAppAuthPrompt)
-import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6602 */;
-import useAuthorizationApp from "useAuthorizationApp" /* 6662 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6665 */;
+// Module 11408 (getShouldShowAppAuthPrompt)
+import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 6609 */;
+import useAuthorizationApp from "useAuthorizationApp" /* 6669 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 6672 */;
 import size from "module_2" /* 2 */;
 
 const AuthorizedAppsStore = AuthorizedAppsStore2;

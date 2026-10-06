@@ -1,11 +1,11 @@
-// === Module 12192: useGuildPowerupCardFooterConfig ===
+// === Module 12207: useGuildPowerupCardFooterConfig ===
 
-// Module 12192 (useGuildPowerupCardFooterConfig)
+// Module 12207 (useGuildPowerupCardFooterConfig)
 import Constants from "Constants" /* 1085 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12155 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12159 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12170 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12174 */;
 import GuildStore from "GuildStore" /* 2074 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4768 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4774 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

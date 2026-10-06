@@ -1,6 +1,6 @@
-// === Module 9755: useThrottle ===
+// === Module 9768: useThrottle ===
 
-// Module 9755 (useThrottle)
+// Module 9768 (useThrottle)
 import _mod12 from "module_12" /* 12 */;
 import react_mod from "react" /* 19 */;
 import size from "module_2" /* 2 */;

@@ -1,9 +1,9 @@
-// === Module 17323: useControlsTranslation ===
+// === Module 17351: useControlsTranslation ===
 
-// Module 17323 (useControlsTranslation)
-import spring from "spring" /* 5597 */;
-import VoicePanelConstants from "VoicePanelConstants" /* 11902 */;
-import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11905 */;
+// Module 17351 (useControlsTranslation)
+import spring from "spring" /* 5604 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 11916 */;
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 11919 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

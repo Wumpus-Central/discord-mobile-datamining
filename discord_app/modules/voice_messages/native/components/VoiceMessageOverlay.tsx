@@ -1,31 +1,31 @@
-// === Module 12311: VoiceMessageOverlay ===
+// === Module 12326: VoiceMessageOverlay ===
 
-// Module 12311 (VoiceMessageOverlay)
+// Module 12326 (VoiceMessageOverlay)
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1121 */;
 import intl7 from "intl" /* 1126 */;
 import native from "native" /* 1188 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4612 */;
-import Text_Text from "Text/Text" /* 4886 */;
-import timing from "timing" /* 4891 */;
-import LegacyTokens from "LegacyTokens" /* 5620 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5770 */;
-import react_native from "react-native" /* 5779 */;
-import useRefValueDefault from "useRefValue" /* 5973 */;
-import inlineStyles from "inlineStyles" /* 8136 */;
-import VoiceMessagesUIStore from "VoiceMessagesUIStore" /* 11574 */;
-import VoiceMessageConstants from "VoiceMessageConstants" /* 11575 */;
-import ChatInputConstants from "ChatInputConstants" /* 11576 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4618 */;
+import Text_Text from "Text/Text" /* 4892 */;
+import timing from "timing" /* 4897 */;
+import LegacyTokens from "LegacyTokens" /* 5627 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5777 */;
+import react_native from "react-native" /* 5786 */;
+import useRefValueDefault from "useRefValue" /* 5980 */;
+import inlineStyles from "inlineStyles" /* 8169 */;
+import VoiceMessagesUIStore from "VoiceMessagesUIStore" /* 11587 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 11588 */;
+import ChatInputConstants from "ChatInputConstants" /* 11589 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 import react_native2 from "react-native" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ChannelStore from "ChannelStore" /* 2051 */;
 import Fragment from "Fragment" /* 21 */;
 import module_12 from "module_12" /* 12 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

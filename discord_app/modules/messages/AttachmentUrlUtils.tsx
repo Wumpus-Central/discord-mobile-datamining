@@ -1,19 +1,19 @@
-// === Module 7518: AttachmentUrlUtils ===
+// === Module 7529: AttachmentUrlUtils ===
 
-// Module 7518 (AttachmentUrlUtils)
+// Module 7529 (AttachmentUrlUtils)
 import Constants from "Constants" /* 1085 */;
 import DurationsDefault from "Durations" /* 1102 */;
 import HTTPUtils from "HTTPUtils" /* 1282 */;
 import URLUtilsDefault from "URLUtils" /* 1371 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 2022 */;
 import UrlHostUtils from "UrlHostUtils" /* 2023 */;
-import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5800 */;
+import AttachmentUrlConstants from "AttachmentUrlConstants" /* 5807 */;
 import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 import size from "module_2" /* 2 */;
 
 let hostname;
 
-const f94972 = (item) => {
+const f95112 = (item) => {
   pathname = pathname.pathname;
   return pathname.startsWith(item);
 };
@@ -86,7 +86,7 @@ function isRefreshableAttachmentUrl(toURLSafeResult) {
         const _Array = Array;
         const arr = Array.from(ATTACHMENT_PATH_PREFIXES);
         closure_0 = toURLSafeResult;
-        const someResult = arr.some(f94972);
+        const someResult = arr.some(f95112);
         hasItem = (closure_7.some((arr) => {
           hostname = hostname.hostname;
           let flag = true;
@@ -299,7 +299,7 @@ items[1] = substr;
 function isAttachmentPathUrl(toURLSafeResult) {
   let closure_0 = toURLSafeResult;
   const arr = Array.from(ATTACHMENT_PATH_PREFIXES);
-  const someResult = arr.some(f94972);
+  const someResult = arr.some(f95112);
   const tmp2 = (closure_7.some((arr) => {
     hostname = hostname.hostname;
     let flag = true;

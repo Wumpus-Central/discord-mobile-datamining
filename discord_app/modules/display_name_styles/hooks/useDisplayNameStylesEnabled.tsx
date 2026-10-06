@@ -1,11 +1,11 @@
-// === Module 5306: useDisplayNameStylesEnabled ===
+// === Module 5313: useDisplayNameStylesEnabled ===
 
-// Module 5306 (useDisplayNameStylesEnabled)
+// Module 5313 (useDisplayNameStylesEnabled)
 import react from "react" /* 19 */;
 import get_initialized from "get initialized" /* 504 */;
 import react2 from "react" /* 576 */;
-import react3 from "react" /* 5307 */;
-import AccessibilityStore from "AccessibilityStore" /* 4879 */;
+import react3 from "react" /* 5314 */;
+import AccessibilityStore from "AccessibilityStore" /* 4885 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

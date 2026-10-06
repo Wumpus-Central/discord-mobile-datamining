@@ -1,7 +1,7 @@
-// === Module 13561: XboxApplicationRecord ===
+// === Module 13577: XboxApplicationRecord ===
 
-// Module 13561 (XboxApplicationRecord)
-import PlatformsDefault from "Platforms" /* 5442 */;
+// Module 13577 (XboxApplicationRecord)
+import PlatformsDefault from "Platforms" /* 5449 */;
 import ApplicationRecord from "ApplicationRecord" /* 2009 */;
 import size from "module_2" /* 2 */;
 

@@ -1,11 +1,11 @@
-// === Module 9236: Sheet/BottomSheetTextInput ===
+// === Module 9271: Sheet/BottomSheetTextInput ===
 
-// Module 9236 (Sheet/BottomSheetTextInput)
+// Module 9271 (Sheet/BottomSheetTextInput)
 import Fragment from "Fragment" /* 21 */;
 import react2 from "react" /* 576 */;
-import NativeTextInput from "NativeTextInput" /* 6109 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6111 */;
-import void_TextInput_TextInputDefault from "void/TextInput/TextInput" /* 9237 */;
+import NativeTextInput from "NativeTextInput" /* 6116 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 6118 */;
+import void_TextInput_TextInputDefault from "void/TextInput/TextInput" /* 9272 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import react from "react" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

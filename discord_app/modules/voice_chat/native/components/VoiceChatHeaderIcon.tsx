@@ -1,20 +1,20 @@
-// === Module 9684: VoiceChatHeaderIcon ===
+// === Module 9697: VoiceChatHeaderIcon ===
 
-// Module 9684 (VoiceChatHeaderIcon)
+// Module 9697 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1188 */;
-import native2 from "native" /* 4589 */;
-import Pressables from "Pressables" /* 5909 */;
-import NavigatorConstants from "NavigatorConstants" /* 6068 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9587 */;
+import native2 from "native" /* 4595 */;
+import Pressables from "Pressables" /* 5916 */;
+import NavigatorConstants from "NavigatorConstants" /* 6075 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9600 */;
 import react from "react" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 4905 */;
+import ReadStateStore from "ReadStateStore" /* 4911 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles_mod from "createStyles" /* 4890 */;
+import createStyles_mod from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 

@@ -1,21 +1,21 @@
-// === Module 13775: GameOrganizationInviteActionSheet ===
+// === Module 13793: GameOrganizationInviteActionSheet ===
 
-// Module 13775 (GameOrganizationInviteActionSheet)
+// Module 13793 (GameOrganizationInviteActionSheet)
 import react_native from "react-native" /* 17 */;
 import react2 from "react" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1096 */;
 import _modDef2391 from "module_2391" /* 2391 */;
-import Constants2 from "Constants" /* 7226 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9483 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9490 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9508 */;
+import Constants2 from "Constants" /* 7239 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9496 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9503 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9521 */;
 import _slicedToArray_mod from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
-import InstantInviteSendStateStore from "InstantInviteSendStateStore" /* 9554 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9494 */;
+import InstantInviteSendStateStore from "InstantInviteSendStateStore" /* 9567 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9507 */;
 import Fragment from "Fragment" /* 21 */;
-import createStyles from "createStyles" /* 4890 */;
+import createStyles from "createStyles" /* 4896 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -27,7 +27,7 @@ let metroRequire;
 let obj2;
 let tmp12;
 let unpackModuleId;
-const GameOrganizationInviteListDefault = tmp12(13776);
+const GameOrganizationInviteListDefault = tmp12(13794);
 function isInvitableUserRow(type) {
   const tmp3 = (type.type === InstantInviteUtils.RowTypes.FRIEND || type.type === InstantInviteUtils.RowTypes.DM) && !type.item.bot;
   return tmp3;
@@ -266,7 +266,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   }
   const intl = tmp(1126).intl;
   const stringResult = intl.string(_modDef2391.nVMqjA);
-  const ActionSheet = tmp(6701).ActionSheet;
+  const ActionSheet = tmp(6708).ActionSheet;
   if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
     class X {
       constructor(id) {
@@ -283,21 +283,21 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
       }
     }
   }
-  const Stack = tmp(5593).Stack;
+  const Stack = tmp(5600).Stack;
   const PX_16 = tmp23(587).space.PX_16;
   const header = tmp4.header;
   const obj5 = { spacing: nativeDefault.space.PX_4, children: items2 };
-  const Stack2 = tmp(5593).Stack;
+  const Stack2 = tmp(5600).Stack;
   const obj6 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp4.centeredText, children: intl2.formatToPlainString(_modDef2391.EnTIIr, { noun: stringResult }) };
-  const Heading = tmp(4886).Heading;
+  const Heading = tmp(4892).Heading;
   intl2 = tmp(1126).intl;
   items2 = [closure_11(Heading, obj6), ];
   const obj7 = { variant: "text-sm/medium", color: "text-muted", style: tmp4.centeredText, children: intl3.formatToPlainString(_modDef2391.BBk7Qw, { noun: stringResult }) };
-  const Text = tmp(4886).Text;
+  const Text = tmp(4892).Text;
   intl3 = tmp(1126).intl;
   items2[1] = closure_11(Text, obj7);
   const tmp27 = closure_12(Stack2, obj5);
-  const SearchField = tmp(6547).SearchField;
+  const SearchField = tmp(6554).SearchField;
   const intl4 = tmp(1126).intl;
   cResult[11] = tmp4.centeredText;
   cResult[12] = tmp4.header;
@@ -383,23 +383,23 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   const intl = combined(1126).intl;
   const stringResult = intl.string(_modDef2391.nVMqjA);
   const obj2 = { scrollable: true, startExpanded: true, dismissAccessibilityLabel: intl2.string(combined(1126).t.cpT0Cq), header: closure_12(Stack, obj3), children: tmp14Result };
-  const ActionSheet = combined(6701).ActionSheet;
+  const ActionSheet = combined(6708).ActionSheet;
   intl2 = combined(1126).intl;
   obj3 = { spacing: nativeDefault.space.PX_16, style: tmp.header, children: items4 };
-  Stack = combined(5593).Stack;
+  Stack = combined(5600).Stack;
   const obj4 = { spacing: nativeDefault.space.PX_4, children: items3 };
-  const Stack2 = combined(5593).Stack;
+  const Stack2 = combined(5600).Stack;
   const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: intl3.formatToPlainString(_modDef2391.EnTIIr, { noun: stringResult }) };
-  const Heading = combined(4886).Heading;
+  const Heading = combined(4892).Heading;
   intl3 = combined(1126).intl;
   items3 = [closure_11(Heading, obj5), ];
   const obj6 = { variant: "text-sm/medium", color: "text-muted", style: tmp.centeredText, children: intl4.formatToPlainString(_modDef2391.BBk7Qw, { noun: stringResult }) };
-  const Text = combined(4886).Text;
+  const Text = combined(4892).Text;
   intl4 = combined(1126).intl;
   items3[1] = closure_11(Text, obj6);
   items4 = [closure_12(Stack2, obj4), ];
   const obj7 = { size: "md", round: true, onChange: callback, placeholder: intl5.formatToPlainString(_modDef2391.cRK6SQ, { noun: stringResult }) };
-  const SearchField = combined(6547).SearchField;
+  const SearchField = combined(6554).SearchField;
   intl5 = combined(1126).intl;
   items4[1] = closure_11(SearchField, obj7);
   if (first) {

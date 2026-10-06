@@ -1,19 +1,19 @@
-// === Module 9346: SecureFramesVerifiedStore ===
+// === Module 9360: SecureFramesVerifiedStore ===
 
-// Module 9346 (SecureFramesVerifiedStore)
+// Module 9360 (SecureFramesVerifiedStore)
 import get_initializedDefault from "get initialized" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1085 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4945 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9364 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4951 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9378 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4913 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4929 */;
-import TransientKeyStore from "TransientKeyStore" /* 9347 */;
-import VerifiedKeyStore from "VerifiedKeyStore" /* 9348 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4919 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4935 */;
+import TransientKeyStore from "TransientKeyStore" /* 9361 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9362 */;
 import size from "module_2" /* 2 */;
 
-const f100298 = (acc, item) => {
+const f100452 = (acc, item) => {
   const obj = closure_0(dependencyMap[7]);
   const tmp = true === map.get(obj.decodeStreamKey(item).ownerId);
   const value = map1.get(item);
@@ -64,7 +64,7 @@ function handleUserUpdate(userId) {
       const result = map.set(userId, isKeyVerifiedResult);
     }
     const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-    const reduced = allActiveStreamKeys.reduce(f100298, false);
+    const reduced = allActiveStreamKeys.reduce(f100452, false);
     const tmp16 = computeCallVerification();
     if (!flag) {
       flag = reduced;
@@ -146,7 +146,7 @@ let obj = {
       return tmp;
     }, false);
     const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-    const reduced1 = allActiveStreamKeys.reduce(f100298, false);
+    const reduced1 = allActiveStreamKeys.reduce(f100452, false);
     const tmp3 = computeCallVerification();
     if (!reduced) {
       reduced = reduced1;

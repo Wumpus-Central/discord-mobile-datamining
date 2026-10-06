@@ -1,6 +1,6 @@
-// === Module 4742: HomeDrawerExperiment ===
+// === Module 4748: HomeDrawerExperiment ===
 
-// Module 4742 (HomeDrawerExperiment)
+// Module 4748 (HomeDrawerExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1441 */;
 import size from "module_2" /* 2 */;
 

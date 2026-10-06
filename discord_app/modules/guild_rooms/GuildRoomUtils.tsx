@@ -1,11 +1,11 @@
-// === Module 5051: GuildRoomUtils ===
+// === Module 5057: GuildRoomUtils ===
 
-// Module 5051 (GuildRoomUtils)
-import GuildRoomTypes from "GuildRoomTypes" /* 5049 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 5050 */;
-import GuildRoomConstants from "GuildRoomConstants" /* 5052 */;
-import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 5053 */;
-import GuildRoomStore from "GuildRoomStore" /* 5048 */;
+// Module 5057 (GuildRoomUtils)
+import GuildRoomTypes from "GuildRoomTypes" /* 5055 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 5056 */;
+import GuildRoomConstants from "GuildRoomConstants" /* 5058 */;
+import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 5059 */;
+import GuildRoomStore from "GuildRoomStore" /* 5054 */;
 import size from "module_2" /* 2 */;
 
 let map, map1;

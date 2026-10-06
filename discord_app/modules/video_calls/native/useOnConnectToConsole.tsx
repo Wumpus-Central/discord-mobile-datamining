@@ -1,11 +1,11 @@
-// === Module 9446: useOnConnectToConsole ===
+// === Module 9459: useOnConnectToConsole ===
 
-// Module 9446 (useOnConnectToConsole)
+// Module 9459 (useOnConnectToConsole)
 import dismissible_content from "dismissible_content" /* 2036 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4698 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 8733 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 8764 */;
-import beginConsoleTransfer from "beginConsoleTransfer" /* 9447 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4704 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 8765 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 8796 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 9460 */;
 import react from "react" /* 19 */;
 import Constants from "Constants" /* 1085 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
