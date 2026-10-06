@@ -27,7 +27,7 @@ const memoResult = memo(
             tmp4 = cResult[2];
           }
           if (cResult[3] !== tmp4) {
-            const tmp8 = jsx(guildId(6496).Navigator, {
+            const tmp8 = jsx(guildId(6503).Navigator, {
               screens: tmp4,
               initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN,
             });
@@ -96,7 +96,7 @@ const memoResult = memo(
           obj[GUILD_ROLE_CONNECTIONS_SCREEN] = obj2;
           return obj;
         }, items);
-        return jsx(guildId(6496).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
+        return jsx(guildId(6503).Navigator, { screens: memo, initialRouteName: GUILD_ROLE_CONNECTIONS_SCREEN });
       },
 );
 const result = size.fileFinishedImporting("modules/connections/native/GuildRoleConnectionsModal.tsx");

@@ -78,6 +78,6 @@ export default function markGuildsAsRead(arr, source, onFinished) {
   let obj2 = AnalyticsUtilsDefault;
   let obj3 = { source, type: "guild" };
   obj2.track(AnalyticEvents.MARK_AS_READ, obj3);
-  let obj4 = mapped(6605);
+  let obj4 = mapped(6612);
   return obj4.bulkAck(mapped, onFinished);
 }

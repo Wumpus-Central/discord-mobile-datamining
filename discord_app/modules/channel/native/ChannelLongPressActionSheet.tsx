@@ -338,7 +338,7 @@ function getActionSheetButtons(channel) {
         onPress() {
           obj = ModalActionCreatorsDefault;
           const obj2 = { channelId: channel.id };
-          obj.pushLazy(asyncRequire(10668, dependencyMap.paths), obj2);
+          obj.pushLazy(asyncRequire(10681, dependencyMap.paths), obj2);
         },
       };
       intl5 = tmp8(isOptedIn[24]).intl;
@@ -791,7 +791,7 @@ function getActionSheetButtons(channel) {
             obj.hideActionSheet();
             const obj2 = ModalActionCreatorsDefault;
             const obj3 = { channel };
-            obj2.pushLazy(asyncRequire(10701, dependencyMap.paths), obj3);
+            obj2.pushLazy(asyncRequire(10714, dependencyMap.paths), obj3);
             hideLaunchPadDefault();
           },
         };
@@ -1130,8 +1130,8 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(69);
       channel = channel.channel;
       const onClose = channel.onClose;
-      const tmp4 = onClose(6657);
-      const analyticsLocations = tmp4(onClose(6681).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
+      const tmp4 = onClose(6664);
+      const analyticsLocations = tmp4(onClose(6688).CHANNEL_LONG_PRESS_MENU).analyticsLocations;
       if (cResult[0] !== channel) {
         const guildId = channel.getGuildId();
         cResult[0] = channel;
@@ -1141,7 +1141,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       dependencyMap = tmp5;
-      const tmpResult = tmp(10036);
+      const tmpResult = tmp(10049);
       const isFavoritesGuildSelected = tmpResult.useIsFavoritesGuildSelected();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
@@ -1205,8 +1205,8 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult5 = tmp(504);
       const stateFromStoresObject = tmpResult5.useStateFromStoresObject(tmp12, O);
       ({ canManageChannel, canCreateInstantInvite, canConnect, canModerateStage } = stateFromStoresObject);
-      const useOptInEnabledForGuild = tmp(7046).useOptInEnabledForGuild;
-      tmp(7046);
+      const useOptInEnabledForGuild = tmp(7059).useOptInEnabledForGuild;
+      tmp(7059);
       const tmp17 = tmp5;
       if (tmp5 == null) {
         class O {

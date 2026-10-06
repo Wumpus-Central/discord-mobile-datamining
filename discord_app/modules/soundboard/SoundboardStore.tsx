@@ -6,7 +6,7 @@ import Constants from "../../Constants.tsx";
 import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import FrecencyDefault from "../../lib/Frecency.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import SoundboardFavoritesExperiment2 from "experiments/SoundboardFavoritesExperiment.tsx";
@@ -105,7 +105,7 @@ let obj2 = {
     return 100;
   },
   computeWeight(arg0) {
-    const obj = _modDef4461();
+    const obj = _modDef4467();
     if (arg0 > obj.diff(closure_22, "days")) {
       return 0;
     } else {
@@ -507,7 +507,7 @@ const obj3 = {
     const guildId = topSoundsMetadata.guildId;
     const obj = { soundIds: topSoundsMetadata.map((soundId) => soundId.soundId), topSoundsTTL: addResult.valueOf() };
     set = map1.set;
-    const obj2 = _modDef4461();
+    const obj2 = _modDef4467();
     addResult = obj2.add(1, "days");
     const result = set(guildId, obj);
   },

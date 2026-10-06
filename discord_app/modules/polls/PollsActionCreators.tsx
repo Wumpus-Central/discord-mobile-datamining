@@ -2,6 +2,7 @@
 import AppAnalyticsUtilsDefault from "../app_analytics/AppAnalyticsUtils.tsx";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
+import JoinGuildRefusedError from "../guild/JoinGuildRefusedError.tsx";
 import DraftStore from "../../stores/DraftStore.tsx";
 import PollInteractionUtilsAll from "PollInteractionUtils.native.tsx";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -77,7 +78,8 @@ function showLurkingAlert(guildId) {
     onConfirm() {
       obj = GuildActionCreatorsDefault;
       const obj2 = { source: constants.POLL_ALERT };
-      obj.joinGuild(guild_id, obj2);
+      const joinGuildResult = obj.joinGuild(guild_id, obj2);
+      joinGuildResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
     },
   };
   const show = AlertActionCreatorsDefault.show;
@@ -109,7 +111,8 @@ function handleShowVotesForAnswer(messageId) {
         onConfirm() {
           obj = GuildActionCreatorsDefault;
           const obj2 = { source: constants.POLL_ALERT };
-          obj.joinGuild(guild_id, obj2);
+          const joinGuildResult = obj.joinGuild(guild_id, obj2);
+          joinGuildResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
         },
       };
       const show = AlertActionCreatorsDefault.show;
@@ -193,9 +196,9 @@ let obj = function _optimisticallySetAnswers() {
       } else {
         const obj5 = { channelId, messageId };
         let closure_3 = closure_131_21(obj5);
-        const obj7 = closure_131_1(closure_131_3[18]);
+        const obj7 = closure_131_1(closure_131_3[19]);
         let closure_4 = obj7.difference(closure_3, c2);
-        const obj8 = closure_131_1(closure_131_3[18]);
+        const obj8 = closure_131_1(closure_131_3[19]);
         let closure_5 = obj8.difference(c2, closure_3);
         const userId = closure_131_7.getId();
         messageId = 0;
@@ -210,13 +213,13 @@ let obj = function _optimisticallySetAnswers() {
           closure_5.map((id) => ({ type: "MESSAGE_REACTION_ADD", id })),
           messageId,
         );
-        const Emitter = closure_131_1(closure_131_3[19]).Emitter;
+        const Emitter = closure_131_1(closure_131_3[20]).Emitter;
         value = Emitter.batched(() => {
           let dispatchResult;
           for (const item10006 of closure_1_7) {
             let id = item10006.id;
             let type = item10006.type;
-            let tmp4 = messageId(closure_3[20]);
+            let tmp4 = messageId(closure_3[21]);
             obj = {
               type,
               channelId,
@@ -224,7 +227,7 @@ let obj = function _optimisticallySetAnswers() {
               emoji: obj2,
               userId,
               optimistic: true,
-              reactionType: channelId(closure_3[21]).ReactionTypes.VOTE,
+              reactionType: channelId(closure_3[22]).ReactionTypes.VOTE,
             };
             let obj2 = { id, name: id };
             let dispatch = tmp4.dispatch;
@@ -251,7 +254,7 @@ let obj = function _optimisticallySetAnswers() {
     await "IconComponent";
     closure_3 = tmp5;
     ({ channelId: c0, messageId: c1, answerIds: c2 } = channelId);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -372,7 +375,7 @@ obj = function _handlePollSubmitVote() {
         c8 = 4;
         c9 = 1;
         const obj16 = { value: obj3.submitPollVote(obj15), done: false };
-        obj3 = closure_133_2(closure_133_3[22]);
+        obj3 = closure_133_2(closure_133_3[23]);
         return obj16;
       }
     } else if (4 === c8) {
@@ -387,7 +390,7 @@ obj = function _handlePollSubmitVote() {
       } else {
         let stringResult;
         closure_133_14(channelId, messageId, () => {});
-        const AccessibilityAnnouncer = closure_133_0(closure_133_3[23]).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = closure_133_0(closure_133_3[24]).AccessibilityAnnouncer;
         const announce = AccessibilityAnnouncer.announce;
         if (0 === items.length) {
           const intl2 = closure_133_0(closure_133_3[13]).intl;
@@ -418,7 +421,7 @@ obj = function _handlePollSubmitVote() {
     await "IconComponent";
     answerIds = tmp5;
     ({ channelId: c0, messageId: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -461,7 +464,7 @@ obj = function _handleClearPollVote() {
             channel = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (channelId === 1) {
@@ -565,7 +568,7 @@ obj = function _handlePollActionTapped() {
             return acc + num;
           }, 0);
         }
-        obj = closure_2_1(closure_2_3[17]);
+        obj = closure_2_1(closure_2_3[18]);
         obj.trackWithMetadata(constants.POLL_SHOW_RESULTS_CLICKED, {
           channel_id: channelId,
           message_id: messageId,
@@ -651,7 +654,7 @@ obj = function _handlePollActionTapped() {
     }
     await "IconComponent";
     ({ channelId: c0, messageId: c1, type: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -721,7 +724,7 @@ obj = function _createPoll() {
                 obj5 = undefined;
                 layout_type = 1;
                 c6 = 1;
-                return { value: "Set", done: true };
+                return { value: "Reflect", done: true };
               }
             } else if (1 === layout_type) {
               if (arg0 === 1) {
@@ -746,7 +749,7 @@ obj = function _createPoll() {
                     tmp2 = items;
                   }
                   const obj2 = { attachment_ids: tmp2 };
-                  if (layout_type === guildId(allow_multiselect[24]).PollLayoutTypes.DEFAULT) {
+                  if (layout_type === guildId(allow_multiselect[25]).PollLayoutTypes.DEFAULT) {
                     let trimmed;
                     if (text.text != null) {
                       trimmed = str2.trim();
@@ -778,13 +781,13 @@ obj = function _createPoll() {
                   attachmentsToUpload,
                   scheduledTimestamp,
                   onAttachmentUploadError(file, code, reason) {
-                    obj = guildId(allow_multiselect[26]);
+                    obj = guildId(allow_multiselect[27]);
                     const obj2 = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
                     const result = obj.handleUploadMessageAttachmentsErrors(obj2);
                   },
                 };
                 const obj8 = { value: obj10.sendPollMessage(user.id, obj5, obj7), done: false };
-                obj10 = closure_130_1(closure_130_3[25]);
+                obj10 = closure_130_1(closure_130_3[26]);
                 return obj8;
               }
             } else {
@@ -792,12 +795,12 @@ obj = function _createPoll() {
                 let aPIError;
                 duration = 0;
                 let closure_11 = closure_3;
-                if (closure_11 instanceof closure_130_0(closure_130_3[27]).APIError) {
+                if (closure_11 instanceof closure_130_0(closure_130_3[28]).APIError) {
                   aPIError = closure_11;
                 } else {
                   const self = this;
                   const self2 = this;
-                  aPIError = new closure_130_0(closure_130_3[27]).APIError(closure_11);
+                  aPIError = new closure_130_0(closure_130_3[28]).APIError(closure_11);
                 }
                 if ("poll" === aPIError.getAnyErrorMessage()) {
                   if (null != closure_11.text) {
@@ -874,7 +877,7 @@ obj = function _endPollEarly() {
         c3 = 3;
         c4 = 1;
         const obj10 = { value: obj2.endPollEarly(obj9), done: false };
-        obj2 = closure_130_2(closure_130_3[22]);
+        obj2 = closure_130_2(closure_130_3[23]);
         return obj10;
       }
     } else if (channelId === 1) {
@@ -887,7 +890,7 @@ obj = function _endPollEarly() {
     }
     await "IconComponent";
     ({ channelId: c0, messageId: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -925,7 +928,7 @@ obj = {
     channelId2 = obj.channelId;
     messageId2 = obj.messageId;
     message = obj.message;
-    let obj3 = answerId(message[16]);
+    let obj3 = answerId(message[17]);
     let basicPollChatData = obj3.computeBasicPollChatData(message);
     if (basicPollChatData == null) {
       basicPollChatData = {};

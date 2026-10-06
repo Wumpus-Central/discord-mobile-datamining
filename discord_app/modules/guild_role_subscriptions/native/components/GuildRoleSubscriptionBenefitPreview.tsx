@@ -7,7 +7,7 @@ import UnicodeEmojisDefault from "../../../emojis/UnicodeEmojis.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09602_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09615_AssetRegistry.js";
 import GuildRoleSubscriptionsConstants from "../../GuildRoleSubscriptionsConstants.tsx";
 import GuildRoleSubscriptionTierTemplatesUtils from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
 import EmojiIconDefault from "EmojiIcon.tsx";

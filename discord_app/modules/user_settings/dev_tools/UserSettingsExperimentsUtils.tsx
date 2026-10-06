@@ -1,5 +1,5 @@
 // discord_app/modules/user_settings/dev_tools/UserSettingsExperimentsUtils.tsx
-import flattenDefault from "../../../../_runtime/05000_flatten.js";
+import flattenDefault from "../../../../_runtime/05006_flatten.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let id;

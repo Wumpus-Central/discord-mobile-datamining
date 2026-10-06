@@ -8,7 +8,7 @@ import ChannelRecord from "../records/ChannelRecord.tsx";
 import ThreadSortOrder from "../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
 import ForumLayout from "../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
 import GuildRecordUtils from "../utils/GuildRecordUtils.tsx";
-import _modDef4461 from "../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../_runtime/metro/04467__.js";
 import ReactionUtils from "../modules/reactions/ReactionUtils.tsx";
 import UnicodeEmojisDefault from "../modules/emojis/UnicodeEmojis.tsx";
 import InviteRecord from "../records/InviteRecord.tsx";
@@ -24,13 +24,13 @@ let FormStates;
 let closure_14;
 let closure_15;
 let map1;
-const f102548 = (body) => {
+const f102700 = (body) => {
   c21 = false;
   const obj = DispatcherDefault;
   const obj2 = { type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: body.body };
   obj.dispatch(obj2);
 };
-const f102549 = () => {
+const f102701 = () => {
   c21 = false;
   return false;
 };
@@ -116,7 +116,7 @@ function _createInvite(code) {
     uses: null,
     maxUses: null,
     maxAge: null,
-    createdAt: _modDef4461(code.created_at),
+    createdAt: _modDef4467(code.created_at),
     type: null,
     roles: null,
   };
@@ -342,7 +342,7 @@ invites = {
         let obj2 = { url: closure_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
         const get = HTTP.get;
         const value = get(obj2);
-        value.then(f102548, f102549);
+        value.then(f102700, f102701);
       }
       return true;
     }
@@ -534,7 +534,7 @@ invites = {
       const get = HTTP.get;
       const obj = { url: closure_15.INSTANT_INVITES(channel.id), oldFormErrors: true, rejectWithError: true };
       const value = get(obj);
-      value.then(f102548, f102549);
+      value.then(f102700, f102701);
     }
   },
   CHANNEL_SETTINGS_LOADED_INVITES: function handleLoadedInvites(invites) {

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/create/ConjureCreateErrors.tsx
 import Constants from "../../../Constants.tsx";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const AbortCodes = Constants.AbortCodes;
@@ -68,12 +68,12 @@ export const getConjureCreateErrorMessage = function getConjureCreateErrorMessag
   }
   if ("project_limit" === str) {
     const intl3 = intl4.intl;
-    return intl3.string(_modDef3723["lh+h/p"]);
+    return intl3.string(_modDef3753["lh+h/p"]);
   } else if ("rate_limited" === str) {
     const intl2 = intl4.intl;
-    return intl2.string(_modDef3723.zBENJU);
+    return intl2.string(_modDef3753.zBENJU);
   } else {
     const intl = intl4.intl;
-    return intl.string(_modDef3723["9m86fn"]);
+    return intl.string(_modDef3753["9m86fn"]);
   }
 };

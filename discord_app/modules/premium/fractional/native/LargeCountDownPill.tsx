@@ -109,7 +109,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[7] !== tmp4.iconStyle) {
           let obj2 = { style: tmp4.iconStyle, color: nativeDefault.colors.TEXT_STATUS_IDLE };
-          let CircleInformationIcon = tmp(4812).CircleInformationIcon;
+          let CircleInformationIcon = tmp(4818).CircleInformationIcon;
           const tmp13 = closure_5(CircleInformationIcon, obj2);
           cResult[7] = tmp4.iconStyle;
           cResult[8] = tmp13;

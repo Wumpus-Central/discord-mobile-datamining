@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const containerId = selectionActionComponent.containerId;
       let tmp3 = closure_6();
       dependencyMap = tmp3;
-      let obj2 = selectionActionComponent(7802);
+      let obj2 = selectionActionComponent(7813);
       const useState = react.useState;
       set = new Set(obj2.getInitialStringSelectOptions(selectionActionComponent, containerId));
       const tmp5 = first(useState(set), 2);
@@ -405,7 +405,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[25] = allowEmpty;
               cResult[26] = channelId;
               cResult[27] = labelComponent;
-              const tmp28 = jsx(onSubmit(11432), {
+              const tmp28 = jsx(onSubmit(11445), {
                 onPressOptionItem: tmp10,
                 renderIcon: A,
                 skipIcon: !tmp17,
@@ -503,7 +503,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
       let tmp = callback();
       dependencyMap = tmp;
-      let obj = selectionActionComponent(7802);
+      let obj = selectionActionComponent(7813);
       const useState = react.useState;
       set = new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId));
       let tmp3 = first(useState(set), 2);
@@ -629,7 +629,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         channelId,
         allowEmpty,
       };
-      const tmp10 = onSubmit(11432);
+      const tmp10 = onSubmit(11445);
       const tmp9 = memo;
       if (selectionOptionItemWithDescription) {
         selectionOptionItemWithDescription = tmp.selectionOptionItemWithDescription;

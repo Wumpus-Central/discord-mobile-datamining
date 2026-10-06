@@ -11,7 +11,7 @@ import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import AssetRegistryDefault from "../../../../_runtime/16055_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/16094_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../_runtime/00019_react.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -279,7 +279,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj8 = { mode: tmp3, source: tmp13, isChannelLive, style: channelIconLive };
         channelIconLive = undefined;
-        const BaseChannelIcon = tmp10(12016).BaseChannelIcon;
+        const BaseChannelIcon = tmp10(12031).BaseChannelIcon;
         if (isChannelLive) {
           channelIconLive = tmp.channelIconLive;
         }

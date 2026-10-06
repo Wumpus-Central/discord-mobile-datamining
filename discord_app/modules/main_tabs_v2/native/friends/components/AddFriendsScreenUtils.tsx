@@ -101,7 +101,7 @@ let obj = function _sendWave() {
     if (closure_1 === undefined) {
       flag = true;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

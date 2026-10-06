@@ -6,7 +6,7 @@ import native from "../../../../design/void/native.tsx";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09602_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09615_AssetRegistry.js";
 import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";

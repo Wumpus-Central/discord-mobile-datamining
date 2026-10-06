@@ -2,7 +2,7 @@
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3109 from "../ManualReview.messages.js";
+import _modDef3137 from "../ManualReview.messages.js";
 import AlertModal2 from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -19,9 +19,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(3);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl4.intl;
-        const stringResult = intl.string(_modDef3109.CNm4w6);
+        const stringResult = intl.string(_modDef3137.CNm4w6);
         const intl2 = intl4.intl;
-        const stringResult1 = intl2.string(_modDef3109["14Fje3"]);
+        const stringResult1 = intl2.string(_modDef3137["14Fje3"]);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp4 = stringResult;
@@ -54,8 +54,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       intl3 = intl4.intl;
       return (
         <AlertModal
-          title={intl.string(_modDef3109.CNm4w6)}
-          content={intl2.string(_modDef3109["14Fje3"])}
+          title={intl.string(_modDef3137.CNm4w6)}
+          content={intl2.string(_modDef3137["14Fje3"])}
           actions={null}
         />
       );

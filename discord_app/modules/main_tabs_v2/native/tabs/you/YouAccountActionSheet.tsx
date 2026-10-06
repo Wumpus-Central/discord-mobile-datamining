@@ -20,13 +20,13 @@ import TableRadioRow5 from "../../../../../design/components/TableRow/native/Tab
 import TableRadioGroup2 from "../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import TableRowGroup2 from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolidationExperiment.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/06584_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/06591_AssetRegistry.js";
 import BottomSheetTitleHeader2 from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import AnalyticsLocationDefault from "../../../../app_analytics/AnalyticsLocation.tsx";
 import TableSwitchRow2 from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import ActionSheet2 from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import UserSettingsActionCreatorsDefault from "../../../../../actions/UserSettingsActionCreators.tsx";
+import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import getChannelA11yLabel from "../../../../channel/getChannelA11yLabel.tsx";
 import BellSlashIcon from "../../../../../design/components/Icon/native/redesign/generated/BellSlashIcon.tsx";
 import useGameMentionsAsPlainText2 from "../../../../game_mentions/hooks/useGameMentionsAsPlainText.tsx";
@@ -39,10 +39,10 @@ import MultiAccountActionCreatorsAll from "../../../../multi_account/MultiAccoun
 import FocusModeUtils from "../../../../notifications/FocusModeUtils.tsx";
 import setUserStatusDefault from "../../../../multi_account/setUserStatus.tsx";
 import ThemeDarkIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeDarkIcon.tsx";
-import AssetRegistryDefault2 from "../../../../../../_runtime/13924_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../../_runtime/13925_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../../../_runtime/13926_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../../../_runtime/13927_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/13942_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../_runtime/13943_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../../../_runtime/13944_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../../../_runtime/13945_AssetRegistry.js";
 import ThemeLightIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeLightIcon.tsx";
 import ThemeMidnightIcon from "../../../../../design/components/Icon/native/redesign/generated/ThemeMidnightIcon.tsx";
 import DevToolsContentDefault from "../../../../devtools/native/components/DevToolsContent.tsx";
@@ -312,7 +312,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       setting = StatusSetting.useSetting();
       const StatusExpiresAtSetting = setting(2028).StatusExpiresAtSetting;
       const setting1 = StatusExpiresAtSetting.useSetting();
-      let obj2 = setting(6470);
+      let obj2 = setting(6477);
       const manaTypeConsolidationExperiment = obj2.useManaTypeConsolidationExperiment(
         "YouAccountActionSheetOnlineStatus",
       );
@@ -380,7 +380,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             hasIcons: true,
             children: tmp12,
           };
-          const tmp17 = closure_19(setting(6072).TableRadioGroup, obj5);
+          const tmp17 = closure_19(setting(6079).TableRadioGroup, obj5);
           cResult[10] = tmp7;
           cResult[11] = setting;
           cResult[12] = tmp10;
@@ -452,7 +452,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       setting = StatusSetting.useSetting();
       const StatusExpiresAtSetting = setting(2028).StatusExpiresAtSetting;
       let closure_1 = StatusExpiresAtSetting.useSetting();
-      let obj = setting(6470);
+      let obj = setting(6477);
       const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment(
         "YouAccountActionSheetOnlineStatus",
       );
@@ -466,7 +466,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       let intl = setting(1126).intl;
       const stringResult = intl.string(setting(1126).t["0DPAZH"]);
       let tmp6;
-      const TableRadioGroup = setting(6072).TableRadioGroup;
+      const TableRadioGroup = setting(6079).TableRadioGroup;
       if (!manaTypeConsolidationExperiment) {
         tmp6 = stringResult;
       }
@@ -920,10 +920,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = stateFromStores(504);
       stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-      const tmpResult3 = stateFromStores(15872);
+      const tmpResult3 = stateFromStores(15911);
       const multiAccountUsers = tmpResult3.useMultiAccountUsers().multiAccountUsers;
       const arr2 = closure_26(multiAccountUsers);
-      const tmpResult4 = stateFromStores(6470);
+      const tmpResult4 = stateFromStores(6477);
       const manaTypeConsolidationExperiment = tmpResult4.useManaTypeConsolidationExperiment(
         "YouAccountActionSheetSwitchAccounts",
       );
@@ -966,13 +966,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol2 = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { onPress: tmp15, children: closure_19(Text, obj3) };
-            const PressableOpacity = tmp(5909).PressableOpacity;
+            const PressableOpacity = tmp(5916).PressableOpacity;
             obj3 = {
               variant: "text-sm/semibold",
               color: "text-brand",
               children: intl2.string(stateFromStores(1126).t.HxrBOZ),
             };
-            Text = tmp(4886).Text;
+            Text = tmp(4892).Text;
             intl2 = tmp(1126).intl;
             const tmp18 = closure_19(PressableOpacity, obj2);
             cResult[7] = tmp18;
@@ -1062,8 +1062,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[17] = tmp28;
           cResult[18] = tmp29;
           cResult[19] = tmp27;
-          cResult[20] = closure_19(stateFromStores(6072).TableRadioGroup, obj6);
-          const tmp34 = closure_19(stateFromStores(6072).TableRadioGroup, obj6);
+          cResult[20] = closure_19(stateFromStores(6079).TableRadioGroup, obj6);
+          const tmp34 = closure_19(stateFromStores(6079).TableRadioGroup, obj6);
         }
       }
       if (stateFromStores != null) {
@@ -1122,10 +1122,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = stateFromStores(504);
       const items = [UserStore];
       stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-      let obj2 = stateFromStores(15872);
+      let obj2 = stateFromStores(15911);
       const multiAccountUsers = obj2.useMultiAccountUsers().multiAccountUsers;
       const arr2 = closure_26(multiAccountUsers);
-      let obj3 = stateFromStores(6470);
+      let obj3 = stateFromStores(6477);
       const manaTypeConsolidationExperiment = obj3.useManaTypeConsolidationExperiment(
         "YouAccountActionSheetSwitchAccounts",
       );
@@ -1148,13 +1148,13 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           },
           children: closure_19(Text, obj7),
         };
-        PressableOpacity = tmp2(5909).PressableOpacity;
+        PressableOpacity = tmp2(5916).PressableOpacity;
         obj7 = {
           variant: "text-sm/semibold",
           color: "text-brand",
           children: intl2.string(stateFromStores(1126).t.HxrBOZ),
         };
-        Text = tmp2(4886).Text;
+        Text = tmp2(4892).Text;
         intl2 = tmp2(1126).intl;
         items2 = [closure_19(closure_5, obj5), ,];
         let tmp15Result = manaTypeConsolidationExperiment;
@@ -1164,7 +1164,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         }
         items2[1] = tmp15Result;
         let tmp10;
-        const TableRadioGroup = tmp2(6072).TableRadioGroup;
+        const TableRadioGroup = tmp2(6079).TableRadioGroup;
         if (!manaTypeConsolidationExperiment) {
           tmp10 = stringResult;
         }

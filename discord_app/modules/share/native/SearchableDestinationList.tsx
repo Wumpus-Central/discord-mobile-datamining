@@ -4,7 +4,7 @@ import Constants from "../../../Constants.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import RunAfterInteractionsUtils from "../../../utils/native/RunAfterInteractionsUtils.tsx";
 import UserSearchUtils from "../../main_tabs_v2/UserSearchUtils.tsx";
-import _mod9496 from "../../autocompleter/index.tsx";
+import _mod9509 from "../../autocompleter/index.tsx";
 import UserRowConstants from "../../main_tabs_v2/native/shared_components/user_list/UserRowConstants.tsx";
 import formatResults from "../formatResults.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -450,7 +450,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp2Result5;
         let type;
         ({ type, record } = results[arg1]);
-        if (type !== _mod9496.AutocompleterResultTypes.HEADER) {
+        if (type !== _mod9509.AutocompleterResultTypes.HEADER) {
           const destinationKey = formatResults.destinationKey;
           formatResults;
           const tmp2Result4 = formatResults;
@@ -501,20 +501,20 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { onLongPress: NOOP };
           }
           const merged = Object.assign(tmp17);
-          if (_mod9496.AutocompleterResultTypes.USER === type) {
+          if (_mod9509.AutocompleterResultTypes.USER === type) {
             const element = { type: "user", props: obj3 };
             obj3 = { user: record, type: tmp2Result5.getRelationshipType(record.id), onPress: callback3 };
             const merged1 = Object.assign(obj);
             tmp2Result5 = UserSearchUtils;
             return element;
-          } else if (_mod9496.AutocompleterResultTypes.GROUP_DM === type) {
+          } else if (_mod9509.AutocompleterResultTypes.GROUP_DM === type) {
             const element1 = { type: "gdm", props: obj4 };
             obj4 = { channel: record, onPress: callback4 };
             const merged2 = Object.assign(obj);
             return element1;
           } else {
-            if (_mod9496.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-              if (_mod9496.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+            if (_mod9509.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+              if (_mod9509.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
                 const tmp2Result6 = GlobalUtils;
                 return tmp2Result6.assertNever(type);
               }
@@ -537,7 +537,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let type;
         ({ type, record } = results[arg1]);
         let tmp2;
-        if (type !== _mod9496.AutocompleterResultTypes.HEADER) {
+        if (type !== _mod9509.AutocompleterResultTypes.HEADER) {
           let lineClamp;
           if (getRowIsUnavailable != null) {
             const tmp5 = getRowIsUnavailable(record);

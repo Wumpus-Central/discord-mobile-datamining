@@ -728,7 +728,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       const mapped = arr3.map((arr, index) => {
                         let premiumSince;
                         let user;
-                        const f140761 = (item) => {
+                        const f140967 = (item) => {
                           let id;
                           if (user != null) {
                             id = user.id;
@@ -736,8 +736,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           return item === id;
                         };
                         const items = [closure_1.rowContainer];
-                        const rowContainerWithUsersBadge = arr.some(f140761) && closure_1.rowContainerWithUsersBadge;
-                        const someResult = arr.some(f140761);
+                        const rowContainerWithUsersBadge = arr.some(f140967) && closure_1.rowContainerWithUsersBadge;
+                        const someResult = arr.some(f140967);
                         let obj = {
                           style: items,
                           children: arr.map((badge, index) => {
@@ -998,7 +998,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items6[1] = memo.map((arr, index) => {
         let premiumSince;
         let user;
-        const f140763 = (item) => {
+        const f140969 = (item) => {
           let id;
           if (user != null) {
             id = user.id;
@@ -1006,8 +1006,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           return item === id;
         };
         const items = [closure_1.rowContainer];
-        const rowContainerWithUsersBadge = arr.some(f140763) && closure_1.rowContainerWithUsersBadge;
-        const someResult = arr.some(f140763);
+        const rowContainerWithUsersBadge = arr.some(f140969) && closure_1.rowContainerWithUsersBadge;
+        const someResult = arr.some(f140969);
         let obj = {
           style: items,
           children: arr.map((badge, index) => {

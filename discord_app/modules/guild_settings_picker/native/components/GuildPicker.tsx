@@ -20,10 +20,10 @@ export default function GuildPicker(isGuildIncluded) {
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
   let tmp = dependencyMap;
-  let tmp2 = onChange(13707)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  let tmp2 = onChange(13725)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
   ({ options: c2, selectedGuild } = tmp2);
   let name;
-  onChange(13708);
+  onChange(13726);
   if (selectedGuild != null) {
     name = selectedGuild.name;
   }
@@ -52,7 +52,7 @@ export default function GuildPicker(isGuildIncluded) {
           selectedItem: guildId,
           hasIcons: false,
         };
-        const tmp2 = asyncRequire(8949, dependencyMap.paths);
+        const tmp2 = asyncRequire(8978, dependencyMap.paths);
         intl = intl2.intl;
         openLazy(tmp2, GuildPicker_str, obj);
       }}

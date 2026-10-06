@@ -12,7 +12,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06584_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06591_AssetRegistry.js";
 import HotspotStore2 from "../../../hotspot/index.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import StageSparkleDefault from "../components/StageSparkle.tsx";

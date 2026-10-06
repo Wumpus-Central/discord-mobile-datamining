@@ -25,7 +25,7 @@ export default function FormTrialIntervalPicker(interval) {
     stringResult = intl.string(interval(1126).t.WZG1BU);
   } else {
     let tmp4 = interval;
-    let obj = interval(15049);
+    let obj = interval(15064);
     stringResult = obj.formatPlanIntervalDuration(interval);
   }
   return (
@@ -49,7 +49,7 @@ export default function FormTrialIntervalPicker(interval) {
           selectedItem: tmp4,
           hasIcons: false,
         };
-        const tmp2 = asyncRequire(8949, dependencyMap.paths);
+        const tmp2 = asyncRequire(8978, dependencyMap.paths);
         intl = intl2.intl;
         tmp4 = interval;
         if (interval == null) {

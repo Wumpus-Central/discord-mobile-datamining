@@ -92,7 +92,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               tmp23 = tmp26;
             }
           }
-          const BottomSheetTitleHeader = tmp(6644).BottomSheetTitleHeader;
+          const BottomSheetTitleHeader = tmp(6651).BottomSheetTitleHeader;
           const merged = Object.assign(tmp5);
           const tmp22 = <BottomSheetTitleHeader leading={tmp13} trailing={tmp15} />;
           cResult[12] = tmp5;

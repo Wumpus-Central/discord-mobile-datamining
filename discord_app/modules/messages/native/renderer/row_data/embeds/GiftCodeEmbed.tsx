@@ -1,30 +1,30 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/GiftCodeEmbed.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl17 from "../../../../../../intl/index.native.tsx";
-import _modDef4461 from "../../../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../../../_runtime/metro/04467__.js";
 import shared from "../../../../../../design/shared.tsx";
 import react_native from "../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "getEmbedThemeColors.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef10758 from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import AssetRegistryDefault from "../../../../../../../_runtime/11418_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../../_runtime/11419_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../../../_runtime/13029_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../../../../_runtime/13030_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../../../../_runtime/13031_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../../../../_runtime/13032_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../../../../_runtime/13033_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../../../../_runtime/13034_AssetRegistry.js";
-import AssetRegistryDefault9 from "../../../../../../../_runtime/13035_AssetRegistry.js";
-import AssetRegistryDefault10 from "../../../../../../../_runtime/13036_AssetRegistry.js";
-import AssetRegistryDefault11 from "../../../../../../../_runtime/13037_AssetRegistry.js";
-import AssetRegistryDefault12 from "../../../../../../../_runtime/13038_AssetRegistry.js";
-import AssetRegistryDefault13 from "../../../../../../../_runtime/13039_AssetRegistry.js";
-import AssetRegistryDefault14 from "../../../../../../../_runtime/13040_AssetRegistry.js";
-import AssetRegistryDefault15 from "../../../../../../../_runtime/13041_AssetRegistry.js";
-import AssetRegistryDefault16 from "../../../../../../../_runtime/13042_AssetRegistry.js";
-import AssetRegistryDefault17 from "../../../../../../../_runtime/13043_AssetRegistry.js";
-import AssetRegistryDefault18 from "../../../../../../../_runtime/13044_AssetRegistry.js";
+import _modDef10771 from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/11431_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../../_runtime/11432_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../../_runtime/13048_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../../../../_runtime/13049_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../../../../_runtime/13050_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../../../../../_runtime/13051_AssetRegistry.js";
+import AssetRegistryDefault7 from "../../../../../../../_runtime/13052_AssetRegistry.js";
+import AssetRegistryDefault8 from "../../../../../../../_runtime/13053_AssetRegistry.js";
+import AssetRegistryDefault9 from "../../../../../../../_runtime/13054_AssetRegistry.js";
+import AssetRegistryDefault10 from "../../../../../../../_runtime/13055_AssetRegistry.js";
+import AssetRegistryDefault11 from "../../../../../../../_runtime/13056_AssetRegistry.js";
+import AssetRegistryDefault12 from "../../../../../../../_runtime/13057_AssetRegistry.js";
+import AssetRegistryDefault13 from "../../../../../../../_runtime/13058_AssetRegistry.js";
+import AssetRegistryDefault14 from "../../../../../../../_runtime/13059_AssetRegistry.js";
+import AssetRegistryDefault15 from "../../../../../../../_runtime/13060_AssetRegistry.js";
+import AssetRegistryDefault16 from "../../../../../../../_runtime/13061_AssetRegistry.js";
+import AssetRegistryDefault17 from "../../../../../../../_runtime/13062_AssetRegistry.js";
+import AssetRegistryDefault18 from "../../../../../../../_runtime/13063_AssetRegistry.js";
 import react_native2 from "../../../../../../../_runtime/00017_react-native.js";
 import AuthenticationStore from "../../../../../../stores/AuthenticationStore.tsx";
 import GiftCodeStore from "../../../../../../stores/GiftCodeStore.tsx";
@@ -67,7 +67,7 @@ function getGiftStyleUrl(giftStyle) {
   } else if (unpackModuleId.SEASONAL_COFFEE === giftStyle) {
     return AssetRegistryDefault13;
   } else if (unpackModuleId.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef10758 };
+    const obj = { uri: _modDef10771 };
     return obj;
   } else {
     return AssetRegistryDefault6;
@@ -113,7 +113,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
       let obj2 = require("shared");
       const tmp3 = _require;
       if (obj2.isThemeDark(forcedTheme)) {
-        const tmp3Result = tmp3(4696);
+        const tmp3Result = tmp3(4702);
         const embedBackground = tmp3Result.getEmbedBackground();
         let tmp5Result = subtitleColor(embedBackground);
         if (tmp5Result == null) {
@@ -221,7 +221,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
               if (tmp17) {
                 const intl2 = intl17.intl;
                 const formatToPlainString = intl2.formatToPlainString;
-                const obj3 = { hours: expiresAt.diff(_modDef4461(), "h") };
+                const obj3 = { hours: expiresAt.diff(_modDef4467(), "h") };
                 expiresAt = value.expiresAt;
                 const nZBvUR = intl17.t.nZBvUR;
                 formatToPlainStringResult = formatToPlainString(nZBvUR, obj3);
@@ -383,9 +383,9 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                 assetUriForEmbed = assetUriForEmbed1;
               }
               let tmp93 = assetUriForEmbed;
-              const tmp52Result = tmp52(6727);
+              const tmp52Result = tmp52(6741);
               if (tmp52Result.isGameItemSKU(value2)) {
-                const tmp52Result2 = tmp52(6727);
+                const tmp52Result2 = tmp52(6741);
                 const str3 = tmp52Result2.getGameItemThumbnailUrl(value2);
                 let str1;
                 if (str3 != null) {
@@ -404,7 +404,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                   const intl10 = tmp52(1126).intl;
                   const formatToPlainString2 = intl10.formatToPlainString;
                   const t1SOId = tmp52(1126).t.t1SOId;
-                  const tmp49Result = tmp49(4722);
+                  const tmp49Result = tmp49(4728);
                   let str4 = tmp49Result.getName(currentUser);
                   if (str4 == null) {
                     str4 = "";
@@ -427,7 +427,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                     const intl12 = tmp52(1126).intl;
                     const formatToPlainString3 = intl12.formatToPlainString;
                     const DDO4Wz = tmp52(1126).t.DDO4Wz;
-                    const tmp49Result4 = tmp49(4722);
+                    const tmp49Result4 = tmp49(4728);
                     let str7 = tmp49Result4.getName(user);
                     if (str7 == null) {
                       str7 = "";
@@ -462,10 +462,10 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                   }
                 }
                 obj6.splashUrl = tmp109;
-                const tmp49Result5 = tmp49(4528);
+                const tmp49Result5 = tmp49(4534);
                 obj6.splashHasRadialGradient = !tmp49Result5.isPremiumSku(value.skuId);
                 let num5 = 0.97;
-                const tmp49Result6 = tmp49(4528);
+                const tmp49Result6 = tmp49(4534);
                 if (tmp49Result6.isPremiumSku(value.skuId)) {
                   num5 = 0.8;
                 }

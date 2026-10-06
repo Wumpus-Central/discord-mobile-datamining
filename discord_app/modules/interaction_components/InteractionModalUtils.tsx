@@ -9,8 +9,8 @@ import Server from "../../flow/Server.tsx";
 import DraftStore from "../../stores/DraftStore.tsx";
 import stageAttachmentFilesDefault from "../../lib/uploader/stageAttachmentFiles.tsx";
 import ComponentStateContext from "ComponentStateContext.tsx";
-import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
+import getURLForApplicationDefault from "../activities/getURLForApplication.tsx";
 import InteractionModalStore2 from "InteractionModalStore.tsx";
 import _asyncToGenerator_mod from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -38,7 +38,7 @@ function validate(arr) {
   return c0;
 }
 function getData(arg0, arr, arg2) {
-  const f130973 = (type) => {
+  const f131191 = (type) => {
     let components;
     let items;
     let mapped;
@@ -50,7 +50,7 @@ function getData(arg0, arr, arg2) {
     let values2;
     type = type.type;
     if (Server.ComponentType.ACTION_ROW === type) {
-      const obj4 = { type: type.type, components: components.map(f130973) };
+      const obj4 = { type: type.type, components: components.map(f131191) };
       components = type.components;
       return obj4;
     } else if (Server.ComponentType.TEXT_INPUT === type) {
@@ -117,7 +117,7 @@ function getData(arg0, arr, arg2) {
               if (Server.ComponentType.TEXT_DISPLAY === type) {
                 return { type: type.type };
               } else if (Server.ComponentType.LABEL === type) {
-                const obj21 = { type: type.type, component: items.map(f130973)[0] };
+                const obj21 = { type: type.type, component: items.map(f131191)[0] };
                 items = [type.component];
                 return obj21;
               } else if (Server.ComponentType.RADIO_GROUP === type) {
@@ -185,7 +185,7 @@ function getData(arg0, arr, arg2) {
   };
   let closure_0 = arg0;
   let closure_1 = arg2;
-  return arr.map(f130973);
+  return arr.map(f131191);
 }
 function getUploadsForModal(id, customId) {
   let closure_0 = customId;
@@ -249,7 +249,7 @@ let obj = function _submitModal() {
             }
             const obj4 = { data: obj5, preflight: tmp6 };
             obj5 = {
-              interactionType: require("Server").InteractionTypes.MODAL_SUBMIT,
+              interactionType: require("InteractionTypes").InteractionTypes.MODAL_SUBMIT,
               applicationId: closure_0.application.id,
             };
             const addQueued = require("InteractionActionCreators").addQueued;
@@ -269,7 +269,7 @@ let obj = function _submitModal() {
           return obj;
         } else {
           length = arr.map((item, index) => {
-            obj = closure_1_0(nonce[29]);
+            obj = closure_1_0(nonce[30]);
             return obj.getAttachmentPayload(item, index);
           });
           const obj7 = { uploads: arr };
@@ -284,10 +284,10 @@ let obj = function _submitModal() {
                 aborted = signal.aborted;
               }
               if (!aborted) {
-                const HTTP = closure_0(nonce[30]).HTTP;
+                const HTTP = closure_0(nonce[31]).HTTP;
                 const request = { url: constants.INTERACTIONS, body, signal, rejectWithError: false };
                 body = {
-                  type: closure_0(nonce[14]).InteractionTypes.MODAL_SUBMIT,
+                  type: closure_0(nonce[29]).InteractionTypes.MODAL_SUBMIT,
                   application_id: closure_1_0.application.id,
                   channel_id: null,
                   guild_id: null,
@@ -307,7 +307,7 @@ let obj = function _submitModal() {
                 postResult.catch((error) => {
                   if (429 === error.status) {
                     const _setTimeout = setTimeout;
-                    const timerId = setTimeout(closure_1_7, error.body.retry_after * signal(nonce[31]).Millis.SECOND);
+                    const timerId = setTimeout(closure_1_7, error.body.retry_after * signal(nonce[32]).Millis.SECOND);
                   } else {
                     obj = closure_2_0(nonce[28]);
                     obj.setFailed(closure_1_2);

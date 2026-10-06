@@ -4,7 +4,7 @@ import get_initialized from "../../../discord_common/js/packages/flux/index.tsx"
 import react2 from "../../../_runtime/00576_react.js";
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/05702_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05709_fuzzysearch.js";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../_runtime/00019_react.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";

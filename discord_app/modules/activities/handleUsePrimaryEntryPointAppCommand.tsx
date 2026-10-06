@@ -188,7 +188,7 @@ obj = function _handleUsePrimaryEntryPointAppCommandInternal() {
               currentUser = undefined;
               analyticsLocations = 1;
               componentId = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else {
             let tmp5;

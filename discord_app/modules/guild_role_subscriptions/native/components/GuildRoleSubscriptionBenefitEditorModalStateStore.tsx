@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
 import react from "../../../../../_runtime/00576_react.js";
 import react_native from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _slicedToArray from "../../../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray from "../../../../../_runtime/metro/04498__slicedToArray.js";
 import 01254__ from "../../../../../_runtime/metro/01254__.js";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-let closure_2 = Object.freeze({ name: "", emojiId: "backgroundColor", emojiName: "prototype", description: "guildId", refId: "Array" });
+let closure_2 = Object.freeze({ name: "", emojiId: "backgroundColor", emojiName: "text", description: "guild_id", refId: "Array" });
 let closure_3 = module_1254.createWithEqualityFn((arg0) => {
   let closure_0 = arg0;
   let obj = {

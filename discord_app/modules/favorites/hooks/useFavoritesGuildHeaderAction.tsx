@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import Constants from "../../../Constants.tsx";
 import router_utils from "../../routing/router_utils.tsx";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef3367 from "../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = intl2.intl;
         const string = intl.string;
         if (hasAccess) {
-          ojM1xJ = _modDef3367.G9fGlP;
+          ojM1xJ = _modDef3395.G9fGlP;
         } else {
           ojM1xJ = intl2.t.ojM1xJ;
         }
@@ -71,7 +71,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = intl2.intl;
       string = intl.string;
       if (hasAccess) {
-        ojM1xJ = _modDef3367.G9fGlP;
+        ojM1xJ = _modDef3395.G9fGlP;
       } else {
         ojM1xJ = intl2.t.ojM1xJ;
       }

@@ -31,8 +31,8 @@ const memoResult = react.memo(
               const stringResult = intl.string(channel(1126).t["9mysCh"]);
               const intl2 = channel(1126).intl;
               const stringResult1 = intl2.string(channel(1126).t.PDUCIN);
-              const TableRowIcon = channel(5999).TableRowIcon;
-              const tmp12 = <TableRowIcon IconComponent={channel(13656).ChannelListMagnifyingGlassIcon} />;
+              const TableRowIcon = channel(6006).TableRowIcon;
+              const tmp12 = <TableRowIcon IconComponent={channel(13672).ChannelListMagnifyingGlassIcon} />;
               cResult[4] = stringResult;
               cResult[5] = stringResult1;
               cResult[6] = tmp12;
@@ -45,7 +45,7 @@ const memoResult = react.memo(
               tmp8 = cResult[6];
             }
             if (cResult[7] !== tmp4) {
-              const tmp15 = jsx(channel(5993).TableRow, {
+              const tmp15 = jsx(channel(6000).TableRow, {
                 label: tmp6,
                 subLabel: tmp7,
                 icon: tmp8,
@@ -67,7 +67,7 @@ const memoResult = react.memo(
               }
               return tmp16;
             }
-            const tmp19 = jsx(analyticsSection(5976), { style, children: tmp13 });
+            const tmp19 = jsx(analyticsSection(5983), { style, children: tmp13 });
             cResult[9] = style;
             cResult[10] = tmp13;
             cResult[11] = tmp19;
@@ -106,12 +106,12 @@ const memoResult = react.memo(
           end: true,
           arrow: true,
         };
-        analyticsSection(5976);
-        const TableRow = channel(5993).TableRow;
+        analyticsSection(5983);
+        const TableRow = channel(6000).TableRow;
         intl = channel(1126).intl;
         intl2 = channel(1126).intl;
-        ({ IconComponent: channel(13656).ChannelListMagnifyingGlassIcon });
-        const TableRowIcon = channel(5999).TableRowIcon;
+        ({ IconComponent: channel(13672).ChannelListMagnifyingGlassIcon });
+        const TableRowIcon = channel(6006).TableRowIcon;
         return <tmp2 style={style}>{null}</tmp2>;
       },
 );

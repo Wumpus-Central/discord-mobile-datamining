@@ -5,7 +5,7 @@ import embeddedActivityLocationUtils from "../../../activities/utils/embeddedAct
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import FramesConstants from "../../../frames/FramesConstants.tsx";
 import ActivityPanelConstants from "../../../activities/panel/ActivityPanelConstants.tsx";
 import FramesActionCreatorsDefault from "../../../frames/FramesActionCreators.native.tsx";

@@ -304,8 +304,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp2Result;
       let tmp32Result2;
       let tmp = onPress();
-      let tmp4 = first(6657);
-      const analyticsLocations = tmp4(first(6681).FRIEND_REQUESTS).analyticsLocations;
+      let tmp4 = first(6664);
+      const analyticsLocations = tmp4(first(6688).FRIEND_REQUESTS).analyticsLocations;
       navigation();
       const effect = gameRelationshipsByType1.useEffect(() => {
         const obj = first(closure_2[25]);
@@ -323,9 +323,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       );
       first = tmp8[0];
       dependencyMap = tmp10;
-      let obj2 = analyticsLocations(12884);
+      let obj2 = analyticsLocations(12903);
       gameRelationshipsByType = obj2.useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-      let obj3 = analyticsLocations(12884);
+      let obj3 = analyticsLocations(12903);
       gameRelationshipsByType1 = obj3.useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
       let items1 = [gameRelationshipsByType, gameRelationshipsByType1];
       const memo = gameRelationshipsByType1.useMemo(() => {
@@ -338,7 +338,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         });
         return Array.from(set);
       }, items1);
-      first(6663)(memo);
+      first(6670)(memo);
       const items2 = [first, tmp8[1]];
       const memo1 = gameRelationshipsByType1.useMemo(() => {
         const obj = getPendingRelationshipIds;
@@ -563,9 +563,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const tmp27 = first1 === tmp24.Incoming && incoming.length >= incomingData;
       const obj7 = { id: str.toString(), label: intl.string(analyticsLocations(1126).t.bekioP), page: null };
-      const useSegmentedControlState = analyticsLocations(9282).useSegmentedControlState;
+      const useSegmentedControlState = analyticsLocations(9317).useSegmentedControlState;
       str = Outgoing.Incoming;
-      analyticsLocations(9282);
+      analyticsLocations(9317);
       intl = tmp7(1126).intl;
       items8 = [obj7];
       const obj8 = { id: str2.toString(), label: intl2.string(analyticsLocations(1126).t.tWqcIF), page: null };
@@ -574,13 +574,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items8[1] = obj8;
       const segmentedControlState = useSegmentedControlState(obj6);
       const obj9 = { value: analyticsLocations, children: items9 };
-      const AnalyticsLocationProvider = tmp7(6657).AnalyticsLocationProvider;
-      items9 = [outgoingData(tmp2(5911), { absolute: true })];
+      const AnalyticsLocationProvider = tmp7(6664).AnalyticsLocationProvider;
+      items9 = [outgoingData(tmp2(5918), { absolute: true })];
       const obj10 = { style: tmp.container, children: items10 };
       items10 = [, ,];
       const obj11 = {
         style: tmp.tabs,
-        children: outgoingData(analyticsLocations(9283).SegmentedControl, { state: segmentedControlState }),
+        children: outgoingData(analyticsLocations(9318).SegmentedControl, { state: segmentedControlState }),
       };
       items10[0] = outgoingData(pendingIncomingIds, obj11);
       let tmp32Result = null;
@@ -597,13 +597,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           },
           children: outgoingData(Text, obj14),
         };
-        PressableOpacity = tmp7(5909).PressableOpacity;
+        PressableOpacity = tmp7(5916).PressableOpacity;
         obj14 = {
           variant: "text-sm/semibold",
           color: "text-brand",
           children: intl3.string(analyticsLocations(1126).t.O8k7O4),
         };
-        Text = tmp7(4886).Text;
+        Text = tmp7(4892).Text;
         intl3 = tmp7(1126).intl;
         tmp32Result = tmp32(tmp33, obj12);
       }
@@ -611,7 +611,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp25) {
         let stringResult;
         const obj15 = { style: tmp.noResultsContainer, children: outgoingData(tmp2Result, obj16) };
-        tmp2Result = first(10726);
+        tmp2Result = first(10739);
         if (first1 === Outgoing.Incoming) {
           const intl5 = tmp7(1126).intl;
           stringResult = intl5.string(tmp7(1126).t["7uvAKe"]);
@@ -621,12 +621,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         obj16 = {
           title: stringResult,
-          illustration: analyticsLocations(14917).WumpusCouchSpotIllustration,
+          illustration: analyticsLocations(14933).WumpusCouchSpotIllustration,
           disableBackgroundOverlay: true,
         };
         tmp32Result2 = tmp32(tmp33, obj15);
       } else {
-        const UsersFastList = tmp7(10598).UsersFastList;
+        const UsersFastList = tmp7(10611).UsersFastList;
         if (first1 === Outgoing.Incoming) {
           outgoingSection = incomingSection;
         }

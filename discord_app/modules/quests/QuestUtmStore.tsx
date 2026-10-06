@@ -6,9 +6,9 @@ let obj = module_570.create((arg0) => {
   const state = arg0;
   obj = {
     utmSourceCurrent: "r",
-    utmMediumCurrent: "filter",
-    utmCampaignCurrent: "isReactCompilerEnabled",
-    utmContentCurrent: "backgroundColor",
+    utmMediumCurrent: "duration",
+    utmCampaignCurrent: "code",
+    utmContentCurrent: "Array",
     setUtmCurrentContext(utmSourceCurrent) {
       obj = { utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent };
       return state(obj);

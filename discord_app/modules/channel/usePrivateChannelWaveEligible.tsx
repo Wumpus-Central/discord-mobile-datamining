@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import Constants from "../../Constants.tsx";
 import ChannelConstants from "ChannelConstants.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import MessageStore from "../../stores/MessageStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
@@ -263,12 +263,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj6 = SnowflakeUtilsDefault;
           const extractTimestampResult = obj6.extractTimestamp(isDM.id);
-          const isWithinInterval = tmp(4552).isWithinInterval;
-          tmp(4552);
-          const tmp28 = _modDef4461();
+          const isWithinInterval = tmp(4558).isWithinInterval;
+          tmp(4558);
+          const tmp28 = _modDef4467();
           cResult[19] = isDM.id;
-          cResult[20] = isWithinInterval(tmp28, _modDef4461(extractTimestampResult), c7);
-          const isWithinIntervalResult = isWithinInterval(tmp28, _modDef4461(extractTimestampResult), c7);
+          cResult[20] = isWithinInterval(tmp28, _modDef4467(extractTimestampResult), c7);
+          const isWithinIntervalResult = isWithinInterval(tmp28, _modDef4467(extractTimestampResult), c7);
         } else {
           class W {
             constructor() {
@@ -276,7 +276,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmpResult10 = tmp(9785);
+        const tmpResult10 = tmp(9798);
         const strangerDangerWarning = tmpResult10.useStrangerDangerWarning(isDM.id);
         if (tmp4) {
           class W {
@@ -391,8 +391,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const extractTimestampResult = obj5.extractTimestamp(isDM.id);
       const isWithinInterval = require("DateUtils").isWithinInterval;
       require("DateUtils");
-      const tmp10 = recipientId(4461)();
-      const isWithinIntervalResult = isWithinInterval(tmp10, recipientId(4461)(extractTimestampResult), c7);
+      const tmp10 = recipientId(4467)();
+      const isWithinIntervalResult = isWithinInterval(tmp10, recipientId(4467)(extractTimestampResult), c7);
       const obj6 = require("useStrangerDangerWarning");
       const strangerDangerWarning = obj6.useStrangerDangerWarning(isDM.id);
       if (tmp) {

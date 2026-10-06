@@ -12,7 +12,7 @@ import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import LinkIcon from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx";
 import StageIcon from "../../../../design/components/Icon/native/redesign/generated/StageIcon.tsx";
 import VoiceNormalIcon from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
@@ -29,8 +29,8 @@ import ServerGridIcon from "../../../../design/components/Icon/native/redesign/g
 import ServerBoostStreamQualityMarketingExperiment from "../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx";
 import ChevronLargeUpIcon from "../../../../design/components/Icon/native/redesign/generated/ChevronLargeUpIcon.tsx";
 import ChevronLargeDownIcon2 from "../../../../design/components/Icon/native/redesign/generated/ChevronLargeDownIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13401_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/13402_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13420_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/13421_AssetRegistry.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react_mod from "../../../../../_runtime/00019_react.js";
 import Constants from "../../../../Constants.tsx";
@@ -1689,7 +1689,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           return React4(closure_18, obj, tier);
         }),
       };
-      const MarketingCardsScroller = guild(12227).MarketingCardsScroller;
+      const MarketingCardsScroller = guild(12242).MarketingCardsScroller;
       let closure_0 = Math.min(BoostedGuildTiers.TIER_3, guild.premiumTier + 1);
       let findIndexResult = items1.findIndex((tier) => tier.tier === closure_0);
       num = 0;

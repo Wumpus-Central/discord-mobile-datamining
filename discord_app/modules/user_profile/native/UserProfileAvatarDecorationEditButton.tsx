@@ -6,7 +6,7 @@ import native from "../../../design/void/native.tsx";
 import Constants2 from "Constants.tsx";
 import avatar_decorations_AvatarDecorationUtils from "../../collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
 import CutoutableAvatarDecorationDefault from "../../collectibles/native/components/CutoutableAvatarDecoration.tsx";
-import AssetRegistryDefault from "../../../../_runtime/13011_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/13030_AssetRegistry.js";
 import react_mod from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import GuildMemberStore_mod from "../../../stores/GuildMemberStore.tsx";

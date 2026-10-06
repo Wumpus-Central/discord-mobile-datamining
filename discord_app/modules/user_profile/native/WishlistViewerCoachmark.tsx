@@ -3,7 +3,7 @@ import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import intl4 from "../../../intl/index.native.tsx";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
-import _modDef12963 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import _modDef12982 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -28,7 +28,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(6);
       const tmp3 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef12963 };
+        const obj2 = { uri: _modDef12982 };
         cResult[0] = obj2;
         first = obj2;
       } else {
@@ -57,8 +57,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const tmp = closure_8();
-      ({ source: { uri: _modDef12963 }, style: tmp.image });
-      ({ uri: _modDef12963 });
+      ({ source: { uri: _modDef12982 }, style: tmp.image });
+      ({ uri: _modDef12982 });
       return <React3 style={tmp.imageContainer}>{null}</React3>;
     };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -130,7 +130,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === tmp9) {
             tmp13 = cResult[11];
           }
-          const tmpResult = markAsDismissed(9882);
+          const tmpResult = markAsDismissed(9895);
           const coachmark = tmpResult.useCoachmark(anchorRef, tmp13);
           return null;
         }

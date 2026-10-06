@@ -3,7 +3,7 @@ import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3077 from "../TinyBronco.messages.js";
+import _modDef3105 from "../TinyBronco.messages.js";
 import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
 import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
@@ -145,8 +145,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         cResult[8] = tmp8;
-        cResult[9] = jsx(noticeType(5594).Button, { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 });
-        const tmp13 = jsx(noticeType(5594).Button, { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 });
+        cResult[9] = jsx(noticeType(5601).Button, { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 });
+        const tmp13 = jsx(noticeType(5601).Button, { variant: "secondary", size: "sm", text: tmp10, onPress: tmp8 });
       } else {
         class A {
           constructor() {
@@ -260,7 +260,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const HelpMessage = noticeType(1188).HelpMessage;
       let obj3 = { variant: "secondary", size: "sm", text: intl.string(noticeType(1126).t.hvVgAZ), onPress: callback };
-      const Button = noticeType(5594).Button;
+      const Button = noticeType(5601).Button;
       intl = noticeType(1126).intl;
       intl2 = noticeType(1126).intl;
       return <View style={tmp.container}>{null}</View>;
@@ -273,7 +273,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp8 = (
-          <closure_11 message={_modDef3077.qbBkFI} noticeType={metroImportAll.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />
+          <closure_11 message={_modDef3105.qbBkFI} noticeType={metroImportAll.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />
         );
         cResult[0] = tmp8;
         first = tmp8;
@@ -282,7 +282,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => <closure_11 message={_modDef3077.qbBkFI} noticeType={metroImportAll.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
+  : () => <closure_11 message={_modDef3105.qbBkFI} noticeType={metroImportAll.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
@@ -291,7 +291,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp8 = (
-          <closure_11 message={_modDef3077["l+jt8J"]} noticeType={metroImportAll.CONTENT_AND_SOCIAL_NOTICE} />
+          <closure_11 message={_modDef3105["l+jt8J"]} noticeType={metroImportAll.CONTENT_AND_SOCIAL_NOTICE} />
         );
         cResult[0] = tmp8;
         first = tmp8;
@@ -300,7 +300,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => <closure_11 message={_modDef3077["l+jt8J"]} noticeType={metroImportAll.CONTENT_AND_SOCIAL_NOTICE} />;
+  : () => <closure_11 message={_modDef3105["l+jt8J"]} noticeType={metroImportAll.CONTENT_AND_SOCIAL_NOTICE} />;
 let closure_12 = tmp4;
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -394,7 +394,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             );
           }
         }
-        const Button = tmp(5594).Button;
+        const Button = tmp(5601).Button;
         const intl = tmp(1126).intl;
         const tmp11 = (
           <Button
@@ -566,7 +566,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         text: intl.string(AGE_CONFIRMATION_NOTICE(1126).t.FDSSia),
         onPress: callback1,
       };
-      const Button = AGE_CONFIRMATION_NOTICE(5594).Button;
+      const Button = AGE_CONFIRMATION_NOTICE(5601).Button;
       intl = AGE_CONFIRMATION_NOTICE(1126).intl;
       intl2 = AGE_CONFIRMATION_NOTICE(1126).intl;
       return <View style={tmp.container}>{null}</View>;
@@ -578,7 +578,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = react2;
       const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = <closure_13 message={_modDef3077.HGJo1F} />;
+        const tmp7 = <closure_13 message={_modDef3105.HGJo1F} />;
         cResult[0] = tmp7;
         first = tmp7;
       } else {
@@ -586,7 +586,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => <closure_13 message={_modDef3077.HGJo1F} />;
+  : () => <closure_13 message={_modDef3105.HGJo1F} />;
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
@@ -594,7 +594,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = react2;
       const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = <closure_13 message={_modDef3077.tGsCdS} />;
+        const tmp7 = <closure_13 message={_modDef3105.tGsCdS} />;
         cResult[0] = tmp7;
         first = tmp7;
       } else {
@@ -602,7 +602,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return first;
     }
-  : () => <closure_13 message={_modDef3077.tGsCdS} />;
+  : () => <closure_13 message={_modDef3105.tGsCdS} />;
 let closure_14 = tmp6;
 ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();

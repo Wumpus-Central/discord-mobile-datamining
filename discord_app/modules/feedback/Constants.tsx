@@ -36,7 +36,6 @@ export const FeedbackCategory = {
   STREAMING: "STREAMING",
   STREAM_WATCHING: "STREAM_WATCHING",
   PEOPLE: "PEOPLE",
-  CONJURE: "VIBEGRATIONS",
 };
 export const ConnectionFeedbackOption = {
   FREEFORM: "FREEFORM",
@@ -94,11 +93,4 @@ export const StreamFeedbackOption = {
   NO_GAME_AUDIO: "NO_GAME_AUDIO",
 };
 export const PeopleFeedbackOption = { FREEFORM: "FREEFORM", TOXIC_OR_INAPPROPRIATE: "TOXIC_OR_INAPPROPRIATE" };
-export const ConjureFeedbackOption = {
-  FREEFORM: "FREEFORM",
-  NOT_WHAT_I_WANTED: "NOT_WHAT_I_WANTED",
-  TOO_SLOW: "TOO_SLOW",
-  APP_DIDNT_WORK: "APP_DIDNT_WORK",
-  DIDNT_KNOW_WHAT_TO_ASK_FOR: "DIDNT_KNOW_WHAT_TO_ASK_FOR",
-};
 export const FeedbackOptionVariant = { UNSPECIFIED: "UNSPECIFIED", SELF: "SELF", SOMEONE: "SOMEONE", OTHERS: "OTHERS" };

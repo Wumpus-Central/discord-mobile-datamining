@@ -3,9 +3,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import intl6 from "../../../intl/index.native.tsx";
 import GuildScheduledEventsConstants from "../GuildScheduledEventsConstants.tsx";
 import ScheduleUtils from "../utils/ScheduleUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09193_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/09273_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/09274_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/09228_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/09308_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/09309_AssetRegistry.js";
 import GuildScheduledEventStore from "../GuildScheduledEventStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

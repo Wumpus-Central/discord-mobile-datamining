@@ -9,7 +9,12 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 function getUploadPayload(self) {
   let obj2;
-  const obj = { filename: self.filename, file_size: self.currentSize, id: obj2.uniqueId(), original_content_type: "a" };
+  const obj = {
+    filename: self.filename,
+    file_size: self.currentSize,
+    id: obj2.uniqueId(),
+    original_content_type: "Array",
+  };
   obj2 = _modDef12;
   return obj;
 }

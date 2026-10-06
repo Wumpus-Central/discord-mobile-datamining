@@ -17,7 +17,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let guild;
 
-const f101856 = () => {
+const f102008 = () => {
   let flag = false;
   if (null != closure_16) {
     flag = false;
@@ -53,7 +53,7 @@ function startInterval() {
   }
   if (UserGuildSettingsStore.useNewNotifications) {
     const _setInterval = setInterval;
-    interval = setInterval(f101856, 15 * DurationsDefault.Millis.SECOND);
+    interval = setInterval(f102008, 15 * DurationsDefault.Millis.SECOND);
   }
   return false;
 }
@@ -284,7 +284,7 @@ const obj5 = {
     }
     if (UserGuildSettingsStore.useNewNotifications) {
       const _setInterval = setInterval;
-      interval = setInterval(f101856, 15 * DurationsDefault.Millis.SECOND);
+      interval = setInterval(f102008, 15 * DurationsDefault.Millis.SECOND);
     }
     let closure_0 = Date.now() - WEEK;
     const arr = SnowflakeUtilsDefault;

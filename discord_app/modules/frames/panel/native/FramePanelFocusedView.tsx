@@ -63,7 +63,7 @@ const memoResult = memo(
         } else {
           tmp8 = cResult[2];
         }
-        const tmpResult2 = tmp(17176);
+        const tmpResult2 = tmp(17205);
         const baseActivityPanelFocusedView = tmpResult2.useBaseActivityPanelFocusedView(tmp8);
         ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = baseActivityPanelFocusedView);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -105,7 +105,7 @@ const memoResult = memo(
                 }
               }
             }
-            const BaseActivityPanelFocusedView = tmp(17176).BaseActivityPanelFocusedView;
+            const BaseActivityPanelFocusedView = tmp(17205).BaseActivityPanelFocusedView;
             const tmp26 = (
               <BaseActivityPanelFocusedView
                 transitionState={transitionState}
@@ -132,7 +132,7 @@ const memoResult = memo(
           FrameRenderTargetDefault;
           const obj5 = { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig };
           tmp18 = (
-            <tmp21 frameId={stateFromStores} level={tmp(16598).FrameStackLevel.AboveAppContent} presentation={obj5} />
+            <tmp21 frameId={stateFromStores} level={tmp(16636).FrameStackLevel.AboveAppContent} presentation={obj5} />
           );
         }
         cResult[6] = landscapeSafeAreasConfig;

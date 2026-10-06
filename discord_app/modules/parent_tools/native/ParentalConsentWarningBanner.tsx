@@ -5,7 +5,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import FamilyCenterConstants from "../FamilyCenterConstants.tsx";
 import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
-import _modDef7063 from "../../../../_runtime/metro/07063__.js";
+import _modDef7076 from "../../../../_runtime/metro/07076__.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Constants from "../../../Constants.tsx";
@@ -82,7 +82,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = require("useToken");
       const token = obj6.useToken(daysRemaining(587).colors.BACKGROUND_FEEDBACK_WARNING);
       if (cResult[0] !== token) {
-        const obj7 = daysRemaining(7063)(token);
+        const obj7 = daysRemaining(7076)(token);
         const setAlphaResult = obj7.setAlpha(0);
         const toRgbStringResult = setAlphaResult.toRgbString();
         cResult[0] = token;
@@ -235,10 +235,10 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 end: null,
               };
               ({ START: obj12.start, END: obj12.end } = closure_10);
-              const items2 = [closure_11(daysRemaining(5605), obj10)];
+              const items2 = [closure_11(daysRemaining(5612), obj10)];
               const obj11 = {
                 accessibilityRole: "button",
-                accessibilityHint: intl.string(daysRemaining(2493).O2HKdA),
+                accessibilityHint: intl.string(daysRemaining(2521).O2HKdA),
                 onPress: I,
                 style: items3,
                 children: closure_11(Text, obj14),
@@ -254,7 +254,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp4.label,
                 children: formatResult,
               };
-              Text = tmp(4886).Text;
+              Text = tmp(4892).Text;
               if (0 === daysRemaining) {
                 class H {
                   constructor(arg0, arg1) {
@@ -263,7 +263,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj15 = { connectHook: H };
-                formatResult = obj18.format(tmp5(2493).Gfqlpa, obj15);
+                formatResult = obj18.format(tmp5(2521).Gfqlpa, obj15);
               } else {
                 class H {
                   constructor(arg0, arg1) {
@@ -272,7 +272,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj17 = { count: daysRemaining, connectHook: H };
-                formatResult = obj16.format(tmp5(2493).ZBK5mM, obj17);
+                formatResult = obj16.format(tmp5(2521).ZBK5mM, obj17);
               }
               items2[1] = closure_11(closure_4, obj11);
               tmp30[2] = items2;
@@ -337,7 +337,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       daysRemaining = undefined;
       const memo = react.useMemo(() => {
         const items = [token];
-        const obj = _modDef7063(token);
+        const obj = _modDef7076(token);
         const setAlphaResult = obj.setAlpha(0);
         items[1] = setAlphaResult.toRgbString();
         return items;

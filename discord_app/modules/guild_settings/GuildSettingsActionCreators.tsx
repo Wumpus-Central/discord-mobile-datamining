@@ -361,7 +361,7 @@ let obj = {
     const obj5 = obj(584);
     obj5.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
-    const obj6 = obj(6478);
+    const obj6 = obj(6485);
     const obj7 = {
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,

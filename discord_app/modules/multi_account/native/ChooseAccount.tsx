@@ -65,7 +65,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_13();
       let obj2 = navigation(1490);
       navigation = obj2.useNavigation();
-      let obj3 = navigation(15872);
+      let obj3 = navigation(15911);
       const multiAccountUsers = obj3.useMultiAccountUsers().multiAccountUsers;
       if (cResult[0] !== navigation) {
         const fn = function s(tokenStatus) {
@@ -341,7 +341,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj5 = { variant: "text-sm/medium", color: "text-default", children: intl.string(tmp(1126).t["0M5fN7"]) };
-          const Text = tmp(4886).Text;
+          const Text = tmp(4892).Text;
           intl = tmp(1126).intl;
           const tmp15 = closure_11(Text, obj5);
           cResult[9] = tmp15;
@@ -608,12 +608,12 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let obj3 = {
         headerText: intl.string(require("intl").t.bVbB63),
         subHeader: closure_11(Text, obj4),
-        backgroundImageSource: multiAccountUsers(13677),
+        backgroundImageSource: multiAccountUsers(13693),
         backgroundImageCover: true,
         contentStyle: tmp.container,
         children: closure_12(View, obj5),
       };
-      const tmp2 = multiAccountUsers(6460);
+      const tmp2 = multiAccountUsers(6467);
       intl = require("intl").intl;
       obj4 = { variant: "text-sm/medium", color: "text-default", children: intl2.string(require("intl").t["0M5fN7"]) };
       Text = require("Text/Text").Text;
@@ -726,7 +726,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       obj7 = {
         themedColor: multiAccountUsers(587).colors.TEXT_LINK,
         size: require("native").Icon.Sizes.SMALL_20,
-        source: multiAccountUsers(15874),
+        source: multiAccountUsers(15913),
       };
       Icon = require("Form").FormRow.Icon;
       intl3 = require("intl").intl;

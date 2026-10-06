@@ -87,7 +87,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let first;
       const obj = first(576);
       const cResult = obj.c(3);
-      const obj2 = first(6891);
+      const obj2 = first(6901);
       let tmp2 = _slicedToArray(obj2.useSelectedDismissibleContent(items), 2);
       first = tmp2[0];
       dependencyMap = tmp4;
@@ -120,7 +120,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let closure_1;
       let first;
-      const obj = first(6891);
+      const obj = first(6901);
       const tmp = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
       first = tmp[0];
       dependencyMap = tmp3;

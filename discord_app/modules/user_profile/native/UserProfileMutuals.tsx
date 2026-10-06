@@ -55,12 +55,12 @@ export default function UserProfileMutuals(user) {
   c3 = undefined;
   let tmp = closure_10();
   let tmp2 = user;
-  let obj = user(7861);
+  let obj = user(7872);
   const userProfileAnalyticsContext = obj.useUserProfileAnalyticsContext();
   ({ context: c2, trackUserProfileAction: c3 } = userProfileAnalyticsContext);
-  ({ mutualFriends, mutualGuilds } = guildId(12270)(user));
-  guildId(12270)(user);
-  if (guildId(12813)(user)) {
+  ({ mutualFriends, mutualGuilds } = guildId(12285)(user));
+  guildId(12285)(user);
+  if (guildId(12832)(user)) {
     if (!(null != mutualFriends && mutualFriends.length > 0)) {
       if (!(null != mutualGuilds && mutualGuilds.length > 0)) {
         return null;
@@ -80,25 +80,25 @@ export default function UserProfileMutuals(user) {
           _undefined2({ action: "PRESS_SECTION", section: MUTUAL_FRIENDS });
           const obj = ActionSheetActionCreatorsDefault;
           const obj2 = { user, section: MUTUAL_FRIENDS, guildId, onPressMutualFriend, onPressMutualGuild };
-          obj.openLazy(asyncRequire(12275, dependencyMap.paths), "UserProfileMutualsActionSheet", obj2, "stack");
+          obj.openLazy(asyncRequire(12290, dependencyMap.paths), "UserProfileMutualsActionSheet", obj2, "stack");
         },
         children: items,
       };
-      const PressableOpacity = tmp2(5909).PressableOpacity;
+      const PressableOpacity = tmp2(5916).PressableOpacity;
       const obj4 = {
         size: tmp2(1188).AvatarSizes.SIZE_16,
         totalCount: mapped.length,
         names: mapped.map((username) => username.username),
         children: mapped.map((user) => {
-          const obj = { user, size: user(c2[16]).AvatarSizes.SIZE_16, guildId: "r" };
+          const obj = { user, size: user(c2[16]).AvatarSizes.SIZE_16, guildId: "Array" };
           const Avatar = user(c2[16]).Avatar;
           return closure_1_6(Avatar, obj, user.id);
         }),
       };
-      const AvatarPile = tmp2(12850).AvatarPile;
+      const AvatarPile = tmp2(12869).AvatarPile;
       items = [closure_6(AvatarPile, obj4)];
-      const obj5 = { variant, color, children: guildId(12280)(mutualFriends.length) };
-      const Text = tmp2(4886).Text;
+      const obj5 = { variant, color, children: guildId(12295)(mutualFriends.length) };
+      const Text = tmp2(4892).Text;
       items[1] = closure_6(Text, obj5);
       tmp9Result = closure_7(PressableOpacity, obj3);
     }
@@ -112,7 +112,7 @@ export default function UserProfileMutuals(user) {
         importantForAccessibility: "no-hide-descendants",
         children: DIVIDER_DOT,
       };
-      tmp15 = closure_6(tmp2(4886).Text, obj6);
+      tmp15 = closure_6(tmp2(4892).Text, obj6);
     }
     items1[1] = tmp15;
     let tmp9Result2 = null;
@@ -128,14 +128,14 @@ export default function UserProfileMutuals(user) {
           _undefined2({ action: "PRESS_SECTION", section: MUTUAL_GUILDS });
           let obj = ActionSheetActionCreatorsDefault;
           let obj2 = { user, section: MUTUAL_GUILDS, guildId, onPressMutualFriend, onPressMutualGuild };
-          obj.openLazy(asyncRequire(12275, dependencyMap.paths), "UserProfileMutualsActionSheet", obj2, "stack");
+          obj.openLazy(asyncRequire(12290, dependencyMap.paths), "UserProfileMutualsActionSheet", obj2, "stack");
         },
         children: items2,
       };
-      const PressableOpacity2 = tmp2(5909).PressableOpacity;
+      const PressableOpacity2 = tmp2(5916).PressableOpacity;
       if (!(null != mutualFriends && mutualFriends.length > 0)) {
         const obj8 = {
-          size: tmp2(5971).GuildIconSizes.XXSMALL,
+          size: tmp2(5978).GuildIconSizes.XXSMALL,
           totalCount: mapped1.length,
           names: mapped1.map((name) => name.name),
           children: mapped1.map((guild) => {
@@ -144,12 +144,12 @@ export default function UserProfileMutuals(user) {
             return closure_1_6(tmp, obj, guild.id);
           }),
         };
-        const GuildIconPile = tmp2(12284).GuildIconPile;
+        const GuildIconPile = tmp2(12299).GuildIconPile;
         tmp21 = closure_6(GuildIconPile, obj8);
       }
       items2 = [tmp21];
-      const obj9 = { variant, color, children: guildId(12281)(mutualGuilds.length) };
-      const Text2 = tmp2(4886).Text;
+      const obj9 = { variant, color, children: guildId(12296)(mutualGuilds.length) };
+      const Text2 = tmp2(4892).Text;
       items2[1] = closure_6(Text2, obj9);
       tmp9Result2 = closure_7(PressableOpacity2, obj7);
     }

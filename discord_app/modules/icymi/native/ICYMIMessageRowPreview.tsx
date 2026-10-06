@@ -478,7 +478,7 @@ const memo3Result = memo3(
           }
           return obj;
         }, items);
-        const tmp3 = merged(6805)(message);
+        const tmp3 = merged(6815)(message);
         const merged1 = Object.assign(memo);
         const obj2 = {
           ignoreMentioned: true,
@@ -493,7 +493,7 @@ const memo3Result = memo3(
           renderEmbeds: tmp3,
           inlineEmbedMedia: tmp3,
         };
-        const merged2 = Object.assign(message(7593).DEFAULT_OPTIONS);
+        const merged2 = Object.assign(message(7604).DEFAULT_OPTIONS);
         const merged3 = Object.assign(messageOptions);
         return <closure_10 messageOptions={obj2} seeMoreLabel="..." />;
       },
@@ -520,8 +520,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = useThemeDefault();
       if (cResult[0] !== tmp5) {
         const obj2 = { seeMoreLabelColor: nativeDefault.colors.TEXT_DEFAULT };
-        const createNativeStyleProperties = lineClamp(4890).createNativeStyleProperties;
-        lineClamp(4890);
+        const createNativeStyleProperties = lineClamp(4896).createNativeStyleProperties;
+        lineClamp(4896);
         const tmp8 = createNativeStyleProperties(obj2)(tmp5);
         cResult[0] = tmp5;
         cResult[1] = tmp8;
@@ -682,7 +682,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (str === undefined) {
         str = "none";
       }
-      let tmp = messageOptions(4791)();
+      let tmp = messageOptions(4797)();
       let obj = createStyles;
       const obj2 = { seeMoreLabelColor: messageOptions(587).colors.TEXT_DEFAULT };
       dependencyMap = obj.createNativeStyleProperties(obj2)(tmp);
@@ -718,7 +718,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         setOptions(obj);
         return tmp;
       }, items);
-      return jsx(messageOptions(8303), {
+      return jsx(messageOptions(8336), {
         pointerEvents: str,
         horizontalOffset: 0,
         modifyRow(arg0) {

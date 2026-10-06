@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/polls/native/EditPollCreation
 
 export const openEditPollCreationImageAltTextModal = function openEditPollCreationImageAltTextModal(merged) {
   const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(11858, dependencyMap.paths), merged, c3);
+  obj.pushLazy(asyncRequire(11872, dependencyMap.paths), merged, c3);
 };
 export const closeEditPollCreationImageAltTextModal = function closeEditPollCreationImageAltTextModal() {
   const obj = ModalActionCreatorsDefault;

@@ -15,7 +15,7 @@ let _require;
 
 let metroImportAll;
 let metroImportDefault;
-const f104248 = (error) => {
+const f104400 = (error) => {
   const obj = SentryUtilsDefault;
   obj.captureException(error, { tags: { feature: "gift_intent" } });
 };
@@ -98,7 +98,7 @@ export const logMessageGiftIntentShown = function logMessageGiftIntentShown(reci
     };
     obj4 = { intent_type: FRIEND_ANNIVERSARY, target_id: recipientUserId };
     const postResult = HTTP.post(request);
-    postResult.catch(f104248);
+    postResult.catch(f104400);
   }
 };
 export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismissed(channel_id, id) {
@@ -133,7 +133,7 @@ export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismis
       };
       obj2 = { intent_type: giftIntentType, target_id: recipientUserId };
       const postResult = HTTP.post(request);
-      postResult.catch(f104248);
+      postResult.catch(f104400);
     }
   }
 };
@@ -167,6 +167,6 @@ export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchase
     };
     obj4 = { intent_type: FRIEND_ANNIVERSARY, target_id: recipientUserId };
     const postResult = HTTP.post(request);
-    postResult.catch(f104248);
+    postResult.catch(f104400);
   }
 };

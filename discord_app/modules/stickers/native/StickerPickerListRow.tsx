@@ -650,7 +650,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       rowContentPaddingVertical = tmp3;
       let AnimateStickers = stickers(2028).AnimateStickers;
       let closure_8 = AnimateStickers.useSetting();
-      let obj2 = stickers(8826);
+      let obj2 = stickers(8856);
       let closure_9 = obj2.useMobileStickerPickerUpsellRestyleEnabled("native.StickerPickerListRow");
       let items = [];
       if (nativeRow) {
@@ -675,13 +675,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
               ({ id: obj5.stickerId, name: obj5.stickerName, format_type: obj5.stickerType } = tmp9);
               ({ isOpaque, isDisabled, isLocked } = rowTraitsResult);
               let push2 = items.push;
-              obj6 = stickers(10127);
+              obj6 = stickers(10140);
               let push2Result = push2(obj3);
             } else {
               let obj4 = {
                 stickerId: "",
                 stickerName: "",
-                stickerType: stickers(5429).StickerFormat.PNG,
+                stickerType: stickers(5436).StickerFormat.PNG,
                 stickerUrl: "",
                 stickerAnimated: false,
                 stickerDisabled: true,
@@ -719,7 +719,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             },
           };
           obj8 = { rowContentWidth: containerWidth, rowContentPaddingVertical, itemSize: STICKER_SIZE, items };
-          return closure_8(isSectionNitroLocked(10130), obj7);
+          return closure_8(isSectionNitroLocked(10143), obj7);
         } catch (tmp23) {
           const obj9 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: obj10 };
           obj10 = {

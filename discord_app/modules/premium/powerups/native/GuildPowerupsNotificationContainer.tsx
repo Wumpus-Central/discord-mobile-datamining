@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import useGuildPowerupTier3OverrideConfigDefault from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
@@ -118,7 +118,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl2.intl;
-        const stringResult = intl.string(_modDef2525["3FRirU"]);
+        const stringResult = intl.string(_modDef2553["3FRirU"]);
         cResult[0] = stringResult;
         first = stringResult;
       } else {
@@ -213,7 +213,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (manaTypeConsolidationExperiment) {
           str = "text-strong";
         }
-        const obj3 = { color: str, variant: str2, children: intl.string(_modDef2525["3FRirU"]) };
+        const obj3 = { color: str, variant: str2, children: intl.string(_modDef2553["3FRirU"]) };
         str2 = "eyebrow";
         if (manaTypeConsolidationExperiment) {
           str2 = "experimental/heading-lg/semibold";

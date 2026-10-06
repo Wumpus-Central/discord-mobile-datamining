@@ -56,7 +56,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       first = tmp6[0];
       react = tmp8;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj3 = { step: tmp(15910).RemoteAuthStep.INITIALIZING };
+        let obj3 = { step: tmp(15949).RemoteAuthStep.INITIALIZING };
         cResult[0] = obj3;
         first1 = obj3;
       } else {
@@ -90,7 +90,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmp2) {
               tmp7 = closure_3;
               tmp8 = closure_3(() => {
-                /* body not rendered: F145204 */
+                /* body not rendered: F145414 */
               });
             } else {
               tmp3 = closure_8;
@@ -117,7 +117,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmp2) {
               tmp7 = closure_3;
               tmp8 = closure_3(() => {
-                /* body not rendered: F145204 */
+                /* body not rendered: F145414 */
               });
             } else {
               tmp3 = closure_8;
@@ -144,7 +144,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmp2) {
               tmp7 = closure_3;
               tmp8 = closure_3(() => {
-                /* body not rendered: F145204 */
+                /* body not rendered: F145414 */
               });
             } else {
               tmp3 = closure_8;
@@ -172,7 +172,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmp2) {
               tmp7 = closure_3;
               tmp8 = closure_3(() => {
-                /* body not rendered: F145204 */
+                /* body not rendered: F145414 */
               });
             } else {
               tmp3 = closure_8;
@@ -198,7 +198,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmp2) {
               tmp7 = closure_3;
               tmp8 = closure_3(() => {
-                /* body not rendered: F145204 */
+                /* body not rendered: F145414 */
               });
             } else {
               tmp3 = closure_8;
@@ -232,7 +232,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             tmp8 = closure_5(false);
             tmp9 = closure_3;
             tmp10 = closure_3(() => {
-              /* body not rendered: F145205 */
+              /* body not rendered: F145415 */
             });
           }
           return;
@@ -388,7 +388,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       heartbeat_interval = undefined;
                       c3 = 1;
                       c4 = 1;
-                      return { value: "Set", done: true };
+                      return { value: "Reflect", done: true };
                     }
                   } else if (1 === tmp4) {
                     if (arg0 === 1) {

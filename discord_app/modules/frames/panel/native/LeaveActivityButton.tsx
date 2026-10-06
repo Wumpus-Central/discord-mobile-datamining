@@ -26,7 +26,7 @@ const memoResult = react.memo(
           }
           return tmp4;
         }
-        const tmp5 = jsx(tmp(17189).BaseLeaveActivityButton, {
+        const tmp5 = jsx(tmp(17218).BaseLeaveActivityButton, {
           onPress() {
             let id;
             setMode(ActivityPanelModes.DISCONNECTED);

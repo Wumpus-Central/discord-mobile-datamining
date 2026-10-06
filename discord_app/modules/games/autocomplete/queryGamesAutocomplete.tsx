@@ -1,6 +1,7 @@
 // discord_app/modules/games/autocomplete/queryGamesAutocomplete.tsx
 import GameAutocompleteUtils from "GameAutocompleteUtils.tsx";
 import useGameAutocomplete2 from "useGameAutocomplete.tsx";
+import GameSearchSession from "GameSearchSession.tsx";
 import GameAutocompleteStore from "GameAutocompleteStore.tsx";
 import debounce from "../../../../_runtime/00551_debounce.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -18,17 +19,35 @@ let closure_3 = debounce(
 );
 let result = size.fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
 
-export const queryGamesAutocomplete = function queryGamesAutocomplete(query) {
-  const obj = GameAutocompleteUtils;
-  const result = obj.normalizeGameAutocompleteQuery(query);
-  let found = null;
-  if (null != result) {
-    closure_3(result);
-    let closestResults = GameAutocompleteStore.getClosestResults(result);
-    if (closestResults == null) {
-      closestResults = [];
-    }
-    found = closestResults.filter(GameAutocompleteUtils.isGameAutocompleteResultAllowedInGameWidgets);
+export const queryGamesAutocomplete = function queryGamesAutocomplete(query, CHAT_MENTION) {
+  let gameSearchSession = null;
+  if (null != CHAT_MENTION) {
+    const obj = GameSearchSession;
+    gameSearchSession = obj.getGameSearchSession(CHAT_MENTION);
   }
-  return found;
+  if (gameSearchSession != null) {
+    gameSearchSession.onQuery(query);
+  }
+  const obj2 = GameAutocompleteUtils;
+  const result = obj2.normalizeGameAutocompleteQuery(query);
+  if (null == result) {
+    return null;
+  } else {
+    closure_3(result);
+    const closestResults = GameAutocompleteStore.getClosestResults(result);
+    let results;
+    if (closestResults != null) {
+      results = closestResults.results;
+    }
+    if (results == null) {
+      results = [];
+    }
+    const found = results.filter(GameAutocompleteUtils.isGameAutocompleteResultAllowedInGameWidgets);
+    if (null != closestResults) {
+      if (gameSearchSession != null) {
+        gameSearchSession.onResults(closestResults.query, found);
+      }
+    }
+    return found;
+  }
 };

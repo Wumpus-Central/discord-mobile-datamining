@@ -31,7 +31,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = analyticsLocations(576);
       const cResult = obj.c(10);
       onLayout = onLayout.onLayout;
-      let obj2 = analyticsLocations(6955);
+      let obj2 = analyticsLocations(6968);
       const nitroTrialCtaOverride = obj2.useNitroTrialCtaOverride("user_profile_premium_upsell_card");
       analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
       if (cResult[0] !== analyticsLocations) {
@@ -64,7 +64,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items,
       ));
       usePremiumFeatureUpsellGetNitroDefault(false, tmp7, constants2.USER_SETTINGS, undefined, items);
-      const tmpResult = tmp(14477);
+      const tmpResult = tmp(14493);
       const mobileNitroPreviewDirectCheckoutEnabled = tmpResult.useMobileNitroPreviewDirectCheckoutEnabled();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
@@ -121,7 +121,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let analyticsLocations;
       let tmp = analyticsLocations;
       onLayout = onLayout.onLayout;
-      let obj = analyticsLocations(6955);
+      let obj = analyticsLocations(6968);
       let nitroTrialCtaOverride = obj.useNitroTrialCtaOverride("user_profile_premium_upsell_card");
       analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
       items = [analyticsLocations];
@@ -148,7 +148,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items,
       ));
       usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
-      let obj2 = analyticsLocations(14477);
+      let obj2 = analyticsLocations(14493);
       const mobileNitroPreviewDirectCheckoutEnabled = obj2.useMobileNitroPreviewDirectCheckoutEnabled();
       UserProfileFloatingUpsellDefault;
       const intl = analyticsLocations(1126).intl;

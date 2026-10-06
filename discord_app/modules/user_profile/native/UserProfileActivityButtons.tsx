@@ -802,7 +802,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const sync_id = activity.sync_id;
       let tmp6 = null;
       const tmp5 = sync_id;
-      if (sync_id(10625)(activity)) {
+      if (sync_id(10638)(activity)) {
         tmp6 = null;
         if (null != sync_id) {
           let tmp7;
@@ -820,7 +820,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] !== tmp4.icon) {
             const Icon = onAction(1188).Icon;
             const tmp11 = (
-              <Icon size={onAction(1188).Icon.Sizes.SMALL} source={tmp5(7824)} disableColor style={tmp4.icon} />
+              <Icon size={onAction(1188).Icon.Sizes.SMALL} source={tmp5(7835)} disableColor style={tmp4.icon} />
             );
             cResult[2] = tmp4.icon;
             cResult[3] = tmp11;
@@ -842,7 +842,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp6 = tmp14;
               }
             }
-            const tmp16 = jsx(onAction(5594).Button, { text: tmp7, icon: tmp9, variant: "secondary", onPress: tmp12 });
+            const tmp16 = jsx(onAction(5601).Button, { text: tmp7, icon: tmp9, variant: "secondary", onPress: tmp12 });
             cResult[7] = tmp7;
             cResult[8] = tmp9;
             cResult[9] = tmp12;
@@ -945,13 +945,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_20();
       let tmp4 = null;
       const tmp2 = sync_id;
-      if (sync_id(10625)(activity)) {
+      if (sync_id(10638)(activity)) {
         tmp4 = null;
         if (null != sync_id) {
           const Button = components_Button_Button.Button;
           const intl = intl5.intl;
           let obj2 = { platform: activity.name };
-          let obj3 = { size: native.Icon.Sizes.SMALL, source: tmp2(7824), disableColor: true, style: tmp.icon };
+          let obj3 = { size: native.Icon.Sizes.SMALL, source: tmp2(7835), disableColor: true, style: tmp.icon };
           const Icon = native.Icon;
           tmp4 = (
             <Button
@@ -1082,7 +1082,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp7 = tmp11;
           }
-          const tmp13 = jsx(onAction(5594).Button, {
+          const tmp13 = jsx(onAction(5601).Button, {
             text: tmp9,
             variant: "secondary",
             onPress() {

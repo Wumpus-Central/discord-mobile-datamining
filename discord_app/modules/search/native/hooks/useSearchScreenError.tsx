@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/hooks/useSearchScreenError.tsx
 import intl2 from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04808_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04814_AssetRegistry.js";
 import SearchConstants from "../../SearchConstants.tsx";
 import SearchUtils from "../../SearchUtils.tsx";
 import react from "../../../../../_runtime/00019_react.js";

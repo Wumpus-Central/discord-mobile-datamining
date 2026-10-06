@@ -11,7 +11,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let trackAppLauncherItemImpressionOnFirstView;
       let obj = trackAppLauncherItemImpressionOnFirstView(576);
       const cResult = obj.c(4);
-      let obj2 = trackAppLauncherItemImpressionOnFirstView(11725);
+      let obj2 = trackAppLauncherItemImpressionOnFirstView(11739);
       trackAppLauncherItemImpressionOnFirstView =
         obj2.useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
       if (cResult[0] !== trackAppLauncherItemImpressionOnFirstView) {
@@ -115,7 +115,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let items;
       let trackAppLauncherItemImpressionOnFirstView;
-      let obj = trackAppLauncherItemImpressionOnFirstView(11725);
+      let obj = trackAppLauncherItemImpressionOnFirstView(11739);
       trackAppLauncherItemImpressionOnFirstView =
         obj.useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
       let obj2 = {

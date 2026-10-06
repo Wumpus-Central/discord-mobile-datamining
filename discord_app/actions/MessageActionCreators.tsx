@@ -9,7 +9,7 @@ import HelpdeskUtilsDefault from "../utils/HelpdeskUtils.tsx";
 import PremiumUtilsDefault from "../utils/PremiumUtils.tsx";
 import InviteCodeUtils from "../modules/instant_invite/InviteCodeUtils.tsx";
 import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
-import merged5 from "../../_runtime/05075_merged5.js";
+import merged5 from "../../_runtime/05081_merged5.js";
 import GuildTemplatesConstants from "../modules/guild_templates/GuildTemplatesConstants.tsx";
 import MessageCacheStatsDefault from "../modules/local_message_caching/MessageCacheStats.tsx";
 import ReferencedMessageStore2 from "../modules/replies/ReferencedMessageStore.tsx";
@@ -530,7 +530,7 @@ let obj17 = {
   sendExplicitMediaClydeError(c0, attachments, EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED) {
     let message;
     let messageName;
-    const f93771 = () => {
+    const f93910 = () => {
       let intl;
       const obj = { message: intl.string(require("intl").t.i4AbAS), messageName: "BOT_GUILD_EXPLICIT_CONTENT" };
       intl = require("intl").intl;
@@ -554,8 +554,8 @@ let obj17 = {
         intl = require("intl").intl;
         return obj;
       });
-      ({ message, messageName } = withResult1.otherwise(f93771));
-      withResult1.otherwise(f93771);
+      ({ message, messageName } = withResult1.otherwise(f93910));
+      withResult1.otherwise(f93910);
       const obj8 = createNonce;
       const nonce = obj8.createNonce();
       obj17.sendBotMessage(channelId, message, messageName, nonce);
@@ -3002,9 +3002,9 @@ let obj17 = {
         const obj = id(c3[46]);
         const obj2 = { type: "MESSAGE_DELETE", id, channelId, local };
         const dispatchResult = obj.dispatch(obj2);
-        dispatchResult.then(f154444);
+        dispatchResult.then(f154688);
       }
-      const f154444 = () => {
+      const f154688 = () => {
         const AccessibilityAnnouncer = channelId(closure_1_3[82]).AccessibilityAnnouncer;
         const announce = AccessibilityAnnouncer.announce;
         const intl = channelId(closure_1_3[43]).intl;
@@ -3067,7 +3067,7 @@ let obj17 = {
               const obj = id(c3[46]);
               const obj2 = { type: "MESSAGE_DELETE", id, channelId, local };
               const dispatchResult = obj.dispatch(obj2);
-              dispatchResult.then(f154444);
+              dispatchResult.then(f154688);
             });
           }
           c3 = 3;

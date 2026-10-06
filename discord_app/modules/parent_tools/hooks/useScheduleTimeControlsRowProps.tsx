@@ -2,7 +2,7 @@
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react from "../../../../_runtime/00576_react.js";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -17,8 +17,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let first;
         const _Symbol2 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { subLabel: null, trailing: "r" };
-          ({ variant: "text-xs/medium", color: "text-muted", children: intl3.string(_modDef2493.fOBIZH) });
+          const obj2 = { subLabel: null, trailing: "Array" };
+          ({ variant: "text-xs/medium", color: "text-muted", children: intl3.string(_modDef2521.fOBIZH) });
           const Text = Text_Text.Text;
           intl3 = intl4.intl;
           cResult[0] = obj2;
@@ -54,7 +54,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] !== arr.length) {
           const intl = intl4.intl;
           const obj4 = { count: arr.length };
-          const formatToPlainStringResult = intl.formatToPlainString(_modDef2493.XfwcpX, obj4);
+          const formatToPlainStringResult = intl.formatToPlainString(_modDef2521.XfwcpX, obj4);
           cResult[4] = arr.length;
           cResult[5] = formatToPlainStringResult;
           tmp8 = formatToPlainStringResult;
@@ -65,7 +65,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           let stringResult;
           const intl2 = intl4.intl;
           const string = intl2.string;
-          const tmp13 = _modDef2493;
+          const tmp13 = _modDef2521;
           if (tmp4) {
             stringResult = string(tmp13["8vDHRq"]);
           } else {
@@ -104,20 +104,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let intl2;
       let obj5;
       if (0 === arr.length) {
-        const obj2 = { subLabel: null, trailing: "r" };
-        ({ variant: "text-xs/medium", color: "text-muted", children: intl.string(_modDef2493.fOBIZH) });
+        const obj2 = { subLabel: null, trailing: "Array" };
+        ({ variant: "text-xs/medium", color: "text-muted", children: intl.string(_modDef2521.fOBIZH) });
         const Text = Text_Text.Text;
         intl = intl4.intl;
         return obj2;
       } else {
-        const obj4 = { subLabel: intl2.formatToPlainString(_modDef2493.XfwcpX, obj5), trailing: null };
+        const obj4 = { subLabel: intl2.formatToPlainString(_modDef2521.XfwcpX, obj5), trailing: null };
         const someResult = arr.some((enabled) => enabled.enabled);
         intl2 = intl4.intl;
         obj5 = { count: arr.length };
         const Text2 = Text_Text.Text;
         const intl3 = intl4.intl;
         const string = intl3.string;
-        const tmp11 = _modDef2493;
+        const tmp11 = _modDef2521;
         if (someResult) {
           let stringResult = string(tmp11["8vDHRq"]);
         } else {

@@ -166,7 +166,7 @@ let obj = {
     message = message.message;
     let flag = null != message;
     if (flag) {
-      const obj = { id: message.id, messageData: "Set", isBlockedEdit: null, errorMessage: tmp };
+      const obj = { id: message.id, messageData: "Reflect", isBlockedEdit: null, errorMessage: tmp };
       automodFailedMessages[message.id] = obj;
       closure_9 = closure_9 + 1;
       flag = true;

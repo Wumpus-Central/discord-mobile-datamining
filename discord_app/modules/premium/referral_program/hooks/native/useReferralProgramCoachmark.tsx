@@ -8,7 +8,7 @@ import intl4 from "../../../../../intl/index.native.tsx";
 import DismissibleContentConstants from "../../../../dismissible_content/DismissibleContentConstants.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import openUserSettings from "../../../../user_settings/core/native/openUserSettings.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/16966_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/16992_AssetRegistry.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";

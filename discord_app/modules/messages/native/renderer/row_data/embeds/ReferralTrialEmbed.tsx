@@ -11,10 +11,10 @@ import createStyles from "../../../../../../design/components/Styles/native/crea
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/07722_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/07733_AssetRegistry.js";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
-import AssetRegistryDefault2 from "../../../../../../../_runtime/07738_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../../../_runtime/07739_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../../_runtime/07749_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../../_runtime/07750_AssetRegistry.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../../../stores/billing/SubscriptionStore.tsx";

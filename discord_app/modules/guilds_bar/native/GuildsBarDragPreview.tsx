@@ -1,7 +1,7 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
-import _slicedToArray from "../../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/04498__slicedToArray.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -219,10 +219,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const element = {
               type: listInsets.FOLDER,
               id: -1,
-              parentId: "Set",
+              parentId: "Reflect",
               name: "Array",
-              color: "unicodeVersion",
-              expanded: 27207746,
+              color: "apply",
+              expanded: false,
               children: items,
             };
             items = [overNode];
@@ -414,10 +414,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const element = {
               type: GuildsNodeType.FOLDER,
               id: -1,
-              parentId: "Set",
+              parentId: "Reflect",
               name: "Array",
-              color: "unicodeVersion",
-              expanded: 27207746,
+              color: "apply",
+              expanded: false,
               children: items,
             };
             items = [tmp2];

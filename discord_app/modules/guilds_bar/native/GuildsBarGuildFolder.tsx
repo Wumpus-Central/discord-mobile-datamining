@@ -11,7 +11,7 @@ import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import SortedGuildStore2 from "../../../stores/SortedGuildStore.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/05815_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/05822_AssetRegistry.js";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import NativeViewDefault from "../../core/native/NativeView.tsx";
@@ -153,7 +153,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(12);
       guildId = guildId.guildId;
       ({ position, selected } = guildId);
-      const obj2 = guildId(4580);
+      const obj2 = guildId(4586);
       const tmp5 = closure_18(obj2.useToken(nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE));
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
@@ -205,7 +205,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const obj3 = { style: tmp12, guild: stateFromStores, size: guildId(5971).GuildIconSizes.XXSMALL, selected };
+          const obj3 = { style: tmp12, guild: stateFromStores, size: guildId(5978).GuildIconSizes.XXSMALL, selected };
           const tmp4Result = GuildIconDefault;
           const tmp16 = closure_16(tmp4Result, obj3, combined);
           cResult[7] = stateFromStores;
@@ -377,11 +377,11 @@ const memoResult = react.memo(
         color = color.color;
         let token2;
         ({ folderId, totalItems } = color);
-        let obj = color(4580);
+        let obj = color(4586);
         const token = obj.useToken(token2(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-        let obj2 = color(4580);
+        let obj2 = color(4586);
         const token1 = obj2.useToken(token2(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
-        let obj3 = color(4580);
+        let obj3 = color(4586);
         const fn = function s(height) {
           let obj2;
           let obj3;
@@ -390,7 +390,7 @@ const memoResult = react.memo(
           obj3 = color(dependencyMap[16]);
           return obj;
         };
-        const obj4 = { withSpring: color(5597).withSpring, TRANSITION_PHYSICS };
+        const obj4 = { withSpring: color(5604).withSpring, TRANSITION_PHYSICS };
         const tmp3 = closure_18(token, obj3.useToken(token2(587).modules.mobile.GUILD_FOLDER_BACKGROUND_WIDTH_OFFSET));
         const tmp4 = closure_10(folderId);
         const useCallback = react.useCallback;
@@ -398,7 +398,7 @@ const memoResult = react.memo(
         fn.__workletHash = 15799331931829;
         fn.__initData = __initData2;
         const callback = useCallback(fn, []);
-        const obj5 = color(4580);
+        const obj5 = color(4586);
         token2 = obj5.useToken(token2(587).modules.mobile.GUILD_FOLDER_COLOR_OPACITY);
         const items = [color, token2];
         const memo = react.useMemo(() => {
@@ -417,7 +417,7 @@ const memoResult = react.memo(
         items1 = [tmp3.folderBackground, memo];
         const obj7 = { height: token + token1 + (token + 2 * token1) * totalItems + tmp4 };
         items1[2] = obj7;
-        return closure_16(token2(6570), obj6);
+        return closure_16(token2(6577), obj6);
       },
 );
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -432,14 +432,14 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       ({ children, fromTop, cleanUp } = state);
       state = state.state;
       dependencyMap = tmp4;
-      const tmpResult = cleanUp(4580);
+      const tmpResult = cleanUp(4586);
       const token = tmpResult.useToken(state(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
       const tmp7 = closure_18(token);
-      const useSharedValue = cleanUp(4612).useSharedValue;
+      const useSharedValue = cleanUp(4618).useSharedValue;
       let num = 0;
-      cleanUp(4612);
+      cleanUp(4618);
       const tmp5 = state;
-      if (state === cleanUp(4589).TransitionStates.MOUNTED) {
+      if (state === cleanUp(4595).TransitionStates.MOUNTED) {
         num = 1;
       }
       const sharedValue = useSharedValue(num);
@@ -490,14 +490,14 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         ({ scale: withSpring3(num, closure_15) });
         return obj;
       };
-      const tmpResult4 = cleanUp(4612);
+      const tmpResult4 = cleanUp(4618);
       fn.__closure = {
-        withSpring: cleanUp(5597).withSpring,
+        withSpring: cleanUp(5604).withSpring,
         visible: sharedValue,
         FOLDER_SPRING_PHYSICS,
         state,
-        TransitionStates: cleanUp(4589).TransitionStates,
-        runOnJS: cleanUp(4612).runOnJS,
+        TransitionStates: cleanUp(4595).TransitionStates,
+        runOnJS: cleanUp(4618).runOnJS,
         cleanUp,
         fromTop: undefined !== fromTop && fromTop,
         guildItemSize: token,
@@ -505,12 +505,12 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 6656244933777;
       fn.__initData = __initData3;
       ({
-        withSpring: cleanUp(5597).withSpring,
+        withSpring: cleanUp(5604).withSpring,
         visible: sharedValue,
         FOLDER_SPRING_PHYSICS,
         state,
-        TransitionStates: cleanUp(4589).TransitionStates,
-        runOnJS: cleanUp(4612).runOnJS,
+        TransitionStates: cleanUp(4595).TransitionStates,
+        runOnJS: cleanUp(4618).runOnJS,
         cleanUp,
         fromTop: undefined !== fromTop && fromTop,
         guildItemSize: token,
@@ -537,7 +537,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp16;
           }
           const obj3 = { style: tmp15, children };
-          const tmp18 = closure_16(tmp5(6570), obj3);
+          const tmp18 = closure_16(tmp5(6577), obj3);
           cResult[7] = children;
           cResult[8] = tmp15;
           cResult[9] = tmp18;

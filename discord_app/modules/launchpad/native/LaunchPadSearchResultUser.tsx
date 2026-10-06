@@ -99,7 +99,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = user(5602);
+      const tmpResult = user(5609);
       const fontScale = tmpResult.useFontScale();
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
@@ -314,7 +314,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       renderChannelPressableWrapperDefault;
-      const PressableHighlight = tmp(5909).PressableHighlight;
+      const PressableHighlight = tmp(5916).PressableHighlight;
       if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
@@ -575,7 +575,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = ChannelActionCreatorsDefault;
         obj.openPrivateChannel(obj2);
       }, items);
-      let obj = user(5602);
+      let obj = user(5609);
       const fontScale = obj.useFontScale();
       let obj2 = user(504);
       const items1 = [LocaleStore];
@@ -603,7 +603,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let relativeTimestamp = null;
       if (null != extractTimestampResult) {
-        const tmp6Result = user(7126);
+        const tmp6Result = user(7139);
         relativeTimestamp = tmp6Result.getRelativeTimestamp(extractTimestampResult);
       }
       let str = "text-muted";
@@ -621,7 +621,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
       const tmp2Result5 = renderChannelPressableWrapperDefault;
-      const PressableHighlight = tmp6(5909).PressableHighlight;
+      const PressableHighlight = tmp6(5916).PressableHighlight;
       const items5 = [, ,];
       const obj6 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
       tmp2Result6 = renderChannelWrapperDefault;
@@ -675,9 +675,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             message: lastMessage,
             color: str,
             muted: flag,
-            layout: user(7514).ChannelListLayoutTypes.COMPACT,
+            layout: user(7525).ChannelListLayoutTypes.COMPACT,
           };
-          const ChannelRowPreview = tmp6(12488).ChannelRowPreview;
+          const ChannelRowPreview = tmp6(12503).ChannelRowPreview;
           tmp14Result = closure_12(ChannelRowPreview, obj9);
         }
       }
@@ -716,7 +716,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = user(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
-      const tmpResult3 = user(16285);
+      const tmpResult3 = user(16325);
       const baseChannelUnreadBadgeState = tmpResult3.useBaseChannelUnreadBadgeState(channel, stateFromStores);
       ({ unread, mentionCount } = baseChannelUnreadBadgeState);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
@@ -742,7 +742,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp13 = cResult[8];
         }
-        const tmp15 = channel(15137)(channel, tmp13);
+        const tmp15 = channel(15152)(channel, tmp13);
         if (cResult[9] === channel) {
           if (cResult[10] === stateFromStores1) {
             if (cResult[11] === tmp15) {
@@ -814,7 +814,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         muted: stateFromStores,
         isTyping: stateFromStores1,
       };
-      tmp4 = channel(15137)(channel, { unread });
+      tmp4 = channel(15152)(channel, { unread });
       const merged = Object.assign(arg0);
       return closure_12(closure_16, obj4);
     };

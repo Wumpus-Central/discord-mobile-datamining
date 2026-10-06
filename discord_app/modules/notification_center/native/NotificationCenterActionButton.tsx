@@ -2,7 +2,7 @@
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import intl2 from "../../../intl/index.native.tsx";
 import IconButton2 from "../../../design/components/Button/native/IconButton.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/07578_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/07589_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import size from "../../../../_runtime/metro/00002__.js";
 

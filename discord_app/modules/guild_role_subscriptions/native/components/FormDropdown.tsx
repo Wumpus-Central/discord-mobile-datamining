@@ -4,8 +4,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Constants from "../../../../Constants.tsx";
 import native from "../../../../design/void/native.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09602_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/13709_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09615_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/13727_AssetRegistry.js";
 import FormStylesDefault from "FormStyles.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

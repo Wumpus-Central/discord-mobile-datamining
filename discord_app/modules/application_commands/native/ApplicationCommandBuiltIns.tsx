@@ -29,7 +29,7 @@ let obj = {
     let intl4;
     channel = channel.channel;
     if (null != channel) {
-      const obj4 = channel(5043);
+      const obj4 = channel(5049);
       const channelName = obj4.computeChannelName(channel, UserStore, RelationshipStore);
       const intl5 = channel(1126).intl;
       const obj2 = { name: channelName };

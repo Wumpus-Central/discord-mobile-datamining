@@ -7,7 +7,7 @@ import ProfileEffectRecord from "../../records/ProfileEffectRecord.tsx";
 import useProfileEffectDefault from "../useProfileEffect.tsx";
 import CollectiblesPreviewConstants from "../../native/CollectiblesPreviewConstants.tsx";
 import ProfileEffectDefault from "ProfileEffect.tsx";
-import _modDef8479 from "../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8512 from "../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import useCollectibleListLayout from "../../native/useCollectibleListLayout.tsx";
 import CollectiblesEditUserProfileListItems from "../../native/CollectiblesEditUserProfileListItems.tsx";
 import useProfileEffectSections from "../useProfileEffectSections.tsx";
@@ -265,7 +265,7 @@ const memo2Result = memo2(
           }
           const _Symbol2 = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { uri: _modDef8479 };
+            const obj3 = { uri: _modDef8512 };
             cResult[6] = obj3;
             tmp15 = obj3;
           } else {
@@ -420,7 +420,7 @@ const memo2Result = memo2(
         obj2 = { style: items2, accessible: false, importantForAccessibility: "no", children: items3 };
         items2 = [tmp.profileEffect, { borderRadius: 6 }];
         const obj3 = { source: obj4, style: tmp.sampleProfile, resizeMode: "cover" };
-        obj4 = { uri: _modDef8479 };
+        obj4 = { uri: _modDef8512 };
         const tmp2Result = FastImageDefault;
         items3 = [metroRequire(tmp2Result, obj3)];
         const obj5 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true, thumbnailUrlOverride: memo };

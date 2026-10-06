@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl3 from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2589 from "../../premium/gifting/GiftingBadge.messages.js";
+import _modDef2617 from "../../premium/gifting/GiftingBadge.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
@@ -130,7 +130,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             lineClamp: 1,
             variant: "redesign/heading-18/bold",
             color: "mobile-text-heading-primary",
-            children: intl2.string(_modDef2589.roVAey),
+            children: intl2.string(_modDef2617.roVAey),
           };
           const Text = Text_Text.Text;
           intl2 = intl3.intl;
@@ -234,7 +234,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         lineClamp: 1,
         variant: "redesign/heading-18/bold",
         color: "mobile-text-heading-primary",
-        children: intl2.string(_modDef2589.roVAey),
+        children: intl2.string(_modDef2617.roVAey),
       };
       const Text = Text_Text.Text;
       intl2 = intl3.intl;

@@ -234,7 +234,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult3 = channel(504);
       const stateFromStores1 = tmpResult3.useStateFromStores(tmp8, M);
-      const tmpResult4 = channel(12477);
+      const tmpResult4 = channel(12492);
       const hasPreviewableMedia = tmpResult4.useHasPreviewableMedia(message);
       const tmp13 = channel.type === channel(1106).ChannelTypes.DM;
       if (tmp13) {
@@ -291,7 +291,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [ChannelStore];
       obj2 = channel(504);
       const stateFromStores1 = obj2.useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
-      const obj3 = channel(12477);
+      const obj3 = channel(12492);
       const hasPreviewableMedia = obj3.useHasPreviewableMedia(message);
       const tmp6 = channel.type === channel(1106).ChannelTypes.DM;
       let num = 1;
@@ -299,7 +299,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         num = closure_8;
       }
       let tmp10 = null;
-      const tmpResult = channel(12477);
+      const tmpResult = channel(12492);
       const messagePreviewTextVariant = tmpResult.getMessagePreviewTextVariant();
       if (!tmp6) {
         const obj4 = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
@@ -313,12 +313,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             channel,
             message,
             color: "text-default",
-            layout: channel(7514).ChannelListLayoutTypes.COZY,
+            layout: channel(7525).ChannelListLayoutTypes.COZY,
             variant: messagePreviewTextVariant,
             muted: false,
             lineClamp: num,
           };
-          const ChannelRowPreview = tmp(12488).ChannelRowPreview;
+          const ChannelRowPreview = tmp(12503).ChannelRowPreview;
           tmp14 = closure_10(ChannelRowPreview, obj5);
         }
         const obj6 = { children: items2 };
@@ -416,7 +416,7 @@ const memoResult = react.memo(
               rightAccessory: tmp10,
               children: tmp14,
             };
-            const tmp20 = closure_10(notification(12516).NotificationPressable, obj4);
+            const tmp20 = closure_10(notification(12531).NotificationPressable, obj4);
             cResult[11] = tmp5;
             cResult[12] = notification;
             cResult[13] = tmp9;
@@ -478,7 +478,7 @@ const memoResult = react.memo(
           rightAccessory: closure_10(closure_16, { message }),
           children: closure_10(closure_17, { channel, message }),
         };
-        const NotificationPressable = notification(12516).NotificationPressable;
+        const NotificationPressable = notification(12531).NotificationPressable;
         return closure_10(NotificationPressable, obj2);
       },
 );

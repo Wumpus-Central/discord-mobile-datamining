@@ -6,7 +6,7 @@ import ChannelStore from "ChannelStore.tsx";
 import GuildMemberStore from "GuildMemberStore.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-const f35430 = (arg0, userIds) => {
+const f35479 = (arg0, userIds) => {
   let items;
   const obj2 = { type: "GUILD_MEMBERS_REQUEST", guildIds: items, userIds };
   items = [arg0];
@@ -74,8 +74,8 @@ function handleLoadSearchResults(arg0) {
     return false;
   }
 }
-const React3 = new GuildMemberRequesterDefault(GuildMemberStore.isMember, f35430);
-new GuildMemberRequesterDefault(GuildMemberStore.isMember, f35430);
+const React3 = new GuildMemberRequesterDefault(GuildMemberStore.isMember, f35479);
+new GuildMemberRequesterDefault(GuildMemberStore.isMember, f35479);
 const Store = get_initializedDefault.Store;
 class GuildMemberRequesterStore extends Store {
   initialize() {
@@ -116,9 +116,9 @@ let obj = {
     return false;
   },
   SEARCH_MESSAGES_SUCCESS: handleLoadSearchResults,
-  SMART_SEARCH_FETCH_SUCCESS: function handleSmartSearchFetchSuccess(arg0) {
-    let messages;
-    ({ messages, guildId: importDefault } = arg0);
+  SMART_SEARCH_FETCH_SUCCESS: function handleSmartSearchFetchSuccess(messages) {
+    messages = messages.messages;
+    const guildId = messages.smartSearchQuery.guildId;
     const item = messages.forEach((item) => {
       let author;
       let mentions;

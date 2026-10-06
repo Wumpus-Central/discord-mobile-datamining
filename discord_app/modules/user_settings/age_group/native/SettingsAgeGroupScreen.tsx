@@ -5,7 +5,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Constants from "../../../../Constants.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef3045 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3073 from "../../../age_assurance/AgeAssurance.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
@@ -63,7 +63,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           variant: "text-sm/semibold",
           color: "mobile-text-heading-primary",
-          children: intl.string(_modDef3045.PY4MA0),
+          children: intl.string(_modDef3073.PY4MA0),
         };
         const Text = Text_Text.Text;
         intl = intl3.intl;
@@ -77,7 +77,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           variant: "text-sm/normal",
           color: "text-default",
-          children: intl2.format(_modDef3045["1DN29p"], obj4),
+          children: intl2.format(_modDef3073["1DN29p"], obj4),
         };
         const Text2 = Text_Text.Text;
         intl2 = intl3.intl;
@@ -115,7 +115,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         variant: "text-sm/semibold",
         color: "mobile-text-heading-primary",
-        children: intl.string(_modDef3045.PY4MA0),
+        children: intl.string(_modDef3073.PY4MA0),
       };
       const Text = Text_Text.Text;
       intl = intl3.intl;
@@ -123,7 +123,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = {
         variant: "text-sm/normal",
         color: "text-default",
-        children: intl2.format(_modDef3045["1DN29p"], { handleOnHelpUrlHook: callback }),
+        children: intl2.format(_modDef3073["1DN29p"], { handleOnHelpUrlHook: callback }),
       };
       const Text2 = Text_Text.Text;
       intl2 = intl3.intl;
@@ -145,7 +145,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const isTinyBroncoSettingsEnabled = obj2.useIsTinyBroncoSettingsEnabled();
       if (cResult[0] !== isTinyBroncoSettingsEnabled) {
         const obj3 = { sections: items1, ListHeaderComponent: TinyBroncoAgeGroupHeader };
-        const obj4 = { label: intl.string(_modDef3045["5Mi5TE"]), settings: items };
+        const obj4 = { label: intl.string(_modDef3073["5Mi5TE"]), settings: items };
         const createList = SettingBuilders.createList;
         SettingBuilders;
         intl = intl3.intl;
@@ -181,7 +181,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let isTinyBroncoSettingsEnabled;
-      let obj = isTinyBroncoSettingsEnabled(14495);
+      let obj = isTinyBroncoSettingsEnabled(14511);
       isTinyBroncoSettingsEnabled = obj.useIsTinyBroncoSettingsEnabled();
       let items = [isTinyBroncoSettingsEnabled];
       const node = react.useMemo(() => {
@@ -190,7 +190,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let items;
         let items1;
         const obj = { sections: items1, ListHeaderComponent: TinyBroncoAgeGroupHeader };
-        const obj2 = { label: intl.string(_modDef3045["5Mi5TE"]), settings: items };
+        const obj2 = { label: intl.string(_modDef3073["5Mi5TE"]), settings: items };
         const createList = SettingBuilders.createList;
         SettingBuilders;
         intl = intl3.intl;

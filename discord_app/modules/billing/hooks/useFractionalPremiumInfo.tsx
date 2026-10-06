@@ -1,6 +1,6 @@
 // discord_app/modules/billing/hooks/useFractionalPremiumInfo.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
-import _modDef4461 from "../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import BillingUtils from "../../../utils/BillingUtils.tsx";
 import EntitlementActionCreators from "../../../actions/EntitlementActionCreators.tsx";
@@ -46,10 +46,10 @@ function calculateFractionalPremiumInfo(isFetching) {
   const obj = {
     isFractionalPremiumActive: false,
     fractionalState: unpackModuleId.NONE,
-    startsAt: _modDef4461(0),
-    endsAt: _modDef4461(0),
+    startsAt: _modDef4467(0),
+    endsAt: _modDef4467(0),
     currentEntitlementId: "",
-    currentEntitlementEndsAt: _modDef4461(0),
+    currentEntitlementEndsAt: _modDef4467(0),
     unactivatedUnits: [],
     fetched: fetchedAllEntitlements,
   };
@@ -129,12 +129,12 @@ function calculateFractionalPremiumInfo(isFetching) {
         fetched: fetchedAllEntitlements,
       };
       if (null != first) {
-        tmp10 = _modDef4461(first.startsAt);
+        tmp10 = _modDef4467(first.startsAt);
       } else {
-        tmp10 = _modDef4461(0);
+        tmp10 = _modDef4467(0);
       }
       if (null != first) {
-        const tmp2Result = _modDef4461;
+        const tmp2Result = _modDef4467;
         const obj4 = PremiumUtils;
         tmp2ResultResult = tmp2Result(
           obj4.extendDateWithUnconsumedFractionalPremium(
@@ -145,16 +145,16 @@ function calculateFractionalPremiumInfo(isFetching) {
           ),
         );
       } else {
-        tmp2ResultResult = _modDef4461(0);
+        tmp2ResultResult = _modDef4467(0);
       }
       str = "";
       if (null != first) {
         str = first.id;
       }
       if (null != first) {
-        tmp17 = _modDef4461(first.endsAt);
+        tmp17 = _modDef4467(first.endsAt);
       } else {
-        tmp17 = _modDef4461(0);
+        tmp17 = _modDef4467(0);
       }
       return obj7;
     }

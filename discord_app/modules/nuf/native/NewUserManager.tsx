@@ -189,7 +189,7 @@ class NewUserManager extends AutomaticLifecycleManager {
       flag = closure_0.skip ?? false;
       flag2 = closure_0.skipAttempt ?? false;
       flag3 = closure_0.back ?? false;
-      return "Set";
+      return "Reflect";
     });
     applyArgumentsResult.handleOnboardingStep = function () {
       return closure_0(...arguments);

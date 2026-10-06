@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/templates/ConjureTemplates.tsx
 import intl7 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import ConjureConnectionStore from "../connection/ConjureConnectionStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -17,8 +17,8 @@ export const conjureTemplates = function conjureTemplates() {
   let intl6;
   const obj = {
     id: "moderation-bot",
-    name: intl.string(_modDef3723.lGLnE8),
-    description: intl2.string(_modDef3723["pAC6k/"]),
+    name: intl.string(_modDef3753.lGLnE8),
+    description: intl2.string(_modDef3753["pAC6k/"]),
     wizard: true,
   };
   intl = intl7.intl;
@@ -26,16 +26,16 @@ export const conjureTemplates = function conjureTemplates() {
   const items = [obj, ,];
   const obj2 = {
     id: "feature-showcase",
-    name: intl3.string(_modDef3723.uJKQTs),
-    description: intl4.string(_modDef3723["+dKy/B"]),
+    name: intl3.string(_modDef3753.uJKQTs),
+    description: intl4.string(_modDef3753["+dKy/B"]),
   };
   intl3 = intl7.intl;
   intl4 = intl7.intl;
   items[1] = obj2;
   const obj3 = {
     id: "rust-sphere",
-    name: intl5.string(_modDef3723.iF5Oru),
-    description: intl6.string(_modDef3723.NbDDO6),
+    name: intl5.string(_modDef3753.iF5Oru),
+    description: intl6.string(_modDef3753.NbDDO6),
   };
   intl5 = intl7.intl;
   intl6 = intl7.intl;
@@ -45,11 +45,11 @@ export const conjureTemplates = function conjureTemplates() {
 export const templateImportMessage = function templateImportMessage(templateName) {
   const intl = intl7.intl;
   const obj = { templateName };
-  return intl.formatToPlainString(_modDef3723["0PQip6"], obj);
+  return intl.formatToPlainString(_modDef3753["0PQip6"], obj);
 };
 export const startConjureTemplateProject = function startConjureTemplateProject(arg0, name) {
   name = name.name;
   const intl = intl7.intl;
   const obj = { templateId: name.id };
-  sendUserMessage(arg0, intl.formatToPlainString(_modDef3723["0PQip6"], { templateName: name }), undefined, obj);
+  sendUserMessage(arg0, intl.formatToPlainString(_modDef3753["0PQip6"], { templateName: name }), undefined, obj);
 };

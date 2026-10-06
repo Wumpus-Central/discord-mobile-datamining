@@ -113,7 +113,7 @@ export default function RuleExemptionRows(rule) {
           return onChangeRule(obj);
         },
       };
-      obj.openLazy(asyncRequire(17709, dependencyMap.paths), "AutomodExemptRoles", obj2);
+      obj.openLazy(asyncRequire(17755, dependencyMap.paths), "AutomodExemptRoles", obj2);
     },
   };
   const TableRow = tmp2(tmp3[11]).TableRow;
@@ -139,7 +139,7 @@ export default function RuleExemptionRows(rule) {
             return onChangeRule(obj);
           },
         };
-        obj.openLazy(asyncRequire(17711, dependencyMap.paths), "AutomodExemptChannels", obj2);
+        obj.openLazy(asyncRequire(17757, dependencyMap.paths), "AutomodExemptChannels", obj2);
       },
     };
     const TableRow2 = tmp2(tmp3[11]).TableRow;

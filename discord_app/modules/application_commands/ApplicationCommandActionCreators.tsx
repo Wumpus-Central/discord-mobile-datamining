@@ -4,7 +4,7 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
 import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import Server from "../../flow/Server.tsx";
+import InteractionTypes from "../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -176,7 +176,7 @@ export const performAutocomplete = function performAutocomplete(c0, c2, data) {
       const post = HTTP.post;
       const guild = dependencyMap.guild;
       obj4 = {
-        type: Server.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
+        type: InteractionTypes.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
         application_id: _require.applicationId,
         guild_id: id,
         channel_id: dependencyMap.channel.id,

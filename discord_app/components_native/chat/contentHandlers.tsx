@@ -44,7 +44,7 @@ let obj = {
     let roleId;
     let roleName;
     let userId;
-    let obj = parsedUserId(11164);
+    let obj = parsedUserId(11177);
     const nativeSyntheticEventData = obj.getNativeSyntheticEventData(nativeEvent);
     ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
     ({ roleId, guildId } = nativeSyntheticEventData);
@@ -59,7 +59,7 @@ let obj = {
         if (null != guildId) {
           const obj3 = { guildId, roleId, channelId };
           const obj7 = ActionSheetActionCreatorsDefault;
-          obj7.openLazy(parsedUserId(1987)(11209, dependencyMap.paths), "RoleMembersActionSheet", obj3);
+          obj7.openLazy(parsedUserId(1987)(11222, dependencyMap.paths), "RoleMembersActionSheet", obj3);
         }
       }
       if ("@everyone" === roleName) {
@@ -67,7 +67,7 @@ let obj = {
           const openLazy = ActionSheetActionCreatorsDefault.openLazy;
           const obj4 = { guildId, roleId: obj6.castGuildIdAsEveryoneGuildRoleId(guildId), channelId };
           ActionSheetActionCreatorsDefault;
-          const tmp12 = parsedUserId(1987)(11209, dependencyMap.paths);
+          const tmp12 = parsedUserId(1987)(11222, dependencyMap.paths);
           obj6 = SnowflakeUtilsDefault;
           openLazy(tmp12, "RoleMembersActionSheet", obj4);
         }
@@ -125,7 +125,7 @@ let obj = {
   onTapEmoji(nativeEvent) {
     const node = nativeEvent.nativeEvent.node;
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequire(9933, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: node });
+    obj.openLazy(asyncRequire(9946, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: node });
   },
 };
 let closure_6 = _asyncToGenerator(async (arg0) => {
@@ -168,7 +168,7 @@ let closure_6 = _asyncToGenerator(async (arg0) => {
     await "IconComponent";
     closure_1 = tmp;
     attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
-    return "Set";
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -217,7 +217,7 @@ let closure_5 = _asyncToGenerator(async (arg0) => {
     await "IconComponent";
     url = tmp;
     ({ attachmentUrl: c0, fileName: c1 } = nativeEvent.nativeEvent.data);
-    return "Set";
+    return "Reflect";
   })();
   iter.next();
   return iter;
@@ -260,7 +260,7 @@ let closure_4 = _asyncToGenerator(async (arg0) => {
     await "IconComponent";
     urlString = tmp;
     attachmentUrl = nativeEvent.nativeEvent.data.attachmentUrl;
-    return "Set";
+    return "Reflect";
   })();
   iter.next();
   return iter;

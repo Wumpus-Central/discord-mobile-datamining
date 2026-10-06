@@ -31,13 +31,13 @@ export default function OrbCheckoutMenu() {
           obj.open({ key: "ORB_CHECKOUT_SUCCESS", content: "Successfully redeemed item with Orbs" });
         },
       };
-      obj.pushLazy(asyncRequire(12989, dependencyMap.paths), obj2);
+      obj.pushLazy(asyncRequire(13008, dependencyMap.paths), obj2);
     }
   }, items);
   let obj = { children: items1 };
-  const Card = value(5995).Card;
+  const Card = value(6002).Card;
   let obj2 = { style: tmp.title, variant: "text-md/bold", children: "Redeem SKU for Orbs" };
-  items1 = [closure_5(value(4886).Text, obj2), , ,];
+  items1 = [closure_5(value(4892).Text, obj2), , ,];
   const obj3 = {
     containerStyle: tmp.textInput,
     label: "SKU ID",
@@ -47,14 +47,14 @@ export default function OrbCheckoutMenu() {
     },
     clearable: true,
   };
-  items1[1] = closure_5(value(6098).TextInput, obj3);
+  items1[1] = closure_5(value(6105).TextInput, obj3);
   const obj4 = {
     style: tmp.title,
     variant: "text-md/bold",
     children: "Checkout will open with the orb price of the product, if it exists",
   };
-  items1[2] = closure_5(value(4886).Text, obj4);
+  items1[2] = closure_5(value(4892).Text, obj4);
   const obj5 = { text: "Open Orbs Checkout", variant: "primary", onPress: callback, disabled: null == value };
-  items1[3] = closure_5(value(5594).Button, obj5);
+  items1[3] = closure_5(value(5601).Button, obj5);
   return closure_6(Card, obj);
 }

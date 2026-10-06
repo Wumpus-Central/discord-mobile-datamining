@@ -151,7 +151,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         if (cResult[25] !== tmp4.maskOpaque) {
                           const obj4 = { colors, style: tmp4.maskOpaque };
-                          const tmp33 = closure_8(navigation(5605), obj4);
+                          const tmp33 = closure_8(navigation(5612), obj4);
                           cResult[25] = tmp4.maskOpaque;
                           cResult[26] = tmp33;
                           tmp29 = tmp33;
@@ -161,7 +161,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                         if (cResult[27] !== tmp4.maskFade) {
                           const obj5 = { colors: colors2, start: null, end: null, style: tmp4.maskFade };
                           ({ START: obj9.start, END: obj9.end } = VerticalGradient);
-                          const tmp39 = closure_8(navigation(5605), obj5);
+                          const tmp39 = closure_8(navigation(5612), obj5);
                           cResult[27] = tmp4.maskFade;
                           cResult[28] = tmp39;
                           tmp34 = tmp39;
@@ -212,7 +212,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                         children: items1,
                                       };
                                       items1 = [tmp25, tmp53];
-                                      const tmp59 = closure_9(conversation(5995).Card, obj6);
+                                      const tmp59 = closure_9(conversation(6002).Card, obj6);
                                       cResult[44] = conversation.title;
                                       cResult[45] = tmp13;
                                       cResult[46] = tmp4.card;
@@ -223,7 +223,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                                     }
                                   }
                                   const obj7 = { style: tmp4.previewsMask, maskElement: tmp40, children: tmp49 };
-                                  const tmp56 = closure_8(navigation(6052), obj7);
+                                  const tmp56 = closure_8(navigation(6059), obj7);
                                   cResult[40] = tmp4.previewsMask;
                                   cResult[41] = tmp40;
                                   cResult[42] = tmp49;
@@ -239,7 +239,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             if (null == arr4) {
-                              mapped = closure_8(navigation(7586), {});
+                              mapped = closure_8(navigation(7597), {});
                             } else {
                               mapped = arr4.map((blocked) => {
                                 if (!blocked.blocked) {
@@ -292,7 +292,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     style: timestamp,
                     children: tmp20,
                   };
-                  const tmp24 = closure_8(conversation(4886).Text, obj12);
+                  const tmp24 = closure_8(conversation(4892).Text, obj12);
                   cResult[18] = tmp4.timestamp;
                   cResult[19] = tmp20;
                   cResult[20] = tmp24;
@@ -305,7 +305,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   style: tmp4.title,
                   children: conversation.title,
                 };
-                const tmp19 = closure_8(conversation(4886).Text, obj13);
+                const tmp19 = closure_8(conversation(4892).Text, obj13);
                 cResult[13] = conversation.title;
                 cResult[14] = tmp4.title;
                 cResult[15] = tmp19;

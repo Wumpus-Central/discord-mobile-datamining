@@ -87,7 +87,7 @@ export default function AppLauncherChoicesOption(option) {
     };
     index = undefined;
     ActionSheetActionCreatorsDefault;
-    const tmp4 = asyncRequire(11788, dependencyMap.paths);
+    const tmp4 = asyncRequire(11802, dependencyMap.paths);
     if (first != null) {
       index = first.index;
     }

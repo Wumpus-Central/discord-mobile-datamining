@@ -51,12 +51,12 @@ const memoResult = react.memo(
         let obj = trackUserProfileAction(576);
         const cResult = obj.c(70);
         ({ user, channel, displayProfile, scrollPosition } = arg0);
-        const tmp5 = userTag(7913)();
-        let obj2 = trackUserProfileAction(7861);
+        const tmp5 = userTag(7924)();
+        let obj2 = trackUserProfileAction(7872);
         trackUserProfileAction = obj2.useUserProfileAnalyticsContext().trackUserProfileAction;
         let guild_id1;
-        const useName = userTag(5042).useName;
-        userTag(5042);
+        const useName = userTag(5048).useName;
+        userTag(5048);
         if (channel != null) {
           guild_id1 = channel.guild_id;
         }
@@ -65,32 +65,32 @@ const memoResult = react.memo(
           id = channel.id;
         }
         const name = useName(guild_id1, id, user);
-        const tmp4Result = userTag(4722);
+        const tmp4Result = userTag(4728);
         userTag = tmp4Result.useUserTag(user);
-        const tmp11 = userTag(7914)(displayProfile);
-        const tmp12 = userTag(7902)(ACTION_SHEET_MAX_WIDTH);
+        const tmp11 = userTag(7925)(displayProfile);
+        const tmp12 = userTag(7913)(ACTION_SHEET_MAX_WIDTH);
         if (cResult[0] === tmp12) {
           let tmp13;
           if (cResult[1] === scrollPosition) {
             tmp13 = cResult[2];
           }
           ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } =
-            userTag(7915)(tmp13));
-          userTag(7915)(tmp13);
+            userTag(7926)(tmp13));
+          userTag(7926)(tmp13);
           if (cResult[3] === displayProfile) {
             let tmp16;
             if (cResult[4] === user) {
               tmp16 = cResult[5];
             }
-            ({ theme, primaryColor, secondaryColor } = userTag(7899)(tmp16));
-            userTag(7899)(tmp16);
+            ({ theme, primaryColor, secondaryColor } = userTag(7910)(tmp16));
+            userTag(7910)(tmp16);
             if (cResult[6] === primaryColor) {
               if (cResult[7] === secondaryColor) {
                 let tmp18;
                 if (cResult[8] === theme) {
                   tmp18 = cResult[9];
                 }
-                const tmpResult = trackUserProfileAction(7910);
+                const tmpResult = trackUserProfileAction(7921);
                 const userProfileColors = tmpResult.useUserProfileColors(tmp18);
                 ({ avatarBackground, containerBackground } = userProfileColors);
                 if (null == user) {
@@ -250,7 +250,7 @@ const memoResult = react.memo(
                                           onPressPronouns: tmp21,
                                           showBadgeToastOnPress: true,
                                         };
-                                        const tmp38 = closure_7(userTag(10843), obj5);
+                                        const tmp38 = closure_7(userTag(10856), obj5);
                                         cResult[34] = tmp11;
                                         cResult[35] = containerBackground;
                                         cResult[36] = name;
@@ -276,8 +276,8 @@ const memoResult = react.memo(
                                 cResult[23] = avatarBackground;
                                 cResult[24] = guildId;
                                 cResult[25] = user;
-                                cResult[26] = closure_7(trackUserProfileAction(7928).OpenableUserProfileAvatar, obj6);
-                                const tmp27 = closure_7(trackUserProfileAction(7928).OpenableUserProfileAvatar, obj6);
+                                cResult[26] = closure_7(trackUserProfileAction(7939).OpenableUserProfileAvatar, obj6);
+                                const tmp27 = closure_7(trackUserProfileAction(7939).OpenableUserProfileAvatar, obj6);
                               }
                             }
                           }
@@ -300,8 +300,8 @@ const memoResult = react.memo(
                     cResult[19] = displayProfile;
                     cResult[20] = showBlur;
                     cResult[21] = user;
-                    cResult[22] = closure_7(userTag(7916), obj7);
-                    const tmp24 = closure_7(userTag(7916), obj7);
+                    cResult[22] = closure_7(userTag(7927), obj7);
+                    const tmp24 = closure_7(userTag(7927), obj7);
                   }
                   class F {
                     constructor() {
@@ -369,7 +369,7 @@ const memoResult = react.memo(
         importDefault = undefined;
         scrollPosition = scrollPosition.scrollPosition;
         const tmp3 = UserProfileSharedStylesDefault();
-        let obj = trackUserProfileAction(7861);
+        let obj = trackUserProfileAction(7872);
         trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
         let guild_id;
         const useName = NicknameUtilsDefault.useName;
@@ -392,7 +392,7 @@ const memoResult = react.memo(
         const bottom = tmp(1618)().bottom;
         ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
         useProfileThemeDefault({ user, displayProfile });
-        const tmp4Result = trackUserProfileAction(7910);
+        const tmp4Result = trackUserProfileAction(7921);
         const userProfileColors = tmp4Result.useUserProfileColors({ theme, primaryColor, secondaryColor });
         const containerBackground = userProfileColors.containerBackground;
         if (null == user) {
@@ -407,12 +407,12 @@ const memoResult = react.memo(
             blurAnimatedProps,
             showBlur,
           };
-          const items = [closure_7(tmp(7916), obj2)];
+          const items = [closure_7(tmp(7927), obj2)];
           const obj3 = { style: contentAnimatedStyle, children: items1 };
-          View = tmp(4612).View;
+          View = tmp(4618).View;
           const obj4 = { user, guildId, backgroundColor: tmp14, disableStatus: true };
           guildId = undefined;
-          const OpenableUserProfileAvatar = tmp4(7928).OpenableUserProfileAvatar;
+          const OpenableUserProfileAvatar = tmp4(7939).OpenableUserProfileAvatar;
           if (displayProfile != null) {
             guildId = displayProfile.guildId;
           }

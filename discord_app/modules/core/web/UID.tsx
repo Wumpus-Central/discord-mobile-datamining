@@ -1,6 +1,6 @@
 // discord_app/modules/core/web/UID.tsx
 import react from "../../../../_runtime/00576_react.js";
-import uniqueIdDefault from "../../../../_runtime/05094_uniqueId.js";
+import uniqueIdDefault from "../../../../_runtime/05100_uniqueId.js";
 import useInitialValueDefault from "../../../hooks/useInitialValue.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

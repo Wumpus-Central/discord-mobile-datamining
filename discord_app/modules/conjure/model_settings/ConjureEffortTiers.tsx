@@ -1,13 +1,13 @@
 // discord_app/modules/conjure/model_settings/ConjureEffortTiers.tsx
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import ConjureModelLabels from "ConjureModelLabels.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_2 = ["thinking"];
 let closure_3 = ["fast"];
-let obj = { simple: _modDef3723.Mqb8mc, balanced: _modDef3723.zCZfA6, complex: _modDef3723["8l2atm"] };
+let obj = { simple: _modDef3753.Mqb8mc, balanced: _modDef3753.zCZfA6, complex: _modDef3753["8l2atm"] };
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureEffortTiers.tsx");
 
 export const conjureTierLabel = function conjureTierLabel(value) {

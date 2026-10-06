@@ -224,7 +224,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != stateFromStores) {
           let tmp10;
           if (cResult[5] !== stateFromStores) {
-            const tmpResult2 = adContentIds(7212);
+            const tmpResult2 = adContentIds(7225);
             const questStatus = tmpResult2.getQuestStatus(stateFromStores);
             cResult[5] = stateFromStores;
             cResult[6] = questStatus;
@@ -234,7 +234,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp9 = tmp10;
         }
-        return tmp9 !== adCreativeType(7946)(tmp9);
+        return tmp9 !== adCreativeType(7957)(tmp9);
       }
       const fn = function u() {
         let quest = null;

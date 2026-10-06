@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/history/native/ConjureVersionRestoreConfirm.tsx
 import react2 from "../../../../../_runtime/00576_react.js";
 import intl7 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import AlertModal2 from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import TableCheckboxRow2 from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
@@ -37,9 +37,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       [first, tmp6] = react.useState(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl7.intl;
-        const stringResult = intl.string(_modDef3723.NDY6Zv);
+        const stringResult = intl.string(_modDef3753.NDY6Zv);
         const intl2 = intl7.intl;
-        const stringResult1 = intl2.string(_modDef3723.z2x5zj);
+        const stringResult1 = intl2.string(_modDef3753.z2x5zj);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp7 = stringResult;
@@ -56,7 +56,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl5 = intl7.intl;
-          const stringResult2 = intl5.string(_modDef3723.K3Q49G);
+          const stringResult2 = intl5.string(_modDef3753.K3Q49G);
           cResult[5] = stringResult2;
           tmp16 = stringResult2;
         } else {
@@ -132,8 +132,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const obj6 = { hasIcons: false, children: hasOwnProperty(TableCheckboxRow, obj7) };
         const TableRowGroup = TableRowGroup2.TableRowGroup;
         obj7 = {
-          label: intl3.string(_modDef3723["+/pFME"]),
-          subLabel: intl4.string(_modDef3723["+I112y"]),
+          label: intl3.string(_modDef3753["+/pFME"]),
+          subLabel: intl4.string(_modDef3753["+I112y"]),
           checked: first,
           onPress: tmp6,
         };
@@ -166,8 +166,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       first = undefined;
       [first, tmp3] = react.useState(false);
       const obj = {
-        title: intl.string(_modDef3723.NDY6Zv),
-        content: intl2.string(_modDef3723.z2x5zj),
+        title: intl.string(_modDef3753.NDY6Zv),
+        content: intl2.string(_modDef3753.z2x5zj),
         extraContent: tmp4Result,
         actions: metroImportDefault(metroRequire, obj4),
       };
@@ -179,8 +179,8 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { hasIcons: false, children: hasOwnProperty(TableCheckboxRow, obj3) };
         const TableRowGroup = TableRowGroup2.TableRowGroup;
         obj3 = {
-          label: intl3.string(_modDef3723["+/pFME"]),
-          subLabel: intl4.string(_modDef3723["+I112y"]),
+          label: intl3.string(_modDef3753["+/pFME"]),
+          subLabel: intl4.string(_modDef3753["+I112y"]),
           checked: first,
           onPress: tmp3,
         };
@@ -192,7 +192,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       obj4 = { children: items };
       const obj5 = {
         variant: "primary",
-        text: intl5.string(_modDef3723.K3Q49G),
+        text: intl5.string(_modDef3753.K3Q49G),
         onPress() {
           let tmp2 = null;
           if (first) {

@@ -38,7 +38,7 @@ let metroImportAll;
 const GuildFeatures = Constants.GuildFeatures;
 const MAX_STICKER_FILE_SIZE = StickersConstants.MAX_STICKER_FILE_SIZE;
 ({ jsx: closure_12, jsxs: map1 } = Fragment);
-let obj = { tier: BoostedGuildTiers.NONE, title: intl.string(intl5.t.tfVXhP), IconComponent: "r" };
+let obj = { tier: BoostedGuildTiers.NONE, title: intl.string(intl5.t.tfVXhP), IconComponent: "Array" };
 intl = intl5.intl;
 let items = [obj, , ,];
 let obj2 = {

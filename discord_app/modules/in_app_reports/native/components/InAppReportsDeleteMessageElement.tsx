@@ -96,7 +96,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp23 = jsx(message(4847).TrashIcon, { color: "text-feedback-critical" });
+          const tmp23 = jsx(message(4853).TrashIcon, { color: "text-feedback-critical" });
           cResult[13] = tmp23;
           tmp21 = tmp23;
         } else {
@@ -109,7 +109,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return tmp24;
         }
-        const tmp27 = jsx(reportId(12713), {
+        const tmp27 = jsx(reportId(12728), {
           title: tmp15,
           disabledTitle: tmp16,
           description: tmp17,
@@ -167,7 +167,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = MessageActionCreatorsDefault;
         obj3.deleteMessage(message.getChannelId(), message.id);
       }, items3);
-      reportId(12713);
+      reportId(12728);
       const intl = message(1126).intl;
       const intl2 = message(1126).intl;
       const intl3 = message(1126).intl;

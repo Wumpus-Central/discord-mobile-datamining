@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/row_data/CtaButton.tsx
 import intl5 from "../../../../../intl/index.native.tsx";
-import _modDef3109 from "../../../../age_assurance/ManualReview.messages.js";
+import _modDef3137 from "../../../../age_assurance/ManualReview.messages.js";
 import AgeVerificationUtils from "../../../../age_assurance/AgeVerificationUtils.tsx";
 import CtaButtonUtils from "../../../CtaButtonUtils.tsx";
 import ExplicitMediaStore from "../../../../explicit_media_redaction/ExplicitMediaStore.tsx";
@@ -43,7 +43,7 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
     tmp6 = undefined;
     const tmpResult = AgeVerificationUtils;
     if (tmpResult.isAgeVerificationMessageWithManualReviewCta(channel_id, id)) {
-      const obj17 = { text: intl3.string(_modDef3109.Z61nkt), textColor: null, backgroundColor: null, callback: prop2 };
+      const obj17 = { text: intl3.string(_modDef3137.Z61nkt), textColor: null, backgroundColor: null, callback: prop2 };
       intl3 = intl5.intl;
       ({ reportFpTextColor: obj8.textColor, reportFpBackgroundColor: obj8.backgroundColor } = arg2);
       prop2 = undefined;

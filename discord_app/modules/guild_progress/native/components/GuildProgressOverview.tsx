@@ -8,7 +8,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import showSimpleActionSheet2 from "../../../action_sheet/native/showSimpleActionSheet.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09602_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09615_AssetRegistry.js";
 import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import GuildProgressActionCreatorsDefault from "../../GuildProgressActionCreators.tsx";
 import GuildProgressBarDefault from "GuildProgressBar.tsx";

@@ -123,13 +123,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== priceSetAssignmentPurchaseType) {
         let SELF_PURCHASE;
         if (null == priceSetAssignmentPurchaseType) {
-          SELF_PURCHASE = tmp(6734).StorefrontPurchaseType.SELF_PURCHASE;
+          SELF_PURCHASE = tmp(6748).StorefrontPurchaseType.SELF_PURCHASE;
         } else if (constants2.DEFAULT === priceSetAssignmentPurchaseType) {
-          SELF_PURCHASE = tmp(6734).StorefrontPurchaseType.SELF_PURCHASE;
+          SELF_PURCHASE = tmp(6748).StorefrontPurchaseType.SELF_PURCHASE;
         } else if (tmp12.GIFT === priceSetAssignmentPurchaseType) {
-          SELF_PURCHASE = tmp(6734).StorefrontPurchaseType.GIFT;
+          SELF_PURCHASE = tmp(6748).StorefrontPurchaseType.GIFT;
         } else {
-          SELF_PURCHASE = tmp(6734).StorefrontPurchaseType.SELF_PURCHASE;
+          SELF_PURCHASE = tmp(6748).StorefrontPurchaseType.SELF_PURCHASE;
         }
         cResult[3] = priceSetAssignmentPurchaseType;
         cResult[4] = SELF_PURCHASE;
@@ -141,7 +141,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != stateFromStores) {
           let tmp15 = stateFromStores[tmp11];
           if (tmp15 == null) {
-            tmp15 = stateFromStores[tmp(undefined, 6734).StorefrontPurchaseType.SELF_PURCHASE];
+            tmp15 = stateFromStores[tmp(undefined, 6748).StorefrontPurchaseType.SELF_PURCHASE];
           }
           if (cResult[8] === isOrbPrice) {
             let tmp18;
@@ -198,7 +198,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj3 = {
         userPrice: "r",
-        pricesForPurchaseType: "r",
+        pricesForPurchaseType: "emoji",
         purchaseType: tmp11,
         storeHasPrice: null != stateFromStores,
       };
@@ -245,7 +245,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           if (null != stateFromStores) {
             let tmp12 = stateFromStores[SELF_PURCHASE];
             if (tmp12 == null) {
-              tmp12 = stateFromStores[tmp4(undefined, 6734).StorefrontPurchaseType.SELF_PURCHASE];
+              tmp12 = stateFromStores[tmp4(undefined, 6748).StorefrontPurchaseType.SELF_PURCHASE];
             }
             let found;
             if (tmp12 != null) {
@@ -263,7 +263,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return {
           userPrice: "r",
-          pricesForPurchaseType: "r",
+          pricesForPurchaseType: "emoji",
           purchaseType: SELF_PURCHASE,
           storeHasPrice: null != stateFromStores,
         };
@@ -457,7 +457,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (sku.productLine === constants5.SOCIAL_LAYER_GAME_ITEM) {
-              const tmpResult4 = tmp(6735);
+              const tmpResult4 = tmp(6749);
               price = tmpResult4.getPrice(sku, DEFAULT);
             } else {
               const getPrice = sku.getPrice;
@@ -890,12 +890,12 @@ export const transformStorefrontPricesServer = function transformStorefrontPrice
       let obj = _modDef12;
       return obj.mapValues(arg0, (user_price) => {
         let obj2;
-        const f93018 = (currency) => ({ currency: currency.currency, amount: currency.amount });
+        const f93158 = (currency) => ({ currency: currency.currency, amount: currency.amount });
         let obj = {
-          userPrice: user_price.map(f93018),
+          userPrice: user_price.map(f93158),
           prices: obj2.mapValues(user_price.prices, (arg0) => {
             const obj = closure_1_1(closure_1_2[6]);
-            return obj.mapValues(arg0, (arr) => arr.map(f93018));
+            return obj.mapValues(arg0, (arr) => arr.map(f93158));
           }),
         };
         user_price = user_price.user_price;

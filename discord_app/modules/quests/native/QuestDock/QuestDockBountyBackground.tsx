@@ -117,8 +117,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_9();
       const obj = width(573);
       const stateFromStores = obj.useStateFromStores(items, () => QuestDockStore.prevRestingQuestDockMode);
-      const tmp7 = height(15005)(QuestDockMode.EXPANDED);
-      const obj2 = width(15006);
+      const tmp7 = height(15020)(QuestDockMode.EXPANDED);
+      const obj2 = width(15021);
       size = obj2.useSmokeArtSize();
       const tmp2 = width;
       width = size.width;
@@ -129,10 +129,10 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp7) {
         const items2 = [tmp.smokeArtWrapper, tmp8];
         ({
-          surface: tmp2(15006).QuestDockBountySmokeSurface.EXPANDED,
+          surface: tmp2(15021).QuestDockBountySmokeSurface.EXPANDED,
           paused: stateFromStores !== QuestDockMode.EXPANDED,
         });
-        tmp5(15006);
+        tmp5(15021);
         tmp9 = <View style={items2}>{null}</View>;
       }
       return tmp9;
@@ -212,14 +212,14 @@ const memoResult = react.memo(
         let questDockBounty;
         let token;
         previewImageUrl = previewImageUrl.previewImageUrl;
-        let obj = questDockBounty(14925);
+        let obj = questDockBounty(14940);
         questDockBounty = obj.useQuestDockBounty();
         const items = [questDockBounty.videoPreview];
         const memo = react.useMemo(() => {
           const obj = AssetUtils;
           return obj.getMimetype(questDockBounty.videoPreview);
         }, items);
-        const obj2 = questDockBounty(4580);
+        const obj2 = questDockBounty(4586);
         token = obj2.useToken(token(587).colors.BACKGROUND_BRAND);
         const items1 = [token];
         const memo1 = react.useMemo(() => {
@@ -227,13 +227,13 @@ const memoResult = react.memo(
           const mixResult = obj.mix(token, nativeDefault.unsafe_rawColors.BLACK, 0.77, "rgb");
           return mixResult.hex();
         }, items1);
-        token(15004);
+        token(15019);
         return (
           <tmp5
             imageUrl={previewImageUrl}
             videoUrl={questDockBounty.videoPreview}
             videoMimetype={memo}
-            collapsedMediaMode={questDockBounty(15004).QuestDockBackgroundCollapsedMediaMode.HIDDEN}
+            collapsedMediaMode={questDockBounty(15019).QuestDockBackgroundCollapsedMediaMode.HIDDEN}
             gradientBaseColor={memo1}
             backdropColor={memo1}
             expandedHeight={expandedHeight}

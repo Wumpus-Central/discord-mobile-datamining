@@ -715,7 +715,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
     yield "IconComponent";
     responseType = tmp4;
     ({ isAuthorized: c0, overrideSuccessCallback: c1, canceled: c2 } = clientId);
-    return "Set";
+    return "Reflect";
   });
   const items13 = [first7, callbackWithoutPost, clientId, requestedScopes, responseType, redirectUri, codeChallenge, codeChallengeMethod, tmp52, nonce, memo4, first6, first4, first5, first12, dismissOAuthModal, callback, flag5, , , ];
   let application;

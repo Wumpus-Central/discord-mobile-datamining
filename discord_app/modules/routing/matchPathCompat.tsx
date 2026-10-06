@@ -1,5 +1,5 @@
 // discord_app/modules/routing/matchPathCompat.tsx
-import BrowserRouter from "../../../_runtime/04705_BrowserRouter.js";
+import BrowserRouter from "../../../_runtime/04711_BrowserRouter.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/routing/matchPathCompat.tsx");

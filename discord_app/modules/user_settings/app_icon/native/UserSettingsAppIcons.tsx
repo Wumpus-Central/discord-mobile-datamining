@@ -22,7 +22,7 @@ let metroImportDefault;
 let metroRequire;
 let tmp6;
 let unpackModuleId;
-const NitroUpsellButtonDefault = tmp6(9648);
+const NitroUpsellButtonDefault = tmp6(9661);
 const View = react_native.View;
 ({ UpsellTypes: metroRequire, AnalyticsPages: metroImportDefault } = Constants);
 const getIconById = AppIconConstants.getIconById;
@@ -66,7 +66,7 @@ const memoResult = memo(
         }
         const tmpResult = tmp(504);
         stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-        const tmpResult3 = tmp(13261);
+        const tmpResult3 = tmp(13280);
         const currentAppIcon = tmpResult3.useCurrentAppIcon();
         if (cResult[2] !== stateFromStores) {
           const tmpResult4 = tmp(1976);
@@ -78,7 +78,7 @@ const memoResult = memo(
           tmp10 = cResult[3];
         }
         dependencyMap = tmp10;
-        const analyticsLocations = currentAppIcon(6657)().analyticsLocations;
+        const analyticsLocations = currentAppIcon(6664)().analyticsLocations;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { page: constants.APP_ICONS };
           cResult[4] = obj2;
@@ -102,8 +102,8 @@ const memoResult = memo(
             }
             if (cResult[9] !== tmp18) {
               let obj3 = { children: closure_9(analyticsLocation, obj4) };
-              obj4 = { accessibilityRole: "radiogroup", children: closure_9(currentAppIcon(15352), obj5) };
-              const Form = tmp(8895).Form;
+              obj4 = { accessibilityRole: "radiogroup", children: closure_9(currentAppIcon(15367), obj5) };
+              const Form = tmp(8924).Form;
               obj5 = { onSelect: tmp18 };
               const tmp23 = closure_9(Form, obj3);
               cResult[9] = tmp18;
@@ -150,7 +150,7 @@ const memoResult = memo(
                 },
                 text: intl.string(tmp(1126).t.M0rDSO),
               };
-              tmp12Result = currentAppIcon(9648);
+              tmp12Result = currentAppIcon(9661);
               intl = tmp(1126).intl;
               tmp25 = closure_9(analyticsLocation, obj7);
             }
@@ -371,7 +371,7 @@ const memoResult = memo(
         obj = stateFromStores(504);
         const items = [obj];
         stateFromStores = obj.useStateFromStores(items, () => obj.getCurrentUser());
-        let obj2 = stateFromStores(13261);
+        let obj2 = stateFromStores(13280);
         importDefault = obj2.useCurrentAppIcon();
         let obj3 = stateFromStores(1976);
         const isPremiumResult = obj3.isPremium(stateFromStores);
@@ -381,7 +381,7 @@ const memoResult = memo(
         let obj4 = { page: constants.APP_ICONS };
         let obj5 = { children: closure_9(obj4, obj6) };
         obj6 = { accessibilityRole: "radiogroup", children: closure_9(AppIconRowsDefault, obj7) };
-        const Form = stateFromStores(8895).Form;
+        const Form = stateFromStores(8924).Form;
         obj7 = {
           onSelect(arg0) {
             return obj(...arguments);

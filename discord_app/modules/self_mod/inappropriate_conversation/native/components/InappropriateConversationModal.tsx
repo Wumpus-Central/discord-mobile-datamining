@@ -682,7 +682,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_15();
       const container = tmp4.container;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_13(trackAnalyticsEvent(15604).SafetyChatSpotIllustration, {});
+        const tmp7 = closure_13(trackAnalyticsEvent(15618).SafetyChatSpotIllustration, {});
         cResult[0] = tmp7;
         first = tmp7;
       } else {
@@ -704,7 +704,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           accessibilityRole: "header",
           children: tmp8,
         };
-        const tmp12 = closure_13(trackAnalyticsEvent(4886).Text, obj2);
+        const tmp12 = closure_13(trackAnalyticsEvent(4892).Text, obj2);
         cResult[2] = tmp4.takeoverHeader;
         cResult[3] = tmp12;
         tmp10 = tmp12;
@@ -722,7 +722,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== tmp4.takeoverDescription) {
         const obj3 = { variant: "text-md/medium", style: takeoverDescription, children: tmp13 };
-        const tmp17 = closure_13(trackAnalyticsEvent(4886).Text, obj3);
+        const tmp17 = closure_13(trackAnalyticsEvent(4892).Text, obj3);
         cResult[5] = tmp4.takeoverDescription;
         cResult[6] = tmp17;
         tmp15 = tmp17;
@@ -760,7 +760,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                 trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
               },
             };
-            const tmp24 = closure_13(trackAnalyticsEvent(5594).Button, obj4);
+            const tmp24 = closure_13(trackAnalyticsEvent(5601).Button, obj4);
             cResult[12] = trackAnalyticsEvent;
             cResult[13] = tmp24;
             tmp22 = tmp24;
@@ -787,7 +787,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                 trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
               },
             };
-            const tmp29 = closure_13(trackAnalyticsEvent(5594).Button, obj5);
+            const tmp29 = closure_13(trackAnalyticsEvent(5601).Button, obj5);
             cResult[15] = trackAnalyticsEvent;
             cResult[16] = tmp29;
             tmp27 = tmp29;
@@ -849,7 +849,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
       const tmp = closure_15();
       const obj = { style: tmp.container, children: items };
-      items = [closure_13(trackAnalyticsEvent(15604).SafetyChatSpotIllustration, {}), ,];
+      items = [closure_13(trackAnalyticsEvent(15618).SafetyChatSpotIllustration, {}), ,];
       const obj2 = { style: tmp.warningText, children: items1 };
       const obj3 = {
         variant: "heading-xl/semibold",
@@ -857,7 +857,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "header",
         children: intl.string(trackAnalyticsEvent(1126).t.NUMAsF),
       };
-      const Text = trackAnalyticsEvent(4886).Text;
+      const Text = trackAnalyticsEvent(4892).Text;
       intl = trackAnalyticsEvent(1126).intl;
       items1 = [closure_13(Text, obj3)];
       const obj4 = {
@@ -865,7 +865,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.takeoverDescription,
         children: intl2.string(trackAnalyticsEvent(1126).t.uicS5l),
       };
-      const Text2 = trackAnalyticsEvent(4886).Text;
+      const Text2 = trackAnalyticsEvent(4892).Text;
       intl2 = trackAnalyticsEvent(1126).intl;
       items1[1] = closure_13(Text2, obj4);
       items[1] = closure_14(closure_7, obj2);
@@ -880,7 +880,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
         },
       };
-      const Button = trackAnalyticsEvent(5594).Button;
+      const Button = trackAnalyticsEvent(5601).Button;
       intl3 = trackAnalyticsEvent(1126).intl;
       items2 = [closure_13(Button, obj6)];
       const obj7 = {
@@ -893,7 +893,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
         },
       };
-      const Button2 = trackAnalyticsEvent(5594).Button;
+      const Button2 = trackAnalyticsEvent(5601).Button;
       intl4 = trackAnalyticsEvent(1126).intl;
       items2[1] = closure_13(Button2, obj7);
       items[2] = closure_14(closure_7, obj5);

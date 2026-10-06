@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2493 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2521 from "../../../parent_tools/FamilyCenter.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
@@ -59,7 +59,7 @@ let obj = {
   },
   useDescription() {
     const intl = intl2.intl;
-    return intl.string(_modDef2493["7aYkh1"]);
+    return intl.string(_modDef2521["7aYkh1"]);
   },
   parent: MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: tmp2,

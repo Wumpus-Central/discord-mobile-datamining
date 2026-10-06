@@ -6,9 +6,9 @@ import native from "../../../../../design/void/native.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import ForumPostMediaUtils from "../../../ForumPostMediaUtils.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/11042_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../_runtime/11621_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../../_runtime/11622_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/11055_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/11635_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../_runtime/11636_AssetRegistry.js";
 import ForumPostMedia from "../ForumPostMedia.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
@@ -484,7 +484,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ hasUnreads, media } = thread);
       const tmp4 = closure_10();
       const columnSpacer = tmp4;
-      let obj2 = thread(6778);
+      let obj2 = thread(6788);
       [arr, tmp6] = obj2.useSomeAppliedTags(thread, 2);
       _slicedToArray(obj2.useSomeAppliedTags(thread, 2), 2);
       if (cResult[0] !== media) {
@@ -507,7 +507,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const arr2 = closure_15(tmp8, tmp11);
       let wideAspectRatioGrid = tmp11;
       if (cResult[4] !== media) {
-        const tmpResult = thread(7540);
+        const tmpResult = thread(7551);
         const result = tmpResult.messageContainsGifOrVideo(media);
         cResult[4] = media;
         cResult[5] = result;
@@ -631,7 +631,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 if (tmp26) {
                   const obj9 = {
                     style: tmp4.footerLeftContainer,
-                    children: closure_6(thread(11627).ForumPostAppliedTagPills, obj10),
+                    children: closure_6(thread(11641).ForumPostAppliedTagPills, obj10),
                   };
                   obj10 = { appliedTags: arr, additionalTagsCount: tmp6, hasUnreads };
                   tmp26 = closure_6(View, obj9);
@@ -710,7 +710,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       dependencyMap = tmp;
       let tmp2 = thread;
-      let obj = thread(6778);
+      let obj = thread(6788);
       [first, tmp5] = obj.useSomeAppliedTags(thread, 2);
       let tmp14Result = first.length > 0;
       items = [media];
@@ -751,7 +751,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp14Result) {
         const obj4 = {
           style: tmp.footerLeftContainer,
-          children: closure_6(tmp2(11627).ForumPostAppliedTagPills, obj5),
+          children: closure_6(tmp2(11641).ForumPostAppliedTagPills, obj5),
         };
         obj5 = { appliedTags: first, additionalTagsCount: tmp5, hasUnreads };
         tmp14Result = closure_6(View, obj4);

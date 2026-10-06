@@ -276,7 +276,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({ disabled, onVariantSelect } = arg0);
       dependencyMap = tmp4;
       const tmp5 = closure_6();
-      const tmpResult = selectedVariantIndex(7064);
+      const tmpResult = selectedVariantIndex(7077);
       if (tmpResult.getIsVariantProduct(product)) {
         let first;
         const _Symbol = Symbol;
@@ -287,7 +287,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: intl.string(selectedVariantIndex(1126).t.wbgaj6),
           };
-          const Text = selectedVariantIndex(4886).Text;
+          const Text = selectedVariantIndex(4892).Text;
           intl = selectedVariantIndex(1126).intl;
           const tmp10 = closure_4(Text, obj2);
           cResult[0] = tmp10;
@@ -335,7 +335,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             isSelected: closure_0 === arg1,
                             disabled,
                             onSelect() {
-                              /* body not rendered: F143064 */
+                              /* body not rendered: F143266 */
                             },
                           };
                           return closure_1_4(closure_1_8, obj, arg0.variantValue);
@@ -358,7 +358,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           isSelected: closure_0 === arg1,
                           disabled,
                           onSelect() {
-                            /* body not rendered: F143064 */
+                            /* body not rendered: F143266 */
                           },
                         };
                         return closure_1_4(closure_1_8, obj, arg0.variantValue);
@@ -389,7 +389,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         isSelected: closure_0 === arg1,
                         disabled,
                         onSelect() {
-                          /* body not rendered: F143064 */
+                          /* body not rendered: F143266 */
                         },
                       };
                       return closure_1_4(closure_1_8, obj, arg0.variantValue);
@@ -411,7 +411,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     isSelected: closure_0 === arg1,
                     disabled,
                     onSelect() {
-                      /* body not rendered: F143064 */
+                      /* body not rendered: F143266 */
                     },
                   };
                   return closure_1_4(closure_1_8, obj, arg0.variantValue);
@@ -449,13 +449,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 isSelected: closure_0 === arg1,
                 disabled,
                 onSelect() {
-                  /* body not rendered: F143064 */
+                  /* body not rendered: F143266 */
                 },
               };
               return closure_1_4(closure_1_8, obj, arg0.variantValue);
             }
           }
-          tmp12 = closure_4(selectedVariantIndex(4886).Text, obj6);
+          tmp12 = closure_4(selectedVariantIndex(4892).Text, obj6);
         }
         cResult[1] = product.variants;
         cResult[2] = selectedVariantIndex;

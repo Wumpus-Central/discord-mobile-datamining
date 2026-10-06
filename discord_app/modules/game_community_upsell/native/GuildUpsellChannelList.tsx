@@ -137,7 +137,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const GameCommunityAddServerEntryExperiment = tmp(13527).GameCommunityAddServerEntryExperiment;
+      const GameCommunityAddServerEntryExperiment = tmp(13543).GameCommunityAddServerEntryExperiment;
       const cardAction = GameCommunityAddServerEntryExperiment.useConfig(first).cardAction;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         items = [ConsentStore, LocalAppDetectionStore];
@@ -274,7 +274,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj3 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
-        let Text = tmp(4886).Text;
+        let Text = tmp(4892).Text;
         const string = tmp(1126).intl.string;
         class I {
           constructor() {

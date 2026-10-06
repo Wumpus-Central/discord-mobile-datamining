@@ -6,7 +6,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import Constants from "../../../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06147_LegacyBaseButton.js";
 import updateSharedValueIfChanged from "../../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import HappeningNowAnalytics from "HappeningNowAnalytics.tsx";
 import happeningNowRankingUtils from "happeningNowRankingUtils.tsx";
@@ -39,7 +39,7 @@ let metroImportAll;
 let metroImportDefault;
 let metroRequire;
 let obj2;
-const f72391 = (arg0, ref) => {
+const f72492 = (arg0, ref) => {
   const obj = react2;
   const cResult = obj.c(3);
   if (cResult[0] === arg0) {
@@ -57,7 +57,7 @@ const f72391 = (arg0, ref) => {
   cResult[2] = tmp6;
   tmp4 = tmp6;
 };
-const f72392 = (arg0, ref) => {
+const f72493 = (arg0, ref) => {
   const GestureDetector = LegacyBaseButton.GestureDetector;
   const merged = Object.assign(arg0);
   return <GestureDetector gesture={gesture}>{null}</GestureDetector>;
@@ -261,8 +261,8 @@ const gesture = NativeResult.disallowInterruption(true);
 const maintainVisibleContentPosition = { disabled: true };
 const forwardRef = react.forwardRef;
 let ReactCompilerGating = ReactCompilerGating_mod;
-forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? f72391 : f72392).displayName = "HappeningNowScrollView";
-const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? f72391 : f72392);
+forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? f72492 : f72493).displayName = "HappeningNowScrollView";
+const forwardRefResult = forwardRef(ReactCompilerGating.isReactCompilerEnabled() ? f72492 : f72493);
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? (isFocused, arg1) => {
@@ -425,7 +425,7 @@ const memoResult = memo(
           const obj3 = {
             withoutUserCards: "IconComponent",
             guildId: "Array",
-            showMultipleActivitiesPerChannel: 2897,
+            showMultipleActivitiesPerChannel: "SET_SOUNDPACK",
             isFocused,
           };
           cResult[0] = isFocused;
@@ -434,11 +434,11 @@ const memoResult = memo(
         } else {
           tmp6 = cResult[1];
         }
-        [arr, tmp10] = ref(isFocused(15985)(cards, tmp6), 2);
+        [arr, tmp10] = ref(isFocused(16024)(cards, tmp6), 2);
         dependencyMap = tmp10;
-        ref(isFocused(15985)(cards, tmp6), 2);
-        const tmp11 = isFocused(6657);
-        const analyticsLocations = tmp11(isFocused(6681).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
+        ref(isFocused(16024)(cards, tmp6), 2);
+        const tmp11 = isFocused(6664);
+        const analyticsLocations = tmp11(isFocused(6688).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
         ref = react.useRef(0);
         const obj4 = react;
         if (cResult[2] === arr) {
@@ -509,8 +509,8 @@ const memoResult = memo(
                     return obj.cardSize(listRef) === closure_1_8;
                   }
                 }
-                const first = tmp8(tmp7(15993)(num8, D), 2)[0];
-                ref(isFocused(15993)(num8, D), 2);
+                const first = tmp8(tmp7(16032)(num8, D), 2)[0];
+                ref(isFocused(16032)(num8, D), 2);
                 class S {
                   constructor() {
                     tmp = closure_1;
@@ -536,7 +536,7 @@ const memoResult = memo(
                     }
                   }
                   let result = obj6.filterHappeningNowCards(arr);
-                  const tmpResult = listRef(15992);
+                  const tmpResult = listRef(16031);
                   const result1 = tmpResult.sortHappeningNowCards(result);
                   class S {
                     constructor() {
@@ -565,7 +565,7 @@ const memoResult = memo(
                     }
                   }
                 }
-                const tmpResult3 = listRef(15993);
+                const tmpResult3 = listRef(16032);
                 const happeningNowScrollSnapping = tmpResult3.useHappeningNowScrollSnapping(listRef);
                 if (cResult[16] !== tmp10) {
                   class Y {
@@ -600,7 +600,7 @@ const memoResult = memo(
                     }
                   }
                 }
-                const tmpResult4 = listRef(4612);
+                const tmpResult4 = listRef(4618);
                 const sharedValue = tmpResult4.useSharedValue([]);
                 if (cResult[18] !== sharedValue) {
                   class X {
@@ -610,7 +610,7 @@ const memoResult = memo(
                       result = obj.updateSharedValueArrayIfChanged(
                         closure_6,
                         viewableItems.map(() => {
-                          /* body not rendered: F145401 */
+                          /* body not rendered: F145611 */
                         }),
                       );
                       return;
@@ -642,7 +642,7 @@ const memoResult = memo(
                       result = obj.updateSharedValueArrayIfChanged(
                         closure_6,
                         viewableItems.map(() => {
-                          /* body not rendered: F145401 */
+                          /* body not rendered: F145611 */
                         }),
                       );
                       return;
@@ -674,7 +674,7 @@ const memoResult = memo(
                       result = obj.updateSharedValueArrayIfChanged(
                         closure_6,
                         viewableItems.map(() => {
-                          /* body not rendered: F145401 */
+                          /* body not rendered: F145611 */
                         }),
                       );
                       return;
@@ -689,7 +689,7 @@ const memoResult = memo(
                       result = obj.updateSharedValueArrayIfChanged(
                         closure_6,
                         viewableItems.map(() => {
-                          /* body not rendered: F145401 */
+                          /* body not rendered: F145611 */
                         }),
                       );
                       return;
@@ -727,7 +727,7 @@ const memoResult = memo(
                       result = obj.updateSharedValueArrayIfChanged(
                         closure_6,
                         viewableItems.map(() => {
-                          /* body not rendered: F145401 */
+                          /* body not rendered: F145611 */
                         }),
                       );
                       return;
@@ -741,7 +741,7 @@ const memoResult = memo(
                         result = obj.updateSharedValueArrayIfChanged(
                           closure_6,
                           viewableItems.map(() => {
-                            /* body not rendered: F145401 */
+                            /* body not rendered: F145611 */
                           }),
                         );
                         return;
@@ -774,7 +774,7 @@ const memoResult = memo(
                         result = obj.updateSharedValueArrayIfChanged(
                           closure_6,
                           viewableItems.map(() => {
-                            /* body not rendered: F145401 */
+                            /* body not rendered: F145611 */
                           }),
                         );
                         return;
@@ -789,7 +789,7 @@ const memoResult = memo(
                         result = obj.updateSharedValueArrayIfChanged(
                           closure_6,
                           viewableItems.map(() => {
-                            /* body not rendered: F145401 */
+                            /* body not rendered: F145611 */
                           }),
                         );
                         return;
@@ -838,7 +838,7 @@ const memoResult = memo(
                   cResult[36] = Y;
                   cResult[37] = tmp25;
                   cResult[38] = tmp4.containerInner;
-                  cResult[39] = jsx(listRef(8371).FlashList, {
+                  cResult[39] = jsx(listRef(8404).FlashList, {
                     ref: listRef,
                     horizontal: true,
                     renderScrollComponent,
@@ -856,7 +856,7 @@ const memoResult = memo(
                     keyExtractor,
                     getItemType,
                   });
-                  const tmp41 = jsx(listRef(8371).FlashList, {
+                  const tmp41 = jsx(listRef(8404).FlashList, {
                     ref: listRef,
                     horizontal: true,
                     renderScrollComponent,
@@ -944,16 +944,19 @@ const memoResult = memo(
         const tmp2 = listRef;
         let obj = listRef(data[16]);
         const isFocused = obj.useIsFocused();
-        let obj2 = {
-          withoutUserCards: "IconComponent",
-          guildId: "Array",
-          showMultipleActivitiesPerChannel: 2897,
-          isFocused,
-        };
-        const tmp7 = ref(isFocused(data[17])(cards, obj2), 2);
+        const tmp7 = ref(
+          isFocused(data[17])(cards, {
+            withoutUserCards: "IconComponent",
+            guildId: "Array",
+            showMultipleActivitiesPerChannel: "SET_SOUNDPACK",
+            isFocused,
+          }),
+          2,
+        );
         data = tmp7[0];
         const tmp6 = ref;
         ref = tmp8;
+        let obj2 = ref;
         const tmp9 = isFocused(data[18]);
         const analyticsLocations = tmp9(isFocused(data[19]).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
         ref = ref.useRef(0);
@@ -979,7 +982,7 @@ const memoResult = memo(
           num = sharedValue * findIndexResult;
         }
         const items1 = [findIndexResult, num];
-        const callback = obj3.useCallback((arg0, arg1) => {
+        const callback = obj2.useCallback((arg0, arg1) => {
           let sum1;
           const sum = arg1 + arg0;
           if (sum < num) {
@@ -997,7 +1000,7 @@ const memoResult = memo(
           tmp18 = sharedValue;
         }
         const items2 = [data];
-        const memo = obj3.useMemo(() => {
+        const memo = obj2.useMemo(() => {
           const obj = happeningNowRankingUtils;
           const result = obj.filterHappeningNowCards(first);
           const obj2 = happeningNowRankingUtils;
@@ -1006,14 +1009,14 @@ const memoResult = memo(
         const items3 = [tmp7[1]];
         const tmp2Result = tmp2(data[21]);
         const happeningNowScrollSnapping = tmp2Result.useHappeningNowScrollSnapping(listRef);
-        const callback1 = obj3.useCallback((index) => {
+        const callback1 = obj2.useCallback((index) => {
           const obj = { index: index.index, loading, panelVariant: true };
           return renderCard(index.item, obj);
         }, items3);
         const tmp2Result2 = tmp2(data[22]);
         sharedValue = tmp2Result2.useSharedValue([]);
         const items4 = [sharedValue];
-        callback2 = obj3.useCallback((viewableItems) => {
+        callback2 = obj2.useCallback((viewableItems) => {
           viewableItems = viewableItems.viewableItems;
           const obj = updateSharedValueIfChanged;
           const result = obj.updateSharedValueArrayIfChanged(
@@ -1022,7 +1025,7 @@ const memoResult = memo(
           );
         }, items4);
         const items5 = [callback2];
-        const memo1 = obj3.useMemo(() => {
+        const memo1 = obj2.useMemo(() => {
           const obj = _mod12;
           return obj.debounce(callback2, 130);
         }, items5);
@@ -1034,10 +1037,10 @@ const memoResult = memo(
           return tmp27;
         }
         if (tmp7[1]) {
-          const obj5 = { index: 0, loading: tmp7[1], fullwidth: true, panelVariant: true };
+          const obj4 = { index: 0, loading: tmp7[1], fullwidth: true, panelVariant: true };
           tmp28Result = (
             <num style={tmp.loading}>
-              {renderCard(data.length > 0 ? data[0] : { kind: "placeholder", index: 0 }, obj5)}
+              {renderCard(data.length > 0 ? data[0] : { kind: "placeholder", index: 0 }, obj4)}
             </num>
           );
         } else {

@@ -12,7 +12,7 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ChevronSmallRightIcon2 from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
@@ -80,7 +80,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (dependencyMap) {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-        const tmp11 = asyncRequire(12981, dependencyMap.paths);
+        const tmp11 = asyncRequire(13000, dependencyMap.paths);
         const obj = {
           analyticsLocations: items,
           title: intl.string(intl3.t.XcOMLu),
@@ -720,7 +720,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               style: tmp10,
               children: tmp12,
             };
-            const tmp17 = closure_9(tmp(4886).Text, obj3);
+            const tmp17 = closure_9(tmp(4892).Text, obj3);
             cResult[13] = tmp10;
             cResult[14] = tmp12;
             cResult[15] = tmp17;
@@ -748,7 +748,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { color: "interactive-text-default", style: items1 };
         items1 = [,];
         ({ nitroIcon: arr[0], nitroIconSubscribeNow: arr[1] } = tmp4);
-        const tmp9 = closure_9(tmp(8313).NitroWheelIcon, obj5);
+        const tmp9 = closure_9(tmp(8346).NitroWheelIcon, obj5);
         cResult[3] = tmp4.nitroIcon;
         cResult[4] = tmp4.nitroIconSubscribeNow;
         cResult[5] = tmp9;

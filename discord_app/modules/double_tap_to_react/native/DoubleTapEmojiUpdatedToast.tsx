@@ -163,7 +163,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return url;
       }, items1);
       let str = "";
-      stateFromStores(6625);
+      stateFromStores(6632);
       if (null == emoji.id) {
         str = emoji.surrogates;
       }
@@ -256,15 +256,15 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
   let obj5;
   let obj9;
   emoji = emoji.emoji;
-  const obj = emoji(5770);
+  const obj = emoji(5777);
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4590).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4596).AccessibilityAnnouncer;
     const announce = AccessibilityAnnouncer.announce;
     const intl2 = tmp(1126).intl;
     const obj2 = { emojiName: emoji.name };
     announce(intl2.formatToPlainString(emoji(1126).t.nKY0Fl, obj2));
   } else {
-    const tmpResult = emoji(4574);
+    const tmpResult = emoji(4580);
     const designSystemsNotificationComponents = tmpResult.getDesignSystemsNotificationComponents(
       "showDoubleTapEmojiUpdatedToast",
     );

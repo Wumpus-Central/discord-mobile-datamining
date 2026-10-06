@@ -5,7 +5,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
 import TwoFASetupStyles from "TwoFASetupStyles.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/14572_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/14588_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";

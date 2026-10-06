@@ -16,7 +16,7 @@ import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCollectiblesDataDefault from "../hooks/useCollectiblesData.tsx";
 import CollectiblesBadges from "CollectiblesBadges.tsx";
-import AssetRegistryDefault from "../../../../_runtime/13011_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/13030_AssetRegistry.js";
 import _objectWithoutProperties_mod from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../_runtime/00019_react.js";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -156,7 +156,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 accessibilityState: tmp6,
                 children: tmp10,
               };
-              const tmp16 = closure_10(onPress(5909).PressableOpacity, obj3);
+              const tmp16 = closure_10(onPress(5916).PressableOpacity, obj3);
               cResult[14] = accessibilityLabel;
               cResult[15] = str;
               cResult[16] = tmp5;
@@ -347,7 +347,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp9 = closure_12();
       const tmp10 = analyticsLocations;
-      analyticsLocations = analyticsLocations(6657)(tmp4).analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)(tmp4).analyticsLocations;
       if (cResult[3] === analyticsLocations) {
         let tmp11;
         let tmp13;
@@ -360,7 +360,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         const optionCell = tmp9.optionCell;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          let obj2 = { source: tmp10(13012), size: require("native").IconSizes.LARGE };
+          let obj2 = { source: tmp10(13031), size: require("native").IconSizes.LARGE };
           const Icon = tmp(1188).Icon;
           const tmp15 = closure_10(Icon, obj2);
           cResult[6] = tmp15;
@@ -445,7 +445,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
       let analyticsLocations;
       const tmp2 = closure_12();
-      analyticsLocations = analyticsLocations(6657)(analyticsSource).analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)(analyticsSource).analyticsLocations;
       const items = [analyticsLocations, analyticsSource];
       let obj = {
         style: tmp2.optionCell,
@@ -460,7 +460,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         children: items1,
       };
       const merged1 = Object.assign(merged);
-      let obj2 = { source: analyticsLocations(13012), size: analyticsSource(1188).IconSizes.LARGE };
+      let obj2 = { source: analyticsLocations(13031), size: analyticsSource(1188).IconSizes.LARGE };
       const Icon = analyticsSource(1188).Icon;
       items1 = [closure_10(Icon, obj2), ,];
       let obj3 = {
@@ -469,11 +469,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp2.optionCellText,
         children: intl.string(analyticsSource(1126).t.pWG4ze),
       };
-      const Text = analyticsSource(4886).Text;
+      const Text = analyticsSource(4892).Text;
       intl = analyticsSource(1126).intl;
       items1[1] = closure_10(Text, obj3);
       const obj4 = { style: tmp2.newIcon };
-      items1[2] = closure_10(analyticsSource(8486).NewBadge, obj4);
+      items1[2] = closure_10(analyticsSource(8519).NewBadge, obj4);
       return closure_11(closure_13, obj);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

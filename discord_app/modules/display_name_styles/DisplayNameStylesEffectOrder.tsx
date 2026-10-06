@@ -15,7 +15,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let isDisplayNameStylesFlywheelSettersEnabled;
-      const obj = isDisplayNameStylesFlywheelSettersEnabled(9390);
+      const obj = isDisplayNameStylesFlywheelSettersEnabled(9404);
       isDisplayNameStylesFlywheelSettersEnabled = obj.useIsDisplayNameStylesFlywheelSettersEnabled("effect-order");
       items = [isDisplayNameStylesFlywheelSettersEnabled];
       return react.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items : EFFECT_ORDER), items);

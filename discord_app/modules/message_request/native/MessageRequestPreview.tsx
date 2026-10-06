@@ -46,7 +46,7 @@ const memoResult = react.memo(
         channel = channel.channel;
         const style = channel.style;
         const tmp4 = closure_9();
-        const obj2 = channel(12259);
+        const obj2 = channel(12274);
         const messageRequestPreview = obj2.useMessageRequestPreview(channel);
         const message = messageRequestPreview.message;
         ({ loaded, error } = messageRequestPreview);
@@ -660,7 +660,7 @@ const memoResult = react.memo(
         channel = channel.channel;
         const style = channel.style;
         const tmp = closure_9();
-        let obj = channel(12259);
+        let obj = channel(12274);
         const messageRequestPreview = obj.useMessageRequestPreview(channel);
         const message = messageRequestPreview.message;
         ({ loaded, error } = messageRequestPreview);
@@ -717,7 +717,7 @@ const memoResult = react.memo(
             }
             if (null != content) {
               if ("" !== message.content) {
-                const content1 = message(7531)(message, {
+                const content1 = message(7542)(message, {
                   noStyleAndInteraction: true,
                   allowGameMentions: true,
                 }).content;
@@ -731,7 +731,7 @@ const memoResult = react.memo(
               }
             }
             if (null != message) {
-              const tmp2Result = channel(5428);
+              const tmp2Result = channel(5435);
               if (tmp2Result.getMessageStickers(message).length > 0) {
                 const intl5 = tmp2(1126).intl;
                 let stringResult1 = intl5.string(tmp2(1126).t["zuI+by"]);

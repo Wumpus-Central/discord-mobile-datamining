@@ -207,7 +207,7 @@ obj = function _createOrder() {
             body = undefined;
             external_gateway_facet = 1;
             request_gateway_country_code = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === external_gateway_facet) {
           if (order_line_items === 1) {
@@ -452,7 +452,7 @@ obj = function _getOrCreateOrder() {
             value = undefined;
             purchase_type = 1;
             isGift = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === purchase_type) {
           if (arg0 === 1) {
@@ -571,7 +571,7 @@ obj = function _patchOrderLineItem() {
             body = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (orderId === 1) {
@@ -729,7 +729,7 @@ obj = function _patchOrder() {
             body = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (orderId === 1) {
@@ -885,7 +885,7 @@ obj = function _updateOrder() {
             body = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (orderId === 1) {

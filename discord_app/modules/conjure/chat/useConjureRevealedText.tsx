@@ -481,7 +481,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_3;
       let length;
       let tmp4;
-      const f126028 = () => ({ target, length: target.length });
+      const f126176 = () => ({ target, length: target.length });
       _require = target;
       streaming = streaming.streaming;
       dependencyMap = undefined;
@@ -497,15 +497,15 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         streaming = !obj.useStateFromStores(items, () => ref.useReducedMotion);
       }
       let obj2 = react;
-      [arr2, tmp4] = obj4(react.useState(f126028), 2);
+      [arr2, tmp4] = obj4(react.useState(f126176), 2);
       dependencyMap = tmp4;
-      const tmp3 = obj4(react.useState(f126028), 2);
+      const tmp3 = obj4(react.useState(f126176), 2);
       obj4 = arr2;
       let arr3 = arr2;
       if (arr2.target !== target) {
         let obj3 = { target, length };
         if (streaming) {
-          let tmpResult = tmp(16670);
+          let tmpResult = tmp(16689);
           length = tmpResult.reconcileRevealedLength(arr2.target, target, arr2.length);
         } else {
           length = target.length;

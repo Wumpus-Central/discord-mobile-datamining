@@ -89,8 +89,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = cResult[5];
       }
       let str2;
-      const useConjureRevealedText = projectId(16669).useConjureRevealedText;
-      projectId(16669);
+      const useConjureRevealedText = projectId(16688).useConjureRevealedText;
+      projectId(16688);
       if (stateFromStores != null) {
         str2 = stateFromStores.text;
       }
@@ -100,7 +100,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const text = useConjureRevealedText(str2, tmp12).text;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { size: "xs", color: ref(587).colors.TEXT_BRAND };
-        const LightbulbIcon = tmp(9957).LightbulbIcon;
+        const LightbulbIcon = tmp(9970).LightbulbIcon;
         const tmp17 = closure_7(LightbulbIcon, obj3);
         cResult[6] = tmp17;
         tmp14 = tmp17;
@@ -108,8 +108,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = cResult[6];
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { variant: "text-sm/semibold", color: "text-strong", children: intl.string(ref(3723).XXYIeI) };
-        const Text = tmp(4886).Text;
+        const obj4 = { variant: "text-sm/semibold", color: "text-strong", children: intl.string(ref(3753).XXYIeI) };
+        const Text = tmp(4892).Text;
         intl = tmp(1126).intl;
         const tmp21 = closure_7(Text, obj4);
         cResult[7] = tmp21;
@@ -168,7 +168,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { variant: "primary", shadow: "high", children: closure_8(closure_5, obj9) };
         obj9 = { style: tmp4.body, children: items3 };
         items3 = [tmp22, tmp26];
-        const Card = tmp(5995).Card;
+        const Card = tmp(6002).Card;
         const tmp37 = closure_7(Card, obj8);
         cResult[13] = tmp4.body;
         cResult[14] = tmp22;
@@ -189,13 +189,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return scrollToEndResult;
           },
-          children: closure_7(ref(16667), obj11),
+          children: closure_7(ref(16686), obj11),
         };
         obj11 = { source: text };
         tmp29 = closure_7(closure_4, obj10);
       } else {
-        const obj12 = { variant: "text-sm/normal", color: "text-muted", children: intl2.string(ref(3723).LfoD6c) };
-        const Text2 = tmp(4886).Text;
+        const obj12 = { variant: "text-sm/normal", color: "text-muted", children: intl2.string(ref(3753).LfoD6c) };
+        const Text2 = tmp(4892).Text;
         intl2 = tmp(1126).intl;
         tmp29 = closure_7(Text2, obj12);
       }
@@ -226,8 +226,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       let str;
-      const useConjureRevealedText = projectId(16669).useConjureRevealedText;
-      projectId(16669);
+      const useConjureRevealedText = projectId(16688).useConjureRevealedText;
+      projectId(16688);
       if (stateFromStores != null) {
         str = stateFromStores.text;
       }
@@ -240,12 +240,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj3 = { style: tmp.opaque, children: closure_7(Card, obj11) };
       const obj4 = { style: tmp.body, children: items3 };
       const obj5 = { style: tmp.header, children: items2 };
-      Card = tmp3(5995).Card;
+      Card = tmp3(6002).Card;
       const obj6 = { size: "xs", color: ref(587).colors.TEXT_BRAND };
-      const LightbulbIcon = tmp3(9957).LightbulbIcon;
+      const LightbulbIcon = tmp3(9970).LightbulbIcon;
       items2 = [closure_7(LightbulbIcon, obj6)];
-      const obj7 = { variant: "text-sm/semibold", color: "text-strong", children: intl.string(ref(3723).XXYIeI) };
-      const Text = tmp3(4886).Text;
+      const obj7 = { variant: "text-sm/semibold", color: "text-strong", children: intl.string(ref(3753).XXYIeI) };
+      const Text = tmp3(4892).Text;
       intl = tmp3(1126).intl;
       items2[1] = closure_7(Text, obj7);
       items3 = [closure_8(closure_5, obj5)];
@@ -262,13 +262,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return scrollToEndResult;
           },
-          children: closure_7(ref(16667), obj9),
+          children: closure_7(ref(16686), obj9),
         };
         obj9 = { source: text };
         tmp8Result = closure_7(closure_4, obj8);
       } else {
-        const obj10 = { variant: "text-sm/normal", color: "text-muted", children: intl2.string(ref(3723).LfoD6c) };
-        const Text2 = tmp3(4886).Text;
+        const obj10 = { variant: "text-sm/normal", color: "text-muted", children: intl2.string(ref(3753).LfoD6c) };
+        const Text2 = tmp3(4892).Text;
         intl2 = tmp3(1126).intl;
         tmp8Result = closure_7(Text2, obj10);
       }

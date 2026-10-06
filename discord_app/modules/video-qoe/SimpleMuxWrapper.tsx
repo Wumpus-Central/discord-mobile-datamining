@@ -2,7 +2,7 @@
 import logger_Logger from "../../../discord_common/js/packages/logger/Logger.tsx";
 import SessionManager2 from "utils/SessionManager.tsx";
 import MuxIntegration2 from "integrations/MuxIntegration.tsx";
-import _modDef14944 from "../../../_runtime/metro/14944__.js";
+import _modDef14959 from "../../../_runtime/metro/14959__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const logger = new logger_Logger.Logger("SimpleMuxWrapper");
@@ -36,7 +36,7 @@ class SimpleMuxWrapper {
       obj.Hls = self.hlsInstance.constructor;
     }
     try {
-      const obj2 = _modDef14944;
+      const obj2 = _modDef14959;
       obj2.monitor(self.videoElement, obj);
       self.isMonitoring = true;
     } catch (tmp4) {
@@ -48,8 +48,8 @@ class SimpleMuxWrapper {
     const self = this;
     if (this.isMonitoring) {
       try {
-        if (typeof _modDef14944.destroyMonitor === "function") {
-          const tmpResult = _modDef14944;
+        if (typeof _modDef14959.destroyMonitor === "function") {
+          const tmpResult = _modDef14959;
           tmpResult.destroyMonitor(self.videoElement);
         }
         self.isMonitoring = false;
@@ -62,8 +62,8 @@ class SimpleMuxWrapper {
     const self = this;
     if (this.isMonitoring) {
       try {
-        if (typeof _modDef14944.destroyMonitor === "function") {
-          const tmpResult = _modDef14944;
+        if (typeof _modDef14959.destroyMonitor === "function") {
+          const tmpResult = _modDef14959;
           tmpResult.destroyMonitor(self.videoElement);
         }
         self.isMonitoring = false;

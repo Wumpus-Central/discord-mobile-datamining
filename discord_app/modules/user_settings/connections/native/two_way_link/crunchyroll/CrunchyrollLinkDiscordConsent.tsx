@@ -61,7 +61,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = callbackState;
       cResult[6] = L;
       cResult[7] = tmp5;
-      cResult[8] = jsx(navigation(8750).TwoWayLinkDiscordConsent, {
+      cResult[8] = jsx(navigation(8782).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.CRUNCHYROLL,
         callbackCode,
         callbackState,
@@ -70,7 +70,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         onNext: tmp5,
         onError: L,
       });
-      jsx(navigation(8750).TwoWayLinkDiscordConsent, {
+      jsx(navigation(8782).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.CRUNCHYROLL,
         callbackCode,
         callbackState,
@@ -95,7 +95,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = react.useCallback(() => {
         navigation.push(constants.ERROR);
       }, items1);
-      return jsx(navigation(8750).TwoWayLinkDiscordConsent, {
+      return jsx(navigation(8782).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.CRUNCHYROLL,
         callbackCode,
         callbackState,

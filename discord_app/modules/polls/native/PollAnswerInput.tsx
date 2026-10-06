@@ -423,7 +423,7 @@ export default function PollAnswerInput(answer) {
         onRemoveAnswerImage,
         openExpressionPicker,
       };
-      obj.openLazy(asyncRequire(11856, dependencyMap.paths), authStore, obj2);
+      obj.openLazy(asyncRequire(11870, dependencyMap.paths), authStore, obj2);
     },
     iconSrc: index(channelId[21]),
     containerStyle: tmp.defaultImageContainer,

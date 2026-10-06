@@ -4,8 +4,8 @@ import intl4 from "../../../../intl/index.native.tsx";
 import FileUtils from "../../../../utils/FileUtils.tsx";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/07826_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/07827_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/07837_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/07838_AssetRegistry.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const MessageFailureState = RowGeneratorConstants.MessageFailureState;

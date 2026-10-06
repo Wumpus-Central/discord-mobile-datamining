@@ -23,7 +23,7 @@ let obj2;
 let obj3;
 let obj4;
 let obj5;
-const f109170 = (choice, originalIndex) => ({ choice, originalIndex });
+const f109323 = (choice, originalIndex) => ({ choice, originalIndex });
 let length = ["scrollable"];
 let _slicedToArray = _slicedToArray_mod;
 let react = react_mod;
@@ -133,7 +133,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (choices == null) {
             choices = [];
           }
-          return choices.map(f109170);
+          return choices.map(f109323);
         };
         cResult[2] = option.choices;
         cResult[3] = fn;
@@ -276,7 +276,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (choices == null) {
           choices = [];
         }
-        return choices.map(f109170);
+        return choices.map(f109323);
       });
       [first1, react] = react.useState(initChoiceIndex);
       let items = [option.choices];
@@ -346,14 +346,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { option, startExpanded: tmp13, onDismiss, scrollable: tmp13, children: items3 };
       let tmp16 = tmp13;
       length = data.length;
-      const AppLauncherCommandOptionActionSheet = tmp3(11791).AppLauncherCommandOptionActionSheet;
+      const AppLauncherCommandOptionActionSheet = tmp3(11805).AppLauncherCommandOptionActionSheet;
       if (tmp13) {
         const obj3 = { onChange: callback };
-        tmp16 = closure_9(tmp3(11789).AppLauncherListSearchBar, obj3);
+        tmp16 = closure_9(tmp3(11803).AppLauncherListSearchBar, obj3);
       }
       items3 = [tmp16];
       if (0 === length) {
-        tmp20 = closure_9(tmp3(11789).AppLauncherListEmptyState, {});
+        tmp20 = closure_9(tmp3(11803).AppLauncherListEmptyState, {});
       } else {
         const obj4 = {
           scrollable: tmp13,

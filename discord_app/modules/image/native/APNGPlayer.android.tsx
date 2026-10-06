@@ -180,7 +180,7 @@ const forwardRefResult = forwardRef(
           }
           return tmp12;
         }
-        ref(8465);
+        ref(8498);
         const merged = Object.assign(tmp4);
         const tmp15 = <tmp13 ref={ref} onLoad={tmp9} />;
         cResult[6] = tmp9;
@@ -226,7 +226,7 @@ const forwardRefResult = forwardRef(
             }
           },
         }));
-        ref(8465);
+        ref(8498);
         const merged1 = Object.assign(merged);
         return <tmp5 ref={ref} onLoad={callback} />;
       },

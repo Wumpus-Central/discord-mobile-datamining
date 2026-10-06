@@ -38,9 +38,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let controlledSetting;
-      let obj = controlledSetting(8297);
+      let obj = controlledSetting(8330);
       const selectedTeenId = obj.useSelectedTeenId();
-      const ParentalControlledFriendSourceFlags = controlledSetting(14626).ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = controlledSetting(14642).ParentalControlledFriendSourceFlags;
       controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
       const items = [controlledSetting];
       return react.useMemo(() => {

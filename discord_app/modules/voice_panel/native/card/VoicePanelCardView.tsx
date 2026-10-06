@@ -7,7 +7,7 @@ import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/d
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import CallConstants from "../../../calls/CallConstants.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import react3 from "../../../../../_runtime/05738_react.js";
+import react3 from "../../../../../_runtime/05745_react.js";
 import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import cheapWorkletShallowEqual2 from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
@@ -481,7 +481,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = dependencyMap;
       const obj = mode(576);
       const cResult = obj.c(6);
-      const obj2 = mode(17207);
+      const obj2 = mode(17236);
       mode = obj2.usePIPState().mode;
       const ref = react.useRef(mode === VoicePanelPIPModes.IN_APP);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -508,7 +508,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           tmp8 = cResult[5];
         }
         const effect = react.useEffect(tmp7, tmp8);
-        const tmp11 = mode === VoicePanelPIPModes.IN_APP && ref(5973)(ref);
+        const tmp11 = mode === VoicePanelPIPModes.IN_APP && ref(5980)(ref);
         return tmp11;
       }
       const fn = function l() {
@@ -537,7 +537,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let closure_2;
       let mode;
-      const obj = mode(17207);
+      const obj = mode(17236);
       mode = obj.usePIPState().mode;
       const ref = react.useRef(mode === VoicePanelPIPModes.IN_APP);
       dependencyMap = _slicedToArray(react.useState({}), 2)[1];
@@ -560,7 +560,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           ref.current = false;
         }
       }, items);
-      const tmp3 = mode === VoicePanelPIPModes.IN_APP && ref(5973)(ref);
+      const tmp3 = mode === VoicePanelPIPModes.IN_APP && ref(5980)(ref);
       return tmp3;
     };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -635,9 +635,9 @@ const memoResult = react.memo(
         let obj = channelId(576);
         const cResult = obj.c(11);
         viewableChunks = viewableChunks.viewableChunks;
-        channelId = react.useContext(stateFromStoresArray(11901)).channelId;
+        channelId = react.useContext(stateFromStoresArray(11915)).channelId;
         const tmp4 = closure_23(viewableChunks);
-        const obj3 = channelId(17301);
+        const obj3 = channelId(17329);
         const chunkedParticipants = obj3.useChunkedParticipants(channelId, tmp4);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ChannelRTCStore];

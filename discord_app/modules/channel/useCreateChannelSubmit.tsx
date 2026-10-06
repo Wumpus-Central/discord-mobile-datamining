@@ -92,7 +92,7 @@ export default function useCreateChannelSubmit(arg0) {
             guild_id = undefined;
             c7 = 1;
             applicationId = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (permissionOverwrites === 1) {

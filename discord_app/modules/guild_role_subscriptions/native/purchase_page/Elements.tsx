@@ -8,7 +8,7 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import NativePaymentHooksDefault from "../../../payments/native/hooks/NativePaymentHooks.android.tsx";
 import useStoreFrontPriceDefault from "../../../billing/native/subscription/useStoreFrontPrice.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16498_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/16538_AssetRegistry.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
@@ -371,7 +371,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           const _HermesInternal = HermesInternal;
           str = "" + tmp11 + "/mo.";
         }
-        const tmpResult2 = first(6736);
+        const tmpResult2 = first(6750);
         const formatPriceResult = tmpResult2.formatPrice(price.amount, price.currency);
         cResult[3] = price.amount;
         cResult[4] = price.currency;
@@ -394,7 +394,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = _require;
       if (null != price) {
         const _HermesInternal = HermesInternal;
-        const tmp3Result = tmp3(6736);
+        const tmp3Result = tmp3(6750);
         str = "" + tmp3Result.formatPrice(price.amount, price.currency) + "/mo.";
       }
       return str;

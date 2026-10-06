@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       submitting = submitting.submitting;
       const style = submitting.style;
       const tmp4 = closure_4();
-      const obj2 = submitting(4612);
+      const obj2 = submitting(4618);
       class S {
         constructor() {
           tmp = closure_0;
@@ -45,13 +45,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       S.__closure = {
-        withSpring: submitting(5597).withSpring,
+        withSpring: submitting(5604).withSpring,
         submitting,
-        SUBTLE_SPRING: submitting(5598).SUBTLE_SPRING,
+        SUBTLE_SPRING: submitting(5605).SUBTLE_SPRING,
       };
       S.__workletHash = 17050905766844;
       S.__initData = __initData;
-      ({ withSpring: submitting(5597).withSpring, submitting, SUBTLE_SPRING: submitting(5598).SUBTLE_SPRING });
+      ({ withSpring: submitting(5604).withSpring, submitting, SUBTLE_SPRING: submitting(5605).SUBTLE_SPRING });
       const animatedStyle = obj2.useAnimatedStyle(S);
       if (cResult[0] === animatedStyle) {
         if (cResult[1] === style) {
@@ -61,7 +61,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             tmp6 = cResult[3];
           }
           if (cResult[4] !== submitting) {
-            const tmp8 = submitting && jsx(tmp(5609).Ellipsis, { variant: "active", size: "md" });
+            const tmp8 = submitting && jsx(tmp(5616).Ellipsis, { variant: "active", size: "md" });
             let num = 4;
             cResult[4] = submitting;
             cResult[5] = tmp8;
@@ -108,7 +108,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       submitting = submitting.submitting;
       const style = submitting.style;
       const tmp = closure_4();
-      let obj = submitting(4612);
+      let obj = submitting(4618);
       const fn = function u() {
         let num = 0;
         const withSpring = spring.withSpring;
@@ -120,18 +120,18 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       fn.__closure = {
-        withSpring: submitting(5597).withSpring,
+        withSpring: submitting(5604).withSpring,
         submitting,
-        SUBTLE_SPRING: submitting(5598).SUBTLE_SPRING,
+        SUBTLE_SPRING: submitting(5605).SUBTLE_SPRING,
       };
       fn.__workletHash = 15672049349439;
       fn.__initData = __initData2;
-      ({ withSpring: submitting(5597).withSpring, submitting, SUBTLE_SPRING: submitting(5598).SUBTLE_SPRING });
+      ({ withSpring: submitting(5604).withSpring, submitting, SUBTLE_SPRING: submitting(5605).SUBTLE_SPRING });
       const animatedStyle = obj.useAnimatedStyle(fn);
       const items = [style, tmp.ellipsis, animatedStyle];
       const View = ReanimatedRexportDefault.View;
       if (submitting) {
-        submitting = jsx(tmp2(5609).Ellipsis, { variant: "active", size: "md" });
+        submitting = jsx(tmp2(5616).Ellipsis, { variant: "active", size: "md" });
       }
       return <View style={items}>{submitting}</View>;
     };

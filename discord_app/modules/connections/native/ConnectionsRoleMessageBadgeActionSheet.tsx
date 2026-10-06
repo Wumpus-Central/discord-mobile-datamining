@@ -280,7 +280,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       _slicedToArray = groupByResult;
       const keys = Object.keys(groupByResult);
       let closure_4 = keys.length - 1;
-      let obj3 = guildId(4580);
+      let obj3 = guildId(4586);
       const roleColor = obj3.useToken(nativeDefault.unsafe_rawColors.GREEN_330);
       const mapped = keys.map(function (item, index) {
         let icon;
@@ -353,7 +353,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             style: closure_1.popoutCheckGroupPlatformIcon,
             user: tmp7,
             size: native.AvatarSizes.XSMALL,
-            guildId: "a",
+            guildId: "Array",
           };
           const Avatar = native.Avatar;
           tmp25 = authStore3(Avatar, obj7);
@@ -426,7 +426,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let c3 = groupByResult;
       const keys = Object.keys(groupByResult);
       let closure_4 = keys.length - 1;
-      let obj2 = guildId(4580);
+      let obj2 = guildId(4586);
       const roleColor = obj2.useToken(nativeDefault.unsafe_rawColors.GREEN_330);
       let obj3 = {
         children: keys.map(function (item, index) {
@@ -500,7 +500,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               style: closure_1.popoutCheckGroupPlatformIcon,
               user: tmp7,
               size: native.AvatarSizes.XSMALL,
-              guildId: "a",
+              guildId: "Array",
             };
             const Avatar = native.Avatar;
             tmp25 = authStore3(Avatar, obj7);

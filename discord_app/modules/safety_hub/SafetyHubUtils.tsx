@@ -2,7 +2,7 @@
 import get_initialized from "../../../discord_common/js/packages/flux/index.tsx";
 import react from "../../../_runtime/00576_react.js";
 import intl5 from "../../intl/index.native.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import MediaFormatTesters from "../messages/MediaFormatTesters.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -95,8 +95,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  const obj = _modDef4461();
-  return obj.to(_modDef4461(timestamp));
+  const obj = _modDef4467();
+  return obj.to(_modDef4467(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   let num;

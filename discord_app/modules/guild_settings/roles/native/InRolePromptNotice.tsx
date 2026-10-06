@@ -6,7 +6,7 @@ import Constants from "../../../../Constants.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04808_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04814_AssetRegistry.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildSettingsUtils from "../../GuildSettingsUtils.tsx";
 import react from "../../../../../_runtime/00019_react.js";

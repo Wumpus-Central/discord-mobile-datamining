@@ -298,9 +298,9 @@ const memoResult = react.memo(
         const cResult = obj.c(14);
         product = product.product;
         const tmp2 = closure_6();
-        const obj2 = defaultVariantIndex(8419);
+        const obj2 = defaultVariantIndex(8452);
         defaultVariantIndex = obj2.useDefaultVariantIndex(product);
-        const obj3 = defaultVariantIndex(7064);
+        const obj3 = defaultVariantIndex(7077);
         if (obj3.getIsVariantProduct(product)) {
           let tmp7;
           let num3 = 3;
@@ -387,9 +387,9 @@ const memoResult = react.memo(
         product = product.product;
         let defaultVariantIndex;
         const tmp = closure_6();
-        let obj = defaultVariantIndex(8419);
+        let obj = defaultVariantIndex(8452);
         defaultVariantIndex = obj.useDefaultVariantIndex(product);
-        const obj2 = defaultVariantIndex(7064);
+        const obj2 = defaultVariantIndex(7077);
         if (obj2.getIsVariantProduct(product)) {
           let num3 = 3;
           if (product.variants.length <= 4) {

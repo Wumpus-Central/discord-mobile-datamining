@@ -218,7 +218,7 @@ obj = function _authenticateStripePaymentIntent() {
     }
     await "IconComponent";
     ({ client_secret: c0, payment_method_id: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

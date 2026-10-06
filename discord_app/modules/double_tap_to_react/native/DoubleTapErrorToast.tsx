@@ -68,9 +68,9 @@ export const showDoubleTapErrorToast = function showDoubleTapErrorToast(emojiNam
   emojiName = emojiName.emojiName;
   const reason = emojiName.reason;
   const tmp = emojiName;
-  let obj = emojiName(4574);
+  let obj = emojiName(4580);
   const designSystemsNotificationComponents = obj.getDesignSystemsNotificationComponents("showDoubleTapErrorToast");
-  const obj2 = reason(4568);
+  const obj2 = reason(4574);
   if (designSystemsNotificationComponents) {
     let stringResult;
     const openMana = obj2.openMana;

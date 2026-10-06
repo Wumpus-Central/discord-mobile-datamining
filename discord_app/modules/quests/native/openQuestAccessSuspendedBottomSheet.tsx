@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting("modules/quests/native/openQuestAccess
 
 export default function openQuestAccessSuspendedBottomSheet() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(14922, dependencyMap.paths), QuestAccessSuspendedBottomSheet, {});
+  obj.openLazy(asyncRequire(14937, dependencyMap.paths), QuestAccessSuspendedBottomSheet, {});
 }
 export const ACTION_SHEET_KEY = "QuestAccessSuspendedBottomSheet";

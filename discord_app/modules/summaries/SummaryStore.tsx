@@ -4,7 +4,7 @@ import _modDef12 from "../../../_runtime/metro/00012__.js";
 import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import _mod9496 from "../autocompleter/index.tsx";
+import _mod9509 from "../autocompleter/index.tsx";
 import SummaryConstants from "SummaryConstants.tsx";
 import ChannelSummariesExperiment from "../../experiments/ChannelSummariesExperiment.tsx";
 import Summary from "Summary.tsx";
@@ -25,7 +25,7 @@ let closure_18, dependencyMap, findIndexResult, flag, startId;
 function handleQuickSwitcherUpdate() {
   const results = QuickSwitcherStore.getProps().results;
   const found = results.filter((type) => {
-    const tmp = type.type === _mod9496.AutocompleterResultTypes.TEXT_CHANNEL && 0 === type.record.type;
+    const tmp = type.type === _mod9509.AutocompleterResultTypes.TEXT_CHANNEL && 0 === type.record.type;
     return tmp;
   });
   closure_24 = found.map((record) => record.record.id);

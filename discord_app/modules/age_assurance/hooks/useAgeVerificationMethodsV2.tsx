@@ -21,7 +21,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
   let tmp2;
   let tmp4;
   let tmp6;
-  const f96423 = () => callback.methodsV2OutageBannerMessage;
+  const f96603 = () => callback.methodsV2OutageBannerMessage;
   const tmp = _slicedToArray(
     react.useState(() => {
       let methodsV2 = callback.methodsV2;
@@ -38,8 +38,8 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
     2,
   );
   [tmp4, importDefault] = tmp3;
-  [tmp6, dependencyMap] = react.useState(f96423);
-  _slicedToArray(react.useState(f96423), 2);
+  [tmp6, dependencyMap] = react.useState(f96603);
+  _slicedToArray(react.useState(f96603), 2);
   [first, _asyncToGenerator] = react.useState(() => null == callback.methodsV2);
   [first1, _slicedToArray] = react.useState(false);
   react = react.useRef(true);

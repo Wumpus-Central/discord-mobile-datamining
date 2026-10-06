@@ -215,7 +215,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return obj5;
       }
-      obj5 = { previewUrl: "Set", isLoading: true };
+      obj5 = { previewUrl: "Reflect", isLoading: true };
     };
 const result = size.fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");
 

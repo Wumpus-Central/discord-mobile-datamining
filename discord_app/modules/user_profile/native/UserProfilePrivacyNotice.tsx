@@ -299,7 +299,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp21 = cResult[15];
         }
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         const text = tmp4.text;
         const intl = tmp(1126).intl;
         const obj7 = { privacySettingsLink: first1 };

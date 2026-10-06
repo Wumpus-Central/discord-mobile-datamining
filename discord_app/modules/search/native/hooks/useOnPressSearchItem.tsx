@@ -31,7 +31,7 @@ let closure_15;
 let closure_16;
 let map1;
 let metroImportAll;
-const f146646 = async (arg0) => {
+const f146863 = async (arg0) => {
   let guildId = arg0;
   let c2 = 0;
   let c3 = 0;
@@ -874,7 +874,7 @@ const tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = searchContext(callback[19]);
       navigation = obj2.useNavigation();
       const useCallback = react.useCallback;
-      let closure_0 = _asyncToGenerator(f146646);
+      let closure_0 = _asyncToGenerator(f146863);
       callback = useCallback(function () {
         return closure_0(...arguments);
       }, []);
@@ -921,7 +921,7 @@ const tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       obj = searchContext(callback[19]);
       navigation = obj.useNavigation();
       const useCallback = react.useCallback;
-      let closure_0 = _asyncToGenerator(f146646);
+      let closure_0 = _asyncToGenerator(f146863);
       callback = useCallback(function () {
         return closure_0(...arguments);
       }, []);

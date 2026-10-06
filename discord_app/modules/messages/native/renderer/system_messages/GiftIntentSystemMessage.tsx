@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07608_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/07619_AssetRegistry.js";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import GiftIntentEmbed from "../row_data/embeds/GiftIntentEmbed.tsx";
 import EphemeralIndication from "../row_data/EphemeralIndication.tsx";

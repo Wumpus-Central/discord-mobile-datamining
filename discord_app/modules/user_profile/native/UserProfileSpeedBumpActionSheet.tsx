@@ -8,7 +8,7 @@ import TableRow2 from "../../../design/components/TableRow/native/TableRow.nativ
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import Constants2 from "../Constants.tsx";
-import AssetRegistryDefault from "../../../../_runtime/07856_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/07867_AssetRegistry.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
@@ -95,7 +95,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             stringResult = intl2.string(tmp(1126).t.W6fjkS);
           }
           items[1] = obj3;
-          const TableRowGroup = tmp(6074).TableRowGroup;
+          const TableRowGroup = tmp(6081).TableRowGroup;
           const mapped = items.map((icon, index) => {
             let Icon;
             let obj2;
@@ -175,7 +175,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_12(TableRow, obj, index);
           }),
         };
-        const TableRowGroup = tmp4(6074).TableRowGroup;
+        const TableRowGroup = tmp4(6081).TableRowGroup;
         return closure_12(TableRowGroup, obj3);
       } else {
         throw new TypeError("Trying to call a non-function");

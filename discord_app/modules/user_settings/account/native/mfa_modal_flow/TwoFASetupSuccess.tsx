@@ -7,7 +7,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import NativeCeremoniesDefault from "../../../../webauthn/native/NativeCeremonies.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import AssetRegistry from "../../../../../../_runtime/14578_AssetRegistry.js";
+import AssetRegistry from "../../../../../../_runtime/14594_AssetRegistry.js";
 import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
@@ -440,7 +440,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             await "IconComponent";
             ({ ticket: c0, credential: c1 } = closure_0);
-            return "Set";
+            return "Reflect";
           });
           return obj(...arguments);
         };

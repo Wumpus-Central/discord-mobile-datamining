@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileUpsellCard.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import Constants from "Constants.tsx";
 import ColorConstants from "../../colors/native/ColorConstants.tsx";
 import react from "../../../../_runtime/00019_react.js";
@@ -151,10 +151,10 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj3 = { style: tmp4.titleContainer, children: items1 };
               const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-              const NitroWheelIcon = tmp(8313).NitroWheelIcon;
+              const NitroWheelIcon = tmp(8346).NitroWheelIcon;
               items1 = [closure_6(NitroWheelIcon, obj4)];
               const obj5 = { variant: "heading-sm/bold", children: headerText };
-              items1[1] = closure_6(tmp(4886).Text, obj5);
+              items1[1] = closure_6(tmp(4892).Text, obj5);
               tmp9 = closure_7(closure_3, obj3);
             }
             cResult[9] = headerText;
@@ -217,7 +217,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != headerText) {
         const obj3 = { style: tmp.titleContainer, children: items3 };
         const obj4 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-        const NitroWheelIcon = tmp3(8313).NitroWheelIcon;
+        const NitroWheelIcon = tmp3(8346).NitroWheelIcon;
         items3 = [closure_6(NitroWheelIcon, obj4)];
         const obj5 = { variant: "heading-sm/bold", children: headerText };
         items3[1] = closure_6(require("Text/Text").Text, obj5);

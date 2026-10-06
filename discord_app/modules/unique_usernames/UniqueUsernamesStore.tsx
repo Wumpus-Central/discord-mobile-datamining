@@ -14,7 +14,7 @@ let obj = { validations: tmp2, currentUsernameInvalid: false, retryAfterTime: nu
 tmp2 = new LRUCacheDefault({ max: 100, maxAge: 60000 });
 obj2 = {
   migration: { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false },
-  registration: { suggestion: { username: "r" }, source: "Set", fetched: null },
+  registration: { suggestion: { username: "r" }, source: "Reflect", fetched: null },
 };
 const Store = get_initializedDefault.Store;
 class UniqueUsernamesStore extends Store {
@@ -96,7 +96,7 @@ const obj3 = {
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
     obj.suggestions.migration = { suggestion: { username: "r" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = { suggestion: { username: "r" }, source: "Set", fetched: null };
+    obj.suggestions.registration = { suggestion: { username: "r" }, source: "Reflect", fetched: null };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

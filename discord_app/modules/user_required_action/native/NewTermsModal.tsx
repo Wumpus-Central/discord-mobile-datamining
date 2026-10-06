@@ -5,7 +5,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import showSimpleActionSheet2 from "../../action_sheet/native/showSimpleActionSheet.tsx";
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09290_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/09325_AssetRegistry.js";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -112,8 +112,8 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       [r10034, importDefault] = react.useState(false);
       _slicedToArray(react.useState(false), 2);
-      const tmpResult = tmp(6016);
-      tmpResult.useNavigatorBackPressHandler(tmp(5780).BackPressHandler.minimize);
+      const tmpResult = tmp(6023);
+      tmpResult.useNavigatorBackPressHandler(tmp(5787).BackPressHandler.minimize);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         required_action = _asyncToGenerator(async () => {
           let closure_1;
@@ -283,8 +283,8 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const bottom = rect.bottom;
       const memo = react.useMemo(() => action.getAction(), []);
       [first, importDefault] = react.useState(false);
-      let obj = memo(6016);
-      obj.useNavigatorBackPressHandler(memo(5780).BackPressHandler.minimize);
+      let obj = memo(6023);
+      obj.useNavigatorBackPressHandler(memo(5787).BackPressHandler.minimize);
       dependencyMap = react.useCallback(
         _asyncToGenerator(async () => {
           let closure_0;
@@ -367,7 +367,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           variant: "heading-xxl/bold",
           children: intl.string(memo(1126).t["7glvXu"]),
         };
-        const Text = tmp7(4886).Text;
+        const Text = tmp7(4892).Text;
         intl = tmp7(1126).intl;
         items2 = [closure_12(Text, obj6), , , , , ,];
         const obj7 = {
@@ -375,27 +375,27 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.description,
           children: intl2.format(memo(1126).t.CN0Hvb, obj8),
         };
-        const Text2 = tmp7(4886).Text;
+        const Text2 = tmp7(4892).Text;
         intl2 = tmp7(1126).intl;
         obj8 = { url: constants.TERMS_SUMMARY };
         items2[1] = closure_12(Text2, obj7);
         const obj9 = { variant: "text-md/normal", children: intl3.format(memo(1126).t.iw0hFi, obj10) };
-        const Text3 = tmp7(4886).Text;
+        const Text3 = tmp7(4892).Text;
         intl3 = tmp7(1126).intl;
         obj10 = { url: constants.TERMS };
         items2[2] = closure_12(Text3, obj9);
         const obj11 = { variant: "text-md/normal", children: intl4.format(memo(1126).t["36klnD"], obj12) };
-        const Text4 = tmp7(4886).Text;
+        const Text4 = tmp7(4892).Text;
         intl4 = tmp7(1126).intl;
         obj12 = { url: constants.PAID_TERMS };
         items2[3] = closure_12(Text4, obj11);
         const obj13 = { variant: "text-md/normal", children: intl5.format(memo(1126).t.TquFBF, obj14) };
-        const Text5 = tmp7(4886).Text;
+        const Text5 = tmp7(4892).Text;
         intl5 = tmp7(1126).intl;
         obj14 = { url: constants.PRIVACY };
         items2[4] = closure_12(Text5, obj13);
         const obj15 = { variant: "text-md/normal", children: intl6.format(memo(1126).t.ia96Tb, obj16) };
-        const Text6 = tmp7(4886).Text;
+        const Text6 = tmp7(4892).Text;
         intl6 = tmp7(1126).intl;
         obj16 = { url: constants.GUIDELINES };
         items2[5] = closure_12(Text6, obj15);
@@ -404,7 +404,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.agreementDescription,
           children: intl7.string(memo(1126).t["+USXQE"]),
         };
-        const Text7 = tmp7(4886).Text;
+        const Text7 = tmp7(4892).Text;
         intl7 = tmp7(1126).intl;
         items2[6] = closure_12(Text7, obj17);
         items3 = [closure_13(closure_8, obj5), ,];
@@ -418,7 +418,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           },
           text: intl8.string(memo(1126).t["+TBKL1"]),
         };
-        Button = tmp7(5594).Button;
+        Button = tmp7(5601).Button;
         intl8 = tmp7(1126).intl;
         items3[1] = closure_12(closure_6, obj18);
         const obj20 = {

@@ -76,7 +76,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         hasItem = PermissionStore.can(constants2.KICK_MEMBERS, stateFromStores);
       }
       if (hasItem) {
-        const tmpResult = tmp(5842);
+        const tmpResult = tmp(5849);
         hasItem = tmpResult.guildHasVerificationGate(stateFromStores);
       }
       return hasItem;

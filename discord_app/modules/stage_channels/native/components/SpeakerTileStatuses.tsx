@@ -4,8 +4,8 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06457_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/09736_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06464_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09749_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import VoiceStateStore from "../../../../stores/VoiceStateStore.tsx";
@@ -152,7 +152,7 @@ const memoResult = memo(
                 return MediaEngineStore.isLocalMute(userId);
               }
             }
-            tmp15 = channelId(9691);
+            tmp15 = channelId(9704);
           } else {
             class S {
               constructor() {
@@ -216,15 +216,15 @@ const memoResult = memo(
           flag2 = false;
         }
         if (stateFromStores) {
-          tmp5 = channelId(9691);
+          tmp5 = channelId(9704);
           flag3 = true;
         } else if (flag2) {
-          tmp5 = channelId(9126);
+          tmp5 = channelId(9161);
           flag3 = false;
         } else {
           flag3 = false;
           if (flag) {
-            tmp5 = channelId(4819);
+            tmp5 = channelId(4825);
             flag3 = false;
           }
         }
@@ -271,7 +271,7 @@ const memo2Result = memo2(
           let tmp9;
           const tmpResult = userId(504);
           if (tmpResult.useStateFromStores(first, tmp7, tmp8)) {
-            tmp9 = channelId(9735);
+            tmp9 = channelId(9748);
           }
           let tmp11 = null;
           if (null != tmp9) {
@@ -338,7 +338,7 @@ const memo2Result = memo2(
         const tmp = closure_8();
         const obj = userId(504);
         if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
-          tmp4 = channelId(9735);
+          tmp4 = channelId(9748);
         }
         let tmp6 = null;
         if (null != tmp4) {

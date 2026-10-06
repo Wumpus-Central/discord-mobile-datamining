@@ -105,7 +105,7 @@ const memoResult = memo(
           tmp11 = cResult[14];
         }
         _require = tmp11;
-        const TableRadioGroup = tmp(6072).TableRadioGroup;
+        const TableRadioGroup = tmp(6079).TableRadioGroup;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
           const stringResult = intl.string(require("intl").t.H4mGfI);
@@ -160,7 +160,7 @@ const memoResult = memo(
         const autoArchiveOptions = obj.getAutoArchiveOptions();
         _require = null != channel && channel.isForumPost() && channel.hasFlag(ChannelFlags.PINNED);
         const hasFlagResult = null != channel && channel.isForumPost() && channel.hasFlag(ChannelFlags.PINNED);
-        const TableRadioGroup = tmp(6072).TableRadioGroup;
+        const TableRadioGroup = tmp(6079).TableRadioGroup;
         const intl = tmp(1126).intl;
         return (
           <TableRadioGroup

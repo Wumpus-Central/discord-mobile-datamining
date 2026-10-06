@@ -298,7 +298,7 @@ const memoResult = react.memo(
                   tmp44 = tmp47;
                 }
                 const obj6 = { disabled: !tmp8, initialValue: ref, onValueChange: tmp39 };
-                const tmp43 = closure_8(first1(15843), obj6);
+                const tmp43 = closure_8(first1(15882), obj6);
                 cResult[23] = !tmp8;
                 cResult[24] = tmp39;
                 cResult[25] = tmp43;
@@ -449,7 +449,7 @@ const memoResult = react.memo(
           style: visualEffectViewOverrideSharedStyles.zeroPaddingHorizontal,
           disabled: !tmp7,
           label: "Blur Tint Opacity " + str2,
-          subLabel: closure_8(backgroundColor(15843), obj9),
+          subLabel: closure_8(backgroundColor(15882), obj9),
         };
         str2 = undefined;
         const FormRow3 = Form.FormRow;

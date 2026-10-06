@@ -6,7 +6,7 @@ import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import GuildScheduledEventsConstants from "../GuildScheduledEventsConstants.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04808_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04814_AssetRegistry.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useAlertStore from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
@@ -39,7 +39,7 @@ let closure_16;
 let closure_17;
 let closure_18;
 let map1;
-const f99674 = () => event(paths[14])(paths[19], paths.paths);
+const f99852 = () => event(paths[14])(paths[19], paths.paths);
 function openCreateOrEditGuildEventModal(guild, arg1) {
   let guildEvent;
   let recurrenceId;
@@ -56,13 +56,13 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     _modDef38(null != guildEvent, "recurrence editing requires a guild event");
     const obj3 = { guildEvent, recurrenceId, onCloseModal: handleClose };
     const obj4 = ModalActionCreatorsDefault;
-    obj4.pushLazy(asyncRequire(9176, dependencyMap.paths), obj3, closure_13);
+    obj4.pushLazy(asyncRequire(9211, dependencyMap.paths), obj3, closure_13);
   } else {
     obj = ActionSheetActionCreatorsDefault;
     obj.hideAllActionSheets();
     const obj5 = { guild, targetChannel: tmp, initialGuildEvent: guildEvent, onCloseModal: handleClose };
     const obj2 = ModalActionCreatorsDefault;
-    obj2.pushLazy(asyncRequire(9202, dependencyMap.paths), obj5, closure_13);
+    obj2.pushLazy(asyncRequire(9237, dependencyMap.paths), obj5, closure_13);
   }
 }
 let obj = function _transitionToEventDetailsFromInvite() {
@@ -145,7 +145,7 @@ export { openCreateOrEditGuildEventModal };
 export const openGuildEventListActionSheet = function openGuildEventListActionSheet(guild) {
   obj = ActionSheetActionCreatorsDefault;
   const obj2 = { guild };
-  obj.openLazy(asyncRequire(9278, dependencyMap.paths), authStore2, obj2);
+  obj.openLazy(asyncRequire(9313, dependencyMap.paths), authStore2, obj2);
 };
 export const closeGuildEventListActionSheet = function closeGuildEventListActionSheet() {
   obj = ActionSheetActionCreatorsDefault;
@@ -156,14 +156,14 @@ export const openStartGuildEventModal = function openStartGuildEventModal(event,
   obj.hideAllActionSheets();
   const obj2 = ModalActionCreatorsDefault;
   const obj3 = { event, recurrenceId, onCloseActionSheet };
-  obj2.pushLazy(asyncRequire(9470, dependencyMap.paths), obj3, closure_15);
+  obj2.pushLazy(asyncRequire(9483, dependencyMap.paths), obj3, closure_15);
 };
 export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActionSheet(
   eventId,
   guildId,
   recurrenceId,
 ) {
-  react.lazy(f99674);
+  react.lazy(f99852);
   obj = useAlertStore;
   obj.openAlert("DeleteEventAlert", <lazyResult eventId={eventId} guildId={guildId} recurrenceId={recurrenceId} />);
 };
@@ -489,8 +489,8 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 obj = ActionSheetActionCreatorsDefault;
                 obj.hideAllActionSheets();
                 const obj2 = ModalActionCreatorsDefault;
-                const obj3 = { event, recurrenceId, onCloseActionSheet: "r" };
-                obj2.pushLazy(asyncRequire(9470, dependencyMap.paths), obj3, closure_15);
+                const obj3 = { event, recurrenceId, onCloseActionSheet: "Array" };
+                obj2.pushLazy(asyncRequire(9483, dependencyMap.paths), obj3, closure_15);
               },
             };
             const push = items.push;
@@ -569,7 +569,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
               onPress() {
                 let id;
                 ({ id, guild_id } = event);
-                react.lazy(f99674);
+                react.lazy(f99852);
                 obj = useAlertStore;
                 obj.openAlert(
                   "DeleteEventAlert",
@@ -595,9 +595,9 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
               let id;
               let paths;
               ({ id, guild_id } = event);
-              react.lazy(f99674);
+              react.lazy(f99852);
               obj = useAlertStore;
-              obj.openAlert("DeleteEventAlert", <lazyResult eventId={id} guildId={guild_id} recurrenceId="r" />);
+              obj.openAlert("DeleteEventAlert", <lazyResult eventId={id} guildId={guild_id} recurrenceId="Array" />);
             },
           };
           push6(obj9);

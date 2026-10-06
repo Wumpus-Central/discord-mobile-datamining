@@ -13,13 +13,13 @@ let obj = {
     let files;
     ({ files, channelId } = draftType);
     draftType = draftType.draftType;
-    if (files.some(channelId(8813).itemNeedsImagePreConversion)) {
+    if (files.some(channelId(8843).itemNeedsImagePreConversion)) {
       function dispatch(files) {
         const obj = DispatcherDefault;
         const obj2 = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };
         obj.dispatch(obj2);
       }
-      const allPromises = Promise.all(files.map(channelId(8813).maybePreConvertImageItem));
+      const allPromises = Promise.all(files.map(channelId(8843).maybePreConvertImageItem));
       allPromises.then(dispatch);
     } else {
       let obj = draftType(584);

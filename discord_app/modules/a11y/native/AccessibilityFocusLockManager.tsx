@@ -45,7 +45,7 @@ class AccessibilityFocusLockManager extends LifecycleManager {
       }
     }
     if (self._focusLockEnabled) {
-      let obj = item10014(5711);
+      let obj = item10014(5718);
       obj.disableFocusLock();
       self._focusLockEnabled = false;
     }

@@ -8,7 +8,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require;
 
-const f111403 = () => {
+const f111558 = () => {
   const obj = DispatcherDefault;
   const obj2 = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
   return obj.dispatch(obj2);
@@ -34,7 +34,7 @@ Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", async (arg0) => {
     });
   });
   let obj2 = DispatcherDefault;
-  obj2.wait(f111403);
+  obj2.wait(f111558);
 });
 const useContactSyncStore = module_570.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
 let Storage2 = Storage4.Storage;
@@ -84,7 +84,7 @@ export const setStoredContacts = function setStoredContacts(arg0) {
     });
   });
   const obj2 = DispatcherDefault;
-  obj2.wait(f111403);
+  obj2.wait(f111558);
 };
 export const deleteStoredContacts = function deleteStoredContacts() {
   let state;

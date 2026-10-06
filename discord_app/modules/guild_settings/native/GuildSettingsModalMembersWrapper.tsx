@@ -44,7 +44,7 @@ const memoResult = memo(
     : (guildId) => {
         guildId = guildId.guildId;
         const obj = canReviewGuildMemberApplications;
-        return jsx(importDefault(obj.useCanReviewGuildMemberApplications(guildId) ? 16525 : 16527), { guildId });
+        return jsx(importDefault(obj.useCanReviewGuildMemberApplications(guildId) ? 16565 : 16567), { guildId });
       },
 );
 const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx");

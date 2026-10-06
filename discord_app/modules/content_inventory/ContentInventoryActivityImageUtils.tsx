@@ -92,9 +92,9 @@ function computeImageForActivity(arg0) {
         tmp16 = { src: guildIconURL };
         const obj3 = { src: guildIconURL };
       }
-      return { largeImage: tmp16, smallImage: "r" };
+      return { largeImage: tmp16, smallImage: "Array" };
     } else if (isOnXboxDefault(activity)) {
-      const obj5 = { largeImage: obj6, smallImage: "r" };
+      const obj5 = { largeImage: obj6, smallImage: "Array" };
       obj6 = { src: tmp2Result.get(metroRequire.XBOX).icon.customPNG, alt: intl4.string(intl5.t.Nfvo72) };
       tmp2Result = PlatformsDefault;
       intl4 = intl5.intl;
@@ -102,7 +102,7 @@ function computeImageForActivity(arg0) {
     } else {
       if (null == smallImage) {
         if (isOnPlayStationDefault(activity)) {
-          const obj7 = { largeImage: obj8, smallImage: "r" };
+          const obj7 = { largeImage: obj8, smallImage: "Array" };
           obj8 = { src: tmp2Result2.get(metroRequire.PLAYSTATION).icon.lightPNG, alt: intl3.string(intl5.t.fFl4jo) };
           tmp2Result2 = PlatformsDefault;
           intl3 = intl5.intl;
@@ -116,7 +116,7 @@ function computeImageForActivity(arg0) {
         if (activity != null) {
           name1 = activity.name;
         }
-        return { largeImage: obj9, smallImage: "r" };
+        return { largeImage: obj9, smallImage: "Array" };
       } else {
         let name;
         let obj14;
@@ -144,7 +144,7 @@ function computeImageForActivity(arg0) {
           obj14 = { largeImage: tmp5, smallImage };
           const obj13 = { largeImage: tmp5, smallImage };
         } else {
-          obj14 = { largeImage: smallImage, smallImage: "r" };
+          obj14 = { largeImage: smallImage, smallImage: "Array" };
         }
         return obj14;
       }
@@ -231,7 +231,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (null != tmp11) {
         let tmp16;
         if (cResult[9] !== tmp11) {
-          const obj4 = { largeImage: tmp11, smallImage: "r" };
+          const obj4 = { largeImage: tmp11, smallImage: "Array" };
           cResult[9] = tmp11;
           cResult[10] = obj4;
           tmp16 = obj4;
@@ -244,7 +244,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (tmp4) {
             let tmp15;
             if (cResult[11] !== tmp9) {
-              const obj5 = { largeImage: obj6, smallImage: "r" };
+              const obj5 = { largeImage: obj6, smallImage: "Array" };
               obj6 = { src: tmp9 };
               cResult[11] = tmp9;
               cResult[12] = obj5;
@@ -256,7 +256,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         if (cResult[13] !== largeImage2) {
-          const obj7 = { largeImage: largeImage2, smallImage: "r" };
+          const obj7 = { largeImage: largeImage2, smallImage: "Array" };
           cResult[13] = largeImage2;
           cResult[14] = obj7;
           tmp14 = obj7;
@@ -331,17 +331,17 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj7 = { largeImage, smallImage };
         const obj3 = { largeImage, smallImage };
       } else if (null != tmp6) {
-        obj7 = { largeImage: tmp6, smallImage: "r" };
-        const obj4 = { largeImage: tmp6, smallImage: "r" };
+        obj7 = { largeImage: tmp6, smallImage: "Array" };
+        const obj4 = { largeImage: tmp6, smallImage: "Array" };
       } else {
         if (null != coverURL) {
           if (showCoverImage) {
-            const obj5 = { largeImage: obj6, smallImage: "r" };
+            const obj5 = { largeImage: obj6, smallImage: "Array" };
             obj7 = obj5;
             obj6 = { src: coverURL };
           }
         }
-        obj7 = { largeImage: largeImage2, smallImage: "r" };
+        obj7 = { largeImage: largeImage2, smallImage: "Array" };
       }
       const obj8 = { activity, application: fallbackApplication, largeImageSrc: src, trackingSource };
       if (fallbackApplication == null) {
@@ -718,7 +718,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let first;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { largeImage: "Array", smallImage: "Set" };
+          const obj2 = { largeImage: "start", smallImage: "unicodeVersion" };
           cResult[0] = obj2;
           first = obj2;
         } else {
@@ -883,7 +883,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         application_id = application_id.application_id;
       }
       if (null == application_id) {
-        return { largeImage: "Array", smallImage: "Set" };
+        return { largeImage: "start", smallImage: "unicodeVersion" };
       } else {
         let large_image;
         if (application_id != null) {

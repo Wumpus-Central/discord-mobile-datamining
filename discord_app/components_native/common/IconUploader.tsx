@@ -4,7 +4,7 @@ import intl2 from "../../intl/index.native.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
-import AssetRegistryDefault from "../../../_runtime/10666_AssetRegistry.js";
+import AssetRegistryDefault from "../../../_runtime/10679_AssetRegistry.js";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../../_runtime/00019_react.js";
 import react_native from "../../../_runtime/00017_react-native.js";
@@ -103,10 +103,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               style: iconStyle,
               icon: tmp7,
               value: name,
-              size: onUpload(5971).GuildIconSizes.XLARGE,
+              size: onUpload(5978).GuildIconSizes.XLARGE,
               animate: true,
             };
-            const tmp21 = onChangeIconPress(5971);
+            const tmp21 = onChangeIconPress(5978);
             const tmp22 = closure_8(tmp21, obj3);
             cResult[8] = tmp7;
             cResult[9] = iconStyle;
@@ -190,7 +190,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp39 = tmp42;
               }
               let obj6 = { accessibilityRole: "button", accessibilityLabel: tmp34, onPress: tmp10, children: tmp28 };
-              const tmp38 = closure_8(onUpload(5909).PressableOpacity, obj6);
+              const tmp38 = closure_8(onUpload(5916).PressableOpacity, obj6);
               cResult[27] = tmp10;
               cResult[28] = tmp28;
               cResult[29] = tmp38;
@@ -208,7 +208,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp24 = null;
         if (!tmp4) {
-          const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(10666) };
+          const obj8 = { style: tmp6.uploadIcon, source: onChangeIconPress(10679) };
           tmp24 = closure_8(closure_6, obj8);
         }
         cResult[20] = tmp4;

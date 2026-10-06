@@ -21,7 +21,7 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
   let constants2;
   let data;
   if (null != getData.getData) {
-    let obj2 = data(6984);
+    let obj2 = data(6997);
     obj2.trackAppOpened("notification");
     data = getData.getData();
     let type = data.type;

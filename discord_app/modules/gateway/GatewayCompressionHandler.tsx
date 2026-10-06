@@ -5,7 +5,7 @@ import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ProcessArgs2 from "../../utils/ProcessArgs.tsx";
 import GatewayZstdUtils from "GatewayZstdUtils.native.tsx";
 import react_native2 from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
-import _mod13461 from "../../../_runtime/metro/13461__.js";
+import _mod13477 from "../../../_runtime/metro/13477__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let obj;
@@ -96,7 +96,7 @@ class tmp4 extends BaseGatewayCompressionHandler {
     let _inflate;
     let handleFlushEnd;
     const tmp2 = new tmp(arg0, new.target, tmp, this);
-    tmp2._pako = _mod13461;
+    tmp2._pako = _mod13477;
     tmp2._usesZstd = false;
     tmp2._zstdDecoder = null;
     tmp2._zstdStream = null;
@@ -239,7 +239,7 @@ items.push(tmp4);
 class tmp6 extends BaseGatewayCompressionHandler {
   constructor() {
     const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
-    applyArgumentsResult._pako = _mod13461;
+    applyArgumentsResult._pako = _mod13477;
     return applyArgumentsResult;
   }
   static canUse() {

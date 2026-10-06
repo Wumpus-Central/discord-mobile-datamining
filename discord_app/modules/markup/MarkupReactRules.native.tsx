@@ -163,13 +163,13 @@ function MarkupMention(styles) {
           const obj2 = { guildId: null, roleId: null, channelId: null };
           ({ guildId: obj5.guildId, roleId: obj5.roleId, channelId: obj5.channelId } = node);
           const obj4 = ActionSheetActionCreatorsDefault;
-          obj4.openLazy(asyncRequire(11209, dependencyMap.paths), "RoleMembersActionSheet", obj2, "stack");
+          obj4.openLazy(asyncRequire(11222, dependencyMap.paths), "RoleMembersActionSheet", obj2, "stack");
         }
       }
       if ("@everyone" === node.roleName) {
         if (null != node.guildId) {
           const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-          const tmp13 = asyncRequire(11209, dependencyMap.paths);
+          const tmp13 = asyncRequire(11222, dependencyMap.paths);
           const obj6 = {
             guildId: node.guildId,
             roleId: obj3.castGuildIdAsEveryoneGuildRoleId(node.guildId),
@@ -456,7 +456,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
               onLongPress: tmp7,
               children: tmp8,
             };
-            const tmp16 = closure_17(node(4886).Text, obj2, key);
+            const tmp16 = closure_17(node(4892).Text, obj2, key);
             cResult[11] = str;
             cResult[12] = state.key;
             cResult[13] = link;
@@ -468,8 +468,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { inLink: true };
-        const smartOutput = node(7768).smartOutput;
-        node(7768);
+        const smartOutput = node(7779).smartOutput;
+        node(7779);
         const merged = Object.assign(state);
         const smartOutputResult = smartOutput(node, output, obj3);
         cResult[7] = node;
@@ -587,13 +587,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         children: smartOutput(node, output, obj2),
       };
       link = styles.link;
-      const Text = node(4886).Text;
+      const Text = node(4892).Text;
       if (link == null) {
         link = tmp.link;
       }
       obj2 = { inLink: true };
-      smartOutput = node(7768).smartOutput;
-      node(7768);
+      smartOutput = node(7779).smartOutput;
+      node(7779);
       const merged = Object.assign(state);
       return closure_17(Text, obj, state.key);
     };
@@ -742,7 +742,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               tmp11 = tmp14;
             }
           }
-          const tmpResult = node(7768);
+          const tmpResult = node(7779);
           const smartOutputResult = tmpResult.smartOutput(node, output, state);
           cResult[6] = node;
           cResult[7] = output;
@@ -829,7 +829,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
           }
         };
       }
-      obj3 = node(7768);
+      obj3 = node(7779);
       return closure_17(closure_21, obj2, state.key);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -1104,7 +1104,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = {
                 themedColor: node(587).colors.MENTION_FOREGROUND,
                 style: size,
-                source: tmp11(11182),
+                source: tmp11(11195),
                 size: state(1188).Icon.Sizes.CUSTOM,
               };
               const ThemedIcon = tmp(1188).ThemedIcon;
@@ -1251,7 +1251,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj6 = { variant: str2, style: tmp5, children: items2 };
               items2 = [tmp6, tmp8, tmp14];
-              const tmp18 = closure_18(state(4886).Text, obj6, key);
+              const tmp18 = closure_18(state(4892).Text, obj6, key);
               cResult[10] = tmp4.channelMentionText;
               cResult[11] = state.key;
               cResult[12] = str2;
@@ -1262,7 +1262,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
               tmp16 = tmp18;
             }
           }
-          const tmpResult = state(7768);
+          const tmpResult = state(7779);
           const smartOutputResult = tmpResult.smartOutput(node, output, state);
           cResult[6] = node;
           cResult[7] = output;
@@ -1300,7 +1300,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp3 = state;
       let str2 = variants.channelMentionText;
-      const Text = state(4886).Text;
+      const Text = state(4892).Text;
       if (str2 == null) {
         str2 = "text-xs/medium";
       }
@@ -1315,7 +1315,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           themedColor: node(587).colors.MENTION_FOREGROUND,
           style: size,
-          source: tmp8(11182),
+          source: tmp8(11195),
           size: tmp3(1188).Icon.Sizes.CUSTOM,
         };
         const ThemedIcon = tmp3(1188).ThemedIcon;
@@ -1329,7 +1329,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7Result = closure_17(ThemedIcon, obj2);
       }
       items[1] = tmp7Result;
-      const tmp3Result = tmp3(7768);
+      const tmp3Result = tmp3(7779);
       items[2] = tmp3Result.smartOutput(node, output, state);
       const tmp2Result = closure_18(Text, obj, state.key);
       let tmp13Result = tmp2Result;
@@ -1426,7 +1426,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const channelMentionText = tmp4.channelMentionText;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(13653), size: SMALL };
+        const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(13669), size: SMALL };
         const ThemedIcon = tmp(1188).ThemedIcon;
         const fontScale = closure_6.getFontScale();
         if (fontScale < 1) {
@@ -1546,7 +1546,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj6 = { variant: str2, style: channelMentionText, children: items2 };
           items2 = [first, tmp11];
-          const tmp15 = closure_18(state(4886).Text, obj6, key);
+          const tmp15 = closure_18(state(4892).Text, obj6, key);
           cResult[5] = tmp4.channelMentionText;
           cResult[6] = state.key;
           cResult[7] = str2;
@@ -1555,7 +1555,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
           tmp13 = tmp15;
         }
       }
-      const tmpResult = state(7768);
+      const tmpResult = state(7779);
       const smartOutputResult = tmpResult.smartOutput(node, output, state);
       cResult[1] = node;
       cResult[2] = output;
@@ -1581,12 +1581,12 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         str = "text";
       }
       let str2 = variants.channelMentionText;
-      const Text = state(4886).Text;
+      const Text = state(4892).Text;
       if (str2 == null) {
         str2 = "text-xs/medium";
       }
       let obj = { variant: str2, style: tmp.channelMentionText, children: items };
-      const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(13653), size: SMALL };
+      const obj2 = { themedColor: node(587).colors.MENTION_FOREGROUND, source: node(13669), size: SMALL };
       const ThemedIcon = tmp3(1188).ThemedIcon;
       const fontScale = closure_6.getFontScale();
       if (fontScale < 1) {
@@ -1597,7 +1597,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         SMALL = tmp3(1188).Icon.Sizes.SMALL;
       }
       items = [closure_17(ThemedIcon, obj2)];
-      const tmp3Result = state(7768);
+      const tmp3Result = state(7779);
       items[1] = tmp3Result.smartOutput(node, output, state);
       const tmp2Result = closure_18(Text, obj, state.key);
       let tmp5Result = tmp2Result;

@@ -17,11 +17,11 @@ export const shouldSuppressAutocompleteFetch = function shouldSuppressAutocomple
   }
   return false;
 };
-export const normalizeGameAutocompleteQuery = function normalizeGameAutocompleteQuery(query) {
-  if (null == query) {
+export const normalizeGameAutocompleteQuery = function normalizeGameAutocompleteQuery(name) {
+  if (null == name) {
     return null;
   } else {
-    const str = query.trim();
+    const str = name.trim();
     const formatted = str.toLowerCase();
     const replaced = formatted.replaceAll("_", " ");
     const substr = replaced.slice(0, 100);

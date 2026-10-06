@@ -3,7 +3,7 @@ import Fragment from "../../../../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../../../../_runtime/00576_react.js";
 import BaseRive2 from "../BaseRive.tsx";
 import RiveErrorBoundary2 from "../RiveErrorBoundary.tsx";
-import _modDef4691 from "../../../../../../../../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js";
+import _modDef4697 from "../../../../../../../../discord_assets/assets/mana/rive/native/TeenScreenTime.riv.js";
 import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../../../../_runtime/00019_react.js";
 import ReactCompilerGating_mod from "../../../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
@@ -82,7 +82,7 @@ let closure_9 = react.forwardRef(
         const tmp14 = (
           <BaseRive
             ref={ref}
-            src={_modDef4691}
+            src={_modDef4697}
             artboard={str}
             artboardProperties={artboardProperties}
             artboardViewModelInstances={artboardViewModelInstances}
@@ -118,7 +118,7 @@ let closure_9 = react.forwardRef(
         return (
           <BaseRive
             ref={ref}
-            src={_modDef4691}
+            src={_modDef4697}
             artboard={str}
             artboardProperties={artboardProperties}
             artboardViewModelInstances={artboardViewModelInstances}

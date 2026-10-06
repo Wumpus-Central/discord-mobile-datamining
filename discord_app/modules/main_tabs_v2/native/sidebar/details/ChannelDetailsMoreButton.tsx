@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import PressableNavigatorButtonWrapperDefault from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/09290_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/09325_AssetRegistry.js";
 import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
@@ -52,7 +52,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[3] !== tmp4) {
             ({ accessibilityLabel: tmp7, source: AssetRegistryDefault, onPress: tmp4 });
             PressableNavigatorButtonWrapperDefault;
-            const HeaderIconButton = tmp(7498).HeaderIconButton;
+            const HeaderIconButton = tmp(7509).HeaderIconButton;
             const tmp13 = <tmp12>{null}</tmp12>;
             cResult[3] = tmp4;
             cResult[4] = tmp13;
@@ -81,7 +81,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             onPress: tmp,
           };
           PressableNavigatorButtonWrapperDefault;
-          const HeaderIconButton = channel(7498).HeaderIconButton;
+          const HeaderIconButton = channel(7509).HeaderIconButton;
           intl = channel(1126).intl;
           tmp2 = <tmp6>{null}</tmp6>;
         } else {

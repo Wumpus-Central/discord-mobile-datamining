@@ -158,7 +158,7 @@ obj = function _submitAgeSignal() {
             }
             c8 = 1;
             c9 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           let toSubmitOutcome;

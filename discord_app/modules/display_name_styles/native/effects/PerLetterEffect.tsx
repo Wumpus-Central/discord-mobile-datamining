@@ -54,7 +54,7 @@ export default function PerLetterEffect(name) {
       );
     });
   }, items);
-  const Text = name(4886).Text;
+  const Text = name(4892).Text;
   const merged = Object.assign(textProps);
   let accessibilityLabel = textProps.accessibilityLabel;
   if (accessibilityLabel == null) {

@@ -4,9 +4,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import intl4 from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09091_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09127_AssetRegistry.js";
 import useScreenshareUtils from "../useScreenshareUtils.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";

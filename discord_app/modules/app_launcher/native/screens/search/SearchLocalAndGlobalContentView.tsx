@@ -313,20 +313,20 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       let onPressSend;
       let tmp = hasOptions;
       ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-      obj = hasOptions(11665);
+      obj = hasOptions(11679);
       const appLauncherIconSource = obj.getAppLauncherIconSource(application);
       let tmp4 = null != appLauncherIconSource;
       if (tmp4) {
         const obj2 = { iconSource: appLauncherIconSource };
-        tmp4 = closure_10(onPressSend(11670), obj2);
+        tmp4 = closure_10(onPressSend(11684), obj2);
       }
-      const tmpResult = tmp(11729);
+      const tmpResult = tmp(11743);
       const obj3 = {
         command,
         context,
         beforeExecuteCommand,
         onExecuteCommand,
-        sectionName: tmp(8932).AppLauncherSectionName.SEARCH,
+        sectionName: tmp(8961).AppLauncherSectionName.SEARCH,
       };
       const commandRowSend = tmpResult.useCommandRowSend(obj3);
       hasOptions = commandRowSend.hasOptions;
@@ -360,10 +360,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         onPress,
         accessibilityActions: memo,
         onAccessibilityAction: callback,
-        trailing: closure_10(onPressSend(11729), { hasOptions, sending, onPressSend }),
+        trailing: closure_10(onPressSend(11743), { hasOptions, sending, onPressSend }),
       };
-      const TableRow = tmp(5993).TableRow;
-      tmpResult2 = tmp(8794);
+      const TableRow = tmp(6000).TableRow;
+      tmpResult2 = tmp(8826);
       return closure_10(TableRow, obj4);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

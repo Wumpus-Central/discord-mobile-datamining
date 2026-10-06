@@ -8,7 +8,7 @@ import PushNotificationPermissionStore from "../../../../../stores/native/PushNo
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
 import PushNotificationActionCreators from "../../../../../actions/native/PushNotificationActionCreators.tsx";
 import NewUserPermissionsOnboardingDefault from "../NewUserPermissionsOnboarding.android.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/15922_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/15961_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import NotificationPermissionConstants from "NotificationPermissionConstants.tsx";

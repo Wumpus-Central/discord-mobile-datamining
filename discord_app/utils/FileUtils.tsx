@@ -4,7 +4,7 @@ import intl2 from "../intl/index.native.tsx";
 import PremiumUtils from "PremiumUtils.tsx";
 import FileSizeUtils from "FileSizeUtils.tsx";
 import UploadUtils from "UploadUtils.tsx";
-import _modDef7271 from "../../_runtime/metro/07271__.js";
+import _modDef7284 from "../../_runtime/metro/07284__.js";
 import GuildStore from "../stores/GuildStore.tsx";
 import UserStore from "../stores/UserStore.tsx";
 import Constants from "../Constants.tsx";
@@ -141,7 +141,7 @@ export const classifyFileName = function classifyFileName(fileName, arg1) {
   return str2;
 };
 export const sizeString = function sizeString(size) {
-  const obj = _modDef7271;
+  const obj = _modDef7284;
   return obj.filesize(size);
 };
 export const maxFileSize = function maxFileSize(guildId) {

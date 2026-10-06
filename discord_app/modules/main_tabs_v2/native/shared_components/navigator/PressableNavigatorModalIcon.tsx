@@ -33,7 +33,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   return (
     <tmp4 isModal>
       <HeaderIconButton
-        source={importDefault("back" === str ? 7501 : 7506)}
+        source={importDefault("back" === str ? 7512 : 7517)}
         onPress={goBack}
         accessibilityLabel={stringResult}
       />

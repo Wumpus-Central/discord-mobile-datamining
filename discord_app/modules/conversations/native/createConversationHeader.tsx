@@ -1,9 +1,9 @@
 // discord_app/modules/conversations/native/createConversationHeader.tsx
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef3625 from "../Conversations.messages.js";
+import _modDef3655 from "../Conversations.messages.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import computeScrollData from "../../chat/native/computeScrollData.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11564_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/11577_AssetRegistry.js";
 import RowGeneratorConstants from "../../messages/native/renderer/RowGeneratorConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -21,7 +21,7 @@ export default function createConversationHeader(conversationId) {
     startMessageId: conversationId.startMessageId,
     title: conversationId.title,
     expandIconUrl: obj2.getAssetUriForEmbed(AssetRegistryDefault),
-    expandAccessibilityLabel: intl.string(_modDef3625.pU5Dut),
+    expandAccessibilityLabel: intl.string(_modDef3655.pU5Dut),
   };
   obj2 = renderer_EmbedUtils;
   intl = intl2.intl;

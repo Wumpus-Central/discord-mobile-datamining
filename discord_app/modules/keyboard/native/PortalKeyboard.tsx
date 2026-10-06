@@ -3,7 +3,7 @@ import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import Portal from "../../../../_runtime/04752_Portal.js";
+import Portal from "../../../../_runtime/04758_Portal.js";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

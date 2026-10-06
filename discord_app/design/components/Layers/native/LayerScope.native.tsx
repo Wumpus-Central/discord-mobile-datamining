@@ -21,7 +21,7 @@ function Layer(zIndex) {
   let closure_3;
   zIndex = zIndex.zIndex;
   _slicedToArray = undefined;
-  const context = react.useContext(zIndex(6652).LayerContext);
+  const context = react.useContext(zIndex(6659).LayerContext);
   dependencyMap = _slicedToArray(react.useState({}), 2)[1];
   _slicedToArray = react.useRef(null);
   const items = [context];

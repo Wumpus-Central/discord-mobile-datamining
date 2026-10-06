@@ -162,7 +162,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                 const _HermesInternal = HermesInternal;
                 ActionSheetActionCreatorsDefault;
                 const obj8 = { guildId: guild_id };
-                const tmp98 = asyncRequire(9396, dependencyMap.paths);
+                const tmp98 = asyncRequire(9410, dependencyMap.paths);
                 openLazy(tmp98, "GuildProfileActionSheet:" + guild_id, obj8);
               }
             }
@@ -419,7 +419,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                   notificationType: TOP_MESSAGE_PUSH,
                 };
                 TOP_MESSAGE_PUSH = data.notificationType;
-                const tmp107 = asyncRequire(11269, dependencyMap.paths);
+                const tmp107 = asyncRequire(11282, dependencyMap.paths);
                 const openLazy2 = ActionSheetActionCreatorsDefault.openLazy;
                 ActionSheetActionCreatorsDefault;
                 if (TOP_MESSAGE_PUSH == null) {

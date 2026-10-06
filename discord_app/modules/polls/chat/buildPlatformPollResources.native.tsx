@@ -1,8 +1,8 @@
 // discord_app/modules/polls/chat/buildPlatformPollResources.native.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/05992_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/06640_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/05999_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/06647_AssetRegistry.js";
 import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import PollStyles from "native/PollStyles.tsx";
 import 00012__ from "../../../../_runtime/metro/00012__.js";

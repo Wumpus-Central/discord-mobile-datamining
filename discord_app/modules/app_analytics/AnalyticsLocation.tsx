@@ -194,6 +194,7 @@ export default {
   AVATAR: "avatar",
   USERNAME: "username",
   MEMBER_LIST: "member list",
+  CONTEXTUAL_REFERRAL_GDM_MEMBER_LIST: "contextual referral gdm member list",
   USER_MENTION: "user mention",
   ROLE_MENTION: "role mention",
   CONNECTIONS_ROLE_POPOUT: "connections role popout",

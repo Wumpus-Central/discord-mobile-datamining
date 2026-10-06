@@ -12,11 +12,11 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let _null2;
 
-const f132052 = (id) => id.id;
+const f132271 = (id) => id.id;
 function handleGuildRoleCreateOrUpdate(arg0) {
   if (c8) {
     const sortedRoles = GuildRoleStore.getSortedRoles(tmp);
-    let c9 = sortedRoles.map(f132052);
+    let c9 = sortedRoles.map(f132271);
   }
 }
 const FormStates = Constants.FormStates;
@@ -100,7 +100,7 @@ let obj = {
     guildId = guildId.guildId;
     c8 = true;
     const sortedRoles = GuildRoleStore.getSortedRoles(guildId);
-    let c9 = sortedRoles.map(f132052);
+    let c9 = sortedRoles.map(f132271);
     const guild = GuildStore.getGuild(guildId);
     clearTimeout(closure_15);
   },

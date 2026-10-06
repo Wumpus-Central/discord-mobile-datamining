@@ -83,7 +83,7 @@ function LaunchpadChannelIcon(channel) {
       }
       if (cResult[9] !== channel2) {
         const obj3 = { channel: channel2, size: "sm", wrapperSize: 32 };
-        const tmp38 = closure_8(channel(11817).ChannelIcon, obj3);
+        const tmp38 = closure_8(channel(11831).ChannelIcon, obj3);
         cResult[9] = channel2;
         cResult[10] = tmp38;
         tmp36 = tmp38;
@@ -123,7 +123,7 @@ function LaunchpadChannelIcon(channel) {
     obj9 = { guild: stateFromStores1, size: tmp6.icon.guildBadgeIconSize };
     items3 = [closure_8(View, obj8)];
     const obj10 = { channel, size: "sm", wrapperSize: 32 };
-    items3[1] = closure_8(channel(11817).ChannelIcon, obj10);
+    items3[1] = closure_8(channel(11831).ChannelIcon, obj10);
     tmp14 = closure_10(closure_9, obj7);
   }
   return tmp14;

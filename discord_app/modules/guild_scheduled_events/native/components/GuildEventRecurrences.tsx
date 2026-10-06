@@ -199,7 +199,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { style: tmp2.container, children: items };
       let obj2 = { variant: "heading-md/semibold", children: intl.string(guildEventId(1126).t["D/jjoa"]) };
       useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule);
-      const Text = guildEventId(4886).Text;
+      const Text = guildEventId(4892).Text;
       intl = guildEventId(1126).intl;
       items = [closure_6(Text, obj2), ,];
       const obj3 = {
@@ -235,7 +235,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           },
           size: "sm",
         };
-        const Button = tmp8(5594).Button;
+        const Button = tmp8(5601).Button;
         intl2 = tmp8(1126).intl;
         canViewMoreRecurrences = closure_6(Button, obj4);
       }

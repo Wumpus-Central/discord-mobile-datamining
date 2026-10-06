@@ -4,7 +4,7 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import getInviteURLDefault from "../../instant_invite/getInviteURL.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
-import baseRestDefault from "../../../../_runtime/10682_baseRest.js";
+import baseRestDefault from "../../../../_runtime/10695_baseRest.js";
 import _asyncToGenerator_mod from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -32,7 +32,7 @@ export const useInviteActions = function useInviteActions(invite) {
   _asyncToGenerator = isPrivateResult;
   let obj = {
     label: intl.string(invite(1126).t.RDE0Sc),
-    iconSource: onInviteRevoked(10674).share,
+    iconSource: onInviteRevoked(10687).share,
     action() {
       baseRestDefault(() => {
         let formatToPlainStringResult;
@@ -71,7 +71,7 @@ export const useInviteActions = function useInviteActions(invite) {
   const items = [obj, ,];
   let obj2 = {
     label: intl2.string(invite(1126).t.OpuAlK),
-    iconSource: onInviteRevoked(10674).copy,
+    iconSource: onInviteRevoked(10687).copy,
     action() {
       if (c3) {
         const tmpResult = instant_invite_InstantInviteUtils;
@@ -88,7 +88,7 @@ export const useInviteActions = function useInviteActions(invite) {
   items[1] = obj2;
   let obj3 = {
     label: intl3.string(invite(1126).t.v6Yazx),
-    iconSource: onInviteRevoked(10674).revoke,
+    iconSource: onInviteRevoked(10687).revoke,
     variant: "destructive",
     action: function () {
       return closure_2(...arguments);

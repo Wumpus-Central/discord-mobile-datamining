@@ -262,7 +262,7 @@ function RoleCreateScene() {
     metroImportAll.dismiss();
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { color, onSelect };
-    obj.openLazy(asyncRequire(16231, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequire(16271, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items2);
   intl2 = navigation(color[18]).intl;
   intl3 = navigation(color[18]).intl;
@@ -667,8 +667,8 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj4 = { text: tmp23, onPress: M };
                 cResult[16] = M;
-                cResult[17] = closure_21(tmp(5594).Button, obj4);
-                const tmp26 = closure_21(tmp(5594).Button, obj4);
+                cResult[17] = closure_21(tmp(5601).Button, obj4);
+                const tmp26 = closure_21(tmp(5601).Button, obj4);
               } else {
                 class M {
                   constructor() {
@@ -707,8 +707,8 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
             const obj8 = { onSelect: tmp11, location: constants2.GUILD_ROLE_CREATION_MODAL, guildId: guild.id };
             cResult[12] = guild.id;
             cResult[13] = tmp11;
-            cResult[14] = closure_21(role(17784), obj8);
-            const tmp22 = closure_21(role(17784), obj8);
+            cResult[14] = closure_21(role(17830), obj8);
+            const tmp22 = closure_21(role(17830), obj8);
           }
         }
         const fn2 = function o(arg0) {
@@ -1484,7 +1484,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       useMountEffectDefault(tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { screens, initialRouteName: obj6.STEP_DISPLAY };
-        const tmp11 = closure_21(tmp(6496).Navigator, obj2);
+        const tmp11 = closure_21(tmp(6503).Navigator, obj2);
         cResult[2] = tmp11;
         tmp7 = tmp11;
       } else {

@@ -192,7 +192,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = fn;
         tmp8 = fn;
       }
-      const tmpResult = attachmentCount(4890);
+      const tmpResult = attachmentCount(4896);
       const tmp7 = tmpResult.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp5);
       cResult[0] = TEXT_SUBTLE;
       cResult[1] = tmp5;
@@ -214,7 +214,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         TEXT_SUBTLE = tmp(587).colors.TEXT_SUBTLE;
       }
-      let obj = attachmentCount(4890);
+      let obj = attachmentCount(4896);
       const tmp4 = obj.createNativeStyleProperties({ seeMoreLabelColor: TEXT_SUBTLE })(tmp3);
       importDefault = tmp4;
       const items = [tmp4.seeMoreLabelColor, attachmentCount];

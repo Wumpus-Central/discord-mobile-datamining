@@ -1,10 +1,10 @@
 // discord_app/modules/conjure/agent_activity/native/ConjureFloatingActivity.tsx
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/05929_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/05936_AssetRegistry.js";
 import ConjureTodoListDefault from "ConjureTodoList.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";
@@ -83,7 +83,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(41);
       ({ line, onJumpToActivity, bottom, todos, todosLive, agents } = arg0);
       const tmp4 = closure_8();
-      const tmpResult = sharedValue(4612);
+      const tmpResult = sharedValue(4618);
       sharedValue = tmpResult.useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function _() {
@@ -106,7 +106,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = react.useEffect(tmp6, tmp7);
-      const tmpResult2 = sharedValue(4612);
+      const tmpResult2 = sharedValue(4618);
       class D {
         constructor() {
           const obj = { opacity: sharedValue.get() };
@@ -189,7 +189,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       importDefault = undefined;
       agents = agents.agents;
       const tmp = closure_8();
-      let obj = sharedValue(4612);
+      let obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(0);
       const items = [sharedValue];
       const effect = react.useEffect(() => {
@@ -201,7 +201,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           return obj.cancelAnimation(closure_1_0);
         };
       }, items);
-      const obj2 = sharedValue(4612);
+      const obj2 = sharedValue(4618);
       class T {
         constructor() {
           const obj = { opacity: sharedValue.get() };
@@ -232,19 +232,19 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = {
         style: tmp.pillMain,
         accessibilityRole: "button",
-        accessibilityLabel: intl.formatToPlainString(_modDef3723.xuQfOT, { activity: line }),
+        accessibilityLabel: intl.formatToPlainString(_modDef3753.xuQfOT, { activity: line }),
         hitSlop: 8,
         onPress: onJumpToActivity,
         children: items3,
       };
-      const PressableOpacity = tmp2(5909).PressableOpacity;
+      const PressableOpacity = tmp2(5916).PressableOpacity;
       intl = tmp2(1126).intl;
       const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
-      const MagicWandIcon = tmp2(12500).MagicWandIcon;
+      const MagicWandIcon = tmp2(12515).MagicWandIcon;
       items3 = [closure_6(MagicWandIcon, obj8)];
       const obj9 = {
         style: tmp.label,
-        children: closure_6(sharedValue(4886).Text, {
+        children: closure_6(sharedValue(4892).Text, {
           variant: "text-sm/medium",
           color: "text-default",
           lineClamp: 1,
@@ -261,10 +261,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           size: "sm",
           icon: AssetRegistryDefault,
           pressed: tmp8,
-          accessibilityLabel: intl2.string(_modDef3723.Qp2isI),
+          accessibilityLabel: intl2.string(_modDef3753.Qp2isI),
           onPress: callback,
         };
-        ToggleIconButton = tmp2(14251).ToggleIconButton;
+        ToggleIconButton = tmp2(14269).ToggleIconButton;
         intl2 = tmp2(1126).intl;
         tmp16Result = closure_6(tmp15, obj10);
       }

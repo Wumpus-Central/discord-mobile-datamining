@@ -51,7 +51,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           hexToRgbResult = closure_6.get(uri);
         }
         if (hexToRgbResult == null) {
-          const tmpResult = tmp(4727);
+          const tmpResult = tmp(4733);
           hexToRgbResult = tmpResult.hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
         }
         cResult[2] = uri;

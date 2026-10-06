@@ -1,5 +1,5 @@
 // discord_app/lib/Histogram.tsx
-import RBTree from "../../_runtime/07234_RBTree.js";
+import RBTree from "../../_runtime/07247_RBTree.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("lib/Histogram.tsx");

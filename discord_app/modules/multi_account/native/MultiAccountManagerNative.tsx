@@ -7,7 +7,7 @@ import intl2 from "../../../intl/index.native.tsx";
 import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04828_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04834_AssetRegistry.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import Constants2 from "../Constants.tsx";
 import Constants from "../../../Constants.tsx";
@@ -21,7 +21,7 @@ let closure_4;
 let hasOwnProperty;
 function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(17563, dependencyMap.paths), {}, c7);
+  obj.pushLazy(asyncRequire(17609, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     const tmpResult = ModalActionCreatorsDefault;
     tmpResult.popWithKey(c7);
@@ -99,7 +99,7 @@ class MultiAccountManagerNative extends MultiAccountManager {
       const MobileHomeDrawerExperiment = require("HomeDrawerExperiment").MobileHomeDrawerExperiment;
       const tmp2 = _require;
       if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-        const tmp2Result = tmp2(4736);
+        const tmp2Result = tmp2(4742);
         tmp2Result.setHomeDrawerState(false);
       }
     }

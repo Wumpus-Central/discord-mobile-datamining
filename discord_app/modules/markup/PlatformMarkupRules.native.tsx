@@ -18,7 +18,7 @@ let resolveAssetSource;
 let obj2;
 let obj3;
 let obj4;
-const f90916 = (type) => {
+const f91052 = (type) => {
   let uri;
   let tmp = type;
   if ("channel" === type.type) {
@@ -109,7 +109,7 @@ let obj = {
             const items = [content];
             arr2 = items;
           }
-          mapped = arr2.map(f90916);
+          mapped = arr2.map(f91052);
         }
       }
       const inContent = parsed.inContent;
@@ -123,7 +123,7 @@ let obj = {
             const items1 = [inContent];
             arr4 = items1;
           }
-          mapped1 = arr4.map(f90916);
+          mapped1 = arr4.map(f91052);
         }
       }
       return obj;
@@ -176,7 +176,7 @@ let obj = {
             const items = [content];
             arr2 = items;
           }
-          mapped = arr2.map(f90916);
+          mapped = arr2.map(f91052);
         }
       }
       const inContent = parsed.inContent;
@@ -190,7 +190,7 @@ let obj = {
             const items1 = [inContent];
             arr4 = items1;
           }
-          mapped1 = arr4.map(f90916);
+          mapped1 = arr4.map(f91052);
         }
       }
       return obj;
@@ -215,7 +215,7 @@ let obj = {
             const items = [content];
             arr2 = items;
           }
-          mapped = arr2.map(f90916);
+          mapped = arr2.map(f91052);
         }
       }
       const inContent = parsed.inContent;
@@ -229,7 +229,7 @@ let obj = {
             const items1 = [inContent];
             arr4 = items1;
           }
-          mapped1 = arr4.map(f90916);
+          mapped1 = arr4.map(f91052);
         }
       }
       return obj;
@@ -307,7 +307,7 @@ export const decorateWithIcon = function decorateWithIcon(content) {
         const items = [content];
         arr2 = items;
       }
-      mapped = arr2.map(f90916);
+      mapped = arr2.map(f91052);
     }
   }
   return mapped;

@@ -4,10 +4,10 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Constants from "../../../Constants.tsx";
 import PremiumConstants from "../../premium/PremiumConstants.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon2 from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef12975 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef12994 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
@@ -117,7 +117,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj6 = { uri: _modDef12975 };
+        const obj6 = { uri: _modDef12994 };
         cResult[4] = obj6;
         tmp13 = obj6;
       } else {
@@ -240,7 +240,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items1[0] = closure_6(LinearGradientDefault, obj5);
       const obj6 = { source: obj7, style: tmp.headerImage };
-      obj7 = { uri: _modDef12975 };
+      obj7 = { uri: _modDef12994 };
       const tmp3 = FastImageDefault;
       items1[1] = closure_6(tmp3, obj6);
       const obj8 = { style: tmp.nitroIconContainer, children: closure_6(NitroIconDefault, {}) };

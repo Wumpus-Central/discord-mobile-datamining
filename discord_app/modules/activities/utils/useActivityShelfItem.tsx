@@ -62,8 +62,8 @@ function useOnActivityItemSelected(arg0) {
     str = "";
   }
   let tmp = customId({ context, applicationId: str, fetchesApplication });
-  analyticsLocations = context(6657)().analyticsLocations;
-  closure_14 = context(9132)();
+  analyticsLocations = context(6664)().analyticsLocations;
+  closure_14 = context(9167)();
   obj = canLaunchContextlessFrame;
   closure_15 = obj.canLaunchContextlessFrame(application);
   if (null == application) {

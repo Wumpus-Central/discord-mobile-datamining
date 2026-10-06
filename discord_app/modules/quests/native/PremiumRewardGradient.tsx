@@ -4,8 +4,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import design_shared from "../../../../discord_common/js/packages/design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
-import _modDef6052 from "../../../../_runtime/metro/06052__.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import _modDef6059 from "../../../../_runtime/metro/06059__.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
@@ -305,7 +305,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             tmp29 = tmp32;
           }
           const obj5 = { style: tmp12, maskElement: tmp14, children: tmp20 };
-          const tmp28 = metroRequire(_modDef6052, obj5);
+          const tmp28 = metroRequire(_modDef6059, obj5);
           cResult[11] = tmp12;
           cResult[12] = tmp20;
           cResult[13] = tmp28;
@@ -340,7 +340,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       items = [tmp.wrapper, style];
       const items1 = [tmp.glow];
       let glowLight = !isThemeDarkResult;
-      const tmp10 = _modDef6052;
+      const tmp10 = _modDef6059;
       if (!isThemeDarkResult) {
         glowLight = tmp.glowLight;
       }

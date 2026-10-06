@@ -111,7 +111,7 @@ let obj = function _openMediaModal() {
         openAs: 0,
       }),
     );
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

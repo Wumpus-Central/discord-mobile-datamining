@@ -1,6 +1,6 @@
 // discord_app/modules/icymi/native/navigator/ICYMINavigator.tsx
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -21,7 +21,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp8;
       let obj = accessibilityNativeStackOptions(576);
       const cResult = obj.c(6);
-      const obj2 = accessibilityNativeStackOptions(6496);
+      const obj2 = accessibilityNativeStackOptions(6503);
       accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
       if (cResult[0] !== accessibilityNativeStackOptions) {
         const fn = function n() {

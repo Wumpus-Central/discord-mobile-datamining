@@ -1,13 +1,13 @@
 // discord_app/modules/slayer_storefront/utils/SlayerStorefrontDisclaimerUtils.tsx
 import Constants from "../../../Constants.tsx";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3593 from "../intl/SlayerStorefront.messages.js";
+import _modDef3623 from "../intl/SlayerStorefront.messages.js";
 import StorefrontPlatform from "../../../../discord_common/js/shared/shared-constants/StorefrontPlatform.tsx";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import SocialLayerStorefrontStore from "../SocialLayerStorefrontStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f104538 = (item) => closure_1_6[item];
+const f104690 = (item) => closure_1_6[item];
 const MarketingURLs = Constants.MarketingURLs;
 let closure_6 = {
   [StorefrontPlatform.StorefrontPlatform.DESKTOP]: "PC",
@@ -37,8 +37,8 @@ export const getNotSupportedSentence = function getNotSupportedSentence(id) {
     const _Intl = Intl;
     const self = this;
     const self2 = this;
-    const obj = { platforms: listFormat.format(arr.map(f104538)), count: arr.length };
-    const v5h8p5P = _modDef3593["5h8p5P"];
+    const obj = { platforms: listFormat.format(arr.map(f104690)), count: arr.length };
+    const v5h8p5P = _modDef3623["5h8p5P"];
     listFormat = new Intl.ListFormat(LocaleStore.locale);
     str = formatToPlainString(v5h8p5P, obj);
   }
@@ -50,7 +50,7 @@ export const getCheckoutDisclaimerMessageForApplication = function getCheckoutDi
   const intl = intl4.intl;
   const format = intl.format;
   id = undefined;
-  const Q0dHYO = _modDef3593.Q0dHYO;
+  const Q0dHYO = _modDef3623.Q0dHYO;
   if (id != null) {
     id = id.id;
   }
@@ -67,8 +67,8 @@ export const getCheckoutDisclaimerMessageForApplication = function getCheckoutDi
     const _Intl = Intl;
     const self = this;
     const self2 = this;
-    const obj = { platforms: listFormat.format(arr.map(f104538)), count: arr.length };
-    const v5h8p5P = _modDef3593["5h8p5P"];
+    const obj = { platforms: listFormat.format(arr.map(f104690)), count: arr.length };
+    const v5h8p5P = _modDef3623["5h8p5P"];
     listFormat = new Intl.ListFormat(LocaleStore.locale);
     platforms_info = formatToPlainString(v5h8p5P, obj);
   }
@@ -96,11 +96,11 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
   if (shouldAppendDisclaimer) {
     let arr;
     const obj2 = { applicationName: str, platforms_info: format2(Q0dHYO, obj4) };
-    const prop = _modDef3593["3ah/a2"];
+    const prop = _modDef3623["3ah/a2"];
     const intl2 = intl4.intl;
     format2 = intl2.format;
     let id;
-    Q0dHYO = _modDef3593.Q0dHYO;
+    Q0dHYO = _modDef3623.Q0dHYO;
     if (name != null) {
       id = name.id;
     }
@@ -117,8 +117,8 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
       const _Intl = Intl;
       const self = this;
       const self2 = this;
-      const obj3 = { platforms: listFormat.format(arr.map(f104538)), count: arr.length };
-      const v5h8p5P = _modDef3593["5h8p5P"];
+      const obj3 = { platforms: listFormat.format(arr.map(f104690)), count: arr.length };
+      const v5h8p5P = _modDef3623["5h8p5P"];
       listFormat = new Intl.ListFormat(LocaleStore.locale);
       str2 = formatToPlainString(v5h8p5P, obj3);
     }
@@ -148,7 +148,7 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
   const obj = { buyButtonLabel: stringResult, paidServiceTermURL: MarketingURLs.PAID_TERMS, applicationName: str };
   const intl = intl4.intl;
   const format = intl.format;
-  const tmp4 = _modDef3593;
+  const tmp4 = _modDef3623;
   if (shouldAppendDisclaimer) {
     let arr2;
     let id;
@@ -169,15 +169,15 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
       const _Intl = Intl;
       const self = this;
       const self2 = this;
-      const obj2 = { platforms: listFormat.format(arr2.map(f104538)), count: arr2.length };
-      const v5h8p5P = _modDef3593["5h8p5P"];
+      const obj2 = { platforms: listFormat.format(arr2.map(f104690)), count: arr2.length };
+      const v5h8p5P = _modDef3623["5h8p5P"];
       listFormat = new Intl.ListFormat(LocaleStore.locale);
       str2 = formatToPlainString(v5h8p5P, obj2);
     }
     const obj3 = { platforms_info: str2 };
     items = [format(Q0dHYO, obj3)];
     const intl2 = intl4.intl;
-    items[1] = intl2.format(_modDef3593.Ufm9XX, obj);
+    items[1] = intl2.format(_modDef3623.Ufm9XX, obj);
     items1 = items;
   } else {
     items1 = [format(tmp4.Ufm9XX, obj)];
@@ -193,7 +193,7 @@ export const getRedeemPurchaseDescriptionForApplication = function getRedeemPurc
   const format = intl.format;
   const id = name.id;
   const obj = { applicationName: name, platforms_info: str };
-  const fO4b1C = _modDef3593.fO4b1C;
+  const fO4b1C = _modDef3623.fO4b1C;
   if (null == id) {
     arr = items;
   } else {
@@ -207,8 +207,8 @@ export const getRedeemPurchaseDescriptionForApplication = function getRedeemPurc
     const _Intl = Intl;
     const self = this;
     const self2 = this;
-    const obj2 = { platforms: listFormat.format(arr.map(f104538)), count: arr.length };
-    const v5h8p5P = _modDef3593["5h8p5P"];
+    const obj2 = { platforms: listFormat.format(arr.map(f104690)), count: arr.length };
+    const v5h8p5P = _modDef3623["5h8p5P"];
     listFormat = new Intl.ListFormat(LocaleStore.locale);
     str = formatToPlainString(v5h8p5P, obj2);
   }
@@ -225,7 +225,7 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
   let vyAtfo;
   hasAlreadyLinked = hasAlreadyLinked.hasAlreadyLinked;
   name = name.name;
-  const tmp3 = _modDef3593;
+  const tmp3 = _modDef3623;
   if (hasAlreadyLinked) {
     vyAtfo = tmp3.yqAKVO;
     tmp4 = importDefault;
@@ -250,8 +250,8 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
     const _Intl = Intl;
     const self = this;
     const self2 = this;
-    const obj2 = { platforms: listFormat.format(arr.map(f104538)), count: arr.length };
-    const v5h8p5P = tmp4(3593)["5h8p5P"];
+    const obj2 = { platforms: listFormat.format(arr.map(f104690)), count: arr.length };
+    const v5h8p5P = tmp4(3623)["5h8p5P"];
     listFormat = new Intl.ListFormat(LocaleStore.locale);
     str = formatToPlainString(v5h8p5P, obj2);
   }

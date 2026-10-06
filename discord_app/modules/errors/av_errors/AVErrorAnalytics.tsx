@@ -322,8 +322,8 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       let tmp99;
       let type;
       let voiceVersion;
-      const f133000 = (type) => "video" === type.type;
-      const f133001 = (type) => "video" === type.type;
+      const f133216 = (type) => "video" === type.type;
+      const f133217 = (type) => "video" === type.type;
       const obj = {
         error_name: error.valueOf(),
         error_code: errorInfo.errorCode,
@@ -520,7 +520,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         let tmp29 = null;
         if (null != connectionStats) {
           const outbound = connectionStats.stats.rtp.outbound;
-          let found = outbound.find(f133000);
+          let found = outbound.find(f133216);
           if (found == null) {
             found = null;
           }
@@ -535,7 +535,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           if (null != connectionStats1) {
             let tmp25 = null;
             if (null != connectionStats1.stats.rtp.inbound[userId]) {
-              let found1 = arr.find(f133001);
+              let found1 = arr.find(f133217);
               if (found1 == null) {
                 found1 = null;
               }
@@ -562,7 +562,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           let tmp39 = null;
           if (null != connectionStats2) {
             const outbound1 = connectionStats2.stats.rtp.outbound;
-            let found2 = outbound1.find(f133000);
+            let found2 = outbound1.find(f133216);
             if (found2 == null) {
               found2 = null;
             }
@@ -577,7 +577,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
             if (null != connectionStats3) {
               let tmp35 = null;
               if (null != connectionStats3.stats.rtp.inbound[userId]) {
-                let found3 = arr3.find(f133001);
+                let found3 = arr3.find(f133217);
                 if (found3 == null) {
                   found3 = null;
                 }
@@ -604,7 +604,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         let tmp48 = null;
         if (null != connectionStats4) {
           const outbound2 = connectionStats4.stats.rtp.outbound;
-          let found4 = outbound2.find(f133000);
+          let found4 = outbound2.find(f133216);
           if (found4 == null) {
             found4 = null;
           }
@@ -630,7 +630,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           if (null != connectionStats5) {
             let tmp55 = null;
             if (null != connectionStats5.stats.rtp.inbound[userId]) {
-              let found5 = arr6.find(f133001);
+              let found5 = arr6.find(f133217);
               if (found5 == null) {
                 found5 = null;
               }
@@ -698,7 +698,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         let tmp73 = null;
         if (null != connectionStats7) {
           const outbound4 = connectionStats7.stats.rtp.outbound;
-          let found7 = outbound4.find(f133000);
+          let found7 = outbound4.find(f133216);
           if (found7 == null) {
             found7 = null;
           }
@@ -713,7 +713,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           if (null != connectionStats8) {
             let tmp70 = null;
             if (null != connectionStats8.stats.rtp.inbound[userId]) {
-              let found8 = arr8.find(f133001);
+              let found8 = arr8.find(f133217);
               if (found8 == null) {
                 found8 = null;
               }
@@ -736,7 +736,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         let tmp78 = null;
         if (null != connectionStats9) {
           const outbound5 = connectionStats9.stats.rtp.outbound;
-          let found9 = outbound5.find(f133000);
+          let found9 = outbound5.find(f133216);
           if (found9 == null) {
             found9 = null;
           }
@@ -756,7 +756,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         let tmp88 = null;
         if (null != connectionStats10) {
           const outbound6 = connectionStats10.stats.rtp.outbound;
-          let found10 = outbound6.find(f133000);
+          let found10 = outbound6.find(f133216);
           if (found10 == null) {
             found10 = null;
           }
@@ -778,7 +778,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           if (null != connectionStats11) {
             let tmp84 = null;
             if (null != connectionStats11.stats.rtp.inbound[userId]) {
-              let found11 = arr11.find(f133001);
+              let found11 = arr11.find(f133217);
               if (found11 == null) {
                 found11 = null;
               }

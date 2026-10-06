@@ -7,7 +7,7 @@ import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import Patterns from "../../../../../_runtime/04857_Patterns.js";
+import Patterns from "../../../../../_runtime/04863_Patterns.js";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
 import QuestContent from "../../../../../discord_common/js/shared/shared-constants/QuestContent.tsx";
@@ -245,7 +245,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                             const tmpResult = tmp(504);
                             const stateFromStores = tmpResult.useStateFromStores(tmp18, F);
-                            const tmpResult2 = tmp(8508);
+                            const tmpResult2 = tmp(8541);
                             const balance = tmpResult2.useFetchVirtualCurrencyBalance().balance;
                             let obj7 = react;
                             const tmp24 = _slicedToArray(react.useState(null), 2);
@@ -904,7 +904,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       ({ bounty, sourceQuestContent } = arg0);
       const height = useWindowDimensionsDefault().height;
       size = closure_20();
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       sharedValue = obj2.useSharedValue(0);
       [tmp4, importDefault] = _slicedToArray(react.useState(null), 2);
       const tmp3 = _slicedToArray(react.useState(null), 2);

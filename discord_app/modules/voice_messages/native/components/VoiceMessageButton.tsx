@@ -7,7 +7,7 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
 import MessageConstants from "../../../messages/MessageConstants.tsx";
 import NativePermissionConstants from "../../../native_permissions/NativePermissionConstants.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import XSmallBoldIcon2 from "../../../../design/components/Icon/native/redesign/generated/XSmallBoldIcon.tsx";
 import isChannelFocused from "../../../panels/isChannelFocused.native.tsx";
 import VoiceMessageUtils from "../VoiceMessageUtils.tsx";
@@ -188,7 +188,7 @@ const memoResult = react.memo((disabled) => {
   let c14;
   let tmp = closure_16((voiceMessageAnimationState) => voiceMessageAnimationState.voiceMessageAnimationState);
   dependencyMap = tmp;
-  let obj = disabled(4612);
+  let obj = disabled(4618);
   const sharedValue = obj.useSharedValue(0);
   const tmp3 = first(closure_30(), 3);
   first = tmp3[0];
@@ -199,7 +199,7 @@ const memoResult = react.memo((disabled) => {
   currentState = react.useRef(true);
   let closure_8 = react.useRef(currentState.currentState);
   let closure_9 = react.useRef(null);
-  const tmp7 = channelId(11143)();
+  const tmp7 = channelId(11156)();
   const width = channelId(1484)().width;
   const useCallback = react.useCallback;
   _require = sharedValue(function* (arg0) {
@@ -258,7 +258,7 @@ const memoResult = react.memo((disabled) => {
             sendMessageOptionsForReply = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -453,7 +453,7 @@ const memoResult = react.memo((disabled) => {
       }
     };
   }, items2);
-  let obj2 = disabled(4736);
+  let obj2 = disabled(4742);
   const items3 = [first, tmp6, channelId];
   const isModalOpen = obj2.useIsModalOpen();
   const effect4 = react.useEffect(() => {
@@ -717,7 +717,7 @@ const memoResult = react.memo((disabled) => {
       }
     }
   }
-  let obj3 = { voiceMessageAnimationState: tmp, runOnJS: disabled(4612).runOnJS, triggerHapticGuarded };
+  let obj3 = { voiceMessageAnimationState: tmp, runOnJS: disabled(4618).runOnJS, triggerHapticGuarded };
   Q.__closure = obj3;
   Q.__workletHash = 9127775028714;
   Q.__initData = __initData;
@@ -748,7 +748,7 @@ const memoResult = react.memo((disabled) => {
       obj.endAudioRecording();
     }
   }, items7);
-  const tmp19 = channelId(9239);
+  const tmp19 = channelId(9274);
   const tmp20 = sharedValue(function* () {
     if (c2 === 2) {
       c2 = 3;
@@ -871,18 +871,18 @@ const memoResult = react.memo((disabled) => {
     ({ runOnJS: ReanimatedRexport.runOnJS, handleFinalize: callback3 });
     return onUpdateResult.onFinalize(fn3);
   }, items8);
-  const tooltipTargetRef = channelId(11888)().tooltipTargetRef;
-  const GestureDetector = disabled(6140).GestureDetector;
+  const tooltipTargetRef = channelId(11902)().tooltipTargetRef;
+  const GestureDetector = disabled(6147).GestureDetector;
   let obj5 = {
     ref: tooltipTargetRef,
-    IconComponent: disabled(9689).MicrophoneIcon,
+    IconComponent: disabled(9702).MicrophoneIcon,
     active: false,
     accessibilityLabel: intl2.string(disabled(1126).t.lwy6aX),
     accessibilityActions,
     onAccessibilityAction,
     disabled,
   };
-  channelId(11868);
+  channelId(11882);
   intl2 = disabled(1126).intl;
   return <GestureDetector gesture={memo}>{null}</GestureDetector>;
 });

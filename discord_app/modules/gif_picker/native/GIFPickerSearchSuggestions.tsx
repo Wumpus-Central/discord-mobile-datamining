@@ -73,7 +73,7 @@ const memoResult = react.memo(
               color: "text-default",
               children: tmp8,
             };
-            const tmp12 = closure_5(onClickSuggestion(4886).Text, obj2);
+            const tmp12 = closure_5(onClickSuggestion(4892).Text, obj2);
             cResult[3] = tmp4.footerSuggestionsTitle;
             cResult[4] = tmp12;
             tmp10 = tmp12;
@@ -171,7 +171,7 @@ const memoResult = react.memo(
             color: "text-default",
             children: intl.string(onClickSuggestion(1126).t["3JGJo2"]),
           };
-          const Text = tmp2(4886).Text;
+          const Text = tmp2(4892).Text;
           intl = tmp2(1126).intl;
           items1 = [closure_5(Text, obj3)];
           const obj4 = {

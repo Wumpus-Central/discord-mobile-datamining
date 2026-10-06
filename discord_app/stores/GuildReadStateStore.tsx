@@ -129,7 +129,7 @@ function isCountableChannel(channel) {
 }
 function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
   let c1;
-  const f94258 = (item) => {
+  const f94398 = (item) => {
     const _ackMessageId = notifCenterReadState1._ackMessageId;
     const lastMessageIdResult = ReadStateStore.lastMessageId(item);
     const obj = c1(notifCenterReadState[18]);
@@ -148,7 +148,7 @@ function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
     if (null != notifCenterReadState) {
       const obj2 = require("SnowflakeUtils");
       const keys = obj2.keys(mentionCounts.mentionCounts);
-      const item = keys.forEach(f94258);
+      const item = keys.forEach(f94398);
     }
     closure_0 = mentionCounts2;
     let closure_1 = 0;
@@ -162,7 +162,7 @@ function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
     if (!tmp14) {
       const obj3 = require("SnowflakeUtils");
       const keys1 = obj3.keys(mentionCounts2.mentionCounts);
-      const item1 = keys1.forEach(f94258);
+      const item1 = keys1.forEach(f94398);
     }
     let num2;
     const _Math = Math;

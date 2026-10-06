@@ -14,5 +14,5 @@ export const openEmojiPickerActionSheet = function openEmojiPickerActionSheet(ar
   const obj = emojis_EmojiActionCreators;
   const result = obj.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequire(9868, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
+  obj2.openLazy(asyncRequire(9881, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
 };

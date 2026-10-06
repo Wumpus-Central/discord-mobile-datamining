@@ -6,14 +6,14 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import HeaderShared from "../../shared_components/HeaderShared.tsx";
 import ChannelDetailsConstants from "ChannelDetailsConstants.tsx";
 import navigateToThreadCreation from "../../../../threads/native/navigateToThreadCreation.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/12442_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/12457_AssetRegistry.js";
 import SearchNavigatorConstants from "../../../../search/native/components/navigator/SearchNavigatorConstants.tsx";
 import ChannelSettingsModal from "../../../../../components_native/channel_settings/ChannelSettingsModal.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../../_runtime/07568_NativeStackView.js";
 import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -91,7 +91,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = channel(576);
       const cResult = obj.c(5);
       channel = channel.channel;
-      const obj2 = channel(6772);
+      const obj2 = channel(6782);
       const canStartThread = obj2.useCanStartThread(channel);
       if (cResult[0] !== channel) {
         const fn = function t() {
@@ -119,7 +119,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== tmp5) {
           const obj3 = { accessibilityLabel: tmp8, onPress: tmp5, source: AssetRegistryDefault };
-          const HeaderIconButton = tmp(7498).HeaderIconButton;
+          const HeaderIconButton = tmp(7509).HeaderIconButton;
           const tmp13 = closure_10(HeaderIconButton, obj3);
           cResult[3] = tmp5;
           cResult[4] = tmp13;
@@ -134,7 +134,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   : (channel) => {
       let intl;
       channel = channel.channel;
-      let obj = channel(6772);
+      let obj = channel(6782);
       [][0] = channel;
       const canStartThread = obj.useCanStartThread(channel);
       let tmp5 = null;
@@ -144,7 +144,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           onPress: tmp4,
           source: AssetRegistryDefault,
         };
-        const HeaderIconButton = tmp(7498).HeaderIconButton;
+        const HeaderIconButton = tmp(7509).HeaderIconButton;
         intl = tmp(1126).intl;
         tmp5 = closure_10(HeaderIconButton, obj2);
       }
@@ -185,7 +185,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }
@@ -198,7 +198,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }
@@ -211,7 +211,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }
@@ -223,7 +223,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }
@@ -234,7 +234,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }
@@ -243,7 +243,7 @@ const memoResult = memo(
                 class C {
                   constructor() {
                     return navigation.addListener("beforeRemove", () => {
-                      /* body not rendered: F147781 */
+                      /* body not rendered: F148004 */
                     });
                   }
                 }
@@ -254,7 +254,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }
@@ -263,7 +263,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }
@@ -272,7 +272,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }
@@ -285,7 +285,7 @@ const memoResult = memo(
               class C {
                 constructor() {
                   return navigation.addListener("beforeRemove", () => {
-                    /* body not rendered: F147781 */
+                    /* body not rendered: F148004 */
                   });
                 }
               }

@@ -53,7 +53,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp8;
       }
-      const tmp9 = jsx(animatedStyles(8371).FlashList, {
+      const tmp9 = jsx(animatedStyles(8404).FlashList, {
         contentContainerStyle: first,
         data: cards,
         renderItem: tmp6,
@@ -70,7 +70,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       animatedStyles = animatedStyles.animatedStyles;
       const cards = animatedStyles.cards;
       const obj2 = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
-      const FlashList = animatedStyles(8371).FlashList;
+      const FlashList = animatedStyles(8404).FlashList;
       return (
         <FlashList
           contentContainerStyle={obj2}

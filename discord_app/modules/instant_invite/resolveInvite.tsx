@@ -87,7 +87,7 @@ export default function resolveInvite(inviteKey, _location, inviteInstanceId) {
       trackedActionData: obj5,
       rejectWithError: false,
     };
-    const get = tmp4(5083).get;
+    const get = tmp4(5089).get;
     TrackedHTTPUtilsDefault;
     obj5 = {
       event: tmp(1260).NetworkActionNames.INVITE_RESOLVE,

@@ -1,6 +1,6 @@
 // discord_app/modules/unique_usernames/UniqueUsernamesUtils.tsx
 import intl2 from "../../intl/index.native.tsx";
-import merged5 from "../../../_runtime/05075_merged5.js";
+import merged5 from "../../../_runtime/05081_merged5.js";
 import UniqueUsernamesTypes from "UniqueUsernamesTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUserna
 
 export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(config) {
   let P;
-  const f117206 = () => {
+  const f117364 = () => {
     let intl;
     const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: intl.string(intl2.t.T15lqn) };
     intl = intl2.intl;
@@ -17,8 +17,8 @@ export const formatUsernameLiveCheckValidation = function formatUsernameLiveChec
   const str = merged5;
   const match = str.match(config);
   let obj = { error: P.not(merged5.P.nullish) };
-  const _with = match.with({ rateLimited: true }, f117206).with;
-  match.with({ rateLimited: true }, f117206);
+  const _with = match.with({ rateLimited: true }, f117364).with;
+  match.with({ rateLimited: true }, f117364);
   P = merged5.P;
   const _withResult = _with(obj, (error) => {
     const obj = { type: UniqueUsernamesTypes.NameValidationState.ERROR, message: error.error };

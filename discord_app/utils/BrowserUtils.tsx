@@ -1,8 +1,8 @@
 // discord_app/utils/BrowserUtils.tsx
-import _modDef5403 from "../../_runtime/metro/05403__.js";
+import _modDef5410 from "../../_runtime/metro/05410__.js";
 import size from "../../_runtime/metro/00002__.js";
 
-let str = _modDef5403.name;
+let str = _modDef5410.name;
 if (str == null) {
   str = "unknown";
 }
@@ -11,7 +11,7 @@ let num = -1;
 let num2 = -1;
 if ("chrome" === str2.toLowerCase()) {
   const _parseInt = parseInt;
-  let str3 = _modDef5403.version;
+  let str3 = _modDef5410.version;
   if (str3 == null) {
     str3 = "";
   }
@@ -20,7 +20,7 @@ if ("chrome" === str2.toLowerCase()) {
 let _parseInt2Result = num;
 if ("electron" === str2.toLowerCase()) {
   const _parseInt2 = parseInt;
-  let str4 = _modDef5403.version;
+  let str4 = _modDef5410.version;
   if (str4 == null) {
     str4 = "";
   }
@@ -30,7 +30,7 @@ const map = _parseInt2Result;
 let _parseInt3Result = num;
 if ("firefox" === str2.toLowerCase()) {
   const _parseInt3 = parseInt;
-  let str5 = _modDef5403.version;
+  let str5 = _modDef5410.version;
   if (str5 == null) {
     str5 = "";
   }
@@ -40,7 +40,7 @@ let c2 = _parseInt3Result;
 let _parseInt4Result = num;
 if ("edge" === str2.toLowerCase()) {
   const _parseInt4 = parseInt;
-  let str6 = _modDef5403.version;
+  let str6 = _modDef5410.version;
   if (str6 == null) {
     str6 = "";
   }
@@ -49,7 +49,7 @@ if ("edge" === str2.toLowerCase()) {
 let c3 = _parseInt4Result;
 if ("safari" === str2.toLowerCase()) {
   const _parseInt5 = parseInt;
-  let str7 = _modDef5403.version;
+  let str7 = _modDef5410.version;
   if (str7 == null) {
     str7 = "";
   }

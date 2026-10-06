@@ -50,7 +50,7 @@ let obj = function _fetchAppliedGuildBoostsForGuild() {
             tmp = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (guildId === 1) {
@@ -143,7 +143,7 @@ obj = function _fetchAppliedGuildBoostsForUser() {
             tmp = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -365,7 +365,7 @@ obj = function _applyToGuild() {
             appliedGuildBoostError = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (arg0 === 1) {

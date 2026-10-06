@@ -346,7 +346,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   _asyncToGenerator(true);
                   const promise = fn();
                   promise.then(() => {
-                    /* body not rendered: F152065 */
+                    /* body not rendered: F152297 */
                   });
                 }, 0);
               } else {

@@ -78,7 +78,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         hasIcons: false,
       };
       ActionSheetActionCreatorsDefault;
-      const tmp8 = asyncRequire(8949, dependencyMap.paths);
+      const tmp8 = asyncRequire(8978, dependencyMap.paths);
       intl = intl4.intl;
       channels = first.channels;
       openLazy(tmp8, WebhookGuildChannelSelector_str, obj);

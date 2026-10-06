@@ -43,7 +43,7 @@ let obj = function _getDeviceState() {
             fallback = obj5.fallback;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           let DEFAULT_DEVICE_STATE;

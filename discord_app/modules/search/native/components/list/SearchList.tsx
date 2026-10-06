@@ -24,6 +24,7 @@ import GenericTextRowDefault from "rows/GenericTextRow.tsx";
 import SearchListSectionDefault from "SearchListSection.tsx";
 import SmartSearchRowDefault from "../../../../intelligence_layer/search/native/components/SmartSearchRow.tsx";
 import SuggestedSearchSkeletonDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchSkeleton.tsx";
+import smartSearchViewabilityConfig from "../../../../intelligence_layer/search/native/smartSearchViewabilityConfig.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import SearchConstants from "../../../SearchConstants.tsx";
@@ -363,8 +364,10 @@ const memoResult = react.memo(
             ListFooterComponent,
             ItemSeparatorComponent,
             numColumns,
+            viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig,
           };
-          const tmp23 = metroImportAll(defaultMVCPConfig.AnimatedFlashList, obj6);
+          const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;
+          const tmp23 = metroImportAll(AnimatedFlashList, obj6);
           cResult[7] = ItemSeparatorComponent;
           cResult[8] = ListFooterComponent;
           cResult[9] = ListHeaderComponent;
@@ -442,6 +445,7 @@ const memoResult = react.memo(
           ListFooterComponent,
           ItemSeparatorComponent,
           numColumns,
+          viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig,
         };
         obj5 = undefined;
         const AnimatedFlashList = defaultMVCPConfig.AnimatedFlashList;

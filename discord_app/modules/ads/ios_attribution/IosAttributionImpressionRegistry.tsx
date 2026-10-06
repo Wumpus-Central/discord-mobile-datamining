@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 let impressionToken;
 
 let obj3;
-const f105815 = () => {};
+const f105967 = () => {};
 function isCurrentImpression(arg0, arg1) {
   return map.get(arg0) === arg1;
 }
@@ -22,7 +22,7 @@ function endImpressionToken(token) {
   if (null != token) {
     obj = IosAttributionNativeModule;
     const endImpressionResult = obj.endImpression(token);
-    endImpressionResult.catch(f105815);
+    endImpressionResult.catch(f105967);
   }
 }
 let obj = function _startNativeImpression() {
@@ -87,7 +87,7 @@ let obj = function _startNativeImpression() {
             token = undefined;
             signAbort = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === signAbort) {
           if (impressionId === 1) {
@@ -345,7 +345,7 @@ obj = function _getStoreKitCredential() {
               impressionToken = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c3) {
             if (arg0 === 1) {
@@ -441,7 +441,7 @@ export const endImpression = function endImpression(id) {
     if (null != token) {
       const obj2 = IosAttributionNativeModule;
       const endImpressionResult = obj2.endImpression(token);
-      endImpressionResult.catch(f105815);
+      endImpressionResult.catch(f105967);
     }
   }
 };

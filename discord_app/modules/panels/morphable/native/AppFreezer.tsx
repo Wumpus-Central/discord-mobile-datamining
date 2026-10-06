@@ -50,7 +50,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp7;
         }
       }
-      const tmp8 = jsx(lockKeys(5738).Freeze, { freeze: tmp6, placeholder, children });
+      const tmp8 = jsx(lockKeys(5745).Freeze, { freeze: tmp6, placeholder, children });
       cResult[2] = children;
       cResult[3] = placeholder;
       cResult[4] = tmp6;
@@ -79,7 +79,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return someResult;
       });
-      const Freeze = lockKeys(5738).Freeze;
+      const Freeze = lockKeys(5745).Freeze;
       if (!freeze) {
         freeze = flag;
       }

@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      const MediaViewerSourcesStore = tmp(7934).MediaViewerSourcesStore;
+      const MediaViewerSourcesStore = tmp(7945).MediaViewerSourcesStore;
       const state = MediaViewerSourcesStore.useState(tmp4);
       if (cResult[2] !== arg0) {
         const fn2 = function o(userRevealedIndexes) {
@@ -42,7 +42,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[3];
       }
-      const MediaViewerSourcesStore2 = tmp(7934).MediaViewerSourcesStore;
+      const MediaViewerSourcesStore2 = tmp(7945).MediaViewerSourcesStore;
       const state1 = MediaViewerSourcesStore2.useState(tmp6);
       if (cResult[4] !== state) {
         let flattenSourceResult;

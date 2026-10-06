@@ -900,7 +900,7 @@ obj = function _fetchCollectiblesMarketings() {
       await "IconComponent";
       body = tmp;
       PROD = release.release ?? CollectiblesMarketingReleaseType.CollectiblesMarketingReleaseType.PROD;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;
@@ -1149,7 +1149,7 @@ obj = function _maybeFetchCollectiblesShopTabLayout() {
     }
     await "IconComponent";
     ({ tab: c0, abortSignal: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -1172,7 +1172,7 @@ export { openCollectiblesShop };
 export { openCollectiblesShopMobile };
 export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   let isCollectiblesShopRoute;
-  obj = isCollectiblesShopRoute(4737);
+  obj = isCollectiblesShopRoute(4743);
   const rootNavigationRef = obj.getRootNavigationRef();
   let tmp2 = !(null == rootNavigationRef || !rootNavigationRef.isReady());
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();

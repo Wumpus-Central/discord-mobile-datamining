@@ -5,7 +5,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
 import SearchEmpty from "../../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
 import react from "../../../../../_runtime/00019_react.js";

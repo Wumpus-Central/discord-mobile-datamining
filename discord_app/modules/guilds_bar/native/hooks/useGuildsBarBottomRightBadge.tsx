@@ -46,9 +46,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       [first, dependencyMap] = react.useState(tmp5);
-      const tmpResult = mentionCount(4580);
+      const tmpResult = mentionCount(4586);
       const token = tmpResult.useToken(first(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
-      const tmpResult2 = mentionCount(4580);
+      const tmpResult2 = mentionCount(4586);
       const token1 = tmpResult2.useToken(first(587).modules.mobile.GUILD_BAR_ITEM_MARGIN);
       const diff = token1 - tmp(1188).BADGE_PADDING;
       if (cResult[2] !== diff) {
@@ -123,8 +123,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const obj4 = { position: "bottom-right", containerSize: token, width: diff1 };
           cResult[7] = token;
           cResult[8] = diff1;
-          cResult[9] = first(16238)(obj4);
-          const tmp23 = first(16238)(obj4);
+          cResult[9] = first(16278)(obj4);
+          const tmp23 = first(16278)(obj4);
         } else {
           class L {
             constructor(nativeEvent) {
@@ -202,8 +202,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
             cResult[25] = tmp13;
             cResult[26] = joinRequestState;
-            cResult[27] = jsx(first(16239), { style: tmp13, joinRequestState });
-            const tmp17 = jsx(first(16239), { style: tmp13, joinRequestState });
+            cResult[27] = jsx(first(16279), { style: tmp13, joinRequestState });
+            const tmp17 = jsx(first(16279), { style: tmp13, joinRequestState });
           }
         }
         return tmp20;
@@ -275,7 +275,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           items2 = [tmp5];
           return obj8;
         } else {
-          return { badge: null, cutout: "Array", cutouts: "toCharArray$esjava$1" };
+          return { badge: null, cutout: "Array", cutouts: "parent" };
         }
       }, items1);
     };

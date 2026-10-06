@@ -5,7 +5,7 @@ import intl3 from "../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05702_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05709_fuzzysearch.js";
 import UserRowConstants from "UserRowConstants.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";

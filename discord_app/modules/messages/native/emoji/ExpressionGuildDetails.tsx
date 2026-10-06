@@ -25,7 +25,7 @@ let obj2;
 let size;
 let size1;
 let tmp8;
-const GuildBadgeDefault = tmp8(5977);
+const GuildBadgeDefault = tmp8(5984);
 const View = react_native.View;
 let closure_4 = ExpressionSourceRecord.ExpressionSourceGuildRecord;
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: metroImportDefault } = Fragment);
@@ -118,7 +118,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     obj9 = { style: null, onPress: null, children: null };
                     obj9.style = tmp6.joinGuildButton;
                     obj9.onPress = function onPress() {
-                      /* body not rendered: F140098 */
+                      /* body not rendered: F140304 */
                     };
                     PressableOpacity = tmp4(tmp5[13]).PressableOpacity;
                     obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -171,7 +171,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   obj9 = { style: null, onPress: null, children: null };
                   obj9.style = tmp6.joinGuildButton;
                   obj9.onPress = function onPress() {
-                    /* body not rendered: F140098 */
+                    /* body not rendered: F140304 */
                   };
                   PressableOpacity = tmp4(tmp5[13]).PressableOpacity;
                   obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -236,7 +236,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           obj9 = { style: null, onPress: null, children: null };
                           obj9.style = tmp6.joinGuildButton;
                           obj9.onPress = function onPress() {
-                            /* body not rendered: F140098 */
+                            /* body not rendered: F140304 */
                           };
                           PressableOpacity = tmp4(tmp5[13]).PressableOpacity;
                           obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -316,7 +316,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 obj9 = { style: null, onPress: null, children: null };
                 obj9.style = tmp6.joinGuildButton;
                 obj9.onPress = function onPress() {
-                  /* body not rendered: F140098 */
+                  /* body not rendered: F140304 */
                 };
                 PressableOpacity = tmp4(tmp5[13]).PressableOpacity;
                 obj10 = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -391,7 +391,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj5 = { style: tmp.guildDetailsContainer, children: null };
         const obj6 = { variant: "eyebrow", color: "text-default", children: title };
-        const items = [tmp9(guild(4886).Text, obj6)];
+        const items = [tmp9(guild(4892).Text, obj6)];
         const obj7 = { style: tmp.guildDetailsContent, children: null };
         const items1 = [tmp7];
         const obj8 = { style: tmp.guildNameAndOnlineMembers, children: null };
@@ -405,7 +405,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp8Result = GuildBadgeDefault;
         items2 = [tmp9(tmp8Result, obj10)];
         const obj11 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: guild.name };
-        items2[1] = tmp9(guild(4886).Text, obj11);
+        items2[1] = tmp9(guild(4892).Text, obj11);
         const items3 = [closure_7(View, obj9)];
         const obj12 = { style: tmp.guildDescriptionSection, children: null };
         if (isDiscoverableResult) {
@@ -416,7 +416,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               children: intl2.format(guild(1126).t["LC+S+m"], obj14),
             };
-            const Text2 = tmp13(4886).Text;
+            const Text2 = tmp13(4892).Text;
             intl2 = tmp13(1126).intl;
             obj14 = { membersOnline: fromGuildType.presenceCount };
             const items4 = [tmp9(Text2, obj13), ,];
@@ -433,13 +433,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   },
                   children: tmp9(Text3, obj17),
                 };
-                const PressableOpacity = tmp13(5909).PressableOpacity;
+                const PressableOpacity = tmp13(5916).PressableOpacity;
                 obj17 = {
                   variant: "text-xs/medium",
                   color: "text-default",
                   children: intl3.string(guild(1126).t.riu2R5),
                 };
-                Text3 = tmp13(4886).Text;
+                Text3 = tmp13(4892).Text;
                 intl3 = tmp13(1126).intl;
                 tmp9Result = tmp9(PressableOpacity, obj16);
               }
@@ -452,7 +452,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               children: intl4.string(guild(1126).t.inyJqO),
             };
-            const Text4 = tmp13(4886).Text;
+            const Text4 = tmp13(4892).Text;
             intl4 = tmp13(1126).intl;
             tmp9Result = tmp9(Text4, obj19);
           }
@@ -466,14 +466,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           return closure_7(View, obj5);
         }
         const obj20 = { variant: "text-xs/medium", color: "text-default", children: intl.string(guild(1126).t.H29mx4) };
-        const Text = tmp13(4886).Text;
+        const Text = tmp13(4892).Text;
         intl = tmp13(1126).intl;
         tmp9Result1 = tmp9(Text, obj20);
       }
       const obj21 = {
         style: tmp.guildIcon,
         guild: fromGuildType,
-        size: guild(5971).GuildIconSizes.XLARGE,
+        size: guild(5978).GuildIconSizes.XLARGE,
         animate: true,
       };
       const tmp10 = GuildIconDefault;

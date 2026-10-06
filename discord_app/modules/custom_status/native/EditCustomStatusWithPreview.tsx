@@ -13,7 +13,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import react_native from "../../a11y/native/setAccessibilityFocus.android.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/06427_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/06434_AssetRegistry.js";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import maybeShowDiscardChangesAlertDefault from "../../user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx";
 import Constants2 from "../Constants.tsx";
@@ -348,7 +348,7 @@ function EditCustomStatusWithPreview(navigation) {
         obj.dismissKeyboard();
         const obj2 = ActionSheetActionCreatorsDefault;
         const obj3 = { initialValue: first2, onChange };
-        obj2.openLazy(asyncRequire(10980, dependencyMap.paths), "ClearAfterOptionsActionSheet", obj3);
+        obj2.openLazy(asyncRequire(10993, dependencyMap.paths), "ClearAfterOptionsActionSheet", obj3);
       },
       trailing: ref1(Text, obj19),
     };
@@ -555,7 +555,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[4] !== tmp4) {
           const obj3 = { initialRouteName: "root", screens: tmp4, headerStatusBarHeight: 12, headerStyle: tmp6 };
-          const Navigator = analyticsLocations(6496).Navigator;
+          const Navigator = analyticsLocations(6503).Navigator;
           analyticsLocations(1370);
           const tmp8Result = closure_13(Navigator, obj3);
           cResult[4] = tmp4;
@@ -576,7 +576,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           intl = analyticsLocations(closure_1_2[12]).intl;
           return closure_1_13(GenericHeaderTitle, obj);
         },
-        headerLeft: tmpResult4.getHeaderCloseButton(_prompt(5093).pop),
+        headerLeft: tmpResult4.getHeaderCloseButton(_prompt(5099).pop),
         ignoreKeyboard: true,
         render(arg0, navigation) {
           const obj = { navigation, onClose: _prompt(closure_2_2[45]).pop, analyticsLocations, prompt: _prompt };
@@ -588,7 +588,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = _prompt;
       cResult[2] = obj4;
       tmp4 = obj4;
-      tmpResult4 = analyticsLocations(6010);
+      tmpResult4 = analyticsLocations(6017);
     }
   : (analyticsLocations) => {
       let obj3;
@@ -621,7 +621,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       }, items);
       let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: 12, headerStyle: obj3 };
-      const Navigator = analyticsLocations(6496).Navigator;
+      const Navigator = analyticsLocations(6503).Navigator;
       let obj2 = analyticsLocations(1370);
       obj3 = undefined;
       const tmp3Result = analyticsLocations(1370);

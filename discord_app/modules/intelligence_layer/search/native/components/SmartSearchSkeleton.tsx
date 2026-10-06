@@ -7,7 +7,6 @@ import _modDef3919 from "../../SmartSearch.messages.js";
 import react3 from "../../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
 import AILoader from "../../../../../design/visual-identities/ai/AILoader/AILoader.native.tsx";
 import AIShimmer from "../../../../../design/visual-identities/ai/AIShimmer/AIShimmer.native.tsx";
-import waveTransition from "../../../../../design/visual-identities/ai/AIShimmer/waveTransition.tsx";
 import FormRowPlaceholderDefault from "../../../../search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
 import AILoaderConstants from "../../../../../design/visual-identities/ai/AILoader/AILoaderConstants.tsx";
@@ -18,22 +17,14 @@ import size from "../../../../../../_runtime/metro/00002__.js";
 
 let isCollapsed;
 
-let AI_LOADER_REST_FRACTION;
-let AI_LOADER_STEP_FRACTION;
 let hasOwnProperty;
 let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-const f126928 = () => Math.random() - 0.5;
+const f127081 = () => Math.random() - 0.5;
 const View = react_native.View;
-({
-  AI_LOADER_CYCLE_MS: hasOwnProperty,
-  AI_LOADER_REDUCED_MOTION_CYCLE_MS: metroRequire,
-  AI_LOADER_REST_FRACTION,
-  AI_LOADER_STEP_FRACTION,
-} = AILoaderConstants);
+({ AI_LOADER_CYCLE_MS: hasOwnProperty, AI_LOADER_REDUCED_MOTION_CYCLE_MS: metroRequire } = AILoaderConstants);
 ({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
-let closure_9 = AI_LOADER_REST_FRACTION + 2 * AI_LOADER_STEP_FRACTION;
 let items = [
   _modDef3919.Sb2fo2,
   _modDef3919.rXNe0Z,
@@ -43,7 +34,7 @@ let items = [
   _modDef3919.kk7BVL,
   _modDef3919.UVa49v,
 ];
-let closure_11 = createStyles.createStyles((arg0) => {
+let closure_10 = createStyles.createStyles((arg0) => {
   let num2;
   let num3;
   let num;
@@ -91,17 +82,16 @@ const memoResult = memo(
         let first;
         let items1;
         let items2;
-        let shimmerDelayMs;
-        let shimmerDurationMs;
-        let shimmerInitialDelayMs;
+        let tmp12;
+        let tmp16;
         const obj = react2;
-        const cResult = obj.c(23);
+        const cResult = obj.c(21);
         isCollapsed = isCollapsed.isCollapsed;
-        const tmp5 = closure_11(isCollapsed);
+        const tmp5 = closure_10(isCollapsed);
         const reducedMotion = react.useContext(react3.AccessibilityPreferencesContext).reducedMotion;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           items = [_modDef3919.ffCCEe];
-          HermesBuiltin.arraySpread(items, items.sort(f126928), 1);
+          HermesBuiltin.arraySpread(items, items.sort(f127081), 1);
           const mapped = items.map((item) => {
             const intl = intl2.intl;
             return intl.string(item);
@@ -111,171 +101,163 @@ const memoResult = memo(
         } else {
           first = cResult[0];
         }
-        const tmp12 = reducedMotion.enabled ? metroRequire : hasOwnProperty;
-        const result = 0.8 * tmp12;
-        let REDUCED_MOTION_PASS_MS = result;
         if (reducedMotion.enabled) {
-          REDUCED_MOTION_PASS_MS = waveTransition.REDUCED_MOTION_PASS_MS;
-        }
-        const diff = tmp12 - REDUCED_MOTION_PASS_MS;
-        const diff1 = tmp12 * closure_9 - diff;
-        if (cResult[1] === diff) {
-          if (cResult[2] === result) {
-            let tmp16;
-            let tmp17;
-            if (cResult[3] === diff1) {
-              tmp16 = cResult[4];
-            }
-            ({ shimmerDurationMs, shimmerDelayMs, shimmerInitialDelayMs } = tmp16);
-            const _Symbol = Symbol;
-            const block = tmp5.block;
-            if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp19 = metroImportDefault(AILoader.AILoader, { size: 12, color: "interactive-text-default" });
-              cResult[5] = tmp19;
-              tmp17 = tmp19;
-            } else {
-              tmp17 = cResult[5];
-            }
-            if (cResult[6] === shimmerDelayMs) {
-              if (cResult[7] === shimmerDurationMs) {
-                if (cResult[8] === shimmerInitialDelayMs) {
-                  let tmp20;
-                  if (cResult[9] === tmp5.label) {
-                    tmp20 = cResult[10];
-                  }
-                  if (cResult[11] === tmp5.header) {
-                    let tmp23;
-                    let tmp27;
-                    if (cResult[12] === tmp20) {
-                      tmp23 = cResult[13];
-                    }
-                    const skeletons = tmp5.skeletons;
-                    if (cResult[14] !== isCollapsed) {
-                      let num12 = 6;
-                      const _Array = Array;
-                      if (isCollapsed) {
-                        num12 = 3;
-                      }
-                      const obj2 = { length: num12 };
-                      const fromResult = from(obj2);
-                      const mapped1 = fromResult.map((item, index) => {
-                        const tmp = FormRowPlaceholderDefault;
-                        return closure_1_7(tmp, {}, "skeleton-" + index);
-                      });
-                      cResult[14] = isCollapsed;
-                      cResult[15] = mapped1;
-                      tmp27 = mapped1;
-                    } else {
-                      tmp27 = cResult[15];
-                    }
-                    if (cResult[16] === tmp5.skeletons) {
-                      let tmp29;
-                      if (cResult[17] === tmp27) {
-                        tmp29 = cResult[18];
-                      }
-                      if (cResult[19] === tmp5.block) {
-                        if (cResult[20] === tmp23) {
-                          let tmp33;
-                          if (cResult[21] === tmp29) {
-                            tmp33 = cResult[22];
-                          }
-                          return tmp33;
-                        }
-                      }
-                      const obj3 = { style: block, children: items1 };
-                      items1 = [tmp23, tmp29];
-                      const tmp36 = metroImportAll(View, obj3);
-                      cResult[19] = tmp5.block;
-                      cResult[20] = tmp23;
-                      cResult[21] = tmp29;
-                      cResult[22] = tmp36;
-                      tmp33 = tmp36;
-                    }
-                    const obj4 = { style: skeletons, children: tmp27 };
-                    const tmp32 = metroImportDefault(View, obj4);
-                    cResult[16] = tmp5.skeletons;
-                    cResult[17] = tmp27;
-                    cResult[18] = tmp32;
-                    tmp29 = tmp32;
-                  }
-                  const obj5 = { style: tmp5.header, children: items2 };
-                  items2 = [tmp17, tmp20];
-                  const tmp26 = metroImportAll(View, obj5);
-                  cResult[11] = tmp5.header;
-                  cResult[12] = tmp20;
-                  cResult[13] = tmp26;
-                  tmp23 = tmp26;
-                }
-              }
-            }
-            const obj6 = {
-              text: first,
-              variant: "text-sm/semibold",
-              color: "interactive-text-default",
-              delay: shimmerDelayMs,
-              initialDelay: shimmerInitialDelayMs,
-              duration: shimmerDurationMs,
-              style: tmp5.label,
-            };
-            const tmp22 = metroImportDefault(AIShimmer.AIShimmer, obj6);
-            cResult[6] = shimmerDelayMs;
-            cResult[7] = shimmerDurationMs;
-            cResult[8] = shimmerInitialDelayMs;
-            cResult[9] = tmp5.label;
-            cResult[10] = tmp22;
-            tmp20 = tmp22;
+          let tmp14;
+          const _Symbol2 = Symbol;
+          if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+            const obj2 = { shimmerDurationMs: 1000, shimmerDelayMs: metroRequire - 450, shimmerInitialDelayMs: 550 };
+            cResult[1] = obj2;
+            tmp14 = obj2;
+          } else {
+            tmp14 = cResult[1];
+          }
+          tmp12 = tmp14;
+        } else {
+          const _Symbol = Symbol;
+          if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+            const obj3 = { shimmerDurationMs: 1000, shimmerDelayMs: hasOwnProperty - 1000, shimmerInitialDelayMs: 300 };
+            cResult[2] = obj3;
+            tmp12 = obj3;
+          } else {
+            tmp12 = cResult[2];
           }
         }
-        const obj7 = { shimmerDurationMs: result, shimmerDelayMs: diff, shimmerInitialDelayMs: diff1 };
-        cResult[1] = diff;
-        cResult[2] = result;
-        cResult[3] = diff1;
-        cResult[4] = obj7;
-        tmp16 = obj7;
+        const block = tmp5.block;
+        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+          const tmp18 = metroImportDefault(AILoader.AILoader, { size: 12, color: "interactive-text-default" });
+          cResult[3] = tmp18;
+          tmp16 = tmp18;
+        } else {
+          tmp16 = cResult[3];
+        }
+        if (cResult[4] === tmp12.shimmerDelayMs) {
+          if (cResult[5] === tmp12.shimmerDurationMs) {
+            if (cResult[6] === tmp12.shimmerInitialDelayMs) {
+              let tmp19;
+              if (cResult[7] === tmp5.label) {
+                tmp19 = cResult[8];
+              }
+              if (cResult[9] === tmp5.header) {
+                let tmp21;
+                let tmp25;
+                if (cResult[10] === tmp19) {
+                  tmp21 = cResult[11];
+                }
+                const skeletons = tmp5.skeletons;
+                if (cResult[12] !== isCollapsed) {
+                  let num11 = 6;
+                  const _Array = Array;
+                  if (isCollapsed) {
+                    num11 = 3;
+                  }
+                  const obj4 = { length: num11 };
+                  const fromResult = from(obj4);
+                  const mapped1 = fromResult.map((item, index) => {
+                    const tmp = FormRowPlaceholderDefault;
+                    return closure_1_7(tmp, {}, "skeleton-" + index);
+                  });
+                  cResult[12] = isCollapsed;
+                  cResult[13] = mapped1;
+                  tmp25 = mapped1;
+                } else {
+                  tmp25 = cResult[13];
+                }
+                if (cResult[14] === tmp5.skeletons) {
+                  let tmp27;
+                  if (cResult[15] === tmp25) {
+                    tmp27 = cResult[16];
+                  }
+                  if (cResult[17] === tmp5.block) {
+                    if (cResult[18] === tmp21) {
+                      let tmp31;
+                      if (cResult[19] === tmp27) {
+                        tmp31 = cResult[20];
+                      }
+                      return tmp31;
+                    }
+                  }
+                  const obj5 = { style: block, children: items1 };
+                  items1 = [tmp21, tmp27];
+                  const tmp34 = metroImportAll(View, obj5);
+                  cResult[17] = tmp5.block;
+                  cResult[18] = tmp21;
+                  cResult[19] = tmp27;
+                  cResult[20] = tmp34;
+                  tmp31 = tmp34;
+                }
+                const obj6 = { style: skeletons, children: tmp25 };
+                const tmp30 = metroImportDefault(View, obj6);
+                cResult[14] = tmp5.skeletons;
+                cResult[15] = tmp25;
+                cResult[16] = tmp30;
+                tmp27 = tmp30;
+              }
+              const obj7 = { style: tmp5.header, children: items2 };
+              items2 = [tmp16, tmp19];
+              const tmp24 = metroImportAll(View, obj7);
+              cResult[9] = tmp5.header;
+              cResult[10] = tmp19;
+              cResult[11] = tmp24;
+              tmp21 = tmp24;
+            }
+          }
+        }
+        const obj8 = {
+          text: first,
+          variant: "text-sm/semibold",
+          color: "interactive-text-default",
+          delay: tmp12.shimmerDelayMs,
+          initialDelay: tmp12.shimmerInitialDelayMs,
+          duration: tmp12.shimmerDurationMs,
+          style: tmp5.label,
+        };
+        const tmp20 = metroImportDefault(AIShimmer.AIShimmer, obj8);
+        cResult[4] = tmp12.shimmerDelayMs;
+        cResult[5] = tmp12.shimmerDurationMs;
+        cResult[6] = tmp12.shimmerInitialDelayMs;
+        cResult[7] = tmp5.label;
+        cResult[8] = tmp20;
+        tmp19 = tmp20;
       }
     : (isCollapsed) => {
         let fromResult;
         let items1;
         let items2;
-        let shimmerDelayMs;
-        let shimmerDurationMs;
-        let shimmerInitialDelayMs;
         isCollapsed = isCollapsed.isCollapsed;
         let reducedMotion;
-        let tmp = closure_11(isCollapsed);
-        reducedMotion = react.useContext(reducedMotion(4596).AccessibilityPreferencesContext).reducedMotion;
+        let tmp = closure_10(isCollapsed);
+        reducedMotion = react.useContext(reducedMotion(4602).AccessibilityPreferencesContext).reducedMotion;
         items = [reducedMotion.enabled];
         const memo = react.useMemo(() => {
-          items = [_modDef3919.ffCCEe, ...closure_1_10.sort(f126928)];
+          items = [_modDef3919.ffCCEe, ...closure_1_9.sort(f127081)];
           return items.map((item) => {
             const intl = reducedMotion(closure_1_2[10]).intl;
             return intl.string(item);
           });
         }, []);
         const memo1 = react.useMemo(() => {
-          const tmp = reducedMotion.enabled ? metroRequire : hasOwnProperty;
-          const result = 0.8 * tmp;
-          let REDUCED_MOTION_PASS_MS = result;
+          let obj;
           if (reducedMotion.enabled) {
-            REDUCED_MOTION_PASS_MS = waveTransition.REDUCED_MOTION_PASS_MS;
+            obj = { shimmerDurationMs: 1000, shimmerDelayMs: metroRequire - 450, shimmerInitialDelayMs: 550 };
+            const obj2 = { shimmerDurationMs: 1000, shimmerDelayMs: metroRequire - 450, shimmerInitialDelayMs: 550 };
+          } else {
+            obj = { shimmerDurationMs: 1000, shimmerDelayMs: hasOwnProperty - 1000, shimmerInitialDelayMs: 300 };
           }
-          const diff = tmp - REDUCED_MOTION_PASS_MS;
-          return { shimmerDurationMs: result, shimmerDelayMs: diff, shimmerInitialDelayMs: tmp * closure_9 - diff };
+          return obj;
         }, items);
-        const obj = { style: tmp.block, children: items2 };
-        const obj2 = { style: tmp.header, children: items1 };
-        ({ shimmerDurationMs, shimmerDelayMs, shimmerInitialDelayMs } = memo1);
-        items1 = [closure_7(reducedMotion(14209).AILoader, { size: 12, color: "interactive-text-default" })];
+        let obj = { style: tmp.block, children: items2 };
+        let obj2 = { style: tmp.header, children: items1 };
+        items1 = [closure_7(reducedMotion(14227).AILoader, { size: 12, color: "interactive-text-default" })];
         const obj3 = {
           text: memo,
           variant: "text-sm/semibold",
           color: "interactive-text-default",
-          delay: shimmerDelayMs,
-          initialDelay: shimmerInitialDelayMs,
-          duration: shimmerDurationMs,
+          delay: memo1.shimmerDelayMs,
+          initialDelay: memo1.shimmerInitialDelayMs,
+          duration: memo1.shimmerDurationMs,
           style: tmp.label,
         };
-        items1[1] = closure_7(reducedMotion(14213).AIShimmer, obj3);
+        items1[1] = closure_7(reducedMotion(14231).AIShimmer, obj3);
         items2 = [closure_8(View, obj2)];
         let num = 6;
         const _Array = Array;
@@ -294,6 +276,8 @@ const memoResult = memo(
         return closure_8(View, obj);
       },
 );
-let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/components/SmartSearchSkeleton.tsx");
+const result = size.fileFinishedImporting(
+  "modules/intelligence_layer/search/native/components/SmartSearchSkeleton.tsx",
+);
 
 export default memoResult;

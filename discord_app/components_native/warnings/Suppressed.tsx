@@ -2,8 +2,8 @@
 import Fragment from "../../../_runtime/react/00021_Fragment.js";
 import intl4 from "../../intl/index.native.tsx";
 import PermissionActionCreatorsDefault from "../../actions/PermissionActionCreators.tsx";
-import AssetRegistryDefault from "../../../_runtime/17100_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../_runtime/17101_AssetRegistry.js";
+import AssetRegistryDefault from "../../../_runtime/17126_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../_runtime/17127_AssetRegistry.js";
 import react from "../../../_runtime/00019_react.js";
 import PermissionSpeakStore from "../../stores/PermissionSpeakStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -41,7 +41,7 @@ class Suppressed extends Component {
       tmp6 = importDefault;
       tmp7 = AssetRegistryDefault2;
     }
-    return jsx(tmp6(5783), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
+    return jsx(tmp6(5790), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
   }
 }
 const prototype = Suppressed.prototype;

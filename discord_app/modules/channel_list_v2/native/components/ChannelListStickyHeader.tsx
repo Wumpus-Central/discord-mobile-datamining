@@ -136,7 +136,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === guild) {
         let tmp17;
         const tmp15 = useStickyServerHeaderSubtitleDefault(guild);
-        const tmpResult5 = guild(5998);
+        const tmpResult5 = guild(6005);
         const iOSPressEffects = tmpResult5.useIOSPressEffects(4);
         ({ pressableStyles, onPressIn, onPressOut } = iOSPressEffects);
         if (cResult[5] !== guild) {
@@ -148,9 +148,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp17 = cResult[6];
         }
-        const tmpResult7 = guild(4580);
+        const tmpResult7 = guild(4586);
         const token = tmpResult7.useToken(tmp8(587).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
-        const tmpResult8 = guild(4580);
+        const tmpResult8 = guild(4586);
         const token1 = tmpResult8.useToken(tmp8(587).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
         if (cResult[7] === pressableStyles) {
           let tmp21;
@@ -231,7 +231,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                       let tmp60 = null;
                                                       if (tmp11) {
                                                         tmp60 = closure_6(
-                                                          tmp(16075).FavoritesGuildHeaderActionButton,
+                                                          tmp(16114).FavoritesGuildHeaderActionButton,
                                                           {},
                                                         );
                                                       }
@@ -309,7 +309,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                               let tmp79 = null;
                                                               if (undefined !== showCoachmarks && showCoachmarks) {
                                                                 const obj4 = { targetRef: ref, guild };
-                                                                tmp79 = closure_6(tmp8(16081), obj4);
+                                                                tmp79 = closure_6(tmp8(16120), obj4);
                                                               }
                                                               cResult[66] = guild;
                                                               cResult[67] =
@@ -347,7 +347,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                             useButtonComponent: true,
                                                             useEventsButton: true,
                                                           };
-                                                          tmp67 = closure_6(tmp8(11925), obj7);
+                                                          tmp67 = closure_6(tmp8(11939), obj7);
                                                         }
                                                         cResult[57] = guild;
                                                         cResult[58] =
@@ -414,7 +414,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     lineClamp: 1,
                                     children: intl2.format(guild(1126).t.zRl6XR, obj12),
                                   };
-                                  const Text = tmp(4886).Text;
+                                  const Text = tmp(4892).Text;
                                   intl2 = tmp(1126).intl;
                                   obj12 = { count: tmp15 };
                                   items4 = [closure_6(Text, obj11), ,];
@@ -427,7 +427,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     lineClamp: 1,
                                     children: intl3.string(guild(1126).t["1g9A/f"]),
                                   };
-                                  const Text2 = tmp(4886).Text;
+                                  const Text2 = tmp(4892).Text;
                                   intl3 = tmp(1126).intl;
                                   items4[2] = closure_6(Text2, obj14);
                                   tmp49 = closure_7(closure_4, obj10);
@@ -457,7 +457,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     let tmp42 = null;
                     if (tmp5) {
                       const obj16 = { size: "xxs", color: nativeDefault.colors.TEXT_SUBTLE, style: tmp7.chevron };
-                      const ChevronSmallRightIcon = tmp(6708).ChevronSmallRightIcon;
+                      const ChevronSmallRightIcon = tmp(6715).ChevronSmallRightIcon;
                       tmp42 = closure_6(ChevronSmallRightIcon, obj16);
                     }
                     cResult[25] = tmp5;
@@ -487,7 +487,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 lineClamp: 1,
                 children: tmp17,
               };
-              const tmp32 = closure_6(guild(4886).Text, obj19);
+              const tmp32 = closure_6(guild(4892).Text, obj19);
               cResult[16] = tmp17;
               cResult[17] = token;
               cResult[18] = tmp32;
@@ -500,7 +500,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 size: "sm",
                 color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
               };
-              const StarIcon = tmp(9943).StarIcon;
+              const StarIcon = tmp(9956).StarIcon;
               tmp28 = closure_6(StarIcon, obj20);
             }
             cResult[13] = tmp11;
@@ -588,14 +588,14 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       const tmp10 = useStickyServerHeaderSubtitleDefault(guild);
-      const tmp6Result = guild(5998);
+      const tmp6Result = guild(6005);
       const iOSPressEffects = tmp6Result.useIOSPressEffects(4);
       ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
       const tmp6Result4 = guild(2077);
       const favoritesAwareGuildName = tmp6Result4.getFavoritesAwareGuildName(guild);
-      const tmp6Result5 = guild(4580);
+      const tmp6Result5 = guild(4586);
       const token = tmp6Result5.useToken(tmp2(587).modules.mobile.CHANNEL_LIST_TITLE_TEXT_STYLE);
-      const tmp6Result6 = guild(4580);
+      const tmp6Result6 = guild(4586);
       const token1 = tmp6Result6.useToken(tmp2(587).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
       const obj3 = {
         style: items1,
@@ -633,7 +633,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: tmp.header, children: items2 };
       if (isFavoritesGuildIdResult) {
         const obj5 = { style: tmp.headerIcon, size: "sm", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-        const StarIcon = tmp6(9943).StarIcon;
+        const StarIcon = tmp6(9956).StarIcon;
         tmp22 = closure_6(StarIcon, obj5);
       }
       items2 = [tmp22, , ,];
@@ -641,7 +641,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         ref,
         collapsable: false,
         style: tmp.flex,
-        children: closure_6(guild(4886).Text, {
+        children: closure_6(guild(4892).Text, {
           experimental_useNativeText: true,
           color: "mobile-text-heading-primary",
           variant: token,
@@ -656,7 +656,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp24Result = null;
       if (flag2) {
         const obj8 = { size: "xxs", color: nativeDefault.colors.TEXT_SUBTLE, style: tmp.chevron };
-        const ChevronSmallRightIcon = tmp6(6708).ChevronSmallRightIcon;
+        const ChevronSmallRightIcon = tmp6(6715).ChevronSmallRightIcon;
         tmp24Result = closure_6(ChevronSmallRightIcon, obj8);
       }
       items2[3] = tmp24Result;
@@ -673,7 +673,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             lineClamp: 1,
             children: intl2.format(guild(1126).t.zRl6XR, obj11),
           };
-          const Text = tmp6(4886).Text;
+          const Text = tmp6(4892).Text;
           intl2 = tmp6(1126).intl;
           obj11 = { count: tmp10 };
           items4 = [closure_6(Text, obj10), ,];
@@ -686,7 +686,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             lineClamp: 1,
             children: intl3.string(guild(1126).t["1g9A/f"]),
           };
-          const Text2 = tmp6(4886).Text;
+          const Text2 = tmp6(4892).Text;
           intl3 = tmp6(1126).intl;
           items4[2] = closure_6(Text2, obj13);
           tmp15Result = closure_7(closure_4, obj9);
@@ -705,14 +705,14 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items6 = [tmp15Result2];
       let tmp24Result5 = null;
       if (isFavoritesGuildIdResult) {
-        tmp24Result5 = closure_6(tmp6(16075).FavoritesGuildHeaderActionButton, {});
+        tmp24Result5 = closure_6(tmp6(16114).FavoritesGuildHeaderActionButton, {});
       }
       items6[1] = tmp24Result5;
       items7 = [closure_7(closure_4, obj15), , , ,];
       let tmp24Result6 = null;
       if (flag) {
         const obj16 = { guild, useButtonComponent: true, useEventsButton: true };
-        tmp24Result6 = closure_6(tmp2(11925), obj16);
+        tmp24Result6 = closure_6(tmp2(11939), obj16);
       }
       items7[1] = tmp24Result6;
       if (tmp24Result7) {
@@ -726,7 +726,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp24Result8 = null;
       if (flag3) {
         const obj20 = { targetRef: ref, guild };
-        tmp24Result8 = closure_6(tmp2(16081), obj20);
+        tmp24Result8 = closure_6(tmp2(16120), obj20);
       }
       items7[4] = tmp24Result8;
       return closure_7(closure_4, obj14);

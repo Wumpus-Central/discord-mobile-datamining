@@ -400,7 +400,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = sharedValue(live.useState(0), 2);
       const width = tmp5[0];
       dependencyMap = tmp5[1];
-      const obj3 = tint(4612);
+      const obj3 = tint(4618);
       sharedValue = obj3.useSharedValue(0);
       if (live) {
         live = !stateFromStores;
@@ -455,7 +455,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { bandWidth: result, progress: sharedValue, width };
       fn.__workletHash = 8820828976937;
       fn.__initData = __initData;
-      const tmp2Result = tint(4612);
+      const tmp2Result = tint(4618);
       const animatedStyle = tmp2Result.useAnimatedStyle(fn);
       const obj4 = {
         style: tmp.root,
@@ -488,13 +488,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           children: closure_8(View, obj8),
         };
         obj7 = { children: renderFace() };
-        tmp18 = width(6052);
-        obj8 = { style: items4, children: closure_8(width(5605), obj10) };
+        tmp18 = width(6059);
+        obj8 = { style: items4, children: closure_8(width(5612), obj10) };
         items4 = [tmp.band, ,];
         const obj9 = { width: result };
         items4[1] = obj9;
         items4[2] = animatedStyle;
-        View = width(4612).View;
+        View = width(4618).View;
         obj10 = { style: tmp.fill, start, end, colors: memo, locations };
         tmp14 = closure_8(closure_6, obj5);
       }

@@ -262,7 +262,7 @@ const memoResult = react.memo((navigateToSettings) => {
   if (hasConjureGuild) {
     let obj2 = {
       IconComponent: tmp2(gradientSecondaryBackground[33]).MagicWandIcon,
-      accessibilityLabel: intl.string(tmp5(gradientSecondaryBackground[34]).bHcJoe),
+      accessibilityLabel: intl.string(tmp5(gradientSecondaryBackground[34]).uk6jhJ),
       onPress: tmp22,
     };
     const tmp5Result = tmp5(gradientSecondaryBackground[32]);

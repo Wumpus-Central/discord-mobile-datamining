@@ -63,17 +63,18 @@ export const sync = function sync(activity, userId) {
   const obj2 = { type: "ACTIVITY_SYNC", activity, userId };
   obj.dispatch(obj2);
 };
-export const play = function play(result, userId) {
-  let activity;
-  _require = result;
-  obj = require("SpotifyUtils");
-  const spotifyMetadataFromActivity = obj.getSpotifyMetadataFromActivity(result, userId);
-  const nextPromise = spotifyMetadataFromActivity.then((metadata) => {
+export const play = function play(activity, userId) {
+  _require = activity;
+  const promise = require("asyncRequire")(11394, dependencyMap.paths);
+  const nextPromise = promise.then((getSpotifyMetadataFromActivity) =>
+    getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(activity, userId),
+  );
+  const nextPromise1 = nextPromise.then((metadata) => {
     obj = DispatcherDefault;
     const obj2 = { type: "ACTIVITY_PLAY", activity, userId, metadata };
     return obj.dispatch(obj2);
   });
-  nextPromise.catch(() => {
+  nextPromise1.catch(() => {
     obj = DispatcherDefault;
     const obj2 = { type: "ACTIVITY_PLAY", activity, userId };
     return obj.dispatch(obj2);

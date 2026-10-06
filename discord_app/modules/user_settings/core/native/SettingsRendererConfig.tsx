@@ -265,6 +265,7 @@ import ActivityPrivacyDefaultSharingSettingDefault from "../../defs/native/Activ
 import FriendRequestsNotesSettingDefault from "../../defs/native/FriendRequestsNotesSetting.tsx";
 import NotifyFriendsOnComeOnlineSettingDefault from "../../defs/native/NotifyFriendsOnComeOnlineSetting.tsx";
 import NotifyFriendsOnProfileUpdateSettingDefault from "../../defs/native/NotifyFriendsOnProfileUpdateSetting.tsx";
+import NotifyServerMembersOnGoLiveSettingDefault from "../../defs/native/NotifyServerMembersOnGoLiveSetting.tsx";
 import VideoBackgroundSettingDefault from "../../defs/native/VideoBackgroundSetting.tsx";
 import MobileNotifSettingsRendererConfig from "../../notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -454,6 +455,7 @@ let NOISE_SUPPRESSION_KRISP;
 let NOTIFICATIONS;
 let NOTIFY_FRIENDS_ON_COME_ONLINE;
 let NOTIFY_FRIENDS_ON_PROFILE_UPDATE;
+let NOTIFY_SERVER_MEMBERS_ON_GO_LIVE;
 let OFFICIAL_MESSAGE_STYLE;
 let OUTPUT_VOLUME;
 let PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION;
@@ -835,6 +837,7 @@ const obj = {
   [FRIEND_REQUEST_NOTES]: FriendRequestsNotesSettingDefault,
   [NOTIFY_FRIENDS_ON_COME_ONLINE]: NotifyFriendsOnComeOnlineSettingDefault,
   [NOTIFY_FRIENDS_ON_PROFILE_UPDATE]: NotifyFriendsOnProfileUpdateSettingDefault,
+  [NOTIFY_SERVER_MEMBERS_ON_GO_LIVE]: NotifyServerMembersOnGoLiveSettingDefault,
   [VIDEO_BACKGROUND]: VideoBackgroundSettingDefault,
 };
 ({
@@ -1115,6 +1118,7 @@ ACTIVITY_PRIVACY_DEFAULT_SHARING = MobileUserSettings.ACTIVITY_PRIVACY_DEFAULT_S
 FRIEND_REQUEST_NOTES = MobileUserSettings.FRIEND_REQUEST_NOTES;
 NOTIFY_FRIENDS_ON_COME_ONLINE = MobileUserSettings.NOTIFY_FRIENDS_ON_COME_ONLINE;
 NOTIFY_FRIENDS_ON_PROFILE_UPDATE = MobileUserSettings.NOTIFY_FRIENDS_ON_PROFILE_UPDATE;
+NOTIFY_SERVER_MEMBERS_ON_GO_LIVE = MobileUserSettings.NOTIFY_SERVER_MEMBERS_ON_GO_LIVE;
 VIDEO_BACKGROUND = MobileUserSettings.VIDEO_BACKGROUND;
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const freezeResult = freeze(obj);

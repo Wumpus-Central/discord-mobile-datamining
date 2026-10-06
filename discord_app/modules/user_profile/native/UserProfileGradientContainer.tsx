@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/UserProfileGradientContainer.tsx
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import useUserProfileGradientColors from "../hooks/native/useUserProfileGradientColors.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";

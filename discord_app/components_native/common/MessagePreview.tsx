@@ -129,7 +129,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      return jsx(onBeforeJumpToMessage(13093).ChatPreview, {
+      return jsx(onBeforeJumpToMessage(13112).ChatPreview, {
         channelId,
         messages,
         jumpToChatProps: memo,

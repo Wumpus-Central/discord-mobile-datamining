@@ -828,24 +828,24 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         angleOverride: 0,
         mixAmount: obj3,
       };
-      obj3 = { dark: token(4696).OverlayOpacity.LEVEL_1 };
+      obj3 = { dark: token(4702).OverlayOpacity.LEVEL_1 };
       const tmp11 = ThemedGradientDefault;
       items6 = [closure_13(tmp11, obj2)];
       let obj4 = { style: tmp.container, children: items9 };
       let obj5 = { style: tmp.centerContent, children: items7 };
-      let obj6 = { source: token(13675), style: tmp.logo };
+      let obj6 = { source: token(13691), style: tmp.logo };
       items7 = [closure_13(callback3, obj6)];
       let obj7 = { style: tmp.loadingContainer, children: items8 };
       items8 = [closure_13(callback2, {})];
       let obj8 = { variant: "text-lg/semibold", children: intl.string(token(1126).t.W9uNdG) };
-      const Text = token(4886).Text;
+      const Text = token(4892).Text;
       intl = token(1126).intl;
       items8[1] = closure_13(Text, obj8);
       items7[1] = closure_14(callback1, obj7);
       items9 = [closure_14(callback1, obj5)];
       let obj9 = { style: tmp.bottomContent, children: items10 };
       let obj10 = { variant: "text-sm/normal", children: intl2.string(token(1126).t["ZXe5/Y"]) };
-      const Text2 = token(4886).Text;
+      const Text2 = token(4892).Text;
       intl2 = token(1126).intl;
       items10 = [closure_13(Text2, obj10)];
       let obj11 = {
@@ -855,7 +855,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         onPress,
         textStyle: tmp.link,
       };
-      const LinkButton = token(6429).LinkButton;
+      const LinkButton = token(6436).LinkButton;
       intl3 = token(1126).intl;
       items10[1] = closure_13(LinkButton, obj11);
       items9[1] = closure_14(callback1, obj9);

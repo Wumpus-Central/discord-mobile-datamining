@@ -103,7 +103,7 @@ let obj = function _setUserStatus() {
     if (disableTracking === undefined) {
       disableTracking = false;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

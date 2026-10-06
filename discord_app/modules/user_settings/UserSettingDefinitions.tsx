@@ -46,7 +46,7 @@ export const defineProtoSetting = function defineProtoSetting(
     return explicitContentFromProto(tmp3);
   }
   const obj2 = require("ReactCompilerGating");
-  const f85642 = (favorites) => {
+  const f85776 = (favorites) => {
     let closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(
       explicitContentFromProto[6],
@@ -54,7 +54,7 @@ export const defineProtoSetting = function defineProtoSetting(
     return PreloadedUserSettingsActionCreators.updateAsync(
       closure_0,
       async (arg0) => {
-        arg0[f85642] = explicitContentToProto(favorites, arg0[f85642]);
+        arg0[f85776] = explicitContentToProto(favorites, arg0[f85776]);
       },
       closure_4,
     );
@@ -66,7 +66,7 @@ export const defineProtoSetting = function defineProtoSetting(
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f85648(tmp2);
+      return f85782(tmp2);
     },
     useSetting: obj2.isReactCompilerEnabled()
       ? () => {
@@ -129,14 +129,14 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, in
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f85648(tmp2);
+      return f85782(tmp2);
     },
   };
-  const f85645 = (arg0) => {
+  const f85779 = (arg0) => {
     let obj3;
     let obj5;
     let updateSettingResult;
-    if (SelectivelySyncedUserSettingsStore.shouldSync(f85645)) {
+    if (SelectivelySyncedUserSettingsStore.shouldSync(f85779)) {
       updateSettingResult = getSetting.updateSetting(arg0);
     } else {
       const obj2 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: obj3 };
@@ -144,7 +144,7 @@ export function wrapSettingWithSelectiveSyncing(UserSettingDefinitions, text, in
       const obj4 = { settings: obj5 };
       obj5 = {};
       obj5[closure_1_2] = arg0;
-      obj3[f85645] = obj4;
+      obj3[f85779] = obj4;
       const obj = require("Dispatcher");
       obj.dispatch(obj2);
       updateSettingResult = Promise.resolve();
@@ -180,13 +180,13 @@ export function wrapSettingWithOverride(arg0, gifAutoPlay, arg2, arg3) {
       if (typeof fn === "function") {
         tmp2 = fn(getSetting());
       }
-      return f85648(tmp2);
+      return f85782(tmp2);
     },
   };
-  const f85648 = (arg0) => {
+  const f85782 = (arg0) => {
     let items;
     const obj2 = { type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items };
-    items = [f85648];
+    items = [f85782];
     const obj = gifAutoPlay(closure_2[7]);
     obj.dispatch(obj2);
     return getSetting.updateSetting(arg0);

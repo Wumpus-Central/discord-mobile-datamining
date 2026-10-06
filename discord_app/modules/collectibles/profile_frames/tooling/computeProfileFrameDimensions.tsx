@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting(
 
 export const computeProfileFrameDimensions = function computeProfileFrameDimensions(arr) {
   let innerWidth;
-  innerWidth = innerWidth(7882).DefaultProfileFrameDimensions.INNER_WIDTH;
+  innerWidth = innerWidth(7893).DefaultProfileFrameDimensions.INNER_WIDTH;
   const mapped = arr.map((dims) => Math.round(Math.max(0, (dims.dims.width - innerWidth) / 2)));
   let overflowHorizontal = 0;
   if (mapped.length > 0) {

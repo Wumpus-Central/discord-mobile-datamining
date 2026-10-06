@@ -28,7 +28,7 @@ export const openBadgeDirectoryScreen = function openBadgeDirectoryScreen(arg0) 
   const pushLazy = ModalActionCreatorsDefault.pushLazy;
   ModalActionCreatorsDefault;
   const obj2 = { targetUserId };
-  const tmp4 = asyncRequire(10887, dependencyMap.paths);
+  const tmp4 = asyncRequire(10900, dependencyMap.paths);
   const obj3 = PlatformUtils;
   if (!obj3.isIOS()) {
     obj4 = { presentation: "modal" };

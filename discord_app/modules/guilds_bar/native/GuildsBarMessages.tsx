@@ -150,9 +150,9 @@ const memoResult = react.memo(
             overState="y"
             label={intl.string(intl2.t.YUU0RF)}
             externalChildren={badge}
-            expandedChildren="bottom"
+            expandedChildren="Guild Scheduled Event Invite Button Embed"
           >
-            {null}
+            {"PUSH_FEEDBACK_RECEIVED_NOTIFICATION"}
           </tmp5Result>
         );
       },

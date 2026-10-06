@@ -22,7 +22,7 @@ let hasOwnProperty;
 let metroRequire;
 let obj2;
 let tmp5;
-const SelectedDismissibleContentDefault = tmp5(10354);
+const SelectedDismissibleContentDefault = tmp5(10367);
 const View = react_native.View;
 const ContentDismissActionType = DismissibleContentConstants.ContentDismissActionType;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);

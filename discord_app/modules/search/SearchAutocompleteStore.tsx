@@ -2,7 +2,7 @@
 import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
-import isEqualDefault from "../../../_runtime/05010_isEqual.js";
+import isEqualDefault from "../../../_runtime/05016_isEqual.js";
 import AutocompleteUtils from "../../utils/AutocompleteUtils.tsx";
 import autocompleter_AutocompleterConstants from "../autocompleter/AutocompleterConstants.tsx";
 import GuildUtilsDefault from "../../utils/GuildUtils.tsx";
@@ -16,6 +16,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import StreamerModeStore from "../../stores/StreamerModeStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
+import SelectedSearchContextStore from "SelectedSearchContextStore.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -23,7 +24,7 @@ const SearchTokensDefault = SearchTokens;
 let user;
 
 let SearchTokenTypes;
-let c9;
+let c10;
 function handleUserSearchResults(searchContext, results) {
   let cursorScope;
   let mode;
@@ -109,8 +110,8 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
   if (constants.FILTER === type) {
     let tmp25;
     ({ filter, token } = autocompleteMode);
-    let num = c17;
-    if (c17 === undefined) {
+    let num = c18;
+    if (c18 === undefined) {
       num = 10;
     }
     let currentUser;
@@ -208,18 +209,18 @@ function getAutocompleteList(searchContext, autocompleteMode, tokens) {
       const items = [tmp4];
       tmp25 = items;
     } else {
-      tmp25 = closure_14;
+      tmp25 = closure_15;
     }
     return tmp25;
   } else {
-    return closure_14;
+    return closure_15;
   }
 }
 function handleChannelCreateOrDelete() {
   const obj = SearchUtils;
   obj.clearTokenCache();
 }
-function rebuildAutocompleteResults(c13) {
+function rebuildAutocompleteResults(c14) {
   let cursorScope;
   let mode;
   let obj4;
@@ -250,21 +251,29 @@ function rebuildAutocompleteResults(c13) {
     const result1 = map.set(searchContextId, obj5);
   }
 }
-({ SearchPopoutModes: c9, SearchTokenTypes } = Constants);
+({ SearchPopoutModes: c10, SearchTokenTypes } = Constants);
 const ME = Constants.ME;
 const AutocompleterResultTypes = autocompleter_AutocompleterConstants.AutocompleterResultTypes;
-let c13 = null;
-let closure_14 = [];
+let c14 = null;
+let closure_15 = [];
 const map = new Map();
 const map1 = new Map();
-let c17 = 10;
+let c18 = 10;
 let items = [, ,];
 ({ FILTER_FROM: arr[0], FILTER_IN: arr[1], FILTER_MENTIONS: arr[2] } = SearchTokenTypes);
 new Set(items);
 const Store = get_initializedDefault.Store;
 class SearchAutocompleteStoreClass extends Store {
   initialize() {
-    this.waitFor(ChannelStore, GuildMemberStore, GuildStore, SelectedChannelStore, StreamerModeStore, UserStore);
+    this.waitFor(
+      ChannelStore,
+      GuildMemberStore,
+      GuildStore,
+      SelectedChannelStore,
+      SelectedSearchContextStore,
+      StreamerModeStore,
+      UserStore,
+    );
   }
   getState(searchContext) {
     let obj3;
@@ -277,17 +286,14 @@ class SearchAutocompleteStoreClass extends Store {
     }
     return value;
   }
-  getSelectedSearchContext() {
-    return c13;
-  }
 }
 const prototype = SearchAutocompleteStoreClass.prototype;
 SearchAutocompleteStoreClass.displayName = "SearchAutocompleteStore";
 let obj = {
   SEARCH_AUTOCOMPLETE_INITIALIZE: function handleSearchAutocompleteInitialize(searchContext) {
     searchContext = searchContext.searchContext;
-    if (!isEqualDefault(c13, searchContext)) {
-      c13 = searchContext;
+    if (!isEqualDefault(c14, searchContext)) {
+      c14 = searchContext;
       const obj = SearchUtils;
       obj.clearTokenCache();
     }
@@ -303,8 +309,8 @@ let obj = {
     let tmpResult3;
     let tokens;
     ({ searchContext, tokens, cursorScope } = arg0);
-    if (!isEqualDefault(c13, searchContext)) {
-      c13 = searchContext;
+    if (!isEqualDefault(c14, searchContext)) {
+      c14 = searchContext;
       const obj = SearchUtils;
       obj.clearTokenCache();
     }
@@ -379,7 +385,7 @@ let obj = {
           const guildIdFromSearchContext = tmp5Result5.getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
             const tmpResult4 = GuildUtilsDefault;
-            const members = tmpResult4.requestMembers(guildIdFromSearchContext, trimmed, c17);
+            const members = tmpResult4.requestMembers(guildIdFromSearchContext, trimmed, c18);
           }
           const context3 = value5.context;
           const setQuery = context3.setQuery;
@@ -427,16 +433,16 @@ let obj = {
       map1.delete(id);
     }
     map.delete(id);
-    let c13 = null;
+    let c14 = null;
   },
   CHANNEL_CREATE: handleChannelCreateOrDelete,
   CHANNEL_DELETE: handleChannelCreateOrDelete,
   STREAMER_MODE_UPDATE: function handleStreamerModeUpdate() {
-    const tmp = null != c13 && rebuildAutocompleteResults(c13);
+    const tmp = null != c14 && rebuildAutocompleteResults(c14);
     return tmp;
   },
   CHANNEL_SELECT: function handleChannelSelect() {
-    const tmp = null != c13 && rebuildAutocompleteResults(c13);
+    const tmp = null != c14 && rebuildAutocompleteResults(c14);
     return tmp;
   },
 };

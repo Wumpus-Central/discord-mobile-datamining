@@ -7,7 +7,7 @@ import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06584_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06591_AssetRegistry.js";
 import GuildEventModalConstants from "../GuildEventModalConstants.tsx";
 import GuildEventCardDefault from "GuildEventCard.tsx";
 import _asyncToGenerator_mod from "../../../../../_runtime/metro/00005__asyncToGenerator.js";

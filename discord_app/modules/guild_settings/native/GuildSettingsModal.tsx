@@ -685,7 +685,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp6 = tmp4(5984)(I);
+      const tmp6 = tmp4(5991)(I);
       _require = tmp6;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         class I {
@@ -854,7 +854,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             LANDING = undefined;
-            const Navigator = tmp(6496).Navigator;
+            const Navigator = tmp(6503).Navigator;
             if (null == first) {
               class D {
                 constructor(arg0) {

@@ -42,7 +42,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp7 = first(5043)(channel.channel);
+      const tmp7 = first(5049)(channel.channel);
       dependencyMap = tmp7;
       const tmpResult = require("useNavigation");
       navigation = tmpResult.useNavigation();
@@ -219,7 +219,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           subtitle: tmpResult.getMuteBannerSubtitleFromConfig(stateFromStoresObject.config),
           onPressUnmute: callback1,
         };
-        const NotificationSettingsMuteBanner = tmp(12498).NotificationSettingsMuteBanner;
+        const NotificationSettingsMuteBanner = tmp(12513).NotificationSettingsMuteBanner;
         intl2 = tmp(1126).intl;
         tmpResult = require("NotificationSettingsMuteBanner");
         muted = closure_6(NotificationSettingsMuteBanner, obj5);
@@ -241,14 +241,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let isForumLikeChannelResult = channel.isForumLikeChannel();
       if (isForumLikeChannelResult) {
         const obj9 = { style: { marginTop: 24 }, channel: channel.channel };
-        isForumLikeChannelResult = closure_6(tmp(12515).NotificationSettingsChannelPost, obj9);
+        isForumLikeChannelResult = closure_6(tmp(12530).NotificationSettingsChannelPost, obj9);
       }
       items3[4] = isForumLikeChannelResult;
       let tmp11Result = !channelPresetInheritance.inherited;
       if (tmp11Result) {
         const obj10 = { style: { marginTop: 24 }, children: closure_6(Button, obj11) };
         obj11 = { variant: "secondary", onPress: callback, text: intl3.string(require("intl").t["3PBFN6"]) };
-        Button = tmp(5594).Button;
+        Button = tmp(5601).Button;
         intl3 = tmp(1126).intl;
         tmp11Result = closure_6(View, obj10);
       }

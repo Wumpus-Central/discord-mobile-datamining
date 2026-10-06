@@ -129,7 +129,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       });
-      let tmp2 = stateFromStores(12235)(arg0);
+      let tmp2 = stateFromStores(12250)(arg0);
       dependencyMap = tmp2;
       const obj2 = require("ServerThemeExperiment");
       const serverThemeRollbackEnabled = obj2.useServerThemeRollbackEnabled(arg0, "useMarketablePowerupPerks");

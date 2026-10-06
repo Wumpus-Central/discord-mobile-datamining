@@ -7,15 +7,15 @@ import IAPStoreDefault from "../../../stores/native/IAPStore.android.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import types from "../../virtual_currency/types.tsx";
-import _modDef8507 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
+import _modDef8540 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon.png.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f97445 = (variants) => {
+const f97626 = (variants) => {
   let everyResult;
   const obj = closure_1_0(closure_1_2[6]);
   if (obj.getIsVariantProduct(variants)) {
     variants = variants.variants;
-    everyResult = variants.every(f97445);
+    everyResult = variants.every(f97626);
   } else {
     const googleSkuIds = variants.googleSkuIds;
     let tmp5;
@@ -44,7 +44,7 @@ function hasAtLeastOneGPlaySynced(nextResult) {
       let obj = CollectiblesProductUtils;
       if (obj.getIsVariantProduct(variants)) {
         variants = variants.variants;
-        everyResult = variants.every(f97445);
+        everyResult = variants.every(f97626);
       } else {
         const tmp3 = IAPStoreDefault;
         let googleSkuIds = variants.googleSkuIds;
@@ -190,7 +190,7 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
   const obj = CollectiblesProductUtils;
   if (obj.getIsVariantProduct(variants)) {
     variants = variants.variants;
-    return variants.every(f97445);
+    return variants.every(f97626);
   } else {
     const googleSkuIds = variants.googleSkuIds;
     let tmp5;
@@ -250,7 +250,7 @@ export const createOrbProfileBadge = function createOrbProfileBadge() {
   const obj = {
     id: types.OrbBadges.ORB_PROFILE_BADGE,
     icon: types.OrbBadges.ORB_PROFILE_BADGE,
-    iconSrc: _modDef8507,
+    iconSrc: _modDef8540,
     description: "",
     isPreviewMode: true,
   };

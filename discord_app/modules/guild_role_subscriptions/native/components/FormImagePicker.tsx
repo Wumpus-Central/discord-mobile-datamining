@@ -161,7 +161,7 @@ class ImagePickerIcon {
       tmp10 = closure_8;
     } else {
       tmp10 = closure_8;
-      tmp12Result = closure_8(image(16724).ImagePlusIcon, {});
+      tmp12Result = closure_8(image(16745).ImagePlusIcon, {});
     }
     items3 = [tmp12Result];
     let tmp10Result = null != image && !flag;
@@ -170,7 +170,7 @@ class ImagePickerIcon {
       if (standalone) {
         standalone = tmp.standaloneIcon;
       }
-      obj4 = { style: items4, children: tmp10(image(10058).PencilIcon, { color: "#292b30", size: "sm" }) };
+      obj4 = { style: items4, children: tmp10(image(10071).PencilIcon, { color: "#292b30", size: "sm" }) };
       items4[1] = standalone;
       tmp10Result = tmp10(View, obj4);
     }
@@ -405,7 +405,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: description,
       };
-      items[0] = closure_8(tmp6(4886).Text, obj3);
+      items[0] = closure_8(tmp6(4892).Text, obj3);
       obj4 = {
         text: stringResult,
         variant: "secondary",
@@ -415,7 +415,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         size: "md",
         disabled,
       };
-      items[1] = closure_8(tmp6(5594).Button, obj4);
+      items[1] = closure_8(tmp6(5601).Button, obj4);
       items1 = [closure_9(View, obj2)];
       const obj5 = { disabled, imageUploadSize, image, setImage };
       const merged1 = Object.assign(merged);

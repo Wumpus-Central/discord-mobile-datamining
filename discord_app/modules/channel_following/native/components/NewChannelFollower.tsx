@@ -247,7 +247,7 @@ export default function NewChannelFollower(targetChannelId) {
         },
         hasIcons: false,
       };
-      const tmp2 = asyncRequire(8949, dependencyMap.paths);
+      const tmp2 = asyncRequire(8978, dependencyMap.paths);
       intl = intl10.intl;
       const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
       reduce = flattenedGuildIds.reduce;

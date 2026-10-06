@@ -322,7 +322,7 @@ export const NotificationSettingsGuildMessageNotification = function Notificatio
     onCustomize() {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { guildId: style.guildId };
-      obj.openLazy(asyncRequire(12507, dependencyMap.paths), "MessageNotificationGuildActionSheet", obj2);
+      obj.openLazy(asyncRequire(12522, dependencyMap.paths), "MessageNotificationGuildActionSheet", obj2);
     },
   };
   obj2 = require("notificationSettingsGuildFlagUtils");
@@ -340,7 +340,7 @@ export const NotificationSettingsChannelMessageNotification = function Notificat
     onCustomize() {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { channel: style.channel };
-      obj.openLazy(asyncRequire(12509, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj2);
+      obj.openLazy(asyncRequire(12524, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj2);
     },
   };
   obj2 = require("notficationSettingsChannelFlagUtils");

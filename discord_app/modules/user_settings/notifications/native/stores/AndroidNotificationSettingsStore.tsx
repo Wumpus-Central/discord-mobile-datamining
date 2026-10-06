@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx
 import react from "../../../../../../_runtime/00576_react.js";
-import _slicedToArray from "../../../../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray from "../../../../../../_runtime/metro/04498__slicedToArray.js";
 import PushNotificationDefault from "../../../../../lib/pushnotification/PushNotification.tsx";
 import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import 01254__ from "../../../../../../_runtime/metro/01254__.js";
@@ -141,7 +141,7 @@ let obj = function _initializeAndroidNotificationSettingsStore() {
   });
   return obj(...arguments);
 };
-let closure_4 = module_1254.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "T", isSoundsEnabled: "y", isNotifyEveryTime: "IconComponent" }));
+let closure_4 = module_1254.createWithEqualityFn(() => ({ isLightsEnabled: "toCharArray$esjava$1", isVibrationsEnabled: "Symbol", isSoundsEnabled: "IconComponent", isNotifyEveryTime: "Reflect" }));
 let ReactCompilerGating = ReactCompilerGating_mod;
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   let first;

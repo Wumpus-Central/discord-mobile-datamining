@@ -274,7 +274,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores != null) {
         channelId2 = stateFromStores.channelId;
       }
-      tmp5Result = tmp5(17318);
+      tmp5Result = tmp5(17346);
       return obj3;
     };
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useConsoleConnectingInfo.tsx");

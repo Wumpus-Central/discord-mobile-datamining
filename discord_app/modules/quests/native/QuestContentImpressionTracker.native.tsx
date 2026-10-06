@@ -143,7 +143,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[3];
       }
-      const tmpResult = tmp(8371);
+      const tmpResult = tmp(8404);
       const tmp9 = _slicedToArray(tmpResult.useRecyclingState(false, tmp6), 2)[1];
       dependencyMap = tmp9;
       if (cResult[4] === adContentIds) {
@@ -158,7 +158,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           if (overrideVisibility == null) {
             overrideVisibility = tmp8;
           }
-          const tmp16 = overrideVisibility !== visibilityRef(7946)(overrideVisibility);
+          const tmp16 = overrideVisibility !== visibilityRef(7957)(overrideVisibility);
           if (cResult[9] === overrideVisibility) {
             let tmp18;
             if (cResult[10] === tmp16) {
@@ -213,7 +213,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const visibilityRef = adContentIds.visibilityRef;
       let overrideVisibility = adContentIds.overrideVisibility;
       const joined = adContentIds.join("_");
-      let obj = adContentIds(8371);
+      let obj = adContentIds(8404);
       const items = [joined];
       [first, tmp5] = obj.useRecyclingState(false, items);
       dependencyMap = tmp5;
@@ -246,7 +246,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = {
         visible: overrideVisibility,
-        visibleChanged: overrideVisibility !== visibilityRef(7946)(overrideVisibility),
+        visibleChanged: overrideVisibility !== visibilityRef(7957)(overrideVisibility),
       };
       return obj2;
     };

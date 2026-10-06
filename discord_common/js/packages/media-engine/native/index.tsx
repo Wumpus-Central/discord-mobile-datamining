@@ -372,7 +372,7 @@ class MediaEngineNative extends TypedEventEmitter {
       return obj(...arguments);
     };
     let c1 = false;
-    obj.on(obj(4954).MediaEngineEvent.Destroy, () => {
+    obj.on(obj(4960).MediaEngineEvent.Destroy, () => {
       c1 = true;
       return true;
     });
@@ -601,8 +601,8 @@ class MediaEngineNative extends TypedEventEmitter {
       videoSupported.experiments = undefined;
     }
     let flag = videoSupported.videoSupported;
-    const create = self(4957).create;
-    self(4957);
+    const create = self(4963).create;
+    self(4963);
     if (flag == null) {
       flag = true;
     }
@@ -610,7 +610,7 @@ class MediaEngineNative extends TypedEventEmitter {
       flag = self.supports(constants3.VIDEO);
     }
     obj2 = create(arg0, arg1, videoSupported, flag);
-    obj2.on(obj2(4962).BaseConnectionEvent.Destroy, (arg0) => {
+    obj2.on(obj2(4968).BaseConnectionEvent.Destroy, (arg0) => {
       const connections = self.connections;
       connections.delete(arg0);
       if (self.connectionsEmpty()) {
@@ -624,10 +624,10 @@ class MediaEngineNative extends TypedEventEmitter {
         }
       }
     });
-    obj2.on(obj2(4962).BaseConnectionEvent.Connected, () => {
+    obj2.on(obj2(4968).BaseConnectionEvent.Connected, () => {
       obj2.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj2));
     });
-    obj2.on(obj2(4962).BaseConnectionEvent.Silence, (arg0) => {
+    obj2.on(obj2(4968).BaseConnectionEvent.Silence, (arg0) => {
       self.emit(MediaEngineEvent.MediaEngineEvent.Silence, arg0);
     });
     let connections = self.connections;
@@ -647,7 +647,7 @@ class MediaEngineNative extends TypedEventEmitter {
         let result = setNativeThreadsPriority(videoSupported.threadPriorityConfiguration);
       }
     }
-    self.emit(tmp(4954).MediaEngineEvent.Connection, obj2);
+    self.emit(tmp(4960).MediaEngineEvent.Connection, obj2);
     return obj2;
   }
   shouldConnectionBroadcastVideo(context) {
@@ -1820,7 +1820,7 @@ class MediaEngineNative extends TypedEventEmitter {
     const replay = obj.createReplay(arg0, arg1);
     let tmp2 = null;
     if (null != replay) {
-      replay.on(self(4962).BaseConnectionEvent.Destroy, (arg0) => {
+      replay.on(self(4968).BaseConnectionEvent.Destroy, (arg0) => {
         const connections = self.connections;
         connections.delete(arg0);
         if (self.connectionsEmpty()) {
@@ -1832,7 +1832,7 @@ class MediaEngineNative extends TypedEventEmitter {
       connections.add(replay);
       const obj3 = self(2001);
       obj3.setProcessPriority(constants.HIGH);
-      self.emit(self(4954).MediaEngineEvent.Connection, replay);
+      self.emit(self(4960).MediaEngineEvent.Connection, replay);
       tmp2 = replay;
     }
     return tmp2;

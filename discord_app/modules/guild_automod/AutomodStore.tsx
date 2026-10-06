@@ -1,7 +1,7 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
 import react2 from "../../../_runtime/00576_react.js";
 import Constants from "../../Constants.tsx";
-import _slicedToArray2 from "../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray2 from "../../../_runtime/metro/04498__slicedToArray.js";
 import Constants2 from "Constants.tsx";
 import SystemRulesUtils from "SystemRulesUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
@@ -13,7 +13,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let _require, c0, c1, c6, c7, closure_5;
 
-const f131576 = (arg0) => {
+const f131795 = (arg0) => {
   const items = [, ];
   ({ syncRules: arr[0], fetching: arr[1] } = arg0);
   return items;
@@ -234,7 +234,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   closure_1 = undefined;
   first1 = undefined;
   [first, closure_1] = react.useState(false);
-  [first1, tmp6] = withEqualityFn(f131576, _slicedToArray2.shallow);
+  [first1, tmp6] = withEqualityFn(f131795, _slicedToArray2.shallow);
   let closure_3 = tmp6;
   const items = [first, ];
   const items1 = [arg0, tmp6, first1];
@@ -398,7 +398,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   let tmp8;
   _require = arg0;
   [first, closure_1] = react.useState(false);
-  [first1, tmp5] = withEqualityFn(f131576, require("_slicedToArray").shallow);
+  [first1, tmp5] = withEqualityFn(f131795, require("_slicedToArray").shallow);
   let closure_3 = tmp5;
   let items = [first, ];
   const items1 = [arg0, tmp5, first1];
@@ -552,7 +552,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0) => {
   } else {
     tmp4 = cResult[1];
   }
-  return withEqualityFn(tmp4, tmp(4492).shallow);
+  return withEqualityFn(tmp4, tmp(4498).shallow);
 }) : ((arg0) => {
   let closure_0;
   _require = arg0;
@@ -574,7 +574,7 @@ function useSyncAutomodRules(arg0) {
   let first;
   let closure_0 = arg0;
   [first, closure_1] = react.useState(false);
-  const tmp3 = _slicedToArray(withEqualityFn(f131576, _slicedToArray2.shallow), 2);
+  const tmp3 = _slicedToArray(withEqualityFn(f131795, _slicedToArray2.shallow), 2);
   const first1 = tmp3[0];
   let closure_3 = tmp5;
   const items = [first, ];

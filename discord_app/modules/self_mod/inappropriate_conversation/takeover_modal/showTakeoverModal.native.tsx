@@ -20,6 +20,6 @@ export const showTakeoverModal = function showTakeoverModal(arg0) {
   if (obj.isEligibleForInappropriateConversationWarning({ location: "takeover-modal" })) {
     const obj3 = { warningId, warningType, senderId, channelId };
     const obj2 = ModalActionCreatorsDefault;
-    obj2.pushLazy(asyncRequire(15602, dependencyMap.paths), obj3, TAKEOVER_MODAL_KEY);
+    obj2.pushLazy(asyncRequire(15616, dependencyMap.paths), obj3, TAKEOVER_MODAL_KEY);
   }
 };

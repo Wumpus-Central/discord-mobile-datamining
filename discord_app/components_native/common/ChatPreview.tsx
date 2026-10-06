@@ -166,7 +166,7 @@ class ChatPreviewBase extends PureComponent {
         let item1 = items.forEach((arr, index) => {
           let c1;
           let obj8;
-          const f154888 = (message) => {
+          const f155133 = (message) => {
             const content = obj3.content;
             const obj = {
               rowType: constants2.MESSAGE,
@@ -216,7 +216,7 @@ class ChatPreviewBase extends PureComponent {
               tmp8 = obj3;
             }
             obj3 = tmp8;
-            const item = arr.forEach(f154888);
+            const item = arr.forEach(f155133);
             tmp8.revealed = arr[arr.length - 1].id === messages.revealedMessageId;
             tmp8.context = arr[arr.length - 1].id;
             const intl2 = _undefined(changeType[17]).intl;
@@ -232,7 +232,7 @@ class ChatPreviewBase extends PureComponent {
               tmp14 = obj5;
             }
             obj5 = tmp14;
-            const item1 = arr.forEach(f154888);
+            const item1 = arr.forEach(f155133);
             tmp14.revealed = arr[arr.length - 1].id === messages.revealedMessageId;
             tmp14.context = arr[arr.length - 1].id;
             const intl = _undefined(changeType[17]).intl;
@@ -293,11 +293,11 @@ class ChatPreviewBase extends PureComponent {
           rows: previousRows,
           scrollToMessageId: jumpTargetId,
           jumpTargetId,
-          jumpType: "Symbol",
+          jumpType: "Set",
           shouldInitialScroll: "Array",
-          animated: 0.301,
-          scrollPosition: 1,
-          focusTargetId: "hidden",
+          animated: -1,
+          scrollPosition: -1,
+          focusTargetId: -1,
         };
         require.scrollData = computeScrollDataDefault(obj3);
         if (!tmp7) {
@@ -377,7 +377,7 @@ class ChatPreviewBase extends PureComponent {
         },
         message: require.getMessage(data.messageId),
         messageChannel: channel,
-        selectedChannelId: null,
+        selectedChannelId: 4.707,
         tapLinkData: nativeEvent,
       };
       const handleMessagesTapLink = handleMessagesTapLink2.handleMessagesTapLink;
@@ -718,9 +718,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult5 = channelId(504);
       const stateFromStores1 = tmpResult5.useStateFromStores(tmp11, S);
       const width = useWindowDimensionsDefault().width;
-      const tmpResult6 = channelId(6832);
+      const tmpResult6 = channelId(6842);
       const isChannelSpoilerGated = tmpResult6.useIsChannelSpoilerGated(stateFromStores1);
-      const tmpResult7 = channelId(5100);
+      const tmpResult7 = channelId(5106);
       const isChannelContentGated = tmpResult7.useIsChannelContentGated(stateFromStores1);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
@@ -800,9 +800,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = channelId(504);
       const stateFromStores1 = obj2.useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
       const width = useWindowDimensionsDefault().width;
-      const obj3 = channelId(6832);
+      const obj3 = channelId(6842);
       const isChannelSpoilerGated = obj3.useIsChannelSpoilerGated(stateFromStores1);
-      const obj4 = channelId(5100);
+      const obj4 = channelId(5106);
       const isChannelContentGated = obj4.useIsChannelContentGated(stateFromStores1);
       const items2 = [ActionSheetStore];
       const obj6 = {

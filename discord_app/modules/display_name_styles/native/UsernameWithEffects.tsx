@@ -216,8 +216,8 @@ const memoResult = memo(
               if (cResult[6] !== displayNameStylesFont) {
                 let tmp19;
                 if (null != displayNameStylesFont) {
-                  tmp19 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
-                  const obj4 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
+                  tmp19 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
+                  const obj4 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
                 }
                 cResult[6] = displayNameStylesFont;
                 cResult[7] = tmp19;
@@ -819,7 +819,7 @@ const memoResult = memo(
         let STATIC = userName.effectDisplayType;
         ({ userId, guildId } = userName);
         if (STATIC === undefined) {
-          STATIC = userName(10634).EffectDisplayType.STATIC;
+          STATIC = userName(10647).EffectDisplayType.STATIC;
         }
         ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
         if (ignoreDisabledStylesSetting === undefined) {
@@ -839,23 +839,23 @@ const memoResult = memo(
           }),
         );
         let num2;
-        const tmp7 = num2(5305)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
-        let obj = userName(9390);
+        const tmp7 = num2(5312)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
+        let obj = userName(9404);
         const isDisplayNameStylesFlywheelViewersEnabled =
           obj.useIsDisplayNameStylesFlywheelViewersEnabled("UsernameWithEffects");
         const obj2 = userName(1394);
         const result = obj2.applyFlywheelViewingFallback(tmp7, isDisplayNameStylesFlywheelViewersEnabled);
-        const obj3 = userName(5306);
+        const obj3 = userName(5313);
         const displayNameStylesEnabled = obj3.useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
-        const obj4 = userName(9389);
+        const obj4 = userName(9403);
         const displayNameStylesFont = obj4.useDisplayNameStylesFont({
           displayNameStyles: result,
           ignoreDisabledStylesSetting,
         });
         let tmp13;
         if (null != displayNameStylesFont) {
-          tmp13 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
-          const obj5 = { fontFamily: displayNameStylesFont, lineHeight: "r" };
+          tmp13 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
+          const obj5 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
         }
         let num = merged.lineClamp;
         if (num == null) {
@@ -870,11 +870,11 @@ const memoResult = memo(
           }
           tmp14 = tmp15;
         }
-        const tmp8Result = userName(4580);
+        const tmp8Result = userName(4586);
         const token = tmp8Result.useToken(tmp5(587).colors.BACKGROUND_BASE_LOW);
-        const tmp8Result7 = userName(4580);
+        const tmp8Result7 = userName(4586);
         const token1 = tmp8Result7.useToken(tmp5(587).colors.WHITE);
-        const tmp8Result8 = userName(10635);
+        const tmp8Result8 = userName(10648);
         const displayNameStylesAccessibleColors = tmp8Result8.useDisplayNameStylesAccessibleColors({
           displayNameStyles: result,
           backgroundColor: token,
@@ -895,8 +895,8 @@ const memoResult = memo(
           const tmp8Result9 = userName(1394);
           colorVariants = tmp8Result9.generateColorVariants(first);
         }
-        const TextStyleSheet = tmp8(4886).TextStyleSheet;
-        const tmp8Result10 = userName(4896);
+        const TextStyleSheet = tmp8(4892).TextStyleSheet;
+        const tmp8Result10 = userName(4902);
         const tmp21 = TextStyleSheet[tmp8Result10.useTypographyVariantRemap(tmp8Result10, merged.variant, false)];
         const flattenResult = closure_9.flatten(merged.style);
         num2 = undefined;
@@ -953,7 +953,7 @@ const memoResult = memo(
         const tmp29Result = closure_14(str, num2);
         if (displayNameStylesEnabled) {
           if (null != tmp7) {
-            if (STATIC !== userName(10634).EffectDisplayType.PLAIN) {
+            if (STATIC !== userName(10647).EffectDisplayType.PLAIN) {
               if (null != colorVariants) {
                 let layoutImpact;
                 const items1 = [merged.style, tmp14];
@@ -962,8 +962,8 @@ const memoResult = memo(
                   layoutImpact = tmp29Result.layoutImpact;
                 }
                 if (effectId === userName(1396).DisplayNameEffect.GUMMY) {
-                  const tmp5Result = num2(10638);
-                  const tmp8Result12 = userName(4583);
+                  const tmp5Result = num2(10651);
+                  const tmp8Result12 = userName(4589);
                   let str3 = tmp8Result12.getNodeText(userName);
                   if (str3 == null) {
                     str3 = "";
@@ -1032,7 +1032,7 @@ const memoResult = memo(
                             style: items5,
                             children: userName,
                           };
-                          const Text = tmp8(4886).Text;
+                          const Text = tmp8(4892).Text;
                           const merged2 = Object.assign(merged);
                           tmp49 = undefined;
                           if (null != tmp38Result2) {
@@ -1046,7 +1046,7 @@ const memoResult = memo(
                             style: items7,
                             children: userName,
                           };
-                          const Text2 = tmp8(4886).Text;
+                          const Text2 = tmp8(4892).Text;
                           const merged3 = Object.assign(merged);
                           tmp53 = undefined;
                           if (null != tmp38Result) {
@@ -1093,7 +1093,7 @@ const memoResult = memo(
                       textStrokeColor: tmp32,
                       children: userName,
                     };
-                    const Text3 = tmp8(4886).Text;
+                    const Text3 = tmp8(4892).Text;
                     const merged4 = Object.assign(merged);
                     items11 = [items10];
                     return closure_11(Text3, obj13);
@@ -1125,14 +1125,14 @@ const memoResult = memo(
               }
             }
             const obj14 = { style: items13, color: defaultColor, children: userName };
-            const Text4 = tmp8(4886).Text;
+            const Text4 = tmp8(4892).Text;
             const merged5 = Object.assign(merged);
             items13 = [merged.style, tmp13];
             return closure_11(Text4, obj14);
           }
         }
         const obj15 = { color: defaultColor, children: userName };
-        const Text5 = tmp8(4886).Text;
+        const Text5 = tmp8(4892).Text;
         const merged6 = Object.assign(merged);
         return closure_11(Text5, obj15);
       },

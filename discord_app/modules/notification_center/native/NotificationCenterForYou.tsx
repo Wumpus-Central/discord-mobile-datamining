@@ -201,7 +201,7 @@ export const NotificationCenterForYou = (panelVariant) => {
     let arr7;
     let arr8;
     let ref2;
-    const f153382 = (id, id2) => {
+    const f153618 = (id, id2) => {
       const obj = arr8(items2[23]);
       return -1 * obj.compare(id.id, id2.id);
     };
@@ -301,9 +301,9 @@ export const NotificationCenterForYou = (panelVariant) => {
           current3.add(kind.id);
         }
       });
-      const sorted = items1.sort(f153382);
-      const sorted1 = items2.sort(f153382);
-      const sorted2 = items3.sort(f153382);
+      const sorted = items1.sort(f153618);
+      const sorted1 = items2.sort(f153618);
+      const sorted2 = items3.sort(f153618);
       let obj = currentNavigationRouteName(setting[27]);
       const tmp20 = memo(
         obj.partition(items1, (type) => {

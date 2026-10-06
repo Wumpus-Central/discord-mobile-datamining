@@ -78,7 +78,7 @@ let obj = function _fetchGuildJoinRequests() {
             requests = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (guildId === 1) {
@@ -398,7 +398,7 @@ obj = function _updateGuildJoinRequest() {
             tmp = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (guildId === 1) {
@@ -678,7 +678,7 @@ obj = function _createOrEnterJoinRequestInterview() {
             channel = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

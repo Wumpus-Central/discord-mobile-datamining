@@ -5,7 +5,7 @@ import intl5 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ChannelRecord from "../../../../records/ChannelRecord.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04809_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04815_AssetRegistry.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
@@ -13,7 +13,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildEventModalConstants from "../GuildEventModalConstants.tsx";
 import StageChannelUpsellCardStore from "../../StageChannelUpsellCardStore.tsx";
-import AssetRegistryDefault2 from "../../../../../_runtime/09208_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09243_AssetRegistry.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -145,7 +145,7 @@ export default function StageChannelUpsell(arg0) {
             obj.popWithKey(closure_1_12);
           },
         };
-        obj2.pushLazy(asyncRequire(9209, dependencyMap.paths), obj3, CREATE_CHANNEL_MODAL_KEY);
+        obj2.pushLazy(asyncRequire(9244, dependencyMap.paths), obj3, CREATE_CHANNEL_MODAL_KEY);
         closure_2();
         const obj4 = ActionSheetActionCreatorsDefault;
         obj4.hideActionSheet();

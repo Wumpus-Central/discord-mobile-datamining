@@ -5,7 +5,7 @@ import intl3 from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import DeviceMediaDefault from "../../../device/native/DeviceMedia.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/10387_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/10400_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

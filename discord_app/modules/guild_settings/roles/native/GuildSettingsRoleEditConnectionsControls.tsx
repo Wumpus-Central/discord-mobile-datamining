@@ -37,7 +37,7 @@ let closure_12;
 let metroImportAll;
 let obj2;
 let unpackModuleId;
-const f132242 = (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId;
+const f132461 = (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId;
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
   let arr4;
   let closure_1;
@@ -178,7 +178,7 @@ function AddConnectionButton(locked) {
         },
       };
       tmp4 = GuildRoleMemberCountStore;
-      const tmp2 = asyncRequire(17809, dependencyMap.paths);
+      const tmp2 = asyncRequire(17855, dependencyMap.paths);
       const combined = "SelectConnectionActionSheet-" + react;
       if (GuildRoleMemberCountStore == null) {
         tmp4 = null;
@@ -448,7 +448,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           const _Object = Object;
           const obj2 = _modDef12;
-          values2 = values(obj2.groupBy(roleConnectionConfigurations, f132242));
+          values2 = values(obj2.groupBy(roleConnectionConfigurations, f132461));
         }
         cResult[0] = roleConnectionConfigurations;
         cResult[1] = values2;
@@ -578,7 +578,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Object = Object;
         const obj = _modDef12;
-        values2 = values(obj.groupBy(roleConnectionConfigurations, f132242));
+        values2 = values(obj.groupBy(roleConnectionConfigurations, f132461));
       }
       const obj2 = {
         title: intl.string(intl5.t.Xs7PHX),
@@ -624,9 +624,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const role = guild.role;
       ({ locked, integrations } = guild);
       closure_13();
-      let obj2 = guild(17810);
+      let obj2 = guild(17856);
       const applicationIdentityLinkedRolesEnabled = obj2.useApplicationIdentityLinkedRolesEnabled(guild.id);
-      const obj3 = guild(17812);
+      const obj3 = guild(17858);
       const applicationIdentityLinkedRolesEnabled1 = obj3.useApplicationIdentityLinkedRolesEnabled(
         guild.id,
         "guild_settings_roles_edit_connections",
@@ -711,7 +711,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         dependencyMap = tmp15;
-        if (tmp15 === guild(6678).ConnectionConfigurationRuleOperator.OR) {
+        if (tmp15 === guild(6685).ConnectionConfigurationRuleOperator.OR) {
           class S {
             constructor() {
               const editedRoleConnectionConfigurationsMap =
@@ -851,8 +851,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               connectionType,
               connectionMetadataField: "Array",
               applicationId: tmp2,
-              operator: "runOnJS",
-              value: "r",
+              operator: "disabled",
+              value: false,
             };
             items.push(obj);
             const updateRoleConnectionConfigurations =
@@ -872,7 +872,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               const _Object = Object;
               const obj2 = _modDef12;
-              values2 = values(obj2.groupBy(items, f132242));
+              values2 = values(obj2.groupBy(items, f132461));
             }
             const result = updateRoleConnectionConfigurations(id, values2);
           }
@@ -1030,7 +1030,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               const _Object = Object;
               const obj = _modDef12;
-              values2 = values(obj.groupBy(arg0, f132242));
+              values2 = values(obj.groupBy(arg0, f132461));
             }
             const result = updateRoleConnectionConfigurations(id, values2);
           },
@@ -1062,7 +1062,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               const _Object = Object;
               const obj = _modDef12;
-              values2 = values(obj.groupBy(arg0, f132242));
+              values2 = values(obj.groupBy(arg0, f132461));
             }
             const result = updateRoleConnectionConfigurations(id, values2);
           },
@@ -1080,8 +1080,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             connectionType,
             connectionMetadataField: "Array",
             applicationId,
-            operator: "runOnJS",
-            value: "r",
+            operator: "disabled",
+            value: false,
           };
           items.push(obj);
           const updateRoleConnectionConfigurations =
@@ -1101,7 +1101,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const _Object = Object;
             const obj2 = _modDef12;
-            values2 = values(obj2.groupBy(items, f132242));
+            values2 = values(obj2.groupBy(items, f132461));
           }
           const result = updateRoleConnectionConfigurations(id, values2);
         },

@@ -332,7 +332,7 @@ function handleCommand(message, fn) {
   const nonce = message.nonce;
   ({ attachments, maxSizeCallback: require } = message);
   const body = {
-    type: require("Server").InteractionTypes.APPLICATION_COMMAND,
+    type: require("InteractionTypes").InteractionTypes.APPLICATION_COMMAND,
     application_id: applicationId,
     guild_id: guildId,
     channel_id: channelId,

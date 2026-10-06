@@ -1,7 +1,7 @@
 // discord_app/modules/panels/morphable/native/useMorphablePanelGesture.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import updateSharedValueIfChangedDefault from "../../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
 import MorphablePanelUtils from "MorphablePanelUtils.tsx";
 import triggerIOSHapticDefault from "triggerIOSHaptic.tsx";

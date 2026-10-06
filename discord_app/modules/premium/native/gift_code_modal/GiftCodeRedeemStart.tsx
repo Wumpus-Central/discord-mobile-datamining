@@ -6,7 +6,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import CollectiblesItemType from "../../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import merged5 from "../../../../../_runtime/05075_merged5.js";
+import merged5 from "../../../../../_runtime/05081_merged5.js";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import GameIcon from "../../../game_detection/native/GameIcon.tsx";
@@ -56,44 +56,44 @@ function getGiftCodeHeaderText(isSubscription) {
   let sku;
   let subscriptionGiftStartHeaderText;
   let subscriptionPlan;
-  const f106386 = () => {
+  const f106538 = () => {
     const intl = intl7.intl;
     const obj = { sender };
     return intl.formatToPlainString(intl7.t.JUV1tL, obj);
   };
-  const f106387 = () => {
+  const f106539 = () => {
     const intl = sender(dependencyMap[10]).intl;
     return intl.string(sender(dependencyMap[10]).t.iJ8823);
   };
-  const f106388 = () => {
+  const f106540 = () => {
     const intl = intl7.intl;
     const obj = { sender };
     return intl.formatToPlainString(intl7.t.SKduyh, obj);
   };
-  const f106389 = () => {
+  const f106541 = () => {
     const intl = intl7.intl;
     const obj = { sender };
     return intl.formatToPlainString(intl7.t["1w42T2"], obj);
   };
-  const f106390 = () => {
+  const f106542 = () => {
     const intl = intl7.intl;
     const obj = { sender };
     return intl.formatToPlainString(intl7.t.vFiQlU, obj);
   };
-  const f106391 = () => {
+  const f106543 = () => {
     const intl = intl7.intl;
     const obj = { sender };
     return intl.formatToPlainString(intl7.t["UH/EQL"], obj);
   };
-  const f106392 = () => {
+  const f106544 = () => {
     const intl = sender(dependencyMap[10]).intl;
     return intl.string(sender(dependencyMap[10]).t["2ZO6CC"]);
   };
-  const f106393 = () => {
+  const f106545 = () => {
     const intl = sender(dependencyMap[10]).intl;
     return intl.string(sender(dependencyMap[10]).t["2NxdjX"]);
   };
-  const f106394 = () => {
+  const f106546 = () => {
     const intl = sender(dependencyMap[10]).intl;
     return intl.string(sender(dependencyMap[10]).t.v7F232);
   };
@@ -102,8 +102,8 @@ function getGiftCodeHeaderText(isSubscription) {
   if (isSubscription.isSubscription) {
     if (null != subscriptionPlan) {
       let name;
-      const getSubscriptionGiftStartHeaderText = sender(5310).getSubscriptionGiftStartHeaderText;
-      sender(5310);
+      const getSubscriptionGiftStartHeaderText = sender(5317).getSubscriptionGiftStartHeaderText;
+      sender(5317);
       if (sku != null) {
         name = sku.name;
       }
@@ -111,48 +111,48 @@ function getGiftCodeHeaderText(isSubscription) {
     }
     return subscriptionGiftStartHeaderText;
   }
-  let obj = sender(6727);
+  let obj = sender(6741);
   if (obj.isGameItemSKU(sku)) {
     let intl = sender(1126).intl;
     subscriptionGiftStartHeaderText = intl.string(sender(1126).t["Bn1J+a"]);
   } else {
     const obj2 = { type: itemType, isBundle, sender };
-    const str = sender(5075);
+    const str = sender(5081);
     const match = str.match(obj2);
-    const obj3 = { isBundle: true, sender: P.not(sender(5075).P.nullish) };
+    const obj3 = { isBundle: true, sender: P.not(sender(5081).P.nullish) };
     const _with = match.with;
-    P = sender(5075).P;
-    const obj4 = { isBundle: true, sender: sender(5075).P.nullish };
-    const _with2 = _with(obj3, f106386).with;
-    _with(obj3, f106386);
-    const obj5 = { type: sender(1980).CollectiblesItemType.AVATAR_DECORATION, sender: P2.not(sender(5075).P.nullish) };
-    const _with3 = _with2(obj4, f106387).with;
-    _with2(obj4, f106387);
-    P2 = sender(5075).P;
-    const obj6 = { type: sender(1980).CollectiblesItemType.PROFILE_EFFECT, sender: P3.not(sender(5075).P.nullish) };
-    const _with4 = _with3(obj5, f106388).with;
-    _with3(obj5, f106388);
-    P3 = sender(5075).P;
-    const obj7 = { type: sender(1980).CollectiblesItemType.NAMEPLATE, sender: P4.not(sender(5075).P.nullish) };
-    const _with5 = _with4(obj6, f106389).with;
-    _with4(obj6, f106389);
-    P4 = sender(5075).P;
-    const obj8 = { type: sender(1980).CollectiblesItemType.PROFILE_FRAME, sender: P5.not(sender(5075).P.nullish) };
-    const _with6 = _with5(obj7, f106390).with;
-    _with5(obj7, f106390);
-    P5 = sender(5075).P;
-    const obj9 = { type: sender(1980).CollectiblesItemType.AVATAR_DECORATION, sender: sender(5075).P.nullish };
-    const _with7 = _with6(obj8, f106391).with;
-    _with6(obj8, f106391);
-    const obj10 = { type: sender(1980).CollectiblesItemType.PROFILE_EFFECT, sender: sender(5075).P.nullish };
-    const _with8 = _with7(obj9, f106392).with;
-    _with7(obj9, f106392);
-    const obj11 = { type: sender(1980).CollectiblesItemType.NAMEPLATE, sender: sender(5075).P.nullish };
-    const _with9 = _with8(obj10, f106393).with;
-    _with8(obj10, f106393);
-    const obj12 = { type: sender(1980).CollectiblesItemType.PROFILE_FRAME, sender: sender(5075).P.nullish };
-    const _with10 = _with9(obj11, f106394).with;
-    _with9(obj11, f106394);
+    P = sender(5081).P;
+    const obj4 = { isBundle: true, sender: sender(5081).P.nullish };
+    const _with2 = _with(obj3, f106538).with;
+    _with(obj3, f106538);
+    const obj5 = { type: sender(1980).CollectiblesItemType.AVATAR_DECORATION, sender: P2.not(sender(5081).P.nullish) };
+    const _with3 = _with2(obj4, f106539).with;
+    _with2(obj4, f106539);
+    P2 = sender(5081).P;
+    const obj6 = { type: sender(1980).CollectiblesItemType.PROFILE_EFFECT, sender: P3.not(sender(5081).P.nullish) };
+    const _with4 = _with3(obj5, f106540).with;
+    _with3(obj5, f106540);
+    P3 = sender(5081).P;
+    const obj7 = { type: sender(1980).CollectiblesItemType.NAMEPLATE, sender: P4.not(sender(5081).P.nullish) };
+    const _with5 = _with4(obj6, f106541).with;
+    _with4(obj6, f106541);
+    P4 = sender(5081).P;
+    const obj8 = { type: sender(1980).CollectiblesItemType.PROFILE_FRAME, sender: P5.not(sender(5081).P.nullish) };
+    const _with6 = _with5(obj7, f106542).with;
+    _with5(obj7, f106542);
+    P5 = sender(5081).P;
+    const obj9 = { type: sender(1980).CollectiblesItemType.AVATAR_DECORATION, sender: sender(5081).P.nullish };
+    const _with7 = _with6(obj8, f106543).with;
+    _with6(obj8, f106543);
+    const obj10 = { type: sender(1980).CollectiblesItemType.PROFILE_EFFECT, sender: sender(5081).P.nullish };
+    const _with8 = _with7(obj9, f106544).with;
+    _with7(obj9, f106544);
+    const obj11 = { type: sender(1980).CollectiblesItemType.NAMEPLATE, sender: sender(5081).P.nullish };
+    const _with9 = _with8(obj10, f106545).with;
+    _with8(obj10, f106545);
+    const obj12 = { type: sender(1980).CollectiblesItemType.PROFILE_FRAME, sender: sender(5081).P.nullish };
+    const _with10 = _with9(obj11, f106546).with;
+    _with9(obj11, f106546);
     const _with10Result = _with10(obj12, () => {
       const intl = sender(dependencyMap[10]).intl;
       return intl.string(sender(dependencyMap[10]).t["1+tgC0"]);

@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef7952 from "../../../../../_runtime/metro/07952__.js";
+import _modDef7963 from "../../../../../_runtime/metro/07963__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
@@ -151,7 +151,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               maximumTrackTintColor: tmp12.maximumTrackTintColor.backgroundColor,
               tapToSeek: true,
             };
-            const tmp22 = _modDef7952;
+            const tmp22 = _modDef7963;
             const merged = Object.assign(tmp5);
             const tmp26 = closure_7(tmp22, obj4);
             cResult[16] = tmp13;
@@ -232,7 +232,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         maximumTrackTintColor: tmp2.maximumTrackTintColor.backgroundColor,
         tapToSeek: true,
       };
-      const tmp9 = step(7952);
+      const tmp9 = step(7963);
       const merged1 = Object.assign(merged);
       items2 = [tmp2.slider, style];
       items1[1] = closure_7(tmp9, obj3);

@@ -10,7 +10,7 @@ import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import GuildTagConstants from "../../../guild_tag/GuildTagConstants.tsx";
 import getEmbedThemeColorsDefault from "row_data/embeds/getEmbedThemeColors.tsx";
 import renderer_EmbedUtils from "EmbedUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/07606_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/07617_AssetRegistry.js";
 import transformMessageComponentsDefault from "transformMessageComponents.tsx";
 import AccessibilityStore_mod from "../../../a11y/AccessibilityStore.tsx";
 import ApplicationStore_mod from "../../../applications/ApplicationStore.tsx";
@@ -1496,7 +1496,7 @@ function createMessageContent(message) {
       }
       applicationIconSource = author.getAvatarSource(undefined);
     }
-    parseMessageMarkupResult = { content: "Symbol", hasSpoilerEmbeds: "ICYMI_TAKE_SURVEY", hasBailedAst: null };
+    parseMessageMarkupResult = { content: "Set", hasSpoilerEmbeds: "none", hasBailedAst: "URL" };
   }
 }
 const processColor = react_native.processColor;

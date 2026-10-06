@@ -104,7 +104,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               class A {
                 constructor() {
                   return () => {
-                    /* body not rendered: F140930 */
+                    /* body not rendered: F141136 */
                   };
                 }
               }
@@ -117,7 +117,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               class A {
                 constructor() {
                   return () => {
-                    /* body not rendered: F140930 */
+                    /* body not rendered: F141136 */
                   };
                 }
               }

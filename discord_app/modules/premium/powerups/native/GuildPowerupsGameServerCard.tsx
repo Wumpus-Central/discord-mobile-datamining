@@ -83,7 +83,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 return useReducedMotion.useReducedMotion;
               }
             }
-            const tmp20 = jsx(guildId(4678).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: obj3 });
+            const tmp20 = jsx(guildId(4684).GameServerHostingRive, { stateMachine: "SM_Auto", dataBinding: obj3 });
             cResult[5] = stateFromStores1;
             cResult[6] = tmp20;
             tmp18 = tmp20;

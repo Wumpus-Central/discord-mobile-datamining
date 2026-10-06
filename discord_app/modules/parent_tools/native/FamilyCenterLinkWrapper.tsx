@@ -30,7 +30,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       userId = userId.userId;
       const children = userId.children;
       const tmp4 = closure_4();
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       if (undefined === userId) {
         return null;
       } else {
@@ -48,7 +48,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp6;
             }
           }
-          const tmp8 = jsx(tmp(5909).PressableOpacity, { style: tmp4.container, onPress: tmp5, children });
+          const tmp8 = jsx(tmp(5916).PressableOpacity, { style: tmp4.container, onPress: tmp5, children });
           cResult[3] = children;
           cResult[4] = tmp5;
           cResult[5] = tmp4.container;
@@ -75,10 +75,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let analyticsLocations;
       const children = userId.children;
       const tmp = closure_4();
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       let tmp3 = null;
       if (undefined !== userId) {
-        tmp3 = jsx(userId(5909).PressableOpacity, {
+        tmp3 = jsx(userId(5916).PressableOpacity, {
           style: tmp.container,
           onPress() {
             const obj = {

@@ -9,7 +9,7 @@ import TableRow2 from "../../../../../design/components/TableRow/native/TableRow
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import WumpusCouchSpotIllustration from "../../../../../design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/16384_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/16424_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";

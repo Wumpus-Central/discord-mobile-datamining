@@ -5,7 +5,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.native.tsx";
 import useToken2 from "../../../../design/tokens/native/useToken.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04808_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04814_AssetRegistry.js";
 import CallConstants from "../../../calls/CallConstants.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import useAvatarColorDefault from "../../../avatar/useAvatarColor.tsx";
@@ -848,7 +848,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       let reactingToThermalState;
       let speaking;
       let tmp3;
-      const f99342 = () => {
+      const f99530 = () => {
         const items = [
           ChannelRTCStore.getParticipants(channelId),
           ChannelRTCStore.getVideoParticipants(channelId),
@@ -865,8 +865,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [ChannelRTCStore];
       const items2 = [channelId];
       const obj2 = channelId(leadingEdgeDebounce[22]);
-      [arr4, tmp3] = obj2.useStateFromStores(items1, f99342, items2, areParticipantsEqual);
-      _slicedToArray(obj2.useStateFromStores(items1, f99342, items2, areParticipantsEqual), 2);
+      [arr4, tmp3] = obj2.useStateFromStores(items1, f99530, items2, areParticipantsEqual);
+      _slicedToArray(obj2.useStateFromStores(items1, f99530, items2, areParticipantsEqual), 2);
       const items3 = [SpeakingStore];
       const items4 = [selfParticipant];
       const obj3 = channelId(leadingEdgeDebounce[22]);
@@ -1135,7 +1135,7 @@ let closure_23 = memo2(
         let obj9;
         let tmp5;
         let tmp6;
-        const f99347 = () => {
+        const f99535 = () => {
           const items = [
             ChannelCallLifecycleStore.consumedRequestToRespondToSeriousThermalState(),
             ChannelCallLifecycleStore.isReactingToThermalState(),
@@ -1148,8 +1148,8 @@ let closure_23 = memo2(
         let items = [ChannelCallLifecycleStore];
         const obj = get_initialized;
         const obj2 = { channelId: channel.id, selfParticipant };
-        [tmp5, tmp6] = obj.useStateFromStoresArray(items, f99347);
-        _slicedToArray(obj.useStateFromStoresArray(items, f99347), 2);
+        [tmp5, tmp6] = obj.useStateFromStoresArray(items, f99535);
+        _slicedToArray(obj.useStateFromStoresArray(items, f99535), 2);
         const tmp7 = closure_22(obj2);
         let avatarURL;
         const obj3 = useToken2;

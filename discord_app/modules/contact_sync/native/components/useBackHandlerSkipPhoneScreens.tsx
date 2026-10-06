@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === arg0) {
           tmp4 = cResult[2];
         }
-        const tmpResult = tmp(6016);
+        const tmpResult = tmp(6023);
         tmpResult.useNavigatorBackPressHandler(tmp4);
       }
       const fn = function o() {

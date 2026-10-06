@@ -6,7 +6,8 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import Server from "../../flow/Server.tsx";
 import CheckpointConstants from "../checkpoint/CheckpointConstants.tsx";
 import interactionCallbackErrorReason from "../interactions/interactionCallbackErrorReason.tsx";
-import InteractionTypes from "../interactions/InteractionTypes.tsx";
+import InteractionTypes from "../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
+import interactions_InteractionTypes from "../interactions/InteractionTypes.tsx";
 import MediaTypes from "../media/MediaTypes.tsx";
 import InteractionComponentTypes from "InteractionComponentTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -24,92 +25,92 @@ function flattenComponents(components) {
   return map;
 }
 function flattenComponent(map, accessory) {
-  const f90190 = (id) => {
+  const f90326 = (id) => {
     const result = closure_0.set(id.id, id);
     const type = id.type;
-    if (closure_2_0(closure_2_2[5]).ComponentType.ACTION_ROW === type) {
+    if (closure_2_0(closure_2_2[7]).ComponentType.ACTION_ROW === type) {
       const components = id.components;
-      const item = components.forEach(f90190);
-    } else if (closure_2_0(closure_2_2[5]).ComponentType.SECTION === type) {
+      const item = components.forEach(f90326);
+    } else if (closure_2_0(closure_2_2[7]).ComponentType.SECTION === type) {
       const components1 = id.components;
-      const item1 = components1.forEach(f90191);
+      const item1 = components1.forEach(f90327);
       const accessory = id.accessory;
       const result1 = closure_0.set(accessory.id, accessory);
       const type2 = accessory.type;
-      if (closure_2_0(closure_2_2[5]).ComponentType.ACTION_ROW === type2) {
+      if (closure_2_0(closure_2_2[7]).ComponentType.ACTION_ROW === type2) {
         const components2 = accessory.components;
-        const item2 = components2.forEach(f90190);
-      } else if (closure_2_0(closure_2_2[5]).ComponentType.SECTION === type2) {
+        const item2 = components2.forEach(f90326);
+      } else if (closure_2_0(closure_2_2[7]).ComponentType.SECTION === type2) {
         const components3 = accessory.components;
-        const item3 = components3.forEach(f90191);
+        const item3 = components3.forEach(f90327);
         closure_2_7(closure_0, accessory.accessory);
-      } else if (closure_2_0(closure_2_2[5]).ComponentType.CONTAINER === type2) {
+      } else if (closure_2_0(closure_2_2[7]).ComponentType.CONTAINER === type2) {
         const components4 = accessory.components;
-        const item4 = components4.forEach(f90192);
+        const item4 = components4.forEach(f90328);
       }
-    } else if (closure_2_0(closure_2_2[5]).ComponentType.CONTAINER === type) {
+    } else if (closure_2_0(closure_2_2[7]).ComponentType.CONTAINER === type) {
       const components5 = id.components;
-      const item5 = components5.forEach(f90192);
+      const item5 = components5.forEach(f90328);
     }
   };
-  const f90191 = (id) => {
+  const f90327 = (id) => {
     let closure_0 = obj;
     let result = obj.set(id.id, id);
     let type = id.type;
-    if (closure_2_0(closure_2_2[5]).ComponentType.ACTION_ROW === type) {
+    if (closure_2_0(closure_2_2[7]).ComponentType.ACTION_ROW === type) {
       let components = id.components;
-      let item = components.forEach(f90190);
-    } else if (closure_2_0(closure_2_2[5]).ComponentType.SECTION === type) {
+      let item = components.forEach(f90326);
+    } else if (closure_2_0(closure_2_2[7]).ComponentType.SECTION === type) {
       let components1 = id.components;
-      let item1 = components1.forEach(f90191);
+      let item1 = components1.forEach(f90327);
       let accessory = id.accessory;
       let result1 = obj.set(accessory.id, accessory);
       let type2 = accessory.type;
-      if (closure_2_0(closure_2_2[5]).ComponentType.ACTION_ROW === type2) {
+      if (closure_2_0(closure_2_2[7]).ComponentType.ACTION_ROW === type2) {
         let components2 = accessory.components;
-        let item2 = components2.forEach(f90190);
-      } else if (closure_2_0(closure_2_2[5]).ComponentType.SECTION === type2) {
+        let item2 = components2.forEach(f90326);
+      } else if (closure_2_0(closure_2_2[7]).ComponentType.SECTION === type2) {
         let components3 = accessory.components;
-        let item3 = components3.forEach(f90191);
+        let item3 = components3.forEach(f90327);
         let num = 0;
         let tmp9 = closure_2_7(obj, accessory.accessory);
-      } else if (closure_2_0(closure_2_2[5]).ComponentType.CONTAINER === type2) {
+      } else if (closure_2_0(closure_2_2[7]).ComponentType.CONTAINER === type2) {
         let components4 = accessory.components;
-        let item4 = components4.forEach(f90192);
+        let item4 = components4.forEach(f90328);
       }
-    } else if (closure_2_0(closure_2_2[5]).ComponentType.CONTAINER === type) {
+    } else if (closure_2_0(closure_2_2[7]).ComponentType.CONTAINER === type) {
       let components5 = id.components;
-      let item5 = components5.forEach(f90192);
+      let item5 = components5.forEach(f90328);
     }
   };
-  const f90192 = (id) => {
+  const f90328 = (id) => {
     let closure_0 = obj;
     let result = obj.set(id.id, id);
     let type = id.type;
-    if (obj(closure_2_2[5]).ComponentType.ACTION_ROW === type) {
+    if (obj(closure_2_2[7]).ComponentType.ACTION_ROW === type) {
       let components = id.components;
-      let item = components.forEach(f90190);
-    } else if (obj(closure_2_2[5]).ComponentType.SECTION === type) {
+      let item = components.forEach(f90326);
+    } else if (obj(closure_2_2[7]).ComponentType.SECTION === type) {
       let components1 = id.components;
-      let item1 = components1.forEach(f90191);
+      let item1 = components1.forEach(f90327);
       let accessory = id.accessory;
       let result1 = obj.set(accessory.id, accessory);
       let type2 = accessory.type;
-      if (obj(closure_2_2[5]).ComponentType.ACTION_ROW === type2) {
+      if (obj(closure_2_2[7]).ComponentType.ACTION_ROW === type2) {
         let components2 = accessory.components;
-        let item2 = components2.forEach(f90190);
-      } else if (obj(closure_2_2[5]).ComponentType.SECTION === type2) {
+        let item2 = components2.forEach(f90326);
+      } else if (obj(closure_2_2[7]).ComponentType.SECTION === type2) {
         let components3 = accessory.components;
-        let item3 = components3.forEach(f90191);
+        let item3 = components3.forEach(f90327);
         let num = 0;
         let tmp9 = closure_2_7(obj, accessory.accessory);
-      } else if (obj(closure_2_2[5]).ComponentType.CONTAINER === type2) {
+      } else if (obj(closure_2_2[7]).ComponentType.CONTAINER === type2) {
         let components4 = accessory.components;
-        let item4 = components4.forEach(f90192);
+        let item4 = components4.forEach(f90328);
       }
-    } else if (obj(closure_2_2[5]).ComponentType.CONTAINER === type) {
+    } else if (obj(closure_2_2[7]).ComponentType.CONTAINER === type) {
       let components5 = id.components;
-      let item5 = components5.forEach(f90192);
+      let item5 = components5.forEach(f90328);
     }
   };
   _require = map;
@@ -117,14 +118,14 @@ function flattenComponent(map, accessory) {
   const type = accessory.type;
   if (require("Server").ComponentType.ACTION_ROW === type) {
     const components = accessory.components;
-    const item = components.forEach(f90190);
+    const item = components.forEach(f90326);
   } else if (require("Server").ComponentType.SECTION === type) {
     const components1 = accessory.components;
-    const item1 = components1.forEach(f90191);
+    const item1 = components1.forEach(f90327);
     flattenComponent(map, accessory.accessory);
   } else if (require("Server").ComponentType.CONTAINER === type) {
     const components2 = accessory.components;
-    const item2 = components2.forEach(f90192);
+    const item2 = components2.forEach(f90328);
   }
 }
 function findChildComponent(type, componentId) {
@@ -351,7 +352,7 @@ function transformComponent(accessory, items) {
         components: found,
       };
       found = mapped.filter(tmp2(1375).isNotNullish);
-      tmp2Result = tmp2(5122);
+      tmp2Result = tmp2(5129);
       return obj2;
     } else if (tmp2(1985).ComponentType.BUTTON === type2) {
       let tmp41;
@@ -394,7 +395,7 @@ function transformComponent(accessory, items) {
         url: obj49.url,
         label: obj49.label,
       } = accessory);
-      tmp2Result28 = tmp2(5122);
+      tmp2Result28 = tmp2(5129);
       return obj7;
     } else if (tmp2(1985).ComponentType.STRING_SELECT === type2) {
       const obj8 = {
@@ -446,7 +447,7 @@ function transformComponent(accessory, items) {
         maxValues: null,
       };
       ({ custom_id: obj45.customId, disabled: obj45.disabled, required: required9 } = accessory);
-      tmp2Result29 = tmp2(5122);
+      tmp2Result29 = tmp2(5129);
       if (required9 == null) {
         required9 = false;
       }
@@ -476,7 +477,7 @@ function transformComponent(accessory, items) {
         disabled: obj43.disabled,
         required: required8,
       } = accessory);
-      tmp2Result30 = tmp2(5122);
+      tmp2Result30 = tmp2(5129);
       if (required8 == null) {
         required8 = false;
       }
@@ -495,7 +496,7 @@ function transformComponent(accessory, items) {
         defaultValues: null,
       };
       ({ custom_id: obj41.customId, disabled: obj41.disabled, required: required7 } = accessory);
-      tmp2Result31 = tmp2(5122);
+      tmp2Result31 = tmp2(5129);
       if (required7 == null) {
         required7 = false;
       }
@@ -519,7 +520,7 @@ function transformComponent(accessory, items) {
         defaultValues: null,
       };
       ({ custom_id: obj39.customId, disabled: obj39.disabled, required: required6 } = accessory);
-      tmp2Result32 = tmp2(5122);
+      tmp2Result32 = tmp2(5129);
       if (required6 == null) {
         required6 = false;
       }
@@ -543,7 +544,7 @@ function transformComponent(accessory, items) {
         defaultValues: null,
       };
       ({ custom_id: obj37.customId, disabled: obj37.disabled, required: required5 } = accessory);
-      tmp2Result33 = tmp2(5122);
+      tmp2Result33 = tmp2(5129);
       if (required5 == null) {
         required5 = false;
       }
@@ -568,7 +569,7 @@ function transformComponent(accessory, items) {
         defaultValues: null,
       };
       ({ custom_id: obj35.customId, disabled: obj35.disabled, required: required4 } = accessory);
-      tmp2Result34 = tmp2(5122);
+      tmp2Result34 = tmp2(5129);
       if (required4 == null) {
         required4 = false;
       }
@@ -611,7 +612,7 @@ function transformComponent(accessory, items) {
             accessory: tmp32,
           };
           tmp33 = obj16;
-          tmp2Result35 = tmp2(5122);
+          tmp2Result35 = tmp2(5129);
         }
       }
       return tmp33;
@@ -621,7 +622,7 @@ function transformComponent(accessory, items) {
         id: tmp2Result36.asComponentId(items.join(",")),
         content: accessory.content,
       };
-      tmp2Result36 = tmp2(5122);
+      tmp2Result36 = tmp2(5129);
       return obj17;
     } else if (tmp2(1985).ComponentType.THUMBNAIL === type2) {
       const obj18 = {
@@ -631,9 +632,9 @@ function transformComponent(accessory, items) {
         description: null,
         spoiler: null,
       };
-      tmp2Result37 = tmp2(5122);
+      tmp2Result37 = tmp2(5129);
       ({ description: obj28.description, spoiler: obj28.spoiler } = accessory);
-      tmp2Result38 = tmp2(5121);
+      tmp2Result38 = tmp2(5128);
       return obj18;
     } else if (tmp2(1985).ComponentType.MEDIA_GALLERY === type2) {
       const obj19 = {
@@ -643,12 +644,12 @@ function transformComponent(accessory, items) {
           let obj2;
           const obj = { media: obj2.toUnfurledMediaItem(media.media), description: null, spoiler: null };
           ({ description: obj.description, spoiler: obj.spoiler } = media);
-          obj2 = items(dependencyMap[7]);
+          obj2 = items(dependencyMap[8]);
           return obj;
         }),
       };
       items1 = accessory.items;
-      tmp2Result39 = tmp2(5122);
+      tmp2Result39 = tmp2(5129);
       return obj19;
     } else if (tmp2(1985).ComponentType.FILE === type2) {
       const obj20 = {
@@ -659,9 +660,9 @@ function transformComponent(accessory, items) {
         size: null,
         spoiler: null,
       };
-      tmp2Result40 = tmp2(5122);
+      tmp2Result40 = tmp2(5129);
       ({ name: obj23.name, size: obj23.size, spoiler: obj23.spoiler } = accessory);
-      tmp2Result41 = tmp2(5121);
+      tmp2Result41 = tmp2(5128);
       return obj20;
     } else if (tmp2(1985).ComponentType.SEPARATOR === type2) {
       const obj21 = {
@@ -671,7 +672,7 @@ function transformComponent(accessory, items) {
         spacing: SMALL,
       };
       flag3 = accessory.divider;
-      tmp2Result42 = tmp2(5122);
+      tmp2Result42 = tmp2(5129);
       if (flag3 == null) {
         flag3 = true;
       }
@@ -689,7 +690,7 @@ function transformComponent(accessory, items) {
           contentInventoryEntry: accessory.content_inventory_entry,
         };
         tmp25 = obj22;
-        tmp2Result43 = tmp2(5122);
+        tmp2Result43 = tmp2(5129);
       }
       return tmp25;
     } else if (tmp2(1985).ComponentType.CONTAINER === type2) {
@@ -713,7 +714,7 @@ function transformComponent(accessory, items) {
       };
       found2 = mapped2.filter(tmp2(1375).isNotNullish);
       int2hslResult = undefined;
-      tmp2Result44 = tmp2(5122);
+      tmp2Result44 = tmp2(5129);
       if (null != accessory.accent_color) {
         const tmp2Result45 = tmp2(1103);
         int2hslResult = tmp2Result45.int2hsl(accessory.accent_color, false);
@@ -738,7 +739,7 @@ function transformComponent(accessory, items) {
         };
         ({ label: obj14.label, description: obj14.description } = accessory);
         tmp21 = obj25;
-        tmp2Result46 = tmp2(5122);
+        tmp2Result46 = tmp2(5129);
       }
       return tmp21;
     } else if (tmp2(1985).ComponentType.FILE_UPLOAD === type2) {
@@ -753,7 +754,7 @@ function transformComponent(accessory, items) {
         fileTypes: null,
       };
       ({ custom_id: obj12.customId, disabled: obj12.disabled, required: required3 } = accessory);
-      tmp2Result47 = tmp2(5122);
+      tmp2Result47 = tmp2(5129);
       if (required3 == null) {
         required3 = false;
       }
@@ -769,13 +770,13 @@ function transformComponent(accessory, items) {
           id: tmp2Result48.asComponentId(items.join(",")),
           checkpointData: tmp2Result49.transformCheckpoint2025CardComponent(checkpoint_data),
         };
-        tmp2Result48 = tmp2(5122);
+        tmp2Result48 = tmp2(5129);
         tmp12 = obj27;
-        tmp2Result49 = tmp2(5123);
+        tmp2Result49 = tmp2(5130);
       } else {
         tmp12 = null;
         if (tmp10.V2026 === version) {
-          const tmp2Result50 = tmp2(5136);
+          const tmp2Result50 = tmp2(5143);
           const result = tmp2Result50.transformCheckpoint2026CardComponent(checkpoint_data);
           let tmp13 = null;
           if (null != result) {
@@ -785,7 +786,7 @@ function transformComponent(accessory, items) {
               checkpointData: result,
             };
             tmp13 = obj29;
-            tmp2Result51 = tmp2(5122);
+            tmp2Result51 = tmp2(5129);
           }
           tmp12 = tmp13;
         }
@@ -800,7 +801,7 @@ function transformComponent(accessory, items) {
         required: required2,
       };
       ({ custom_id: obj5.customId, options: obj5.options, required: required2 } = accessory);
-      tmp2Result52 = tmp2(5122);
+      tmp2Result52 = tmp2(5129);
       if (required2 == null) {
         required2 = false;
       }
@@ -822,7 +823,7 @@ function transformComponent(accessory, items) {
         max_values: obj3.maxValues,
         required,
       } = accessory);
-      tmp2Result53 = tmp2(5122);
+      tmp2Result53 = tmp2(5129);
       if (required == null) {
         required = false;
       }
@@ -835,7 +836,7 @@ function transformComponent(accessory, items) {
         default: null,
       };
       ({ custom_id: obj.customId, default: obj.default } = accessory);
-      tmp2Result54 = tmp2(5122);
+      tmp2Result54 = tmp2(5129);
       return obj;
     } else {
       logger.warn("transformComponent: Unknown component type", accessory.type);
@@ -858,13 +859,13 @@ export const getLayoutComponentErrorText = function getLayoutComponentErrorText(
     interactionType = interaction.data.interactionType;
   }
   let componentId = null;
-  if (interactionType === Server.InteractionTypes.MESSAGE_COMPONENT) {
+  if (interactionType === InteractionTypes.InteractionTypes.MESSAGE_COMPONENT) {
     let state;
     if (interaction != null) {
       state = interaction.state;
     }
     componentId = null;
-    if (state === InteractionTypes.InteractionState.FAILED) {
+    if (state === interactions_InteractionTypes.InteractionState.FAILED) {
       componentId = interaction.data.componentId;
     }
   }

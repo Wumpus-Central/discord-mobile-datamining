@@ -1422,7 +1422,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const MobileHomeDrawerExperiment = tmp(4742).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = tmp(4748).MobileHomeDrawerExperiment;
       const enableHome = MobileHomeDrawerExperiment.useConfig(tmp8).enableHome;
       let tmp10 = null;
       if (null != stateFromStores) {
@@ -1460,7 +1460,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return guildFolderById;
       });
-      const MobileHomeDrawerExperiment = folderId(4742).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = folderId(4748).MobileHomeDrawerExperiment;
       const enableHome = MobileHomeDrawerExperiment.useConfig({ location: "folder-expanded-children" }).enableHome;
       let tmp3 = null;
       if (null != stateFromStores) {

@@ -22,11 +22,12 @@ const React3 = new LRUCacheDefault(obj2);
 new LRUCacheDefault(obj2);
 const Store = get_initializedDefault.Store;
 class SuggestedSearchStore extends Store {
-  getNextSuggestions(guildId, channelIds, arg2) {
+  getNextSuggestions(channelIds, arg1) {
     let peekResult1;
     let suggestedSearches;
+    channelIds = channelIds.channelIds;
     if (0 === channelIds.length) {
-      let peekResult = closure_3.peek(guildId);
+      let peekResult = closure_3.peek(tmp2);
       if (peekResult == null) {
         peekResult = null;
       }
@@ -43,14 +44,14 @@ class SuggestedSearchStore extends Store {
       suggestedSearches = items;
     } else if (0 === peekResult1.suggestedSearches.length) {
       suggestedSearches = items;
-    } else if (peekResult1.suggestedSearches.length < arg2) {
+    } else if (peekResult1.suggestedSearches.length < arg1) {
       suggestedSearches = peekResult1.suggestedSearches;
     } else {
       const suggestedSearches1 = peekResult1.suggestedSearches;
-      const substr = suggestedSearches1.slice(peekResult1.currentIndex, peekResult1.currentIndex + arg2);
-      const result = (peekResult1.currentIndex + arg2) % peekResult1.suggestedSearches.length;
+      const substr = suggestedSearches1.slice(peekResult1.currentIndex, peekResult1.currentIndex + arg1);
+      const result = (peekResult1.currentIndex + arg1) % peekResult1.suggestedSearches.length;
       suggestedSearches = substr;
-      if (result < arg2) {
+      if (result < arg1) {
         const push = substr.push;
         const suggestedSearches2 = peekResult1.suggestedSearches;
         items = [];
@@ -61,13 +62,14 @@ class SuggestedSearchStore extends Store {
     }
     return suggestedSearches;
   }
-  hasSuggestions(guildId, channelIds) {
-    return this.getNextSuggestions(guildId, channelIds, 1).length > 0;
+  hasSuggestions(smartSearchQuery) {
+    return this.getNextSuggestions(smartSearchQuery, 1).length > 0;
   }
-  isLoadingSuggestedSearches(guildId, channelIds) {
+  isLoadingSuggestedSearches(channelIds) {
     let peekResult1;
+    channelIds = channelIds.channelIds;
     if (0 === channelIds.length) {
-      let peekResult = closure_3.peek(guildId);
+      let peekResult = closure_3.peek(tmp);
       if (peekResult == null) {
         peekResult = null;
       }
@@ -89,10 +91,11 @@ class SuggestedSearchStore extends Store {
     }
     return flag;
   }
-  willExhaustSuggestedSearches(guildId, channelIds, windowSize) {
+  willExhaustSuggestedSearches(channelIds, windowSize) {
     let peekResult1;
+    channelIds = channelIds.channelIds;
     if (0 === channelIds.length) {
-      let peekResult = closure_3.peek(guildId);
+      let peekResult = closure_3.peek(tmp);
       if (peekResult == null) {
         peekResult = null;
       }
@@ -113,19 +116,38 @@ class SuggestedSearchStore extends Store {
     }
     return tmp10;
   }
+  getStateForScope(smartSearchQuery) {
+    let peekResult1;
+    const channelIds = smartSearchQuery.channelIds;
+    if (0 === channelIds.length) {
+      let peekResult = closure_3.peek(tmp);
+      if (peekResult == null) {
+        peekResult = null;
+      }
+      peekResult1 = peekResult;
+    } else {
+      const peek = closure_4.peek;
+      const obj = SmartSearchUtils;
+      peekResult1 = peek(obj.getChannelFilterKey(channelIds));
+      if (peekResult1 == null) {
+        peekResult1 = null;
+      }
+    }
+    return peekResult1;
+  }
 }
 const prototype = SuggestedSearchStore.prototype;
 SuggestedSearchStore.displayName = "SuggestedSearchStore";
 let obj3 = {
-  SUGGESTED_SEARCHES_FETCH_START: function handleFetchStart(arg0) {
+  SUGGESTED_SEARCHES_FETCH_START: function handleFetchStart(scope) {
     let channelIds;
     let guildId;
     let value2;
-    ({ guildId, channelIds } = arg0);
+    ({ guildId, channelIds } = scope.scope);
     if (0 === channelIds.length) {
       let value = closure_3.get(guildId);
       if (null == value) {
-        const obj3 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false };
+        const obj3 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false, requestId: null };
         const result = closure_3.set(guildId, obj3);
         value = obj3;
       }
@@ -135,25 +157,28 @@ let obj3 = {
       const channelFilterKey = obj2.getChannelFilterKey(channelIds);
       value2 = closure_4.get(channelFilterKey);
       if (null == value2) {
-        const obj5 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false };
+        const obj5 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false, requestId: null };
         const result1 = closure_4.set(channelFilterKey, obj5);
         value2 = obj5;
       }
     }
     value2.isLoading = true;
   },
-  SUGGESTED_SEARCHES_FETCH_SUCCESS: function handleFetchSuccess(response) {
+  SUGGESTED_SEARCHES_FETCH_SUCCESS: function handleFetchSuccess(requestId) {
     let channelIds;
     let guildId;
-    let refillWindowSize;
-    let value2;
-    ({ guildId, channelIds, refillWindowSize } = response);
+    let scope;
     let suggestedSearches;
-    response = response.response;
+    let value2;
+    let windowSize;
+    ({ scope, suggestedSearches, windowSize } = requestId);
+    let suggestedSearches2;
+    ({ guildId, channelIds } = scope);
+    requestId = requestId.requestId;
     if (0 === channelIds.length) {
       let value = closure_3.get(guildId);
       if (null == value) {
-        const obj3 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false };
+        const obj3 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false, requestId: null };
         const result = closure_3.set(guildId, obj3);
         value = obj3;
       }
@@ -163,59 +188,56 @@ let obj3 = {
       const channelFilterKey = obj2.getChannelFilterKey(channelIds);
       value2 = closure_4.get(channelFilterKey);
       if (null == value2) {
-        const obj5 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false };
+        const obj5 = { guildId, currentIndex: 0, suggestedSearches: items, isLoading: false, requestId: null };
         const result1 = closure_4.set(channelFilterKey, obj5);
         value2 = obj5;
       }
     }
     value2.isLoading = false;
-    const suggestions = response.suggestions;
-    const mapped = suggestions.map((suggestionId) => ({
-      suggestionId: suggestionId.suggestion_id,
-      suggestedSearchText: suggestionId.suggested_search_text,
-    }));
-    if (null != refillWindowSize) {
+    value2.requestId = requestId;
+    if (null != windowSize) {
       if (0 !== value2.suggestedSearches.length) {
         if (0 === value2.suggestedSearches.length) {
-          suggestedSearches = items;
-        } else if (value2.suggestedSearches.length < refillWindowSize) {
-          suggestedSearches = value2.suggestedSearches;
+          suggestedSearches2 = items;
+        } else if (value2.suggestedSearches.length < windowSize) {
+          suggestedSearches2 = value2.suggestedSearches;
         } else {
           const suggestedSearches1 = value2.suggestedSearches;
-          const substr = suggestedSearches1.slice(value2.currentIndex, value2.currentIndex + refillWindowSize);
-          const result2 = (value2.currentIndex + refillWindowSize) % value2.suggestedSearches.length;
-          suggestedSearches = substr;
-          if (result2 < refillWindowSize) {
+          const substr = suggestedSearches1.slice(value2.currentIndex, value2.currentIndex + windowSize);
+          const result2 = (value2.currentIndex + windowSize) % value2.suggestedSearches.length;
+          suggestedSearches2 = substr;
+          if (result2 < windowSize) {
             const push = substr.push;
-            const suggestedSearches2 = value2.suggestedSearches;
+            const suggestedSearches3 = value2.suggestedSearches;
             items = [];
-            HermesBuiltin.arraySpread(items, suggestedSearches2.slice(0, result2), 0);
+            HermesBuiltin.arraySpread(items, suggestedSearches3.slice(0, result2), 0);
             HermesBuiltin.apply(push, items, substr);
-            suggestedSearches = substr;
+            suggestedSearches2 = substr;
           }
         }
-        const found = mapped.filter((item) => {
+        const found = suggestedSearches.filter((item) => {
           let closure_0 = item;
-          return !suggestedSearches.some((suggestionId) => suggestionId.suggestionId === suggestionId.suggestionId);
+          return !suggestedSearches2.some((suggestionId) => suggestionId.suggestionId === suggestionId.suggestionId);
         });
         if (0 !== found.length) {
           const items1 = [];
-          HermesBuiltin.arraySpread(items1, found, HermesBuiltin.arraySpread(items1, suggestedSearches, 0));
+          HermesBuiltin.arraySpread(items1, found, HermesBuiltin.arraySpread(items1, suggestedSearches2, 0));
           value2.suggestedSearches = items1;
           value2.currentIndex = 0;
         } else {
-          value2.currentIndex = (value2.currentIndex + refillWindowSize) % value2.suggestedSearches.length;
+          value2.currentIndex = (value2.currentIndex + windowSize) % value2.suggestedSearches.length;
         }
       }
     }
     value2.currentIndex = 0;
-    value2.suggestedSearches = mapped;
+    value2.suggestedSearches = suggestedSearches;
   },
   SUGGESTED_SEARCHES_FETCH_FAILURE: function handleFetchFailure(arg0) {
-    let channelIds;
     let peekResult1;
-    let refillWindowSize;
-    ({ channelIds, refillWindowSize } = arg0);
+    let scope;
+    let windowSize;
+    ({ scope, windowSize } = arg0);
+    const channelIds = scope.channelIds;
     if (0 === channelIds.length) {
       let peekResult = closure_3.peek(tmp);
       if (peekResult == null) {
@@ -234,16 +256,16 @@ let obj3 = {
       return false;
     } else {
       peekResult1.isLoading = false;
-      const tmp10 = null != refillWindowSize && peekResult1.suggestedSearches.length > 0;
+      const tmp10 = null != windowSize && peekResult1.suggestedSearches.length > 0;
       if (tmp10) {
-        peekResult1.currentIndex = (peekResult1.currentIndex + refillWindowSize) % peekResult1.suggestedSearches.length;
+        peekResult1.currentIndex = (peekResult1.currentIndex + windowSize) % peekResult1.suggestedSearches.length;
       }
     }
   },
-  SUGGESTED_SEARCH_ADVANCE: function handleAdvance(channelIds) {
+  SUGGESTED_SEARCH_ADVANCE: function handleAdvance(scope) {
     let peekResult1;
-    channelIds = channelIds.channelIds;
-    const windowSize = channelIds.windowSize;
+    const channelIds = scope.scope.channelIds;
+    const windowSize = scope.windowSize;
     if (0 === channelIds.length) {
       let peekResult = closure_3.peek(tmp);
       if (peekResult == null) {

@@ -6,7 +6,7 @@ import Constants from "../../../../Constants.tsx";
 import intl6 from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef3367 from "../../../favorites/intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../../../favorites/intl/FavoritesGuild.messages.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
@@ -73,7 +73,7 @@ function getAppearanceSettings() {
   const intl3 = intl6.intl;
   format = intl3.format;
   obj7 = { helpCenterLink: obj8.getArticleURL(HelpdeskArticles.FAVORITES_GUILD) };
-  GR2KOG = _modDef3367.GR2KOG;
+  GR2KOG = _modDef3395.GR2KOG;
   items1[5] = obj6;
   obj8 = HelpdeskUtilsDefault;
   const obj9 = { label: intl4.string(intl6.t.lEde7i), settings: items7 };

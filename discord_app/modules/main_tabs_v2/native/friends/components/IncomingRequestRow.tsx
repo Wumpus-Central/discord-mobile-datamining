@@ -241,7 +241,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           const tmp42 = jsx(
-                            tmp33(12294),
+                            tmp33(12309),
                             { application: null, textVariant: "text-xs/medium", iconSize: 12 },
                             stateFromStores1.id,
                           );

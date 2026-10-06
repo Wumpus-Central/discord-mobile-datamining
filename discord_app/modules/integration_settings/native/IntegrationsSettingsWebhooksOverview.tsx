@@ -687,7 +687,7 @@ class WebhooksOverview extends PureComponent {
     }
     const helpText = self.getHelpText();
     const children = [
-      closure_20(webhookType(4886).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
+      closure_20(webhookType(4892).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
       ,
     ];
     let tmp4Result = webhookType === constants3.INCOMING;
@@ -697,7 +697,7 @@ class WebhooksOverview extends PureComponent {
     }
     children[1] = tmp4Result;
     if (0 === found.length) {
-      const obj2 = { Illustration: webhookType(17025).WebhookEmpty, title: stringResult };
+      const obj2 = { Illustration: webhookType(17051).WebhookEmpty, title: stringResult };
       const EmptyState = webhookType(1188).EmptyState;
       if (webhookType === constants3.CHANNEL_FOLLOWER) {
         const intl2 = webhookType(1126).intl;
@@ -733,7 +733,7 @@ class WebhooksOverview extends PureComponent {
           return closure_1_20(closure_1_25, obj, id);
         }),
       };
-      const TableRowGroup = webhookType(6074).TableRowGroup;
+      const TableRowGroup = webhookType(6081).TableRowGroup;
       tmp4Result2 = closure_20(TableRowGroup, obj3);
     }
     children[2] = tmp4Result2;

@@ -27,18 +27,18 @@ function UsernameStatusMessage(showHint) {
   let P2;
   showHint = showHint.showHint;
   const usernameStatus = showHint.usernameStatus;
-  const str = showHint(5075);
+  const str = showHint(5081);
   const match = str.match(usernameStatus);
-  let obj = { type: showHint(14516).NameValidationState.ERROR, message: P.select() };
+  let obj = { type: showHint(14532).NameValidationState.ERROR, message: P.select() };
   const _with = match.with;
-  P = showHint(5075).P;
+  P = showHint(5081).P;
   const _withResult = _with(obj, (children) => {
     const obj = { variant: "text-xs/medium", color: "text-feedback-critical", children };
     return closure_1_11(showHint(dependencyMap[11]).Text, obj);
   });
   const _with2 = _withResult.with;
-  const obj2 = { type: showHint(14516).NameValidationState.AVAILABLE, message: P2.select() };
-  P2 = showHint(5075).P;
+  const obj2 = { type: showHint(14532).NameValidationState.AVAILABLE, message: P2.select() };
+  P2 = showHint(5081).P;
   const _with2Result = _with2(obj2, (children) => {
     const obj = { variant: "text-xs/medium", color: "text-feedback-positive", children };
     return closure_1_11(showHint(dependencyMap[11]).Text, obj);

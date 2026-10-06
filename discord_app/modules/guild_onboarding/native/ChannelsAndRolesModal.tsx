@@ -239,7 +239,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = guildId(573);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
-      const tmp9 = defaultTab(6838)(stateFromStores);
+      const tmp9 = defaultTab(6848)(stateFromStores);
       const tmp8 = defaultTab;
       if (cResult[3] !== tmp9) {
         let stringResult;
@@ -270,7 +270,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp13;
         }
         const obj2 = { screenKey: "channelAndRolesModal", title: tmp10, render: tmp12 };
-        const tmp15 = closure_8(tmp8(10661), obj2);
+        const tmp15 = closure_8(tmp8(10674), obj2);
         cResult[8] = tmp10;
         cResult[9] = tmp12;
         cResult[10] = tmp15;

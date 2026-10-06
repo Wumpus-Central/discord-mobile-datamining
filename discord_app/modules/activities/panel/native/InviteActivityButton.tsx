@@ -56,7 +56,7 @@ const memoResult = react.memo(
               const openLazy = ActionSheetActionCreatorsDefault.openLazy;
               ActionSheetActionCreatorsDefault;
               const obj = { activity: stateFromStores };
-              const tmp2 = asyncRequire(17180, dependencyMap.paths);
+              const tmp2 = asyncRequire(17209, dependencyMap.paths);
               openLazy(tmp2, "ActivityInviteSheet-" + stateFromStores.session_id, obj);
             };
             cResult[4] = stateFromStores;
@@ -80,11 +80,11 @@ const memoResult = react.memo(
             tmp13 = cResult[7];
           }
           if (cResult[8] !== tmp11) {
-            const Button = tmp(5594).Button;
+            const Button = tmp(5601).Button;
             const tmp19 = (
               <Button
                 onPress={tmp11}
-                icon={stateFromStores(9715)}
+                icon={stateFromStores(9728)}
                 text={tmp12}
                 accessibilityLabel={tmp13}
                 variant="secondary-overlay"
@@ -116,7 +116,7 @@ const memoResult = react.memo(
         );
         let tmp4 = null;
         if (null != stateFromStores) {
-          const Button = tmp(5594).Button;
+          const Button = tmp(5601).Button;
           const intl = tmp(1126).intl;
           const intl2 = tmp(1126).intl;
           tmp4 = (
@@ -125,10 +125,10 @@ const memoResult = react.memo(
                 const openLazy = ActionSheetActionCreatorsDefault.openLazy;
                 ActionSheetActionCreatorsDefault;
                 const obj = { activity: stateFromStores };
-                const tmp2 = asyncRequire(17180, dependencyMap.paths);
+                const tmp2 = asyncRequire(17209, dependencyMap.paths);
                 openLazy(tmp2, "ActivityInviteSheet-" + stateFromStores.session_id, obj);
               }}
-              icon={stateFromStores(9715)}
+              icon={stateFromStores(9728)}
               text={intl.string(tmp(1126).t["OzOM/q"])}
               accessibilityLabel={intl2.string(tmp(1126).t["OzOM/q"])}
               variant="secondary-overlay"

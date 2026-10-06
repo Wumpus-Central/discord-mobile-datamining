@@ -47,8 +47,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = useThemeDefault();
       if (cResult[0] !== tmp6) {
         let obj2 = { seeMoreLabelColor: nativeDefault.colors.TEXT_DEFAULT };
-        const createNativeStyleProperties = lineClamp(4890).createNativeStyleProperties;
-        lineClamp(4890);
+        const createNativeStyleProperties = lineClamp(4896).createNativeStyleProperties;
+        lineClamp(4896);
         const tmp9 = createNativeStyleProperties(obj2)(tmp6);
         cResult[0] = tmp6;
         cResult[1] = tmp9;
@@ -98,7 +98,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const self = this;
           const self2 = this;
-          let obj3 = new tmp5(7591)();
+          let obj3 = new tmp5(7602)();
           const obj4 = {
             renderEmbeds: tmp12,
             inlineEmbedMedia: tmp14,

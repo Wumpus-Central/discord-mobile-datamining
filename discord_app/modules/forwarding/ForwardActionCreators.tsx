@@ -1,7 +1,7 @@
 // discord_app/modules/forwarding/ForwardActionCreators.tsx
 import Constants from "../../Constants.tsx";
 import MessageConstants from "../messages/MessageConstants.tsx";
-import allSettledDefault from "../../../_runtime/05323_allSettled.js";
+import allSettledDefault from "../../../_runtime/05330_allSettled.js";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";

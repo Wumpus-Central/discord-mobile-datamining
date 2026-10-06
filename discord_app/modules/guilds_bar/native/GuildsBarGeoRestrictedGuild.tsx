@@ -55,7 +55,7 @@ const memoResult = react.memo(
         } else {
           first = cResult[0];
         }
-        const tmpResult = tmp(16234);
+        const tmpResult = tmp(16274);
         const guildsBarAnimatedWrapperStyles = tmpResult.useGuildsBarAnimatedWrapperStyles(first);
         if (cResult[1] === restrictedGuild.icon) {
           let tmp7;
@@ -140,7 +140,7 @@ const memoResult = react.memo(
                   value={restrictedGuild.name}
                   selected={false}
                   animate={false}
-                  size={tmp(5971).GuildIconSizes.LARGE}
+                  size={tmp(5978).GuildIconSizes.LARGE}
                 />
               );
             }
@@ -204,7 +204,7 @@ const memoResult = react.memo(
         let tmp8Result;
         restrictedGuild = restrictedGuild.restrictedGuild;
         let tmp = closure_5();
-        let obj = restrictedGuild(16234);
+        let obj = restrictedGuild(16274);
         let animatableSourceWithFallback = null;
         const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
@@ -270,7 +270,7 @@ const memoResult = react.memo(
               value={restrictedGuild.name}
               selected={false}
               animate={false}
-              size={tmp2(5971).GuildIconSizes.LARGE}
+              size={tmp2(5978).GuildIconSizes.LARGE}
             />
           );
         }
@@ -285,8 +285,8 @@ const memoResult = react.memo(
             config={memo}
             cutouts={items}
             overState="a"
-            externalChildren={28}
-            expandedChildren={480}
+            externalChildren="previousElementSibling"
+            expandedChildren={null}
           >
             {tmp8Result}
           </tmp10>

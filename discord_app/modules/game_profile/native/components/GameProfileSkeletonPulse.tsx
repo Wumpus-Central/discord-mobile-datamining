@@ -268,7 +268,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const effect1 = react.useEffect(O, tmp13);
       let result = (-arg0 % c5) / c5;
       dependencyMap = result;
-      const tmpResult2 = tmp(4612);
+      const tmpResult2 = tmp(4618);
       class T {
         constructor() {
           let tmp7;
@@ -371,7 +371,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       let result = (-arg0 % c5) / c5;
       dependencyMap = result;
-      let obj2 = stateFromStores(4612);
+      let obj2 = stateFromStores(4618);
       const fn = function f() {
         let tmp7;
         const obj = { opacity: null };

@@ -447,7 +447,7 @@ obj = {
           const guildMembers = socket.requestGuildMembers(userIds.guildIds, obj);
         });
       } else {
-        const socket2 = tmp(13439).socket;
+        const socket2 = tmp(13458).socket;
         obj = { query: null, limit: null, presences: userIds.presences };
         ({ query: obj.query, limit: obj.limit } = userIds);
         let guildMembers = socket2.requestGuildMembers(userIds.guildIds, obj);
@@ -551,7 +551,7 @@ obj = {
           }
         });
       }
-      let socket2 = tmp(13439).socket;
+      let socket2 = tmp(13458).socket;
       socket2.streamWatch(streamKey);
     }
     return false;

@@ -17,5 +17,5 @@ export const showYouAccountActionSheet = function showYouAccountActionSheet() {
     flag2 = true;
   }
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(16312, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
+  obj.openLazy(asyncRequire(16352, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
 };

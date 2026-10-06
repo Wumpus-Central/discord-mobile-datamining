@@ -33,7 +33,7 @@ export default function useFetchShareEmbed(arg0) {
       let current;
       obj = _asyncToGenerator(async () => {
         let closure_2;
-        const f155503 = () => {
+        const f155746 = () => {
           c3(true);
           if (ref.current === batchUpdates) {
             closure_2(false);
@@ -90,7 +90,7 @@ export default function useFetchShareEmbed(arg0) {
               } else if (1 === c4) {
                 c3 = 0;
                 const obj7 = current(closure_2_2[5]);
-                batchUpdates = obj7.batchUpdates(f155503);
+                batchUpdates = obj7.batchUpdates(f155746);
                 throw tmp55;
               } else {
                 if (2 === c4) {
@@ -104,7 +104,7 @@ export default function useFetchShareEmbed(arg0) {
                 } else if (arg0 === 2) {
                   c3 = 0;
                   const obj5 = current(closure_2_2[5]);
-                  obj5.batchUpdates(f155503);
+                  obj5.batchUpdates(f155746);
                   c5 = 3;
                   const obj10 = { value, done: true };
                   return obj10;
@@ -114,14 +114,14 @@ export default function useFetchShareEmbed(arg0) {
                   if (batchUpdates !== c0) {
                     c3 = 0;
                     const obj4 = current(closure_2_2[5]);
-                    obj4.batchUpdates(f155503);
+                    obj4.batchUpdates(f155746);
                     c5 = 3;
                     return { value: "IconComponent", done: null };
                   } else if (0 === tmp.embeds.length) {
                     tmp(undefined);
                     c3 = 0;
                     const obj2 = current(closure_2_2[5]);
-                    batchUpdates = obj2.batchUpdates(f155503);
+                    batchUpdates = obj2.batchUpdates(f155746);
                     c5 = 3;
                     const obj11 = { value: undefined, done: true };
                     return obj11;
@@ -135,7 +135,7 @@ export default function useFetchShareEmbed(arg0) {
                 c3 = 0;
                 batchUpdates = current(closure_2_2[5]).batchUpdates;
                 const tmp38 = current(closure_2_2[5]);
-                batchUpdates(f155503);
+                batchUpdates(f155746);
               }
               c5 = 3;
               return { value: "IconComponent", done: null };

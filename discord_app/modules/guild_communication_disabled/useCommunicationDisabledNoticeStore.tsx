@@ -3,7 +3,7 @@ import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import react from "../../../_runtime/00576_react.js";
 import _mod1254 from "../../../_runtime/metro/01254__.js";
 import GuildDisableCommunicationConstants from "GuildDisableCommunicationConstants.tsx";
-import _slicedToArray2 from "../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray2 from "../../../_runtime/metro/04498__slicedToArray.js";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import 00571__ from "../../../_runtime/metro/00571__.js";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";

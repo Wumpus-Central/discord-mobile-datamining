@@ -39,7 +39,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const tmpResult = tmp(7636);
+      const tmpResult = tmp(7647);
       const tmp8 = _slicedToArray(tmpResult.useCurrentUserCommunicationDisabled(tmp5), 2)[1];
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];

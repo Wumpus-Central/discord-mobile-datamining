@@ -91,13 +91,13 @@ const memoResult = memo(
         const cResult = obj.c(55);
         useMaybeFetchCollectiblesRecommendationsDefault();
         closure_19();
-        let obj2 = token(4580);
+        let obj2 = token(4586);
         token = obj2.useToken(nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND);
         [first, importDefault] = stateFromStores.useState(0);
         [dependencyMap, closure_3] = stateFromStores.useState(false);
         let obj3 = token(1490);
         const nativeStackNavigation = obj3.useNativeStackNavigation();
-        let obj4 = token(6490);
+        let obj4 = token(6497);
         const params = obj4.useSettingNavigationRoute().params;
         let autoFocusElement;
         if (params != null) {
@@ -142,7 +142,7 @@ const memoResult = memo(
             }
           }
         }
-        const useSegmentedControlState = tmp(9282).useSegmentedControlState;
+        const useSegmentedControlState = tmp(9317).useSegmentedControlState;
         const obj6 = {
           items: tmp14,
           pageWidth: first,
@@ -159,7 +159,7 @@ const memoResult = memo(
             return tmp(obj);
           },
         };
-        const tmpResult = tmp(9282);
+        const tmpResult = tmp(9317);
         if (field === ProfileCustomizationSubsection.GUILD) {
           class D {
             constructor(arg0) {

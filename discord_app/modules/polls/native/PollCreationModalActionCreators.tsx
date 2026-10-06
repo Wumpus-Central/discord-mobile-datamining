@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/polls/native/PollCreationModa
 
 export const openCreatePollModal = function openCreatePollModal(merged) {
   const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(11828, dependencyMap.paths), merged, c3);
+  obj.pushLazy(asyncRequire(11842, dependencyMap.paths), merged, c3);
 };
 export const closeCreatePollModal = function closeCreatePollModal() {
   const obj = ModalActionCreatorsDefault;

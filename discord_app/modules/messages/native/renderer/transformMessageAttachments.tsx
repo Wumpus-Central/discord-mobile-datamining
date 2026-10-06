@@ -4,7 +4,7 @@ import intl8 from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import FlagUtils from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import MediaFormatTesters from "../../MediaFormatTesters.tsx";
-import _modDef7271 from "../../../../../_runtime/metro/07271__.js";
+import _modDef7284 from "../../../../../_runtime/metro/07284__.js";
 import RowGeneratorConstants from "RowGeneratorConstants.tsx";
 import sanitizeMediaDimension3 from "sanitizeMediaDimension.tsx";
 import RowGeneratorUtilsDefault from "RowGeneratorUtils.tsx";
@@ -257,7 +257,7 @@ export default function transformMessageAttachments(arg0) {
           const intl3 = intl8.intl;
           stringResult1 = intl3.string(intl8.t["0PQYk3"]);
         }
-        obj12 = _modDef7271;
+        obj12 = _modDef7284;
         const intl4 = intl8.intl;
         str6 = intl4.string(intl8.t.jCV1Tz);
         intl5 = intl8.intl;

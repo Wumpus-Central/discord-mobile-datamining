@@ -691,7 +691,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[13] !== tmp13) {
               const obj2 = { hasIcons: false, children: tmp13 };
-              const tmp18 = closure_7(tmp(6074).TableRowGroup, obj2);
+              const tmp18 = closure_7(tmp(6081).TableRowGroup, obj2);
               cResult[13] = tmp13;
               cResult[14] = tmp18;
               tmp16 = tmp18;
@@ -706,7 +706,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol2 = Symbol;
               if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp25 = closure_7(tmp(10728).ModalFloatingActionSpacer, {});
+                const tmp25 = closure_7(tmp(10741).ModalFloatingActionSpacer, {});
                 cResult[18] = tmp25;
                 tmp23 = tmp25;
               } else {
@@ -749,7 +749,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   onValueChange(arg0) {
                     closure_0 = arg0;
                     let tmp = closure_1_1(() => {
-                      /* body not rendered: F153242 */
+                      /* body not rendered: F153475 */
                     });
                   },
                 };
@@ -768,7 +768,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   onValueChange(arg0) {
                     closure_0 = arg0;
                     let tmp = closure_1_1(() => {
-                      /* body not rendered: F153242 */
+                      /* body not rendered: F153475 */
                     });
                   },
                 };
@@ -789,7 +789,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         text: "Come on fhqwhgads",
         onPress: onAction,
       };
-      const tmp11 = closure_7(tmp(10728).ModalFloatingAction, obj5);
+      const tmp11 = closure_7(tmp(10741).ModalFloatingAction, obj5);
       cResult[4] = onAction;
       cResult[5] = tmp4.screen.backgroundColor;
       cResult[6] = tmp7;
@@ -804,12 +804,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let items;
       let obj2;
       let obj4;
-      const f121242 = () => false;
+      const f121405 = () => false;
       c1 = undefined;
       onAction = onAction.onAction;
       let tmp = closure_9();
       let parts = "I said ooh ah fhqwhgads, I said ooh ah fhqhgads!".split(" ");
-      [arr2, c1] = react.useState(parts.map(f121242));
+      [arr2, c1] = react.useState(parts.map(f121405));
       let obj = {
         title: "Everybody come on fhqwhgads.",
         emoji: "\u{1F44F}",
@@ -822,8 +822,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         text: "Come on fhqwhgads",
         onPress: onAction,
       };
-      _slicedToArray(react.useState(parts.map(f121242)), 2);
-      ModalFloatingAction = parts(10728).ModalFloatingAction;
+      _slicedToArray(react.useState(parts.map(f121405)), 2);
+      ModalFloatingAction = parts(10741).ModalFloatingAction;
       const obj3 = { style: tmp.tableRows, children: closure_7(TableRowGroup, obj4) };
       obj4 = {
         hasIcons: false,
@@ -848,8 +848,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           return closure_1_7(parts(dependencyMap[24]).TableSwitchRow, obj, index);
         }),
       };
-      TableRowGroup = parts(6074).TableRowGroup;
-      items = [closure_7(closure_5, obj3), closure_7(parts(10728).ModalFloatingActionSpacer, {})];
+      TableRowGroup = parts(6081).TableRowGroup;
+      items = [closure_7(closure_5, obj3), closure_7(parts(10741).ModalFloatingActionSpacer, {})];
       return closure_8(closure_14, obj);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

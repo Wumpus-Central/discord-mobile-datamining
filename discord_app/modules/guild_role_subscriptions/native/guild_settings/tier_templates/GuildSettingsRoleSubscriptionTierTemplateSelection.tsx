@@ -88,7 +88,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] !== error.message) {
           const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: items };
           items = ["Error: ", error.message];
-          const tmp14 = closure_15(guildId(4886).Text, obj3);
+          const tmp14 = closure_15(guildId(4892).Text, obj3);
           cResult[2] = error.message;
           cResult[3] = tmp14;
           tmp12 = tmp14;
@@ -151,7 +151,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (null != error) {
         const obj3 = { variant: "text-xs/normal", color: "text-feedback-critical", children: items };
         items = ["Error: ", error.message];
-        tmp3 = closure_15(guildId(4886).Text, obj3);
+        tmp3 = closure_15(guildId(4892).Text, obj3);
       } else {
         tmp3 = null;
         if (null != templates) {
@@ -170,7 +170,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 return closure_1_14(closure_1_8, obj);
               },
               decelerationRate: "fast",
-              snapToInterval: guildId(17978).CARD_WIDTH + v16,
+              snapToInterval: guildId(18024).CARD_WIDTH + v16,
               renderItem(template) {
                 const obj = {
                   template: template.item,

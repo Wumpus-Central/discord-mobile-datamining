@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl7 from "../../../../intl/index.native.tsx";
 import v1 from "../../../../../_runtime/01266_v1.js";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Card_Card from "../../../../design/components/Card/native/Card.native.tsx";
@@ -454,7 +454,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const intl = intl7.intl;
           const formatToPlainString = intl.formatToPlainString;
           const obj13 = { tokens: tmpResult5.formatTokens(entry.promptTokens) };
-          const v6GQUgQ = _modDef3723["6GQUgQ"];
+          const v6GQUgQ = _modDef3753["6GQUgQ"];
           tmpResult5 = debug_ConjureTraceFormat;
           formatToPlainStringResult = formatToPlainString(v6GQUgQ, obj13);
         }
@@ -492,7 +492,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const intl = intl7.intl;
           const formatToPlainString = intl.formatToPlainString;
           const obj3 = { tokens: tmp2Result.formatTokens(entry.promptTokens) };
-          const v6GQUgQ = _modDef3723["6GQUgQ"];
+          const v6GQUgQ = _modDef3753["6GQUgQ"];
           tmp2Result = debug_ConjureTraceFormat;
           formatToPlainStringResult = formatToPlainString(v6GQUgQ, obj3);
         }
@@ -684,7 +684,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = {
                 variant: "text-xs/normal",
                 color: "text-subtle",
-                children: intl.formatToPlainString(_modDef3723["3dQ1ly"], { percent: num2 }),
+                children: intl.formatToPlainString(_modDef3753["3dQ1ly"], { percent: num2 }),
               };
               const Text2 = Text_Text.Text;
               intl = intl7.intl;
@@ -693,7 +693,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const intl2 = intl7.intl;
               const formatToPlainString = intl2.formatToPlainString;
               let num4;
-              const Ow0k34 = _modDef3723.Ow0k34;
+              const Ow0k34 = _modDef3753.Ow0k34;
               if (found != null) {
                 num4 = found.calls;
               }
@@ -775,7 +775,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp = closure_10();
       let closure_1 = tmp;
       const tmp2 = entries;
-      let obj = entries(16761);
+      let obj = entries(16782);
       dependencyMap = obj.useTraceCategoryFillStyles();
       let items = [entries];
       const memo = react.useMemo(() => {
@@ -842,7 +842,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = {
             variant: "text-xs/normal",
             color: "text-subtle",
-            children: intl.formatToPlainString(_modDef3723["3dQ1ly"], { percent: num2 }),
+            children: intl.formatToPlainString(_modDef3753["3dQ1ly"], { percent: num2 }),
           };
           const Text2 = Text_Text.Text;
           intl = intl7.intl;
@@ -851,7 +851,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = intl7.intl;
           const formatToPlainString = intl2.formatToPlainString;
           let num4;
-          const Ow0k34 = _modDef3723.Ow0k34;
+          const Ow0k34 = _modDef3753.Ow0k34;
           if (found != null) {
             num4 = found.calls;
           }
@@ -875,7 +875,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           return React4(View, obj, item);
         }),
       };
-      TRACE_CATEGORIES = tmp2(16763).TRACE_CATEGORIES;
+      TRACE_CATEGORIES = tmp2(16784).TRACE_CATEGORIES;
       items1[1] = closure_8(View, obj4);
       return closure_9(View, obj2);
     };
@@ -1335,7 +1335,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             kind: "group",
             key: "group-" + turnId,
-            label: intl.formatToPlainString(_modDef3723.gPwGYA, obj3),
+            label: intl.formatToPlainString(_modDef3753.gPwGYA, obj3),
             started: tmpResult.formatClockTime(turnId.startedAt),
             spanMs: turnId.spanMs,
           };
@@ -1420,7 +1420,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = {
               kind: "group",
               key: "group-" + turnId,
-              label: intl.formatToPlainString(_modDef3723.gPwGYA, obj3),
+              label: intl.formatToPlainString(_modDef3753.gPwGYA, obj3),
               started: tmpResult.formatClockTime(turnId.startedAt),
               spanMs: turnId.spanMs,
             };

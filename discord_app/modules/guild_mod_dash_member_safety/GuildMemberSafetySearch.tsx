@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import CommunicationDisabledUtils from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 import AutomodPermissionUtils from "../guild_automod/AutomodPermissionUtils.tsx";
-import isEqualDefault from "../../../_runtime/05010_isEqual.js";
+import isEqualDefault from "../../../_runtime/05016_isEqual.js";
 import GuildMemberSafetySearchUtils from "GuildMemberSafetySearchUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import size from "../../../_runtime/metro/00002__.js";
@@ -27,9 +27,9 @@ let obj = {
   selectedRoleIds: set,
   selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
   selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-  selectedJoinSourceType: "applicationId",
-  selectedSourceInviteCode: "round",
-  selectedSort: "width",
+  selectedJoinSourceType: "code",
+  selectedSourceInviteCode: "split",
+  selectedSort: "length",
 };
 set = new Set();
 let closure_4 = freeze(obj);
@@ -47,9 +47,9 @@ class GuildMemberSafetySearch {
       selectedRoleIds: new Set(),
       selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
       selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-      selectedJoinSourceType: "applicationId",
-      selectedSourceInviteCode: "round",
-      selectedSort: "width",
+      selectedJoinSourceType: "code",
+      selectedSourceInviteCode: "split",
+      selectedSort: "length",
     };
     obj2.hasDefaultQuery = true;
     const obj = {
@@ -61,9 +61,9 @@ class GuildMemberSafetySearch {
       selectedRoleIds: new Set(),
       selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
       selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-      selectedJoinSourceType: "applicationId",
-      selectedSourceInviteCode: "round",
-      selectedSort: "width",
+      selectedJoinSourceType: "code",
+      selectedSourceInviteCode: "split",
+      selectedSort: "length",
     };
     new Set();
     return obj2;
@@ -78,9 +78,9 @@ class GuildMemberSafetySearch {
       selectedRoleIds: new Set(),
       selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
       selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-      selectedJoinSourceType: "applicationId",
-      selectedSourceInviteCode: "round",
-      selectedSort: "width",
+      selectedJoinSourceType: "code",
+      selectedSourceInviteCode: "split",
+      selectedSort: "length",
     };
     this.hasDefaultQuery = true;
     const obj = {
@@ -92,9 +92,9 @@ class GuildMemberSafetySearch {
       selectedRoleIds: new Set(),
       selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
       selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-      selectedJoinSourceType: "applicationId",
-      selectedSourceInviteCode: "round",
-      selectedSort: "width",
+      selectedJoinSourceType: "code",
+      selectedSourceInviteCode: "split",
+      selectedSort: "length",
     };
     new Set();
   }
@@ -122,9 +122,9 @@ class GuildMemberSafetySearch {
         selectedRoleIds: set,
         selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
         selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-        selectedJoinSourceType: "applicationId",
-        selectedSourceInviteCode: "round",
-        selectedSort: "width",
+        selectedJoinSourceType: "code",
+        selectedSourceInviteCode: "split",
+        selectedSort: "length",
       };
       self._searchState = obj;
       self.hasDefaultQuery = true;
@@ -331,9 +331,9 @@ export const getDefaultSearchState = function getDefaultSearchState() {
     selectedRoleIds: new Set(),
     selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
     selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
-    selectedJoinSourceType: "applicationId",
-    selectedSourceInviteCode: "round",
-    selectedSort: "width",
+    selectedJoinSourceType: "code",
+    selectedSourceInviteCode: "split",
+    selectedSort: "length",
   };
   new Set();
   return obj;

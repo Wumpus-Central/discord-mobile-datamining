@@ -2,8 +2,8 @@
 import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import Server from "../../flow/Server.tsx";
-import InteractionTypes from "InteractionTypes.tsx";
+import InteractionTypes from "../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
+import interactions_InteractionTypes from "InteractionTypes.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -64,10 +64,14 @@ class InteractionStore extends Store {
   }
   canQueueInteraction(c1, nonce) {
     let tmp2 =
-      null != tmp && null != closure_8[tmp] && closure_8[tmp].state !== InteractionTypes.InteractionState.FAILED;
+      null != tmp &&
+      null != closure_8[tmp] &&
+      closure_8[tmp].state !== interactions_InteractionTypes.InteractionState.FAILED;
     if (!tmp2) {
-      tmp2 = null != closure_8[nonce] && closure_8[nonce].state !== InteractionTypes.InteractionState.FAILED;
-      const tmp9 = null != closure_8[nonce] && closure_8[nonce].state !== InteractionTypes.InteractionState.FAILED;
+      tmp2 =
+        null != closure_8[nonce] && closure_8[nonce].state !== interactions_InteractionTypes.InteractionState.FAILED;
+      const tmp9 =
+        null != closure_8[nonce] && closure_8[nonce].state !== interactions_InteractionTypes.InteractionState.FAILED;
     }
     return !tmp2;
   }
@@ -129,14 +133,14 @@ let obj = {
       closure_10[nonce] = messageId;
     }
     closure_8[nonce] = {
-      state: InteractionTypes.InteractionState.QUEUED,
+      state: interactions_InteractionTypes.InteractionState.QUEUED,
       data,
       onCreate,
       onCancel,
       onSuccess,
       onFailure,
     };
-    ({ state: InteractionTypes.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure });
+    ({ state: interactions_InteractionTypes.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure });
   },
   INTERACTION_CREATE: function handleInteractionCreate(nonce) {
     nonce = nonce.nonce;
@@ -144,8 +148,8 @@ let obj = {
       return false;
     } else {
       if (null != closure_8[nonce]) {
-        if (closure_8[nonce].state === InteractionTypes.InteractionState.QUEUED) {
-          closure_8[nonce].state = InteractionTypes.InteractionState.CREATED;
+        if (closure_8[nonce].state === interactions_InteractionTypes.InteractionState.QUEUED) {
+          closure_8[nonce].state = interactions_InteractionTypes.InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
             onCreate(tmp);
@@ -195,7 +199,7 @@ let obj = {
       if (onFailure != null) {
         onFailure(errorCode, errorMessage, status, reasonCode);
       }
-      if (closure_8[nonce].data.interactionType === Server.InteractionTypes.APPLICATION_COMMAND) {
+      if (closure_8[nonce].data.interactionType === InteractionTypes.InteractionTypes.APPLICATION_COMMAND) {
         if (null == closure_13[nonce]) {
           const tmp15 = closure_8[nonce];
           delete closure_8[nonce];
@@ -210,7 +214,12 @@ let obj = {
           delete closure_13[nonce];
         }
       } else {
-        const obj = { state: InteractionTypes.InteractionState.FAILED, errorCode, errorMessage, reasonCode };
+        const obj = {
+          state: interactions_InteractionTypes.InteractionState.FAILED,
+          errorCode,
+          errorMessage,
+          reasonCode,
+        };
         const merged = Object.assign(tmp21);
         closure_8[nonce] = obj;
       }
@@ -253,7 +262,7 @@ let obj = {
       while (tmp16 !== undefined) {
         let tmp5 = _slicedToArray(tmp2, 2);
         let first = tmp5[0];
-        if (tmp5[1].state === InteractionTypes.InteractionState.FAILED) {
+        if (tmp5[1].state === interactions_InteractionTypes.InteractionState.FAILED) {
           let tmp11 = deleteNonce(first);
         }
         continue;

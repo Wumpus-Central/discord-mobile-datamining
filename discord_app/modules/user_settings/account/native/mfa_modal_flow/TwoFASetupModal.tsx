@@ -90,9 +90,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp12Result = tmp9;
         if (tmp12Result) {
           const obj5 = { bottom: true, style: tmp4.floatingButton, children: closure_6(Button, obj6) };
-          const SafeAreaPaddingView = tmp(6619).SafeAreaPaddingView;
+          const SafeAreaPaddingView = tmp(6626).SafeAreaPaddingView;
           obj6 = { onPress: tmp8, text: stringResult };
-          Button = tmp(5594).Button;
+          Button = tmp(5601).Button;
           if (name === tmp6.SUCCESS) {
             const intl2 = tmp(1126).intl;
             stringResult = intl2.string(tmp(1126).t.i4jeWR);
@@ -144,9 +144,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       items1 = [children];
       if (tmp10Result) {
         const obj4 = { bottom: true, style: tmp.floatingButton, children: closure_6(Button, obj5) };
-        const SafeAreaPaddingView = tmp2(6619).SafeAreaPaddingView;
+        const SafeAreaPaddingView = tmp2(6626).SafeAreaPaddingView;
         obj5 = { onPress: tmp7, text: stringResult };
-        Button = tmp2(5594).Button;
+        Button = tmp2(5601).Button;
         if (name === TwoFAModalSetupSections.SUCCESS) {
           const intl2 = tmp2(1126).intl;
           stringResult = intl2.string(tmp2(1126).t.i4jeWR);
@@ -255,7 +255,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (initialRouteName) => {
       let intl;
-      const f117321 = () => {
+      const f117479 = () => {
         let obj4;
         let obj6;
         let totpSecret;
@@ -312,11 +312,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = {
         initialRouteName: LANDING,
-        screens: useInitialValueDefault(f117321),
+        screens: useInitialValueDefault(f117479),
         headerBackTitle: intl.string(intl3.t["13/7kX"]),
         headerTitleAlign: "center",
       };
-      useInitialValueDefault(f117321);
+      useInitialValueDefault(f117479);
       const Navigator = Navigator2.Navigator;
       intl = intl3.intl;
       return metroRequire(Navigator, obj);

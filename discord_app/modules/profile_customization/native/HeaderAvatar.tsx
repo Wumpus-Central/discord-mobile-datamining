@@ -147,7 +147,7 @@ const forwardRefResult = forwardRef(
                 status: closure_8.getStatus(id),
                 activities: closure_8.getActivities(id),
                 customStatusActivity: closure_8.findActivity(id, () => {
-                  /* body not rendered: F138412 */
+                  /* body not rendered: F138619 */
                 }),
               };
               return obj;
@@ -172,7 +172,7 @@ const forwardRefResult = forwardRef(
                 status: closure_8.getStatus(id),
                 activities: closure_8.getActivities(id),
                 customStatusActivity: closure_8.findActivity(id, () => {
-                  /* body not rendered: F138412 */
+                  /* body not rendered: F138619 */
                 }),
               };
               return obj;
@@ -192,7 +192,7 @@ const forwardRefResult = forwardRef(
                 status: closure_8.getStatus(id),
                 activities: closure_8.getActivities(id),
                 customStatusActivity: closure_8.findActivity(id, () => {
-                  /* body not rendered: F138412 */
+                  /* body not rendered: F138619 */
                 }),
               };
               return obj;
@@ -215,7 +215,7 @@ const forwardRefResult = forwardRef(
                 status: closure_8.getStatus(id),
                 activities: closure_8.getActivities(id),
                 customStatusActivity: closure_8.findActivity(id, () => {
-                  /* body not rendered: F138412 */
+                  /* body not rendered: F138619 */
                 }),
               };
               return obj;
@@ -231,7 +231,7 @@ const forwardRefResult = forwardRef(
                 status: closure_8.getStatus(id),
                 activities: closure_8.getActivities(id),
                 customStatusActivity: closure_8.findActivity(id, () => {
-                  /* body not rendered: F138412 */
+                  /* body not rendered: F138619 */
                 }),
               };
               return obj;
@@ -253,7 +253,7 @@ const forwardRefResult = forwardRef(
                   status: closure_8.getStatus(id),
                   activities: closure_8.getActivities(id),
                   customStatusActivity: closure_8.findActivity(id, () => {
-                    /* body not rendered: F138412 */
+                    /* body not rendered: F138619 */
                   }),
                 };
                 return obj;
@@ -269,7 +269,7 @@ const forwardRefResult = forwardRef(
                   status: closure_8.getStatus(id),
                   activities: closure_8.getActivities(id),
                   customStatusActivity: closure_8.findActivity(id, () => {
-                    /* body not rendered: F138412 */
+                    /* body not rendered: F138619 */
                   }),
                 };
                 return obj;
@@ -285,7 +285,7 @@ const forwardRefResult = forwardRef(
                   status: closure_8.getStatus(id),
                   activities: closure_8.getActivities(id),
                   customStatusActivity: closure_8.findActivity(id, () => {
-                    /* body not rendered: F138412 */
+                    /* body not rendered: F138619 */
                   }),
                 };
                 return obj;
@@ -293,7 +293,7 @@ const forwardRefResult = forwardRef(
             }
           }
           let obj2 = { pendingValue: tmp8, userValue: undefined, guildValue: undefined, guildId: tmp6 };
-          const tmpResult6 = tmp(7837);
+          const tmpResult6 = tmp(7848);
           const profilePreviewValue = tmpResult6.getProfilePreviewValue(obj2);
           cResult[22] = tmp6;
           cResult[23] = tmp8;
@@ -402,9 +402,9 @@ const forwardRefResult = forwardRef(
           guildId,
         };
         avatarDecoration = undefined;
-        const tmp11 = id(7930);
-        const getProfilePreviewValue = guildId(7837).getProfilePreviewValue;
-        guildId(7837);
+        const tmp11 = id(7941);
+        const getProfilePreviewValue = guildId(7848).getProfilePreviewValue;
+        guildId(7848);
         const tmp10 = id;
         if (user != null) {
           avatarDecoration = user.avatarDecoration;
@@ -419,7 +419,7 @@ const forwardRefResult = forwardRef(
           size,
           status: tmp16,
           statusStyle: items4,
-          streaming: tmp10(7931)(activities),
+          streaming: tmp10(7942)(activities),
           animate: flag,
           avatarDecoration: tmp11Result,
         };
@@ -434,12 +434,12 @@ const forwardRefResult = forwardRef(
         }
         if (null != onPress) {
           let obj8;
-          const PressableOpacity = guildId(5909).PressableOpacity;
+          const PressableOpacity = guildId(5916).PressableOpacity;
           const merged1 = Object.assign(merged);
           const Avatar = guildId(1188).Avatar;
           if (undefined !== pendingAvatarSrc) {
             const obj7 = { source: tmp5Result.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores) };
-            tmp5Result = guildId(7919);
+            tmp5Result = guildId(7930);
             const merged2 = Object.assign(obj5);
             obj8 = obj7;
           } else {
@@ -464,7 +464,7 @@ const forwardRefResult = forwardRef(
           const Avatar2 = guildId(1188).Avatar;
           if (undefined !== pendingAvatarSrc) {
             const obj10 = { source: tmp5Result2.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores) };
-            tmp5Result2 = guildId(7919);
+            tmp5Result2 = guildId(7930);
             const merged5 = Object.assign(obj5);
             obj11 = obj10;
           } else {

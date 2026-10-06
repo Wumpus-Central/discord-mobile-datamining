@@ -2,7 +2,7 @@
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import UserSearchUtils from "../../main_tabs_v2/UserSearchUtils.tsx";
-import _mod9496 from "../../autocompleter/index.tsx";
+import _mod9509 from "../../autocompleter/index.tsx";
 import UserRowDefault from "../../main_tabs_v2/native/shared_components/user_list/UserRow.tsx";
 import GroupDMRowDefault from "../../main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx";
 import ChannelRowDefault from "../../main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx";
@@ -155,7 +155,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const onPressDestination = result.onPressDestination;
       const merged = Object.assign(result, Object.assign({ result: 0, onPressDestination: 0 }));
       ({ type, record } = result);
-      if (type === _mod9496.AutocompleterResultTypes.HEADER) {
+      if (type === _mod9509.AutocompleterResultTypes.HEADER) {
         return null;
       } else {
         let fn;
@@ -165,23 +165,23 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return onPressDestination(obj.getDestinationIdFromResult(require));
           };
         }
-        if (_mod9496.AutocompleterResultTypes.USER === type) {
-          onPressDestination(10602);
+        if (_mod9509.AutocompleterResultTypes.USER === type) {
+          onPressDestination(10615);
           const merged1 = Object.assign(merged);
           const tmp2Result = UserSearchUtils;
           return <tmp18 user={record} type={tmp2Result.getRelationshipType(record.id)} onPress={fn} />;
-        } else if (_mod9496.AutocompleterResultTypes.GROUP_DM === type) {
-          onPressDestination(10647);
+        } else if (_mod9509.AutocompleterResultTypes.GROUP_DM === type) {
+          onPressDestination(10660);
           const merged2 = Object.assign(merged);
           return <tmp12 channel={record} onPress={fn} />;
         } else {
-          if (_mod9496.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-            if (_mod9496.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+          if (_mod9509.AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+            if (_mod9509.AutocompleterResultTypes.VOICE_CHANNEL !== type) {
               const tmp2Result2 = GlobalUtils;
               return tmp2Result2.assertNever(type);
             }
           }
-          onPressDestination(10650);
+          onPressDestination(10663);
           const merged3 = Object.assign(merged);
           return <tmp6 channel={record} onPress={fn} />;
         }

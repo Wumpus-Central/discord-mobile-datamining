@@ -5,7 +5,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Constants from "../../../../Constants.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";

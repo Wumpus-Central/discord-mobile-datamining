@@ -547,7 +547,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let onPressSend;
       ({ isFirstRow, isLastRow, onExecuteCommand, installOnDemand, icon } = command);
       let tmp = command;
-      let obj = command(10994);
+      let obj = command(11007);
       const entrypoint = obj.useAppLauncherContext().entrypoint;
       const tmp3 = onPressSend(true, true);
       hasOptions(context, true, true);
@@ -572,8 +572,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         sectionName,
       };
       fn = undefined;
-      const useCommandRowSend = command(11729).useCommandRowSend;
-      const tmp5 = command(11729);
+      const useCommandRowSend = command(11743).useCommandRowSend;
+      const tmp5 = command(11743);
       if (installOnDemand) {
         let closure_0 = _asyncToGenerator(async (arg0) => {
           let obj5;
@@ -684,7 +684,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         onAccessibilityAction: callback,
         trailing: closure_13(CommandRowButtonDefault, { hasOptions, sending, onPressSend }),
       };
-      const TableRow = tmp(5993).TableRow;
+      const TableRow = tmp(6000).TableRow;
       return closure_13(TableRow, obj3);
     };
 let closure_20 = tmp6;

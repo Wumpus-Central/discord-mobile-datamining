@@ -22,7 +22,7 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   return result;
 }
 const isThread = ChannelRecord.isThread;
-let closure_7 = { typingChannelId: "Array", typingChannelName: "Set", typingUserIds: [] };
+let closure_7 = { typingChannelId: "Array", typingChannelName: "Reflect", typingUserIds: [] };
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
       let closure_0;

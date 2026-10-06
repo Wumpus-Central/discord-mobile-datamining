@@ -25,7 +25,7 @@ import GuildRoleSubscriptionTierBenefitsModal from "../components/GuildRoleSubsc
 import EditStateContextProvider2 from "../../edit_state/EditStateContextProvider.tsx";
 import GuildRoleSubscriptionTierDesignModal from "../components/GuildRoleSubscriptionTierDesignModal.tsx";
 import GuildRoleSubscriptionTierDetailsModal from "../components/GuildRoleSubscriptionTierDetailsModal.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/17970_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/18016_AssetRegistry.js";
 import ActionableNoticeDefault from "../components/ActionableNotice.tsx";
 import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -620,7 +620,7 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
   let obj7;
   let obj8;
   let tmp17;
-  const f132725 = (currentScene) => {
+  const f132944 = (currentScene) => {
     let DETAILS = currentScene.currentScene;
     if (DETAILS == null) {
       DETAILS = handleCreateOrUpdateFromEditState.DETAILS;
@@ -706,9 +706,9 @@ export default function GuildSettingsRoleSubscriptionTierEdit(guildId) {
       presentError(anyErrorMessage);
     }
   }, items1);
-  [tmp17, c14] = _slicedToArray(loading.useRoleTierEditStore(f132725), 2);
+  [tmp17, c14] = _slicedToArray(loading.useRoleTierEditStore(f132944), 2);
   const items2 = [navigation, hasChanges, first1, loading, callback];
-  _slicedToArray(loading.useRoleTierEditStore(f132725), 2);
+  _slicedToArray(loading.useRoleTierEditStore(f132944), 2);
   const layoutEffect1 = obj.useLayoutEffect(() => {
     let onPress;
     let title;

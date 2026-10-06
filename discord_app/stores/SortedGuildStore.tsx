@@ -341,7 +341,7 @@ function handleGuildFolderDeleteLocal(targetId) {
   const element = guildsTree.getNode(targetId.targetId);
   let tmp = null != element;
   if (tmp) {
-    const tmp4 = element.type === element(5619).GuildsNodeType.FOLDER;
+    const tmp4 = element.type === element(5626).GuildsNodeType.FOLDER;
     const tmp2 = element;
     if (tmp4) {
       const children = element.children;

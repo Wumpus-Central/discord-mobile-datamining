@@ -41,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       const tmp4 = closure_7();
       if (cResult[0] !== item.url) {
-        const tmpResult = item(10090);
+        const tmpResult = item(10103);
         const gifUrlKeyResult = tmpResult.gifUrlKey(item.url);
         cResult[0] = item.url;
         cResult[1] = gifUrlKeyResult;
@@ -49,7 +49,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const tmpResult2 = item(10094);
+      const tmpResult2 = item(10107);
       const isFavoriteGIF = tmpResult2.useIsFavoriteGIF(tmp5);
       ({ width, height } = isFavoriteGIF(1484)());
       isFavoriteGIF(1484)();
@@ -337,7 +337,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                       }
-                      BottomSheet = tmp(6645).BottomSheet;
+                      BottomSheet = tmp(6652).BottomSheet;
                       const tmp41 = closure_5(BottomSheet, obj4);
                       cResult[34] = tmp4.contentWrapper;
                       cResult[35] = tmp34;
@@ -440,7 +440,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj6 = { children: items1 };
                 items1 = [tmp25, tmp29];
-                const tmp33 = closure_6(item(5592).ButtonGroup, obj6);
+                const tmp33 = closure_6(item(5599).ButtonGroup, obj6);
                 cResult[27] = tmp25;
                 cResult[28] = tmp29;
                 cResult[29] = tmp33;

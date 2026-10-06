@@ -3,7 +3,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import Constants from "../../../../Constants.tsx";
 import ReanimatedRexport2 from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../Styles/native/createStyles.tsx";

@@ -14,5 +14,5 @@ export const showForLaterModal = function showForLaterModal(BOOKMARK) {
   }
   const obj = { type: BOOKMARK };
   const obj2 = ModalActionCreatorsDefault;
-  obj2.pushLazy(asyncRequire(7497, dependencyMap.paths), obj, "for-later-modal", { presentation: "modal" });
+  obj2.pushLazy(asyncRequire(7508, dependencyMap.paths), obj, "for-later-modal", { presentation: "modal" });
 };

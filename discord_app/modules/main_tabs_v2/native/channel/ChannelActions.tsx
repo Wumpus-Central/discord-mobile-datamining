@@ -85,9 +85,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = hasUnread;
         }
         if (isAppChannelChatOpen) {
-          ChatIcon = tmp(5890).AppsIcon;
+          ChatIcon = tmp(5897).AppsIcon;
         } else {
-          ChatIcon = tmp(5855).ChatIcon;
+          ChatIcon = tmp(5862).ChatIcon;
         }
         if (cResult[0] === type.guild_id) {
           if (cResult[1] === type.id) {
@@ -182,9 +182,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = hasUnread;
         }
         if (isAppChannelChatOpen) {
-          ChatIcon = tmp2(5890).AppsIcon;
+          ChatIcon = tmp2(5897).AppsIcon;
         } else {
-          ChatIcon = tmp2(5855).ChatIcon;
+          ChatIcon = tmp2(5862).ChatIcon;
         }
         let obj = {
           source: null,
@@ -874,7 +874,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = channelId(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
-      channelId(5100);
+      channelId(5106);
       let tmp10 = null;
       if (null != stateFromStores) {
         tmp10 = null;
@@ -906,7 +906,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [ChannelStore];
       const obj = channelId(504);
       const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-      channelId(5100);
+      channelId(5106);
       let tmp4 = null;
       if (null != stateFromStores) {
         tmp4 = null;
@@ -972,7 +972,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = channelId(504);
       const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp6);
       ({ isMultiUserDM, isDM } = stateFromStoresObject);
-      const tmpResult2 = channelId(7528);
+      const tmpResult2 = channelId(7539);
       const hasForumSearchQuery = tmpResult2.useHasForumSearchQuery(channelId);
       if (cResult[3] === channelId) {
         if (cResult[4] === hasForumSearchQuery) {
@@ -1001,7 +1001,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (hasForumSearchQuery) {
-        tmp12 = jsx(tmp(13098).ForumChannelCloseSearchButton, { channelId });
+        tmp12 = jsx(tmp(13117).ForumChannelCloseSearchButton, { channelId });
       } else {
         if (!isDM) {
           if (!isMultiUserDM) {
@@ -1052,10 +1052,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return obj2;
       });
       ({ isMultiUserDM, isDM } = stateFromStoresObject);
-      let obj2 = channelId(7528);
+      let obj2 = channelId(7539);
       const tmp = channelId;
       if (obj2.useHasForumSearchQuery(channelId)) {
-        tmp4Result = jsx(tmp(13098).ForumChannelCloseSearchButton, { channelId });
+        tmp4Result = jsx(tmp(13117).ForumChannelCloseSearchButton, { channelId });
       } else {
         if (!isDM) {
           if (!isMultiUserDM) {

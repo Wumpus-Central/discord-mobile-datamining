@@ -555,17 +555,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = obtainableOrbRewards(504);
       let ONYX = tmpResult.useStateFromStores(tmp8, tmp9);
       if (tmp5) {
-        ONYX = obtainableOrbRewards(14863).ThemeTypes.ONYX;
+        ONYX = obtainableOrbRewards(14879).ThemeTypes.ONYX;
       }
       if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-        COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(14887).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
+        COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(14903).QUEST_HOME_REPLACE_MEDIA_CARD_WIDTH;
       } else {
-        COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(8418).COLLECTIBLES_SHOP_CARD_WIDTH;
+        COLLECTIBLES_SHOP_CARD_WIDTH = obtainableOrbRewards(8451).COLLECTIBLES_SHOP_CARD_WIDTH;
       }
       if (undefined !== replacesHeaderMedia && replacesHeaderMedia) {
-        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(14887).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
+        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(14903).QUEST_HOME_REPLACE_MEDIA_CARD_HEIGHT;
       } else {
-        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(8418).COLLECTIBLES_SHOP_CARD_HEIGHT;
+        COLLECTIBLES_SHOP_CARD_HEIGHT = obtainableOrbRewards(8451).COLLECTIBLES_SHOP_CARD_HEIGHT;
       }
       if (cResult[2] !== COLLECTIBLES_SHOP_CARD_WIDTH) {
         const sum = COLLECTIBLES_SHOP_CARD_WIDTH + PX_12;

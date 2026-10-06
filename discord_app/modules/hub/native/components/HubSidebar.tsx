@@ -146,8 +146,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         onPress: handleItemClick,
         disableHighlightOnPress: true,
         mode: DEFAULT,
-        name: metroImportDefault(tmp5(12016).BaseChannelName, { name: label, mode: DEFAULT }),
-        icon: metroImportDefault(tmp5(12016).BaseChannelIcon, { mode: DEFAULT, IconComponent }),
+        name: metroImportDefault(tmp5(12031).BaseChannelName, { name: label, mode: DEFAULT }),
+        icon: metroImportDefault(tmp5(12031).BaseChannelIcon, { mode: DEFAULT, IconComponent }),
         channelInfo: tmp6Result,
       };
       tmp6Result = null;
@@ -374,7 +374,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp2 = null != stateFromStores && SelectedChannelStore.getChannelId() === tmp.id;
         return tmp2;
       });
-      guild(16137);
+      guild(16176);
       let tmp9Result = null;
       if (null != stateFromStores) {
         let row = null;
@@ -383,10 +383,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj4 = { style: row, children: items4 };
         const obj5 = { guild };
-        items4 = [closure_7(stateFromStores(16138), obj5), , ,];
+        items4 = [closure_7(stateFromStores(16177), obj5), , ,];
         const obj6 = {
           active: stateFromStores1,
-          IconComponent: tmp(15423).CompassIcon,
+          IconComponent: tmp(15439).CompassIcon,
           label: intl.string(tmp(1126).t.K50GHd),
           handleItemClick() {
             const obj = transitionToChannel;
@@ -397,7 +397,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         intl = tmp(1126).intl;
         items4[1] = closure_7(closure_10, obj6);
         const obj7 = {
-          IconComponent: tmp(10978).PlusMediumIcon,
+          IconComponent: tmp(10991).PlusMediumIcon,
           label: intl2.string(tmp(1126).t.emRpdS),
           handleItemClick() {
             const obj = GuildDirectoryAddModalActionCreatorsDefault;
@@ -412,7 +412,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         intl2 = tmp(1126).intl;
         items4[2] = closure_7(closure_10, obj7);
         const obj8 = {
-          IconComponent: tmp(4833).UserPlusIcon,
+          IconComponent: tmp(4839).UserPlusIcon,
           label: intl3.string(tmp(1126).t.MJQOuJ),
           handleItemClick() {
             const obj = instant_invite_InstantInviteUtils;

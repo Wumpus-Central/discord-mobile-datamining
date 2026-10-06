@@ -251,7 +251,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = activeEventOrStageInstanceChannel;
       const obj = activeEventOrStageInstanceChannel(576);
       const cResult = obj.c(29);
-      const obj2 = activeEventOrStageInstanceChannel(16112);
+      const obj2 = activeEventOrStageInstanceChannel(16151);
       activeEventOrStageInstanceChannel = obj2.useActiveEventOrStageInstanceChannel(arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PermissionStore];
@@ -281,7 +281,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(first, S);
-      const tmpResult5 = tmp(9160);
+      const tmpResult5 = tmp(9195);
       const guildActiveEvent = tmpResult5.useGuildActiveEvent(arg0);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class S {
@@ -372,8 +372,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult6 = tmp(504);
       const stateFromStores1 = tmpResult6.useStateFromStores(tmp10, tmp12, tmp15);
-      const useActualStageSpeakerCount = tmp(5588).useActualStageSpeakerCount;
-      tmp(5588);
+      const useActualStageSpeakerCount = tmp(5595).useActualStageSpeakerCount;
+      tmp(5595);
       if (activeEventOrStageInstanceChannel != null) {
         class S {
           constructor() {

@@ -64,7 +64,7 @@ let obj = function _navigateToGuild() {
             obj6 = undefined;
             category_id = 1;
             _location = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === category_id) {
           if (arg0 === 1) {
@@ -295,7 +295,7 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "unicodeVersion",
-    discoverySplash: "backgroundColor",
+    discoverySplash: null,
     emojis: [],
   };
   ({

@@ -7,7 +7,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const f115027 = (name) => {
+const f115189 = (name) => {
   let tmp = "settings" === name.name;
   if (!tmp) {
     const state = name.state;
@@ -18,7 +18,7 @@ const f115027 = (name) => {
     let someResult = null != routes1;
     if (someResult) {
       const routes = state.routes;
-      someResult = routes.some(f115027);
+      someResult = routes.some(f115189);
     }
     tmp = someResult;
   }
@@ -38,7 +38,7 @@ function isUserSettingsOpen() {
     let someResult = null != routes1;
     if (someResult) {
       const routes = rootState.routes;
-      someResult = routes.some(f115027);
+      someResult = routes.some(f115189);
     }
     tmp2 = someResult;
   }
@@ -69,7 +69,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 let someResult = null != routes1;
                 if (someResult) {
                   const routes = rootState.routes;
-                  someResult = routes.some(f115027);
+                  someResult = routes.some(f115189);
                 }
                 rootNavigationRef(someResult);
               }
@@ -107,7 +107,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             let someResult = null != routes1;
             if (someResult) {
               let routes = rootState.routes;
-              someResult = routes.some(f115027);
+              someResult = routes.some(f115189);
             }
             _require(someResult);
           }

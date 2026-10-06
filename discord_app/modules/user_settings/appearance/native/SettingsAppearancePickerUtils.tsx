@@ -175,7 +175,7 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     const obj2 = { hex: mixColorsResult.toHexString(), stop: num9 };
     const mixColors = ColorUtils.mixColors;
     ColorUtils;
-    const tmp18 = new tmp11(4728)(r, g, b, num8);
+    const tmp18 = new tmp11(4734)(r, g, b, num8);
     num9 = 0;
     mixColorsResult = mixColors(tmp72, tmp18);
     if (theme.customThemeSettings.colors.length > 1) {
@@ -261,7 +261,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let token;
       const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARK;
-      let obj = token(4580);
+      let obj = token(4586);
       token = obj.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
       let items = [token];
       return react.useMemo(() => {

@@ -33,7 +33,7 @@ export const queryMentionables = function queryMentionables(type, query, channel
     const tmp4 =
       type === require("Server").ComponentType.ROLE_SELECT ||
       type === require("Server").ComponentType.MENTIONABLE_SELECT;
-    let obj = channel(5621);
+    let obj = channel(5628);
     let obj2 = {
       query,
       channel,

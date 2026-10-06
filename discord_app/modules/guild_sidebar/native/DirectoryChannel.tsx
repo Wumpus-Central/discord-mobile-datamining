@@ -92,7 +92,7 @@ const memoResult = memo(
             const container = tmp4.container;
             if (cResult[8] !== stateFromStores) {
               const obj2 = { channel: stateFromStores };
-              const tmp15 = id(9260)(obj2);
+              const tmp15 = id(9295)(obj2);
               cResult[8] = stateFromStores;
               cResult[9] = tmp15;
               tmp13 = tmp15;
@@ -124,7 +124,7 @@ const memoResult = memo(
                 }
               }
             }
-            const tmp21 = jsx(id(16054), {
+            const tmp21 = jsx(id(16093), {
               onPress: tmp11,
               onLongPress: tmp12,
               style: container,
@@ -195,7 +195,7 @@ const memoResult = memo(
         let tmp7 = null;
         if (null != stateFromStores) {
           const obj3 = { channel: stateFromStores };
-          id(16054);
+          id(16093);
           const obj4 = { selected };
           tmp7 = (
             <tmp10
@@ -204,7 +204,7 @@ const memoResult = memo(
               style={tmp.container}
               accessible
               accessibilityRole="button"
-              accessibilityLabel={id(9260)(obj3)}
+              accessibilityLabel={id(9295)(obj3)}
               accessibilityState={obj4}
               channel={stateFromStores}
               selected={selected}

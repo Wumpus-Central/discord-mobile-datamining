@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import DismissibleContentConstants from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import _modDef2593 from "../NitroFileUpload.messages.js";
+import _modDef2621 from "../NitroFileUpload.messages.js";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import usePremiumFeatureUpsellGetNitroDefault from "../../roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
 import react_mod from "../../../../../_runtime/00019_react.js";
@@ -75,7 +75,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = tmp(5590);
+      const tmpResult = tmp(5597);
       const unmountEffect = tmpResult.useUnmountEffect(A);
       if (cResult[4] !== tmp5) {
         class P {
@@ -138,7 +138,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             closure_2(ContentDismissActionType.USER_DISMISS);
           }
         }
-        const tmp14 = jsx(tmp(17131).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
+        const tmp14 = jsx(tmp(17160).FileUploadSpotIllustration, { accessible: false, resizeMode: "contain" });
         cResult[10] = tmp14;
         tmp13 = tmp14;
       } else {
@@ -170,9 +170,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             closure_2(ContentDismissActionType.USER_DISMISS);
           }
         }
-        const stringResult = obj5.string(_modDef2593["Uty2/X"]);
+        const stringResult = obj5.string(_modDef2621["Uty2/X"]);
         const intl = tmp(1126).intl;
-        const stringResult1 = intl.string(_modDef2593.VAgI8Q);
+        const stringResult1 = intl.string(_modDef2621.VAgI8Q);
         cResult[13] = stringResult;
         cResult[14] = stringResult1;
         tmp19 = stringResult1;
@@ -191,7 +191,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             closure_2(ContentDismissActionType.USER_DISMISS);
           }
         }
-        const stringResult2 = obj6.string(_modDef2593.mRy6sO);
+        const stringResult2 = obj6.string(_modDef2621.mRy6sO);
         cResult[15] = stringResult2;
         tmp22 = stringResult2;
       } else {
@@ -224,14 +224,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[19] = D;
         cResult[20] = tmp25;
         cResult[21] = tmp15;
-        cResult[22] = jsx(tmp(10045).PromoSheet, {
+        cResult[22] = jsx(tmp(10058).PromoSheet, {
           illustration: tmp15,
           title: tmp18,
           description: tmp19,
           onDismiss: D,
           actions: tmp25,
         });
-        const tmp29 = jsx(tmp(10045).PromoSheet, {
+        const tmp29 = jsx(tmp(10058).PromoSheet, {
           illustration: tmp15,
           title: tmp18,
           description: tmp19,
@@ -241,7 +241,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[16] = loading;
       cResult[17] = null;
-      cResult[18] = jsx(tmp(5594).Button, {
+      cResult[18] = jsx(tmp(5601).Button, {
         grow: true,
         size: "lg",
         variant: "primary",
@@ -249,7 +249,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         text: tmp22,
         onPress: null,
       });
-      const tmp26 = jsx(tmp(5594).Button, {
+      const tmp26 = jsx(tmp(5601).Button, {
         grow: true,
         size: "lg",
         variant: "primary",

@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef3367 from "../../../favorites/intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../../../favorites/intl/FavoritesGuild.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FavoritesActionCreators from "../../../favorites/FavoritesActionCreators.tsx";
 import FavoritesHooks from "../../../favorites/FavoritesHooks.tsx";
@@ -12,7 +12,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
 let obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef3367.OT1NK5);
+    return intl.string(_modDef3395.OT1NK5);
   },
   parent: MobileUserSettings.APPEARANCE,
   usePredicate() {

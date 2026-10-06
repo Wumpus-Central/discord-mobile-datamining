@@ -7,7 +7,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef8758 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef8790 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
@@ -186,7 +186,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = HelpdeskUtilsDefault;
       const articleURL = obj3.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
       if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj10 = { uri: _modDef8758 };
+        const obj10 = { uri: _modDef8790 };
         cResult[16] = obj10;
         tmp17 = obj10;
       } else {
@@ -277,7 +277,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: twoWayLinkStyles.container, children: items1 };
       const obj5 = {
         source: react.useMemo(() => {
-          const obj = { uri: _modDef8758 };
+          const obj = { uri: _modDef8790 };
           return obj;
         }, []),
         style: tmp.image,

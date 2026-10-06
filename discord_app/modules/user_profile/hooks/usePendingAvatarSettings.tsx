@@ -20,7 +20,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(15);
       isTryItOut = isTryItOut.isTryItOut;
       const guildId = isTryItOut.guildId;
-      const tmp4 = guildId(7834)(isTryItOut.analyticsLocations);
+      const tmp4 = guildId(7845)(isTryItOut.analyticsLocations);
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserProfileSettingsStore];
@@ -63,10 +63,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             setTryItOutAvatarDecoration = cResult[8];
           }
           if (isTryItOut) {
-            setTryItOutAvatar = tmp(7838).setTryItOutAvatar;
+            setTryItOutAvatar = tmp(7849).setTryItOutAvatar;
           }
           if (isTryItOut) {
-            setTryItOutAvatarDecoration = tmp(7838).setTryItOutAvatarDecoration;
+            setTryItOutAvatarDecoration = tmp(7849).setTryItOutAvatarDecoration;
           }
           if (cResult[9] === pendingAvatar) {
             if (cResult[10] === pendingAvatarDecoration) {
@@ -156,7 +156,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let pendingErrors;
       isTryItOut = isTryItOut.isTryItOut;
       const guildId = isTryItOut.guildId;
-      const tmp2 = guildId(7834)(isTryItOut.analyticsLocations);
+      const tmp2 = guildId(7845)(isTryItOut.analyticsLocations);
       dependencyMap = tmp2;
       let obj = isTryItOut(573);
       const items = [UserProfileSettingsStore];
@@ -214,10 +214,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         setPendingAvatarDecoration: setTryItOutAvatarDecoration,
       };
       if (isTryItOut) {
-        setTryItOutAvatar = tmp3(7838).setTryItOutAvatar;
+        setTryItOutAvatar = tmp3(7849).setTryItOutAvatar;
       }
       if (isTryItOut) {
-        setTryItOutAvatarDecoration = tmp3(7838).setTryItOutAvatarDecoration;
+        setTryItOutAvatarDecoration = tmp3(7849).setTryItOutAvatarDecoration;
       }
       return obj2;
     };

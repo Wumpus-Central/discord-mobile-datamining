@@ -3,7 +3,7 @@ import LoggerDefault from "../modules/debug/Logger.tsx";
 import get_initialized from "../../discord_common/js/packages/flux/index.tsx";
 import react from "../../_runtime/00576_react.js";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _mod5420 from "../../_runtime/metro/05420__.js";
+import _mod5427 from "../../_runtime/metro/05427__.js";
 import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
 import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
@@ -20,7 +20,7 @@ function getStripe() {
   if (null != React2) {
     resolved = Promise.resolve(React2);
   } else {
-    obj = _mod5420;
+    obj = _mod5427;
     const stripe = obj.loadStripe(metroImportDefault.STRIPE.KEY);
     resolved = stripe.then((result) => {
       let closure_1_2 = result;

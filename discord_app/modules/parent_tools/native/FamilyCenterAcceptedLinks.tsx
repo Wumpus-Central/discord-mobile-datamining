@@ -4,7 +4,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../intl/index.native.tsx";
 import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
@@ -12,7 +12,7 @@ import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText2 from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterEmptyDefault from "FamilyCenterEmpty.tsx";
 import FamilyCenterLinkRowDefault from "FamilyCenterLinkRow.tsx";
-import AssetRegistryDefault from "../../../../_runtime/14731_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/14747_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import FamilyCenterConstants from "../FamilyCenterConstants.tsx";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
@@ -37,11 +37,11 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
   if (undefined !== str) {
     let obj2 = { otherUser: str, actions: closure_6(PressableOpacity, obj) };
     const tmp7 = FamilyCenterLinkRowDefault;
-    PressableOpacity = str(5909).PressableOpacity;
+    PressableOpacity = str(5916).PressableOpacity;
     const intl = str(1126).intl;
     const formatToPlainString = intl.formatToPlainString;
     let str1;
-    const T7DUoU = _modDef2493.T7DUoU;
+    const T7DUoU = _modDef2521.T7DUoU;
     if (str != null) {
       str1 = str.toString();
     }
@@ -51,7 +51,7 @@ function FamilyCenterAcceptedLinkRow(otherUser) {
       onPress() {
         const obj = ModalActionCreatorsDefault;
         const obj2 = { otherUser: str };
-        obj.pushLazy(asyncRequire(14729, dependencyMap.paths), obj2);
+        obj.pushLazy(asyncRequire(14745, dependencyMap.paths), obj2);
       },
       style: tmp.actionButton,
       children: closure_6(Icon, obj4),
@@ -147,7 +147,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (0 === activeLinkUsers.length) {
             const obj5 = { style: tmp4.empty, children: metroRequire(tmp5Result, obj6) };
-            obj6 = { text: intl3.string(_modDef2493.C4ScLD) };
+            obj6 = { text: intl3.string(_modDef2521.C4ScLD) };
             tmp5Result = FamilyCenterEmptyDefault;
             intl3 = intl4.intl;
             mapped = metroRequire(View, obj5);
@@ -172,9 +172,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { count: activeLinkUsers.length, max: tmp7 };
       const useAgeSpecificText = useAgeSpecificText2.useAgeSpecificText;
       const intl = intl4.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef2493["+tnO34"], obj8);
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef2521["+tnO34"], obj8);
       const intl2 = intl4.intl;
-      const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2493["pu6/U0"], obj8);
+      const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2521["pu6/U0"], obj8);
       cResult[0] = activeLinkUsers.length;
       cResult[1] = tmp7;
       cResult[2] = useAgeSpecificText;
@@ -198,12 +198,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const useAgeSpecificText = useAgeSpecificText2.useAgeSpecificText;
       useAgeSpecificText2;
       const intl = intl4.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef2493["+tnO34"], obj2);
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef2521["+tnO34"], obj2);
       const intl2 = intl4.intl;
       const obj3 = { style: tmp.container, children: items };
       const ageSpecificText = useAgeSpecificText(
         formatToPlainStringResult,
-        intl2.formatToPlainString(_modDef2493["pu6/U0"], obj2),
+        intl2.formatToPlainString(_modDef2521["pu6/U0"], obj2),
       );
       items = [,];
       const obj4 = { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText };
@@ -211,7 +211,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { style: tmp.content, children: mapped };
       if (0 === activeLinkUsers.length) {
         const obj6 = { style: tmp.empty, children: metroRequire(tmp2Result, obj7) };
-        obj7 = { text: intl3.string(_modDef2493.C4ScLD) };
+        obj7 = { text: intl3.string(_modDef2521.C4ScLD) };
         tmp2Result = FamilyCenterEmptyDefault;
         intl3 = intl4.intl;
         mapped = metroRequire(View, obj6);

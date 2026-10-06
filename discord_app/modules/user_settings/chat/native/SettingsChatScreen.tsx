@@ -6,7 +6,7 @@ import Constants from "../../../../Constants.tsx";
 import intl14 from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/10124_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/10137_AssetRegistry.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -164,7 +164,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             supportURL: "https://support.discord.com/hc/articles/9665451164951",
           }),
         };
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         intl = tmp(1126).intl;
         const tmp13 = closure_9(Text, obj3);
         cResult[2] = tmp13;
@@ -197,7 +197,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: tmp5.card, children: closure_9(Card, obj6) };
         obj6 = { border: "none", shadow: "none", children: closure_10(View, obj7) };
         obj7 = { style: tmp5.cardContent, children: items2 };
-        Card = tmp(5995).Card;
+        Card = tmp(6002).Card;
         const obj8 = {
           style: tmp5.cardIcon,
           source: AssetRegistryDefault,
@@ -211,7 +211,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: intl2.format(stackNavigation(1126).t.uW1zul, obj10),
         };
-        const Text2 = tmp(4886).Text;
+        const Text2 = tmp(4892).Text;
         intl2 = tmp(1126).intl;
         obj10 = {
           onClick() {
@@ -264,7 +264,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: tmp3.card, children: closure_9(Card, obj5) };
         obj5 = { border: "none", shadow: "none", children: closure_10(View, obj6) };
         obj6 = { style: tmp3.cardContent, children: items2 };
-        Card = tmp(5995).Card;
+        Card = tmp(6002).Card;
         const obj7 = {
           style: tmp3.cardIcon,
           source: AssetRegistryDefault,
@@ -278,7 +278,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: intl2.format(require("intl").t.uW1zul, obj9),
         };
-        const Text2 = tmp(4886).Text;
+        const Text2 = tmp(4892).Text;
         intl2 = tmp(1126).intl;
         obj9 = {
           onClick() {

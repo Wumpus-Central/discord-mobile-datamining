@@ -13,8 +13,8 @@ import MessageReactionsTypes from "../../messages/MessageReactionsTypes.tsx";
 import ReactionActionCreators from "../ReactionActionCreators.tsx";
 import ReactionIcon from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import SuperReactionIcon from "../../../design/components/Icon/native/redesign/generated/SuperReactionIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09986_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/09987_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/09999_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/10000_AssetRegistry.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../stores/MessageStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
@@ -47,7 +47,7 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(onDi
     if (!obj.isPremium(currentUser)) {
       const obj3 = { onDismiss };
       const obj2 = ActionSheetActionCreatorsDefault;
-      openLazyResult = obj2.openLazy(asyncRequire(9856, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj3);
+      openLazyResult = obj2.openLazy(asyncRequire(9869, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj3);
     }
     return openLazyResult;
   }
@@ -175,7 +175,7 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     const obj3 = { messageId, channelId, emoji };
     ActionSheetActionCreatorsDefault;
-    const tmp21 = asyncRequire(9973, dependencyMap.paths);
+    const tmp21 = asyncRequire(9986, dependencyMap.paths);
     const merged2 = Object.assign(merged);
     openLazy(tmp21, "MessageReactions", obj3);
   }
@@ -184,7 +184,7 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(asyncRequire(9985, dependencyMap.paths), "MessagePreviewReactions", obj2);
+  obj.openLazy(asyncRequire(9998, dependencyMap.paths), "MessagePreviewReactions", obj2);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj2;

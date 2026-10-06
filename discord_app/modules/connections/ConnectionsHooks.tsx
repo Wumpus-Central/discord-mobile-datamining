@@ -273,7 +273,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const sortBy = set(12).sortBy;
       set(12);
       const items1 = [tmp14, tmp15, tmp16, P, E];
-      const arr3 = set(5442);
+      const arr3 = set(5449);
       const sortByResult = sortBy(arr3.filter(tmp8), items1);
       cResult[5] = tmp9;
       cResult[6] = tmp8;

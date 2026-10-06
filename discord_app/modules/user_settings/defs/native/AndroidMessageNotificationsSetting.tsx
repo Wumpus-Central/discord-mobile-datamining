@@ -2,7 +2,7 @@
 import react from "../../../../../_runtime/00576_react.js";
 import intl2 from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef2819 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef2847 from "../../../notifications/NotificationSettings.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import notifications_NotificationSettingsUtils from "../../../notifications/NotificationSettingsUtils.tsx";
 import MobileNotifSettings from "../../notifications/native/codegen/MobileNotifSettings.tsx";
@@ -75,11 +75,11 @@ const createToggle2 = SettingBuilders.createToggle;
 const obj3 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.odJXYJ);
+    return intl.string(_modDef2847.odJXYJ);
   },
   useDescription() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819["+jwUmI"]);
+    return intl.string(_modDef2847["+jwUmI"]);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {

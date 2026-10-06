@@ -65,7 +65,7 @@ let obj = {
     const pushLazy = ModalActionCreatorsDefault.pushLazy;
     const obj = { allowDeletePhone: true, reason: PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE };
     ModalActionCreatorsDefault;
-    const tmp2 = asyncRequire(6539, dependencyMap.paths);
+    const tmp2 = asyncRequire(6546, dependencyMap.paths);
     pushLazy(tmp2, obj, closure_4);
   },
   withArrow: true,

@@ -51,7 +51,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = _require;
       _require = tmp4;
       if (cResult[0] !== source) {
-        const tmpResult = tmp(16668);
+        const tmpResult = tmp(16687);
         const splitMarkdownBlocksResult = tmpResult.splitMarkdownBlocks(source);
         cResult[0] = source;
         cResult[1] = splitMarkdownBlocksResult;
@@ -97,7 +97,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     obj.style = closure_0.list;
                     items = source.items;
                     obj.children = items.map(() => {
-                      /* body not rendered: F146407 */
+                      /* body not rendered: F146612 */
                     });
                     tmp4 = jsx(View, obj, arg1);
                   }
@@ -144,7 +144,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   obj.style = closure_0.list;
                   items = source.items;
                   obj.children = items.map(() => {
-                    /* body not rendered: F146407 */
+                    /* body not rendered: F146612 */
                   });
                   tmp4 = jsx(View, obj, arg1);
                 }
@@ -176,7 +176,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             obj.style = closure_0.list;
             items = source.items;
             obj.children = items.map(() => {
-              /* body not rendered: F146407 */
+              /* body not rendered: F146612 */
             });
             tmp4 = jsx(View, obj, arg1);
           }

@@ -7,7 +7,7 @@ import UserSettings from "../user_settings/UserSettings.tsx";
 import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f114965 = (item) => {
+const f115127 = (item) => {
   const timestamp = Date.now();
   return item < timestamp - 3 * DurationsDefault.Millis.DAY;
 };
@@ -55,7 +55,7 @@ let obj = {
           return item > timestamp - 5 * DurationsDefault.Millis.DAY;
         });
         sessionStartsWithDND = found;
-        const someResult = found.length >= 4 && sessionStartsWithDND.some(f114965);
+        const someResult = found.length >= 4 && sessionStartsWithDND.some(f115127);
         if (someResult) {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
@@ -68,8 +68,8 @@ let obj = {
     sessionStartsWithDND = [];
   },
   HABITUAL_DND_CLEAR: function handleDNDClear() {
-    c6 = sessionStartsWithDND.length >= 4 && sessionStartsWithDND.some(f114965);
-    const someResult = sessionStartsWithDND.length >= 4 && sessionStartsWithDND.some(f114965);
+    c6 = sessionStartsWithDND.length >= 4 && sessionStartsWithDND.some(f115127);
+    const someResult = sessionStartsWithDND.length >= 4 && sessionStartsWithDND.some(f115127);
     sessionStartsWithDND = [];
   },
 };

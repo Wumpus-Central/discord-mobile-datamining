@@ -24,7 +24,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require, c24, set2, set3;
 
-const f94239 = (user) => {
+const f94379 = (user) => {
   const str = user.user.username;
   return str.toLowerCase();
 };
@@ -302,7 +302,7 @@ function handleMutualFriendsFetchSuccess(userId) {
     new UserRecord(obj2);
     return obj;
   });
-  const iter = mapped.sortBy(f94239);
+  const iter = mapped.sortBy(f94379);
   const result = set(userId, iter.value());
   const result1 = map4.set(userId.userId, userId.mutualFriends.length);
 }
@@ -386,7 +386,7 @@ function handleProfileFetch(arg0) {
       new UserRecord(obj2);
       return obj;
     });
-    const iter = mapped.sortBy(f94239);
+    const iter = mapped.sortBy(f94379);
     set3(id3, iter.value());
     const result3 = map4.set(userProfile.user.id, userProfile.mutual_friends.length);
   }
@@ -676,7 +676,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "unicodeVersion",
+      fetchError: "code",
     };
     const obj2 = {
       connectedAccounts: [],
@@ -693,7 +693,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "unicodeVersion",
+      fetchError: "code",
     };
   }
   const timestamp = Date.now();

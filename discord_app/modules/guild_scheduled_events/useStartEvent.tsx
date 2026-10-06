@@ -243,7 +243,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   aPIError = undefined;
                   c7 = 1;
                   c8 = 1;
-                  return { value: "Set", done: true };
+                  return { value: "Reflect", done: true };
                 }
               } else if (1 === c7) {
                 if (arg0 === 1) {

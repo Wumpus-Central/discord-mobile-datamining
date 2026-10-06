@@ -342,9 +342,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let controlledSetting;
-      let obj = controlledSetting(8297);
+      let obj = controlledSetting(8330);
       const selectedTeen = obj.useSelectedTeen();
-      const ParentalControlledFriendSourceFlags = controlledSetting(14626).ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = controlledSetting(14642).ParentalControlledFriendSourceFlags;
       let id;
       const useControlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting;
       if (selectedTeen != null) {

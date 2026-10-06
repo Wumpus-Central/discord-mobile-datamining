@@ -9,7 +9,7 @@ import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
@@ -17,7 +17,7 @@ import NitroWheelIcon from "../../../design/components/Icon/native/redesign/gene
 import useDefaultVariantIndex from "../hooks/useDefaultVariantIndex.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
-import _mod8508 from "../../virtual_currency/hooks/index.tsx";
+import _mod8541 from "../../virtual_currency/hooks/index.tsx";
 import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder.tsx";
 import TagIcon from "../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
 import getProductName from "../utils/getProductName.tsx";
@@ -138,7 +138,7 @@ const memoResult = memo(
                     tmp13 = cResult[13];
                   }
                   const discountPercentage2 = tmp13.discountPercentage;
-                  const tmpResult = _mod8508;
+                  const tmpResult = _mod8541;
                   const balance = tmpResult.useFetchVirtualCurrencyBalance().balance;
                   let tmp17 = null;
                   if (null != tmp9) {

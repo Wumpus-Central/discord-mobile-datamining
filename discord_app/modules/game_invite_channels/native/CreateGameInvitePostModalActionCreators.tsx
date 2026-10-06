@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 
 export const openCreateGameInvitePostModal = function openCreateGameInvitePostModal(merged) {
   const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(12440, dependencyMap.paths), merged, c3);
+  obj.pushLazy(asyncRequire(12455, dependencyMap.paths), merged, c3);
 };
 export const closeCreateGameInvitePostModal = function closeCreateGameInvitePostModal() {
   const obj = ModalActionCreatorsDefault;

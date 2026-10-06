@@ -147,7 +147,7 @@ export default function AddMembersBody(pendingAdditions) {
   dependencyMap = tmp3;
   let tmp5 = dependencyMap;
   let obj = { isKeyboardAwareOnAndroid: !inActionSheet };
-  const insets = pendingAdditions(6471)(obj).insets;
+  const insets = pendingAdditions(6478)(obj).insets;
   let obj2 = guild(504);
   let items = [GuildRoleStore];
   const stateFromStores = obj2.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
@@ -209,12 +209,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    BottomSheetScrollView = guild(6112).BottomSheetScrollView;
+    BottomSheetScrollView = guild(6119).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    BottomSheetSectionList = guild(6112).BottomSheetSectionList;
+    BottomSheetSectionList = guild(6119).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -245,12 +245,12 @@ export default function AddMembersBody(pendingAdditions) {
     },
     autoFocus: true,
   };
-  tmp4Result = pendingAdditions(9235);
+  tmp4Result = pendingAdditions(9270);
   intl3 = guild(1126).intl;
   const items5 = [closure_16(closure_7, obj9), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
-    const obj11 = { style: tmp3.inputDescContainer, children: closure_16(guild(4886).Text, obj12) };
+    const obj11 = { style: tmp3.inputDescContainer, children: closure_16(guild(4892).Text, obj12) };
     obj12 = { style: tmp3.inputDescText, variant: "text-xs/medium", color: "text-default", children: inputDesc };
     tmp27Result = closure_16(tmp28, obj11);
   }
@@ -269,7 +269,7 @@ export default function AddMembersBody(pendingAdditions) {
       if (0 === membersRows.length) {
         const obj15 = { children: closure_16(EmptyState, obj16) };
         obj16 = {
-          Illustration: guild(9240).NoResultsAlt,
+          Illustration: guild(9275).NoResultsAlt,
           style: null,
           bodyStyle: null,
           body: intl5.format(guild(1126).t.ErpIY3, obj17),

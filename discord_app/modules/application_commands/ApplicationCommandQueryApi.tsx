@@ -334,7 +334,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     return section.section.id === first1;
                   }
                 }
-                const tmp49 = guild_id(8805).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
+                const tmp49 = guild_id(8835).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
                 const _Symbol2 = Symbol;
                 if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                   class G {
@@ -1177,7 +1177,7 @@ let result = size.fileFinishedImporting("modules/application_commands/Applicatio
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   let closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "marginBottom", command: "unicodeVersion", section: "Reflect" };
+    return { application: "duration", command: "toCharArray$esjava$1", section: "toCharArray$esjava$1" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -1232,7 +1232,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "marginBottom", command: "unicodeVersion", section: "Reflect" };
+    return { application: "duration", command: "toCharArray$esjava$1", section: "toCharArray$esjava$1" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -1390,7 +1390,7 @@ export const useCommand = function useCommand(cResult, commandId) {
         }
       }
     }
-    return { command: "Array", application: "Set" };
+    return { command: "start", application: "unicodeVersion" };
   }, items);
 };
 export const useCommandsForApplication = tmp6;

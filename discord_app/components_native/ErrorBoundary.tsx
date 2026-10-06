@@ -275,7 +275,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             return obj(...arguments);
           },
         };
-        const Button = tmp3(5594).Button;
+        const Button = tmp3(5601).Button;
         intl = tmp3(1126).intl;
         return closure_9(Button, obj2);
       }

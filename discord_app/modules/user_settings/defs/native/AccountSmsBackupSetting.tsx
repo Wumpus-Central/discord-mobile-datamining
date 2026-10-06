@@ -159,7 +159,7 @@ let closure_7 = module_12.debounce(function toggleSMS(user) {
     const pushLazy = ModalActionCreatorsDefault.pushLazy;
     let obj = { reason: PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE };
     ModalActionCreatorsDefault;
-    const tmp6 = asyncRequire(6539, dependencyMap.paths);
+    const tmp6 = asyncRequire(6546, dependencyMap.paths);
     pushLazy(tmp6, obj, closure_5);
   }
 }, 200);

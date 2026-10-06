@@ -20,7 +20,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = guild(576);
       const cResult = obj.c(15);
       guild = guild.guild;
-      let obj2 = guild(12130);
+      let obj2 = guild(12145);
       const guildProgressStep = obj2.useGuildProgressStep(guild);
       ({ percentComplete, subtitle, completed } = guildProgressStep);
       if (cResult[0] === completed) {
@@ -41,8 +41,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const Icon = tmp(8897).RowButton.Icon;
-            const tmp15 = <Icon source={completed(16123)} />;
+            const Icon = tmp(8926).RowButton.Icon;
+            const tmp15 = <Icon source={completed(16162)} />;
             const intl = tmp(1126).intl;
             const stringResult = intl.string(guild(1126).t.o3HK3d);
             cResult[7] = tmp15;
@@ -54,7 +54,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             tmp12 = cResult[8];
           }
           if (cResult[9] !== percentComplete) {
-            const tmp20 = jsx(completed(12250), { percent: percentComplete });
+            const tmp20 = jsx(completed(12265), { percent: percentComplete });
             cResult[9] = percentComplete;
             cResult[10] = tmp20;
             tmp17 = tmp20;
@@ -70,7 +70,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp21;
             }
           }
-          const tmp23 = jsx(guild(8897).RowButton, {
+          const tmp23 = jsx(guild(8926).RowButton, {
             icon: tmp11,
             label: tmp12,
             subLabel: subtitle,
@@ -114,7 +114,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let percentComplete;
       let subtitle;
       guild = guild.guild;
-      let obj = guild(12130);
+      let obj = guild(12145);
       const guildProgressStep = obj.useGuildProgressStep(guild);
       const completed = guildProgressStep.completed;
       const items = [completed, guild.id];
@@ -134,9 +134,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = GuildProgressUtils;
         obj2.openActionSheet(guild);
       }, items1);
-      const RowButton = guild(8897).RowButton;
-      ({ source: completed(16123) });
-      const Icon = guild(8897).RowButton.Icon;
+      const RowButton = guild(8926).RowButton;
+      ({ source: completed(16162) });
+      const Icon = guild(8926).RowButton.Icon;
       const intl = guild(1126).intl;
       return (
         <RowButton

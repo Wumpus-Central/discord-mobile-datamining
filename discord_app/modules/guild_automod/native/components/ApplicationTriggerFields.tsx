@@ -69,7 +69,7 @@ export default function ApplicationTriggerFields(rule) {
             return onChangeRule(obj);
           },
         };
-        obj.openLazy(asyncRequire(17703, dependencyMap.paths), "AutomodSelectApplication", obj2);
+        obj.openLazy(asyncRequire(17749, dependencyMap.paths), "AutomodSelectApplication", obj2);
       }
     },
   };

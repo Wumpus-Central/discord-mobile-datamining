@@ -548,7 +548,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let tmp9 = null;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-        const tmpResult2 = tmp(4720);
+        const tmpResult2 = tmp(4726);
         let result = tmpResult2.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           let tmp15 = null;
@@ -740,7 +740,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = _require;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
         let tmp10 = null;
-        const tmp2Result = tmp2(4720);
+        const tmp2Result = tmp2(4726);
         if (
           canShowTimeRecurringContent(
             !tmp2Result.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE),
@@ -836,7 +836,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let tmp9 = null;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-        const tmpResult2 = tmp(4720);
+        const tmpResult2 = tmp(4726);
         let result = tmpResult2.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           let tmp16 = null;
@@ -1084,7 +1084,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_3 = null;
       let tmp7 = null;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-        const tmpResult = tmp(4720);
+        const tmpResult = tmp(4726);
         let result = tmpResult.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (UserSettingsProtoStore.hasLoaded(UserSettingsTypes.PRELOADED_USER_SETTINGS)) {
           let tmp13 = null;
@@ -1199,7 +1199,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let result = null == THIRD_PARTY_OUTBOUND_PROMO_NAGBAR;
       if (!result) {
-        const tmpResult2 = tmp(2038);
+        const tmpResult2 = tmp(2037);
         result = tmpResult2.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(
           THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
           id,
@@ -1521,7 +1521,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let tmp15 = null;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-        const tmpResult2 = tmp(4720);
+        const tmpResult2 = tmp(4726);
         let lastDismissedAtMs1;
         const tmp16 = !tmpResult2.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (tmp8 != null) {
@@ -1571,7 +1571,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = null;
       let tmp7 = null;
       if (null != PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE) {
-        const tmpResult = tmp(4720);
+        const tmpResult = tmp(4726);
         let lastDismissedAtMs;
         const tmp8 = !tmpResult.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE);
         if (tmp4 != null) {

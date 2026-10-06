@@ -118,7 +118,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp11;
                 let obj2 = guildId(1371);
                 if (!obj2.isDiscordUrl(customInstallUrl)) {
-                  PlusSmallIcon = tmp(8263).LinkExternalSmallIcon;
+                  PlusSmallIcon = tmp(8296).LinkExternalSmallIcon;
                 }
                 const _Symbol = Symbol;
                 if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -238,7 +238,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[15] = tmp5;
                 cResult[16] = tmp4;
                 cResult[17] = tmp13;
-                cResult[18] = jsx(tmp(5594).Button, {
+                cResult[18] = jsx(tmp(5601).Button, {
                   text: tmp11,
                   onPress: tmp4,
                   onLongPress: tmp5,
@@ -246,7 +246,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   onAccessibilityAction: C,
                   icon: tmp13,
                 });
-                const tmp18 = jsx(tmp(5594).Button, {
+                const tmp18 = jsx(tmp(5601).Button, {
                   text: tmp11,
                   onPress: tmp4,
                   onLongPress: tmp5,
@@ -255,7 +255,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                   icon: tmp13,
                 });
               }
-              PlusSmallIcon = tmp(8529).PlusSmallIcon;
+              PlusSmallIcon = tmp(8562).PlusSmallIcon;
             }
           }
         }
@@ -306,7 +306,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp6;
         let obj2 = guildId(1371);
         if (!obj2.isDiscordUrl(customInstallUrl)) {
-          let PlusSmallIcon = application(8263).LinkExternalSmallIcon;
+          let PlusSmallIcon = application(8296).LinkExternalSmallIcon;
           tmp6 = application;
         }
         const items1 = [application];
@@ -327,7 +327,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             obj2.presentLinkCopied();
           }
         }, items1);
-        const Button = tmp6(5594).Button;
+        const Button = tmp6(5601).Button;
         let intl = tmp6(1126).intl;
         ({ size: "sm", color: guildId(587).colors.WHITE });
         return (
@@ -341,7 +341,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           />
         );
       }
-      PlusSmallIcon = application(8529).PlusSmallIcon;
+      PlusSmallIcon = application(8562).PlusSmallIcon;
       tmp6 = application;
     };
 ReactCompilerGating = ReactCompilerGating_mod;

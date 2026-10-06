@@ -63,7 +63,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[3] === userIdsAndWishlistIds) {
           tmp8 = cResult[4];
         }
-        const tmpResult2 = applicationIdsFilter(8430);
+        const tmpResult2 = applicationIdsFilter(8463);
         const fetchWishlists = tmpResult2.useFetchWishlists(tmp8);
         ({ wishlists, isFetching, errors } = fetchWishlists);
         if (cResult[5] === applicationIdsFilter) {

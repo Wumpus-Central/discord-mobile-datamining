@@ -4,7 +4,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import Constants from "../../../Constants.tsx";
 import intl5 from "../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import SettingsConstants from "../../user_settings/core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../settings/native/renderer/SettingLayout.tsx";
@@ -48,7 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = intl5.intl;
         format = intl.format;
         obj3 = { helpdeskArticle: obj4.getArticleURL(HelpdeskArticles.DATA_PRIVACY_CONTROLS) };
-        Z5yJZy = _modDef2493.Z5yJZy;
+        Z5yJZy = _modDef2521.Z5yJZy;
         const items1 = [obj2, , ,];
         obj4 = HelpdeskUtilsDefault;
         const obj5 = { settings: items2, subLabel: format2(Imp6Ns, obj6) };
@@ -56,7 +56,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = intl5.intl;
         format2 = intl2.format;
         obj6 = { helpdeskArticle: obj7.getArticleURL(HelpdeskArticles.DATA_USED_FOR_RECOMMENDED) };
-        Imp6Ns = _modDef2493.Imp6Ns;
+        Imp6Ns = _modDef2521.Imp6Ns;
         items1[1] = obj5;
         obj7 = HelpdeskUtilsDefault;
         const obj8 = { settings: items3, subLabel: format3(cnCK6b, obj9) };
@@ -64,7 +64,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = intl5.intl;
         format3 = intl3.format;
         obj9 = { helpdeskArticle: obj10.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
-        cnCK6b = _modDef2493.cnCK6b;
+        cnCK6b = _modDef2521.cnCK6b;
         items1[2] = obj8;
         obj10 = HelpdeskUtilsDefault;
         const obj11 = { settings: items4, subLabel: format4(v6mK5Pz, obj12) };
@@ -72,7 +72,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl4 = intl5.intl;
         format4 = intl4.format;
         obj12 = { helpdeskArticle: obj13.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
-        v6mK5Pz = _modDef2493["6mK5Pz"];
+        v6mK5Pz = _modDef2521["6mK5Pz"];
         items1[3] = obj11;
         cResult[0] = items1;
         first = items1;
@@ -125,7 +125,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = memo(dependencyMap[6]).intl;
         format = intl.format;
         obj2 = { helpdeskArticle: obj3.getArticleURL(constants.DATA_PRIVACY_CONTROLS) };
-        Z5yJZy = _modDef2493.Z5yJZy;
+        Z5yJZy = _modDef2521.Z5yJZy;
         const items1 = [obj, , ,];
         obj3 = HelpdeskUtilsDefault;
         const obj4 = { settings: items2, subLabel: format2(Imp6Ns, obj5) };
@@ -133,7 +133,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = memo(dependencyMap[6]).intl;
         format2 = intl2.format;
         obj5 = { helpdeskArticle: obj6.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED) };
-        Imp6Ns = _modDef2493.Imp6Ns;
+        Imp6Ns = _modDef2521.Imp6Ns;
         items1[1] = obj4;
         obj6 = HelpdeskUtilsDefault;
         const obj7 = { settings: items3, subLabel: format3(cnCK6b, obj8) };
@@ -141,7 +141,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = memo(dependencyMap[6]).intl;
         format3 = intl3.format;
         obj8 = { helpdeskArticle: obj9.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS) };
-        cnCK6b = _modDef2493.cnCK6b;
+        cnCK6b = _modDef2521.cnCK6b;
         items1[2] = obj7;
         obj9 = HelpdeskUtilsDefault;
         const obj10 = { settings: items4, subLabel: format4(v6mK5Pz, obj11) };
@@ -149,7 +149,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl4 = memo(dependencyMap[6]).intl;
         format4 = intl4.format;
         obj11 = { helpdeskArticle: obj12.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS) };
-        v6mK5Pz = _modDef2493["6mK5Pz"];
+        v6mK5Pz = _modDef2521["6mK5Pz"];
         items1[3] = obj10;
         obj12 = HelpdeskUtilsDefault;
         return items1;

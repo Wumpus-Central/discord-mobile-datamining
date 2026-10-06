@@ -83,7 +83,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = cResult[4];
         }
         if (cResult[5] !== message.author) {
-          const obj3 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+          const obj3 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
           const Avatar = native.Avatar;
           const tmp12 = hasOwnProperty(Avatar, obj3);
           cResult[5] = message.author;
@@ -210,7 +210,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         children: items1,
       };
       Card = Card_Card.Card;
-      const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "r" };
+      const obj4 = { size: native.AvatarSizes.SMALL, user: message.author, guildId: "Array" };
       const Avatar = native.Avatar;
       items1 = [hasOwnProperty(Avatar, obj4)];
       const obj5 = { style: tmp.body, children: items2 };

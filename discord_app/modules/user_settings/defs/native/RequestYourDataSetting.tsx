@@ -5,8 +5,8 @@ import get_initialized from "../../../../../discord_common/js/packages/flux/inde
 import react from "../../../../../_runtime/00576_react.js";
 import intl3 from "../../../../intl/index.native.tsx";
 import react_native2 from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _modDef4461 from "../../../../../_runtime/metro/04461__.js";
-import _slicedToArray from "../../../../../_runtime/metro/04492__slicedToArray.js";
+import _modDef4467 from "../../../../../_runtime/metro/04467__.js";
+import _slicedToArray from "../../../../../_runtime/metro/04498__slicedToArray.js";
 import UserSettingsAccountActionCreators from "../../../../actions/UserSettingsAccountActionCreators.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import HarvesterUtils from "../../../harvester/HarvesterUtils.tsx";
@@ -195,11 +195,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     if (cResult[1] !== tmp4.created_at) {
       const _Symbol = Symbol;
       const forResult = Symbol.for("react.early_return_sentinel");
-      const obj3 = _modDef4461(tmp4.created_at);
+      const obj3 = _modDef4467(tmp4.created_at);
       const addResult = obj3.add(hasOwnProperty, "days");
       let tmp11 = null;
       let formatToPlainStringResult;
-      if (!addResult.isBefore(_modDef4461())) {
+      if (!addResult.isBefore(_modDef4467())) {
         const intl = intl3.intl;
         const formatToPlainString = intl.formatToPlainString;
         const obj2 = { date: addResult.format("MMMM Do YYYY") };
@@ -233,10 +233,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   } else if (null == tmp) {
     return null;
   } else {
-    const obj3 = _modDef4461(tmp.created_at);
+    const obj3 = _modDef4467(tmp.created_at);
     const addResult = obj3.add(hasOwnProperty, "days");
     let formatToPlainStringResult = null;
-    if (!addResult.isBefore(_modDef4461())) {
+    if (!addResult.isBefore(_modDef4467())) {
       const intl = intl3.intl;
       const formatToPlainString = intl.formatToPlainString;
       const obj = { date: addResult.format("MMMM Do YYYY") };

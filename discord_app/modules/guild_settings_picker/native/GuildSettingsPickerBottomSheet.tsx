@@ -203,15 +203,15 @@ if (ReactCompilerGating.isReactCompilerEnabled()) {
       feature = feature.feature;
       ({ section: importDefault, subsection: dependencyMap, guildId } = feature);
       const tmp = closure_6();
-      let obj = feature(13702);
+      let obj = feature(13720);
       const guildSettingsPickerFeature = obj.useGuildSettingsPickerFeature(feature);
       ({ selectGuildCta, title, description, isGuildSupported } = guildSettingsPickerFeature);
       let obj2 = { startExpanded: true, children: items };
-      BottomSheet = feature(6645).BottomSheet;
-      items = [closure_4(feature(6644).BottomSheetTitleHeader, { title }), , , , ,];
+      BottomSheet = feature(6652).BottomSheet;
+      items = [closure_4(feature(6651).BottomSheetTitleHeader, { title }), , , , ,];
       const obj3 = {
         style: tmp.content,
-        children: closure_4(feature(4886).Text, { variant: "text-md/medium", children: description }),
+        children: closure_4(feature(4892).Text, { variant: "text-md/medium", children: description }),
       };
       items[1] = closure_4(guildId, obj3);
       items[2] = closure_4(feature(1188).Spacer, { size: 16 });
@@ -226,7 +226,7 @@ if (ReactCompilerGating.isReactCompilerEnabled()) {
       };
       items[3] = closure_4(GuildPickerDefault, obj4);
       items[4] = closure_4(feature(1188).Spacer, { size: 16 });
-      const obj5 = { style: tmp.content, children: closure_4(feature(5594).Button, obj6) };
+      const obj5 = { style: tmp.content, children: closure_4(feature(5601).Button, obj6) };
       obj6 = {
         grow: true,
         text: selectGuildCta,

@@ -1,5 +1,5 @@
 // discord_app/utils/ClipboardUtils.native.tsx
-import _modDef6689 from "../../_runtime/metro/06689__.js";
+import _modDef6696 from "../../_runtime/metro/06696__.js";
 import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
 import size from "../../_runtime/metro/00002__.js";
 
@@ -33,7 +33,7 @@ let obj = function _copy() {
             const obj4 = { value, done: true };
             return obj4;
           } else {
-            const obj2 = _modDef6689;
+            const obj2 = _modDef6696;
             obj2.setString(closure_0);
             if (closure_1 != null) {
               closure_1();
@@ -69,6 +69,6 @@ export const copy = function copy() {
   return obj(...arguments);
 };
 export const getString = function getString() {
-  obj = _modDef6689;
+  obj = _modDef6696;
   return obj.getString();
 };

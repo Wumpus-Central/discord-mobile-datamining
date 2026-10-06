@@ -3,7 +3,7 @@ import react_native from "../../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../../intl/index.native.tsx";
-import _modDef2589 from "../../GiftingBadge.messages.js";
+import _modDef2617 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import BadgeDirectoryStore from "../../../../badges/BadgeDirectoryStore.tsx";
 import GiftingBadgesUtils from "../../GiftingBadgesUtils.tsx";
@@ -229,7 +229,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       const Text = Text_Text.Text;
                       const intl = intl2.intl;
                       const obj9 = { count: progress, threshold: tmp18 };
-                      const formatResult = intl.format(_modDef2589.iIpfQe, obj9);
+                      const formatResult = intl.format(_modDef2617.iIpfQe, obj9);
                       cResult[6] = tmp6;
                       cResult[7] = newTier;
                       cResult[8] = tmp8;
@@ -363,7 +363,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj10 = {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: intl.format(_modDef2589.iIpfQe, { count: progress, threshold: tmp8 }),
+        children: intl.format(_modDef2617.iIpfQe, { count: progress, threshold: tmp8 }),
       };
       Text = Text_Text.Text;
       intl = intl2.intl;

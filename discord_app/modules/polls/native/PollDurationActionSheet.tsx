@@ -65,7 +65,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp11;
           }
         }
-        const tmp13 = jsx(onChange(6072).TableRadioGroup, {
+        const tmp13 = jsx(onChange(6079).TableRadioGroup, {
           title: tmp7,
           hasIcons: false,
           onChange: tmp5,
@@ -104,7 +104,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = ActionSheetActionCreatorsDefault;
         obj.hideActionSheet();
       }, items);
-      const TableRadioGroup = onChange(6072).TableRadioGroup;
+      const TableRadioGroup = onChange(6079).TableRadioGroup;
       const intl = onChange(1126).intl;
       const entries = Object.entries(tmp);
       return (

@@ -11,7 +11,7 @@ import MobileEmojiPickerUpsellRestyleExperiment from "../../../premium/experimen
 import NitroWheelIcon2 from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import PremiumFeaturesCards from "../../../user_settings/premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../../../components_native/premium/openPremiumModal.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09917_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09930_AssetRegistry.js";
 import PremiumExpressionPickerSearchUpsellDefault from "../../../premium/roadblocks/native/views/PremiumExpressionPickerSearchUpsell.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";

@@ -16,7 +16,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp3;
       let obj = startConnection(576);
       const cResult = obj.c(8);
-      let obj2 = startConnection(6676);
+      let obj2 = startConnection(6683);
       const providerConnection = obj2.useProviderConnection(arg0);
       ({ loading, hasConnection, canConnect, startConnection } = providerConnection);
       const account = providerConnection.account;
@@ -148,7 +148,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let hasConnection;
       let loading;
       let startConnection;
-      let obj = startConnection(6676);
+      let obj = startConnection(6683);
       const providerConnection = obj.useProviderConnection(arg0);
       startConnection = providerConnection.startConnection;
       ({ loading, hasConnection, canConnect, account } = providerConnection);

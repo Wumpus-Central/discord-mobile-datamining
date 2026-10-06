@@ -91,7 +91,7 @@ let obj = function _fetchProfile() {
             closure_12 = undefined;
             join_request_id = 1;
             signal = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === join_request_id) {
           if (userId === 1) {

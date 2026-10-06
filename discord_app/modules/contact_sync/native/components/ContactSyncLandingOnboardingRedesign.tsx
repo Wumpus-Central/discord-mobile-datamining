@@ -4,7 +4,7 @@ import NativePermissionConstants from "../../../native_permissions/NativePermiss
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import NativePermissionUtilsDefault from "../../../native_permissions/NativePermissionUtils.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/12342_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/12357_AssetRegistry.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../../../../_runtime/00019_react.js";
@@ -155,7 +155,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[5] !== tmp4.title) {
         let obj3 = { style: title, variant: "heading-xl/bold", children: tmp12 };
-        const tmp16 = closure_8(onNext(4886).Text, obj3);
+        const tmp16 = closure_8(onNext(4892).Text, obj3);
         cResult[5] = tmp4.title;
         cResult[6] = tmp16;
         tmp14 = tmp16;
@@ -173,7 +173,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[8] !== tmp4.subtitle) {
         let obj4 = { style: subtitle, variant: "text-sm/medium", children: tmp17 };
-        const tmp21 = closure_8(onNext(4886).Text, obj4);
+        const tmp21 = closure_8(onNext(4892).Text, obj4);
         cResult[8] = tmp4.subtitle;
         cResult[9] = tmp21;
         tmp19 = tmp21;
@@ -280,7 +280,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[16] = tmp29;
         tmp26 = tmp29;
       }
-      const tmp25 = closure_8(onNext(5594).Button, {
+      const tmp25 = closure_8(onNext(5601).Button, {
         variant: "primary",
         size: "lg",
         text: tmp22,
@@ -369,16 +369,16 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       );
       items1 = [closure_8(closure_6, obj3), , , ,];
       let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: intl.string(onNext(1126).t["/G+nci"]) };
-      const Text = onNext(4886).Text;
+      const Text = onNext(4892).Text;
       intl = onNext(1126).intl;
       items1[1] = closure_8(Text, obj4);
       let obj5 = { style: tmp.subtitle, variant: "text-sm/medium", children: intl2.string(onNext(1126).t.G8zcHt) };
-      const Text2 = onNext(4886).Text;
+      const Text2 = onNext(4892).Text;
       intl2 = onNext(1126).intl;
       items1[2] = closure_8(Text2, obj5);
       const obj6 = { style: tmp.buttonContainer, children: closure_8(Button, obj7) };
       obj7 = { variant: "primary", size: "lg", text: intl3.string(onNext(1126).t.LhlgY9), onPress: callback, loading };
-      Button = onNext(5594).Button;
+      Button = onNext(5601).Button;
       intl3 = onNext(1126).intl;
       items1[3] = closure_8(closure_5, obj6);
       items1[4] = closure_8(ContactSyncErrorDefault, { error });

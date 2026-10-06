@@ -52,7 +52,7 @@ let obj = function _getFromCacheOrFallback2() {
             value2 = undefined;
             c2 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c2) {
           if (arg0 === 1) {
@@ -152,7 +152,7 @@ obj = function _getEmojiDominantColors() {
             ({ emoji: c0, emojiSource: c1 } = closure_0);
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

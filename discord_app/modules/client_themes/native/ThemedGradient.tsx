@@ -13,7 +13,7 @@ import GuildThemePresets from "../../guild_themes/GuildThemePresets.tsx";
 import useRoutedActiveGuildThemeDefault from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../_runtime/00019_react.js";
 import ClientThemesBackgroundStore from "../ClientThemesBackgroundStore.tsx";
@@ -27,7 +27,7 @@ let dependencyMap;
 
 let c10;
 let unpackModuleId;
-const f90929 = (item) => item / 100;
+const f91065 = (item) => item / 100;
 function getMixedGradientColor(mixColorOverride) {
   let b;
   let darkFallbackAmount;
@@ -281,7 +281,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp3 = cResult[1];
       }
       dependencyMap = tmp3;
-      let tmp4 = mixColorOverride(4791)();
+      let tmp4 = mixColorOverride(4797)();
       const theme = tmp4;
       if (cResult[2] === gradient.colors) {
         if (cResult[3] === mix) {
@@ -463,7 +463,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       dependencyMap = tmp4;
-      const tmp5 = mixColorOverride(4791)();
+      const tmp5 = mixColorOverride(4797)();
       const theme = tmp5;
       if (cResult[2] === mix) {
         if (cResult[3] === tmp4) {
@@ -522,7 +522,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = mix(4733);
+      const tmpResult = mix(4739);
       const guildThemePresetAppearance = tmpResult.getGuildThemePresetAppearance(preset, tmp5);
       if (cResult[11] === mix) {
         if (cResult[12] === tmp4) {
@@ -783,7 +783,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         gradientColorStops = [];
       }
       if (gradientColorStops.length === reduced.length) {
-        mapped1 = gradientColorStops.map(f90929);
+        mapped1 = gradientColorStops.map(f91065);
       } else if (1 === reduced.length) {
         mapped1 = [0, 1];
       } else {
@@ -1034,7 +1034,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         gradientColorStops = [];
       }
       if (gradientColorStops.length === reduced.length) {
-        mapped1 = gradientColorStops.map(f90929);
+        mapped1 = gradientColorStops.map(f91065);
       } else if (1 === reduced.length) {
         mapped1 = [0, 1];
       } else {
@@ -1059,7 +1059,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp10Result = null;
       if (reduced.length >= 2) {
         let obj = { colors: reduced, locations: mapped1, start: point, end: point1, style: items2 };
-        const tmp2Result = tmp2(5605);
+        const tmp2Result = tmp2(5612);
         if (wide) {
           let obj2 = { width };
           wide = obj2;

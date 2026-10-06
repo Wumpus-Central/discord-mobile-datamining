@@ -221,7 +221,7 @@ obj = function _getApplication() {
     if (closure_1 === undefined) {
       obj5 = {};
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -385,7 +385,7 @@ obj = function _getSimilarApplications() {
     }
     await "IconComponent";
     ({ applicationId: c0, guildId: c1, options: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -547,7 +547,7 @@ obj = function _search() {
     }
     await "IconComponent";
     ({ query: c0, guildId: c1, options: c2, onSuccessCallback: c3 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -658,7 +658,7 @@ obj = function _fetchCollections() {
     APPLICATION_DIRECTORY =
       obj5.surface ?? ApplicationCollectionSurface.ApplicationCollectionSurface.APPLICATION_DIRECTORY;
     ACTIVE = obj5.activeState ?? ApplicationCollectionActiveState.ApplicationCollectionActiveState.ACTIVE;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

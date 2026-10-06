@@ -18,13 +18,14 @@ let obj = {
     let channelId;
     let fromChannelId;
     let fromGuildId;
+    let isAppStartupNavigation;
     let jumpType;
     let messageId;
     let opensChannel;
     let skipMessageFetch;
     let source;
     guildId = guildId.guildId;
-    ({ channelId, messageId, jumpType, source, skipMessageFetch, opensChannel } = guildId);
+    ({ channelId, messageId, jumpType, source, skipMessageFetch, opensChannel, isAppStartupNavigation } = guildId);
     const obj = SelectedChannelActionCreatorsAdditional;
     const channelSelectionOrigin = obj.getChannelSelectionOrigin();
     ({ fromGuildId, fromChannelId } = channelSelectionOrigin);
@@ -45,6 +46,7 @@ let obj = {
       source,
       skipMessageFetch,
       opensChannel,
+      isAppStartupNavigation,
     });
   },
   selectPrivateChannel(id) {

@@ -1438,9 +1438,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               onPress() {
                 return onDismiss(option);
               },
-              children: tmp13(option(4797).CircleXIcon, { size: "md" }),
+              children: tmp13(option(4803).CircleXIcon, { size: "md" }),
             };
-            const PressableOpacity = tmp2(5909).PressableOpacity;
+            const PressableOpacity = tmp2(5916).PressableOpacity;
             items[1] = tmp13(PressableOpacity, obj9);
             tmp61 = closure_6(View, obj7);
           }

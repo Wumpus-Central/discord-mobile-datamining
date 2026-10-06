@@ -25,7 +25,7 @@ let obj = {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     ActionSheetActionCreatorsDefault;
     const obj = { gameId, source, sourceUserId };
-    const tmp4 = asyncRequire(8326, dependencyMap.paths);
+    const tmp4 = asyncRequire(8359, dependencyMap.paths);
     openLazy(tmp4, "game-profile-" + gameId, obj, stackingBehavior);
   },
   returnToGameProfile(gameId) {
@@ -37,7 +37,7 @@ let obj = {
     obj.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequire(8326, dependencyMap.paths);
+    const tmp3 = asyncRequire(8359, dependencyMap.paths);
     openLazy(tmp3, "game-profile-" + gameId, { gameId, source, initialScrollOffset });
   },
   setGameProfilePendingReturn(arg0) {

@@ -157,7 +157,7 @@ let obj = function _startLurking() {
     if (closure_2 === undefined) {
       obj4 = {};
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

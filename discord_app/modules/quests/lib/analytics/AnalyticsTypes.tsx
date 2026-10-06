@@ -2,13 +2,13 @@
 import QuestTypes from "../../QuestTypes.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const f94511 = (item) => QuestTypes.QuestContent[item] === questContent;
+const f94651 = (item) => QuestTypes.QuestContent[item] === questContent;
 let closure_2 = Object.keys(QuestTypes.QuestContent);
 const result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
 
 export const getQuestContentName = function getQuestContentName(questContent) {
   let closure_0 = questContent;
-  let str = closure_2.find(f94511);
+  let str = closure_2.find(f94651);
   if (str == null) {
     str = "";
   }
@@ -57,7 +57,7 @@ export const getContentProperties = function getContentProperties(
     content_position: questContentPosition,
     row_index: questContentRowIndex,
   };
-  str = closure_2.find(f94511);
+  str = closure_2.find(f94651);
   if (str == null) {
     str = "";
   }

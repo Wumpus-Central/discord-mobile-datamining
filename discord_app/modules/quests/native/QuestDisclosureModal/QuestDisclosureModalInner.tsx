@@ -170,7 +170,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                 color: "mobile-text-heading-primary",
                                 children: format(tzq9Wa, obj8),
                               };
-                              const Text = tmp(4886).Text;
+                              const Text = tmp(4892).Text;
                               const intl5 = tmp(1126).intl;
                               format = intl5.format;
                               obj8 = {
@@ -280,7 +280,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         return metroImportDefault(React3, obj, index);
                       }),
                     };
-                    const Card = tmp(5995).Card;
+                    const Card = tmp(6002).Card;
                     tmp20 = closure_6(Card, obj13);
                   }
                   cResult[15] = isTargetedDisclosure;
@@ -391,7 +391,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           isVideoQuest,
         }),
       };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       tmp2Result = require("QuestCopyUtils");
       items2[1] = tmp6(Text, obj6);
       if (isTargetedDisclosure) {
@@ -417,12 +417,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             return metroImportDefault(React3, obj, index);
           }),
         };
-        const Card = tmp2(5995).Card;
+        const Card = tmp2(6002).Card;
         isTargetedDisclosure = tmp6(Card, obj7);
       }
       items2[2] = isTargetedDisclosure;
       const obj8 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: format(tzq9Wa, obj9) };
-      const Text2 = tmp2(4886).Text;
+      const Text2 = tmp2(4892).Text;
       const intl5 = tmp2(1126).intl;
       format = intl5.format;
       obj9 = { privacySettingsUrl: obj11.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
@@ -437,7 +437,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         text: intl6.string(require("intl").t.cpT0Cq),
         onPress: onClose,
       };
-      Button = tmp2(5594).Button;
+      Button = tmp2(5601).Button;
       intl6 = tmp2(1126).intl;
       items2[4] = tmp6(closure_4, obj10);
       return closure_7(closure_3, obj4);

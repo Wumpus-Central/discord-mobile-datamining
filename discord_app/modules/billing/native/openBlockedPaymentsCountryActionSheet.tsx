@@ -9,5 +9,5 @@ export default function openBlockedPaymentsCountryActionSheet() {
   const obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequire(11093, dependencyMap.paths), "BlockedPaymentsCountryActionSheet");
+  obj2.openLazy(asyncRequire(11106, dependencyMap.paths), "BlockedPaymentsCountryActionSheet");
 }

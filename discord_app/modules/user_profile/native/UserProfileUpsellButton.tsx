@@ -32,8 +32,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       analyticsObject = analyticsObject.analyticsObject;
       const label = analyticsObject.label;
       const tmp4 = closure_10();
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
-      let obj2 = analyticsObject(6955);
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+      let obj2 = analyticsObject(6968);
       const nitroTrialCtaOverride = obj2.useNitroTrialCtaOverride("user_profile_upsell_button");
       if (cResult[0] === analyticsLocations) {
         let tmp6;
@@ -55,7 +55,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               tmp11 = cResult[9];
             }
             if (cResult[10] !== tmp4.nitroWheel) {
-              const tmp16 = jsx(analyticsObject(8313).NitroWheelIcon, {
+              const tmp16 = jsx(analyticsObject(8346).NitroWheelIcon, {
                 color: "white",
                 size: "sm",
                 style: tmp4.nitroWheel,
@@ -120,7 +120,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp19[0] = tmp10;
             tmp19[2] = tmp11;
             tmp19[3] = tmp14;
-            const tmp20 = jsx(analyticsObject(5594).Button, tmp19);
+            const tmp20 = jsx(analyticsObject(5601).Button, tmp19);
             cResult[12] = tmp10;
             cResult[13] = tmp11;
             cResult[14] = tmp14;
@@ -215,8 +215,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let analyticsLocations;
       const label = analyticsObject.label;
       const tmp = closure_10();
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
-      let obj = analyticsObject(6955);
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
+      let obj = analyticsObject(6968);
       let nitroTrialCtaOverride = obj.useNitroTrialCtaOverride("user_profile_upsell_button");
       const items = [analyticsLocations, analyticsObject];
       const effect = react.useEffect(() => {
@@ -230,7 +230,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = AnalyticsUtilsDefault;
         obj.track(metroImportDefault.PREMIUM_UPSELL_VIEWED, obj2);
       }, items);
-      const Button = analyticsObject(5594).Button;
+      const Button = analyticsObject(5601).Button;
       if (nitroTrialCtaOverride == null) {
         nitroTrialCtaOverride = label;
       }

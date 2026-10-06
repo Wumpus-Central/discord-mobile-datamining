@@ -99,7 +99,7 @@ const memoResult = memo(
           class R {
             constructor() {
               size = Image.getSize(assetUrl, () => {
-                /* body not rendered: F144423 */
+                /* body not rendered: F144627 */
               });
               return;
             }
@@ -113,7 +113,7 @@ const memoResult = memo(
           class R {
             constructor() {
               size = Image.getSize(assetUrl, () => {
-                /* body not rendered: F144423 */
+                /* body not rendered: F144627 */
               });
               return;
             }
@@ -121,7 +121,7 @@ const memoResult = memo(
           tmp12 = cResult[8];
         }
         const effect = react.useEffect(R, tmp12);
-        const tmpResult = tmp(4612);
+        const tmpResult = tmp(4618);
         class W {
           constructor() {
             tmp = closure_0(closure_2[10]);
@@ -134,16 +134,16 @@ const memoResult = memo(
             return obj;
           }
         }
-        W.__closure = { withSpring: tmp(5597).withSpring, logoDimensionStyles: tmp6, SPRING_CONFIG };
+        W.__closure = { withSpring: tmp(5604).withSpring, logoDimensionStyles: tmp6, SPRING_CONFIG };
         W.__workletHash = 13667917221894;
         W.__initData = __initData;
-        ({ withSpring: tmp(5597).withSpring, logoDimensionStyles: tmp6, SPRING_CONFIG });
+        ({ withSpring: tmp(5604).withSpring, logoDimensionStyles: tmp6, SPRING_CONFIG });
         const animatedStyle = tmpResult.useAnimatedStyle(W);
         if (cResult[9] !== assetUrl) {
           class R {
             constructor() {
               size = Image.getSize(assetUrl, () => {
-                /* body not rendered: F144423 */
+                /* body not rendered: F144627 */
               });
               return;
             }
@@ -155,7 +155,7 @@ const memoResult = memo(
           class R {
             constructor() {
               size = Image.getSize(assetUrl, () => {
-                /* body not rendered: F144423 */
+                /* body not rendered: F144627 */
               });
               return;
             }
@@ -166,7 +166,7 @@ const memoResult = memo(
           class R {
             constructor() {
               size = Image.getSize(assetUrl, () => {
-                /* body not rendered: F144423 */
+                /* body not rendered: F144627 */
               });
               return;
             }
@@ -175,7 +175,7 @@ const memoResult = memo(
             class R {
               constructor() {
                 size = Image.getSize(assetUrl, () => {
-                  /* body not rendered: F144423 */
+                  /* body not rendered: F144627 */
                 });
                 return;
               }
@@ -185,7 +185,7 @@ const memoResult = memo(
             class R {
               constructor() {
                 size = Image.getSize(assetUrl, () => {
-                  /* body not rendered: F144423 */
+                  /* body not rendered: F144627 */
                 });
                 return;
               }
@@ -197,7 +197,7 @@ const memoResult = memo(
             class R {
               constructor() {
                 size = Image.getSize(assetUrl, () => {
-                  /* body not rendered: F144423 */
+                  /* body not rendered: F144627 */
                 });
                 return;
               }

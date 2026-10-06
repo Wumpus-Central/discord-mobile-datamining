@@ -3,8 +3,8 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react from "../../../../../_runtime/00576_react.js";
 import Constants from "../../../../Constants.tsx";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
-import _modDef15535 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import _modDef15551 from "../../../../../discord_assets/assets/checkpoint/mobile_background_texture.png.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -38,7 +38,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj4 = { uri: _modDef15535 };
+        const obj4 = { uri: _modDef15551 };
         cResult[2] = obj4;
         tmp10 = obj4;
       } else {
@@ -75,8 +75,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       items = [,];
       const obj2 = { colors, start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.background };
       items[0] = metroRequire(LinearGradientDefault, obj2);
-      const obj3 = { source: { uri: _modDef15535 }, style: tmp.background, resizeMode: "cover" };
-      ({ uri: _modDef15535 });
+      const obj3 = { source: { uri: _modDef15551 }, style: tmp.background, resizeMode: "cover" };
+      ({ uri: _modDef15551 });
       items[1] = metroRequire(Image, obj3);
       return metroImportAll(metroImportDefault, obj);
     };

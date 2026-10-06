@@ -274,7 +274,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       hasIcons: false,
     };
     ActionSheetActionCreatorsDefault;
-    const tmp2 = asyncRequire(8949, dependencyMap.paths);
+    const tmp2 = asyncRequire(8978, dependencyMap.paths);
     intl = intl11.intl;
     id = undefined;
     if (rulesChannel != null) {
@@ -301,7 +301,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       hasIcons: false,
     };
     ActionSheetActionCreatorsDefault;
-    const tmp2 = asyncRequire(8949, dependencyMap.paths);
+    const tmp2 = asyncRequire(8978, dependencyMap.paths);
     intl = intl11.intl;
     id = undefined;
     if (publicUpdatesChannel != null) {
@@ -328,7 +328,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       hasIcons: false,
     };
     ActionSheetActionCreatorsDefault;
-    const tmp2 = asyncRequire(8949, dependencyMap.paths);
+    const tmp2 = asyncRequire(8978, dependencyMap.paths);
     intl = intl11.intl;
     id = undefined;
     if (safetyAlertsChannel != null) {

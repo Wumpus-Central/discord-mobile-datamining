@@ -535,7 +535,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp9,
           children: stateFromStores,
         };
-        const tmp12 = closure_11(channel(4886).Text, obj3);
+        const tmp12 = closure_11(channel(4892).Text, obj3);
         cResult[5] = tmp9;
         cResult[6] = stateFromStores;
         cResult[7] = tmp12;
@@ -572,7 +572,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           children: stateFromStores,
         };
         obj3 = { textAlign };
-        tmp4 = closure_11(tmp(4886).Text, obj2);
+        tmp4 = closure_11(tmp(4892).Text, obj2);
       }
       return tmp4;
     };
@@ -629,7 +629,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp9,
           children: stateFromStores,
         };
-        const tmp12 = closure_11(channel(4886).Text, obj3);
+        const tmp12 = closure_11(channel(4892).Text, obj3);
         cResult[5] = tmp9;
         cResult[6] = stateFromStores;
         cResult[7] = tmp12;
@@ -657,7 +657,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
           children: stateFromStores,
         };
         obj3 = { textAlign };
-        tmp4 = closure_11(tmp(4886).Text, obj2);
+        tmp4 = closure_11(tmp(4892).Text, obj2);
       }
       return tmp4;
     };

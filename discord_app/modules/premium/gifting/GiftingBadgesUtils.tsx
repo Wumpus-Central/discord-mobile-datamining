@@ -1,7 +1,7 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
 import react2 from "../../../../_runtime/00576_react.js";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef2589 from "GiftingBadge.messages.js";
+import _modDef2617 from "GiftingBadge.messages.js";
 import BadgeId from "../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryStore2 from "../../badges/BadgeDirectoryStore.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
@@ -118,7 +118,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const GiftingBadgeExperiment = tmp(10471).GiftingBadgeExperiment;
+      const GiftingBadgeExperiment = tmp(10484).GiftingBadgeExperiment;
       const enabled2 = GiftingBadgeExperiment.useConfig(tmp5).enabled;
       let str = "-DISABLED";
       let str2 = "-DISABLED";
@@ -134,7 +134,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const GiftingBadgeDesktopExperiment = tmp(10476).GiftingBadgeDesktopExperiment;
+      const GiftingBadgeDesktopExperiment = tmp(10489).GiftingBadgeDesktopExperiment;
       let enabled3 = GiftingBadgeDesktopExperiment.useConfig(tmp8).enabled;
       let tmp9 = enabled2;
       if ("web" === platform) {
@@ -155,7 +155,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp11 = cResult[5];
       }
-      const GiftingBadgeCoachmarkAudienceExperiment = tmp(10478).GiftingBadgeCoachmarkAudienceExperiment;
+      const GiftingBadgeCoachmarkAudienceExperiment = tmp(10491).GiftingBadgeCoachmarkAudienceExperiment;
       const enabled4 = GiftingBadgeCoachmarkAudienceExperiment.useConfig(tmp11).enabled;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
@@ -296,7 +296,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp4 = enabled3;
       }
-      const GiftingBadgeCoachmarkAudienceExperiment = tmp(10478).GiftingBadgeCoachmarkAudienceExperiment;
+      const GiftingBadgeCoachmarkAudienceExperiment = tmp(10491).GiftingBadgeCoachmarkAudienceExperiment;
       const useConfig2 = GiftingBadgeCoachmarkAudienceExperiment.useConfig;
       if (tmp4) {
         str = "";
@@ -385,7 +385,7 @@ export const getGiftingBadgeAccessibilityLabel = function getGiftingBadgeAccessi
     str = "";
   }
   const intl = intl2.intl;
-  return "" + str + ", " + intl.formatToPlainString(_modDef2589.qvx9E4, { count });
+  return "" + str + ", " + intl.formatToPlainString(_modDef2617.qvx9E4, { count });
 };
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(
   badgeProgress,

@@ -16,7 +16,7 @@ let _require, importDefault;
 
 let _slicedToArray = _slicedToArray_mod;
 const jsx = Fragment.jsx;
-const useVideoStateStore = module_570.create(() => ({ controls: "Set", paused: true }));
+const useVideoStateStore = module_570.create(() => ({ controls: "Reflect", paused: true }));
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? ((arg0, portal, controls) => {
   let closure_0;
@@ -212,7 +212,7 @@ export const initVideoStateStore = function initVideoStateStore() {
   let state;
   const obj = react_native;
   obj.batchUpdates(() => {
-    state.setState({ controls: "Set", paused: true });
+    state.setState({ controls: "Reflect", paused: true });
   });
 };
 export const setMuted = function setMuted(isMuted) {

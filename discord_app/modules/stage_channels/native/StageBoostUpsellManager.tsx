@@ -49,7 +49,7 @@ class StageBoostUpsellManager extends AutomaticLifecycleManager {
                 if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                   const obj2 = { channel };
                   const obj3 = ActionSheetActionCreatorsDefault;
-                  obj3.openLazy(asyncRequire(5587, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
+                  obj3.openLazy(asyncRequire(5594, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj2);
                   c8 = true;
                 }
               }

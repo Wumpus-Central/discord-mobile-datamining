@@ -10,7 +10,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let c5, c6, closure_3, guildId;
 
-const f94400 = () => {
+const f94540 = () => {
   let obj = DatabaseDaosDefault;
   const databaseResult = obj.database();
   if (databaseResult != null) {
@@ -49,7 +49,7 @@ class NonGuildVersions {
     if (obj.isCacheEnabled()) {
       const addChangeListener = SelectedGuildStore.addChangeListener;
       let obj2 = _modDef12;
-      addChangeListener(obj2.throttle(f94400, 10 * DurationsDefault.Millis.SECOND));
+      addChangeListener(obj2.throttle(f94540, 10 * DurationsDefault.Millis.SECOND));
     }
     return obj3;
   }
@@ -164,7 +164,7 @@ obj.actions = {
 if (isCacheEnabled.isCacheEnabled()) {
   let addChangeListener = SelectedGuildStore.addChangeListener;
   const importDefaultResult1 = _modDef12;
-  addChangeListener(importDefaultResult1.throttle(f94400, 10 * DurationsDefault.Millis.SECOND));
+  addChangeListener(importDefaultResult1.throttle(f94540, 10 * DurationsDefault.Millis.SECOND));
 }
 let result = size.fileFinishedImporting("modules/app_database/modules/NonGuildVersions.tsx");
 

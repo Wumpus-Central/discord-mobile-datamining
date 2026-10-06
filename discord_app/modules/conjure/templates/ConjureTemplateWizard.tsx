@@ -1,29 +1,42 @@
 // discord_app/modules/conjure/templates/ConjureTemplateWizard.tsx
 import intl3 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/templates/ConjureTemplateWizard.tsx");
 
-export const conjureWizardNeedsServerStep = function conjureWizardNeedsServerStep(guildId, stateFromStores) {
+export const conjureWizardServerStep = function conjureWizardServerStep(guildId, stateFromStores) {
   let closure_0 = guildId;
-  return !stateFromStores.some((id) => id.id === guildId);
+  let str = "none";
+  if (0 !== stateFromStores.length) {
+    let str2 = "pick";
+    if (stateFromStores.some((id) => id.id === guildId)) {
+      str2 = "skip";
+    }
+    str = str2;
+  }
+  return str;
 };
 export const conjureTemplateWizardSteps = function conjureTemplateWizardSteps(result1, first1) {
-  let items1;
-  const obj = { length: Math.max(1, result1.length) };
-  const arr = Array.from(obj, (arg0, index) => ({ kind: "question", index }));
-  const tmp3 = first1;
-  if (tmp3) {
-    const items = ["about", "server"];
-    HermesBuiltin.arraySpread(items, arr, 2);
-    items1 = items;
+  if ("none" === first1) {
+    return ["server"];
   } else {
-    items1 = ["about"];
-    HermesBuiltin.arraySpread(items1, arr, 1);
+    let items1;
+    const _Array = Array;
+    const _Math = Math;
+    const obj = { length: Math.max(1, result1.length) };
+    const fromResult = from(obj, (arg0, index) => ({ kind: "question", index }));
+    if ("pick" === first1) {
+      const items = ["about", "server"];
+      HermesBuiltin.arraySpread(items, fromResult, 2);
+      items1 = items;
+    } else {
+      items1 = ["about"];
+      HermesBuiltin.arraySpread(items1, fromResult, 1);
+    }
+    return items1;
   }
-  return items1;
 };
 export const canLeaveConjureWizardQuestion = function canLeaveConjureWizardQuestion(result1, arg1) {
   let tmp = null != result1;
@@ -44,7 +57,7 @@ export const conjureTemplateStartMessage = function conjureTemplateStartMessage(
   const intl = intl3.intl;
   const formatToPlainString = intl.formatToPlainString;
   const obj = { templateName: name, locale: intl3.intl.currentLocale };
-  const prop = _modDef3723["/qSx7+"];
+  const prop = _modDef3753["/qSx7+"];
   return formatToPlainString(prop, obj);
 };
 export const conjureTemplateWizardGuilds = function conjureTemplateWizardGuilds(
@@ -115,7 +128,7 @@ export const conjureWizardServerCopy = function conjureWizardServerCopy(stateFro
     server = stateFromStores1.server;
   }
   if (server == null) {
-    const obj = { title: intl.string(_modDef3723.vcxYIA), hint: intl2.string(_modDef3723.auUHPZ) };
+    const obj = { title: intl.string(_modDef3753.vcxYIA), hint: intl2.string(_modDef3753.auUHPZ) };
     intl = intl3.intl;
     intl2 = intl3.intl;
     server = obj;

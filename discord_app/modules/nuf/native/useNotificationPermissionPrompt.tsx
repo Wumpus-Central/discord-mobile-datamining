@@ -55,9 +55,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp14 = cResult[7];
         }
         const effect = react.useEffect(tmp13, tmp14);
-        const tmpResult5 = stateFromStores(16466);
+        const tmpResult5 = stateFromStores(16506);
         const guildOpenNudge = tmpResult5.useGuildOpenNudge();
-        const tmpResult6 = stateFromStores(16470);
+        const tmpResult6 = stateFromStores(16510);
         const postCallDisconnectNudge = tmpResult6.usePostCallDisconnectNudge();
       }
       class N {
@@ -108,9 +108,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items2);
-      const obj3 = stateFromStores(16466);
+      const obj3 = stateFromStores(16506);
       const guildOpenNudge = obj3.useGuildOpenNudge();
-      const obj4 = stateFromStores(16470);
+      const obj4 = stateFromStores(16510);
       const postCallDisconnectNudge = obj4.usePostCallDisconnectNudge();
     };
 const result = size.fileFinishedImporting("modules/nuf/native/useNotificationPermissionPrompt.tsx");

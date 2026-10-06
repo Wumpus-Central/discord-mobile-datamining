@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/live_reload/conjureLiveReloadStatus.tsx
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 function liveReloadProgress(phase, step) {
@@ -51,9 +51,9 @@ function liveReloadProgress(phase, step) {
     const intl = intl4.intl;
     string = intl.string;
     if ("enable" === tmp4) {
-      NeoP8L = _modDef3723.NeoP8L;
+      NeoP8L = _modDef3753.NeoP8L;
     } else {
-      NeoP8L = _modDef3723["3+DCLs"];
+      NeoP8L = _modDef3753["3+DCLs"];
     }
     stringResult = null;
     if (null != str6) {
@@ -73,15 +73,15 @@ let closure_3 = {
   disable: ["snapshot", "stopping", "reload"],
 };
 let obj = {
-  sandbox: _modDef3723.wYBwzU,
-  files: _modDef3723["5hvVF1"],
-  packages: _modDef3723.DKR23W,
-  prepare: _modDef3723.qc4VkW,
-  build: _modDef3723.ZcJIE6,
-  server: _modDef3723.mAXkyS,
-  stopping: _modDef3723.dI8HGD,
-  snapshot: _modDef3723.E3ZRQo,
-  reload: _modDef3723.ZWcCXh,
+  sandbox: _modDef3753.wYBwzU,
+  files: _modDef3753["5hvVF1"],
+  packages: _modDef3753.DKR23W,
+  prepare: _modDef3753.qc4VkW,
+  build: _modDef3753.ZcJIE6,
+  server: _modDef3753.mAXkyS,
+  stopping: _modDef3753.dI8HGD,
+  snapshot: _modDef3753.E3ZRQo,
+  reload: _modDef3753.ZWcCXh,
 };
 const result = size.fileFinishedImporting("modules/conjure/live_reload/conjureLiveReloadStatus.tsx");
 
@@ -117,7 +117,7 @@ export function liveReloadSettledDirection(arg0, arg1) {
 export { liveReloadProgress };
 export const liveReloadDescription = function liveReloadDescription(stateFromStores) {
   const intl = intl4.intl;
-  const stringResult = intl.string(_modDef3723.xjblZt);
+  const stringResult = intl.string(_modDef3753.xjblZt);
   if ("error" !== stateFromStores.phase) {
     let combined;
     const tmp6 = liveReloadProgress(stateFromStores.phase, stateFromStores.step);
@@ -137,7 +137,7 @@ export const liveReloadDescription = function liveReloadDescription(stateFromSto
         if (stateFromStores.enabled) {
           const intl2 = intl4.intl;
           const _HermesInternal = HermesInternal;
-          combined = "" + intl2.string(_modDef3723.gCey7s) + " \u00B7 " + stringResult;
+          combined = "" + intl2.string(_modDef3753.gCey7s) + " \u00B7 " + stringResult;
         }
       }
     }
@@ -146,7 +146,7 @@ export const liveReloadDescription = function liveReloadDescription(stateFromSto
   const intl3 = intl4.intl;
   const formatToPlainString = intl3.formatToPlainString;
   const enabled = stateFromStores.enabled;
-  const tmp3Result = _modDef3723;
+  const tmp3Result = _modDef3753;
   let error = stateFromStores.error;
   const tmp11 = enabled ? tmp3Result["9YJAIN"] : tmp3Result.JUqlqE;
   if (error == null) {

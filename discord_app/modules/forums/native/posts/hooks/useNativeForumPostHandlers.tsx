@@ -48,7 +48,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       threadId = threadId.threadId;
       let NORMAL = threadId.reactionType;
       if (undefined === NORMAL) {
-        NORMAL = tmp(7259).ReactionTypes.NORMAL;
+        NORMAL = tmp(7272).ReactionTypes.NORMAL;
       }
       if (cResult[0] !== threadId) {
         const fn = function h(containerRef) {
@@ -486,7 +486,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let NORMAL = threadId.reactionType;
       if (NORMAL === undefined) {
         let tmp = threadId;
-        NORMAL = threadId(7259).ReactionTypes.NORMAL;
+        NORMAL = threadId(7272).ReactionTypes.NORMAL;
       }
       const items = [threadId];
       const items1 = [threadId];

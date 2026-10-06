@@ -2,11 +2,11 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
-import _modDef6052 from "../../../../_runtime/metro/06052__.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import _modDef6059 from "../../../../_runtime/metro/06059__.js";
 import Constants2 from "../../user_profile/native/Constants.tsx";
 import UserProfileSharedStyles from "../../user_profile/native/UserProfileSharedStyles.tsx";
-import _mod8594 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import _mod8629 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -247,7 +247,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                               };
                                               ({ START: obj20.start, END: obj20.end } = HorizontalGradient);
                                               items2 = [,];
-                                              const tmp53 = _modDef6052;
+                                              const tmp53 = _modDef6059;
                                               items2[0] = metroImportAll(LinearGradientDefault, obj11);
                                               const obj12 = { style: tmp4.heroImageMaskRemainder };
                                               items2[1] = metroImportAll(metroRequire, obj12);
@@ -310,7 +310,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         cResult[32] = tmp34;
                         tmp31 = tmp34;
                       }
-                      const items5 = [_mod8594.ResolvedValueType.MEDIA];
+                      const items5 = [_mod8629.ResolvedValueType.MEDIA];
                       const fieldValue = resolveFieldValue(image, items5);
                       cResult[16] = resolveFieldValue;
                       cResult[17] = image;
@@ -318,7 +318,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp16 = fieldValue;
                     }
                   }
-                  const tmpResult5 = _mod8594;
+                  const tmpResult5 = _mod8629;
                   const textComponentValues = tmpResult5.resolveTextComponentValues(
                     topConfig.components.subtitle_3,
                     resolveFieldValue,
@@ -331,7 +331,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp13 = textComponentValues;
                 }
               }
-              const tmpResult6 = _mod8594;
+              const tmpResult6 = _mod8629;
               const textComponentValues1 = tmpResult6.resolveTextComponentValues(
                 topConfig.components.subtitle_2,
                 resolveFieldValue,
@@ -344,7 +344,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               tmp11 = textComponentValues1;
             }
           }
-          const tmpResult7 = _mod8594;
+          const tmpResult7 = _mod8629;
           const textComponentValues2 = tmpResult7.resolveTextComponentValues(
             topConfig.components.subtitle_1,
             resolveFieldValue,
@@ -357,7 +357,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = textComponentValues2;
         }
       }
-      const tmpResult8 = _mod8594;
+      const tmpResult8 = _mod8629;
       const textComponentValues3 = tmpResult8.resolveTextComponentValues(
         topConfig.components.title,
         resolveFieldValue,
@@ -392,20 +392,20 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_11();
       [tmp3, c0] = react.useState(null);
       _slicedToArray(react.useState(null), 2);
-      const obj = _mod8594;
+      const obj = _mod8629;
       const textComponentValues = obj.resolveTextComponentValues(
         topConfig.components.title,
         resolveFieldValue,
         numberFormat,
         true,
       );
-      const obj2 = _mod8594;
+      const obj2 = _mod8629;
       const textComponentValues1 = obj2.resolveTextComponentValues(
         topConfig.components.subtitle_1,
         resolveFieldValue,
         numberFormat,
       );
-      const obj3 = _mod8594;
+      const obj3 = _mod8629;
       const textComponentValues2 = obj3.resolveTextComponentValues(
         topConfig.components.subtitle_2,
         resolveFieldValue,
@@ -413,7 +413,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const hero_image = topConfig.components.hero_image;
       let image;
-      const obj4 = _mod8594;
+      const obj4 = _mod8629;
       const textComponentValues3 = obj4.resolveTextComponentValues(
         topConfig.components.subtitle_3,
         resolveFieldValue,
@@ -422,7 +422,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (hero_image != null) {
         image = hero_image.fields.image;
       }
-      const items = [_mod8594.ResolvedValueType.MEDIA];
+      const items = [_mod8629.ResolvedValueType.MEDIA];
       const fieldValue = resolveFieldValue(image, items);
       const obj5 = { style: tmp.root, children: items1 };
       items1 = [header, ,];
@@ -490,7 +490,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj14 = { start: null, end: null, colors, style: tmp.heroImageFadeGradient };
           ({ START: obj16.start, END: obj16.end } = HorizontalGradient);
           items5 = [,];
-          const tmp21 = _modDef6052;
+          const tmp21 = _modDef6059;
           items5[0] = metroImportAll(LinearGradientDefault, obj14);
           const obj15 = { style: tmp.heroImageMaskRemainder };
           items5[1] = metroImportAll(metroRequire, obj15);

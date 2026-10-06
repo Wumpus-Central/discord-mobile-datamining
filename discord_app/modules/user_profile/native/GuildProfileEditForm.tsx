@@ -62,7 +62,7 @@ function EditGuildProfileBanner(user) {
   const tmp3 = useAnalyticsLocationsDefault;
   const analyticsLocations = tmp3(AnalyticsLocationDefault.EDIT_BANNER).analyticsLocations;
   let obj2 = { value: analyticsLocations, children: closure_17(tmp6, obj3) };
-  const AnalyticsLocationProvider = user(6657).AnalyticsLocationProvider;
+  const AnalyticsLocationProvider = user(6664).AnalyticsLocationProvider;
   obj3 = {
     user,
     displayProfile,
@@ -91,7 +91,7 @@ function EditGuildProfileBanner(user) {
           },
         };
         ActionSheetActionCreatorsDefault;
-        const tmp14 = asyncRequire(14418, dependencyMap.paths);
+        const tmp14 = asyncRequire(14434, dependencyMap.paths);
         dependencyMap = undefined;
         showRemoveBanner = ProfileCustomizationUtils.showRemoveBanner;
         ProfileCustomizationUtils;

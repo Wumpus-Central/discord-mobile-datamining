@@ -686,7 +686,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[9] !== tmp20) {
             let selectedRoleIds;
             if (null != tmp20) {
-              const tmpResult4 = guildId(6601);
+              const tmpResult4 = guildId(6608);
               selectedRoleIds = tmpResult4.getSelectedRoleIds(tmp20);
             } else {
               const _Set = Set;
@@ -703,7 +703,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[11] !== tmp20) {
             let selectedChannelIds;
             if (null != tmp20) {
-              const tmpResult5 = guildId(6601);
+              const tmpResult5 = guildId(6608);
               selectedChannelIds = tmpResult5.getSelectedChannelIds(tmp20);
             } else {
               const _Set2 = Set;
@@ -726,9 +726,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[16] === tmp23) {
                   tmp27 = cResult[17];
                 }
-                ({ helpText, helpTextAdditional } = selectedOptionIds(6620)(tmp27));
-                selectedOptionIds(6620)(tmp27);
-                const tmpResult6 = guildId(4580);
+                ({ helpText, helpTextAdditional } = selectedOptionIds(6627)(tmp27));
+                selectedOptionIds(6627)(tmp27);
+                const tmpResult6 = guildId(4586);
                 const token = tmpResult6.useToken(selectedOptionIds(587).colors.BACKGROUND_BASE_LOWER);
                 if (cResult[18] !== token) {
                   const obj7 = selectedOptionIds(683)(token);
@@ -842,7 +842,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                             onPress: handleOnPress,
                             disabled: tmp14,
                           };
-                          const tmp50 = closure_15(guildId(5594).Button, obj4);
+                          const tmp50 = closure_15(guildId(5601).Button, obj4);
                           cResult[37] = tmp12;
                           cResult[38] = tmp14;
                           cResult[39] = handleOnPress;
@@ -859,7 +859,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                           children: items4,
                         };
                         items4 = [helpText, " ", helpTextAdditional];
-                        tmp46 = closure_16(tmp(4886).Text, obj5);
+                        tmp46 = closure_16(tmp(4892).Text, obj5);
                       } else {
                         tmp46 = null;
                       }
@@ -877,7 +877,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                         color: "text-default",
                         children: intl2.string(guildId(1126).t.dA1dSf),
                       };
-                      const Text = tmp(4886).Text;
+                      const Text = tmp(4892).Text;
                       intl2 = tmp(1126).intl;
                       tmp43 = closure_15(Text, obj6);
                     }
@@ -893,7 +893,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                     colors: tmp36,
                     pointerEvents: "none",
                   };
-                  const tmp29Result = selectedOptionIds(5605);
+                  const tmp29Result = selectedOptionIds(5612);
                   const tmp41 = closure_15(tmp29Result, obj8);
                   cResult[27] = tmp36;
                   cResult[28] = tmp37;
@@ -1625,7 +1625,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[13] !== option.title) {
                 const obj5 = { variant: "text-md/semibold", children: option.title };
-                const tmp24 = closure_15(option(4886).Text, obj5);
+                const tmp24 = closure_15(option(4892).Text, obj5);
                 cResult[13] = option.title;
                 cResult[14] = tmp24;
                 tmp22 = tmp24;
@@ -1723,7 +1723,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1 = [closure_15(closure_6, obj3)];
       const obj7 = { variant: "text-md/semibold", children: option.title };
-      items1[1] = closure_15(tmp2(4886).Text, obj7);
+      items1[1] = closure_15(tmp2(4892).Text, obj7);
       return closure_16(closure_6, obj2);
     };
 size = size_mod;
@@ -1790,7 +1790,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
         return selectOption(id, id2, flag);
       },
     };
-    obj.openLazy(asyncRequire(6630, dependencyMap.paths), "DropdownOptions", obj2);
+    obj.openLazy(asyncRequire(6637, dependencyMap.paths), "DropdownOptions", obj2);
   }, items2);
   items4 = [closure_15(closure_20, { currentPrompt, numberOfPrompts, currentPromptIndex })];
   let tmp11Result = 0 === found.length;

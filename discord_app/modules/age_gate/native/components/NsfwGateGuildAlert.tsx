@@ -2,8 +2,8 @@
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import AgeRestrictedContentSettingsUtils from "../../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import Constants2 from "Constants.tsx";
+import AgeRestrictedContentSettingsUtils from "../../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -241,7 +241,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             track(GUILD_NSFW_GATE_VIEWED, obj);
           }
         }
-        const AlertActionButton = tmp(5713).AlertActionButton;
+        const AlertActionButton = tmp(5720).AlertActionButton;
         const intl2 = tmp(1126).intl;
         const tmp15 = (
           <AlertActionButton
@@ -333,8 +333,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const items1 = [tmp14];
-        const AlertModal = tmp(5713).AlertModal;
-        const AlertActionButton2 = tmp(5713).AlertActionButton;
+        const AlertModal = tmp(5720).AlertModal;
+        const AlertActionButton2 = tmp(5720).AlertActionButton;
         const intl3 = tmp(1126).intl;
         items1[1] = <AlertActionButton2 key="dismiss" variant="secondary" text={intl3.string(tmp(1126).t.WAI6xu)} />;
         const tmp17 = <AlertModal title={tmp10} content={tmp11} actions={items1} />;
@@ -418,10 +418,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         track(GUILD_NSFW_GATE_VIEWED, obj);
       }, items);
-      const AlertModal = guildId(5713).AlertModal;
+      const AlertModal = guildId(5720).AlertModal;
       const intl = guildId(1126).intl;
       const intl2 = guildId(1126).intl;
-      const AlertActionButton = guildId(5713).AlertActionButton;
+      const AlertActionButton = guildId(5720).AlertActionButton;
       const intl3 = guildId(1126).intl;
       const items1 = [
         <AlertActionButton
@@ -435,7 +435,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }}
         />,
       ];
-      const AlertActionButton2 = guildId(5713).AlertActionButton;
+      const AlertActionButton2 = guildId(5720).AlertActionButton;
       const intl4 = guildId(1126).intl;
       items1[1] = <AlertActionButton2 key="dismiss" variant="secondary" text={intl4.string(guildId(1126).t.WAI6xu)} />;
       return (

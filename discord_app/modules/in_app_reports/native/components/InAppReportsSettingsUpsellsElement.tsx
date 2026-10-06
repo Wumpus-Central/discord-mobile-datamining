@@ -63,7 +63,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[1];
       }
-      trackSettingsUpsellsAction(5590)(tmp6);
+      trackSettingsUpsellsAction(5597)(tmp6);
       const tmp7 = trackSettingsUpsellsAction;
       if (cResult[2] === onButtonClick) {
         let tmp9;
@@ -73,7 +73,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp13 = closure_9(onButtonClick(6883).SettingsIcon, {});
+          const tmp13 = closure_9(onButtonClick(6893).SettingsIcon, {});
           cResult[5] = tmp13;
           tmp11 = tmp13;
         } else {
@@ -93,7 +93,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { title, disabledTitle, description, disabled: tmp5, onPress: tmp9, icon: tmp11 };
-        const tmp16 = closure_9(tmp7(12713), obj2);
+        const tmp16 = closure_9(tmp7(12728), obj2);
         cResult[6] = description;
         cResult[7] = disabledTitle;
         cResult[8] = tmp5;

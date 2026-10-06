@@ -48,7 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       let tmp8 = null;
       if (stateFromStores) {
-        tmp8 = userProfileLiveActivities(10611)(arg0);
+        tmp8 = userProfileLiveActivities(10624)(arg0);
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [PresenceStore];
@@ -142,7 +142,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores2 != null) {
         const entries1 = stateFromStores2.entries;
         found = entries1.filter((extra) => {
-          const f142912 = (item) => {
+          const f143114 = (item) => {
             let result = null != item;
             if (result) {
               const obj = closure_2_0(closure_2_2[12]);
@@ -158,8 +158,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             let result;
             const tmpResult = ContentInventoryTypes;
             if (tmpResult.isListenedSessionEntry(extra)) {
-              result = extra.extra.entries.length > 0 && !userProfileLiveActivities.some(f142912);
-              const tmp7 = extra.extra.entries.length > 0 && !userProfileLiveActivities.some(f142912);
+              result = extra.extra.entries.length > 0 && !userProfileLiveActivities.some(f143114);
+              const tmp7 = extra.extra.entries.length > 0 && !userProfileLiveActivities.some(f143114);
             } else {
               const tmpResult3 = ContentInventoryTypes;
               if (tmpResult3.isWatchedMediaEntry(extra)) {
@@ -224,7 +224,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores2 != null) {
           const entries = stateFromStores2.entries;
           found = entries.filter((extra) => {
-            const f152745 = (item) => {
+            const f152978 = (item) => {
               let result = null != item;
               if (result) {
                 const obj = userProfileLiveActivities(closure_2_2[12]);
@@ -240,8 +240,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               let result;
               const tmpResult = closure_2_0(stateFromStores2[11]);
               if (tmpResult.isListenedSessionEntry(extra)) {
-                result = extra.extra.entries.length > 0 && !userProfileLiveActivities.some(f152745);
-                const tmp7 = extra.extra.entries.length > 0 && !userProfileLiveActivities.some(f152745);
+                result = extra.extra.entries.length > 0 && !userProfileLiveActivities.some(f152978);
+                const tmp7 = extra.extra.entries.length > 0 && !userProfileLiveActivities.some(f152978);
               } else {
                 const tmpResult3 = closure_2_0(stateFromStores2[11]);
                 if (tmpResult3.isWatchedMediaEntry(extra)) {

@@ -50,7 +50,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { value: none, label: intl.string(require("intl").t.fUdMeO), icon: null };
         intl = tmp2(1126).intl;
         ({ IconComponent: require("DenyIcon").DenyIcon });
-        const TableRowIcon = tmp2(5999).TableRowIcon;
+        const TableRowIcon = tmp2(6006).TableRowIcon;
         cResult[1] = obj2;
         tmp8 = obj2;
       } else {
@@ -60,7 +60,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { value: BLUR_BACKGROUND_OPTION, label: intl2.string(require("intl").t.LhSyL8), icon: null };
         intl2 = tmp2(1126).intl;
         ({ IconComponent: require("BlurBackgroundIcon").BlurBackgroundIcon });
-        const TableRowIcon2 = tmp2(5999).TableRowIcon;
+        const TableRowIcon2 = tmp2(6006).TableRowIcon;
         cResult[2] = obj4;
         tmp11 = obj4;
       } else {

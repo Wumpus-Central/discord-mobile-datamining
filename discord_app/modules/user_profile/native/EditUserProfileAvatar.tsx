@@ -127,7 +127,7 @@ export default function EditUserProfileAvatar(user) {
       handleEditAvatarDecorationSelect: fn,
       showRemoveAvatar: tmp3Result.showRemoveAvatar(pendingAvatar, user.avatar),
     };
-    const tmp4 = asyncRequire(14437, dependencyMap.paths);
+    const tmp4 = asyncRequire(14453, dependencyMap.paths);
     if (!flag) {
       fn = () => {
         const obj = user(flag2[16]);

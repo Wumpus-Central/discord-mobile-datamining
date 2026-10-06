@@ -6,8 +6,8 @@ import DraftStore from "../../../stores/DraftStore.tsx";
 import ApplicationCommandTypes from "../ApplicationCommandTypes.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../../actions/UploadAttachmentActionCreators.tsx";
 import showUploadPreviewActionSheetDefault from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import AssetRegistryDefault2 from "../../../../_runtime/11861_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/11862_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/11875_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/11876_AssetRegistry.js";
 import UploadAttachmentStore from "../../../stores/UploadAttachmentStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

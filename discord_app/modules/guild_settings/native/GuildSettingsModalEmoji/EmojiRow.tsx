@@ -10,7 +10,7 @@ import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnab
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
 import showEmojiOverflowActionSheetDefault from "../showEmojiOverflowActionSheet.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/17739_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/17785_AssetRegistry.js";
 import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react_mod from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";

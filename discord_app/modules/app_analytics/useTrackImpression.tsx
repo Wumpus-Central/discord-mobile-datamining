@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtils2 from "../../utils/AnalyticsUtils.tsx";
 import _modDef1342 from "../../../_runtime/metro/01342__.js";
 import AppAnalyticsUtils from "AppAnalyticsUtils.tsx";
-import uniqueIdDefault from "../../../_runtime/05094_uniqueId.js";
+import uniqueIdDefault from "../../../_runtime/05100_uniqueId.js";
 import useMountEffectDefault from "../../hooks/useMountEffect.tsx";
 import react_mod from "../../../_runtime/00019_react.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -196,7 +196,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       react = undefined;
       react = react.useRef(undefined);
       const ref2 = react.useRef(undefined);
-      const tmp = obj(5590)(() => {
+      const tmp = obj(5597)(() => {
         if (obj.trackOnInitialLoad) {
           let fn;
           const tmp6 = _modDef1342(ref.current, current);

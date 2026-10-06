@@ -3,7 +3,7 @@ import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04810_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04816_AssetRegistry.js";
 import LegacyTokens from "../../../design/migrations/native/LegacyTokens.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import react from "../../../../_runtime/00019_react.js";

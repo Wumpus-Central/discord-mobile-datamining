@@ -44,7 +44,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp10;
         tmp7 = tmp10;
       }
-      const tmp6 = jsx(navigation(10593), {
+      const tmp6 = jsx(navigation(10606), {
         onSelectUser(arg0) {
           setRecipientUser(arg0);
           navigation.navigate(UnifiedGiftModalTypes.UnifiedGiftModalScreens.GIFT_DETAIL, undefined, { pop: true });

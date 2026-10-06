@@ -1,8 +1,8 @@
 // discord_common/js/packages/time-utils/TimeUtils.tsx
 import navigationStart from "../performance-utils/index.js";
-import createFindDefault from "../../../../_runtime/04921_createFind.js";
+import createFindDefault from "../../../../_runtime/04927_createFind.js";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
-import 04920__ from "../../../../_runtime/metro/04920__.js";
+import 04926__ from "../../../../_runtime/metro/04926__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let c2, c3, importDefault, max;
@@ -584,11 +584,11 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
     max = max.max;
     return max.unit === obj.NONE && rounded === max || rounded < max;
   });
-  const tmp2 = createFindDefault(items, (unit) => f89672(unit.unit), findIndexResult);
+  const tmp2 = createFindDefault(items, (unit) => f89810(unit.unit), findIndexResult);
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = items.find((unit) => f89672(unit.unit));
+    const found = items.find((unit) => f89810(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -604,16 +604,16 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
   } else {
     let unit;
     closure_0 = rounded;
-    const f89672 = (dependencyMap) => closure_0.includes(dependencyMap);
+    const f89810 = (dependencyMap) => closure_0.includes(dependencyMap);
     const findIndexResult = items.findIndex((max) => {
       max = max.max;
       return max.unit === obj.NONE && rounded === max || rounded < max;
     });
-    const tmp11 = f89672(4921)(items, (unit) => f89672(unit.unit), findIndexResult);
+    const tmp11 = f89810(4927)(items, (unit) => f89810(unit.unit), findIndexResult);
     if (null != tmp11) {
       unit = tmp11.unit;
     } else {
-      const found = items.find((unit) => f89672(unit.unit));
+      const found = items.find((unit) => f89810(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

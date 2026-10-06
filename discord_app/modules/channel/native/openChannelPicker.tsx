@@ -37,7 +37,7 @@ export default function openChannelPicker(onClose) {
   const obj = { header: obj2, guild, channels: found.map((channel) => channel.channel), selectedChannel };
   obj2 = { title: intl.string(intl2.t.r2ptsz), onClose };
   ActionSheetActionCreatorsDefault;
-  const tmp4 = asyncRequire(12103, dependencyMap.paths);
+  const tmp4 = asyncRequire(12118, dependencyMap.paths);
   intl = intl2.intl;
   found = items.filter(filterFn);
   const merged1 = Object.assign(merged);

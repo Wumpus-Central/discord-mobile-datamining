@@ -2,13 +2,13 @@
 import inject from "inject.tsx";
 import VideoQualityManager from "../VideoQualityManager.tsx";
 import discord_common_BaseConnectionEvent from "../BaseConnectionEvent.tsx";
-import cloneDeepDefault from "../../../../../_runtime/04963_cloneDeep.js";
+import cloneDeepDefault from "../../../../../_runtime/04969_cloneDeep.js";
 import VideoCodecUtils from "../utils/VideoCodecUtils.tsx";
 import transformStatsDefault from "transformStats.tsx";
-import isEqualDefault from "../../../../../_runtime/05010_isEqual.js";
+import isEqualDefault from "../../../../../_runtime/05016_isEqual.js";
 import discord_common_VoiceEngine from "VoiceEngine.tsx";
-import reduceDefault from "../../../../../_runtime/05012_reduce.js";
-import clampDefault from "../../../../../_runtime/05015_clamp.js";
+import reduceDefault from "../../../../../_runtime/05018_reduce.js";
+import clampDefault from "../../../../../_runtime/05021_clamp.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import Constants_mod from "../Constants.tsx";
 import Constants_mod2 from "Constants.tsx";
@@ -1018,7 +1018,7 @@ class Connection extends BaseConnection {
       resolved = Promise.resolve(null);
     } else {
       const tmp = self;
-      const tmp3 = self(5007);
+      const tmp3 = self(5013);
       self = this;
       const self2 = this;
       const timeout = tmp3.timeout;
@@ -1064,7 +1064,7 @@ class Connection extends BaseConnection {
           );
         }
       });
-      const timeoutResult = timeout(promise, self(4956).STATS_INTERVAL);
+      const timeoutResult = timeout(promise, self(4962).STATS_INTERVAL);
       resolved = timeoutResult.catch((error) => {
         if (!(error instanceof self(dependencyMap[8]).TimeoutError)) {
           throw error;

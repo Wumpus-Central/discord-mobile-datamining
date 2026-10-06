@@ -39,7 +39,7 @@ function handleDeletedEntityIds(guild_id) {
         let obj3;
         if (!set.has(id)) {
           const obj2 = { type: "CHANNEL_DELETE", channel: obj3 };
-          obj3 = { guild_id: guild_id2, id, parent_id: "r" };
+          obj3 = { guild_id: guild_id2, id, parent_id: "Array" };
           const obj = guild_id(closure_2_1[8]);
           obj.dispatch(obj2);
         }
@@ -47,7 +47,6 @@ function handleDeletedEntityIds(guild_id) {
     }
     if (null != guild_id.roles) {
       guild_id = tmp.guild_id;
-      let tmp2 = globalThis;
       const _Set = Set;
       const self = this;
       const self2 = this;
@@ -212,8 +211,8 @@ function handleGuildCreate(guild) {
     );
   }
 }
-let tmp2 = new LoggerDefault("EntityVersionsManager");
-let closure_8 = tmp2;
+let closure_8 = new LoggerDefault("EntityVersionsManager");
+const tmp2 = new LoggerDefault("EntityVersionsManager");
 class EntityVersionsManager extends AutomaticLifecycleManager {
   constructor() {
     const applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);

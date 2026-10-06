@@ -58,7 +58,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const layoutEffect = react.useLayoutEffect(tmp6, tmp7);
         const container = tmp4.container;
         if (cResult[4] !== tmp4.header) {
-          const obj3 = { source: navigation(12404), style: tmp4.header };
+          const obj3 = { source: navigation(12419), style: tmp4.header };
           const tmp14 = closure_6(closure_5, obj3);
           cResult[4] = tmp4.header;
           cResult[5] = tmp14;
@@ -115,7 +115,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[15] !== onClose) {
             const obj6 = { size: "lg", text: tmp26, onPress: onClose };
-            const tmp30 = closure_6(onClose(5594).Button, obj6);
+            const tmp30 = closure_6(onClose(5601).Button, obj6);
             cResult[15] = onClose;
             cResult[16] = tmp30;
             tmp28 = tmp30;
@@ -159,7 +159,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp31 = tmp34;
         }
         const obj9 = { style: description, variant: "text-sm/medium", color: "text-default", children: tmp21 };
-        const tmp25 = closure_6(onClose(4886).Text, obj9);
+        const tmp25 = closure_6(onClose(4892).Text, obj9);
         cResult[11] = tmp4.description;
         cResult[12] = tmp21;
         cResult[13] = tmp25;
@@ -214,7 +214,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const obj2 = { style: tmp.container, children: items1 };
       items1 = [, , ,];
-      const obj3 = { source: navigation(12404), style: tmp.header };
+      const obj3 = { source: navigation(12419), style: tmp.header };
       items1[0] = closure_6(closure_5, obj3);
       const obj4 = { style: tmp.title, accessibilityRole: "header", children: intl.string(onClose(1126).t.OaloU5) };
       const LegacyText = onClose(1188).LegacyText;
@@ -226,12 +226,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: intl2.format(onClose(1126).t.Rs7MXJ, { school }),
       };
-      const Text = onClose(4886).Text;
+      const Text = onClose(4892).Text;
       intl2 = onClose(1126).intl;
       items1[2] = closure_6(Text, obj5);
       const obj6 = { style: tmp.redesignButton, children: closure_6(Button, obj7) };
       obj7 = { size: "lg", text: intl3.string(onClose(1126).t.i4jeWR), onPress: onClose };
-      Button = onClose(5594).Button;
+      Button = onClose(5601).Button;
       intl3 = onClose(1126).intl;
       items1[3] = closure_6(closure_4, obj6);
       return closure_7(closure_4, obj2);

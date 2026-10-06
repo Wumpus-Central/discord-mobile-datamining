@@ -26,7 +26,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
           tmp4 = cResult[2];
           tmp5 = cResult[3];
         }
-        let tmpResult = tmp(6496);
+        let tmpResult = tmp(6503);
         return tmpResult.useNavigatorScreens(tmp4, tmp5);
       }
       const fn = function t() {
@@ -129,7 +129,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   : (extendedOnboarding) => {
       extendedOnboarding = extendedOnboarding.extendedOnboarding;
       const skipIntro = extendedOnboarding.skipIntro;
-      let obj = extendedOnboarding(6496);
+      let obj = extendedOnboarding(6503);
       const items = [extendedOnboarding, skipIntro];
       return obj.useNavigatorScreens(() => {
         let headerCloseButton;
@@ -308,8 +308,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_5({ extendedOnboarding, skipIntro });
       let items = [extendedOnboarding, skipIntro];
       if (extendedOnboarding) {
-        const StepModal = tmp4(14272).StepModal;
-        let ICYMIInfoScreens = tmp4(16411).ICYMIInfoScreens;
+        const StepModal = tmp4(14290).StepModal;
+        let ICYMIInfoScreens = tmp4(16451).ICYMIInfoScreens;
         tmp3Result = (
           <StepModal
             screens={tmp}
@@ -318,8 +318,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           />
         );
       } else {
-        const Modal = tmp4(10976).Modal;
-        tmp3Result = <Modal screens={tmp} initialRouteName={extendedOnboarding(16411).ICYMIInfoScreens.DEFAULT} />;
+        const Modal = tmp4(10989).Modal;
+        tmp3Result = <Modal screens={tmp} initialRouteName={extendedOnboarding(16451).ICYMIInfoScreens.DEFAULT} />;
       }
       return tmp3Result;
     };

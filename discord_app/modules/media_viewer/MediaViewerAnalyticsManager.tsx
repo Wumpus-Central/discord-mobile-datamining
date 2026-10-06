@@ -17,7 +17,7 @@ let obj2 = {
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
   hasMediaOptions: "unicodeVersion",
-  source: null,
+  source: "onDoubleTapMessage",
   incrementableActions: fromEntries(values.map((item) => {
     const items = [item, 0];
     return items;

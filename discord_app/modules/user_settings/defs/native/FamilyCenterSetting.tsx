@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../Constants.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2493 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2521 from "../../../parent_tools/FamilyCenter.messages.js";
 import WarningIcon2 from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import GroupIcon from "../../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import useIsParentalConsentBannerActive from "../../../parent_tools/useIsParentalConsentBannerActive.tsx";
@@ -49,7 +49,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   size="sm"
                   color={nativeDefault.colors.ICON_FEEDBACK_WARNING}
                   accessible
-                  accessibilityLabel={intl.string(_modDef2493.wucWfE)}
+                  accessibilityLabel={intl.string(_modDef2521.wucWfE)}
                 />
               );
               cResult[0] = tmp12;
@@ -88,7 +88,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 size="sm"
                 color={nativeDefault.colors.ICON_FEEDBACK_WARNING}
                 accessible
-                accessibilityLabel={intl.string(_modDef2493.wucWfE)}
+                accessibilityLabel={intl.string(_modDef2521.wucWfE)}
               />
             );
           }
@@ -99,7 +99,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 let obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2493.RZqaJn);
+    return intl.string(_modDef2521.RZqaJn);
   },
   parent: null,
   IconComponent: GroupIcon.GroupIcon,

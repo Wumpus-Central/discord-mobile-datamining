@@ -773,7 +773,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp19 = cResult[4];
       }
-      const tmpResult = tmp(7815);
+      const tmpResult = tmp(7826);
       const colorStore = tmpResult.useColorStore(tmp19);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         _require = _asyncToGenerator(async (arg0, arg1) => {

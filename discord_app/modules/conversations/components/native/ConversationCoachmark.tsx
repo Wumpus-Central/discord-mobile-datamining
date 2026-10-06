@@ -218,7 +218,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ children, isLast } = arg0);
       const tmp = closure_9();
       const ref = react.useRef(null);
-      let obj = first(6891);
+      let obj = first(6901);
       const tmp3 = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
       first = tmp3[0];
       dependencyMap = tmp5;
@@ -242,7 +242,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         intl2 = intl3.intl;
         return obj;
       }, items);
-      const obj2 = first(9882);
+      const obj2 = first(9895);
       const coachmark = obj2.useCoachmark(ref, memo);
       const items1 = [tmp3[1]];
       let coachmarkWrapper;

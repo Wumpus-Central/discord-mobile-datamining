@@ -346,9 +346,9 @@ class RTCMediaSinkWantsManager extends TypedEventEmitter {
     tmp9.delayedCall = delayedCall;
     const timeout = new tmp11(2046).Timeout();
     tmp9.offscreenTimeout = timeout;
-    const WindowVisibilityVideoManager = tmp11(9109).WindowVisibilityVideoManager;
+    const WindowVisibilityVideoManager = tmp11(9144).WindowVisibilityVideoManager;
     WindowVisibilityVideoManager.on(
-      tmp11(9109).WindowVisibilityEvent.IncomingVideoEnabledChanged,
+      tmp11(9144).WindowVisibilityEvent.IncomingVideoEnabledChanged,
       tmp9.incomingVideoEnabledChanged,
     );
     return tmp9;

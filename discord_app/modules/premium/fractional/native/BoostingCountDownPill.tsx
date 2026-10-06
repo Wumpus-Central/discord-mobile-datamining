@@ -22,7 +22,7 @@ function handlePress() {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   const obj = { aboutText: intl.string(intl2.t["07lzz7"]) };
   ActionSheetActionCreatorsDefault;
-  const tmp2 = asyncRequire(13323, dependencyMap.paths);
+  const tmp2 = asyncRequire(13342, dependencyMap.paths);
   intl = intl2.intl;
   openLazy(tmp2, "NitroCreditEducationActionSheet", obj);
 }

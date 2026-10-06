@@ -185,10 +185,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               _setTimeout = setTimeout;
               num = 1000;
               closure_0 = setTimeout(() => {
-                /* body not rendered: F147939 */
+                /* body not rendered: F148162 */
               }, 1000);
               return () => {
-                /* body not rendered: F147940 */
+                /* body not rendered: F148163 */
               };
             }
           }
@@ -208,10 +208,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               _setTimeout = setTimeout;
               num = 1000;
               closure_0 = setTimeout(() => {
-                /* body not rendered: F147939 */
+                /* body not rendered: F148162 */
               }, 1000);
               return () => {
-                /* body not rendered: F147940 */
+                /* body not rendered: F148163 */
               };
             }
           }
@@ -229,10 +229,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               _setTimeout = setTimeout;
               num = 1000;
               closure_0 = setTimeout(() => {
-                /* body not rendered: F147939 */
+                /* body not rendered: F148162 */
               }, 1000);
               return () => {
-                /* body not rendered: F147940 */
+                /* body not rendered: F148163 */
               };
             }
           }
@@ -333,11 +333,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           items7[1] = hidden;
           const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-          items8 = [closure_10(tmp2(17076), obj6)];
+          items8 = [closure_10(tmp2(17102), obj6)];
           const obj7 = { channelId };
-          items8[1] = closure_10(ref(17078), obj7);
+          items8[1] = closure_10(ref(17104), obj7);
           items9 = [closure_11(tmp15, obj5)];
-          const obj8 = { style: items10, children: closure_10(ref(12082), obj10) };
+          const obj8 = { style: items10, children: closure_10(ref(12097), obj10) };
           items10 = [tmp.footer];
           items10[1] = { paddingBottom: ref(587).space.PX_8 + bottom };
           obj10 = { channel: stateFromStores };

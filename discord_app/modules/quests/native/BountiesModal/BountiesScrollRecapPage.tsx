@@ -11,9 +11,9 @@ import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidat
 import common_Video from "../../../../components_native/common/Video.tsx";
 import APNGPlayer2 from "../../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef14858 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
-import _modDef14859 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
-import _modDef14860 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
+import _modDef14874 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
+import _modDef14875 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
+import _modDef14876 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -83,7 +83,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       if (obj2.isAndroid()) {
         let tmp11;
         if (cResult[0] !== !reducedMotion) {
-          const obj3 = { url: _modDef14858, style: _false.absoluteFillObject, autoplay: !reducedMotion };
+          const obj3 = { url: _modDef14874, style: _false.absoluteFillObject, autoplay: !reducedMotion };
           const APNGPlayer = APNGPlayer2.APNGPlayer;
           const tmp15 = metroRequire(APNGPlayer, obj3);
           cResult[0] = !reducedMotion;
@@ -115,7 +115,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp5;
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj5 = { uri: _modDef14859 };
+          const obj5 = { uri: _modDef14875 };
           cResult[5] = obj5;
           tmp5 = obj5;
         } else {
@@ -161,7 +161,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           pointerEvents: "none",
           children: metroRequire(APNGPlayer, obj3),
         };
-        obj3 = { url: _modDef14858, style: _false.absoluteFillObject, autoplay: !reducedMotion };
+        obj3 = { url: _modDef14874, style: _false.absoluteFillObject, autoplay: !reducedMotion };
         APNGPlayer = APNGPlayer2.APNGPlayer;
         tmp3Result = metroRequire(React3, obj2);
       } else {
@@ -174,7 +174,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           preventsDisplaySleepDuringVideoPlayback: false,
           importantForAccessibility: "no-hide-descendants",
         };
-        obj5 = { uri: _modDef14859 };
+        obj5 = { uri: _modDef14875 };
         const VideoComponent = common_Video.VideoComponent;
         tmp3Result = metroRequire(VideoComponent, obj4);
       }
@@ -225,7 +225,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { uri: _modDef14860 };
+          const obj3 = { uri: _modDef14876 };
           cResult[5] = obj3;
           tmp13 = obj3;
         } else {
@@ -543,7 +543,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         preventsDisplaySleepDuringVideoPlayback: false,
         importantForAccessibility: "no-hide-descendants",
       };
-      obj6 = { uri: _modDef14860 };
+      obj6 = { uri: _modDef14876 };
       const VideoComponent = common_Video.VideoComponent;
       items2 = [metroRequire(VideoComponent, obj5)];
       const obj7 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };

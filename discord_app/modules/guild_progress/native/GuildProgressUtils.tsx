@@ -542,7 +542,7 @@ export const openActionSheet = function openActionSheet(guild) {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   const obj = { guild };
-  const tmp2 = asyncRequire(12132, dependencyMap.paths);
+  const tmp2 = asyncRequire(12147, dependencyMap.paths);
   openLazy(tmp2, "guild-progress-" + guild.id, obj);
 };
 export const hideActionSheet = function hideActionSheet(id) {

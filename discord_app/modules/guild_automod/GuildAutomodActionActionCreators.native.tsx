@@ -31,7 +31,7 @@ export const openSubmitFeedback = function openSubmitFeedback(messageId, content
     automodDecision: obj3,
   };
   obj3 = { messageId, messageContent: content, decisionId, channel };
-  obj.pushLazy(asyncRequire(11478, dependencyMap.paths), obj2, React3);
+  obj.pushLazy(asyncRequire(11491, dependencyMap.paths), obj2, React3);
 };
 export function openRaidResolveModal() {}
 export function openConfirmRemoveMentionRaid() {}
@@ -40,7 +40,7 @@ export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuar
   const obj = actions_AlertActionCreatorsDefault;
   const obj2 = {
     importer() {
-      const promise = asyncRequire(11481, dependencyMap.paths);
+      const promise = asyncRequire(11494, dependencyMap.paths);
       return promise.then((result) => {
         let closure_0 = result.default;
         return (arg0) => {

@@ -27,7 +27,7 @@ let closure_12;
 let closure_14;
 let closure_15;
 let map1;
-const f94573 = (body) => {
+const f94713 = (body) => {
   const obj = DispatcherDefault;
   const obj2 = { type: "THREAD_UPDATE", channel: closure_4(body.body) };
   obj.dispatch(obj2);
@@ -47,7 +47,7 @@ function patchThread(id, body) {
   const patch = HTTP.patch;
   obj2 = require("HTTPUtils");
   const patchResult = patch(request);
-  return patchResult.then(f94573);
+  return patchResult.then(f94713);
 }
 function dispatchThreadMemberLocalUpdate(id, isJoining) {
   const obj = DispatcherDefault;
@@ -79,7 +79,7 @@ let obj = {
     const patch = HTTP.patch;
     obj3 = require("HTTPUtils");
     const patchResult = patch(request);
-    return patchResult.then(f94573);
+    return patchResult.then(f94713);
   },
   lockThread(channel) {
     let closure_0 = channel;
@@ -440,7 +440,7 @@ let obj = {
     const patch = HTTP.patch;
     obj3 = require("HTTPUtils");
     const patchResult = patch(request);
-    return patchResult.then(f94573);
+    return patchResult.then(f94713);
   },
   joinThread(channel, arg1) {
     let closure_0 = channel;

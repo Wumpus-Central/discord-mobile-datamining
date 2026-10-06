@@ -7,7 +7,7 @@ const GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY = "GUILD_SETTINGS_ROLE_CREATE_MODAL_K
 let obj = {
   open() {
     const obj = ModalActionCreatorsDefault;
-    obj.pushLazy(asyncRequire(17779, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
+    obj.pushLazy(asyncRequire(17825, dependencyMap.paths), undefined, GUILD_SETTINGS_ROLE_CREATE_MODAL_KEY);
   },
   close() {
     const obj = ModalActionCreatorsDefault;

@@ -897,7 +897,6 @@ const obj = {
       "POST_CONNECTION_OPEN",
       "EXPERIMENT_OVERRIDE_BUCKET",
       "EXPERIMENTS_FETCH_SUCCESS",
-      "APP_STATE_UPDATE",
     ],
     inlineRequire() {
       return require("NativeNotificationsManager").default;

@@ -41,7 +41,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(10);
       const tmp4 = closure_7();
       const obj2 = shared;
-      const tmp5Result = importDefault(obj2.isThemeLight(useThemeDefault()) ? 11738 : 11739);
+      const tmp5Result = importDefault(obj2.isThemeLight(useThemeDefault()) ? 11752 : 11753);
       const tmpResult = AppLauncherNativeUtils;
       const logAppLauncherEmptyStateView = tmpResult.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
@@ -102,7 +102,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let items;
       const tmp = closure_7();
       const obj = shared;
-      const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 11738 : 11739);
+      const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 11752 : 11753);
       const tmp2Result = AppLauncherNativeUtils;
       const logAppLauncherEmptyStateView = tmp2Result.useLogAppLauncherEmptyStateView(
         AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,

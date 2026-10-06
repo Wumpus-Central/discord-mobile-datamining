@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import fuzzysearchDefault from "../../../../_runtime/05702_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/05709_fuzzysearch.js";
 import Constants2 from "../Constants.tsx";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
 import InstantInviteUtilsDefault from "../../../utils/InstantInviteUtils.tsx";
@@ -316,7 +316,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   const obj3 = { recipientId: id2, source: newestAnalyticsLocation };
-  const tmp3 = asyncRequire(12792, dependencyMap.paths);
+  const tmp3 = asyncRequire(12811, dependencyMap.paths);
   openLazy(tmp3, "invite-to-guilds-" + id2, obj3);
 };
 export const useServerInviteRows = tmp3;

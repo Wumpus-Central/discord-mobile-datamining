@@ -19,7 +19,7 @@ let MemoizerUtils;
 function getURL(name) {
   let str;
   if (null == name) {
-    const convert = module_4524.convert;
+    const convert = module_4530.convert;
     const _HermesInternal = HermesInternal;
     str = "asset:/emoji-" + convert.toCodePoint(name) + ".png";
   } else {

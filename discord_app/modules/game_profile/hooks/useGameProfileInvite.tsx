@@ -16,7 +16,7 @@ let _require, c3, c4;
 
 let QueryIds;
 let metroImportDefault;
-const f97085 = (category) =>
+const f97266 = (category) =>
   category.category === closure_1_0(closure_1_2[6]).ThirdPartyGameApplicationWebsiteCategory.DISCORD;
 function isUsableGameProfileInvite(state) {
   let tmp = null != state && state.state !== metroImportDefault.RESOLVING;
@@ -176,7 +176,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         if (websites != null) {
           websites = websites.websites;
           if (websites != null) {
-            found = websites.find(f97085);
+            found = websites.find(f97266);
           }
         }
         let arr;
@@ -359,7 +359,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (websites != null) {
         websites = websites.websites;
         if (websites != null) {
-          found = websites.find(f97085);
+          found = websites.find(f97266);
         }
       }
       let arr;
@@ -454,7 +454,7 @@ export const preloadGameProfileInvite = function preloadGameProfileInvite(arg0) 
     if (game != null) {
       const websites = game.websites;
       if (websites != null) {
-        found = websites.find(f97085);
+        found = websites.find(f97266);
       }
     }
     let arr;

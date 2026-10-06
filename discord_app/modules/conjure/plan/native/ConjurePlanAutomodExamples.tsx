@@ -6,7 +6,7 @@ import intl4 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import AvatarUtils from "../../../../utils/AvatarUtils.tsx";
 import utils_AvatarUtils from "../../../../utils/native/AvatarUtils.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import CircleCheckIcon from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -118,7 +118,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(_modDef3723.DnWMLj) };
+        const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(_modDef3753.DnWMLj) };
         const Text = Text_Text.Text;
         intl = intl4.intl;
         const tmp12 = React3(Text, obj3);
@@ -146,7 +146,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       obj2 = { size: "xs", color: nativeDefault.colors.TEXT_SUBTLE };
       const ShieldIcon = ShieldIcon2.ShieldIcon;
       items = [React3(ShieldIcon, obj2)];
-      const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(_modDef3723.DnWMLj) };
+      const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: intl.string(_modDef3753.DnWMLj) };
       const Text = Text_Text.Text;
       intl = intl4.intl;
       items[1] = React3(Text, obj3);
@@ -577,7 +577,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3723.z4ZKYG) };
+        const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3753.z4ZKYG) };
         const Text = Text_Text.Text;
         intl2 = intl4.intl;
         const tmp14 = React3(Text, obj3);
@@ -644,7 +644,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_4(closure_1_11, obj, automod.section);
             }
           }
-          const obj5 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(_modDef3723.bo4MOx) };
+          const obj5 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(_modDef3753.bo4MOx) };
           const Text2 = Text_Text.Text;
           intl3 = intl4.intl;
           const tmp26 = React3(Text2, obj5);
@@ -705,7 +705,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj4 = utils_AvatarUtils;
       intl = intl4.intl;
       items = [React3(Avatar, obj3)];
-      const obj5 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3723.z4ZKYG) };
+      const obj5 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3753.z4ZKYG) };
       const Text = Text_Text.Text;
       intl2 = intl4.intl;
       items[1] = React3(Text, obj5);
@@ -720,7 +720,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = ConjurePlanAutomodOutcomes;
       result = obj7.groupPlanAutomodExamples(automod.examples);
       items1[1] = React3(View, obj6);
-      const obj8 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(_modDef3723.bo4MOx) };
+      const obj8 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(_modDef3753.bo4MOx) };
       const Text2 = Text_Text.Text;
       intl3 = intl4.intl;
       items1[2] = React3(Text2, obj8);

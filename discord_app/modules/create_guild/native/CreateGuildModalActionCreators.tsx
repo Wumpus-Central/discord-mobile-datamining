@@ -12,7 +12,7 @@ let obj = {
   openCreateGuildModal(onSuccess) {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { onSuccess };
-    obj.pushLazy(asyncRequire(12358, dependencyMap.paths), obj2, React3);
+    obj.pushLazy(asyncRequire(12373, dependencyMap.paths), obj2, React3);
   },
   closeCreateGuildModal() {
     const obj = ModalActionCreatorsDefault;
@@ -27,12 +27,12 @@ let obj = {
   openGuildInviteScreen(channel) {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { channel };
-    obj.pushLazy(asyncRequire(12358, dependencyMap.paths), obj2, React3);
+    obj.pushLazy(asyncRequire(12373, dependencyMap.paths), obj2, React3);
   },
   openGuildJoinServerScreen() {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { initialState: constants.JOIN_SERVER };
-    obj.pushLazy(asyncRequire(12358, dependencyMap.paths), obj2, React3);
+    obj.pushLazy(asyncRequire(12373, dependencyMap.paths), obj2, React3);
   },
 };
 const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildModalActionCreators.tsx");

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
 import react from "../../../../../_runtime/00576_react.js";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import usePowerupActiveStatus from "usePowerupActiveStatus.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -95,7 +95,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp15;
           const _Symbol3 = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj4 = { type: "active", statusText: intl.string(_modDef2525.FFLkmx) };
+            const obj4 = { type: "active", statusText: intl.string(_modDef2553.FFLkmx) };
             intl = intl2.intl;
             cResult[8] = obj4;
             tmp15 = obj4;
@@ -436,7 +436,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp4 = { type: "expiring", expiringAt: reduced };
           const obj2 = { type: "expiring", expiringAt: reduced };
         } else if (someResult) {
-          const obj3 = { type: "active", statusText: intl.string(_modDef2525.FFLkmx) };
+          const obj3 = { type: "active", statusText: intl.string(_modDef2553.FFLkmx) };
           intl = intl2.intl;
           tmp4 = obj3;
         }

@@ -68,7 +68,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp7 = cResult[4];
         }
         if (cResult[5] !== tmp6) {
-          const tmp10 = jsx(userId(7579).ContextMenu, { items: tmp6, children: tmp7 });
+          const tmp10 = jsx(userId(7590).ContextMenu, { items: tmp6, children: tmp7 });
           cResult[5] = tmp6;
           cResult[6] = tmp10;
           tmp8 = tmp10;
@@ -77,12 +77,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp8;
       }
-      const items = [{ label: first, variant: "destructive", IconComponent: userId(8315).FlagIcon, action }];
+      const items = [{ label: first, variant: "destructive", IconComponent: userId(8348).FlagIcon, action }];
       cResult[1] = userId;
       cResult[2] = widget;
       cResult[3] = items;
       tmp6 = items;
-      ({ label: first, variant: "destructive", IconComponent: userId(8315).FlagIcon, action });
+      ({ label: first, variant: "destructive", IconComponent: userId(8348).FlagIcon, action });
     }
   : (arg0) => {
       let hitSlop;

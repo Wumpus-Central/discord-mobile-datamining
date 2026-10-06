@@ -13,7 +13,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const MobileUserSettings = SettingsConstants.MobileUserSettings;
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const f70247 = (arg0) => {};
+const f70310 = (arg0) => {};
 let obj = {
   useTitle() {
     const intl = intl2.intl;
@@ -26,7 +26,7 @@ let SettingBuilders = SettingBuilders_mod;
 let obj2 = {
   parent: MobileUserSettings.NOTIFICATIONS,
   usePredicate() {
-    if (typeof f70247 === "function") {
+    if (typeof f70310 === "function") {
       const obj = CallKitMetricCollectionExperimentDefault;
       let enabled = obj.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
       if (enabled) {
@@ -50,7 +50,7 @@ SettingBuilders = SettingBuilders_mod;
 let obj3 = {
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
-    if (typeof f70247 === "function") {
+    if (typeof f70310 === "function") {
       const obj = CallKitMetricCollectionExperimentDefault;
       let enabled = obj.useConfig({ location: "RedesignIOSNativePhoneIntegrationSetting" }).enabled;
       if (enabled) {

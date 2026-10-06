@@ -212,7 +212,7 @@ const memoResult = react.memo(
         let onAccessibilityAction;
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(16234);
+        let obj = id(16274);
         const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
@@ -249,7 +249,7 @@ const memoResult = react.memo(
         }, items1);
         ({ accessibilityActions, onAccessibilityAction } = memo);
         const items2 = [id];
-        const obj3 = id(4612);
+        const obj3 = id(4618);
         const sharedValue = obj3.useSharedValue("" + id);
         const memo1 = react.useMemo(() => {
           let obj = {
@@ -267,7 +267,7 @@ const memoResult = react.memo(
         let tmp8Result = null;
         const tmp = id;
         if (expanded) {
-          tmp8Result = jsx(tmp(16233).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(16273).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         return (
           <tmp9
@@ -282,11 +282,11 @@ const memoResult = react.memo(
             sharedId={sharedValue}
             cutouts="IconComponent"
             overState="a"
-            preventClipping="bracket"
+            preventClipping="сімвал"
             config={memo1}
             externalChildren={tmp8Result}
           >
-            {null}
+            {"\u044D\u043B\u0435\u043C\u0435\u043D\u0442"}
           </tmp9>
         );
       },

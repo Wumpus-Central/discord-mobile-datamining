@@ -32,13 +32,13 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   let balance;
   const tmp3 = balance;
   const tmp2 = closure_10();
-  let obj = balance(8509);
+  let obj = balance(8542);
   balance = obj.useFetchVirtualCurrencyBalance().balance;
   [][0] = balance;
   let obj2 = { style: tmp2.headerRightContainer, children: items };
   if (isVirtualCurrencyEnabled) {
     let obj3 = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(tmp3(11000).BalanceWidgetPillButton, obj3);
+    isVirtualCurrencyEnabled = closure_8(tmp3(11013).BalanceWidgetPillButton, obj3);
   }
   items = [isVirtualCurrencyEnabled];
   let obj4 = {};
@@ -75,7 +75,7 @@ function FiltersButton(setSelectedSortMethod) {
       initialSortMethod: selectedSortMethod,
       initialFilters: selectedFilters,
     };
-    obj.openLazy(asyncRequire(14807, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", obj2);
+    obj.openLazy(asyncRequire(14823, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", obj2);
   }, items);
   let obj = {
     icon: closure_8(setSelectedSortMethod(tmp3[23]).FiltersHorizontalIcon, {

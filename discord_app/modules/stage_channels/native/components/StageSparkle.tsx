@@ -4,8 +4,8 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09293_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/09294_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09328_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09329_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
@@ -153,8 +153,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = importDefault;
       }
       items1 = [metroRequire(View, obj2)];
-      const obj5 = { style: tmp3.sparkles, source: tmp10(9294) };
-      const tmp10Result = tmp10(5974);
+      const obj5 = { style: tmp3.sparkles, source: tmp10(9329) };
+      const tmp10Result = tmp10(5981);
       items1[1] = metroRequire(tmp10Result, obj5);
       return metroImportDefault(View, obj);
     };

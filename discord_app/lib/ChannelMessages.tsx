@@ -1291,7 +1291,7 @@ class ChannelMessages {
       if (id === id1) {
         if (null != nonce.nonce) {
           if (value.id === nonce.nonce) {
-            const obj4 = messageRecord1(5112);
+            const obj4 = messageRecord1(5118);
             const messageRecord = obj4.createMessageRecord(nonce);
             if (null != value.interactionData) {
               messageRecord.interactionData = value.interactionData;
@@ -1307,7 +1307,7 @@ class ChannelMessages {
       }
       return self;
     } else {
-      let obj = messageRecord1(5112);
+      let obj = messageRecord1(5118);
       messageRecord1 = obj.createMessageRecord(nonce);
       const lastResult = self.last();
       if (null != lastResult) {
@@ -1504,7 +1504,7 @@ class ChannelMessages {
           jumpType = jump.jumpType;
         }
         if (jumpType == null) {
-          jumpType = id(4787).JumpType.ANIMATED;
+          jumpType = id(4793).JumpType.ANIMATED;
         }
         let obj2 = {
           ready: true,
@@ -1697,7 +1697,7 @@ class ChannelMessages {
     let reversed;
     let sum;
     const self = this;
-    let obj = reversed(5435);
+    let obj = reversed(5442);
     const result = obj.requireSortedDescending(messages);
     const mapped = messages.map((item) => mergeMessage(self, item));
     reversed = mapped.reverse();

@@ -10,7 +10,7 @@ const require = globalThis.__r;
 let _require, dependencyMap;
 
 const jsx = Fragment.jsx;
-let closure_4 = react.lazy(() => asyncRequire(12199, dependencyMap.paths));
+let closure_4 = react.lazy(() => asyncRequire(12214, dependencyMap.paths));
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (guildId, powerup) => {
       _require = guildId;

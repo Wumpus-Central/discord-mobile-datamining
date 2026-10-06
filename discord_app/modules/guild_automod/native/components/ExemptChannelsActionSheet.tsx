@@ -217,7 +217,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp16 = jsx(stateFromStores(17710), {
+      const tmp16 = jsx(stateFromStores(17756), {
         title: tmp11,
         searchPlaceholder: tmp12,
         listId: "automod-exempt-channels",
@@ -257,7 +257,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp4;
       }, items2);
-      let tmp4 = stateFromStores(17710);
+      let tmp4 = stateFromStores(17756);
       const intl = guildId(1126).intl;
       const intl2 = guildId(1126).intl;
       return (

@@ -7,7 +7,7 @@ import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators.tsx";
 import OneWayToTwoWayLinkUpsell2 from "../OneWayToTwoWayLinkUpsell.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/14777_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/14793_AssetRegistry.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import Constants from "../../../../../../Constants.tsx";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";

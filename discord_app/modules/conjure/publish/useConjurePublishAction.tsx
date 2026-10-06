@@ -2,14 +2,13 @@
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import Constants from "../../../Constants.tsx";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import ConjureTypes from "../ConjureTypes.tsx";
 import UserActionCreators from "../../../actions/UserActionCreators.tsx";
 import ConjureProjectStore2 from "../projects/ConjureProjectStore.tsx";
 import ConjureActionCreators from "../projects/ConjureActionCreators.tsx";
 import openConjurePublishDestination from "openConjurePublishDestination.tsx";
-import conjureFeedback from "../feedback/conjureFeedback.tsx";
 import conjurePublishAction2 from "conjurePublishAction.tsx";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../../../_runtime/00019_react.js";
@@ -28,7 +27,7 @@ let _require, c12, c13, c4, c5, closure_10;
 
 let closure_12;
 let unpackModuleId;
-const f125691 = () => {};
+const f125864 = () => {};
 function readPublishSubject(projectId, guildId) {
   let canResult;
   let canResult1;
@@ -297,7 +296,7 @@ function startPublish(project, navigatesOnPublish, platform) {
     tmp2.catch(() => {});
   }
   if ("channel" === destination) {
-    obj = project(platform[22]);
+    obj = project(platform[21]);
     let obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId: id, pending: true };
     obj.dispatch(obj2);
   }
@@ -339,16 +338,12 @@ function startPublish(project, navigatesOnPublish, platform) {
           id = project.application_id;
         }
         const profile = fetchProfile(id, { withMutualGuilds: true });
-        profile.catch(f125691);
+        profile.catch(f125864);
       }
       if (null != destination) {
-        if (set.has(tmp3)) {
-          obj = conjureFeedback;
-          const result = obj.skipNextFeedbackForProject(id);
-        }
         const nextPromise = promise.then(() => {
           function waitForAppChannel() {
-            return closure_1_23(...arguments);
+            return closure_1_22(...arguments);
           }
           let tmp;
           if ("channel" === destination) {
@@ -357,7 +352,7 @@ function startPublish(project, navigatesOnPublish, platform) {
           return tmp;
         });
         const cleanupPromise = nextPromise.finally(() => {
-          obj = project(platform[22]);
+          obj = project(platform[21]);
           const obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId, pending: false };
           obj.dispatch(obj2);
         });
@@ -388,7 +383,7 @@ function startPublish(project, navigatesOnPublish, platform) {
         message = message.message;
       } else {
         const intl = intl2.intl;
-        message = intl.string(_modDef3723.gMWZeG);
+        message = intl.string(_modDef3753.gMWZeG);
       }
       showError(message);
     },
@@ -588,13 +583,13 @@ obj = function _runConjurePublishAction() {
                               set.add(closure_0);
                               c11 = 1;
                               const requestConsent = platform.requestConsent;
-                              let f153461 = requestConsent;
+                              let f153697 = requestConsent;
                               if (requestConsent == null) {
-                                f153461 = (arg0) => closure_2_19(arg0, closure_1_2);
+                                f153697 = (arg0) => closure_2_19(arg0, closure_1_2);
                               }
                               c12 = 2;
                               c13 = 1;
-                              const obj6 = { value: f153461(closure_0), done: false };
+                              const obj6 = { value: f153697(closure_0), done: false };
                               return obj6;
                             }
                           } else {
@@ -615,20 +610,20 @@ obj = function _runConjurePublishAction() {
           }
         } else if (1 === c12) {
           c11 = 0;
-          closure_137_24.delete(closure_0);
+          closure_137_23.delete(closure_0);
           throw closure_10;
         } else if (arg0 === 1) {
           c13 = 3;
           throw value;
         } else if (arg0 === 2) {
           c11 = 0;
-          closure_137_24.delete(closure_0);
+          closure_137_23.delete(closure_0);
           c13 = 3;
           obj = { value, done: true };
           return obj;
         } else {
           c11 = 0;
-          closure_137_24.delete(closure_0);
+          closure_137_23.delete(closure_0);
           if (closure_137_13.isProjectPublishing(closure_0)) {
             c13 = 3;
             return { value: "IconComponent", done: null };
@@ -651,8 +646,8 @@ obj = function _runConjurePublishAction() {
                 botPermissionsChanged: true === prop1,
               };
               preview_ready1 = undefined;
-              const requiresPermissionReview = closure_137_0(closure_137_2[27]).requiresPermissionReview;
-              const tmp78 = closure_137_0(closure_137_2[27]);
+              const requiresPermissionReview = closure_137_0(closure_137_2[26]).requiresPermissionReview;
+              const tmp78 = closure_137_0(closure_137_2[26]);
               if (closure_5 != null) {
                 preview_ready1 = closure_5.preview_ready;
               }
@@ -669,7 +664,7 @@ obj = function _runConjurePublishAction() {
                 prop1 = closure_5.bot_permissions_changed;
               }
               if (!requiresPermissionReview(obj7)) {
-                closure_137_22(surface, conjurePublishAction, closure_1);
+                closure_137_21(surface, conjurePublishAction, closure_1);
               }
             }
             c13 = 3;
@@ -695,8 +690,7 @@ obj = function _runConjurePublishAction() {
 const canPublishProject = ConjureProjectStore2.canPublishProject;
 const Permissions = Constants.Permissions;
 let context = react.createContext(null);
-const set = new Set(["dm", "guild", "channel"]);
-new Set();
+const set = new Set();
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishAction.tsx");
 
 export default function useConjurePublishAction(arg0, arg1) {
@@ -969,7 +963,7 @@ export default function useConjurePublishAction(arg0, arg1) {
         id = project.application_id;
       }
       const profile = fetchProfile(id, { withMutualGuilds: true });
-      profile.catch(f125691);
+      profile.catch(f125864);
     }
   }, items3);
   const items4 = [memo];

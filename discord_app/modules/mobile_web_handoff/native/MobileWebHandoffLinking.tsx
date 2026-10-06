@@ -123,7 +123,7 @@ let obj = function _redirectWithHandoffToken() {
     }
     flag2 = obj7.forceExternalBrowser ?? false;
     nonce = Object.assign(obj7, Object.assign({ forceExternalBrowser: 0 }));
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

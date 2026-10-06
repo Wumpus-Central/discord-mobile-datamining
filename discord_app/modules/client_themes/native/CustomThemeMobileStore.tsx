@@ -13,7 +13,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let c5, closure_3, prop;
 
-const f83658 = () => {
+const f83792 = () => {
   const obj = DispatcherDefault;
   return obj.dispatch({ type: "REFRESH_THEME" });
 };
@@ -45,7 +45,7 @@ function loadFromProtoSettings() {
         prop = clientThemeSettings.customUserThemeSettings;
       }
       const obj2 = DispatcherDefault;
-      obj2.wait(f83658);
+      obj2.wait(f83792);
     }
   }
 }
@@ -65,7 +65,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
         prop = clientThemeSettings.customUserThemeSettings;
       }
       const obj2 = DispatcherDefault;
-      obj2.wait(f83658);
+      obj2.wait(f83792);
     }
   }
 }
@@ -97,7 +97,7 @@ class CustomThemeMobileStore extends PersistedStore {
       obj = { theme, customTheme: prop };
       const obj2 = { theme, customTheme: prop };
     } else {
-      obj = { theme: "Array", customTheme: "Set" };
+      obj = { theme: "start", customTheme: "unicodeVersion" };
     }
     return obj;
   }
@@ -277,7 +277,7 @@ let obj = {
           prop = clientThemeSettings.customUserThemeSettings;
         }
         const obj2 = DispatcherDefault;
-        obj2.wait(f83658);
+        obj2.wait(f83792);
       }
     }
   },

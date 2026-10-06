@@ -120,7 +120,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp22 = null != warningText;
                 if (tmp22) {
                   const obj4 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
-                  tmp22 = closure_4(tmp(4886).Text, obj4);
+                  tmp22 = closure_4(tmp(4892).Text, obj4);
                 }
                 cResult[12] = warningText;
                 cResult[13] = tmp22;
@@ -250,7 +250,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp11 = View;
       if (tmp12) {
         const obj8 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
-        tmp12 = closure_4(tmp4(4886).Text, obj8);
+        tmp12 = closure_4(tmp4(4892).Text, obj8);
       }
       items4[1] = tmp12;
       items2[1] = closure_6(tmp11, obj6);

@@ -365,7 +365,7 @@ export default function ICYMITopicsScreen() {
     style: tmp.title,
     children: intl.string(first(1126).t.Y5d99L),
   };
-  const Text = first(4886).Text;
+  const Text = first(4892).Text;
   intl = first(1126).intl;
   const children = [closure_10(Text, obj3), , , ,];
   let obj4 = {
@@ -374,7 +374,7 @@ export default function ICYMITopicsScreen() {
     style: tmp.subtitle,
     children: intl2.string(first(1126).t.MGZsfv),
   };
-  const Text2 = first(4886).Text;
+  const Text2 = first(4892).Text;
   intl2 = first(1126).intl;
   children[1] = closure_10(Text2, obj4);
   let obj5 = { style: tmp.separator };
@@ -406,7 +406,7 @@ export default function ICYMITopicsScreen() {
     items4 = [{ marginBottom: bottom }, tmp.footer];
     const obj10 = { marginBottom: bottom };
     obj11 = { loading: first1, size: "lg", text: intl3.string(first(1126).t.PDTjLN), onPress: callback };
-    Button = tmp8(5594).Button;
+    Button = tmp8(5601).Button;
     intl3 = tmp8(1126).intl;
     tmp13Result = closure_10(closure_6, obj9);
   }

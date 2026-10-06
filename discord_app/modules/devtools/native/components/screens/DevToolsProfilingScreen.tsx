@@ -95,7 +95,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             hasIcons: false,
             children: closure_5(require("TableRow").TableRow, obj4),
           };
-          const TableRowGroup2 = tmp(6074).TableRowGroup;
+          const TableRowGroup2 = tmp(6081).TableRowGroup;
           obj4 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: first };
           items = [closure_5(TableRowGroup2, obj3)];
           const _Object2 = Object;
@@ -147,11 +147,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           tmp12 = closure_7(closure_6, obj2);
         } else {
           const obj5 = { title: "Component Profiler", hasIcons: false, children: closure_5(TableRow, obj6) };
-          let TableRowGroup = tmp(6074).TableRowGroup;
+          let TableRowGroup = tmp(6081).TableRowGroup;
           obj6 = { label: "No components rendered yet.", subLabel: closure_7(Text, obj7) };
-          TableRow = tmp(5993).TableRow;
+          TableRow = tmp(6000).TableRow;
           obj7 = { variant: "text-xs/medium", color: "text-subtle", children: items1 };
-          Text = tmp(4886).Text;
+          Text = tmp(4892).Text;
           const obj8 = { variant: "text-xs/semibold", style: tmp5.monospace, children: "<ComponentProfiler />" };
           items1 = [
             "Make sure you wrap your component in ",

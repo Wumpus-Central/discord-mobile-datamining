@@ -9,7 +9,7 @@ import AppIconTypes from "../AppIconTypes.tsx";
 import AppIconUtils from "AppIconUtils.tsx";
 import AppIconRowDefault from "AppIconRow/AppIconRow.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
-import _objectDestructuringEmpty from "../../../../_runtime/11870__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../_runtime/11884__objectDestructuringEmpty.js";
 import UserStore from "../../../stores/UserStore.tsx";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -58,7 +58,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onLongPress = cResult[0];
       }
       const container = tmp6.container;
-      const TableRowGroup = tmp(6074).TableRowGroup;
+      const TableRowGroup = tmp(6081).TableRowGroup;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t.N4YDao);
@@ -150,7 +150,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }),
         };
         onLongPress(react.useState(false), 2);
-        TableRowGroup = merged(6074).TableRowGroup;
+        TableRowGroup = merged(6081).TableRowGroup;
         intl = merged(1126).intl;
         return closure_9(View, obj);
       }

@@ -5,7 +5,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import intl2 from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import ChannelConstants from "../../channel/ChannelConstants.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import ConjureUtils from "../shared/ConjureUtils.tsx";
 import ConjurePlatformUtilsDefault from "../shared/ConjurePlatformUtils.native.tsx";
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
@@ -20,7 +20,7 @@ import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import Constants from "../../../Constants.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../_runtime/metro/00002__.js";
 
 let closure_15;
 let closure_16;
@@ -1484,7 +1484,7 @@ let obj = {
                   const obj = { provisionalTodo: undefined, steps: items };
                   const merged = Object.assign(disposition);
                   items = [];
-                  const obj2 = { type: "step", kind: "terminal_error", message: intl.string(_modDef3723.lmiuFX) };
+                  const obj2 = { type: "step", kind: "terminal_error", message: intl.string(_modDef3753.lmiuFX) };
                   const arraySpreadResult = HermesBuiltin.arraySpread(items, disposition.steps, 0);
                   intl = intl2.intl;
                   items[arraySpreadResult] = obj2;
@@ -1556,6 +1556,7 @@ let obj = {
   },
 };
 const conjureChatStore = new ConjureChatStore(DispatcherDefault, obj);
+let size = size_mod;
 let result = size.fileFinishedImporting("modules/conjure/chat/ConjureChatStore.tsx");
 
 export default conjureChatStore;

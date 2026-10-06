@@ -6,7 +6,7 @@ import intl5 from "../../../../../intl/index.native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/06586_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/06593_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";

@@ -369,7 +369,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
         type: "timeout",
         id: setTimeout(
           () => {
-            const f154176 = () => {
+            const f154420 = () => {
               sendTelemetryEvent();
               if (typeof scheduleNextHeartbeat === "function") {
                 const result = 0.1 * scheduleDrain;
@@ -380,7 +380,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
                 ({
                   type: "timeout",
                   id: setTimeout(
-                    f154176,
+                    f154420,
                     Math.max(scheduleDrain + (Math.floor(Math.random() * result * 2) - result), drainEventsQueue),
                   ),
                 });
@@ -396,7 +396,7 @@ export const analyticsTrackingStoreMaker = (getLaunchSignature) => {
               let _Math3 = Math;
               obj = {
                 type: "timeout",
-                id: setTimeout(f154176, Math.max(c8 + (Math.floor(Math.random() * result * 2) - result), c9)),
+                id: setTimeout(f154420, Math.max(c8 + (Math.floor(Math.random() * result * 2) - result), c9)),
               };
               let _setTimeout = setTimeout;
             } else {

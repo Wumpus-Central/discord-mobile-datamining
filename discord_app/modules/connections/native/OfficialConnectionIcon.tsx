@@ -6,8 +6,8 @@ import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUt
 import native from "../../../design/void/native.tsx";
 import useRoleIconProps2 from "../../roles/useRoleIconProps.tsx";
 import RoleIconDefault from "../../roles/native/RoleIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11184_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/11185_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/11197_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/11198_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import Constants from "../../../Constants.tsx";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";

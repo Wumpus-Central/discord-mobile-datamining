@@ -89,7 +89,7 @@ class NUFChannelsManager extends AutomaticLifecycleManager {
           }
           if (isNewUserResult) {
             const obj3 = ActionSheetActionCreatorsDefault;
-            obj3.openLazy(asyncRequire(13579, dependencyMap.paths), "NUFChannelsActionSheet");
+            obj3.openLazy(asyncRequire(13595, dependencyMap.paths), "NUFChannelsActionSheet");
             const Storage2 = Storage3.Storage;
             const result = Storage2.set(c9, true);
           }

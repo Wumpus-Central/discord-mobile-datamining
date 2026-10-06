@@ -112,7 +112,7 @@ let obj = {
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequire(15779, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
+    obj.openLazy(asyncRequire(15816, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
   },
 };
 const guildSelector = SettingBuilders.createGuildSelector(obj);

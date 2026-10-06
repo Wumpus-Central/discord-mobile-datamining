@@ -8,7 +8,7 @@ let obj = {
   showModal(userCode) {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { userCode };
-    obj.pushLazy(asyncRequire(13686, dependencyMap.paths), obj2, ACTIVATE_DEVICE_MODAL_KEY);
+    obj.pushLazy(asyncRequire(13704, dependencyMap.paths), obj2, ACTIVATE_DEVICE_MODAL_KEY);
   },
   hideModal() {
     const obj = ModalActionCreatorsDefault;

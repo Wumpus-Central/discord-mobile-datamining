@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/accessibility/getSettingsOverrideReason.tsx
 import UserSettingsConstants from "../UserSettingsConstants.tsx";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3885 from "../../game_mode/GameMode.messages.js";
+import _modDef3915 from "../../game_mode/GameMode.messages.js";
 import UserSettingsOverridesStore from "../UserSettingsOverridesStore.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -39,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             formatResult = intl.string(intl4.t["2ExvRu"]);
           } else if (constants.GAME_MODE === appliedOverrideReasonKey) {
             const intl3 = intl4.intl;
-            formatResult = intl3.string(_modDef3885.VGcdxP);
+            formatResult = intl3.string(_modDef3915.VGcdxP);
           }
           return formatResult;
         };
@@ -68,7 +68,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           formatResult = intl.string(intl4.t["2ExvRu"]);
         } else if (constants.GAME_MODE === appliedOverrideReasonKey) {
           const intl3 = intl4.intl;
-          formatResult = intl3.string(_modDef3885.VGcdxP);
+          formatResult = intl3.string(_modDef3915.VGcdxP);
         }
         return formatResult;
       });
@@ -83,7 +83,7 @@ function getSettingsOverrideReason(arg0) {
     return intl2.string(intl4.t["2ExvRu"]);
   } else if (constants.GAME_MODE === arg0) {
     const intl = intl4.intl;
-    return intl.string(_modDef3885.VGcdxP);
+    return intl.string(_modDef3915.VGcdxP);
   }
 }
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()

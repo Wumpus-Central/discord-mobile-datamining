@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/utils/usePremiumFeatures.tsx
 import intl11 from "../../../../../intl/index.native.tsx";
 import user from "../../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef3205 from "../../../../premium/premium_group/PremiumGroup.messages.js";
+import _modDef3233 from "../../../../premium/premium_group/PremiumGroup.messages.js";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import PremiumGroupConstants from "../../../../premium/premium_group/PremiumGroupConstants.tsx";
 import BoostGemIcon from "../../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
@@ -314,7 +314,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let obj6;
         let obj = {
           IconComponent: FriendsIcon.FriendsIcon,
-          label: intl.formatToPlainString(_modDef3205.gsE005, obj2),
+          label: intl.formatToPlainString(_modDef3233.gsE005, obj2),
           premiumTypes: new Set(items),
           premiumGroupRoles: items1,
           availableOnFractional: false,
@@ -328,7 +328,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const items2 = [obj, , , , , , , , ,];
         const obj3 = {
           IconComponent: FriendsIcon.FriendsIcon,
-          label: intl2.string(_modDef3205["G6K/+s"]),
+          label: intl2.string(_modDef3233["G6K/+s"]),
           premiumTypes: new Set(items3),
           premiumGroupRoles: items4,
           availableOnFractional: false,
@@ -419,7 +419,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items2[6] = obj10;
         const obj11 = {
           IconComponent: BoostGemIcon.BoostGemIcon,
-          label: intl8.formatToPlainString(_modDef3205.HVCRVf, obj12),
+          label: intl8.formatToPlainString(_modDef3233.HVCRVf, obj12),
           premiumTypes: new Set(items15),
           premiumGroupRoles: items16,
           availableOnFractional: false,

@@ -9,10 +9,10 @@ import SelectedChannelStore from "SelectedChannelStore.tsx";
 import PrivateChannelSortStore from "views/PrivateChannelSortStore.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
-const f115020 = (item) => mentionCount.getMentionCount(item) > 0;
+const f115182 = (item) => mentionCount.getMentionCount(item) > 0;
 function rebuildUnreads() {
   const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
-  found = privateChannelIds.filter(f115020);
+  found = privateChannelIds.filter(f115182);
   if (found.length > 20) {
     found.length = 20;
   }
@@ -30,7 +30,7 @@ function rebuildUnreads() {
 }
 function handleConnectionOpen() {
   const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
-  found = privateChannelIds.filter(f115020);
+  found = privateChannelIds.filter(f115182);
   if (found.length > 20) {
     found.length = 20;
   }
@@ -52,7 +52,7 @@ function handleGenericUpdate(channelId) {
   const tmp2 = null == channel || !isPrivate(channel.type);
   if (tmp4) {
     const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
-    found = privateChannelIds.filter(f115020);
+    found = privateChannelIds.filter(f115182);
     if (found.length > 20) {
       found.length = 20;
     }
@@ -95,7 +95,7 @@ let obj = {
     const tmp2 = null == channel || !isPrivate(channel.type);
     if (tmp4) {
       const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
-      found = privateChannelIds.filter(f115020);
+      found = privateChannelIds.filter(f115182);
       if (found.length > 20) {
         found.length = 20;
       }
@@ -117,7 +117,7 @@ let obj = {
     let hasItem = set.has(channel.channel.id);
     if (hasItem) {
       const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
-      found = privateChannelIds.filter(f115020);
+      found = privateChannelIds.filter(f115182);
       if (found.length > 20) {
         found.length = 20;
       }
@@ -141,7 +141,7 @@ let obj = {
     const tmp2 = null == channel || !isPrivate(channel.type);
     if (tmp4) {
       const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
-      found = privateChannelIds.filter(f115020);
+      found = privateChannelIds.filter(f115182);
       if (found.length > 20) {
         found.length = 20;
       }
@@ -166,7 +166,7 @@ let obj = {
     const tmp2 = null == channel || !isPrivate(channel.type);
     if (tmp4) {
       const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
-      found = privateChannelIds.filter(f115020);
+      found = privateChannelIds.filter(f115182);
       if (found.length > 20) {
         found.length = 20;
       }

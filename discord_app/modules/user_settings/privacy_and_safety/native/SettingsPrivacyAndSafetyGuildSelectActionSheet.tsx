@@ -120,7 +120,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != stateFromStores) {
           if (cResult[4] !== stateFromStores) {
             const obj2 = {
-              type: selectedGuildId(5122).SelectOptionType.GUILD,
+              type: selectedGuildId(5129).SelectOptionType.GUILD,
               guild: stateFromStores,
               label: null,
               value: null,
@@ -137,7 +137,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = {
-          type: selectedGuildId(5122).SelectOptionType.GUILD,
+          type: selectedGuildId(5129).SelectOptionType.GUILD,
           guild: dangerouslyConstructGuildRecordFromUntypedObject(obj5),
           label: intl2.string(selectedGuildId(1126).t["32u1Dx"]),
           value,
@@ -168,7 +168,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3;
         if (null != stateFromStores) {
           obj3 = {
-            type: selectedGuildId(5122).SelectOptionType.GUILD,
+            type: selectedGuildId(5129).SelectOptionType.GUILD,
             guild: stateFromStores,
             label: null,
             value: null,
@@ -178,7 +178,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         return obj3;
       }
       const obj4 = {
-        type: selectedGuildId(5122).SelectOptionType.GUILD,
+        type: selectedGuildId(5129).SelectOptionType.GUILD,
         guild: dangerouslyConstructGuildRecordFromUntypedObject(obj7),
         label: intl2.string(selectedGuildId(1126).t["32u1Dx"]),
         value,
@@ -399,7 +399,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[14] = tmp10;
       cResult[15] = tmp4.iconContainer;
       cResult[16] = tmp21;
-      cResult[17] = jsx(L(11432), {
+      cResult[17] = jsx(L(11445), {
         onPressOptionItem: tmp14,
         renderHeaderIcon: P,
         renderIcon: U,
@@ -415,7 +415,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         allowEmpty: false,
         expanded: true,
       });
-      jsx(L(11432), {
+      jsx(L(11445), {
         onPressOptionItem: tmp14,
         renderHeaderIcon: P,
         renderIcon: U,

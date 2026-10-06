@@ -284,7 +284,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       items4 = [tmp.gradient, opacityStyle];
       const View2 = ReanimatedRexportDefault.View;
       str = "play";
-      BountiesScrollGradientRive = zIndex(4662).BountiesScrollGradientRive;
+      BountiesScrollGradientRive = zIndex(4668).BountiesScrollGradientRive;
       if (stateFromStores) {
         str = "halt";
       }

@@ -12,5 +12,5 @@ export const hideStickerDetailActionSheet = function hideStickerDetailActionShee
 };
 export const showStickerDetailActionSheet = function showStickerDetailActionSheet(arg0) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(10132, dependencyMap.paths), sticker_detail_action_sheet, arg0);
+  obj.openLazy(asyncRequire(10145, dependencyMap.paths), sticker_detail_action_sheet, arg0);
 };

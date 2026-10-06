@@ -23,7 +23,7 @@ let _require, dependencyMap;
 
 let closure_12;
 let map1;
-const f108370 = (id) => ({ id: id.id, text: id.name });
+const f108523 = (id) => ({ id: id.id, text: id.name });
 function getUsers(getGuildId) {
   let mapped;
   let user;
@@ -105,7 +105,7 @@ class ApplicationCommandOptionValueParser {
       let tmp17;
       let tmp7;
       let tmp8;
-      const f108375 = (text) => -text.text.length;
+      const f108528 = (text) => -text.text.length;
       const trimmed = text.trim();
       const tmp = obj;
       const arr2 = closure_2_15(obj.channel);
@@ -116,7 +116,7 @@ class ApplicationCommandOptionValueParser {
         sortedRoles = [];
       }
       const arr4 = closure_2_1(closure_2_2[10])(sortedRoles);
-      let closure_2 = arr4.map(f108370);
+      let closure_2 = arr4.map(f108523);
       let closure_3 = arr2.map((text) => {
         obj = { text: str.split("#")[0] };
         const merged = Object.assign(text);
@@ -128,7 +128,7 @@ class ApplicationCommandOptionValueParser {
           let firstResult = null;
           if (trimmed[0] === closure_2_12) {
             let closure_1 = trimmed.substr(closure_2_12.length);
-            const sortByResult = arr2.sortBy(f108375);
+            const sortByResult = arr2.sortBy(f108528);
             const found = sortByResult.filter((text) => {
               const str = text.text;
               const formatted = closure_1.toLowerCase();
@@ -148,7 +148,7 @@ class ApplicationCommandOptionValueParser {
             let firstResult1 = null;
             if (trimmed[0] === closure_2_12) {
               closure_1 = trimmed.substr(closure_2_12.length);
-              const sortByResult1 = closure_3.sortBy(f108375);
+              const sortByResult1 = closure_3.sortBy(f108528);
               const found1 = sortByResult1.filter((text) => {
                 const str = text.text;
                 const formatted = closure_1.toLowerCase();
@@ -206,7 +206,7 @@ class ApplicationCommandOptionValueParser {
           let firstResult = null;
           if (trimmed[0] === closure_2_12) {
             let closure_1 = trimmed.substr(closure_2_12.length);
-            const sortByResult = closure_2.sortBy(f108375);
+            const sortByResult = closure_2.sortBy(f108528);
             const found = sortByResult.filter((text) => {
               const str = text.text;
               const formatted = closure_1.toLowerCase();
@@ -242,7 +242,7 @@ class ApplicationCommandOptionValueParser {
           let firstResult = null;
           if (trimmed[0] === length) {
             let closure_1 = trimmed.substr(length.length);
-            let sortByResult = obj8.sortBy(f108375);
+            let sortByResult = obj8.sortBy(f108528);
             let found = sortByResult.filter((text) => {
               const str = text.text;
               const formatted = closure_1.toLowerCase();
@@ -306,7 +306,7 @@ function getRoles(guild_id) {
     sortedRoles = [];
   }
   const arr2 = _modDef12(sortedRoles);
-  return arr2.map(f108370);
+  return arr2.map(f108523);
 }
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function (channel) {
@@ -324,7 +324,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp17;
             let tmp7;
             let tmp8;
-            const f108375 = (text) => -text.text.length;
+            const f108528 = (text) => -text.text.length;
             const trimmed = text.trim();
             const tmp = obj;
             const arr2 = closure_2_15(obj.channel);
@@ -335,7 +335,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               sortedRoles = [];
             }
             const arr4 = closure_2_1(closure_2_2[10])(sortedRoles);
-            let closure_2 = arr4.map(f108370);
+            let closure_2 = arr4.map(f108523);
             let closure_3 = arr2.map((text) => {
               obj = { text: str.split("#")[0] };
               const merged = Object.assign(text);
@@ -347,7 +347,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 let firstResult = null;
                 if (trimmed[0] === closure_2_12) {
                   let closure_1 = trimmed.substr(closure_2_12.length);
-                  const sortByResult = arr2.sortBy(f108375);
+                  const sortByResult = arr2.sortBy(f108528);
                   const found = sortByResult.filter((text) => {
                     const str = text.text;
                     const formatted = closure_1.toLowerCase();
@@ -367,7 +367,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   let firstResult1 = null;
                   if (trimmed[0] === closure_2_12) {
                     closure_1 = trimmed.substr(closure_2_12.length);
-                    const sortByResult1 = closure_3.sortBy(f108375);
+                    const sortByResult1 = closure_3.sortBy(f108528);
                     const found1 = sortByResult1.filter((text) => {
                       const str = text.text;
                       const formatted = closure_1.toLowerCase();
@@ -425,7 +425,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 let firstResult = null;
                 if (trimmed[0] === closure_2_12) {
                   let closure_1 = trimmed.substr(closure_2_12.length);
-                  const sortByResult = closure_2.sortBy(f108375);
+                  const sortByResult = closure_2.sortBy(f108528);
                   const found = sortByResult.filter((text) => {
                     const str = text.text;
                     const formatted = closure_1.toLowerCase();
@@ -461,7 +461,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 let firstResult = null;
                 if (trimmed[0] === length) {
                   let closure_1 = trimmed.substr(length.length);
-                  let sortByResult = obj8.sortBy(f108375);
+                  let sortByResult = obj8.sortBy(f108528);
                   let found = sortByResult.filter((text) => {
                     const str = text.text;
                     const formatted = closure_1.toLowerCase();
@@ -537,7 +537,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp17;
             let tmp7;
             let tmp8;
-            const f108375 = (text) => -text.text.length;
+            const f108528 = (text) => -text.text.length;
             const trimmed = text.trim();
             const tmp = obj;
             const arr2 = closure_2_15(obj.channel);
@@ -548,7 +548,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               sortedRoles = [];
             }
             const arr4 = closure_2_1(closure_2_2[10])(sortedRoles);
-            let closure_2 = arr4.map(f108370);
+            let closure_2 = arr4.map(f108523);
             let closure_3 = arr2.map((text) => {
               obj = { text: str.split("#")[0] };
               const merged = Object.assign(text);
@@ -560,7 +560,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 let firstResult = null;
                 if (trimmed[0] === closure_2_12) {
                   let closure_1 = trimmed.substr(closure_2_12.length);
-                  const sortByResult = arr2.sortBy(f108375);
+                  const sortByResult = arr2.sortBy(f108528);
                   const found = sortByResult.filter((text) => {
                     const str = text.text;
                     const formatted = closure_1.toLowerCase();
@@ -580,7 +580,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   let firstResult1 = null;
                   if (trimmed[0] === closure_2_12) {
                     closure_1 = trimmed.substr(closure_2_12.length);
-                    const sortByResult1 = closure_3.sortBy(f108375);
+                    const sortByResult1 = closure_3.sortBy(f108528);
                     const found1 = sortByResult1.filter((text) => {
                       const str = text.text;
                       const formatted = closure_1.toLowerCase();
@@ -638,7 +638,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 let firstResult = null;
                 if (trimmed[0] === closure_2_12) {
                   let closure_1 = trimmed.substr(closure_2_12.length);
-                  const sortByResult = closure_2.sortBy(f108375);
+                  const sortByResult = closure_2.sortBy(f108528);
                   const found = sortByResult.filter((text) => {
                     const str = text.text;
                     const formatted = closure_1.toLowerCase();
@@ -674,7 +674,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 let firstResult = null;
                 if (trimmed[0] === length) {
                   let closure_1 = trimmed.substr(length.length);
-                  let sortByResult = obj8.sortBy(f108375);
+                  let sortByResult = obj8.sortBy(f108528);
                   let found = sortByResult.filter((text) => {
                     const str = text.text;
                     const formatted = closure_1.toLowerCase();

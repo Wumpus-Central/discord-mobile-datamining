@@ -64,8 +64,8 @@ export default function UserProfileNameplateEditButton(user) {
   let obj2 = { pendingValue: pendingNameplate, userValue: nameplate1, guildValue: nameplate2, guildId };
   const collectibles = user.collectibles;
   nameplate1 = undefined;
-  const getProfilePreviewValue = user(7837).getProfilePreviewValue;
-  user(7837);
+  const getProfilePreviewValue = user(7848).getProfilePreviewValue;
+  user(7848);
   if (collectibles != null) {
     nameplate1 = collectibles.nameplate;
   }
@@ -78,8 +78,8 @@ export default function UserProfileNameplateEditButton(user) {
   }
   const profilePreviewValue = getProfilePreviewValue(obj2);
   let skuId;
-  const useFetchNameplate = user(14464).useFetchNameplate;
-  user(14464);
+  const useFetchNameplate = user(14480).useFetchNameplate;
+  user(14480);
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
@@ -105,7 +105,7 @@ export default function UserProfileNameplateEditButton(user) {
   }
   const items1 = [user, nameplate, guildId];
   if (isFetching) {
-    const UserProfileEditFormButton2 = tmp3(14445).UserProfileEditFormButton;
+    const UserProfileEditFormButton2 = tmp3(14461).UserProfileEditFormButton;
     const intl4 = tmp3(1126).intl;
     const intl5 = tmp3(1126).intl;
     return (
@@ -144,7 +144,7 @@ export default function UserProfileNameplateEditButton(user) {
       onPress: tmp14,
       leading: null,
     };
-    const UserProfileEditFormButton = tmp3(14445).UserProfileEditFormButton;
+    const UserProfileEditFormButton = tmp3(14461).UserProfileEditFormButton;
     intl3 = tmp3(1126).intl;
     obj6 = { text: formatToPlainStringResult };
     if (null != nameplateData) {
@@ -158,6 +158,6 @@ export default function UserProfileNameplateEditButton(user) {
       }
     }
     const Icon = tmp3(1188).Icon;
-    tmp17Result = <Icon source={guildId(13011)} style={tmp.noneIcon} />;
+    tmp17Result = <Icon source={guildId(13030)} style={tmp.noneIcon} />;
   }
 }

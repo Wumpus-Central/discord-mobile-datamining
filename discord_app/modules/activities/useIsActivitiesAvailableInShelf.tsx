@@ -15,7 +15,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(8);
       let obj2 = require("useIsActivitiesEnabledForCurrentPlatform");
       const isActivitiesEnabledForCurrentPlatform = obj2.useIsActivitiesEnabledForCurrentPlatform();
-      const tmp3 = isActivitiesEnabledForCurrentPlatform(9081)(arg1);
+      const tmp3 = isActivitiesEnabledForCurrentPlatform(9117)(arg1);
       if (cResult[0] === guildId) {
         let tmp4;
         if (cResult[1] === tmp3) {
@@ -65,7 +65,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("useIsActivitiesEnabledForCurrentPlatform");
       const isActivitiesEnabledForCurrentPlatform = obj.useIsActivitiesEnabledForCurrentPlatform();
       let tmp3 = null != guildId;
-      const tmp2 = isActivitiesEnabledForCurrentPlatform(9081)(arg1);
+      const tmp2 = isActivitiesEnabledForCurrentPlatform(9117)(arg1);
       if (tmp3) {
         tmp3 = "" !== guildId;
       }

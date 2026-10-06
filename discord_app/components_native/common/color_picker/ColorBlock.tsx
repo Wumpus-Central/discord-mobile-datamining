@@ -7,7 +7,7 @@ import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUt
 import native from "../../../design/void/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11181_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/11194_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../modules/react_compiler/ReactCompilerGating.tsx";

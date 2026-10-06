@@ -57,7 +57,7 @@ const memoResult = react.memo(
                 }
               }
             }
-            return { channelId: "unicodeVersion", type: null };
+            return { channelId: "unicodeVersion", type: false };
           };
           cResult[0] = items;
           cResult[1] = fn;
@@ -238,7 +238,7 @@ const memoResult = react.memo(
               }
             }
           }
-          return { channelId: "unicodeVersion", type: null };
+          return { channelId: "unicodeVersion", type: false };
         });
         if ("private" === stateFromStoresObject.type) {
           tmp8 = <View style={tmp.wrapper}>{null}</View>;

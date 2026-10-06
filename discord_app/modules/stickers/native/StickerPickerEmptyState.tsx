@@ -366,8 +366,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp;
       let obj = require("StickersHooks");
       const fetchStickerPacks = obj.useFetchStickerPacks();
-      const tmp3 = analyticsLocations(6657);
-      analyticsLocations = tmp3(analyticsLocations(6681).EMPTY_STATE).analyticsLocations;
+      const tmp3 = analyticsLocations(6664);
+      analyticsLocations = tmp3(analyticsLocations(6688).EMPTY_STATE).analyticsLocations;
       let obj2 = require("get initialized");
       const items = [StickersStore];
       const stateFromStoresArray = obj2.useStateFromStoresArray(items, () => {
@@ -445,8 +445,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         },
       };
       Button = require("components/Button/Button").Button;
-      obj9 = { source: analyticsLocations(8865), style: tmp.nitroWheel, resizeMode: "contain" };
-      tmp6 = analyticsLocations(5974);
+      obj9 = { source: analyticsLocations(8894), style: tmp.nitroWheel, resizeMode: "contain" };
+      tmp6 = analyticsLocations(5981);
       intl3 = require("intl").intl;
       items2[3] = closure_11(View, obj7);
       return closure_12(View, obj3);

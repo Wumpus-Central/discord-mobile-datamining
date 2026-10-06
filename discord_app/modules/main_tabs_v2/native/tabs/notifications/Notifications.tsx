@@ -188,7 +188,7 @@ let closure_12 = react.memo(
             onPress: goBack,
             children: closure_7(require("BackIconWithBadge").LeftBackIconWithBadge, {}),
           };
-          const PressableOpacity = tmp(5909).PressableOpacity;
+          const PressableOpacity = tmp(5916).PressableOpacity;
           intl = tmp(1126).intl;
           items2 = [closure_7(PressableOpacity, obj7), ,];
           const obj8 = {
@@ -199,7 +199,7 @@ let closure_12 = react.memo(
             accessibilityRole: "header",
             children: intl2.string(require("intl").t.HcoRu0),
           };
-          const Text = tmp(4886).Text;
+          const Text = tmp(4892).Text;
           intl2 = tmp(1126).intl;
           items2[1] = closure_7(Text, obj8);
           let tmp14Result = null;
@@ -264,7 +264,7 @@ let closure_12 = react.memo(
             onPress: goBack,
             children: closure_7(require("BackIconWithBadge").LeftBackIconWithBadge, {}),
           };
-          const PressableOpacity = tmp5(5909).PressableOpacity;
+          const PressableOpacity = tmp5(5916).PressableOpacity;
           intl = tmp5(1126).intl;
           items1 = [closure_7(PressableOpacity, obj4), ,];
           const obj5 = {
@@ -275,7 +275,7 @@ let closure_12 = react.memo(
             accessibilityRole: "header",
             children: intl2.string(require("intl").t.HcoRu0),
           };
-          const Text = tmp5(4886).Text;
+          const Text = tmp5(4892).Text;
           intl2 = tmp5(1126).intl;
           items1[1] = closure_7(Text, obj5);
           let tmp10Result = null;

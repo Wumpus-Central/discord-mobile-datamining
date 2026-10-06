@@ -79,7 +79,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp15 = cResult[5];
       }
-      const obj6 = reduced(8939);
+      const obj6 = reduced(8968);
       const discovery = obj6.useDiscovery(tmp15);
       ({ commandsByActiveSection, loading } = discovery);
       if (cResult[6] !== commandsByActiveSection) {
@@ -165,7 +165,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmpResult2 = tmp(11745);
+        const tmpResult2 = tmp(11759);
         const sortApplicationsViaFrecency = tmpResult2.useSortApplicationsViaFrecency(tmp25);
         if (cResult[14] === stateFromStores) {
           class I {

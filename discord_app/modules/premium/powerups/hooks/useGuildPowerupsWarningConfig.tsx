@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx
 import intl3 from "../../../../intl/index.native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
 import react_mod from "../../../../../_runtime/00019_react.js";
 import AppliedGuildBoostStore from "../../../../stores/AppliedGuildBoostStore.tsx";
@@ -84,7 +84,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
-          const stringResult = intl.string(_modDef2525.n5hQhc);
+          const stringResult = intl.string(_modDef2553.n5hQhc);
           cResult[7] = stringResult;
           tmp12 = stringResult;
         } else {
@@ -109,7 +109,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const intl2 = tmp(1126).intl;
         const formatToPlainString = intl2.formatToPlainString;
         const obj4 = { boostCount: diff, perksString: join.join(", ") };
-        const iAaAiG = _modDef2525.iAaAiG;
+        const iAaAiG = _modDef2553.iAaAiG;
         const formatToPlainStringResult = formatToPlainString(iAaAiG, obj4);
         cResult[8] = join;
         cResult[9] = diff;
@@ -165,7 +165,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           obj = {
             shouldShow: true,
-            title: intl.string(_modDef2525.n5hQhc),
+            title: intl.string(_modDef2553.n5hQhc),
             description: formatToPlainString(iAaAiG, obj2),
             requiredBoostCount: react,
           };
@@ -173,7 +173,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = intl3.intl;
           formatToPlainString = intl2.formatToPlainString;
           obj2 = { boostCount: react, perksString: closure_1.join(", ") };
-          iAaAiG = _modDef2525.iAaAiG;
+          iAaAiG = _modDef2553.iAaAiG;
         }
         return obj;
       }, items3);

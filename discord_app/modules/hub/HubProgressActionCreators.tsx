@@ -8,7 +8,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require;
 
-const f100725 = (hubProgress) => {
+const f100877 = (hubProgress) => {
   let flag = false;
   for (const item10008 of HUB_PROGRESS_STEP_ORDER) {
     let obj = FlagUtils;
@@ -38,7 +38,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
       const obj = items(2033);
       const result = obj.updateUserGuildSettings(
         guildId,
-        f100725,
+        f100877,
         items(2033).UserSettingsDelay.INFREQUENT_USER_ACTION,
       );
     }
@@ -49,7 +49,7 @@ export const skipHubProgress = function skipHubProgress(id) {
   let obj = require("UserSettingsProtoActionCreators");
   const result = obj.updateUserGuildSettings(
     id,
-    f100725,
+    f100877,
     require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 };

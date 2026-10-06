@@ -16,7 +16,7 @@ let StyleSheet;
 let hasOwnProperty;
 let obj2;
 let tmp8;
-const KeyboardAwareViewDefault = tmp8(6537);
+const KeyboardAwareViewDefault = tmp8(6544);
 ({ View: hasOwnProperty, StyleSheet } = react_native);
 const jsx = Fragment.jsx;
 let createStyles = createStyles_mod;
@@ -105,7 +105,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp11 = children;
       if (first) {
-        tmp11 = jsx(tmp(6535).SceneLoadingIndicator, {});
+        tmp11 = jsx(tmp(6542).SceneLoadingIndicator, {});
       }
       cResult[2] = children;
       cResult[3] = first;
@@ -141,7 +141,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       });
       if (first) {
-        children = jsx(first(6535).SceneLoadingIndicator, {});
+        children = jsx(first(6542).SceneLoadingIndicator, {});
       }
       if (!ignoreKeyboard) {
         KeyboardAwareViewDefault;

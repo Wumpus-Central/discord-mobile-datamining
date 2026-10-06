@@ -6,7 +6,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Constants from "../../../Constants.tsx";
 import intl3 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import BottomSheetModal from "../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
 import SearchEmpty from "../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
 import useExpressionPickerInsetsDefault from "../../expression_picker/native/useExpressionPickerInsets.tsx";

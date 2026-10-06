@@ -30,7 +30,7 @@ export const openForwardModal = function openForwardModal(arg0) {
   obj.trackForwardStart(message.channel_id, message.id, source);
   const tmp2 = showSearchableDestinationListModalDefault;
   tmp2(
-    asyncRequire(11308, dependencyMap.paths),
+    asyncRequire(11321, dependencyMap.paths),
     { message, initialSelectedDestinations, forwardOptions, source, customSendHandler },
     c5,
   );

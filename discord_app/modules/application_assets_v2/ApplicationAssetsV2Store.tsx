@@ -6,14 +6,14 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require, resolved_assets, set;
 
-const f98295 = (application_id) => application_id.application_id;
+const f98489 = (application_id) => application_id.application_id;
 function handleFeaturedOrDeveloperFetchSuccess(configs) {
   let c0;
   const values = Object.values(configs.configs);
   _require = false;
   const flatResult = values.flat();
   const obj2 = require("../../../_runtime/metro/00012__.js");
-  const entries1 = entries(obj2.groupBy(flatResult, f98295));
+  const entries1 = entries(obj2.groupBy(flatResult, f98489));
   const mapped = entries1.map((item) => {
     let obj;
     let tmp;
@@ -90,7 +90,7 @@ let obj = {
     _require = false;
     configs = configs.configs;
     let obj = require("../../../_runtime/metro/00012__.js");
-    const entries1 = entries(obj.groupBy(configs, f98295));
+    const entries1 = entries(obj.groupBy(configs, f98489));
     const mapped = entries1.map((item) => {
       let obj;
       let tmp;

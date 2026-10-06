@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import intl2 from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13409_AssetRegistry.js";
-import _mod13410 from "../../../../../_runtime/metro/13410__.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/13411_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13428_AssetRegistry.js";
+import _mod13429 from "../../../../../_runtime/metro/13429__.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/13430_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -84,7 +84,7 @@ let items = [
       return intl.string(intl2.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod13410, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod13429, autoPlay: !AccessibilityStore.useReducedMotion, style };
       const tmp = LottieAnimationViewDefault;
       return metroRequire(tmp, obj);
     },

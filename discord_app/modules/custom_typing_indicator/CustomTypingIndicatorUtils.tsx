@@ -4,7 +4,7 @@ import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtil
 import EmojiConstants from "../emojis/EmojiConstants.tsx";
 import user2 from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes.tsx";
-import _modDef3725 from "intl/CustomTypingIndicator.messages.js";
+import _modDef3755 from "intl/CustomTypingIndicator.messages.js";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiStore from "../emojis/EmojiStore.tsx";
@@ -21,23 +21,23 @@ let _require, set, usableGuildEmoji;
 const Permissions = Constants.Permissions;
 const EmojiIntention = EmojiConstants.EmojiIntention;
 let obj = {};
-obj[user2.TypingSuggestion.UNSPECIFIED] = _modDef3725["6Cdy4a"];
-obj[user2.TypingSuggestion.YAPPING] = _modDef3725.E5VRaj;
-obj[user2.TypingSuggestion.VENTING] = _modDef3725.xmxdPC;
-obj[user2.TypingSuggestion.OVERSHARING] = _modDef3725["qGaH/9"];
-obj[user2.TypingSuggestion.BARKING] = _modDef3725.M282uk;
-obj[user2.TypingSuggestion.BABBLING] = _modDef3725.myNZDT;
-obj[user2.TypingSuggestion.DAYDREAMING] = _modDef3725.F7RLTP;
-obj[user2.TypingSuggestion.MEOWING] = _modDef3725.EfxyQI;
+obj[user2.TypingSuggestion.UNSPECIFIED] = _modDef3755["6Cdy4a"];
+obj[user2.TypingSuggestion.YAPPING] = _modDef3755.E5VRaj;
+obj[user2.TypingSuggestion.VENTING] = _modDef3755.xmxdPC;
+obj[user2.TypingSuggestion.OVERSHARING] = _modDef3755["qGaH/9"];
+obj[user2.TypingSuggestion.BARKING] = _modDef3755.M282uk;
+obj[user2.TypingSuggestion.BABBLING] = _modDef3755.myNZDT;
+obj[user2.TypingSuggestion.DAYDREAMING] = _modDef3755.F7RLTP;
+obj[user2.TypingSuggestion.MEOWING] = _modDef3755.EfxyQI;
 let obj2 = {};
-obj2[user2.TypingSuggestion.UNSPECIFIED] = _modDef3725.kh4K4F;
-obj2[user2.TypingSuggestion.YAPPING] = _modDef3725.m9AeqG;
-obj2[user2.TypingSuggestion.VENTING] = _modDef3725["SZ0/Qu"];
-obj2[user2.TypingSuggestion.OVERSHARING] = _modDef3725.N8cWE8;
-obj2[user2.TypingSuggestion.BARKING] = _modDef3725.L5aWEN;
-obj2[user2.TypingSuggestion.BABBLING] = _modDef3725.AoBaEw;
-obj2[user2.TypingSuggestion.DAYDREAMING] = _modDef3725["3hOLod"];
-obj2[user2.TypingSuggestion.MEOWING] = _modDef3725["0Z9/o9"];
+obj2[user2.TypingSuggestion.UNSPECIFIED] = _modDef3755.kh4K4F;
+obj2[user2.TypingSuggestion.YAPPING] = _modDef3755.m9AeqG;
+obj2[user2.TypingSuggestion.VENTING] = _modDef3755["SZ0/Qu"];
+obj2[user2.TypingSuggestion.OVERSHARING] = _modDef3755.N8cWE8;
+obj2[user2.TypingSuggestion.BARKING] = _modDef3755.L5aWEN;
+obj2[user2.TypingSuggestion.BABBLING] = _modDef3755.AoBaEw;
+obj2[user2.TypingSuggestion.DAYDREAMING] = _modDef3755["3hOLod"];
+obj2[user2.TypingSuggestion.MEOWING] = _modDef3755["0Z9/o9"];
 let items = [
   user2.TypingSuggestion.UNSPECIFIED,
   user2.TypingSuggestion.YAPPING,

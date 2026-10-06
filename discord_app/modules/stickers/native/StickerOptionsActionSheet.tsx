@@ -33,16 +33,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = jsx(stickerUrl(4839).LinkIcon, {});
+        const tmp8 = jsx(stickerUrl(4845).LinkIcon, {});
         const intl = tmp(1126).intl;
         const stringResult = intl.string(stickerUrl(1126).t.B1ubHx);
         cResult[2] = tmp8;
         cResult[3] = stringResult;
       }
       if (cResult[4] !== tmp4) {
-        const ActionSheet = tmp(6701).ActionSheet;
+        const ActionSheet = tmp(6708).ActionSheet;
         let obj3 = { hasIcons: true, children: null };
-        const TableRowGroup = tmp(6074).TableRowGroup;
+        const TableRowGroup = tmp(6081).TableRowGroup;
         const tmp12 = <ActionSheet>{null}</ActionSheet>;
         cResult[4] = tmp4;
         cResult[5] = tmp12;
@@ -64,11 +64,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = ActionSheetActionCreatorsDefault;
         obj3.hideActionSheet();
       }, items);
-      const ActionSheet = stickerUrl(6701).ActionSheet;
+      const ActionSheet = stickerUrl(6708).ActionSheet;
       let obj2 = { hasIcons: true, children: null };
-      const TableRowGroup = stickerUrl(6074).TableRowGroup;
+      const TableRowGroup = stickerUrl(6081).TableRowGroup;
       let obj3 = { icon: null, label: intl.string(stickerUrl(1126).t.B1ubHx), onPress: callback };
-      const TableRow = stickerUrl(5993).TableRow;
+      const TableRow = stickerUrl(6000).TableRow;
       intl = stickerUrl(1126).intl;
       return <ActionSheet>{null}</ActionSheet>;
     };

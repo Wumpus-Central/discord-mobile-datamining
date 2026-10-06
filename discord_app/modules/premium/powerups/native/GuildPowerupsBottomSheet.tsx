@@ -4,7 +4,7 @@ import get_initialized from "../../../../../discord_common/js/packages/flux/inde
 import react from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../../intl/index.native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import GameServerHostingRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/GameServerHostingRive.tsx";
 import GameServerConstants from "../../../game_server/GameServerConstants.tsx";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
@@ -420,7 +420,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = {
               variant: "text-sm/medium",
               color: "text-muted",
-              children: intl.formatToPlainString(_modDef2525.GMhQcE, obj6),
+              children: intl.formatToPlainString(_modDef2553.GMhQcE, obj6),
             };
             const Text = Text_Text.Text;
             intl = intl4.intl;
@@ -472,7 +472,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = {
             variant: "text-sm/medium",
             color: "text-muted",
-            children: intl.formatToPlainString(_modDef2525.GMhQcE, obj6),
+            children: intl.formatToPlainString(_modDef2553.GMhQcE, obj6),
           };
           const Text = Text_Text.Text;
           intl = intl4.intl;
@@ -617,7 +617,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                     };
                     const intl3 = intl4.intl;
                     const string = intl3.string;
-                    const tmp5Result = _modDef2525;
+                    const tmp5Result = _modDef2553;
                     if (isPowerupActive) {
                       stringResult = string(tmp5Result.TZsu1U);
                     } else {
@@ -637,7 +637,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 let tmp30 = tmp8;
                 if (tmp30) {
-                  const obj4 = { variant: "primary", text: intl2.string(_modDef2525.g5Ds69), onPress: tmp14 };
+                  const obj4 = { variant: "primary", text: intl2.string(_modDef2553.g5Ds69), onPress: tmp14 };
                   const Button = components_Button_Button.Button;
                   intl2 = intl4.intl;
                   tmp30 = metroImportAll(Button, obj4);
@@ -662,7 +662,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = {
                 style: tmp4.description,
                 variant: "text-md/bold",
-                children: intl.string(_modDef2525["jo5++h"]),
+                children: intl.string(_modDef2553["jo5++h"]),
               };
               const Text = Text_Text.Text;
               intl = intl4.intl;
@@ -747,7 +747,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             style: tmp.description,
             variant: "text-md/bold",
-            children: intl.string(_modDef2525["jo5++h"]),
+            children: intl.string(_modDef2553["jo5++h"]),
           };
           const Text = Text_Text.Text;
           intl = intl4.intl;
@@ -761,7 +761,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }
         items[1] = tmp21;
         if (showConfigureButton) {
-          const obj4 = { variant: "primary", text: intl2.string(_modDef2525.g5Ds69), onPress: tmp10 };
+          const obj4 = { variant: "primary", text: intl2.string(_modDef2553.g5Ds69), onPress: tmp10 };
           const Button = components_Button_Button.Button;
           intl2 = intl4.intl;
           showConfigureButton = metroImportAll(Button, obj4);
@@ -793,7 +793,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           };
           const intl3 = intl4.intl;
           const string = intl3.string;
-          const tmp2Result = _modDef2525;
+          const tmp2Result = _modDef2553;
           if (isPowerupActive) {
             stringResult = string(tmp2Result.TZsu1U);
           } else {

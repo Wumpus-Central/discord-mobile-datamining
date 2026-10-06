@@ -80,7 +80,7 @@ class ApplicationCommandAutocompleteStore extends Store {
         optionNameToLastQuery: map3,
         optionNameToContextKey: map4,
         lastErrored: false,
-        lastResponseNonce: "code",
+        lastResponseNonce: "applicationId",
       };
       const _Map2 = Map;
       const self3 = this;
@@ -125,7 +125,7 @@ class ApplicationCommandAutocompleteStore extends Store {
         optionNameToLastQuery: map3,
         optionNameToContextKey: map4,
         lastErrored: false,
-        lastResponseNonce: "code",
+        lastResponseNonce: "applicationId",
       };
       const _Map2 = Map;
       const self3 = this;
@@ -176,7 +176,7 @@ class ApplicationCommandAutocompleteStore extends Store {
         optionNameToLastQuery: map3,
         optionNameToContextKey: map4,
         lastErrored: false,
-        lastResponseNonce: "code",
+        lastResponseNonce: "applicationId",
       };
       const _Map2 = Map;
       const self3 = this;
@@ -222,7 +222,7 @@ class ApplicationCommandAutocompleteStore extends Store {
         optionNameToLastQuery: map3,
         optionNameToContextKey: map4,
         lastErrored: false,
-        lastResponseNonce: "code",
+        lastResponseNonce: "applicationId",
       };
       const _Map2 = Map;
       const self3 = this;
@@ -280,7 +280,7 @@ let obj = {
         optionNameToLastQuery: map3,
         optionNameToContextKey: map4,
         lastErrored: false,
-        lastResponseNonce: "code",
+        lastResponseNonce: "applicationId",
       };
       map = new Map();
       const _Map2 = Map;
@@ -388,7 +388,7 @@ let obj = {
           optionNameToLastQuery: map3,
           optionNameToContextKey: map4,
           lastErrored: false,
-          lastResponseNonce: "code",
+          lastResponseNonce: "applicationId",
         };
         map = new Map();
         const _Map2 = Map;
@@ -532,7 +532,7 @@ let obj = {
             optionNameToLastQuery: map3,
             optionNameToContextKey: map4,
             lastErrored: false,
-            lastResponseNonce: "code",
+            lastResponseNonce: "applicationId",
           };
           map = new Map();
           const _Map2 = Map;

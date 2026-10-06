@@ -297,7 +297,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const PressableOpacity = Pressables.PressableOpacity;
         if (!tmp13) {
           const obj18 = { style: tmp.fullGradient, colors: items, start, end };
-          tmp21Result = tmp21(orbMultiplierEligibility(5605), obj18);
+          tmp21Result = tmp21(orbMultiplierEligibility(5612), obj18);
         }
         items4 = [tmp21Result];
         const obj19 = { style: tmp.fullGradientContent, children: tmp16Result };

@@ -7,13 +7,13 @@ import size from "../../../_runtime/metro/00002__.js";
 let obj = {
   openAddFriendModalDeeplink() {
     const obj = ModalActionCreatorsDefault;
-    obj.pushLazy(asyncRequire(13666, dependencyMap.paths));
+    obj.pushLazy(asyncRequire(13682, dependencyMap.paths));
   },
   openAddFriendModal(sourceMetadata) {
     if (null != UserStore.getCurrentUser()) {
       const obj2 = { sourceMetadata };
       const obj = ModalActionCreatorsDefault;
-      obj.pushLazy(asyncRequire(13666, dependencyMap.paths), obj2);
+      obj.pushLazy(asyncRequire(13682, dependencyMap.paths), obj2);
     }
   },
 };

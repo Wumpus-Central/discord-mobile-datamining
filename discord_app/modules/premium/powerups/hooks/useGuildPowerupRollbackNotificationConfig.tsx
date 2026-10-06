@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackNotificationConfig.tsx
 import intl3 from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -23,8 +23,8 @@ function getGuildThemeRollbackNotificationConfig(storeRemovalDate) {
       const tmp3 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
       const obj = {
         dismissibleContent: dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
-        title: intl.formatToPlainString(_modDef2525["6e2ry1"], obj2),
-        description: intl2.formatToPlainString(_modDef2525.jd8fki, obj5),
+        title: intl.formatToPlainString(_modDef2553["6e2ry1"], obj2),
+        description: intl2.formatToPlainString(_modDef2553.jd8fki, obj5),
       };
       intl = intl3.intl;
       obj2 = { dateString: tmp3 };
@@ -69,7 +69,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       let tmp8;
       if (stateFromStores != null) {
-        tmp8 = stateFromStores.allPowerups[tmp(undefined, 4771).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+        tmp8 = stateFromStores.allPowerups[tmp(undefined, 4777).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
       const tmpResult2 = require("guildTheme");
       const shouldShowGuildThemeRollback = tmpResult2.useShouldShowGuildThemeRollback(arg0, arg1);
@@ -94,8 +94,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = {
               dismissibleContent:
                 require("dismissible_content").DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
-              title: intl.formatToPlainString(_modDef2525["6e2ry1"], obj3),
-              description: intl2.formatToPlainString(_modDef2525.jd8fki, obj4),
+              title: intl.formatToPlainString(_modDef2553["6e2ry1"], obj3),
+              description: intl2.formatToPlainString(_modDef2553.jd8fki, obj4),
             };
             intl = tmp(1126).intl;
             obj3 = { dateString: tmp14 };
@@ -141,8 +141,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = {
               dismissibleContent:
                 require("dismissible_content").DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION,
-              title: intl.formatToPlainString(_modDef2525["6e2ry1"], obj3),
-              description: intl2.formatToPlainString(_modDef2525.jd8fki, obj4),
+              title: intl.formatToPlainString(_modDef2553["6e2ry1"], obj3),
+              description: intl2.formatToPlainString(_modDef2553.jd8fki, obj4),
             };
             intl = tmp(1126).intl;
             obj3 = { dateString: tmp8 };

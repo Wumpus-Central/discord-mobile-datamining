@@ -491,7 +491,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             return () => {
-              /* body not rendered: F148307 */
+              /* body not rendered: F148532 */
             };
           }
         }
@@ -504,7 +504,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             return () => {
-              /* body not rendered: F148307 */
+              /* body not rendered: F148532 */
             };
           }
         }
@@ -515,7 +515,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             return () => {
-              /* body not rendered: F148307 */
+              /* body not rendered: F148532 */
             };
           }
         }
@@ -525,7 +525,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             return () => {
-              /* body not rendered: F148307 */
+              /* body not rendered: F148532 */
             };
           }
         }
@@ -534,7 +534,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         class T {
           constructor() {
             return () => {
-              /* body not rendered: F148307 */
+              /* body not rendered: F148532 */
             };
           }
         }
@@ -556,7 +556,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               self2 = this;
               set = new Set(
                 (() => {
-                  /* body not rendered: F148308 */
+                  /* body not rendered: F148533 */
                 })(),
               );
               tmp3 = set;

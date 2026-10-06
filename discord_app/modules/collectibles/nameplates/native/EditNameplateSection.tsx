@@ -324,9 +324,9 @@ const memo2Result = memo2(
           onPress: callback,
           size,
           accessibilityLabel: nameplate.label,
-          children: closure_6(setSelectedNameplate(8474), obj2),
+          children: closure_6(setSelectedNameplate(8507), obj2),
         };
-        const EditCollectiblesListItemProduct = nameplate(13010).EditCollectiblesListItemProduct;
+        const EditCollectiblesListItemProduct = nameplate(13029).EditCollectiblesListItemProduct;
         obj2 = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: items2 };
         items2 = [tmp.nameplate, { borderRadius: 6 }];
         return closure_6(EditCollectiblesListItemProduct, obj);

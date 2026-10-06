@@ -3,7 +3,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import useToken from "../../../tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

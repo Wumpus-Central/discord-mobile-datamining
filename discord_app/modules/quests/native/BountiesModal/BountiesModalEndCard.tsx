@@ -2,7 +2,7 @@
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta.tsx";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
@@ -65,11 +65,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withTiming(num, timingPresets.timingStandard) };
         return obj;
       };
-      const obj2 = visible(4612);
-      fn.__closure = { withTiming: visible(4891).withTiming, visible, timingStandard: visible(4894).timingStandard };
+      const obj2 = visible(4618);
+      fn.__closure = { withTiming: visible(4897).withTiming, visible, timingStandard: visible(4900).timingStandard };
       fn.__workletHash = 15062259404736;
       fn.__initData = __initData;
-      ({ withTiming: visible(4891).withTiming, visible, timingStandard: visible(4894).timingStandard });
+      ({ withTiming: visible(4897).withTiming, visible, timingStandard: visible(4900).timingStandard });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       if (cResult[0] === animatedStyle) {
         if (cResult[1] === bounty) {
@@ -117,7 +117,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       visible = visible.visible;
       ({ bounty, sourceQuestContent } = visible);
       const tmp = closure_7();
-      const tmp3 = visible(4612);
+      const tmp3 = visible(4618);
       const fn = function b() {
         let num = 0;
         const withTiming = timing.withTiming;
@@ -128,7 +128,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withTiming(num, timingPresets.timingStandard) };
         return obj;
       };
-      let obj = { withTiming: visible(4891).withTiming, visible, timingStandard: visible(4894).timingStandard };
+      let obj = { withTiming: visible(4897).withTiming, visible, timingStandard: visible(4900).timingStandard };
       fn.__closure = obj;
       fn.__workletHash = 8770295520643;
       fn.__initData = __initData2;

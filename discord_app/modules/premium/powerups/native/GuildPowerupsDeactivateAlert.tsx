@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsDeactivateAlert.tsx
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useGuildPowerupOnDeactivateDefault from "../hooks/useGuildPowerupOnDeactivate.tsx";
 import useDeactivateWarningTextDefault from "../hooks/useDeactivateWarningText.tsx";
@@ -50,10 +50,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId, powerup } = arg0);
       const tmp4 = closure_6();
       _require = tmp4;
-      const tmp6 = onDeactivate(12200)(guildId, powerup);
+      const tmp6 = onDeactivate(12215)(guildId, powerup);
       onDeactivate = tmp6.onDeactivate;
       const error = tmp6.error;
-      const arr = onDeactivate(12201)(guildId, powerup);
+      const arr = onDeactivate(12216)(guildId, powerup);
       const obj2 = require("GuildPowerupAnalytics");
       const logPowerupModalOpened = obj2.useLogPowerupModalOpened(
         guildId,
@@ -66,7 +66,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           size: "custom",
           style: { width: 40, height: 40 },
         };
-        const CircleErrorIcon = tmp(4800).CircleErrorIcon;
+        const CircleErrorIcon = tmp(4806).CircleErrorIcon;
         const tmp10 = closure_4(CircleErrorIcon, obj3);
         cResult[0] = tmp10;
         first = tmp10;
@@ -85,7 +85,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== powerup.title) {
         const intl = tmp(1126).intl;
         const obj5 = { perk: powerup.title };
-        const formatToPlainStringResult = intl.formatToPlainString(onDeactivate(2525).iEBw1M, obj5);
+        const formatToPlainStringResult = intl.formatToPlainString(onDeactivate(2553).iEBw1M, obj5);
         cResult[3] = powerup.title;
         cResult[4] = formatToPlainStringResult;
         tmp15 = formatToPlainStringResult;
@@ -95,7 +95,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] !== powerup.title) {
         const intl2 = tmp(1126).intl;
         const obj6 = { perk: powerup.title };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(onDeactivate(2525)["7o0K+2"], obj6);
+        const formatToPlainStringResult1 = intl2.formatToPlainString(onDeactivate(2553)["7o0K+2"], obj6);
         cResult[5] = powerup.title;
         cResult[6] = formatToPlainStringResult1;
         tmp17 = formatToPlainStringResult1;
@@ -134,7 +134,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               return onDeactivate();
             }
           }
-          const stringResult = obj8.string(onDeactivate(2525).PYPdl4);
+          const stringResult = obj8.string(onDeactivate(2553).PYPdl4);
           cResult[12] = stringResult;
           tmp22 = stringResult;
         } else {
@@ -191,7 +191,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj9 = { onPress: tmp27, variant: "secondary", text: intl3.string(require("intl").t["ETE/oC"]) };
-          const AlertActionButton = tmp(5713).AlertActionButton;
+          const AlertActionButton = tmp(5720).AlertActionButton;
           intl3 = tmp(1126).intl;
           let str2 = "cancel";
           const tmp29 = closure_4(AlertActionButton, obj9, "cancel");
@@ -331,7 +331,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: error,
         };
-        tmp20 = closure_4(tmp(4886).Text, obj13);
+        tmp20 = closure_4(tmp(4892).Text, obj13);
       }
       cResult[7] = error;
       cResult[8] = tmp4.warningText;
@@ -373,8 +373,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const obj2 = {
         header: closure_4(View, obj3),
-        title: intl.formatToPlainString(_modDef2525.iEBw1M, obj5),
-        content: intl2.formatToPlainString(_modDef2525["7o0K+2"], obj6),
+        title: intl.formatToPlainString(_modDef2553.iEBw1M, obj5),
+        content: intl2.formatToPlainString(_modDef2553["7o0K+2"], obj6),
         actions: closure_5(AlertActions, obj8),
         extraContent: closure_4(View, obj11),
       };
@@ -395,7 +395,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: error,
         };
-        tmp7Result = closure_4(tmp5(4886).Text, obj7);
+        tmp7Result = closure_4(tmp5(4892).Text, obj7);
       }
       obj8 = { children: items };
       items = [tmp7Result, ,];
@@ -405,9 +405,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           stopPropagation.stopPropagation();
           return _undefined();
         },
-        text: intl3.string(_modDef2525.PYPdl4),
+        text: intl3.string(_modDef2553.PYPdl4),
       };
-      const AlertActionButton = tmp5(5713).AlertActionButton;
+      const AlertActionButton = tmp5(5720).AlertActionButton;
       intl3 = tmp5(1126).intl;
       items[1] = closure_4(AlertActionButton, obj9, "deactivate");
       const obj10 = {
@@ -415,7 +415,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "secondary",
         text: intl4.string(require("intl").t["ETE/oC"]),
       };
-      const AlertActionButton2 = tmp5(5713).AlertActionButton;
+      const AlertActionButton2 = tmp5(5720).AlertActionButton;
       intl4 = tmp5(1126).intl;
       items[2] = closure_4(AlertActionButton2, obj10, "cancel");
       obj11 = {

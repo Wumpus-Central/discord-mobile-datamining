@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting("modules/color_picker/native/showCusto
 
 export default function showCustomColorPickerActionSheet(arg0, stack) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(14422, dependencyMap.paths), CustomColorPicker, arg0, stack);
+  obj.openLazy(asyncRequire(14438, dependencyMap.paths), CustomColorPicker, arg0, stack);
 }
 export const CUSTOM_COLOR_PICKER_KEY = "CustomColorPicker";

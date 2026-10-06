@@ -147,7 +147,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
       cResult[10] = tmp36;
       tmp33 = tmp36;
     }
-    const tmp32 = jsx(voiceState2(15115).HappeningNowCardSubtitle, {
+    const tmp32 = jsx(voiceState2(15130).HappeningNowCardSubtitle, {
       lineClamp: 1,
       accessibilityLabel: tmp27,
       children: tmp26,
@@ -163,7 +163,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     const obj = voiceState2(504);
     const stateFromStores1 = obj.useStateFromStores(items1, () => ChannelStore.getChannel(voiceState2.channelId));
     const tmp9 = useChannelNameDefault(stateFromStores1);
-    const HappeningNowCardSubtitle = voiceState2(15115).HappeningNowCardSubtitle;
+    const HappeningNowCardSubtitle = voiceState2(15130).HappeningNowCardSubtitle;
     if (null != stateFromStores1) {
       const obj7 = { channel: stateFromStores1 };
       const tmp13 = getChannelA11yLabelDefault(obj7);

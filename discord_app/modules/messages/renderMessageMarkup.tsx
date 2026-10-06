@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let hasSpoilerEmbeds;
 
-const f95059 = (arg0) => {
+const f95199 = (arg0) => {
   let tmp = arg0;
   if (!Array.isArray(arg0)) {
     const items = [arg0];
@@ -237,7 +237,7 @@ export const renderAutomodMessageMarkup = function renderAutomodMessageMarkup(ar
     channelId,
     muted: false,
   };
-  return MarkupUtilsDefault.parseAutoModerationSystemMessage(arg0, true, obj, f95059);
+  return MarkupUtilsDefault.parseAutoModerationSystemMessage(arg0, true, obj, f95199);
 };
 export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMarkupToAST(
   arg0,
@@ -261,5 +261,5 @@ export const renderAutomodMessageMarkupToAST = function renderAutomodMessageMark
     channelId,
     muted: false,
   };
-  return MarkupUtilsDefault.parseAutoModerationSystemMessageToAST(arg0, true, obj, f95059);
+  return MarkupUtilsDefault.parseAutoModerationSystemMessageToAST(arg0, true, obj, f95199);
 };

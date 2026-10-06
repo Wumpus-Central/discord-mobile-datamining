@@ -237,7 +237,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl.string(intl3.t["bm6P5/"]);
         tmp5 = require;
       }
-      const obj = { style: items, children: metroImportAll(tmp5(5594).Button, obj3) };
+      const obj = { style: items, children: metroImportAll(tmp5(5601).Button, obj3) };
       items = [tmp.footerContainer, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
       ({ paddingBottom: useSafeAreaInsetsDefault().bottom });
       obj3 = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };

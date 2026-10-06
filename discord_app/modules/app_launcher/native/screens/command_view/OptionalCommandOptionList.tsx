@@ -32,7 +32,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp4 = cResult[2];
           }
           if (cResult[5] !== tmp4) {
-            const tmp9 = jsx(onSelectOption(6074).TableRowGroup, { hasIcons: false, children: tmp4 });
+            const tmp9 = jsx(onSelectOption(6081).TableRowGroup, { hasIcons: false, children: tmp4 });
             cResult[5] = tmp4;
             cResult[6] = tmp9;
             tmp7 = tmp9;

@@ -2,7 +2,7 @@
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import react from "../../../../../../_runtime/00576_react.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef8098 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ShieldSpotIllustration-2x.png.js";
+import _modDef8131 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ShieldSpotIllustration-2x.png.js";
 import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";
 import size_mod from "../../../../../../_runtime/metro/00002__.js";
 
@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         num3 = scale;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef8098 };
+        const obj2 = { uri: _modDef8131 };
         cResult[0] = obj2;
         first = obj2;
       } else {
@@ -94,7 +94,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (num3 === undefined) {
         num3 = 1;
       }
-      const obj2 = { uri: _modDef8098 };
+      const obj2 = { uri: _modDef8131 };
       FastImageDefault;
       size = { width: num * num3, height: num2 * num3 };
       const items = [size];

@@ -8,7 +8,7 @@ import ActionSheetConstants from "../../action_sheet/native/ActionSheetConstants
 import ChevronSmallRightIcon2 from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import SavedMessagesTypes from "../SavedMessagesTypes.tsx";
 import BookmarkIcon from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
-import _modDef13135 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef13154 from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
@@ -119,7 +119,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_8();
       const tmp5 = type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
       ({ scrollView, pageContainer, container } = tmp4);
-      const tmp6 = importDefault(tmp5 ? 13133 : 13134);
+      const tmp6 = importDefault(tmp5 ? 13152 : 13153);
       if (cResult[0] === tmp4.upsellImage) {
         let tmp7;
         let tmp9;
@@ -279,7 +279,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj2 = { style: tmp.container, children: items };
       items = [, ,];
-      const obj3 = { source: importDefault(tmp4 ? 13133 : 13134), style: tmp.upsellImage };
+      const obj3 = { source: importDefault(tmp4 ? 13152 : 13153), style: tmp.upsellImage };
       items[0] = metroRequire(_false, obj3);
       const obj4 = { style: tmp.textContainer, children: items1 };
       const obj5 = {
@@ -338,7 +338,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_8();
       const demo = tmp4.demo;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef13135 };
+        const obj2 = { uri: _modDef13154 };
         cResult[0] = obj2;
         first = obj2;
       } else {
@@ -533,8 +533,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj2 = { style: tmp.messages, children: items };
       items = [,];
-      const obj3 = { source: { uri: _modDef13135 }, style: tmp.avatar };
-      ({ uri: _modDef13135 });
+      const obj3 = { source: { uri: _modDef13154 }, style: tmp.avatar };
+      ({ uri: _modDef13154 });
       items[0] = metroRequire(_false, obj3);
       const obj5 = { style: tmp.messageLines, children: items1 };
       const obj6 = { variant: "text-sm/semibold", color: "text-default", children: intl.string(intl7.t.cqpybK) };

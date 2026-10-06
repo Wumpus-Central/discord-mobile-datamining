@@ -1,8 +1,8 @@
 // discord_app/modules/conjure/voice/ConjureVoiceSessionCoordinator.tsx
 import Constants2 from "../../../Constants.tsx";
 import v1 from "../../../../_runtime/01266_v1.js";
-import RPCErrorDefault from "../../rpc/RPCError.tsx";
 import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
+import RPCErrorDefault from "../../rpc/RPCError.tsx";
 import SpatialAudioForVoiceExperimentDefault from "../../voice_panel/SpatialAudioForVoiceExperiment.tsx";
 import ConjureVoiceGeometry from "ConjureVoiceGeometry.tsx";
 import validateEmbeddedAppFrameDefault from "../../rpc/helpers/validateEmbeddedAppFrame.tsx";

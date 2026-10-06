@@ -12,7 +12,7 @@ export default function openFavoritesGuildAddChannelModal(arg0) {
   let source;
   ({ parentId, source } = arg0);
   const tmp = showSearchableDestinationListModalDefault;
-  tmp(asyncRequire(10708, dependencyMap.paths), { parentId, source }, FavoritesGuildAddChannelModal);
+  tmp(asyncRequire(10721, dependencyMap.paths), { parentId, source }, FavoritesGuildAddChannelModal);
 }
 export const FAVORITES_GUILD_ADD_CHANNEL_MODAL_KEY = "FavoritesGuildAddChannelModal";
 export const closeFavoritesGuildAddChannelModal = function closeFavoritesGuildAddChannelModal() {

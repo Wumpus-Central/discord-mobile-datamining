@@ -195,8 +195,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return messageRecord;
       }, items);
       const tmp5 = message;
-      const ActionSheet = message(6701).ActionSheet;
-      const BottomSheetTitleHeader = message(6644).BottomSheetTitleHeader;
+      const ActionSheet = message(6708).ActionSheet;
+      const BottomSheetTitleHeader = message(6651).BottomSheetTitleHeader;
       let intl = message(1126).intl;
       const string = intl.string;
       if (null != thread) {
@@ -211,7 +211,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != memo) {
         let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
       } else {
-        tmp4Result = jsx(tmp5(4886).Text, { variant: "text-md/normal", color: "text-default", children: notice });
+        tmp4Result = jsx(tmp5(4892).Text, { variant: "text-md/normal", color: "text-default", children: notice });
       }
       return (
         <ActionSheet header={<BottomSheetTitleHeader title={string(StrErG)} subtitle={name} />}>{null}</ActionSheet>

@@ -3,7 +3,7 @@ import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../../_runtime/00576_react.js";
 import _modDef683 from "../../../../../../_runtime/metro/00683__.js";
 import Constants from "../../../../../Constants.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
 import useSearchHostSurface from "../useSearchHostSurface.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";
@@ -74,7 +74,7 @@ const memoResult = memo(
     : (height) => {
         let searchHostSurfaceColor;
         const tmp = closure_7(height.height);
-        let obj = searchHostSurfaceColor(16866);
+        let obj = searchHostSurfaceColor(16890);
         searchHostSurfaceColor = obj.useSearchHostSurfaceColor();
         let items = [searchHostSurfaceColor];
         const memo = react.useMemo(() => {

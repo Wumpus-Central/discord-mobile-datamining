@@ -26,7 +26,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(25);
       channel = channel.channel;
       ({ draftText, isEligible } = channel);
-      let obj2 = channel(4698);
+      let obj2 = channel(4704);
       let result = obj2.useIsDismissibleContentDismissed_UNSAFE(closure_7);
       dependencyMap = result;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -125,7 +125,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let first;
       let connected;
       let isCoachmarkVisible;
-      let obj = channel(4698);
+      let obj = channel(4704);
       let result = obj.useIsDismissibleContentDismissed_UNSAFE(closure_7);
       dependencyMap = result;
       let obj2 = channel(504);

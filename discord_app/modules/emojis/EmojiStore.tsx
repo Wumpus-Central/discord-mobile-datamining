@@ -7,7 +7,7 @@ import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import DatabaseDaosDefault from "../app_database/DatabaseDaos.tsx";
 import TryLoad from "../app_database/app/TryLoad.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import PremiumRoleUtils from "../guild_role_subscriptions/PremiumRoleUtils.tsx";
 import EmojiTypes from "EmojiTypes.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
@@ -1142,7 +1142,7 @@ class EmojiStore extends PersistedStore {
     let closure_2;
     let closure_0 = intention;
     let formatted = query.toLowerCase();
-    obj = formatted(4874);
+    obj = formatted(4880);
     const escapeResult = obj.escape(formatted);
     let orderByResult = locked;
     const tmp2 = formatted;
@@ -1617,8 +1617,8 @@ let obj7 = {
     const guildId = topEmojisMetadata.guildId;
     obj = { emojiIds: topEmojisMetadata.map((emojiId) => emojiId.emojiId), topEmojisTTL: addResult.valueOf() };
     set = map.set;
-    const tmp = _modDef4461;
-    const tmpResult = tmp(_modDef4461());
+    const tmp = _modDef4467;
+    const tmpResult = tmp(_modDef4467());
     addResult = tmpResult.add(1, "days");
     const result = set(guildId, obj);
   },

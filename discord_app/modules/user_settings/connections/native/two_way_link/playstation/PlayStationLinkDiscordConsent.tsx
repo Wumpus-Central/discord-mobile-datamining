@@ -96,7 +96,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = tmp5;
       cResult[9] = platformType;
       cResult[10] = tmp9;
-      cResult[11] = jsx(navigation(8750).TwoWayLinkDiscordConsent, {
+      cResult[11] = jsx(navigation(8782).TwoWayLinkDiscordConsent, {
         platformType,
         callbackCode,
         callbackState,
@@ -106,7 +106,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         onError: N,
         redirectUri: tmp9,
       });
-      jsx(navigation(8750).TwoWayLinkDiscordConsent, {
+      jsx(navigation(8782).TwoWayLinkDiscordConsent, {
         platformType,
         callbackCode,
         callbackState,
@@ -137,16 +137,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         navigation.push(constants.ERROR, obj);
       }, items1);
       if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
-        PLAYSTATION_APPLICATION_ID = tmp(8751).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
+        PLAYSTATION_APPLICATION_ID = tmp(8783).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
       } else {
-        PLAYSTATION_APPLICATION_ID = tmp(8751).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID;
+        PLAYSTATION_APPLICATION_ID = tmp(8783).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID;
       }
       if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
-        PLAYSTATION = tmp(8772).ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING;
+        PLAYSTATION = tmp(8804).ConsoleAuthorizationRedirectURIs.PLAYSTATION_STAGING;
       } else {
-        PLAYSTATION = tmp(8772).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
+        PLAYSTATION = tmp(8804).ConsoleAuthorizationRedirectURIs.PLAYSTATION;
       }
-      return jsx(navigation(8750).TwoWayLinkDiscordConsent, {
+      return jsx(navigation(8782).TwoWayLinkDiscordConsent, {
         platformType,
         callbackCode,
         callbackState,

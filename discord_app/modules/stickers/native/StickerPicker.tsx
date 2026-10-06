@@ -99,9 +99,9 @@ const memoResult = react.memo(
         ({ paddingTop, onPressSticker } = arg0);
         ({ stickerFormats, inPortalKeyboard } = arg0);
         closure_17();
-        let obj2 = channel(10111);
+        let obj2 = channel(10124);
         const fetchStickerPacks = obj2.useFetchStickerPacks();
-        let obj3 = channel(10113);
+        let obj3 = channel(10126);
         const stickerCategories = obj3.useStickerCategories(channel);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let items = [StickersStore];
@@ -121,11 +121,11 @@ const memoResult = react.memo(
         const tmp11 = analyticsLocations(react.useState(0), 2);
         [r10050, tmp12] = tmp11;
         dependencyMap = tmp12;
-        const tmp14 = onPressSticker(6657);
-        analyticsLocations = tmp14(onPressSticker(6681).STICKER_PICKER).analyticsLocations;
+        const tmp14 = onPressSticker(6664);
+        analyticsLocations = tmp14(onPressSticker(6688).STICKER_PICKER).analyticsLocations;
         const tmp15 = analyticsLocations(react.useState(null), 2);
         [r10064, react] = tmp15;
-        const tmpResult2 = channel(8826);
+        const tmpResult2 = channel(8856);
         let mobileStickerPickerUpsellRestyleEnabled =
           tmpResult2.useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -135,8 +135,8 @@ const memoResult = react.memo(
         } else {
           tmp17 = cResult[2];
         }
-        ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10086)(tmp17));
-        onPressSticker(10086)(tmp17);
+        ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10099)(tmp17));
+        onPressSticker(10099)(tmp17);
         if (cResult[3] === channel) {
           if (cResult[6] === channel.guild_id) {
             let tmp20;
@@ -240,7 +240,7 @@ const memoResult = react.memo(
               tmp2 = closure_2;
               obj = closure_0(closure_2[20]);
               batchUpdatesResult = obj.batchUpdates(() => {
-                /* body not rendered: F140217 */
+                /* body not rendered: F140423 */
               });
             }
             return;
@@ -275,9 +275,9 @@ const memoResult = react.memo(
         react = undefined;
         ({ bottomSheetRef, bottomSheetIndex, paddingTop, stickerFormats, inPortalKeyboard } = channel);
         const tmp = closure_17();
-        let obj = channel(10111);
+        let obj = channel(10124);
         const fetchStickerPacks = obj.useFetchStickerPacks();
-        let obj2 = channel(10113);
+        let obj2 = channel(10126);
         const stickerCategories = obj2.useStickerCategories(channel);
         let obj3 = channel(504);
         let items = [StickersStore];
@@ -285,18 +285,18 @@ const memoResult = react.memo(
         const tmp6 = analyticsLocations(react.useState(0), 2);
         dependencyMap = tmp8;
         const first = tmp6[0];
-        const tmp10 = onPressSticker(6657);
-        analyticsLocations = tmp10(onPressSticker(6681).STICKER_PICKER).analyticsLocations;
+        const tmp10 = onPressSticker(6664);
+        analyticsLocations = tmp10(onPressSticker(6688).STICKER_PICKER).analyticsLocations;
         const tmp11 = analyticsLocations(react.useState(null), 2);
         [tmp12, c4] = tmp11;
-        let obj4 = channel(8826);
+        let obj4 = channel(8856);
         let mobileStickerPickerUpsellRestyleEnabled =
           obj4.useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
         let items1 = [channel, mobileStickerPickerUpsellRestyleEnabled];
-        ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10086)({ hasCategories: true }));
+        ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10099)({ hasCategories: true }));
         const items2 = [,];
         ({ id: arr4[0], guild_id: arr4[1] } = channel);
-        onPressSticker(10086)({ hasCategories: true });
+        onPressSticker(10099)({ hasCategories: true });
         const callback = react.useCallback((arg0) => {
           if ("" !== arg0) {
             const obj2 = StickersSearchUtils;
@@ -420,7 +420,7 @@ const memoResult = react.memo(
           const obj2 = { type: constants4.STICKER_SEARCH, channel_id: channel.id, guild_id: channel.guild_id };
           obj.track(constants.CHAT_INPUT_COMPONENT_VIEWED, obj2);
         }, items4);
-        let obj5 = onPressSticker(6687);
+        let obj5 = onPressSticker(6694);
         const items5 = [channel];
         const tidaWebformEnabled = obj5.useExperiment(
           { location: "StickerPicker" },
@@ -434,7 +434,7 @@ const memoResult = react.memo(
         let obj6 = { value: analyticsLocations, children: closure_16(mobileStickerPickerUpsellRestyleEnabled, obj7) };
         obj7 = { style: tmp.container, children: items6 };
         let tmp20Result = null;
-        const AnalyticsLocationProvider = channel(6657).AnalyticsLocationProvider;
+        const AnalyticsLocationProvider = channel(6664).AnalyticsLocationProvider;
         if (0 !== stickerCategories.length) {
           let obj8 = { style: tmp.header, children: closure_15(SearchField, obj9) };
           obj9 = {
@@ -444,7 +444,7 @@ const memoResult = react.memo(
             onFocus: callback2,
             round: true,
           };
-          SearchField = tmp2(6547).SearchField;
+          SearchField = tmp2(6554).SearchField;
           intl = tmp2(1126).intl;
           tmp20Result = closure_15(tmp22, obj8);
         }
@@ -452,7 +452,7 @@ const memoResult = react.memo(
         if (stateFromStores) {
           let tmp20Result3;
           if (0 === stickerCategories.length) {
-            const obj10 = { style: tmp.emptyState, children: closure_15(onPressSticker(10141), {}) };
+            const obj10 = { style: tmp.emptyState, children: closure_15(onPressSticker(10154), {}) };
             tmp20Result3 = closure_15(tmp22, obj10);
           } else {
             const obj11 = {
@@ -469,7 +469,7 @@ const memoResult = react.memo(
               inPortalKeyboard,
             };
             tmp27 = undefined;
-            let tmp9Result = tmp9(10142);
+            let tmp9Result = tmp9(10155);
             if (tidaWebformEnabled) {
               tmp27 = callback3;
             }
@@ -481,7 +481,7 @@ const memoResult = react.memo(
           tmp20Result4 = closure_15(closure_6, obj12);
         }
         items6[1] = tmp20Result4;
-        items6[2] = closure_15(onPressSticker(10148), {
+        items6[2] = closure_15(onPressSticker(10161), {
           categories: stickerCategories,
           categoryIndex: first,
           style: safeAreaStyle,

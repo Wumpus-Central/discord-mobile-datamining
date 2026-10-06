@@ -9,7 +9,7 @@ import UserSettingsModalActionCreatorsDefault from "../../actions/UserSettingsMo
 import transitionToGuild from "../../modules/routing/transitionToGuild.native.tsx";
 import useGuildPowerupsBoostCountDefault from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import TouchableHitBoxDefault from "../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import AssetRegistryDefault from "../../../_runtime/10138_AssetRegistry.js";
+import AssetRegistryDefault from "../../../_runtime/10151_AssetRegistry.js";
 import BoostedGuildTierProgressCircleDefault from "../../modules/premium/native/BoostedGuildTierProgressCircle.tsx";
 import react from "../../../_runtime/00019_react.js";
 import react_native from "../../../_runtime/00017_react-native.js";
@@ -113,7 +113,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let obj2 = {
           guild: stateFromStores,
-          size: guildId(5971).GuildIconSizes.LARGE,
+          size: guildId(5978).GuildIconSizes.LARGE,
           style: tmp4.guildIcon,
           selected: false,
         };
@@ -156,7 +156,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const obj3 = {
           guild: stateFromStores,
-          size: guildId(5971).GuildIconSizes.LARGE,
+          size: guildId(5978).GuildIconSizes.LARGE,
           style: tmp.guildIcon,
           selected: false,
         };
@@ -165,7 +165,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         items1 = [closure_8(tmp2Result2, obj3), ,];
         const obj4 = { style: tmp.guildCardDescription, children: items2 };
         const obj5 = { variant: "text-md/bold", children: stateFromStores.name };
-        items2 = [closure_8(guildId(4886).Text, obj5)];
+        items2 = [closure_8(guildId(4892).Text, obj5)];
         const obj6 = { style: tmp.subscriptionInfo, children: items3 };
         const obj7 = {
           source: AssetRegistryDefault,
@@ -175,7 +175,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         };
         items3 = [closure_8(closure_4, obj7)];
         const obj8 = { variant: "text-xs/medium", children: intl.format(guildId(1126).t.If4iTS, obj9) };
-        const Text = tmp5(4886).Text;
+        const Text = tmp5(4892).Text;
         intl = tmp5(1126).intl;
         obj9 = { subscriberCount: tmp8 };
         items3[1] = closure_8(Text, obj8);

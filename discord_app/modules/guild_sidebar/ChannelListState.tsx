@@ -44,9 +44,9 @@ let closure_16;
 let closure_17;
 let closure_30;
 let closure_31;
-const f93995 = (id) => id.id;
-const f94007 = (id) => id.id;
-const f94015 = (id) => id.id;
+const f94135 = (id) => id.id;
+const f94147 = (id) => id.id;
+const f94155 = (id) => id.id;
 function computeSubtitle(type, arg1, arg2) {
   type = type.type;
   if (constants.GUILD_VOICE === type) {
@@ -308,7 +308,7 @@ class ChannelListImpl {
       rows: null,
       firstVoiceChannel: "Array",
       allChannelsById: 0,
-      version: "System",
+      version: 58.939,
     });
     merged.id = id;
     merged.hideMutedChannels = UserGuildSettingsStore.isGuildCollapsed(merged.id);
@@ -318,9 +318,9 @@ class ChannelListImpl {
       optedInChannelsWithPendingUpdates = UserGuildSettingsStore.getOptedInChannels(merged.id);
     }
     merged.optedInChannels = optedInChannelsWithPendingUpdates;
-    const obj2 = initializationData(7046);
+    const obj2 = initializationData(7059);
     merged.optInEnabled = obj2.isOptInEnabledForGuild(merged.id);
-    const obj3 = initializationData(6723);
+    const obj3 = initializationData(6737);
     merged.hideResourceChannels = obj3.canSeeOnboardingHome(merged.id);
     const _Set = Set;
     let guildFavorites = UserGuildSettingsStore.getGuildFavorites(merged.id);
@@ -453,13 +453,13 @@ class ChannelListImpl {
       importDefault = tmp20;
       const arr7 = _modDef12(items);
       let iter = arr7.map((item) => new ChannelListChannelImpl(closure_1, item, closure_0));
-      let self4 = iter.keyBy(f93995);
+      let self4 = iter.keyBy(f94135);
       tmp20.channels = self4.value();
       merged.noParentCategory = tmp20;
       const self5 = this;
       let tmp26 = initializationData;
       merged.favoritesCategory = new ChannelListFavoritesCategory(merged, initializationData);
-      const obj6 = initializationData(7047);
+      const obj6 = initializationData(7060);
       if (obj6.isRecentlyActiveChannelsEnabled()) {
         self4 = this;
         tmp26 = mutableGuildChannelsForGuild;
@@ -503,7 +503,7 @@ class ChannelListImpl {
               tmp31.isMuted = false;
               const arr8 = _modDef12(items1);
               items1 = arr8.map((item) => new RecentsChannelListChannel(closure_1, item, closure_0));
-              iter = items1.keyBy(f94007);
+              iter = items1.keyBy(f94147);
               self4 = iter.value();
               tmp31.channels = self4;
               tmp33 = tmp31;
@@ -546,7 +546,7 @@ class ChannelListImpl {
           tmp42.categoriesById = obj4;
           const arr9 = _modDef12(items2);
           const mapped = arr9.map((item) => new VoiceChannelListChannel(closure_1, item, initializationData));
-          const iter2 = mapped.keyBy(f94015);
+          const iter2 = mapped.keyBy(f94155);
           tmp42.channels = iter2.value();
         }
         merged.voiceChannelsCategory = tmp42;
@@ -1208,7 +1208,7 @@ class ChannelListCategoryNoParent extends BaseChannelListCategory {
     importDefault = tmp22;
     const arr = _modDef12(arg1);
     const mapped = arr.map((item) => new ChannelListChannelImpl(closure_1, item, closure_0));
-    const iter = mapped.keyBy(f93995);
+    const iter = mapped.keyBy(f94135);
     tmp22.channels = iter.value();
     return tmp22;
   }
@@ -1500,7 +1500,7 @@ class ChannelListRecentsCategory extends BaseChannelListCategory {
         tmp2.isMuted = false;
         const arr = _modDef12(arg1);
         const mapped = arr.map((item) => new RecentsChannelListChannel(closure_1, item, closure_0));
-        const iter = mapped.keyBy(f94007);
+        const iter = mapped.keyBy(f94147);
         tmp2.channels = iter.value();
       }
     }
@@ -1583,7 +1583,7 @@ class ChannelListVoiceChannelsCategory extends BaseChannelListCategory {
       tmp2.categoriesById = categoriesById;
       const arr = _modDef12(arg1);
       const mapped = arr.map((item) => new VoiceChannelListChannel(closure_1, item, initializationData));
-      const iter = mapped.keyBy(f94015);
+      const iter = mapped.keyBy(f94155);
       tmp2.channels = iter.value();
     }
     return tmp2;

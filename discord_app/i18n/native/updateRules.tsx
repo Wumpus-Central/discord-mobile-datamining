@@ -25,9 +25,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       node = node.node;
       ({ output, state } = node);
       const alwaysShowLinkDecorations = react.useContext(
-        node(4596).AccessibilityPreferencesContext,
+        node(4602).AccessibilityPreferencesContext,
       ).alwaysShowLinkDecorations;
-      const obj2 = node(4580);
+      const obj2 = node(4586);
       const token = obj2.useToken(nativeDefault.colors.TEXT_LINK);
       let str = "none";
       if (alwaysShowLinkDecorations) {

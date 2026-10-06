@@ -181,10 +181,10 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let stringResult;
       guildId = guildId.guildId;
       const onConnect = guildId.onConnect;
-      let obj = guildId(5713);
+      let obj = guildId(5720);
       dependencyMap = obj.useDismissModalCallback();
       const tmp3 = isGuildNSFW(GuildStore.getGuild(guildId));
-      const AlertModal = guildId(5713).AlertModal;
+      const AlertModal = guildId(5720).AlertModal;
       const intl = guildId(1126).intl;
       const string = intl.string;
       const t = guildId(1126).t;
@@ -203,7 +203,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         string2Result = string2(t2.E4Cd5I);
       }
       obj3 = { children: items };
-      AlertActions = tmp(5713).AlertActions;
+      AlertActions = tmp(5720).AlertActions;
       const obj4 = {
         variant: "primary",
         onPress() {
@@ -214,7 +214,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         },
         text: intl3.string(guildId(1126).t.wVq7uo),
       };
-      const AlertActionButton = tmp(5713).AlertActionButton;
+      const AlertActionButton = tmp(5720).AlertActionButton;
       intl3 = tmp(1126).intl;
       items = [closure_5(AlertActionButton, obj4, "confirm")];
       const obj5 = {
@@ -226,7 +226,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         },
         text: intl4.string(guildId(1126).t["/g10LC"]),
       };
-      const AlertActionButton2 = tmp(5713).AlertActionButton;
+      const AlertActionButton2 = tmp(5720).AlertActionButton;
       intl4 = tmp(1126).intl;
       items[1] = closure_5(AlertActionButton2, obj5, "add-profile-picture");
       return closure_5(AlertModal, obj2);

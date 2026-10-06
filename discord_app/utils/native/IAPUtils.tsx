@@ -10,7 +10,7 @@ import DeviceUtils from "DeviceUtils.tsx";
 import CountryCodeUtils from "../../modules/i18n/CountryCodeUtils.tsx";
 import ProductIds from "../../modules/premium/native/ProductIds.android.tsx";
 import react_native2 from "../../../discord_common/js/packages/rtn-codegen/js/NativeAppStoreModule.tsx";
-import _mod10785 from "../../../_runtime/metro/10785__.js";
+import _mod10798 from "../../../_runtime/metro/10798__.js";
 import StorekitIAPQueueDefault from "../../modules/billing/native/StorekitIAPQueue.tsx";
 import GeneratedPaymentCurrencies from "../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx";
 import iapProducts from "IAPUtils.mock.tsx";
@@ -98,7 +98,7 @@ let obj = function _restorePurchases() {
               closure_3 = undefined;
               c7 = 1;
               c8 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c7) {
             if (arg0 === 1) {
@@ -319,7 +319,7 @@ obj = function _fetchStoreFront() {
               c4 = 2;
               c5 = 1;
               const obj6 = { value: obj4.getStorefront(), done: false };
-              obj4 = require("../../../_runtime/metro/10785__.js");
+              obj4 = require("../../../_runtime/metro/10798__.js");
               return obj6;
             } else {
               c5 = 3;
@@ -378,7 +378,7 @@ let _default = null;
 if (PlatformUtils.isIOS()) {
   _default = react_native2.default;
 }
-let items = [_mod10785.ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED, _mod10785.ErrorCode.E_UNKNOWN];
+let items = [_mod10798.ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED, _mod10798.ErrorCode.E_UNKNOWN];
 let set = new Set(items);
 let tmp5 = new LoggerDefault("IAPUtils.tsx");
 obj = {

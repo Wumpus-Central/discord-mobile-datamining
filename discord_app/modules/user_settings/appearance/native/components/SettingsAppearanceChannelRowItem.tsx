@@ -331,9 +331,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "redesign/channel-title/semibold",
         children: title,
       };
-      items3[0] = React3(tmp6(4886).Text, obj8);
+      items3[0] = React3(tmp6(4892).Text, obj8);
       const obj9 = { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp };
-      items3[1] = React3(tmp6(4886).Text, obj9);
+      items3[1] = React3(tmp6(4892).Text, obj9);
       items4 = [hasOwnProperty(View, obj7)];
       let tmp5Result2 = null;
       if (null != preview) {
@@ -344,7 +344,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           lineClamp: 1,
           children: preview,
         };
-        tmp5Result2 = React3(tmp6(4886).Text, obj10);
+        tmp5Result2 = React3(tmp6(4892).Text, obj10);
       }
       items4[1] = tmp5Result2;
       items1[2] = hasOwnProperty(View, obj6);

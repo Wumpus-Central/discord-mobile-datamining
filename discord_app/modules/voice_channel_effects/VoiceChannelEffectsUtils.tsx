@@ -4,16 +4,6 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
-import _modDef6853 from "../../../_runtime/metro/06853__.js";
-import _modDef6854 from "../../../_runtime/metro/06854__.js";
-import _modDef6855 from "../../../_runtime/metro/06855__.js";
-import _modDef6856 from "../../../_runtime/metro/06856__.js";
-import _modDef6857 from "../../../_runtime/metro/06857__.js";
-import _modDef6858 from "../../../_runtime/metro/06858__.js";
-import _modDef6859 from "../../../_runtime/metro/06859__.js";
-import _modDef6860 from "../../../_runtime/metro/06860__.js";
-import _modDef6861 from "../../../_runtime/metro/06861__.js";
-import _modDef6862 from "../../../_runtime/metro/06862__.js";
 import _modDef6863 from "../../../_runtime/metro/06863__.js";
 import _modDef6864 from "../../../_runtime/metro/06864__.js";
 import _modDef6865 from "../../../_runtime/metro/06865__.js";
@@ -26,6 +16,16 @@ import _modDef6871 from "../../../_runtime/metro/06871__.js";
 import _modDef6872 from "../../../_runtime/metro/06872__.js";
 import _modDef6873 from "../../../_runtime/metro/06873__.js";
 import _modDef6874 from "../../../_runtime/metro/06874__.js";
+import _modDef6875 from "../../../_runtime/metro/06875__.js";
+import _modDef6876 from "../../../_runtime/metro/06876__.js";
+import _modDef6877 from "../../../_runtime/metro/06877__.js";
+import _modDef6878 from "../../../_runtime/metro/06878__.js";
+import _modDef6879 from "../../../_runtime/metro/06879__.js";
+import _modDef6880 from "../../../_runtime/metro/06880__.js";
+import _modDef6881 from "../../../_runtime/metro/06881__.js";
+import _modDef6882 from "../../../_runtime/metro/06882__.js";
+import _modDef6883 from "../../../_runtime/metro/06883__.js";
+import _modDef6884 from "../../../_runtime/metro/06884__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import VoiceChannelEffectsConstants from "VoiceChannelEffectsConstants.tsx";
 import 00012__ from "../../../_runtime/metro/00012__.js";
@@ -36,8 +36,8 @@ let src;
 let VoiceChannelEffectAnimationType;
 let closure_4;
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef6853];
-const items1 = [_modDef6854, _modDef6855, _modDef6856, _modDef6857, _modDef6858, _modDef6859, _modDef6860, _modDef6861, _modDef6862, _modDef6863, _modDef6864, _modDef6865, _modDef6866, _modDef6867, _modDef6868, _modDef6869, _modDef6870, _modDef6871, _modDef6872, _modDef6873, _modDef6874];
+const items = [_modDef6863];
+const items1 = [_modDef6864, _modDef6865, _modDef6866, _modDef6867, _modDef6868, _modDef6869, _modDef6870, _modDef6871, _modDef6872, _modDef6873, _modDef6874, _modDef6875, _modDef6876, _modDef6877, _modDef6878, _modDef6879, _modDef6880, _modDef6881, _modDef6882, _modDef6883, _modDef6884];
 const AnimationTypeToAnimations = { [VoiceChannelEffectAnimationType.BASIC]: items, [VoiceChannelEffectAnimationType.PREMIUM]: items1 };
 const memoizeResult = module_12.memoize((src) => {
   const promise = new Promise((arg0) => {
@@ -114,28 +114,28 @@ export const getEffectUrl = function getEffectUrl(emoji) {
 export const getEffectAnnouncement = function getEffectAnnouncement(items) {
   let username2;
   let username4;
-  const f93441 = (item) => {
+  const f93576 = (item) => {
     let tmp = item[emojiName];
     if (tmp == null) {
       tmp = null;
     }
     return tmp;
   };
-  const f93442 = (item) => null != item;
+  const f93577 = (item) => null != item;
   if (items.length < 1) {
     return "";
   } else {
     let joined;
     const userId = "userId";
     const arr = module_12(items);
-    const mapped = arr.map(f93441);
-    const found = mapped.filter(f93442);
+    const mapped = arr.map(f93576);
+    const found = mapped.filter(f93577);
     const iter = found.uniq();
     const valueResult = iter.value();
     const emojiName = "emojiName";
     const arr4 = module_12(items);
-    const mapped1 = arr4.map(f93441);
-    const found1 = mapped1.filter(f93442);
+    const mapped1 = arr4.map(f93576);
+    const found1 = mapped1.filter(f93577);
     const iter2 = found1.uniq();
     const valueResult2 = iter2.value();
     if (valueResult2.length < 2) {

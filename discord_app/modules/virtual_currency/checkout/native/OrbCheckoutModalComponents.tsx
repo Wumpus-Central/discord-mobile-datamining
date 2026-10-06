@@ -428,7 +428,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let skuId;
       const tmp = closure_8();
-      let obj = skuId(12990);
+      let obj = skuId(13009);
       skuId = obj.useOrbCheckoutModalContext().skuId;
       const items = [skuId];
       const memo = react.useMemo(() => {
@@ -441,7 +441,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         color: "interactive-text-active",
         children: memo,
       };
-      return closure_6(skuId(4886).Text, obj2);
+      return closure_6(skuId(4892).Text, obj2);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()

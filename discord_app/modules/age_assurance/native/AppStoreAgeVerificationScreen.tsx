@@ -49,7 +49,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
   navigation = obj.useNavigation();
   const tmp4 = callback1(react.useState({ type: "loading" }), 2);
   [tmp5, c2] = tmp4;
-  let obj2 = modalSessionId(5102);
+  let obj2 = modalSessionId(5108);
   const watchAgeVerificationStatusChange = obj2.useWatchAgeVerificationStatusChange(onClose);
   let items = [navigation];
   const callback = react.useCallback(() => {
@@ -239,14 +239,14 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       clearTimeout(closure_1);
     };
   }, items2);
-  const ModalScreen = modalSessionId(8095).ModalScreen;
-  const ModalContent = modalSessionId(8096).ModalContent;
-  const Stack = modalSessionId(5593).Stack;
+  const ModalScreen = modalSessionId(8128).ModalScreen;
+  const ModalContent = modalSessionId(8129).ModalContent;
+  const Stack = modalSessionId(5600).Stack;
   if ("loading" === tmp5.type) {
     let obj3 = { children: items3 };
     items3 = [closure_7(ActivityIndicator, { size: "large" })];
-    let obj4 = { variant: "text-md/medium", color: "text-strong", children: intl.string(navigation(3045).MN6I4Y) };
-    const Text = tmp(4886).Text;
+    let obj4 = { variant: "text-md/medium", color: "text-strong", children: intl.string(navigation(3073).MN6I4Y) };
+    const Text = tmp(4892).Text;
     intl = tmp(1126).intl;
     items3[1] = closure_7(Text, obj4);
     tmp15 = closure_9(closure_8, obj3);
@@ -256,17 +256,17 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
       variant: "text-md/medium",
       color: "text-strong",
       accessibilityRole: "alert",
-      children: intl2.string(navigation(3045).tBwanH),
+      children: intl2.string(navigation(3073).tBwanH),
     };
-    const Text2 = tmp(4886).Text;
+    const Text2 = tmp(4892).Text;
     intl2 = tmp(1126).intl;
     items4 = [closure_7(Text2, obj6)];
     let obj7 = { children: closure_7(Button, obj8) };
-    const ButtonGroup = tmp(5592).ButtonGroup;
+    const ButtonGroup = tmp(5599).ButtonGroup;
     obj8 = {
       variant: "primary",
       size: "lg",
-      text: intl3.string(navigation(3045)["Jx33+I"]),
+      text: intl3.string(navigation(3073)["Jx33+I"]),
       onPress() {
         const trackAgeVerificationModalClicked = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked;
         AgeVerificationAnalyticsUtils;
@@ -278,7 +278,7 @@ export default function AppStoreAgeVerificationScreen(modalSessionId) {
         callback();
       },
     };
-    Button = tmp(5594).Button;
+    Button = tmp(5601).Button;
     intl3 = tmp(1126).intl;
     items4[1] = closure_7(ButtonGroup, obj7);
     tmp15 = closure_9(closure_8, obj5);

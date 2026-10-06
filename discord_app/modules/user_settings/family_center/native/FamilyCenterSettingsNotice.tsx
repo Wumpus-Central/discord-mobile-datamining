@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import _modDef2493 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2521 from "../../../parent_tools/FamilyCenter.messages.js";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import LayerActionCreators from "../../../../actions/LayerActionCreators.tsx";
 import Constants from "../../../safety_common/Constants.tsx";
@@ -17,7 +17,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp3;
       let obj = activeLinkUserIds(576);
       const cResult = obj.c(5);
-      let obj2 = activeLinkUserIds(8295);
+      let obj2 = activeLinkUserIds(8328);
       activeLinkUserIds = obj2.useActiveLinkUserIds();
       if (cResult[0] !== activeLinkUserIds) {
         const fn = function o() {
@@ -43,7 +43,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       SafetySettingsNoticeDefault;
       const tmp6 = (
         <tmp5
-          label={_modDef2493.i284fU}
+          label={_modDef2521.i284fU}
           noticeType={SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE}
           labelHook={tmp3}
           count={activeLinkUserIds.length}
@@ -56,12 +56,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let activeLinkUserIds;
-      let obj = activeLinkUserIds(8295);
+      let obj = activeLinkUserIds(8328);
       activeLinkUserIds = obj.useActiveLinkUserIds();
       SafetySettingsNoticeDefault;
       return (
         <tmp
-          label={_modDef2493.i284fU}
+          label={_modDef2521.i284fU}
           noticeType={SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE}
           labelHook={function labelHook() {
             const obj = LayerActionCreators;

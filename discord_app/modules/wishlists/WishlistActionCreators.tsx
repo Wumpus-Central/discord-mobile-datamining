@@ -18,7 +18,7 @@ let c5, c6, closure_4;
 let c10;
 let closure_12;
 let unpackModuleId;
-const f97286 = (id) => id.id;
+const f97467 = (id) => id.id;
 function extraWishlistParams() {
   const obj = {};
   if (null != BillingInfoStore.ipCountryCode) {
@@ -50,7 +50,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
       priceId: obj3,
       data: tmpResult.transformStorefrontPricesServer(storefront_pricing),
     };
-    obj3 = { type: "skus", skuIds: found.map(f97286) };
+    obj3 = { type: "skus", skuIds: found.map(f97467) };
     const dispatch = DispatcherDefault.dispatch;
     DispatcherDefault;
     tmpResult = StorefrontUtils;
@@ -754,7 +754,7 @@ let obj = {
             priceId: obj3,
             data: obj4.transformStorefrontPricesServer(storefront_pricing),
           };
-          obj3 = { type: "skus", skuIds: skus2.map(f97286) };
+          obj3 = { type: "skus", skuIds: skus2.map(f97467) };
           const dispatch = closure_1_1(closure_1_2[9]).dispatch;
           closure_1_1(closure_1_2[9]);
           obj4 = closure_1_0(closure_1_2[10]);

@@ -10,7 +10,7 @@ import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09715_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09728_AssetRegistry.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
 import OngoingCallStatusLabelDefault from "../components/OngoingCallStatusLabel.tsx";
@@ -198,7 +198,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(first, C);
-      const tmp10 = stateFromStores1(9600)(channel);
+      const tmp10 = stateFromStores1(9613)(channel);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
           constructor() {
@@ -248,7 +248,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = tmp(504);
       stateFromStores1 = tmpResult2.useStateFromStores(tmp11, N, tmp14);
-      let tmp16 = tmp9(5043)(channel);
+      let tmp16 = tmp9(5049)(channel);
       if (stateFromStores != null) {
         class N {
           constructor() {
@@ -316,7 +316,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp16 = tmp22;
           }
-          if (stateFromStores1(5846)(channel)) {
+          if (stateFromStores1(5853)(channel)) {
             class V {
               constructor() {
                 return closure_1(closure_2[20])(channel.id, AnalyticsPages.CHANNEL_CALL);
@@ -355,7 +355,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "text-overlay-light",
                   children: tmp16,
                 };
-                tmp32 = closure_10(tmp(4886).Text, obj3);
+                tmp32 = closure_10(tmp(4892).Text, obj3);
               }
               cResult[21] = tmp16;
               cResult[22] = tmp32;
@@ -386,7 +386,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "text-overlay-light",
                   children: tmp17,
                 };
-                tmp34 = closure_10(tmp(4886).Text, obj4);
+                tmp34 = closure_10(tmp(4892).Text, obj4);
               }
               cResult[23] = tmp17;
               cResult[24] = tmp34;
@@ -503,9 +503,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { size: channel(1188).Icon.Sizes.MEDIUM, source: tmp5Result, disableColor: true, style: tmp.icons };
       const Icon = tmp2(1188).Icon;
       if (isRoleRequiredDefault(channel)) {
-        tmp5Result = tmp5(13610);
+        tmp5Result = tmp5(13626);
       } else {
-        tmp5Result = tmp5(9694);
+        tmp5Result = tmp5(9707);
       }
       items3 = [closure_10(Icon, obj6), ,];
       let tmp14Result = formatToPlainStringResult;
@@ -518,7 +518,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-overlay-light",
           children: formatToPlainStringResult,
         };
-        tmp14Result = closure_10(tmp2(4886).Text, obj8);
+        tmp14Result = closure_10(tmp2(4892).Text, obj8);
       }
       items4 = [tmp14Result];
       let tmp14Result3 = name;
@@ -530,7 +530,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-overlay-light",
           children: name,
         };
-        tmp14Result3 = closure_10(tmp2(4886).Text, obj9);
+        tmp14Result3 = closure_10(tmp2(4892).Text, obj9);
       }
       items4[1] = tmp14Result3;
       items3[1] = closure_11(View, obj7);

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/chat/conjureAttachmentDrafts.tsx
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import ZustandStore from "../../../lib/ZustandStore.tsx";
 import ConjureTypes from "../ConjureTypes.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -15,7 +15,7 @@ let _require, closure_9;
 let closure_4;
 let hasOwnProperty;
 let metroRequire;
-const f126162 = () => {};
+const f126323 = () => {};
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
@@ -75,7 +75,7 @@ function discardDraft(projectId, item10010) {
   }
   if (null != item10010.ref) {
     const promise = React3(projectId, item10010.ref.id);
-    promise.catch(f126162);
+    promise.catch(f126323);
   }
 }
 function discardProject(projectId, deleteFromWorker) {
@@ -191,7 +191,7 @@ function conjureAttachmentTooLargeText(contentType) {
   const intl = intl2.intl;
   const formatToPlainString = intl.formatToPlainString;
   const obj = { size: formatConjureAttachmentLimit(obj2.conjureAttachmentLimit(contentType)) };
-  const JZ59Bo = _modDef3723.JZ59Bo;
+  const JZ59Bo = _modDef3753.JZ59Bo;
   formatConjureAttachmentLimit = ConjureTypes.formatConjureAttachmentLimit;
   ConjureTypes;
   obj2 = ConjureTypes;
@@ -230,7 +230,7 @@ export const uploadConjureAttachment = function uploadConjureAttachment(override
     const intl = intl2.intl;
     formatToPlainString = intl.formatToPlainString;
     obj3 = { size: formatConjureAttachmentLimit(tmpResult2.conjureAttachmentLimit(contentType)) };
-    JZ59Bo = _modDef3723.JZ59Bo;
+    JZ59Bo = _modDef3753.JZ59Bo;
     formatConjureAttachmentLimit = ConjureTypes.formatConjureAttachmentLimit;
     ConjureTypes;
     tmpResult2 = ConjureTypes;
@@ -289,7 +289,7 @@ export const removeConjureAttachmentDraft = function removeConjureAttachmentDraf
     }
     if (null != found.ref) {
       const promise = React3(projectId, found.ref.id);
-      promise.catch(f126162);
+      promise.catch(f126323);
     }
     const found1 = tmp2.filter((localId) => localId.localId !== closure_0);
     const draftsByProject = zustandStore.getState().draftsByProject;

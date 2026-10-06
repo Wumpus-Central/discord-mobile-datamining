@@ -42,15 +42,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = channel(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
       let id;
-      const useEmbeddedActivityLaunchability = channel(9011).useEmbeddedActivityLaunchability;
-      channel(9011);
+      const useEmbeddedActivityLaunchability = channel(9044).useEmbeddedActivityLaunchability;
+      channel(9044);
       if (channel != null) {
         id = channel.id;
       }
       const embeddedActivityLaunchability = useEmbeddedActivityLaunchability(id);
       let flag = false;
-      if (channel(11671).ActivityAction.LEAVE !== activityAction) {
-        if (channel(11671).ActivityAction.START === activityAction) {
+      if (channel(11685).ActivityAction.LEAVE !== activityAction) {
+        if (channel(11685).ActivityAction.START === activityAction) {
           flag = false;
           if (null != channel) {
             let isGuildVoiceResult;
@@ -59,12 +59,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (isGuildVoiceResult) {
               flag = false;
-              if (embeddedActivityLaunchability !== channel(9011).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+              if (embeddedActivityLaunchability !== channel(9044).EmbeddedActivityLaunchability.CAN_LAUNCH) {
                 flag = true;
               }
             } else {
               flag = false;
-              const tmpResult6 = channel(9000);
+              const tmpResult6 = channel(9033);
               if (!tmpResult6.isActivitiesInTextEnabled(channel)) {
                 flag = true;
               }
@@ -72,7 +72,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         } else {
           flag = false;
-          if (channel(11671).ActivityAction.JOIN === activityAction) {
+          if (channel(11685).ActivityAction.JOIN === activityAction) {
             let isGuildVoiceResult1;
             if (channel != null) {
               isGuildVoiceResult1 = channel.isGuildVoice();
@@ -81,7 +81,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               flag = !stateFromStores;
             } else {
               flag = false;
-              const tmpResult7 = channel(9000);
+              const tmpResult7 = channel(9033);
               if (!tmpResult7.isActivitiesInTextEnabled(channel)) {
                 flag = true;
               }
@@ -91,7 +91,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let flag2 = flag;
       let tmp14;
-      if (activityAction !== channel(11671).ActivityAction.LEAVE) {
+      if (activityAction !== channel(11685).ActivityAction.LEAVE) {
         const tmp15 =
           application instanceof ApplicationRecord
             ? application.embeddedActivityConfig
@@ -177,15 +177,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel),
       );
       let id;
-      const useEmbeddedActivityLaunchability = channel(9011).useEmbeddedActivityLaunchability;
-      channel(9011);
+      const useEmbeddedActivityLaunchability = channel(9044).useEmbeddedActivityLaunchability;
+      channel(9044);
       if (channel != null) {
         id = channel.id;
       }
       const embeddedActivityLaunchability = useEmbeddedActivityLaunchability(id);
       let flag = false;
-      if (channel(11671).ActivityAction.LEAVE !== activityAction) {
-        if (channel(11671).ActivityAction.START === activityAction) {
+      if (channel(11685).ActivityAction.LEAVE !== activityAction) {
+        if (channel(11685).ActivityAction.START === activityAction) {
           flag = false;
           if (null != channel) {
             let isGuildVoiceResult;
@@ -194,12 +194,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (isGuildVoiceResult) {
               flag = false;
-              if (embeddedActivityLaunchability !== channel(9011).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+              if (embeddedActivityLaunchability !== channel(9044).EmbeddedActivityLaunchability.CAN_LAUNCH) {
                 flag = true;
               }
             } else {
               flag = false;
-              const tmp2Result = channel(9000);
+              const tmp2Result = channel(9033);
               if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
                 flag = true;
               }
@@ -207,7 +207,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         } else {
           flag = false;
-          if (channel(11671).ActivityAction.JOIN === activityAction) {
+          if (channel(11685).ActivityAction.JOIN === activityAction) {
             let isGuildVoiceResult1;
             if (channel != null) {
               isGuildVoiceResult1 = channel.isGuildVoice();
@@ -216,7 +216,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               flag = !stateFromStores;
             } else {
               flag = false;
-              const tmp2Result3 = channel(9000);
+              const tmp2Result3 = channel(9033);
               if (!tmp2Result3.isActivitiesInTextEnabled(channel)) {
                 flag = true;
               }
@@ -226,7 +226,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let disabled = flag;
       let reason;
-      if (activityAction !== channel(11671).ActivityAction.LEAVE) {
+      if (activityAction !== channel(11685).ActivityAction.LEAVE) {
         const tmp11 =
           application instanceof ApplicationRecord
             ? application.embeddedActivityConfig

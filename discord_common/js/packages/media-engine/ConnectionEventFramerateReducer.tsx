@@ -29,8 +29,8 @@ class ConnectionEventFramerateReducer {
     obj.connection = connection;
     obj.sinkWants = sinkWants;
     logger.enableNativeLogger(true);
-    connection.on(obj(4962).BaseConnectionEvent.Speaking, obj.handleSpeaking);
-    connection.on(obj(4962).BaseConnectionEvent.Mute, obj.handleSelfMute);
+    connection.on(obj(4968).BaseConnectionEvent.Speaking, obj.handleSpeaking);
+    connection.on(obj(4968).BaseConnectionEvent.Mute, obj.handleSelfMute);
     obj.initialize();
     return obj;
   }

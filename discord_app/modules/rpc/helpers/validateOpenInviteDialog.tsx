@@ -32,7 +32,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog(socket
       const surface = tmp36.surface;
       const type = surface.type;
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-        return { frame: tmp36, channel: "Array", guild: "toCharArray$esjava$1" };
+        return { frame: tmp36, channel: "Array", guild: "parent" };
       } else {
         if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
           if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {

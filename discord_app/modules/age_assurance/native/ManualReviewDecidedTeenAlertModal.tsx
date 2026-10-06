@@ -2,7 +2,7 @@
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3109 from "../ManualReview.messages.js";
+import _modDef3137 from "../ManualReview.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AlertModal2 from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import AgeVerificationConstants from "../AgeVerificationConstants.tsx";
@@ -55,7 +55,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         let intl = intl4.intl;
-        const stringResult = intl.string(_modDef3109.AA3xYb);
+        const stringResult = intl.string(_modDef3137.AA3xYb);
         cResult[1] = stringResult;
         tmp6 = stringResult;
       } else {
@@ -92,7 +92,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const intl2 = intl4.intl;
       const format = intl2.format;
-      const tmp10 = _modDef3109;
+      const tmp10 = _modDef3137;
       if (isManualReviewInconclusiveCopyEnabled) {
         const obj6 = { contentAndSettingsHook: first };
         formatResult = format(tmp10.UIbYzl, obj6);
@@ -141,7 +141,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let intl = intl4.intl;
       const intl2 = intl4.intl;
       const format = intl2.format;
-      const tmp5 = _modDef3109;
+      const tmp5 = _modDef3137;
       if (isManualReviewInconclusiveCopyEnabled) {
         const obj3 = { contentAndSettingsHook };
         formatResult = format(tmp5.UIbYzl, obj3);
@@ -157,7 +157,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ text: intl3.string(intl4.t["NX+WJN"]) });
       const AlertActionButton = AlertModal2.AlertActionButton;
       intl3 = intl4.intl;
-      return <AlertModal title={intl.string(_modDef3109.AA3xYb)} content={formatResult} actions={null} />;
+      return <AlertModal title={intl.string(_modDef3137.AA3xYb)} content={formatResult} actions={null} />;
     };
 const result = size.fileFinishedImporting("modules/age_assurance/native/ManualReviewDecidedTeenAlertModal.tsx");
 

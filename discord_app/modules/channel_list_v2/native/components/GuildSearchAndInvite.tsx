@@ -5,10 +5,10 @@ import intl6 from "../../../../intl/index.native.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import useStableCallbackDefault from "../../../../hooks/useStableCallback.tsx";
 import IconButton4 from "../../../../design/components/Button/native/IconButton.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09276_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09311_AssetRegistry.js";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import utils_InstantInviteUtils from "../../../../utils/native/InstantInviteUtils.tsx";
-import AssetRegistryDefault2 from "../../../../../_runtime/09715_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09728_AssetRegistry.js";
 import RedesignChannelListConstants from "../RedesignChannelListConstants.tsx";
 import GuildDirectorySearchModalActionCreatorsDefault from "../../../directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx";
 import SearchPlatformUtilsDefault from "../../../search/native/SearchPlatformUtils.tsx";
@@ -542,7 +542,7 @@ const memoResult = react.memo(
           }
         }
         const tmp12 = useStableCallbackDefault(B);
-        const tmpResult2 = guild(12008);
+        const tmpResult2 = guild(12023);
         const shouldShowInvitesDisabledNotif = tmpResult2.useShouldShowInvitesDisabledNotif(guild);
         useCanSeeEventsInChannelListDefault(guild.id);
         ({ hasUnread, handlePress, handleLongPress } = useEventsButtonPropsDefault(guild));
@@ -618,7 +618,7 @@ const memoResult = react.memo(
           const obj = instant_invite_InstantInviteUtils;
           const result = obj.handleOpenInviteActionsheet(guild, channelId, channels, unpackModuleId.GUILD_HEADER);
         });
-        const obj2 = guild(12008);
+        const obj2 = guild(12023);
         const shouldShowInvitesDisabledNotif = obj2.useShouldShowInvitesDisabledNotif(guild);
         const tmp4 = useCanSeeEventsInChannelListDefault(guild.id);
         const tmp5 = useEventsButtonPropsDefault(guild);

@@ -41,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("react");
       const cResult = obj.c(8);
       if (cResult[0] !== arr) {
-        const mapped = arr.map(tmp(10711).getChannelIdFromDestinationId);
+        const mapped = arr.map(tmp(10724).getChannelIdFromDestinationId);
         const found = mapped.find(tmp(1375).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found;
@@ -89,7 +89,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arr) => {
       let found;
-      const mapped = arr.map(found(10711).getChannelIdFromDestinationId);
+      const mapped = arr.map(found(10724).getChannelIdFromDestinationId);
       found = mapped.find(found(1375).isNotNullish);
       let obj = found(504);
       const items = [ChannelStore];
@@ -384,7 +384,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           let result = tmp13Result9.shouldShowTiggerPawtect();
           if (result) {
             const tmp13Result10 = require("RegionalFeatureConfigUtils");
-            result = tmp13Result10.isFeatureAgeGated(tmp13(5581).AgeGatedFeature.AGE_GATED_SPACES);
+            result = tmp13Result10.isFeatureAgeGated(tmp13(5588).AgeGatedFeature.AGE_GATED_SPACES);
           }
           let disableAgeRestrictedDestinations = !(false !== nsfwAllowed && !result);
           if (disableAgeRestrictedDestinations) {

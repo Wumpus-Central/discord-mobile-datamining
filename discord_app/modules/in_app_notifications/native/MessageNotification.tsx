@@ -205,7 +205,7 @@ const memoResult = react.memo(function MessageNotification(notification) {
   const callback1 = guild.useCallback(() => {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { channelId: channel.id };
-    return obj.pushLazy(asyncRequire(12495, dependencyMap.paths), obj2, "in-app-notification-settings-modal");
+    return obj.pushLazy(asyncRequire(12510, dependencyMap.paths), obj2, "in-app-notification-settings-modal");
   }, items2);
   const memo = guild.useMemo(
     () => ({

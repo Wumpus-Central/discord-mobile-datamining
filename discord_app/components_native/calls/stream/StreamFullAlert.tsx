@@ -5,7 +5,7 @@ import intl4 from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AlertDefault from "../../common/Alert.tsx";
 import AVError from "../../../modules/errors/av_errors/AVError.tsx";
-import AssetRegistryDefault from "../../../../_runtime/18051_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/18096_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import ReactCompilerGating from "../../../modules/react_compiler/ReactCompilerGating.tsx";

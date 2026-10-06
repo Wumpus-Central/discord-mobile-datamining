@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
 import APIErrorDefault from "../../errors/APIError.tsx";
 import SharedCaptchaUtils from "../captcha/SharedCaptchaUtils.tsx";
@@ -141,7 +141,7 @@ obj = function _registerPhone() {
               phone = phone.phone;
               c5 = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c5) {
             if (arg0 === 1) {
@@ -249,7 +249,7 @@ function registerFull(giftCodeSKUId) {
     let obj2 = { source: constants5.REGISTER, action: constants4.AGE_GATE_SUBMITTED };
     const tmp4Result = AnalyticsUtilsDefault;
     tmp4Result.track(metroRequire.AGE_GATE_ACTION, obj2);
-    const obj10 = _modDef4461();
+    const obj10 = _modDef4467();
     const diffResult = obj10.diff(birthday, "years");
     if (diffResult >= 13) {
       let str;

@@ -4,7 +4,7 @@ import intl7 from "../../../../intl/index.native.tsx";
 import MessageConstants from "../../MessageConstants.tsx";
 import PublicGuildsUtils from "../../../public_guilds/PublicGuildsUtils.tsx";
 import isCrosspostDefault from "../../isCrosspost.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/07709_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/07720_AssetRegistry.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const Image = react_native.Image;
@@ -100,8 +100,9 @@ export default function getTagProperties(arg0) {
       tagType: SYSTEM_DM_TAG_SYSTEM_TYPE,
       tagIconUrl: tmp5,
       opTagText: stringResult3,
-      opTagTextColor: 27227714,
-      opTagBackgroundColor: 34112000,
+      opTagTextColor:
+        -754169043291420500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      opTagBackgroundColor: 175593249004376850000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
     };
     ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
     return obj2;

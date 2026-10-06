@@ -611,14 +611,14 @@ class BugCreateScreen {
         }
       }
     }, items5);
-    let obj3 = { bottomOffset: screenshotUri(6581).TEXT_AREA_HEIGHT, children: tmp35(Stack, obj4) };
+    let obj3 = { bottomOffset: screenshotUri(6588).TEXT_AREA_HEIGHT, children: tmp35(Stack, obj4) };
     const KeyboardAwareScrollView = screenshotUri(1632).KeyboardAwareScrollView;
     obj4 = { spacing: 24, style: tmp.container, children: items8 };
-    Stack = screenshotUri(5593).Stack;
+    Stack = screenshotUri(5600).Stack;
     let obj5 = { spacing: 8, children: items6 };
-    const Stack2 = screenshotUri(5593).Stack;
+    const Stack2 = screenshotUri(5600).Stack;
     let obj6 = { variant: "text-sm/semibold", color: "text-subtle", children: intl.string(screenshotUri(1126).t.tM969v) };
-    let Text = screenshotUri(4886).Text;
+    let Text = screenshotUri(4892).Text;
     intl = screenshotUri(1126).intl;
     items6 = [first4(Text, obj6), ];
     let obj7 = { children: items7 };
@@ -648,7 +648,7 @@ class BugCreateScreen {
         return closure_11(first2, obj, uri.id);
       })
     };
-    const Card = screenshotUri(5995).Card;
+    const Card = screenshotUri(6002).Card;
     items7 = [first4(first3, obj8), ];
     let obj9 = {
       text: intl2.string(screenshotUri(1126).t.HVxmOD),
@@ -656,32 +656,32 @@ class BugCreateScreen {
         return obj(...arguments);
       }
     };
-    const Button = screenshotUri(5594).Button;
+    const Button = screenshotUri(5601).Button;
     intl2 = screenshotUri(1126).intl;
     items7[1] = first4(Button, obj9);
     items6[1] = closure_11(Card, obj7);
     items8 = [closure_11(Stack2, obj5), , , , , , ];
     let obj10 = { label: intl3.string(screenshotUri(1126).t.OZRgjw), placeholder: intl4.string(screenshotUri(1126).t["6mpW05"]), onChange: tmp4, clearable: true, autoCapitalize: "sentences" };
-    const TextInput = screenshotUri(6098).TextInput;
+    const TextInput = screenshotUri(6105).TextInput;
     intl3 = screenshotUri(1126).intl;
     intl4 = screenshotUri(1126).intl;
     items8[1] = first4(TextInput, obj10);
     const tmp36 = callback;
     if (stateFromStores) {
       let obj11 = { title: intl5.string(tmp25(1126).t["77VVd8"]), hasIcons: false, children: tmp37(TableRow, obj12) };
-      const TableRowGroup = tmp25(6074).TableRowGroup;
+      const TableRowGroup = tmp25(6081).TableRowGroup;
       intl5 = tmp25(1126).intl;
       obj12 = {
         disabled: null == first7,
         onPress() {
             obj = ActionSheetActionCreatorsDefault;
             const obj2 = { features: null != first7 ? first7.features : [], feature: first8, setFeature };
-            return obj.openLazy(asyncRequire(12537, dependencyMap.paths), "BugReporterFeatureActionSheet", obj2);
+            return obj.openLazy(asyncRequire(12552, dependencyMap.paths), "BugReporterFeatureActionSheet", obj2);
           },
         label: name,
         arrow: true
       };
-      TableRow = tmp25(5993).TableRow;
+      TableRow = tmp25(6000).TableRow;
       if (null != first8) {
         name = first8.name;
       } else {
@@ -715,21 +715,21 @@ class BugCreateScreen {
         return authStore(TableRadioRow, obj, value);
       })
     };
-    const TableRadioGroup = tmp25(6072).TableRadioGroup;
+    const TableRadioGroup = tmp25(6079).TableRadioGroup;
     intl7 = tmp25(1126).intl;
     if (num == null) {
       num = -1;
     }
-    const tmp25Result = screenshotUri(12527);
+    const tmp25Result = screenshotUri(12542);
     priorities = tmp25Result.getPriorities();
     items8[3] = first4(TableRadioGroup, obj13);
     const obj14 = { label: intl8.string(screenshotUri(1126).t["1SplH2"]), placeholder: intl9.string(screenshotUri(1126).t.CQmAZd), onChange: tmp7, autoCorrect: true, autoCapitalize: "sentences" };
-    const TextArea = tmp25(6580).TextArea;
+    const TextArea = tmp25(6587).TextArea;
     intl8 = tmp25(1126).intl;
     intl9 = tmp25(1126).intl;
     items8[4] = first4(TextArea, obj14);
     const obj15 = { label: intl10.string(screenshotUri(1126).t["7p5pqh"]), placeholder: intl11.string(screenshotUri(1126).t.HewMzo), onChange: tmp12, clearable: true };
-    const TextInput2 = tmp25(6098).TextInput;
+    const TextInput2 = tmp25(6105).TextInput;
     intl10 = tmp25(1126).intl;
     intl11 = tmp25(1126).intl;
     items8[5] = first4(TextInput2, obj15);
@@ -754,7 +754,7 @@ class BugCreateScreen {
         open(obj3);
       }
     };
-    Button2 = tmp25(5594).Button;
+    Button2 = tmp25(5601).Button;
     intl12 = tmp25(1126).intl;
     items8[6] = first4(first2, obj16);
     const children = [tmp37(KeyboardAwareScrollView, obj3), ];
@@ -839,7 +839,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function BugReportMod
     intl = intl13.intl;
     return obj2;
   }, items);
-  return closure_10(screenshotUri(6496).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(6503).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 });
 size = size_mod;
 let result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterModal.tsx");

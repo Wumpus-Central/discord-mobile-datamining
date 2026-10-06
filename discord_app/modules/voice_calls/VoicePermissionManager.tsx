@@ -38,7 +38,7 @@ class VoicePermissionManager extends AutomaticLifecycleManager {
     voiceStates = voiceStates.voiceStates;
     const item = voiceStates.forEach(function (item) {
       let userId;
-      const f130813 = (result) => {
+      const f130990 = (result) => {
         const tmp = result;
         if (tmp) {
           closure_1_1(closure_1_2[9])(true);
@@ -61,7 +61,7 @@ class VoicePermissionManager extends AutomaticLifecycleManager {
               if (isSpeakerResult) {
                 const obj4 = NativePermissionUtilsDefault;
                 const permission = obj4.requestPermission(constants2.AUDIO);
-                permission.then(f130813);
+                permission.then(f130990);
                 if (MediaEngineStore.getMode() === constants.PUSH_TO_TALK) {
                   const tmp17Result = NativePermissionUtilsDefault;
                   const permission1 = tmp17Result.requestPermission(constants2.INPUT_MONITORING);
@@ -78,7 +78,7 @@ class VoicePermissionManager extends AutomaticLifecycleManager {
                 ) {
                   const obj2 = NativePermissionUtilsDefault;
                   const permission2 = obj2.requestPermission(constants2.AUDIO);
-                  permission2.then(f130813);
+                  permission2.then(f130990);
                   if (MediaEngineStore.getMode() === constants.PUSH_TO_TALK) {
                     const tmp11Result = NativePermissionUtilsDefault;
                     const permission3 = tmp11Result.requestPermission(constants2.INPUT_MONITORING);

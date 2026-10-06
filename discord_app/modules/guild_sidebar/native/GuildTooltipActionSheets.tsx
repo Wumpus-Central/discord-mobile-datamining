@@ -16,16 +16,16 @@ import size from "../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequire(16171, dependencyMap.paths);
+  return asyncRequire(16211, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequire(16173, dependencyMap.paths);
+  return asyncRequire(16213, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequire(16176, dependencyMap.paths);
+  return asyncRequire(16216, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequire(16178, dependencyMap.paths);
+  return asyncRequire(16218, dependencyMap.paths);
 }
 const constants = DismissibleContentConstants.DismissibleContentGroupName;
 const jsx = Fragment.jsx;
@@ -39,14 +39,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(2);
       id = guild.guild.id;
       const items = [];
-      const obj2 = id(16179);
+      const obj2 = id(16219);
       if (obj2.useCanSeeCreatorMonetizationOnboardingV2Upsell(id)) {
         items.push(id(2036).DismissibleContent.CREATOR_MONETIZATION_ONBOARDING_V2_UPSELL);
       }
       if (useIsGuildEligibleForRoleSubscriptionsUpsellDefault(id)) {
         items.push(id(2036).DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL);
       }
-      const tmpResult = id(5678);
+      const tmpResult = id(5685);
       if (tmpResult.useCanUseRoleSubscriptionIAP(id)) {
         items.push(id(2036).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL);
       }
@@ -109,14 +109,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (guild) => {
       const id = guild.guild.id;
       const items = [];
-      const obj = id(16179);
+      const obj = id(16219);
       if (obj.useCanSeeCreatorMonetizationOnboardingV2Upsell(id)) {
         items.push(id(2036).DismissibleContent.CREATOR_MONETIZATION_ONBOARDING_V2_UPSELL);
       }
       if (useIsGuildEligibleForRoleSubscriptionsUpsellDefault(id)) {
         items.push(id(2036).DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL);
       }
-      const tmpResult = id(5678);
+      const tmpResult = id(5685);
       if (tmpResult.useCanUseRoleSubscriptionIAP(id)) {
         items.push(id(2036).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL);
       }

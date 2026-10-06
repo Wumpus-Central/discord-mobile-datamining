@@ -17,7 +17,7 @@ import module_12_mod from "../../../../_runtime/metro/00012__.js";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f130815 = async (arg0) => {
+const f130992 = async (arg0) => {
   let closure_0 = arg0;
   let closure_1 = false;
   let obj = closure_0(closure_2[13]);
@@ -207,7 +207,7 @@ function handleSetLocalMute(arg0) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "audioContextSettings",
-      f130815,
+      f130992,
       UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
     );
   }
@@ -224,7 +224,7 @@ function handleSetLocalSoundboardMute(userId) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "audioContextSettings",
-      f130815,
+      f130992,
       UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
     );
   }
@@ -262,7 +262,7 @@ let closure_12 = module_12.debounce(() => {
   const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync(
     "audioContextSettings",
-    f130815,
+    f130992,
     UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
 }, 2000);

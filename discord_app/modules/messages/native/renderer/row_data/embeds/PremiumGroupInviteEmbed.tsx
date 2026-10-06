@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl3 from "../../../../../../intl/index.native.tsx";
-import _modDef3205 from "../../../../../premium/premium_group/PremiumGroup.messages.js";
+import _modDef3233 from "../../../../../premium/premium_group/PremiumGroup.messages.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/07719_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/07730_AssetRegistry.js";
 import PremiumGroupUtils from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
 import PremiumGroupConstants from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
@@ -67,7 +67,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
         bodyTextColor,
         learnMoreLink: formatToPartsResult,
       };
-      formatToPartsResult = intl.formatToParts(_modDef3205["9VTnfI"], obj);
+      formatToPartsResult = intl.formatToParts(_modDef3233["9VTnfI"], obj);
       const intl2 = intl3.intl;
       str = intl2.string(intl3.t.oW0eUd);
       return obj7;

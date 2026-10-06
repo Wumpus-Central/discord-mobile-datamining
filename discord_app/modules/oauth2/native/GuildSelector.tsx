@@ -60,7 +60,7 @@ export default function GuildSelector(onGuildChange) {
       selectedItem: selectedGuildId,
       hasIcons: false,
     };
-    const tmp2 = asyncRequire(8949, dependencyMap.paths);
+    const tmp2 = asyncRequire(8978, dependencyMap.paths);
     intl = intl4.intl;
     found = guilds.filter((permissions) => {
       const obj = guilds(closure_1_3[10]);
@@ -71,7 +71,7 @@ export default function GuildSelector(onGuildChange) {
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: items1 };
   const obj2 = { variant: "eyebrow", color: "text-default", children: intl.string(selectedGuildId(1126).t["1DXFFd"]) };
-  const Text = selectedGuildId(4886).Text;
+  const Text = selectedGuildId(4892).Text;
   intl = selectedGuildId(1126).intl;
   items1 = [closure_7(Text, obj2), , ,];
   let tmp6Result = null;
@@ -84,7 +84,7 @@ export default function GuildSelector(onGuildChange) {
   }
   items1[1] = tmp6Result;
   let name;
-  const FormRow = selectedGuildId(8895).FormRow;
+  const FormRow = selectedGuildId(8924).FormRow;
   if (found != null) {
     name = found.name;
   }
@@ -95,7 +95,7 @@ export default function GuildSelector(onGuildChange) {
   const obj4 = {
     label: name,
     disabled,
-    trailing: closure_7(selectedGuildId(8895).FormRow.Arrow, {}),
+    trailing: closure_7(selectedGuildId(8924).FormRow.Arrow, {}),
     DEPRECATED_style: tmp.select,
     onPress: callback,
   };

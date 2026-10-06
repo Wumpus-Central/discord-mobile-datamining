@@ -3,7 +3,7 @@ import get_initialized from "../../../../discord_common/js/packages/flux/index.t
 import react from "../../../../_runtime/00576_react.js";
 import intl2 from "../../../intl/index.native.tsx";
 import ClientThemesTypes from "../ClientThemesTypes.tsx";
-import _modDef2723 from "../intl/ClientThemes.messages.js";
+import _modDef2751 from "../intl/ClientThemes.messages.js";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import SavedCustomThemeStore from "../SavedCustomThemeStore.tsx";
@@ -19,7 +19,7 @@ let metroImportDefault;
 let metroRequire;
 function getCustomThemesName() {
   const intl = intl2.intl;
-  return intl.string(_modDef2723.yl1iMm);
+  return intl.string(_modDef2751.yl1iMm);
 }
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: metroRequire, REFRESH_STANDARD_BACKGROUND_THEMES: metroImportDefault } =
   ClientThemesConstants);

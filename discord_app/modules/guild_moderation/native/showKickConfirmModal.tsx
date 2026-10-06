@@ -10,5 +10,5 @@ export default function showKickConfirmModal(merged) {
   const obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   const obj2 = ModalActionCreatorsDefault;
-  obj2.pushLazy(asyncRequire(11468, dependencyMap.paths), merged);
+  obj2.pushLazy(asyncRequire(11481, dependencyMap.paths), merged);
 }

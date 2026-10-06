@@ -217,7 +217,7 @@ const memoResult = react.memo((arg0) => {
       destination_channel_id: channel_id,
     };
     obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
-    const promise = asyncRequire(12695, dependencyMap.paths);
+    const promise = asyncRequire(12710, dependencyMap.paths);
     promise.then((result) => {
       result.default(channel_id, true);
     });

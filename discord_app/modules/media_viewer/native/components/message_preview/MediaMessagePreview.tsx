@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../../../../utils/SnowflakeUtils.tsx";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../../Constants.tsx";
 import intl2 from "../../../../../intl/index.native.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06147_LegacyBaseButton.js";
 import ReactionActionCreators from "../../../../reactions/ReactionActionCreators.tsx";
 import RowGeneratorDefault from "../../../../messages/native/renderer/RowGenerator.tsx";
 import RowGeneratorTypes from "../../../../messages/native/renderer/RowGeneratorTypes.tsx";

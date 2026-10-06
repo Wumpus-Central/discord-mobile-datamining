@@ -47,7 +47,7 @@ let obj = function _addDirectoryGuildEntry() {
     if (closure_3 === undefined) {
       UNCATEGORIZED = constants.UNCATEGORIZED;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -81,7 +81,7 @@ obj = function _updateDirectoryEntry() {
     if (closure_3 === undefined) {
       UNCATEGORIZED = constants.UNCATEGORIZED;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import BackgroundImageDefault from "../../../auth/native/components/atoms/BackgroundImage.tsx";
-import AgeRestrictedContentSettingsUtils from "../../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
 import Constants2 from "Constants.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/17452_AssetRegistry.js";
+import AgeRestrictedContentSettingsUtils from "../../../user_settings/content_and_social/AgeRestrictedContentSettingsUtils.tsx";
+import AssetRegistryDefault from "../../../../../_runtime/06729_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
@@ -424,8 +424,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           children: first,
         };
         cResult[10] = tmp4.header;
-        cResult[11] = closure_11(guildId(4886).Text, obj5);
-        const tmp27 = closure_11(guildId(4886).Text, obj5);
+        cResult[11] = closure_11(guildId(4892).Text, obj5);
+        const tmp27 = closure_11(guildId(4892).Text, obj5);
       } else {
         class U {
           constructor() {
@@ -515,8 +515,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj6 = { style: tmp4.description, variant: "text-md/normal", color: "text-default", children: tmp7 };
         const obj7 = { style: tmp4.description, variant: "text-md/normal", color: "text-default", children: tmp9 };
-        const tmp30 = closure_11(guildId(4886).Text, obj6);
-        const tmp31 = closure_11(guildId(4886).Text, obj7);
+        const tmp30 = closure_11(guildId(4892).Text, obj6);
+        const tmp31 = closure_11(guildId(4892).Text, obj7);
         cResult[12] = tmp4.description;
         cResult[13] = tmp30;
         cResult[14] = tmp31;
@@ -701,8 +701,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj9 = { onPress: onClose, size: "md", text: tmp32 };
         cResult[16] = onClose;
-        cResult[17] = closure_11(guildId(5594).Button, obj9);
-        const tmp35 = closure_11(guildId(5594).Button, obj9);
+        cResult[17] = closure_11(guildId(5601).Button, obj9);
+        const tmp35 = closure_11(guildId(5601).Button, obj9);
       } else {
         class U {
           constructor() {
@@ -857,8 +857,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         track(GUILD_NSFW_GATE_VIEWED, obj);
       }, items);
       const obj3 = { style: tmp.container, children: items1 };
-      items1 = [closure_11(currentUser(6463), {}), , , , ,];
-      const obj4 = { source: currentUser(17452), style: tmp.image };
+      items1 = [closure_11(currentUser(6470), {}), , , , ,];
+      const obj4 = { source: currentUser(6729), style: tmp.image };
       items1[1] = closure_11(closure_5, obj4);
       const obj5 = {
         style: tmp.header,
@@ -866,18 +866,18 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: stringResult,
       };
-      items1[2] = closure_11(guildId(4886).Text, obj5);
+      items1[2] = closure_11(guildId(4892).Text, obj5);
       const obj6 = {
         style: tmp.description,
         variant: "text-md/normal",
         color: "text-default",
         children: stringResult1,
       };
-      items1[3] = closure_11(guildId(4886).Text, obj6);
+      items1[3] = closure_11(guildId(4892).Text, obj6);
       const obj7 = { style: tmp.description, variant: "text-md/normal", color: "text-default", children: formatResult };
-      items1[4] = closure_11(guildId(4886).Text, obj7);
+      items1[4] = closure_11(guildId(4892).Text, obj7);
       const obj8 = { onPress: onClose, size: "md", text: intl4.string(guildId(1126).t.gRqiWV) };
-      const Button = guildId(5594).Button;
+      const Button = guildId(5601).Button;
       intl4 = guildId(1126).intl;
       items1[5] = closure_11(Button, obj8);
       return closure_12(closure_4, obj3);

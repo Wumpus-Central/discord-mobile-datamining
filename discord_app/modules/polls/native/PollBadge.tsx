@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import intl2 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import AssetRegistryDefault from "../../../../_runtime/16846_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/16867_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";

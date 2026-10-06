@@ -8,7 +8,7 @@ import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import ApplicationCommandQueryTypes from "../ApplicationCommandQueryTypes.tsx";
 import ApplicationCommandsConstants from "ApplicationCommandsConstants.tsx";
-import AssetRegistryDefault from "../../../../_runtime/10147_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/10160_AssetRegistry.js";
 import ApplicationCommandsCategoriesConstants from "ApplicationCommandsCategoriesConstants.tsx";
 import ApplicationSectionHeader from "ApplicationSectionHeader.tsx";
 import ApplicationCommandDiscoveryManager from "../ApplicationCommandDiscoveryManager.tsx";
@@ -78,7 +78,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const canOnlyUseTextCommands = onHeightChange.canOnlyUseTextCommands;
       let tmp4 = sum();
       dependencyMap = tmp4;
-      const obj2 = onPressSlashItem(5602);
+      const obj2 = onPressSlashItem(5609);
       const bound = Math.max(obj2.useFontScale() * commandsByActiveSection, commandsByActiveSection);
       let obj3 = ref;
       ref = ref.useRef(null);
@@ -94,7 +94,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      let tmpResult = onPressSlashItem(12040);
+      let tmpResult = onPressSlashItem(12055);
       const commandDiscoveryManager = tmpResult.useCommandDiscoveryManager(first);
       if (cResult[1] !== channel) {
         const obj4 = { channel, type: "channel" };
@@ -113,7 +113,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp12 = cResult[3];
       }
-      const BuiltInCommandFilter = onPressSlashItem(8803).BuiltInCommandFilter;
+      const BuiltInCommandFilter = onPressSlashItem(8833).BuiltInCommandFilter;
       let tmp13 = canOnlyUseTextCommands ? BuiltInCommandFilter.ONLY_TEXT : BuiltInCommandFilter.ALLOW;
       let tmp14 = !canOnlyUseTextCommands;
       if (cResult[4] === tmp13) {
@@ -136,7 +136,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[9] === tmp15) {
             tmp18 = cResult[10];
           }
-          const obj9 = channel(8939);
+          const obj9 = channel(8968);
           const discovery = obj9.useDiscovery(tmp18);
           sectionDescriptors = discovery.sectionDescriptors;
           const activeSections = discovery.activeSections;
@@ -788,7 +788,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const commandDiscoveryManager = obj3.useCommandDiscoveryManager(
         (initialSectionId) => initialSectionId.initialSectionId,
       );
-      let tmp8 = channel(8939);
+      let tmp8 = channel(8968);
       const obj4 = { context: { channel, type: "channel" }, filters: obj5, options: obj6, allowFetch: true };
       obj5 = {
         commandTypes: items,

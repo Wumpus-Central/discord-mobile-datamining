@@ -9,8 +9,8 @@ import GuildRoleRecord from "../../../../records/GuildRoleRecord.tsx";
 import PermissionUtilsAll from "../../../../utils/PermissionUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04805_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/04807_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04811_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/04813_AssetRegistry.js";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
@@ -465,7 +465,7 @@ class GuildSettingsRoleEdit extends PureComponent {
     };
     const sectionChanges = self.getSectionChanges();
     const setOptions = navigation.setOptions;
-    obj2 = role(6010);
+    obj2 = role(6017);
     if (submitting) {
       fn = () => closure_1_23(role(dependencyMap[18]).HeaderSubmittingIndicator, {});
     } else if (sectionChanges) {
@@ -486,7 +486,7 @@ class GuildSettingsRoleEdit extends PureComponent {
     let items;
     const self = this;
     const obj = { hasIcons: false, children: items };
-    const TableRowGroup = self(6074).TableRowGroup;
+    const TableRowGroup = self(6081).TableRowGroup;
     const obj2 = {
       label: intl.string(self(1126).t.WIDE1L),
       onPress() {
@@ -494,7 +494,7 @@ class GuildSettingsRoleEdit extends PureComponent {
       },
       arrow: true,
     };
-    const TableRow = self(5993).TableRow;
+    const TableRow = self(6000).TableRow;
     intl = self(1126).intl;
     items = [closure_23(TableRow, obj2), ,];
     const obj3 = {
@@ -504,7 +504,7 @@ class GuildSettingsRoleEdit extends PureComponent {
       },
       arrow: true,
     };
-    const TableRow2 = self(5993).TableRow;
+    const TableRow2 = self(6000).TableRow;
     intl2 = self(1126).intl;
     items[1] = closure_23(TableRow2, obj3);
     const obj4 = {
@@ -514,7 +514,7 @@ class GuildSettingsRoleEdit extends PureComponent {
       },
       arrow: true,
     };
-    const TableRow3 = self(5993).TableRow;
+    const TableRow3 = self(6000).TableRow;
     intl3 = self(1126).intl;
     items[2] = closure_23(TableRow3, obj4);
     return closure_24(TableRowGroup, obj);
@@ -790,7 +790,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   let obj2 = { children: items2 };
                   let obj3 = { guild: tmp14, navigation, contentContainerStyle };
                   const merged = Object.assign(tmp15);
-                  items2 = [closure_23(GuildSettingsRoleEdit, obj3), closure_23(guildId(6536).NavScrim, {})];
+                  items2 = [closure_23(GuildSettingsRoleEdit, obj3), closure_23(guildId(6543).NavScrim, {})];
                   tmp28 = closure_24(closure_25, obj2);
                 }
                 cResult[18] = contentContainerStyle;

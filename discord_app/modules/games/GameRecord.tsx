@@ -92,6 +92,7 @@ class GameRecord extends Record {
       media: tmp5.media,
       first_release_date: tmp5.firstReleaseDate,
       shop_collection_ids: tmp5.shopCollectionIds,
+      community_guild_ids: tmp5.communityGuildIds,
       steam_release_status: tmp5.steamReleaseStatus,
       reviews,
     } = item10012);

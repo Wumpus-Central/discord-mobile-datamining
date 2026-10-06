@@ -134,7 +134,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             isSubmitting: stateFromStores,
             handleSubmit: tmp16,
             handleSubmitAvatarDecoration: tmp17,
-            resetPending: tmp(6477).resetAllPending,
+            resetPending: tmp(6484).resetAllPending,
           };
           class S {
             constructor() {
@@ -1214,7 +1214,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }),
           items3,
         ),
-        resetPending: pendingChanges(6477).resetAllPending,
+        resetPending: pendingChanges(6484).resetAllPending,
       };
       const merged = Object.assign(pendingChanges);
       const merged1 = Object.assign(tryItOutChanges);

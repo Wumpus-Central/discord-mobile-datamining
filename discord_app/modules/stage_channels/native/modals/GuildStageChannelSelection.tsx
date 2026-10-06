@@ -46,7 +46,7 @@ export default function GuildStageChannelSelection(channel) {
       selectedItem: id,
       hasIcons: false,
     };
-    const tmp4 = asyncRequire(8949, dependencyMap.paths);
+    const tmp4 = asyncRequire(8978, dependencyMap.paths);
     intl = intl2.intl;
     id = undefined;
     if (channel != null) {

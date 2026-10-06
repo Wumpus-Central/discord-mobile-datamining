@@ -558,7 +558,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = stateFromStores(504);
       stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
-      const tmpResult2 = stateFromStores(9561);
+      const tmpResult2 = stateFromStores(9574);
       if (tmpResult2.useShowStageMusicMuteButton(channelId)) {
         if (speaker) {
           let tmp10;
@@ -579,7 +579,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp10 = cResult[3];
           }
-          const tmp4Result = importDefault(stateFromStores ? 9570 : 9572);
+          const tmp4Result = importDefault(stateFromStores ? 9583 : 9585);
           if (cResult[4] !== stateFromStores) {
             const fn2 = function p() {
               const obj = StageMusicActionCreators;
@@ -624,7 +624,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [StageMusicStore];
       stateFromStores = obj.useStateFromStores(items, () => muted.isMuted());
       let tmp7Result = null;
-      const obj2 = stateFromStores(9561);
+      const obj2 = stateFromStores(9574);
       if (obj2.useShowStageMusicMuteButton(channelId)) {
         tmp7Result = null;
         if (speaker) {
@@ -640,7 +640,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           }
           obj3 = {
             accessibilityLabel: stringResult,
-            icon: importDefault(stateFromStores ? 9570 : 9572),
+            icon: importDefault(stateFromStores ? 9583 : 9585),
             onPress() {
               const obj = StageMusicActionCreators;
               return obj.updateStageMusicMuted(!stateFromStores);

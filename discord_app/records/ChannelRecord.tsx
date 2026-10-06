@@ -22,11 +22,11 @@ let ChannelTypes;
 let Permissions;
 let hasOwnProperty;
 let metroImportAll;
-const f85757 = (arg0, id) => {
+const f85891 = (arg0, id) => {
   arg0[id.id] = id.nick;
   return arg0;
 };
-const f85758 = (id) => {
+const f85892 = (id) => {
   let emoji_id;
   obj = { id: id.id, name: id.name, emojiId: emoji_id, emojiName: null, moderated: null, color: null };
   emoji_id = undefined;
@@ -948,22 +948,22 @@ class UnknownChannelRecord extends ChannelRecordBase {
       rawRecipients: null != application_id.recipients ? application_id.recipients : [],
       recipients: mapped,
       recipientFlags: true,
-      rtcRegion: "D",
-      safetyWarnings: "DD",
-      blockedUserWarningDismissed: false,
-      template: false,
-      themeColor: "years",
+      rtcRegion: "audio",
+      safetyWarnings: null,
+      blockedUserWarningDismissed: null,
+      template: null,
+      themeColor: null,
       threadMetadata: tmp10,
-      topic_: "weeks",
-      totalMessageSent: "days",
+      topic_: null,
+      totalMessageSent: null,
       type: UNKNOWN,
-      userLimit_: "minutes",
-      version: "seconds",
-      videoQualityMode: "validate",
+      userLimit_: null,
+      version: null,
+      videoQualityMode: null,
       linkedLobby: null,
-      hdStreamingUntil: "\u{1F693}",
-      hdStreamingBuyerId: 6,
-      voiceHangout: 677,
+      hdStreamingUntil: null,
+      hdStreamingBuyerId: null,
+      voiceHangout: null,
     };
     tmp = undefined;
     if (null != application_id.available_tags) {
@@ -972,7 +972,7 @@ class UnknownChannelRecord extends ChannelRecordBase {
       if (null == available_tags) {
         items = [];
       } else {
-        items = available_tags.map(f85758);
+        items = available_tags.map(f85892);
       }
       tmp = items;
     }
@@ -1050,7 +1050,7 @@ class UnknownChannelRecord extends ChannelRecordBase {
       obj6 = {};
     } else {
       const arr3 = _modDef12;
-      obj6 = arr3.reduce(nicks, f85757, {});
+      obj6 = arr3.reduce(nicks, f85891, {});
     }
     ({
       nsfw: obj.nsfw_,
@@ -1486,7 +1486,7 @@ class ForumChannelRecord extends ChannelRecordBase {
       if (null == available_tags) {
         items = [];
       } else {
-        items = available_tags.map(f85758);
+        items = available_tags.map(f85892);
       }
       items1 = items;
     } else {
@@ -1711,7 +1711,7 @@ class PrivateChannelRecord extends ChannelRecordBase {
       obj2 = {};
     } else {
       const arr2 = _modDef12;
-      obj2 = arr2.reduce(nicks, f85757, {});
+      obj2 = arr2.reduce(nicks, f85891, {});
     }
     ({
       recipient_flags: obj.recipientFlags,

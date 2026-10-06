@@ -7,7 +7,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import ActionSheetConstants from "../../../action_sheet/native/ActionSheetConstants.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AppStoreOverlayContent from "../AppStoreOverlay/AppStoreOverlayContent.tsx";

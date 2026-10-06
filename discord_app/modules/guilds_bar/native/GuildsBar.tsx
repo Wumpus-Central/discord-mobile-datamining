@@ -253,8 +253,8 @@ const memoResult = react.memo(
                             return tmp28;
                           }
                           const obj3 = {
-                            profile: fastListRef(11571).Profiles.Guilds,
-                            children: closure_4(fastListRef(6140).GestureDetector, obj4),
+                            profile: fastListRef(11584).Profiles.Guilds,
+                            children: closure_4(fastListRef(6147).GestureDetector, obj4),
                           };
                           obj4 = { gesture, children: tmp25 };
                           const tmp6Result = StartupProfilerDefault;
@@ -345,10 +345,10 @@ const memoResult = react.memo(
           const result = obj.registerGuildVisibilityMethod(fastListRef);
         }, items);
         closure_7(listProps, fastListRef);
-        let obj = { profile: fastListRef(11571).Profiles.Guilds, children: closure_4(GestureDetector, obj2) };
+        let obj = { profile: fastListRef(11584).Profiles.Guilds, children: closure_4(GestureDetector, obj2) };
         const tmp9 = StartupProfilerDefault;
         obj2 = { gesture, children: closure_5(tmp11, obj3) };
-        GestureDetector = fastListRef(6140).GestureDetector;
+        GestureDetector = fastListRef(6147).GestureDetector;
         obj3 = { style: tmp.wrapper, collapsable: false, nativeID: "guilds-bar-view", children: items1 };
         const obj4 = {
           ref: fastListRef,

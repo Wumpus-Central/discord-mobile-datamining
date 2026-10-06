@@ -278,7 +278,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           const tmp34 = -1 === findIndexResult && null != guild && canManageAllExpressions;
           if (tmp34) {
             const obj3 = {
-              type: tmp45(5429).StickerCategoryTypes.EMPTY_GUILD_UPSELL,
+              type: tmp45(5436).StickerCategoryTypes.EMPTY_GUILD_UPSELL,
               id: null,
               name: null,
               stickers: [],
@@ -933,10 +933,10 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       [tmp12, _asyncToGenerator] = current(react.useState(false), 2);
       const tmp11 = current(react.useState(false), 2);
       if (cResult[3] !== id) {
-        const tmpResult3 = tmp(5428);
+        const tmpResult3 = tmp(5435);
         let isGuildStickerResult = tmpResult3.isGuildSticker(id);
         if (!isGuildStickerResult) {
-          const tmpResult4 = tmp(5428);
+          const tmpResult4 = tmp(5435);
           isGuildStickerResult = tmpResult4.isStandardSticker(id);
         }
         cResult[3] = id;
@@ -1525,7 +1525,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       let obj3 = require("StickersUtils");
       let isGuildStickerResult = obj3.isGuildSticker(renderableSticker);
       if (!isGuildStickerResult) {
-        const tmpResult = tmp(5428);
+        const tmpResult = tmp(5435);
         isGuildStickerResult = tmpResult.isStandardSticker(renderableSticker);
       }
       obj4 = {

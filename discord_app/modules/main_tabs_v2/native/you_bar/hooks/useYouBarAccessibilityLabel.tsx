@@ -166,7 +166,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     found1 = undefined;
                     if (activities != null) {
                       found1 = activities.find(() => {
-                        /* body not rendered: F145801 */
+                        /* body not rendered: F146011 */
                       });
                     }
                     if (null != found1) {
@@ -211,7 +211,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             items1[1] = tag;
             items1[2] = text;
             found2 = items1.filter(() => {
-              /* body not rendered: F145802 */
+              /* body not rendered: F146012 */
             });
             str2 = ", ";
             return found2.join(", ");
@@ -231,7 +231,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_0;
       let closure_2;
       const tmp = dependencyMap;
-      let obj = id(4722);
+      let obj = id(4728);
       _require = obj.useName(id);
       id = undefined;
       if (id != null) {

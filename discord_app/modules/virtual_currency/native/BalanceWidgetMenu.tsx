@@ -13,7 +13,7 @@ import QuestConstants from "../../quests/QuestConstants.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import TableRow2 from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import _mod8508 from "../hooks/index.tsx";
+import _mod8541 from "../hooks/index.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import QuestUtils from "../../quests/native/QuestUtils.native.tsx";
 import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton.tsx";
@@ -28,7 +28,7 @@ function BalanceWidgetMenu() {
   let constants2;
   let constants3;
   let str;
-  let obj = str(8508);
+  let obj = str(8541);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = react.useCallback(() => {
@@ -315,7 +315,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp7;
       const obj = react2;
       const cResult = obj.c(3);
-      const obj2 = _mod8508;
+      const obj2 = _mod8541;
       const balance = obj2.useFetchVirtualCurrencyBalance().balance;
       DismissibleContentUnsafeUtils;
       if (null == balance) {
@@ -358,7 +358,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let tmp5Result;
-      const obj = _mod8508;
+      const obj = _mod8541;
       const balance = obj.useFetchVirtualCurrencyBalance().balance;
       DismissibleContentUnsafeUtils;
       if (null == balance) {

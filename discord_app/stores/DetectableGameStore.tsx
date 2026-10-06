@@ -167,7 +167,7 @@ class DetectableGameStore extends PersistedStore {
   }
   getState() {
     let obj3;
-    const f85612 = (source) => source.source;
+    const f85746 = (source) => source.source;
     obj = PlatformUtils;
     if (obj.isDesktop()) {
       obj3 = {
@@ -175,14 +175,14 @@ class DetectableGameStore extends PersistedStore {
         detectableGames: closure_8.values(),
         blocklistEtag: etag,
         blocklistExecutables,
-        blocklistPatterns: closure_20.map(f85612),
+        blocklistPatterns: closure_20.map(f85746),
       };
       const obj2 = {
         detectableGamesEtag: etag,
         detectableGames: closure_8.values(),
         blocklistEtag: etag,
         blocklistExecutables,
-        blocklistPatterns: closure_20.map(f85612),
+        blocklistPatterns: closure_20.map(f85746),
       };
     } else {
       obj3 = {

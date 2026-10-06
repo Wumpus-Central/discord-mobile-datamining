@@ -345,7 +345,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 found1 = undefined;
                 if (closure_8 != null) {
                   found1 = arr5.find(() => {
-                    /* body not rendered: F140584 */
+                    /* body not rendered: F140790 */
                   });
                 }
                 if (null != found1) {
@@ -460,8 +460,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [PresenceStore];
       const obj2 = userId(504);
       const stateFromStores1 = obj2.useStateFromStores(items1, () => PresenceStore.getActivities(userId));
-      const tmp6 = stateFromStores1(10611)(userId);
-      const voiceChannel = stateFromStores1(10612)({ userId, guildId }).voiceChannel;
+      const tmp6 = stateFromStores1(10624)(userId);
+      const voiceChannel = stateFromStores1(10625)({ userId, guildId }).voiceChannel;
       const items2 = [stateFromStores1];
       const memo = react.useMemo(() => {
         let found;
@@ -492,8 +492,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       let state;
-      const useGameMentionsAsPlainText = userId(10613).useGameMentionsAsPlainText;
-      userId(10613);
+      const useGameMentionsAsPlainText = userId(10626).useGameMentionsAsPlainText;
+      userId(10626);
       const tmp2 = userId;
       if (memo != null) {
         state = memo.state;
@@ -515,9 +515,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (null != tmp6) {
           let found;
-          const tmp5Result = stateFromStores1(10614);
+          const tmp5Result = stateFromStores1(10627);
           if (stateFromStores1 != null) {
-            found = stateFromStores1.find(tmp5(10619));
+            found = stateFromStores1.find(tmp5(10632));
           }
           const obj3 = {
             game: found,
@@ -547,7 +547,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               hideText: null != state1,
             };
             items5 = [tmp.icon, iconStyle];
-            tmp19Result = closure_10(tmp5(10620), obj4);
+            tmp19Result = closure_10(tmp5(10633), obj4);
           } else {
             tmp19Result = null;
             if (null != voiceChannel) {
@@ -560,7 +560,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 hideText: null != state1,
               };
               items6 = [tmp.icon, iconStyle];
-              tmp19Result = closure_10(tmp5(10627), obj5);
+              tmp19Result = closure_10(tmp5(10640), obj5);
             }
           }
         }
@@ -571,7 +571,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp26 = null != memo.emoji && !flag;
             if (tmp26) {
               const obj6 = { emoji: memo.emoji, size: emojiSize, animate, style: tmp.emoji };
-              tmp26 = closure_10(tmp5(10629), obj6);
+              tmp26 = closure_10(tmp5(10642), obj6);
             }
             const items7 = [tmp26];
             let tmp28 = null != memo.state;
@@ -582,7 +582,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 maxFontSizeMultiplier,
                 children: gameMentionsAsPlainText,
               };
-              tmp28 = closure_10(tmp5(10618), obj7);
+              tmp28 = closure_10(tmp5(10631), obj7);
             }
             const obj8 = { children: items7 };
             items7[1] = tmp28;
@@ -602,7 +602,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             importantForAccessibility: "no-hide-descendants",
             children: DOT_UNICODE,
           };
-          tmp32 = closure_10(tmp5(10618), obj10);
+          tmp32 = closure_10(tmp5(10631), obj10);
         }
         items8[1] = tmp32;
         items8[2] = tmp22;

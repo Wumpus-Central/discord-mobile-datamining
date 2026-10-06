@@ -170,14 +170,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } = displayEmojis);
       ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
       const tmp = closure_9(displayEmojis.anchorTop);
-      let obj = displayEmojis(12068);
+      let obj = displayEmojis(12083);
       const suggestionBarHeight = obj.useSuggestionBarHeight(
         transitionState,
         cleanUp,
         CONTAINER_SMALL_WRAPPER_HEIGHT,
         onOccupiedHeightChange,
       );
-      let obj2 = displayEmojis(4612);
+      let obj2 = displayEmojis(4618);
       const fn = function j() {
         let items;
         let obj2;
@@ -187,13 +187,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       fn.__closure = {
-        interpolate: displayEmojis(4612).interpolate,
+        interpolate: displayEmojis(4618).interpolate,
         heightSv: suggestionBarHeight,
         CONTAINER_SMALL_WRAPPER_HEIGHT,
       };
       fn.__workletHash = 8299755729224;
       fn.__initData = __initData2;
-      ({ interpolate: displayEmojis(4612).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT });
+      ({ interpolate: displayEmojis(4618).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       let items = [tmp.containerSmall, animatedStyle];
       const View = ReanimatedRexportDefault.View;
@@ -256,7 +256,7 @@ const forwardRefResult = forwardRef(
         const tmpResult = require("EmojiSuggestionBarUtils");
         const emojiSuggestionBarState = tmpResult.useEmojiSuggestionBarState(
           tmp6,
-          tmp(12068).MAX_SUGGESTIONS_LARGE,
+          tmp(12083).MAX_SUGGESTIONS_LARGE,
           1,
           arg1,
         );
@@ -312,7 +312,7 @@ const forwardRefResult = forwardRef(
             obj.onOccupiedHeightChange = closure_1;
             obj.transitionState = arg2;
             obj.cleanUp = arg3;
-            return jsx(f60142, obj, anchorTop);
+            return jsx(f60208, obj, anchorTop);
           }
         }
         cResult[12] = tmp4;

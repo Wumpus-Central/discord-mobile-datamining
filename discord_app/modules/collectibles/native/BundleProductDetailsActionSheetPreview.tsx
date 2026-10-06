@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import CollectiblesShopConstants from "../CollectiblesShopConstants.tsx";
 import intl2 from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06147_LegacyBaseButton.js";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useShopProductItems from "../hooks/useShopProductItems.tsx";
 import IndividualProductPreview from "IndividualProductPreview.tsx";

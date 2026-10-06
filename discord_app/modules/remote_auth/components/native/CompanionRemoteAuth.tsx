@@ -138,7 +138,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmpResult = tmp(15911);
+      const tmpResult = tmp(15950);
       const state = tmpResult.useAuthWebsocket(first, true).state;
       if (cResult[1] !== navigation) {
         class I {
@@ -155,7 +155,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      if (state.step === tmp(15910).RemoteAuthStep.PENDING_REMOTE_INIT) {
+      if (state.step === tmp(15949).RemoteAuthStep.PENDING_REMOTE_INIT) {
         class I {
           constructor() {
             navigation.goBack();
@@ -286,7 +286,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = navigation;
       let obj = navigation(1490);
       navigation = obj.useNavigation();
-      const context = react.useContext(fingerprint(5308));
+      const context = react.useContext(fingerprint(5315));
       const callback = react.useCallback((arg0) => {
         let tmp = arg0;
         const obj = {
@@ -304,7 +304,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         track(LOGIN_SUCCESSFUL, obj);
       }, []);
-      const obj3 = navigation(15911);
+      const obj3 = navigation(15950);
       const state = obj3.useAuthWebsocket(callback, true).state;
       const items = [navigation];
       const callback1 = react.useCallback(() => {
@@ -312,7 +312,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp5 = fingerprint;
       fingerprint = null;
-      if (state.step === navigation(15910).RemoteAuthStep.PENDING_REMOTE_INIT) {
+      if (state.step === navigation(15949).RemoteAuthStep.PENDING_REMOTE_INIT) {
         fingerprint = state.fingerprint;
       }
       const items1 = [fingerprint];
@@ -328,7 +328,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const obj4 = { headerText: intl.string(tmp2(1126).t["7fNJgA"]), children: closure_7(View, obj5) };
-      const tmp5Result = tmp5(6460);
+      const tmp5Result = tmp5(6467);
       intl = tmp2(1126).intl;
       obj5 = { style: tmp.statusContainer, children: renderSteps(state, tmp, callback1, context) };
       return closure_7(tmp5Result, obj4);

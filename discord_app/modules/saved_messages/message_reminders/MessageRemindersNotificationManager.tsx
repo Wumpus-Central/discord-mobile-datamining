@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 function scheduleNextNotification() {
   let found;
   let timeout;
-  let obj = found(7485);
+  let obj = found(7496);
   if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
     if (null != timeout) {
       const _clearTimeout = clearTimeout;

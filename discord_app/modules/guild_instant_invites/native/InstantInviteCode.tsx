@@ -274,10 +274,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = { style: closure_10().flex, children: closure_9(Stack, obj2) };
       const memo = react.useMemo(() => closure_5(invite.channel), items);
       obj2 = { children: items1 };
-      Stack = invite(5593).Stack;
+      Stack = invite(5600).Stack;
       items1 = [,];
       const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
-      items1[0] = closure_8(invite(4886).Text, obj3);
+      items1[0] = closure_8(invite(4892).Text, obj3);
       const obj4 = { channel: memo, expiresAt: invite.getExpiresAt() };
       items1[1] = closure_8(closure_11, obj4);
       return closure_8(View, obj);

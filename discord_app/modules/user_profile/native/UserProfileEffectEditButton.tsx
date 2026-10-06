@@ -97,7 +97,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   const callback = userProfileEffect.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut };
-    obj.openLazy(asyncRequire(14456, dependencyMap.paths), "Profile Effect", obj2);
+    obj.openLazy(asyncRequire(14472, dependencyMap.paths), "Profile Effect", obj2);
   }, items);
   if (product != null) {
     name = product.name;

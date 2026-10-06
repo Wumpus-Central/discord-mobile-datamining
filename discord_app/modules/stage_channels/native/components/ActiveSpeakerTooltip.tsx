@@ -102,7 +102,7 @@ const memoResult = memo(
           tmp8 = cResult[3];
         }
         const tmpResult = channel(504);
-        const first1 = _slicedToArray(tmpResult.useStateFromStores(first, tmp7, tmp8, tmp(5589).isVersionEqual), 1)[0];
+        const first1 = _slicedToArray(tmpResult.useStateFromStores(first, tmp7, tmp8, tmp(5596).isVersionEqual), 1)[0];
         const first2 = _slicedToArray(closure_7(), 1)[0];
         const tmp10 = _slicedToArray(closure_6(), 2)[1];
         if (0 !== first1.length) {
@@ -173,7 +173,7 @@ const memoResult = memo(
                               onPress: tmp10,
                               children: tmp30,
                             };
-                            const tmp36 = closure_8(channel(5909).PressableOpacity, obj3);
+                            const tmp36 = closure_8(channel(5916).PressableOpacity, obj3);
                             cResult[26] = tmp10;
                             cResult[27] = tmp4.container;
                             cResult[28] = tmp30;
@@ -203,7 +203,7 @@ const memoResult = memo(
                       color: "text-default",
                       children: tmp21,
                     };
-                    const tmp25 = closure_8(channel(4886).Text, obj6);
+                    const tmp25 = closure_8(channel(4892).Text, obj6);
                     cResult[16] = tmp4.participantNameplateSpeakingText;
                     cResult[17] = tmp21;
                     cResult[18] = tmp25;
@@ -262,7 +262,7 @@ const memoResult = memo(
               return items;
             },
             items1,
-            channel(5589).isVersionEqual,
+            channel(5596).isVersionEqual,
           ),
           1,
         )[0];
@@ -279,7 +279,7 @@ const memoResult = memo(
             };
             obj3 = { style: tmp.participantItemContainer, children: items2 };
             const obj4 = { style: tmp.participantAvatarContainer, children: closure_8(tmp11, obj5) };
-            const PressableOpacity = tmp2(5909).PressableOpacity;
+            const PressableOpacity = tmp2(5916).PressableOpacity;
             obj5 = {
               namesStyle: tmp.participantAvatarText,
               users: first,
@@ -296,7 +296,7 @@ const memoResult = memo(
               color: "text-default",
               children: intl.format(channel(1126).t["+dia6l"], obj8),
             };
-            Text = tmp2(4886).Text;
+            Text = tmp2(4892).Text;
             intl = tmp2(1126).intl;
             obj8 = { count: first.length };
             items2[1] = closure_8(View, obj6);

@@ -19,7 +19,7 @@ export const getCheckpointRoutes = function getCheckpointRoutes(arg0) {
   }
   return CHECKPOINT_NO_SHARED_DATA_FLOW;
 };
-export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(checkpointFlow, route, arg2) {
+export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(checkpointFlow, arg1, arg2) {
   let INTRODUCTION;
   let prop;
   if (checkpointFlow === CheckpointNavigation.CheckpointFlow.SHARED_DATA) {
@@ -27,7 +27,7 @@ export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(ch
   } else {
     prop = CheckpointNoSharedDataFlow.CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
-  const index = prop.indexOf(route);
+  const index = prop.indexOf(arg1);
   if (-1 === index) {
     INTRODUCTION = CheckpointNavigation.CheckpointRoute.INTRODUCTION;
   } else {

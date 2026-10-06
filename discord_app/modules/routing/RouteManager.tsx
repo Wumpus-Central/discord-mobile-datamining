@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import router_utils from "router_utils.tsx";
 import convertRouteToNavigation from "convertRouteToNavigation.native.tsx";
-import _mod12560 from "../../../_runtime/metro/12560__.js";
+import _mod12575 from "../../../_runtime/metro/12575__.js";
 import GatewayConnectionStore from "../gateway/GatewayConnectionStore.tsx";
 import KeybindRouterStore from "KeybindRouterStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -100,7 +100,7 @@ class RouteManager {
         let pathname = obj2.getHistory().location.pathname;
         let tmp7Result = tmp7(location, REPLACE);
         if (null != tmp7Result) {
-          let tmp9Result = _mod12560;
+          let tmp9Result = _mod12575;
           let obj3 = {
             message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
             data: obj4,

@@ -21,7 +21,7 @@ import RowGeneratorTypes from "../../messages/native/renderer/RowGeneratorTypes.
 import MediaViewerAnalyticsManager from "../MediaViewerAnalyticsManager.tsx";
 import getDisplayFilenameDefault from "../../messages/getDisplayFilename.tsx";
 import useStateFromSharedValueDefault from "../../reanimated/native/useStateFromSharedValue.tsx";
-import NativePortalView from "../../../components_native/common/NativePortalView.tsx";
+import MediaModalPortal from "components/renderers/MediaModalPortal.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import Constants from "../../../Constants.tsx";
@@ -33,7 +33,7 @@ let _require, closure_2, dependencyMap, importDefault;
 
 let hasOwnProperty;
 let metroRequire;
-const f95981 = () => {
+const f96122 = () => {
   if (ConstantsIOS.MediaType.IMAGE === VIDEO) {
     const tmp2Result = ToastUtils;
     tmp2Result.presentImageSaved();
@@ -891,7 +891,7 @@ function downloadMediaAssetWithContentType(mediaUrl, VIDEO, contentType) {
     const obj = react_nativeDefault;
     result = obj.downloadMediaAsset(mediaUrl, VIDEO);
   }
-  return result.then(f95981, handleDownloadError);
+  return result.then(f96122, handleDownloadError);
 }
 function isAnimatedWebpSource(sourceURI) {
   let result = null != sourceURI.sourceURI && null != sourceURI.uri;
@@ -1264,7 +1264,7 @@ export const downloadMediaAsset = function downloadMediaAsset(mediaUrl, VIDEO) {
   let closure_0 = VIDEO;
   const obj = react_nativeDefault;
   const downloadMediaAssetResult = obj.downloadMediaAsset(mediaUrl, VIDEO);
-  return downloadMediaAssetResult.then(f95981, handleDownloadError);
+  return downloadMediaAssetResult.then(f96122, handleDownloadError);
 };
 export { downloadMediaAssetWithContentType };
 export const getYoutubeClipVideoIdFromURI = function getYoutubeClipVideoIdFromURI(uri) {
@@ -1324,7 +1324,7 @@ export const getVideoSourceType = function getVideoSourceType(source) {
     return PORTAL;
   }
   if (null != source.portal) {
-    const obj2 = NativePortalView;
+    const obj2 = MediaModalPortal;
     if (!obj2.isPortalExpired(source.portal)) {
       PORTAL = obj.PORTAL;
     }

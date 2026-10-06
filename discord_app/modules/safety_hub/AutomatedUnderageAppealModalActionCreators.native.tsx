@@ -14,7 +14,7 @@ let _require, c2, dependencyMap, importDefault;
 let closure_4;
 let hasOwnProperty;
 let tmp;
-const ModalActionCreatorsDefault = tmp(5093);
+const ModalActionCreatorsDefault = tmp(5099);
 ({ AGE_APPEAL_ACTION_SHEET_NAME: closure_4, AGE_CHECK_POLL_DELAY_MS: hasOwnProperty } = SafetyHubConstants);
 let closure_6 = AgeVerificationConstants.AGE_VERIFICATION_GET_STARTED_MODAL_KEY;
 const jsx = Fragment.jsx;
@@ -24,7 +24,7 @@ let obj = {
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     const obj2 = ActionSheetActionCreatorsDefault;
     const obj3 = { classificationId, onClose };
-    obj2.openLazy(asyncRequire(11496, dependencyMap.paths), React3, obj3);
+    obj2.openLazy(asyncRequire(11509, dependencyMap.paths), React3, obj3);
   },
   openV2(classificationId, onClose) {
     let closure_2;
@@ -37,8 +37,8 @@ let obj = {
     let tmp4 = _require;
     let obj2 = require("SafetyHubUtils");
     if (obj2.isCurrentUserSuspended()) {
-      const tmp4Result = tmp4(8105);
-      if (tmp4Result.isExpressiveModalV2Enabled(tmp4(8086).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
+      const tmp4Result = tmp4(8138);
+      if (tmp4Result.isExpressiveModalV2Enabled(tmp4(8119).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS)) {
         let tmp6 = globalThis;
         const _Math = Math;
         const _Date = Date;

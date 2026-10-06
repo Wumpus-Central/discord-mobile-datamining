@@ -15,7 +15,7 @@ let c3;
 let obj = module_570.create(() => {
   let items;
   let obj2;
-  obj = { voiceMessageAnimationState: obj2.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "Set", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: [], waveformVersion: "Symbol", showVoiceMessagesTooltip: "M6 2v1h1V2H6ZM5 3v1h1V3H5ZM6 4v1h1V4H6ZM4 4v1h1V4H4ZM3 5v1h1V5H3ZM2 6v2h1V6H2ZM1 8v2h1V8H1Z", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: 0.75, isUsingHoldGesture: null };
+  obj = { voiceMessageAnimationState: obj2.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "Reflect", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: [], waveformVersion: "Set", showVoiceMessagesTooltip: "RNSScreen", savedVoiceMessageUploadData: null, isVoiceMessageButtonMounted: null, isUsingHoldGesture: 245 };
   items = [, ];
   ({ SENDING: arr[0], SENDING: arr[1] } = React2);
   obj2 = ReanimatedRexport;
@@ -74,7 +74,7 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
     set = currWaveHeight.set;
-    obj = waveformVersion(5597);
+    obj = waveformVersion(5604);
     const result = set(obj.withSpring(arg0 / closure_3));
   }
   const items = [arg0, waveformVersion];

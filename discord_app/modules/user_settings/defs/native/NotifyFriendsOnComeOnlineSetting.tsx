@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx
 import intl2 from "../../../../intl/index.native.tsx";
 import UserSettings from "../../UserSettings.tsx";
-import _modDef2659 from "../../../activity_privacy/ActivityPrivacy.messages.js";
+import _modDef2687 from "../../../activity_privacy/ActivityPrivacy.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FriendOnlineNotificationUtils from "../../../notifications/friend_online/FriendOnlineNotificationUtils.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -11,11 +11,11 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
 const obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2659.A0FVCV);
+    return intl.string(_modDef2687.A0FVCV);
   },
   useDescription() {
     const intl = intl2.intl;
-    return intl.string(_modDef2659.vHX6RG);
+    return intl.string(_modDef2687.vHX6RG);
   },
   parent: MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.NotifyFriendsOnComeOnline.useSetting,

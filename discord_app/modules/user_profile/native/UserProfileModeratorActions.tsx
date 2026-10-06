@@ -462,7 +462,7 @@ export default function UserProfileModeratorActions(user) {
               selectedChannel: null,
             };
             obj2 = { title: intl.string(intl18.t.r2ptsz) };
-            const tmp3 = asyncRequire(12103, dependencyMap.paths);
+            const tmp3 = asyncRequire(12118, dependencyMap.paths);
             intl = intl18.intl;
             openLazy(tmp3, "ChannelPicker", obj, "stack");
           }}
@@ -501,7 +501,7 @@ export default function UserProfileModeratorActions(user) {
                 arr.pop();
               },
             };
-            obj.pushLazy(asyncRequire(11447, dependencyMap.paths), obj2);
+            obj.pushLazy(asyncRequire(11460, dependencyMap.paths), obj2);
           }}
         />,
       );

@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/conjureProjectMenuItems.tsx
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/projects/conjureProjectMenuItems.tsx");
@@ -17,7 +17,7 @@ export const previewMenuItems = function previewMenuItems(canRefresh) {
   const items = [];
   if (canRefresh.canRefresh) {
     const push = items.push;
-    const obj = { id: "preview-refresh", label: intl.string(_modDef3723["/nOi5n"]), kind: "refresh", disabled: tmp };
+    const obj = { id: "preview-refresh", label: intl.string(_modDef3753["/nOi5n"]), kind: "refresh", disabled: tmp };
     intl = intl4.intl;
     push(obj);
   }
@@ -30,7 +30,7 @@ export const previewMenuItems = function previewMenuItems(canRefresh) {
     if ("authorize" === nextResult.offer) {
       let obj2 = {
         id: "preview-connect-" + connection.type,
-        label: intl2.formatToPlainString(_modDef3723.DEwmI5, obj3),
+        label: intl2.formatToPlainString(_modDef3753.DEwmI5, obj3),
         kind: "connect",
         connectionType: connection.type,
         disabled: connectPending.has(connection.type),
@@ -42,7 +42,7 @@ export const previewMenuItems = function previewMenuItems(canRefresh) {
     } else {
       obj4 = {
         id: "preview-connect-" + connection.type,
-        label: intl3.formatToPlainString(_modDef3723.GnHcWc, obj5),
+        label: intl3.formatToPlainString(_modDef3753.GnHcWc, obj5),
         kind: "connect",
         connectionType: connection.type,
         disabled: true,

@@ -125,7 +125,7 @@ function buildChannelsAndMapping() {
       return map;
     }
   }
-  const obj = map(14290);
+  const obj = map(14308);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = computeInheritedImportances(mappings);

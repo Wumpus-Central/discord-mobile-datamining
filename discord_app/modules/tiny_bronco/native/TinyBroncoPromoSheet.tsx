@@ -3,7 +3,7 @@ import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3077 from "../TinyBronco.messages.js";
+import _modDef3105 from "../TinyBronco.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
@@ -40,9 +40,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(36);
       markAsDismissed = markAsDismissed.markAsDismissed;
       closure_11();
-      let obj2 = dismissOnce(5102);
+      let obj2 = dismissOnce(5108);
       const isVerifiedTeen = obj2.useIsVerifiedTeen();
-      let obj3 = dismissOnce(14531);
+      let obj3 = dismissOnce(14547);
       const tmp = dismissOnce;
       dismissOnce = obj3.useDismissOnce(markAsDismissed);
       if (cResult[0] !== dismissOnce) {
@@ -172,7 +172,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { text: null, onPress: null };
       const intl = tmp(1126).intl;
-      _modDef3077;
+      _modDef3105;
       if (isVerifiedTeen) {
         class M {
           constructor() {
@@ -210,9 +210,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let dismissOnce;
       markAsDismissed = markAsDismissed.markAsDismissed;
       const tmp = closure_11();
-      let obj = dismissOnce(5102);
+      let obj = dismissOnce(5108);
       const isVerifiedTeen = obj.useIsVerifiedTeen();
-      let obj2 = dismissOnce(14531);
+      let obj2 = dismissOnce(14547);
       dismissOnce = obj2.useDismissOnce(markAsDismissed);
       const items = [dismissOnce];
       const items1 = [dismissOnce];
@@ -259,7 +259,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       const intl = dismissOnce(1126).intl;
       const string = intl.string;
-      const tmp13 = _modDef3077;
+      const tmp13 = _modDef3105;
       if (isVerifiedTeen) {
         obj3.text = string(tmp13["+7NlgO"]);
         obj3.onPress = callback3;
@@ -273,17 +273,17 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = {
         illustration: closure_9(Image, obj5),
-        title: intl2.string(tmp14(3077).GdTVPF),
+        title: intl2.string(tmp14(3105).GdTVPF),
         description: formatResult,
         onDismiss: callback,
         actions: closure_10(ButtonGroup, obj8),
       };
-      obj5 = { source: tmp14(14532), style: tmp.illustration, resizeMode: "contain" };
-      const PromoSheet = tmp2(10045).PromoSheet;
+      obj5 = { source: tmp14(14548), style: tmp.illustration, resizeMode: "contain" };
+      const PromoSheet = tmp2(10058).PromoSheet;
       intl2 = tmp2(1126).intl;
       const intl3 = tmp2(1126).intl;
       const format = intl3.format;
-      const tmp14Result = tmp14(3077);
+      const tmp14Result = tmp14(3105);
       if (isVerifiedTeen) {
         const obj6 = { handleOnConfirmAgeHook: callback2 };
         formatResult = format(tmp14Result["Ga2z/E"], obj6);
@@ -292,17 +292,17 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         formatResult = format(tmp14Result.xuvWqy, obj7);
       }
       obj8 = { size: "lg", style: tmp.actions, children: items5 };
-      ButtonGroup = tmp2(5592).ButtonGroup;
+      ButtonGroup = tmp2(5599).ButtonGroup;
       items5 = [,];
       const obj9 = { size: "lg", text: tmp15.text, onPress: tmp15.onPress };
-      items5[0] = closure_9(dismissOnce(5594).Button, obj9);
+      items5[0] = closure_9(dismissOnce(5601).Button, obj9);
       const obj10 = {
         size: "lg",
         variant: "secondary",
         text: intl4.string(dismissOnce(1126).t["NX+WJN"]),
         onPress: callback1,
       };
-      const Button = tmp2(5594).Button;
+      const Button = tmp2(5601).Button;
       intl4 = tmp2(1126).intl;
       items5[1] = closure_9(Button, obj10);
       return closure_9(PromoSheet, obj4);

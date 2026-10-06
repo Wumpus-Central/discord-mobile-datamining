@@ -18,7 +18,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4;
       let obj = context(576);
       const cResult = obj.c(3);
-      context = react.useContext(context(15864).TrackRegistrationContext);
+      context = react.useContext(context(15903).TrackRegistrationContext);
       if (cResult[0] !== context) {
         const fn = function o() {
           let obj = RootNavigationRef;
@@ -53,7 +53,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let constants2;
       let context;
-      context = react.useContext(context(15864).TrackRegistrationContext);
+      context = react.useContext(context(15903).TrackRegistrationContext);
       const items = [context];
       const layoutEffect = react.useLayoutEffect(() => {
         let obj = RootNavigationRef;

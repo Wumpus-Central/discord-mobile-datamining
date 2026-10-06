@@ -46,7 +46,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       let tmp8;
       if (stateFromStores != null) {
-        tmp8 = stateFromStores.allPowerups[tmp(undefined, 4771).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+        tmp8 = stateFromStores.allPowerups[tmp(undefined, 4777).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
       const tmp9 = usePowerupActiveStatusDefault(arg0, tmp8);
       const tmpResult2 = require("ServerThemeExperiment");
@@ -85,7 +85,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = obj.useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
       let tmp4;
       if (stateFromStores != null) {
-        tmp4 = stateFromStores.allPowerups[tmp(undefined, 4771).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+        tmp4 = stateFromStores.allPowerups[tmp(undefined, 4777).GUILD_POWERUP_GUILD_THEME_SKU_ID];
       }
       const tmp5 = usePowerupActiveStatusDefault(arg0, tmp4);
       const tmpResult = require("ServerThemeExperiment");

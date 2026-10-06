@@ -31,7 +31,7 @@ let obj = {
         },
       };
       tmp3 = arg3;
-      const tmp10 = self(1987)(9209, dependencyMap.paths);
+      const tmp10 = self(1987)(9244, dependencyMap.paths);
       pushLazy(tmp10, obj, CREATE_CHANNEL_MODAL_KEY);
     }
   },

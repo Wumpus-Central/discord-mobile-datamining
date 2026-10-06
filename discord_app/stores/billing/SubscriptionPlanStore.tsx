@@ -16,7 +16,7 @@ let c9;
 let closure_4;
 let hasOwnProperty;
 let metroImportAll;
-const f88633 = (id) => {
+const f88770 = (id) => {
   const obj = {
     id: id.id,
     name: id.name,
@@ -90,7 +90,7 @@ function reset() {
     SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH],
     SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH],
   ];
-  const item = items.forEach(f88633);
+  const item = items.forEach(f88770);
 }
 ({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
 ({ SubscriptionIntervalTypes, SubscriptionPlanInfo } = PremiumConstants);
@@ -108,7 +108,7 @@ let items = [
   SubscriptionPlanInfo[SubscriptionPlans.NONE_3_MONTH],
   SubscriptionPlanInfo[SubscriptionPlans.NONE_6_MONTH],
 ];
-let item = items.forEach(f88633);
+let item = items.forEach(f88770);
 let items1 = [, ,];
 ({ DAY: arr2[0], MONTH: arr2[1], YEAR: arr2[2] } = SubscriptionIntervalTypes);
 const Store = get_initializedDefault.Store;

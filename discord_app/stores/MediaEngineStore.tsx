@@ -38,7 +38,7 @@ import UpscaleSmallCapturedFramesExperiment2 from "../modules/media_engine/Upsca
 import GlobalFramePoolLockExperiment from "../modules/media_engine/GlobalFramePoolLockExperiment.tsx";
 import AudioFidelityExperiment from "../modules/media_engine/AudioFidelityExperiment.tsx";
 import SystemwideEchoCancellationExperiment from "../modules/media_engine/SystemwideEchoCancellationExperiment.tsx";
-import _modDef13829 from "../../_runtime/metro/13829__.js";
+import _modDef13847 from "../../_runtime/metro/13847__.js";
 import AudioEffectsExperimentDefault from "../modules/media_engine/AudioEffectsExperiment.tsx";
 import queryAudioEffectsDefault from "../modules/noise_cancellation/queryAudioEffects.tsx";
 import IOSAudioInterruptExperiment from "../modules/media_engine/IOSAudioInterruptExperiment.tsx";
@@ -303,7 +303,7 @@ function getSettings() {
       vadTrailing: 25,
       delay: 20,
       shortcut: [],
-      updatedAt: "Set",
+      updatedAt: "IconComponent",
     };
     obj3 = {};
     PlatformUtils.isPlatformEmbedded || false;
@@ -547,8 +547,8 @@ function updateVideo() {
       const obj18 = PlatformUtils;
       let isWindowsResult = obj18.isWindows();
       if (isWindowsResult) {
-        const satisfies = _modDef13829.satisfies;
-        _modDef13829;
+        const satisfies = _modDef13847.satisfies;
+        _modDef13847;
         const tmp43 = DiscordNativeDefault;
         let release;
         if (tmp43 != null) {
@@ -561,8 +561,8 @@ function updateVideo() {
         const tmp71Result = PlatformUtils;
         let isWindowsResult1 = tmp71Result.isWindows();
         if (isWindowsResult1) {
-          const satisfies2 = _modDef13829.satisfies;
-          _modDef13829;
+          const satisfies2 = _modDef13847.satisfies;
+          _modDef13847;
           const tmp50 = DiscordNativeDefault;
           let release1;
           if (tmp50 != null) {
@@ -621,8 +621,8 @@ function updateVideo() {
         isMacResult = obj8.supports(Features.SCREEN_CAPTURE_KIT);
       }
       if (isMacResult) {
-        const satisfies3 = _modDef13829.satisfies;
-        _modDef13829;
+        const satisfies3 = _modDef13847.satisfies;
+        _modDef13847;
         const tmp62 = DiscordNativeDefault;
         let release2;
         if (tmp62 != null) {
@@ -761,13 +761,13 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   const merged = Object.assign(tmp12);
   result = setAutomaticGainControl(obj2);
   const noiseCancellation = tmp2.noiseCancellation;
-  const tmp10Result = tmp10(9675);
+  const tmp10Result = tmp10(9688);
   const tmp10ResultResult = tmp10Result(noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   if (tmp10ResultResult !== noiseCancellation) {
     CertifiedDeviceStore.info("Falling back to system noise suppression.");
   }
   setEchoCancellation.setNoiseCancellation(tmp10ResultResult);
-  const tmp10Result6 = tmp10(13819);
+  const tmp10Result6 = tmp10(13837);
   if (tmp10ResultResult) {
     defaultConfig2 = tmp10Result6.getConfig({ location: "setNoiseCancellation" });
   } else {
@@ -778,7 +778,7 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   );
   const setSpatialAudioEnabled = setEchoCancellation.setSpatialAudioEnabled;
   const audioMixerSettings = tmp2.audioMixerSettings;
-  const tmp10Result7 = tmp10(13639);
+  const tmp10Result7 = tmp10(13655);
   const supportsResult =
     true === audioMixerSettings.enabled &&
     tmp10Result7.getConfig({ location: "MediaEngineStore" }).enabled &&
@@ -788,7 +788,7 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   const inputDeviceId2 = tmpResult.inputDeviceId;
   const tmp26 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId2) || tmpResult.echoCancellation;
   const tmp27 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId2) || tmpResult.noiseSuppression;
-  const tmp10Result8 = tmp10(9675);
+  const tmp10Result8 = tmp10(9688);
   const tmp10Result3Result = tmp10Result8(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   const obj7 = AudioFidelityExperiment;
   const voiceFidelityCaps = obj7.getVoiceFidelityCaps(
@@ -801,9 +801,9 @@ function updateConnectionVoiceProcessing(setEchoCancellation) {
   const obj8 = PlatformUtils;
   let isWindowsResult = obj8.isWindows();
   if (isWindowsResult) {
-    const satisfies = tmp10(13829).satisfies;
-    tmp10(13829);
-    const tmp10Result10 = tmp10(4490);
+    const satisfies = tmp10(13847).satisfies;
+    tmp10(13847);
+    const tmp10Result10 = tmp10(4496);
     let release;
     if (tmp10Result10 != null) {
       release = tmp10Result10.os.release;
@@ -937,7 +937,7 @@ function mergeSettings(arg0) {
       vadTrailing: 25,
       delay: 20,
       shortcut: [],
-      updatedAt: "Set",
+      updatedAt: "IconComponent",
     };
     obj3 = {};
     PlatformUtils.isPlatformEmbedded || false;
@@ -958,7 +958,7 @@ function applySettings() {
   result.setAudioInputDevice(inputDeviceId);
   maybeProbeAudioEffects(inputDeviceId);
   obj2 = PlatformUtils;
-  if (obj2.isMac()) {
+  if (obj2.isWindows()) {
     let guid;
     if (inputDevices[inputDeviceId] != null) {
       guid = tmp7.guid;
@@ -969,13 +969,15 @@ function applySettings() {
         result = watchDeviceHardwareMutedChange(tmp7.guid);
       }
     }
+  } else {
+    PlatformUtils;
   }
   result.setAudioOutputDevice(tmp.outputDeviceId);
   updateVideo();
   result.setInputVolume(tmp.inputVolume);
   const setOutputVolume = obj.setOutputVolume;
-  const obj3 = MobileAudioOutputExperimentDefault;
-  if (obj3.getConfig({ location: "MediaEngineStore.applySettings" }).audioOutputPresent) {
+  const obj4 = MobileAudioOutputExperimentDefault;
+  if (obj4.getConfig({ location: "MediaEngineStore.applySettings" }).audioOutputPresent) {
     setOutputVolume(tmp.outputVolume);
   } else {
     setOutputVolume(BottomSheet);
@@ -984,8 +986,8 @@ function applySettings() {
   const result1 = obj.setSidechainCompression(tmp.sidechainCompression);
   const result2 = obj.setSidechainCompressionStrength(tmp.sidechainCompressionStrength);
   const result3 = obj.setAudioInputBypassSystemProcessing(tmp.bypassSystemInputProcessing);
-  const tmp4Result = PlatformUtils;
-  if (tmp4Result.isLinux()) {
+  const tmp4Result2 = PlatformUtils;
+  if (tmp4Result2.isLinux()) {
     const tmp14Result = DesktopNativeUtilsDefault;
     if (tmp14Result != null) {
       const setOpenH264Enabled = tmp14Result.setOpenH264Enabled;
@@ -1001,7 +1003,7 @@ function applySettings() {
     tmp14Result2.getConfig({ location: "MediaEngineStore" }).enabled &&
     obj.supports(Features.SPATIAL_AUDIO);
   const distanceAttenuationEnabled = audioMixerSettings.distanceAttenuationEnabled;
-  const obj4 = {
+  const obj3 = {
     isSpatial: _false,
     enabled: _false,
     binaural: { spatialBlend: audioMixerSettings.spatialBlend },
@@ -1013,7 +1015,7 @@ function applySettings() {
     true === audioMixerSettings.enabled &&
     tmp14Result2.getConfig({ location: "MediaEngineStore" }).enabled &&
     obj.supports(Features.SPATIAL_AUDIO);
-  result.setAudioMixerOptions(obj4);
+  result.setAudioMixerOptions(obj3);
 }
 function maybeProbeAudioEffects() {
   return obj(...arguments);
@@ -1340,7 +1342,7 @@ function setLoopback() {
   const inputDeviceId2 = tmpResult.inputDeviceId;
   const tmp16 = CertifiedDeviceStore.hasEchoCancellation(inputDeviceId2) || tmpResult.echoCancellation;
   const tmp17 = CertifiedDeviceStore.hasNoiseSuppression(inputDeviceId2) || tmpResult.noiseSuppression;
-  const tmp10Result = tmp10(9675);
+  const tmp10Result = tmp10(9688);
   const tmp10ResultResult = tmp10Result(tmpResult.noiseCancellation, mediaEngineStore.getSystemMicrophoneMode());
   const obj6 = AudioFidelityExperiment;
   const voiceFidelityCaps = obj6.getVoiceFidelityCaps(
@@ -1809,7 +1811,7 @@ function setAudioSubsystem(arg0) {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -1883,7 +1885,7 @@ function setAudioSubsystem(arg0) {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj6 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -2094,9 +2096,9 @@ let obj5 = {
   index: 0,
   name: "No Output Devices",
   disabled: true,
-  guid: "unicodeVersion",
-  hardwareId: "mode",
-  containerId: "bm",
+  guid: "filter",
+  hardwareId: "start",
+  containerId: "T",
 };
 const outputDevices = { [DEFAULT_DEVICE_ID]: obj5 };
 let obj6 = {
@@ -2205,7 +2207,7 @@ class MediaEngineStore extends Store {
       let self2 = this;
       const self3 = this;
       const tmp4 = self;
-      const tmp5 = new obj(13889)(closure_72, self);
+      const tmp5 = new obj(13907)(closure_72, self);
       let tmp6 = tmp5;
       navigation = tmp5;
     }
@@ -2215,7 +2217,7 @@ class MediaEngineStore extends Store {
       obj.track(constants.DEVICE_ENUMERATION_TIMEOUT, {});
     });
     obj = closure_72;
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.Connection, (setAttenuation) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.Connection, (setAttenuation) => {
       pollMetrics = setAttenuation;
       closure_164();
       closure_144(setAttenuation);
@@ -2509,36 +2511,36 @@ class MediaEngineStore extends Store {
         setAttenuation.setExperimentFlag(closure_2_45.H265_HARDWARE_DECODE_AVAILABLE, result);
       });
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.DeviceChange, (inputDevices, outputDevices, videoDevices) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.DeviceChange, (inputDevices, outputDevices, videoDevices) => {
       timeout.stop();
       obj = obj(dependencyMap[43]);
       obj2 = { type: "MEDIA_ENGINE_DEVICES", inputDevices, outputDevices, videoDevices };
       obj.dispatch(obj2);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.VolumeChange, (inputVolume, outputVolume) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.VolumeChange, (inputVolume, outputVolume) => {
       obj = obj(dependencyMap[43]);
       obj2 = { type: "AUDIO_VOLUME_CHANGE", inputVolume, outputVolume };
       obj.dispatch(obj2);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.DesktopSourceEnd, (endReason, errorCode) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.DesktopSourceEnd, (endReason, errorCode) => {
       obj = obj(dependencyMap[43]);
       obj2 = { type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: null, endReason, errorCode };
       obj.dispatch(obj2);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.AudioPermission, (granted) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.AudioPermission, (granted) => {
       c125 = true;
       obj = obj(dependencyMap[43]);
       obj2 = { type: "MEDIA_ENGINE_PERMISSION", kind: "audio", granted };
       obj.dispatch(obj2);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.VideoPermission, (granted) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoPermission, (granted) => {
       obj = obj(dependencyMap[43]);
       obj2 = { type: "MEDIA_ENGINE_PERMISSION", kind: "video", granted };
       obj.dispatch(obj2);
     });
     const on = closure_72.on;
     on(
-      pollMetrics(4945).MediaEngineEvent.WatchdogTimeout,
+      pollMetrics(4951).MediaEngineEvent.WatchdogTimeout,
       _asyncToGenerator(async () => {
         let closure_2;
         let closure_3;
@@ -2678,7 +2680,7 @@ class MediaEngineStore extends Store {
         }
       }),
     );
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.VideoInputInitialized, (description) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoInputInitialized, (description) => {
       let rounded;
       const tmp = obj;
       const tmp3 = obj(dependencyMap[42]);
@@ -2700,7 +2702,7 @@ class MediaEngineStore extends Store {
       ({ initializationTimerExpired: obj.timed_out, entropy: obj.activity } = description);
       track(VIDEO_INPUT_INITIALIZED, obj);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.AudioInputInitialized, (description) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.AudioInputInitialized, (description) => {
       const tmp = obj(dependencyMap[42]);
       obj = {
         device_name: description.description.name,
@@ -2711,11 +2713,11 @@ class MediaEngineStore extends Store {
       const AUDIO_INPUT_INITIALIZED = constants.AUDIO_INPUT_INITIALIZED;
       track(AUDIO_INPUT_INITIALIZED, obj);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.ClipsRecordingRestartNeeded, () => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingRestartNeeded, () => {
       obj = obj(dependencyMap[43]);
       obj.dispatch({ type: "CLIPS_RESTART" });
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.ClipsInitFailure, (errMsg, applicationName) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsInitFailure, (errMsg, applicationName) => {
       let closure_2 = closure_82 < 3;
       closure_82 = closure_82 + 1;
       obj = applicationName(status[43]);
@@ -2737,24 +2739,24 @@ class MediaEngineStore extends Store {
         }
       });
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.ClipsRecordingHealthy, () => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingHealthy, () => {
       if (0 !== c82) {
         const _HermesInternal = HermesInternal;
         logger.info("Clips bridge reported healthy; resetting restart budget (was " + c82 + ").");
         c82 = 0;
       }
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.ClipsRecordingReadyChanged, (arg0) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingReadyChanged, (arg0) => {
       if (closure_1_83 !== arg0) {
         const _HermesInternal = HermesInternal;
         logger.info("Clips recorder ready changed: " + arg0);
         closure_1_83 = arg0;
       }
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.ClipsBridgeIdleShutdown, () => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsBridgeIdleShutdown, () => {
       logger.info("Clips bridge idle shutdown");
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.ClipsRecordingEnded, (arg0, soundshareId) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.ClipsRecordingEnded, (arg0, soundshareId) => {
       let id;
       if (_null != null) {
         desktopSource = _null.desktopSource;
@@ -2781,30 +2783,30 @@ class MediaEngineStore extends Store {
         _null = null;
       }
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.NativeScreenSharePickerUpdate, (existing, content) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerUpdate, (existing, content) => {
       obj = obj(dependencyMap[43]);
       obj2 = { type: "NATIVE_SCREEN_SHARE_PICKER_UPDATE", existing, content };
       obj.dispatch(obj2);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.NativeScreenSharePickerCancel, (existing) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerCancel, (existing) => {
       obj = obj(dependencyMap[43]);
       obj2 = { type: "NATIVE_SCREEN_SHARE_PICKER_CANCEL", existing };
       obj.dispatch(obj2);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.NativeScreenSharePickerError, (error) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.NativeScreenSharePickerError, (error) => {
       obj = obj(dependencyMap[43]);
       obj2 = { type: "NATIVE_SCREEN_SHARE_PICKER_ERROR", error };
       obj.dispatch(obj2);
     });
     closure_72.on(
-      pollMetrics(4945).MediaEngineEvent.AudioDeviceModuleError,
+      pollMetrics(4951).MediaEngineEvent.AudioDeviceModuleError,
       (audio_device_module, code, device_name) => {
         obj = obj(dependencyMap[42]);
         obj2 = { audio_device_module, code, device_name };
         obj.track(constants.AUDIO_DEVICE_MODULE_ERROR, obj2);
       },
     );
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.VideoCodecError, (mode) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoCodecError, (mode) => {
       let VIDEO_DECODE_ERROR;
       let tmp2;
       let tmp3;
@@ -2830,7 +2832,7 @@ class MediaEngineStore extends Store {
       }
       reportAVError(obj3);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.ConnectionStats, (arr) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.ConnectionStats, (arr) => {
       obj = obj(dependencyMap[43]);
       obj2 = {
         type: "MEDIA_ENGINE_CONNECTION_STATS",
@@ -2848,10 +2850,10 @@ class MediaEngineStore extends Store {
       };
       obj.dispatch(obj2);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.VoiceProcessingError, handleVoiceProcessingError);
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.VideoFilterError, handleVideoFilterError);
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.SpatialAudioStatus, handleSpatialAudioStatus);
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.VoiceQueueMetrics, (taskMetrics) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.VoiceProcessingError, handleVoiceProcessingError);
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.VideoFilterError, handleVideoFilterError);
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.SpatialAudioStatus, handleSpatialAudioStatus);
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.VoiceQueueMetrics, (taskMetrics) => {
       const tmp = processQueueMetricsForAnalytics(taskMetrics);
       if (null !== tmp) {
         obj = obj(dependencyMap[42]);
@@ -2883,12 +2885,12 @@ class MediaEngineStore extends Store {
         gpus.length > 0 && gpus.every((vendor_id) => "10de" === vendor_id.vendor_id);
       }
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.DeviceHardwareMutedChange, (deviceGuid, hardwareMuted) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.DeviceHardwareMutedChange, (deviceGuid, hardwareMuted) => {
       obj = obj(dependencyMap[43]);
       obj2 = { type: "AUDIO_INPUT_DEVICE_HARDWARE_MUTED_CHANGED", deviceGuid, hardwareMuted };
       obj.dispatch(obj2);
     });
-    closure_72.on(pollMetrics(4945).MediaEngineEvent.SystemMicrophoneModeChange, (arg0) => {
+    closure_72.on(pollMetrics(4951).MediaEngineEvent.SystemMicrophoneModeChange, (arg0) => {
       let closure_1_129 = arg0;
       closure_1_72.eachConnection(updateConnectionVoiceProcessing);
       mediaEngineStore.emitChange();
@@ -2922,7 +2924,7 @@ class MediaEngineStore extends Store {
           vadTrailing: 25,
           delay: 20,
           shortcut: [],
-          updatedAt: "Set",
+          updatedAt: "IconComponent",
         },
         vadUseKrispSettingVersion: 0,
         ncUseKrispSettingVersion: 0,
@@ -3257,7 +3259,7 @@ class MediaEngineStore extends Store {
           vadTrailing: 25,
           delay: 20,
           shortcut: [],
-          updatedAt: "Set",
+          updatedAt: "IconComponent",
         };
         obj7 = {};
         const tmp56 = pollMetrics(1369).isPlatformEmbedded || false;
@@ -3855,8 +3857,8 @@ class MediaEngineStore extends Store {
   supportsExperimentalSoundshare() {
     let supportsResult = result.supports(Features.EXPERIMENTAL_SOUNDSHARE);
     if (supportsResult) {
-      const satisfies = _modDef13829.satisfies;
-      _modDef13829;
+      const satisfies = _modDef13847.satisfies;
+      _modDef13847;
       const tmp5 = DiscordNativeDefault;
       let release;
       if (tmp5 != null) {
@@ -3870,8 +3872,8 @@ class MediaEngineStore extends Store {
     obj = PlatformUtils;
     let isWindowsResult = obj.isWindows() && result.supports(Features.SOUNDSHARE);
     if (isWindowsResult) {
-      const satisfies = _modDef13829.satisfies;
-      _modDef13829;
+      const satisfies = _modDef13847.satisfies;
+      _modDef13847;
       const tmp7 = DiscordNativeDefault;
       let release;
       if (tmp7 != null) {
@@ -3960,8 +3962,8 @@ class MediaEngineStore extends Store {
     if (obj.isMac()) {
       let supportsResult = result.supports(Features.SOUNDSHARE);
       if (supportsResult) {
-        const satisfies = _modDef13829.satisfies;
-        _modDef13829;
+        const satisfies = _modDef13847.satisfies;
+        _modDef13847;
         const tmp13 = DiscordNativeDefault;
         let release;
         if (tmp13 != null) {
@@ -3973,8 +3975,8 @@ class MediaEngineStore extends Store {
         const tmpResult = PlatformUtils;
         let satisfies2Result = tmpResult.isMac() && result.supports(Features.SCREEN_CAPTURE_KIT);
         if (satisfies2Result) {
-          const satisfies2 = _modDef13829.satisfies;
-          _modDef13829;
+          const satisfies2 = _modDef13847.satisfies;
+          _modDef13847;
           const tmp20 = DiscordNativeDefault;
           let release1;
           if (tmp20 != null) {
@@ -4194,7 +4196,7 @@ let obj7 = {
                 vadTrailing: 25,
                 delay: 20,
                 shortcut: [],
-                updatedAt: "Set",
+                updatedAt: "IconComponent",
               };
               obj3 = {};
               PlatformUtils.isPlatformEmbedded || false;
@@ -4398,7 +4400,7 @@ let obj7 = {
             vadTrailing: 25,
             delay: 20,
             shortcut: [],
-            updatedAt: "Set",
+            updatedAt: "IconComponent",
           };
           obj4 = {};
           DEFAULT2(1369).isPlatformEmbedded || false;
@@ -4500,7 +4502,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -4581,7 +4583,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -4665,7 +4667,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -4757,7 +4759,7 @@ let obj7 = {
           vadTrailing: 25,
           delay: 20,
           shortcut: [],
-          updatedAt: "Set",
+          updatedAt: "IconComponent",
         };
         obj4 = {};
         PlatformUtils.isPlatformEmbedded || false;
@@ -4921,7 +4923,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj5 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5074,7 +5076,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj9 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5175,7 +5177,7 @@ let obj7 = {
           vadTrailing: 25,
           delay: 20,
           shortcut: [],
-          updatedAt: "Set",
+          updatedAt: "IconComponent",
         };
         obj4 = {};
         PlatformUtils.isPlatformEmbedded || false;
@@ -5257,7 +5259,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj5 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5369,7 +5371,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj3 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5451,7 +5453,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj5 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5530,7 +5532,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj5 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5606,7 +5608,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj3 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5696,7 +5698,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5710,17 +5712,19 @@ let obj7 = {
     result.setAudioInputDevice(id);
     maybeProbeAudioEffects(id);
     const obj6 = PlatformUtils;
-    if (obj6.isMac()) {
+    if (obj6.isWindows()) {
       let guid;
       if (inputDevices[id] != null) {
-        guid = tmp21.guid;
+        guid = tmp23.guid;
       }
       if (null != guid) {
         const watchDeviceHardwareMutedChange = obj5.watchDeviceHardwareMutedChange;
         if (watchDeviceHardwareMutedChange != null) {
-          const result1 = watchDeviceHardwareMutedChange(tmp21.guid);
+          const result1 = watchDeviceHardwareMutedChange(tmp23.guid);
         }
       }
+    } else {
+      PlatformUtils;
     }
     result.eachConnection(updateConnectionVoiceProcessing);
     c104 = undefined;
@@ -5805,7 +5809,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -5883,7 +5887,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       const merged = Object.assign(closure_34);
@@ -5965,7 +5969,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6046,7 +6050,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6125,7 +6129,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6211,7 +6215,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6292,7 +6296,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       obj2(1369).isPlatformEmbedded || false;
@@ -6386,7 +6390,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       obj2(1369).isPlatformEmbedded || false;
@@ -6490,7 +6494,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6584,7 +6588,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6660,7 +6664,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6736,7 +6740,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6817,7 +6821,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6900,7 +6904,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj3 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -6919,8 +6923,8 @@ let obj7 = {
     let valueResult;
     let valueResult3;
     let valueResult4;
-    const f85486 = (id) => {
-      const f85485 = (containerId) => {
+    const f85620 = (id) => {
+      const f85619 = (containerId) => {
         let tmp = null != containerId.containerId && containerId.containerId === closure_0.containerId;
         if (!tmp) {
           tmp = null != containerId.hardwareId && containerId.hardwareId === closure_0.hardwareId;
@@ -6952,7 +6956,7 @@ let obj7 = {
       if (("videoinput" === id.type) !== true) {
         let WEBCAM;
         closure_0 = id;
-        if ((null != videoDevices.find(f85485)) !== true) {
+        if ((null != videoDevices.find(f85619)) !== true) {
           const items = ["builtin", "displayport", "hdmi"];
           let str = id.macosTransportType;
           const includes = items.includes;
@@ -6983,7 +6987,7 @@ let obj7 = {
                     let tmp3 = "audioinput" === id.type;
                     if (tmp3) {
                       closure_0 = id;
-                      tmp3 = null != outputDevices.find(f85485);
+                      tmp3 = null != outputDevices.find(f85619);
                     }
                     if (tmp3 === true) {
                       WEBCAM = constants2.HEADSET;
@@ -6991,7 +6995,7 @@ let obj7 = {
                       let tmp4 = "audiooutput" === id.type;
                       if (tmp4) {
                         closure_0 = id;
-                        tmp4 = null != inputDevices.find(f85485);
+                        tmp4 = null != inputDevices.find(f85619);
                       }
                     }
                   }
@@ -7028,16 +7032,16 @@ let obj7 = {
         index: 0,
         name: tmp5,
         disabled: true,
-        guid: "enabled",
-        hardwareId: "toCharArray$esjava$1",
-        containerId: "toCharArray$esjava$1",
+        guid: "filter",
+        hardwareId: "ks",
+        containerId: "flex",
       };
       obj2 = {};
       obj2[obj.id] = obj;
       valueResult = obj2;
     } else {
       const arr2 = AUDIO_INPUT(12)(arr);
-      const mapped = arr2.map(f85486);
+      const mapped = arr2.map(f85620);
       let str = "id";
       const iter = mapped.keyBy("id");
       valueResult = iter.value();
@@ -7060,7 +7064,7 @@ let obj7 = {
       closure_72.setAudioInputDevice(id);
       maybeProbeAudioEffects(id);
       const tmp3Result = tmp3(1369);
-      if (tmp3Result.isMac()) {
+      if (tmp3Result.isWindows()) {
         let guid;
         if (valueResult[id] != null) {
           guid = tmp19.guid;
@@ -7071,6 +7075,8 @@ let obj7 = {
             result = watchDeviceHardwareMutedChange(tmp19.guid);
           }
         }
+      } else {
+        tmp3(1369);
       }
       closure_72.eachConnection(updateConnectionVoiceProcessing);
     }
@@ -7088,16 +7094,16 @@ let obj7 = {
         index: 0,
         name: tmp25,
         disabled: true,
-        guid: "enabled",
-        hardwareId: "toCharArray$esjava$1",
-        containerId: "toCharArray$esjava$1",
+        guid: "filter",
+        hardwareId: "ks",
+        containerId: "flex",
       };
       const obj6 = {};
       obj6[obj3.id] = obj3;
       valueResult3 = obj6;
     } else {
       const arr4 = AUDIO_INPUT(12)(arr3);
-      const mapped1 = arr4.map(f85486);
+      const mapped1 = arr4.map(f85620);
       let str2 = "id";
       const iter2 = mapped1.keyBy("id");
       valueResult3 = iter2.value();
@@ -7110,8 +7116,8 @@ let obj7 = {
         firstResult1 = tmp29[DEFAULT_DEVICE_ID];
       }
       if (firstResult1 == null) {
-        const obj13 = AUDIO_INPUT(12)(valueResult3);
-        const values4 = obj13.values();
+        const obj14 = AUDIO_INPUT(12)(valueResult3);
+        const values4 = obj14.values();
         firstResult1 = values4.first();
       }
       if (null != firstResult1) {
@@ -7156,16 +7162,16 @@ let obj7 = {
         index: 0,
         name: tmp42,
         disabled: true,
-        guid: "enabled",
-        hardwareId: "toCharArray$esjava$1",
-        containerId: "toCharArray$esjava$1",
+        guid: "filter",
+        hardwareId: "ks",
+        containerId: "flex",
       };
       const obj9 = {};
       obj9[obj8.id] = obj8;
       valueResult4 = obj9;
     } else {
       const arr6 = AUDIO_INPUT(12)(arr5);
-      const mapped2 = arr6.map(f85486);
+      const mapped2 = arr6.map(f85620);
       let str3 = "id";
       const iter3 = mapped2.keyBy("id");
       valueResult4 = iter3.value();
@@ -7182,7 +7188,7 @@ let obj7 = {
           }
           tmp51 = disabled;
         }
-        let tmp55 = "Firefox" === tmp9(5403).name;
+        let tmp55 = "Firefox" === tmp9(5410).name;
         if (tmp55) {
           tmp55 = "" === DISABLED_DEVICE_ID;
         }
@@ -7273,7 +7279,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj5 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -7403,7 +7409,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj5 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -7495,7 +7501,7 @@ let obj7 = {
           vadTrailing: 25,
           delay: 20,
           shortcut: [],
-          updatedAt: "Set",
+          updatedAt: "IconComponent",
         };
         obj3 = {};
         PlatformUtils.isPlatformEmbedded || false;
@@ -7678,7 +7684,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -7849,7 +7855,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj4 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -7925,7 +7931,7 @@ let obj7 = {
         vadTrailing: 25,
         delay: 20,
         shortcut: [],
-        updatedAt: "Set",
+        updatedAt: "IconComponent",
       };
       obj3 = {};
       PlatformUtils.isPlatformEmbedded || false;
@@ -7959,7 +7965,7 @@ let obj7 = {
           vadTrailing: 25,
           delay: 20,
           shortcut: [],
-          updatedAt: "Set",
+          updatedAt: "IconComponent",
         },
         vadUseKrispSettingVersion: 0,
         ncUseKrispSettingVersion: 0,
@@ -8175,8 +8181,8 @@ let obj7 = {
         isWindowsResult = tmpResult5.isWindows();
         const obj8 = result;
         if (isWindowsResult) {
-          const satisfies = _modDef13829.satisfies;
-          _modDef13829;
+          const satisfies = _modDef13847.satisfies;
+          _modDef13847;
           const tmp3Result6 = DiscordNativeDefault;
           let release;
           if (tmp3Result6 != null) {
@@ -8187,8 +8193,8 @@ let obj7 = {
         const tmpResult6 = PlatformUtils;
         isMacResult = tmpResult6.isMac() && obj8.supports(Features.SCREEN_CAPTURE_KIT);
         if (isMacResult) {
-          const satisfies2 = _modDef13829.satisfies;
-          _modDef13829;
+          const satisfies2 = _modDef13847.satisfies;
+          _modDef13847;
           const tmp3Result8 = DiscordNativeDefault;
           let release1;
           if (tmp3Result8 != null) {

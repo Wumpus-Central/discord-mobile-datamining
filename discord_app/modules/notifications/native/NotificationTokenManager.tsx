@@ -6,7 +6,7 @@ import intl32 from "../../../intl/index.native.tsx";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import _modDef2819 from "../NotificationSettings.messages.js";
+import _modDef2847 from "../NotificationSettings.messages.js";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import PushNotificationActionCreatorsDefault from "../../../actions/native/PushNotificationActionCreators.tsx";
 import NotificationSettingsConstants from "../NotificationSettingsConstants.tsx";
@@ -214,20 +214,20 @@ class NotificationTokenManager extends LifecycleManager {
       NativeModules.DCDNotificationCategoryUtils.registerNotificationCategoriesAndGroups;
     if (null != registerNotificationCategoriesAndGroups) {
       const obj = {
-        calls: intl.string(_modDef2819["IUH/Oe"]),
-        mediaConnections: intl2.string(_modDef2819.VeBD1N),
-        messages: intl3.string(_modDef2819["4qWUAO"]),
-        directMessages: intl4.string(_modDef2819.NGdNZb),
-        friendRequests: intl5.string(_modDef2819.NxgGZA),
-        polls: intl6.string(_modDef2819.MOjygY),
-        social: intl7.string(_modDef2819["UzRF+8"]),
-        stageLive: intl8.string(_modDef2819["4n388K"]),
-        guildEventLive: intl9.string(_modDef2819["40TIqW"]),
+        calls: intl.string(_modDef2847["IUH/Oe"]),
+        mediaConnections: intl2.string(_modDef2847.VeBD1N),
+        messages: intl3.string(_modDef2847["4qWUAO"]),
+        directMessages: intl4.string(_modDef2847.NGdNZb),
+        friendRequests: intl5.string(_modDef2847.NxgGZA),
+        polls: intl6.string(_modDef2847.MOjygY),
+        social: intl7.string(_modDef2847["UzRF+8"]),
+        stageLive: intl8.string(_modDef2847["4n388K"]),
+        guildEventLive: intl9.string(_modDef2847["40TIqW"]),
         guildHighlights: intl10.string(intl32.t.p5jg9S),
-        forumThreadCreated: intl11.string(_modDef2819.HibKoy),
-        systemMessages: intl12.string(_modDef2819.zJlwvV),
-        other: intl13.string(_modDef2819.kIrLfg),
-        default: intl14.string(_modDef2819["T+79Eo"]),
+        forumThreadCreated: intl11.string(_modDef2847.HibKoy),
+        systemMessages: intl12.string(_modDef2847.zJlwvV),
+        other: intl13.string(_modDef2847.kIrLfg),
+        default: intl14.string(_modDef2847["T+79Eo"]),
         reactions: intl15.string(intl32.t.gHp0C4),
       };
       intl = intl32.intl;
@@ -246,10 +246,10 @@ class NotificationTokenManager extends LifecycleManager {
       intl14 = intl32.intl;
       intl15 = intl32.intl;
       const obj2 = {
-        realtime: intl16.string(_modDef2819.S5cB9e),
-        social: intl17.string(_modDef2819["UzRF+8"]),
-        server: intl18.string(_modDef2819.zRKbpz),
-        other: intl19.string(_modDef2819.q5M7HV),
+        realtime: intl16.string(_modDef2847.S5cB9e),
+        social: intl17.string(_modDef2847["UzRF+8"]),
+        server: intl18.string(_modDef2847.zRKbpz),
+        other: intl19.string(_modDef2847.q5M7HV),
       };
       intl16 = intl32.intl;
       intl17 = intl32.intl;

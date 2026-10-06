@@ -8,11 +8,11 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import useColorThemeBackgroundDefault from "../../../client_themes/native/useColorThemeBackground.tsx";
 import HeaderShared from "../shared_components/HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/12261_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/12276_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
 import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -126,7 +126,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6] = cResult;
       }
       const layoutEffect = react.useLayoutEffect(tmp5, tmp6);
-      const tmpResult = tmp(6496);
+      const tmpResult = tmp(6503);
       const accessibilityNativeStackOptions = tmpResult.useAccessibilityNativeStackOptions();
       if (cResult[2] === accessibilityNativeStackOptions) {
         let tmp9;

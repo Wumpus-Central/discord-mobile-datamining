@@ -3,7 +3,7 @@ import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../../../_runtime/00576_react.js";
 import Constants from "../../../../../../Constants.tsx";
 import intl2 from "../../../../../../intl/index.native.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/04809_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/04815_AssetRegistry.js";
 import Navigator2 from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton2 from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
@@ -185,13 +185,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (locationStack) => {
       let twoWayLinkStyles;
       locationStack = locationStack.locationStack;
-      const obj = twoWayLinkStyles(8742);
+      const obj = twoWayLinkStyles(8774);
       twoWayLinkStyles = obj.useTwoWayLinkStyles();
       const items = [twoWayLinkStyles];
       const memo = react.useMemo(() => getScreens(twoWayLinkStyles), items);
-      const obj2 = twoWayLinkStyles(8763);
+      const obj2 = twoWayLinkStyles(8795);
       const accountLinkStepTracking = obj2.useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack);
-      const Navigator = twoWayLinkStyles(6496).Navigator;
+      const Navigator = twoWayLinkStyles(6503).Navigator;
       const intl = twoWayLinkStyles(1126).intl;
       return (
         <Navigator

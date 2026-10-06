@@ -1,7 +1,7 @@
 // discord_app/modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
-import createAggregatorDefault from "../../../_runtime/17006_createAggregator.js";
+import createAggregatorDefault from "../../../_runtime/17032_createAggregator.js";
 import _slicedToArray_mod from "../../../_runtime/metro/00032__slicedToArray.js";
 import react_mod from "../../../_runtime/00019_react.js";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
@@ -12,7 +12,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require;
 
-const f128040 = (id) => id.id;
+const f128216 = (id) => id.id;
 let _slicedToArray = _slicedToArray_mod;
 let react = react_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -162,7 +162,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const found = values.filter(
           (type) => type.type === closure_1_0(stateFromStoresArray[4]).PermissionOverwriteType.MEMBER,
         );
-        mapped = found.map(f128040);
+        mapped = found.map(f128216);
       }
       const tmp11Result = tmp11(mapped, S);
       cResult[4] = stateFromStoresArray;
@@ -194,7 +194,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const found = values.filter(
               (type) => type.type === closure_1_0(stateFromStoresArray[4]).PermissionOverwriteType.MEMBER,
             );
-            items = found.map(f128040);
+            items = found.map(f128216);
           }
           return tmp(items, (arg0) => stateFromStoresArray.includes(arg0));
         }, items2),

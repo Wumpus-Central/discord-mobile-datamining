@@ -321,17 +321,17 @@ let obj = {
     const tmp2 = dependencyMap;
     let obj = entryPoint(1615);
     if (obj.isMetaQuest()) {
-      const tmpResult = tmp(5709);
-      tmpResult.openAlert(closure_7, jsx(onClose(8102), {}), onClose);
+      const tmpResult = tmp(5716);
+      tmpResult.openAlert(closure_7, jsx(onClose(8135), {}), onClose);
     } else {
-      const tmpResult6 = tmp(5102);
+      const tmpResult6 = tmp(5108);
       let isAgeVerifiedResult = tmpResult6.isAgeVerified();
       if (isAgeVerifiedResult) {
-        const tmpResult7 = tmp(5580);
+        const tmpResult7 = tmp(5587);
         isAgeVerifiedResult = tmpResult7.hasAgeGatedFeatures();
       }
       dependencyMap = isAgeVerifiedResult;
-      const tmpResult8 = tmp(8103);
+      const tmpResult8 = tmp(8136);
       if (tmpResult8.isAgeVerificationIncodeEnabled(entryPoint)) {
         const currentUser = UserStore.getCurrentUser();
         prop = undefined;
@@ -363,7 +363,7 @@ let obj = {
           }
         }
       } else {
-        const tmpResult9 = tmp(8105);
+        const tmpResult9 = tmp(8138);
         if (tmpResult9.isExpressiveModalV2Enabled(entryPoint)) {
           let tmp8 = prop;
           prop(function* () {
@@ -451,11 +451,11 @@ let obj = {
             }
           })();
         } else {
-          const tmpResult10 = tmp(8259);
+          const tmpResult10 = tmp(8292);
           UserStore = tmpResult10.isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
           let tmp4 = onClose;
           let tmp5 = prop;
-          const obj7 = onClose(5093);
+          const obj7 = onClose(5099);
           obj7.pushLazy(
             prop(function* () {
               let c1;

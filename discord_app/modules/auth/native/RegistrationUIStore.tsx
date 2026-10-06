@@ -6,7 +6,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require;
 
-const useRegistrationUIStore = module_570.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "code" }));
+const useRegistrationUIStore = module_570.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "applicationId" }));
 const result = size.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
 export { useRegistrationUIStore };

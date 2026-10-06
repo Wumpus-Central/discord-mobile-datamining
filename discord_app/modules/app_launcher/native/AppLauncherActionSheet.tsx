@@ -241,7 +241,6 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       let channel;
       let closure_129_0;
-      let logger;
       let name;
       ({ chatInputRef: closure_129_0, channel } = arg0);
       const ref = react.useRef(null);

@@ -3,12 +3,12 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
+import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import useIsPrivateAudioOnlyCallDefault from "../useIsPrivateAudioOnlyCall.tsx";
 import useSelectedParticipantDefault from "../../useSelectedParticipant.tsx";
-import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09719_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/09720_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09732_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09733_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -61,12 +61,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp10 = null;
         if (isVideoEnabled) {
-          videoDevices(9587);
+          videoDevices(9600);
           const intl = videoDeviceId(1126).intl;
           tmp10 = (
             <tmp13
               accessibilityLabel={intl.string(videoDeviceId(1126).t["t9eQ/g"])}
-              source={videoDevices(9719)}
+              source={videoDevices(9732)}
               onPress={tmp8}
               disableBackground
             />

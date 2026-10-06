@@ -183,7 +183,7 @@ function contentClassificationToAgeRestrictionConclusion(data) {
           EVERYONE = AgeRestrictionStatus4.EVERYONE;
           tmp24 = require;
         }
-        const obj8 = { source: tmp24(5899).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
+        const obj8 = { source: tmp24(5906).AgeRestrictionSource.AGENCY_CLASSIFICATION_IGDB, status: EVERYONE };
         push7(obj8);
       }
       if (null != data.agency_ratings.apple) {

@@ -202,7 +202,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj2 = { style: items2, children: closure_9(Icon, obj3) };
               items2 = [tmp4.iconContainer];
-              obj3 = { style: tmp4.icon, source: user(8276), color: user(587).unsafe_rawColors.WHITE };
+              obj3 = { style: tmp4.icon, source: user(8309), color: user(587).unsafe_rawColors.WHITE };
               Icon = channelId(1188).Icon;
               tmp23 = closure_9(View, obj2);
             }
@@ -276,7 +276,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (speaker) {
         const obj6 = { style: items3, children: closure_9(Icon, obj7) };
         items3 = [tmp.iconContainer];
-        obj7 = { style: tmp.icon, source: user(8276), color: user(587).unsafe_rawColors.WHITE };
+        obj7 = { style: tmp.icon, source: user(8309), color: user(587).unsafe_rawColors.WHITE };
         Icon = native.Icon;
         speaker = closure_9(View, obj6);
       }
@@ -674,9 +674,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === onAccept) {
           tmp8 = cResult[3];
         }
-        const tmp2Result = channel(8277);
+        const tmp2Result = channel(8310);
         const stageBlockedUsers = tmp2Result.useStageBlockedUsers(channel.id);
-        const tmp2Result2 = channel(8277);
+        const tmp2Result2 = channel(8310);
         const stageIgnoredUsers = tmp2Result2.useStageIgnoredUsers(channel.id);
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
@@ -719,8 +719,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj2 = { text: tmp10, onPress: tmp8 };
           cResult[6] = tmp8;
-          cResult[7] = closure_9(channel(5594).Button, obj2);
-          const tmp13 = closure_9(channel(5594).Button, obj2);
+          cResult[7] = closure_9(channel(5601).Button, obj2);
+          const tmp13 = closure_9(channel(5601).Button, obj2);
         } else {
           class E {
             constructor(nativeEvent) {
@@ -736,7 +736,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { variant: "secondary", text: intl.string(channel(1126).t.CZGqeT), onPress };
-          const Button = tmp2(5594).Button;
+          const Button = tmp2(5601).Button;
           intl = tmp2(1126).intl;
           const tmp15 = closure_9(Button, obj3);
           cResult[8] = tmp15;
@@ -857,8 +857,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[25] = Z;
                 cResult[26] = tmp5.container;
                 cResult[27] = tmp34;
-                cResult[28] = closure_9(onAccept(6569), obj5);
-                const tmp38 = closure_9(onAccept(6569), obj5);
+                cResult[28] = closure_9(onAccept(6576), obj5);
+                const tmp38 = closure_9(onAccept(6576), obj5);
               }
               class Z {
                 constructor(arg0, arg1) {
@@ -926,9 +926,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = items1(react.useState(0), 2);
       dependencyMap = tmp3[1];
       const first = tmp3[0];
-      let obj = channel(8277);
+      let obj = channel(8310);
       const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
-      const obj2 = channel(8277);
+      const obj2 = channel(8310);
       const stageIgnoredUsers = obj2.useStageIgnoredUsers(channel.id);
       const length = stageBlockedUsers.length;
       const length2 = stageIgnoredUsers.length;
@@ -936,7 +936,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         closure_2(nativeEvent.nativeEvent.layout.height);
       }, []);
       const obj3 = { bottom: true, style: tmp2.buttons, onLayout: callback, children: items };
-      const SafeAreaPaddingView = channel(6619).SafeAreaPaddingView;
+      const SafeAreaPaddingView = channel(6626).SafeAreaPaddingView;
       const obj4 = {
         text: intl.string(channel(1126).t.mbD50D),
         onPress() {
@@ -945,7 +945,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           obj.hideActionSheet(closure_8);
         },
       };
-      const Button = channel(5594).Button;
+      const Button = channel(5601).Button;
       intl = channel(1126).intl;
       items = [closure_9(Button, obj4)];
       const obj5 = {
@@ -956,7 +956,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           obj.hideActionSheet(closure_1_8);
         },
       };
-      const Button2 = channel(5594).Button;
+      const Button2 = channel(5601).Button;
       intl2 = channel(1126).intl;
       items[1] = closure_9(Button2, obj5);
       items1 = [];
@@ -968,7 +968,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         footer: tmp6,
         children: items3,
       };
-      BottomSheet = channel(6645).BottomSheet;
+      BottomSheet = channel(6652).BottomSheet;
       const obj7 = {
         inActionSheet: true,
         contentContainerStyle: tmp2.container,
@@ -982,7 +982,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           return 48;
         },
       };
-      const tmp8 = onAccept(6569);
+      const tmp8 = onAccept(6576);
       intl3 = channel(1126).intl;
       items2 = [items1.length];
       items3 = [closure_9(tmp8, obj7)];

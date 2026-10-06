@@ -6,7 +6,7 @@ import useToken2 from "../../design/tokens/native/useToken.tsx";
 import Constants from "../../../discord_common/js/packages/media-engine/Constants.tsx";
 import PerceptualVolumeUtils from "../../utils/PerceptualVolumeUtils.tsx";
 import VoiceNormalIcon from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import _modDef7952 from "../../../_runtime/metro/07952__.js";
+import _modDef7963 from "../../../_runtime/metro/07963__.js";
 import VoiceXIcon from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../_runtime/00019_react.js";
@@ -215,8 +215,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[27] = tmp24;
         cResult[28] = L;
         cResult[29] = tmp27;
-        cResult[30] = closure_7(_modDef7952, obj3);
-        const tmp32 = closure_7(_modDef7952, obj3);
+        cResult[30] = closure_7(_modDef7963, obj3);
+        const tmp32 = closure_7(_modDef7963, obj3);
       }
       const items = [tmp15.volumerSlider, tmp8];
       cResult[9] = tmp8;
@@ -280,7 +280,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         },
         onResponderGrant,
       };
-      const tmp8Result = _modDef7952;
+      const tmp8Result = _modDef7963;
       tmp5Result = PerceptualVolumeUtils;
       if (accessibilityLabel == null) {
         const intl = intl2.intl;

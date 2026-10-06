@@ -1,8 +1,8 @@
 // discord_app/modules/messages/native/renderer/row_data/SurveyIndication.tsx
 import intl2 from "../../../../../intl/index.native.tsx";
 import PushNotificationConstants from "../../../../push_notifications/PushNotificationConstants.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/13025_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../_runtime/13026_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/13044_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/13045_AssetRegistry.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
@@ -31,9 +31,9 @@ export const createSurveyIndication = function createSurveyIndication(message, f
     content: formatToParts(GwWhce, { handleMessage: obj }),
     feedbackIconUrl: getAssetUriForEmbed(tmp8Result),
   };
-  getAssetUriForEmbed = tmp2(7605).getAssetUriForEmbed;
-  tmp2(7605);
-  const tmp2Result2 = tmp2(4729);
+  getAssetUriForEmbed = tmp2(7616).getAssetUriForEmbed;
+  tmp2(7616);
+  const tmp2Result2 = tmp2(4735);
   if (tmp2Result2.isThemeDark(forcedTheme)) {
     tmp8Result = AssetRegistryDefault;
   } else {

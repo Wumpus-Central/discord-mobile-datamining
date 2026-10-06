@@ -89,12 +89,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-      const tmpResult3 = tmp(6764);
+      const tmpResult3 = tmp(6774);
       const isUserInCreatorMonetizationEligibleCountry = tmpResult3.useIsUserInCreatorMonetizationEligibleCountry();
       id = undefined;
       const useShouldRestrictUpdatingCreatorMonetizationSettings =
-        tmp(6756).useShouldRestrictUpdatingCreatorMonetizationSettings;
-      tmp(6756);
+        tmp(6766).useShouldRestrictUpdatingCreatorMonetizationSettings;
+      tmp(6766);
       if (id != null) {
         id = id.id;
       }

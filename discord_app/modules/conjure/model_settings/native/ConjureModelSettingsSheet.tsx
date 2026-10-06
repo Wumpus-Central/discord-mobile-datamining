@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import BottomSheetTitleHeader2 from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet2 from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ConjureConnectionStore2 from "../../connection/ConjureConnectionStore.tsx";
@@ -215,13 +215,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let stringResult;
         ({ tierSettings, tiers, choices } = stateFromStores);
         const obj4 = { direction: "vertical", spacing: nativeDefault.space.PX_16, children: items7 };
-        const Stack = tmp(5593).Stack;
+        const Stack = tmp(5600).Stack;
         const obj5 = { settings: tierSettings, tiers, choices, disabled: tmp5, onChange: callback };
         items7 = [closure_7(ConjureEffortPickerDefault, obj5)];
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         const intl = tmp(1126).intl;
         const string = intl.string;
-        const tmp12 = _modDef3723;
+        const tmp12 = _modDef3753;
         if (tmp5) {
           stringResult = string(tmp12.GxpdUR);
         } else {
@@ -245,7 +245,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(3);
       projectId = projectId.projectId;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { title: intl.string(_modDef3723["3E7Yc0"]) };
+        const obj2 = { title: intl.string(_modDef3753["3E7Yc0"]) };
         const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
         intl = intl2.intl;
         const tmp7 = metroImportDefault(BottomSheetTitleHeader, obj2);
@@ -279,7 +279,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         children: metroImportDefault(View, obj3),
       };
       const ActionSheet = ActionSheet2.ActionSheet;
-      obj2 = { title: intl.string(_modDef3723["3E7Yc0"]) };
+      obj2 = { title: intl.string(_modDef3753["3E7Yc0"]) };
       BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
       intl = intl2.intl;
       obj3 = { children: metroImportDefault(closure_9, { projectId }) };

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/manage_subscriptions/useManageSubscriptionCardData.tsx
 import Constants from "../../../Constants.tsx";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef4461 from "../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import PriceUtils from "../../../utils/PriceUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
@@ -20,13 +20,13 @@ function computeSubscriptionInfo(subscription) {
   let stringResult;
   subscription = subscription.subscription;
   let str = "";
-  const obj = _modDef4461(subscription.currentPeriodEnd);
+  const obj = _modDef4467(subscription.currentPeriodEnd);
   const formatResult = obj.format("M/D/YY");
   if (null != subscription.price) {
     const obj2 = PriceUtils;
     str = obj2.formatPrice(subscription.price, subscription.currency);
   }
-  const obj3 = _modDef4461(subscription.createdAt);
+  const obj3 = _modDef4467(subscription.createdAt);
   const obj4 = {
     memberSince: obj3.format("M/D/YY"),
     nextRenewalDate: formatResult,

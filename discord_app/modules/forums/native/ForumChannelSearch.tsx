@@ -173,7 +173,7 @@ const memo2Result = memo2(
         channelId = channelId.channelId;
         const guildId = channelId.guildId;
         closure_8();
-        let obj2 = channelId(13099);
+        let obj2 = channelId(13118);
         const canSearchForumPostsByChannelId = obj2.useCanSearchForumPostsByChannelId(channelId);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ForumSearchStore];
@@ -315,7 +315,7 @@ const memo2Result = memo2(
         ({ guildId: importDefault, placeholder } = channelId);
         let tmp2 = channelId;
         const tmp = closure_8();
-        let obj = channelId(13099);
+        let obj = channelId(13118);
         const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
         let obj2 = channelId(504);
         const items = [ForumSearchStore];
@@ -337,7 +337,7 @@ const memo2Result = memo2(
         if (canSearchForumPostsByChannelId) {
           tmp8Result = null;
           if (null != stateFromStores) {
-            const SearchField = tmp2(6547).SearchField;
+            const SearchField = tmp2(6554).SearchField;
             if (null == placeholder) {
               const intl = tmp2(1126).intl;
               const string = intl.string;

@@ -5,7 +5,7 @@ import Constants from "../../../Constants.tsx";
 import intl3 from "../../../intl/index.native.tsx";
 import FavoritesConstants from "../FavoritesConstants.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
-import _modDef3367 from "../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import FavoriteStore from "../FavoriteStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -55,7 +55,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp14;
                   const _Symbol = Symbol;
                   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-                    const obj2 = { label: intl.string(_modDef3367.WsUrMD), tooltip: intl2.string(_modDef3367.dW9Kov) };
+                    const obj2 = { label: intl.string(_modDef3395.WsUrMD), tooltip: intl2.string(_modDef3395.dW9Kov) };
                     intl = intl3.intl;
                     intl2 = intl3.intl;
                     cResult[2] = obj2;
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 const formatted = str.toLowerCase();
                 tmp6 = null;
                 if (formatted === closure_4.toLowerCase()) {
-                  const obj2 = { label: intl.string(_modDef3367.WsUrMD), tooltip: intl2.string(_modDef3367.dW9Kov) };
+                  const obj2 = { label: intl.string(_modDef3395.WsUrMD), tooltip: intl2.string(_modDef3395.dW9Kov) };
                   intl = intl3.intl;
                   intl2 = intl3.intl;
                   tmp6 = obj2;

@@ -2,7 +2,7 @@
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef2787 from "../../safety_flows/SafetyFlows.messages.js";
+import _modDef2815 from "../../safety_flows/SafetyFlows.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AgeVerificationActionCreatorsDefault from "../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
@@ -32,7 +32,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return obj.showAgeVerificationGetStartedModal(obj2);
           },
         };
-        const formatResult = intl.format(_modDef2787.ifObbX, obj2);
+        const formatResult = intl.format(_modDef2815.ifObbX, obj2);
         cResult[0] = formatResult;
         first = formatResult;
       } else {
@@ -68,7 +68,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       };
       return (
         <Text variant="text-md/medium" color="text-muted" style={closure_4().text}>
-          {intl.format(_modDef2787.ifObbX, obj2)}
+          {intl.format(_modDef2815.ifObbX, obj2)}
         </Text>
       );
     };

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3593 from "../intl/SlayerStorefront.messages.js";
+import _modDef3623 from "../intl/SlayerStorefront.messages.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
@@ -582,7 +582,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       let title;
       let tmp18Result4;
       let useReducedMotion;
-      const f105099 = () => useReducedMotion.useReducedMotion;
+      const f105251 = () => useReducedMotion.useReducedMotion;
       sku = sku.sku;
       ({ finePrint, ctaLabel, onCtaPress, onClose } = sku);
       let width;
@@ -593,8 +593,8 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       width = require("useWindowDimensions")().width;
       let obj = sku(width[18]);
       const items = [AccessibilityStore];
-      ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_27(obj.useStateFromStores(items, f105099)));
-      const tmp5 = closure_27(obj.useStateFromStores(items, f105099));
+      ({ previewViewStyle, textViewStyle, curtainViewStyle } = closure_27(obj.useStateFromStores(items, f105251)));
+      const tmp5 = closure_27(obj.useStateFromStores(items, f105251));
       let obj2 = sku(width[19]);
       const isScreenLandscape = obj2.useIsScreenLandscape();
       let obj3 = react;
@@ -1244,7 +1244,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             formatToPlainString2Result = formatToPlainString(prop, obj3);
           } else {
             let str;
-            const eNNnIG = _modDef3593.eNNnIG;
+            const eNNnIG = _modDef3623.eNNnIG;
             if (getOrFetchApplication != null) {
               str = getOrFetchApplication.name;
             }

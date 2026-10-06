@@ -63,7 +63,7 @@ let obj = function _stageAttachmentFiles() {
     await Promise.all(constants);
     await "IconComponent";
     constants = tmp;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

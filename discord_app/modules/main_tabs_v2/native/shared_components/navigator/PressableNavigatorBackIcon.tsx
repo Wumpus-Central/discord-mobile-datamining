@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorBackIcon.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07501_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/07512_AssetRegistry.js";
 import MaskedBadgeDefault from "../MaskedBadge.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -143,12 +143,12 @@ const forwardRefResult = forwardRef(
             tmp18 = tmp19;
           }
         }
-        const tmpResult3 = tmp(4580);
+        const tmpResult3 = tmp(4586);
         let backgroundColor = tmpResult3.useToken(tmp4);
-        const useGradientValue = tmp(4696).useGradientValue;
-        tmp(4696);
+        const useGradientValue = tmp(4702).useGradientValue;
+        tmp(4702);
         if (backgroundColor == null) {
-          backgroundColor = useGradientValue(tmp(4696).GradientPercentage.START);
+          backgroundColor = useGradientValue(tmp(4702).GradientPercentage.START);
         }
         if (backgroundColor == null) {
           backgroundColor = tmp11.maskStroke.backgroundColor;
@@ -223,7 +223,7 @@ const forwardRefResult = forwardRef(
                     children: tmp35,
                   };
                   const tmp43 = PressableNavigatorButtonWrapperDefault;
-                  PressableOpacity = tmp(5909).PressableOpacity;
+                  PressableOpacity = tmp(5916).PressableOpacity;
                   const merged = Object.assign(tmp7);
                   const tmp47 = closure_11(tmp43, obj7);
                   cResult[24] = tmp22;

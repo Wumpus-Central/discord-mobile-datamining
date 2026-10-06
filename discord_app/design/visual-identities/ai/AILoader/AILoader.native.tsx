@@ -259,7 +259,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const stagger = index.stagger;
       const tmp = closure_16(size);
       const glyph = tmp;
-      let obj = index(4612);
+      let obj = index(4618);
       const sharedValue = obj.useSharedValue(0);
       let items = [cycle, index, sharedValue, stagger];
       const effect = cycle.useEffect(() => {
@@ -278,7 +278,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           return obj.cancelAnimation(sharedValue);
         };
       }, items);
-      let obj2 = index(4612);
+      let obj2 = index(4618);
       class R {
         constructor() {
           let items;
@@ -322,7 +322,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           ),
         ),
       });
-      View = size(4612).View;
+      View = size(4618).View;
       return <stagger style={tmp.slot}>{null}</stagger>;
     };
 const memo = react.memo;
@@ -349,7 +349,7 @@ const memoResult = memo(
           str = color;
         }
         const tmp4 = closure_16(num);
-        const reducedMotion = num2.useContext(tmp(4589).AccessibilityPreferencesContext).reducedMotion;
+        const reducedMotion = num2.useContext(tmp(4595).AccessibilityPreferencesContext).reducedMotion;
         const tmp5 = reducedMotion.enabled ? closure_8 : closure_5;
         dependencyMap = tmp5;
         num2 = 0;
@@ -445,7 +445,7 @@ const memoResult = memo(
         let num2;
         const style = size.style;
         const tmp = closure_16(num);
-        const reducedMotion = num2.useContext(num(4589).AccessibilityPreferencesContext).reducedMotion;
+        const reducedMotion = num2.useContext(num(4595).AccessibilityPreferencesContext).reducedMotion;
         dependencyMap = reducedMotion.enabled ? closure_8 : closure_5;
         num2 = 0;
         if (!reducedMotion.enabled) {

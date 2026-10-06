@@ -105,7 +105,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const BaseActivityPanelController = tmp(17161).BaseActivityPanelController;
+      const BaseActivityPanelController = tmp(17190).BaseActivityPanelController;
       const tmp13 = (
         <BaseActivityPanelController
           context={FramePanelStateContextDefault}
@@ -176,7 +176,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           obj.updateFramePanelMode(tmp, PIP);
         }
       }, items1);
-      const BaseActivityPanelController = mainFrameId(17161).BaseActivityPanelController;
+      const BaseActivityPanelController = mainFrameId(17190).BaseActivityPanelController;
       return (
         <BaseActivityPanelController
           context={FramePanelStateContextDefault}

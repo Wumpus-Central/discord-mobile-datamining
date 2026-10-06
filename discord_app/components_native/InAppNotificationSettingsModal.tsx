@@ -294,7 +294,7 @@ const memoResult = memo(
           obj3 = NavigatorHeader2;
           return obj;
         }, items);
-        return closure_11(channelId(6496).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
+        return closure_11(channelId(6503).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
       },
 );
 let result = size.fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");

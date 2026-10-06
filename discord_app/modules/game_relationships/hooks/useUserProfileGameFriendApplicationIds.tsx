@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = userId(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-      const tmpResult2 = userId(12884);
+      const tmpResult2 = userId(12903);
       const gameFriendsForUser = tmpResult2.useGameFriendsForUser(userId);
       if (stateFromStores) {
         tmp9 = closure_5;

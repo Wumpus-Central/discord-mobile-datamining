@@ -33,7 +33,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj3 = {
         mediaModalFooterBackgroundColorRgba: { r: tmp4, g: tmp5, b: tmp6, a: tmp7 },
-        MediaModalFooterUnderlay: "r",
+        MediaModalFooterUnderlay: "Array",
       };
       cResult[0] = tmp7;
       cResult[1] = tmp6;
@@ -49,7 +49,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = _slicedToArray(tmpResult.rgba(), 4);
       return {
         mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] },
-        MediaModalFooterUnderlay: "r",
+        MediaModalFooterUnderlay: "Array",
       };
     };
 const result = size.fileFinishedImporting(

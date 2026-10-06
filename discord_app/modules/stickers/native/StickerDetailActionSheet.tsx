@@ -11,6 +11,7 @@ import StickersUtils from "../StickersUtils.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ActionSheetConstants from "../../action_sheet/native/ActionSheetConstants.tsx";
+import JoinGuildRefusedError from "../../guild/JoinGuildRefusedError.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
 import StarOutlineIcon2 from "../../../design/components/Icon/native/redesign/generated/StarOutlineIcon.tsx";
@@ -119,7 +120,7 @@ function UnavailableStickerDetail(arg0) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequire(10133, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequire(10146, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   items2 = [closure_21(require("Sticker"), { sticker: renderableSticker, size: 48 }), ,];
@@ -165,7 +166,7 @@ function UnavailableStickerDetail(arg0) {
     };
     intl2 = channel(tmp4[21]).intl;
     obj10 = { color: require("native").colors.INTERACTIVE_TEXT_DEFAULT };
-    MoreHorizontalIcon = channel(tmp4[44]).MoreHorizontalIcon;
+    MoreHorizontalIcon = channel(tmp4[45]).MoreHorizontalIcon;
     tidaWebformEnabled = closure_21(closure_8, obj9);
   }
   items2[2] = tidaWebformEnabled;
@@ -1097,7 +1098,7 @@ function GuildStickerDetail(sticker) {
     if (null != stickerAssetUrl) {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { stickerUrl: tmp };
-      obj.openLazy(asyncRequire(10133, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
+      obj.openLazy(asyncRequire(10146, dependencyMap.paths), "StickerOptionsActionSheet", obj2, "stack");
     }
   }, items1);
   analyticsLocation = obj.useMemo(() => {
@@ -1151,7 +1152,7 @@ function GuildStickerDetail(sticker) {
                 id = undefined;
                 c2 = 1;
                 v3 = 1;
-                const obj4 = { value: channel(guild[41])(id.id), done: false };
+                const obj4 = { value: channel(guild[42])(id.id), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
@@ -1261,7 +1262,7 @@ function GuildStickerDetail(sticker) {
   if (first1) {
     const obj8 = { style: tmp.guildEmojiTopContainer, children: items5 };
     const obj9 = { sticker, size: 48 };
-    items5 = [closure_21(tmp14(tmp6[43]), obj9), ,];
+    items5 = [closure_21(tmp14(tmp6[44]), obj9), ,];
     const obj10 = { style: tmp.guildEmojiDescription, children: items6 };
     const obj11 = { variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: sticker.name };
     items6 = [closure_21(tmp5(tmp6[20]).Text, obj11)];
@@ -1278,7 +1279,7 @@ function GuildStickerDetail(sticker) {
       };
       intl2 = tmp5(tmp6[21]).intl;
       obj14 = { color: channel(guild[13]).colors.INTERACTIVE_TEXT_DEFAULT };
-      MoreHorizontalIcon = tmp5(tmp6[44]).MoreHorizontalIcon;
+      MoreHorizontalIcon = tmp5(tmp6[45]).MoreHorizontalIcon;
       tmp34Result = closure_21(obj7, obj13);
     }
     items5[2] = tmp34Result;
@@ -1291,7 +1292,7 @@ function GuildStickerDetail(sticker) {
           return openStickersPremiumUpsellAlertDefault(analyticsLocation);
         },
       };
-      const tmp14Result = channel(guild[45]);
+      const tmp14Result = channel(guild[46]);
       intl3 = tmp5(tmp6[21]).intl;
       items8 = [closure_21(tmp14Result, obj16)];
       const obj17 = { style: obj18 };
@@ -1310,10 +1311,11 @@ function GuildStickerDetail(sticker) {
             const id = first.id;
             let obj = GuildActionCreatorsDefault;
             const joinGuildResult = obj.joinGuild(id);
-            joinGuildResult.then(() => {
+            const nextPromise = joinGuildResult.then(() => {
               const obj = channel(guild[40]);
               const result = obj.transitionToGuildSync(id);
             });
+            nextPromise.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
           }
         },
       };
@@ -1329,8 +1331,8 @@ function GuildStickerDetail(sticker) {
     let tmp31Result3 = null != stateFromStores || null != guild;
     if (tmp31Result3) {
       const obj23 = { style: tmp.divider };
-      const items10 = [closure_21(tmp5(tmp6[47]).FormDivider, obj23)];
-      const tmp14Result2 = channel(guild[48]);
+      const items10 = [closure_21(tmp5(tmp6[48]).FormDivider, obj23)];
+      const tmp14Result2 = channel(guild[49]);
       if (guild == null) {
         guild = stateFromStores;
       }
@@ -1359,7 +1361,7 @@ function GuildStickerDetail(sticker) {
     if (tidaWebformEnabled) {
       let string4Result;
       const obj26 = { style: tmp.divider };
-      const items11 = [closure_21(tmp5(tmp6[47]).FormDivider, obj26)];
+      const items11 = [closure_21(tmp5(tmp6[48]).FormDivider, obj26)];
       const obj27 = { style: tmp.favoriteContainer, children: closure_21(Button2, obj28) };
       Button2 = tmp5(tmp6[29]).Button;
       const intl6 = tmp5(tmp6[21]).intl;

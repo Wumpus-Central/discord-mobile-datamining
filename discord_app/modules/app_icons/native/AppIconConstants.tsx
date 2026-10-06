@@ -1,31 +1,31 @@
 // discord_app/modules/app_icons/native/AppIconConstants.tsx
 import intl25 from "../../../intl/index.native.tsx";
 import AppIconTypes from "../AppIconTypes.tsx";
-import AssetRegistryDefault from "../../../../_runtime/08830_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/08831_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/08832_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/08833_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/08834_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/08835_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/08836_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../_runtime/08837_AssetRegistry.js";
-import AssetRegistryDefault9 from "../../../../_runtime/08838_AssetRegistry.js";
-import AssetRegistryDefault10 from "../../../../_runtime/08839_AssetRegistry.js";
-import AssetRegistryDefault11 from "../../../../_runtime/08840_AssetRegistry.js";
-import AssetRegistryDefault12 from "../../../../_runtime/08841_AssetRegistry.js";
-import AssetRegistryDefault13 from "../../../../_runtime/08842_AssetRegistry.js";
-import AssetRegistryDefault14 from "../../../../_runtime/08843_AssetRegistry.js";
-import AssetRegistryDefault15 from "../../../../_runtime/08844_AssetRegistry.js";
-import AssetRegistryDefault16 from "../../../../_runtime/08845_AssetRegistry.js";
-import AssetRegistryDefault17 from "../../../../_runtime/08846_AssetRegistry.js";
-import AssetRegistryDefault18 from "../../../../_runtime/08847_AssetRegistry.js";
-import AssetRegistryDefault19 from "../../../../_runtime/08848_AssetRegistry.js";
-import AssetRegistryDefault20 from "../../../../_runtime/08849_AssetRegistry.js";
-import AssetRegistryDefault21 from "../../../../_runtime/08850_AssetRegistry.js";
-import AssetRegistryDefault22 from "../../../../_runtime/08851_AssetRegistry.js";
-import AssetRegistryDefault23 from "../../../../_runtime/08852_AssetRegistry.js";
-import AssetRegistryDefault24 from "../../../../_runtime/08853_AssetRegistry.js";
-import AssetRegistryDefault25 from "../../../../_runtime/08854_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/08860_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/08861_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/08862_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../_runtime/08863_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../_runtime/08864_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../../_runtime/08865_AssetRegistry.js";
+import AssetRegistryDefault7 from "../../../../_runtime/08866_AssetRegistry.js";
+import AssetRegistryDefault8 from "../../../../_runtime/08867_AssetRegistry.js";
+import AssetRegistryDefault9 from "../../../../_runtime/08868_AssetRegistry.js";
+import AssetRegistryDefault10 from "../../../../_runtime/08869_AssetRegistry.js";
+import AssetRegistryDefault11 from "../../../../_runtime/08870_AssetRegistry.js";
+import AssetRegistryDefault12 from "../../../../_runtime/08871_AssetRegistry.js";
+import AssetRegistryDefault13 from "../../../../_runtime/08872_AssetRegistry.js";
+import AssetRegistryDefault14 from "../../../../_runtime/08873_AssetRegistry.js";
+import AssetRegistryDefault15 from "../../../../_runtime/08874_AssetRegistry.js";
+import AssetRegistryDefault16 from "../../../../_runtime/08875_AssetRegistry.js";
+import AssetRegistryDefault17 from "../../../../_runtime/08876_AssetRegistry.js";
+import AssetRegistryDefault18 from "../../../../_runtime/08877_AssetRegistry.js";
+import AssetRegistryDefault19 from "../../../../_runtime/08878_AssetRegistry.js";
+import AssetRegistryDefault20 from "../../../../_runtime/08879_AssetRegistry.js";
+import AssetRegistryDefault21 from "../../../../_runtime/08880_AssetRegistry.js";
+import AssetRegistryDefault22 from "../../../../_runtime/08881_AssetRegistry.js";
+import AssetRegistryDefault23 from "../../../../_runtime/08882_AssetRegistry.js";
+import AssetRegistryDefault24 from "../../../../_runtime/08883_AssetRegistry.js";
+import AssetRegistryDefault25 from "../../../../_runtime/08884_AssetRegistry.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let intl;
@@ -52,7 +52,7 @@ let intl6;
 let intl7;
 let intl8;
 let intl9;
-const f98705 = (expiresAt) => {
+const f98895 = (expiresAt) => {
   let tmp = null != expiresAt.expiresAt;
   if (tmp) {
     const _Date = Date;
@@ -60,7 +60,7 @@ const f98705 = (expiresAt) => {
   }
   return !tmp;
 };
-const f98706 = (expiresAt) => {
+const f98896 = (expiresAt) => {
   let tmp = null != expiresAt.expiresAt;
   if (tmp) {
     const _Date = Date;
@@ -283,10 +283,10 @@ export const isIconExpired = function isIconExpired(expiresAt) {
   return tmp;
 };
 export const getOfficialAlternateIcons = function getOfficialAlternateIcons() {
-  return items.filter(f98705);
+  return items.filter(f98895);
 };
 export const getLimitedAlternateIcons = function getLimitedAlternateIcons() {
-  return closure_4.filter(f98706);
+  return closure_4.filter(f98896);
 };
 export const getIcons = function getIcons() {
   let intl;
@@ -297,7 +297,7 @@ export const getIcons = function getIcons() {
     isPremium: false,
   };
   intl = intl25.intl;
-  items = [obj, ...items.filter(f98705), ...closure_4.filter(f98706)];
+  items = [obj, ...items.filter(f98895), ...closure_4.filter(f98896)];
   return items;
 };
 export const getIconById = function getIconById(currentAppIcon) {
@@ -311,7 +311,7 @@ export const getIconById = function getIconById(currentAppIcon) {
     isPremium: false,
   };
   intl = intl25.intl;
-  items = [obj, ...items.filter(f98705), ...closure_4.filter(f98706)];
+  items = [obj, ...items.filter(f98895), ...closure_4.filter(f98896)];
   let found = items.find((id) => id.id === closure_0);
   if (null == found) {
     const obj2 = {

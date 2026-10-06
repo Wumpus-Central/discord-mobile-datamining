@@ -17,7 +17,7 @@ export const showAudioOutputSelector = function showAudioOutputSelector(channelI
   if (obj.isAndroid()) {
     const obj3 = { channelId, isConnectedToVoiceChannel };
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequire(9332, dependencyMap.paths), closure_4, obj3);
+    obj2.openLazy(asyncRequire(9346, dependencyMap.paths), closure_4, obj3);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {

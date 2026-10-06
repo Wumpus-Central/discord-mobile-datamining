@@ -8,7 +8,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16172_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/16212_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -62,8 +62,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { source: markAsDismissed(16172) };
-          const tmp11 = markAsDismissed(5974);
+          const obj2 = { source: markAsDismissed(16212) };
+          const tmp11 = markAsDismissed(5981);
           const tmp12 = closure_6(tmp11, obj2);
           cResult[5] = tmp12;
           tmp8 = tmp12;
@@ -88,7 +88,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp13,
           };
-          const tmp17 = closure_6(guildId(4886).Text, obj3);
+          const tmp17 = closure_6(guildId(4892).Text, obj3);
           cResult[7] = tmp4.title;
           cResult[8] = tmp17;
           tmp15 = tmp17;
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp4.description) {
           const obj4 = { style: description, variant: "text-sm/medium", color: "text-default", children: tmp18 };
-          const tmp22 = closure_6(guildId(4886).Text, obj4);
+          const tmp22 = closure_6(guildId(4892).Text, obj4);
           cResult[10] = tmp4.description;
           cResult[11] = tmp22;
           tmp20 = tmp22;
@@ -125,7 +125,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[13] !== tmp5) {
           const obj5 = { onPress: tmp5, text: tmp23 };
-          const tmp27 = closure_6(guildId(5594).Button, obj5);
+          const tmp27 = closure_6(guildId(5601).Button, obj5);
           cResult[13] = tmp5;
           cResult[14] = tmp27;
           tmp25 = tmp27;
@@ -173,8 +173,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj7 = { onPress: R, text: tmp29, variant: "secondary" };
           cResult[18] = R;
-          cResult[19] = closure_6(guildId(5594).Button, obj7);
-          const tmp32 = closure_6(guildId(5594).Button, obj7);
+          cResult[19] = closure_6(guildId(5601).Button, obj7);
+          const tmp32 = closure_6(guildId(5601).Button, obj7);
         } else {
           class R {
             constructor() {
@@ -202,8 +202,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[25] = tmp6;
           cResult[26] = tmp15;
           cResult[27] = tmp20;
-          cResult[28] = closure_7(guildId(6645).BottomSheet, obj8);
-          const tmp39 = closure_7(guildId(6645).BottomSheet, obj8);
+          cResult[28] = closure_7(guildId(6652).BottomSheet, obj8);
+          const tmp39 = closure_7(guildId(6652).BottomSheet, obj8);
         }
         const obj9 = { style: dismissButton, children: tmp31 };
         cResult[20] = tmp4.dismissButton;

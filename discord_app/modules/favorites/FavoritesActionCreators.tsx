@@ -407,7 +407,7 @@ let obj = function _addFavoriteChannelsToParent() {
         obj4 = {};
       }
       flag = obj4.silent ?? false;
-      return "Set";
+      return "Reflect";
     })();
     let nextResult = iter.next();
     return iter;
@@ -432,7 +432,7 @@ obj = function _addFavoriteChannels() {
     await closure_131_27(tmp8, obj5, c2);
     await "IconComponent";
     ({ channelIds: c0, parentId: c1, source: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -606,7 +606,7 @@ obj = function _addFavoriteChannelsToCategory() {
     await closure_130_27(c0, obj5, c2);
     await "IconComponent";
     ({ channelIds: c0, categoryName: c1, source: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

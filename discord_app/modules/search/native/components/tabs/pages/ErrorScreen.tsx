@@ -12,7 +12,7 @@ import size from "../../../../../../../_runtime/metro/00002__.js";
 let text;
 
 let tmp;
-const Text_Text = tmp(4886);
+const Text_Text = tmp(4892);
 const View = react_native.View;
 const jsx = Fragment.jsx;
 let closure_6 = createStyles.createStyles({

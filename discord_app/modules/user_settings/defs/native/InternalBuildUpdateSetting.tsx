@@ -2,7 +2,7 @@
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
 import react from "../../../../../_runtime/00576_react.js";
-import _modDef4461 from "../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../_runtime/metro/04467__.js";
 import DownloadIcon from "../../../../design/components/Icon/native/redesign/generated/DownloadIcon.tsx";
 import MobileNativeUpdateUtilsAll from "../../../mobile_native_updater/MobileNativeUpdateUtils.tsx";
 import useIsStaffOrDeveloperSettingPredicate from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
@@ -65,7 +65,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != stateFromStores1) {
           let tmp12;
           if (cResult[4] !== stateFromStores1) {
-            const obj4 = _modDef4461(stateFromStores1);
+            const obj4 = _modDef4467(stateFromStores1);
             const fromNowResult = obj4.fromNow();
             cResult[4] = stateFromStores1;
             cResult[5] = fromNowResult;
@@ -104,7 +104,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         str = "Never refreshed";
         if (null != stateFromStores1) {
           const _HermesInternal = HermesInternal;
-          const obj3 = _modDef4461(stateFromStores1);
+          const obj3 = _modDef4467(stateFromStores1);
           str = "Last refreshed " + obj3.fromNow();
         }
       }

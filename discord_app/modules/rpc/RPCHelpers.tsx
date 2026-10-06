@@ -649,8 +649,8 @@ export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoic
   let sorted;
   let sorted1;
   let tmp2;
-  const f139440 = (index, index2) => index.index - index2.index;
-  const f139441 = (id) => ({ id: id.id, name: id.name });
+  const f139659 = (index, index2) => index.index - index2.index;
+  const f139660 = (id) => ({ id: id.id, name: id.name });
   const settings = MediaEngineStore.getSettings();
   obj = {
     input: obj3,
@@ -670,14 +670,14 @@ export const getDeprecatedVoiceSettingsWithShortcut = function getDeprecatedVoic
     deaf: null,
     mute: null,
   };
-  obj3 = { available_devices: sorted.map(f139441), device_id: null, volume: null };
+  obj3 = { available_devices: sorted.map(f139660), device_id: null, volume: null };
   tmp2 = fn(settings);
   const values = Object.values(MediaEngineStore.getInputDevices());
-  sorted = values.sort(f139440);
+  sorted = values.sort(f139659);
   ({ inputDeviceId: obj2.device_id, inputVolume: obj2.volume } = settings);
-  obj5 = { available_devices: sorted1.map(f139441), device_id: null, volume: null };
+  obj5 = { available_devices: sorted1.map(f139660), device_id: null, volume: null };
   const values2 = Object.values(MediaEngineStore.getOutputDevices());
-  sorted1 = values2.sort(f139440);
+  sorted1 = values2.sort(f139659);
   ({ outputDeviceId: obj4.device_id, outputVolume: obj4.volume } = settings);
   ({
     automaticGainControl: obj.automatic_gain_control,

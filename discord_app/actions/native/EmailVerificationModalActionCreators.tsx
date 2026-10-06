@@ -19,7 +19,7 @@ let obj = {
       obj.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
     }
     const obj2 = ModalActionCreatorsDefault;
-    obj2.pushLazy(asyncRequire(6008, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
+    obj2.pushLazy(asyncRequire(6015, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
   },
   close() {
     let obj = DispatcherDefault;

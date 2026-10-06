@@ -25,7 +25,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ bottom, right } = analyticsLocations(1618)());
       analyticsLocations(1618)();
       const tmp4 = analyticsLocations;
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       if (cResult[0] !== channel.id) {
         const fn = function n() {
           React3();
@@ -59,13 +59,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          tmp4(9120);
+          tmp4(9155);
           const tmp13 = (
             <tmp4Result
               gestureEnabled
               participant={participant}
               avatarSize={channel(1188).AvatarSizes.PROFILE}
-              resizeMode={channel(9105).ResizeMode.AUTO}
+              resizeMode={channel(9140).ResizeMode.AUTO}
               statusStyle={tmp8}
               onSingleTap={onSingleTap}
               onDoubleTap={tmp6}

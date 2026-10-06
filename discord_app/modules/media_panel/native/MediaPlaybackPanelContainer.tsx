@@ -1,7 +1,7 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelContainer.tsx
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
-import react3 from "../../../../_runtime/04494_react.js";
+import react3 from "../../../../_runtime/04500_react.js";
 import MediaPlayerManager from "../../media/native/MediaPlayerManager.tsx";
 import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController.tsx";
 import react from "../../../../_runtime/00019_react.js";

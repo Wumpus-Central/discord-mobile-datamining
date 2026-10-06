@@ -24,7 +24,7 @@ let obj = {
     const obj = AnalyticsUtilsDefault;
     obj.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj2 = ModalActionCreatorsDefault;
-    obj2.pushLazy(asyncRequire(14653, dependencyMap.paths), "Contact Sync Name Update Modal");
+    obj2.pushLazy(asyncRequire(14669, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: () => {

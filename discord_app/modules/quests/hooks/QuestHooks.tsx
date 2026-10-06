@@ -12,7 +12,7 @@ import NumberUtils from "../../../../discord_common/js/shared/utils/NumberUtils.
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import shared from "../../../design/shared.tsx";
-import merged5 from "../../../../_runtime/05075_merged5.js";
+import merged5 from "../../../../_runtime/05081_merged5.js";
 import QualtricsActionCreators from "../../qualtrics/QualtricsActionCreators.tsx";
 import SurveyActionTypes2 from "../../../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx";
 import QuestTypes from "../QuestTypes.tsx";
@@ -930,7 +930,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }));
       const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
       lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
-      const obj5 = obj(10912);
+      const obj5 = obj(10925);
       isEligibleForQuests = obj5.getIsEligibleForQuests();
       const items3 = [
         obj.fetchPolicy,
@@ -1772,7 +1772,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
                 claimedAt = userStatus.claimedAt;
               }
               let tmp8 = null != claimedAt;
-              const tmpResult = tmp(7206);
+              const tmpResult = tmp(7219);
               if (tmp8) {
                 tmp8 = !tmpResult.isStreamingAndCanWatch(arg1, stateFromStores);
               }
@@ -2346,7 +2346,7 @@ let tmp21 = ReactCompilerGating.isReactCompilerEnabled()
       quest = quest.quest;
       ({ questContent: importDefault, sourceQuestContent: dependencyMap } = quest);
       let closure_3 = closure_56({ quest });
-      let obj = quest(10916);
+      let obj = quest(10929);
       let closure_4 = obj.useGetQuestImpressionId();
       return () => {
         const tmp = QuestPlatformUtils;
@@ -4178,7 +4178,7 @@ const tmp36 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult4 = require("AssetUtils");
         const questAsset = tmpResult4.getQuestAsset(
           stateFromStores,
-          tmp(10000).QuestAssetType.COSPONSOR_LOGO_TYPE,
+          tmp(10013).QuestAssetType.COSPONSOR_LOGO_TYPE,
           tmp11,
         );
         cResult[4] = stateFromStores;

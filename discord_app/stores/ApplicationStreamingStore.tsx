@@ -745,7 +745,7 @@ let obj = {
     let streamType;
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    const obj = sourceId(4942);
+    const obj = sourceId(4948);
     const obj2 = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj2);
     let startsWithResult;
@@ -835,7 +835,7 @@ let obj = {
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         const obj = StreamKeyUtils;
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        const promise = asyncRequire(13643, dependencyMap.paths);
+        const promise = asyncRequire(13659, dependencyMap.paths);
         promise.then((result) => {
           result.default(guildId);
         });

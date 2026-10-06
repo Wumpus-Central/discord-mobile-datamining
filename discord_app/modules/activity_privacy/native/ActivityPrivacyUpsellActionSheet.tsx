@@ -20,7 +20,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
       const settingName = direction.settingName;
-      const tmp4 = direction === direction(14659).ChangeDirection.RESTRICTING;
+      const tmp4 = direction === direction(14675).ChangeDirection.RESTRICTING;
       if (cResult[0] === tmp4) {
         let tmp5;
         if (cResult[1] === settingName) {
@@ -56,7 +56,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const tmp11 = jsx(affectedGuildIds(14661), {
+          const tmp11 = jsx(affectedGuildIds(14677), {
             direction,
             affectedGuildIds: null,
             title,
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = C;
         tmp7 = C;
       }
-      const tmpResult = tmp(14659);
+      const tmpResult = tmp(14675);
       const upsellStrings = tmpResult.getUpsellStrings(tmp4, settingName);
       cResult[0] = tmp4;
       cResult[1] = settingName;
@@ -102,8 +102,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       direction = direction.direction;
       const affectedGuildIds = direction.affectedGuildIds;
       const settingName = direction.settingName;
-      const RESTRICTING = direction(14659).ChangeDirection.RESTRICTING;
-      let obj = direction(14659);
+      const RESTRICTING = direction(14675).ChangeDirection.RESTRICTING;
+      let obj = direction(14675);
       const upsellStrings = obj.getUpsellStrings(direction === RESTRICTING, settingName);
       const items = [direction, affectedGuildIds];
       ({ title, subtitle, confirmText, toastContent } = upsellStrings);
@@ -111,7 +111,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = ActivityPrivacyUpsellUtils;
         const result = obj.applyBulkGuildRestrictionChange(direction, affectedGuildIds);
       }, items);
-      return jsx(affectedGuildIds(14661), {
+      return jsx(affectedGuildIds(14677), {
         direction,
         affectedGuildIds,
         title,

@@ -90,7 +90,7 @@ let obj = function _launchGuildBoostFlowOrAlert() {
             mobileBoostingEnabled = undefined;
             onPaymentDismiss = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === onPaymentDismiss) {

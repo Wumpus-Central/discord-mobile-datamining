@@ -50,7 +50,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
           const tmp = obj;
           EXPANDING = obj.EXPANDING;
         }
-        const tmp8Result = EXPANDING(6491);
+        const tmp8Result = EXPANDING(6498);
         dependencyMap = tmp8Result.getSanitizedActivityRestrictedGuilds();
         const flattenedGuildIds = SortedGuildStore.getFlattenedGuildIds();
         if (setting !== EXPANDING(1197).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {

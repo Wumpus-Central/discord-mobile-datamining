@@ -201,7 +201,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           push(DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
         }
       }
-      const tmpResult2 = channelId(6891);
+      const tmpResult2 = channelId(6901);
       [tmp15, tmp16] = tmpResult2.useSelectedDismissibleContent(items1, constants.APP_LAUNCHER_ONBOARDING);
       _slicedToArray(tmpResult2.useSelectedDismissibleContent(items1, constants.APP_LAUNCHER_ONBOARDING), 2);
       if (cResult[7] === tmp16) {
@@ -238,7 +238,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           push(DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
         }
       }
-      const tmpResult = channelId(6891);
+      const tmpResult = channelId(6901);
       const tmp7 = _slicedToArray(tmpResult.useSelectedDismissibleContent(items, constants.APP_LAUNCHER_ONBOARDING), 2);
       return { visibleContent: tmp7[0], markAsDismissed: tmp7[1] };
     };

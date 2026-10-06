@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../Constants.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
-import _modDef2493 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2521 from "../../../parent_tools/FamilyCenter.messages.js";
 import FamilyCenterConstants from "../../../parent_tools/FamilyCenterConstants.tsx";
 import FamilyCenterActionCreatorsDefault from "../../../parent_tools/FamilyCenterActionCreators.tsx";
 import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -129,7 +129,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             let teenId;
                             let obj = {
                               onPress() {
-                                /* body not rendered: F153018 */
+                                /* body not rendered: F153251 */
                               },
                               label: intl.string(stackNavigation(selectedSubPage[16]).t.OYkgVk),
                             };
@@ -144,7 +144,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       return;
                     }
-                    setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                    setOptionsResult1 = closure_0.setOptions({ title: "start", headerRight: "unicodeVersion" });
                     return;
                   }
                 }
@@ -174,7 +174,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                               let teenId;
                               let obj = {
                                 onPress() {
-                                  /* body not rendered: F153018 */
+                                  /* body not rendered: F153251 */
                                 },
                                 label: intl.string(stackNavigation(selectedSubPage[16]).t.OYkgVk),
                               };
@@ -189,7 +189,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         return;
                       }
-                      setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                      setOptionsResult1 = closure_0.setOptions({ title: "start", headerRight: "unicodeVersion" });
                       return;
                     }
                   }
@@ -227,7 +227,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                               let teenId;
                               let obj = {
                                 onPress() {
-                                  /* body not rendered: F153018 */
+                                  /* body not rendered: F153251 */
                                 },
                                 label: intl.string(stackNavigation(selectedSubPage[16]).t.OYkgVk),
                               };
@@ -242,7 +242,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         return;
                       }
-                      setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                      setOptionsResult1 = closure_0.setOptions({ title: "start", headerRight: "unicodeVersion" });
                       return;
                     }
                   }
@@ -284,7 +284,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                               let teenId;
                               let obj = {
                                 onPress() {
-                                  /* body not rendered: F153018 */
+                                  /* body not rendered: F153251 */
                                 },
                                 label: intl.string(stackNavigation(selectedSubPage[16]).t.OYkgVk),
                               };
@@ -299,7 +299,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         return;
                       }
-                      setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                      setOptionsResult1 = closure_0.setOptions({ title: "start", headerRight: "unicodeVersion" });
                       return;
                     }
                   }
@@ -340,7 +340,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                               let teenId;
                               let obj = {
                                 onPress() {
-                                  /* body not rendered: F153018 */
+                                  /* body not rendered: F153251 */
                                 },
                                 label: intl.string(stackNavigation(selectedSubPage[16]).t.OYkgVk),
                               };
@@ -355,7 +355,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         return;
                       }
-                      setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                      setOptionsResult1 = closure_0.setOptions({ title: "start", headerRight: "unicodeVersion" });
                       return;
                     }
                   }
@@ -403,7 +403,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                               let teenId;
                               let obj = {
                                 onPress() {
-                                  /* body not rendered: F153018 */
+                                  /* body not rendered: F153251 */
                                 },
                                 label: intl.string(stackNavigation(selectedSubPage[16]).t.OYkgVk),
                               };
@@ -418,7 +418,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         return;
                       }
-                      setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+                      setOptionsResult1 = closure_0.setOptions({ title: "start", headerRight: "unicodeVersion" });
                       return;
                     }
                   }
@@ -454,7 +454,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       let teenId;
                       let obj = {
                         onPress() {
-                          /* body not rendered: F153018 */
+                          /* body not rendered: F153251 */
                         },
                         label: intl.string(stackNavigation(selectedSubPage[16]).t.OYkgVk),
                       };
@@ -469,7 +469,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 return;
               }
-              setOptionsResult1 = closure_0.setOptions({ title: "Array", headerRight: "Set" });
+              setOptionsResult1 = closure_0.setOptions({ title: "start", headerRight: "unicodeVersion" });
               return;
             }
           }
@@ -573,7 +573,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let intl;
         if (selectedSubPage === FamilyCenterSubPages.SCREEN_TIME_CONTROLS) {
           if (null != id) {
-            let obj = { title: intl.string(_modDef2493["1Op+NP"]), headerRight: fn };
+            let obj = { title: intl.string(_modDef2521["1Op+NP"]), headerRight: fn };
             const setOptions = stackNavigation.setOptions;
             intl = intl3.intl;
             fn = undefined;
@@ -597,7 +597,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             setOptions(obj);
           }
         }
-        stackNavigation.setOptions({ title: "Array", headerRight: "Set" });
+        stackNavigation.setOptions({ title: "start", headerRight: "unicodeVersion" });
       }, items1);
       const SCREEN_TIME_CONTROLS = FamilyCenterSubPages.SCREEN_TIME_CONTROLS;
       const obj4 = {

@@ -3,8 +3,8 @@ import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
 import ConsoleOAuthApplications from "../../../../discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx";
-import _modDef13691 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
-import _modDef13692 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
+import _modDef13709 from "../../../../discord_assets/assets/images/consoles/ps_link_success_illustration-2x.png.js";
+import _modDef13710 from "../../../../discord_assets/assets/images/consoles/social_layer_link_success_illustration-2x.png.js";
 import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
@@ -567,7 +567,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID,
           ];
           if (items.includes(userCodeData.clientId)) {
-            closure_3(_modDef13691);
+            closure_3(_modDef13709);
           } else {
             const scopes = userCodeData.scopes;
             if (
@@ -576,7 +576,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 return obj.isSocialLayerUmbrellaScope(item);
               })
             ) {
-              closure_3(_modDef13692);
+              closure_3(_modDef13710);
             }
           }
         }

@@ -180,7 +180,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             tmp9 = cResult[4];
           }
           if (cResult[5] !== stateFromStores) {
-            const tmp14 = jsx(channelId(8303), {
+            const tmp14 = jsx(channelId(8336), {
               rowGenerator,
               message: stateFromStores,
               style: tmp9,

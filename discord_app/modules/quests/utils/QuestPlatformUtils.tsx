@@ -433,15 +433,15 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != tmp) {
     url = tmp;
   }
-  let obj = adContentId(7224);
+  let obj = adContentId(7237);
   if (
     obj.shouldMigrateToAdAnalyticsInterface(
-      adContentId(7224).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL,
+      adContentId(7237).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL,
       "open_ad_game_link_directly",
     )
   ) {
     let obj2 = {
-      type: adContentId(7223).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA,
+      type: adContentId(7236).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA,
       adCreativeType,
       adCreativeId: adContentId,
       questContentCTA: null,
@@ -450,8 +450,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
       questContentPosition: null,
       impressionId: null,
     };
-    const captureAdUserAction = adContentId(7213).captureAdUserAction;
-    adContentId(7213);
+    const captureAdUserAction = adContentId(7226).captureAdUserAction;
+    adContentId(7226);
     ({
       ctaContent: obj4.questContentCTA,
       content: obj4.surfaceId,
@@ -477,7 +477,7 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
       impressionId: obj3.impressionId,
       sourceQuestContent: obj3.sourceQuestContent,
     } = impressionId);
-    const tmp2Result3 = adContentId(7202);
+    const tmp2Result3 = adContentId(7215);
     const result = tmp2Result3.trackAdContentClicked(obj5);
   }
   const ComponentDispatch = tmp2(1121).ComponentDispatch;
@@ -487,8 +487,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != impressionId) {
     const ios = cta.ios;
     let iosAppId;
-    const getIosAttributionClickFramework = adContentId(10934).getIosAttributionClickFramework;
-    adContentId(10934);
+    const getIosAttributionClickFramework = adContentId(10947).getIosAttributionClickFramework;
+    adContentId(10947);
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
@@ -511,7 +511,7 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   }
   if (preferExternalAppStore) {
     if (null == fn) {
-      adCreativeType(4559)(url);
+      adCreativeType(4565)(url);
     }
   }
   const obj8 = {

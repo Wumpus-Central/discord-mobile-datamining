@@ -302,7 +302,7 @@ let closure_3 = _asyncToGenerator(async function (arg0) {
           access_token = undefined;
           c3 = 1;
           c4 = 1;
-          return { value: "Set", done: true };
+          return { value: "Reflect", done: true };
         }
       } else if (1 === c3) {
         if (arg0 === 1) {

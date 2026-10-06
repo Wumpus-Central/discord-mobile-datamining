@@ -25,7 +25,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp4 = cResult[2];
         }
         if (cResult[5] !== tmp4) {
-          const tmp9 = jsx(guildId(4886).Text, {
+          const tmp9 = jsx(guildId(4892).Text, {
             variant: "text-xs/medium",
             color: "text-voice-connected",
             lineClamp: 1,

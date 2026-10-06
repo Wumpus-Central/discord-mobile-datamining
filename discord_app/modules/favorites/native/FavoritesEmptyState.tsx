@@ -2,7 +2,7 @@
 import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl5 from "../../../intl/index.native.tsx";
-import _modDef3367 from "../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -63,7 +63,7 @@ export default function FavoritesEmptyState() {
     variant: "heading-md/bold",
     color: "mobile-text-heading-primary",
     style: tmp.text,
-    children: intl.string(_modDef3367["wh+Rz1"]),
+    children: intl.string(_modDef3395["wh+Rz1"]),
   };
   const Heading = Text_Text.Heading;
   intl = intl5.intl;
@@ -72,7 +72,7 @@ export default function FavoritesEmptyState() {
     variant: "text-md/medium",
     color: "text-default",
     style: tmp.text,
-    children: intl2.string(_modDef3367["+SuGKb"]),
+    children: intl2.string(_modDef3395["+SuGKb"]),
   };
   const Text = Text_Text.Text;
   intl2 = intl5.intl;
@@ -82,14 +82,14 @@ export default function FavoritesEmptyState() {
   if (hasAccess) {
     const obj6 = {
       variant: "primary",
-      text: intl4.string(_modDef3367["6kk0gM"]),
+      text: intl4.string(_modDef3395["6kk0gM"]),
       icon: hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {}),
       onPress: callback,
     };
     intl4 = intl5.intl;
     obj7 = obj6;
   } else {
-    obj7 = { variant: "primary", text: intl3.string(_modDef3367.yYVbdv), onPress: callback1 };
+    obj7 = { variant: "primary", text: intl3.string(_modDef3395.yYVbdv), onPress: callback1 };
     intl3 = intl5.intl;
   }
   items[2] = hasOwnProperty(Button, obj7);

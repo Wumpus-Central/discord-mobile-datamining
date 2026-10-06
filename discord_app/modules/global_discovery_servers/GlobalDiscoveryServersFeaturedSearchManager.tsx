@@ -240,7 +240,7 @@ class GlobalDiscoveryServersFeaturedSearchManager extends AutomaticLifecycleMana
       if (forceRefresh === undefined) {
         forceRefresh = false;
       }
-      return "Set";
+      return "Reflect";
     });
     applyArgumentsResult.fetchCategoryFeaturedGuilds = function () {
       return closure_0(...arguments);

@@ -49,5 +49,5 @@ export const onMarkAsNotSpamConfirmationModal = function onMarkAsNotSpamConfirma
   let onConfirm;
   ({ onConfirm, onCancel, channel } = arg0);
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(12089, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
+  obj.openLazy(asyncRequire(12104, dependencyMap.paths), "SpamMessageHamActionSheet", { channel, onConfirm, onCancel });
 };

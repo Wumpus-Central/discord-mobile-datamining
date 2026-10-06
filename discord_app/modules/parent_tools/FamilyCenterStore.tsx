@@ -16,13 +16,13 @@ let REQUESTS;
 let metroRequire;
 let tmp;
 let tmp2;
-const f94036 = (acc, user_id) => {
+const f94176 = (acc, user_id) => {
   const obj = {};
   const merged = Object.assign(acc);
   obj[user_id.user_id] = user_id;
   return obj;
 };
-const f94038 = (acc, id) => {
+const f94178 = (acc, id) => {
   let num;
   const obj = {};
   const merged = Object.assign(acc);
@@ -37,7 +37,7 @@ const f94038 = (acc, id) => {
   obj[id] = obj2;
   return obj;
 };
-const f94039 = (acc, invoice_items) => {
+const f94179 = (acc, invoice_items) => {
   let sku_id;
   let subscription_plan_id;
   if (null != invoice_items.invoice_items) {
@@ -53,7 +53,7 @@ const f94039 = (acc, invoice_items) => {
   }
   return acc;
 };
-const f94040 = (acc, entitlement_id) => {
+const f94180 = (acc, entitlement_id) => {
   acc[entitlement_id.entitlement_id] = entitlement_id;
   return acc;
 };
@@ -130,21 +130,21 @@ function handleInitialLoad(arg0) {
   if (undefined !== totals) {
     closure_15 = totals;
   }
-  closure_32 = guilds.reduce(f94038, closure_32);
+  closure_32 = guilds.reduce(f94178, closure_32);
   if (linkedUsers === undefined) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce(f94036, {});
+    reduced = linkedUsers.reduce(f94176, {});
   } else {
     reduced = {};
   }
   c13 = true;
   if (null != invoices) {
-    closure_29 = invoices.reduce(f94039, {});
+    closure_29 = invoices.reduce(f94179, {});
   }
   if (null != gifts) {
-    closure_30 = gifts.reduce(f94040, {});
+    closure_30 = gifts.reduce(f94180, {});
   }
   if (spendingLimit == null) {
     spendingLimit = null;
@@ -166,7 +166,7 @@ function handleLinkedUserFetch(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce(f94036, {});
+    reduced = linkedUsers.reduce(f94176, {});
   } else {
     reduced = {};
   }
@@ -178,7 +178,7 @@ function handleRequestLinkSuccess(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce(f94036, {});
+    reduced = linkedUsers.reduce(f94176, {});
   } else {
     reduced = {};
   }
@@ -220,12 +220,12 @@ function handleTeenActivityFetch(familyCenterTeenActivity) {
       closure_15 = totals;
     }
     let tmp = closure_32;
-    closure_32 = guilds.reduce(f94038, closure_32);
+    closure_32 = guilds.reduce(f94178, closure_32);
     if (null != invoices) {
-      closure_29 = invoices.reduce(f94039, {});
+      closure_29 = invoices.reduce(f94179, {});
     }
     if (null != gifts) {
-      closure_30 = gifts.reduce(f94040, {});
+      closure_30 = gifts.reduce(f94180, {});
     }
     c20 = false;
     let obj = SnowflakeUtilsDefault;
@@ -251,7 +251,7 @@ function handleTeenActivityMoreFetch(familyCenterTeenActivity) {
       const result = value.set(display_type.event_id, display_type);
     }
   });
-  closure_32 = guilds.reduce(f94038, closure_32);
+  closure_32 = guilds.reduce(f94178, closure_32);
 }
 function handleUserLinkStatusUpdate(linkedUsers) {
   linkedUsers = linkedUsers.linkedUsers;
@@ -259,7 +259,7 @@ function handleUserLinkStatusUpdate(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce(f94036, {});
+    reduced = linkedUsers.reduce(f94176, {});
   } else {
     reduced = {};
   }
@@ -271,7 +271,7 @@ function handleUserLinkRemove(linkedUsers) {
     linkedUsers = [];
   }
   if (linkedUsers.length > 0) {
-    reduced = linkedUsers.reduce(f94036, {});
+    reduced = linkedUsers.reduce(f94176, {});
   } else {
     reduced = {};
   }
@@ -303,7 +303,7 @@ function handleCurrentUserUpdate(user) {
       linked_users1 = [];
     }
     if (linked_users1.length > 0) {
-      reduced = linked_users1.reduce(f94036, {});
+      reduced = linked_users1.reduce(f94176, {});
     } else {
       reduced = {};
     }
@@ -319,7 +319,7 @@ function handleConnectionOpen(linkedUsers) {
       linkedUsers = [];
     }
     if (linkedUsers.length > 0) {
-      reduced = linkedUsers.reduce(f94036, {});
+      reduced = linkedUsers.reduce(f94176, {});
     } else {
       reduced = {};
     }
@@ -489,14 +489,14 @@ class FamilyCenterStore extends MobileCacheSnapshotStore {
       }
       let num = 0;
       if (linkedUsers.length > 0) {
-        reduced = linkedUsers.reduce(f94036, {});
+        reduced = linkedUsers.reduce(f94176, {});
       } else {
         reduced = {};
       }
       c13 = true;
       const guilds = snapshot.guilds;
       let tmp2 = closure_32;
-      closure_32 = guilds.reduce(f94038, closure_32);
+      closure_32 = guilds.reduce(f94178, closure_32);
       const teenActivity = snapshot.teenActivity;
       let tmp4 = freshTeenActivityWithMap();
       let closure_0 = tmp4;

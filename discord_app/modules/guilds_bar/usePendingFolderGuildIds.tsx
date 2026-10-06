@@ -6,7 +6,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f100518 = (item) => null == closure_0[item];
+const f100670 = (item) => null == closure_0[item];
 function getPendingFolderGuildIds() {
   let obj;
   let obj2;
@@ -18,7 +18,7 @@ function getPendingFolderGuildIds() {
   [obj, obj2] = tmp;
   const guildIds = obj.computeGuildIds();
   const guilds = obj2.getGuilds();
-  return guildIds.filter(f100518);
+  return guildIds.filter(f100670);
 }
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
@@ -35,7 +35,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           [obj, obj2] = items;
           const guildIds = obj.computeGuildIds();
           const guilds = obj2.getGuilds();
-          return guildIds.filter(f100518);
+          return guildIds.filter(f100670);
         };
         cResult[0] = items;
         cResult[1] = fn;
@@ -57,7 +57,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         [obj, obj2] = items;
         const guildIds = obj.computeGuildIds();
         const guilds = obj2.getGuilds();
-        return guildIds.filter(f100518);
+        return guildIds.filter(f100670);
       });
     };
 const result = size.fileFinishedImporting("modules/guilds_bar/usePendingFolderGuildIds.tsx");

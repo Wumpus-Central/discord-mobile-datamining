@@ -171,7 +171,7 @@ let obj = {
     const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
-    } else if (channelId === channelId(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+    } else if (channelId === channelId(6736).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
       return false;
     } else {
       let num3;

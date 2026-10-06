@@ -311,7 +311,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                       obj = {
                         style: closure_3.row,
                         children: onSelect.map(() => {
-                          /* body not rendered: F140676 */
+                          /* body not rendered: F140882 */
                         }),
                       };
                       return jsx(View, obj, arg1);
@@ -340,7 +340,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                     obj = {
                       style: closure_3.row,
                       children: onSelect.map(() => {
-                        /* body not rendered: F140676 */
+                        /* body not rendered: F140882 */
                       }),
                     };
                     return jsx(View, obj, arg1);
@@ -360,7 +360,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
               obj = {
                 style: closure_3.row,
                 children: onSelect.map(() => {
-                  /* body not rendered: F140676 */
+                  /* body not rendered: F140882 */
                 }),
               };
               return jsx(View, obj, arg1);

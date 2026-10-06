@@ -15,8 +15,8 @@ import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal2 from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import AssetRegistryDefault from "../../_runtime/10123_AssetRegistry.js";
-import _modDef15370 from "../../_runtime/metro/15370__.js";
+import AssetRegistryDefault from "../../_runtime/10136_AssetRegistry.js";
+import _modDef15385 from "../../_runtime/metro/15385__.js";
 import react from "../../_runtime/00019_react.js";
 import Fragment from "../../_runtime/react/00021_Fragment.js";
 import createStyles_mod from "../design/components/Styles/native/createStyles.tsx";
@@ -237,7 +237,7 @@ class ChangeLog extends PureComponent2 {
           },
           useLocalHTML: true,
         };
-        items = [closure_7(_modDef15370, obj4)];
+        items = [closure_7(_modDef15385, obj4)];
         let tmp6Result = null;
         if (!tmp2) {
           const obj5 = { style: tmp.videoOverlay, source: obj6 };
@@ -280,7 +280,7 @@ class ChangeLog extends PureComponent2 {
         onPress: self.playVideo,
         children: closure_7(tmp15Result, obj10),
       };
-      const PressableOpacity = tmp18(5909).PressableOpacity;
+      const PressableOpacity = tmp18(5916).PressableOpacity;
       obj10 = {
         accessibilityLabel: "Play Video",
         accessibilityRole: "button",

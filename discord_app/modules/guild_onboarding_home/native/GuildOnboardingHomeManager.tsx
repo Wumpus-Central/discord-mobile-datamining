@@ -99,7 +99,7 @@ class GuildOnboardingHomeManager extends AutomaticLifecycleManager {
             if (0 !== num) {
               const pushLazy = ModalActionCreatorsDefault.pushLazy;
               const obj = { initialPercent: (num - 1) / num, numActions: num };
-              const tmp11 = asyncRequire(17502, dependencyMap.paths);
+              const tmp11 = asyncRequire(17547, dependencyMap.paths);
               const obj2 = { animation: ConstantsIOS.ModalAnimation.FADE };
               const NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY =
                 GuildOnboardingHomeTypes.NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY;
@@ -165,7 +165,7 @@ class GuildOnboardingHomeManager extends AutomaticLifecycleManager {
       await "IconComponent";
       closure_2 = tmp4;
       ({ guildId: c0, channelId: c1 } = closure_0);
-      return "Set";
+      return "Reflect";
     });
     applyArgumentsResult.handleChannelSelect = function () {
       return closure_0(...arguments);

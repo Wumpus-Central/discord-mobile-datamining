@@ -21,7 +21,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
   const obj4 = {
     importer() {
       let onConfirm;
-      const promise = asyncRequire(10608, dependencyMap.paths);
+      const promise = asyncRequire(10621, dependencyMap.paths);
       return promise.then((result) => {
         let closure_0 = result.default;
         return (View) => {

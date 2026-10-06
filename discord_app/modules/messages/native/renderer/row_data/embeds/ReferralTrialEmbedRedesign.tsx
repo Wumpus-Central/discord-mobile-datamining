@@ -11,8 +11,8 @@ import createStyles from "../../../../../../design/components/Styles/native/crea
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/07722_AssetRegistry.js";
-import _modDef7725 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/07733_AssetRegistry.js";
+import _modDef7736 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
@@ -118,7 +118,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             const obj5 = {
               titleText: formatToPlainString2Result,
               titleColor,
-              headerImageUrl: _modDef7725,
+              headerImageUrl: _modDef7736,
               headerText: intl12.string(intl13.t.HtTvXA),
               headerColor: headerTextColor,
               backgroundColor,
@@ -283,7 +283,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
         const obj18 = {
           titleText: "",
           titleColor,
-          headerImageUrl: _modDef7725,
+          headerImageUrl: _modDef7736,
           headerText: "",
           headerColor: headerTextColor,
           backgroundColor,

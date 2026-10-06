@@ -4,7 +4,7 @@ import intl2 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import NumberUtils from "../../../../../discord_common/js/shared/utils/NumberUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _mod11919 from "index.tsx";
+import _mod11933 from "index.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -34,7 +34,7 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
     return tmp2;
   }
   if (flag) {
-    tmp2 = jsx(_mod11919.NewBadge, {});
+    tmp2 = jsx(_mod11933.NewBadge, {});
   } else {
     if (null != newPostCount) {
       if (newPostCount > 0) {

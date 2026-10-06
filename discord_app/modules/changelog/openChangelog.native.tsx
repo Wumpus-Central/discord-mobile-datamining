@@ -20,6 +20,6 @@ export const openChangelog = function openChangelog() {
   }
   if (!isModalOpenResult) {
     const obj2 = ModalActionCreatorsDefault;
-    obj2.pushLazy(asyncRequire(15369, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    obj2.pushLazy(asyncRequire(15384, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
   }
 };

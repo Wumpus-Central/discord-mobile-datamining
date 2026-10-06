@@ -75,7 +75,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp5) {
           let obj2 = { variant: "secondary", text: tmp16, onPress: tmp5 };
-          const tmp20 = closure_6(tmp(5594).Button, obj2);
+          const tmp20 = closure_6(tmp(5601).Button, obj2);
           cResult[10] = tmp5;
           cResult[11] = tmp20;
           tmp18 = tmp20;
@@ -93,7 +93,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[13] !== tmp10) {
           const obj3 = { text: tmp21, variant: "destructive", onPress: tmp10 };
-          const tmp25 = closure_6(tmp(5594).Button, obj3);
+          const tmp25 = closure_6(tmp(5601).Button, obj3);
           cResult[13] = tmp10;
           cResult[14] = tmp25;
           tmp23 = tmp25;
@@ -112,7 +112,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp30;
           }
-          const obj4 = { icon: tmp(5928).ClipboardListIcon, header: tmp12, subtitle: tmp13, buttons: tmp26 };
+          const obj4 = { icon: tmp(5935).ClipboardListIcon, header: tmp12, subtitle: tmp13, buttons: tmp26 };
           const tmp33 = MemberVerificationAlertDefault;
           const merged = Object.assign(tmp6);
           const tmp37 = closure_6(tmp33, obj4);
@@ -162,22 +162,22 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const result = obj.openMemberVerificationCancelPendingAlert(obj2);
       }, items);
       let obj = {
-        icon: guildId(5928).ClipboardListIcon,
+        icon: guildId(5935).ClipboardListIcon,
         header: intl.string(guildId(1126).t.zhfXbs),
         subtitle: intl2.string(guildId(1126).t["SRM/e/"]),
         buttons: closure_8(closure_7, obj2),
       };
-      const tmp3 = onClose(5927);
+      const tmp3 = onClose(5934);
       const merged1 = Object.assign(merged);
       intl = guildId(1126).intl;
       intl2 = guildId(1126).intl;
       obj2 = { children: items1 };
       const obj3 = { variant: "secondary", text: intl3.string(guildId(1126).t.f293OM), onPress: onClose };
-      const Button = guildId(5594).Button;
+      const Button = guildId(5601).Button;
       intl3 = guildId(1126).intl;
       items1 = [closure_6(Button, obj3)];
       const obj4 = { text: intl4.string(guildId(1126).t.mqtdmQ), variant: "destructive", onPress: callback };
-      const Button2 = guildId(5594).Button;
+      const Button2 = guildId(5601).Button;
       intl4 = guildId(1126).intl;
       items1[1] = closure_6(Button2, obj4);
       return closure_6(tmp3, obj);

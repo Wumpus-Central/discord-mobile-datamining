@@ -54,7 +54,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const f68906 = () => {};
+const f68969 = () => {};
 ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -228,8 +228,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let isDismissedResult = null != userStatus1;
       if (isDismissedResult) {
-        const tmpResult7 = tmp(7183);
-        isDismissedResult = tmpResult7.isDismissed(questDockQuest.userStatus, tmp(5626).QuestContent.QUEST_BAR_MOBILE);
+        const tmpResult7 = tmp(7196);
+        isDismissedResult = tmpResult7.isDismissed(questDockQuest.userStatus, tmp(5633).QuestContent.QUEST_BAR_MOBILE);
       }
       if (questDockQuest != null) {
         const userStatus = questDockQuest.userStatus;
@@ -237,15 +237,15 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           const claimedAt = userStatus.claimedAt;
         }
       }
-      const tmpResult8 = tmp(10911);
+      const tmpResult8 = tmp(10924);
       const isQuestExpired = tmpResult8.useIsQuestExpired(questDockQuest);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult9 = tmp(10912);
+        const tmpResult9 = tmp(10925);
         const isEligibleForQuests = tmpResult9.getIsEligibleForQuests();
         cResult[3] = isEligibleForQuests;
       }
       if (cResult[4] !== bounty) {
-        const tmpResult10 = tmp(14903);
+        const tmpResult10 = tmp(14919);
         const questDockAdCreativeId = tmpResult10.getQuestDockAdCreativeId(bounty);
         cResult[4] = bounty;
         cResult[5] = questDockAdCreativeId;
@@ -330,7 +330,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         const type = bounty.type;
         const tmpResult12 = tmp(504);
         const stateFromStores2 = tmpResult12.useStateFromStores(tmp23, R, tmp25);
-        if (tmp(5630).AdCreativeType.NO_FILL === type) {
+        if (tmp(5637).AdCreativeType.NO_FILL === type) {
           class Q {
             constructor() {
               const isAdContentDismissedResult = null != closure_1 && QuestStore.isAdContentDismissed(tmp);
@@ -365,7 +365,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = _require;
       const obj = require("AdCreativeUtils");
       const questDockQuest = obj.getQuestDockQuest(type);
-      const tmp4 = questDockAdCreativeId(6433)();
+      const tmp4 = questDockAdCreativeId(6440)();
       const items = [QuestStore];
       let userStatus1;
       const obj2 = require("get initialized");
@@ -380,8 +380,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let isDismissedResult = null != userStatus1;
       if (isDismissedResult) {
-        const tmpResult = tmp(7183);
-        isDismissedResult = tmpResult.isDismissed(questDockQuest.userStatus, tmp(5626).QuestContent.QUEST_BAR_MOBILE);
+        const tmpResult = tmp(7196);
+        isDismissedResult = tmpResult.isDismissed(questDockQuest.userStatus, tmp(5633).QuestContent.QUEST_BAR_MOBILE);
       }
       let claimedAt;
       if (questDockQuest != null) {
@@ -390,11 +390,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           claimedAt = userStatus.claimedAt;
         }
       }
-      const tmpResult6 = tmp(10911);
+      const tmpResult6 = tmp(10924);
       const isQuestExpired = tmpResult6.useIsQuestExpired(questDockQuest);
-      const tmpResult7 = tmp(10912);
+      const tmpResult7 = tmp(10925);
       let isEligibleForQuests = tmpResult7.getIsEligibleForQuests();
-      const tmpResult8 = tmp(14903);
+      const tmpResult8 = tmp(14919);
       questDockAdCreativeId = tmpResult8.getQuestDockAdCreativeId(type);
       const items1 = [QuestStore];
       const items2 = [questDockAdCreativeId];
@@ -420,9 +420,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         },
         items4,
       );
-      if (tmp(5630).AdCreativeType.NO_FILL === type) {
+      if (tmp(5637).AdCreativeType.NO_FILL === type) {
         return false;
-      } else if (tmp(5630).AdCreativeType.BOUNTY === type) {
+      } else if (tmp(5637).AdCreativeType.BOUNTY === type) {
         if (isEligibleForQuests) {
           isEligibleForQuests = !stateFromStores1;
         }
@@ -433,7 +433,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           isEligibleForQuests = !tmp4;
         }
         return isEligibleForQuests;
-      } else if (tmp(5630).AdCreativeType.QUEST === type) {
+      } else if (tmp(5637).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           let tmp16;
           if (null == claimedAt) {
@@ -454,7 +454,7 @@ let closure_15 = tmp7;
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
-      if (typeof f68906 === "function") {
+      if (typeof f68969 === "function") {
         const useDeliveredCreativeForPlacement = useQuestForPlacement.useDeliveredCreativeForPlacement;
         useQuestForPlacement;
         return closure_15(
@@ -468,7 +468,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       }
     }
   : () => {
-      if (typeof f68906 === "function") {
+      if (typeof f68969 === "function") {
         const useDeliveredCreativeForPlacement = useQuestForPlacement.useDeliveredCreativeForPlacement;
         useQuestForPlacement;
         return closure_15(
@@ -610,7 +610,7 @@ ReactCompilerGating = ReactCompilerGating_mod;
 let fn = () => {
   const obj = useQuestForPlacement;
   const adRefreshLoop = obj.useAdRefreshLoop(QuestTypes.AdPlacement.MOBILE_HOME_DOCK_AREA);
-  if (typeof f68906 === "function") {
+  if (typeof f68969 === "function") {
     const useDeliveredCreativeForPlacement = useQuestForPlacement.useDeliveredCreativeForPlacement;
     useQuestForPlacement;
     return useDeliveredCreativeForPlacement(

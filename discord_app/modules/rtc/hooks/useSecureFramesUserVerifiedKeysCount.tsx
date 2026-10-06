@@ -1,5 +1,5 @@
 // discord_app/modules/rtc/hooks/useSecureFramesUserVerifiedKeysCount.tsx
-import _mod9349 from "../../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9363 from "../../../../discord_common/js/packages/libdave/index.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import VerifiedKeyStore from "../VerifiedKeyStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -23,7 +23,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const self = this;
           const self2 = this;
           const uint8Array = new Uint8Array(keyToOmit);
-          const tmpResult = userId(9349);
+          const tmpResult = userId(9363);
           const serializeKeyResult = tmpResult.serializeKey(uint8Array);
           let num = 0;
           cResult[0] = keyToOmit;
@@ -83,7 +83,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const self = this;
           const self2 = this;
           const uint8Array = new Uint8Array(keyToOmit);
-          const obj = _mod9349;
+          const obj = _mod9363;
           return obj.serializeKey(uint8Array);
         }
       }, items);

@@ -10,7 +10,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useFontScale from "../../screen/native/useFontScale.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import AssetRegistryDefault from "../../../../_runtime/06638_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/06645_AssetRegistry.js";
 import ChannelListLayout from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
 import FriendsScreenConstants from "../../main_tabs_v2/native/friends/screens/FriendsScreenConstants.tsx";
 import AvatarDuoPile2 from "../../../design/components/Pile/native/AvatarDuoPile.native.tsx";

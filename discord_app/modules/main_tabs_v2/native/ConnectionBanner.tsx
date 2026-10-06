@@ -9,8 +9,8 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
-import _modDef6052 from "../../../../_runtime/metro/06052__.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
+import _modDef6059 from "../../../../_runtime/metro/06059__.js";
 import ConnectivityIndicatorStateStore2 from "../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 import ConnectionIndicatorExperimentDefault from "ConnectionIndicatorExperiment.tsx";
 import ConnectionUnknownIcon2 from "../../../design/components/Icon/native/redesign/generated/ConnectionUnknownIcon.tsx";
@@ -378,7 +378,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj7 = { style: tmp3.glow, maskElement: tmp17, children: tmp24 };
-                const tmp32 = closure_12(_modDef6052, obj7);
+                const tmp32 = closure_12(_modDef6059, obj7);
                 cResult[20] = tmp3.glow;
                 cResult[21] = tmp17;
                 cResult[22] = tmp24;
@@ -423,7 +423,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       let token;
       progress = progress.progress;
       const tmp = closure_21();
-      let obj = token(4580);
+      let obj = token(4586);
       token = obj.useToken(nativeDefault.colors.ICON_FEEDBACK_POSITIVE);
       let items = [token];
       const memo = react.useMemo(() => {
@@ -449,7 +449,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4 = { style: tmp.glowMaskGradient, colors, locations, start, end };
       obj5 = { style: tmp.glowMaskGradient, colors: memo, locations: locations2, start: start2, end: end2 };
-      tmp4 = _modDef6052;
+      tmp4 = _modDef6059;
       return closure_12(View, obj2);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

@@ -221,7 +221,7 @@ let obj = {
   notifCenterIds: set,
   notifCenterLocalItems: [],
   paginationHasMore: true,
-  paginationCursor: "Symbol",
+  paginationCursor: "Set",
   notifCenterActive: "none",
   notifCenterTabFocused: "URL",
 };
@@ -417,7 +417,7 @@ const obj2 = {
       notifCenterIds: new Set(),
       notifCenterLocalItems: prop,
       paginationHasMore: true,
-      paginationCursor: "Symbol",
+      paginationCursor: "Set",
       notifCenterActive: "none",
       notifCenterTabFocused: "URL",
     };
@@ -560,7 +560,7 @@ const obj2 = {
       notifCenterIds: new Set(),
       notifCenterLocalItems: prop,
       paginationHasMore: true,
-      paginationCursor: "Symbol",
+      paginationCursor: "Set",
       notifCenterActive: "none",
       notifCenterTabFocused: "URL",
     };
@@ -626,7 +626,7 @@ const obj2 = {
         let tmp8 = obj;
         const items = [];
         const arraySpreadResult = HermesBuiltin.arraySpread(items, obj.notifCenterLocalItems, 0);
-        obj = id(7126);
+        obj = id(7139);
         items[arraySpreadResult] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
       }
@@ -732,7 +732,7 @@ const obj2 = {
       notifCenterIds: new Set(),
       notifCenterLocalItems: prop,
       paginationHasMore: true,
-      paginationCursor: "Symbol",
+      paginationCursor: "Set",
       notifCenterActive: "none",
       notifCenterTabFocused: "URL",
     };

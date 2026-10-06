@@ -41,7 +41,7 @@ let obj = function _createStripeSetupIntent() {
             }
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -121,7 +121,7 @@ obj = function _createSetupIntentForPaymentElements() {
             }
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {

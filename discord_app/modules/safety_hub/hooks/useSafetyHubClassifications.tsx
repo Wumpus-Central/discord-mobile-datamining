@@ -161,7 +161,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult7 = tmp(504);
       const stateFromStores3 = tmpResult7.useStateFromStores(tmp16, tmp17);
-      const tmpResult8 = tmp(8092);
+      const tmpResult8 = tmp(8125);
       if (tmpResult8.isGuildClassification(stateFromStores)) {
         let GUILD_MEMBER;
         const guild_metadata = stateFromStores.guild_metadata;
@@ -170,7 +170,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return SafetyHubStore.getIsAppealEligible();
           }
         }
-        if (undefined === tmp(8094).MemberType.OWNER) {
+        if (undefined === tmp(8127).MemberType.OWNER) {
           GUILD_MEMBER = ViolationType.GUILD_OWNER;
         } else {
           GUILD_MEMBER = ViolationType.GUILD_MEMBER;
@@ -273,7 +273,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (guild_metadata != null) {
           member_type = guild_metadata.member_type;
         }
-        if (member_type === tmp(8094).MemberType.OWNER) {
+        if (member_type === tmp(8127).MemberType.OWNER) {
           GUILD_MEMBER = ViolationType.GUILD_OWNER;
         } else {
           GUILD_MEMBER = ViolationType.GUILD_MEMBER;

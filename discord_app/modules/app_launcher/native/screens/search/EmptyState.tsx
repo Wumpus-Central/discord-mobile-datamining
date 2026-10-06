@@ -32,9 +32,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       showsGenericMessage = tmp4;
       const tmp5 = closure_5();
-      const tmpResult = showsGenericMessage(11665);
+      const tmpResult = showsGenericMessage(11679);
       const logAppLauncherEmptyStateView = tmpResult.useLogAppLauncherEmptyStateView(
-        tmp(8932).AppLauncherEmptyStateType.SEARCH_EMPTY,
+        tmp(8961).AppLauncherEmptyStateType.SEARCH_EMPTY,
         query,
       );
       if (cResult[0] !== tmp4) {
@@ -107,7 +107,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp17;
         tmp14 = tmp17;
       }
-      const tmp13 = jsx(showsGenericMessage(4886).Text, {
+      const tmp13 = jsx(showsGenericMessage(4892).Text, {
         style: tmp5.text,
         variant: "text-sm/medium",
         color: "text-default",
@@ -125,9 +125,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       const tmp = closure_5();
-      const obj = flag(11665);
+      const obj = flag(11679);
       const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(
-        flag(8932).AppLauncherEmptyStateType.SEARCH_EMPTY,
+        flag(8961).AppLauncherEmptyStateType.SEARCH_EMPTY,
         query,
       );
       const items = [flag];
@@ -144,7 +144,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(stringResult, "polite");
       }, items);
-      const Text = flag(4886).Text;
+      const Text = flag(4892).Text;
       let intl = flag(1126).intl;
       let string = intl.string;
       let t = flag(1126).t;

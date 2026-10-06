@@ -281,7 +281,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult6 = require("get initialized");
         const stateFromStores2 = tmpResult6.useStateFromStores(tmp13, U, tmp17);
-        const tmp20 = stateFromStores(16270)(arg0);
+        const tmp20 = stateFromStores(16310)(arg0);
         const tmpResult7 = require("useToken");
         const token = tmpResult7.useToken(stateFromStores(587).modules.mobile.GUILD_BAR_ITEM_SIZE);
         const tmpResult8 = require("useToken");

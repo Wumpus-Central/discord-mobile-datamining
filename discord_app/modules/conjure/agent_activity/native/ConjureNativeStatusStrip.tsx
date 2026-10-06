@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/agent_activity/native/ConjureNativeStatusStrip.tsx
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AILoaderConstants from "../../../../design/visual-identities/ai/AILoader/AILoaderConstants.tsx";
 import ConjureStatusLabels from "../ConjureStatusLabels.tsx";
@@ -628,11 +628,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               tmp6 = cResult[4];
               tmp7 = cResult[5];
             }
-            const first = tmp(16740).RECALLING_LINES[0];
+            const first = tmp(16761).RECALLING_LINES[0];
             if (cResult[6] !== projectUsage) {
               let runesUsedLabelsResult = null;
               if (null != projectUsage) {
-                const tmpResult = tmp(16740);
+                const tmpResult = tmp(16761);
                 runesUsedLabelsResult = tmpResult.runesUsedLabels(projectUsage);
               }
               cResult[6] = projectUsage;
@@ -698,7 +698,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const PressableOpacity = tmp(5909).PressableOpacity;
+              const PressableOpacity = tmp(5916).PressableOpacity;
               if (!tmp15) {
                 class X {
                   constructor() {
@@ -790,7 +790,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                stringResult = obj5.string(_modDef3723["0Kemnh"]);
+                stringResult = obj5.string(_modDef3753["0Kemnh"]);
               }
               obj3 = { line: tmp7, rotating: tmp6 === first };
               tmp20Result = tmp20(PressableOpacity, obj2);
@@ -818,7 +818,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult2 = tmp(16740);
+      const tmpResult2 = tmp(16761);
       const thinkingLabelResult = tmpResult2.thinkingLabel({
         activity,
         compacting,
@@ -865,14 +865,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ activity, projectUsage, connLabel, thinkingOpen } = projectId);
       ({ connFailed, controlling, onToggleThinking } = projectId);
       let tmp = closure_9();
-      let obj = projectId(16740);
+      let obj = projectId(16761);
       const thinkingLabelResult = obj.thinkingLabel({ activity, compacting, recalling, controlling });
       const intl = projectId(1126).intl;
       const stringResult = intl.string(thinkingLabelResult);
       let runesUsedLabelsResult = null;
-      const first = projectId(16740).RECALLING_LINES[0];
+      const first = projectId(16761).RECALLING_LINES[0];
       if (null != projectUsage) {
-        const tmp2Result = projectId(16740);
+        const tmp2Result = projectId(16761);
         runesUsedLabelsResult = tmp2Result.runesUsedLabels(projectUsage);
       }
       let tmp8 = null != activity && "" !== activity.text;
@@ -905,7 +905,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       if (thinking) {
         let tmp16 = tmp9;
-        const PressableOpacity = tmp2(5909).PressableOpacity;
+        const PressableOpacity = tmp2(5916).PressableOpacity;
         if (!tmp9) {
           tmp16 = tmp15;
         }
@@ -935,7 +935,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult1 = undefined;
         if (tmp9) {
           const intl2 = tmp2(1126).intl;
-          stringResult1 = intl2.string(_modDef3723["0Kemnh"]);
+          stringResult1 = intl2.string(_modDef3753["0Kemnh"]);
         }
         obj7 = { line: stringResult, rotating: thinkingLabelResult === first };
         tmp13Result = closure_7(PressableOpacity, obj5);
@@ -956,7 +956,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp13Result4 = null;
       if (null != connLabel) {
         let str3 = "text-muted";
-        const Text = tmp2(4886).Text;
+        const Text = tmp2(4892).Text;
         if (connFailed) {
           str3 = "text-feedback-critical";
         }
@@ -974,11 +974,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           onPress: callback,
           children: items3,
         };
-        const PressableOpacity2 = tmp2(5909).PressableOpacity;
+        const PressableOpacity2 = tmp2(5916).PressableOpacity;
         const obj11 = { variant: "text-xs/medium", color: "text-muted", children: runesUsedLabelsResult.text };
-        items3 = [closure_7(projectId(4886).Text, obj11)];
+        items3 = [closure_7(projectId(4892).Text, obj11)];
         const obj12 = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
-        const CircleInformationIcon = tmp2(4812).CircleInformationIcon;
+        const CircleInformationIcon = tmp2(4818).CircleInformationIcon;
         items3[1] = closure_7(CircleInformationIcon, obj12);
         tmp11Result = closure_8(PressableOpacity2, obj10);
       }

@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -111,15 +111,15 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         value = visible.get();
         return obj;
       };
-      const obj2 = visible(4612);
+      const obj2 = visible(4618);
       fn.__closure = {
-        withSpring: visible(5597).withSpring,
+        withSpring: visible(5604).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(7581).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(7592).CONTEXT_MENU_SPRING,
       };
       fn.__workletHash = 6862317967896;
       fn.__initData = __initData2;
-      ({ withSpring: visible(5597).withSpring, visible, CONTEXT_MENU_SPRING: visible(7581).CONTEXT_MENU_SPRING });
+      ({ withSpring: visible(5604).withSpring, visible, CONTEXT_MENU_SPRING: visible(7592).CONTEXT_MENU_SPRING });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let stringResult;
@@ -154,7 +154,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         onDismiss: onPress,
         accessibilityLabel: first,
       };
-      const tmp10 = closure_6(visible(5771).Backdrop, obj4);
+      const tmp10 = closure_6(visible(5778).Backdrop, obj4);
       cResult[1] = animatedStyle;
       cResult[2] = onPress;
       cResult[3] = tmp4.accessibleDismiss;
@@ -166,7 +166,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       visible = visible.visible;
       const onPress = visible.onPress;
       const tmp = closure_15();
-      let obj = visible(4612);
+      let obj = visible(4618);
       const fn = function n() {
         let value;
         let withSpring;
@@ -177,13 +177,13 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       fn.__closure = {
-        withSpring: visible(5597).withSpring,
+        withSpring: visible(5604).withSpring,
         visible,
-        CONTEXT_MENU_SPRING: visible(7581).CONTEXT_MENU_SPRING,
+        CONTEXT_MENU_SPRING: visible(7592).CONTEXT_MENU_SPRING,
       };
       fn.__workletHash = 7758377027899;
       fn.__initData = __initData3;
-      ({ withSpring: visible(5597).withSpring, visible, CONTEXT_MENU_SPRING: visible(7581).CONTEXT_MENU_SPRING });
+      ({ withSpring: visible(5604).withSpring, visible, CONTEXT_MENU_SPRING: visible(7592).CONTEXT_MENU_SPRING });
       const animatedStyle = obj.useAnimatedStyle(fn);
       const obj3 = {
         blur: "none",
@@ -192,7 +192,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         onDismiss: onPress,
         accessibilityLabel: stringResult,
       };
-      const Backdrop = visible(5771).Backdrop;
+      const Backdrop = visible(5778).Backdrop;
       const obj4 = visible(1369);
       const isAndroidResult = obj4.isAndroid();
       const intl = visible(1126).intl;

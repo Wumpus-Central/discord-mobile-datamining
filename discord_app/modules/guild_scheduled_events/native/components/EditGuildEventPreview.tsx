@@ -128,7 +128,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("get initialized");
       const stateFromStores = tmpResult.useStateFromStores(first, tmp7, tmp8);
-      let tmp11 = channel_id(5043)(stateFromStores);
+      let tmp11 = channel_id(5049)(stateFromStores);
       dependencyMap = tmp11;
       const tmp10 = channel_id;
       if (cResult[4] === stateFromStores) {
@@ -242,14 +242,14 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp26 = cResult[26];
         }
-        let Text = tmp(4886).Text;
+        let Text = tmp(4892).Text;
         const headerSubtitle = tmp4.headerSubtitle;
         if (cResult[27] !== stateFromStores) {
           let formatToPlainStringResult;
           if (null != stateFromStores) {
             const intl2 = tmp(1126).intl;
             const formatToPlainString = intl2.formatToPlainString;
-            const obj5 = { channelName: tmp10(9260)(obj6) };
+            const obj5 = { channelName: tmp10(9295)(obj6) };
             const sxcQPE = tmp(1126).t.sxcQPE;
             obj6 = { channel: stateFromStores };
             formatToPlainStringResult = formatToPlainString(sxcQPE, obj5);
@@ -358,7 +358,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [channel_id];
       const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
       const tmp5 = channel_id;
-      const tmp6 = channel_id(5043)(stateFromStores);
+      const tmp6 = channel_id(5049)(stateFromStores);
       dependencyMap = tmp6;
       let obj2 = require("EntityUtils");
       let locationFromEvent = obj2.getLocationFromEvent(event);
@@ -367,7 +367,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = locationFromEvent;
       }
       locationFromEvent = tmp8;
-      let tmp2Result = tmp2(9258);
+      let tmp2Result = tmp2(9293);
       eventLocationIconSource = tmp2Result.getEventLocationIconSource(event, stateFromStores, true);
       let obj3 = { style: tmp.header, children: items2 };
       const obj4 = {
@@ -376,7 +376,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl.string(require("intl").t.yBsFE3),
       };
-      let Text = tmp2(4886).Text;
+      let Text = tmp2(4892).Text;
       intl = tmp2(1126).intl;
       items2 = [closure_6(Text, obj4)];
       const obj5 = {
@@ -387,12 +387,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         children: formatResult,
       };
       formatToPlainStringResult = undefined;
-      const Text2 = tmp2(4886).Text;
+      const Text2 = tmp2(4892).Text;
       const tmp10 = locationFromEvent;
       if (null != stateFromStores) {
         const intl2 = tmp2(1126).intl;
         const formatToPlainString = intl2.formatToPlainString;
-        const obj6 = { channelName: tmp5(9260)(obj7) };
+        const obj6 = { channelName: tmp5(9295)(obj7) };
         const sxcQPE = tmp2(1126).t.sxcQPE;
         obj7 = { channel: stateFromStores };
         formatToPlainStringResult = formatToPlainString(sxcQPE, obj6);

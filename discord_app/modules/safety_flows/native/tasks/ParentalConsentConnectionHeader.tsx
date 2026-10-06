@@ -5,7 +5,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2787 from "../../SafetyFlows.messages.js";
+import _modDef2815 from "../../SafetyFlows.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import AuthenticationActionCreatorsDefault from "../../../../actions/AuthenticationActionCreators.tsx";
@@ -86,7 +86,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           return obj.logout("safety_flows_parental_consent_connection");
         };
         const intl = intl2.intl;
-        const stringResult = intl.string(_modDef2787["3HuGuY"]);
+        const stringResult = intl.string(_modDef2815["3HuGuY"]);
         cResult[4] = fn2;
         cResult[5] = stringResult;
         tmp12 = stringResult;
@@ -185,7 +185,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj = AuthenticationActionCreatorsDefault;
           return obj.logout("safety_flows_parental_consent_connection");
         },
-        children: intl.string(_modDef2787["3HuGuY"]),
+        children: intl.string(_modDef2815["3HuGuY"]),
       };
       const Text = Text_Text.Text;
       intl = intl2.intl;

@@ -7,6 +7,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import MemberVerificationAlertActionCreators from "../../../guild_member_verification/native/MemberVerificationAlertActionCreators.tsx";
 import GuildProfileTypes from "../../GuildProfileTypes.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
+import JoinGuildRefusedError from "../../../guild/JoinGuildRefusedError.tsx";
 import GuildDiscoveryUtils from "../../../../utils/GuildDiscoveryUtils.tsx";
 import transitionToGuild from "../../../routing/transitionToGuild.native.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../actions/InstantInviteActionCreators.tsx";
@@ -87,7 +88,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                         const obj2 = GuildDiscoveryUtils;
                         const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                        obj2.startLurking(guildId, obj3);
+                        const startLurkingResult = obj2.startLurking(guildId, obj3);
+                        startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                       }
                     }
                     cResult[17] = guildId;
@@ -99,7 +101,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                         const obj2 = GuildDiscoveryUtils;
                         const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                        obj2.startLurking(guildId, obj3);
+                        const startLurkingResult = obj2.startLurking(guildId, obj3);
+                        startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                       }
                     }
                   }
@@ -111,7 +114,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                         const obj2 = GuildDiscoveryUtils;
                         const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                        obj2.startLurking(guildId, obj3);
+                        const startLurkingResult = obj2.startLurking(guildId, obj3);
+                        startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                       }
                     }
                     cResult[19] = tmp22;
@@ -122,7 +126,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                         const obj2 = GuildDiscoveryUtils;
                         const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                        obj2.startLurking(guildId, obj3);
+                        const startLurkingResult = obj2.startLurking(guildId, obj3);
+                        startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                       }
                     }
                   }
@@ -135,7 +140,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                         const obj2 = GuildDiscoveryUtils;
                         const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                        obj2.startLurking(guildId, obj3);
+                        const startLurkingResult = obj2.startLurking(guildId, obj3);
+                        startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                       }
                     }
                     if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
@@ -145,10 +151,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                           obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                           const obj2 = GuildDiscoveryUtils;
                           const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                          obj2.startLurking(guildId, obj3);
+                          const startLurkingResult = obj2.startLurking(guildId, obj3);
+                          startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                         }
                       }
-                      const stringResult = obj3.string(profile(validInviteKey[19]).t.KLOhbO);
+                      const stringResult = obj3.string(profile(validInviteKey[20]).t.KLOhbO);
                       cResult[20] = stringResult;
                       tmp23 = stringResult;
                     } else {
@@ -158,7 +165,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                           obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                           const obj2 = GuildDiscoveryUtils;
                           const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                          obj2.startLurking(guildId, obj3);
+                          const startLurkingResult = obj2.startLurking(guildId, obj3);
+                          startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                         }
                       }
                     }
@@ -169,10 +177,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                           obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                           const obj2 = GuildDiscoveryUtils;
                           const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                          obj2.startLurking(guildId, obj3);
+                          const startLurkingResult = obj2.startLurking(guildId, obj3);
+                          startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                         }
                       }
-                      const Button = tmp(tmp2[20]).Button;
+                      const Button = tmp(tmp2[21]).Button;
                       const merged = Object.assign(tmp22);
                       class M {
                         constructor() {
@@ -222,7 +231,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                           obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                           const obj2 = GuildDiscoveryUtils;
                           const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                          obj2.startLurking(guildId, obj3);
+                          const startLurkingResult = obj2.startLurking(guildId, obj3);
+                          startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                         }
                       }
                     }
@@ -234,7 +244,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                         const obj2 = GuildDiscoveryUtils;
                         const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                        obj2.startLurking(guildId, obj3);
+                        const startLurkingResult = obj2.startLurking(guildId, obj3);
+                        startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
                       }
                     }
                   }
@@ -285,7 +296,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
                 const obj2 = GuildDiscoveryUtils;
                 const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-                obj2.startLurking(guildId, obj3);
+                const startLurkingResult = obj2.startLurking(guildId, obj3);
+                startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
               }
             }
           }
@@ -431,18 +443,19 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
         const obj2 = GuildDiscoveryUtils;
         const obj3 = { object: AnalyticsObjects.GUILD_PROFILE };
-        obj2.startLurking(guildId, obj3);
+        const startLurkingResult = obj2.startLurking(guildId, obj3);
+        startLurkingResult.catch(JoinGuildRefusedError.ignoreJoinGuildRefused);
       }, items4);
       const memo = obj2.useMemo(() => ({ grow: true, size: "lg", variant: "active" }), []);
       if (profile(validInviteKey[7]).CTATypes.IS_MEMBER === ctaType) {
-        const Button7 = tmp11(tmp[20]).Button;
+        const Button7 = tmp11(tmp[21]).Button;
         const merged = Object.assign(memo);
-        const intl7 = tmp11(tmp[19]).intl;
-        return <Button7 onPress={callback} text={intl7.string(profile(validInviteKey[19]).t.KLOhbO)} />;
+        const intl7 = tmp11(tmp[20]).intl;
+        return <Button7 onPress={callback} text={intl7.string(profile(validInviteKey[20]).t.KLOhbO)} />;
       } else if (profile(validInviteKey[7]).CTATypes.ADOPT_TAG === ctaType) {
-        const Button6 = tmp11(tmp[20]).Button;
+        const Button6 = tmp11(tmp[21]).Button;
         const merged1 = Object.assign(memo);
-        const intl6 = tmp11(tmp[19]).intl;
+        const intl6 = tmp11(tmp[20]).intl;
         return (
           <Button6
             onPress={function handleGoToTagSettings() {
@@ -450,34 +463,34 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               obj.hideActionSheet("GuildProfileActionSheet:" + guildId);
               closure_3();
             }}
-            text={intl6.string(profile(validInviteKey[19]).t.cQDYRu)}
+            text={intl6.string(profile(validInviteKey[20]).t.cQDYRu)}
           />
         );
       } else if (profile(validInviteKey[7]).CTATypes.HAS_APPLICATION === ctaType) {
-        const Button5 = tmp11(tmp[20]).Button;
+        const Button5 = tmp11(tmp[21]).Button;
         const merged2 = Object.assign(memo);
-        const intl5 = tmp11(tmp[19]).intl;
-        return <Button5 onPress={callback2} text={intl5.string(profile(validInviteKey[19]).t["4yfIDk"])} />;
+        const intl5 = tmp11(tmp[20]).intl;
+        return <Button5 onPress={callback2} text={intl5.string(profile(validInviteKey[20]).t["4yfIDk"])} />;
       } else if (profile(validInviteKey[7]).CTATypes.APPLY_TO_JOIN === ctaType) {
-        const Button4 = tmp11(tmp[20]).Button;
+        const Button4 = tmp11(tmp[21]).Button;
         const merged3 = Object.assign(memo);
-        const intl4 = tmp11(tmp[19]).intl;
-        return <Button4 onPress={callback3} text={intl4.string(profile(validInviteKey[19]).t["7XdMW2"])} />;
+        const intl4 = tmp11(tmp[20]).intl;
+        return <Button4 onPress={callback3} text={intl4.string(profile(validInviteKey[20]).t["7XdMW2"])} />;
       } else if (profile(validInviteKey[7]).CTATypes.LURK_DISCOVERABLE === ctaType) {
-        const Button3 = tmp11(tmp[20]).Button;
+        const Button3 = tmp11(tmp[21]).Button;
         const merged4 = Object.assign(memo);
-        const intl3 = tmp11(tmp[19]).intl;
-        return <Button3 onPress={callback4} text={intl3.string(profile(validInviteKey[19]).t.XpeFYr)} />;
+        const intl3 = tmp11(tmp[20]).intl;
+        return <Button3 onPress={callback4} text={intl3.string(profile(validInviteKey[20]).t.XpeFYr)} />;
       } else if (profile(validInviteKey[7]).CTATypes.JOIN_VIA_INVITE === ctaType) {
-        const Button2 = tmp11(tmp[20]).Button;
+        const Button2 = tmp11(tmp[21]).Button;
         const merged5 = Object.assign(memo);
-        const intl2 = tmp11(tmp[19]).intl;
-        return <Button2 onPress={callback1} text={intl2.string(profile(validInviteKey[19]).t.XpeFYr)} />;
+        const intl2 = tmp11(tmp[20]).intl;
+        return <Button2 onPress={callback1} text={intl2.string(profile(validInviteKey[20]).t.XpeFYr)} />;
       } else if (profile(validInviteKey[7]).CTATypes.ACCEPT_ROLES === ctaType) {
-        const Button = tmp11(tmp[20]).Button;
+        const Button = tmp11(tmp[21]).Button;
         const merged6 = Object.assign(memo);
-        const intl = tmp11(tmp[19]).intl;
-        return <Button onPress={callback1} text={intl.string(profile(validInviteKey[19]).t.MMlhsr)} />;
+        const intl = tmp11(tmp[20]).intl;
+        return <Button onPress={callback1} text={intl.string(profile(validInviteKey[20]).t.MMlhsr)} />;
       } else {
         return null;
       }

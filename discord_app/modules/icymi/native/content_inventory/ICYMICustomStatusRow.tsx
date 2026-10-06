@@ -9,7 +9,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import PencilIcon from "../../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/11042_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/11055_AssetRegistry.js";
 import ArrowAngleLeftUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react_mod from "../../../../../_runtime/00019_react.js";
@@ -183,7 +183,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const userId = id.userId;
       ({ customStatusExtra, renderForScreenshot, variant } = id);
       closure_14(renderForScreenshot);
-      const obj2 = id(7507);
+      const obj2 = id(7518);
       const gradientBottom = obj2.useGradientBottom();
       let backgroundColor;
       if (gradientBottom != null) {
@@ -194,7 +194,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp6Result = closure_13(backgroundColor);
       if (cResult[0] !== tmp6Result.background.backgroundColor) {
-        const tmpResult = id(4727);
+        const tmpResult = id(4733);
         cResult[0] = tmp6Result.background.backgroundColor;
         cResult[1] = tmpResult.hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);
         const hexWithOpacityResult = tmpResult.hexWithOpacity(tmp6Result.background.backgroundColor, 0.6);

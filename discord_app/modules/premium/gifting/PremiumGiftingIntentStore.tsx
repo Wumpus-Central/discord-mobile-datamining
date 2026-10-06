@@ -16,7 +16,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let _null, closure_10, closure_14, set2;
 
-const f95458 = (userId) => {
+const f95599 = (userId) => {
   const userAffinity = UserAffinitiesV2Store.getUserAffinity(userId);
   let dmProbability;
   if (userAffinity != null) {
@@ -35,7 +35,7 @@ function getCurrentTime() {
 function categorizeTopAffinityFriendAnniversaries() {
   const flag = false;
   const obj = FriendAnniversaryUtils;
-  const result = obj.categorizeFriendAnniversariesByAffinity(closure_11, f95458, flag);
+  const result = obj.categorizeFriendAnniversariesByAffinity(closure_11, f95599, flag);
   ({ highestAffinity: set, highAffinity: set1 } = result);
 }
 function updateFriendAnniversaries() {
@@ -101,7 +101,7 @@ function generateFriendAnniversaries(c15) {
   new Set();
   new Set();
   closure_14 = {};
-  const obj2 = set2(7750);
+  const obj2 = set2(7761);
   if (
     obj2.getFriendAnniversaryGateConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" }).enabled
   ) {
@@ -134,8 +134,8 @@ function generateFriendAnniversaries(c15) {
             }
           });
           const sorted = closure_11.sort((arg0, arg1) => UserAffinitiesV2Store.compareByDmProbability(arg0, arg1));
-          const tmp3Result = set2(7749);
-          const result = tmp3Result.categorizeFriendAnniversariesByAffinity(closure_11, f95458, true);
+          const tmp3Result = set2(7760);
+          const result = tmp3Result.categorizeFriendAnniversariesByAffinity(closure_11, f95599, true);
           ({ highestAffinity: set, highAffinity: set1 } = result);
         }
       }

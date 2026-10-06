@@ -3,13 +3,13 @@ import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6052 from "../../../../../../_runtime/metro/06052__.js";
+import _modDef6059 from "../../../../../../_runtime/metro/06059__.js";
 import Constants from "../../../../user_profile/native/Constants.tsx";
 import ProfileFrameLayerOrder from "../../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerOrder.tsx";
 import ProfileFrameDefault from "../ProfileFrame.tsx";
 import scaleProfileFrameDefault from "../../scaleProfileFrame.tsx";
 import CollectiblesPreviewConstants from "../../../native/CollectiblesPreviewConstants.tsx";
-import _modDef8479 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8512 from "../../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
@@ -235,7 +235,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                                       cResult[69] ===
                                                                       Symbol.for("react.memo_cache_sentinel")
                                                                     ) {
-                                                                      const obj5 = { uri: _modDef8479 };
+                                                                      const obj5 = { uri: _modDef8512 };
                                                                       cResult[69] = obj5;
                                                                       tmp83 = obj5;
                                                                     } else {
@@ -354,7 +354,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                         maskElement: tmp63,
                                                         children: tmp69,
                                                       };
-                                                      const tmp75 = metroRequire(_modDef6052, obj11);
+                                                      const tmp75 = metroRequire(_modDef6059, obj11);
                                                       cResult[52] = tmp63;
                                                       cResult[53] = tmp69;
                                                       cResult[54] = tmp22;
@@ -589,7 +589,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = {
         style: { position: "absolute", top: 0, left: 0, right: 0, height: overflowTop, backgroundColor: "black" },
       };
-      const tmp13 = _modDef6052;
+      const tmp13 = _modDef6059;
       items[0] = metroRequire(React3, obj5);
       const obj6 = {
         style: { position: "absolute", bottom: 0, left: 0, right: 0, height: overflowBottom, backgroundColor: "black" },
@@ -687,7 +687,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items3[1] = tmp16;
       const obj16 = { style: items3, children: metroRequire(tmp3Result, obj17) };
       obj17 = { source: obj18, style: tmp.sampleProfile, resizeMode: "cover" };
-      obj18 = { uri: _modDef8479 };
+      obj18 = { uri: _modDef8512 };
       tmp3Result = FastImageDefault;
       items2[1] = metroRequire(React3, obj16);
       const obj19 = {

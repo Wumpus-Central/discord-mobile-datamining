@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
-import chunkDefault from "../../../../../../_runtime/09951_chunk.js";
+import chunkDefault from "../../../../../../_runtime/09964_chunk.js";
 import LayoutUtils from "../LayoutUtils.tsx";
 import EmojiIconDefault from "../EmojiIcon.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
@@ -64,7 +64,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const arr = chunkDefault(emojiIds, num);
-      let GappedList = guildId(9953).GappedList;
+      let GappedList = guildId(9966).GappedList;
       if (cResult[7] !== guildId) {
         const fn = function x(arr, key) {
           ({ gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });

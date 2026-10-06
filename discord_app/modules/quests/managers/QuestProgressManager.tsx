@@ -434,7 +434,7 @@ class QuestProgressManager extends AutomaticLifecycleManager {
       await "IconComponent";
       closure_2 = tmp4;
       applicationId = closure_0.applicationId;
-      return "Set";
+      return "Reflect";
     });
     applyArgumentsResult.actions = obj2;
     return applyArgumentsResult;

@@ -13,7 +13,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 
 function VoiceControlsNuxActionSheetImporter() {
-  return asyncRequire(17213, dependencyMap.paths);
+  return asyncRequire(17242, dependencyMap.paths);
 }
 const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
 const isActivityParticipant = CallConstants.isActivityParticipant;

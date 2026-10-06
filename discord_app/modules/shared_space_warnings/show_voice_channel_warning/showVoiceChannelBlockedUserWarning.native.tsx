@@ -32,7 +32,7 @@ export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlock
     ActionSheetActionCreatorsDefault;
     obj2 = { channel_id: channelId, blocked_user_ids: items, warning_surface: constants.POST_JOIN_SHEET };
     items = [items1];
-    const tmp12 = asyncRequire(13551, dependencyMap.paths);
+    const tmp12 = asyncRequire(13567, dependencyMap.paths);
     openLazy(tmp12, "gdm_blocked_user_action_sheet", obj);
   } else {
     React3();

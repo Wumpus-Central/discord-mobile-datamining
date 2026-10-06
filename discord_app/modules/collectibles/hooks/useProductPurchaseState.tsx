@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import compactDefault from "../../../../_runtime/08497_compact.js";
+import compactDefault from "../../../../_runtime/08530_compact.js";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

@@ -4,7 +4,7 @@ import Constants from "../../../../Constants.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../../UserSettings.tsx";
-import _modDef2819 from "../../../notifications/NotificationSettings.messages.js";
+import _modDef2847 from "../../../notifications/NotificationSettings.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FocusModeUtils from "../../../notifications/FocusModeUtils.tsx";
 import notifications_NotificationSettingsUtils from "../../../notifications/NotificationSettingsUtils.tsx";
@@ -88,7 +88,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (focusModeEnabled) {
           stringResult = string(intl2.t.cIRG0s);
         } else {
-          stringResult = string(_modDef2819["T/zMdV"]);
+          stringResult = string(_modDef2847["T/zMdV"]);
         }
         cResult[0] = focusModeEnabled;
         cResult[1] = stringResult;
@@ -107,7 +107,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (focusModeEnabled) {
         stringResult = string(intl2.t.cIRG0s);
       } else {
-        stringResult = string(_modDef2819["T/zMdV"]);
+        stringResult = string(_modDef2847["T/zMdV"]);
       }
       return stringResult;
     };
@@ -132,7 +132,7 @@ const createToggle2 = SettingBuilders.createToggle;
 const obj3 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.sH5mu9);
+    return intl.string(_modDef2847.sH5mu9);
   },
   useDescription: tmp4,
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,

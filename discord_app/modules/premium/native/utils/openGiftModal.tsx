@@ -9,5 +9,5 @@ export const openGiftModal = function openGiftModal(navigationParams) {
   navigationParams = navigationParams.navigationParams;
   const merged = Object.assign(navigationParams, Object.assign({ navigationParams: 0 }));
   const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(10393, dependencyMap.paths), merged, "gift_modal_key", navigationParams);
+  obj.pushLazy(asyncRequire(10406, dependencyMap.paths), merged, "gift_modal_key", navigationParams);
 };

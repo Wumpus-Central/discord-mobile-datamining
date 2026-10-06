@@ -157,7 +157,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp12 = !hideIcon;
       if (tmp12) {
-        const obj2 = { icon: tmp7(10616).TvIcon, style: iconStyle };
+        const obj2 = { icon: tmp7(10629).TvIcon, style: iconStyle };
         const tmp15 = ActivityStatusIconDefault;
         tmp12 = _false(tmp15, obj2);
       }

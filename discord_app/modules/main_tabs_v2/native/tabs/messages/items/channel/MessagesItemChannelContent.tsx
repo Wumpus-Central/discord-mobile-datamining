@@ -4,19 +4,19 @@ import react_native from "../../../../../../../../_runtime/00017_react-native.js
 import react2 from "../../../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../../../design/void/native.tsx";
-import _modDef4461 from "../../../../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../../../../_runtime/metro/04467__.js";
 import useThemeDefault from "../../../../../../../hooks/useTheme.tsx";
 import useChannelNameDefault from "../../../../../../channel/useChannelName.tsx";
 import ReadStateConstants from "../../../../../../read_states/ReadStateConstants.tsx";
-import AssetRegistryDefault from "../../../../../../../../_runtime/06457_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../../_runtime/06464_AssetRegistry.js";
 import isChangelogChannelDefault from "../../../../../../changelog/utils/isChangelogChannel.tsx";
-import AssetRegistryDefault2 from "../../../../../../../../_runtime/07589_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../../../_runtime/07600_AssetRegistry.js";
 import BotTagDefault from "../../../../../../applications/native/BotTag.tsx";
 import GuildTagDefault from "../../../../../../guild_tag/native/GuildTag.tsx";
 import ActivityStatusDefault from "../../../../../../activity_status/native/ActivityStatus.tsx";
 import UsernameWithEffectsDefault from "../../../../../../display_name_styles/native/UsernameWithEffects.tsx";
-import AssetRegistryDefault3 from "../../../../../../../../_runtime/10693_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../../../../../_runtime/11065_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../../../_runtime/10706_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../../../../../_runtime/11078_AssetRegistry.js";
 import useMessagePreviewsDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import MessagesItemChannelWaveDefault from "MessagesItemChannelWave.tsx";
@@ -264,7 +264,7 @@ const memoResult = react.memo(
         const resolvedUnreadSetting = channel.resolvedUnreadSetting;
         const tmp5 = useThemeDefault();
         if (cResult[0] !== tmp5) {
-          const tmpResult = channel(4587);
+          const tmpResult = channel(4593);
           cResult[0] = tmp5;
           cResult[1] = tmpResult.isThemeLight(tmp5);
           const isThemeLightResult = tmpResult.isThemeLight(tmp5);
@@ -369,7 +369,7 @@ const memoResult = react.memo(
         ({ channelSelected, muted, ignored, blocked, hasUnreadMessages, hasNameplate } = channel);
         ({ favorite, hasActivity, resolvedUnreadSetting } = channel);
         let tmp5 = hasUnreadMessages;
-        const obj = channel(4587);
+        const obj = channel(4593);
         const isThemeLightResult = obj.isThemeLight(useThemeDefault());
         if (hasUnreadMessages) {
           tmp5 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
@@ -382,15 +382,15 @@ const memoResult = react.memo(
         const tmp11 = useMessagePreviewsDefault(channel, { unread: hasUnreadMessages });
         let tmp12 = null != tmp11;
         if (tmp12) {
-          const obj3 = _modDef4461();
+          const obj3 = _modDef4467();
           tmp12 = obj3.diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
           obj3.diff(tmp11.timestamp, "hours") < 1 || !hasActivity || hasUnreadMessages;
         }
         if (tmp12) {
           tmp12 = !isChangelogChannelDefault(channel.id);
         }
-        const useRelativeTimestamp = channel(15963).useRelativeTimestamp;
-        channel(15963);
+        const useRelativeTimestamp = channel(16002).useRelativeTimestamp;
+        channel(16002);
         let id = stateFromStores;
         const extractTimestamp = SnowflakeUtilsDefault.extractTimestamp;
         SnowflakeUtilsDefault;
@@ -419,7 +419,7 @@ const memoResult = react.memo(
         const obj5 = { style: tmp8.content, children: null };
         const obj6 = { style: tmp8.channelNameAndAccessories, children: null };
         const obj7 = { style: tmp8.channelNameAndBadge, children: null };
-        tmpResult4 = channel(4580);
+        tmpResult4 = channel(4586);
         if (channel.isDM()) {
           if (null != channel.recipients) {
             let tmp25Result;
@@ -431,7 +431,7 @@ const memoResult = react.memo(
                 effectDisplayType: channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN,
               };
               const tmp3Result4 = UsernameWithEffectsDefault;
-              EffectDisplayType = tmp(10634).EffectDisplayType;
+              EffectDisplayType = tmp(10647).EffectDisplayType;
               const merged = Object.assign(obj4);
               tmp25Result = closure_6(tmp3Result4, obj8);
               tmp22 = closure_6;
@@ -500,7 +500,7 @@ const memoResult = react.memo(
               const obj18 = { style: items7, variant: "text-xs/medium", lineClamp: 1, children: relativeTimestamp };
               items7 = [,];
               ({ channelText: arr8[0], timestamp: arr8[1] } = tmp9);
-              tmp22Result6 = tmp22(tmp(4886).Text, obj18);
+              tmp22Result6 = tmp22(tmp(4892).Text, obj18);
             }
             items6[1] = tmp22Result6;
             items3[1] = tmp22(View, obj11);
@@ -519,11 +519,11 @@ const memoResult = react.memo(
                 message: tmp11,
                 channel,
                 color: str7,
-                layout: channel(7514).ChannelListLayoutTypes.COZY_DRAWER_SMOL,
+                layout: channel(7525).ChannelListLayoutTypes.COZY_DRAWER_SMOL,
                 muted,
               };
               str7 = "text-muted";
-              const ChannelRowPreview = tmp(12488).ChannelRowPreview;
+              const ChannelRowPreview = tmp(12503).ChannelRowPreview;
               if (!((muted || ignored || blocked) && !channelSelected)) {
                 if (channelSelected) {
                   str6 = "mobile-text-heading-primary";
@@ -548,7 +548,7 @@ const memoResult = react.memo(
                   lineClamp: 1,
                   children: intl.string(channel(1126).t.FL5T01),
                 };
-                const Text2 = tmp(4886).Text;
+                const Text2 = tmp(4892).Text;
                 intl = tmp(1126).intl;
                 tmp22Result7 = tmp22(Text2, obj22);
               }
@@ -568,7 +568,7 @@ const memoResult = react.memo(
         }
         tmp22 = closure_6;
         const obj25 = { children: tmp18 };
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         const merged1 = Object.assign(obj4);
         tmp25Result = closure_6(Text, obj25);
       },

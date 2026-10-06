@@ -7,6 +7,7 @@ import validateOpenInviteDialog from "../../../helpers/validateOpenInviteDialog.
 import _asyncToGenerator from "../../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import Constants_mod from "../../../Constants.tsx";
 import Constants_mod2 from "../../../../../Constants.tsx";
+import CONTEXT_MENU_ICON_NAMES from "../../../../../../discord_common/js/packages/rpc-schema/rpc-schema.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 let c2, c3;
@@ -53,6 +54,7 @@ const ANY = RPC_SCOPE_CONFIG.ANY;
 const items = [OAuth2Scopes.OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj3[ANY] = items;
 obj[OPEN_INVITE_DIALOG] = obj2;
+const INITIATE_IMAGE_UPLOAD = RPCCommands.INITIATE_IMAGE_UPLOAD;
 let obj4 = {
   scope: obj5,
   handler(socket) {
@@ -100,7 +102,7 @@ let obj4 = {
                 const tmp51 = new tmp(c2[6])(obj4, "No application.");
                 throw tmp51;
               } else {
-                const tmp79 = tmp(c2[8])(tmp75);
+                const tmp79 = tmp(c2[9])(tmp75);
                 id1 = undefined;
                 if (tmp79 != null) {
                   id1 = tmp79.id;
@@ -112,7 +114,7 @@ let obj4 = {
                   const tmp45 = new tmp(c2[6])(obj5, "Unable to find selected channel");
                   throw tmp45;
                 } else {
-                  const obj12 = tmp(c2[9]);
+                  const obj12 = tmp(c2[10]);
                   const permission = obj12.requestPermission(constants2.PHOTOS);
                   c2 = 1;
                   c3 = 1;
@@ -137,7 +139,7 @@ let obj4 = {
               const obj7 = { value, done: true };
               return obj7;
             } else if (value) {
-              const tmp73Result = tmp(c2[10]);
+              const tmp73Result = tmp(c2[11]);
               c2 = 2;
               c3 = 1;
               const obj8 = {
@@ -174,7 +176,7 @@ let obj4 = {
                 throw tmp31;
               } else {
                 const obj13 = { name: closure_2.fileName, type: closure_2.type, uri: closure_2.uri };
-                const obj18 = tmp2(c2[11]);
+                const obj18 = tmp2(c2[12]);
                 c2 = 3;
                 c3 = 1;
                 const obj14 = { value: obj18.uploadImageAttachment(id, id1, obj13), done: false };
@@ -192,7 +194,7 @@ let obj4 = {
             closure_3 = value;
             if (null != closure_3) {
               if (null != closure_3.url) {
-                if (!(closure_3 instanceof tmp(c2[12]))) {
+                if (!(closure_3 instanceof tmp(c2[13]))) {
                   let obj = { image_url: closure_3.url };
                   c3 = 3;
                   const obj16 = { value: obj, done: true };
@@ -217,11 +219,12 @@ let obj4 = {
   },
 };
 obj5 = {};
-const INITIATE_IMAGE_UPLOAD = RPCCommands.INITIATE_IMAGE_UPLOAD;
+const createRPCCommand = CONTEXT_MENU_ICON_NAMES.createRPCCommand;
+const INITIATE_IMAGE_UPLOAD2 = RPCCommands.INITIATE_IMAGE_UPLOAD;
 const ANY2 = RPC_SCOPE_CONFIG.ANY;
 const items1 = [OAuth2Scopes.OAuth2Scopes.RPC, RPC_LOCAL_SCOPE, RPC_AUTHENTICATED_SCOPE];
 obj5[ANY2] = items1;
-obj[INITIATE_IMAGE_UPLOAD] = obj4;
+obj[INITIATE_IMAGE_UPLOAD] = createRPCCommand(INITIATE_IMAGE_UPLOAD2, obj4);
 let result = size.fileFinishedImporting("modules/rpc/native/server/commands/activities.tsx");
 
 export default obj;

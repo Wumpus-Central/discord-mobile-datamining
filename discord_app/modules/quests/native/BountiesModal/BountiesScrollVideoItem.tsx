@@ -423,7 +423,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp21;
       let tmp7;
       let tmp8;
-      const f118190 = () => {
+      const f118348 = () => {
         let currentBalance = null;
         if (isActive) {
           currentBalance = VirtualCurrencyStore.getCurrentBalance();
@@ -482,9 +482,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const handlePlayerStateChange = isEndCardVisible({ isActive, playerRef: ref }).handlePlayerStateChange;
       [tmp17, tmp18] = isActive(obj.useState(isActive), 2);
       isActive(obj.useState(isActive), 2);
-      [tmp20, tmp21] = isActive(obj.useState(f118190), 2);
+      [tmp20, tmp21] = isActive(obj.useState(f118348), 2);
       VirtualCurrencyStore = tmp21;
-      isActive(obj.useState(f118190), 2);
+      isActive(obj.useState(f118348), 2);
       const first = tmp5(obj.useState(0), 2)[0];
       isActive(obj.useState(0), 2);
       const tmp12 = flushProgress;
@@ -881,8 +881,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = {
         adContentId: bounty.id,
-        adCreativeType: bounty(5630).AdCreativeType.BOUNTY,
-        questContent: bounty(5628).QuestContent.VIDEO_MODAL_MOBILE,
+        adCreativeType: bounty(5637).AdCreativeType.BOUNTY,
+        questContent: bounty(5635).QuestContent.VIDEO_MODAL_MOBILE,
         sourceQuestContent,
         overrideVisibility: isActive,
         children() {
@@ -904,7 +904,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       };
-      const BillableAdPlacementImpressionTrackerNative = bounty(10958).BillableAdPlacementImpressionTrackerNative;
+      const BillableAdPlacementImpressionTrackerNative = bounty(10971).BillableAdPlacementImpressionTrackerNative;
       return flag3(BillableAdPlacementImpressionTrackerNative, obj);
     };
 let size = size_mod;

@@ -120,7 +120,7 @@ let obj = function _handlePurchaseUpdated() {
                 closure_11 = undefined;
                 c6 = 1;
                 c7 = 1;
-                return { value: "Set", done: true };
+                return { value: "Reflect", done: true };
               }
               break;
             }
@@ -476,7 +476,7 @@ obj = function _handleDowngradeCommand() {
       }
       await "IconComponent";
       downgradeCommand = downgradeCommand.downgradeCommand;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;
@@ -771,7 +771,7 @@ obj = function _handleAppStateUpdated() {
       }
       await "IconComponent";
       state = state.state;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

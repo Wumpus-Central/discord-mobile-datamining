@@ -272,7 +272,7 @@ const memoResult = memo(
             style: tmp.label,
             children: intl.string(tmp2(1126).t["hxa+G3"]),
           };
-          let Text = tmp2(4886).Text;
+          let Text = tmp2(4892).Text;
           intl = tmp2(1126).intl;
           items = [closure_6(Text, obj3)];
           let obj4 = {

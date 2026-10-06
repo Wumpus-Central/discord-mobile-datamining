@@ -5,8 +5,8 @@ import DurationsDefault from "../../../../../utils/Durations.tsx";
 import intl4 from "../../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumConstants from "../../../../premium/PremiumConstants.tsx";
-import _modDef4461 from "../../../../../../_runtime/metro/04461__.js";
-import LinearGradientDefault from "../../../../../../_runtime/05605_LinearGradient.js";
+import _modDef4467 from "../../../../../../_runtime/metro/04467__.js";
+import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
 import ColorConstants from "../../../../colors/native/ColorConstants.tsx";
 import useCountdownDefault from "../../../../../hooks/useCountdown.tsx";
 import NoticeActionCreatorsDefault from "../../../../../actions/NoticeActionCreators.tsx";
@@ -31,7 +31,7 @@ let obj2;
 let obj3;
 let tmp;
 const HelpdeskUtilsDefault = tmp(2115);
-const UserProfileCardDefault = tmp(6706);
+const UserProfileCardDefault = tmp(6713);
 function getNoticeCopy(days, trialPeriod, termsUrl) {
   let formatResult;
   if (days.days > 0) {
@@ -91,7 +91,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       navigateToPremium = navigateToPremium.navigateToPremium;
       const style = navigateToPremium.style;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = untilAtLeast(4461)();
+        let obj2 = untilAtLeast(4467)();
         const addResult = obj2.add(5, "days");
         cResult[0] = addResult;
         untilAtLeast = addResult;
@@ -117,7 +117,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(573);
       const stateFromStores = tmpResult.useStateFromStores(tmp8, tmp9);
-      const tmpResult4 = tmp(6956);
+      const tmpResult4 = tmp(6969);
       const premiumTrialOffer = tmpResult4.usePremiumTrialOffer();
       if (cResult[3] !== premiumTrialOffer) {
         let num5 = 0;
@@ -139,8 +139,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp13 = cResult[4];
       }
-      const tmp16 = untilAtLeast(6948)(tmp13, closure_15);
-      const tmpResult5 = tmp(16977);
+      const tmp16 = untilAtLeast(6961)(tmp13, closure_15);
+      const tmpResult5 = tmp(17003);
       shouldShowExpiringTrialOfferCard = tmpResult5.useShouldShowExpiringTrialOfferCard();
       if (cResult[5] === stateFromStores) {
         if (cResult[6] === shouldShowExpiringTrialOfferCard) {
@@ -349,7 +349,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                           return closure_12(tmp2, obj);
                                                         }
                                                       }
-                                                      const tmp81 = closure_12(untilAtLeast(6706), tmp80);
+                                                      const tmp81 = closure_12(untilAtLeast(6713), tmp80);
                                                       cResult[58] = tmp74;
                                                       cResult[59] = style;
                                                       cResult[60] = tmp81;
@@ -510,7 +510,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                       onPress: tmp57,
                                       children: tmp58,
                                     };
-                                    const tmp62 = closure_12(tmp(5909).PressableOpacity, obj4);
+                                    const tmp62 = closure_12(tmp(5916).PressableOpacity, obj4);
                                     cResult[37] = tmp7.closeButton;
                                     cResult[38] = tmp57;
                                     cResult[39] = tmp58;
@@ -579,11 +579,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const header = tmp7.header;
                 const tmp31Result = tmp31(PREMIUM_TRIAL);
-                const Text = tmp(4886).Text;
+                const Text = tmp(4892).Text;
                 const subscriptionTrial3 = premiumTrialOffer.subscriptionTrial;
                 let interval;
-                const formatIntervalDuration = tmp(4528).formatIntervalDuration;
-                tmp(4528);
+                const formatIntervalDuration = tmp(4534).formatIntervalDuration;
+                tmp(4534);
                 if (subscriptionTrial3 != null) {
                   interval = subscriptionTrial3.interval;
                 }
@@ -662,7 +662,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp = importDefault;
       let tmp2 = dependencyMap;
       const style = navigateToPremium.style;
-      let obj = _modDef4461();
+      let obj = _modDef4467();
       importDefault = obj.add(5, "days");
       const tmp3 = closure_16();
       dependencyMap = tmp3;
@@ -670,7 +670,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = navigateToPremium(573);
       let items = [shouldShowExpiringTrialOfferCard];
       const stateFromStores = obj2.useStateFromStores(items, () => shouldShowExpiringTrialOfferCard.getNoticeType());
-      let obj3 = navigateToPremium(6956);
+      let obj3 = navigateToPremium(6969);
       const premiumTrialOffer = obj3.usePremiumTrialOffer();
       let num = 0;
       const tmp7 = useCountdownDefault;
@@ -682,7 +682,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp7Result = tmp7(num, closure_15);
-      const tmp4Result = tmp4(16977);
+      const tmp4Result = tmp4(17003);
       shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
       const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
       const effect = stateFromStores.useEffect(() => {
@@ -707,11 +707,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             let obj4 = { style: tmp3.header, children: closure_12(Text, obj7) };
             const articleURL = getArticleURL(PREMIUM_TRIAL);
-            Text = tmp4(4886).Text;
+            Text = tmp4(4892).Text;
             const subscriptionTrial = premiumTrialOffer.subscriptionTrial;
             let interval;
-            const formatIntervalDuration = tmp4(4528).formatIntervalDuration;
-            tmp4(4528);
+            const formatIntervalDuration = tmp4(4534).formatIntervalDuration;
+            tmp4(4534);
             const tmp17 = premiumTrialOffer;
             if (subscriptionTrial != null) {
               interval = subscriptionTrial.interval;
@@ -746,7 +746,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               },
               children: closure_12(tmp4(1188).CloseIcon, size),
             };
-            const PressableOpacity = tmp4(5909).PressableOpacity;
+            const PressableOpacity = tmp4(5916).PressableOpacity;
             intl = tmp4(1126).intl;
             size = { width: 16, height: 16, color: tmp3.closeIcon.color };
             items2[1] = closure_12(PressableOpacity, obj8);

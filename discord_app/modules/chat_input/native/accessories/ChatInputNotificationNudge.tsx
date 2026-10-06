@@ -32,7 +32,7 @@ let hasOwnProperty;
 let map1;
 let tmp9;
 let unpackModuleId;
-const PostReactionPermissionNudgeExperimentDefault = tmp9(12062);
+const PostReactionPermissionNudgeExperimentDefault = tmp9(12077);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = react);
 const View = react_native.View;
 const PermissionPromptType = PushNotificationPermissionStore.PermissionPromptType;
@@ -427,7 +427,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = channel(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
       const tmp10 = !stateFromStores && !useIsAppDMDefault(channel);
-      const tmpResult5 = channel(12054);
+      const tmpResult5 = channel(12069);
       const shouldShowPushNotificationNudgeByPromptType = tmpResult5.useShouldShowPushNotificationNudgeByPromptType(
         PermissionPromptType.CHANNEL_BANNER,
       );
@@ -440,7 +440,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp9Result = PostReactionPermissionNudgeExperimentDefault;
       const enabled = tmp9Result.useConfig(tmp13).enabled;
-      const tmpResult6 = channel(12054);
+      const tmpResult6 = channel(12069);
       const shouldShowPushNotificationNudgeByPromptType1 = tmpResult6.useShouldShowPushNotificationNudgeByPromptType(
         PermissionPromptType.POST_REACTION_BANNER,
       );
@@ -452,8 +452,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = cResult[4];
       }
       let prop = null;
-      const useSelectedTimeRecurringDismissibleContent = channel(6891).useSelectedTimeRecurringDismissibleContent;
-      channel(6891);
+      const useSelectedTimeRecurringDismissibleContent = channel(6901).useSelectedTimeRecurringDismissibleContent;
+      channel(6901);
       if (tmp10) {
         prop = null;
         if (shouldShowPushNotificationNudgeByPromptType) {
@@ -471,8 +471,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp23 = cResult[5];
       }
       let prop1 = null;
-      const useSelectedTimeRecurringDismissibleContent2 = channel(6891).useSelectedTimeRecurringDismissibleContent;
-      channel(6891);
+      const useSelectedTimeRecurringDismissibleContent2 = channel(6901).useSelectedTimeRecurringDismissibleContent;
+      channel(6901);
       if (tmp10) {
         prop1 = null;
         if (enabled) {
@@ -650,19 +650,19 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return isMutedResult;
       });
       const tmp5 = !stateFromStores && !useIsAppDMDefault(channel);
-      const tmpResult = channel(12054);
+      const tmpResult = channel(12069);
       const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(
         PermissionPromptType.CHANNEL_BANNER,
       );
       const tmp4Result = PostReactionPermissionNudgeExperimentDefault;
       const enabled = tmp4Result.useConfig({ location: "ChatInputNotificationNudge" }).enabled;
-      const tmpResult4 = channel(12054);
+      const tmpResult4 = channel(12069);
       const shouldShowPushNotificationNudgeByPromptType1 = tmpResult4.useShouldShowPushNotificationNudgeByPromptType(
         PermissionPromptType.POST_REACTION_BANNER,
       );
       let prop = null;
-      const useSelectedTimeRecurringDismissibleContent = channel(6891).useSelectedTimeRecurringDismissibleContent;
-      channel(6891);
+      const useSelectedTimeRecurringDismissibleContent = channel(6901).useSelectedTimeRecurringDismissibleContent;
+      channel(6901);
       if (tmp5) {
         prop = null;
         if (shouldShowPushNotificationNudgeByPromptType) {
@@ -674,8 +674,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       importDefault = tmp15;
       _slicedToArray(useSelectedTimeRecurringDismissibleContent(prop, obj2, undefined, true), 2);
       let prop1 = null;
-      const useSelectedTimeRecurringDismissibleContent2 = channel(6891).useSelectedTimeRecurringDismissibleContent;
-      channel(6891);
+      const useSelectedTimeRecurringDismissibleContent2 = channel(6901).useSelectedTimeRecurringDismissibleContent;
+      channel(6901);
       if (tmp5) {
         prop1 = null;
         if (enabled) {

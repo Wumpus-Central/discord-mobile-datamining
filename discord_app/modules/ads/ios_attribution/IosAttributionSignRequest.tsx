@@ -50,7 +50,7 @@ let obj = function _fetchIosAttributionSignedPayloads() {
             ({ metadataSealed: c0, impressionId: c1, specs: c2, signal: c3 } = closure_0);
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (metadata_sealed === 1) {

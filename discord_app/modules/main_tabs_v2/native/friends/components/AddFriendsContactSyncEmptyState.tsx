@@ -6,7 +6,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import ContactSyncModalActionCreators from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
 import ContactSyncUtils from "../../../../contact_sync/native/ContactSyncUtils.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/12342_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/12357_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";

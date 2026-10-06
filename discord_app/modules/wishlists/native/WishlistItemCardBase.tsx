@@ -89,7 +89,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-        const HeartIcon = tmp(8428).HeartIcon;
+        const HeartIcon = tmp(8461).HeartIcon;
         const tmp9 = closure_5(HeartIcon, obj2);
         cResult[2] = tmp9;
         tmp6 = tmp9;
@@ -134,7 +134,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         children: closure_5(HeartIcon, obj2),
       };
       obj2 = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-      HeartIcon = toastText(8428).HeartIcon;
+      HeartIcon = toastText(8461).HeartIcon;
       return closure_5(closure_3, obj);
     };
 let obj6 = { OWNED: "owned", LOCKED: "locked" };

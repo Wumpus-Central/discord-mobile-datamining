@@ -169,7 +169,7 @@ const memoResult = react.memo(
               const result = obj.openAutomodProfileQuarantineAlert(guildId);
             }
           }
-          const tmp18 = jsx(tmp(12121).ChatXIcon, {});
+          const tmp18 = jsx(tmp(12136).ChatXIcon, {});
           cResult[12] = tmp18;
         } else {
           class R {
@@ -235,7 +235,7 @@ const memoResult = react.memo(
           const obj = GuildAutomodActionActionCreators;
           const result = obj.openAutomodProfileQuarantineAlert(guildId);
         }, items2);
-        const obj2 = guildId(4515);
+        const obj2 = guildId(4521);
         const automodReason = obj2.getAutomodReason(stateFromStores);
         if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
           const intl2 = tmp(1126).intl;

@@ -370,7 +370,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        if (undefined === setUsername(14516).NameValidationState.ERROR) {
+        if (undefined === setUsername(14532).NameValidationState.ERROR) {
           class H {
             constructor() {
               tmp = closure_1(true);
@@ -386,7 +386,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const TextInput = setUsername(6098).TextInput;
+        const TextInput = setUsername(6105).TextInput;
         const str = "default";
         const tmpResult = setUsername(1369);
         if (tmpResult.isAndroid()) {
@@ -503,7 +503,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         status: str2,
         submitBehavior,
       };
-      const TextInput = setUsername(6098).TextInput;
+      const TextInput = setUsername(6105).TextInput;
       intl = setUsername(1126).intl;
       intl2 = setUsername(1126).intl;
       str = "default";
@@ -518,7 +518,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         type = usernameStatus.type;
       }
       str2 = undefined;
-      if (type === tmp15(14516).NameValidationState.ERROR) {
+      if (type === tmp15(14532).NameValidationState.ERROR) {
         str2 = "error";
       }
       const obj6 = { children: items3 };

@@ -5,7 +5,7 @@ import intl3 from "../../../intl/index.native.tsx";
 import WarningIcon from "../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09642_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/09655_AssetRegistry.js";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";

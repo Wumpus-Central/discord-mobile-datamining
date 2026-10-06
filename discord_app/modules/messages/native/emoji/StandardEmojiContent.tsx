@@ -166,7 +166,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = require("useTrackOpenPopout");
         const trackOpenPopout = tmpResult.useTrackOpenPopout(tmp13);
         if (cResult[6] !== emojiNode.surrogate) {
-          const obj6 = isFavoriteEmoji(4523);
+          const obj6 = isFavoriteEmoji(4529);
           const result = obj6.convertSurrogateToBase(emojiNode.surrogate);
           cResult[6] = emojiNode.surrogate;
           cResult[7] = result;
@@ -177,7 +177,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         _require = tmp15;
         const tmpResult2 = require("EmojiPickerUtils");
         isFavoriteEmoji = tmpResult2.useIsFavoriteEmoji(tmp10, tmp15);
-        const tmp20 = isFavoriteEmoji(9937)(emojiNode.content);
+        const tmp20 = isFavoriteEmoji(9950)(emojiNode.content);
         if (cResult[8] !== emojiNode.surrogate) {
           const obj4 = { surrogate: emojiNode.surrogate };
           const tmp24 = closure_6(closure_10, obj4);
@@ -199,7 +199,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const obj7 = { variant: "text-sm/medium", children: intl.string(require("intl").t.sXdH8c) };
-          const Text = tmp(4886).Text;
+          const Text = tmp(4892).Text;
           intl = tmp(1126).intl;
           const tmp30 = closure_6(Text, obj7);
           cResult[12] = tmp30;

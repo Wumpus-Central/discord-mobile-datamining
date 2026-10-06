@@ -1,6 +1,6 @@
 // discord_app/modules/share/useAutocompleter.tsx
 import useInitialValueDefault from "../../hooks/useInitialValue.tsx";
-import _modDef9496 from "../autocompleter/index.tsx";
+import _modDef9509 from "../autocompleter/index.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
@@ -32,7 +32,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       _slicedToArray(react.useState(first), 2);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o() {
-          let obj = new _modDef9496((results, query) => {
+          let obj = new _modDef9509((results, query) => {
             const obj = { results, query };
             closure_1_1(obj);
           });
@@ -144,7 +144,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp = _slicedToArray(react.useState({ results: [], query: "" }), 2);
       [tmp2, c1] = tmp;
       const tmp3 = useInitialValueDefault(() => {
-        let obj = new _modDef9496((results, query) => {
+        let obj = new _modDef9509((results, query) => {
           const obj = { results, query };
           closure_1_1(obj);
         });

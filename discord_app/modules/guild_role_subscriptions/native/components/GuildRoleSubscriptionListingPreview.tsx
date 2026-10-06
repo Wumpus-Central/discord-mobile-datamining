@@ -568,7 +568,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[1] === label) {
             tmp6 = cResult[2];
           }
-          const tmp8 = listingId === guildId(17934).NEW_LISTING_EDIT_STATE_ID;
+          const tmp8 = listingId === guildId(17980).NEW_LISTING_EDIT_STATE_ID;
           let closure_2 = tmp8;
           if (cResult[3] === benefits) {
             if (cResult[4] === guildId) {

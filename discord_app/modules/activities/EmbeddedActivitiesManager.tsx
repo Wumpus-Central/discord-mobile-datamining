@@ -4,18 +4,18 @@ import ComponentDispatchUtils from "../../utils/ComponentDispatchUtils.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import v1 from "../../../_runtime/01266_v1.js";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import Server from "../../flow/Server.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
 import embeddedActivityLocationUtils from "utils/embeddedActivityLocationUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreators.tsx";
+import InteractionTypes from "../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import MonitoringAgentDefault from "../monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
 import AnalyticsLocationDefault from "../app_analytics/AnalyticsLocation.tsx";
-import getURLForApplication from "getURLForApplication.tsx";
 import ApplicationFlagUtils from "../applications/utils/ApplicationFlagUtils.tsx";
 import CommandPermissionContext from "../application_commands/CommandPermissionContext.tsx";
 import getPlatformDefault from "utils/getPlatform.tsx";
+import getURLForApplication from "getURLForApplication.tsx";
 import getShelfItemDataDefault from "getShelfItemData.tsx";
 import ThermalUtilsDefault from "../device/ThermalUtils.native.tsx";
 import FramesActionCreatorsDefault from "../frames/FramesActionCreators.native.tsx";
@@ -48,7 +48,7 @@ let closure_17;
 let closure_18;
 let closure_19;
 let closure_20;
-const f98985 = (userStatus) => {
+const f99171 = (userStatus) => {
   userStatus = userStatus.userStatus;
   let enrolledAt;
   if (userStatus != null) {
@@ -213,7 +213,7 @@ let obj = function _handleActivityClose() {
     }
     await "IconComponent";
     ({ applicationId: c0, location: c1, instanceId: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -510,7 +510,7 @@ function maybeEmitFrameSessionMetricsForQuest(applicationId, name) {
     if (eligibleQuestsForApplicationId.length > 0) {
       const _HermesInternal2 = HermesInternal;
       const items = ["application_id:" + applicationId];
-      const found = eligibleQuestsForApplicationId.find(f98985);
+      const found = eligibleQuestsForApplicationId.find(f99171);
       let id;
       if (found != null) {
         id = found.id;
@@ -796,7 +796,7 @@ class EmbeddedActivitiesManager extends LifecycleManager {
               raw_thermal_state = undefined;
               application_id = 1;
               is_activity_start = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === application_id) {
             if (arg0 === 1) {
@@ -1134,7 +1134,7 @@ class EmbeddedActivitiesManager extends LifecycleManager {
       await "IconComponent";
       commandOrigin = 0;
       ({ channelId: c0, applicationId: c1, analyticsLocations: c2, commandOrigin: c3, inviterUserId: c4 } = channelId);
-      return "Set";
+      return "Reflect";
     });
     applyArgumentsResult.handleDeferredOpen = function () {
       return closure_0(...arguments);
@@ -1172,13 +1172,13 @@ class EmbeddedActivitiesManager extends LifecycleManager {
       ({ nonce, data } = arg0);
       if (null == closure_1_22[data.applicationId]) {
         let tmp2;
-        if (data.interactionType === Server.InteractionTypes.APPLICATION_COMMAND) {
+        if (data.interactionType === InteractionTypes.InteractionTypes.APPLICATION_COMMAND) {
           const items = [AnalyticsLocationDefault.INTERACTION_APPLICATION_COMMAND];
           tmp2 = items;
-        } else if (data.interactionType === Server.InteractionTypes.MESSAGE_COMPONENT) {
+        } else if (data.interactionType === InteractionTypes.InteractionTypes.MESSAGE_COMPONENT) {
           const items1 = [AnalyticsLocationDefault.INTERACTION_MESSAGE_COMPONENT];
           tmp2 = items1;
-        } else if (data.interactionType === Server.InteractionTypes.MODAL_SUBMIT) {
+        } else if (data.interactionType === InteractionTypes.InteractionTypes.MODAL_SUBMIT) {
           const items2 = [AnalyticsLocationDefault.INTERACTION_MODAL_SUBMIT];
           tmp2 = items2;
         }
@@ -1540,7 +1540,7 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
         if (eligibleQuestsForApplicationId.length > 0) {
           const _HermesInternal2 = HermesInternal;
           const items2 = ["application_id:" + applicationId];
-          const found = eligibleQuestsForApplicationId.find(f98985);
+          const found = eligibleQuestsForApplicationId.find(f99171);
           let id;
           if (found != null) {
             id = found.id;

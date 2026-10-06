@@ -151,7 +151,7 @@ const memoResult = react.memo(
                   obj3 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
                   const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
                 } else {
-                  obj3 = { status: "Array", activities: "Set" };
+                  obj3 = { status: "start", activities: "unicodeVersion" };
                 }
                 return obj3;
               }
@@ -170,7 +170,7 @@ const memoResult = react.memo(
                   obj3 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
                   const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
                 } else {
-                  obj3 = { status: "Array", activities: "Set" };
+                  obj3 = { status: "start", activities: "unicodeVersion" };
                 }
                 return obj3;
               }
@@ -192,7 +192,7 @@ const memoResult = react.memo(
                   obj3 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
                   const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
                 } else {
-                  obj3 = { status: "Array", activities: "Set" };
+                  obj3 = { status: "start", activities: "unicodeVersion" };
                 }
                 return obj3;
               }
@@ -212,7 +212,7 @@ const memoResult = react.memo(
                   obj3 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
                   const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
                 } else {
-                  obj3 = { status: "Array", activities: "Set" };
+                  obj3 = { status: "start", activities: "unicodeVersion" };
                 }
                 return obj3;
               }
@@ -252,9 +252,9 @@ const memoResult = react.memo(
           const tmpResult9 = channel(504);
           const stateFromStoresObject1 = tmpResult9.useStateFromStoresObject(tmp16, B);
           ({ mentionCount, hasUnreadMessages } = stateFromStoresObject1);
-          ({ isIncomingCall, isOngoingCall } = setIsPressed(15959)(channel.id));
+          ({ isIncomingCall, isOngoingCall } = setIsPressed(15998)(channel.id));
           const _Symbol3 = Symbol;
-          setIsPressed(15959)(channel.id);
+          setIsPressed(15998)(channel.id);
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
             class B {
               constructor() {
@@ -458,7 +458,7 @@ const memoResult = react.memo(
               }
             }
           }
-          const tmpResult13 = channel(7888);
+          const tmpResult13 = channel(7899);
           const nameplate = tmpResult13.useNameplate(tmp32);
           let tmp35 = null != nameplate;
           if (tmp35) {
@@ -591,7 +591,7 @@ const memoResult = react.memo(
             obj3 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
             const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
           } else {
-            obj3 = { status: "Array", activities: "Set" };
+            obj3 = { status: "start", activities: "unicodeVersion" };
           }
           return obj3;
         });

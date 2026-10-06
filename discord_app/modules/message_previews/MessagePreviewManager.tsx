@@ -110,7 +110,7 @@ class MessagePreviewManager extends AutomaticLifecycleManager {
                 closure_4 = undefined;
                 c7 = 1;
                 c8 = 1;
-                return { value: "Set", done: true };
+                return { value: "Reflect", done: true };
               }
             } else {
               let closure_1;

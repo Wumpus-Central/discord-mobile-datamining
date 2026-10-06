@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/community/GuildSettingsAnalyticsStore.tsx
 import get_initializedDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
-import createCompounderDefault from "../../../../_runtime/17855_createCompounder.js";
+import createCompounderDefault from "../../../../_runtime/17901_createCompounder.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_3;

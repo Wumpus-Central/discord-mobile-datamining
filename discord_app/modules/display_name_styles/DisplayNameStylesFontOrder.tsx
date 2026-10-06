@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let isDisplayNameStylesFlywheelSettersEnabled;
-      const obj = isDisplayNameStylesFlywheelSettersEnabled(9390);
+      const obj = isDisplayNameStylesFlywheelSettersEnabled(9404);
       isDisplayNameStylesFlywheelSettersEnabled = obj.useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
       items = [isDisplayNameStylesFlywheelSettersEnabled];
       return react.useMemo(() => (isDisplayNameStylesFlywheelSettersEnabled ? items1 : items), items);

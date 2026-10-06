@@ -5,7 +5,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../tokens/native/useToken.tsx";
 import react3 from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import LottieViewDefault from "../../../../../_runtime/05921_LottieView.js";
+import LottieViewDefault from "../../../../../_runtime/05928_LottieView.js";
 import IconSize from "../../Icon/IconSize.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../../../modules/react_compiler/ReactCompilerGating.tsx";

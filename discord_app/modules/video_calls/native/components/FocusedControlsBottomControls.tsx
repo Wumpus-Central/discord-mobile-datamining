@@ -304,7 +304,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(8);
       positionY = positionY.positionY;
       const tmp4 = closure_19();
-      const obj2 = positionY(9616);
+      const obj2 = positionY(9629);
       const canShowTooltip = obj2.useCanShowTooltip(positionY(1105).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
       const fn = function o() {
         const obj = { opacity: 1 - Math.min((-1 * positionY.get()) / c16, 1) };
@@ -314,7 +314,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = obj4;
       fn.__workletHash = 15386908151356;
       fn.__initData = __initData3;
-      const obj3 = positionY(4612);
+      const obj3 = positionY(4618);
       const animatedStyle = obj3.useAnimatedStyle(fn);
       if (canShowTooltip) {
         let first;
@@ -376,9 +376,9 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       let obj7;
       positionY = positionY.positionY;
       const tmp = closure_19();
-      let obj = positionY(9616);
+      let obj = positionY(9629);
       const canShowTooltip = obj.useCanShowTooltip(positionY(1105).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
-      positionY(4612);
+      positionY(4618);
       const fn = function o() {
         const obj = { opacity: 1 - Math.min((-1 * positionY.get()) / c16, 1) };
         return obj;
@@ -440,7 +440,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = obj3;
       fn.__workletHash = 16821998405506;
       fn.__initData = __initData5;
-      const obj2 = positionY(4612);
+      const obj2 = positionY(4618);
       const animatedStyle = obj2.useAnimatedStyle(fn);
       if (cResult[0] !== isExpanded) {
         obj4 = { expanded: isExpanded };
@@ -460,7 +460,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = closure_13(tmp(6649).ActionSheetHeaderBar, {});
+        const tmp13 = closure_13(tmp(6656).ActionSheetHeaderBar, {});
         cResult[4] = tmp13;
         tmp11 = tmp13;
       } else {
@@ -518,7 +518,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp15) {
         const obj8 = { style: items1, children: aboveActionBar };
         items1 = [tmp4.aboveActionBarChildrenContainer, animatedStyle];
-        tmp15 = closure_13(offsetY(4612).View, obj8);
+        tmp15 = closure_13(offsetY(4618).View, obj8);
       }
       cResult[5] = aboveActionBar;
       cResult[6] = animatedStyle;
@@ -536,7 +536,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       const aboveActionBar = positionY.aboveActionBar;
       ({ onPressHeader, isExpanded } = positionY);
       const tmp = closure_19();
-      let obj = positionY(4612);
+      let obj = positionY(4618);
       const fn = function u() {
         const obj = { opacity: 2 - Math.max(Math.abs(positionY.get()) / (offsetY / 3 - c16), 0) };
         return obj;
@@ -556,12 +556,12 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj4 = { style: tmp.aboveActionBarContainer, children: items };
       const animatedStyle = obj.useAnimatedStyle(fn);
-      items = [closure_13(closure_27, { positionY }), closure_13(positionY(6649).ActionSheetHeaderBar, {})];
+      items = [closure_13(closure_27, { positionY }), closure_13(positionY(6656).ActionSheetHeaderBar, {})];
       let tmp4Result = null != aboveActionBar;
       if (tmp4Result) {
         obj5 = { style: items1, children: aboveActionBar };
         items1 = [tmp.aboveActionBarChildrenContainer, animatedStyle];
-        tmp4Result = closure_13(offsetY(4612).View, obj5);
+        tmp4Result = closure_13(offsetY(4618).View, obj5);
       }
       items[2] = tmp4Result;
       return closure_13(closure_6, obj3);

@@ -545,7 +545,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { hasIcons: true, children: null };
       const obj7 = { style: tmp.sections, children: closure_12(TableRowGroup, tmp15) };
       TableRowGroup = TableRowGroup2.TableRowGroup;
-      const tmp13 = trigger(11960);
+      const tmp13 = trigger(11974);
       const obj9 = { Icon: null, message: null, onPress: null };
       tmp10 = onPress;
       const tmp11 = ref;
@@ -564,7 +564,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             onPress(true);
           },
         };
-        const tmp12Result = trigger(11960);
+        const tmp12Result = trigger(11974);
         intl6 = intl8.intl;
         items4[1] = closure_11(tmp12Result, obj10);
         obj8.children = items4;
@@ -584,7 +584,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             onPress(false);
           },
         };
-        const tmp12Result2 = trigger(11960);
+        const tmp12Result2 = trigger(11974);
         intl4 = intl8.intl;
         items5[1] = closure_11(tmp12Result2, obj11);
         obj8.children = items5;

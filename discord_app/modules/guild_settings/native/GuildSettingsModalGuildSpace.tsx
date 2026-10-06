@@ -135,8 +135,6 @@ ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (contentContainerStyle) => {
       let guild;
-      let items4;
-      let items5;
       let stateFromStores;
       let tmp10;
       let tmp12;
@@ -145,43 +143,54 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6;
       let tmp7;
       const obj = stateFromStores(576);
-      const cResult = obj.c(33);
+      const cResult = obj.c(34);
       contentContainerStyle = contentContainerStyle.contentContainerStyle;
       const tmp4 = closure_11();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildSettingsStore];
-        const fn = function o() {
-          return guild.getGuild();
-        };
+        class S {
+          constructor() {
+            return guild.getGuild();
+          }
+        }
         const items1 = [];
         cResult[0] = items;
-        cResult[1] = fn;
+        cResult[1] = S;
         cResult[2] = items1;
         tmp5 = items;
-        tmp6 = fn;
         tmp7 = items1;
       } else {
         [tmp5, tmp6, tmp7] = cResult;
       }
       const tmpResult = stateFromStores(504);
-      stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6, tmp7);
+      stateFromStores = tmpResult.useStateFromStores(tmp5, S, tmp7);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [PermissionStore];
+        class S {
+          constructor() {
+            return guild.getGuild();
+          }
+        }
         cResult[3] = items2;
         tmp10 = items2;
       } else {
         tmp10 = cResult[3];
       }
       if (cResult[4] !== stateFromStores) {
-        const fn2 = function v() {
+        const fn = function v() {
           return PermissionStore.can(metroRequire.MANAGE_GUILD, stateFromStores);
         };
         const items3 = [stateFromStores];
+        class S {
+          constructor() {
+            return guild.getGuild();
+          }
+        }
         cResult[4] = stateFromStores;
-        cResult[5] = fn2;
+        cResult[5] = fn;
         cResult[6] = items3;
         tmp13 = items3;
-        tmp12 = fn2;
+        tmp12 = fn;
       } else {
         tmp12 = cResult[5];
         tmp13 = cResult[6];
@@ -193,151 +202,195 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[7] === contentContainerStyle) {
           let tmp15;
-          let tmp16;
-          let tmp19;
           let tmp18;
+          let tmp17;
+          let tmp22;
+          let tmp21;
           if (cResult[8] === tmp4.content) {
             tmp15 = cResult[9];
           }
           const _Symbol = Symbol;
           const stackPadding = tmp4.stackPadding;
-          if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+          class S {
+            constructor() {
+              return guild.getGuild();
+            }
+          }
+          if (tmp16 === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(1126).intl;
-            const stringResult = intl.string(stateFromStores(1126).t.OBskVU);
+            const stringResult = intl.string(stateFromStores(1126).t["0JLdD3"]);
+            class S {
+              constructor() {
+                return guild.getGuild();
+              }
+            }
+            const stringResult1 = obj4.string(stateFromStores(1126).t.Xa1KEN);
             cResult[10] = stringResult;
-            tmp16 = stringResult;
+            cResult[11] = stringResult1;
+            tmp18 = stringResult1;
+            tmp17 = stringResult;
           } else {
-            tmp16 = cResult[10];
+            tmp17 = cResult[10];
+            tmp18 = cResult[11];
           }
           const _Symbol2 = Symbol;
-          if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+          if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+            const string = tmp(1126).intl.string;
+            class S {
+              constructor() {
+                return guild.getGuild();
+              }
+            }
             const intl2 = tmp(1126).intl;
-            const stringResult1 = intl2.string(_modDef2425.btBTIw);
-            const intl3 = tmp(1126).intl;
-            const stringResult2 = intl3.string(_modDef2425.n3aRYQ);
-            cResult[11] = stringResult1;
-            cResult[12] = stringResult2;
-            tmp19 = stringResult2;
-            tmp18 = stringResult1;
+            const stringResult2 = intl2.string(stateFromStores(1126).t.n3aRYQ);
+            cResult[12] = tmp24;
+            cResult[13] = stringResult2;
+            tmp22 = stringResult2;
+            tmp21 = tmp24;
           } else {
-            tmp18 = cResult[11];
-            tmp19 = cResult[12];
+            tmp21 = cResult[12];
+            tmp22 = cResult[13];
           }
-          if (cResult[13] === stateFromStores) {
-            let tmp24;
-            let tmp29;
-            if (cResult[14] === !stateFromStores1) {
-              tmp24 = cResult[15];
+          if (cResult[14] === stateFromStores) {
+            let tmp27;
+            if (cResult[15] === !stateFromStores1) {
+              tmp27 = cResult[16];
             }
             const _Symbol3 = Symbol;
-            if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl4 = tmp(1126).intl;
-              const stringResult3 = intl4.string(stateFromStores(1126).t.YZqqTX);
-              cResult[16] = stringResult3;
-              tmp29 = stringResult3;
-            } else {
-              tmp29 = cResult[16];
-            }
-            if (cResult[17] === stateFromStores) {
-              let tmp32;
-              if (cResult[18] === !stateFromStores1) {
-                tmp32 = cResult[19];
+            class S {
+              constructor() {
+                return guild.getGuild();
               }
-              if (cResult[20] === tmp24) {
-                let tmp37;
-                if (cResult[21] === tmp32) {
-                  tmp37 = cResult[22];
+            }
+            if (cResult[18] === stateFromStores) {
+              let tmp35;
+              if (cResult[19] === !stateFromStores1) {
+                tmp35 = cResult[20];
+              }
+              if (cResult[21] === tmp27) {
+                let tmp40;
+                if (cResult[22] === tmp35) {
+                  tmp40 = cResult[23];
                 }
-                if (cResult[23] === tmp4.stackPadding) {
-                  let tmp40;
-                  if (cResult[24] === tmp37) {
-                    tmp40 = cResult[25];
+                if (cResult[24] === tmp4.stackPadding) {
+                  let tmp44;
+                  if (cResult[25] === tmp40) {
+                    tmp44 = cResult[26];
                   }
-                  if (cResult[26] === tmp4.container) {
-                    if (cResult[27] === tmp40) {
-                      let tmp44;
-                      let tmp47;
-                      let tmp50;
-                      if (cResult[28] === tmp15) {
-                        tmp44 = cResult[29];
+                  if (cResult[27] === tmp4.container) {
+                    if (cResult[28] === tmp44) {
+                      let tmp49;
+                      let tmp55;
+                      if (cResult[29] === tmp15) {
+                        tmp49 = cResult[30];
                       }
                       const _Symbol4 = Symbol;
-                      if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
-                        const tmp49 = closure_8(stateFromStores(6536).NavScrim, {});
-                        cResult[30] = tmp49;
-                        tmp47 = tmp49;
-                      } else {
-                        tmp47 = cResult[30];
+                      class S {
+                        constructor() {
+                          return guild.getGuild();
+                        }
                       }
-                      if (cResult[31] !== tmp44) {
-                        const obj2 = { children: items4 };
-                        items4 = [tmp44, tmp47];
-                        const tmp53 = closure_9(closure_10, obj2);
-                        cResult[31] = tmp44;
-                        cResult[32] = tmp53;
-                        tmp50 = tmp53;
+                      if (cResult[32] !== tmp49) {
+                        const obj2 = { children: tmp58 };
+                        class S {
+                          constructor() {
+                            return guild.getGuild();
+                          }
+                        }
+                        tmp58[0] = tmp49;
+                        tmp58[1] = tmp54;
+                        const tmp59 = closure_9(closure_10, obj2);
+                        cResult[32] = tmp49;
+                        cResult[33] = tmp59;
+                        tmp55 = tmp59;
                       } else {
-                        tmp50 = cResult[32];
+                        tmp55 = cResult[33];
                       }
-                      return tmp50;
+                      return tmp55;
                     }
                   }
-                  const obj3 = { style: tmp54, contentContainerStyle: tmp15, children: tmp40 };
-                  const tmp46 = closure_8(stateFromStores(8895).Form, obj3);
-                  cResult[26] = tmp4.container;
-                  cResult[27] = tmp40;
-                  cResult[28] = tmp15;
-                  cResult[29] = tmp46;
-                  tmp44 = tmp46;
+                  class S {
+                    constructor() {
+                      return guild.getGuild();
+                    }
+                  }
+                  tmp51[0] = tmp60;
+                  tmp51[1] = tmp15;
+                  tmp51[2] = tmp44;
+                  const tmp52 = closure_8(stateFromStores(8924).Form, tmp51);
+                  cResult[27] = tmp4.container;
+                  cResult[28] = tmp44;
+                  cResult[29] = tmp15;
+                  cResult[30] = tmp52;
+                  tmp49 = tmp52;
                 }
-                const obj4 = { style: stackPadding, spacing: nativeDefault.space.PX_24, children: tmp37 };
-                const Stack = tmp(5593).Stack;
-                const tmp43 = closure_8(Stack, obj4);
-                cResult[23] = tmp4.stackPadding;
-                cResult[24] = tmp37;
-                cResult[25] = tmp43;
-                tmp40 = tmp43;
+                class S {
+                  constructor() {
+                    return guild.getGuild();
+                  }
+                }
+                tmp46[0] = stackPadding;
+                const Stack = tmp(5600).Stack;
+                tmp46[1] = nativeDefault.space.PX_24;
+                tmp46[2] = tmp40;
+                const tmp48 = closure_8(Stack, tmp46);
+                cResult[24] = tmp4.stackPadding;
+                cResult[25] = tmp40;
+                cResult[26] = tmp48;
+                tmp44 = tmp48;
               }
-              const obj5 = { title: tmp16, hasIcons: false, children: items5 };
-              items5 = [tmp24, tmp32];
-              const tmp39 = closure_9(stateFromStores(6074).TableRowGroup, obj5);
-              cResult[20] = tmp24;
-              cResult[21] = tmp32;
-              cResult[22] = tmp39;
-              tmp37 = tmp39;
+              class S {
+                constructor() {
+                  return guild.getGuild();
+                }
+              }
+              tmp42[0] = tmp17;
+              tmp42[1] = tmp18;
+              const items4 = [tmp27, tmp35];
+              tmp42[3] = items4;
+              const tmp43 = closure_9(stateFromStores(6081).TableRowGroup, tmp42);
+              cResult[21] = tmp27;
+              cResult[22] = tmp35;
+              cResult[23] = tmp43;
+              tmp40 = tmp43;
             }
-            const obj6 = {
+            const obj3 = {
               guild: stateFromStores,
               flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-              settingType: stateFromStores(17669).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
-              label: tmp29,
+              settingType: stateFromStores(17715).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+              label: tmp33,
               disabled: !stateFromStores1,
             };
-            const tmp36 = closure_8(closure_12, obj6);
-            cResult[17] = stateFromStores;
-            cResult[18] = !stateFromStores1;
-            cResult[19] = tmp36;
-            tmp32 = tmp36;
+            const tmp39 = closure_8(closure_12, obj3);
+            cResult[18] = stateFromStores;
+            cResult[19] = !stateFromStores1;
+            cResult[20] = tmp39;
+            tmp35 = tmp39;
           }
-          const obj7 = {
+          const obj5 = {
             guild: stateFromStores,
             flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-            settingType: stateFromStores(17669).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
-            label: tmp18,
-            subLabel: tmp19,
+            settingType: stateFromStores(17715).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+            label: tmp21,
+            subLabel: tmp22,
             disabled: !stateFromStores1,
           };
-          const tmp28 = closure_8(closure_12, obj7);
-          cResult[13] = stateFromStores;
-          cResult[14] = !stateFromStores1;
-          cResult[15] = tmp28;
-          tmp24 = tmp28;
+          const tmp31 = closure_8(closure_12, obj5);
+          cResult[14] = stateFromStores;
+          cResult[15] = !stateFromStores1;
+          cResult[16] = tmp31;
+          tmp27 = tmp31;
         }
-        const items6 = [tmp4.content, contentContainerStyle];
+        const items5 = [tmp4.content];
+        class S {
+          constructor() {
+            return guild.getGuild();
+          }
+        }
         cResult[7] = contentContainerStyle;
         cResult[8] = tmp4.content;
-        cResult[9] = items6;
-        tmp15 = items6;
+        cResult[9] = items5;
+        tmp15 = items5;
       }
     }
   : (contentContainerStyle) => {
@@ -348,6 +401,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let intl2;
       let intl3;
       let intl4;
+      let intl5;
       let items3;
       let items4;
       let items5;
@@ -372,37 +426,43 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { children: items5 };
         const obj4 = { style: tmp.container, contentContainerStyle: items3, children: closure_8(Stack, obj5) };
         items3 = [tmp.content, contentContainerStyle];
-        const Form = tmp2(8895).Form;
+        const Form = tmp2(8924).Form;
         obj5 = {
           style: tmp.stackPadding,
           spacing: nativeDefault.space.PX_24,
           children: closure_9(TableRowGroup, obj6),
         };
-        Stack = tmp2(5593).Stack;
-        obj6 = { title: intl.string(stateFromStores(1126).t.OBskVU), hasIcons: false, children: items4 };
-        TableRowGroup = tmp2(6074).TableRowGroup;
+        Stack = tmp2(5600).Stack;
+        obj6 = {
+          title: intl.string(stateFromStores(1126).t["0JLdD3"]),
+          description: intl2.string(stateFromStores(1126).t.Xa1KEN),
+          hasIcons: false,
+          children: items4,
+        };
+        TableRowGroup = tmp2(6081).TableRowGroup;
         intl = tmp2(1126).intl;
+        intl2 = tmp2(1126).intl;
         const obj7 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-          settingType: stateFromStores(17669).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
-          label: intl2.string(_modDef2425.btBTIw),
-          subLabel: intl3.string(_modDef2425.n3aRYQ),
+          settingType: stateFromStores(17715).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+          label: intl3.string(_modDef2425.btBTIw),
+          subLabel: intl4.string(stateFromStores(1126).t.n3aRYQ),
           disabled: !stateFromStores1,
         };
-        intl2 = tmp2(1126).intl;
         intl3 = tmp2(1126).intl;
+        intl4 = tmp2(1126).intl;
         items4 = [closure_8(closure_12, obj7)];
         const obj8 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-          settingType: stateFromStores(17669).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
-          label: intl4.string(stateFromStores(1126).t.YZqqTX),
+          settingType: stateFromStores(17715).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+          label: intl5.string(stateFromStores(1126).t["9tlK5J"]),
           disabled: !stateFromStores1,
         };
-        intl4 = tmp2(1126).intl;
+        intl5 = tmp2(1126).intl;
         items4[1] = closure_8(closure_12, obj8);
-        items5 = [closure_8(Form, obj4), closure_8(stateFromStores(6536).NavScrim, {})];
+        items5 = [closure_8(Form, obj4), closure_8(stateFromStores(6543).NavScrim, {})];
         tmp6 = closure_9(closure_10, obj3);
       }
       return tmp6;

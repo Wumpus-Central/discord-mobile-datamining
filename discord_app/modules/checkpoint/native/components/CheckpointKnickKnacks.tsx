@@ -4,7 +4,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
 import react2 from "../../../../../_runtime/00576_react.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod4604 from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/index.tsx";
+import _mod4610 from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/index.tsx";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -60,7 +60,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             tmp12 = cResult[6];
           }
           if (cResult[7] !== tmp9) {
-            const tmp15 = jsx(_mod4604.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
+            const tmp15 = jsx(_mod4610.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
             cResult[7] = tmp9;
             cResult[8] = tmp15;
             tmp13 = tmp15;

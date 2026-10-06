@@ -193,7 +193,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
       const obj = AnalyticsUtilsDefault;
       obj.track(AnalyticEvents.OPEN_POPOUT, obj2);
       const obj3 = ActionSheetActionCreatorsDefault;
-      obj3.openLazy(asyncRequire(12336, dependencyMap.paths), "Contact Sync Info Settings");
+      obj3.openLazy(asyncRequire(12351, dependencyMap.paths), "Contact Sync Info Settings");
     }
   }, items4);
   const items5 = [onNext, onComplete];
@@ -604,7 +604,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       [loading, dependencyMap] = react.useState(false);
       ({ name, error, isNameFromContactBook } = closure_10());
       closure_10();
-      loading(12344)(navigation, navigateToLandingPage);
+      loading(12359)(navigation, navigateToLandingPage);
       const tmp8 = loading;
       if (cResult[0] !== navigation) {
         const _require = _asyncToGenerator(async (arg0) => {
@@ -713,7 +713,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj5 = { onNext: tmp10, error, loading, initialName: str, prefilledFromContactBook: tmp16 };
-          const tmp19 = closure_16(tmp8(12346), obj5);
+          const tmp19 = closure_16(tmp8(12361), obj5);
           cResult[7] = error;
           cResult[8] = loading;
           cResult[9] = tmp10;
@@ -771,7 +771,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = closure_10();
       const name = tmp5.name;
       ({ isNameFromContactBook, error } = tmp5);
-      loading(12344)(navigation, navigateToLandingPage);
+      loading(12359)(navigation, navigateToLandingPage);
       const useCallback = react.useCallback;
       let closure_0 = onNext(function* (arg0) {
         let obj2;
@@ -853,7 +853,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = { style: tmp.container, children: closure_16(tmp11, obj3) };
       obj3 = { onNext, error, loading, initialName: str, prefilledFromContactBook: tmp12 };
       str = name;
-      tmp11 = loading(12346);
+      tmp11 = loading(12361);
       if (name == null) {
         str = "";
       }
@@ -1145,7 +1145,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 return tmp22;
               }
               const obj3 = { screens: tmp13, initialRouteStack: tmp18, headerBackTitle: tmp20 };
-              const tmp24 = closure_16(tmp(6496).Navigator, obj3);
+              const tmp24 = closure_16(tmp(6503).Navigator, obj3);
               cResult[17] = tmp13;
               cResult[18] = tmp18;
               cResult[19] = tmp24;

@@ -6,7 +6,7 @@ import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import useGetOrFetchApplicationsDefault from "../../../applications/useGetOrFetchApplications.tsx";
 import ActivityPanelStateContextDefault from "ActivityPanelStateContext.tsx";
 import BlurVisualEffectViewDefault from "BlurVisualEffectView.tsx";
@@ -138,12 +138,12 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  T.__closure = { runOnJS: setMode(4612).runOnJS, setMode, ActivityPanelModes };
+                  T.__closure = { runOnJS: setMode(4618).runOnJS, setMode, ActivityPanelModes };
                   T.__workletHash = 14504167937928;
                   T.__initData = __initData;
                   cResult[13] = setMode;
                   cResult[14] = T;
-                  const obj3 = { runOnJS: setMode(4612).runOnJS, setMode, ActivityPanelModes };
+                  const obj3 = { runOnJS: setMode(4618).runOnJS, setMode, ActivityPanelModes };
                 } else {
                   class T {
                     constructor() {
@@ -166,7 +166,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[16] = pipState;
                 cResult[17] = wrapperOffset;
                 cResult[18] = {
-                  mode: setMode(17174).MorphablePanelModes.PANEL,
+                  mode: setMode(17203).MorphablePanelModes.PANEL,
                   panGestureEnabled: true,
                   pipState,
                   swipeRequiresPop: true,
@@ -175,7 +175,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                   disableHorizontalSafeAreas: true,
                 };
                 const obj4 = {
-                  mode: setMode(17174).MorphablePanelModes.PANEL,
+                  mode: setMode(17203).MorphablePanelModes.PANEL,
                   panGestureEnabled: true,
                   pipState,
                   swipeRequiresPop: true,
@@ -229,7 +229,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = ReanimatedRexport;
         obj.runOnJS(setMode)(constants.PIP);
       };
-      let obj = { runOnJS: landscape(4612).runOnJS, setMode, ActivityPanelModes };
+      let obj = { runOnJS: landscape(4618).runOnJS, setMode, ActivityPanelModes };
       const memo1 = react.useMemo(() => {
         let num2;
         let num3;
@@ -268,7 +268,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { gesture: tmp6(obj3), headerWrapperStyles: memo, headerStyles: memo1, styles: tmp };
       const callback = useCallback(fn, items2);
       obj3 = {
-        mode: landscape(17174).MorphablePanelModes.PANEL,
+        mode: landscape(17203).MorphablePanelModes.PANEL,
         panGestureEnabled: true,
         pipState,
         swipeRequiresPop: true,
@@ -276,7 +276,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         onPanMinimizeGestureEnd: callback,
         disableHorizontalSafeAreas: true,
       };
-      tmp6 = setMode(17174);
+      tmp6 = setMode(17203);
       return obj2;
     };
 let closure_17 = tmp7;

@@ -65,7 +65,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       onComplete = route.route.params.onComplete;
       const tmp4 = closure_9();
       const bottom = connectGuardianGate(1618)().bottom;
-      let obj2 = onComplete(17593);
+      let obj2 = onComplete(17639);
       connectGuardianGate = obj2.useConnectGuardianGate();
       dependencyMap = react.useRef(false);
       if (cResult[0] === connectGuardianGate.state) {
@@ -86,7 +86,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol4 = Symbol;
             if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp60 = closure_7(tmp(5968).ActivityIndicator, {});
+              const tmp60 = closure_7(tmp(5975).ActivityIndicator, {});
               cResult[7] = tmp60;
               tmp58 = tmp60;
             } else {
@@ -117,7 +117,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           ({ container, header, title } = tmp4);
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(1126).intl;
-            const stringResult = intl.string(connectGuardianGate(2493).ITlV6p);
+            const stringResult = intl.string(connectGuardianGate(2521).ITlV6p);
             cResult[10] = stringResult;
             tmp10 = stringResult;
           } else {
@@ -125,7 +125,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[11] !== tmp4.title) {
             const obj5 = { style: title, variant: "heading-xl/bold", color: "text-default", children: tmp10 };
-            const tmp14 = closure_7(tmp(4886).Text, obj5);
+            const tmp14 = closure_7(tmp(4892).Text, obj5);
             cResult[11] = tmp4.title;
             cResult[12] = tmp14;
             tmp12 = tmp14;
@@ -136,7 +136,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const description = tmp4.description;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             const intl2 = tmp(1126).intl;
-            const formatResult = intl2.format(connectGuardianGate(2493).F4GT2S, {
+            const formatResult = intl2.format(connectGuardianGate(2521).F4GT2S, {
               link: "https://support.discord.com/hc/articles/14155060633623",
             });
             cResult[13] = formatResult;
@@ -161,7 +161,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 ({ cardSection, scanPrompt } = tmp4);
                 if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl3 = tmp(1126).intl;
-                  const stringResult1 = intl3.string(connectGuardianGate(2493).Mi60fm);
+                  const stringResult1 = intl3.string(connectGuardianGate(2521).Mi60fm);
                   cResult[21] = stringResult1;
                   tmp24 = stringResult1;
                 } else {
@@ -174,7 +174,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-default",
                     children: tmp24,
                   };
-                  const tmp28 = closure_7(tmp(4886).Text, obj6);
+                  const tmp28 = closure_7(tmp(4892).Text, obj6);
                   cResult[22] = tmp4.scanPrompt;
                   cResult[23] = tmp28;
                   tmp26 = tmp28;
@@ -242,7 +242,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 return tmpResult;
                               },
                             };
-                            const tmp47 = closure_7(tmp(5594).Button, obj10);
+                            const tmp47 = closure_7(tmp(5601).Button, obj10);
                             cResult[40] = onComplete;
                             cResult[41] = tmp47;
                             tmp45 = tmp47;
@@ -304,7 +304,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj14 = { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null };
                 ({ linkCode: obj8.linkCode, expiresAt: obj8.expiresAt, refresh: obj8.onRefresh } = connectGuardianGate);
-                const tmp31 = closure_7(tmp(14689).ConnectGuardianCard, obj14);
+                const tmp31 = closure_7(tmp(14705).ConnectGuardianCard, obj14);
                 cResult[24] = connectGuardianGate.expiresAt;
                 cResult[25] = connectGuardianGate.linkCode;
                 cResult[26] = connectGuardianGate.refresh;
@@ -322,7 +322,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             tmp20 = tmp23;
           }
           const obj27 = { style: description, variant: "text-sm/medium", color: "text-muted", children: tmp15 };
-          const tmp19 = closure_7(tmp(4886).Text, obj27);
+          const tmp19 = closure_7(tmp(4892).Text, obj27);
           cResult[14] = tmp4.description;
           cResult[15] = tmp15;
           cResult[16] = tmp19;
@@ -367,7 +367,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const onComplete = route.route.params.onComplete;
       const tmp = closure_9();
       const bottom = connectGuardianGate(1618)().bottom;
-      let obj = onComplete(17593);
+      let obj = onComplete(17639);
       connectGuardianGate = obj.useConnectGuardianGate();
       dependencyMap = react.useRef(false);
       const items = [connectGuardianGate.state, onComplete];
@@ -384,7 +384,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       if ("gate" !== connectGuardianGate.state) {
-        let obj2 = { style: items1, children: closure_7(onComplete(5968).ActivityIndicator, {}) };
+        let obj2 = { style: items1, children: closure_7(onComplete(5975).ActivityIndicator, {}) };
         items1 = [,];
         ({ container: arr2[0], centered: arr2[1] } = tmp);
         tmp9 = closure_7(View, obj2);
@@ -395,20 +395,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.title,
           variant: "heading-xl/bold",
           color: "text-default",
-          children: intl.string(connectGuardianGate(2493).ITlV6p),
+          children: intl.string(connectGuardianGate(2521).ITlV6p),
         };
-        const Text = tmp4(4886).Text;
+        const Text = tmp4(4892).Text;
         intl = tmp4(1126).intl;
         items2 = [closure_7(Text, obj5)];
         const obj6 = {
           style: tmp.description,
           variant: "text-sm/medium",
           color: "text-muted",
-          children: intl2.format(connectGuardianGate(2493).F4GT2S, {
+          children: intl2.format(connectGuardianGate(2521).F4GT2S, {
             link: "https://support.discord.com/hc/articles/14155060633623",
           }),
         };
-        const Text2 = tmp4(4886).Text;
+        const Text2 = tmp4(4892).Text;
         intl2 = tmp4(1126).intl;
         items2[1] = closure_7(Text2, obj6);
         items3 = [closure_8(View, obj4), , ,];
@@ -417,14 +417,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.scanPrompt,
           variant: "text-md/semibold",
           color: "text-default",
-          children: intl3.string(connectGuardianGate(2493).Mi60fm),
+          children: intl3.string(connectGuardianGate(2521).Mi60fm),
         };
-        const Text3 = tmp4(4886).Text;
+        const Text3 = tmp4(4892).Text;
         intl3 = tmp4(1126).intl;
         items4 = [closure_7(Text3, obj8)];
         const obj10 = { shareActions: "compact", linkCode: null, expiresAt: null, onRefresh: null };
         ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-        items4[1] = closure_7(onComplete(14689).ConnectGuardianCard, obj10);
+        items4[1] = closure_7(onComplete(14705).ConnectGuardianCard, obj10);
         items3[1] = closure_8(View, obj7);
         const obj11 = { style: tmp.grow };
         items3[2] = closure_7(View, obj11);
@@ -444,7 +444,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return tmpResult;
           },
         };
-        Button = tmp4(5594).Button;
+        Button = tmp4(5601).Button;
         intl4 = tmp4(1126).intl;
         items3[3] = closure_7(View, obj12);
         tmp9 = closure_8(View, obj3);

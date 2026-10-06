@@ -6,7 +6,7 @@ import intl5 from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04807_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04813_AssetRegistry.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -164,7 +164,7 @@ export default function GuildSettingsRoleMembers(guild) {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     ActionSheetActionCreatorsDefault;
     const obj2 = { guild, role };
-    const tmp3 = asyncRequire(17786, dependencyMap.paths);
+    const tmp3 = asyncRequire(17832, dependencyMap.paths);
     openLazy(tmp3, "role-add-members-" + guild.id + "-" + role.id, obj2);
   }, items3);
   closure_6 = found.useCallback((item) => {

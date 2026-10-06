@@ -7,8 +7,8 @@ import NativePermissionConstants from "../../../native_permissions/NativePermiss
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/10390_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/10391_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/10403_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/10404_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

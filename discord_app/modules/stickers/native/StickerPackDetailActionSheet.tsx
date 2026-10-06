@@ -34,7 +34,7 @@ let closure_12 = createStyles.createStyles({
     justifyContent: "center",
     backgroundColor: "rgba(0, 0, 0, 0.85)",
   },
-  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "code" },
+  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "applicationId" },
   stickers: { paddingHorizontal: 16, marginBottom: 16 },
   popoutContainer: { position: "absolute", bottom: 50 },
 });

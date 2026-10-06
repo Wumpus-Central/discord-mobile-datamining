@@ -337,7 +337,7 @@ const memoResult = react.memo(
                       cResult[26] = tmp40;
                       cResult[27] = tmp27;
                       cResult[28] = tmp28;
-                      const tmp45 = closure_7(bottom(4612).View, obj5);
+                      const tmp45 = closure_7(bottom(4618).View, obj5);
                       class T {
                         constructor() {
                           let pointerEvents = "none";
@@ -356,7 +356,7 @@ const memoResult = react.memo(
                     const tmp42 = closure_6(FloatingActionButton2.FloatingActionButton, obj6);
                   }
                   const obj7 = { style: tmp4.gradient, pointerEvents: "none" };
-                  const tmp5Result = bottom(5605);
+                  const tmp5Result = bottom(5612);
                   const merged = Object.assign(tmp23);
                   cResult[17] = tmp23;
                   cResult[18] = tmp4.gradient;

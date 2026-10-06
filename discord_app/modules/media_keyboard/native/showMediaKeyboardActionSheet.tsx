@@ -13,7 +13,7 @@ export const hideMediaKeyboardActionSheet = function hideMediaKeyboardActionShee
 };
 export const showMediaKeyboardActionSheet = function showMediaKeyboardActionSheet(arg0) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(10366, dependencyMap.paths), MEDIA_KEYBOARD_ACTION_SHEET, arg0);
+  obj.openLazy(asyncRequire(10379, dependencyMap.paths), MEDIA_KEYBOARD_ACTION_SHEET, arg0);
 };
 export const presentLimitedLibraryPicker = function presentLimitedLibraryPicker() {
   const obj = react_nativeDefault;

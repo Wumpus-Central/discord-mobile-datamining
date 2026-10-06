@@ -267,11 +267,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let first;
       dependencyMap = undefined;
       ({ targetRef, badgeId } = arg0);
-      let obj = tieredTenureBadgeData(7119);
+      let obj = tieredTenureBadgeData(7132);
       const tieredTenureBadge = obj.getTieredTenureBadge(badgeId);
       tieredTenureBadgeData = null;
       if (null != tieredTenureBadge) {
-        const tmpResult = tieredTenureBadgeData(7119);
+        const tmpResult = tieredTenureBadgeData(7132);
         tieredTenureBadgeData = tmpResult.getTieredTenureBadgeData(tieredTenureBadge);
       }
       if (null != tieredTenureBadgeData) {
@@ -280,7 +280,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         items1 = [];
       }
-      const tmpResult3 = tieredTenureBadgeData(6891);
+      const tmpResult3 = tieredTenureBadgeData(6901);
       const tmp5 = _slicedToArray(tmpResult3.useSelectedDismissibleContent(items1), 2);
       first = tmp5[0];
       dependencyMap = tmp7;
@@ -316,7 +316,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         intl3 = intl4.intl;
         return obj;
       }, items2);
-      const tmpResult4 = tieredTenureBadgeData(9882);
+      const tmpResult4 = tieredTenureBadgeData(9895);
       const coachmark = tmpResult4.useCoachmark(targetRef, memo);
       return null;
     };

@@ -6,7 +6,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import ColorConstants from "../../../../modules/colors/native/ColorConstants.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import createStyles from "../../../components/Styles/native/createStyles.tsx";

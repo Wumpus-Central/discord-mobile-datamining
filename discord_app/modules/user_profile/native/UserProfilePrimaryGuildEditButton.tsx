@@ -164,7 +164,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
             selectedGuildId: pendingPrimaryGuildId,
             onSelectGuild: handleSelectPrimaryGuild,
           };
-          obj.openLazy(asyncRequire(14471, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", obj2);
+          obj.openLazy(asyncRequire(14487, dependencyMap.paths), "UserPrimaryGuildListBottomSheet", obj2);
         }}
         leading={tmp23Result}
         trailing={tmp23Result2}

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx
 import react2 from "../../../../../_runtime/00576_react.js";
 import intl5 from "../../../../intl/index.native.tsx";
-import _modDef4461 from "../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../_runtime/metro/04467__.js";
 import ScheduleUtils from "../../utils/ScheduleUtils.tsx";
 import GuildEventModalComponents from "GuildEventModalComponents.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -28,7 +28,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ guildEvent, recurrenceId, schedule } = onChange);
       onChange = onChange.onChange;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp6 = _modDef4461();
+        const tmp6 = _modDef4467();
         cResult[0] = tmp6;
         first = tmp6;
       } else {
@@ -219,10 +219,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = C;
         tmp15 = C;
       }
-      const obj2 = _modDef4461();
+      const obj2 = _modDef4467();
       const addResult = obj2.add(ScheduleUtils.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
       if (cResult[6] !== schedule.startDate) {
-        const obj3 = _modDef4461(schedule.startDate);
+        const obj3 = _modDef4467(schedule.startDate);
         class T {
           constructor(arg0) {
             obj = {};
@@ -239,7 +239,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp12 = cResult[7];
       }
-      const obj4 = _modDef4461();
+      const obj4 = _modDef4467();
       const addResult2 = obj4.add(ScheduleUtils.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
       if (null != recurrenceId) {
         const add = addResult.add;
@@ -272,19 +272,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       schedule = schedule.schedule;
       const onChange = schedule.onChange;
       ({ guildEvent, recurrenceId } = schedule);
-      const tmp2 = onChange(4461)();
-      let obj = onChange(4461)();
-      const addResult = obj.add(schedule(9163).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
+      const tmp2 = onChange(4467)();
+      let obj = onChange(4467)();
+      const addResult = obj.add(schedule(9198).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
       const items = [schedule.startDate];
       const memo = react.useMemo(() => {
-        const obj = _modDef4461(schedule.startDate);
+        const obj = _modDef4467(schedule.startDate);
         return obj.add(15, "minutes");
       }, items);
-      const obj3 = onChange(4461)();
-      const addResult1 = obj3.add(schedule(9163).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
+      const obj3 = onChange(4467)();
+      const addResult1 = obj3.add(schedule(9198).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
       if (null != recurrenceId) {
-        addResult.add(schedule(9163).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
-        addResult1.add(schedule(9163).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
+        addResult.add(schedule(9198).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
+        addResult1.add(schedule(9198).MAX_YEARS_AHEAD_RECURRING_EVENT, "years");
       }
       const obj2 = {
         date: schedule.startDate,
@@ -298,7 +298,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         dateLabel: intl.string(schedule(1126).t.kKOIwJ),
         timeLabel: intl2.string(schedule(1126).t["6dGmCD"]),
       };
-      const GuildEventDatetime = tmp3(9186).GuildEventDatetime;
+      const GuildEventDatetime = tmp3(9221).GuildEventDatetime;
       intl = tmp3(1126).intl;
       intl2 = tmp3(1126).intl;
       const children = [closure_4(GuildEventDatetime, obj2)];
@@ -316,7 +316,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           dateLabel: intl3.string(schedule(1126).t.CTLgZJ),
           timeLabel: intl4.string(schedule(1126).t.j2RuXF),
         };
-        const GuildEventDatetime2 = tmp3(9186).GuildEventDatetime;
+        const GuildEventDatetime2 = tmp3(9221).GuildEventDatetime;
         intl3 = tmp3(1126).intl;
         intl4 = tmp3(1126).intl;
         tmp9Result = closure_4(GuildEventDatetime2, obj4);

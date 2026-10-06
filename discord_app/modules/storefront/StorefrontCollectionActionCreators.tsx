@@ -125,7 +125,7 @@ let obj = function _maybeFetchCollectionsWithProducts() {
     flag = closure_0.includeUnpublishedCollections ?? false;
     flag2 = closure_0.ignoreCache ?? false;
     flag3 = closure_0.includePricing ?? false;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -638,7 +638,7 @@ obj = function _maybeFetchCollectionsForApplication() {
     if (includePricing === undefined) {
       includePricing = false;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

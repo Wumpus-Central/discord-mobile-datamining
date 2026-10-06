@@ -6,8 +6,10 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 const Routes = Constants.Routes;
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
+const target = "target";
 const result = size.fileFinishedImporting("modules/conjure/projects/openConjureProject.tsx");
 
+export const CONJURE_TARGET_PARAM = "target";
 export const openConjureProject = function openConjureProject(id, projectId) {
   let CHANNELResult;
   const transitionTo = router_utils.transitionTo;
@@ -18,4 +20,14 @@ export const openConjureProject = function openConjureProject(id, projectId) {
     CHANNELResult = Routes.CHANNEL(id, StaticChannelRoute.CONJURE, projectId);
   }
   transitionTo(CHANNELResult);
+};
+export const openConjureForMe = function openConjureForMe(arg0) {
+  let str;
+  const transitionTo = router_utils.transitionTo;
+  const obj = { search: str.toString() };
+  const obj2 = { [closure_1_4]: "user" };
+  router_utils;
+  const CHANNELResult = Routes.CHANNEL(arg0, StaticChannelRoute.CONJURE);
+  str = new URLSearchParams(obj2);
+  transitionTo(CHANNELResult, obj);
 };

@@ -5,7 +5,7 @@ import router_utils from "../../routing/router_utils.tsx";
 import intl3 from "../../../intl/index.native.tsx";
 import UserSettings from "../../user_settings/UserSettings.tsx";
 import FavoritesUtils from "../FavoritesUtils.tsx";
-import _modDef3367 from "../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import FavoritesActionCreators from "../FavoritesActionCreators.tsx";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import react from "../../../../_runtime/00019_react.js";
@@ -47,9 +47,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl3.intl;
-        const stringResult = intl.string(_modDef3367.YkET6R);
+        const stringResult = intl.string(_modDef3395.YkET6R);
         const intl2 = intl3.intl;
-        const stringResult1 = intl2.string(_modDef3367.ZzcwNk);
+        const stringResult1 = intl2.string(_modDef3395.ZzcwNk);
         cResult[1] = stringResult;
         cResult[2] = stringResult1;
         tmp7 = stringResult1;
@@ -90,8 +90,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = {
         isAvailable: setting,
-        label: intl.string(_modDef3367.YkET6R),
-        subLabel: intl2.string(_modDef3367.ZzcwNk),
+        label: intl.string(_modDef3395.YkET6R),
+        subLabel: intl2.string(_modDef3395.ZzcwNk),
         perform: callback,
       };
       intl = intl3.intl;

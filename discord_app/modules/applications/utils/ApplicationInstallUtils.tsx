@@ -4,7 +4,7 @@ import ApplicationIntegrationType from "../../../../discord_common/js/shared/sha
 import ApplicationCommandIndexStore from "../../application_commands/ApplicationCommandIndexStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f98863 = (oauth2_install_params) => {
+const f99048 = (oauth2_install_params) => {
   let prop;
   if (oauth2_install_params != null) {
     prop = oauth2_install_params.oauth2_install_params;
@@ -30,7 +30,7 @@ export const canInstallApplication = function canInstallApplication(installAppPr
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some(f98863);
+      someResult = values.some(f99048);
     }
     tmp = someResult;
   }
@@ -44,7 +44,7 @@ export const isAppUserInstallable = function isAppUserInstallable(integrationTyp
     if (someResult) {
       const _Object = Object;
       const values = Object.values(integrationTypesConfig);
-      someResult = values.some(f98863);
+      someResult = values.some(f99048);
     }
     tmp = someResult;
   }

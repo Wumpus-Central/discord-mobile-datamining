@@ -38,7 +38,7 @@ const memoResult = memo(
         const cResult = obj.c(61);
         channel = channel.channel;
         let tmp4 = closure_8();
-        let obj2 = channel(5572);
+        let obj2 = channel(5579);
         const canModerateRequestToSpeak = obj2.useCanModerateRequestToSpeak(channel.id);
         if (cResult[0] !== channel) {
           const obj3 = { channel };
@@ -48,15 +48,15 @@ const memoResult = memo(
         } else {
           tmp6 = cResult[1];
         }
-        const tmpResult = channel(9625);
+        const tmpResult = channel(9638);
         const actionBarPrimaryButton = tmpResult.useActionBarPrimaryButton(tmp6);
-        const tmpResult5 = channel(9604);
+        const tmpResult5 = channel(9617);
         const getActionBarHeight = tmpResult5.useGetActionBarHeight(channel.id);
-        const tmp9 = actionBarPrimaryButton(9082)(channel.id);
-        const tmpResult6 = channel(9561);
+        const tmp9 = actionBarPrimaryButton(9118)(channel.id);
+        const tmpResult6 = channel(9574);
         const tmp10 = tmpResult6.useShowStageMusicMuteButton(channel.id) && !tmp9;
         if (cResult[2] !== channel.guild_id) {
-          const tmpResult7 = channel(5574);
+          const tmpResult7 = channel(5581);
           const isStageVideoEnabledResult = tmpResult7.isStageVideoEnabled(channel.guild_id);
           cResult[2] = channel.guild_id;
           cResult[3] = isStageVideoEnabledResult;
@@ -130,14 +130,14 @@ const memoResult = memo(
                         tmp46 = tmp13Result;
                       }
                       const obj5 = { channel, isSmallSize: tmp11 };
-                      const tmp45 = closure_5(channel(9558).ChatButton, obj5);
+                      const tmp45 = closure_5(channel(9571).ChatButton, obj5);
                       cResult[18] = channel;
                       cResult[19] = tmp11;
                       cResult[20] = tmp45;
                       tmp43 = tmp45;
                     }
                   }
-                  const tmpResult8 = channel(9558);
+                  const tmpResult8 = channel(9571);
                   const obj6 = { channel, isSmallSize: tmp11 };
                   const tmp40Result = closure_5(
                     canModerateRequestToSpeak ? tmpResult8.RequestToSpeakListButton : tmpResult8.MoveToAudienceButton,
@@ -150,7 +150,7 @@ const memoResult = memo(
                   tmp39 = tmp40Result;
                 }
                 const obj7 = { channel, isSmallSize: tmp11 };
-                const tmp38 = closure_5(channel(9686).ChannelCallMicButton, obj7);
+                const tmp38 = closure_5(channel(9699).ChannelCallMicButton, obj7);
                 cResult[11] = channel;
                 cResult[12] = tmp11;
                 cResult[13] = tmp38;
@@ -160,7 +160,7 @@ const memoResult = memo(
             let tmp34 = tmp11;
             if (tmp34) {
               const obj8 = { channel, isSmallSize: tmp11 };
-              tmp34 = closure_5(tmp(9625).VideoButton, obj8);
+              tmp34 = closure_5(tmp(9638).VideoButton, obj8);
             }
             cResult[7] = channel;
             cResult[8] = tmp11;
@@ -224,7 +224,7 @@ const memoResult = memo(
                         tmp27 = tmp13Result2;
                       }
                       const obj10 = { channel, isSmallSize: tmp10 && canModerateRequestToSpeak };
-                      const tmp26 = closure_5(channel(9558).ChatButton, obj10);
+                      const tmp26 = closure_5(channel(9571).ChatButton, obj10);
                       cResult[41] = channel;
                       cResult[42] = tmp10 && canModerateRequestToSpeak;
                       cResult[43] = tmp26;
@@ -234,7 +234,7 @@ const memoResult = memo(
                   let tmp22 = canModerateRequestToSpeak;
                   if (tmp22) {
                     const obj11 = { channel, isSmallSize: tmp10 && canModerateRequestToSpeak };
-                    tmp22 = closure_5(tmp(9558).RequestToSpeakListButton, obj11);
+                    tmp22 = closure_5(tmp(9571).RequestToSpeakListButton, obj11);
                   }
                   cResult[37] = channel;
                   cResult[38] = canModerateRequestToSpeak;
@@ -243,7 +243,7 @@ const memoResult = memo(
                   tmp21 = tmp22;
                 }
                 const obj12 = { channel, isSmallSize: tmp10 && canModerateRequestToSpeak };
-                const tmp20 = closure_5(channel(9558).RequestToSpeakButton, obj12);
+                const tmp20 = closure_5(channel(9571).RequestToSpeakButton, obj12);
                 cResult[34] = channel;
                 cResult[35] = tmp10 && canModerateRequestToSpeak;
                 cResult[36] = tmp20;
@@ -253,7 +253,7 @@ const memoResult = memo(
             let tmp16 = tmp10;
             if (tmp16) {
               const obj13 = { channel, isSmallSize: tmp10 && canModerateRequestToSpeak };
-              tmp16 = closure_5(tmp(9558).MusicMuteButton, obj13);
+              tmp16 = closure_5(tmp(9571).MusicMuteButton, obj13);
             }
             cResult[30] = channel;
             cResult[31] = tmp10 && canModerateRequestToSpeak;

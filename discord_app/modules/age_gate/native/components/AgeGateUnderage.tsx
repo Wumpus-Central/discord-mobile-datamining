@@ -102,7 +102,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               tmp15 = cResult[7];
             }
-            const tmpResult2 = onClose(6016);
+            const tmpResult2 = onClose(6023);
             tmpResult2.useNavigatorBackPressHandler(tmp15);
             if (cResult[8] !== (undefined !== existingUser && existingUser)) {
               let stringResult;
@@ -123,7 +123,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[10] !== tmp8) {
               let tmp20 = null;
               if (!tmp8) {
-                tmp20 = closure_6(tmp7(6463), {});
+                tmp20 = closure_6(tmp7(6470), {});
               }
               cResult[10] = tmp8;
               cResult[11] = tmp20;
@@ -134,7 +134,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol = Symbol;
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
               const tmp26 = closure_6(AuthNavbarPlaceholderDefault, {});
-              const tmp27 = closure_6(onClose(8097).ShieldSpotIllustration, {});
+              const tmp27 = closure_6(onClose(8130).ShieldSpotIllustration, {});
               cResult[12] = tmp27;
               cResult[13] = tmp26;
               tmp24 = tmp26;
@@ -201,12 +201,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       color: "interactive-text-default",
                       children: intl4.format(onClose(1126).t["3axQdB"], { days: 30 }),
                     };
-                    const Text = tmp(4886).Text;
+                    const Text = tmp(4892).Text;
                     intl4 = tmp(1126).intl;
                     items1 = [closure_6(Text, obj4)];
                     const obj5 = { style: tmp9.buttonWrapper, children: closure_6(Button, obj6) };
                     obj6 = { onPress: onClose, text: intl5.string(onClose(1126).t.JhDw5o), grow: true };
-                    Button = tmp(5594).Button;
+                    Button = tmp(5601).Button;
                     intl5 = tmp(1126).intl;
                     items1[1] = closure_6(View, obj5);
                     tmp40 = closure_8(closure_7, obj3);
@@ -224,7 +224,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "interactive-text-default",
                   children: tmp31,
                 };
-                const tmp38 = closure_6(onClose(4886).Text, obj7);
+                const tmp38 = closure_6(onClose(4892).Text, obj7);
                 cResult[20] = tmp9.body;
                 cResult[21] = tmp31;
                 cResult[22] = tmp38;

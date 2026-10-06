@@ -290,7 +290,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   onSubmitEditing: J,
                   onFocus: tmp27,
                   onBlur: tmp30,
-                  leadingIcon: options(6548).MagnifyingGlassIcon,
+                  leadingIcon: options(6555).MagnifyingGlassIcon,
                   clearable: true,
                   returnKeyType: "search",
                   accessibilityRole: "search",
@@ -298,7 +298,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   autoCapitalize: "none",
                   disabled: undefined !== isDisabled && isDisabled,
                 };
-                const TextField = tmp(6100).TextField;
+                const TextField = tmp(6107).TextField;
                 cResult[29] = A;
                 cResult[30] = tmp27;
                 cResult[31] = J;
@@ -506,7 +506,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         onSubmitEditing: callback1,
         onFocus: callback2,
         onBlur: callback3,
-        leadingIcon: options(6548).MagnifyingGlassIcon,
+        leadingIcon: options(6555).MagnifyingGlassIcon,
         clearable: true,
         returnKeyType: "search",
         accessibilityRole: "search",
@@ -514,7 +514,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         autoCapitalize: "none",
         disabled: flag2,
       };
-      const TextField = options(6100).TextField;
+      const TextField = options(6107).TextField;
       items6 = [closure_7(TextField, obj3)];
       const tmp14 = c8;
       if (tmp16Result) {

@@ -136,7 +136,7 @@ let obj = function _executeCommand() {
             obj25 = undefined;
             c15 = 1;
             c16 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp4) {
@@ -844,7 +844,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      const obj2 = onMessageSuccess(7249);
+      const obj2 = onMessageSuccess(7262);
       nonce = obj2.createNonce();
     }
     const obj4 = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: obj5 };
@@ -855,7 +855,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       onFailure: obj3.onFailure,
     } = interactionLifecycleOptions);
     obj5 = {
-      interactionType: onMessageSuccess(1985).InteractionTypes.APPLICATION_COMMAND,
+      interactionType: onMessageSuccess(5126).InteractionTypes.APPLICATION_COMMAND,
       applicationId,
       channelId: id,
     };
@@ -880,8 +880,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
               let guildId;
               let nonce;
               ({ nonce, applicationId, channelId, guildId } = closure_0);
-              const handleInteractionResponse = onMessageSuccess(closure_2_3[26]).handleInteractionResponse;
-              onMessageSuccess(closure_2_3[26]);
+              const handleInteractionResponse = onMessageSuccess(closure_2_3[27]).handleInteractionResponse;
+              onMessageSuccess(closure_2_3[27]);
               if (guildId == null) {
                 guildId = null;
               }
@@ -895,17 +895,17 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
         });
       }
     }
-    const obj8 = { type: onMessageSuccess(7462).MessageDataType.COMMAND, message };
-    let enqueue = message(7462).enqueue;
-    message(7462);
+    const obj8 = { type: onMessageSuccess(7473).MessageDataType.COMMAND, message };
+    let enqueue = message(7473).enqueue;
+    message(7473);
     enqueue(obj8, (ok) => {
       let applicationId;
       let channelId;
       let guildId;
       let nonce;
       ({ nonce, applicationId, channelId, guildId } = closure_0);
-      const handleInteractionResponse = onMessageSuccess(closure_2_3[26]).handleInteractionResponse;
-      onMessageSuccess(closure_2_3[26]);
+      const handleInteractionResponse = onMessageSuccess(closure_2_3[27]).handleInteractionResponse;
+      onMessageSuccess(closure_2_3[27]);
       if (guildId == null) {
         guildId = null;
       }
@@ -1009,7 +1009,7 @@ obj = function _displayInteractionLifecycleInChat() {
           let tmp7 = user;
           const obj10 = { channelId: closure_1.channel.id, content: "", type, author: obj11 };
           type = interaction_data.type;
-          const tmp10 = closure_133_1(closure_133_3[29]);
+          const tmp10 = closure_133_1(closure_133_3[30]);
           if (type === closure_133_0(closure_133_3[13]).ApplicationCommandType.CHAT) {
             type = closure_133_13.CHAT_INPUT_COMMAND;
           } else {
@@ -1032,12 +1032,12 @@ obj = function _displayInteractionLifecycleInChat() {
             id: interaction_data.id,
             name: interaction_data.name,
             name_localized: command.displayName,
-            type: closure_133_0(closure_133_3[13]).InteractionTypes.APPLICATION_COMMAND,
+            type: closure_133_0(closure_133_3[25]).InteractionTypes.APPLICATION_COMMAND,
             user: obj7.userRecordToServer(closure_133_9.getCurrentUser()),
           };
-          obj7 = closure_133_0(closure_133_3[29]);
+          obj7 = closure_133_0(closure_133_3[30]);
           const obj14 = { applicationId: command.applicationId, command };
-          const obj8 = closure_133_1(closure_133_3[30]);
+          const obj8 = closure_133_1(closure_133_3[31]);
           obj8.receiveMessage(closure_1.channel.id, obj12, true, obj14);
           type = {
             onCreate(id) {
@@ -1051,12 +1051,12 @@ obj = function _displayInteractionLifecycleInChat() {
                 let result = arg1;
                 const tmp2 = null == arg1 && null != code;
                 if (tmp2) {
-                  obj = closure_1(obj11[30]);
+                  obj = closure_1(obj11[31]);
                   obj.sendClydeError(closure_1_1.channel.id, code);
                 }
                 const tmp7 = null == result && null != reason;
                 if (tmp7) {
-                  const obj2 = closure_0(obj11[26]);
+                  const obj2 = closure_0(obj11[27]);
                   result = obj2.interactionCallbackErrorReason(reason, closure_1_0.applicationId);
                 }
                 const obj4 = {
@@ -1221,11 +1221,11 @@ obj = function _stageAttachments() {
       setFailed = closure_2_2(closure_2_3[24]).setFailed;
       const ENTITY_TOO_LARGE = constants.ENTITY_TOO_LARGE;
       closure_2_2(closure_2_3[24]);
-      const intl = closure_2_0(closure_2_3[34]).intl;
+      const intl = closure_2_0(closure_2_3[35]).intl;
       const formatToPlainString = intl.formatToPlainString;
       obj = { maxSize: obj2.sizeString(closure_3) };
-      const fxEKdS = closure_2_0(closure_2_3[34]).t.fxEKdS;
-      obj2 = closure_2_0(closure_2_3[32]);
+      const fxEKdS = closure_2_0(closure_2_3[35]).t.fxEKdS;
+      obj2 = closure_2_0(closure_2_3[33]);
       setFailed(closure_1, ENTITY_TOO_LARGE, formatToPlainString(fxEKdS, obj));
     }
     const getEffectiveUploadLimit = UploadLimits.getEffectiveUploadLimit;
@@ -1238,12 +1238,12 @@ obj = function _stageAttachments() {
       let c6 = 0;
       setFailed = closure_133_2(closure_133_3[24]).setFailed;
       const tmp15 = closure_133_2(closure_133_3[24]);
-      let intl = closure_133_0(closure_133_3[34]).intl;
+      let intl = closure_133_0(closure_133_3[35]).intl;
       const obj7 = { count: closure_0.length };
       const setFailedResult = setFailed(
         closure_1,
         undefined,
-        intl.formatToPlainString(closure_133_0(closure_133_3[34]).t["9h1/1p"], obj7),
+        intl.formatToPlainString(closure_133_0(closure_133_3[35]).t["9h1/1p"], obj7),
       );
     } else if (3 === c7) {
       if (arg0 === 1) {
@@ -1296,7 +1296,7 @@ obj = function _stageAttachments() {
         setFailed = closure_133_1;
         c7 = 4;
         c8 = 1;
-        const obj6 = { value: closure_133_1(closure_133_3[35])(closure_0), done: false };
+        const obj6 = { value: closure_133_1(closure_133_3[36])(closure_0), done: false };
         return obj6;
       }
     }

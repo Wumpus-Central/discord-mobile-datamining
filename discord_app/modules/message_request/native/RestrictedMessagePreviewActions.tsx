@@ -105,7 +105,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   const callback4 = react.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { userId: user.id, channelId: channel.id };
-    obj.openLazy(asyncRequire(9817, dependencyMap.paths), closure_8, obj2);
+    obj.openLazy(asyncRequire(9830, dependencyMap.paths), closure_8, obj2);
   }, items6);
   const items8 = [message, channel.id];
   const callback5 = react.useCallback(() => {
@@ -212,7 +212,7 @@ export default function RestrictedMessagePreviewActions(channel) {
       variant: "active",
       text: intl3.string(channel(message[20]).t.xMH6vD),
       disabled: true,
-      onPress: "a",
+      onPress: "Boolean",
     };
     const Button3 = tmp2(tmp3[19]).Button;
     intl3 = tmp2(tmp3[20]).intl;

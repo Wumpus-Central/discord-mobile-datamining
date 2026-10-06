@@ -200,7 +200,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
       };
       const tmpResult = ActionSheetActionCreatorsDefault;
       tmpResult.openLazy(
-        asyncRequire(11514, dependencyMap.paths),
+        asyncRequire(11527, dependencyMap.paths),
         "AppealIngestionFreeTextAppealReasonActionSheet",
         obj3,
       );
@@ -208,23 +208,23 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = closure_8();
   const formRow = tmp;
-  let obj = isDsaEligible(11492);
+  let obj = isDsaEligible(11505);
   dependencyMap = obj.useSafetyHubAppealSignal();
   const intl = isDsaEligible(1126).intl;
   const stringResult = intl.string(isDsaEligible(1126).t["C5q+pW"]);
   const intl2 = isDsaEligible(1126).intl;
   let obj2 = { children: items };
   const stringResult1 = intl2.string(isDsaEligible(1126).t.VEcRhw);
-  const AppealIngestionModalScreen = isDsaEligible(11498).AppealIngestionModalScreen;
+  const AppealIngestionModalScreen = isDsaEligible(11511).AppealIngestionModalScreen;
   items = [
-    closure_6(isDsaEligible(11498).AppealIngestionModalHeader, {
+    closure_6(isDsaEligible(11511).AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: stringResult1,
     }),
   ];
   let obj3 = { style: tmp.container, children: closure_7(Form, obj4) };
   obj4 = { style: tmp.form, children: items1 };
-  Form = isDsaEligible(8895).Form;
+  Form = isDsaEligible(8924).Form;
   const obj5 = {
     sectionBodyStyle: tmp.formSection,
     accessibilityRole: "radiogroup",
@@ -238,11 +238,11 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
       return metroRequire(closure_9, obj, "formrow-" + index);
     }),
   };
-  const FormSection = isDsaEligible(8895).FormSection;
+  const FormSection = isDsaEligible(8924).FormSection;
   items1 = [closure_6(FormSection, obj5)];
   const obj6 = { style: tmp.disclaimer, children: closure_6(Text, obj7) };
   obj7 = { variant: "text-sm/normal", children: intl3.format(isDsaEligible(1126).t["8k9GCW"], {}) };
-  Text = isDsaEligible(4886).Text;
+  Text = isDsaEligible(4892).Text;
   intl3 = isDsaEligible(1126).intl;
   items1[1] = closure_6(handleAppealSignalSelect, obj6);
   items[1] = closure_6(handleAppealSignalSelect, obj3);

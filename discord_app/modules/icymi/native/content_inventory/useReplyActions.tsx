@@ -302,7 +302,7 @@ export const useReplyActions = function useReplyActions(cResult) {
           obj2.feedItemActioned(obj3);
           const obj5 = { content, author: tmp, sendMessage, onPressEmoji: callback1 };
           const obj4 = ActionSheetActionCreatorsDefault;
-          obj4.openLazy(asyncRequire(16449, dependencyMap.paths), "ReactActionSheet", obj5);
+          obj4.openLazy(asyncRequire(16489, dependencyMap.paths), "ReactActionSheet", obj5);
         }
       }, items6),
       openEmojiPicker: callback2,

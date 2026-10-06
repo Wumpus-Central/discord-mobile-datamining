@@ -249,7 +249,7 @@ export default function HubEmailConnectionContent(arg0) {
   [first1, _slicedToArray] = react.useState(false);
   [obj2, c5] = react.useState(null);
   _slicedToArray(react.useState(null), 2);
-  const insets = invite(6471)().insets;
+  const insets = invite(6478)().insets;
   const ref = react.useRef(null);
   const intl = intl8.intl;
   const stringResult = intl.string(intl8.t.H1jCHH);
@@ -338,7 +338,7 @@ export default function HubEmailConnectionContent(arg0) {
       }, 100);
     },
   };
-  const tmp10Result = invite(6097);
+  const tmp10Result = invite(6104);
   intl4 = intl8.intl;
   intl5 = intl8.intl;
   intl6 = intl8.intl;

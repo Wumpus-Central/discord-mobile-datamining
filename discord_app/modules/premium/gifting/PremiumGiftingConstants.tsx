@@ -1,6 +1,6 @@
 // discord_app/modules/premium/gifting/PremiumGiftingConstants.tsx
 import PremiumConstants from "../PremiumConstants.tsx";
-import _modDef2557 from "PremiumGifting.messages.js";
+import _modDef2585 from "PremiumGifting.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let BOX;
@@ -17,18 +17,18 @@ let SNOWGLOBE;
 let STANDARD_BOX;
 const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;
 const obj = {
-  [SNOWGLOBE]: _modDef2557.M6cPwB,
-  [BOX]: _modDef2557.B9XqQk,
-  [CUP]: _modDef2557["6dCq/u"],
-  [STANDARD_BOX]: _modDef2557.GzPel1,
-  [CAKE]: _modDef2557.AJ4iir,
-  [CHEST]: _modDef2557.P5keo3,
-  [COFFEE]: _modDef2557.w84vET,
-  [SEASONAL_STANDARD_BOX]: _modDef2557["vd1fu/"],
-  [SEASONAL_CAKE]: _modDef2557.aubYGR,
-  [SEASONAL_CHEST]: _modDef2557.vjxYqU,
-  [SEASONAL_COFFEE]: _modDef2557.bHuJLa,
-  [NITROWEEN_STANDARD]: _modDef2557["+HMF8k"],
+  [SNOWGLOBE]: _modDef2585.M6cPwB,
+  [BOX]: _modDef2585.B9XqQk,
+  [CUP]: _modDef2585["6dCq/u"],
+  [STANDARD_BOX]: _modDef2585.GzPel1,
+  [CAKE]: _modDef2585.AJ4iir,
+  [CHEST]: _modDef2585.P5keo3,
+  [COFFEE]: _modDef2585.w84vET,
+  [SEASONAL_STANDARD_BOX]: _modDef2585["vd1fu/"],
+  [SEASONAL_CAKE]: _modDef2585.aubYGR,
+  [SEASONAL_CHEST]: _modDef2585.vjxYqU,
+  [SEASONAL_COFFEE]: _modDef2585.bHuJLa,
+  [NITROWEEN_STANDARD]: _modDef2585["+HMF8k"],
 };
 ({
   SNOWGLOBE,

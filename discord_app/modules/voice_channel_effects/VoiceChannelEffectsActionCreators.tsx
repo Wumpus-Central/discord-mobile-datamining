@@ -51,8 +51,8 @@ export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCu
   const postResult = HTTP.post(request);
   postResult.then(closure_8, () => {});
   const items = [];
-  const tmp7 = abortController(6875);
-  items[0] = abortController(6681).CHANNEL_CALL;
+  const tmp7 = abortController(6885);
+  items[0] = abortController(6688).CHANNEL_CALL;
   tmp7(items, arg2, sound, require("SoundboardTypes").AnalyticsSoundType.ENTRY);
 };
 export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundboardEffect(
@@ -97,7 +97,7 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
   };
   const postResult = HTTP.post(request);
   postResult.then(closure_8, () => {});
-  const tmp9 = abortController(6875);
+  const tmp9 = abortController(6885);
   if (items == null) {
     items = [];
   }
@@ -125,9 +125,9 @@ export const sendVoiceChannelSoundboardEcho = function sendVoiceChannelSoundboar
   const postResult = HTTP.post(request);
   postResult.then(closure_8, () => {});
   const tmp2 = _require;
-  const tmp6 = abortController(6875);
+  const tmp6 = abortController(6885);
   if (arg3 == null) {
     items = [];
   }
-  tmp6(items, arg2, soundId, tmp2(5805).AnalyticsSoundType.ECHO);
+  tmp6(items, arg2, soundId, tmp2(5812).AnalyticsSoundType.ECHO);
 };

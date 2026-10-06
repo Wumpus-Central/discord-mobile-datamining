@@ -19,9 +19,9 @@ import openIgnoreThermalStateAlert from "../../../activities/native/openIgnoreTh
 import CallsUtils from "../../../voice_calls/native/CallsUtils.tsx";
 import CameraLottie2 from "../../../../design/components/LottieIcon/native/generated/CameraLottie.tsx";
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09653_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/09654_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../_runtime/09655_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09666_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09667_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../_runtime/09668_AssetRegistry.js";
 import ChannelCallConnectingScreen from "ChannelCallConnectingScreen.tsx";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import DisconnectRemoteButton from "DisconnectRemoteButton.tsx";
@@ -713,8 +713,8 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
               stopStream(obj2.encodeStreamKey(stateFromStores1));
             }
           }
-          const PrimaryActionButton = stateFromStores1(9076).PrimaryActionButton;
-          tmp20[0] = stateFromStores(9654);
+          const PrimaryActionButton = stateFromStores1(9112).PrimaryActionButton;
+          tmp20[0] = stateFromStores(9667);
           tmp20[1] = tmp14;
           tmp20[2] = isSmallSize;
           tmp20[3] = N;
@@ -787,7 +787,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             stopStream(obj2.encodeStreamKey(stateFromStores));
           },
         };
-        const PrimaryActionButton = stateFromStores(9076).PrimaryActionButton;
+        const PrimaryActionButton = stateFromStores(9112).PrimaryActionButton;
         intl = tmp(1126).intl;
         tmp4 = closure_15(PrimaryActionButton, obj3);
       }
@@ -1011,7 +1011,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = channel(576);
       const cResult = obj.c(15);
       channel = channel.channel;
-      const obj2 = channel(9054);
+      const obj2 = channel(9090);
       const isConnectedToVoiceChannel = obj2.useIsConnectedToVoiceChannel(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore, AuthenticationStore];
@@ -1294,7 +1294,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
   : (channel) => {
       let currentEmbeddedActivity;
       channel = channel.channel;
-      let obj = channel(9054);
+      let obj = channel(9090);
       const isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
       const items = [ChannelRTCStore, AuthenticationStore];
       const obj2 = channel(504);

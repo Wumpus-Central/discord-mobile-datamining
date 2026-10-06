@@ -8,7 +8,7 @@ import asyncRequire from "../../../../../../../_runtime/01987_asyncRequire.js";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import defaultMVCPConfig from "../../../../../../../discord_common/js/packages/flash-list/index.js";
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import LegendList from "../../../../../../../_runtime/15968_LegendList.js";
+import LegendList from "../../../../../../../_runtime/16007_LegendList.js";
 import FriendSuggestionUtils from "../../../../../friend_suggestions/FriendSuggestionUtils.tsx";
 import AddFriendsScreenUtils from "../../../friends/components/AddFriendsScreenUtils.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -77,7 +77,7 @@ let closure_12 = react.memo(function MessagesItemSuggestedFriendView(height) {
     return items;
   }, items);
   const callback = react.useCallback(() => {
-    const promise = asyncRequire(7850, dependencyMap.paths);
+    const promise = asyncRequire(7861, dependencyMap.paths);
     promise.then((result) => {
       const obj = {
         userId: suggestedFriend.user.id,

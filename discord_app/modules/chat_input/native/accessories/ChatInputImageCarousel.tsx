@@ -51,7 +51,7 @@ const memoResult = react.memo(
             }
             let tmp12 = null;
             if (null != stateFromStores) {
-              tmp12 = jsx(channelId(10360), { attachments: stateFromStores, channelId });
+              tmp12 = jsx(channelId(10373), { attachments: stateFromStores, channelId });
             }
             cResult[6] = stateFromStores;
             cResult[7] = channelId;
@@ -111,7 +111,7 @@ const memoResult = react.memo(
         );
         let tmp4 = null;
         if (null != stateFromStores) {
-          tmp4 = jsx(channelId(10360), { attachments: stateFromStores, channelId });
+          tmp4 = jsx(channelId(10373), { attachments: stateFromStores, channelId });
         }
         return tmp4;
       },

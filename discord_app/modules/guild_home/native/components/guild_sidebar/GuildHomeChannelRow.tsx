@@ -47,7 +47,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const ChannelModes = tmp(12016).ChannelModes;
+      const ChannelModes = tmp(12031).ChannelModes;
       const tmp6 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
       const container = tmp4.container;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -75,9 +75,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[5];
       }
       if (cResult[6] !== tmp6) {
-        const tmp15 = jsx(id(12016).BaseChannelName, { name: tmp10, mode: tmp6 });
-        const BaseChannelIcon = tmp(12016).BaseChannelIcon;
-        const tmp16 = <BaseChannelIcon mode={tmp6} IconComponent={id(13654).SignPostIcon} />;
+        const tmp15 = jsx(id(12031).BaseChannelName, { name: tmp10, mode: tmp6 });
+        const BaseChannelIcon = tmp(12031).BaseChannelIcon;
+        const tmp16 = <BaseChannelIcon mode={tmp6} IconComponent={id(13670).SignPostIcon} />;
         cResult[6] = tmp6;
         cResult[7] = tmp15;
         cResult[8] = tmp16;
@@ -133,7 +133,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = router_utils;
         obj.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
       }, items);
-      const ChannelModes = id(12016).ChannelModes;
+      const ChannelModes = id(12031).ChannelModes;
       if (selected) {
         DEFAULT = ChannelModes.SELECTED;
         tmp5 = tmp3;
@@ -144,10 +144,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       BaseChannelItemDefault;
       const intl = tmp5(1126).intl;
       ({ name: intl2.string(tmp5(1126).t.VbpLyU), mode: DEFAULT });
-      const BaseChannelName = tmp5(12016).BaseChannelName;
+      const BaseChannelName = tmp5(12031).BaseChannelName;
       intl2 = tmp5(1126).intl;
-      ({ mode: DEFAULT, IconComponent: tmp5(13654).SignPostIcon });
-      const BaseChannelIcon = tmp5(12016).BaseChannelIcon;
+      ({ mode: DEFAULT, IconComponent: tmp5(13670).SignPostIcon });
+      const BaseChannelIcon = tmp5(12031).BaseChannelIcon;
       return (
         <tmp7
           onPress={callback}

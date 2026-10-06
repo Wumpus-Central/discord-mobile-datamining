@@ -88,7 +88,7 @@ export default function GIFPickerItemView(onPressGIF) {
   const callback1 = react.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { item };
-    obj.openLazy(asyncRequire(10104, dependencyMap.paths), "GIFPickerItemActionSheet", obj2, "stack");
+    obj.openLazy(asyncRequire(10117, dependencyMap.paths), "GIFPickerItemActionSheet", obj2, "stack");
     const obj3 = KeyboardManagerUtils;
     const result = obj3.dismissGlobalKeyboard();
   }, items1);

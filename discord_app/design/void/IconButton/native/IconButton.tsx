@@ -177,7 +177,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       let tmp6;
-      const PressableOpacity = size(5909).PressableOpacity;
+      const PressableOpacity = size(5916).PressableOpacity;
       if (!accessibilityHidden) {
         tmp6 = accessibilityLabel;
       }

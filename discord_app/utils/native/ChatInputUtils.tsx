@@ -7,7 +7,7 @@ import useKeyboardType from "../../modules/keyboard/native/useKeyboardType.tsx";
 import PortalKeyboardUIStore from "../../modules/keyboard/native/PortalKeyboardUIStore.native.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f89232 = (item) => {
+const f89369 = (item) => {
   let tmp = typeof item === "number";
   if (typeof item === "number") {
     const obj = ScreenIndexFrozen;
@@ -28,7 +28,7 @@ function getBestActiveInput() {
           if (!map1.has("conjure-preview")) {
             const _Array = Array;
             const arr = Array.from(map1.keys());
-            const found = arr.filter(f89232);
+            const found = arr.filter(f89369);
             if (0 !== found.length) {
               const _Math = Math;
               const items = [];
@@ -153,7 +153,7 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
     } else {
       const _Array = Array;
       const arr = Array.from(obj.keys());
-      const found = arr.filter(f89232);
+      const found = arr.filter(f89369);
       if (0 !== found.length) {
         const _Math = Math;
         const items = [];
@@ -197,7 +197,7 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
               if (!obj2.has("conjure-preview")) {
                 const _Array = Array;
                 const arr = Array.from(obj2.keys());
-                const found = arr.filter(f89232);
+                const found = arr.filter(f89369);
                 if (0 !== found.length) {
                   const _Math = Math;
                   const items = [];

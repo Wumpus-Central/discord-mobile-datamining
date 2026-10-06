@@ -6,7 +6,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import GuildBadgeDefault from "../../guild/native/GuildBadge.tsx";
@@ -122,12 +122,12 @@ const memoResult = memo(
                 if (cResult[12] === tmp4.text) {
                   tmp20 = cResult[13];
                 }
-                const Text = tmp(4886).Text;
+                const Text = tmp(4892).Text;
                 const _Date = Date;
                 const self = this;
                 const self2 = this;
-                const formatUserActivityTimestamp = action(8298).formatUserActivityTimestamp;
-                action(8298);
+                const formatUserActivityTimestamp = action(8331).formatUserActivityTimestamp;
+                action(8331);
                 const date = new Date(extractTimestampResult);
                 const result = formatUserActivityTimestamp(date.getTime(), value.timestampFormatter);
                 if (cResult[14] === Text) {
@@ -190,7 +190,7 @@ const memoResult = memo(
                 lineClamp: 1,
                 children: tmp18,
               };
-              const tmp22 = closure_8(action(4886).Text, obj5);
+              const tmp22 = closure_8(action(4892).Text, obj5);
               cResult[11] = tmp18;
               cResult[12] = tmp4.text;
               cResult[13] = tmp22;
@@ -255,7 +255,7 @@ const memoResult = memo(
             lineClamp: 1,
             children: tmp3Result2.getName(stateFromStores),
           };
-          const Text = tmp6(4886).Text;
+          const Text = tmp6(4892).Text;
           tmp3Result2 = UserUtilsDefault;
           items2 = [closure_8(Text, obj6)];
           const obj7 = {
@@ -263,12 +263,12 @@ const memoResult = memo(
             color: "channels-default",
             children: formatUserActivityTimestamp(date.getTime(), value.timestampFormatter),
           };
-          const Text2 = tmp6(4886).Text;
+          const Text2 = tmp6(4892).Text;
           const _Date = Date;
           const self = this;
           const self2 = this;
-          formatUserActivityTimestamp = action(8298).formatUserActivityTimestamp;
-          action(8298);
+          formatUserActivityTimestamp = action(8331).formatUserActivityTimestamp;
+          action(8331);
           date = new Date(extractTimestampResult);
           items2[1] = closure_8(Text2, obj7);
           items1[1] = closure_9(View, obj5);
@@ -399,9 +399,9 @@ const memo2Result = memo2(
                               const obj2 = {
                                 variant: "text-xs/medium",
                                 color: "channels-default",
-                                children: intl.format(_modDef2493["5JmNgg"], obj4),
+                                children: intl.format(_modDef2521["5JmNgg"], obj4),
                               };
-                              const Text = tmp(4886).Text;
+                              const Text = tmp(4892).Text;
                               intl = tmp(1126).intl;
                               obj4 = { members: stateFromStores.approximateMemberCount };
                               tmp35 = closure_8(Text, obj2);
@@ -471,7 +471,7 @@ const memo2Result = memo2(
                     lineClamp: 1,
                     children: name,
                   };
-                  const tmp25 = closure_8(action(4886).Text, obj9);
+                  const tmp25 = closure_8(action(4892).Text, obj9);
                   cResult[13] = tmp4.header;
                   cResult[14] = name;
                   cResult[15] = tmp25;
@@ -501,7 +501,7 @@ const memo2Result = memo2(
             style: null,
             textStyle: null,
             guild: stateFromStores,
-            size: action(5971).GuildIconSizes.NORMAL,
+            size: action(5978).GuildIconSizes.NORMAL,
             animate: true,
           };
           const tmp10Result2 = GuildIconDefault;
@@ -543,7 +543,7 @@ const memo2Result = memo2(
             style: null,
             textStyle: null,
             guild: stateFromStores,
-            size: action(5971).GuildIconSizes.NORMAL,
+            size: action(5978).GuildIconSizes.NORMAL,
             animate: true,
           };
           const tmp6Result = GuildIconDefault;
@@ -571,16 +571,16 @@ const memo2Result = memo2(
             lineClamp: 1,
             children: name,
           };
-          items2[1] = closure_8(action(4886).Text, obj9);
+          items2[1] = closure_8(action(4892).Text, obj9);
           items3 = [closure_8(View, obj6)];
           let tmp11Result2 = null;
           if (undefined !== stateFromStores.approximateMemberCount) {
             const obj10 = {
               variant: "text-xs/medium",
               color: "channels-default",
-              children: intl.format(_modDef2493["5JmNgg"], obj19),
+              children: intl.format(_modDef2521["5JmNgg"], obj19),
             };
-            const Text = tmp2(4886).Text;
+            const Text = tmp2(4892).Text;
             intl = tmp2(1126).intl;
             obj19 = { members: stateFromStores.approximateMemberCount };
             tmp11Result2 = closure_8(Text, obj10);

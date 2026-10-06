@@ -9,9 +9,9 @@ import react_native2 from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import BuildOverrideStore2 from "../../../../../../build_overrides/BuildOverrideStore.tsx";
 import build_overrides_BuildOverrideUtils from "../../../../../../build_overrides/native/BuildOverrideUtils.tsx";
-import AssetRegistryDefault from "../../../../../../../../_runtime/11418_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../../../_runtime/11419_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../../../../_runtime/13058_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../../_runtime/11431_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../../../_runtime/11432_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../../../_runtime/13077_AssetRegistry.js";
 import validateBuildOverrideDefault from "../../../../../../build_overrides/validateBuildOverride.tsx";
 import size from "../../../../../../../../_runtime/metro/00002__.js";
 

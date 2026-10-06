@@ -5,14 +5,14 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import 00570__ from "../../../../_runtime/metro/00570__.js";
-import react_native3_mod from "../../../../_runtime/08009_react-native.js";
+import react_native3_mod from "../../../../_runtime/08019_react-native.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 let _require;
 
-const f96146 = () => {
+const f96287 = () => {
   state.setState({ orientationLock: null });
 };
 function handleOrientationChange(initialOrientation) {
@@ -72,7 +72,7 @@ function handleDeviceOrientationChange(LANDSCAPE) {
         const obj10 = react_native;
         const result = obj10.unlockAllOrientations();
         const tmp15Result4 = react_native2;
-        tmp15Result4.batchUpdates(f96146);
+        tmp15Result4.batchUpdates(f96287);
         c8 = false;
       }
     } else if ("PORTRAIT" === LANDSCAPE) {
@@ -91,7 +91,7 @@ function handleDeviceOrientationChange(LANDSCAPE) {
         const obj5 = react_native;
         const result1 = obj5.unlockAllOrientations();
         const tmp13Result4 = react_native2;
-        tmp13Result4.batchUpdates(f96146);
+        tmp13Result4.batchUpdates(f96287);
         c8 = false;
       }
     }
@@ -216,7 +216,7 @@ function unlockOrientation(unlockAfterRotatingToPreviousLock) {
   const obj5 = react_native;
   const result = obj5.unlockAllOrientations();
   const tmpResult4 = react_native2;
-  tmpResult4.batchUpdates(f96146);
+  tmpResult4.batchUpdates(f96287);
 }
 function lockOrientation(PORTRAIT, flag) {
   const ignoreAutoRotate = react_native.ignoreAutoRotate;
@@ -303,6 +303,6 @@ export const restoreDefaultOrientation = function restoreDefaultOrientation() {
   const obj7 = react_native;
   const result = obj7.unlockAllOrientations();
   const tmpResult8 = react_native2;
-  tmpResult8.batchUpdates(f96146);
+  tmpResult8.batchUpdates(f96287);
   lockOrientationForiOS();
 };

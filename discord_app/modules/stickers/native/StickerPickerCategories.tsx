@@ -1174,7 +1174,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         listId: ExpressionPickerViewType.STICKER,
         onLayout: callback4,
         onScroll: callback1,
-        placeholderConfig: categoryIndex(9967)(),
+        placeholderConfig: categoryIndex(9980)(),
         ref,
         scrollReporting: "callbacks",
         sections: memo,
@@ -1182,8 +1182,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         showsHorizontalScrollIndicator: false,
         style: tmp.list,
       };
-      const tmp21 = categoryIndex(9968);
-      items9[0] = closure_14(categoryIndex(6552), obj2);
+      const tmp21 = categoryIndex(9981);
+      items9[0] = closure_14(categoryIndex(6559), obj2);
       let tmp22Result = null != first && first1;
       const tmp17 = categoryIndex;
       if (tmp22Result) {
@@ -1193,12 +1193,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           accessibilityLabel: intl.string(categories(1126).t.rzCcjK),
           children: closure_14(closure_5, obj4),
         };
-        const PressableOpacity = categories(5909).PressableOpacity;
+        const PressableOpacity = categories(5916).PressableOpacity;
         intl = categories(1126).intl;
         obj4 = { style: items10, children: closure_14(Icon, obj5) };
         items10 = [,];
         ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
-        obj5 = { style: tmp.guildIcon, source: tmp17(10149) };
+        obj5 = { style: tmp.guildIcon, source: tmp17(10162) };
         Icon = categories(1188).Icon;
         tmp22Result = closure_14(PressableOpacity, obj3);
       }

@@ -89,7 +89,7 @@ class StrangerDangerWarningBanner {
           },
           impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION,
         };
-        const tmp2 = asyncRequire(9817, dependencyMap.paths);
+        const tmp2 = asyncRequire(9830, dependencyMap.paths);
         openLazy(tmp2, closure_9, obj);
       };
     }, items5);
@@ -117,7 +117,7 @@ class StrangerDangerWarningBanner {
           actionItems: null,
         };
         ModalActionCreatorsDefault;
-        const tmp2 = asyncRequire(9805, dependencyMap.paths);
+        const tmp2 = asyncRequire(9818, dependencyMap.paths);
         intl = intl5.intl;
         arr = metroImportDefault();
         ({

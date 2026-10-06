@@ -5,7 +5,7 @@ import DispatcherDefault from "../../../../Dispatcher.tsx";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl9 from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2589 from "../../../premium/gifting/GiftingBadge.messages.js";
+import _modDef2617 from "../../../premium/gifting/GiftingBadge.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
@@ -16,7 +16,7 @@ import useStoreConnectionErrorAlertDefault from "../../../premium/native/useStor
 import BadgeId from "../../../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
 import BadgeDirectoryActionCreators from "../../../badges/BadgeDirectoryActionCreators.tsx";
 import PremiumFeaturesCards from "PremiumFeaturesCards.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13363_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13382_AssetRegistry.js";
 import OutboundPromotionCardDefault from "../../../../components_native/premium/OutboundPromotionCard.tsx";
 import EntitlementGiftGroupCardDefault from "../../../../components_native/premium/EntitlementGiftGroupCard.tsx";
 import PremiumTierCardDefault from "../../../../components_native/premium/PremiumTierCard.tsx";
@@ -198,9 +198,9 @@ const forwardRefResult = react.forwardRef(
           tmp14 = cResult[5];
         }
         react = tmp14;
-        const tmpResult7 = tmp(6923);
+        const tmpResult7 = tmp(6936);
         const isPaymentsBlocked = tmpResult7.useIsPaymentsBlocked();
-        const tmpResult8 = tmp(13362);
+        const tmpResult8 = tmp(13381);
         const outboundPromotions = tmpResult8.useOutboundPromotions();
         const promotionsLoaded = outboundPromotions.promotionsLoaded;
         const activeOutboundPromotions = outboundPromotions.activeOutboundPromotions;
@@ -217,7 +217,7 @@ const forwardRefResult = react.forwardRef(
         } else {
           tmp19 = cResult[7];
         }
-        const GiftingBadgeExperiment = tmp(10471).GiftingBadgeExperiment;
+        const GiftingBadgeExperiment = tmp(10484).GiftingBadgeExperiment;
         enabled = GiftingBadgeExperiment.useConfig(tmp19).enabled;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           let items1 = [claimedOutboundPromotionCodeMap];
@@ -239,7 +239,7 @@ const forwardRefResult = react.forwardRef(
         const tmp24 = navigation(react.useState(false), 2);
         constants = tmp24[0];
         constants2 = tmp24[1];
-        const tmpResult10 = tmp(13205);
+        const tmpResult10 = tmp(13224);
         const subscriptionPlansLoaded = tmpResult10.useSubscriptionPlansLoaded();
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           class X {
@@ -249,7 +249,7 @@ const forwardRefResult = react.forwardRef(
                 const obj = recipientUserId(closure_2[25]);
                 const giftableEntitlements = obj.fetchGiftableEntitlements();
                 giftableEntitlements.then(() => {
-                  /* body not rendered: F152811 */
+                  /* body not rendered: F153044 */
                 });
                 const obj2 = analyticsLocation(closure_2[26]);
                 obj2.init();
@@ -274,7 +274,7 @@ const forwardRefResult = react.forwardRef(
                 const obj = recipientUserId(closure_2[25]);
                 const giftableEntitlements = obj.fetchGiftableEntitlements();
                 giftableEntitlements.then(() => {
-                  /* body not rendered: F152811 */
+                  /* body not rendered: F153044 */
                 });
                 const obj2 = analyticsLocation(closure_2[26]);
                 obj2.init();

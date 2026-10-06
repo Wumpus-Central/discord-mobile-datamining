@@ -18,7 +18,7 @@ export default function openForumExplicitMediaWarning(arg0, arg1) {
     importer() {
       let channelId;
       let messageId;
-      const promise = asyncRequire(8917, dependencyMap.paths);
+      const promise = asyncRequire(8946, dependencyMap.paths);
       return promise.then((result) => {
         closure_0 = result.default;
         return (arg0) => {

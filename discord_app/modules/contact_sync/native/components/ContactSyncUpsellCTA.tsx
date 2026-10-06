@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
 import ContactSyncPersistedStore from "../ContactSyncPersistedStore.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13671_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13687_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Constants from "../../../../Constants.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -194,7 +194,7 @@ const memoResult = react.memo(
             }
             return tmp12;
           }
-          const FormCTA = _location(8895).FormCTA;
+          const FormCTA = _location(8924).FormCTA;
           const tmp15 = (
             <FormCTA
               onPress={tmp5}
@@ -220,7 +220,7 @@ const memoResult = react.memo(
         const style = location.style;
         let tmp = closure_7();
         let items = [tmp.container, style];
-        const FormCTA = location(8895).FormCTA;
+        const FormCTA = location(8924).FormCTA;
         let intl = location(1126).intl;
         const intl2 = location(1126).intl;
         return (

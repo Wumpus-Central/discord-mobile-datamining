@@ -1101,7 +1101,7 @@ const memo6Result = memo6(
           arr2 = cResult[4];
         }
         const type = widget.type;
-        if (userId(7112).WidgetType.FAVORITE_GAMES === type) {
+        if (userId(7125).WidgetType.FAVORITE_GAMES === type) {
           if (cResult[5] === tmp12) {
             if (cResult[6] === result) {
               if (cResult[7] === disableInteraction) {
@@ -1127,7 +1127,7 @@ const memo6Result = memo6(
           cResult[9] = userId;
           cResult[10] = tmp54;
           tmp53 = tmp54;
-        } else if (userId(7112).WidgetType.CURRENT_GAMES === type) {
+        } else if (userId(7125).WidgetType.CURRENT_GAMES === type) {
           if (cResult[11] === tmp10) {
             let arr5;
             if (cResult[12] === arr2) {
@@ -1182,7 +1182,7 @@ const memo6Result = memo6(
                           accessibilityRole: "button",
                           children: closure_10(Text2, obj6),
                         };
-                        Text2 = tmp(4886).Text;
+                        Text2 = tmp(4892).Text;
                         const intl2 = tmp(1126).intl;
                         if (tmp10) {
                           stringResult = intl2.string(tmp(1126).t["6MwJo/"]);
@@ -1233,8 +1233,8 @@ const memo6Result = memo6(
           cResult[13] = substr;
           arr5 = substr;
         } else {
-          if (userId(7112).WidgetType.WANT_TO_PLAY_GAMES !== type) {
-            if (userId(7112).WidgetType.PLAYED_GAMES !== type) {
+          if (userId(7125).WidgetType.WANT_TO_PLAY_GAMES !== type) {
+            if (userId(7125).WidgetType.PLAYED_GAMES !== type) {
               return null;
             }
           }
@@ -1290,7 +1290,7 @@ const memo6Result = memo6(
                           accessibilityRole: "button",
                           children: closure_10(Text, obj11),
                         };
-                        Text = tmp(4886).Text;
+                        Text = tmp(4892).Text;
                         const intl = tmp(1126).intl;
                         if (tmp10) {
                           stringResult1 = intl.string(tmp(1126).t["6MwJo/"]);
@@ -1342,7 +1342,7 @@ const memo6Result = memo6(
           arr3 = substr1;
         }
         if (cResult[51] !== widget) {
-          const tmpResult2 = userId(8587);
+          const tmpResult2 = userId(8622);
           const widgetTitle = tmpResult2.getWidgetTitle(widget);
           cResult[51] = widget;
           cResult[52] = widgetTitle;
@@ -1401,8 +1401,8 @@ const memo6Result = memo6(
               cResult[62] = tmp57;
               cResult[63] = tmp59;
               cResult[64] = tmp62;
-              cResult[65] = closure_10(disableInteraction(6706), obj14);
-              const tmp67 = closure_10(disableInteraction(6706), obj14);
+              cResult[65] = closure_10(disableInteraction(6713), obj14);
+              const tmp67 = closure_10(disableInteraction(6713), obj14);
             }
           }
         }
@@ -1414,7 +1414,7 @@ const memo6Result = memo6(
             }
           }
           const obj15 = { userId, widget };
-          tmp60 = closure_10(disableInteraction(8314), obj15);
+          tmp60 = closure_10(disableInteraction(8347), obj15);
         }
         cResult[53] = disableInteraction;
         cResult[54] = stateFromStores;
@@ -1668,7 +1668,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       ({ isVisible, cardStyle } = userId);
       const tmp4 = undefined === isVisible || isVisible;
       const tmp5 = closure_14();
-      const tmpResult = tmp(12704);
+      const tmpResult = tmp(12719);
       const displayableBoardWidgets = tmpResult.useDisplayableBoardWidgets(userId);
       closure_16(tmp4, displayableBoardWidgets.length > 0);
       if (0 === displayableBoardWidgets.length) {
@@ -1725,7 +1725,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const cardStyle = userId.cardStyle;
       const tmp = closure_14();
-      let obj = userId(12704);
+      let obj = userId(12719);
       const displayableBoardWidgets = obj.useDisplayableBoardWidgets(userId);
       closure_16(flag, displayableBoardWidgets.length > 0);
       let tmp3 = null;

@@ -246,7 +246,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             found = undefined;
             if (sections != null) {
               found = arr.find(() => {
-                /* body not rendered: F142097 */
+                /* body not rendered: F142301 */
               });
             }
             closure_1 = found;
@@ -256,7 +256,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             obj.command = item;
             obj.section = found;
             obj.onPress = function onPress() {
-              /* body not rendered: F142098 */
+              /* body not rendered: F142302 */
             };
             tmp6 = item;
             obj.guildId = item.guild_id;

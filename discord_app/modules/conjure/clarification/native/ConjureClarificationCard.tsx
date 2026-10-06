@@ -109,10 +109,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp21 = cResult[3];
       }
-      const tmpResult = tmp(4594);
+      const tmpResult = tmp(4600);
       const accessibilityRole = tmpResult.useCheckboxA11yNative(tmp21).accessibilityRole;
       if (cResult[4] !== clarification.questions[bound]) {
-        const tmpResult5 = tmp(16717);
+        const tmpResult5 = tmp(16738);
         const isImageQuestionResult = tmpResult5.isImageQuestion(clarification.questions[bound]);
         cResult[4] = clarification.questions[bound];
         cResult[5] = isImageQuestionResult;
@@ -128,10 +128,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         answeredOptionIdsResult = tmp25;
       } else {
-        const tmpResult6 = tmp(16717);
+        const tmpResult6 = tmp(16738);
         answeredOptionIdsResult = tmpResult6.answeredOptionIds(first1[tmp19.id]);
       }
-      const tmpResult7 = tmp(16718);
+      const tmpResult7 = tmp(16739);
       const conjureOwnImages = tmpResult7.useConjureOwnImages(projectId, first1, tmp9);
       if (cResult[6] === first1) {
         if (cResult[7] === clarification) {
@@ -208,8 +208,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       let multiSelectAnswerResult = null;
                       if (true === clarification.questions[bound].multi_select) {
-                        const multiSelectAnswer = tmp(16719).multiSelectAnswer;
-                        const tmpResult8 = tmp(16719);
+                        const multiSelectAnswer = tmp(16740).multiSelectAnswer;
+                        const tmpResult8 = tmp(16740);
                         class Z {
                           constructor(arg0) {
                             closure_0 = onSubmit;
@@ -358,9 +358,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                         let tmp51 = null;
                                         if (null != onDismiss) {
                                           let obj8 = {
-                                            IconComponent: tmp(6017).XSmallIcon,
+                                            IconComponent: tmp(6024).XSmallIcon,
                                             onPress: onDismiss,
-                                            accessibilityLabel: intl.string(onSubmit(3723).qVXlk0),
+                                            accessibilityLabel: intl.string(onSubmit(3753).qVXlk0),
                                           };
                                           class Z {
                                             constructor(arg0) {
@@ -479,9 +479,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                               let obj9 = {
                                                 variant: "text-xs/normal",
                                                 color: "text-muted",
-                                                children: obj21.string(onSubmit(3723).tE8qbz),
+                                                children: obj21.string(onSubmit(3753).tE8qbz),
                                               };
-                                              const Text2 = tmp(4886).Text;
+                                              const Text2 = tmp(4892).Text;
                                               class Z {
                                                 constructor(arg0) {
                                                   closure_0 = onSubmit;
@@ -828,10 +828,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                                         const obj12 = {
                                                                           variant: "tertiary",
                                                                           size: "sm",
-                                                                          text: obj24.string(onSubmit(3723).Pk5lfA),
+                                                                          text: obj24.string(onSubmit(3753).Pk5lfA),
                                                                           onPress: tmp28,
                                                                         };
-                                                                        const Button = tmp(5594).Button;
+                                                                        const Button = tmp(5601).Button;
                                                                         class Z {
                                                                           constructor(arg0) {
                                                                             closure_0 = onSubmit;
@@ -896,7 +896,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                                     const obj13 = { style: tmp4.customField };
                                                                     items1[1] = closure_6(View, obj13);
                                                                     let tmp75 = tmp17;
-                                                                    const Button2 = tmp(5594).Button;
+                                                                    const Button2 = tmp(5601).Button;
                                                                     const tmp74 = closure_6;
                                                                     if (null != onSubmit) {
                                                                       tmp75 = null == tmp36;
@@ -917,7 +917,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                                                     if (bound === tmp39) {
                                                                       w1nRmT = tmp(1126).t.geKm7t;
                                                                     } else {
-                                                                      w1nRmT = onSubmit(3723).w1nRmT;
+                                                                      w1nRmT = onSubmit(3753).w1nRmT;
                                                                     }
                                                                     items1[2] = tmp74(Button2, obj15);
                                                                     tmp69(View, obj11);
@@ -1222,9 +1222,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   const obj18 = {
                                     variant: "text-xs/semibold",
                                     color: "text-muted",
-                                    children: obj14.formatToPlainString(onSubmit(3723).yzYUjq, obj19),
+                                    children: obj14.formatToPlainString(onSubmit(3753).yzYUjq, obj19),
                                   };
-                                  let Text = tmp(4886).Text;
+                                  let Text = tmp(4892).Text;
                                   class Z {
                                     constructor(arg0) {
                                       closure_0 = onSubmit;
@@ -1613,9 +1613,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       id = tmp12;
       let tmp13 = true === tmp12.multi_select;
       let closure_11 = tmp13;
-      let obj2 = clarification(4594);
+      let obj2 = clarification(4600);
       const accessibilityRole = obj2.useCheckboxA11yNative({ checked: false }).accessibilityRole;
-      let obj3 = clarification(16717);
+      let obj3 = clarification(16738);
       const isImageQuestionResult = obj3.isImageQuestion(clarification.questions[bound]);
       let c13 = isImageQuestionResult;
       if (tmp13) {
@@ -1625,11 +1625,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         answeredOptionIdsResult = tmp18;
       } else {
-        let tmp14Result = tmp14(16717);
+        let tmp14Result = tmp14(16738);
         answeredOptionIdsResult = tmp14Result.answeredOptionIds(first[tmp12.id]);
       }
       c14 = answeredOptionIdsResult;
-      let tmp14Result3 = tmp14(16718);
+      let tmp14Result3 = tmp14(16739);
       const conjureOwnImages = tmp14Result3.useConjureOwnImages(projectId, first, tmp4);
       let items = [first, clarification, bound, onSubmit, clarification.questions[bound].id];
       callback = obj.useCallback((arg0) => {
@@ -1706,7 +1706,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let multiSelectAnswerResult = null;
       if (tmp13) {
-        let tmp14Result4 = tmp14(16719);
+        let tmp14Result4 = tmp14(16740);
         multiSelectAnswerResult = tmp14Result4.multiSelectAnswer(
           tmp12,
           answeredOptionIdsResult,
@@ -1751,9 +1751,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let obj8 = {
           variant: "text-xs/semibold",
           color: "text-muted",
-          children: intl.formatToPlainString(onSubmit(3723).yzYUjq, obj9),
+          children: intl.formatToPlainString(onSubmit(3753).yzYUjq, obj9),
         };
-        let Text = tmp14(4886).Text;
+        let Text = tmp14(4892).Text;
         intl = tmp14(1126).intl;
         obj9 = { index: bound + 1, total: clarification.questions.length };
         tmp32 = closure_6(Text, obj8);
@@ -1765,16 +1765,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "header",
         children: tmp12.question,
       };
-      items4[1] = closure_6(clarification(4886).Text, obj10);
+      items4[1] = closure_6(clarification(4892).Text, obj10);
       items5 = [closure_7(c5, obj7)];
       let tmp35Result = null;
       if (null != onDismiss) {
         const obj11 = {
-          IconComponent: clarification(6017).XSmallIcon,
+          IconComponent: clarification(6024).XSmallIcon,
           onPress: onDismiss,
-          accessibilityLabel: intl2.string(onSubmit(3723).qVXlk0),
+          accessibilityLabel: intl2.string(onSubmit(3753).qVXlk0),
         };
-        const tmp38 = onSubmit(16551);
+        const tmp38 = onSubmit(16591);
         intl2 = tmp14(1126).intl;
         tmp35Result = tmp35(tmp38, obj11);
       }
@@ -1782,8 +1782,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items6 = [closure_7(c5, obj6), , , ,];
       let tmp35Result5 = null;
       if (tmp13) {
-        const obj12 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(onSubmit(3723).tE8qbz) };
-        const Text2 = tmp14(4886).Text;
+        const obj12 = { variant: "text-xs/normal", color: "text-muted", children: intl3.string(onSubmit(3753).tE8qbz) };
+        const Text2 = tmp14(4892).Text;
         intl3 = tmp14(1126).intl;
         tmp35Result5 = tmp35(Text2, obj12);
       }
@@ -1797,7 +1797,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           onPick: callback1,
           own: conjureOwnImages.controlsFor(clarification.questions[bound], tmp10),
         };
-        const tmp43 = onSubmit(16720);
+        const tmp43 = onSubmit(16741);
         tmp35Result6 = tmp35(tmp43, obj13);
       } else {
         const options = tmp12.options;
@@ -1887,8 +1887,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (!isImageQuestionResult) {
         const obj14 = {
           size: "md",
-          placeholder: intl4.string(onSubmit(3723)["tOC+tn"]),
-          accessibilityLabel: intl5.formatToPlainString(onSubmit(3723)["4JeYPB"], obj15),
+          placeholder: intl4.string(onSubmit(3753)["tOC+tn"]),
+          accessibilityLabel: intl5.formatToPlainString(onSubmit(3753)["4JeYPB"], obj15),
           value: str,
           onChange(arg0) {
             let closure_0 = arg0;
@@ -1902,7 +1902,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           onSubmitEditing: callback3,
           returnKeyType: "send",
         };
-        const TextInput = tmp14(6098).TextInput;
+        const TextInput = tmp14(6105).TextInput;
         intl4 = tmp14(1126).intl;
         intl5 = tmp14(1126).intl;
         obj15 = { question: clarification.questions[bound].question };
@@ -1926,10 +1926,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const obj17 = {
             variant: "tertiary",
             size: "sm",
-            text: intl6.string(onSubmit(3723).Pk5lfA),
+            text: intl6.string(onSubmit(3753).Pk5lfA),
             onPress: callback2,
           };
-          const Button = tmp14(5594).Button;
+          const Button = tmp14(5601).Button;
           intl6 = tmp14(1126).intl;
           tmp35Result8 = tmp35(Button, obj17);
         }
@@ -1937,7 +1937,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items7 = [tmp35Result8, ,];
       const obj18 = { style: tmp.customField };
       items7[1] = closure_6(c5, obj18);
-      const Button2 = tmp14(5594).Button;
+      const Button2 = tmp14(5601).Button;
       if (!tmp10) {
         tmp10 = null == tmp28;
       }
@@ -1957,7 +1957,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (bound === clarification.questions.length - 1) {
         w1nRmT = tmp14(1126).t.geKm7t;
       } else {
-        w1nRmT = onSubmit(3723).w1nRmT;
+        w1nRmT = onSubmit(3753).w1nRmT;
       }
       items7[2] = closure_6(Button2, obj19);
       tmp30Result = tmp30(tmp31, obj16);

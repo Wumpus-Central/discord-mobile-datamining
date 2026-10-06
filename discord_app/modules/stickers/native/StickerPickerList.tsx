@@ -10,7 +10,7 @@ import PremiumUpsellSectionDividerDefault from "../../premium/roadblocks/native/
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
 import StickerPickerStore from "StickerPickerStore.tsx";
 import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
-import AssetRegistryDefault from "../../../../_runtime/10143_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/10156_AssetRegistry.js";
 import useStickerPickerListData from "useStickerPickerListData.tsx";
 import StickerPickerPremiumSearchUpsellDefault from "StickerPickerPremiumSearchUpsell.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";

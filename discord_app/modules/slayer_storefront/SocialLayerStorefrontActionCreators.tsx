@@ -179,7 +179,7 @@ let obj = function _fetchSocialLayerStorefront2() {
     if (closure_2 === undefined) {
       obj6 = {};
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -282,7 +282,7 @@ obj = function _fetchSocialLayerStorefrontSkuWithUrl2() {
     if (closure_2 === undefined) {
       obj7 = {};
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

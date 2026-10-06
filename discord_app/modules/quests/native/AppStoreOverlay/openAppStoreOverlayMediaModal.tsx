@@ -124,7 +124,7 @@ let obj = function _openAppStoreOverlayMediaModal() {
         onClose: 0,
       }),
     );
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

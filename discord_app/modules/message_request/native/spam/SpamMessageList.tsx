@@ -29,7 +29,7 @@ let obj3;
 let obj4;
 let size;
 let tmp3;
-const MessageRequestEmptyDefault = tmp3(17066);
+const MessageRequestEmptyDefault = tmp3(17092);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty, FlatList: metroRequire } = react_native);
 const AnalyticEvents = Constants.AnalyticEvents;
 ({ jsx: metroImportAll, jsxs: c9 } = Fragment);
@@ -954,10 +954,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_11();
       importDefault = tmp2;
       const bottom = useSafeAreaInsetsDefault().bottom;
-      let obj = goToMessageRequestPreview(17065);
+      let obj = goToMessageRequestPreview(17091);
       dependencyMap = obj.useSpamMessageRequestCount();
       const arr = useSortedSpamMessageRequestsDefault();
-      let obj2 = goToMessageRequestPreview(17063);
+      let obj2 = goToMessageRequestPreview(17089);
       hasSingleMessageRequest = obj2.useListHasSingleSpamMessageRequest();
       useMountEffectDefault(() => {
         const obj = AnalyticsUtilsDefault;

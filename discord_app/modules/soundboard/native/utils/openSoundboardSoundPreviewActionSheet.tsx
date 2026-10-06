@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/soundboard/native/utils/openS
 export default function openSoundboardSoundPreviewActionSheet(channel, sound, analyticsSource, soundGridLocation) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { channel, sound, soundGridLocation, analyticsSource };
-  obj.openLazy(asyncRequire(17243, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj2);
+  obj.openLazy(asyncRequire(17272, dependencyMap.paths), "SoundboardSoundPreviewActionSheet", obj2);
 }

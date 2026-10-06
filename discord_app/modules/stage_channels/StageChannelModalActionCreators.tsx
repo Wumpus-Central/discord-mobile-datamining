@@ -72,14 +72,14 @@ function connectAndOpen(channel) {
     result = obj.shouldShowVoiceChannelChangeConfirmation(channel);
   }
   if (result) {
-    const obj2 = flag2(8070);
+    const obj2 = flag2(8103);
     result = obj2.showChannelChangeConfirmationAlert(channel, () => {
       connectAndOpen(channel, flag, flag2, true);
     });
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      const obj3 = flag2(8070);
+      const obj3 = flag2(8103);
       obj3.navigateToStage(channel, voiceChannelId);
     }
   }

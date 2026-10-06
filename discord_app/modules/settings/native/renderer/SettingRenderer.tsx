@@ -812,7 +812,7 @@ let closure_27 = react.memo((arg0) => {
   let trailing;
   const tmp = trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14505);
+  let obj = trailing(14521);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
@@ -848,19 +848,19 @@ let closure_27 = react.memo((arg0) => {
     end,
   };
   tmp12 = null;
-  const TableRow = tmp(5993).TableRow;
+  const TableRow = tmp(6000).TableRow;
   if (null != trailing) {
     tmp12 = callback;
   }
   tmp11Result = null;
   if (null != IconComponent) {
     const obj3 = { IconComponent, variant };
-    tmp11Result = closure_14(tmp(5993).TableRow.Icon, obj3);
+    tmp11Result = closure_14(tmp(6000).TableRow.Icon, obj3);
   }
   tmp11Result2 = null;
   if (null != trailing) {
     const obj4 = { text: trailing };
-    tmp11Result2 = closure_14(tmp(5993).TableRow.TrailingText, obj4);
+    tmp11Result2 = closure_14(tmp(6000).TableRow.TrailingText, obj4);
   }
   const children = [closure_14(TableRow, obj2)];
   if (highlightSettingItem) {

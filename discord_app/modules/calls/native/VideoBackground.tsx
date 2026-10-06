@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import Constants from "../../../Constants.tsx";
 import native from "../../../design/void/native.tsx";
 import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import VideoBackgroundManagerDefault from "VideoBackgroundManager.tsx";
 import useProfileTileGradientDefault from "useProfileTileGradient.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -34,12 +34,12 @@ function useDominantRGBFromImage(assetImage, cResult) {
     tmp = first;
   }
   const tmp3 = first;
-  const tmp5 = first(7921)();
+  const tmp5 = first(7932)();
   dependencyMap = tmp5;
   let hexToRgbResult;
   const useState = react.useState;
   if (null != assetImage) {
-    hexToRgbResult = tmp3(7922).cachedDominantColors[assetImage];
+    hexToRgbResult = tmp3(7933).cachedDominantColors[assetImage];
   }
   if (hexToRgbResult == null) {
     const obj2 = require("ColorUtils");

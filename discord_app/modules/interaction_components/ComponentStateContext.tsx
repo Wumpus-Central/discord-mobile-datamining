@@ -2,7 +2,8 @@
 import Fragment from "../../../_runtime/react/00021_Fragment.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Server from "../../flow/Server.tsx";
-import InteractionTypes from "../interactions/InteractionTypes.tsx";
+import InteractionTypes from "../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
+import interactions_InteractionTypes from "../interactions/InteractionTypes.tsx";
 import InteractionComponentTypes from "InteractionComponentTypes.tsx";
 import useMountEffectDefault from "../../hooks/useMountEffect.tsx";
 import InteractionUtils from "../interactions/InteractionUtils.tsx";
@@ -50,9 +51,9 @@ function getActionComponentState(interaction, id) {
   }
   let DISABLED = InteractionComponentTypes.ActionComponentState.NORMAL;
   let DISABLED2 = DISABLED;
-  const tmp3 = null != interaction && interaction.state !== InteractionTypes.InteractionState.FAILED;
+  const tmp3 = null != interaction && interaction.state !== interactions_InteractionTypes.InteractionState.FAILED;
   if (tmp3) {
-    if (interaction.data.interactionType === Server.InteractionTypes.MESSAGE_COMPONENT) {
+    if (interaction.data.interactionType === InteractionTypes.InteractionTypes.MESSAGE_COMPONENT) {
       if (interaction.data.componentId === id.id) {
         DISABLED = InteractionComponentTypes.ActionComponentState.LOADING;
       }
@@ -497,16 +498,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       });
       let guild_id;
-      const useCurrentUserCommunicationDisabled = channel(7636).useCurrentUserCommunicationDisabled;
-      channel(7636);
+      const useCurrentUserCommunicationDisabled = channel(7647).useCurrentUserCommunicationDisabled;
+      channel(7647);
       if (channel != null) {
         guild_id = channel.guild_id;
       }
       const tmp8 = _slicedToArray(useCurrentUserCommunicationDisabled(guild_id), 2)[1];
-      const tmpResult = channel(6772);
+      const tmpResult = channel(6782);
       const isThreadModerator = tmpResult.useIsThreadModerator(channel);
       let tmp11 = !stateFromStores;
-      const tmpResult2 = channel(6772);
+      const tmpResult2 = channel(6782);
       const canUnarchiveThread = tmpResult2.useCanUnarchiveThread(channel);
       if (stateFromStores) {
         tmp11 = stateFromStores1;
@@ -624,7 +625,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const fn = function l(arg0) {
         let str = "message";
-        const tmp = closure_1(context[18]);
+        const tmp = closure_1(context[19]);
         const tmp2 = id;
         if (null != context.modal) {
           str = "modal";
@@ -654,7 +655,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [id, context];
       const validate = react.useCallback((arg0) => {
         let str = "message";
-        const tmp = closure_1(context[18]);
+        const tmp = closure_1(context[19]);
         const tmp2 = id;
         if (null != context.modal) {
           str = "modal";
@@ -1014,7 +1015,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                   state: tmp17,
                   executeStateUpdate: tmp13,
                   isDisabled: false,
-                  visualState: tmp(5122).ActionComponentState.NORMAL,
+                  visualState: tmp(5129).ActionComponentState.NORMAL,
                   error,
                 };
                 class S {
@@ -1133,7 +1134,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         state: stateFromStores,
         executeStateUpdate,
         isDisabled: false,
-        visualState: tmp(5122).ActionComponentState.NORMAL,
+        visualState: tmp(5129).ActionComponentState.NORMAL,
         error,
       };
       return obj2;
@@ -1200,7 +1201,7 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
             message: ApplicationWidget_str,
             validators,
             getParents(arg0) {
-              const obj = message(applicationWidget[22]);
+              const obj = message(applicationWidget[23]);
               return obj.getParents(ApplicationWidget_str.components, arg0);
             },
           };
@@ -1216,7 +1217,7 @@ export const ComponentStateContextProvider = function ComponentStateContextProvi
             validationErrors,
             setValidationErrors,
             getParents(arg0) {
-              const obj = message(applicationWidget[22]);
+              const obj = message(applicationWidget[23]);
               return obj.getParents(components.components, arg0);
             },
           };

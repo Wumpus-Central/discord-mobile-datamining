@@ -5,75 +5,119 @@ import HTTPUtils from "../../../discord_common/js/packages/http-utils/HTTPUtils.
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let c1, c4;
+let c1, c4, c5;
 
 let obj = function _fetchCheckpointData() {
   obj = _asyncToGenerator(async () => {
-    let closure_1;
-    let closure_2;
-    let flag;
     let closure_0 = arg0;
-    if (1 === c4) {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        let c5 = 3;
         throw value;
       } else if (arg0 === 2) {
-        c5 = 3;
-        const obj5 = { value, done: true };
-        return obj5;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        const obj11 = closure_130_1(closure_130_2[2]);
-        obj11.dispatch({ type: "CHECKPOINT_FETCH_START" });
-        if (flag) {
-          const obj6 = {
-            type: "CHECKPOINT_FETCH_SUCCESS",
-            stats: closure_130_0(closure_130_2[3]).MOCK_CHECKPOINT_STATS,
-            character: null,
-          };
-          const dispatch = closure_130_1(closure_130_2[2]).dispatch;
-          const tmp23 = closure_130_1(closure_130_2[2]);
-          dispatch(obj6);
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      let c3;
+      try {
+        let flag;
+        let body;
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            let closure_2 = tmp;
+            let closure_1 = tmp4;
+            flag = closure_0;
+            if (closure_0 === undefined) {
+              flag = false;
+            }
+            body = undefined;
+            c4 = 1;
+            c5 = 1;
+            return { value: "Reflect", done: true };
+          }
+        } else if (1 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            const obj11 = closure_130_1(closure_130_2[2]);
+            obj11.dispatch({ type: "CHECKPOINT_FETCH_START" });
+            if (flag) {
+              const obj6 = {
+                type: "CHECKPOINT_FETCH_SUCCESS",
+                stats: closure_130_0(closure_130_2[3]).MOCK_CHECKPOINT_STATS,
+                character: null,
+              };
+              const dispatch = closure_130_1(closure_130_2[2]).dispatch;
+              const tmp23 = closure_130_1(closure_130_2[2]);
+              dispatch(obj6);
+              c5 = 3;
+              return { value: true, done: true };
+            } else {
+              c3 = 1;
+              const HTTP = closure_130_0(closure_130_2[4]).HTTP;
+              const obj7 = { url: closure_130_4.CHECKPOINT, rejectWithError: true };
+              c4 = 3;
+              c5 = 1;
+              const obj8 = { value: HTTP.get(obj7), done: false };
+              return obj8;
+            }
+          }
+        } else if (2 === c4) {
+          c3 = 0;
+          const obj4 = closure_130_1(closure_130_2[2]);
+          obj4.dispatch({ type: "CHECKPOINT_FETCH_FAILED" });
+          c5 = 3;
+          return { value: false, done: true };
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          c5 = 3;
+          const obj9 = { value, done: true };
+          return obj9;
         } else {
-          let c3 = 1;
-          const HTTP = closure_130_0(closure_130_2[4]).HTTP;
-          const obj7 = { url: closure_130_4.CHECKPOINT, rejectWithError: true };
-          c4 = 3;
-          c5 = 1;
-          const obj8 = { value: HTTP.get(obj7), done: false };
-          return obj8;
+          body = value.body;
+          let statsFromServerResult = null;
+          const dispatch2 = closure_130_1(closure_130_2[2]).dispatch;
+          const tmp37 = closure_130_1(closure_130_2[2]);
+          if (null != body.stats) {
+            obj = closure_130_0(closure_130_2[5]);
+            statsFromServerResult = obj.statsFromServer(body.stats);
+          }
+          const obj10 = { type: "CHECKPOINT_FETCH_SUCCESS", stats: statsFromServerResult, character: body.character };
+          dispatch2(obj10);
+          c3 = 0;
+          c5 = 3;
+          return { value: true, done: true };
+        }
+      } catch (tmp27) {
+        if (0 === c3) {
+          c5 = 3;
+          throw tmp27;
+        } else {
+          c4 = 2;
         }
       }
-    } else if (2 === c4) {
-      c3 = 0;
-      const obj4 = closure_130_1(closure_130_2[2]);
-      obj4.dispatch({ type: "CHECKPOINT_FETCH_FAILED" });
-    } else if (arg0 === 1) {
-      c5 = 3;
-      throw value;
-    } else if (arg0 === 2) {
-      c3 = 0;
-      c5 = 3;
-      const obj9 = { value, done: true };
-      return obj9;
-    } else {
-      const body = value.body;
-      let statsFromServerResult = null;
-      const dispatch2 = closure_130_1(closure_130_2[2]).dispatch;
-      const tmp37 = closure_130_1(closure_130_2[2]);
-      if (null != body.stats) {
-        obj = closure_130_0(closure_130_2[5]);
-        statsFromServerResult = obj.statsFromServer(body.stats);
-      }
-      const obj10 = { type: "CHECKPOINT_FETCH_SUCCESS", stats: statsFromServerResult, character: body.character };
-      dispatch2(obj10);
-      c3 = 0;
     }
-    await "IconComponent";
-    flag = closure_0;
-    if (closure_0 === undefined) {
-      flag = false;
-    }
-    return "Set";
   });
   return obj(...arguments);
 };

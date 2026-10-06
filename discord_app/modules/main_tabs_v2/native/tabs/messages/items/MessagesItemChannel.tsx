@@ -7,7 +7,7 @@ import defaultMVCPConfig from "../../../../../../../discord_common/js/packages/f
 import useScaledTextLineHeight from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
 import MessagesItemChannelBase from "channel/MessagesItemChannelBase.tsx";
 import MessagesItemPlaceholderDefault from "MessagesItemPlaceholder.tsx";
-import LegendList from "../../../../../../../_runtime/15968_LegendList.js";
+import LegendList from "../../../../../../../_runtime/16007_LegendList.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";

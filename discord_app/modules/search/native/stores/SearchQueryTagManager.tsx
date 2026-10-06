@@ -44,7 +44,7 @@ class SearchQueryTagManager {
     items[
       HermesBuiltin.arraySpread(
         items,
-        tags.filter((item) => item !== obj && item !== self),
+        tags.filter((item) => item !== userId && item !== closure_1_1),
         0,
       )
     ] = {

@@ -224,7 +224,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 const result = openMemberVerificationCancelPendingAlert(obj);
               }
             }
-            const tmp26 = closure_7(tmp(5594).Button, obj2);
+            const tmp26 = closure_7(tmp(5601).Button, obj2);
             cResult[17] = tmp15;
             cResult[18] = tmp26;
             tmp24 = tmp26;
@@ -278,7 +278,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 const result = openMemberVerificationCancelPendingAlert(obj);
               }
             }
-            const tmp31 = closure_7(tmp(5594).Button, obj3);
+            const tmp31 = closure_7(tmp(5601).Button, obj3);
             cResult[20] = tmp16;
             cResult[21] = tmp31;
             tmp29 = tmp31;
@@ -319,7 +319,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 const result = openMemberVerificationCancelPendingAlert(obj);
               }
             }
-            const obj4 = { icon: tmp(6588).ListViewIcon, header: tmp17, buttons: tmp32 };
+            const obj4 = { icon: tmp(6595).ListViewIcon, header: tmp17, buttons: tmp32 };
             const tmp38 = MemberVerificationAlertDefault;
             const merged = Object.assign(tmp6);
             const tmp42 = closure_7(tmp38, obj4);
@@ -427,19 +427,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         formatToPlainStringResult = intl.string(tmp2(1126).t["0sTyEb"]);
       }
       const obj3 = {
-        icon: guildId(6588).ListViewIcon,
+        icon: guildId(6595).ListViewIcon,
         header: formatToPlainStringResult,
         buttons: closure_9(closure_8, obj4),
       };
-      const tmp9 = onClose(5927);
+      const tmp9 = onClose(5934);
       const merged1 = Object.assign(merged);
       obj4 = { children: items4 };
       const obj5 = { variant: "secondary", text: intl3.string(guildId(1126).t.h3aGmv), onPress: callback };
-      const Button = tmp2(5594).Button;
+      const Button = tmp2(5601).Button;
       intl3 = tmp2(1126).intl;
       items4 = [closure_7(Button, obj5)];
       const obj6 = { text: intl4.string(guildId(1126).t.OQFlFD), variant: "destructive", onPress: callback1 };
-      const Button2 = tmp2(5594).Button;
+      const Button2 = tmp2(5601).Button;
       intl4 = tmp2(1126).intl;
       items4[1] = closure_7(Button2, obj6);
       return closure_7(tmp9, obj3);

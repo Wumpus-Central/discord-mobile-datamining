@@ -104,11 +104,11 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   _setTimeout = setTimeout;
                   num2 = 1000;
                   closure_4.current = setTimeout(() => {
-                    /* body not rendered: F142240 */
+                    /* body not rendered: F142444 */
                   }, 1000);
                 }
                 return () => {
-                  /* body not rendered: F142241 */
+                  /* body not rendered: F142445 */
                 };
               }
             }

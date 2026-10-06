@@ -14,5 +14,5 @@ export default function showLongPressForumPostActionSheet(thread, parentChannel)
   }
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { thread, parentChannel, onClose: hideActionSheet };
-  obj.openLazy(asyncRequire(10033, dependencyMap.paths), "ForumPostLongPressActionSheet", obj2);
+  obj.openLazy(asyncRequire(10046, dependencyMap.paths), "ForumPostLongPressActionSheet", obj2);
 }

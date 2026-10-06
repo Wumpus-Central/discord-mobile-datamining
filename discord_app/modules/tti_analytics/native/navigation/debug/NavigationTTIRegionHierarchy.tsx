@@ -462,7 +462,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let descendantTracking;
       let hasChildren;
       let tracking;
-      const f124895 = () => {
+      const f125073 = () => {
         map = new Map();
         return map;
       };
@@ -479,8 +479,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let ref;
       const regionId = react.useId();
       context = react.useContext(depth);
-      [obj2, c3] = context(react.useState(f124895), 2);
-      context(react.useState(f124895), 2);
+      [obj2, c3] = context(react.useState(f125073), 2);
+      context(react.useState(f125073), 2);
       const tmp4 = context(react.useState(false), 2);
       let closure_4 = tmp4[1];
       let num;

@@ -117,11 +117,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return obj;
       };
-      const tmpResult2 = isVisible(4612);
+      const tmpResult2 = isVisible(4618);
       fn2.__closure = {
         useReducedMotion: stateFromStores,
         VISIBILITY_OFFSET,
-        withSpring: isVisible(5597).withSpring,
+        withSpring: isVisible(5604).withSpring,
         isVisible,
         SPRING_CONFIG,
       };
@@ -130,7 +130,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({
         useReducedMotion: stateFromStores,
         VISIBILITY_OFFSET,
-        withSpring: isVisible(5597).withSpring,
+        withSpring: isVisible(5604).withSpring,
         isVisible,
         SPRING_CONFIG,
       });
@@ -212,7 +212,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                     return tmp44;
                                   }
                                   const obj3 = { style: tmp10, children: tmp40 };
-                                  const tmp47 = closure_6(stateFromStores(4612).View, obj3);
+                                  const tmp47 = closure_6(stateFromStores(4618).View, obj3);
                                   cResult[35] = tmp40;
                                   cResult[36] = tmp10;
                                   cResult[37] = tmp47;
@@ -227,7 +227,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                   useAngle: true,
                                   children: tmp36,
                                 };
-                                const tmp43 = closure_6(stateFromStores(5605), obj4);
+                                const tmp43 = closure_6(stateFromStores(5612), obj4);
                                 cResult[32] = tmp4.border;
                                 cResult[33] = tmp36;
                                 cResult[34] = tmp43;
@@ -262,7 +262,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     fractionalPremiumState,
                     premiumGroupRole,
                   };
-                  const tmp31 = closure_6(stateFromStores(6907), obj8);
+                  const tmp31 = closure_6(stateFromStores(6917), obj8);
                   cResult[19] = fractionalPremiumState;
                   cResult[20] = guild;
                   cResult[21] = premiumGroupRole;
@@ -282,7 +282,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               tmp23 = tmp26;
             }
             const obj10 = { style: tmp4.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name };
-            const tmp22 = closure_6(isVisible(4886).Text, obj10);
+            const tmp22 = closure_6(isVisible(4892).Text, obj10);
             cResult[12] = guild.name;
             cResult[13] = tmp4.guildName;
             cResult[14] = tmp22;
@@ -290,8 +290,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         ({ guildIcon: obj6.style, guildIconText: obj6.textStyle } = tmp4);
-        const obj11 = { style: null, textStyle: null, guild, size: isVisible(5971).GuildIconSizes.LARGE };
-        const tmp18 = stateFromStores(5971);
+        const obj11 = { style: null, textStyle: null, guild, size: isVisible(5978).GuildIconSizes.LARGE };
+        const tmp18 = stateFromStores(5978);
         const tmp19 = closure_6(tmp18, obj11);
         cResult[8] = guild;
         cResult[9] = tmp4.guildIcon;
@@ -350,11 +350,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return obj;
       };
-      const obj2 = isVisible(4612);
+      const obj2 = isVisible(4618);
       fn.__closure = {
         useReducedMotion: stateFromStores,
         VISIBILITY_OFFSET,
-        withSpring: isVisible(5597).withSpring,
+        withSpring: isVisible(5604).withSpring,
         isVisible,
         SPRING_CONFIG,
       };
@@ -363,14 +363,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({
         useReducedMotion: stateFromStores,
         VISIBILITY_OFFSET,
-        withSpring: isVisible(5597).withSpring,
+        withSpring: isVisible(5604).withSpring,
         isVisible,
         SPRING_CONFIG,
       });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       const obj4 = { style: items1, children: closure_6(tmp4, obj5) };
       items1 = [tmp.wrapper, animatedStyle];
-      View = stateFromStores(4612).View;
+      View = stateFromStores(4618).View;
       obj5 = {
         angle: 45,
         angleCenter: { x: 0.5, y: 0.5 },
@@ -381,7 +381,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         children: closure_7(View, obj6),
       };
       items2 = [,];
-      tmp4 = stateFromStores(5605);
+      tmp4 = stateFromStores(5612);
       items2[0] = stateFromStores(587).unsafe_rawColors.GUILD_BOOSTING_BLUE;
       items2[1] = stateFromStores(587).unsafe_rawColors.GUILD_BOOSTING_PURPLE;
       obj6 = { style: tmp.innerWraper, children: items4 };
@@ -390,14 +390,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.guildIcon,
         textStyle: tmp.guildIconText,
         guild,
-        size: isVisible(5971).GuildIconSizes.LARGE,
+        size: isVisible(5978).GuildIconSizes.LARGE,
       };
-      const tmp5 = stateFromStores(5971);
+      const tmp5 = stateFromStores(5978);
       items3 = [closure_6(tmp5, obj8)];
       const obj9 = { style: tmp.guildName, variant: "text-md/bold", lineClamp: 1, children: guild.name };
-      items3[1] = closure_6(isVisible(4886).Text, obj9);
+      items3[1] = closure_6(isVisible(4892).Text, obj9);
       items4 = [closure_7(View, obj7)];
-      const obj10 = { style: tmp.buttonContainer, children: closure_6(stateFromStores(6907), obj11) };
+      const obj10 = { style: tmp.buttonContainer, children: closure_6(stateFromStores(6917), obj11) };
       obj11 = {
         guild,
         previousGuildSubscriptionSlot,

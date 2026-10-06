@@ -64,7 +64,7 @@ const StartupProfilerDefault = StartupProfiler;
 
 const jsx = Fragment.jsx;
 if (global.__DEV__) {
-  asyncRequire(14167, dependencyMap.paths);
+  asyncRequire(14185, dependencyMap.paths);
 }
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -400,7 +400,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4;
       let obj = isChannelMetadataObfuscationEnabled(576);
       const cResult = obj.c(3);
-      const obj2 = isChannelMetadataObfuscationEnabled(13479);
+      const obj2 = isChannelMetadataObfuscationEnabled(13495);
       isChannelMetadataObfuscationEnabled = obj2.useIsChannelMetadataObfuscationEnabled("App");
       if (cResult[0] !== isChannelMetadataObfuscationEnabled) {
         const fn = function n() {
@@ -421,7 +421,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let isChannelMetadataObfuscationEnabled;
-      let obj = isChannelMetadataObfuscationEnabled(13479);
+      let obj = isChannelMetadataObfuscationEnabled(13495);
       isChannelMetadataObfuscationEnabled = obj.useIsChannelMetadataObfuscationEnabled("App");
       const items = [isChannelMetadataObfuscationEnabled];
       const effect = react.useEffect(() => {
@@ -429,50 +429,13 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const result = obj.setUseChannelObfuscation(isChannelMetadataObfuscationEnabled);
       }, items);
     };
-ReactCompilerGating = ReactCompilerGating_mod;
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
-  ? () => {
-      let shouldUseAltGateway;
-      let tmp3;
-      let tmp4;
-      let obj = shouldUseAltGateway(576);
-      const cResult = obj.c(3);
-      const obj2 = shouldUseAltGateway(14394);
-      shouldUseAltGateway = obj2.useShouldUseAltGateway("App");
-      if (cResult[0] !== shouldUseAltGateway) {
-        const fn = function n() {
-          const obj = react_nativeDefault2;
-          obj.setUseAltGateway(shouldUseAltGateway);
-        };
-        const items = [shouldUseAltGateway];
-        cResult[0] = shouldUseAltGateway;
-        cResult[1] = fn;
-        cResult[2] = items;
-        tmp4 = items;
-        tmp3 = fn;
-      } else {
-        tmp3 = cResult[1];
-        tmp4 = cResult[2];
-      }
-      const effect = react.useEffect(tmp3, tmp4);
-    }
-  : () => {
-      let shouldUseAltGateway;
-      let obj = shouldUseAltGateway(14394);
-      shouldUseAltGateway = obj.useShouldUseAltGateway("App");
-      const items = [shouldUseAltGateway];
-      const effect = react.useEffect(() => {
-        const obj = react_nativeDefault2;
-        obj.setUseAltGateway(shouldUseAltGateway);
-      }, items);
-    };
 const main = "main";
 ReactCompilerGating = ReactCompilerGating_mod;
 const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       let tmp10;
-      let tmp11;
-      let tmp13;
+      let tmp12;
+      let tmp9;
       const obj = react2;
       const cResult = obj.c(3);
       const renderApp = TTITrackerDefault.renderApp;
@@ -480,7 +443,6 @@ const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
       closure_7();
       closure_8();
       closure_9();
-      closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
           const renderAppEffect = TTITrackerDefault.renderAppEffect;
@@ -489,22 +451,22 @@ const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
         const items = [];
         cResult[0] = fn;
         cResult[1] = items;
-        tmp10 = fn;
-        tmp11 = items;
+        tmp10 = items;
+        tmp9 = fn;
       } else {
-        [tmp10, tmp11] = cResult;
+        [tmp9, tmp10] = cResult;
       }
-      const effect = react.useEffect(tmp10, tmp11);
+      const effect = react.useEffect(tmp9, tmp10);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         StartupProfilerDefault;
         AppContainerDefault;
-        const tmp18 = <tmp4Result profile={StartupProfiler.Profiles.App}>{null}</tmp4Result>;
-        cResult[2] = tmp18;
-        tmp13 = tmp18;
+        const tmp17 = <tmp4Result profile={StartupProfiler.Profiles.App}>{null}</tmp4Result>;
+        cResult[2] = tmp17;
+        tmp12 = tmp17;
       } else {
-        tmp13 = cResult[2];
+        tmp12 = cResult[2];
       }
-      return tmp13;
+      return tmp12;
     }
   : () => {
       const renderApp = TTITrackerDefault.renderApp;
@@ -512,14 +474,13 @@ const tmp20 = ReactCompilerGating.isReactCompilerEnabled()
       closure_7();
       closure_8();
       closure_9();
-      closure_10();
       const effect = react.useEffect(() => {
         const renderAppEffect = TTITrackerDefault.renderAppEffect;
         return renderAppEffect.record();
       }, []);
       StartupProfilerDefault;
       AppContainerDefault;
-      return <tmp7 profile={StartupProfiler.Profiles.App}>{null}</tmp7>;
+      return <tmp6 profile={StartupProfiler.Profiles.App}>{null}</tmp6>;
     };
 let result = size.fileFinishedImporting("components_native/App.tsx");
 

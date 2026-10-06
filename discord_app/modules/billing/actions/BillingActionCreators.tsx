@@ -1,7 +1,7 @@
 // discord_app/modules/billing/actions/BillingActionCreators.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef4461 from "../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import BillingConstants from "../../../components/billing/BillingConstants.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
@@ -537,7 +537,7 @@ obj = function _fetchPayments() {
             value = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (arg0 === 1) {
@@ -643,12 +643,12 @@ obj = function _fetchSubscriptions() {
             lastLazyPerkSync = lastLazyPerkSync.getLastLazyPerkSync();
             let tmp30 = null == lastLazyPerkSync;
             if (!tmp30) {
-              const obj6 = _modDef4461();
+              const obj6 = _modDef4467();
               tmp30 = obj6.diff(lastLazyPerkSync, "hours") >= 1;
             }
             if (tmp30) {
               FULL_RESYNC = constants2.FULL_RESYNC;
-              lastLazyPerkSync = _modDef4461();
+              lastLazyPerkSync = _modDef4467();
             }
             HTTP = HTTPUtils.HTTP;
             const request = {
@@ -913,7 +913,7 @@ obj = function _createSubscription() {
             billingError = undefined;
             c10 = 1;
             c11 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === c10) {
@@ -1750,7 +1750,7 @@ obj = function _fetchIpCountryCode() {
             country_code = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {
@@ -1870,7 +1870,7 @@ obj = function _fetchIpLocation() {
             subdivision_code = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {

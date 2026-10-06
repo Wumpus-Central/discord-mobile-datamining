@@ -227,7 +227,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                                     style: tmp16,
                                                     children: tmp42,
                                                   };
-                                                  const tmp48 = closure_11(onPress(5909).PressableOpacity, obj3);
+                                                  const tmp48 = closure_11(onPress(5916).PressableOpacity, obj3);
                                                   cResult[46] = accessibilityLabel;
                                                   cResult[47] = accessibilityState;
                                                   cResult[48] = tmp42;
@@ -272,9 +272,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                         cutoutPositionInDegrees,
                                       ),
                                     };
-                                    tmpResult = onPress(9078);
+                                    tmpResult = onPress(9114);
                                     items1[1] = size1;
-                                    tmpResult2 = onPress(9078);
+                                    tmpResult2 = onPress(9114);
                                     tmp38 = closure_11(closure_9, obj5);
                                   }
                                   cResult[34] = tmp11.badgeRadius;

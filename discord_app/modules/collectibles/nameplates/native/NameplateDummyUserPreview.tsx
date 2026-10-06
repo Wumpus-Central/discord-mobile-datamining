@@ -123,7 +123,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[7] === tmp6.nameplate) {
               tmp13 = cResult[8];
             }
-            const tmp17 = importDefault(tmp11 ? 8476 : 8477);
+            const tmp17 = importDefault(tmp11 ? 8509 : 8510);
             if (cResult[9] === avatarSize) {
               if (cResult[10] === tmp6.avatar) {
                 let tmp18;
@@ -246,7 +246,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items2[0] = hasOwnProperty(NameplateDefault, obj3);
       const obj4 = { style: tmp3.avatarContainer, children: hasOwnProperty(Avatar, obj5) };
       obj5 = {
-        source: importDefault(stateFromStores ? 8476 : 8477),
+        source: importDefault(stateFromStores ? 8509 : 8510),
         size: NORMAL,
         "aria-hidden": true,
         style: tmp3.avatar,

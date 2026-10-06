@@ -40,20 +40,20 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         items = [maxWidth, 0];
         return obj;
       };
-      const obj2 = translateX(4612);
+      const obj2 = translateX(4618);
       fn.__closure = {
-        interpolate: translateX(4612).interpolate,
+        interpolate: translateX(4618).interpolate,
         translateX,
         maxWidth,
-        Extrapolation: translateX(4612).Extrapolation,
+        Extrapolation: translateX(4618).Extrapolation,
       };
       fn.__workletHash = 7933670426250;
       fn.__initData = __initData;
       ({
-        interpolate: translateX(4612).interpolate,
+        interpolate: translateX(4618).interpolate,
         translateX,
         maxWidth,
-        Extrapolation: translateX(4612).Extrapolation,
+        Extrapolation: translateX(4618).Extrapolation,
       });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       if (cResult[0] === animatedStyle) {
@@ -64,7 +64,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp5;
       }
       let items = [tmp3.scrim, animatedStyle];
-      const tmp6 = jsx(maxWidth(4612).View, { style: items, pointerEvents: "none" });
+      const tmp6 = jsx(maxWidth(4618).View, { style: items, pointerEvents: "none" });
       cResult[0] = animatedStyle;
       cResult[1] = tmp3.scrim;
       cResult[2] = tmp6;
@@ -74,7 +74,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       translateX = translateX.translateX;
       const maxWidth = translateX.maxWidth;
       const tmp = closure_4();
-      let obj = translateX(4612);
+      let obj = translateX(4618);
       const fn = function c() {
         let interpolate;
         let items;
@@ -87,22 +87,22 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       fn.__closure = {
-        interpolate: translateX(4612).interpolate,
+        interpolate: translateX(4618).interpolate,
         translateX,
         maxWidth,
-        Extrapolation: translateX(4612).Extrapolation,
+        Extrapolation: translateX(4618).Extrapolation,
       };
       fn.__workletHash = 9902483670729;
       fn.__initData = __initData2;
       ({
-        interpolate: translateX(4612).interpolate,
+        interpolate: translateX(4618).interpolate,
         translateX,
         maxWidth,
-        Extrapolation: translateX(4612).Extrapolation,
+        Extrapolation: translateX(4618).Extrapolation,
       });
       const animatedStyle = obj.useAnimatedStyle(fn);
       let items = [tmp.scrim, animatedStyle];
-      return jsx(maxWidth(4612).View, { style: items, pointerEvents: "none" });
+      return jsx(maxWidth(4618).View, { style: items, pointerEvents: "none" });
     };
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
 

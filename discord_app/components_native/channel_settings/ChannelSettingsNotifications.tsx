@@ -259,7 +259,7 @@ class ChannelSettingsNotifications extends PureComponent {
       tmp7 = require;
     }
     const isGuildStageVoiceResult = channel.isGuildStageVoice();
-    const TableRadioGroup = tmp7(6072).TableRadioGroup;
+    const TableRadioGroup = tmp7(6079).TableRadioGroup;
     const obj = {
       value: messageNotifications,
       onChange: self.handleTypeChange,
@@ -269,7 +269,7 @@ class ChannelSettingsNotifications extends PureComponent {
       children: null,
     };
     intl3 = tmp7(1126).intl;
-    const TableRadioRow = tmp7(6071).TableRadioRow;
+    const TableRadioRow = tmp7(6078).TableRadioRow;
     if (isGuildStageVoiceResult) {
       const obj2 = { disabled: tmp18, label: stringResult, subLabel: stringResult1, value: constants2.NULL };
       tmp18 = muted || guildMuted;
@@ -285,14 +285,14 @@ class ChannelSettingsNotifications extends PureComponent {
       }
       const items = [authStore3(TableRadioRow, obj2), ,];
       let tmp21 = muted;
-      const TableRadioRow5 = tmp7(6071).TableRadioRow;
+      const TableRadioRow5 = tmp7(6078).TableRadioRow;
       if (!muted) {
         tmp21 = guildMuted;
       }
       const obj3 = { disabled: tmp21, value: constants2.ONLY_MENTIONS, label: intl12.string(tmp7(1126).t["BENn/6"]) };
       intl12 = tmp7(1126).intl;
       items[1] = authStore3(TableRadioRow5, obj3);
-      const TableRadioRow6 = tmp7(6071).TableRadioRow;
+      const TableRadioRow6 = tmp7(6078).TableRadioRow;
       if (!muted) {
         muted = guildMuted;
       }
@@ -325,7 +325,7 @@ class ChannelSettingsNotifications extends PureComponent {
         subLabel: stringResult3,
         value: constants2.ALL_MESSAGES,
       };
-      const TableRadioRow2 = tmp7(6071).TableRadioRow;
+      const TableRadioRow2 = tmp7(6078).TableRadioRow;
       intl6 = tmp7(1126).intl;
       stringResult3 = null;
       if (null != guildMemberCount) {
@@ -341,7 +341,7 @@ class ChannelSettingsNotifications extends PureComponent {
         disabled: muted || guildMuted,
         value: constants2.ONLY_MENTIONS,
       };
-      const TableRadioRow3 = tmp7(6071).TableRadioRow;
+      const TableRadioRow3 = tmp7(6078).TableRadioRow;
       intl8 = tmp7(1126).intl;
       items1[2] = authStore3(TableRadioRow3, obj7);
       const obj8 = {
@@ -349,7 +349,7 @@ class ChannelSettingsNotifications extends PureComponent {
         disabled: muted || guildMuted,
         value: constants2.NO_MESSAGES,
       };
-      const TableRadioRow4 = tmp7(6071).TableRadioRow;
+      const TableRadioRow4 = tmp7(6078).TableRadioRow;
       intl9 = tmp7(1126).intl;
       items1[3] = authStore3(TableRadioRow4, obj8);
       obj.children = items1;

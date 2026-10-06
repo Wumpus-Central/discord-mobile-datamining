@@ -79,7 +79,7 @@ export default function AppLauncherChannelOption(option) {
         },
         onActionSheetDismiss: _slicedToArray,
       };
-      const tmp4 = asyncRequire(11817, dependencyMap.paths);
+      const tmp4 = asyncRequire(11831, dependencyMap.paths);
       openLazy(tmp4, AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, obj);
     },
     autoFocus,

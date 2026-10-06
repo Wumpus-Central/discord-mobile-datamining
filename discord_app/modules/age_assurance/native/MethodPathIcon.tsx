@@ -2,7 +2,7 @@
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08169_inlineStyles.js";
 import react from "../../../../_runtime/00019_react.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -32,7 +32,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(10);
       icon = icon.icon;
       const tmp3 = closure_5();
-      const obj2 = token(4580);
+      const obj2 = token(4586);
       token = obj2.useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT);
       if (cResult[0] === icon.paths) {
         let tmp7;

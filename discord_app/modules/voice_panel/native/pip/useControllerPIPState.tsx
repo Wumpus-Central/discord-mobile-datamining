@@ -13,7 +13,7 @@ import FramesStore from "../../../frames/FramesStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SpeakingStore from "../../../../stores/SpeakingStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
-import size from "../../../../../_runtime/metro/00002__.js";
+import size_mod from "../../../../../_runtime/metro/00002__.js";
 
 let dependencyMap, targetDimensions;
 
@@ -29,7 +29,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = channelId;
       channelId = channelId.channelId;
       const mode = channelId.mode;
-      let tmp4 = mode(17190)(channelId);
+      let tmp4 = mode(17219)(channelId);
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [EmbeddedActivitiesStore, FramesStore, ChannelStore];
@@ -107,7 +107,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_2;
       channelId = channelId.channelId;
       const mode = channelId.mode;
-      const tmp = mode(17190)(channelId);
+      const tmp = mode(17219)(channelId);
       dependencyMap = tmp;
       const items = [EmbeddedActivitiesStore, FramesStore, ChannelStore];
       const items1 = [channelId, tmp, mode];
@@ -167,6 +167,7 @@ const __initData = {
 const __initData2 = {
   code: "function useControllerPIPStateTsx2(current){const{clampPIPScale,pipState,scale}=this.__closure;const newScale=clampPIPScale({scale:current.scale,width:pipState.width,containerHeight:pipState.containerHeight,showSecondaryPIP:pipState.showSecondaryPIP,windowDimensions:current.windowDimensions,safeArea:current.safeArea,pipAvoidanceSpecs:current.pipAvoidanceSpecs});if(current.scale!==newScale){scale.set(newScale);}}",
 };
+let size = size_mod;
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
 export const useControllerPIPState = function useControllerPIPState(channelId) {
@@ -181,7 +182,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let tmp15;
   let tmpResult;
   let windowDimensions;
-  const f130302 = () => layoutManager.getTargetDimensions(focusedId);
+  const f130478 = () => layoutManager.getTargetDimensions(focusedId);
   channelId = channelId.channelId;
   ({ connected, focusedId } = channelId);
   const layoutManager = channelId.layoutManager;
@@ -195,15 +196,16 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let obj = channelId(layoutManager[18]);
   const sharedValue = useSharedValue(obj.getVoicePanelPIPScaleCached());
   let obj2 = pipAvoidanceSpecs;
-  const ref = pipAvoidanceSpecs.useRef({
+  size = {
     id: "enabled",
     mode: "toCharArray$esjava$1",
     width: false,
     height: null,
     containerHeight: "slide_from_bottom",
-    showSecondaryPIP: "_createExtraStyles",
+    showSecondaryPIP: 2392,
     scale: sharedValue,
-  });
+  };
+  const ref = pipAvoidanceSpecs.useRef(size);
   let tmp6 = windowDimensions(pipAvoidanceSpecs.useState(undefined), 2);
   const current = tmp6[0];
   let closure_8 = tmp6[1];
@@ -219,7 +221,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   )[0];
   let items = [first1];
   const layoutEffect = pipAvoidanceSpecs.useLayoutEffect(() => () => first1.cancel(), items);
-  [tmp15, c11] = windowDimensions(pipAvoidanceSpecs.useState(f130302), 2);
+  [tmp15, c11] = windowDimensions(pipAvoidanceSpecs.useState(f130478), 2);
   const obj3 = {
     connected,
     mode,
@@ -228,7 +230,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     selfHasVideo: tmp11,
     showSecondaryPIP: tmp9,
   };
-  windowDimensions(pipAvoidanceSpecs.useState(f130302), 2);
+  windowDimensions(pipAvoidanceSpecs.useState(f130478), 2);
   ({ participant, dimensions } = focusedId(layoutManager[21])(channelId, layoutManager, focusedId, current, obj3));
   let obj4 = {
     id,
@@ -322,7 +324,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }, items1);
   const items2 = [focusedId, layoutManager, tmp15];
   const effect2 = obj2.useEffect(() => {
-    const f153680 = (safeAreaState) => {
+    const f153920 = (safeAreaState) => {
       targetDimensions = targetDimensions.getTargetDimensions(closure_1_1);
       const obj = channelId(layoutManager[16]);
       if (obj.cheapWorkletShallowEqual(safeAreaState, targetDimensions)) {
@@ -330,9 +332,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       }
       return targetDimensions;
     };
-    _undefined(f153680);
+    _undefined(f153920);
     return layoutManager.subscribeFromItem(function updateParticipantDimensions() {
-      _undefined(f153680);
+      _undefined(f153920);
     });
   }, items2);
   tmp10(layoutManager[23])(channelId, layoutManager, focusedId);

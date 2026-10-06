@@ -30,7 +30,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
   let markAsDismissed;
   let ref;
   let tmp = enabled;
-  obj = enabled(6890);
+  obj = enabled(6900);
   enabled = obj.useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
   let obj2 = enabled(504);
   let items = [markAsDismissed];
@@ -105,7 +105,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
     }
     return items1;
   }, items6);
-  const tmpResult = tmp(6891);
+  const tmpResult = tmp(6901);
   const tmp10 = first(tmpResult.useSelectedDismissibleContent(memo, undefined, true), 2);
   first = tmp10[0];
   react = tmp12;
@@ -145,7 +145,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
         let c0 = false;
         obj = DispatcherDefault;
         const subscription = obj.subscribe("SHOW_ACTION_SHEET", handleShow);
-        const promise = asyncRequire(6895, dependencyMap.paths);
+        const promise = asyncRequire(6905, dependencyMap.paths);
         promise.catch(() => {
           const tmp = c0 || Idle !== closure_2_10.Opening;
           if (!tmp) {

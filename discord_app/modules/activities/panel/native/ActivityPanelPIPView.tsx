@@ -1796,7 +1796,7 @@ const memoResult = memo(
               transitionCleanUp={transitionCleanUp}
               pipOrientationLockState={stateFromStores}
               hasActivity={null != activity}
-              context={applicationId(17168)}
+              context={applicationId(17197)}
             >
               {tmp18}
             </closure_28>
@@ -1810,13 +1810,13 @@ const memoResult = memo(
         }
         cResult[8] = stateFromStores1;
         cResult[9] = landscapeSafeAreasConfig;
-        cResult[10] = jsx(applicationId(9134), {
+        cResult[10] = jsx(applicationId(9169), {
           channel: stateFromStores1,
           layoutMode: ActivityLayoutMode.PIP,
           portraitSafeAreasConfig,
           landscapeSafeAreasConfig,
         });
-        const tmp19 = jsx(applicationId(9134), {
+        const tmp19 = jsx(applicationId(9169), {
           channel: stateFromStores1,
           layoutMode: ActivityLayoutMode.PIP,
           portraitSafeAreasConfig,

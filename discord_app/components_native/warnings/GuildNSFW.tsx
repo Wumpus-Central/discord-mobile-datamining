@@ -60,8 +60,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] !== guildId) {
         const fn2 = function _() {
-          const obj = GuildActionCreatorsDefault;
-          obj.nsfwReturnToSafety(guildId.guildId);
+          if (false !== guildId.returnToSafety) {
+            const obj = GuildActionCreatorsDefault;
+            obj.nsfwReturnToSafety(guildId.guildId);
+          }
           if (guildId.onReturnToSafety != null) {
             guildId.onReturnToSafety();
           }
@@ -87,16 +89,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
+        class T {
           constructor() {
             const obj = AgeVerificationActionCreatorsDefault;
             const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
             const result = obj.showAgeVerificationGetStartedModal(obj2);
           }
         }
-        cResult[11] = E;
+        cResult[11] = T;
       } else {
-        class E {
+        class T {
           constructor() {
             const obj = AgeVerificationActionCreatorsDefault;
             const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -105,7 +107,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (stateFromStores != null) {
-        class E {
+        class T {
           constructor() {
             const obj = AgeVerificationActionCreatorsDefault;
             const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -115,7 +117,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const channelId = guildId.channelId;
       if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-        class E {
+        class T {
           constructor() {
             const obj = AgeVerificationActionCreatorsDefault;
             const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -126,7 +128,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[12] = stringResult;
         tmp19 = stringResult;
       } else {
-        class E {
+        class T {
           constructor() {
             const obj = AgeVerificationActionCreatorsDefault;
             const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -135,7 +137,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[13] === tmp9) {
-        class E {
+        class T {
           constructor() {
             const obj = AgeVerificationActionCreatorsDefault;
             const obj2 = { entryPoint: guildId(dependencyMap[10]).AgeVerificationModalEntryPoint.NSFW_GUILD };
@@ -178,8 +180,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         id = stateFromStores.id;
       }
       function handleDisagree() {
-        const obj = GuildActionCreatorsDefault;
-        obj.nsfwReturnToSafety(channelId.guildId);
+        if (false !== channelId.returnToSafety) {
+          const obj = GuildActionCreatorsDefault;
+          obj.nsfwReturnToSafety(channelId.guildId);
+        }
         if (channelId.onReturnToSafety != null) {
           channelId.onReturnToSafety();
         }

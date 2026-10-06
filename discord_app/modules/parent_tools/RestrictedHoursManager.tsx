@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import intl2 from "../../intl/index.native.tsx";
 import FamilyCenterModels from "FamilyCenterModels.tsx";
-import _modDef2493 from "FamilyCenter.messages.js";
+import _modDef2521 from "FamilyCenter.messages.js";
 import FamilyCenterRestrictedHoursUtils from "FamilyCenterRestrictedHoursUtils.tsx";
 import RestrictedHoursActionCreators from "RestrictedHoursActionCreators.native.tsx";
 import NotificationSettingsStore from "../../stores/NotificationSettingsStore.tsx";
@@ -60,7 +60,7 @@ function scheduleUpcomingWarning() {
         const _Date2 = Date;
         const self3 = this;
         const self4 = this;
-        const stringResult = intl.string(_modDef2493["0JlDg0"]);
+        const stringResult = intl.string(_modDef2521["0JlDg0"]);
         const JS_DAY_TO_DAY_OF_WEEK = FamilyCenterModels.JS_DAY_TO_DAY_OF_WEEK;
         const date2 = new Date(startAtMs);
         const items = [JS_DAY_TO_DAY_OF_WEEK[date2.getDay(date2)]];

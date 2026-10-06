@@ -7,5 +7,5 @@ const result = size.fileFinishedImporting("modules/user_profile/utils/native/ope
 
 export default function openEditNoteModal(merged) {
   const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(12876, dependencyMap.paths), merged, undefined, { presentation: "modal" });
+  obj.pushLazy(asyncRequire(12895, dependencyMap.paths), merged, undefined, { presentation: "modal" });
 }

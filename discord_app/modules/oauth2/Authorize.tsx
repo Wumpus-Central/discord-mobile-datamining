@@ -2,7 +2,7 @@
 import BigFlagUtilsAll from "../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import PermissionUtilsAll from "../../utils/PermissionUtils.tsx";
 import QueryStringUtils from "../../utils/QueryStringUtils.tsx";
-import _mod5635 from "../../../_runtime/metro/05635__.js";
+import _mod5642 from "../../../_runtime/metro/05642__.js";
 import OAuth2Scopes from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
 import scopes from "scopes.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -38,7 +38,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       return guild_id;
     }
   }
-  const obj = _mod5635;
+  const obj = _mod5642;
   const parsed = obj.parse(query, { arrayFormat: "bracket" });
   let NONE = PermissionUtilsAll.NONE;
   try {

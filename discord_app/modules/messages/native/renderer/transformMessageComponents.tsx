@@ -17,10 +17,10 @@ let _require, importDefault;
 let tmp4;
 const intl6 = tmp4(1126);
 const FlagUtils = tmp4(1390);
-const AgeVerificationUtils = tmp4(5102);
-const MediaTypes = tmp4(5121);
-const sanitizeMediaDimension = tmp4(7790);
-const ExplicitMediaUtils = tmp4(7808);
+const AgeVerificationUtils = tmp4(5108);
+const MediaTypes = tmp4(5128);
+const sanitizeMediaDimension = tmp4(7801);
+const ExplicitMediaUtils = tmp4(7819);
 function transformToRowGeneratedComponent(message, accessory) {
   let colors;
   let contentType;
@@ -77,7 +77,7 @@ function transformToRowGeneratedComponent(message, accessory) {
   function expensive() {
     if (null != found1) {
       if (0 !== found1.length) {
-        const mapped = found1.map(f95518);
+        const mapped = found1.map(f95659);
         const intl = closure_0(message[8]).intl;
         const formatToPlainString = intl.formatToPlainString;
         const obj = { selections: mapped.join(",") };
@@ -148,7 +148,7 @@ function transformToRowGeneratedComponent(message, accessory) {
     const merged2 = Object.assign(accessory);
     tmpResult26 = tmp(tmp2[9]);
     _require = accessory;
-    const f95518 = (arg0) => found1.options[arg0].label;
+    const f95659 = (arg0) => found1.options[arg0].label;
     tmpResult27 = tmp(tmp2[7]);
     obj5 = { expensive, cheap: tmpResult29.getSelectPlaceholder(accessory) };
     getAccessibilityLabelOrCheapFallbackUnsafe2 = tmp(tmp2[19]).getAccessibilityLabelOrCheapFallbackUnsafe;
@@ -452,8 +452,8 @@ function transformToRowGeneratedComponent(message, accessory) {
                 name = intl2.string(tmp(tmp2[8]).t.GnuJ5u);
               }
               num2 = accessory.size;
-              filesize = require("../../../../../_runtime/metro/07271__.js").filesize;
-              require("../../../../../_runtime/metro/07271__.js");
+              filesize = require("../../../../../_runtime/metro/07284__.js").filesize;
+              require("../../../../../_runtime/metro/07284__.js");
               if (num2 == null) {
                 num2 = 0;
               }
@@ -567,7 +567,7 @@ function transformToRowGeneratedComponent(message, accessory) {
     tmpResult42 = tmp(tmp2[9]);
     tmpResult43 = tmp(tmp2[12]);
     _require = accessory;
-    const f95519 = (label) => label.label;
+    const f95660 = (label) => label.label;
     tmpResult44 = tmp(tmp2[7]);
     obj25 = { expensive, cheap: tmpResult46.getSelectPlaceholder(accessory) };
     getAccessibilityLabelOrCheapFallbackUnsafe = tmp(tmp2[19]).getAccessibilityLabelOrCheapFallbackUnsafe;
@@ -649,7 +649,7 @@ export default function transformMessageComponents(message, arr) {
     type: "textDisplayComponent",
     parserState: obj2.getInitialParserStateFromMessage(message.message, closure_7),
   };
-  obj2 = obj3(7531);
+  obj2 = obj3(7542);
   obj3 = { markdownConfigs: { textDisplayComponent: obj } };
   const merged = Object.assign(message);
   const mapped = arr.map((item) => transformToRowGeneratedComponent(obj3, item));

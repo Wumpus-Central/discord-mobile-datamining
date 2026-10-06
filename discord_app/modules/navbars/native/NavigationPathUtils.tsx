@@ -1,7 +1,7 @@
 // discord_app/modules/navbars/native/NavigationPathUtils.tsx
 import react from "../../../../_runtime/00576_react.js";
 import Constants from "../../../Constants.tsx";
-import MemoryRouter from "../../../../_runtime/04710_MemoryRouter.js";
+import MemoryRouter from "../../../../_runtime/04716_MemoryRouter.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

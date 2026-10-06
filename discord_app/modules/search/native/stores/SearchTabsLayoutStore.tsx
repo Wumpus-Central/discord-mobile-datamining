@@ -1,9 +1,9 @@
 // discord_app/modules/search/native/stores/SearchTabsLayoutStore.tsx
 import get_initializedDefault from "../../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
-import SearchUtils from "../../SearchUtils.tsx";
-import SmartSearchTypes from "../../../intelligence_layer/search/SmartSearchTypes.tsx";
 import SmartSearchUtils from "../../../intelligence_layer/search/SmartSearchUtils.tsx";
+import SmartSearchTypes from "../../../intelligence_layer/search/SmartSearchTypes.tsx";
+import SearchUtils from "../../SearchUtils.tsx";
 import SmartSearchResultsStore from "../../../intelligence_layer/search/SmartSearchResultsStore.tsx";
 import ChannelStore_mod from "../../../../stores/ChannelStore.tsx";
 import SearchMessageStore from "../../SearchMessageStore.tsx";

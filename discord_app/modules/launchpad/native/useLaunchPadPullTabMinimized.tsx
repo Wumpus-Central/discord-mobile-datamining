@@ -25,7 +25,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4;
       const obj = sharedValue(576);
       const cResult = obj.c(3);
-      const obj2 = sharedValue(4612);
+      const obj2 = sharedValue(4618);
       sharedValue = obj2.useSharedValue(false);
       if (cResult[0] !== sharedValue) {
         const fn = function t() {
@@ -68,7 +68,7 @@ let closure_4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let sharedValue;
-      const obj = sharedValue(4612);
+      const obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(false);
       const items = [sharedValue];
       const effect = react.useEffect(() => {

@@ -10,7 +10,7 @@ export default function openInstantInviteActionSheet(invite_channel_id) {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   let id = invite_channel_id.vanityURLCode;
-  const tmp4 = asyncRequire(9489, dependencyMap.paths);
+  const tmp4 = asyncRequire(9502, dependencyMap.paths);
   if (id == null) {
     id = invite_channel_id.channel.id;
   }

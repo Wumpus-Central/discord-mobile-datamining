@@ -517,9 +517,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== echoCancellation) {
         let obj2 = { title: tmp8, hasIcons: false, children: closure_5(TableSwitchRow, obj3) };
-        const UserSettingsTableRowGroup = inputMode(9657).UserSettingsTableRowGroup;
-        obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(9673).handleEchoCancellationChange };
-        TableSwitchRow = inputMode(6698).TableSwitchRow;
+        const UserSettingsTableRowGroup = inputMode(9670).UserSettingsTableRowGroup;
+        obj3 = { label: tmp10, value: echoCancellation, onValueChange: inputMode(9686).handleEchoCancellationChange };
+        TableSwitchRow = inputMode(6705).TableSwitchRow;
         const tmp14 = closure_5(UserSettingsTableRowGroup, obj2);
         cResult[4] = echoCancellation;
         cResult[5] = tmp14;
@@ -552,9 +552,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           label: tmp19,
           subLabel: tmp20,
           value: automaticGainControl,
-          onValueChange: inputMode(9673).handleAutomaticGainControlChange,
+          onValueChange: inputMode(9686).handleAutomaticGainControlChange,
         };
-        const TableSwitchRow2 = inputMode(6698).TableSwitchRow;
+        const TableSwitchRow2 = inputMode(6705).TableSwitchRow;
         const tmp25 = closure_5(TableSwitchRow2, obj4);
         cResult[9] = automaticGainControl;
         cResult[10] = tmp25;
@@ -590,7 +590,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj6 = { hasIcons: false, children: items2 };
           items2 = [tmp23, tmp26];
-          const tmp31 = closure_6(inputMode(9657).UserSettingsTableRowGroup, obj6);
+          const tmp31 = closure_6(inputMode(9670).UserSettingsTableRowGroup, obj6);
           cResult[15] = tmp23;
           cResult[16] = tmp26;
           cResult[17] = tmp31;
@@ -609,7 +609,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             return obj.setMode(inputMode, obj2);
           },
         };
-        const TableSwitchRow3 = inputMode(6698).TableSwitchRow;
+        const TableSwitchRow3 = inputMode(6705).TableSwitchRow;
         intl5 = inputMode(1126).intl;
         intl6 = inputMode(1126).intl;
         tmp27 = closure_5(TableSwitchRow3, obj7);

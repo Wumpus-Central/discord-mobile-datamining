@@ -2,7 +2,7 @@
 import SubscriptionRoleStore from "SubscriptionRoleStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f90709 = (item) => set.has(item);
+const f90845 = (item) => set.has(item);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx");
 
 export const isRoleSubscriptionEmoji = function isRoleSubscriptionEmoji(roles, id) {
@@ -35,7 +35,7 @@ export const isPurchasableRoleSubscriptionEmoji = function isPurchasableRoleSubs
           customEmojiFromJoinedGuild.guildId,
         );
         const roles = customEmojiFromJoinedGuild.roles;
-        return roles.some(f90709);
+        return roles.some(f90845);
       }
     }
   }
@@ -66,7 +66,7 @@ export const isUnusableRoleSubscriptionEmoji = function isUnusableRoleSubscripti
                 customEmojiFromJoinedGuild.guildId,
               );
               const roles = customEmojiFromJoinedGuild.roles;
-              flag2 = roles.some(f90709);
+              flag2 = roles.some(f90845);
             }
           }
         }

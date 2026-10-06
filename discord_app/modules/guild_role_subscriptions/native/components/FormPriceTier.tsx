@@ -85,7 +85,7 @@ export default function FormPriceTier(guildId) {
             selectedItem: price,
             hasIcons: false,
           };
-          const tmp3 = asyncRequire(8949, dependencyMap.paths);
+          const tmp3 = asyncRequire(8978, dependencyMap.paths);
           intl = intl4.intl;
           openLazy(tmp3, "GuildRoleSubscriptionPriceTierSelect", obj);
         }}

@@ -164,7 +164,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let step;
       _require = react.useContext(require("Auth").TrackRegistrationContext);
       ({ destinationStep: importDefault, onPress: dependencyMap } = arg0);
-      const HeaderBackButton = require("../../../../_runtime/metro/06019__.js").HeaderBackButton;
+      const HeaderBackButton = require("../../../../_runtime/metro/06026__.js").HeaderBackButton;
       const merged = Object.assign(arg0);
       return (
         <HeaderBackButton

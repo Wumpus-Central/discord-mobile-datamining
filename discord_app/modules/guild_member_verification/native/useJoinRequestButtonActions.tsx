@@ -176,7 +176,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         const _HermesInternal = HermesInternal;
         ActionSheetActionCreatorsDefault;
         const obj = { joinRequest, onError, onDismiss };
-        const tmp10 = asyncRequire(12300, dependencyMap.paths);
+        const tmp10 = asyncRequire(12315, dependencyMap.paths);
         openLazy(tmp10, "RejectionReason-" + joinRequestId, obj);
       }
     }, items2),

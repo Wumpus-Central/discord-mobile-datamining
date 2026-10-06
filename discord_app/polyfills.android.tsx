@@ -1,5 +1,5 @@
 // discord_app/polyfills.android.tsx
-import Locale from "../_runtime/13961_Locale.js";
+import Locale from "../_runtime/13979_Locale.js";
 import polyfillsNative from "polyfillsNative.tsx";
 import size from "../_runtime/metro/00002__.js";
 

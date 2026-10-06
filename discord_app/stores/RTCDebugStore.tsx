@@ -348,7 +348,7 @@ let obj2 = {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(4945).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
+          replayConnection.on(replayConnection(4951).BaseConnectionEvent.Video, (userId, arg1, arg2, arg3) => {
             let str;
             let num = arg3;
             obj = {

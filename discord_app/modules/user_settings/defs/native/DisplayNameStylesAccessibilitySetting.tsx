@@ -2,7 +2,7 @@
 import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
 import react from "../../../../../_runtime/00576_react.js";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2883 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2911 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AccessibilityActionCreators from "../../../a11y/AccessibilityActionCreators.tsx";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -44,7 +44,7 @@ function onValueChange(enabled) {
 let obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2883["2gFUEw"]);
+    return intl.string(_modDef2911["2gFUEw"]);
   },
   parent: MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,

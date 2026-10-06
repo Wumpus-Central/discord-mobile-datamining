@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod6019 from "../../../../_runtime/metro/06019__.js";
+import _mod6026 from "../../../../_runtime/metro/06026__.js";
 import useIsWindowLarge from "../../screen/native/useIsWindowLarge.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import react from "../../../../_runtime/00019_react.js";
@@ -56,7 +56,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp7 = cResult[2];
         }
         if (cResult[3] !== onClose) {
-          const tmpResult = subtitle(6010);
+          const tmpResult = subtitle(6017);
           const headerCloseButton = tmpResult.getHeaderCloseButton(onClose);
           cResult[3] = onClose;
           cResult[4] = headerCloseButton;
@@ -70,7 +70,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (!tmpResult3.isIOS()) {
             num3 = top;
           } else {
-            subtitle(6433);
+            subtitle(6440);
             num3 = 0;
           }
           cResult[5] = top;
@@ -101,7 +101,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         ({ headerLeftContainer: obj5.headerLeftContainerStyle, headerRightContainer: obj5.headerRightContainerStyle } =
           tmp4);
-        const tmp14 = jsx(subtitle(6019).Header, {
+        const tmp14 = jsx(subtitle(6026).Header, {
           headerStyle: tmp6,
           title,
           headerTitle: tmp7,
@@ -167,7 +167,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         headerRightContainerStyle: null,
         headerStatusBarHeight: num + nativeDefault.space.PX_8,
       };
-      const Header = _mod6019.Header;
+      const Header = _mod6026.Header;
       obj2 = NavigatorHeader;
       ({ headerLeftContainer: obj.headerLeftContainerStyle, headerRightContainer: obj.headerRightContainerStyle } =
         tmp);

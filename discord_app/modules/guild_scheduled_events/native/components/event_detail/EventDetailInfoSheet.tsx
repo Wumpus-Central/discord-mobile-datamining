@@ -433,7 +433,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         },
         items2,
       );
-      let obj3 = guildEvent(9179);
+      let obj3 = guildEvent(9214);
       const result = obj3.recurrenceRuleFromServer(guildEvent.recurrence_rule);
       const items3 = [,];
       ({ guild_id: arr4[0], id: arr4[1] } = guildEvent);
@@ -485,22 +485,22 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         showCreator: false,
         recurrenceId,
       };
-      items8[0] = closure_12(guildEvent(9261).GuildEventCardHeader, obj8);
+      items8[0] = closure_12(guildEvent(9296).GuildEventCardHeader, obj8);
       const obj9 = { event: guildEvent, textStyle: tmp.eventTitle, style: tmp.eventTitleContainer };
-      items8[1] = closure_12(guildEvent(9261).GuildEventCardTitle, obj9);
+      items8[1] = closure_12(guildEvent(9296).GuildEventCardTitle, obj9);
       const obj10 = { event: guildEvent, textStyle: tmp.guildTextStyle };
-      items8[2] = closure_12(guildEvent(9261).GuildEventCardSimpleGuildInfo, obj10);
-      items8[3] = closure_12(guildEvent(9261).GuildEventSimpleLocation, { event: guildEvent });
+      items8[2] = closure_12(guildEvent(9296).GuildEventCardSimpleGuildInfo, obj10);
+      items8[3] = closure_12(guildEvent(9296).GuildEventSimpleLocation, { event: guildEvent });
       const obj11 = { style: tmp.interestedContainer, children: items9 };
       items9 = [,];
       const obj12 = { size: "sm", style: tmp.interestedIcon };
-      items9[0] = closure_12(guildEvent(9266).BellIcon, obj12);
+      items9[0] = closure_12(guildEvent(9301).BellIcon, obj12);
       const obj13 = {
         variant: "text-sm/medium",
         color: "text-default",
         children: intl.format(guildEvent(1126).t["+DLsD8"], { count: tmp8 }),
       };
-      const Text = guildEvent(4886).Text;
+      const Text = guildEvent(4892).Text;
       intl = guildEvent(1126).intl;
       items9[1] = closure_12(Text, obj13);
       items8[4] = closure_13(creator, obj11);
@@ -520,7 +520,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-default",
           children: intl2.format(guildEvent(1126).t["66DLFs"], obj17),
         };
-        const Text2 = tmp2(4886).Text;
+        const Text2 = tmp2(4892).Text;
         intl2 = tmp2(1126).intl;
         obj17 = {
           usernameHook() {
@@ -568,7 +568,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items8[5] = tmp11Result;
       const obj18 = { event: guildEvent, style: tmp.eventDescriptionContainer };
-      items8[6] = closure_12(guildEvent(9261).GuildEventCardDescription, obj18);
+      items8[6] = closure_12(guildEvent(9296).GuildEventCardDescription, obj18);
       let hasItem = set.has(guildEvent.entity_type);
       if (hasItem) {
         const obj19 = {
@@ -583,13 +583,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         };
         items11 = [,];
         const tmp7Result = StageChannelAgeVerificationNoticeDefault;
-        items11[0] = guildEvent(8083).DividerPosition.TOP;
-        items11[1] = guildEvent(8083).DividerPosition.BOTTOM;
+        items11[0] = guildEvent(8116).DividerPosition.TOP;
+        items11[1] = guildEvent(8116).DividerPosition.BOTTOM;
         hasItem = closure_12(tmp7Result, obj19);
       }
       items8[7] = hasItem;
       const obj20 = { direction: "horizontal", style: tmp.controlsContainer, children: items12 };
-      const ButtonGroup = tmp2(5592).ButtonGroup;
+      const ButtonGroup = tmp2(5599).ButtonGroup;
       items12 = [, ,];
       const obj21 = {
         event: guildEvent,
@@ -603,14 +603,14 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         isConnected: stateFromStores,
         recurrenceId,
       };
-      items12[0] = closure_12(guildEvent(9261).GuildEventCardPrimaryAction, obj21);
+      items12[0] = closure_12(guildEvent(9296).GuildEventCardPrimaryAction, obj21);
       let tmp13Result = null;
       if (stateFromStores1) {
         const obj22 = { event: guildEvent };
-        tmp13Result = closure_12(tmp2(9261).GuildEventShareAction, obj22);
+        tmp13Result = closure_12(tmp2(9296).GuildEventShareAction, obj22);
       }
       items12[1] = tmp13Result;
-      items12[2] = closure_12(guildEvent(9261).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
+      items12[2] = closure_12(guildEvent(9296).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
       items8[8] = closure_13(ButtonGroup, obj20);
       let tmp13Result2 = null != result;
       if (tmp13Result2) {

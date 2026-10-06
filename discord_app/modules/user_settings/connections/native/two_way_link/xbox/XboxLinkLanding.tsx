@@ -7,7 +7,7 @@ import VoiceNormalIcon from "../../../../../../design/components/Icon/native/red
 import XboxLinkConstants from "XboxLinkConstants.tsx";
 import ScreenStreamIcon from "../../../../../../design/components/Icon/native/redesign/generated/ScreenStreamIcon.tsx";
 import GameControllerIcon from "../../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import _modDef8740 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
+import _modDef8772 from "../../../../../../../discord_assets/assets/connections/xbox_link_landing.png.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import Constants from "../../../../../../Constants.tsx";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -95,7 +95,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp16[0] = _modDef8740;
+        tmp16[0] = _modDef8772;
         cResult[4] = tmp16;
       } else {
         class N {
@@ -138,7 +138,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp22;
       }
-      tmp22 = jsx(navigation(8741).TwoWayLinkLanding, {
+      tmp22 = jsx(navigation(8773).TwoWayLinkLanding, {
         platformType: constants2.XBOX,
         img: tmp16,
         imgStyle: image,
@@ -166,10 +166,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         navigation.push(XboxLinkModalScenes.PRE_CONNECT);
       }, items);
       const memo1 = react.useMemo(() => {
-        const obj = { uri: _modDef8740 };
+        const obj = { uri: _modDef8772 };
         return obj;
       }, []);
-      const TwoWayLinkLanding = navigation(8741).TwoWayLinkLanding;
+      const TwoWayLinkLanding = navigation(8773).TwoWayLinkLanding;
       const intl2 = navigation(1126).intl;
       const intl3 = navigation(1126).intl;
       return (

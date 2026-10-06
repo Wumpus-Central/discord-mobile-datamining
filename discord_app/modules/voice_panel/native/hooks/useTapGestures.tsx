@@ -26,7 +26,7 @@ export default function useTapGestures(onSingleTap) {
   let closure_3;
   let isFocusedVideoZoomed;
   let current = onSingleTap;
-  isFocusedVideoZoomed = react.useContext(isFocusedVideoZoomed(11901)).isFocusedVideoZoomed;
+  isFocusedVideoZoomed = react.useContext(isFocusedVideoZoomed(11915)).isFocusedVideoZoomed;
   dependencyMap = react.useRef(onSingleTap);
   react = tmp;
   __initData = tmp2;

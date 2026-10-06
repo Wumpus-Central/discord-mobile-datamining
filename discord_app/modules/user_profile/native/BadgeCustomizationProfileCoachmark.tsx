@@ -145,7 +145,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = markAsDismissed(504);
       const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-      const reducedMotion = react.useContext(markAsDismissed(4596).AccessibilityPreferencesContext).reducedMotion;
+      const reducedMotion = react.useContext(markAsDismissed(4602).AccessibilityPreferencesContext).reducedMotion;
       const tmp8 = closure_8(targetRef, visible);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = markAsDismissed(1126).intl;
@@ -206,7 +206,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[19] === visible) {
                       tmp18 = cResult[20];
                     }
-                    const tmpResult2 = markAsDismissed(9882);
+                    const tmpResult2 = markAsDismissed(9895);
                     const coachmark = tmpResult2.useCoachmark(targetRef, tmp18);
                     return null;
                   }
@@ -254,7 +254,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj3 = {
         type: "rive",
-        rive: markAsDismissed(4605).BadgesCoachmarkRive,
+        rive: markAsDismissed(4611).BadgesCoachmarkRive,
         aspectRatio: "16/9",
         riveProps: obj4,
       };

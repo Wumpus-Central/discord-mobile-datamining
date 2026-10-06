@@ -1,12 +1,12 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateConstants.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import 04461__ from "../../../_runtime/metro/04461__.js";
+import 04467__ from "../../../_runtime/metro/04467__.js";
 import react_native_mod from "../../utils/native/ClientInfoUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let tmp3 = null;
-const durationResult = module_4461.duration(6, "hours");
+const durationResult = module_4467.duration(6, "hours");
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {
   const _process = process;
   tmp3 = null;

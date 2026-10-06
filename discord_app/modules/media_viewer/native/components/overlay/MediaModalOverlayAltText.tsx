@@ -75,7 +75,7 @@ const memoResult = react.memo(
             }
             const _Symbol2 = Symbol;
             if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-              const Text = tmp(4886).Text;
+              const Text = tmp(4892).Text;
               const intl = tmp(1126).intl;
               const tmp11 = (
                 <Text variant="text-xs/semibold" color="text-overlay-light">
@@ -94,7 +94,7 @@ const memoResult = react.memo(
               }
               tmp5 = tmp12;
             }
-            const tmp14 = jsx(tmp(5909).PressableOpacity, {
+            const tmp14 = jsx(tmp(5916).PressableOpacity, {
               style: tmp4.container,
               onPress: tmp6,
               hitSlop: tmp8,
@@ -120,9 +120,9 @@ const memoResult = react.memo(
         if (ViewImageDescriptions.useSetting()) {
           tmp4 = null;
           if (0 !== str.length) {
-            const PressableOpacity = tmp3(5909).PressableOpacity;
+            const PressableOpacity = tmp3(5916).PressableOpacity;
             ({ variant: "text-xs/semibold", color: "text-overlay-light", children: intl.string(str(1126).t.Q5VqrN) });
-            const Text = tmp3(4886).Text;
+            const Text = tmp3(4892).Text;
             intl = tmp3(1126).intl;
             tmp4 = (
               <PressableOpacity

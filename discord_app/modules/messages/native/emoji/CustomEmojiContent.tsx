@@ -413,7 +413,7 @@ export default function CustomEmojiContent(emojiNode) {
       handleOpenEmojiOptionsMenu = function handleOpenEmojiOptionsMenu() {
         obj = ActionSheetActionCreatorsDefault;
         const obj2 = { emojiSrc: emojiNode.src };
-        obj.openLazy(asyncRequire(9947, dependencyMap.paths), "EmojiOptionsActionSheet", obj2, "stack");
+        obj.openLazy(asyncRequire(9960, dependencyMap.paths), "EmojiOptionsActionSheet", obj2, "stack");
       };
       intl3 = tmp2(nonce[28]).intl;
       obj23 = { color: expressionSourceGuild(nonce[8]).colors.INTERACTIVE_TEXT_DEFAULT };

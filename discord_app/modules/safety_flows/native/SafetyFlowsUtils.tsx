@@ -1,8 +1,8 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef2787 from "../SafetyFlows.messages.js";
+import _modDef2815 from "../SafetyFlows.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04805_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04811_AssetRegistry.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import types from "../types.tsx";
 import constants from "../constants.tsx";
@@ -85,7 +85,7 @@ function navigateToScreenForTask(arr, task_type) {
     const obj2 = {
       key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS",
       icon: AssetRegistryDefault,
-      content: intl.string(_modDef2787["/fHz9S"]),
+      content: intl.string(_modDef2815["/fHz9S"]),
     };
     const open = ToastActionCreatorsDefault.open;
     ToastActionCreatorsDefault;

@@ -38,9 +38,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(573);
       const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
-      const tmp8 = stateFromStores(7946)(stateFromStores);
+      const tmp8 = stateFromStores(7957)(stateFromStores);
       dependencyMap = tmp8;
-      const tmp9 = stateFromStores(9132)();
+      const tmp9 = stateFromStores(9167)();
       react = tmp9;
       if (cResult[2] === arg0) {
         if (cResult[3] === tmp9) {
@@ -92,9 +92,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = obj.useStateFromStores(items, () =>
         pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream(),
       );
-      const tmp2 = stateFromStores(7946)(stateFromStores);
+      const tmp2 = stateFromStores(7957)(stateFromStores);
       dependencyMap = tmp2;
-      const tmp3 = stateFromStores(9132)();
+      const tmp3 = stateFromStores(9167)();
       react = tmp3;
       const items1 = [stateFromStores, tmp2, arg0, tmp3];
       const effect = react.useEffect(() => {

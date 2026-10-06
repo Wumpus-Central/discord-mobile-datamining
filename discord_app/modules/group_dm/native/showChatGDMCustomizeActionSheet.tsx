@@ -10,5 +10,5 @@ export default function showChatGDMCustomizeActionSheet(merged) {
   const obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   const obj2 = ModalActionCreatorsDefault;
-  obj2.pushLazy(asyncRequire(10657, dependencyMap.paths), merged, "customize-group-dm", { presentation: "modal" });
+  obj2.pushLazy(asyncRequire(10670, dependencyMap.paths), merged, "customize-group-dm", { presentation: "modal" });
 }

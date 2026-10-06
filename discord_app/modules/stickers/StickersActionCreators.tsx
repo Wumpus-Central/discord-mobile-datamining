@@ -19,7 +19,7 @@ let _require, c1, c2, locale, stickerIds;
 
 let c10;
 let unpackModuleId;
-const f102766 = (item) => null != stickerById.getStickerById(item);
+const f102918 = (item) => null != stickerById.getStickerById(item);
 let obj = function _fetchStickerPack() {
   obj = _asyncToGenerator(async (packId, ingestStickers) => {
     let closure_2;
@@ -98,7 +98,7 @@ obj = function _fetchStickerPacks() {
       obj5 = {};
     }
     locale = obj5.locale ?? locale.locale;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -460,7 +460,7 @@ export const favoriteSticker = function favoriteSticker(arg0) {
       if (GuildAvailabilityStore.totalUnavailableGuilds <= 0) {
         let found = stickerIds1;
         if (GatewayConnectionStore.isConnected()) {
-          found = stickerIds1.filter(f102766);
+          found = stickerIds1.filter(f102918);
         }
         tmp = found;
       }
@@ -505,7 +505,7 @@ export const unfavoriteSticker = function unfavoriteSticker(arg0) {
       if (GuildAvailabilityStore.totalUnavailableGuilds <= 0) {
         let found = stickerIds1;
         if (GatewayConnectionStore.isConnected()) {
-          found = stickerIds1.filter(f102766);
+          found = stickerIds1.filter(f102918);
         }
         tmp = found;
       }

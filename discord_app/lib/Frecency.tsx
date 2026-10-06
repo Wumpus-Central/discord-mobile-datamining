@@ -1,6 +1,6 @@
 // discord_app/lib/Frecency.tsx
 import _modDef12 from "../../_runtime/metro/00012__.js";
-import _modDef4461 from "../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../_runtime/metro/04467__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
@@ -197,7 +197,7 @@ class Frecency {
     const self = this;
     const tmp = importDefault;
     let tmp2 = dependencyMap;
-    dependencyMap = _modDef4461();
+    dependencyMap = _modDef4467();
     let maxByResult = null;
     if (this.calculateMaxTotalUse) {
       let tmp4 = globalThis;
@@ -220,7 +220,7 @@ class Frecency {
             return false;
           } else {
             recentUses.score =
-              recentUses.score + closure_1 * self.computeWeight(closure_1.diff(_modDef4461(arg0), "days"));
+              recentUses.score + closure_1 * self.computeWeight(closure_1.diff(_modDef4467(arg0), "days"));
           }
         });
         const tmp4 = arg1;

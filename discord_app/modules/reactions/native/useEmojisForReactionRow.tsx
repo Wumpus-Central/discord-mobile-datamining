@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      const tmpResult = tmp(9870);
+      const tmpResult = tmp(9883);
       const frequentlyUsedReactionEmojis = tmpResult.useFrequentlyUsedReactionEmojis(tmp4);
       const rounded = Math.floor(Math.min(useWindowDimensionsDefault().width, arg1) / arg2);
       if (cResult[2] === getGuildId) {

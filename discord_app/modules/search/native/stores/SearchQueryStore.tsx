@@ -188,7 +188,7 @@ class SearchQueryStateManager {
       let items1;
       let channelName;
       if (null != channel) {
-        const obj2 = obj(5043);
+        const obj2 = obj(5049);
         channelName = obj2.computeChannelName(channel, UserStore, RelationshipStore);
       }
       if (null == channelName) {
@@ -206,7 +206,7 @@ class SearchQueryStateManager {
         let str = ": ";
         stringResult = intl.string(obj(1126).t.WNpFHa);
         items1 = [obj3];
-        obj4 = obj(11968);
+        obj4 = obj(11987);
       }
       items = items1;
     }

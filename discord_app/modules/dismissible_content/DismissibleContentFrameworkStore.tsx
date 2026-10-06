@@ -4,8 +4,8 @@ import get_initializedDefault from "../../../discord_common/js/packages/flux/ind
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import DismissibleContentTypes from "DismissibleContentTypes.tsx";
 import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig.tsx";
+import DismissibleContentTypes from "DismissibleContentTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let map;

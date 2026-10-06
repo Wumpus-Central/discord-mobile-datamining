@@ -53,7 +53,7 @@ let obj = function _finishMFACheck() {
             }
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (ticket === 1) {

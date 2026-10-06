@@ -9,7 +9,7 @@ import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/Ac
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
 import useTypeConsolidationTextTransform from "../../../../design/useTypeConsolidationTextTransform.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/06653_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/06660_AssetRegistry.js";
 import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
@@ -753,7 +753,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                   function handleViewEntireTemplate() {
                                     const obj = ActionSheetActionCreatorsDefault;
                                     const obj2 = { template, guildId, handleSelectTemplateInPreview };
-                                    obj.openLazy(asyncRequire(17979, dependencyMap.paths), "TierTemplateCard", obj2);
+                                    obj.openLazy(asyncRequire(18025, dependencyMap.paths), "TierTemplateCard", obj2);
                                   }
                                   if (cResult[46] === handleViewEntireTemplate) {
                                     class W {
@@ -778,7 +778,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                         };
                                         const obj = ActionSheetActionCreatorsDefault;
                                         obj.openLazy(
-                                          asyncRequire(17983, dependencyMap.paths),
+                                          asyncRequire(18029, dependencyMap.paths),
                                           "TierTemplatePriceReselectionCard",
                                           obj2,
                                         );
@@ -808,7 +808,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                       };
                                       const obj = ActionSheetActionCreatorsDefault;
                                       obj.openLazy(
-                                        asyncRequire(17983, dependencyMap.paths),
+                                        asyncRequire(18029, dependencyMap.paths),
                                         "TierTemplatePriceReselectionCard",
                                         obj2,
                                       );
@@ -833,7 +833,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                     };
                                     const obj = ActionSheetActionCreatorsDefault;
                                     obj.openLazy(
-                                      asyncRequire(17983, dependencyMap.paths),
+                                      asyncRequire(18029, dependencyMap.paths),
                                       "TierTemplatePriceReselectionCard",
                                       obj2,
                                     );
@@ -860,7 +860,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                   };
                                   const obj = ActionSheetActionCreatorsDefault;
                                   obj.openLazy(
-                                    asyncRequire(17983, dependencyMap.paths),
+                                    asyncRequire(18029, dependencyMap.paths),
                                     "TierTemplatePriceReselectionCard",
                                     obj2,
                                   );
@@ -885,7 +885,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                 };
                                 const obj = ActionSheetActionCreatorsDefault;
                                 obj.openLazy(
-                                  asyncRequire(17983, dependencyMap.paths),
+                                  asyncRequire(18029, dependencyMap.paths),
                                   "TierTemplatePriceReselectionCard",
                                   obj2,
                                 );
@@ -907,7 +907,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                               };
                               const obj = ActionSheetActionCreatorsDefault;
                               obj.openLazy(
-                                asyncRequire(17983, dependencyMap.paths),
+                                asyncRequire(18029, dependencyMap.paths),
                                 "TierTemplatePriceReselectionCard",
                                 obj2,
                               );
@@ -935,7 +935,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                             };
                             const obj = ActionSheetActionCreatorsDefault;
                             obj.openLazy(
-                              asyncRequire(17983, dependencyMap.paths),
+                              asyncRequire(18029, dependencyMap.paths),
                               "TierTemplatePriceReselectionCard",
                               obj2,
                             );
@@ -967,7 +967,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                         newPricesToPick: suggestedUnusedPrices,
                       };
                       const obj = ActionSheetActionCreatorsDefault;
-                      obj.openLazy(asyncRequire(17983, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+                      obj.openLazy(asyncRequire(18029, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
                     } else {
                       handleCreateFromTemplate(selectedTemplate, arg1);
                     }
@@ -986,7 +986,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 if (closure_7) {
                   const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
                   const obj = ActionSheetActionCreatorsDefault;
-                  obj.openLazy(asyncRequire(17983, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+                  obj.openLazy(asyncRequire(18029, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
                 } else {
                   handleCreateFromTemplate(selectedTemplate, arg1);
                 }
@@ -1087,7 +1087,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         if (closure_7) {
           const obj2 = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequire(17983, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
+          obj.openLazy(asyncRequire(18029, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj2);
         } else {
           handleCreateFromTemplate(selectedTemplate, arg1);
         }
@@ -1108,7 +1108,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         onPress() {
           const obj = ActionSheetActionCreatorsDefault;
           const obj2 = { template, guildId, handleSelectTemplateInPreview: callback1 };
-          obj.openLazy(asyncRequire(17979, dependencyMap.paths), "TierTemplateCard", obj2);
+          obj.openLazy(asyncRequire(18025, dependencyMap.paths), "TierTemplateCard", obj2);
         },
         children: items6,
       };

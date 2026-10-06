@@ -2,7 +2,7 @@
 import AccessibilityAnnouncer2 from "../AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import _slicedToArray_mod from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
-import 04571__ from "../../../../../../_runtime/metro/04571__.js";
+import 04577__ from "../../../../../../_runtime/metro/04577__.js";
 import ReactCompilerGating_mod from "../../../../../../discord_app/modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
@@ -12,7 +12,7 @@ let _require, dependencyMap, set;
 let _slicedToArray = _slicedToArray_mod;
 const top = "top";
 let c5 = 3000;
-let closure_6 = module_4571.create(() => {
+let closure_6 = module_4577.create(() => {
   const obj = { containerIdsBySurface: new Map() };
   new Map();
   return obj;

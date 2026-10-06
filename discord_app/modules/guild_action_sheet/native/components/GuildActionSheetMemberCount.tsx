@@ -231,7 +231,7 @@ const memoResult = react.memo(
         const obj4 = { style: items, children: _false(View, { style: items1 }) };
         items1 = [tmp8.dot, "online" === type ? tmp8.onlineDot : tmp8.offlineDot];
         items2 = [_false(View, obj4)];
-        const Text = tmp4(4886).Text;
+        const Text = tmp4(4892).Text;
         if (textVariant == null) {
           textVariant = "text-sm/normal";
         }

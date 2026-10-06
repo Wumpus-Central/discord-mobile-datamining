@@ -17,7 +17,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9;
       let obj = entrypoint(576);
       const cResult = obj.c(6);
-      let obj2 = entrypoint(10994);
+      let obj2 = entrypoint(11007);
       const tmp = entrypoint;
       entrypoint = obj2.useAppLauncherContext().entrypoint;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -98,7 +98,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let entrypoint;
       let items;
       let ref;
-      let obj = entrypoint(10994);
+      let obj = entrypoint(11007);
       entrypoint = obj.useAppLauncherContext().entrypoint;
       const useRef = react.useRef;
       set = new Set();

@@ -5,13 +5,13 @@ import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import Constants from "../../../../Constants.tsx";
 import intl13 from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
-import _modDef6052 from "../../../../../_runtime/metro/06052__.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import _modDef6059 from "../../../../../_runtime/metro/06059__.js";
 import ConjureDesignFeedback from "../../design_feedback/ConjureDesignFeedback.tsx";
 import ConjureHistoryFormat from "../../history/ConjureHistoryFormat.tsx";
 import ConjureVersionRestoreConfirm from "../../history/native/ConjureVersionRestoreConfirm.tsx";
@@ -20,11 +20,14 @@ import ConjureRepliedMessage from "ConjureRepliedMessage.tsx";
 import ConjureMessageAuthor from "ConjureMessageAuthor.tsx";
 import ConjureMessageActionSheet from "ConjureMessageActionSheet.tsx";
 import useConjureAttachmentImage from "../useConjureAttachmentImage.tsx";
+import conjurePlanWidget2 from "../../plan/conjurePlanWidget.tsx";
 import ConjureNativeCardSurfaceDefault from "../../shared/native/ConjureNativeCardSurface.tsx";
 import ConjureNativeCollapsibleSection from "../../shared/native/ConjureNativeCollapsibleSection.tsx";
 import ConjurePlanAutomodExamples from "../../plan/native/ConjurePlanAutomodExamples.tsx";
 import ConjureNativeMarkdown from "ConjureNativeMarkdown.tsx";
+import ConjurePlanWidgetDefault from "../../plan/native/ConjurePlanWidget.tsx";
 import ConjureTimelineTree from "../../agent_activity/ConjureTimelineTree.tsx";
+import ConjureNativeStepImagesDefault from "ConjureNativeStepImages.tsx";
 import ConjureSubagentMark from "../../agent_activity/native/ConjureSubagentMark.tsx";
 import ConjureTodoAgents from "../../agent_activity/ConjureTodoAgents.tsx";
 import ConjureChatRestore from "../../history/ConjureChatRestore.tsx";
@@ -38,7 +41,7 @@ import conjurePendingPlan from "../../plan/conjurePendingPlan.tsx";
 import ConjureChatGrouping from "../ConjureChatGrouping.tsx";
 import chat_ConjureRepliedMessage from "../ConjureRepliedMessage.tsx";
 import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
-import react from "../../../../../_runtime/00019_react.js";
+import react_mod from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 import ConjureConnectionStore_mod from "../../connection/ConjureConnectionStore.tsx";
@@ -52,15 +55,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const ConjureNativeStatusLineDefault = ConjureNativeStatusLine;
 const ConjureNativeCollapsibleSectionDefault = ConjureNativeCollapsibleSection;
 const ConjurePlanAutomodExamplesDefault = ConjurePlanAutomodExamples;
-let _require,
-  autoscrollToBottomThreshold,
-  dependencyMap,
-  fadingEdgeLength,
-  map,
-  nativeEvent,
-  set,
-  stepCommand,
-  viewableItems;
+let _require, autoscrollToBottomThreshold, dependencyMap, fadingEdgeLength, map, nativeEvent, set, viewableItems;
 
 let c10;
 let closure_12;
@@ -91,6 +86,7 @@ let rect;
 let rect1;
 let unpackModuleId;
 let _slicedToArray = _slicedToArray_mod;
+let react = react_mod;
 ({
   ActivityIndicator: hasOwnProperty,
   Image: metroRequire,
@@ -255,7 +251,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = intl13.intl;
-          const stringResult = intl.string(_modDef3723["3/aHX6"]);
+          const stringResult = intl.string(_modDef3753["3/aHX6"]);
           cResult[0] = stringResult;
           first = stringResult;
         } else {
@@ -263,7 +259,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3723.X15LLY) };
+          const obj3 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3753.X15LLY) };
           const Text = Text_Text.Text;
           intl2 = intl13.intl;
           const tmp13 = closure_19(Text, obj3);
@@ -329,9 +325,9 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         let tmp9Result;
         const intl = intl13.intl;
-        const stringResult = intl.string(_modDef3723["3/aHX6"]);
+        const stringResult = intl.string(_modDef3753["3/aHX6"]);
         const Stack = Stack_Stack.Stack;
-        const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3723.X15LLY) };
+        const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl2.string(_modDef3753.X15LLY) };
         const Text = Text_Text.Text;
         intl2 = intl13.intl;
         items = [closure_19(Text, obj2)];
@@ -361,7 +357,7 @@ ReactCompilerGating = ReactCompilerGating_mod;
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
       let arr;
-      let arr2;
+      let arr3;
       let expanded;
       let intl10;
       let intl11;
@@ -375,537 +371,439 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       let items3;
       let items4;
       let items5;
-      let num;
       let onApprove;
       let onToggleExpanded;
       let projectId;
       let proposal;
-      let str;
-      let str2;
-      let str3;
       let superseded;
-      let tmp10;
-      let tmp11;
-      let tmp12;
-      let tmp13;
-      let tmp14;
-      let tmp15;
       let tmp16;
-      let tmp17;
-      let tmp18;
-      let tmp19;
-      let tmp20;
-      let tmp21;
-      let tmp23;
-      let tmp25;
-      let tmp27;
-      let tmp32;
-      let tmp7;
       let tmp8;
-      let tmp9;
       let version;
       let obj = react2;
-      const cResult = obj.c(90);
+      const cResult = obj.c(64);
       ({ projectId, proposal, version, superseded, expanded, onToggleExpanded, onApprove } = arg0);
       const tmp6 = closure_29();
-      if (cResult[0] === (undefined === expanded || expanded)) {
-        if (cResult[1] === onToggleExpanded) {
-          if (cResult[2] === proposal) {
-            if (cResult[3] === (undefined !== superseded && superseded)) {
-              if (cResult[4] === version) {
-                tmp7 = cResult[5];
-                tmp8 = cResult[6];
-                tmp9 = cResult[7];
-                tmp10 = cResult[8];
-                tmp11 = cResult[9];
-                arr = cResult[10];
-                arr2 = cResult[11];
-                tmp12 = cResult[12];
-                tmp13 = cResult[13];
-                tmp14 = cResult[14];
-                tmp15 = cResult[15];
-                tmp16 = cResult[16];
-                tmp17 = cResult[17];
-                tmp18 = cResult[18];
-                str = cResult[19];
-                str2 = cResult[20];
-                tmp19 = cResult[21];
-                str3 = cResult[22];
-                num = cResult[23];
-                tmp20 = cResult[24];
-                tmp21 = cResult[25];
+      const str = proposal.summary;
+      const trimmed = str.trim();
+      if (cResult[0] !== proposal.what_changed) {
+        let str3;
+        if (proposal.what_changed != null) {
+          str3 = str2.trim();
+        }
+        if (str3 == null) {
+          str3 = "";
+        }
+        cResult[0] = proposal.what_changed;
+        cResult[1] = str3;
+        tmp8 = str3;
+      } else {
+        tmp8 = cResult[1];
+      }
+      if (cResult[2] !== proposal.bot_permissions) {
+        let bot_permissions = proposal.bot_permissions;
+        if (bot_permissions == null) {
+          bot_permissions = [];
+        }
+        cResult[2] = proposal.bot_permissions;
+        cResult[3] = bot_permissions;
+        arr = bot_permissions;
+      } else {
+        arr = cResult[3];
+      }
+      if (cResult[4] !== proposal.privileged_intents) {
+        let privileged_intents = proposal.privileged_intents;
+        if (privileged_intents == null) {
+          privileged_intents = [];
+        }
+        cResult[4] = proposal.privileged_intents;
+        cResult[5] = privileged_intents;
+        arr3 = privileged_intents;
+      } else {
+        arr3 = cResult[5];
+      }
+      const automod = proposal.automod;
+      const tmpResult = conjurePlanWidget2;
+      const conjurePlanWidget = tmpResult.useConjurePlanWidget(projectId, proposal);
+      const tmp14 = ConjureNativeCardSurfaceDefault;
+      const tmp15 = ConjureNativeCollapsibleSectionDefault;
+      if (cResult[6] === (undefined !== superseded && superseded)) {
+        let tmp19;
+        let tmp24;
+        let tmp23;
+        let tmp27;
+        let tmp30;
+        let stringResult2;
+        if (cResult[7] === version) {
+          tmp16 = cResult[8];
+        }
+        if (cResult[9] !== (undefined !== superseded && superseded)) {
+          let tmp20 = null;
+          if (undefined !== superseded && superseded) {
+            const obj2 = { children: intl3.string(_modDef3753.hF2c41) };
+            const ConjureNativeCollapsibleMeta = ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta;
+            intl3 = intl13.intl;
+            tmp20 = closure_19(ConjureNativeCollapsibleMeta, obj2);
+          }
+          cResult[9] = undefined !== superseded && superseded;
+          cResult[10] = tmp20;
+          tmp19 = tmp20;
+        } else {
+          tmp19 = cResult[10];
+        }
+        const _Symbol = Symbol;
+        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl4 = intl13.intl;
+          const stringResult = intl4.string(_modDef3753.yD8EJS);
+          const intl5 = intl13.intl;
+          const stringResult1 = intl5.string(_modDef3753.nSPGNb);
+          cResult[11] = stringResult;
+          cResult[12] = stringResult1;
+          tmp24 = stringResult1;
+          tmp23 = stringResult;
+        } else {
+          tmp23 = cResult[11];
+          tmp24 = cResult[12];
+        }
+        const Stack = Stack_Stack.Stack;
+        if (cResult[13] !== automod) {
+          let tmp28 = null;
+          if (null != automod) {
+            tmp28 = closure_19(ConjurePlanAutomodExamples.ConjurePlanAutomodTypeTag, {});
+          }
+          cResult[13] = automod;
+          cResult[14] = tmp28;
+          tmp27 = tmp28;
+        } else {
+          tmp27 = cResult[14];
+        }
+        if (cResult[15] !== tmp8) {
+          let tmp31 = null;
+          if ("" !== tmp8) {
+            const obj3 = { direction: "vertical", spacing: 4, children: items };
+            const Stack5 = Stack_Stack.Stack;
+            const obj4 = {
+              variant: "text-sm/semibold",
+              color: "text-muted",
+              children: intl12.string(_modDef3753.iNS4dl),
+            };
+            const Text8 = Text_Text.Text;
+            intl12 = intl13.intl;
+            items = [closure_19(Text8, obj4)];
+            const obj5 = { variant: "text-md/normal", color: "text-default", children: tmp8 };
+            items[1] = closure_19(Text_Text.Text, obj5);
+            tmp31 = closure_20(Stack5, obj3);
+          }
+          cResult[15] = tmp8;
+          cResult[16] = tmp31;
+          tmp30 = tmp31;
+        } else {
+          tmp30 = cResult[16];
+        }
+        let Text = Text_Text.Text;
+        if ("" === trimmed) {
+          const intl6 = intl13.intl;
+          stringResult2 = intl6.string(_modDef3753["0+RUWx"]);
+        } else {
+          const tmp13Result = MarkupUtilsDefault;
+          stringResult2 = tmp13Result.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
+        }
+        if (cResult[17] === Text) {
+          let tmp33;
+          let tmp36;
+          if (cResult[18] === stringResult2) {
+            tmp33 = cResult[19];
+          }
+          if (cResult[20] !== automod) {
+            let tmp38 = null;
+            if (null != automod) {
+              tmp38 = null;
+              if (automod.examples.length > 0) {
+                const obj6 = { automod };
+                tmp38 = closure_19(ConjurePlanAutomodExamplesDefault, obj6);
               }
-              if (cResult[43] === tmp7) {
-                if (cResult[44] === str) {
-                  if (cResult[45] === str2) {
-                    let tmp49;
-                    let tmp52;
-                    if (cResult[46] === tmp19) {
-                      tmp49 = cResult[47];
+            }
+            cResult[20] = automod;
+            cResult[21] = tmp38;
+            tmp36 = tmp38;
+          } else {
+            tmp36 = cResult[21];
+          }
+          if (cResult[22] === automod) {
+            if (cResult[23] === projectId) {
+              let tmp40;
+              if (cResult[24] === proposal.design_image) {
+                tmp40 = cResult[25];
+              }
+              if (cResult[26] === automod) {
+                let tmp45;
+                let tmp53;
+                let tmp57;
+                let tmp61;
+                if (cResult[27] === conjurePlanWidget) {
+                  tmp45 = cResult[28];
+                }
+                if (cResult[29] !== proposal.changes) {
+                  let tmp54 = null;
+                  if (proposal.changes.length > 0) {
+                    const obj7 = { direction: "vertical", spacing: 4, children: items1 };
+                    const Stack2 = Stack_Stack.Stack;
+                    const obj8 = {
+                      variant: "text-sm/semibold",
+                      color: "text-muted",
+                      children: intl7.string(_modDef3753["5+mG1z"]),
+                    };
+                    const Text2 = Text_Text.Text;
+                    intl7 = intl13.intl;
+                    items1 = [closure_19(Text2, obj8)];
+                    const changes = proposal.changes;
+                    items1[1] = changes.map((item, index) => {
+                      const obj = { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item };
+                      const Text = require("Text/Text").Text;
+                      return closure_1_19(Text, obj, index);
+                    });
+                    tmp54 = closure_20(Stack2, obj7);
+                  }
+                  cResult[29] = proposal.changes;
+                  cResult[30] = tmp54;
+                  tmp53 = tmp54;
+                } else {
+                  tmp53 = cResult[30];
+                }
+                if (cResult[31] !== arr) {
+                  let tmp58 = null;
+                  if (arr.length > 0) {
+                    const obj9 = { direction: "vertical", spacing: 4, children: items2 };
+                    const Stack3 = Stack_Stack.Stack;
+                    const obj10 = {
+                      variant: "text-sm/semibold",
+                      color: "text-muted",
+                      children: intl8.string(_modDef3753["2UbW6r"]),
+                    };
+                    const Text3 = Text_Text.Text;
+                    intl8 = intl13.intl;
+                    items2 = [closure_19(Text3, obj10)];
+                    const obj11 = { variant: "text-sm/normal", color: "text-default", children: arr.join(", ") };
+                    const Text4 = Text_Text.Text;
+                    items2[1] = closure_19(Text4, obj11);
+                    tmp58 = closure_20(Stack3, obj9);
+                  }
+                  cResult[31] = arr;
+                  cResult[32] = tmp58;
+                  tmp57 = tmp58;
+                } else {
+                  tmp57 = cResult[32];
+                }
+                if (cResult[33] !== arr3) {
+                  let tmp62 = null;
+                  if (arr3.length > 0) {
+                    const obj12 = { direction: "vertical", spacing: 4, children: items3 };
+                    const Stack4 = Stack_Stack.Stack;
+                    const obj13 = {
+                      variant: "text-sm/semibold",
+                      color: "text-muted",
+                      children: intl9.string(_modDef3753["7TKfpj"]),
+                    };
+                    const Text5 = Text_Text.Text;
+                    intl9 = intl13.intl;
+                    items3 = [closure_19(Text5, obj13)];
+                    const obj14 = { variant: "text-sm/normal", color: "text-default", children: arr3.join(", ") };
+                    const Text6 = Text_Text.Text;
+                    items3[1] = closure_19(Text6, obj14);
+                    tmp62 = closure_20(Stack4, obj12);
+                  }
+                  cResult[33] = arr3;
+                  cResult[34] = tmp62;
+                  tmp61 = tmp62;
+                } else {
+                  tmp61 = cResult[34];
+                }
+                if (cResult[35] === onApprove) {
+                  if (cResult[36] === tmp6) {
+                    let tmp65;
+                    if (cResult[37] === (undefined !== superseded && superseded)) {
+                      tmp65 = cResult[38];
                     }
-                    if (cResult[48] !== tmp11) {
-                      let tmp54 = null;
-                      if (null != tmp11) {
-                        tmp54 = null;
-                        if (tmp11.examples.length > 0) {
-                          const obj2 = { automod: tmp11 };
-                          tmp54 = closure_19(ConjurePlanAutomodExamplesDefault, obj2);
-                        }
-                      }
-                      cResult[48] = tmp11;
-                      cResult[49] = tmp54;
-                      tmp52 = tmp54;
-                    } else {
-                      tmp52 = cResult[49];
-                    }
-                    if (cResult[50] === tmp11) {
-                      if (cResult[51] === projectId) {
-                        let tmp57;
-                        let tmp62;
-                        let tmp67;
-                        let tmp72;
-                        if (cResult[52] === proposal.design_image) {
-                          tmp57 = cResult[53];
-                        }
-                        if (cResult[54] !== proposal.changes) {
-                          let tmp63 = null;
-                          if (proposal.changes.length > 0) {
-                            const obj3 = { direction: "vertical", spacing: 4, children: items };
-                            const Stack2 = Stack_Stack.Stack;
-                            const obj4 = {
-                              variant: "text-sm/semibold",
-                              color: "text-muted",
-                              children: intl7.string(_modDef3723["5+mG1z"]),
-                            };
-                            const Text2 = Text_Text.Text;
-                            intl7 = intl13.intl;
-                            items = [closure_19(Text2, obj4)];
-                            const changes = proposal.changes;
-                            items[1] = changes.map((item, index) => {
-                              const obj = {
-                                variant: "text-sm/normal",
-                                color: "text-default",
-                                children: "\u2022 " + item,
-                              };
-                              const Text = require("Text/Text").Text;
-                              return closure_1_19(Text, obj, index);
-                            });
-                            tmp63 = closure_20(Stack2, obj3);
-                          }
-                          cResult[54] = proposal.changes;
-                          cResult[55] = tmp63;
-                          tmp62 = tmp63;
-                        } else {
-                          tmp62 = cResult[55];
-                        }
-                        if (cResult[56] !== arr2) {
-                          let tmp68 = null;
-                          if (arr2.length > 0) {
-                            const obj5 = { direction: "vertical", spacing: 4, children: items1 };
-                            const Stack3 = Stack_Stack.Stack;
-                            const obj6 = {
-                              variant: "text-sm/semibold",
-                              color: "text-muted",
-                              children: intl8.string(_modDef3723["2UbW6r"]),
-                            };
-                            const Text3 = Text_Text.Text;
-                            intl8 = intl13.intl;
-                            items1 = [closure_19(Text3, obj6)];
-                            const obj7 = {
-                              variant: "text-sm/normal",
-                              color: "text-default",
-                              children: arr2.join(", "),
-                            };
-                            const Text4 = Text_Text.Text;
-                            items1[1] = closure_19(Text4, obj7);
-                            tmp68 = closure_20(Stack3, obj5);
-                          }
-                          cResult[56] = arr2;
-                          cResult[57] = tmp68;
-                          tmp67 = tmp68;
-                        } else {
-                          tmp67 = cResult[57];
-                        }
-                        if (cResult[58] !== arr) {
-                          let tmp73 = null;
-                          if (arr.length > 0) {
-                            const obj8 = { direction: "vertical", spacing: 4, children: items2 };
-                            const Stack4 = Stack_Stack.Stack;
-                            const obj9 = {
-                              variant: "text-sm/semibold",
-                              color: "text-muted",
-                              children: intl9.string(_modDef3723["7TKfpj"]),
-                            };
-                            const Text5 = Text_Text.Text;
-                            intl9 = intl13.intl;
-                            items2 = [closure_19(Text5, obj9)];
-                            const obj10 = {
-                              variant: "text-sm/normal",
-                              color: "text-default",
-                              children: arr.join(", "),
-                            };
-                            const Text6 = Text_Text.Text;
-                            items2[1] = closure_19(Text6, obj10);
-                            tmp73 = closure_20(Stack4, obj8);
-                          }
-                          cResult[58] = arr;
-                          cResult[59] = tmp73;
-                          tmp72 = tmp73;
-                        } else {
-                          tmp72 = cResult[59];
-                        }
-                        if (cResult[60] === onApprove) {
-                          if (cResult[61] === tmp6) {
-                            let tmp77;
-                            if (cResult[62] === (undefined !== superseded && superseded)) {
-                              tmp77 = cResult[63];
-                            }
-                            if (cResult[64] === tmp8) {
-                              if (cResult[65] === tmp49) {
-                                if (cResult[66] === tmp52) {
-                                  if (cResult[67] === tmp57) {
-                                    if (cResult[68] === tmp62) {
-                                      if (cResult[69] === tmp67) {
-                                        if (cResult[70] === tmp72) {
-                                          if (cResult[71] === tmp77) {
-                                            if (cResult[72] === str3) {
-                                              if (cResult[73] === num) {
-                                                if (cResult[74] === tmp20) {
-                                                  let tmp84;
-                                                  if (cResult[75] === tmp21) {
-                                                    tmp84 = cResult[76];
-                                                  }
-                                                  if (cResult[77] === tmp9) {
-                                                    if (cResult[78] === tmp12) {
-                                                      if (cResult[79] === tmp13) {
-                                                        if (cResult[80] === tmp14) {
-                                                          if (cResult[81] === tmp15) {
-                                                            if (cResult[82] === tmp16) {
-                                                              if (cResult[83] === tmp17) {
-                                                                if (cResult[84] === tmp18) {
-                                                                  let tmp87;
-                                                                  if (cResult[85] === tmp84) {
-                                                                    tmp87 = cResult[86];
-                                                                  }
-                                                                  if (cResult[87] === tmp10) {
-                                                                    let tmp90;
-                                                                    if (cResult[88] === tmp87) {
-                                                                      tmp90 = cResult[89];
-                                                                    }
-                                                                    return tmp90;
-                                                                  }
-                                                                  const obj11 = { children: tmp87 };
-                                                                  const tmp92 = closure_19(tmp10, obj11);
-                                                                  cResult[87] = tmp10;
-                                                                  cResult[88] = tmp87;
-                                                                  cResult[89] = tmp92;
-                                                                  tmp90 = tmp92;
-                                                                }
-                                                              }
-                                                            }
-                                                          }
+                    if (cResult[39] === Stack) {
+                      if (cResult[40] === tmp27) {
+                        if (cResult[41] === tmp30) {
+                          if (cResult[42] === tmp33) {
+                            if (cResult[43] === tmp36) {
+                              if (cResult[44] === tmp40) {
+                                if (cResult[45] === tmp45) {
+                                  if (cResult[46] === tmp53) {
+                                    if (cResult[47] === tmp57) {
+                                      if (cResult[48] === tmp61) {
+                                        let tmp71;
+                                        if (cResult[49] === tmp65) {
+                                          tmp71 = cResult[50];
+                                        }
+                                        if (cResult[51] === tmp15) {
+                                          if (cResult[52] === (undefined === expanded || expanded)) {
+                                            if (cResult[53] === onToggleExpanded) {
+                                              if (cResult[54] === (undefined !== superseded && superseded)) {
+                                                if (cResult[55] === tmp71) {
+                                                  if (cResult[56] === tmp16) {
+                                                    if (cResult[57] === tmp19) {
+                                                      if (cResult[58] === tmp23) {
+                                                        let tmp74;
+                                                        if (cResult[59] === tmp24) {
+                                                          tmp74 = cResult[60];
                                                         }
+                                                        if (cResult[61] === tmp14) {
+                                                          let tmp77;
+                                                          if (cResult[62] === tmp74) {
+                                                            tmp77 = cResult[63];
+                                                          }
+                                                          return tmp77;
+                                                        }
+                                                        const obj15 = { children: tmp74 };
+                                                        const tmp79 = closure_19(tmp14, obj15);
+                                                        cResult[61] = tmp14;
+                                                        cResult[62] = tmp74;
+                                                        cResult[63] = tmp79;
+                                                        tmp77 = tmp79;
                                                       }
                                                     }
                                                   }
-                                                  const obj12 = {
-                                                    title: tmp12,
-                                                    meta: tmp13,
-                                                    superseded: tmp14,
-                                                    expanded: tmp15,
-                                                    onToggleExpanded: tmp16,
-                                                    showLabel: tmp17,
-                                                    hideLabel: tmp18,
-                                                    children: tmp84,
-                                                  };
-                                                  const tmp89 = closure_19(tmp9, obj12);
-                                                  cResult[77] = tmp9;
-                                                  cResult[78] = tmp12;
-                                                  cResult[79] = tmp13;
-                                                  cResult[80] = tmp14;
-                                                  cResult[81] = tmp15;
-                                                  cResult[82] = tmp16;
-                                                  cResult[83] = tmp17;
-                                                  cResult[84] = tmp18;
-                                                  cResult[85] = tmp84;
-                                                  cResult[86] = tmp89;
-                                                  tmp87 = tmp89;
                                                 }
                                               }
                                             }
                                           }
                                         }
+                                        const obj16 = {
+                                          title: tmp16,
+                                          meta: tmp19,
+                                          superseded: undefined !== superseded && superseded,
+                                          expanded: undefined === expanded || expanded,
+                                          onToggleExpanded,
+                                          showLabel: tmp23,
+                                          hideLabel: tmp24,
+                                          children: tmp71,
+                                        };
+                                        const tmp76 = closure_19(tmp15, obj16);
+                                        cResult[51] = tmp15;
+                                        cResult[52] = undefined === expanded || expanded;
+                                        cResult[53] = onToggleExpanded;
+                                        cResult[54] = undefined !== superseded && superseded;
+                                        cResult[55] = tmp71;
+                                        cResult[56] = tmp16;
+                                        cResult[57] = tmp19;
+                                        cResult[58] = tmp23;
+                                        cResult[59] = tmp24;
+                                        cResult[60] = tmp76;
+                                        tmp74 = tmp76;
                                       }
                                     }
                                   }
                                 }
                               }
                             }
-                            const obj13 = { direction: str3, spacing: num, children: items3 };
-                            items3 = [tmp20, tmp21, tmp49, tmp52, tmp57, tmp62, tmp67, tmp72, tmp77];
-                            const tmp86 = closure_20(tmp8, obj13);
-                            cResult[64] = tmp8;
-                            cResult[65] = tmp49;
-                            cResult[66] = tmp52;
-                            cResult[67] = tmp57;
-                            cResult[68] = tmp62;
-                            cResult[69] = tmp67;
-                            cResult[70] = tmp72;
-                            cResult[71] = tmp77;
-                            cResult[72] = str3;
-                            cResult[73] = num;
-                            cResult[74] = tmp20;
-                            cResult[75] = tmp21;
-                            cResult[76] = tmp86;
-                            tmp84 = tmp86;
                           }
                         }
-                        let tmp79 = null;
-                        if (null != onApprove) {
-                          tmp79 = null;
-                          if (!(undefined !== superseded && superseded)) {
-                            const obj14 = { style: tmp6.planActions, children: items4 };
-                            const obj15 = {
-                              text: intl10.string(_modDef3723["6S+wRM"]),
-                              variant: "primary",
-                              onPress: onApprove,
-                            };
-                            const Button = components_Button_Button.Button;
-                            intl10 = intl13.intl;
-                            items4 = [closure_19(Button, obj15)];
-                            const obj16 = {
-                              variant: "text-sm/normal",
-                              color: "text-muted",
-                              style: tmp6.planReplyHint,
-                              children: intl11.string(_modDef3723.IZoqbR),
-                            };
-                            const Text7 = Text_Text.Text;
-                            intl11 = intl13.intl;
-                            items4[1] = closure_19(Text7, obj16);
-                            tmp79 = closure_20(metroImportAll, obj14);
-                          }
-                        }
-                        cResult[60] = onApprove;
-                        cResult[61] = tmp6;
-                        cResult[62] = undefined !== superseded && superseded;
-                        cResult[63] = tmp79;
-                        tmp77 = tmp79;
                       }
                     }
-                    let tmp59 = null;
-                    if (null == tmp11) {
-                      tmp59 = null;
-                      if (null != proposal.design_image) {
-                        const obj17 = { projectId, design: proposal.design_image };
-                        tmp59 = closure_19(closure_30, obj17);
-                      }
-                    }
-                    cResult[50] = tmp11;
-                    cResult[51] = projectId;
-                    cResult[52] = proposal.design_image;
-                    cResult[53] = tmp59;
-                    tmp57 = tmp59;
+                    const obj17 = { direction: "vertical", spacing: 8, children: items4 };
+                    items4 = [tmp27, tmp30, tmp33, tmp36, tmp40, tmp45, tmp53, tmp57, tmp61, tmp65];
+                    const tmp73 = closure_20(Stack, obj17);
+                    cResult[39] = Stack;
+                    cResult[40] = tmp27;
+                    cResult[41] = tmp30;
+                    cResult[42] = tmp33;
+                    cResult[43] = tmp36;
+                    cResult[44] = tmp40;
+                    cResult[45] = tmp45;
+                    cResult[46] = tmp53;
+                    cResult[47] = tmp57;
+                    cResult[48] = tmp61;
+                    cResult[49] = tmp65;
+                    cResult[50] = tmp73;
+                    tmp71 = tmp73;
                   }
                 }
+                let tmp67 = null;
+                if (null != onApprove) {
+                  tmp67 = null;
+                  if (!(undefined !== superseded && superseded)) {
+                    const obj18 = { style: tmp6.planActions, children: items5 };
+                    const obj19 = {
+                      text: intl10.string(_modDef3753["6S+wRM"]),
+                      variant: "primary",
+                      onPress: onApprove,
+                    };
+                    const Button = components_Button_Button.Button;
+                    intl10 = intl13.intl;
+                    items5 = [closure_19(Button, obj19)];
+                    const obj20 = {
+                      variant: "text-sm/normal",
+                      color: "text-muted",
+                      style: tmp6.planReplyHint,
+                      children: intl11.string(_modDef3753.IZoqbR),
+                    };
+                    const Text7 = Text_Text.Text;
+                    intl11 = intl13.intl;
+                    items5[1] = closure_19(Text7, obj20);
+                    tmp67 = closure_20(metroImportAll, obj18);
+                  }
+                }
+                cResult[35] = onApprove;
+                cResult[36] = tmp6;
+                cResult[37] = undefined !== superseded && superseded;
+                cResult[38] = tmp67;
+                tmp65 = tmp67;
               }
-              const obj18 = { variant: str, color: str2, children: tmp19 };
-              const tmp51 = closure_19(tmp7, obj18);
-              cResult[43] = tmp7;
-              cResult[44] = str;
-              cResult[45] = str2;
-              cResult[46] = tmp19;
-              cResult[47] = tmp51;
-              tmp49 = tmp51;
+              let tmp47 = null;
+              if (null == automod) {
+                tmp47 = null;
+                if (null != conjurePlanWidget) {
+                  const obj21 = {};
+                  const tmp13Result2 = ConjurePlanWidgetDefault;
+                  const merged = Object.assign(conjurePlanWidget);
+                  tmp47 = closure_19(tmp13Result2, obj21);
+                }
+              }
+              cResult[26] = automod;
+              cResult[27] = conjurePlanWidget;
+              cResult[28] = tmp47;
+              tmp45 = tmp47;
             }
           }
-        }
-      }
-      const str4 = proposal.summary;
-      const trimmed = str4.trim();
-      if (cResult[26] !== proposal.what_changed) {
-        let str6;
-        if (proposal.what_changed != null) {
-          str6 = str5.trim();
-        }
-        if (str6 == null) {
-          str6 = "";
-        }
-        cResult[26] = proposal.what_changed;
-        cResult[27] = str6;
-        tmp23 = str6;
-      } else {
-        tmp23 = cResult[27];
-      }
-      if (cResult[28] !== proposal.bot_permissions) {
-        let bot_permissions = proposal.bot_permissions;
-        if (bot_permissions == null) {
-          bot_permissions = [];
-        }
-        cResult[28] = proposal.bot_permissions;
-        cResult[29] = bot_permissions;
-        tmp25 = bot_permissions;
-      } else {
-        tmp25 = cResult[29];
-      }
-      if (cResult[30] !== proposal.privileged_intents) {
-        let privileged_intents = proposal.privileged_intents;
-        if (privileged_intents == null) {
-          privileged_intents = [];
-        }
-        cResult[30] = proposal.privileged_intents;
-        cResult[31] = privileged_intents;
-        tmp27 = privileged_intents;
-      } else {
-        tmp27 = cResult[31];
-      }
-      const automod = proposal.automod;
-      const tmp30 = ConjureNativeCardSurfaceDefault;
-      const tmp31 = ConjureNativeCollapsibleSectionDefault;
-      if (cResult[32] === (undefined !== superseded && superseded)) {
-        let tmp35;
-        let tmp40;
-        let tmp39;
-        let tmp43;
-        let tmp46;
-        let stringResult2;
-        if (cResult[33] === version) {
-          tmp32 = cResult[34];
-        }
-        if (cResult[35] !== (undefined !== superseded && superseded)) {
-          let tmp36 = null;
-          if (undefined !== superseded && superseded) {
-            const obj19 = { children: intl3.string(_modDef3723.hF2c41) };
-            const ConjureNativeCollapsibleMeta = ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta;
-            intl3 = intl13.intl;
-            tmp36 = closure_19(ConjureNativeCollapsibleMeta, obj19);
+          let tmp42 = null;
+          if (null == automod) {
+            tmp42 = null;
+            if (null != proposal.design_image) {
+              const obj22 = { projectId, design: proposal.design_image };
+              tmp42 = closure_19(closure_30, obj22);
+            }
           }
-          cResult[35] = undefined !== superseded && superseded;
-          cResult[36] = tmp36;
-          tmp35 = tmp36;
-        } else {
-          tmp35 = cResult[36];
+          cResult[22] = automod;
+          cResult[23] = projectId;
+          cResult[24] = proposal.design_image;
+          cResult[25] = tmp42;
+          tmp40 = tmp42;
         }
-        const _Symbol = Symbol;
-        if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl4 = intl13.intl;
-          const stringResult = intl4.string(_modDef3723.yD8EJS);
-          const intl5 = intl13.intl;
-          const stringResult1 = intl5.string(_modDef3723.nSPGNb);
-          cResult[37] = stringResult;
-          cResult[38] = stringResult1;
-          tmp40 = stringResult1;
-          tmp39 = stringResult;
-        } else {
-          tmp39 = cResult[37];
-          tmp40 = cResult[38];
-        }
-        const Stack = Stack_Stack.Stack;
-        if (cResult[39] !== automod) {
-          let tmp44 = null;
-          if (null != automod) {
-            tmp44 = closure_19(ConjurePlanAutomodExamples.ConjurePlanAutomodTypeTag, {});
-          }
-          cResult[39] = automod;
-          cResult[40] = tmp44;
-          tmp43 = tmp44;
-        } else {
-          tmp43 = cResult[40];
-        }
-        if (cResult[41] !== tmp23) {
-          let tmp47 = null;
-          if ("" !== tmp23) {
-            const obj20 = { direction: "vertical", spacing: 4, children: items5 };
-            const Stack5 = Stack_Stack.Stack;
-            const obj21 = {
-              variant: "text-sm/semibold",
-              color: "text-muted",
-              children: intl12.string(_modDef3723.iNS4dl),
-            };
-            const Text8 = Text_Text.Text;
-            intl12 = intl13.intl;
-            items5 = [closure_19(Text8, obj21)];
-            const obj22 = { variant: "text-md/normal", color: "text-default", children: tmp23 };
-            items5[1] = closure_19(Text_Text.Text, obj22);
-            tmp47 = closure_20(Stack5, obj20);
-          }
-          cResult[41] = tmp23;
-          cResult[42] = tmp47;
-          tmp46 = tmp47;
-        } else {
-          tmp46 = cResult[42];
-        }
-        let Text = Text_Text.Text;
-        if ("" === trimmed) {
-          const intl6 = intl13.intl;
-          stringResult2 = intl6.string(_modDef3723["0+RUWx"]);
-        } else {
-          const tmp29Result = MarkupUtilsDefault;
-          stringResult2 = tmp29Result.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
-        }
-        cResult[0] = undefined === expanded || expanded;
-        cResult[1] = onToggleExpanded;
-        cResult[2] = proposal;
-        cResult[3] = undefined !== superseded && superseded;
-        cResult[4] = version;
-        cResult[5] = Text;
-        cResult[6] = Stack;
-        cResult[7] = tmp31;
-        cResult[8] = tmp30;
-        cResult[9] = automod;
-        cResult[10] = tmp27;
-        cResult[11] = tmp25;
-        cResult[12] = tmp32;
-        cResult[13] = tmp35;
-        cResult[14] = undefined !== superseded && superseded;
-        cResult[15] = undefined === expanded || expanded;
-        cResult[16] = onToggleExpanded;
-        cResult[17] = tmp39;
-        cResult[18] = tmp40;
-        cResult[19] = "text-md/normal";
-        cResult[20] = "text-default";
-        cResult[21] = stringResult2;
-        cResult[22] = "vertical";
-        cResult[23] = 8;
-        cResult[24] = tmp43;
-        cResult[25] = tmp46;
-        tmp19 = stringResult2;
-        tmp21 = tmp46;
-        tmp20 = tmp43;
-        num = 8;
-        str3 = "vertical";
-        str2 = "text-default";
-        str = "text-md/normal";
-        tmp18 = tmp40;
-        tmp17 = tmp39;
-        tmp16 = onToggleExpanded;
-        tmp15 = tmp5;
-        tmp14 = tmp4;
-        tmp13 = tmp35;
-        tmp12 = tmp32;
-        arr2 = tmp25;
-        arr = tmp27;
-        tmp11 = automod;
-        tmp10 = tmp30;
-        tmp9 = tmp31;
-        tmp8 = Stack;
-        tmp7 = Text;
+        const obj23 = { variant: "text-md/normal", color: "text-default", children: stringResult2 };
+        const tmp35 = closure_19(Text, obj23);
+        cResult[17] = Text;
+        cResult[18] = stringResult2;
+        cResult[19] = tmp35;
+        tmp33 = tmp35;
       }
       if (undefined !== superseded && superseded) {
         let formatToPlainStringResult;
         if (null != version) {
           const intl2 = intl13.intl;
-          const obj23 = { version };
-          formatToPlainStringResult = intl2.formatToPlainString(_modDef3723.YZ3qJs, obj23);
+          const obj24 = { version };
+          formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.YZ3qJs, obj24);
         }
-        cResult[32] = undefined !== superseded && superseded;
-        cResult[33] = version;
-        cResult[34] = formatToPlainStringResult;
-        tmp32 = formatToPlainStringResult;
+        cResult[6] = undefined !== superseded && superseded;
+        cResult[7] = version;
+        cResult[8] = formatToPlainStringResult;
+        tmp16 = formatToPlainStringResult;
       }
       const intl = intl13.intl;
-      formatToPlainStringResult = intl.string(_modDef3723["3b6e7o"]);
+      formatToPlainStringResult = intl.string(_modDef3753["3b6e7o"]);
     }
-  : (projectId) => {
+  : (expanded) => {
       let Stack;
       let intl10;
       let intl11;
@@ -921,22 +819,22 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       let items3;
       let items4;
       let items5;
-      let obj22;
+      let obj24;
+      let projectId;
       let proposal;
       let superseded;
-      let tmp3Result;
+      let tmp6Result;
       let version;
-      ({ proposal, version, superseded } = projectId);
-      projectId = projectId.projectId;
+      ({ projectId, proposal, version, superseded } = expanded);
       if (superseded === undefined) {
         superseded = false;
       }
-      let flag = projectId.expanded;
+      let flag = expanded.expanded;
       if (flag === undefined) {
         flag = true;
       }
-      const onApprove = projectId.onApprove;
-      const onToggleExpanded = projectId.onToggleExpanded;
+      const onApprove = expanded.onApprove;
+      const onToggleExpanded = expanded.onToggleExpanded;
       const tmp = closure_29();
       const str = proposal.summary;
       const trimmed = str.trim();
@@ -956,170 +854,183 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         privileged_intents = [];
       }
       const automod = proposal.automod;
-      const tmp6 = ConjureNativeCardSurfaceDefault;
+      let obj = conjurePlanWidget2;
+      const conjurePlanWidget = obj.useConjurePlanWidget(projectId, proposal);
+      const tmp8 = ConjureNativeCardSurfaceDefault;
       if (superseded) {
         let formatToPlainStringResult;
         let stringResult;
         if (null != version) {
           const intl2 = intl13.intl;
-          let obj = { version };
-          formatToPlainStringResult = intl2.formatToPlainString(_modDef3723.YZ3qJs, obj);
+          const obj2 = { version };
+          formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.YZ3qJs, obj2);
         }
-        const obj2 = {
+        const obj3 = {
           title: formatToPlainStringResult,
-          meta: tmp3Result,
+          meta: tmp6Result,
           superseded,
           expanded: flag,
           onToggleExpanded,
-          showLabel: intl4.string(_modDef3723.yD8EJS),
-          hideLabel: intl5.string(_modDef3723.nSPGNb),
-          children: closure_20(Stack, obj22),
+          showLabel: intl4.string(_modDef3753.yD8EJS),
+          hideLabel: intl5.string(_modDef3753.nSPGNb),
+          children: closure_20(Stack, obj24),
         };
-        tmp3Result = null;
+        tmp6Result = null;
         if (superseded) {
-          const obj3 = { children: intl3.string(_modDef3723.hF2c41) };
+          const obj4 = { children: intl3.string(_modDef3753.hF2c41) };
           const ConjureNativeCollapsibleMeta = ConjureNativeCollapsibleSection.ConjureNativeCollapsibleMeta;
           intl3 = intl13.intl;
-          tmp3Result = closure_19(ConjureNativeCollapsibleMeta, obj3);
+          tmp6Result = closure_19(ConjureNativeCollapsibleMeta, obj4);
         }
         intl4 = intl13.intl;
         intl5 = intl13.intl;
-        let tmp3Result4 = null;
+        let tmp6Result5 = null;
         Stack = Stack_Stack.Stack;
         if (null != automod) {
-          tmp3Result4 = closure_19(ConjurePlanAutomodExamples.ConjurePlanAutomodTypeTag, {});
+          tmp6Result5 = closure_19(ConjurePlanAutomodExamples.ConjurePlanAutomodTypeTag, {});
         }
-        items = [tmp3Result4, , , , , , , ,];
+        items = [tmp6Result5, , , , , , , , ,];
         let tmp12Result = null;
         if ("" !== str3) {
-          const obj4 = { direction: "vertical", spacing: 4, children: items1 };
+          const obj5 = { direction: "vertical", spacing: 4, children: items1 };
           const Stack5 = Stack_Stack.Stack;
-          const obj5 = {
+          const obj6 = {
             variant: "text-sm/semibold",
             color: "text-muted",
-            children: intl12.string(_modDef3723.iNS4dl),
+            children: intl12.string(_modDef3753.iNS4dl),
           };
           const Text8 = Text_Text.Text;
           intl12 = intl13.intl;
-          items1 = [closure_19(Text8, obj5)];
-          const obj6 = { variant: "text-md/normal", color: "text-default", children: str3 };
-          items1[1] = closure_19(Text_Text.Text, obj6);
-          tmp12Result = closure_20(Stack5, obj4);
+          items1 = [closure_19(Text8, obj6)];
+          const obj7 = { variant: "text-md/normal", color: "text-default", children: str3 };
+          items1[1] = closure_19(Text_Text.Text, obj7);
+          tmp12Result = closure_20(Stack5, obj5);
         }
         items[1] = tmp12Result;
         let Text = Text_Text.Text;
         if ("" === trimmed) {
           const intl6 = intl13.intl;
-          stringResult = intl6.string(_modDef3723["0+RUWx"]);
+          stringResult = intl6.string(_modDef3753["0+RUWx"]);
         } else {
-          const tmp4Result = MarkupUtilsDefault;
-          stringResult = tmp4Result.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
+          const tmp7Result = MarkupUtilsDefault;
+          stringResult = tmp7Result.parse(trimmed, true, ConjureNativeMarkdown.CONJURE_MARKUP_OPTIONS);
         }
-        const obj7 = { variant: "text-md/normal", color: "text-default", children: stringResult };
-        items[2] = closure_19(Text, obj7);
-        let tmp3Result5 = null;
+        const obj8 = { variant: "text-md/normal", color: "text-default", children: stringResult };
+        items[2] = closure_19(Text, obj8);
+        let tmp6Result6 = null;
         if (null != automod) {
-          tmp3Result5 = null;
+          tmp6Result6 = null;
           if (automod.examples.length > 0) {
-            const obj8 = { automod };
-            tmp3Result5 = closure_19(ConjurePlanAutomodExamplesDefault, obj8);
+            const obj9 = { automod };
+            tmp6Result6 = closure_19(ConjurePlanAutomodExamplesDefault, obj9);
           }
         }
-        items[3] = tmp3Result5;
-        let tmp3Result6 = null;
+        items[3] = tmp6Result6;
+        let tmp6Result7 = null;
         if (null == automod) {
-          tmp3Result6 = null;
+          tmp6Result7 = null;
           if (null != proposal.design_image) {
-            const obj9 = { projectId, design: proposal.design_image };
-            tmp3Result6 = closure_19(closure_30, obj9);
+            const obj10 = { projectId, design: proposal.design_image };
+            tmp6Result7 = closure_19(closure_30, obj10);
           }
         }
-        items[4] = tmp3Result6;
+        items[4] = tmp6Result7;
+        let tmp6Result8 = null;
+        if (null == automod) {
+          tmp6Result8 = null;
+          if (null != conjurePlanWidget) {
+            const obj11 = {};
+            const tmp7Result2 = ConjurePlanWidgetDefault;
+            const merged = Object.assign(conjurePlanWidget);
+            tmp6Result8 = closure_19(tmp7Result2, obj11);
+          }
+        }
+        items[5] = tmp6Result8;
         let tmp12Result5 = null;
         if (proposal.changes.length > 0) {
-          const obj10 = { direction: "vertical", spacing: 4, children: items2 };
+          const obj12 = { direction: "vertical", spacing: 4, children: items2 };
           const Stack2 = Stack_Stack.Stack;
-          const obj11 = {
+          const obj13 = {
             variant: "text-sm/semibold",
             color: "text-muted",
-            children: intl7.string(_modDef3723["5+mG1z"]),
+            children: intl7.string(_modDef3753["5+mG1z"]),
           };
           const Text2 = Text_Text.Text;
           intl7 = intl13.intl;
-          items2 = [closure_19(Text2, obj11)];
+          items2 = [closure_19(Text2, obj13)];
           const changes = proposal.changes;
           items2[1] = changes.map((item, index) => {
             const obj = { variant: "text-sm/normal", color: "text-default", children: "\u2022 " + item };
             const Text = require("Text/Text").Text;
             return closure_1_19(Text, obj, index);
           });
-          tmp12Result5 = closure_20(Stack2, obj10);
+          tmp12Result5 = closure_20(Stack2, obj12);
         }
-        items[5] = tmp12Result5;
+        items[6] = tmp12Result5;
         let tmp12Result6 = null;
         if (bot_permissions.length > 0) {
-          const obj12 = { direction: "vertical", spacing: 4, children: items3 };
+          const obj14 = { direction: "vertical", spacing: 4, children: items3 };
           const Stack3 = Stack_Stack.Stack;
-          const obj13 = {
+          const obj15 = {
             variant: "text-sm/semibold",
             color: "text-muted",
-            children: intl8.string(_modDef3723["2UbW6r"]),
+            children: intl8.string(_modDef3753["2UbW6r"]),
           };
           const Text3 = Text_Text.Text;
           intl8 = intl13.intl;
-          items3 = [closure_19(Text3, obj13)];
-          const obj14 = { variant: "text-sm/normal", color: "text-default", children: bot_permissions.join(", ") };
+          items3 = [closure_19(Text3, obj15)];
+          const obj16 = { variant: "text-sm/normal", color: "text-default", children: bot_permissions.join(", ") };
           const Text4 = Text_Text.Text;
-          items3[1] = closure_19(Text4, obj14);
-          tmp12Result6 = closure_20(Stack3, obj12);
+          items3[1] = closure_19(Text4, obj16);
+          tmp12Result6 = closure_20(Stack3, obj14);
         }
-        items[6] = tmp12Result6;
+        items[7] = tmp12Result6;
         let tmp12Result7 = null;
         if (privileged_intents.length > 0) {
-          const obj15 = { direction: "vertical", spacing: 4, children: items4 };
+          const obj17 = { direction: "vertical", spacing: 4, children: items4 };
           const Stack4 = Stack_Stack.Stack;
-          const obj16 = {
+          const obj18 = {
             variant: "text-sm/semibold",
             color: "text-muted",
-            children: intl9.string(_modDef3723["7TKfpj"]),
+            children: intl9.string(_modDef3753["7TKfpj"]),
           };
           const Text5 = Text_Text.Text;
           intl9 = intl13.intl;
-          items4 = [closure_19(Text5, obj16)];
-          const obj17 = { variant: "text-sm/normal", color: "text-default", children: privileged_intents.join(", ") };
+          items4 = [closure_19(Text5, obj18)];
+          const obj19 = { variant: "text-sm/normal", color: "text-default", children: privileged_intents.join(", ") };
           const Text6 = Text_Text.Text;
-          items4[1] = closure_19(Text6, obj17);
-          tmp12Result7 = closure_20(Stack4, obj15);
+          items4[1] = closure_19(Text6, obj19);
+          tmp12Result7 = closure_20(Stack4, obj17);
         }
-        items[7] = tmp12Result7;
+        items[8] = tmp12Result7;
         let tmp12Result8 = null;
         if (null != onApprove) {
           tmp12Result8 = null;
           if (!superseded) {
-            const obj18 = { style: tmp.planActions, children: items5 };
-            const obj19 = { text: intl10.string(_modDef3723["6S+wRM"]), variant: "primary", onPress: onApprove };
+            const obj20 = { style: tmp.planActions, children: items5 };
+            const obj21 = { text: intl10.string(_modDef3753["6S+wRM"]), variant: "primary", onPress: onApprove };
             const Button = components_Button_Button.Button;
             intl10 = intl13.intl;
-            items5 = [closure_19(Button, obj19)];
-            const obj20 = {
+            items5 = [closure_19(Button, obj21)];
+            const obj22 = {
               variant: "text-sm/normal",
               color: "text-muted",
               style: tmp.planReplyHint,
-              children: intl11.string(_modDef3723.IZoqbR),
+              children: intl11.string(_modDef3753.IZoqbR),
             };
             const Text7 = Text_Text.Text;
             intl11 = intl13.intl;
-            items5[1] = closure_19(Text7, obj20);
-            tmp12Result8 = closure_20(metroImportAll, obj18);
+            items5[1] = closure_19(Text7, obj22);
+            tmp12Result8 = closure_20(metroImportAll, obj20);
           }
         }
-        obj22 = { direction: "vertical", spacing: 8, children: items };
-        items[8] = tmp12Result8;
-        const obj21 = { children: closure_19(tmp7, obj2) };
-        return closure_19(tmp6, obj21);
+        obj24 = { direction: "vertical", spacing: 8, children: items };
+        items[9] = tmp12Result8;
+        const obj23 = { children: closure_19(tmp9, obj3) };
+        return closure_19(tmp8, obj23);
       }
       const intl = intl13.intl;
-      formatToPlainStringResult = intl.string(_modDef3723["3b6e7o"]);
+      formatToPlainStringResult = intl.string(_modDef3753["3b6e7o"]);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
@@ -1135,8 +1046,8 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_29();
       const ideaCards = tmp4.ideaCards;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3723["wx/o8Y"]) };
-        const Text = onPick(4886).Text;
+        let obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3753["wx/o8Y"]) };
+        const Text = onPick(4892).Text;
         intl = onPick(1126).intl;
         const tmp8 = closure_19(Text, obj2);
         cResult[0] = tmp8;
@@ -1174,10 +1085,10 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
             onPress() {
               return onPick(title);
             },
-            accessibilityLabel: intl.formatToPlainString(_modDef3723.H8G39M, obj2),
+            accessibilityLabel: intl.formatToPlainString(_modDef3753.H8G39M, obj2),
             children: closure_1_20(Stack, { direction: "vertical", spacing: 4, children: items }),
           };
-          const Card = onPick(dependencyMap[27]).Card;
+          const Card = onPick(dependencyMap[29]).Card;
           intl = onPick(dependencyMap[17]).intl;
           obj2 = { title: title.title };
           Stack = onPick(dependencyMap[20]).Stack;
@@ -1210,7 +1121,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       let require;
       ({ ideas, onPick: require } = arg0);
       let obj = { style: closure_29().ideaCards, children: items };
-      let obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3723["wx/o8Y"]) };
+      let obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3753["wx/o8Y"]) };
       const Text = Text_Text.Text;
       intl = intl13.intl;
       items = [
@@ -1224,7 +1135,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
             onPress() {
               return _require(title);
             },
-            accessibilityLabel: intl.formatToPlainString(_modDef3723.H8G39M, obj2),
+            accessibilityLabel: intl.formatToPlainString(_modDef3753.H8G39M, obj2),
             children: closure_1_20(Stack, { direction: "vertical", spacing: 4, children: items }),
           };
           const Card = require("Card/Card").Card;
@@ -1261,7 +1172,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
         const fn = function n(size) {
           const promise = unpackModuleId(projectId, size);
           const nextPromise = promise.then((result) => {
-            const obj = closure_1_1(closure_1_2[28]);
+            const obj = closure_1_1(closure_1_2[30]);
             return obj.openURL(result);
           });
           nextPromise.catch(() => {});
@@ -1323,7 +1234,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: intl.formatToPlainString(closure_1(closure_2[18]).GtNukg, obj2),
             children: closure_1_19(projectId(closure_2[19]).Text, obj3),
           };
-          const Card = projectId(closure_2[27]).Card;
+          const Card = projectId(closure_2[29]).Card;
           intl = projectId(closure_2[17]).intl;
           obj2 = { name: id.name };
           obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
@@ -1357,7 +1268,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_2 = react.useCallback((size) => {
         const promise = unpackModuleId(projectId, size);
         const nextPromise = promise.then((result) => {
-          const obj = closure_1_1(closure_1_2[28]);
+          const obj = closure_1_1(closure_1_2[30]);
           return obj.openURL(result);
         });
         nextPromise.catch(() => {});
@@ -1382,7 +1293,7 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
               accessibilityLabel: intl.formatToPlainString(closure_1(closure_2[18]).GtNukg, obj2),
               children: closure_1_19(projectId(closure_2[19]).Text, obj3),
             };
-            const Card = projectId(closure_2[27]).Card;
+            const Card = projectId(closure_2[29]).Card;
             intl = projectId(closure_2[17]).intl;
             obj2 = { name: id.name };
             obj3 = { variant: "text-xs/medium", color: "text-default", children: id.name };
@@ -1408,97 +1319,157 @@ let closure_33 = ReactCompilerGating.isReactCompilerEnabled()
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
+      let arr;
+      let closure_0;
       let crestColor;
       let detail;
       let epoch;
       let inGutter;
       let live;
       let node;
+      let obj5;
+      let projectId;
       let tmp10;
-      let tmp7;
+      let tmp13;
       let tmpResult2;
       let obj = require("react");
-      const cResult = obj.c(20);
-      ({ node, inGutter, live, crestColor, epoch } = arg0);
+      const cResult = obj.c(28);
+      ({ projectId, node, inGutter, live, crestColor, epoch } = arg0);
       let num = 0;
       if (undefined !== epoch) {
         num = epoch;
       }
       const tmp6 = closure_29();
       _require = tmp6;
-      if (cResult[0] !== node) {
+      if (cResult[0] !== node.attachments) {
+        let tmp8;
+        const _Symbol = Symbol;
+        if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
+          const fn = function l(id) {
+            if (null != id.id) {
+              const CONJURE_VIEWABLE_IMAGE_TYPES = closure_0(dependencyMap[31]).CONJURE_VIEWABLE_IMAGE_TYPES;
+              if (CONJURE_VIEWABLE_IMAGE_TYPES.has(id.content_type)) {
+                const obj = { id: id.id };
+                const merged = Object.assign(id);
+                items = [obj];
+              }
+              return [];
+            }
+          };
+          cResult[2] = fn;
+          tmp8 = fn;
+        } else {
+          tmp8 = cResult[2];
+        }
+        const attachments = node.attachments;
+        const flatMapResult = attachments.flatMap(tmp8);
+        cResult[0] = node.attachments;
+        cResult[1] = flatMapResult;
+        arr = flatMapResult;
+      } else {
+        arr = cResult[1];
+      }
+      if (cResult[3] !== node) {
         const tmpResult = require("ConjureTimelineTree");
         const describeNodeResult = tmpResult.describeNode(node);
-        cResult[0] = node;
-        cResult[1] = describeNodeResult;
-        tmp7 = describeNodeResult;
+        cResult[3] = node;
+        cResult[4] = describeNodeResult;
+        tmp10 = describeNodeResult;
       } else {
-        tmp7 = cResult[1];
+        tmp10 = cResult[4];
       }
-      let str2 = "detail";
+      let str3 = "detail";
       const status = node.status;
       if (undefined !== live && live) {
-        str2 = "headline";
+        str3 = "headline";
       }
-      if (cResult[2] !== node.durationMs) {
-        let tmp11 = null;
+      if (cResult[5] !== node.durationMs) {
+        let tmp14 = null;
         if (null != node.durationMs) {
           const obj2 = {
             variant: "text-xs/normal",
             color: "text-subtle",
             children: tmpResult2.describeDuration(node.durationMs),
           };
-          let Text = tmp(4886).Text;
+          let Text = tmp(4892).Text;
           tmpResult2 = require("ConjureDuration");
-          tmp11 = closure_19(Text, obj2);
+          tmp14 = closure_19(Text, obj2);
         }
-        cResult[2] = node.durationMs;
-        cResult[3] = tmp11;
-        tmp10 = tmp11;
+        cResult[5] = node.durationMs;
+        cResult[6] = tmp14;
+        tmp13 = tmp14;
       } else {
-        tmp10 = cResult[3];
+        tmp13 = cResult[6];
       }
-      if (cResult[4] === crestColor) {
-        if (cResult[5] === num) {
-          if (cResult[6] === (undefined !== inGutter && inGutter)) {
-            if (cResult[7] === (undefined !== live && live)) {
-              if (cResult[8] === tmp7) {
-                if (cResult[9] === (!tmp5 && "failed" !== node.status)) {
-                  if ((cResult[10] === "failed") === status) {
-                    if (cResult[11] === str2) {
-                      let tmp14;
-                      if (cResult[12] === tmp10) {
-                        tmp14 = cResult[13];
+      if (cResult[7] === crestColor) {
+        if (cResult[8] === num) {
+          if (cResult[9] === (undefined !== inGutter && inGutter)) {
+            if (cResult[10] === (undefined !== live && live)) {
+              if (cResult[11] === tmp10) {
+                if (cResult[12] === (!(undefined !== live && live) && "failed" !== node.status)) {
+                  if ((cResult[13] === "failed") === status) {
+                    if (cResult[14] === str3) {
+                      let tmp17;
+                      if (cResult[15] === tmp13) {
+                        tmp17 = cResult[16];
                       }
-                      if (cResult[14] === node.detail) {
-                        let tmp16;
-                        if (cResult[15] === tmp6) {
-                          tmp16 = cResult[16];
+                      if (cResult[17] === node.detail) {
+                        let tmp19;
+                        if (cResult[18] === tmp6) {
+                          tmp19 = cResult[19];
                         }
-                        if (cResult[17] === tmp16) {
-                          let tmp20;
-                          if (cResult[18] === tmp14) {
-                            tmp20 = cResult[19];
+                        if (cResult[20] === arr) {
+                          if (cResult[21] === projectId) {
+                            let tmp23;
+                            if (cResult[22] === tmp6) {
+                              tmp23 = cResult[23];
+                            }
+                            if (cResult[24] === tmp17) {
+                              if (cResult[25] === tmp19) {
+                                let tmp29;
+                                if (cResult[26] === tmp23) {
+                                  tmp29 = cResult[27];
+                                }
+                                return tmp29;
+                              }
+                            }
+                            const obj3 = { children: items };
+                            items = [tmp17, tmp19, tmp23];
+                            const tmp32 = closure_20(closure_8, obj3);
+                            cResult[24] = tmp17;
+                            cResult[25] = tmp19;
+                            cResult[26] = tmp23;
+                            cResult[27] = tmp32;
+                            tmp29 = tmp32;
                           }
-                          return tmp20;
                         }
-                        const obj3 = { children: items };
-                        items = [tmp14, tmp16];
-                        const tmp23 = closure_20(closure_8, obj3);
-                        cResult[17] = tmp16;
-                        cResult[18] = tmp14;
-                        cResult[19] = tmp23;
-                        tmp20 = tmp23;
+                        let tmp25 = null;
+                        if (null != projectId) {
+                          tmp25 = null;
+                          if (arr.length > 0) {
+                            const obj4 = {
+                              style: tmp6.stepDetail,
+                              children: closure_19(ConjureNativeStepImagesDefault, obj5),
+                            };
+                            obj5 = { projectId, images: arr };
+                            tmp25 = closure_19(closure_8, obj4);
+                          }
+                        }
+                        cResult[20] = arr;
+                        cResult[21] = projectId;
+                        cResult[22] = tmp6;
+                        cResult[23] = tmp25;
+                        tmp23 = tmp25;
                       }
-                      let tmp17 = null;
+                      let tmp20 = null;
                       if (node.detail.length > 0) {
-                        const obj4 = {
+                        const obj6 = {
                           style: tmp6.stepDetail,
                           children: detail.map((children, index) => {
                             const Text = Text_Text.Text;
-                            stepCommand = undefined;
+                            let stepCommand;
                             if (children.startsWith("$ ")) {
-                              stepCommand = stepCommand.stepCommand;
+                              stepCommand = closure_0.stepCommand;
                             }
                             const obj = {
                               variant: "text-sm/normal",
@@ -1510,12 +1481,12 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
                           }),
                         };
                         detail = node.detail;
-                        tmp17 = closure_19(closure_8, obj4);
+                        tmp20 = closure_19(closure_8, obj6);
                       }
-                      cResult[14] = node.detail;
-                      cResult[15] = tmp6;
-                      cResult[16] = tmp17;
-                      tmp16 = tmp17;
+                      cResult[17] = node.detail;
+                      cResult[18] = tmp6;
+                      cResult[19] = tmp20;
+                      tmp19 = tmp20;
                     }
                   }
                 }
@@ -1524,41 +1495,44 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp15 = closure_19(ConjureNativeStatusLineDefault, {
-        line: tmp7,
+      const tmp18 = closure_19(ConjureNativeStatusLineDefault, {
+        line: tmp10,
         live: undefined !== live && live,
-        settled: !tmp5 && "failed" !== node.status,
+        settled: !(undefined !== live && live) && "failed" !== node.status,
         failed: "failed" === status,
-        presentation: str2,
+        presentation: str3,
         crestColor,
         inGutter: undefined !== inGutter && inGutter,
         epoch: num,
-        trailing: tmp10,
+        trailing: tmp13,
       });
-      cResult[4] = crestColor;
-      cResult[5] = num;
-      cResult[6] = undefined !== inGutter && inGutter;
-      cResult[7] = undefined !== live && live;
-      cResult[8] = tmp7;
-      cResult[9] = !tmp5 && "failed" !== node.status;
-      cResult[10] = "failed" === status;
-      cResult[11] = str2;
-      cResult[12] = tmp10;
-      cResult[13] = tmp15;
-      tmp14 = tmp15;
+      cResult[7] = crestColor;
+      cResult[8] = num;
+      cResult[9] = undefined !== inGutter && inGutter;
+      cResult[10] = undefined !== live && live;
+      cResult[11] = tmp10;
+      cResult[12] = !(undefined !== live && live) && "failed" !== node.status;
+      cResult[13] = "failed" === status;
+      cResult[14] = str3;
+      cResult[15] = tmp13;
+      cResult[16] = tmp18;
+      tmp17 = tmp18;
     }
   : (live) => {
+      let closure_0;
       let crestColor;
       let detail;
       let epoch;
       let inGutter;
       let node;
       let obj2;
+      let obj6;
+      let projectId;
       let str2;
       let tmp4Result;
-      let tmp7Result;
-      let tmp8;
-      ({ node, inGutter } = live);
+      let tmp8Result;
+      let tmp9;
+      ({ projectId, node, inGutter } = live);
       if (inGutter === undefined) {
         inGutter = false;
       }
@@ -1572,10 +1546,22 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_29();
       _require = tmp;
+      const attachments = node.attachments;
+      const flatMapResult = attachments.flatMap((id) => {
+        if (null != id.id) {
+          const CONJURE_VIEWABLE_IMAGE_TYPES = closure_0(dependencyMap[31]).CONJURE_VIEWABLE_IMAGE_TYPES;
+          if (CONJURE_VIEWABLE_IMAGE_TYPES.has(id.content_type)) {
+            const obj = { id: id.id };
+            const merged = Object.assign(id);
+            items = [obj];
+          }
+          return [];
+        }
+      });
       let obj = {
         line: obj2.describeNode(node),
         live: flag,
-        settled: tmp8,
+        settled: tmp9,
         failed: "failed" === node.status,
         presentation: str2,
         crestColor,
@@ -1583,10 +1569,10 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
         epoch,
         trailing: tmp4Result,
       };
-      const tmp6 = ConjureNativeStatusLineDefault;
+      const tmp7 = ConjureNativeStatusLineDefault;
       str2 = "detail";
       obj2 = require("ConjureTimelineTree");
-      tmp8 = !flag && "failed" !== node.status;
+      tmp9 = !flag && "failed" !== node.status;
       if (flag) {
         str2 = "headline";
       }
@@ -1595,54 +1581,66 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           variant: "text-xs/normal",
           color: "text-subtle",
-          children: tmp7Result.describeDuration(node.durationMs),
+          children: tmp8Result.describeDuration(node.durationMs),
         };
-        let Text = tmp7(4886).Text;
-        tmp7Result = require("ConjureDuration");
+        let Text = tmp8(4892).Text;
+        tmp8Result = require("ConjureDuration");
         tmp4Result = closure_19(Text, obj3);
       }
-      const children = [closure_19(tmp6, obj)];
-      let tmp4Result2 = null;
+      const children = [closure_19(tmp7, obj), ,];
+      let tmp4Result3 = null;
       if (node.detail.length > 0) {
         const obj4 = {
           style: tmp.stepDetail,
           children: detail.map((children, index) => {
             const Text = Text_Text.Text;
-            stepCommand = undefined;
+            let stepCommand;
             if (children.startsWith("$ ")) {
-              stepCommand = stepCommand.stepCommand;
+              stepCommand = closure_0.stepCommand;
             }
             const obj = { variant: "text-sm/normal", color: "text-muted", style: stepCommand, children };
             return closure_19(Text, obj, index);
           }),
         };
         detail = node.detail;
-        tmp4Result2 = closure_19(closure_8, obj4);
+        tmp4Result3 = closure_19(closure_8, obj4);
       }
-      children[1] = tmp4Result2;
+      children[1] = tmp4Result3;
+      let tmp4Result4 = null;
+      if (null != projectId) {
+        tmp4Result4 = null;
+        if (flatMapResult.length > 0) {
+          const obj5 = { style: tmp.stepDetail, children: closure_19(ConjureNativeStepImagesDefault, obj6) };
+          obj6 = { projectId, images: flatMapResult };
+          tmp4Result4 = closure_19(closure_8, obj5);
+        }
+      }
+      children[2] = tmp4Result4;
       return closure_20(closure_8, { children });
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (epoch) => {
+  ? (projectId) => {
       let describeTurnDurationResult;
+      let epoch;
       let first;
       let steps1;
       let tmp6;
       let tree;
       let turn3;
       let turnActive;
-      let obj = turnActive(576);
-      const cResult = obj.c(30);
-      ({ tree, turnActive } = epoch);
-      epoch = epoch.epoch;
-      const besideAvatar = epoch.besideAvatar;
+      let obj = projectId(epoch[15]);
+      const cResult = obj.c(31);
+      projectId = projectId.projectId;
+      ({ tree, turnActive } = projectId);
+      epoch = projectId.epoch;
+      const besideAvatar = projectId.besideAvatar;
       const tmp4 = closure_29();
-      [tmp6, dependencyMap] = react.useState(false);
-      _slicedToArray(react.useState(false), 2);
+      const tmp5 = _slicedToArray(react.useState(false), 2);
+      [tmp6, _slicedToArray] = tmp5;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function i() {
-          return dependencyMap((arg0) => !arg0);
+          return _slicedToArray((arg0) => !arg0);
         };
         cResult[0] = fn;
         first = fn;
@@ -1661,14 +1659,14 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp12;
             let tmp23;
             if (cResult[4] === turnActive) {
-              _slicedToArray = cResult[5];
+              react = cResult[5];
               tmp12 = cResult[6];
             }
             if (cResult[9] !== tree.steps) {
               let someResult = tree.steps.length > 1;
               if (!someResult) {
                 const steps = tree.steps;
-                someResult = steps.some((detail) => detail.detail.length > 0);
+                someResult = steps.some((detail) => detail.detail.length > 0 || detail.attachments.length > 0);
               }
               cResult[9] = tree.steps;
               cResult[10] = someResult;
@@ -1698,26 +1696,28 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
                           if (cResult[20] === epoch) {
                             if (cResult[21] === tmp6) {
                               if (cResult[22] === tmp23) {
-                                if (cResult[23] === tmp4) {
-                                  if (cResult[24] === tree.steps) {
-                                    let tmp32;
-                                    if (cResult[25] === turnActive) {
-                                      tmp32 = cResult[26];
-                                    }
-                                    if (cResult[27] === tmp28) {
-                                      let tmp36;
-                                      if (cResult[28] === tmp32) {
-                                        tmp36 = cResult[29];
+                                if (cResult[23] === projectId) {
+                                  if (cResult[24] === tmp4) {
+                                    if (cResult[25] === tree.steps) {
+                                      let tmp32;
+                                      if (cResult[26] === turnActive) {
+                                        tmp32 = cResult[27];
                                       }
-                                      return tmp36;
+                                      if (cResult[28] === tmp28) {
+                                        let tmp36;
+                                        if (cResult[29] === tmp32) {
+                                          tmp36 = cResult[30];
+                                        }
+                                        return tmp36;
+                                      }
+                                      const obj2 = { children: items };
+                                      items = [tmp28, tmp32];
+                                      const tmp39 = closure_20(closure_8, obj2);
+                                      cResult[28] = tmp28;
+                                      cResult[29] = tmp32;
+                                      cResult[30] = tmp39;
+                                      tmp36 = tmp39;
                                     }
-                                    const obj2 = { children: items };
-                                    items = [tmp28, tmp32];
-                                    const tmp39 = closure_20(closure_8, obj2);
-                                    cResult[27] = tmp28;
-                                    cResult[28] = tmp32;
-                                    cResult[29] = tmp39;
-                                    tmp36 = tmp39;
                                   }
                                 }
                               }
@@ -1732,8 +1732,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
                               style: tmp4.activityDetail,
                               children: steps1.map((node) => {
                                 let tmp3;
-                                const obj = { node, live: tmp3, epoch };
-                                tmp3 = turnActive && node === _slicedToArray;
+                                const obj = { projectId, node, live: tmp3, epoch };
+                                tmp3 = turnActive && node === react;
                                 return closure_19(closure_34, obj, node.id);
                               }),
                             };
@@ -1745,10 +1745,11 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
                         cResult[20] = epoch;
                         cResult[21] = tmp6;
                         cResult[22] = tmp23;
-                        cResult[23] = tmp4;
-                        cResult[24] = tree.steps;
-                        cResult[25] = turnActive;
-                        cResult[26] = tmp33;
+                        cResult[23] = projectId;
+                        cResult[24] = tmp4;
+                        cResult[25] = tree.steps;
+                        cResult[26] = turnActive;
+                        cResult[27] = tmp33;
                         tmp32 = tmp33;
                       }
                     }
@@ -1766,7 +1767,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
               expanded: tmp6,
               onToggle: tmp27,
             };
-            const tmp31 = closure_19(epoch(16654), obj4);
+            const tmp31 = closure_19(turnActive(epoch[10]), obj4);
             cResult[11] = epoch;
             cResult[12] = tmp6;
             cResult[13] = tmp12;
@@ -1779,9 +1780,9 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = turnActive(16672);
+      const tmpResult = projectId(epoch[32]);
       const currentStepResult = tmpResult.currentStep(tree.steps);
-      _slicedToArray = currentStepResult;
+      react = currentStepResult;
       let tmp14;
       if (!turnActive) {
         const turn2 = tree.turn;
@@ -1805,14 +1806,14 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
         describeTurnDurationResult = cResult[8];
       }
       if (null != tmp14) {
-        const tmpResult3 = turnActive(16673);
+        const tmpResult3 = projectId(epoch[33]);
         describeTurnDurationResult = tmpResult3.describeTurnDuration(tmp14);
       } else if (null != currentStepResult) {
-        const tmpResult4 = turnActive(16672);
+        const tmpResult4 = projectId(epoch[32]);
         describeTurnDurationResult = tmpResult4.describeNode(currentStepResult);
       } else if (describeTurnDurationResult == null) {
-        const intl = turnActive(1126).intl;
-        describeTurnDurationResult = intl.string(epoch(3723).t8skVB);
+        const intl = tmp(tmp2[17]).intl;
+        describeTurnDurationResult = intl.string(turnActive(tmp2[18]).t8skVB);
       }
       ({ steps: tmp3[1], tasks: tmp3[2], turn: turn3 } = tree);
       let durationMs2;
@@ -1827,26 +1828,28 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (epoch) => {
       let _undefined;
-      let c2;
       let c3;
+      let c4;
+      let projectId;
+      let require;
       let steps1;
       let tmp19;
       let tmp20;
       let tmp3;
       let tree;
       let turnActive;
-      ({ tree, turnActive } = epoch);
+      ({ projectId: require, tree, turnActive } = epoch);
       epoch = epoch.epoch;
-      dependencyMap = undefined;
       _slicedToArray = undefined;
+      react = undefined;
       const besideAvatar = epoch.besideAvatar;
       const tmp = closure_29();
-      [tmp3, c2] = react.useState(false);
+      [tmp3, c3] = react.useState(false);
       _slicedToArray(react.useState(false), 2);
       const callback = react.useCallback(() => _undefined((arg0) => !arg0), []);
-      let obj = turnActive(16672);
+      let obj = require("ConjureTimelineTree");
       const currentStepResult = obj.currentStep(tree.steps);
-      _slicedToArray = currentStepResult;
+      react = currentStepResult;
       let tmp8;
       if (!turnActive) {
         const turn = tree.turn;
@@ -1863,19 +1866,19 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
         groupLabel = found.task.groupLabel;
       }
       if (null != tmp8) {
-        const tmp5Result = turnActive(16673);
+        const tmp5Result = require("ConjureDuration");
         groupLabel = tmp5Result.describeTurnDuration(tmp8);
       } else if (null != currentStepResult) {
-        const tmp5Result2 = turnActive(16672);
+        const tmp5Result2 = require("ConjureTimelineTree");
         groupLabel = tmp5Result2.describeNode(currentStepResult);
       } else if (groupLabel == null) {
-        const intl = turnActive(1126).intl;
-        groupLabel = intl.string(epoch(3723).t8skVB);
+        const intl = require("intl").intl;
+        groupLabel = intl.string(turnActive(tmp6[18]).t8skVB);
       }
       let someResult = tree.steps.length > 1;
       if (!someResult) {
         const steps = tree.steps;
-        someResult = steps.some((detail) => detail.detail.length > 0);
+        someResult = steps.some((detail) => detail.detail.length > 0 || detail.attachments.length > 0);
       }
       const obj2 = {
         line: groupLabel,
@@ -1888,7 +1891,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
         onToggle: tmp20,
       };
       tmp19 = undefined;
-      const tmp18 = epoch(16654);
+      const tmp18 = turnActive(epoch[10]);
       if (besideAvatar) {
         tmp19 = null;
       }
@@ -1905,8 +1908,8 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
             style: tmp.activityDetail,
             children: steps1.map((node) => {
               let tmp3;
-              const obj = { node, live: tmp3, epoch };
-              tmp3 = turnActive && node === c3;
+              const obj = { projectId: require, node, live: tmp3, epoch };
+              tmp3 = turnActive && node === c4;
               return closure_19(closure_34, obj, node.id);
             }),
           };
@@ -1919,7 +1922,7 @@ let closure_35 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0) => {
+  ? (projectId) => {
       let describeTaskOutcomeResult;
       let epoch;
       let first;
@@ -1928,16 +1931,17 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       let mark;
       let tmp6;
       let turnActive;
-      let obj = mark(576);
-      const cResult = obj.c(32);
-      ({ lane, mark } = arg0);
-      ({ turnActive, epoch } = arg0);
+      let obj = projectId(epoch[15]);
+      const cResult = obj.c(33);
+      projectId = projectId.projectId;
+      ({ lane, mark } = projectId);
+      ({ turnActive, epoch } = projectId);
       const tmp4 = closure_29();
-      [tmp6, dependencyMap] = react.useState(false);
-      _slicedToArray(react.useState(false), 2);
+      const tmp5 = _slicedToArray(react.useState(false), 2);
+      [tmp6, _slicedToArray] = tmp5;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function i() {
-          return dependencyMap((arg0) => !arg0);
+          return _slicedToArray((arg0) => !arg0);
         };
         cResult[0] = fn;
         first = fn;
@@ -1955,7 +1959,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp18;
             if (cResult[4] === turnActive) {
               tmp9 = cResult[5];
-              _slicedToArray = cResult[6];
+              react = cResult[6];
               tmp11 = cResult[7];
             }
             const status = lane.task.status;
@@ -1990,24 +1994,26 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                     if (cResult[24] === lane.task.detail) {
                                       if (cResult[25] === tmp10) {
                                         if (cResult[26] === mark.tint) {
-                                          let tmp27;
-                                          if (cResult[27] === tmp4) {
-                                            tmp27 = cResult[28];
-                                          }
-                                          if (cResult[29] === tmp23) {
-                                            let tmp31;
-                                            if (cResult[30] === tmp27) {
-                                              tmp31 = cResult[31];
+                                          if (cResult[27] === projectId) {
+                                            let tmp27;
+                                            if (cResult[28] === tmp4) {
+                                              tmp27 = cResult[29];
                                             }
-                                            return tmp31;
+                                            if (cResult[30] === tmp23) {
+                                              let tmp31;
+                                              if (cResult[31] === tmp27) {
+                                                tmp31 = cResult[32];
+                                              }
+                                              return tmp31;
+                                            }
+                                            const obj2 = { children: items };
+                                            items = [tmp23, tmp27];
+                                            const tmp34 = closure_20(closure_8, obj2);
+                                            cResult[30] = tmp23;
+                                            cResult[31] = tmp27;
+                                            cResult[32] = tmp34;
+                                            tmp31 = tmp34;
                                           }
-                                          const obj2 = { children: items };
-                                          items = [tmp23, tmp27];
-                                          const tmp34 = closure_20(closure_8, obj2);
-                                          cResult[29] = tmp23;
-                                          cResult[30] = tmp27;
-                                          cResult[31] = tmp34;
-                                          tmp31 = tmp34;
                                         }
                                       }
                                     }
@@ -2028,12 +2034,12 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                       color: "text-feedback-critical",
                                       children,
                                     };
-                                    return closure_1_19(mark(dependencyMap[19]).Text, obj, index);
+                                    return closure_1_19(projectId(epoch[19]).Text, obj, index);
                                   }),
                                 ];
                                 const steps = lane.steps;
                                 items1[1] = steps.map((node) => {
-                                  const obj = { node, live: node === _slicedToArray, crestColor: mark.tint, epoch };
+                                  const obj = { projectId, node, live: node === react, crestColor: mark.tint, epoch };
                                   return closure_19(closure_34, obj, node.id);
                                 });
                                 tmp28 = closure_20(closure_8, obj3);
@@ -2046,8 +2052,9 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                             cResult[24] = lane.task.detail;
                             cResult[25] = tmp10;
                             cResult[26] = mark.tint;
-                            cResult[27] = tmp4;
-                            cResult[28] = tmp28;
+                            cResult[27] = projectId;
+                            cResult[28] = tmp4;
+                            cResult[29] = tmp28;
                             tmp27 = tmp28;
                           }
                         }
@@ -2069,7 +2076,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
               expanded: tmp6,
               onToggle: tmp21,
             };
-            const tmp26 = closure_19(epoch(16654), obj4);
+            const tmp26 = closure_19(mark(epoch[10]), obj4);
             cResult[10] = epoch;
             cResult[11] = tmp6;
             cResult[12] = turnActive;
@@ -2086,23 +2093,23 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let currentStepResult;
       if (turnActive) {
-        const tmpResult = mark(16672);
+        const tmpResult = projectId(epoch[32]);
         currentStepResult = tmpResult.currentStep(lane.steps);
       }
-      _slicedToArray = currentStepResult;
+      react = currentStepResult;
       const tmp13 = lane.task.detail.length > 0 || lane.steps.length > 0;
       if ("running" === lane.task.status) {
         let describeNodeResult;
         if (null != currentStepResult) {
-          const tmpResult4 = mark(16672);
+          const tmpResult4 = projectId(epoch[32]);
           describeNodeResult = tmpResult4.describeNode(currentStepResult);
         } else {
-          const tmpResult5 = mark(16674);
+          const tmpResult5 = projectId(epoch[35]);
           describeNodeResult = tmpResult5.taskTitle(lane.task);
         }
         describeTaskOutcomeResult = describeNodeResult;
       } else {
-        const tmpResult6 = mark(16674);
+        const tmpResult6 = projectId(epoch[35]);
         describeTaskOutcomeResult = tmpResult6.describeTaskOutcome(lane.task);
       }
       cResult[1] = "running" === lane.task.status;
@@ -2117,47 +2124,55 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0) => {
       let _undefined;
-      let c2;
       let c3;
+      let c4;
       let describeTaskOutcomeResult;
       let epoch;
       let items1;
       let lane;
       let mark;
+      let projectId;
+      let require;
+      let tmp11;
       let tmp23;
       let tmp24;
       let tmp3;
       let turnActive;
-      ({ lane, mark } = arg0);
+      ({ projectId: require, lane, mark } = arg0);
       ({ turnActive, epoch } = arg0);
-      dependencyMap = undefined;
       _slicedToArray = undefined;
+      react = undefined;
       const tmp = closure_29();
-      [tmp3, c2] = react.useState(false);
+      [tmp3, c3] = react.useState(false);
       _slicedToArray(react.useState(false), 2);
-      const callback = react.useCallback(() => c2((arg0) => !arg0), []);
+      const callback = react.useCallback(() => _undefined((arg0) => !arg0), []);
       if (turnActive) {
         turnActive = tmp5;
       }
       let currentStepResult;
       if (turnActive) {
-        let obj = mark(16672);
+        let obj = require("ConjureTimelineTree");
         currentStepResult = obj.currentStep(lane.steps);
       }
-      _slicedToArray = currentStepResult;
+      react = currentStepResult;
       const tmp9 = lane.task.detail.length > 0 || lane.steps.length > 0;
       if ("running" === lane.task.status) {
         let describeNodeResult;
+        let tmp15;
         if (null != currentStepResult) {
-          const obj4 = mark(16672);
+          const obj4 = require("ConjureTimelineTree");
           describeNodeResult = obj4.describeNode(currentStepResult);
+          tmp15 = epoch;
         } else {
-          const obj3 = mark(16674);
+          tmp15 = epoch;
+          const obj3 = require("ConjureTaskOutcome");
           describeNodeResult = obj3.taskTitle(lane.task);
         }
+        tmp11 = tmp15;
         describeTaskOutcomeResult = describeNodeResult;
       } else {
-        const obj2 = mark(16674);
+        tmp11 = epoch;
+        const obj2 = require("ConjureTaskOutcome");
         describeTaskOutcomeResult = obj2.describeTaskOutcome(lane.task);
       }
       const obj5 = {
@@ -2173,7 +2188,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
         onToggle: tmp24,
       };
       tmp23 = !turnActive;
-      const tmp22 = epoch(16654);
+      const tmp22 = mark(tmp11[10]);
       if (!turnActive) {
         tmp23 = "failed" !== lane.task.status;
       }
@@ -2191,12 +2206,12 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
           items1 = [
             detail.map((children, index) => {
               const obj = { variant: "text-xs/normal", color: "text-feedback-critical", children };
-              return closure_1_19(mark(c2[19]).Text, obj, index);
+              return closure_1_19(require("Text/Text").Text, obj, index);
             }),
           ];
           const steps = lane.steps;
           items1[1] = steps.map((node) => {
-            const obj = { node, live: node === c3, crestColor: mark.tint, epoch };
+            const obj = { projectId: require, node, live: node === c4, crestColor: mark.tint, epoch };
             return closure_19(closure_34, obj, node.id);
           });
           tmp19Result = closure_20(closure_8, obj6);
@@ -2207,108 +2222,118 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (besideAvatar) => {
-      let closure_2;
+  ? (projectId) => {
+      let length;
       let tmp6;
       let tmp7;
       let tree;
       let turnActive;
-      let obj = turnActive(576);
-      const cResult = obj.c(12);
-      ({ tree, turnActive } = besideAvatar);
-      besideAvatar = besideAvatar.besideAvatar;
+      let obj = projectId(length[15]);
+      const cResult = obj.c(14);
+      const tmp = projectId;
+      projectId = projectId.projectId;
+      ({ tree, turnActive } = projectId);
+      const besideAvatar = projectId.besideAvatar;
       let tmp5 = closure_29();
+      const tmp2 = length;
       if (0 === tree.steps.length) {
         if (0 === tree.tasks.length) {
           return null;
         }
       }
-      const length = tree.tasks.length;
+      length = tree.tasks.length;
       if (cResult[0] === (undefined !== besideAvatar && besideAvatar)) {
         if (cResult[1] === length) {
-          if (cResult[2] === tmp5.activityBox) {
-            if (cResult[3] === tree) {
-              if (cResult[4] === turnActive) {
-                tmp6 = cResult[5];
+          if (cResult[2] === projectId) {
+            if (cResult[3] === tmp5.activityBox) {
+              if (cResult[4] === tree) {
+                if (cResult[5] === turnActive) {
+                  tmp6 = cResult[6];
+                }
+                return tmp6;
               }
-              return tmp6;
             }
           }
         }
       }
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function v(taskId) {
+      if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function f(taskId) {
           return taskId.taskId;
         };
-        cResult[6] = fn;
+        cResult[7] = fn;
         tmp7 = fn;
       } else {
-        tmp7 = cResult[6];
+        tmp7 = cResult[7];
       }
       const tasks = tree.tasks;
-      const tmpResult = turnActive(16675);
-      dependencyMap = tmpResult.subagentIllocons(tasks.map(tmp7));
-      if (cResult[7] === (undefined !== besideAvatar && besideAvatar)) {
-        if (cResult[8] === length) {
-          if (cResult[9] === tree) {
-            let tmp8;
-            if (cResult[10] === turnActive) {
-              tmp8 = cResult[11];
+      const tmpResult = tmp(tmp2[36]);
+      let closure_3 = tmpResult.subagentIllocons(tasks.map(tmp7));
+      if (cResult[8] === (undefined !== besideAvatar && besideAvatar)) {
+        if (cResult[9] === length) {
+          if (cResult[10] === projectId) {
+            if (cResult[11] === tree) {
+              let tmp8;
+              if (cResult[12] === turnActive) {
+                tmp8 = cResult[13];
+              }
+              let obj2 = { style: tmp5.activityBox, children: items };
+              items = [tmp8];
+              const tasks1 = tree.tasks;
+              items[1] = tasks1.map((task) => {
+                let familiarMarkResult;
+                if (null != task.task.helperMark) {
+                  const obj = ConjureSubagentMark;
+                  familiarMarkResult = obj.familiarMark(task.task.helperMark);
+                }
+                if (familiarMarkResult == null) {
+                  familiarMarkResult = closure_3.get(task.taskId);
+                }
+                let tmp5 = null;
+                if (null != familiarMarkResult) {
+                  const obj2 = { projectId, lane: task, mark: familiarMarkResult, turnActive, epoch: length };
+                  tmp5 = closure_19(closure_36, obj2, task.taskId);
+                }
+                return tmp5;
+              });
+              const tmp12 = closure_20(closure_8, obj2);
+              cResult[0] = undefined !== besideAvatar && besideAvatar;
+              cResult[1] = length;
+              cResult[2] = projectId;
+              cResult[3] = tmp5.activityBox;
+              cResult[4] = tree;
+              cResult[5] = turnActive;
+              cResult[6] = tmp12;
+              tmp6 = tmp12;
             }
-            let obj2 = { style: tmp5.activityBox, children: items };
-            items = [tmp8];
-            const tasks1 = tree.tasks;
-            items[1] = tasks1.map((task) => {
-              let familiarMarkResult;
-              if (null != task.task.helperMark) {
-                const obj = ConjureSubagentMark;
-                familiarMarkResult = obj.familiarMark(task.task.helperMark);
-              }
-              if (familiarMarkResult == null) {
-                familiarMarkResult = closure_2.get(task.taskId);
-              }
-              let tmp5 = null;
-              if (null != familiarMarkResult) {
-                const obj2 = { lane: task, mark: familiarMarkResult, turnActive, epoch: length };
-                tmp5 = closure_19(closure_36, obj2, task.taskId);
-              }
-              return tmp5;
-            });
-            const tmp12 = closure_20(closure_8, obj2);
-            cResult[0] = undefined !== besideAvatar && besideAvatar;
-            cResult[1] = length;
-            cResult[2] = tmp5.activityBox;
-            cResult[3] = tree;
-            cResult[4] = turnActive;
-            cResult[5] = tmp12;
-            tmp6 = tmp12;
           }
         }
       }
       const tmp9 = closure_19(closure_35, {
+        projectId,
         tree,
         turnActive,
         epoch: length,
         besideAvatar: undefined !== besideAvatar && besideAvatar,
       });
-      cResult[7] = undefined !== besideAvatar && besideAvatar;
-      cResult[8] = length;
-      cResult[9] = tree;
-      cResult[10] = turnActive;
-      cResult[11] = tmp9;
+      cResult[8] = undefined !== besideAvatar && besideAvatar;
+      cResult[9] = length;
+      cResult[10] = projectId;
+      cResult[11] = tree;
+      cResult[12] = turnActive;
+      cResult[13] = tmp9;
       tmp8 = tmp9;
     }
-  : (besideAvatar) => {
-      let closure_2;
+  : (projectId) => {
       let tree;
       let turnActive;
-      ({ tree, turnActive } = besideAvatar);
-      let flag = besideAvatar.besideAvatar;
+      projectId = projectId.projectId;
+      ({ tree, turnActive } = projectId);
+      let flag = projectId.besideAvatar;
       if (flag === undefined) {
         flag = false;
       }
       let length;
-      dependencyMap = undefined;
+      let closure_3;
       const tmp = closure_29();
       if (0 === tree.steps.length) {
         if (0 === tree.tasks.length) {
@@ -2316,11 +2341,11 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       length = tree.tasks.length;
-      let obj = turnActive(16675);
+      let obj = projectId(length[36]);
       const tasks = tree.tasks;
-      dependencyMap = obj.subagentIllocons(tasks.map((taskId) => taskId.taskId));
+      closure_3 = obj.subagentIllocons(tasks.map((taskId) => taskId.taskId));
       let obj2 = { style: tmp.activityBox, children: items };
-      items = [closure_19(closure_35, { tree, turnActive, epoch: length, besideAvatar: flag })];
+      items = [closure_19(closure_35, { projectId, tree, turnActive, epoch: length, besideAvatar: flag })];
       const tasks1 = tree.tasks;
       items[1] = tasks1.map((task) => {
         let familiarMarkResult;
@@ -2329,11 +2354,11 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
           familiarMarkResult = obj.familiarMark(task.task.helperMark);
         }
         if (familiarMarkResult == null) {
-          familiarMarkResult = closure_2.get(task.taskId);
+          familiarMarkResult = closure_3.get(task.taskId);
         }
         let tmp5 = null;
         if (null != familiarMarkResult) {
-          const obj2 = { lane: task, mark: familiarMarkResult, turnActive, epoch: length };
+          const obj2 = { projectId, lane: task, mark: familiarMarkResult, turnActive, epoch: length };
           tmp5 = closure_19(closure_36, obj2, task.taskId);
         }
         return tmp5;
@@ -2404,7 +2429,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj7 = { style: transcript, maskElement: tmp23, children };
-              const tmp30 = closure_19(_modDef6052, obj7);
+              const tmp30 = closure_19(_modDef6059, obj7);
               cResult[11] = children;
               cResult[12] = tmp3.transcript;
               cResult[13] = tmp23;
@@ -2439,7 +2464,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = { style: tmp.transcript, children: items };
         items = [, ,];
         const obj4 = { style: tmp.maskSolid };
-        const tmp6 = _modDef6052;
+        const tmp6 = _modDef6059;
         items[0] = closure_19(metroImportAll, obj4);
         const obj5 = { style: tmp.maskFade, colors: items, locations, start, end };
         items[1] = closure_19(LinearGradientDefault, obj5);
@@ -2478,7 +2503,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const relative = tmp4.relative;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3723["t+b0rz"]) };
+        const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3753["t+b0rz"]) };
         const Text = Text_Text.Text;
         intl = intl13.intl;
         const tmp9 = closure_19(Text, obj2);
@@ -2517,7 +2542,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] !== onRestore) {
           let tmp19 = null;
           if (null != onRestore) {
-            const obj5 = { text: intl2.string(_modDef3723.H8Jfhu), variant: "secondary", onPress: onRestore };
+            const obj5 = { text: intl2.string(_modDef3753.H8Jfhu), variant: "secondary", onPress: onRestore };
             const Button = components_Button_Button.Button;
             intl2 = intl13.intl;
             tmp19 = closure_19(Button, obj5);
@@ -2563,7 +2588,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       const relative = obj.formatAuthoredAt(proposal.authored_at).relative;
       const tmp5 = ConjureNativeCardSurfaceDefault;
       const Stack = Stack_Stack.Stack;
-      const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3723["t+b0rz"]) };
+      const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: intl.string(_modDef3753["t+b0rz"]) };
       const Text = Text_Text.Text;
       intl = intl13.intl;
       items = [closure_19(Text, obj2), ,];
@@ -2580,7 +2605,7 @@ let closure_39 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = closure_20(Stack2, { direction: "vertical", spacing: 4, children: items1 });
       let tmp3Result2 = null;
       if (null != onRestore) {
-        const obj5 = { text: intl2.string(_modDef3723.H8Jfhu), variant: "secondary", onPress: onRestore };
+        const obj5 = { text: intl2.string(_modDef3753.H8Jfhu), variant: "secondary", onPress: onRestore };
         const Button = components_Button_Button.Button;
         intl2 = intl13.intl;
         tmp3Result2 = closure_19(Button, obj5);
@@ -2619,7 +2644,7 @@ let closure_40 = memo(
         const tmp = projectId;
         const tmp2 = groupStart;
         let obj = projectId(groupStart[15]);
-        const cResult = obj.c(229);
+        const cResult = obj.c(231);
         projectId = projectId.projectId;
         const message = projectId.message;
         groupStart = projectId.groupStart;
@@ -2667,13 +2692,16 @@ let closure_40 = memo(
             }
             const length = tmp15;
             if (cResult[10] !== message.steps) {
-              const tmpResult = tmp(tmp2[29]);
-              cResult[10] = message.steps;
-              cResult[11] = tmpResult.latestTodos(message.steps);
+              const tmpResult = tmp(tmp2[32]);
               const latestTodosResult = tmpResult.latestTodos(message.steps);
+              cResult[10] = message.steps;
+              cResult[11] = latestTodosResult;
+              let tmp17 = latestTodosResult;
+            } else {
+              tmp17 = cResult[11];
             }
             if (cResult[12] !== tmp9.tasks) {
-              const tmpResult6 = tmp(tmp2[37]);
+              const tmpResult6 = tmp(tmp2[41]);
               cResult[12] = tmp9.tasks;
               cResult[13] = tmpResult6.runningTodoAgents(tmp9.tasks);
               const runningTodoAgentsResult = tmpResult6.runningTodoAgents(tmp9.tasks);
@@ -2686,7 +2714,7 @@ let closure_40 = memo(
                       let tmp26;
                       let tmp30;
                       if (cResult[25] !== message.content) {
-                        const tmpResult7 = tmp(tmp2[38]);
+                        const tmpResult7 = tmp(tmp2[42]);
                         const result = tmpResult7.parseConjureDesignRemark(message.content);
                         cResult[25] = message.content;
                         cResult[26] = result;
@@ -2765,7 +2793,7 @@ let closure_40 = memo(
                                                           }
                                                         }
                                                         if (cResult[54] !== message.agentReaction) {
-                                                          const tmpResult8 = tmp(tmp2[46]);
+                                                          const tmpResult8 = tmp(tmp2[50]);
                                                           const conjureAgentReactionLabel =
                                                             tmpResult8.getConjureAgentReactionLabel(
                                                               message.agentReaction,
@@ -2945,7 +2973,7 @@ let closure_40 = memo(
                                                           }
                                                           tmp92[0] = tmp4.avatar;
                                                           let obj2 = { userId: message.user_id };
-                                                          tmp92[1] = closure_19(tmp(tmp2[44]).ConjureUserAvatar, obj2);
+                                                          tmp92[1] = closure_19(tmp(tmp2[48]).ConjureUserAvatar, obj2);
                                                           tmp89 = closure_19(onJumpToReplied, tmp92);
                                                         }
                                                         cResult[56] = groupStart;
@@ -3093,7 +3121,7 @@ let closure_40 = memo(
                                                               }
                                                             }
                                                             let obj4 = { projectId, notice: message.publishNotice };
-                                                            const tmp82 = closure_19(message(tmp2[42]), obj4);
+                                                            const tmp82 = closure_19(message(tmp2[46]), obj4);
                                                             cResult[85] = message.publishNotice;
                                                             cResult[86] = projectId;
                                                             cResult[87] = tmp82;
@@ -3348,7 +3376,7 @@ let closure_40 = memo(
                                                               color: message(tmp2[9]).colors.TEXT_MUTED,
                                                             };
                                                             const tmp68 = message(tmp2[10]);
-                                                            const StopIcon = tmp(tmp2[49]).StopIcon;
+                                                            const StopIcon = tmp(tmp2[53]).StopIcon;
                                                             tmp69[4] = closure_19(StopIcon, obj5);
                                                             const tmp70 = closure_19(tmp68, tmp69);
                                                             cResult[93] = tmp70;
@@ -4085,7 +4113,7 @@ let closure_40 = memo(
                                                   tmp45[0] = tmp4.reminderSlot;
                                                   tmp45[1] = reminder;
                                                   tmp45[2] = tmp41;
-                                                  tmp43 = closure_19(message(tmp2[45]), tmp45);
+                                                  tmp43 = closure_19(message(tmp2[49]), tmp45);
                                                 }
                                                 cResult[49] = hostsReminder;
                                                 cResult[50] = reminder;
@@ -4161,7 +4189,7 @@ let closure_40 = memo(
                               }
                             }
                           }
-                          function _e() {
+                          function xe() {
                             let fn;
                             let obj = { content, userId: user_id, onRestoreVersion: fn };
                             fn = undefined;
@@ -4170,7 +4198,7 @@ let closure_40 = memo(
                             if (null != closure_17) {
                               if (null != onRestoreVersion) {
                                 fn = () => {
-                                  const obj = projectId(groupStart[41]);
+                                  const obj = projectId(groupStart[45]);
                                   const obj2 = {
                                     onConfirm() {
                                       return closure_1_11(closure_1_17);
@@ -4186,7 +4214,7 @@ let closure_40 = memo(
                           cResult[36] = tmp30;
                           cResult[37] = onRestoreVersion;
                           cResult[38] = tmp36;
-                          cResult[39] = _e;
+                          cResult[39] = xe;
                         }
                         let turnRestoreEntryResult = null;
                         if (null != onRestoreVersion) {
@@ -4228,14 +4256,14 @@ let closure_40 = memo(
             cResult[17] = ae;
           }
           let obj7 = { turnActive: !tmp11 };
-          const tmpResult9 = tmp(tmp2[29]);
+          const tmpResult9 = tmp(tmp2[32]);
           const turnSegmentsResult = tmpResult9.turnSegments(steps2, obj7);
           cResult[7] = message.steps;
           cResult[8] = !tmp11;
           cResult[9] = turnSegmentsResult;
           tmp15 = turnSegmentsResult;
         }
-        const tmpResult10 = tmp(tmp2[29]);
+        const tmpResult10 = tmp(tmp2[32]);
         const timelineTree = tmpResult10.buildTimelineTree(steps, { turnActive: tmp8 });
         cResult[2] = message.steps;
         cResult[3] = !tmp5;
@@ -4391,7 +4419,6 @@ let closure_40 = memo(
           return turnRestoreEntryResult;
         }, items9);
         const items10 = [trimmed, user_id, memo5, onRestoreVersion];
-        let tmp15 = "" !== trimmed;
         const callback3 = onToggleChecklist.useCallback(() => {
           let fn;
           let obj = { content: trimmed, userId: user_id, onRestoreVersion: fn };
@@ -4401,7 +4428,7 @@ let closure_40 = memo(
           if (null != memo5) {
             if (null != onRestoreVersion) {
               fn = () => {
-                const obj = projectId(groupStart[41]);
+                const obj = projectId(groupStart[45]);
                 const obj2 = {
                   onConfirm() {
                     return closure_1_11(closure_1_17);
@@ -4413,7 +4440,7 @@ let closure_40 = memo(
           }
           return showConjureMessageActions(obj);
         }, items10);
-        if (!tmp15) {
+        if ("" === trimmed) {
           let tmp17 = null;
           if (hostsReminder) {
             let obj2 = {
@@ -4449,7 +4476,7 @@ let closure_40 = memo(
                 }
               },
             };
-            tmp17 = clarification(message(groupStart[45]), obj2);
+            tmp17 = clarification(message(groupStart[49]), obj2);
           }
           if ("user" === message.role) {
             let tmp101Result;
@@ -4460,7 +4487,7 @@ let closure_40 = memo(
                 }
               }
             }
-            const obj41 = projectId(groupStart[46]);
+            const obj41 = projectId(groupStart[50]);
             const conjureAgentReactionLabel = obj41.getConjureAgentReactionLabel(message.agentReaction);
             let obj5 = { style: items8, onLongPress: tmp16, accessible: false, children: items11 };
             let tmp103 = null;
@@ -4468,7 +4495,7 @@ let closure_40 = memo(
             if (groupStart) {
               let obj6 = {
                 style: tmp.avatar,
-                children: clarification(projectId(groupStart[44]).ConjureUserAvatar, obj7),
+                children: clarification(projectId(groupStart[48]).ConjureUserAvatar, obj7),
               };
               obj7 = { userId: message.user_id };
               tmp103 = clarification(onJumpToReplied, obj6);
@@ -4478,14 +4505,14 @@ let closure_40 = memo(
             if (groupStart) {
               let obj8 = {
                 style: tmp.header,
-                children: clarification(projectId(groupStart[44]).ConjureUserHeader, obj9),
+                children: clarification(projectId(groupStart[48]).ConjureUserHeader, obj9),
               };
               obj9 = { userId: null, at: null };
               ({ user_id: obj46.userId, created_at: obj46.at } = message);
               tmp106 = clarification(onJumpToReplied, obj8);
             }
             items11[1] = tmp106;
-            if (tmp15) {
+            if ("" !== trimmed) {
               let combined;
               const Text3 = tmp98(tmp99[19]).Text;
               if (!groupStart) {
@@ -4502,13 +4529,13 @@ let closure_40 = memo(
               };
               if (null != memo4) {
                 const obj11 = { label: memo4.label, variant: "text-md/medium" };
-                tmp112 = clarification(message(tmp99[47]), obj11);
+                tmp112 = clarification(message(tmp99[51]), obj11);
               }
               items12 = [tmp112, ,];
               let str5 = null;
               if (null != memo4) {
                 str5 = null;
-                if (tmp15) {
+                if ("" !== trimmed) {
                   str5 = " ";
                 }
               }
@@ -4534,7 +4561,7 @@ let closure_40 = memo(
                   accessible: true,
                   accessibilityRole: "image",
                   accessibilityLabel: conjureAgentReactionLabel,
-                  children: clarification(message(groupStart[48]), obj14),
+                  children: clarification(message(groupStart[52]), obj14),
                 };
                 obj14 = { name: message.agentReaction, fastImageStyle: tmp.agentReactionEmoji };
                 tmp118 = clarification(onJumpToReplied, obj13);
@@ -4547,7 +4574,7 @@ let closure_40 = memo(
               if (null != message.publishNotice) {
                 const obj15 = { style: items8, children: items13 };
                 const obj16 = { projectId, notice: message.publishNotice };
-                items13 = [clarification(message(groupStart[42]), obj16), tmp17];
+                items13 = [clarification(message(groupStart[46]), obj16), tmp17];
                 return c20(onJumpToReplied, obj15);
               }
             }
@@ -4564,7 +4591,7 @@ let closure_40 = memo(
               tmp91 = message(groupStart[10]);
               intl2 = projectId(groupStart[17]).intl;
               obj20 = { size: "refresh_sm", color: message(groupStart[9]).colors.TEXT_MUTED };
-              StopIcon = projectId(groupStart[49]).StopIcon;
+              StopIcon = projectId(groupStart[53]).StopIcon;
               items14 = [clarification(onJumpToReplied, obj18), tmp17];
               return c20(onJumpToReplied, obj17);
             } else {
@@ -4606,7 +4633,7 @@ let closure_40 = memo(
                 tmp27 = secretRequest;
               }
               if ("open" === secretRequestStatus) {
-                let obj3 = projectId(groupStart[50]);
+                let obj3 = projectId(groupStart[54]);
                 tmp29 = obj3.activeAwaitingUser(message, isNewest);
               }
               let tmp33 = null;
@@ -4652,7 +4679,7 @@ let closure_40 = memo(
                   }
                 }
               }
-              let obj4 = projectId(groupStart[51]);
+              let obj4 = projectId(groupStart[55]);
               const obj21 = {
                 steps: message.steps,
                 content: trimmed,
@@ -4697,7 +4724,7 @@ let closure_40 = memo(
                   }
                 }
               }
-              const tmp38Result = projectId(groupStart[51]);
+              const tmp38Result = projectId(groupStart[55]);
               const turnLeadsWithStretchResult = tmp38Result.turnLeadsWithStretch(tmp41, turnPresentation);
               c21 = turnLeadsWithStretchResult;
               const found1 = memo1.filter((hasWork) => hasWork.hasWork);
@@ -4709,7 +4736,7 @@ let closure_40 = memo(
               const tmp45 = !tmp22(message);
               closure_23 = tmp45;
               const obj22 = { turnActive: tmp45 };
-              const tmp38Result4 = projectId(groupStart[29]);
+              const tmp38Result4 = projectId(groupStart[32]);
               open = tmp38Result4.turnLifecycle(memo1, obj22).open;
               let avatarSpokenReplying = groupStart && null != replied;
               let tmp49Result = null;
@@ -4732,11 +4759,11 @@ let closure_40 = memo(
               }
               const obj24 = { children: items15 };
               items16[2] = avatarSpokenReplying;
-              const obj25 = { style: items16, children: clarification(projectId(groupStart[44]).ConjureAvatar, {}) };
+              const obj25 = { style: items16, children: clarification(projectId(groupStart[48]).ConjureAvatar, {}) };
               items15[1] = clarification(onJumpToReplied, obj25);
               const obj26 = {
                 style: tmp.header,
-                children: clarification(projectId(groupStart[44]).ConjureHeader, obj27),
+                children: clarification(projectId(groupStart[48]).ConjureHeader, obj27),
               };
               obj27 = { at: message.created_at };
               items15[2] = clarification(onJumpToReplied, obj26);
@@ -4758,12 +4785,11 @@ let closure_40 = memo(
                   let obj3;
                   let steps;
                   let tasks;
-                  let tmp15;
                   let tmp5;
-                  let tmp18Result = null;
+                  let tmp19Result = null;
                   const Fragment = react.Fragment;
                   if (null != prose.prose) {
-                    tmp18Result = null;
+                    tmp19Result = null;
                     if (prose.prose.key !== c20) {
                       const obj2 = { style: closure_12.spoken, children: clarification(ConjureRevealedMarkdown, obj3) };
                       obj3 = { source: prose.prose.content, streaming: tmp5 };
@@ -4775,13 +4801,14 @@ let closure_40 = memo(
                       if (tmp5) {
                         tmp5 = !prose.hasWork;
                       }
-                      tmp18Result = clarification(metroImportAll, obj2);
+                      tmp19Result = clarification(metroImportAll, obj2);
                     }
                   }
-                  const children = [tmp18Result];
+                  const children = [tmp19Result];
                   let tmp7Result = null;
                   if (prose.hasWork) {
-                    const obj = {
+                    const obj = { projectId, tree: null, turnActive: null, besideAvatar: null };
+                    const obj4 = {
                       steps: steps.filter((segment) => segment.segment === index),
                       tasks: tasks.filter((task) => task.task.segment === index),
                     };
@@ -4792,16 +4819,18 @@ let closure_40 = memo(
                       let obj6;
                       if (null != memo.turn) {
                         obj6 = { turn: memo.turn };
-                        const obj4 = { turn: memo.turn };
+                        const obj5 = { turn: memo.turn };
                       }
-                      const obj5 = { tree: obj, turnActive: prose.index === open, besideAvatar: tmp15 };
                       const merged = Object.assign(obj6);
-                      tmp15 = c21 && groupStart && 0 === index;
-                      if (tmp15) {
-                        tmp15 = null == prose.prose || prose.prose.key === c20;
-                        const tmp16 = null == prose.prose || prose.prose.key === c20;
+                      obj.tree = obj4;
+                      obj.turnActive = prose.index === open;
+                      let tmp16 = c21 && groupStart && 0 === index;
+                      if (tmp16) {
+                        tmp16 = null == prose.prose || prose.prose.key === c20;
+                        const tmp17 = null == prose.prose || prose.prose.key === c20;
                       }
-                      tmp7Result = clarification(closure_37, obj5);
+                      obj.besideAvatar = tmp16;
+                      tmp7Result = clarification(closure_37, obj);
                     }
                     obj6 = {};
                   }
@@ -4864,7 +4893,7 @@ let closure_40 = memo(
               let tmp53Result15 = null;
               if (showsClosingMessage) {
                 const obj33 = { source: closingContent };
-                tmp53Result15 = tmp53(message(tmp39[25]), obj33);
+                tmp53Result15 = tmp53(message(tmp39[26]), obj33);
               }
               items18[1] = tmp53Result15;
               let tmp53Result16 = null;
@@ -4875,7 +4904,7 @@ let closure_40 = memo(
                   children: tmp38Result5.midTurnCaption(message.acknowledges),
                 };
                 const Text = tmp38(tmp39[19]).Text;
-                tmp38Result5 = projectId(groupStart[52]);
+                tmp38Result5 = projectId(groupStart[56]);
                 tmp53Result16 = tmp53(Text, obj34);
               }
               items18[2] = tmp53Result16;
@@ -4886,8 +4915,8 @@ let closure_40 = memo(
               }
               items18[3] = tmp53Result17;
               if (null != items19) {
-                const tmp67 = message(groupStart[21]);
-                const tmp68 = message(groupStart[53]);
+                const tmp67 = message(groupStart[22]);
+                const tmp68 = message(groupStart[57]);
                 if (items19 == null) {
                   items19 = [];
                 }
@@ -4901,7 +4930,7 @@ let closure_40 = memo(
                   expanded: checklistExpanded,
                   onToggleExpanded: callback,
                 };
-                tmp38Result6 = projectId(groupStart[54]);
+                tmp38Result6 = projectId(groupStart[58]);
                 tmp53Result18 = tmp53(tmp67, obj36);
               } else {
                 tmp53Result18 = null;
@@ -4931,7 +4960,7 @@ let closure_40 = memo(
                     return closure_10(clarification.id);
                   },
                 };
-                tmp53Result20 = tmp53(message(tmp39[55]), obj39);
+                tmp53Result20 = tmp53(message(tmp39[59]), obj39);
               }
               items18[6] = tmp53Result20;
               let tmp53Result21 = null;
@@ -4943,19 +4972,19 @@ let closure_40 = memo(
                   status: secretRequestStatus,
                   awaiting: tmp29,
                 };
-                tmp53Result21 = tmp53(message(tmp39[56]), obj40);
+                tmp53Result21 = tmp53(message(tmp39[60]), obj40);
               }
               items18[7] = tmp53Result21;
               let tmp53Result22 = null;
               if (null != tmp33) {
                 const obj42 = { projectId, request: tmp33 };
-                tmp53Result22 = tmp53(message(tmp39[57]), obj42);
+                tmp53Result22 = tmp53(message(tmp39[61]), obj42);
               }
               items18[8] = tmp53Result22;
               let tmp53Result23 = null;
               if (null != tmp25) {
                 const obj43 = { projectId };
-                tmp53Result23 = tmp53(message(tmp39[58]), obj43);
+                tmp53Result23 = tmp53(message(tmp39[62]), obj43);
               }
               items18[9] = tmp53Result23;
               let tmp53Result24 = null;
@@ -4974,7 +5003,7 @@ let closure_40 = memo(
                       let obj = ConjureVersionRestoreConfirm;
                       const obj2 = {
                         onConfirm() {
-                          const obj = projectId(groupStart[39]);
+                          const obj = projectId(groupStart[43]);
                           return onRestoreVersion(obj.proposalRestoreEntry(restoreProposal));
                         },
                       };
@@ -5051,9 +5080,9 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp8, tmp9, tmp10] = cResult;
       }
-      const tmp2Result = tmp2(stateFromStores[59]);
+      const tmp2Result = tmp2(stateFromStores[63]);
       stateFromStores = tmp2Result.useStateFromStores(tmp8, tmp9, tmp10);
-      const bottom = onRestoreVersion(tmp4[60])().bottom;
+      const bottom = onRestoreVersion(tmp4[64])().bottom;
       if (cResult[3] === stateFromStores) {
         let tmp13;
         let tmp14;
@@ -5068,7 +5097,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = stateFromStores3;
         const effect = stateFromStores3.useEffect(tmp13, tmp14);
         let tmp17 = tmp3;
-        const tmp2Result15 = tmp2(stateFromStores[61]);
+        const tmp2Result15 = tmp2(stateFromStores[65]);
         const ackConjureProjectWhileViewing = tmp2Result15.useAckConjureProjectWhileViewing(projectId);
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -5079,29 +5108,29 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           tmp19 = cResult[7];
         }
         if (cResult[8] !== projectId) {
-          class F {
+          class N {
             constructor() {
               return ConjureChatStore.getMessages(projectId);
             }
           }
           const items3 = [projectId];
           cResult[8] = projectId;
-          cResult[9] = F;
+          cResult[9] = N;
           cResult[10] = items3;
           tmp22 = items3;
         } else {
-          class F {
+          class N {
             constructor() {
               return ConjureChatStore.getMessages(projectId);
             }
           }
           tmp22 = cResult[10];
         }
-        const tmp2Result16 = tmp2(stateFromStores[59]);
-        const stateFromStores1 = tmp2Result16.useStateFromStores(tmp19, F, tmp22);
+        const tmp2Result16 = tmp2(stateFromStores[63]);
+        const stateFromStores1 = tmp2Result16.useStateFromStores(tmp19, N, tmp22);
         const _Symbol2 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          class F {
+          class N {
             constructor() {
               return ConjureChatStore.getMessages(projectId);
             }
@@ -5110,7 +5139,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = items4;
           tmp26 = items4;
         } else {
-          class F {
+          class N {
             constructor() {
               return ConjureChatStore.getMessages(projectId);
             }
@@ -5151,7 +5180,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp28 = cResult[14];
         }
-        const tmp2Result17 = tmp2(stateFromStores[59]);
+        const tmp2Result17 = tmp2(stateFromStores[63]);
         const stateFromStores2 = tmp2Result17.useStateFromStores(tmp26, U, tmp28);
         if (cResult[15] === stateFromStores1) {
           let tmp36;
@@ -5168,8 +5197,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp88;
           let tmp92;
           let tmp94;
-          let tmp99;
-          let tmp101;
+          let tmp98;
+          let tmp100;
           class U {
             constructor() {
               const publishStatus = ConjureProjectStore.getPublishStatus(projectId);
@@ -5218,29 +5247,29 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[19] !== projectId) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
             const items7 = [projectId];
             cResult[19] = projectId;
-            cResult[20] = J;
+            cResult[20] = Y;
             cResult[21] = items7;
             tmp38 = items7;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
             tmp38 = cResult[21];
           }
-          const tmp2Result18 = tmp2(stateFromStores[59]);
-          stateFromStores3 = tmp2Result18.useStateFromStores(tmp36, J, tmp38);
+          const tmp2Result18 = tmp2(stateFromStores[63]);
+          stateFromStores3 = tmp2Result18.useStateFromStores(tmp36, Y, tmp38);
           const _Symbol4 = Symbol;
           if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5249,14 +5278,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[22] = items8;
             tmp42 = items8;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
           }
           if (cResult[23] !== projectId) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5267,18 +5296,18 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[25] = items9;
             tmp44 = items9;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
             tmp44 = cResult[25];
           }
-          const tmp2Result19 = tmp2(stateFromStores[59]);
+          const tmp2Result19 = tmp2(stateFromStores[63]);
           const stateFromStores4 = tmp2Result19.useStateFromStores(tmp42, tmp45, tmp44);
           const _Symbol5 = Symbol;
           if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5287,14 +5316,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[26] = items10;
             tmp49 = items10;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
           }
           if (cResult[27] !== projectId) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5305,18 +5334,18 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[29] = items11;
             tmp51 = items11;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
             tmp51 = cResult[29];
           }
-          const tmp2Result20 = tmp2(stateFromStores[59]);
+          const tmp2Result20 = tmp2(stateFromStores[63]);
           const stateFromStores5 = tmp2Result20.useStateFromStores(tmp49, tmp52, tmp51);
           const _Symbol6 = Symbol;
           if (cResult[30] === Symbol.for("react.memo_cache_sentinel")) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5324,14 +5353,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             const items12 = [ConjureChatStore];
             cResult[30] = items12;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
           }
           if (cResult[31] !== projectId) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5341,14 +5370,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[32] = tmp59;
             cResult[33] = items13;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
           }
-          tmp2(stateFromStores[59]);
-          class P {
+          tmp2(stateFromStores[63]);
+          class A {
             constructor() {
               if (stateFromStores) {
                 authStore(projectId);
@@ -5359,7 +5388,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp68 = null == tmp66;
           _slicedToArray(obj3.useState(null), 2);
           if (!tmp68) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5367,14 +5396,14 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             tmp68 = tmp69;
           }
           if (!tmp68) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
             }
           }
           if (cResult[34] !== projectId) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5382,7 +5411,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[34] = projectId;
             cResult[35] = tmp71;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5390,7 +5419,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol7 = Symbol;
           if (cResult[36] === Symbol.for("react.memo_cache_sentinel")) {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5399,7 +5428,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[36] = items14;
             tmp73 = items14;
           } else {
-            class J {
+            class Y {
               constructor() {
                 return ConjureChatStore.isThinking(projectId);
               }
@@ -5424,7 +5453,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp75 = cResult[39];
           }
-          const tmp2Result22 = tmp2(stateFromStores[59]);
+          const tmp2Result22 = tmp2(stateFromStores[63]);
           const stateFromStores6 = tmp2Result22.useStateFromStores(tmp73, Se, tmp75);
           const _Symbol8 = Symbol;
           if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
@@ -5462,7 +5491,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp81 = cResult[43];
           }
-          const tmp2Result23 = tmp2(stateFromStores[59]);
+          const tmp2Result23 = tmp2(stateFromStores[63]);
           const stateFromStores7 = tmp2Result23.useStateFromStores(tmp79, tmp82, tmp81);
           const _Symbol9 = Symbol;
           if (cResult[44] === Symbol.for("react.memo_cache_sentinel")) {
@@ -5482,29 +5511,29 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[45] !== projectId) {
-            class Ie {
+            class Re {
               constructor() {
                 return ConjureChatStore.hasLoadedHistory(projectId);
               }
             }
             const items19 = [projectId];
             cResult[45] = projectId;
-            cResult[46] = Ie;
+            cResult[46] = Re;
             cResult[47] = items19;
             tmp88 = items19;
           } else {
-            class Ie {
+            class Re {
               constructor() {
                 return ConjureChatStore.hasLoadedHistory(projectId);
               }
             }
             tmp88 = cResult[47];
           }
-          const tmp2Result24 = tmp2(stateFromStores[59]);
-          const stateFromStores8 = tmp2Result24.useStateFromStores(tmp86, Ie, tmp88);
+          const tmp2Result24 = tmp2(stateFromStores[63]);
+          const stateFromStores8 = tmp2Result24.useStateFromStores(tmp86, Re, tmp88);
           const _Symbol10 = Symbol;
           if (cResult[48] === Symbol.for("react.memo_cache_sentinel")) {
-            class Ie {
+            class Re {
               constructor() {
                 return ConjureChatStore.hasLoadedHistory(projectId);
               }
@@ -5513,47 +5542,55 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[48] = items20;
             tmp92 = items20;
           } else {
-            class Ie {
+            class Re {
               constructor() {
                 return ConjureChatStore.hasLoadedHistory(projectId);
               }
             }
           }
           if (cResult[49] !== projectId) {
-            class Ie {
+            class Pe {
               constructor() {
-                return ConjureChatStore.hasLoadedHistory(projectId);
+                const hasLoadedHistoryResult =
+                  ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+                return hasLoadedHistoryResult;
               }
             }
             const items21 = [projectId];
             cResult[49] = projectId;
-            cResult[50] = tmp95;
+            cResult[50] = Pe;
             cResult[51] = items21;
             tmp94 = items21;
           } else {
-            class Ie {
+            class Pe {
               constructor() {
-                return ConjureChatStore.hasLoadedHistory(projectId);
+                const hasLoadedHistoryResult =
+                  ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+                return hasLoadedHistoryResult;
               }
             }
             tmp94 = cResult[51];
           }
-          const tmp2Result25 = tmp2(stateFromStores[59]);
-          const stateFromStores9 = tmp2Result25.useStateFromStores(tmp92, tmp95, tmp94);
+          const tmp2Result25 = tmp2(stateFromStores[63]);
+          const stateFromStores9 = tmp2Result25.useStateFromStores(tmp92, Pe, tmp94);
           const _Symbol11 = Symbol;
           if (cResult[52] === Symbol.for("react.memo_cache_sentinel")) {
-            class Ie {
+            class Pe {
               constructor() {
-                return ConjureChatStore.hasLoadedHistory(projectId);
+                const hasLoadedHistoryResult =
+                  ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+                return hasLoadedHistoryResult;
               }
             }
             const items22 = [ConjureChatStore];
             cResult[52] = items22;
-            tmp99 = items22;
+            tmp98 = items22;
           } else {
-            class Ie {
+            class Pe {
               constructor() {
-                return ConjureChatStore.hasLoadedHistory(projectId);
+                const hasLoadedHistoryResult =
+                  ConjureChatStore.hasLoadedHistory(projectId) && null != authStore3(projectId);
+                return hasLoadedHistoryResult;
               }
             }
           }
@@ -5567,17 +5604,17 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[53] = projectId;
             cResult[54] = De;
             cResult[55] = items23;
-            tmp101 = items23;
+            tmp100 = items23;
           } else {
             class De {
               constructor() {
                 return ConjureChatStore.isHistoryUnavailable(projectId);
               }
             }
-            tmp101 = cResult[55];
+            tmp100 = cResult[55];
           }
-          const tmp2Result26 = tmp2(stateFromStores[59]);
-          const stateFromStores10 = tmp2Result26.useStateFromStores(tmp99, De, tmp101);
+          const tmp2Result26 = tmp2(stateFromStores[63]);
+          const stateFromStores10 = tmp2Result26.useStateFromStores(tmp98, De, tmp100);
           if (cResult[56] === stateFromStores6) {
             class De {
               constructor() {
@@ -5590,19 +5627,19 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             historyUnavailable: stateFromStores10,
             connState: stateFromStores6,
           };
-          const tmp2Result27 = tmp2(stateFromStores[63]);
+          const tmp2Result27 = tmp2(stateFromStores[67]);
           cResult[56] = stateFromStores6;
           cResult[57] = stateFromStores8;
           cResult[58] = stateFromStores10;
           cResult[59] = tmp2Result27.chatEmptyState(obj2);
           const chatEmptyStateResult = tmp2Result27.chatEmptyState(obj2);
         }
-        const tmp2Result28 = tmp2(stateFromStores[62]);
+        const tmp2Result28 = tmp2(stateFromStores[66]);
         cResult[15] = stateFromStores1;
         cResult[16] = stateFromStores2;
         cResult[17] = tmp2Result28.withLivePublishCard(stateFromStores1, stateFromStores2);
         tmp2Result28.withLivePublishCard(stateFromStores1, stateFromStores2);
-        class P {
+        class A {
           constructor() {
             if (stateFromStores) {
               authStore(projectId);
@@ -5610,7 +5647,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      class P {
+      class A {
         constructor() {
           if (stateFromStores) {
             authStore(projectId);
@@ -5620,10 +5657,10 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const items24 = [stateFromStores, projectId];
       cResult[3] = stateFromStores;
       cResult[4] = projectId;
-      cResult[5] = P;
+      cResult[5] = A;
       cResult[6] = items24;
       tmp14 = items24;
-      tmp13 = P;
+      tmp13 = A;
     }
   : (projectId) => {
       let FlashList;
@@ -5668,11 +5705,11 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp92Result;
       let tmp92Result4;
       let tmp95;
-      const f125940 = () => {
+      const f126078 = () => {
         map = new Map();
         return map;
       };
-      const f125943 = () => {
+      const f126081 = () => {
         map = new Map();
         return map;
       };
@@ -5730,28 +5767,28 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp = c29();
       let tmp2 = projectId;
       let tmp3 = stateFromStores;
-      let obj = projectId(stateFromStores[59]);
+      let obj = projectId(stateFromStores[63]);
       items = [stateFromStores10];
       stateFromStores = obj.useStateFromStores(items, () => "active" === stateFromStores10.getState(), []);
       let tmp5 = onRestoreVersion;
       let obj2 = stateFromStores2;
       const items1 = [stateFromStores, projectId];
-      const bottom = onRestoreVersion(stateFromStores[60])().bottom;
+      const bottom = onRestoreVersion(stateFromStores[64])().bottom;
       const effect = stateFromStores2.useEffect(() => {
         if (stateFromStores) {
           authStore(projectId);
         }
       }, items1);
-      let obj3 = projectId(stateFromStores[61]);
+      let obj3 = projectId(stateFromStores[65]);
       const ackConjureProjectWhileViewing = obj3.useAckConjureProjectWhileViewing(projectId);
       let tmp8 = closure_18;
       const items2 = [closure_18];
       const items3 = [projectId];
-      const obj4 = projectId(stateFromStores[59]);
+      const obj4 = projectId(stateFromStores[63]);
       const stateFromStores1 = obj4.useStateFromStores(items2, () => ConjureChatStore.getMessages(projectId), items3);
       const items4 = [c15];
       const items5 = [projectId];
-      const obj5 = projectId(stateFromStores[59]);
+      const obj5 = projectId(stateFromStores[63]);
       stateFromStores2 = obj5.useStateFromStores(
         items4,
         () => {
@@ -5774,15 +5811,15 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }, items6);
       const items7 = [closure_18];
       const items8 = [projectId];
-      const obj6 = projectId(stateFromStores[59]);
+      const obj6 = projectId(stateFromStores[63]);
       const stateFromStores3 = obj6.useStateFromStores(items7, () => ConjureChatStore.isThinking(projectId), items8);
       const items9 = [closure_18];
       const items10 = [projectId];
-      const obj7 = projectId(stateFromStores[59]);
+      const obj7 = projectId(stateFromStores[63]);
       const stateFromStores4 = obj7.useStateFromStores(items9, () => ConjureChatStore.isCompacting(projectId), items10);
       const items11 = [closure_18];
       const items12 = [projectId];
-      const obj8 = projectId(stateFromStores[59]);
+      const obj8 = projectId(stateFromStores[63]);
       const stateFromStores5 = obj8.useStateFromStores(
         items11,
         () => ConjureChatStore.getThinkingActivity(projectId),
@@ -5790,7 +5827,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const items13 = [closure_18];
       const items14 = [projectId];
-      const obj9 = projectId(stateFromStores[59]);
+      const obj9 = projectId(stateFromStores[63]);
       const stateFromStores6 = obj9.useStateFromStores(
         items13,
         () => ConjureChatStore.getProjectUsage(projectId),
@@ -5826,7 +5863,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const items16 = [memo1];
       const items17 = [projectId];
-      const tmp2Result = tmp2(tmp3[59]);
+      const tmp2Result = tmp2(tmp3[63]);
       const stateFromStores7 = tmp2Result.useStateFromStores(
         items16,
         () => ConjureConnectionStore.getConnState(projectId),
@@ -5834,7 +5871,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const items18 = [memo1];
       const items19 = [projectId];
-      const tmp2Result17 = tmp2(tmp3[59]);
+      const tmp2Result17 = tmp2(tmp3[63]);
       const stateFromStores8 = tmp2Result17.useStateFromStores(
         items18,
         () => ConjureConnectionStore.isChatStopped(projectId),
@@ -5842,7 +5879,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const items20 = [tmp8];
       const items21 = [projectId];
-      const tmp2Result18 = tmp2(tmp3[59]);
+      const tmp2Result18 = tmp2(tmp3[63]);
       stateFromStores9 = tmp2Result18.useStateFromStores(
         items20,
         () => ConjureChatStore.hasLoadedHistory(projectId),
@@ -5850,7 +5887,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const items22 = [tmp8];
       const items23 = [projectId];
-      const tmp2Result19 = tmp2(tmp3[59]);
+      const tmp2Result19 = tmp2(tmp3[63]);
       stateFromStores10 = tmp2Result19.useStateFromStores(
         items22,
         () => {
@@ -5861,13 +5898,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const items24 = [tmp8];
       const items25 = [projectId];
-      const tmp2Result20 = tmp2(tmp3[59]);
+      const tmp2Result20 = tmp2(tmp3[63]);
       const stateFromStores11 = tmp2Result20.useStateFromStores(
         items24,
         () => ConjureChatStore.isHistoryUnavailable(projectId),
         items25,
       );
-      const tmp2Result21 = tmp2(tmp3[63]);
+      const tmp2Result21 = tmp2(tmp3[67]);
       const chatEmptyStateResult = tmp2Result21.chatEmptyState({
         historyLoaded: stateFromStores9,
         historyUnavailable: stateFromStores11,
@@ -5896,7 +5933,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }, items26);
       const items27 = [tmp24];
       const items28 = [projectId];
-      const tmp2Result22 = tmp2(tmp3[59]);
+      const tmp2Result22 = tmp2(tmp3[63]);
       stateFromStores12 = tmp2Result22.useStateFromStores(
         items27,
         () => {
@@ -5914,13 +5951,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = ConjureSecretRequestState;
         return obj.secretRequestStatuses(memo, stateFromStores12);
       }, items29);
-      [c15, c16] = tmp15(obj2.useState(f125940), 2);
-      tmp15(obj2.useState(f125940), 2);
+      [c15, c16] = tmp15(obj2.useState(f126078), 2);
+      tmp15(obj2.useState(f126078), 2);
       onToggleChecklist = obj2.useCallback((arg0, arg1) => {
         let closure_0 = arg0;
         let closure_1 = arg1;
         _undefined2((get) => {
-          const obj = projectId(stateFromStores[54]);
+          const obj = projectId(stateFromStores[58]);
           return obj.toggleChecklist(get, closure_0, closure_1);
         });
       }, []);
@@ -5929,13 +5966,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = conjurePendingPlan;
         return obj.planVersions(memo);
       }, items30);
-      [c19, c20] = tmp15(obj2.useState(f125943), 2);
-      tmp15(obj2.useState(f125943), 2);
+      [c19, c20] = tmp15(obj2.useState(f126081), 2);
+      tmp15(obj2.useState(f126081), 2);
       onTogglePlan = obj2.useCallback((arg0, arg1) => {
         let closure_0 = arg0;
         let closure_1 = arg1;
         _undefined32((get) => {
-          const obj = projectId(stateFromStores[65]);
+          const obj = projectId(stateFromStores[69]);
           return obj.togglePlanCard(get, closure_0, closure_1);
         });
       }, []);
@@ -5982,21 +6019,21 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         const sendConjureCardReply = conjureAttachmentDrafts.sendConjureCardReply;
         conjureAttachmentDrafts;
         const intl = intl13.intl;
-        sendConjureCardReply(projectId, intl.string(_modDef3723.EMgIuY));
+        sendConjureCardReply(projectId, intl.string(_modDef3753.EMgIuY));
       }, items32);
       const items33 = [projectId];
       fadingEdgeLength = obj2.useCallback((implementation_prompt) => {
         const obj = conjureAttachmentDrafts;
         obj.sendConjureCardReply(projectId, implementation_prompt.implementation_prompt);
       }, items33);
-      [tmp39, tmp40] = tmp15(tmp5(tmp3[68])(projectId), 2);
-      tmp15(tmp5(tmp3[68])(projectId), 2);
-      const tmp2Result23 = tmp2(tmp3[69]);
+      [tmp39, tmp40] = tmp15(tmp5(tmp3[72])(projectId), 2);
+      tmp15(tmp5(tmp3[72])(projectId), 2);
+      const tmp2Result23 = tmp2(tmp3[73]);
       conjureReminder = tmp2Result23.useConjureReminder(projectId, memo, tmp39);
       const items34 = [projectId];
       closure_26 = obj2.useCallback(() => {
         const intl = intl13.intl;
-        map1(projectId, intl.string(_modDef3723["t5CN3+"]));
+        map1(projectId, intl.string(_modDef3753["t5CN3+"]));
       }, items34);
       const items35 = [projectId];
       closure_27 = obj2.useCallback((implementation_prompt, clarificationAnswers, attachments) => {
@@ -6095,7 +6132,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         });
       }, []);
       bound = tmp55;
-      const tmp2Result24 = tmp2(tmp3[33]);
+      const tmp2Result24 = tmp2(tmp3[37]);
       if (!tmp2Result24.isIOS()) {
         let _Math = Math;
         bound = Math.min(tmp55, fadingEdgeLength);
@@ -6209,7 +6246,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }, items45);
       const items46 = [callback5];
       const memo7 = obj2.useMemo(() => {
-        const obj = { itemVisiblePercentThreshold: projectId(stateFromStores[70]).MIN_VISIBLE_PERCENT };
+        const obj = { itemVisiblePercentThreshold: projectId(stateFromStores[74]).MIN_VISIBLE_PERCENT };
         return obj;
       }, []);
       const callback8 = obj2.useCallback((viewableItems) => {
@@ -6261,12 +6298,12 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let checklistLiveResult = null == tmp74;
       if (!checklistLiveResult) {
-        const tmp2Result25 = tmp2(tmp3[54]);
+        const tmp2Result25 = tmp2(tmp3[58]);
         checklistLiveResult = tmp2Result25.checklistLive(tmp74);
       }
       let conjureTurnStartedAtResult;
       if (null != tmp74) {
-        const tmp2Result26 = tmp2(tmp3[71]);
+        const tmp2Result26 = tmp2(tmp3[75]);
         conjureTurnStartedAtResult = tmp2Result26.conjureTurnStartedAt(tmp74);
       }
       const items48 = [memo5];
@@ -6365,13 +6402,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         set(projectId);
       }, items54);
       if ("open" !== stateFromStores7) {
-        const tmp2Result27 = tmp2(tmp3[73]);
+        const tmp2Result27 = tmp2(tmp3[77]);
         connectionLabelResult = tmp2Result27.connectionLabel(stateFromStores7);
       }
       const obj10 = { style: tmp.container, children: items55 };
-      const tmp2Result28 = tmp2(tmp3[74]);
+      const tmp2Result28 = tmp2(tmp3[78]);
       const conjureControlActive = tmp2Result28.useConjureControlActive(projectId);
-      items55 = [c19(tmp5(tmp3[75]), { thinking: stateFromStores3, bleedBottom: bottom }), ,];
+      items55 = [c19(tmp5(tmp3[79]), { thinking: stateFromStores3, bleedBottom: bottom }), ,];
       const obj11 = { style: tmp.transcriptArea, children: items58 };
       const obj12 = { clearance: tmp55, children: c19(FlashList, obj13) };
       obj13 = {
@@ -6491,18 +6528,18 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           return _undefined3(closure_40, obj);
         },
       };
-      FlashList = tmp2(tmp3[76]).FlashList;
-      tmp2Result29 = tmp2(tmp3[33]);
+      FlashList = tmp2(tmp3[80]).FlashList;
+      tmp2Result29 = tmp2(tmp3[37]);
       tmp2Result29.isIOS() && undefined;
       tmp95 = undefined;
-      const tmp2Result30 = tmp2(tmp3[33]);
+      const tmp2Result30 = tmp2(tmp3[37]);
       const tmp93 = ref;
       if (tmp2Result30.isIOS()) {
         tmp95 = { top: num };
         const obj14 = { top: num };
       }
       tmp92Result = null;
-      const tmp2Result31 = tmp2(tmp3[33]);
+      const tmp2Result31 = tmp2(tmp3[37]);
       if (!tmp2Result31.isIOS()) {
         tmp92Result = null;
         if (num > 0) {
@@ -6512,7 +6549,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       items56 = [tmp.transcript];
-      const tmp2Result32 = tmp2(tmp3[33]);
+      const tmp2Result32 = tmp2(tmp3[37]);
       let tmp98 = !tmp2Result32.isIOS();
       tmp2Result32.isIOS();
       if (tmp98) {
@@ -6543,7 +6580,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp92Result5 = null;
       if (tmp23) {
         const obj23 = { projectId };
-        tmp92Result5 = tmp92(tmp5(tmp3[77]), obj23);
+        tmp92Result5 = tmp92(tmp5(tmp3[81]), obj23);
       }
       items58[1] = tmp92Result5;
       let tmp92Result6 = null;
@@ -6556,7 +6593,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           todosLive: checklistLiveResult,
           agents: memo9,
         };
-        const tmp5Result = tmp5(tmp3[78]);
+        const tmp5Result = tmp5(tmp3[82]);
         tmp92Result6 = tmp92(tmp5Result, obj24);
       }
       items58[2] = tmp92Result6;
@@ -6576,7 +6613,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         thinkingOpen: tmp23,
         onToggleThinking: callback,
       };
-      const tmp5Result3 = tmp5(tmp3[79]);
+      const tmp5Result3 = tmp5(tmp3[83]);
       if (tmp99) {
         tmp99 = 0 === memo.length;
       }
@@ -6591,7 +6628,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         onDraftHasTextChange: tmp40,
       };
       tmp106 = undefined;
-      const tmp5Result4 = tmp5(tmp3[80]);
+      const tmp5Result4 = tmp5(tmp3[84]);
       if (stateFromStores3) {
         tmp106 = callback11;
       }

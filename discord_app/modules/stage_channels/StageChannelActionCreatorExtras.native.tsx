@@ -27,23 +27,23 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageChannelAc
 export const openStageChannelSettings = function openStageChannelSettings(channel) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { channel };
-  obj.openLazy(asyncRequire(8073, dependencyMap.paths), hasOwnProperty, obj2);
+  obj.openLazy(asyncRequire(8106, dependencyMap.paths), hasOwnProperty, obj2);
 };
 export function openEndGuildEventConfirmationModal() {}
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { channel, onAccept };
-  obj.openLazy(asyncRequire(8275, dependencyMap.paths), metroRequire, obj2);
+  obj.openLazy(asyncRequire(8308, dependencyMap.paths), metroRequire, obj2);
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { channelId, onOpenRTCDebugOverlay };
-  obj.openLazy(asyncRequire(8278, dependencyMap.paths), metroImportDefault, obj2);
+  obj.openLazy(asyncRequire(8311, dependencyMap.paths), metroImportDefault, obj2);
 };
 export const openEndStageModal = function openEndStageModal(channel) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { channel };
-  obj.openLazy(asyncRequire(12730, dependencyMap.paths), metroImportAll, obj2);
+  obj.openLazy(asyncRequire(12745, dependencyMap.paths), metroImportAll, obj2);
 };
 export const openStageChannel = function openStageChannel(isGuildStageVoice) {
   if (isGuildStageVoice.isGuildStageVoice()) {
@@ -55,7 +55,7 @@ export const openStageChannel = function openStageChannel(isGuildStageVoice) {
     if (!obj3.isModalOpen(voiceChannelKey)) {
       const obj = { channel: isGuildStageVoice };
       const obj4 = ModalActionCreatorsDefault;
-      obj4.pushLazy(asyncRequire(9056, dependencyMap.paths), obj, voiceChannelKey);
+      obj4.pushLazy(asyncRequire(9092, dependencyMap.paths), obj, voiceChannelKey);
     }
   }
 };
@@ -85,7 +85,7 @@ export const navigateToStage = function navigateToStage(id, arg1) {
     if (!obj3.isModalOpen(voiceChannelKey)) {
       const obj = { channel: id };
       const obj4 = ModalActionCreatorsDefault;
-      obj4.pushLazy(asyncRequire(9056, dependencyMap.paths), obj, voiceChannelKey);
+      obj4.pushLazy(asyncRequire(9092, dependencyMap.paths), obj, voiceChannelKey);
     }
   }
 };

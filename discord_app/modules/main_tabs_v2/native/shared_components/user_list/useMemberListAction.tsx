@@ -34,7 +34,7 @@ let RelationshipStore = RelationshipStore_mod;
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 ({ Permissions: c10, AnalyticsSections: unpackModuleId, InstantInviteSources: closure_12 } = Constants);
 const jsx = Fragment.jsx;
-let closure_14 = { listActionRenderer: "Array", listActionHeight: "Set" };
+let closure_14 = { listActionRenderer: "start", listActionHeight: "unicodeVersion" };
 let obj = { wrapper: { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS } };
 let closure_15 = createStyles.createStyles(obj);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -136,7 +136,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (channel != null) {
           id = channel.id;
         }
-        id(6546)();
+        id(6553)();
         [r10095, dependencyMap] = react.useState(undefined);
         const _Symbol = Symbol;
         _slicedToArray(react.useState(undefined), 2);

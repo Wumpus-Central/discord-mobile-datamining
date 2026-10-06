@@ -7,20 +7,20 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11044_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/11045_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/11046_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/11047_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/11048_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/11049_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/11050_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../_runtime/11051_AssetRegistry.js";
-import AssetRegistryDefault9 from "../../../../_runtime/11052_AssetRegistry.js";
-import AssetRegistryDefault10 from "../../../../_runtime/11053_AssetRegistry.js";
-import AssetRegistryDefault11 from "../../../../_runtime/11054_AssetRegistry.js";
-import AssetRegistryDefault12 from "../../../../_runtime/11055_AssetRegistry.js";
-import AssetRegistryDefault13 from "../../../../_runtime/11056_AssetRegistry.js";
-import AssetRegistryDefault14 from "../../../../_runtime/11057_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/11057_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/11058_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/11059_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../_runtime/11060_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../_runtime/11061_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../../_runtime/11062_AssetRegistry.js";
+import AssetRegistryDefault7 from "../../../../_runtime/11063_AssetRegistry.js";
+import AssetRegistryDefault8 from "../../../../_runtime/11064_AssetRegistry.js";
+import AssetRegistryDefault9 from "../../../../_runtime/11065_AssetRegistry.js";
+import AssetRegistryDefault10 from "../../../../_runtime/11066_AssetRegistry.js";
+import AssetRegistryDefault11 from "../../../../_runtime/11067_AssetRegistry.js";
+import AssetRegistryDefault12 from "../../../../_runtime/11068_AssetRegistry.js";
+import AssetRegistryDefault13 from "../../../../_runtime/11069_AssetRegistry.js";
+import AssetRegistryDefault14 from "../../../../_runtime/11070_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
@@ -657,7 +657,7 @@ export default function AttachmentPreview(isImage) {
       items = [metroRequire(closure_13, size2)];
       const obj8 = {
         style: tmp5.videoIcon,
-        children: metroRequire(tmp8(8368).CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" }),
+        children: metroRequire(tmp8(8401).CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" }),
       };
       items[1] = metroRequire(hasOwnProperty, obj8);
       tmp16 = metroImportDefault(hasOwnProperty, obj7);

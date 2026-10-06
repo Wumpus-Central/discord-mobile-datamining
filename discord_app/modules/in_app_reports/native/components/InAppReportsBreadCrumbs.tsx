@@ -119,12 +119,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const container = tmp5.container;
             if (cResult[2] !== menuName) {
               let stringResult;
-              const REPORT_TO_MOD = tmp(8282).ReportMenuTypeSets.REPORT_TO_MOD;
+              const REPORT_TO_MOD = tmp(8315).ReportMenuTypeSets.REPORT_TO_MOD;
               const hasItem = REPORT_TO_MOD.has(menuName);
               const intl = tmp(1126).intl;
               const string = intl.string;
               if (hasItem) {
-                stringResult = string(tmp8(2625)["6mx/DP"]);
+                stringResult = string(tmp8(2653)["6mx/DP"]);
               } else {
                 stringResult = string(tmp(1126).t["+3V9Tp"]);
               }
@@ -245,7 +245,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const string = intl.string;
             const tmp10 = _require;
             if (hasItem) {
-              stringResult = string(tmp5(2625)["6mx/DP"]);
+              stringResult = string(tmp5(2653)["6mx/DP"]);
             } else {
               stringResult = string(tmp10(1126).t["+3V9Tp"]);
             }

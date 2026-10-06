@@ -145,7 +145,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       let closure_0;
       let memo;
-      const tmp = memo(6663)(arg0);
+      const tmp = memo(6670)(arg0);
       _require = tmp;
       const items = [tmp];
       memo = react.useMemo(() => {

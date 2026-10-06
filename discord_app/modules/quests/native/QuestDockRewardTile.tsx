@@ -94,10 +94,10 @@ const memoResult = react.memo(
                 tmp2 = closure_1_5;
                 str = "change";
                 closure_0 = closure_1_5.addEventListener("change", () => {
-                  /* body not rendered: F140872 */
+                  /* body not rendered: F141078 */
                 });
                 return () => {
-                  /* body not rendered: F140873 */
+                  /* body not rendered: F141079 */
                 };
               } else {
                 return;
@@ -122,10 +122,10 @@ const memoResult = react.memo(
                 tmp2 = closure_1_5;
                 str = "change";
                 closure_0 = closure_1_5.addEventListener("change", () => {
-                  /* body not rendered: F140872 */
+                  /* body not rendered: F141078 */
                 });
                 return () => {
-                  /* body not rendered: F140873 */
+                  /* body not rendered: F141079 */
                 };
               } else {
                 return;
@@ -143,10 +143,10 @@ const memoResult = react.memo(
                 tmp2 = closure_1_5;
                 str = "change";
                 closure_0 = closure_1_5.addEventListener("change", () => {
-                  /* body not rendered: F140872 */
+                  /* body not rendered: F141078 */
                 });
                 return () => {
-                  /* body not rendered: F140873 */
+                  /* body not rendered: F141079 */
                 };
               } else {
                 return;
@@ -154,7 +154,7 @@ const memoResult = react.memo(
             }
           }
         }
-        const tmpResult4 = isAnimatedAsset(10000);
+        const tmpResult4 = isAnimatedAsset(10013);
         const scaledImageUrl = tmpResult4.getScaledImageUrl({ assetUrl, width, height });
         cResult[7] = assetUrl;
         cResult[8] = height;

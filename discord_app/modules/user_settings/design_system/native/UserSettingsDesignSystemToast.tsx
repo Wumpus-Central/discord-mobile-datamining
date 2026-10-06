@@ -9,9 +9,9 @@ import toastUtils from "../../../../design/mana/components/Toast/toastUtils.nati
 import DesignSystemsNotificationComponentsExperiment from "../../../design/DesignSystemsNotificationComponentsExperiment.tsx";
 import CheckmarkLargeIcon from "../../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
 import XLargeIcon from "../../../../design/components/Icon/native/redesign/generated/XLargeIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04805_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/04807_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../_runtime/04811_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04811_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/04813_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../_runtime/04817_AssetRegistry.js";
 import CircleInformationIcon from "../../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";

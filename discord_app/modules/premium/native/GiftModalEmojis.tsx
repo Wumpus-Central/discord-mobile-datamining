@@ -111,7 +111,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       const tmp = closure_7();
-      const obj = flag(4527);
+      const obj = flag(4533);
       dependencyMap = obj.getURL(emojiName);
       return (
         <View style={tmp.emojisContainer}>

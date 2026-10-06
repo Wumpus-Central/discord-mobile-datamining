@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/agent_activity/ConjureTimelineTree.tsx
 import intl6 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -483,10 +483,10 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  healthcheck_failed: _modDef3723.iwOTgo,
-  preview_ready: _modDef3723.okkgSB,
-  working: _modDef3723.t8skVB,
-  error: _modDef3723.avt0ax,
+  healthcheck_failed: _modDef3753.iwOTgo,
+  preview_ready: _modDef3753.okkgSB,
+  working: _modDef3753.t8skVB,
+  error: _modDef3753.avt0ax,
 };
 let result = size.fileFinishedImporting("modules/conjure/agent_activity/ConjureTimelineTree.tsx");
 
@@ -503,26 +503,26 @@ export const describeNode = function describeNode(currentStepResult) {
   const intl = intl6.intl;
   const string = intl.string;
   if (t8skVB == null) {
-    t8skVB = _modDef3723.t8skVB;
+    t8skVB = _modDef3753.t8skVB;
   }
   return string(t8skVB);
 };
 export const describeTaskStatus = function describeTaskStatus(arg0) {
   if ("running" === arg0) {
     const intl5 = intl6.intl;
-    return intl5.string(_modDef3723.jTwZFY);
+    return intl5.string(_modDef3753.jTwZFY);
   } else if ("done" === arg0) {
     const intl4 = intl6.intl;
-    return intl4.string(_modDef3723.keYz9o);
+    return intl4.string(_modDef3753.keYz9o);
   } else if ("failed" === arg0) {
     const intl3 = intl6.intl;
-    return intl3.string(_modDef3723["RoY/lg"]);
+    return intl3.string(_modDef3753["RoY/lg"]);
   } else if ("cancelled" === arg0) {
     const intl2 = intl6.intl;
-    return intl2.string(_modDef3723["HZw/I/"]);
+    return intl2.string(_modDef3753["HZw/I/"]);
   } else if ("incomplete" === arg0) {
     const intl = intl6.intl;
-    return intl.string(_modDef3723.sf2UHL);
+    return intl.string(_modDef3753.sf2UHL);
   }
 };
 export { buildTimelineTree };

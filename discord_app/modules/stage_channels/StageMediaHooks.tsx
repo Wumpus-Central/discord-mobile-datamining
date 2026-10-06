@@ -9,7 +9,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require;
 
-const f90454 = (type) => type.type === require("StageChannelParticipants").StageChannelParticipantTypes.STREAM;
+const f90590 = (type) => type.type === require("StageChannelParticipants").StageChannelParticipantTypes.STREAM;
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
@@ -191,7 +191,7 @@ function getStageHasStream(id) {
     id,
     StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
   );
-  return null != mutableParticipants.find(f90454);
+  return null != mutableParticipants.find(f90590);
 }
 const result = size.fileFinishedImporting("modules/stage_channels/StageMediaHooks.tsx");
 
@@ -202,7 +202,7 @@ export const getStageHasMedia = function getStageHasMedia(id) {
     id,
     StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER,
   );
-  const hasVideoResult = null != mutableParticipants.find(f90454) || VoiceStateStore.hasVideo(id);
+  const hasVideoResult = null != mutableParticipants.find(f90590) || VoiceStateStore.hasVideo(id);
   return hasVideoResult;
 };
 export { getStageHasStream };

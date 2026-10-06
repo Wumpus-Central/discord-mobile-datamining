@@ -169,7 +169,7 @@ const memoResult = react.memo(function BotUserProfileContent(user) {
           ActionSheetActionCreatorsDefault;
           const obj = { user, guildId: guild_id, channelId: id };
           id = undefined;
-          const tmp2 = asyncRequire(10839, dependencyMap.paths);
+          const tmp2 = asyncRequire(10852, dependencyMap.paths);
           if (channel != null) {
             id = channel.id;
           }

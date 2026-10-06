@@ -12,7 +12,7 @@ export default function showGuildSettingsStickerCreateModal(merged) {
   const obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   const obj2 = ModalActionCreatorsDefault;
-  obj2.pushLazy(asyncRequire(17750, dependencyMap.paths), merged, "guild-settings-sticker-create", {
+  obj2.pushLazy(asyncRequire(17796, dependencyMap.paths), merged, "guild-settings-sticker-create", {
     presentation: "modal",
   });
 }

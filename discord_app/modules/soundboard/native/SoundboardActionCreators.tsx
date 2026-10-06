@@ -14,7 +14,7 @@ export const openSoundboardSoundPickerActionSheet = function openSoundboardSound
   let initialScrollLocation;
   ({ channel, analyticsSource, initialScrollLocation } = arg0);
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(17227, dependencyMap.paths), "SoundboardSoundPickerActionSheet", {
+  obj.openLazy(asyncRequire(17256, dependencyMap.paths), "SoundboardSoundPickerActionSheet", {
     channel,
     analyticsSource,
     initialScrollLocation,
@@ -32,7 +32,7 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   const obj = { channel, analyticsSource };
   ({ channel: channel2, analyticsSource: analyticsSource2, initialScrollLocation } = obj);
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequire(17227, dependencyMap.paths), "SoundboardSoundPickerActionSheet", {
+  obj2.openLazy(asyncRequire(17256, dependencyMap.paths), "SoundboardSoundPickerActionSheet", {
     channel: channel2,
     analyticsSource: analyticsSource2,
     initialScrollLocation,

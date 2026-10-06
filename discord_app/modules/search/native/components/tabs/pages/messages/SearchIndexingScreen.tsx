@@ -37,7 +37,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = react.useEffect(tmp4, tmp5);
       if (cResult[3] !== searchContext) {
-        const tmpResult = tmp(11968);
+        const tmpResult = tmp(11987);
         const indexingErrorText = tmpResult.getIndexingErrorText(searchContext);
         cResult[3] = searchContext;
         cResult[4] = indexingErrorText;
@@ -63,7 +63,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { searchContext };
         obj.trackSearchIndexing(obj2);
       }, items);
-      let obj = searchContext(11968);
+      let obj = searchContext(11987);
       const text = obj.getIndexingErrorText(searchContext);
       return jsx(ErrorScreenDefault, { text });
     };

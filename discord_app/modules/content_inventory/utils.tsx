@@ -2,8 +2,8 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import intl4 from "../../intl/index.native.tsx";
-import _mod4104 from "../../../_runtime/metro/04104__.js";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _mod4110 from "../../../_runtime/metro/04110__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import ContentInventoryEntryType from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
 import ContentInventoryTraitType from "../../../discord_common/js/shared/shared-constants/ContentInventoryTraitType.tsx";
 import size_mod from "../../../_runtime/metro/00002__.js";
@@ -105,8 +105,8 @@ function formatEndedTimestamp(entry, stateFromStores, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = _modDef4461(timestamp);
-  const tmp3 = _modDef4461;
+  const obj2 = _modDef4467(timestamp);
+  const tmp3 = _modDef4467;
   const obj3 = SnowflakeUtilsDefault;
   const diffResult = obj2.diff(tmp3(obj3.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
@@ -423,8 +423,8 @@ export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(
   let num4;
   let num5;
   const obj = { start, end: new Date() };
-  const intervalToDuration = _mod4104.intervalToDuration;
-  _mod4104;
+  const intervalToDuration = _mod4110.intervalToDuration;
+  _mod4110;
   new Date();
   const intervalToDurationResult = intervalToDuration(obj);
   const months = intervalToDurationResult.months;

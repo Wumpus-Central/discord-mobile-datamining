@@ -14,7 +14,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require;
 
-const f138315 = (acc, item) => {
+const f138522 = (acc, item) => {
   user = user.getUser(item);
   let tmp3 = acc;
   if (null != user) {
@@ -167,7 +167,7 @@ function getSortedVoiceSessionParticipants(message) {
   let reduced;
   if (call != null) {
     const participants = call.participants;
-    reduced = participants.reduce(f138315, []);
+    reduced = participants.reduce(f138522, []);
   }
   if (reduced == null) {
     reduced = [];
@@ -195,13 +195,13 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
   let reduced;
   if (call != null) {
     const participants = call.participants;
-    reduced = participants.reduce(f138315, []);
+    reduced = participants.reduce(f138522, []);
   }
   if (reduced == null) {
     reduced = [];
   }
   const userAffinitiesMap = UserAffinitiesV2Store.getUserAffinitiesMap();
-  const tmp3Result = tmp3(7742);
+  const tmp3Result = tmp3(7753);
   const result = tmp3Result.maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
   const mapped = result.map((user) => {
     let obj2;

@@ -154,9 +154,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const reanimatedKeyboardAnimation = obj.useReanimatedKeyboardAnimation();
       const height = reanimatedKeyboardAnimation.height;
       progress = reanimatedKeyboardAnimation.progress;
-      let obj2 = animatedSheetIndex(4747);
+      let obj2 = animatedSheetIndex(4753);
       const keyboardTypeSharedValue = obj2.useKeyboardTypeSharedValue();
-      let obj3 = animatedSheetIndex(4612);
+      let obj3 = animatedSheetIndex(4618);
       const fn = function b() {
         let interpolate;
         let items;
@@ -186,7 +186,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items2 = [obj4];
       };
       let obj4 = {
-        interpolate: animatedSheetIndex(4612).interpolate,
+        interpolate: animatedSheetIndex(4618).interpolate,
         progress,
         bottom,
         followSystemKeyboard: flag,
@@ -205,8 +205,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const items = [keyboardStickyFooter.keyboardStickyFooter, animatedStyle];
         return items;
       }, items);
-      const obj5 = { style: memo, children: height(animatedSheetIndex(4752).PortalHost, { name: str }) };
-      const View = flag(4612).View;
+      const obj5 = { style: memo, children: height(animatedSheetIndex(4758).PortalHost, { name: str }) };
+      const View = flag(4618).View;
       return height(View, obj5);
     };
 const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardFooterIOS.ios.tsx");

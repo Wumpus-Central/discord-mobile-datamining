@@ -98,7 +98,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { opacity: sharedValue };
       fn2.__workletHash = 11432452203963;
       fn2.__initData = __initData;
-      const tmpResult = tmp(4612);
+      const tmpResult = tmp(4618);
       const animatedStyle = tmpResult.useAnimatedStyle(fn2);
       if (cResult[3] !== tmp4) {
         const _Array = Array;
@@ -135,7 +135,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp14;
       }
-      const tmp15 = closure_6(sharedValue(4612).View, { style: animatedStyle, "aria-hidden": true, children: tmp10 });
+      const tmp15 = closure_6(sharedValue(4618).View, { style: animatedStyle, "aria-hidden": true, children: tmp10 });
       cResult[5] = animatedStyle;
       cResult[6] = tmp10;
       cResult[7] = tmp15;
@@ -188,7 +188,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
       obj4 = { length: closure_5 };
-      View = sharedValue(4612).View;
+      View = sharedValue(4618).View;
       return closure_6(View, obj3);
     };
 size = size_mod;

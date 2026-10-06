@@ -12,7 +12,7 @@ import WideBannerBlockRecord2 from "WideBannerBlockRecord.tsx";
 import CollectiblesCategoryRecord from "CollectiblesCategoryRecord.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f94190 = (type) => {
+const f94330 = (type) => {
   type = type.type;
   if (ShopBlockType.ShopBlockType.HERO === type) {
     return HeroBlockRecord.fromServer(type);
@@ -34,8 +34,8 @@ const f94190 = (type) => {
     return closure_1_6.fromServer(type);
   }
 };
-const f94191 = (item) => undefined !== item;
-const f94192 = (item) => CollectiblesCategoryRecord.fromServer(item);
+const f94331 = (item) => undefined !== item;
+const f94332 = (item) => CollectiblesCategoryRecord.fromServer(item);
 const CountdownTimerBlockRecord = CountdownTimerBlockRecord2.CountdownTimerBlockRecord;
 const FeaturedBlockRecord = FeaturedBlockRecord2.FeaturedBlockRecord;
 const FeedBlockRecord = FeedBlockRecord2.FeedBlockRecord;
@@ -49,20 +49,20 @@ class CollectiblesShopHomeRecord {
   constructor(shop_blocks) {
     const obj = Object.create(new.target.prototype);
     shop_blocks = shop_blocks.shop_blocks;
-    const mapped = shop_blocks.map(f94190);
-    obj.shopBlocks = mapped.filter(f94191);
+    const mapped = shop_blocks.map(f94330);
+    obj.shopBlocks = mapped.filter(f94331);
     const categories = shop_blocks.categories;
-    obj.categories = categories.map(f94192);
+    obj.categories = categories.map(f94332);
     return obj;
   }
   static fromServer(shop_blocks) {
     if (typeof CollectiblesShopHomeRecord === "function") {
       const obj = Object.create(tmp.prototype);
       shop_blocks = shop_blocks.shop_blocks;
-      const mapped = shop_blocks.map(f94190);
-      obj.shopBlocks = mapped.filter(f94191);
+      const mapped = shop_blocks.map(f94330);
+      obj.shopBlocks = mapped.filter(f94331);
       const categories = shop_blocks.categories;
-      obj.categories = categories.map(f94192);
+      obj.categories = categories.map(f94332);
       return obj;
     } else {
       throw new TypeError("Trying to call a non-function");

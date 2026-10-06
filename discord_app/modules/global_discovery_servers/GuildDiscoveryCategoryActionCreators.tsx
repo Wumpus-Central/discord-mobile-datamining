@@ -279,7 +279,7 @@ obj = function _saveGuildMetadata() {
             about = undefined;
             partner_application_timestamp = 1;
             is_published = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === partner_application_timestamp) {
           if (guildId === 1) {

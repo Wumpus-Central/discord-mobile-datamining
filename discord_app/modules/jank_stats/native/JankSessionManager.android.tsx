@@ -60,7 +60,7 @@ class JankSessionManager extends AutomaticLifecycleManager {
     let logger;
     const self = this;
     if (!this._isDelivering) {
-      let obj = self(17538);
+      let obj = self(17583);
       tmp._isDelivering = true;
       const pendingReports = obj.getPendingReports();
       const nextPromise = pendingReports.then((arr) => {

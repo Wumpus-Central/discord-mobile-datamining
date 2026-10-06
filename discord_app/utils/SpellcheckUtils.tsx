@@ -160,7 +160,7 @@ obj = function _isMisspelled() {
             misspelled = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {
@@ -244,7 +244,7 @@ obj = function _getCorrections() {
             correctionsForMisspelling = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {
@@ -330,7 +330,7 @@ obj = function _getCachedMisspelling() {
             cachedMisspelling2 = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {

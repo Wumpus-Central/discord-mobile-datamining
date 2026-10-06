@@ -89,7 +89,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               tmp25 = cResult[13];
               tmp26 = cResult[14];
             }
-            let str = emoji.type === tmp(4526).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
+            let str = emoji.type === tmp(4532).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
             if (str == null) {
               str = "";
             }
@@ -229,7 +229,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           status = mediaAttachmentState.status;
         }
       }
-      const tmp8 = status === tmp(11835).PollMediaUploadAttachmentStatus.PREPARING;
+      const tmp8 = status === tmp(11849).PollMediaUploadAttachmentStatus.PREPARING;
       closure_7 = tmp8;
       let obj3 = {
         renderImage: obj2.useMemo(() => {

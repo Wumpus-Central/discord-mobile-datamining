@@ -126,7 +126,7 @@ let obj = function _authorize() {
             } = closure_0);
             response_type = 1;
             redirect_uri = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === response_type) {
           if (authorize === 1) {
@@ -277,7 +277,7 @@ obj = function _fetchAuthorization() {
             } = closure_0);
             redirect_uri = 1;
             code_challenge = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === redirect_uri) {
           if (client_id === 1) {

@@ -100,8 +100,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp19;
       let tmp20;
       if (0 !== keys.length) {
-        const Form = tmp(8895).Form;
-        const Stack = tmp(5593).Stack;
+        const Form = tmp(8924).Form;
+        const Stack = tmp(5600).Stack;
         const container = tmp4.container;
         if (cResult[10] !== stateFromStores) {
           class T {
@@ -119,7 +119,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 const result = obj.updateUserGuildSettings(
                   closure_0,
                   () => {
-                    /* body not rendered: F153138 */
+                    /* body not rendered: F153371 */
                   },
                   stateFromStores(closure_2_2[13]).UserSettingsDelay.INFREQUENT_USER_ACTION,
                 );
@@ -136,7 +136,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 const result = obj.updateUserGuildSettings(
                   closure_0,
                   () => {
-                    /* body not rendered: F153139 */
+                    /* body not rendered: F153372 */
                   },
                   stateFromStores(closure_2_2[13]).UserSettingsDelay.INFREQUENT_USER_ACTION,
                 );
@@ -164,7 +164,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 const result = obj.updateUserGuildSettings(
                   closure_0,
                   () => {
-                    /* body not rendered: F153138 */
+                    /* body not rendered: F153371 */
                   },
                   stateFromStores(closure_2_2[13]).UserSettingsDelay.INFREQUENT_USER_ACTION,
                 );
@@ -181,7 +181,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 const result = obj.updateUserGuildSettings(
                   closure_0,
                   () => {
-                    /* body not rendered: F153139 */
+                    /* body not rendered: F153372 */
                   },
                   stateFromStores(closure_2_2[13]).UserSettingsDelay.INFREQUENT_USER_ACTION,
                 );
@@ -228,7 +228,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp5 = null;
       if (0 !== keys.length) {
         let obj3 = { children: closure_4(Stack, obj4) };
-        const Form = tmp2(8895).Form;
+        const Form = tmp2(8924).Form;
         obj4 = {
           spacing: 24,
           style: tmp.container,
@@ -276,7 +276,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return hasOwnProperty(TableRowGroup, obj, item);
           }),
         };
-        Stack = tmp2(5593).Stack;
+        Stack = tmp2(5600).Stack;
         tmp5 = closure_4(Form, obj3);
       }
       return tmp5;

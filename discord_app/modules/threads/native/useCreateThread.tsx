@@ -85,7 +85,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[9] === useDefaultThreadName) {
                       tmp5 = cResult[10];
                     }
-                    const tmpResult = tmp(8810);
+                    const tmpResult = tmp(8840);
                     return tmpResult.useCreateThreadCommon(tmp5);
                   }
                 }
@@ -133,7 +133,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         useDefaultThreadName,
       } = arg0);
       const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-      let obj = analyticsLocations(8810);
+      let obj = analyticsLocations(8840);
       let obj2 = {
         parentChannel,
         parentMessageId,
@@ -184,7 +184,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(10);
       parentChannel = parentChannel.parentChannel;
       ({ threadSettings, appliedTags, onThreadCreated } = parentChannel);
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         let tmp4;
         if (cResult[1] === parentChannel) {
@@ -206,7 +206,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[8] === tmp4) {
                     tmp6 = cResult[9];
                   }
-                  const tmpResult = tmp(8810);
+                  const tmpResult = tmp(8840);
                   return tmpResult.useCreateForumPostCommon(tmp6);
                 }
               }
@@ -281,7 +281,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const threadSettings = parentChannel.threadSettings;
       let analyticsLocations;
       ({ appliedTags, onThreadCreated } = parentChannel);
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       const useCallback = react.useCallback;
       let closure_0 = _asyncToGenerator(async (arg0) => {
         let FirstThreadMessage;
@@ -329,7 +329,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = useCallback(function () {
         return closure_0(...arguments);
       }, items);
-      const tmp2 = parentChannel(8810);
+      const tmp2 = parentChannel(8840);
       let obj = { parentChannel, name: str, appliedTags, analyticsLocations, onThreadCreated, upload: callback };
       str = undefined;
       const useCreateForumPostCommon = tmp2.useCreateForumPostCommon;

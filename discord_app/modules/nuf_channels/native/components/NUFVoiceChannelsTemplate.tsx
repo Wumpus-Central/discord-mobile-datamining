@@ -4,7 +4,7 @@ import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUti
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
 import NUFChannelsManagerDefault from "../NUFChannelsManager.tsx";
 import NUFTemplateDefault from "NUFTemplate.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13590_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13606_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

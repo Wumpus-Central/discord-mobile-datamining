@@ -3,7 +3,7 @@ import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
 import Constants from "../../../../../../Constants.tsx";
 import CrunchyrollConnectionConstants from "../../../../../connections/CrunchyrollConnectionConstants.tsx";
 import CrunchyrollLinkConstants from "CrunchyrollLinkConstants.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/08781_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/08813_AssetRegistry.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
@@ -70,7 +70,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp12;
         }
       }
-      const TwoWayLinkPreConnect = tmp(8746).TwoWayLinkPreConnect;
+      const TwoWayLinkPreConnect = tmp(8778).TwoWayLinkPreConnect;
       const tmp13 = (
         <TwoWayLinkPreConnect
           platformType={PlatformTypes.CRUNCHYROLL}
@@ -101,7 +101,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = react.useCallback(() => {
         navigation.push(constants.ERROR);
       }, items1);
-      const TwoWayLinkPreConnect = navigation(8746).TwoWayLinkPreConnect;
+      const TwoWayLinkPreConnect = navigation(8778).TwoWayLinkPreConnect;
       const intl = navigation(1126).intl;
       const intl2 = navigation(1126).intl;
       return (

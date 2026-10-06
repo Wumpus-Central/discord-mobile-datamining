@@ -14,11 +14,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9;
       let obj = sharedValue(576);
       const cResult = obj.c(3);
-      const obj2 = sharedValue(4737);
+      const obj2 = sharedValue(4743);
       let rootNavigationRef = obj2.getRootNavigationRef();
       let isReadyResult;
-      const useSharedValue = sharedValue(4612).useSharedValue;
-      sharedValue(4612);
+      const useSharedValue = sharedValue(4618).useSharedValue;
+      sharedValue(4618);
       if (rootNavigationRef != null) {
         isReadyResult = rootNavigationRef.isReady();
       }
@@ -80,11 +80,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let sharedValue;
       let tmp3;
-      let obj = sharedValue(4737);
+      let obj = sharedValue(4743);
       let rootNavigationRef = obj.getRootNavigationRef();
       let isReadyResult;
-      const useSharedValue = sharedValue(4612).useSharedValue;
-      sharedValue(4612);
+      const useSharedValue = sharedValue(4618).useSharedValue;
+      sharedValue(4618);
       if (rootNavigationRef != null) {
         isReadyResult = rootNavigationRef.isReady();
       }

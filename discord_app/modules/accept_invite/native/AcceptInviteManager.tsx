@@ -167,7 +167,7 @@ class AcceptInviteManager extends AutomaticLifecycleManager {
             obj.hideActionSheet();
             const obj5 = { code, isRegistration: _isRegistration, deeplinkAttemptId, inviteInstanceId };
             const obj2 = ModalActionCreatorsDefault;
-            obj2.pushLazy(asyncRequire(17442, dependencyMap.paths), obj5, ACCEPT_INVITE_MODAL_KEY);
+            obj2.pushLazy(asyncRequire(17471, dependencyMap.paths), obj5, ACCEPT_INVITE_MODAL_KEY);
             flag = false;
           }
         }

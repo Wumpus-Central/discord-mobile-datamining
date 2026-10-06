@@ -10,7 +10,7 @@ import TableRadioRow3 from "../../../../design/components/TableRow/native/TableR
 import TableRowGroup4 from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import TableSwitchRow2 from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/17769_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/17815_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
@@ -338,8 +338,8 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
     }
     let tmp2;
     if (null != tmp) {
-      let obj = { label: intl.string(integration(1126).t.eBtNBa), trailing: closure_7(integration(4886).Text, obj2) };
-      const TableRow = integration(5993).TableRow;
+      let obj = { label: intl.string(integration(1126).t.eBtNBa), trailing: closure_7(integration(4892).Text, obj2) };
+      const TableRow = integration(6000).TableRow;
       intl = integration(1126).intl;
       obj2 = { style: iter.value, variant: "text-md/medium", color: "text-muted", children: tmp.name };
       tmp2 = closure_7(TableRow, obj);
@@ -367,7 +367,7 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
       const obj4 = { integration, onPress: self.handleToggleEmotes };
       tmp13 = closure_7(closure_13, obj4);
     }
-    const obj3 = self(5442);
+    const obj3 = self(5449);
     const value = obj3.get(integration.type);
     let tmp19Result = null;
     if (null != value) {
@@ -378,10 +378,10 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
         source: makeSource(tmp15Result2.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG),
         style: iter.integrationIcon,
       };
-      tmp15Result2 = tmp15(4729);
+      tmp15Result2 = tmp15(4735);
       tmp19Result = closure_7(closure_3, obj5);
     }
-    const values = Object.values(tmp12(17768).IntegrationExpireGracePeriodTypes);
+    const values = Object.values(tmp12(17814).IntegrationExpireGracePeriodTypes);
     const found = values.filter((item) => Number.isInteger(item));
     const mapped = found.map((value) => {
       let intl;
@@ -391,12 +391,12 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
     });
     const obj6 = { style: { flex: 1 }, contentContainerStyle: items, children: closure_8(Stack, obj7) };
     items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
-    const Form = tmp15(8895).Form;
+    const Form = tmp15(8924).Form;
     obj7 = { style: iter.stackPadding, spacing: self(587).space.PX_24, children: items1 };
-    Stack = tmp15(5593).Stack;
-    const TableRowGroup = tmp15(6074).TableRowGroup;
+    Stack = tmp15(5600).Stack;
+    const TableRowGroup = tmp15(6081).TableRowGroup;
     let str1;
-    const TableRow2 = tmp15(5993).TableRow;
+    const TableRow2 = tmp15(6000).TableRow;
     if (integration.user != null) {
       str1 = str.toString();
     }
@@ -407,9 +407,9 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
     };
     items1[0] = closure_7(TableRowGroup, obj8);
     const obj9 = { title: intl3.string(tmp15(1126).t.i17qFc), hasIcons: false, children: items2 };
-    const TableRowGroup2 = tmp15(6074).TableRowGroup;
+    const TableRowGroup2 = tmp15(6081).TableRowGroup;
     intl3 = tmp15(1126).intl;
-    const TableRow3 = tmp15(5993).TableRow;
+    const TableRow3 = tmp15(6000).TableRow;
     const intl4 = tmp15(1126).intl;
     let str2 = integration.subscriber_count;
     const format = intl4.format;
@@ -426,7 +426,7 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
     obj11 = { datetime: obj12.calendar() };
     prop = tmp15(1126).t["+42M+u"];
     let flag = integration.syncing;
-    obj12 = self(4461)(integration.synced_at);
+    obj12 = self(4467)(integration.synced_at);
     if (flag == null) {
       flag = false;
     }
@@ -441,19 +441,19 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
       hasIcons: false,
       children: items3,
     };
-    const TableRadioGroup = tmp15(6072).TableRadioGroup;
+    const TableRadioGroup = tmp15(6079).TableRadioGroup;
     const obj16 = {
-      value: tmp15(17770).IntegrationExpireBehaviorTypes.REMOVE_ROLE,
+      value: tmp15(17816).IntegrationExpireBehaviorTypes.REMOVE_ROLE,
       label: intl6.string(tmp15(1126).t["6kpw4i"]),
     };
-    const TableRadioRow = tmp15(6071).TableRadioRow;
+    const TableRadioRow = tmp15(6078).TableRadioRow;
     intl6 = tmp15(1126).intl;
     items3 = [closure_7(TableRadioRow, obj16)];
     const obj17 = {
-      value: tmp15(17770).IntegrationExpireBehaviorTypes.KICK,
+      value: tmp15(17816).IntegrationExpireBehaviorTypes.KICK,
       label: intl7.string(tmp15(1126).t.fQUQIJ),
     };
-    const TableRadioRow2 = tmp15(6071).TableRadioRow;
+    const TableRadioRow2 = tmp15(6078).TableRadioRow;
     intl7 = tmp15(1126).intl;
     items3[1] = closure_7(TableRadioRow2, obj17);
     items1[2] = closure_8(TableRadioGroup, obj15);
@@ -465,11 +465,11 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
         return metroImportDefault(closure_11, obj, index);
       }),
     };
-    const TableRowGroup3 = tmp15(6074).TableRowGroup;
+    const TableRowGroup3 = tmp15(6081).TableRowGroup;
     intl8 = tmp15(1126).intl;
     items1[3] = closure_7(TableRowGroup3, obj18);
     items1[4] = tmp13;
-    items4 = [closure_7(Form, obj6), closure_7(tmp15(6536).NavScrim, {})];
+    items4 = [closure_7(Form, obj6), closure_7(tmp15(6543).NavScrim, {})];
     return closure_8(closure_9, obj13);
   }
 }

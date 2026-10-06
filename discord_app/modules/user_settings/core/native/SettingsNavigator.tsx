@@ -17,7 +17,7 @@ import LocaleStore_mod from "../../LocaleStore.tsx";
 import UserSettingSearchStore from "../../UserSettingSearchStore.tsx";
 import Constants from "../../../../Constants.tsx";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
 import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

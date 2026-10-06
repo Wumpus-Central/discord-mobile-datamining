@@ -20,7 +20,7 @@ export const openDisableCommunication = function openDisableCommunication(userId
   if (null != user) {
     const obj2 = { guildId, user, cancelButtonCallback };
     const obj = ModalActionCreatorsDefault;
-    obj.pushLazy(asyncRequire(11452, dependencyMap.paths), obj2);
+    obj.pushLazy(asyncRequire(11465, dependencyMap.paths), obj2);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {
@@ -31,7 +31,7 @@ export const openEnableCommunication = function openEnableCommunication(arg0) {
       let guildId;
       let onCancel;
       let userId;
-      const promise = asyncRequire(11455, dependencyMap.paths);
+      const promise = asyncRequire(11468, dependencyMap.paths);
       return promise.then((result) => {
         let closure_0 = result.default;
         return (arg0) => {

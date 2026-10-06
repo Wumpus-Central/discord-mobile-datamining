@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _mod9349 from "../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9363 from "../../../discord_common/js/packages/libdave/index.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 let users = {};
@@ -21,7 +21,7 @@ class VerifiedKeyStore extends PersistedStore {
     return { users };
   }
   getKeyTrustedAt(arg0, uint8Array) {
-    const obj = _mod9349;
+    const obj = _mod9363;
     let tmp2;
     if (users[arg0] != null) {
       tmp2 = tmp[obj.serializeKey(obj, uint8Array)];
@@ -53,7 +53,7 @@ let obj = {
     }
     users[userId] = obj;
     const uint8Array = new Uint8Array(key);
-    const obj2 = _mod9349;
+    const obj2 = _mod9363;
     const serializeKeyResult = obj2.serializeKey(uint8Array);
     obj[serializeKeyResult] = Date.now();
   },

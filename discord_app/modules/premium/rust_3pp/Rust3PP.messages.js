@@ -1,6 +1,6 @@
 // discord_app/modules/premium/rust_3pp/Rust3PP.messages.js
 import AssetJsonUtils from "../../asset_json/native/AssetJsonUtils.tsx";
-import AssetRegistry from "../../../../_runtime/03496_AssetRegistry.js";
+import AssetRegistry from "../../../../_runtime/03524_AssetRegistry.js";
 import module_1165_mod from "../../../../_runtime/metro/01165__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/ConjurePatchNotesChannel.tsx
 import Storage3 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let set;
@@ -14,7 +14,7 @@ export const PLAY_LINE_CHANNEL_PLACEHOLDER = combined;
 export const formatPlaySuffix = function formatPlaySuffix(PLAY_LINE_CHANNEL_PLACEHOLDER) {
   const intl = intl2.intl;
   const obj = { channel: PLAY_LINE_CHANNEL_PLACEHOLDER };
-  return "\n\n" + intl.formatToPlainString(_modDef3723["2ECgBx"], obj);
+  return "\n\n" + intl.formatToPlainString(_modDef3753["2ECgBx"], obj);
 };
 export const lastPatchNotesChannel = function lastPatchNotesChannel(applicationId) {
   const Storage = Storage3.Storage;

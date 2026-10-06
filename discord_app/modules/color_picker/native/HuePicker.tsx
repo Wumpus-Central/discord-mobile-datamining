@@ -85,13 +85,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                 obj.runOnJS(tmp)();
               }
             };
-            fn3.__closure = { onPanFinalize, runOnJS: tmp(4612).runOnJS };
+            fn3.__closure = { onPanFinalize, runOnJS: tmp(4618).runOnJS };
             fn3.__workletHash = 2479115151384;
             fn3.__initData = __initData3;
             cResult[5] = onPanFinalize;
             cResult[6] = fn3;
             tmp6 = fn3;
-            const obj2 = { onPanFinalize, runOnJS: tmp(4612).runOnJS };
+            const obj2 = { onPanFinalize, runOnJS: tmp(4618).runOnJS };
           } else {
             tmp6 = cResult[6];
           }
@@ -102,7 +102,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[9] === tmp6) {
                 tmp8 = cResult[10];
               }
-              let tmpResult = tmp(6140);
+              let tmpResult = tmp(6147);
               const panGesture = tmpResult.usePanGesture(tmp8);
               if (cResult[11] !== panGesture) {
                 const obj3 = { gesture: panGesture };
@@ -134,10 +134,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__closure = {
         hue,
-        normalizeValue: tmp(14424).normalizeValue,
+        normalizeValue: tmp(14440).normalizeValue,
         barWidth,
         onPanUpdate,
-        runOnJS: tmp(4612).runOnJS,
+        runOnJS: tmp(4618).runOnJS,
       };
       fn.__workletHash = 353921971989;
       fn.__initData = __initData;
@@ -150,13 +150,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           tmpResult.runOnJS(tmp4)();
         }
       };
-      ({ hue, normalizeValue: tmp(14424).normalizeValue, barWidth, onPanUpdate, runOnJS: tmp(4612).runOnJS });
+      ({ hue, normalizeValue: tmp(14440).normalizeValue, barWidth, onPanUpdate, runOnJS: tmp(4618).runOnJS });
       fn2.__closure = {
         hue,
-        normalizeValue: tmp(14424).normalizeValue,
+        normalizeValue: tmp(14440).normalizeValue,
         barWidth,
         onPanUpdate,
-        runOnJS: tmp(4612).runOnJS,
+        runOnJS: tmp(4618).runOnJS,
       };
       fn2.__workletHash = 10859524318070;
       fn2.__initData = __initData2;
@@ -167,7 +167,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = fn2;
       tmp5 = fn2;
       tmp4 = fn;
-      ({ hue, normalizeValue: tmp(14424).normalizeValue, barWidth, onPanUpdate, runOnJS: tmp(4612).runOnJS });
+      ({ hue, normalizeValue: tmp(14440).normalizeValue, barWidth, onPanUpdate, runOnJS: tmp(4618).runOnJS });
     }
   : (hue, barWidth, onPanUpdate, onPanFinalize) => {
       let fn;

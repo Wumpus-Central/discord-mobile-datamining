@@ -44,7 +44,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         _require = cResult[1];
       }
-      return set(6663)(tmp3);
+      return set(6670)(tmp3);
     }
   : (arg0) => {
       let closure_0 = arg0;

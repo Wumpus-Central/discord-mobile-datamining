@@ -56,7 +56,7 @@ function onObscuredContentNonFriendsDmOnPress() {
   let items;
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14629);
+    let obj = selectedTeenId(14645);
     const explicitContentNonFriendDm =
       obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
     const intl = selectedTeenId(1126).intl;
@@ -72,8 +72,8 @@ function onObscuredContentNonFriendsDmOnPress() {
       },
       currentValue: explicitContentNonFriendDm,
     };
-    const handleSensitiveMediaFilterPress = selectedTeenId(14634).handleSensitiveMediaFilterPress;
-    selectedTeenId(14634);
+    const handleSensitiveMediaFilterPress = selectedTeenId(14650).handleSensitiveMediaFilterPress;
+    selectedTeenId(14650);
     intl2 = selectedTeenId(1126).intl;
     items = [selectedTeenId(1197).ExplicitContentRedaction.SHOW];
     let result = handleSensitiveMediaFilterPress(obj2);

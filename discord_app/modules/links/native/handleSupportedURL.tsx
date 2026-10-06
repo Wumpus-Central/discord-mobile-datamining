@@ -83,6 +83,7 @@ export default function handleSupportedURL(payload) {
   let fingerprint;
   let flag;
   let guildId2;
+  let isAppStartupNavigation;
   let messageId;
   let navigationReplace;
   let nonce;
@@ -96,7 +97,7 @@ export default function handleSupportedURL(payload) {
   let summaryId;
   let waitForConnection;
   payload = payload.payload;
-  ({ safe, navigationReplace, waitForConnection, skipMessageFetch } = payload);
+  ({ safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation } = payload);
   let rootNavigationRef1;
   let rootNavigationRef2;
   let inviteCode;
@@ -250,7 +251,7 @@ export default function handleSupportedURL(payload) {
       const obj26 = payload(inviteCode[29]);
       obj26.startDiceRoll(channelId2, diceCount, diceSides);
       const obj22 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: obj23 };
-      obj23 = { safe, navigationReplace, waitForConnection, skipMessageFetch };
+      obj23 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       rootNavigationRef1(inviteCode[30])(obj22);
       flag2 = true;
     }
@@ -341,7 +342,7 @@ export default function handleSupportedURL(payload) {
               ? () => {
                   const obj = ModalActionCreatorsDefault;
                   const obj2 = { remoteAuthFingerprint };
-                  obj.pushLazy(asyncRequire(13676, dependencyMap.paths), obj2, "REMOTE_AUTH_MODAL");
+                  obj.pushLazy(asyncRequire(13692, dependencyMap.paths), obj2, "REMOTE_AUTH_MODAL");
                 }
               : () => {
                   let paths;
@@ -1144,7 +1145,7 @@ export default function handleSupportedURL(payload) {
     const tmp122 = null != guildId && null != channelId;
     if (tmp122) {
       const obj39 = { guildId, channelId, messageId, navigationSettings: obj40, summaryId };
-      obj40 = { safe, navigationReplace, waitForConnection, skipMessageFetch };
+      obj40 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       rootNavigationRef1(inviteCode[30])(obj39);
       flag = true;
     }

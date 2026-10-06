@@ -19,11 +19,11 @@ import BundleSampleV2Default from "BundleSampleV2.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef8499 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
+import _modDef8532 from "../../../../discord_assets/assets/orbs/orb_profile_badge_icon-2x.png.js";
 import FractionalNitroCoinIllustration2 from "FractionalNitroCoinIllustration.tsx";
 import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import getProductName from "../utils/getProductName.tsx";
-import _modDef10747 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
+import _modDef10760 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small.png.js";
 import OrbCheckoutAmountTagDefault from "../../virtual_currency/native/OrbCheckoutAmountTag.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import CollectiblesPreviewConstants from "CollectiblesPreviewConstants.tsx";
@@ -147,7 +147,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         let first;
         const _Symbol = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { uri: _modDef10747 };
+          const obj2 = { uri: _modDef10760 };
           cResult[0] = obj2;
           first = obj2;
         } else {
@@ -235,7 +235,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.profileEffect,
           resizeMode: "cover",
         };
-        obj3 = { uri: _modDef10747 };
+        obj3 = { uri: _modDef10760 };
         const tmp2Result = FastImageDefault;
         items = [metroImportDefault(tmp2Result, obj2)];
         const obj4 = { style: tmp.profileEffect, source: obj5, accessibilityLabel: tmp4.title, resizeMode: "cover" };
@@ -657,7 +657,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp33;
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { uri: _modDef8499 };
+          const obj2 = { uri: _modDef8532 };
           cResult[2] = obj2;
           tmp31 = obj2;
         } else {
@@ -777,7 +777,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         return metroImportDefault(FractionalNitroCoinIllustration, size);
       } else if (product.skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
         const obj = { source: obj2, style: tmp.externalProductImage };
-        obj2 = { uri: _modDef8499 };
+        obj2 = { uri: _modDef8532 };
         const tmp18 = FastImageDefault;
         return metroImportDefault(tmp18, obj);
       } else {
@@ -1378,7 +1378,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_10(flag);
       let obj = useCurrentUser;
       const currentUser = obj.useCurrentUser();
-      let obj2 = flag2(4528);
+      let obj2 = flag2(4534);
       const canUseShopDiscountsResult = obj2.canUseShopDiscounts(currentUser);
       dependencyMap = canUseShopDiscountsResult;
       const items = [product, flag2, canUseShopDiscountsResult];
@@ -1434,7 +1434,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: intl.string(intl8.t["3YfczA"]),
         };
-        Text = tmp3(4886).Text;
+        Text = tmp3(4892).Text;
         intl = tmp3(1126).intl;
         flag3 = closure_7(View, obj5);
       }

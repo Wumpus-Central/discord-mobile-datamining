@@ -106,7 +106,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult4 = require("useStateFromStores");
       const stateFromStores2 = tmpResult4.useStateFromStores(tmp13, U);
-      const obj5 = guild_id(4528);
+      const obj5 = guild_id(4534);
       if (obj5.canUseSoundboardEverywhere(stateFromStores)) {
         class U {
           constructor() {

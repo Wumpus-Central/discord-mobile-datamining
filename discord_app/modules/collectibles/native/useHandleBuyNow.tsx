@@ -102,7 +102,7 @@ function useHandleBuyNow(product) {
     onPurchasePending() {},
     orderId,
   };
-  const tmp3 = onBuySettled(10750)(obj);
+  const tmp3 = onBuySettled(10763)(obj);
   react = tmp3;
   let obj2 = {
     handleBuyNow: react.useCallback(

@@ -88,7 +88,7 @@ let closure_13 = memo(
             }
             if (cResult[7] !== stateFromStores) {
               const obj2 = { entry: stateFromStores };
-              const tmp16 = closure_10(directoryChannelId(11941), obj2);
+              const tmp16 = closure_10(directoryChannelId(11955), obj2);
               cResult[7] = stateFromStores;
               cResult[8] = tmp16;
               tmp13 = tmp16;
@@ -109,7 +109,7 @@ let closure_13 = memo(
               }
             }
             const obj3 = { label: guild.name, icon: tmp9, trailing: tmp13, start, end };
-            const tmp19 = closure_10(guild(5993).TableRow, obj3);
+            const tmp19 = closure_10(guild(6000).TableRow, obj3);
             cResult[9] = end;
             cResult[10] = guild.name;
             cResult[11] = start;
@@ -119,7 +119,7 @@ let closure_13 = memo(
             tmp17 = tmp19;
           }
           const obj4 = { style: tmp4.guildIcon, guild };
-          const tmp12 = closure_10(directoryChannelId(5971), obj4);
+          const tmp12 = closure_10(directoryChannelId(5978), obj4);
           cResult[4] = guild;
           cResult[5] = tmp4.guildIcon;
           cResult[6] = tmp12;
@@ -148,12 +148,12 @@ let closure_13 = memo(
         );
         const obj2 = {
           label: guild.name,
-          icon: closure_10(directoryChannelId(5971), obj3),
-          trailing: closure_10(directoryChannelId(11941), { entry: stateFromStores }),
+          icon: closure_10(directoryChannelId(5978), obj3),
+          trailing: closure_10(directoryChannelId(11955), { entry: stateFromStores }),
           start,
           end,
         };
-        const TableRow = guild(5993).TableRow;
+        const TableRow = guild(6000).TableRow;
         obj3 = { style: tmp.guildIcon, guild };
         return closure_10(TableRow, obj2);
       },

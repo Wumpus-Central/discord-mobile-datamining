@@ -260,10 +260,10 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       class P {
         constructor() {
           closure_0 = setTimeout(() => {
-            /* body not rendered: F144573 */
+            /* body not rendered: F144777 */
           }, 5500);
           return () => {
-            /* body not rendered: F144574 */
+            /* body not rendered: F144778 */
           };
         }
       }

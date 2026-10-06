@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ProfileEffectRecord from "../../collectibles/records/ProfileEffectRecord.tsx";
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
@@ -227,7 +227,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let memo;
       let tmp = closure_12();
       let str = user.id;
-      const tmp4 = isTryItOut(7857);
+      const tmp4 = isTryItOut(7868);
       if (str == null) {
         str = "";
       }
@@ -236,10 +236,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = selectedProfileEffect(memo.useState(currentProfileEffect), 2);
       selectedProfileEffect = tmp6[0];
       const tmp8 = tmp6[1];
-      let obj = guildId(7841);
+      let obj = guildId(7852);
       const bottomSheetRef = obj.useBottomSheetRef().bottomSheetRef;
-      const tmp2Result = isTryItOut(6657);
-      const analyticsLocations = tmp2Result(tmp2(6681).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
+      const tmp2Result = isTryItOut(6664);
+      const analyticsLocations = tmp2Result(tmp2(6688).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
       const items = [guildId, tmp4Result];
       memo = memo.useMemo(() => {
         let tmp;
@@ -287,11 +287,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       let obj2 = { value: analyticsLocations, children: closure_10(BottomSheet, obj3) };
-      const AnalyticsLocationProvider = guildId(6657).AnalyticsLocationProvider;
+      const AnalyticsLocationProvider = guildId(6664).AnalyticsLocationProvider;
       obj3 = { scrollable: true, ref: bottomSheetRef, onExpand: callback, startExpanded: true, children: items4 };
       const obj4 = { style: tmp.container, children: items3 };
       const obj5 = { style: tmp.bounceOffset };
-      BottomSheet = guildId(6645).BottomSheet;
+      BottomSheet = guildId(6652).BottomSheet;
       items3 = [closure_9(closure_5, obj5), ,];
       const obj6 = {
         variant: "redesign/heading-18/bold",
@@ -299,7 +299,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "header",
         children: intl.string(guildId(1126).t["/6nv6N"]),
       };
-      const Text = guildId(4886).Text;
+      const Text = guildId(4892).Text;
       intl = guildId(1126).intl;
       items3[1] = closure_9(Text, obj6);
       items3[2] = closure_9(closure_13, {
@@ -317,10 +317,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         isTryItOut,
         onApply: callback1,
         analyticsLocations,
-        analyticsSource: isTryItOut(6681).EDIT_PROFILE_EFFECT_SHEET,
+        analyticsSource: isTryItOut(6688).EDIT_PROFILE_EFFECT_SHEET,
       };
       skuId = undefined;
-      const tmp2Result2 = isTryItOut(7843);
+      const tmp2Result2 = isTryItOut(7854);
       if (currentProfileEffect != null) {
         skuId = currentProfileEffect.skuId;
       }
@@ -783,7 +783,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       let purchase;
       ({ previewSkuId, user, guildId } = arg0);
       const tmp = closure_12();
-      const tmp2 = purchase(7844)(previewSkuId);
+      const tmp2 = purchase(7855)(previewSkuId);
       const product = tmp2.product;
       let c0 = product;
       purchase = tmp2.purchase;
@@ -807,10 +807,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp3;
       }, items);
-      items1 = [closure_9(purchase(10824), { user, guildId, profileEffect: memo, maxWidth: 250 })];
+      items1 = [closure_9(purchase(10837), { user, guildId, profileEffect: memo, maxWidth: 250 })];
       const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: items2 };
       items2 = [,];
-      const tmp4 = purchase(5605);
+      const tmp4 = purchase(5612);
       items2[0] = "" + tmp.previewGradient.color + "00";
       items2[1] = tmp.previewGradient.color;
       items1[1] = closure_9(tmp4, obj2);

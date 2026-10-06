@@ -429,11 +429,11 @@ let obj = {
       set = map1.set;
       let id = nextResult.id;
       let tmp15 = mapped;
-      let obj3 = mapped(7183);
+      let obj3 = mapped(7196);
       let result1 = set(id, obj3.isQuestExpired(nextResult));
       let targetedContent = nextResult.targetedContent;
-      if (targetedContent.includes(mapped(5626).QuestContent.QUEST_BAR)) {
-        let tmp15Result = tmp15(7193);
+      if (targetedContent.includes(mapped(5633).QuestContent.QUEST_BAR)) {
+        let tmp15Result = tmp15(7206);
         let obj4 = { location: QuestsExperimentLocations.QUESTS_STORE };
         let questLogger = tmp15Result.getQuestLogger(obj4);
         let _HermesInternal2 = HermesInternal;
@@ -458,7 +458,7 @@ let obj = {
         let result3 = map.set(item10131.id, item10131);
         set2 = map1.set;
         let id2 = item10131.id;
-        let obj8 = mapped(7183);
+        let obj8 = mapped(7196);
         let set2Result = set2(id2, obj8.isQuestExpired(item10131));
       }
       continue;

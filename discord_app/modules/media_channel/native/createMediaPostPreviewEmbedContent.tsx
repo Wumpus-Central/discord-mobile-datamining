@@ -127,7 +127,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             }
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj5 = {
-                blurredCoverImage: _false.resolveAssetSource(tmp10(13085)).uri,
+                blurredCoverImage: _false.resolveAssetSource(tmp10(13104)).uri,
                 footer: formatToPartsResult,
                 ctaButtonColor: tmp11,
               };

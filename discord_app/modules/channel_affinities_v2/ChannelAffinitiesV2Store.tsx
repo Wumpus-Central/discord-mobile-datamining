@@ -4,7 +4,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f123470 = (channelId) => {
+const f123648 = (channelId) => {
   const items = [channelId.channelId, channelId];
   return items;
 };
@@ -24,7 +24,7 @@ class ChannelAffinitiesV2Store extends PersistedStore {
       channelAffinities = obj.channelAffinities;
       const self = this;
       const self2 = this;
-      new Map(channelAffinities.map(f123470));
+      new Map(channelAffinities.map(f123648));
     }
   }
   shouldFetch() {
@@ -81,7 +81,7 @@ const obj2 = {
     c2 = false;
     obj.channelAffinities = affineChannels;
     const channelAffinities = obj.channelAffinities;
-    map = new Map(channelAffinities.map(f123470));
+    map = new Map(channelAffinities.map(f123648));
   },
   LOAD_CHANNEL_AFFINITIES_V2_FAILURE: function handleLoadChannelAffinitiesFailure() {
     c2 = false;

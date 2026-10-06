@@ -1,6 +1,6 @@
 // discord_app/modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _mod8594 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import _mod8629 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserApplicationIdentityStore2 from "../../user_application_identity/UserApplicationIdentityStore.tsx";
 import ApplicationAssetV2Utils from "../../application_assets_v2/ApplicationAssetV2Utils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -331,8 +331,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const memo1 = useMemo(() => {
         let profile;
         const resolvedValuesFromUserApplicationIdentityProfile =
-          _mod8594.resolvedValuesFromUserApplicationIdentityProfile;
-        _mod8594;
+          _mod8629.resolvedValuesFromUserApplicationIdentityProfile;
+        _mod8629;
         if (stateFromStores != null) {
           profile = stateFromStores.profile;
         }

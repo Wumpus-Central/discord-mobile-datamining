@@ -4,7 +4,7 @@ import Storage4 from "../../../../discord_common/js/packages/storage/Storage.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import Constants from "../../../Constants.tsx";
 import PremiumConstants from "../PremiumConstants.tsx";
-import _modDef4461 from "../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import UserOfferStore from "../../../stores/billing/UserOfferStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -21,10 +21,10 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       const value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = _modDef4461(value);
+        tmp4 = _modDef4467(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(_modDef4461());
+        return tmp4.isAfter(_modDef4467());
       }
     }
     let tmp6 = null != tmp11 && "" !== tmp11;

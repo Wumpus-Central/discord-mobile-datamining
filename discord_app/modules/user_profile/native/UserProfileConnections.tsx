@@ -17,8 +17,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11197_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/11198_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/11210_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/11211_AssetRegistry.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import react_mod from "../../../../_runtime/00019_react.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -310,7 +310,7 @@ let closure_19 = memo(
                                     tmp7 = PlatformTypes;
                                     obj1.trusted = account.type !== PlatformTypes.DOMAIN;
                                     obj1.onConfirm = function onConfirm() {
-                                      /* body not rendered: F143014 */
+                                      /* body not rendered: F143216 */
                                     };
                                     handleClickResult = obj.handleClick(obj1);
                                   }
@@ -379,7 +379,7 @@ let closure_19 = memo(
                                       tmp7 = PlatformTypes;
                                       obj1.trusted = account.type !== PlatformTypes.DOMAIN;
                                       obj1.onConfirm = function onConfirm() {
-                                        /* body not rendered: F143014 */
+                                        /* body not rendered: F143216 */
                                       };
                                       handleClickResult = obj.handleClick(obj1);
                                     }
@@ -498,7 +498,7 @@ let closure_19 = memo(
                                 tmp7 = PlatformTypes;
                                 obj1.trusted = account.type !== PlatformTypes.DOMAIN;
                                 obj1.onConfirm = function onConfirm() {
-                                  /* body not rendered: F143014 */
+                                  /* body not rendered: F143216 */
                                 };
                                 handleClickResult = obj.handleClick(obj1);
                               }
@@ -545,7 +545,7 @@ let closure_19 = memo(
                                     tmp7 = PlatformTypes;
                                     obj1.trusted = account.type !== PlatformTypes.DOMAIN;
                                     obj1.onConfirm = function onConfirm() {
-                                      /* body not rendered: F143014 */
+                                      /* body not rendered: F143216 */
                                     };
                                     handleClickResult = obj.handleClick(obj1);
                                   }
@@ -598,7 +598,7 @@ let closure_19 = memo(
                               tmp7 = PlatformTypes;
                               obj1.trusted = account.type !== PlatformTypes.DOMAIN;
                               obj1.onConfirm = function onConfirm() {
-                                /* body not rendered: F143014 */
+                                /* body not rendered: F143216 */
                               };
                               handleClickResult = obj.handleClick(obj1);
                             }
@@ -623,7 +623,7 @@ let closure_19 = memo(
                         tmp7 = PlatformTypes;
                         obj1.trusted = account.type !== PlatformTypes.DOMAIN;
                         obj1.onConfirm = function onConfirm() {
-                          /* body not rendered: F143014 */
+                          /* body not rendered: F143216 */
                         };
                         handleClickResult = obj.handleClick(obj1);
                       }
@@ -713,7 +713,7 @@ let closure_19 = memo(
                 tmp7 = PlatformTypes;
                 obj1.trusted = account.type !== PlatformTypes.DOMAIN;
                 obj1.onConfirm = function onConfirm() {
-                  /* body not rendered: F143014 */
+                  /* body not rendered: F143216 */
                 };
                 handleClickResult = obj.handleClick(obj1);
               }
@@ -970,7 +970,7 @@ let closure_20 = memo2(
         application = application.application;
         const identity = application.identity;
         const tmp4 = closure_16();
-        let obj2 = trackUserProfileAction(7861);
+        let obj2 = trackUserProfileAction(7872);
         trackUserProfileAction = obj2.useUserProfileAnalyticsContext().trackUserProfileAction;
         if (cResult[0] !== application) {
           const iconSource = application.getIconSource(closure_7);
@@ -1042,7 +1042,7 @@ let closure_20 = memo2(
               cResult[15] = tmp8;
               cResult[16] = str;
               cResult[17] = tmp14;
-              const tmp20 = closure_12(trackUserProfileAction(5993).TableRow, obj5);
+              const tmp20 = closure_12(trackUserProfileAction(6000).TableRow, obj5);
               class C {
                 constructor() {
                   tmp = trackUserProfileAction({ action: "COPY_CONNECTED_ACCOUNT" });
@@ -1060,7 +1060,7 @@ let closure_20 = memo2(
             let tmp15;
             if (null != tmp5) {
               const obj6 = { size, source: tmp5, style: tmp4.applicationIcon };
-              tmp15 = closure_12(tmp(4579).BaseIconImage, obj6);
+              tmp15 = closure_12(tmp(4585).BaseIconImage, obj6);
             }
             cResult[10] = tmp5;
             cResult[11] = tmp4;
@@ -1517,7 +1517,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       userId = userId.userId;
       const style = userId.style;
       const tmp2 = closure_16();
-      let obj = userId(4589);
+      let obj = userId(4595);
       const theme = obj.useThemeContext().theme;
       const items = [LocaleStore];
       const obj2 = userId(504);
@@ -1525,8 +1525,8 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [StreamerModeStore];
       const obj3 = userId(504);
       const stateFromStores = obj3.useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
-      ({ connections, appIdentities } = theme(12934)(userId));
-      theme(12934)(userId);
+      ({ connections, appIdentities } = theme(12953)(userId));
+      theme(12953)(userId);
       const tmp6 = theme;
       if (!stateFromStores) {
         const items2 = [];
@@ -1555,10 +1555,10 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           style: items3,
           title: intl.string(userId(1126).t["3fe7U5"]),
           titleStyle: tmp2.refreshCardTitle,
-          children: closure_12(userId(6074).TableRowGroup, obj5),
+          children: closure_12(userId(6081).TableRowGroup, obj5),
         };
         items3 = [tmp2.cardContainer, style];
-        const tmp6Result = tmp6(6706);
+        const tmp6Result = tmp6(6713);
         intl = tmp3(1126).intl;
         obj5 = { hasIcons: true, children: items2 };
         return closure_12(tmp6Result, obj4);

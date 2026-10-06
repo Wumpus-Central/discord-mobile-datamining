@@ -65,7 +65,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[6] !== tmp4.label) {
             const obj2 = { variant: "text-xs/semibold", color: "text-muted", style: label, children: tmp9 };
-            const tmp13 = closure_5(roleIds(4886).Text, obj2);
+            const tmp13 = closure_5(roleIds(4892).Text, obj2);
             cResult[6] = tmp4.label;
             cResult[7] = tmp13;
             tmp11 = tmp13;
@@ -164,7 +164,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.label,
           children: intl.string(roleIds(1126).t.stcSfI),
         };
-        const Text = tmp2(4886).Text;
+        const Text = tmp2(4892).Text;
         intl = tmp2(1126).intl;
         items2 = [closure_5(Text, obj3)];
         const obj4 = {

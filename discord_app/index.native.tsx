@@ -13,9 +13,9 @@ import size from "../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require;
 
-const f79739 = () => {
-  let closure_0 = GenerateInvite(f18179[12]).default;
-  return (arg0) => closure_0(GenerateInvite, f18179, arg0);
+const f79872 = () => {
+  let closure_0 = GenerateInvite(f18225[12]).default;
+  return (arg0) => closure_0(GenerateInvite, f18225, arg0);
 };
 const polyfillsEnd = TTITracker.default.imports.polyfillsEnd;
 polyfillsEnd.record();
@@ -42,40 +42,40 @@ AppRegistry.registerRunnable("Share", () => {
   return require("executeRunnable").default("Share", () => closure_3(...closure_0));
 });
 const BackgroundSync = "BackgroundSync";
-const f18169 = () => BackgroundSync(f18169[13]);
-AppRegistry.registerHeadlessTask("BackgroundSync", f79739);
+const f18215 = () => BackgroundSync(f18215[13]);
+AppRegistry.registerHeadlessTask("BackgroundSync", f79872);
 if (isTTITest.isTTITest) {
   const TTITestAction = "TTITestAction";
-  const f18170 = () => TTITestAction(f18170[14]);
-  AppRegistry.registerHeadlessTask("TTITestAction", f79739);
+  const f18216 = () => TTITestAction(f18216[14]);
+  AppRegistry.registerHeadlessTask("TTITestAction", f79872);
 }
 const Disconnect = "Disconnect";
-const f18171 = () => Disconnect(f18171[15]);
-AppRegistry.registerHeadlessTask("Disconnect", f79739);
+const f18217 = () => Disconnect(f18217[15]);
+AppRegistry.registerHeadlessTask("Disconnect", f79872);
 const MarkAsRead = "MarkAsRead";
-const f18172 = () => MarkAsRead(f18172[16]);
-AppRegistry.registerHeadlessTask("MarkAsRead", f79739);
+const f18218 = () => MarkAsRead(f18218[16]);
+AppRegistry.registerHeadlessTask("MarkAsRead", f79872);
 const MuteAction = "MuteAction";
-const f18173 = () => MuteAction(f18173[17]);
-AppRegistry.registerHeadlessTask("MuteAction", f79739);
+const f18219 = () => MuteAction(f18219[17]);
+AppRegistry.registerHeadlessTask("MuteAction", f79872);
 const ToggleDeafen = "ToggleDeafen";
-const f18174 = () => ToggleDeafen(f18174[18]);
-AppRegistry.registerHeadlessTask("ToggleDeafen", f79739);
+const f18220 = () => ToggleDeafen(f18220[18]);
+AppRegistry.registerHeadlessTask("ToggleDeafen", f79872);
 const ToggleSelfMute = "ToggleSelfMute";
-const f18175 = () => ToggleSelfMute(f18175[19]);
-AppRegistry.registerHeadlessTask("ToggleSelfMute", f79739);
+const f18221 = () => ToggleSelfMute(f18221[19]);
+AppRegistry.registerHeadlessTask("ToggleSelfMute", f79872);
 const DismissCallAction = "DismissCallAction";
-const f18176 = () => DismissCallAction(f18176[20]);
-AppRegistry.registerHeadlessTask("DismissCallAction", f79739);
+const f18222 = () => DismissCallAction(f18222[20]);
+AppRegistry.registerHeadlessTask("DismissCallAction", f79872);
 const DirectReply = "DirectReply";
-const f18177 = () => DirectReply(f18177[21]);
-AppRegistry.registerHeadlessTask("DirectReply", f79739);
+const f18223 = () => DirectReply(f18223[21]);
+AppRegistry.registerHeadlessTask("DirectReply", f79872);
 const SelectVoiceChannel = "SelectVoiceChannel";
-const f18178 = () => SelectVoiceChannel(f18178[22]);
-AppRegistry.registerHeadlessTask("SelectVoiceChannel", f79739);
+const f18224 = () => SelectVoiceChannel(f18224[22]);
+AppRegistry.registerHeadlessTask("SelectVoiceChannel", f79872);
 const GenerateInvite = "GenerateInvite";
-const f18179 = () => GenerateInvite(f18179[23]);
-AppRegistry.registerHeadlessTask("GenerateInvite", f79739);
+const f18225 = () => GenerateInvite(f18225[23]);
+AppRegistry.registerHeadlessTask("GenerateInvite", f79872);
 const result = size.fileFinishedImporting("index.native.tsx");
 
 // === Orphan Functions ===
@@ -949,7 +949,7 @@ function global() {
         let items;
         let items3;
         let length;
-        const f133213 = (item, index) => {
+        const f133429 = (item, index) => {
           let c0 = " ";
           const applyResult = Array.apply(null, Array(items3[index] - item.length));
           const mapped = applyResult.map(() => c0);
@@ -1052,10 +1052,10 @@ function global() {
             const mapped = applyResult.map(() => c0);
             return mapped.join("");
           });
-          const mapped2 = mapped1.map(f133213);
+          const mapped2 = mapped1.map(f133429);
           let str2 = " | ";
           const text = `| ${obj2.join(" | ")}`;
-          const mapped3 = combined.map(f133213);
+          const mapped3 = combined.map(f133429);
           const items4 = [`| ${obj3.join(" | ")} |`, `${`| ${obj2.join(" | ")}`} |`];
           const num = 1;
           let num2 = 0;
@@ -1063,7 +1063,7 @@ function global() {
             do {
               let arr9 = items2[num2];
               let push = items4.push;
-              let mapped4 = arr9.map(f133213);
+              let mapped4 = arr9.map(f133429);
               let arr3 = push("| " + mapped4.join(" | ") + " |");
               num2 = num2 + 1;
               length = arr2.length;
@@ -1296,7 +1296,7 @@ function global() {
     },
   };
   self.ErrorUtils = obj3;
-  // Metro registry: 18134 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
+  // Metro registry: 18180 module registrations omitted (each __d(factory, id, deps) wires a module rendered above)
   __r(119);
   return __r(0);
 }
@@ -1328,7 +1328,7 @@ function isoStop(blobReachResult, bellReachResult) {
 
 function then() {}
 
-function f83233(arg0, arg1, str) {
+function f83366(arg0, arg1, str) {
   if (typeof str !== "string") {
     ({ length: closure_1_0.minimumSignificantDigits, length: closure_1_0.maximumSignificantDigits } = arg1);
   } else if ("+" === str) {
@@ -1347,7 +1347,7 @@ function f83233(arg0, arg1, str) {
   return "";
 }
 
-function f83235(arg0, arg1) {
+function f83368(arg0, arg1) {
   let obj;
   const __assign = closure_1_0(closure_1_1[1]).__assign;
   closure_1_0(closure_1_1[1]);
@@ -1408,7 +1408,7 @@ function f83235(arg0, arg1) {
   }
 }
 
-function f83236(arg0, arg1) {
+function f83369(arg0, arg1) {
   let obj;
   const __assign = closure_1_0(closure_1_1[1]).__assign;
   closure_1_0(closure_1_1[1]);
@@ -1469,7 +1469,7 @@ function f83236(arg0, arg1) {
   }
 }
 
-function f83237(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f83370(arg0, arg1, arg2, arg3, arg4, arg5) {
   const tmp = arg1;
   if (tmp) {
     closure_1_0.minimumIntegerDigits = arg2.length;
@@ -1497,7 +1497,7 @@ function f83237(arg0, arg1, arg2, arg3, arg4, arg5) {
   return "";
 }
 
-function f83238(arg0, arg1, arg2, arg3, arg4, arg5) {
+function f83371(arg0, arg1, arg2, arg3, arg4, arg5) {
   if ("*" === arg2) {
     closure_1_0.minimumFractionDigits = arg1.length;
   } else {

@@ -149,9 +149,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         left: sum,
         top: sum1,
         right: "concat",
-        bottom: "lj",
-        padding: "key",
-        minWidth: "userId",
+        bottom: "TypeError",
+        padding: "keys",
+        minWidth: "ind",
       };
       cResult[0] = sum;
       cResult[1] = sum1;
@@ -176,9 +176,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           left: size - badgeSize + num,
           top: size - badgeSize + num2,
           right: "concat",
-          bottom: "lj",
-          padding: "key",
-          minWidth: "userId",
+          bottom: "TypeError",
+          padding: "keys",
+          minWidth: "ind",
         };
         return rect;
       }, items);

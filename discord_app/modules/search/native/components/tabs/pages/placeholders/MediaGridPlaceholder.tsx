@@ -157,7 +157,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         arr = cResult[3];
       }
-      const tmpResult4 = tmp(16816);
+      const tmpResult4 = tmp(16837);
       const placeholderAnimatedStyle = tmpResult4.usePlaceholderAnimatedStyle(visible);
       if (cResult[4] === placeholderAnimatedStyle) {
         if (cResult[5] === tmp4.container) {
@@ -186,7 +186,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               color: "interactive-text-default",
               children: tmp13,
             };
-            const tmp17 = closure_7(tmp(4886).Text, obj2);
+            const tmp17 = closure_7(tmp(4892).Text, obj2);
             cResult[9] = tmp4.sectionText;
             cResult[10] = tmp17;
             tmp15 = tmp17;
@@ -212,7 +212,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[15] !== tmp4.sectionText) {
               const obj3 = { variant: "text-sm/semibold", color: "text-brand", style: sectionText2, children: tmp22 };
-              const tmp26 = closure_7(tmp(4886).Text, obj3);
+              const tmp26 = closure_7(tmp(4892).Text, obj3);
               cResult[15] = tmp4.sectionText;
               cResult[16] = tmp26;
               tmp24 = tmp26;
@@ -252,7 +252,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             obj = {
                               style: closure_1.row,
                               children: size.map(() => {
-                                /* body not rendered: F146673 */
+                                /* body not rendered: F146890 */
                               }),
                             };
                             tmp = closure_1_8;
@@ -295,7 +295,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                             obj = {
                               style: closure_1.row,
                               children: size.map(() => {
-                                /* body not rendered: F146673 */
+                                /* body not rendered: F146890 */
                               }),
                             };
                             tmp = closure_1_8;
@@ -327,7 +327,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       obj = {
                         style: closure_1.row,
                         children: size.map(() => {
-                          /* body not rendered: F146673 */
+                          /* body not rendered: F146890 */
                         }),
                       };
                       tmp = closure_1_8;
@@ -421,7 +421,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items2[2] = placeholderAnimatedStyle;
       const obj3 = { style: tmp.section, children: items3 };
       const obj4 = { style: tmp.sectionItem, children: closure_7(Text, obj5) };
-      View = numRows(4612).View;
+      View = numRows(4618).View;
       obj5 = {
         style: tmp.sectionText,
         maxFontSizeMultiplier: 2,

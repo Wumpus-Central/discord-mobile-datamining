@@ -15,7 +15,7 @@ import useChannelName from "../modules/channel/useChannelName.tsx";
 import StickersTypes from "../modules/stickers/StickersTypes.tsx";
 import autocompleter_AutocompleterConstants from "../modules/autocompleter/AutocompleterConstants.tsx";
 import utils_AutocompleteUtils from "native/AutocompleteUtils.tsx";
-import fuzzysearchDefault from "../../_runtime/05702_fuzzysearch.js";
+import fuzzysearchDefault from "../../_runtime/05709_fuzzysearch.js";
 import sortByMatchScoreDefault from "../modules/autocompleter/sortByMatchScore.tsx";
 import GuildUtilsDefault from "GuildUtils.tsx";
 import isSoundValidDefault from "../modules/premium/sounds/soundmoji/utils/isSoundValid.tsx";
@@ -67,8 +67,8 @@ let closure_42;
 let hasOwnProperty;
 let map1;
 let metroRequire;
-const f90623 = (author) => author.author.id;
-const f90624 = (author) => user.getUser(author.author.id);
+const f90759 = (author) => author.author.id;
+const f90760 = (author) => user.getUser(author.author.id);
 function NOOP() {
   return true;
 }
@@ -773,8 +773,8 @@ let obj = {
                   const messages = MessageStore.getMessages(id);
                   const tmp16Result = tmp16(messages.toArray());
                   const reversed = tmp16Result.reverse();
-                  const uniqByResult = reversed.uniqBy(f90623);
-                  const mapped1 = uniqByResult.map(f90624);
+                  const uniqByResult = reversed.uniqBy(f90759);
+                  const mapped1 = uniqByResult.map(f90760);
                   const found = mapped1.filter((isNonUserBot) => {
                     if (null == isNonUserBot) {
                       return false;
@@ -883,8 +883,8 @@ let obj = {
               const messages = MessageStore.getMessages(channelId);
               const tmp14Result = tmp14(messages.toArray());
               const reversed = tmp14Result.reverse();
-              const uniqByResult = reversed.uniqBy(f90623);
-              const mapped = uniqByResult.map(f90624);
+              const uniqByResult = reversed.uniqBy(f90759);
+              const mapped = uniqByResult.map(f90760);
               const found = mapped.filter((isNonUserBot) => {
                 if (null == isNonUserBot) {
                   return false;
@@ -1674,8 +1674,8 @@ let obj = {
         const messages = MessageStore.getMessages(channelId1);
         const tmp6Result = tmp6(messages.toArray());
         const reversed = tmp6Result.reverse();
-        const uniqByResult = reversed.uniqBy(f90623);
-        const mapped = uniqByResult.map(f90624);
+        const uniqByResult = reversed.uniqBy(f90759);
+        const mapped = uniqByResult.map(f90760);
         const found = mapped.filter((isNonUserBot) => {
           if (null == isNonUserBot) {
             return false;

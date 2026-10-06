@@ -22,9 +22,9 @@ import size from "../../../../../../../_runtime/metro/00002__.js";
 let _require, dependencyMap, obj1, set, style, tmp3, token;
 
 let obj2;
-const f126636 = (text) => text.text;
+const f126797 = (text) => text.text;
 function getSuggestionsKey(arr) {
-  const mapped = arr.map(f126636);
+  const mapped = arr.map(f126797);
   return mapped.join(" ");
 }
 let closure_3 = ["text", "searchTokenType", "onPress"];
@@ -498,11 +498,11 @@ const memoResult = react.memo(
                         style: closure_7,
                         collapsable: false,
                         children: arg1.map(() => {
-                          /* body not rendered: F146606 */
+                          /* body not rendered: F146823 */
                         }),
                       };
                       obj.children = jsx(View, obj1);
-                      return jsx(f75197, obj, searchContext);
+                      return jsx(f75268, obj, searchContext);
                     }
                   }
                   cResult[15] = items2;
@@ -520,11 +520,11 @@ const memoResult = react.memo(
                       style: closure_7,
                       collapsable: false,
                       children: arg1.map(() => {
-                        /* body not rendered: F146606 */
+                        /* body not rendered: F146823 */
                       }),
                     };
                     obj.children = jsx(View, obj1);
-                    return jsx(f75197, obj, searchContext);
+                    return jsx(f75268, obj, searchContext);
                   }
                 }
                 cResult[16] = tmp21;
@@ -610,10 +610,10 @@ const memoResult = react.memo(
             return obj.subscribeSearchQueryState(
               searchContext,
               () => {
-                /* body not rendered: F146604 */
+                /* body not rendered: F146821 */
               },
               () => {
-                /* body not rendered: F146605 */
+                /* body not rendered: F146822 */
               },
             );
           }
@@ -632,12 +632,12 @@ const memoResult = react.memo(
         const containerStyle = searchContext.containerStyle;
         let tmp = closure_10();
         dependencyMap = tmp;
-        let obj = searchContext(16789);
+        let obj = searchContext(16810);
         const searchSuggestionsContext = obj.useSearchSuggestionsContext();
         const suggestionsRef = searchSuggestionsContext.suggestionsRef;
         const suggestionsMounted = searchSuggestionsContext.suggestionsMounted;
         const dismissed = searchSuggestionsContext.dismissed;
-        let obj2 = searchContext(16798);
+        let obj2 = searchContext(16819);
         const validFilterTokens = obj2.useValidFilterTokens(searchContext);
         const tmp4 = suggestionsMounted(validFilterTokens.useState([]), 2);
         const first = tmp4[0];
@@ -682,10 +682,10 @@ const memoResult = react.memo(
                       }
                     });
                     constants((arr) => {
-                      const mapped = arr.map(f126636);
+                      const mapped = arr.map(f126797);
                       let tmp2 = closure_1;
                       const joined = mapped.join(" ");
-                      const mapped1 = closure_1.map(f126636);
+                      const mapped1 = closure_1.map(f126797);
                       if (joined === mapped1.join(" ")) {
                         tmp2 = arr;
                       }
@@ -713,11 +713,11 @@ const memoResult = react.memo(
             obj.runOnJS(closure_8)(EMPTY_SEARCH_FILTER_ROWS);
           }
         };
-        const obj3 = searchContext(4612);
-        fn2.__closure = { runOnJS: searchContext(4612).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
+        const obj3 = searchContext(4618);
+        fn2.__closure = { runOnJS: searchContext(4618).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS };
         fn2.__workletHash = 4958389658939;
         fn2.__initData = __initData6;
-        ({ runOnJS: searchContext(4612).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS });
+        ({ runOnJS: searchContext(4618).runOnJS, setSuggestions: tmp4[1], EMPTY_SEARCH_FILTER_ROWS });
         const animatedReaction = obj3.useAnimatedReaction(fn, fn2);
         let items1 = [first, suggestionsMounted];
         const effect1 = validFilterTokens.useEffect(() => {
@@ -758,7 +758,7 @@ const memoResult = react.memo(
           );
         }, items4);
         const obj5 = { items: memo1, renderItem: callback, getItemKey: getSuggestionsKey };
-        return memo(searchContext(4589).TransitionGroup, obj5);
+        return memo(searchContext(4595).TransitionGroup, obj5);
       },
 );
 let result = size.fileFinishedImporting(

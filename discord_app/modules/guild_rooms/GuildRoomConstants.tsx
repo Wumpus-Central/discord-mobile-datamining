@@ -3,21 +3,21 @@ import intl4 from "../../intl/index.native.tsx";
 import _modDef2393 from "GuildRooms.messages.js";
 import GuildRoomSeats from "../../../discord_common/js/shared/shared-constants/GuildRoomSeats.tsx";
 import GuildRoomBackgrounds from "../../../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx";
-import _modDef5054 from "../../../discord_assets/assets/guild-room/guild-room-bg-1.webp.js";
-import _modDef5055 from "../../../discord_assets/assets/guild-room/test-background/Room-Partial-Posters-Blurred.webp.js";
+import _modDef5060 from "../../../discord_assets/assets/guild-room/guild-room-bg-1.webp.js";
+import _modDef5061 from "../../../discord_assets/assets/guild-room/test-background/Room-Partial-Posters-Blurred.webp.js";
 import GuildRoomBackgroundPositions from "../../../discord_common/js/shared/shared-constants/GuildRoomBackgroundPositions.tsx";
-import _modDef5057 from "../../../discord_assets/assets/guild-room/plant_dead.png.js";
-import _modDef5058 from "../../../discord_assets/assets/guild-room/plant_dying.png.js";
-import _modDef5059 from "../../../discord_assets/assets/guild-room/plant_live.png.js";
-import _modDef5060 from "../../../discord_assets/assets/guild-room/plant_vase.png.js";
-import _modDef5061 from "../../../discord_assets/assets/guild-room/test-background/Duck.png.js";
-import _modDef5062 from "../../../discord_assets/assets/guild-room/guild-room-note-pad.png.js";
-import _modDef5063 from "../../../discord_assets/assets/guild-room/guild-room-bg-2.webp.js";
-import _modDef5064 from "../../../discord_assets/assets/guild-room/plant-dead-2.png.js";
-import _modDef5065 from "../../../discord_assets/assets/guild-room/plant-dying-2.png.js";
-import _modDef5066 from "../../../discord_assets/assets/guild-room/plant-live-2.png.js";
-import _modDef5067 from "../../../discord_assets/assets/guild-room/plant-vase-2.png.js";
-import _modDef5068 from "../../../discord_assets/assets/guild-room/guild-room-duck-2.png.js";
+import _modDef5063 from "../../../discord_assets/assets/guild-room/plant_dead.png.js";
+import _modDef5064 from "../../../discord_assets/assets/guild-room/plant_dying.png.js";
+import _modDef5065 from "../../../discord_assets/assets/guild-room/plant_live.png.js";
+import _modDef5066 from "../../../discord_assets/assets/guild-room/plant_vase.png.js";
+import _modDef5067 from "../../../discord_assets/assets/guild-room/test-background/Duck.png.js";
+import _modDef5068 from "../../../discord_assets/assets/guild-room/guild-room-note-pad.png.js";
+import _modDef5069 from "../../../discord_assets/assets/guild-room/guild-room-bg-2.webp.js";
+import _modDef5070 from "../../../discord_assets/assets/guild-room/plant-dead-2.png.js";
+import _modDef5071 from "../../../discord_assets/assets/guild-room/plant-dying-2.png.js";
+import _modDef5072 from "../../../discord_assets/assets/guild-room/plant-live-2.png.js";
+import _modDef5073 from "../../../discord_assets/assets/guild-room/plant-vase-2.png.js";
+import _modDef5074 from "../../../discord_assets/assets/guild-room/guild-room-duck-2.png.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let C_LGlh, yG_xS0;
@@ -48,8 +48,8 @@ const getLabel2 = () => {
 };
 let obj = {};
 const obj2 = {
-  background: _modDef5054,
-  backgroundBlurred: _modDef5055,
+  background: _modDef5060,
+  backgroundBlurred: _modDef5061,
   aspectRatio: 1.366583541147132,
   getName() {
     const intl = intl4.intl;
@@ -57,8 +57,8 @@ const obj2 = {
   },
   seats: obj3,
   plants: items,
-  duck: { asset: _modDef5061, position: { x: 67.3, y: 45 }, width: 4.8 },
-  notePad: { asset: _modDef5062, position: { x: 81.5, y: 84.5 }, width: 4 },
+  duck: { asset: _modDef5067, position: { x: 67.3, y: 45 }, width: 4.8 },
+  notePad: { asset: _modDef5068, position: { x: 81.5, y: 84.5 }, width: 4 },
   screen: {
     topLeft: { x: 56.8, y: 16.15 },
     topRight: { x: 75.85, y: 23 },
@@ -248,19 +248,19 @@ const obj25 = {
 const SEAT_22 = GuildRoomSeats.GuildRoomSeats.SEAT_22;
 obj3[SEAT_22] = obj25;
 const point = {
-  plantDeadAsset: _modDef5057,
-  plantDyingAsset: _modDef5058,
-  plantLiveAsset: _modDef5059,
-  plantVaseAsset: _modDef5060,
+  plantDeadAsset: _modDef5063,
+  plantDyingAsset: _modDef5064,
+  plantLiveAsset: _modDef5065,
+  plantVaseAsset: _modDef5066,
   x: 45.57,
   y: 50.62,
 };
 items = [point];
-({ asset: _modDef5061, position: { x: 67.3, y: 45 }, width: 4.8 });
+({ asset: _modDef5067, position: { x: 67.3, y: 45 }, width: 4.8 });
 obj[DEFAULT] = obj2;
 const obj28 = {
-  background: _modDef5063,
-  backgroundBlurred: _modDef5055,
+  background: _modDef5069,
+  backgroundBlurred: _modDef5061,
   aspectRatio: 1.2894117647058823,
   getName() {
     const intl = intl4.intl;
@@ -268,8 +268,8 @@ const obj28 = {
   },
   seats: obj29,
   plants: items1,
-  duck: { asset: _modDef5068, position: { x: 64.6, y: 58.5 }, width: 4.8 },
-  notePad: { asset: _modDef5062, position: { x: 69, y: 78.5 }, width: 4 },
+  duck: { asset: _modDef5074, position: { x: 64.6, y: 58.5 }, width: 4.8 },
+  notePad: { asset: _modDef5068, position: { x: 69, y: 78.5 }, width: 4 },
   screen: {
     topLeft: { x: 51.85, y: 33.5 },
     topRight: { x: 69.15, y: 40.5 },
@@ -277,7 +277,7 @@ const obj28 = {
     bottomLeft: { x: 51.95, y: 49.1 },
   },
 };
-({ asset: _modDef5062, position: { x: 81.5, y: 84.5 }, width: 4 });
+({ asset: _modDef5068, position: { x: 81.5, y: 84.5 }, width: 4 });
 const LIVING_ROOM_2 = GuildRoomBackgrounds.GuildRoomBackgrounds.LIVING_ROOM_2;
 obj29 = {};
 const obj30 = {
@@ -516,17 +516,17 @@ const ytIYuY = _modDef2393.ytIYuY;
 let c1 = 4;
 obj29[SEAT_222] = obj51;
 const point1 = {
-  plantDeadAsset: _modDef5064,
-  plantDyingAsset: _modDef5065,
-  plantLiveAsset: _modDef5066,
-  plantVaseAsset: _modDef5067,
+  plantDeadAsset: _modDef5070,
+  plantDyingAsset: _modDef5071,
+  plantLiveAsset: _modDef5072,
+  plantVaseAsset: _modDef5073,
   x: 41,
   y: 46,
 };
 items1 = [point1];
-({ asset: _modDef5068, position: { x: 64.6, y: 58.5 }, width: 4.8 });
+({ asset: _modDef5074, position: { x: 64.6, y: 58.5 }, width: 4.8 });
 obj[LIVING_ROOM_2] = obj28;
-({ asset: _modDef5062, position: { x: 69, y: 78.5 }, width: 4 });
+({ asset: _modDef5068, position: { x: 69, y: 78.5 }, width: 4 });
 const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomConstants.tsx");
 
 export const DEFAULT_BACKGROUND_POSITION = { imageOffsetX: 0, imageOffsetY: 0, imageWidth: 0, imageHeight: 0 };

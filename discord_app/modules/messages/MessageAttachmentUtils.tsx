@@ -110,7 +110,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp9;
         }
       }
-      tmp(6795);
+      tmp(6805);
       if (cResult[7] === stateFromStores) {
         let tmp12;
         if (cResult[8] === setting) {
@@ -140,9 +140,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       });
       const RenderSpoilers = channel(2028).RenderSpoilers;
       const setting = RenderSpoilers.useSetting();
-      const obj2 = channel(6795);
+      const obj2 = channel(6805);
       const enabledHarmTypesBitmaskForChannelType = obj2.getEnabledHarmTypesBitmaskForChannelType(
-        channel(6800).ContentHarmTypeChannel.GUILD,
+        channel(6810).ContentHarmTypeChannel.GUILD,
       );
       return getForumPostShouldObscure(
         media,

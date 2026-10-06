@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesModal/bountyError.tsx
 import intl2 from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04807_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04813_AssetRegistry.js";
 import BountiesModalConstants from "BountiesModalConstants.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

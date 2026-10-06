@@ -987,7 +987,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         headerLeftContainerStyle: null,
         headerRightContainerStyle: null,
       };
-      const Header = title(6019).Header;
+      const Header = title(6026).Header;
       let obj3 = title(1369);
       num = 0;
       const tmp12 = title;
@@ -996,7 +996,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } =
         tmp6);
-      tmp12Result = tmp12(6010);
+      tmp12Result = tmp12(6017);
       items1 = [closure_11(Header, obj4), ,];
       let obj5 = {
         rowMode: UserRowModes.TOGGLE,

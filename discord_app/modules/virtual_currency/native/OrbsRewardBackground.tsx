@@ -1,7 +1,7 @@
 // discord_app/modules/virtual_currency/native/OrbsRewardBackground.tsx
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef10966 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
-import _modDef10967 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg.mp4.js";
+import _modDef10979 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
+import _modDef10980 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg.mp4.js";
 import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react_mod from "../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -122,7 +122,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               return closure_2(true);
             }
           }
-          tmp20[0] = _modDef10966;
+          tmp20[0] = _modDef10979;
           cResult[10] = tmp20;
         } else {
           class B {
@@ -171,8 +171,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             playInBackground: true,
             preventsDisplaySleepDuringVideoPlayback: false,
           };
-          obj5 = { uri: _modDef10967 };
-          const VideoComponent = onReady(7983).VideoComponent;
+          obj5 = { uri: _modDef10980 };
+          const VideoComponent = onReady(7993).VideoComponent;
           tmp27 = closure_7(VideoComponent, obj3);
         }
         cResult[13] = stateFromStores1 === ACTIVE;
@@ -240,7 +240,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       const Fragment = obj3.Fragment;
       const obj4 = { source: obj5, style, resizeMode: "cover", onLoad: callback };
-      obj5 = { uri: _modDef10966 };
+      obj5 = { uri: _modDef10979 };
       const tmp16 = FastImageDefault;
       const children = [closure_7(tmp16, obj4)];
       let tmp14Result = !stateFromStores && stateFromStores1 === ACTIVE;
@@ -254,8 +254,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           playInBackground: true,
           preventsDisplaySleepDuringVideoPlayback: false,
         };
-        obj7 = { uri: _modDef10967 };
-        const VideoComponent = onReady(7983).VideoComponent;
+        obj7 = { uri: _modDef10980 };
+        const VideoComponent = onReady(7993).VideoComponent;
         tmp14Result = closure_7(VideoComponent, obj6);
       }
       children[1] = tmp14Result;

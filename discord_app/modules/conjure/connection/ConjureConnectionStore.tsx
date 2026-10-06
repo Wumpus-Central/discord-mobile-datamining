@@ -825,7 +825,7 @@ function handleEvent(projectId, pendingEvents, type) {
         obj64.dispatch(obj28);
       } else {
         const intl2 = require("intl").intl;
-        sendFailedStep(projectId, intl2.string(attachment_id(3723)["913RMa"]), obj2);
+        sendFailedStep(projectId, intl2.string(attachment_id(3753)["913RMa"]), obj2);
       }
     } else if ("thinking_lifecycle" === type.kind) {
       ({ phase, session, seq, ticks, elapsed_ms, text } = type);
@@ -957,7 +957,7 @@ function handleEvent(projectId, pendingEvents, type) {
         obj51.dispatch(obj50);
       } else {
         const intl = require("intl").intl;
-        sendFailedStep(projectId, intl.string(attachment_id(3723)["0+RUWx"]), obj2);
+        sendFailedStep(projectId, intl.string(attachment_id(3753)["0+RUWx"]), obj2);
       }
     } else if ("ideas" === type.kind) {
       const tmp140 = null != type.ideas && type.ideas.length > 0;
@@ -1214,7 +1214,7 @@ function handleEvent(projectId, pendingEvents, type) {
     const promise = relayControlRequest(projectId, pendingEvents, type);
     promise.catch(() => {});
   } else if ("control_abort" === type.type) {
-    const obj20 = attachment_id(8702);
+    const obj20 = attachment_id(8737);
     obj20.abortPreviewControl(projectId);
   } else {
     if ("control_claim" !== type.type) {
@@ -1223,12 +1223,12 @@ function handleEvent(projectId, pendingEvents, type) {
           if ("begin" === type.phase) {
             const obj18 = require("conjurePreviewControlLease");
             const result2 = obj18.setConjureControlTuning(projectId, "tuning" === type.mode);
-            const obj19 = attachment_id(8702);
+            const obj19 = attachment_id(8737);
             const result3 = obj19.beginPreviewOperation(projectId);
           } else {
             const obj16 = require("conjurePreviewControlLease");
             const result4 = obj16.setConjureControlTuning(projectId, false);
-            const obj17 = attachment_id(8702);
+            const obj17 = attachment_id(8737);
             obj17.endPreviewOperation(projectId);
           }
         } else if ("live_reload" === type.type) {
@@ -1386,7 +1386,7 @@ function handleEvent(projectId, pendingEvents, type) {
     if ("capture_claim" === type.type) {
       upload_token = type.upload_token;
     }
-    const conjurePreviewClaim = resolveConjurePreviewClaim(id, upload_token);
+    const conjurePreviewClaim = resolveConjurePreviewClaim(projectId, id, upload_token);
   }
 }
 obj = function _openWithFreshTicket() {
@@ -3453,7 +3453,7 @@ obj = function _fetchProjectMcpConnection() {
             expiresAtMs = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {
@@ -3938,7 +3938,7 @@ obj = function _getAttachmentUrl() {
             uRLSearchParams = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {

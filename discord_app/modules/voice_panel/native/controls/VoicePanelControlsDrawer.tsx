@@ -3,7 +3,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import react3 from "../../../../../_runtime/05738_react.js";
+import react3 from "../../../../../_runtime/05745_react.js";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import VoicePanelChatViewDefault from "VoicePanelChatView.tsx";

@@ -109,7 +109,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp16 = cResult[15];
               }
               if (cResult[16] !== user) {
-                const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "r" };
+                const obj4 = { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" };
                 const Avatar = native.Avatar;
                 const tmp19 = _false(Avatar, obj4);
                 cResult[16] = user;
@@ -262,7 +262,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items1 = [_false(Text, obj4)];
       const obj5 = { style: items2, children: items3 };
       items2 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
-      const obj6 = { size: native.AvatarSizes.LARGE_48, user, guildId: "r" };
+      const obj6 = { size: native.AvatarSizes.LARGE_48, user, guildId: "Array" };
       const Avatar = native.Avatar;
       items3 = [_false(Avatar, obj6)];
       let tmp8Result = null != user.globalName;

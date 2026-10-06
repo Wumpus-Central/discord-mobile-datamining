@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import utils_UploadUtils from "../../../utils/native/UploadUtils.tsx";
 import AttachmentPreviewDefault from "../../media/native/AttachmentPreview.tsx";
 import react from "../../../../_runtime/00019_react.js";

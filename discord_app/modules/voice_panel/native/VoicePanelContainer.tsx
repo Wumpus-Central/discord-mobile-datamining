@@ -1,7 +1,7 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
-import _slicedToArray from "../../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/04498__slicedToArray.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import VoicePanelUIDefault from "VoicePanelUI.tsx";
 import VoicePanelControllerDefault from "VoicePanelController.tsx";

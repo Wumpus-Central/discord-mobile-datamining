@@ -58,7 +58,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp4.text) {
         const obj2 = { style: text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: tmp6 };
-        const tmp10 = closure_3(channel(4886).Text, obj2);
+        const tmp10 = closure_3(channel(4892).Text, obj2);
         cResult[3] = tmp4.text;
         cResult[4] = tmp10;
         tmp8 = tmp10;
@@ -75,7 +75,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp5) {
         const obj3 = { onPress: tmp5, text: tmp11, size: "sm", variant: "secondary", grow: true };
-        const tmp15 = closure_3(channel(5594).Button, obj3);
+        const tmp15 = closure_3(channel(5601).Button, obj3);
         cResult[6] = tmp5;
         cResult[7] = tmp15;
         tmp13 = tmp15;
@@ -113,7 +113,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl.string(channel(1126).t.Hl0Mqh),
       };
-      const Text = channel(4886).Text;
+      const Text = channel(4892).Text;
       intl = channel(1126).intl;
       items = [closure_3(Text, obj2)];
       const obj3 = {
@@ -130,7 +130,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "secondary",
         grow: true,
       };
-      const Button = channel(5594).Button;
+      const Button = channel(5601).Button;
       intl2 = channel(1126).intl;
       items[1] = closure_3(Button, obj3);
       return closure_4(View, obj);

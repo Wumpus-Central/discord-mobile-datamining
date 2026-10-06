@@ -50,7 +50,7 @@ const memoResult = react.memo((index) => {
     items = [userId];
     obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
-      const promise = asyncRequire(7850, dependencyMap.paths);
+      const promise = asyncRequire(7861, dependencyMap.paths);
       promise.then((result) => {
         const obj = { userId: localUser.id, localUser, sourceAnalyticsLocations };
         return result.default(obj);

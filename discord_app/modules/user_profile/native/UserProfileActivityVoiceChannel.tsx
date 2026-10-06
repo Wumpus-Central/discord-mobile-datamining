@@ -179,7 +179,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
           return tmp(obj);
         },
       };
-      obj.openLazy(asyncRequire(12849, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj2, "stack");
+      obj.openLazy(asyncRequire(12868, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj2, "stack");
     },
     children: tmp13(AvatarPile, obj17),
   };

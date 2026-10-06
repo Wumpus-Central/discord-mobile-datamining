@@ -28,7 +28,7 @@ const memoResult = memo(
         const participants = channel.participants;
         const row = channel.row;
         const tmp4 = closure_5();
-        const obj2 = channel(5912);
+        const obj2 = channel(5919);
         const isScreenLandscape = obj2.useIsScreenLandscape();
         let num = 3;
         if (0 === row) {
@@ -37,11 +37,11 @@ const memoResult = memo(
         if (cResult[0] !== num) {
           let THIRD;
           if (1 === num) {
-            THIRD = tmp(9731).StageTileSize.FULL;
+            THIRD = tmp(9744).StageTileSize.FULL;
           } else if (2 === num) {
-            THIRD = tmp(9731).StageTileSize.HALF;
+            THIRD = tmp(9744).StageTileSize.HALF;
           } else {
-            THIRD = tmp(9731).StageTileSize.THIRD;
+            THIRD = tmp(9744).StageTileSize.THIRD;
           }
           cResult[0] = num;
           cResult[1] = THIRD;

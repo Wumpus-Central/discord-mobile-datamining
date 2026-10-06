@@ -16,7 +16,7 @@ let result = size.fileFinishedImporting("modules/guilds_bar/GuildMediaStateShado
 export const compareGuildMediaState = function compareGuildMediaState(guildId, fromHook, stateFromStores) {
   let obj12;
   let obj6;
-  const f123763 = (item) => {
+  const f123941 = (item) => {
     let flag = closure_0[item];
     if (flag == null) {
       flag = false;
@@ -29,11 +29,11 @@ export const compareGuildMediaState = function compareGuildMediaState(guildId, f
   };
   let closure_0 = fromHook;
   let guildMediaState = stateFromStores;
-  const found = closure_5.filter(f123763);
+  const found = closure_5.filter(f123941);
   if (0 !== found.length) {
     closure_0 = fromHook;
     guildMediaState = GuildMediaStateStore.getGuildMediaState(guildId);
-    const length = closure_5.filter(f123763).length;
+    const length = closure_5.filter(f123941).length;
     const obj8 = LastFewActionsAll;
     let str = obj8.last();
     if (str == null) {

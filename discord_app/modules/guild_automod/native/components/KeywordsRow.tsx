@@ -35,7 +35,7 @@ export default function KeywordsRow(label) {
       const openLazy = ActionSheetActionCreatorsDefault.openLazy;
       const obj = { title: label, description: importDefault, keywords, onSave };
       ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequire(17699, dependencyMap.paths);
+      const tmp2 = asyncRequire(17745, dependencyMap.paths);
       if ("regex" === dependencyMap) {
         obj3 = { type: dependencyMap };
         const obj2 = { type: dependencyMap };
@@ -46,8 +46,8 @@ export default function KeywordsRow(label) {
       openLazy(tmp2, "AutomodKeywords", obj);
     },
   };
-  const TableRow = label(5993).TableRow;
-  Text = label(4886).Text;
+  const TableRow = label(6000).TableRow;
+  Text = label(4892).Text;
   if (keywords.length > 0) {
     const _String = String;
     StringResult = String(keywords.length);

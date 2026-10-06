@@ -189,7 +189,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_0;
       let initialStack;
       let screens;
-      const f109815 = () => {
+      const f109968 = () => {
         let obj2;
         const obj = { name: GuildDirectoryCreate.CREATE_OR_ADD, params: obj2 };
         obj2 = {};
@@ -199,8 +199,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return obj3;
       };
       _require = arg0;
-      ({ screens, initialStack } = useInitialValueDefault(f109815));
-      useInitialValueDefault(f109815);
+      ({ screens, initialStack } = useInitialValueDefault(f109968));
+      useInitialValueDefault(f109968);
       const Navigator = require("Navigator").Navigator;
       const intl = require("intl").intl;
       return (

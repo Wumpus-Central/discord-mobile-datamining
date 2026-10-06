@@ -15,6 +15,6 @@ export default function openPremiumUpsellActionSheet(
 ) {
   const obj = ActionSheetActionCreatorsDefault;
   const obj2 = { featureName, subfeatureName, analyticsLocations, onDismiss, appEntryKey };
-  obj.openLazy(asyncRequire(7481, dependencyMap.paths), PremiumUpsellActionSheetKey, obj2);
+  obj.openLazy(asyncRequire(7492, dependencyMap.paths), PremiumUpsellActionSheetKey, obj2);
 }
 export const PREMIUM_UPSELL_ACTION_SHEET_KEY = "PremiumUpsellActionSheetKey";

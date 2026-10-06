@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import intl6 from "../../../../intl/index.native.tsx";
 import EnhancedRoleColorUtils from "../../enhanced_role_colors/EnhancedRoleColorUtils.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -12,7 +12,7 @@ import BottomSheetTitleHeader2 from "../../../../design/components/Sheet/native/
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import _modDef13135 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef13154 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import GuildSettingsRoleConstants from "../../../guild_settings/roles/GuildSettingsRoleConstants.tsx";
 import GuildSettingsRolesStore from "../../../guild_settings/roles/GuildSettingsRolesStore.tsx";
 import EnhancedRoleColorConstants from "../constants/EnhancedRoleColorConstants.tsx";
@@ -138,9 +138,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       roleStyle = roleStyle.roleStyle;
       const onStyleChanged = roleStyle.onStyleChanged;
       ({ guildId, role } = roleStyle);
-      const tmp5 = closure_11(onStyleChanged(4791)());
+      const tmp5 = closure_11(onStyleChanged(4797)());
       dependencyMap = tmp5;
-      let obj2 = roleStyle(5793);
+      let obj2 = roleStyle(5800);
       const hasEnhancedRoleColorsForRole = obj2.useHasEnhancedRoleColorsForRole(guildId, role);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let intl = tmp(1126).intl;
@@ -150,12 +150,12 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmpResult = tmp(17800);
+      const tmpResult = tmp(17846);
       const guildSettingsRoleExampleMessage = tmpResult.useGuildSettingsRoleExampleMessage(first);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const self = this;
         const self2 = this;
-        const tmp11 = new onStyleChanged(7591)();
+        const tmp11 = new onStyleChanged(7602)();
         cResult[1] = tmp11;
         tmp10 = tmp11;
       } else {
@@ -164,7 +164,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const rowGenerator = tmp10;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         let obj3 = { title: intl2.string(tmp(1126).t["9wVJRB"]) };
-        const BottomSheetTitleHeader = tmp(6644).BottomSheetTitleHeader;
+        const BottomSheetTitleHeader = tmp(6651).BottomSheetTitleHeader;
         intl2 = tmp(1126).intl;
         const tmp15 = closure_9(BottomSheetTitleHeader, obj3);
         cResult[2] = tmp15;
@@ -207,7 +207,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             const obj4 = { header: tmp13, children: closure_10(guildSettingsRoleExampleMessage, obj5) };
                             obj5 = { style: tmp16, children: items };
                             items = [tmp20, tmp24];
-                            BottomSheet = tmp(6645).BottomSheet;
+                            BottomSheet = tmp(6652).BottomSheet;
                             const tmp34 = closure_9(BottomSheet, obj4);
                             cResult[20] = tmp5.container;
                             cResult[21] = tmp20;
@@ -224,15 +224,15 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             variant: "text-sm/semibold",
                             children: format(VpEDJc, obj8),
                           };
-                          let Text = tmp(4886).Text;
+                          let Text = tmp(4892).Text;
                           const intl3 = tmp(1126).intl;
                           format = intl3.format;
                           obj8 = { magical: closure_9(Text2, obj9) };
-                          VpEDJc = tmp4(2525).VpEDJc;
+                          VpEDJc = tmp4(2553).VpEDJc;
                           obj9 = {
                             gradientColors: items1,
                             variant: "text-sm/semibold",
-                            children: intl4.string(onStyleChanged(2525)["+/IHLl"]),
+                            children: intl4.string(onStyleChanged(2553)["+/IHLl"]),
                           };
                           items1 = [, ,];
                           ({
@@ -240,15 +240,15 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             secondary_color: arr[1],
                             tertiary_color: arr[2],
                           } = HOLOGRAPHIC_ROLE_COLORS);
-                          Text2 = tmp(4886).Text;
+                          Text2 = tmp(4892).Text;
                           intl4 = tmp(1126).intl;
                           items2 = [closure_9(Text, obj7)];
                           const obj10 = {
                             style: tmp5.upsellText,
                             variant: "text-sm/normal",
-                            children: intl5.string(onStyleChanged(2525).FJZeZF),
+                            children: intl5.string(onStyleChanged(2553).FJZeZF),
                           };
-                          const Text3 = tmp(4886).Text;
+                          const Text3 = tmp(4892).Text;
                           intl5 = tmp(1126).intl;
                           items2[1] = closure_9(Text3, obj10);
                           tmp25 = closure_10(guildSettingsRoleExampleMessage, obj6);
@@ -304,7 +304,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = enhanced_role_colors_EnhancedRoleColorUtils;
             message.roleColors = obj2.processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = _modDef13135;
+            message.message.avatarURL = _modDef13154;
           },
         };
         items1 = [closure_1_9(onStyleChanged(button[17]), obj2)];
@@ -396,7 +396,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj2 = enhanced_role_colors_EnhancedRoleColorUtils;
               message.roleColors = obj2.processColorStrings(result);
               message.message.shouldShowRoleOnName = true;
-              message.message.avatarURL = _modDef13135;
+              message.message.avatarURL = _modDef13154;
             },
           };
           items1 = [closure_1_9(require("ChatItem"), obj2)];
@@ -416,14 +416,14 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = intl6.intl;
         format = intl3.format;
         obj8 = { magical: closure_9(Text2, obj9) };
-        VpEDJc = _modDef2525.VpEDJc;
-        obj9 = { gradientColors: items1, variant: "text-sm/semibold", children: intl4.string(_modDef2525["+/IHLl"]) };
+        VpEDJc = _modDef2553.VpEDJc;
+        obj9 = { gradientColors: items1, variant: "text-sm/semibold", children: intl4.string(_modDef2553["+/IHLl"]) };
         items1 = [, ,];
         ({ primary_color: arr2[0], secondary_color: arr2[1], tertiary_color: arr2[2] } = HOLOGRAPHIC_ROLE_COLORS);
         Text2 = Text_Text.Text;
         intl4 = intl6.intl;
         items2 = [closure_9(Text, obj7)];
-        const obj10 = { style: tmp3.upsellText, variant: "text-sm/normal", children: intl5.string(_modDef2525.FJZeZF) };
+        const obj10 = { style: tmp3.upsellText, variant: "text-sm/normal", children: intl5.string(_modDef2553.FJZeZF) };
         const Text3 = Text_Text.Text;
         intl5 = intl6.intl;
         items2[1] = closure_9(Text3, obj10);

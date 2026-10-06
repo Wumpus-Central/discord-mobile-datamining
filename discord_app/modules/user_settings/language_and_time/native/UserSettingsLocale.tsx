@@ -149,7 +149,7 @@ const memoResult = react.memo(
           cResult[9] = tmp16;
           tmp13 = tmp16;
         }
-        const SafeAreaPaddingView = tmp(6619).SafeAreaPaddingView;
+        const SafeAreaPaddingView = tmp(6626).SafeAreaPaddingView;
         const tmp12 = <SafeAreaPaddingView bottom>{null}</SafeAreaPaddingView>;
         cResult[4] = stateFromStores;
         cResult[5] = tmp9;

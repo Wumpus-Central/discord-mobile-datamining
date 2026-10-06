@@ -6,7 +6,7 @@ import v1 from "../../../../../_runtime/01266_v1.js";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import ClipView from "../../../components/Icon/native/ClipView.tsx";
 import ChannelAnimationConstants from "../../../../modules/main_tabs_v2/native/shared_components/guild_channels/ChannelAnimationConstants.tsx";
 import getChannelIcon from "../../../../modules/channel/getChannelIcon.tsx";
@@ -348,7 +348,7 @@ function CutoutAvatarImage(arg0) {
         tmp18 = metroImportDefault;
       }
       const obj11 = { style, children: metroImportAll(tmp17Result, size12) };
-      tmp17Result = tmp17(8136);
+      tmp17Result = tmp17(8169);
       const Defs = inlineStyles.Defs;
       const size9 = { width: size, height: size, id: v4Result1, children: items2 };
       const Mask = inlineStyles.Mask;
@@ -613,7 +613,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = cutout;
       cutout = cutout.cutout;
       ({ source, style, imageStyle } = cutout);
-      obj2 = cutout(4612);
+      obj2 = cutout(4618);
       const fn = function i() {
         let items;
         let point;
@@ -658,13 +658,13 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       fn.__closure = {
         cutout,
-        CutoutShape: cutout(8469).CutoutShape,
-        withSpring: cutout(5597).withSpring,
+        CutoutShape: cutout(8502).CutoutShape,
+        withSpring: cutout(5604).withSpring,
         CHANNEL_SPRING_CONFIG,
       };
       fn.__workletHash = 12529564164821;
       fn.__initData = __initData;
-      ({ cutout, CutoutShape: cutout(8469).CutoutShape, withSpring: cutout(5597).withSpring, CHANNEL_SPRING_CONFIG });
+      ({ cutout, CutoutShape: cutout(8502).CutoutShape, withSpring: cutout(5604).withSpring, CHANNEL_SPRING_CONFIG });
       const animatedProps = obj2.useAnimatedProps(fn);
       if (cResult[0] !== source) {
         const tmp7 = getReactNativeSVGImageSourceDefault(source);
@@ -697,7 +697,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { style, animatedProps, children: tmp10 };
-        const tmp14 = closure_7(tmp(8469).ClipViewAnimated, obj4);
+        const tmp14 = closure_7(tmp(8502).ClipViewAnimated, obj4);
         cResult[7] = animatedProps;
         cResult[8] = style;
         cResult[9] = tmp10;
@@ -718,7 +718,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       let style;
       cutout = cutout.cutout;
       ({ source, style, imageStyle } = cutout);
-      let obj = cutout(4612);
+      let obj = cutout(4618);
       const fn = function n() {
         let items;
         let point;
@@ -763,8 +763,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj2 = {
         cutout,
-        CutoutShape: cutout(8469).CutoutShape,
-        withSpring: cutout(5597).withSpring,
+        CutoutShape: cutout(8502).CutoutShape,
+        withSpring: cutout(5604).withSpring,
         CHANNEL_SPRING_CONFIG,
       };
       fn.__closure = obj2;
@@ -773,7 +773,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedProps = obj.useAnimatedProps(fn);
       const obj3 = { style, animatedProps, children: closure_7(FastImageDefault, obj4) };
       const tmp2 = getReactNativeSVGImageSourceDefault(source);
-      const ClipViewAnimated = cutout(8469).ClipViewAnimated;
+      const ClipViewAnimated = cutout(8502).ClipViewAnimated;
       obj4 = { style: items, source: tmp2, usesSmallCache: true };
       items = [obj2.image, imageStyle];
       return closure_7(ClipViewAnimated, obj3);

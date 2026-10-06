@@ -16,13 +16,13 @@ const hasOwnProperty = new LRUCacheDefault({ max: 500 });
 new LRUCacheDefault({ max: 500 });
 const Store = get_initializedDefault.Store;
 class GameAutocompleteStore extends Store {
-  getResults(query) {
+  getResults(name) {
     let DEFAULT = arg1;
     if (arg1 === undefined) {
       DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
     }
     const obj = GameAutocompleteUtils;
-    const result = obj.normalizeGameAutocompleteQuery(query);
+    const result = obj.normalizeGameAutocompleteQuery(name);
     let peekResult;
     if (null != result) {
       const _HermesInternal = HermesInternal;
@@ -40,22 +40,23 @@ class GameAutocompleteStore extends Store {
     if (null != result) {
       let length = result.length;
       if (length >= 1) {
+        const substr = result.slice(0, length);
         const _HermesInternal = HermesInternal;
-        const peekResult = navigation.peek("" + DEFAULT + ":" + result.slice(0, length));
+        const peekResult = navigation.peek("" + DEFAULT + ":" + substr);
         while (null == peekResult) {
           length = length - 1;
         }
-        return peekResult;
+        return { query: substr, results: peekResult };
       }
     }
   }
-  shouldSuppressFetch(query) {
+  shouldSuppressFetch(name) {
     let DEFAULT;
     if (DEFAULT === undefined) {
-      DEFAULT = DEFAULT(5893).GameAutocompleteProfile.DEFAULT;
+      DEFAULT = DEFAULT(5900).GameAutocompleteProfile.DEFAULT;
     }
-    const obj = DEFAULT(5894);
-    const result = obj.normalizeGameAutocompleteQuery(query);
+    const obj = DEFAULT(5901);
+    const result = obj.normalizeGameAutocompleteQuery(name);
     const tmp3 = DEFAULT;
     if (null == result) {
       return false;
@@ -65,7 +66,7 @@ class GameAutocompleteStore extends Store {
       const hasItem = navigation.has(combined);
       let result1 = !hasItem && !set.has(combined);
       if (result1) {
-        const tmp3Result = tmp3(5894);
+        const tmp3Result = tmp3(5901);
         result1 = tmp3Result.shouldSuppressAutocompleteFetch(result, (arg0) =>
           navigation.peek("" + DEFAULT + ":" + arg0),
         );
@@ -73,13 +74,13 @@ class GameAutocompleteStore extends Store {
       return result1;
     }
   }
-  isFetching(query) {
+  isFetching(name) {
     let DEFAULT = arg1;
     if (arg1 === undefined) {
       DEFAULT = GameAutocompleteTypes.GameAutocompleteProfile.DEFAULT;
     }
     const obj = GameAutocompleteUtils;
-    const result = obj.normalizeGameAutocompleteQuery(query);
+    const result = obj.normalizeGameAutocompleteQuery(name);
     let hasItem = null != result;
     if (hasItem) {
       const _HermesInternal = HermesInternal;

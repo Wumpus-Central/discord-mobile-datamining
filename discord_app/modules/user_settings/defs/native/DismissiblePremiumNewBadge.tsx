@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import ConstantsIOS from "../../../../ConstantsIOS.tsx";
 import native from "../../../../design/void/native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import ColorConstants from "../../../colors/native/ColorConstants.tsx";
 import SelectedDismissibleContentDefault from "../../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import react from "../../../../../_runtime/00019_react.js";

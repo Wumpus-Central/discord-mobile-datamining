@@ -17,10 +17,10 @@ import ActionSheetHeaderBar from "../../../design/components/Sheet/native/Action
 import PremiumPlanActionSheetHeaderDefault from "../../premium/native/PremiumPlanActionSheetHeader.tsx";
 import utils_CollectiblesUtils from "../utils/CollectiblesUtils.tsx";
 import FractionalNitroCoinIllustration2 from "FractionalNitroCoinIllustration.tsx";
-import AssetRegistryDefault from "../../../../_runtime/10455_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/10456_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/10468_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/10469_AssetRegistry.js";
 import CircleQuestionIcon2 from "../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
-import AssetRegistryDefault3 from "../../../../_runtime/12995_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/13014_AssetRegistry.js";
 import react_mod from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import PremiumConstants from "../../premium/PremiumConstants.tsx";
@@ -483,9 +483,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       ({ onPressExplorePerks, onPressViewCredits } = skuId);
       const tmp = closure_12();
       dependencyMap = tmp;
-      const tmp4 = consumed(4791)();
+      const tmp4 = consumed(4797)();
       react = tmp4;
-      let obj = skuId(7097);
+      let obj = skuId(7110);
       const fetchFractionalPremiumInfo = obj.useFetchFractionalPremiumInfo();
       const isFractionalPremiumActive = fetchFractionalPremiumInfo.isFractionalPremiumActive;
       const expiresAt = fetchFractionalPremiumInfo.expiresAt;
@@ -557,10 +557,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = consumed(description[20]);
         obj2.openURL(articleURL);
       }, []);
-      BottomSheet = skuId(6645).BottomSheet;
+      BottomSheet = skuId(6652).BottomSheet;
       if (consumed) {
         let obj2 = { premiumType: TIER_2.TIER_2 };
-        tmp12Result = closure_9(tmp2(6937), obj2);
+        tmp12Result = closure_9(tmp2(6950), obj2);
         tmp15 = closure_9;
       } else {
         let obj3 = { skuId };
@@ -570,9 +570,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { children: items2 };
       items2 = [tmp12Result];
       const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: tmp15(CircleQuestionIcon, obj6) };
-      const PressableOpacity = tmp5(5909).PressableOpacity;
+      const PressableOpacity = tmp5(5916).PressableOpacity;
       obj6 = { style: tmp.questionIcon, color: consumed(587).colors.WHITE };
-      CircleQuestionIcon = tmp5(11015).CircleQuestionIcon;
+      CircleQuestionIcon = tmp5(11028).CircleQuestionIcon;
       items2[1] = tmp15(PressableOpacity, obj5);
       const items3 = [closure_10(closure_11, obj4), ,];
       const obj7 = { style: tmp.body, children: tmp10Result };
@@ -584,7 +584,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         items4 = [memo, memo1];
         const obj10 = { size: "lg", text: null, onPress: null };
         const obj9 = { style: tmp.buttonContainer, children: items5 };
-        const Button = tmp5(5594).Button;
+        const Button = tmp5(5601).Button;
         let intl = tmp5(1126).intl;
         const string = intl.string;
         const t = tmp5(1126).t;
@@ -607,7 +607,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             return obj.hideActionSheet();
           },
         };
-        const Button2 = tmp5(5594).Button;
+        const Button2 = tmp5(5601).Button;
         intl2 = tmp5(1126).intl;
         items5[1] = tmp15(Button2, obj11);
         items4[2] = closure_10(expiresAt, obj9);
@@ -615,7 +615,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj12 = { handleDisabled: true, children: items3 };
       items3[1] = tmp15(expiresAt, obj7);
-      items3[2] = tmp15(skuId(6649).ActionSheetHeaderBar, { variant: "floating" });
+      items3[2] = tmp15(skuId(6656).ActionSheetHeaderBar, { variant: "floating" });
       return closure_10(BottomSheet, obj12);
     };
 size = size_mod;

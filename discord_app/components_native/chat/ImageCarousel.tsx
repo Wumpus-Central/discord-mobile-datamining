@@ -8,7 +8,7 @@ import ReanimatedRexportDefault from "../../modules/reanimated/ReanimatedRexport
 import timing from "../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../design/animation/reanimated/spring/spring.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
-import AssetRegistryDefault from "../../../_runtime/06427_AssetRegistry.js";
+import AssetRegistryDefault from "../../../_runtime/06434_AssetRegistry.js";
 import DraftStore from "../../stores/DraftStore.tsx";
 import Upload from "../../lib/uploader/Upload.tsx";
 import UploadAttachmentActionCreatorsDefault from "../../actions/UploadAttachmentActionCreators.tsx";
@@ -136,7 +136,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = sharedValue;
       let obj = sharedValue(576);
       const cResult = obj.c(5);
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       sharedValue = obj2.useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function o() {
@@ -177,13 +177,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         };
         let obj3 = {
-          withTiming: tmp(4891).withTiming,
+          withTiming: tmp(4897).withTiming,
           animatedStylePropValue: sharedValue,
           STANDARD_EASING: tmp(1188).STANDARD_EASING,
-          withSpring: tmp(5597).withSpring,
+          withSpring: tmp(5604).withSpring,
         };
-        const useAnimatedStyle = tmp(4612).useAnimatedStyle;
-        tmp(4612);
+        const useAnimatedStyle = tmp(4618).useAnimatedStyle;
+        tmp(4618);
         fn2.__closure = obj3;
         fn2.__workletHash = 14689938623095;
         fn2.__initData = __initData;
@@ -197,13 +197,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0) => {
       let sharedValue;
-      let obj = sharedValue(4612);
+      let obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(0);
       let items = [sharedValue, arg0];
       const effect = react.useEffect(() => {
         const result = sharedValue.set(1);
       }, items);
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       const fn = function o() {
         let items;
         let obj2;
@@ -227,10 +227,10 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       let obj3 = {
-        withTiming: sharedValue(4891).withTiming,
+        withTiming: sharedValue(4897).withTiming,
         animatedStylePropValue: sharedValue,
         STANDARD_EASING: sharedValue(1188).STANDARD_EASING,
-        withSpring: sharedValue(5597).withSpring,
+        withSpring: sharedValue(5604).withSpring,
       };
       fn.__closure = obj3;
       fn.__workletHash = 1893609222612;

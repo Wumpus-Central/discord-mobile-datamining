@@ -13,7 +13,7 @@ import Pressables from "../../../../../design/void/Pressables/native/Pressables.
 import ManaTypeConsolidationExperiment from "../../../../design/ManaTypeConsolidationExperiment.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/13112_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/13131_AssetRegistry.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
@@ -481,7 +481,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         style: tmp4.channelIcon,
-        autoStatusCutout: null,
+        autoStatusCutout: false,
       };
       const Avatar = native.Avatar;
       const tmp7 = metroImportAll(Avatar, obj2);
@@ -510,7 +510,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         isMobileOnline,
         isVROnline,
         style: tmp.channelIcon,
-        autoStatusCutout: null,
+        autoStatusCutout: false,
       };
       tmp = closure_11();
       const Avatar = native.Avatar;

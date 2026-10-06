@@ -316,7 +316,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         yield "IconComponent";
         isGift = tmp4;
         ({ orderLineItems: c0, subscriptionFacet: c1 } = orderLineItems);
-        return "Set";
+        return "Reflect";
       });
       let items = [paymentGateway, onOrderCreated, isGift, mobileStoreFront, initialExternalGatewayFacet];
       callback = useCallback(function () {
@@ -886,7 +886,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         analyticsInitialStep: closure_7,
       } = children);
       children = children.children;
-      const contextMetadata = order(5984)(() => {
+      const contextMetadata = order(5991)(() => {
         let id;
         if (order != null) {
           id = order.id;
@@ -901,7 +901,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { loadId: id, startTime: Date.now() };
         return obj4;
       });
-      redux = order(5984)(() => {
+      redux = order(5991)(() => {
         const obj = { load_id: contextMetadata.loadId, payment_gateway };
         const merged = Object.assign(View);
         return obj;
@@ -922,7 +922,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }),
         1,
       )[0];
-      const tmp2 = order(5590)(() => {
+      const tmp2 = order(5597)(() => {
         if (null != View) {
           let obj = PaymentFlowStartedTriggerPoint;
           const result = obj.trackPaymentFlowStartedAnalyticsAndCTP(analyticsFields);

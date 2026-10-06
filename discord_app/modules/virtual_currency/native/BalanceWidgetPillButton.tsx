@@ -3,7 +3,7 @@ import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import intl2 from "../../../intl/index.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/08492_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/08525_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

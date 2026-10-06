@@ -4,192 +4,24 @@ import react_native from "../../../../_runtime/00017_react-native.js";
 import Constants from "../../../Constants.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
-import ClearChannelNotificationsOnAppForegroundExperiment from "ClearChannelNotificationsOnAppForegroundExperiment.tsx";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import GuildReadStateStore from "../../../stores/GuildReadStateStore.tsx";
-import ReadStateStore from "../../../stores/ReadStateStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-let c1, c2, c4, c5, closure_12, closure_3, constants, map;
+let c4, c5, c8, closure_0, closure_12, closure_3, map;
 
-function getDeliveredNotifications() {
-  return obj(...arguments);
-}
-let obj = function _getDeliveredNotifications() {
-  obj = _asyncToGenerator(async () => {
-    let obj3;
-    if (c2 === 2) {
-      c2 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        const obj4 = { value, done: true };
-        return obj4;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj5 = { value, done: true };
-            return obj5;
-          } else {
-            let closure_0 = tmp;
-            const obj2 = ClearChannelNotificationsOnAppForegroundExperiment;
-            if (obj2.shouldClearChannelNotificationsOnAppForeground({ location: "getDeliveredNotifications" })) {
-              c1 = 1;
-              c2 = 1;
-              const obj6 = { value: obj3.getDeliveredNotifications(), done: false };
-              obj3 = PushNotificationDefault;
-              return obj6;
-            }
-          }
-        } else if (arg0 === 1) {
-          c2 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c2 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          closure_9 = value;
-        }
-        c2 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp9) {
-        c2 = 3;
-        throw tmp9;
-      }
-    }
-  });
-  return obj(...arguments);
-};
-function updateAndClearStaleNotifications() {
-  return obj(...arguments);
-}
-obj = function _updateAndClearStaleNotifications() {
-  obj = _asyncToGenerator(async () => {
-    function clearStaleNotifications() {
-      obj = closure_1_0(closure_1_2[6]);
-      if (obj.shouldClearChannelNotificationsOnAppForeground({ location: "clearStaleNotifications" })) {
-        const found = closure_1_9.filter((userInfo) => {
-          if (null != userInfo.userInfo) {
-            if (typeof userInfo.userInfo === "object") {
-              if (typeof userInfo.userInfo.channel_id !== "string") {
-                return false;
-              } else if (typeof userInfo.userInfo.notif_instance_id !== "string") {
-                return false;
-              } else {
-                let message_id = userInfo.userInfo.notif_instance_id;
-                if ("MESSAGE_CREATE" === userInfo.userInfo.type) {
-                  if (typeof userInfo.userInfo.message_id !== "string") {
-                    return false;
-                  } else {
-                    message_id = userInfo.userInfo.message_id;
-                  }
-                } else if ("GENERIC_PUSH_NOTIFICATION_SENT" !== userInfo.userInfo.type) {
-                  return false;
-                } else if ("REACTIONS_PUSH_NOTIFICATION" !== userInfo.userInfo.notification_type) {
-                  return false;
-                }
-                if (null != message_id) {
-                  if (typeof message_id === "string") {
-                    const ackMessageIdResult = closure_1_6.ackMessageId(userInfo.userInfo.channel_id);
-                    let tmp3 = null != ackMessageIdResult;
-                    if (tmp3) {
-                      obj = closure_1_1(closure_1_2[8]);
-                      tmp3 = obj.compare(ackMessageIdResult, message_id) > 0;
-                    }
-                    return tmp3;
-                  }
-                }
-                return false;
-              }
-            }
-          }
-          return false;
-        });
-        const mapped = found.map((identifier) => identifier.identifier);
-        if (mapped.length > 0) {
-          const obj2 = closure_1_1(closure_1_2[7]);
-          const result = obj2.removeDeliveredNotifications(mapped);
-          closure_1_10();
-        }
-      }
-    }
-    if (c2 === 2) {
-      c2 = 3;
-      const str = "Generator functions may not be called on executing generators";
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp2 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      try {
-        c2 = 2;
-        let tmp3 = c1;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            const obj3 = { value, done: true };
-            return obj3;
-          } else {
-            let c0 = 0;
-            c1 = 1;
-            c2 = 1;
-            const obj4 = { value: getDeliveredNotifications(), done: false };
-            return obj4;
-          }
-        } else if (arg0 === 1) {
-          c2 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c2 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          clearStaleNotifications();
-          c2 = 3;
-          return { value: "IconComponent", done: null };
-        }
-      } catch (tmp7) {
-        c2 = 3;
-        throw tmp7;
-      }
-    }
-  });
-  return obj(...arguments);
-};
 const NativeModules = react_native.NativeModules;
 const AnalyticEvents = Constants.AnalyticEvents;
+let closure_7 = new LoggerDefault("NativeNotificationsManager");
 const tmp2 = new LoggerDefault("NativeNotificationsManager");
-let closure_8 = tmp2;
-let closure_9 = [];
 class NativeNotificationsManager extends AutomaticLifecycleManager {
   constructor() {
     let totalMentionCount;
     let applyArgumentsResult = HermesBuiltin.applyArguments(this, new.target);
     applyArgumentsResult.handleAck = function handleAck(channelId) {
       channelId = channelId.channelId;
-      obj = PlatformUtils;
+      const obj = PlatformUtils;
       if (obj.isIOS()) {
         const obj2 = PushNotificationDefault;
         const result = obj2.setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
@@ -208,8 +40,8 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
       let logger;
       let str1;
       let value;
-      if (logger === 2) {
-        logger = 3;
+      if (c8 === 2) {
+        c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
@@ -221,24 +53,25 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
           return { value: "IconComponent", done: null };
         }
       } else {
-        let tmp75;
-        let c6;
+        let tmp73;
+        let v1;
         try {
           let str3;
           let processing_notifications;
           let processing_notification_states;
-          let closure_6;
           let PUSH_NOTIFICATION_RECEIVED;
+          let closure_8;
           let moveAndReadData;
+          let obj;
           let normalizeTimestampToMs;
-          logger = 2;
-          const tmp4 = constants;
-          if (0 === constants) {
+          c8 = 2;
+          const tmp4 = logger;
+          if (0 === logger) {
             if (arg0 === 1) {
-              logger = 3;
+              c8 = 3;
               throw value;
             } else if (arg0 === 2) {
-              logger = 3;
+              c8 = 3;
               let obj4 = { value, done: true };
               return obj4;
             } else {
@@ -247,17 +80,15 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
               processing_notifications = undefined;
               processing_notification_states = undefined;
               map = undefined;
-              tmp75 = undefined;
-              closure_6 = undefined;
+              tmp73 = undefined;
+              v1 = undefined;
               PUSH_NOTIFICATION_RECEIVED = undefined;
-              logger = undefined;
-              const obj15 = applyArgumentsResult(background_str[10]);
-              if (obj15.isIOS()) {
-                updateAndClearStaleNotifications();
-              } else {
+              closure_8 = undefined;
+              const obj15 = applyArgumentsResult(background_str[6]);
+              if (!obj15.isIOS()) {
                 let result = require.handleSetCallNotificationExperiment();
               }
-              c6 = 1;
+              v1 = 1;
               moveAndReadData = function moveAndReadData() {
                 return closure_1_10(...arguments);
               };
@@ -298,7 +129,7 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
                           c4 = 1;
                           c5 = 1;
                           const obj5 = { value: obj9.removeFile(str3, closure_1), done: false };
-                          obj9 = closure_0(closure_2[11]);
+                          obj9 = closure_0(closure_2[8]);
                           return obj5;
                         }
                       } else if (1 === c4) {
@@ -313,7 +144,7 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
                           c4 = 2;
                           c5 = 1;
                           const obj8 = { value: obj6.moveFile(closure_131_0, closure_0, closure_1), done: false };
-                          obj6 = closure_0(closure_2[11]);
+                          obj6 = closure_0(closure_2[8]);
                           return obj8;
                         }
                       } else {
@@ -332,7 +163,7 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
                               c4 = 3;
                               c5 = 1;
                               const obj11 = { value: obj3.readFile(closure_131_0, closure_1, "utf8"), done: false };
-                              obj3 = closure_0(closure_2[11]);
+                              obj3 = closure_0(closure_2[8]);
                               return obj11;
                             }
                           }
@@ -372,7 +203,7 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
                   return rounded;
                 }
               };
-              let obj11 = applyArgumentsResult(background_str[10]);
+              let obj11 = applyArgumentsResult(background_str[6]);
               str3 = "cache";
               if (obj11.isIOS()) {
                 str3 = "shared";
@@ -380,45 +211,45 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
               processing_notifications = "processing_notifications";
               processing_notification_states = "processing_notification_states";
               PUSH_NOTIFICATION_RECEIVED = moveAndReadData("notifications_to_track", "processing_notifications");
-              constants = 2;
-              logger = 1;
+              logger = 2;
+              c8 = 1;
               let obj5 = { value: PUSH_NOTIFICATION_RECEIVED, done: false };
               return obj5;
             }
           } else {
             if (1 === tmp4) {
-              c6 = 0;
-              closure_12 = tmp75;
+              v1 = 0;
+              closure_12 = tmp73;
               logger.error("Error tracking push notifications", closure_12);
             } else {
               if (2 === tmp4) {
                 if (arg0 === 1) {
-                  logger = 3;
+                  c8 = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  c6 = 0;
-                  logger = 3;
+                  v1 = 0;
+                  c8 = 3;
                   let obj6 = { value, done: true };
                   return obj6;
                 } else {
                   PUSH_NOTIFICATION_RECEIVED = value;
                   if (null == PUSH_NOTIFICATION_RECEIVED) {
-                    c6 = 0;
-                    logger = 3;
+                    v1 = 0;
+                    c8 = 3;
                     return { value: "IconComponent", done: null };
                   } else {
                     const _Map = Map;
                     const self = this;
                     const self2 = this;
                     map = new Map();
-                    PUSH_NOTIFICATION_RECEIVED = applyArgumentsResult(background_str[10]);
+                    PUSH_NOTIFICATION_RECEIVED = applyArgumentsResult(background_str[6]);
                     if (PUSH_NOTIFICATION_RECEIVED.isIOS()) {
                       PUSH_NOTIFICATION_RECEIVED = moveAndReadData(
                         "notification_states_to_track",
                         processing_notification_states,
                       );
-                      constants = 3;
-                      logger = 1;
+                      logger = 3;
+                      c8 = 1;
                       let obj8 = { value: PUSH_NOTIFICATION_RECEIVED, done: false };
                       return obj8;
                     }
@@ -426,18 +257,18 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
                 }
               } else if (3 === tmp4) {
                 if (arg0 === 1) {
-                  logger = 3;
+                  c8 = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  c6 = 0;
-                  logger = 3;
+                  v1 = 0;
+                  c8 = 3;
                   let obj9 = { value, done: true };
                   return obj9;
                 } else {
-                  tmp75 = value;
-                  PUSH_NOTIFICATION_RECEIVED = tmp75;
-                  if (null !== tmp75) {
-                    const str14 = tmp75.trim();
+                  tmp73 = value;
+                  PUSH_NOTIFICATION_RECEIVED = tmp73;
+                  if (null !== tmp73) {
+                    const str14 = tmp73.trim();
                     const parts = str14.split("\n");
                     const item = parts.forEach((item) => {
                       const parsed = JSON.parse(item);
@@ -446,121 +277,121 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
                   }
                 }
               } else if (4 === tmp4) {
-                c6 = 1;
+                v1 = 1;
                 PUSH_NOTIFICATION_RECEIVED = applyArgumentsResult;
                 applyArgumentsResult.return();
-                throw tmp75;
+                throw tmp73;
               } else {
                 if (5 === tmp4) {
                   if (arg0 === 1) {
-                    logger = 3;
+                    c8 = 3;
                     throw value;
                   } else if (arg0 === 2) {
-                    c6 = 0;
-                    logger = 3;
+                    v1 = 0;
+                    c8 = 3;
                     let obj10 = { value, done: true };
                     return obj10;
                   } else {
-                    PUSH_NOTIFICATION_RECEIVED = applyArgumentsResult(background_str[10]);
+                    PUSH_NOTIFICATION_RECEIVED = applyArgumentsResult(background_str[6]);
                     if (PUSH_NOTIFICATION_RECEIVED.isIOS()) {
                       let tmp5 = PUSH_NOTIFICATION_RECEIVED;
-                      let obj2 = applyArgumentsResult(background_str[11]);
+                      let obj2 = applyArgumentsResult(background_str[8]);
                       PUSH_NOTIFICATION_RECEIVED = obj2.removeFile(str3, processing_notification_states);
-                      constants = 6;
-                      logger = 1;
+                      logger = 6;
+                      c8 = 1;
                       let obj12 = { value: PUSH_NOTIFICATION_RECEIVED, done: false };
                       return obj12;
                     }
                   }
                 } else if (arg0 === 1) {
-                  logger = 3;
+                  c8 = 3;
                   throw value;
                 } else if (arg0 === 2) {
-                  c6 = 0;
-                  logger = 3;
+                  v1 = 0;
+                  c8 = 3;
                   obj = { value, done: true };
                   return obj;
                 }
-                c6 = 0;
+                v1 = 0;
               }
               const str = PUSH_NOTIFICATION_RECEIVED.trim();
-              closure_6 = str.split("\n");
-              let closure_1 = closure_6;
-              applyArgumentsResult = closure_6[Symbol.iterator]();
+              v1 = str.split("\n");
+              let closure_1 = v1;
+              applyArgumentsResult = v1[Symbol.iterator]();
               PUSH_NOTIFICATION_RECEIVED = applyArgumentsResult.next();
               while (applyArgumentsResult !== undefined) {
-                c6 = 2;
+                v1 = 2;
                 let _JSON = JSON;
-                logger = JSON.parse(PUSH_NOTIFICATION_RECEIVED);
-                PUSH_NOTIFICATION_RECEIVED = applyArgumentsResult(background_str[10]);
+                closure_8 = JSON.parse(PUSH_NOTIFICATION_RECEIVED);
+                PUSH_NOTIFICATION_RECEIVED = applyArgumentsResult(background_str[6]);
                 let isIOSResult = PUSH_NOTIFICATION_RECEIVED.isIOS();
                 if (isIOSResult) {
-                  isIOSResult = undefined !== logger._local_uuid;
+                  isIOSResult = undefined !== closure_8._local_uuid;
                 }
                 if (isIOSResult) {
-                  PUSH_NOTIFICATION_RECEIVED = logger;
-                  let tmp24 = logger;
-                  value = map.get(logger._local_uuid);
+                  PUSH_NOTIFICATION_RECEIVED = closure_8;
+                  let tmp24 = closure_8;
+                  value = map.get(closure_8._local_uuid);
                   background_str = value;
                   if (value == null) {
                     background_str = "background";
                   }
                   PUSH_NOTIFICATION_RECEIVED.app_state = background_str;
                 }
-                let tmp31 = closure_1(background_str[12]);
-                PUSH_NOTIFICATION_RECEIVED = constants.PUSH_NOTIFICATION_RECEIVED;
+                let tmp31 = closure_1(background_str[9]);
+                PUSH_NOTIFICATION_RECEIVED = v1.PUSH_NOTIFICATION_RECEIVED;
                 let obj13 = {
-                  notification_received_timestamp: normalizeTimestampToMs(logger.timestamp),
-                  push_action_type: logger.push_action_type,
-                  notif_instance_id: logger.notif_instance_id,
-                  notif_type_id: logger.notif_type_id,
-                  join_id: logger.join_id,
-                  notif_user_id: logger.notif_user_id,
-                  receiving_user_id: logger.receiving_user_id,
-                  message_id: logger.message_id,
-                  message_type: logger.message_type,
-                  guild_id: logger.guild_id,
-                  channel_id: logger.channel_id,
+                  notification_received_timestamp: normalizeTimestampToMs(closure_8.timestamp),
+                  push_action_type: closure_8.push_action_type,
+                  notif_instance_id: closure_8.notif_instance_id,
+                  notif_type_id: closure_8.notif_type_id,
+                  join_id: closure_8.join_id,
+                  notif_user_id: closure_8.notif_user_id,
+                  receiving_user_id: closure_8.receiving_user_id,
+                  message_id: closure_8.message_id,
+                  message_type: closure_8.message_type,
+                  guild_id: closure_8.guild_id,
+                  channel_id: closure_8.channel_id,
                   channel_type: str1,
-                  rel_type: logger.rel_type,
-                  mention_type: logger.mention_type,
-                  app_state: logger.app_state,
-                  os_enabled: logger.os_enabled,
+                  rel_type: closure_8.rel_type,
+                  mention_type: closure_8.mention_type,
+                  app_state: closure_8.app_state,
+                  os_enabled: closure_8.os_enabled,
                 };
                 let track = tmp31.track;
-                let str2 = logger.channel_type;
+                let str2 = closure_8.channel_type;
                 str1 = undefined;
                 if (str2 != null) {
                   str1 = str2.toString();
                 }
                 let trackResult = track(PUSH_NOTIFICATION_RECEIVED, obj13);
-                c6 = 1;
+                v1 = 1;
                 continue;
               }
-              let obj7 = applyArgumentsResult(background_str[11]);
+              let obj7 = applyArgumentsResult(background_str[8]);
               PUSH_NOTIFICATION_RECEIVED = obj7.removeFile(str3, processing_notifications);
-              constants = 5;
-              logger = 1;
+              logger = 5;
+              c8 = 1;
               const obj14 = { value: PUSH_NOTIFICATION_RECEIVED, done: false };
               return obj14;
             }
-            logger = 3;
+            c8 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp75) {
-          if (0 === c6) {
-            logger = 3;
-            throw tmp75;
-          } else if (1 === tmp77) {
-            constants = 1;
+        } catch (tmp73) {
+          if (0 === v1) {
+            c8 = 3;
+            throw tmp73;
+          } else if (1 === tmp75) {
+            logger = 1;
           } else {
-            constants = 4;
+            logger = 4;
           }
         }
       }
     });
     applyArgumentsResult.handleSetCallNotificationExperiment = function handleSetCallNotificationExperiment() {
-      obj = PlatformUtils;
+      const obj = PlatformUtils;
       if (!obj.isIOS()) {
         const DCDNotificationManager = NativeModules.DCDNotificationManager;
         const setShowMissedCallNotifications = DCDNotificationManager.setShowMissedCallNotifications;
@@ -574,16 +405,12 @@ class NativeNotificationsManager extends AutomaticLifecycleManager {
         }
       }
     };
-    applyArgumentsResult.updateAndClearStaleNotifications = function updateAndClearStaleNotifications() {
-      updateAndClearStaleNotifications();
-    };
     applyArgumentsResult.actions = {
       MESSAGE_ACK: applyArgumentsResult.handleAck,
       CHANNEL_SELECT: applyArgumentsResult.handleAck,
       POST_CONNECTION_OPEN: applyArgumentsResult.handlePostConnectionOpen,
       EXPERIMENT_OVERRIDE_BUCKET: applyArgumentsResult.handleSetCallNotificationExperiment,
       EXPERIMENTS_FETCH_SUCCESS: applyArgumentsResult.handleSetCallNotificationExperiment,
-      APP_STATE_UPDATE: applyArgumentsResult.updateAndClearStaleNotifications,
     };
     return applyArgumentsResult;
   }

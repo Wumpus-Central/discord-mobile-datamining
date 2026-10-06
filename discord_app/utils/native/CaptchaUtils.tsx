@@ -6,7 +6,7 @@ import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import SharedCaptchaUtils from "../../modules/captcha/SharedCaptchaUtils.tsx";
 import MonitoringAgentDefault from "../../modules/monitoring/MonitoringAgent.tsx";
 import MetricEvents from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import _modDef17429 from "../../../_runtime/metro/17429__.js";
+import _modDef17458 from "../../../_runtime/metro/17458__.js";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../_runtime/00019_react.js";
 import react_native from "../../../_runtime/00017_react-native.js";
@@ -373,7 +373,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         items = ["event_name:" + "initial-load", "captcha_service:" + HCAPTCHA];
         increment(obj3);
       }, items1);
-      _modDef17429;
+      _modDef17458;
       const merged1 = Object.assign(merged);
       return (
         <tmp5

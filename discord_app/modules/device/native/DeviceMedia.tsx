@@ -104,7 +104,7 @@ let obj = {
                     obj3.track(constants.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj2);
                   }
           };
-          lastAssetIndex(10376)(obj2);
+          lastAssetIndex(10389)(obj2);
         }
       }
     }

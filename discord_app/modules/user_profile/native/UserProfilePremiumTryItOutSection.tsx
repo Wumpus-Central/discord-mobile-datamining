@@ -113,7 +113,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] !== tmp4.lockIcon) {
         const obj4 = { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp4.lockIcon };
-        const LockIcon = tmp(5879).LockIcon;
+        const LockIcon = tmp(5886).LockIcon;
         const tmp18 = closure_5(LockIcon, obj4);
         cResult[7] = tmp4.lockIcon;
         cResult[8] = tmp18;
@@ -220,7 +220,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items1[0] = closure_5(View, obj3);
       const obj4 = { style: tmp.lockCircle, children: closure_5(LockIcon, obj5) };
       obj5 = { size: "xs", color: nativeDefault.colors.ICON_MUTED, style: tmp.lockIcon };
-      LockIcon = analyticsLocations(5879).LockIcon;
+      LockIcon = analyticsLocations(5886).LockIcon;
       items1[1] = closure_5(View, obj4);
       return closure_5(tmp4, obj);
     };

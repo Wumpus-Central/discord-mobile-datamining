@@ -385,15 +385,15 @@ let subscriptions = {
   },
   GUILD_SUBSCRIPTIONS_CHANNEL: function handleChannel(arg0) {
     let channelId;
-    let flag;
+    let flag3;
     let guildId;
     let ranges;
     ({ guildId, channelId, ranges } = arg0);
     if (channelId === EVERYONE_CHANNEL_ID) {
-      flag = closure_20.subscribeChannel(guildId, channelId, ranges);
+      flag3 = closure_20.subscribeChannel(guildId, channelId, ranges, false);
     } else {
       const channel = ChannelStore.getChannel(channelId);
-      flag = false;
+      flag3 = false;
       if (null != channel) {
         let subscribeChannelResult1;
         const guildId1 = channel.getGuildId();
@@ -412,7 +412,7 @@ let subscriptions = {
         if (isThreadResult) {
           let subscribeChannelResult;
           if (channel.type === constants.ANNOUNCEMENT_THREAD) {
-            subscribeChannelResult = closure_20.subscribeChannel(guildId1, channel.parent_id, ranges);
+            subscribeChannelResult = closure_20.subscribeChannel(guildId1, channel.parent_id, ranges, false);
           } else {
             subscribeChannelResult =
               channel.isActiveThread() &&
@@ -420,12 +420,12 @@ let subscriptions = {
           }
           subscribeChannelResult1 = subscribeChannelResult;
         } else {
-          subscribeChannelResult1 = closure_20.subscribeChannel(guildId1, channelId, ranges);
+          subscribeChannelResult1 = closure_20.subscribeChannel(guildId1, channelId, ranges, false);
         }
-        flag = subscribeChannelResult1;
+        flag3 = subscribeChannelResult1;
       }
     }
-    return flag;
+    return flag3;
   },
   GUILD_SUBSCRIPTIONS: function handleGuild(guildId) {
     return closure_20.subscribeToGuild(guildId.guildId);

@@ -10,6 +10,7 @@ import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
+import useCanPlayAnimatedEmojiDefault from "useCanPlayAnimatedEmoji.tsx";
 import EmojiAngryFaceWithHornsIcon from "../../../design/components/Icon/native/redesign/generated/EmojiAngryFaceWithHornsIcon.tsx";
 import EmojiColdFaceIcon from "../../../design/components/Icon/native/redesign/generated/EmojiColdFaceIcon.tsx";
 import EmojiCowboyHatFaceIcon from "../../../design/components/Icon/native/redesign/generated/EmojiCowboyHatFaceIcon.tsx";
@@ -79,39 +80,47 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
   ? (emoji) => {
       let animated;
       const obj = react2;
-      const cResult = obj.c(8);
+      const cResult = obj.c(9);
       emoji = emoji.emoji;
-      if (cResult[0] === emoji.animated) {
-        let tmp3;
-        let tmp10;
-        let tmp9;
-        if (cResult[1] === emoji.id) {
-          tmp3 = cResult[2];
-        }
-        const _Symbol = Symbol;
-        if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          size = { width: v28, height: v28 };
-          const obj3 = { fontSize: v28, lineHeight: 32 };
-          cResult[3] = size;
-          cResult[4] = obj3;
-          tmp10 = obj3;
-          tmp9 = size;
-        } else {
-          tmp9 = cResult[3];
-          tmp10 = cResult[4];
-        }
-        if (cResult[5] === emoji.name) {
-          let tmp12;
-          if (cResult[6] === tmp3) {
-            tmp12 = cResult[7];
+      const tmp4 = useCanPlayAnimatedEmojiDefault();
+      if (cResult[0] === tmp4) {
+        if (cResult[1] === emoji.animated) {
+          let tmp5;
+          let tmp11;
+          let tmp10;
+          if (cResult[2] === emoji.id) {
+            tmp5 = cResult[3];
           }
-          return tmp12;
+          const _Symbol = Symbol;
+          if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+            size = { width: v28, height: v28 };
+            const obj3 = { fontSize: v28, lineHeight: 32 };
+            cResult[4] = size;
+            cResult[5] = obj3;
+            tmp11 = obj3;
+            tmp10 = size;
+          } else {
+            tmp10 = cResult[4];
+            tmp11 = cResult[5];
+          }
+          if (cResult[6] === emoji.name) {
+            let tmp13;
+            if (cResult[7] === tmp5) {
+              tmp13 = cResult[8];
+            }
+            return tmp13;
+          }
+          const tmp15 = jsx(EmojiDefault, {
+            name: emoji.name,
+            src: tmp5,
+            fastImageStyle: tmp10,
+            textEmojiStyle: tmp11,
+          });
+          cResult[6] = emoji.name;
+          cResult[7] = tmp5;
+          cResult[8] = tmp15;
+          tmp13 = tmp15;
         }
-        const tmp15 = jsx(EmojiDefault, { name: emoji.name, src: tmp3, fastImageStyle: tmp9, textEmojiStyle: tmp10 });
-        cResult[5] = emoji.name;
-        cResult[6] = tmp3;
-        cResult[7] = tmp15;
-        tmp12 = tmp15;
       }
       let emojiURL;
       if (null != emoji.id) {
@@ -122,17 +131,22 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (animated == null) {
           animated = false;
         }
+        if (animated) {
+          animated = tmp4;
+        }
         emojiURL = getEmojiURL(obj5);
       }
-      cResult[0] = emoji.animated;
-      cResult[1] = emoji.id;
-      cResult[2] = emojiURL;
-      tmp3 = emojiURL;
+      cResult[0] = tmp4;
+      cResult[1] = emoji.animated;
+      cResult[2] = emoji.id;
+      cResult[3] = emojiURL;
+      tmp5 = emojiURL;
     }
   : (emoji) => {
       let animated;
       emoji = emoji.emoji;
       let emojiURL;
+      const tmp3 = useCanPlayAnimatedEmojiDefault();
       EmojiDefault;
       if (null != emoji.id) {
         const obj3 = { id: null, animated, size: v28 };
@@ -142,11 +156,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (animated == null) {
           animated = false;
         }
+        if (animated) {
+          animated = tmp3;
+        }
         emojiURL = getEmojiURL(obj3);
       }
       size = { width: v28, height: v28 };
       return (
-        <tmp4
+        <tmp5
           name={emoji.name}
           src={emojiURL}
           fastImageStyle={size}
@@ -170,7 +187,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = pressed(576);
       const cResult = obj.c(6);
       ({ Icon, pressed } = arg0);
-      let obj2 = pressed(4612);
+      let obj2 = pressed(4618);
       const fn = function t() {
         let interpolateResult;
         let interpolateResult1;
@@ -195,10 +212,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       };
       let obj3 = {
         pressed,
-        withSpring: pressed(5597).withSpring,
-        interpolate: pressed(4612).interpolate,
+        withSpring: pressed(5604).withSpring,
+        interpolate: pressed(4618).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5598).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5605).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
       fn.__closure = obj3;
@@ -236,7 +253,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   : (pressed) => {
       pressed = pressed.pressed;
       const Icon = pressed.Icon;
-      let obj = pressed(4612);
+      let obj = pressed(4618);
       const fn = function o() {
         let interpolateResult;
         let interpolateResult1;
@@ -261,10 +278,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       };
       let obj2 = {
         pressed,
-        withSpring: pressed(5597).withSpring,
-        interpolate: pressed(4612).interpolate,
+        withSpring: pressed(5604).withSpring,
+        interpolate: pressed(4618).interpolate,
         PLACEHOLDER_EMOJI_RESTING_OPACITY,
-        ON_PRESS_SPRING: pressed(5598).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5605).ON_PRESS_SPRING,
         PLACEHOLDER_EMOJI_ACTIVE_SCALE,
       };
       fn.__closure = obj2;
@@ -288,7 +305,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       index = index.index;
       ({ emoji, placeholderIcon, onChange } = index);
       closure_11();
-      let obj2 = index(sharedValue[31]);
+      let obj2 = index(sharedValue[32]);
       sharedValue = obj2.useSharedValue(0);
       if (cResult[0] === index) {
         let formatToPlainString2Result;
@@ -357,10 +374,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const formatToPlainString2 = tmp14.formatToPlainString;
           const obj5 = {
             slot: index + 1,
-            total: index(sharedValue[37]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT,
+            total: index(sharedValue[38]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT,
             emojiName: emoji.name,
           };
-          const prop = onChange(tmp2[36])["lEsZ+N"];
+          const prop = onChange(tmp2[37])["lEsZ+N"];
           formatToPlainString2Result = formatToPlainString2(prop, obj5);
         } else {
           class T {
@@ -369,8 +386,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const formatToPlainString = tmp11.formatToPlainString;
-          const obj6 = { slot: index + 1, total: index(sharedValue[37]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
-          const O0Pe85 = onChange(tmp2[36]).O0Pe85;
+          const obj6 = { slot: index + 1, total: index(sharedValue[38]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
+          const O0Pe85 = onChange(tmp2[37]).O0Pe85;
           formatToPlainString2Result = formatToPlainString(O0Pe85, obj6);
         }
         cResult[7] = emoji;
@@ -418,7 +435,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue;
       const placeholderIcon = index.placeholderIcon;
       const tmp = closure_11();
-      let obj = index(sharedValue[31]);
+      let obj = index(sharedValue[32]);
       sharedValue = obj.useSharedValue(0);
       items = [index, onChange];
       const items1 = [sharedValue];
@@ -453,23 +470,23 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = react.useCallback(() => sharedValue.set(1), items1);
       const callback2 = react.useCallback(() => sharedValue.set(0), items2);
       if (null != emoji) {
-        const intl2 = tmp2(tmp3[35]).intl;
+        const intl2 = tmp2(tmp3[36]).intl;
         const formatToPlainString2 = intl2.formatToPlainString;
         let obj2 = {
           slot: index + 1,
-          total: index(sharedValue[37]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT,
+          total: index(sharedValue[38]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT,
           emojiName: emoji.name,
         };
-        const prop = onChange(tmp3[36])["lEsZ+N"];
+        const prop = onChange(tmp3[37])["lEsZ+N"];
         formatToPlainString2Result = formatToPlainString2(prop, obj2);
       } else {
-        const intl = tmp2(tmp3[35]).intl;
+        const intl = tmp2(tmp3[36]).intl;
         const formatToPlainString = intl.formatToPlainString;
-        const obj3 = { slot: index + 1, total: index(sharedValue[37]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
-        const O0Pe85 = onChange(tmp3[36]).O0Pe85;
+        const obj3 = { slot: index + 1, total: index(sharedValue[38]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
+        const O0Pe85 = onChange(tmp3[37]).O0Pe85;
         formatToPlainString2Result = formatToPlainString(O0Pe85, obj3);
       }
-      const Card = tmp2(tmp3[38]).Card;
+      const Card = tmp2(tmp3[39]).Card;
       if (null != emoji) {
         tmp12Result = <closure_12 emoji={emoji} />;
       } else {
@@ -499,8 +516,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const onChange = emojis.onChange;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          const obj = emojis(first1[39]);
-          return obj.sampleSize(items, emojis(first1[37]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT);
+          const obj = emojis(first1[40]);
+          return obj.sampleSize(items, emojis(first1[38]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT);
         };
         cResult[0] = fn;
         first = fn;
@@ -517,8 +534,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp6;
         }
       }
-      const obj3 = { length: emojis(first1[37]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
-      const Stack = tmp(tmp2[40]).Stack;
+      const obj3 = { length: emojis(first1[38]).CUSTOM_TYPING_INDICATOR_EMOJI_COUNT };
+      const Stack = tmp(tmp2[41]).Stack;
       const tmp7 = (
         <Stack direction="horizontal" spacing={8}>
           {from(obj3, (arg0, index) => {

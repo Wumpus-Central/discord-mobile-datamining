@@ -9,7 +9,7 @@ import showUserProfileActionSheetDefault from "../../../user_profile/native/show
 import Form from "../../../../design/void/Form/native/index.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09715_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09728_AssetRegistry.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import VoiceMemberEmbeddedActivity from "VoiceMemberEmbeddedActivity.tsx";
@@ -156,9 +156,9 @@ let closure_28 = memo2(
                 accessibilityLabel: intl.string(tmp(1126).t["6Qgrev"]),
                 accessibilityHidden: true,
                 source: AssetRegistryDefault,
-                size: tmp(13272).CircularIconButton.Sizes.MEDIUM_32,
+                size: tmp(13291).CircularIconButton.Sizes.MEDIUM_32,
               };
-              const CircularIconButton = tmp(13272).CircularIconButton;
+              const CircularIconButton = tmp(13291).CircularIconButton;
               intl = tmp(1126).intl;
               const tmp20 = closure_23(CircularIconButton, obj2);
               const intl2 = tmp(1126).intl;
@@ -188,7 +188,7 @@ let closure_28 = memo2(
                   }
                 },
               };
-              items2[1] = closure_23(tmp(8895).FormRow, obj4);
+              items2[1] = closure_23(tmp(8924).FormRow, obj4);
               const tmp26 = closure_24(Fragment, obj3);
               cResult[7] = channel;
               cResult[8] = tmp26;
@@ -231,14 +231,14 @@ let closure_28 = memo2(
                 }
               },
             };
-            const FormRow = tmp4(8895).FormRow;
+            const FormRow = tmp4(8924).FormRow;
             obj3 = {
               accessibilityLabel: intl.string(channel(1126).t["6Qgrev"]),
               accessibilityHidden: true,
               source: AssetRegistryDefault,
-              size: channel(13272).CircularIconButton.Sizes.MEDIUM_32,
+              size: channel(13291).CircularIconButton.Sizes.MEDIUM_32,
             };
-            CircularIconButton = tmp4(13272).CircularIconButton;
+            CircularIconButton = tmp4(13291).CircularIconButton;
             intl = tmp4(1126).intl;
             intl2 = tmp4(1126).intl;
             items[1] = closure_23(FormRow, obj2);
@@ -339,10 +339,10 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = isActionSheet(576);
       const cResult = obj.c(13);
       ({ item, channelId, onPressUser, isActionSheet } = arg0);
-      const obj2 = isActionSheet(9101);
+      const obj2 = isActionSheet(9137);
       const analyticsContext = obj2.useAnalyticsContext();
       const tmp4 = analyticsContext;
-      let analyticsLocations = analyticsContext(6657)().analyticsLocations;
+      let analyticsLocations = analyticsContext(6664)().analyticsLocations;
       const tmp5 = undefined !== item.url && undefined !== item.applicationId;
       if (tmp5) {
         if (cResult[0] === analyticsContext) {
@@ -363,7 +363,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             let obj3 = { embeddedActivity: item, channelId, onItemPress: tmp13, isActionSheet };
-            const tmp17 = closure_23(tmp4(13596), obj3);
+            const tmp17 = closure_23(tmp4(13612), obj3);
             cResult[4] = channelId;
             cResult[5] = isActionSheet;
             cResult[6] = tmp13;
@@ -458,7 +458,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         let obj4 = { onPress: onPressUser, isActionSheet };
-        const tmp4Result = tmp4(13597);
+        const tmp4Result = tmp4(13613);
         const merged = Object.assign(item);
         let tmp12 = closure_23(tmp4Result, obj4);
         cResult[9] = isActionSheet;
@@ -863,7 +863,7 @@ const forwardRefResult = react.forwardRef(
         let ownerId;
         let reduced;
         let tmp25Result2;
-        const f115092 = (user) => stateFromStoresArray.includes(user.user.id);
+        const f115254 = (user) => stateFromStoresArray.includes(user.user.id);
         channel = channel.channel;
         let flag = channel.isActionSheet;
         if (flag === undefined) {
@@ -942,8 +942,8 @@ const forwardRefResult = react.forwardRef(
                 str = "";
               }
               const tmp3Result = flag(tmp4[40]);
-              [arr10, arr11] = tmp3Result.partition(stateFromStores, f115092);
-              _slicedToArray(tmp3Result.partition(stateFromStores, f115092), 2);
+              [arr10, arr11] = tmp3Result.partition(stateFromStores, f115254);
+              _slicedToArray(tmp3Result.partition(stateFromStores, f115254), 2);
               if (arr10.length > 0) {
                 const push = items5.push;
                 const obj5 = {

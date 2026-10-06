@@ -12,7 +12,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../../../stores/SelectedGuildStore.tsx";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -23,7 +23,7 @@ let c9;
 let closure_4;
 let hasOwnProperty;
 let unpackModuleId;
-const f122069 = () => guildId.getGuildId();
+const f122241 = () => guildId.getGuildId();
 function getGuildsComponent() {
   return require("guilds/Guilds").default;
 }
@@ -52,7 +52,7 @@ const memoResult = react.memo(
         const ref = react.useRef(undefined);
         const items = [SelectedGuildStore];
         const obj2 = get_initialized;
-        const stateFromStores = obj2.useStateFromStores(items, f122069);
+        const stateFromStores = obj2.useStateFromStores(items, f122241);
         const tmp6 = null == ref.current && null != stateFromStores;
         if (tmp6) {
           const obj3 = { guildId: stateFromStores, channelId };
@@ -191,7 +191,7 @@ const memoResult = react.memo(
         const ref = react.useRef(undefined);
         let obj2 = current(accessibilityNativeStackOptions[10]);
         let items = [SelectedGuildStore];
-        const stateFromStores = obj2.useStateFromStores(items, f122069);
+        const stateFromStores = obj2.useStateFromStores(items, f122241);
         const tmp5 = null == ref.current && null != stateFromStores;
         if (tmp5) {
           let obj3 = { guildId: stateFromStores, channelId };

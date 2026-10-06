@@ -19,7 +19,7 @@ let hasOwnProperty;
 let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-const f112002 = (type) => type.type === constants.GIFV;
+const f112157 = (type) => type.type === constants.GIFV;
 const REACTION_MILESTONE_COUNTS = InAppNotificationConstants.REACTION_MILESTONE_COUNTS;
 ({
   AnalyticEvents: hasOwnProperty,
@@ -42,7 +42,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           let everyResult = hasFlag.embeds.length > 0;
           if (everyResult) {
             let embeds = hasFlag.embeds;
-            everyResult = embeds.every(f112002);
+            everyResult = embeds.every(f112157);
           }
           hasFlagResult = everyResult;
         }
@@ -60,7 +60,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 let everyResult = message.embeds.length > 0;
                 if (everyResult) {
                   const embeds = message.embeds;
-                  everyResult = embeds.every(f112002);
+                  everyResult = embeds.every(f112157);
                 }
                 hasFlagResult = everyResult;
               }
@@ -92,7 +92,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           let everyResult = closure_0.embeds.length > 0;
           if (everyResult) {
             let embeds = closure_0.embeds;
-            everyResult = embeds.every(f112002);
+            everyResult = embeds.every(f112157);
           }
           hasFlagResult = everyResult;
         }
@@ -110,7 +110,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 let everyResult = message.embeds.length > 0;
                 if (everyResult) {
                   const embeds = message.embeds;
-                  everyResult = embeds.every(f112002);
+                  everyResult = embeds.every(f112157);
                 }
                 hasFlagResult = everyResult;
               }

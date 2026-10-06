@@ -3,7 +3,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import Constants from "../../../../Constants.tsx";
 import intl4 from "../../../../intl/index.native.tsx";
 import DismissibleContentConstants from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import _modDef3367 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../../intl/FavoritesGuild.messages.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import FavoritesGuildAnalytics from "../../analytics/FavoritesGuildAnalytics.tsx";
 import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "../../../guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx";
@@ -64,7 +64,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       [tmp9, tmp10] = react.useState(tmp7);
       dependencyMap = tmp10;
       _slicedToArray(react.useState(tmp7), 2);
-      const tmpResult = markAsDismissed(4612);
+      const tmpResult = markAsDismissed(4618);
       class C {
         constructor() {
           return scrollPosition.get() <= 0;
@@ -79,10 +79,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           obj.runOnJS(dependencyMap)(arg0);
         }
       };
-      fn2.__closure = { runOnJS: markAsDismissed(4612).runOnJS, setScrolledToTop: tmp10 };
+      fn2.__closure = { runOnJS: markAsDismissed(4618).runOnJS, setScrolledToTop: tmp10 };
       fn2.__workletHash = 13648062364539;
       fn2.__initData = __initData2;
-      ({ runOnJS: markAsDismissed(4612).runOnJS, setScrolledToTop: tmp10 });
+      ({ runOnJS: markAsDismissed(4618).runOnJS, setScrolledToTop: tmp10 });
       const animatedReaction = tmpResult.useAnimatedReaction(C, fn2);
       if (cResult[2] !== markAsDismissed) {
         class I {
@@ -129,9 +129,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             markAsDismissed(ContentDismissActionType.TAKE_ACTION);
           }
         }
-        const stringResult = obj4.string(scrollPosition(3367)["bu/mLv"]);
+        const stringResult = obj4.string(scrollPosition(3395)["bu/mLv"]);
         const intl = tmp(1126).intl;
-        const stringResult1 = intl.string(scrollPosition(3367).kxQJ7q);
+        const stringResult1 = intl.string(scrollPosition(3395).kxQJ7q);
         cResult[6] = stringResult;
         cResult[7] = stringResult1;
         tmp15 = stringResult1;
@@ -154,7 +154,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const intl2 = tmp(1126).intl;
-        const stringResult2 = intl2.string(scrollPosition(3367)["vN/KQ9"]);
+        const stringResult2 = intl2.string(scrollPosition(3395)["vN/KQ9"]);
         cResult[8] = R;
         cResult[9] = stringResult2;
         tmp20 = stringResult2;
@@ -237,13 +237,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = {
           visible,
           position: "bottom",
-          title: intl.string(_modDef3367["bu/mLv"]),
-          description: intl2.string(_modDef3367.kxQJ7q),
+          title: intl.string(_modDef3395["bu/mLv"]),
+          description: intl2.string(_modDef3395.kxQJ7q),
           onDismiss,
           renderImgComponent() {
             return closure_1_8(scrollPosition(visible[13]), {});
           },
-          buttonLabel: intl3.string(_modDef3367["vN/KQ9"]),
+          buttonLabel: intl3.string(_modDef3395["vN/KQ9"]),
           onButtonPress: callback1,
         };
         intl = intl4.intl;

@@ -7,11 +7,11 @@ import Constants from "../../../Constants.tsx";
 import intl4 from "../../../intl/index.native.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
-import _modDef3725 from "../intl/CustomTypingIndicator.messages.js";
+import _modDef3755 from "../intl/CustomTypingIndicator.messages.js";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef11588 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef11589 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef11601 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef11602 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import react_mod from "../../../../_runtime/00019_react.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
@@ -46,7 +46,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = markAsDismissed(1126).intl;
-        const stringResult = intl.string(_modDef3725.Eq5jIA);
+        const stringResult = intl.string(_modDef3755.Eq5jIA);
         cResult[0] = stringResult;
         first = stringResult;
       } else {
@@ -54,7 +54,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = markAsDismissed(1126).intl;
-        const stringResult1 = intl2.string(_modDef3725.lSBp2M);
+        const stringResult1 = intl2.string(_modDef3755.lSBp2M);
         cResult[1] = stringResult1;
         tmp7 = stringResult1;
       } else {
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const intl3 = markAsDismissed(1126).intl;
-        const stringResult2 = intl3.string(_modDef3725["6NP6ic"]);
+        const stringResult2 = intl3.string(_modDef3755["6NP6ic"]);
         cResult[4] = tmp14;
         cResult[5] = stringResult2;
         tmp13 = stringResult2;
@@ -114,7 +114,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             obj = closure_0(closure_2[11]);
             obj1 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
             openUserSettingsResult = obj.openUserSettings(obj1, () => {
-              /* body not rendered: F147754 */
+              /* body not rendered: F147977 */
             });
             return;
           }
@@ -127,7 +127,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             obj = closure_0(closure_2[11]);
             obj1 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
             openUserSettingsResult = obj.openUserSettings(obj1, () => {
-              /* body not rendered: F147754 */
+              /* body not rendered: F147977 */
             });
             return;
           }
@@ -139,7 +139,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             obj = closure_0(closure_2[11]);
             obj1 = { screen: UserSettingsSections.TYPING_INDICATOR, params: { source: "profile_coachmark" } };
             openUserSettingsResult = obj.openUserSettings(obj1, () => {
-              /* body not rendered: F147754 */
+              /* body not rendered: F147977 */
             });
             return;
           }
@@ -196,7 +196,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           renderImgComponent() {
             return closure_1_7(closure_1_9, {});
           },
-          buttonLabel: intl.string(_modDef3725["6NP6ic"]),
+          buttonLabel: intl.string(_modDef3755["6NP6ic"]),
           buttonVariant: "primary",
           onButtonPress() {
             const obj = visible(str[11]);
@@ -226,7 +226,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(6);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [_modDef11588, _modDef11589, _modDef11588];
+        const items = [_modDef11601, _modDef11602, _modDef11601];
         cResult[0] = items;
         first = items;
       } else {
@@ -281,7 +281,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         emojiSource: items,
       });
       CustomTypingIndicatorDynamicAssetDefault;
-      items = [_modDef11588, _modDef11589, _modDef11588];
+      items = [_modDef11601, _modDef11602, _modDef11601];
       return <View style={tmp.coachmarkImageContainer}>{null}</View>;
     };
 const result = size.fileFinishedImporting(

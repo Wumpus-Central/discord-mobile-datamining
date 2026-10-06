@@ -7,11 +7,11 @@ import PrivateChannelCallUtils from "../../../utils/native/PrivateChannelCallUti
 import NativePermissionConstants from "../../native_permissions/NativePermissionConstants.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import AVError from "../../errors/av_errors/AVError.tsx";
 import AudioActionCreatorsDefault from "../../../actions/AudioActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09327_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/09328_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/09329_AssetRegistry.js";
+import AVError from "../../errors/av_errors/AVError.tsx";
+import AssetRegistryDefault from "../../../../_runtime/09341_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/09342_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/09343_AssetRegistry.js";
 import useIsVideoModeDefault from "../../video_calls/native/useIsVideoMode.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -100,7 +100,7 @@ let obj = function _handleToggleVideo() {
     if (closure_1 === undefined) {
       flag3 = true;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -271,7 +271,7 @@ const tmp2 = PlatformUtils.isAndroid()
       const obj2 = {
         isAudioRouteEnabled,
         toggleAudio: callback,
-        routeSource: isVideoMode(isBluetoothRoute ? 9328 : 9329),
+        routeSource: isVideoMode(isBluetoothRoute ? 9342 : 9343),
       };
       return obj2;
     };
@@ -303,7 +303,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       const tmp9 = useIsVideoModeDefault();
       _require = tmp9;
-      let tmp10 = stateFromStores === tmp(9301).RouteTypes.SPEAKER;
+      let tmp10 = stateFromStores === tmp(9336).RouteTypes.SPEAKER;
       const tmp11 = stateFromStores === require("VoiceCallTypes").RouteTypes.BLUETOOTH;
       const tmp8 = importDefault;
       if (!tmp10) {
@@ -341,7 +341,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const effect = react.useEffect(O, tmp16);
-          const tmp8Result = tmp8(tmp11 ? 9328 : 9329);
+          const tmp8Result = tmp8(tmp11 ? 9342 : 9343);
           if (cResult[10] === isAudioRouteEnabled) {
             class O {
               constructor() {
@@ -413,7 +413,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const effect = react.useEffect(() => {
         closure_3(closure_1);
       }, items2);
-      const obj2 = { isAudioRouteEnabled, toggleAudio: callback, routeSource: tmp3(tmp6 ? 9328 : 9329) };
+      const obj2 = { isAudioRouteEnabled, toggleAudio: callback, routeSource: tmp3(tmp6 ? 9342 : 9343) };
       return obj2;
     };
 let result = size.fileFinishedImporting("modules/voice_calls/native/CallsUtils.tsx");

@@ -3,7 +3,7 @@ import get_initialized from "../../../../../discord_common/js/packages/flux/inde
 import react from "../../../../../_runtime/00576_react.js";
 import intl4 from "../../../../intl/index.native.tsx";
 import user from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef3205 from "../PremiumGroup.messages.js";
+import _modDef3233 from "../PremiumGroup.messages.js";
 import PremiumGroupUtils from "../PremiumGroupUtils.native.tsx";
 import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
@@ -106,7 +106,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 return closure_1_3.getPremiumGroupSubscription();
               }
             }
-            const Nu9LNm = _modDef3205.Nu9LNm;
+            const Nu9LNm = _modDef3233.Nu9LNm;
             priceString = format(Nu9LNm, obj4);
           }
         }
@@ -144,7 +144,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             const intl = intl4.intl;
             const format = intl.format;
             const obj3 = { primaryName: tmp4, premiumGroupProductName: React3() };
-            const Nu9LNm = _modDef3205.Nu9LNm;
+            const Nu9LNm = _modDef3233.Nu9LNm;
             priceString = format(Nu9LNm, obj3);
           }
         }
@@ -157,12 +157,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const intl3 = intl4.intl;
           const format3 = intl3.format;
           const obj5 = { helpCenterLink: hasOwnProperty, premiumGroupProductName: React3() };
-          const prop = _modDef3205["+R/K74"];
+          const prop = _modDef3233["+R/K74"];
           format3Result = format3(prop, obj5);
         } else {
           const intl2 = intl4.intl;
           const format2 = intl2.format;
-          const tmp3Result = _modDef3205;
+          const tmp3Result = _modDef3233;
           const obj6 = { helpCenterLink: hasOwnProperty };
           format3Result = format2(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj6);
         }

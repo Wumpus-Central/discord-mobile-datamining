@@ -6,8 +6,8 @@ import intl2 from "../intl/index.native.tsx";
 import native from "../../discord_common/js/packages/design/native.tsx";
 import shared from "../design/shared.tsx";
 import Pressables from "../design/void/Pressables/native/Pressables.tsx";
-import AssetRegistryDefault from "../../_runtime/09744_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../_runtime/09745_AssetRegistry.js";
+import AssetRegistryDefault from "../../_runtime/09757_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../_runtime/09758_AssetRegistry.js";
 import useFetchStreamPreviewDefault from "../modules/go_live/useFetchStreamPreview.tsx";
 import react from "../../_runtime/00019_react.js";
 import react_native from "../../_runtime/00017_react-native.js";
@@ -63,7 +63,7 @@ let obj4 = {
 size = {
   flex: 1,
   width: "100%",
-  height: "filter",
+  height: "__initData",
   aspectRatio: true,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
 };

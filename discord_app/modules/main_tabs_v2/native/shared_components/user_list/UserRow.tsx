@@ -189,7 +189,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "text-subtle",
                   children: stateFromStores.name,
                 };
-                const tmp26 = closure_14(applicationId(4886).Text, obj5);
+                const tmp26 = closure_14(applicationId(4892).Text, obj5);
                 cResult[13] = stateFromStores.name;
                 cResult[14] = tmp26;
                 tmp24 = tmp26;
@@ -225,7 +225,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         let tmp13;
         if (cResult[19] !== user) {
-          const tmpResult2 = applicationId(4722);
+          const tmpResult2 = applicationId(4728);
           const userTag = tmpResult2.getUserTag(user);
           cResult[19] = user;
           cResult[20] = userTag;
@@ -235,7 +235,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[21] !== tmp13) {
           const obj8 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp13 };
-          const tmp17 = closure_14(applicationId(4886).Text, obj8);
+          const tmp17 = closure_14(applicationId(4892).Text, obj8);
           cResult[21] = tmp13;
           cResult[22] = tmp17;
           tmp15 = tmp17;
@@ -510,7 +510,7 @@ const memoResult = react.memo(function UserRow(type) {
     let zFfSFQ2;
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "r" };
+      let obj2 = { accessibilityActions: items, actions: "Array" };
       return obj2;
     } else {
       let tmp9;
@@ -819,7 +819,7 @@ const memoResult = react.memo(function UserRow(type) {
     let localUser;
     let sourceAnalyticsLocations;
     if (null == onLongPress) {
-      const promise = asyncRequire(7850, dependencyMap.paths);
+      const promise = asyncRequire(7861, dependencyMap.paths);
       promise.then((result) => {
         const obj = { userId: localUser.id, localUser, sourceAnalyticsLocations };
         return result.default(obj);

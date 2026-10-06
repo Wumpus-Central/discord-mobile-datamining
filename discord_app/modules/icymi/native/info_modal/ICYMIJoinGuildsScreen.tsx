@@ -266,7 +266,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           tmp10 = cResult[5];
         }
         const effect = react.useEffect(tmp9, tmp10);
-        const tmpResult = tmp(4612);
+        const tmpResult = tmp(4618);
         class G {
           constructor() {
             let num2;
@@ -297,7 +297,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const useAnimatedStyle = tmpResult.useAnimatedStyle;
         G.__closure = {
-          withTiming: tmp(4891).withTiming,
+          withTiming: tmp(4897).withTiming,
           selectedGuilds,
           SELECTED_SERVER_SIZE_WITH_BORDER: v50,
           tokens: first(587),
@@ -306,7 +306,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         G.__workletHash = 2911488630455;
         G.__initData = __initData;
         const obj3 = {
-          withTiming: tmp(4891).withTiming,
+          withTiming: tmp(4897).withTiming,
           selectedGuilds,
           SELECTED_SERVER_SIZE_WITH_BORDER: v50,
           tokens: first(587),
@@ -387,7 +387,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp25[0] = tmp17;
             tmp25[1] = tmp19;
-            const tmp26 = closure_12(first(4612).View, tmp25);
+            const tmp26 = closure_12(first(4618).View, tmp25);
             cResult[14] = tmp17;
             cResult[15] = tmp19;
             cResult[16] = tmp26;
@@ -405,7 +405,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             listId: "selected-servers-list",
             showsHorizontalScrollIndicator: false,
           };
-          const tmp14Result = first(6552);
+          const tmp14Result = first(6559);
           const tmp22 = closure_12(tmp14Result, obj4);
           cResult[11] = tmp5;
           cResult[12] = tmp18;
@@ -473,7 +473,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           closure_2(selectedGuilds.length);
         }
       }, items1);
-      let obj = selectedGuilds(4612);
+      let obj = selectedGuilds(4618);
       const fn = function _() {
         let num2;
         let num3;
@@ -501,7 +501,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       fn.__closure = {
-        withTiming: selectedGuilds(4891).withTiming,
+        withTiming: selectedGuilds(4897).withTiming,
         selectedGuilds,
         SELECTED_SERVER_SIZE_WITH_BORDER: v50,
         tokens: first(587),
@@ -509,7 +509,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 13469351702676;
       fn.__initData = __initData2;
       ({
-        withTiming: selectedGuilds(4891).withTiming,
+        withTiming: selectedGuilds(4897).withTiming,
         selectedGuilds,
         SELECTED_SERVER_SIZE_WITH_BORDER: v50,
         tokens: first(587),
@@ -517,7 +517,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj.useAnimatedStyle(fn);
       const obj3 = { style: items2, children: closure_12(tmp12, obj4) };
       items2 = [tmp.selectedServersRowContainer, animatedStyle];
-      const View = first(4612).View;
+      const View = first(4618).View;
       let num = 3;
       obj4 = {
         ref,
@@ -531,7 +531,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         listId: "selected-servers-list",
         showsHorizontalScrollIndicator: false,
       };
-      tmp12 = first(6552);
+      tmp12 = first(6559);
       if (selectedGuilds.length >= 3) {
         let num2 = 1;
         num = selectedGuilds.length + 1;
@@ -577,7 +577,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol = Symbol;
             if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
               size = {
-                shape: guild(8469).CutoutShape.RoundedRect,
+                shape: guild(8502).CutoutShape.RoundedRect,
                 x: 8,
                 y: 46,
                 width: 56,
@@ -630,7 +630,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                     const obj4 = {
                       style: tmp23,
                       guild,
-                      size: guild(5971).GuildIconSizes.LARGE,
+                      size: guild(5978).GuildIconSizes.LARGE,
                       animate: !stateFromStores,
                     };
                     const tmp28 = GuildIconDefault;
@@ -720,7 +720,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj3 = { style: tmp.bannerImage, children: items3 };
       const obj4 = { cutouts: items1, children: tmp11Result };
-      size = { shape: guild(8469).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+      size = { shape: guild(8502).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
       items1 = [size];
       const tmp13 = ClipViewDefault;
       if (null != guild.banner) {
@@ -733,7 +733,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11Result = closure_12(closure_6, obj6);
       }
       items3 = [closure_12(tmp13, obj4)];
-      const obj7 = { style: items4, guild, size: guild(5971).GuildIconSizes.LARGE, animate: !stateFromStores };
+      const obj7 = { style: items4, guild, size: guild(5978).GuildIconSizes.LARGE, animate: !stateFromStores };
       items4 = [,];
       ({ guildIcon: arr5[0], guildIconBorder: arr5[1] } = tmp);
       const tmp12Result = GuildIconDefault;
@@ -807,7 +807,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
               color: "text-default",
               children: guild.description,
             };
-            const tmp19 = closure_12(guild(4886).Text, obj3);
+            const tmp19 = closure_12(guild(4892).Text, obj3);
             cResult[11] = guild.description;
             cResult[12] = tmp19;
             tmp17 = tmp19;
@@ -826,7 +826,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp22;
             if (selected) {
               const obj5 = { size: "sm", color: handlePress(587).colors.CONTROL_CONNECTED_TEXT_DEFAULT };
-              const CircleCheckIcon = tmp(4792).CircleCheckIcon;
+              const CircleCheckIcon = tmp(4798).CircleCheckIcon;
               tmp22 = closure_12(CircleCheckIcon, obj5);
             }
             cResult[15] = selected;
@@ -888,7 +888,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                                   children: items1,
                                 };
                                 items1 = [tmp10, tmp35];
-                                const tmp41 = closure_13(guild(5909).PressableHighlight, obj6);
+                                const tmp41 = closure_13(guild(5916).PressableHighlight, obj6);
                                 cResult[36] = tmp9;
                                 cResult[37] = tmp4.featuredServerContainer;
                                 cResult[38] = tmp4.pressableUnderlayColor.backgroundColor;
@@ -931,7 +931,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 variant: str,
                 grow: true,
               };
-              const tmp30 = closure_12(guild(5594).Button, obj9);
+              const tmp30 = closure_12(guild(5601).Button, obj9);
               cResult[21] = tmp9;
               cResult[22] = stateFromStores;
               cResult[23] = str;
@@ -971,7 +971,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: guild.name,
         };
-        const tmp16 = closure_12(guild(4886).Text, obj10);
+        const tmp16 = closure_12(guild(4892).Text, obj10);
         cResult[8] = guild.name;
         cResult[9] = tmp4.featuredServerTitle;
         cResult[10] = tmp16;
@@ -1008,7 +1008,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         onPress: callback,
         children: null,
       };
-      const PressableHighlight = guild(5909).PressableHighlight;
+      const PressableHighlight = guild(5916).PressableHighlight;
       const items2 = [closure_12(closure_21, { guild })];
       const obj3 = { style: tmp.featuredServerInnerContainer, children: null };
       const items3 = [, ,];
@@ -1019,7 +1019,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: guild.name,
       };
-      items3[0] = closure_12(guild(4886).Text, obj4);
+      items3[0] = closure_12(guild(4892).Text, obj4);
       const obj5 = {
         maxFontSizeMultiplier: 1,
         lineClamp: 2,
@@ -1027,7 +1027,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: guild.description,
       };
-      items3[1] = closure_12(guild(4886).Text, obj5);
+      items3[1] = closure_12(guild(4892).Text, obj5);
       const obj6 = { style: tmp.buttonContainer, children: null };
       const obj7 = {
         accessibilityHint: "checkbox",
@@ -1041,10 +1041,10 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         grow: true,
       };
       tmp7Result = undefined;
-      const Button = guild(5594).Button;
+      const Button = guild(5601).Button;
       if (selected) {
         const obj8 = { size: "sm", color: handlePress(587).colors.CONTROL_CONNECTED_TEXT_DEFAULT };
-        const CircleCheckIcon = tmp2(4792).CircleCheckIcon;
+        const CircleCheckIcon = tmp2(4798).CircleCheckIcon;
         tmp7Result = closure_12(CircleCheckIcon, obj8);
       }
       if (stateFromStores) {
@@ -1198,7 +1198,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               tmp8 = closure_5((arr) => {
                 let id;
                 return arr.filter(() => {
-                  /* body not rendered: F153401 */
+                  /* body not rendered: F153637 */
                 });
               });
             } else {
@@ -1243,7 +1243,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               tmp8 = closure_5((arr) => {
                 let id;
                 return arr.filter(() => {
-                  /* body not rendered: F153401 */
+                  /* body not rendered: F153637 */
                 });
               });
             } else {
@@ -1283,7 +1283,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               tmp8 = closure_5((arr) => {
                 let id;
                 return arr.filter(() => {
-                  /* body not rendered: F153401 */
+                  /* body not rendered: F153637 */
                 });
               });
             } else {
@@ -1440,7 +1440,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               tmp8 = closure_5((arr) => {
                 let id;
                 return arr.filter(() => {
-                  /* body not rendered: F153401 */
+                  /* body not rendered: F153637 */
                 });
               });
             } else {
@@ -1478,7 +1478,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               tmp8 = closure_5((arr) => {
                 let id;
                 return arr.filter(() => {
-                  /* body not rendered: F153401 */
+                  /* body not rendered: F153637 */
                 });
               });
             } else {

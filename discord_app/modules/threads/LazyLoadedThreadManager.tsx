@@ -15,7 +15,7 @@ let c9;
 let closure_4;
 let hasOwnProperty;
 let metroImportAll;
-const f93344 = () => {
+const f93479 = () => {
   closure_11 = {};
   channelId = channelId.getChannelId();
   const tmp2 = null != channelId && null == channel.getChannel(channelId);
@@ -28,7 +28,7 @@ function initialize() {
   if (!tmp) {
     c12 = true;
     const obj = DispatcherDefault;
-    const subscription = obj.subscribe("CONNECTION_OPEN", f93344);
+    const subscription = obj.subscribe("CONNECTION_OPEN", f93479);
   }
 }
 function dispatchLoadedThread(nextResult, arg1) {
@@ -59,7 +59,7 @@ function loadThread(channelId) {
       c12 = true;
       let tmp2 = importDefault;
       let obj = DispatcherDefault;
-      const subscription = obj.subscribe("CONNECTION_OPEN", f93344);
+      const subscription = obj.subscribe("CONNECTION_OPEN", f93479);
     }
     if (GatewayConnectionStore.isConnected()) {
       if (null != closure_11[channelId]) {
@@ -76,9 +76,9 @@ function loadThread(channelId) {
         const matchPath = require("matchPathCompat").matchPath;
         CHANNEL = constants.CHANNEL;
         require("matchPathCompat");
-        const RouteParam = tmp13(4717).RouteParam;
+        const RouteParam = tmp13(4723).RouteParam;
         guildIdResult = RouteParam.guildId();
-        RouteParam2 = tmp13(4717).RouteParam;
+        RouteParam2 = tmp13(4723).RouteParam;
         importDefault = matchPath(pathname, obj2);
         const HTTP = tmp13(1282).HTTP;
         const get = HTTP.get;
@@ -104,7 +104,7 @@ function loadThread(channelId) {
         const catchPromise = nextPromise.catch(() => {
           let guildId;
           closure_11[id] = { type: "NOT_FOUND" };
-          const obj = { id, guild_id: guildId, parent_id: "r" };
+          const obj = { id, guild_id: guildId, parent_id: "Array" };
           guildId = undefined;
           const dispatch = DispatcherDefault.dispatch;
           DispatcherDefault;
@@ -151,7 +151,7 @@ let obj = {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp10 = nextResult;
-        if (nextResult !== items1(6722).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(6736).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (!isStaticChannelRoute(tmp10)) {
             if (null == ChannelStore.getChannel(tmp10)) {
               let tmp19 = closure_11[tmp10];

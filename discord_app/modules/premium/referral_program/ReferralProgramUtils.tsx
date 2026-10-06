@@ -31,7 +31,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = stateFromStores1;
       let obj = stateFromStores1(576);
       const cResult = obj.c(7);
-      const obj2 = stateFromStores1(7727);
+      const obj2 = stateFromStores1(7738);
       let isEligibleSenderForReferralProgram = obj2.useIsEligibleSenderForReferralProgram(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReferralTrialStore];
@@ -150,7 +150,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let stateFromStores1;
-      let obj = stateFromStores1(7727);
+      let obj = stateFromStores1(7738);
       let isEligibleSenderForReferralProgram = obj.useIsEligibleSenderForReferralProgram(false);
       const items = [ReferralTrialStore];
       const obj2 = stateFromStores1(504);

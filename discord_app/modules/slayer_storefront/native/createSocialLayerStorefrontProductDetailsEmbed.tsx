@@ -1,7 +1,7 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
 import intl4 from "../../../intl/index.native.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
-import _modDef3593 from "../intl/SlayerStorefront.messages.js";
+import _modDef3623 from "../intl/SlayerStorefront.messages.js";
 import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchApplications.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
 import StorefrontUtils from "../../storefront/StorefrontUtils.tsx";
@@ -77,11 +77,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp4) {
         const fn2 = function s() {
-          const f141056 = (applicationId) => applicationId.applicationId;
+          const f141262 = (applicationId) => applicationId.applicationId;
           const mapped = closure_0.map((item) => closure_1_5.get(item));
           const found = mapped.filter(GlobalUtils.isNotNullish);
-          const items = [...new Set(found.map(f141056))];
-          new Set(found.map(f141056));
+          const items = [...new Set(found.map(f141262))];
+          new Set(found.map(f141262));
           return items;
         };
         const items1 = [tmp4];
@@ -135,16 +135,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresArray = obj.useStateFromStoresArray(
         items1,
         () => {
-          const f141059 = (applicationId) => applicationId.applicationId;
+          const f141265 = (applicationId) => applicationId.applicationId;
           const mapped = memo.map((item) => closure_1_5.get(item));
           const found = mapped.filter(GlobalUtils.isNotNullish);
-          const items = [...new Set(found.map(f141059))];
-          new Set(found.map(f141059));
+          const items = [...new Set(found.map(f141265))];
+          new Set(found.map(f141265));
           return items;
         },
         items2,
       );
-      memo(6663)(stateFromStoresArray);
+      memo(6670)(stateFromStoresArray);
     };
 let result = size.fileFinishedImporting(
   "modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx",
@@ -228,7 +228,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               stringResult = string(intl4.t.boqtTA);
             } else {
-              stringResult = string(_modDef3593.BKf0MM);
+              stringResult = string(_modDef3623.BKf0MM);
             }
             prop = undefined;
             if (result1) {

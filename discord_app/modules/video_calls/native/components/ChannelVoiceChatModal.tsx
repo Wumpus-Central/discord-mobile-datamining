@@ -87,7 +87,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         str = "";
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp11 = jsx(tmp(5881).StageIcon, { size: "sm" });
+        const tmp11 = jsx(tmp(5888).StageIcon, { size: "sm" });
         cResult[3] = tmp11;
         tmp9 = tmp11;
       } else {
@@ -152,7 +152,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         <tmp5
           screenKey="StageVoiceChat"
           title={str}
-          titleIcon={jsx(channel(5881).StageIcon, { size: "sm" })}
+          titleIcon={jsx(channel(5888).StageIcon, { size: "sm" })}
           render={function render() {
             let guild_id = channel.guild_id;
             const Provider = reactDefault.Provider;

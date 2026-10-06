@@ -66,7 +66,7 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     };
     navigation.push(PREMIUM_PLAN_SELECT, obj);
   } else {
-    const pushLazy = flag2(5093).pushLazy;
+    const pushLazy = flag2(5099).pushLazy;
     const obj3 = {
       initialRoute: PREMIUM_PLAN_SELECT,
       analyticsLocation,
@@ -81,8 +81,8 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
       onPaymentSuccess,
       onPaymentDismiss,
     };
-    flag2(5093);
-    const tmp8 = asyncRequire(6918, dependencyMap.paths);
+    flag2(5099);
+    const tmp8 = asyncRequire(6929, dependencyMap.paths);
     pushLazy(tmp8, obj3, PremiumModal.PREMIUM_KEY);
   }
   const obj2 = UserSettingsUtils;

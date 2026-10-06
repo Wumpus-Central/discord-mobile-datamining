@@ -628,7 +628,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let items2;
       let items3;
       let screens;
-      const f132621 = () => {
+      const f132840 = () => {
         let tmp3;
         const obj = { screens: buildScreenMap(modalKey, handleClose), initialStack: tmp3 };
         _modDef38(memo.length > 0, "At least one step must be provided to RoleTierEditScenesModal");
@@ -694,8 +694,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       let obj = { children: items2 };
-      ({ screens, initialStack } = modalKey(steps[20])(f132621));
-      const tmp5 = modalKey(steps[20])(f132621);
+      ({ screens, initialStack } = modalKey(steps[20])(f132840));
+      const tmp5 = modalKey(steps[20])(f132840);
       let obj2 = {
         screens,
         initialRouteStack: initialStack,

@@ -6,10 +6,10 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import MemberVerificationTypes from "../../guild_member_verification/MemberVerificationTypes.tsx";
 import LegacyTokens from "../../../design/migrations/native/LegacyTokens.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11917_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/16240_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/16241_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/16242_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/11931_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/16280_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/16281_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../_runtime/16282_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";

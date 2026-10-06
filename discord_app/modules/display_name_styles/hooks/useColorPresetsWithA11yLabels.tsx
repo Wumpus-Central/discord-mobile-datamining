@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import intl2 from "../../../intl/index.native.tsx";
 import DisplayNameStylesConstants from "../DisplayNameStylesConstants.tsx";
-import _modDef2883 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2911 from "../intl/DisplayNameStyles.messages.js";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -27,7 +27,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const intl = intl2.intl;
             formatToPlainString = intl.formatToPlainString;
             obj2 = { number: arg1 + 1, hexList: mapped.join(", ") };
-            FHfTsV = _modDef2883.FHfTsV;
+            FHfTsV = _modDef2911.FHfTsV;
             mapped = colors.map(utils_ColorUtils.int2hex);
             return obj;
           };

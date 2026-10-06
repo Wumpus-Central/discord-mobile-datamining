@@ -445,8 +445,8 @@ const memoResult = react.memo(
                   let tmp9;
                   let tmp = arg0;
                   if (arg0 == null) {
-                    tmp = { onPress, ref: "r" };
-                    const obj = { onPress, ref: "r" };
+                    tmp = { onPress, ref: "Array" };
+                    const obj = { onPress, ref: "Array" };
                   }
                   const obj2 = { targetRef: tmp.ref, canShowTooltip: tmp9 };
                   tmp9 = queueAudioSwap;
@@ -779,8 +779,8 @@ const memoResult = react.memo(
             let tmp9;
             let tmp = arg0;
             if (arg0 == null) {
-              tmp = { onPress, ref: "r" };
-              const obj = { onPress, ref: "r" };
+              tmp = { onPress, ref: "Array" };
+              const obj = { onPress, ref: "Array" };
             }
             const obj2 = { targetRef: tmp.ref, canShowTooltip: tmp9 };
             tmp9 = closure_15;

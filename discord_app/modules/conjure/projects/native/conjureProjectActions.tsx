@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/projects/native/conjureProjectActions.tsx
 import intl13 from "../../../../intl/index.native.tsx";
 import ChannelConstants from "../../../channel/ChannelConstants.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
@@ -313,7 +313,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
       React3(project.id);
       const id = project.id;
       const intl = intl13.intl;
-      hasOwnProperty(id, intl.string(_modDef3723.oU20rd));
+      hasOwnProperty(id, intl.string(_modDef3753.oU20rd));
     },
   };
   intl5 = tmp14(muted[7]).intl;
@@ -384,7 +384,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
       obj.copy(project.id);
       const obj2 = {
         key: "VIBEGRATIONS_PROJECT_ID_COPIED",
-        content: intl.string(_modDef3723.CmfaZG),
+        content: intl.string(_modDef3753.CmfaZG),
         IconComponent: CopyIcon.CopyIcon,
       };
       const open = ToastActionCreatorsDefault.open;
@@ -421,8 +421,8 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         const tmp = AlertModal;
         obj = {
           key: "VibegrationsProjectDelete",
-          title: intl.formatToPlainString(_modDef3723.CJBhb2, obj2),
-          content: intl2.string(_modDef3723["0OmrVn"]),
+          title: intl.formatToPlainString(_modDef3753.CJBhb2, obj2),
+          content: intl2.string(_modDef3753["0OmrVn"]),
           confirmText: intl3.string(intl13.t.oyYWHE),
           onConfirm() {
             obj = project(muted[29]);

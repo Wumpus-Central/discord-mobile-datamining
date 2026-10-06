@@ -19,15 +19,15 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let dependencyMap, importDefault;
 
-const f89123 = (stop) => stop.stop;
-const f89124 = (item) => nativeDefault.unsafe_rawColors[item.token];
+const f89260 = (stop) => stop.stop;
+const f89261 = (item) => nativeDefault.unsafe_rawColors[item.token];
 function getGradientColorByPercentage(type, MID) {
   let colors;
   let colors2;
   if (type.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     ({ colors, colors: colors2 } = type);
-    const mapped = colors.map(f89124);
-    const mapped1 = colors2.map(f89123);
+    const mapped = colors.map(f89261);
+    const mapped1 = colors2.map(f89260);
     const obj6 = _modDef683;
     const scaleResult = obj6.scale(mapped);
     const obj8 = scaleResult.domain(mapped1)(MID);
@@ -358,8 +358,8 @@ function getClientThemesGradientColorByPercentage(arg0, arg1) {
   let colors;
   let colors2;
   ({ colors, colors: colors2 } = arg0);
-  const mapped = colors.map(f89124);
-  const mapped1 = colors2.map(f89123);
+  const mapped = colors.map(f89261);
+  const mapped1 = colors2.map(f89260);
   const obj = _modDef683;
   const scaleResult = obj.scale(mapped);
   obj3 = scaleResult.domain(mapped1)(arg1);
@@ -368,7 +368,7 @@ function getClientThemesGradientColorByPercentage(arg0, arg1) {
 }
 function getClientThemesGradientHexColors(colors) {
   colors = colors.colors;
-  return colors.map(f89124);
+  return colors.map(f89261);
 }
 function getGradientValue(theme, END) {
   return calculateGradientValueWithOpacity(theme, END, theme.theme);
@@ -397,7 +397,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
       }
       if (gradient.type === ClientThemesTypes.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
         const colors = gradient.colors;
-        mapped = colors.map(f89124);
+        mapped = colors.map(f89261);
       } else {
         mapped = gradient.customThemeSettings.colors;
       }

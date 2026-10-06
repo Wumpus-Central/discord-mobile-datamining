@@ -82,7 +82,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[4];
       }
       if (cResult[5] !== tmp9) {
-        const tmp12 = jsx(tmp(6496).Navigator, { screens: tmp9, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
+        const tmp12 = jsx(tmp(6503).Navigator, { screens: tmp9, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
         cResult[5] = tmp9;
         cResult[6] = tmp12;
         tmp10 = tmp12;
@@ -129,7 +129,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         intl = intl2.intl;
         return obj;
       }, items);
-      return jsx(bottom(6496).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
+      return jsx(bottom(6503).Navigator, { screens, initialRouteName: "FAVORITES_GUILD_CHANNEL_SORT" });
     };
 const result = size.fileFinishedImporting("modules/favorites/native/modal/FavoritesGuildChannelSortModal.tsx");
 

@@ -7,7 +7,7 @@ import shared from "../../../../design/shared.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import SortedGuildStore2 from "../../../../stores/SortedGuildStore.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import FastList from "../../../../lib/native/FastList.tsx";
 import ContextMenuState from "../../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
 import roundToNearestPixelDefault from "../../../voice_panel/native/utils/roundToNearestPixel.tsx";
@@ -739,7 +739,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    setStateShallow({ dragSpecs: "Array", overSpecs: "Set" });
+    setStateShallow({ dragSpecs: "start", overSpecs: "unicodeVersion" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj10 = { mode: null };

@@ -3,11 +3,11 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
 import react2 from "../../../../../_runtime/00576_react.js";
 import intl4 from "../../../../intl/index.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04816_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04822_AssetRegistry.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import IconButton2 from "../../../../design/components/Button/native/IconButton.native.tsx";
 import IconActionButton from "IconActionButton.tsx";
-import _mod15956 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
+import _mod15995 from "../../../../design/components/LottieIcon/native/generated/index.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import MessageRequestStore from "../../../message_request/MessageRequestStore.tsx";
@@ -131,7 +131,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
       const effect = react.useEffect(tmp5, tmp6);
       if (cResult[3] !== color) {
         const obj3 = { ref, color, size: "sm", autoPlay: true };
-        const tmp10 = React4(_mod15956.MessageRequestLottie, obj3);
+        const tmp10 = React4(_mod15995.MessageRequestLottie, obj3);
         cResult[3] = color;
         cResult[4] = tmp10;
         tmp8 = tmp10;
@@ -155,7 +155,7 @@ const IconComponent = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      return React4(_mod15956.MessageRequestLottie, { ref, color, size: "sm", autoPlay: true });
+      return React4(_mod15995.MessageRequestLottie, { ref, color, size: "sm", autoPlay: true });
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -366,8 +366,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           const merged2 = Object.assign(merged);
           tmp24 = React4(IconButton, obj4);
         }
-        items = [tmp24, tmp3.requestCount > 0 && tmp27(tmp26(13097).ButtonBadge, { badgePosition: "right" })];
-        tmp3.requestCount > 0 && tmp27(tmp26(13097).ButtonBadge, { badgePosition: "right" });
+        items = [tmp24, tmp3.requestCount > 0 && tmp27(tmp26(13116).ButtonBadge, { badgePosition: "right" })];
+        tmp3.requestCount > 0 && tmp27(tmp26(13116).ButtonBadge, { badgePosition: "right" });
         return authStore(View, obj2);
       } else {
         const obj = {

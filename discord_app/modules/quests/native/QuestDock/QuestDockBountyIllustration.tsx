@@ -11,7 +11,7 @@ import APNGPlayer2 from "../../../image/native/APNGPlayer.android.tsx";
 import BountiesMobileQuestBarExperiment2 from "../../experiments/BountiesMobileQuestBarExperiment.tsx";
 import QuestDockHooks from "QuestDockHooks.tsx";
 import useIsQuestDockContentVisibleDefault from "useIsQuestDockContentVisible.tsx";
-import _modDef15015 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
+import _modDef15030 from "../../../../../discord_assets/assets/quests/bounties/QuestBar_3DOrbs_2X.png.js";
 import react from "../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import QuestDockConstants from "QuestDockConstants.tsx";
@@ -296,7 +296,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         const effect = react.useEffect(tmp7, tmp8);
         if (cResult[4] !== tmp4.fill) {
           const APNGPlayer = APNGPlayer2.APNGPlayer;
-          const tmp13 = <APNGPlayer ref={ref} url={_modDef15015} style={tmp4.fill} autoplay={false} />;
+          const tmp13 = <APNGPlayer ref={ref} url={_modDef15030} style={tmp4.fill} autoplay={false} />;
           cResult[4] = tmp4.fill;
           cResult[5] = tmp13;
           tmp10 = tmp13;
@@ -335,7 +335,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       const APNGPlayer = APNGPlayer2.APNGPlayer;
-      return <APNGPlayer ref={ref} url={_modDef15015} style={tmp.fill} autoplay={false} />;
+      return <APNGPlayer ref={ref} url={_modDef15030} style={tmp.fill} autoplay={false} />;
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
@@ -377,7 +377,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp10;
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { uri: _modDef15015 };
+          const obj3 = { uri: _modDef15030 };
           cResult[4] = obj3;
           tmp10 = obj3;
         } else {
@@ -419,7 +419,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp2Result.isAndroid()) {
         tmp6Result = <closure_12 shouldAnimate={tmp5} />;
       } else {
-        const obj4 = { uri: _modDef15015 };
+        const obj4 = { uri: _modDef15030 };
         FastImageDefault;
         tmp6Result = (
           <tmp8

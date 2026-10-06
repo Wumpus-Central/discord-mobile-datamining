@@ -8,9 +8,9 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
-import _modDef7952 from "../../../../../_runtime/metro/07952__.js";
-import PaginationDefault from "../../../../../_runtime/10491_Pagination.js";
-import AssetRegistryDefault from "../../../../../_runtime/11181_AssetRegistry.js";
+import _modDef7963 from "../../../../../_runtime/metro/07963__.js";
+import PaginationDefault from "../../../../../_runtime/10504_Pagination.js";
+import AssetRegistryDefault from "../../../../../_runtime/11194_AssetRegistry.js";
 import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -393,7 +393,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_14(_modDef7952, obj7),
+        children: closure_14(_modDef7963, obj7),
       };
       obj7 = {
         maximumValue: values.length - 1,

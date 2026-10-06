@@ -166,7 +166,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                           children: items,
                         };
                         items = [tmp24, children];
-                        const tmp30 = closure_8(tmp(5909).PressableOpacity, obj3);
+                        const tmp30 = closure_8(tmp(5916).PressableOpacity, obj3);
                         cResult[21] = accessibilityLabel;
                         cResult[22] = children;
                         cResult[23] = disabled;
@@ -214,7 +214,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             tmp15 = tmp18;
           }
           let tmp11 = null;
-          const tmpResult = tmp(4729);
+          const tmpResult = tmp(4735);
           if (tmpResult.isThemeDark(theme)) {
             tmp11 = null;
             if (!(undefined === disableBackground || disableBackground)) {

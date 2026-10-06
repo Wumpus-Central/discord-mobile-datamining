@@ -166,9 +166,9 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     }
     return guildId;
   });
-  let obj2 = stateFromStores3(15306);
+  let obj2 = stateFromStores3(15321);
   const inHoldout = obj2.useConfig({ location: "useGuildOpenNudge" }).inHoldout;
-  let obj3 = stateFromStores(12054);
+  let obj3 = stateFromStores(12069);
   const canSeePushNotificationNudge = obj3.useCanSeePushNotificationNudge();
   const items1 = [UserGuildSettingsStore];
   const obj4 = stateFromStores(504);
@@ -232,7 +232,7 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   });
   const obj7 = first1;
   if (tmp13) {
-    const tmpResult = tmp(4717);
+    const tmpResult = tmp(4723);
     tmp13 = !tmpResult.isPseudoGuildId(stateFromStores);
   }
   if (tmp13) {
@@ -254,8 +254,8 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     tmp13 = stateFromStores4;
   }
   let prop = null;
-  const useSelectedTimeRecurringGuildDismissibleContent = tmp(6891).useSelectedTimeRecurringGuildDismissibleContent;
-  tmp(6891);
+  const useSelectedTimeRecurringGuildDismissibleContent = tmp(6901).useSelectedTimeRecurringGuildDismissibleContent;
+  tmp(6901);
   if (tmp13) {
     prop = tmp(2036).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;
   }
@@ -274,7 +274,7 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
       const result = obj.setPushPermissionReactivationSeen(PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET);
       const obj3 = { guildId: stateFromStores, markAsDismissed };
       const obj2 = ActionSheetActionCreatorsDefault;
-      obj2.openLazy(asyncRequire(16466, dependencyMap.paths), c16, obj3);
+      obj2.openLazy(asyncRequire(16506, dependencyMap.paths), c16, obj3);
     }
   }, items6);
 };

@@ -8,8 +8,8 @@ import shared from "../../../../design/shared.tsx";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06626_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/06627_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06633_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/06634_AssetRegistry.js";
 import getEmojiItemUrlDefault from "../../../emojis/utils/getEmojiItemUrl.tsx";
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -385,7 +385,7 @@ let closure_14 = memo(
                             constructor(arg0) {
                               closure_0 = emojis;
                               found = emojis.find(() => {
-                                /* body not rendered: F140073 */
+                                /* body not rendered: F140279 */
                               });
                               if (null != found) {
                                 tmp2 = onLongPressEmoji;
@@ -407,7 +407,7 @@ let closure_14 = memo(
                           constructor(arg0) {
                             closure_0 = emojis;
                             found = emojis.find(() => {
-                              /* body not rendered: F140073 */
+                              /* body not rendered: F140279 */
                             });
                             if (null != found) {
                               tmp2 = onLongPressEmoji;
@@ -426,7 +426,7 @@ let closure_14 = memo(
                       constructor(arg0) {
                         closure_0 = emojis;
                         found = emojis.find(() => {
-                          /* body not rendered: F140072 */
+                          /* body not rendered: F140278 */
                         });
                         if (null != found) {
                           tmp2 = onPressEmoji;
@@ -466,7 +466,7 @@ let closure_14 = memo(
               constructor(arg0) {
                 closure_0 = emojis;
                 found = emojis.find(() => {
-                  /* body not rendered: F140073 */
+                  /* body not rendered: F140279 */
                 });
                 if (null != found) {
                   tmp2 = onLongPressEmoji;

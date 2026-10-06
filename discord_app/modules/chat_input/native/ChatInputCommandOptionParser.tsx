@@ -6,7 +6,7 @@ import getGameMediaRefURLDefault from "../../games/getGameMediaRefURL.tsx";
 import StringUtils from "../../../utils/StringUtils.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import AssetRegistryDefault from "../../../../_runtime/07814_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/07825_AssetRegistry.js";
 import ChatInputParser from "ChatInputParser.tsx";
 import ApplicationCommandOptionValueParser from "ApplicationCommandOptionValueParser.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -362,30 +362,30 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
   }
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
-  const f152493 = (text) => _require(text.text) === closure_0;
+  const f152725 = (text) => _require(text.text) === closure_0;
   const items = [];
   const obj = ApplicationCommandOptionValueParser;
   const users = obj.getUsers(channel);
-  const f108355 = (arg0) => arg0;
+  const f108508 = (arg0) => arg0;
   let match = re17.exec(arg1);
   if (null != match) {
     do {
       let str = match[1];
       let closure_0 = str.trim();
-      if (null != users.find(f152493)) {
+      if (null != users.find(f152725)) {
         let obj3 = { location: match.index, length: match[0].length };
         let arr = items.push(obj3);
       }
       match = re17.exec(arg1);
     } while (null != match);
   }
-  const f108356 = (arg0) => arg0.split("#")[0];
+  const f108509 = (arg0) => arg0.split("#")[0];
   let match1 = re18.exec(arg1);
   if (null != match1) {
     do {
       let str2 = match1[1];
       closure_0 = str2.trim();
-      if (null != users.find(f152493)) {
+      if (null != users.find(f152725)) {
         let obj5 = { location: match1.index, length: match1[0].length };
         let arr2 = items.push(obj5);
       }

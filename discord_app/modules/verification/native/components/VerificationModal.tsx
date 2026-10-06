@@ -17,7 +17,7 @@ import UserSettingsConfirmPasswordDefault from "../../../user_settings/account/n
 import Navigator2 from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import VerifyPhoneDefault from "VerifyPhone.tsx";
 import HeaderActionButton2 from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09290_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09325_AssetRegistry.js";
 import OverviewDefault from "Overview.tsx";
 import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../../../../_runtime/00019_react.js";
@@ -519,7 +519,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[2];
       }
       if (cResult[3] !== navigation) {
-        const tmp13 = jsx(navigation(5594).Button, {
+        const tmp13 = jsx(navigation(5601).Button, {
           text: tmp9,
           onPress() {
             let ENTER_EMAIL;
@@ -553,7 +553,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const EmptyState = tmp(1188).EmptyState;
       const tmp15 = (
-        <EmptyState Illustration={navigation(17648).VerifyPhone} title={tmp5} body={tmp6}>
+        <EmptyState Illustration={navigation(17694).VerifyPhone} title={tmp5} body={tmp6}>
           {null}
         </EmptyState>
       );
@@ -588,11 +588,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           dispatch(StackActions.push(ENTER_EMAIL));
         },
       });
-      const Button = navigation(5594).Button;
+      const Button = navigation(5601).Button;
       intl3 = navigation(1126).intl;
       return (
         <EmptyState
-          Illustration={navigation(17648).VerifyPhone}
+          Illustration={navigation(17694).VerifyPhone}
           title={intl.string(navigation(1126).t.KLnLIP)}
           body={intl2.string(navigation(1126).t.XGbCq3)}
         >
@@ -721,7 +721,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = stateFromStores(dependencyMap[35]);
         obj2.dismissKeyboard();
       }, []);
-      const Navigator = stateFromStores(6496).Navigator;
+      const Navigator = stateFromStores(6503).Navigator;
       const intl = stateFromStores(1126).intl;
       return (
         <Navigator

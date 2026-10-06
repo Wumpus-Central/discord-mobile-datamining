@@ -35,7 +35,7 @@ let emojiCount,
   tmp3,
   tmp32,
   tmp5,
-  tmp8,
+  tmp7,
   tmp9,
   tmp9Result,
   tmp9Result1,
@@ -111,8 +111,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const AnimateEmoji = index(animation[9]).AnimateEmoji;
-      AnimateEmoji.useSetting() && !enabled;
+      emojiCount(animation[9])();
       const tmpResult = index(animation[10]);
       const sharedValue = tmpResult.useSharedValue(1);
       const tmpResult4 = index(animation[10]);
@@ -256,7 +255,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   );
                 }
                 return () => {
-                  /* body not rendered: F141516 */
+                  /* body not rendered: F141722 */
                 };
               }
             }
@@ -294,7 +293,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let emojiURL;
       let index;
       let obj3;
-      let tmp18;
+      let tmp17;
       ({ emoji, index } = emojiCount);
       emojiCount = emojiCount.emojiCount;
       let num = emojiCount.size;
@@ -319,12 +318,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = animation(obj.useState(null), 2);
       closure_6 = tmp4[1];
       let items = [name];
-      const first = tmp4[0];
       const callback = obj.useCallback(() => {
         closure_6(name);
       }, items);
-      const AnimateEmoji = tmp2(tmp3[9]).AnimateEmoji;
-      const tmp7 = AnimateEmoji.useSetting() && !enabled;
+      const tmp8 = emojiCount(num[9])();
       const tmp2Result = index(num[10]);
       sharedValue = tmp2Result.useSharedValue(1);
       const tmp2Result5 = index(num[10]);
@@ -451,11 +448,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__initData = __initData;
       const tmp2Result8 = index(num[10]);
       const animatedStyle = tmp2Result8.useAnimatedStyle(fn);
-      let obj2 = { style: animatedStyle, children: sharedValue(tmp18, obj3, name) };
+      let obj2 = { style: animatedStyle, children: sharedValue(tmp17, obj3, name) };
       const View = emojiCount(tmp3[10]).View;
       let str = "\u{1F615}";
-      tmp18 = emojiCount(num[15]);
-      if (first !== name) {
+      tmp17 = emojiCount(num[15]);
+      if (tmp4[0] !== name) {
         let str2 = "";
         if (null == emoji.id) {
           str2 = emoji.name;
@@ -464,17 +461,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3 = { name: str, src: emojiURL, fastImageStyle: null, textEmojiStyle: null, onError: callback };
       emojiURL = undefined;
-      if (first !== name) {
+      if (tmp4[0] !== name) {
         if (null != emoji.id) {
           let obj4 = { id: null, animated, size: num };
           ({ id: obj9.id, animated } = emoji);
-          const getEmojiURL = tmp17(num[14]).getEmojiURL;
+          const getEmojiURL = tmp7(num[14]).getEmojiURL;
           emojiCount(num[14]);
           if (animated == null) {
             animated = false;
           }
           if (animated) {
-            animated = tmp7;
+            animated = tmp8;
           }
           emojiURL = getEmojiURL(obj4);
         }

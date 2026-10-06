@@ -376,9 +376,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_1;
       let closure_2;
       let gradientBottom;
-      let obj = gradientBottom(4580);
+      let obj = gradientBottom(4586);
       const token = obj.useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-      let obj2 = gradientBottom(7507);
+      let obj2 = gradientBottom(7518);
       gradientBottom = obj2.useGradientBottom();
       let backgroundColor1;
       if (gradientBottom != null) {

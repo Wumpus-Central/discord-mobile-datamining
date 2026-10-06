@@ -3,7 +3,7 @@ import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
 import intl3 from "../../../intl/index.native.tsx";
-import _modDef3367 from "../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import useScaledRowHeightDefault from "../../main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx";
@@ -48,20 +48,20 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = arr(576);
       const cResult = obj.c(21);
       const tmp4 = closure_13();
-      let obj2 = arr(16032);
+      let obj2 = arr(16071);
       const categoryStyles = obj2.useCategoryStyles();
       arr = closure_5();
       const tmp6 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef3367.F3dWTe);
+        const stringResult = intl.string(_modDef3395.F3dWTe);
         cResult[0] = stringResult;
         first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] !== tmp6) {
-        let obj3 = { label: first, perform: tmp6, Icon: tmp(6017).XSmallIcon };
+        let obj3 = { label: first, perform: tmp6, Icon: tmp(6024).XSmallIcon };
         cResult[1] = tmp6;
         cResult[2] = obj3;
         tmp10 = obj3;
@@ -170,13 +170,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp19 = fn;
         }
         const obj7 = {
-          name: intl2.string(_modDef3367.oHWnLy),
+          name: intl2.string(_modDef3395.oHWnLy),
           withMarginTop: false,
           styles: categoryStyles,
           trailingAction: tmp10,
         };
-        const renderCategoryItem = tmp(16032).renderCategoryItem;
-        tmp(16032);
+        const renderCategoryItem = tmp(16071).renderCategoryItem;
+        tmp(16071);
         intl2 = tmp(1126).intl;
         const renderCategoryItemResult = renderCategoryItem(obj7);
         cResult[5] = categoryStyles;
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let perform;
       let style;
       let tmp = closure_13();
-      let obj = arr(16032);
+      let obj = arr(16071);
       const categoryStyles = obj.useCategoryStyles();
       arr = closure_5();
       const tmp5 = closure_6();
@@ -201,7 +201,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [tmp5];
       const memo = react.useMemo(() => {
         let intl;
-        const obj = { label: intl.string(_modDef3367.F3dWTe), perform, Icon: XSmallIcon.XSmallIcon };
+        const obj = { label: intl.string(_modDef3395.F3dWTe), perform, Icon: XSmallIcon.XSmallIcon };
         intl = intl3.intl;
         return obj;
       }, items);
@@ -213,13 +213,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (0 !== arr.length) {
         let obj2 = { style: tmp.container, children: items2 };
         let obj3 = {
-          name: intl.string(_modDef3367.oHWnLy),
+          name: intl.string(_modDef3395.oHWnLy),
           withMarginTop: false,
           styles: categoryStyles,
           trailingAction: memo,
         };
-        const renderCategoryItem = arr(16032).renderCategoryItem;
-        arr(16032);
+        const renderCategoryItem = arr(16071).renderCategoryItem;
+        arr(16071);
         intl = tmp2(1126).intl;
         items2 = [renderCategoryItem(obj3)];
         const obj4 = {

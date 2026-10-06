@@ -7,11 +7,11 @@ import CreateChannelModalActionCreatorsDefault from "../../../../../actions/nati
 import GuildSettingsActionCreatorsDefault from "../../../../guild_settings/GuildSettingsActionCreators.tsx";
 import instant_invite_InstantInviteUtils from "../../../../instant_invite/native/InstantInviteUtils.tsx";
 import GuildDirectoryAddModalActionCreatorsDefault from "../../../../directory_channels/native/components/GuildDirectoryAddModalActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/12442_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/12457_AssetRegistry.js";
 import HappeningNowCardDefault from "HappeningNowCard.tsx";
-import AssetRegistryDefault2 from "../../../../../../_runtime/16016_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../../_runtime/16017_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../../../_runtime/16018_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/16055_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../_runtime/16056_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../../../_runtime/16057_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import GuildChannelStore from "../../../../../stores/GuildChannelStore.tsx";

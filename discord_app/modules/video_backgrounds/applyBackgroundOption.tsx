@@ -224,7 +224,7 @@ obj = function _applyBackgroundOptionLive() {
       }
       await "IconComponent";
       location = track.location;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;
@@ -253,7 +253,7 @@ obj = function _applyBackgroundOptionPreview() {
       }
       await "IconComponent";
       location = track.location;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

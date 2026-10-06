@@ -1,7 +1,7 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
 import react from "../../../../_runtime/00576_react.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import _modDef7063 from "../../../../_runtime/metro/07063__.js";
+import _modDef7076 from "../../../../_runtime/metro/07076__.js";
 import useAvatarColor from "../../avatar/useAvatarColor.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -98,7 +98,7 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         [tmp4, tmp5, tmp6] = first;
         const obj = { r: tmp4, g: tmp5, b: tmp6 };
         _slicedToArray(first, 3);
-        const obj2 = _modDef7063(obj);
+        const obj2 = _modDef7076(obj);
         let num2 = 1;
         ({ h, s, l } = obj2.toHsl());
         obj2.toHsl();
@@ -106,7 +106,7 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
           num2 = AccessibilityStore.saturation;
         }
         const obj9 = { h, s: s * num2, l };
-        const obj4 = _modDef7063(obj9);
+        const obj4 = _modDef7076(obj9);
         return obj4.toHexString();
       } else {
         return null;

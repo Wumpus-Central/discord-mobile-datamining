@@ -83,7 +83,7 @@ const memoResult = react.memo(
           } else {
             tmp17 = cResult[7];
           }
-          const tmp5Result = importDefault(showKeyboardIcon ? 11059 : 8412);
+          const tmp5Result = importDefault(showKeyboardIcon ? 11072 : 8445);
           if (cResult[8] === tmp9.expressionButtonIconTint) {
             if (cResult[9] === token1) {
               let tmp19;
@@ -168,7 +168,7 @@ const memoResult = react.memo(
         ({
           size: token1,
           style: tmp7.expressionButtonIconTint,
-          source: importDefault(showKeyboardIcon ? 11059 : 8412),
+          source: importDefault(showKeyboardIcon ? 11072 : 8445),
         });
         const Icon = native.Icon;
         return (

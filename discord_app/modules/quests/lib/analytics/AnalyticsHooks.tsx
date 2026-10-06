@@ -24,7 +24,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp3;
       let obj = getQuestImpressionId(576);
       const cResult = obj.c(2);
-      let obj2 = getQuestImpressionId(10916);
+      let obj2 = getQuestImpressionId(10929);
       getQuestImpressionId = obj2.useGetQuestImpressionId();
       if (cResult[0] !== getQuestImpressionId) {
         const fn = function t(properties) {
@@ -47,7 +47,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let getQuestImpressionId;
-      let obj = getQuestImpressionId(10916);
+      let obj = getQuestImpressionId(10929);
       getQuestImpressionId = obj.useGetQuestImpressionId();
       const items = [getQuestImpressionId];
       return react.useCallback((properties) => {
@@ -276,7 +276,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp3;
       let obj = getQuestImpressionId(576);
       const cResult = obj.c(2);
-      let obj2 = getQuestImpressionId(10916);
+      let obj2 = getQuestImpressionId(10929);
       getQuestImpressionId = obj2.useGetQuestImpressionId();
       if (cResult[0] !== getQuestImpressionId) {
         const fn = function t(properties) {
@@ -299,7 +299,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let getQuestImpressionId;
-      let obj = getQuestImpressionId(10916);
+      let obj = getQuestImpressionId(10929);
       getQuestImpressionId = obj.useGetQuestImpressionId();
       const items = [getQuestImpressionId];
       return react.useCallback((properties) => {
@@ -584,13 +584,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(19);
       questHomeHero = questHomeHero.questHomeHero;
       const shouldShowQuestHomeHeroContent = questHomeHero.shouldShowQuestHomeHeroContent;
-      const QuestContent = questHomeHero(5626).QuestContent;
+      const QuestContent = questHomeHero(5633).QuestContent;
       const tmp4 = shouldShowQuestHomeHeroContent
         ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED
         : QuestContent.QUEST_HOME_ENTRYPOINT;
       dependencyMap = tmp4;
       if (cResult[0] !== tmp4) {
-        const tmpResult = tmp(7212);
+        const tmpResult = tmp(7225);
         const contentProperties = tmpResult.getContentProperties(tmp4);
         delete tmp6["row_index"];
         cResult[0] = tmp4;
@@ -747,7 +747,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       questHomeHero = questHomeHero.questHomeHero;
       const shouldShowQuestHomeHeroContent = questHomeHero.shouldShowQuestHomeHeroContent;
       let memo;
-      const QuestContent = questHomeHero(5626).QuestContent;
+      const QuestContent = questHomeHero(5633).QuestContent;
       const tmp = shouldShowQuestHomeHeroContent
         ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED
         : QuestContent.QUEST_HOME_ENTRYPOINT;

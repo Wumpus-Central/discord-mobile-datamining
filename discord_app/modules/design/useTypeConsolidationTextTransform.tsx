@@ -26,7 +26,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj4 = { variant: "experimental/body-sm/medium", style };
         const obj3 = { variant: "experimental/body-sm/medium", style };
       } else {
-        obj4 = { variant, style: "r" };
+        obj4 = { variant, style: "Array" };
       }
       cResult[0] = variant;
       cResult[1] = manaTypeConsolidationExperiment;
@@ -40,7 +40,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = { variant: "experimental/body-sm/medium", style };
         const obj2 = { variant: "experimental/body-sm/medium", style };
       } else {
-        obj3 = { variant, style: "r" };
+        obj3 = { variant, style: "Array" };
       }
       return obj3;
     };

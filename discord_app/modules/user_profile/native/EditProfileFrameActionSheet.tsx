@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ProfileFrameRecord from "../../collectibles/records/ProfileFrameRecord.tsx";
 import UserProfileSettingsActionCreators from "../UserProfileSettingsActionCreators.tsx";
@@ -65,16 +65,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       ({ user, currentProfileFrame, guildId } = arg0);
       const tmp4 = closure_12();
       let str = user.id;
-      const tmp6 = selectedProfileFrame(7857);
+      const tmp6 = selectedProfileFrame(7868);
       if (str == null) {
         str = "";
       }
       const tmp6Result = tmp6(str);
       [selectedProfileFrame, tmp9] = react.useState(currentProfileFrame);
-      const tmpResult = guildId(7841);
+      const tmpResult = guildId(7852);
       const bottomSheetRef = tmpResult.useBottomSheetRef().bottomSheetRef;
-      const tmp5Result = selectedProfileFrame(6657);
-      const analyticsLocations = tmp5Result(tmp5(6681).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
+      const tmp5Result = selectedProfileFrame(6664);
+      const analyticsLocations = tmp5Result(tmp5(6688).EDIT_PROFILE_FRAME_SHEET).analyticsLocations;
       if (cResult[0] !== tmp6Result) {
         let tmp12 = null != tmp6Result;
         if (tmp12) {
@@ -360,7 +360,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = T;
       }
       const obj5 = {
-        type: selectedProfileFrame(6681).EDIT_PROFILE_FRAME_SHEET,
+        type: selectedProfileFrame(6688).EDIT_PROFILE_FRAME_SHEET,
         guild_id: guildId,
         profile_has_nitro_customization: tmp11,
       };
@@ -909,7 +909,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       let purchase;
       ({ previewSkuId, user, guildId } = arg0);
       const tmp = closure_12();
-      const tmp2 = purchase(7844)(previewSkuId);
+      const tmp2 = purchase(7855)(previewSkuId);
       const product = tmp2.product;
       let c0 = product;
       purchase = tmp2.purchase;
@@ -933,10 +933,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp3;
       }, items);
-      items1 = [closure_9(purchase(10998), { user, guildId, profileFrame: memo, maxWidth: 280 })];
+      items1 = [closure_9(purchase(11011), { user, guildId, profileFrame: memo, maxWidth: 280 })];
       const obj2 = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: items2 };
       items2 = [,];
-      const tmp4 = purchase(5605);
+      const tmp4 = purchase(5612);
       items2[0] = "" + tmp.previewGradient.color + "00";
       items2[1] = tmp.previewGradient.color;
       items1[1] = closure_9(tmp4, obj2);

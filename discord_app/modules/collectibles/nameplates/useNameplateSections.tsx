@@ -148,7 +148,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp27 = obj4;
         }
       }
-      const tmp2Result4 = stateFromStores(7065);
+      const tmp2Result4 = stateFromStores(7078);
       const nameplates = tmp2Result4.getNameplates(stateFromStores, tmp13);
       if (cResult[10] === tmp14) {
         let tmp18;
@@ -320,7 +320,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1[2] = obj4;
         return items1.filter((items) => items.items.length > 0);
       }, items2);
-      return first(13004)(tmp5, obj.PREVIEW);
+      return first(13023)(tmp5, obj.PREVIEW);
     };
 let result = size.fileFinishedImporting("modules/collectibles/nameplates/useNameplateSections.tsx");
 

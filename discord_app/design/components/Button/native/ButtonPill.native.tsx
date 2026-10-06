@@ -9,7 +9,7 @@ import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
 import ButtonHooks from "ButtonHooks.native.tsx";
 import ButtonShine from "ButtonShine.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import ButtonEllipsis from "ButtonEllipsis.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";

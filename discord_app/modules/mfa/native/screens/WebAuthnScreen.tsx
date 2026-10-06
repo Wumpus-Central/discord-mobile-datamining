@@ -197,7 +197,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const stringResult = intl.string(finish(1126).t.saHocI);
             const intl2 = finish(1126).intl;
             const stringResult1 = intl2.string(finish(1126).t.YpMrqM);
-            const tmp28 = jsx(finish(14596).KeyImage, {});
+            const tmp28 = jsx(finish(14612).KeyImage, {});
             cResult[7] = stringResult;
             cResult[8] = stringResult1;
             cResult[9] = tmp28;
@@ -394,7 +394,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       obj3 = {
         headerText: intl.string(finish(1126).t.saHocI),
         subtitle: intl2.string(finish(1126).t.YpMrqM),
-        headerImage: challenge(finish(14596).KeyImage, {}),
+        headerImage: challenge(finish(14612).KeyImage, {}),
         content: shouldDisplayAndroidFidoSelector,
         submit: challenge(tmp17Result, obj5),
         screenProps: { mfaChallenge, finish },

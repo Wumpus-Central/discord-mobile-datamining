@@ -393,10 +393,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         } = obj);
         return items;
       }, []);
-      const EditStateContextProvider = guildId(17944).EditStateContextProvider;
+      const EditStateContextProvider = guildId(17990).EditStateContextProvider;
       let obj3 = { guildId, children: null };
       const RoleSubscriptionSettingsDisabledContextProvider =
-        guildId(17921).RoleSubscriptionSettingsDisabledContextProvider;
+        guildId(17967).RoleSubscriptionSettingsDisabledContextProvider;
       let obj4 = {
         guildId,
         modalKey,

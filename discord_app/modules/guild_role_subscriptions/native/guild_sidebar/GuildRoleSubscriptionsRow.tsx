@@ -8,7 +8,7 @@ import ChannelConstants from "../../../channel/ChannelConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import RedesignChannelListConstants from "../../../channel_list_v2/native/RedesignChannelListConstants.tsx";
 import BaseChannelItemDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/12461_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/12476_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -51,9 +51,9 @@ export default function GuildRoleSubscriptionsRow(selected) {
         obj.hideActionSheet(closure_1_1);
       },
     };
-    obj.openLazy(asyncRequire(16131, dependencyMap.paths), c1, obj2);
+    obj.openLazy(asyncRequire(16170, dependencyMap.paths), c1, obj2);
   }, items1);
-  const ChannelModes = id(12016).ChannelModes;
+  const ChannelModes = id(12031).ChannelModes;
   if (selected) {
     DEFAULT = ChannelModes.SELECTED;
     tmp6 = tmp4;
@@ -64,10 +64,10 @@ export default function GuildRoleSubscriptionsRow(selected) {
   BaseChannelItemDefault;
   const intl = tmp6(1126).intl;
   let obj2 = { name: intl2.string(tmp6(1126).t["KzCF/6"]), mode: DEFAULT };
-  const BaseChannelName = tmp6(12016).BaseChannelName;
+  const BaseChannelName = tmp6(12031).BaseChannelName;
   intl2 = tmp6(1126).intl;
   ({ disableColor: true, mode: DEFAULT, source: AssetRegistryDefault });
-  const BaseChannelIcon = tmp6(12016).BaseChannelIcon;
+  const BaseChannelIcon = tmp6(12031).BaseChannelIcon;
   return (
     <tmp8
       onPress={callback}

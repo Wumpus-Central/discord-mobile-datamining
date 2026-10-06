@@ -5,7 +5,7 @@ import getNavigationModalPresentationDefault from "../../../main_tabs_v2/native/
 import BillingFlowsDefault from "../../../billing/native/smoke/BillingFlows.android.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
-import NativeStackView from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -25,7 +25,7 @@ const memoResult = react.memo(
         let tmp = accessibilityNativeStackOptions;
         let obj = accessibilityNativeStackOptions(576);
         const cResult = obj.c(6);
-        let obj2 = accessibilityNativeStackOptions(6496);
+        let obj2 = accessibilityNativeStackOptions(6503);
         accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [];
@@ -75,7 +75,7 @@ const memoResult = react.memo(
           cResult[3] = tmp11;
         }
         if (cResult[4] !== tmp6) {
-          const NativePaymentContextProvider = tmp(10551).NativePaymentContextProvider;
+          const NativePaymentContextProvider = tmp(10564).NativePaymentContextProvider;
           const tmp15 = (
             <NativePaymentContextProvider skuIDs={first} activeSubscription={null}>
               {null}

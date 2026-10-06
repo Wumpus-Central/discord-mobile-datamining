@@ -3,7 +3,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef4461 from "../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../_runtime/metro/04467__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
@@ -12,7 +12,7 @@ import GuildRoleSubscriptionsHooks from "../../GuildRoleSubscriptionsHooks.tsx";
 import FormSeparatorDefault from "../components/FormSeparator.tsx";
 import useManageSubscriptionCardDataDefault from "../../manage_subscriptions/useManageSubscriptionCardData.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/15053_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/15068_AssetRegistry.js";
 import FastAssetImageDefault from "../components/FastAssetImage.tsx";
 import GuildRoleSubscriptionCardAll from "../components/listing_elements/GuildRoleSubscriptionCard.tsx";
 import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -49,9 +49,9 @@ function CancelSubscriptionButtonFooter(guild) {
   [tmp3, c3] = cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
   const tmp4 = dependencyMap;
   cancelSubscription(isPurchasedViaAppleGeneric.useState(false), 2);
-  const tmp5 = subscription(6657);
-  const analyticsLocations = tmp5(subscription(6681).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
-  let obj = subscription(8871);
+  const tmp5 = subscription(6664);
+  const analyticsLocations = tmp5(subscription(6688).GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL).analyticsLocations;
+  let obj = subscription(8900);
   const cancelSubscription1 = obj.useCancelSubscription(subscription.id, subscription.isACOM);
   cancelSubscription = cancelSubscription1.cancelSubscription;
   isPurchasedViaAppleGeneric = subscription.isPurchasedViaAppleGeneric;
@@ -233,7 +233,7 @@ function CancelSubscriptionButtonFooter(guild) {
     }),
     items,
   );
-  Button = guild(5594).Button;
+  Button = guild(5601).Button;
   if (!tmp3) {
     if (isPurchasedViaAppleGeneric) {
       isPurchasedViaAppleGeneric = !nativePaymentsConnected;
@@ -251,7 +251,7 @@ let createStyles = createStyles_mod;
 let obj = {
   container: { flex: 1 },
   body: { marginVertical: 24, marginHorizontal: 16 },
-  heroImage: { width: "100%", height: "filter", aspectRatio: "<string:2353406737>" },
+  heroImage: { width: "100%", height: "__initData", aspectRatio: "<string:2353406737>" },
   footer: obj2,
 };
 obj2 = { borderTopColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_HOVER, borderTopWidth: 1, padding: 16 };
@@ -294,7 +294,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = GuildRoleSubscriptionListingEditStateUtilsAll;
       const first3 = _slicedToArray(obj5.useName(listingId), 1)[0];
       if (cResult[0] !== subscription.currentPeriodEnd) {
-        const obj6 = _modDef4461(subscription.currentPeriodEnd);
+        const obj6 = _modDef4467(subscription.currentPeriodEnd);
         const formatResult = obj6.format(c12);
         const intl = intl4.intl;
         const obj7 = { subscriptionEndDate: formatResult };
@@ -504,7 +504,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const first2 = _slicedToArray(obj3.useIntangibleBenefits(listingId), 1)[0];
       const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
       const first3 = _slicedToArray(obj4.useName(listingId), 1)[0];
-      const obj5 = _modDef4461(subscription.currentPeriodEnd);
+      const obj5 = _modDef4467(subscription.currentPeriodEnd);
       const formatResult = obj5.format(c12);
       const intl = intl4.intl;
       const formatResult1 = intl.format(intl4.t.EtAXzC, { subscriptionEndDate: formatResult });

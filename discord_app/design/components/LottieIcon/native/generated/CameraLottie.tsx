@@ -1,7 +1,7 @@
 // discord_app/design/components/LottieIcon/native/generated/CameraLottie.tsx
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../../_runtime/00576_react.js";
-import AssetRegistry from "../../../../../../_runtime/09628_AssetRegistry.js";
+import AssetRegistry from "../../../../../../_runtime/09641_AssetRegistry.js";
 import LottieIcon2 from "../LottieIcon.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../../../../modules/react_compiler/ReactCompilerGating.tsx";

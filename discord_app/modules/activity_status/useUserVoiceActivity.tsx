@@ -87,7 +87,7 @@ let PermissionStore = PermissionStore_mod;
 let VoiceStateStore = VoiceStateStore_mod;
 const Permissions = Constants.Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "Set" });
+let closure_7 = Object.freeze({ voiceState: "start", voiceChannel: "unicodeVersion" });
 function getUserVoiceState(arg0) {
   let guildId;
   let includeNonDiscoverable;

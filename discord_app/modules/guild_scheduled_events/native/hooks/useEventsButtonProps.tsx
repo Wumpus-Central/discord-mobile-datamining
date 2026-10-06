@@ -63,7 +63,7 @@ export default function useEventsButtonProps(id) {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     ActionSheetActionCreatorsDefault;
     const obj = { guildId: user.id };
-    const tmp2 = asyncRequire(12012, dependencyMap.paths);
+    const tmp2 = asyncRequire(12027, dependencyMap.paths);
     openLazy(tmp2, "UpcomingEventsLongPress-" + user.id, obj);
   }, items4);
   if (arr4.length > 0) {
@@ -74,10 +74,10 @@ export default function useEventsButtonProps(id) {
     const intl = tmp(1126).intl;
     name = intl.string(tmp(1126).t.tlopTM);
   }
-  let mode = tmp(12016).ChannelModes.DEFAULT;
+  let mode = tmp(12031).ChannelModes.DEFAULT;
   const tmp8 = hasUnread && !eventsMuted;
   if (tmp8) {
-    mode = tmp(12016).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(12031).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 }

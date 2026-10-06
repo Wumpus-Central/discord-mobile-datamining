@@ -34,7 +34,7 @@ let _require, importDefault;
 
 let closure_17;
 let closure_18;
-const f123546 = (item) => {
+const f123724 = (item) => {
   if ("unavailable-guilds" === item) {
     return closure_1_19(itemSize(itemMargin[25]), {}, item);
   } else if ("empty-nux" === item) {
@@ -1040,7 +1040,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                                         },
                                         renderFooter() {
                                           GuildsBarFooterWrapperDefault;
-                                          return <tmp>{closure_13.map(f123546)}</tmp>;
+                                          return <tmp>{closure_13.map(f123724)}</tmp>;
                                         },
                                         getRecyclerKey(arg0, arg1, arg2) {
                                           if (arg1 >= constants.GUILDS) {
@@ -1607,7 +1607,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             },
             renderFooter() {
               GuildsBarFooterWrapperDefault;
-              return <tmp>{items1.map(f123546)}</tmp>;
+              return <tmp>{items1.map(f123724)}</tmp>;
             },
             getRecyclerKey(arg0, arg1, arg2) {
               if (arg1 >= stateFromStores3.GUILDS) {

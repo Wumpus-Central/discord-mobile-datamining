@@ -20,7 +20,7 @@ let obj = {
     obj2.track(AnalyticEvents.OPEN_MODAL, obj3);
     const obj4 = ModalActionCreatorsDefault;
     const obj5 = { guildId, onClose: startCreateForumPostFlow };
-    obj4.pushLazy(asyncRequire(5962, dependencyMap.paths), obj5, React3);
+    obj4.pushLazy(asyncRequire(5969, dependencyMap.paths), obj5, React3);
   },
   closeMemberVerificationModal() {
     let flag = arg0;

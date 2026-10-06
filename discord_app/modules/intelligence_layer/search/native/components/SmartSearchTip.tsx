@@ -101,7 +101,7 @@ const memoResult = memo(
             accessibilityRole: "header",
             children: tmp7,
           };
-          const tmp12 = closure_5(guildId(4886).Text, obj2);
+          const tmp12 = closure_5(guildId(4892).Text, obj2);
           cResult[3] = tmp4.title;
           cResult[4] = tmp12;
           tmp10 = tmp12;
@@ -115,7 +115,7 @@ const memoResult = memo(
             lineClamp: 1,
             children: intl2.string(_modDef3919.QIdSmb),
           };
-          const Text = guildId(4886).Text;
+          const Text = guildId(4892).Text;
           intl2 = guildId(1126).intl;
           const tmp16 = closure_5(Text, obj3);
           cResult[5] = tmp16;
@@ -142,7 +142,7 @@ const memoResult = memo(
                 }
                 if (cResult[16] !== answerText) {
                   const obj4 = { variant: "text-md/normal", color: "text-default", children: answerText };
-                  const tmp28 = closure_5(guildId(4886).Text, obj4);
+                  const tmp28 = closure_5(guildId(4892).Text, obj4);
                   cResult[16] = answerText;
                   cResult[17] = tmp28;
                   tmp26 = tmp28;
@@ -189,7 +189,7 @@ const memoResult = memo(
                 return hasOwnProperty(Avatar, obj, user.id);
               }),
             };
-            const AvatarPile = guildId(12850).AvatarPile;
+            const AvatarPile = guildId(12869).AvatarPile;
             substr = arr.slice(0, 3);
             tmp20 = closure_5(AvatarPile, obj7);
           }
@@ -230,7 +230,7 @@ const memoResult = memo(
           accessibilityRole: "header",
           children: intl.string(guildId(3919).ydAwWi),
         };
-        const Text = citations(4886).Text;
+        const Text = citations(4892).Text;
         intl = citations(1126).intl;
         items1 = [closure_5(Text, obj4)];
         const obj5 = {
@@ -239,7 +239,7 @@ const memoResult = memo(
           lineClamp: 1,
           children: intl2.string(guildId(3919).QIdSmb),
         };
-        const Text2 = citations(4886).Text;
+        const Text2 = citations(4892).Text;
         intl2 = citations(1126).intl;
         items1[1] = closure_5(Text2, obj5);
         items2 = [closure_6(View, obj3)];
@@ -255,14 +255,14 @@ const memoResult = memo(
               return hasOwnProperty(Avatar, obj, user.id);
             }),
           };
-          const AvatarPile = tmp5(12850).AvatarPile;
+          const AvatarPile = tmp5(12869).AvatarPile;
           substr = memo.slice(0, 3);
           tmp4Result = closure_5(AvatarPile, obj6);
         }
         items2[1] = tmp4Result;
         items3 = [
           closure_6(View, obj2),
-          closure_5(citations(4886).Text, { variant: "text-md/normal", color: "text-default", children: answerText }),
+          closure_5(citations(4892).Text, { variant: "text-md/normal", color: "text-default", children: answerText }),
         ];
         return closure_6(View, obj);
       },

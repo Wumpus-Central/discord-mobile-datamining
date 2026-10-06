@@ -757,7 +757,7 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
   let obj3;
   let screen;
   let tmp2Result4;
-  let obj = icymiScreen(4737);
+  let obj = icymiScreen(4743);
   const rootNavigationRef = obj.getRootNavigationRef();
   ({ screen, forceNavigate } = drawerOpen);
   if (null != rootNavigationRef) {
@@ -776,15 +776,15 @@ export const navigateToRootTab = function navigateToRootTab(drawerOpen) {
           if (forceNavigate) {
             let obj2 = { screen, params: obj3 };
             obj3 = { guildId, channelId, drawerOpen: drawerOpen.drawerOpen };
-            const tmp2Result = icymiScreen(4737);
+            const tmp2Result = icymiScreen(4743);
             const rootNavigationRef1 = tmp2Result.getRootNavigationRef();
             if (null != rootNavigationRef1) {
               if (rootNavigationRef1.isReady()) {
                 if (tmp4) {
                   const rootState = rootNavigationRef1.getRootState();
                   const obj4 = { name: "tabs", key: "tabs-" + tmp2Result4.v4(), params: obj2 };
-                  const wrapRouteForRootNavigator = icymiScreen(4738).wrapRouteForRootNavigator;
-                  icymiScreen(4738);
+                  const wrapRouteForRootNavigator = icymiScreen(4744).wrapRouteForRootNavigator;
+                  icymiScreen(4744);
                   const _HermesInternal = HermesInternal;
                   const items = [obj4];
                   const items1 = [];

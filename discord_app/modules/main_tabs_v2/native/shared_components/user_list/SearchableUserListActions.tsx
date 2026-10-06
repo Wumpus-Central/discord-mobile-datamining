@@ -24,7 +24,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(8);
       actions = actions.actions;
       const style = actions.style;
-      const tmp2 = style(10597)();
+      const tmp2 = style(10610)();
       if (cResult[0] !== style) {
         let obj2 = style;
         flatten = flatten.flatten;
@@ -93,7 +93,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_2;
       actions = actions.actions;
       const style = actions.style;
-      const tmp = style(10597)();
+      const tmp = style(10610)();
       dependencyMap = tmp;
       const items = [actions, tmp, style];
       return react.useMemo(() => {

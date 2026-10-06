@@ -8,7 +8,7 @@ import HeaderActionButton2 from "../../../../../design/components/Navigator/nati
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import GuildSettingsVanityURLUtils from "../GuildSettingsVanityURLUtils.tsx";
 import ChangeVanityURLActionCreatorsDefault from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/17816_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/17862_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import ChangeVanityURLModalStore from "../../../../../stores/ChangeVanityURLModalStore.tsx";
@@ -109,7 +109,7 @@ class GuildSettingsModalVanityURL extends PureComponent {
       if (submitting) {
         fn = () => null;
       } else if (isEditing) {
-        let obj = self(6010);
+        let obj = self(6017);
         fn = obj.getHeaderConditionalBackButton(this.handleCancel);
       }
       const obj2 = { headerLeft: fn, headerRight: fn2 };
@@ -349,7 +349,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           styles: tmp4,
           contentContainerStyle,
         };
-        items3 = [closure_9(GuildSettingsModalVanityURL, obj4), closure_9(guildId(6536).NavScrim, {})];
+        items3 = [closure_9(GuildSettingsModalVanityURL, obj4), closure_9(guildId(6543).NavScrim, {})];
         tmp20 = closure_10(closure_11, obj3);
       }
       cResult[7] = contentContainerStyle;
@@ -395,7 +395,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           styles: tmp,
           contentContainerStyle,
         };
-        items3 = [closure_9(GuildSettingsModalVanityURL, obj6), closure_9(tmp2(6536).NavScrim, {})];
+        items3 = [closure_9(GuildSettingsModalVanityURL, obj6), closure_9(tmp2(6543).NavScrim, {})];
         tmp10 = closure_10(closure_11, obj5);
       }
       return tmp10;

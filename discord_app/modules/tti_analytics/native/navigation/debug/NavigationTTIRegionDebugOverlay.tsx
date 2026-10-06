@@ -251,7 +251,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const f74124 = () => {};
+const f74227 = () => {};
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0) => {
@@ -408,7 +408,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             accessible: false,
             children: tmp7,
           };
-          const tmp15 = closure_7(surface(4886).Text, obj3);
+          const tmp15 = closure_7(surface(4892).Text, obj3);
           cResult[8] = tmp7;
           cResult[9] = tmp4.badgeText;
           cResult[10] = str5;
@@ -600,18 +600,18 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       ({ regionId, tracking, descendantTracking, includedDescendants, excludedDescendants, hierarchyDepth, violation } =
         name);
       const tmp4 = closure_10();
-      let obj2 = name(16481);
+      let obj2 = name(16521);
       const navTTISurface = obj2.useNavTTISurface();
       const tmp6 = react;
       [tmp8, dependencyMap] = react.useState(false);
       _slicedToArray(react.useState(false), 2);
-      if (typeof f74124 === "function") {
+      if (typeof f74227 === "function") {
         const useSyncExternalStore = tmp6.useSyncExternalStore;
-        const subscribeNavigationTTIDebugFreezeTarget = tmp(16485).subscribeNavigationTTIDebugFreezeTarget;
+        const subscribeNavigationTTIDebugFreezeTarget = tmp(16525).subscribeNavigationTTIDebugFreezeTarget;
         const syncExternalStore = useSyncExternalStore(
           subscribeNavigationTTIDebugFreezeTarget,
-          tmp(16485).getNavigationTTIDebugFreezeTarget,
-          tmp(16485).getNavigationTTIDebugFreezeTarget,
+          tmp(16525).getNavigationTTIDebugFreezeTarget,
+          tmp(16525).getNavigationTTIDebugFreezeTarget,
         );
         if (cResult[0] === name) {
           if (cResult[1] === regionId) {
@@ -911,7 +911,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                                                 accessible: false,
                                                 children: combined1,
                                               };
-                                              const tmp61 = closure_7(name(4886).Text, obj6);
+                                              const tmp61 = closure_7(name(4892).Text, obj6);
                                               cResult[32] = combined1;
                                               cResult[33] = tmp4.badgeText;
                                               cResult[34] = num32;
@@ -1071,20 +1071,20 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_5;
       const regionId = name.regionId;
       const tmp = closure_10();
-      let obj = name(16481);
+      let obj = name(16521);
       const navTTISurface = obj.useNavTTISurface();
       const tmp6 = _slicedToArray(react.useState(false), 2);
       [tmp7, c2] = tmp6;
       const tmp5 = react;
-      if (typeof f74124 === "function") {
+      if (typeof f74227 === "function") {
         let str5;
         let combined;
         const useSyncExternalStore = tmp5.useSyncExternalStore;
-        const subscribeNavigationTTIDebugFreezeTarget = tmp2(16485).subscribeNavigationTTIDebugFreezeTarget;
+        const subscribeNavigationTTIDebugFreezeTarget = tmp2(16525).subscribeNavigationTTIDebugFreezeTarget;
         const syncExternalStore = useSyncExternalStore(
           subscribeNavigationTTIDebugFreezeTarget,
-          tmp2(16485).getNavigationTTIDebugFreezeTarget,
-          tmp2(16485).getNavigationTTIDebugFreezeTarget,
+          tmp2(16525).getNavigationTTIDebugFreezeTarget,
+          tmp2(16525).getNavigationTTIDebugFreezeTarget,
         );
         let obj2 = { name, regionId, tracking };
         const tmp10 = closure_11(obj2);
@@ -1309,7 +1309,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             children: combined1,
           };
           num = 1;
-          Text = tmp2(4886).Text;
+          Text = tmp2(4892).Text;
           if (tmp7) {
             num = 3;
           }

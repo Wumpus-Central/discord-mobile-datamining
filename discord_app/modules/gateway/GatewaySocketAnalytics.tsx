@@ -447,17 +447,14 @@ export const getReadyPayloadByteSizeAnalytics = function getReadyPayloadByteSize
   }
 };
 export const logGatewayConnected = function logGatewayConnected(gatewayUrl) {
-  let altGateway;
   let now;
   let socket;
-  ({ socket, altGateway, now } = gatewayUrl);
+  ({ socket, now } = gatewayUrl);
   gatewayUrl = gatewayUrl.gatewayUrl;
   const obj = AnalyticsUtilsDefault;
   const obj2 = {
     num_failed_connect_attempts: socket.failedConnectAttempts,
     gateway_url: gatewayUrl,
-    assigned_to_alt_gateway: altGateway.isAssignedToAltGateway(),
-    did_fall_back_from_alt_gateway: altGateway.getDidFallBack(),
     is_reconnect: socket.hasConnectedOnce,
     is_fast_connect: socket.isFastConnect,
     duration_ms_since_first_connect_attempt: now - socket.firstConnectAttemptStartTime,

@@ -3,8 +3,8 @@ import intl14 from "../../intl/index.native.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import Constants from "../soundpacks/Constants.tsx";
 import HalloweenHolidayExperimentDefault from "HalloweenHolidayExperiment.tsx";
-import AssetRegistryDefault from "../../../_runtime/17512_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../_runtime/17513_AssetRegistry.js";
+import AssetRegistryDefault from "../../../_runtime/17557_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../_runtime/17558_AssetRegistry.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let Soundpacks;

@@ -5,19 +5,23 @@ import size from "../../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/frames/utils/getFrameSurfaceQueryParams.tsx");
 
 export default function getFrameSurfaceQueryParams(type) {
+  const StringResult = String(type.type);
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-    return {};
+    return { surface: StringResult };
   } else {
     if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL !== type) {
       if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL !== type) {
-        return {};
+        return { surface: StringResult };
       }
     }
-    const obj = { channel_id: type.channelId };
-    if (null != type.guildId) {
-      obj.guild_id = type.guildId;
+    const obj3 = { surface: StringResult };
+    if (null != type.channelId) {
+      obj3.channel_id = type.channelId;
     }
-    return obj;
+    if (null != type.guildId) {
+      obj3.guild_id = type.guildId;
+    }
+    return obj3;
   }
 }

@@ -60,7 +60,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = (
         <tmp8
           gestureEnabled
-          resizeMode={channel(9105).ResizeMode.CONTAIN}
+          resizeMode={channel(9140).ResizeMode.CONTAIN}
           onSingleTap={first}
           onDoubleTap={tmp5}
           participant={participant}
@@ -79,7 +79,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return (
         <tmp
           gestureEnabled
-          resizeMode={channel(9105).ResizeMode.CONTAIN}
+          resizeMode={channel(9140).ResizeMode.CONTAIN}
           onSingleTap={function onSingleTap() {
             closure_1_3();
           }}

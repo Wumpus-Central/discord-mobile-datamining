@@ -121,7 +121,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
               status === SubscriptionStatusTypes.PAUSE_PENDING ||
               status === SubscriptionStatusTypes.PAST_DUE;
             if (tmp.returnCtaAsComponent) {
-              const LinkButton = tmp13(6914).LinkButton;
+              const LinkButton = tmp13(6924).LinkButton;
               const intl3 = tmp13(1126).intl;
               const string = intl3.string;
               const t = tmp13(1126).t;

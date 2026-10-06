@@ -6,7 +6,7 @@ import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import MicrophoneSlashIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/05817_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/05824_AssetRegistry.js";
 import HeadphonesDenyIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon from "../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";

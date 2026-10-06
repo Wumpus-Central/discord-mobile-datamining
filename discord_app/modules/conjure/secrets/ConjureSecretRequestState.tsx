@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/secrets/ConjureSecretRequestState.tsx
 import react2 from "../../../../_runtime/00576_react.js";
 import intl3 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
@@ -14,10 +14,10 @@ function isSecretsSavedMessage(content) {
   const str = content.content;
   const trimmed = str.trim();
   const intl = intl3.intl;
-  let tmp5 = trimmed === intl.string(_modDef3723.UGqnoV);
+  let tmp5 = trimmed === intl.string(_modDef3753.UGqnoV);
   if (!tmp5) {
     const intl2 = intl3.intl;
-    tmp5 = trimmed === intl2.string(_modDef3723.sMQt5O);
+    tmp5 = trimmed === intl2.string(_modDef3753.sMQt5O);
   }
   return tmp5;
 }

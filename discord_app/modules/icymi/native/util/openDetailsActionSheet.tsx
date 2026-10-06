@@ -27,5 +27,5 @@ export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {
     },
   });
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj3.openLazy(asyncRequire(16402, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
+  obj3.openLazy(asyncRequire(16442, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
 };

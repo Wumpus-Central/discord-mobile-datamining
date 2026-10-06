@@ -10,7 +10,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
 import BottomSheetTitleHeader2 from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
@@ -245,8 +245,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresArray = tmpResult6.useStateFromStoresArray(tmp16, A, tmp18);
       const tmpResult7 = channelId(1490);
       navigation = tmpResult7.useNavigation();
-      tmp5(5043)(stateFromStores);
-      const tmpResult8 = channelId(11232);
+      tmp5(5049)(stateFromStores);
+      const tmpResult8 = channelId(11245);
       const appChannelBotUserId = tmpResult8.useAppChannelBotUserId(stateFromStores);
       if (null != stateFromStores) {
         class A {

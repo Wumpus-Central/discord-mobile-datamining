@@ -32,7 +32,7 @@ let c10;
 let c9;
 let closure_12;
 let unpackModuleId;
-const f93429 = (joinSound) => null != joinSound.joinSound;
+const f93564 = (joinSound) => null != joinSound.joinSound;
 function hasPermissionToPlaySound(guildId, guild_id) {
   guild_id = undefined;
   if (guild_id != null) {
@@ -254,7 +254,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Object = Object;
         const values = Object.values(obj2);
-        if (!values.some(f93429)) {
+        if (!values.some(f93564)) {
           const tmpResult2 = UserUtils;
           const result = tmpResult2.ageEligibleForPremiumUpsell(stateFromStores);
           const obj6 = PremiumUtilsDefault;
@@ -290,7 +290,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Object = Object;
         const values = Object.values(obj2);
-        if (!values.some(f93429)) {
+        if (!values.some(f93564)) {
           const tmpResult = UserUtils;
           const result = tmpResult.ageEligibleForPremiumUpsell(stateFromStores);
           const obj5 = PremiumUtilsDefault;
@@ -312,7 +312,7 @@ function hasSetAnyCustomJoinSound() {
     obj = {};
   }
   const values = Object.values(obj);
-  return values.some(f93429);
+  return values.some(f93564);
 }
 let result = size.fileFinishedImporting("modules/soundboard/SoundboardUtils.tsx");
 
@@ -413,15 +413,15 @@ export const updateCustomJoinSound = function updateCustomJoinSound(guildId, gui
         tmp6 = require;
       }
       if (null != joinSound.joinSound) {
-        ADDED = tmp6(5805).AnalyticsChangeType.UPDATED;
+        ADDED = tmp6(5812).AnalyticsChangeType.UPDATED;
       } else {
-        ADDED = tmp6(5805).AnalyticsChangeType.ADDED;
+        ADDED = tmp6(5812).AnalyticsChangeType.ADDED;
       }
       joinSound.joinSound = {
         soundId: guildId.soundId,
         guildId: guildId.guildId === authStore ? React4 : guildId.guildId,
       };
-      const ENTRY = tmp6(5805).AnalyticsSoundType.ENTRY;
+      const ENTRY = tmp6(5812).AnalyticsSoundType.ENTRY;
       obj = { location_stack, guild_id: num, change_type: ADDED, sound_type: ENTRY, sound_source: CUSTOM };
       num = 0;
       const track = AnalyticsUtilsDefault.track;

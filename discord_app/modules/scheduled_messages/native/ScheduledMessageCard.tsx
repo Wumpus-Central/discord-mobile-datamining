@@ -140,8 +140,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             let obj2 = { channel: stateFromStores, actions: null };
             cResult[8] = stateFromStores;
-            cResult[9] = closure_7(scheduledMessage(11844).ForLaterCardHeader, obj2);
-            const tmp15 = closure_7(scheduledMessage(11844).ForLaterCardHeader, obj2);
+            cResult[9] = closure_7(scheduledMessage(11858).ForLaterCardHeader, obj2);
+            const tmp15 = closure_7(scheduledMessage(11858).ForLaterCardHeader, obj2);
           } else {
             class R {
               constructor() {
@@ -206,7 +206,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const obj4 = {
               style: tmp4.pendingRemoval,
-              children: closure_7(scheduledMessage(5968).ActivityIndicator, { size: "small" }),
+              children: closure_7(scheduledMessage(5975).ActivityIndicator, { size: "small" }),
             };
             tmp20Result = closure_7(View, obj4);
           } else {
@@ -222,7 +222,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp21[0] = scheduledMessage.record;
             let tmp22;
-            const ForLaterMessageRow = tmp(11845).ForLaterMessageRow;
+            const ForLaterMessageRow = tmp(11859).ForLaterMessageRow;
             if (tmp26 > 0) {
               class R {
                 constructor() {
@@ -236,14 +236,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj5 = { style: tmp4.attachmentCount, children: items1 };
               const obj6 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-              const AttachmentIcon = tmp(10369).AttachmentIcon;
+              const AttachmentIcon = tmp(10382).AttachmentIcon;
               items1 = [closure_7(AttachmentIcon, obj6)];
               const obj7 = {
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: intl.format(scheduledMessage(1126).t.ZJ1tPW, obj8),
               };
-              const Text = tmp(4886).Text;
+              const Text = tmp(4892).Text;
               intl = tmp(1126).intl;
               obj8 = { count: tmp26 };
               items1[1] = closure_7(Text, obj7);
@@ -294,33 +294,33 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           children: items1,
         };
         const obj3 = { scheduledMessage, isPendingRemoval };
-        const Card = tmp2(5995).Card;
+        const Card = tmp2(6002).Card;
         items1 = [closure_7(closure_10, obj3), , ,];
         const obj4 = { channel: stateFromStores, actions: null };
-        items1[1] = closure_7(scheduledMessage(11844).ForLaterCardHeader, obj4);
+        items1[1] = closure_7(scheduledMessage(11858).ForLaterCardHeader, obj4);
         const obj5 = { style: tmp.cardDivider };
         items1[2] = closure_7(View, obj5);
         if (isPendingRemoval) {
           const obj6 = {
             style: tmp.pendingRemoval,
-            children: closure_7(scheduledMessage(5968).ActivityIndicator, { size: "small" }),
+            children: closure_7(scheduledMessage(5975).ActivityIndicator, { size: "small" }),
           };
           tmp10Result = closure_7(View, obj6);
         } else {
           const obj7 = { message: scheduledMessage.record, lineClamp: 10, maxHeight: 400, footer: tmp9Result };
           tmp9Result = undefined;
-          const ForLaterMessageRow = tmp2(11845).ForLaterMessageRow;
+          const ForLaterMessageRow = tmp2(11859).ForLaterMessageRow;
           if (scheduledMessage.attachmentUploads.length > 0) {
             const obj8 = { style: tmp.attachmentCount, children: items2 };
             const obj9 = { size: "xxs", color: stateFromStores(587).colors.TEXT_MUTED };
-            const AttachmentIcon = tmp2(10369).AttachmentIcon;
+            const AttachmentIcon = tmp2(10382).AttachmentIcon;
             items2 = [closure_7(AttachmentIcon, obj9)];
             const obj10 = {
               variant: "text-sm/normal",
               color: "text-muted",
               children: intl.format(scheduledMessage(1126).t.ZJ1tPW, obj11),
             };
-            const Text = tmp2(4886).Text;
+            const Text = tmp2(4892).Text;
             intl = tmp2(1126).intl;
             obj11 = { count: scheduledMessage.attachmentUploads.length };
             items2[1] = closure_7(Text, obj10);

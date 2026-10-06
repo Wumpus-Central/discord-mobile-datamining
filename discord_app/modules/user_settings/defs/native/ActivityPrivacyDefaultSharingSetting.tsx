@@ -125,7 +125,7 @@ let obj = {
       const obj2 = { direction: null, affectedGuildIds: null, settingName: activityRestrictionSettingName };
       ({ direction: obj4.direction, affectedGuildIds: obj4.affectedGuildIds } = affectedGuilds);
       const obj3 = ActionSheetActionCreatorsDefault;
-      obj3.openLazy(asyncRequire(15818, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
+      obj3.openLazy(asyncRequire(15855, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj2);
     }
   },
 };

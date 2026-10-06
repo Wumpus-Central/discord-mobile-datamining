@@ -12,7 +12,7 @@ import AppLauncherViewAllScreenDefault from "screens/app_list_view/AppLauncherVi
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../_runtime/00019_react.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../_runtime/07568_NativeStackView.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -71,12 +71,12 @@ const memoResult = react.memo(
         const tmp5 = useAnalyticsLocationsDefault;
         const analyticsLocations = tmp5(AnalyticsLocationDefault.APP_LAUNCHER).analyticsLocations;
         const tmp6 = closure_12();
-        const useKeyboardContextForType = entrypoint(4747).useKeyboardContextForType;
-        entrypoint(4747);
+        const useKeyboardContextForType = entrypoint(4753).useKeyboardContextForType;
+        entrypoint(4753);
         if (overrideParams == null) {
           overrideParams = useKeyboardContextForType(entrypoint(1616).KeyboardTypes.APP_LAUNCHER);
         }
-        const tmpResult = entrypoint(6496);
+        const tmpResult = entrypoint(6503);
         const accessibilityNativeStackOptions = tmpResult.useAccessibilityNativeStackOptions();
         if (cResult[0] !== overrideParams) {
           const initialRouteName = overrideParams.initialRouteName;
@@ -277,12 +277,12 @@ const memoResult = react.memo(
         const tmp3 = useAnalyticsLocationsDefault;
         const analyticsLocations = tmp3(AnalyticsLocationDefault.APP_LAUNCHER).analyticsLocations;
         const tmp4 = closure_12();
-        const useKeyboardContextForType = entrypoint(4747).useKeyboardContextForType;
-        entrypoint(4747);
+        const useKeyboardContextForType = entrypoint(4753).useKeyboardContextForType;
+        entrypoint(4753);
         if (overrideParams == null) {
           overrideParams = useKeyboardContextForType(entrypoint(1616).KeyboardTypes.APP_LAUNCHER);
         }
-        const tmp5Result = entrypoint(6496);
+        const tmp5Result = entrypoint(6503);
         const accessibilityNativeStackOptions = tmp5Result.useAccessibilityNativeStackOptions();
         const initialRouteName = overrideParams.initialRouteName;
         let obj14 = _objectWithoutProperties(overrideParams, closure_4);
@@ -298,7 +298,7 @@ const memoResult = react.memo(
         obj2 = { initialRouteName, screenOptions: obj3, children: items2 };
         obj3 = { contentStyle: items1, headerShown: false, fullScreenGestureEnabled: true };
         items1 = [tmp4.navigator, contentStyle];
-        const AnalyticsLocationProvider = entrypoint(6657).AnalyticsLocationProvider;
+        const AnalyticsLocationProvider = entrypoint(6664).AnalyticsLocationProvider;
         Navigator = closure_11.Navigator;
         const merged = Object.assign(accessibilityNativeStackOptions);
         const Screen = closure_11.Screen;
@@ -378,7 +378,7 @@ const memoResult = react.memo(
           },
           children: tmp9Result,
         };
-        return closure_9(entrypoint(10994).AppLauncherContext.Provider, obj19);
+        return closure_9(entrypoint(11007).AppLauncherContext.Provider, obj19);
       },
 );
 const result = size.fileFinishedImporting("modules/app_launcher/native/AppLauncherNavigator.tsx");

@@ -18,7 +18,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(3);
       selected = selected.selected;
       const tmp3 = closure_5();
-      const tmp4 = importDefault(selected ? 6640 : 6641);
+      const tmp4 = importDefault(selected ? 6647 : 6648);
       if (cResult[0] === tmp3.radio) {
         let tmp5;
         if (cResult[1] === tmp4) {
@@ -34,7 +34,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (selected) => {
       selected = selected.selected;
-      return <Image style={closure_5().radio} source={importDefault(selected ? 6640 : 6641)} />;
+      return <Image style={closure_5().radio} source={importDefault(selected ? 6647 : 6648)} />;
     };
 const result = size.fileFinishedImporting("design/void/Form/native/FormRadio.tsx");
 

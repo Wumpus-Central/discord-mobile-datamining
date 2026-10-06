@@ -13,10 +13,10 @@ import TrophyIcon from "../../../design/components/Icon/native/redesign/generate
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
 import PremiumUpsellSectionDivider from "../../premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx";
 import PremiumUpsellGradientBackground from "../../premium/roadblocks/native/views/PremiumUpsellGradientBackground.tsx";
-import chunkDefault from "../../../../_runtime/09951_chunk.js";
-import AssetRegistryDefault from "../../../../_runtime/10116_AssetRegistry.js";
+import chunkDefault from "../../../../_runtime/09964_chunk.js";
+import AssetRegistryDefault from "../../../../_runtime/10129_AssetRegistry.js";
 import SoundButton2 from "SoundButton.tsx";
-import AssetRegistryDefault2 from "../../../../_runtime/17244_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/17273_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import UserStore_mod from "../../../stores/UserStore.tsx";
 import SoundboardStyleConstants from "SoundboardStyleConstants.tsx";
@@ -355,7 +355,7 @@ const memoResult = react.memo(
         }
         const tmp4 = debounceResult();
         UserStore = tmp4;
-        const tmpResult = tmp(5602);
+        const tmpResult = tmp(5609);
         const fontScale = tmpResult.useFontScale();
         if (cResult[0] !== categories) {
           const tmp9 = calculateRowsPerSection(categories, closure_6);
@@ -1121,7 +1121,7 @@ const memoResult = react.memo(
         }
         const listRef = channel.listRef;
         const currentUser = closure_10();
-        let obj = channel(5602);
+        let obj = channel(5609);
         const fontScale = obj.useFontScale();
         let tmp2 = getSectionPosition(categories, closure_6);
         const tmp3 = getFastListSectionsFromCategories(categories, closure_6, fontScale);

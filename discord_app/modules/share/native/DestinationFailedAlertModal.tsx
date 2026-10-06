@@ -217,7 +217,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           isVROnline,
           size: user(1188).AvatarSizes.XSMALL,
           avatarDecoration: user.avatarDecoration,
-          autoStatusCutout: 1,
+          autoStatusCutout: null,
         };
         const Avatar = tmp(1188).Avatar;
         if (StatusTypes.OFFLINE !== status) {
@@ -241,7 +241,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           children: name,
         };
         name = stateFromStores;
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         if (stateFromStores == null) {
           class A {
             constructor() {
@@ -298,7 +298,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           isVROnline: tmp7,
           size: user(1188).AvatarSizes.XSMALL,
           avatarDecoration: user.avatarDecoration,
-          autoStatusCutout: 1,
+          autoStatusCutout: null,
         };
         tmp13 = null;
         const Avatar = tmp2(1188).Avatar;
@@ -313,7 +313,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           ellipsizeMode: "tail",
           children: stateFromStores,
         };
-        const Text = tmp2(4886).Text;
+        const Text = tmp2(4892).Text;
         if (stateFromStores == null) {
           const obj6 = UserUtilsDefault;
           stateFromStores = obj6.getName(user);
@@ -402,7 +402,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           ellipsizeMode: "tail",
           children: tmp12,
         };
-        const tmp17 = closure_10(channel(4886).Text, obj3);
+        const tmp17 = closure_10(channel(4892).Text, obj3);
         cResult[6] = tmp12;
         cResult[7] = tmp4.label;
         cResult[8] = tmp17;
@@ -412,9 +412,9 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(10738).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(10751).GuildIconWithChannelTypeSizes.SMALL_32,
       };
-      const GuildIconWithChannelType = tmp(10738).GuildIconWithChannelType;
+      const GuildIconWithChannelType = tmp(10751).GuildIconWithChannelType;
       const tmp14 = closure_10(GuildIconWithChannelType, obj4);
       cResult[3] = channel;
       cResult[4] = stateFromStores;
@@ -440,13 +440,13 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         "aria-label": "",
         guild: stateFromStores,
         channel,
-        size: channel(10738).GuildIconWithChannelTypeSizes.SMALL_32,
+        size: channel(10751).GuildIconWithChannelTypeSizes.SMALL_32,
       };
       const tmp3 = useChannelNameDefault(channel);
-      const GuildIconWithChannelType = channel(10738).GuildIconWithChannelType;
+      const GuildIconWithChannelType = channel(10751).GuildIconWithChannelType;
       items1 = [closure_10(GuildIconWithChannelType, obj3)];
       const obj4 = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp3 };
-      items1[1] = closure_10(channel(4886).Text, obj4);
+      items1[1] = closure_10(channel(4892).Text, obj4);
       return closure_11(View, obj2);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

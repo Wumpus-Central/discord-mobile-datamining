@@ -6,7 +6,7 @@ import react_nativeDefault2 from "../../../discord_common/js/packages/rtn-codege
 import asyncRequire from "../../../_runtime/01987_asyncRequire.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import GuildOnboardingConstants from "native/GuildOnboardingConstants.tsx";
-import _mod6593 from "../../../_runtime/metro/06593__.js";
+import _mod6600 from "../../../_runtime/metro/06600__.js";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -21,7 +21,7 @@ let _require, c4;
 let c10;
 let c9;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod6593));
+  return JSON.parse(JSON.stringify(_mod6600));
 }
 let obj = function _doGuildOnboarding() {
   obj = _asyncToGenerator(async (arg0) => {
@@ -63,7 +63,7 @@ let obj = function _doGuildOnboarding() {
               closure_1 = undefined;
               c5 = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c5) {
             if (arg0 === 1) {
@@ -293,7 +293,7 @@ function openAndWaitForOnboarding(guildId) {
       landingAnimation: closure_13[guildId],
       isFirstOpen: true,
     };
-    const pushLazyResult = obj.pushLazy(asyncRequire(6616, dependencyMap.paths), obj2, closure_8);
+    const pushLazyResult = obj.pushLazy(asyncRequire(6623, dependencyMap.paths), obj2, closure_8);
     pushLazyResult.then(() => {
       if (guildId.getGuildId() !== closure_1_0) {
         obj = closure_0(dependencyMap[20]);

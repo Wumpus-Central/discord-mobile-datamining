@@ -362,7 +362,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl3.string(tmp2(1126).t["N+Mi/U"]),
       };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       intl3 = tmp2(1126).intl;
       items2 = [closure_14(Text, obj4)];
       const obj5 = {
@@ -383,7 +383,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           closure_2.push(constants.JOIN_SERVER, {});
         },
       };
-      items2[1] = closure_14(tmp2(5594).Button, obj5);
+      items2[1] = closure_14(tmp2(5601).Button, obj5);
       return closure_14(closure_5, obj2);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

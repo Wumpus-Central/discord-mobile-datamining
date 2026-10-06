@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef3205 from "../PremiumGroup.messages.js";
+import _modDef3233 from "../PremiumGroup.messages.js";
 import PremiumGroupConstants from "../PremiumGroupConstants.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -84,7 +84,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               const intl = intl2.intl;
               const obj4 = { helpCenterLink: HELP_CENTER_LINK };
-              const formatResult = intl.format(_modDef3205.ah1Ecm, obj4);
+              const formatResult = intl.format(_modDef3233.ah1Ecm, obj4);
               cResult[11] = formatResult;
               tmp18 = formatResult;
             } else {
@@ -170,7 +170,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "text-sm/medium",
         color: "text-overlay-light",
         style: tmp.helpdeskText,
-        children: intl.format(_modDef3205.ah1Ecm, obj7),
+        children: intl.format(_modDef3233.ah1Ecm, obj7),
       };
       const Text = Text_Text.Text;
       intl = intl2.intl;

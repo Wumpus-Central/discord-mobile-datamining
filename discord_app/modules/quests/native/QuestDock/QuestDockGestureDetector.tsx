@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import QuestConstants from "../../QuestConstants.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import QuestDockUtils from "QuestDockUtils.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import QuestDockConstants from "QuestDockConstants.tsx";

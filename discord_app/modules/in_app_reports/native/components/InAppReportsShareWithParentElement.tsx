@@ -82,7 +82,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                           const _Symbol = Symbol;
                           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                            const tmp58 = jsx(tmp(12715).ShareIcon, {});
+                            const tmp58 = jsx(tmp(12730).ShareIcon, {});
                             const intl3 = tmp(1126).intl;
                             const stringResult = intl3.string(tmp(1126).t["5l/hlt"]);
                             cResult[15] = tmp58;

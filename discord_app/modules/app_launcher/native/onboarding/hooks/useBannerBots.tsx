@@ -60,7 +60,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === stateFromStores) {
           tmp11 = cResult[5];
         }
-        const tmpResult2 = context(8804);
+        const tmpResult2 = context(8834);
         return tmpResult2.useTopCommands(tmp11);
       }
       const obj2 = { channel: context.channel, guild: stateFromStores };
@@ -85,7 +85,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
           return getGuild(guild_id);
         }),
       };
-      const obj3 = context(8804);
+      const obj3 = context(8834);
       return obj3.useTopCommands(obj2);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -349,7 +349,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       context = context.context;
       let first1;
       const obj = closure_6({ context });
-      const obj2 = first1(11681);
+      const obj2 = first1(11695);
       const apps = obj2.useApplicationsInContext({
         context,
         onlyWithCommands: true,
@@ -361,8 +361,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const channel = context.channel;
       let guild_id;
       const tmp4 = closure_5({ context });
-      const useActivityApplications = first1(11652).useActivityApplications;
-      first1(11652);
+      const useActivityApplications = first1(11666).useActivityApplications;
+      first1(11666);
       const tmp2 = first1;
       if (channel != null) {
         guild_id = channel.guild_id;

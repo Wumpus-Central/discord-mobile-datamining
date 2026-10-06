@@ -1,6 +1,6 @@
 // discord_app/utils/SecondsSliderUtils.tsx
 import intl7 from "../intl/index.native.tsx";
-import _modDef4461 from "../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../_runtime/metro/04467__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
@@ -16,7 +16,7 @@ export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPer
     intl = intl7.intl;
     stringResult = intl.string(intl7.t.Yl1D84);
   }
-  const obj = _modDef4461;
+  const obj = _modDef4467;
   const time = obj.duration(rateLimitPerUser, "seconds");
   if (time.days() > 0) {
     const intl6 = intl7.intl;

@@ -112,7 +112,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
   let loadMoreBefore;
   let scrollToTopMessage;
   let updateNativeRows;
-  const f106608 = (id) => id.id;
+  const f106760 = (id) => id.id;
   _require = messages;
   function handleVisibleMessagesChange(arg0) {
     let firstVisibleMessagePercentVisible;
@@ -443,7 +443,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     oldestUnreadMessageId: messages.oldestUnreadMessageId,
     shouldJumpToOriginalPost: callback3,
   };
-  let tmp17 = chatManager(11156)(obj2);
+  let tmp17 = chatManager(11169)(obj2);
   ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = tmp17);
   let obj3 = {
     chatRef: ref5,
@@ -502,7 +502,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     isStaff: messages.isStaff,
     visibleMessagesWindowHandler: messages.visibleMessagesWindowHandler,
   };
-  let tmp18 = chatManager(11158)(obj3);
+  let tmp18 = chatManager(11171)(obj3);
   ({
     hasHandledScrollRef: closure_18,
     isAtBottomRef: closure_19,
@@ -587,7 +587,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     scrollToTopMessage,
     useReducedMotion: messages.useReducedMotion,
   };
-  let tmp22 = chatManager(11561)(obj4);
+  let tmp22 = chatManager(11574)(obj4);
   ({ updateRows: closure_33, scrollToMessageId: closure_34 } = tmp22);
   const effect = react.useEffect(() => {
     let channelId;
@@ -635,7 +635,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     ({ channelId, messages: messages2 } = messages);
     const recordMessageRender = first(dependencyMap[11]).recordMessageRender;
     first(dependencyMap[11]);
-    const mapped = messages2.map(f106608);
+    const mapped = messages2.map(f106760);
     let hasFetched = messages2.hasFetched;
     if (!hasFetched) {
       hasFetched = messages2.ready && !messages2.cached;
@@ -644,7 +644,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
     ({ channelId: channelId2, messages: messages3 } = messages);
     const recordMessageRender2 = first(dependencyMap[11]).recordMessageRender;
     first(dependencyMap[11]);
-    const mapped1 = messages3.map(f106608);
+    const mapped1 = messages3.map(f106760);
     let hasFetched2 = messages3.hasFetched;
     if (!hasFetched2) {
       hasFetched2 = messages3.ready && !messages3.cached;
@@ -1029,7 +1029,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
                                                                                                                                             );
                                                                                                                                           const mapped =
                                                                                                                                             messages.map(
-                                                                                                                                              f106608,
+                                                                                                                                              f106760,
                                                                                                                                             );
                                                                                                                                           let hasFetched =
                                                                                                                                             messages.hasFetched;
@@ -1458,7 +1458,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
           ({ channelId: channelId3, messages: messages3 } = tmp2);
           const recordMessageRender2 = first(dependencyMap[11]).recordMessageRender;
           const tmp100 = first(dependencyMap[11]);
-          const mapped1 = messages3.map(f106608);
+          const mapped1 = messages3.map(f106760);
           let hasFetched2 = messages3.hasFetched;
           if (!hasFetched2) {
             hasFetched2 = messages3.ready && !messages3.cached;
@@ -1630,7 +1630,7 @@ const forwardRefResult = react.forwardRef((messages, arg1) => {
       handleVisibleMessagesChange(obj);
     },
   };
-  items4 = [findMessageIndex(chatManager(11506), obj7)];
+  items4 = [findMessageIndex(chatManager(11519), obj7)];
   let obj8 = { messages: messages.messages };
   items4[1] = findMessageIndex(require("ChatTTITracker").ChatTTITracker, obj8);
   return ref2(closure_18, obj6);

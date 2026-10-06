@@ -109,7 +109,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       screenIndex = screenIndex.screenIndex;
       ({ channelId, onJumpToPresent, children } = screenIndex);
       const tmp5 = useIsUsingClientThemeDefault();
-      const obj2 = screenIndex(11891);
+      const obj2 = screenIndex(11905);
       const chatInputFloatingOverlayStyle = obj2.useChatInputFloatingOverlayStyle();
       const tmp7 = closure_9(tmp5);
       if (cResult[0] !== screenIndex) {
@@ -138,7 +138,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp14 = closure_7(screenIndex(11891).ChatInputScrimGradient, {});
+        const tmp14 = closure_7(screenIndex(11905).ChatInputScrimGradient, {});
         cResult[5] = tmp14;
         tmp12 = tmp14;
       } else {
@@ -258,7 +258,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const channelId = screenIndex.channelId;
       ({ onJumpToPresent, children } = screenIndex);
       const tmp3 = useIsUsingClientThemeDefault();
-      const obj = screenIndex(11891);
+      const obj = screenIndex(11905);
       const chatInputFloatingOverlayStyle = obj.useChatInputFloatingOverlayStyle();
       const tmp6 = closure_9(tmp3);
       const items = [screenIndex];
@@ -267,7 +267,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         closure_6(screenIndex, nativeEvent.nativeEvent.layout.height);
       }, items);
       items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), chatInputFloatingOverlayStyle];
-      items2 = [closure_7(screenIndex(11891).ChatInputScrimGradient, {})];
+      items2 = [closure_7(screenIndex(11905).ChatInputScrimGradient, {})];
       let tmp10Result = null;
       const obj3 = { style: tmp6.container, children: items3 };
       const tmp4 = screenIndex;

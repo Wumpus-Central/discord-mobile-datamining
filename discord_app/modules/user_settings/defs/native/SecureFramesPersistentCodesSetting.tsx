@@ -3,7 +3,7 @@ import get_initialized from "../../../../../discord_common/js/packages/flux/inde
 import react from "../../../../../_runtime/00576_react.js";
 import intl2 from "../../../../intl/index.native.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
-import SecureFramesActionCreatorsDefault from "../../../rtc/SecureFramesActionCreators.tsx";
+import updatePersistentCodesEnabled from "../../../rtc/updatePersistentCodesEnabled.tsx";
 import SecureFramesPersistedStore from "../../../rtc/SecureFramesPersistedStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -50,7 +50,7 @@ let obj = {
   parent: MobileUserSettings.DATA_AND_PRIVACY,
   useValue: tmp2,
   onValueChange: function handleSecureFramesPersistentCodesToggle(arg0) {
-    const obj = SecureFramesActionCreatorsDefault;
+    const obj = updatePersistentCodesEnabled;
     const result = obj.updatePersistentCodesEnabled(arg0);
   },
 };

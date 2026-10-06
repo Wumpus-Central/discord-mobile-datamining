@@ -6,7 +6,7 @@ import react3 from "../../../../../discord_common/js/packages/design/components/
 import IconDefault from "../../../void/Icon/native/Icon.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../animation/reanimated/spring/springPresets.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/05992_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/05999_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import createStyles_mod from "../../Styles/native/createStyles.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";

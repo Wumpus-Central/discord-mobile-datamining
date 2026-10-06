@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Constants from "../../../../Constants.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef2589 from "../GiftingBadge.messages.js";
+import _modDef2617 from "../GiftingBadge.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import BadgeDirectoryStore2 from "../../../badges/BadgeDirectoryStore.tsx";
 import GiftingBadgesUtils from "../GiftingBadgesUtils.tsx";
@@ -171,7 +171,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               obj.track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
             }
           }
-          const stringResult = obj4.string(stateFromStores1(2589)["0MB2C6"]);
+          const stringResult = obj4.string(stateFromStores1(2617)["0MB2C6"]);
           class S {
             constructor() {
               return useReducedMotion.useReducedMotion;
@@ -225,7 +225,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               obj.track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
             }
           }
-          const stringResult1 = obj6.string(stateFromStores1(2589).k9sNVH);
+          const stringResult1 = obj6.string(stateFromStores1(2617).k9sNVH);
           class S {
             constructor() {
               return useReducedMotion.useReducedMotion;
@@ -322,7 +322,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "heading-xl/semibold",
         color: "text-strong",
         accessibilityRole: "header",
-        children: intl.string(_modDef2589["0MB2C6"]),
+        children: intl.string(_modDef2617["0MB2C6"]),
       };
       let Text = require("Text/Text").Text;
       intl = require("intl").intl;
@@ -331,7 +331,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.description,
         variant: "text-md/medium",
         color: "text-default",
-        children: intl2.string(_modDef2589.k9sNVH),
+        children: intl2.string(_modDef2617.k9sNVH),
       };
       const Text2 = require("Text/Text").Text;
       intl2 = require("intl").intl;
@@ -386,7 +386,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const obj6 = {
                 variant: "text-md/normal",
                 color: "text-subtle",
-                children: intl.formatToPlainString(_modDef2589.qvx9E4, obj7),
+                children: intl.formatToPlainString(_modDef2617.qvx9E4, obj7),
               };
               const Text = Text_Text.Text;
               intl = intl3.intl;

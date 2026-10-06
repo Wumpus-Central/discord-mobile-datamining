@@ -146,7 +146,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId), items1);
       const items2 = [stateFromStores];
       const memo = react.useMemo(() => stateFromStores.filter((item) => !closure_1_4(item)), items2);
-      stateFromStores(17710);
+      stateFromStores(17756);
       const intl = guildId(1126).intl;
       const intl2 = guildId(1126).intl;
       return (

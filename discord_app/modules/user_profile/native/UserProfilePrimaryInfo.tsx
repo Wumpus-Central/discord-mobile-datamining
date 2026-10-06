@@ -321,7 +321,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           guildId,
           userName: name,
           variant: headingVariant,
-          effectDisplayType: user(10634).EffectDisplayType.STATIC,
+          effectDisplayType: user(10647).EffectDisplayType.STATIC,
           lineClamp: 2,
           pendingDisplayNameStyles,
           defaultColor: "mobile-text-heading-primary",
@@ -342,13 +342,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.displayName,
           children: items1,
         };
-        const PressableOpacity = user(5909).PressableOpacity;
+        const PressableOpacity = user(5916).PressableOpacity;
         const obj8 = {
           userId: user.id,
           guildId,
           userName: name,
           variant: headingVariant,
-          effectDisplayType: user(10634).EffectDisplayType.STATIC,
+          effectDisplayType: user(10647).EffectDisplayType.STATIC,
           lineClamp: 2,
           pendingDisplayNameStyles,
           defaultColor: "mobile-text-heading-primary",
@@ -361,7 +361,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         items1 = [closure_14(tmp17, obj8), renderBotTag()];
         const tmp13 = user;
         if (showChevron) {
-          showChevron = closure_14(tmp13(10844).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+          showChevron = closure_14(tmp13(10857).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
         }
         items1[2] = showChevron;
         tmp12Result = closure_15(PressableOpacity, obj7);

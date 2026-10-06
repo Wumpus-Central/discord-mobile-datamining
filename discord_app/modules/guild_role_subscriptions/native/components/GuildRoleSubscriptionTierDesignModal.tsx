@@ -310,7 +310,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[10] !== tmp10) {
         const fn = function x(icon) {
-          const obj = { icon: icon.uri, unicodeEmoji: "r" };
+          const obj = { icon: icon.uri, unicodeEmoji: "Array" };
           return closure_0(obj);
         };
         cResult[10] = tmp10;
@@ -414,7 +414,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       let role;
       let tmp7;
       let tmp8;
-      const tmp3 = role(13710)();
+      const tmp3 = role(13728)();
       let obj = require("EditStateContextProvider");
       const editStateContext = obj.useEditStateContext();
       ({ editStateId, guildId } = editStateContext);
@@ -444,7 +444,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { children: items1 };
       items1 = [closure_9(closure_13, { role }), , , ,];
       const obj7 = { style: tmp3.header, children: intl.string(require("intl").t.sEr1zr) };
-      const tmpResult = role(9477);
+      const tmpResult = role(9490);
       intl = tmp4(1126).intl;
       items1[1] = closure_9(tmpResult, obj7);
       const obj8 = {
@@ -454,19 +454,19 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         previewShape: require("FormImagePicker").PreviewShape.SQUIRCLE,
         previewResizeMode: "cover",
         setImage(icon) {
-          const obj = { icon: icon.uri, unicodeEmoji: "r" };
+          const obj = { icon: icon.uri, unicodeEmoji: "Array" };
           return closure_0(obj);
         },
         disabled: roleSubscriptionSettingsDisabled,
       };
-      const tmpResult3 = role(17927);
+      const tmpResult3 = role(17973);
       intl2 = tmp4(1126).intl;
       items1[2] = closure_9(tmpResult3, obj8);
       const obj9 = { style: tmp3.header, children: intl3.string(require("intl").t["W7hH+z"]) };
-      const tmpResult4 = role(9477);
+      const tmpResult4 = role(9490);
       intl3 = tmp4(1126).intl;
       items1[3] = closure_9(tmpResult4, obj9);
-      items1[4] = closure_9(role(17963), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+      items1[4] = closure_9(role(18009), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
       return closure_10(closure_11, obj6);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

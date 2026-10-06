@@ -29,10 +29,10 @@ export default function FormRoleColorPicker(color) {
   const callback = react.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { color, onSelect: onChange };
-    obj.openLazy(asyncRequire(16231, dependencyMap.paths), "RoleColorPicker", obj2);
+    obj.openLazy(asyncRequire(16271, dependencyMap.paths), "RoleColorPicker", obj2);
   }, items);
   let obj2 = { color, style: tmp.rowColorBlock, onSelect: callback };
-  onChange(13708);
+  onChange(13726);
   const obj3 = color(1103);
   return <tmp3 leading={null} label={obj3.int2hex(color)} disabled={flag} onPress={callback} />;
 }

@@ -796,9 +796,9 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != welcomeScreen) {
           const obj3 = { startExpanded: true, children: closure_18(hasError, obj4) };
           obj4 = { contentContainerStyle: tmp.container, children: items9 };
-          const ActionSheet = tmp2(6701).ActionSheet;
-          const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(12386).Sizes.MEDIUM, textScale: 2 };
-          const tmp17 = onHide(12386);
+          const ActionSheet = tmp2(6708).ActionSheet;
+          const obj5 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(12401).Sizes.MEDIUM, textScale: 2 };
+          const tmp17 = onHide(12401);
           items9 = [closure_17(tmp17, obj5), , , ,];
           const obj6 = {
             style: tmp.header,
@@ -806,7 +806,7 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: intl.format(guildId(1126).t["0aydCN"], obj7),
           };
-          const Text = tmp2(4886).Text;
+          const Text = tmp2(4892).Text;
           intl = tmp2(1126).intl;
           obj7 = {
             guildName: stateFromStores.name,
@@ -827,14 +827,14 @@ let tmp11 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: welcomeScreen.description,
           };
-          items9[2] = closure_17(guildId(4886).Text, obj8);
+          items9[2] = closure_17(guildId(4892).Text, obj8);
           const obj9 = {
             style: tmp.channelsTitle,
             variant: "eyebrow",
             color: "text-default",
             children: str.toUpperCase(),
           };
-          const Text2 = tmp2(4886).Text;
+          const Text2 = tmp2(4892).Text;
           const intl2 = tmp2(1126).intl;
           str = intl2.string(guildId(1126).t["haj5+i"]);
           items9[3] = closure_17(Text2, obj9);

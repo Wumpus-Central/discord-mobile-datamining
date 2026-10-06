@@ -52,13 +52,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(25);
       ({ props, openTab } = wrapperSpecs);
       wrapperSpecs = wrapperSpecs.wrapperSpecs;
-      const context = react.useContext(connected(11901));
+      const context = react.useContext(connected(11915));
       connected = context.connected;
       const channelId = context.channelId;
       const tmp6 = closure_7();
-      const obj2 = openTab(17327);
+      const obj2 = openTab(17355);
       const voicePanelButtonStyles = obj2.useVoicePanelButtonStyles(wrapperSpecs);
-      const tmp8 = connected(17269)(channelId);
+      const tmp8 = connected(17298)(channelId);
       const backgroundColor = voicePanelButtonStyles.iconBg.backgroundColor;
       if (cResult[0] === connected) {
         let tmp9;
@@ -85,7 +85,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[8] !== voicePanelButtonStyles.iconFill.color) {
               const obj3 = { color: voicePanelButtonStyles.iconFill.color };
-              const tmp21 = closure_4(openTab(5855).ChatIcon, obj3);
+              const tmp21 = closure_4(openTab(5862).ChatIcon, obj3);
               cResult[8] = voicePanelButtonStyles.iconFill.color;
               cResult[9] = tmp21;
               tmp19 = tmp21;
@@ -119,7 +119,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                       const element = { onPress: tmp9, props, accessibilityLabel: tmp11, children: tmp28 };
-                      const tmp34 = closure_4(connected(17328), element);
+                      const tmp34 = closure_4(connected(17356), element);
                       cResult[21] = tmp9;
                       cResult[22] = props;
                       cResult[23] = tmp28;
@@ -142,7 +142,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj5 = { style: items1 };
                 items1 = [,];
                 ({ badge: arr[0], notificationBadge: arr[1] } = tmp6);
-                tmp26 = closure_4(tmp4(5976), obj5);
+                tmp26 = closure_4(tmp4(5983), obj5);
               }
               cResult[13] = tmp8;
               cResult[14] = tmp6.badge;
@@ -151,7 +151,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               tmp25 = tmp26;
             }
             const obj6 = { style: tmp6.iconContainer, children: tmp19 };
-            const tmp24 = closure_4(connected(5976), obj6);
+            const tmp24 = closure_4(connected(5983), obj6);
             cResult[10] = tmp6.iconContainer;
             cResult[11] = tmp19;
             cResult[12] = tmp24;
@@ -168,7 +168,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           badgeRadius: 5,
           scaleToPixelDensity: true,
         };
-        const tmp18 = closure_4(connected(17336), obj7);
+        const tmp18 = closure_4(connected(17364), obj7);
         cResult[4] = backgroundColor;
         cResult[5] = result;
         cResult[6] = null != tmp8;

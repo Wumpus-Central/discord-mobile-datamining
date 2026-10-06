@@ -674,16 +674,16 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const intl = invite(1126).intl;
       const stringResult = intl.string(invite(1126).t["3rE1P8"]);
-      let obj = invite(7225);
+      let obj = invite(7238);
       if (obj.isFriendInvite(invite)) {
         const intl7 = tmp3(1126).intl;
         const format3 = intl7.format;
         let obj2 = { username: obj11.getFormattedName(invite.inviter) };
         const Quj7HX = tmp3(1126).t.Quj7HX;
-        obj11 = isGuildMember(4722);
+        obj11 = isGuildMember(4728);
         format3Result = format3(Quj7HX, obj2);
       } else {
-        const tmp3Result = invite(7225);
+        const tmp3Result = invite(7238);
         if (tmp3Result.isGroupDMInvite(invite)) {
           if (null != invite.channel) {
             let format2Result;
@@ -692,7 +692,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               const format2 = intl6.format;
               let obj3 = { username: obj9.getFormattedName(invite.inviter) };
               const Lu4h18 = tmp3(1126).t.Lu4h18;
-              obj9 = isGuildMember(4722);
+              obj9 = isGuildMember(4728);
               format2Result = format2(Lu4h18, obj3);
             }
             format3Result = format2Result;
@@ -700,14 +700,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           const intl5 = tmp3(1126).intl;
           format2Result = intl5.string(tmp3(1126).t.OsdY8B);
         } else {
-          const tmp3Result3 = invite(7225);
+          const tmp3Result3 = invite(7238);
           if (tmp3Result3.isStreamInvite(invite)) {
             if (null != invite.target_user) {
               const intl4 = tmp3(1126).intl;
               const formatToPlainString = intl4.formatToPlainString;
               const obj4 = { username: obj7.getFormattedName(invite.target_user) };
               const x2L32Q = tmp3(1126).t.x2L32Q;
-              obj7 = isGuildMember(4722);
+              obj7 = isGuildMember(4728);
               format3Result = formatToPlainString(x2L32Q, obj4);
             }
           }
@@ -731,7 +731,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               const format = intl2.format;
               const obj6 = { username: obj5.getFormattedName(invite.inviter) };
               const spU2mI = tmp3(1126).t.spU2mI;
-              obj5 = isGuildMember(4722);
+              obj5 = isGuildMember(4728);
               format3Result = format(spU2mI, obj6);
             }
           }
@@ -741,9 +741,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj8 = { style: tmp.inviteJoinContainer, children: items1 };
       if (null != memo) {
         tmp22 = null;
-        const tmp3Result4 = invite(7225);
+        const tmp3Result4 = invite(7238);
         if (!tmp3Result4.isFriendInvite(invite)) {
-          const obj10 = { style: tmp.inviterIconWrapper, children: closure_12(isGuildMember(5974), obj12) };
+          const obj10 = { style: tmp.inviterIconWrapper, children: closure_12(isGuildMember(5981), obj12) };
           obj12 = { source: memo, style: tmp.inviterIcon };
           tmp22 = closure_12(View, obj10);
         }
@@ -755,7 +755,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: format3Result,
       };
-      items1[1] = closure_12(invite(4886).Text, obj13);
+      items1[1] = closure_12(invite(4892).Text, obj13);
       return closure_13(View, obj8);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -1435,11 +1435,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp8Result) {
         const obj10 = { event: guild_scheduled_event };
         const obj9 = { style: tmp.embedDetailsCard, children: items3 };
-        items3 = [closure_12(invite(9261).GuildEventCardHeader, obj10), ,];
+        items3 = [closure_12(invite(9296).GuildEventCardHeader, obj10), ,];
         const obj11 = { event: guild_scheduled_event };
-        items3[1] = closure_12(invite(9261).GuildEventCardMetaInfo, obj11);
+        items3[1] = closure_12(invite(9296).GuildEventCardMetaInfo, obj11);
         const obj12 = { event: guild_scheduled_event };
-        items3[2] = closure_12(invite(9261).GuildEventCardGuildInfo, obj12);
+        items3[2] = closure_12(invite(9296).GuildEventCardGuildInfo, obj12);
         tmp8Result = closure_13(View, obj9);
       }
       items2[5] = tmp8Result;
@@ -1454,7 +1454,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp10Result;
       if (null != userAvatarSource) {
         const obj13 = { source: userAvatarSource, variant: "entity" };
-        tmp10Result = closure_12(tmp4(5594).Button.Icon, obj13);
+        tmp10Result = closure_12(tmp4(5601).Button.Icon, obj13);
       }
       if (null != stateFromStores) {
         const intl = tmp4(1126).intl;
@@ -1491,7 +1491,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         _undefined(constants.ACCEPT);
         importDefault();
       }
-      const ButtonGroup = tmp4(5592).ButtonGroup;
+      const ButtonGroup = tmp4(5599).ButtonGroup;
       const items4 = [,];
       const obj15 = {
         icon: tmp10Result,
@@ -1503,8 +1503,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         loading: tmp3 === constants3.ACCEPT,
         disabled: tmp3 === constants3.ACCEPT,
       };
-      items4[0] = closure_12(invite(5594).Button, obj15);
-      const Button = tmp4(5594).Button;
+      items4[0] = closure_12(invite(5601).Button, obj15);
+      const Button = tmp4(5601).Button;
       const intl4 = tmp4(1126).intl;
       const string = intl4.string;
       const t = tmp4(1126).t;

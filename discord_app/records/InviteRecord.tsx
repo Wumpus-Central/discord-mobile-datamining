@@ -1,5 +1,5 @@
 // discord_app/records/InviteRecord.tsx
-import _modDef4461 from "../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../_runtime/metro/04467__.js";
 import Record from "../lib/Record.tsx";
 import UserRecord from "UserRecord.tsx";
 import size from "../../_runtime/metro/00002__.js";
@@ -56,14 +56,14 @@ class InviteRecord extends Record {
       target_user: obj.targetUser,
       target_application: obj.targetApplication,
     } = created_at);
-    tmp3 = _modDef4461;
+    tmp3 = _modDef4467;
     return new InviteRecord(obj);
   }
   isExpired() {
     const maxAge = this.maxAge;
     if (maxAge > 0) {
       const _Date = Date;
-      const obj = _modDef4461(tmp.createdAt);
+      const obj = _modDef4467(tmp.createdAt);
       const addResult = obj.add(maxAge, "seconds");
       if (addResult.isBefore(Date.now())) {
         return true;
@@ -75,7 +75,7 @@ class InviteRecord extends Record {
     const self = this;
     let num = Infinity;
     if (this.maxAge > 0) {
-      const obj = _modDef4461(self.createdAt);
+      const obj = _modDef4467(self.createdAt);
       const addResult = obj.add(self.maxAge, "seconds");
       num = addResult.toDate();
     }

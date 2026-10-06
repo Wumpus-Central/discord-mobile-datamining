@@ -8,7 +8,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16177_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/16217_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -96,8 +96,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             children: tmp8,
           };
           cResult[6] = tmp4.title;
-          cResult[7] = closure_6(guildId(4886).Text, obj3);
-          const tmp11 = closure_6(guildId(4886).Text, obj3);
+          cResult[7] = closure_6(guildId(4892).Text, obj3);
+          const tmp11 = closure_6(guildId(4892).Text, obj3);
         } else {
           class N {
             constructor() {
@@ -137,8 +137,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             children: tmp12,
           };
           cResult[9] = tmp4.description;
-          cResult[10] = closure_6(guildId(4886).Text, obj5);
-          const tmp15 = closure_6(guildId(4886).Text, obj5);
+          cResult[10] = closure_6(guildId(4892).Text, obj5);
+          const tmp15 = closure_6(guildId(4892).Text, obj5);
         } else {
           class N {
             constructor() {
@@ -152,8 +152,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               return markAsDismissed(ContentDismissActionType.UNKNOWN);
             }
           }
-          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(16177) };
-          const tmp18 = markAsDismissed(5974);
+          const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(16217) };
+          const tmp18 = markAsDismissed(5981);
           cResult[11] = tmp4.image;
           cResult[12] = closure_6(tmp18, obj6);
           const tmp19 = closure_6(tmp18, obj6);
@@ -189,8 +189,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj8 = { onPress: tmp5, text: tmp20 };
           cResult[14] = tmp5;
-          cResult[15] = closure_6(guildId(5594).Button, obj8);
-          const tmp23 = closure_6(guildId(5594).Button, obj8);
+          cResult[15] = closure_6(guildId(5601).Button, obj8);
+          const tmp23 = closure_6(guildId(5601).Button, obj8);
         } else {
           class N {
             constructor() {
@@ -239,8 +239,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj10 = { onPress: P, text: tmp25, variant: "secondary" };
           cResult[19] = P;
-          cResult[20] = closure_6(guildId(5594).Button, obj10);
-          const tmp28 = closure_6(guildId(5594).Button, obj10);
+          cResult[20] = closure_6(guildId(5601).Button, obj10);
+          const tmp28 = closure_6(guildId(5601).Button, obj10);
         } else {
           class P {
             constructor() {

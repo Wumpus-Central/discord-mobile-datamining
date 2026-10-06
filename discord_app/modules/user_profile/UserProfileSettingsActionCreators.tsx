@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import isEqualDefault from "../../../_runtime/05010_isEqual.js";
+import isEqualDefault from "../../../_runtime/05016_isEqual.js";
 import GuildTagUtils from "../guild_tag/GuildTagUtils.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";

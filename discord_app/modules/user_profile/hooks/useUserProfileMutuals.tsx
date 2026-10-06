@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9;
       let user;
       let userAffinitiesMap;
-      const f111097 = (arg0) => {
+      const f111252 = (arg0) => {
         let length = closure_3[arg0.guild.id];
         if (length == null) {
           length = stateFromStores1.length;
@@ -210,8 +210,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const tmpResult8 = require("../../../../_runtime/metro/00012__.js");
           cResult[12] = arr3;
           cResult[13] = stateFromStores1;
-          cResult[14] = tmpResult8.sortBy(arr3, f111097);
-          const sortByResult = tmpResult8.sortBy(arr3, f111097);
+          cResult[14] = tmpResult8.sortBy(arr3, f111252);
+          const sortByResult = tmpResult8.sortBy(arr3, f111252);
         }
       }
       stateFromStores(stateFromStores1[9])(tmp8);

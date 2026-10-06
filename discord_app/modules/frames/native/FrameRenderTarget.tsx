@@ -1,7 +1,7 @@
 // discord_app/modules/frames/native/FrameRenderTarget.tsx
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
-import WebView from "../../../../_runtime/07973_WebView.js";
+import WebView from "../../../../_runtime/07983_WebView.js";
 import useFramePoolBorrowDefault from "useFramePoolBorrow.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";

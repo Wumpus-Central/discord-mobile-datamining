@@ -1,7 +1,7 @@
 // discord_app/records/AuditLogRecord.tsx
 import SnowflakeUtilsDefault from "../utils/SnowflakeUtils.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import _modDef4461 from "../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../_runtime/metro/04467__.js";
 import Record from "../lib/Record.tsx";
 import Constants from "../Constants.tsx";
 import size from "../../_runtime/metro/00002__.js";
@@ -409,7 +409,7 @@ class AuditLogRecord extends Record {
     tmp5.actionType = getActionType(tmp5.action);
     ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
     if (timestampStart == null) {
-      const tmp8 = _modDef4461;
+      const tmp8 = _modDef4467;
       const obj = SnowflakeUtilsDefault;
       timestampStart = tmp8(obj.extractTimestamp(tmp5.id));
     }

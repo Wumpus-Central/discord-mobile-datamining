@@ -41,7 +41,7 @@ export const dismissAlerts = function dismissAlerts() {
   });
   const tmp4 = 0 === arr4.length && first.length > 0;
   if (tmp4) {
-    arr4(5710)();
+    arr4(5717)();
   }
 };
 export const dismissAlert = function dismissAlert(key) {
@@ -73,7 +73,7 @@ export const dismissAlert = function dismissAlert(key) {
       }
     });
     if (tmp2) {
-      found(5710)();
+      found(5717)();
     }
   }
 };

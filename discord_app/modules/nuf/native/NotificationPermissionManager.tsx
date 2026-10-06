@@ -1,7 +1,7 @@
 // discord_app/modules/nuf/native/NotificationPermissionManager.tsx
 import discord_common_AnalyticsUtils from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
 import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
-import _modDef4461 from "../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NativePermissionConstants from "../../native_permissions/NativePermissionConstants.tsx";
 import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativePermissionManagerModule.tsx";
@@ -31,7 +31,7 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      obj = _modDef4461();
+      obj = _modDef4467();
       tmp4 = obj.diff(tmp, "days") >= 1;
     }
     tmp2 = tmp4;
@@ -181,7 +181,7 @@ function showPrompt(arg0, arg1, arg2) {
       location,
     };
     ActionSheetActionCreatorsDefault;
-    const tmp3 = asyncRequire(17595, dependencyMap.paths);
+    const tmp3 = asyncRequire(17641, dependencyMap.paths);
     openLazy(tmp3, authStore, obj2);
   }, arg2);
 }
@@ -399,7 +399,7 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
                 ({ message: c0, optimistic: c1, isPushNotification: c2, sendMessageOptions: c3 } = closure_0);
                 c3 = 1;
                 c4 = 1;
-                return { value: "Set", done: true };
+                return { value: "Reflect", done: true };
               }
             } else {
               let tmp5;
@@ -492,7 +492,7 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
                 invite = invite.invite;
                 c4 = 1;
                 c5 = 1;
-                return { value: "Set", done: true };
+                return { value: "Reflect", done: true };
               }
             } else {
               let tmp5;
@@ -624,7 +624,7 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
         }
         await "IconComponent";
         relationship = relationship.relationship;
-        return "Set";
+        return "Reflect";
       })();
       iter.next();
       return iter;
@@ -666,7 +666,7 @@ class NotificationPermissionManager extends AutomaticLifecycleManager {
               closure_2 = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else {
             if (1 === c3) {

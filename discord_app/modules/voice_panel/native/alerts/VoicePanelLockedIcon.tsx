@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import NativeViewDefault from "../../../core/native/NativeView.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/17332_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/17360_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";

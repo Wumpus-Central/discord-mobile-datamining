@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import Portal2 from "../../../../../_runtime/04752_Portal.js";
+import Portal2 from "../../../../../_runtime/04758_Portal.js";
 import react from "../../../../../_runtime/00019_react.js";
 import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";

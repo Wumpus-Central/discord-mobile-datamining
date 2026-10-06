@@ -3235,10 +3235,10 @@ const memoResult = react.memo(
         let guildId;
         let obj = channelId(576);
         const cResult = obj.c(8);
-        const context = react.useContext(guildId(11901));
+        const context = react.useContext(guildId(11915));
         channelId = context.channelId;
         guildId = context.guildId;
-        const tmp5 = guildId(17190)(channelId);
+        const tmp5 = guildId(17219)(channelId);
         dependencyMap = tmp5;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           let items = [
@@ -3268,11 +3268,11 @@ const memoResult = react.memo(
               first,
               tmp12,
               tmp13,
-              tmp(17305).areVoicePanelPreJoinContentPropsEqual,
+              tmp(17333).areVoicePanelPreJoinContentPropsEqual,
             );
             if (cResult[6] !== stateFromStores) {
               const obj2 = { item: stateFromStores, renderItem };
-              const tmp22 = closure_27(channelId(4589).TransitionItem, obj2);
+              const tmp22 = closure_27(channelId(4595).TransitionItem, obj2);
               cResult[6] = stateFromStores;
               cResult[7] = tmp22;
               tmp19 = tmp22;
@@ -3332,10 +3332,10 @@ const memoResult = react.memo(
     : () => {
         let closure_2;
         let guildId;
-        const context = react.useContext(guildId(11901));
+        const context = react.useContext(guildId(11915));
         const channelId = context.channelId;
         guildId = context.guildId;
-        const tmp2 = guildId(17190)(channelId);
+        const tmp2 = guildId(17219)(channelId);
         dependencyMap = tmp2;
         let obj = channelId(504);
         let items = [
@@ -3387,10 +3387,10 @@ const memoResult = react.memo(
             }
           },
           items1,
-          channelId(17305).areVoicePanelPreJoinContentPropsEqual,
+          channelId(17333).areVoicePanelPreJoinContentPropsEqual,
         );
         const obj2 = { item: stateFromStores, renderItem };
-        return closure_27(channelId(4589).TransitionItem, obj2);
+        return closure_27(channelId(4595).TransitionItem, obj2);
       },
 );
 let size = size_mod;

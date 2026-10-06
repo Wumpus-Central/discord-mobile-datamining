@@ -28,7 +28,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp4 = cResult[1];
       }
-      const tmp6 = importDefault(tmp4 ? 6015 : 6018);
+      const tmp6 = importDefault(tmp4 ? 6022 : 6025);
       if (cResult[2] !== tmp4) {
         const intl = intl2.intl;
         const string = intl.string;
@@ -76,7 +76,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         <IconButton
           size="sm"
           variant="secondary-overlay"
-          icon={importDefault(canGoBackResult ? 6015 : 6018)}
+          icon={importDefault(canGoBackResult ? 6022 : 6025)}
           onPress={onPress}
           accessibilityLabel={string(canGoBackResult ? t["13/7kX"] : t.cpT0Cq)}
           maxFontSizeMultiplier={1.5}

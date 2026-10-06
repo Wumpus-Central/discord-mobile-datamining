@@ -11,7 +11,7 @@ import RegistrationUIStore from "../RegistrationUIStore.tsx";
 import RegistrationConstants from "../../RegistrationConstants.tsx";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
-import module_4461_mod from "../../../../../_runtime/metro/04461__.js";
+import module_4467_mod from "../../../../../_runtime/metro/04467__.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -40,14 +40,14 @@ let obj = {
 };
 obj2 = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let closure_15 = createStyles.createStyles(obj);
-let module_4461 = module_4461_mod;
-module_4461 = module_4461.utc();
-let closure_17 = module_4461.toDate();
-module_4461 = module_4461.clone();
-const endOfResult = module_4461.endOf("year");
+let module_4467 = module_4467_mod;
+module_4467 = module_4467.utc();
+let closure_17 = module_4467.toDate();
+module_4467 = module_4467.clone();
+const endOfResult = module_4467.endOf("year");
 const maximumDate = endOfResult.toDate();
-module_4461 = module_4461.clone();
-const subtractResult = module_4461.subtract(100, "years");
+module_4467 = module_4467.clone();
+const subtractResult = module_4467.subtract(100, "years");
 const minimumDate = subtractResult.toDate();
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
@@ -395,7 +395,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj9 = {
         value: formatResult,
-        text: module_4461.format("L"),
+        text: module_4467.format("L"),
         onPress() {
           return ConsentStore(true);
         },
@@ -456,10 +456,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         minimumDate,
         onConfirm(arg0) {
           ConsentStore(false);
-          closure_3(module_4461(arg0));
+          closure_3(module_4467(arg0));
         },
         onDateChange(date1) {
-          closure_3(module_4461(date1));
+          closure_3(module_4467(date1));
         },
         onCancel() {
           return ConsentStore(false);

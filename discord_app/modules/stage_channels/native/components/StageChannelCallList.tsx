@@ -846,10 +846,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       let width;
       let isScreenLandscape;
-      let obj = width(9754);
+      let obj = width(9767);
       const throttleDurationForChannel = obj.useThrottleDurationForChannel(channel.id);
       width = isScreenLandscape(1484)().width;
-      const obj2 = width(5912);
+      const obj2 = width(5919);
       isScreenLandscape = obj2.useIsScreenLandscape();
       const items = [width, isScreenLandscape];
       const memo = react.useMemo(() => {
@@ -865,7 +865,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
         return obj;
       }, items);
-      const obj3 = width(9754);
+      const obj3 = width(9767);
       const tmp4 = _slicedToArray(
         obj3.useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
         2,

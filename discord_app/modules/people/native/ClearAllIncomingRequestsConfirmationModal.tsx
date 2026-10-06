@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/people/native/ClearAllIncomin
 export default function openClearAllIncomingRequestsConfirmationModal(incomingPendingRequestCount) {
   const obj = ModalActionCreatorsDefault;
   const obj2 = { incomingPendingRequestCount };
-  obj.pushLazy(asyncRequire(9441, dependencyMap.paths), obj2);
+  obj.pushLazy(asyncRequire(9454, dependencyMap.paths), obj2);
 }

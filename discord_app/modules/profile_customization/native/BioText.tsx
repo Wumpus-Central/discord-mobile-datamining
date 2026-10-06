@@ -216,7 +216,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj4 = { variant: str, color: str3, lineClamp, style: span, children: tmp21 };
-                const tmp25 = closure_8(lineClamp(4886).Text, obj4, "changelog-cta");
+                const tmp25 = closure_8(lineClamp(4892).Text, obj4, "changelog-cta");
                 cResult[11] = lineClamp;
                 cResult[12] = tmp4.span;
                 cResult[13] = str3;
@@ -229,7 +229,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj5 = { variant: str, color: str4, lineClamp, style: text, children: items1 };
           items1 = [tmp16, "\n"];
-          const tmp20 = closure_7(lineClamp(4886).Text, obj5, "changelog-bio");
+          const tmp20 = closure_7(lineClamp(4892).Text, obj5, "changelog-bio");
           cResult[4] = lineClamp;
           cResult[5] = tmp4.text;
           cResult[6] = str4;
@@ -263,7 +263,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj6 = { variant: str, color: str2, lineClamp, style: tmp4.text, children: tmp5 };
-          const tmp14 = closure_8(lineClamp(4886).Text, obj6);
+          const tmp14 = closure_8(lineClamp(4892).Text, obj6);
           cResult[20] = lineClamp;
           cResult[21] = tmp4.text;
           cResult[22] = str2;
@@ -274,8 +274,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj7 = { linkVariant: str, textVariant: str, customEmojiOffsetY: num };
-      const parseBioReact = lineClamp(8942).parseBioReact;
-      lineClamp(8942);
+      const parseBioReact = lineClamp(8971).parseBioReact;
+      lineClamp(8971);
       num = undefined;
       const tmpResult2 = lineClamp(1369);
       if (tmpResult2.isAndroid()) {

@@ -6,7 +6,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AttachmentIcon from "../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import PlusLargeIcon2 from "../../../design/components/Icon/native/redesign/generated/PlusLargeIcon.tsx";
 import CalendarPlusIcon from "../../../design/components/Icon/native/redesign/generated/CalendarPlusIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11849_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/11863_AssetRegistry.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";

@@ -72,7 +72,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmpResult = onlyWithCommands(8800);
+      const tmpResult = onlyWithCommands(8832);
       const hasBaseAccessPermissions = tmpResult.usePermissionContext(channel, first).hasBaseAccessPermissions;
       let tmp7 = closure_9(context, hasBaseAccessPermissions, tmp4);
       const tmp8 = closure_10(hasBaseAccessPermissions, undefined === allowFetch || allowFetch);
@@ -159,7 +159,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmp31 = includeNonEmbeddedApps && includeBuiltIn;
           if (tmp31) {
-            items1.push(onlyWithCommands(8794).FAKE_BUILT_IN_APP);
+            items1.push(onlyWithCommands(8826).FAKE_BUILT_IN_APP);
           }
           cResult[5] = tmp7.result;
           cResult[6] = includeBuiltIn;
@@ -232,9 +232,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if ("channel" === context.type) {
         channel = context.channel;
       }
-      const usePermissionContext = onlyWithCommands(8800).usePermissionContext;
+      const usePermissionContext = onlyWithCommands(8832).usePermissionContext;
       const items = [];
-      onlyWithCommands(8800);
+      onlyWithCommands(8832);
       items[0] = onlyWithCommands(1985).ApplicationCommandType.CHAT;
       const hasBaseAccessPermissions = usePermissionContext(channel, items).hasBaseAccessPermissions;
       let tmp3 = closure_9(context, hasBaseAccessPermissions, flag);
@@ -310,7 +310,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         includeNonEmbeddedApps = includeBuiltIn;
       }
       if (includeNonEmbeddedApps) {
-        items2.push(onlyWithCommands(8794).FAKE_BUILT_IN_APP);
+        items2.push(onlyWithCommands(8826).FAKE_BUILT_IN_APP);
       }
       let obj = { apps: items2, loading: tmp28 };
       let fetching;
@@ -1642,7 +1642,7 @@ export const useGlobalSearchResults = function useGlobalSearchResults(fetches) {
     tmp = substr;
   }
   const tmp3 = query;
-  const tmp5 = entrypoint === query(8932).AppLauncherEntrypoint.VOICE;
+  const tmp5 = entrypoint === query(8961).AppLauncherEntrypoint.VOICE;
   dependencyMap = tmp5;
   guild_id = undefined;
   if ("channel" === context.type) {

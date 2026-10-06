@@ -5,7 +5,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
 import intl6 from "../../../intl/index.native.tsx";
-import _modDef3205 from "../premium_group/PremiumGroup.messages.js";
+import _modDef3233 from "../premium_group/PremiumGroup.messages.js";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import BoostGemIcon2 from "../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -271,7 +271,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = intl6.intl;
-          const stringResult = intl3.string(tmp23(3205)["5asczk"]);
+          const stringResult = intl3.string(tmp23(3233)["5asczk"]);
           cResult[28] = stringResult;
           tmp34 = stringResult;
         } else {
@@ -398,7 +398,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           tmp43Result = metroRequire(View, obj13);
         } else {
           const obj15 = { size: GameIcon.GameIconSizes.SMALL, skuId: tmp5 };
-          const tmp23Result = tmp23(6667);
+          const tmp23Result = tmp23(6674);
           tmp43Result = metroRequire(tmp23Result, obj15);
         }
         cResult[37] = tmp9;
@@ -447,7 +447,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (hasPremiumGroup) {
         const intl3 = intl6.intl;
-        stringResult = intl3.string(_modDef3205["5asczk"]);
+        stringResult = intl3.string(_modDef3233["5asczk"]);
       } else {
         if (null != currentSubscription) {
           if (currentSubscription.planId === planId) {
@@ -779,7 +779,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: intl.string(currentSubscription(1126).t.YugZY0),
           };
-          const Text = tmp2(4886).Text;
+          const Text = tmp2(4892).Text;
           intl = tmp2(1126).intl;
           items1 = [closure_6(Text, obj3), , ,];
           const obj4 = {
@@ -806,7 +806,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             variant: "text-sm/medium",
             children: intl2.string(currentSubscription(1126).t.Z5b2Gf),
           };
-          const Text2 = tmp2(4886).Text;
+          const Text2 = tmp2(4892).Text;
           intl2 = tmp2(1126).intl;
           items1[2] = closure_6(Text2, obj5);
           let tmp9Result = null;
@@ -819,7 +819,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 variant: "text-sm/medium",
                 children: intl3.string(currentSubscription(1126).t.azRP0E),
               };
-              const Text3 = tmp2(4886).Text;
+              const Text3 = tmp2(4892).Text;
               intl3 = tmp2(1126).intl;
               tmp9Result = closure_6(Text3, obj6);
             }

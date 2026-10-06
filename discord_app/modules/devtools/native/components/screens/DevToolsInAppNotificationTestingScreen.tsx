@@ -902,7 +902,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_14(TableRow, obj, label.label);
             }),
           };
-          let TableRowGroup = tmp(6074).TableRowGroup;
+          let TableRowGroup = tmp(6081).TableRowGroup;
           const tmp20 = closure_14(TableRowGroup, obj4);
           cResult[8] = tmp20;
           tmp17 = tmp20;

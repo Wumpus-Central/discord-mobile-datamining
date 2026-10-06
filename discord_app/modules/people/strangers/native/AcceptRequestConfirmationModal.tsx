@@ -99,8 +99,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = { variant: "heading-lg/bold", color: "text-strong", style: text, children: tmp10 };
         cResult[5] = tmp4.text;
-        cResult[6] = closure_4(onConfirm(4886).Text, obj3);
-        const tmp13 = closure_4(onConfirm(4886).Text, obj3);
+        cResult[6] = closure_4(onConfirm(4892).Text, obj3);
+        const tmp13 = closure_4(onConfirm(4892).Text, obj3);
       } else {
         class T {
           constructor() {
@@ -145,8 +145,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj5 = { variant: "text-md/medium", color: "text-subtle", style: text2, children: tmp14 };
         cResult[8] = tmp4.text;
-        cResult[9] = closure_4(onConfirm(4886).Text, obj5);
-        const tmp17 = closure_4(onConfirm(4886).Text, obj5);
+        cResult[9] = closure_4(onConfirm(4892).Text, obj5);
+        const tmp17 = closure_4(onConfirm(4892).Text, obj5);
       } else {
         class T {
           constructor() {
@@ -206,7 +206,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.text,
         children: intl3.string(onConfirm(1126).t.eJzSDT),
       };
-      const Text = onConfirm(4886).Text;
+      const Text = onConfirm(4892).Text;
       intl3 = onConfirm(1126).intl;
       items = [closure_4(Text, obj3)];
       const obj4 = {
@@ -215,7 +215,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.text,
         children: intl4.string(onConfirm(1126).t.GB4jUw),
       };
-      const Text2 = onConfirm(4886).Text;
+      const Text2 = onConfirm(4892).Text;
       intl4 = onConfirm(1126).intl;
       items[1] = closure_4(Text2, obj4);
       return closure_4(tmp2, obj);

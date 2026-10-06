@@ -182,7 +182,7 @@ const memoResult = memo(
         let voiceStates;
         let tmp2 = guildChannels;
         let obj = gameClaimMarkAsDismissed(guildChannels[13]);
-        const cResult = obj.c(113);
+        const cResult = obj.c(112);
         ({ contentInset, gameClaimMarkAsDismissed } = guild);
         guild = guild.guild;
         guildChannels = guild.guildChannels;
@@ -199,8 +199,9 @@ const memoResult = memo(
         const bannerWidth = tmp6.bannerWidth;
         const headerHeight = tmp6.headerHeight;
         const fontScale = tmp6.fontScale;
-        ({ listTop, listBottom, listPaddingBottom, listViewportHeight } = tmp6);
+        ({ listTop, listViewportHeight } = tmp6);
         let obj3 = react;
+        ({ listBottom, listPaddingBottom } = tmp6);
         const ref = react.useRef(null);
         const tmp5 = guild;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -213,7 +214,7 @@ const memoResult = memo(
         const tmp5Result = tmp5(tmp2[20]);
         const list = tmp5Result.useConfig(first).list;
         if (cResult[1] !== guildChannels) {
-          class N {
+          class P {
             constructor() {
               obj = closure_0(closure_2[21]);
               result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -221,9 +222,9 @@ const memoResult = memo(
             }
           }
           cResult[1] = guildChannels;
-          cResult[2] = N;
+          cResult[2] = P;
         } else {
-          class N {
+          class P {
             constructor() {
               obj = closure_0(closure_2[21]);
               result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -233,16 +234,16 @@ const memoResult = memo(
         }
         if (cResult[3] === guildChannels) {
           let tmp11;
-          class N {
+          class P {
             constructor() {
               obj = closure_0(closure_2[21]);
               result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
               return;
             }
           }
-          const effect = obj3.useEffect(N, items);
+          const effect = obj3.useEffect(P, items);
           if (cResult[6] !== guildChannels) {
-            class N {
+            class P {
               constructor() {
                 obj = closure_0(closure_2[21]);
                 result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -254,7 +255,7 @@ const memoResult = memo(
             cResult[7] = sections;
             tmp11 = sections;
           } else {
-            class N {
+            class P {
               constructor() {
                 obj = closure_0(closure_2[21]);
                 result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -265,7 +266,7 @@ const memoResult = memo(
           sections = tmp11;
           const id = guild.id;
           if (cResult[8] !== id) {
-            class N {
+            class P {
               constructor() {
                 obj = closure_0(closure_2[21]);
                 result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -276,7 +277,7 @@ const memoResult = memo(
             cResult[8] = id;
             cResult[9] = tmp14;
           } else {
-            class N {
+            class P {
               constructor() {
                 obj = closure_0(closure_2[21]);
                 result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -290,7 +291,7 @@ const memoResult = memo(
           const tmpResult2 = gameClaimMarkAsDismissed(tmp2[23]);
           const isHomeDrawerEnabled = tmpResult2.useIsHomeDrawerEnabled();
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            class N {
+            class P {
               constructor() {
                 obj = closure_0(closure_2[21]);
                 result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -299,7 +300,7 @@ const memoResult = memo(
             }
             cResult[10] = tmp18;
           } else {
-            class N {
+            class P {
               constructor() {
                 obj = closure_0(closure_2[21]);
                 result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -308,7 +309,7 @@ const memoResult = memo(
             }
           }
           if (cResult[11] === guild) {
-            class N {
+            class P {
               constructor() {
                 obj = closure_0(closure_2[21]);
                 result = obj.registerFastListChannelVisibilityMethod(closure_15, guildChannels);
@@ -338,7 +339,7 @@ const memoResult = memo(
         let items14;
         let listBottom;
         let listPaddingBottom;
-        let listViewportHeight;
+        let listTop;
         let obj18;
         let row;
         let section;
@@ -356,7 +357,6 @@ const memoResult = memo(
           gameClaimMarkAsDismissed.startApplicationAccountLinkAuthorization;
         const accountLinkApplication = gameClaimMarkAsDismissed.accountLinkApplication;
         const favoritesSuggestionsNoticeHeight = gameClaimMarkAsDismissed.favoritesSuggestionsNoticeHeight;
-        listViewportHeight = undefined;
         let tmp2 = guildChannels;
         ({ contentInset, style } = gameClaimMarkAsDismissed);
         let obj = gameClaimMarkAsDismissed(guildChannels[18]);
@@ -367,8 +367,8 @@ const memoResult = memo(
         const bannerWidth = tmp5.bannerWidth;
         const headerHeight = tmp5.headerHeight;
         const fontScale = tmp5.fontScale;
-        ({ listBottom, listPaddingBottom, listViewportHeight } = tmp5);
-        const listTop = tmp5.listTop;
+        const listViewportHeight = tmp5.listViewportHeight;
+        ({ listTop, listBottom, listPaddingBottom } = tmp5);
         const ref = startApplicationAccountLinkAuthorization.useRef(null);
         let obj2 = guild(guildChannels[20]);
         const list = obj2.useConfig({ location: "Channel List" }).list;
@@ -584,7 +584,6 @@ const memoResult = memo(
         const youBarTotalHeight = obj10.useYouBarTotalHeight(16);
         const obj12 = {
           endReachedThreshold: listBottom + listPaddingBottom,
-          footerSize: listBottom + listPaddingBottom,
           getItemSize: callback5,
           getRecyclerKey: callback11,
           getSectionFooterSize: callback9,
@@ -1001,12 +1000,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp2Result = selectedGuildId(2077);
             if (tmp2Result.isFavoritesGuildId(selectedGuildId)) {
               const obj4 = { guild: stateFromStores, selectedChannelId, selectedVoiceChannelId: stateFromStores1 };
-              const _default = selectedGuildId(16211).default;
+              const _default = selectedGuildId(16251).default;
               const merged1 = Object.assign(merged);
               return closure_16(_default, obj4);
             } else {
               let tmp6Result;
-              const tmp2Result2 = selectedGuildId(9899);
+              const tmp2Result2 = selectedGuildId(9912);
               if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
                 const obj5 = { style: merged.style, guildId: selectedGuildId };
                 tmp6Result = closure_16(NsfwGateGuildSidebarDefault, obj5);

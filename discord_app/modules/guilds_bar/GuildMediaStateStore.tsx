@@ -287,7 +287,7 @@ function computeGuildMediaState(guildId) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = getEmbeddedActivityLocationChannelId(_location);
-        let tmp34Result = tmp34(9000);
+        let tmp34Result = tmp34(9033);
         if (tmp34Result.isActivitiesInTextEnabled(ChannelStore.getChannel(embeddedActivityLocationChannelId))) {
           someResult2 = found.length > 0;
         } else {
@@ -308,7 +308,7 @@ function computeGuildMediaState(guildId) {
           activity: someResult2,
           isCurrentUserConnected: false,
         };
-        let tmp34Result2 = tmp34(9160);
+        let tmp34Result2 = tmp34(9195);
         return obj4;
       }
       continue;
@@ -344,17 +344,6 @@ function handleSelectedChannelChange() {
     tmp2 = flag;
   }
   return tmp2;
-}
-function handleGuildCreateOrDelete(guild) {
-  let flag = 0 !== map.size;
-  guild = guild.guild;
-  if (flag) {
-    closure_23 = closure_23 + 1;
-    closure_24 = closure_24 + 1;
-    flag = true;
-  }
-  map.delete(guild.id);
-  return flag;
 }
 const isVoiceChannel = ChannelRecord.isVoiceChannel;
 ({ BasicPermissions: closure_19, ME: closure_20 } = Constants);
@@ -434,13 +423,36 @@ class GuildMediaStateStore extends Store {
 const prototype = GuildMediaStateStore.prototype;
 GuildMediaStateStore.displayName = "GuildMediaStateStore";
 let obj = {
-  CONNECTION_OPEN: reset,
-  CONNECTION_OPEN_SUPPLEMENTAL: reset,
-  CONNECTION_CLOSED: reset,
+  CONNECTION_OPEN: function handleConnectionOpen() {
+    const tmp = markAllStale();
+    const keys = map.keys();
+    const iter = keys[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let tmp4 = nextResult;
+      if (null == GuildStore.getGuild(nextResult)) {
+        let deleteResult = map.delete(tmp4);
+      }
+      continue;
+    }
+    return tmp;
+  },
+  CONNECTION_OPEN_SUPPLEMENTAL: markAllStale,
+  CONNECTION_CLOSED: markAllStale,
   OVERLAY_INITIALIZE: reset,
   LOGOUT: reset,
-  GUILD_CREATE: handleGuildCreateOrDelete,
-  GUILD_DELETE: handleGuildCreateOrDelete,
+  GUILD_CREATE: markAllStale,
+  GUILD_DELETE: function handleGuildDelete(guild) {
+    let flag = 0 !== map.size;
+    guild = guild.guild;
+    if (flag) {
+      closure_23 = closure_23 + 1;
+      closure_24 = closure_24 + 1;
+      flag = true;
+    }
+    map.delete(guild.id);
+    return flag;
+  },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(arg0) {
     let flag = false;
     const tmp = arg0.voiceStates[Symbol.iterator]();

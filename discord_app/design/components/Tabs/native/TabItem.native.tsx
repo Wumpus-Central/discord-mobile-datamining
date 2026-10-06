@@ -155,7 +155,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(17);
       ({ count, index, activeIndex, pressed, variant } = arg0);
       const tmp4 = closure_11();
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       sharedValue = obj2.useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function n() {
@@ -188,12 +188,12 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         obj4 = ReanimatedRexport2;
         return obj;
       };
-      const tmpResult = tmp(4612);
+      const tmpResult = tmp(4618);
       let obj3 = {
-        withSpring: tmp(5597).withSpring,
+        withSpring: tmp(5604).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
-        interpolate: tmp(4612).interpolate,
+        interpolate: tmp(4618).interpolate,
       };
       fn2.__closure = obj3;
       fn2.__workletHash = 5074862072194;
@@ -232,7 +232,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp17 = tmp20;
               }
               const obj5 = { animated: true, variant: "text-sm/medium", style: tmp12, lineClamp: 1, children: count };
-              const tmp16 = closure_6(tmp(4886).Text, obj5);
+              const tmp16 = closure_6(tmp(4892).Text, obj5);
               cResult[11] = tmp12;
               cResult[12] = count;
               cResult[13] = tmp16;
@@ -265,13 +265,13 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue;
       ({ count, index, activeIndex, pressed, variant } = arg0);
       const tmp = closure_11();
-      let obj = sharedValue(4612);
+      let obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(0);
       let items = [sharedValue];
       const layoutEffect = react.useLayoutEffect(() => {
         const result = sharedValue.set(1);
       }, items);
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       class I {
         constructor() {
           let items;
@@ -291,10 +291,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       let obj3 = {
-        withSpring: sharedValue(5597).withSpring,
+        withSpring: sharedValue(5604).withSpring,
         countAnimationState: sharedValue,
         COUNT_SPRING_CONFIG,
-        interpolate: sharedValue(4612).interpolate,
+        interpolate: sharedValue(4618).interpolate,
       };
       I.__closure = obj3;
       I.__workletHash = 8384757524453;
@@ -302,7 +302,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj2.useAnimatedStyle(I);
       let obj4 = {
         style: items1,
-        children: closure_6(sharedValue(4886).Text, {
+        children: closure_6(sharedValue(4892).Text, {
           animated: true,
           variant: "text-sm/medium",
           style: tmp5,

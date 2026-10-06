@@ -433,7 +433,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp20;
       let trailingIcon;
       let trailingPressableProps;
-      const f91379 = () => {
+      const f91515 = () => {
         let num = 0;
         if (null != leadingIcon) {
           num = IconSize.ICON_SIZE.xs + tmp;
@@ -497,8 +497,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             let trailingIcon2 = inputStyles.trailingText;
           }
           let num = 2;
-          [tmp19, tmp20] = trailingIcon(react.useState(f91379), 2);
-          trailingIcon(react.useState(f91379), 2);
+          [tmp19, tmp20] = trailingIcon(react.useState(f91515), 2);
+          trailingIcon(react.useState(f91515), 2);
           const tmp21 = trailingIcon(
             react.useState(() => {
               let num = 0;

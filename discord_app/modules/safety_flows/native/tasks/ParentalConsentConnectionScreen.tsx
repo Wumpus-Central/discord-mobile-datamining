@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl5 from "../../../../intl/index.native.tsx";
 import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
-import _modDef2787 from "../../SafetyFlows.messages.js";
+import _modDef2815 from "../../SafetyFlows.messages.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FamilyCenterConstants from "../../../parent_tools/FamilyCenterConstants.tsx";
 import shareGuardianConnectLink from "../../../parent_tools/native/shareGuardianConnectLink.tsx";
@@ -239,11 +239,11 @@ export default function ParentalConsentConnectionScreen() {
       linkCode: str2,
       expiresAt: parsed,
       onRefresh: getLinkCode,
-      title: intl.string(_modDef2787.dMMSA0),
-      body: intl2.format(_modDef2787["6GaRTu"], obj2),
+      title: intl.string(_modDef2815.dMMSA0),
+      body: intl2.format(_modDef2815["6GaRTu"], obj2),
     };
     ActionSheetActionCreatorsDefault;
-    const tmp2 = asyncRequire(14687, dependencyMap.paths);
+    const tmp2 = asyncRequire(14703, dependencyMap.paths);
     intl = intl5.intl;
     intl2 = intl5.intl;
     obj2 = { link };

@@ -81,5 +81,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
   const obj = ModalActionCreatorsDefault;
-  obj.pushLazy(asyncRequire(17570, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  obj.pushLazy(asyncRequire(17616, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

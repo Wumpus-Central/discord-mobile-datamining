@@ -110,7 +110,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[18] !== onClose) {
             const obj2 = { text: tmp25, variant: "secondary", onPress: onClose };
-            const tmp29 = closure_6(tmp(5594).Button, obj2);
+            const tmp29 = closure_6(tmp(5601).Button, obj2);
             cResult[18] = onClose;
             cResult[19] = tmp29;
             tmp27 = tmp29;
@@ -150,7 +150,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp30 = tmp33;
         }
         const obj5 = { variant: "destructive", text: tmp19, onPress: tmp12 };
-        const tmp24 = closure_6(tmp(5594).Button, obj5);
+        const tmp24 = closure_6(tmp(5601).Button, obj5);
         cResult[14] = tmp12;
         cResult[15] = tmp19;
         cResult[16] = tmp24;
@@ -192,14 +192,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         subtitle: subtitleText,
         buttons: closure_8(closure_7, obj2),
       };
-      const tmp5 = onClose(5927);
+      const tmp5 = onClose(5934);
       const merged1 = Object.assign(merged);
       intl = guildId(1126).intl;
       if (subtitleText == null) {
         const intl2 = tmp7(1126).intl;
         subtitleText = intl2.string(tmp7(1126).t.nQHxqm);
       }
-      const Button = tmp7(5594).Button;
+      const Button = tmp7(5601).Button;
       if (confirmText == null) {
         const intl3 = tmp7(1126).intl;
         confirmText = intl3.string(tmp7(1126).t.OzHPde);
@@ -207,7 +207,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       obj2 = { children: items1 };
       items1 = [closure_6(Button, { variant: "destructive", text: confirmText, onPress: callback })];
       const obj3 = { text: intl4.string(guildId(1126).t.bANR0R), variant: "secondary", onPress: onClose };
-      const Button2 = tmp7(5594).Button;
+      const Button2 = tmp7(5601).Button;
       intl4 = tmp7(1126).intl;
       items1[1] = closure_6(Button2, obj3);
       return closure_6(tmp5, obj);

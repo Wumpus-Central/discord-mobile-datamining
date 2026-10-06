@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/native/ConjurePublishNotesSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl14 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import GuildChannelStore2 from "../../../../stores/GuildChannelStore.tsx";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MessageConstants from "../../../messages/MessageConstants.tsx";
@@ -271,7 +271,7 @@ export default function ConjurePublishNotesSheet(guildId) {
         closure_1_10(id.id);
       },
     };
-    obj3 = { title: intl.string(_modDef3723.Gd63Fl) };
+    obj3 = { title: intl.string(_modDef3753.Gd63Fl) };
     tmp2 = ChannelPickerActionSheetDefault;
     intl = intl14.intl;
     showActionSheet(obj);

@@ -235,7 +235,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       if (tmp48) {
                         const obj9 = { style: items2, children: headerRight() };
                         items2 = [tmp4.headerRight, animatedStyle];
-                        const View2 = tmp5(4612).View;
+                        const View2 = tmp5(4618).View;
                         tmp48 = closure_7(View2, obj9);
                       }
                       cResult[22] = headerRight;
@@ -268,16 +268,16 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               if (tmp38) {
                 const obj11 = { style: tmp4.rankPillContainer, children: items4 };
                 const obj12 = { rank: game.l30Rank, compact: true };
-                items4 = [closure_7(sharedValue(8363), obj12)];
+                items4 = [closure_7(sharedValue(8396), obj12)];
                 const items5 = [StyleSheet.absoluteFill, animatedStyle1];
-                const obj13 = { style: null, children: closure_7(sharedValue(8363), obj14) };
+                const obj13 = { style: null, children: closure_7(sharedValue(8396), obj14) };
                 class B {
                   constructor() {
                     const obj = { opacity: 1 - sharedValue.get() };
                     return obj;
                   }
                 }
-                const View = tmp5(4612).View;
+                const View = tmp5(4618).View;
                 obj14 = { rank: game.l30Rank };
                 items4[1] = closure_7(View, obj13);
                 tmp38 = closure_8(closure_5, obj11);
@@ -369,12 +369,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue;
       const tmp = closure_10();
       const tmp2 = game;
-      let obj = game(4580);
+      let obj = game(4586);
       dependencyMap = tmp6;
       const token = obj.useToken(application(587).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN);
       let num = 0;
-      const useSharedValue = game(4612).useSharedValue;
-      game(4612);
+      const useSharedValue = game(4618).useSharedValue;
+      game(4618);
       if (null != headerRight) {
         num = 1;
       }
@@ -397,9 +397,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { headerRightProgress: sharedValue };
       fn.__workletHash = 7824413274607;
       fn.__initData = __initData3;
-      const tmp2Result = tmp2(4612);
+      const tmp2Result = tmp2(4618);
       const animatedStyle = tmp2Result.useAnimatedStyle(fn);
-      const tmp2Result2 = tmp2(4612);
+      const tmp2Result2 = tmp2(4618);
       class S {
         constructor() {
           const obj = { opacity: 1 - sharedValue.get() };
@@ -453,7 +453,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != name) {
         const obj2 = { style: tmp.headerContainer, children: items2 };
         const obj3 = { android_fallbackColor: token };
-        items2 = [closure_7(tmp2(8567).BackgroundBlurFill, obj3)];
+        items2 = [closure_7(tmp2(8602).BackgroundBlurFill, obj3)];
         let tmp18Result = null != memo;
         const obj4 = { style: tmp.headerRow, children: items3 };
         if (tmp18Result) {
@@ -469,7 +469,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           lineClamp: 1,
           children: name,
         };
-        items4 = [closure_7(tmp2(4886).Heading, obj8)];
+        items4 = [closure_7(tmp2(4892).Heading, obj8)];
         let l30Rank;
         if (game != null) {
           l30Rank = game.l30Rank;
@@ -478,10 +478,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp16Result) {
           const obj10 = { rank: game.l30Rank, compact: true };
           const obj9 = { style: tmp.rankPillContainer, children: items5 };
-          items5 = [closure_7(application(8363), obj10)];
-          const obj11 = { style: items6, children: closure_7(application(8363), obj12) };
+          items5 = [closure_7(application(8396), obj10)];
+          const obj11 = { style: items6, children: closure_7(application(8396), obj12) };
           items6 = [StyleSheet.absoluteFill, animatedStyle1];
-          const View = tmp4(4612).View;
+          const View = tmp4(4618).View;
           obj12 = { rank: game.l30Rank };
           items5[1] = closure_7(View, obj11);
           tmp16Result = closure_8(closure_5, obj9);
@@ -492,7 +492,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp18Result2) {
           const obj13 = { style: items7, children: headerRight() };
           items7 = [tmp.headerRight, animatedStyle];
-          const View2 = tmp4(4612).View;
+          const View2 = tmp4(4618).View;
           tmp18Result2 = closure_7(View2, obj13);
         }
         items3[2] = tmp18Result2;

@@ -55,7 +55,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp6 = cResult[4];
         }
         MessageStore = tmp6;
-        const tmpResult = tmp(9785);
+        const tmpResult = tmp(9798);
         const strangerDangerWarning = tmpResult.useStrangerDangerWarning(id.id);
         if (cResult[5] !== id) {
           const hasFlagResult = id.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);

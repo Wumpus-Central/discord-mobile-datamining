@@ -11,5 +11,5 @@ export const openEditCustomStatusModal = function openEditCustomStatusModal(arg0
   ({ analyticsLocations, prompt: _prompt } = arg0);
   const obj = ModalActionCreatorsDefault;
   const obj2 = { analyticsLocations, prompt: _prompt };
-  obj.pushLazy(asyncRequire(10829, dependencyMap.paths), obj2, undefined, { presentation: "modal" });
+  obj.pushLazy(asyncRequire(10842, dependencyMap.paths), obj2, undefined, { presentation: "modal" });
 };

@@ -9,8 +9,8 @@ import DismissibleContentConstants from "../dismissible_content/DismissibleConte
 import embeddedActivityLocationUtils from "utils/embeddedActivityLocationUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../actions/ChannelRTCActionCreators.tsx";
 import Constants3 from "../instant_invite/Constants.tsx";
-import ActivityPanelConstants from "panel/ActivityPanelConstants.tsx";
 import ApplicationCommandIndexStore from "../application_commands/ApplicationCommandIndexStore.tsx";
+import ActivityPanelConstants from "panel/ActivityPanelConstants.tsx";
 import ChannelRTCParticipants from "../calls/ChannelRTCParticipants.tsx";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import ApplicationStore from "../applications/ApplicationStore.tsx";
@@ -178,7 +178,7 @@ let obj = function _runPrimaryAppCommandOrJoinEmbeddedActivity() {
             PRIVATE_CHANNEL = undefined;
             c16 = 1;
             c17 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c16) {
           if (channelId === 1) {
@@ -601,7 +601,7 @@ obj = function _maybeSendPrimaryAppCommand() {
             user = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (applicationId === 1) {
@@ -949,7 +949,7 @@ obj = function _joinEmbeddedActivity() {
             obj32 = undefined;
             guild_id = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === guild_id) {
           if (arg0 === 1) {
@@ -1501,7 +1501,7 @@ obj = function _fetchShelf() {
             assets = undefined;
             c8 = 1;
             c9 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === c8) {
@@ -1728,7 +1728,7 @@ obj = function _sendEmbeddedActivityInvite() {
             code = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -1824,7 +1824,7 @@ obj = function _sendEmbeddedActivityInviteUser() {
             let code;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -1969,14 +1969,17 @@ function createProxyTicket() {
   return obj(...arguments);
 }
 obj = function _createProxyTicket() {
-  obj = _asyncToGenerator(async (arg0, channel_id) => {
+  obj = _asyncToGenerator(async (arg0, channel_id, surface) => {
     let closure_0 = arg0;
+    let c4 = 0;
     let c3 = 0;
-    let c2 = 0;
-    return (async (arg0, value) => {
+    return (async (arg0, value, arg2) => {
       const obj4 = { use_stateless_ticket: true };
       if (null != channel_id) {
         obj4.channel_id = channel_id;
+      }
+      if (null != surface) {
+        obj4.surface = surface;
       }
       const HTTP = HTTPUtils.HTTP;
       const request = { url: closure_2_21.APPLICATION_PROXY_TICKET(closure_0), body: obj4, rejectWithError: true };

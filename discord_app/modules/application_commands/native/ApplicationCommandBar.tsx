@@ -391,7 +391,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -409,7 +409,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -426,7 +426,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -445,7 +445,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -464,7 +464,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -481,7 +481,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -497,7 +497,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               options = command.options;
               if (options != null) {
                 item = options.forEach(() => {
-                  /* body not rendered: F142101 */
+                  /* body not rendered: F142305 */
                 });
               }
               tmp2 = closure_9(c0);
@@ -527,7 +527,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -544,7 +544,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -574,7 +574,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -592,7 +592,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             options = command.options;
             if (options != null) {
               item = options.forEach(() => {
-                /* body not rendered: F142101 */
+                /* body not rendered: F142305 */
               });
             }
             tmp2 = closure_9(c0);
@@ -608,7 +608,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               options = command.options;
               if (options != null) {
                 item = options.forEach(() => {
-                  /* body not rendered: F142101 */
+                  /* body not rendered: F142305 */
                 });
               }
               tmp2 = closure_9(c0);
@@ -636,7 +636,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 options = command.options;
                 if (options != null) {
                   item = options.forEach(() => {
-                    /* body not rendered: F142101 */
+                    /* body not rendered: F142305 */
                   });
                 }
                 tmp2 = closure_9(c0);
@@ -665,7 +665,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 options = command.options;
                 if (options != null) {
                   item = options.forEach(() => {
-                    /* body not rendered: F142101 */
+                    /* body not rendered: F142305 */
                   });
                 }
                 tmp2 = closure_9(c0);
@@ -682,7 +682,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 options = command.options;
                 if (options != null) {
                   item = options.forEach(() => {
-                    /* body not rendered: F142101 */
+                    /* body not rendered: F142305 */
                   });
                 }
                 tmp2 = closure_9(c0);
@@ -711,7 +711,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   options = command.options;
                   if (options != null) {
                     item = options.forEach(() => {
-                      /* body not rendered: F142101 */
+                      /* body not rendered: F142305 */
                     });
                   }
                   tmp2 = closure_9(c0);
@@ -1157,7 +1157,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp21 = ref;
       if (tmp22) {
         const obj4 = { style: tmp.applicationIcon, source: memo };
-        tmp22 = c10(section(5974), obj4);
+        tmp22 = c10(section(5981), obj4);
       }
       items5 = [tmp22, , ,];
       const obj5 = {
@@ -1167,7 +1167,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: `/ ${command.displayName}`,
       };
-      items5[1] = c10(command(4886).Text, obj5);
+      items5[1] = c10(command(4892).Text, obj5);
       let options = command.options;
       let mapped;
       if (options != null) {
@@ -1213,7 +1213,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: intl.string(command(1126).t.U19GM3),
         };
-        const Text = tmp12(4886).Text;
+        const Text = tmp12(4892).Text;
         intl = tmp12(1126).intl;
         items7[1] = c10(Text, obj7);
         const options1 = command.options;
@@ -1245,10 +1245,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items5[3] = tmp19Result;
       items8 = [closure_12(tmp21, obj3), , ,];
       const obj9 = { style: tmp.applicationDescriptionDivider };
-      items8[1] = c10(command(8895).FormDivider, obj9);
+      items8[1] = c10(command(8924).FormDivider, obj9);
       items8[2] = c10(closure_15, { command, option: currentOption, optionState: tmp17 });
       const obj10 = { style: tmp.applicationDescriptionDivider };
-      items8[3] = c10(command(8895).FormDivider, obj10);
+      items8[3] = c10(command(8924).FormDivider, obj10);
       return closure_12(ref, obj2);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

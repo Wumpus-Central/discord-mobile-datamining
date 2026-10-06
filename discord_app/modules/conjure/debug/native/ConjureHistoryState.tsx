@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
@@ -86,7 +86,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let stringResult = emptyBody;
         if ("failed" === state.status) {
           const intl2 = intl3.intl;
-          stringResult = intl2.string(_modDef3723["8SErdg"]);
+          stringResult = intl2.string(_modDef3753["8SErdg"]);
         }
         cResult[5] = emptyBody;
         cResult[6] = "failed" === state.status;
@@ -96,7 +96,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let stringResult1 = emptyTitle;
       if ("failed" === state.status) {
         const intl = intl3.intl;
-        stringResult1 = intl.string(_modDef3723.h1SE6R);
+        stringResult1 = intl.string(_modDef3753.h1SE6R);
       }
       cResult[0] = emptyTitle;
       cResult[1] = "failed" === state.status;
@@ -117,13 +117,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const Text = Text_Text.Text;
       if ("failed" === state.state.status) {
         const intl = intl3.intl;
-        emptyTitle = intl.string(_modDef3723.h1SE6R);
+        emptyTitle = intl.string(_modDef3753.h1SE6R);
       }
       items = [React3(Text, { variant: "text-sm/medium", color: "text-default", children: emptyTitle })];
       const Text2 = Text_Text.Text;
       if ("failed" === state.state.status) {
         const intl2 = intl3.intl;
-        emptyBody = intl2.string(_modDef3723["8SErdg"]);
+        emptyBody = intl2.string(_modDef3753["8SErdg"]);
       }
       items[1] = React3(Text2, { variant: "text-xs/normal", color: "text-muted", children: emptyBody });
       return hasOwnProperty(View, obj);
@@ -146,7 +146,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = {
               variant: "text-xs/normal",
               color: "text-feedback-critical",
-              children: intl2.string(_modDef3723.h1SE6R),
+              children: intl2.string(_modDef3753.h1SE6R),
             };
             const Text2 = Text_Text.Text;
             intl2 = intl3.intl;
@@ -166,7 +166,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: intl.string(_modDef3723.V7Ri8H),
+                children: intl.string(_modDef3753.V7Ri8H),
               };
               const Text = Text_Text.Text;
               intl = intl3.intl;
@@ -194,7 +194,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             variant: "text-xs/normal",
             color: "text-feedback-critical",
-            children: intl2.string(_modDef3723.h1SE6R),
+            children: intl2.string(_modDef3753.h1SE6R),
           };
           const Text2 = Text_Text.Text;
           intl2 = intl3.intl;
@@ -202,7 +202,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp2 = null;
           if (state.truncated) {
-            const obj = { variant: "text-xs/normal", color: "text-muted", children: intl.string(_modDef3723.V7Ri8H) };
+            const obj = { variant: "text-xs/normal", color: "text-muted", children: intl.string(_modDef3753.V7Ri8H) };
             const Text = Text_Text.Text;
             intl = intl3.intl;
             tmp2 = React3(Text, obj);

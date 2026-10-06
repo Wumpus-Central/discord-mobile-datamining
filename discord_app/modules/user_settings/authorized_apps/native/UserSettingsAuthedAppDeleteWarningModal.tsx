@@ -351,7 +351,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 let obj3 = { variant: "secondary", text: intl3.string(require("intl").t["ETE/oC"]) };
-                const AlertActionButton = tmp(5713).AlertActionButton;
+                const AlertActionButton = tmp(5720).AlertActionButton;
                 intl3 = tmp(1126).intl;
                 const tmp23 = closure_3(AlertActionButton, obj3, "cancel");
                 cResult[17] = tmp23;

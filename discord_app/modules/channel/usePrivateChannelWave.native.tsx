@@ -29,7 +29,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === first) {
           tmp6 = cResult[2];
         }
-        const tmpResult = tmp(15965);
+        const tmpResult = tmp(16004);
         const privateChannelWaveEligible = tmpResult.usePrivateChannelWaveEligible(id, arg1);
         if (cResult[3] === tmp6) {
           let tmp9;

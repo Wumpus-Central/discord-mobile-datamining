@@ -859,9 +859,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       c10 = undefined;
       c11 = undefined;
       const tmp = c10();
-      let obj = frame(7895);
+      let obj = frame(7906);
       let closure_6 = obj.useIsProfileFrameLayerPreloadEnabled("ProfileFrame");
-      const obj2 = frame(7894);
+      const obj2 = frame(7905);
       const settled = obj2.usePreloadLayerImages({ frame, containerWidth, profileThemeType, filterLayer }).settled;
       const items = [frame.layers, frameOrder, profileThemeType, filterLayer];
       const memo = profileThemeType.useMemo(() => {
@@ -876,8 +876,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         });
       }, items);
       let num = 0;
-      const useSharedValue = frame(4612).useSharedValue;
-      frame(4612);
+      const useSharedValue = frame(4618).useSharedValue;
+      frame(4618);
       if (settled) {
         num = 1;
       }
@@ -899,7 +899,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               overflowTop: c9,
               overflowBottom: c10,
               overflowHorizontal: c11,
-            } = containerWidth(7896)(frame, containerWidth));
+            } = containerWidth(7907)(frame, containerWidth));
             const obj4 = {
               style: items2,
               children: memo.map((layer) => (
@@ -919,8 +919,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             items2 = [tmp.container];
             const obj5 = { opacity: sharedValue };
             items2[1] = obj5;
-            containerWidth(7896)(frame, containerWidth);
-            const View = containerWidth(4612).View;
+            containerWidth(7907)(frame, containerWidth);
+            const View = containerWidth(4618).View;
             return sharedValue(View, obj4);
           }
         }

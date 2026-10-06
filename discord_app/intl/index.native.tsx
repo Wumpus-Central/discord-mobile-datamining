@@ -5,7 +5,7 @@ import react_native from "../../discord_common/js/packages/rtn-codegen/js/Native
 import native from "../design/void/native.tsx";
 import migration from "native/migration.tsx";
 import defaultMessageProxy from "defaultMessageProxy.tsx";
-import _modDef13952 from "messages/international.messages.js";
+import _modDef13969 from "messages/international.messages.js";
 import react from "../../_runtime/00019_react.js";
 import util from "util.tsx";
 import 01165__ from "../../_runtime/metro/01165__.js";
@@ -73,6 +73,6 @@ export const useSyncMessages = (messagesLoader) => {
   return obj.useSyncMessages(messagesLoader, withFormattersResult);
 };
 export const t = defaultMessageProxy._defaultMessages;
-export const international = _modDef13952;
+export const international = _modDef13969;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

@@ -370,7 +370,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           result = flag;
         } else {
-          const tmpResult = tmp(4501);
+          const tmpResult = tmp(4507);
           result = tmpResult.isRestrictedFromShowingGuildPurchaseEntryPoints(restrictions);
         }
         shouldHideGuildPurchaseEntryPoints = result;
@@ -515,7 +515,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         result = flag;
       } else {
-        const tmpResult = tmp(4501);
+        const tmpResult = tmp(4507);
         result = tmpResult.isRestrictedFromUpdatingCreatorMonetizationSettings(tmp5);
       }
       let hasItem;
@@ -593,7 +593,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let obj3;
       let restrictions;
       let restrictionsLoading;
-      const f93127 = () => GuildStore.getGuild(closure_0);
+      const f93262 = () => GuildStore.getGuild(closure_0);
       _require = arg0;
       const items = [GuildStore];
       const items1 = [arg0];
@@ -602,8 +602,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         isMonetizationReapplicationDisabled: obj3.isRestrictedFromMonetizationReapplication(restrictions),
         restrictionsLoading,
       };
-      ({ restrictions, restrictionsLoading } = closure_10(obj.useStateFromStores(items, f93127, items1)));
-      closure_10(obj.useStateFromStores(items, f93127, items1));
+      ({ restrictions, restrictionsLoading } = closure_10(obj.useStateFromStores(items, f93262, items1)));
+      closure_10(obj.useStateFromStores(items, f93262, items1));
       obj3 = require("CreatorMonetizationRestrictionsUtils");
       return obj2;
     };

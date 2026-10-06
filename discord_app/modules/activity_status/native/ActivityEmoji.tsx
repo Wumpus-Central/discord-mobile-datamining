@@ -54,7 +54,7 @@ export default function ActivityEmoji(emoji) {
   if (null != emoji) {
     let tmp11;
     if (null == emoji) {
-      tmp11 = jsx(tmp2(8411).ReactionIcon, { style, size: "sm" });
+      tmp11 = jsx(tmp2(8444).ReactionIcon, { style, size: "sm" });
     } else {
       const items1 = [style];
       const size1 = { width: size, height: size };

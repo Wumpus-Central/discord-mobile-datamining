@@ -5,7 +5,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import intl2 from "../../../../intl/index.native.tsx";
 import native from "../../native.tsx";
 import Pressables from "../../Pressables/native/Pressables.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06427_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06434_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";

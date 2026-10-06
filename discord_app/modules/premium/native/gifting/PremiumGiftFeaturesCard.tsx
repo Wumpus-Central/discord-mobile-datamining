@@ -9,7 +9,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ClockIcon2 from "../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import TextStylesDefault from "../../../rebrand/native/TextStyles.tsx";
 import PremiumFeaturesBackgroundDefault from "../../../user_settings/premium/native/PremiumFeaturesBackground.tsx";
 import usePremiumFeaturesDefault from "../../../user_settings/premium/native/utils/usePremiumFeatures.tsx";

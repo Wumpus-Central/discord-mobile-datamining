@@ -5,8 +5,8 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import useToken2 from "../../../../design/tokens/native/useToken.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
-import _modDef6052 from "../../../../../_runtime/metro/06052__.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
+import _modDef6059 from "../../../../../_runtime/metro/06059__.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import YouBarConstants from "YouBarConstants.tsx";
@@ -22,7 +22,7 @@ let metroImportDefault;
 let metroRequire;
 let obj2;
 let tmp4;
-const ReanimatedRexportDefault = tmp4(4612);
+const ReanimatedRexportDefault = tmp4(4618);
 const View = react_native.View;
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
@@ -181,7 +181,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 return tmp39;
               }
               const obj6 = { style: first, maskElement: tmp31, children: tmp35 };
-              const tmp42 = metroRequire(_modDef6052, obj6);
+              const tmp42 = metroRequire(_modDef6059, obj6);
               cResult[24] = tmp31;
               cResult[25] = tmp35;
               cResult[26] = tmp42;
@@ -242,7 +242,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items = [, ,];
       const tmp = closure_8();
-      const tmp3 = _modDef6052;
+      const tmp3 = _modDef6059;
       items[0] = metroRequire(View, obj3);
       const obj4 = {
         style: {

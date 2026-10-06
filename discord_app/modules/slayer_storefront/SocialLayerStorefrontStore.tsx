@@ -396,7 +396,7 @@ obj = {
       const merged7 = Object.assign(obj12);
       obj12 = obj8;
     } else {
-      obj = { state: "error", fetchedAt: Date.now(), storefront: "r" };
+      obj = { state: "error", fetchedAt: Date.now(), storefront: "o" };
       const _Date = Date;
       if (null != guildId) {
         const obj9 = {};

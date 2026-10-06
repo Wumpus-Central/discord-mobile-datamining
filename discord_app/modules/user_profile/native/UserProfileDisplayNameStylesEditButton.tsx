@@ -6,7 +6,7 @@ import intl3 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
-import AssetRegistryDefault from "../../../../_runtime/13011_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/13030_AssetRegistry.js";
 import getDisplayNameStylesFontNameDefault from "../../display_name_styles/getDisplayNameStylesFontName.tsx";
 import DisplayNameStylesColorSwatchDefault from "../../display_name_styles/native/DisplayNameStylesColorSwatch.tsx";
 import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";

@@ -1,12 +1,12 @@
 // discord_app/polyfillsNative.tsx
 import _mod1248 from "../_runtime/metro/01248__.js";
 import Buffer from "../_runtime/01263_Buffer.js";
-import _mod14152 from "../_runtime/metro/14152__.js";
+import _mod14170 from "../_runtime/metro/14170__.js";
 import Logger from "modules/debug/Logger.tsx";
-import 14058__ from "../_runtime/metro/14058__.js";
-import react_native from "../_runtime/14128_react-native.js";
-import getPluralRules from "../_runtime/14146_getPluralRules.js";
-import 14149__ from "../_runtime/metro/14149__.js";
+import 14076__ from "../_runtime/metro/14076__.js";
+import react_native from "../_runtime/14146_react-native.js";
+import getPluralRules from "../_runtime/14164_getPluralRules.js";
+import 14167__ from "../_runtime/metro/14167__.js";
 import size from "../_runtime/metro/00002__.js";
 
 if (typeof process === "undefined") {
@@ -21,7 +21,7 @@ if (!global.self) {
   global.self = global;
 }
 if (null == window.crypto) {
-  const _module5 = _mod14152;
+  const _module5 = _mod14170;
   const _window = window;
   window.crypto = global.crypto;
 }

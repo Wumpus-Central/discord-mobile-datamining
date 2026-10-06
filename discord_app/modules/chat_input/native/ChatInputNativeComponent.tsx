@@ -133,7 +133,7 @@ const forwardRefResult = forwardRef(
           num6 = 1;
         }
         if (maxHeight == null) {
-          maxHeight = tmp10(11645)(onMaxHeightChanged);
+          maxHeight = tmp10(11659)(onMaxHeightChanged);
         }
         if (cResult[4] === tmp16) {
           if (cResult[5] === accessible) {
@@ -325,7 +325,7 @@ const forwardRefResult = forwardRef(
         if (isThemeDarkResult) {
           num2 = 1;
         }
-        const tmp14 = tmp10(11645)(onMaxHeightChanged);
+        const tmp14 = tmp10(11659)(onMaxHeightChanged);
         ChatInputNativeComponent.default;
         if (maxHeight == null) {
           maxHeight = tmp14;

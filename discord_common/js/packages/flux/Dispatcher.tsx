@@ -10,7 +10,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 
 let _self, map, map1;
 
-const f81504 = (item) => {
+const f81637 = (item) => {
   items = [item, []];
   return items;
 };
@@ -50,9 +50,9 @@ class ActionHandlersGraph {
     merged[0] = new Map();
     merged[1] = {};
     new Map();
-    merged[2] = new Map(items.map(f81504));
+    merged[2] = new Map(items.map(f81637));
     merged[3] = {};
-    new Map(items.map(f81504));
+    new Map(items.map(f81637));
     return merged;
   }
   getOrderedActionHandlers(type) {
@@ -280,7 +280,7 @@ class Dispatcher {
       _currentDispatchActionType: null,
       _actionHandlers: null,
       _sentryUtils: "Array",
-      functionCache: "\u{1F469}\u{1F3FD}\u200D\u2764\uFE0F\u200D\u{1F48B}\u200D\u{1F469}\u{1F3FF}",
+      functionCache: true,
     });
     merged[0] = [];
     merged[1] = {};
@@ -304,12 +304,12 @@ class Dispatcher {
       const self3 = this;
       const self4 = this;
       map = new Map();
-      merged1[2] = new Map(items.map(f81504));
+      merged1[2] = new Map(items.map(f81637));
       merged1[3] = {};
       merged[5] = merged1;
       merged[7] = {};
       merged._sentryUtils = _sentryUtils;
-      map1 = new Map(items.map(f81504));
+      map1 = new Map(items.map(f81637));
       if (null == actionLogger) {
         const self5 = this;
         const self6 = this;

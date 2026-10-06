@@ -44,7 +44,7 @@ let obj = function _claimIncentivizedAccountLinkingReward() {
     }
     await "IconComponent";
     ({ applicationId: c0, onSuccess: c1, onError: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

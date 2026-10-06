@@ -2,7 +2,7 @@
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ConjureDebugFormat from "../ConjureDebugFormat.tsx";
@@ -90,7 +90,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             const intl3 = intl4.intl;
-            const stringResult = intl3.string(_modDef3723.oKEgiu);
+            const stringResult = intl3.string(_modDef3753.oKEgiu);
             cResult[6] = stringResult;
             tmp19 = stringResult;
           } else {
@@ -136,7 +136,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {
           variant: "text-xs/normal",
           color: "text-feedback-critical",
-          children: intl2.string(_modDef3723.ZVByPX),
+          children: intl2.string(_modDef3753.ZVByPX),
         };
         const Text2 = Text_Text.Text;
         intl2 = intl4.intl;
@@ -149,7 +149,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           const intl = intl4.intl;
           formatToPlainString = intl.formatToPlainString;
           obj7 = { time: tmpResult.formatObservedAt(generatedAt) };
-          INVO50 = _modDef3723.INVO50;
+          INVO50 = _modDef3753.INVO50;
           tmpResult = ConjureDebugFormat;
           tmp9 = hasOwnProperty(Text, obj6);
         }
@@ -181,7 +181,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = {
           variant: "text-xs/normal",
           color: "text-feedback-critical",
-          children: intl2.string(_modDef3723.ZVByPX),
+          children: intl2.string(_modDef3753.ZVByPX),
         };
         const Text2 = Text_Text.Text;
         intl2 = intl4.intl;
@@ -194,13 +194,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           const intl = intl4.intl;
           formatToPlainString = intl.formatToPlainString;
           obj6 = { time: obj5.formatObservedAt(generatedAt) };
-          INVO50 = _modDef3723.INVO50;
+          INVO50 = _modDef3753.INVO50;
           obj5 = ConjureDebugFormat;
           tmp4Result = hasOwnProperty(Text, obj4);
         }
       }
       items = [hasOwnProperty(React3, obj2)];
-      const obj7 = { variant: "secondary", size: "sm", text: intl3.string(_modDef3723.oKEgiu), onPress: onRefresh };
+      const obj7 = { variant: "secondary", size: "sm", text: intl3.string(_modDef3753.oKEgiu), onPress: onRefresh };
       const Button = components_Button_Button.Button;
       intl3 = intl4.intl;
       items[1] = hasOwnProperty(Button, obj7);

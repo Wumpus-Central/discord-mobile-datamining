@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting("modules/quests/native/openBountiesNux
 
 export default function openBountiesNuxPromoSheet() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(14870, dependencyMap.paths), BountiesNuxPromoSheet, {});
+  obj.openLazy(asyncRequire(14886, dependencyMap.paths), BountiesNuxPromoSheet, {});
 }
 export const PROMO_SHEET_KEY = "BountiesNuxPromoSheet";

@@ -6,7 +6,7 @@ import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import TableRowGroup5 from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import getEmbeddedActivityLaunchability from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 import MobileAudioOutputExperimentDefault from "../../../media_engine/MobileAudioOutputExperiment.tsx";
 import UserSettingsVoiceProcessing from "../../../user_settings/voice/native/UserSettingsVoiceProcessing.tsx";

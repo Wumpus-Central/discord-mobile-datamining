@@ -85,29 +85,29 @@ export default function useControlsButtons() {
   let safeArea;
   let stateFromStores;
   let treatment;
-  const context = treatment.useContext(safeArea(11901));
+  const context = treatment.useContext(safeArea(11915));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  let tmp2 = safeArea(17190)(context.channelId);
+  let tmp2 = safeArea(17219)(context.channelId);
   dependencyMap = tmp2;
-  let obj = safeArea(17215);
+  let obj = safeArea(17244);
   treatment = obj.useConfig({ location: "VoicePanelControlButtons" }).treatment;
   let obj2 = windowDimensions(504);
   let items = [stateFromStores];
   stateFromStores = obj2.useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
-  let obj3 = windowDimensions(4612);
+  let obj3 = windowDimensions(4618);
   const fn = function o() {
     const getControlsDefaultWidth = VoicePanelControlsUtils.getControlsDefaultWidth;
     VoicePanelControlsUtils;
     const width = windowDimensions.get().width;
     return getControlsDefaultWidth(width, safeArea.get().left, safeArea.get().right);
   };
-  let obj4 = { getControlsDefaultWidth: windowDimensions(11909).getControlsDefaultWidth, windowDimensions, safeArea };
+  let obj4 = { getControlsDefaultWidth: windowDimensions(11923).getControlsDefaultWidth, windowDimensions, safeArea };
   fn.__closure = obj4;
   fn.__workletHash = 16456936876254;
   fn.__initData = __initData;
   const derivedValue = obj3.useDerivedValue(fn);
-  const tmp5 = safeArea(7941)(derivedValue);
+  const tmp5 = safeArea(7952)(derivedValue);
   let closure_5 = tmp5;
   const items1 = [tmp2, stateFromStores, tmp5, treatment];
   return treatment.useMemo(() => {

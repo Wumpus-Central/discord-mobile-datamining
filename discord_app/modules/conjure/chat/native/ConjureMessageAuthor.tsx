@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import AppsIcon2 from "../../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -353,7 +353,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const at = arg0.at;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl2.intl;
-        const stringResult = intl.string(_modDef3723.uk6jhJ);
+        const stringResult = intl.string(_modDef3753.uk6jhJ);
         cResult[0] = stringResult;
         first = stringResult;
       } else {
@@ -373,7 +373,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       let at;
       let intl;
-      const obj = { name: intl.string(_modDef3723.uk6jhJ), color: "text-brand", at };
+      const obj = { name: intl.string(_modDef3753.uk6jhJ), color: "text-brand", at };
       at = arg0.at;
       intl = intl2.intl;
       return metroRequire(closure_10, obj);
@@ -437,13 +437,13 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: tmp8,
             children: tmp10,
           };
-          const tmp15 = closure_6(tmp(5909).PressableOpacity, obj2);
+          const tmp15 = closure_6(tmp(5916).PressableOpacity, obj2);
           cResult[6] = tmp5;
           cResult[7] = tmp10;
           cResult[8] = tmp15;
           tmp13 = tmp15;
         }
-        const obj3 = { size, user: tmp4, guildId: "r" };
+        const obj3 = { size, user: tmp4, guildId: "Array" };
         const tmp12 = closure_6(tmp(1188).Avatar, obj3);
         cResult[3] = size;
         cResult[4] = tmp4;
@@ -482,7 +482,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const PressableOpacity = require("Pressables").PressableOpacity;
         intl = require("intl").intl;
-        obj2 = { size: NORMAL, user: tmp3, guildId: "r" };
+        obj2 = { size: NORMAL, user: tmp3, guildId: "Array" };
         tmp5 = closure_6(PressableOpacity, obj);
       }
       return tmp5;

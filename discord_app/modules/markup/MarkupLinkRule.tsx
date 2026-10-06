@@ -7,7 +7,7 @@ import _modDef1936 from "../../../_runtime/metro/01936__.js";
 import findCodedLinks from "../coded_links/findCodedLinks.tsx";
 import MarkupTypes from "MarkupTypes.tsx";
 import UnicodeSanitizationUtils from "UnicodeSanitizationUtils.tsx";
-import _modDef5792 from "../../../_runtime/metro/05792__.js";
+import _modDef5799 from "../../../_runtime/metro/05799__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -175,7 +175,7 @@ function punycodeLink(url) {
           const error1 = new Error("no hostname");
           throw error1;
         }
-        const obj = _modDef5792;
+        const obj = _modDef5799;
         const str6 = uRL.hostname;
         uRL.hostname = obj.toASCII(str6.toLowerCase());
         uRL.username = "";

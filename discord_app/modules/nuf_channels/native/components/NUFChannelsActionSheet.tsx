@@ -96,7 +96,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp20;
       }
-      const tmp21 = jsx(tmp(6645).BottomSheet, { onDismiss: tmp5, startExpanded: true, children: tmp16 });
+      const tmp21 = jsx(tmp(6652).BottomSheet, { onDismiss: tmp5, startExpanded: true, children: tmp16 });
       cResult[10] = tmp5;
       cResult[11] = tmp16;
       cResult[12] = tmp21;
@@ -115,7 +115,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp2(ContentDismissActionType.UNKNOWN);
         }
       }, items);
-      BottomSheet = markAsDismissed(6645).BottomSheet;
+      BottomSheet = markAsDismissed(6652).BottomSheet;
       ({
         illustration: null,
         title: intl.string(markAsDismissed(1126).t.Ay9424),

@@ -14,8 +14,8 @@ let obj1, obj7, obj8, tmp2, tmp5;
 
 let obj2;
 let tmp;
-const ReanimatedRexport = tmp(4612);
-const timing = tmp(4891);
+const ReanimatedRexport = tmp(4618);
+const timing = tmp(4897);
 const StyleSheet = react_native.StyleSheet;
 const jsx = Fragment.jsx;
 let obj = { background: obj2 };

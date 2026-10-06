@@ -5,7 +5,7 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import NewUserUtils from "../NewUserUtils.tsx";
 import react_mod from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -16,7 +16,7 @@ let _require, closure_0, dependencyMap;
 let hasOwnProperty;
 let metroRequire;
 let obj2;
-const f131163 = () => closure_1_0(paths[7])(paths[6], paths.paths);
+const f131382 = () => closure_1_0(paths[7])(paths[6], paths.paths);
 let react = react_mod;
 let NativeModules = react_native.NativeModules;
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = Fragment);
@@ -55,7 +55,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const ref = accessibilityNativeStackOptions.useRef(tmp5);
       dependencyMap = accessibilityNativeStackOptions.useRef(null);
-      const tmpResult = tmp(6496);
+      const tmpResult = tmp(6503);
       accessibilityNativeStackOptions = tmpResult.useAccessibilityNativeStackOptions();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function f(flag) {
@@ -102,7 +102,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult2 = tmp(6016);
+      const tmpResult2 = tmp(6023);
       tmpResult2.useNavigatorBackPressHandler(N);
       if (cResult[4] === accessibilityNativeStackOptions) {
         let tmp11;
@@ -175,7 +175,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   let obj = {
                     onPress() {
                       closure_0 = closure_1_4;
-                      const lazyResult = React.lazy(f131163);
+                      const lazyResult = React.lazy(f131382);
                       const obj = closure_2_0(closure_2_2[8]);
                       const obj2 = {
                         onConfirm() {
@@ -441,7 +441,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   let paths;
                   closure_0 = closure_1_4;
-                  const lazyResult = React.lazy(f131163);
+                  const lazyResult = React.lazy(f131382);
                   const obj = closure_2_0(closure_2_2[8]);
                   const obj2 = {
                     onConfirm() {

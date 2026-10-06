@@ -53,7 +53,7 @@ let obj = {
     }
   },
   analyticsType: "@Everyone Warning",
-  animation: "unicodeVersion",
+  animation: "colors",
 };
 const items = [
   obj,

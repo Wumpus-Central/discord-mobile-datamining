@@ -25,7 +25,7 @@ import useIsSecureFramesUIEnabled from "../../../rtc/hooks/useIsSecureFramesUIEn
 import ShieldLockIcon2 from "../../../../design/components/Icon/native/redesign/generated/ShieldLockIcon.tsx";
 import ChannelCallConnectingScreen from "../../../video_calls/native/components/ChannelCallConnectingScreen.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/12728_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/12743_AssetRegistry.js";
 import WrenchIcon from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
 import VoicePanelSettingsActionCreators from "VoicePanelSettingsActionCreators.tsx";
 import getChannelInfoSubtitleDefault from "../utils/getChannelInfoSubtitle.tsx";
@@ -133,7 +133,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult4 = guildId(504);
         const stateFromStores1 = tmpResult4.useStateFromStores(tmp9, tmp11, tmp12);
-        const tmp15 = channelId(5043)(stateFromStores1);
+        const tmp15 = channelId(5049)(stateFromStores1);
         if (cResult[8] !== channelId) {
           const obj2 = { channelId };
           cResult[8] = channelId;
@@ -142,7 +142,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp16 = cResult[9];
         }
-        const tmpResult5 = guildId(9384);
+        const tmpResult5 = guildId(9398);
         const isSecureFramesUIEnabled = tmpResult5.useIsSecureFramesUIEnabled(tmp16);
         if (cResult[10] !== channelId) {
           const obj3 = { channelId };
@@ -152,7 +152,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp18 = cResult[11];
         }
-        const tmpResult6 = guildId(9345);
+        const tmpResult6 = guildId(9359);
         const isCallSecureFramesVerified = tmpResult6.useIsCallSecureFramesVerified(tmp18);
         if (cResult[12] === tmp15) {
           let tmp20;
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const obj4 = { style: tmp4.headerContainer, children: items3 };
                     items3 = [tmp26, tmp29, tmp32];
-                    const tmp39 = closure_19(channelId(5976), obj4);
+                    const tmp39 = closure_19(channelId(5983), obj4);
                     cResult[28] = tmp4.headerContainer;
                     cResult[29] = tmp26;
                     cResult[30] = tmp29;
@@ -205,14 +205,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   if (tmp33) {
                     const obj5 = { style: tmp4.secureFrames, children: items4 };
                     items4 = [,];
-                    const tmp14Result = channelId(5976);
-                    items4[0] = closure_18(guildId(5879).LockIcon, { size: "xxs", color: "status-positive" });
+                    const tmp14Result = channelId(5983);
+                    items4[0] = closure_18(guildId(5886).LockIcon, { size: "xxs", color: "status-positive" });
                     const obj6 = {
                       variant: "text-xs/medium",
                       color: "status-positive",
                       children: intl2.string(guildId(1126).t["3BogKe"]),
                     };
-                    const Text = tmp(4886).Text;
+                    const Text = tmp(4892).Text;
                     intl2 = tmp(1126).intl;
                     items4[1] = closure_18(Text, obj6);
                     tmp33 = closure_19(tmp14Result, obj5);
@@ -228,7 +228,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   accessibilityRole: "summary",
                   children: stateFromStores,
                 };
-                const tmp31 = closure_18(guildId(4886).Text, obj7);
+                const tmp31 = closure_18(guildId(4892).Text, obj7);
                 cResult[22] = stateFromStores;
                 cResult[23] = tmp4.channelSubtitle;
                 cResult[24] = tmp31;
@@ -237,7 +237,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const obj8 = { style: tmp4.channelTitleWrapper, children: items5 };
             items5 = [tmp20, tmp23];
-            const tmp28 = closure_19(channelId(5976), obj8);
+            const tmp28 = closure_19(channelId(5983), obj8);
             cResult[18] = tmp4.channelTitleWrapper;
             cResult[19] = tmp20;
             cResult[20] = tmp23;
@@ -251,7 +251,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               size: "xs",
               accessibilityLabel: intl.string(guildId(1126).t.mR9cf3),
             };
-            const ShieldLockIcon = tmp(9431).ShieldLockIcon;
+            const ShieldLockIcon = tmp(9444).ShieldLockIcon;
             intl = tmp(1126).intl;
             tmp24 = closure_18(ShieldLockIcon, obj9);
           }
@@ -267,7 +267,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           accessibilityRole: "header",
           children: tmp15,
         };
-        const tmp22 = closure_18(guildId(4886).Text, obj10);
+        const tmp22 = closure_18(guildId(4892).Text, obj10);
         cResult[12] = tmp15;
         cResult[13] = tmp4.channelTitle;
         cResult[14] = tmp22;
@@ -315,7 +315,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [channelId];
       const obj2 = get_initialized;
       const stateFromStores1 = obj2.useStateFromStores(items1, () => ChannelStore.getChannel(channelId), items2);
-      const tmp7 = channelId(5043)(stateFromStores1);
+      const tmp7 = channelId(5049)(stateFromStores1);
       const obj3 = useIsSecureFramesUIEnabled;
       let isSecureFramesUIEnabled = obj3.useIsSecureFramesUIEnabled({ channelId });
       const obj4 = useIsSecureFramesVerified;
@@ -330,8 +330,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "header",
         children: tmp7,
       };
-      const tmp11 = channelId(5976);
-      const tmp12 = channelId(5976);
+      const tmp11 = channelId(5983);
+      const tmp12 = channelId(5983);
       items3[0] = closure_18(Text_Text.Text, obj7);
       if (isCallSecureFramesVerified) {
         const obj8 = { style: tmp.secureFramesIcon, size: "xs", accessibilityLabel: intl.string(intl18.t.mR9cf3) };
@@ -351,7 +351,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (isSecureFramesUIEnabled) {
         const obj10 = { style: tmp.secureFrames, children: items5 };
         items5 = [,];
-        const tmp6Result = channelId(5976);
+        const tmp6Result = channelId(5983);
         items5[0] = closure_18(LockIcon.LockIcon, { size: "xxs", color: "status-positive" });
         const obj11 = {
           variant: "text-xs/medium",
@@ -701,7 +701,7 @@ const memoResult = react.memo(function VoicePanelSettingsOverview(guildId) {
   const callback4 = stateFromStores1.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { channelId };
-    obj.openLazy(asyncRequire(17253, dependencyMap.paths), closure_17, obj2);
+    obj.openLazy(asyncRequire(17282, dependencyMap.paths), closure_17, obj2);
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

@@ -30,9 +30,9 @@ let closure_12;
 let hasOwnProperty;
 let metroRequire;
 let unpackModuleId;
-const f126878 = (type) => {
+const f127041 = (type) => {
   if (Array.isArray(type)) {
-    const item = type.forEach(f126878);
+    const item = type.forEach(f127041);
   } else {
     if ("link" !== type.type) {
       if ("channelMention" !== type.type) {
@@ -42,7 +42,7 @@ const f126878 = (type) => {
           closure_1 = tmp2;
           const _Array = Array;
           if (Array.isArray(content)) {
-            const item1 = content.forEach(f126878);
+            const item1 = content.forEach(f127041);
           } else {
             if ("link" !== content.type) {
               if ("channelMention" !== content.type) {
@@ -67,7 +67,7 @@ const f126878 = (type) => {
       closure_1 = tmp2;
       const _Array2 = Array;
       if (Array.isArray(type)) {
-        const item2 = type.forEach(f126878);
+        const item2 = type.forEach(f127041);
       } else {
         if ("link" !== type.type) {
           if ("channelMention" !== type.type) {
@@ -90,7 +90,7 @@ function getLinkNodeAtIndex(content, diff, fn) {
   let closure_0 = diff;
   let closure_1 = fn;
   if (Array.isArray(content)) {
-    const item = content.forEach(f126878);
+    const item = content.forEach(f127041);
   } else {
     if ("link" !== content.type) {
       if ("channelMention" !== content.type) {
@@ -140,7 +140,7 @@ function LinkParsedGridItem(author) {
     let closure_0 = linkIndex;
     let closure_1 = closure_11;
     if (Array.isArray(type)) {
-      let item = type.forEach(f126878);
+      let item = type.forEach(f127041);
     } else {
       if ("link" !== type.type) {
         if ("channelMention" !== type.type) {
@@ -150,7 +150,7 @@ function LinkParsedGridItem(author) {
             closure_1 = closure_11;
             let _Array = Array;
             if (Array.isArray(content)) {
-              let item1 = content.forEach(f126878);
+              let item1 = content.forEach(f127041);
             } else {
               if ("link" !== content.type) {
                 if ("channelMention" !== content.type) {
@@ -175,7 +175,7 @@ function LinkParsedGridItem(author) {
         closure_1 = closure_11;
         let _Array2 = Array;
         if (Array.isArray(type)) {
-          let item2 = type.forEach(f126878);
+          let item2 = type.forEach(f127041);
         } else {
           if ("link" !== type.type) {
             if ("channelMention" !== type.type) {

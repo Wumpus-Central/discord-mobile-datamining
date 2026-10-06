@@ -1,8 +1,8 @@
 // discord_app/modules/premium/premium_group/PremiumGroupUtils.native.tsx
 import intl7 from "../../../intl/index.native.tsx";
-import _modDef3205 from "PremiumGroup.messages.js";
+import _modDef3233 from "PremiumGroup.messages.js";
 import UserUtils from "../../../utils/UserUtils.tsx";
-import _mod7721 from "PremiumGroupUtils.shared.tsx";
+import _mod7732 from "PremiumGroupUtils.shared.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import PremiumGroupConstants from "PremiumGroupConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -11,8 +11,8 @@ let closure_4;
 let hasOwnProperty;
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.native.tsx");
-for (const key10025 in _mod7721) {
-  exports[key10025] = _mod7721[key10025];
+for (const key10025 in _mod7732) {
+  exports[key10025] = _mod7732[key10025];
   continue;
 }
 
@@ -51,9 +51,9 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     let tmp15 = null;
     if (null != tmp8) {
       const obj2 = {
-        message: intl4.format(_modDef3205.MkcFjx, obj3),
-        header: intl5.formatToPlainString(_modDef3205["5uwv8J"], obj4),
-        body: intl6.formatToPlainString(_modDef3205["AmE0B/"], obj6),
+        message: intl4.format(_modDef3233.MkcFjx, obj3),
+        header: intl5.formatToPlainString(_modDef3233["5uwv8J"], obj4),
+        body: intl6.formatToPlainString(_modDef3233["AmE0B/"], obj6),
       };
       intl4 = intl7.intl;
       obj3 = { receiverName: tmp8, premiumGroupProductName: tmp };
@@ -68,9 +68,9 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     const obj = UserUtils;
     const nameFromUserResult1 = obj.nameFromUser(sender);
     const obj7 = {
-      message: intl.format(_modDef3205["51Kv/4"], obj8),
-      header: intl2.string(_modDef3205.ssge1y),
-      body: intl3.formatToPlainString(_modDef3205.tej76V, obj9),
+      message: intl.format(_modDef3233["51Kv/4"], obj8),
+      header: intl2.string(_modDef3233.ssge1y),
+      body: intl3.formatToPlainString(_modDef3233.tej76V, obj9),
     };
     intl = intl7.intl;
     obj8 = { senderName: nameFromUserResult1, premiumGroupProductName: tmp, helpCenterLink: hasOwnProperty };

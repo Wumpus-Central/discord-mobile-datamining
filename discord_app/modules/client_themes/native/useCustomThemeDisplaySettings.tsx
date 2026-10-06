@@ -108,7 +108,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp5;
       let tmp6;
       let tmpResult;
-      const f89339 = () => {
+      const f89476 = () => {
         const items = [
           CustomThemeMobileStore.getCustomTheme(),
           CustomThemeMobileStore.getBaseTheme(),
@@ -118,8 +118,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       };
       let items = [CustomThemeMobileStore];
       const obj = get_initialized;
-      [tmp4, tmp5, tmp6] = obj.useStateFromStoresArray(items, f89339);
-      _slicedToArray(obj.useStateFromStoresArray(items, f89339), 3);
+      [tmp4, tmp5, tmp6] = obj.useStateFromStoresArray(items, f89476);
+      _slicedToArray(obj.useStateFromStoresArray(items, f89476), 3);
       if (undefined !== tmp6) {
         return tmp6;
       } else {

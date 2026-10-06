@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
 import react from "../../../../../_runtime/00576_react.js";
 import intl4 from "../../../../intl/index.native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
-import _modDef2947 from "../../../game_server/GameServer.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
+import _modDef2975 from "../../../game_server/GameServer.messages.js";
 import Powerups from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
 import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups.tsx";
 import useGameServerGetExpiringEntitlementsDefault from "../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx";
@@ -23,7 +23,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           let stringResult;
           if (arr2.length > 0) {
             const intl = intl4.intl;
-            stringResult = intl.string(_modDef2947["B3OfL/"]);
+            stringResult = intl.string(_modDef2975["B3OfL/"]);
           }
           cResult[1] = arr2.length;
           cResult[2] = stringResult;
@@ -71,7 +71,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol3 = Symbol;
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
               const intl2 = intl4.intl;
-              const stringResult1 = intl2.string(_modDef2525.Sfr0Jw);
+              const stringResult1 = intl2.string(_modDef2553.Sfr0Jw);
               cResult[12] = stringResult1;
               tmp22 = stringResult1;
             } else {
@@ -84,7 +84,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol4 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
               const intl3 = intl4.intl;
-              const stringResult2 = intl3.string(_modDef2947.wiungr);
+              const stringResult2 = intl3.string(_modDef2975.wiungr);
               cResult[13] = stringResult2;
               tmp26 = stringResult2;
             } else {
@@ -148,7 +148,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let stringResult;
         if (arr2.length > 0) {
           const intl = intl4.intl;
-          stringResult = intl.string(_modDef2947["B3OfL/"]);
+          stringResult = intl.string(_modDef2975["B3OfL/"]);
         }
         const items = [];
         const arraySpreadResult = HermesBuiltin.arraySpread(
@@ -167,12 +167,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (arr.some((skuId) => skuId.skuId === Powerups.VANITY_URL_POWERUP_SKU_ID)) {
           const push = items3.push;
           const intl2 = intl4.intl;
-          push(intl2.string(_modDef2525.Sfr0Jw));
+          push(intl2.string(_modDef2553.Sfr0Jw));
         }
         if (arr2.length > 0) {
           const push2 = items3.push;
           const intl3 = intl4.intl;
-          push2(intl3.string(_modDef2947.wiungr));
+          push2(intl3.string(_modDef2975.wiungr));
         }
         return {
           shouldShow: arr.length > 0 || arr2.length > 0,

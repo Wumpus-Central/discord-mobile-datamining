@@ -3,7 +3,7 @@ import get_initializedDefault from "../../../../discord_common/js/packages/flux/
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import Constants2 from "../../../Constants.tsx";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef4461 from "../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import PushNotificationDefault from "../../../lib/pushnotification/PushNotification.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import GuildVerificationStore from "../../../stores/GuildVerificationStore.tsx";
@@ -65,12 +65,12 @@ let obj = {
           let obj;
           const verificationLevel = guild.verificationLevel;
           if (VerificationLevels.MEDIUM === verificationLevel) {
-            obj = _modDef4461(check.accountDeadline);
+            obj = _modDef4467(check.accountDeadline);
           } else if (VerificationLevels.HIGH === verificationLevel) {
-            obj = _modDef4461(check.memberDeadline);
+            obj = _modDef4467(check.memberDeadline);
           }
           if (null != obj) {
-            if (!obj.isSameOrBefore(_modDef4461(), "minute")) {
+            if (!obj.isSameOrBefore(_modDef4467(), "minute")) {
               const obj2 = { type: hasOwnProperty.GUILD_VERIFICATION, guildId: guild.id };
               set.add(obj2);
               const obj3 = {

@@ -3,6 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import Server from "../../flow/Server.tsx";
 import interactionCallbackErrorReason from "interactionCallbackErrorReason.tsx";
+import InteractionTypes from "../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import InteractionActionCreators from "InteractionActionCreators.tsx";
 import _slicedToArray from "SkemaUtils.tsx";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -77,7 +78,7 @@ let obj = function _executeMessageComponentInteraction() {
           onFailure(code, arg1) {
             const tmp2 = null == arg1 && null != code;
             if (tmp2) {
-              obj = closure_1(message_flags[9]);
+              obj = closure_1(message_flags[10]);
               obj.sendClydeError(channel_id, code);
             }
           },
@@ -147,7 +148,7 @@ let obj = function _executeMessageComponentInteraction() {
       guildId: c7,
       localState: c8,
     } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -368,7 +369,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
   if (state2 != null) {
     interactionType = state2.data.interactionType;
   }
-  const tmp19 = interactionType === Server.InteractionTypes.APPLICATION_COMMAND;
+  const tmp19 = interactionType === InteractionTypes.InteractionTypes.APPLICATION_COMMAND;
   const isCommandTypeResult = state.isCommandType();
   if (!tmp19) {
     if (isCommandTypeResult) {

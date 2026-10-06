@@ -2,8 +2,8 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import DurationsDefault from "../../../utils/Durations.tsx";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3593 from "../intl/SlayerStorefront.messages.js";
-import _modDef4461 from "../../../../_runtime/metro/04461__.js";
+import _modDef3623 from "../intl/SlayerStorefront.messages.js";
+import _modDef4467 from "../../../../_runtime/metro/04467__.js";
 import useIntervalDefault from "../../../hooks/useInterval.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
@@ -21,8 +21,8 @@ function getLimitedOfferTimeLeft(arg0) {
   if (null == arg0) {
     return null;
   } else {
-    const obj2 = _modDef4461(arg0);
-    const diffResult = obj2.diff(_modDef4461(), "seconds");
+    const obj2 = _modDef4467(arg0);
+    const diffResult = obj2.diff(_modDef4467(), "seconds");
     let tmp4 = null;
     if (diffResult > 0) {
       const time = {
@@ -59,13 +59,13 @@ function formatLimitedOfferTimeLeft(arg0) {
     } else if (hours > 0) {
       const intl2 = intl4.intl;
       const obj3 = { hours };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3593.PPaJSw, obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3623.PPaJSw, obj3);
     } else {
       const intl = intl4.intl;
       const formatToPlainString = intl.formatToPlainString;
       const _Math = Math;
       const obj = { minutes: Math.max(tmp13, 1) };
-      const prop = _modDef3593["7Z+aIf"];
+      const prop = _modDef3623["7Z+aIf"];
       formatToPlainStringResult = formatToPlainString(prop, obj);
     }
     return formatToPlainStringResult;

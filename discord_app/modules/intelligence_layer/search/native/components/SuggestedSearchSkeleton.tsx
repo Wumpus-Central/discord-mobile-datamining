@@ -40,7 +40,7 @@ createStyles = createStyles.createStyles;
 size = {
   width: 18,
   height: 18,
-  borderRadius: nativeDefault.radii.xs,
+  borderRadius: nativeDefault.radii.round,
   backgroundColor: nativeDefault.colors.BORDER_SUBTLE,
   marginRight: nativeDefault.space.PX_12,
 };
@@ -67,7 +67,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = sharedValue(576);
       const cResult = obj.c(17);
       const tmp4 = closure_7();
-      const obj2 = sharedValue(4612);
+      const obj2 = sharedValue(4618);
       sharedValue = obj2.useSharedValue(0.4);
       if (cResult[0] !== sharedValue) {
         const fn = function o() {
@@ -95,7 +95,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { opacity: sharedValue };
       fn2.__workletHash = 9760194902231;
       fn2.__initData = __initData;
-      const tmpResult = tmp(4612);
+      const tmpResult = tmp(4618);
       const animatedStyle = tmpResult.useAnimatedStyle(fn2);
       if (cResult[3] === animatedStyle) {
         let tmp10;
@@ -164,7 +164,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj6;
       let sharedValue;
       const tmp = closure_7();
-      let obj = sharedValue(4612);
+      let obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(0.4);
       const items = [sharedValue];
       const effect = react.useEffect(() => {
@@ -181,7 +181,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = { opacity: sharedValue };
       fn.__workletHash = 16042492079220;
       fn.__initData = __initData2;
-      const obj2 = sharedValue(4612);
+      const obj2 = sharedValue(4618);
       const animatedStyle = obj2.useAnimatedStyle(fn);
       const obj3 = { style: items1, "aria-hidden": true, children: items2 };
       items1 = [tmp.row, animatedStyle];

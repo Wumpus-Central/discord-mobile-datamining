@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataForQuestsSetting.tsx
 import react from "../../../../../_runtime/00576_react.js";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2493 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2521 from "../../../parent_tools/FamilyCenter.messages.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import ParentalControlledUserSettings from "../../family_center/ParentalControlledUserSettings.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
@@ -35,7 +35,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 let obj = {
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2493.ZhaNu8);
+    return intl.string(_modDef2521.ZhaNu8);
   },
   parent: MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: tmp2,

@@ -13,7 +13,7 @@ import TableRowGroup7 from "../../../../design/components/TableRow/native/TableR
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import TableSwitchRow8 from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/10124_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/10137_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";

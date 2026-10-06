@@ -12,8 +12,8 @@ import showAudioOutputSelector from "../../../voice_calls/native/audio_output_se
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import VoiceActionUtils from "../VoiceActionUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09699_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/09700_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09712_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09713_AssetRegistry.js";
 import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
 import useDeafStatesDefault from "../../useDeafStates.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -488,7 +488,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(7);
       channelId = channelId.channelId;
       const isConnectedToVoiceChannel = channelId.isConnectedToVoiceChannel;
-      const obj2 = channelId(9299);
+      const obj2 = channelId(9334);
       const routeSource = obj2.useMaskedSpeakerStates().routeSource;
       if (cResult[0] === channelId) {
         let tmp4;
@@ -620,7 +620,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[1];
       }
       const onPress = tmp7.onPress;
-      const tmp5Result = importDefault(tmp7.deaf ? 9703 : 9704);
+      const tmp5Result = importDefault(tmp7.deaf ? 9716 : 9717);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl3.intl;
         const stringResult = intl.string(intl3.t.wjcRFX);
@@ -658,7 +658,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         disabled: flag,
         onPress: deafHandler.onPress,
-        iconSource: importDefault(deafHandler.deaf ? 9703 : 9704),
+        iconSource: importDefault(deafHandler.deaf ? 9716 : 9717),
         label: intl.string(intl3.t.wjcRFX),
       };
       intl = intl3.intl;

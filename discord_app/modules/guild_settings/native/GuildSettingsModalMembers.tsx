@@ -7,7 +7,7 @@ import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/desi
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import MemberSafetyPermissionsUtils from "../../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
 import ChannelPermissionsUtils from "../../channel_permissions/ChannelPermissionsUtils.tsx";
-import _mod9496 from "../../autocompleter/index.tsx";
+import _mod9509 from "../../autocompleter/index.tsx";
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -25,7 +25,7 @@ import createStyles_mod from "../../../design/components/Styles/native/createSty
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const _modDef9496 = _mod9496;
+const _modDef9509 = _mod9509;
 let closure_11, closure_12, dependencyMap, guildId, navigation;
 
 let closure_17;
@@ -38,7 +38,7 @@ const View = react_native.View;
 let GuildMemberStore = GuildMemberStore_mod;
 const GuildSettingsSections = Constants.GuildSettingsSections;
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = Fragment);
-let items = [_mod9496.AutocompleterResultTypes.USER];
+let items = [_mod9509.AutocompleterResultTypes.USER];
 let createStyles = createStyles_mod;
 let obj = {
   containerInner: obj2,
@@ -286,11 +286,11 @@ let closure_22 = memo(
           let formatToPlainStringResult;
           if (found.length > 0) {
             const user = UserStore.getUser(guildMember.userId);
-            const obj2 = guildMember(5042);
+            const obj2 = guildMember(5048);
             let str = obj2.getNickname(guild.id, undefined, user);
             const tmp9 = guildMember;
             if (str == null) {
-              const tmp9Result = tmp9(4722);
+              const tmp9Result = tmp9(4728);
               str = tmp9Result.getGlobalName(user);
             }
             if (str == null) {
@@ -324,7 +324,7 @@ let closure_22 = memo(
             end,
           };
           tmp12Result = null;
-          const tmp14 = guildMember(10680);
+          const tmp14 = guildMember(10693);
           if (mapped.length > 0) {
             const obj5 = { style: tmp.roleList, pointerEvents: "none", children: mapped };
             tmp12Result = closure_17(View, obj5);
@@ -755,8 +755,8 @@ const memoResult = react.memo(
         let obj10;
         let obj12;
         let tmp33Result;
-        const f125114 = () => {
-          const tmp = new _modDef9496(
+        const f125292 = () => {
+          const tmp = new _modDef9509(
             (arg0) => {
               closure_1_10(arg0);
               closure_1_14(false);
@@ -845,9 +845,9 @@ const memoResult = react.memo(
         const tmp16 = stateFromStores(stateFromStores1.useState(false), 2);
         first2 = tmp16[0];
         closure_14 = tmp16[1];
-        first3 = stateFromStores(stateFromStores1.useState(f125114), 2)[0];
+        first3 = stateFromStores(stateFromStores1.useState(f125292), 2)[0];
         const items8 = [guildId, stateFromStoresArray, first, stateFromStores1, first1];
-        stateFromStores(stateFromStores1.useState(f125114), 2);
+        stateFromStores(stateFromStores1.useState(f125292), 2);
         const memo = stateFromStores1.useMemo(() => {
           function guildRoleIsFiltered(roles) {
             let tmp2 = null != stateFromStores1;
@@ -867,7 +867,7 @@ const memoResult = react.memo(
             const nextResult = iter2.next();
             while (iter2 !== undefined) {
               let tmp21 = nextResult;
-              if (nextResult.type === _mod9496.AutocompleterResultTypes.USER) {
+              if (nextResult.type === _mod9509.AutocompleterResultTypes.USER) {
                 let member = GuildMemberStore.getMember(guildId, tmp21.record.id);
                 let tmp28 = member;
                 let guildRoleIsFilteredResult = null == member;

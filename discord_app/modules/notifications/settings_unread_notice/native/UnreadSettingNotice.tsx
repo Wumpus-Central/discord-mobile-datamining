@@ -63,7 +63,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { variant: "text-md/semibold", children: intl.string(require("intl").t.i4xQ5o) };
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         intl = tmp(1126).intl;
         const tmp11 = closure_5(Text, obj3);
         cResult[2] = tmp11;
@@ -101,7 +101,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-link",
           children: intl2.string(require("intl").t.KyUKhT),
         };
-        const Text2 = tmp(4886).Text;
+        const Text2 = tmp(4892).Text;
         intl2 = tmp(1126).intl;
         const tmp19 = closure_5(Text2, obj5);
         cResult[7] = tmp19;

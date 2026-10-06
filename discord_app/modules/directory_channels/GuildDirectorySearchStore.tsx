@@ -68,7 +68,7 @@ let obj = {
     const obj3 = { results: obj4.orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj2[query] = obj3;
     closure_4[channelId] = obj2;
-    obj4 = items(11932);
+    obj4 = items(11946);
   },
   GUILD_DIRECTORY_SEARCH_FAILURE: function handleSearchFailure(channelId) {
     channelId = channelId.channelId;

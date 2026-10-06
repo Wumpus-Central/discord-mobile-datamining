@@ -8,7 +8,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 
 function onPress() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(14765, dependencyMap.paths), "AddConnection");
+  obj.openLazy(asyncRequire(14781, dependencyMap.paths), "AddConnection");
 }
 const jsx = Fragment.jsx;
 const memoResult = react.memo(
@@ -23,7 +23,7 @@ const memoResult = react.memo(
         const obj2 = stackNavigation(1490);
         const tmp = stackNavigation;
         stackNavigation = obj2.useStackNavigation();
-        const obj3 = stackNavigation(6490);
+        const obj3 = stackNavigation(6497);
         const params = obj3.useSettingNavigationRoute().params;
         let selectedPlatformType;
         if (params != null) {
@@ -55,7 +55,7 @@ const memoResult = react.memo(
         }
         const layoutEffect = react.useLayoutEffect(tmp6, tmp7);
         if (cResult[3] !== selectedPlatformType) {
-          const tmp11 = jsx(tmp(14766).UserSettingsConnections, { selectedPlatformType });
+          const tmp11 = jsx(tmp(14782).UserSettingsConnections, { selectedPlatformType });
           cResult[3] = selectedPlatformType;
           cResult[4] = tmp11;
           tmp9 = tmp11;
@@ -69,7 +69,7 @@ const memoResult = react.memo(
         let obj = stackNavigation(1490);
         const tmp = stackNavigation;
         stackNavigation = obj.useStackNavigation();
-        const obj2 = stackNavigation(6490);
+        const obj2 = stackNavigation(6497);
         const params = obj2.useSettingNavigationRoute().params;
         let selectedPlatformType;
         if (params != null) {
@@ -89,7 +89,7 @@ const memoResult = react.memo(
           };
           stackNavigation.setOptions(obj);
         }, items);
-        return jsx(tmp(14766).UserSettingsConnections, { selectedPlatformType });
+        return jsx(tmp(14782).UserSettingsConnections, { selectedPlatformType });
       },
 );
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");

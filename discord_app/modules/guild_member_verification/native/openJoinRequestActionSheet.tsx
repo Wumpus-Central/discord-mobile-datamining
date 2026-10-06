@@ -9,6 +9,6 @@ export default function openJoinRequestActionSheet(joinRequest) {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   const obj = { joinRequest };
-  const tmp2 = asyncRequire(16536, dependencyMap.paths);
+  const tmp2 = asyncRequire(16576, dependencyMap.paths);
   openLazy(tmp2, "joinRequestActionSheet" + joinRequest.joinRequestId, obj);
 }

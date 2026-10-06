@@ -8,7 +8,7 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import AssetRegistryDefault from "../../../../_runtime/06427_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/06434_AssetRegistry.js";
 import DraftStore2 from "../../../stores/DraftStore.tsx";
 import DraftActionCreatorsDefault from "../../../actions/DraftActionCreators.tsx";
 import ScheduledMessageTypes from "../../scheduled_messages/ScheduledMessageTypes.tsx";
@@ -1766,11 +1766,11 @@ let closure_26 = forwardRef(
         obj = backgroundColor(576);
         const cResult = obj.c(9);
         children = children.children;
-        const obj2 = backgroundColor(4696);
-        backgroundColor = closure_16(obj2.useGradientValue(backgroundColor(4696).GradientPercentage.END)).contextBar
+        const obj2 = backgroundColor(4702);
+        backgroundColor = closure_16(obj2.useGradientValue(backgroundColor(4702).GradientPercentage.END)).contextBar
           .backgroundColor;
         const tmp3 = closure_17();
-        const obj3 = backgroundColor(4612);
+        const obj3 = backgroundColor(4618);
         const sharedValue = obj3.useSharedValue(0);
         let fn = function o() {
           obj = { backgroundColor, maxHeight: sharedValue.get() };
@@ -1779,7 +1779,7 @@ let closure_26 = forwardRef(
         fn.__closure = { stylesBackgroundColor: backgroundColor, heightSv: sharedValue };
         fn.__workletHash = 16731072716488;
         fn.__initData = __initData;
-        const obj4 = backgroundColor(4612);
+        const obj4 = backgroundColor(4618);
         const animatedStyle = obj4.useAnimatedStyle(fn);
         dependencyMap = first.useRef(null);
         const obj5 = first;
@@ -1814,7 +1814,7 @@ let closure_26 = forwardRef(
                   set = sharedValue.set;
                   obj = backgroundColor(closure_2[25]);
                   const fn = function n() {
-                    /* body not rendered: F152583 */
+                    /* body not rendered: F152818 */
                   };
                   fn.__closure = { runOnJS: backgroundColor(closure_2[24]).runOnJS, handleTransitionFinished };
                   fn.__workletHash = 10908592279914;
@@ -1847,7 +1847,7 @@ let closure_26 = forwardRef(
                   set = sharedValue.set;
                   obj = backgroundColor(closure_2[25]);
                   const fn = function n() {
-                    /* body not rendered: F152583 */
+                    /* body not rendered: F152818 */
                   };
                   fn.__closure = { runOnJS: backgroundColor(closure_2[24]).runOnJS, handleTransitionFinished };
                   fn.__workletHash = 10908592279914;
@@ -1880,7 +1880,7 @@ let closure_26 = forwardRef(
                   set = sharedValue.set;
                   obj = backgroundColor(closure_2[25]);
                   const fn = function n() {
-                    /* body not rendered: F152583 */
+                    /* body not rendered: F152818 */
                   };
                   fn.__closure = { runOnJS: backgroundColor(closure_2[24]).runOnJS, handleTransitionFinished };
                   fn.__workletHash = 10908592279914;
@@ -1911,7 +1911,7 @@ let closure_26 = forwardRef(
                     set = sharedValue.set;
                     obj = backgroundColor(closure_2[25]);
                     const fn = function n() {
-                      /* body not rendered: F152583 */
+                      /* body not rendered: F152818 */
                     };
                     fn.__closure = { runOnJS: backgroundColor(closure_2[24]).runOnJS, handleTransitionFinished };
                     fn.__workletHash = 10908592279914;
@@ -1926,7 +1926,7 @@ let closure_26 = forwardRef(
             return tmp10;
           }
           const obj6 = { style: tmp9, children };
-          const tmp13 = closure_12(sharedValue(4612).View, obj6);
+          const tmp13 = closure_12(sharedValue(4618).View, obj6);
           cResult[6] = children;
           cResult[7] = tmp9;
           cResult[8] = tmp13;

@@ -54,6 +54,7 @@ class AgeGateManager extends AutomaticLifecycleManager {
   }
   handleAgeGateModalOpen(source) {
     source = source.source;
+    const channelId = source.channelId;
     let obj = ModalActionCreatorsDefault;
     obj.pushLazy(
       _asyncToGenerator(async () => {
@@ -68,7 +69,7 @@ class AgeGateManager extends AutomaticLifecycleManager {
         }
         return value;
       }),
-      { source },
+      { source, channelId },
       closure_7,
     );
   }

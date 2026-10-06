@@ -433,7 +433,7 @@ const memoResult = react.memo(
                 size: REFRESH_MEDIUM_32,
                 animate: stateFromStores1,
                 typing: stateFromStores,
-                autoStatusCutout: null,
+                autoStatusCutout: true,
               };
               const Avatar = tmp(tmp2[12]).Avatar;
               if (!stateFromStores2.isSystemUser()) {
@@ -587,7 +587,7 @@ const memoResult = react.memo(
                 size={REFRESH_MEDIUM_32}
                 animate={stateFromStores1}
                 typing={stateFromStores}
-                autoStatusCutout={null}
+                autoStatusCutout
               />
             );
           }

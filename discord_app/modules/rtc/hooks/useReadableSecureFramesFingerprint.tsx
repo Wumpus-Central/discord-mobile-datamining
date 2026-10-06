@@ -1,7 +1,7 @@
 // discord_app/modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx
 import byteLengthDefault from "../../../../_runtime/00206_byteLength.js";
 import react2 from "../../../../_runtime/00576_react.js";
-import _mod9349 from "../../../../discord_common/js/packages/libdave/index.tsx";
+import _mod9363 from "../../../../discord_common/js/packages/libdave/index.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -40,7 +40,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if ("" !== fingerprintBase64) {
           const obj2 = byteLengthDefault;
           const toByteArrayResult = obj2.toByteArray(fingerprintBase64);
-          const tmpResult = _mod9349;
+          const tmpResult = _mod9363;
           const str7 = tmpResult.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
           tmp5 = null;
           if (null != str7) {
@@ -75,7 +75,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if ("" !== fingerprintBase64) {
             const obj = byteLengthDefault;
             const toByteArrayResult = obj.toByteArray(fingerprintBase64);
-            const obj2 = _mod9349;
+            const obj2 = _mod9363;
             const str5 = obj2.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
             if (null == str5) {
               return null;

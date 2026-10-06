@@ -2,7 +2,7 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import themes from "../../../design/utils/shared/themes.tsx";
 import useTheme from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
@@ -99,7 +99,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[11] === tmp14) {
                   tmp15 = cResult[12];
                 }
-                const tmp16Result = importDefault(tmp6 ? 14932 : 14933);
+                const tmp16Result = importDefault(tmp6 ? 14947 : 14948);
                 if (cResult[13] === str2) {
                   if (cResult[14] === tmp15) {
                     let tmp18;
@@ -196,7 +196,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = hasOwnProperty;
       }
       items1 = [tmp7Result];
-      const obj5 = { style: items2, source: importDefault(isThemeDarkResult ? 14932 : 14933), resizeMode: str2 };
+      const obj5 = { style: items2, source: importDefault(isThemeDarkResult ? 14947 : 14948), resizeMode: str2 };
       items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
       const tmp12 = FastImageDefault;
       items1[1] = tmp9(tmp12, obj5);

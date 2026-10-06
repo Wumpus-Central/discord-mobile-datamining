@@ -546,7 +546,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           isIgnored,
           isCallActive: tmp10,
         };
-        tmpResult6 = tmp(5304);
+        tmpResult6 = tmp(5311);
         return formatMessagePreview(author, obj2);
       }
       class I {
@@ -606,7 +606,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return user;
       });
-      const tmpResult2 = tmp(5304);
+      const tmpResult2 = tmp(5311);
       const obj3 = {
         message: author,
         channel,

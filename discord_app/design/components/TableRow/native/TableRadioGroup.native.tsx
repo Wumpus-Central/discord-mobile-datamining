@@ -60,7 +60,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp9 = cResult[4];
           }
           const imperativeHandle = obj2.useImperativeHandle(groupRef, tmp8, tmp9);
-          context = obj2.useContext(onChange(6073).RedesignCompatContext);
+          context = obj2.useContext(onChange(6080).RedesignCompatContext);
           if (cResult[5] === tmp4) {
             let tmp12;
             if (cResult[6] === onChange) {
@@ -112,7 +112,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   hasIcons,
                   children: tmp14,
                 };
-                const tmp19 = context(onChange(6074).TableRowGroup, obj4);
+                const tmp19 = context(onChange(6081).TableRowGroup, obj4);
                 cResult[16] = accessibilityLabel;
                 cResult[17] = description;
                 cResult[18] = hasIcons;
@@ -256,7 +256,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      jsx = obj.useContext(onChange(6073).RedesignCompatContext);
+      jsx = obj.useContext(onChange(6080).RedesignCompatContext);
       const items1 = [undefined !== value, onChange];
       onSelect = obj.useCallback((arg0) => {
         if (!closure_1) {
@@ -284,7 +284,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       });
       Children = obj.Children;
-      const TableRowGroup = onChange(6074).TableRowGroup;
+      const TableRowGroup = onChange(6081).TableRowGroup;
       return <Provider value={react.useMemo(() => ({ selectedValue, onSelect }), items2)}>{null}</Provider>;
     };
 const result = size.fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");

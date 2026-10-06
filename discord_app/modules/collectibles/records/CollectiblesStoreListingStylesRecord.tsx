@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import _modDef7063 from "../../../../_runtime/metro/07063__.js";
+import _modDef7076 from "../../../../_runtime/metro/07076__.js";
 import Record from "../../../lib/Record.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -21,12 +21,12 @@ class CollectiblesStoreListingStylesRecord extends Record {
     let tmp;
     ({ background_colors, button_colors, confetti_colors } = arg0);
     const mapped = background_colors.map((item) => {
-      const tmp = _modDef7063;
+      const tmp = _modDef7076;
       const obj = utils_ColorUtils;
       return tmp(obj.int2hex(item));
     });
     const mapped1 = button_colors.map((item) => {
-      const tmp = _modDef7063;
+      const tmp = _modDef7076;
       const obj = utils_ColorUtils;
       return tmp(obj.int2hex(item));
     });

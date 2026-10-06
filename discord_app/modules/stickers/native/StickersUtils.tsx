@@ -6,8 +6,8 @@ import KeyboardTypes from "../../keyboard/native/KeyboardTypes.tsx";
 import StickersTypes from "../StickersTypes.tsx";
 import StickerPickerStore from "StickerPickerStore.tsx";
 import StickerCategoryUtils from "../StickerCategoryUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/10116_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/10117_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/10129_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/10130_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -58,7 +58,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[2];
       }
       dependencyMap = tmp9;
-      const tmpResult2 = tmp(8826);
+      const tmpResult2 = tmp(8856);
       const mobileStickerPickerUpsellRestyleEnabled =
         tmpResult2.useMobileStickerPickerUpsellRestyleEnabled("native.StickerPicker");
       if (cResult[3] === arg0) {

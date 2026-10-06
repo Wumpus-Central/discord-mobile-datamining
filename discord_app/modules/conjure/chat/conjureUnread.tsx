@@ -241,7 +241,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
-      const tmp9 = stateFromStores(16144)();
+      const tmp9 = stateFromStores(16183)();
       dependencyMap = tmp9;
       if (cResult[4] === tmp9) {
         if (cResult[5] === projectId) {
@@ -287,7 +287,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         },
         items1,
       );
-      let tmp2 = stateFromStores(16144)();
+      let tmp2 = stateFromStores(16183)();
       dependencyMap = tmp2;
       const items2 = [projectId, stateFromStores, tmp2];
       const effect = react.useEffect(() => {

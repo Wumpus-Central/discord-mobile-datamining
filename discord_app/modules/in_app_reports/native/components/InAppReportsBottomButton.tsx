@@ -5,7 +5,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Constants from "../../../../../discord_common/js/shared/Constants.tsx";
 import intl8 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
-import _modDef2625 from "../../../report_to_mod/ReportToMod.messages.js";
+import _modDef2653 from "../../../report_to_mod/ReportToMod.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -78,7 +78,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol4 = Symbol;
             if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
               const intl6 = intl8.intl;
-              const stringResult1 = intl6.string(_modDef2625.ZUyreS);
+              const stringResult1 = intl6.string(_modDef2653.ZUyreS);
               cResult[1] = stringResult1;
               tmp16 = stringResult1;
             } else {
@@ -135,7 +135,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const intl7 = intl8.intl;
           const string = intl7.string;
           if (isModeratorReport) {
-            stringResult5 = string(_modDef2625.psKFdJ);
+            stringResult5 = string(_modDef2653.psKFdJ);
           } else {
             stringResult5 = string(intl8.t.h6D8Vy);
           }
@@ -311,7 +311,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = intl8.intl;
           const string = intl2.string;
           if (isModeratorReport) {
-            stringResult = string(_modDef2625.ZUyreS);
+            stringResult = string(_modDef2653.ZUyreS);
           } else {
             const stringResult1 = string(intl8.t["G+vU89"]);
             const intl3 = intl8.intl;
@@ -334,7 +334,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const intl4 = intl8.intl;
         const string2 = intl4.string;
         if (isModeratorReport) {
-          string2Result = string2(_modDef2625.psKFdJ);
+          string2Result = string2(_modDef2653.psKFdJ);
         } else {
           string2Result = string2(intl8.t.h6D8Vy);
         }

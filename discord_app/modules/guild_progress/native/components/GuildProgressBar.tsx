@@ -46,7 +46,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       percent = percent.percent;
       const style = percent.style;
       const tmp4 = closure_6();
-      const obj2 = percent(4612);
+      const obj2 = percent(4618);
       const sharedValue = obj2.useSharedValue(0);
       if (cResult[0] === percent) {
         let tmp6;
@@ -56,7 +56,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           tmp7 = cResult[3];
         }
         const effect = react.useEffect(tmp6, tmp7);
-        const tmpResult = tmp(4612);
+        const tmpResult = tmp(4618);
         class R {
           constructor() {
             const obj = { width: "" + sharedValue.get() + "%" };
@@ -107,7 +107,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const items = [tmp4.progress, animatedStyle];
           tmp16[0] = items;
-          const tmp17 = jsx(sharedValue(4612).View, tmp16);
+          const tmp17 = jsx(sharedValue(4618).View, tmp16);
           cResult[7] = animatedStyle;
           cResult[8] = tmp4.progress;
           cResult[9] = tmp17;
@@ -136,7 +136,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       percent = percent.percent;
       const style = percent.style;
       const tmp = closure_6();
-      let obj = percent(4612);
+      let obj = percent(4618);
       const sharedValue = obj.useSharedValue(0);
       const items = [percent, sharedValue];
       const effect = react.useEffect(() => {
@@ -152,7 +152,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 17127431788560;
       fn.__initData = __initData2;
       const items1 = [tmp.wrapper, style];
-      const obj2 = percent(4612);
+      const obj2 = percent(4618);
       const animatedStyle = obj2.useAnimatedStyle(fn);
       const items2 = [tmp.progress, animatedStyle];
       return <View style={items1}>{null}</View>;

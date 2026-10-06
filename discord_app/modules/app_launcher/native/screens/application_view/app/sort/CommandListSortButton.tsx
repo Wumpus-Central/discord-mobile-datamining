@@ -64,17 +64,17 @@ export default function CommandListSortButton(sortOrder) {
           obj.hideActionSheet("CommandListSortActionSheet");
         },
       };
-      obj.openLazy(asyncRequire(11774, dependencyMap.paths), "CommandListSortActionSheet", obj2);
+      obj.openLazy(asyncRequire(11788, dependencyMap.paths), "CommandListSortActionSheet", obj2);
     },
     children: closure_7(View, obj2),
   };
   obj2 = { style: tmp.button, children: items };
-  const PressableOpacity = sortOrder(5909).PressableOpacity;
+  const PressableOpacity = sortOrder(5916).PressableOpacity;
   items = [
-    closure_6(sortOrder(4886).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
+    closure_6(sortOrder(4892).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
   ];
   const obj3 = { size: "xs", color: onSortOptionPress(587).colors.TEXT_DEFAULT };
-  const ChevronSmallDownIcon = sortOrder(10844).ChevronSmallDownIcon;
+  const ChevronSmallDownIcon = sortOrder(10857).ChevronSmallDownIcon;
   items[1] = closure_6(ChevronSmallDownIcon, obj3);
   return closure_6(PressableOpacity, obj);
 }

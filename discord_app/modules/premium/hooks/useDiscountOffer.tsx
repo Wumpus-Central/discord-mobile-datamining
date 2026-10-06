@@ -148,7 +148,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     num = time - Date.now();
                   }
                   if (timeout != null) {
-                    timeout.start(num, f151302);
+                    timeout.start(num, f151536);
                   }
                 }
               });
@@ -200,7 +200,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [first, stateFromStores];
       const hasItem = CHURN_DISCOUNT_IDS.includes(arg0);
       const effect = obj3.useEffect(function () {
-        const f151303 = () => {
+        const f151537 = () => {
           if (!first) {
             if (stateFromStores.hasExpired()) {
               closure_3(true);
@@ -219,7 +219,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               num = time - Date.now();
             }
             if (timeout != null) {
-              timeout.start(num, f151303);
+              timeout.start(num, f151537);
             }
           }
         };
@@ -243,7 +243,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               let time = expiresAt.getTime();
               num = time - Date.now();
             }
-            timeout.start(num, f151303);
+            timeout.start(num, f151537);
           }
           return () => timeout.stop();
         }

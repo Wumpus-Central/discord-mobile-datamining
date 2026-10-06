@@ -244,7 +244,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       tmp3 = require;
       NO_CHANNEL = getEmbeddedActivityLaunchability.EmbeddedActivityLaunchability.NO_CHANNEL;
     }
-    const CAN_LAUNCH = tmp3(9011).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    const CAN_LAUNCH = tmp3(9044).EmbeddedActivityLaunchability.CAN_LAUNCH;
     const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channelId);
     const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
     let first;

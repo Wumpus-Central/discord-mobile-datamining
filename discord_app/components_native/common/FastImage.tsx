@@ -2,26 +2,34 @@
 import react_native from "../../../_runtime/00017_react-native.js";
 import Fragment from "../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../_runtime/00576_react.js";
+import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import FastImageNativeComponentDefault from "../../../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../_runtime/00019_react.js";
-import createStyles from "../../design/components/Styles/native/createStyles.tsx";
-import ReactCompilerGating_mod from "../../modules/react_compiler/ReactCompilerGating.tsx";
-import PlatformUtils from "../../utils/PlatformUtils.tsx";
+import ReactCompilerGating from "../../modules/react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-let accessible;
-
-let closure_3 = ["tintColor"];
-let closure_4 = ["tintColor"];
+let closure_3 = [
+  "accessible",
+  "accessibilityLabel",
+  "enableAnimation",
+  "fade",
+  "manualPlayback",
+  "paused",
+  "placeholder",
+  "source",
+  "style",
+  "tintColor",
+  "usesSmallCache",
+];
 const Image = react_native.Image;
 const jsx = Fragment.jsx;
-let closure_8 = createStyles.createStyles({ base: { overflow: "hidden" } });
 const memo = react.memo;
-let ReactCompilerGating = ReactCompilerGating_mod;
-let memoResult = memo(
+const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
-    ? (accessible) => {
+    ? (arg0) => {
+        let accessibilityLabel;
+        let accessible;
         let enableAnimation;
         let fade;
         let manualPlayback;
@@ -30,88 +38,145 @@ let memoResult = memo(
         let source;
         let style;
         let tintColor;
+        let tmp10;
+        let tmp11;
+        let tmp12;
+        let tmp13;
+        let tmp14;
+        let tmp15;
+        let tmp22;
+        let tmp23;
+        let tmp4;
+        let tmp5;
+        let tmp6;
+        let tmp7;
+        let tmp8;
+        let tmp9;
         let usesSmallCache;
         const obj = react2;
-        const cResult = obj.c(22);
-        const tmp3 = closure_8();
-        accessible = accessible.accessible;
-        if (accessible == null) {
-          const tmp4 = null != accessible.accessibilityLabel || undefined;
-          accessible = tmp4;
-        }
-        ({ source, style, tintColor, placeholder, enableAnimation, paused, manualPlayback, fade, usesSmallCache } =
-          accessible);
-        if (typeof source === "number") {
-          if (cResult[0] === accessible) {
-            let tmp28;
-            if (cResult[1] === accessible) {
-              tmp28 = cResult[2];
-            }
-            return tmp28;
-          }
-          const merged = Object.assign(accessible);
-          const tmp34 = <Image accessible={accessible} />;
-          cResult[0] = accessible;
-          cResult[1] = accessible;
-          cResult[2] = tmp34;
-          tmp28 = tmp34;
+        const cResult = obj.c(44);
+        if (cResult[0] !== arg0) {
+          ({
+            accessible,
+            accessibilityLabel,
+            enableAnimation,
+            fade,
+            manualPlayback,
+            paused,
+            placeholder,
+            source,
+            style,
+            tintColor,
+            usesSmallCache,
+          } = arg0);
+          const tmp18 = _objectWithoutProperties(arg0, closure_3);
+          cResult[0] = arg0;
+          cResult[1] = accessibilityLabel;
+          cResult[2] = accessible;
+          cResult[3] = manualPlayback;
+          cResult[4] = paused;
+          cResult[5] = placeholder;
+          cResult[6] = tmp18;
+          cResult[7] = source;
+          cResult[8] = style;
+          cResult[9] = enableAnimation;
+          cResult[10] = fade;
+          cResult[11] = usesSmallCache;
+          cResult[12] = tintColor;
+          tmp15 = tintColor;
+          tmp14 = usesSmallCache;
+          tmp13 = fade;
+          tmp12 = enableAnimation;
+          tmp11 = style;
+          tmp10 = source;
+          tmp9 = tmp18;
+          tmp8 = placeholder;
+          tmp7 = paused;
+          tmp6 = manualPlayback;
+          tmp5 = accessible;
+          tmp4 = accessibilityLabel;
         } else {
-          let tmp8;
-          let items1;
-          if (cResult[3] !== placeholder) {
-            let assetSource = null;
-            if (null != placeholder) {
-              assetSource = Image.resolveAssetSource(placeholder);
-            }
-            cResult[3] = placeholder;
-            cResult[4] = assetSource;
-            tmp8 = assetSource;
-          } else {
-            tmp8 = cResult[4];
+          tmp4 = cResult[1];
+          tmp5 = cResult[2];
+          tmp6 = cResult[3];
+          tmp7 = cResult[4];
+          tmp8 = cResult[5];
+          tmp9 = cResult[6];
+          tmp10 = cResult[7];
+          tmp11 = cResult[8];
+          tmp12 = cResult[9];
+          tmp13 = cResult[10];
+          tmp14 = cResult[11];
+          tmp15 = cResult[12];
+        }
+        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj2 = { overflow: "hidden" };
+          cResult[13] = obj2;
+          tmp22 = obj2;
+        } else {
+          tmp22 = cResult[13];
+        }
+        if (cResult[14] !== tmp15) {
+          let tmp25;
+          if (null != tmp15) {
+            tmp25 = { tintColor: tmp15 };
+            const obj3 = { tintColor: tmp15 };
           }
-          let tmp11 = accessible;
-          if ("tintColor" in accessible) {
-            let tmp12;
-            if (cResult[5] !== accessible) {
-              const tintColor2 = accessible.tintColor;
-              const tmp15 = _objectWithoutProperties(accessible, closure_3);
-              cResult[5] = accessible;
-              cResult[6] = tmp15;
-              tmp12 = tmp15;
-            } else {
-              tmp12 = cResult[6];
-            }
-            tmp11 = tmp12;
+          cResult[14] = tmp15;
+          cResult[15] = tmp25;
+          tmp23 = tmp25;
+        } else {
+          tmp23 = cResult[15];
+        }
+        if (cResult[16] === tmp11) {
+          let tmp26;
+          let tmp43;
+          if (cResult[17] === tmp23) {
+            tmp26 = cResult[18];
           }
-          const _Array = Array;
-          let first = source;
-          if (Array.isArray(source)) {
-            first = source[0];
+          if (tmp5 == null) {
+            tmp5 = null != tmp4 || undefined;
           }
-          if (cResult[7] === style) {
-            if (cResult[8] === tmp3.base) {
-              let tmp18;
-              if (cResult[9] === tintColor) {
-                tmp18 = cResult[10];
+          const tmpResult = PlatformUtils;
+          if (!tmpResult.isAndroid()) {
+            if (typeof tmp10 !== "number") {
+              let tmp30;
+              const _Array = Array;
+              let first = tmp10;
+              if (Array.isArray(tmp10)) {
+                first = tmp10[0];
               }
-              let uri;
-              if (tmp8 != null) {
-                uri = tmp8.uri;
+              if (cResult[30] !== tmp8) {
+                let assetSource = null;
+                if (null != tmp8) {
+                  assetSource = Image.resolveAssetSource(tmp8);
+                }
+                let uri;
+                if (assetSource != null) {
+                  uri = assetSource.uri;
+                }
+                cResult[30] = tmp8;
+                cResult[31] = uri;
+                tmp30 = uri;
+              } else {
+                tmp30 = cResult[31];
               }
-              if (cResult[11] === accessible) {
-                if (cResult[12] === (undefined === enableAnimation || enableAnimation)) {
-                  if (cResult[13] === (undefined === fade || fade)) {
-                    if (cResult[14] === manualPlayback) {
-                      if (cResult[15] === tmp11) {
-                        if (cResult[16] === paused) {
-                          if (cResult[17] === first) {
-                            if (cResult[18] === tmp18) {
-                              if (cResult[19] === uri) {
-                                let tmp20;
-                                if (cResult[20] === (undefined !== usesSmallCache && usesSmallCache)) {
-                                  tmp20 = cResult[21];
+              if (cResult[32] === tmp4) {
+                if (cResult[33] === tmp5) {
+                  if (cResult[34] === (undefined === tmp12 || tmp12)) {
+                    if (cResult[35] === (undefined === tmp13 || tmp13)) {
+                      if (cResult[36] === tmp6) {
+                        if (cResult[37] === tmp7) {
+                          if (cResult[38] === tmp9) {
+                            if (cResult[39] === tmp26) {
+                              if (cResult[40] === first) {
+                                if (cResult[41] === tmp30) {
+                                  let tmp34;
+                                  if (cResult[42] === (undefined !== tmp14 && tmp14)) {
+                                    tmp34 = cResult[43];
+                                  }
+                                  return tmp34;
                                 }
-                                return tmp20;
                               }
                             }
                           }
@@ -122,50 +187,104 @@ let memoResult = memo(
                 }
               }
               FastImageNativeComponentDefault;
-              const merged1 = Object.assign(tmp11);
-              const tmp27 = (
-                <tmp23
-                  accessible={accessible}
+              const merged = Object.assign(tmp9);
+              const tmp41 = (
+                <tmp37
+                  accessible={tmp5}
+                  accessibilityLabel={tmp4}
                   source={first}
-                  style={tmp18}
-                  placeholder={uri}
-                  enableAnimation={undefined === enableAnimation || enableAnimation}
-                  paused={paused}
-                  manualPlayback={manualPlayback}
-                  fade={undefined === fade || fade}
-                  usesSmallCache={undefined !== usesSmallCache && usesSmallCache}
+                  style={tmp26}
+                  placeholder={tmp30}
+                  enableAnimation={undefined === tmp12 || tmp12}
+                  paused={tmp7}
+                  manualPlayback={tmp6}
+                  fade={undefined === tmp13 || tmp13}
+                  usesSmallCache={undefined !== tmp14 && tmp14}
                 />
               );
-              cResult[11] = accessible;
-              cResult[12] = undefined === enableAnimation || enableAnimation;
-              cResult[13] = undefined === fade || fade;
-              cResult[14] = manualPlayback;
-              cResult[15] = tmp11;
-              cResult[16] = paused;
-              cResult[17] = first;
-              cResult[18] = tmp18;
-              cResult[19] = uri;
-              cResult[20] = undefined !== usesSmallCache && usesSmallCache;
-              cResult[21] = tmp27;
-              tmp20 = tmp27;
+              cResult[32] = tmp4;
+              cResult[33] = tmp5;
+              cResult[34] = undefined === tmp12 || tmp12;
+              cResult[35] = undefined === tmp13 || tmp13;
+              cResult[36] = tmp6;
+              cResult[37] = tmp7;
+              cResult[38] = tmp9;
+              cResult[39] = tmp26;
+              cResult[40] = first;
+              cResult[41] = tmp30;
+              cResult[42] = undefined !== tmp14 && tmp14;
+              cResult[43] = tmp41;
+              tmp34 = tmp41;
             }
           }
-          if (null == tintColor) {
-            const items = [tmp3.base, style];
-            items1 = items;
-          } else {
-            items1 = [tmp3.base, style];
-            const obj4 = { tintColor };
-            items1[2] = obj4;
+          let tmp42;
+          const tmpResult3 = PlatformUtils;
+          if (tmpResult3.isAndroid()) {
+            tmp42 = tmp8;
           }
-          cResult[7] = style;
-          cResult[8] = tmp3.base;
-          cResult[9] = tintColor;
-          cResult[10] = items1;
-          tmp18 = items1;
+          if (cResult[19] !== tmp9) {
+            let num31 = 0;
+            const tmpResult4 = PlatformUtils;
+            if (!tmpResult4.isAndroid()) {
+              num31 = tmp9.fadeDuration;
+            }
+            cResult[19] = tmp9;
+            cResult[20] = num31;
+            tmp43 = num31;
+          } else {
+            tmp43 = cResult[20];
+          }
+          if (cResult[21] === tmp4) {
+            if (cResult[22] === tmp5) {
+              if (cResult[23] === tmp9) {
+                if (cResult[24] === tmp10) {
+                  if (cResult[25] === tmp26) {
+                    if (cResult[26] === tmp42) {
+                      if (cResult[27] === tmp43) {
+                        let tmp44;
+                        if (cResult[28] === tmp15) {
+                          tmp44 = cResult[29];
+                        }
+                        return tmp44;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          const merged1 = Object.assign(tmp9);
+          const tmp50 = (
+            <Image
+              source={tmp10}
+              style={tmp26}
+              tintColor={tmp15}
+              accessible={tmp5}
+              accessibilityLabel={tmp4}
+              defaultSource={tmp42}
+              fadeDuration={tmp43}
+            />
+          );
+          cResult[21] = tmp4;
+          cResult[22] = tmp5;
+          cResult[23] = tmp9;
+          cResult[24] = tmp10;
+          cResult[25] = tmp26;
+          cResult[26] = tmp42;
+          cResult[27] = tmp43;
+          cResult[28] = tmp15;
+          cResult[29] = tmp50;
+          tmp44 = tmp50;
         }
+        const items = [tmp22, tmp11, tmp23];
+        cResult[16] = tmp11;
+        cResult[17] = tmp23;
+        cResult[18] = items;
+        tmp26 = items;
       }
-    : (accessible) => {
+    : (fade) => {
+        let accessibilityLabel;
+        let accessible;
         let enableAnimation;
         let manualPlayback;
         let paused;
@@ -173,107 +292,105 @@ let memoResult = memo(
         let source;
         let style;
         let tintColor;
-        const tmp = closure_8();
-        accessible = accessible.accessible;
+        let usesSmallCache;
+        ({ accessible, accessibilityLabel, enableAnimation } = fade);
+        if (enableAnimation === undefined) {
+          enableAnimation = true;
+        }
+        let flag = fade.fade;
+        if (flag === undefined) {
+          flag = true;
+        }
+        ({ placeholder, source, tintColor, usesSmallCache, manualPlayback, paused, style } = fade);
+        if (usesSmallCache === undefined) {
+          usesSmallCache = false;
+        }
+        const merged = Object.assign(
+          fade,
+          Object.assign({
+            accessible: 0,
+            accessibilityLabel: 0,
+            enableAnimation: 0,
+            fade: 0,
+            manualPlayback: 0,
+            paused: 0,
+            placeholder: 0,
+            source: 0,
+            style: 0,
+            tintColor: 0,
+            usesSmallCache: 0,
+          }),
+        );
+        const items = [{ overflow: "hidden" }, style];
+        let tmp2;
+        if (null != tintColor) {
+          tmp2 = { tintColor };
+          const obj = { tintColor };
+        }
+        items[2] = tmp2;
         if (accessible == null) {
-          const tmp2 = null != accessible.accessibilityLabel || undefined;
-          accessible = tmp2;
+          accessible = null != accessibilityLabel || undefined;
         }
-        ({ source, style, tintColor, placeholder, enableAnimation } = accessible);
-        const fade = accessible.fade;
-        let tmp4 = undefined === fade;
-        const tmp3 = undefined === enableAnimation || enableAnimation;
-        ({ paused, manualPlayback } = accessible);
-        if (!tmp4) {
-          tmp4 = fade;
+        const obj2 = PlatformUtils;
+        if (!obj2.isAndroid()) {
+          let tmp11Result;
+          if (typeof source !== "number") {
+            FastImageNativeComponentDefault;
+            const merged1 = Object.assign(merged);
+            const _Array = Array;
+            let first = source;
+            if (Array.isArray(source)) {
+              first = source[0];
+            }
+            let assetSource = null;
+            if (null != placeholder) {
+              assetSource = Image.resolveAssetSource(placeholder);
+            }
+            let uri;
+            if (assetSource != null) {
+              uri = assetSource.uri;
+            }
+            tmp11Result = (
+              <tmp17
+                accessible={accessible}
+                accessibilityLabel={accessibilityLabel}
+                source={first}
+                style={items}
+                placeholder={uri}
+                enableAnimation={enableAnimation}
+                paused={paused}
+                manualPlayback={manualPlayback}
+                fade={flag}
+                usesSmallCache={usesSmallCache}
+              />
+            );
+          }
+          return tmp11Result;
         }
-        const usesSmallCache = accessible.usesSmallCache;
-        const tmp5 = undefined !== usesSmallCache && usesSmallCache;
-        if (typeof source === "number") {
-          const merged = Object.assign(accessible);
-          return <Image accessible={accessible} />;
-        } else {
-          let items1;
-          let assetSource = null;
-          if (null != placeholder) {
-            assetSource = Image.resolveAssetSource(placeholder);
-          }
-          let tmp8 = accessible;
-          if ("tintColor" in accessible) {
-            const tintColor2 = accessible.tintColor;
-            tmp8 = _objectWithoutProperties(accessible, closure_4);
-          }
-          FastImageNativeComponentDefault;
-          const merged1 = Object.assign(tmp8);
-          const _Array = Array;
-          let first = source;
-          if (Array.isArray(source)) {
-            first = source[0];
-          }
-          if (null == tintColor) {
-            const items = [tmp.base, style];
-            items1 = items;
-          } else {
-            items1 = [tmp.base, style];
-            const obj3 = { tintColor };
-            items1[2] = obj3;
-          }
-          let uri;
-          if (assetSource != null) {
-            uri = assetSource.uri;
-          }
-          return (
-            <tmp14
-              accessible={accessible}
-              source={first}
-              style={items1}
-              placeholder={uri}
-              enableAnimation={tmp3}
-              paused={paused}
-              manualPlayback={manualPlayback}
-              fade={tmp4}
-              usesSmallCache={tmp5}
-            />
-          );
+        const merged2 = Object.assign(merged);
+        let tmp14;
+        const tmp4Result = PlatformUtils;
+        if (tmp4Result.isAndroid()) {
+          tmp14 = placeholder;
         }
+        let num = 0;
+        const tmp4Result2 = PlatformUtils;
+        if (!tmp4Result2.isAndroid()) {
+          num = merged.fadeDuration;
+        }
+        tmp11Result = (
+          <Image
+            source={source}
+            style={items}
+            tintColor={tintColor}
+            accessible={accessible}
+            accessibilityLabel={accessibilityLabel}
+            defaultSource={tmp14}
+            fadeDuration={num}
+          />
+        );
       },
 );
-ReactCompilerGating = ReactCompilerGating_mod;
-let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (accessible) => {
-      const obj = react2;
-      const cResult = obj.c(3);
-      accessible = accessible.accessible;
-      if (accessible == null) {
-        const tmp2 = null != accessible.accessibilityLabel || undefined;
-        accessible = tmp2;
-      }
-      if (cResult[0] === accessible) {
-        let tmp3;
-        if (cResult[1] === accessible) {
-          tmp3 = cResult[2];
-        }
-        return tmp3;
-      }
-      const merged = Object.assign(accessible);
-      const tmp5 = <Image accessible={accessible} defaultSource={accessible.placeholder} fadeDuration={0} />;
-      cResult[0] = accessible;
-      cResult[1] = accessible;
-      cResult[2] = tmp5;
-      tmp3 = tmp5;
-    }
-  : (accessible) => {
-      accessible = accessible.accessible;
-      if (accessible == null) {
-        const tmp = null != accessible.accessibilityLabel || undefined;
-        accessible = tmp;
-      }
-      const merged = Object.assign(accessible);
-      return <Image accessible={accessible} defaultSource={accessible.placeholder} fadeDuration={0} />;
-    };
-if (PlatformUtils.isAndroid()) {
-  memoResult = tmp4;
-}
 const result = size.fileFinishedImporting("components_native/common/FastImage.tsx");
 
 export default memoResult;

@@ -89,7 +89,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const MobileHomeDrawerExperiment = tmp(4742).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = tmp(4748).MobileHomeDrawerExperiment;
       const enableHome = MobileHomeDrawerExperiment.useConfig(tmp8).enableHome;
       let tmp10 = null;
       if (null != stateFromStores) {
@@ -126,7 +126,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [GuildStore];
       const obj = guildId(504);
       const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
-      const MobileHomeDrawerExperiment = guildId(4742).MobileHomeDrawerExperiment;
+      const MobileHomeDrawerExperiment = guildId(4748).MobileHomeDrawerExperiment;
       const enableHome = MobileHomeDrawerExperiment.useConfig({ location: "guild-row" }).enableHome;
       let tmp3 = null;
       if (null != stateFromStores) {
@@ -292,8 +292,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[12] = guild.name;
       cResult[13] = tmp4.guildNameText;
       cResult[14] = "text-default";
-      cResult[15] = closure_18(tmp(4886).Text, obj3);
-      closure_18(tmp(4886).Text, obj3);
+      cResult[15] = closure_18(tmp(4892).Text, obj3);
+      closure_18(tmp(4892).Text, obj3);
     }
   : (guild) => {
       let closure_3;

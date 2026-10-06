@@ -279,7 +279,7 @@ obj = function _fetchTestSKUsForApplication() {
             body = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {
@@ -398,7 +398,7 @@ obj = function _previewPurchaseSku() {
             billingError = undefined;
             apply_wallet_balance = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === apply_wallet_balance) {
           if (arg0 === 1) {

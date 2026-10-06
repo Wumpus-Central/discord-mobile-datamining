@@ -649,7 +649,7 @@ let closure_14 = _asyncToGenerator(async (arg0, arg1) => {
             id = undefined;
             c6 = 1;
             c7 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c6) {
           if (arg0 === 1) {

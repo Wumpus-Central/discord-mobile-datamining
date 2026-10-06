@@ -1,6 +1,6 @@
 // discord_app/modules/premium/gifting/GiftingBadgeTier.messages.js
 import AssetJsonUtils from "../../asset_json/native/AssetJsonUtils.tsx";
-import AssetRegistry from "../../../../_runtime/02592_AssetRegistry.js";
+import AssetRegistry from "../../../../_runtime/02620_AssetRegistry.js";
 import module_1165_mod from "../../../../_runtime/metro/01165__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 

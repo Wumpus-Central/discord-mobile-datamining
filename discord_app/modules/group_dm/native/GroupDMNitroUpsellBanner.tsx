@@ -7,7 +7,7 @@ import intl4 from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import AssetRegistryDefault from "../../../../_runtime/07722_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/07733_AssetRegistry.js";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import GroupDMConstants from "../GroupDMConstants.tsx";
 import GroupDMNitroCapExperimentDefault from "../GroupDMNitroCapExperiment.tsx";

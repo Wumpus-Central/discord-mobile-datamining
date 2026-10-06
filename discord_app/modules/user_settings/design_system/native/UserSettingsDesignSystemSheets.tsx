@@ -15,7 +15,7 @@ import ActionSheetRow from "../../../../design/components/Sheet/native/ActionShe
 import ActionSheet2 from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import ActionSheetHeaderPressableText from "../../../../design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx";
 import PromoSheet2 from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import _modDef15686 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
+import _modDef15700 from "../../../../../discord_assets/assets/mana/asset-library/generated/BugSpotIllustration-2x.png.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
@@ -370,7 +370,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           actions: first,
         };
         obj4 = { type: "image", src: obj5, aspectRatio: "16/9" };
-        obj5 = { uri: _modDef15686 };
+        obj5 = { uri: _modDef15700 };
         const PromoSheet = PromoSheet2.PromoSheet;
         const tmp10 = metroImportDefault(PromoSheet, obj3);
         cResult[1] = tmp10;
@@ -403,7 +403,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         actions: tmp,
       };
       obj3 = { type: "image", src: obj4, aspectRatio: "16/9" };
-      obj4 = { uri: _modDef15686 };
+      obj4 = { uri: _modDef15700 };
       tmp = metroImportDefault(Button, obj);
       const PromoSheet = PromoSheet2.PromoSheet;
       return metroImportDefault(PromoSheet, obj2);

@@ -69,7 +69,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp14 = cResult[10];
           }
           if (cResult[11] !== tmp14) {
-            const tmp18 = jsx(searchContext(4886).Text, {
+            const tmp18 = jsx(searchContext(4892).Text, {
               variant: "heading-sm/normal",
               color: "interactive-text-default",
               children: tmp14,
@@ -87,7 +87,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp19;
           }
-          const tmp21 = jsx(searchContext(5995).Card, {
+          const tmp21 = jsx(searchContext(6002).Card, {
             variant: "primary",
             border: "subtle",
             style: tmp13,

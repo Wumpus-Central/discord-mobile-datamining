@@ -10,7 +10,7 @@ const require = globalThis.__r;
 let importDefault;
 
 let tmp4;
-const useGetOrFetchApplicationsDefault = tmp4(6663);
+const useGetOrFetchApplicationsDefault = tmp4(6670);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function (arg0) {
       let _require;

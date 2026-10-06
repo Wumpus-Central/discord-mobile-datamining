@@ -12,12 +12,12 @@ import GuildRoleRecordUtilsAll from "../../../utils/GuildRoleRecordUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import GuildTemplatesConstants from "../../guild_templates/GuildTemplatesConstants.tsx";
 import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09189_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/09224_AssetRegistry.js";
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import InvalidLink from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import GuildIconUploaderDefault from "../../guild/native/GuildIconUploader.tsx";
-import AssetRegistryDefault2 from "../../../../_runtime/11414_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/11415_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/11427_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/11428_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Constants from "../../../Constants.tsx";
@@ -187,7 +187,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       guildTemplate = guildTemplate.guildTemplate;
       ({ createServer, name, setName, icon, chooseIcon, errors } = guildTemplate);
       const tmp4 = closure_14();
-      const obj2 = guildTemplate(6469);
+      const obj2 = guildTemplate(6476);
       const typeConsolidationTextTransform = obj2.useTypeConsolidationTextTransform("AcceptGuildTemplate");
       _modDef38(null != guildTemplate, "guild template cannot be null");
       _modDef38(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
@@ -230,7 +230,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: tmp17,
             };
-            const tmp21 = closure_11(guildTemplate(4886).Text, obj4);
+            const tmp21 = closure_11(guildTemplate(4892).Text, obj4);
             cResult[12] = tmp4.header;
             cResult[13] = tmp21;
             tmp19 = tmp21;
@@ -285,7 +285,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[28] !== tmp4.hint) {
                         const obj6 = { style: hint, variant: "text-xs/medium", color: "text-muted", children: tmp34 };
-                        const tmp39 = closure_11(guildTemplate(4886).Text, obj6);
+                        const tmp39 = closure_11(guildTemplate(4892).Text, obj6);
                         cResult[28] = tmp4.hint;
                         cResult[29] = tmp39;
                         tmp37 = tmp39;
@@ -344,7 +344,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                                 color: "mobile-text-heading-primary",
                                 children: tmp54,
                               };
-                              const tmp58 = closure_11(guildTemplate(4886).Text, obj8);
+                              const tmp58 = closure_11(guildTemplate(4892).Text, obj8);
                               cResult[41] = tmp4.sectionHeader;
                               cResult[42] = tmp58;
                               tmp56 = tmp58;
@@ -358,7 +358,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                                 color: "text-default",
                                 children: intl6.string(guildTemplate(1126).t.Ztwyoz),
                               };
-                              const Text = tmp(4886).Text;
+                              const Text = tmp(4892).Text;
                               intl6 = tmp(1126).intl;
                               const tmp61 = closure_11(Text, obj9);
                               cResult[43] = tmp61;
@@ -492,7 +492,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                                     color: "mobile-text-heading-primary",
                                     children: intl9.string(guildTemplate(1126).t.mQ0H1p),
                                   };
-                                  const Text2 = tmp(4886).Text;
+                                  const Text2 = tmp(4892).Text;
                                   intl9 = tmp(1126).intl;
                                   items2 = [closure_11(Text2, obj14), ,];
                                   const obj15 = {
@@ -500,7 +500,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                                     color: "text-default",
                                     children: intl10.string(guildTemplate(1126).t.jOPEYC),
                                   };
-                                  const Text3 = tmp(4886).Text;
+                                  const Text3 = tmp(4892).Text;
                                   intl10 = tmp(1126).intl;
                                   items2[1] = closure_11(Text3, obj15);
                                   const obj16 = { roles: arr };
@@ -519,7 +519,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                                 children: items3,
                               };
                               items3 = [tmp70, tmp73];
-                              const tmp77 = closure_12(guildTemplate(4886).Text, obj17);
+                              const tmp77 = closure_12(guildTemplate(4892).Text, obj17);
                               cResult[53] = tmp4.sectionTip;
                               cResult[54] = tmp70;
                               cResult[55] = tmp77;
@@ -547,7 +547,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                         disabled: guildTemplate.state === GuildTemplateStates.ACCEPTING,
                         grow: true,
                       };
-                      const tmp46 = closure_11(guildTemplate(5594).Button, obj19);
+                      const tmp46 = closure_11(guildTemplate(5601).Button, obj19);
                       cResult[31] = createServer;
                       cResult[32] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
                       cResult[33] = guildTemplate.state === GuildTemplateStates.ACCEPTING;
@@ -565,7 +565,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                     returnKeyType: "done",
                     clearable: true,
                   };
-                  const tmp33 = closure_11(guildTemplate(6098).TextInput, obj20);
+                  const tmp33 = closure_11(guildTemplate(6105).TextInput, obj20);
                   cResult[23] = name;
                   cResult[24] = setName;
                   cResult[25] = name1;
@@ -594,7 +594,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-default",
             children: guildTemplate.name,
           };
-          const tmp24 = closure_11(guildTemplate(4886).Text, obj22);
+          const tmp24 = closure_11(guildTemplate(4892).Text, obj22);
           cResult[14] = guildTemplate.name;
           cResult[15] = tmp4.description;
           cResult[16] = tmp24;
@@ -675,7 +675,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       const errors = guildTemplate.errors;
       ({ createServer, name, setName, icon, chooseIcon } = guildTemplate);
       const tmp = closure_14();
-      let obj = guildTemplate(6469);
+      let obj = guildTemplate(6476);
       const typeConsolidationTextTransform = obj.useTypeConsolidationTextTransform("AcceptGuildTemplate");
       _modDef38(null != guildTemplate, "guild template cannot be null");
       _modDef38(guildTemplate.state !== GuildTemplateStates.RESOLVING, "guild must be resolved");
@@ -694,7 +694,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl.string(guildTemplate(1126).t.QzUORX),
       };
-      const Text = guildTemplate(4886).Text;
+      const Text = guildTemplate(4892).Text;
       intl = guildTemplate(1126).intl;
       items1 = [closure_11(Text, obj3), , , , , , , , , , ,];
       const obj4 = {
@@ -703,7 +703,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: guildTemplate.name,
       };
-      items1[1] = closure_11(guildTemplate(4886).Text, obj4);
+      items1[1] = closure_11(guildTemplate(4892).Text, obj4);
       const obj5 = {
         iconBackgroundColor: tmp.wrapper.backgroundColor,
         style: tmp.iconUploader,
@@ -721,7 +721,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         returnKeyType: "done",
         clearable: true,
       };
-      const TextInput = guildTemplate(6098).TextInput;
+      const TextInput = guildTemplate(6105).TextInput;
       intl2 = guildTemplate(1126).intl;
       name1 = undefined;
       if (errors != null) {
@@ -734,7 +734,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-muted",
         children: intl3.format(guildTemplate(1126).t["2bprXx"], obj8),
       };
-      const Text2 = tmp2(4886).Text;
+      const Text2 = tmp2(4892).Text;
       intl3 = tmp2(1126).intl;
       obj8 = { guidelinesURL: constants.GUIDELINES };
       items1[4] = closure_11(Text2, obj7);
@@ -747,7 +747,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         disabled: guildTemplate.state === GuildTemplateStates.ACCEPTING,
         grow: true,
       };
-      Button = tmp2(5594).Button;
+      Button = tmp2(5601).Button;
       intl4 = tmp2(1126).intl;
       items1[5] = closure_11(closure_4, obj9);
       const obj11 = { style: tmp.divider, outer: true };
@@ -758,7 +758,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl5.string(guildTemplate(1126).t.OGiMXJ),
       };
-      const Text3 = tmp2(4886).Text;
+      const Text3 = tmp2(4892).Text;
       intl5 = tmp2(1126).intl;
       items1[7] = closure_11(Text3, obj12);
       const obj13 = {
@@ -766,7 +766,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: intl6.string(guildTemplate(1126).t.Ztwyoz),
       };
-      const Text4 = tmp2(4886).Text;
+      const Text4 = tmp2(4892).Text;
       intl6 = tmp2(1126).intl;
       items1[8] = closure_11(Text4, obj13);
       const obj14 = { channels: guildTemplate.serializedSourceGuild.channels };
@@ -777,7 +777,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         color: "interactive-text-default",
         children: items4,
       };
-      const Text5 = tmp2(4886).Text;
+      const Text5 = tmp2(4892).Text;
       const obj16 = { style: items2, children: items3 };
       items2 = [tmp.protip, typeConsolidationTextTransform];
       const LegacyText = tmp2(1188).LegacyText;
@@ -796,7 +796,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: intl9.string(guildTemplate(1126).t.mQ0H1p),
         };
-        const Text6 = tmp2(4886).Text;
+        const Text6 = tmp2(4892).Text;
         intl9 = tmp2(1126).intl;
         items5 = [closure_11(Text6, obj18), ,];
         const obj19 = {
@@ -804,7 +804,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-default",
           children: intl10.string(guildTemplate(1126).t.jOPEYC),
         };
-        const Text7 = tmp2(4886).Text;
+        const Text7 = tmp2(4892).Text;
         intl10 = tmp2(1126).intl;
         items5[1] = closure_11(Text7, obj19);
         const obj20 = { roles: found };

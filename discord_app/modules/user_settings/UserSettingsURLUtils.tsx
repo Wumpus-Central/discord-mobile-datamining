@@ -2,7 +2,7 @@
 import UserSettingsConstants from "UserSettingsConstants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettingsKeys from "UserSettingsKeys.tsx";
-import _mod5635 from "../../../_runtime/metro/05635__.js";
+import _mod5642 from "../../../_runtime/metro/05642__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -190,8 +190,8 @@ export const parseSettingsUrl = function parseSettingsUrl(arg0) {
     tmp8 = tmp9;
   }
   const obj2 = { target: tmp8, path: joined, params: parse(search) };
-  parse = _mod5635.parse;
-  _mod5635;
+  parse = _mod5642.parse;
+  _mod5642;
   if (search == null) {
     const _location = location;
     search = location.search;

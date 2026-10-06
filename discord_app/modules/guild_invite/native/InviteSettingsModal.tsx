@@ -185,7 +185,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmpResult3 = tmp(5590);
+        const tmpResult3 = tmp(5597);
         const unmountEffect = tmpResult3.useUnmountEffect(V);
         if (cResult[9] !== channel) {
           class G {
@@ -374,7 +374,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items1);
-      const tmp2Result2 = navigation(5590);
+      const tmp2Result2 = navigation(5597);
       const unmountEffect = tmp2Result2.useUnmountEffect(() => {
         const obj = channel(closure_2[20]);
         obj.wait(channel(closure_2[17]).resetSettings);
@@ -444,14 +444,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { roleIds };
         obj.updateSettings(obj2);
       }, []);
-      const Form = tmp2(8895).Form;
+      const Form = tmp2(8924).Form;
       ({
         style: tmp.formContent,
         channel: first,
         guild,
         maxAge: settings.maxAge,
         maxUses: settings.maxUses,
-        maxUsesOptions: channel(9483).getMaxUsesOptions,
+        maxUsesOptions: channel(9496).getMaxUsesOptions,
         temporary: null,
         flags: null,
         roleIds: null,
@@ -461,7 +461,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: callback4,
         onChangeRoleIds: callback5,
       });
-      channel(17991);
+      channel(18037);
       ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
       return <Form contentContainerStyle={tmp.formContainer}>{null}</Form>;
     };

@@ -9,6 +9,6 @@ const GUILD_POWERUPS_BOTTOM_SHEET_KEY_export = "GUILD_POWERUPS_BOTTOM_SHEET_KEY"
 
 export default function openGuildPowerupsBottomSheet(arg0) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(12175, dependencyMap.paths), GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
+  obj.openLazy(asyncRequire(12190, dependencyMap.paths), GUILD_POWERUPS_BOTTOM_SHEET_KEY, arg0);
 }
 export { GUILD_POWERUPS_BOTTOM_SHEET_KEY_export as GUILD_POWERUPS_BOTTOM_SHEET_KEY };

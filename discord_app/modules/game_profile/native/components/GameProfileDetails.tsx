@@ -178,7 +178,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let joined;
           if (game != null) {
             const genres1 = game.genres;
-            const mapped = genres1.map(trackAction(8361).getGenreText);
+            const mapped = genres1.map(trackAction(8394).getGenreText);
             joined = mapped.join(", ");
           }
           let genres2;
@@ -364,8 +364,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const _Date = Date;
               const self = this;
               const self2 = this;
-              const dateFormat = arr(4552).dateFormat;
-              arr(4552);
+              const dateFormat = arr(4558).dateFormat;
+              arr(4558);
               const date = new Date(firstReleaseDate);
               const dateFormatResult = dateFormat(date, "LL");
               cResult[32] = firstReleaseDate;
@@ -732,8 +732,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             children: tmp78,
           };
           cResult[57] = tmp4.headerText;
-          cResult[58] = closure_8(trackAction(4886).Text, obj10);
-          const tmp81 = closure_8(trackAction(4886).Text, obj10);
+          cResult[58] = closure_8(trackAction(4892).Text, obj10);
+          const tmp81 = closure_8(trackAction(4892).Text, obj10);
         } else {
           class Z {
             constructor(icon) {

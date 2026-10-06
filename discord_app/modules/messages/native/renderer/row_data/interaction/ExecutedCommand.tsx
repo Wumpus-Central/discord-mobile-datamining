@@ -5,7 +5,7 @@ import Constants from "../../../../../../Constants.tsx";
 import intl4 from "../../../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
 import utils_AvatarUtils from "../../../../../../utils/native/AvatarUtils.tsx";
-import Server from "../../../../../../flow/Server.tsx";
+import InteractionTypes from "../../../../../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import useMessageAuthor from "../../../../useMessageAuthor.tsx";
 import ApplicationCommandUtils from "../../../../../application_commands/ApplicationCommandUtils.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
@@ -93,7 +93,7 @@ export const createExecutedCommand = function createExecutedCommand(
       type = initialInteractionMetadata.type;
     }
     let tmp25 = null;
-    if (type === Server.InteractionTypes.APPLICATION_COMMAND) {
+    if (type === InteractionTypes.InteractionTypes.APPLICATION_COMMAND) {
       tmp25 = null;
       if (null != initialInteractionMetadata.target_user) {
         const self = this;

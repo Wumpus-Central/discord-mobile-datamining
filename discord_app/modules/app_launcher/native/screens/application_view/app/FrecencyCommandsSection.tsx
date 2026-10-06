@@ -281,7 +281,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let obj = { style: tmp.container, children: items1 };
         const obj2 = { style: tmp.header, children: arr(Heading, obj3) };
         obj3 = { variant: "text-md/medium", color: "text-default", children: intl.string(context(1126).t.acSE0h) };
-        Heading = context(4886).Heading;
+        Heading = context(4892).Heading;
         intl = context(1126).intl;
         items1 = [
           arr(View, obj2),

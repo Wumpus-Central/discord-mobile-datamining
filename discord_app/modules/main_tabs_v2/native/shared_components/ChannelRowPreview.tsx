@@ -780,7 +780,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         gifAutoPlay = false;
       }
       ({ textColor, gradientStyles, gradientColors } = arg0);
-      const tmp = gifAutoPlay(4791)();
+      const tmp = gifAutoPlay(4797)();
       let obj = createStyles;
       let obj2 = { seeMoreLabelColor: gifAutoPlay(587).colors.TEXT_DEFAULT };
       dependencyMap = obj.createNativeStyleProperties(obj2)(tmp);
@@ -851,7 +851,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         gradientStyles,
         gradientColors,
       };
-      return closure_8(gifAutoPlay(8303), obj4);
+      return closure_8(gifAutoPlay(8336), obj4);
     };
 let closure_13 = tmp5;
 const memo2 = react.memo;

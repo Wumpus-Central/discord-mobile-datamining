@@ -133,9 +133,9 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       searchContext = searchContext.searchContext;
       const guildId = searchContext.guildId;
       let tmp4 = closure_21();
-      const analyticsLocations = guildId(6657)().analyticsLocations;
+      const analyticsLocations = guildId(6664)().analyticsLocations;
       if (cResult[0] !== searchContext) {
-        const tmpResult = searchContext(11968);
+        const tmpResult = searchContext(11987);
         const searchContextId = tmpResult.getSearchContextId(searchContext);
         cResult[0] = searchContext;
         cResult[1] = searchContextId;
@@ -216,7 +216,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult8 = searchContext(16816);
+      const tmpResult8 = searchContext(16837);
       const fullscreenPlaceholderCount = tmpResult8.useFullscreenPlaceholderCount(tmp16);
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
         class R {
@@ -435,8 +435,8 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores4;
       let tmp3 = dependencyMap;
       const tmp = closure_21();
-      const analyticsLocations = guildId(6657)().analyticsLocations;
-      let obj = searchContext(11968);
+      const analyticsLocations = guildId(6664)().analyticsLocations;
+      let obj = searchContext(11987);
       dependencyMap = obj.getSearchContextId(searchContext);
       let obj2 = searchContext(573);
       let items = [SearchMemberTabStore];
@@ -446,7 +446,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       let obj3 = searchContext(573);
       const items1 = [stateFromStores4];
       const stateFromStores1 = obj3.useStateFromStores(items1, () => stateFromStores4.getChannelId());
-      let obj4 = searchContext(16816);
+      let obj4 = searchContext(16837);
       const obj5 = { placeholderHeight, numColumns: 1 };
       const fullscreenPlaceholderCount = obj4.useFullscreenPlaceholderCount(obj5);
       const items2 = [callback];
@@ -614,16 +614,16 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return items;
       }, items11);
-      const obj10 = searchContext(16872);
+      const obj10 = searchContext(16897);
       const contentContainerStyles = obj10.useContentContainerStyles();
-      const obj11 = searchContext(16870);
+      const obj11 = searchContext(16895);
       const messageTabCountsErrorText = obj11.useMessageTabCountsErrorText({ searchContext });
       if (null != messageTabCountsErrorText) {
-        tmp20 = jsx(tmp2(16808), { text: messageTabCountsErrorText });
+        tmp20 = jsx(tmp2(16829), { text: messageTabCountsErrorText });
       } else {
         if (stateFromStores4) {
           if (null != stateFromStores3) {
-            tmp20 = jsx(tmp2(11210), {
+            tmp20 = jsx(tmp2(11223), {
               onUserPress: callback1,
               onUserLongPress: callback2,
               channelId: stateFromStores3,
@@ -635,7 +635,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
             });
           }
         }
-        tmp20 = jsx(tmp2(16820), { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo });
+        tmp20 = jsx(tmp2(16841), { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo });
       }
       return tmp20;
     };
@@ -720,7 +720,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       if (!stateFromStores) {
         let tmp17;
         if (stateFromStores1) {
-          channelId(16873);
+          channelId(16898);
           tmp17 = (
             <tmp16
               channelId={channelId}
@@ -774,7 +774,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             items2,
           )
         ) {
-          channelId(16873);
+          channelId(16898);
           tmp7 = (
             <tmp6
               channelId={channelId}
@@ -806,8 +806,8 @@ const memoResult = react.memo(
         const cResult = obj.c(34);
         searchContext = searchContext.searchContext;
         const tmp4 = closure_21();
-        const tmp6 = stateFromStores(6657);
-        const analyticsLocations = tmp6(stateFromStores(6681).SEARCH_MEMBERS).analyticsLocations;
+        const tmp6 = stateFromStores(6664);
+        const analyticsLocations = tmp6(stateFromStores(6688).SEARCH_MEMBERS).analyticsLocations;
         channelId = undefined;
         const tmp5 = stateFromStores;
         if (searchContext.type === constants4.CHANNEL) {
@@ -1016,7 +1016,7 @@ const memoResult = react.memo(
                 return tmp2;
               }
             }
-            tmp24 = jsx(tmp5(16875), {
+            tmp24 = jsx(tmp5(16900), {
               location: "GroupDMDetailsMembers",
               memberCount: stateFromStores1,
               recipientLimit: stateFromStores2,
@@ -1048,8 +1048,8 @@ const memoResult = react.memo(
         let stateFromStores;
         const tmp = closure_21();
         let tmp2 = stateFromStores;
-        const tmp4 = stateFromStores(6657);
-        const analyticsLocations = tmp4(stateFromStores(6681).SEARCH_MEMBERS).analyticsLocations;
+        const tmp4 = stateFromStores(6664);
+        const analyticsLocations = tmp4(stateFromStores(6688).SEARCH_MEMBERS).analyticsLocations;
         let channelId;
         if (searchContext.type === constants4.CHANNEL) {
           channelId = searchContext.channelId;
@@ -1106,7 +1106,7 @@ const memoResult = react.memo(
         [][0] = stateFromStores;
         const type = searchContext.type;
         if (constants4.CHANNEL === type) {
-          const AnalyticsLocationProvider2 = tmp7(6657).AnalyticsLocationProvider;
+          const AnalyticsLocationProvider2 = tmp7(6664).AnalyticsLocationProvider;
           ({
             channelId: searchContext.channelId,
             disableStickySections: true,
@@ -1114,10 +1114,10 @@ const memoResult = react.memo(
             onUserPress: channelId(1881).dismissGlobalKeyboard,
             listHeaderContent: tmp19Result,
           });
-          tmp2(11812);
+          tmp2(11826);
           tmp19Result = null;
           if (stateFromStores) {
-            tmp19Result = jsx(tmp2(16875), {
+            tmp19Result = jsx(tmp2(16900), {
               location: "GroupDMDetailsMembers",
               memberCount: stateFromStores1,
               recipientLimit: tmp11,
@@ -1139,7 +1139,7 @@ const memoResult = react.memo(
               throw error;
             }
           }
-          const AnalyticsLocationProvider = tmp7(6657).AnalyticsLocationProvider;
+          const AnalyticsLocationProvider = tmp7(6664).AnalyticsLocationProvider;
           return <AnalyticsLocationProvider value={analyticsLocations}>{null}</AnalyticsLocationProvider>;
         }
       },

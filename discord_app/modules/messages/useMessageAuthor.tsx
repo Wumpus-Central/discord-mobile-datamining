@@ -112,8 +112,8 @@ function useNullableMessageAuthor(message) {
       const tmp27Result7 = get_initialized;
       let stateFromStores2 = tmp27Result7.useStateFromStores(tmp42, tmp44, tmp45);
       let bot;
-      const useName2 = stateFromStores6(4722).useName;
-      stateFromStores6(4722);
+      const useName2 = stateFromStores6(4728).useName;
+      stateFromStores6(4728);
       const tmp47 = stateFromStores6;
       if (message != null) {
         bot = message.author.bot;
@@ -220,7 +220,7 @@ function useNullableMessageAuthor(message) {
                 return guild.getGuild(guild_id);
               }
             }
-            const tmp66 = tmp47(5305)(tmp65);
+            const tmp66 = tmp47(5312)(tmp65);
             if (null != message) {
               class I {
                 constructor() {
@@ -383,8 +383,8 @@ function useNullableMessageAuthor(message) {
         return role;
       }
     }
-    const useName = stateFromStores6(4722).useName;
-    stateFromStores6(4722);
+    const useName = stateFromStores6(4728).useName;
+    stateFromStores6(4728);
     if (message != null) {
       class I {
         constructor() {

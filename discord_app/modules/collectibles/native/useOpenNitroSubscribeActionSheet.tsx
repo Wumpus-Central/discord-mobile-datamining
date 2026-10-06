@@ -19,7 +19,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (undefined === arg0) {
         COLLECTIBLES_SHOP = constants2.COLLECTIBLES_SHOP;
       }
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         let tmp4;
         if (cResult[1] === COLLECTIBLES_SHOP) {
@@ -44,7 +44,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         COLLECTIBLES_SHOP = constants2.COLLECTIBLES_SHOP;
       }
       let analyticsLocations;
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       const items = [analyticsLocations, COLLECTIBLES_SHOP];
       return react.useCallback(() => {
         let obj2;

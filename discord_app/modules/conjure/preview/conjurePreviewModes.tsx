@@ -97,3 +97,6 @@ export const requiresPermissionReview = function requiresPermissionReview(arg0) 
   }
   return tmp3;
 };
+export function permissionReviewBlocksMode(activeMode, result) {
+  return result && "bot" === activeMode;
+}

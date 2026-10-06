@@ -26,7 +26,7 @@ let closure_12;
 let map1;
 let tmp11;
 let unpackModuleId;
-const useMountEffectDefault = tmp11(5590);
+const useMountEffectDefault = tmp11(5597);
 let closure_3 = ["guildId", "userId", "onCancel"];
 const View = react_native.View;
 ({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: c9, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: c10 } =
@@ -209,8 +209,8 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_14();
       dependencyMap = tmp2;
       const tmp3 = userId;
-      closure_3 = _slicedToArray(userId(7636)(userId, guildId), 1)[0];
-      userId(5590)(() => {
+      closure_3 = _slicedToArray(userId(7647)(userId, guildId), 1)[0];
+      userId(5597)(() => {
         obj = AnalyticsUtilsDefault;
         const obj2 = { type, guild_id: guildId, other_user_id: userId };
         obj.track(unpackModuleId.OPEN_MODAL, obj2);
@@ -227,7 +227,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         },
         children: closure_13(View, obj2),
       };
-      const tmp7 = userId(5783);
+      const tmp7 = userId(5790);
       const merged1 = Object.assign(merged);
       intl = guildId(1126).intl;
       intl2 = guildId(1126).intl;
@@ -238,12 +238,12 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       intl3 = tmp9(1126).intl;
       obj2 = { style: tmp2.body, children: items };
       let obj3 = { style: tmp2.description, variant: "text-sm/medium", children: format(prop, obj4) };
-      const Text = tmp9(4886).Text;
+      const Text = tmp9(4892).Text;
       const intl4 = tmp9(1126).intl;
       format = intl4.format;
       prop = tmp9(1126).t["t+abNU"];
       const user = UserStore.getUser(userId);
-      const tmp3Result = tmp3(5042);
+      const tmp3Result = tmp3(5048);
       let str = tmp3Result.getName(guildId, null, user);
       if (str == null) {
         str = "";
@@ -266,7 +266,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let obj5 = { style: items1, variant: "text-sm/medium", children: intl5.format(tmp9(1126).t.KtENkK, obj6) };
       items1 = [,];
       ({ cta: arr2[0], description: arr2[1] } = tmp2);
-      const Text2 = tmp9(4886).Text;
+      const Text2 = tmp9(4892).Text;
       intl5 = tmp9(1126).intl;
       obj6 = { link };
       items[1] = closure_12(Text2, obj5);

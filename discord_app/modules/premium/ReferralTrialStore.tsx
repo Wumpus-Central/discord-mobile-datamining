@@ -134,7 +134,7 @@ let obj = {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      let obj = userTrialOfferId(6962);
+      let obj = userTrialOfferId(6975);
       const referralsRemaining = obj.fetchReferralsRemaining();
     }
     if (!set1.has(userTrialOfferId)) {

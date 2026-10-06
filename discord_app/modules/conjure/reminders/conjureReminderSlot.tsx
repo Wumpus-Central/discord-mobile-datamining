@@ -6,6 +6,7 @@ import conjurePublishCard from "../publish/conjurePublishCard.tsx";
 import conjureIdeasOffer from "conjureIdeasOffer.tsx";
 import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react_mod from "../../../../_runtime/00019_react.js";
+import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -13,9 +14,9 @@ import size from "../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require, dependencyMap, importDefault, set;
 
-let hasOwnProperty;
+let metroImportDefault;
 let metroRequire;
-const f126052 = (item) => {
+const f126209 = (item) => {
   const obj = { leaving: true };
   const merged = Object.assign(item);
   return obj;
@@ -66,30 +67,32 @@ function selectConjureReminder(arr, unseen) {
 function nextReminderClockState(projectId, projectId2, now) {
   let bound;
   let bound2;
-  let tmp61;
+  let lastActivityAt;
+  let tmp66;
   if (projectId.projectId !== projectId2.projectId) {
-    const tmp54 = now();
+    const tmp59 = now();
     const obj3 = {
-      now: tmp54,
-      visitStartedAt: tmp54,
+      now: tmp59,
+      visitStartedAt: tmp59,
       draftTyped: false,
       lastActivityAt: null,
       lastMessageAt: bound,
       seenAt: null,
       unseen: false,
-      hiddenAt: tmp61,
+      hiddenAt: tmp66,
       outdatedShown: false,
       outdatedBackoff: 0,
+      outdatedUpdating: false,
     };
     const merged = Object.assign(projectId2);
     bound = null;
     if (null != projectId2.messageAt) {
       const _Math3 = Math;
-      bound = Math.min(projectId2.messageAt, tmp54);
+      bound = Math.min(projectId2.messageAt, tmp59);
     }
-    tmp61 = null;
+    tmp66 = null;
     if (!projectId2.visible) {
-      tmp61 = tmp54;
+      tmp66 = tmp59;
     }
     return obj3;
   } else {
@@ -109,30 +112,44 @@ function nextReminderClockState(projectId, projectId2, now) {
     const merged1 = Object.assign(projectId);
     let tmp5 = obj;
     if (projectId.draftHasText !== projectId2.draftHasText) {
-      const obj4 = { lastActivityAt: tmp };
+      const obj4 = { lastActivityAt: tmp, outdatedUpdating: projectId2.publishing && obj.outdatedUpdating };
       const merged2 = Object.assign(obj);
       ({ draftHasText: obj2.draftHasText, draftHasText: obj2.draftTyped } = projectId2);
       tmp5 = obj4;
     }
     let tmp9 = tmp5;
     if (projectId.publishing !== projectId2.publishing) {
-      const obj5 = { publishing: projectId2.publishing, lastActivityAt: tmp, outdatedShown: false, outdatedBackoff: 0 };
+      let outdatedUpdating = tmp5.outdatedUpdating;
+      if (outdatedUpdating) {
+        outdatedUpdating = projectId2.publishing || projectId2.drift;
+      }
+      const obj5 = {
+        publishing: projectId2.publishing,
+        lastActivityAt,
+        outdatedShown: false,
+        outdatedBackoff: 0,
+        outdatedUpdating: projectId2.publishing && tmp5.outdatedUpdating,
+      };
       const merged3 = Object.assign(tmp5);
+      lastActivityAt = tmp;
+      if (outdatedUpdating) {
+        lastActivityAt = tmp5.lastActivityAt;
+      }
       tmp9 = obj5;
     }
-    let tmp13 = tmp9;
+    let tmp14 = tmp9;
     if (projectId.drift !== projectId2.drift) {
       const obj6 = { drift: projectId2.drift };
       const merged4 = Object.assign(tmp9);
-      let tmp17 = obj6;
+      let tmp18 = obj6;
       if (!projectId2.drift) {
         const obj7 = { outdatedShown: false, outdatedBackoff: 0 };
         const merged5 = Object.assign(obj6);
-        tmp17 = obj7;
+        tmp18 = obj7;
       }
-      tmp13 = tmp17;
+      tmp14 = tmp18;
     }
-    let tmp21 = tmp13;
+    let tmp22 = tmp14;
     if (projectId.messageAt !== projectId2.messageAt) {
       let bound1 = null;
       if (null != projectId2.messageAt) {
@@ -140,77 +157,95 @@ function nextReminderClockState(projectId, projectId2, now) {
         bound1 = Math.min(projectId2.messageAt, tmp);
       }
       const obj8 = { messageAt: projectId2.messageAt, lastMessageAt: bound1 };
-      const merged6 = Object.assign(tmp13);
-      let tmp27 = obj8;
+      const merged6 = Object.assign(tmp14);
+      let tmp28 = obj8;
       if (obj8.outdatedShown) {
-        tmp27 = obj8;
+        tmp28 = obj8;
         if (!obj8.publishing) {
           const _Math2 = Math;
           const obj9 = { outdatedShown: false, outdatedBackoff: bound2 };
           bound2 = Math.min(obj8.outdatedBackoff + 1, items.length - 1);
           const merged7 = Object.assign(obj8);
-          tmp27 = obj9;
+          tmp28 = obj9;
         }
       }
-      tmp21 = tmp27;
-      const tmp34 = projectId2.visible || null == projectId.messageAt;
-      if (!tmp34) {
-        const obj10 = { unseen: true };
-        const merged8 = Object.assign(tmp27);
-        tmp21 = obj10;
+      let tmp35 = tmp28;
+      if (!tmp28.publishing) {
+        const obj10 = { outdatedUpdating: false };
+        const merged8 = Object.assign(tmp28);
+        tmp35 = obj10;
+      }
+      tmp22 = tmp35;
+      const tmp39 = projectId2.visible || null == projectId.messageAt;
+      if (!tmp39) {
+        const obj11 = { unseen: true };
+        const merged9 = Object.assign(tmp35);
+        tmp22 = obj11;
       }
     }
-    let tmp38 = tmp21;
+    let tmp43 = tmp22;
     if (projectId.visible !== projectId2.visible) {
-      let obj27;
-      const obj11 = { visible: projectId2.visible };
-      const merged9 = Object.assign(tmp21);
+      let obj29;
+      const obj12 = { visible: projectId2.visible };
+      const merged10 = Object.assign(tmp22);
       if (projectId2.visible) {
-        let tmp44;
+        let tmp49;
         let hiddenAt = projectId.hiddenAt;
         if (hiddenAt == null) {
           hiddenAt = tmp;
         }
-        if (tmp - hiddenAt >= c8) {
-          const obj12 = { visitStartedAt: tmp };
-          const merged10 = Object.assign(obj11);
-          tmp44 = obj12;
+        if (tmp - hiddenAt >= c9) {
+          const obj13 = { visitStartedAt: tmp };
+          const merged11 = Object.assign(obj12);
+          tmp49 = obj13;
         } else {
-          tmp44 = obj11;
-          if (obj11.unseen) {
-            const obj13 = { seenAt: tmp };
-            const merged11 = Object.assign(obj11);
-            tmp44 = obj13;
+          tmp49 = obj12;
+          if (obj12.unseen) {
+            const obj14 = { seenAt: tmp };
+            const merged12 = Object.assign(obj12);
+            tmp49 = obj14;
           }
         }
-        const obj14 = { hiddenAt: null, unseen: false };
-        const merged12 = Object.assign(tmp44);
-        obj27 = obj14;
+        const obj15 = { hiddenAt: null, unseen: false };
+        const merged13 = Object.assign(tmp49);
+        obj29 = obj15;
       } else {
-        obj27 = { hiddenAt: tmp, unseen: false };
-        const merged13 = Object.assign(obj11);
+        obj29 = { hiddenAt: tmp, unseen: false };
+        const merged14 = Object.assign(obj12);
       }
-      tmp38 = obj27;
+      tmp43 = obj29;
     }
-    return tmp38;
+    return tmp43;
   }
 }
 let _slicedToArray = _slicedToArray_mod;
 let react = react_mod;
-({ isStrandedSegment: hasOwnProperty, turnSettled: metroRequire } = ConjureChatStore);
+({ isStrandedSegment: metroRequire, turnSettled: metroImportDefault } = ConjureChatStore);
 let items = [60000, 180000, 600000];
-let c8 = 600000;
+let c9 = 600000;
 let obj = {
   key: "outdated",
   priority: 2,
   idleDelayMs: 60000,
   backoffDelaysMs: items,
   clock: "persistent",
-  eligible(draftTyped) {
-    let showsOutdatedNoticeResult = !draftTyped.draftTyped;
-    if (showsOutdatedNoticeResult) {
-      const obj = conjurePublishCard;
-      showsOutdatedNoticeResult = obj.showsOutdatedNotice(tmp);
+  eligible(outdatedUpdating) {
+    let draftTyped;
+    let publish;
+    let showsOutdatedNoticeResult;
+    ({ publish, draftTyped } = outdatedUpdating);
+    if (outdatedUpdating.outdatedUpdating) {
+      let isUpdate;
+      if (publish != null) {
+        isUpdate = publish.isUpdate;
+      }
+      showsOutdatedNoticeResult = true === isUpdate;
+    } else {
+      showsOutdatedNoticeResult = !draftTyped;
+      if (showsOutdatedNoticeResult) {
+        const obj = conjurePublishCard;
+        showsOutdatedNoticeResult = obj.showsOutdatedNotice(publish);
+      }
     }
     return showsOutdatedNoticeResult;
   },
@@ -255,28 +290,35 @@ const map = new Map();
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arr, arg2) => {
+      let closure_0;
       let closure_2;
       let closure_4;
       let messageAt;
       let nextDueAt;
       let outdatedBackoff;
       let shown;
-      let tmp30;
-      let tmp31;
-      let tmp46;
-      const f126054 = (backoffDelaysMs) => {
-        let idleDelayMs;
-        const obj = { idleDelayMs, eligible: null != react && backoffDelaysMs.eligible(tmp4) };
-        const merged = Object.assign(backoffDelaysMs);
-        backoffDelaysMs = backoffDelaysMs.backoffDelaysMs;
-        idleDelayMs = undefined;
-        if (backoffDelaysMs != null) {
-          idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
+      let tmp32;
+      let tmp33;
+      let tmp45;
+      let tmp50;
+      const f126211 = (key) => {
+        let num;
+        const obj = { idleDelayMs: num, eligible: null != react && key.eligible(tmp6) };
+        const merged = Object.assign(key);
+        if ("outdated" !== key.key) {
+          const backoffDelaysMs = key.backoffDelaysMs;
+          let idleDelayMs;
+          if (backoffDelaysMs != null) {
+            idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
+          }
+          if (idleDelayMs == null) {
+            idleDelayMs = key.idleDelayMs;
+          }
+          num = idleDelayMs;
+        } else {
+          num = 0;
         }
-        if (idleDelayMs == null) {
-          idleDelayMs = backoffDelaysMs.idleDelayMs;
-        }
-        null != react && backoffDelaysMs.eligible(tmp4);
+        null != react && key.eligible(tmp6);
         return obj;
       };
       _require = arg0;
@@ -301,11 +343,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               break;
             } else {
               tmp5 = tmp6;
-              if (closure_6(tmp6)) {
+              if (closure_7(tmp6)) {
                 break;
               } else {
                 tmp5 = null;
-                if (!nextDueAt(arr, diff)) {
+                if (!closure_6(arr, diff)) {
                   break;
                 }
               }
@@ -348,13 +390,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   if (cResult[12] === tmp16) {
                     if (cResult[13] === tmp17) {
                       if (cResult[14] === tmp18) {
-                        let tmp26;
+                        let tmp28;
                         if (cResult[15] === tmp3) {
-                          tmp26 = cResult[16];
+                          tmp28 = cResult[16];
                         }
-                        importDefault = tmp26;
-                        if (cResult[17] !== tmp26) {
-                          class R {
+                        importDefault = tmp28;
+                        if (cResult[17] !== tmp28) {
+                          class T {
                             constructor() {
                               let bound;
                               let tmp5;
@@ -370,6 +412,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 hiddenAt: tmp5,
                                 outdatedShown: false,
                                 outdatedBackoff: 0,
+                                outdatedUpdating: false,
                               };
                               const merged = Object.assign(messageAt);
                               bound = null;
@@ -384,10 +427,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               return obj;
                             }
                           }
-                          cResult[17] = tmp26;
-                          cResult[18] = R;
+                          cResult[17] = tmp28;
+                          cResult[18] = T;
                         } else {
-                          class R {
+                          class T {
                             constructor() {
                               let bound;
                               let tmp5;
@@ -403,6 +446,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 hiddenAt: tmp5,
                                 outdatedShown: false,
                                 outdatedBackoff: 0,
+                                outdatedUpdating: false,
                               };
                               const merged = Object.assign(messageAt);
                               bound = null;
@@ -418,16 +462,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                         }
-                        [tmp30, tmp31] = react.useState(R);
-                        dependencyMap = tmp31;
+                        [tmp32, tmp33] = react.useState(T);
+                        dependencyMap = tmp33;
                         let _Date = Date;
-                        _slicedToArray(react.useState(R), 2);
-                        const tmp34 = nextReminderClockState(tmp30, tmp26, Date.now);
-                        _slicedToArray = tmp34;
-                        let tmp35 = null;
-                        const obj3 = react;
+                        _slicedToArray(react.useState(T), 2);
+                        const tmp36 = nextReminderClockState(tmp32, tmp28, Date.now);
+                        _slicedToArray = tmp36;
+                        let tmp37 = null;
                         if (null != tmp5) {
-                          class R {
+                          class T {
                             constructor() {
                               let bound;
                               let tmp5;
@@ -443,6 +486,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 hiddenAt: tmp5,
                                 outdatedShown: false,
                                 outdatedBackoff: 0,
+                                outdatedUpdating: false,
                               };
                               const merged = Object.assign(messageAt);
                               bound = null;
@@ -457,8 +501,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               return obj;
                             }
                           }
-                          if (!tmp36) {
-                            class R {
+                          if (!tmp38) {
+                            class T {
                               constructor() {
                                 let bound;
                                 let tmp5;
@@ -474,6 +518,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   hiddenAt: tmp5,
                                   outdatedShown: false,
                                   outdatedBackoff: 0,
+                                  outdatedUpdating: false,
                                 };
                                 const merged = Object.assign(messageAt);
                                 bound = null;
@@ -488,8 +533,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 return obj;
                               }
                             }
-                            if (tmp37 != null) {
-                              class R {
+                            if (tmp39 != null) {
+                              class T {
                                 constructor() {
                                   let bound;
                                   let tmp5;
@@ -505,6 +550,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     hiddenAt: tmp5,
                                     outdatedShown: false,
                                     outdatedBackoff: 0,
+                                    outdatedUpdating: false,
                                   };
                                   const merged = Object.assign(messageAt);
                                   bound = null;
@@ -521,7 +567,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             if (undefined == null) {
-                              class R {
+                              class T {
                                 constructor() {
                                   let bound;
                                   let tmp5;
@@ -537,6 +583,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     hiddenAt: tmp5,
                                     outdatedShown: false,
                                     outdatedBackoff: 0,
+                                    outdatedUpdating: false,
                                   };
                                   const merged = Object.assign(messageAt);
                                   bound = null;
@@ -553,9 +600,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                           }
-                          tmp35 = null;
-                          if (!tmp36) {
-                            class R {
+                          tmp37 = null;
+                          if (!tmp38) {
+                            class T {
                               constructor() {
                                 let bound;
                                 let tmp5;
@@ -571,6 +618,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   hiddenAt: tmp5,
                                   outdatedShown: false,
                                   outdatedBackoff: 0,
+                                  outdatedUpdating: false,
                                 };
                                 const merged = Object.assign(messageAt);
                                 bound = null;
@@ -585,18 +633,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 return obj;
                               }
                             }
-                            tmp39[0] = tmp5;
-                            tmp39[1] = tmp2;
-                            tmp39[2] = arg2;
-                            tmp39[3] = tmp34.draftTyped && arg2;
-                            tmp35 = tmp39;
+                            tmp41[0] = tmp5;
+                            tmp41[1] = tmp2;
+                            tmp41[2] = arg2;
+                            tmp41[3] = tmp36.draftTyped && arg2;
+                            tmp41[4] = tmp36.outdatedUpdating;
+                            tmp37 = tmp41;
                           }
                         }
-                        react = tmp35;
-                        ({ shown, nextDueAt } = selectConjureReminder(items1.map(f126054), tmp34));
-                        selectConjureReminder(items1.map(f126054), tmp34);
+                        react = tmp37;
+                        ({ shown, nextDueAt } = selectConjureReminder(items1.map(f126211), tmp36));
+                        selectConjureReminder(items1.map(f126211), tmp36);
                         if ("outdated" === shown) {
-                          class R {
+                          class T {
                             constructor() {
                               let bound;
                               let tmp5;
@@ -612,6 +661,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 hiddenAt: tmp5,
                                 outdatedShown: false,
                                 outdatedBackoff: 0,
+                                outdatedUpdating: false,
                               };
                               const merged = Object.assign(messageAt);
                               bound = null;
@@ -627,7 +677,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           if (cResult[19] === arg0) {
-                            class R {
+                            class T {
                               constructor() {
                                 let bound;
                                 let tmp5;
@@ -643,6 +693,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   hiddenAt: tmp5,
                                   outdatedShown: false,
                                   outdatedBackoff: 0,
+                                  outdatedUpdating: false,
                                 };
                                 const merged = Object.assign(messageAt);
                                 bound = null;
@@ -658,7 +709,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               }
                             }
                             if (cResult[22] !== arg0) {
-                              class R {
+                              class T {
                                 constructor() {
                                   let bound;
                                   let tmp5;
@@ -674,6 +725,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     hiddenAt: tmp5,
                                     outdatedShown: false,
                                     outdatedBackoff: 0,
+                                    outdatedUpdating: false,
                                   };
                                   const merged = Object.assign(messageAt);
                                   bound = null;
@@ -688,39 +740,30 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   return obj;
                                 }
                               }
-                              tmp45[0] = arg0;
-                              class D {
-                                constructor() {
-                                  function onActivity() {
-                                    closure_0 = Date.now();
-                                    closure_1_2((arg0) => {
-                                      const obj = { now: lastActivityAt, lastActivityAt };
-                                      const merged = Object.assign(arg0);
-                                      return obj;
-                                    });
-                                  }
-                                  set = map.get(onActivity);
-                                  const tmp = onActivity;
-                                  if (set == null) {
-                                    const _Set = Set;
-                                    const self = this;
-                                    const self2 = this;
-                                    set = new Set();
-                                  }
-                                  const result = map.set(tmp, set);
-                                  set.add(onActivity);
-                                  return () => {
-                                    set.delete(onActivity);
-                                    if (0 === set.size) {
-                                      map.delete(closure_0);
-                                    }
-                                  };
-                                }
-                              }
+                              tmp47[0] = arg0;
                               cResult[22] = arg0;
-                              cResult[23] = tmp45;
+                              class E {
+                                constructor() {
+                                  if (null != nextDueAt) {
+                                    const _setTimeout = setTimeout;
+                                    const _Math = Math;
+                                    const _Date = Date;
+                                    const timeout = setTimeout(
+                                      () =>
+                                        closure_1_2((arg0) => {
+                                          const obj = { now: Date.now() };
+                                          const merged = Object.assign(arg0);
+                                          return obj;
+                                        }),
+                                      Math.max(0, tmp - Date.now()),
+                                    );
+                                    return () => clearTimeout(closure_0);
+                                  }
+                                }
+                              }
+                              cResult[23] = tmp47;
                             } else {
-                              class R {
+                              class T {
                                 constructor() {
                                   let bound;
                                   let tmp5;
@@ -736,6 +779,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     hiddenAt: tmp5,
                                     outdatedShown: false,
                                     outdatedBackoff: 0,
+                                    outdatedUpdating: false,
                                   };
                                   const merged = Object.assign(messageAt);
                                   bound = null;
@@ -751,36 +795,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                               }
                             }
-                            class D {
-                              constructor() {
-                                function onActivity() {
-                                  closure_0 = Date.now();
-                                  closure_1_2((arg0) => {
-                                    const obj = { now: lastActivityAt, lastActivityAt };
-                                    const merged = Object.assign(arg0);
-                                    return obj;
-                                  });
-                                }
-                                set = map.get(onActivity);
-                                const tmp = onActivity;
-                                if (set == null) {
-                                  const _Set = Set;
-                                  const self = this;
-                                  const self2 = this;
-                                  set = new Set();
-                                }
-                                const result = map.set(tmp, set);
-                                set.add(onActivity);
-                                return () => {
-                                  set.delete(onActivity);
-                                  if (0 === set.size) {
-                                    map.delete(closure_0);
-                                  }
-                                };
-                              }
-                            }
+                            const effect = obj3.useEffect(tmp45, tmp47);
                             if (cResult[24] === nextDueAt) {
-                              class R {
+                              class T {
                                 constructor() {
                                   let bound;
                                   let tmp5;
@@ -796,6 +813,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     hiddenAt: tmp5,
                                     outdatedShown: false,
                                     outdatedBackoff: 0,
+                                    outdatedUpdating: false,
                                   };
                                   const merged = Object.assign(messageAt);
                                   bound = null;
@@ -810,8 +828,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                   return obj;
                                 }
                               }
-                              if (cResult[27] === tmp34.now) {
-                                class R {
+                              if (cResult[27] === tmp36.now) {
+                                class T {
                                   constructor() {
                                     let bound;
                                     let tmp5;
@@ -827,6 +845,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                       hiddenAt: tmp5,
                                       outdatedShown: false,
                                       outdatedBackoff: 0,
+                                      outdatedUpdating: false,
                                     };
                                     const merged = Object.assign(messageAt);
                                     bound = null;
@@ -841,126 +860,88 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                     return obj;
                                   }
                                 }
-                                const effect = obj3.useEffect(tmp46, tmp48);
-                                class D {
-                                  constructor() {
-                                    function onActivity() {
-                                      closure_0 = Date.now();
+                                const effect1 = obj3.useEffect(E, tmp50);
+                                return shown;
+                              }
+                              items = [nextDueAt];
+                              class E {
+                                constructor() {
+                                  if (null != nextDueAt) {
+                                    const _setTimeout = setTimeout;
+                                    const _Math = Math;
+                                    const _Date = Date;
+                                    const timeout = setTimeout(
+                                      () =>
+                                        closure_1_2((arg0) => {
+                                          const obj = { now: Date.now() };
+                                          const merged = Object.assign(arg0);
+                                          return obj;
+                                        }),
+                                      Math.max(0, tmp - Date.now()),
+                                    );
+                                    return () => clearTimeout(closure_0);
+                                  }
+                                }
+                              }
+                              cResult[27] = tmp36.now;
+                              cResult[28] = nextDueAt;
+                              cResult[29] = items;
+                              tmp50 = items;
+                            }
+                            class E {
+                              constructor() {
+                                if (null != nextDueAt) {
+                                  const _setTimeout = setTimeout;
+                                  const _Math = Math;
+                                  const _Date = Date;
+                                  const timeout = setTimeout(
+                                    () =>
                                       closure_1_2((arg0) => {
-                                        const obj = { now: lastActivityAt, lastActivityAt };
+                                        const obj = { now: Date.now() };
                                         const merged = Object.assign(arg0);
                                         return obj;
-                                      });
-                                    }
-                                    set = map.get(onActivity);
-                                    const tmp = onActivity;
-                                    if (set == null) {
-                                      const _Set = Set;
-                                      const self = this;
-                                      const self2 = this;
-                                      set = new Set();
-                                    }
-                                    const result = map.set(tmp, set);
-                                    set.add(onActivity);
-                                    return () => {
-                                      set.delete(onActivity);
-                                      if (0 === set.size) {
-                                        map.delete(closure_0);
-                                      }
-                                    };
-                                  }
+                                      }),
+                                    Math.max(0, tmp - Date.now()),
+                                  );
+                                  return () => clearTimeout(closure_0);
                                 }
                               }
-                              class D {
-                                constructor() {
-                                  function onActivity() {
-                                    closure_0 = Date.now();
-                                    closure_1_2((arg0) => {
-                                      const obj = { now: lastActivityAt, lastActivityAt };
-                                      const merged = Object.assign(arg0);
-                                      return obj;
-                                    });
-                                  }
-                                  set = map.get(onActivity);
-                                  const tmp = onActivity;
-                                  if (set == null) {
-                                    const _Set = Set;
-                                    const self = this;
-                                    const self2 = this;
-                                    set = new Set();
-                                  }
-                                  const result = map.set(tmp, set);
-                                  set.add(onActivity);
-                                  return () => {
-                                    set.delete(onActivity);
-                                    if (0 === set.size) {
-                                      map.delete(closure_0);
-                                    }
-                                  };
-                                }
-                              }
-                              tmp48[0] = nextDueAt;
-                              tmp48[1] = tmp34.now;
-                              cResult[27] = tmp34.now;
-                              cResult[28] = nextDueAt;
-                              cResult[29] = tmp48;
                             }
-                            const fn = function x() {
-                              if (null != nextDueAt) {
-                                const _setTimeout = setTimeout;
-                                const _Math = Math;
-                                const _Date = Date;
-                                const timeout = setTimeout(
-                                  () =>
-                                    closure_1_2((arg0) => {
-                                      const obj = { now: Date.now() };
-                                      const merged = Object.assign(arg0);
-                                      return obj;
-                                    }),
-                                  Math.max(0, tmp - Date.now()),
-                                );
-                                return () => clearTimeout(closure_0);
+                            cResult[24] = nextDueAt;
+                            cResult[25] = tmp33;
+                            cResult[26] = E;
+                          }
+                          const fn = function k() {
+                            function onActivity() {
+                              closure_1_2((arg0) => {
+                                const obj = { outdatedUpdating: true };
+                                const merged = Object.assign(arg0);
+                                return obj;
+                              });
+                            }
+                            set = map.get(onActivity);
+                            const tmp = onActivity;
+                            if (set == null) {
+                              const _Set = Set;
+                              const self = this;
+                              const self2 = this;
+                              set = new Set();
+                            }
+                            const result = map.set(tmp, set);
+                            set.add(onActivity);
+                            return () => {
+                              set.delete(onActivity);
+                              if (0 === set.size) {
+                                map.delete(closure_0);
                               }
                             };
-                            cResult[24] = nextDueAt;
-                            cResult[25] = tmp31;
-                            cResult[26] = fn;
-                            tmp46 = fn;
-                          }
-                          class D {
-                            constructor() {
-                              function onActivity() {
-                                closure_0 = Date.now();
-                                closure_1_2((arg0) => {
-                                  const obj = { now: lastActivityAt, lastActivityAt };
-                                  const merged = Object.assign(arg0);
-                                  return obj;
-                                });
-                              }
-                              set = map.get(onActivity);
-                              const tmp = onActivity;
-                              if (set == null) {
-                                const _Set = Set;
-                                const self = this;
-                                const self2 = this;
-                                set = new Set();
-                              }
-                              const result = map.set(tmp, set);
-                              set.add(onActivity);
-                              return () => {
-                                set.delete(onActivity);
-                                if (0 === set.size) {
-                                  map.delete(closure_0);
-                                }
-                              };
-                            }
-                          }
-                          cResult[19] = arg0;
-                          cResult[20] = tmp31;
-                          cResult[21] = D;
+                          };
+                          cResult[20] = tmp33;
+                          cResult[21] = fn;
+                          tmp45 = fn;
                         }
-                        if (tmp34 !== tmp30) {
-                          class R {
+                        if (tmp36 !== tmp32) {
+                          class T {
                             constructor() {
                               let bound;
                               let tmp5;
@@ -976,6 +957,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 hiddenAt: tmp5,
                                 outdatedShown: false,
                                 outdatedBackoff: 0,
+                                outdatedUpdating: false,
                               };
                               const merged = Object.assign(messageAt);
                               bound = null;
@@ -1004,6 +986,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 messageAt: tmp18,
                 visible: tmp3,
               };
+              let num = 10;
               cResult[10] = tmp14;
               cResult[11] = tmp15;
               cResult[12] = tmp16;
@@ -1011,14 +994,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[14] = tmp18;
               cResult[15] = tmp3;
               cResult[16] = obj2;
-              tmp26 = obj2;
+              tmp28 = obj2;
             }
           }
         }
       }
       const atResult = arr.at(-1);
       if (tmp2 != null) {
-        class R {
+        class T {
           constructor() {
             let bound;
             let tmp5;
@@ -1034,6 +1017,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               hiddenAt: tmp5,
               outdatedShown: false,
               outdatedBackoff: 0,
+              outdatedUpdating: false,
             };
             const merged = Object.assign(messageAt);
             bound = null;
@@ -1050,7 +1034,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (tmp2 != null) {
-        class R {
+        class T {
           constructor() {
             let bound;
             let tmp5;
@@ -1066,6 +1050,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               hiddenAt: tmp5,
               outdatedShown: false,
               outdatedBackoff: 0,
+              outdatedUpdating: false,
             };
             const merged = Object.assign(messageAt);
             bound = null;
@@ -1080,99 +1065,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return obj;
           }
         }
-        class D {
-          constructor() {
-            function onActivity() {
-              closure_0 = Date.now();
-              closure_1_2((arg0) => {
-                const obj = { now: lastActivityAt, lastActivityAt };
-                const merged = Object.assign(arg0);
-                return obj;
-              });
-            }
-            set = map.get(onActivity);
-            const tmp = onActivity;
-            if (set == null) {
-              const _Set = Set;
-              const self = this;
-              const self2 = this;
-              set = new Set();
-            }
-            const result = map.set(tmp, set);
-            set.add(onActivity);
-            return () => {
-              set.delete(onActivity);
-              if (0 === set.size) {
-                map.delete(closure_0);
-              }
-            };
-          }
-        }
-      }
-      let maxResult = null;
-      if (null != atResult) {
-        class R {
-          constructor() {
-            let bound;
-            let tmp5;
-            const timestamp = Date.now();
-            const obj = {
-              now: timestamp,
-              visitStartedAt: timestamp,
-              draftTyped: false,
-              lastActivityAt: null,
-              lastMessageAt: bound,
-              seenAt: null,
-              unseen: false,
-              hiddenAt: tmp5,
-              outdatedShown: false,
-              outdatedBackoff: 0,
-            };
-            const merged = Object.assign(messageAt);
-            bound = null;
-            if (null != messageAt.messageAt) {
-              const _Math = Math;
-              bound = Math.min(messageAt.messageAt, timestamp);
-            }
-            tmp5 = null;
-            if (!messageAt.visible) {
-              tmp5 = timestamp;
-            }
-            return obj;
-          }
-        }
-        const finished_at = atResult.finished_at;
-        class D {
-          constructor() {
-            function onActivity() {
-              closure_0 = Date.now();
-              closure_1_2((arg0) => {
-                const obj = { now: lastActivityAt, lastActivityAt };
-                const merged = Object.assign(arg0);
-                return obj;
-              });
-            }
-            set = map.get(onActivity);
-            const tmp = onActivity;
-            if (set == null) {
-              const _Set = Set;
-              const self = this;
-              const self2 = this;
-              set = new Set();
-            }
-            const result = map.set(tmp, set);
-            set.add(onActivity);
-            return () => {
-              set.delete(onActivity);
-              if (0 === set.size) {
-                map.delete(closure_0);
-              }
-            };
-          }
-        }
-        const created_at = atResult.created_at;
-        if (finished_at == null) {
-          class R {
+        if (tmp21 != null) {
+          class T {
             constructor() {
               let bound;
               let tmp5;
@@ -1188,6 +1082,95 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 hiddenAt: tmp5,
                 outdatedShown: false,
                 outdatedBackoff: 0,
+                outdatedUpdating: false,
+              };
+              const merged = Object.assign(messageAt);
+              bound = null;
+              if (null != messageAt.messageAt) {
+                const _Math = Math;
+                bound = Math.min(messageAt.messageAt, timestamp);
+              }
+              tmp5 = null;
+              if (!messageAt.visible) {
+                tmp5 = timestamp;
+              }
+              return obj;
+            }
+          }
+        }
+      }
+      let maxResult = null;
+      if (null != atResult) {
+        class T {
+          constructor() {
+            let bound;
+            let tmp5;
+            const timestamp = Date.now();
+            const obj = {
+              now: timestamp,
+              visitStartedAt: timestamp,
+              draftTyped: false,
+              lastActivityAt: null,
+              lastMessageAt: bound,
+              seenAt: null,
+              unseen: false,
+              hiddenAt: tmp5,
+              outdatedShown: false,
+              outdatedBackoff: 0,
+              outdatedUpdating: false,
+            };
+            const merged = Object.assign(messageAt);
+            bound = null;
+            if (null != messageAt.messageAt) {
+              const _Math = Math;
+              bound = Math.min(messageAt.messageAt, timestamp);
+            }
+            tmp5 = null;
+            if (!messageAt.visible) {
+              tmp5 = timestamp;
+            }
+            return obj;
+          }
+        }
+        const finished_at = atResult.finished_at;
+        let _Math = Math;
+        class E {
+          constructor() {
+            if (null != nextDueAt) {
+              const _setTimeout = setTimeout;
+              const _Math = Math;
+              const _Date = Date;
+              const timeout = setTimeout(
+                () =>
+                  closure_1_2((arg0) => {
+                    const obj = { now: Date.now() };
+                    const merged = Object.assign(arg0);
+                    return obj;
+                  }),
+                Math.max(0, tmp - Date.now()),
+              );
+              return () => clearTimeout(closure_0);
+            }
+          }
+        }
+        if (finished_at == null) {
+          class T {
+            constructor() {
+              let bound;
+              let tmp5;
+              const timestamp = Date.now();
+              const obj = {
+                now: timestamp,
+                visitStartedAt: timestamp,
+                draftTyped: false,
+                lastActivityAt: null,
+                lastMessageAt: bound,
+                seenAt: null,
+                unseen: false,
+                hiddenAt: tmp5,
+                outdatedShown: false,
+                outdatedBackoff: 0,
+                outdatedUpdating: false,
               };
               const merged = Object.assign(messageAt);
               bound = null;
@@ -1205,7 +1188,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const settled_at = atResult.settled_at;
         if (settled_at == null) {
-          class R {
+          class T {
             constructor() {
               let bound;
               let tmp5;
@@ -1221,6 +1204,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 hiddenAt: tmp5,
                 outdatedShown: false,
                 outdatedBackoff: 0,
+                outdatedUpdating: false,
               };
               const merged = Object.assign(messageAt);
               bound = null;
@@ -1236,13 +1220,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        maxResult = max(created_at, finished_at, settled_at);
+        maxResult = max(tmp23, finished_at, settled_at);
       }
       cResult[0] = arg2;
       cResult[1] = arr;
       cResult[2] = arg0;
       if (tmp2 != null) {
-        class R {
+        class T {
           constructor() {
             let bound;
             let tmp5;
@@ -1258,6 +1242,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               hiddenAt: tmp5,
               outdatedShown: false,
               outdatedBackoff: 0,
+              outdatedUpdating: false,
             };
             const merged = Object.assign(messageAt);
             bound = null;
@@ -1275,7 +1260,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[3] = undefined;
       if (tmp2 != null) {
-        class R {
+        class T {
           constructor() {
             let bound;
             let tmp5;
@@ -1291,6 +1276,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               hiddenAt: tmp5,
               outdatedShown: false,
               outdatedBackoff: 0,
+              outdatedUpdating: false,
             };
             const merged = Object.assign(messageAt);
             bound = null;
@@ -1305,32 +1291,37 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return obj;
           }
         }
-        class D {
-          constructor() {
-            function onActivity() {
-              closure_0 = Date.now();
-              closure_1_2((arg0) => {
-                const obj = { now: lastActivityAt, lastActivityAt };
-                const merged = Object.assign(arg0);
-                return obj;
-              });
-            }
-            set = map.get(onActivity);
-            const tmp = onActivity;
-            if (set == null) {
-              const _Set = Set;
-              const self = this;
-              const self2 = this;
-              set = new Set();
-            }
-            const result = map.set(tmp, set);
-            set.add(onActivity);
-            return () => {
-              set.delete(onActivity);
-              if (0 === set.size) {
-                map.delete(closure_0);
+        if (tmp25 != null) {
+          class T {
+            constructor() {
+              let bound;
+              let tmp5;
+              const timestamp = Date.now();
+              const obj = {
+                now: timestamp,
+                visitStartedAt: timestamp,
+                draftTyped: false,
+                lastActivityAt: null,
+                lastMessageAt: bound,
+                seenAt: null,
+                unseen: false,
+                hiddenAt: tmp5,
+                outdatedShown: false,
+                outdatedBackoff: 0,
+                outdatedUpdating: false,
+              };
+              const merged = Object.assign(messageAt);
+              bound = null;
+              if (null != messageAt.messageAt) {
+                const _Math = Math;
+                bound = Math.min(messageAt.messageAt, timestamp);
               }
-            };
+              tmp5 = null;
+              if (!messageAt.visible) {
+                tmp5 = timestamp;
+              }
+              return obj;
+            }
           }
         }
       }
@@ -1341,8 +1332,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = "changes" === undefined;
       cResult[9] = maxResult;
       tmp18 = maxResult;
-      tmp17 = tmp25;
-      tmp16 = tmp24;
+      tmp17 = tmp27;
+      tmp16 = tmp26;
       tmp15 = arg2;
       tmp14 = arg0;
     }
@@ -1358,7 +1349,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let state;
       let tmp15;
       let tmp16;
-      const f126057 = () => {
+      const f126214 = () => {
         let bound;
         let tmp5;
         const timestamp = Date.now();
@@ -1373,6 +1364,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           hiddenAt: tmp5,
           outdatedShown: false,
           outdatedBackoff: 0,
+          outdatedUpdating: false,
         };
         const merged = Object.assign(obj);
         bound = null;
@@ -1386,29 +1378,35 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return obj;
       };
-      const f126058 = (backoffDelaysMs) => {
-        let idleDelayMs;
-        obj = { idleDelayMs, eligible: null != obj3 && backoffDelaysMs.eligible(tmp4) };
-        const merged = Object.assign(backoffDelaysMs);
-        backoffDelaysMs = backoffDelaysMs.backoffDelaysMs;
-        idleDelayMs = undefined;
-        if (backoffDelaysMs != null) {
-          idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
+      const f126215 = (key) => {
+        let num;
+        obj = { idleDelayMs: num, eligible: null != obj3 && key.eligible(tmp6) };
+        const merged = Object.assign(key);
+        if ("outdated" !== key.key) {
+          const backoffDelaysMs = key.backoffDelaysMs;
+          let idleDelayMs;
+          if (backoffDelaysMs != null) {
+            idleDelayMs = backoffDelaysMs[outdatedBackoff.outdatedBackoff];
+          }
+          if (idleDelayMs == null) {
+            idleDelayMs = key.idleDelayMs;
+          }
+          num = idleDelayMs;
+        } else {
+          num = 0;
         }
-        if (idleDelayMs == null) {
-          idleDelayMs = backoffDelaysMs.idleDelayMs;
-        }
-        null != obj3 && backoffDelaysMs.eligible(tmp4);
+        null != obj3 && key.eligible(tmp6);
         return obj;
       };
       let closure_0 = projectId;
-      let tmp = obj(16614)(projectId);
+      let tmp = obj(16652)(projectId);
       let diff = arr.length - 1;
       let tmp4 = null;
-      const tmp2 = obj(16144)();
+      const tmp2 = obj(16183)();
       if (0 <= diff) {
         while (true) {
           let tmp5 = arr[diff];
+          let tmp6 = diff;
           if ("publish_notice" === tmp5.kind) {
             diff = diff - 1;
             tmp4 = null;
@@ -1421,11 +1419,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               break;
             } else {
               tmp4 = tmp5;
-              if (closure_6(tmp5)) {
+              if (closure_7(tmp5)) {
                 break;
               } else {
                 tmp4 = null;
-                if (!nextDueAt(arr, diff)) {
+                if (!closure_6(arr, diff)) {
                   break;
                 }
               }
@@ -1468,9 +1466,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         maxResult = max(created_at, num, num2);
       }
-      [tmp15, tmp16] = obj3.useState(f126057);
+      [tmp15, tmp16] = obj3.useState(f126214);
       dependencyMap = tmp16;
-      _slicedToArray(obj3.useState(f126057), 2);
+      _slicedToArray(obj3.useState(f126214), 2);
       const tmp17 = nextReminderClockState(tmp15, obj, Date.now);
       _slicedToArray = tmp17;
       let tmp18 = null;
@@ -1489,13 +1487,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         tmp18 = null;
         if (!tmp19) {
-          obj3 = { turn: tmp4, publish: tmp, draftHasText, draftTyped: tmp17.draftTyped && draftHasText };
+          obj3 = {
+            turn: tmp4,
+            publish: tmp,
+            draftHasText,
+            draftTyped: tmp17.draftTyped && draftHasText,
+            outdatedUpdating: tmp17.outdatedUpdating,
+          };
           tmp18 = obj3;
         }
       }
       obj3 = tmp18;
-      ({ shown, nextDueAt } = selectConjureReminder(items1.map(f126058), tmp17));
-      selectConjureReminder(items1.map(f126058), tmp17);
+      ({ shown, nextDueAt } = selectConjureReminder(items1.map(f126215), tmp17));
+      selectConjureReminder(items1.map(f126215), tmp17);
       if ("outdated" === shown) {
         if (!tmp17.outdatedShown) {
           const obj4 = { outdatedShown: true };
@@ -1505,9 +1509,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         items = [projectId];
         const effect = obj2.useEffect(function () {
           function onActivity() {
-            let closure_0 = Date.now();
             closure_1_2((arg0) => {
-              obj = { now: lastActivityAt, lastActivityAt };
+              obj = { outdatedUpdating: true };
               const merged = Object.assign(arg0);
               return obj;
             });
@@ -1559,8 +1562,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? (key) => {
       let arr2;
       let first;
-      let items2;
       let tmp13;
+      let tmp16;
       let tmp5;
       const obj = react2;
       const cResult = obj.c(9);
@@ -1585,7 +1588,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (key !== key) {
         closure_0 = key;
         const found1 = arr2.filter((key) => key.key !== closure_0);
-        const mapped = found1.map(f126052);
+        const mapped = found1.map(f126209);
         let tmp9 = mapped;
         if (null != key) {
           items1 = [];
@@ -1599,7 +1602,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp14;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const fn = function u(leaving) {
+          const fn = function l(leaving) {
             return leaving.leaving;
           };
           cResult[3] = fn;
@@ -1616,80 +1619,37 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let closure_1 = tmp13;
       if (cResult[4] !== tmp13) {
-        class A {
-          constructor() {
-            if (closure_1) {
-              tmp = globalThis;
-              _setTimeout = setTimeout;
-              num = 180;
-              closure_0 = setTimeout(
-                () =>
-                  closure_0(() => {
-                    /* body not rendered: F153484 */
-                  }),
-                180,
-              );
-              return () => clearTimeout(closure_0);
-            } else {
-              return;
-            }
+        const fn2 = function p() {
+          if (closure_1) {
+            const _setTimeout = setTimeout;
+            const timeout = setTimeout(() => closure_0((arr) => arr.filter((leaving) => !leaving.leaving)), 180);
+            return () => clearTimeout(closure_0);
           }
-        }
+        };
         cResult[4] = tmp13;
-        cResult[5] = A;
+        cResult[5] = fn2;
+        tmp16 = fn2;
       } else {
-        class A {
-          constructor() {
-            if (closure_1) {
-              tmp = globalThis;
-              _setTimeout = setTimeout;
-              num = 180;
-              closure_0 = setTimeout(
-                () =>
-                  closure_0(() => {
-                    /* body not rendered: F153484 */
-                  }),
-                180,
-              );
-              return () => clearTimeout(closure_0);
-            } else {
-              return;
-            }
-          }
-        }
+        tmp16 = cResult[5];
       }
       if (cResult[6] === tmp13) {
-        class A {
-          constructor() {
-            if (closure_1) {
-              tmp = globalThis;
-              _setTimeout = setTimeout;
-              num = 180;
-              closure_0 = setTimeout(
-                () =>
-                  closure_0(() => {
-                    /* body not rendered: F153484 */
-                  }),
-                180,
-              );
-              return () => clearTimeout(closure_0);
-            } else {
-              return;
-            }
-          }
+        let tmp17;
+        if (cResult[7] === arr2) {
+          tmp17 = cResult[8];
         }
-        const effect = react.useEffect(A, items2);
+        const effect = react.useEffect(tmp16, tmp17);
         return arr2;
       }
-      items2 = [tmp13, arr2];
+      const items2 = [tmp13, arr2];
       cResult[6] = tmp13;
       cResult[7] = arr2;
       cResult[8] = items2;
+      tmp17 = items2;
     }
   : (key) => {
       let arr;
       let tmp3;
-      const f126065 = (leaving) => leaving.leaving;
+      const f126222 = (leaving) => leaving.leaving;
       [arr, tmp3] = react.useState([]);
       let closure_0 = tmp3;
       _slicedToArray(react.useState([]), 2);
@@ -1704,18 +1664,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (key !== key) {
         closure_0 = key;
         const found1 = arr.filter((key) => key.key !== closure_0);
-        const mapped = found1.map(f126052);
+        const mapped = found1.map(f126209);
         let tmp7 = mapped;
         if (null != key) {
           items = [];
-          let obj2 = { key, leaving: false };
+          const obj2 = { key, leaving: false };
           items[HermesBuiltin.arraySpread(items, mapped, 0)] = obj2;
           tmp7 = items;
         }
         tmp3(tmp7);
       }
-      items1 = [arr.some(f126065), arr];
-      arr.some(f126065);
+      items1 = [arr.some(f126222), arr];
+      arr.some(f126222);
       const effect = react.useEffect(() => {
         if (closure_1) {
           const _setTimeout = setTimeout;
@@ -1725,6 +1685,100 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       return arr;
     };
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+  ? () => {
+      let stateFromStores;
+      let tmp10;
+      let tmp11;
+      let tmp4;
+      let tmp5;
+      let tmp9;
+      let useReducedMotion;
+      const obj = stateFromStores(576);
+      const cResult = obj.c(8);
+      const tmp = stateFromStores;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        items = [AccessibilityStore];
+        const fn = function s() {
+          return useReducedMotion.useReducedMotion;
+        };
+        cResult[0] = items;
+        cResult[1] = fn;
+        tmp4 = items;
+        tmp5 = fn;
+      } else {
+        [tmp4, tmp5] = cResult;
+      }
+      const tmpResult = tmp(504);
+      stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
+      [tmp9, importDefault] = react.useState(1);
+      _slicedToArray(react.useState(1), 2);
+      if (cResult[2] !== stateFromStores) {
+        const fn2 = function l() {
+          let closure_0;
+          let interval;
+          if (!interval) {
+            const _setInterval = setInterval;
+            interval = setInterval(() => closure_1_1((arg0) => (arg0 % 3) + 1), 400);
+            return () => clearInterval(closure_0);
+          }
+        };
+        items1 = [stateFromStores];
+        cResult[2] = stateFromStores;
+        cResult[3] = fn2;
+        cResult[4] = items1;
+        tmp11 = items1;
+        tmp10 = fn2;
+      } else {
+        tmp10 = cResult[3];
+        tmp11 = cResult[4];
+      }
+      const effect = react.useEffect(tmp10, tmp11);
+      if (cResult[5] === tmp9) {
+        let tmp13;
+        if (cResult[6] === stateFromStores) {
+          tmp13 = cResult[7];
+        }
+        return tmp13;
+      }
+      let num5 = 3;
+      const repeat = ".".repeat;
+      if (!stateFromStores) {
+        num5 = tmp9;
+      }
+      const repeatResult = repeat(num5);
+      cResult[5] = tmp9;
+      cResult[6] = stateFromStores;
+      cResult[7] = repeatResult;
+      tmp13 = repeatResult;
+    }
+  : () => {
+      let closure_1;
+      let first;
+      let stateFromStores;
+      let useReducedMotion;
+      items = [AccessibilityStore];
+      const obj = stateFromStores(504);
+      stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+      [first, closure_1] = react.useState(1);
+      items1 = [stateFromStores];
+      const effect = react.useEffect(() => {
+        let closure_0;
+        let interval;
+        if (!interval) {
+          const _setInterval = setInterval;
+          interval = setInterval(() => closure_1_1((arg0) => (arg0 % 3) + 1), 400);
+          return () => clearInterval(closure_0);
+        }
+      }, items1);
+      let num = 3;
+      const repeat = ".".repeat;
+      if (!stateFromStores) {
+        num = first;
+      }
+      return repeat(num);
+    };
 function reminderSlotTurn(View) {
   let diff = View.length - 1;
   if (0 <= diff) {
@@ -1733,9 +1787,9 @@ function reminderSlotTurn(View) {
       if ("publish_notice" !== tmp2.kind) {
         if ("user" === tmp2.role) {
           break;
-        } else if (metroRequire(tmp2)) {
+        } else if (metroImportDefault(tmp2)) {
           return tmp2;
-        } else if (!hasOwnProperty(View, diff)) {
+        } else if (!metroRequire(View, diff)) {
           return null;
         }
       }
@@ -1780,7 +1834,7 @@ function clampToObserved(arg0, arg1) {
 function nextReminderLayers(arr, key) {
   let closure_0 = key;
   const found = arr.filter((key) => key.key !== closure_0);
-  const mapped = found.map(f126052);
+  const mapped = found.map(f126209);
   let tmp3 = mapped;
   if (null != key) {
     items = [];
@@ -1812,3 +1866,4 @@ export const markConjureReminderActivity = function markConjureReminderActivity(
 export const useConjureReminder = tmp4;
 export { nextReminderLayers };
 export const useConjureReminderLayers = tmp5;
+export const useConjureUpdatingDots = tmp6;

@@ -180,7 +180,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(18);
       node = node.node;
       ({ output, state, style } = node);
-      const tmp4 = null != react.useContext(node(10994).AppLauncherContext);
+      const tmp4 = null != react.useContext(node(11007).AppLauncherContext);
       let closure_1 = tmp4;
       const tmp5 = closure_6();
       dependencyMap = tmp5;
@@ -215,7 +215,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                     const items = ["/", tmp8];
-                    const tmp12 = jsxs(node(4886).Text, {
+                    const tmp12 = jsxs(node(4892).Text, {
                       style,
                       variant: "text-md/bold",
                       onPress: tmp6,
@@ -230,7 +230,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     tmp10 = tmp12;
                   }
                 }
-                const tmpResult = node(7768);
+                const tmpResult = node(7779);
                 const smartOutputResult = tmpResult.smartOutput(node, output, state);
                 cResult[9] = node;
                 cResult[10] = output;
@@ -316,10 +316,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let style;
       node = node.node;
       ({ output, state, style } = node);
-      let closure_1 = null != react.useContext(node(10994).AppLauncherContext);
+      let closure_1 = null != react.useContext(node(11007).AppLauncherContext);
       dependencyMap = closure_6();
-      const Text = node(4886).Text;
-      let obj2 = node(7768);
+      const Text = node(4892).Text;
+      let obj2 = node(7779);
       const items = ["/", obj2.smartOutput(node, output, state)];
       return (
         <Text

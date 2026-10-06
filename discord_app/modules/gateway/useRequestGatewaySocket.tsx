@@ -14,7 +14,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       _require = arg0;
       let obj = require("react");
       const cResult = obj.c(4);
-      const obj2 = canUIRequestGatewaySocket(10015);
+      const obj2 = canUIRequestGatewaySocket(10028);
       canUIRequestGatewaySocket = obj2.useCanUIRequestGatewaySocket();
       if (cResult[0] === canUIRequestGatewaySocket) {
         let tmp3;
@@ -46,7 +46,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       let canUIRequestGatewaySocket;
       let closure_0 = arg0;
-      let obj = canUIRequestGatewaySocket(10015);
+      let obj = canUIRequestGatewaySocket(10028);
       canUIRequestGatewaySocket = obj.useCanUIRequestGatewaySocket();
       const items = [arg0, canUIRequestGatewaySocket];
       const effect = react.useEffect(() => {

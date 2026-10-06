@@ -4,7 +4,7 @@ import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../Constants.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import AssetRegistryDefault from "../../_runtime/08756_AssetRegistry.js";
+import AssetRegistryDefault from "../../_runtime/08788_AssetRegistry.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
 import _asyncToGenerator from "../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../_runtime/00019_react.js";
@@ -204,7 +204,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[15] = tmp14;
           cResult[16] = C;
           cResult[17] = L;
-          cResult[18] = jsx(stateFromStores(5783), {
+          cResult[18] = jsx(stateFromStores(5790), {
             body: _prompt,
             confirmText: cta,
             cancelText: tmp12,
@@ -212,7 +212,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             onCancel: C,
             renderConfirmRightIcon: L,
           });
-          const tmp20 = jsx(stateFromStores(5783), {
+          const tmp20 = jsx(stateFromStores(5790), {
             body: _prompt,
             confirmText: cta,
             cancelText: tmp12,
@@ -321,7 +321,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp5 = null;
       if (null != stateFromStores) {
         ({ prompt: obj2.body, cta: obj2.confirmText } = stateFromStores);
-        const tmp8 = stateFromStores(5783);
+        const tmp8 = stateFromStores(5790);
         const intl = tmp(1126).intl;
         tmp5 = (
           <tmp8

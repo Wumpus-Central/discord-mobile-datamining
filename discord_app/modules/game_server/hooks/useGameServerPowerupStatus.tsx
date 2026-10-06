@@ -1,6 +1,6 @@
 // discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef2525 from "../../premium/powerups/GuildPowerups.messages.js";
+import _modDef2553 from "../../premium/powerups/GuildPowerups.messages.js";
 import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import GameServerStore from "../GameServerStore.tsx";
@@ -70,7 +70,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp10;
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { type: "active", statusText: intl.string(_modDef2525.FFLkmx) };
+            const obj3 = { type: "active", statusText: intl.string(_modDef2553.FFLkmx) };
             intl = tmp(1126).intl;
             cResult[6] = obj3;
             tmp10 = obj3;
@@ -101,7 +101,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         },
         items1,
       );
-      const tmp2 = stateFromStores(12218)(arg0);
+      const tmp2 = stateFromStores(12233)(arg0);
       dependencyMap = tmp2;
       const items2 = [tmp2, stateFromStores];
       return react.useMemo(() => {
@@ -117,7 +117,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             obj3 = { type: "expiring", expiringAt: tmp[0].ends_at };
             const obj2 = { type: "expiring", expiringAt: tmp[0].ends_at };
           } else {
-            obj3 = { type: "active", statusText: intl.string(_modDef2525.FFLkmx) };
+            obj3 = { type: "active", statusText: intl.string(_modDef2553.FFLkmx) };
             intl = intl2.intl;
           }
           return obj3;

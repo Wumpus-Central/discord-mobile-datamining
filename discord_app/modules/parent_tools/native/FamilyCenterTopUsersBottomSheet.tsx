@@ -2,7 +2,7 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import intl2 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import TableRow2 from "../../../design/components/TableRow/native/TableRow.native.tsx";
@@ -46,7 +46,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           if (tmp7 === Symbol.for("react.early_return_sentinel")) {
             let tmp19;
             if (cResult[11] !== tmp8) {
-              const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "r" };
+              const obj2 = { size: native.AvatarSizes.SMALL, user: tmp8, guildId: "Array" };
               const Avatar = native.Avatar;
               const tmp21 = React3(Avatar, obj2);
               cResult[11] = tmp8;
@@ -137,7 +137,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { label: obj3.getName(user), subLabel: topUserOrGuildDescription, icon: React3(Avatar, obj4) };
         const TableRow = TableRow2.TableRow;
         obj3 = UserUtilsDefault;
-        obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "r" };
+        obj4 = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
         Avatar = native.Avatar;
         return React3(TableRow, obj2);
       }
@@ -157,7 +157,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const header = tmp4.header;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl2.intl;
-        const stringResult = intl.string(_modDef2493.BxbvS7);
+        const stringResult = intl.string(_modDef2521.BxbvS7);
         cResult[0] = stringResult;
         first = stringResult;
       } else {
@@ -223,7 +223,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { children: items };
       const tmp = closure_6();
       const ActionSheet = ActionSheet2.ActionSheet;
-      const obj2 = { variant: "text-md/bold", style: tmp.header, children: intl.string(_modDef2493.BxbvS7) };
+      const obj2 = { variant: "text-md/bold", style: tmp.header, children: intl.string(_modDef2521.BxbvS7) };
       const Text = Text_Text.Text;
       intl = intl2.intl;
       items = [React3(Text, obj2)];

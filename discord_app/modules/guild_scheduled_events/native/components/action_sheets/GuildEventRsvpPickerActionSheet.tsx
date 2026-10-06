@@ -217,8 +217,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       defaultValue = undefined;
       let closure_5;
       const tmp = closure_9();
-      [defaultValue, tmp6] = defaultValue.useState(event(9181).ResponseOptions.SERIES);
-      let obj = event(9181);
+      [defaultValue, tmp6] = defaultValue.useState(event(9216).ResponseOptions.SERIES);
+      let obj = event(9216);
       const existingRsvp = obj.getExistingRsvp(event.id, null);
       let response;
       if (existingRsvp != null) {
@@ -234,12 +234,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl.string(tmp2(1126).t["8MPCVr"]);
       }
       let obj2 = {
-        header: closure_7(event(6644).BottomSheetTitleHeader, { title: stringResult }),
+        header: closure_7(event(6651).BottomSheetTitleHeader, { title: stringResult }),
         children: closure_8(SafeAreaPaddingView, obj3),
       };
-      BottomSheet = tmp2(6645).BottomSheet;
+      BottomSheet = tmp2(6652).BottomSheet;
       obj3 = { bottom: true, style: tmp.container, children: items };
-      SafeAreaPaddingView = tmp2(6619).SafeAreaPaddingView;
+      SafeAreaPaddingView = tmp2(6626).SafeAreaPaddingView;
       const obj4 = {
         defaultValue,
         onChange: tmp6,
@@ -249,8 +249,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           return closure_1_7(event(dependencyMap[14]).TableRadioRow, obj, value.value);
         }),
       };
-      const TableRadioGroup = tmp2(6072).TableRadioGroup;
-      const tmp2Result = event(9181);
+      const TableRadioGroup = tmp2(6079).TableRadioGroup;
+      const tmp2Result = event(9216);
       responseOptions = tmp2Result.getResponseOptions();
       items = [closure_7(TableRadioGroup, obj4)];
       const obj5 = { style: tmp.buttonWrapper, children: closure_7(Button, obj6) };
@@ -270,7 +270,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         },
         text: intl3.string(event(1126).t.TyCVIq),
       };
-      Button = tmp2(5594).Button;
+      Button = tmp2(5601).Button;
       intl3 = tmp2(1126).intl;
       items[1] = closure_7(closure_5, obj5);
       return closure_7(BottomSheet, obj2);

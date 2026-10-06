@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import intl2 from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils.tsx";
@@ -399,7 +399,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmpResult = onRatingPress(6140);
+      const tmpResult = onRatingPress(6147);
       const nativeGesture = tmpResult.useNativeGesture(first);
       const tmp7 = stats.length <= 2;
       dependencyMap = length.useRef(0);
@@ -608,7 +608,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   obj = { stat: onCarouselScroll, onRatingPress: null };
                   tmp3 = undefined;
                   tmp = jsx;
-                  tmp2 = f56309;
+                  tmp2 = f56362;
                   if ("rating" === onCarouselScroll.type) {
                     tmp3 = onRatingPress;
                   }
@@ -624,7 +624,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   obj = { stat: onCarouselScroll, onRatingPress: null };
                   tmp3 = undefined;
                   tmp = jsx;
-                  tmp2 = f56309;
+                  tmp2 = f56362;
                   if ("rating" === onCarouselScroll.type) {
                     tmp3 = onRatingPress;
                   }

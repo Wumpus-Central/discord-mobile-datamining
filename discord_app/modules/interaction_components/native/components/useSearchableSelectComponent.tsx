@@ -240,7 +240,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp13 = queryOptionsResult;
         }
       }
-      const tmp2Result = tmp2(7803);
+      const tmp2Result = tmp2(7814);
       const initialSnowflakeSelectOptions = tmp2Result.getInitialSnowflakeSelectOptions(
         selectActionComponent,
         containerId,

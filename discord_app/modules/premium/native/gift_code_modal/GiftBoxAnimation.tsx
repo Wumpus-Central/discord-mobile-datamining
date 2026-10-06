@@ -3,7 +3,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import get_initialized from "../../../../../discord_common/js/packages/flux/index.tsx";
 import react2 from "../../../../../_runtime/00576_react.js";
 import PremiumConstants from "../../PremiumConstants.tsx";
-import merged5 from "../../../../../_runtime/05075_merged5.js";
+import merged5 from "../../../../../_runtime/05081_merged5.js";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -43,14 +43,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             class A {
               constructor() {
-                return require("../../../../../_runtime/metro/11106__.js");
+                return require("../../../../../_runtime/metro/11119__.js");
               }
             }
             cResult[4] = A;
           } else {
             class A {
               constructor() {
-                return require("../../../../../_runtime/metro/11106__.js");
+                return require("../../../../../_runtime/metro/11119__.js");
               }
             }
           }
@@ -58,14 +58,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
             class A {
               constructor() {
-                return require("../../../../../_runtime/metro/11106__.js");
+                return require("../../../../../_runtime/metro/11119__.js");
               }
             }
             cResult[5] = tmp12;
           } else {
             class A {
               constructor() {
-                return require("../../../../../_runtime/metro/11106__.js");
+                return require("../../../../../_runtime/metro/11119__.js");
               }
             }
           }
@@ -73,14 +73,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             class A {
               constructor() {
-                return require("../../../../../_runtime/metro/11106__.js");
+                return require("../../../../../_runtime/metro/11119__.js");
               }
             }
             cResult[6] = tmp14;
           } else {
             class A {
               constructor() {
-                return require("../../../../../_runtime/metro/11106__.js");
+                return require("../../../../../_runtime/metro/11119__.js");
               }
             }
           }
@@ -88,14 +88,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
             class E {
               constructor() {
-                return require("../../../../../_runtime/metro/10566__.js");
+                return require("../../../../../_runtime/metro/10579__.js");
               }
             }
             cResult[7] = E;
           } else {
             class E {
               constructor() {
-                return require("../../../../../_runtime/metro/10566__.js");
+                return require("../../../../../_runtime/metro/10579__.js");
               }
             }
           }
@@ -103,14 +103,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
             class E {
               constructor() {
-                return require("../../../../../_runtime/metro/10566__.js");
+                return require("../../../../../_runtime/metro/10579__.js");
               }
             }
             cResult[8] = tmp17;
           } else {
             class E {
               constructor() {
-                return require("../../../../../_runtime/metro/10566__.js");
+                return require("../../../../../_runtime/metro/10579__.js");
               }
             }
           }
@@ -118,14 +118,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
             class O {
               constructor() {
-                return require("../../../../../_runtime/metro/10572__.js");
+                return require("../../../../../_runtime/metro/10585__.js");
               }
             }
             cResult[9] = O;
           } else {
             class O {
               constructor() {
-                return require("../../../../../_runtime/metro/10572__.js");
+                return require("../../../../../_runtime/metro/10585__.js");
               }
             }
           }
@@ -133,14 +133,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
             class O {
               constructor() {
-                return require("../../../../../_runtime/metro/10572__.js");
+                return require("../../../../../_runtime/metro/10585__.js");
               }
             }
             cResult[10] = tmp20;
           } else {
             class O {
               constructor() {
-                return require("../../../../../_runtime/metro/10572__.js");
+                return require("../../../../../_runtime/metro/10585__.js");
               }
             }
           }
@@ -148,14 +148,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
             class O {
               constructor() {
-                return require("../../../../../_runtime/metro/10572__.js");
+                return require("../../../../../_runtime/metro/10585__.js");
               }
             }
             cResult[11] = tmp22;
           } else {
             class O {
               constructor() {
-                return require("../../../../../_runtime/metro/10572__.js");
+                return require("../../../../../_runtime/metro/10585__.js");
               }
             }
           }
@@ -163,14 +163,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
             class C {
               constructor() {
-                return require("../../../../../_runtime/metro/10581__.js");
+                return require("../../../../../_runtime/metro/10594__.js");
               }
             }
             cResult[12] = C;
           } else {
             class C {
               constructor() {
-                return require("../../../../../_runtime/metro/10581__.js");
+                return require("../../../../../_runtime/metro/10594__.js");
               }
             }
           }
@@ -178,14 +178,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             class N {
               constructor() {
-                return require("../../../../../_runtime/metro/10584__.js");
+                return require("../../../../../_runtime/metro/10597__.js");
               }
             }
             cResult[13] = N;
           } else {
             class N {
               constructor() {
-                return require("../../../../../_runtime/metro/10584__.js");
+                return require("../../../../../_runtime/metro/10597__.js");
               }
             }
           }
@@ -193,14 +193,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
             class F {
               constructor() {
-                return require("../../../../../_runtime/metro/10587__.js");
+                return require("../../../../../_runtime/metro/10600__.js");
               }
             }
             cResult[14] = F;
           } else {
             class F {
               constructor() {
-                return require("../../../../../_runtime/metro/10587__.js");
+                return require("../../../../../_runtime/metro/10600__.js");
               }
             }
           }
@@ -208,14 +208,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
             class L {
               constructor() {
-                return require("../../../../../_runtime/metro/10566__.js");
+                return require("../../../../../_runtime/metro/10579__.js");
               }
             }
             cResult[15] = L;
           } else {
             class L {
               constructor() {
-                return require("../../../../../_runtime/metro/10566__.js");
+                return require("../../../../../_runtime/metro/10579__.js");
               }
             }
           }
@@ -238,7 +238,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           class L {
             constructor() {
-              return require("../../../../../_runtime/metro/10566__.js");
+              return require("../../../../../_runtime/metro/10579__.js");
             }
           }
         }
@@ -246,21 +246,21 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
           class L {
             constructor() {
-              return require("../../../../../_runtime/metro/10566__.js");
+              return require("../../../../../_runtime/metro/10579__.js");
             }
           }
           cResult[16] = tmp31;
         } else {
           class L {
             constructor() {
-              return require("../../../../../_runtime/metro/10566__.js");
+              return require("../../../../../_runtime/metro/10579__.js");
             }
           }
         }
         if (cResult[17] === tmp9) {
           class L {
             constructor() {
-              return require("../../../../../_runtime/metro/10566__.js");
+              return require("../../../../../_runtime/metro/10579__.js");
             }
           }
           return tmp32;
@@ -274,7 +274,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (giftStyle) => {
       let useReducedMotion;
-      const f106464 = () => require("../../../../../_runtime/metro/10566__.js");
+      const f106616 = () => require("../../../../../_runtime/metro/10579__.js");
       giftStyle = giftStyle.giftStyle;
       get_initialized;
       [][0] = AccessibilityStore;
@@ -284,41 +284,41 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const str = merged5;
         const match = str.match(giftStyle);
         const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, () =>
-          require("../../../../../_runtime/metro/11106__.js"),
+          require("../../../../../_runtime/metro/11119__.js"),
         );
         const withResult1 = withResult.with(PremiumGiftStyles.BOX, () =>
-          require("../../../../../_runtime/metro/11107__.js"),
+          require("../../../../../_runtime/metro/11120__.js"),
         );
         const withResult2 = withResult1.with(PremiumGiftStyles.CUP, () =>
-          require("../../../../../_runtime/metro/11108__.js"),
+          require("../../../../../_runtime/metro/11121__.js"),
         );
         const withResult3 = withResult2.with(PremiumGiftStyles.STANDARD_BOX, () =>
-          require("../../../../../_runtime/metro/10566__.js"),
+          require("../../../../../_runtime/metro/10579__.js"),
         );
         const withResult4 = withResult3.with(PremiumGiftStyles.COFFEE, () =>
-          require("../../../../../_runtime/metro/10575__.js"),
+          require("../../../../../_runtime/metro/10588__.js"),
         );
         const withResult5 = withResult4.with(PremiumGiftStyles.CHEST, () =>
-          require("../../../../../_runtime/metro/10572__.js"),
+          require("../../../../../_runtime/metro/10585__.js"),
         );
         const withResult6 = withResult5.with(PremiumGiftStyles.CAKE, () =>
-          require("../../../../../_runtime/metro/10569__.js"),
+          require("../../../../../_runtime/metro/10582__.js"),
         );
         const withResult7 = withResult6.with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () =>
-          require("../../../../../_runtime/metro/10578__.js"),
+          require("../../../../../_runtime/metro/10591__.js"),
         );
         const withResult8 = withResult7.with(PremiumGiftStyles.SEASONAL_CAKE, () =>
-          require("../../../../../_runtime/metro/10581__.js"),
+          require("../../../../../_runtime/metro/10594__.js"),
         );
         const withResult9 = withResult8.with(PremiumGiftStyles.SEASONAL_CHEST, () =>
-          require("../../../../../_runtime/metro/10584__.js"),
+          require("../../../../../_runtime/metro/10597__.js"),
         );
         const withResult10 = withResult9.with(PremiumGiftStyles.SEASONAL_COFFEE, () =>
-          require("../../../../../_runtime/metro/10587__.js"),
+          require("../../../../../_runtime/metro/10600__.js"),
         );
-        withResult10.otherwise(f106464);
+        withResult10.otherwise(f106616);
         return jsx(LottieAnimationViewDefault, {
-          source: withResult10.otherwise(f106464),
+          source: withResult10.otherwise(f106616),
           autoPlay: !tmp4,
           style: { width: 320, height: 212 },
         });

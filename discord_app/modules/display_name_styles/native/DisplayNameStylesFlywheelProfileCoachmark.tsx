@@ -3,7 +3,7 @@ import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
-import _modDef2883 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2911 from "../intl/DisplayNameStyles.messages.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import DisplayNameLockeAbstractUI from "../../../design/components/mana-assets/native/generated/DisplayNameLockeAbstractUI.native.tsx";
 import react_mod from "../../../../_runtime/00019_react.js";
@@ -63,7 +63,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let stringResult;
         const intl = markAsDismissed(1126).intl;
         const string = intl.string;
-        const tmp13 = _modDef2883;
+        const tmp13 = _modDef2911;
         if (tmp8) {
           stringResult = string(tmp13.h6sykk);
         } else {
@@ -79,7 +79,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let string2Result;
         const intl2 = markAsDismissed(1126).intl;
         const string2 = intl2.string;
-        const tmp17 = _modDef2883;
+        const tmp17 = _modDef2911;
         if (tmp8) {
           string2Result = string2(tmp17.TyUdka);
         } else {
@@ -151,11 +151,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [UserStore];
       const obj = visible(504);
       const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-      const obj2 = markAsDismissed(4528);
+      const obj2 = markAsDismissed(4534);
       const result = obj2.canUsePremiumProfileCustomization(stateFromStores);
       const intl = visible(1126).intl;
       const string = intl.string;
-      const tmp6 = markAsDismissed(2883);
+      const tmp6 = markAsDismissed(2911);
       const tmp4 = markAsDismissed;
       if (result) {
         stringResult = string(tmp6.h6sykk);
@@ -165,7 +165,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = stringResult;
       const intl2 = tmp(1126).intl;
       const string2 = intl2.string;
-      const tmp4Result = tmp4(2883);
+      const tmp4Result = tmp4(2911);
       if (result) {
         string2Result = string2(tmp4Result.TyUdka);
       } else {
@@ -190,7 +190,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }),
         items2,
       );
-      const tmpResult = visible(9882);
+      const tmpResult = visible(9895);
       const coachmark = tmpResult.useCoachmark(targetRef, memo);
       return null;
     };

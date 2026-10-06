@@ -518,12 +518,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             currentResult = current();
           }
           closure_0 = closure_2(function () {
-            /* body not rendered: F152123 */
+            /* body not rendered: F152355 */
           });
           tmp3 = closure_2;
           if (tmp3) {
             tmp5 = (function fetch() {
-              /* body not rendered: F152124 */
+              /* body not rendered: F152356 */
             })();
           } else {
             current2 = tmp.current;

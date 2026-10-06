@@ -425,11 +425,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp6;
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = {
-            type: hasOwnProperty.INACTIVE,
-            sourceEntitlement: "Array",
-            sourcePowerup: "toCharArray$esjava$1",
-          };
+          const obj2 = { type: hasOwnProperty.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "parent" };
           cResult[2] = obj2;
           tmp6 = obj2;
         } else {
@@ -451,12 +447,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = closure_10(arg0, items);
       if (tmpResult.length <= 0) {
-        first = { type: hasOwnProperty.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "toCharArray$esjava$1" };
-        const obj = {
-          type: hasOwnProperty.INACTIVE,
-          sourceEntitlement: "Array",
-          sourcePowerup: "toCharArray$esjava$1",
-        };
+        first = { type: hasOwnProperty.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "parent" };
+        const obj = { type: hasOwnProperty.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "parent" };
       } else {
         first = tmpResult[0];
       }

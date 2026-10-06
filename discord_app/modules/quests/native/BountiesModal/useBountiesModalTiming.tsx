@@ -323,7 +323,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp5;
       let tmp7;
       let tmp9;
-      const f118218 = () => {
+      const f118376 = () => {
         num = 0;
         if (null != num3) {
           num = num / tmp;
@@ -376,8 +376,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       [tmp5, c11] = onRewardEarned(useState(tmp), 2);
       const tmp4 = onRewardEarned(useState(tmp), 2);
-      [tmp7, c12] = onRewardEarned(obj.useState(f118218), 2);
-      const tmp6 = onRewardEarned(obj.useState(f118218), 2);
+      [tmp7, c12] = onRewardEarned(obj.useState(f118376), 2);
+      const tmp6 = onRewardEarned(obj.useState(f118376), 2);
       let tmp8 = onRewardEarned(obj.useState(null), 2);
       [tmp9, c13] = tmp8;
       [tmp11, c14] = onRewardEarned(obj.useState(num2), 2);

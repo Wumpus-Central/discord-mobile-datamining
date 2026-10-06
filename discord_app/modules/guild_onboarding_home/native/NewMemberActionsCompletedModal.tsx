@@ -68,7 +68,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       numActions = numActions.numActions;
       const initialPercent = numActions.initialPercent;
       const tmp4 = closure_7();
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       sharedValue = obj2.useSharedValue(initialPercent);
       if (cResult[0] !== sharedValue) {
         const fn = function h() {
@@ -85,7 +85,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = react.useEffect(tmp6, tmp7);
-      const tmpResult = tmp(4612);
+      const tmpResult = tmp(4618);
       class T {
         constructor() {
           let obj2;
@@ -97,10 +97,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      T.__closure = { withDelay: tmp(4612).withDelay, withTiming: tmp(4891).withTiming, barWidth: sharedValue };
+      T.__closure = { withDelay: tmp(4618).withDelay, withTiming: tmp(4897).withTiming, barWidth: sharedValue };
       T.__workletHash = 7643178959760;
       T.__initData = __initData;
-      ({ withDelay: tmp(4612).withDelay, withTiming: tmp(4891).withTiming, barWidth: sharedValue });
+      ({ withDelay: tmp(4618).withDelay, withTiming: tmp(4897).withTiming, barWidth: sharedValue });
       const animatedStyle = tmpResult.useAnimatedStyle(T);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
@@ -231,13 +231,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[7] = tmp4.text;
       cResult[8] = tmp13;
-      cResult[9] = closure_5(tmp(4886).Text, {
+      cResult[9] = closure_5(tmp(4892).Text, {
         style: text,
         variant: "heading-xl/semibold",
         color: "text-overlay-light",
         children: tmp13,
       });
-      const tmp16 = closure_5(tmp(4886).Text, {
+      const tmp16 = closure_5(tmp(4892).Text, {
         style: text,
         variant: "heading-xl/semibold",
         color: "text-overlay-light",
@@ -254,13 +254,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue;
       ({ initialPercent, numActions } = arg0);
       const tmp = closure_7();
-      let obj = sharedValue(4612);
+      let obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(initialPercent);
       const items = [sharedValue];
       const effect = react.useEffect(() => {
         const result = sharedValue.set(1);
       }, items);
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       const fn = function y() {
         let obj2;
         let withDelay;
@@ -271,13 +271,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       fn.__closure = {
-        withDelay: sharedValue(4612).withDelay,
-        withTiming: sharedValue(4891).withTiming,
+        withDelay: sharedValue(4618).withDelay,
+        withTiming: sharedValue(4897).withTiming,
         barWidth: sharedValue,
       };
       fn.__workletHash = 8771000018451;
       fn.__initData = __initData2;
-      ({ withDelay: sharedValue(4612).withDelay, withTiming: sharedValue(4891).withTiming, barWidth: sharedValue });
+      ({ withDelay: sharedValue(4618).withDelay, withTiming: sharedValue(4897).withTiming, barWidth: sharedValue });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       const effect1 = react.useEffect(() => {
         const timerId = setTimeout(() => {
@@ -292,7 +292,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-overlay-light",
         children: intl.format(sharedValue(1126).t.pGj5u2, { count: numActions }),
       };
-      const Text = sharedValue(4886).Text;
+      const Text = sharedValue(4892).Text;
       intl = sharedValue(1126).intl;
       items1 = [closure_5(Text, obj5)];
       const obj6 = { style: tmp.progressBackground, children: closure_5(ReanimatedRexportDefault.View, obj7) };

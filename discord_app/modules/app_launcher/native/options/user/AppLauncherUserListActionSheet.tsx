@@ -257,7 +257,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp14[0] = id;
           tmp14[5] = tmp4;
-          tmp10Result = jsx(tmp11(11812), tmp14);
+          tmp10Result = jsx(tmp11(11826), tmp14);
         } else {
           class U {
             constructor(arg0) {
@@ -295,7 +295,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp12[1] = guild_id;
           tmp12[3] = U;
           tmp12[6] = tmp4;
-          tmp10Result = jsx(tmp11(11210), tmp12);
+          tmp10Result = jsx(tmp11(11223), tmp12);
         }
         cResult[8] = channel;
         cResult[9] = id;
@@ -438,7 +438,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp7;
         }
       }
-      const tmp8 = jsx(onPressRow(11789).AppLauncherList, {
+      const tmp8 = jsx(onPressRow(11803).AppLauncherList, {
         contentContainerStyle: tmp4.emptyState,
         data: tmp5,
         renderItem: tmp6,
@@ -456,7 +456,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const query = onPressRow.query;
       const items = [query];
       closure_6();
-      return jsx(onPressRow(11789).AppLauncherList, {
+      return jsx(onPressRow(11803).AppLauncherList, {
         contentContainerStyle: closure_6().emptyState,
         data: items,
         renderItem(label) {

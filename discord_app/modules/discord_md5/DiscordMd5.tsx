@@ -1,5 +1,5 @@
 // discord_app/modules/discord_md5/DiscordMd5.tsx
-import _modDef6480 from "../../../_runtime/metro/06480__.js";
+import _modDef6487 from "../../../_runtime/metro/06487__.js";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -15,7 +15,7 @@ class DiscordMd5 {
     })();
   }
   static fromArrayBuffer(value) {
-    const _ArrayBuffer = _modDef6480.ArrayBuffer;
+    const _ArrayBuffer = _modDef6487.ArrayBuffer;
     return _ArrayBuffer.hash(value);
   }
   static fromDataURI(arg0) {
@@ -50,7 +50,7 @@ class DiscordMd5 {
             length = atobResult.length;
           } while (num < length);
         }
-        const _ArrayBuffer = _modDef6480.ArrayBuffer;
+        const _ArrayBuffer = _modDef6487.ArrayBuffer;
         return _ArrayBuffer.hash(arrayBuffer);
       }
     });

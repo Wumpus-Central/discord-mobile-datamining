@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import PremiumGroupInviteEmbed from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07722_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/07733_AssetRegistry.js";
 import AuthenticationStore from "../../../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";

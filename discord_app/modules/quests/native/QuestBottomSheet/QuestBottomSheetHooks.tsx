@@ -25,10 +25,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = setRestingQuestDockMode(576);
       const cResult = obj.c(3);
       setRestingQuestDockMode = react.useContext(
-        setRestingQuestDockMode(14900).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(14916).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = react.useContext(
-        setRestingQuestDockMode(14923).QuestBottomSheetContext,
+        setRestingQuestDockMode(14938).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       if (cResult[0] === isInQuestBottomSheet) {
         let tmp2;
@@ -53,10 +53,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let setRestingQuestDockMode;
       setRestingQuestDockMode = react.useContext(
-        setRestingQuestDockMode(14900).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(14916).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const isInQuestBottomSheet = react.useContext(
-        setRestingQuestDockMode(14923).QuestBottomSheetContext,
+        setRestingQuestDockMode(14938).QuestBottomSheetContext,
       ).isInQuestBottomSheet;
       const items = [isInQuestBottomSheet, setRestingQuestDockMode];
       return react.useCallback(() => {
@@ -78,7 +78,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const sourceQuestContent = questId.sourceQuestContent;
       const tmp2 = closure_6();
       dependencyMap = tmp2;
-      const obj2 = questId(10916);
+      const obj2 = questId(10929);
       const questImpression = obj2.useQuestImpression();
       if (cResult[0] === tmp2) {
         if (cResult[1] === questImpression) {
@@ -168,7 +168,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const sourceQuestContent = questId.sourceQuestContent;
       const tmp = closure_6();
       dependencyMap = tmp;
-      let obj = questId(10916);
+      let obj = questId(10929);
       const questImpression = obj.useQuestImpression();
       const items = [questId, tmp, questImpression, sourceQuestContent];
       return react.useCallback(() => {

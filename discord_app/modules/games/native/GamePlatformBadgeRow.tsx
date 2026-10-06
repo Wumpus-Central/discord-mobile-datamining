@@ -93,7 +93,7 @@ const memoResult = react.memo(
           obj = GamePlatformBadges;
           return obj.sortGamePlatformAvailability(platforms);
         }, items);
-        const Stack = platforms(5593).Stack;
+        const Stack = platforms(5600).Stack;
         return (
           <Stack direction="horizontal" align="center" spacing={nativeDefault.space.PX_4} style={tmp.row}>
             {memo.map((item) => {

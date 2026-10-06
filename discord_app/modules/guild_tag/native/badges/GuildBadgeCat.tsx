@@ -1,6 +1,6 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeCat.tsx
 import react2 from "../../../../../_runtime/00576_react.js";
-import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import GuildBadgeUtils from "GuildBadgeUtils.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";

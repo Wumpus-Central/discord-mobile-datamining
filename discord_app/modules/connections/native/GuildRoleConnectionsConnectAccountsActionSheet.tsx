@@ -11,7 +11,7 @@ import AvatarUtils from "../../../utils/AvatarUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04811_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04817_AssetRegistry.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useChannelNameDefault from "../../channel/useChannelName.tsx";
@@ -26,8 +26,8 @@ import ConnectionsUtils from "../ConnectionsUtils.tsx";
 import getConnectionsRolesDefault from "../../channel/getConnectionsRoles.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
-import AssetRegistryDefault2 from "../../../../_runtime/11181_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/11182_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/11194_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/11195_AssetRegistry.js";
 import ConnectionsRoleActionCreators from "../ConnectionsRoleActionCreators.tsx";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -643,7 +643,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp6 = closure_14;
                       accounts = closure_14.getAccounts();
                       someResult = accounts.some(() => {
-                        /* body not rendered: F141112 */
+                        /* body not rendered: F141318 */
                       });
                     }
                     connection_type = null;
@@ -721,7 +721,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                         tmp6 = closure_14;
                         accounts = closure_14.getAccounts();
                         someResult = accounts.some(() => {
-                          /* body not rendered: F141112 */
+                          /* body not rendered: F141318 */
                         });
                       }
                       connection_type = null;
@@ -800,7 +800,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                         tmp6 = closure_14;
                         accounts = closure_14.getAccounts();
                         someResult = accounts.some(() => {
-                          /* body not rendered: F141112 */
+                          /* body not rendered: F141318 */
                         });
                       }
                       connection_type = null;
@@ -991,7 +991,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                                           tmp6 = closure_14;
                                                           accounts = closure_14.getAccounts();
                                                           someResult = accounts.some(() => {
-                                                            /* body not rendered: F141112 */
+                                                            /* body not rendered: F141318 */
                                                           });
                                                         }
                                                         connection_type = null;
@@ -1070,7 +1070,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                                       tmp6 = closure_14;
                                                       accounts = closure_14.getAccounts();
                                                       someResult = accounts.some(() => {
-                                                        /* body not rendered: F141112 */
+                                                        /* body not rendered: F141318 */
                                                       });
                                                     }
                                                     connection_type = null;
@@ -1163,7 +1163,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                                   tmp6 = closure_14;
                                                   accounts = closure_14.getAccounts();
                                                   someResult = accounts.some(() => {
-                                                    /* body not rendered: F141112 */
+                                                    /* body not rendered: F141318 */
                                                   });
                                                 }
                                                 connection_type = null;
@@ -1236,7 +1236,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                               tmp6 = closure_14;
                                               accounts = closure_14.getAccounts();
                                               someResult = accounts.some(() => {
-                                                /* body not rendered: F141112 */
+                                                /* body not rendered: F141318 */
                                               });
                                             }
                                             connection_type = null;
@@ -1302,7 +1302,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                       user: obj4,
                                       size: canStartAuthorization(identity_connected_account_type[23]).AvatarSizes
                                         .XSMALL,
-                                      guildId: "a",
+                                      guildId: "Array",
                                     };
                                     const Avatar = tmp(tmp2[23]).Avatar;
                                     tmp41 = closure_29(Avatar, obj13);
@@ -1322,7 +1322,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                             tmp6 = closure_14;
                                             accounts = closure_14.getAccounts();
                                             someResult = accounts.some(() => {
-                                              /* body not rendered: F141112 */
+                                              /* body not rendered: F141318 */
                                             });
                                           }
                                           connection_type = null;
@@ -1390,7 +1390,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                                         tmp6 = closure_14;
                                         accounts = closure_14.getAccounts();
                                         someResult = accounts.some(() => {
-                                          /* body not rendered: F141112 */
+                                          /* body not rendered: F141318 */
                                         });
                                       }
                                       connection_type = null;
@@ -1468,7 +1468,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
                     tmp6 = closure_14;
                     accounts = closure_14.getAccounts();
                     someResult = accounts.some(() => {
-                      /* body not rendered: F141112 */
+                      /* body not rendered: F141318 */
                     });
                   }
                   connection_type = null;
@@ -1723,7 +1723,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
             style: tmp.appIcon,
             user: memo,
             size: eligibilityState(tmp3[23]).AvatarSizes.XSMALL,
-            guildId: "a",
+            guildId: "Array",
           };
           const Avatar = tmp2(tmp3[23]).Avatar;
           tmp15Result = tmp15(Avatar, obj8);
@@ -2016,7 +2016,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items3);
-      let obj2 = eligibilityStatesGroups(4580);
+      let obj2 = eligibilityStatesGroups(4586);
       roleColor = obj2.useToken(nativeDefault.unsafe_rawColors.GREEN_330);
       let obj3 = {
         children: sorted.map(function (item) {
@@ -2213,7 +2213,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
               style: closure_5.appIcon,
               user: tmp11,
               size: eligibilityStatesGroups(dependencyMap[23]).AvatarSizes.XSMALL,
-              guildId: "a",
+              guildId: "Array",
             };
             const Avatar = tmp13(dependencyMap[23]).Avatar;
             tmp22Result7 = tmp22(Avatar, obj13);
@@ -2645,7 +2645,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
             obj.setFriendSync(account.type, account.id, enabled);
           },
         };
-        const FormSwitchRow = account(8895).FormSwitchRow;
+        const FormSwitchRow = account(8924).FormSwitchRow;
         intl = account(1126).intl;
         tmp13 = closure_29(FormSwitchRow, obj2);
       }
@@ -2660,7 +2660,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
             obj.setShowActivity(account.type, account.id, show_activity);
           },
         };
-        const FormSwitchRow2 = account(8895).FormSwitchRow;
+        const FormSwitchRow2 = account(8924).FormSwitchRow;
         intl2 = account(1126).intl;
         obj4 = { platform: value.name };
         tmp16 = closure_29(FormSwitchRow2, obj3);
@@ -2686,7 +2686,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
             const result = setMetadataVisibility(type, id, num);
           },
         };
-        const FormSwitchRow3 = account(8895).FormSwitchRow;
+        const FormSwitchRow3 = account(8924).FormSwitchRow;
         intl3 = account(1126).intl;
         tmp19 = closure_29(FormSwitchRow3, obj5);
       }
@@ -2709,7 +2709,7 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled()
           setVisibility(type, id, num);
         },
       };
-      const FormSwitchRow4 = account(8895).FormSwitchRow;
+      const FormSwitchRow4 = account(8924).FormSwitchRow;
       intl4 = account(1126).intl;
       items = [closure_29(FormSwitchRow4, obj7), tmp19, tmp16, tmp13];
       return closure_30(closure_8, obj6);
@@ -2787,7 +2787,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     let tmp38Result4;
     let tmp4;
     let tmp9;
-    const f106931 = () => {
+    const f107083 = () => {
       let tmp3;
       let tmp2 = null;
       if (null != initialAttemptedPlatformType) {
@@ -2894,8 +2894,8 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
     const stateFromStores2 = obj3.useStateFromStores(items2, () => first2.getId());
     [first2, closure_13] = react.useState(null);
     [first3, closure_15] = react.useState(null);
-    [tmp27, c16] = react.useState(f106931);
-    _slicedToArray(react.useState(f106931), 2);
+    [tmp27, c16] = react.useState(f107083);
+    _slicedToArray(react.useState(f107083), 2);
     [arr6, c17] = react.useState(null);
     _slicedToArray(react.useState(null), 2);
     const tmp30 = role(initialAttemptedPlatformType[19])();

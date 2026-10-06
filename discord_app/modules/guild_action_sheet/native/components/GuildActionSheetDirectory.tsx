@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildActionSheetActions from "GuildActionSheetActions.tsx";
 import GuildActionSheetHeaderDefault from "GuildActionSheetHeader.tsx";

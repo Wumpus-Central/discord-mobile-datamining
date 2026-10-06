@@ -467,7 +467,7 @@ obj = function _fetchSummariesBulk() {
     }
     flag = obj4.useQuickSwitcher ?? true;
     flag2 = obj4.useChannelAffinities ?? true;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

@@ -7,7 +7,7 @@ import Constants2 from "../../../../discord_common/js/shared/Constants.tsx";
 import intl3 from "../../../intl/index.native.tsx";
 import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04815_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04821_AssetRegistry.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
@@ -72,10 +72,10 @@ function SortAndViewOptions(channel) {
         obj.hideActionSheet(combined);
       },
     };
-    obj.openLazy(asyncRequire(12433, dependencyMap.paths), combined, obj2);
+    obj.openLazy(asyncRequire(12448, dependencyMap.paths), combined, obj2);
   }, items);
   const isMediaChannelResult = channel.isMediaChannel();
-  const Button = id(5594).Button;
+  const Button = id(5601).Button;
   const intl = id(1126).intl;
   const string = intl.string;
   const t = id(1126).t;
@@ -90,7 +90,7 @@ function SortAndViewOptions(channel) {
     text: stringResult,
     onPress: callback,
     size: "sm",
-    icon: closure_14(tmp4(11775).ArrowsUpDownIcon, { size: "xxs" }),
+    icon: closure_14(tmp4(11789).ArrowsUpDownIcon, { size: "xxs" }),
   };
   return closure_14(Button, obj);
 }
@@ -103,12 +103,12 @@ function TagFilter(channel) {
     onPress() {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { channel };
-      obj.openLazy(asyncRequire(12434, dependencyMap.paths), "ForumTagFilterActionSheet", obj2);
+      obj.openLazy(asyncRequire(12449, dependencyMap.paths), "ForumTagFilterActionSheet", obj2);
     },
     size: "sm",
-    icon: closure_14(channel(8524).TagIcon, { size: "xxs" }),
+    icon: closure_14(channel(8557).TagIcon, { size: "xxs" }),
   };
-  const Button = channel(5594).Button;
+  const Button = channel(5601).Button;
   intl = channel(1126).intl;
   return closure_14(Button, obj);
 }

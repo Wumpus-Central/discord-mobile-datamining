@@ -112,7 +112,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             selectedVoiceChannelId: stateFromStores1,
             voiceStates: stateFromStores,
           };
-          const tmpResult5 = guildId(5035);
+          const tmpResult5 = guildId(5041);
           const summarizedVoiceUsers = tmpResult5.computeSummarizedVoiceUsers(obj3);
           const found = summarizedVoiceUsers.filter(tmp16);
           cResult[10] = channels;
@@ -122,7 +122,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = found;
         }
       }
-      const tmpResult6 = guildId(5035);
+      const tmpResult6 = guildId(5041);
       const isAnyVoiceStateStageResult = tmpResult6.isAnyVoiceStateStage(channels, stateFromStores1, stateFromStores);
       cResult[6] = channels;
       cResult[7] = stateFromStores1;

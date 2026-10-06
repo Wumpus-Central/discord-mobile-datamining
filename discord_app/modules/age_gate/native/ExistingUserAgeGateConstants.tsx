@@ -9,5 +9,6 @@ export const ExistingUserAgeGateScreens = {
   Blocked: "Blocked",
   NSFWBlocked: "NSFWBlocked",
   NSFWGateGuild: "NSFWGateGuild",
+  NSFWVoiceChannel: "NSFWVoiceChannel",
   Pawtect: "Pawtect",
 };

@@ -4,7 +4,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import intl2 from "../../../intl/index.native.tsx";
 import RootNavigationRef from "../../main_tabs_v2/RootNavigationRef.native.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import _modDef10879 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
+import _modDef10892 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
@@ -33,7 +33,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(6);
       const tmp3 = closure_9();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef10879 };
+        const obj2 = { uri: _modDef10892 };
         cResult[0] = obj2;
         first = obj2;
       } else {
@@ -62,8 +62,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       const tmp = closure_9();
-      ({ source: { uri: _modDef10879 }, style: tmp.coachmarkImage });
-      ({ uri: _modDef10879 });
+      ({ source: { uri: _modDef10892 }, style: tmp.coachmarkImage });
+      ({ uri: _modDef10892 });
       return <metroRequire style={tmp.coachmarkImageContainer}>{null}</metroRequire>;
     };
 ReactCompilerGating = ReactCompilerGating_mod;

@@ -21,7 +21,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const DraftStore = DraftStore2;
 let set;
 
-const f94603 = (content_type) => {
+const f94743 = (content_type) => {
   let str = content_type.content_type;
   if (str == null) {
     str = "unknown";
@@ -171,7 +171,7 @@ export const getForumPostAttachmentMimetypes = function getForumPostAttachmentMi
     items = [];
   } else {
     const attachments = firstMessage.attachments;
-    items = attachments.map(f94603);
+    items = attachments.map(f94743);
   }
   return items;
 };
@@ -309,7 +309,7 @@ export const collectForumPostAnalyticsMetadata = function collectForumPostAnalyt
             items1 = [];
           } else {
             const attachments = firstMessage2.attachments;
-            items1 = attachments.map(f94603);
+            items1 = attachments.map(f94743);
           }
           tmp = obj2;
         }

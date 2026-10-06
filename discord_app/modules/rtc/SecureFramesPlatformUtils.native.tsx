@@ -27,13 +27,13 @@ let obj = {
   openSecureFramesStreamVerification(streamKey, channelId) {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { streamKey, channelId };
-    obj.openLazy(asyncRequire(9380, dependencyMap.paths), metroRequire, obj2);
+    obj.openLazy(asyncRequire(9394, dependencyMap.paths), metroRequire, obj2);
   },
   openSecureFramesUserVerificationModal(id, id2, fn) {
     if (fn()) {
       const obj2 = { userId: id, channelId: id2 };
       const obj = ModalActionCreatorsDefault;
-      obj.pushLazy(asyncRequire(9369, dependencyMap.paths), obj2, metroImportDefault);
+      obj.pushLazy(asyncRequire(9384, dependencyMap.paths), obj2, metroImportDefault);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -86,7 +86,7 @@ let obj = {
         tmp7(React4.CHANNEL(guildId, channelId));
         const obj = { userId, channelId, guildId, fingerprint };
         const obj3 = ActionSheetActionCreatorsDefault;
-        obj3.openLazy(asyncRequire(9383, dependencyMap.paths), hasOwnProperty, obj);
+        obj3.openLazy(asyncRequire(9397, dependencyMap.paths), hasOwnProperty, obj);
       }
     }
     const obj2 = { title: intl.string(intl3.t["5ICxE6"]), body: intl2.string(intl3.t["v1eXp/"]) };

@@ -106,7 +106,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         application = section.application;
       }
       if (cResult[0] !== application) {
-        const tmpResult = scrollOffsetY(11665);
+        const tmpResult = scrollOffsetY(11679);
         const appLauncherIconSource = tmpResult.getAppLauncherIconSource(application);
         cResult[0] = application;
         cResult[1] = appLauncherIconSource;
@@ -114,7 +114,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[1];
       }
-      const tmpResult5 = scrollOffsetY(4612);
+      const tmpResult5 = scrollOffsetY(4618);
       class I {
         constructor() {
           obj = { opacity: null, transform: null };
@@ -133,12 +133,12 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      let obj2 = { interpolate: scrollOffsetY(4612).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
+      let obj2 = { interpolate: scrollOffsetY(4618).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
       I.__closure = obj2;
       I.__workletHash = 12508066849017;
       I.__initData = __initData;
       const animatedStyle = tmpResult5.useAnimatedStyle(I);
-      const tmpResult6 = scrollOffsetY(4612);
+      const tmpResult6 = scrollOffsetY(4618);
       class S {
         constructor() {
           obj = { transform: null, opacity: null };
@@ -169,7 +169,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         APP_ICON_SIZE: 72,
         APP_ICON_BORDER_WIDTH: 4,
         DEFAULT_CONTENT_PADDING,
-        interpolate: scrollOffsetY(4612).interpolate,
+        interpolate: scrollOffsetY(4618).interpolate,
         scrollOffsetY,
         TOTAL_SCROLL_RANGE,
       };
@@ -177,7 +177,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       S.__workletHash = 12727209734626;
       S.__initData = __initData2;
       const animatedStyle1 = tmpResult6.useAnimatedStyle(S);
-      const tmpResult7 = scrollOffsetY(4612);
+      const tmpResult7 = scrollOffsetY(4618);
       class D {
         constructor() {
           obj = { opacity: null };
@@ -188,12 +188,12 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      let obj4 = { interpolate: scrollOffsetY(4612).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
+      let obj4 = { interpolate: scrollOffsetY(4618).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
       D.__closure = obj4;
       D.__workletHash = 5435153794228;
       D.__initData = __initData3;
       const animatedStyle2 = tmpResult7.useAnimatedStyle(D);
-      const tmpResult8 = scrollOffsetY(4580);
+      const tmpResult8 = scrollOffsetY(4586);
       let str = tmpResult8.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
       let tmp13 = tmp6;
       const tmp12 = useAvatarColorDefault;
@@ -336,7 +336,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                       color: "text-overlay-light",
                       children: displayName,
                     };
-                    const tmp33 = closure_6(scrollOffsetY(4886).Text, obj8);
+                    const tmp33 = closure_6(scrollOffsetY(4892).Text, obj8);
                     cResult[21] = tmp29;
                     cResult[22] = displayName;
                     cResult[23] = tmp33;
@@ -416,7 +416,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return getAppLauncherIconSource(application);
       }, items);
-      let obj = scrollOffsetY(4612);
+      let obj = scrollOffsetY(4618);
       class A {
         constructor() {
           let items;
@@ -434,12 +434,12 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      let obj2 = { interpolate: scrollOffsetY(4612).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
+      let obj2 = { interpolate: scrollOffsetY(4618).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
       A.__closure = obj2;
       A.__workletHash = 7452027319932;
       A.__initData = __initData4;
       const animatedStyle = obj.useAnimatedStyle(A);
-      let obj3 = scrollOffsetY(4612);
+      let obj3 = scrollOffsetY(4618);
       class C {
         constructor() {
           let items;
@@ -470,7 +470,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         APP_ICON_SIZE: 72,
         APP_ICON_BORDER_WIDTH: 4,
         DEFAULT_CONTENT_PADDING,
-        interpolate: scrollOffsetY(4612).interpolate,
+        interpolate: scrollOffsetY(4618).interpolate,
         scrollOffsetY,
         TOTAL_SCROLL_RANGE,
       };
@@ -478,7 +478,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       C.__workletHash = 3695464152805;
       C.__initData = __initData5;
       const animatedStyle1 = obj3.useAnimatedStyle(C);
-      let obj5 = scrollOffsetY(4612);
+      let obj5 = scrollOffsetY(4618);
       const fn = function f() {
         let items;
         let obj2;
@@ -487,15 +487,15 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         obj2 = ReanimatedRexport;
         return obj;
       };
-      let obj6 = { interpolate: scrollOffsetY(4612).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
+      let obj6 = { interpolate: scrollOffsetY(4618).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE };
       fn.__closure = obj6;
       fn.__workletHash = 10778290362673;
       fn.__initData = __initData6;
       const animatedStyle2 = obj5.useAnimatedStyle(fn);
-      let obj7 = scrollOffsetY(4580);
+      let obj7 = scrollOffsetY(4586);
       let str = obj7.useToken(section(587).colors.BACKGROUND_BASE_LOW);
       let tmp10 = memo;
-      const tmp9 = section(7815);
+      const tmp9 = section(7826);
       if (typeof memo !== "number") {
         let uri;
         if (memo != null) {
@@ -509,7 +509,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp9Result = tmp9(tmp10, str);
       if (null != memo) {
         const obj8 = { style: tmp.appIcon, source: memo };
-        tmp15 = closure_6(tmp8(5974), obj8);
+        tmp15 = closure_6(tmp8(5981), obj8);
         tmp16 = closure_6;
       } else {
         const obj9 = { style: items1 };
@@ -528,7 +528,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       items2[1] = prop;
       const obj11 = { style: items3 };
       items3 = [tmp.headerBannerOverlay, animatedStyle2];
-      items4 = [tmp16(section(4612).View, obj11), tmp16(section(11755), { onPress: onPressBack }), , ,];
+      items4 = [tmp16(section(4618).View, obj11), tmp16(section(11769), { onPress: onPressBack }), , ,];
       const obj12 = {
         lineClamp: 1,
         animated: true,
@@ -539,7 +539,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items5 = [tmp.appSmallName, animatedStyle];
       displayName = undefined;
-      const Text = scrollOffsetY(4886).Text;
+      const Text = scrollOffsetY(4892).Text;
       if (command != null) {
         displayName = command.displayName;
       }
@@ -547,7 +547,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       items4[3] = tmp16(scrollOffsetY(1188).Spacer, { size: 32 });
       const obj13 = { style: items6, children: tmp15 };
       items6 = [tmp.appIconMask, animatedStyle1];
-      items4[4] = tmp16(section(4612).View, obj13);
+      items4[4] = tmp16(section(4618).View, obj13);
       return closure_7(View, obj10);
     };
 size = size_mod;

@@ -192,6 +192,6 @@ export const openWelcomeActionSheet = function openWelcomeActionSheet(guildId) {
   const onHide = guildId.onHide;
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
-  const tmp2 = asyncRequire(12452, dependencyMap.paths);
+  const tmp2 = asyncRequire(12467, dependencyMap.paths);
   openLazy(tmp2, "GuildWelcomeActionSheet" + guildId, { guildId, onHide });
 };

@@ -74,7 +74,7 @@ export default function RestrictedMessagePreviewHeader(channel) {
         obj4.popWithKey(closure_1_5);
       },
     };
-    obj.openLazy(asyncRequire(12269, dependencyMap.paths), "MutualGuildsActionSheet", obj2);
+    obj.openLazy(asyncRequire(12284, dependencyMap.paths), "MutualGuildsActionSheet", obj2);
   }, items2);
   let obj4 = {
     accessibilityRole: "button",

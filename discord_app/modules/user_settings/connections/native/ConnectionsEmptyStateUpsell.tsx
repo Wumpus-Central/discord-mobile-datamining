@@ -108,7 +108,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       if (cResult[2] !== platform.type) {
-        const tmpResult = platform(14769);
+        const tmpResult = platform(14785);
         const connectionBackgroundColor = tmpResult.getConnectionBackgroundColor(platform.type);
         cResult[2] = platform.type;
         cResult[3] = connectionBackgroundColor;
@@ -155,7 +155,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                         let obj2 = { onPress: tmp6, style: tmp4.card, border: "strong", children: tmp19 };
-                        const tmp25 = closure_6(platform(5995).Card, obj2);
+                        const tmp25 = closure_6(platform(6002).Card, obj2);
                         cResult[23] = tmp6;
                         cResult[24] = tmp4.card;
                         cResult[25] = tmp19;
@@ -209,7 +209,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         whitePNG = platform.icon.whitePNG;
       } else {
         const icon = platform.icon;
-        const tmpResult4 = platform(4729);
+        const tmpResult4 = platform(4735);
         whitePNG = tmpResult4.isThemeDark(tmp5) ? icon.darkPNG : icon.lightPNG;
       }
       const source = makeSource(whitePNG);
@@ -473,7 +473,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let items6;
       let obj4;
       const tmp = closure_8();
-      let obj = emptyStatePlatforms(7012);
+      let obj = emptyStatePlatforms(7025);
       emptyStatePlatforms = obj.useEmptyStatePlatforms();
       const items = [emptyStatePlatforms];
       const memo = react.useMemo(() => emptyStatePlatforms.slice(0, 3), items);
@@ -484,7 +484,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       obj4 = { style: tmp.content, children: items5 };
       const obj5 = { spacing: 16, direction: "vertical", align: "center", style: tmp.textContainer, children: items3 };
       ({ paddingBottom: useSafeAreaInsetsDefault().bottom });
-      const Stack = emptyStatePlatforms(5593).Stack;
+      const Stack = emptyStatePlatforms(5600).Stack;
       const obj6 = {
         spacing: 16,
         justify: "center",
@@ -494,10 +494,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return closure_1_6(closure_1_9, obj, platform.type);
         }),
       };
-      const Stack2 = emptyStatePlatforms(5593).Stack;
+      const Stack2 = emptyStatePlatforms(5600).Stack;
       items3 = [closure_6(Stack2, obj6)];
       const obj7 = { spacing: 16, justify: "center", direction: "horizontal", children: items4 };
-      const Stack3 = emptyStatePlatforms(5593).Stack;
+      const Stack3 = emptyStatePlatforms(5600).Stack;
       items4 = [
         memo1.map((platform) => {
           const obj = { platform };
@@ -509,14 +509,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       items3[1] = closure_7(Stack3, obj7);
       items5 = [closure_7(Stack, obj5)];
       const obj9 = { spacing: 8, align: "center", style: tmp.textContainer, children: items6 };
-      const Stack4 = emptyStatePlatforms(5593).Stack;
+      const Stack4 = emptyStatePlatforms(5600).Stack;
       const obj10 = {
         variant: "text-lg/bold",
         color: "mobile-text-heading-primary",
         style: tmp.text,
         children: intl.string(emptyStatePlatforms(1126).t.JlrHXb),
       };
-      const Text = emptyStatePlatforms(4886).Text;
+      const Text = emptyStatePlatforms(4892).Text;
       intl = emptyStatePlatforms(1126).intl;
       items6 = [closure_6(Text, obj10)];
       const obj11 = {
@@ -525,7 +525,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.text,
         children: intl2.string(emptyStatePlatforms(1126).t.XijaQP),
       };
-      const Text2 = emptyStatePlatforms(4886).Text;
+      const Text2 = emptyStatePlatforms(4892).Text;
       intl2 = emptyStatePlatforms(1126).intl;
       items6[1] = closure_6(Text2, obj11);
       items5[1] = closure_7(Stack4, obj9);

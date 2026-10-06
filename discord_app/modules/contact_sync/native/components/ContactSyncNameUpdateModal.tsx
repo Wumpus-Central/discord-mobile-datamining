@@ -184,8 +184,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       cResult[2] = tmp6;
       cResult[3] = undefined;
-      cResult[4] = jsx(onNext(12346), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
-      const tmp12 = jsx(onNext(12346), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
+      cResult[4] = jsx(onNext(12361), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
+      const tmp12 = jsx(onNext(12361), { onNext, onRemoveName: E, loading: tmp6, initialName: undefined });
     }
   : () => {
       let str;

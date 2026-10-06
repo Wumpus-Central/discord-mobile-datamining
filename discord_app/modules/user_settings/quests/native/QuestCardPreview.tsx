@@ -43,12 +43,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp5;
       }
-      const QuestContentImpressionTrackerNative = tmp(10958).QuestContentImpressionTrackerNative;
+      const QuestContentImpressionTrackerNative = tmp(10971).QuestContentImpressionTrackerNative;
       const tmp6 = (
         <QuestContentImpressionTrackerNative
           questOrQuests={quest}
-          questContent={tmp(5626).QuestContent.INTERNAL_PREVIEW_TOOL}
-          sourceQuestContent={tmp(5626).QuestContent.INTERNAL_PREVIEW_TOOL}
+          questContent={tmp(5633).QuestContent.INTERNAL_PREVIEW_TOOL}
+          sourceQuestContent={tmp(5633).QuestContent.INTERNAL_PREVIEW_TOOL}
           trackGuildAndChannelMetadata={false}
         >
           {tmp4}
@@ -61,12 +61,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (quest) => {
       quest = quest.quest;
-      const QuestContentImpressionTrackerNative = quest(10958).QuestContentImpressionTrackerNative;
+      const QuestContentImpressionTrackerNative = quest(10971).QuestContentImpressionTrackerNative;
       return (
         <QuestContentImpressionTrackerNative
           questOrQuests={quest}
-          questContent={quest(5626).QuestContent.INTERNAL_PREVIEW_TOOL}
-          sourceQuestContent={quest(5626).QuestContent.INTERNAL_PREVIEW_TOOL}
+          questContent={quest(5633).QuestContent.INTERNAL_PREVIEW_TOOL}
+          sourceQuestContent={quest(5633).QuestContent.INTERNAL_PREVIEW_TOOL}
           trackGuildAndChannelMetadata={false}
         >
           {function children() {

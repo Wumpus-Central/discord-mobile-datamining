@@ -70,7 +70,7 @@ const memoResult = react.memo(
           height = nativeDefault.space.PX_48;
         }
         const tmp6 = closure_8(height);
-        const tmpResult = sharedValue(4612);
+        const tmpResult = sharedValue(4618);
         sharedValue = tmpResult.useSharedValue(1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
@@ -97,7 +97,7 @@ const memoResult = react.memo(
             tmp12 = cResult[5];
           }
           const effect = react.useEffect(tmp11, tmp12);
-          const tmpResult4 = sharedValue(4612);
+          const tmpResult4 = sharedValue(4618);
           class I {
             constructor() {
               const obj = { opacity: sharedValue.get() };
@@ -299,7 +299,7 @@ const memoResult = react.memo(
         let sharedValue;
         flag = undefined;
         const tmp3 = closure_8(height);
-        let obj = sharedValue(4612);
+        let obj = sharedValue(4618);
         const tmp4 = sharedValue;
         sharedValue = obj.useSharedValue(1);
         let obj2 = sharedValue(504);
@@ -326,7 +326,7 @@ const memoResult = react.memo(
             const result1 = set(1);
           }
         }, items1);
-        const tmp4Result = tmp4(4612);
+        const tmp4Result = tmp4(4618);
         class S {
           constructor() {
             const obj = { opacity: sharedValue.get() };
@@ -340,7 +340,7 @@ const memoResult = react.memo(
         const obj3 = { style: items2, collapsable: false, children: items3 };
         items2 = [tmp3.row, animatedStyle];
         const obj4 = { style: tmp3.placeholderAvatar };
-        View = flag(4612).View;
+        View = flag(4618).View;
         items3 = [closure_6(View, obj4)];
         const obj5 = { style: tmp3.rowInner, children: closure_6(View, obj6) };
         obj6 = { style: tmp3.rowHeaderWrapper, children: closure_6(View, obj7) };

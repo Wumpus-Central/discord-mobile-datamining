@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16172_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/16212_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";

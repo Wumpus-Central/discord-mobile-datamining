@@ -245,7 +245,7 @@ function FeaturedServer(guild) {
     color: "mobile-text-heading-primary",
     children: guild.name,
   };
-  items3 = [closure_14(guild(4886).Text, obj4)];
+  items3 = [closure_14(guild(4892).Text, obj4)];
   let obj5 = {
     maxFontSizeMultiplier: 1,
     lineClamp: 3,
@@ -253,11 +253,11 @@ function FeaturedServer(guild) {
     color: "text-default",
     children: guild.description,
   };
-  items3[1] = closure_14(guild(4886).Text, obj5);
+  items3[1] = closure_14(guild(4892).Text, obj5);
   items2[1] = closure_15(View, obj3);
   let obj6 = { style: tmp.buttonContainer, children: closure_14(Button, obj7) };
   obj7 = { disabled: stateFromStores, loading: first, text: stringResult, size: "sm", onPress: callback, grow: true };
-  Button = guild(5594).Button;
+  Button = guild(5601).Button;
   let intl = guild(1126).intl;
   const string = intl.string;
   const t = guild(1126).t;
@@ -363,7 +363,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol = Symbol;
             if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
               size = {
-                shape: guild(8469).CutoutShape.RoundedRect,
+                shape: guild(8502).CutoutShape.RoundedRect,
                 x: 8,
                 y: 46,
                 width: 56,
@@ -411,7 +411,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj4 = {
                     style: tmp4.guildIcon,
                     guild: tmp14,
-                    size: guild(5971).GuildIconSizes.LARGE,
+                    size: guild(5978).GuildIconSizes.LARGE,
                     animate: !stateFromStores,
                   };
                   const tmp29 = GuildIconDefault;
@@ -498,7 +498,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         return obj.fromClientDiscoverableGuild(guild);
       }, items1);
       const obj4 = { cutouts: items2, children: tmp12Result };
-      size = { shape: guild(8469).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+      size = { shape: guild(8502).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
       items2 = [size];
       const tmp14 = ClipViewDefault;
       if (null != guild.banner) {
@@ -514,7 +514,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = {
         style: tmp.guildIcon,
         guild: memo,
-        size: guild(5971).GuildIconSizes.LARGE,
+        size: guild(5978).GuildIconSizes.LARGE,
         animate: !stateFromStores,
       };
       const tmp13Result = GuildIconDefault;

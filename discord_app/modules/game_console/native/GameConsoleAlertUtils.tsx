@@ -90,7 +90,7 @@ let obj = {
     };
     const show = tmp.show;
     ({ body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close });
-    const SelfDismissibleAlertBody = reconnectPlatformType(9453).SelfDismissibleAlertBody;
+    const SelfDismissibleAlertBody = reconnectPlatformType(9466).SelfDismissibleAlertBody;
     show(obj);
   },
 };

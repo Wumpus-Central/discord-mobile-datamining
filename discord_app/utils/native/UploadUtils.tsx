@@ -537,7 +537,7 @@ obj = function _mediaManager() {
               closure_3 = tmp;
               c6 = 1;
               c7 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c6) {
             if (arg0 === 1) {
@@ -1366,7 +1366,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != require.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj4 = { uri: require, overrideType: "r" };
+                  const obj4 = { uri: require, overrideType: "Array" };
                   const tmp12Result8 = UploadUtils;
                   isVideo = tmp12Result8.getFile(obj4).isVideo;
                 }
@@ -1397,7 +1397,7 @@ function convertVideo(videoMetadata) {
                 } else {
                   isVideo2 = null != require.match(/^assets-library:\/\/.+&ext=mp4$/i);
                   if (isVideo2) {
-                    obj6 = { uri: require, overrideType: "r" };
+                    obj6 = { uri: require, overrideType: "Array" };
                     const tmp12Result11 = UploadUtils;
                     isVideo2 = tmp12Result11.getFile(obj6).isVideo;
                   }
@@ -1637,7 +1637,7 @@ obj = function _processVideoUpload() {
             encodingConfig = undefined;
             fileSize = 1;
             spoiler = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === fileSize) {
           if (arg0 === 1) {
@@ -1873,7 +1873,7 @@ obj = function _processImageOrFileUpload() {
             closure_26 = undefined;
             i = 1;
             width = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {
@@ -2210,7 +2210,7 @@ obj = function _tryConvertImage() {
               path3 = undefined;
               useJpegliEncoder = 1;
               c7 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
             break;
           }

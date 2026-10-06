@@ -536,7 +536,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = NavigatorHeader;
         return obj;
       }, items1);
-      return jsx(url(10976).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
+      return jsx(url(10989).Modal, { screens: memo1, initialRouteName: constants.PREVIEW });
     };
 const result = size.fileFinishedImporting("modules/media/native/PlaintextFilePreviewModal.tsx");
 

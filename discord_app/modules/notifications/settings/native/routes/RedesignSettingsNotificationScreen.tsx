@@ -2,7 +2,7 @@
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../../_runtime/00576_react.js";
 import intl2 from "../../../../../intl/index.native.tsx";
-import _modDef2819 from "../../../NotificationSettings.messages.js";
+import _modDef2847 from "../../../NotificationSettings.messages.js";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import SettingsConstants from "../../../../user_settings/core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../../settings/native/renderer/SettingBuilders.tsx";
@@ -49,7 +49,7 @@ const memoResult = memo(
           items = [,];
           const tmpResult2 = MobileNotifSettingsRouteBuilders;
           items[0] = tmpResult2.buildOverviewCategoriesSection();
-          const obj5 = { label: intl.string(_modDef2819.nvBHcD), settings: items1 };
+          const obj5 = { label: intl.string(_modDef2847.nvBHcD), settings: items1 };
           intl = intl2.intl;
           items1 = [, , , , , ,];
           ({
@@ -135,7 +135,7 @@ const memoResult = memo(
           items = [,];
           const obj2 = MobileNotifSettingsRouteBuilders;
           items[0] = obj2.buildOverviewCategoriesSection();
-          const obj3 = { label: intl.string(_modDef2819.nvBHcD), settings: items1 };
+          const obj3 = { label: intl.string(_modDef2847.nvBHcD), settings: items1 };
           intl = intl2.intl;
           items1 = [, , , , , ,];
           ({

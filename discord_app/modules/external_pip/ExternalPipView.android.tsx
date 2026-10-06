@@ -107,11 +107,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { disabled: !obj3.isSupported() };
         cResult[0] = obj2;
         first = obj2;
-        obj3 = setExternalPipActive(9110);
+        obj3 = setExternalPipActive(9145);
       } else {
         first = cResult[0];
       }
-      externalPipEnabled = setExternalPipActive(17154)(first).externalPipEnabled;
+      externalPipEnabled = setExternalPipActive(17183)(first).externalPipEnabled;
       ({ externalPipActive, setExternalPipActive } = closure_7());
       closure_7();
       if (cResult[1] !== externalPipEnabled) {
@@ -256,8 +256,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2;
       let setExternalPipActive;
       let obj = { disabled: !obj2.isSupported() };
-      const tmp = setExternalPipActive(17154);
-      obj2 = setExternalPipActive(9110);
+      const tmp = setExternalPipActive(17183);
+      obj2 = setExternalPipActive(9145);
       const externalPipEnabled = tmp(obj).externalPipEnabled;
       const tmp2 = closure_7();
       setExternalPipActive = tmp2.setExternalPipActive;

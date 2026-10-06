@@ -22,9 +22,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = guildId(576);
       const cResult = obj.c(11);
       guildId = guildId.guildId;
-      let obj2 = guildId(4580);
+      let obj2 = guildId(4586);
       token = obj2.useToken(token(587).modules.mobile.TABLE_ROW_ICON_SIZE);
-      const arr = token(16514)(guildId);
+      const arr = token(16554)(guildId);
       if (cResult[0] !== guildId) {
         const fn = function l(channelId) {
           const obj = GuildOnboardingHomeActionCreators;
@@ -46,7 +46,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp6 = cResult[5];
           }
           if (cResult[9] !== tmp6) {
-            const ActionSheet = tmp(6701).ActionSheet;
+            const ActionSheet = tmp(6708).ActionSheet;
             let obj4 = { hasIcons: true, children: tmp6 };
             const tmp11 = <ActionSheet>{null}</ActionSheet>;
             cResult[9] = tmp6;
@@ -108,10 +108,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   : (guildId) => {
       let closure_1;
       guildId = guildId.guildId;
-      let obj = guildId(4580);
+      let obj = guildId(4586);
       importDefault = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE);
       const arr = useResourceChannelsDefault(guildId);
-      const ActionSheet = guildId(6701).ActionSheet;
+      const ActionSheet = guildId(6708).ActionSheet;
       ({
         hasIcons: true,
         children: arr.map((label) => {
@@ -141,7 +141,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           );
         }),
       });
-      const Group = guildId(6697).ActionSheetRow.Group;
+      const Group = guildId(6704).ActionSheetRow.Group;
       return <ActionSheet>{null}</ActionSheet>;
     };
 let size = size_mod;

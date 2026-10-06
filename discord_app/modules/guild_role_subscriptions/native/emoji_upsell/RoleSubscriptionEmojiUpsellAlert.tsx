@@ -3,7 +3,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import intl4 from "../../../../intl/index.native.tsx";
 import ChannelConstants from "../../../channel/ChannelConstants.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/08819_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/08849_AssetRegistry.js";
 import CreatorRevenueButton2 from "../components/CreatorRevenueButton.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -60,7 +60,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== name) {
         const obj2 = {
-          image: onClose(8819),
+          image: onClose(8849),
           title: intl.string(tmp(1126).t.cBjkcx),
           description: intl2.formatToPlainString(tmp(1126).t["h0u/Hi"], obj3),
         };
@@ -116,14 +116,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp19;
             }
           }
-          const tmp21 = jsx(onClose(5783), { cancelText: tmp13, onClose, renderConfirmButton: tmp15, children: tmp16 });
+          const tmp21 = jsx(onClose(5790), { cancelText: tmp13, onClose, renderConfirmButton: tmp15, children: tmp16 });
           cResult[14] = onClose;
           cResult[15] = tmp15;
           cResult[16] = tmp16;
           cResult[17] = tmp21;
           tmp19 = tmp21;
         }
-        const tmp18 = jsx(tmp(8827).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
+        const tmp18 = jsx(tmp(8857).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
         cResult[11] = diff;
         cResult[12] = tmp11;
         cResult[13] = tmp18;

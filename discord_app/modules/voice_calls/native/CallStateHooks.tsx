@@ -64,7 +64,7 @@ export default function _default() {
   );
   const participants = stateFromStores.getParticipants(tmp);
   let found = participants.filter((type) => type.type !== ParticipantTypes.ACTIVITY && type.user.id !== id);
-  const tmp3 = id(9445)();
+  const tmp3 = id(9458)();
   dependencyMap = tmp3;
   obj2 = require("get initialized");
   const items2 = [RTCConnectionStore];

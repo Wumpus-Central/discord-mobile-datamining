@@ -57,7 +57,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== author) {
           const Avatar = native.Avatar;
-          const tmp11 = <Avatar user={author} size={native.AvatarSizes.NORMAL} guildId="r" />;
+          const tmp11 = <Avatar user={author} size={native.AvatarSizes.NORMAL} guildId="Array" />;
           cResult[6] = author;
           cResult[7] = tmp11;
           tmp9 = tmp11;
@@ -125,11 +125,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           rootNavigationRef.navigate("message-requests");
         }
       }, []);
-      const NotificationPressable = author(12516).NotificationPressable;
-      let obj2 = { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "r" };
+      const NotificationPressable = author(12531).NotificationPressable;
+      let obj2 = { user: author, size: author(1188).AvatarSizes.NORMAL, guildId: "Array" };
       const Avatar = author(1188).Avatar;
       ({ text: intl.string(author(1126).t["Bx4/Lf"]) });
-      const SystemMessageText = author(12486).SystemMessageText;
+      const SystemMessageText = author(12501).SystemMessageText;
       intl = author(1126).intl;
       return (
         <NotificationPressable icon={null} header={memo} onPress={callback} notification={notification}>

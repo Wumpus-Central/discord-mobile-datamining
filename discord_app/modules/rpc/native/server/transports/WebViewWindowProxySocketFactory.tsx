@@ -25,6 +25,6 @@ export default function _default(logger) {
       info(combined, stripSensitiveLoggingDataDefault(arg0));
     },
   };
-  const tmp = new logger(9035)(obj);
+  const tmp = new logger(9068)(obj);
   return tmp;
 }

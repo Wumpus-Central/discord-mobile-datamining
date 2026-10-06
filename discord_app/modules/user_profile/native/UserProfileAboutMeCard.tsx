@@ -536,12 +536,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_5.locale;
           }
         }
-        const getCreatedAtDate = tmp(6678).getCreatedAtDate;
-        tmp(6678);
+        const getCreatedAtDate = tmp(6685).getCreatedAtDate;
+        tmp(6685);
         const obj5 = guildId(11);
         const createdAtDate = getCreatedAtDate(obj5.extractTimestamp(userId), stateFromStores);
-        const getCreatedAtDate2 = tmp(6678).getCreatedAtDate;
-        tmp(6678);
+        const getCreatedAtDate2 = tmp(6685).getCreatedAtDate;
+        tmp(6685);
         if (stateFromStores2 != null) {
           class R {
             constructor() {
@@ -759,13 +759,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return member;
       });
-      const getCreatedAtDate = userId(6678).getCreatedAtDate;
-      userId(6678);
+      const getCreatedAtDate = userId(6685).getCreatedAtDate;
+      userId(6685);
       const obj4 = SnowflakeUtilsDefault;
       const createdAtDate = getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
       let joinedAt;
-      const getCreatedAtDate2 = userId(6678).getCreatedAtDate;
-      userId(6678);
+      const getCreatedAtDate2 = userId(6685).getCreatedAtDate;
+      userId(6685);
       if (stateFromStores2 != null) {
         joinedAt = stateFromStores2.joinedAt;
       }
@@ -777,7 +777,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       items4 = [tmp.memberJoinDates, { columnGap }];
       const obj7 = {
         themeType,
-        icon: closure_11(userId(10547).ClydeIcon, { size: "xs" }),
+        icon: closure_11(userId(10560).ClydeIcon, { size: "xs" }),
         accessibilityLabel: intl2.formatToPlainString(userId(1126).t["9t7w53"], { date: createdAtDate }),
         children: createdAtDate,
       };
@@ -793,14 +793,14 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           importantForAccessibility: "no-hide-descendants",
           children,
         };
-        items6 = [closure_11(userId(4886).Text, obj9)];
+        items6 = [closure_11(userId(4892).Text, obj9)];
         const obj10 = {
           themeType,
           icon: closure_11(tmp10Result, obj11),
           accessibilityLabel: intl3.formatToPlainString(userId(1126).t.FdLNDK, obj12),
           children: createdAtDate2,
         };
-        obj11 = { guild: stateFromStores1, size: userId(5971).GuildIconSizes.XXSMALL };
+        obj11 = { guild: stateFromStores1, size: userId(5978).GuildIconSizes.XXSMALL };
         tmp10Result = GuildIconDefault;
         intl3 = tmp4(1126).intl;
         obj12 = { guildName: stateFromStores1.name, date: createdAtDate2 };
@@ -1114,7 +1114,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp13;
         tmp11 = tmp13;
       }
-      const tmp10 = closure_11(url(4886).Text, { variant: textVariant, color: "text-link", children: label });
+      const tmp10 = closure_11(url(4892).Text, { variant: textVariant, color: "text-link", children: label });
       cResult[4] = label;
       cResult[5] = textVariant;
       cResult[6] = tmp10;

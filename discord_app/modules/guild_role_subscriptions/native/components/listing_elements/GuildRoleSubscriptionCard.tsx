@@ -187,7 +187,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const obj7 = { renderGap: first3, children: items };
                     items = [tmp14, tmp16, tmp27, tmp33];
-                    const tmp41 = closure_8(guildId(9953).GappedList, obj7);
+                    const tmp41 = closure_8(guildId(9966).GappedList, obj7);
                     cResult[18] = tmp14;
                     cResult[19] = tmp16;
                     cResult[20] = tmp27;
@@ -210,7 +210,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       return metroRequire(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, obj, index);
                     }),
                   };
-                  const GappedList2 = guildId(9953).GappedList;
+                  const GappedList2 = guildId(9966).GappedList;
                   items1[2] = closure_6(GappedList2, obj11);
                   tmp34 = closure_8(closure_7, obj8);
                 }
@@ -235,7 +235,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   return metroRequire(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, obj, benefit.ref_id);
                 }),
               };
-              const GappedList = guildId(9953).GappedList;
+              const GappedList = guildId(9966).GappedList;
               items2[2] = closure_6(GappedList, obj15);
               tmp28 = closure_8(closure_7, obj12);
             }
@@ -267,7 +267,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp16 = tmp17;
       }
       const obj20 = { children: items5 };
-      items5 = [tmp8, tmp9, closure_6(guildId(15056).GuildRoleSubscriptionMemberPreview, { guildId, role })];
+      items5 = [tmp8, tmp9, closure_6(guildId(15071).GuildRoleSubscriptionMemberPreview, { guildId, role })];
       const tmp15 = closure_8(closure_7, obj20);
       cResult[3] = guildId;
       cResult[4] = role;
@@ -308,12 +308,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj6 = { children: items };
       const obj7 = { children: intl.string(guildId(1126).t["DJ+bGu"]) };
-      const GappedList = guildId(9953).GappedList;
+      const GappedList = guildId(9966).GappedList;
       intl = guildId(1126).intl;
       items = [
         closure_6(closure_10, obj7),
         closure_6(guildId(1188).Spacer, { size: 8 }),
-        closure_6(guildId(15056).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+        closure_6(guildId(15071).GuildRoleSubscriptionMemberPreview, { guildId, role }),
       ];
       items1 = [closure_8(closure_7, obj6), , ,];
       let tmp5Result = null;
@@ -345,7 +345,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             return metroRequire(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, obj, benefit.ref_id);
           }),
         };
-        const GappedList2 = guildId(9953).GappedList;
+        const GappedList2 = guildId(9966).GappedList;
         items4[2] = closure_6(GappedList2, obj15);
         tmp5Result3 = closure_8(closure_7, obj12);
       }
@@ -364,7 +364,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             return metroRequire(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, obj, index);
           }),
         };
-        const GappedList3 = guildId(9953).GappedList;
+        const GappedList3 = guildId(9966).GappedList;
         items5[2] = closure_6(GappedList3, obj19);
         tmp5Result4 = closure_8(closure_7, obj16);
       }

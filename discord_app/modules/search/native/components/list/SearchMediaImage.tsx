@@ -272,9 +272,9 @@ let closure_20 = memo(
           }
           const tmpResult = channelId(504);
           const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp8);
-          const tmpResult6 = channelId(7945);
+          const tmpResult6 = channelId(7956);
           const shouldDisplaySpoilerObscurity = tmpResult6.useShouldDisplaySpoilerObscurity(stateFromStores);
-          if (obscureReason !== channelId(6799).ObscureReason.SPOILER) {
+          if (obscureReason !== channelId(6809).ObscureReason.SPOILER) {
             tmp11 = obscureReason;
           } else {
             tmp11 = null;
@@ -294,7 +294,7 @@ let closure_20 = memo(
                             tmp13 = cResult[14];
                           }
                           if (cResult[15] !== tmp11) {
-                            const tmpResult7 = channelId(11626);
+                            const tmpResult7 = channelId(11640);
                             const obscuredAlt = tmpResult7.getObscuredAlt(tmp11);
                             cResult[15] = tmp11;
                             cResult[16] = obscuredAlt;
@@ -404,7 +404,7 @@ let closure_20 = memo(
                                 }
                               }
                               const obj6 = { style: tmp4, uri: tmp13, placeholder, placeholderVersion, alt: tmp27 };
-                              const tmp31 = closure_15(channelId(8409).ImageWithPlaceholder, obj6);
+                              const tmp31 = closure_15(channelId(8442).ImageWithPlaceholder, obj6);
                               cResult[33] = tmp27;
                               cResult[34] = placeholder;
                               cResult[35] = placeholderVersion;
@@ -725,7 +725,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const authorId = attachment.authorId;
       const merged = Object.assign(attachment, Object.assign({ attachment: 0, channelId: 0, authorId: 0 }));
       dependencyMap = undefined;
-      let obj = attachment(11303);
+      let obj = attachment(11316);
       const enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(
         channelId,
         authorId,
@@ -738,7 +738,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let hasFlagResult = hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
       if (!hasFlagResult) {
-        const tmp2Result = attachment(6832);
+        const tmp2Result = attachment(6842);
         hasFlagResult = tmp2Result.isChannelSpoilerGated(ChannelStore.getChannel(channelId));
       }
       dependencyMap = hasFlagResult;
@@ -748,7 +748,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return obj.getObscureReasonForAttachment(attachment, enabledHarmTypesBitmaskForChannelAndAuthorId, c2);
       }, items);
       const obj2 = { channelId, obscureReason: memo, mediaUrl: attachmentUrl };
-      const tmp2Result2 = attachment(7939);
+      const tmp2Result2 = attachment(7950);
       attachmentUrl = tmp2Result2.getAttachmentUrl(attachment);
       const merged1 = Object.assign(merged);
       ({ height: obj4.mediaHeight, width: obj4.mediaWidth } = attachment);
@@ -1018,9 +1018,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         embed,
         Object.assign({ embed: 0, sources: 0, messageId: 0, channelId: 0, authorId: 0 }),
       );
-      let obj = embed(11303);
+      let obj = embed(11316);
       closure_3 = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId);
-      const obj2 = embed(6832);
+      const obj2 = embed(6842);
       closure_4 = obj2.useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
       const items = [SearchMessageStore];
       const thumbnail = embed.thumbnail;
@@ -1047,12 +1047,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           return getObscureReasonForEmbed(embed, message, flag2, closure_3);
         }
       });
-      const obj4 = embed(7939);
+      const obj4 = embed(7950);
       size = obj4.getEmbedMedia(embed);
       let embedUrl = null;
       const tmp2 = embed;
       if (null != size) {
-        let tmp2Result = tmp2(7939);
+        let tmp2Result = tmp2(7950);
         embedUrl = tmp2Result.getEmbedUrl(size);
       }
       if (null != thumbnail) {

@@ -17,8 +17,8 @@ export default function getTimestampString(arg0, fn) {
   }
   importDefault = undefined;
   let time;
-  let obj = require("../../../_runtime/metro/04461__.js")();
-  const diffResult = obj.diff(require("../../../_runtime/metro/04461__.js")(arg0), "s");
+  let obj = require("../../../_runtime/metro/04467__.js")();
+  const diffResult = obj.diff(require("../../../_runtime/metro/04467__.js")(arg0), "s");
   let tmp4;
   const tmp = importDefault;
   if (null != fn) {

@@ -3,26 +3,26 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
 import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
-import AssetRegistryDefault from "../../../../../_runtime/04816_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/04840_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04822_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/04846_AssetRegistry.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
 import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
 import getInviteURLDefault from "../../getInviteURL.tsx";
-import AssetRegistryDefault3 from "../../../../../_runtime/09265_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../_runtime/09300_AssetRegistry.js";
 import ShareDefault from "../../../icons/native/Share.tsx";
-import AssetRegistryDefault4 from "../../../../../_runtime/09521_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../../_runtime/09522_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../../_runtime/09523_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../../_runtime/09541_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../../_runtime/09542_AssetRegistry.js";
-import AssetRegistryDefault9 from "../../../../../_runtime/09543_AssetRegistry.js";
-import AssetRegistryDefault10 from "../../../../../_runtime/09544_AssetRegistry.js";
-import AssetRegistryDefault11 from "../../../../../_runtime/09545_AssetRegistry.js";
-import AssetRegistryDefault12 from "../../../../../_runtime/09546_AssetRegistry.js";
-import AssetRegistryDefault13 from "../../../../../_runtime/09547_AssetRegistry.js";
-import AssetRegistryDefault14 from "../../../../../_runtime/09548_AssetRegistry.js";
-import AssetRegistryDefault15 from "../../../../../_runtime/09549_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../../_runtime/09534_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../../_runtime/09535_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../../../_runtime/09536_AssetRegistry.js";
+import AssetRegistryDefault7 from "../../../../../_runtime/09554_AssetRegistry.js";
+import AssetRegistryDefault8 from "../../../../../_runtime/09555_AssetRegistry.js";
+import AssetRegistryDefault9 from "../../../../../_runtime/09556_AssetRegistry.js";
+import AssetRegistryDefault10 from "../../../../../_runtime/09557_AssetRegistry.js";
+import AssetRegistryDefault11 from "../../../../../_runtime/09558_AssetRegistry.js";
+import AssetRegistryDefault12 from "../../../../../_runtime/09559_AssetRegistry.js";
+import AssetRegistryDefault13 from "../../../../../_runtime/09560_AssetRegistry.js";
+import AssetRegistryDefault14 from "../../../../../_runtime/09561_AssetRegistry.js";
+import AssetRegistryDefault15 from "../../../../../_runtime/09562_AssetRegistry.js";
 import InstantInviteConstants from "../InstantInviteConstants.tsx";
 import Constants from "../../../../Constants.tsx";
 import MetaQuestUtils_mod from "../../../device/MetaQuestUtils.android.tsx";
@@ -126,7 +126,7 @@ const obj4 = {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     ActionSheetActionCreatorsDefault;
     const obj = { link: getInviteURLDefault(code), location: _location, channel };
-    const tmp2 = asyncRequire(9524, dependencyMap.paths);
+    const tmp2 = asyncRequire(9537, dependencyMap.paths);
     const combined = "InstantInviteQRCodeActionSheet-" + code;
     openLazy(tmp2, combined, obj, "stack");
   },
@@ -150,14 +150,14 @@ const obj5 = {
     const code = channel.code;
     ({ message, location: _location } = channel);
     let tmp = channel;
-    let obj = channel(9481);
+    let obj = channel(9494);
     obj.trackOptionClicked(code, channel, constants.SMS, _location);
     let obj2 = channel(1369);
     if (obj2.isIOS()) {
-      let obj3 = code(4854);
+      let obj3 = code(4860);
       obj3.hideActionSheet();
     }
-    const tmpResult = tmp(5023);
+    const tmpResult = tmp(5029);
     tmpResult.sendSMS({ body: message }, (arg0, arg1, arg2) => {
       let id;
       let intl;
@@ -222,14 +222,14 @@ const obj6 = {
     const code = channel.code;
     ({ message, location: _location } = channel);
     let tmp = channel;
-    let obj = channel(9481);
+    let obj = channel(9494);
     obj.trackOptionClicked(code, channel, constants.EMAIL, _location);
     let obj2 = channel(1369);
     if (obj2.isIOS()) {
-      let obj3 = code(4854);
+      let obj3 = code(4860);
       obj3.hideActionSheet();
     }
-    const tmpResult = tmp(5023);
+    const tmpResult = tmp(5029);
     tmpResult.sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
       let id;
       let intl;

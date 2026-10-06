@@ -9,7 +9,7 @@ import asyncRequire from "../../_runtime/01987_asyncRequire.js";
 import LinkingDefault from "../lib/native/Linking.tsx";
 import ModalActionCreatorsDefault from "../actions/ModalActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../actions/native/AlertActionCreators.tsx";
-import AssetRegistryDefault from "../../_runtime/06584_AssetRegistry.js";
+import AssetRegistryDefault from "../../_runtime/06591_AssetRegistry.js";
 import openUserSettings from "../modules/user_settings/core/native/openUserSettings.tsx";
 import FamilyCenterConstants from "../modules/parent_tools/FamilyCenterConstants.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
@@ -152,7 +152,7 @@ export default function QRScannerModal(showHelp) {
               tmp22Result.pop();
               const obj2 = { remoteAuthFingerprint: result };
               const tmp22Result4 = ModalActionCreatorsDefault;
-              tmp22Result4.pushLazy(asyncRequire(13676, dependencyMap.paths), obj2);
+              tmp22Result4.pushLazy(asyncRequire(13692, dependencyMap.paths), obj2);
             } else {
               let match;
               if (url.pathname != null) {
@@ -184,7 +184,7 @@ export default function QRScannerModal(showHelp) {
           show(obj4);
           tmp9 = importDefault;
         }
-        const tmp9Result = tmp9(5093);
+        const tmp9Result = tmp9(5099);
         tmp9Result.pop();
       },
     };

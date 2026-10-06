@@ -8,7 +8,7 @@ import Constants from "../../../Constants.tsx";
 import intl4 from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3269 from "../IncentivizedAccountLinking.messages.js";
+import _modDef3297 from "../IncentivizedAccountLinking.messages.js";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -16,8 +16,8 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import APNGDecorationNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
 import PromoSheet2 from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import WindowLaunchIcon2 from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
-import _modDef15741 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
-import _modDef15742 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
+import _modDef15777 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import _modDef15778 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
 import react from "../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -83,16 +83,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp11Result;
         if (stateFromStores) {
           size = { width: v150, height: v150 };
-          tmp11Result = <Image source={{ uri: _modDef15741 }} style={size} />;
-          const obj3 = { uri: _modDef15741 };
+          tmp11Result = <Image source={{ uri: _modDef15777 }} style={size} />;
+          const obj3 = { uri: _modDef15777 };
         } else {
           const tmpResult2 = PlatformUtils;
           if (tmpResult2.isAndroid()) {
             APNGDecorationNativeComponentDefault;
             const size1 = { width: v150, height: v150 };
-            tmp11Result = <tmp12Result url={_modDef15742} style={size1} />;
+            tmp11Result = <tmp12Result url={_modDef15778} style={size1} />;
           } else {
-            const obj6 = { uri: _modDef15742 };
+            const obj6 = { uri: _modDef15778 };
             FastImageDefault;
             const size2 = { width: v150, height: v150 };
             tmp11Result = <tmp12Result2 source={obj6} resizeMode="contain" style={size2} />;
@@ -119,9 +119,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = intl4.intl;
-        const stringResult = intl2.string(_modDef3269.ublzTG);
+        const stringResult = intl2.string(_modDef3297.ublzTG);
         const intl3 = intl4.intl;
-        const stringResult1 = intl3.string(_modDef3269.JgM2xu);
+        const stringResult1 = intl3.string(_modDef3297.JgM2xu);
         cResult[7] = stringResult;
         cResult[8] = stringResult1;
         tmp27 = stringResult1;
@@ -161,20 +161,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [AccessibilityStore];
       if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
         size = { width: v150, height: v150 };
-        tmp3Result = <Image source={{ uri: _modDef15741 }} style={size} />;
+        tmp3Result = <Image source={{ uri: _modDef15777 }} style={size} />;
         tmp8 = importDefault;
         tmp9 = jsx;
-        const obj3 = { uri: _modDef15741 };
+        const obj3 = { uri: _modDef15777 };
       } else {
         const tmpResult = PlatformUtils;
         if (tmpResult.isAndroid()) {
           APNGDecorationNativeComponentDefault;
           const size1 = { width: v150, height: v150 };
-          tmp3Result = <tmp4Result url={_modDef15742} style={size1} />;
+          tmp3Result = <tmp4Result url={_modDef15778} style={size1} />;
           tmp8 = importDefault;
           tmp9 = jsx;
         } else {
-          const obj6 = { uri: _modDef15742 };
+          const obj6 = { uri: _modDef15778 };
           FastImageDefault;
           const size2 = { width: v150, height: v150 };
           tmp3Result = <tmp4Result2 source={obj6} resizeMode="contain" style={size2} />;
@@ -201,8 +201,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       obj8 = { size: "sm", color: tmp8(587).colors.WHITE };
       WindowLaunchIcon = WindowLaunchIcon2.WindowLaunchIcon;
       const obj9 = {
-        title: intl2.string(tmp8(3269).ublzTG),
-        description: intl3.string(tmp8(3269).JgM2xu),
+        title: intl2.string(tmp8(3297).ublzTG),
+        description: intl3.string(tmp8(3297).JgM2xu),
         actions: tmp9Result,
         illustration: tmp3Result,
         onDismiss() {

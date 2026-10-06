@@ -4,7 +4,7 @@ import get_initialized from "../../../../../discord_common/js/packages/flux/inde
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04807_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04813_AssetRegistry.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import BottomSheetTitleHeader2 from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";

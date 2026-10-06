@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx
 import intl3 from "../../../../intl/index.native.tsx";
 import dismissible_content from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import getGuildPowerupFormattedDateStringDefault from "../utils/getGuildPowerupFormattedDateString.tsx";
 import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -27,7 +27,7 @@ function getGuildThemeRollbackModalConfig(allPowerups) {
       const tmp3 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
       const obj = {
         dismissibleContent: dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_MODAL,
-        header: "" + title + " " + intl.formatToPlainString(_modDef2525["6e2ry1"], obj2),
+        header: "" + title + " " + intl.formatToPlainString(_modDef2553["6e2ry1"], obj2),
         bodies: items,
         hasCancelButton: false,
       };
@@ -38,7 +38,7 @@ function getGuildThemeRollbackModalConfig(allPowerups) {
       const intl2 = intl3.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = allPowerups);
-      items = [intl2.formatToPlainString(_modDef2525.jd8fki, obj5)];
+      items = [intl2.formatToPlainString(_modDef2553.jd8fki, obj5)];
       return obj;
     }
   }
@@ -100,7 +100,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (stateFromStores1 != null) {
         const allPowerups = stateFromStores1.allPowerups;
         if (allPowerups != null) {
-          tmp12 = allPowerups[tmp(undefined, 4771).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+          tmp12 = allPowerups[tmp(undefined, 4777).GUILD_POWERUP_GUILD_THEME_SKU_ID];
         }
       }
       const tmpResult4 = require("guildTheme");

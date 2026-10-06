@@ -47,11 +47,11 @@ class GatewaySocketDispatcher {
   constructor(socket) {
     let logger;
     const obj3 = Object.create(new.target.prototype);
-    let obj = obj3(13451);
+    let obj = obj3(13467);
     obj3.scheduler = obj.createDispatcherWorkScheduler();
     obj3.queue = [];
     obj3.paused = true;
-    const obj2 = obj3(13454);
+    const obj2 = obj3(13470);
     obj3.resumeAnalytics = obj2.createResumeAnalytics();
     obj3.getDispatchHandler = null;
     obj3.flush = function flush(arg0) {
@@ -341,7 +341,7 @@ class GatewaySocketDispatcher {
           let telemetry = self.scheduler.telemetry;
           let tmp8 = closure_5;
           telemetry.measure(
-            tmp21(13453).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD,
+            tmp21(13469).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD,
             closure_5.length,
           );
           const queue = self.queue;

@@ -3,7 +3,7 @@ import get_initialized from "../../../discord_common/js/packages/flux/index.tsx"
 import react from "../../../_runtime/00576_react.js";
 import intl2 from "../../intl/index.native.tsx";
 import PremiumConstants from "../premium/PremiumConstants.tsx";
-import _modDef2493 from "FamilyCenter.messages.js";
+import _modDef2521 from "FamilyCenter.messages.js";
 import PriceUtils from "../../utils/PriceUtils.tsx";
 import utils_PriceUtils from "../../../discord_common/js/shared/utils/PriceUtils.tsx";
 import SpendingLimitUtils from "SpendingLimitUtils.tsx";
@@ -45,7 +45,7 @@ function getSpendingLimitDisplayState(amount, arg1) {
         const intl = intl2.intl;
         formatToPlainString = intl.formatToPlainString;
         obj4 = { amount: tmp6Result.formatPrice(diff, currency) };
-        prop = _modDef2493["+Q+bU1"];
+        prop = _modDef2521["+Q+bU1"];
         obj = obj3;
         tmp6Result = PriceUtils;
       } else {

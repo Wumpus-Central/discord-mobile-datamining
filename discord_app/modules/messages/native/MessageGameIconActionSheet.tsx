@@ -158,7 +158,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       const obj5 = { startExpanded: true, children: closure_6(View, obj6) };
                       obj6 = { style: contentWrapper, children: tmp30 };
-                      BottomSheet = tmp(6645).BottomSheet;
+                      BottomSheet = tmp(6652).BottomSheet;
                       const tmp37 = closure_6(BottomSheet, obj5);
                       cResult[27] = tmp4.contentWrapper;
                       cResult[28] = tmp30;
@@ -187,7 +187,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const obj10 = { variant: "text-sm/medium", children: items3 };
             items3 = [tmp17, " ", tmp19];
-            const tmp25 = closure_7(applicationId(4886).Text, obj10);
+            const tmp25 = closure_7(applicationId(4892).Text, obj10);
             cResult[16] = tmp17;
             cResult[17] = tmp19;
             cResult[18] = tmp25;
@@ -199,7 +199,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-muted",
             children: messageTimestamp,
           };
-          const tmp16 = closure_6(applicationId(4886).Text, obj11);
+          const tmp16 = closure_6(applicationId(4892).Text, obj11);
           cResult[10] = messageTimestamp;
           cResult[11] = tmp4.timestamp;
           cResult[12] = tmp16;
@@ -230,7 +230,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != stateFromStores) {
         const obj2 = { style: tmp.contentWrapper, children: closure_7(View, obj3) };
         obj3 = { style: tmp.gameDescriptionWrapperOuter, children: items1 };
-        BottomSheet = tmp2(6645).BottomSheet;
+        BottomSheet = tmp2(6652).BottomSheet;
         let str;
         const obj4 = { style: tmp.gameIcon, resizeMode: "contain", source: obj6, disableColor: true };
         const Icon = tmp2(1188).Icon;
@@ -250,9 +250,9 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-muted",
           children: messageTimestamp,
         };
-        items2 = [closure_6(applicationId(4886).Text, obj8)];
+        items2 = [closure_6(applicationId(4892).Text, obj8)];
         const obj9 = { variant: "text-sm/medium", children: items3 };
-        const Text = tmp2(4886).Text;
+        const Text = tmp2(4892).Text;
         const intl = tmp2(1126).intl;
         const obj10 = { applicationName: stateFromStores.name };
         items3 = [intl.format(applicationId(1126).t.J3s8JP, obj10), " "];

@@ -496,12 +496,12 @@ const memoResult = react.memo(
         const tmp2 = dependencyMap;
         obj = channel(1490);
         importDefault = obj.useNavigation();
-        let obj2 = channel(12083);
+        let obj2 = channel(12098);
         const isMessageRequestRestrictedViewer = obj2.useIsMessageRequestRestrictedViewer();
         let obj3 = channel(504);
         const items = [obj];
         const stateFromStores = obj3.useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
-        let obj4 = channel(12084);
+        let obj4 = channel(12099);
         let obj5 = {
           user: stateFromStores,
           onError: function handleRequestError() {

@@ -4,7 +4,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../Constants.tsx";
 import intl2 from "../../../intl/index.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/06015_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/06022_AssetRegistry.js";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import IconButton2 from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";

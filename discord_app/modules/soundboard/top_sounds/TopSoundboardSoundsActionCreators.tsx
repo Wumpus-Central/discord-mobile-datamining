@@ -9,7 +9,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require;
 
-const f129263 = (body) => {
+const f129439 = (body) => {
   let mapped;
   const items = body.body.items;
   const obj = {
@@ -22,7 +22,7 @@ const f129263 = (body) => {
   mapped = items.map((soundId) => ({ soundId: soundId.sound_id, rank: soundId.sound_rank }));
   return dispatch(obj);
 };
-const f129264 = () => {
+const f129440 = () => {
   const obj = DispatcherDefault;
   const obj2 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH_FAILURE", guildId };
   return obj.dispatch(obj2);
@@ -59,7 +59,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
               rejectWithError: true,
             };
             const value = get(obj3);
-            value.then(f129263, f129264);
+            value.then(f129439, f129440);
           }
         }
       }
@@ -82,6 +82,6 @@ export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildI
       rejectWithError: true,
     };
     const value = get(obj4);
-    value.then(f129263, f129264);
+    value.then(f129439, f129440);
   }
 };

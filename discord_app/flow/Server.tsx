@@ -37,6 +37,7 @@ export const ApplicationDirectoryEntryCarouselItemType = {
   YOUTUBE: 2,
   [2]: "YOUTUBE",
 };
+export const CheckoutContextPaymentNoticeSubjectType = { PAYMENT_SOURCE: "payment_source", GENERAL: "general" };
 export const InteractionContextType = {
   GUILD: 0,
   [0]: "GUILD",
@@ -84,16 +85,6 @@ export const ApplicationCommandType = {
   [3]: "MESSAGE",
   PRIMARY_ENTRY_POINT: 4,
   [4]: "PRIMARY_ENTRY_POINT",
-};
-export const InteractionTypes = {
-  APPLICATION_COMMAND: 2,
-  [2]: "APPLICATION_COMMAND",
-  MESSAGE_COMPONENT: 3,
-  [3]: "MESSAGE_COMPONENT",
-  APPLICATION_COMMAND_AUTOCOMPLETE: 4,
-  [4]: "APPLICATION_COMMAND_AUTOCOMPLETE",
-  MODAL_SUBMIT: 5,
-  [5]: "MODAL_SUBMIT",
 };
 export const UnfurledMediaLoadingState = {
   UNKNOWN: 0,

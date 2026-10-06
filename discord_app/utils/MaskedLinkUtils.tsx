@@ -76,8 +76,8 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
       isDismissable: true,
       contextKey,
     };
-    const show3 = channelId(5707).show;
-    channelId(5707);
+    const show3 = channelId(5714).show;
+    channelId(5714);
     intl = require("intl").intl;
     intl2 = require("intl").intl;
     obj3 = { url: href.href };
@@ -224,13 +224,13 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
         obj4 = require("MaskedLinkStoreMethodsAdditional");
         track(URL_CLICKED, obj5);
       }
-      if (channelId(7519)(channelId)) {
+      if (channelId(7530)(channelId)) {
         const obj6 = { cta_type: "inline_link", target: tmp6 };
         const tmpResult9 = channelId(1252);
         tmpResult9.track(constants2.CHANGE_LOG_CTA_CLICKED, obj6);
       }
     }
-    const tmpResult10 = channelId(8051);
+    const tmpResult10 = channelId(8061);
     tmpResult10.trackLinkClicked(tmp6);
     if (null == onClick) {
       const obj7 = { skipExtensionCheck: "a", analyticsLocations: items, messageId, channelId };
@@ -240,7 +240,7 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
       if (preventDefault != null) {
         preventDefault.preventDefault();
       }
-      const tmpResult11 = channelId(12749);
+      const tmpResult11 = channelId(12764);
       tmpResult11.show(tmp6);
       onCancel();
     } else {
@@ -285,8 +285,8 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
             isProtocol: true,
             contextKey,
           };
-          const show2 = channelId(12754).show;
-          channelId(12754);
+          const show2 = channelId(12769).show;
+          channelId(12769);
           show2(obj8);
         } else {
           const tmp52Result = require("MarkupLinkRule");
@@ -303,8 +303,8 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
             isProtocol: false,
             contextKey,
           };
-          const show = channelId(12754).show;
-          channelId(12754);
+          const show = channelId(12769).show;
+          channelId(12769);
           show(obj10);
         }
       }
@@ -312,7 +312,7 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
         handleConfirm();
       } else if (flag2) {
         const obj11 = { messageId: tmp11, channelId, guildId: tmp12, sourceChannelId: tmp10, sourceGuildId: tmp9 };
-        const tmpResult14 = channelId(8051);
+        const tmpResult14 = channelId(8061);
         let result = tmpResult14.trackAnnouncementMessageLinkClicked(obj11);
       }
     }

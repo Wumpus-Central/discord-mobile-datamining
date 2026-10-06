@@ -5,7 +5,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildThemePresets from "../GuildThemePresets.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import GuildThemePreviewOverlayDefault from "GuildThemePreviewOverlay.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -15,8 +15,8 @@ import size from "../../../../_runtime/metro/00002__.js";
 let importDefault;
 
 let obj2;
-const f122942 = (hex) => hex.hex;
-const f122943 = (stop) => stop.stop / 100;
+const f123114 = (hex) => hex.hex;
+const f123115 = (stop) => stop.stop / 100;
 const View = react_native.View;
 const jsx = Fragment.jsx;
 let obj = {
@@ -178,8 +178,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const tmp2Result4 = GuildThemePresets;
           const guildThemePresetAppearance = tmp2Result4.getGuildThemePresetAppearance(guildThemePreset, tmp7);
           const obj5 = {
-            colors: colors.map(f122942),
-            locations: colors1.map(f122943),
+            colors: colors.map(f123114),
+            locations: colors1.map(f123115),
             angle: guildThemePresetAppearance.angle,
           };
           colors = guildThemePresetAppearance.colors;
@@ -231,8 +231,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp6Result = GuildThemePresets;
             const guildThemePresetAppearance = tmp6Result.getGuildThemePresetAppearance(guildThemePreset, closure_1);
             const obj3 = {
-              colors: colors.map(f122942),
-              locations: colors1.map(f122943),
+              colors: colors.map(f123114),
+              locations: colors1.map(f123115),
               angle: guildThemePresetAppearance.angle,
             };
             colors = guildThemePresetAppearance.colors;

@@ -2,7 +2,7 @@
 import react_native from "../../../../../../../_runtime/00017_react-native.js";
 import Constants from "../../../../../../Constants.tsx";
 import intl2 from "../../../../../../intl/index.native.tsx";
-import _modDef4461 from "../../../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../../../_runtime/metro/04467__.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import SafetyHubUtils from "../../../../../safety_hub/SafetyHubUtils.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
@@ -75,7 +75,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             const obj2 = {
               titleText: str,
               titleIcon: tmp6Result4.getAssetUriForEmbed(
-                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 4804 : 5820)),
+                Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 4810 : 5827)),
               ),
               subtitleText: formatToPlainString(eevFb6, obj3),
               descriptionText: str4,
@@ -96,10 +96,10 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
               num = 0;
             }
             obj3 = { daysAgo: diff(tmp14Result.unix(num), "days") };
-            diff = _modDef4461().diff;
-            _modDef4461();
+            diff = _modDef4467().diff;
+            _modDef4467();
             str4 = parseMessageForPropsResult.body;
-            tmp14Result = _modDef4461;
+            tmp14Result = _modDef4467;
             if (str4 == null) {
               str4 = "";
             }

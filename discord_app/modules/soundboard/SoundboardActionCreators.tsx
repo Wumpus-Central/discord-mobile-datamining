@@ -135,7 +135,7 @@ function _maybeFetchDefaultSounds() {
 }
 function _maybeFetchGuildSoundboardSounds() {
   let SOUNDBOARD_SOUNDS_RECEIVED;
-  obj = SOUNDBOARD_SOUNDS_RECEIVED(6843);
+  obj = SOUNDBOARD_SOUNDS_RECEIVED(6853);
   const guildIdsToFetchSoundsFor = obj.getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
@@ -250,7 +250,7 @@ obj = function _uploadSound() {
             body = undefined;
             volume = 1;
             emoji_id = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === volume) {
           if (arg0 === 1) {
@@ -347,7 +347,7 @@ obj = function _updateSound() {
             body = undefined;
             volume = 1;
             emoji_id = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === volume) {
           if (arg0 === 1) {

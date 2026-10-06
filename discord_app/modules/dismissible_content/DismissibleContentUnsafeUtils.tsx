@@ -2,8 +2,8 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import Uint8ArrayUtils from "../../utils/Uint8ArrayUtils.tsx";
-import DismissibleContentTypes from "DismissibleContentTypes.tsx";
 import DismissibleContentUtils from "DismissibleContentUtils.tsx";
+import DismissibleContentTypes from "DismissibleContentTypes.tsx";
 import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry.tsx";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
@@ -150,7 +150,7 @@ let obj = function _UNSAFE_markDismissibleContentAsDismissed() {
     if (closure_1 === undefined) {
       obj6 = {};
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -193,7 +193,7 @@ obj = function _UNSAFE_markSingleUseGuildDismissibleContentAsDismissed() {
             }
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {

@@ -1,6 +1,6 @@
 // discord_app/modules/avatar/useAvatarColor.tsx
 import react2 from "../../../_runtime/00576_react.js";
-import _modDef7063 from "../../../_runtime/metro/07063__.js";
+import _modDef7076 from "../../../_runtime/metro/07076__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../../_runtime/00019_react.js";

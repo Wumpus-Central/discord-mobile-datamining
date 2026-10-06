@@ -3,7 +3,7 @@ import get_initializedDefault from "../../../../../discord_common/js/packages/fl
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import Constants from "../../../../Constants.tsx";
 import GuildUtilsDefault from "../../../../utils/GuildUtils.tsx";
-import _modDef9496 from "../../../autocompleter/index.tsx";
+import _modDef9509 from "../../../autocompleter/index.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -40,8 +40,8 @@ class GuildMemberSearchManager {
       }
     };
     const items = [];
-    const tmp2 = _modDef9496;
-    items[0] = obj(9496).AutocompleterResultTypes.USER;
+    const tmp2 = _modDef9509;
+    items[0] = obj(9509).AutocompleterResultTypes.USER;
     obj.autocompleter = new tmp2(obj.onAutocompleterResultsChange, items, 50);
     const autocompleter = obj.autocompleter;
     new tmp2(obj.onAutocompleterResultsChange, items, 50);
@@ -162,8 +162,8 @@ let obj = {
           }
         };
         let items = [];
-        const tmp4 = _modDef9496;
-        items[0] = obj2(9496).AutocompleterResultTypes.USER;
+        const tmp4 = _modDef9509;
+        items[0] = obj2(9509).AutocompleterResultTypes.USER;
         const self = this;
         const self2 = this;
         obj2.autocompleter = new tmp4(obj2.onAutocompleterResultsChange, items, 50);

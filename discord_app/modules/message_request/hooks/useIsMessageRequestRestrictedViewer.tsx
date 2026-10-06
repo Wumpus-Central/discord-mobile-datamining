@@ -8,19 +8,19 @@ import size from "../../../../_runtime/metro/00002__.js";
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       const obj = AgeVerificationUtils;
-      const isExplicitlyVerifiedAdult = obj.useIsExplicitlyVerifiedAdult();
+      const isVerifiedAdult = obj.useIsVerifiedAdult();
       const obj2 = RegionalFeatureConfigUtils;
       const tmp2 =
-        !isExplicitlyVerifiedAdult &&
+        !isVerifiedAdult &&
         obj2.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS);
       return tmp2;
     }
   : () => {
       const obj = AgeVerificationUtils;
-      const isExplicitlyVerifiedAdult = obj.useIsExplicitlyVerifiedAdult();
+      const isVerifiedAdult = obj.useIsVerifiedAdult();
       const obj2 = RegionalFeatureConfigUtils;
       const tmp2 =
-        !isExplicitlyVerifiedAdult &&
+        !isVerifiedAdult &&
         obj2.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS);
       return tmp2;
     };

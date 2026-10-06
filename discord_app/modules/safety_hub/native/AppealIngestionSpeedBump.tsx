@@ -62,13 +62,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = emitAppealIngestionEvent(504);
       let stateFromStores = tmpResult.useStateFromStores(tmp5, A);
-      const useSafetyHubClassification = emitAppealIngestionEvent(11492).useSafetyHubClassification;
-      emitAppealIngestionEvent(11492);
+      const useSafetyHubClassification = emitAppealIngestionEvent(11505).useSafetyHubClassification;
+      emitAppealIngestionEvent(11505);
       if (stateFromStores == null) {
         stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
       }
       const safetyHubClassification = useSafetyHubClassification(stateFromStores);
-      const tmpResult4 = emitAppealIngestionEvent(11500);
+      const tmpResult4 = emitAppealIngestionEvent(11513);
       emitAppealIngestionEvent = tmpResult4.useEmitAppealIngestionEvent();
       ({ isDsaEligible, classification } = safetyHubClassification);
       let str;
@@ -136,7 +136,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             return appealClassificationId.getAppealClassificationId();
           }
         }
-        const tmp22 = closure_8(emitAppealIngestionEvent(11498).AppealIngestionModalHeader, obj2);
+        const tmp22 = closure_8(emitAppealIngestionEvent(11511).AppealIngestionModalHeader, obj2);
         cResult[6] = tmp22;
         tmp20 = tmp22;
       } else {
@@ -208,7 +208,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         variant: "text-xs/normal",
                         children: obj9.format(emitAppealIngestionEvent(1126).t.WMUgCX, {}),
                       };
-                      const Text = tmp(4886).Text;
+                      const Text = tmp(4892).Text;
                       class A {
                         constructor() {
                           return appealClassificationId.getAppealClassificationId();
@@ -254,7 +254,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   items1 = [tmp20];
                   const obj7 = { style: tmp4.container, children: items2 };
                   items2 = [tmp23, tmp27, tmp31, tmp37, tmp39, tmp41, tmp43];
-                  const AppealIngestionModalScreen = tmp(11498).AppealIngestionModalScreen;
+                  const AppealIngestionModalScreen = tmp(11511).AppealIngestionModalScreen;
                   items1[1] = closure_9(View, obj7);
                   const tmp48 = closure_9(AppealIngestionModalScreen, obj6);
                   cResult[27] = tmp4.container;
@@ -372,7 +372,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const stringResult = intl.string(require("intl").t["C5q+pW"]);
       const intl2 = tmp2(1126).intl;
       const stringResult1 = intl2.string(require("intl").t.URt7VI);
-      const AppealIngestionModalScreen = tmp2(11498).AppealIngestionModalScreen;
+      const AppealIngestionModalScreen = tmp2(11511).AppealIngestionModalScreen;
       const items1 = [
         closure_8(require("AppealIngestionModal").AppealIngestionModalHeader, {
           headerText: stringResult,
@@ -447,7 +447,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items2[5] = tmp10Result4;
       if (isDsaEligible) {
         const obj9 = { variant: "text-xs/normal", children: intl7.format(require("intl").t.WMUgCX, {}) };
-        const Text = tmp2(4886).Text;
+        const Text = tmp2(4892).Text;
         intl7 = tmp2(1126).intl;
         isDsaEligible = closure_8(Text, obj9);
       }

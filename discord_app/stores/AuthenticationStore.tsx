@@ -12,18 +12,17 @@ import Server from "../flow/Server.tsx";
 import APIErrorDefault from "../errors/APIError.tsx";
 import getAuthenticationErrorsFromAPIError from "../modules/auth/getAuthenticationErrorsFromAPIError.tsx";
 import AuthenticationUtils from "../utils/AuthenticationUtils.tsx";
-import ApexActionCreators from "../modules/experiments/apex/ApexActionCreators.tsx";
 import isStaffFromRawUserDefault from "../modules/user/isStaffFromRawUser.tsx";
 import fetchExperiments2 from "../modules/experiments/fetchExperiments.tsx";
 import awaitExperiments from "../modules/app_startup/awaitExperiments.tsx";
 import TrackingConsentUtilsDefault from "../modules/tracking/TrackingConsentUtils.tsx";
-import react_native from "../modules/cache/ClientStateStoreStorage.native.tsx";
 import BrowserHandoffStore from "BrowserHandoffStore.native.tsx";
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore.tsx";
 import Constants from "../Constants.tsx";
 import AgeGateConstants from "../modules/age_gate/AgeGateConstants.tsx";
 import size from "../../_runtime/metro/00002__.js";
 
+const require = globalThis.__r;
 const Dispatcher = Dispatcher2;
 let _null, c33, c4, c5, challenge;
 
@@ -34,7 +33,7 @@ let c10;
 let closure_12;
 let metroImportAll;
 let unpackModuleId;
-const f81422 = (body) => {
+const f81555 = (body) => {
   let assignments;
   let guild_experiments;
   body = body.body;
@@ -65,12 +64,12 @@ const f81422 = (body) => {
   const obj6 = awaitExperiments;
   obj6.onExperimentsLoaded();
 };
-const f81423 = () => {
+const f81556 = () => {
   c33 = null;
   const obj = Dispatcher;
   obj.dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
 };
-const f81424 = () => {
+const f81557 = () => {
   const obj = router_utils;
   obj.transitionTo(constants.REGISTER);
 };
@@ -132,7 +131,7 @@ function fetchFingerprint(arg0) {
           fetchExperiments2;
           tmpResult4 = router_utils;
           const experiments = fetchExperiments(obj3);
-          nextPromise = experiments.then(f81422, f81423);
+          nextPromise = experiments.then(f81555, f81556);
           closure_33 = nextPromise;
         }
         return nextPromise;
@@ -265,6 +264,7 @@ let items = [];
 let Store = get_initializedDefault.Store;
 class AuthenticationStore extends Store {
   initialize() {
+    let paths;
     const Storage = Storage6.Storage;
     id = Storage.get(user_id_cache);
     const Storage2 = Storage6.Storage;
@@ -287,17 +287,19 @@ class AuthenticationStore extends Store {
     let obj = TokenManagerAll;
     if (null == obj.getToken()) {
       const tmp7 = null == installation || 0 === installation.length;
-      const promise = fetchFingerprint();
+      let promise = fetchFingerprint();
       if (tmp7) {
         function fireApex() {
-          const obj = ApexActionCreators;
-          const installationExperiments = obj.fetchInstallationExperiments(null);
+          const promise = require("asyncRequire")(paths[19], paths.paths);
+          promise.then((fetchInstallationExperiments) =>
+            fetchInstallationExperiments.fetchInstallationExperiments(null),
+          );
         }
         promise.then(fireApex, fireApex);
       }
     }
     this.addChangeListener(() => {
-      const obj = react_native;
+      const obj = require("react-native");
       return obj.setClientState(id);
     });
   }
@@ -480,7 +482,7 @@ let obj = {
         c26 = true;
         handleLogout();
         const obj4 = Dispatcher;
-        obj4.wait(f81424);
+        obj4.wait(f81557);
       } else {
         const obj3 = { user_id: Storage2.get(user_id_cache) };
         const track = AnalyticsUtilsDefault.track;
@@ -779,7 +781,7 @@ let obj = {
     fetchExperiments2;
     obj5 = router_utils;
     const experiments = fetchExperiments(obj3);
-    closure_33 = experiments.then(f81422, f81423);
+    closure_33 = experiments.then(f81555, f81556);
   },
   CURRENT_USER_UPDATE: function handleUserUpdate(user) {
     user = user.user;
@@ -794,7 +796,7 @@ let obj = {
     c26 = true;
     handleLogout();
     const obj = Dispatcher;
-    obj.wait(f81424);
+    obj.wait(f81557);
   },
   CLOSE_SUSPENDED_USER: function handleSuspendedUserClosed() {
     c34 = null;

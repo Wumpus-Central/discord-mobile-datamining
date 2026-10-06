@@ -152,14 +152,14 @@ let closure_19 = memo(
             const tmp13 = _slicedToArray(shouldOpenGameProfile.useState(undefined), 2);
             _slicedToArray = tmp13[1];
             if (cResult[6] !== game.id) {
-              let obj2 = { gameId: game.id, source: tmp(8319).GameProfileSources.SimilarGames };
+              let obj2 = { gameId: game.id, source: tmp(8352).GameProfileSources.SimilarGames };
               cResult[6] = game.id;
               cResult[7] = obj2;
               tmp16 = obj2;
             } else {
               tmp16 = cResult[7];
             }
-            const tmp18 = trackAction(8321)(tmp16);
+            const tmp18 = trackAction(8354)(tmp16);
             shouldOpenGameProfile = tmp18.shouldOpenGameProfile;
             const gameId = tmp18.gameId;
             const tmp17 = trackAction;
@@ -253,8 +253,8 @@ let closure_19 = memo(
                             return;
                           }
                         }
-                        const obj5 = { style: tmp4.coverArtPlaceholder, children: closure_10(tmp17(8386), obj6) };
-                        const GameProfileSkeletonContainer = tmp(8386).GameProfileSkeletonContainer;
+                        const obj5 = { style: tmp4.coverArtPlaceholder, children: closure_10(tmp17(8419), obj6) };
+                        const GameProfileSkeletonContainer = tmp(8419).GameProfileSkeletonContainer;
                         obj6 = { style: tmp4.coverArt };
                         tmp32 = closure_10(GameProfileSkeletonContainer, obj5);
                       }
@@ -301,7 +301,7 @@ let closure_19 = memo(
                           return;
                         }
                       }
-                      const obj9 = { style: items2, children: closure_10(game(4886).Text, obj10) };
+                      const obj9 = { style: items2, children: closure_10(game(4892).Text, obj10) };
                       items2 = [tmp4.coverArtFallback, tmp6];
                       obj10 = {
                         variant: "text-xs/medium",
@@ -619,7 +619,7 @@ let closure_21 = memo3(
             skeletonTitleWidth: 124,
             children: tmp8,
           };
-          const tmp12 = closure_10(tmp(8388).GameProfileSectionSkeleton, obj2);
+          const tmp12 = closure_10(tmp(8421).GameProfileSectionSkeleton, obj2);
           cResult[5] = tmp4.container;
           cResult[6] = tmp4.header;
           cResult[7] = tmp8;
@@ -647,7 +647,7 @@ let closure_21 = memo3(
           skeletonTitleWidth: 124,
           children: closure_10(tmp2, obj2),
         };
-        const GameProfileSectionSkeleton = cardWidth(8388).GameProfileSectionSkeleton;
+        const GameProfileSectionSkeleton = cardWidth(8421).GameProfileSectionSkeleton;
         obj2 = {
           contentContainerStyle: tmp.skeletonCards,
           children: Array.from({ length: 4 }, (arg0, arg1) => {
@@ -752,7 +752,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             decelerationRate: "fast",
             snapToInterval: sum,
           };
-          const FlashList = trackAction(8371).FlashList;
+          const FlashList = trackAction(8404).FlashList;
           class L {
             constructor(arg0) {
               obj = { game: arg0.item, trackAction, cardWidth: closure_1 };

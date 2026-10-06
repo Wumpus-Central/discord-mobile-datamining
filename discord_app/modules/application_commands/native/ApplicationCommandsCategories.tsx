@@ -202,7 +202,7 @@ let closure_10 = memo(
           return obj.getApplicationCommandsIconSource(section, stateFromStores);
         }, items1);
         null != memo && jsx(FastImageDefault, { style: tmp.categoryImage, source: memo });
-        const PressableOpacity = tmp2(5909).PressableOpacity;
+        const PressableOpacity = tmp2(5916).PressableOpacity;
         const intl = tmp2(1126).intl;
         const formatToPlainString = intl.formatToPlainString;
         const t = tmp2(1126).t;

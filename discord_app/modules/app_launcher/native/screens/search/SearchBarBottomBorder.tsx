@@ -33,7 +33,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         num = triggerScrollHeight;
       }
       const tmp4 = closure_5();
-      const tmpResult = num(4612);
+      const tmpResult = num(4618);
       const sharedValue = tmpResult.useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function c() {
@@ -73,13 +73,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         };
         const obj2 = {
-          withSpring: num(5597).withSpring,
+          withSpring: num(5604).withSpring,
           scrollPosition: sharedValue,
           triggerScrollHeight: num,
-          springStandard: num(5598).springStandard,
+          springStandard: num(5605).springStandard,
         };
-        const useAnimatedStyle = num(4612).useAnimatedStyle;
-        num(4612);
+        const useAnimatedStyle = num(4618).useAnimatedStyle;
+        num(4618);
         fn3.__closure = obj2;
         fn3.__workletHash = 5466161440826;
         fn3.__initData = __initData;
@@ -107,7 +107,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[15] = obj3;
             tmp19 = obj3;
           }
-          const tmp18 = jsx(sharedValue(4612).View, { style: tmp14 }, key);
+          const tmp18 = jsx(sharedValue(4618).View, { style: tmp14 }, key);
           cResult[10] = key;
           cResult[11] = tmp14;
           cResult[12] = tmp18;
@@ -133,7 +133,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         triggerScrollHeight = 1;
       }
       const tmp = closure_5();
-      let obj = triggerScrollHeight(4612);
+      let obj = triggerScrollHeight(4618);
       const sharedValue = obj.useSharedValue(0);
       const items = [key, sharedValue];
       const effect = react.useEffect(() => {
@@ -153,21 +153,21 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withSpring(num, springPresets.springStandard) };
         return obj;
       };
-      const obj2 = triggerScrollHeight(4612);
+      const obj2 = triggerScrollHeight(4618);
       fn.__closure = {
-        withSpring: triggerScrollHeight(5597).withSpring,
+        withSpring: triggerScrollHeight(5604).withSpring,
         scrollPosition: sharedValue,
         triggerScrollHeight,
-        springStandard: triggerScrollHeight(5598).springStandard,
+        springStandard: triggerScrollHeight(5605).springStandard,
       };
       fn.__workletHash = 17305021520857;
       fn.__initData = __initData2;
       const obj4 = { scrollHandler: callback, bottomBorderComponent: null };
       ({
-        withSpring: triggerScrollHeight(5597).withSpring,
+        withSpring: triggerScrollHeight(5604).withSpring,
         scrollPosition: sharedValue,
         triggerScrollHeight,
-        springStandard: triggerScrollHeight(5598).springStandard,
+        springStandard: triggerScrollHeight(5605).springStandard,
       });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       const items2 = [tmp.border, animatedStyle];

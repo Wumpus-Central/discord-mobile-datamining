@@ -12,7 +12,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let obj2;
 const jsx = Fragment.jsx;
 let obj = {
-  maskStyle: { position: "relative", right: "IconComponent" },
+  maskStyle: { position: "relative", right: "applicationId" },
   unreadDot: { width: 0, height: 0 },
   badgeStyle: { flexGrow: 1, flexShrink: 0 },
   unreadBadge: { position: "relative", bottom: -3 },

@@ -6,12 +6,12 @@ import asyncRequire from "../../../_runtime/01987_asyncRequire.js";
 import PremiumUtils from "../PremiumUtils.tsx";
 import ChatInputUtils from "ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import AssetRegistryDefault from "../../../_runtime/08819_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../_runtime/08820_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../_runtime/08821_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../_runtime/08822_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../_runtime/08823_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../_runtime/08824_AssetRegistry.js";
+import AssetRegistryDefault from "../../../_runtime/08849_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../_runtime/08850_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../_runtime/08851_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../_runtime/08852_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../_runtime/08853_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../_runtime/08854_AssetRegistry.js";
 import PremiumFeaturesCards from "../../modules/user_settings/premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../components_native/premium/openPremiumModal.tsx";
 import react from "../../../_runtime/00019_react.js";
@@ -408,7 +408,7 @@ let obj = {
           importer() {
             let imageSource;
             let largestFileSize;
-            const promise = asyncRequire(8827, dependencyMap.paths);
+            const promise = asyncRequire(8857, dependencyMap.paths);
             return promise.then((result) => {
               let closure_0 = result.default;
               return (arg0) => {

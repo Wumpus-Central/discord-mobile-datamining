@@ -1,15 +1,15 @@
 // discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
 import shared from "../../../design/shared.tsx";
-import AssetRegistryDefault from "../../../../_runtime/05978_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/05979_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/05985_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/05986_AssetRegistry.js";
 import BadgeCategory from "../BadgeCategory.tsx";
 import GuildTraits from "../GuildTraits.tsx";
-import AssetRegistryDefault3 from "../../../../_runtime/08398_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/08399_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/08400_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/08401_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/08402_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../_runtime/08403_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/08431_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../_runtime/08432_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../_runtime/08433_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../../_runtime/08434_AssetRegistry.js";
+import AssetRegistryDefault7 from "../../../../_runtime/08435_AssetRegistry.js";
+import AssetRegistryDefault8 from "../../../../_runtime/08436_AssetRegistry.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const badgeVariants = {};

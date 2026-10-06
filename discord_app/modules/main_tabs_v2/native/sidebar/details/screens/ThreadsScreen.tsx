@@ -35,7 +35,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(16);
       ({ style, channel } = arg0);
       const tmp3 = closure_9();
-      let obj2 = channel(6772);
+      let obj2 = channel(6782);
       const canStartThread = obj2.useCanStartThread(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { includeKeyboardHeight: true };
@@ -132,7 +132,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const style = channel.style;
       const tmp = closure_9();
-      let obj = channel(6772);
+      let obj = channel(6782);
       const canStartThread = obj.useCanStartThread(channel);
       const items = [channel];
       const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;

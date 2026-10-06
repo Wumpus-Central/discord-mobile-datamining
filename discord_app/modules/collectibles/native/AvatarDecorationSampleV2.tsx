@@ -3,7 +3,7 @@ import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import AssetRegistryDefault from "../../../../_runtime/08467_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/08500_AssetRegistry.js";
 import CutoutableAvatarDecorationDefault from "components/CutoutableAvatarDecoration.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";

@@ -4,7 +4,7 @@ import react from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
 import asyncRequire from "../../../../../_runtime/01987_asyncRequire.js";
-import _modDef3205 from "../PremiumGroup.messages.js";
+import _modDef3233 from "../PremiumGroup.messages.js";
 import PremiumGroupConstants from "../PremiumGroupConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -25,11 +25,11 @@ function handlePress() {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   const obj = { aboutText: formatToPlainString(prop, obj2) };
   ActionSheetActionCreatorsDefault;
-  const tmp2 = asyncRequire(13321, dependencyMap.paths);
+  const tmp2 = asyncRequire(13340, dependencyMap.paths);
   const intl = intl2.intl;
   formatToPlainString = intl.formatToPlainString;
   obj2 = { premiumGroupProductName: closure_5() };
-  prop = _modDef3205["5xN/C1"];
+  prop = _modDef3233["5xN/C1"];
   openLazy(tmp2, "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = react_native);

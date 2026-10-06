@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import intl4 from "../../../intl/index.native.tsx";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
 import NitroWheelIcon2 from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/09715_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/09728_AssetRegistry.js";
 import openGroupDMAddMembersDefault from "openGroupDMAddMembers.tsx";
 import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel.tsx";
 import GroupDMConstants from "../GroupDMConstants.tsx";
@@ -38,7 +38,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const _location = location.location;
       const tmp4 = closure_9();
       react.useRef(null);
-      const obj2 = channelId(11213);
+      const obj2 = channelId(11226);
       const groupDMNitroAudience = obj2.useGroupDMNitroAudience();
       dependencyMap = tmp7;
       if (cResult[0] === groupDMNitroAudience) {
@@ -48,7 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === _location) {
           tmp8 = cResult[2];
         }
-        const tmp10 = _location(11220)(tmp8);
+        const tmp10 = _location(11233)(tmp8);
         _slicedToArray = tmp10;
         if (cResult[3] !== _location) {
           const obj3 = { location: _location };
@@ -58,14 +58,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp11 = cResult[4];
         }
-        const tmp9Result = _location(11216);
+        const tmp9Result = _location(11229);
         const enabled = tmp9Result.useConfig(tmp11).enabled;
         if (cResult[5] === enabled) {
           let tmp30;
           if ((cResult[6] === "staff") === groupDMNitroAudience) {
             tmp13 = cResult[7];
           }
-          const tmpResult = channelId(6891);
+          const tmpResult = channelId(6901);
           const tmp15 = _slicedToArray(tmpResult.useSelectedDismissibleContent(tmp13), 2);
           react = tmp17;
           const first = tmp15[0];
@@ -131,7 +131,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const string = tmp27.string;
-            const tmpResult2 = channelId(11213);
+            const tmpResult2 = channelId(11226);
             cResult[13] = groupDMNitroAudience;
             cResult[14] = string(tmpResult2.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
             const stringResult1 = string(tmpResult2.getGroupDMNitroCapCTAMessage(groupDMNitroAudience));
@@ -189,7 +189,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 return closure_4(ContentDismissActionType.USER_DISMISS);
               }
             }
-            const NitroWheelIcon = channelId(8313).NitroWheelIcon;
+            const NitroWheelIcon = channelId(8346).NitroWheelIcon;
             tmp30 = (
               <NitroWheelIcon size="custom" style={tmp4.nitroWheelIcon} color={_location(587).unsafe_rawColors.WHITE} />
             );
@@ -214,7 +214,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         audience: groupDMNitroAudience,
         location: _location,
-        acquisitionStrategy: channelId(11213).GroupDMNitroAcquisitionStrategy.MARKETING,
+        acquisitionStrategy: channelId(11226).GroupDMNitroAcquisitionStrategy.MARKETING,
       };
       cResult[0] = groupDMNitroAudience;
       cResult[1] = _location;
@@ -234,20 +234,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp;
       let obj = react;
       const ref = react.useRef(null);
-      let obj2 = channelId(11213);
+      let obj2 = channelId(11226);
       const groupDMNitroAudience = obj2.useGroupDMNitroAudience();
       react = tmp6;
       let obj3 = {
         audience: groupDMNitroAudience,
         location: _location,
-        acquisitionStrategy: channelId(11213).GroupDMNitroAcquisitionStrategy.MARKETING,
+        acquisitionStrategy: channelId(11226).GroupDMNitroAcquisitionStrategy.MARKETING,
       };
-      let tmp7 = _location(11220);
+      let tmp7 = _location(11233);
       const tmp7Result = tmp7(obj3);
       let closure_5 = tmp7Result;
-      const obj4 = _location(11216);
+      const obj4 = _location(11229);
       const enabled = obj4.useConfig({ location: _location }).enabled;
-      channelId(6891);
+      channelId(6901);
       if (enabled) {
         let str = "staff";
         if ("staff" !== groupDMNitroAudience) {
@@ -331,7 +331,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return obj;
         }, items1);
-        const tmp3Result = channelId(9882);
+        const tmp3Result = channelId(9895);
         const coachmark = tmp3Result.useCoachmark(ref, memo);
         return (
           <closure_5 ref={ref} collapsable={false}>

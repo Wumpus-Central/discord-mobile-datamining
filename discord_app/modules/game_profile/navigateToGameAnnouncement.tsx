@@ -58,7 +58,7 @@ let obj = function _navigateToGameAnnouncement() {
             joinedAt = undefined;
             messageId = 1;
             sourceLocationStack = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === messageId) {

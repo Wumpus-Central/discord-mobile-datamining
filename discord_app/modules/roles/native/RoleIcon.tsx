@@ -115,9 +115,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: result,
         lineHeight: "unicodeVersion",
-        textAlign: "add",
+        textAlign: -102143,
         width: num,
-        marginBottom: "duration",
+        marginBottom: 1358954865,
       };
       cResult[2] = num;
       cResult[3] = result;
@@ -137,9 +137,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         fontFamily: "System",
         fontSize: size * num,
         lineHeight: "unicodeVersion",
-        textAlign: "add",
+        textAlign: -102143,
         width: size,
-        marginBottom: "duration",
+        marginBottom: 1358954865,
       };
       if (null != src) {
         tmp = <Image resizeMode="contain" source={{ uri: src }} style={size1} />;

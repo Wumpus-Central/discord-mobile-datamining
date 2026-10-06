@@ -4,7 +4,7 @@ import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
 import PremiumFeaturesCards from "../../../premium/native/PremiumFeaturesCards.tsx";
 import openPremiumModalDefault from "../../../../../components_native/premium/openPremiumModal.tsx";
 import AnimatedEnterExitItemDefault from "../../../../../design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
@@ -103,7 +103,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(14);
       theme = theme.theme;
       const tmp4 = closure_17();
-      let obj2 = theme(4612);
+      let obj2 = theme(4618);
       const fn = function n() {
         let obj2;
         let num = 1;
@@ -119,8 +119,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         theme,
         ThemeTypes,
         StyleSheet,
-        withSpring: theme(5597).withSpring,
-        springStandard: theme(5598).springStandard,
+        withSpring: theme(5604).withSpring,
+        springStandard: theme(5605).springStandard,
       };
       fn.__workletHash = 16911565077998;
       fn.__initData = __initData2;
@@ -128,12 +128,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         theme,
         ThemeTypes,
         StyleSheet,
-        withSpring: theme(5597).withSpring,
-        springStandard: theme(5598).springStandard,
+        withSpring: theme(5604).withSpring,
+        springStandard: theme(5605).springStandard,
       });
       const animatedStyle = obj2.useAnimatedStyle(fn);
-      const tmp6 = analyticsLocations(6657);
-      analyticsLocations = tmp6(analyticsLocations(6681).CLIENT_THEMES_EDITOR).analyticsLocations;
+      const tmp6 = analyticsLocations(6664);
+      analyticsLocations = tmp6(analyticsLocations(6688).CLIENT_THEMES_EDITOR).analyticsLocations;
       if (cResult[0] !== analyticsLocations) {
         const fn2 = function l() {
           let obj2;
@@ -203,7 +203,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = tmp23;
         tmp20 = tmp23;
       }
-      const tmp19 = closure_10(tmp(5594).Button, {
+      const tmp19 = closure_10(tmp(5601).Button, {
         text: tmp13,
         icon: tmp15,
         variant: "active",
@@ -222,7 +222,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       theme = theme.theme;
       let analyticsLocations;
       let tmp = closure_17();
-      let obj = theme(4612);
+      let obj = theme(4618);
       const fn = function l() {
         let obj2;
         let num = 1;
@@ -238,15 +238,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         theme,
         ThemeTypes,
         StyleSheet,
-        withSpring: theme(5597).withSpring,
-        springStandard: theme(5598).springStandard,
+        withSpring: theme(5604).withSpring,
+        springStandard: theme(5605).springStandard,
       };
       fn.__closure = obj2;
       fn.__workletHash = 14565202241551;
       fn.__initData = __initData3;
       const animatedStyle = obj.useAnimatedStyle(fn);
-      const tmp3 = analyticsLocations(6657);
-      analyticsLocations = tmp3(analyticsLocations(6681).CLIENT_THEMES_EDITOR).analyticsLocations;
+      const tmp3 = analyticsLocations(6664);
+      analyticsLocations = tmp3(analyticsLocations(6688).CLIENT_THEMES_EDITOR).analyticsLocations;
       const items = [analyticsLocations];
       const obj3 = { style: tmp.nitroUpsell, children: items1 };
       const obj4 = { style: animatedStyle, importantForAccessibility: "no-hide-descendants", colors };
@@ -269,7 +269,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         onPress: callback,
         size: "md",
       };
-      const Button = theme(5594).Button;
+      const Button = theme(5601).Button;
       intl = theme(1126).intl;
       obj6 = { style: tmp.nitroWheelIcon };
       items1[1] = closure_10(Button, obj5);

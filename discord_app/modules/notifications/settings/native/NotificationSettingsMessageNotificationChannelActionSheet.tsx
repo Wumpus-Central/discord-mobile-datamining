@@ -48,7 +48,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 return tmp9;
               }
             }
-            const tmp12 = jsx(unread(12508), {
+            const tmp12 = jsx(unread(12523), {
               context: "channel",
               value: notification,
               allMessagesSubLabel: tmp5,
@@ -111,7 +111,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const unread = channelPresetSettings.unread;
       const notification = channelPresetSettings.notification;
       let stringResult;
-      unread(12508);
+      unread(12523);
       if (notification !== UserNotificationSettings.ALL_MESSAGES) {
         if (unread !== UnreadSetting.ALL_MESSAGES) {
           const intl = tmp(1126).intl;

@@ -11,7 +11,7 @@ import TransientKeyStore from "TransientKeyStore.tsx";
 import VerifiedKeyStore from "VerifiedKeyStore.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f100298 = (acc, item) => {
+const f100452 = (acc, item) => {
   const obj = closure_0(dependencyMap[7]);
   const tmp = true === map.get(obj.decodeStreamKey(item).ownerId);
   const value = map1.get(item);
@@ -63,7 +63,7 @@ function handleUserUpdate(userId) {
       const result = map.set(userId, isKeyVerifiedResult);
     }
     const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-    const reduced = allActiveStreamKeys.reduce(f100298, false);
+    const reduced = allActiveStreamKeys.reduce(f100452, false);
     const tmp16 = computeCallVerification();
     if (!flag) {
       flag = reduced;
@@ -151,7 +151,7 @@ let obj = {
       return tmp;
     }, false);
     const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-    const reduced1 = allActiveStreamKeys.reduce(f100298, false);
+    const reduced1 = allActiveStreamKeys.reduce(f100452, false);
     const tmp3 = computeCallVerification();
     if (!reduced) {
       reduced = reduced1;

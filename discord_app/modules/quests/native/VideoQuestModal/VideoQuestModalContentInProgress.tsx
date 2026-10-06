@@ -275,8 +275,8 @@ let closure_32 = memo(
         }
         const tmp6 = closure_23(first);
         if (cResult[1] !== quest) {
-          const tmpResult7 = isFullscreen(10000);
-          const questAsset = tmpResult7.getQuestAsset(quest, isFullscreen(10000).QuestAssetType.HERO);
+          const tmpResult7 = isFullscreen(10013);
+          const questAsset = tmpResult7.getQuestAsset(quest, isFullscreen(10013).QuestAssetType.HERO);
           cResult[1] = quest;
           cResult[2] = questAsset;
         }
@@ -324,7 +324,7 @@ let closure_32 = memo(
               closure_3(nativeDefault.space.PX_24 + nativeEvent.nativeEvent.layout.height);
             }
           }
-          const md = isFullscreen(14935).QUEST_PROGRESS_DIAMETER_BY_SIZE.md;
+          const md = isFullscreen(14950).QUEST_PROGRESS_DIAMETER_BY_SIZE.md;
           if (tmp14 == null) {
             class J {
               constructor(nativeEvent) {
@@ -334,7 +334,7 @@ let closure_32 = memo(
           }
           const sum = md + tmp14;
           const sum1 = sum + 2 * setIsFullscreen(587).space.PX_16;
-          const tmpResult8 = isFullscreen(4612);
+          const tmpResult8 = isFullscreen(4618);
           const sharedValue = tmpResult8.useSharedValue(0);
           if (cResult[8] !== sharedValue) {
             class J {
@@ -364,14 +364,14 @@ let closure_32 = memo(
             return withDelay(c15, obj.withTiming(sharedValue.get(), obj2));
           }
           let obj2 = {
-            withDelay: isFullscreen(4612).withDelay,
+            withDelay: isFullscreen(4618).withDelay,
             LOGO_REWARD_TRANSITION_DELAY_MS,
-            withTiming: isFullscreen(4891).withTiming,
+            withTiming: isFullscreen(4897).withTiming,
             isComponentMounted: sharedValue,
             LOGO_REWARD_TRANSITION_DURATION_MS,
           };
-          const useDerivedValue = isFullscreen(4612).useDerivedValue;
-          isFullscreen(4612);
+          const useDerivedValue = isFullscreen(4618).useDerivedValue;
+          isFullscreen(4618);
           he.__closure = obj2;
           he.__workletHash = 12561024953493;
           he.__initData = __initData;
@@ -384,7 +384,7 @@ let closure_32 = memo(
           ge.__closure = obj3;
           ge.__workletHash = 17463485679217;
           ge.__initData = __initData2;
-          const tmpResult10 = isFullscreen(4612);
+          const tmpResult10 = isFullscreen(4618);
           const animatedStyle = tmpResult10.useAnimatedStyle(ge);
           function _e() {
             const obj = { opacity: 1 - derivedValue.get() };
@@ -394,7 +394,7 @@ let closure_32 = memo(
           _e.__closure = obj5;
           _e.__workletHash = 9103187579788;
           _e.__initData = __initData3;
-          const tmpResult11 = isFullscreen(4612);
+          const tmpResult11 = isFullscreen(4618);
           const animatedStyle1 = tmpResult11.useAnimatedStyle(_e);
           function ye() {
             let pointerEvents = "none";
@@ -407,7 +407,7 @@ let closure_32 = memo(
           ye.__closure = obj6;
           ye.__workletHash = 6340268991801;
           ye.__initData = __initData4;
-          const tmpResult12 = isFullscreen(4612);
+          const tmpResult12 = isFullscreen(4618);
           const animatedProps = tmpResult12.useAnimatedProps(ye);
           setIsFullscreen(1618)();
           if (cResult[11] === isFullscreen) {
@@ -459,7 +459,7 @@ let closure_32 = memo(
                 closure_3(nativeDefault.space.PX_24 + nativeEvent.nativeEvent.layout.height);
               }
             }
-            if (diff < isFullscreen(14935).QUEST_PROGRESS_DIAMETER_BY_SIZE.lg + tmp14) {
+            if (diff < isFullscreen(14950).QUEST_PROGRESS_DIAMETER_BY_SIZE.lg + tmp14) {
               class J {
                 constructor(nativeEvent) {
                   closure_3(nativeDefault.space.PX_24 + nativeEvent.nativeEvent.layout.height);
@@ -1361,7 +1361,7 @@ const memoResult = react.memo(function VideoQuestModalContentInProgress(arg0) {
   let videoQuestClickCtaAndMaybeCloseModal;
   ({ onClose, sourceQuestContent } = arg0);
   ({ contentWidth, isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen } = arg0);
-  let obj = sourceQuestContent(14930);
+  let obj = sourceQuestContent(14945);
   const quest = obj.useVideoQuestModalContext().quest;
   items = [quest];
   items1 = [quest];
@@ -1381,14 +1381,14 @@ const memoResult = react.memo(function VideoQuestModalContentInProgress(arg0) {
     const openLazy = ActionSheetActionCreatorsDefault.openLazy;
     ActionSheetActionCreatorsDefault;
     const obj = { quest };
-    const tmp2 = asyncRequire(14958, dependencyMap.paths);
+    const tmp2 = asyncRequire(14973, dependencyMap.paths);
     openLazy(tmp2, "transcript-" + quest.id, obj);
   }, items2);
-  let obj2 = sourceQuestContent(10916);
+  let obj2 = sourceQuestContent(10929);
   const getQuestImpressionId = obj2.useGetQuestImpressionId();
   [tmp11, _objectWithoutProperties] = videoQuestClickCtaAndMaybeCloseModal.useState(false);
   _slicedToArray(videoQuestClickCtaAndMaybeCloseModal.useState(false), 2);
-  let obj3 = sourceQuestContent(7206);
+  let obj3 = sourceQuestContent(7219);
   const isShareableQuestResult = obj3.isShareableQuest(quest.config);
   _slicedToArray = isShareableQuestResult;
   const items3 = [isShareableQuestResult, quest.id, getQuestImpressionId, sourceQuestContent];
@@ -1443,7 +1443,7 @@ const memoResult = react.memo(function VideoQuestModalContentInProgress(arg0) {
       showShareActionSheet(obj4, "Video Quest Modal - " + tmp5.id);
     }
   }, items3);
-  let obj4 = sourceQuestContent(14959);
+  let obj4 = sourceQuestContent(14974);
   videoQuestClickCtaAndMaybeCloseModal = obj4.useVideoQuestClickCtaAndMaybeCloseModal({
     quest,
     onClose,
@@ -1465,13 +1465,13 @@ const memoResult = react.memo(function VideoQuestModalContentInProgress(arg0) {
     const obj2 = { questId: quest.id };
     const result = obj.openRewardDetailsBottomSheet(obj2);
   }, items6);
-  const obj5 = sourceQuestContent(14960);
+  const obj5 = sourceQuestContent(14975);
   const videoExternallyPaused = obj5.useVideoExternallyPaused(quest.id, tmp11);
   const tmp19 =
-    quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5631).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+    quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5638).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   let tmp20 = null == tmp19;
   if (!tmp20) {
-    const tmpResult = sourceQuestContent(10940);
+    const tmpResult = sourceQuestContent(10953);
     tmp20 = "portrait" === tmpResult.getVideoOrientation(tmp19);
   }
   const obj6 = {

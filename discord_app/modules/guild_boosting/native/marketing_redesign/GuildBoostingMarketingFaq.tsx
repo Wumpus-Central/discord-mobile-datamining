@@ -5,7 +5,7 @@ import Constants from "../../../../Constants.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13413_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13432_AssetRegistry.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
@@ -186,7 +186,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp4.heading) {
         let obj2 = { style: heading, variant: "heading-xxl/bold", children: first1 };
-        const tmp11 = closure_7(tmp(4886).Heading, obj2);
+        const tmp11 = closure_7(tmp(4892).Heading, obj2);
         cResult[1] = tmp4.heading;
         cResult[2] = tmp11;
         tmp9 = tmp11;

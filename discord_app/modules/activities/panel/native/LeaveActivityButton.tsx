@@ -5,7 +5,7 @@ import intl3 from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ActivityPanelConstants from "../ActivityPanelConstants.tsx";
 import EmbeddedActivitiesNativeManagerDefault from "../../native/EmbeddedActivitiesNativeManager.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09577_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09590_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

@@ -7,7 +7,7 @@ import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
 import ActionSheet2 from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import useOpenExternalUrlFromGameProfileDefault from "../../hooks/useOpenExternalUrlFromGameProfile.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -83,7 +83,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           style: headerText,
           children: tmp9,
         };
-        const tmp13 = closure_4(trackAction(4886).Text, obj3);
+        const tmp13 = closure_4(trackAction(4892).Text, obj3);
         cResult[3] = tmp4.headerText;
         cResult[4] = tmp13;
         tmp11 = tmp13;
@@ -132,8 +132,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       return tmp30;
                     }
                   }
-                  const obj5 = { children: closure_5(trackAction(6112).BottomSheetScrollView, obj6) };
-                  const ActionSheet = trackAction(6701).ActionSheet;
+                  const obj5 = { children: closure_5(trackAction(6119).BottomSheetScrollView, obj6) };
+                  const ActionSheet = trackAction(6708).ActionSheet;
                   obj6 = { contentContainerStyle: tmp8, children: items };
                   items = [tmp18, tmp26];
                   const tmp33 = closure_4(ActionSheet, obj5);
@@ -198,7 +198,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = tmp21;
         tmp18 = tmp21;
       }
-      const tmp17 = closure_4(trackAction(4886).Text, {
+      const tmp17 = closure_4(trackAction(4892).Text, {
         variant: "text-md/medium",
         color: "text-subtle",
         style: headerText2,

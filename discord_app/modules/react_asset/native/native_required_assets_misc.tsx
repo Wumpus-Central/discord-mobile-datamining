@@ -12,13 +12,13 @@ import AssetRegistryDefault10 from "../../../../_runtime/01428_AssetRegistry.js"
 import AssetRegistryDefault11 from "../../../../_runtime/01429_AssetRegistry.js";
 import AssetRegistryDefault12 from "../../../../_runtime/01430_AssetRegistry.js";
 import AssetRegistryDefault13 from "../../../../_runtime/01431_AssetRegistry.js";
-import AssetRegistryDefault14 from "../../../../_runtime/18109_AssetRegistry.js";
-import AssetRegistryDefault15 from "../../../../_runtime/18110_AssetRegistry.js";
-import AssetRegistryDefault16 from "../../../../_runtime/18111_AssetRegistry.js";
-import AssetRegistryDefault17 from "../../../../_runtime/18112_AssetRegistry.js";
-import AssetRegistryDefault18 from "../../../../_runtime/18113_AssetRegistry.js";
-import AssetRegistryDefault19 from "../../../../_runtime/18114_AssetRegistry.js";
-import AssetRegistryDefault20 from "../../../../_runtime/18115_AssetRegistry.js";
+import AssetRegistryDefault14 from "../../../../_runtime/18155_AssetRegistry.js";
+import AssetRegistryDefault15 from "../../../../_runtime/18156_AssetRegistry.js";
+import AssetRegistryDefault16 from "../../../../_runtime/18157_AssetRegistry.js";
+import AssetRegistryDefault17 from "../../../../_runtime/18158_AssetRegistry.js";
+import AssetRegistryDefault18 from "../../../../_runtime/18159_AssetRegistry.js";
+import AssetRegistryDefault19 from "../../../../_runtime/18160_AssetRegistry.js";
+import AssetRegistryDefault20 from "../../../../_runtime/18161_AssetRegistry.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {

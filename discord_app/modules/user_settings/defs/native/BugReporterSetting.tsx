@@ -40,7 +40,7 @@ let obj = {
     if (!BugReportStore.getField("isReportOpen")) {
       BugReportStore.setState({ isReportOpen: true });
       const obj2 = ModalActionCreatorsDefault;
-      obj2.pushLazy(asyncRequire(12525, dependencyMap.paths));
+      obj2.pushLazy(asyncRequire(12540, dependencyMap.paths));
     }
   },
   withArrow: true,

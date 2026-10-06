@@ -117,10 +117,10 @@ let obj = function _getInitialURLs() {
 function sharedInit() {
   let _true;
   let closure_1;
-  const f148566 = () => _true(handleNotification[31]);
+  const f148791 = () => _true(handleNotification[31]);
   function handleNotification(arg0) {
     if (c0) {
-      timeRequireDefault("receiveNotification", f148566).default(arg0, false);
+      timeRequireDefault("receiveNotification", f148791).default(arg0, false);
       TTITrackerDefault.extraProperties.tapped_notification = true;
     } else {
       closure_1.push(arg0);
@@ -265,7 +265,7 @@ function sharedInit() {
     closure_20.log("Push notification received, the app state is " + state);
     if (state !== constants.ACTIVE) {
       if (c0) {
-        timeRequireDefault("receiveNotification", f148566).default(arg0, false);
+        timeRequireDefault("receiveNotification", f148791).default(arg0, false);
         TTITrackerDefault.extraProperties.tapped_notification = true;
       } else {
         closure_1.push(arg0);
@@ -497,7 +497,7 @@ obj = function _initializeIntl() {
               tmp = undefined;
               c3 = 1;
               c4 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c3) {
             if (arg0 === 1) {

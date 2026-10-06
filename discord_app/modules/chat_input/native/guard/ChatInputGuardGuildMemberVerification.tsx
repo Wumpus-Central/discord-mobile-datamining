@@ -9,9 +9,9 @@ import LottieAnimationViewDefault from "../../../../components_native/common/Lot
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ChatInputConstants from "../ChatInputConstants.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/12113_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/12114_AssetRegistry.js";
-import _mod12115 from "../../../../../_runtime/metro/12115__.js";
+import AssetRegistryDefault from "../../../../../_runtime/12128_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/12129_AssetRegistry.js";
+import _mod12130 from "../../../../../_runtime/metro/12130__.js";
 import react from "../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -232,7 +232,7 @@ const memoResult = react.memo(
         }
         fn3 = function k() {
           LottieAnimationViewDefault;
-          return <tmp style={lottieAnimation.lottieAnimation} source={_mod12115} autoPlay={!stateFromStores} />;
+          return <tmp style={lottieAnimation.lottieAnimation} source={_mod12130} autoPlay={!stateFromStores} />;
         };
         cResult[12] = tmp4.lottieAnimation;
         cResult[13] = stateFromStores;
@@ -247,13 +247,13 @@ const memoResult = react.memo(
         guildId = guildId.guildId;
         const tmp = closure_8();
         const tmp2 = guildId;
-        let obj = guildId(5935);
+        let obj = guildId(5942);
         const currentUserGuildJoinRequest = obj.useCurrentUserGuildJoinRequest(guildId);
         let applicationStatus;
         if (currentUserGuildJoinRequest != null) {
           applicationStatus = currentUserGuildJoinRequest.applicationStatus;
         }
-        if (tmp2(4702).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+        if (tmp2(4708).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
           tmp8 = AssetRegistryDefault;
           const intl3 = tmp2(1126).intl;
           stringResult = intl3.string(tmp2(1126).t.lk30cY);
@@ -267,9 +267,9 @@ const memoResult = react.memo(
               const result = obj3.openMemberVerificationRejectedAlert(obj4);
             }
           }
-        } else if (tmp2(4702).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
+        } else if (tmp2(4708).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
           tmp8 = AssetRegistryDefault2;
-          tmp7 = jsx(tmp2(6017).XSmallIcon, {});
+          tmp7 = jsx(tmp2(6024).XSmallIcon, {});
           const intl2 = tmp2(1126).intl;
           class I {
             constructor() {

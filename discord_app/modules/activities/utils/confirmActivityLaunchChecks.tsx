@@ -54,7 +54,7 @@ let obj = function _getOrFetchApplicationForLaunch() {
             PRIVATE_CHANNEL = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (applicationId === 1) {
@@ -171,7 +171,7 @@ obj = function _confirmActivityChange() {
             } = closure_0);
             c2 = 1;
             c3 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === tmp4) {
@@ -300,7 +300,7 @@ obj = function _confirmActivityAgeGate() {
             application = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           let closure_1;
@@ -462,7 +462,7 @@ obj = function _confirmExternalAppLaunch() {
             isVerified = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           let closure_1;

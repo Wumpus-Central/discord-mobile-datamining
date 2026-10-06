@@ -214,7 +214,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 items[
                   HermesBuiltin.arraySpread(
                     items,
-                    filter((arg0) => arg0 !== encodeStreamKeyResult1),
+                    filter((arg0) => arg0 !== requiredAction),
                     0,
                   )
                 ] = tmp2;

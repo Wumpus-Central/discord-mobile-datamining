@@ -71,7 +71,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       children = children.children;
       let nodeText;
       const style = children.style;
-      const obj = nodeText(4582);
+      const obj = nodeText(4588);
       nodeText = obj.getNodeText(children);
       const items = [nodeText];
       const effect = react.useEffect(() => {
@@ -81,7 +81,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           AccessibilityAnnouncer.announce(nodeText);
         }
       }, items);
-      return jsx(nodeText(4886).Text, { style, variant: "text-xs/medium", color: "text-feedback-critical", children });
+      return jsx(nodeText(4892).Text, { style, variant: "text-xs/medium", color: "text-feedback-critical", children });
     };
 const result = size.fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
 

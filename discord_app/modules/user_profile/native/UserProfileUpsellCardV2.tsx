@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import ConstantsIOS from "../../../ConstantsIOS.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import ColorConstants from "../../colors/native/ColorConstants.tsx";
 import NitroWheelIcon2 from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import react from "../../../../_runtime/00019_react.js";

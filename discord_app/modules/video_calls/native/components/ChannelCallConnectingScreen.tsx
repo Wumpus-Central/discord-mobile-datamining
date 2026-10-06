@@ -9,16 +9,16 @@ import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
-import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import ChannelCallStore from "../ChannelCallStore.tsx";
 import useActionBarHeight from "../useActionBarHeight.tsx";
-import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import beginConsoleTransfer from "../../../game_console/native/beginConsoleTransfer.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09685_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09698_AssetRegistry.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import react_mod from "../../../../../_runtime/00019_react.js";
@@ -110,7 +110,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const tmp4 = closure_15();
       const tmp6 = useChannelNameDefault(channel);
-      let obj2 = channel(9600);
+      let obj2 = channel(9613);
       const isVoiceChannelLocked = obj2.useIsVoiceChannelLocked(channel);
       if (cResult[0] === channel) {
         let tmp8;
@@ -206,7 +206,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const tmp = closure_15();
       const tmp4 = useChannelNameDefault(channel);
-      let obj = channel(9600);
+      let obj = channel(9613);
       const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
       let fn = null;
       if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {

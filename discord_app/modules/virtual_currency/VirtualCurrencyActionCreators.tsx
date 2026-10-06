@@ -153,7 +153,7 @@ obj = function _redeemVirtualCurrencyForSKU() {
             billingError = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (skuId === 1) {

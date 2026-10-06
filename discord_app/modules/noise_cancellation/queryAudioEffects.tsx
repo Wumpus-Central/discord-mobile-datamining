@@ -3,7 +3,7 @@ import logger_Logger from "../../../discord_common/js/packages/logger/Logger.tsx
 import Constants from "../../Constants.tsx";
 import utils_PlatformUtils from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import DiscordNativeDefault from "../../lib/DiscordNative.tsx";
-import _modDef13829 from "../../../_runtime/metro/13829__.js";
+import _modDef13847 from "../../../_runtime/metro/13847__.js";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -30,7 +30,7 @@ let obj = function _queryAudioEffects() {
         const error1 = new Error("Audio effects querying not supported on non-Windows platforms");
         return reject(error1);
       }
-      const obj5 = _modDef13829;
+      const obj5 = _modDef13847;
       if (!obj5.satisfies(DiscordNativeDefault.os.release, ">=10.0.22000")) {
         const _Error2 = Error;
         const self3 = this;

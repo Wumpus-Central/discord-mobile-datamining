@@ -8,11 +8,11 @@ import Pressables from "../../../../../../design/void/Pressables/native/Pressabl
 import AgeVerificationActionCreatorsDefault from "../../../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import AgeVerificationAnalyticsUtils from "../../../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import SearchPlatformUtils from "../../../SearchPlatformUtils.tsx";
+import SmartSearchUtils from "../../../../../intelligence_layer/search/SmartSearchUtils.tsx";
 import SearchUtils from "../../../../SearchUtils.tsx";
 import SearchPlatformConstants from "../../../SearchPlatformConstants.tsx";
 import search_tracking_TrackingDefault from "../../../tracking/Tracking.tsx";
 import SearchPlatformActionCreatorsDefault from "../../../SearchPlatformActionCreators.tsx";
-import SmartSearchUtils from "../../../../../intelligence_layer/search/SmartSearchUtils.tsx";
 import ExplicitMediaRedactionNativeUtils from "../../../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
 import MediaGridPlaceholder from "placeholders/MediaGridPlaceholder.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -72,7 +72,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         const intl2 = tmp(1126).intl;
         const tmp9 = (
           <Text variant="text-sm/semibold" color="text-brand">
@@ -85,7 +85,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] !== tmp4) {
-        const tmp12 = jsx(searchContext(5909).PressableHighlight, {
+        const tmp12 = jsx(searchContext(5916).PressableHighlight, {
           onPress: tmp4,
           accessibilityRole: "button",
           unstable_pressDelay: 130,
@@ -103,10 +103,10 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   : (searchContext) => {
       let intl2;
       searchContext = searchContext.searchContext;
-      const PressableHighlight = searchContext(5909).PressableHighlight;
+      const PressableHighlight = searchContext(5916).PressableHighlight;
       const intl = searchContext(1126).intl;
       ({ variant: "text-sm/semibold", color: "text-brand", children: intl2.string(searchContext(1126).t.LFTAUp) });
-      const Text = searchContext(4886).Text;
+      const Text = searchContext(4892).Text;
       intl2 = searchContext(1126).intl;
       return (
         <PressableHighlight
@@ -214,7 +214,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const arr = onPressDMItem(10594)(first);
+      const arr = onPressDMItem(10607)(first);
       if (cResult[1] !== searchContext) {
         const obj3 = { searchContext };
         cResult[1] = searchContext;
@@ -223,7 +223,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[2];
       }
-      const tmpResult = tmp(16812);
+      const tmpResult = tmp(16833);
       onPressDMItem = tmpResult.useOnPressDMItem(tmp6);
       if (cResult[3] === onPressDMItem) {
         let tmp8;
@@ -443,17 +443,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? (searchContext) => {
       let arr3;
       let intl;
-      let isLoadingSuggestedSearches;
-      let obj3;
+      let obj4;
       let onPressGuildTextChannel;
-      let suggestedSearches;
       let tmp12;
+      let tmp14;
       let tmp4;
       let tmp6;
       let tmp8;
       let tmp9;
       let obj = searchContext(onPressGuildTextChannel[12]);
-      const cResult = obj.c(22);
+      const cResult = obj.c(23);
       searchContext = searchContext.searchContext;
       if (cResult[0] !== searchContext) {
         const tmpResult = searchContext(onPressGuildTextChannel[21]);
@@ -512,66 +511,81 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = cResult[10];
       }
       smartSearchQuery = tmp12;
+      if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj3 = { source: "guild_suggestions", trackShown: true };
+        cResult[11] = obj3;
+        tmp14 = obj3;
+      } else {
+        tmp14 = cResult[11];
+      }
       const tmpResult8 = searchContext(onPressGuildTextChannel[24]);
-      const suggestedSearches1 = tmpResult8.useSuggestedSearches(tmp12, "guild_suggestions");
-      ({ suggestedSearches, isLoadingSuggestedSearches } = suggestedSearches1);
-      if (cResult[11] === onPressGuildTextChannel) {
-        let tmp15;
+      const suggestedSearches = tmpResult8.useSuggestedSearches(tmp12, tmp14);
+      const suggestedSearches1 = suggestedSearches.suggestedSearches;
+      const isLoadingSuggestedSearches = suggestedSearches.isLoadingSuggestedSearches;
+      if (cResult[12] === onPressGuildTextChannel) {
         let tmp16;
         let tmp17;
-        let tmp23;
-        if (cResult[12] === searchContext) {
-          tmp15 = cResult[13];
+        let tmp18;
+        let tmp24;
+        if (cResult[13] === searchContext) {
+          tmp16 = cResult[14];
         }
-        const onPress = tmp15;
-        if (cResult[14] === tmp15) {
-          if (cResult[15] === isLoadingSuggestedSearches) {
-            if (cResult[16] === tmp12) {
-              if (cResult[17] === arr3) {
-                if (cResult[18] === suggestedSearches) {
-                  tmp16 = cResult[19];
+        const onPress = tmp16;
+        if (cResult[15] === tmp16) {
+          if (cResult[16] === isLoadingSuggestedSearches) {
+            if (cResult[17] === tmp12) {
+              if (cResult[18] === arr3) {
+                if (cResult[19] === suggestedSearches1) {
+                  tmp17 = cResult[20];
                 }
-                return tmp16;
+                return tmp17;
               }
             }
           }
         }
         const items1 = [];
-        if (0 === suggestedSearches.length) {
+        if (0 === suggestedSearches1.length) {
           if (!isLoadingSuggestedSearches) {
-            tmp17 = items1;
+            tmp18 = items1;
           }
-          cResult[14] = tmp15;
-          cResult[15] = isLoadingSuggestedSearches;
-          cResult[16] = tmp12;
-          cResult[17] = arr3;
-          cResult[18] = suggestedSearches;
-          cResult[19] = tmp17;
-          tmp16 = tmp17;
+          cResult[15] = tmp16;
+          cResult[16] = isLoadingSuggestedSearches;
+          cResult[17] = tmp12;
+          cResult[18] = arr3;
+          cResult[19] = suggestedSearches1;
+          cResult[20] = tmp18;
+          tmp17 = tmp18;
         }
-        let element = { type: constants.SECTION, props: obj3 };
+        let element = { type: constants.SECTION, props: obj4 };
         const push = items1.push;
-        obj3 = { title: intl.string(searchContext(onPressGuildTextChannel[14]).t.HbJ7eD) };
+        obj4 = { title: intl.string(searchContext(onPressGuildTextChannel[14]).t.HbJ7eD) };
         intl = tmp(tmp2[14]).intl;
         push(element);
         if (null != tmp12) {
-          if (0 === suggestedSearches.length) {
-            let num17 = 0;
+          if (0 === suggestedSearches1.length) {
+            let num18 = 0;
             if (isLoadingSuggestedSearches) {
               do {
-                let obj4 = { type: constants.SUGGESTED_SEARCH_PLACEHOLDER, key: "suggested-search-skeleton-" + num17 };
+                let obj5 = { type: constants.SUGGESTED_SEARCH_PLACEHOLDER, key: "suggested-search-skeleton-" + num18 };
                 let _HermesInternal = HermesInternal;
                 let push2 = items1.push;
-                let push2Result = push2(obj4);
-                num17 = num17 + 1;
-                tmp17 = items1;
-              } while (num17 < 3);
+                let push2Result = push2(obj5);
+                num18 = num18 + 1;
+                tmp18 = items1;
+              } while (num18 < 3);
             }
           } else {
-            const item = suggestedSearches.forEach((suggestedSearch) => {
+            const item = suggestedSearches1.forEach((suggestedSearch, index) => {
               let obj;
               const element = { type: constants.SUGGESTED_SEARCH, props: obj };
-              obj = { suggestedSearch, smartSearchQuery, variant: "compact" };
+              obj = {
+                suggestedSearch,
+                smartSearchQuery,
+                suggestionSource: "guild_suggestions",
+                index,
+                numSuggestedSearches: suggestedSearches1.length,
+                variant: "compact",
+              };
               items1.push(element);
             });
           }
@@ -582,26 +596,26 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           obj = { channel: channel.channel, lastMessageId: channel.lastMessageId, onPress };
           items1.push(element);
         });
-        if (cResult[20] !== items1) {
+        if (cResult[21] !== items1) {
           const substr1 = items1.slice(0, 4);
-          cResult[20] = items1;
-          cResult[21] = substr1;
-          tmp23 = substr1;
+          cResult[21] = items1;
+          cResult[22] = substr1;
+          tmp24 = substr1;
         } else {
-          tmp23 = cResult[21];
+          tmp24 = cResult[22];
         }
-        tmp17 = tmp23;
+        tmp18 = tmp24;
       }
-      const fn2 = function y(channelId) {
+      const fn2 = function b(channelId) {
         const obj = search_tracking_TrackingDefault;
         const obj2 = { searchContext, channelId };
         const result = obj.trackSuggestedSearchClicked(obj2);
         onPressGuildTextChannel(channelId);
       };
-      cResult[11] = onPressGuildTextChannel;
-      cResult[12] = searchContext;
-      cResult[13] = fn2;
-      tmp15 = fn2;
+      cResult[12] = onPressGuildTextChannel;
+      cResult[13] = searchContext;
+      cResult[14] = fn2;
+      tmp16 = fn2;
     }
   : (searchContext) => {
       let closure_1;
@@ -624,7 +638,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return obj.getSmartSearchQuery(searchContext, "");
       }, items2);
       const obj4 = searchContext(stateFromStores[24]);
-      const suggestedSearches1 = obj4.useSuggestedSearches(memo1, "guild_suggestions");
+      const suggestedSearches1 = obj4.useSuggestedSearches(memo1, { source: "guild_suggestions", trackShown: true });
       const suggestedSearches = suggestedSearches1.suggestedSearches;
       isLoadingSuggestedSearches = suggestedSearches1.isLoadingSuggestedSearches;
       const items3 = [onPressGuildTextChannel, searchContext];
@@ -665,10 +679,17 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               return items;
             }
           } else {
-            const item = suggestedSearches.forEach((suggestedSearch) => {
+            const item = suggestedSearches.forEach((suggestedSearch, index) => {
               let obj;
               const element = { type: constants.SUGGESTED_SEARCH, props: obj };
-              obj = { suggestedSearch, smartSearchQuery: memo1, variant: "compact" };
+              obj = {
+                suggestedSearch,
+                smartSearchQuery: memo1,
+                suggestionSource: "guild_suggestions",
+                index,
+                numSuggestedSearches: suggestedSearches.length,
+                variant: "compact",
+              };
               items.push(element);
             });
           }
@@ -799,7 +820,7 @@ let closure_22 = memo(
         const messages = stateFromStoresObject.messages;
         ({ isLoadingMediaGrid, isInitialSearchQuery } = stateFromStoresObject);
         if (cResult[3] !== searchContext) {
-          const tmp2Result2 = searchContext(11968);
+          const tmp2Result2 = searchContext(11987);
           const searchContextId = tmp2Result2.getSearchContextId(searchContext);
           cResult[3] = searchContext;
           cResult[4] = searchContextId;
@@ -808,7 +829,7 @@ let closure_22 = memo(
           tmp11 = cResult[4];
         }
         const arr3 = closure_21(tmp11);
-        const tmp15 = messages(16815)(width);
+        const tmp15 = messages(16836)(width);
         dependencyMap = tmp15;
         if (null != messages) {
           let arr4;
@@ -823,7 +844,7 @@ let closure_22 = memo(
             items1 = [];
             const obj4 = messages[Symbol.iterator]();
             while (obj4 !== undefined) {
-              let obj5 = searchContext(11966);
+              let obj5 = searchContext(11980);
               let items2 = [tmp19];
               let media = obj5.getMedia(searchContext, items2);
               let item = media.forEach((item) => items1.push(item));
@@ -842,7 +863,7 @@ let closure_22 = memo(
             if (cResult[9] === searchContext) {
               tmp27 = cResult[10];
             }
-            const obj7 = searchContext(16812);
+            const obj7 = searchContext(16833);
             const onPressMediaItem = obj7.useOnPressMediaItem(tmp27);
             if (cResult[11] === messages) {
               let tmp33;
@@ -859,7 +880,7 @@ let closure_22 = memo(
               } else {
                 tmp34 = cResult[14];
               }
-              const tmp29Result = searchContext(16816);
+              const tmp29Result = searchContext(16837);
               const fullscreenPlaceholderCount = tmp29Result.useFullscreenPlaceholderCount(tmp34);
               if (cResult[15] === tmp33) {
                 if (cResult[16] === isInitialSearchQuery) {

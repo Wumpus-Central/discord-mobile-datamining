@@ -7,7 +7,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13300_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13319_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";

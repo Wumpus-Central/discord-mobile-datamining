@@ -1,6 +1,6 @@
 // discord_app/intl/messages/untranslated.messages.js
 import AssetJsonUtils from "../../modules/asset_json/native/AssetJsonUtils.tsx";
-import AssetRegistry from "../../../_runtime/13951_AssetRegistry.js";
+import AssetRegistry from "../../../_runtime/13968_AssetRegistry.js";
 import module_1165_mod from "../../../_runtime/metro/01165__.js";
 import size from "../../../_runtime/metro/00002__.js";
 

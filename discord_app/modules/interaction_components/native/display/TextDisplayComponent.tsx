@@ -30,7 +30,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = channelId(576);
       const cResult = obj.c(21);
       ({ type, id, content } = arg0);
-      const obj2 = channelId(7795);
+      const obj2 = channelId(7806);
       const componentContainerId = obj2.useComponentContainerId();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         channelId = SelectedChannelStore.getChannelId();
@@ -90,7 +90,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmpResult4 = channelId(504);
           const stateFromStores = tmpResult4.useStateFromStores(tmp21, tmp22);
-          const tmpResult5 = channelId(7945);
+          const tmpResult5 = channelId(7956);
           const tmp25 = !tmpResult5.useShouldDisplaySpoilerObscurity(stateFromStores);
           if (cResult[9] === tmp19) {
             if (cResult[10] === setting) {
@@ -133,13 +133,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                         model={tmp10}
                         markdownTextRenderOptions={tmp28}
                         onTapLink={tmp30}
-                        onLongPressLink={channelId(11203).contentHandlers.onLongPressLink}
-                        onTapAttachmentLink={channelId(11203).contentHandlers.onTapAttachmentLink}
-                        onLongPressAttachmentLink={channelId(11203).contentHandlers.onLongPressAttachmentLink}
-                        onTapMention={channelId(11203).contentHandlers.onTapMention}
-                        onTapTimestamp={channelId(11203).contentHandlers.onTapTimestamp}
-                        onTapInlineCode={channelId(11203).contentHandlers.onTapInlineCode}
-                        onTapEmoji={channelId(11203).contentHandlers.onTapEmoji}
+                        onLongPressLink={channelId(11216).contentHandlers.onLongPressLink}
+                        onTapAttachmentLink={channelId(11216).contentHandlers.onTapAttachmentLink}
+                        onLongPressAttachmentLink={channelId(11216).contentHandlers.onLongPressAttachmentLink}
+                        onTapMention={channelId(11216).contentHandlers.onTapMention}
+                        onTapTimestamp={channelId(11216).contentHandlers.onTapTimestamp}
+                        onTapInlineCode={channelId(11216).contentHandlers.onTapInlineCode}
+                        onTapEmoji={channelId(11216).contentHandlers.onTapEmoji}
                         style={tmp31}
                       />
                     );
@@ -174,7 +174,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       parseToAST = MarkupUtilsDefault.parseToAST;
       MarkupUtilsDefault;
       obj7 = { channelId, renderOptions };
-      tmpResult6 = channelId(7531);
+      tmpResult6 = channelId(7542);
       const json = stringify(obj6);
       cResult[1] = content;
       cResult[2] = id;
@@ -185,7 +185,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (type) => {
       let tmp6;
       let tmp7;
-      const f120795 = () => {
+      const f120958 = () => {
         const items = [,];
         ({ roleStyle: arr[0], alwaysShowLinkDecorations: arr[1] } = AccessibilityStore);
         return items;
@@ -211,8 +211,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj2 = type(content[13]);
       const items1 = [AccessibilityStore];
-      [tmp6, tmp7] = channelId(obj2.useStateFromStoresArray(items1, f120795), 2);
-      channelId(obj2.useStateFromStoresArray(items1, f120795), 2);
+      [tmp6, tmp7] = channelId(obj2.useStateFromStoresArray(items1, f120958), 2);
+      channelId(obj2.useStateFromStoresArray(items1, f120958), 2);
       const AnimateEmoji = type(content[14]).AnimateEmoji;
       const setting = AnimateEmoji.useSetting();
       let obj3 = type(content[13]);

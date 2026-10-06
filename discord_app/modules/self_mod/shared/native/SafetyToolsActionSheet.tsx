@@ -9,16 +9,16 @@ import EyeSlashIcon2 from "../../../../design/components/Icon/native/redesign/ge
 import EyeIcon from "../../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
 import ChevronSmallRightIcon2 from "../../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import FlagIcon from "../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/08316_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/08349_AssetRegistry.js";
 import HeartIcon from "../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
-import AssetRegistryDefault2 from "../../../../../_runtime/08429_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../_runtime/08922_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/08462_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../_runtime/08951_AssetRegistry.js";
 import ShieldIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import MusicIcon from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
-import AssetRegistryDefault4 from "../../../../../_runtime/09572_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../../_runtime/09585_AssetRegistry.js";
 import SafetyWarningUtils from "../SafetyWarningUtils.tsx";
-import AssetRegistryDefault5 from "../../../../../_runtime/09837_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../../_runtime/09843_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../../_runtime/09850_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../../../_runtime/09856_AssetRegistry.js";
 import EducationIcon from "../../../../design/components/Icon/native/redesign/generated/EducationIcon.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
@@ -183,7 +183,7 @@ export default function SafetyToolsActionSheet(channelId) {
     let obj5 = {
       label: stringResult,
       subLabel: stringResult1,
-      icon: importDefault(stateFromStores1 ? 6459 : 6457),
+      icon: importDefault(stateFromStores1 ? 6466 : 6464),
       IconComponent: EyeSlashIcon,
       disabled: stateFromStores,
       onPress() {

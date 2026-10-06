@@ -61,7 +61,7 @@ let obj = function _launchActivityInBotDM() {
             channelId = undefined;
             customId = 1;
             referrerId = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === customId) {
           if (arg0 === 1) {

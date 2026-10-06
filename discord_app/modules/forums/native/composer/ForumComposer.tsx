@@ -157,14 +157,14 @@ function ActionBar(channel) {
       },
       foregroundRipple: true,
     };
-    const HeaderActionButton = tmp2(6880).HeaderActionButton;
+    const HeaderActionButton = tmp2(6890).HeaderActionButton;
     intl = tmp2(1126).intl;
     items4 = [,];
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     if (tmp8) {
-      ImageIcon = tmp2(11058).KeyboardIcon;
+      ImageIcon = tmp2(11071).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(5871).ImageIcon;
+      ImageIcon = tmp2(5878).ImageIcon;
     }
     tmp16Result = closure_29(HeaderActionButton, obj6);
   }
@@ -173,7 +173,7 @@ function ActionBar(channel) {
     const obj7 = {
       accessibilityLabel: intl2.string(tmp2(1126).t["112vVE"]),
       style: items6,
-      IconComponent: tmp2(8524).TagIcon,
+      IconComponent: tmp2(8557).TagIcon,
       onPress() {
         let intl;
         metroRequire.dismiss();
@@ -201,35 +201,35 @@ function ActionBar(channel) {
           },
         };
         ActionSheetActionCreatorsDefault;
-        const tmp3 = asyncRequire(11060, dependencyMap.paths);
+        const tmp3 = asyncRequire(11073, dependencyMap.paths);
         intl = intl6.intl;
         openLazy(tmp3, "ForumPostTagsActionSheet", obj);
       },
       foregroundRipple: true,
     };
-    const HeaderActionButton2 = tmp2(6880).HeaderActionButton;
+    const HeaderActionButton2 = tmp2(6890).HeaderActionButton;
     intl2 = tmp2(1126).intl;
     items6 = [,];
     ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
     tmp10 = closure_29(HeaderActionButton2, obj7);
   }
   items5[1] = tmp10;
-  let tmp18 = lastInput === tmp2(10068).PostComposerInputs.CONTENT;
+  let tmp18 = lastInput === tmp2(10081).PostComposerInputs.CONTENT;
   if (tmp18) {
     const obj8 = {
       accessibilityLabel: intl3.string(tmp2(1126).t.iZ7Mz9),
       style: tmp.actionButton,
-      IconComponent: tmp2(8411).ReactionIcon,
+      IconComponent: tmp2(8444).ReactionIcon,
       onPress: onShowExpressionPicker,
       foregroundRipple: true,
     };
-    const HeaderActionButton3 = tmp2(6880).HeaderActionButton;
+    const HeaderActionButton3 = tmp2(6890).HeaderActionButton;
     intl3 = tmp2(1126).intl;
     tmp18 = closure_29(HeaderActionButton3, obj8);
   }
   items5[2] = tmp18;
   const obj9 = { style: tmp.postButtonWrapper, children: closure_29(Button, obj10) };
-  Button = tmp2(5594).Button;
+  Button = tmp2(5601).Button;
   const intl4 = tmp2(1126).intl;
   const string = intl4.string;
   const t = tmp2(1126).t;
@@ -253,7 +253,7 @@ function ActionBar(channel) {
     submitting = !canPost;
   }
   obj11 = { size: "sm", color: nativeDefault.colors.WHITE };
-  ChatIcon = tmp2(5855).ChatIcon;
+  ChatIcon = tmp2(5862).ChatIcon;
   items5[3] = closure_29(closure_9, obj9);
   items3[1] = closure_30(closure_9, obj5);
   return closure_30(closure_9, obj3);
@@ -1025,7 +1025,7 @@ export default function ForumComposer(parentChannel) {
     yield "IconComponent";
     closure_1 = tmp4;
     stickerId = closure_0.stickerId;
-    return "Set";
+    return "Reflect";
   });
   const items13 = [parentChannel, first1.length, isEdit, thread, str4, callback4, createForumPost, stateFromStores5];
   callback21 = useCallback2(function () {

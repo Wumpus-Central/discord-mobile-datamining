@@ -159,8 +159,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = analyticsLocations(stateFromStores1.useState(false), 2);
       const first = tmp5[0];
       dependencyMap = tmp5[1];
-      const tmp8 = first(6657);
-      analyticsLocations = tmp8(first(6681).BOOSTED_GUILD_PERKS_MODAL).analyticsLocations;
+      const tmp8 = first(6664);
+      analyticsLocations = tmp8(first(6688).BOOSTED_GUILD_PERKS_MODAL).analyticsLocations;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         class T {
@@ -220,14 +220,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmp19 = closure_18(first);
           const tmp20 = closure_18(!first);
-          const tmp7Result = first(13267);
+          const tmp7Result = first(13286);
           const tmp7ResultResult = tmp7Result(
             fractionalPremiumInfo.endsAt,
-            guild(13267).CountDownMessageTypes.LONG_TIME_LEFT,
+            guild(13286).CountDownMessageTypes.LONG_TIME_LEFT,
           );
-          const tmpResult4 = guild(7736);
+          const tmpResult4 = guild(7747);
           const isInReverseTrial = tmpResult4.useIsInReverseTrial();
-          const total = tmp7(7671)(guild.guild.id).total;
+          const total = tmp7(7682)(guild.guild.id).total;
           UserStore = obj2.useRef(-1);
           if (cResult[10] === first) {
             let tmp24;
@@ -245,7 +245,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const effect = obj2.useEffect(tmp24, tmp25);
             if (cResult[14] !== stateFromStores) {
-              const tmp7Result3 = first(4528);
+              const tmp7Result3 = first(4534);
               const isPremiumResult = tmp7Result3.isPremium(stateFromStores);
               class H {
                 constructor() {
@@ -327,7 +327,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                     return boostSlots.boostSlots;
                   }
                 }
-                const tmp33 = closure_12(first(13322), obj4);
+                const tmp33 = closure_12(first(13341), obj4);
                 cResult[23] = tmp7ResultResult;
                 cResult[24] = isInReverseTrial;
                 cResult[25] = tmp4.boostingUnavailablePill;
@@ -406,7 +406,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   return boostSlots.boostSlots;
                 }
               }
-              const tmp51 = closure_12(guild(4886).Heading, obj6);
+              const tmp51 = closure_12(guild(4892).Heading, obj6);
               cResult[36] = tmp4.heading;
               cResult[37] = tmp51;
               tmp49 = tmp51;
@@ -433,7 +433,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[48] !== tmp4.guildBoostCountIcon) {
                       const obj7 = {
                         style: tmp4.guildBoostCountIcon,
-                        source: first(13307),
+                        source: first(13326),
                         color: first(587).unsafe_rawColors.GUILD_BOOSTING_PINK,
                         size: guild(1188).Icon.Sizes.SMALL,
                       };
@@ -584,8 +584,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                                                 cResult[104] = tmp97;
                                                                 cResult[105] = tmp100;
                                                                 cResult[106] = tmp103;
-                                                                cResult[107] = closure_13(first(5605), obj11);
-                                                                const tmp108 = closure_13(first(5605), obj11);
+                                                                cResult[107] = closure_13(first(5612), obj11);
+                                                                const tmp108 = closure_13(first(5612), obj11);
                                                               }
                                                             }
                                                           }
@@ -626,7 +626,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                           tmp94[5] = premiumGroupRole;
                                           tmp94[6] = intent;
                                           tmp94[7] = onResult;
-                                          const tmp96 = closure_12(first(6907), tmp94);
+                                          const tmp96 = closure_12(first(6917), tmp94);
                                           cResult[83] = fractionalPremiumInfo.fractionalState;
                                           cResult[84] = guild;
                                           cResult[85] = intent;
@@ -657,7 +657,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                       tmp89[0] = tmp30;
                                       const items9 = [tmp56, tmp84];
                                       tmp89[1] = items9;
-                                      const tmp90 = closure_13(guild(5909).PressableOpacity, tmp89);
+                                      const tmp90 = closure_13(guild(5916).PressableOpacity, tmp89);
                                       cResult[77] = tmp56;
                                       cResult[78] = tmp84;
                                       cResult[79] = tmp90;
@@ -685,7 +685,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                                 tmp82[0] = tmp74;
                                 tmp82[1] = tmp78;
-                                const tmp83 = closure_12(first(4612).View, tmp82);
+                                const tmp83 = closure_12(first(4618).View, tmp82);
                                 cResult[70] = tmp74;
                                 cResult[71] = tmp78;
                                 cResult[72] = tmp83;
@@ -702,7 +702,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                 color: "text-overlay-light",
                                 children: tmp76,
                               };
-                              const tmp79 = closure_12(guild(4886).Text, obj15);
+                              const tmp79 = closure_12(guild(4892).Text, obj15);
                               cResult[67] = tmp75;
                               cResult[68] = tmp76;
                               cResult[69] = tmp79;
@@ -741,7 +741,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp72[0] = tmp61;
                       const items13 = [tmp62, tmp67];
                       tmp72[1] = items13;
-                      const tmp73 = closure_13(first(4612).View, tmp72);
+                      const tmp73 = closure_13(first(4618).View, tmp72);
                       cResult[55] = tmp61;
                       cResult[56] = tmp62;
                       cResult[57] = tmp67;
@@ -755,7 +755,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       color: "text-overlay-light",
                       children: tmp66,
                     };
-                    const tmp69 = closure_12(guild(4886).Text, obj16);
+                    const tmp69 = closure_12(guild(4892).Text, obj16);
                     cResult[52] = tmp4.guildBoostCount;
                     cResult[53] = tmp66;
                     cResult[54] = tmp69;
@@ -780,7 +780,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 tmp58[0] = tmp4.guildName;
                 tmp58[3] = guild.name;
-                const tmp59 = closure_12(guild(4886).Text, tmp58);
+                const tmp59 = closure_12(guild(4892).Text, tmp58);
                 cResult[42] = guild.name;
                 cResult[43] = tmp4.guildName;
                 cResult[44] = tmp59;
@@ -788,8 +788,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             ({ guildIcon: obj13.style, guildIconText: obj13.textStyle } = tmp4);
-            const obj17 = { style: null, textStyle: null, guild, size: guild(5971).GuildIconSizes.LARGE };
-            const tmp7Result4 = first(5971);
+            const obj17 = { style: null, textStyle: null, guild, size: guild(5978).GuildIconSizes.LARGE };
+            const tmp7Result4 = first(5978);
             const tmp55 = closure_12(tmp7Result4, obj17);
             cResult[38] = guild;
             cResult[39] = tmp4.guildIcon;
@@ -871,8 +871,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = analyticsLocations(stateFromStores1.useState(false), 2);
       const first = tmp2[0];
       dependencyMap = tmp2[1];
-      const tmp6 = first(6657);
-      analyticsLocations = tmp6(first(6681).BOOSTED_GUILD_PERKS_MODAL).analyticsLocations;
+      const tmp6 = first(6664);
+      analyticsLocations = tmp6(first(6688).BOOSTED_GUILD_PERKS_MODAL).analyticsLocations;
       let obj = guild(573);
       const items = [ref];
       const stateFromStores = obj.useStateFromStores(items, () => ref.getCurrentUser());
@@ -889,11 +889,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       const tmp11 = closure_18(first);
       const tmp12 = closure_18(!first);
-      const tmp13 = first(13267);
-      const tmp13Result = tmp13(fractionalPremiumInfo.endsAt, guild(13267).CountDownMessageTypes.LONG_TIME_LEFT);
-      let obj3 = guild(7736);
+      const tmp13 = first(13286);
+      const tmp13Result = tmp13(fractionalPremiumInfo.endsAt, guild(13286).CountDownMessageTypes.LONG_TIME_LEFT);
+      let obj3 = guild(7747);
       const isInReverseTrial = obj3.useIsInReverseTrial();
-      const total = first(7671)(premiumGroupRole.guild.id).total;
+      const total = first(7682)(premiumGroupRole.guild.id).total;
       ref = stateFromStores1.useRef(-1);
       const items3 = [first, memo];
       const effect = stateFromStores1.useEffect(() => {
@@ -908,16 +908,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           window.clearTimeout(ref.current);
         };
       }, items3);
-      let obj4 = first(4528);
+      let obj4 = first(4534);
       const isPremiumResult = obj4.isPremium(stateFromStores);
       if (premiumGroupRole === guild(1385).PremiumSubscriptionGroupRole.MEMBER) {
         const obj5 = { style: tmp.boostingUnavailablePill };
-        tmp19 = closure_12(tmp4(13320), obj5);
+        tmp19 = closure_12(tmp4(13339), obj5);
       } else {
         tmp19 = null;
         if (fractionalPremiumInfo.fractionalState !== FractionalPremiumStates.NONE) {
           const obj6 = { fpDurationText: tmp13Result, isInReverseTrial, style: tmp.boostingUnavailablePill };
-          tmp19 = closure_12(tmp4(13322), obj6);
+          tmp19 = closure_12(tmp4(13341), obj6);
         }
       }
       const obj7 = {
@@ -931,7 +931,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         children: closure_13(tmp4Result3, obj8),
       };
       items4 = [, , , ,];
-      const tmp4Result = first(5605);
+      const tmp4Result = first(5612);
       items4[0] = first(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_1;
       items4[1] = first(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_2;
       items4[2] = first(587).unsafe_rawColors.PREMIUM_TIER_0_HEADER_GRADIENT_3;
@@ -947,8 +947,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         children: items5,
       };
       items5 = [, , ,];
-      tmp4Result3 = first(5605);
-      items5[0] = closure_12(first(13382), { guild });
+      tmp4Result3 = first(5612);
+      items5[0] = closure_12(first(13401), { guild });
       const obj9 = { style: tmp.headerContent, children: items6 };
       const obj10 = {
         style: tmp.heading,
@@ -956,16 +956,16 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "display-sm",
         children: intl.string(guild(1126).t["AF+Tyh"]),
       };
-      const Heading = guild(4886).Heading;
+      const Heading = guild(4892).Heading;
       intl = guild(1126).intl;
       items6 = [closure_12(Heading, obj10), , , ,];
       const obj11 = {
         style: tmp.guildIcon,
         textStyle: tmp.guildIconText,
         guild,
-        size: guild(5971).GuildIconSizes.LARGE,
+        size: guild(5978).GuildIconSizes.LARGE,
       };
-      const tmp4Result4 = first(5971);
+      const tmp4Result4 = first(5978);
       items6[1] = closure_12(tmp4Result4, obj11);
       const obj12 = {
         onPress() {
@@ -974,7 +974,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         },
         children: items7,
       };
-      const PressableOpacity = guild(5909).PressableOpacity;
+      const PressableOpacity = guild(5916).PressableOpacity;
       items7 = [,];
       const obj13 = {
         style: tmp.guildName,
@@ -982,14 +982,14 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "text-md/bold",
         children: guild.name,
       };
-      items7[0] = closure_12(guild(4886).Text, obj13);
+      items7[0] = closure_12(guild(4892).Text, obj13);
       const obj15 = { style: items8, children: items9 };
       items8 = [tmp12, tmp.totalBoostCountWrapper];
       const obj14 = { style: tmp.guildBoostCountWrapper, children: items10 };
-      View = tmp4(4612).View;
+      View = tmp4(4618).View;
       const obj16 = {
         style: tmp.guildBoostCountIcon,
-        source: first(13307),
+        source: first(13326),
         color: first(587).unsafe_rawColors.GUILD_BOOSTING_PINK,
         size: guild(1188).Icon.Sizes.SMALL,
       };
@@ -1002,13 +1002,13 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-overlay-light",
         children: intl2.format(guild(1126).t["pob/cL"], { subscriptions: total }),
       };
-      const Text = guild(4886).Text;
+      const Text = guild(4892).Text;
       intl2 = guild(1126).intl;
       items9[1] = closure_12(Text, obj17);
       items10 = [closure_13(View, obj15)];
       const obj18 = { style: items11, children: closure_12(Text2, obj19) };
       items11 = [tmp11, tmp.guildBoostCurrentUserCountWrapper];
-      const View2 = tmp4(4612).View;
+      const View2 = tmp4(4618).View;
       obj19 = {
         style: items12,
         variant: "text-sm/bold",
@@ -1017,7 +1017,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items12 = [,];
       ({ guildBoostCount: arr13[0], guildBoostCurrentUserCount: arr13[1] } = tmp);
-      Text2 = guild(4886).Text;
+      Text2 = guild(4892).Text;
       intl3 = guild(1126).intl;
       items10[1] = closure_12(View2, obj18);
       items7[1] = closure_13(memo, obj14);
@@ -1035,17 +1035,17 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items13 = [,];
       ({ cta: arr14[0], ctaPrimary: arr14[1] } = tmp);
-      items6[4] = closure_12(first(6907), obj20);
+      items6[4] = closure_12(first(6917), obj20);
       items5[1] = closure_13(memo, obj9);
       const obj21 = { style: tmp.headerStars };
-      items5[2] = closure_12(first(13385), obj21);
+      items5[2] = closure_12(first(13404), obj21);
       const obj22 = { style: tmp.headerWave };
-      items5[3] = closure_12(first(13386), obj22);
+      items5[3] = closure_12(first(13405), obj22);
       const items14 = [closure_12(tmp4Result, obj7)];
       const obj23 = { style: items15, children: closure_12(Button, obj26) };
       items15 = [,];
       ({ cta: arr16[0], ctaSecondary: arr16[1] } = tmp);
-      Button = guild(5594).Button;
+      Button = guild(5601).Button;
       if (isPremiumResult) {
         const obj24 = {
           variant: "secondary",
@@ -1067,7 +1067,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           grow: true,
         };
         intl5 = guild(1126).intl;
-        obj25 = { size: guild(1188).Icon.Sizes.SMALL, source: first(13387), style: tmp.giftIcon };
+        obj25 = { size: guild(1188).Icon.Sizes.SMALL, source: first(13406), style: tmp.giftIcon };
         Icon2 = guild(1188).Icon;
         obj26 = obj24;
       } else {

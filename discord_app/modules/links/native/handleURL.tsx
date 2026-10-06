@@ -315,7 +315,7 @@ let obj = function _handleURL() {
           presentFailedToast(intl.string(closure_2_0(closure_2_2[11]).t.XiqzAp));
         }
       };
-      return "Set";
+      return "Reflect";
     })();
     let nextResult = iter.next();
     return iter;

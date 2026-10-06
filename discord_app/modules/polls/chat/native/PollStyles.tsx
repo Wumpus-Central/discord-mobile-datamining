@@ -1,5 +1,5 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
-import merged5 from "../../../../../_runtime/05075_merged5.js";
+import merged5 from "../../../../../_runtime/05081_merged5.js";
 import PollLayoutTypes from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import PollMessageChatDataTypes from "../PollMessageChatDataTypes.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
-import _slicedToArray from "../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray from "../../../_runtime/metro/04498__slicedToArray.js";
 import CollectiblesProductUtils from "utils/CollectiblesProductUtils.tsx";
 import 01254__ from "../../../_runtime/metro/01254__.js";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";

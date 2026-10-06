@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/badges/native/openCustomizeBa
 export const openCustomizeBadgesSheet = function openCustomizeBadgesSheet(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(14448, dependencyMap.paths), "Customize Badges", { analyticsLocations });
+  obj.openLazy(asyncRequire(14464, dependencyMap.paths), "Customize Badges", { analyticsLocations });
 };

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import intl4 from "../../../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../../../toast/native/ToastActionCreators.tsx";
 import DesignSystemsNotificationComponentsExperiment from "../../../../../design/DesignSystemsNotificationComponentsExperiment.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/08922_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/08951_AssetRegistry.js";
 import ShieldIcon from "../../../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import ChannelSafetyWarningsStore2 from "../../../../ChannelSafetyWarningsStore.tsx";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";

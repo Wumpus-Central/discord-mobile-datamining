@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish/conjurePublishAction.tsx
 import intl19 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import conjurePreviewModes from "../preview/conjurePreviewModes.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -56,8 +56,8 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
         let tmp9;
         if ("bot" === surface) {
           const obj2 = {
-            update: intl11.string(_modDef3723.JpDnbE),
-            open: intl12.string(_modDef3723.NNIwRu),
+            update: intl11.string(_modDef3753.JpDnbE),
+            open: intl12.string(_modDef3753.NNIwRu),
             destination: "dm",
             navigatesOnFirstPublish: true,
             navigatesOnUpdate: false,
@@ -67,8 +67,8 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
           tmp9 = obj2;
         } else if ("activity" === surface) {
           const obj3 = {
-            update: intl9.string(_modDef3723.QesMDC),
-            open: intl10.string(_modDef3723.iyQTsb),
+            update: intl9.string(_modDef3753.QesMDC),
+            open: intl10.string(_modDef3753.iyQTsb),
             destination: "launch",
             navigatesOnFirstPublish: false,
             navigatesOnUpdate: false,
@@ -78,8 +78,8 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
           tmp9 = obj3;
         } else if ("widget" === surface) {
           const obj4 = {
-            update: intl7.string(_modDef3723["LUi/55"]),
-            open: intl8.string(_modDef3723.TXUK1g),
+            update: intl7.string(_modDef3753["LUi/55"]),
+            open: intl8.string(_modDef3753.TXUK1g),
             destination: "profile",
             navigatesOnFirstPublish: true,
             navigatesOnUpdate: true,
@@ -96,10 +96,10 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
         if (null != guildName) {
           const intl = intl19.intl;
           const obj = { server: guildName };
-          const formatToPlainStringResult = intl.formatToPlainString(_modDef3723.fTgw6C, obj);
+          const formatToPlainStringResult = intl.formatToPlainString(_modDef3753.fTgw6C, obj);
           if ("bot" === surface) {
             const obj5 = {
-              update: intl6.string(_modDef3723.JpDnbE),
+              update: intl6.string(_modDef3753.JpDnbE),
               open: formatToPlainStringResult,
               destination: "guild",
               navigatesOnFirstPublish: true,
@@ -109,7 +109,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
             tmp7 = obj5;
           } else if ("activity" === surface) {
             const obj6 = {
-              update: intl4.string(_modDef3723.QesMDC),
+              update: intl4.string(_modDef3753.QesMDC),
               open: formatToPlainStringResult1,
               destination: "channel",
               navigatesOnFirstPublish: true,
@@ -120,13 +120,13 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
             if (null != appChannelName) {
               const intl5 = intl19.intl;
               const obj7 = { channel: appChannelName };
-              formatToPlainStringResult1 = intl5.formatToPlainString(_modDef3723.l9xGQD, obj7);
+              formatToPlainStringResult1 = intl5.formatToPlainString(_modDef3753.l9xGQD, obj7);
             }
             tmp7 = obj6;
           } else if ("automod" === surface) {
             const obj8 = {
-              update: intl2.string(_modDef3723.bwBMMn),
-              open: intl3.string(_modDef3723.KjbLum),
+              update: intl2.string(_modDef3753.bwBMMn),
+              open: intl3.string(_modDef3753.KjbLum),
               destination: "automod",
               navigatesOnFirstPublish: false,
               navigatesOnUpdate: false,
@@ -192,18 +192,18 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
       if (false === tmp22) {
         if (usesNativeAppChannels) {
           const intl15 = intl19.intl;
-          formatToPlainStringResult2 = intl15.formatToPlainString(_modDef3723["4sqXfg"], obj11);
+          formatToPlainStringResult2 = intl15.formatToPlainString(_modDef3753["4sqXfg"], obj11);
         }
         tmp24 = formatToPlainStringResult2;
       }
       if (false === tmp22) {
         const intl14 = intl19.intl;
-        formatToPlainStringResult2 = intl14.formatToPlainString(_modDef3723.N4NkyR, obj11);
+        formatToPlainStringResult2 = intl14.formatToPlainString(_modDef3753.N4NkyR, obj11);
       } else {
         formatToPlainStringResult2 = null;
         if (usesNativeAppChannels) {
           const intl13 = intl19.intl;
-          formatToPlainStringResult2 = intl13.formatToPlainString(_modDef3723.PxtHIV, obj11);
+          formatToPlainStringResult2 = intl13.formatToPlainString(_modDef3753.PxtHIV, obj11);
         }
       }
     }
@@ -258,7 +258,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
       }
       if (true === prop2) {
         const obj14 = {
-          label: intl18.string(_modDef3723["tUeY/h"]),
+          label: intl18.string(_modDef3753["tUeY/h"]),
           action: "review_permissions",
           navigatesOnPublish: tmp45,
         };
@@ -273,13 +273,13 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
     }
     if (update == null) {
       const intl16 = intl19.intl;
-      update = intl16.string(_modDef3723.QesMDC);
+      update = intl16.string(_modDef3753.QesMDC);
     }
     const obj27 = { label: update, action: "publish", navigatesOnPublish: tmp45 };
     const merged1 = Object.assign(obj13);
     if (!("changes" === status.state && !tmp19)) {
       const intl17 = intl19.intl;
-      update = intl17.string(_modDef3723["120EFN"]);
+      update = intl17.string(_modDef3753["120EFN"]);
     }
     return obj27;
   }

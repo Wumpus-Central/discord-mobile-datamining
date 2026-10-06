@@ -23,11 +23,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = analyticsContext(576);
       const cResult = obj.c(13);
       title = title.title;
-      let obj2 = analyticsContext(9101);
+      let obj2 = analyticsContext(9137);
       analyticsContext = obj2.useAnalyticsContext();
-      let obj3 = analyticsContext(9316);
+      let obj3 = analyticsContext(8089);
       const lastUsedVideoBackgroundOption = obj3.useLastUsedVideoBackgroundOption();
-      let obj4 = analyticsContext(9681);
+      let obj4 = analyticsContext(9694);
       const videoBackgroundRadioOptions = obj4.useVideoBackgroundRadioOptions();
       if (cResult[0] !== analyticsContext.location) {
         const fn = function l(arg0) {
@@ -48,7 +48,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       if (cResult[2] !== lastUsedVideoBackgroundOption) {
-        const tmpResult = analyticsContext(9681);
+        const tmpResult = analyticsContext(9694);
         let result = tmpResult.toVideoBackgroundRadioValue(lastUsedVideoBackgroundOption);
         cResult[2] = lastUsedVideoBackgroundOption;
         cResult[3] = result;
@@ -98,7 +98,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp15 = jsx(analyticsContext(6072).TableRadioGroup, {
+      const tmp15 = jsx(analyticsContext(6079).TableRadioGroup, {
         hasIcons: true,
         title,
         value: tmp7,

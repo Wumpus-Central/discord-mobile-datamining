@@ -149,10 +149,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         class B {
           constructor() {
             closure_0 = closure_7.addEventListener("change", () => {
-              /* body not rendered: F143521 */
+              /* body not rendered: F143723 */
             });
             return () => {
-              /* body not rendered: F143522 */
+              /* body not rendered: F143724 */
             };
           }
         }
@@ -168,17 +168,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         class B {
           constructor() {
             closure_0 = closure_7.addEventListener("change", () => {
-              /* body not rendered: F143521 */
+              /* body not rendered: F143723 */
             });
             return () => {
-              /* body not rendered: F143522 */
+              /* body not rendered: F143724 */
             };
           }
         }
         tmp28 = cResult[12];
       }
       const effect = obj2.useEffect(B, tmp28);
-      const tmpResult2 = tmp(4612);
+      const tmpResult2 = tmp(4618);
       class H {
         constructor() {
           if (null == closure_3) {
@@ -223,10 +223,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj3 = {
         width,
         OFFSCREEN_OFFSET,
-        withRepeat: tmp(4612).withRepeat,
-        withSequence: tmp(4612).withSequence,
-        withTiming: tmp(4891).withTiming,
-        withDelay: tmp(4612).withDelay,
+        withRepeat: tmp(4618).withRepeat,
+        withSequence: tmp(4618).withSequence,
+        withTiming: tmp(4897).withTiming,
+        withDelay: tmp(4618).withDelay,
         INITIAL_ANIMATION_DELAY,
         ANIMATION_DURATION: v2000,
       };

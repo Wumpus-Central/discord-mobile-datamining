@@ -287,10 +287,10 @@ class GuildSettingsModalModeration extends PureComponent {
         return authStore(TableRadioRow, obj, "level-" + value);
       }),
     };
-    const TableRadioGroup = self(6072).TableRadioGroup;
+    const TableRadioGroup = self(6079).TableRadioGroup;
     intl = self(1126).intl;
     intl2 = self(1126).intl;
-    let obj2 = self(14645);
+    let obj2 = self(14661);
     const features = guild.features;
     verificationLevelOptions = obj2.generateVerificationLevelOptions(features.has(constants.COMMUNITY));
     return closure_10(TableRadioGroup, obj, "level-section");
@@ -329,7 +329,7 @@ class GuildSettingsModalModeration extends PureComponent {
         return authStore(TableRadioRow, obj, "filter-" + value);
       }),
     };
-    const TableRadioGroup = self(6072).TableRadioGroup;
+    const TableRadioGroup = self(6079).TableRadioGroup;
     intl = self(1126).intl;
     const intl2 = self(1126).intl;
     format = intl2.format;
@@ -337,7 +337,7 @@ class GuildSettingsModalModeration extends PureComponent {
     BI4ukC = self(1126).t.BI4ukC;
     const features = guild.features;
     obj3 = HelpdeskUtilsDefault;
-    const obj4 = self(14645);
+    const obj4 = self(14661);
     contentFilterOptions = obj4.generateContentFilterOptions(features.has(constants.COMMUNITY));
     return closure_10(TableRadioGroup, obj, "filter-section");
   }

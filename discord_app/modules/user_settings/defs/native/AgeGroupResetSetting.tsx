@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AgeGroupResetSetting.tsx
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef3045 from "../../../age_assurance/AgeAssurance.messages.js";
+import _modDef3073 from "../../../age_assurance/AgeAssurance.messages.js";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import AgeGroupScreenRowProps from "AgeGroupScreenRowProps.tsx";
@@ -14,12 +14,12 @@ const jsx = Fragment.jsx;
 const obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef3045["bD//cU"]);
+    return intl.string(_modDef3073["bD//cU"]);
   },
   parent: MobileUserSettings.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
     const intl = intl2.intl;
-    return intl.string(_modDef3045.Gn0SAj);
+    return intl.string(_modDef3073.Gn0SAj);
   },
   onPress() {
     SettingsAgeGroupResetAlert.default;

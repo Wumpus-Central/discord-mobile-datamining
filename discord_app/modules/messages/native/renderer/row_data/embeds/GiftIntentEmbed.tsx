@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import intl5 from "../../../../../../intl/index.native.tsx";
 import PremiumConstants from "../../../../../premium/PremiumConstants.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/04832_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/04838_AssetRegistry.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import PremiumGiftingUtils from "../../../../../premium/PremiumGiftingUtils.tsx";
-import AssetRegistryDefault2 from "../../../../../../../_runtime/07752_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../../../_runtime/07753_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../../_runtime/07763_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../../_runtime/07764_AssetRegistry.js";
 import PremiumGiftingIntentStore from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";

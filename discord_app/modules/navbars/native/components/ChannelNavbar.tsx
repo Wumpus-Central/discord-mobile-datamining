@@ -141,7 +141,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[7] !== stateFromStores) {
         let channelIcon = null;
         if (null != stateFromStores) {
-          const tmpResult5 = channelId(5812);
+          const tmpResult5 = channelId(5819);
           channelIcon = tmpResult5.getChannelIcon(stateFromStores);
         }
         class C {
@@ -156,7 +156,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[9] !== stateFromStores) {
         if (null != stateFromStores) {
-          channelId(5043);
+          channelId(5049);
           class C {
             constructor() {
               return connected.isConnected();

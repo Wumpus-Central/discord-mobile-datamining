@@ -85,7 +85,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(7);
       ({ children, style } = arg0);
       const tmp3 = closure_17();
-      activeQuestDockMode = react.useContext(activeQuestDockMode(14897).QuestDockGestureContext).activeQuestDockMode;
+      activeQuestDockMode = react.useContext(activeQuestDockMode(14913).QuestDockGestureContext).activeQuestDockMode;
       const fn = function n() {
         const withSpring = spring.withSpring;
         let num = 0;
@@ -96,9 +96,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withSpring(num, c9) };
         return obj;
       };
-      const obj2 = activeQuestDockMode(4612);
+      const obj2 = activeQuestDockMode(4618);
       fn.__closure = {
-        withSpring: activeQuestDockMode(5597).withSpring,
+        withSpring: activeQuestDockMode(5604).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -106,7 +106,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 5908890006198;
       fn.__initData = __initData;
       ({
-        withSpring: activeQuestDockMode(5597).withSpring,
+        withSpring: activeQuestDockMode(5604).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -148,8 +148,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       let activeQuestDockMode;
       ({ children, style } = arg0);
       const tmp = closure_17();
-      activeQuestDockMode = react.useContext(activeQuestDockMode(14897).QuestDockGestureContext).activeQuestDockMode;
-      let obj = activeQuestDockMode(4612);
+      activeQuestDockMode = react.useContext(activeQuestDockMode(14913).QuestDockGestureContext).activeQuestDockMode;
+      let obj = activeQuestDockMode(4618);
       const fn = function s() {
         const withSpring = spring.withSpring;
         let num = 0;
@@ -161,7 +161,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       };
       fn.__closure = {
-        withSpring: activeQuestDockMode(5597).withSpring,
+        withSpring: activeQuestDockMode(5604).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,
@@ -169,7 +169,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 9800697298933;
       fn.__initData = __initData2;
       ({
-        withSpring: activeQuestDockMode(5597).withSpring,
+        withSpring: activeQuestDockMode(5604).withSpring,
         activeQuestDockMode,
         QuestDockMode,
         QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED,

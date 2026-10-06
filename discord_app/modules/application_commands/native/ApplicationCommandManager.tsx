@@ -1307,7 +1307,7 @@ class ApplicationCommandManager {
         let focused2 = editId.focused;
         const getCurrentOption = self.getCurrentOption;
         if (!focused2) {
-          const obj5 = obj11(4747);
+          const obj5 = obj11(4753);
           const keyboardType = obj5.getKeyboardType();
           focused2 = keyboardType !== obj11(1616).KeyboardTypes.SYSTEM;
         }
@@ -1346,7 +1346,7 @@ class ApplicationCommandManager {
       }
       if (tmp92) {
         self.optionValues = self.getAllCommandOptionValues(activeCommand, editId.text);
-        const obj7 = obj11(11779);
+        const obj7 = obj11(11793);
         self.optionValidationResults = obj7.getValidationResults(
           activeCommand,
           self.optionValues,
@@ -1640,7 +1640,7 @@ class ApplicationCommandManager {
       let tmp132 =
         tmp91 && null != activeOption && activeOption.type !== tmp105(1985).ApplicationCommandOptionType.ATTACHMENT;
       if (tmp132) {
-        const tmp105Result2 = obj11(4747);
+        const tmp105Result2 = obj11(4753);
         const keyboardType1 = tmp105Result2.getKeyboardType();
         tmp132 = keyboardType1 !== tmp105(1616).KeyboardTypes.SYSTEM;
       }
@@ -1759,7 +1759,7 @@ class ApplicationCommandManager {
       let tmp28 = currentOption(tmp26, 2);
       let first = tmp28[0];
       let tmp30 = tmp28[1];
-      let obj3 = obj11(11605);
+      let obj3 = obj11(11619);
       let hasItem = 0 !== obj3.findGameMentionTokens(editId.text, tmp30.name, mapped).locations.length;
       if (!hasItem) {
         let text3 = editId.text;

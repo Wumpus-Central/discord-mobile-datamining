@@ -2,7 +2,7 @@
 import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f83081 = (item) => {
+const f83214 = (item) => {
   let result1;
   const result = item / 255;
   if (result <= 0.03928) {
@@ -267,7 +267,7 @@ export const int2rgbArray = function int2rgbArray(modalV2BackgroundColor) {
 };
 export const getLuminance = function getLuminance(arg0, arg1, arg2) {
   const items = [arg0, arg1, arg2];
-  const mapped = items.map(f83081);
+  const mapped = items.map(f83214);
   return 0.2126 * mapped[0] + 0.7152 * mapped[1] + 0.0722 * mapped[2];
 };
 export const getContrast = function getContrast(hex2intResult, hex2intResult1) {
@@ -275,11 +275,11 @@ export const getContrast = function getContrast(hex2intResult, hex2intResult1) {
   const items1 = [(hex2intResult1 >> 16) & 255, (hex2intResult1 >> 8) & 255, 255 & hex2intResult1];
   const items2 = [, ,];
   [arr3[0], arr3[1], arr3[2]] = items;
-  const mapped = items2.map(f83081);
+  const mapped = items2.map(f83214);
   const sum = 0.2126 * mapped[0] + 0.7152 * mapped[1] + 0.0722 * mapped[2];
   const items3 = [, ,];
   [arr4[0], arr4[1], arr4[2]] = items1;
-  const mapped1 = items3.map(f83081);
+  const mapped1 = items3.map(f83214);
   const sum1 = 0.2126 * mapped1[0] + 0.7152 * mapped1[1] + 0.0722 * mapped1[2];
   const sum2 = Math.max(sum, sum1) + 0.05;
   return sum2 / (Math.min(sum, sum1) + 0.05);

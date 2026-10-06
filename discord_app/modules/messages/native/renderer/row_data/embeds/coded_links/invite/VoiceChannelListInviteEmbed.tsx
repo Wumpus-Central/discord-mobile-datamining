@@ -76,7 +76,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const guild1 = GuildStore.getGuild(invite.guild.id);
     tmp2 = null;
     if (null != guild1) {
-      const channel = displayNameStylesEnabled(10025)(invite).channel;
+      const channel = displayNameStylesEnabled(10038)(invite).channel;
       tmp2 = null;
       if (null != channel) {
         tmp2 = null;
@@ -101,12 +101,12 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
   } else {
     const guild = tmp2.guild;
     const channel2 = tmp2.channel;
-    ({ colors, baseColors } = displayNameStylesEnabled(7604)(theme));
+    ({ colors, baseColors } = displayNameStylesEnabled(7615)(theme));
     let assetUriForEmbed;
-    displayNameStylesEnabled(7604)(theme);
+    displayNameStylesEnabled(7615)(theme);
     const tmp40 = displayNameStylesEnabled;
     if (null != guild.icon) {
-      let obj2 = guild(7605);
+      let obj2 = guild(7616);
       assetUriForEmbed = obj2.getAssetUriForEmbed(getGuildIconSource(guild, 128, false));
     }
     const voiceStatesForChannelAlt = SortedVoiceStateStore.getVoiceStatesForChannelAlt(channel2.id, guild.id);
@@ -211,13 +211,13 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(guild.id);
     const id = channel2.id;
     const merged = Object.assign(baseColors);
-    let obj4 = guild(4696);
+    let obj4 = guild(4702);
     const embedScrollGradientBackground = obj4.getEmbedScrollGradientBackground();
     backgroundColor = processColor(embedScrollGradientBackground);
     if (backgroundColor == null) {
       backgroundColor = baseColors.backgroundColor;
     }
-    tmp31Result = guild(5043);
+    tmp31Result = guild(5049);
     tmp36 = currentClientVoiceChannelId === id;
     intl = tmp31(1126).intl;
     ({
@@ -226,7 +226,7 @@ export const createVoiceChannelListInviteEmbed = function createVoiceChannelList
     } = colors);
     items1 = [GuildMemberStore];
     let flag2 = true;
-    tmp40Result = tmp40(10026);
+    tmp40Result = tmp40(10039);
     intl2 = tmp31(1126).intl;
     const intl3 = tmp31(1126).intl;
     str2 = intl3.string(guild(1126).t.dI3q4h);

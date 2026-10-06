@@ -13,7 +13,7 @@ import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, navigation, setOptionsResult;
+let _require, navigation;
 
 let StyleSheet;
 let closure_4;
@@ -26,7 +26,7 @@ let obj3;
 const PremiumUpsellTypes = PremiumConstants.PremiumUpsellTypes;
 const jsx = Fragment.jsx;
 let createStyles = createStyles_mod;
-let obj = { container: obj2, headerTitle: obj3 };
+let obj = { container: obj2, headerContent: obj3 };
 obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles = createStyles.createStyles;
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -37,23 +37,22 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let analyticsLocations;
       let closure_0;
       let currentUser;
-      let items3;
       let sourceAnalyticsLocations;
-      let tmp12;
-      let tmp13;
-      let tmp16;
-      let tmp25;
-      let tmp8;
+      let tmp10;
+      let tmp15;
+      let tmp18;
       let tmp9;
       let obj = require("react");
-      const cResult = obj.c(20);
+      const cResult = obj.c(21);
       const tmp4 = closure_10();
+      const tmp = _require;
       _require = tmp4;
       let obj2 = require("useNavigation");
       navigation = obj2.useNavigation();
-      const tmp6 = navigation(sourceAnalyticsLocations[11]);
-      const tmp6Result = tmp6(navigation(sourceAnalyticsLocations[12]).USER_SETTINGS_TRY_OUT_PREMIUM);
-      ({ analyticsLocations, sourceAnalyticsLocations } = tmp6Result);
+      const tmp7 = navigation(sourceAnalyticsLocations[11]);
+      const tmp7Result = tmp7(navigation(sourceAnalyticsLocations[12]).USER_SETTINGS_TRY_OUT_PREMIUM);
+      ({ analyticsLocations, sourceAnalyticsLocations } = tmp7Result);
+      const tmp6 = navigation;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [UserStore];
         const fn = function l() {
@@ -61,171 +60,124 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         };
         cResult[0] = items;
         cResult[1] = fn;
-        tmp8 = items;
-        tmp9 = fn;
+        tmp10 = fn;
+        tmp9 = items;
       } else {
-        [tmp8, tmp9] = cResult;
+        [tmp9, tmp10] = cResult;
       }
-      const tmpResult = require("get initialized");
-      const stateFromStores = tmpResult.useStateFromStores(tmp8, tmp9);
+      const tmpResult = tmp(sourceAnalyticsLocations[13]);
+      const stateFromStores = tmpResult.useStateFromStores(tmp9, tmp10);
+      const tmp13 = tmp6(sourceAnalyticsLocations[14])();
+      let closure_4 = tmp13;
       if (cResult[2] !== stateFromStores) {
-        const fn2 = function h() {
-          if (null != stateFromStores) {
-            const tmp3 = maybeFetchUserProfileDefault;
-            tmp3(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
+        class T {
+          constructor() {
+            if (null != stateFromStores) {
+              const tmp3 = maybeFetchUserProfileDefault;
+              tmp3(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
+            }
           }
-        };
+        }
         const items1 = [stateFromStores];
         cResult[2] = stateFromStores;
-        cResult[3] = fn2;
+        cResult[3] = T;
         cResult[4] = items1;
-        tmp13 = items1;
-        tmp12 = fn2;
+        tmp15 = items1;
       } else {
-        tmp12 = cResult[3];
-        tmp13 = cResult[4];
-      }
-      const effect = stateFromStores.useEffect(tmp12, tmp13);
-      if (cResult[5] !== sourceAnalyticsLocations) {
-        class P {
+        class T {
           constructor() {
-            let obj3;
-            const obj2 = {
-              type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
-              location: obj3,
-              location_stack: sourceAnalyticsLocations,
-            };
-            obj3 = { page: metroImportDefault.USER_SETTINGS };
-            const obj = AnalyticsUtilsDefault;
-            obj.track(metroRequire.PREMIUM_UPSELL_VIEWED, obj2);
+            if (null != stateFromStores) {
+              const tmp3 = maybeFetchUserProfileDefault;
+              tmp3(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
+            }
+          }
+        }
+        tmp15 = cResult[4];
+      }
+      const effect = stateFromStores.useEffect(T, tmp15);
+      const obj4 = stateFromStores;
+      if (cResult[5] !== sourceAnalyticsLocations) {
+        class T {
+          constructor() {
+            if (null != stateFromStores) {
+              const tmp3 = maybeFetchUserProfileDefault;
+              tmp3(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
+            }
           }
         }
         const items2 = [sourceAnalyticsLocations];
         cResult[5] = sourceAnalyticsLocations;
-        cResult[6] = P;
+        cResult[6] = tmp19;
         cResult[7] = items2;
-        tmp16 = items2;
+        tmp18 = items2;
       } else {
-        class P {
+        class T {
           constructor() {
-            let obj3;
-            const obj2 = {
-              type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
-              location: obj3,
-              location_stack: sourceAnalyticsLocations,
-            };
-            obj3 = { page: metroImportDefault.USER_SETTINGS };
-            const obj = AnalyticsUtilsDefault;
-            obj.track(metroRequire.PREMIUM_UPSELL_VIEWED, obj2);
+            if (null != stateFromStores) {
+              const tmp3 = maybeFetchUserProfileDefault;
+              tmp3(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
+            }
           }
         }
-        tmp16 = cResult[7];
+        tmp18 = cResult[7];
       }
-      const effect1 = obj4.useEffect(P, tmp16);
+      const effect1 = obj4.useEffect(tmp19, tmp18);
       if (cResult[8] === navigation) {
-        class P {
+        class T {
           constructor() {
-            let obj3;
-            const obj2 = {
-              type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
-              location: obj3,
-              location_stack: sourceAnalyticsLocations,
-            };
-            obj3 = { page: metroImportDefault.USER_SETTINGS };
-            const obj = AnalyticsUtilsDefault;
-            obj.track(metroRequire.PREMIUM_UPSELL_VIEWED, obj2);
-          }
-        }
-        const layoutEffect = obj4.useLayoutEffect(L, items3);
-        let tmp19 = null;
-        if (null != stateFromStores) {
-          class P {
-            constructor() {
-              let obj3;
-              const obj2 = {
-                type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
-                location: obj3,
-                location_stack: sourceAnalyticsLocations,
-              };
-              obj3 = { page: metroImportDefault.USER_SETTINGS };
-              const obj = AnalyticsUtilsDefault;
-              obj.track(metroRequire.PREMIUM_UPSELL_VIEWED, obj2);
+            if (null != stateFromStores) {
+              const tmp3 = maybeFetchUserProfileDefault;
+              tmp3(stateFromStores.id, stateFromStores.getAvatarURL(undefined, 80), { dispatchWait: true });
             }
           }
-          if (cResult[14] === tmp4.container) {
-            class P {
-              constructor() {
-                let obj3;
-                const obj2 = {
-                  type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
-                  location: obj3,
-                  location_stack: sourceAnalyticsLocations,
-                };
-                obj3 = { page: metroImportDefault.USER_SETTINGS };
-                const obj = AnalyticsUtilsDefault;
-                obj.track(metroRequire.PREMIUM_UPSELL_VIEWED, obj2);
-              }
-            }
-            if (cResult[17] === analyticsLocations) {
-              class P {
-                constructor() {
-                  let obj3;
-                  const obj2 = {
-                    type: PremiumUpsellTypes.PREMIUM_PROFILE_TRY_IT_OUT,
-                    location: obj3,
-                    location_stack: sourceAnalyticsLocations,
-                  };
-                  obj3 = { page: metroImportDefault.USER_SETTINGS };
-                  const obj = AnalyticsUtilsDefault;
-                  obj.track(metroRequire.PREMIUM_UPSELL_VIEWED, obj2);
-                }
-              }
-              tmp19 = tmp25;
-            }
-            const tmp27 = jsx(require("useAnalyticsLocations").AnalyticsLocationProvider, {
-              value: analyticsLocations,
-              children: tmp21,
-            });
-            cResult[17] = analyticsLocations;
-            cResult[18] = tmp21;
-            cResult[19] = tmp27;
-            tmp25 = tmp27;
-          }
-          const tmp24 = <closure_4 style={tmp4.container}>{tmp20}</closure_4>;
-          cResult[14] = tmp4.container;
-          cResult[15] = tmp20;
-          cResult[16] = tmp24;
-        }
-        return tmp19;
-      }
-      class L {
-        constructor() {
-          obj = {
-            headerTitle() {
-              const Heading = closure_0(sourceAnalyticsLocations[16]).Heading;
-              const intl = closure_0(sourceAnalyticsLocations[17]).intl;
-              return (
-                <Heading
-                  variant="redesign/heading-18/bold"
-                  color="mobile-text-heading-primary"
-                  lineClamp={1}
-                  maxFontSizeMultiplier={2}
-                  style={closure_1_0.headerTitle}
-                >
-                  {intl.string(closure_0(sourceAnalyticsLocations[17]).t.PxUx8e)}
-                </Heading>
-              );
-            },
-          };
-          setOptionsResult = closure_1.setOptions(obj);
-          return;
         }
       }
-      items3 = [navigation, tmp4];
+      const fn2 = function v() {
+        let onPress;
+        const obj = {
+          headerTitle() {
+            const Heading = closure_0(sourceAnalyticsLocations[17]).Heading;
+            const intl = closure_0(sourceAnalyticsLocations[18]).intl;
+            return (
+              <Heading
+                variant="redesign/heading-18/bold"
+                color="mobile-text-heading-primary"
+                lineClamp={1}
+                maxFontSizeMultiplier={2}
+                style={closure_1_0.headerContent}
+              >
+                {intl.string(closure_0(sourceAnalyticsLocations[18]).t.PxUx8e)}
+              </Heading>
+            );
+          },
+          headerRight() {
+            const PressableOpacity = closure_0(sourceAnalyticsLocations[19]).PressableOpacity;
+            const intl = closure_0(sourceAnalyticsLocations[18]).intl;
+            const intl2 = closure_0(sourceAnalyticsLocations[18]).intl;
+            ({ size: "md", color: navigation(sourceAnalyticsLocations[7]).colors.ICON_STRONG });
+            const DiceIcon = closure_0(sourceAnalyticsLocations[20]).DiceIcon;
+            return (
+              <PressableOpacity
+                onPress={onPress}
+                accessibilityRole="button"
+                accessibilityLabel={intl.string(closure_0(sourceAnalyticsLocations[18]).t.VzqqFC)}
+                accessibilityHint={intl2.string(closure_0(sourceAnalyticsLocations[18]).t.bBRdiB)}
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                style={closure_1_0.headerContent}
+              >
+                {null}
+              </PressableOpacity>
+            );
+          },
+        };
+        navigation.setOptions(obj);
+      };
+      const items3 = [navigation, tmp13, tmp4];
       cResult[8] = navigation;
-      cResult[9] = tmp4;
-      cResult[10] = L;
-      cResult[11] = items3;
+      cResult[9] = tmp13;
+      cResult[10] = tmp4;
+      cResult[11] = fn2;
+      cResult[12] = items3;
     }
   : () => {
       let closure_0;
@@ -243,6 +195,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = require("get initialized");
       const items = [UserStore];
       const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
+      const tmp9 = navigation(sourceAnalyticsLocations[14])();
+      let closure_4 = tmp9;
       const items1 = [stateFromStores];
       const effect = stateFromStores.useEffect(() => {
         if (null != stateFromStores) {
@@ -262,34 +216,54 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = AnalyticsUtilsDefault;
         obj.track(metroRequire.PREMIUM_UPSELL_VIEWED, obj2);
       }, items2);
-      const items3 = [navigation, tmp];
+      const items3 = [navigation, tmp9, tmp];
       const layoutEffect = stateFromStores.useLayoutEffect(() => {
+        let onPress;
         const obj = {
           headerTitle() {
-            const Heading = closure_0(sourceAnalyticsLocations[16]).Heading;
-            const intl = closure_0(sourceAnalyticsLocations[17]).intl;
+            const Heading = closure_0(sourceAnalyticsLocations[17]).Heading;
+            const intl = closure_0(sourceAnalyticsLocations[18]).intl;
             return (
               <Heading
                 variant="redesign/heading-18/bold"
                 color="mobile-text-heading-primary"
                 lineClamp={1}
                 maxFontSizeMultiplier={2}
-                style={closure_1_0.headerTitle}
+                style={closure_1_0.headerContent}
               >
-                {intl.string(closure_0(sourceAnalyticsLocations[17]).t.PxUx8e)}
+                {intl.string(closure_0(sourceAnalyticsLocations[18]).t.PxUx8e)}
               </Heading>
+            );
+          },
+          headerRight() {
+            const PressableOpacity = closure_0(sourceAnalyticsLocations[19]).PressableOpacity;
+            const intl = closure_0(sourceAnalyticsLocations[18]).intl;
+            const intl2 = closure_0(sourceAnalyticsLocations[18]).intl;
+            ({ size: "md", color: navigation(sourceAnalyticsLocations[7]).colors.ICON_STRONG });
+            const DiceIcon = closure_0(sourceAnalyticsLocations[20]).DiceIcon;
+            return (
+              <PressableOpacity
+                onPress={onPress}
+                accessibilityRole="button"
+                accessibilityLabel={intl.string(closure_0(sourceAnalyticsLocations[18]).t.VzqqFC)}
+                accessibilityHint={intl2.string(closure_0(sourceAnalyticsLocations[18]).t.bBRdiB)}
+                hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
+                style={closure_1_0.headerContent}
+              >
+                {null}
+              </PressableOpacity>
             );
           },
         };
         navigation.setOptions(obj);
       }, items3);
-      let tmp12 = null;
+      let tmp13 = null;
       const tmp2 = _require;
       if (null != stateFromStores) {
         const AnalyticsLocationProvider = tmp2(tmp3[11]).AnalyticsLocationProvider;
-        tmp12 = <AnalyticsLocationProvider value={analyticsLocations}>{null}</AnalyticsLocationProvider>;
+        tmp13 = <AnalyticsLocationProvider value={analyticsLocations}>{null}</AnalyticsLocationProvider>;
       }
-      return tmp12;
+      return tmp13;
     };
 const result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/ProfileCustomizationTryItOutV2SettingScreen.tsx",

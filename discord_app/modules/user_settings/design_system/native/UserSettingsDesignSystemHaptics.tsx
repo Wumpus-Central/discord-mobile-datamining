@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
-import Patterns from "../../../../../_runtime/04857_Patterns.js";
+import Patterns from "../../../../../_runtime/04863_Patterns.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import Card_Card from "../../../../design/components/Card/native/Card.native.tsx";
@@ -47,7 +47,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp5;
       }
-      const tmp6 = closure_3(tmp(5594).Button, { variant: "secondary", onPress: tmp4, text: label });
+      const tmp6 = closure_3(tmp(5601).Button, { variant: "secondary", onPress: tmp4, text: label });
       cResult[2] = label;
       cResult[3] = tmp4;
       cResult[4] = tmp6;
@@ -63,7 +63,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         },
         text: text.label,
       };
-      return closure_3(type(5594).Button, obj);
+      return closure_3(type(5601).Button, obj);
     };
 let obj = { type: haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT, label: "IMPACT_LIGHT" };
 let items = [obj, , , , , , , ,];

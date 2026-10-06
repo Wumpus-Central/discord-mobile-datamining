@@ -989,12 +989,12 @@ class StreamRTCConnection extends RTCConnection {
         codecUsageStats = getCodecUsageStats("receiver", tmp3);
       }
       let obj = { stream_application_name: _default.getApplicationNames() };
-      _default = obj5(5031).default;
+      _default = obj5(5037).default;
       const tmp5 = obj5;
       if (self.isOwner) {
         let obj2 = { clips_enabled: tmp5Result.isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
         obj3 = obj2;
-        tmp5Result = tmp5(13485);
+        tmp5Result = tmp5(13501);
       } else {
         obj3 = {};
       }

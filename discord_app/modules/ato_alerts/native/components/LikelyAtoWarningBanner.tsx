@@ -123,7 +123,7 @@ class LikelyAtoWarningBanner {
           learnMore: authStore(Text, obj3),
         };
         ModalActionCreatorsDefault;
-        const tmp2 = asyncRequire(9805, dependencyMap.paths);
+        const tmp2 = asyncRequire(9818, dependencyMap.paths);
         intl = intl5.intl;
         obj2 = {
           senderId,

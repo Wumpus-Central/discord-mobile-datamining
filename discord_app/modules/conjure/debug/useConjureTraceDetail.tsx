@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp9;
           let tmp11;
           if (cResult[4] !== detailId) {
-            const tmpResult = tmp(16764);
+            const tmpResult = tmp(16785);
             const cachedTraceDetailResult = tmpResult.cachedTraceDetail(detailId);
             cResult[4] = detailId;
             cResult[5] = cachedTraceDetailResult;

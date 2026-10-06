@@ -24,7 +24,7 @@ import size from "../../_runtime/metro/00002__.js";
 
 let closure_14, hasOwnProperty;
 
-const f85885 = (member) => member.member;
+const f86019 = (member) => member.member;
 function trackCommunicationDisabled(guildId, tmp10Result) {
   if (null != tmp10Result.communicationDisabledUntil) {
     const obj2 = CommunicationDisabledUtils;
@@ -99,9 +99,9 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
       colorString: null,
       colorStrings: null,
       colorRoleId: "concat",
-      hoistRoleId: "lj",
-      iconRoleId: "key",
-      highestRoleId: "userId",
+      hoistRoleId: "TypeError",
+      iconRoleId: "keys",
+      highestRoleId: "ind",
     };
   } else {
     const iter = roles[Symbol.iterator]();
@@ -1156,7 +1156,7 @@ obj = {
         const item = activity_instances.forEach((participants) => {
           let found;
           participants = participants.participants;
-          obj = { id, members: found.map(f85885) };
+          obj = { id, members: found.map(f86019) };
           found = participants.filter(isActivityParticipantValidGuildMemberDefault);
           buildMembers(obj);
         });
@@ -2203,7 +2203,7 @@ obj = {
     let tmp3 = null != embeddedActivityLocationGuildId;
     if (tmp3) {
       const participants = instance.participants;
-      const obj2 = { id: embeddedActivityLocationGuildId, members: found.map(f85885) };
+      const obj2 = { id: embeddedActivityLocationGuildId, members: found.map(f86019) };
       found = participants.filter(isActivityParticipantValidGuildMemberDefault);
       tmp3 = buildMembers(obj2);
     }

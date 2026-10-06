@@ -145,7 +145,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         headerLeftContainerStyle: tmp4.headerLeftContainer,
         headerRightContainerStyle: tmp4.headerRightContainer,
       };
-      const tmp15 = closure_4(require("../../../../_runtime/metro/06019__.js").Header, obj4);
+      const tmp15 = closure_4(require("../../../../_runtime/metro/06026__.js").Header, obj4);
       cResult[7] = tmp4.headerLeftContainer;
       cResult[8] = tmp4.headerRightContainer;
       cResult[9] = tmp9;
@@ -186,7 +186,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         headerLeftContainerStyle: null,
         headerRightContainerStyle: null,
       };
-      const Header = tmp4(6019).Header;
+      const Header = tmp4(6026).Header;
       num = 0;
       const tmp4Result = require("PlatformUtils");
       if (!tmp4Result.isIOS()) {

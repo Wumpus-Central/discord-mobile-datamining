@@ -137,7 +137,7 @@ function getScreens(guildId) {
       return jsx(GuildOnboardingPrompt.RulesPrompt, { guildId, onClose: ChannelStore });
     },
   };
-  obj4 = guildId(6010);
+  obj4 = guildId(6017);
   return obj;
 }
 let constants = GuildOnboardingConstants.GuildOnboardingModalStates;

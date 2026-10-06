@@ -193,7 +193,7 @@ let obj = function _backgroundSync() {
       }
       await "IconComponent";
       closure_3 = tmp;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

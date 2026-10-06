@@ -2,10 +2,10 @@
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import SlayerStorefrontUtils from "../SlayerStorefrontUtils.tsx";
-import _modDef7063 from "../../../../_runtime/metro/07063__.js";
+import _modDef7076 from "../../../../_runtime/metro/07076__.js";
 import DominantColorUtils from "../../voice_panel/native/card/DominantColorUtils.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
@@ -88,7 +88,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp16;
             let tmp19;
             if (cResult[11] !== dominantColorFromImage) {
-              const obj6 = _modDef7063(dominantColorFromImage);
+              const obj6 = _modDef7076(dominantColorFromImage);
               const brightenResult = obj6.brighten(20);
               const saturateResult = brightenResult.saturate(30);
               const setAlphaResult = saturateResult.setAlpha(0.8);
@@ -100,7 +100,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               tmp16 = cResult[12];
             }
             if (cResult[13] !== dominantColorFromImage) {
-              const obj10 = _modDef7063(dominantColorFromImage);
+              const obj10 = _modDef7076(dominantColorFromImage);
               const saturateResult1 = obj10.saturate(50);
               const setAlphaResult1 = saturateResult1.setAlpha(0.9);
               const toRgbStringResult1 = setAlphaResult1.toRgbString();

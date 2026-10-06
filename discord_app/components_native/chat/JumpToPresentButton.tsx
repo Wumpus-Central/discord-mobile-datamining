@@ -240,9 +240,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp;
       });
-      const obj2 = channelId(9609);
+      const obj2 = channelId(9622);
       const isVoicePanelMounted = obj2.useIsVoicePanelMounted(channelId);
-      const obj3 = channelId(9609);
+      const obj3 = channelId(9622);
       const isVoicePanelOpen = obj3.useIsVoicePanelOpen(channelId);
       const items1 = [MessageStore];
       const obj4 = channelId(504);
@@ -269,10 +269,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const items3 = [tmp.container, tmp10];
       if (tmp5) {
-        screenIndex(11897);
-        tmp12Result = <tmp16 accessibilityLabel={stringResult} icon={screenIndex(11898)} onPress={onJumpToPresent} />;
+        screenIndex(11911);
+        tmp12Result = <tmp16 accessibilityLabel={stringResult} icon={screenIndex(11912)} onPress={onJumpToPresent} />;
       } else {
-        tmp12Result = jsx(tmp3(11899).MemoedVoicePanelDismissChatButton, {});
+        tmp12Result = jsx(tmp3(11913).MemoedVoicePanelDismissChatButton, {});
       }
       return <View style={items3}>{tmp12Result}</View>;
     };

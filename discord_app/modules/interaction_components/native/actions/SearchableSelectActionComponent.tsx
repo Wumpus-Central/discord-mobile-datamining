@@ -128,7 +128,7 @@ export default function SearchableSelectActionComponent(type) {
               const _HermesInternal2 = HermesInternal;
               ActionSheetActionCreatorsDefault;
               const obj2 = { selectionActionComponent: type };
-              const tmp16 = asyncRequire(11437, dependencyMap.paths);
+              const tmp16 = asyncRequire(11450, dependencyMap.paths);
               const combined = "ChannelSelectComponentActionSheet:" + customId;
               const merged = Object.assign(obj4);
               openLazy2(tmp16, combined, obj2);
@@ -137,7 +137,7 @@ export default function SearchableSelectActionComponent(type) {
               const _HermesInternal = HermesInternal;
               ActionSheetActionCreatorsDefault;
               const obj = { selectionActionComponent: type };
-              const tmp6 = asyncRequire(11433, dependencyMap.paths);
+              const tmp6 = asyncRequire(11446, dependencyMap.paths);
               const combined1 = "MentionableSelectComponentActionSheet:" + customId;
               const merged1 = Object.assign(obj4);
               openLazy(tmp6, combined1, obj);

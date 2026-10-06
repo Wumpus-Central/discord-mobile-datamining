@@ -259,7 +259,7 @@ let actions = function _fetchInventory() {
     if (force === undefined) {
       force = false;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

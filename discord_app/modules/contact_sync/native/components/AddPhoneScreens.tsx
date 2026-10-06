@@ -74,7 +74,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: first,
         };
-        const tmp10 = closure_9(navigation(4886).Text, obj3);
+        const tmp10 = closure_9(navigation(4892).Text, obj3);
         cResult[1] = tmp5.title;
         cResult[2] = tmp10;
         tmp8 = tmp10;
@@ -92,7 +92,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[4] !== tmp5.subtitle) {
         const obj4 = { style: subtitle, variant: "text-sm/medium", color: "text-default", children: tmp11 };
-        const tmp15 = closure_9(navigation(4886).Text, obj4);
+        const tmp15 = closure_9(navigation(4892).Text, obj4);
         cResult[4] = tmp5.subtitle;
         cResult[5] = tmp15;
         tmp13 = tmp15;
@@ -132,7 +132,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj5 = {
             style: tmp5.container,
-            reason: navigation(6542).ChangePhoneReason.CONTACT_SYNC,
+            reason: navigation(6549).ChangePhoneReason.CONTACT_SYNC,
             header: tmp16,
             onComplete: P,
           };
@@ -383,7 +383,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   nextPromise = result.then(() => {
                     const obj = RunAfterInteractionsUtils;
                     closure_0 = obj.runAfterInteractions(() => {
-                      /* body not rendered: F152633 */
+                      /* body not rendered: F152868 */
                     });
                   });
                 }
@@ -415,7 +415,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             nextPromise = result.then(() => {
               const obj = RunAfterInteractionsUtils;
               closure_0 = obj.runAfterInteractions(() => {
-                /* body not rendered: F152633 */
+                /* body not rendered: F152868 */
               });
             });
           }

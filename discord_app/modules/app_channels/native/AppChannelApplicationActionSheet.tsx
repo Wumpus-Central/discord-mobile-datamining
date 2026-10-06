@@ -19,7 +19,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(11);
       ({ selectedApplicationId, onChange } = arg0);
       ({ guildId, channelId } = arg0);
-      const obj2 = onChange(9220);
+      const obj2 = onChange(9255);
       const options = obj2.useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
       if (cResult[0] !== onChange) {
         const fn = function l(arg0) {
@@ -34,7 +34,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const BottomSheetTitleHeader = onChange(6644).BottomSheetTitleHeader;
+        const BottomSheetTitleHeader = onChange(6651).BottomSheetTitleHeader;
         const intl = onChange(1126).intl;
         const tmp7 = <BottomSheetTitleHeader title={intl.string(onChange(1126).t.F2FMFR)} />;
         cResult[2] = tmp7;
@@ -136,7 +136,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const ActionSheet = onChange(6701).ActionSheet;
+      const ActionSheet = onChange(6708).ActionSheet;
       cResult[7] = tmp4;
       cResult[8] = str;
       cResult[9] = tmp10;
@@ -151,7 +151,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let selectedApplicationId;
       ({ selectedApplicationId, onChange } = arg0);
       ({ guildId, channelId } = arg0);
-      let obj = onChange(9220);
+      let obj = onChange(9255);
       const options = obj.useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
       const items = [onChange];
       const callback = react.useCallback((arg0) => {
@@ -159,9 +159,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = ActionSheetActionCreatorsDefault;
         obj.hideActionSheet();
       }, items);
-      const ActionSheet = onChange(6701).ActionSheet;
+      const ActionSheet = onChange(6708).ActionSheet;
       ({ title: intl.string(onChange(1126).t.F2FMFR) });
-      const BottomSheetTitleHeader = onChange(6644).BottomSheetTitleHeader;
+      const BottomSheetTitleHeader = onChange(6651).BottomSheetTitleHeader;
       intl = onChange(1126).intl;
       ({
         accessibilityLabel: intl2.string(onChange(1126).t.F2FMFR),
@@ -185,7 +185,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           );
         }),
       });
-      const TableRadioGroup = onChange(6072).TableRadioGroup;
+      const TableRadioGroup = onChange(6079).TableRadioGroup;
       intl2 = onChange(1126).intl;
       if (selectedApplicationId == null) {
         selectedApplicationId = "";

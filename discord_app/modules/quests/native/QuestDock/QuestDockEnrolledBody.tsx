@@ -256,12 +256,12 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       class S {
         constructor() {
           closure_0 = closure_3(function () {
-            /* body not rendered: F153094 */
+            /* body not rendered: F153327 */
           });
           tmp = closure_4;
           if (tmp) {
             tmp2 = (function maybeOpenVideoQuestModal() {
-              /* body not rendered: F153095 */
+              /* body not rendered: F153328 */
             })();
           }
           return;
@@ -650,11 +650,11 @@ const memoResult = react.memo(
         let tmp6;
         const obj = minExpandedContentHeight(576);
         const cResult = obj.c(16);
-        const obj2 = minExpandedContentHeight(14925);
+        const obj2 = minExpandedContentHeight(14940);
         const questDockQuest = obj2.useQuestDockQuest();
         const tmp3 = closure_15();
         minExpandedContentHeight = react.useContext(
-          minExpandedContentHeight(14897).QuestDockGestureContext,
+          minExpandedContentHeight(14913).QuestDockGestureContext,
         ).minExpandedContentHeight;
         const bottom = useSafeAreaInsetsDefault().bottom;
         if (cResult[0] !== minExpandedContentHeight) {
@@ -810,11 +810,11 @@ const memoResult = react.memo(
         let items2;
         let minExpandedContentHeight;
         let tmp5Result;
-        const obj = minExpandedContentHeight(14925);
+        const obj = minExpandedContentHeight(14940);
         const questDockQuest = obj.useQuestDockQuest();
         const tmp2 = closure_15();
         minExpandedContentHeight = react.useContext(
-          minExpandedContentHeight(14897).QuestDockGestureContext,
+          minExpandedContentHeight(14913).QuestDockGestureContext,
         ).minExpandedContentHeight;
         const items = [minExpandedContentHeight];
         const bottom = useSafeAreaInsetsDefault().bottom;
@@ -836,7 +836,7 @@ const memoResult = react.memo(
         const obj2 = { style: items2, onLayout: callback, children: tmp5Result };
         items2 = [tmp2.wrapper, { paddingBottom: Math.max(bottom, QUEST_DOCK_EXPANDED_PADDING_BOTTOM) }];
         ({ paddingBottom: Math.max(bottom, QUEST_DOCK_EXPANDED_PADDING_BOTTOM) });
-        const obj4 = minExpandedContentHeight(7208);
+        const obj4 = minExpandedContentHeight(7221);
         if (obj4.hasWatchVideoTasks(questDockQuest)) {
           const obj5 = { quest: questDockQuest };
           tmp5Result = closure_12(closure_16, obj5);

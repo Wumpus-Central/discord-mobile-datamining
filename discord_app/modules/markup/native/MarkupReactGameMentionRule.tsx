@@ -39,7 +39,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const node = state.node;
       const tmp4 = closure_5();
       const gameId = node.gameId;
-      let obj2 = state(5891);
+      let obj2 = state(5898);
       const gameMentionData = obj2.useGameMentionData(gameId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
@@ -79,7 +79,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = { color: textColor1, children: items };
           items = ["@", first];
-          const tmp32 = closure_3(state(4878).MarkupText, obj3, state.key);
+          const tmp32 = closure_3(state(4884).MarkupText, obj3, state.key);
           cResult[4] = state.key;
           cResult[5] = textColor1;
           cResult[6] = tmp32;
@@ -90,7 +90,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             let textColor;
             if (cResult[10] !== tmp4.icon) {
               const obj4 = { size: "sm", style: tmp4.icon };
-              const tmp15 = closure_4(state(8248).UnknownGameIcon, obj4);
+              const tmp15 = closure_4(state(8281).UnknownGameIcon, obj4);
               cResult[10] = tmp4.icon;
               cResult[11] = tmp15;
               tmp13 = tmp15;
@@ -116,7 +116,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp13 = tmp18;
               }
               const obj6 = { style: tmp4.icon, source: tmp17 };
-              const tmp21 = closure_4(gameId(5974), obj6);
+              const tmp21 = closure_4(gameId(5981), obj6);
               cResult[14] = tmp4.icon;
               cResult[15] = tmp17;
               cResult[16] = tmp21;
@@ -159,7 +159,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 children: items1,
               };
               items1 = [tmp13, tmp23];
-              const tmp28 = closure_3(state(4878).MarkupText, obj7, state.key);
+              const tmp28 = closure_3(state(4884).MarkupText, obj7, state.key);
               cResult[20] = tmp13;
               cResult[21] = state.key;
               cResult[22] = tmp4.chip;
@@ -171,7 +171,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               tmp26 = tmp28;
             }
             const obj8 = { variant: "text-sm/medium", style: tmp4.chipText, children: gameName };
-            const tmp25 = closure_4(state(4886).Text, obj8);
+            const tmp25 = closure_4(state(4892).Text, obj8);
             cResult[17] = gameName;
             cResult[18] = tmp4.chipText;
             cResult[19] = tmp25;
@@ -208,7 +208,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const node = state.node;
       const tmp = closure_5();
       const gameId = node.gameId;
-      let obj = state(5891);
+      let obj = state(5898);
       const gameMentionData = obj.useGameMentionData(gameId);
       const intl = state(1126).intl;
       const stringResult = intl.string(state(1126).t["11pdXZ"]);
@@ -228,7 +228,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp8Result = tmp8(gameId, gameIcon, { size: 32 });
       if (null == gameMentionData) {
         let textColor;
-        const MarkupText2 = tmp2(4878).MarkupText;
+        const MarkupText2 = tmp2(4884).MarkupText;
         if (state != null) {
           textColor = state.textColor;
         }
@@ -238,7 +238,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         let tmp11 = null != tmp8Result;
         const obj3 = { size: "sm", style: tmp.icon };
-        const tmp18 = closure_4(state(8248).UnknownGameIcon, obj3);
+        const tmp18 = closure_4(state(8281).UnknownGameIcon, obj3);
         if (tmp11) {
           tmp11 = "" !== tmp8Result;
         }
@@ -246,10 +246,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp11) {
           const obj4 = { style: tmp.icon, source: obj5 };
           obj5 = { uri: tmp8Result };
-          tmp17Result = closure_4(tmp7(5974), obj4);
+          tmp17Result = closure_4(tmp7(5981), obj4);
         }
         let str2 = "button";
-        const MarkupText = tmp2(4878).MarkupText;
+        const MarkupText = tmp2(4884).MarkupText;
         if (state.noStyleAndInteraction) {
           str2 = "text";
         }
@@ -273,7 +273,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         items1 = [tmp17Result];
         const obj7 = { variant: "text-sm/medium", style: tmp.chipText, children: gameName };
-        items1[1] = closure_4(state(4886).Text, obj7);
+        items1[1] = closure_4(state(4892).Text, obj7);
         return closure_3(MarkupText, obj6, state.key);
       }
     };

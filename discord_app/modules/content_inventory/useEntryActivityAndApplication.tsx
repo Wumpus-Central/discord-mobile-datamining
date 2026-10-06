@@ -49,7 +49,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === application_id1) {
           tmp10 = cResult[5];
         }
-        const tmp13 = _slicedToArray(first1(6663)(tmp10), 2);
+        const tmp13 = _slicedToArray(first1(6670)(tmp10), 2);
         first1 = tmp13[0];
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
@@ -140,7 +140,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let application_id;
       const tmp = _require;
-      const tmp4 = activityApplication(6663);
+      const tmp4 = activityApplication(6670);
       if (stateFromStores != null) {
         application_id = stateFromStores.application_id;
       }

@@ -204,7 +204,7 @@ const memoResult = react.memo(
               tmp12 = onKick;
               nextPromise = kickUserResult.then(onKick);
               catchPromise = nextPromise.catch(() => {
-                /* body not rendered: F141393 */
+                /* body not rendered: F141599 */
               });
             }
             return;
@@ -242,7 +242,7 @@ const memoResult = react.memo(
         let tmp4Result3;
         let tmp4Result4;
         let v1Ie87p;
-        const f107869 = () => ({ kicking: false, kickError: false });
+        const f108022 = () => ({ kicking: false, kickError: false });
         ({ guildId: require, userId: importDefault, onKick } = arg0);
         let stateFromStores1;
         c6 = undefined;
@@ -260,10 +260,10 @@ const memoResult = react.memo(
         const obj3 = require("get initialized");
         stateFromStores1 = obj3.useStateFromStores(items2, () => UserStore.getUser(importDefault));
         ref = stateFromStores1.useRef("");
-        [tmp11, c6] = stateFromStores(stateFromStores1.useState(f107869), 2);
+        [tmp11, c6] = stateFromStores(stateFromStores1.useState(f108022), 2);
         const items3 = [stateFromStores, onKick, stateFromStores1];
         let tmp14Result2 = null;
-        stateFromStores(stateFromStores1.useState(f107869), 2);
+        stateFromStores(stateFromStores1.useState(f108022), 2);
         if (null != stateFromStores1) {
           tmp14Result2 = null;
           if (null != stateFromStores) {

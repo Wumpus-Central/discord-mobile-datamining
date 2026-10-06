@@ -69,8 +69,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[4];
       }
       let id;
-      const useGuildEligibleForGuildProducts = tmp(6761).useGuildEligibleForGuildProducts;
-      tmp(6761);
+      const useGuildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts;
+      tmp(6771);
       if (features != null) {
         id = features.id;
       }
@@ -129,8 +129,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       let id;
-      const useGuildEligibleForGuildProducts = tmp(6761).useGuildEligibleForGuildProducts;
-      tmp(6761);
+      const useGuildEligibleForGuildProducts = tmp(6771).useGuildEligibleForGuildProducts;
+      tmp(6771);
       if (features != null) {
         id = features.id;
       }

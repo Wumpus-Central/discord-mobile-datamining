@@ -39,6 +39,7 @@ class McpConnectionPanel {
     return this.state;
   }
   mint(dependencyMap) {
+    let logger;
     let closure_0 = dependencyMap;
     const self = this;
     return (async () => {

@@ -57,7 +57,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue;
       let obj = sharedValue(576);
       const cResult = obj.c(10);
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       sharedValue = obj2.useSharedValue(false);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [];
@@ -102,7 +102,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             result = closure_0.set(true);
             current = closure_1.current;
             item = current.forEach(() => {
-              /* body not rendered: F141779 */
+              /* body not rendered: F141985 */
             });
             current1 = closure_1.current;
             spliceResult = current1.splice(0, closure_1.current.length);
@@ -117,7 +117,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             result = closure_0.set(true);
             current = closure_1.current;
             item = current.forEach(() => {
-              /* body not rendered: F141779 */
+              /* body not rendered: F141985 */
             });
             current1 = closure_1.current;
             spliceResult = current1.splice(0, closure_1.current.length);
@@ -130,7 +130,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             fn = function n() {
-              /* body not rendered: F141780 */
+              /* body not rendered: F141986 */
             };
             obj = {
               withTiming: closure_0(closure_1[2]).withTiming,
@@ -152,7 +152,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             fn = function n() {
-              /* body not rendered: F141780 */
+              /* body not rendered: F141986 */
             };
             obj = {
               withTiming: closure_0(closure_1[2]).withTiming,
@@ -174,7 +174,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         class I {
           constructor() {
             fn = function n() {
-              /* body not rendered: F141780 */
+              /* body not rendered: F141986 */
             };
             obj = {
               withTiming: closure_0(closure_1[2]).withTiming,
@@ -200,7 +200,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let closure_1;
       let sharedValue;
-      let obj = sharedValue(4612);
+      let obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(false);
       dependencyMap = react.useRef([]);
       let items = [sharedValue];

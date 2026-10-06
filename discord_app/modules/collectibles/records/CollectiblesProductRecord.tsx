@@ -293,12 +293,12 @@ class CollectiblesProductRecord extends CollectiblesStoreListingRecord {
                   items,
                   categorySkuId: str3,
                   isCategoryReward: closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === id.id),
-                  prices: "r",
+                  prices: "<string:1358955069>",
                   previewAssets: previewAssetPaths,
                   googleSkuIds,
                   eligibleOffers: tenantMetadata.eligibleOffers,
-                  variants: "targetUserId",
-                  bundledProducts: "textRed",
+                  variants: "M11 6V5H9v1H7V5H5v1H4v3h1v1h2.01v1h2v-1H11V9h1V6h-1Z",
+                  bundledProducts: "#fff",
                   isFirstParty: collectibles.isFirstParty,
                 };
                 str = undefined;

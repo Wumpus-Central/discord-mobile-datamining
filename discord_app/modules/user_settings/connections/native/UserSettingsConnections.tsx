@@ -26,7 +26,7 @@ let closure_12;
 let obj2;
 let tmp2;
 let unpackModuleId;
-const ConnectionsEmptyStateUpsellDefault = tmp2(14767);
+const ConnectionsEmptyStateUpsellDefault = tmp2(14783);
 const ActivityIndicator = react_native.ActivityIndicator;
 const FetchState = AuthorizedAppsStore2.FetchState;
 const AnalyticsLocations = Constants.AnalyticsLocations;
@@ -91,7 +91,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
     if (null != selectedPlatformType) {
       if (-1 === selectedPlatformType) {
         const obj2 = ActionSheetActionCreatorsDefault;
-        obj2.openLazy(asyncRequire(14765, dependencyMap.paths), "AddConnection");
+        obj2.openLazy(asyncRequire(14781, dependencyMap.paths), "AddConnection");
       } else {
         const obj = { platformType: selectedPlatformType, location: AnalyticsLocations.USER_SETTINGS };
         authorizeConnectionDefault(obj);
@@ -107,9 +107,9 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
         }
       }
       const obj4 = { style: tmp.form, children: closure_12(Stack, obj5) };
-      const Form = tmp4(8895).Form;
+      const Form = tmp4(8924).Form;
       obj5 = { spacing: 16, children: items5 };
-      Stack = tmp4(5593).Stack;
+      Stack = tmp4(5600).Stack;
       items5 = [
         prop.map((identity) => {
           let closure_0 = identity;

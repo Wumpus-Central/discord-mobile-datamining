@@ -60,8 +60,8 @@ class FramesStoreClass extends Store {
       continue;
     }
   }
-  getFrameBySurface(previewAppId, size) {
-    return map.get(metroImportDefault(previewAppId, size));
+  getFrameBySurface(previewAppId, CONJURE_PREVIEW_SURFACE) {
+    return map.get(metroImportDefault(previewAppId, CONJURE_PREVIEW_SURFACE));
   }
   getFramesForSurface(arg0) {
     let closure_0 = arg0;

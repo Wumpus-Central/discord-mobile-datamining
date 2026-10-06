@@ -8,7 +8,7 @@ import useToken2 from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import HeaderDebugOverlayDefault from "../../../devtools/design_toggles/HeaderDebugOverlay.native.tsx";
-import _mod6019 from "../../../../../_runtime/metro/06019__.js";
+import _mod6026 from "../../../../../_runtime/metro/06026__.js";
 import react_native from "MainTabsV2Constants.tsx";
 import PressableNavigatorModalIconDefault from "navigator/PressableNavigatorModalIcon.tsx";
 import ChannelActionsDefault from "../channel/ChannelActions.tsx";
@@ -335,7 +335,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp6 = closure_11();
       closure_5 = tmp6;
-      const tmp7 = tmp5(6011)("os-drawn");
+      const tmp7 = tmp5(6018)("os-drawn");
       if (null == subtitle) {
         let renderTitleContainerResult;
         if (null == tmp7) {
@@ -416,7 +416,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           accessibilityLabel: null,
         };
         ({ label: obj2.truncatedLabel, label: obj2.accessibilityLabel } = tmp5);
-        const HeaderBackButton = _mod6019.HeaderBackButton;
+        const HeaderBackButton = _mod6026.HeaderBackButton;
         const merged = Object.assign(tmp5);
         const tmp18 = React4(HeaderBackButton, obj3);
         cResult[7] = tmp5;
@@ -445,7 +445,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items = [closure_11().backButtonLabel, labelStyle];
       closure_11();
-      const HeaderBackButton = _mod6019.HeaderBackButton;
+      const HeaderBackButton = _mod6026.HeaderBackButton;
       const merged1 = Object.assign(merged);
       return React4(HeaderBackButton, obj);
     };
@@ -483,7 +483,7 @@ const memoResult = react.memo(
         }
         const tmpResult = navigation(1491);
         const text = tmpResult.useTheme().colors.text;
-        const tmpResult2 = navigation(7507);
+        const tmpResult2 = navigation(7518);
         const gradientTop = tmpResult2.useGradientTop();
         const sum = num + MIN_HEADER_HEIGHT;
         if (cResult[0] === num) {

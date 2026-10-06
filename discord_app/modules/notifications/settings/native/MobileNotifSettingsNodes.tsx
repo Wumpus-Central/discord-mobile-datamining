@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsNodes.tsx
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2819 from "../../NotificationSettings.messages.js";
+import _modDef2847 from "../../NotificationSettings.messages.js";
 import settings_NotifSettingsUtils from "../NotifSettingsUtils.tsx";
 import NotifSettings from "../../../../../discord_common/js/shared/shared-constants/NotifSettings.tsx";
 import notifications_NotificationSettingsUtils from "../../NotificationSettingsUtils.tsx";
@@ -14,7 +14,7 @@ let SettingBuilders = SettingBuilders_mod;
 let obj = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.wv4QHR);
+    return intl.string(_modDef2847.wv4QHR);
   },
   useValue() {
     const obj = settings_NotifSettingsUtils;
@@ -39,7 +39,7 @@ SettingBuilders = SettingBuilders_mod;
 const obj2 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.n0Wp6j);
+    return intl.string(_modDef2847.n0Wp6j);
   },
   useValue() {
     const obj = settings_NotifSettingsUtils;
@@ -64,7 +64,7 @@ SettingBuilders = SettingBuilders_mod;
 const obj3 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.n0Wp6j);
+    return intl.string(_modDef2847.n0Wp6j);
   },
   useValue() {
     const obj = settings_NotifSettingsUtils;
@@ -89,7 +89,7 @@ SettingBuilders = SettingBuilders_mod;
 const obj4 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.Iy9grw);
+    return intl.string(_modDef2847.Iy9grw);
   },
   useValue() {
     const obj = settings_NotifSettingsUtils;
@@ -114,7 +114,7 @@ SettingBuilders = SettingBuilders_mod;
 const obj5 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.Iy9grw);
+    return intl.string(_modDef2847.Iy9grw);
   },
   useValue() {
     const obj = settings_NotifSettingsUtils;
@@ -139,7 +139,7 @@ SettingBuilders = SettingBuilders_mod;
 const obj6 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819["9EDo+/"]);
+    return intl.string(_modDef2847["9EDo+/"]);
   },
   useValue() {
     const obj = settings_NotifSettingsUtils;
@@ -164,7 +164,7 @@ SettingBuilders = SettingBuilders_mod;
 const obj7 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819["9EDo+/"]);
+    return intl.string(_modDef2847["9EDo+/"]);
   },
   useValue() {
     const obj = settings_NotifSettingsUtils;

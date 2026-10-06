@@ -185,7 +185,7 @@ let obj = function _getReactors() {
             body = undefined;
             limit = 1;
             after = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === limit) {
           if (channelId === 1) {
@@ -303,7 +303,7 @@ obj = function _addReaction() {
             colors = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (channelId === 1) {
@@ -859,7 +859,7 @@ obj = function _removeReaction() {
       _location = constants.MESSAGE;
     }
     ({ userId: c4, options: c5 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

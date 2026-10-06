@@ -94,7 +94,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = id(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6, tmp7);
-      const tmpResult4 = id(7409);
+      const tmpResult4 = id(7420);
       const lastMessageTimestamp = tmpResult4.useLastMessageTimestamp(thread);
       if (null != stateFromStores) {
         if (!items.includes(stateFromStores.type)) {
@@ -116,7 +116,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (cResult[4] !== lastMessageTimestamp) {
-        const tmpResult5 = id(7409);
+        const tmpResult5 = id(7420);
         const timestampString = tmpResult5.getTimestampString(lastMessageTimestamp);
         cResult[4] = lastMessageTimestamp;
         cResult[5] = timestampString;
@@ -125,7 +125,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp15 = cResult[5];
       }
       if (cResult[6] !== lastMessageTimestamp) {
-        const tmpResult6 = id(7409);
+        const tmpResult6 = id(7420);
         const timestampAccessibilityLabel = tmpResult6.getTimestampAccessibilityLabel(lastMessageTimestamp);
         cResult[6] = lastMessageTimestamp;
         cResult[7] = timestampAccessibilityLabel;
@@ -156,7 +156,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [id];
       const obj = id(504);
       const stateFromStores = obj.useStateFromStores(items, () => ThreadMessageStore.getMostRecentMessage(id), items1);
-      const obj2 = id(7409);
+      const obj2 = id(7420);
       const lastMessageTimestamp = obj2.useLastMessageTimestamp(thread);
       if (null != stateFromStores) {
         if (!items.includes(stateFromStores.type)) {
@@ -166,9 +166,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = id(7409);
+      const tmpResult = id(7420);
       const timestampString = tmpResult.getTimestampString(lastMessageTimestamp);
-      const tmpResult2 = id(7409);
+      const tmpResult2 = id(7420);
       const obj4 = {
         thread,
         timestamp: timestampString,
@@ -728,7 +728,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       c4 = undefined;
       let roleStyle;
       const tmp = closure_13();
-      let obj = message(6814);
+      let obj = message(6824);
       items = [message.author.id];
       const subscribeGuildMembers = obj.useSubscribeGuildMembers(
         { [thread.guild_id]: items },
@@ -750,9 +750,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       ({ nick: c2, colorString: c3, colorStrings: c4 } = tmp4);
       const obj4 = SnowflakeUtilsDefault;
       const extractTimestampResult = obj4.extractTimestamp(message.id);
-      const obj5 = message(7409);
+      const obj5 = message(7420);
       const timestampString = obj5.getTimestampString(extractTimestampResult);
-      const obj6 = message(7409);
+      const obj6 = message(7420);
       const timestampAccessibilityLabel = obj6.getTimestampAccessibilityLabel(extractTimestampResult);
       roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
       const obj7 = {
@@ -770,7 +770,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: intl.format(message(1126).t.M79KAH, obj9),
       };
-      Text = message(4886).Text;
+      Text = message(4892).Text;
       intl = message(1126).intl;
       obj9 = {
         usernameHook(arg0, arg1) {

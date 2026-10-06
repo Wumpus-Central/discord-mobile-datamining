@@ -2,7 +2,7 @@
 import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import SafetyHubModels from "SafetyHubModels.tsx";
-import createAggregatorDefault from "../../../_runtime/08107_createAggregator.js";
+import createAggregatorDefault from "../../../_runtime/08140_createAggregator.js";
 import SafetyHubConstants from "SafetyHubConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

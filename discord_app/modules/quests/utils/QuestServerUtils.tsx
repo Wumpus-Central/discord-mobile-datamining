@@ -1,11 +1,11 @@
 // discord_app/modules/quests/utils/QuestServerUtils.tsx
-import merged5 from "../../../../_runtime/05075_merged5.js";
+import merged5 from "../../../../_runtime/05081_merged5.js";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
 import Quest from "../types/v2/Quest.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f94489 = (id) => {
+const f94629 = (id) => {
   const obj = Quest;
   return obj.questFromServerV2(id);
 };
@@ -139,7 +139,7 @@ export const isQuestWithKnownConfigVersion = function isQuestWithKnownConfigVers
 export const questConfigFromServer = function questConfigFromServer(body) {
   const str = merged5;
   const match = str.match(body);
-  const withResult = match.with({ config_version: 2 }, f94489);
+  const withResult = match.with({ config_version: 2 }, f94629);
   return withResult.exhaustive();
 };
 export const questUserStatusFromServer = function questUserStatusFromServer(body) {
@@ -190,7 +190,7 @@ export const questWithUserStatusFromServer = function questWithUserStatusFromSer
   const str = merged5;
   const match = str.match(config);
   tmp = null;
-  withResult = match.with({ config_version: 2 }, f94489);
+  withResult = match.with({ config_version: 2 }, f94629);
   if (null != body.user_status) {
     const user_status = body.user_status;
     const obj2 = {

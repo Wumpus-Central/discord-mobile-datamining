@@ -3,7 +3,7 @@ import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl3 from "../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/16282_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/16322_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";

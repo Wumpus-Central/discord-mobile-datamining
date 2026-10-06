@@ -19,7 +19,7 @@ function openGuildEventDetails(arg0) {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   obj = { eventId, event, onCloseActionSheet: onClose, recurrenceId };
-  const tmp4 = asyncRequire(9280, dependencyMap.paths);
+  const tmp4 = asyncRequire(9315, dependencyMap.paths);
   if (recurrenceId == null) {
     const tmp3Result = ScheduleUtils;
     recurrenceId = tmp3Result.getNextRecurrenceIdInEvent(event);
@@ -99,5 +99,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
 export const openEndEventModal = function openEndEventModal(channel) {
   obj = ActionSheetActionCreatorsDefault;
   const obj2 = { channel };
-  obj.openLazy(asyncRequire(9298, dependencyMap.paths), closure_4, obj2);
+  obj.openLazy(asyncRequire(9333, dependencyMap.paths), closure_4, obj2);
 };

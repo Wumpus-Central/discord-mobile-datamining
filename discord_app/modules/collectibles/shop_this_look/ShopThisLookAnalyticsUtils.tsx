@@ -18,8 +18,6 @@ export const ShopThisLookMenuAction = {
   COACHMARK_VIEWED: "coachmark_viewed",
   COACHMARK_CTA_CLICKED: "coachmark_cta_clicked",
   COACHMARK_DISMISSED: "coachmark_dismissed",
-  RED_DOT_VIEWED: "red_dot_viewed",
-  RED_DOT_DISMISSED: "red_dot_dismissed",
 };
 export const ShopThisLookRowAction = { ROW_VIEWED: "row_viewed", ROW_CLICKED: "row_clicked" };
 export { ShopThisLookProductType };

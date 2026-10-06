@@ -71,7 +71,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp16 = cResult[7];
         }
-        const tmp5Result = importDefault(mute ? 9691 : 9692);
+        const tmp5Result = importDefault(mute ? 9704 : 9705);
         if (!tmp4) {
           tmp4 = mute;
         }
@@ -140,7 +140,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items,
         () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
       );
-      const obj2 = mute(9687);
+      const obj2 = mute(9700);
       const muteHandler = obj2.createMuteHandler(tmp3, stateFromStores);
       mute = muteHandler.mute;
       const items1 = [mute];
@@ -160,7 +160,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           appearsDisabled={stateFromStores}
           accessibilityLabel={intl.string(mute(1126).t.B3zz0G)}
           onPress={onPress}
-          source={importDefault(mute ? 9691 : 9692)}
+          source={importDefault(mute ? 9704 : 9705)}
           isActive={flag}
           isSmallSize={isSmallSize}
           lottieComponent={memo}

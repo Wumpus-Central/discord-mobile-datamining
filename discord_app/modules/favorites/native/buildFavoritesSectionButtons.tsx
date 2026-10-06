@@ -3,7 +3,7 @@ import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import intl4 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
-import _modDef3367 from "../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import StarIcon from "../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
@@ -129,7 +129,7 @@ obj = function _removeChannelFromFavorites() {
 function openNoAccessUpsell() {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
-  const tmp2 = asyncRequire(10040, dependencyMap.paths);
+  const tmp2 = asyncRequire(10053, dependencyMap.paths);
   openLazy(tmp2, openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, { source: "channel_context_menu" });
 }
 const jsx = Fragment.jsx;
@@ -149,7 +149,7 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
         let tmp11;
         if (tmp3) {
           const obj2 = {
-            label: intl3.string(_modDef3367.TN4nAX),
+            label: intl3.string(_modDef3395.TN4nAX),
             IconComponent: StarIcon.StarIcon,
             isDestructive: true,
             onPress() {
@@ -165,7 +165,7 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
           tmp11 = null;
           if (!tmp4) {
             const obj3 = {
-              label: intl2.string(_modDef3367.G9fGlP),
+              label: intl2.string(_modDef3395.G9fGlP),
               IconComponent: StarOutlineIcon.StarOutlineIcon,
               trailing: tmp15,
               onPress() {
@@ -188,7 +188,7 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
         obj = tmp11;
       } else {
         obj = {
-          label: intl.string(_modDef3367.G9fGlP),
+          label: intl.string(_modDef3395.G9fGlP),
           IconComponent: NitroWheelIcon.NitroWheelIcon,
           onPress: openNoAccessUpsell,
         };

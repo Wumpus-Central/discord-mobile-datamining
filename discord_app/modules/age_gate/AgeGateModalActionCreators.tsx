@@ -13,12 +13,12 @@ const AgeGateAnalyticAction = AgeGateConstants.AgeGateAnalyticAction;
 ({ Routes: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 const result = size.fileFinishedImporting("modules/age_gate/AgeGateModalActionCreators.tsx");
 
-export const openAgeGateModal = function openAgeGateModal(JOIN_LARGE_GUILD_UNDERAGE) {
+export const openAgeGateModal = function openAgeGateModal(JOIN_LARGE_GUILD_UNDERAGE, channelId) {
   const obj = AnalyticsUtilsDefault;
   const obj2 = { type: "Enter Your Birthday", source: { section: JOIN_LARGE_GUILD_UNDERAGE } };
   obj.track(hasOwnProperty.OPEN_MODAL, obj2);
   const obj3 = DispatcherDefault;
-  const obj4 = { type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE };
+  const obj4 = { type: "AGE_GATE_MODAL_OPEN", source: JOIN_LARGE_GUILD_UNDERAGE, channelId };
   obj3.dispatch(obj4);
 };
 export const closeAgeGateModal = function closeAgeGateModal(source) {

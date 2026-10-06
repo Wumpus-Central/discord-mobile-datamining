@@ -73,10 +73,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 _setTimeout = setTimeout;
                 num = 2500;
                 closure_0 = setTimeout(() => {
-                  /* body not rendered: F143058 */
+                  /* body not rendered: F143260 */
                 }, 2500);
                 return () => {
-                  /* body not rendered: F143059 */
+                  /* body not rendered: F143261 */
                 };
               } else {
                 return;
@@ -96,10 +96,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 _setTimeout = setTimeout;
                 num = 2500;
                 closure_0 = setTimeout(() => {
-                  /* body not rendered: F143058 */
+                  /* body not rendered: F143260 */
                 }, 2500);
                 return () => {
-                  /* body not rendered: F143059 */
+                  /* body not rendered: F143261 */
                 };
               } else {
                 return;
@@ -118,10 +118,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 _setTimeout = setTimeout;
                 num = 2500;
                 closure_0 = setTimeout(() => {
-                  /* body not rendered: F143058 */
+                  /* body not rendered: F143260 */
                 }, 2500);
                 return () => {
-                  /* body not rendered: F143059 */
+                  /* body not rendered: F143261 */
                 };
               } else {
                 return;
@@ -137,10 +137,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 _setTimeout = setTimeout;
                 num = 2500;
                 closure_0 = setTimeout(() => {
-                  /* body not rendered: F143058 */
+                  /* body not rendered: F143260 */
                 }, 2500);
                 return () => {
-                  /* body not rendered: F143059 */
+                  /* body not rendered: F143261 */
                 };
               } else {
                 return;
@@ -156,10 +156,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 _setTimeout = setTimeout;
                 num = 2500;
                 closure_0 = setTimeout(() => {
-                  /* body not rendered: F143058 */
+                  /* body not rendered: F143260 */
                 }, 2500);
                 return () => {
-                  /* body not rendered: F143059 */
+                  /* body not rendered: F143261 */
                 };
               } else {
                 return;

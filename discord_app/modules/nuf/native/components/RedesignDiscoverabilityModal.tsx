@@ -228,7 +228,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[11] = tmp18;
           tmp15 = tmp18;
         }
-        const tmp14 = jsx(allowPhone(12346), { onNext: tmp9, loading: false, initialName: name });
+        const tmp14 = jsx(allowPhone(12361), { onNext: tmp9, loading: false, initialName: name });
         cResult[6] = tmp9;
         cResult[7] = name;
         cResult[8] = tmp14;
@@ -267,7 +267,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const result = obj.startContactSyncForDiscoverability(arg0);
         onComplete();
       }, items1);
-      allowPhone(12346);
+      allowPhone(12361);
       if (name == null) {
         name = "";
       }
@@ -356,7 +356,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp10;
       }
-      const Navigator = tmp(6496).Navigator;
+      const Navigator = tmp(6503).Navigator;
       const tmp11 = (
         <Navigator
           headerStyle={header}
@@ -374,7 +374,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const onComplete = route.route.params.onComplete;
       let tmp = closure_8();
       const items = [onComplete];
-      const Navigator = onComplete(6496).Navigator;
+      const Navigator = onComplete(6503).Navigator;
       const intl = onComplete(1126).intl;
       return (
         <Navigator

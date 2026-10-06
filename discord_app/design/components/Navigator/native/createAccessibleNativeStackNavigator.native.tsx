@@ -3,7 +3,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import Link from "../../../../../_runtime/01491_Link.js";
 import Navigator from "Navigator.native.tsx";
-import NativeStackView2 from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView2 from "../../../../../_runtime/07568_NativeStackView.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import ReactCompilerGating_mod from "../../../../modules/react_compiler/ReactCompilerGating.tsx";

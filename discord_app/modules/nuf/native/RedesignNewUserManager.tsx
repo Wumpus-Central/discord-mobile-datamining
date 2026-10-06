@@ -22,7 +22,7 @@ class RedesignNewUserManager extends AutomaticLifecycleManager {
   constructor() {
     let action;
     let id;
-    const f131149 = (item) => {
+    const f131368 = (item) => {
       const obj = closure_1_0(closure_1_2[6]);
       const coerceModalRouteResult = obj.coerceModalRoute(item);
       let key;
@@ -77,7 +77,7 @@ class RedesignNewUserManager extends AutomaticLifecycleManager {
             null == rootNavigationRef || !rootNavigationRef.isReady();
             if (someResult) {
               const routes = rootNavigationRef.getRootState().routes;
-              someResult = routes.some(f131149);
+              someResult = routes.some(f131368);
             }
             if (!someResult) {
               const tmp4Result = NewUserUtils;
@@ -128,7 +128,7 @@ class RedesignNewUserManager extends AutomaticLifecycleManager {
           null == rootNavigationRef || !rootNavigationRef.isReady();
           if (someResult) {
             const routes = rootNavigationRef.getRootState().routes;
-            someResult = routes.some(f131149);
+            someResult = routes.some(f131368);
           }
           if (!someResult) {
             require.startOnboarding();

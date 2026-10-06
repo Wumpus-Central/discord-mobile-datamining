@@ -44,7 +44,7 @@ let obj = function _updateBadgeSettings() {
             obj8 = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (display_order === 1) {

@@ -345,17 +345,6 @@ class ChannelConversationsStore extends Store {
     }
     return flag;
   }
-  getSelectedConversationId(arg0) {
-    const peekResult = navigation.peek(arg0);
-    let prop;
-    if (peekResult != null) {
-      prop = peekResult.selectedConversationId;
-    }
-    if (prop == null) {
-      prop = null;
-    }
-    return prop;
-  }
   consumeFocusRequest() {
     let flag = closure_16 !== closure_17;
     if (flag) {
@@ -363,29 +352,6 @@ class ChannelConversationsStore extends Store {
       flag = true;
     }
     return flag;
-  }
-  getSelectedConversation(arg0) {
-    const peekResult = navigation.peek(arg0);
-    let prop;
-    if (peekResult != null) {
-      prop = peekResult.selectedConversationId;
-    }
-    let tmp3 = null;
-    if (null != prop) {
-      let conversation;
-      if (peekResult != null) {
-        const conversationMetadataById = peekResult.conversationMetadataById;
-        const value = conversationMetadataById.get(prop);
-        if (value != null) {
-          conversation = value.conversation;
-        }
-      }
-      if (conversation == null) {
-        conversation = null;
-      }
-      tmp3 = conversation;
-    }
-    return tmp3;
   }
   getConversationColor(arg0, arg1) {
     const peekResult = navigation.peek(arg0);
@@ -591,6 +557,7 @@ let obj2 = {
     let isJump;
     let max;
     let rawConversations;
+    let selectedConversationId;
     function mergeConversations(conversations, found) {
       map = new Map();
       const iter = conversations[Symbol.iterator]();
@@ -631,6 +598,7 @@ let obj2 = {
       }
     }
     function buildChannelData(channelId, substr, peekResult) {
+      let prop;
       let reachedNewest;
       let reachedOldest;
       let guildId;
@@ -802,31 +770,7 @@ let obj2 = {
         }
         continue;
       }
-      let prop;
-      if (peekResult != null) {
-        prop = peekResult.recentFeedbackRatingsByConversationId;
-      }
-      if (prop == null) {
-        const self = this;
-        const self2 = this;
-        const obj3 = { max };
-        prop = new LRUCacheDefault(obj3);
-      }
-      let prop1;
-      if (peekResult != null) {
-        prop1 = peekResult.selectedConversationId;
-      }
-      if (prop1 == null) {
-        prop1 = null;
-      }
-      let tmp82 = null;
-      if (null != prop1) {
-        tmp82 = null;
-        if (substr.some((id) => id.id === prop1)) {
-          tmp82 = prop1;
-        }
-      }
-      const obj4 = {
+      const obj3 = {
         guildId,
         conversations: substr,
         conversationMetadataById: map,
@@ -834,9 +778,18 @@ let obj2 = {
         recentFeedbackRatingsByConversationId: prop,
         reachedOldest,
         reachedNewest,
-        selectedConversationId: tmp82,
         colorIndex: sum,
       };
+      prop = undefined;
+      if (peekResult != null) {
+        prop = peekResult.recentFeedbackRatingsByConversationId;
+      }
+      if (prop == null) {
+        const self = this;
+        const self2 = this;
+        const obj4 = { max };
+        prop = new LRUCacheDefault(obj4);
+      }
       reachedOldest = undefined;
       if (peekResult != null) {
         reachedOldest = peekResult.reachedOldest;
@@ -851,35 +804,31 @@ let obj2 = {
       if (reachedNewest == null) {
         reachedNewest = null;
       }
-      return obj4;
+      return obj3;
     }
-    ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
+    ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated, selectedConversationId } = requestKey);
     set = undefined;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
       let conversations;
-      const mapped = rawConversations.map(set(7107).mapConversation);
+      const mapped = rawConversations.map(set(7120).mapConversation);
       const found = mapped.filter(set(1375).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {
         let items1;
-        let prop;
-        if (peekResult != null) {
-          prop = peekResult.selectedConversationId;
-        }
-        let tmp7 = null;
-        if (null != prop) {
+        let tmp5 = null;
+        if (null != selectedConversationId) {
           let conversation;
           if (peekResult != null) {
             let conversationMetadataById = peekResult.conversationMetadataById;
-            let value = conversationMetadataById.get(prop);
+            let value = conversationMetadataById.get(selectedConversationId);
             if (value != null) {
               conversation = value.conversation;
             }
           }
-          tmp7 = conversation;
+          tmp5 = conversation;
         }
-        if (null != tmp7) {
-          let items = [tmp7];
+        if (null != tmp5) {
+          let items = [tmp5];
           items1 = items;
         } else {
           items1 = [];
@@ -905,7 +854,7 @@ let obj2 = {
         }
         timestamp = reachedOldest;
       }
-      let tmp12 = null;
+      let tmp10 = null;
       if (!isJump) {
         let reachedNewest;
         if (peekResult != null) {
@@ -914,79 +863,79 @@ let obj2 = {
         if (reachedNewest == null) {
           reachedNewest = null;
         }
-        tmp12 = reachedNewest;
+        tmp10 = reachedNewest;
       }
+      let tmp12 = globalThis;
       const _Set = Set;
       let self = this;
       let self2 = this;
       set = new Set(conversations.map((id) => id.id));
-      let tmp16 = set;
-      let tmp17 = found.some((id) => !set.has(id.id)) || null == anchor;
-      let timestamp2 = tmp12;
-      let tmp19 = timestamp;
-      if (!tmp17) {
+      let timestamp2 = tmp10;
+      let tmp17 = timestamp;
+      const tmp15 = found.some((id) => !set.has(id.id)) || null == anchor;
+      if (!tmp15) {
         let timestamp1;
         if ("before" === direction) {
           const _Date2 = Date;
           timestamp = Date.now();
-          timestamp1 = tmp12;
+          timestamp1 = tmp10;
         } else {
-          timestamp1 = tmp12;
+          timestamp1 = tmp10;
           if ("after" === direction) {
             const _Date = Date;
             timestamp1 = Date.now();
           }
         }
         timestamp2 = timestamp1;
-        tmp19 = timestamp;
+        tmp17 = timestamp;
       }
-      let tmp21 = "before" === direction;
-      let tmp22 = tmp21 && null == anchor;
-      if (tmp22) {
+      let tmp19 = "before" === direction;
+      const tmp20 = tmp19 && null == anchor;
+      if (tmp20) {
         const _Date3 = Date;
         timestamp2 = Date.now();
       }
       const arr5 = mergeConversations(conversations, found);
-      let tmp24 = timestamp2;
-      let tmp25 = tmp19;
+      let tmp22 = timestamp2;
+      let tmp23 = tmp17;
       let substr = arr5;
       if (arr5.length > closure_11) {
         if ("after" === direction) {
           substr = arr5.slice(arr5.length - closure_11);
-          tmp24 = timestamp2;
-          tmp25 = null;
-        } else if (tmp21) {
+          tmp22 = timestamp2;
+          tmp23 = null;
+        } else if (tmp19) {
           substr = arr5.slice(0, closure_11);
-          tmp24 = null;
-          tmp25 = tmp19;
+          tmp22 = null;
+          tmp23 = tmp17;
         } else {
-          let tmp27 = clampAnchorWindowStart(arr5, anchor);
-          let tmp28 = tmp19;
-          if (tmp27 > 0) {
-            tmp28 = null;
+          let tmp25 = clampAnchorWindowStart(arr5, anchor);
+          let tmp26 = tmp17;
+          if (tmp25 > 0) {
+            tmp26 = null;
           }
-          let tmp29 = timestamp2;
-          if (tmp27 + closure_11 < arr5.length) {
-            tmp29 = null;
+          let tmp27 = timestamp2;
+          if (tmp25 + closure_11 < arr5.length) {
+            tmp27 = null;
           }
-          substr = arr5.slice(tmp27, tmp27 + closure_11);
-          tmp24 = tmp29;
-          tmp25 = tmp28;
+          substr = arr5.slice(tmp25, tmp25 + closure_11);
+          tmp22 = tmp27;
+          tmp23 = tmp26;
         }
       }
-      let tmp30 = buildChannelData(channelId, substr, peekResult);
-      tmp30.reachedOldest = tmp25;
-      tmp30.reachedNewest = tmp24;
+      const tmp28 = buildChannelData(channelId, substr, peekResult);
+      tmp28.reachedOldest = tmp23;
+      tmp28.reachedNewest = tmp22;
       if (null != peekResult) {
         const _Object = Object;
-        const merged = Object.assign(peekResult, tmp30);
+        const merged = Object.assign(peekResult, tmp28);
       } else {
-        let result = navigation.set(channelId, tmp30);
+        let result = navigation.set(channelId, tmp28);
       }
       for (const item10105 of rawConversations) {
         if (null != item10105.messages) {
           let num = 0;
-          let tmp40 = processHydratedMessages(channelId, item10105.id, item10105.messages, fullyHydrated);
+          let tmp38 = processHydratedMessages(channelId, item10105.id, item10105.messages, fullyHydrated);
         }
         continue;
       }
@@ -1018,24 +967,7 @@ let obj2 = {
     if (hasItem) {
       const value = navigation.get(channelId);
     }
-    let flag = false;
-    const keys = navigation.keys();
-    for (const item10020 of keys) {
-      if (item10020 !== channelId) {
-        let peekResult = navigation.peek(tmp6);
-        let prop;
-        let tmp10 = peekResult;
-        if (peekResult != null) {
-          prop = peekResult.selectedConversationId;
-        }
-        if (null != prop) {
-          tmp10.selectedConversationId = null;
-          flag = true;
-        }
-      }
-      continue;
-    }
-    return flag;
+    return false;
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     const id = channel.channel.id;
@@ -1091,41 +1023,9 @@ let obj2 = {
     }
     return false;
   },
-  SET_SELECTED_CONVERSATION: function handleSetSelectedConversation(channelId) {
-    channelId = channelId.channelId;
-    if (null == channelId) {
-      return false;
-    } else {
-      const peekResult = navigation.peek(channelId);
-      let flag = null != peekResult;
-      if (flag) {
-        peekResult.selectedConversationId = tmp;
-        flag = true;
-      }
-      return flag;
-    }
-  },
   CONVERSATION_FOCUS_REQUEST: function handleConversationFocusRequest() {
     closure_16 = closure_16 + 1;
     return true;
-  },
-  CLEAR_CONVERSATION_SELECTION: function handleClearConversationSelection(conversationId) {
-    conversationId = conversationId.conversationId;
-    const peekResult = navigation.peek(conversationId.channelId);
-    if (null == peekResult) {
-      return false;
-    } else {
-      const selectedConversationId = peekResult.selectedConversationId;
-      let flag = null != selectedConversationId;
-      if (flag) {
-        flag = null == conversationId || selectedConversationId === conversationId;
-      }
-      if (flag) {
-        peekResult.selectedConversationId = null;
-        flag = true;
-      }
-      return flag;
-    }
   },
   SET_CONVERSATION_FEEDBACK_RATING: function handleSetConversationFeedbackRating(channelId) {
     let conversationId;

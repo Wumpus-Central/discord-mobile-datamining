@@ -7,7 +7,7 @@ import native from "../../../../design/void/native.tsx";
 import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import GuildPowerupsImageDefault from "GuildPowerupsImage.tsx";
 import GuildPowerupsCardFooter2 from "GuildPowerupsCardFooter.tsx";

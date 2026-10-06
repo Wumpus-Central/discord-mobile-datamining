@@ -21,7 +21,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = subtitleStyles(576);
       const cResult = obj.c(16);
       ({ guild, channel, channelName, count } = arg0);
-      const obj2 = subtitleStyles(16265);
+      const obj2 = subtitleStyles(16305);
       subtitleStyles = obj2.useSubtitleStyles();
       if (cResult[0] === channel) {
         let tmp5;
@@ -120,11 +120,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let channelIconComponentWithGuild;
       if (null != channel) {
-        const tmpResult = subtitleStyles(5812);
+        const tmpResult = subtitleStyles(5819);
         channelIconComponentWithGuild = tmpResult.getChannelIconComponentWithGuild(channel, guild);
       }
       if (channelIconComponentWithGuild == null) {
-        channelIconComponentWithGuild = tmp(5864).TextIcon;
+        channelIconComponentWithGuild = tmp(5871).TextIcon;
       }
       cResult[0] = channel;
       cResult[1] = guild;

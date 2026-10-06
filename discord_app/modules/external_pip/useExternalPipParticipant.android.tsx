@@ -149,7 +149,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                         num = 3000;
                         closure_0 = setTimeout(() => {
                           closure_1_3(() => {
-                            /* body not rendered: F153637 */
+                            /* body not rendered: F153877 */
                           });
                         }, 3000);
                         return () => {
@@ -174,7 +174,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                         num = 3000;
                         closure_0 = setTimeout(() => {
                           closure_1_3(() => {
-                            /* body not rendered: F153637 */
+                            /* body not rendered: F153877 */
                           });
                         }, 3000);
                         return () => {
@@ -583,12 +583,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (current !== id2) {
           obj = {
             focusedParticipantStreamId: "Array",
-            focusedParticipantUserId: "Set",
+            focusedParticipantUserId: "Reflect",
             focusedParticipantType: ref2.current,
           };
           const obj2 = {
             focusedParticipantStreamId: "Array",
-            focusedParticipantUserId: "Set",
+            focusedParticipantUserId: "Reflect",
             focusedParticipantType: ref2.current,
           };
         } else {
@@ -679,12 +679,12 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (current !== id2) {
           obj = {
             focusedParticipantStreamId: "Array",
-            focusedParticipantUserId: "Set",
+            focusedParticipantUserId: "Reflect",
             focusedParticipantType: ref2.current,
           };
           const obj2 = {
             focusedParticipantStreamId: "Array",
-            focusedParticipantUserId: "Set",
+            focusedParticipantUserId: "Reflect",
             focusedParticipantType: ref2.current,
           };
         } else {

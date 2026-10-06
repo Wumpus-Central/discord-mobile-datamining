@@ -70,11 +70,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(first, U);
-      const tmpResult5 = tmp(4773);
+      const tmpResult5 = tmp(4779);
       const serverThemeEnabled = tmpResult5.useServerThemeEnabled(arg0, "useGuildPowerupNewPerkMarketingVersion");
-      const tmpResult6 = tmp(4772);
+      const tmpResult6 = tmp(4778);
       const serverThemeUserEnabled = tmpResult6.useServerThemeUserEnabled("useGuildPowerupNewPerkMarketingVersion");
-      const tmpResult7 = tmp(4773);
+      const tmpResult7 = tmp(4779);
       const serverThemeRollbackEnabled = tmpResult7.useServerThemeRollbackEnabled(
         arg0,
         "useGuildPowerupNewPerkMarketingVersion",

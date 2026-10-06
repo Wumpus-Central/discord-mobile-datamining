@@ -357,14 +357,14 @@ let obj = {
     closure_4[requestKey] = { state: "loading", collectionIds };
   },
   STOREFRONT_COLLECTIONS_AFTER_FETCH_SUCCESS: function handleCollectionsAfterFetchSuccess(collections) {
-    const f97560 = (id) => id.id;
+    const f97741 = (id) => id.id;
     collections = collections.collections;
     closure_4[collections.requestKey] = {
       state: "success",
-      collectionIds: collections.map(f97560),
+      collectionIds: collections.map(f97741),
       fetchedAt: Date.now(),
     };
-    ({ state: "success", collectionIds: collections.map(f97560), fetchedAt: Date.now() });
+    ({ state: "success", collectionIds: collections.map(f97741), fetchedAt: Date.now() });
     const item = collections.forEach((id) => {
       closure_1_5[id.id] = id;
     });

@@ -4,7 +4,7 @@ import useStateFromStores from "../../../../discord_common/js/packages/flux/useS
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -127,7 +127,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               obj.hideActionSheet(closure_1_6);
             }
           }
-          stringResult = obj4.string(_modDef2493.aCUVfL);
+          stringResult = obj4.string(_modDef2521.aCUVfL);
         }
         class A {
           constructor() {
@@ -172,7 +172,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 return FamilyCenterStore.getLinkCodeExpiresAt();
               }
             }
-            formatResult = format(_modDef2493["2O6ltn"], obj2);
+            formatResult = format(_modDef2521["2O6ltn"], obj2);
           }
           class A {
             constructor() {
@@ -277,7 +277,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const Text = Text_Text.Text;
       if (title == null) {
         const intl = intl4.intl;
-        title = intl.string(_modDef2493.aCUVfL);
+        title = intl.string(_modDef2521.aCUVfL);
       }
       items2 = [metroImportDefault(Text, obj5)];
       const obj6 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: body };
@@ -285,7 +285,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (body == null) {
         const intl2 = intl4.intl;
         const obj7 = { link };
-        body = intl2.format(_modDef2493["2O6ltn"], obj7);
+        body = intl2.format(_modDef2521["2O6ltn"], obj7);
       }
       items2[1] = metroImportDefault(Text2, obj6);
       items3 = [metroImportAll(View, obj4), ,];
@@ -300,7 +300,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj10 = { startExpanded: true, children: metroImportAll(View, obj3) };
       items3[1] = metroImportDefault(View, obj8);
-      const obj11 = { variant: "secondary", size: "md", text: intl3.string(_modDef2493.Hsm5IF), onPress: callback };
+      const obj11 = { variant: "secondary", size: "md", text: intl3.string(_modDef2521.Hsm5IF), onPress: callback };
       const Button = components_Button_Button.Button;
       intl3 = intl4.intl;
       items3[2] = metroImportDefault(Button, obj11);

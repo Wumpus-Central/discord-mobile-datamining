@@ -153,7 +153,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        const obj3 = playableComputerDevices(11383);
+        const obj3 = playableComputerDevices(11396);
         obj3.setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);

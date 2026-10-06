@@ -2,7 +2,7 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _mod8594 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import _mod8629 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
@@ -164,7 +164,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[11] = tmp14;
             tmp12 = tmp14;
           }
-          const tmpResult = _mod8594;
+          const tmpResult = _mod8629;
           const singleStringOrSkeleton = tmpResult.resolveSingleStringOrSkeleton(
             componentConfig,
             "description",
@@ -175,7 +175,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = singleStringOrSkeleton;
           tmp10 = singleStringOrSkeleton;
         }
-        const tmpResult2 = _mod8594;
+        const tmpResult2 = _mod8629;
         const singleStringOrSkeleton1 = tmpResult2.resolveSingleStringOrSkeleton(
           componentConfig,
           "name",
@@ -186,7 +186,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = singleStringOrSkeleton1;
         tmp8 = singleStringOrSkeleton1;
       }
-      const items2 = [_mod8594.ResolvedValueType.MEDIA];
+      const items2 = [_mod8629.ResolvedValueType.MEDIA];
       const fieldValue = resolveFieldValue(image, items2);
       cResult[0] = resolveFieldValue;
       cResult[1] = image;
@@ -209,11 +209,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       if (componentConfig != null) {
         image = componentConfig.fields.image;
       }
-      const items = [_mod8594.ResolvedValueType.MEDIA];
+      const items = [_mod8629.ResolvedValueType.MEDIA];
       const fieldValue = resolveFieldValue(image, items);
-      const obj = _mod8594;
+      const obj = _mod8629;
       const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
-      const obj2 = _mod8594;
+      const obj2 = _mod8629;
       const singleStringOrSkeleton1 = obj2.resolveSingleStringOrSkeleton(
         componentConfig,
         "description",

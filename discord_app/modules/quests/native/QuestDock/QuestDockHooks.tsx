@@ -515,10 +515,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = setRestingQuestDockMode(576);
       const cResult = obj.c(4);
       setRestingQuestDockMode = react.useContext(
-        setRestingQuestDockMode(14900).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(14916).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const activeQuestDockMode = react.useContext(
-        setRestingQuestDockMode(14897).QuestDockGestureContext,
+        setRestingQuestDockMode(14913).QuestDockGestureContext,
       ).activeQuestDockMode;
       if (cResult[0] === activeQuestDockMode) {
         let tmp2;
@@ -568,10 +568,10 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let setRestingQuestDockMode;
       setRestingQuestDockMode = react.useContext(
-        setRestingQuestDockMode(14900).QuestDockExternalCoordinationContext,
+        setRestingQuestDockMode(14916).QuestDockExternalCoordinationContext,
       ).setRestingQuestDockMode;
       const activeQuestDockMode = react.useContext(
-        setRestingQuestDockMode(14897).QuestDockGestureContext,
+        setRestingQuestDockMode(14913).QuestDockGestureContext,
       ).activeQuestDockMode;
       const items = [setRestingQuestDockMode, activeQuestDockMode];
       const effect = react.useEffect(() => {
@@ -820,7 +820,7 @@ export const useActionSheetPressHandler = function useActionSheetPressHandler(qu
       const result1 = trackAdContentClicked(obj9);
     }
     const obj5 = ActionSheetActionCreatorsDefault;
-    obj5.openLazy(asyncRequire(14904, dependencyMap.paths), "QuestDockContextMenuActionSheet", {
+    obj5.openLazy(asyncRequire(14920, dependencyMap.paths), "QuestDockContextMenuActionSheet", {
       creative: questCreative,
       impressionId: tmp8,
     });

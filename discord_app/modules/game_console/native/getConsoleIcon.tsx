@@ -1,8 +1,8 @@
 // discord_app/modules/game_console/native/getConsoleIcon.tsx
 import Constants from "../../../Constants.tsx";
 import CallConstants from "../../calls/CallConstants.tsx";
-import AssetRegistryDefault from "../../../../_runtime/08754_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/09464_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/08786_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/09477_AssetRegistry.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let PLAYSTATION;

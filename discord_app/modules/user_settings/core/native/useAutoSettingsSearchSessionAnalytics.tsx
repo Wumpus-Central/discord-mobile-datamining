@@ -10,7 +10,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let importDefault, isFocused, state;
 
 let tmp8;
-const useMountEffectDefault = tmp8(5590);
+const useMountEffectDefault = tmp8(5597);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       let closure_1;

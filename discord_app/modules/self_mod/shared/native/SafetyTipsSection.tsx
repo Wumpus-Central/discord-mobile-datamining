@@ -35,7 +35,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       showHeader = showHeader.showHeader;
       const tmp4 = closure_6();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp7 = closure_4(safetyTips(9807).SafetyBookletSpotIllustration, {});
+        const tmp7 = closure_4(safetyTips(9820).SafetyBookletSpotIllustration, {});
         cResult[0] = tmp7;
         first = tmp7;
       } else {
@@ -103,7 +103,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj3 = { spacing: 16, children: items };
               items = [tmp8, tmp18, tmp24];
-              const tmp30 = closure_5(safetyTips(5593).Stack, obj3);
+              const tmp30 = closure_5(safetyTips(5600).Stack, obj3);
               cResult[19] = tmp8;
               cResult[20] = tmp18;
               cResult[21] = tmp24;
@@ -119,7 +119,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj5 = { spacing: 8, align: "center", justify: "center", children: items1 };
           items1 = [tmp12, tmp15];
-          const tmp20 = closure_5(safetyTips(5593).Stack, obj5);
+          const tmp20 = closure_5(safetyTips(5600).Stack, obj5);
           cResult[9] = tmp12;
           cResult[10] = tmp15;
           cResult[11] = tmp20;
@@ -132,7 +132,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-default",
           children: description,
         };
-        const tmp17 = closure_4(safetyTips(4886).Text, obj6);
+        const tmp17 = closure_4(safetyTips(4892).Text, obj6);
         cResult[6] = description;
         cResult[7] = tmp4.text;
         cResult[8] = tmp17;
@@ -145,7 +145,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           variant: "heading-xl/semibold",
           children: intl.string(safetyTips(1126).t.eAbVfS),
         };
-        const Text = safetyTips(4886).Text;
+        const Text = safetyTips(4892).Text;
         intl = safetyTips(1126).intl;
         tmp13 = closure_4(Text, obj7);
       }
@@ -161,17 +161,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let showHeader = safetyTips.showHeader;
       const description = safetyTips.description;
       const tmp = closure_6();
-      let obj = { style: tmp.image, children: closure_4(safetyTips(9807).SafetyBookletSpotIllustration, {}) };
-      const Stack = safetyTips(5593).Stack;
+      let obj = { style: tmp.image, children: closure_4(safetyTips(9820).SafetyBookletSpotIllustration, {}) };
+      const Stack = safetyTips(5600).Stack;
       const items = [closure_4(View, obj), ,];
-      const Stack2 = safetyTips(5593).Stack;
+      const Stack2 = safetyTips(5600).Stack;
       if (showHeader) {
         const obj2 = {
           style: tmp.text,
           variant: "heading-xl/semibold",
           children: intl.string(safetyTips(1126).t.eAbVfS),
         };
-        const Text = tmp3(4886).Text;
+        const Text = tmp3(4892).Text;
         intl = tmp3(1126).intl;
         showHeader = closure_4(Text, obj2);
       }
@@ -185,7 +185,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: description,
       };
-      items1[1] = closure_4(safetyTips(4886).Text, obj5);
+      items1[1] = closure_4(safetyTips(4892).Text, obj5);
       items[1] = closure_5(Stack2, obj4);
       const obj6 = {
         style: tmp.tips,

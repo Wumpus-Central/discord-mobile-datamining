@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupTier3OverrideConfig.tsx
 import Constants from "../../../../Constants.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -47,7 +47,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp8;
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { shouldShow: true, text: intl.string(_modDef2525.l9n4QZ) };
+          const obj2 = { shouldShow: true, text: intl.string(_modDef2553.l9n4QZ) };
           intl = tmp(1126).intl;
           cResult[4] = obj2;
           tmp8 = obj2;
@@ -86,7 +86,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return true === hasItem;
         })
       ) {
-        const obj2 = { shouldShow: true, text: intl.string(_modDef2525.l9n4QZ) };
+        const obj2 = { shouldShow: true, text: intl.string(_modDef2553.l9n4QZ) };
         intl = tmp(1126).intl;
         obj3 = obj2;
       } else {

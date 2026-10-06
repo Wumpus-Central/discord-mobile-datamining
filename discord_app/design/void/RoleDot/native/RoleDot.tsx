@@ -5,7 +5,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import useFontScale from "../../../../modules/screen/native/useFontScale.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import useHasEnhancedRoleColorsDefault from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

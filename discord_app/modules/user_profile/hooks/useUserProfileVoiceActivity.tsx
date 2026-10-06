@@ -21,8 +21,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === userId) {
           tmp4 = cResult[2];
         }
-        ({ voiceState, voiceChannel } = id(10612)(tmp4));
-        id(10612)(tmp4);
+        ({ voiceState, voiceChannel } = id(10625)(tmp4));
+        id(10625)(tmp4);
         id = undefined;
         if (voiceChannel != null) {
           id = voiceChannel.id;
@@ -93,7 +93,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2;
       const userId = guildId.userId;
       let id;
-      const tmp2 = id(10612)({ userId, guildId: guildId.guildId });
+      const tmp2 = id(10625)({ userId, guildId: guildId.guildId });
       const voiceChannel = tmp2.voiceChannel;
       id = undefined;
       const voiceState = tmp2.voiceState;

@@ -1,6 +1,6 @@
 // discord_app/lib/pushnotification/PushNotification.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import _modDef8967 from "../../../_runtime/metro/08967__.js";
+import _modDef8996 from "../../../_runtime/metro/08996__.js";
 import react_native from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
 import react_nativeDefault from "../../modules/native_permissions/mobile/openNotificationSettings.native.tsx";
 import react_native2 from "../../../_runtime/00017_react-native.js";
@@ -88,7 +88,7 @@ let obj = {
         });
       });
     } else {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       initialNotification = obj2.getInitialNotification();
     }
     return initialNotification;
@@ -129,7 +129,7 @@ let obj = {
   setApplicationIconBadgeNumber(arg0) {
     const obj = PlatformUtils;
     if (!obj.isAndroid()) {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const result = obj2.setApplicationIconBadgeNumber(arg0);
     }
   },
@@ -138,7 +138,7 @@ let obj = {
     if (obj.isAndroid()) {
       const result = PushNotificationAndroid.clearAllNotifications();
     } else {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const result1 = obj2.setApplicationIconBadgeNumber(0);
     }
   },
@@ -147,7 +147,7 @@ let obj = {
     if (obj.isAndroid()) {
       const result = PushNotificationAndroid.presentLocalNotification(arg0);
     } else {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const result1 = obj2.presentLocalNotification(arg0);
     }
   },
@@ -160,7 +160,7 @@ let obj = {
       const self = this;
       const self2 = this;
       resolveResult = new _Promise((arg0) => {
-        const obj = _modDef8967;
+        const obj = _modDef8996;
         const deliveredNotifications = obj.getDeliveredNotifications(arg0);
       });
     }
@@ -169,35 +169,35 @@ let obj = {
   removeDeliveredNotifications(arg0) {
     const obj = PlatformUtils;
     if (!obj.isAndroid()) {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const result = obj2.removeDeliveredNotifications(arg0);
     }
   },
   scheduleLocalNotification(arg0) {
     const obj = PlatformUtils;
     if (!obj.isAndroid()) {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const result = obj2.scheduleLocalNotification(arg0);
     }
   },
   getScheduledLocalNotifications(arg0) {
     const obj = PlatformUtils;
     if (!obj.isAndroid()) {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const scheduledLocalNotifications = obj2.getScheduledLocalNotifications(arg0);
     }
   },
   cancelLocalNotifications(arg0) {
     const obj = PlatformUtils;
     if (!obj.isAndroid()) {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const result = obj2.cancelLocalNotifications(arg0);
     }
   },
   cancelAllLocalNotifications() {
     const obj = PlatformUtils;
     if (!obj.isAndroid()) {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const result = obj2.cancelAllLocalNotifications();
     }
   },
@@ -206,7 +206,7 @@ let obj = {
     if (obj.isAndroid()) {
       fn({});
     } else {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       obj2.checkPermissions(fn);
     }
   },
@@ -218,7 +218,7 @@ let obj = {
       const self2 = this;
       permissions = new Promise((fn) => fn({}));
     } else {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       permissions = obj2.requestPermissions(arg0);
     }
     return permissions;
@@ -276,7 +276,7 @@ let obj = {
       }
       const result = PushNotificationAndroid.registerEventListener(localNotification);
     } else {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const listener = obj2.addEventListener(localNotification, handleLocalNotification);
     }
   },
@@ -289,7 +289,7 @@ let obj = {
       });
       const result = PushNotificationAndroid.registerEventListener("register");
     } else {
-      const obj2 = _modDef8967;
+      const obj2 = _modDef8996;
       const listener = obj2.addEventListener("register", handleToken);
     }
   },

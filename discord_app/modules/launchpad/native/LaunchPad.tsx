@@ -10,7 +10,7 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _mod9496 from "../../autocompleter/index.tsx";
+import _mod9509 from "../../autocompleter/index.tsx";
 import AutocompleterDefault from "../../autocompleter/Autocompleter.tsx";
 import createAutocompleterResultForChannelIdDefault from "../../autocompleter/createAutocompleterResultForChannelId.tsx";
 import hideLaunchPadDefault from "hideLaunchPad.tsx";
@@ -1234,11 +1234,11 @@ let closure_37 = memo(
 );
 const results = [];
 let items = [
-  _mod9496.AutocompleterResultTypes.GUILD,
-  _mod9496.AutocompleterResultTypes.TEXT_CHANNEL,
-  _mod9496.AutocompleterResultTypes.GROUP_DM,
-  _mod9496.AutocompleterResultTypes.VOICE_CHANNEL,
-  _mod9496.AutocompleterResultTypes.USER,
+  _mod9509.AutocompleterResultTypes.GUILD,
+  _mod9509.AutocompleterResultTypes.TEXT_CHANNEL,
+  _mod9509.AutocompleterResultTypes.GROUP_DM,
+  _mod9509.AutocompleterResultTypes.VOICE_CHANNEL,
+  _mod9509.AutocompleterResultTypes.USER,
 ];
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_42 = ReactCompilerGating.isReactCompilerEnabled()

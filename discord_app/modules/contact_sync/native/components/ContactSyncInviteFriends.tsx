@@ -6,7 +6,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/12350_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/12365_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 import Constants from "../../../../Constants.tsx";
@@ -125,7 +125,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp15,
         };
-        const tmp19 = closure_7(stateFromStores(4886).Text, obj3);
+        const tmp19 = closure_7(stateFromStores(4892).Text, obj3);
         cResult[7] = tmp4.title;
         cResult[8] = tmp19;
         tmp17 = tmp19;
@@ -143,7 +143,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[10] !== tmp4.subtitle) {
         const obj4 = { style: subtitle, variant: "text-sm/medium", color: "text-default", children: tmp20 };
-        const tmp24 = closure_7(stateFromStores(4886).Text, obj4);
+        const tmp24 = closure_7(stateFromStores(4892).Text, obj4);
         cResult[10] = tmp4.subtitle;
         cResult[11] = tmp24;
         tmp22 = tmp24;
@@ -171,7 +171,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[18] !== tmp9) {
               const obj5 = { variant: "primary", size: "lg", text: tmp27, onPress: tmp9 };
-              const tmp31 = closure_7(stateFromStores(5594).Button, obj5);
+              const tmp31 = closure_7(stateFromStores(5601).Button, obj5);
               cResult[18] = tmp9;
               cResult[19] = tmp31;
               tmp29 = tmp31;

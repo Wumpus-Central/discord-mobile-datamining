@@ -7,5 +7,5 @@ const result = size.fileFinishedImporting("components_native/premium/openPremium
 
 export default function openPremiumModal(merged) {
   const obj = ModalActionCreatorsDefault;
-  return obj.pushLazy(asyncRequire(6918, dependencyMap.paths), merged, "PREMIUM_KEY", { presentation: "modal" });
+  return obj.pushLazy(asyncRequire(6929, dependencyMap.paths), merged, "PREMIUM_KEY", { presentation: "modal" });
 }

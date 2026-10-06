@@ -65,7 +65,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
       } else {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
         const obj = { userId };
-        const tmp5 = asyncRequire(10848, dependencyMap.paths);
+        const tmp5 = asyncRequire(10861, dependencyMap.paths);
         openLazy(tmp5, TieredTenureBadgeActionSheet.TIERED_TENURE_BADGE_ACTION_SHEET_KEY, obj, "stack");
       }
       if (isPremiumSubscriber) {

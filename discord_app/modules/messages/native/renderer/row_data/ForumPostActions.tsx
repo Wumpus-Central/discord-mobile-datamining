@@ -1,9 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/ForumPostActions.tsx
 import Constants from "../../../../../Constants.tsx";
 import ReactionUtils from "../../../../reactions/ReactionUtils.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/04578_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/04584_AssetRegistry.js";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
-import AssetRegistryDefault2 from "../../../../../../_runtime/07608_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/07619_AssetRegistry.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const HelpdeskArticles = Constants.HelpdeskArticles;
@@ -122,12 +122,12 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     const _HermesInternal = HermesInternal;
     const tmp6Result = tmp6(1242);
     tmp6Result.captureMessage(
-      "Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4578 : 7608),
+      "Forum follow is null. isFollowing: " + isFollowing + " icon: " + tmp6(isFollowing ? 4584 : 7619),
     );
   }
   let stringResult;
-  const tmp8Result = tmp8(7605);
-  const assetUriForEmbed1 = tmp8Result.getAssetUriForEmbed(tmp6(4840));
+  const tmp8Result = tmp8(7616);
+  const assetUriForEmbed1 = tmp8Result.getAssetUriForEmbed(tmp6(4846));
   if (!hasReactions) {
     let emoji;
     if (defaultReaction != null) {
@@ -144,8 +144,8 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       title: intl2.string(tmp8(1126).t["5uAO7d"]),
       subtitle: formatToParts(YtCu5p, obj2),
       cta: intl4.string(tmp8(1126).t.C5UQC9),
-      icon: tmp8Result3.getAssetUriForEmbed(tmp6(7609)),
-      closeIcon: tmp8Result4.getAssetUriForEmbed(tmp6(6584)),
+      icon: tmp8Result3.getAssetUriForEmbed(tmp6(7620)),
+      closeIcon: tmp8Result4.getAssetUriForEmbed(tmp6(6591)),
     };
     intl2 = tmp8(1126).intl;
     const intl3 = tmp8(1126).intl;
@@ -155,9 +155,9 @@ export const createForumPostActions = function createForumPostActions(arg0) {
     YtCu5p = tmp8(1126).t.YtCu5p;
     tmp6Result2 = tmp6(2115);
     intl4 = tmp8(1126).intl;
-    tmp8Result3 = tmp8(7605);
+    tmp8Result3 = tmp8(7616);
     tmp14 = obj;
-    tmp8Result4 = tmp8(7605);
+    tmp8Result4 = tmp8(7616);
   }
   const obj4 = {
     numDisplayedReactions: 3,

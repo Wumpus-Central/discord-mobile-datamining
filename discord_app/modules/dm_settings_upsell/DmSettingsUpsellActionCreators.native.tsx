@@ -23,7 +23,7 @@ let obj = {
     }
     const obj = { guildId };
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequire(17488, dependencyMap.paths), "dm_settings_upsell_modal", obj);
+    obj2.openLazy(asyncRequire(17515, dependencyMap.paths), "dm_settings_upsell_modal", obj);
     const Storage2 = Storage3.Storage;
     const result = Storage2.set(_false, timestamp);
   },

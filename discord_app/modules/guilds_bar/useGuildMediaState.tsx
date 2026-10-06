@@ -237,7 +237,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           obj1 = {
             guildHasVoice: flag,
             guildHasVideo: (() => {
-              /* body not rendered: F145755 */
+              /* body not rendered: F145965 */
             })(),
             selectedVoiceChannelHasVideo: null,
           };

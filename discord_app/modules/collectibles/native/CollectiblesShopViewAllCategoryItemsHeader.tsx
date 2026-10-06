@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import intl5 from "../../../intl/index.native.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import HeaderShared from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
-import AssetRegistryDefault from "../../../../_runtime/07501_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/07512_AssetRegistry.js";
 import useYouBarSettingsSafeArea from "../../main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";

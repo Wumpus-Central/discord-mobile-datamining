@@ -1,7 +1,7 @@
 // discord_app/modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx
 import Constants from "../../../Constants.tsx";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef3237 from "../AccountLinking.messages.js";
+import _modDef3265 from "../AccountLinking.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import react_mod from "../../../../_runtime/00019_react.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
@@ -57,7 +57,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(tmp6, tmp7);
-      const tmpResult3 = tmp(4851);
+      const tmpResult3 = tmp(4857);
       const isInAppBrowserOpen = tmpResult3.useIsInAppBrowserOpen();
       if (cResult[4] !== arg0) {
         class A {
@@ -84,7 +84,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_0(arg0);
           }
         }
-        const tmpResult4 = tmp(7946);
+        const tmpResult4 = tmp(7957);
         const previousWhen = tmpResult4.usePreviousWhen(obj3);
         if (cResult[9] === (stateFromStores && !isInAppBrowserOpen)) {
           class A {
@@ -102,7 +102,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 if (state) {
                   tmp.current = false;
                   if (closure_2) {
-                    const obj = { content: intl.string(_modDef3237.uG6teD), key: "account-linked-toast" };
+                    const obj = { content: intl.string(_modDef3265.uG6teD), key: "account-linked-toast" };
                     const open = ToastActionCreatorsDefault.open;
                     ToastActionCreatorsDefault;
                     intl = intl2.intl;
@@ -176,7 +176,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               if (stateFromStores) {
                 tmp.current = false;
                 if (false) {
-                  const obj = { content: intl.string(_modDef3237.uG6teD), key: "account-linked-toast" };
+                  const obj = { content: intl.string(_modDef3265.uG6teD), key: "account-linked-toast" };
                   const open = ToastActionCreatorsDefault.open;
                   ToastActionCreatorsDefault;
                   intl = intl2.intl;

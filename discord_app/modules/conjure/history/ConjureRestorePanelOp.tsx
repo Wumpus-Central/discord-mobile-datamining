@@ -5,5 +5,5 @@ const result = size.fileFinishedImporting("modules/conjure/history/ConjureRestor
 
 export const RESTORE_WINDOW_DAYS = 30;
 export function restorePanelEnvironments(arg0) {
-  return "user" === arg0 ? ["stable"] : ["preview", "stable"];
+  return "user" === arg0 ? ["stable"] : ["stable", "preview"];
 }

@@ -6,7 +6,7 @@ import Stack_Stack from "../../../../../design/components/Stack/native/Stack.nat
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "TwoWayLinkStyles.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/08762_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/08794_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";

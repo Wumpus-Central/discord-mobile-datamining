@@ -17,7 +17,7 @@ let visible = false;
 let obj = {};
 let size = {
   x: "Array",
-  y: "T",
+  y: "Symbol",
   width: "y",
   height: "IconComponent",
   screenOrientation: DeviceOrientation.OrientationType.PORTRAIT,
@@ -28,7 +28,7 @@ let size = {
 obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
 const size1 = {
   x: "Array",
-  y: "T",
+  y: "Symbol",
   width: "y",
   height: "IconComponent",
   screenOrientation: DeviceOrientation.OrientationType.PORTRAIT,

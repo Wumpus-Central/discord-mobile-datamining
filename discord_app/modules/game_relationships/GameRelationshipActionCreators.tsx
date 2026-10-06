@@ -56,7 +56,7 @@ let obj = function _deleteGameRelationship() {
     await "IconComponent";
     let closure_2 = tmp;
     ({ userId: c0, applicationId: c1, onSuccess: c2 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -80,7 +80,7 @@ obj = function _removeGameFriend() {
     await closure_130_7(obj5);
     await "IconComponent";
     ({ userId: c0, applicationId: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -104,7 +104,7 @@ obj = function _cancelGameFriendRequest() {
     await closure_130_7(obj5);
     await "IconComponent";
     ({ userId: c0, applicationId: c1 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

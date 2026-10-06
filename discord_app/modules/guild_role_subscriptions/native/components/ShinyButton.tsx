@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import BaseTextButton2 from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09904_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09917_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";

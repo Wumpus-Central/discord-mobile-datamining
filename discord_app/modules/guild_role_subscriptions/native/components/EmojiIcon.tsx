@@ -3,7 +3,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09904_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09917_AssetRegistry.js";
 import useEmojiByIdOrName from "../../useEmojiByIdOrName.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import size_mod from "../../../../../_runtime/metro/00002__.js";

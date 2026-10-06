@@ -19,17 +19,24 @@ export const getFrameIntentForSurface = function getFrameIntentForSurface(type) 
     return obj2.INLINE;
   }
 };
-export const makeFrameId = function makeFrameId(arg0, type) {
+export const makeFrameId = function makeFrameId(prop, type) {
   type = type.type;
   if (EmbeddedSurfaceType.EmbeddedSurfaceType.MAIN === type) {
-    const _HermesInternal3 = HermesInternal;
-    return "main:" + arg0;
+    const _HermesInternal4 = HermesInternal;
+    return "main:" + prop;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL === type) {
-    const _HermesInternal2 = HermesInternal;
-    return "app-channel:" + arg0 + ":" + type.channelId;
+    let combined;
+    if (null != type.channelId) {
+      const _HermesInternal3 = HermesInternal;
+      combined = "app-channel:" + prop + ":" + type.channelId;
+    } else {
+      const _HermesInternal2 = HermesInternal;
+      combined = "app-channel:" + prop;
+    }
+    return combined;
   } else if (EmbeddedSurfaceType.EmbeddedSurfaceType.VOICE_CHANNEL === type) {
     const _HermesInternal = HermesInternal;
-    return "voice-channel:" + arg0 + ":" + type.channelId;
+    return "voice-channel:" + prop + ":" + type.channelId;
   }
 };
 export const getFrameSurfaceForChannel = function getFrameSurfaceForChannel(type) {
@@ -54,10 +61,10 @@ export const getChannelIdForSurface = function getChannelIdForSurface(type) {
     }
   }
 };
-export const isLaunched = function isLaunched(mainFrame) {
+export const isLaunched = function isLaunched(conjureBuilderPreviewFrame) {
   let state;
-  if (mainFrame != null) {
-    state = mainFrame.state;
+  if (conjureBuilderPreviewFrame != null) {
+    state = conjureBuilderPreviewFrame.state;
   }
   return "launched" === state;
 };

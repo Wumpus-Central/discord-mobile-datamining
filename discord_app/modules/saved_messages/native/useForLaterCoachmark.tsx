@@ -5,7 +5,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import intl3 from "../../../intl/index.native.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
-import AssetRegistryDefault from "../../../../_runtime/13134_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/13153_AssetRegistry.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -140,14 +140,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       let first;
       let items1;
-      let obj = first(7485);
+      let obj = first(7496);
       if (obj.useIsForLaterExperimentOn("forLaterCoachmark")) {
         const items = [closure_8];
         items1 = items;
       } else {
         items1 = [];
       }
-      const tmpResult = first(6891);
+      const tmpResult = first(6901);
       const tmp4 = _slicedToArray(tmpResult.useSelectedDismissibleContent(items1, undefined, true), 2);
       first = tmp4[0];
       let closure_1 = tmp6;
@@ -171,7 +171,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         intl2 = intl3.intl;
         return obj;
       }, items2);
-      const tmpResult2 = first(9882);
+      const tmpResult2 = first(9895);
       const coachmark = tmpResult2.useCoachmark(arg0, memo);
       return tmp4[1];
     };

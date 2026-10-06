@@ -1396,7 +1396,7 @@ export const usePublishSubscriptionListing = function usePublishSubscriptionList
               ({ guildId: c0, groupListingId: c1, listingId: c2 } = closure_0);
               c5 = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c5) {
             if (guildId === 1) {

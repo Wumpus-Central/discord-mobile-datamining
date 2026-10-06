@@ -10,7 +10,7 @@ import themes from "../../../../design/utils/shared/themes.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import getDevicePixelRatioDefault from "../../../../utils/getDevicePixelRatio.web.tsx";
 import guild_profile_GuildProfileUtils from "../GuildProfileUtils.tsx";
 import GuildProfileHeaderDefault from "GuildProfileHeader.tsx";
@@ -407,7 +407,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp5Result = null != guildProfile.description && guildProfile.description.length > 0;
       if (tmp5Result) {
         let obj3 = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
-        tmp5Result = closure_8(guildProfile(4886).Text, obj3);
+        tmp5Result = closure_8(guildProfile(4892).Text, obj3);
       }
       items2 = [
         tmp5Result,

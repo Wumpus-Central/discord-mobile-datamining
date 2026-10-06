@@ -100,7 +100,7 @@ export const transformNativeLink = function transformNativeLink(value, channelId
       obj5 = obj3;
       const obj4 = { type: MarkupTypes.AST_KEY.TEXT, content: name };
     } else {
-      obj5 = { type: MarkupTypes.AST_KEY.LINK, content: items1, target: url, title: "a" };
+      obj5 = { type: MarkupTypes.AST_KEY.LINK, content: items1, target: url, title: "Array" };
       const obj6 = { type: MarkupTypes.AST_KEY.TEXT, content: tmp8 };
       items1 = [obj6];
       tmp8 = stripCredentialsForDisplay(url);

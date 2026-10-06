@@ -53,7 +53,7 @@ const memoResult = memo(
         }
         const tmpResult = channelId(504);
         const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
-        const tmpResult2 = channelId(11927);
+        const tmpResult2 = channelId(11941);
         const channelDetailsSearchContext = tmpResult2.useChannelDetailsSearchContext(channelId, stateFromStores);
         const tmp9 = closure_7();
         if (cResult[3] !== channelDetailsSearchContext) {
@@ -95,7 +95,7 @@ const memoResult = memo(
           }
           return guild_id;
         });
-        const obj3 = channelId(11927);
+        const obj3 = channelId(11941);
         const channelDetailsSearchContext = obj3.useChannelDetailsSearchContext(channelId, stateFromStores);
         return <View style={closure_7().container}>{null}</View>;
       },

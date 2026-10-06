@@ -2,7 +2,7 @@
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader.tsx";
 import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard.tsx";
 import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard.tsx";
@@ -34,7 +34,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const listings = guildId.listings;
       const tmp4 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let obj2 = { title: intl.string(_modDef2525.TV3Vm8), description: intl2.string(_modDef2525.STx9hp) };
+        let obj2 = { title: intl.string(_modDef2553.TV3Vm8), description: intl2.string(_modDef2553.STx9hp) };
         const tmp8 = GuildPowerupsSectionHeaderDefault;
         intl = tmp(1126).intl;
         intl2 = tmp(1126).intl;
@@ -108,7 +108,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ guildId: require, listings } = arg0);
       let obj = { children: items };
       const tmp = closure_7();
-      let obj2 = { title: intl.string(_modDef2525.TV3Vm8), description: intl2.string(_modDef2525.STx9hp) };
+      let obj2 = { title: intl.string(_modDef2553.TV3Vm8), description: intl2.string(_modDef2553.STx9hp) };
       const tmp2 = GuildPowerupsSectionHeaderDefault;
       intl = intl3.intl;
       intl2 = intl3.intl;

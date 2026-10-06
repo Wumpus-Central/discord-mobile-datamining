@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItem.tsx
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import useMediaViewerSources from "../useMediaViewerSources.tsx";
 import useEntranceAnimation from "../useEntranceAnimation.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";

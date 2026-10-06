@@ -128,7 +128,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       if (IncludeGameMentionsInAutocomplete.getSetting()) {
         if (0 !== query.length) {
           const tmpResult = channel(flag2[16]);
-          let result = tmpResult.queryGamesAutocomplete(query);
+          let result = tmpResult.queryGamesAutocomplete(query, channel(flag2[17]).GameSearchSurface.CHAT_MENTION);
           if (result == null) {
             result = [];
           }
@@ -145,10 +145,10 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
   items1 = [GameAutocompleteStore];
   let obj3 = {
     queryResults(str) {
-      const TimestampAutocompleteMobileExperiment = channel(flag2[17]).TimestampAutocompleteMobileExperiment;
+      const TimestampAutocompleteMobileExperiment = channel(flag2[18]).TimestampAutocompleteMobileExperiment;
       const items = [];
       if (TimestampAutocompleteMobileExperiment.getConfig({ location: "timestamps autocomplete" }).enabled) {
-        const tmpResult = channel(flag2[18]);
+        const tmpResult = channel(flag2[19]);
         const result = tmpResult.queryTimestampSuggestions(str.trim());
         const iter = result[Symbol.iterator]();
         const nextResult = iter.next();
@@ -235,7 +235,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               const stickerPacks = obj4.fetchStickerPacks();
             }
             const items2 = [query];
-            const items3 = [channel, (arg0, arg1) => arg1 === channel(flag2[20]).StickerSendability.SENDABLE];
+            const items3 = [channel, (arg0, arg1) => arg1 === channel(flag2[21]).StickerSendability.SENDABLE];
             flag2 = true;
             const tmp3Result = AutocompleteUtilsDefault;
             items1 = tmp3Result.queryStickers(items2, true, items3);
@@ -253,7 +253,7 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
             if (null != name.id) {
               const obj4 = { id: null, animated: null, size };
               ({ id: obj3.id, animated: obj3.animated } = name);
-              const obj2 = flag(flag2[21]);
+              const obj2 = flag(flag2[22]);
               url = obj2.getEmojiURL(obj4);
             } else {
               url = name.url;

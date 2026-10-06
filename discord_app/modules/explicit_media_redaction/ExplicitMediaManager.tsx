@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import Constants from "../../Constants.tsx";
 import UserSettingsConstants from "../user_settings/UserSettingsConstants.tsx";
-import flattenDefault from "../../../_runtime/05000_flatten.js";
+import flattenDefault from "../../../_runtime/05006_flatten.js";
 import MessageRecordUtils from "../messages/MessageRecordUtils.tsx";
 import ObscuredMediaUtils from "ObscuredMediaUtils.tsx";
 import HarmTypeConfiguration from "HarmTypeConfiguration.tsx";
@@ -11,7 +11,7 @@ import ReferencedMessageStore2 from "../replies/ReferencedMessageStore.tsx";
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils.tsx";
 import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants.tsx";
 import ExplicitMediaRedactionActionCreators from "ExplicitMediaRedactionActionCreators.tsx";
-import uniqWithDefault from "../../../_runtime/17494_uniqWith.js";
+import uniqWithDefault from "../../../_runtime/17521_uniqWith.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import ChannelSectionStore from "../../stores/ChannelSectionStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -25,7 +25,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const ReferencedMessageStore = ReferencedMessageStore2;
 let messageByReference, set;
 
-const f130878 = (channel_id) => {
+const f131055 = (channel_id) => {
   const tmp = obj;
   if (null == obj[channel_id.channel_id]) {
     tmp[channel_id.channel_id] = {
@@ -235,8 +235,8 @@ function withoutScheduledTimeout(arg0) {
 }
 function handleUnscannedMessages(found2, isMessageUpdate) {
   let found1;
-  const f130872 = (id) => id.id;
-  const f130876 = (channel_id) => channel_id.channel_id;
+  const f131049 = (id) => id.id;
+  const f131053 = (channel_id) => channel_id.channel_id;
   let obj = isMessageUpdate;
   if (isMessageUpdate == null) {
     obj = {};
@@ -308,8 +308,8 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
     const _Set = Set;
     const self = this;
     const self2 = this;
-    tmp = new Set(found1.map(f130876)).size > 1;
-    set = new Set(found1.map(f130876));
+    tmp = new Set(found1.map(f131053)).size > 1;
+    set = new Set(found1.map(f131053));
   }
   let closure_1 = tmp;
   if (tmp2) {
@@ -322,16 +322,16 @@ function handleUnscannedMessages(found2, isMessageUpdate) {
         if (tmp) {
           const result = obj.sendMultiChannelMessagesForScanning(found);
         } else {
-          const result1 = obj.sendMessagesForScanning(found[0].channel_id, found.map(f130872));
+          const result1 = obj.sendMessagesForScanning(found[0].channel_id, found.map(f131049));
         }
       }
     }, 800 * Math.random());
   } else if (0 !== found1.length) {
-    let obj2 = found1(8924);
+    let obj2 = found1(8953);
     if (tmp) {
       let result = obj2.sendMultiChannelMessagesForScanning(found1);
     } else {
-      let result1 = obj2.sendMessagesForScanning(found1[0].channel_id, found1.map(f130872));
+      let result1 = obj2.sendMessagesForScanning(found1[0].channel_id, found1.map(f131049));
     }
   }
 }
@@ -369,14 +369,14 @@ function processMessagesFromAction(firstMessages, isMessageUpdate) {
     HermesBuiltin.arraySpread(items, found1, HermesBuiltin.arraySpread(items, found, 0));
     tmp3 = items;
   }
-  const arr4 = obj2(17494)(tmp3, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
+  const arr4 = obj2(17521)(tmp3, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
   const found2 = arr4.filter((item) => {
     obj = obj(dependencyMap[12]);
     return obj.hasUnscannedMedia(item);
   });
   let obj = {};
   obj2 = {};
-  const item = arr4.forEach(f130878);
+  const item = arr4.forEach(f131055);
   const obj3 = obj2(11);
   const entries = obj3.entries(obj);
   const item1 = entries.forEach((item) => {
@@ -671,14 +671,14 @@ function maybeScanMessagesForChannelId(channelId) {
       HermesBuiltin.arraySpread(items, found1, HermesBuiltin.arraySpread(items, found, 0));
       tmp4 = items;
     }
-    const arr5 = obj2(17494)(tmp4, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
+    const arr5 = obj2(17521)(tmp4, (id, id2) => id.id === id2.id && id.channel_id === id2.channel_id);
     const found2 = arr5.filter((item) => {
       obj = obj(dependencyMap[12]);
       return obj.hasUnscannedMedia(item);
     });
     let obj = {};
     obj2 = {};
-    const item = arr5.forEach(f130878);
+    const item = arr5.forEach(f131055);
     const obj3 = obj2(11);
     const entries = obj3.entries(obj);
     const item1 = entries.forEach((item) => {

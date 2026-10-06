@@ -288,6 +288,6 @@ export const openBurstReactionFirstSendActionSheet = function openBurstReactionF
     );
     const obj4 = { channelId, messageId, emoji };
     const tmpResult2 = ActionSheetActionCreatorsDefault;
-    tmpResult2.openLazy(asyncRequire(7451, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj4);
+    tmpResult2.openLazy(asyncRequire(7462, dependencyMap.paths), "BurstReactionFirstSendActionSheet", obj4);
   }
 };

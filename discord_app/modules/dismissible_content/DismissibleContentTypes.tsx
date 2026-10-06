@@ -46,6 +46,7 @@ const items1 = [
   dismissible_content.DismissibleContent.BOUNTIES_RECURRING_SWIPE_UP_NUX,
   dismissible_content.DismissibleContent.BATTLENET_CONNECTION_DEPRECATION,
   dismissible_content.DismissibleContent.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES,
+  dismissible_content.DismissibleContent.CONTEXTUAL_REFERRAL_GDM_MEMBER_LIST_EMBED,
 ];
 const items2 = [
   dismissible_content.DismissibleContent.GIFTING_PROMOTION_ICON,

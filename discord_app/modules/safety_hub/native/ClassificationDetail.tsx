@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Constants from "../../../Constants.tsx";
 import intl4 from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3109 from "../../age_assurance/ManualReview.messages.js";
+import _modDef3137 from "../../age_assurance/ManualReview.messages.js";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import MonitoringAgentDefault from "../../monitoring/MonitoringAgent.tsx";
@@ -97,7 +97,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
-      const ShieldIcon2 = tmp12(8923).ShieldIcon;
+      const ShieldIcon2 = tmp12(8952).ShieldIcon;
       const tmp23 = closure_13(ShieldIcon2, obj2);
       cResult[4] = tmp23;
       tmp20 = tmp23;
@@ -126,7 +126,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     }
     if (cResult[9] !== tmp28) {
       const obj5 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: tmp28 };
-      const tmp32 = closure_13(policyExplainerLink(4886).Text, obj5);
+      const tmp32 = closure_13(policyExplainerLink(4892).Text, obj5);
       cResult[9] = tmp28;
       cResult[10] = tmp32;
       tmp30 = tmp32;
@@ -183,7 +183,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
     const obj11 = { style: tmp3.classificationPolicyCardIcon, children: closure_13(ShieldIcon, obj12) };
     obj12 = { size: "sm", color: nativeDefault.colors.TEXT_LINK };
     tmp9 = TouchableHitBoxDefault;
-    ShieldIcon = policyExplainerLink(8923).ShieldIcon;
+    ShieldIcon = policyExplainerLink(8952).ShieldIcon;
     items3 = [closure_13(closure_4, obj11)];
     const obj13 = { style: tmp3.classificationPolicyCardContent, children: closure_13(Text, obj14) };
     obj14 = {
@@ -191,7 +191,7 @@ function ClassificationPolicyCard(policyExplainerLink) {
       color: "mobile-text-heading-primary",
       children: intl.format(policyExplainerLink(1126).t.zxUdpj, obj15),
     };
-    Text = policyExplainerLink(4886).Text;
+    Text = policyExplainerLink(4892).Text;
     intl = policyExplainerLink(1126).intl;
     obj15 = { classificationDescription: classificationTypeText };
     items3[1] = closure_13(closure_4, obj13);
@@ -381,7 +381,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       guildMetadata = classificationTypeText.guildMetadata;
       const tmp = closure_16();
       const items = [classificationTypeText, guildMetadata];
-      let obj = { style: tmp.header, children: closure_13(classificationTypeText(4886).Text, obj2) };
+      let obj = { style: tmp.header, children: closure_13(classificationTypeText(4892).Text, obj2) };
       const memo = react.useMemo(() => {
         let formatResult;
         let name;
@@ -877,7 +877,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { large: true, children: intl2.string(_modDef3109.rn3Gto) };
+        const obj3 = { large: true, children: intl2.string(_modDef3137.rn3Gto) };
         intl2 = intl4.intl;
         const tmp14 = map1(closure_19, obj3);
         cResult[3] = tmp14;
@@ -922,7 +922,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       items = [map1(closure_18, obj2)];
       const obj3 = { style: items1, children: map1(closure_19, obj4) };
       items1 = [tmp.actionsTaken];
-      obj4 = { large: true, children: intl2.string(_modDef3109.rn3Gto) };
+      obj4 = { large: true, children: intl2.string(_modDef3137.rn3Gto) };
       intl2 = intl4.intl;
       items[1] = map1(React3, obj3);
       return authStore2(React3, obj);
@@ -1014,7 +1014,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[2];
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { large: true, children: intl2.string(_modDef3109["yV/t/V"]) };
+        const obj3 = { large: true, children: intl2.string(_modDef3137["yV/t/V"]) };
         intl2 = intl4.intl;
         const tmp14 = map1(closure_19, obj3);
         cResult[3] = tmp14;
@@ -1059,7 +1059,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       items = [map1(closure_18, obj2)];
       const obj3 = { style: items1, children: map1(closure_19, obj4) };
       items1 = [tmp.actionsTaken];
-      obj4 = { large: true, children: intl2.string(_modDef3109["yV/t/V"]) };
+      obj4 = { large: true, children: intl2.string(_modDef3137["yV/t/V"]) };
       intl2 = intl4.intl;
       items[1] = map1(React3, obj3);
       return authStore2(React3, obj);
@@ -1456,7 +1456,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp6;
       }
       const intl = intl4.intl;
-      const formatResult = intl.format(_modDef3109.vPOpia, { tosLink, communityGuidelinesLink });
+      const formatResult = intl.format(_modDef3137.vPOpia, { tosLink, communityGuidelinesLink });
       cResult[0] = communityGuidelinesLink;
       cResult[1] = tosLink;
       cResult[2] = formatResult;
@@ -1470,7 +1470,7 @@ let closure_31 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = {
         variant: "text-sm/normal",
         color: "text-muted",
-        children: intl.format(_modDef3109.vPOpia, { tosLink, communityGuidelinesLink }),
+        children: intl.format(_modDef3137.vPOpia, { tosLink, communityGuidelinesLink }),
       };
       const Text = Text_Text.Text;
       intl = intl4.intl;

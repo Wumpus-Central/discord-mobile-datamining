@@ -8,7 +8,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import useArchiveOrDeleteDefault from "useArchiveOrDelete.tsx";
 import react from "../../../../../_runtime/00019_react.js";

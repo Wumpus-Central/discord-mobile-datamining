@@ -15,8 +15,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let url;
       let obj = url(576);
       const cResult = obj.c(6);
-      const obj2 = url(10000);
-      const questAsset = obj2.getQuestAsset(quest, url(10000).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
+      const obj2 = url(10013);
+      const questAsset = obj2.getQuestAsset(quest, url(10013).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
       url = undefined;
       if (questAsset != null) {
         url = questAsset.url;
@@ -76,8 +76,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_2;
       let tmp4;
       let url;
-      let obj = url(10000);
-      const questAsset = obj.getQuestAsset(quest, url(10000).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
+      let obj = url(10013);
+      const questAsset = obj.getQuestAsset(quest, url(10013).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
       url = undefined;
       if (questAsset != null) {
         url = questAsset.url;

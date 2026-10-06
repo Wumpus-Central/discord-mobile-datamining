@@ -38,9 +38,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-      const tmpResult4 = tmp(7729);
+      const tmpResult4 = tmp(7740);
       const hasDiscountApplied = tmpResult4.useHasDiscountApplied();
-      const tmpResult5 = tmp(7730);
+      const tmpResult5 = tmp(7741);
       const hasActiveTrial = tmpResult5.useHasActiveTrial();
       const tmp11 = useFractionalPremiumInfoDefault();
       if (cResult[2] === stateFromStores) {
@@ -115,11 +115,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [UserStore];
       const obj = flag(504);
       const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-      const obj2 = flag(7729);
+      const obj2 = flag(7740);
       const hasDiscountApplied = obj2.useHasDiscountApplied();
-      const obj3 = flag(7730);
+      const obj3 = flag(7741);
       const hasActiveTrial = obj3.useHasActiveTrial();
-      const tmp6 = fetched(6898)();
+      const tmp6 = fetched(6908)();
       let verified;
       if (stateFromStores != null) {
         verified = stateFromStores.verified;

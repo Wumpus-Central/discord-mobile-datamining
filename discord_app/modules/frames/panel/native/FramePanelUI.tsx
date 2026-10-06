@@ -11,9 +11,9 @@ import size from "../../../../../_runtime/metro/00002__.js";
 function renderActivityOrPIP(id, arg1, transitionState, transitionCleanUp) {
   let tmp4;
   if ("pip" === arg1) {
-    tmp4 = 17196;
+    tmp4 = 17225;
   } else {
-    tmp4 = 17197;
+    tmp4 = 17226;
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, id);
 }

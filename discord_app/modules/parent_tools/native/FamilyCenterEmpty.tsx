@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
 import react2 from "../../../../_runtime/00576_react.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import AssetRegistryDefault from "../../../../_runtime/14725_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/14741_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";

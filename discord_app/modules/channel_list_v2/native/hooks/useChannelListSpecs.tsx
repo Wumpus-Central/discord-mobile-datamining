@@ -135,12 +135,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_2;
       let height;
       let redesignGuildHeaderHeight;
-      let obj = redesignGuildHeaderHeight(16059);
+      let obj = redesignGuildHeaderHeight(16098);
       redesignGuildHeaderHeight = obj.useRedesignGuildHeaderHeight(banner);
       height = height(1484)({ ignoreKeyboard: true }).height;
-      const tmp2 = height(15947)();
+      const tmp2 = height(15986)();
       dependencyMap = tmp2;
-      const obj2 = redesignGuildHeaderHeight(5602);
+      const obj2 = redesignGuildHeaderHeight(5609);
       const fontScale = obj2.useFontScale();
       let closure_4 = tmp4;
       const top = height(1618)().top;

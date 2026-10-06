@@ -6,7 +6,7 @@ import Constants from "../../../../Constants.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13593_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13609_AssetRegistry.js";
 import JoinVoiceChannelButtonDefault from "JoinVoiceChannelButton.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

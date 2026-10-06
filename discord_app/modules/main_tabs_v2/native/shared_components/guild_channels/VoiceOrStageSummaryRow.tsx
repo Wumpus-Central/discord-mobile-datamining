@@ -111,7 +111,7 @@ const memoResult = react.memo(
           num = max;
         }
         if (cResult[0] !== layout) {
-          const tmpResult = guildId(11698);
+          const tmpResult = guildId(11712);
           const layoutStyles = tmpResult.getLayoutStyles(layout);
           cResult[0] = layout;
           cResult[1] = layoutStyles;
@@ -398,12 +398,12 @@ const memoResult = react.memo(
                         let obj6 = {
                           size: guildId(1188).Icon.Sizes.CUSTOM,
                           style: { height: 14, width: 14 },
-                          source: num(16827),
+                          source: num(16848),
                         };
                         const Icon = guildId(1188).Icon;
                         items3 = [closure_4(Icon, obj6)];
                         let obj7 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-                        items3[1] = closure_4(guildId(4886).Text, obj7);
+                        items3[1] = closure_4(guildId(4892).Text, obj7);
                         tmp17Result = closure_4(bound, obj4);
                       }
                       cResult[22] = audienceCount;

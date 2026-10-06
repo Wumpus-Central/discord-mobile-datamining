@@ -110,7 +110,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              const tmp22 = jsx(markAsDismissed(9890).Coachmark, {
+              const tmp22 = jsx(markAsDismissed(9903).Coachmark, {
                 renderImgComponent: tmp10,
                 title: tmp13,
                 description: tmp14,
@@ -179,7 +179,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let tmp3 = null;
       if (visible) {
-        const Coachmark = markAsDismissed(9890).Coachmark;
+        const Coachmark = markAsDismissed(9903).Coachmark;
         const intl = markAsDismissed(1126).intl;
         const intl2 = markAsDismissed(1126).intl;
         size = { x: 0, y: -40, width: diff, height: 40 };

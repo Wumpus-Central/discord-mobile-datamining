@@ -2,7 +2,7 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl5 from "../../../intl/index.native.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
@@ -126,9 +126,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const hasMaxConnections = obj2.useHasMaxConnections();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl5.intl;
-        const stringResult = intl.string(_modDef2493["T7GyW+"]);
+        const stringResult = intl.string(_modDef2521["T7GyW+"]);
         const intl2 = intl5.intl;
-        const stringResult1 = intl2.string(_modDef2493.goKE2b);
+        const stringResult1 = intl2.string(_modDef2521.goKE2b);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp8 = stringResult;
@@ -140,11 +140,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const ageSpecificText = tmpResult.useAgeSpecificText(tmp8, tmp9);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = intl5.intl;
-        const formatResult = intl3.format(_modDef2493.MXjDSv, {
+        const formatResult = intl3.format(_modDef2521.MXjDSv, {
           articleLink: "https://support.discord.com/hc/articles/14155060633623",
         });
         const intl4 = intl5.intl;
-        const formatResult1 = intl4.format(_modDef2493.EMCf6j, {
+        const formatResult1 = intl4.format(_modDef2521.EMCf6j, {
           articleLink: "https://support.discord.com/hc/articles/14155043715735",
         });
         cResult[2] = formatResult;
@@ -157,7 +157,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = useAgeSpecificText3;
       const ageSpecificText1 = tmpResult2.useAgeSpecificText(tmp13, tmp14);
-      const tmp4Result = importDefault(tmp5 ? 14691 : 14692);
+      const tmp4Result = importDefault(tmp5 ? 14707 : 14708);
       if (cResult[4] === tmp6.art) {
         let tmp19;
         if (cResult[5] === tmp4Result) {
@@ -244,21 +244,21 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const useAgeSpecificText = useAgeSpecificText3.useAgeSpecificText;
       useAgeSpecificText3;
       const intl = intl5.intl;
-      const stringResult = intl.string(_modDef2493["T7GyW+"]);
+      const stringResult = intl.string(_modDef2521["T7GyW+"]);
       const intl2 = intl5.intl;
-      const ageSpecificText = useAgeSpecificText(stringResult, intl2.string(_modDef2493.goKE2b));
+      const ageSpecificText = useAgeSpecificText(stringResult, intl2.string(_modDef2521.goKE2b));
       const useAgeSpecificText2 = useAgeSpecificText3.useAgeSpecificText;
       useAgeSpecificText3;
       const intl3 = intl5.intl;
-      const formatResult = intl3.format(_modDef2493.MXjDSv, {
+      const formatResult = intl3.format(_modDef2521.MXjDSv, {
         articleLink: "https://support.discord.com/hc/articles/14155060633623",
       });
       const intl4 = intl5.intl;
       const obj2 = { style: tmp4.container, children: items };
-      const obj3 = { source: importDefault(tmp3 ? 14691 : 14692), style: tmp4.art };
+      const obj3 = { source: importDefault(tmp3 ? 14707 : 14708), style: tmp4.art };
       const ageSpecificText2 = useAgeSpecificText2(
         formatResult,
-        intl4.format(_modDef2493.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }),
+        intl4.format(_modDef2521.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }),
       );
       items = [hasOwnProperty(React3, obj3), , ,];
       const obj4 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };

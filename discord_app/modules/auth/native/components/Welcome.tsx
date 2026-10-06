@@ -15,8 +15,8 @@ import GuildTemplatesConstants from "../../../guild_templates/GuildTemplatesCons
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import Constants2 from "../../../instant_invite/Constants.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13058_AssetRegistry.js";
-import AssetRegistry from "../../../../../_runtime/13675_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13077_AssetRegistry.js";
+import AssetRegistry from "../../../../../_runtime/13691_AssetRegistry.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import react_mod from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -156,7 +156,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             tmp21 = cResult[4];
           }
           if (cResult[5] !== tmp21) {
-            const obj4 = { user: tmp21, guildId: "r" };
+            const obj4 = { user: tmp21, guildId: "Array" };
             const tmp28 = closure_21(native.Avatar, obj4);
             cResult[5] = tmp21;
             cResult[6] = tmp28;
@@ -200,7 +200,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             tmp6 = cResult[11];
           }
           if (cResult[12] !== tmp6) {
-            const obj5 = { user: tmp6, guildId: "r" };
+            const obj5 = { user: tmp6, guildId: "Array" };
             const tmp13 = closure_21(native.Avatar, obj5);
             cResult[12] = tmp6;
             cResult[13] = tmp13;
@@ -325,7 +325,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           _modDef38(null != inviter, "Null inviter");
           const self = this;
           const self2 = this;
-          const obj = { user: tmp10, guildId: "r" };
+          const obj = { user: tmp10, guildId: "Array" };
           const Avatar = native.Avatar;
           tmp10 = new UserRecord(inviter);
           tmp12 = closure_21(Avatar, obj);
@@ -340,7 +340,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           const self3 = this;
           const self4 = this;
-          const obj4 = { user: tmp29, guildId: "r" };
+          const obj4 = { user: tmp29, guildId: "Array" };
           const Avatar2 = native.Avatar;
           tmp29 = new UserRecord(inviter);
           const tmp31 = closure_21(Avatar2, obj4);
@@ -357,9 +357,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
         items1 = [tmp12];
         const obj6 = { style: tmp.text, children: items2 };
         const obj7 = { variant: "text-sm/medium", color: "text-subtle", children: stringResult };
-        items2 = [tmp16(tmp15(4886).Text, obj7)];
+        items2 = [tmp16(tmp15(4892).Text, obj7)];
         const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-        items2[1] = tmp16(tmp15(4886).Text, obj8);
+        items2[1] = tmp16(tmp15(4892).Text, obj8);
         items1[1] = afk(React3, obj6);
         return afk(React3, obj5);
       }

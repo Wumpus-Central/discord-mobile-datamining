@@ -61,7 +61,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = require("get initialized");
       const stateFromStores = tmpResult.useStateFromStores(first, E);
-      const available = unlockedPowerups(7671)(arg0).available;
+      const available = unlockedPowerups(7682)(arg0).available;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         class E {
           constructor() {

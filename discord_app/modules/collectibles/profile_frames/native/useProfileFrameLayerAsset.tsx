@@ -13,7 +13,7 @@ let _Promise, _require, c4, c5, frame, nextPromise, num2;
 
 let metroImportDefault;
 let metroRequire;
-const f95860 = (arg0) => {
+const f96001 = (arg0) => {
   closure_0 = arg0;
   size = size.getSize(
     closure_0,
@@ -43,7 +43,7 @@ function measureProfileFrameLayer(arg0) {
     if (null == value2) {
       const self = this;
       const self2 = this;
-      const promise = new Promise(f95860);
+      const promise = new Promise(f96001);
       const cleanupPromise = promise.finally(() => set.delete(closure_0));
       const result = map1.set(arg0, cleanupPromise);
       value2 = cleanupPromise;
@@ -276,7 +276,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
               if (null == resolved) {
                 const self = this;
                 const self2 = this;
-                const promise = new Promise(f95860);
+                const promise = new Promise(f96001);
                 const cleanupPromise = promise.finally(() => set.delete(closure_0));
                 const result = map1.set(tmp, cleanupPromise);
                 resolved = cleanupPromise;
@@ -334,7 +334,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             if (null == resolved) {
               const self = this;
               const self2 = this;
-              const promise = new Promise(f95860);
+              const promise = new Promise(f96001);
               const cleanupPromise = promise.finally(() => set.delete(closure_0));
               let result = map1.set(collectiblesItemAssetUrl, cleanupPromise);
               resolved = cleanupPromise;

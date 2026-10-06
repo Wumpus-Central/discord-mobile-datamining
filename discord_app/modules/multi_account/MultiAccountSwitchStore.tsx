@@ -96,7 +96,7 @@ let obj = {
     let users;
     let users1;
     let users3;
-    const f114789 = (id) => id.id;
+    const f114951 = (id) => id.id;
     user = user.user;
     let tmp = c11;
     if (tmp) {
@@ -120,7 +120,7 @@ let obj = {
             to_user_id: _null,
             actual_user_id: id,
             fast_connect_user_id: obj5.getLastFastConnectIdentifyUserId(),
-            linked_user_ids: users.map(f114789),
+            linked_user_ids: users.map(f114951),
             has_ever_connected,
             switch_origin,
           };
@@ -137,7 +137,7 @@ let obj = {
         to_user_id: _null,
         actual_user_id: user.id,
         fast_connect_user_id: obj8.getLastFastConnectIdentifyUserId(),
-        linked_user_ids: users1.map(f114789),
+        linked_user_ids: users1.map(f114951),
         has_ever_connected,
         switch_origin,
       };
@@ -189,7 +189,7 @@ let obj = {
             to_user_id: _null,
             actual_user_id: id2,
             fast_connect_user_id: obj17.getLastFastConnectIdentifyUserId(),
-            linked_user_ids: users3.map(f114789),
+            linked_user_ids: users3.map(f114951),
             has_ever_connected,
             switch_origin,
           };
@@ -241,7 +241,7 @@ let obj = {
             to_user_id,
             actual_user_id: id,
             fast_connect_user_id: obj3.getLastFastConnectIdentifyUserId(),
-            linked_user_ids: users.map(f114789),
+            linked_user_ids: users.map(f114951),
             has_ever_connected,
             switch_origin,
           };

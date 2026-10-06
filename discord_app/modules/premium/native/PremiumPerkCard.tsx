@@ -10,23 +10,23 @@ import useFontScale from "../../screen/native/useFontScale.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import AssetRegistryDefault from "../../../../_runtime/13206_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/13207_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/13208_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/13209_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/13210_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../../_runtime/13211_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../../_runtime/13212_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../../_runtime/13213_AssetRegistry.js";
-import AssetRegistryDefault9 from "../../../../_runtime/13214_AssetRegistry.js";
-import AssetRegistryDefault10 from "../../../../_runtime/13215_AssetRegistry.js";
-import AssetRegistryDefault11 from "../../../../_runtime/13216_AssetRegistry.js";
-import AssetRegistryDefault12 from "../../../../_runtime/13217_AssetRegistry.js";
-import AssetRegistryDefault13 from "../../../../_runtime/13218_AssetRegistry.js";
-import AssetRegistryDefault14 from "../../../../_runtime/13219_AssetRegistry.js";
-import AssetRegistryDefault15 from "../../../../_runtime/13220_AssetRegistry.js";
-import AssetRegistryDefault16 from "../../../../_runtime/13221_AssetRegistry.js";
-import _modDef13222 from "../../../../discord_assets/assets/images/perks/xbox_game_pass.jpg.js";
+import AssetRegistryDefault from "../../../../_runtime/13225_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/13226_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/13227_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../_runtime/13228_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../_runtime/13229_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../../_runtime/13230_AssetRegistry.js";
+import AssetRegistryDefault7 from "../../../../_runtime/13231_AssetRegistry.js";
+import AssetRegistryDefault8 from "../../../../_runtime/13232_AssetRegistry.js";
+import AssetRegistryDefault9 from "../../../../_runtime/13233_AssetRegistry.js";
+import AssetRegistryDefault10 from "../../../../_runtime/13234_AssetRegistry.js";
+import AssetRegistryDefault11 from "../../../../_runtime/13235_AssetRegistry.js";
+import AssetRegistryDefault12 from "../../../../_runtime/13236_AssetRegistry.js";
+import AssetRegistryDefault13 from "../../../../_runtime/13237_AssetRegistry.js";
+import AssetRegistryDefault14 from "../../../../_runtime/13238_AssetRegistry.js";
+import AssetRegistryDefault15 from "../../../../_runtime/13239_AssetRegistry.js";
+import AssetRegistryDefault16 from "../../../../_runtime/13240_AssetRegistry.js";
+import _modDef13241 from "../../../../discord_assets/assets/images/perks/xbox_game_pass.jpg.js";
 import PillTextDefault from "components/PillText.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
@@ -638,9 +638,9 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   let obj9;
   let prop;
   let subscriptionPlansLoaded;
-  let obj = subscriptionPlansLoaded(13205);
+  let obj = subscriptionPlansLoaded(13224);
   subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
-  let obj2 = subscriptionPlansLoaded(4528);
+  let obj2 = subscriptionPlansLoaded(4534);
   const maxFileSizeForPremiumType = obj2.getMaxFileSizeForPremiumType(PremiumTypes.TIER_2);
   const callback = react.useCallback(() => {
     const obj2 = {
@@ -820,14 +820,14 @@ export const usePremiumPerkCard = function usePremiumPerkCard() {
   intl34 = subscriptionPlansLoaded(1126).intl;
   obj20 = {
     title: intl35.string(subscriptionPlansLoaded(1126).t.aJE9i1),
-    imageSrc: { uri: _modDef13222 },
+    imageSrc: { uri: _modDef13241 },
     imageStyle: { aspectRatio: 1.9789473684210526 },
     bodyComponent: closure_9(Text, obj22),
   };
   intl35 = subscriptionPlansLoaded(1126).intl;
   obj22 = { variant: "text-sm/normal", children: format(prop, obj23) };
-  ({ uri: _modDef13222 });
-  Text = subscriptionPlansLoaded(4886).Text;
+  ({ uri: _modDef13241 });
+  Text = subscriptionPlansLoaded(4892).Text;
   const intl36 = subscriptionPlansLoaded(1126).intl;
   format = intl36.format;
   obj23 = { termsLink: obj24.getArticleURL(NITRO_2_POINT_0.NITRO_2_POINT_0) };

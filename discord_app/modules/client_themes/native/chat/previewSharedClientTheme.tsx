@@ -8,5 +8,5 @@ const result = size.fileFinishedImporting("modules/client_themes/native/chat/pre
 export const handleTapPreviewSharedClientTheme = function handleTapPreviewSharedClientTheme(message) {
   message = message.message;
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(11558, dependencyMap.paths), "custom-theme-preview", { message, backdropKind: "none" });
+  obj.openLazy(asyncRequire(11571, dependencyMap.paths), "custom-theme-preview", { message, backdropKind: "none" });
 };

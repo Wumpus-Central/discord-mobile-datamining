@@ -13,10 +13,10 @@ import ButtonGroup2 from "../../../../design/components/ButtonGroup/native/Butto
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13675_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/13677_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../_runtime/13678_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../../_runtime/13679_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13691_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/13693_AssetRegistry.js";
+import QrLoginSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrLoginSpotIllustration.native.tsx";
+import QrSuccessSpotIllustration from "../../../../design/components/mana-assets/native/generated/QrSuccessSpotIllustration.native.tsx";
 import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -78,6 +78,7 @@ obj3 = {
   shadowOffset: { height: 2, width: 0 },
 };
 let closure_12 = createStyles(obj);
+let c13 = 0.75;
 const constants = {
   LOADING: 0,
   [0]: "LOADING",
@@ -115,7 +116,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] !== arg0) {
           const obj3 = {};
           const merged = Object.assign(arg0);
-          const tmp15 = React4(closure_14, obj3);
+          const tmp15 = React4(closure_15, obj3);
           cResult[5] = arg0;
           cResult[6] = tmp15;
           tmp9 = tmp15;
@@ -189,14 +190,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items = [tmp.logo, { marginTop: top }];
       items1 = [React4(metroRequire, obj2)];
       const obj3 = { style: tmp.container, children: React4(metroImportDefault, obj4) };
-      obj4 = { style: tmp.mainCard, children: React4(closure_14, obj5) };
+      obj4 = { style: tmp.mainCard, children: React4(closure_15, obj5) };
       obj5 = {};
       const merged = Object.assign(arg0);
       items1[1] = React4(metroImportDefault, obj3);
       return authStore(hasOwnProperty, obj);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
-let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
   ? (remoteAuthFingerprint) => {
       let first;
       let tmp4;
@@ -305,7 +306,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const tmp12 = closure_9(closure_18, {});
+          const tmp12 = closure_9(closure_19, {});
           cResult[4] = tmp12;
           tmp10 = tmp12;
         } else {
@@ -386,11 +387,11 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         });
       }, items);
       if (constants.LOADING === tmp3) {
-        return closure_9(closure_18, {});
+        return closure_9(closure_19, {});
       } else if (constants.LOADED === tmp3) {
         let tmp13;
         if (null == tmp5) {
-          tmp13 = closure_9(closure_17, {});
+          tmp13 = closure_9(closure_18, {});
         } else {
           let obj = {
             handshakeToken: tmp5,
@@ -400,18 +401,18 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               const result = obj.DeprecatedLayoutAnimation();
             },
           };
-          tmp13 = closure_9(closure_15, obj);
+          tmp13 = closure_9(closure_16, obj);
         }
         return tmp13;
       } else if (constants.SUCCEEDED === tmp3) {
-        return closure_9(closure_16, {});
+        return closure_9(closure_17, {});
       } else {
         const NOT_FOUND = constants.NOT_FOUND;
-        return closure_9(closure_17, {});
+        return closure_9(closure_18, {});
       }
     };
 ReactCompilerGating = ReactCompilerGating_mod;
-let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   ? (handshakeToken) => {
       let closure_3;
       let first;
@@ -424,7 +425,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9;
       const tmp = handshakeToken;
       let obj = handshakeToken(576);
-      const cResult = obj.c(29);
+      const cResult = obj.c(30);
       handshakeToken = handshakeToken.handshakeToken;
       const setAuthStep = handshakeToken.setAuthStep;
       const tmp4 = closure_12();
@@ -467,132 +468,142 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] === handshakeToken) {
         let tmp13;
         let tmp16;
-        let tmp21;
+        let tmp20;
         let tmp24;
-        let tmp26;
-        let tmp30;
+        let tmp27;
+        let tmp29;
+        let tmp33;
         if (cResult[5] === setAuthStep) {
           tmp13 = cResult[6];
         }
-        if (cResult[7] !== tmp4.mainImage) {
-          const obj4 = { source: setAuthStep(13678), style: tmp4.mainImage };
-          const tmp20 = closure_9(closure_6, obj4);
-          cResult[7] = tmp4.mainImage;
-          cResult[8] = tmp20;
-          tmp16 = tmp20;
-        } else {
-          tmp16 = cResult[8];
-        }
         const _Symbol = Symbol;
-        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj5 = { variant: "heading-md/extrabold", children: intl.string(tmp(1126).t.jD2pqF) };
-          const Heading = tmp(4886).Heading;
-          intl = tmp(1126).intl;
-          const tmp23 = closure_9(Heading, obj5);
-          cResult[9] = tmp23;
-          tmp21 = tmp23;
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj4 = { scale };
+          const tmp19 = closure_9(tmp(13694).QrLoginSpotIllustration, obj4);
+          cResult[7] = tmp19;
+          tmp16 = tmp19;
         } else {
-          tmp21 = cResult[9];
+          tmp16 = cResult[7];
+        }
+        if (cResult[8] !== tmp4.mainImage) {
+          const obj5 = { style: tmp4.mainImage, children: tmp16 };
+          const tmp23 = closure_9(closure_7, obj5);
+          cResult[8] = tmp4.mainImage;
+          cResult[9] = tmp23;
+          tmp20 = tmp23;
+        } else {
+          tmp20 = cResult[9];
         }
         const _Symbol2 = Symbol;
-        const warningCaption = tmp4.warningCaption;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = tmp(1126).intl;
-          const stringResult = intl2.string(tmp(1126).t["hcd/kh"]);
-          cResult[10] = stringResult;
-          tmp24 = stringResult;
+          const obj6 = { variant: "heading-md/extrabold", children: intl.string(tmp(1126).t.jD2pqF) };
+          const Heading = tmp(4892).Heading;
+          intl = tmp(1126).intl;
+          const tmp26 = closure_9(Heading, obj6);
+          cResult[10] = tmp26;
+          tmp24 = tmp26;
         } else {
           tmp24 = cResult[10];
         }
-        if (cResult[11] !== tmp4.warningCaption) {
-          const obj6 = { style: warningCaption, children: tmp24 };
-          const tmp28 = closure_9(tmp(1188).LegacyText, obj6);
-          cResult[11] = tmp4.warningCaption;
-          cResult[12] = tmp28;
-          tmp26 = tmp28;
+        const _Symbol3 = Symbol;
+        const warningCaption = tmp4.warningCaption;
+        if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
+          const intl2 = tmp(1126).intl;
+          const stringResult = intl2.string(tmp(1126).t["hcd/kh"]);
+          cResult[11] = stringResult;
+          tmp27 = stringResult;
         } else {
-          tmp26 = cResult[12];
+          tmp27 = cResult[11];
+        }
+        if (cResult[12] !== tmp4.warningCaption) {
+          const obj7 = { style: warningCaption, children: tmp27 };
+          const tmp31 = closure_9(tmp(1188).LegacyText, obj7);
+          cResult[12] = tmp4.warningCaption;
+          cResult[13] = tmp31;
+          tmp29 = tmp31;
+        } else {
+          tmp29 = cResult[13];
         }
         const _HermesInternal = HermesInternal;
         const buttonGroup = tmp4.buttonGroup;
         const combined = "" + tmp15;
-        const _Symbol3 = Symbol;
-        if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+        const _Symbol4 = Symbol;
+        if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = tmp(1126).intl;
           const stringResult1 = intl3.string(tmp(1126).t.N3qV8e);
-          cResult[13] = stringResult1;
-          tmp30 = stringResult1;
+          cResult[14] = stringResult1;
+          tmp33 = stringResult1;
         } else {
-          tmp30 = cResult[13];
+          tmp33 = cResult[14];
         }
-        if (cResult[14] === tmp13) {
-          if (cResult[15] === (!tmp6 && !first)) {
-            let tmp32;
+        if (cResult[15] === tmp13) {
+          if (cResult[16] === (!tmp6 && !first)) {
             let tmp35;
-            let tmp37;
-            if (cResult[16] === combined) {
-              tmp32 = cResult[17];
-            }
-            const _Symbol4 = Symbol;
-            if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl4 = tmp(1126).intl;
-              const stringResult2 = intl4.string(tmp(1126).t["ETE/oC"]);
-              cResult[18] = stringResult2;
-              tmp35 = stringResult2;
-            } else {
+            let tmp38;
+            let tmp40;
+            if (cResult[17] === combined) {
               tmp35 = cResult[18];
             }
-            if (cResult[19] !== tmp12) {
-              const obj7 = { variant: "secondary", text: tmp35, onPress: tmp12 };
-              const tmp39 = closure_9(tmp(5594).Button, obj7);
-              cResult[19] = tmp12;
-              cResult[20] = tmp39;
-              tmp37 = tmp39;
+            const _Symbol5 = Symbol;
+            if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
+              const intl4 = tmp(1126).intl;
+              const stringResult2 = intl4.string(tmp(1126).t["ETE/oC"]);
+              cResult[19] = stringResult2;
+              tmp38 = stringResult2;
             } else {
-              tmp37 = cResult[20];
+              tmp38 = cResult[19];
             }
-            if (cResult[21] === tmp4.buttonGroup) {
-              if (cResult[22] === tmp32) {
-                let tmp40;
-                if (cResult[23] === tmp37) {
-                  tmp40 = cResult[24];
+            if (cResult[20] !== tmp12) {
+              const obj8 = { variant: "secondary", text: tmp38, onPress: tmp12 };
+              const tmp42 = closure_9(tmp(5601).Button, obj8);
+              cResult[20] = tmp12;
+              cResult[21] = tmp42;
+              tmp40 = tmp42;
+            } else {
+              tmp40 = cResult[21];
+            }
+            if (cResult[22] === tmp4.buttonGroup) {
+              if (cResult[23] === tmp35) {
+                let tmp43;
+                if (cResult[24] === tmp40) {
+                  tmp43 = cResult[25];
                 }
-                if (cResult[25] === tmp40) {
-                  if (cResult[26] === tmp16) {
-                    let tmp43;
-                    if (cResult[27] === tmp26) {
-                      tmp43 = cResult[28];
+                if (cResult[26] === tmp29) {
+                  if (cResult[27] === tmp43) {
+                    let tmp46;
+                    if (cResult[28] === tmp20) {
+                      tmp46 = cResult[29];
                     }
-                    return tmp43;
+                    return tmp46;
                   }
                 }
-                const obj8 = { children: items1 };
-                items1 = [tmp16, tmp21, tmp26, tmp40];
-                const tmp46 = closure_10(closure_11, obj8);
-                cResult[25] = tmp40;
-                cResult[26] = tmp16;
-                cResult[27] = tmp26;
-                cResult[28] = tmp46;
-                tmp43 = tmp46;
+                const obj9 = { children: items1 };
+                items1 = [tmp20, tmp24, tmp29, tmp43];
+                const tmp49 = closure_10(closure_11, obj9);
+                cResult[26] = tmp29;
+                cResult[27] = tmp43;
+                cResult[28] = tmp20;
+                cResult[29] = tmp49;
+                tmp46 = tmp49;
               }
             }
-            const obj9 = { style: buttonGroup, children: items2 };
-            items2 = [tmp32, tmp37];
-            const tmp42 = closure_10(tmp(5592).ButtonGroup, obj9);
-            cResult[21] = tmp4.buttonGroup;
-            cResult[22] = tmp32;
-            cResult[23] = tmp37;
-            cResult[24] = tmp42;
-            tmp40 = tmp42;
+            const obj10 = { style: buttonGroup, children: items2 };
+            items2 = [tmp35, tmp40];
+            const tmp45 = closure_10(tmp(5599).ButtonGroup, obj10);
+            cResult[22] = tmp4.buttonGroup;
+            cResult[23] = tmp35;
+            cResult[24] = tmp40;
+            cResult[25] = tmp45;
+            tmp43 = tmp45;
           }
         }
-        const obj10 = { text: tmp30, onPress: tmp13, disabled: !tmp6 && !first };
-        const tmp34 = closure_9(tmp(5594).Button, obj10, combined);
-        cResult[14] = tmp13;
-        cResult[15] = !tmp6 && !first;
-        cResult[16] = combined;
-        cResult[17] = tmp34;
-        tmp32 = tmp34;
+        const obj11 = { text: tmp33, onPress: tmp13, disabled: !tmp6 && !first };
+        const tmp37 = closure_9(tmp(5601).Button, obj11, combined);
+        cResult[15] = tmp13;
+        cResult[16] = !tmp6 && !first;
+        cResult[17] = combined;
+        cResult[18] = tmp37;
+        tmp35 = tmp37;
       }
       const obj3 = setAuthStep(12);
       const throttleResult = obj3.throttle(
@@ -629,6 +640,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       let intl4;
       let items;
       let items1;
+      let obj4;
       let require;
       let tmp3;
       let tmp5;
@@ -648,7 +660,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         return () => clearTimeout(closure_0);
       }, []);
       let obj = _modDef12;
-      let tmp10 = !tmp3;
+      let tmp9 = !tmp3;
       const throttleResult = obj.throttle(
         () => {
           let obj;
@@ -668,27 +680,27 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         { leading: true, trailing: false },
       );
       if (!tmp3) {
-        tmp10 = !tmp5;
+        tmp9 = !tmp5;
       }
       const obj2 = { children: items };
-      items = [, , ,];
-      const obj3 = { source: AssetRegistryDefault3, style: tmp.mainImage };
-      items[0] = closure_9(closure_6, obj3);
-      const obj4 = { variant: "heading-md/extrabold", children: intl.string(intl5.t.jD2pqF) };
+      const obj3 = { style: tmp.mainImage, children: closure_9(QrLoginSpotIllustration.QrLoginSpotIllustration, obj4) };
+      obj4 = { scale };
+      items = [closure_9(closure_7, obj3), , ,];
+      const obj5 = { variant: "heading-md/extrabold", children: intl.string(intl5.t.jD2pqF) };
       const Heading = Text_Text.Heading;
       intl = intl5.intl;
-      items[1] = closure_9(Heading, obj4);
-      const obj5 = { style: tmp.warningCaption, children: intl2.string(intl5.t["hcd/kh"]) };
+      items[1] = closure_9(Heading, obj5);
+      const obj6 = { style: tmp.warningCaption, children: intl2.string(intl5.t["hcd/kh"]) };
       const LegacyText = native.LegacyText;
       intl2 = intl5.intl;
-      items[2] = closure_9(LegacyText, obj5);
-      const obj6 = { style: tmp.buttonGroup, children: items1 };
+      items[2] = closure_9(LegacyText, obj6);
+      const obj7 = { style: tmp.buttonGroup, children: items1 };
       const ButtonGroup = ButtonGroup2.ButtonGroup;
-      const obj7 = { text: intl3.string(intl5.t.N3qV8e), onPress: throttleResult, disabled: tmp10 };
+      const obj8 = { text: intl3.string(intl5.t.N3qV8e), onPress: throttleResult, disabled: tmp9 };
       const Button = components_Button_Button.Button;
       intl3 = intl5.intl;
-      items1 = [closure_9(Button, obj7, "" + tmp10)];
-      const obj8 = {
+      items1 = [closure_9(Button, obj8, "" + tmp9)];
+      const obj9 = {
         variant: "secondary",
         text: intl4.string(intl5.t["ETE/oC"]),
         onPress() {
@@ -703,98 +715,107 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const Button2 = components_Button_Button.Button;
       intl4 = intl5.intl;
-      items1[1] = closure_9(Button2, obj8);
-      items[3] = closure_10(ButtonGroup, obj6);
+      items1[1] = closure_9(Button2, obj9);
+      items[3] = closure_10(ButtonGroup, obj7);
       return closure_10(closure_11, obj2);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
-let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
+      let first;
       let intl;
       let intl3;
       let items;
-      let tmp10;
       let tmp13;
-      let tmp15;
+      let tmp16;
       let tmp18;
-      let tmp22;
-      let tmp5;
+      let tmp21;
+      let tmp25;
+      let tmp9;
       const obj = react2;
-      const cResult = obj.c(13);
+      const cResult = obj.c(14);
       const tmp4 = closure_12();
-      if (cResult[0] !== tmp4.mainImage) {
-        const obj2 = { source: AssetRegistryDefault4, style: tmp4.mainImage };
-        const tmp9 = React4(metroRequire, obj2);
-        cResult[0] = tmp4.mainImage;
-        cResult[1] = tmp9;
-        tmp5 = tmp9;
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { scale };
+        const tmp8 = React4(QrSuccessSpotIllustration.QrSuccessSpotIllustration, obj2);
+        cResult[0] = tmp8;
+        first = tmp8;
       } else {
-        tmp5 = cResult[1];
+        first = cResult[0];
       }
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { variant: "heading-xl/extrabold", children: intl.string(intl5.t.HbwTOZ) };
+      if (cResult[1] !== tmp4.mainImage) {
+        const obj3 = { style: tmp4.mainImage, children: first };
+        const tmp12 = React4(metroImportDefault, obj3);
+        cResult[1] = tmp4.mainImage;
+        cResult[2] = tmp12;
+        tmp9 = tmp12;
+      } else {
+        tmp9 = cResult[2];
+      }
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj4 = { variant: "heading-xl/extrabold", children: intl.string(intl5.t.HbwTOZ) };
         const Heading = Text_Text.Heading;
         intl = intl5.intl;
-        const tmp12 = React4(Heading, obj3);
-        cResult[2] = tmp12;
-        tmp10 = tmp12;
-      } else {
-        tmp10 = cResult[2];
-      }
-      const caption = tmp4.caption;
-      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = intl5.intl;
-        const stringResult = intl2.string(intl5.t.wKknJ0);
-        cResult[3] = stringResult;
-        tmp13 = stringResult;
+        const tmp15 = React4(Heading, obj4);
+        cResult[3] = tmp15;
+        tmp13 = tmp15;
       } else {
         tmp13 = cResult[3];
       }
-      if (cResult[4] !== tmp4.caption) {
-        const obj4 = { style: caption, variant: "text-md/medium", color: "text-muted", children: tmp13 };
-        const tmp17 = React4(Text_Text.Text, obj4);
-        cResult[4] = tmp4.caption;
-        cResult[5] = tmp17;
-        tmp15 = tmp17;
+      const caption = tmp4.caption;
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const intl2 = intl5.intl;
+        const stringResult = intl2.string(intl5.t.wKknJ0);
+        cResult[4] = stringResult;
+        tmp16 = stringResult;
       } else {
-        tmp15 = cResult[5];
+        tmp16 = cResult[4];
       }
-      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj5 = { text: intl3.string(intl5.t.pYWLA0), onPress: ModalActionCreatorsDefault.pop };
-        const Button = components_Button_Button.Button;
-        intl3 = intl5.intl;
-        const tmp21 = React4(Button, obj5);
-        cResult[6] = tmp21;
-        tmp18 = tmp21;
+      if (cResult[5] !== tmp4.caption) {
+        const obj5 = { style: caption, variant: "text-md/medium", color: "text-muted", children: tmp16 };
+        const tmp20 = React4(Text_Text.Text, obj5);
+        cResult[5] = tmp4.caption;
+        cResult[6] = tmp20;
+        tmp18 = tmp20;
       } else {
         tmp18 = cResult[6];
       }
-      if (cResult[7] !== tmp4.buttonGroup) {
-        const obj6 = { style: tmp4.buttonGroup, children: tmp18 };
-        const tmp24 = React4(ButtonGroup2.ButtonGroup, obj6);
-        cResult[7] = tmp4.buttonGroup;
-        cResult[8] = tmp24;
-        tmp22 = tmp24;
+      if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj6 = { text: intl3.string(intl5.t.pYWLA0), onPress: ModalActionCreatorsDefault.pop };
+        const Button = components_Button_Button.Button;
+        intl3 = intl5.intl;
+        const tmp24 = React4(Button, obj6);
+        cResult[7] = tmp24;
+        tmp21 = tmp24;
       } else {
-        tmp22 = cResult[8];
+        tmp21 = cResult[7];
       }
-      if (cResult[9] === tmp5) {
-        if (cResult[10] === tmp15) {
-          let tmp25;
-          if (cResult[11] === tmp22) {
-            tmp25 = cResult[12];
+      if (cResult[8] !== tmp4.buttonGroup) {
+        const obj7 = { style: tmp4.buttonGroup, children: tmp21 };
+        const tmp27 = React4(ButtonGroup2.ButtonGroup, obj7);
+        cResult[8] = tmp4.buttonGroup;
+        cResult[9] = tmp27;
+        tmp25 = tmp27;
+      } else {
+        tmp25 = cResult[9];
+      }
+      if (cResult[10] === tmp9) {
+        if (cResult[11] === tmp18) {
+          let tmp28;
+          if (cResult[12] === tmp25) {
+            tmp28 = cResult[13];
           }
-          return tmp25;
+          return tmp28;
         }
       }
-      const obj7 = { children: items };
-      items = [tmp5, tmp10, tmp15, tmp22];
-      const tmp26 = authStore(unpackModuleId, obj7);
-      cResult[9] = tmp5;
-      cResult[10] = tmp15;
-      cResult[11] = tmp22;
-      cResult[12] = tmp26;
-      tmp25 = tmp26;
+      const obj8 = { children: items };
+      items = [tmp9, tmp13, tmp18, tmp25];
+      const tmp29 = authStore(unpackModuleId, obj8);
+      cResult[10] = tmp9;
+      cResult[11] = tmp18;
+      cResult[12] = tmp25;
+      cResult[13] = tmp29;
+      tmp28 = tmp29;
     }
   : () => {
       let Button;
@@ -802,17 +823,21 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       let intl2;
       let intl3;
       let items;
-      let obj6;
+      let obj3;
+      let obj7;
       const tmp = closure_12();
       const obj = { children: items };
-      items = [, , ,];
-      const obj2 = { source: AssetRegistryDefault4, style: tmp.mainImage };
-      items[0] = React4(metroRequire, obj2);
-      const obj3 = { variant: "heading-xl/extrabold", children: intl.string(intl5.t.HbwTOZ) };
+      const obj2 = {
+        style: tmp.mainImage,
+        children: React4(QrSuccessSpotIllustration.QrSuccessSpotIllustration, obj3),
+      };
+      obj3 = { scale };
+      items = [React4(metroImportDefault, obj2), , ,];
+      const obj4 = { variant: "heading-xl/extrabold", children: intl.string(intl5.t.HbwTOZ) };
       const Heading = Text_Text.Heading;
       intl = intl5.intl;
-      items[1] = React4(Heading, obj3);
-      const obj4 = {
+      items[1] = React4(Heading, obj4);
+      const obj5 = {
         style: tmp.caption,
         variant: "text-md/medium",
         color: "text-muted",
@@ -820,17 +845,17 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       };
       const Text = Text_Text.Text;
       intl2 = intl5.intl;
-      items[2] = React4(Text, obj4);
-      const obj5 = { style: tmp.buttonGroup, children: React4(Button, obj6) };
+      items[2] = React4(Text, obj5);
+      const obj6 = { style: tmp.buttonGroup, children: React4(Button, obj7) };
       const ButtonGroup = ButtonGroup2.ButtonGroup;
-      obj6 = { text: intl3.string(intl5.t.pYWLA0), onPress: ModalActionCreatorsDefault.pop };
+      obj7 = { text: intl3.string(intl5.t.pYWLA0), onPress: ModalActionCreatorsDefault.pop };
       Button = components_Button_Button.Button;
       intl3 = intl5.intl;
-      items[3] = React4(ButtonGroup, obj5);
+      items[3] = React4(ButtonGroup, obj6);
       return authStore(unpackModuleId, obj);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
-let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       let first;
       let intl;
@@ -936,7 +961,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       return authStore(unpackModuleId, obj);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
-let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
       let first;
       let tmp8;

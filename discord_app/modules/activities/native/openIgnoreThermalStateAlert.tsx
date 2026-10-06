@@ -16,7 +16,7 @@ export const openIgnoreThermalStateAlert = function openIgnoreThermalStateAlert(
   const obj2 = {
     importer() {
       let onConfirm;
-      const promise = asyncRequire(9085, dependencyMap.paths);
+      const promise = asyncRequire(9121, dependencyMap.paths);
       return promise.then((IgnoreThermalStateAlert) => {
         IgnoreThermalStateAlert = IgnoreThermalStateAlert.IgnoreThermalStateAlert;
         return (arg0) => {

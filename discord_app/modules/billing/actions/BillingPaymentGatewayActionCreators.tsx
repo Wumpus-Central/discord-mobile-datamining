@@ -5,7 +5,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import intl2 from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
-import react from "../../../../_runtime/05417_react.js";
+import react from "../../../../_runtime/05424_react.js";
 import StripeActionCreators from "StripeActionCreators.tsx";
 import StripeUtilsAll from "../../../utils/StripeUtils.tsx";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -533,7 +533,7 @@ obj = function _createExpressCheckoutPaymentMethod() {
             billingAddressToken = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -699,7 +699,7 @@ obj = function _confirmPaymentElementSource() {
                 billing_details = undefined;
                 c12 = 3;
                 c13 = 1;
-                return { value: "Set", done: true };
+                return { value: "Reflect", done: true };
               }
               break;
             }
@@ -768,8 +768,8 @@ obj = function _confirmPaymentElementSource() {
                         if (closure_11 == null) {
                           _undefined = undefined;
                         }
-                        tmp121 = { setupIntent: _undefined, error: "r" };
-                        const obj8 = { setupIntent: _undefined, error: "r" };
+                        tmp121 = { setupIntent: _undefined, error: "Array" };
+                        const obj8 = { setupIntent: _undefined, error: "Array" };
                         if (shouldRecreateSetupIntentForPaymentElement(tmp121.error)) {
                           if (c3 !== closure_137_10.PAYMENT_REQUEST) {
                             c12 = 7;
@@ -1325,7 +1325,7 @@ obj = function _createAdyenVaultablePaymentSource() {
               adyen_redirect_url = undefined;
               c12 = 1;
               c13 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c12) {
             if (arg0 === 1) {

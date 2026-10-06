@@ -273,7 +273,7 @@ let obj = function _saveChannel() {
             channel = undefined;
             flags = 1;
             permission_overwrites = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === flags) {
           if (arg0 === 1) {

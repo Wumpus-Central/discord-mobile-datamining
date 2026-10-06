@@ -4,10 +4,10 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import useReferralProgramBannerDetails from "../hooks/useReferralProgramBannerDetails.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13257_AssetRegistry.js";
-import _modDef13258 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
+import AssetRegistryDefault from "../../../../../_runtime/13276_AssetRegistry.js";
+import _modDef13277 from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
@@ -84,7 +84,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               tmp23 = cResult[10];
             }
             if (altImage == null) {
-              altImage = _modDef13258;
+              altImage = _modDef13277;
             }
             if (cResult[11] !== altImage) {
               const obj5 = { uri: altImage };
@@ -193,7 +193,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items[1] = hasOwnProperty(tmp4Result3, size);
       const tmp4Result4 = FastImageDefault;
       if (altImage == null) {
-        altImage = _modDef13258;
+        altImage = _modDef13277;
       }
       const obj6 = { source: { uri: altImage }, style: tmp.progressCircleImage };
       items[2] = React3(tmp4Result4, obj6);

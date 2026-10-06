@@ -31,7 +31,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp7;
       }
-      const tmp8 = jsx(navigation(15503), {
+      const tmp8 = jsx(navigation(15519), {
         variant: "secondary",
         text: first,
         onPress() {

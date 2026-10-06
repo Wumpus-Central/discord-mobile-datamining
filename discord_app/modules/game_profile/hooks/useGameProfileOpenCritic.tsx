@@ -1,10 +1,10 @@
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
 import intl5 from "../../../intl/index.native.tsx";
 import OpenCriticTier from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
-import _modDef8379 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
-import _modDef8380 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
-import _modDef8381 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
-import _modDef8382 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
+import _modDef8412 from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
+import _modDef8413 from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
+import _modDef8414 from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
+import _modDef8415 from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
@@ -26,13 +26,13 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    return _modDef8379;
+    return _modDef8412;
   } else if (OpenCriticTier.OpenCriticTier.STRONG === tier) {
-    return _modDef8380;
+    return _modDef8413;
   } else if (OpenCriticTier.OpenCriticTier.FAIR === tier) {
-    return _modDef8381;
+    return _modDef8414;
   } else if (OpenCriticTier.OpenCriticTier.WEAK === tier) {
-    return _modDef8382;
+    return _modDef8415;
   }
 };
 export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {

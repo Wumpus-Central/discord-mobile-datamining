@@ -7,13 +7,13 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Constants2 from "../../../../../discord_common/js/packages/media-engine/Constants.tsx";
 import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
 import useVideoStreamErrorDefault from "../../../errors/hooks/useVideoStreamError.tsx";
 import VideoEmptyStateDefault from "../../../../components_native/calls/stream/VideoEmptyState.tsx";
 import StreamQualityLiveIndicatorDefault from "../../../go_live/native/StreamQualityLiveIndicator.tsx";
 import VideoRenderer from "VideoRenderer.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09118_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09153_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
@@ -223,7 +223,7 @@ let closure_15 = memo(
               stream: stateFromStores,
               removeCloseButton: removeEmptyStateButton,
               removeSplashImage: removeEmptyStateImage,
-              type: participant(9096).VideoEmptyTypes.STREAM_FAILED,
+              type: participant(9132).VideoEmptyTypes.STREAM_FAILED,
               style: StyleSheet.absoluteFill,
             };
             const tmp9Result = VideoEmptyStateDefault;
@@ -247,7 +247,7 @@ let closure_15 = memo(
               stream: stateFromStores,
               removeCloseButton: removeEmptyStateButton,
               removeSplashImage: removeEmptyStateImage,
-              type: participant(9096).VideoEmptyTypes.STREAM_ENDED,
+              type: participant(9132).VideoEmptyTypes.STREAM_ENDED,
               style: StyleSheet.absoluteFill,
             };
             const tmp9Result4 = VideoEmptyStateDefault;
@@ -319,7 +319,7 @@ let closure_15 = memo(
                 stream: stateFromStores,
                 removeCloseButton: removeEmptyStateButton,
                 removeSplashImage: removeEmptyStateImage,
-                type: participant(9096).VideoEmptyTypes.STREAM_FAILED,
+                type: participant(9132).VideoEmptyTypes.STREAM_FAILED,
                 style: StyleSheet.absoluteFill,
                 avError: tmp10,
               };
@@ -340,9 +340,9 @@ let closure_15 = memo(
                   tmp25 = cResult[26];
                 }
                 if (ownerId === tmp46) {
-                  REMOTE_STREAM = tmp(9104).VideoSpinnerContext.SELF_STREAM;
+                  REMOTE_STREAM = tmp(9139).VideoSpinnerContext.SELF_STREAM;
                 } else {
-                  REMOTE_STREAM = tmp(9104).VideoSpinnerContext.REMOTE_STREAM;
+                  REMOTE_STREAM = tmp(9139).VideoSpinnerContext.REMOTE_STREAM;
                 }
                 class P {
                   constructor() {
@@ -418,7 +418,7 @@ let closure_15 = memo(
               stream: stateFromStores,
               removeCloseButton: removeEmptyStateButton,
               removeSplashImage: removeEmptyStateImage,
-              type: participant(9096).VideoEmptyTypes.STREAM_FAILED,
+              type: participant(9132).VideoEmptyTypes.STREAM_FAILED,
               style: StyleSheet.absoluteFill,
             };
             const tmp4Result = VideoEmptyStateDefault;
@@ -428,7 +428,7 @@ let closure_15 = memo(
               stream: stateFromStores,
               removeCloseButton: removeEmptyStateButton,
               removeSplashImage: removeEmptyStateImage,
-              type: participant(9096).VideoEmptyTypes.STREAM_ENDED,
+              type: participant(9132).VideoEmptyTypes.STREAM_ENDED,
               style: StyleSheet.absoluteFill,
             };
             const tmp4Result5 = VideoEmptyStateDefault;
@@ -460,7 +460,7 @@ let closure_15 = memo(
                 stream: stateFromStores,
                 removeCloseButton: removeEmptyStateButton,
                 removeSplashImage: removeEmptyStateImage,
-                type: participant(9096).VideoEmptyTypes.STREAM_FAILED,
+                type: participant(9132).VideoEmptyTypes.STREAM_FAILED,
                 style: StyleSheet.absoluteFill,
                 avError: tmp5,
               };
@@ -483,9 +483,9 @@ let closure_15 = memo(
               };
               const tmp4Result8 = VideoRendererDefault;
               if (ownerId === id) {
-                REMOTE_STREAM = tmp(9104).VideoSpinnerContext.SELF_STREAM;
+                REMOTE_STREAM = tmp(9139).VideoSpinnerContext.SELF_STREAM;
               } else {
-                REMOTE_STREAM = tmp(9104).VideoSpinnerContext.REMOTE_STREAM;
+                REMOTE_STREAM = tmp(9139).VideoSpinnerContext.REMOTE_STREAM;
               }
               const obj9 = { children: items1 };
               items1 = [closure_10(tmp4Result8, obj8), tmp9];

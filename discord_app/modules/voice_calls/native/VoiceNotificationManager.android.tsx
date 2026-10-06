@@ -83,13 +83,13 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     obj.voiceServiceHandlerId = 9000;
     obj.state = {
-      channelId: "T",
+      channelId: "Symbol",
       connectionState: "cursor",
       selfMute: false,
-      deafened: "increasedFileUploadSize",
-      isPushToTalk: null,
-      embeddedActivity: "webcode",
-      isStreaming: "text",
+      deafened: 2387,
+      isPushToTalk: 2388,
+      embeddedActivity: 2389,
+      isStreaming: 2390,
     };
     obj.handleVoiceStateChange = handleVoiceStateChange;
     obj.handleMediaEngineStateChange = handleMediaEngineStateChange;
@@ -256,13 +256,13 @@ const prototype = VoiceNotificationManager.prototype;
 let obj = Object.create(VoiceNotificationManager.prototype);
 obj.voiceServiceHandlerId = 9000;
 obj.state = {
-  channelId: "T",
+  channelId: "Symbol",
   connectionState: "cursor",
   selfMute: false,
-  deafened: "increasedFileUploadSize",
-  isPushToTalk: null,
-  embeddedActivity: "webcode",
-  isStreaming: "text",
+  deafened: 2387,
+  isPushToTalk: 2388,
+  embeddedActivity: 2389,
+  isStreaming: 2390,
 };
 obj.handleVoiceStateChange = handleVoiceStateChange;
 obj.handleMediaEngineStateChange = handleMediaEngineStateChange;

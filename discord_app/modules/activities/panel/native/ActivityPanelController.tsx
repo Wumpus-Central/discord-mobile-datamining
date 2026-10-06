@@ -1368,7 +1368,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmp19 = (
           <closure_24
-            context={connectedActivityInTextChannelId(17168)}
+            context={connectedActivityInTextChannelId(17197)}
             orientationLockStateForApp={orientationLockStateForApp}
             mode={mode}
             hasConnectedActivity={hasConnectedActivity}
@@ -1475,7 +1475,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       return (
         <closure_24
-          context={connectedActivityInTextChannelId(17168)}
+          context={connectedActivityInTextChannelId(17197)}
           orientationLockStateForApp={orientationLockStateForApp}
           mode={mode}
           hasConnectedActivity={hasConnectedActivity}

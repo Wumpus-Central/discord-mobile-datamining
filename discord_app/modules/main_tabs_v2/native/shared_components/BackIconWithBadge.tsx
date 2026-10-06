@@ -238,7 +238,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("get initialized");
       const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
       let num = 0;
-      const value = memo(16336)().value;
+      const value = memo(16376)().value;
       const tmp5 = memo;
       if (null != stateFromStores) {
         num = stateFromStores;
@@ -281,7 +281,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj2 = { style: size, children: closure_7(View, obj3) };
       obj3 = { style: tmp.backIcon, children: items5 };
-      const tmp5Result = tmp5(8469);
+      const tmp5Result = tmp5(8502);
       if (null != memo1) {
         const items3 = [memo1];
         items4 = items3;

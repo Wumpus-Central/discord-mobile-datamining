@@ -62,7 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0) => {
       let closure_0;
-      const f114320 = () => {
+      const f114482 = () => {
         const items = [authStore.getAllUserExperimentDescriptors(), authStore.getGuildExperiments()];
         return items;
       };
@@ -70,8 +70,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let items = [ExperimentStore];
       const obj = require("get initialized");
       const items1 = [arg0, ,];
-      [arr2[1], arr2[2]] = obj.useStateFromStoresArray(items, f114320);
-      _slicedToArray(obj.useStateFromStoresArray(items, f114320), 2);
+      [arr2[1], arr2[2]] = obj.useStateFromStoresArray(items, f114482);
+      _slicedToArray(obj.useStateFromStoresArray(items, f114482), 2);
       const effect = react.useEffect(() => {
         closure_0.trigger();
       }, items1);

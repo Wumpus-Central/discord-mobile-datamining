@@ -11,7 +11,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let hostname;
 
-const f94972 = (item) => {
+const f95112 = (item) => {
   pathname = pathname.pathname;
   return pathname.startsWith(item);
 };
@@ -85,7 +85,7 @@ function isRefreshableAttachmentUrl(toURLSafeResult) {
         const _Array = Array;
         const arr = Array.from(ATTACHMENT_PATH_PREFIXES);
         closure_0 = toURLSafeResult;
-        const someResult = arr.some(f94972);
+        const someResult = arr.some(f95112);
         hasItem =
           (closure_7.some((arr) => {
             hostname = hostname.hostname;
@@ -307,7 +307,7 @@ items[1] = substr;
 function isAttachmentPathUrl(toURLSafeResult) {
   let closure_0 = toURLSafeResult;
   const arr = Array.from(ATTACHMENT_PATH_PREFIXES);
-  const someResult = arr.some(f94972);
+  const someResult = arr.some(f95112);
   const tmp2 =
     (closure_7.some((arr) => {
       hostname = hostname.hostname;

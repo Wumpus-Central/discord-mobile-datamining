@@ -250,7 +250,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   let user;
   let v4X2kc;
   const onPress = () => {
-    const obj = { color: secondaryColor, onSelect: f116873, suggestedColors };
+    const obj = { color: secondaryColor, onSelect: f117031, suggestedColors };
     showCustomColorPickerActionSheetDefault(obj);
   };
   ({ user, onProfileThemeColorsChanged: require, guildId, pendingAvatarSrc, showResetMenu } = pendingThemeColors);
@@ -310,7 +310,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
                 closure_1_0(tmp4);
               },
             };
-            obj.openLazy(asyncRequire(14453, dependencyMap.paths), "Profile Theme", obj2);
+            obj.openLazy(asyncRequire(14469, dependencyMap.paths), "Profile Theme", obj2);
           },
           children: closure_4(require("MoreHorizontalIcon").MoreHorizontalIcon, obj6),
         };
@@ -322,13 +322,13 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       items[1] = showResetMenu;
       items1 = [closure_5(secondaryColor, obj3)];
       const obj7 = { style: tmp.themeColorContainer, children: items2 };
-      const f116872 = (arg0) => {
+      const f117030 = (arg0) => {
         if (arg0 !== closure_1_2) {
           const items = [arg0, secondaryColor];
           let themeColors;
           const tmp4 = closure_1(primaryColor[16]);
-          if (f116872 != null) {
-            themeColors = f116872.themeColors;
+          if (f117030 != null) {
+            themeColors = f117030.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {
@@ -350,13 +350,13 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       v4X2kc = require("intl").t.v4X2kc;
       tmp6Result = require("utils/ColorUtils");
       items2 = [closure_4(closure_9, obj8)];
-      const f116873 = (arg0) => {
+      const f117031 = (arg0) => {
         if (arg0 !== closure_1_3) {
           const items = [closure_1_2, arg0];
           let themeColors;
           const tmp4 = closure_1(primaryColor[16]);
-          if (f116873 != null) {
-            themeColors = f116873.themeColors;
+          if (f117031 != null) {
+            themeColors = f117031.themeColors;
           }
           let tmp8;
           if (!tmp4(items, themeColors)) {

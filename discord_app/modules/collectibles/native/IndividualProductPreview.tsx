@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FractionalPremiumSKUs from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
 import ProfileEffectUserPreviewDefault from "../profile_effects/native/previews/ProfileEffectUserPreview.tsx";
 import ProfileFrameUserPreviewDefault from "../profile_frames/native/previews/ProfileFrameUserPreview.tsx";
@@ -118,7 +118,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             tmp14 = tmp17;
           }
           const obj4 = { style: tmp3.profilePreviewGradient, start: tmp6, end: tmp7, colors: tmp9 };
-          const tmp13 = closure_7(onTrackPress(5605), obj4);
+          const tmp13 = closure_7(onTrackPress(5612), obj4);
           cResult[8] = tmp3.profilePreviewGradient;
           cResult[9] = tmp9;
           cResult[10] = tmp13;
@@ -374,7 +374,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== product) {
           const obj2 = { product };
-          const tmp8 = closure_7(onTrackPress(12972), obj2);
+          const tmp8 = closure_7(onTrackPress(12991), obj2);
           cResult[3] = product;
           cResult[4] = tmp8;
           tmp5 = tmp8;

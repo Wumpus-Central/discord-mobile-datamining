@@ -259,14 +259,14 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         openGuildPowerupsModalDefault(obj);
       }, items);
       let obj = { spacing: nativeDefault.space.PX_8, children: items1 };
-      const Stack = guildId(5593).Stack;
+      const Stack = guildId(5600).Stack;
       const obj2 = {
         variant: "text-md/medium",
         color: "text-subtle",
         accessibilityRole: "header",
         children: intl.string(guildId(1126).t.wRnfnY),
       };
-      const Text = guildId(4886).Text;
+      const Text = guildId(4892).Text;
       intl = guildId(1126).intl;
       items1 = [closure_7(Text, obj2), ,];
       const obj3 = {
@@ -313,11 +313,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.upsellText,
           children: intl3.string(guildId(1126).t.U5p3GZ),
         };
-        const Text2 = tmp7(4886).Text;
+        const Text2 = tmp7(4892).Text;
         intl3 = tmp7(1126).intl;
         items2[1] = closure_7(Text2, obj6);
         const obj7 = { size: "md", color: nativeDefault.colors.ICON_SUBTLE };
-        const ChevronSmallRightIcon = tmp7(6708).ChevronSmallRightIcon;
+        const ChevronSmallRightIcon = tmp7(6715).ChevronSmallRightIcon;
         items2[2] = closure_7(ChevronSmallRightIcon, obj7);
         tmp6Result = closure_8(closure_4, obj4);
       }

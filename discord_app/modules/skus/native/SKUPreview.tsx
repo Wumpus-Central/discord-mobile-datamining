@@ -398,7 +398,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       sku = sku.sku;
       let DEFAULT_ITEM_SIZE = sku.size;
       if (DEFAULT_ITEM_SIZE === undefined) {
-        DEFAULT_ITEM_SIZE = sku(8427).DEFAULT_ITEM_SIZE;
+        DEFAULT_ITEM_SIZE = sku(8460).DEFAULT_ITEM_SIZE;
       }
       const items = [sku];
       const memo = react.useMemo(() => closure_5(sku), items);

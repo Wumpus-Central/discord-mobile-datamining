@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx
 import ReanimatedRexport from "../../../../../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../../_runtime/06147_LegacyBaseButton.js";
 import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
 import react from "../../../../../../../_runtime/00019_react.js";
 import ReactCompilerGating_mod from "../../../../../react_compiler/ReactCompilerGating.tsx";

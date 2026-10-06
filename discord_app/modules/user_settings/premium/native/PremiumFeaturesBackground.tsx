@@ -3,7 +3,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import PremiumConstants from "../../../premium/PremiumConstants.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import ColorConstants from "../../../colors/native/ColorConstants.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";

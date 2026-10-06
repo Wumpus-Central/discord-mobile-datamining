@@ -2,7 +2,7 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import useUserLinks from "../hooks/useUserLinks.tsx";
@@ -61,7 +61,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== tmp7) {
         const intl = intl4.intl;
         const obj3 = { maxConnections: tmp7 };
-        const formatToPlainStringResult = intl.formatToPlainString(_modDef2493["1/PzIj"], obj3);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef2521["1/PzIj"], obj3);
         cResult[0] = tmp7;
         cResult[1] = formatToPlainStringResult;
         tmp8 = formatToPlainStringResult;
@@ -71,7 +71,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== tmp7) {
         const intl2 = intl4.intl;
         const obj4 = { maxConnections: tmp7 };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2493.RcTgiE, obj4);
+        const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2521.RcTgiE, obj4);
         cResult[2] = tmp7;
         cResult[3] = formatToPlainStringResult1;
         tmp10 = formatToPlainStringResult1;
@@ -116,7 +116,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = useIsInAdultAgeGroupDefault() ? hasOwnProperty : metroRequire;
       useAgeSpecificText;
       const intl = intl4.intl;
-      intl.formatToPlainString(_modDef2493["1/PzIj"], { maxConnections: tmp6 });
+      intl.formatToPlainString(_modDef2521["1/PzIj"], { maxConnections: tmp6 });
       const intl2 = intl4.intl;
       let tmp10 = null;
       if (hasMaxConnections) {
@@ -161,7 +161,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           ({ container, supportHeader } = tmp4);
           if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
             const intl3 = intl4.intl;
-            const stringResult = intl3.string(_modDef2493["7/tVhv"]);
+            const stringResult = intl3.string(_modDef2521["7/tVhv"]);
             cResult[3] = stringResult;
             tmp13 = stringResult;
           } else {
@@ -206,7 +206,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (shouldShowHelplineLink) {
         const intl2 = intl4.intl;
-        formatResult = intl2.format(_modDef2493["KOwsf/"], {
+        formatResult = intl2.format(_modDef2521["KOwsf/"], {
           helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
         });
       } else {
@@ -214,7 +214,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (shouldShowThroughlineLink) {
           const intl = intl4.intl;
           const obj7 = { helpLink: THROUGHLINE_URL };
-          formatResult = intl.format(_modDef2493["6tsC8u"], obj7);
+          formatResult = intl.format(_modDef2521["6tsC8u"], obj7);
         }
       }
       cResult[0] = shouldShowHelplineLink;
@@ -232,7 +232,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       useHelpLineVisibility;
       if (shouldShowHelplineLink) {
         const intl2 = intl4.intl;
-        formatResult = intl2.format(_modDef2493["KOwsf/"], {
+        formatResult = intl2.format(_modDef2521["KOwsf/"], {
           helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
         });
       } else {
@@ -240,7 +240,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp6) {
           const intl = intl4.intl;
           const obj2 = { helpLink: THROUGHLINE_URL };
-          formatResult = intl.format(_modDef2493["6tsC8u"], obj2);
+          formatResult = intl.format(_modDef2521["6tsC8u"], obj2);
         }
       }
       let tmp11 = null;
@@ -249,7 +249,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = {
           style: tmp.supportHeader,
           variant: "heading-sm/semibold",
-          children: intl3.string(_modDef2493["7/tVhv"]),
+          children: intl3.string(_modDef2521["7/tVhv"]),
         };
         const Text = Text_Text.Text;
         intl3 = intl4.intl;

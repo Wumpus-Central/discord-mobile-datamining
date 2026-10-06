@@ -95,7 +95,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp11;
       }
-      BottomSheet = tmp(6645).BottomSheet;
+      BottomSheet = tmp(6652).BottomSheet;
       tmp11 = (
         <BottomSheet startExpanded onDismiss={S}>
           {null}
@@ -195,7 +195,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     return tmp15;
                   }
-                  BottomSheet = tmp(6645).BottomSheet;
+                  BottomSheet = tmp(6652).BottomSheet;
                   const tmp18 = (
                     <BottomSheet startExpanded onDismiss={tmp10}>
                       {null}
@@ -242,7 +242,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const tmp2Result = require("v1");
         const v4Result = tmp2Result.v4();
         _require = v4Result;
-        BottomSheet = tmp2(6645).BottomSheet;
+        BottomSheet = tmp2(6652).BottomSheet;
         return (
           <BottomSheet
             startExpanded

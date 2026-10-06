@@ -7,7 +7,7 @@ import UserSettingsProtoActionCreators from "../../../../user_settings/UserSetti
 import dismissible_content from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import TrashIcon from "../../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import fuzzysearchDefault from "../../../../../../_runtime/05702_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../../../_runtime/05709_fuzzysearch.js";
 import TableRow4 from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowArrow from "../../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
 import TableRowGroup3 from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -37,7 +37,7 @@ let obj4;
 let obj5;
 let obj6;
 let obj7;
-const f120306 = (localeCompare, arg1) => localeCompare.localeCompare(arg1);
+const f120467 = (localeCompare, arg1) => localeCompare.localeCompare(arg1);
 let _slicedToArray = _slicedToArray_mod;
 const View = react_native.View;
 ({ jsx: metroImportDefault, jsxs: metroImportAll, Fragment: c9 } = Fragment);
@@ -517,7 +517,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
               continue;
             }
-            const sorted = items.sort(f120306);
+            const sorted = items.sort(f120467);
             return items;
           }
         }
@@ -552,7 +552,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
               continue;
             }
-            const sorted = items.sort(f120306);
+            const sorted = items.sort(f120467);
             return items;
           }
         }
@@ -587,7 +587,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
               continue;
             }
-            const sorted = items.sort(f120306);
+            const sorted = items.sort(f120467);
             return items;
           }
         }
@@ -631,7 +631,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
               continue;
             }
-            const sorted = items.sort(f120306);
+            const sorted = items.sort(f120467);
             return items;
           }
         }
@@ -698,7 +698,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
               continue;
             }
-            const sorted = items.sort(f120306);
+            const sorted = items.sort(f120467);
             closure_5(items);
             M();
           }
@@ -731,7 +731,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               }
               continue;
             }
-            const sorted = items.sort(f120306);
+            const sorted = items.sort(f120467);
             closure_5(items);
             M();
           }
@@ -789,7 +789,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = useSafeAreaInsetsDefault();
       const ref = initialSearchQuery.useRef(null);
       importDefault = initialSearchQuery.useRef(0);
-      let obj = ref(9593);
+      let obj = ref(9606);
       let tmp4 = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
       [dependencyMap, tmp5] = tmp4;
       _slicedToArray = tmp5;
@@ -830,7 +830,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           continue;
         }
-        const sorted = items.sort(f120306);
+        const sorted = items.sort(f120467);
         return items;
       });
       let items = [closure_6];
@@ -876,7 +876,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           continue;
         }
-        const sorted = items.sort(f120306);
+        const sorted = items.sort(f120467);
         closure_6(items);
         callback();
       }, items1);
@@ -918,7 +918,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items4 = [tmp.contentContainer];
       const obj5 = { paddingBottom: tmp2.bottom + nativeDefault.space.PX_16 };
-      FlashList = ref(8371).FlashList;
+      FlashList = ref(8404).FlashList;
       items4[1] = obj5;
       return dailyCapOverridden(first1, obj3);
     };

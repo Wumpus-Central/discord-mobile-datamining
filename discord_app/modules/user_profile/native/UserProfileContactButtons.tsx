@@ -157,8 +157,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(23);
       user = user.user;
       ({ hasCustomProfileTheme, location: _location, ButtonComponent } = user);
-      const newestAnalyticsLocation = trackUserProfileAction(6657)().newestAnalyticsLocation;
-      let obj2 = user(7861);
+      const newestAnalyticsLocation = trackUserProfileAction(6664)().newestAnalyticsLocation;
+      let obj2 = user(7872);
       const tmp4 = trackUserProfileAction;
       trackUserProfileAction = obj2.useUserProfileAnalyticsContext().trackUserProfileAction;
       if (_location == null) {
@@ -173,7 +173,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       dependencyMap = tmp5;
-      const tmpResult = user(12884);
+      const tmpResult = user(12903);
       const gameFriendsForUser = tmpResult.useGameFriendsForUser(user.id);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [RelationshipStore];
@@ -194,7 +194,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult2 = user(504);
       const stateFromStores = tmpResult2.useStateFromStores(tmp6, tmp8);
-      const tmp4Result = tmp4(4722);
+      const tmp4Result = tmp4(4728);
       const name = tmp4Result.useName(user);
       if (stateFromStores !== RelationshipTypes.FRIEND) {
         if (stateFromStores !== RelationshipTypes.BLOCKED) {
@@ -207,9 +207,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp12;
             let tmp14;
             if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-              UserPlusIcon = tmp(12957).UserClockIcon;
+              UserPlusIcon = tmp(12976).UserClockIcon;
             } else {
-              UserPlusIcon = tmp(4833).UserPlusIcon;
+              UserPlusIcon = tmp(4839).UserPlusIcon;
             }
             if (cResult[5] !== (stateFromStores === RelationshipTypes.PENDING_OUTGOING)) {
               let stringResult;
@@ -434,20 +434,20 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       let stateFromStores;
       userDisplayName = undefined;
       ({ hasCustomProfileTheme, ButtonComponent } = user);
-      const newestAnalyticsLocation = trackUserProfileAction(6657)().newestAnalyticsLocation;
-      let obj = user(7861);
+      const newestAnalyticsLocation = trackUserProfileAction(6664)().newestAnalyticsLocation;
+      let obj = user(7872);
       const tmp = trackUserProfileAction;
       trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
       if (_location == null) {
         _location = newestAnalyticsLocation;
       }
       dependencyMap = { location: _location };
-      const tmp3Result = user(12884);
+      const tmp3Result = user(12903);
       const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
       const items = [RelationshipStore];
       const tmp3Result2 = user(504);
       stateFromStores = tmp3Result2.useStateFromStores(items, () => RelationshipStore.getRelationshipType(user.id));
-      const tmpResult = tmp(4722);
+      const tmpResult = tmp(4728);
       userDisplayName = tmpResult.useName(user);
       if (stateFromStores !== RelationshipTypes.FRIEND) {
         if (stateFromStores !== RelationshipTypes.BLOCKED) {
@@ -460,9 +460,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             let stringResult;
             let string2Result;
             if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-              UserPlusIcon = tmp3(12957).UserClockIcon;
+              UserPlusIcon = tmp3(12976).UserClockIcon;
             } else {
-              UserPlusIcon = tmp3(4833).UserPlusIcon;
+              UserPlusIcon = tmp3(4839).UserPlusIcon;
             }
             const intl = tmp3(1126).intl;
             const string = intl.string;
@@ -533,7 +533,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(88);
       user = user.user;
       ({ disableMessage, disableCalls, location: _location, hasCustomProfileTheme, style } = user);
-      let obj2 = user(7861);
+      let obj2 = user(7872);
       const trackUserProfileAction = obj2.useUserProfileAnalyticsContext().trackUserProfileAction;
       closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -555,7 +555,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = user(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-      const tmpResult2 = user(12884);
+      const tmpResult2 = user(12903);
       const gameFriendsForUser = tmpResult2.useGameFriendsForUser(user.id);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function x() {
@@ -595,7 +595,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmp14 = trackUserProfileAction(12959)(user.id, false, O);
+        const tmp14 = trackUserProfileAction(12978)(user.id, false, O);
         const handlePress = tmp14.handlePress;
         ({ text, inCall, accessibilityHint } = tmp14);
         if (hasCustomProfileTheme) {
@@ -698,8 +698,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = { color: tmp15, size: "xs" };
           cResult[57] = tmp15;
-          cResult[58] = closure_8(user(5855).ChatIcon, obj3);
-          const tmp26 = closure_8(user(5855).ChatIcon, obj3);
+          cResult[58] = closure_8(user(5862).ChatIcon, obj3);
+          const tmp26 = closure_8(user(5862).ChatIcon, obj3);
         } else {
           class O {
             constructor() {
@@ -737,7 +737,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const formatToPlainString = tmp30.formatToPlainString;
           const obj4 = { name: tmp13Result.getName(user) };
           const zFfSFQ = tmp(1126).t.zFfSFQ;
-          tmp13Result = trackUserProfileAction(4722);
+          tmp13Result = trackUserProfileAction(4728);
           cResult[60] = user;
           cResult[61] = formatToPlainString(zFfSFQ, obj4);
           const formatToPlainStringResult = formatToPlainString(zFfSFQ, obj4);
@@ -778,7 +778,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           onPress: tmp11,
           disabled: disableMessage,
         };
-        tmp35[1] = closure_8(user(5594).Button, obj6);
+        tmp35[1] = closure_8(user(5601).Button, obj6);
         cResult[62] = disableMessage;
         cResult[63] = tmp11;
         cResult[64] = tmp25;

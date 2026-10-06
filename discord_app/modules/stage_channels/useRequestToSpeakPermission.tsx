@@ -58,7 +58,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_5.getChannel(closure_0);
           }
         }
-        const obj3 = stateFromStores(4514);
+        const obj3 = stateFromStores(4520);
         cResult[4] = stateFromStores;
         cResult[5] = obj3.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
         const canEveryoneRoleResult = obj3.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
@@ -147,7 +147,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [ChannelStore];
       const items1 = [arg0];
       const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(closure_0), items1);
-      const obj2 = stateFromStores(4514);
+      const obj2 = stateFromStores(4520);
       const canEveryoneRoleResult = obj2.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
       [tmp4, tmp5] = react.useState(canEveryoneRoleResult);
       dependencyMap = tmp5;

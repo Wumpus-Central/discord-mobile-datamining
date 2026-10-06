@@ -742,16 +742,16 @@ class QuestContentImpression {
     obj4.isQuestEnrollmentBlocked = isQuestEnrollmentBlocked;
     obj4.onImpressionCallback = onImpression;
     obj4.sourceQuestContent = sourceQuestContent;
-    let obj2 = obj4(7224);
+    let obj2 = obj4(7237);
     obj4.migrateQuestContentLoadedToCaptureAdUserAction = obj2.shouldMigrateToAdAnalyticsInterface(
-      obj4(7224).AdAnalyticsInterfaceExperimentStep.STEP_1_LOADED,
+      obj4(7237).AdAnalyticsInterfaceExperimentStep.STEP_1_LOADED,
       "quest_content_impression",
     );
-    const tmp4 = obj4(7224);
+    const tmp4 = obj4(7237);
     const shouldMigrateToAdAnalyticsInterface = tmp4.shouldMigrateToAdAnalyticsInterface;
-    let obj3 = obj4(7183);
+    let obj3 = obj4(7196);
     let result = obj3.isBillableQuestContent(questContent, adCreativeType);
-    const AdAnalyticsInterfaceExperimentStep = obj4(7224).AdAnalyticsInterfaceExperimentStep;
+    const AdAnalyticsInterfaceExperimentStep = obj4(7237).AdAnalyticsInterfaceExperimentStep;
     obj4.migrateQuestContentViewedToCaptureAdUserAction = shouldMigrateToAdAnalyticsInterface(
       result
         ? AdAnalyticsInterfaceExperimentStep.STEP_5_VIEWED_IMPRESSION
@@ -759,7 +759,7 @@ class QuestContentImpression {
       "quest_content_impression",
     );
     const tmp2 = obj4;
-    if (adCreativeType === tmp2(5630).AdCreativeType.QUEST) {
+    if (adCreativeType === tmp2(5637).AdCreativeType.QUEST) {
       let obj5 = { adContentIds, adCreativeType };
       obj4.entity = obj5;
     } else {

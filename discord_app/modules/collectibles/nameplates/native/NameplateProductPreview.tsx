@@ -9,7 +9,7 @@ import utils from "../utils.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useDisplayNameStylesDefault from "../../../display_name_styles/hooks/useDisplayNameStyles.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import TableRow2 from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import ProfileCustomizationUtils from "../../../profile_customization/ProfileCustomizationUtils.tsx";
 import useShopProductItems from "../../hooks/useShopProductItems.tsx";
@@ -590,8 +590,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.AvatarSizes.NORMAL,
           avatarDecoration: tmp9,
           animate: !stateFromStores,
-          autoStatusCutout: null,
-          "aria-hidden": "SOURCE",
+          autoStatusCutout: false,
+          "aria-hidden": false,
         };
         const Avatar = native.Avatar;
         const tmp26 = metroRequire(Avatar, obj6);
@@ -658,8 +658,8 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           size: native.AvatarSizes.NORMAL,
           avatarDecoration,
           animate: !stateFromStores,
-          autoStatusCutout: null,
-          "aria-hidden": "SOURCE",
+          autoStatusCutout: false,
+          "aria-hidden": false,
         };
         const Avatar = native.Avatar;
         return metroRequire(Avatar, obj);

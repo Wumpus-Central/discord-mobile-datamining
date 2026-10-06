@@ -79,9 +79,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 canRenderVideo: false,
                 userNick: obj5.getName(closure_2, closure_1, user),
                 userAvatarDecoration: obj6.getAvatarDecoration(user, closure_2),
-                streamId: "Symbol",
+                streamId: "Set",
                 ringing: null,
-                hasVideo: 0,
+                hasVideo: 465.988,
                 isSelf: id3 === id1,
               };
               id1 = AuthenticationStore.getId();
@@ -195,9 +195,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   canRenderVideo: false,
                   userNick: obj5.getName(closure_2, closure_1, user),
                   userAvatarDecoration: obj6.getAvatarDecoration(user, closure_2),
-                  streamId: "Symbol",
+                  streamId: "Set",
                   ringing: null,
-                  hasVideo: 0,
+                  hasVideo: 465.988,
                   isSelf: id3 === id1,
                 };
                 id1 = AuthenticationStore.getId();

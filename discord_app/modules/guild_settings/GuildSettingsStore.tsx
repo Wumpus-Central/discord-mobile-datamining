@@ -9,7 +9,7 @@ import ChannelRecord from "../../records/ChannelRecord.tsx";
 import GuildRecordUtils from "../../utils/GuildRecordUtils.tsx";
 import PlainRecord from "../../lib/PlainRecord.tsx";
 import GuildRecord from "../../records/GuildRecord.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import GlobalDiscoveryServersConstants from "../global_discovery_servers/GlobalDiscoveryServersConstants.tsx";
 import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils.tsx";
 import GuildSettingsVanityURLActionCreators from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
@@ -123,7 +123,7 @@ function _createInvite(code) {
   ({ uses: obj.uses, max_uses: obj.maxUses, max_age: obj.maxAge } = code);
   created_at = code.created_at;
   ({ flags: obj.flags, roles: obj.roles } = code);
-  tmp7 = _modDef4461;
+  tmp7 = _modDef4467;
   const tmp4 = new InviteRecord(obj);
   return tmp4;
 }

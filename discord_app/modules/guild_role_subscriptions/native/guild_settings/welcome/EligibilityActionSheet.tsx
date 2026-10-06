@@ -82,7 +82,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp9,
         };
-        const tmp13 = closure_5(onRequireModeratorMFAClick(4886).Heading, obj4);
+        const tmp13 = closure_5(onRequireModeratorMFAClick(4892).Heading, obj4);
         cResult[4] = tmp4.title;
         cResult[5] = tmp13;
         tmp11 = tmp13;
@@ -103,7 +103,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj5 = { startExpanded: true, children: items };
         items = [tmp11, tmp14];
-        const tmp18 = closure_6(onRequireModeratorMFAClick(6645).BottomSheet, obj5);
+        const tmp18 = closure_6(onRequireModeratorMFAClick(6652).BottomSheet, obj5);
         cResult[9] = tmp11;
         cResult[10] = tmp14;
         cResult[11] = tmp18;
@@ -147,14 +147,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = { startExpanded: true, children: items1 };
       const tmp3 = useCreatorMonetizationEligibilityItemsDefault(eligibility, memo);
-      BottomSheet = onRequireModeratorMFAClick(6645).BottomSheet;
+      BottomSheet = onRequireModeratorMFAClick(6652).BottomSheet;
       let obj2 = {
         style: tmp.title,
         variant: "heading-lg/semibold",
         color: "mobile-text-heading-primary",
         children: intl.string(onRequireModeratorMFAClick(1126).t["3s47iN"]),
       };
-      const Heading = onRequireModeratorMFAClick(4886).Heading;
+      const Heading = onRequireModeratorMFAClick(4892).Heading;
       intl = onRequireModeratorMFAClick(1126).intl;
       items1 = [closure_5(Heading, obj2)];
       let obj3 = { style: tmp.container, items: tmp3 };

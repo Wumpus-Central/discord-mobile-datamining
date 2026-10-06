@@ -6,7 +6,7 @@ import renderer_EmbedUtils from "../EmbedUtils.tsx";
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07745_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/07756_AssetRegistry.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";

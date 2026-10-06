@@ -9,7 +9,7 @@ import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f105471 = (item) => null != item;
+const f105623 = (item) => null != item;
 const View = react_native.View;
 const jsx = Fragment.jsx;
 let ReactCompilerGating = ReactCompilerGating_mod;
@@ -34,7 +34,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           complex_icon_static_url: arr[1],
           complex_icon_animated_url: arr[2],
         } = badge);
-        const found = items.filter(f105471);
+        const found = items.filter(f105623);
         const joined = found.join("|");
         cResult[0] = badge;
         cResult[1] = joined;
@@ -160,7 +160,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [, ,];
       ({ simple_icon_raster_url: arr[0], complex_icon_static_url: arr[1], complex_icon_animated_url: arr[2] } = badge);
       style = style.style;
-      const found = items.filter(f105471);
+      const found = items.filter(f105623);
       const joined = found.join("|");
       [tmp3, tmp4] = react.useState({ urlsKey: joined, candidateIndex: 0 });
       let c0 = tmp4;

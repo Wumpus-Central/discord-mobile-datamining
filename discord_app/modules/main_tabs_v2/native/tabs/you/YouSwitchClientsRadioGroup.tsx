@@ -19,7 +19,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = value(576);
       const cResult = obj.c(9);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = value(16322);
+        const tmpResult = value(16362);
         const currentVariant = tmpResult.getCurrentVariant();
         cResult[0] = currentVariant;
         value = currentVariant;
@@ -158,7 +158,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   );
                 }
               }
-              const tmp15 = jsx(value(6072).TableRadioGroup, {
+              const tmp15 = jsx(value(6079).TableRadioGroup, {
                 title: "Switch Clients",
                 value,
                 onChange: tmp10,
@@ -235,7 +235,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != arr) {
           tmp5 = null;
           if (arr.length >= 2) {
-            const TableRadioGroup = memo(6072).TableRadioGroup;
+            const TableRadioGroup = memo(6079).TableRadioGroup;
             tmp5 = (
               <TableRadioGroup title="Switch Clients" value={memo} onChange={tmp4} hasIcons>
                 {arr.map((value) => {

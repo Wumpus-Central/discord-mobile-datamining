@@ -6,7 +6,7 @@ import intl3 from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04805_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04811_AssetRegistry.js";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import react_nativeDefault from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAppLifecycleModule.tsx";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";

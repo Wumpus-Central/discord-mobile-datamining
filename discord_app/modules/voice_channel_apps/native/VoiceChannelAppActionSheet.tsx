@@ -1,5 +1,5 @@
 // discord_app/modules/voice_channel_apps/native/VoiceChannelAppActionSheet.tsx
-import _modDef3821 from "../VoiceChannelApps.messages.js";
+import _modDef3851 from "../VoiceChannelApps.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRowApplicationIconDefault from "../../applications/native/TableRowApplicationIcon.tsx";
 import react from "../../../../_runtime/00019_react.js";
@@ -31,7 +31,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(15);
       ({ selectedApplicationId, onChange } = guildId);
       guildId = guildId.guildId;
-      const obj2 = onChange(16993);
+      const obj2 = onChange(17019);
       const voiceChannelAppSettingOptions = obj2.useVoiceChannelAppSettingOptions(guildId, selectedApplicationId);
       ({ options, listState } = voiceChannelAppSettingOptions);
       if (cResult[0] !== onChange) {
@@ -52,7 +52,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = onChange(1126).intl;
-        const stringResult = intl.string(_modDef3821.AdT7SZ);
+        const stringResult = intl.string(_modDef3851.AdT7SZ);
         cResult[2] = stringResult;
         tmp6 = stringResult;
       } else {
@@ -60,7 +60,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { title: tmp6 };
-        const tmp11 = closure_4(onChange(6644).BottomSheetTitleHeader, obj3);
+        const tmp11 = closure_4(onChange(6651).BottomSheetTitleHeader, obj3);
         cResult[3] = tmp11;
         tmp9 = tmp11;
       } else {
@@ -77,10 +77,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           stringResult1 = intl4.string(onChange(1126).t.ZTNur7);
         } else if ("failed" === listState) {
           const intl3 = onChange(1126).intl;
-          stringResult1 = intl3.string(_modDef3821.X2xOBn);
+          stringResult1 = intl3.string(_modDef3851.X2xOBn);
         } else if ("empty" === listState) {
           const intl2 = onChange(1126).intl;
-          stringResult1 = intl2.string(_modDef3821["4S6iHa"]);
+          stringResult1 = intl2.string(_modDef3851["4S6iHa"]);
         }
         cResult[4] = listState;
         cResult[5] = stringResult1;
@@ -160,8 +160,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_1_4(TableRadioRow, obj, applicationId);
           }
         }
-        const obj4 = { value: none, label: intl5.string(_modDef3821.KEB4Rm) };
-        let TableRadioRow = onChange(6071).TableRadioRow;
+        const obj4 = { value: none, label: intl5.string(_modDef3851.KEB4Rm) };
+        let TableRadioRow = onChange(6078).TableRadioRow;
         intl5 = onChange(1126).intl;
         const tmp23 = closure_4(TableRadioRow, obj4);
         cResult[9] = tmp23;
@@ -200,8 +200,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const obj5 = { header: tmp9, children: closure_5(onChange(6072).TableRadioGroup, obj6) };
-      const ActionSheet = onChange(6701).ActionSheet;
+      const obj5 = { header: tmp9, children: closure_5(onChange(6079).TableRadioGroup, obj6) };
+      const ActionSheet = onChange(6708).ActionSheet;
       obj6 = {
         accessibilityLabel: tmp6,
         value: tmp12,
@@ -230,7 +230,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let stringResult1;
       ({ selectedApplicationId, onChange } = guildId);
       guildId = guildId.guildId;
-      let obj = onChange(16993);
+      let obj = onChange(17019);
       const voiceChannelAppSettingOptions = obj.useVoiceChannelAppSettingOptions(guildId, selectedApplicationId);
       ({ options, listState } = voiceChannelAppSettingOptions);
       const items = [onChange];
@@ -244,12 +244,12 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj.hideActionSheet();
       }, items);
       const intl = onChange(1126).intl;
-      const stringResult = intl.string(_modDef3821.AdT7SZ);
+      const stringResult = intl.string(_modDef3851.AdT7SZ);
       const obj2 = {
-        header: closure_4(onChange(6644).BottomSheetTitleHeader, { title: stringResult }),
+        header: closure_4(onChange(6651).BottomSheetTitleHeader, { title: stringResult }),
         children: closure_5(TableRadioGroup, obj3),
       };
-      const ActionSheet = onChange(6701).ActionSheet;
+      const ActionSheet = onChange(6708).ActionSheet;
       obj3 = {
         accessibilityLabel: stringResult,
         value: selectedApplicationId,
@@ -258,7 +258,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: true,
         children: items1,
       };
-      TableRadioGroup = onChange(6072).TableRadioGroup;
+      TableRadioGroup = onChange(6079).TableRadioGroup;
       if (selectedApplicationId == null) {
         selectedApplicationId = none;
       }
@@ -267,10 +267,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult1 = intl4.string(onChange(1126).t.ZTNur7);
       } else if ("failed" === listState) {
         const intl3 = onChange(1126).intl;
-        stringResult1 = intl3.string(_modDef3821.X2xOBn);
+        stringResult1 = intl3.string(_modDef3851.X2xOBn);
       } else if ("empty" === listState) {
         const intl2 = onChange(1126).intl;
-        stringResult1 = intl2.string(_modDef3821["4S6iHa"]);
+        stringResult1 = intl2.string(_modDef3851["4S6iHa"]);
       }
       items1 = [
         options.map((applicationId) => {
@@ -287,8 +287,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return closure_1_4(TableRadioRow, obj, applicationId);
         }),
       ];
-      const obj4 = { value: none, label: intl5.string(_modDef3821.KEB4Rm) };
-      let TableRadioRow = onChange(6071).TableRadioRow;
+      const obj4 = { value: none, label: intl5.string(_modDef3851.KEB4Rm) };
+      let TableRadioRow = onChange(6078).TableRadioRow;
       intl5 = onChange(1126).intl;
       items1[1] = closure_4(TableRadioRow, obj4);
       return closure_4(ActionSheet, obj2);

@@ -8,11 +8,11 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import _mod6019 from "../../../../_runtime/metro/06019__.js";
+import _mod6026 from "../../../../_runtime/metro/06026__.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef7063 from "../../../../_runtime/metro/07063__.js";
+import _modDef7076 from "../../../../_runtime/metro/07076__.js";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useShopProductItems from "../hooks/useShopProductItems.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
@@ -212,7 +212,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp10;
         }
         let obj2 = { onPress: tmp5, backImage: tmp6, accessibilityLabel: tmp8, displayMode: "minimal" };
-        const tmp12 = closure_12(tmp(6019).HeaderBackButton, obj2);
+        const tmp12 = closure_12(tmp(6026).HeaderBackButton, obj2);
         cResult[6] = tmp5;
         cResult[7] = tmp6;
         cResult[8] = tmp12;
@@ -260,7 +260,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: intl.string(intl5.t.cpT0Cq),
         displayMode: "minimal",
       };
-      const HeaderBackButton = _mod6019.HeaderBackButton;
+      const HeaderBackButton = _mod6026.HeaderBackButton;
       intl = intl5.intl;
       return closure_12(HeaderBackButton, obj);
     };
@@ -513,7 +513,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let closure_26 = [80, 79, 78, 75, 72, 50, 45, 35, 70];
 function useDrummingHapticFeedbacks() {}
-let obj7 = _modDef7063("black");
+let obj7 = _modDef7076("black");
 let closure_28 = obj7.toHexString();
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
@@ -771,7 +771,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = useCurrentUser;
       const currentUser = tmpResult.useCurrentUser();
-      const backgroundColors = currentUser(10815)(product.styles).backgroundColors;
+      const backgroundColors = currentUser(10828)(product.styles).backgroundColors;
       let tertiary;
       if (backgroundColors != null) {
         tertiary = backgroundColors.tertiary;
@@ -1146,7 +1146,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                                                         ];
                                                                                         tmp102[0] = items4;
                                                                                         const tmp103 = closure_12(
-                                                                                          currentUser(4612).View,
+                                                                                          currentUser(4618).View,
                                                                                           tmp102,
                                                                                         );
                                                                                         cResult[90] = curtainViewStyle;
@@ -1278,7 +1278,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                                   tmp80[0] = tmp74;
                                                                   tmp80[1] = tmp75;
                                                                   const tmp81 = closure_12(
-                                                                    currentUser(4612).View,
+                                                                    currentUser(4618).View,
                                                                     tmp80,
                                                                   );
                                                                   cResult[67] = tmp74;
@@ -1296,7 +1296,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                                   }
                                                                 }
                                                                 tmp110[2] = tmp9.title;
-                                                                const Text = tmp(4886).Text;
+                                                                const Text = tmp(4892).Text;
                                                                 const intl3 = tmp(1126).intl;
                                                                 const obj9 = { itemName: product.name };
                                                                 tmp110[3] = intl3.format(intl5.t.YNaxMp, obj9);
@@ -1307,7 +1307,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                                   style: tmp9.title,
                                                                   children: formatResult,
                                                                 };
-                                                                const Text2 = tmp(4886).Text;
+                                                                const Text2 = tmp(4892).Text;
                                                                 const tmpResult16 = CollectiblesUtils;
                                                                 let result =
                                                                   tmpResult16.isPremiumCollectiblesProduct(product);
@@ -1354,7 +1354,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                                                             }
                                                           }
                                                           const obj14 = { style: tmp69, children: tmp70 };
-                                                          const tmp73 = closure_12(currentUser(4612).View, obj14);
+                                                          const tmp73 = closure_12(currentUser(4618).View, obj14);
                                                           cResult[57] = tmp69;
                                                           cResult[58] = tmp70;
                                                           cResult[59] = tmp73;
@@ -1698,7 +1698,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const items2 = [tmp31, ,];
           const items3 = [tmp6.main];
           let str;
-          const SafeAreaPaddingView = tmp2(6619).SafeAreaPaddingView;
+          const SafeAreaPaddingView = tmp2(6626).SafeAreaPaddingView;
           if (useCategoryImage) {
             str = "rgba(0, 0, 0, 0.3)";
           }
@@ -1709,7 +1709,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj9 = { style: tmp6.headerLeading, children: showOrbBalancePill };
           if (showOrbBalancePill) {
             const obj10 = { initialRenderedBalance: prop, balance };
-            showOrbBalancePill = tmp33(tmp2(11000).BalanceWidgetPill, obj10);
+            showOrbBalancePill = tmp33(tmp2(11013).BalanceWidgetPill, obj10);
           }
           items4 = [tmp33(closure_8, obj9)];
           let toHexStringResult;
@@ -1767,7 +1767,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             tmp32Result2 = null;
             if (require("CollectiblesItemType").CollectiblesItemType.NAMEPLATE === type) {
               const obj19 = { user: currentUser, nameplate: product.items[0], animate: true };
-              tmp32Result2 = tmp32(tmp2(10999).NameplatePreview, obj19);
+              tmp32Result2 = tmp32(tmp2(11012).NameplatePreview, obj19);
             }
           }
           items7 = [tmp33(View, obj13)];
@@ -1783,7 +1783,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               style: tmp6.title,
               children: intl3.format(require("intl").t.YNaxMp, obj22),
             };
-            const Text = tmp2(4886).Text;
+            const Text = tmp2(4892).Text;
             intl3 = tmp2(1126).intl;
             obj22 = { itemName: product.name };
             const items9 = [tmp33(Text, obj21)];
@@ -1793,7 +1793,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               style: tmp6.title,
               children: formatResult,
             };
-            const Text2 = tmp2(4886).Text;
+            const Text2 = tmp2(4892).Text;
             const tmp2Result14 = require("CollectiblesUtils");
             let result = tmp2Result14.isPremiumCollectiblesProduct(product);
             const intl4 = tmp2(1126).intl;
@@ -1814,7 +1814,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           items5[1] = closure_13(closure_7, obj12);
           const obj28 = { style: tmp6.footer, children: tmp33(closure_8, obj29) };
           obj29 = { style: tmp6.cta, children: tmp33(Button, obj31) };
-          Button = tmp2(5594).Button;
+          Button = tmp2(5601).Button;
           if (canUseNow) {
             const obj30 = {
               loading: isApplying,

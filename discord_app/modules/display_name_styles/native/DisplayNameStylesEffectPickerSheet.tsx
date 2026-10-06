@@ -2,7 +2,7 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl3 from "../../../intl/index.native.tsx";
-import _modDef2883 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2911 from "../intl/DisplayNameStyles.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import UsernameWithEffectsDefault from "UsernameWithEffects.tsx";
@@ -396,11 +396,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       first = undefined;
       closure_5 = undefined;
       const tmp = closure_9();
-      let obj = userId(7841);
+      let obj = userId(7852);
       const bottomSheetRef = obj.useBottomSheetRef().bottomSheetRef;
-      let obj2 = userId(15158);
+      let obj2 = userId(15173);
       const visibleEffectOrder = obj2.useVisibleEffectOrder();
-      const obj3 = userId(15159);
+      const obj3 = userId(15174);
       const displayNameStylesNewEffects = obj3.useDisplayNameStylesNewEffects(visibleEffectOrder);
       ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
       [first, closure_5] = first.useState(selectedEffectId);
@@ -412,12 +412,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp9 = null;
       if (null != userId) {
         const obj4 = { ref: bottomSheetRef, header: closure_7(tmp12, obj5), children: closure_7(closure_5, obj7) };
-        BottomSheet = tmp2(6645).BottomSheet;
-        obj5 = { title: intl.string(onSelectEffect(2883).RVtMxT), trailing: closure_7(Button, obj6) };
-        tmp12 = onSelectEffect(15163);
+        BottomSheet = tmp2(6652).BottomSheet;
+        obj5 = { title: intl.string(onSelectEffect(2911).RVtMxT), trailing: closure_7(Button, obj6) };
+        tmp12 = onSelectEffect(15178);
         intl = tmp2(1126).intl;
         obj6 = { text: intl2.string(userId(1126).t.XqMe3N), onPress: tmp8, variant: "primary", size: "sm" };
-        Button = tmp2(5594).Button;
+        Button = tmp2(5601).Button;
         intl2 = tmp2(1126).intl;
         obj7 = { style: tmp.container, children: closure_7(closure_5, obj8) };
         obj8 = { style: tmp.contentContainer, children: closure_7(Stack, obj9) };
@@ -442,7 +442,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             return closure_7(closure_1_10, obj, effectId);
           }),
         };
-        Stack = tmp2(5593).Stack;
+        Stack = tmp2(5600).Stack;
         tmp9 = closure_7(BottomSheet, obj4);
       }
       return tmp9;
@@ -466,7 +466,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const string = intl.string;
         let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
         if (OpWJ3f == null) {
-          OpWJ3f = _modDef2883.OpWJ3f;
+          OpWJ3f = _modDef2911.OpWJ3f;
         }
         const stringResult = string(OpWJ3f);
         cResult[0] = effectId;
@@ -603,7 +603,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const string = intl.string;
       let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
       if (OpWJ3f == null) {
-        OpWJ3f = _modDef2883.OpWJ3f;
+        OpWJ3f = _modDef2911.OpWJ3f;
       }
       const stringResult = string(OpWJ3f);
       const items = [tmp.effectCard];

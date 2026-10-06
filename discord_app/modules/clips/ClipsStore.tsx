@@ -316,7 +316,7 @@ obj = {
   maxAutoClips: 20,
   clipSignals: { enableDistributedSignals: true, enableGameSignals: true },
   debugTooltipsEnabled: false,
-  enableAutoclipping: "Set",
+  enableAutoclipping: "Reflect",
   showPovClipsInGallery: true,
 };
 obj = {

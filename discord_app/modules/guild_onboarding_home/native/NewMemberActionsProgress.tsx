@@ -4,7 +4,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ChannelConstants from "../../channel/ChannelConstants.tsx";
 import GuildMemberConstants from "../../guild_member/GuildMemberConstants.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import react from "../../../../_runtime/00019_react.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import GuildOnboardingHomeSettingsStore from "../GuildOnboardingHomeSettingsStore.tsx";

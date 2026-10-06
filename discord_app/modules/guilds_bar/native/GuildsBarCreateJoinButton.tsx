@@ -148,7 +148,7 @@ const memoResult = react.memo(
         obj = enabled(576);
         const cResult = obj.c(17);
         const tmp4 = closure_13();
-        const obj2 = enabled(16234);
+        const obj2 = enabled(16274);
         const guildsBarAnimatedWrapperStyles = obj2.useGuildsBarAnimatedWrapperStyles();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { location: "GuildsBarCreateJoinButton" };
@@ -157,7 +157,7 @@ const memoResult = react.memo(
         } else {
           first = cResult[0];
         }
-        const GameCommunityAddServerEntryExperiment = tmp(13527).GameCommunityAddServerEntryExperiment;
+        const GameCommunityAddServerEntryExperiment = tmp(13543).GameCommunityAddServerEntryExperiment;
         enabled = GameCommunityAddServerEntryExperiment.useConfig(first).enabled;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [SelectedGuildStore];
@@ -196,7 +196,7 @@ const memoResult = react.memo(
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
           const stringResult = intl.string(enabled(1126).t.l5WIbf);
-          const tmp16 = jsx(enabled(16294).HomeDrawerAddServerRowExpandedChildren, {});
+          const tmp16 = jsx(enabled(16334).HomeDrawerAddServerRowExpandedChildren, {});
           cResult[5] = stringResult;
           cResult[6] = tmp16;
           tmp13 = tmp16;
@@ -214,7 +214,7 @@ const memoResult = react.memo(
           tmp18 = importDefault;
         }
         if (cResult[7] !== MOBILE_GUILDBAR_ICON_DEFAULT) {
-          const tmp21 = jsx(enabled(10983).CirclePlusIcon, { size: "md", color: MOBILE_GUILDBAR_ICON_DEFAULT });
+          const tmp21 = jsx(enabled(10996).CirclePlusIcon, { size: "md", color: MOBILE_GUILDBAR_ICON_DEFAULT });
           cResult[7] = MOBILE_GUILDBAR_ICON_DEFAULT;
           cResult[8] = tmp21;
           tmp19 = tmp21;
@@ -243,7 +243,7 @@ const memoResult = react.memo(
             }
           }
         }
-        const tmp23 = jsx(tmp18(16234), {
+        const tmp23 = jsx(tmp18(16274), {
           selected: tmp10,
           circle: false,
           unread: false,
@@ -266,9 +266,9 @@ const memoResult = react.memo(
         let guildId;
         let intl;
         const tmp = closure_13();
-        obj = enabled(16234);
+        obj = enabled(16274);
         const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
-        const GameCommunityAddServerEntryExperiment = enabled(13527).GameCommunityAddServerEntryExperiment;
+        const GameCommunityAddServerEntryExperiment = enabled(13543).GameCommunityAddServerEntryExperiment;
         enabled = GameCommunityAddServerEntryExperiment.useConfig({ location: "GuildsBarCreateJoinButton" }).enabled;
         const items = [SelectedGuildStore];
         const obj2 = enabled(504);
@@ -296,12 +296,12 @@ const memoResult = react.memo(
           overState: "y",
           config: memo,
           label: intl.string(enabled(1126).t.l5WIbf),
-          expandedChildren: "CHANNEL_MEMBER_COUNT_UPDATE",
-          children: "THREAD_CREATE",
+          expandedChildren: "binary",
+          children: "prefault",
         });
         GuildsBarAnimatedItemWrapperDefault;
         intl = tmp2(1126).intl;
-        const CirclePlusIcon = tmp2(10983).CirclePlusIcon;
+        const CirclePlusIcon = tmp2(10996).CirclePlusIcon;
         const colors = nativeDefault.colors;
         return <View style={tmp.stretch}>{null}</View>;
       },

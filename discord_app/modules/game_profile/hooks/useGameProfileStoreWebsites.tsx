@@ -24,13 +24,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = id1(576);
       const cResult = obj.c(8);
       id = undefined;
-      const useSteamWebsiteUrl = id1(8334).useSteamWebsiteUrl;
-      id1(8334);
+      const useSteamWebsiteUrl = id1(8367).useSteamWebsiteUrl;
+      id1(8367);
       if (id != null) {
         id = id.id;
       }
       const steamWebsiteUrl = useSteamWebsiteUrl(id);
-      const tmp7 = steamReleaseStatus(8336)(id);
+      const tmp7 = steamReleaseStatus(8369)(id);
       id1 = undefined;
       if (id != null) {
         id1 = id.id;
@@ -85,13 +85,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmp12 =
             null == steamWebsiteUrl ||
-            steamReleaseStatus === id1(8335).SteamReleaseStatus.RETIRED_ABANDONED ||
+            steamReleaseStatus === id1(8368).SteamReleaseStatus.RETIRED_ABANDONED ||
             found.some(
               (category) => category.category === id1(dependencyMap[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM,
             );
           if (!tmp12) {
             const push = found.push;
-            const obj2 = { category: id1(8333).ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
+            const obj2 = { category: id1(8366).ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
             push(obj2);
           }
           const _Symbol = Symbol;

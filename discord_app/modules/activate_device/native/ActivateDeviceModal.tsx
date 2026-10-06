@@ -64,7 +64,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
       }
       if (cResult[3] !== tmp4) {
-        const tmp11 = jsx(userCode(6496).Navigator, {
+        const tmp11 = jsx(userCode(6503).Navigator, {
           screens: tmp4,
           initialRouteName: constants.ACTIVATE_DEVICE,
           headerBackTitle: tmp6,
@@ -107,7 +107,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         return { [closure_2_5.ACTIVATE_DEVICE]: obj };
       }, items);
-      const Navigator = userCode(6496).Navigator;
+      const Navigator = userCode(6503).Navigator;
       let intl = userCode(1126).intl;
       return (
         <Navigator

@@ -46,7 +46,7 @@ const memoResult = react.memo(
           }
           const tmpResult = tmp(504);
           const stateFromStores = tmpResult.useStateFromStores(first, tmp7);
-          const tmpResult3 = tmp(7172);
+          const tmpResult3 = tmp(7185);
           const canBypassSlowmode = tmpResult3.useCanBypassSlowmode(channel);
           if (hasTypingText) {
             let tmp13;
@@ -82,7 +82,7 @@ const memoResult = react.memo(
                 color: "interactive-text-default",
                 children: tmp10,
               };
-              const tmp16 = closure_5(tmp(4886).Text, obj2);
+              const tmp16 = closure_5(tmp(4892).Text, obj2);
               cResult[9] = tmp10;
               cResult[10] = tmp16;
               tmp14 = tmp16;
@@ -91,7 +91,7 @@ const memoResult = react.memo(
             }
             if (cResult[11] !== tmp4.icon) {
               const obj3 = { style: tmp4.icon, size: "xxs" };
-              const tmp19 = closure_5(tmp(11227).TimerIcon, obj3);
+              const tmp19 = closure_5(tmp(11240).TimerIcon, obj3);
               cResult[11] = tmp4.icon;
               cResult[12] = tmp19;
               tmp17 = tmp19;
@@ -111,7 +111,7 @@ const memoResult = react.memo(
             }
             const obj4 = { onPress: tmp13, style: tmp4.container, children: items1 };
             items1 = [tmp14, tmp17];
-            const tmp22 = closure_6(tmp(5909).PressableOpacity, obj4);
+            const tmp22 = closure_6(tmp(5916).PressableOpacity, obj4);
             cResult[13] = tmp13;
             cResult[14] = tmp4.container;
             cResult[15] = tmp14;
@@ -126,7 +126,7 @@ const memoResult = react.memo(
             }
             tmp10 = tmp11;
           }
-          const tmpResult4 = tmp(7172);
+          const tmpResult4 = tmp(7185);
           const slowmodeIndicatorText = tmpResult4.getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode);
           cResult[4] = canBypassSlowmode;
           cResult[5] = stateFromStores;

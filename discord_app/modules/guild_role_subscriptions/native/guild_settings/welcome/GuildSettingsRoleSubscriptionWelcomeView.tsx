@@ -76,7 +76,7 @@ function StartEarningButton(isTermsAccepted) {
         navigation.push(constants.SECURITY);
       },
     };
-    const tmp2 = asyncRequire(17883, dependencyMap.paths);
+    const tmp2 = asyncRequire(17929, dependencyMap.paths);
     return openLazy(tmp2, EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, obj);
   }, items1);
   const obj2 = {

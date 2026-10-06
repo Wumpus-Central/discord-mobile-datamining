@@ -20,7 +20,7 @@ let c9;
 let metroImportAll;
 let metroImportDefault;
 function createPollCreationImageForMedia(mediaURL, status) {
-  const obj = { mediaAttachmentState: obj2, emoji: "Array", stickerId: "toCharArray$esjava$1" };
+  const obj = { mediaAttachmentState: obj2, emoji: "Array", stickerId: "parent" };
   return obj;
 }
 let react = react_mod;
@@ -483,7 +483,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     mediaURL: objectURL,
                   },
                   emoji: "Array",
-                  stickerId: "toCharArray$esjava$1",
+                  stickerId: "parent",
                 };
                 ({ status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL });
                 Ae(obj, arg1);
@@ -495,7 +495,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     mediaURL: objectURL,
                   },
                   emoji: "Array",
-                  stickerId: "toCharArray$esjava$1",
+                  stickerId: "parent",
                 };
                 ({ status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL });
                 Ae(obj4, arg1);
@@ -525,7 +525,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       mediaURL: objectURL,
                     },
                     emoji: "Array",
-                    stickerId: "toCharArray$esjava$1",
+                    stickerId: "parent",
                   };
                   ({ status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL });
                   Ae(obj, arg1);
@@ -537,7 +537,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       mediaURL: objectURL,
                     },
                     emoji: "Array",
-                    stickerId: "toCharArray$esjava$1",
+                    stickerId: "parent",
                   };
                   ({ status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL });
                   Ae(obj4, arg1);
@@ -581,7 +581,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       mediaURL: objectURL,
                     },
                     emoji: "Array",
-                    stickerId: "toCharArray$esjava$1",
+                    stickerId: "parent",
                   };
                   ({ status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL });
                   Ae(obj, arg1);
@@ -593,7 +593,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       mediaURL: objectURL,
                     },
                     emoji: "Array",
-                    stickerId: "toCharArray$esjava$1",
+                    stickerId: "parent",
                   };
                   ({ status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL });
                   Ae(obj4, arg1);
@@ -662,7 +662,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   mediaURL: objectURL,
                 },
                 emoji: "Array",
-                stickerId: "toCharArray$esjava$1",
+                stickerId: "parent",
               };
               ({ status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL });
               Ae(obj, arg1);
@@ -674,7 +674,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   mediaURL: objectURL,
                 },
                 emoji: "Array",
-                stickerId: "toCharArray$esjava$1",
+                stickerId: "parent",
               };
               ({ status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL });
               Ae(obj4, arg1);
@@ -695,7 +695,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 mediaURL: objectURL,
               },
               emoji: "Array",
-              stickerId: "toCharArray$esjava$1",
+              stickerId: "parent",
             };
             ({ status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL });
             Ae(obj, arg1);
@@ -707,7 +707,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 mediaURL: objectURL,
               },
               emoji: "Array",
-              stickerId: "toCharArray$esjava$1",
+              stickerId: "parent",
             };
             ({ status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL });
             Ae(obj4, arg1);
@@ -1047,7 +1047,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = {
           mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL },
           emoji: "Array",
-          stickerId: "toCharArray$esjava$1",
+          stickerId: "parent",
         };
         ({ status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL });
         callback2(obj, arg1);
@@ -1059,14 +1059,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             mediaURL: objectURL,
           },
           emoji: "Array",
-          stickerId: "toCharArray$esjava$1",
+          stickerId: "parent",
         };
         ({ status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL });
         callback2(obj4, arg1);
       }, items2);
       const callback6 = obj.useCallback((emoji, arg1) => {
         callback3(id, arg1);
-        const obj = { emoji, stickerId: "Array", mediaAttachmentState: "toCharArray$esjava$1" };
+        const obj = { emoji, stickerId: "Array", mediaAttachmentState: "parent" };
         callback2(obj, arg1);
       }, items3);
       const items4 = [answers.length < first1];

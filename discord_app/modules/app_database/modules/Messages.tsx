@@ -371,18 +371,21 @@ class Messages {
     }
     messagesTransactionResult.trimChannel(guild_id, channelId, SaveableChannelsStore.saveLimit(channelId));
   }
-  replaceChannel(arg0, channelId, arr, database) {
+  replaceChannel(arg0, channelId, arg2, database) {
     let closure_2;
     let closure_0 = arg0;
     importDefault = channelId;
-    const obj = DatabaseDaosDefault;
+    let obj = DatabaseDaosDefault;
     const messagesTransactionResult = obj.messagesTransaction(database);
     dependencyMap = GatewayConnectionStore.lastTimeConnectedChanged();
+    const items = [];
     const saveLimitResult = SaveableChannelsStore.saveLimit(channelId);
-    let substr = arr;
-    if (arr.length > saveLimitResult) {
-      substr = arr.slice(arr.length - saveLimitResult);
-    }
+    HermesBuiltin.arraySpread(items, arg2, 0);
+    const sorted = items.sort((id, id2) => {
+      const obj = channelId(closure_2[11]);
+      return obj.compare(id2.id, id.id);
+    });
+    const substr = sorted.slice(0, saveLimitResult);
     messagesTransactionResult.replaceChannel(
       arg0,
       channelId,

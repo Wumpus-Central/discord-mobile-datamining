@@ -190,7 +190,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const toUser = guild.toUser;
       const items = [guild, toUser];
       const memo = react.useMemo(() => getScreens(guild, toUser), items);
-      const Navigator = guild(6496).Navigator;
+      const Navigator = guild(6503).Navigator;
       const intl = guild(1126).intl;
       return (
         <Navigator

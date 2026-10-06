@@ -16,7 +16,7 @@ export const showSimpleActionSheet = function showSimpleActionSheet(key) {
       obj.hideActionSheet(key);
     },
   };
-  const tmp3 = key(1987)(6695, dependencyMap.paths);
+  const tmp3 = key(1987)(6702, dependencyMap.paths);
   const merged1 = Object.assign(merged);
   openLazy(tmp3, key, obj, stackingBehavior);
 };

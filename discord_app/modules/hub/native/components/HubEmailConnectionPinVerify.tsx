@@ -1,6 +1,6 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionPinVerify.tsx
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04816_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04822_AssetRegistry.js";
 import HubJoinManagerDefault from "../../HubJoinManager.tsx";
 import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";

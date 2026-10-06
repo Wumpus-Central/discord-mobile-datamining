@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const GuildChannelStore = GuildChannelStore2;
 let _require;
 
-const f131507 = (channel) => channel.channel;
+const f131726 = (channel) => channel.channel;
 let closure_3 = GuildChannelStore2.GUILD_SELECTABLE_CHANNELS_KEY;
 function getChannelsAllowedToUnlink(arg0) {
   let items;
@@ -29,7 +29,7 @@ function getChannelsAllowedToUnlink(arg0) {
       const obj = closure_2_0(closure_2_1[2]);
       return obj.canUnlinkLobbyChannel(channel.channel, closure_0);
     });
-    items = found.map(f131507);
+    items = found.map(f131726);
   }
   return items;
 }
@@ -62,7 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   const obj = closure_2_0(closure_2_1[2]);
                   return obj.canUnlinkLobbyChannel(channel.channel, closure_0);
                 });
-                items = found.map(f131507);
+                items = found.map(f131726);
               }
               return items;
             }
@@ -94,7 +94,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj = closure_2_0(closure_2_1[2]);
                 return obj.canUnlinkLobbyChannel(channel.channel, closure_0);
               });
-              items = found.map(f131507);
+              items = found.map(f131726);
             }
             return items;
           }

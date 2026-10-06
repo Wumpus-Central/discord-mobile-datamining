@@ -8,7 +8,7 @@ import useAuthorWithProcessedColor from "useAuthorWithProcessedColor.tsx";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import GuildLeaderboardSystemMessageCopy from "../../../../guild_space/gaming_leaderboard/GuildLeaderboardSystemMessageCopy.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07759_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/07770_AssetRegistry.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 import createStyles from "../../../../../design/components/Styles/native/createStyles.tsx";

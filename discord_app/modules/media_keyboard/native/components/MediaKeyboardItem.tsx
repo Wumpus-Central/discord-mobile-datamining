@@ -8,7 +8,7 @@ import ReanimatedRexport2 from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/10123_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/10136_AssetRegistry.js";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import NativeMenuActionCreatorsDefault from "../../../native_menu/native/NativeMenuActionCreators.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";

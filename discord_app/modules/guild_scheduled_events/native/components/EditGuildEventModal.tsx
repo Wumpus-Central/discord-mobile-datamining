@@ -185,7 +185,7 @@ const memoResult = memo(
         let onClose;
         let right;
         let tmp8;
-        const f99769 = () => {
+        const f99947 = () => {
           obj = KeyboardManagerUtilsAll;
           const result = obj.dismissGlobalKeyboard();
           if (first1) {
@@ -306,7 +306,7 @@ const memoResult = memo(
           }),
           1,
         )[0];
-        [c6, tmp8] = first1(require("LazyAPIPromise")(f99769), 2);
+        [c6, tmp8] = first1(require("LazyAPIPromise")(f99947), 2);
         constants = {
           guild,
           guildEvent,
@@ -363,7 +363,7 @@ const memoResult = memo(
           },
           fullscreen: true,
         };
-        first1(require("LazyAPIPromise")(f99769), 2);
+        first1(require("LazyAPIPromise")(f99947), 2);
         const CHANNEL_SELECTOR = guild(guildEvent[11]).EditGuildEventScreens.CHANNEL_SELECTOR;
         const CHANNEL_SELECTOR2 = guild(guildEvent[11]).EditGuildEventScreens.CHANNEL_SELECTOR;
         obj3[CHANNEL_SELECTOR] = obj4;

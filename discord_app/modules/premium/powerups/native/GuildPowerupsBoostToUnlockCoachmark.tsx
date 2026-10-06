@@ -46,7 +46,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         return obj;
       }, items);
-      markAsDismissed(16096)(targetRef, guildId, memo);
+      markAsDismissed(16135)(targetRef, guildId, memo);
       return null;
     };
 const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx");

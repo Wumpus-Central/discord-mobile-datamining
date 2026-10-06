@@ -355,27 +355,27 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = quest(504);
       const items2 = [UserStore];
       const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-      const obj2 = quest(10005);
+      const obj2 = quest(10018);
       const defaultRewardName = obj2.getDefaultRewardName(quest.config, stateFromStores);
-      BottomSheet = quest(6645).BottomSheet;
+      BottomSheet = quest(6652).BottomSheet;
       const obj3 = { direction: "vertical", spacing: memo(587).space.PX_16, style: tmp.wrapper, children: items5 };
-      const Stack = quest(5593).Stack;
+      const Stack = quest(5600).Stack;
       const obj4 = { align: "center", direction: "horizontal", spacing: memo(587).space.PX_16, children: items3 };
-      const Stack2 = quest(5593).Stack;
-      items3 = [closure_6(memo(10950), { quest, height: 56, width: 56, withAnimation: true })];
+      const Stack2 = quest(5600).Stack;
+      items3 = [closure_6(memo(10963), { quest, height: 56, width: 56, withAnimation: true })];
       const obj5 = {
         direction: "vertical",
         spacing: memo(587).space.PX_4,
         style: tmp.rewardDetailsCopy,
         children: items4,
       };
-      const Stack3 = quest(5593).Stack;
+      const Stack3 = quest(5600).Stack;
       const obj6 = { variant: "eyebrow", color: "text-subtle", children: intl.string(quest(1126).t["jyYgZ+"]) };
-      const Text = quest(4886).Text;
+      const Text = quest(4892).Text;
       intl = quest(1126).intl;
       items4 = [
         closure_6(Text, obj6),
-        closure_6(quest(4886).Text, {
+        closure_6(quest(4892).Text, {
           variant: "heading-lg/semibold",
           color: "text-strong",
           children: defaultRewardName,
@@ -390,7 +390,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { style: tmp.separator };
         items6 = [closure_6(View, obj8)];
         const obj9 = { variant: "text-md/normal", color: "text-subtle", children: memo1 };
-        items6[1] = closure_6(tmp4(4886).Text, obj9);
+        items6[1] = closure_6(tmp4(4892).Text, obj9);
         tmp9Result = closure_7(closure_8, obj7);
       }
       items5[1] = tmp9Result;

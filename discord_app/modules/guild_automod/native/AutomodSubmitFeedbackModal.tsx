@@ -6,7 +6,7 @@ import Constants from "../../../Constants.tsx";
 import intl4 from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04809_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04815_AssetRegistry.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";

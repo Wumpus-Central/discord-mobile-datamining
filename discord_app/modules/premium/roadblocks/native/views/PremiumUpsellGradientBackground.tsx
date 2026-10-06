@@ -3,7 +3,7 @@ import react_native from "../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../../_runtime/00576_react.js";
 import ConstantsIOS from "../../../../../ConstantsIOS.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
 import ColorConstants from "../../../../colors/native/ColorConstants.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
 import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";

@@ -11,7 +11,7 @@ import NativePermissionConstants from "../../modules/native_permissions/NativePe
 import AgeGateUtils from "../../modules/age_gate/AgeGateUtils.tsx";
 import SelectedChannelActionCreatorsDefault from "../../actions/SelectedChannelActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
-import RunAfterInteractionsUtils from "RunAfterInteractionsUtils.tsx";
+import AgeGateModalActionCreators from "../../modules/age_gate/AgeGateModalActionCreators.tsx";
 import StageChannelActionCreatorExtras from "../../modules/stage_channels/StageChannelActionCreatorExtras.native.tsx";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../../_runtime/00019_react.js";
@@ -169,12 +169,14 @@ export const isVoiceChannelModalKey = function isVoiceChannelModalKey(openModalK
 };
 export { openChannelCallModal };
 export const maybeShowAgeGateModal = function maybeShowAgeGateModal(channelId) {
-  let obj = AgeGateUtils;
+  _require = channelId;
+  let obj = require("AgeGateUtils");
+  const tmp = _require;
   if (obj.shouldShowAgeGateForChannelId(channelId)) {
-    const tmpResult = RunAfterInteractionsUtils;
+    const tmpResult = tmp(6541);
     tmpResult.runAfterInteractions(() => {
-      const obj = require("AgeGateModalActionCreators");
-      obj.openAgeGateModal(constants.NSFW_VOICE_CHANNEL);
+      const obj = AgeGateModalActionCreators;
+      obj.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL, channelId);
     }, 150);
   }
 };
@@ -182,7 +184,7 @@ export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   const obj = { channel };
-  const tmp2 = asyncRequire(13576, dependencyMap.paths);
+  const tmp2 = asyncRequire(13592, dependencyMap.paths);
   openLazy(tmp2, "" + c17 + "-" + channel.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(id) {

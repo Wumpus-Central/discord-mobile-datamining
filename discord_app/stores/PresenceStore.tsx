@@ -17,7 +17,7 @@ let hasOwnProperty;
 let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-const f89725 = (party) => {
+const f89863 = (party) => {
   party = party.party;
   let id;
   const application_id = party.application_id;
@@ -173,7 +173,7 @@ function flattenPresence(id) {
           const self = this;
           const self2 = this;
           const items1 = [];
-          map = new Map(reversed.map(f89725));
+          map = new Map(reversed.map(f89863));
           HermesBuiltin.arraySpread(items1, map.values(), 0);
           tmp7 = items1;
         }
@@ -201,7 +201,7 @@ function flattenPresence(id) {
       const self3 = this;
       const self4 = this;
       const items3 = [];
-      map1 = new Map(reversed1.map(f89725));
+      map1 = new Map(reversed1.map(f89863));
       HermesBuiltin.arraySpread(items3, map1.values(), 0);
       tmp19 = items3;
     }
@@ -285,7 +285,7 @@ function updatePresence(arg0) {
         const self = this;
         const self2 = this;
         const items2 = [];
-        map = new Map(reversed.map(f89725));
+        map = new Map(reversed.map(f89863));
         HermesBuiltin.arraySpread(items2, map.values(), 0);
         tmp14 = items2;
       }
@@ -346,7 +346,7 @@ function updatePresenceInConnectionOpen(arg0) {
         const self = this;
         const self2 = this;
         const items2 = [];
-        map = new Map(reversed.map(f89725));
+        map = new Map(reversed.map(f89863));
         HermesBuiltin.arraySpread(items2, map.values(), 0);
         tmp14 = items2;
       }

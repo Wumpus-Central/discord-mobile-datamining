@@ -76,7 +76,7 @@ export default function CustomStatusPreview(user) {
     obj.dismissKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
     const obj3 = { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji };
-    obj2.openLazy(asyncRequire(10839, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj3, "stack");
+    obj2.openLazy(asyncRequire(10852, dependencyMap.paths), "UserProfileCustomStatusActionSheet", obj3, "stack");
   }, items);
   let obj2 = { theme, primaryColor, secondaryColor, children: closure_8(View, obj3) };
   obj3 = { style: items1, children: items2 };

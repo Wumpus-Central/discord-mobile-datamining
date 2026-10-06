@@ -59,7 +59,7 @@ let obj = function _navigateToSocialLayerStorefrontWithGuildPreview() {
             joinedAt = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === c3) {

@@ -240,7 +240,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       }
       tmp3(isGameInvitesChannelResult, "requires a game invites channel");
       let gameId;
-      const useGame = tmp(6812).useGame;
+      const useGame = tmp(6822).useGame;
       require("useGame");
       if (stateFromStores != null) {
         gameId = stateFromStores.gameId;
@@ -291,7 +291,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       let application;
       const tmp = closure_15(arg0);
-      let obj = application(6658);
+      let obj = application(6665);
       application = obj.useApplication(tmp);
       const items = [application];
       return useMemo(() => {

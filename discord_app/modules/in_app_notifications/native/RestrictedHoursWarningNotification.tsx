@@ -46,7 +46,7 @@ const memoResult = react.memo(
         const tmp4 = closure_9();
         type = notification.type;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-          const ThemeDarkIcon = tmp(12544).ThemeDarkIcon;
+          const ThemeDarkIcon = tmp(12559).ThemeDarkIcon;
           const tmp8 = <ThemeDarkIcon size="sm" color={nativeDefault.colors.WHITE} />;
           cResult[0] = tmp8;
           first = tmp8;
@@ -88,7 +88,7 @@ const memoResult = react.memo(
           tmp14 = cResult[6];
         }
         if (cResult[7] !== notification.subtitle) {
-          const tmp18 = jsx(type(4886).Text, {
+          const tmp18 = jsx(type(4892).Text, {
             variant: "redesign/message-preview/medium",
             color: "text-subtle",
             lineClamp,
@@ -113,7 +113,7 @@ const memoResult = react.memo(
             }
           }
         }
-        const tmp20 = jsx(type(12516).NotificationPressable, {
+        const tmp20 = jsx(type(12531).NotificationPressable, {
           icon: tmp9,
           header: tmp13,
           children: tmp15,
@@ -132,7 +132,7 @@ const memoResult = react.memo(
         notification = notification.notification;
         const type = notification.type;
         let obj2 = { size: "sm", color: type(587).colors.WHITE };
-        const ThemeDarkIcon = notification(12544).ThemeDarkIcon;
+        const ThemeDarkIcon = notification(12559).ThemeDarkIcon;
         const items = [notification.title];
         const items1 = [type];
         const tmp = <View style={closure_9().iconContainer}>{null}</View>;
@@ -148,7 +148,7 @@ const memoResult = react.memo(
           const obj4 = { screen: metroImportDefault.FAMILY_CENTER };
           obj3.openUserSettings(obj4);
         }, items1);
-        const NotificationPressable = notification(12516).NotificationPressable;
+        const NotificationPressable = notification(12531).NotificationPressable;
         let obj4 = {
           variant: "redesign/message-preview/medium",
           color: "text-subtle",

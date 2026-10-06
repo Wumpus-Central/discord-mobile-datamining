@@ -13,7 +13,7 @@ import react_native2 from "../../../../../../discord_common/js/packages/design/h
 import utils_ColorDefault from "../../../../../utils/Color.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ThemedGradient from "../../../../client_themes/native/ThemedGradient.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/15094_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/15109_AssetRegistry.js";
 import SynchronizeIconNativeDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
 import ThemeStore from "../../../ThemeStore.tsx";

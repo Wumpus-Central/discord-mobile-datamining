@@ -3,7 +3,7 @@ import Constants from "../../Constants.tsx";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f94867 = (mimeType) => {
+const f95007 = (mimeType) => {
   let str = mimeType.mimeType;
   if (str == null) {
     str = "unknown";
@@ -17,7 +17,7 @@ export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
   let mapped;
   if (null != fileItems.fileItems) {
     fileItems = fileItems.fileItems;
-    mapped = fileItems.map(f94867);
+    mapped = fileItems.map(f95007);
   } else {
     mapped = [];
   }
@@ -31,5 +31,5 @@ export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
   });
 };
 export const getAttachmentMimeTypes = function getAttachmentMimeTypes(items) {
-  return items.map(f94867);
+  return items.map(f95007);
 };

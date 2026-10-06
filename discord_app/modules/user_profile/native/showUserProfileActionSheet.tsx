@@ -19,7 +19,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
     const isBlockedResult = RelationshipStore.isBlocked(ignoreBlockedSpeedBump.userId);
     const isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      const tmp8 = asyncRequire(7853, dependencyMap.paths);
+      const tmp8 = asyncRequire(7864, dependencyMap.paths);
       const _HermesInternal = HermesInternal;
       const openLazy = ActionSheetActionCreatorsDefault.openLazy;
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
@@ -32,7 +32,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       openLazy(tmp8, combined, obj, str);
     }
   }
-  const tmp21 = asyncRequire(7871, dependencyMap.paths);
+  const tmp21 = asyncRequire(7882, dependencyMap.paths);
   const openLazy2 = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;

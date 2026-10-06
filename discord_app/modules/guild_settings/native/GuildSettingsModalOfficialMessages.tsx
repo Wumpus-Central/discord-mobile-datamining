@@ -13,7 +13,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import TableRowConstants from "../../../design/components/TableRow/native/TableRowConstants.tsx";
 import GuildOfficialMessageUtils from "../../messages/GuildOfficialMessageUtils.tsx";
 import HeaderActionButton2 from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/15102_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/15117_AssetRegistry.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
@@ -526,7 +526,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
       },
     };
     ActionSheetActionCreatorsDefault;
-    const tmp2 = asyncRequire(16231, dependencyMap.paths);
+    const tmp2 = asyncRequire(16271, dependencyMap.paths);
     intl = intl4.intl;
     openLazy(tmp2, "RoleColorPicker", obj);
   }, items5);

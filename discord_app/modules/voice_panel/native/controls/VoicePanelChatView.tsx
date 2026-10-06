@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04796_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04802_AssetRegistry.js";
 import ChannelActionCreatorsDefault from "../../../../actions/ChannelActionCreators.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ThemedGradientDefault from "../../../client_themes/native/ThemedGradient.tsx";
@@ -202,7 +202,7 @@ const memoResult1 = react.memo(
                   }
                   preloadResult = preload(tmp2, channelId);
                   return () => {
-                    /* body not rendered: F141959 */
+                    /* body not rendered: F142165 */
                   };
                 }
               }
@@ -243,7 +243,7 @@ const memoResult1 = react.memo(
                 }
                 preloadResult = preload(tmp2, channelId);
                 return () => {
-                  /* body not rendered: F141959 */
+                  /* body not rendered: F142165 */
                 };
               }
             }

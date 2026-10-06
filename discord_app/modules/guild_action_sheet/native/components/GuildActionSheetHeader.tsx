@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Constants from "../../../../Constants.tsx";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/08398_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/08431_AssetRegistry.js";
 import GuildPopoutActionCreators from "../../../guild_profile/GuildPopoutActionCreators.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -28,7 +28,7 @@ let obj3;
 let size;
 let tmp4;
 let unpackModuleId;
-const AssetRegistryDefault2 = tmp4(8401);
+const AssetRegistryDefault2 = tmp4(8434);
 ({ View: closure_4, Image: hasOwnProperty } = react_native);
 const GuildFeatures = Constants.GuildFeatures;
 ({ jsx: c10, jsxs: unpackModuleId } = Fragment);
@@ -96,9 +96,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = tmp(1126).intl;
           const stringResult1 = intl2.string(require("intl").t.op2cJ6);
           importDefault = stringResult1;
-          const GlobeEarthIcon = tmp(8551).GlobeEarthIcon;
+          const GlobeEarthIcon = tmp(8584).GlobeEarthIcon;
           _require = GlobeEarthIcon;
-          tmp9Result = tmp9(8401);
+          tmp9Result = tmp9(8434);
           tmp11 = stringResult1;
           tmp12 = GlobeEarthIcon;
         }
@@ -191,10 +191,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = GlobeEarthIcon(1126).intl;
       importDefault = intl.string(GlobeEarthIcon(1126).t.TME4LJ);
       let tmp4Result = AssetRegistryDefault;
-      if (guildVisibility === GlobeEarthIcon(8397).GuildVisibility.PUBLIC) {
+      if (guildVisibility === GlobeEarthIcon(8430).GuildVisibility.PUBLIC) {
         const intl2 = tmp2(1126).intl;
         importDefault = intl2.string(tmp2(1126).t.op2cJ6);
-        GlobeEarthIcon = tmp2(8551).GlobeEarthIcon;
+        GlobeEarthIcon = tmp2(8584).GlobeEarthIcon;
         tmp4Result = AssetRegistryDefault2;
       }
       let obj = {
@@ -207,7 +207,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         },
         children: items,
       };
-      const PressableOpacity = tmp2(5909).PressableOpacity;
+      const PressableOpacity = tmp2(5916).PressableOpacity;
       let obj2 = { style: tmp.communityPillIcon, source: tmp4Result, disableColor: true };
       items = [closure_10(GlobeEarthIcon(1188).Icon, obj2)];
       const obj3 = {
@@ -216,7 +216,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.communityPillText,
         children: intl3.string(GlobeEarthIcon(1126).t.K7iRig),
       };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       intl3 = tmp2(1126).intl;
       items[1] = closure_10(Text, obj3);
       return closure_11(PressableOpacity, obj);

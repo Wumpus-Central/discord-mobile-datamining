@@ -63,7 +63,7 @@ let body = function _saveProfileAndAccountRequest() {
             token = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (body === 1) {
@@ -288,10 +288,10 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   }
   const obj4 = {
     headers: tmpResult.buildHeadersForMd5({
-      [avatar(6482).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+      [avatar(6489).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
     }),
   };
-  tmpResult = tmp(6478);
+  tmpResult = tmp(6485);
   const promise = saveProfileAndAccountRequest(user, obj4);
   return promise.then(
     (result) => {

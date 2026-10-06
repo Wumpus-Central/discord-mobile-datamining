@@ -279,15 +279,15 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       ({ bottom, left } = top);
       ({ right, leading: dependencyMap } = top);
       const children = top.emojiComponent;
-      let obj = top(4612);
+      let obj = top(4618);
       const sharedValue = obj.useSharedValue(0);
-      const obj2 = top(4612);
+      const obj2 = top(4618);
       const sharedValue1 = obj2.useSharedValue(0);
-      const obj3 = top(4612);
+      const obj3 = top(4618);
       const sharedValue2 = obj3.useSharedValue(0.2);
-      let obj4 = top(4612);
+      let obj4 = top(4618);
       const sharedValue3 = obj4.useSharedValue(0);
-      const obj5 = top(5590);
+      const obj5 = top(5597);
       const mountLayoutEffect = obj5.useMountLayoutEffect(() => {
         const obj = {
           positionValue: sharedValue,
@@ -298,7 +298,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         };
         randomizeAnimationValues(obj);
       });
-      const obj6 = top(4612);
+      const obj6 = top(4618);
       class S {
         constructor() {
           let obj4;
@@ -346,7 +346,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
       S.__workletHash = 17194622427708;
       S.__initData = __initData2;
       const style = obj6.useAnimatedStyle(S);
-      return closure_11(left(4612).View, { style, children });
+      return closure_11(left(4618).View, { style, children });
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let closure_18 = ReactCompilerGating.isReactCompilerEnabled()

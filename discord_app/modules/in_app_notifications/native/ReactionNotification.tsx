@@ -1152,7 +1152,7 @@ export default function ReactionNotification(notification) {
   const callback1 = obj.useCallback(() => {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { channelId: id };
-    return obj.pushLazy(asyncRequire(12495, dependencyMap.paths), obj2, "in-app-notification-settings-modal");
+    return obj.pushLazy(asyncRequire(12510, dependencyMap.paths), obj2, "in-app-notification-settings-modal");
   }, items4);
   let obj3 = {
     icon: closure_10(ReactorNotificationIcon, { notification, isMilestone: result }),

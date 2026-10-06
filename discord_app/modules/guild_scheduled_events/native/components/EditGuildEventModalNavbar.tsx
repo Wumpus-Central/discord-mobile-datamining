@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import intl3 from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04809_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04815_AssetRegistry.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";

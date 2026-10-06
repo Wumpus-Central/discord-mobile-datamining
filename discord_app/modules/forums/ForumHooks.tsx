@@ -51,7 +51,7 @@ let closure_20;
 let closure_21;
 let closure_22;
 let closure_23;
-const f94990 = (burst_count) => burst_count.burst_count;
+const f95130 = (burst_count) => burst_count.burst_count;
 let _asyncToGenerator = _asyncToGenerator_mod;
 let ActiveThreadsStore = ActiveThreadsStore_mod;
 let ThreadMessageStore = ThreadMessageStore_mod;
@@ -473,7 +473,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       if (0 !== arr.length) {
         let tmp7;
         if (cResult[2] !== arr) {
-          const items = [(count) => count.count + count.burst_count, f94990];
+          const items = [(count) => count.count + count.burst_count, f95130];
           const obj2 = _modDef12;
           const orderByResult = obj2.orderBy(arr, items, ["desc", "desc"]);
           cResult[2] = arr;
@@ -502,7 +502,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           reactions = [];
         }
         if (0 !== reactions.length) {
-          const items = [(count) => count.count + count.burst_count, f94990];
+          const items = [(count) => count.count + count.burst_count, f95130];
           const obj = _modDef12;
           return obj.orderBy(reactions, items, ["desc", "desc"])[0];
         }
@@ -739,7 +739,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
             return count.count + count.burst_count;
           }
         }
-        const items2 = [(count) => count.count + count.burst_count, f94990];
+        const items2 = [(count) => count.count + count.burst_count, f95130];
         const obj2 = _modDef12;
         orderByResult = obj2.orderBy(tmp7, items2, ["desc", "desc"]);
       }
@@ -778,7 +778,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let orderByResult = reactions;
         if (flag) {
-          const items = [(count) => count.count + count.burst_count, f94990];
+          const items = [(count) => count.count + count.burst_count, f95130];
           const obj = _modDef12;
           orderByResult = obj.orderBy(reactions, items, ["desc", "desc"]);
         }
@@ -840,7 +840,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[1];
       }
       if (cResult[2] !== tmp6) {
-        const items = [(count) => count.count + count.burst_count, f94990];
+        const items = [(count) => count.count + count.burst_count, f95130];
         const obj2 = _modDef12;
         const orderByResult = obj2.orderBy(tmp6, items, ["desc", "desc"]);
         cResult[2] = tmp6;
@@ -950,7 +950,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
         if (reactions == null) {
           reactions = [];
         }
-        const items = [(count) => count.count + count.burst_count, f94990];
+        const items = [(count) => count.count + count.burst_count, f95130];
         const obj = _modDef12;
         return obj.orderBy(reactions, items, ["desc", "desc"]);
       }, items);
@@ -1243,7 +1243,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = id(504);
       const stateFromStores = tmpResult.useStateFromStores(tmp7, tmp9);
-      const tmpResult2 = id(5304);
+      const tmpResult2 = id(5311);
       const nullableMessageAuthor = tmpResult2.useNullableMessageAuthor(author);
       if (cResult[5] === tmp5) {
         let tmp12;
@@ -1325,7 +1325,7 @@ let tmp12 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [UserStore];
       const obj = id(504);
       const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(id));
-      const obj2 = id(5304);
+      const obj2 = id(5311);
       const nullableMessageAuthor = obj2.useNullableMessageAuthor(author);
       const items1 = [guildId, id];
       const effect = react.useEffect(() => {
@@ -2144,12 +2144,12 @@ const tmp24 = ReactCompilerGating.isReactCompilerEnabled()
                       num = 350;
                       closure_0 = setTimeout(
                         closure_3(function () {
-                          /* body not rendered: F138235 */
+                          /* body not rendered: F138442 */
                         }),
                         350,
                       );
                       return () => {
-                        /* body not rendered: F138236 */
+                        /* body not rendered: F138443 */
                       };
                     }
                   } else {

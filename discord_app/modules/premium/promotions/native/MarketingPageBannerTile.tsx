@@ -151,7 +151,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                                 },
                                 children: tmp13.linkText,
                               };
-                              tmp25 = closure_5(tmp(4886).Text, obj3);
+                              tmp25 = closure_5(tmp(4892).Text, obj3);
                             }
                             cResult[24] = tmp13;
                             cResult[25] = tmp25;
@@ -332,7 +332,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
       const button = bannerFields.button;
       let buttonAction;
-      const getButtonActionHandler = helpArticleLinkProps(13232).getButtonActionHandler;
+      const getButtonActionHandler = helpArticleLinkProps(13251).getButtonActionHandler;
       if (button != null) {
         buttonAction = button.buttonAction;
       }
@@ -355,7 +355,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         type: helpArticleLinkProps(1260).ImpressionTypes.VIEW,
         name: helpArticleLinkProps(1260).ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: {
-          component_type: helpArticleLinkProps(10470).MarketingComponentType.MARKETING_PAGE_BANNER,
+          component_type: helpArticleLinkProps(10483).MarketingComponentType.MARKETING_PAGE_BANNER,
           component_id: componentId,
           promotion_id: promotionId,
         },
@@ -363,14 +363,14 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const buttonActionHandler = getButtonActionHandler(obj);
       const tmp2Result = useTrackImpressionDefault;
       ({
-        component_type: helpArticleLinkProps(10470).MarketingComponentType.MARKETING_PAGE_BANNER,
+        component_type: helpArticleLinkProps(10483).MarketingComponentType.MARKETING_PAGE_BANNER,
         component_id: componentId,
         promotion_id: promotionId,
       });
       tmp2Result(obj2);
-      const tmp4Result = helpArticleLinkProps(13235);
+      const tmp4Result = helpArticleLinkProps(13254);
       const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
-      const tmp4Result2 = helpArticleLinkProps(13235);
+      const tmp4Result2 = helpArticleLinkProps(13254);
       helpArticleLinkProps = tmp4Result2.getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
       const obj4 = { style: items, children: closure_6(closure_4, obj5) };
       items = [tmp.container, style];
@@ -384,7 +384,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items2 = [tmp13Result, , ,];
       const obj8 = { color: "mobile-text-heading-primary", variant: "text-lg/bold", children: bannerFields.header };
-      items2[1] = closure_5(helpArticleLinkProps(4886).Text, obj8);
+      items2[1] = closure_5(helpArticleLinkProps(4892).Text, obj8);
       const obj9 = {
         color: "mobile-text-heading-primary",
         variant: "text-sm/medium",
@@ -393,7 +393,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items3 = [formatStringWithCommonPremiumParams, " "];
       let tmp13Result3 = null != helpArticleLinkProps;
-      const Text = tmp4(4886).Text;
+      const Text = tmp4(4892).Text;
       if (tmp13Result3) {
         const obj10 = {
           color: "text-link",
@@ -405,7 +405,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           },
           children: helpArticleLinkProps.linkText,
         };
-        tmp13Result3 = closure_5(tmp4(4886).Text, obj10);
+        tmp13Result3 = closure_5(tmp4(4892).Text, obj10);
       }
       items3[2] = tmp13Result3;
       items2[2] = closure_6(Text, obj9);

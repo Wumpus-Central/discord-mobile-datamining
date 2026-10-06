@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx
 import intl4 from "../../intl/index.native.tsx";
 import user from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef2493 from "FamilyCenter.messages.js";
+import _modDef2521 from "FamilyCenter.messages.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function setsEqual(set, set2) {
@@ -25,13 +25,13 @@ function formatDays(days) {
   set = new Set(days);
   if (setsEqual(set, set2)) {
     const intl3 = intl4.intl;
-    return intl3.string(_modDef2493.bPjqd1);
+    return intl3.string(_modDef2521.bPjqd1);
   } else if (setsEqual(set, set)) {
     const intl2 = intl4.intl;
-    return intl2.string(_modDef2493["4dr9L9"]);
+    return intl2.string(_modDef2521["4dr9L9"]);
   } else if (setsEqual(set, set1)) {
     const intl = intl4.intl;
-    return intl.string(_modDef2493["6lTTJ+"]);
+    return intl.string(_modDef2521["6lTTJ+"]);
   } else {
     const _Intl = Intl;
     let self = this;
@@ -126,7 +126,7 @@ export const formatDuration = function formatDuration(arg0) {
   const isIntegerResult = Number.isInteger(result);
   const intl = intl4.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const tmp3 = _modDef2493;
+  const tmp3 = _modDef2521;
   if (isIntegerResult) {
     const obj2 = { hours: result };
     formatToPlainStringResult = formatToPlainString(tmp3.hFDcmZ, obj2);
@@ -169,9 +169,9 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       const date1 = new Date(2025, 0, 1, endTime.hours, endTime.minutes);
       const format2Result = format2(date1);
       if (60 * startTime2.hours + startTime2.minutes > 60 * endTime2.hours + endTime2.minutes) {
-        OxveI8 = _modDef2493.OxveI8;
+        OxveI8 = _modDef2521.OxveI8;
       } else {
-        OxveI8 = _modDef2493["ERTn+E"];
+        OxveI8 = _modDef2521["ERTn+E"];
       }
       const intl = intl4.intl;
       const obj = { days: tmp5, startTime: formatResult, endTime: format2Result };

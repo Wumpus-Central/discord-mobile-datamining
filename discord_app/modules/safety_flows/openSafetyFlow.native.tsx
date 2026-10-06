@@ -134,7 +134,7 @@ let obj = function _openSafetyFlow() {
       obj5 = {};
     }
     requiredAction = obj5.requiredAction;
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

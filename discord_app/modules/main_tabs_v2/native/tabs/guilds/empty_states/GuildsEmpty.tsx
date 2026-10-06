@@ -8,7 +8,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Stack_Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import CreateGuildModalActionCreatorsDefault from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/16210_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/16250_AssetRegistry.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../../_runtime/00017_react-native.js";
@@ -408,7 +408,7 @@ const memoResult = react.memo(
         } else {
           tmp11 = cResult[2];
         }
-        selectedGuildId(8422)(tmp11);
+        selectedGuildId(8455)(tmp11);
         if (cResult[3] === tmp10) {
           let tmp13;
           let tmp14;
@@ -417,9 +417,9 @@ const memoResult = react.memo(
             tmp14 = cResult[6];
           }
           const effect = react.useEffect(tmp13, tmp14);
-          const tmpResult3 = navigation(5912);
+          const tmpResult3 = navigation(5919);
           const isScreenLandscape = tmpResult3.useIsScreenLandscape();
-          const tmpResult4 = navigation(14901);
+          const tmpResult4 = navigation(14917);
           const youBarTotalHeight = tmpResult4.useYouBarTotalHeight();
           let tmp19 = null;
           if (stateFromStores) {
@@ -439,7 +439,7 @@ const memoResult = react.memo(
                   accessibilityRole: "header",
                   children: intl.string(navigation(1126).t["7hB4kg"]),
                 };
-                const Text = tmp(4886).Text;
+                const Text = tmp(4892).Text;
                 intl = tmp(1126).intl;
                 const tmp23 = closure_13(Text, obj4);
                 cResult[10] = tmp23;
@@ -590,7 +590,7 @@ const memoResult = react.memo(
           type: navigation(1260).ImpressionTypes.VIEW,
           name: navigation(1260).ImpressionNames.GUILDS_EMPTY_NUX,
         };
-        const tmp7 = selectedGuildId(8422);
+        const tmp7 = selectedGuildId(8455);
         tmp7(obj3);
         const items1 = [tmp6, navigation];
         const effect = react.useEffect(() => {
@@ -628,9 +628,9 @@ const memoResult = react.memo(
             }
           }
         }, items1);
-        const tmp2Result = navigation(5912);
+        const tmp2Result = navigation(5919);
         const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-        navigation(14901);
+        navigation(14917);
         let tmp14Result = null;
         if (stateFromStores) {
           const obj4 = { style: items2, children: items3 };
@@ -644,7 +644,7 @@ const memoResult = react.memo(
             accessibilityRole: "header",
             children: intl.string(navigation(1126).t["7hB4kg"]),
           };
-          Text = tmp2(4886).Text;
+          Text = tmp2(4892).Text;
           intl = tmp2(1126).intl;
           items3 = [closure_13(closure_6, obj5)];
           let tmp18;

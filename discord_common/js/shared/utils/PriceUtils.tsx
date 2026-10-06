@@ -1,7 +1,7 @@
 // discord_common/js/shared/utils/PriceUtils.tsx
 import Constants from "../Constants.tsx";
 import CountryCodes from "../shared-constants/CountryCodes.tsx";
-import _modDef6738 from "../../../../_runtime/metro/06738__.js";
+import _modDef6752 from "../../../../_runtime/metro/06752__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -206,7 +206,7 @@ function convertToMajorCurrencyUnits(diff1, USD) {
   } else {
     const self = this;
     const self2 = this;
-    obj = new _modDef6738(diff1);
+    obj = new _modDef6752(diff1);
     const dividedByResult = obj.dividedBy(10 ** obj[USD]);
     return dividedByResult.toNumber();
   }
@@ -494,7 +494,7 @@ export const formatPrice = function (result, currency, localeOverride, arg3) {
         } else {
           const self = this;
           const self2 = this;
-          const obj4 = new _modDef6738(result);
+          const obj4 = new _modDef6752(result);
           const dividedByResult = obj4.dividedBy(10 ** obj[currency]);
           toNumberResult = dividedByResult.toNumber();
         }
@@ -519,7 +519,7 @@ export const convertToMinorCurrencyUnits = function (arg0, currencyCode) {
   } else {
     const self = this;
     const self2 = this;
-    obj = new _modDef6738(arg0);
+    obj = new _modDef6752(arg0);
     const timesResult = obj.times(10 ** obj[currencyCode]);
     return timesResult.toNumber();
   }

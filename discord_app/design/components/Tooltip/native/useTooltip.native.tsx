@@ -41,7 +41,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp8 = useWindowDimensionsDefault();
       let closure_3 = tmp8;
       let closure_4 = context.useRef(tmp8);
-      context = context.useContext(tmp(6652).LayerContext);
+      context = context.useContext(tmp(6659).LayerContext);
       let closure_6 = context.useRef(null);
       const items = [context, ref];
       const effect = context.useEffect(() => {
@@ -172,7 +172,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp3 = useWindowDimensionsDefault();
       let closure_3 = tmp3;
       ref = context.useRef(tmp3);
-      context = context.useContext(ref(6652).LayerContext);
+      context = context.useContext(ref(6659).LayerContext);
       let ref2 = context.useRef(null);
       let items = [context, ref];
       const effect = context.useEffect(() => {

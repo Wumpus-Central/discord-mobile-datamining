@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/ChannelRow.tsx
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4461 from "../../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../../_runtime/metro/04467__.js";
 import DateUtils from "../../../../../utils/DateUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useChannelName from "../../../../channel/useChannelName.tsx";
@@ -251,7 +251,7 @@ const memoResult = react.memo(
                 style: null,
                 guild: stateFromStores,
                 channel: tmp4,
-                size: tmp(10738).GuildIconWithChannelTypeSizes.SMALL_32,
+                size: tmp(10751).GuildIconWithChannelTypeSizes.SMALL_32,
               };
               class J {
                 constructor() {
@@ -268,7 +268,7 @@ const memoResult = react.memo(
                   return;
                 }
               }
-              const GuildIconWithChannelType = tmp(10738).GuildIconWithChannelType;
+              const GuildIconWithChannelType = tmp(10751).GuildIconWithChannelType;
               tmp34 = closure_14(GuildIconWithChannelType, obj2);
             }
             cResult[26] = tmp4;
@@ -468,7 +468,7 @@ const memoResult = react.memo(
               const obj6 = {
                 variant: "text-xs/medium",
                 color: "text-subtle",
-                children: obj7.calendarFormatCompact(_modDef4461(tmp14)),
+                children: obj7.calendarFormatCompact(_modDef4467(tmp14)),
               };
               const Text = Text_Text.Text;
               obj7 = DateUtils;

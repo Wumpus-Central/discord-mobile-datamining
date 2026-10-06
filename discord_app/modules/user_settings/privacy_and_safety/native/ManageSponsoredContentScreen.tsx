@@ -94,7 +94,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { label: tmp9, subLabel: tmp11, value: !tmp4, onValueChange: tmp8 };
-        const tmp18 = closure_5(adTopic(6698).TableSwitchRow, obj2);
+        const tmp18 = closure_5(adTopic(6705).TableSwitchRow, obj2);
         cResult[9] = tmp8;
         cResult[10] = tmp9;
         cResult[11] = tmp11;
@@ -134,7 +134,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           AdTopicOptOuts2.updateSetting(items);
         },
       };
-      const TableSwitchRow = adTopic(6698).TableSwitchRow;
+      const TableSwitchRow = adTopic(6705).TableSwitchRow;
       intl = adTopic(1126).intl;
       const intl2 = adTopic(1126).intl;
       string = intl2.string;

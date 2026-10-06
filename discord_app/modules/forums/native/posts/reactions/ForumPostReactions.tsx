@@ -41,7 +41,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const containerWidth = thread.containerWidth;
       const tmp4 = closure_6();
       dependencyMap = tmp4;
-      const disableReactionCreates = reactionContainerStyle(10028)(thread).disableReactionCreates;
+      const disableReactionCreates = reactionContainerStyle(10041)(thread).disableReactionCreates;
       let num = 28;
       if (disableReactionCreates) {
         num = 0;
@@ -53,7 +53,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === diff) {
             tmp6 = cResult[3];
           }
-          const tmpResult = tmp(7528);
+          const tmpResult = tmp(7539);
           const maxPossibleForumPostReactions = tmpResult.useMaxPossibleForumPostReactions(tmp6);
           ({ reactions, additionalReactionCount } = maxPossibleForumPostReactions);
           if (0 === reactions.length) {
@@ -258,12 +258,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ parentChannel, firstMessage, containerWidth, containerStyle } = thread);
       const tmp = closure_6();
       dependencyMap = tmp;
-      const disableReactionCreates = reactionContainerStyle(10028)(thread).disableReactionCreates;
+      const disableReactionCreates = reactionContainerStyle(10041)(thread).disableReactionCreates;
       let num = 28;
       if (disableReactionCreates) {
         num = 0;
       }
-      let obj = thread(7528);
+      let obj = thread(7539);
       const obj2 = {
         containerWidth: containerWidth - num,
         reactionEmojiWidth: 46,
@@ -293,13 +293,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp8 = additionalReactionCount > 0;
         if (tmp8) {
           const obj4 = { count: additionalReactionCount, containerStyle: reactionContainerStyle, threadId: thread.id };
-          tmp8 = closure_4(tmp3(10030).AdditionalReactionCount, obj4);
+          tmp8 = closure_4(tmp3(10043).AdditionalReactionCount, obj4);
         }
         items1[1] = tmp8;
         let tmp10 = !disableReactionCreates;
         if (tmp10) {
           const obj5 = { containerStyle: reactionContainerStyle, threadId: thread.id };
-          tmp10 = closure_4(tmp3(10030).AddReactionButton, obj5);
+          tmp10 = closure_4(tmp3(10043).AddReactionButton, obj5);
         }
         items1[2] = tmp10;
         tmp6Result = closure_5(View, obj3);
@@ -327,7 +327,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({ parentChannel, firstMessage, containerStyle, reactionContainerStyle } = thread);
       const tmp4 = closure_6();
       dependencyMap = tmp4;
-      const disableReactionCreates = reactionContainerStyle(10028)(thread).disableReactionCreates;
+      const disableReactionCreates = reactionContainerStyle(10041)(thread).disableReactionCreates;
       let num = 2;
       if (disableReactionCreates) {
         num = 3;
@@ -338,7 +338,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === num) {
             tmp5 = cResult[3];
           }
-          const tmpResult = thread(7528);
+          const tmpResult = thread(7539);
           const someForumPostReactions = tmpResult.useSomeForumPostReactions(tmp5);
           ({ reactions, additionalNonUniqueReactionCount } = someForumPostReactions);
           if (0 === reactions.length) {
@@ -399,7 +399,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         if (tmp15) {
                           const obj3 = { containerStyle: items1, threadId: thread.id };
                           items1 = [tmp4.actionBarReaction, reactionContainerStyle];
-                          tmp15 = closure_4(tmp(10030).AddReactionButton, obj3);
+                          tmp15 = closure_4(tmp(10043).AddReactionButton, obj3);
                         }
                         cResult[21] = disableReactionCreates;
                         cResult[22] = reactionContainerStyle;
@@ -418,7 +418,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                       threadId: thread.id,
                     };
                     items2 = [tmp4.actionBarReaction, reactionContainerStyle];
-                    tmp12 = closure_4(tmp(10030).AdditionalReactionCount, obj4);
+                    tmp12 = closure_4(tmp(10043).AdditionalReactionCount, obj4);
                   }
                   cResult[16] = additionalNonUniqueReactionCount;
                   cResult[17] = reactionContainerStyle;
@@ -493,11 +493,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({ parentChannel, firstMessage, containerStyle } = thread);
       const tmp = closure_6();
       dependencyMap = tmp;
-      const disableReactionCreates = reactionContainerStyle(10028)(thread).disableReactionCreates;
+      const disableReactionCreates = reactionContainerStyle(10041)(thread).disableReactionCreates;
       let obj = { message: firstMessage, parentChannel, sorted: false, count: num };
       num = 2;
-      const useSomeForumPostReactions = thread(7528).useSomeForumPostReactions;
-      thread(7528);
+      const useSomeForumPostReactions = thread(7539).useSomeForumPostReactions;
+      thread(7539);
       if (disableReactionCreates) {
         num = 3;
       }
@@ -524,14 +524,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (tmp9) {
           const obj3 = { count: additionalNonUniqueReactionCount, containerStyle: items2, threadId: thread.id };
           items2 = [tmp.actionBarReaction, reactionContainerStyle];
-          tmp9 = closure_4(tmp3(10030).AdditionalReactionCount, obj3);
+          tmp9 = closure_4(tmp3(10043).AdditionalReactionCount, obj3);
         }
         items1[1] = tmp9;
         let tmp11 = !disableReactionCreates;
         if (tmp11) {
           const obj4 = { containerStyle: items3, threadId: thread.id };
           items3 = [tmp.actionBarReaction, reactionContainerStyle];
-          tmp11 = closure_4(tmp3(10030).AddReactionButton, obj4);
+          tmp11 = closure_4(tmp3(10043).AddReactionButton, obj4);
         }
         items1[2] = tmp11;
         tmp7Result = closure_5(View, obj2);

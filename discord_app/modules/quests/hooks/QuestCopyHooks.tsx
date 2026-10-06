@@ -2399,7 +2399,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return subtitle;
       }, items);
-      obj2 = quest(10010);
+      obj2 = quest(10023);
       return obj;
     };
 let result = size.fileFinishedImporting("modules/quests/hooks/QuestCopyHooks.tsx");

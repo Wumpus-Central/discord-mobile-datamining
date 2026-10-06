@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/hooks/useControlsHoverGesture.tsx
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import VoicePanelControlsConstants from "../controls/VoicePanelControlsConstants.tsx";
 import VoicePanelConstants from "../../VoicePanelConstants.tsx";
 import react from "../../../../../_runtime/00019_react.js";

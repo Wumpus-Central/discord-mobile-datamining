@@ -3,7 +3,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import intl2 from "../../../intl/index.native.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
 import DisplayNameFont from "../../../../discord_common/js/shared/shared-constants/DisplayNameFont.tsx";
-import _modDef2883 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2911 from "../intl/DisplayNameStyles.messages.js";
 import useDisplayNameStylesEffectDefaultColorsDefault from "useDisplayNameStylesEffectDefaultColors.native.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -12,13 +12,13 @@ import size from "../../../../_runtime/metro/00002__.js";
 let importDefault;
 
 const DISPLAY_NAME_STYLES_EFFECT_NAMES = {};
-DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.SOLID] = _modDef2883.OpWJ3f;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.GRADIENT] = _modDef2883["i9e/u1"];
-DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.NEON] = _modDef2883.x68b1F;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.TOON] = _modDef2883.otpeeM;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.POP] = _modDef2883.cjQOKb;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.GUMMY] = _modDef2883.x9Gtie;
-DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.PRISM] = _modDef2883["/M7psm"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.SOLID] = _modDef2911.OpWJ3f;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.GRADIENT] = _modDef2911["i9e/u1"];
+DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.NEON] = _modDef2911.x68b1F;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.TOON] = _modDef2911.otpeeM;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.POP] = _modDef2911.cjQOKb;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.GUMMY] = _modDef2911.x9Gtie;
+DISPLAY_NAME_STYLES_EFFECT_NAMES[DisplayNameEffect.DisplayNameEffect.PRISM] = _modDef2911["/M7psm"];
 let closure_5 = {
   [DisplayNameEffect.DisplayNameEffect.SOLID]: 3,
   [DisplayNameEffect.DisplayNameEffect.GRADIENT]: 2.5,
@@ -40,7 +40,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let OpWJ3f = obj[effectId];
         const string = intl.string;
         if (OpWJ3f == null) {
-          OpWJ3f = _modDef2883.OpWJ3f;
+          OpWJ3f = _modDef2911.OpWJ3f;
         }
         const stringResult = string(OpWJ3f);
         cResult[0] = effectId;
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let OpWJ3f = obj[effectId];
         const string = intl.string;
         if (OpWJ3f == null) {
-          OpWJ3f = _modDef2883.OpWJ3f;
+          OpWJ3f = _modDef2911.OpWJ3f;
         }
         obj = {
           name: string(OpWJ3f),

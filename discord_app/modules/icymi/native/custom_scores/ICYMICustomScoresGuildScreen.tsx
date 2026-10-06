@@ -275,7 +275,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 return ICYMIStore.getCustomGuildScore(guildId);
               }
             }
-            const tmp2Result5 = navigation(8028);
+            const tmp2Result5 = navigation(8038);
             cResult[12] = stateFromStores1;
             cResult[13] = tmp2Result5.numberToCustomScore(stateFromStores1);
             const numberToCustomScoreResult = tmp2Result5.numberToCustomScore(stateFromStores1);
@@ -418,7 +418,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               let tmp60 = navigation;
-              if (first1 !== navigation(7039).SECTION_INDEX_GUILD_ACTIONS) {
+              if (first1 !== navigation(7052).SECTION_INDEX_GUILD_ACTIONS) {
                 class R {
                   constructor() {
                     return ChannelListStore.getGuild(guildId);
@@ -537,7 +537,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                           channelId: tmp47[1].id,
                           start: 0 === first2,
                           end: first2 === arr7.length - 1,
-                          disabled: tmp21 === navigation(8028).ICYMICustomScore.MUTED,
+                          disabled: tmp21 === navigation(8038).ICYMICustomScore.MUTED,
                         };
                         class W {
                           constructor(item) {
@@ -695,7 +695,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [ICYMIStore];
       const tmp2Result = navigation(504);
       const stateFromStores1 = tmp2Result.useStateFromStores(items2, () => ICYMIStore.getCustomGuildScore(guildId));
-      const tmp2Result3 = navigation(8028);
+      const tmp2Result3 = navigation(8038);
       const numberToCustomScoreResult = tmp2Result3.numberToCustomScore(stateFromStores1);
       react = numberToCustomScoreResult;
       const items3 = [ChannelListStore];
@@ -844,7 +844,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         keyExtractor,
       };
       rect = { bottom, top: guildId(587).space.PX_12 };
-      AnimatedFlashList = tmp2(8371).AnimatedFlashList;
+      AnimatedFlashList = tmp2(8404).AnimatedFlashList;
       return closure_11(guildChannels, obj3);
     };
 const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresGuildScreen.tsx");

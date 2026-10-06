@@ -14,7 +14,7 @@ import Constants2 from "../../instant_invite/Constants.tsx";
 import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
 import AssetUtils from "../lib/AssetUtils.tsx";
 import QuestCopyHooks from "../hooks/QuestCopyHooks.tsx";
-import AssetRegistryDefault from "../../../../_runtime/13063_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/13082_AssetRegistry.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import QuestStore from "../QuestStore.tsx";
 import QuestConstants from "../QuestConstants.tsx";

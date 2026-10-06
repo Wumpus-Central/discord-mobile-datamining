@@ -125,7 +125,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                           if (cResult[33] !== tmp13) {
                             let obj2 = { onPress: tmp13, text: tmp19, size: "md" };
-                            const tmp23 = handleTextInputChange(guildId(5594).Button, obj2);
+                            const tmp23 = handleTextInputChange(guildId(5601).Button, obj2);
                             cResult[33] = tmp13;
                             cResult[34] = tmp23;
                             tmp21 = tmp23;
@@ -143,7 +143,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                           }
                           if (cResult[36] !== tmp12) {
                             let obj3 = { onPress: tmp12, text: tmp24, variant: "secondary", size: "md" };
-                            const tmp28 = handleTextInputChange(guildId(5594).Button, obj3);
+                            const tmp28 = handleTextInputChange(guildId(5601).Button, obj3);
                             cResult[36] = tmp12;
                             cResult[37] = tmp28;
                             tmp26 = tmp28;
@@ -201,16 +201,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      let obj6 = { text: intl.string(tmp(1126).t.yeaXw5), value: tmp(7027).RaidResolutionType.LEGITIMATE_ACTIVITY };
+      let obj6 = { text: intl.string(tmp(1126).t.yeaXw5), value: tmp(7040).RaidResolutionType.LEGITIMATE_ACTIVITY };
       intl = tmp(1126).intl;
       const items2 = [obj6, , ,];
-      const obj7 = { text: intl2.string(guildId(1126).t["o++3B8"]), value: guildId(7027).RaidResolutionType.DM_SPAM };
+      const obj7 = { text: intl2.string(guildId(1126).t["o++3B8"]), value: guildId(7040).RaidResolutionType.DM_SPAM };
       intl2 = tmp(1126).intl;
       items2[1] = obj7;
-      const obj8 = { text: intl3.string(guildId(1126).t.UfHAwZ), value: guildId(7027).RaidResolutionType.JOIN_RAID };
+      const obj8 = { text: intl3.string(guildId(1126).t.UfHAwZ), value: guildId(7040).RaidResolutionType.JOIN_RAID };
       intl3 = tmp(1126).intl;
       items2[2] = obj8;
-      const obj9 = { text: intl4.string(guildId(1126).t.K3UWeR), value: guildId(7027).RaidResolutionType.OTHER };
+      const obj9 = { text: intl4.string(guildId(1126).t.K3UWeR), value: guildId(7040).RaidResolutionType.OTHER };
       intl4 = tmp(1126).intl;
       items2[3] = obj9;
       handleTextInputChange = function handleTextInputChange(Button) {

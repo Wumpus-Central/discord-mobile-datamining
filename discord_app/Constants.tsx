@@ -995,6 +995,7 @@ const obj2 = {
     return "/users/@me/billing/wallet/" + paymentSourceId + "/information";
   },
   BILLING_PAYMENTS: "/users/@me/billing/payments",
+  BILLING_HISTORY: "/users/@me/billing/history",
   BILLING_PAYMENT(value) {
     return "/users/@me/billing/payments/" + value;
   },
@@ -2865,7 +2866,6 @@ const obj7 = {
   ACK_WINDOW_FOCUS: "Ack - Window Focus",
   ACK_CHANNEL_SECTION_STORE_UPDATE: "Ack - Channel Section Store Update",
   ACK_VOICE_CHANNEL_SELECT: "Ack - Voice Channel Select",
-  ACK_VIBEGRATIONS_CHAT_CLOSED: "Ack - Vibegrations Chat Closed",
   ACK_APP_FOREGROUND: "Ack - App Foreground",
   ENABLE_AUTOMATIC_ACK: "Enable Automatic Ack",
 };
@@ -3775,6 +3775,7 @@ export const NoticeTypes = {
   SURVEY: "SURVEY",
   CORRUPT_INSTALLATION: "CORRUPT_INSTALLATION",
   VIDEO_UNSUPPORTED_BROWSER: "VIDEO_UNSUPPORTED_BROWSER",
+  VIDEO_GUARD: "VIDEO_GUARD",
   CONNECT_SPOTIFY: "CONNECT_SPOTIFY",
   SPOTIFY_AUTO_PAUSED: "SPOTIFY_AUTO_PAUSED",
   PREMIUM_PROMO: "PREMIUM_PROMO",
@@ -4754,6 +4755,8 @@ export const AbortCodes = {
   [700000]: "USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED",
   USER_GUILD_JOIN_DISCOVERABLE_SERVER_AGE_GATED: 700001,
   [700001]: "USER_GUILD_JOIN_DISCOVERABLE_SERVER_AGE_GATED",
+  USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED: 700002,
+  [700002]: "USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED",
 };
 export const AnalyticsLocations = {
   GUILD_CREATE_INVITE_SUGGESTION: "Guild Create Invite Suggestion",
@@ -6531,6 +6534,8 @@ export const AnalyticEvents = {
   USER_PROFILE_REPORT_GAME_DETECTION: "user_profile_report_game_detection",
   GAME_DETECTION_FEEDBACK_MODAL: "game_detection_feedback_modal",
   DETECTABLE_GAME_SEARCHED_BATCHED: "detectable_game_searched_batched",
+  GAME_SEARCH_RESULT_SELECTED: "game_search_result_selected",
+  GAME_SEARCH_SESSION_ENDED: "game_search_session_ended",
   DM_PROFILE_TOGGLED: "dm_profile_toggled",
   USER_PROFILE_WISHLIST_ACTION: "user_profile_wishlist_action",
   USER_PROFILE_EMBED_RENDER_FAILED: "user_profile_embed_render_failed",
@@ -7018,6 +7023,14 @@ export const AnalyticEvents = {
   VIBEGRATION_DEPLOYED: "vibegration_deployed",
   VIBEGRATION_PUBLISH_ACTION_CLICKED: "vibegration_publish_action_clicked",
   VIBEGRATION_ERRORED: "vibegration_errored",
+  SMART_SEARCH_ANSWER_RETURNED: "smart_search_answer_returned",
+  SMART_SEARCH_ANSWER_SHOWN: "smart_search_answer_shown",
+  SMART_SEARCH_ANSWER_DWELLED: "smart_search_answer_dwelled",
+  SMART_SEARCH_ANSWER_TOGGLED: "smart_search_answer_toggled",
+  SMART_SEARCH_CITATION_OPENED: "smart_search_citation_opened",
+  SUGGESTED_SEARCHES_RETURNED: "suggested_searches_returned",
+  SUGGESTED_SEARCHES_SHOWN: "suggested_searches_shown",
+  SUGGESTED_SEARCH_STARTED: "suggested_search_started",
 };
 export const PublicReleaseChannels = { CANARY: "canary", PTB: "ptb", STABLE: "stable" };
 export const UserFlags = obj17;

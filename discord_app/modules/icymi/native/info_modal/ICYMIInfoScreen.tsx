@@ -127,7 +127,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const tmp3 = dependencyMap;
   ({ top, bottom } = navigation(1618)());
   const tmp4 = navigation(1618)();
-  const tmp5 = navigation(4791)();
+  const tmp5 = navigation(4797)();
   let obj = extendedOnboarding(1490);
   navigation = obj.useNavigation();
   const items = [extendedOnboarding, navigation];
@@ -208,7 +208,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   let obj2 = { style: items2, children: closure_9(HeaderIconButton, obj3) };
   items2 = [{ marginTop: top }, tmp.closeIcon];
   obj3 = {
-    source: navigation(7506),
+    source: navigation(7517),
     onPress() {
       const arr = navigation(closure_2[14]);
       return arr.pop();
@@ -216,37 +216,37 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
     accessibilityLabel: intl.string(extendedOnboarding(1126).t.cpT0Cq),
     color: tmp.closeIconColor.backgroundColor,
   };
-  HeaderIconButton = extendedOnboarding(7498).HeaderIconButton;
+  HeaderIconButton = extendedOnboarding(7509).HeaderIconButton;
   intl = extendedOnboarding(1126).intl;
   const items3 = [closure_9(closure_6, obj2), ,];
   let obj4 = { style: items4, children: items5 };
   items4 = [tmp.container, { marginBottom: bottom }];
   let obj5 = { source: obj6, style: tmp.bgImage };
-  obj6 = { uri: navigation(16415) };
-  const tmp17 = navigation(5974);
+  obj6 = { uri: navigation(16455) };
+  const tmp17 = navigation(5981);
   items5 = [closure_9(tmp17, obj5)];
   const obj7 = { style: items6, children: items8 };
   items6 = [tmp.subContainer, { marginTop: top + navigation(587).space.PX_12 }];
   const obj9 = { style: tmp.header, children: items7 };
   ({ marginTop: top + navigation(587).space.PX_12 });
-  const tmp18 = navigation(5974);
+  const tmp18 = navigation(5981);
   if (tmp5 === ThemeTypes.LIGHT) {
-    tmp2Result = tmp2(16416);
+    tmp2Result = tmp2(16456);
   } else {
-    tmp2Result = tmp2(16417);
+    tmp2Result = tmp2(16457);
   }
   items7 = [, , ,];
   const obj10 = { source: { uri: tmp2Result }, style: tmp.headerImg };
   items7[0] = closure_9(tmp18, obj10);
-  const obj11 = { source: navigation(16418), style: tmp.flashIcon };
-  const tmp2Result2 = navigation(5974);
+  const obj11 = { source: navigation(16458), style: tmp.flashIcon };
+  const tmp2Result2 = navigation(5981);
   items7[1] = closure_9(tmp2Result2, obj11);
   const obj12 = {
     variant: "heading-xl/bold",
     color: "mobile-text-heading-primary",
     children: intl2.string(extendedOnboarding(1126).t["jnXV/V"]),
   };
-  const Text = tmp6(4886).Text;
+  const Text = tmp6(4892).Text;
   intl2 = tmp6(1126).intl;
   items7[2] = closure_9(Text, obj12);
   const obj13 = {
@@ -255,7 +255,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
     style: tmp.headerText,
     children: intl3.string(extendedOnboarding(1126).t["9SjvoK"]),
   };
-  const Text2 = tmp6(4886).Text;
+  const Text2 = tmp6(4892).Text;
   intl3 = tmp6(1126).intl;
   items7[3] = closure_9(Text2, obj13);
   items8 = [closure_10(closure_6, obj9)];
@@ -265,7 +265,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const obj15 = { style: tmp.body, children: items10 };
   const obj17 = {
     style: tmp.infoIcon,
-    children: closure_9(extendedOnboarding(8791).ServerIcon, { size: "sm", color: "interactive-text-active" }),
+    children: closure_9(extendedOnboarding(8823).ServerIcon, { size: "sm", color: "interactive-text-active" }),
   };
   items9[0] = closure_9(closure_6, obj17);
   const obj18 = {
@@ -274,7 +274,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
     style: tmp.infoText,
     children: intl4.string(extendedOnboarding(1126).t.knxfqR),
   };
-  const Text3 = tmp6(4886).Text;
+  const Text3 = tmp6(4892).Text;
   intl4 = tmp6(1126).intl;
   items9[1] = closure_9(Text3, obj18);
   items10 = [closure_10(closure_6, obj16), , , ,];
@@ -284,7 +284,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   items11 = [,];
   const obj21 = {
     style: tmp.infoIcon,
-    children: closure_9(extendedOnboarding(12832).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
+    children: closure_9(extendedOnboarding(12851).NewUserIcon, { size: "sm", color: "interactive-text-active" }),
   };
   items11[0] = closure_9(closure_6, obj21);
   const obj22 = {
@@ -293,7 +293,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
     style: tmp.infoText,
     children: intl5.string(extendedOnboarding(1126).t.BnUXZi),
   };
-  const Text4 = tmp6(4886).Text;
+  const Text4 = tmp6(4892).Text;
   intl5 = tmp6(1126).intl;
   items11[1] = closure_9(Text4, obj22);
   items10[2] = closure_10(closure_6, obj20);
@@ -303,7 +303,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   items12 = [,];
   const obj25 = {
     style: tmp.infoIcon,
-    children: closure_9(extendedOnboarding(4792).CircleCheckIcon, { size: "sm", color: "interactive-text-active" }),
+    children: closure_9(extendedOnboarding(4798).CircleCheckIcon, { size: "sm", color: "interactive-text-active" }),
   };
   items12[0] = closure_9(closure_6, obj25);
   const obj26 = {
@@ -312,7 +312,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
     style: tmp.infoText,
     children: intl6.string(extendedOnboarding(1126).t.itb1rh),
   };
-  const Text5 = tmp6(4886).Text;
+  const Text5 = tmp6(4892).Text;
   intl6 = tmp6(1126).intl;
   items12[1] = closure_9(Text5, obj26);
   items10[4] = closure_10(closure_6, obj24);
@@ -323,7 +323,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
     style: tmp.hint,
     children: intl7.format(extendedOnboarding(1126).t["jVS/hc"], obj28),
   };
-  const Text6 = tmp6(4886).Text;
+  const Text6 = tmp6(4892).Text;
   intl7 = tmp6(1126).intl;
   obj28 = {
     feedbackHook(children, arg1) {
@@ -346,7 +346,7 @@ export default function ICYMIInfoScreen(extendedOnboarding) {
   const obj29 = { style: items14, children: closure_9(Button, obj30) };
   items14 = [{ marginBottom: bottom }, tmp.footer];
   obj30 = { size: "lg", loading: first, text: stringResult, onPress: callback };
-  Button = tmp6(5594).Button;
+  Button = tmp6(5601).Button;
   const intl8 = tmp6(1126).intl;
   const string = intl8.string;
   const t = tmp6(1126).t;

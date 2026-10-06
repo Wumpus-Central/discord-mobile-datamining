@@ -27,7 +27,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(20);
       user = user.user;
       ({ channel, onPress, start, end } = user);
-      const obj2 = user(7887);
+      const obj2 = user(7898);
       const avatarDecoration = obj2.useAvatarDecoration(user, channel.guild_id);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [PresenceStore];
@@ -82,7 +82,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                       }
                     }
-                    const tmp16 = jsx(user(5993).TableRow, { onPress, label: tmp9, icon: tmp11, start, end });
+                    const tmp16 = jsx(user(6000).TableRow, { onPress, label: tmp9, icon: tmp11, start, end });
                     cResult[14] = end;
                     cResult[15] = onPress;
                     cResult[16] = start;
@@ -136,7 +136,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       user = user.user;
       const channel = user.channel;
       ({ onPress, start, end } = user);
-      let obj = user(7887);
+      let obj = user(7898);
       const avatarDecoration = obj.useAvatarDecoration(user, channel.guild_id);
       const items = [PresenceStore];
       const obj2 = user(504);
@@ -149,7 +149,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       });
       ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-      const TableRow = user(5993).TableRow;
+      const TableRow = user(6000).TableRow;
       const obj4 = NicknameUtilsDefault;
       ({
         user,
@@ -219,13 +219,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp11;
           }
-          const tmp14 = jsx(onPressUser(10841), { title: first, onBack, scrollable: true, children: tmp8 });
+          const tmp14 = jsx(onPressUser(10854), { title: first, onBack, scrollable: true, children: tmp8 });
           cResult[8] = onBack;
           cResult[9] = tmp8;
           cResult[10] = tmp14;
           tmp11 = tmp14;
         }
-        const tmp10 = jsx(channel(10841).UserProfileStackedActionSheetList, {
+        const tmp10 = jsx(channel(10854).UserProfileStackedActionSheetList, {
           data: users,
           keyExtractor: tmp6,
           renderItem: tmp7,

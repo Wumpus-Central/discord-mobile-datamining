@@ -3,7 +3,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06884_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06894_AssetRegistry.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import RowButton8 from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import react from "../../../../../_runtime/00019_react.js";

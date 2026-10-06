@@ -61,10 +61,10 @@ let obj = function _joinGuild() {
     let closure_3;
     let obj10;
     let obj11;
-    let obj23;
+    let obj24;
     let sessionId;
-    let tmp147;
-    let tmp154;
+    let tmp168;
+    let tmp175;
     let value;
     function showGuildAtCapacityAlert() {
       let intl;
@@ -131,7 +131,7 @@ let obj = function _joinGuild() {
             closure_12 = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (guildId === 1) {
@@ -146,8 +146,8 @@ let obj = function _joinGuild() {
             loadId = obj4.loadId;
             lurkLocation = obj4.lurkLocation;
             autoNavigate = obj4.autoNavigate;
-            const tmp104 = undefined === autoNavigate || autoNavigate;
-            closure_6 = tmp104;
+            const tmp125 = undefined === autoNavigate || autoNavigate;
+            closure_6 = tmp125;
             lurker = obj4.lurker;
             let c2 = lurker;
             if (lurker == null) {
@@ -156,14 +156,14 @@ let obj = function _joinGuild() {
             lurker = c2;
             currentUser = closure_132_14.getCurrentUser();
             let hasFlagResult;
-            const obj18 = currentUser;
+            const obj19 = currentUser;
             if (currentUser != null) {
-              hasFlagResult = obj18.hasFlag(closure_132_18.QUARANTINED);
+              hasFlagResult = obj19.hasFlag(closure_132_18.QUARANTINED);
             }
             if (hasFlagResult) {
               closure_132_1(closure_132_3[15])();
-              const self = this;
-              const self2 = this;
+              const self3 = this;
+              const self4 = this;
               const promise = new Promise((arg0, fn) => {
                 const error = new Error();
                 return fn(error);
@@ -172,8 +172,8 @@ let obj = function _joinGuild() {
               const obj8 = { value: promise, done: true };
               return obj8;
             } else {
-              const obj19 = closure_132_1(closure_132_3[14]);
-              obj19.wait(() => {
+              const obj20 = closure_132_1(closure_132_3[14]);
+              obj20.wait(() => {
                 obj = closure_1(loadId[14]);
                 const obj2 = { type: "GUILD_JOIN", guildId, lurker, source, loadId };
                 return obj.dispatch(obj2);
@@ -194,30 +194,30 @@ let obj = function _joinGuild() {
                 context: obj11,
                 oldFormErrors: true,
                 body: {},
-                rejectWithError: obj23.rejectWithMigratedError(),
+                rejectWithError: obj24.rejectWithMigratedError(),
               };
               const put = HTTP.put;
               obj10 = {
                 lurker,
                 session_id: sessionId,
                 recommendation_load_id: loadId,
-                location: tmp147,
-                from_directory: tmp154,
+                location: tmp168,
+                from_directory: tmp175,
               };
               sessionId = null;
               if (lurker) {
                 sessionId = closure_132_8.getSessionId();
               }
-              tmp147 = null;
+              tmp168 = null;
               if (lurker) {
-                tmp147 = null;
+                tmp168 = null;
                 if (null != lurkLocation) {
-                  tmp147 = lurkLocation;
+                  tmp168 = lurkLocation;
                 }
               }
-              tmp154 = source === closure_132_17.DIRECTORY_ENTRY || null;
+              tmp175 = source === closure_132_17.DIRECTORY_ENTRY || null;
               obj11 = { source };
-              obj23 = closure_132_0(closure_132_3[16]);
+              obj24 = closure_132_0(closure_132_3[16]);
               c7 = 3;
               c8 = 1;
               const obj12 = { value: put(request), done: false };
@@ -269,7 +269,25 @@ let obj = function _joinGuild() {
           if (tmp91) {
             closure_132_25(guildId);
           }
-          throw closure_13;
+          const body5 = closure_13.body;
+          let code4;
+          if (body5 != null) {
+            code4 = body5.code;
+          }
+          if (code4 === closure_132_15.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED) {
+            const tmp109 = lurker;
+            if (tmp109) {
+              closure_132_25(guildId);
+            }
+            const obj18 = closure_132_0(closure_132_3[22]);
+            const result = obj18.showNSFWGuildJoinGate(guildId);
+            const self = this;
+            const self2 = this;
+            const joinGuildRefusedError = new closure_132_0(closure_132_3[23]).JoinGuildRefusedError();
+            throw joinGuildRefusedError;
+          } else {
+            throw closure_13;
+          }
         } else {
           if (3 === c7) {
             if (guildId === 1) {
@@ -291,31 +309,31 @@ let obj = function _joinGuild() {
                   const tmp23 = closure_6;
                   if (tmp23) {
                     const obj13 = closure_132_0(closure_132_3[17]);
-                    const result = obj13.transitionToMemberVerification(guildId);
+                    const result1 = obj13.transitionToMemberVerification(guildId);
                     c6 = 0;
                     c8 = 3;
-                    const obj20 = { value, done: true };
-                    return obj20;
+                    const obj21 = { value, done: true };
+                    return obj21;
                   }
                 }
               }
               if (null != value.body.welcome_screen) {
-                const obj21 = {
+                const obj22 = {
                   type: "WELCOME_SCREEN_UPDATE",
                   guildId: value.body.id,
                   welcomeScreen: value.body.welcome_screen,
                 };
                 const obj7 = closure_132_1(closure_132_3[14]);
-                obj7.dispatch(obj21);
+                obj7.dispatch(obj22);
               }
               if (null != value.body.approximate_presence_count) {
-                const obj22 = {
+                const obj23 = {
                   type: "ONLINE_GUILD_MEMBER_COUNT_UPDATE",
                   guildId: value.body.id,
                   count: value.body.approximate_presence_count,
                 };
                 const obj9 = closure_132_1(closure_132_3[14]);
-                obj9.dispatch(obj22);
+                obj9.dispatch(obj23);
               }
               const tmp43 = lurker;
               if (!tmp43) {
@@ -323,11 +341,11 @@ let obj = function _joinGuild() {
                 if (tmp44) {
                   c7 = 4;
                   c8 = 1;
-                  const obj24 = {
+                  const obj25 = {
                     value: closure_132_0(closure_132_3[19])(closure_132_3[18], closure_132_3.paths),
                     done: false,
                   };
-                  return obj24;
+                  return obj25;
                 }
               }
             }
@@ -338,15 +356,15 @@ let obj = function _joinGuild() {
             } else if (guildId === 2) {
               c6 = 0;
               c8 = 3;
-              const obj25 = { value, done: true };
-              return obj25;
+              const obj26 = { value, done: true };
+              return obj26;
             } else {
               closure_12 = value.default;
-              const obj26 = { guildId, returnChannelId: channelId };
+              const obj27 = { guildId, returnChannelId: channelId };
               c7 = 5;
               c8 = 1;
-              const obj27 = { value: closure_12(obj26), done: false };
-              return obj27;
+              const obj28 = { value: closure_12(obj27), done: false };
+              return obj28;
             }
           } else if (guildId === 1) {
             c8 = 3;
@@ -359,14 +377,14 @@ let obj = function _joinGuild() {
           }
           c6 = 0;
           c8 = 3;
-          const obj28 = { value, done: true };
-          return obj28;
+          const obj29 = { value, done: true };
+          return obj29;
         }
-      } catch (tmp167) {
-        closure_5 = tmp167;
+      } catch (tmp188) {
+        closure_5 = tmp188;
         if (0 === c6) {
           c8 = 3;
-          throw tmp167;
+          throw tmp188;
         } else {
           c7 = 2;
         }
@@ -449,7 +467,7 @@ obj = {
               getChannelId = function getChannelId(id, arg1) {
                 let first = arg1;
                 if (null == arg1) {
-                  obj = welcomeModalChannelId(closure_1_3[22]);
+                  obj = welcomeModalChannelId(closure_1_3[24]);
                   first = obj.getGuildTransitionRoute(id)[0];
                 }
                 return first;
@@ -485,7 +503,7 @@ obj = {
                   welcomeModalChannelId = undefined;
                 }
               }
-              const tmp21 = getChannelId(messageId[23]);
+              const tmp21 = getChannelId(messageId[25]);
               tmp21(closure_1_21.CHANNEL(closure_131_0, closure_0, closure_131_3), obj6);
               const _setImmediate = setImmediate;
               const self = this;
@@ -825,7 +843,7 @@ obj = {
                 const intl = color(closure_3[13]).intl;
                 stringResult = intl.string(color(closure_3[13]).t.QBMHvB);
               }
-              const obj5 = { name: stringResult, color, colors: obj6, permissions: primary_color(closure_3[27]).NONE };
+              const obj5 = { name: stringResult, color, colors: obj6, permissions: primary_color(closure_3[29]).NONE };
               color = closure_2;
               if (closure_2 == null) {
                 color = 0;
@@ -858,7 +876,7 @@ obj = {
             closure_2 = closure_5;
             const self = this;
             const self2 = this;
-            const tmp25 = new obj6(closure_3[30])(closure_2);
+            const tmp25 = new obj6(closure_3[32])(closure_2);
             throw tmp25;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -871,14 +889,14 @@ obj = {
           } else {
             color = value;
             body = color.body;
-            const deserializer = primary_color(closure_3[28]);
+            const deserializer = primary_color(closure_3[30]);
             body.permissions = deserializer.deserialize(body.permissions);
             if (!closure_132_4) {
               const obj10 = { type: "GUILD_SETTINGS_ROLE_SELECT", roleId: color.body.id, role: body };
               obj = obj6(closure_3[14]);
               obj.dispatch(obj10);
             }
-            const obj3 = obj6(closure_3[29]);
+            const obj3 = obj6(closure_3[31]);
             const result = obj3.checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
@@ -928,7 +946,7 @@ obj = {
       const merged = Object.assign(tmp29);
       obj6 = value(c3[16]);
       await patch(request);
-      obj = tmp(c3[29]);
+      obj = tmp(c3[31]);
       const result = obj.checkGuildTemplateDirty(closure_129_0);
       return value;
     })();
@@ -976,7 +994,7 @@ obj = {
       const patch = HTTP.patch;
       obj8 = value(c3[16]);
       await patch(request);
-      obj = body(c3[29]);
+      obj = body(c3[31]);
       const result = obj.checkGuildTemplateDirty(closure_129_0);
       return value;
     })();
@@ -999,7 +1017,7 @@ obj = {
       const patch = HTTP.patch;
       obj8 = value(c3[16]);
       await patch(request);
-      obj = body(c3[29]);
+      obj = body(c3[31]);
       const result = obj.checkGuildTemplateDirty(closure_129_0);
       return value;
     })();

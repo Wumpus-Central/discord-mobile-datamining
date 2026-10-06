@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import _asyncToGenerator_mod from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -126,31 +126,31 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       const result = tmp(1188).AVATAR_SIZE_MAP[closure_13] / height;
       dependencyMap = result;
       const result1 = (height - tmp(1188).AVATAR_SIZE_MAP[closure_13]) / 2;
-      const tmp16 = transitionState === tmp(4589).TransitionStates.MOUNTED;
+      const tmp16 = transitionState === tmp(4595).TransitionStates.MOUNTED;
       let num5 = 0;
-      const useSharedValue = tmp(4612).useSharedValue;
-      tmp(4612);
+      const useSharedValue = tmp(4618).useSharedValue;
+      tmp(4618);
       if (tmp16) {
         num5 = 1;
       }
       const sharedValue = useSharedValue(num5);
       let num6 = 1;
-      const useSharedValue2 = tmp(4612).useSharedValue;
-      tmp(4612);
+      const useSharedValue2 = tmp(4618).useSharedValue;
+      tmp(4618);
       if (!tmp16) {
         num6 = result;
       }
       const sharedValue2 = useSharedValue2(num6);
-      const useSharedValue3 = tmp(4612).useSharedValue;
-      tmp(4612);
+      const useSharedValue3 = tmp(4618).useSharedValue;
+      tmp(4618);
       if (tmp16) {
         tmp22 = -closure_17;
       } else {
         tmp22 = -result1;
       }
       const sharedValue3 = useSharedValue3(tmp22);
-      const useSharedValue4 = tmp(4612).useSharedValue;
-      tmp(4612);
+      const useSharedValue4 = tmp(4618).useSharedValue;
+      tmp(4618);
       if (tmp16) {
         diff = -closure_17 - (height - closure_15) / 2;
       } else {
@@ -268,26 +268,26 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                 return rect;
               }
               let rect = {
-                withSpring: tmp(5597).withSpring,
+                withSpring: tmp(5604).withSpring,
                 scale: sharedValue2,
                 YOU_BAR_SPRING_CONFIG,
                 left: sharedValue3,
                 top: sharedValue4,
                 opacity: sharedValue,
                 transitionState,
-                TransitionStates: tmp(4589).TransitionStates,
-                runOnJS: tmp(4612).runOnJS,
+                TransitionStates: tmp(4595).TransitionStates,
+                runOnJS: tmp(4618).runOnJS,
                 cleanup,
               };
-              const useAnimatedStyle = tmp(4612).useAnimatedStyle;
-              tmp(4612);
+              const useAnimatedStyle = tmp(4618).useAnimatedStyle;
+              tmp(4618);
               et.__closure = rect;
               et.__workletHash = 15831722009842;
               et.__initData = __initData;
               const animatedStyle = useAnimatedStyle(et);
-              const tmpResult17 = tmp(4580);
+              const tmpResult17 = tmp(4586);
               const token = tmpResult17.useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
-              const tmpResult18 = tmp(4580);
+              const tmpResult18 = tmp(4586);
               const token1 = tmpResult18.useToken(cleanup(587).colors.BORDER_SUBTLE);
               if (null == stateFromStores1) {
                 return null;
@@ -832,7 +832,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
             needsOffscreenAlphaCompositing: null,
             avatarDecoration,
             status: OFFLINE,
-            autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==",
+            autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==",
           };
           const tmp23 = closure_22(tmp(sharedValue[15]).Avatar, obj4);
           cResult[11] = avatarDecoration;
@@ -956,7 +956,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           needsOffscreenAlphaCompositing: null,
           avatarDecoration,
           status: OFFLINE,
-          autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==",
+          autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9nb19saXZlL3dlYi9tb2RhbA==",
         };
         Avatar = tmp(tmp2[15]).Avatar;
         if (OFFLINE === StatusTypes.UNKNOWN) {

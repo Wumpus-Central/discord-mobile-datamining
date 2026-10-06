@@ -40,7 +40,7 @@ export const createWaveTransition = function createWaveTransition(duration) {
   let DEFAULT_PASS_DURATION = duration.duration;
   if (DEFAULT_PASS_DURATION == null) {
     const tmp = obj;
-    DEFAULT_PASS_DURATION = obj(14215).DEFAULT_PASS_DURATION;
+    DEFAULT_PASS_DURATION = obj(14233).DEFAULT_PASS_DURATION;
   }
   obj = {
     duration: DEFAULT_PASS_DURATION,
@@ -91,7 +91,7 @@ export const createWaveTransition = function createWaveTransition(duration) {
   if (0 < glyphCountResult) {
     do {
       let tmp6 = obj;
-      let str3 = obj(14215).GLYPH_PEAK;
+      let str3 = obj(14233).GLYPH_PEAK;
       let charAt = str3.charAt;
       let tmp5Result = tmp5();
       str = `${charAt((tmp8 * obj(c1[0]).GLYPH_PEAK.length) | 0)}`;

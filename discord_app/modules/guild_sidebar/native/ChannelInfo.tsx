@@ -75,7 +75,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp8);
         ({ guild, mentionsCount, isMentionLowImportance, isNewChannel } = stateFromStoresObject);
         const tmp11 = useEmbeddedAppsForChannelDefault(channel);
-        const tmpResult4 = channel(7528);
+        const tmpResult4 = channel(7539);
         const unreadThreadsCountForParent = tmpResult4.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
         const obj2 = { mentionsCount, isNewChannel, postsWithUnreadsCount: unreadThreadsCountForParent, muted };
         if (showChannelBadgeDefault(obj2)) {
@@ -129,7 +129,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 hasItem = features.has(constants.COMMUNITY);
               }
               if (hasItem) {
-                const tmpResult5 = channel(5036);
+                const tmpResult5 = channel(5042);
                 if (tmpResult5.hasStream(voiceStates)) {
                   let tmp26;
                   const _Symbol = Symbol;
@@ -147,7 +147,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (null != enableActivities) {
             if (enableActivities) {
-              const tmpResult6 = channel(16159);
+              const tmpResult6 = channel(16198);
               if (tmpResult6.showChannelItemEmbeddedActivities(tmp11)) {
                 if (cResult[14] === tmp11) {
                   let tmp23;
@@ -260,7 +260,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
       const isMentionLowImportance = stateFromStoresObject.isMentionLowImportance;
       const tmp5 = useEmbeddedAppsForChannelDefault(channel);
-      const obj2 = channel(7528);
+      const obj2 = channel(7539);
       const postsWithUnreadsCount = obj2.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
       if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
         let tmp18 = null;
@@ -286,7 +286,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               hasItem = features.has(constants.COMMUNITY);
             }
             if (hasItem) {
-              const tmpResult = channel(5036);
+              const tmpResult = channel(5042);
               if (tmpResult.hasStream(voiceStates)) {
                 tmp11Result = jsx(tmp(1188).LiveTag, {});
               }
@@ -295,7 +295,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (null != enableActivities) {
           if (enableActivities) {
-            const tmpResult2 = channel(16159);
+            const tmpResult2 = channel(16198);
             if (tmpResult2.showChannelItemEmbeddedActivities(tmp5)) {
               tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });
             }
@@ -390,7 +390,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   return tmp16;
                 }
               }
-              const tmp18 = jsx(channel(16042).ConnectedUserLimit, {
+              const tmp18 = jsx(channel(16081).ConnectedUserLimit, {
                 userCount: voiceStatesCount,
                 video: hasVideo,
                 channel,
@@ -457,7 +457,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = hasMedia;
       }
       if (tmp4(obj2)) {
-        const ConnectedUserLimit = tmp(16042).ConnectedUserLimit;
+        const ConnectedUserLimit = tmp(16081).ConnectedUserLimit;
         if (!hasVideo) {
           hasVideo = hasMedia;
         }

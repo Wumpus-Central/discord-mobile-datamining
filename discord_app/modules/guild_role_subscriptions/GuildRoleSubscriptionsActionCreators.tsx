@@ -190,7 +190,7 @@ obj = function _fetchAllSubscriptionListingsDataForGuild() {
             benefitChannels = undefined;
             c11 = 1;
             c12 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp4) {
           if (guildId === 1) {
@@ -844,7 +844,7 @@ obj = function _fetchGuildRoleSubscriptionGroupListing() {
             tmp = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (arg0 === 1) {
@@ -935,7 +935,7 @@ obj = function _createSubscriptionListing() {
             id = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -1052,7 +1052,7 @@ obj = function _updateSubscriptionListing() {
             value = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {
@@ -1153,7 +1153,7 @@ obj = function _fetchMonetizationRestrictions() {
             restrictions = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           if (1 === c7) {

@@ -100,7 +100,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult3 = require("StageChannelParticipantStoreHooks");
       const stageParticipants = tmpResult3.useStageParticipants(
         arg0,
-        tmp(5582).StageChannelParticipantNamedIndex.SPEAKER,
+        tmp(5589).StageChannelParticipantNamedIndex.SPEAKER,
       );
       if (cResult[3] !== stageParticipants) {
         const _Symbol = Symbol;

@@ -57,7 +57,7 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   const obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequire(7829, dependencyMap.paths), "Edit Avatar Decoration", {
+  obj2.openLazy(asyncRequire(7840, dependencyMap.paths), "Edit Avatar Decoration", {
     user,
     guildId,
     currentAvatarDecoration,

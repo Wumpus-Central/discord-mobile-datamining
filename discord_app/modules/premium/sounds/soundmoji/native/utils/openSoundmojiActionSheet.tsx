@@ -10,6 +10,6 @@ export default function openSoundmojiActionSheet(arg0) {
   const obj = SoundmojiRenderingExperiment;
   if (obj.getSoundmojiRenderingExperiment({ location: "openSoundmojiActionSheet" })) {
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequire(11545, dependencyMap.paths), "soundmoji_actionsheet_key", arg0);
+    obj2.openLazy(asyncRequire(11558, dependencyMap.paths), "soundmoji_actionsheet_key", arg0);
   }
 }

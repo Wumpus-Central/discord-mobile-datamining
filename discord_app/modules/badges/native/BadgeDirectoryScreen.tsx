@@ -94,8 +94,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmpResult5 = tmp(6010);
-          const headerCloseButton = tmpResult5.getHeaderCloseButton(tmp(10886).closeBadgeDirectoryScreen);
+          const tmpResult5 = tmp(6017);
+          const headerCloseButton = tmpResult5.getHeaderCloseButton(tmp(10899).closeBadgeDirectoryScreen);
           cResult[8] = headerCloseButton;
           tmp16 = headerCloseButton;
         } else {
@@ -108,7 +108,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[11] === tmp14) {
               tmp18 = cResult[12];
             }
-            const tmpResult6 = tmp(10886);
+            const tmpResult6 = tmp(10899);
             if (tmpResult6.isBadgeDirectoryIOSPageSheet()) {
               if (cResult[13] === tmp18) {
                 if (cResult[14] === tmp4.sheetHeader) {
@@ -120,7 +120,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               ({ sheetHeader: obj10.headerStyle, view: obj10.viewStyle } = tmp4);
-              const tmp27 = jsx(tmp(6496).Navigator, {
+              const tmp27 = jsx(tmp(6503).Navigator, {
                 screens: tmp18,
                 initialRouteName,
                 headerStatusBarHeight: 0,
@@ -138,7 +138,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp20 = cResult[19];
                 }
               }
-              const tmp23 = jsx(tmp(10976).Modal, { screens: tmp18, initialRouteName, viewStyle: tmp4.view });
+              const tmp23 = jsx(tmp(10989).Modal, { screens: tmp18, initialRouteName, viewStyle: tmp4.view });
               cResult[17] = tmp18;
               cResult[18] = tmp4.view;
               cResult[19] = tmp23;
@@ -237,10 +237,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             obj3 = NavigatorHeader;
             return obj;
           }, items2);
-          const tmp2Result = targetUserId(10886);
+          const tmp2Result = targetUserId(10899);
           if (tmp2Result.isBadgeDirectoryIOSPageSheet()) {
             ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-            tmp9Result = jsx(tmp2(6496).Navigator, {
+            tmp9Result = jsx(tmp2(6503).Navigator, {
               screens: memo,
               initialRouteName,
               headerStatusBarHeight: 0,
@@ -248,7 +248,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               viewStyle: null,
             });
           } else {
-            tmp9Result = jsx(tmp2(10976).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+            tmp9Result = jsx(tmp2(10989).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
           }
           return tmp9Result;
         }

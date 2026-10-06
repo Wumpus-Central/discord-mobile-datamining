@@ -99,7 +99,7 @@ let obj = function _handleJoinEmbeddedActivityInternal() {
             let closure_18;
             analyticsLocations = 1;
             componentId = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === analyticsLocations) {
           if (applicationId === 1) {

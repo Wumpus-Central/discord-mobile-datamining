@@ -4,7 +4,7 @@ import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../../intl/index.native.tsx";
 import discord_common_AnalyticsUtils from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef2589 from "../../GiftingBadge.messages.js";
+import _modDef2617 from "../../GiftingBadge.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import useAnalyticsLocationsDefault from "../../../../app_analytics/useAnalyticsLocations.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
@@ -140,7 +140,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const intl = intl2.intl;
             const obj6 = { giftsRemaining: giftsToNextTier, nextTier: nextTierName };
-            const formatToPlainStringResult = intl.formatToPlainString(_modDef2589["0+xfd9"], obj6);
+            const formatToPlainStringResult = intl.formatToPlainString(_modDef2617["0+xfd9"], obj6);
             cResult[12] = giftsToNextTier;
             cResult[13] = nextTierName;
             cResult[14] = formatToPlainStringResult;
@@ -209,7 +209,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       items2 = [React3(View, obj3)];
       const obj5 = {
         variant: "text-md/semibold",
-        children: intl.formatToPlainString(_modDef2589["0+xfd9"], {
+        children: intl.formatToPlainString(_modDef2617["0+xfd9"], {
           giftsRemaining: giftsToNextTier,
           nextTier: nextTierName,
         }),

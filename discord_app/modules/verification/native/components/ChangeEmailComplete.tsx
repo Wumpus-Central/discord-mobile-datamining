@@ -6,7 +6,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import EmailVerificationModalActionCreatorsDefault from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
 import ChangeEmailStore from "../../ChangeEmailStore.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06094_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06101_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

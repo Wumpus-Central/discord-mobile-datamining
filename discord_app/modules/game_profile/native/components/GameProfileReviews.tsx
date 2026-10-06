@@ -130,10 +130,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       ({ title, rating, ratingCount, isRecentRating } = url);
       const tmp4 = closure_10();
       const alwaysShowLinkDecorations = react.useContext(
-        url(4596).AccessibilityPreferencesContext,
+        url(4602).AccessibilityPreferencesContext,
       ).alwaysShowLinkDecorations;
-      const tmp6 = trackAction(8328);
-      const tmp6Result = tmp6(trackAction(4565).openURL);
+      const tmp6 = trackAction(8361);
+      const tmp6Result = tmp6(trackAction(4571).openURL);
       dependencyMap = tmp6Result;
       if (cResult[0] === alwaysShowLinkDecorations) {
         if (cResult[1] === isRecentRating) {
@@ -244,7 +244,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                                 color: "text-subtle",
                                                 children: str6.toString(),
                                               };
-                                              const Text2 = tmp(4886).Text;
+                                              const Text2 = tmp(4892).Text;
                                               const intl2 = tmp(1126).intl;
                                               const format = intl2.format;
                                               const obj5 = { rating_count: ratingCount.toLocaleString() };
@@ -291,9 +291,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = url(8375);
+      const tmpResult = url(8408);
       const result = tmpResult.calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating);
-      const tmpResult3 = url(8376);
+      const tmpResult3 = url(8409);
       const steamReviewScoreDescriptionColor = tmpResult3.getSteamReviewScoreDescriptionColor(result);
       if (cResult[30] === tmp6Result) {
         if (cResult[31] === trackAction) {
@@ -321,7 +321,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol2 = Symbol;
             if (cResult[38] === Symbol.for("react.memo_cache_sentinel")) {
               const obj7 = { size: "sm", color: trackAction(587).colors.ICON_STRONG };
-              const SteamNeutralIcon = tmp(8338).SteamNeutralIcon;
+              const SteamNeutralIcon = tmp(8371).SteamNeutralIcon;
               const tmp31 = closure_7(SteamNeutralIcon, obj7);
               cResult[38] = tmp31;
               tmp29 = tmp31;
@@ -330,7 +330,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[39] !== title) {
               const obj8 = { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title };
-              const tmp34 = closure_7(url(4886).Text, obj8);
+              const tmp34 = closure_7(url(4892).Text, obj8);
               cResult[39] = title;
               cResult[40] = tmp34;
               tmp32 = tmp34;
@@ -343,7 +343,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp35 = cResult[43];
               }
               const steamRatingContainer = tmp4.steamRatingContainer;
-              const Text = tmp(4886).Text;
+              const Text = tmp(4892).Text;
               let linkText;
               if (alwaysShowLinkDecorations) {
                 linkText = tmp4.linkText;
@@ -353,7 +353,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[45] === linkText) {
                   tmp41 = cResult[46];
                 }
-                const tmpResult4 = url(8376);
+                const tmpResult4 = url(8409);
                 const steamReviewScoreDescriptionIntl = tmpResult4.getSteamReviewScoreDescriptionIntl(result);
                 cResult[0] = alwaysShowLinkDecorations;
                 cResult[1] = isRecentRating;
@@ -463,15 +463,15 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       ({ title, rating, isRecentRating } = url);
       const tmp = closure_10();
       const alwaysShowLinkDecorations = react.useContext(
-        url(4596).AccessibilityPreferencesContext,
+        url(4602).AccessibilityPreferencesContext,
       ).alwaysShowLinkDecorations;
-      const tmp5 = trackAction(8328);
-      const tmp5Result = tmp5(trackAction(4565).openURL);
+      const tmp5 = trackAction(8361);
+      const tmp5Result = tmp5(trackAction(4571).openURL);
       dependencyMap = tmp5Result;
-      const obj = url(8375);
+      const obj = url(8408);
       const result = obj.calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating);
       const items = [tmp5Result, url, trackAction];
-      const obj2 = url(8376);
+      const obj2 = url(8409);
       const steamReviewScoreDescriptionColor = obj2.getSteamReviewScoreDescriptionColor(result);
       const obj3 = {
         onPress: react.useCallback(() => {
@@ -491,10 +491,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       items1[1] = showBorderBottom;
       const obj4 = { style: tmp.steamNameContainer, children: items2 };
       const obj5 = { size: "sm", color: trackAction(587).colors.ICON_STRONG };
-      const SteamNeutralIcon = tmp2(8338).SteamNeutralIcon;
+      const SteamNeutralIcon = tmp2(8371).SteamNeutralIcon;
       items2 = [
         closure_7(SteamNeutralIcon, obj5),
-        closure_7(tmp2(4886).Text, {
+        closure_7(tmp2(4892).Text, {
           variant: "heading-sm/medium",
           color: "mobile-text-heading-primary",
           children: title,
@@ -511,17 +511,17 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items4 = [tmp.steamScoreDescription];
       let linkText;
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       if (alwaysShowLinkDecorations) {
         linkText = tmp.linkText;
       }
       items4[1] = linkText;
-      tmp2Result = url(8376);
+      tmp2Result = url(8409);
       items5 = [closure_7(Text, obj7)];
       let tmp12Result = null != ratingCount && result !== tmp2(2027).SteamReviewScoreDescription.NO_USER_REVIEWS;
       if (tmp12Result) {
         const obj8 = { variant: "text-sm/medium", color: "text-subtle", children: str.toString() };
-        const Text2 = tmp2(4886).Text;
+        const Text2 = tmp2(4892).Text;
         const intl2 = tmp2(1126).intl;
         const format = intl2.format;
         const obj9 = { rating_count: ratingCount.toLocaleString() };
@@ -575,7 +575,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           opencritic1 = reviews2.opencritic;
         }
         if (opencritic1 == null) {
-          opencritic1 = { topCriticRating: "marginBottom", topCriticRatingCount: "unicodeVersion", tier: "Reflect" };
+          opencritic1 = {
+            topCriticRating: "duration",
+            topCriticRatingCount: "toCharArray$esjava$1",
+            tier: "toCharArray$esjava$1",
+          };
         }
         const reviews3 = game.reviews;
         let opencritic2;
@@ -596,8 +600,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (num3 == null) {
         num3 = -1;
       }
-      const tmp11 = trackAction(8328);
-      const tmp11Result = tmp11(trackAction(4565).openURL);
+      const tmp11 = trackAction(8361);
+      const tmp11Result = tmp11(trackAction(4571).openURL);
       dependencyMap = tmp11Result;
       const tmp10 = trackAction;
       if (cResult[2] === tmp11Result) {
@@ -613,7 +617,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[6] !== tier) {
             let str = "";
             if (null != tier) {
-              const tmpResult = url(8377);
+              const tmpResult = url(8410);
               str = tmpResult.getOpenCriticTierText(tier);
             }
             cResult[6] = tier;
@@ -625,7 +629,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[8] !== tier) {
             let openCriticCircleRatingColor;
             if (null != tier) {
-              const tmpResult4 = url(8377);
+              const tmpResult4 = url(8410);
               openCriticCircleRatingColor = tmpResult4.getOpenCriticCircleRatingColor(tier);
             } else {
               openCriticCircleRatingColor = { foregroundColor: "", backgroundColor: "" };
@@ -653,7 +657,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: intl2.string(url(1126).t["UxvER+"]),
             };
-            const Text = url(4886).Text;
+            const Text = url(4892).Text;
             intl2 = url(1126).intl;
             const tmp22 = closure_7(Text, obj2);
             cResult[11] = tmp22;
@@ -688,8 +692,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                                 ),
                                 children: intl4.string(url(1126).t["0xYzpO"]),
                               };
-                              const Text3 = url(4886).Text;
-                              tmpResult5 = url(8376);
+                              const Text3 = url(4892).Text;
+                              tmpResult5 = url(8409);
                               intl4 = url(1126).intl;
                               tmp35 = closure_7(Text3, obj3);
                             }
@@ -759,7 +763,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                   items2[1] = obj7;
                   intl3 = url(1126).intl;
                   const obj8 = { rating: topCriticRating, strokeColor: foregroundColor, size };
-                  items3 = [closure_7(tmp10(8383), obj8)];
+                  items3 = [closure_7(tmp10(8416), obj8)];
                   const obj9 = { style: tmp4.opencriticTopCriticRatingContainer, children: closure_7(Text2, obj10) };
                   const _Math = Math;
                   obj10 = {
@@ -767,7 +771,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-overlay-light",
                     children: Math.floor(topCriticRating),
                   };
-                  Text2 = url(4886).Text;
+                  Text2 = url(4892).Text;
                   items3[1] = closure_7(closure_4, obj9);
                   tmp29 = closure_8(closure_4, obj6);
                 }
@@ -797,7 +801,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               accessibilityLabel: tmp14,
             };
             obj13 = { uri: tmpResult6.getOpenCriticTierImage(tier) };
-            tmpResult6 = url(8377);
+            tmpResult6 = url(8410);
             tmp24 = closure_7(closure_4, obj11);
           }
           cResult[12] = tmp4.opencriticTopCriticContainer;
@@ -851,7 +855,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         opencritic = reviews.opencritic;
       }
       if (opencritic == null) {
-        opencritic = { topCriticRating: "marginBottom", topCriticRatingCount: "unicodeVersion", tier: "Reflect" };
+        opencritic = {
+          topCriticRating: "duration",
+          topCriticRatingCount: "toCharArray$esjava$1",
+          tier: "toCharArray$esjava$1",
+        };
       }
       ({ tier, topCriticRating } = opencritic);
       if (topCriticRating == null) {
@@ -861,8 +869,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       if (num == null) {
         num = -1;
       }
-      const tmp4 = trackAction(8328);
-      const tmp4Result = tmp4(trackAction(4565).openURL);
+      const tmp4 = trackAction(8361);
+      const tmp4Result = tmp4(trackAction(4571).openURL);
       dependencyMap = tmp4Result;
       const items = [tmp4Result, url, trackAction];
       let str = "";
@@ -872,11 +880,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       const tmp2 = trackAction;
       if (null != tier) {
-        const obj2 = url(8377);
+        const obj2 = url(8410);
         str = obj2.getOpenCriticTierText(tier);
       }
       if (null != tier) {
-        const obj4 = url(8377);
+        const obj4 = url(8410);
         openCriticCircleRatingColor = obj4.getOpenCriticCircleRatingColor(tier);
       } else {
         openCriticCircleRatingColor = { foregroundColor: "", backgroundColor: "" };
@@ -895,7 +903,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl2.string(url(1126).t["UxvER+"]),
       };
-      const Text = url(4886).Text;
+      const Text = url(4892).Text;
       intl2 = url(1126).intl;
       items1 = [closure_7(Text, obj3)];
       let tmp12Result = null;
@@ -909,7 +917,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         };
         obj7 = { source: obj8, style: tmp.opencriticTopCriticImage, accessible: true, accessibilityLabel: str };
         obj8 = { uri: tmp11Result.getOpenCriticTierImage(tier) };
-        tmp11Result = url(8377);
+        tmp11Result = url(8410);
         tmp12Result = closure_7(closure_4, obj6);
       }
       items2 = [tmp12Result, ,];
@@ -930,11 +938,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             items3[1] = obj10;
             intl3 = tmp11(1126).intl;
             const obj11 = { rating: topCriticRating, strokeColor: foregroundColor, size };
-            items4 = [closure_7(tmp2(8383), obj11)];
+            items4 = [closure_7(tmp2(8416), obj11)];
             const obj12 = { style: tmp.opencriticTopCriticRatingContainer, children: closure_7(Text2, obj13) };
             const _Math = Math;
             obj13 = { variant: "text-xs/bold", color: "text-overlay-light", children: Math.floor(topCriticRating) };
-            Text2 = tmp11(4886).Text;
+            Text2 = tmp11(4892).Text;
             items4[1] = closure_7(closure_4, obj12);
             tmp9Result = closure_8(closure_4, obj9);
           }
@@ -951,8 +959,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             ),
             children: intl4.string(url(1126).t["0xYzpO"]),
           };
-          const Text3 = tmp11(4886).Text;
-          tmp11Result2 = url(8376);
+          const Text3 = tmp11(4892).Text;
+          tmp11Result2 = url(8409);
           intl4 = tmp11(1126).intl;
           tmp12Result2 = closure_7(Text3, obj14);
         }

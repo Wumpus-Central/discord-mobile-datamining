@@ -2,7 +2,7 @@
 import react_native from "../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../_runtime/00576_react.js";
 import intl4 from "../../../intl/index.native.tsx";
-import _modDef3593 from "../intl/SlayerStorefront.messages.js";
+import _modDef3623 from "../intl/SlayerStorefront.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard.tsx";
 import InfoBox from "../../user_settings/authorized_apps/native/InfoBox.tsx";
@@ -225,7 +225,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
             const intl3 = intl4.intl;
             const formatToPlainString2 = intl3.formatToPlainString;
             let name1;
-            const BMMo2K = _modDef3593.BMMo2K;
+            const BMMo2K = _modDef3623.BMMo2K;
             if (application != null) {
               name1 = application.name;
             }
@@ -343,7 +343,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         if (mobileAccountLinkingDisabled) {
           const formatToPlainString2 = intl.formatToPlainString;
           let name;
-          const BMMo2K = _modDef3593.BMMo2K;
+          const BMMo2K = _modDef3623.BMMo2K;
           if (application != null) {
             name = application.name;
           }

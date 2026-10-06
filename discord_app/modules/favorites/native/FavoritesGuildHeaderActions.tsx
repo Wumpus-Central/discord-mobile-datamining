@@ -18,7 +18,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(4);
       ({ isPreview, label, exitPreview } = useFavoritesGuildHeaderActionDefault());
       useFavoritesGuildHeaderActionDefault();
-      const tmp4Result = importDefault(isPreview ? 6018 : 10979);
+      const tmp4Result = importDefault(isPreview ? 6025 : 10992);
       if (!isPreview) {
         exitPreview = FavoritesGuildAddActionSheet.openFavoritesGuildAddActionSheet;
       }
@@ -59,7 +59,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         <IconButton
           variant="secondary"
           size="sm"
-          icon={importDefault(isPreview ? 6018 : 10979)}
+          icon={importDefault(isPreview ? 6025 : 10992)}
           onPress={exitPreview}
           accessibilityLabel={label}
           maxFontSizeMultiplier={1}

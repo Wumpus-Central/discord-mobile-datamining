@@ -2,7 +2,7 @@
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react from "../../../../_runtime/00576_react.js";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef2787 from "../SafetyFlows.messages.js";
+import _modDef2815 from "../SafetyFlows.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import ModalDisclaimer2 from "../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
@@ -19,7 +19,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const ModalDisclaimer = ModalDisclaimer2.ModalDisclaimer;
-        ({ variant: "text-xs/medium", children: intl.format(_modDef2787["0DHxym"], obj4) });
+        ({ variant: "text-xs/medium", children: intl.format(_modDef2815["0DHxym"], obj4) });
         const Text = Text_Text.Text;
         intl = intl2.intl;
         const tmp7 = <ModalDisclaimer>{null}</ModalDisclaimer>;
@@ -39,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let intl;
       const ModalDisclaimer = ModalDisclaimer2.ModalDisclaimer;
-      ({ variant: "text-xs/medium", children: intl.format(_modDef2787["0DHxym"], obj3) });
+      ({ variant: "text-xs/medium", children: intl.format(_modDef2815["0DHxym"], obj3) });
       const Text = Text_Text.Text;
       intl = intl2.intl;
       return <ModalDisclaimer>{null}</ModalDisclaimer>;

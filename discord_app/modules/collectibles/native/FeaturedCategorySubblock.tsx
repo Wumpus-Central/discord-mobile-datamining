@@ -494,7 +494,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_10();
       let obj = subblock(1490);
       importDefault = obj.useNavigation();
-      let obj2 = subblock(8421);
+      let obj2 = subblock(8454);
       dependencyMap = obj2.useCollectiblesAnalyticsContext();
       const assetUrl = subblock.assetUrl;
       let obj3 = subblock(504);
@@ -503,7 +503,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId),
       );
       let unpublishedAt = subblock.unpublishedAt;
-      const obj4 = subblock(15717);
+      const obj4 = subblock(15753);
       const handleCardVisibilityChange = obj4.useTrackProductCardImpression(
         subblock.categoryStoreListingId,
         "mobile_home",
@@ -590,7 +590,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         children: items1,
       };
       const tmp10 = VisibilitySensorDefault;
-      PressableOpacity = tmp2(5909).PressableOpacity;
+      PressableOpacity = tmp2(5916).PressableOpacity;
       intl = tmp2(1126).intl;
       obj7 = { category: subblock.name };
       intl2 = tmp2(1126).intl;
@@ -602,11 +602,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp9Result = closure_8(stateFromStores, obj9);
       }
       items1 = [tmp9Result];
-      const tmp2Result = subblock(7065);
+      const tmp2Result = subblock(7078);
       let result = tmp2Result.shouldShowLimitedTimeBadge(date);
       if (result) {
         const obj11 = { style: tmp.limitedTimeBadge };
-        result = closure_8(tmp2(8486).LimitedTimeBadge, obj11);
+        result = closure_8(tmp2(8519).LimitedTimeBadge, obj11);
       }
       items1[1] = result;
       return closure_8(tmp10, obj5);

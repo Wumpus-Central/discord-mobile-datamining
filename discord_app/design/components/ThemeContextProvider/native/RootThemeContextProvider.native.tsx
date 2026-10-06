@@ -246,7 +246,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (children) => {
       let themeContext;
-      let obj = themeContext(4589);
+      let obj = themeContext(4595);
       themeContext = obj.useThemeContext();
       const items = [themeContext];
       const memo = react.useMemo(() => {
@@ -256,7 +256,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const merged = Object.assign(themeContext);
         return createThemedContext(obj);
       }, items);
-      return jsx(themeContext(4589).ThemeContext.Provider, { value: memo, children: children.children });
+      return jsx(themeContext(4595).ThemeContext.Provider, { value: memo, children: children.children });
     };
 const result = size.fileFinishedImporting(
   "design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx",

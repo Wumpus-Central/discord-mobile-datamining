@@ -5,7 +5,7 @@ import RobotIcon from "../../../design/components/Icon/native/redesign/generated
 import Constants from "../Constants.tsx";
 import MenuIcon from "../../../design/components/Icon/native/redesign/generated/MenuIcon.tsx";
 import ChannelListPlusIcon from "../../../design/components/Icon/native/redesign/generated/ChannelListPlusIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/17690_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/17736_AssetRegistry.js";
 import BaseRuleInfo from "../BaseRuleInfo.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

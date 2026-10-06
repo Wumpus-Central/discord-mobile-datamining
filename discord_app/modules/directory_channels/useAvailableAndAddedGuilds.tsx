@@ -189,7 +189,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       class R {
         constructor() {
           tmp = closure_4(function () {
-            /* body not rendered: F141994 */
+            /* body not rendered: F142200 */
           })();
           return;
         }

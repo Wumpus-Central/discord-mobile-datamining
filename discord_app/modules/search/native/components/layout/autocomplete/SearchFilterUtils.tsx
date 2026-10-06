@@ -239,7 +239,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(se
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   let closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(11969));
+  const keys = Object.keys(items(11988));
   const item = keys.forEach(function (token) {
     const obj = SearchTokens;
     if (obj.isSearchFilterTokenType(token)) {

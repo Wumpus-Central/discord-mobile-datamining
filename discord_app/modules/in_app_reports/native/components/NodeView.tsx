@@ -631,7 +631,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       };
       obj3 = { style: tmp.childContainer, children: items2 };
       const obj4 = { style: tmp.childContent, children: items1 };
-      const PressableHighlight = tmp6(5909).PressableHighlight;
+      const PressableHighlight = tmp6(5916).PressableHighlight;
       items1 = [,];
       const obj5 = {
         style: tmp.childButtonText,
@@ -639,13 +639,13 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: tmp3,
       };
-      items1[0] = closure_18(child(4886).Text, obj5);
+      items1[0] = closure_18(child(4892).Text, obj5);
       if (stateFromStores) {
         stateFromStores = null != report_type;
       }
       if (stateFromStores) {
         const obj6 = { style: tmp.debugText, variant: "text-xs/normal", color: "text-muted", children: report_type };
-        stateFromStores = closure_18(tmp6(4886).Text, obj6);
+        stateFromStores = closure_18(tmp6(4892).Text, obj6);
       }
       items1[1] = stateFromStores;
       items2 = [closure_19(closure_8, obj4), closure_18(ArrowDefault, {})];

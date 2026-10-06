@@ -6,7 +6,7 @@ import urlParse from "../../../_runtime/01373_urlParse.js";
 import InviteCodeUtils from "../instant_invite/InviteCodeUtils.tsx";
 import CodedLink from "CodedLink.tsx";
 import findCodedLinkUrlsDefault from "findCodedLinkUrls.native.tsx";
-import _mod5635 from "../../../_runtime/metro/05635__.js";
+import _mod5642 from "../../../_runtime/metro/05642__.js";
 import UnicodeSanitizationUtils from "../markup/UnicodeSanitizationUtils.tsx";
 import _slicedToArray from "../application_storefront/storefrontMessageEmbedCodedLink.tsx";
 import InviteTypeUtils from "../instant_invite/InviteTypeUtils.tsx";
@@ -24,7 +24,7 @@ let obj17;
 let obj20;
 let obj4;
 let obj7;
-const f89365 = (arg0, arg1, arg2, arg3) => {
+const f89502 = (arg0, arg1, arg2, arg3) => {
   let combined = arg0;
   if (null == arg2) {
     const _HermesInternal = HermesInternal;
@@ -45,7 +45,7 @@ const coerceLinksToCodedLinks2 = function coerceLinksToCodedLinks(arg0) {
         let primaryHostRemainingPath;
         let templateHostRemainingPath;
         let url;
-        const f89367 = (item) => {
+        const f89504 = (item) => {
           let parts;
           if (typeof item === "string") {
             parts = item.split(",");
@@ -326,7 +326,7 @@ const coerceLinksToCodedLinks2 = function coerceLinksToCodedLinks(arg0) {
               }
               let parsed = null;
               if (null != query) {
-                const tmp4Result23 = _mod5635;
+                const tmp4Result23 = _mod5642;
                 parsed = tmp4Result23.parse(query);
               }
               if (typeof match11[3] === "string") {
@@ -345,7 +345,7 @@ const coerceLinksToCodedLinks2 = function coerceLinksToCodedLinks(arg0) {
                   const _Array = Array;
                   if (Array.isArray(skuIds)) {
                     const tmp4Result26 = storefrontCodedLink2;
-                    result1 = tmp4Result26.normalizeStorefrontSkuIds(skuIds.flatMap(f89367));
+                    result1 = tmp4Result26.normalizeStorefrontSkuIds(skuIds.flatMap(f89504));
                   } else {
                     result1 = [];
                   }
@@ -434,7 +434,7 @@ const coerceLinksToCodedLinks2 = function coerceLinksToCodedLinks(arg0) {
               let applicationId;
               let parsed1 = null;
               if (null != query) {
-                const tmp4Result28 = _mod5635;
+                const tmp4Result28 = _mod5642;
                 parsed1 = tmp4Result28.parse(query);
               }
               let str14;
@@ -468,7 +468,7 @@ const coerceLinksToCodedLinks2 = function coerceLinksToCodedLinks(arg0) {
                       const _Array2 = Array;
                       if (Array.isArray(skuIds1)) {
                         const tmp4Result31 = storefrontCodedLink2;
-                        result2 = tmp4Result31.normalizeStorefrontSkuIds(skuIds1.flatMap(f89367));
+                        result2 = tmp4Result31.normalizeStorefrontSkuIds(skuIds1.flatMap(f89504));
                       } else {
                         result2 = [];
                       }
@@ -884,7 +884,7 @@ function findCodedLinks(str) {
   if (null == str) {
     return [];
   } else {
-    str = str.replace(regExp1, f89365);
+    str = str.replace(regExp1, f89502);
     const tmp4 = findCodedLinkUrlsDefault(str);
     let match = str.match(re22);
     const concat = tmp4.concat;
@@ -1130,7 +1130,7 @@ export const findCodedLink = function findCodedLink(sanitizeUrlResult) {
   if (null == sanitizeUrlResult) {
     items = [];
   } else {
-    const str = sanitizeUrlResult.replace(regExp1, f89365);
+    const str = sanitizeUrlResult.replace(regExp1, f89502);
     const tmp4 = findCodedLinkUrlsDefault(str);
     let match = str.match(re22);
     const concat = tmp4.concat;
@@ -1152,7 +1152,7 @@ export const containsCodedLink = function containsCodedLink(sanitizeWhitespaceRe
     if (null == str) {
       items = [];
     } else {
-      const str2 = str.replace(regExp1, f89365);
+      const str2 = str.replace(regExp1, f89502);
       const tmp6 = findCodedLinkUrlsDefault(str2);
       let match = str2.match(re22);
       const concat = tmp6.concat;

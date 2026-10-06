@@ -717,10 +717,10 @@ function TrialOfferSheetExample() {
   let premiumTrialOffer;
   function markAsDismissed() {}
   const tmp = premiumTrialOffer;
-  let obj = premiumTrialOffer(6956);
+  let obj = premiumTrialOffer(6969);
   premiumTrialOffer = obj.usePremiumTrialOffer();
-  const TableRowGroup = premiumTrialOffer(6074).TableRowGroup;
-  const TableRow = premiumTrialOffer(5993).TableRow;
+  const TableRowGroup = premiumTrialOffer(6081).TableRowGroup;
+  const TableRow = premiumTrialOffer(6000).TableRow;
   let obj2 = {
     label: "Trial Offer Nitro Basic",
     subLabel: str2,
@@ -729,12 +729,12 @@ function TrialOfferSheetExample() {
       if (null != premiumTrialOffer) {
         const obj2 = { fallbackPremiumType: tmp, userTrialOffer: tmp2, markAsDismissed };
         const obj = ActionSheetActionCreatorsDefault;
-        obj.openLazy(asyncRequire(15565, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        obj.openLazy(asyncRequire(15579, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     },
   };
   items = [closure_17(TableRow, obj2)];
-  const TableRow2 = tmp(5993).TableRow;
+  const TableRow2 = tmp(6000).TableRow;
   const obj3 = { title: "Trial Offers", hasIcons: false, children: items };
   const obj4 = {
     label: "Trial Offer Nitro",
@@ -744,7 +744,7 @@ function TrialOfferSheetExample() {
       if (null != premiumTrialOffer) {
         const obj2 = { fallbackPremiumType: tmp, userTrialOffer: tmp2, markAsDismissed };
         const obj = ActionSheetActionCreatorsDefault;
-        obj.openLazy(asyncRequire(15565, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
+        obj.openLazy(asyncRequire(15579, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj2);
       }
     },
   };

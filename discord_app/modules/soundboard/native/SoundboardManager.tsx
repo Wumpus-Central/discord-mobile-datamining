@@ -90,7 +90,7 @@ class SoundboardManager extends BaseSoundboardManager {
       await "IconComponent";
       closure_2 = tmp;
       ({ sound: c0, soundKey: c1, soundId: c2, userId: c3 } = closure_0);
-      return "Set";
+      return "Reflect";
     });
     applyArgumentsResult._playSoundWithListener = function () {
       return closure_0(...arguments);

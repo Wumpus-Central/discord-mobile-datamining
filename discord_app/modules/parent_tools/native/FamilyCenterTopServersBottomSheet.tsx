@@ -2,7 +2,7 @@
 import react from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import TableRowGroup2 from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
@@ -77,7 +77,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj2 = { label: stateFromStores.name, subLabel: tmp9, icon: tmp11 };
-            const tmp17 = closure_4(guildActivity(5993).TableRow, obj2);
+            const tmp17 = closure_4(guildActivity(6000).TableRow, obj2);
             cResult[9] = tmp9;
             cResult[10] = stateFromStores.name;
             cResult[11] = tmp11;
@@ -91,7 +91,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp14;
           tmp11 = tmp14;
         }
-        const tmpResult2 = guildActivity(8298);
+        const tmpResult2 = guildActivity(8331);
         const topUserOrGuildDescription = tmpResult2.getTopUserOrGuildDescription(
           guildActivity.messages_sent,
           guildActivity.call_count,
@@ -112,7 +112,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == stateFromStores) {
         return null;
       } else {
-        const tmp2Result = guildActivity(8298);
+        const tmp2Result = guildActivity(8331);
         const topUserOrGuildDescription = tmp2Result.getTopUserOrGuildDescription(
           guildActivity.messages_sent,
           guildActivity.call_count,
@@ -122,7 +122,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
           subLabel: topUserOrGuildDescription,
           icon: closure_4(GuildIconDefault, obj3),
         };
-        const TableRow = tmp2(5993).TableRow;
+        const TableRow = tmp2(6000).TableRow;
         obj3 = { guild: stateFromStores, style: tmp.guildIcon };
         return closure_4(TableRow, obj2);
       }
@@ -142,7 +142,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const header = tmp4.header;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl2.intl;
-        const stringResult = intl.string(_modDef2493.Lq9Set);
+        const stringResult = intl.string(_modDef2521.Lq9Set);
         cResult[0] = stringResult;
         first = stringResult;
       } else {
@@ -208,7 +208,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { children: items };
       const tmp = closure_6();
       const ActionSheet = ActionSheet2.ActionSheet;
-      const obj2 = { variant: "text-md/bold", style: tmp.header, children: intl.string(_modDef2493.Lq9Set) };
+      const obj2 = { variant: "text-md/bold", style: tmp.header, children: intl.string(_modDef2521.Lq9Set) };
       const Text = Text_Text.Text;
       intl = intl2.intl;
       items = [React3(Text, obj2)];

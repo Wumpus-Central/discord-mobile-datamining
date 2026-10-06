@@ -55,13 +55,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const TwoWayLinkDiscordConsent = tmp(8750).TwoWayLinkDiscordConsent;
+      const TwoWayLinkDiscordConsent = tmp(8782).TwoWayLinkDiscordConsent;
       const tmp8 = (
         <TwoWayLinkDiscordConsent
           platformType={PlatformTypes.XBOX}
           callbackCode={callbackCode}
           callbackState={callbackState}
-          clientId={navigation(8751).ConsoleOAuthApplications.XBOX_APPLICATION_ID}
+          clientId={navigation(8783).ConsoleOAuthApplications.XBOX_APPLICATION_ID}
           scopes={XBOX_CLIENT_SCOPES}
           onNext={tmp5}
           onError={tmp6}
@@ -89,13 +89,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = react.useCallback(() => {
         navigation.push(XboxLinkModalScenes.ERROR);
       }, items1);
-      const TwoWayLinkDiscordConsent = navigation(8750).TwoWayLinkDiscordConsent;
+      const TwoWayLinkDiscordConsent = navigation(8782).TwoWayLinkDiscordConsent;
       return (
         <TwoWayLinkDiscordConsent
           platformType={PlatformTypes.XBOX}
           callbackCode={callbackCode}
           callbackState={callbackState}
-          clientId={navigation(8751).ConsoleOAuthApplications.XBOX_APPLICATION_ID}
+          clientId={navigation(8783).ConsoleOAuthApplications.XBOX_APPLICATION_ID}
           scopes={XBOX_CLIENT_SCOPES}
           onNext={callback}
           onError={callback1}

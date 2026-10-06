@@ -452,7 +452,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }, items4);
       const intl = projectId(1126).intl;
       const string = intl.string;
-      const tmp19 = size(3723);
+      const tmp19 = size(3753);
       if (first2) {
         prop = tmp19["URbF/7"];
         tmp21 = tmp18;
@@ -473,7 +473,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         onLayout: callback,
         onPress: callback2,
         accessibilityRole: "button",
-        accessibilityLabel: intl2.string(tmp21(3723)["DesV7/"]),
+        accessibilityLabel: intl2.string(tmp21(3753)["DesV7/"]),
         testID: "conjure-design-surface",
         children: tmp26(first2, obj2),
       };
@@ -549,7 +549,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = {
         style: tmp.hint,
         accessibilityLiveRegion: "polite",
-        children: closure_8(projectId(4886).Text, obj8),
+        children: closure_8(projectId(4892).Text, obj8),
       };
       obj8 = { variant: "text-sm/medium", color: "text-default", style: tmp.hintText, children: stringResult };
       items6[2] = closure_8(first2, obj7);

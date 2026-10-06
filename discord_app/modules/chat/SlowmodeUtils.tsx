@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
 import intl4 from "../../intl/index.native.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -63,7 +63,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const intl2 = intl4.intl;
     return intl2.string(intl4.t["8+NidX"]);
   } else if (stateFromStores >= DurationsDefault.Millis.HOUR) {
-    const tmp3Result = _modDef4461;
+    const tmp3Result = _modDef4467;
     const time2 = tmp3Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
     const combined = "" + time2.minutes();
@@ -74,7 +74,7 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const padStartResult1 = combined1.padStart(2, "0");
     return "" + time2.hours() + ":" + padStartResult + ":" + padStartResult1;
   } else if (stateFromStores > 0) {
-    const tmp3Result2 = _modDef4461;
+    const tmp3Result2 = _modDef4467;
     const time = tmp3Result2.duration(stateFromStores);
     const _HermesInternal = HermesInternal;
     const combined2 = "" + time.seconds();

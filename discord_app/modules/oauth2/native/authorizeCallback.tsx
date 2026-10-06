@@ -37,13 +37,13 @@ export default function authorizeCallback(arg0) {
           if (null != pathname.match(re5)) {
             const obj3 = { application: tmp, guild: tmp2 };
             const tmp8Result4 = ModalActionCreatorsDefault;
-            tmp8Result4.pushLazy(asyncRequire(8714, dependencyMap.paths), obj3, _false);
+            tmp8Result4.pushLazy(asyncRequire(8746, dependencyMap.paths), obj3, _false);
           } else if (null != pathname.match(re6)) {
             if (!canceled) {
               const pushLazy = ModalActionCreatorsDefault.pushLazy;
               let str1;
               ModalActionCreatorsDefault;
-              const tmp19 = asyncRequire(8712, dependencyMap.paths);
+              const tmp19 = asyncRequire(8744, dependencyMap.paths);
               if (searchParams != null) {
                 const str2 = searchParams.get("error_description");
                 if (str2 != null) {
@@ -81,6 +81,6 @@ export default function authorizeCallback(arg0) {
     openURL(_location, SAFARI);
   } else if (!canceled) {
     const obj = ModalActionCreatorsDefault;
-    obj.pushLazy(asyncRequire(8712, dependencyMap.paths), undefined, React3);
+    obj.pushLazy(asyncRequire(8744, dependencyMap.paths), undefined, React3);
   }
 }

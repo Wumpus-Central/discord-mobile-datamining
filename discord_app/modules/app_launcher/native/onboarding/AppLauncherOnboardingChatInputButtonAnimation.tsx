@@ -9,8 +9,8 @@ import ButtonConstants from "../../../../design/components/Button/native/ButtonC
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import ClientThemesOverrides from "../../../client_themes/native/ClientThemesOverrides.tsx";
 import useAppLauncherOnboardingContentDefault from "hooks/useAppLauncherOnboardingContent.tsx";
-import _mod11676 from "../../../../../_runtime/metro/11676__.js";
-import _mod11873 from "../../../../../_runtime/metro/11873__.js";
+import _mod11690 from "../../../../../_runtime/metro/11690__.js";
+import _mod11887 from "../../../../../_runtime/metro/11887__.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -160,7 +160,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const glowLottie = tmp4.glowLottie;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult5 = _mod11873;
+        const tmpResult5 = _mod11887;
         cResult[6] = tmpResult5;
         tmp15 = tmpResult5;
       } else {
@@ -197,7 +197,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 const _Symbol = Symbol;
                 const trinketsLottie = tmp4.trinketsLottie;
                 if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                  const tmpResult6 = _mod11676;
+                  const tmpResult6 = _mod11690;
                   cResult[20] = tmpResult6;
                   tmp33 = tmpResult6;
                 } else {
@@ -291,7 +291,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items1 = [React3.absoluteFill, tmp.glowAnimation];
       const obj3 = { children: items4 };
       const View = ReanimatedRexportDefault.View;
-      const obj5 = { collapsable: false, style: tmp.glowLottie, source: _mod11873, autoPlay: !stateFromStores };
+      const obj5 = { collapsable: false, style: tmp.glowLottie, source: _mod11887, autoPlay: !stateFromStores };
       const tmp5 = LottieAnimationViewDefault;
       items2 = [metroRequire(tmp5, obj5), ,];
       const obj6 = { collapsable: false, style: items3 };
@@ -300,7 +300,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj7 = { collapsable: false, style: tmp.fakeButton };
       items2[2] = metroRequire(_false, obj7);
       items4 = [metroImportDefault(View, obj4)];
-      const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: _mod11676, autoPlay: !stateFromStores };
+      const obj8 = { collapsable: false, style: tmp.trinketsLottie, source: _mod11690, autoPlay: !stateFromStores };
       const tmp6 = LottieAnimationViewDefault;
       items4[1] = metroRequire(tmp6, obj8);
       return metroImportDefault(metroImportAll, obj3);

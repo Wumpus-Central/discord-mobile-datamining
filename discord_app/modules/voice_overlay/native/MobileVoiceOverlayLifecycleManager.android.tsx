@@ -20,7 +20,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 import MobileVoiceOverlayStore from "../../../stores/native/MobileVoiceOverlayStore.tsx";
 import Constants from "../../../Constants.tsx";
 import "AssetRegistry";
-import AssetRegistry from "../../../../_runtime/12726_AssetRegistry.js";
+import AssetRegistry from "../../../../_runtime/12741_AssetRegistry.js";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

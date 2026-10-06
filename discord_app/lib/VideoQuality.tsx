@@ -1601,10 +1601,10 @@ class VideoQuality extends TypedEventEmitter {
     let value = self.cameraDuration.value;
     const cameraDuration = self.cameraDuration;
     cameraDuration.value =
-      self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT && null != transport.camera;
+      self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT && null != transport.camera;
     const cameraOpportunityDuration = self.cameraOpportunityDuration;
-    const tmp7 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT && null != transport.camera;
-    let tmp9 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT;
+    const tmp7 = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT && null != transport.camera;
+    let tmp9 = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT;
     if (tmp9) {
       let tmp10 = null;
       tmp9 = null != transport.camera;
@@ -1614,7 +1614,7 @@ class VideoQuality extends TypedEventEmitter {
     }
     cameraOpportunityDuration.value = tmp9;
     const cameraSendDuration = self.cameraSendDuration;
-    let tmp11 = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT && null != transport.camera;
+    let tmp11 = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT && null != transport.camera;
     if (tmp11) {
       tmp11 = num > 0;
     }
@@ -1624,7 +1624,7 @@ class VideoQuality extends TypedEventEmitter {
       self.cameraToggles = self.cameraToggles + 1;
     }
     const videoBackgroundEnabledDuration = self.videoBackgroundEnabledDuration;
-    let liveBackgroundEnabled = self.connection.context === tmp(4945).MediaEngineContextTypes.DEFAULT;
+    let liveBackgroundEnabled = self.connection.context === tmp(4951).MediaEngineContextTypes.DEFAULT;
     if (liveBackgroundEnabled) {
       liveBackgroundEnabled = null != transport.camera;
     }

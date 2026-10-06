@@ -39,7 +39,7 @@ export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
   const tmp = stream;
-  let obj = stream(7228);
+  let obj = stream(7241);
   dependencyMap = obj.useGetStreamApplication(stream);
   let obj2 = stream(504);
   const items = [AuthenticationStore];
@@ -59,7 +59,7 @@ export default function StreamFeedbackActionSheet(stream) {
   };
   const intl4 = tmp(1126).intl;
   string = intl4.string;
-  const tmp9 = analyticsData(2755);
+  const tmp9 = analyticsData(2783);
   if (stateFromStores) {
     TVTIT1 = tmp9["0ZBLiZ"];
     tmp10 = tmp8;
@@ -68,10 +68,10 @@ export default function StreamFeedbackActionSheet(stream) {
     tmp10 = tmp8;
   }
   intl5 = tmp(1126).intl;
-  tmpResult = tmp(11252);
+  tmpResult = tmp(11265);
   obj4 = { value: constants2.FREEFORM, label: intl6.string(tmp(1126).t.emlT91) };
   intl6 = tmp(1126).intl;
-  tmp10(16639);
+  tmp10(17530);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
@@ -82,7 +82,7 @@ export default function StreamFeedbackActionSheet(stream) {
       headerLabel={stringResult}
       showHeaderCloseButton
       ratingBody={stringResult2}
-      categoriesHeader={intl7.string(tmp10(2755).tq8598)}
+      categoriesHeader={intl7.string(tmp10(2783).tq8598)}
       optionsTree={items1}
       trackOpen={function trackOpen() {
         let id;
@@ -162,7 +162,7 @@ export default function StreamFeedbackActionSheet(stream) {
               const obj7 = { mediaSessionId: null, rtcConnectionId: null };
               ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
               const tmp22Result = ActionSheetActionCreatorsDefault;
-              tmp22Result.openLazy(asyncRequire(16642, dependencyMap.paths), "UploadLogs", obj7);
+              tmp22Result.openLazy(asyncRequire(17532, dependencyMap.paths), "UploadLogs", obj7);
             }
           }
           const obj4 = ToastUtils;

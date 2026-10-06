@@ -1,7 +1,9 @@
 // discord_app/modules/voice_calls/RTCConnectionDesyncHooks.tsx
 import _mod12 from "../../../_runtime/metro/00012__.js";
-import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
-import react_mod from "../../../_runtime/00019_react.js";
+import Constants from "../../Constants.tsx";
+import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment.tsx";
+import _slicedToArray_mod from "../../../_runtime/metro/00032__slicedToArray.js";
+import react from "../../../_runtime/00019_react.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import RTCConnectionDesyncStore from "../../stores/RTCConnectionDesyncStore.tsx";
 import RTCConnectionStore from "../../stores/RTCConnectionStore.tsx";
@@ -10,7 +12,7 @@ import ReactCompilerGating_mod from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
-let _require, clearTimeoutResult, dependencyMap, num, set;
+let _require, set;
 
 function syncChannelVoiceStates(stateFromStores, arg1) {
   if (null != stateFromStores) {
@@ -43,7 +45,8 @@ function syncChannelVoiceStates(stateFromStores, arg1) {
   }
   return arg1;
 }
-let react = react_mod;
+let _slicedToArray = _slicedToArray_mod;
+const RTCConnectionStates = Constants.RTCConnectionStates;
 let ReactCompilerGating = ReactCompilerGating_mod;
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
@@ -62,7 +65,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function c() {
+        const fn = function l() {
           let desyncedVoiceStates = null;
           if (closure_0 === RTCConnectionStore.getChannelId()) {
             desyncedVoiceStates = RTCConnectionDesyncStore.getDesyncedVoiceStates();
@@ -92,12 +95,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0, arg1) => {
       let closure_0;
-      let closure_1;
+      let stateFromStores;
       _require = arg0;
-      dependencyMap = arg1;
+      let closure_1 = arg1;
       const items = [RTCConnectionDesyncStore, RTCConnectionStore];
       const obj = require("get initialized");
-      const stateFromStores = obj.useStateFromStores(items, () => {
+      stateFromStores = obj.useStateFromStores(items, () => {
         let desyncedVoiceStates = null;
         if (closure_0 === RTCConnectionStore.getChannelId()) {
           desyncedVoiceStates = RTCConnectionDesyncStore.getDesyncedVoiceStates();
@@ -125,7 +128,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== arg0) {
-        const fn = function l() {
+        const fn = function s() {
           let desyncedParticipants = null;
           if (closure_0 === RTCConnectionStore.getChannelId()) {
             desyncedParticipants = RTCConnectionDesyncStore.getDesyncedParticipants();
@@ -154,14 +157,14 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return desyncedParticipants;
       });
     };
-let closure_9 = tmp3;
+let closure_11 = tmp3;
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? (arg0, arg1) => {
       let items;
       const obj = items(576);
       const cResult = obj.c(3);
-      const arr = closure_9(arg0);
+      const arr = closure_11(arg0);
       if (cResult[0] === arr) {
         let tmp3;
         if (cResult[1] === arg1) {
@@ -177,10 +180,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           HermesBuiltin.arraySpread(items, arg1, 0);
           const item = arr.forEach((item) => {
             const splice = items.splice;
-            let obj = closure_2_0(closure_2_1[6]);
+            let obj = closure_2_0(closure_2_2[7]);
             splice(
               obj.sortedIndexBy(items, item, (arg0) => {
-                const obj = items(closure_1_1[10]);
+                const obj = items(closure_1_2[11]);
                 return obj.sortKey(arg0);
               }),
               0,
@@ -197,7 +200,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0, arg1) => {
       let closure_0 = arg1;
-      const tmp = closure_9(arg0);
+      const tmp = closure_11(arg0);
       let closure_1 = tmp;
       let items = [tmp, arg1];
       return react.useMemo(() => {
@@ -209,10 +212,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             HermesBuiltin.arraySpread(items, closure_0, 0);
             const item = closure_1.forEach((item) => {
               const splice = items.splice;
-              let obj = closure_2_0(closure_2_1[6]);
+              let obj = closure_2_0(closure_2_2[7]);
               splice(
                 obj.sortedIndexBy(items, item, (arg0) => {
-                  const obj = items(closure_1_1[10]);
+                  const obj = items(closure_1_2[11]);
                   return obj.sortKey(arg0);
                 }),
                 0,
@@ -227,21 +230,129 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = ReactCompilerGating_mod;
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
-  ? (arg0, arg1) => {
+  ? (arg0) => {
       let closure_0;
-      let closure_1;
       let first;
-      let ref;
-      let stateFromStores2;
-      let stateFromStores3;
+      let tmp10;
       let tmp13;
-      let tmp16;
+      let tmp14;
       let tmp6;
       let tmp8;
       let tmp9;
       _require = arg0;
-      dependencyMap = arg1;
-      let tmp2 = dependencyMap;
+      const obj = require("react");
+      const cResult = obj.c(8);
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const items = [AuthenticationStore];
+        cResult[0] = items;
+        first = items;
+      } else {
+        first = cResult[0];
+      }
+      if (cResult[1] !== arg0) {
+        const fn = function o() {
+          return AuthenticationStore.getId() === closure_0;
+        };
+        cResult[1] = arg0;
+        cResult[2] = fn;
+        tmp6 = fn;
+      } else {
+        tmp6 = cResult[2];
+      }
+      const tmpResult = require("get initialized");
+      let stateFromStores = tmpResult.useStateFromStores(first, tmp6);
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = { location: "useIsSelfDisconnectedUIVisible" };
+        cResult[3] = obj2;
+        tmp8 = obj2;
+      } else {
+        tmp8 = cResult[3];
+      }
+      const obj4 = VoiceConnectFeedbackExperimentDefault;
+      const showSelfConnectingUI = obj4.useConfig(tmp8).showSelfConnectingUI;
+      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
+        const items1 = [RTCConnectionStore];
+        const fn2 = function h() {
+          return RTCConnectionStore.getState();
+        };
+        cResult[4] = items1;
+        cResult[5] = fn2;
+        tmp10 = fn2;
+        tmp9 = items1;
+      } else {
+        tmp9 = cResult[4];
+        tmp10 = cResult[5];
+      }
+      const tmpResult3 = require("get initialized");
+      const stateFromStores1 = tmpResult3.useStateFromStores(tmp9, tmp10);
+      if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
+        const items2 = [RTCConnectionStore];
+        const fn3 = function y() {
+          return RTCConnectionStore.getWasEverRtcConnected();
+        };
+        cResult[6] = items2;
+        cResult[7] = fn3;
+        tmp14 = fn3;
+        tmp13 = items2;
+      } else {
+        tmp13 = cResult[6];
+        tmp14 = cResult[7];
+      }
+      const tmpResult4 = require("get initialized");
+      if (stateFromStores) {
+        stateFromStores = tmpResult4.useStateFromStores(tmp13, tmp14);
+      }
+      if (stateFromStores) {
+        stateFromStores = stateFromStores1 !== RTCConnectionStates.RTC_CONNECTED;
+      }
+      if (stateFromStores) {
+        stateFromStores = showSelfConnectingUI;
+      }
+      return stateFromStores;
+    }
+  : (arg0) => {
+      let closure_0;
+      _require = arg0;
+      const items = [AuthenticationStore];
+      const obj = require("get initialized");
+      let stateFromStores = obj.useStateFromStores(items, () => AuthenticationStore.getId() === closure_0);
+      const obj2 = VoiceConnectFeedbackExperimentDefault;
+      const showSelfConnectingUI = obj2.useConfig({ location: "useIsSelfDisconnectedUIVisible" }).showSelfConnectingUI;
+      const items1 = [RTCConnectionStore];
+      const obj3 = require("get initialized");
+      const stateFromStores1 = obj3.useStateFromStores(items1, () => RTCConnectionStore.getState());
+      const items2 = [RTCConnectionStore];
+      const obj4 = require("get initialized");
+      if (stateFromStores) {
+        stateFromStores = obj4.useStateFromStores(items2, () => RTCConnectionStore.getWasEverRtcConnected());
+      }
+      if (stateFromStores) {
+        stateFromStores = stateFromStores1 !== RTCConnectionStates.RTC_CONNECTED;
+      }
+      if (stateFromStores) {
+        stateFromStores = showSelfConnectingUI;
+      }
+      return stateFromStores;
+    };
+ReactCompilerGating = ReactCompilerGating_mod;
+let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
+  ? (arg0, arg1) => {
+      let channelId;
+      let closure_0;
+      let closure_5;
+      let first;
+      let first1;
+      let ref;
+      let stateFromStores1;
+      let tmp13;
+      let tmp16;
+      let tmp28;
+      let tmp6;
+      let tmp8;
+      let tmp9;
+      _require = arg0;
+      let closure_1 = arg1;
+      let tmp2 = stateFromStores1;
       const obj = require("react");
       const cResult = obj.c(23);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -264,208 +375,193 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = require("get initialized");
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const items1 = [stateFromStores2];
-        const fn2 = function y() {
-          return stateFromStores2.getChannelId();
-        };
+        const items1 = [RTCConnectionStore];
+        class I {
+          constructor() {
+            return channelId.getChannelId();
+          }
+        }
         cResult[3] = items1;
-        cResult[4] = fn2;
-        tmp9 = fn2;
+        cResult[4] = I;
+        tmp9 = I;
         tmp8 = items1;
       } else {
         tmp8 = cResult[3];
         tmp9 = cResult[4];
       }
       const tmpResult4 = require("get initialized");
-      const stateFromStores1 = tmpResult4.useStateFromStores(tmp8, tmp9);
-      react = react.useRef(null);
-      [tmp13, AuthenticationStore] = stateFromStores1(react.useState(false), 2);
-      stateFromStores1(react.useState(false), 2);
-      const tmp14 = stateFromStores1(react.useState(false), 2);
-      let closure_5 = tmp14[1];
-      const first1 = tmp14[0];
+      stateFromStores1 = tmpResult4.useStateFromStores(tmp8, tmp9);
+      _slicedToArray = react.useRef(null);
+      const tmp12 = _slicedToArray(react.useState(false), 2);
+      [tmp13, react] = tmp12;
+      [first1, AuthenticationStore] = react.useState(false);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const items2 = [stateFromStores2, stateFromStores3];
+        const items2 = [RTCConnectionStore];
+        class I {
+          constructor() {
+            return channelId.getChannelId();
+          }
+        }
+        items2[1] = VoiceStateStore;
         cResult[5] = items2;
         tmp16 = items2;
       } else {
         tmp16 = cResult[5];
       }
       if (cResult[6] === arg0) {
-        let tmp19;
-        let tmp21;
+        let tmp18;
+        let tmp20;
         if (cResult[7] === arg1) {
-          tmp19 = cResult[8];
+          tmp18 = cResult[8];
         }
         const tmpResult5 = require("get initialized");
-        stateFromStores2 = tmpResult5.useStateFromStores(tmp16, tmp19);
+        const stateFromStores2 = tmpResult5.useStateFromStores(tmp16, tmp18);
+        class I {
+          constructor() {
+            return channelId.getChannelId();
+          }
+        }
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const items3 = [stateFromStores2, stateFromStores3];
+          const items3 = [RTCConnectionStore];
+          class I {
+            constructor() {
+              return channelId.getChannelId();
+            }
+          }
+          items3[1] = VoiceStateStore;
           cResult[9] = items3;
-          tmp21 = items3;
+          tmp20 = items3;
         } else {
-          tmp21 = cResult[9];
+          tmp20 = cResult[9];
         }
         if (cResult[10] === arg0) {
-          let tmp24;
-          let tmp27;
-          let tmp26;
+          let tmp22;
+          let tmp25;
           if (cResult[11] === arg1) {
-            tmp24 = cResult[12];
+            tmp22 = cResult[12];
           }
           const tmpResult6 = require("get initialized");
-          stateFromStores3 = tmpResult6.useStateFromStores(tmp21, tmp24);
+          const stateFromStores3 = tmpResult6.useStateFromStores(tmp20, tmp22);
+          class I {
+            constructor() {
+              return channelId.getChannelId();
+            }
+          }
           if (cResult[13] !== stateFromStores2) {
-            const fn4 = function j() {
-              if (stateFromStores2) {
-                closure_5(true);
-              }
-            };
-            const items4 = [stateFromStores2];
-            cResult[13] = stateFromStores2;
-            cResult[14] = fn4;
             class M {
               constructor() {
-                const tmp2 =
-                  null != closure_1 &&
-                  null != closure_0 &&
-                  RTCConnectionStore.getChannelId() === closure_0 &&
-                  null != VoiceStateStore.isInChannel(closure_0, closure_1) &&
-                  !RTCConnectionStore.isUserConnected(closure_1);
-                return tmp2;
+                if (RTCConnectionDesyncStore) {
+                  closure_5(true);
+                }
               }
             }
-            tmp27 = items4;
-            tmp26 = fn4;
-          } else {
-            tmp26 = cResult[14];
-            tmp27 = cResult[15];
-          }
-          const effect = obj4.useEffect(tmp26, tmp27);
-          if (cResult[16] === arg0) {
-            let tmp29;
-            let tmp30;
-            let tmp34;
-            if (cResult[17] === stateFromStores1) {
-              tmp29 = cResult[18];
-              tmp30 = cResult[19];
+            const items4 = [stateFromStores2];
+            class I {
+              constructor() {
+                return channelId.getChannelId();
+              }
             }
-            const effect1 = obj4.useEffect(tmp29, tmp30);
+            cResult[13] = stateFromStores2;
+            cResult[14] = M;
+            class B {
+              constructor() {
+                if (stateFromStores1 !== closure_0) {
+                  closure_5(false);
+                }
+              }
+            }
+            cResult[15] = items4;
+            tmp25 = items4;
+          } else {
+            class M {
+              constructor() {
+                if (RTCConnectionDesyncStore) {
+                  closure_5(true);
+                }
+              }
+            }
+            tmp25 = cResult[15];
+          }
+          const effect = react.useEffect(M, tmp25);
+          if (cResult[16] === arg0) {
+            class M {
+              constructor() {
+                if (RTCConnectionDesyncStore) {
+                  closure_5(true);
+                }
+              }
+            }
+            const effect1 = react.useEffect(B, tmp28);
             if (cResult[20] !== stateFromStores3) {
-              class K {
+              class M {
                 constructor() {
-                  tmp = closure_7;
-                  if (tmp) {
-                    tmp3 = null;
-                    if (null == closure_3.current) {
-                      tmp6 = globalThis;
-                      _setTimeout = setTimeout;
-                      num = 250;
-                      tmp2.current = setTimeout(() => {
-                        ref.current = null;
-                        closure_1_4(true);
-                      }, 250);
-                    }
-                    return () => {
-                      clearTimeout(ref.current);
-                      ref.current = null;
-                    };
+                  if (RTCConnectionDesyncStore) {
+                    closure_5(true);
                   }
-                  clearTimeoutResult = clearTimeout(closure_3.current);
-                  closure_3.current = null;
-                  tmp5 = closure_4(false);
-                  return;
                 }
               }
               const items5 = [stateFromStores3];
+              class I {
+                constructor() {
+                  return channelId.getChannelId();
+                }
+              }
               cResult[20] = stateFromStores3;
-              cResult[21] = K;
+              cResult[21] = tmp32;
+              class B {
+                constructor() {
+                  if (stateFromStores1 !== closure_0) {
+                    closure_5(false);
+                  }
+                }
+              }
+              cResult[22] = items5;
+            } else {
               class M {
                 constructor() {
-                  const tmp2 =
-                    null != closure_1 &&
-                    null != closure_0 &&
-                    RTCConnectionStore.getChannelId() === closure_0 &&
-                    null != VoiceStateStore.isInChannel(closure_0, closure_1) &&
-                    !RTCConnectionStore.isUserConnected(closure_1);
-                  return tmp2;
-                }
-              }
-              tmp34 = items5;
-            } else {
-              class K {
-                constructor() {
-                  tmp = closure_7;
-                  if (tmp) {
-                    tmp3 = null;
-                    if (null == closure_3.current) {
-                      tmp6 = globalThis;
-                      _setTimeout = setTimeout;
-                      num = 250;
-                      tmp2.current = setTimeout(() => {
-                        ref.current = null;
-                        closure_1_4(true);
-                      }, 250);
-                    }
-                    return () => {
-                      clearTimeout(ref.current);
-                      ref.current = null;
-                    };
+                  if (RTCConnectionDesyncStore) {
+                    closure_5(true);
                   }
-                  clearTimeoutResult = clearTimeout(closure_3.current);
-                  closure_3.current = null;
-                  tmp5 = closure_4(false);
-                  return;
                 }
               }
-              tmp34 = cResult[22];
             }
-            const effect2 = obj4.useEffect(K, tmp34);
+            class I {
+              constructor() {
+                return channelId.getChannelId();
+              }
+            }
             return !stateFromStores && first1 && tmp13;
           }
-          const fn5 = function w() {
-            if (stateFromStores1 !== closure_0) {
-              closure_5(false);
-            }
-          };
-          class M {
+          class B {
             constructor() {
-              const tmp2 =
-                null != closure_1 &&
-                null != closure_0 &&
-                RTCConnectionStore.getChannelId() === closure_0 &&
-                null != VoiceStateStore.isInChannel(closure_0, closure_1) &&
-                !RTCConnectionStore.isUserConnected(closure_1);
-              return tmp2;
+              if (stateFromStores1 !== closure_0) {
+                closure_5(false);
+              }
             }
           }
-          tmp31[0] = arg0;
-          tmp31[1] = stateFromStores1;
+          const items6 = [arg0, stateFromStores1];
           cResult[16] = arg0;
           cResult[17] = stateFromStores1;
-          cResult[18] = fn5;
-          cResult[19] = tmp31;
-          tmp30 = tmp31;
-          tmp29 = fn5;
+          cResult[18] = B;
+          cResult[19] = items6;
+          tmp28 = items6;
         }
-        class M {
-          constructor() {
-            const tmp2 =
-              null != closure_1 &&
-              null != closure_0 &&
-              RTCConnectionStore.getChannelId() === closure_0 &&
-              null != VoiceStateStore.isInChannel(closure_0, closure_1) &&
-              !RTCConnectionStore.isUserConnected(closure_1);
-            return tmp2;
-          }
-        }
+        const fn3 = function w() {
+          const tmp2 =
+            null != closure_1 &&
+            null != closure_0 &&
+            RTCConnectionStore.getChannelId() === closure_0 &&
+            null != VoiceStateStore.isInChannel(closure_0, closure_1) &&
+            !RTCConnectionStore.isUserConnected(closure_1);
+          return tmp2;
+        };
         cResult[10] = arg0;
         cResult[11] = arg1;
-        cResult[12] = M;
-        tmp24 = M;
+        cResult[12] = fn3;
+        tmp22 = fn3;
       }
-      const fn3 = function p() {
+      const fn2 = function _() {
         const isUserConnectedResult =
           null != closure_1 &&
           null != closure_0 &&
@@ -476,33 +572,32 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       };
       cResult[6] = arg0;
       cResult[7] = arg1;
-      cResult[8] = fn3;
-      tmp19 = fn3;
+      cResult[8] = fn2;
+      tmp18 = fn2;
     }
   : (arg0, arg1) => {
       let closure_0;
-      let closure_1;
       let ref;
-      let stateFromStores2;
+      let stateFromStores1;
       let stateFromStores3;
       let tmp4;
       let tmp6;
       _require = arg0;
-      dependencyMap = arg1;
+      let closure_1 = arg1;
       const items = [AuthenticationStore];
       const obj = require("get initialized");
       const stateFromStores = obj.useStateFromStores(items, () => AuthenticationStore.getId() === closure_1);
-      const items1 = [stateFromStores2];
+      const items1 = [stateFromStores3];
       const obj2 = require("get initialized");
-      const stateFromStores1 = obj2.useStateFromStores(items1, () => stateFromStores2.getChannelId());
-      react = react.useRef(null);
-      [tmp4, AuthenticationStore] = stateFromStores1(react.useState(false), 2);
-      const tmp3 = stateFromStores1(react.useState(false), 2);
-      [tmp6, RTCConnectionDesyncStore] = stateFromStores1(react.useState(false), 2);
-      const items2 = [stateFromStores2, stateFromStores3];
-      const tmp5 = stateFromStores1(react.useState(false), 2);
+      stateFromStores1 = obj2.useStateFromStores(items1, () => stateFromStores3.getChannelId());
+      _slicedToArray = react.useRef(null);
+      const tmp3 = _slicedToArray(react.useState(false), 2);
+      [tmp4, react] = tmp3;
+      [tmp6, AuthenticationStore] = _slicedToArray(react.useState(false), 2);
+      const items2 = [stateFromStores3, VoiceStateStore];
+      const tmp5 = _slicedToArray(react.useState(false), 2);
       const obj3 = require("get initialized");
-      stateFromStores2 = obj3.useStateFromStores(items2, () => {
+      const stateFromStores2 = obj3.useStateFromStores(items2, () => {
         const isUserConnectedResult =
           null != closure_1 &&
           null != closure_0 &&
@@ -511,7 +606,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           RTCConnectionStore.isUserConnected(closure_1);
         return isUserConnectedResult;
       });
-      const items3 = [stateFromStores2, stateFromStores3];
+      const items3 = [stateFromStores3, VoiceStateStore];
       const obj4 = require("get initialized");
       stateFromStores3 = obj4.useStateFromStores(items3, () => {
         const tmp2 =
@@ -525,13 +620,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const items4 = [stateFromStores2];
       const effect = react.useEffect(() => {
         if (stateFromStores2) {
-          RTCConnectionDesyncStore(true);
+          AuthenticationStore(true);
         }
       }, items4);
       const items5 = [arg0, stateFromStores1];
       const effect1 = react.useEffect(() => {
         if (stateFromStores1 !== closure_0) {
-          RTCConnectionDesyncStore(false);
+          AuthenticationStore(false);
         }
       }, items5);
       const items6 = [stateFromStores3];
@@ -551,7 +646,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         clearTimeout(ref.current);
         ref.current = null;
-        AuthenticationStore(false);
+        react(false);
       }, items6);
       return !stateFromStores && tmp6 && tmp4;
     };
@@ -560,4 +655,5 @@ const result = size.fileFinishedImporting("modules/voice_calls/RTCConnectionDesy
 export const useEnsureSyncedChannelVoiceStates = tmp2;
 export const useDesyncedChannelParticipants = tmp3;
 export const useEnsureSyncedChannelParticipants = tmp4;
-export const useIsRTCDisconnectedUIVisible = tmp5;
+export const useIsSelfDisconnectedUIVisible = tmp5;
+export const useIsRTCDisconnectedUIVisible = tmp6;

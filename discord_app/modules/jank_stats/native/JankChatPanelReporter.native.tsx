@@ -58,14 +58,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp10;
           }
-          showCreateThread(15937);
+          showCreateThread(15976);
           const tmp14 = (
             <tmp13
               position={translateX}
               openAt={0}
               closedAt={maxWidth}
               resolveOpenName={tmp9}
-              resolveClosedName={channelId(15934).getPanelListScreenName}
+              resolveClosedName={channelId(15973).getPanelListScreenName}
             />
           );
           cResult[8] = maxWidth;
@@ -111,14 +111,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = getJankScreenName;
         return obj.getChatPanelScreenName(channelId, showCreateThread);
       }, []);
-      showCreateThread(15937);
+      showCreateThread(15976);
       return (
         <tmp3
           position={translateX}
           openAt={0}
           closedAt={maxWidth}
           resolveOpenName={callback}
-          resolveClosedName={channelId(15934).getPanelListScreenName}
+          resolveClosedName={channelId(15973).getPanelListScreenName}
         />
       );
     };

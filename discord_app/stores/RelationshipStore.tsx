@@ -102,7 +102,12 @@ let closure_14 = 0;
 let closure_15 = {};
 let closure_16 = 0;
 let size = 0;
-let closure_19 = { friends: "Array", blocked: "T", ignored: "y", blockedOrIgnored: "IconComponent" };
+let closure_19 = {
+  friends: "toCharArray$esjava$1",
+  blocked: "Symbol",
+  ignored: "IconComponent",
+  blockedOrIgnored: "Reflect",
+};
 const set3 = new Set();
 const map1 = new Map();
 const Store = get_initializedDefault.Store;

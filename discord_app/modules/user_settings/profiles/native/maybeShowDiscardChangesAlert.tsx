@@ -35,8 +35,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
       },
       isDismissable: false,
     };
-    const show = onConfirm(5708).show;
-    onConfirm(5708);
+    const show = onConfirm(5715).show;
+    onConfirm(5715);
     intl = intl5.intl;
     intl2 = intl5.intl;
     intl3 = intl5.intl;

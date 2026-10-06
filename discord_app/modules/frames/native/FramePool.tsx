@@ -370,7 +370,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const syncExternalStore = react.useSyncExternalStore(first1(16596).subscribe, tmp15);
+        const syncExternalStore = react.useSyncExternalStore(first1(16634).subscribe, tmp15);
         const tmp16 = first1;
         if (cResult[11] !== syncExternalStore) {
           class S {
@@ -420,12 +420,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = first1;
         cResult[15] = tmp18;
         cResult[16] = jsx(
-          tmp16(17147),
+          tmp16(17176),
           { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 },
           first1,
         );
         const tmp24 = jsx(
-          tmp16(17147),
+          tmp16(17176),
           { frame, iframeId: first1, onActivityCrash: tmp13, presentation: tmp18 },
           first1,
         );
@@ -482,11 +482,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = v1;
         closure_2(obj.v4());
       }, []);
-      let syncExternalStore = react.useSyncExternalStore(iframeId(16596).subscribe, () => {
+      let syncExternalStore = react.useSyncExternalStore(iframeId(16634).subscribe, () => {
         const obj = FramePoolManagerDefault;
         return obj.getWinningTargetState(id);
       });
-      iframeId(17147);
+      iframeId(17176);
       if (syncExternalStore == null) {
         let obj2 = { layoutMode: constants.FOCUSED };
         syncExternalStore = obj2;

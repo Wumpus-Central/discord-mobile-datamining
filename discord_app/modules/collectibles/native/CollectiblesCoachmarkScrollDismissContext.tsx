@@ -14,7 +14,7 @@ let obj = {
   registerDismiss() {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "r",
+  handleDismissCoachmarkOnScroll: "Array",
 };
 const redux = react.createContext(obj);
 let ReactCompilerGating = ReactCompilerGating_mod;

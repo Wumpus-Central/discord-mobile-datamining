@@ -120,7 +120,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "text-brand",
                   children: intl4.string(require("intl").t.cpT0Cq),
                 };
-                const Text = tmp(4886).Text;
+                const Text = tmp(4892).Text;
                 intl4 = tmp(1126).intl;
                 const tmp19 = closure_4(Text, obj4);
                 cResult[15] = tmp19;
@@ -267,7 +267,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl2.format(require("intl").t.XDm6yN, obj6),
       };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       intl2 = tmp2(1126).intl;
       obj6 = { stickerPackName: stickerPack.name };
       items2 = [closure_4(Text, obj5)];
@@ -277,10 +277,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: intl3.string(require("intl").t.cpT0Cq),
         children: closure_4(Text2, obj8),
       };
-      const PressableOpacity = tmp2(5909).PressableOpacity;
+      const PressableOpacity = tmp2(5916).PressableOpacity;
       intl3 = tmp2(1126).intl;
       obj8 = { variant: "text-md/bold", color: "text-brand", children: intl4.string(require("intl").t.cpT0Cq) };
-      Text2 = tmp2(4886).Text;
+      Text2 = tmp2(4892).Text;
       intl4 = tmp2(1126).intl;
       items2[1] = closure_4(PressableOpacity, obj7);
       items3 = [closure_5(closure_2, obj4)];

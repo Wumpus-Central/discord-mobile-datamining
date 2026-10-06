@@ -5,7 +5,7 @@ import intl4 from "../../../intl/index.native.tsx";
 import ChannelRecord from "../../../records/ChannelRecord.tsx";
 import AccessibilityAnnouncer2 from "../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../../_runtime/05702_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/05709_fuzzysearch.js";
 import getFlattedChannelListDefault from "../../channel/getFlattedChannelList.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";

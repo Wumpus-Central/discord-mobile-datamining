@@ -73,7 +73,7 @@ function renderCategoryItem(muted) {
   let tmp32Result = name;
   if (typeof name === "string") {
     let str = "text-subtle";
-    const Text = trailingAction(4886).Text;
+    const Text = trailingAction(4892).Text;
     if (flag) {
       str = "text-muted";
     }
@@ -97,7 +97,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(10978).PlusMediumIcon;
+    Icon = trailingAction(10991).PlusMediumIcon;
   }
   let tmp10Result = null;
   if (null != trailingAction) {
@@ -111,7 +111,7 @@ function renderCategoryItem(muted) {
       androidRippleConfig,
       children: closure_11(Icon, obj6),
     };
-    PressableOpacity = trailingAction(5909).PressableOpacity;
+    PressableOpacity = trailingAction(5916).PressableOpacity;
     label = undefined;
     if (!tmp) {
       label = trailingAction.label;
@@ -151,7 +151,7 @@ function renderCategoryItem(muted) {
       children: tmp18Result,
     };
     tmp31 = undefined;
-    const PressableHighlight = trailingAction(5909).PressableHighlight;
+    const PressableHighlight = trailingAction(5916).PressableHighlight;
     if (items2.length > 0) {
       tmp31 = items2;
     }
@@ -346,7 +346,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != tmp14) {
           obj2 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
           ({ tooltip: obj3.accessibilityLabel, label: obj3.children } = tmp14);
-          tmp18 = closure_11(tmp(4886).Text, obj2);
+          tmp18 = closure_11(tmp(4892).Text, obj2);
         }
         cResult[3] = tmp14;
         cResult[4] = tmp18;
@@ -394,7 +394,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const muted2 = merged.muted;
       const colors = nativeDefault.colors;
       const obj5 = {
-        icon: closure_11(channel(10844).ChevronSmallDownIcon, { size: "xxs", color: tmp22, style: tmp23 }),
+        icon: closure_11(channel(10857).ChevronSmallDownIcon, { size: "xxs", color: tmp22, style: tmp23 }),
         accessibilityState: { expanded: !collapsed2 },
       };
       tmp22 = muted2 ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
@@ -464,14 +464,14 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != tmp9) {
         const obj4 = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
         ({ tooltip: obj3.accessibilityLabel, label: obj3.children } = tmp9);
-        tmp12 = closure_11(tmp2(4886).Text, obj4);
+        tmp12 = closure_11(tmp2(4892).Text, obj4);
       }
       const collapsed2 = obj2.collapsed;
       const merged = Object.assign(obj2, Object.assign({ collapsed: 0 }));
       const muted2 = merged.muted;
       const colors = nativeDefault.colors;
       const obj7 = {
-        icon: closure_11(channel(10844).ChevronSmallDownIcon, { size: "xxs", color: tmp15, style: tmp16 }),
+        icon: closure_11(channel(10857).ChevronSmallDownIcon, { size: "xxs", color: tmp15, style: tmp16 }),
         accessibilityState: { expanded: !collapsed2 },
       };
       tmp15 = muted2 ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
@@ -540,7 +540,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
         const merged = Object.assign(obj2, Object.assign({ collapsed: 0 }));
         const muted = merged.muted;
         const colors = stateFromStores(587).colors;
-        const obj4 = { icon: closure_11(guildId(10844).ChevronSmallDownIcon, obj5), accessibilityState: obj6 };
+        const obj4 = { icon: closure_11(guildId(10857).ChevronSmallDownIcon, obj5), accessibilityState: obj6 };
         const tmp15 = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
         const tmp16 = collapsed ? obj2 : obj3;
         const merged1 = Object.assign(merged);
@@ -592,7 +592,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const muted = merged.muted;
       const colors = stateFromStores(587).colors;
       obj3 = {
-        icon: closure_11(guildId(10844).ChevronSmallDownIcon, { size: "xxs", color: tmp7, style: tmp8 }),
+        icon: closure_11(guildId(10857).ChevronSmallDownIcon, { size: "xxs", color: tmp7, style: tmp8 }),
         accessibilityState: { expanded: !collapsed },
       };
       tmp7 = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;

@@ -5,7 +5,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl4 from "../../../intl/index.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04809_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04815_AssetRegistry.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";

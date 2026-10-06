@@ -127,7 +127,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   obj = { children: closure_7(closure_5, obj2) };
   obj2 = { style: tmp.container, keyboardShouldPersistTaps: "handled", children: items1 };
   const obj3 = { style: tmp.header, children: items };
-  const GuildDirectoryAddModalScreen = directoryChannelId(11937).GuildDirectoryAddModalScreen;
+  const GuildDirectoryAddModalScreen = directoryChannelId(11951).GuildDirectoryAddModalScreen;
   const obj4 = {
     style: tmp.title,
     accessibilityRole: "header",
@@ -135,7 +135,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
     color: "mobile-text-heading-primary",
     children: intl.string(directoryChannelId(1126).t["5bQcoa"]),
   };
-  const Text = directoryChannelId(4886).Text;
+  const Text = directoryChannelId(4892).Text;
   intl = directoryChannelId(1126).intl;
   items = [closure_6(Text, obj4)];
   let obj5 = {
@@ -144,7 +144,7 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
     color: "text-default",
     children: intl2.string(directoryChannelId(1126).t.Ie60Wc),
   };
-  const Text2 = directoryChannelId(4886).Text;
+  const Text2 = directoryChannelId(4892).Text;
   intl2 = directoryChannelId(1126).intl;
   items[1] = closure_6(Text2, obj5);
   items1 = [closure_7(obj, obj3)];

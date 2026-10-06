@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16827_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/16848_AssetRegistry.js";
 import getLayoutStylesDefault from "getLayoutStyles.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
@@ -377,7 +377,7 @@ const memoResult = react.memo(
           const Icon = max(1188).Icon;
           items4 = [closure_4(Icon, obj5)];
           let obj6 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
-          items4[1] = closure_4(max(4886).Text, obj6);
+          items4[1] = closure_4(max(4892).Text, obj6);
           tmp8Result = tmp8(tmp6, obj3);
         }
         items1[1] = tmp8Result;

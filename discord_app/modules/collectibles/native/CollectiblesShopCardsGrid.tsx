@@ -177,7 +177,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                               obj = {
                                 style: closure_4.rowContainer,
                                 children: preferVCPrice.map(() => {
-                                  /* body not rendered: F145073 */
+                                  /* body not rendered: F145281 */
                                 }),
                               };
                               return closure_1_7(closure_4, obj, arg1);
@@ -226,7 +226,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                             obj = {
                               style: closure_4.rowContainer,
                               children: preferVCPrice.map(() => {
-                                /* body not rendered: F145073 */
+                                /* body not rendered: F145281 */
                               }),
                             };
                             return closure_1_7(closure_4, obj, arg1);
@@ -253,7 +253,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 obj = {
                   style: closure_4.rowContainer,
                   children: preferVCPrice.map(() => {
-                    /* body not rendered: F145073 */
+                    /* body not rendered: F145281 */
                   }),
                 };
                 return closure_1_7(closure_4, obj, arg1);
@@ -302,7 +302,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ disableBundleStaticBackground: react, muteBundleStaticBackground: closure_4 } = products);
       ({ onScroll, paddingTop, paddingBottom } = products);
       const rowContainer = closure_8();
-      let obj = products(15733);
+      let obj = products(15769);
       const cardLayout = obj.useCardLayout();
       const columns = cardLayout.columns;
       const cardWidth = cardLayout.cardWidth;
@@ -319,7 +319,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         showsVerticalScrollIndicator: false,
         onScroll,
         contentContainerStyle: {
-          gap: products(8418).COLLECTIBLES_SHOP_CARD_GAP,
+          gap: products(8451).COLLECTIBLES_SHOP_CARD_GAP,
           paddingTop,
           paddingBottom,
           width: rowWidth,
@@ -356,7 +356,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
       ({
-        gap: products(8418).COLLECTIBLES_SHOP_CARD_GAP,
+        gap: products(8451).COLLECTIBLES_SHOP_CARD_GAP,
         paddingTop,
         paddingBottom,
         width: rowWidth,

@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import useChannelName from "../../channel/useChannelName.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import safeTransitionToDefault from "../../links/safeTransitionTo.native.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import PlayIcon2 from "../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx";
@@ -111,7 +111,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       message = message.message;
       ({ activeMediaPlayerSource, isVoiceMessage, isControlVisible } = message);
       const tmp4 = closure_17();
-      const obj2 = message(4580);
+      const obj2 = message(4586);
       const token = obj2.useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, UserStore, RelationshipStore];
@@ -205,8 +205,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 children: tmp21,
               };
               cResult[11] = tmp21;
-              cResult[12] = closure_15(message(4886).Text, obj3);
-              const tmp28 = closure_15(message(4886).Text, obj3);
+              cResult[12] = closure_15(message(4892).Text, obj3);
+              const tmp28 = closure_15(message(4892).Text, obj3);
             } else {
               class R {
                 constructor(nativeEvent) {
@@ -245,7 +245,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const obj4 = { style: { flex: 1 }, children: items2 };
               const obj5 = { spacing: 20, speed: 0.2, children: tmp27 };
-              items2 = [closure_15(message(17377).Marquee, obj5)];
+              items2 = [closure_15(message(17406).Marquee, obj5)];
               const obj6 = {
                 start: { x: 0, y: 0 },
                 end: { x: 1, y: 0 },
@@ -319,7 +319,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       react = undefined;
       ({ isVoiceMessage, isControlVisible } = message);
       const tmp = closure_17();
-      let obj = message(4580);
+      let obj = message(4586);
       const token = obj.useToken(first(587).colors.BACKGROUND_SURFACE_HIGH);
       const items = [ChannelStore, UserStore, RelationshipStore];
       const items1 = [message];
@@ -364,7 +364,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               if (contentMessage.attachments.length > 0) {
                 str2 = "";
                 if (null != activeMediaPlayerSource.attachmentIndex) {
-                  str2 = tmp4(7940)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
+                  str2 = tmp4(7951)(contentMessage.attachments[activeMediaPlayerSource.attachmentIndex]);
                 }
               }
             }
@@ -377,7 +377,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               },
               children: str2,
             };
-            const tmp14 = closure_15(message(4886).Text, obj3);
+            const tmp14 = closure_15(message(4892).Text, obj3);
             const obj4 = {
               accessibilityElementsHidden: isControlVisible,
               style: tmp.infoContent,
@@ -391,7 +391,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             if (memo) {
               const obj6 = { style: { flex: 1 }, children: items3 };
               const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-              items3 = [closure_15(message(17377).Marquee, obj7)];
+              items3 = [closure_15(message(17406).Marquee, obj7)];
               const obj8 = {
                 start: { x: 0, y: 0 },
                 end: { x: 1, y: 0 },
@@ -400,14 +400,14 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp.infoContainerGradient,
               };
               items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
-              items3[1] = closure_15(first(5605), obj8);
+              items3[1] = closure_15(first(5612), obj8);
               tmp16Result = closure_16(closure_7, obj6);
             }
             items5 = [tmp16Result];
             let tmp13Result = null != stateFromStores;
             if (tmp13Result) {
               const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: stateFromStores };
-              tmp13Result = closure_15(tmp2(4886).Text, obj9);
+              tmp13Result = closure_15(tmp2(4892).Text, obj9);
             }
             items5[1] = tmp13Result;
             return closure_15(closure_7, obj4);
@@ -476,11 +476,11 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withTiming(num, { duration: 200 }) };
         return obj;
       };
-      const tmpResult = tmp(4612);
-      fn2.__closure = { withTiming: tmp(4891).withTiming, visible };
+      const tmpResult = tmp(4618);
+      fn2.__closure = { withTiming: tmp(4897).withTiming, visible };
       fn2.__workletHash = 3641278982291;
       fn2.__initData = __initData;
-      ({ withTiming: tmp(4891).withTiming, visible });
+      ({ withTiming: tmp(4897).withTiming, visible });
       const animatedStyle = tmpResult.useAnimatedStyle(fn2);
       if (cResult[2] !== isVoiceMessage) {
         let stringResult;
@@ -522,7 +522,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp15 = closure_15(tmp(8567).BackgroundBlurFill, { blurAmount: 0.05 });
+          const tmp15 = closure_15(tmp(8602).BackgroundBlurFill, { blurAmount: 0.05 });
           cResult[9] = tmp15;
           tmp13 = tmp15;
         } else {
@@ -536,7 +536,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp20 = closure_15(tmp(6014).ArrowLargeLeftIcon, { size: "sm" });
+            const tmp20 = closure_15(tmp(6021).ArrowLargeLeftIcon, { size: "sm" });
             cResult[13] = tmp20;
             tmp18 = tmp20;
           } else {
@@ -557,7 +557,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const _Symbol3 = Symbol;
                   if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                    const tmp29 = closure_15(tmp(4795).XLargeIcon, { size: "sm" });
+                    const tmp29 = closure_15(tmp(4801).XLargeIcon, { size: "sm" });
                     cResult[22] = tmp29;
                     tmp27 = tmp29;
                   } else {
@@ -581,7 +581,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         const obj3 = { style: tmp11, children: items };
                         items = [tmp13, tmp21, tmp30];
-                        const tmp37 = closure_16(visible(4612).View, obj3);
+                        const tmp37 = closure_16(visible(4618).View, obj3);
                         cResult[28] = tmp30;
                         cResult[29] = tmp11;
                         cResult[30] = tmp21;
@@ -679,7 +679,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      let obj = message(4612);
+      let obj = message(4618);
       const fn = function c() {
         let num = 0;
         const withTiming = timing.withTiming;
@@ -690,10 +690,10 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withTiming(num, { duration: 200 }) };
         return obj;
       };
-      fn.__closure = { withTiming: message(4891).withTiming, visible };
+      fn.__closure = { withTiming: message(4897).withTiming, visible };
       fn.__workletHash = 1481412007504;
       fn.__initData = __initData2;
-      ({ withTiming: message(4891).withTiming, visible });
+      ({ withTiming: message(4897).withTiming, visible });
       const animatedStyle = obj.useAnimatedStyle(fn);
       const intl = message(1126).intl;
       const string = intl.string;
@@ -713,8 +713,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj3 = { style: items1, children: items2 };
       items1 = [tmp.pipControls, animatedStyle];
-      const View = visible(4612).View;
-      items2 = [closure_15(message(8567).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
+      const View = visible(4618).View;
+      items2 = [closure_15(message(8602).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
       const obj4 = {
         disabled: !visible,
         style: items3,
@@ -722,7 +722,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityRole: "button",
         accessibilityLabel: stringResult,
-        children: closure_15(message(6014).ArrowLargeLeftIcon, { size: "sm" }),
+        children: closure_15(message(6021).ArrowLargeLeftIcon, { size: "sm" }),
       };
       items3 = [,];
       ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
@@ -734,7 +734,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityRole: "button",
         accessibilityLabel: string2Result,
-        children: closure_15(message(4795).XLargeIcon, { size: "sm" }),
+        children: closure_15(message(4801).XLargeIcon, { size: "sm" }),
       };
       items4 = [,];
       ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);

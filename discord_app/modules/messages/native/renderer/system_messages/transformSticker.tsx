@@ -42,7 +42,7 @@ export const transformSticker = function transformSticker(tmp5Result8) {
   if (str2 == null) {
     str2 = "";
   }
-  NativeLottieRenderMode = tmp(7659).NativeLottieRenderMode;
+  NativeLottieRenderMode = tmp(7670).NativeLottieRenderMode;
   obj3 = {
     expensive() {
       const intl = intl3.intl;

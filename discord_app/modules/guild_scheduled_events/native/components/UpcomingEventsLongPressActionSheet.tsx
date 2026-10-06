@@ -81,8 +81,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return UserGuildSettingsStore.isMuteScheduledEventsEnabled(guildId);
           }
         }
-        let obj2 = { guild: stateFromStores, size: tmp(5971).GuildIconSizes.LARGE };
-        const tmp15 = stateFromStores1(5971);
+        let obj2 = { guild: stateFromStores, size: tmp(5978).GuildIconSizes.LARGE };
+        const tmp15 = stateFromStores1(5978);
         cResult[6] = stateFromStores;
         cResult[7] = closure_7(tmp15, obj2);
         const tmp16 = closure_7(tmp15, obj2);
@@ -127,8 +127,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = { leading: tmp17, title: tmp19 };
           cResult[12] = tmp17;
-          cResult[13] = closure_7(tmp(6644).BottomSheetTitleHeader, obj3);
-          const tmp22 = closure_7(tmp(6644).BottomSheetTitleHeader, obj3);
+          cResult[13] = closure_7(tmp(6651).BottomSheetTitleHeader, obj3);
+          const tmp22 = closure_7(tmp(6651).BottomSheetTitleHeader, obj3);
         } else {
           class F {
             constructor() {
@@ -143,7 +143,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               return UserGuildSettingsStore.isMuteScheduledEventsEnabled(guildId);
             }
           }
-          const obj4 = { source: stateFromStores1(12013) };
+          const obj4 = { source: stateFromStores1(12028) };
           const Icon = tmp(1188).Icon;
           const tmp25 = closure_7(Icon, obj4);
           cResult[14] = tmp25;
@@ -163,7 +163,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj5 = { text: intl.string(tmp(1126).t.e6RscS) };
-          const FormLabel = tmp(8895).FormLabel;
+          const FormLabel = tmp(8924).FormLabel;
           intl = tmp(1126).intl;
           const tmp27 = closure_7(FormLabel, obj5);
           cResult[15] = tmp27;
@@ -192,8 +192,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             },
           };
           cResult[16] = guildId;
-          cResult[17] = closure_7(tmp(8895).FormRow, obj7);
-          const tmp29 = closure_7(tmp(8895).FormRow, obj7);
+          cResult[17] = closure_7(tmp(8924).FormRow, obj7);
+          const tmp29 = closure_7(tmp(8924).FormRow, obj7);
         } else {
           class F {
             constructor() {
@@ -201,7 +201,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmp30 = stateFromStores1(stateFromStores1 ? 12014 : 12015);
+        const tmp30 = stateFromStores1(stateFromStores1 ? 12029 : 12030);
         if (cResult[18] !== tmp30) {
           class F {
             constructor() {
@@ -257,8 +257,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj9 = { text: tmp35 };
           cResult[22] = tmp35;
-          cResult[23] = closure_7(tmp(8895).FormLabel, obj9);
-          const tmp37 = closure_7(tmp(8895).FormLabel, obj9);
+          cResult[23] = closure_7(tmp(8924).FormLabel, obj9);
+          const tmp37 = closure_7(tmp(8924).FormLabel, obj9);
         } else {
           class F {
             constructor() {
@@ -283,8 +283,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[27] = tmp31;
           cResult[28] = tmp36;
           cResult[29] = tmp38;
-          cResult[30] = closure_7(tmp(8895).FormRow, obj10);
-          const tmp41 = closure_7(tmp(8895).FormRow, obj10);
+          cResult[30] = closure_7(tmp(8924).FormRow, obj10);
+          const tmp41 = closure_7(tmp(8924).FormRow, obj10);
         }
         const fn2 = function w() {
           const updateGuildNotificationSettings =
@@ -332,12 +332,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = obj2.useStateFromStores(items1, () =>
         UserGuildSettingsStore.isMuteScheduledEventsEnabled(guildId),
       );
-      const ActionSheet = guildId(6701).ActionSheet;
+      const ActionSheet = guildId(6708).ActionSheet;
       const obj3 = { leading: closure_7(View, obj4), title: intl.string(guildId(1126).t.tlopTM) };
       obj4 = { style: tmp.headerIcon, children: closure_7(tmp9, obj5) };
-      const BottomSheetTitleHeader = guildId(6644).BottomSheetTitleHeader;
-      obj5 = { guild: stateFromStores, size: guildId(5971).GuildIconSizes.LARGE };
-      tmp9 = stateFromStores1(5971);
+      const BottomSheetTitleHeader = guildId(6651).BottomSheetTitleHeader;
+      obj5 = { guild: stateFromStores, size: guildId(5978).GuildIconSizes.LARGE };
+      tmp9 = stateFromStores1(5978);
       intl = guildId(1126).intl;
       const items2 = [closure_7(BottomSheetTitleHeader, obj3), ,];
       const obj6 = {
@@ -350,14 +350,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.hideActionSheet();
         },
       };
-      const FormRow = guildId(8895).FormRow;
-      obj7 = { source: stateFromStores1(12013) };
+      const FormRow = guildId(8924).FormRow;
+      obj7 = { source: stateFromStores1(12028) };
       Icon = guildId(1188).Icon;
       obj8 = { text: intl2.string(guildId(1126).t.e6RscS) };
-      FormLabel = guildId(8895).FormLabel;
+      FormLabel = guildId(8924).FormLabel;
       intl2 = guildId(1126).intl;
       items2[1] = closure_7(FormRow, obj6);
-      const FormRow2 = guildId(8895).FormRow;
+      const FormRow2 = guildId(8924).FormRow;
       const obj9 = {
         leading: closure_7(Icon2, obj10),
         label: closure_7(FormLabel2, { text: stringResult }),
@@ -374,9 +374,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       };
-      obj10 = { source: stateFromStores1(stateFromStores1 ? 12014 : 12015) };
+      obj10 = { source: stateFromStores1(stateFromStores1 ? 12029 : 12030) };
       Icon2 = guildId(1188).Icon;
-      FormLabel2 = tmp2(8895).FormLabel;
+      FormLabel2 = tmp2(8924).FormLabel;
       const intl3 = tmp2(1126).intl;
       const string = intl3.string;
       const t = tmp2(1126).t;

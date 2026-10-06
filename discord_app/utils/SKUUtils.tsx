@@ -1,7 +1,7 @@
 // discord_app/utils/SKUUtils.tsx
 import intl71 from "../intl/index.native.tsx";
 import PlatformUtils from "PlatformUtils.tsx";
-import _modDef4461 from "../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../_runtime/metro/04467__.js";
 import matchPathCompat from "../modules/routing/matchPathCompat.tsx";
 import StoreUtils from "StoreUtils.tsx";
 import _slicedToArray from "../../_runtime/metro/00032__slicedToArray.js";
@@ -291,7 +291,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     if (0 < items.length) {
       [tmp3, tmp4] = items[num];
       _slicedToArray(items[num], 2);
-      const obj = _modDef4461(preorderApproximateReleaseDate, tmp3, true);
+      const obj = _modDef4467(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

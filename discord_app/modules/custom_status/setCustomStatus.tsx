@@ -2,7 +2,7 @@
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import Constants2 from "Constants.tsx";
 import getClearAfterDurationDefault from "utils/getClearAfterDuration.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -46,7 +46,7 @@ export default function setCustomStatus(arg0) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
-      const obj2 = _modDef4461();
+      const obj2 = _modDef4467();
       const addResult = obj2.add(getClearAfterDurationDefault(clearAfter), "ms");
       const toDateResult = addResult.toDate();
       str2 = String(toDateResult.getTime());
@@ -65,7 +65,7 @@ export default function setCustomStatus(arg0) {
   }
   _String2 = String;
   if (createdAtMs == null) {
-    const obj5 = _modDef4461();
+    const obj5 = _modDef4467();
     const toDateResult1 = obj5.toDate();
     createdAtMs = toDateResult1.getTime();
   }

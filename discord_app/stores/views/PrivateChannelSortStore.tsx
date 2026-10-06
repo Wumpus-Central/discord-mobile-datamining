@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import get_initializedDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import SecondaryIndexMap from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
 import FakePlaceholderPrivateChannel from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
 import MessageRequestStore from "../../modules/message_request/MessageRequestStore.tsx";
@@ -30,7 +30,7 @@ function makeSortedChannel(channel) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      const obj = _modDef4461(isMessageRequestTimestamp);
+      const obj = _modDef4467(isMessageRequestTimestamp);
       const valueOfResult = obj.valueOf();
       const obj2 = SnowflakeUtilsDefault;
       let fromTimestampResult = obj2.fromTimestamp(valueOfResult);
@@ -87,7 +87,7 @@ const secondaryIndexMap = new SecondaryIndexMap.SecondaryIndexMap(
 let values = [];
 let values2 = [];
 let closure_17 = [];
-const f38840 = () => {};
+const f38901 = () => {};
 const Store = get_initializedDefault.Store;
 class PrivateChannelSortStore extends Store {
   initialize() {
@@ -104,7 +104,7 @@ class PrivateChannelSortStore extends Store {
     this.syncWith(items, handleConnectionOpen);
   }
   getPrivateChannelIds() {
-    if (typeof f38840 === "function") {
+    if (typeof f38901 === "function") {
       values = secondaryIndexMap.values(constants.FAVORITE);
       values2 = secondaryIndexMap.values(constants.DEFAULT);
       const tmp4 = values === values && values2 === values2;

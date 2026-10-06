@@ -10,7 +10,7 @@ import 00570__ from "../../../../_runtime/metro/00570__.js";
 import SafeAreaStore from "../../safe_area/SafeAreaStore.native.tsx";
 import size_mod from "../../../../_runtime/metro/00002__.js";
 
-const f84127 = () => state.setState((arg0) => closure_1_4(arg0));
+const f84261 = () => state.setState((arg0) => closure_1_4(arg0));
 function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
   let height2;
   let height4;
@@ -126,16 +126,16 @@ const Dimensions = react_native.Dimensions;
 let byAppEntry = module_570.create(() => getDimensionsStoreState(undefined));
 const subscription = SafeAreaStore.subscribe(() => {
   const obj = react_native2;
-  obj.batchUpdates(f84127);
+  obj.batchUpdates(f84261);
 });
 subscribeToKeyboardUIStore(() => {
   const obj = react_native2;
-  obj.batchUpdates(f84127);
+  obj.batchUpdates(f84261);
 });
 const listener = Dimensions.addEventListener("change", () => {
   let state;
   const obj = react_native2;
-  obj.batchUpdates(f84127);
+  obj.batchUpdates(f84261);
 });
 let size = size_mod;
 const result = size.fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");

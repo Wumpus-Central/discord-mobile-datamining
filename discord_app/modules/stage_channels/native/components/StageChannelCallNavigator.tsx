@@ -287,11 +287,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withSpring(num, viewAnimationConfig) };
         return obj;
       };
-      const obj3 = showOverlay(4612);
-      fn.__closure = { withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig };
+      const obj3 = showOverlay(4618);
+      fn.__closure = { withSpring: showOverlay(5604).withSpring, showOverlay, viewAnimationConfig };
       fn.__workletHash = 3866068723381;
       fn.__initData = __initData3;
-      ({ withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig });
+      ({ withSpring: showOverlay(5604).withSpring, showOverlay, viewAnimationConfig });
       const animatedStyle = obj3.useAnimatedStyle(fn);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn2 = function s() {
@@ -358,7 +358,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       importDefault = undefined;
       channel = channel.channel;
       [showOverlay, importDefault] = react.useState(false);
-      let obj = showOverlay(4612);
+      let obj = showOverlay(4618);
       const fn = function c() {
         let num = 0;
         const withSpring = spring.withSpring;
@@ -369,10 +369,10 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withSpring(num, viewAnimationConfig) };
         return obj;
       };
-      fn.__closure = { withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig };
+      fn.__closure = { withSpring: showOverlay(5604).withSpring, showOverlay, viewAnimationConfig };
       fn.__workletHash = 17555856853074;
       fn.__initData = __initData4;
-      ({ withSpring: showOverlay(5597).withSpring, showOverlay, viewAnimationConfig });
+      ({ withSpring: showOverlay(5604).withSpring, showOverlay, viewAnimationConfig });
       const animatedStyle = obj.useAnimatedStyle(fn);
       const effect = react.useEffect(() => {
         let closure_0;

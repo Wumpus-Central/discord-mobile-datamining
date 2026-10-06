@@ -62,11 +62,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = guildId(573);
       const first1 = tmpResult.useStateFromStoresArray(first, tmp6)[0];
-      const tmpResult4 = guildId(6658);
-      const tmp8 = hasAlreadyLinked(6660)(tmpResult4.useApplication(first1).data);
+      const tmpResult4 = guildId(6665);
+      const tmp8 = hasAlreadyLinked(6667)(tmpResult4.useApplication(first1).data);
       ({ fetched, hasAlreadyLinked } = tmp8);
       ({ connectionApp, canStartAuthorization, startAuthorization } = tmp8);
-      const tmpResult5 = guildId(16196);
+      const tmpResult5 = guildId(16236);
       const defaultAuthorizationNotifiers = tmpResult5.useDefaultAuthorizationNotifiers(
         startAuthorization,
         hasAlreadyLinked,
@@ -103,7 +103,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp14 = cResult[4];
       }
-      const tmpResult6 = guildId(6891);
+      const tmpResult6 = guildId(6901);
       const tmp15 = _slicedToArray(
         tmpResult6.useSelectedSingleUseGuildDismissibleContent(tmp14, guildId, constants3.CHANNEL_NOTICES, true),
         2,
@@ -189,11 +189,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return gameApplicationIds;
       })[0];
-      let obj2 = guildId(6658);
-      const tmp4 = hasAlreadyLinked(6660)(obj2.useApplication(first).data);
+      let obj2 = guildId(6665);
+      const tmp4 = hasAlreadyLinked(6667)(obj2.useApplication(first).data);
       ({ fetched, hasAlreadyLinked } = tmp4);
       ({ connectionApp, canStartAuthorization, startAuthorization } = tmp4);
-      const obj3 = guildId(16196);
+      const obj3 = guildId(16236);
       const defaultAuthorizationNotifiers = obj3.useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked);
       if (fetched) {
         fetched = !hasAlreadyLinked;
@@ -213,8 +213,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       if (fetched) {
         fetched = null != connectionApp.applicationAccountLinkBenefitConfig.reward_image;
       }
-      const useSelectedSingleUseGuildDismissibleContent = guildId(6891).useSelectedSingleUseGuildDismissibleContent;
-      guildId(6891);
+      const useSelectedSingleUseGuildDismissibleContent = guildId(6901).useSelectedSingleUseGuildDismissibleContent;
+      guildId(6901);
       if (fetched) {
         const items1 = [guildId(2036).DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER];
         items2 = items1;

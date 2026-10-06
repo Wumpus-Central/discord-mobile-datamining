@@ -8,7 +8,7 @@ import Constants from "../../../discord_common/js/packages/media-engine/Constant
 import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
 import GameConsoleActionCreators from "GameConsoleActionCreators.tsx";
 import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils.tsx";
-import _modDef17500 from "getErrorMessageForCommandResult.tsx";
+import _modDef17545 from "getErrorMessageForCommandResult.tsx";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
@@ -270,7 +270,7 @@ class GameConsoleManager extends AutomaticLifecycleManager {
               str2 = "";
             }
             let device = getDevice(type, str2);
-            const tmp8 = _modDef17500;
+            const tmp8 = _modDef17545;
             if (device == null) {
               obj = { id: "id", platform: intl.string(intl3.t["UQMV/E"]), name: intl2.string(intl3.t["UQMV/E"]) };
               intl = intl3.intl;

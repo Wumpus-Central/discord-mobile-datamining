@@ -5,13 +5,13 @@ import intl5 from "../../../../../../../intl/index.native.tsx";
 import GuildScheduledEventsConstants from "../../../../../../guild_scheduled_events/GuildScheduledEventsConstants.tsx";
 import GuildRecordUtils from "../../../../../../../utils/GuildRecordUtils.tsx";
 import GuildRecord from "../../../../../../../records/GuildRecord.tsx";
-import AssetRegistryDefault from "../../../../../../../../_runtime/04805_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../../_runtime/04811_AssetRegistry.js";
 import useChannelName from "../../../../../../channel/useChannelName.tsx";
 import Constants from "../../../../../../instant_invite/Constants.tsx";
 import react_native2 from "../../../RowGeneratorStyleSheet.tsx";
 import getEmbedThemeColorsDefault from "../getEmbedThemeColors.tsx";
 import renderer_EmbedUtils from "../../../EmbedUtils.tsx";
-import AssetRegistryDefault2 from "../../../../../../../../_runtime/07608_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../../../_runtime/07619_AssetRegistry.js";
 import ScheduleUtils from "../../../../../../guild_scheduled_events/utils/ScheduleUtils.tsx";
 import useEventSchedule from "../../../../../../guild_scheduled_events/useEventSchedule.tsx";
 import GuildScheduledEventsActionCreatorsDefault from "../../../../../../guild_scheduled_events/GuildScheduledEventsActionCreators.tsx";
@@ -22,7 +22,7 @@ import GuildScheduledEventManagerDefault from "../../../../../../guild_scheduled
 import GuildScheduledEventHeaderUtils from "../../../../../../guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx";
 import ShareDefault from "../../../../../../icons/native/Share.tsx";
 import CodedLinksConstants from "CodedLinksConstants.tsx";
-import AssetRegistryDefault3 from "../../../../../../../../_runtime/13053_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../../../_runtime/13072_AssetRegistry.js";
 import _slicedToArray from "../../../../../../../../_runtime/metro/00032__slicedToArray.js";
 import GuildScheduledEventStore_mod from "../../../../../../guild_scheduled_events/GuildScheduledEventStore.tsx";
 import ChannelStore from "../../../../../../../stores/ChannelStore.tsx";
@@ -349,7 +349,7 @@ export const createGuildScheduledEventLinkEmbed = function createGuildScheduledE
   let nextRecurrenceIdInEvent = tmp[2];
   const guildScheduledEvent = GuildScheduledEventStore.getGuildScheduledEvent(tmp[1]);
   if (nextRecurrenceIdInEvent == null) {
-    const obj2 = first(9163);
+    const obj2 = first(9198);
     nextRecurrenceIdInEvent = obj2.getNextRecurrenceIdInEvent(guildScheduledEvent);
   }
   if (null != guildScheduledEvent) {

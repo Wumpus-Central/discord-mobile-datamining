@@ -152,7 +152,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 end,
                 onPress,
                 onAddSuggestion() {
-                  /* body not rendered: F153597 */
+                  /* body not rendered: F153837 */
                 },
                 location: metroRequire.FRIENDS_SUGGESTED_FRIENDS_MODAL,
               };

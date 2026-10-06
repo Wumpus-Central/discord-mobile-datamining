@@ -108,7 +108,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   if (tmp19Result) {
     let obj3 = { variant: "text-sm/medium", color: "text-muted", children: intl.format(guild(1126).t.ZhSOBy, obj4) };
-    let Text = guild(4886).Text;
+    let Text = guild(4892).Text;
     intl = guild(1126).intl;
     obj4 = { onTemplateOpen: obj5 };
     obj5 = {
@@ -117,7 +117,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
         ActionSheetActionCreatorsDefault;
         const obj = { permissionsEdited, onPermissionsChanged: dependencyMap, guildId: guild.id };
-        const tmp3 = asyncRequire(17804, dependencyMap.paths);
+        const tmp3 = asyncRequire(17850, dependencyMap.paths);
         openLazy(tmp3, "role-permission-templates-" + guild.id + "-" + role.id, obj);
       },
       accessibilityRole: "button",
@@ -125,7 +125,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     tmp19Result = closure_14(Text, obj3);
   }
   const tmp19Result3 = closure_14(closure_6, { children: tmp19Result });
-  const tmp15Result = role(17009);
+  const tmp15Result = role(17035);
   const guildPermissionSpec = tmp15Result.generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {
@@ -145,8 +145,8 @@ export default function GuildSettingsRoleEditPermission(guild) {
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
   const children = [, , ,];
   const tmp25 = mapped1.length > 0;
-  children[0] = closure_14(role(17801), { role });
-  let obj6 = { children: closure_14(guild(6547).SearchField, obj7) };
+  children[0] = closure_14(role(17847), { role });
+  let obj6 = { children: closure_14(guild(6554).SearchField, obj7) };
   obj7 = {
     size: "md",
     onChange(str) {
@@ -262,7 +262,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     tmp19Result4 = closure_14(closure_8, obj8);
   } else {
     const obj9 = {
-      Illustration: guild(9240).NoResultsAlt,
+      Illustration: guild(9275).NoResultsAlt,
       style: null,
       bodyStyle: null,
       body: intl2.format(guild(1126).t.Psh5OO, obj11),

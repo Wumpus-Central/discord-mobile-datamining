@@ -1499,7 +1499,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                         tmp43[1] = tmp6;
                         tmp43[2] = first;
                         tmp43[3] = tmp26;
-                        const tmp44 = closure_20(tmp(9230).AddMembersBody, tmp43);
+                        const tmp44 = closure_20(tmp(9265).AddMembersBody, tmp43);
                         cResult[24] = tmp6;
                         cResult[25] = first;
                         cResult[26] = tmp44;
@@ -1849,7 +1849,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp6;
       }
-      const tmp7 = closure_20(tmp(6496).Navigator, { screens, initialRouteStack: initialStack });
+      const tmp7 = closure_20(tmp(6503).Navigator, { screens, initialRouteStack: initialStack });
       cResult[2] = initialStack;
       cResult[3] = screens;
       cResult[4] = tmp7;
@@ -1859,7 +1859,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_0;
       let initialStack;
       let screens;
-      const f99835 = () => {
+      const f100013 = () => {
         let obj2;
         const obj = { name: constants.CREATE_CHANNEL, params: obj2 };
         obj2 = {};
@@ -1869,8 +1869,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         return obj3;
       };
       _require = arg0;
-      ({ screens, initialStack } = useInitialValueDefault(f99835));
-      useInitialValueDefault(f99835);
+      ({ screens, initialStack } = useInitialValueDefault(f100013));
+      useInitialValueDefault(f100013);
       return closure_20(require("Navigator").Navigator, { screens, initialRouteStack });
     };
 let result = size.fileFinishedImporting("components_native/CreateChannelModal.tsx");

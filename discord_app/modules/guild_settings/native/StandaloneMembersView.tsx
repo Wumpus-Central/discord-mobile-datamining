@@ -58,7 +58,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp9;
       if (cResult[5] !== navigation) {
-        const tmpResult = tmp(6010);
+        const tmpResult = tmp(6017);
         const headerCloseButton = tmpResult.getHeaderCloseButton(() => navigation.goBack());
         cResult[5] = navigation;
         cResult[6] = headerCloseButton;

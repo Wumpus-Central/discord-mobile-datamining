@@ -278,7 +278,7 @@ class GuildSettingsModalMemberEdit extends PureComponent2 {
           return authStore4(HeaderActionButton, obj);
         };
       } else if (null != onClose) {
-        let obj = self(6010);
+        let obj = self(6017);
         fn = obj.getHeaderCloseButton(onClose);
       }
       let obj2 = {
@@ -856,7 +856,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = require("react");
       const cResult = obj.c(9);
       ({ userId, onClose, onRemove } = guildId);
-      const tmp4 = onClose(5984)(guildId.guildId);
+      const tmp4 = onClose(5991)(guildId.guildId);
       const tmp = _require;
       if (cResult[0] === tmp4) {
         if (cResult[1] === onClose) {
@@ -883,7 +883,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp8;
           }
           const obj4 = { screens: tmp5, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: tmp6 };
-          const tmp11 = closure_18(tmp(6496).Navigator, obj4);
+          const tmp11 = closure_18(tmp(6503).Navigator, obj4);
           cResult[6] = tmp5;
           cResult[7] = tmp6;
           cResult[8] = tmp11;
@@ -930,7 +930,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       onClose = onClose.onClose;
       const onRemove = onClose.onRemove;
       ({ guildId, userId } = onClose);
-      let tmp = onRemove(5984)(guildId);
+      let tmp = onRemove(5991)(guildId);
       let closure_2 = tmp;
       const items = [onClose, onRemove, tmp];
       const memo = react.useMemo(() => {
@@ -968,7 +968,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = { screens: memo, initialRouteName: constants3.MEMBER_EDIT, initialRouteStack: items1 };
       items1 = [{ name: constants3.MEMBER_EDIT, params: { userId } }];
       const obj2 = { name: constants3.MEMBER_EDIT, params: { userId } };
-      return closure_18(onClose(6496).Navigator, obj);
+      return closure_18(onClose(6503).Navigator, obj);
     };
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 

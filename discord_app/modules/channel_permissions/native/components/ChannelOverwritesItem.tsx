@@ -11,8 +11,8 @@ import TableRow2 from "../../../../design/components/TableRow/native/TableRow.na
 import ChannelPermissionsConstants from "../../ChannelPermissionsConstants.tsx";
 import ChannelPermissionsUtilsAll from "../../ChannelPermissionsUtils.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09233_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/09234_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09268_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09269_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -75,7 +75,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[5] !== prop) {
               let obj2 = { style: prop };
               cResult[5] = prop;
-              const tmp11 = closure_10(tmp(4797).CircleXIcon, obj2);
+              const tmp11 = closure_10(tmp(4803).CircleXIcon, obj2);
               class R {
                 constructor() {
                   if (null != onRemove) {
@@ -104,7 +104,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     intl3 = closure_0(closure_3[8]).intl;
                     obj.confirmText = intl3.string(closure_0(closure_3[8]).t.fKxYb0);
                     obj.onConfirm = function onConfirm() {
-                      /* body not rendered: F99901 */
+                      /* body not rendered: F100079 */
                     };
                     showConfirmModalResult = showConfirmModal(obj);
                     return;
@@ -159,14 +159,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                   intl3 = closure_0(closure_3[8]).intl;
                   obj.confirmText = intl3.string(closure_0(closure_3[8]).t.fKxYb0);
                   obj.onConfirm = function onConfirm() {
-                    /* body not rendered: F99901 */
+                    /* body not rendered: F100079 */
                   };
                   showConfirmModalResult = showConfirmModal(obj);
                   return;
                 }
               }
             }
-            const tmp14 = closure_10(tmp(5909).PressableOpacity, obj3);
+            const tmp14 = closure_10(tmp(5916).PressableOpacity, obj3);
             cResult[7] = item.disabled;
             cResult[8] = tmp7;
             cResult[9] = tmp9;
@@ -202,7 +202,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               intl3 = closure_0(closure_3[8]).intl;
               obj.confirmText = intl3.string(closure_0(closure_3[8]).t.fKxYb0);
               obj.onConfirm = function onConfirm() {
-                /* body not rendered: F99901 */
+                /* body not rendered: F100079 */
               };
               showConfirmModalResult = showConfirmModal(obj);
               return;
@@ -267,10 +267,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           },
           children: closure_10(CircleXIcon, obj2),
         };
-        const PressableOpacity = item(5909).PressableOpacity;
+        const PressableOpacity = item(5916).PressableOpacity;
         intl = item(1126).intl;
         let prop;
-        CircleXIcon = item(4797).CircleXIcon;
+        CircleXIcon = item(4803).CircleXIcon;
         if (item.disabled) {
           prop = tmp.rowRemoveIconDisabled;
         }

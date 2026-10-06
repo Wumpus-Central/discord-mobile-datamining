@@ -6,7 +6,7 @@ import CommunicationDisabledUtils from "../../guild_communication_disabled/Commu
 import AutomodPermissionUtils from "../../guild_automod/AutomodPermissionUtils.tsx";
 import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
-import merged5 from "../../../../_runtime/05075_merged5.js";
+import merged5 from "../../../../_runtime/05081_merged5.js";
 import useFormattedExpirationLabel from "useFormattedExpirationLabel.tsx";
 import PollsInteractionStore from "../PollsInteractionStore.tsx";
 import PollLayoutTypes from "../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";

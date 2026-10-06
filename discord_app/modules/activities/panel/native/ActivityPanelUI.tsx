@@ -21,9 +21,9 @@ let metroImportDefault;
 function renderActivityOrPIP(id, arg1, transitionState, transitionCleanUp) {
   let tmp4;
   if ("pip" === arg1) {
-    tmp4 = 17170;
+    tmp4 = 17199;
   } else {
-    tmp4 = 17176;
+    tmp4 = 17205;
   }
   const obj = { transitionState, transitionCleanUp };
   return metroImportDefault(importDefault(tmp4), obj, id);
@@ -113,10 +113,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = closure_12;
       }, items);
       const obj = { children: items1 };
-      const LayerScope = mode(6651).LayerScope;
+      const LayerScope = mode(6658).LayerScope;
       items1 = [renderActivityPanelSystemUIManager()];
       const obj2 = { items: memo, renderItem: renderActivityOrPIP, getItemKey: getKey, wrapChildren };
-      items1[1] = closure_7(mode(4589).TransitionGroup, obj2);
+      items1[1] = closure_7(mode(4595).TransitionGroup, obj2);
       return closure_8(LayerScope, obj);
     };
 let closure_15 = tmp4;

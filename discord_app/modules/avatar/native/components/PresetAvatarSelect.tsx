@@ -134,7 +134,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const container = tmp4.container;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { variant: "text-sm/medium", color: "text-default", children: intl.string(tmp(1126).t.yP28YL) };
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         intl = tmp(1126).intl;
         const tmp7 = closure_4(Text, obj2);
         cResult[0] = tmp7;

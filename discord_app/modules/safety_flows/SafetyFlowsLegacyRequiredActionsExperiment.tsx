@@ -19,13 +19,13 @@ function config() {
   return obj;
 }
 function union() {
-  const f131157 = (requiredActions) => {
+  const f131376 = (requiredActions) => {
     const items = [...requiredActions.requiredActions];
     return items;
   };
   let items = [...arguments];
-  const obj = { requiredActions: new Set(items.flatMap(f131157)) };
-  new Set(items.flatMap(f131157));
+  const obj = { requiredActions: new Set(items.flatMap(f131376)) };
+  new Set(items.flatMap(f131376));
   return obj;
 }
 ({

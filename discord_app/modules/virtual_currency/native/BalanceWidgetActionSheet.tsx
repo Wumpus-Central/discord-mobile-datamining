@@ -6,9 +6,9 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
 import DismissibleContentUnsafeUtils from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import _mod11012 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_animated.mp4.js";
-import _mod11013 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_static.png.js";
-import _mod11014 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js";
+import _mod11025 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_animated.mp4.js";
+import _mod11026 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_bg_static.png.js";
+import _mod11027 from "../../../../discord_assets/assets/virtual_currency/images/native/balancePromotion_rewards.png.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Constants from "../../../Constants.tsx";
@@ -161,9 +161,9 @@ export default function _default(balance) {
     let tmp = null;
     if (num > 4100) {
       const obj = {
-        backgroundVideo: _mod11012.default,
-        backgroundImage: _mod11013.default,
-        bannerImage: _mod11014.default,
+        backgroundVideo: _mod11025.default,
+        backgroundImage: _mod11026.default,
+        bannerImage: _mod11027.default,
         bannerText: intl.string(intl3.t.LaMEFL),
       };
       intl = intl3.intl;

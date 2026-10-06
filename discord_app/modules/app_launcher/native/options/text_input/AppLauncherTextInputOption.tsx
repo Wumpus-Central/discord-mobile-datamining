@@ -290,7 +290,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       );
       value = tmp2[0];
       react = tmp2[1];
-      let obj = onChangeText(10994);
+      let obj = onChangeText(11007);
       const entrypoint = obj.useAppLauncherContext().entrypoint;
       react.useRef({ start: 0, end: 0 });
       const ref = react.useRef(null);
@@ -348,17 +348,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const result = obj.maybeFetchTopEmojisByGuild(guildId);
         }
       }, items2);
-      let obj2 = onChangeText(11792);
+      let obj2 = onChangeText(11806);
       const animationDelayedAutoFocus = obj2.useAnimationDelayedAutoFocus(autoFocus, () => {
         const current = ref.current;
         if (current != null) {
           current.focus();
         }
       });
-      if (entrypoint === onChangeText(8932).AppLauncherEntrypoint.VOICE) {
+      if (entrypoint === onChangeText(8961).AppLauncherEntrypoint.VOICE) {
         TextInput = tmp4(1188).TextInput;
       } else {
-        TextInput = guildId(11797);
+        TextInput = guildId(11811);
       }
       const items3 = [tmp.container, ,];
       const tmp12 = onChangeText;
@@ -421,7 +421,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const result1 = obj2.openEmojiPickerActionSheet(obj3);
           },
         };
-        tmp14Result = tmp14(guildId(11798), obj5);
+        tmp14Result = tmp14(guildId(11812), obj5);
       }
       items4[1] = tmp14Result;
       return tmp12(tmp13, obj3);

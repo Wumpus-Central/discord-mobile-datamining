@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import intl6 from "../../../../intl/index.native.tsx";
 import FreeFormTextInputDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 import InstantInviteUtilsDefault from "../../../../utils/InstantInviteUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09515_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09528_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
@@ -158,7 +158,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const _Symbol2 = Symbol;
               if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-                const tmp26 = closure_5(stateFromStores(6883).SettingsIcon, {});
+                const tmp26 = closure_5(stateFromStores(6893).SettingsIcon, {});
                 cResult[15] = tmp26;
                 tmp24 = tmp26;
               } else {
@@ -203,7 +203,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[29] !== onShare) {
                         let obj2 = { text: tmp39, onPress: onShare };
-                        const tmp43 = closure_5(stateFromStores(5594).Button, obj2);
+                        const tmp43 = closure_5(stateFromStores(5601).Button, obj2);
                         cResult[29] = onShare;
                         cResult[30] = tmp43;
                         tmp41 = tmp43;
@@ -240,7 +240,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       color: "text-muted",
                       children: tmp34,
                     };
-                    const tmp38 = closure_5(stateFromStores(4886).Text, obj4);
+                    const tmp38 = closure_5(stateFromStores(4892).Text, obj4);
                     cResult[25] = tmp4.expireCaption;
                     cResult[26] = tmp34;
                     cResult[27] = tmp38;
@@ -263,7 +263,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp4.settingsButton,
                 children: tmp24,
               };
-              const tmp29 = closure_5(stateFromStores(5909).PressableOpacity, obj6);
+              const tmp29 = closure_5(stateFromStores(5916).PressableOpacity, obj6);
               cResult[16] = onPressSettings;
               cResult[17] = tmp4.settingsButton;
               cResult[18] = tmp29;
@@ -356,15 +356,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "button",
         onPress: onPressSettings,
         style: tmp.settingsButton,
-        children: closure_5(stateFromStores(6883).SettingsIcon, {}),
+        children: closure_5(stateFromStores(6893).SettingsIcon, {}),
       };
-      const PressableOpacity = tmp2(5909).PressableOpacity;
+      const PressableOpacity = tmp2(5916).PressableOpacity;
       intl3 = tmp2(1126).intl;
       items2[1] = closure_5(PressableOpacity, obj6);
       items1[1] = closure_6(View, obj4);
       const obj7 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: formatResult };
       formatResult = null;
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       if (null != stateFromStores) {
         let dqPWMN;
         const tmp8Result = InstantInviteUtilsDefault;
@@ -394,7 +394,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1[2] = closure_5(Text, obj7);
       const obj9 = { text: intl5.string(stateFromStores(1126).t.Ej3B3Y), onPress: onShare };
-      const Button = tmp2(5594).Button;
+      const Button = tmp2(5601).Button;
       intl5 = tmp2(1126).intl;
       items1[3] = closure_5(Button, obj9);
       return closure_6(View, obj2);

@@ -1203,7 +1203,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
         reportedPageIndex = tmp9;
         closure_5 = cResult[7];
       }
-      const tmpResult = tmp(4612);
+      const tmpResult = tmp(4618);
       class P {
         constructor() {
           let tmp2 = Math.floor(closure_3.get()) === closure_2;
@@ -1221,7 +1221,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
       P.__workletHash = 2724531395868;
       P.__initData = __initData13;
       const derivedValue = tmpResult.useDerivedValue(P);
-      const tmpResult3 = tmp(4612);
+      const tmpResult3 = tmp(4618);
       class O {
         constructor() {
           let pointerEvents = "box-none";
@@ -1362,7 +1362,7 @@ let closure_47 = ReactCompilerGating.isReactCompilerEnabled()
         fn.__closure = obj5;
         fn.__workletHash = 6740536171688;
         fn.__initData = __initData17;
-        const tmpResult4 = tmp(4612);
+        const tmpResult4 = tmp(4618);
         const animatedStyle = tmpResult4.useAnimatedStyle(fn);
         if (cResult[15] === tmp4) {
           class H {

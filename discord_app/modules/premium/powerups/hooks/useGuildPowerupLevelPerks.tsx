@@ -3,7 +3,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import intl4 from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import PremiumConstants from "../../PremiumConstants.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import GuildPowerupsConstants from "../constants/GuildPowerupsConstants.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -78,7 +78,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           totalEmojis: features.features.total_emoji_slots,
           additionalEmojis: features.features.additional_emoji_slots,
         };
-        const formatToPlainStringResult = intl.formatToPlainString(_modDef2525["NXvV0+"], obj4);
+        const formatToPlainStringResult = intl.formatToPlainString(_modDef2553["NXvV0+"], obj4);
         cResult[13] = features.features.additional_emoji_slots;
         cResult[14] = features.features.total_emoji_slots;
         cResult[15] = formatToPlainStringResult;
@@ -106,7 +106,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           totalStickers: features.features.total_sticker_slots,
           additionalStickers: features.features.additional_sticker_slots,
         };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2525.ZEvvPz, obj6);
+        const formatToPlainStringResult1 = intl2.formatToPlainString(_modDef2553.ZEvvPz, obj6);
         cResult[18] = features.features.additional_sticker_slots;
         cResult[19] = features.features.total_sticker_slots;
         cResult[20] = formatToPlainStringResult1;
@@ -134,7 +134,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           totalSoundboards: features.features.total_sound_slots,
           additionalSoundboards: features.features.additional_sound_slots,
         };
-        const formatToPlainStringResult2 = intl3.formatToPlainString(_modDef2525["s9u/E7"], obj8);
+        const formatToPlainStringResult2 = intl3.formatToPlainString(_modDef2553["s9u/E7"], obj8);
         cResult[23] = features.features.additional_sound_slots;
         cResult[24] = features.features.total_sound_slots;
         cResult[25] = formatToPlainStringResult2;
@@ -178,7 +178,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         closure_0 = GUILD_FEATURE_TO_PERK();
         if (includeEmojis) {
           const push = items.push;
-          const obj = { perkIcon: PerkIcons.EMOJI, description: intl.formatToPlainString(_modDef2525["NXvV0+"], obj2) };
+          const obj = { perkIcon: PerkIcons.EMOJI, description: intl.formatToPlainString(_modDef2553["NXvV0+"], obj2) };
           intl = intl4.intl;
           obj2 = {
             totalEmojis: closure_0.features.total_emoji_slots,
@@ -190,7 +190,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const push2 = items.push;
           const obj3 = {
             perkIcon: PerkIcons.STICKER,
-            description: intl2.formatToPlainString(_modDef2525.ZEvvPz, obj4),
+            description: intl2.formatToPlainString(_modDef2553.ZEvvPz, obj4),
           };
           intl2 = intl4.intl;
           obj4 = {
@@ -203,7 +203,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const push3 = items.push;
           const obj5 = {
             perkIcon: PerkIcons.SOUNDBOARD,
-            description: intl3.formatToPlainString(_modDef2525["s9u/E7"], obj6),
+            description: intl3.formatToPlainString(_modDef2553["s9u/E7"], obj6),
           };
           intl3 = intl4.intl;
           obj6 = {

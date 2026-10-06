@@ -131,7 +131,7 @@ const jsx = Fragment.jsx;
 let closure_7 = module_570.create(() => ({ isDisabled: false, isUploading: false }));
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const f70398 = () => {
+const f70461 = () => {
 
 };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -140,7 +140,7 @@ ReactCompilerGating = ReactCompilerGating_mod;
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
   obj = react;
   const cResult = obj.c(2);
-  if (typeof f70398 === "function") {
+  if (typeof f70461 === "function") {
     let tmp3;
     const isUploading = closure_7().isUploading;
     if (cResult[0] !== isUploading) {
@@ -159,7 +159,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (() => {
     throw new TypeError("Trying to call a non-function");
   }
 }) : (() => {
-  if (typeof f70398 === "function") {
+  if (typeof f70461 === "function") {
     let tmp2 = null;
     if (closure_7().isUploading) {
       tmp2 = <ActivityIndicator />;

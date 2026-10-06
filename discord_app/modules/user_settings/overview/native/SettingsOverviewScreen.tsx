@@ -164,7 +164,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let hasPremiumSubscriptionToDisplay;
-      let obj = hasPremiumSubscriptionToDisplay(4528);
+      let obj = hasPremiumSubscriptionToDisplay(4534);
       hasPremiumSubscriptionToDisplay = obj.useHasPremiumSubscriptionToDisplay();
       const items = [hasPremiumSubscriptionToDisplay];
       const node = react.useMemo(() => {
@@ -175,7 +175,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         SettingBuilders;
         return createList(obj);
       }, items);
-      return jsx(hasPremiumSubscriptionToDisplay(14500).SearchableSettingsList, { node });
+      return jsx(hasPremiumSubscriptionToDisplay(14516).SearchableSettingsList, { node });
     };
 const result = size.fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
 

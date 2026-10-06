@@ -359,12 +359,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { applicationName: name, commandName: item.displayName };
         return formatToPlainString(Pk4Mz3, obj);
       }, items);
-      let obj = item(11860);
+      let obj = item(11874);
       const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
       let tmp8Result = null != applicationCommandsIconSource;
-      const TableRow = item(5993).TableRow;
+      const TableRow = item(6000).TableRow;
       if (tmp8Result) {
-        tmp8Result = jsx(section(5974), { style: tmp.commandIcon, source: applicationCommandsIconSource });
+        tmp8Result = jsx(section(5981), { style: tmp.commandIcon, source: applicationCommandsIconSource });
       }
       return (
         <TableRow

@@ -13,7 +13,7 @@ let obj = {
     ({ bountyId, sourceQuestContent, variant, bounty } = arg0);
     const obj = ModalActionCreatorsDefault;
     obj.pushLazy(
-      asyncRequire(14812, dependencyMap.paths),
+      asyncRequire(14828, dependencyMap.paths),
       { bountyId, sourceQuestContent, variant, bounty },
       BOUNTIES_MODAL,
     );

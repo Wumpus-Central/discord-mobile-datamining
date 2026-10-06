@@ -84,7 +84,7 @@ class Database {
     return resolved;
   }
   execute(table, type) {
-    const f135623 = async (arg0) => {
+    const f135841 = async (arg0) => {
       raw = raw.raw;
       const execute = raw.execute;
       const obj = { handle: 0 };
@@ -115,7 +115,7 @@ class Database {
         if (type == null) {
           type = table.type;
         }
-        executeAsyncResult = executeAsync(type, f135623);
+        executeAsyncResult = executeAsync(type, f135841);
       } else {
         let type2 = type;
         const timeAsync = require("AppStartPerformance").timeAsync;
@@ -134,7 +134,7 @@ class Database {
           if (closure_0 == null) {
             type = table.type;
           }
-          return executeAsync(type, f135623);
+          return executeAsync(type, f135841);
         }
         executeAsyncResult = timeAsync("\u{1F4BE}", "" + type2 + " " + str, callback);
       }

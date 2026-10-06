@@ -6,7 +6,7 @@ import Constants from "../../../../Constants.tsx";
 import ThreadConstants from "../../../threads/ThreadConstants.tsx";
 import transitionToChannel from "../../../routing/transitionToChannel.tsx";
 import ReadStateConstants from "../../../read_states/ReadStateConstants.tsx";
-import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import showLongPressForumPostActionSheetDefault from "../../../action_sheet/native/components/showLongPressForumPostActionSheet.tsx";
 import showThreadLongPressActionSheetDefault from "../../../threads/native/components/showThreadLongPressActionSheet.tsx";
 import react_mod from "../../../../../_runtime/00019_react.js";

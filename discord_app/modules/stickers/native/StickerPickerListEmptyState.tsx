@@ -6,9 +6,9 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import Constants from "../../../Constants.tsx";
 import intl2 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import BottomSheetModal from "../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
 import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
-import AssetRegistryDefault from "../../../../_runtime/10147_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/10160_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -144,10 +144,10 @@ const memoResult = react.memo(
           () => ({ marginBottom: insetBottom + EXPRESSION_FOOTER_HEIGHT, marginTop: insetTop, flex: 1 }),
           items,
         );
-        const obj = insetTop(9925);
+        const obj = insetTop(9938);
         const modalDismissGuardRefreshControl = obj.useModalDismissGuardRefreshControl();
         if (inActionSheet) {
-          let BottomSheetScrollView = insetTop(6112).BottomSheetScrollView;
+          let BottomSheetScrollView = insetTop(6119).BottomSheetScrollView;
         } else {
           BottomSheetScrollView = ScrollView;
         }
@@ -160,7 +160,7 @@ const memoResult = react.memo(
           bodyStyle: null,
           containerStyle: null,
           imageStyle: null,
-          source: insetBottom(10147),
+          source: insetBottom(10160),
           titleStyle: { marginBottom: 0 },
         });
         const RefreshEmptyState = insetTop(1188).RefreshEmptyState;

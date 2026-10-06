@@ -64,7 +64,7 @@ let obj = function _validatePurchase() {
             ({ productId: c0, premiumSubscription: c1, offerId: c2, currency: c3, price: c4, isGift: c5 } = closure_0);
             is_gift = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           let self;
@@ -444,7 +444,7 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
     flag = premiumSubscription.isOneTimePurchase ?? false;
     flag2 = premiumSubscription.allowPlanChange ?? true;
     ({ applicationId: c9, giftInfoOptions: c10, onPurchaseComplete: c11, onPurchaseError: c12 } = premiumSubscription);
-    return "Set";
+    return "Reflect";
   });
   const items1 = [
     tmp5,

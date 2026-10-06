@@ -101,6 +101,7 @@ let obj2 = {
   },
 };
 let obj3 = {
+  embeddedAppSDK: true,
   request: "Array",
   response(string) {
     let stringResult;
@@ -110,6 +111,7 @@ let obj3 = {
   },
 };
 let obj4 = {
+  embeddedAppSDK: true,
   response: "Array",
   request(string) {
     let requiredResult;
@@ -120,6 +122,7 @@ let obj4 = {
   },
 };
 let obj5 = {
+  embeddedAppSDK: true,
   request(string) {
     let allowResult;
     const obj = { access_token: allowResult.optional() };
@@ -196,6 +199,7 @@ let obj5 = {
   },
 };
 let obj6 = {
+  embeddedAppSDK: true,
   request: "Array",
   response(array) {
     let itemsResult;
@@ -642,6 +646,7 @@ const obj14 = {
   },
 };
 const obj15 = {
+  embeddedAppSDK: true,
   request(string) {
     let maxResult;
     let stringResult;
@@ -945,6 +950,7 @@ const obj24 = {
   },
 };
 const obj25 = {
+  embeddedAppSDK: true,
   request: "Array",
   response(array) {
     let allowResult;
@@ -1108,6 +1114,7 @@ const obj25 = {
   },
 };
 const obj26 = {
+  embeddedAppSDK: true,
   request(string) {
     let minResult;
     let stringResult;
@@ -1117,9 +1124,10 @@ const obj26 = {
     minResult = stringResult1.min(0);
     return obj;
   },
-  response: "r",
+  response: "Reflect",
 };
 const obj27 = {
+  embeddedAppSDK: true,
   request(string) {
     let maxResult;
     const obj = { id: maxResult.required() };
@@ -1133,10 +1141,12 @@ const obj27 = {
   },
 };
 const obj28 = {
+  embeddedAppSDK: true,
   request(string) {
-    let stringResult;
-    const obj = { quest_id: stringResult.required() };
-    stringResult = string.string();
+    let requiredResult;
+    const obj = { quest_id: requiredResult.meta({ className: "QuestId" }) };
+    const stringResult = string.string();
+    requiredResult = stringResult.required();
     return obj;
   },
   response(string) {
@@ -1156,10 +1166,12 @@ const obj28 = {
   },
 };
 const obj29 = {
+  embeddedAppSDK: true,
   request(string) {
-    let stringResult;
-    const obj = { quest_id: stringResult.required() };
-    stringResult = string.string();
+    let requiredResult;
+    const obj = { quest_id: requiredResult.meta({ className: "QuestId" }) };
+    const stringResult = string.string();
+    requiredResult = stringResult.required();
     return obj;
   },
   response(boolean) {
@@ -1170,6 +1182,7 @@ const obj29 = {
   },
 };
 const obj30 = {
+  embeddedAppSDK: true,
   request: "Array",
   response(string) {
     let allowResult;
@@ -1192,6 +1205,7 @@ const obj30 = {
   },
 };
 const obj31 = {
+  embeddedAppSDK: true,
   request: "Array",
   response(string) {
     let stringResult;

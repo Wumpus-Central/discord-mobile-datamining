@@ -5,13 +5,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import MicrophoneSlashIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneSlashIcon.tsx";
-import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import VoiceStateIconUtils from "../utils/VoiceStateIconUtils.tsx";
 import HeadphonesDenyIcon2 from "../../../../design/components/Icon/native/redesign/generated/HeadphonesDenyIcon.tsx";
 import HeadphonesSlashIcon from "../../../../design/components/Icon/native/redesign/generated/HeadphonesSlashIcon.tsx";
 import MicrophoneDenyIcon2 from "../../../../design/components/Icon/native/redesign/generated/MicrophoneDenyIcon.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09343_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/09344_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09357_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/09358_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

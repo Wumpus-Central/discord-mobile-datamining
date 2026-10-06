@@ -28,7 +28,7 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
         }
       },
     };
-    const pushLazyResult = obj.pushLazy(asyncRequire(8044, dependencyMap.paths), obj2, SHARE_PREPARING_MODAL_KEY, {
+    const pushLazyResult = obj.pushLazy(asyncRequire(8054, dependencyMap.paths), obj2, SHARE_PREPARING_MODAL_KEY, {
       animation: "fade",
       presentation: "transparentModal",
     });

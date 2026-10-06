@@ -7,7 +7,7 @@ let obj = {
   show(href) {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { href };
-    obj.openLazy(asyncRequire(11207, dependencyMap.paths), "suspicious-download", obj2);
+    obj.openLazy(asyncRequire(11220, dependencyMap.paths), "suspicious-download", obj2);
   },
 };
 const result = size.fileFinishedImporting(

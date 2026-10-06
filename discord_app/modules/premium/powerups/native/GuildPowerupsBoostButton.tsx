@@ -231,7 +231,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [GuildBoostSlotStore];
       const stateFromStores1 = obj2.useStateFromStores(items1, () => boostSlots.boostSlots);
       const items2 = [UserStore];
-      const tmp6 = stateFromStores1(6898)({ forceFetch: true });
+      const tmp6 = stateFromStores1(6908)({ forceFetch: true });
       const obj3 = guildId(504);
       const stateFromStores2 = obj3.useStateFromStores(items2, () => currentUser.getCurrentUser());
       const tmp = guildId;
@@ -248,7 +248,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }, items3);
       let tmp10 = null;
       if (null != stateFromStores) {
-        tmp10 = jsx(tmp5(6907), {
+        tmp10 = jsx(tmp5(6917), {
           guild: stateFromStores,
           previousGuildSubscriptionSlot: memo,
           analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR,

@@ -240,17 +240,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let collectiblesAnalyticsContext;
       const tmp = analyticsLocations;
       ({ index, isDarkTheme } = category);
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       const tmp3 = closure_9();
       let obj = category(1490);
       dependencyMap = obj.useNavigation();
       const unpublishedAt = category.unpublishedAt;
       const products = category.products;
-      let obj2 = category(14876);
+      let obj2 = category(14892);
       const obj3 = { products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
       const filteredAndSortedProducts = obj2.useFilteredAndSortedProducts(obj3);
       const mobileBannerUrl = category.mobileBannerUrl;
-      const obj4 = category(15708);
+      const obj4 = category(15744);
       const collectiblesShopDeepLinkProps = obj4.useCollectiblesShopDeepLinkProps({
         products: filteredAndSortedProducts,
       });
@@ -258,7 +258,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
       const ref = unpublishedAt.useRef(null);
       let items = [category.storeListingId];
-      const obj6 = category(8371);
+      const obj6 = category(8404);
       const recyclingState = obj6.useRecyclingState(null, items, () => {
         const current = ref.current;
         if (current != null) {
@@ -266,8 +266,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       });
       let tmp10 = null != productIndex;
-      const useScrollToInitialIndexOnce = category(15712).useScrollToInitialIndexOnce;
-      category(15712);
+      const useScrollToInitialIndexOnce = category(15748).useScrollToInitialIndexOnce;
+      category(15748);
       if (tmp10) {
         tmp10 = productIndex > 0;
       }
@@ -275,11 +275,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         shouldScroll: tmp10,
         initialScrollIndex: productIndex,
         flashListRef: ref,
-        afterMs: category(15712).INITIAL_SCROLL_DELAY_MS,
+        afterMs: category(15748).INITIAL_SCROLL_DELAY_MS,
         resetKey: category.storeListingId,
       };
       const scrollToInitialIndexOnce = useScrollToInitialIndexOnce(obj7);
-      const tmp4Result = category(8421);
+      const tmp4Result = category(8454);
       collectiblesAnalyticsContext = tmp4Result.useCollectiblesAnalyticsContext();
       const items1 = [
         initialProductSkuId,
@@ -326,7 +326,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         children: collectiblesAnalyticsContext(filteredAndSortedProducts, obj9),
       };
       obj9 = { style: tmp3.categoryContainer, children: items5 };
-      let CollectiblesAnalyticsProvider = tmp4(8421).CollectiblesAnalyticsProvider;
+      let CollectiblesAnalyticsProvider = tmp4(8454).CollectiblesAnalyticsProvider;
       const items3 = [tmp3.categoryHeader];
       items3[1] = isDarkTheme ? tmp3.categoryHeaderBorderDark : tmp3.categoryHeaderBorderLight;
       const obj10 = {
@@ -357,7 +357,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         },
         children: items4,
       };
-      const PressableOpacity = tmp4(5909).PressableOpacity;
+      const PressableOpacity = tmp4(5916).PressableOpacity;
       intl = tmp4(1126).intl;
       obj11 = { category: category.name };
       intl2 = tmp4(1126).intl;
@@ -366,12 +366,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmp15Result) {
         const obj13 = { source: obj14, resizeMode: "cover", style: tmp3.imageBackground };
         obj14 = { uri: mobileBannerUrl };
-        tmp15Result = tmp15(tmp(5974), obj13);
+        tmp15Result = tmp15(tmp(5981), obj13);
       }
       items4 = [tmp15Result];
       const obj15 = {
         style: tmp3.viewAllIcon,
-        children: ref(category(6708).ChevronSmallRightIcon, { size: "sm", color: "white" }),
+        children: ref(category(6715).ChevronSmallRightIcon, { size: "sm", color: "white" }),
       };
       items4[1] = ref(filteredAndSortedProducts, obj15);
       items5 = [collectiblesAnalyticsContext(PressableOpacity, obj10, category.storeListingId)];
@@ -384,14 +384,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         renderItem: callback,
         drawDistance: 150,
         decelerationRate: "fast",
-        snapToInterval: category(8418).COLLECTIBLES_SHOP_CARD_WIDTH + 12,
+        snapToInterval: category(8451).COLLECTIBLES_SHOP_CARD_WIDTH + 12,
         showsHorizontalScrollIndicator: false,
         ListHeaderComponent: ListFooterComponent,
         ListFooterComponent,
         ItemSeparatorComponent,
         initialScrollIndex: productIndex,
       };
-      const FlashList = tmp4(8371).FlashList;
+      const FlashList = tmp4(8404).FlashList;
       intl3 = tmp4(1126).intl;
       obj17 = { category: category.name };
       items5[1] = ref(FlashList, obj16);

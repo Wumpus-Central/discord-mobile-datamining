@@ -43,14 +43,14 @@ const memoResult = react.memo(
         }
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const _Object = Object;
-          const entries = Object.entries(tmp(15408).PerformanceTestingScreens);
+          const entries = Object.entries(tmp(15424).PerformanceTestingScreens);
           cResult[2] = entries;
           arr = entries;
         } else {
           arr = cResult[2];
         }
         if (cResult[3] !== navigation) {
-          const TableRowGroup = tmp(6074).TableRowGroup;
+          const TableRowGroup = tmp(6081).TableRowGroup;
           const tmp11 = (
             <TableRowGroup hasIcons>
               {arr.map((item) => {

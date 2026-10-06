@@ -205,8 +205,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresObject = tmpResult.useStateFromStoresObject(first, tmp6);
       ({ fetchingConnections, matchingPlatform } = stateFromStoresObject);
       let replacedBy;
-      const useGetOrFetchApplication = deprecatedPlatformTypes(6663).useGetOrFetchApplication;
-      deprecatedPlatformTypes(6663);
+      const useGetOrFetchApplication = deprecatedPlatformTypes(6670).useGetOrFetchApplication;
+      deprecatedPlatformTypes(6670);
       if (matchingPlatform != null) {
         let migrationData = matchingPlatform.migrationData;
         if (migrationData != null) {
@@ -262,8 +262,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       });
       ({ fetchingConnections, matchingPlatform } = stateFromStoresObject);
       let replacedBy;
-      const useGetOrFetchApplication = deprecatedPlatformTypes(6663).useGetOrFetchApplication;
-      deprecatedPlatformTypes(6663);
+      const useGetOrFetchApplication = deprecatedPlatformTypes(6670).useGetOrFetchApplication;
+      deprecatedPlatformTypes(6670);
       if (matchingPlatform != null) {
         let migrationData = matchingPlatform.migrationData;
         if (migrationData != null) {

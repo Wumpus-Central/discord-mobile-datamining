@@ -73,7 +73,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp14;
           }
         }
-        const tmp16 = jsx(setting(14445).UserProfileEditFormSwitch, {
+        const tmp16 = jsx(setting(14461).UserProfileEditFormSwitch, {
           value: !tmp5,
           label: first,
           subLabel: tmp9,
@@ -109,7 +109,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (undefined !== pendingLegacyUsernameDisabled) {
         tmp4 = pendingLegacyUsernameDisabled;
       }
-      const UserProfileEditFormSwitch = tmp(14445).UserProfileEditFormSwitch;
+      const UserProfileEditFormSwitch = tmp(14461).UserProfileEditFormSwitch;
       const intl = tmp(1126).intl;
       const intl2 = tmp(1126).intl;
       if (tmp4) {

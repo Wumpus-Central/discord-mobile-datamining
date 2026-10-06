@@ -104,6 +104,9 @@ let obj = function _preloadAllIntlMessageFiles() {
             asyncRequire(dependencyMap[72], dependencyMap.paths),
             asyncRequire(dependencyMap[73], dependencyMap.paths),
             asyncRequire(dependencyMap[74], dependencyMap.paths),
+            asyncRequire(dependencyMap[75], dependencyMap.paths),
+            asyncRequire(dependencyMap[76], dependencyMap.paths),
+            asyncRequire(dependencyMap[77], dependencyMap.paths),
           ];
           c0 = 3;
           obj = { value: all(items), done: true };

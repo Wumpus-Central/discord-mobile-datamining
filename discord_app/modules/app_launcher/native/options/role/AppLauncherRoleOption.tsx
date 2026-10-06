@@ -83,7 +83,7 @@ export default function AppLauncherRoleOption(option) {
         },
         onActionSheetDismiss: _slicedToArray,
       };
-      const tmp4 = asyncRequire(11805, dependencyMap.paths);
+      const tmp4 = asyncRequire(11819, dependencyMap.paths);
       openLazy(tmp4, AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, obj);
     },
     leading: guild_id(tmp3(tmp4[9]).RoleIcon, { role: stateFromStores }),

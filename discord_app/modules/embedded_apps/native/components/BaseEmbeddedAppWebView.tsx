@@ -9,7 +9,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../../../../utils/URLUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
-import WebView2 from "../../../../../_runtime/07973_WebView.js";
+import WebView2 from "../../../../../_runtime/07983_WebView.js";
 import getPostMessageJavaScriptDefault from "../utils/getPostMessageJavaScript.tsx";
 import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";

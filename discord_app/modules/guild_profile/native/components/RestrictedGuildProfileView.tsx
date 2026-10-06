@@ -6,7 +6,7 @@ import intl3 from "../../../../intl/index.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import GuildIcon from "../../../guild/native/GuildIcon.tsx";
 import GuildProfileView from "GuildProfileView.tsx";
 import react from "../../../../../_runtime/00019_react.js";

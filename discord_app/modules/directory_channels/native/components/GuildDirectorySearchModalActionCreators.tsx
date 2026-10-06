@@ -8,7 +8,7 @@ let obj = {
   open(channel) {
     channel = channel.channel;
     const obj = ModalActionCreatorsDefault;
-    obj.pushLazy(asyncRequire(11929, dependencyMap.paths), { channel }, GUILD_DIRECTORY_SEARCH_MODAL_KEY);
+    obj.pushLazy(asyncRequire(11943, dependencyMap.paths), { channel }, GUILD_DIRECTORY_SEARCH_MODAL_KEY);
   },
   close() {
     const obj = ModalActionCreatorsDefault;

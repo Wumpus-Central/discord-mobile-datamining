@@ -80,7 +80,7 @@ let obj = function _manuallyStartConsoleQuest() {
             message = undefined;
             c7 = 1;
             c8 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (arg0 === 1) {
@@ -545,7 +545,7 @@ obj = function _sendHeartbeat() {
       terminal = false;
     }
     ({ executablePath: c4, executableFingerprint: c5 } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -1141,7 +1141,7 @@ obj = function _completeQuestPreview() {
     if (closure_1 === undefined) {
       num7 = 1;
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -2089,7 +2089,7 @@ obj = function _fetchVideoTranscript() {
       if (closure_1 === undefined) {
         flag = false;
       }
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

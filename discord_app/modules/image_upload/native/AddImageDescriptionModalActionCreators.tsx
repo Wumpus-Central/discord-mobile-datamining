@@ -10,7 +10,7 @@ let obj = {
     const obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
     const obj2 = ModalActionCreatorsDefault;
-    obj2.pushLazy(asyncRequire(11037, dependencyMap.paths), merged, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
+    obj2.pushLazy(asyncRequire(11050, dependencyMap.paths), merged, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
   },
   close() {
     const obj = ModalActionCreatorsDefault;

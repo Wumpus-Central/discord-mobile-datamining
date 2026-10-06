@@ -432,17 +432,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != channel) {
         tmp9 = null;
         if (null != GuildStore.getGuild(channel.guild_id)) {
-          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(5971).GuildIconSizes.LARGE };
+          const obj2 = { guild: GuildStore.getGuild(channel.guild_id), size: tmp5(5978).GuildIconSizes.LARGE };
           const tmp12 = GuildIconDefault;
           tmp9 = React4(tmp12, obj2);
         }
       }
-      closure_13(tmp5(4567).presentFriendRequestAcceptedToast);
+      closure_13(tmp5(4573).presentFriendRequestAcceptedToast);
       const obj3 = {
-        header: React4(tmp5(6644).BottomSheetTitleHeader, { title: stringResult }),
+        header: React4(tmp5(6651).BottomSheetTitleHeader, { title: stringResult }),
         children: authStore(View, obj4),
       };
-      const ActionSheet = tmp5(6701).ActionSheet;
+      const ActionSheet = tmp5(6708).ActionSheet;
       const obj5 = { text: link, size: 240, style: tmp.code, accessibilityLabel: plainText };
       plainText = undefined;
       obj4 = { style: tmp.container, children: items1 };
@@ -462,7 +462,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp14Result2 = null != tmp8;
       if (tmp14Result2) {
         const obj8 = { variant: "text-md/normal", children: tmp8.visible };
-        tmp14Result2 = React4(tmp5(4886).Text, obj8);
+        tmp14Result2 = React4(tmp5(4892).Text, obj8);
       }
       items1[1] = tmp14Result2;
       return React4(ActionSheet, obj3);

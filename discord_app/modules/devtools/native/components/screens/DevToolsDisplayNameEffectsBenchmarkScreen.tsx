@@ -4,14 +4,14 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import intl2 from "../../../../../intl/index.native.tsx";
 import DisplayNameStylesConstants from "../../../../display_name_styles/DisplayNameStylesConstants.tsx";
 import DisplayNameEffect from "../../../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import _modDef2883 from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2911 from "../../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import types from "../../../../display_name_styles/types.tsx";
 import useDisplayNameStylesEffectConfigs from "../../../../display_name_styles/hooks/useDisplayNameStylesEffectConfigs.tsx";
-import _mod10640 from "../../../../../utils/native/StringUtils.tsx";
+import _mod10653 from "../../../../../utils/native/StringUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
@@ -34,7 +34,7 @@ function effectName(arg0) {
   const string = intl.string;
   let OpWJ3f = useDisplayNameStylesEffectConfigs.DISPLAY_NAME_STYLES_EFFECT_NAMES[arg0];
   if (OpWJ3f == null) {
-    OpWJ3f = _modDef2883.OpWJ3f;
+    OpWJ3f = _modDef2911.OpWJ3f;
   }
   return string(OpWJ3f);
 }
@@ -487,7 +487,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
       const items3 = [memo];
       const memo1 = first1.useMemo(() => {
-        const obj = _mod10640;
+        const obj = _mod10653;
         return obj.splitGraphemes(memo).length;
       }, items3);
       const items4 = [first];
@@ -648,7 +648,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const length = String(Math.max(run.params.rowCount - 1, 0)).length;
               const StringResult = String(id);
               const padStartResult = StringResult.padStart(length, "0");
-              const obj3 = _mod10640;
+              const obj3 = _mod10653;
               const splitGraphemesResult = obj3.splitGraphemes(name);
               sum = padStartResult;
               if (splitGraphemesResult.length > length) {

@@ -2,7 +2,7 @@
 import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import CrunchyrollLinkConstants from "CrunchyrollLinkConstants.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/08779_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/08811_AssetRegistry.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import Constants from "../../../../../../Constants.tsx";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
@@ -31,7 +31,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = navigation(1490);
       navigation = obj2.useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { label: intl.string(navigation(1126).t["2TXHQd"]), icon: navigation(7948).PlayIcon };
+        const obj3 = { label: intl.string(navigation(1126).t["2TXHQd"]), icon: navigation(7959).PlayIcon };
         intl = tmp(1126).intl;
         const items = [obj3];
         cResult[0] = items;
@@ -94,7 +94,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp16;
       }
-      const TwoWayLinkLanding = tmp(8741).TwoWayLinkLanding;
+      const TwoWayLinkLanding = tmp(8773).TwoWayLinkLanding;
       tmp16 = (
         <TwoWayLinkLanding
           platformType={constants3.CRUNCHYROLL}
@@ -129,7 +129,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = react.useCallback(() => {
         navigation.push(constants.PRE_CONNECT);
       }, items);
-      const TwoWayLinkLanding = navigation(8741).TwoWayLinkLanding;
+      const TwoWayLinkLanding = navigation(8773).TwoWayLinkLanding;
       let intl = navigation(1126).intl;
       const intl2 = navigation(1126).intl;
       const obj3 = HelpdeskUtilsDefault;

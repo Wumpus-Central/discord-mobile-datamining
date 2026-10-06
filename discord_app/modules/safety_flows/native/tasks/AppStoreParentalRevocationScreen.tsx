@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl5 from "../../../../intl/index.native.tsx";
-import _modDef2787 from "../../SafetyFlows.messages.js";
+import _modDef2815 from "../../SafetyFlows.messages.js";
 import LinkingDefault from "../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -73,7 +73,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ content, upperHalf, text } = tmp4);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = intl5.intl;
-        const stringResult = intl.string(_modDef2787.Z87TFb);
+        const stringResult = intl.string(_modDef2815.Z87TFb);
         cResult[1] = stringResult;
         tmp6 = stringResult;
       } else {
@@ -97,7 +97,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ body, text: text2 } = tmp4);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = intl5.intl;
-        const stringResult1 = intl2.string(_modDef2787.VS98dM);
+        const stringResult1 = intl2.string(_modDef2815.VS98dM);
         cResult[4] = stringResult1;
         tmp12 = stringResult1;
       } else {
@@ -115,7 +115,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const text3 = tmp4.text;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const intl3 = intl5.intl;
-        const stringResult2 = intl3.string(_modDef2787.BaI6L4);
+        const stringResult2 = intl3.string(_modDef2815.BaI6L4);
         cResult[7] = stringResult2;
         tmp18 = stringResult2;
       } else {
@@ -180,7 +180,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     const ModalFooter = ModalFooter2.ModalFooter;
                     const obj7 = {
                       variant: "primary",
-                      text: intl4.string(_modDef2787["6FXIU6"]),
+                      text: intl4.string(_modDef2815["6FXIU6"]),
                       icon: hasOwnProperty(LinkExternalSmallIcon, obj8),
                       iconPosition: "end",
                       onPress: first,
@@ -280,7 +280,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "heading-xl/bold",
         color: "mobile-text-heading-primary",
         style: tmp.text,
-        children: intl.string(_modDef2787.Z87TFb),
+        children: intl.string(_modDef2815.Z87TFb),
       };
       const Text = Text_Text.Text;
       intl = intl5.intl;
@@ -291,7 +291,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "text-md/medium",
         color: "text-subtle",
         style: tmp.text,
-        children: intl2.string(_modDef2787.VS98dM),
+        children: intl2.string(_modDef2815.VS98dM),
       };
       const Text2 = Text_Text.Text;
       intl2 = intl5.intl;
@@ -300,7 +300,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "text-md/medium",
         color: "text-subtle",
         style: tmp.text,
-        children: intl3.string(_modDef2787.BaI6L4),
+        children: intl3.string(_modDef2815.BaI6L4),
       };
       const Text3 = Text_Text.Text;
       intl3 = intl5.intl;
@@ -315,7 +315,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       items4 = [hasOwnProperty(LogOutDisclaimerDefault, {})];
       const obj12 = {
         variant: "primary",
-        text: intl4.string(_modDef2787["6FXIU6"]),
+        text: intl4.string(_modDef2815["6FXIU6"]),
         icon: hasOwnProperty(LinkExternalSmallIcon, obj13),
         iconPosition: "end",
         onPress: callback,

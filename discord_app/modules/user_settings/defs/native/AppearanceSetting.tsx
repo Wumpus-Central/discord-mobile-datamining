@@ -5,7 +5,7 @@ import Constants from "../../../../Constants.tsx";
 import intl3 from "../../../../intl/index.native.tsx";
 import ThemeConstants from "../../ThemeConstants.tsx";
 import ClientThemesUtils from "../../../client_themes/ClientThemesUtils.tsx";
-import _modDef2723 from "../../../client_themes/intl/ClientThemes.messages.js";
+import _modDef2751 from "../../../client_themes/intl/ClientThemes.messages.js";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useActiveTheme from "../../../client_themes/native/useActiveTheme.tsx";
 import PaintPaletteIcon from "../../../../design/components/Icon/native/redesign/generated/PaintPaletteIcon.tsx";
@@ -57,7 +57,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = intl3.intl;
-          const stringResult = intl2.string(_modDef2723.KSBBpC);
+          const stringResult = intl2.string(_modDef2751.KSBBpC);
           cResult[4] = stringResult;
           tmp19 = stringResult;
         } else {
@@ -114,7 +114,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const activeThemeType = obj3.useActiveThemeType();
       if (ActiveThemeType.CUSTOM === activeThemeType) {
         const intl2 = intl3.intl;
-        return intl2.string(_modDef2723.KSBBpC);
+        return intl2.string(_modDef2751.KSBBpC);
       } else if (ActiveThemeType.CLIENT === activeThemeType) {
         let name;
         if (stateFromStores != null) {

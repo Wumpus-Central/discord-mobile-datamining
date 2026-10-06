@@ -9,9 +9,9 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import XSmallIcon from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import APNGPlayer from "../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon2 from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef10961 from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
-import _modDef10962 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js";
-import _modDef10963 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_entry_dark.png.js";
+import _modDef10974 from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
+import _modDef10975 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js";
+import _modDef10976 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_entry_dark.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../../../_runtime/00019_react.js";
@@ -190,7 +190,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         displayMode: "minimal",
         style: tmp4.closeButton,
       };
-      const tmp10 = closure_13(require("../../../../_runtime/metro/06019__.js").HeaderBackButton, obj2);
+      const tmp10 = closure_13(require("../../../../_runtime/metro/06026__.js").HeaderBackButton, obj2);
       cResult[4] = tmp4.closeButton;
       cResult[5] = tmp6;
       cResult[6] = tmp10;
@@ -216,7 +216,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         displayMode: "minimal",
         style: tmp.closeButton,
       };
-      const HeaderBackButton = require("../../../../_runtime/metro/06019__.js").HeaderBackButton;
+      const HeaderBackButton = require("../../../../_runtime/metro/06026__.js").HeaderBackButton;
       intl = require("intl").intl;
       return closure_13(HeaderBackButton, obj);
     };
@@ -509,7 +509,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef10961 };
+        const obj2 = { uri: _modDef10974 };
         cResult[1] = obj2;
         tmp5 = obj2;
       } else {
@@ -534,7 +534,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp2;
       const obj = { style: { width: "100%", height: "100%" }, children: map1(tmp2, obj2) };
       obj2 = { source: obj3, style: tmp.animatedOrb, fade: false };
-      obj3 = { uri: _modDef10961 };
+      obj3 = { uri: _modDef10974 };
       tmp = closure_25();
       tmp2 = FastImageDefault;
       return map1(metroImportAll, obj);
@@ -642,7 +642,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                       closure_3(true);
                     }
                   }
-                  const obj3 = { uri: _modDef10963, style: items, onLoad: first2, animate: isAppActive };
+                  const obj3 = { uri: _modDef10976, style: items, onLoad: first2, animate: isAppActive };
                   items = [tmp3.animatedOrb];
                   tmp28 = map1(closure_24, obj3);
                 }
@@ -651,7 +651,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[21] = tmp3.animatedOrb;
                 cResult[22] = tmp28;
               }
-              const obj4 = { uri: _modDef10962, style: tmp20, onLoad: L, animate: !tmp9 && isAppActive };
+              const obj4 = { uri: _modDef10975, style: tmp20, onLoad: L, animate: !tmp9 && isAppActive };
               cResult[16] = tmp20;
               cResult[17] = !tmp9 && isAppActive;
               cResult[18] = map1(closure_24, obj4);
@@ -751,11 +751,11 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = map1(metroImportAll, obj2);
       }
       items1 = [tmp13, ,];
-      const obj3 = { uri: _modDef10962, style: items2, onLoad: callback1, animate: !tmp15Result && isAppActive };
+      const obj3 = { uri: _modDef10975, style: items2, onLoad: callback1, animate: !tmp15Result && isAppActive };
       items2 = [tmp.animatedOrb, (tmp15Result || !first1) && { opacity: 0 }];
       items1[1] = map1(closure_24, obj3);
       if (tmp15Result) {
-        const obj4 = { uri: _modDef10963, style: items3, onLoad: callback, animate: isAppActive };
+        const obj4 = { uri: _modDef10976, style: items3, onLoad: callback, animate: isAppActive };
         items3 = [tmp.animatedOrb];
         tmp15Result = map1(closure_24, obj4);
       }
@@ -809,7 +809,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = balance(504);
       const stateFromStores = tmpResult.useStateFromStores(tmp5, tmp6);
-      const tmpResult5 = balance(8508);
+      const tmpResult5 = balance(8541);
       balance = tmpResult5.useFetchVirtualCurrencyBalance().balance;
       [tmp10, importDefault] = react.useState(false);
       _slicedToArray(react.useState(false), 2);
@@ -854,7 +854,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         orbQuantityClaimed = userStatus.orbQuantityClaimed;
       }
       if (orbQuantityClaimed == null) {
-        const tmpResult8 = balance(10005);
+        const tmpResult8 = balance(10018);
         orbQuantityClaimed = tmpResult8.getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
@@ -939,7 +939,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           accessible: false,
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
-          children: closure_13(tmp(10965).OrbsRewardBackground, obj3),
+          children: closure_13(tmp(10978).OrbsRewardBackground, obj3),
         };
         class L {
           constructor() {
@@ -977,7 +977,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj5 = { style: tmp4.header, children: closure_13(closure_21, {}) };
-          const SafeAreaPaddingView = tmp(6619).SafeAreaPaddingView;
+          const SafeAreaPaddingView = tmp(6626).SafeAreaPaddingView;
           items5 = [closure_13(closure_8, obj5), , ,];
           const obj6 = {
             style: tmp4.animation,
@@ -1013,7 +1013,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.title,
             children: format(FIilK5, obj10),
           };
-          const Heading = tmp(4886).Heading;
+          const Heading = tmp(4892).Heading;
           let intl = tmp(1126).intl;
           format = intl.format;
           FIilK5 = tmp(1126).t.FIilK5;
@@ -1032,7 +1032,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.title,
             children: format3Result,
           };
-          let Text = tmp(4886).Text;
+          let Text = tmp(4892).Text;
           if (balance == null) {
             class X {
               constructor() {
@@ -1086,7 +1086,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           items5[2] = tmp33(closure_8, obj8);
           const obj14 = { style: tmp4.buttonsContainer, children: closure_13(Button, obj15) };
           obj15 = { onPress: tmp25, variant: "primary", size: "lg", text: intl2.string(balance(1126).t.uJAMFX) };
-          Button = tmp(5594).Button;
+          Button = tmp(5601).Button;
           intl2 = tmp(1126).intl;
           items5[3] = closure_13(closure_8, obj14);
           tmp33Result = tmp33(SafeAreaPaddingView, rect);
@@ -1160,7 +1160,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = num(504);
       const items = [AccessibilityStore];
       const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-      let obj2 = num(8508);
+      let obj2 = num(8541);
       num = obj2.useFetchVirtualCurrencyBalance().balance;
       [tmp6, c1] = react.useState(false);
       _slicedToArray(react.useState(false), 2);
@@ -1177,7 +1177,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         num2 = userStatus.orbQuantityClaimed;
       }
       if (num2 == null) {
-        const tmp2Result = num(10005);
+        const tmp2Result = num(10018);
         num2 = tmp2Result.getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
       }
       const effect = react.useEffect(() => {
@@ -1197,7 +1197,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_13(num(10965).OrbsRewardBackground, obj8),
+        children: closure_13(num(10978).OrbsRewardBackground, obj8),
       };
       const callback1 = react.useCallback(() => {
         const obj = _undefined(dependencyMap[9]);
@@ -1221,7 +1221,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const rect = { style: items4, top: true, bottom: true, left: true, right: true, children: items5 };
         items4 = [tmp.main];
         const obj10 = { style: tmp.header, children: closure_13(closure_21, {}) };
-        const SafeAreaPaddingView = tmp2(6619).SafeAreaPaddingView;
+        const SafeAreaPaddingView = tmp2(6626).SafeAreaPaddingView;
         items5 = [closure_13(closure_8, obj10), , ,];
         const obj11 = {
           style: tmp.animation,
@@ -1244,7 +1244,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.title,
           children: format(FIilK5, obj15),
         };
-        const Heading = tmp2(4886).Heading;
+        const Heading = tmp2(4892).Heading;
         let intl = tmp2(1126).intl;
         format = intl.format;
         FIilK5 = tmp2(1126).t.FIilK5;
@@ -1259,7 +1259,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.title,
           children: formatResult,
         };
-        let Text = tmp2(4886).Text;
+        let Text = tmp2(4892).Text;
         if (num == null) {
           num = 0;
         }
@@ -1297,7 +1297,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         items5[2] = closure_15(closure_8, obj13);
         const obj19 = { style: tmp.buttonsContainer, children: closure_13(Button, obj20) };
         obj20 = { onPress: callback1, variant: "primary", size: "lg", text: intl4.string(num(1126).t.uJAMFX) };
-        Button = tmp2(5594).Button;
+        Button = tmp2(5601).Button;
         intl4 = tmp2(1126).intl;
         items5[3] = closure_13(closure_8, obj19);
         tmp12Result = closure_15(SafeAreaPaddingView, rect);

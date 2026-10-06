@@ -34,7 +34,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp8 = minimum(1484)(first);
       _require = tmp8;
-      const tmp9 = minimum(9776)();
+      const tmp9 = minimum(9789)();
       minimum = tmp9.minimum;
       const maximum = tmp9.maximum;
       if (cResult[1] === minimum) {
@@ -43,8 +43,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[2] === tmp8.height) {
           tmp10 = cResult[3];
         }
-        ({ initialPosition, animateOnMount } = minimum(5984)(tmp10));
-        minimum(5984)(tmp10);
+        ({ initialPosition, animateOnMount } = minimum(5991)(tmp10));
+        minimum(5991)(tmp10);
         if (cResult[4] === maximum) {
           if (cResult[5] === minimum) {
             let tmp12;
@@ -144,7 +144,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2;
       let str;
       let styles;
-      const f109372 = () => {
+      const f109525 = () => {
         const obj = { initialPosition: styles.height - minimum, animateOnMount: false };
         let tmp3 = obj;
         const obj2 = PlatformUtils;
@@ -183,7 +183,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       minimum = tmp3.minimum;
       const maximum = tmp3.maximum;
       let items = [flag, maximum, minimum];
-      ({ initialPosition, animateOnMount } = require("useInitialValue")(f109372));
+      ({ initialPosition, animateOnMount } = require("useInitialValue")(f109525));
       let obj = {
         animateOnMount,
         enablePanDownToClose: flag2,
@@ -196,7 +196,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         android_keyboardInputMode: str,
         snapPoints: memo,
       };
-      require("useInitialValue")(f109372);
+      require("useInitialValue")(f109525);
       memo = maximum.useMemo(() => {
         let items1;
         if (flag) {

@@ -8,7 +8,7 @@ import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import NavigatorConstants from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";

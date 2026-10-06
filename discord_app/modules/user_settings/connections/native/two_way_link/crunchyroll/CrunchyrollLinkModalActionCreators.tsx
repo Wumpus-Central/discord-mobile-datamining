@@ -8,7 +8,7 @@ let obj = {
   showModal(locationStack) {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { locationStack };
-    obj.pushLazy(asyncRequire(8776, dependencyMap.paths), obj2, USER_SETTINGS_CONNECTIONS_CRUNCHYROLL_LINK_MODAL_KEY);
+    obj.pushLazy(asyncRequire(8808, dependencyMap.paths), obj2, USER_SETTINGS_CONNECTIONS_CRUNCHYROLL_LINK_MODAL_KEY);
   },
   hideModal() {
     const obj = ModalActionCreatorsDefault;

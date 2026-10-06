@@ -686,7 +686,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6Result = !hideIcon;
       if (tmp6Result) {
         const obj2 = { style: tmp2.unreadIndicator, unread, resolvedUnreadSetting: ALL_MESSAGES };
-        const tmp9 = hideIcon(12017);
+        const tmp9 = hideIcon(12032);
         if (mode === obj.UNREAD_LESS_IMPORTANT) {
           ALL_MESSAGES = UnreadSetting.ONLY_MENTIONS;
         } else {
@@ -697,9 +697,9 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       items1 = [tmp6Result, !hideIcon && icon, name, channelInfo];
       const tmp3Result = closure_11(View, obj);
       if (flag) {
-        AnimatedPressableHighlight = hideIcon(12018);
+        AnimatedPressableHighlight = hideIcon(12033);
       } else {
-        AnimatedPressableHighlight = mode(8567).AnimatedPressableHighlight;
+        AnimatedPressableHighlight = mode(8602).AnimatedPressableHighlight;
       }
       const obj3 = { children: items2 };
       const merged1 = Object.assign(merged);

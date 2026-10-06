@@ -1,6 +1,6 @@
 // discord_app/modules/rewards/ProgramRewardsUtils.tsx
 import PremiumConstants from "../premium/PremiumConstants.tsx";
-import isPastDefault from "../../../_runtime/04302_isPast.js";
+import isPastDefault from "../../../_runtime/04308_isPast.js";
 import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import ProgramRewardsTypes from "ProgramRewardsTypes.tsx";
 import PremiumRewardsOrbsExperiment from "../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx";

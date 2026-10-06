@@ -34,7 +34,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
   let obj2 = { source: { uri: notification.imageUri }, style: tmp.preview };
   const memo = react.useMemo(() => ({ type: "simple", text: "Bug Catcher Clyde" }), []);
   const tmp3 = <closure_5 style={tmp.rightAccessoryContainer}>{null}</closure_5>;
-  const NotificationPressable = notification(12516).NotificationPressable;
+  const NotificationPressable = notification(12531).NotificationPressable;
   return (
     <NotificationPressable
       header={memo}
@@ -53,7 +53,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
           const obj10 = { screenshotUri: null, screenshot: null };
           ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
           const obj6 = ModalActionCreatorsDefault;
-          obj6.pushLazy(asyncRequire(12525, dependencyMap.paths), obj10);
+          obj6.pushLazy(asyncRequire(12540, dependencyMap.paths), obj10);
         }
       }}
       onSettingsPress={function onSettingsPress() {

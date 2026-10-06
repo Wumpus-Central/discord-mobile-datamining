@@ -9,7 +9,7 @@ import components_Button_Button from "../../../../../design/components/Button/na
 import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
 import useYouBarTotalHeight from "../../you_bar/hooks/useYouBarTotalHeight.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/15979_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/16018_AssetRegistry.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";

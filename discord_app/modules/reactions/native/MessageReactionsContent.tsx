@@ -17,7 +17,7 @@ import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import BottomSheetModal from "../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
 import FastListDefault from "../../../lib/native/FastList.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
@@ -68,7 +68,7 @@ let obj7;
 let obj8;
 let obj9;
 let tmp4;
-const ReactionToProfileExperimentDefault = tmp4(9975);
+const ReactionToProfileExperimentDefault = tmp4(9988);
 function RemoveAllButton(channelId) {
   let View;
   let _undefined;
@@ -193,7 +193,7 @@ function EmojiOptionsButton(channelId) {
   const items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(9978)(stateFromStores);
+  const tmp3 = messageId(9991)(stateFromStores);
   const canRemoveReactions = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
@@ -201,17 +201,17 @@ function EmojiOptionsButton(channelId) {
     onPress: react.useCallback(() => {
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { channelId, messageId, reaction, canRemoveReactions };
-      obj.openLazy(asyncRequire(9979, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", obj2, "replaceTopSheet");
+      obj.openLazy(asyncRequire(9992, dependencyMap.paths), "ReactionEmojiOptionsActionSheet", obj2, "replaceTopSheet");
     }, items2),
     style: tmp.emojiOptionsButton,
     children: items3,
   };
   const obj3 = { variant: "text-xs/semibold", color: "text-subtle", children: intl.string(channelId(1126).t.pCaYID) };
-  const Text = channelId(4886).Text;
+  const Text = channelId(4892).Text;
   intl = channelId(1126).intl;
   items3 = [closure_17(Text, obj3)];
   const obj4 = { color: messageId(587).colors.ICON_SUBTLE, size: "xs" };
-  const ChevronSmallRightIcon = channelId(6708).ChevronSmallRightIcon;
+  const ChevronSmallRightIcon = channelId(6715).ChevronSmallRightIcon;
   items3[1] = closure_17(ChevronSmallRightIcon, obj4);
   return closure_18(closure_7, obj2);
 }
@@ -1593,7 +1593,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp5, tmp6] = cResult;
       }
-      const obj4 = setReactionSelectedIndex(6687);
+      const obj4 = setReactionSelectedIndex(6694);
       const tidaWebformEnabled = obj4.useExperiment(tmp5, tmp6).tidaWebformEnabled;
       const tmp7 = setReactionSelectedIndex;
       if (cResult[2] === reactionSelectedIndex) {
@@ -1640,9 +1640,9 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           tabStyleSelected: null,
           tabIndexSelected: reactionSelectedIndex,
           onSelect: T,
-          initialNumTabsToRender: reactionSelectedIndex(4521).MAX_REACTIONS,
+          initialNumTabsToRender: reactionSelectedIndex(4527).MAX_REACTIONS,
         };
-        const tmp7Result = tmp7(9980);
+        const tmp7Result = tmp7(9993);
         cResult[9] = reactionSelectedIndex;
         cResult[10] = tmp4.tab;
         cResult[11] = tmp4.tabActive;
@@ -1688,7 +1688,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_21();
       ({ reactions, reactionSelectedIndex } = setReactionSelectedIndex);
       setReactionSelectedIndex = setReactionSelectedIndex.setReactionSelectedIndex;
-      let obj = setReactionSelectedIndex(6687);
+      let obj = setReactionSelectedIndex(6694);
       const obj2 = { style: tmp.reactionTab, children: items };
       const tidaWebformEnabled = obj.useExperiment(
         { location: "ReactionTabs" },
@@ -1712,11 +1712,11 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           const result = obj.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
           setReactionSelectedIndex(arg0);
         },
-        initialNumTabsToRender: reactionSelectedIndex(4521).MAX_REACTIONS,
+        initialNumTabsToRender: reactionSelectedIndex(4527).MAX_REACTIONS,
       };
       ({ tab: obj3.tabStyle, tabActive: obj3.tabStyleActive, tabSelected: obj3.tabStyleSelected } = tmp);
-      const tmp5 = setReactionSelectedIndex(9980);
-      items = [closure_17(tmp5, obj4), closure_17(setReactionSelectedIndex(8899), { outer: true })];
+      const tmp5 = setReactionSelectedIndex(9993);
+      items = [closure_17(tmp5, obj4), closure_17(setReactionSelectedIndex(8928), { outer: true })];
       const obj5 = { style: tmp.removeButtonContainer, children: items1 };
       const obj7 = {
         style: tmp.emojiTextIdentifier,
@@ -1724,8 +1724,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: obj6.getReactionEmojiName(reactions[reactionSelectedIndex].emoji),
       };
-      const Text = reactionSelectedIndex(4886).Text;
-      obj6 = reactionSelectedIndex(4521);
+      const Text = reactionSelectedIndex(4892).Text;
+      obj6 = reactionSelectedIndex(4527);
       items1 = [closure_17(Text, obj7)];
       const obj12 = {};
       const tmp6 = tidaWebformEnabled ? EmojiOptionsButton : RemoveAllButton;
@@ -1989,13 +1989,13 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const reactionSelected = tmp2.reactionSelected;
       ({ reactionSelectedIndex, setReactionSelectedIndex } = tmp2);
       if (null != reactionSelected.me_vote) {
-        NORMAL = channelId(7259).ReactionTypes.VOTE;
+        NORMAL = channelId(7272).ReactionTypes.VOTE;
         tmp5 = channelId;
       } else if (reactionSelected.burst_count > 0) {
-        NORMAL = channelId(7259).ReactionTypes.BURST;
+        NORMAL = channelId(7272).ReactionTypes.BURST;
         tmp5 = channelId;
       } else {
-        NORMAL = channelId(7259).ReactionTypes.NORMAL;
+        NORMAL = channelId(7272).ReactionTypes.NORMAL;
         tmp5 = channelId;
       }
       ({ reactors, reactorsHasMore } = closure_24({
@@ -2009,7 +2009,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [channelId];
       const tmp5Result = tmp5(504);
       const stateFromStores = tmp5Result.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-      const tmp5Result3 = tmp5(6772);
+      const tmp5Result3 = tmp5(6782);
       const isActiveChannelOrUnarchivableThread = tmp5Result3.useIsActiveChannelOrUnarchivableThread(stateFromStores);
       const tmp14 = useSafeAreaInsetsDefault();
       const tmp15 = closure_22(channelId) && !disableManage && isActiveChannelOrUnarchivableThread;
@@ -2046,15 +2046,15 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp5Result4 = tmp5(1369);
       const obj2 = {
         scrollable: true,
-        backdropOpacity: tmp5(7412).BACKDROP_OPACITY,
+        backdropOpacity: tmp5(7423).BACKDROP_OPACITY,
         backdropChildren: tmp18Result,
         header: tmp18Result3,
         children: tmp18Result4,
       };
       const tmp17 = tmp5Result4.isIOS() && tmp15;
-      BottomSheet = tmp5(6645).BottomSheet;
+      BottomSheet = tmp5(6652).BottomSheet;
       tmp18Result = null;
-      if (NORMAL === tmp5(7259).ReactionTypes.BURST) {
+      if (NORMAL === tmp5(7272).ReactionTypes.BURST) {
         const obj3 = {
           style: closure_8.absoluteFill,
           pointerEvents: "none",

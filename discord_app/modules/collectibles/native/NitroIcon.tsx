@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/NitroIcon.tsx
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../_runtime/00576_react.js";
-import inlineStyles from "../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08169_inlineStyles.js";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";

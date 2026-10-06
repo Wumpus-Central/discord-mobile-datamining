@@ -24,7 +24,7 @@ function createFastConnectSocket() {
     obj = require("PlatformUtils");
     const tmp3 = _require;
     if (obj.isAndroid()) {
-      const obj2 = obj4(13460);
+      const obj2 = obj4(13476);
       supportsZstd = obj2.getConstants().supportsZstd;
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
@@ -34,67 +34,68 @@ function createFastConnectSocket() {
       str2 = "zstd-stream";
     }
     const _window = window;
-    let GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT;
-    if (!obj4(13447)()) {
-      const _window2 = window;
-      GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-    }
-    const _window3 = window;
+    const _window2 = window;
     const _HermesInternal = HermesInternal;
-    const combined = "" + GATEWAY_ENDPOINT + "/?encoding=json&v=" + window.GLOBAL_ENV.API_VERSION + "&compress=" + str2;
-    obj.log(`[FAST CONNECT] ${tmp10}`);
+    const combined =
+      "" +
+      window.GLOBAL_ENV.GATEWAY_ENDPOINT +
+      "/?encoding=json&v=" +
+      window.GLOBAL_ENV.API_VERSION +
+      "&compress=" +
+      str2;
+    obj.log(`[FAST CONNECT] ${tmp8}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp12 = obj4(13444)(combined);
+    const tmp11 = obj4(13463)(combined);
     const _parseFloat = parseFloat;
-    const parsed = parseFloat(tmp12._socketId);
+    const parsed = parseFloat(tmp11._socketId);
     const _isNaN = isNaN;
     const obj3 = obj;
     if (isNaN(parsed)) {
-      obj3.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp12._socketId);
+      obj3.log("[FAST CONNECT] Unable to create socketId from NaN value ", tmp11._socketId);
     } else {
       const tmp3Result = tmp3(1369);
       const isAndroidResult = tmp3Result.isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          const tmp7Result = obj4(13460);
-          const result = tmp7Result.enableZstdStreamSupport(parsed);
+          const tmp10Result = obj4(13476);
+          const result = tmp10Result.enableZstdStreamSupport(parsed);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        const tmp7Result3 = obj4(13460);
-        const result2 = tmp7Result3.enableZlibStreamSupport(parsed);
+        const tmp10Result3 = obj4(13476);
+        const result2 = tmp10Result3.enableZlibStreamSupport(parsed);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;
         const result3 = DCDCompressionManager.enableZlibStreamSupport(parsed);
       }
       obj4 = { open: false, gateway: combined, identify: false, messages: [], clientState: null, userId: null };
-      tmp12.onopen = () => {
+      tmp11.onopen = () => {
         const obj = AppStartPerformanceDefault;
         obj.mark("\u{1F310}", "Fastconnect socket opened");
         obj.log("connected and identified in " + Date.now() - closure_0 + "ms didIdentify:" + obj4.identify);
         obj4.open = true;
       };
       const fn = () => {
-        const obj = obj4(dependencyMap[14]);
+        const obj = obj4(dependencyMap[13]);
         obj.mark("\u{1F310}", "Fastconnect socket close");
         window._ws = null;
       };
-      tmp12.onerror = fn;
-      tmp12.onclose = fn;
-      tmp12.onmessage = (arg0) => {
+      tmp11.onerror = fn;
+      tmp11.onclose = fn;
+      tmp11.onmessage = (arg0) => {
         const obj = AppStartPerformanceDefault;
         obj.mark("\u{1F310}", "Fastconnect socket message");
         const messages = obj4.messages;
         messages.push(arg0);
       };
-      const _window4 = window;
-      const obj5 = { ws: tmp12, state: obj4 };
+      const _window3 = window;
+      const obj5 = { ws: tmp11, state: obj4 };
       window._ws = obj5;
-      const tmp7Result4 = obj4(10);
-      tmp7Result4.mark("\u{1F310}", "Fastconnect socket created");
+      const tmp10Result4 = obj4(10);
+      tmp10Result4.mark("\u{1F310}", "Fastconnect socket created");
     }
   } else {
     obj.log("Skipping fast_connect because `window.WebSocket` does not exist.");

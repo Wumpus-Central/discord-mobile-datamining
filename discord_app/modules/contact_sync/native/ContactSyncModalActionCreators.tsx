@@ -643,7 +643,7 @@ function closeContactSyncModal(skip) {
     }
     let obj2 = { num_contacts_found: friendsFound, num_contacts_added: friendsAdded };
     const tmp16 = closure_15();
-    const obj3 = flag2(12331);
+    const obj3 = flag2(12346);
     obj3.trackFlowEnd(flag, obj2);
     if (tmp16) {
       onComplete(flag);
@@ -665,13 +665,13 @@ function closeContactSyncModal(skip) {
     const tmp2 = closure_15();
     dependencyMap = tmp2;
     if (!back) {
-      obj = flag2(12331);
+      obj = flag2(12346);
       const obj4 = { num_contacts_found: friendsFound, num_contacts_added: friendsAdded };
       obj.trackFlowEnd(flag2, obj4);
     }
     if (tmp2) {
-      let updateAnimation = back(5093).updateAnimation;
-      back(5093);
+      let updateAnimation = back(5099).updateAnimation;
+      back(5099);
       let ModalAnimation = flag2(1105).ModalAnimation;
       if (back) {
         updateAnimation(closure_20, ModalAnimation.SLIDE_IN_OUT_REVERSE);
@@ -777,7 +777,7 @@ export const openContactSyncModal = function openContactSyncModal(initialRoutes,
     customLandingPage: initialRoutes.customLandingPage,
   };
   const obj4 = ModalActionCreatorsDefault;
-  const pushLazyResult = obj4.pushLazy(asyncRequire(12334, dependencyMap.paths), obj3, closure_20);
+  const pushLazyResult = obj4.pushLazy(asyncRequire(12349, dependencyMap.paths), obj3, closure_20);
   pushLazyResult.then(arg2);
 };
 export const openContactSyncModalOnboarding = function openContactSyncModalOnboarding() {
@@ -830,7 +830,7 @@ export const openContactSyncModalDeeplink = function openContactSyncModalDeeplin
     customLandingPage: obj.customLandingPage,
   };
   const obj4 = ModalActionCreatorsDefault;
-  const pushLazyResult = obj4.pushLazy(asyncRequire(12334, dependencyMap.paths), obj3, closure_20);
+  const pushLazyResult = obj4.pushLazy(asyncRequire(12349, dependencyMap.paths), obj3, closure_20);
   pushLazyResult.then(undefined);
 };
 export const refreshContactSyncPermissionStatus = function refreshContactSyncPermissionStatus() {

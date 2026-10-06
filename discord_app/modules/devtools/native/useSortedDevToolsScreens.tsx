@@ -8,7 +8,7 @@ import DevToolsSettingsStore from "../DevToolsSettingsStore.tsx";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f121023 = (item) => {
+const f121186 = (item) => {
   let obj;
   [, obj] = item;
   const tmp = null == obj.predicate || obj.predicate();
@@ -20,7 +20,7 @@ function getSortedDevToolsScreens() {
     sortedScreenKeys = DevToolsSettingsStore.sortedScreenKeys;
   }
   const entries = Object.entries(DevToolsScreens.DevToolsScreens);
-  const found = entries.filter(f121023);
+  const found = entries.filter(f121186);
   return found.sort((arg0, arg1) => {
     let num2;
     let tmp;
@@ -73,7 +73,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Object = Object;
         const entries = Object.entries(DevToolsScreens.DevToolsScreens);
-        const found = entries.filter(f121023);
+        const found = entries.filter(f121186);
         const sorted = found.sort((arg0, arg1) => {
           let num2;
           let tmp;
@@ -114,7 +114,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         sortedScreenKeys = DevToolsSettingsStore.sortedScreenKeys;
       }
       const entries = Object.entries(DevToolsScreens.DevToolsScreens);
-      const found = entries.filter(f121023);
+      const found = entries.filter(f121186);
       return found.sort((arg0, arg1) => {
         let num2;
         let tmp;

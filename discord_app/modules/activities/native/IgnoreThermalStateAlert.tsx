@@ -93,7 +93,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp15,
         };
-        const tmp19 = closure_5(tmp(4886).Text, obj2);
+        const tmp19 = closure_5(tmp(4892).Text, obj2);
         cResult[8] = tmp9.header;
         cResult[9] = tmp19;
         tmp17 = tmp19;
@@ -111,7 +111,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[11] !== tmp9.text) {
         const obj3 = { style: text, variant: "text-md/medium", children: tmp20 };
-        const tmp24 = closure_5(tmp(4886).Text, obj3);
+        const tmp24 = closure_5(tmp(4892).Text, obj3);
         cResult[11] = tmp9.text;
         cResult[12] = tmp24;
         tmp22 = tmp24;
@@ -172,11 +172,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl3.string(onConfirm(1126).t.v5X4fZ),
       };
-      const Text = onConfirm(4886).Text;
+      const Text = onConfirm(4892).Text;
       intl3 = onConfirm(1126).intl;
       items = [closure_5(Text, obj2)];
       const obj3 = { style: tmp2.text, variant: "text-md/medium", children: intl4.string(onConfirm(1126).t.VOgTjy) };
-      const Text2 = onConfirm(4886).Text;
+      const Text2 = onConfirm(4892).Text;
       intl4 = onConfirm(1126).intl;
       items[1] = closure_5(Text2, obj3);
       return closure_6(tmp3, obj);

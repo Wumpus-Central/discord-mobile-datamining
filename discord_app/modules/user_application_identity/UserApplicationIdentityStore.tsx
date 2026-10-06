@@ -3,7 +3,7 @@ import get_initializedDefault from "../../../discord_common/js/packages/flux/ind
 import DispatcherDefault from "../../Dispatcher.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const f98299 = (application_id) => {
+const f98493 = (application_id) => {
   const items = [application_id.application_id, application_id];
   return items;
 };
@@ -55,7 +55,7 @@ let obj2 = {
     let identities;
     const result = map1.set(userId.userId, obj.FETCHED);
     ({ userId, identities } = userId);
-    map = new Map(identities.map(f98299));
+    map = new Map(identities.map(f98493));
     const result1 = map.set(userId, { identities, byApplication: map });
     const result2 = map1.set(userId, obj.FETCHED);
   },
@@ -76,7 +76,7 @@ let obj2 = {
       const _Map = Map;
       const self = this;
       const self2 = this;
-      map = new Map(found.map(f98299));
+      map = new Map(found.map(f98493));
       const obj2 = { identities: found, byApplication: map };
       const result = obj.set(user_id, obj2);
       const result1 = map1.set(user_id, obj.FETCHED);

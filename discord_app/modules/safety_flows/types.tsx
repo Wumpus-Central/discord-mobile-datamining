@@ -1,6 +1,6 @@
 // discord_app/modules/safety_flows/types.tsx
 import intl5 from "../../intl/index.native.tsx";
-import _modDef2787 from "SafetyFlows.messages.js";
+import _modDef2815 from "SafetyFlows.messages.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const obj = {
@@ -47,16 +47,16 @@ const EMAIL_VERIFICATION = obj.EMAIL_VERIFICATION;
 const set1 = new Set(items);
 const set2 = new Set(items1);
 const intl = intl5.intl;
-obj4[EMAIL_VERIFICATION] = intl.string(_modDef2787["Qm6K/s"]);
+obj4[EMAIL_VERIFICATION] = intl.string(_modDef2815["Qm6K/s"]);
 const AGE_VERIFICATION = obj.AGE_VERIFICATION;
 const intl2 = intl5.intl;
-obj4[AGE_VERIFICATION] = intl2.string(_modDef2787["dSkE/A"]);
+obj4[AGE_VERIFICATION] = intl2.string(_modDef2815["dSkE/A"]);
 const PARENTAL_CONSENT_CONNECTION = obj.PARENTAL_CONSENT_CONNECTION;
 const intl3 = intl5.intl;
-obj4[PARENTAL_CONSENT_CONNECTION] = intl3.string(_modDef2787.dMMSA0);
+obj4[PARENTAL_CONSENT_CONNECTION] = intl3.string(_modDef2815.dMMSA0);
 const APP_STORE_PARENTAL_REVOCATION = obj.APP_STORE_PARENTAL_REVOCATION;
 const intl4 = intl5.intl;
-obj4[APP_STORE_PARENTAL_REVOCATION] = intl4.string(_modDef2787.Z87TFb);
+obj4[APP_STORE_PARENTAL_REVOCATION] = intl4.string(_modDef2815.Z87TFb);
 const result = size.fileFinishedImporting("modules/safety_flows/types.tsx");
 
 export const TaskType = obj;

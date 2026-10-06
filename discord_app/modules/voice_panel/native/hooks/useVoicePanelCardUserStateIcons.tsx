@@ -16,8 +16,8 @@ const require = globalThis.__r;
 let _require, dependencyMap, importDefault, obj1, openManaResult, openResult, str;
 
 let tmp2;
-const MobileAudioOutputExperimentDefault = tmp2(9660);
-const useMuteAwareLocalVolumeDefault = tmp2(9701);
+const MobileAudioOutputExperimentDefault = tmp2(9673);
+const useMuteAwareLocalVolumeDefault = tmp2(9714);
 const ParticipantTypes = CallConstants.ParticipantTypes;
 const jsx = Fragment.jsx;
 const VoicePanelCardUserStateIconType = {
@@ -175,7 +175,7 @@ tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 obj4 = { key: "user-disconnected-indicator", icon: null, content: null };
                 obj4.icon = function icon() {
-                  /* body not rendered: F148171 */
+                  /* body not rendered: F148396 */
                 };
                 open = tmp5.open;
                 intl = tmp(tmp2[17]).intl;
@@ -214,7 +214,7 @@ tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 obj4 = { key: "user-disconnected-indicator", icon: null, content: null };
                 obj4.icon = function icon() {
-                  /* body not rendered: F148171 */
+                  /* body not rendered: F148396 */
                 };
                 open = tmp5.open;
                 intl = tmp(tmp2[17]).intl;
@@ -248,7 +248,7 @@ tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 obj4 = { key: "user-disconnected-indicator", icon: null, content: null };
                 obj4.icon = function icon() {
-                  /* body not rendered: F148171 */
+                  /* body not rendered: F148396 */
                 };
                 open = tmp5.open;
                 intl = tmp(tmp2[17]).intl;
@@ -281,7 +281,7 @@ tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 obj4 = { key: "user-disconnected-indicator", icon: null, content: null };
                 obj4.icon = function icon() {
-                  /* body not rendered: F148171 */
+                  /* body not rendered: F148396 */
                 };
                 open = tmp5.open;
                 intl = tmp(tmp2[17]).intl;
@@ -314,7 +314,7 @@ tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   obj4 = { key: "user-disconnected-indicator", icon: null, content: null };
                   obj4.icon = function icon() {
-                    /* body not rendered: F148171 */
+                    /* body not rendered: F148396 */
                   };
                   open = tmp5.open;
                   intl = tmp(tmp2[17]).intl;
@@ -353,7 +353,7 @@ tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   obj4 = { key: "user-disconnected-indicator", icon: null, content: null };
                   obj4.icon = function icon() {
-                    /* body not rendered: F148171 */
+                    /* body not rendered: F148396 */
                   };
                   open = tmp5.open;
                   intl = tmp(tmp2[17]).intl;
@@ -420,7 +420,7 @@ tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       muteDeafenIconState = useMuteDeafenIconState(tmp7, arg2);
       let tmp10;
-      const useVideoIconState = tmp4(9336).useVideoIconState;
+      const useVideoIconState = tmp4(9350).useVideoIconState;
       require("VoiceStateIconUtils");
       if (arg0 === stateFromStores.USER) {
         tmp10 = arg1;
@@ -451,7 +451,7 @@ tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (arg0 === stateFromStores.STREAM) {
         tmp15 = arg1;
       }
-      const effectiveVolume = tmp2Result(tmp15, tmp4(4945).MediaEngineContextTypes.STREAM).effectiveVolume;
+      const effectiveVolume = tmp2Result(tmp15, tmp4(4951).MediaEngineContextTypes.STREAM).effectiveVolume;
       const tmp2Result2 = MobileAudioOutputExperimentDefault;
       showTileVolumeIndicator = tmp2Result2.useConfig({
         location: "useVoicePanelCardUserStateIcons",

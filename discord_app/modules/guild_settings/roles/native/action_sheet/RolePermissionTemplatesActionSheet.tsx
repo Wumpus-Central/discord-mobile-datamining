@@ -218,10 +218,10 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             intl4 = permissionsEdited(closure_2[12]).intl;
             obj.confirmText = intl4.string(permissionsEdited(closure_2[12]).t.p89ACt);
             obj.onConfirm = function onConfirm() {
-              /* body not rendered: F149158 */
+              /* body not rendered: F149393 */
             };
             obj.onCancel = function onCancel() {
-              /* body not rendered: F149159 */
+              /* body not rendered: F149394 */
             };
             showResult = show(obj);
           } else {

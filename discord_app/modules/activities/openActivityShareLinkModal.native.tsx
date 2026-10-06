@@ -20,7 +20,7 @@ export const openActivityShareLinkModal = function openActivityShareLinkModal(ar
   obj.dismissKeyboard();
   const obj2 = ModalActionCreatorsDefault;
   const obj3 = { applicationId, customId, linkId, message, onShare };
-  obj2.pushLazy(asyncRequire(14327, dependencyMap.paths), obj3, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
+  obj2.pushLazy(asyncRequire(14345, dependencyMap.paths), obj3, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
 };
 export const closeActivityShareLinkModal = function closeActivityShareLinkModal() {
   const obj = ModalActionCreatorsDefault;

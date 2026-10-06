@@ -324,7 +324,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[2] === user.id) {
             tmp4 = cResult[3];
           }
-          const tmp6 = cardStyle(12916)(tmp4);
+          const tmp6 = cardStyle(12935)(tmp4);
           ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = tmp6);
           if (!hasCurrentActivity) {
             if (!hasRecentActivity) {
@@ -350,7 +350,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const tmpResult = user(12919);
+                const tmpResult = user(12938);
                 if (isCurrentUser) {
                   tmp8Result = closure_5(tmpResult.UserProfileActivityEmptyCurrentUser, {});
                 } else {
@@ -431,7 +431,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           let tmp17 = hasCurrentActivity;
           if (tmp17) {
-            const obj5 = { heading: intl.string(user(1126).t.J6STd9), children: closure_5(cardStyle(12817), obj6) };
+            const obj5 = { heading: intl.string(user(1126).t.J6STd9), children: closure_5(cardStyle(12836), obj6) };
             intl = tmp(1126).intl;
             obj6 = { user, currentUser, guildId, style: cardStyle };
             tmp17 = closure_5(closure_10, obj5);
@@ -468,15 +468,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({ currentUser, guildId, cardStyle } = user);
       const channelId = user.channelId;
       let obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-      ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(12916)(obj));
-      cardStyle(12916)(obj);
+      ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(12935)(obj));
+      cardStyle(12935)(obj);
       if (!hasCurrentActivity) {
         let tmp10Result;
         if (!hasRecentActivity) {
           if (tmp4) {
             tmp10Result = closure_5(closure_9, {});
           } else {
-            const tmp7 = user(12919);
+            const tmp7 = user(12938);
             if (isCurrentUser) {
               tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
             } else {
@@ -488,7 +488,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return tmp10Result;
       }
       if (hasCurrentActivity) {
-        const obj3 = { heading: intl.string(user(1126).t.J6STd9), children: closure_5(cardStyle(12817), obj4) };
+        const obj3 = { heading: intl.string(user(1126).t.J6STd9), children: closure_5(cardStyle(12836), obj4) };
         intl = user(1126).intl;
         obj4 = { user, currentUser, guildId, style: cardStyle };
         hasCurrentActivity = closure_5(closure_10, obj3);

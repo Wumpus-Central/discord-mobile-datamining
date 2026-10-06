@@ -349,15 +349,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           if (recentApplicationCommandMetadata != null) {
             applicationId = recentApplicationCommandMetadata.applicationId;
           }
-          const tmpResult8 = channelId(4698);
+          const tmpResult8 = channelId(4704);
           result = tmpResult8.useIsDismissibleContentDismissed_UNSAFE(
             tmp(2036).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
           );
-          const tmpResult9 = channelId(4698);
+          const tmpResult9 = channelId(4704);
           const result1 = tmpResult9.useIsDismissibleContentDismissed_UNSAFE(
             tmp(2036).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
           );
-          const tmpResult10 = channelId(4698);
+          const tmpResult10 = channelId(4704);
           const result2 = tmpResult10.useIsDismissibleContentDismissed_UNSAFE(
             tmp(2036).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
           );
@@ -525,16 +525,16 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         applicationId = recentApplicationCommandMetadata.applicationId;
       }
       const BUILT_IN = BuiltInSectionId.BUILT_IN;
-      const tmp2Result6 = channelId(4698);
+      const tmp2Result6 = channelId(4704);
       result = tmp2Result6.useIsDismissibleContentDismissed_UNSAFE(
         tmp2(2036).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER,
       );
-      const tmp2Result7 = channelId(4698);
+      const tmp2Result7 = channelId(4704);
       let result1 = tmp2Result7.useIsDismissibleContentDismissed_UNSAFE(
         tmp2(2036).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER,
       );
       let tmp20 = null != stateFromStores1;
-      const tmp2Result8 = channelId(4698);
+      const tmp2Result8 = channelId(4704);
       const result2 = tmp2Result8.useIsDismissibleContentDismissed_UNSAFE(
         tmp2(2036).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER,
       );

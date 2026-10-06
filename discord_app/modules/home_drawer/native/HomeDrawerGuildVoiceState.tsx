@@ -8,7 +8,7 @@ import intl2 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import GuildChannelStore2 from "../../../stores/GuildChannelStore.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
 import AvatarPile2 from "../../../design/components/Pile/native/AvatarPile.native.tsx";
@@ -132,7 +132,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = { style: tmp5, children: closure_11(AvatarPile, obj4) };
           obj4 = { size: guildId(1188).AvatarSizes.XSMALL, names: tmp6, totalCount: tmp9, children: tmp10 };
-          AvatarPile = guildId(12850).AvatarPile;
+          AvatarPile = guildId(12869).AvatarPile;
           const tmp16 = closure_11(View, obj3);
           cResult[11] = tmp6;
           cResult[12] = tmp10;

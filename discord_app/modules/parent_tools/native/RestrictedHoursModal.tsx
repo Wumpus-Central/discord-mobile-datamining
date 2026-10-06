@@ -32,7 +32,7 @@ let obj6;
 let obj7;
 let obj8;
 let tmp4;
-const useBackPressHandlerDefault = tmp4(5780);
+const useBackPressHandlerDefault = tmp4(5787);
 ({ StyleSheet, View: hasOwnProperty } = react_native);
 ({ jsx: metroImportDefault, jsxs: metroImportAll } = Fragment);
 let c9 = "rgb(0, 3, 40)";
@@ -890,7 +890,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           tmp4 = cResult[2];
           tmp5 = cResult[3];
         }
-        const tmpResult = tmp(6496);
+        const tmpResult = tmp(6503);
         return tmpResult.useNavigatorScreens(tmp4, tmp5);
       }
       const fn = function o() {
@@ -1034,7 +1034,7 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { screens: tmp12, initialRouteName: constants.MAIN };
-        const tmp20 = closure_7(tmp(10976).Modal, obj3);
+        const tmp20 = closure_7(tmp(10989).Modal, obj3);
         cResult[7] = tmp12;
         cResult[8] = tmp20;
         tmp18 = tmp20;

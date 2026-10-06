@@ -19,11 +19,11 @@ import useActivityShelfItem from "../../../../activities/utils/useActivityShelfI
 import ActivityShelfBadgeDefault from "../../../../activities/native/ActivityShelfBadge.tsx";
 import useLaunchingActivityButtonStateDefault from "../../../../app_launcher/utils/useLaunchingActivityButtonState.tsx";
 import getItemSubtitleForMaxPlayers from "../../../../activities/utils/getItemSubtitleForMaxPlayers.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/12460_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/12475_AssetRegistry.js";
 import ActivityShelfItemBackgroundDefault from "ActivityShelfItemBackground.tsx";
 import ActivityShelfItemSummaryDefault from "ActivityShelfItemSummary.tsx";
 import useActivityUsersDefault from "../../../../activities/useActivityUsers.tsx";
-import AssetRegistryDefault2 from "../../../../../../_runtime/17291_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/17320_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import createStyles_mod from "../../../../../design/components/Styles/native/createStyles.tsx";

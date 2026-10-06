@@ -8,7 +8,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import useToken2 from "../../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../../client_themes/native/ClientThemesUtils.tsx";
 import useChatLayoutDefault from "../../../chat/native/useChatLayout.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import YouBarConstants from "YouBarConstants.tsx";
 import useYouBarTotalHeight from "hooks/useYouBarTotalHeight.tsx";
 import GuildsBarConstants from "../../../guilds_bar/native/GuildsBarConstants.tsx";

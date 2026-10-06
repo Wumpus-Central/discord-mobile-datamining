@@ -11,7 +11,7 @@ const require = globalThis.__r;
 let _require, importDefault;
 
 let tmp4;
-const canChannelUseSoundboardDefault = tmp4(6878);
+const canChannelUseSoundboardDefault = tmp4(6888);
 const SoundboardButtonLocation = {
   VOICE_CONTROLS: "call control drawer",
   VOICE_PANEL_CONTROLS: "voice panel controls",
@@ -130,7 +130,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_0;
       let deaf;
       let stringResult;
-      const f130047 = () => {
+      const f130223 = () => {
         const tmp = canChannelUseSoundboardDefault;
         return tmp(ChannelStore.getChannel(closure_0));
       };
@@ -162,11 +162,11 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = {
         visible: tmp2,
         handlePress: callback,
-        disabled: stateFromStores || !react.useMemo(f130047, items2),
+        disabled: stateFromStores || !react.useMemo(f130223, items2),
         disabledAccessibilityHint: stringResult,
       };
       stringResult = undefined;
-      stateFromStores || !react.useMemo(f130047, items2);
+      stateFromStores || !react.useMemo(f130223, items2);
       if (stateFromStores) {
         const intl = tmp3(1126).intl;
         stringResult = intl.string(tmp3(1126).t.X1lQli);

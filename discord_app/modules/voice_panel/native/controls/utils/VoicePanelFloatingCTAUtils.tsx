@@ -127,11 +127,11 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = imminentUpcomingGuildEvents;
       let obj = imminentUpcomingGuildEvents(576);
       const cResult = obj.c(28);
-      stateFromStores(4791)();
+      stateFromStores(4797)();
       id = undefined;
-      const tmp6 = stateFromStores(17190)(react.useContext(stateFromStores(11901)).channelId);
-      const useImminentUpcomingGuildEvents = imminentUpcomingGuildEvents(9160).useImminentUpcomingGuildEvents;
-      imminentUpcomingGuildEvents(9160);
+      const tmp6 = stateFromStores(17219)(react.useContext(stateFromStores(11915)).channelId);
+      const useImminentUpcomingGuildEvents = imminentUpcomingGuildEvents(9195).useImminentUpcomingGuildEvents;
+      imminentUpcomingGuildEvents(9195);
       const tmp4 = stateFromStores;
       if (id != null) {
         id = id.id;
@@ -166,13 +166,13 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = tmp(573);
       stateFromStores = tmpResult.useStateFromStores(first, tmp12, tmp13);
       let tmp16 = null != stateFromStores;
-      const tmpResult3 = tmp(9169);
+      const tmpResult3 = tmp(9204);
       tmpResult3.useManageResourcePermissions(id).canManageGuildEvent(stateFromStores);
       if (tmp16) {
         tmp16 = closure_8(stateFromStores);
       }
       if (cResult[4] !== stateFromStores) {
-        const tmpResult4 = tmp(9163);
+        const tmpResult4 = tmp(9198);
         const nextRecurrenceIdInEvent = tmpResult4.getNextRecurrenceIdInEvent(stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = nextRecurrenceIdInEvent;
@@ -182,7 +182,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp18;
       let guild_id;
-      const tmp4Result = tmp4(9270);
+      const tmp4Result = tmp4(9305);
       if (stateFromStores != null) {
         guild_id = stateFromStores.guild_id;
       }
@@ -426,7 +426,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               intl = tmp(1126).intl;
               intl2 = tmp(1126).intl;
               ({ IconComponent: require("GroupPlusIcon").GroupPlusIcon, variant: "translucent" });
-              const Icon = tmp(8897).RowButton.Icon;
+              const Icon = tmp(8926).RowButton.Icon;
               tmp13 = obj2;
             }
           }
@@ -473,8 +473,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
               };
               intl = tmp3(1126).intl;
               intl2 = tmp3(1126).intl;
-              ({ IconComponent: tmp3(9716).GroupPlusIcon, variant: "translucent" });
-              const Icon = tmp3(8897).RowButton.Icon;
+              ({ IconComponent: tmp3(9729).GroupPlusIcon, variant: "translucent" });
+              const Icon = tmp3(8926).RowButton.Icon;
               tmp7 = obj2;
             }
           }
@@ -602,7 +602,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
   : (arg0) => {
       let setShowFloatingCTA;
       let closure_0 = arg0;
-      setShowFloatingCTA = react.useContext(setShowFloatingCTA(11901)).setShowFloatingCTA;
+      setShowFloatingCTA = react.useContext(setShowFloatingCTA(11915)).setShowFloatingCTA;
       const items = [setShowFloatingCTA, arg0];
       return react.useMemo(() => {
         let tmp = null;

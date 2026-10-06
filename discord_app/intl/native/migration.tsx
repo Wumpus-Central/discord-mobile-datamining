@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(7);
       target = target.target;
       const children = target.children;
-      const tmp4 = closure_5(react.useContext(target(4596).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+      const tmp4 = closure_5(react.useContext(target(4602).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
       if (typeof target === "string") {
         let tmp6;
         if (cResult[0] !== target) {
@@ -99,7 +99,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       target = target.target;
       const children = target.children;
       const tmp = target;
-      const tmp3 = closure_5(react.useContext(target(4596).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+      const tmp3 = closure_5(react.useContext(target(4602).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
       if (typeof target === "string") {
         fn = function k() {
           const openURL = LinkingDefault.openURL;

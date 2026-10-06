@@ -7,7 +7,7 @@ import useToken from "../../../../design/tokens/native/useToken.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import WarningIcon3 from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import GuildProfileView from "GuildProfileView.tsx";
 import react from "../../../../../_runtime/00019_react.js";

@@ -449,7 +449,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let id;
       const tmp5 = guildEventId;
-      const tmp6 = guildEventId(9167);
+      const tmp6 = guildEventId(9202);
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
@@ -474,13 +474,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return getChannel(channel_id);
       });
-      const useManageResourcePermissions = tmp2(9169).useManageResourcePermissions;
-      recurrenceId(9169);
+      const useManageResourcePermissions = tmp2(9204).useManageResourcePermissions;
+      recurrenceId(9204);
       if (stateFromStores2 == null) {
         stateFromStores2 = stateFromStores1;
       }
       closure_5 = useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
-      const tmp2Result6 = recurrenceId(9166);
+      const tmp2Result6 = recurrenceId(9201);
       const eventScheduleById = tmp2Result6.useEventScheduleById(guildEventId, recurrenceId);
       let toISOStringResult;
       if (eventScheduleById != null) {
@@ -539,9 +539,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           },
           style: tmp.eventHeader,
-          children: closure_8(recurrenceId(9261).GuildEventCardHeader, obj5),
+          children: closure_8(recurrenceId(9296).GuildEventCardHeader, obj5),
         };
-        const PressableOpacity = tmp2(5909).PressableOpacity;
+        const PressableOpacity = tmp2(5916).PressableOpacity;
         obj5 = { isActive, event: stateFromStores, showUserCount: false, showCreator: false, recurrenceId };
         items5 = [closure_8(PressableOpacity, obj4)];
         const obj6 = { style: tmp.actions, children: items6 };
@@ -551,7 +551,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             color: "text-feedback-critical",
             children: intl2.string(recurrenceId(1126).t.fyBVRm),
           };
-          const Text = tmp2(4886).Text;
+          const Text = tmp2(4892).Text;
           intl2 = tmp2(1126).intl;
           tmp22Result = closure_8(Text, obj7);
         }
@@ -572,11 +572,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.secondarySmallButton,
           children: closure_8(Icon, obj9),
         };
-        const PressableOpacity2 = tmp2(5909).PressableOpacity;
+        const PressableOpacity2 = tmp2(5916).PressableOpacity;
         intl3 = tmp2(1126).intl;
         const _HermesInternal3 = HermesInternal;
         obj9 = {
-          source: tmp5(9290),
+          source: tmp5(9325),
           size: recurrenceId(1188).Icon.Sizes.REFRESH_SMALL_16,
           style: tmp.secondarySmallIcon,
         };

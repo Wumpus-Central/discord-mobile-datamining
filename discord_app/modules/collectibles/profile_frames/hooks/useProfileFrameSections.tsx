@@ -176,7 +176,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp30 = obj4;
         }
       }
-      const tmp2Result4 = stateFromStores(7065);
+      const tmp2Result4 = stateFromStores(7078);
       const profileFrames = tmp2Result4.getProfileFrames(stateFromStores, tmp13);
       if (cResult[11] === tmp14) {
         let tmp19;
@@ -341,7 +341,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         items1[2] = obj3;
         return items1.filter((items) => items.items.length > 0);
       }, items2);
-      return first(13004)(tmp5, obj.PREVIEW);
+      return first(13023)(tmp5, obj.PREVIEW);
     };
 let result = size.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useProfileFrameSections.tsx");
 

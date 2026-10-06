@@ -153,7 +153,7 @@ export const isImageLoaded = function isImageLoaded(arg0) {
 };
 export const loadImage = function loadImage(url, bind) {
   let image;
-  const f134902 = async () => {
+  const f135119 = async () => {
     let c2;
     let closure_1;
     let tmp;
@@ -219,7 +219,7 @@ export const loadImage = function loadImage(url, bind) {
               let num3 = 5;
               if (closure_129_2.fails < 5) {
                 let tmp12 = backoff;
-                let failResult = closure_129_2.fail(f154177);
+                let failResult = closure_129_2.fail(f154421);
               } else {
                 let flag = true;
                 let tmp11 = closure_1_11(true, closure_129_0, closure_129_1);
@@ -281,7 +281,7 @@ export const loadImage = function loadImage(url, bind) {
       const tmp4 = new image(569)();
     }
     backoff = obj3.backoff;
-    image.onerror = _asyncToGenerator(f134902);
+    image.onerror = _asyncToGenerator(f135119);
     image.onload = () => {
       let callbacks;
       let url;

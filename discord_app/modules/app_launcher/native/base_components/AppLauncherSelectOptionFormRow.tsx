@@ -3,7 +3,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06638_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06645_AssetRegistry.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import useAnimationDelayedAutoFocus from "../hooks/useAnimationDelayedAutoFocus.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -122,7 +122,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const FormRow = tmp(8895).FormRow;
+                const FormRow = tmp(8924).FormRow;
                 const merged = Object.assign(tmp6);
                 const tmp31 = <FormRow start end style={tmp16} label={tmp17} subLabel={tmp20} trailing={tmp22} />;
                 cResult[20] = tmp6;
@@ -218,7 +218,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             });
         }
       }
-      ({ source: unselectedSubLabel(6638), size: native.IconSizes.SMALL_20 });
+      ({ source: unselectedSubLabel(6645), size: native.IconSizes.SMALL_20 });
       const Icon = native.Icon;
       const merged1 = Object.assign(merged);
       return <FormRow start end style={items} label={null} subLabel={fn} trailing={null} />;

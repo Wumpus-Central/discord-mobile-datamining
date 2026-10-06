@@ -302,7 +302,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         return mapped;
       }, items);
       let label;
-      const BottomSheetTitleHeader = renderIcon(6644).BottomSheetTitleHeader;
+      const BottomSheetTitleHeader = renderIcon(6651).BottomSheetTitleHeader;
       if (labelComponent != null) {
         label = labelComponent.label;
       }
@@ -325,7 +325,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5Result = undefined;
       if (tmp2) {
         let str = "primary";
-        const Button = tmp6(5594).Button;
+        const Button = tmp6(5601).Button;
         if (selectButtonDisabled) {
           str = "secondary";
         }
@@ -371,7 +371,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             },
           };
           tmp5Result3 = undefined;
-          const tmp13 = selectedOptions(9235);
+          const tmp13 = selectedOptions(9270);
           if (tmp2) {
             if (0 !== memo.length) {
               tmp5Result3 = closure_8(onQueryChange, {});

@@ -137,13 +137,13 @@ let props = function _handleShare() {
   return obj(...arguments);
 };
 function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
-  const f127429 = (user, index) =>
+  const f127603 = (user, index) =>
     user.user === closure_0[index].user && user.applicationId === closure_0[index].applicationId;
   let closure_0 = arg1;
   let tmp = arr === arg1;
   if (!tmp) {
-    tmp = arr.length === arg1.length && arr.every(f127429);
-    const tmp2 = arr.length === arg1.length && arr.every(f127429);
+    tmp = arr.length === arg1.length && arr.every(f127603);
+    const tmp2 = arr.length === arg1.length && arr.every(f127603);
   }
   return tmp;
 }
@@ -200,7 +200,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = require("ContactSyncUtils");
       const contactSyncAccount = obj2.useContactSyncAccount();
       if (cResult[0] !== contactSyncAccount) {
-        let tmpResult = tmp(12329);
+        let tmpResult = tmp(12344);
         const isContactSyncEnabledResult = tmpResult.isContactSyncEnabled(contactSyncAccount);
         cResult[0] = contactSyncAccount;
         cResult[1] = isContactSyncEnabledResult;

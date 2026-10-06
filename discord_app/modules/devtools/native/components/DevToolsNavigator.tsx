@@ -10,7 +10,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.j
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -40,7 +40,7 @@ let closure_11 = memo(
         let obj = accessibilityNativeStackOptions(576);
         const cResult = obj.c(9);
         let str = screenKey.screenKey;
-        let obj2 = accessibilityNativeStackOptions(6496);
+        let obj2 = accessibilityNativeStackOptions(6503);
         accessibilityNativeStackOptions = obj2.useAccessibilityNativeStackOptions();
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const tmp8 = closure_7(SettingHookHarnessDefault, {});
@@ -109,8 +109,8 @@ let closure_11 = memo(
           const tmp16 = closure_7(Screen, obj3);
           const _Object = Object;
           const obj4 = {};
-          let merged = Object.assign(tmp(15408).DevToolsScreens);
-          const merged1 = Object.assign(tmp(15408).PerformanceTestingScreens);
+          let merged = Object.assign(tmp(15424).DevToolsScreens);
+          const merged1 = Object.assign(tmp(15424).PerformanceTestingScreens);
           const entries1 = entries(obj4);
           const mapped = entries1.map((item) => {
             let tmp2;
@@ -127,7 +127,7 @@ let closure_11 = memo(
             _slicedToArray(item, 2);
             return closure_1_7(closure_1_10.Screen, obj, tmp2);
           });
-          let tmpResult = tmp(14503);
+          let tmpResult = tmp(14519);
           const designSystemScreens = tmpResult.getDesignSystemScreens();
           const mapped1 = designSystemScreens.map((item) => {
             let tmp2;
@@ -246,8 +246,8 @@ let closure_11 = memo(
         };
         items1[0] = closure_7(closure_10.Screen, obj4);
         const obj5 = {};
-        let merged = Object.assign(tmp(15408).DevToolsScreens);
-        let merged1 = Object.assign(tmp(15408).PerformanceTestingScreens);
+        let merged = Object.assign(tmp(15424).DevToolsScreens);
+        let merged1 = Object.assign(tmp(15424).PerformanceTestingScreens);
         const entries1 = entries(obj5);
         items1[1] = entries1.map((item) => {
           let tmp;
@@ -261,7 +261,7 @@ let closure_11 = memo(
           };
           return closure_1_7(closure_1_10.Screen, obj, tmp);
         });
-        let tmpResult = tmp(14503);
+        let tmpResult = tmp(14519);
         const designSystemScreens = tmpResult.getDesignSystemScreens();
         items1[2] = designSystemScreens.map((item) => {
           let tmp;

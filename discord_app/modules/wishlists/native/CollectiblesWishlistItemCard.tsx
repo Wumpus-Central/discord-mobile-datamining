@@ -82,7 +82,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const tmpResult = tmp(504);
         const stateFromStores = tmpResult.useStateFromStores(tmp14, tmp16, tmp17);
         if (cResult[12] !== tmp6) {
-          const tmpResult2 = tmp(8423);
+          const tmpResult2 = tmp(8456);
           const productNameAndTypeFromSku = tmpResult2.getProductNameAndTypeFromSku(tmp6);
           cResult[12] = tmp6;
           cResult[13] = productNameAndTypeFromSku;
@@ -144,7 +144,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[25] = tmp32;
             tmp25 = tmp32;
           }
-          OWNED = tmp(8427).WishlistItemCardOverlay.OWNED;
+          OWNED = tmp(8460).WishlistItemCardOverlay.OWNED;
         }
         const fn = function p() {
           let tmp2 = null;

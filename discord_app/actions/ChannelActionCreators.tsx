@@ -476,11 +476,7 @@ let obj = {
       AnalyticsUtilsDefault;
       track(CHANGE_LOG_DM_REMOVED, obj);
     }
-    const obj2 = {
-      type: "CHANNEL_DELETE",
-      channel: { id, guild_id: "Array", parent_id: "toCharArray$esjava$1" },
-      silent: flag2,
-    };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "parent" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
     tmpResult2.dispatch(obj2);
     if (flag) {

@@ -62,7 +62,7 @@ const memoResult = react.memo(
           }
           const mapped = items.map(UserStore.getUser);
           const found = mapped.filter(onSelectUser(1375).isNotNullish);
-          const mapped1 = found.map(tags(10595));
+          const mapped1 = found.map(tags(10608));
           cResult[0] = selectedUserIds;
           cResult[1] = mapped1;
           tags = mapped1;
@@ -90,14 +90,14 @@ const memoResult = react.memo(
                 }
                 if (cResult[9] !== tmp4.header) {
                   cResult[9] = tmp4.header;
-                  cResult[10] = jsx(onSelectUser(4886).Text, {
+                  cResult[10] = jsx(onSelectUser(4892).Text, {
                     style: header,
                     variant: "text-sm/medium",
                     color: "text-muted",
                     accessible: false,
                     children: tmp15,
                   });
-                  jsx(onSelectUser(4886).Text, {
+                  jsx(onSelectUser(4892).Text, {
                     style: header,
                     variant: "text-sm/medium",
                     color: "text-muted",
@@ -208,7 +208,7 @@ const memoResult = react.memo(
                       return;
                     }
                   }
-                  const tmp26 = jsx(tags(9235), {
+                  const tmp26 = jsx(tags(9270), {
                     autoFocus,
                     focusOnAdd: true,
                     footer: null,
@@ -263,7 +263,7 @@ const memoResult = react.memo(
           tmp12Result = null;
           if (tags.length > 0) {
             let stringResult2;
-            const PressableOpacity = onSelectUser(5909).PressableOpacity;
+            const PressableOpacity = onSelectUser(5916).PressableOpacity;
             let intl = onSelectUser(1126).intl;
             const string = intl.string;
             const t = onSelectUser(1126).t;
@@ -292,9 +292,9 @@ const memoResult = react.memo(
               }
             }
             if (forceSearchResults) {
-              let CirclePlusIcon = onSelectUser(11995).ChevronLargeRightIcon;
+              let CirclePlusIcon = onSelectUser(12012).ChevronLargeRightIcon;
             } else {
-              CirclePlusIcon = onSelectUser(10983).CirclePlusIcon;
+              CirclePlusIcon = onSelectUser(10996).CirclePlusIcon;
             }
             tmp12Result = (
               <PressableOpacity

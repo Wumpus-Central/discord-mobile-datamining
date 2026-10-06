@@ -67,7 +67,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== enabled) {
         const fn = function o() {
           let timeout;
-          const f153051 = () => {
+          const f153284 = () => {
             importDefault(closure_0);
             closure_0 = !closure_0;
             let num = 5000;
@@ -75,13 +75,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             if (closure_0) {
               num = closure_2_9;
             }
-            enabled = _setTimeout(f153051, num);
+            enabled = _setTimeout(f153284, num);
           };
           const tmp = timeout;
           if (tmp) {
             let c0 = false;
             let _setTimeout = setTimeout;
-            timeout = setTimeout(f153051, closure_1_9);
+            timeout = setTimeout(f153284, closure_1_9);
             return () => clearTimeout(closure_0);
           }
         };
@@ -122,7 +122,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [visible];
       const effect = react.useEffect(() => {
         let timeout;
-        const f153052 = () => {
+        const f153285 = () => {
           importDefault(closure_0);
           closure_0 = !closure_0;
           let num = 5000;
@@ -130,13 +130,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           if (closure_0) {
             num = closure_2_9;
           }
-          visible = _setTimeout(f153052, num);
+          visible = _setTimeout(f153285, num);
         };
         const tmp = timeout;
         if (tmp) {
           let c0 = false;
           let _setTimeout = setTimeout;
-          timeout = setTimeout(f153052, closure_1_9);
+          timeout = setTimeout(f153285, closure_1_9);
           return () => clearTimeout(closure_0);
         }
       }, items);

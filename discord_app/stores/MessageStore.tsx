@@ -9,6 +9,7 @@ import Server from "../flow/Server.tsx";
 import DatabaseDaosDefault from "../modules/app_database/DatabaseDaos.tsx";
 import ReactionUtils from "../modules/reactions/ReactionUtils.tsx";
 import MessageRecordUtils from "../modules/messages/MessageRecordUtils.tsx";
+import InteractionTypes from "../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import ChannelMessagesDefault from "../lib/ChannelMessages.tsx";
 import IOSPushNotificationRawPayloadFixExperiment from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
 import GatewayConnectionStore from "../modules/gateway/GatewayConnectionStore.tsx";
@@ -500,7 +501,7 @@ class MessageStore extends Store {
       if (interaction != null) {
         type = interaction.type;
       }
-      let tmp4 = type === Server.InteractionTypes.APPLICATION_COMMAND;
+      let tmp4 = type === InteractionTypes.InteractionTypes.APPLICATION_COMMAND;
       if (tmp4) {
         const interactionData = interaction.interactionData;
         let type1;
@@ -1169,7 +1170,7 @@ obj = {
     ids = ids.ids;
     let mutation;
     const channelId = ids.channelId;
-    obj = mutation(5431);
+    obj = mutation(5438);
     const orCreate = obj.getOrCreate(channelId);
     if (null == orCreate) {
       return false;
@@ -1221,7 +1222,7 @@ obj = {
             mutation = removeManyResult.mutate({ revealedMessageId: null });
           }
         }
-        const tmpResult2 = mutation(5431);
+        const tmpResult2 = mutation(5438);
         tmpResult2.commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);

@@ -92,8 +92,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         let primaryGuild1;
         const forResult = Symbol.for("react.early_return_sentinel");
-        const getUserPrimaryGuild = userId(7836).getUserPrimaryGuild;
-        userId(7836);
+        const getUserPrimaryGuild = userId(7847).getUserPrimaryGuild;
+        userId(7847);
         if (stateFromStores != null) {
           primaryGuild1 = stateFromStores.primaryGuild;
         }
@@ -104,7 +104,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != guildId) {
           tmp20 = null;
           if (null != tag) {
-            const tmpResult4 = userId(7836);
+            const tmpResult4 = userId(7847);
             guildTagBadgeUrl = tmpResult4.getGuildTagBadgeUrl(guildId, tmp19, GuildTagBadgeSize.SIZE_12);
             tmp20 = forResult;
           }
@@ -132,7 +132,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] !== tmp12) {
           const obj2 = { source: obj3, size: GuildTagBadgeSize.SIZE_12 };
           obj3 = { uri: tmp12 };
-          const tmp27 = closure_5(userId(9395).GuildTagBadge, obj2);
+          const tmp27 = closure_5(userId(9409).GuildTagBadge, obj2);
           cResult[8] = tmp12;
           cResult[9] = tmp27;
           tmp24 = tmp27;
@@ -175,7 +175,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           tmp31 = tmp34;
         }
         const obj6 = { variant: "text-xs/semibold", color: "text-default", style: tmp4.tag, children: tmp14 };
-        const tmp30 = closure_5(userId(4886).Text, obj6);
+        const tmp30 = closure_5(userId(4892).Text, obj6);
         cResult[10] = tmp4.tag;
         cResult[11] = tmp14;
         cResult[12] = tmp30;
@@ -195,8 +195,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = userId(504);
       const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(userId), items1);
       let primaryGuild;
-      const getUserPrimaryGuild = userId(7836).getUserPrimaryGuild;
-      userId(7836);
+      const getUserPrimaryGuild = userId(7847).getUserPrimaryGuild;
+      userId(7847);
       if (stateFromStores != null) {
         primaryGuild = stateFromStores.primaryGuild;
       }
@@ -206,13 +206,13 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != tag) {
           const obj2 = { style: tmp.gapContainer, children: closure_6(View, obj3) };
           obj3 = { style: tmp.tagContainer, children: items2 };
-          const tmp2Result = userId(7836);
+          const tmp2Result = userId(7847);
           const guildTagBadgeUrl = tmp2Result.getGuildTagBadgeUrl(guildId, tmp8, GuildTagBadgeSize.SIZE_12);
           const obj4 = { source: obj5, size: GuildTagBadgeSize.SIZE_12 };
           obj5 = { uri: guildTagBadgeUrl };
-          items2 = [closure_5(userId(9395).GuildTagBadge, obj4)];
+          items2 = [closure_5(userId(9409).GuildTagBadge, obj4)];
           const obj6 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
-          items2[1] = closure_5(userId(4886).Text, obj6);
+          items2[1] = closure_5(userId(4892).Text, obj6);
           return closure_5(View, obj2);
         }
       }

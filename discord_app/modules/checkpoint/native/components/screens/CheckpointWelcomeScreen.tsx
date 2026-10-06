@@ -5,8 +5,8 @@ import react from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl3 from "../../../../../intl/index.native.tsx";
 import useWindowDimensionsDefault from "../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3011 from "../../../Checkpoint.messages.js";
-import _modDef3043 from "../../../Checkpoint2026.messages.js";
+import _modDef3039 from "../../../Checkpoint.messages.js";
+import _modDef3071 from "../../../Checkpoint2026.messages.js";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
 import TextWritingAnimation from "../TextWritingAnimation.tsx";
 import CheckpointKnickKnacksDefault from "../CheckpointKnickKnacks.tsx";
@@ -91,7 +91,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const titleText = tmp4.titleText;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = intl3.intl;
-          const stringResult = intl.string(_modDef3011["CdU/PF"]);
+          const stringResult = intl.string(_modDef3039["CdU/PF"]);
           cResult[7] = stringResult;
           tmp14 = stringResult;
         } else {
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[11] !== name) {
             const intl2 = intl3.intl;
             const obj4 = { username: name };
-            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3043.xhZ23b, obj4);
+            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3071.xhZ23b, obj4);
             cResult[11] = name;
             cResult[12] = formatToPlainStringResult;
             tmp20 = formatToPlainStringResult;
@@ -212,7 +212,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = {
         style: items1,
         textStyle: tmp.titleText,
-        text: intl.string(_modDef3011["CdU/PF"]),
+        text: intl.string(_modDef3039["CdU/PF"]),
         delay,
         variant: "display-lg",
       };
@@ -226,7 +226,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items3 = [hasOwnProperty(tmp6, obj6), ,];
       const obj8 = {
         style: tmp.subtitle,
-        text: intl2.formatToPlainString(_modDef3043.xhZ23b, { username: name }),
+        text: intl2.formatToPlainString(_modDef3071.xhZ23b, { username: name }),
         delay: delay + TextWritingAnimation.DURATION,
         variant: "heading-xl/medium",
       };

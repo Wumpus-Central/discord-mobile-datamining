@@ -74,7 +74,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp20 = jsx(onTrackPress(8313).NitroWheelIcon, { size: "sm", color: "white" });
+          const tmp20 = jsx(onTrackPress(8346).NitroWheelIcon, { size: "sm", color: "white" });
           cResult[7] = tmp20;
           tmp18 = tmp20;
         } else {
@@ -108,7 +108,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               closure_1();
             }
           }
-          const tmp24 = jsx(onTrackPress(5595).BaseTextButton, {
+          const tmp24 = jsx(onTrackPress(5602).BaseTextButton, {
             textElement: tmp14,
             text: tmp17,
             accessibilityLabel: tmp11,
@@ -143,7 +143,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp15;
       if (undefined !== shouldShrink && shouldShrink) {
-        tmp15 = jsx(onTrackPress(4886).Text, {
+        tmp15 = jsx(onTrackPress(4892).Text, {
           variant: "text-xs/semibold",
           color: "text-overlay-light",
           allowFontScaling: false,

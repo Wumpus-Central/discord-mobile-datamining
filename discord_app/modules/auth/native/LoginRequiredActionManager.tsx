@@ -35,7 +35,7 @@ class LoginRequiredActionManager extends AutomaticLifecycleManager {
               }
             },
           };
-          const obj2 = currentUser(6885);
+          const obj2 = currentUser(6895);
           obj2.openUserSettings(obj3);
         }
       }

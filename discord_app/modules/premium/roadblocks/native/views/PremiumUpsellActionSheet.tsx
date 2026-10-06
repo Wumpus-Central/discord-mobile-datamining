@@ -8,17 +8,17 @@ import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import ChatInputUtils from "../../../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import StreamSettingsConstants from "../../../../go_live/StreamSettingsConstants.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import ScheduledMessagesConstants from "../../../../../../discord_common/js/shared/shared-constants/ScheduledMessagesConstants.tsx";
 import openPremiumUpsellActionSheet from "../utils/openPremiumUpsellActionSheet.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/07492_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../_runtime/07493_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/07503_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/07504_AssetRegistry.js";
 import showForLaterModal2 from "../../../../saved_messages/native/showForLaterModal.tsx";
 import SavedMessagesTypes from "../../../../saved_messages/SavedMessagesTypes.tsx";
 import APNGPlayer from "../../../../image/native/APNGPlayer.android.tsx";
-import AssetRegistryDefault3 from "../../../../../../_runtime/11849_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../../../_runtime/13137_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../_runtime/11863_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../../../_runtime/13156_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import ThemeStore from "../../../../user_settings/ThemeStore.tsx";
@@ -173,7 +173,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp23 = cResult[22];
                 tmp24 = cResult[23];
               }
-              const tmp4Result = importDefault(tmp7 ? 13133 : 13134);
+              const tmp4Result = importDefault(tmp7 ? 13152 : 13153);
               if (cResult[46] === tmp8) {
                 if (cResult[47] === tmp4Result) {
                   if (cResult[48] === flag) {
@@ -287,8 +287,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
                       obj9[tmp13] = tmp14;
                       obj9[tmp15] = tmp16;
                       obj9[tmp17] = tmp66;
-                      obj9[tmp(7483).EntitlementFeatureNames.SCHEDULED_MESSAGES] = tmp73;
-                      obj9[tmp(7483).EntitlementFeatureNames.STREAM_HIGH_QUALITY] = tmp84;
+                      obj9[tmp(7494).EntitlementFeatureNames.SCHEDULED_MESSAGES] = tmp73;
+                      obj9[tmp(7494).EntitlementFeatureNames.STREAM_HIGH_QUALITY] = tmp84;
                       cResult[58] = tmp9;
                       cResult[59] = tmp10;
                       cResult[60] = tmp11;
@@ -348,29 +348,29 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = tmp(4528);
+      const tmpResult = tmp(4534);
       const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(premiumType);
       let effectiveUploadLimit;
-      if (featureName === tmp(7483).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
-        const getEffectiveUploadLimit = tmp(7295).getEffectiveUploadLimit;
-        tmp(7295);
-        const tmpResult7 = tmp(7270);
+      if (featureName === tmp(7494).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
+        const getEffectiveUploadLimit = tmp(7308).getEffectiveUploadLimit;
+        tmp(7308);
+        const tmpResult7 = tmp(7283);
         effectiveUploadLimit = getEffectiveUploadLimit(tmpResult7.maxFileSize(guildId));
       }
-      const tmp28 = subfeatureName === tmp(7484).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
+      const tmp28 = subfeatureName === tmp(7495).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
       _require = tmp28;
-      if (subfeatureName === tmp(7484).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
-        const tmpResult8 = tmp(7485);
+      if (subfeatureName === tmp(7495).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
+        const tmpResult8 = tmp(7496);
         forLaterLimit = tmpResult8.getForLaterLimit("native.PremiumUpsellActionSheet", tmp28);
       }
       const tmp30 = tmp28 ? closure_18 : closure_17;
       if (cResult[24] !== featureName) {
         let tmp32;
-        const tmpResult9 = tmp(7487);
+        const tmpResult9 = tmp(7498);
         if (
           tmpResult9.getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet")
         ) {
-          tmp32 = closure_20(tmp(7488).ReactionsSpotIllustration, { width: 198, height: 132, accessible: false });
+          tmp32 = closure_20(tmp(7499).ReactionsSpotIllustration, { width: 198, height: 132, accessible: false });
         }
         cResult[24] = featureName;
         cResult[25] = tmp32;
@@ -378,7 +378,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp31 = cResult[25];
       }
-      const SOUNDBOARD_EVERYWHERE = tmp(7483).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
+      const SOUNDBOARD_EVERYWHERE = tmp(7494).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
       const obj13 = {
         title: intl.string(tmp(1126).t.jGDYF0),
         description: intl2.formatToPlainString(tmp(1126).t["fc+8uy"], { nitroTierName: premiumTypeDisplayName }),
@@ -389,7 +389,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       intl = tmp(1126).intl;
       intl2 = tmp(1126).intl;
       ({ uri: "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_" + str + ".png" });
-      const EMOJIS_EVERYWHERE = tmp(7483).EntitlementFeatureNames.EMOJIS_EVERYWHERE;
+      const EMOJIS_EVERYWHERE = tmp(7494).EntitlementFeatureNames.EMOJIS_EVERYWHERE;
       const obj15 = {
         title: intl3.string(tmp(1126).t.zY5PPb),
         description: intl4.formatToPlainString(tmp(1126).t["uukIF/"], { nitroTierName: premiumTypeDisplayName }),
@@ -401,7 +401,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       intl3 = tmp(1126).intl;
       intl4 = tmp(1126).intl;
       ({ uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" });
-      const STICKERS_EVERYWHERE = tmp(7483).EntitlementFeatureNames.STICKERS_EVERYWHERE;
+      const STICKERS_EVERYWHERE = tmp(7494).EntitlementFeatureNames.STICKERS_EVERYWHERE;
       if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
         const intl5 = tmp(1126).intl;
         const stringResult1 = intl5.string(tmp(1126).t.Eukdgl);
@@ -421,14 +421,14 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
           description: tmp37,
           analyticsPage: constants3.PREMIUM_UPSELL_STICKERS_EVERYWHERE,
           upsellType: constants.STICKERS_EVERYWHERE_UPSELL,
-          illustration: closure_20(tmp(7490).StickersSpotIllustration, { width: 235, height: 132, accessible: false }),
+          illustration: closure_20(tmp(7501).StickersSpotIllustration, { width: 235, height: 132, accessible: false }),
         };
         cResult[28] = obj17;
         tmp40 = obj17;
       } else {
         tmp40 = cResult[28];
       }
-      const INCREASED_FILE_UPLOAD_SIZE = tmp(7483).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE;
+      const INCREASED_FILE_UPLOAD_SIZE = tmp(7494).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE;
       if (cResult[29] === Symbol.for("react.memo_cache_sentinel")) {
         const intl7 = tmp(1126).intl;
         const stringResult3 = intl7.string(tmp(1126).t["G+pngo"]);
@@ -437,7 +437,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp42 = cResult[29];
       }
-      const tmpResult10 = tmp(7270);
+      const tmpResult10 = tmp(7283);
       let result = tmpResult10.fileUploadLimitRoadblockDescription({ guildId, maxSize: effectiveUploadLimit });
       if (cResult[30] !== result) {
         const obj18 = { children: result };
@@ -464,7 +464,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[35] === tmp50) {
           tmp51 = cResult[36];
         }
-        const ANIMATED_EMOJIS = tmp(7483).EntitlementFeatureNames.ANIMATED_EMOJIS;
+        const ANIMATED_EMOJIS = tmp(7494).EntitlementFeatureNames.ANIMATED_EMOJIS;
         const _Symbol = Symbol;
         if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
           const intl8 = tmp(1126).intl;
@@ -497,7 +497,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[42] === tmp56) {
               tmp57 = cResult[43];
             }
-            const CLIENT_THEMES = tmp(7483).EntitlementFeatureNames.CLIENT_THEMES;
+            const CLIENT_THEMES = tmp(7494).EntitlementFeatureNames.CLIENT_THEMES;
             const _Symbol2 = Symbol;
             if (cResult[44] === Symbol.for("react.memo_cache_sentinel")) {
               const obj22 = {
@@ -514,7 +514,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               tmp58 = cResult[44];
             }
-            const APP_ICONS = tmp(7483).EntitlementFeatureNames.APP_ICONS;
+            const APP_ICONS = tmp(7494).EntitlementFeatureNames.APP_ICONS;
             const _Symbol3 = Symbol;
             if (cResult[45] === Symbol.for("react.memo_cache_sentinel")) {
               const obj23 = {
@@ -531,7 +531,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
             } else {
               tmp59 = cResult[45];
             }
-            const SAVED_MESSAGES = tmp(7483).EntitlementFeatureNames.SAVED_MESSAGES;
+            const SAVED_MESSAGES = tmp(7494).EntitlementFeatureNames.SAVED_MESSAGES;
             if (null == forLaterLimit) {
               const intl15 = tmp(1126).intl;
               stringResult5 = intl15.string(tmp(1126).t.YXk6N7);
@@ -683,28 +683,28 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       if (theme === constants4.LIGHT) {
         str = "light";
       }
-      const tmpResult = tmp(4528);
+      const tmpResult = tmp(4534);
       const premiumTypeDisplayName = tmpResult.getPremiumTypeDisplayName(premiumType);
       let effectiveUploadLimit;
-      if (featureName === tmp(7483).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
-        const getEffectiveUploadLimit = tmp(7295).getEffectiveUploadLimit;
-        tmp(7295);
-        const tmpResult7 = tmp(7270);
+      if (featureName === tmp(7494).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE) {
+        const getEffectiveUploadLimit = tmp(7308).getEffectiveUploadLimit;
+        tmp(7308);
+        const tmpResult7 = tmp(7283);
         effectiveUploadLimit = getEffectiveUploadLimit(tmpResult7.maxFileSize(guildId));
       }
-      const tmp9 = subfeatureName === tmp(7484).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
+      const tmp9 = subfeatureName === tmp(7495).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_REMINDER_LIMIT;
       _require = tmp9;
-      if (subfeatureName === tmp(7484).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
-        const tmpResult8 = tmp(7485);
+      if (subfeatureName === tmp(7495).PremiumUpsellSubfeatureNames.SAVED_MESSAGES_BOOKMARK_LIMIT) {
+        const tmpResult8 = tmp(7496);
         forLaterLimit = tmpResult8.getForLaterLimit("native.PremiumUpsellActionSheet", tmp9);
       }
       const tmp11 = tmp9 ? closure_18 : closure_17;
       let tmp12;
-      const tmpResult9 = tmp(7487);
+      const tmpResult9 = tmp(7498);
       if (
         tmpResult9.getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumUpsellActionSheet")
       ) {
-        tmp12 = closure_20(tmp(7488).ReactionsSpotIllustration, { width: 198, height: 132, accessible: false });
+        tmp12 = closure_20(tmp(7499).ReactionsSpotIllustration, { width: 198, height: 132, accessible: false });
       }
       const obj3 = {};
       const obj4 = {
@@ -714,7 +714,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         upsellType: constants.SOUNDBOARD_EVERYWHERE_UPSELL,
         image: { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_" + str + ".png" },
       };
-      const SOUNDBOARD_EVERYWHERE = tmp(7483).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
+      const SOUNDBOARD_EVERYWHERE = tmp(7494).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
       intl = tmp(1126).intl;
       intl2 = tmp(1126).intl;
       obj3[SOUNDBOARD_EVERYWHERE] = obj4;
@@ -727,7 +727,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         illustration: tmp12,
       };
       ({ uri: "https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_" + str + ".png" });
-      const EMOJIS_EVERYWHERE = tmp(7483).EntitlementFeatureNames.EMOJIS_EVERYWHERE;
+      const EMOJIS_EVERYWHERE = tmp(7494).EntitlementFeatureNames.EMOJIS_EVERYWHERE;
       intl3 = tmp(1126).intl;
       intl4 = tmp(1126).intl;
       obj3[EMOJIS_EVERYWHERE] = obj6;
@@ -736,10 +736,10 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         description: intl6.string(tmp(1126).t.sMmd7s),
         analyticsPage: constants3.PREMIUM_UPSELL_STICKERS_EVERYWHERE,
         upsellType: constants.STICKERS_EVERYWHERE_UPSELL,
-        illustration: closure_20(tmp(7490).StickersSpotIllustration, { width: 235, height: 132, accessible: false }),
+        illustration: closure_20(tmp(7501).StickersSpotIllustration, { width: 235, height: 132, accessible: false }),
       };
       ({ uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" });
-      const STICKERS_EVERYWHERE = tmp(7483).EntitlementFeatureNames.STICKERS_EVERYWHERE;
+      const STICKERS_EVERYWHERE = tmp(7494).EntitlementFeatureNames.STICKERS_EVERYWHERE;
       intl5 = tmp(1126).intl;
       intl6 = tmp(1126).intl;
       obj3[STICKERS_EVERYWHERE] = obj8;
@@ -750,11 +750,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         upsellType: constants.LARGER_FILE_UPLOAD_UPSELL,
         image: { uri: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_" + str + "_v2.png" },
       };
-      const INCREASED_FILE_UPLOAD_SIZE = tmp(7483).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE;
+      const INCREASED_FILE_UPLOAD_SIZE = tmp(7494).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE;
       intl7 = tmp(1126).intl;
       obj10 = { children: tmpResult10.fileUploadLimitRoadblockDescription({ guildId, maxSize: effectiveUploadLimit }) };
       obj3[INCREASED_FILE_UPLOAD_SIZE] = obj9;
-      tmpResult10 = tmp(7270);
+      tmpResult10 = tmp(7283);
       const obj12 = {
         title: intl8.string(tmp(1126).t.SI7R9I),
         description: intl9.formatToPlainString(tmp(1126).t.uGkSY2, { nitroTierName: premiumTypeDisplayName }),
@@ -764,7 +764,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         illustration: tmp12,
       };
       ({ uri: "https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_" + str + "_v2.png" });
-      const ANIMATED_EMOJIS = tmp(7483).EntitlementFeatureNames.ANIMATED_EMOJIS;
+      const ANIMATED_EMOJIS = tmp(7494).EntitlementFeatureNames.ANIMATED_EMOJIS;
       intl8 = tmp(1126).intl;
       intl9 = tmp(1126).intl;
       obj3[ANIMATED_EMOJIS] = obj12;
@@ -776,7 +776,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         image: AssetRegistryDefault,
       };
       ({ uri: "https://cdn.discordapp.com/assets/premium/roadblocks/emoji_" + str + ".png" });
-      const CLIENT_THEMES = tmp(7483).EntitlementFeatureNames.CLIENT_THEMES;
+      const CLIENT_THEMES = tmp(7494).EntitlementFeatureNames.CLIENT_THEMES;
       intl10 = tmp(1126).intl;
       intl11 = tmp(1126).intl;
       obj3[CLIENT_THEMES] = obj14;
@@ -787,11 +787,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         upsellType: constants.APP_ICON_UPSELL,
         image: AssetRegistryDefault2,
       };
-      const APP_ICONS = tmp(7483).EntitlementFeatureNames.APP_ICONS;
+      const APP_ICONS = tmp(7494).EntitlementFeatureNames.APP_ICONS;
       intl12 = tmp(1126).intl;
       intl13 = tmp(1126).intl;
       obj3[APP_ICONS] = obj15;
-      const SAVED_MESSAGES = tmp(7483).EntitlementFeatureNames.SAVED_MESSAGES;
+      const SAVED_MESSAGES = tmp(7494).EntitlementFeatureNames.SAVED_MESSAGES;
       if (null == forLaterLimit) {
         const intl15 = tmp(1126).intl;
         stringResult = intl15.string(tmp(1126).t.YXk6N7);
@@ -808,7 +808,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         description: stringResult1,
         analyticsPage: constants3.PREMIUM_UPSELL_FOR_LATER,
         upsellType: constants.FOR_LATER_MODAL_UPSELL,
-        image: importDefault(tmp9 ? 13133 : 13134),
+        image: importDefault(tmp9 ? 13152 : 13153),
       };
       if (null == forLaterLimit) {
         const intl17 = tmp(1126).intl;
@@ -841,7 +841,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         upsellType: constants.SCHEDULED_MESSAGES_MODAL_UPSELL,
         image: AssetRegistryDefault3,
       };
-      const SCHEDULED_MESSAGES = tmp(7483).EntitlementFeatureNames.SCHEDULED_MESSAGES;
+      const SCHEDULED_MESSAGES = tmp(7494).EntitlementFeatureNames.SCHEDULED_MESSAGES;
       intl18 = tmp(1126).intl;
       obj21 = { premiumMax };
       obj22 = { children: intl19.format(tmp(1126).t["1kFyto"], obj23) };
@@ -864,7 +864,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         image: AssetRegistryDefault4,
         imageGradientBackground: obj26,
       };
-      const STREAM_HIGH_QUALITY = tmp(7483).EntitlementFeatureNames.STREAM_HIGH_QUALITY;
+      const STREAM_HIGH_QUALITY = tmp(7494).EntitlementFeatureNames.STREAM_HIGH_QUALITY;
       intl20 = tmp(1126).intl;
       intl21 = tmp(1126).intl;
       obj25 = { fps: ApplicationStreamFPS.FPS_60 };

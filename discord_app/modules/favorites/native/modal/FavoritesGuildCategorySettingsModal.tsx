@@ -301,7 +301,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(4);
       categoryId = categoryId.categoryId;
       const tmp4 = onGoBack;
-      onGoBack = onGoBack(10660)().onGoBack;
+      onGoBack = onGoBack(10673)().onGoBack;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
         const stringResult = intl.string(categoryId(1126).t["/uELTj"]);
@@ -325,7 +325,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           return metroImportAll(closure_11, obj);
         },
       };
-      const tmp8 = closure_8(tmp4(10661), obj2);
+      const tmp8 = closure_8(tmp4(10674), obj2);
       cResult[1] = categoryId;
       cResult[2] = onGoBack;
       cResult[3] = tmp8;
@@ -335,7 +335,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let intl;
       categoryId = categoryId.categoryId;
       let onGoBack;
-      onGoBack = onGoBack(10660)().onGoBack;
+      onGoBack = onGoBack(10673)().onGoBack;
       let obj = {
         screenKey: "favoritesGuildCategorySettings",
         title: intl.string(categoryId(1126).t["/uELTj"]),
@@ -344,7 +344,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           return metroImportAll(closure_11, obj);
         },
       };
-      const tmp = onGoBack(10661);
+      const tmp = onGoBack(10674);
       intl = categoryId(1126).intl;
       return closure_8(tmp, obj);
     };

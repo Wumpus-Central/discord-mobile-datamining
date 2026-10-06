@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl30 from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import debug_ConjureTraceFormat from "../ConjureTraceFormat.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -242,13 +242,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != field.field.chars) {
           const intl2 = intl30.intl;
           const obj4 = { count: field.field.chars };
-          formatToPlainStringResult = intl2.formatToPlainString(_modDef3723.ib7All, obj4);
+          formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.ib7All, obj4);
         } else {
           formatToPlainStringResult = null;
           if (null != field.field.items) {
             const intl = intl30.intl;
             const obj6 = { count: field.field.items };
-            formatToPlainStringResult = intl.formatToPlainString(_modDef3723.cIqKbA, obj6);
+            formatToPlainStringResult = intl.formatToPlainString(_modDef3753.cIqKbA, obj6);
           }
         }
         cResult[3] = field.field.chars;
@@ -268,13 +268,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != field.field.chars) {
           const intl2 = intl30.intl;
           const obj3 = { count: field.field.chars };
-          formatToPlainStringResult = intl2.formatToPlainString(_modDef3723.ib7All, obj3);
+          formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.ib7All, obj3);
         } else {
           formatToPlainStringResult = null;
           if (null != field.field.items) {
             const intl = intl30.intl;
             const obj = { count: field.field.items };
-            formatToPlainStringResult = intl.formatToPlainString(_modDef3723.cIqKbA, obj);
+            formatToPlainStringResult = intl.formatToPlainString(_modDef3753.cIqKbA, obj);
           }
         }
         let str = iter.omitted;
@@ -310,9 +310,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = {
             variant: "text-xs/semibold",
             color: "text-feedback-warning",
-            children: intl.string(_modDef3723.LRIpHQ),
+            children: intl.string(_modDef3753.LRIpHQ),
           };
-          let Text = tmp(4886).Text;
+          let Text = tmp(4892).Text;
           intl = tmp(1126).intl;
           const tmp8 = closure_5(Text, obj2);
           cResult[0] = tmp8;
@@ -359,7 +359,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = {
                 variant: "text-xs/normal",
                 color: "text-feedback-warning",
-                children: intl.string(_modDef3723["+kQ+K3"]),
+                children: intl.string(_modDef3753["+kQ+K3"]),
               };
               const Text = Text_Text.Text;
               intl = intl30.intl;
@@ -372,11 +372,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const Text2 = Text_Text.Text;
               if (null == children.chars) {
                 const intl3 = intl30.intl;
-                stringResult = intl3.string(_modDef3723.ijkkUh);
+                stringResult = intl3.string(_modDef3753.ijkkUh);
               } else {
                 const intl2 = intl30.intl;
                 const obj6 = { count: children.chars };
-                stringResult = intl2.formatToPlainString(_modDef3723.PRt8I0, obj6);
+                stringResult = intl2.formatToPlainString(_modDef3753.PRt8I0, obj6);
               }
               const obj7 = { variant: "text-xs/normal", color: "text-subtle", children: stringResult };
               tmp4Result4 = hasOwnProperty(Text2, obj7);
@@ -409,7 +409,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = {
           variant: "text-xs/semibold",
           color: "text-feedback-warning",
-          children: intl.string(_modDef3723.LRIpHQ),
+          children: intl.string(_modDef3753.LRIpHQ),
         };
         let Text = require("Text/Text").Text;
         intl = require("intl").intl;
@@ -435,7 +435,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = {
                 variant: "text-xs/normal",
                 color: "text-feedback-warning",
-                children: intl.string(_modDef3723["+kQ+K3"]),
+                children: intl.string(_modDef3753["+kQ+K3"]),
               };
               const Text = Text_Text.Text;
               intl = intl30.intl;
@@ -448,11 +448,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               const Text2 = Text_Text.Text;
               if (null == children.chars) {
                 const intl3 = intl30.intl;
-                stringResult = intl3.string(_modDef3723.ijkkUh);
+                stringResult = intl3.string(_modDef3753.ijkkUh);
               } else {
                 const intl2 = intl30.intl;
                 const obj6 = { count: children.chars };
-                stringResult = intl2.formatToPlainString(_modDef3723.PRt8I0, obj6);
+                stringResult = intl2.formatToPlainString(_modDef3753.PRt8I0, obj6);
               }
               const obj7 = { variant: "text-xs/normal", color: "text-subtle", children: stringResult };
               tmp4Result4 = hasOwnProperty(Text2, obj7);
@@ -543,7 +543,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       projectId = projectId.projectId;
       ({ entryId, initialEntry } = projectId);
       const tmp4 = closure_8();
-      let obj2 = projectId(16761);
+      let obj2 = projectId(16782);
       const traceCategoryTextStyles = obj2.useTraceCategoryTextStyles();
       const bottom = useSafeAreaInsetsDefault().bottom;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -569,7 +569,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStoresArray = tmpResult.useStateFromStoresArray(first, tmp9, tmp10);
-      const tmpResult15 = tmp(16763);
+      const tmpResult15 = tmp(16784);
       let findTraceEntryResult = tmpResult15.findTraceEntry(stateFromStoresArray, entryId);
       if (findTraceEntryResult == null) {
         findTraceEntryResult = initialEntry;
@@ -577,32 +577,32 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let findTraceEntryResult1 = null;
       if ("tool" === findTraceEntryResult.kind) {
         let parentId = findTraceEntryResult.parentId;
-        const findTraceEntry = tmp(16763).findTraceEntry;
-        tmp(16763);
+        const findTraceEntry = tmp(16784).findTraceEntry;
+        tmp(16784);
         if (parentId == null) {
           parentId = null;
         }
         findTraceEntryResult1 = findTraceEntry(stateFromStoresArray, parentId);
       }
-      const tmpResult17 = tmp(16763);
+      const tmpResult17 = tmp(16784);
       const length = tmpResult17.traceChildren(stateFromStoresArray, findTraceEntryResult.id).length;
       const obj3 = { childCount: length, hasParent: null != findTraceEntryResult1 };
-      const tmpResult18 = tmp(16767);
+      const tmpResult18 = tmp(16788);
       const traceDetailSectionsResult = tmpResult18.traceDetailSections(findTraceEntryResult, obj3);
       let detailId;
-      const useConjureTraceDetail = tmp(16768).useConjureTraceDetail;
-      tmp(16768);
+      const useConjureTraceDetail = tmp(16789).useConjureTraceDetail;
+      tmp(16789);
       if ("tool" === findTraceEntryResult.kind) {
         detailId = findTraceEntryResult.detailId;
       }
       const conjureTraceDetail = useConjureTraceDetail(projectId, detailId);
       const tmp19 = "model" === findTraceEntryResult.kind ? findTraceEntryResult.model : findTraceEntryResult.tool;
-      const tmpResult20 = tmp(16765);
+      const tmpResult20 = tmp(16786);
       const formatClockTimeResult = tmpResult20.formatClockTime(findTraceEntryResult.startedAt, "millis");
-      const tmpResult21 = tmp(16763);
+      const tmpResult21 = tmp(16784);
       const traceCategoryResult = tmpResult21.traceCategory(findTraceEntryResult);
       if (cResult[4] !== conjureTraceDetail) {
-        const tmpResult22 = tmp(16762);
+        const tmpResult22 = tmp(16783);
         const traceRichStatusLabelResult = tmpResult22.traceRichStatusLabel(conjureTraceDetail);
         cResult[4] = conjureTraceDetail;
         cResult[5] = traceRichStatusLabelResult;
@@ -620,32 +620,32 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj5 = {
         scrollable: true,
-        header: closure_5(tmp(6644).BottomSheetTitleHeader, { title: tmp19 }),
+        header: closure_5(tmp(6651).BottomSheetTitleHeader, { title: tmp19 }),
         children: closure_5(BottomSheetScrollView, obj6),
       };
-      const ActionSheet = tmp(6701).ActionSheet;
+      const ActionSheet = tmp(6708).ActionSheet;
       obj6 = { contentContainerStyle: tmp24, children: closure_6(View, obj7) };
       obj7 = { style: tmp4.content, children: items3 };
       const obj8 = { style: tmp4.head, children: items2 };
-      BottomSheetScrollView = tmp(6112).BottomSheetScrollView;
+      BottomSheetScrollView = tmp(6119).BottomSheetScrollView;
       items2 = [, ,];
       const obj9 = { status: findTraceEntryResult.status };
-      items2[0] = closure_5(tmp(16761).TraceStatusDot, obj9);
+      items2[0] = closure_5(tmp(16782).TraceStatusDot, obj9);
       const obj10 = {
         variant: "text-xs/semibold",
         style: traceCategoryTextStyles[traceCategoryResult],
         children: tmpResult23.categoryLabel(traceCategoryResult),
       };
-      const Text = tmp(4886).Text;
-      tmpResult23 = tmp(16762);
+      const Text = tmp(4892).Text;
+      tmpResult23 = tmp(16783);
       items2[1] = closure_5(Text, obj10);
       const obj11 = { variant: "text-xs/normal", color: "text-muted", style: tmp4.headTitle, children: stringResult };
-      const Text2 = tmp(4886).Text;
+      const Text2 = tmp(4892).Text;
       if (null == findTraceEntryResult.durationMs) {
         let intl = tmp(1126).intl;
-        stringResult = intl.string(_modDef3723["2wyRDK"]);
+        stringResult = intl.string(_modDef3753["2wyRDK"]);
       } else {
-        const tmpResult24 = tmp(16762);
+        const tmpResult24 = tmp(16783);
         stringResult = tmpResult24.formatDuration(findTraceEntryResult.durationMs);
       }
       items2[2] = closure_5(Text2, obj11);
@@ -658,14 +658,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           selectable: true,
           children: findTraceEntryResult.error,
         };
-        tmp25Result = closure_5(tmp(4886).Text, obj12);
+        tmp25Result = closure_5(tmp(4892).Text, obj12);
       }
       items3[1] = tmp25Result;
       let tmp26Result = null;
       if (traceDetailSectionsResult.includes("arguments")) {
         tmp26Result = null;
         if ("tool" === findTraceEntryResult.kind) {
-          const obj13 = { title: intl25.string(_modDef3723["G/4JST"]), children: items4 };
+          const obj13 = { title: intl25.string(_modDef3753["G/4JST"]), children: items4 };
           intl25 = tmp(1126).intl;
           let fields = findTraceEntryResult.fields;
           if (fields == null) {
@@ -694,7 +694,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp25Result19 = null;
           if (null != tmp22) {
             const obj15 = { variant: "text-xs/normal", color: "text-subtle", children: tmp22 };
-            tmp25Result19 = closure_5(tmp(4886).Text, obj15);
+            tmp25Result19 = closure_5(tmp(4892).Text, obj15);
           }
           items4[2] = tmp25Result19;
           tmp26Result = closure_6(closure_10, obj13);
@@ -705,14 +705,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (traceDetailSectionsResult.includes("result")) {
         tmp26Result5 = null;
         if ("tool" === findTraceEntryResult.kind) {
-          const obj16 = { title: intl26.string(_modDef3723.Dgg25Y), children: items5 };
+          const obj16 = { title: intl26.string(_modDef3753.Dgg25Y), children: items5 };
           intl26 = tmp(1126).intl;
-          const obj17 = { label: intl27.string(_modDef3723["U+OQCo"]), value: formatToPlainString4(ib7All, obj18) };
+          const obj17 = { label: intl27.string(_modDef3753["U+OQCo"]), value: formatToPlainString4(ib7All, obj18) };
           intl27 = tmp(1126).intl;
           const intl28 = tmp(1126).intl;
           formatToPlainString4 = intl28.formatToPlainString;
           let num9 = findTraceEntryResult.resultChars;
-          ib7All = _modDef3723.ib7All;
+          ib7All = _modDef3753.ib7All;
           if (num9 == null) {
             num9 = 0;
           }
@@ -721,7 +721,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp25Result20 = null;
           if (null != findTraceEntryResult.resultAdded) {
             const obj19 = {
-              label: intl2.string(_modDef3723["MQYS+n"]),
+              label: intl2.string(_modDef3753["MQYS+n"]),
               value: "+" + resultAdded + " \u2212" + resultRemoved,
             };
             intl2 = tmp(1126).intl;
@@ -736,8 +736,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp25Result21 = null;
           if (true === findTraceEntryResult.resultTruncated) {
             const obj20 = {
-              label: intl3.string(_modDef3723.t7GJFc),
-              value: intl4.string(_modDef3723.ijkkUh),
+              label: intl3.string(_modDef3753.t7GJFc),
+              value: intl4.string(_modDef3753.ijkkUh),
               muted: true,
             };
             intl3 = tmp(1126).intl;
@@ -766,23 +766,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (traceDetailSectionsResult.includes("usage")) {
         tmp26Result6 = null;
         if ("model" === findTraceEntryResult.kind) {
-          const obj22 = { title: intl29.string(_modDef3723.NXmRw1), children: items6 };
+          const obj22 = { title: intl29.string(_modDef3753.NXmRw1), children: items6 };
           intl29 = tmp(1126).intl;
           let tmp25Result23 = null;
           if (null != findTraceEntryResult.promptTokens) {
-            const obj23 = { label: intl5.string(_modDef3723.iq3T1q), value: formatToPlainString(v6GQUgQ, obj24) };
+            const obj23 = { label: intl5.string(_modDef3753.iq3T1q), value: formatToPlainString(v6GQUgQ, obj24) };
             intl5 = tmp(1126).intl;
             const intl6 = tmp(1126).intl;
             formatToPlainString = intl6.formatToPlainString;
             obj24 = { tokens: tmpResult25.formatTokens(findTraceEntryResult.promptTokens) };
-            v6GQUgQ = _modDef3723["6GQUgQ"];
-            tmpResult25 = tmp(16762);
+            v6GQUgQ = _modDef3753["6GQUgQ"];
+            tmpResult25 = tmp(16783);
             tmp25Result23 = closure_5(closure_9, obj23);
           }
           items6 = [tmp25Result23, , , , , ,];
           let tmp25Result24 = null;
           if (null != findTraceEntryResult.systemTokens) {
-            const obj25 = { label: intl7.string(_modDef3723.ZELAZn), value: formatToPlainString2(Te7mPn, obj26) };
+            const obj25 = { label: intl7.string(_modDef3753.ZELAZn), value: formatToPlainString2(Te7mPn, obj26) };
             intl7 = tmp(1126).intl;
             const intl8 = tmp(1126).intl;
             formatToPlainString2 = intl8.formatToPlainString;
@@ -793,11 +793,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               messages: formatTokens2(num12),
               messageCount: num13,
             };
-            Te7mPn = _modDef3723.Te7mPn;
+            Te7mPn = _modDef3753.Te7mPn;
             num10 = findTraceEntryResult.toolsTokens;
-            tmpResult26 = tmp(16762);
-            formatTokens = tmp(16762).formatTokens;
-            tmp(16762);
+            tmpResult26 = tmp(16783);
+            formatTokens = tmp(16783).formatTokens;
+            tmp(16783);
             if (num10 == null) {
               num10 = 0;
             }
@@ -806,8 +806,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               num11 = 0;
             }
             num12 = findTraceEntryResult.messagesTokens;
-            formatTokens2 = tmp(16762).formatTokens;
-            tmp(16762);
+            formatTokens2 = tmp(16783).formatTokens;
+            tmp(16783);
             if (num12 == null) {
               num12 = 0;
             }
@@ -821,7 +821,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp25Result25 = null;
           if (null != findTraceEntryResult.inputTokens) {
             const obj27 = {
-              label: intl9.string(_modDef3723["LENc/T"]),
+              label: intl9.string(_modDef3753["LENc/T"]),
               value: String(findTraceEntryResult.inputTokens),
             };
             intl9 = tmp(1126).intl;
@@ -832,7 +832,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp25Result26 = null;
           if (null != findTraceEntryResult.outputTokens) {
             const obj28 = {
-              label: intl10.string(_modDef3723.ewRHwx),
+              label: intl10.string(_modDef3753.ewRHwx),
               value: String(findTraceEntryResult.outputTokens),
             };
             intl10 = tmp(1126).intl;
@@ -842,13 +842,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           items6[3] = tmp25Result26;
           let tmp25Result27 = null;
           if (null != findTraceEntryResult.cacheReadTokens) {
-            const obj29 = { label: intl11.string(_modDef3723.heVFQD), value: formatToPlainString3(VO3gdd, obj30) };
+            const obj29 = { label: intl11.string(_modDef3753.heVFQD), value: formatToPlainString3(VO3gdd, obj30) };
             intl11 = tmp(1126).intl;
             const intl12 = tmp(1126).intl;
             formatToPlainString3 = intl12.formatToPlainString;
             obj30 = { read: null, write: cacheWriteTokens };
             ({ cacheReadTokens: obj38.read, cacheWriteTokens } = findTraceEntryResult);
-            VO3gdd = _modDef3723.VO3gdd;
+            VO3gdd = _modDef3753.VO3gdd;
             if (cacheWriteTokens == null) {
               cacheWriteTokens = 0;
             }
@@ -857,7 +857,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           items6[4] = tmp25Result27;
           let tmp25Result28 = null;
           if (null != findTraceEntryResult.costUsd) {
-            const obj31 = { label: intl13.string(_modDef3723.aBw2Vm), value: "$" + costUsd.toFixed(4) };
+            const obj31 = { label: intl13.string(_modDef3753.aBw2Vm), value: "$" + costUsd.toFixed(4) };
             intl13 = tmp(1126).intl;
             costUsd = findTraceEntryResult.costUsd;
             const _HermesInternal2 = HermesInternal;
@@ -867,9 +867,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj32 = {
             variant: "text-xs/normal",
             color: "text-subtle",
-            children: intl14.string(_modDef3723["foF/Bc"]),
+            children: intl14.string(_modDef3753["foF/Bc"]),
           };
-          const Text3 = tmp(4886).Text;
+          const Text3 = tmp(4892).Text;
           intl14 = tmp(1126).intl;
           items6[6] = closure_5(Text3, obj32);
           tmp26Result6 = closure_6(closure_10, obj22);
@@ -877,8 +877,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items3[4] = tmp26Result6;
       if (traceDetailSectionsResult.includes("arguments")) {
-        const obj33 = { variant: "text-xs/normal", color: "text-subtle", children: intl15.string(_modDef3723.o24IFK) };
-        const Text4 = tmp(4886).Text;
+        const obj33 = { variant: "text-xs/normal", color: "text-subtle", children: intl15.string(_modDef3753.o24IFK) };
+        const Text4 = tmp(4892).Text;
         intl15 = tmp(1126).intl;
         tmp25Result29 = closure_5(Text4, obj33);
       } else {
@@ -887,12 +887,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items3[5] = tmp25Result29;
       let tmp26Result8 = null;
       if (traceDetailSectionsResult.includes("diagnostics")) {
-        const obj34 = { title: intl16.string(_modDef3723["dix/W4"]), children: items7 };
+        const obj34 = { title: intl16.string(_modDef3753["dix/W4"]), children: items7 };
         intl16 = tmp(1126).intl;
         let tmp25Result30 = null;
         if (null != findTraceEntryResult1) {
           const obj35 = {
-            label: intl17.string(_modDef3723.soPsOJ),
+            label: intl17.string(_modDef3753.soPsOJ),
             value: "model" === findTraceEntryResult1.kind ? findTraceEntryResult1.model : findTraceEntryResult1.tool,
           };
           intl17 = tmp(1126).intl;
@@ -902,8 +902,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp25Result31 = null;
         if (length > 0) {
           const obj36 = {
-            label: intl18.string(_modDef3723.kNZBxr),
-            value: intl19.formatToPlainString(_modDef3723["6LoCUh"], obj37),
+            label: intl18.string(_modDef3753.kNZBxr),
+            value: intl19.formatToPlainString(_modDef3753["6LoCUh"], obj37),
           };
           intl18 = tmp(1126).intl;
           intl19 = tmp(1126).intl;
@@ -913,17 +913,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         items7[1] = tmp25Result31;
         let tmp25Result32 = null;
         if (null != findTraceEntryResult.turnId) {
-          const obj39 = { label: intl20.string(_modDef3723.bL1r5J), value: findTraceEntryResult.turnId };
+          const obj39 = { label: intl20.string(_modDef3753.bL1r5J), value: findTraceEntryResult.turnId };
           intl20 = tmp(1126).intl;
           tmp25Result32 = closure_5(closure_9, obj39);
         }
         items7[2] = tmp25Result32;
-        const obj40 = { label: intl21.string(_modDef3723.Ndwr7X), value: findTraceEntryResult.id };
+        const obj40 = { label: intl21.string(_modDef3753.Ndwr7X), value: findTraceEntryResult.id };
         intl21 = tmp(1126).intl;
         items7[3] = closure_5(closure_9, obj40);
         let tmp25Result33 = null;
         if (null != formatClockTimeResult) {
-          const obj41 = { label: intl22.string(_modDef3723.sO8ghW), value: formatClockTimeResult };
+          const obj41 = { label: intl22.string(_modDef3753.sO8ghW), value: formatClockTimeResult };
           intl22 = tmp(1126).intl;
           tmp25Result33 = closure_5(closure_9, obj41);
         }
@@ -932,7 +932,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if ("model" === findTraceEntryResult.kind) {
           tmp25Result34 = null;
           if (null != findTraceEntryResult.stopReason) {
-            const obj42 = { label: intl23.string(_modDef3723.VfYxPF), value: findTraceEntryResult.stopReason };
+            const obj42 = { label: intl23.string(_modDef3753.VfYxPF), value: findTraceEntryResult.stopReason };
             intl23 = tmp(1126).intl;
             tmp25Result34 = closure_5(closure_9, obj42);
           }
@@ -948,9 +948,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj44 = {
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: intl24.string(_modDef3723.mSm8iy),
+                children: intl24.string(_modDef3753.mSm8iy),
               };
-              const Text5 = tmp(4886).Text;
+              const Text5 = tmp(4892).Text;
               intl24 = tmp(1126).intl;
               items8 = [closure_5(Text5, obj44)];
               const schema = findTraceEntryResult.schema;
@@ -966,7 +966,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 const intl = projectId(dependencyMap[9]).intl;
                 formatToPlainString = intl.formatToPlainString;
                 required = label.required;
-                tmp3 = _modDef3723;
+                tmp3 = _modDef3753;
                 obj2 = { type: label.type };
                 return closure_1_5(closure_1_9, obj, label.name);
               });
@@ -1049,7 +1049,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({ entryId, initialEntry } = projectId);
       const tmp = closure_8();
       const tmp2 = projectId;
-      let obj = projectId(16761);
+      let obj = projectId(16782);
       const traceCategoryTextStyles = obj.useTraceCategoryTextStyles();
       const bottom = useSafeAreaInsetsDefault().bottom;
       let obj2 = projectId(504);
@@ -1060,7 +1060,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         () => ConjureProjectStore.getTrace(projectId),
         items1,
       );
-      const obj3 = projectId(16763);
+      const obj3 = projectId(16784);
       let findTraceEntryResult = obj3.findTraceEntry(stateFromStoresArray, entryId);
       if (findTraceEntryResult == null) {
         findTraceEntryResult = initialEntry;
@@ -1068,60 +1068,60 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let findTraceEntryResult1 = null;
       if ("tool" === findTraceEntryResult.kind) {
         let parentId = findTraceEntryResult.parentId;
-        const findTraceEntry = tmp2(16763).findTraceEntry;
-        tmp2(16763);
+        const findTraceEntry = tmp2(16784).findTraceEntry;
+        tmp2(16784);
         if (parentId == null) {
           parentId = null;
         }
         findTraceEntryResult1 = findTraceEntry(stateFromStoresArray, parentId);
       }
-      const tmp2Result13 = tmp2(16763);
+      const tmp2Result13 = tmp2(16784);
       const length = tmp2Result13.traceChildren(stateFromStoresArray, findTraceEntryResult.id).length;
       const obj4 = { childCount: length, hasParent: null != findTraceEntryResult1 };
-      const tmp2Result14 = tmp2(16767);
+      const tmp2Result14 = tmp2(16788);
       const traceDetailSectionsResult = tmp2Result14.traceDetailSections(findTraceEntryResult, obj4);
       let detailId;
-      const useConjureTraceDetail = tmp2(16768).useConjureTraceDetail;
-      tmp2(16768);
+      const useConjureTraceDetail = tmp2(16789).useConjureTraceDetail;
+      tmp2(16789);
       if ("tool" === findTraceEntryResult.kind) {
         detailId = findTraceEntryResult.detailId;
       }
       const conjureTraceDetail = useConjureTraceDetail(projectId, detailId);
       const tmp14 = "model" === findTraceEntryResult.kind ? findTraceEntryResult.model : findTraceEntryResult.tool;
-      const tmp2Result16 = tmp2(16765);
+      const tmp2Result16 = tmp2(16786);
       const formatClockTimeResult = tmp2Result16.formatClockTime(findTraceEntryResult.startedAt, "millis");
-      const tmp2Result17 = tmp2(16763);
+      const tmp2Result17 = tmp2(16784);
       const traceCategoryResult = tmp2Result17.traceCategory(findTraceEntryResult);
-      const tmp2Result18 = tmp2(16762);
+      const tmp2Result18 = tmp2(16783);
       const traceRichStatusLabelResult = tmp2Result18.traceRichStatusLabel(conjureTraceDetail);
       const obj5 = {
         scrollable: true,
-        header: closure_5(tmp2(6644).BottomSheetTitleHeader, { title: tmp14 }),
+        header: closure_5(tmp2(6651).BottomSheetTitleHeader, { title: tmp14 }),
         children: closure_5(BottomSheetScrollView, obj6),
       };
-      const ActionSheet = tmp2(6701).ActionSheet;
+      const ActionSheet = tmp2(6708).ActionSheet;
       obj6 = { contentContainerStyle: { paddingBottom: bottom }, children: closure_6(View, obj7) };
       obj7 = { style: tmp.content, children: items3 };
       const obj8 = { style: tmp.head, children: items2 };
-      BottomSheetScrollView = tmp2(6112).BottomSheetScrollView;
+      BottomSheetScrollView = tmp2(6119).BottomSheetScrollView;
       items2 = [, ,];
       const obj9 = { status: findTraceEntryResult.status };
-      items2[0] = closure_5(tmp2(16761).TraceStatusDot, obj9);
+      items2[0] = closure_5(tmp2(16782).TraceStatusDot, obj9);
       const obj10 = {
         variant: "text-xs/semibold",
         style: traceCategoryTextStyles[traceCategoryResult],
         children: tmp2Result19.categoryLabel(traceCategoryResult),
       };
-      const Text = tmp2(4886).Text;
-      tmp2Result19 = tmp2(16762);
+      const Text = tmp2(4892).Text;
+      tmp2Result19 = tmp2(16783);
       items2[1] = closure_5(Text, obj10);
       const obj11 = { variant: "text-xs/normal", color: "text-muted", style: tmp.headTitle, children: stringResult };
-      const Text2 = tmp2(4886).Text;
+      const Text2 = tmp2(4892).Text;
       if (null == findTraceEntryResult.durationMs) {
         let intl = tmp2(1126).intl;
-        stringResult = intl.string(_modDef3723["2wyRDK"]);
+        stringResult = intl.string(_modDef3753["2wyRDK"]);
       } else {
-        const tmp2Result20 = tmp2(16762);
+        const tmp2Result20 = tmp2(16783);
         stringResult = tmp2Result20.formatDuration(findTraceEntryResult.durationMs);
       }
       items2[2] = closure_5(Text2, obj11);
@@ -1134,14 +1134,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           selectable: true,
           children: findTraceEntryResult.error,
         };
-        tmp18Result = closure_5(tmp2(4886).Text, obj12);
+        tmp18Result = closure_5(tmp2(4892).Text, obj12);
       }
       items3[1] = tmp18Result;
       let tmp19Result = null;
       if (traceDetailSectionsResult.includes("arguments")) {
         tmp19Result = null;
         if ("tool" === findTraceEntryResult.kind) {
-          const obj13 = { title: intl25.string(_modDef3723["G/4JST"]), children: items4 };
+          const obj13 = { title: intl25.string(_modDef3753["G/4JST"]), children: items4 };
           intl25 = tmp2(1126).intl;
           let fields = findTraceEntryResult.fields;
           if (fields == null) {
@@ -1170,7 +1170,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18Result19 = null;
           if (null != traceRichStatusLabelResult) {
             const obj15 = { variant: "text-xs/normal", color: "text-subtle", children: traceRichStatusLabelResult };
-            tmp18Result19 = closure_5(tmp2(4886).Text, obj15);
+            tmp18Result19 = closure_5(tmp2(4892).Text, obj15);
           }
           items4[2] = tmp18Result19;
           tmp19Result = closure_6(closure_10, obj13);
@@ -1181,14 +1181,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (traceDetailSectionsResult.includes("result")) {
         tmp19Result5 = null;
         if ("tool" === findTraceEntryResult.kind) {
-          const obj16 = { title: intl26.string(_modDef3723.Dgg25Y), children: items5 };
+          const obj16 = { title: intl26.string(_modDef3753.Dgg25Y), children: items5 };
           intl26 = tmp2(1126).intl;
-          const obj17 = { label: intl27.string(_modDef3723["U+OQCo"]), value: formatToPlainString4(ib7All, obj18) };
+          const obj17 = { label: intl27.string(_modDef3753["U+OQCo"]), value: formatToPlainString4(ib7All, obj18) };
           intl27 = tmp2(1126).intl;
           const intl28 = tmp2(1126).intl;
           formatToPlainString4 = intl28.formatToPlainString;
           let num = findTraceEntryResult.resultChars;
-          ib7All = _modDef3723.ib7All;
+          ib7All = _modDef3753.ib7All;
           if (num == null) {
             num = 0;
           }
@@ -1197,7 +1197,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18Result20 = null;
           if (null != findTraceEntryResult.resultAdded) {
             const obj19 = {
-              label: intl2.string(_modDef3723["MQYS+n"]),
+              label: intl2.string(_modDef3753["MQYS+n"]),
               value: "+" + resultAdded + " \u2212" + resultRemoved,
             };
             intl2 = tmp2(1126).intl;
@@ -1212,8 +1212,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18Result21 = null;
           if (true === findTraceEntryResult.resultTruncated) {
             const obj20 = {
-              label: intl3.string(_modDef3723.t7GJFc),
-              value: intl4.string(_modDef3723.ijkkUh),
+              label: intl3.string(_modDef3753.t7GJFc),
+              value: intl4.string(_modDef3753.ijkkUh),
               muted: true,
             };
             intl3 = tmp2(1126).intl;
@@ -1242,23 +1242,23 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       if (traceDetailSectionsResult.includes("usage")) {
         tmp19Result6 = null;
         if ("model" === findTraceEntryResult.kind) {
-          const obj22 = { title: intl29.string(_modDef3723.NXmRw1), children: items6 };
+          const obj22 = { title: intl29.string(_modDef3753.NXmRw1), children: items6 };
           intl29 = tmp2(1126).intl;
           let tmp18Result23 = null;
           if (null != findTraceEntryResult.promptTokens) {
-            const obj23 = { label: intl5.string(_modDef3723.iq3T1q), value: formatToPlainString(v6GQUgQ, obj24) };
+            const obj23 = { label: intl5.string(_modDef3753.iq3T1q), value: formatToPlainString(v6GQUgQ, obj24) };
             intl5 = tmp2(1126).intl;
             const intl6 = tmp2(1126).intl;
             formatToPlainString = intl6.formatToPlainString;
             obj24 = { tokens: tmp2Result21.formatTokens(findTraceEntryResult.promptTokens) };
-            v6GQUgQ = _modDef3723["6GQUgQ"];
-            tmp2Result21 = tmp2(16762);
+            v6GQUgQ = _modDef3753["6GQUgQ"];
+            tmp2Result21 = tmp2(16783);
             tmp18Result23 = closure_5(closure_9, obj23);
           }
           items6 = [tmp18Result23, , , , , ,];
           let tmp18Result24 = null;
           if (null != findTraceEntryResult.systemTokens) {
-            const obj25 = { label: intl7.string(_modDef3723.ZELAZn), value: formatToPlainString2(Te7mPn, obj26) };
+            const obj25 = { label: intl7.string(_modDef3753.ZELAZn), value: formatToPlainString2(Te7mPn, obj26) };
             intl7 = tmp2(1126).intl;
             const intl8 = tmp2(1126).intl;
             formatToPlainString2 = intl8.formatToPlainString;
@@ -1269,11 +1269,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               messages: formatTokens2(num4),
               messageCount: num5,
             };
-            Te7mPn = _modDef3723.Te7mPn;
+            Te7mPn = _modDef3753.Te7mPn;
             num2 = findTraceEntryResult.toolsTokens;
-            tmp2Result22 = tmp2(16762);
-            formatTokens = tmp2(16762).formatTokens;
-            tmp2(16762);
+            tmp2Result22 = tmp2(16783);
+            formatTokens = tmp2(16783).formatTokens;
+            tmp2(16783);
             if (num2 == null) {
               num2 = 0;
             }
@@ -1282,8 +1282,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               num3 = 0;
             }
             num4 = findTraceEntryResult.messagesTokens;
-            formatTokens2 = tmp2(16762).formatTokens;
-            tmp2(16762);
+            formatTokens2 = tmp2(16783).formatTokens;
+            tmp2(16783);
             if (num4 == null) {
               num4 = 0;
             }
@@ -1297,7 +1297,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18Result25 = null;
           if (null != findTraceEntryResult.inputTokens) {
             const obj27 = {
-              label: intl9.string(_modDef3723["LENc/T"]),
+              label: intl9.string(_modDef3753["LENc/T"]),
               value: String(findTraceEntryResult.inputTokens),
             };
             intl9 = tmp2(1126).intl;
@@ -1308,7 +1308,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp18Result26 = null;
           if (null != findTraceEntryResult.outputTokens) {
             const obj28 = {
-              label: intl10.string(_modDef3723.ewRHwx),
+              label: intl10.string(_modDef3753.ewRHwx),
               value: String(findTraceEntryResult.outputTokens),
             };
             intl10 = tmp2(1126).intl;
@@ -1318,13 +1318,13 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           items6[3] = tmp18Result26;
           let tmp18Result27 = null;
           if (null != findTraceEntryResult.cacheReadTokens) {
-            const obj29 = { label: intl11.string(_modDef3723.heVFQD), value: formatToPlainString3(VO3gdd, obj30) };
+            const obj29 = { label: intl11.string(_modDef3753.heVFQD), value: formatToPlainString3(VO3gdd, obj30) };
             intl11 = tmp2(1126).intl;
             const intl12 = tmp2(1126).intl;
             formatToPlainString3 = intl12.formatToPlainString;
             obj30 = { read: null, write: cacheWriteTokens };
             ({ cacheReadTokens: obj36.read, cacheWriteTokens } = findTraceEntryResult);
-            VO3gdd = _modDef3723.VO3gdd;
+            VO3gdd = _modDef3753.VO3gdd;
             if (cacheWriteTokens == null) {
               cacheWriteTokens = 0;
             }
@@ -1333,7 +1333,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           items6[4] = tmp18Result27;
           let tmp18Result28 = null;
           if (null != findTraceEntryResult.costUsd) {
-            const obj31 = { label: intl13.string(_modDef3723.aBw2Vm), value: "$" + costUsd.toFixed(4) };
+            const obj31 = { label: intl13.string(_modDef3753.aBw2Vm), value: "$" + costUsd.toFixed(4) };
             intl13 = tmp2(1126).intl;
             costUsd = findTraceEntryResult.costUsd;
             const _HermesInternal2 = HermesInternal;
@@ -1343,9 +1343,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           const obj32 = {
             variant: "text-xs/normal",
             color: "text-subtle",
-            children: intl14.string(_modDef3723["foF/Bc"]),
+            children: intl14.string(_modDef3753["foF/Bc"]),
           };
-          const Text3 = tmp2(4886).Text;
+          const Text3 = tmp2(4892).Text;
           intl14 = tmp2(1126).intl;
           items6[6] = closure_5(Text3, obj32);
           tmp19Result6 = closure_6(closure_10, obj22);
@@ -1353,8 +1353,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items3[4] = tmp19Result6;
       if (traceDetailSectionsResult.includes("arguments")) {
-        const obj33 = { variant: "text-xs/normal", color: "text-subtle", children: intl15.string(_modDef3723.o24IFK) };
-        const Text4 = tmp2(4886).Text;
+        const obj33 = { variant: "text-xs/normal", color: "text-subtle", children: intl15.string(_modDef3753.o24IFK) };
+        const Text4 = tmp2(4892).Text;
         intl15 = tmp2(1126).intl;
         tmp18Result29 = closure_5(Text4, obj33);
       } else {
@@ -1363,12 +1363,12 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items3[5] = tmp18Result29;
       let tmp19Result8 = null;
       if (traceDetailSectionsResult.includes("diagnostics")) {
-        const obj34 = { title: intl16.string(_modDef3723["dix/W4"]), children: items7 };
+        const obj34 = { title: intl16.string(_modDef3753["dix/W4"]), children: items7 };
         intl16 = tmp2(1126).intl;
         let tmp18Result30 = null;
         if (null != findTraceEntryResult1) {
           const obj35 = {
-            label: intl17.string(_modDef3723.soPsOJ),
+            label: intl17.string(_modDef3753.soPsOJ),
             value: "model" === findTraceEntryResult1.kind ? findTraceEntryResult1.model : findTraceEntryResult1.tool,
           };
           intl17 = tmp2(1126).intl;
@@ -1378,8 +1378,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp18Result31 = null;
         if (length > 0) {
           const obj37 = {
-            label: intl18.string(_modDef3723.kNZBxr),
-            value: intl19.formatToPlainString(_modDef3723["6LoCUh"], obj38),
+            label: intl18.string(_modDef3753.kNZBxr),
+            value: intl19.formatToPlainString(_modDef3753["6LoCUh"], obj38),
           };
           intl18 = tmp2(1126).intl;
           intl19 = tmp2(1126).intl;
@@ -1389,17 +1389,17 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         items7[1] = tmp18Result31;
         let tmp18Result32 = null;
         if (null != findTraceEntryResult.turnId) {
-          const obj39 = { label: intl20.string(_modDef3723.bL1r5J), value: findTraceEntryResult.turnId };
+          const obj39 = { label: intl20.string(_modDef3753.bL1r5J), value: findTraceEntryResult.turnId };
           intl20 = tmp2(1126).intl;
           tmp18Result32 = closure_5(closure_9, obj39);
         }
         items7[2] = tmp18Result32;
-        const obj40 = { label: intl21.string(_modDef3723.Ndwr7X), value: findTraceEntryResult.id };
+        const obj40 = { label: intl21.string(_modDef3753.Ndwr7X), value: findTraceEntryResult.id };
         intl21 = tmp2(1126).intl;
         items7[3] = closure_5(closure_9, obj40);
         let tmp18Result33 = null;
         if (null != formatClockTimeResult) {
-          const obj41 = { label: intl22.string(_modDef3723.sO8ghW), value: formatClockTimeResult };
+          const obj41 = { label: intl22.string(_modDef3753.sO8ghW), value: formatClockTimeResult };
           intl22 = tmp2(1126).intl;
           tmp18Result33 = closure_5(closure_9, obj41);
         }
@@ -1408,7 +1408,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if ("model" === findTraceEntryResult.kind) {
           tmp18Result34 = null;
           if (null != findTraceEntryResult.stopReason) {
-            const obj42 = { label: intl23.string(_modDef3723.VfYxPF), value: findTraceEntryResult.stopReason };
+            const obj42 = { label: intl23.string(_modDef3753.VfYxPF), value: findTraceEntryResult.stopReason };
             intl23 = tmp2(1126).intl;
             tmp18Result34 = closure_5(closure_9, obj42);
           }
@@ -1424,9 +1424,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj44 = {
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: intl24.string(_modDef3723.mSm8iy),
+                children: intl24.string(_modDef3753.mSm8iy),
               };
-              const Text5 = tmp2(4886).Text;
+              const Text5 = tmp2(4892).Text;
               intl24 = tmp2(1126).intl;
               items8 = [closure_5(Text5, obj44)];
               const schema = findTraceEntryResult.schema;
@@ -1442,7 +1442,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 const intl = projectId(dependencyMap[9]).intl;
                 formatToPlainString = intl.formatToPlainString;
                 required = label.required;
-                tmp3 = _modDef3723;
+                tmp3 = _modDef3753;
                 obj2 = { type: label.type };
                 return closure_1_5(closure_1_9, obj, label.name);
               });

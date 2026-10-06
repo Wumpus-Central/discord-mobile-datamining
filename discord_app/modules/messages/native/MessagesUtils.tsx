@@ -13,13 +13,14 @@ import ReactionUtils from "../../reactions/ReactionUtils.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import flow_Client from "../../../flow/Client.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04811_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04817_AssetRegistry.js";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../haptics/HapticFeedbackTypes.tsx";
 import ChannelUtils from "../../../utils/ChannelUtils.tsx";
 import MediaFormatTesters from "../MediaFormatTesters.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import InteractionComponentUtils from "../../interaction_components/InteractionComponentUtils.tsx";
+import InteractionTypes from "../../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import QuestTypes from "../../quests/QuestTypes.tsx";
 import useShowMemberVerificationGate from "../../guild_member_verification/hooks/useShowMemberVerificationGate.tsx";
 import MemberVerificationModalActionCreators from "../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
@@ -63,7 +64,7 @@ let closure_18;
 let closure_19;
 let closure_20;
 let closure_21;
-const f101881 = (id) => id.id;
+const f102033 = (id) => id.id;
 function getVisibleMessages(arg0) {
   let chatManager;
   let firstVisibleMessagePercentVisible;
@@ -336,7 +337,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(
             source: obj.embeds[mediaIndex],
             mediaType: "image",
             mediaUrl: obj.embeds[mediaIndex].url,
-            contentType: "o",
+            contentType: "Array",
           };
         }
       }
@@ -624,7 +625,7 @@ export const startOrCancelChannelLatestMessagesLoad = function startOrCancelChan
 export const recordTimings = function recordTimings(channelId, hasFetched) {
   const recordMessageRender = TTITrackerDefault.recordMessageRender;
   TTITrackerDefault;
-  const mapped = hasFetched.map(f101881);
+  const mapped = hasFetched.map(f102033);
   hasFetched = hasFetched.hasFetched;
   if (!hasFetched) {
     const tmp3 = hasFetched.ready && !hasFetched.cached;
@@ -933,7 +934,7 @@ export const syncMessageDisplay = function syncMessageDisplay(messages) {
   }
   const recordMessageRender = oldestUnreadMessageId(scrollToMessageId[39]).recordMessageRender;
   oldestUnreadMessageId(scrollToMessageId[39]);
-  const mapped = messages.map(f101881);
+  const mapped = messages.map(f102033);
   let hasFetched = messages.hasFetched;
   if (!hasFetched) {
     hasFetched = messages.ready && !messages.cached;
@@ -1199,7 +1200,7 @@ export const getMessageAuthorMemberUserIds = function getMessageAuthorMemberUser
     type = initialInteractionMetadata.type;
   }
   let tmp5;
-  if (type === Server.InteractionTypes.APPLICATION_COMMAND) {
+  if (type === InteractionTypes.InteractionTypes.APPLICATION_COMMAND) {
     const target_user = initialInteractionMetadata.target_user;
     let id;
     if (target_user != null) {

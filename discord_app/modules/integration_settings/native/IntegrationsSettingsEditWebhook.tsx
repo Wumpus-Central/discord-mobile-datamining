@@ -306,7 +306,7 @@ class EditWebhook extends PureComponent {
     ({ name, channel, errors } = state);
     const webhookType = props.webhookType;
     ({ avatar, copied } = state);
-    const Text = webhookId(4886).Text;
+    const Text = webhookId(4892).Text;
     const intl = webhookId(1126).intl;
     const string = intl.string;
     const t = webhookId(1126).t;
@@ -318,9 +318,9 @@ class EditWebhook extends PureComponent {
     let obj = { style: tmp.form, contentContainerStyle: items, children: closure_12(Stack, obj2) };
     items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
     const tmp2Result = closure_11(Text, { variant: "text-sm/medium", color: "text-link", children: stringResult });
-    const Form = tmp3(8895).Form;
+    const Form = tmp3(8924).Form;
     obj2 = { spacing: nativeDefault.space.PX_24, style: { paddingHorizontal: tmp.row.padding }, children: items1 };
-    Stack = tmp3(5593).Stack;
+    Stack = tmp3(5600).Stack;
     let tmp2Result3 = null;
     if (webhookType !== constants.CHANNEL_FOLLOWER) {
       const obj3 = { iconProps: obj4, label: intl2.string(webhookId(1126).t["7+5GQa"]) };
@@ -347,7 +347,7 @@ class EditWebhook extends PureComponent {
       onChange: self.handleNameChange,
       errorMessage: first,
     };
-    const TextInput = tmp3(6098).TextInput;
+    const TextInput = tmp3(6105).TextInput;
     intl3 = tmp3(1126).intl;
     first = undefined;
     if (undefined !== errors) {
@@ -361,7 +361,7 @@ class EditWebhook extends PureComponent {
       hasIcons: true,
       children: closure_11(TableRow, obj7),
     };
-    const TableRowGroup = tmp3(6074).TableRowGroup;
+    const TableRowGroup = tmp3(6081).TableRowGroup;
     intl4 = tmp3(1126).intl;
     obj7 = {
       label: tmp3Result.computeChannelName(channel, UserStore, RelationshipStore),
@@ -369,15 +369,15 @@ class EditWebhook extends PureComponent {
       onPress: self.handleChannelChange,
       icon: closure_11(Icon, obj8),
     };
-    TableRow = tmp3(5993).TableRow;
-    tmp3Result = webhookId(5043);
+    TableRow = tmp3(6000).TableRow;
+    tmp3Result = webhookId(5049);
     obj8 = {
       size: webhookId(1188).Icon.Sizes.CUSTOM,
       source: tmp3Result3.getChannelIcon(channel),
       style: tmp.channelIcon,
     };
     Icon = tmp3(1188).Icon;
-    tmp3Result3 = webhookId(5812);
+    tmp3Result3 = webhookId(5819);
     items1[2] = closure_11(TableRowGroup, obj6);
     let tmp2Result4 = null;
     if (null != token) {
@@ -386,14 +386,14 @@ class EditWebhook extends PureComponent {
         hasIcons: false,
         children: closure_11(TableRow2, obj10),
       };
-      const TableRowGroup2 = tmp3(6074).TableRowGroup;
+      const TableRowGroup2 = tmp3(6081).TableRowGroup;
       intl5 = tmp3(1126).intl;
       obj10 = {
         label: "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token),
         onPress: self.handleCopyUrl,
         trailing: tmp2Result,
       };
-      TableRow2 = tmp3(5993).TableRow;
+      TableRow2 = tmp3(6000).TableRow;
       const tmp3Result4 = webhookId(1282);
       aPIBaseURL = tmp3Result4.getAPIBaseURL(false);
       const _HermesInternal = HermesInternal;
@@ -401,9 +401,9 @@ class EditWebhook extends PureComponent {
     }
     items1[3] = tmp2Result4;
     const obj11 = { hasIcons: false, children: closure_11(TableRow3, obj12) };
-    const TableRowGroup3 = tmp3(6074).TableRowGroup;
+    const TableRowGroup3 = tmp3(6081).TableRowGroup;
     obj12 = { variant: "danger", onPress: self.handleDeleteWebhook, label: intl6.string(webhookId(1126).t.oyYWHE) };
-    TableRow3 = tmp3(5993).TableRow;
+    TableRow3 = tmp3(6000).TableRow;
     intl6 = tmp3(1126).intl;
     items1[4] = closure_11(TableRowGroup3, obj11);
     return closure_11(Form, obj);

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/settings/native/ConjureSettingsSheet.tsx
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import useSafeAreaInsetsKeyboardAwareDefault from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 import ConjureProjectStore2 from "../../projects/ConjureProjectStore.tsx";
 import _asyncToGenerator_mod from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -19,7 +19,7 @@ let c3, closure_2, closure_3, dependencyMap, importDefault, projectId, tabs;
 let c10;
 let tmp5;
 let unpackModuleId;
-const useConjureProjectSettingsFormDefault = tmp5(16573);
+const useConjureProjectSettingsFormDefault = tmp5(16613);
 let _asyncToGenerator = _asyncToGenerator_mod;
 let _slicedToArray = _slicedToArray_mod;
 const View = react_native.View;
@@ -27,10 +27,10 @@ let isProjectOwner = ConjureProjectStore2.isProjectOwner;
 ({ jsx: c10, jsxs: unpackModuleId } = Fragment);
 const ConjureSettingsSheet = "ConjureSettingsSheet";
 let obj = {
-  project: _modDef3723.W0eQfN,
-  app: _modDef3723.lFaJYF,
-  secrets: _modDef3723.vDpCPU,
-  model: _modDef3723.Rs3qc9,
+  project: _modDef3753.W0eQfN,
+  app: _modDef3753.lFaJYF,
+  secrets: _modDef3753.vDpCPU,
+  model: _modDef3753.Rs3qc9,
 };
 let closure_14 = createStyles.createStyles((paddingBottom) => {
   obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
@@ -281,7 +281,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = dependencyMap;
       ({ guildId, initialTab, scopeKeys, note, notifyAgent, isPreview } = projectId);
       const tmp4 = projectId;
-      const tmp3 = closure_14(stateFromStores1(6471)({ includeKeyboardHeight: true }).insets.bottom);
+      const tmp3 = closure_14(stateFromStores1(6478)({ includeKeyboardHeight: true }).insets.bottom);
       obj = projectId(504);
       let items = [memo];
       const items1 = [projectId];
@@ -315,7 +315,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       dependencyMap = tmp8;
       let guild_id;
-      const tmpResult = tmp(16573);
+      const tmpResult = tmp(16613);
       if (stateFromStores != null) {
         guild_id = stateFromStores.guild_id;
       }
@@ -324,7 +324,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResultResult = tmpResult(projectId, guild_id);
       _asyncToGenerator = tmpResultResult;
-      const tmp13 = tmp(16577)({ projectId, scopeKeys, note, notifyAgent, isPreview });
+      const tmp13 = tmp(16617)({ projectId, scopeKeys, note, notifyAgent, isPreview });
       _slicedToArray = tmp13;
       isScoped = tmp13.isScoped;
       loaded = tmp13.loaded;
@@ -456,16 +456,16 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let obj5 = {
         startExpanded: true,
-        dismissAccessibilityLabel: intl.string(tmp(3723).bA4VU5),
+        dismissAccessibilityLabel: intl.string(tmp(3753).bA4VU5),
         header: found(BottomSheetTitleHeader, obj6),
         children: tmp24(tmp25, obj7),
       };
-      const ActionSheet = tmp4(6701).ActionSheet;
+      const ActionSheet = tmp4(6708).ActionSheet;
       intl = tmp4(1126).intl;
-      BottomSheetTitleHeader = tmp4(6644).BottomSheetTitleHeader;
+      BottomSheetTitleHeader = tmp4(6651).BottomSheetTitleHeader;
       const intl2 = tmp4(1126).intl;
       const string = intl2.string;
-      const tmpResult2 = tmp(3723);
+      const tmpResult2 = tmp(3753);
       let tmp22Result = null;
       obj6 = { title: string(isScoped ? tmpResult2["jZjP+I"] : tmpResult2.I2XSKe) };
       obj7 = { style: tmp3.container, children: items9 };
@@ -510,7 +510,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp22Result3 = null;
         if ("model" === found) {
           const obj9 = { projectId };
-          tmp22Result3 = tmp22(tmp4(16578).ConjureModelSettingsContent, obj9);
+          tmp22Result3 = tmp22(tmp4(16618).ConjureModelSettingsContent, obj9);
         }
       }
       items9[4] = tmp22Result3;
@@ -520,22 +520,22 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (null == found) {
           let tmp22Result4;
           if (stateFromStores2) {
-            const obj10 = { variant: "text-sm/normal", color: "text-muted", children: intl3.string(tmp(3723).lJJayk) };
-            const Text = tmp4(4886).Text;
+            const obj10 = { variant: "text-sm/normal", color: "text-muted", children: intl3.string(tmp(3753).lJJayk) };
+            const Text = tmp4(4892).Text;
             intl3 = tmp4(1126).intl;
             tmp22Result4 = tmp22(Text, obj10);
           } else {
-            tmp22Result4 = tmp22(tmp4(5968).ActivityIndicator, {});
+            tmp22Result4 = tmp22(tmp4(5975).ActivityIndicator, {});
           }
           tmp32 = tmp22Result4;
         }
       }
       items9[5] = tmp32;
-      const Button = tmp4(5594).Button;
+      const Button = tmp4(5601).Button;
       const intl4 = tmp4(1126).intl;
       const string2 = intl4.string;
       if (isScoped) {
-        A7dQd9 = tmp(3723).A7dQd9;
+        A7dQd9 = tmp(3753).A7dQd9;
       } else {
         A7dQd9 = tmp4(1126).t["R3BPH+"];
       }
@@ -614,7 +614,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[13] === tmp13) {
                   tmp14 = cResult[14];
                 }
-                const tmpResult = tabs(9282);
+                const tmpResult = tabs(9317);
                 const segmentedControlState = tmpResult.useSegmentedControlState(tmp14);
                 if (cResult[15] === segmentedControlState) {
                   let tmp16;
@@ -633,10 +633,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = { onLayout: first, children: tmp17Result };
                 if (tabs.length > 3) {
                   const obj3 = { state: segmentedControlState };
-                  tmp17Result = tmp17(tmp(12282).Tabs, obj3);
+                  tmp17Result = tmp17(tmp(12297).Tabs, obj3);
                 } else {
                   const obj4 = { state: segmentedControlState };
-                  tmp17Result = tmp17(tmp(9283).SegmentedControl, obj4);
+                  tmp17Result = tmp17(tmp(9318).SegmentedControl, obj4);
                 }
                 const tmp17Result2 = tmp17(View, obj2);
                 cResult[15] = segmentedControlState;
@@ -704,7 +704,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }),
         items,
       );
-      const tmp7 = tabs(9282);
+      const tmp7 = tabs(9317);
       obj = {
         items: memo,
         pageWidth: tmp2,
@@ -720,10 +720,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { onLayout: callback, children: tmp9Result };
       if (tabs.length > 3) {
         const obj3 = { state: segmentedControlState };
-        tmp9Result = closure_10(tmp5(12282).Tabs, obj3);
+        tmp9Result = closure_10(tmp5(12297).Tabs, obj3);
       } else {
         const obj4 = { state: segmentedControlState };
-        tmp9Result = closure_10(tmp5(9283).SegmentedControl, obj4);
+        tmp9Result = closure_10(tmp5(9318).SegmentedControl, obj4);
       }
       return closure_10(View, obj2);
     };

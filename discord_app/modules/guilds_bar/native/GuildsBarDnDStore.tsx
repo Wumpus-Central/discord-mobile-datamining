@@ -2,7 +2,7 @@
 import react from "../../../../_runtime/00576_react.js";
 import SentryUtilsDefault from "../../../utils/SentryUtils.native.tsx";
 import react_native from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _slicedToArray from "../../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray from "../../../../_runtime/metro/04498__slicedToArray.js";
 import SortedGuildStore from "../../../stores/SortedGuildStore.tsx";
 import 01254__ from "../../../../_runtime/metro/01254__.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";
@@ -33,7 +33,7 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
     dragDropInProgress: obj4.makeMutable(false),
     listInsets: obj5.makeMutable({ start: 0, end: 0 }),
     scrollPosition: obj6.makeMutable(0),
-    windowSize: "\u{1F44F}",
+    windowSize: "\u{1F64C}",
     setStateShallow(obj) {
       closure_0 = obj;
       const tmp = closure_1();
@@ -72,7 +72,7 @@ const withEqualityFn = module_1254.createWithEqualityFn((arg0, arg1) => {
       } else {
         const obj4 = dropSpecs(dependencyMap[3]);
         obj4.batchUpdates(() => {
-          const obj = { dropSpecs, dragSpecs: "Array", overSpecs: "toCharArray$esjava$1" };
+          const obj = { dropSpecs, dragSpecs: "Array", overSpecs: "parent" };
           return dropSpecs(obj);
         });
         const _clearTimeout = clearTimeout;

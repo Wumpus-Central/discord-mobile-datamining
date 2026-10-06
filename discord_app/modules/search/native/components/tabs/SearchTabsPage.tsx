@@ -79,9 +79,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const tmpResult = searchContext(504);
         const stateFromStores = tmpResult.useStateFromStores(tmp9, tmp11);
-        const tmpResult3 = searchContext(6832);
+        const tmpResult3 = searchContext(6842);
         const isChannelSpoilerGated = tmpResult3.useIsChannelSpoilerGated(stateFromStores);
-        searchContext(5100);
+        searchContext(5106);
         if (first) {
           if (tab !== SearchTabs.MEMBERS) {
             if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -225,7 +225,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           } else if (SearchTabs.THREADS === tab) {
             let tmp28;
             if (cResult[37] !== searchContext) {
-              const tmp30 = jsx(searchContext(16889).SearchTabsThreadScreen, { searchContext });
+              const tmp30 = jsx(searchContext(16914).SearchTabsThreadScreen, { searchContext });
               cResult[37] = searchContext;
               cResult[38] = tmp30;
               tmp28 = tmp30;
@@ -313,9 +313,9 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return getChannel(channelId);
       });
-      const obj2 = searchContext(6832);
+      const obj2 = searchContext(6842);
       const isChannelSpoilerGated = obj2.useIsChannelSpoilerGated(stateFromStores);
-      searchContext(5100);
+      searchContext(5106);
       if (tmp2) {
         if (tab !== SearchTabs.MEMBERS) {
           if (searchContext.type === SearchTypes.GUILD_CHANNEL) {
@@ -343,7 +343,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (SearchTabs.LINKS === tab) {
           return jsx(LinksScreenDefault, { tab, searchContext, isFocused, width });
         } else if (SearchTabs.THREADS === tab) {
-          return jsx(searchContext(16889).SearchTabsThreadScreen, { searchContext });
+          return jsx(searchContext(16914).SearchTabsThreadScreen, { searchContext });
         } else if (SearchTabs.MESSAGES === tab) {
           return jsx(MessagesScreenDefault, { tab, searchContext, isFocused });
         } else if (SearchTabs.PINS === tab) {

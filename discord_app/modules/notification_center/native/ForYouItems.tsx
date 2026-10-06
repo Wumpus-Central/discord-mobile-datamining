@@ -219,13 +219,13 @@ let closure_27 = createStyles.createStyles(obj7);
 let closure_28 = { channelMentionText: "redesign/message-preview/medium" };
 let ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const f73536 = () => {};
+const f73639 = () => {};
 ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const f73537 = () => {};
+const f73640 = () => {};
 ReactCompilerGating = ReactCompilerGating_mod;
 ReactCompilerGating.isReactCompilerEnabled();
-const f73538 = () => {};
+const f73641 = () => {};
 createStyles = createStyles_mod;
 let obj9 = {
   container: { flex: 1 },
@@ -342,7 +342,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       item = item.item;
       ({ acked, compactMode } = item);
       const tmp4 = closure_32();
-      if (typeof f73536 === "function") {
+      if (typeof f73639 === "function") {
         let tmp8;
         let tmp13;
         const obj2 = CustomMarkupAll;
@@ -425,7 +425,7 @@ let closure_36 = ReactCompilerGating.isReactCompilerEnabled()
       let num;
       ({ item, acked, compactMode } = arg0);
       const tmp = closure_32();
-      if (typeof f73536 === "function") {
+      if (typeof f73639 === "function") {
         const obj2 = { style: tmp.calloutContainer, pointerEvents: "none", children: items };
         const obj3 = { style: tmp.messagePreviewBarV2 };
         const obj = CustomMarkupAll;
@@ -471,7 +471,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       const acked = item.acked;
       ({ compactMode, roleStyle } = item);
       const tmp4 = closure_32();
-      const obj2 = message_channel_id(5784);
+      const obj2 = message_channel_id(5791);
       const notifCenterV2MessagePreviewParser = obj2.getNotifCenterV2MessagePreviewParser(
         closure_27(),
         closure_28,
@@ -558,7 +558,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp26 = cResult[11];
         }
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         const tmp29 = acked ? tmp4.messagePreviewTextV2Acked : tmp4.messagePreviewTextV2NotAcked;
         let prop;
         if (isSystemMessage) {
@@ -582,8 +582,8 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             authorId: id1,
           };
           id1 = undefined;
-          const renderMessageContentMarkup = item(7531).renderMessageContentMarkup;
-          item(7531);
+          const renderMessageContentMarkup = item(7542).renderMessageContentMarkup;
+          item(7542);
           if (message5 != null) {
             id1 = message5.author.id;
           }
@@ -599,13 +599,13 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
             const obj6 = { style: tmp4.messagePreviewIconV2Container, children: closure_21(Icon, obj7) };
             Icon = tmp(1188).Icon;
             if (constants4.ATTACHMENT === iconType) {
-              tmp38 = guild_id(11042);
+              tmp38 = guild_id(11055);
             } else if (constants4.STICKER === iconType) {
-              tmp38 = guild_id(10149);
+              tmp38 = guild_id(10162);
             } else {
               tmp38 = null;
               if (constants4.VOICE_MESSAGE === iconType) {
-                tmp38 = guild_id(8276);
+                tmp38 = guild_id(8309);
               }
             }
             obj7 = { source: tmp38, size: item(1188).IconSizes.SMALL, style: tmp4.messagePreviewIconV2 };
@@ -712,7 +712,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       let message_channel_id;
       ({ compactMode, roleStyle } = item);
       const tmp = closure_32();
-      const obj = message_channel_id(5784);
+      const obj = message_channel_id(5791);
       const notifCenterV2MessagePreviewParser = obj.getNotifCenterV2MessagePreviewParser(
         closure_27(),
         closure_28,
@@ -761,7 +761,7 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       items3[0] = closure_21(closure_7, obj6);
       const items4 = [acked ? tmp.messagePreviewTextV2Acked : tmp.messagePreviewTextV2NotAcked];
       let prop;
-      const Text = item(4886).Text;
+      const Text = item(4892).Text;
       if (isSystemMessage) {
         prop = tmp.messagePreviewSystemTextV2;
       }
@@ -774,8 +774,8 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
       let message = item.message;
       const obj8 = { content, guildId: guild_id, channelId: message_channel_id, messageId: message_id, authorId: id };
       id = undefined;
-      const renderMessageContentMarkup = item(7531).renderMessageContentMarkup;
-      item(7531);
+      const renderMessageContentMarkup = item(7542).renderMessageContentMarkup;
+      item(7542);
       if (message != null) {
         id = message.author.id;
       }
@@ -790,13 +790,13 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { style: tmp.messagePreviewIconV2Container, children: closure_21(Icon, obj10) };
         Icon = tmp5(1188).Icon;
         if (constants4.ATTACHMENT === iconType) {
-          tmp17 = guild_id(11042);
+          tmp17 = guild_id(11055);
         } else if (constants4.STICKER === iconType) {
-          tmp17 = guild_id(10149);
+          tmp17 = guild_id(10162);
         } else {
           tmp17 = null;
           if (constants4.VOICE_MESSAGE === iconType) {
-            tmp17 = guild_id(8276);
+            tmp17 = guild_id(8309);
           }
         }
         obj10 = { source: tmp17, size: item(1188).IconSizes.SMALL, style: tmp.messagePreviewIconV2 };
@@ -1137,10 +1137,10 @@ let closure_39 = react.memo((item) => {
     tmp11,
     compactMode,
   );
-  if (typeof f73537 === "function") {
+  if (typeof f73640 === "function") {
     let tmp18 = onSoftAckItem(tmp3[17]);
     const getParserWithoutLinks = tmp18.getParserWithoutLinks;
-    if (typeof f73538 === "function") {
+    if (typeof f73641 === "function") {
       const tmp17Result = onSoftAckItem(tmp3[17]);
       const parserWithoutLinks = tmp17Result.getParserWithoutLinks(closure_24());
       const tmp24 =

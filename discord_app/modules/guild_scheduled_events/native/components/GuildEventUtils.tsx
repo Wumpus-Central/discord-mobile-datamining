@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventUtils.tsx
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
 import EntityUtils from "../../utils/EntityUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/09190_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/09225_AssetRegistry.js";
 import LocationIcon2 from "../../../../design/components/Icon/native/redesign/generated/LocationIcon.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

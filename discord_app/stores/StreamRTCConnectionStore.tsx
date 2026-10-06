@@ -23,7 +23,7 @@ const StreamRTCConnectionDefault = StreamRTCConnection;
 let StreamLayouts;
 let c9;
 let obj2;
-const f89713 = (destroy, arg1) => {
+const f89851 = (destroy, arg1) => {
   let str = "receiver-disconnect";
   destroy = destroy.destroy;
   if (destroy.isOwner) {
@@ -200,12 +200,12 @@ if (MediaEngineStore.isSupported()) {
     CONNECTION_OPEN: function handleConnectionOpen(sessionId) {
       sessionId = sessionId.sessionId;
       const arr = _modDef12;
-      const item = arr.forEach(closure_18, f89713);
+      const item = arr.forEach(closure_18, f89851);
     },
     CONNECTION_CLOSED: function handleConnectionClosed() {
       let c3 = null;
       const arr = _modDef12;
-      const item = arr.forEach(closure_18, f89713);
+      const item = arr.forEach(closure_18, f89851);
     },
     RTC_CONNECTION_STATE: handleRtcAction,
     RTC_CONNECTION_PING: handleRtcAction,
@@ -314,7 +314,7 @@ if (MediaEngineStore.isSupported()) {
     STREAM_STOP: function handleStreamStop(appContext) {
       appContext = appContext.appContext;
       const streamKey = appContext.streamKey;
-      closure_11[streamKey] = { appContext, analyticsLocations: "r" };
+      closure_11[streamKey] = { appContext, analyticsLocations: "Array" };
       const arr = _modDef12;
       const item = arr.forEach(closure_18, (analyticsContext) => {
         analyticsContext = analyticsContext.analyticsContext;

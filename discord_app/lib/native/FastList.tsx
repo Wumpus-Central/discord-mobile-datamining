@@ -4,7 +4,7 @@ import shallowEqual from "../../../discord_common/js/packages/shallow-equal/shal
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
 import ReanimatedRexport2 from "../../modules/reanimated/ReanimatedRexport.tsx";
 import NativeViewDefault from "../../modules/core/native/NativeView.tsx";
-import BottomSheetModal from "../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../_runtime/06119_BottomSheetModal.js";
 import refObjectUnionAsPropDefault from "../../modules/typescript/refObjectUnionAsProp.tsx";
 import _objectWithoutProperties from "../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";

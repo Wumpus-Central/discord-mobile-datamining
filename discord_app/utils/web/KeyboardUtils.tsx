@@ -1,6 +1,6 @@
 // discord_app/utils/web/KeyboardUtils.tsx
 import GlobalUtils from "../GlobalUtils.tsx";
-import keyCodeDefault from "../../../_runtime/13881_keyCode.js";
+import keyCodeDefault from "../../../_runtime/13899_keyCode.js";
 import KeyboardLayoutMapUtils from "KeyboardLayoutMapUtils.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import KeyboardConstants from "../../../discord_common/js/shared/constants/KeyboardConstants.tsx";
@@ -10,7 +10,7 @@ import size from "../../../_runtime/metro/00002__.js";
 
 let LinuxKeyToCode;
 let hasOwnProperty;
-const f115608 = (item) => {
+const f115770 = (item) => {
   let combined;
   let items1;
   let tmp;
@@ -384,7 +384,7 @@ function codeToKey(items1) {
   }
 }
 function toKeyNames(arr) {
-  const mapped = arr.map(f115608);
+  const mapped = arr.map(f115770);
   return mapped.filter(GlobalUtils.isNotNullish);
 }
 const frozen2 = Object.freeze(invertResult2);
@@ -557,7 +557,7 @@ export const toCombo = function toCombo(shortcut) {
   }
   let str = shortcut.replace(/numpad plus/i, "");
   const str2 = str.replace(/NUMPAD \+/i, "numpad plus");
-  const str3 = str2.replace(/mod/i, KEYBOARD_KEY(13883).modKey);
+  const str3 = str2.replace(/mod/i, KEYBOARD_KEY(13901).modKey);
   const parts = str3.split("+");
   const mapped = parts.map((item) => {
     const str = item.trim();
@@ -595,7 +595,7 @@ export const toString = function toString(arr) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const mapped = arr.map(f115608);
+  const mapped = arr.map(f115770);
   const found = mapped.filter(GlobalUtils.isNotNullish);
   if (flag) {
     const appVersion = global.navigator.appVersion;

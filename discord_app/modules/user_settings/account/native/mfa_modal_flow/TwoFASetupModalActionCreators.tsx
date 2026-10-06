@@ -8,7 +8,7 @@ let obj = {
   open(initialRouteName) {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { initialRouteName };
-    obj.pushLazy(asyncRequire(14567, dependencyMap.paths), obj2, TWO_FA_SETUP_MODAL_KEY);
+    obj.pushLazy(asyncRequire(14583, dependencyMap.paths), obj2, TWO_FA_SETUP_MODAL_KEY);
   },
   close() {
     const obj = ModalActionCreatorsDefault;

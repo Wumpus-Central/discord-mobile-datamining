@@ -33,14 +33,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(26);
       ({ style, onPress, iconSize, textVariant, suffix, userId } = arg0);
       if (undefined === iconSize) {
-        iconSize = tmp(5971).GuildIconSizes.XXSMALL_12;
+        iconSize = tmp(5978).GuildIconSizes.XXSMALL_12;
       }
       let str = "text-xs/medium";
       if (undefined !== textVariant) {
         str = textVariant;
       }
       const tmp4 = closure_6();
-      const tmpResult = iconSize(17060);
+      const tmpResult = iconSize(17086);
       const mutualGuildsForMessageRequests = tmpResult.useMutualGuildsForMessageRequests(userId);
       if (cResult[0] === mutualGuildsForMessageRequests.length) {
         if (cResult[1] === iconSize) {
@@ -82,7 +82,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               tmp24 = tmp25;
                             }
                             const obj2 = { accessibilityRole: "button", onPress, children: tmp21 };
-                            const tmp27 = closure_4(iconSize(5909).PressableOpacity, obj2);
+                            const tmp27 = closure_4(iconSize(5916).PressableOpacity, obj2);
                             cResult[23] = tmp21;
                             cResult[24] = onPress;
                             cResult[25] = tmp27;
@@ -105,7 +105,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj4 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp4.label, children: combined };
-              const tmp20 = closure_4(iconSize(4886).Text, obj4);
+              const tmp20 = closure_4(iconSize(4892).Text, obj4);
               cResult[14] = tmp4.label;
               cResult[15] = combined;
               cResult[16] = str;
@@ -147,7 +147,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               return React3(GuildIconDefault, obj, guild.id);
             }),
           };
-          const GuildIconPile = tmp(12284).GuildIconPile;
+          const GuildIconPile = tmp(12299).GuildIconPile;
           tmp13 = closure_4(GuildIconPile, obj6);
         }
         cResult[0] = mutualGuildsForMessageRequests.length;
@@ -182,7 +182,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ onPress, iconSize } = textVariant);
       ({ userId, style } = textVariant);
       if (iconSize === undefined) {
-        iconSize = iconSize(5971).GuildIconSizes.XXSMALL_12;
+        iconSize = iconSize(5978).GuildIconSizes.XXSMALL_12;
       }
       let str = textVariant.textVariant;
       if (str === undefined) {
@@ -190,7 +190,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const suffix = textVariant.suffix;
       const tmp3 = closure_6();
-      let obj = iconSize(17060);
+      let obj = iconSize(17086);
       const mutualGuildsForMessageRequests = obj.useMutualGuildsForMessageRequests(userId);
       const substr = mutualGuildsForMessageRequests.slice(0, 3);
       if (mutualGuildsForMessageRequests.length > 0) {
@@ -213,13 +213,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             return React3(GuildIconDefault, obj, guild.id);
           }),
         };
-        const GuildIconPile = tmp4(12284).GuildIconPile;
+        const GuildIconPile = tmp4(12299).GuildIconPile;
         tmp9 = closure_4(GuildIconPile, obj4);
       }
       items1 = [tmp9];
       const obj5 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: combined };
       combined = formatResult;
-      const Text = tmp4(4886).Text;
+      const Text = tmp4(4892).Text;
       if (null != suffix) {
         const _HermesInternal = HermesInternal;
         combined = "" + formatResult + " \u00B7 " + suffix;
@@ -231,7 +231,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11Result = tmp7Result;
         if (mutualGuildsForMessageRequests.length > 0) {
           const obj6 = { accessibilityRole: "button", onPress, children: tmp7Result };
-          tmp11Result = closure_4(tmp4(5909).PressableOpacity, obj6);
+          tmp11Result = closure_4(tmp4(5916).PressableOpacity, obj6);
         }
       }
       return tmp11Result;

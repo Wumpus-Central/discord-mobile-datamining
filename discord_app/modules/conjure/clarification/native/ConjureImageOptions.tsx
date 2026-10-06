@@ -2,7 +2,7 @@
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl5 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import react_native from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import TrashIcon from "../../../../design/components/Icon/native/redesign/generated/TrashIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -143,7 +143,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           const brokenText = tmp4.brokenText;
           if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = intl5.intl;
-            const stringResult = intl.string(_modDef3723.lhgD88);
+            const stringResult = intl.string(_modDef3753.lhgD88);
             cResult[4] = stringResult;
             tmp21 = stringResult;
           } else {
@@ -257,27 +257,27 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       onMeasured = onMeasured.onMeasured;
       ({ projectId, attachmentId, inert } = onMeasured);
       let tmp = closure_14();
-      const obj = useConjureAttachmentImage;
+      let obj = useConjureAttachmentImage;
       const conjureAttachmentImage = obj.useConjureAttachmentImage(projectId, attachmentId);
       const src = conjureAttachmentImage.src;
-      const items = [tmp.frame];
+      let items = [tmp.frame];
       let frameInert = null;
       ({ gone, handleError } = conjureAttachmentImage);
       if (inert) {
         frameInert = tmp.frameInert;
       }
       items[1] = frameInert;
-      const obj2 = { style: items, children: null };
+      let obj2 = { style: items, children: null };
       if (gone) {
-        const obj3 = { style: tmp.broken, children: items1 };
-        const obj4 = { size: "md", color: nativeDefault.colors.ICON_MUTED };
+        let obj3 = { style: tmp.broken, children: items1 };
+        let obj4 = { size: "md", color: nativeDefault.colors.ICON_MUTED };
         const ImageWarningIcon = ImageWarningIcon2.ImageWarningIcon;
         items1 = [authStore(ImageWarningIcon, obj4)];
-        const obj5 = {
+        let obj5 = {
           variant: "text-xs/medium",
           color: "text-muted",
           style: tmp.brokenText,
-          children: intl.string(_modDef3723.lhgD88),
+          children: intl.string(_modDef3753.lhgD88),
         };
         const Text = Text_Text.Text;
         intl = intl5.intl;
@@ -351,7 +351,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = intl5.intl;
-            const stringResult = intl.string(_modDef3723["4/eeDD"]);
+            const stringResult = intl.string(_modDef3753["4/eeDD"]);
             cResult[6] = stringResult;
             tmp11 = stringResult;
           } else {
@@ -376,8 +376,8 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                       const intl2 = intl5.intl;
                       const obj2 = { answer: option.label };
                       cResult[18] = option.label;
-                      cResult[19] = intl2.formatToPlainString(_modDef3723.AQbxhf, obj2);
-                      const formatToPlainStringResult = intl2.formatToPlainString(_modDef3723.AQbxhf, obj2);
+                      cResult[19] = intl2.formatToPlainString(_modDef3753.AQbxhf, obj2);
+                      const formatToPlainStringResult = intl2.formatToPlainString(_modDef3753.AQbxhf, obj2);
                     }
                     if (cResult[20] === onRemove) {
                       if (cResult[23] === onRemove) {
@@ -539,7 +539,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
                           return;
                         }
                       }
-                      tmp30[1] = intl3.string(_modDef3723.HQEXJM);
+                      tmp30[1] = intl3.string(_modDef3753.HQEXJM);
                       const items = [tmp30];
                       tmp27 = items;
                     } else {
@@ -700,7 +700,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         radioA11yNative = checkboxA11yNative;
       }
       const intl = intl5.intl;
-      const stringResult = intl.string(_modDef3723["4/eeDD"]);
+      const stringResult = intl.string(_modDef3753["4/eeDD"]);
       if (null != galleryWidth) {
         rowTile = { width: galleryWidth };
         const obj3 = { width: galleryWidth };
@@ -719,7 +719,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         onPress: fn,
         accessibilityRole: null,
         accessibilityState: null,
-        accessibilityLabel: intl2.formatToPlainString(_modDef3723.AQbxhf, obj7),
+        accessibilityLabel: intl2.formatToPlainString(_modDef3753.AQbxhf, obj7),
         accessibilityActions: tmp11,
         onAccessibilityAction(nativeEvent) {
           nativeEvent = nativeEvent.nativeEvent;
@@ -743,7 +743,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       intl2 = intl5.intl;
       obj7 = { answer: option.label };
       if (null != onRemove) {
-        const obj8 = { name: "remove", label: intl3.string(_modDef3723.HQEXJM) };
+        const obj8 = { name: "remove", label: intl3.string(_modDef3753.HQEXJM) };
         intl3 = intl5.intl;
         const items1 = [obj8];
         tmp11 = items1;
@@ -819,7 +819,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
             size: "sm",
             variant: "secondary-overlay",
             onPress: onRemove,
-            accessibilityLabel: intl4.formatToPlainString(_modDef3723.JGjZMs, obj20),
+            accessibilityLabel: intl4.formatToPlainString(_modDef3753.JGjZMs, obj20),
           };
           if (null == onRemove) {
             onRemove = () => closure_1_3(option);

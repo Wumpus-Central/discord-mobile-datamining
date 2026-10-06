@@ -434,7 +434,7 @@ obj = function _setupTTITest() {
               error2 = undefined;
               c6 = 1;
               c7 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
             break;
           }
@@ -1057,13 +1057,13 @@ obj = function _apiLogin() {
             closure_0 = iter;
             obj = password(closure_2_2[10]);
             closure_1 = iter;
-            const f155585 = () => {
+            const f155829 = () => {
               const error = new Error("Unable to login " + closure_0 + ". Login failed with action '" + obj + "'");
               closure_2_1(error);
             };
             function handler(arg0) {
               obj.unsubscribe(closure_1, handler);
-              return f155585(arg0);
+              return f155829(arg0);
             }
             const subscription = obj.subscribe(iter, handler);
           }
@@ -1095,7 +1095,7 @@ function subscribeOnce(subscribe, arg1, arg2) {
   let closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f155585(arg0);
+    return f155829(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }

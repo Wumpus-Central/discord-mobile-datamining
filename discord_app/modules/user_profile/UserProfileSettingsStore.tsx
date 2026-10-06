@@ -238,21 +238,27 @@ let obj2 = {
       customTypingIndicatorStyle = customTypingIndicatorStyle.customTypingIndicatorStyle;
       const merged = Object.assign(obj);
     },
-  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function handleSetTryItOutPreset(avatarDecoration) {
+  USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function handleSetTryItOutPreset(arg0) {
+    let avatarDecoration;
     let banner;
     let displayNameStyles;
+    let lastPreset;
     let themeColors;
-    let tryItOutAvatarDecoration = avatarDecoration.avatarDecoration;
+    ({ lastPreset, avatarDecoration } = arg0);
     obj = {
+      tryItOutLastPreset: lastPreset,
       tryItOutBanner: banner,
       tryItOutThemeColors: themeColors,
-      tryItOutAvatarDecoration,
+      tryItOutAvatarDecoration: avatarDecoration,
       tryItOutDisplayNameStyles: displayNameStyles,
     };
-    ({ banner, themeColors, displayNameStyles } = avatarDecoration);
+    ({ banner, themeColors, displayNameStyles } = arg0);
     const merged = Object.assign(obj);
-    if (undefined === tryItOutAvatarDecoration) {
-      tryItOutAvatarDecoration = obj.tryItOutAvatarDecoration;
+    if (undefined === lastPreset) {
+      lastPreset = obj.tryItOutLastPreset;
+    }
+    if (undefined === avatarDecoration) {
+      avatarDecoration = obj.tryItOutAvatarDecoration;
     }
   },
   USER_PROFILE_SETTINGS_CLEAR_ERRORS: function handleResetErrors() {

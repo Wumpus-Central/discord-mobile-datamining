@@ -3,7 +3,7 @@ import react_native from "../../../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../../design/void/native.tsx";
-import _modDef3659 from "../../../../../game_invite_channels/GameInviteChannels.messages.js";
+import _modDef3689 from "../../../../../game_invite_channels/GameInviteChannels.messages.js";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import transitionToChannel from "../../../../../routing/transitionToChannel.tsx";
 import ChannelUtils from "../../../../../../utils/ChannelUtils.tsx";
@@ -394,7 +394,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp15;
             if (cResult[7] !== tmp9) {
               const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: tmp9 };
-              const tmp17 = closure_12(channel(4886).Text, obj2);
+              const tmp17 = closure_12(channel(4892).Text, obj2);
               cResult[7] = tmp9;
               cResult[8] = tmp17;
               tmp15 = tmp17;
@@ -411,9 +411,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         let stringResult;
         if (channel.isGameInvitesChannel()) {
           const intl = tmp(1126).intl;
-          stringResult = intl.string(_modDef3659["D+2/QP"]);
+          stringResult = intl.string(_modDef3689["D+2/QP"]);
         } else {
-          const tmpResult2 = channel(5035);
+          const tmpResult2 = channel(5041);
           stringResult = tmpResult2.channelTypeString(channel);
         }
         tmp10 = stringResult;
@@ -444,9 +444,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         let stringResult;
         if (channel.isGameInvitesChannel()) {
           const intl = tmp(1126).intl;
-          stringResult = intl.string(_modDef3659["D+2/QP"]);
+          stringResult = intl.string(_modDef3689["D+2/QP"]);
         } else {
-          const tmpResult = channel(5035);
+          const tmpResult = channel(5041);
           stringResult = tmpResult.channelTypeString(channel);
         }
         stateFromStores = stringResult;
@@ -456,7 +456,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = null;
         if ("" !== stateFromStores) {
           const obj2 = { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: stateFromStores };
-          tmp6 = closure_12(tmp(4886).Text, obj2);
+          tmp6 = closure_12(tmp(4892).Text, obj2);
         }
       }
       return tmp6;
@@ -478,7 +478,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(48);
       channel = channel.channel;
       closure_15();
-      stateFromStores(5043)(channel);
+      stateFromStores(5049)(channel);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore];
         cResult[0] = items;
@@ -744,7 +744,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       const containerStyle = channel.containerStyle;
       const tmp4 = closure_15();
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       if (cResult[0] === analyticsLocations) {
         let tmp5;
         if (cResult[1] === channel) {
@@ -775,7 +775,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj3 = { style: tmp6, onPress: tmp5, children: tmp7 };
-          const tmp13 = closure_12(tmp(5909).PressableOpacity, obj3);
+          const tmp13 = closure_12(tmp(5916).PressableOpacity, obj3);
           cResult[8] = tmp5;
           cResult[9] = tmp6;
           cResult[10] = tmp7;
@@ -806,7 +806,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       let analyticsLocations;
       const containerStyle = channel.containerStyle;
       const tmp = closure_15();
-      analyticsLocations = analyticsLocations(6657)().analyticsLocations;
+      analyticsLocations = analyticsLocations(6664)().analyticsLocations;
       const items = [channel, analyticsLocations];
       const callback = react.useCallback(() => {
         const recipientId = channel.getRecipientId();
@@ -817,7 +817,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = { style: items1, onPress: callback, children: closure_12(closure_19, { channel }) };
       items1 = [tmp.container, containerStyle];
-      const PressableOpacity = channel(5909).PressableOpacity;
+      const PressableOpacity = channel(5916).PressableOpacity;
       return closure_12(PressableOpacity, obj);
     };
 ReactCompilerGating = ReactCompilerGating_mod;

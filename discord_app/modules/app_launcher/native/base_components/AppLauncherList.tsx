@@ -8,7 +8,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import mergeProps from "../../../../design/utils/native/mergeProps.native.tsx";
 import SearchField2 from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import AppLauncherFlashList from "AppLauncherFlashList.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/11790_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/11804_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import createStyles from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -124,7 +124,7 @@ const forwardRefResult = forwardRef(
           return obj.mergeRefs(appLauncherFlashListProps.scrollerRef, closure_0);
         }, items);
         const items1 = [{ paddingBottom: bottom }, contentContainerStyle.contentContainerStyle];
-        appLauncherFlashListProps(11726);
+        appLauncherFlashListProps(11740);
         const merged = Object.assign(contentContainerStyle);
         ({
           onScroll: obj2.animatedOnScroll,

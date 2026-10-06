@@ -271,7 +271,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp21;
         if (cResult[0] !== obscureReason) {
           const obj3 = {};
-          const tmp24 = ref(11625);
+          const tmp24 = ref(11639);
           const merged = Object.assign(obscureReason);
           const tmp28 = closure_10(tmp24, obj3);
           cResult[0] = obscureReason;
@@ -308,7 +308,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (null != obscureReason.obscureReason) {
-        const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(6799).AGE_VERIFICATION_OBSCURABLE_REASONS;
+        const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp(6809).AGE_VERIFICATION_OBSCURABLE_REASONS;
         if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
           let tmp30;
           if (shouldAgeVerifyForReason) {
@@ -447,7 +447,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const shouldAgeVerifyForReason = obj.useShouldAgeVerifyForReason(obscureReason.obscureReason);
       if (obscureReason.isMediaPost) {
         let obj2 = {};
-        const tmp19 = ref(11625);
+        const tmp19 = ref(11639);
         const merged = Object.assign(obscureReason);
         tmp6Result = closure_10(tmp19, obj2);
         tmp12 = closure_10;
@@ -466,7 +466,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       if (null != obscureReason.obscureReason) {
-        const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6799).AGE_VERIFICATION_OBSCURABLE_REASONS;
+        const AGE_VERIFICATION_OBSCURABLE_REASONS = tmp3(6809).AGE_VERIFICATION_OBSCURABLE_REASONS;
         if (AGE_VERIFICATION_OBSCURABLE_REASONS.has(obscureReason.obscureReason)) {
           if (shouldAgeVerifyForReason) {
             const obj5 = { style: items, ref, children: tmp12(require("Pressables").PressableOpacity, obj6) };

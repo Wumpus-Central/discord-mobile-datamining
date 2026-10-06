@@ -174,7 +174,7 @@ export default function AddFriendNicknameModal(arg0) {
   [c2, c3] = _slicedToArray(react.useState(false), 2);
   const tmp4 = dependencyMap;
   const tmp2 = _slicedToArray(react.useState(false), 2);
-  _slicedToArray = showUserProfile(10664)();
+  _slicedToArray = showUserProfile(10677)();
   let obj2 = get_initialized;
   const items = [obj];
   const stateFromStores = obj2.useStateFromStores(items, () => RelationshipStore.getNickname(require));
@@ -216,8 +216,8 @@ export default function AddFriendNicknameModal(arg0) {
     onCancel: callback1,
     children: items3,
   };
-  tmp3Result = showUserProfile(6537);
-  tmp3Result3 = showUserProfile(5783);
+  tmp3Result = showUserProfile(6544);
+  tmp3Result3 = showUserProfile(5790);
   intl3 = intl7.intl;
   intl4 = intl7.intl;
   let obj6 = {
@@ -248,7 +248,7 @@ export default function AddFriendNicknameModal(arg0) {
   };
   const TextField = TextField2.TextField;
   intl6 = intl7.intl;
-  tmp3Result4 = showUserProfile(4722);
+  tmp3Result4 = showUserProfile(4728);
   items3[2] = closure_9(TextField, obj8);
   return closure_9(callback1, obj3);
 }

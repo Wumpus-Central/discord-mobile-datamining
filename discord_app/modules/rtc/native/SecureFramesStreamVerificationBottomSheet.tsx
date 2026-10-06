@@ -93,7 +93,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const format = intl2.format;
         let obj2 = { helpArticle: tmpResult2.getSecureFramesHelpdeskArticle() };
         const prop = tmp(1126).t["H3+ktv"];
-        tmpResult2 = channelId(9364);
+        tmpResult2 = channelId(9378);
         const formatResult = format(prop, obj2);
         cResult[5] = stringResult;
         cResult[6] = stringResult1;
@@ -128,7 +128,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp16;
       }
-      tmp16 = jsx(streamKey(9381), {
+      tmp16 = jsx(streamKey(9395), {
         title: tmp9,
         subtitle: tmp10,
         footer: tmp11,
@@ -162,14 +162,14 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { message };
         obj3.showShareActionSheet(obj4, AnalyticsSections.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
       }, items1);
-      streamKey(9381);
+      streamKey(9395);
       const intl = channelId(1126).intl;
       const intl2 = channelId(1126).intl;
       const intl3 = channelId(1126).intl;
       const format = intl3.format;
       let obj3 = { helpArticle: obj4.getSecureFramesHelpdeskArticle() };
       const prop = channelId(1126).t["H3+ktv"];
-      obj4 = channelId(9364);
+      obj4 = channelId(9378);
       return (
         <tmp3
           title={intl.string(channelId(1126).t.QogHld)}

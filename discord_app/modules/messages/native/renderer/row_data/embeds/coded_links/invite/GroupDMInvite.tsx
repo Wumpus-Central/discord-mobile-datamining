@@ -68,7 +68,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   }
   let channelIconSource = null;
   if (null != channel) {
-    const tmp8Result = tmp8(12853);
+    const tmp8Result = tmp8(12872);
     channelIconSource = tmp8Result.getChannelIconSource(channel);
   }
   let uri = null;
@@ -80,7 +80,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   if (flag) {
     channelName = null;
     if (null != channel) {
-      const tmp8Result5 = tmp8(5043);
+      const tmp8Result5 = tmp8(5049);
       channelName = tmp8Result5.computeChannelName(channel, UserStore, RelationshipStore);
     }
   }
@@ -146,7 +146,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      const tmp8Result6 = tmp8(5043);
+      const tmp8Result6 = tmp8(5049);
       channelName1 = tmp8Result6.computeChannelName(channel, UserStore, RelationshipStore);
     }
   }

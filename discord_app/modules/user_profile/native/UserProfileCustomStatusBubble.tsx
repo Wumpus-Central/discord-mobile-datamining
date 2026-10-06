@@ -14,7 +14,7 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import Constants2 from "Constants.tsx";
-import inlineStyles from "../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08169_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import CirclePlusIcon2 from "../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -331,7 +331,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp13 = View;
                   obj10 = { children: null };
                   tmp14 = jsx;
-                  tmp15 = f55896;
+                  tmp15 = f55949;
                   obj11 = { emojiId: null, size: null, animated: null, style: null };
                   obj11.emojiId = tmp.id;
                   tmp16 = lineHeight;
@@ -342,7 +342,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                   num3 = 0.1;
                   obj12.marginBottom = 0.1 * -lineHeight;
                   obj11.style = obj12;
-                  obj10.children = jsx(f55896, obj11);
+                  obj10.children = jsx(f55949, obj11);
                   items = [,];
                   items[0] = jsx(View, obj10);
                   tmp17 = jsx;
@@ -403,7 +403,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp13 = View;
                 obj10 = { children: null };
                 tmp14 = jsx;
-                tmp15 = f55896;
+                tmp15 = f55949;
                 obj11 = { emojiId: null, size: null, animated: null, style: null };
                 obj11.emojiId = tmp.id;
                 tmp16 = lineHeight;
@@ -414,7 +414,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
                 num3 = 0.1;
                 obj12.marginBottom = 0.1 * -lineHeight;
                 obj11.style = obj12;
-                obj10.children = jsx(f55896, obj11);
+                obj10.children = jsx(f55949, obj11);
                 items = [,];
                 items[0] = jsx(View, obj10);
                 tmp17 = jsx;
@@ -470,8 +470,8 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = text;
           cResult[14] = tmp9;
           cResult[15] = textVariant;
-          cResult[16] = closure_10(emoji(4886).Text, obj4);
-          const tmp16 = closure_10(emoji(4886).Text, obj4);
+          cResult[16] = closure_10(emoji(4892).Text, obj4);
+          const tmp16 = closure_10(emoji(4892).Text, obj4);
         }
         class P {
           constructor() {
@@ -488,7 +488,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
               tmp13 = View;
               obj10 = { children: null };
               tmp14 = jsx;
-              tmp15 = f55896;
+              tmp15 = f55949;
               obj11 = { emojiId: null, size: null, animated: null, style: null };
               obj11.emojiId = tmp.id;
               tmp16 = lineHeight;
@@ -499,7 +499,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
               num3 = 0.1;
               obj12.marginBottom = 0.1 * -lineHeight;
               obj11.style = obj12;
-              obj10.children = jsx(f55896, obj11);
+              obj10.children = jsx(f55949, obj11);
               items = [,];
               items[0] = jsx(View, obj10);
               tmp17 = jsx;

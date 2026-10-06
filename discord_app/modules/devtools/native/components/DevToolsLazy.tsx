@@ -20,7 +20,7 @@ let obj = {
   eventName: "keyCommandShowDevTools",
   discoverabilityTitle: "Open DevTools Panel",
   onKeyCommand() {
-    const promise = asyncRequire(14406, dependencyMap.paths);
+    const promise = asyncRequire(14422, dependencyMap.paths);
     promise.then((navigateToDevTools) => {
       navigateToDevTools.navigateToDevTools();
     });
@@ -109,15 +109,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp14 = cResult[7];
       }
-      const tmpResult5 = stateFromStores(5781);
+      const tmpResult5 = stateFromStores(5788);
       const keyCommands = tmpResult5.useKeyCommands(tmp14);
       if (stateFromStores) {
         if (stateFromStores1) {
           let tmp19;
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            cResult[8] = stateFromStores(15840);
-            stateFromStores(15840);
+            cResult[8] = stateFromStores(15879);
+            stateFromStores(15879);
             class D {
               constructor() {
                 return showDevWidget.showDevWidget;
@@ -167,11 +167,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           });
         }
       });
-      const obj3 = stateFromStores(5781);
+      const obj3 = stateFromStores(5788);
       const keyCommands = obj3.useKeyCommands(stateFromStores ? items : []);
       if (stateFromStores) {
         if (stateFromStores1) {
-          return jsx(tmp(15840).default, {});
+          return jsx(tmp(15879).default, {});
         }
       }
       return null;

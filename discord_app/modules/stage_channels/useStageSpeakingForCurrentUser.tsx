@@ -101,11 +101,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(tmp8, E, tmp12);
-      const tmpResult3 = tmp(5102);
+      const tmpResult3 = tmp(5108);
       const isVerifiedAdult = tmpResult3.useIsVerifiedAdult();
-      const tmpResult4 = tmp(5580);
+      const tmpResult4 = tmp(5587);
       const tmp15 =
-        tmpResult4.useIsFeatureAgeGated(tmp(5581).AgeGatedFeature.STAGE_SPEAKING) &&
+        tmpResult4.useIsFeatureAgeGated(tmp(5588).AgeGatedFeature.STAGE_SPEAKING) &&
         !isVerifiedAdult &&
         stateFromStores;
       return tmp15;
@@ -130,11 +130,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         },
         items1,
       );
-      const obj2 = channelId(5102);
+      const obj2 = channelId(5108);
       const isVerifiedAdult = obj2.useIsVerifiedAdult();
-      const obj3 = channelId(5580);
+      const obj3 = channelId(5587);
       const tmp5 =
-        obj3.useIsFeatureAgeGated(channelId(5581).AgeGatedFeature.STAGE_SPEAKING) &&
+        obj3.useIsFeatureAgeGated(channelId(5588).AgeGatedFeature.STAGE_SPEAKING) &&
         !isVerifiedAdult &&
         stateFromStores;
       return tmp5;
@@ -211,11 +211,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(tmp8, E, tmp12);
-      const tmpResult3 = tmp(5102);
+      const tmpResult3 = tmp(5108);
       const isAgeVerified = tmpResult3.useIsAgeVerified();
-      const tmpResult4 = tmp(5580);
+      const tmpResult4 = tmp(5587);
       const tmp15 =
-        tmpResult4.useIsFeatureAgeGated(tmp(5581).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
+        tmpResult4.useIsFeatureAgeGated(tmp(5588).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
       return tmp15;
     }
   : (arg0) => {
@@ -238,11 +238,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         },
         items1,
       );
-      const obj2 = channelId(5102);
+      const obj2 = channelId(5108);
       const isAgeVerified = obj2.useIsAgeVerified();
-      const obj3 = channelId(5580);
+      const obj3 = channelId(5587);
       const tmp5 =
-        obj3.useIsFeatureAgeGated(channelId(5581).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
+        obj3.useIsFeatureAgeGated(channelId(5588).AgeGatedFeature.STAGE_SPEAKING) && !isAgeVerified && stateFromStores;
       return tmp5;
     };
 ReactCompilerGating = ReactCompilerGating_mod;

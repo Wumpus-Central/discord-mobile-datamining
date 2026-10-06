@@ -65,9 +65,9 @@ const memoResult = react.memo(
         columns = columns.columns;
         ({ favoritesCategory, inActionSheet, onSelectCategory } = columns);
         if (columns > 2) {
-          GIF_PICKER_ITEM_ESIMTATED_HEIGHT = tmp(10093).GIF_PICKER_ITEM_ESIMTATED_HEIGHT;
+          GIF_PICKER_ITEM_ESIMTATED_HEIGHT = tmp(10106).GIF_PICKER_ITEM_ESIMTATED_HEIGHT;
         } else {
-          GIF_PICKER_ITEM_ESIMTATED_HEIGHT = tmp(10093).GIF_PICKER_ITEM_ESIMTATED_HEIGHT / 2;
+          GIF_PICKER_ITEM_ESIMTATED_HEIGHT = tmp(10106).GIF_PICKER_ITEM_ESIMTATED_HEIGHT / 2;
         }
         const tmp4 = closure_7(GIF_PICKER_ITEM_ESIMTATED_HEIGHT);
         dependencyMap = tmp4;
@@ -79,7 +79,7 @@ const memoResult = react.memo(
         } else {
           first = cResult[0];
         }
-        const safeAreaBottomKeyboardAware = onSelectCategory(10086)(first).safeAreaBottomKeyboardAware;
+        const safeAreaBottomKeyboardAware = onSelectCategory(10099)(first).safeAreaBottomKeyboardAware;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           let items = [GIFPickerViewStore];
           class S {
@@ -193,7 +193,7 @@ const memoResult = react.memo(
                       if (cResult[21] === tmp4.placeholder) {
                         tmp24 = cResult[22];
                       }
-                      const tmp10Result = tmp10(9926);
+                      const tmp10Result = tmp10(9939);
                       const isPortalKeyboardInModal = tmp10Result.useIsPortalKeyboardInModal();
                       class S {
                         constructor() {
@@ -272,7 +272,7 @@ const memoResult = react.memo(
                                 );
                               }
                             }
-                            const tmp34 = jsx(onSelectCategory(6552), {
+                            const tmp34 = jsx(onSelectCategory(6559), {
                               estimatedListSize: tmp29,
                               inActionSheet,
                               preventNativeModalDismiss: isPortalKeyboardInModal,
@@ -297,10 +297,10 @@ const memoResult = react.memo(
                       }
                       const obj4 = { sectionItem: obj5 };
                       obj5 = {
-                        type: tmp10(6559).FastestListPropsPlaceholderType.SHAPE,
+                        type: tmp10(6566).FastestListPropsPlaceholderType.SHAPE,
                         shape: "rect",
                         shapeCount: null,
-                        spaceGap: tmp10(10093).GIF_PICKER_GUTTER_SPACING,
+                        spaceGap: tmp10(10106).GIF_PICKER_GUTTER_SPACING,
                         borderRadius: tmp4.placeholder.borderRadius,
                         colorHex: tmp4.placeholder.backgroundColor,
                         height: tmp26,
@@ -393,14 +393,14 @@ const memoResult = react.memo(
             }
           }
           let num3 = 0;
-          if (0 < Math.max(arr2.length, tmp(10093).DEFAULT_CATEGORY_ROWS)) {
+          if (0 < Math.max(arr2.length, tmp(10106).DEFAULT_CATEGORY_ROWS)) {
             do {
               let arr = items3.push(arr2.slice(num3, num3 + columns));
               num3 = num3 + columns;
               let _Math = Math;
               tmp = columns;
               tmp2 = dependencyMap;
-              bound = Math.max(arr2.length, columns(10093).DEFAULT_CATEGORY_ROWS);
+              bound = Math.max(arr2.length, columns(10106).DEFAULT_CATEGORY_ROWS);
             } while (num3 < bound);
           }
           cResult[6] = arr2;

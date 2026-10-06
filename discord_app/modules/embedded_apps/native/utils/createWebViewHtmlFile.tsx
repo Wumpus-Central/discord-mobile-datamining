@@ -241,7 +241,7 @@ let obj = function _createWebViewHtmlFile() {
               closure_7 = undefined;
               messageForDisallowedNavigationError = 1;
               c6 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {

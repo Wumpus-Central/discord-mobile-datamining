@@ -156,7 +156,7 @@ let obj = function _authorizeWithPrompt() {
             map = undefined;
             _prompt = 1;
             disableGuildSelect = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else {
           let createFromServer;
@@ -594,7 +594,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
   let obj2 = require("CONTEXT_MENU_ICON_NAMES");
   let obj3 = {
     handler(socket) {
-      const f152961 = function (result) {
+      const f153194 = function (result) {
         let access_token;
         let expires_in;
         let scope;
@@ -692,7 +692,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                     isSocketRpcPrivateScope: false,
                   };
                   const promise = authorizeWithPrompt(obj3, closure_0, closure_1);
-                  return promise.then(f152961);
+                  return promise.then(f153194);
                 } else {
                   let str = "Trying to call a non-function";
                   throw new TypeError("Trying to call a non-function");
@@ -707,7 +707,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                 isSocketRpcPrivateScope: false,
               };
               let promise = authorizeWithPrompt(obj3, socket, signal);
-              catchPromise = promise.then(f152961);
+              catchPromise = promise.then(f153194);
             }
             return catchPromise;
           }

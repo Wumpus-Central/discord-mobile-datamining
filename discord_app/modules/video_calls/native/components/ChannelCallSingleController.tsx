@@ -101,8 +101,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = channel;
           cResult[8] = tmp15;
           cResult[9] = selectedParticipant;
-          cResult[10] = jsx(channel(tmp15 ? 9707 : 9709), { participant: selectedParticipant, channel });
-          const tmp17Result = jsx(channel(tmp15 ? 9707 : 9709), { participant: selectedParticipant, channel });
+          cResult[10] = jsx(channel(tmp15 ? 9720 : 9722), { participant: selectedParticipant, channel });
+          const tmp17Result = jsx(channel(tmp15 ? 9720 : 9722), { participant: selectedParticipant, channel });
         }
         return null;
       } else {
@@ -133,11 +133,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const id = selectedParticipant.user.id;
         let tmp15Result = null;
         if (null != tmp4) {
-          tmp15Result = jsx(channel(id === tmp13 ? 9707 : 9709), { participant: selectedParticipant, channel });
+          tmp15Result = jsx(channel(id === tmp13 ? 9720 : 9722), { participant: selectedParticipant, channel });
         }
         return tmp15Result;
       } else if (ParticipantTypes.USER === type) {
-        return jsx(channel(9710), { participant: selectedParticipant, channel });
+        return jsx(channel(9723), { participant: selectedParticipant, channel });
       } else if (ParticipantTypes.HIDDEN_STREAM === type) {
         return null;
       } else if (ParticipantTypes.ACTIVITY === type) {

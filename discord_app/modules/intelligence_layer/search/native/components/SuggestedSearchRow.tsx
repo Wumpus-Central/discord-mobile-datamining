@@ -3,6 +3,8 @@ import react_native from "../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import SearchPlatformUtilsDefault from "../../../../search/native/SearchPlatformUtils.tsx";
+import SearchSessionAnalyticsManagerDefault from "../../../../search/managers/native/SearchSessionAnalyticsManager.tsx";
+import SmartSearchAnalyticsManagerDefault from "../../SmartSearchAnalyticsManager.tsx";
 import SearchPlatformActionCreatorsDefault from "../../../../search/native/SearchPlatformActionCreators.tsx";
 import SuggestedSearchActionCreators from "../../SuggestedSearchActionCreators.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
@@ -37,163 +39,182 @@ const memo = react.memo;
 const memoResult = memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? (suggestedSearch) => {
-        let obj = suggestedSearch(576);
-        const cResult = obj.c(20);
+        let suggestionSource;
+        let obj = suggestedSearch(suggestionSource[7]);
+        const cResult = obj.c(21);
         suggestedSearch = suggestedSearch.suggestedSearch;
         const smartSearchQuery = suggestedSearch.smartSearchQuery;
+        suggestionSource = suggestedSearch.suggestionSource;
+        const index = suggestedSearch.index;
+        const numSuggestedSearches = suggestedSearch.numSuggestedSearches;
         const variant = suggestedSearch.variant;
         let str = "default";
         if (undefined !== variant) {
           str = variant;
         }
         const tmp4 = closure_7();
-        if (cResult[0] === smartSearchQuery.channelIds) {
-          if (cResult[1] === smartSearchQuery.guildId) {
-            if (cResult[2] === smartSearchQuery.searchContext) {
-              let tmp5;
-              if (cResult[3] === suggestedSearch.suggestedSearchText) {
-                tmp5 = cResult[4];
-              }
-              let str2 = "redesign/channel-title/semibold";
-              if ("default" === str) {
-                str2 = "text-md/normal";
-              }
-              if (cResult[5] === tmp4.text) {
-                if (cResult[6] === suggestedSearch.suggestedSearchText) {
-                  let tmp7;
-                  if (cResult[7] === str2) {
-                    tmp7 = cResult[8];
-                  }
-                  let compactLabel;
-                  if ("compact" === str) {
-                    compactLabel = tmp4.compactLabel;
-                  }
-                  if (cResult[9] === tmp7) {
-                    let tmp11;
-                    let tmp17;
-                    let tmp20;
-                    if (cResult[10] === compactLabel) {
-                      tmp11 = cResult[11];
+        if (cResult[0] === index) {
+          if (cResult[1] === numSuggestedSearches) {
+            if (cResult[2] === smartSearchQuery) {
+              if (cResult[3] === suggestedSearch) {
+                let tmp5;
+                if (cResult[4] === suggestionSource) {
+                  tmp5 = cResult[5];
+                }
+                let str2 = "redesign/channel-title/semibold";
+                if ("default" === str) {
+                  str2 = "text-md/normal";
+                }
+                if (cResult[6] === tmp4.text) {
+                  if (cResult[7] === suggestedSearch.suggestedSearchText) {
+                    let tmp7;
+                    if (cResult[8] === str2) {
+                      tmp7 = cResult[9];
                     }
-                    let iconCircle;
-                    if ("default" === str) {
-                      iconCircle = tmp4.iconCircle;
+                    let compactLabel;
+                    if ("compact" === str) {
+                      compactLabel = tmp4.compactLabel;
                     }
-                    const _Symbol = Symbol;
-                    if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp19 = jsx(suggestedSearch(6548).MagnifyingGlassIcon, { size: "sm", color: "icon-muted" });
-                      cResult[12] = tmp19;
-                      tmp17 = tmp19;
-                    } else {
-                      tmp17 = cResult[12];
-                    }
-                    if (cResult[13] !== iconCircle) {
-                      const tmp23 = <View style={iconCircle}>{tmp17}</View>;
-                      cResult[13] = iconCircle;
-                      cResult[14] = tmp23;
-                      tmp20 = tmp23;
-                    } else {
-                      tmp20 = cResult[14];
-                    }
-                    if (cResult[15] === tmp5) {
-                      if (cResult[16] === suggestedSearch.suggestedSearchText) {
-                        if (cResult[17] === tmp11) {
-                          let tmp24;
-                          if (cResult[18] === tmp20) {
-                            tmp24 = cResult[19];
+                    if (cResult[10] === tmp7) {
+                      let tmp11;
+                      let tmp17;
+                      let tmp20;
+                      if (cResult[11] === compactLabel) {
+                        tmp11 = cResult[12];
+                      }
+                      let iconCircle;
+                      if ("default" === str) {
+                        iconCircle = tmp4.iconCircle;
+                      }
+                      const _Symbol = Symbol;
+                      if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
+                        const tmp19 = jsx(suggestedSearch(suggestionSource[14]).MagnifyingGlassIcon, {
+                          size: "sm",
+                          color: "icon-muted",
+                        });
+                        cResult[13] = tmp19;
+                        tmp17 = tmp19;
+                      } else {
+                        tmp17 = cResult[13];
+                      }
+                      if (cResult[14] !== iconCircle) {
+                        const tmp23 = <numSuggestedSearches style={iconCircle}>{tmp17}</numSuggestedSearches>;
+                        cResult[14] = iconCircle;
+                        cResult[15] = tmp23;
+                        tmp20 = tmp23;
+                      } else {
+                        tmp20 = cResult[15];
+                      }
+                      if (cResult[16] === tmp5) {
+                        if (cResult[17] === suggestedSearch.suggestedSearchText) {
+                          if (cResult[18] === tmp11) {
+                            let tmp24;
+                            if (cResult[19] === tmp20) {
+                              tmp24 = cResult[20];
+                            }
+                            return tmp24;
                           }
-                          return tmp24;
                         }
                       }
+                      const tmp26 = jsx(suggestedSearch(suggestionSource[15]).SearchListRow, {
+                        onPress: tmp5,
+                        accessibilityLabel: suggestedSearch.suggestedSearchText,
+                        label: tmp11,
+                        icon: tmp20,
+                      });
+                      cResult[16] = tmp5;
+                      cResult[17] = suggestedSearch.suggestedSearchText;
+                      cResult[18] = tmp11;
+                      cResult[19] = tmp20;
+                      cResult[20] = tmp26;
+                      tmp24 = tmp26;
                     }
-                    const tmp26 = jsx(suggestedSearch(16807).SearchListRow, {
-                      onPress: tmp5,
-                      accessibilityLabel: suggestedSearch.suggestedSearchText,
-                      label: tmp11,
-                      icon: tmp20,
-                    });
-                    cResult[15] = tmp5;
-                    cResult[16] = suggestedSearch.suggestedSearchText;
-                    cResult[17] = tmp11;
-                    cResult[18] = tmp20;
-                    cResult[19] = tmp26;
-                    tmp24 = tmp26;
+                    const tmp14 = <numSuggestedSearches style={compactLabel}>{tmp7}</numSuggestedSearches>;
+                    cResult[10] = tmp7;
+                    cResult[11] = compactLabel;
+                    cResult[12] = tmp14;
+                    tmp11 = tmp14;
                   }
-                  const tmp14 = <View style={compactLabel}>{tmp7}</View>;
-                  cResult[9] = tmp7;
-                  cResult[10] = compactLabel;
-                  cResult[11] = tmp14;
-                  tmp11 = tmp14;
                 }
+                const tmp9 = jsx(suggestedSearch(suggestionSource[13]).Text, {
+                  lineClamp: 2,
+                  variant: str2,
+                  color: "redesign-channel-name-muted-text",
+                  style: tmp4.text,
+                  children: suggestedSearch.suggestedSearchText,
+                });
+                cResult[6] = tmp4.text;
+                cResult[7] = suggestedSearch.suggestedSearchText;
+                cResult[8] = str2;
+                cResult[9] = tmp9;
+                tmp7 = tmp9;
               }
-              const tmp9 = jsx(suggestedSearch(4886).Text, {
-                lineClamp: 2,
-                variant: str2,
-                color: "redesign-channel-name-muted-text",
-                style: tmp4.text,
-                children: suggestedSearch.suggestedSearchText,
-              });
-              cResult[5] = tmp4.text;
-              cResult[6] = suggestedSearch.suggestedSearchText;
-              cResult[7] = str2;
-              cResult[8] = tmp9;
-              tmp7 = tmp9;
             }
           }
         }
         const fn = function c() {
           let suggestedSearchText;
-          const obj = SearchPlatformActionCreatorsDefault;
-          obj.updateSearchQuery(smartSearchQuery.searchContext, (setTextInputValue) => {
+          const obj = SmartSearchAnalyticsManagerDefault;
+          const obj2 = { smartSearchQuery, suggestedSearch, suggestionSource, index, numSuggestedSearches };
+          const result = obj.trackSuggestedSearchStarted(obj2, SearchSessionAnalyticsManagerDefault);
+          const obj3 = SearchPlatformActionCreatorsDefault;
+          obj3.updateSearchQuery(smartSearchQuery.searchContext, (setTextInputValue) => {
             setTextInputValue.setTextInputValue(suggestedSearchText.suggestedSearchText);
           });
-          const obj2 = SearchPlatformUtilsDefault;
-          const initialMessages = obj2.fetchInitialMessages(smartSearchQuery.searchContext);
-          const obj3 = SuggestedSearchActionCreators;
-          const result = obj3.advanceSuggestedSearches(
-            smartSearchQuery.guildId,
-            smartSearchQuery.channelIds,
+          const obj4 = SearchPlatformUtilsDefault;
+          const initialMessages = obj4.fetchInitialMessages(smartSearchQuery.searchContext);
+          const obj5 = SuggestedSearchActionCreators;
+          const result1 = obj5.advanceSuggestedSearches(
+            smartSearchQuery,
+            SearchSessionAnalyticsManagerDefault,
             hasOwnProperty,
           );
         };
-        cResult[0] = smartSearchQuery.channelIds;
-        cResult[1] = smartSearchQuery.guildId;
-        cResult[2] = smartSearchQuery.searchContext;
-        cResult[3] = suggestedSearch.suggestedSearchText;
-        cResult[4] = fn;
+        cResult[0] = index;
+        cResult[1] = numSuggestedSearches;
+        cResult[2] = smartSearchQuery;
+        cResult[3] = suggestedSearch;
+        cResult[4] = suggestionSource;
+        cResult[5] = fn;
         tmp5 = fn;
       }
     : (suggestedSearch) => {
         suggestedSearch = suggestedSearch.suggestedSearch;
         const smartSearchQuery = suggestedSearch.smartSearchQuery;
+        const suggestionSource = suggestedSearch.suggestionSource;
+        const index = suggestedSearch.index;
+        const numSuggestedSearches = suggestedSearch.numSuggestedSearches;
         let str = suggestedSearch.variant;
         if (str === undefined) {
           str = "default";
         }
         const tmp = closure_7();
-        const items = [smartSearchQuery, suggestedSearch.suggestedSearchText];
-        const callback = react.useCallback(() => {
+        const items = [smartSearchQuery, suggestedSearch, suggestionSource, index, numSuggestedSearches];
+        const callback = index.useCallback(() => {
           let suggestedSearchText;
-          const obj = SearchPlatformActionCreatorsDefault;
-          obj.updateSearchQuery(smartSearchQuery.searchContext, (setTextInputValue) => {
+          const obj = SmartSearchAnalyticsManagerDefault;
+          const obj2 = { smartSearchQuery, suggestedSearch, suggestionSource, index, numSuggestedSearches };
+          const result = obj.trackSuggestedSearchStarted(obj2, SearchSessionAnalyticsManagerDefault);
+          const obj3 = SearchPlatformActionCreatorsDefault;
+          obj3.updateSearchQuery(smartSearchQuery.searchContext, (setTextInputValue) => {
             setTextInputValue.setTextInputValue(suggestedSearchText.suggestedSearchText);
           });
-          const obj2 = SearchPlatformUtilsDefault;
-          const initialMessages = obj2.fetchInitialMessages(smartSearchQuery.searchContext);
-          const obj3 = SuggestedSearchActionCreators;
-          const result = obj3.advanceSuggestedSearches(
-            smartSearchQuery.guildId,
-            smartSearchQuery.channelIds,
+          const obj4 = SearchPlatformUtilsDefault;
+          const initialMessages = obj4.fetchInitialMessages(smartSearchQuery.searchContext);
+          const obj5 = SuggestedSearchActionCreators;
+          const result1 = obj5.advanceSuggestedSearches(
+            smartSearchQuery,
+            SearchSessionAnalyticsManagerDefault,
             hasOwnProperty,
           );
         }, items);
         let str2 = "redesign/channel-title/semibold";
-        const Text = suggestedSearch(4886).Text;
+        const Text = suggestedSearch(suggestionSource[13]).Text;
         if ("default" === str) {
           str2 = "text-md/normal";
         }
         let compactLabel;
-        const SearchListRow = tmp4(16807).SearchListRow;
+        const SearchListRow = tmp4(tmp5[15]).SearchListRow;
         if ("compact" === str) {
           compactLabel = tmp.compactLabel;
         }
@@ -203,7 +224,7 @@ const memoResult = memo(
         }
         let obj3 = {
           style: iconCircle,
-          children: jsx(tmp4(6548).MagnifyingGlassIcon, { size: "sm", color: "icon-muted" }),
+          children: jsx(tmp4(tmp5[14]).MagnifyingGlassIcon, { size: "sm", color: "icon-muted" }),
         };
         return (
           <SearchListRow

@@ -3,7 +3,7 @@ import react_native from "../../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradient from "../../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradient from "../../../../../../_runtime/05612_LinearGradient.js";
 import SettingsAppearancePickerUtils from "../SettingsAppearancePickerUtils.tsx";
 import react from "../../../../../../_runtime/00019_react.js";
 import SettingsAppearanceConstants from "../SettingsAppearanceConstants.tsx";

@@ -19,7 +19,7 @@ let screenIndex;
 
 let obj2;
 let tmp14;
-const ReanimatedRexportDefault = tmp14(4612);
+const ReanimatedRexportDefault = tmp14(4618);
 const StyleSheet = react_native.StyleSheet;
 let closure_4 = useChatBottomManagerUIStore.useChatInputContainerHeight;
 const jsx = Fragment.jsx;

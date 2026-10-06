@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = stateFromStores(504);
       stateFromStores = tmpResult.useStateFromStores(tmp4, tmp5);
       if (null != variants) {
-        const tmpResult2 = stateFromStores(7064);
+        const tmpResult2 = stateFromStores(7077);
         if (tmpResult2.getIsVariantProduct(variants)) {
           let tmp9;
           if (cResult[2] === variants.variants) {
@@ -69,7 +69,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let num = 0;
       if (null != variants) {
         num = 0;
-        const tmpResult = tmp(7064);
+        const tmpResult = tmp(7077);
         if (tmpResult.getIsVariantProduct(variants)) {
           const _Math = Math;
           variants = variants.variants;

@@ -207,7 +207,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = getVoiceChannelSubtitle(voiceStates, layout);
       }
       const obj3 = { subtitle: tmp11, muted: false, layout, channelId: id, guildId: guild_id };
-      const tmpResult2 = channel(16825);
+      const tmpResult2 = channel(16846);
       const result = tmpResult2.renderChannelSubtitle(obj3);
       cResult[4] = id;
       cResult[5] = guild_id;

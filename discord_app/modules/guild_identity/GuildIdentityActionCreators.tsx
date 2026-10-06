@@ -82,7 +82,7 @@ let obj = function _saveGuildIdentityChanges() {
             body = undefined;
             c7 = 1;
             vad_colors = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c7) {
           if (guildId === 1) {

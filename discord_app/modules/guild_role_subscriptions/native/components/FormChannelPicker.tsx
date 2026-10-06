@@ -48,7 +48,7 @@ export default function FormChannelPicker(channelId) {
       const obj = { guildId: importDefault, selectedChannelId: id, onChannelSelected: onChange };
       id = undefined;
       ActionSheetActionCreatorsDefault;
-      const tmp2 = asyncRequire(17950, dependencyMap.paths);
+      const tmp2 = asyncRequire(17996, dependencyMap.paths);
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }

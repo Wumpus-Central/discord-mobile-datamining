@@ -8,7 +8,7 @@ import intl2 from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ActionSheetConstants from "../../../action_sheet/native/ActionSheetConstants.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
@@ -129,7 +129,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   accessibilityRole: "header",
                   children: metadata.title,
                 };
-                const tmp21 = closure_7(onOverlaySurfaceClick(4886).Text, obj2);
+                const tmp21 = closure_7(onOverlaySurfaceClick(4892).Text, obj2);
                 cResult[12] = metadata.title;
                 cResult[13] = tmp21;
                 tmp19 = tmp21;
@@ -140,7 +140,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp23 = null != metadata.subtitle && "" !== metadata.subtitle;
                 if (tmp23) {
                   const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: metadata.subtitle };
-                  tmp23 = closure_7(onOverlaySurfaceClick(4886).Text, obj3);
+                  tmp23 = closure_7(onOverlaySurfaceClick(4892).Text, obj3);
                 }
                 cResult[14] = metadata.subtitle;
                 cResult[15] = tmp23;
@@ -232,7 +232,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                           color: "mobile-text-heading-primary",
                           children: intl.string(onOverlaySurfaceClick(1126).t["EV1W/L"]),
                         };
-                        const Text = onOverlaySurfaceClick(4886).Text;
+                        const Text = onOverlaySurfaceClick(4892).Text;
                         intl = onOverlaySurfaceClick(1126).intl;
                         items2 = [closure_7(Text, obj8)];
                         const obj9 = { media: metadata.media, onGetGamePress: onMediaGetGamePress, onCarouselScroll };
@@ -355,11 +355,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "header",
         children: metadata.title,
       };
-      items4[0] = closure_7(onOverlaySurfaceClick(4886).Text, obj9);
+      items4[0] = closure_7(onOverlaySurfaceClick(4892).Text, obj9);
       let tmp17Result = null != metadata.subtitle && "" !== metadata.subtitle;
       if (tmp17Result) {
         const obj10 = { variant: "text-sm/medium", color: "text-subtle", children: metadata.subtitle };
-        tmp17Result = closure_7(onOverlaySurfaceClick(4886).Text, obj10);
+        tmp17Result = closure_7(onOverlaySurfaceClick(4892).Text, obj10);
       }
       items4[1] = tmp17Result;
       items3[1] = closure_8(View, obj8);
@@ -377,7 +377,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: intl.string(onOverlaySurfaceClick(1126).t["EV1W/L"]),
         };
-        const Text = onOverlaySurfaceClick(4886).Text;
+        const Text = onOverlaySurfaceClick(4892).Text;
         intl = onOverlaySurfaceClick(1126).intl;
         items5 = [closure_7(Text, obj13)];
         const obj14 = { media: metadata.media, onGetGamePress: onMediaGetGamePress, onCarouselScroll };
@@ -518,7 +518,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       ({ onInstallPress, onLayout } = arg0);
       const tmp = closure_10();
       const bottom = token(1618)().bottom;
-      let obj = bottom(4580);
+      let obj = bottom(4586);
       token = obj.useToken(token(587).colors.MOBILE_ACTIONSHEET_BACKGROUND);
       let items = [token];
       const items1 = [bottom];
@@ -543,10 +543,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         start: VerticalGradient.START,
         end: VerticalGradient.END,
       };
-      items2[0] = closure_7(token(5605), obj3);
+      items2[0] = closure_7(token(5612), obj3);
       const obj4 = { style: memo1, children: closure_7(Button, obj5) };
       obj5 = { size: "lg", text: intl.string(bottom(1126).t.lwQdjB), onPress: onInstallPress };
-      Button = bottom(5594).Button;
+      Button = bottom(5601).Button;
       intl = bottom(1126).intl;
       items2[1] = closure_7(View, obj4);
       return closure_8(View, obj2);

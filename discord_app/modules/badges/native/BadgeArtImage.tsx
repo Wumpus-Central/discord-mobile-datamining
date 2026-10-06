@@ -3,7 +3,7 @@ import react_native from "../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import inlineStyles from "../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08169_inlineStyles.js";
 import APNGPlayer from "../../image/native/APNGPlayer.android.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
@@ -150,7 +150,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               let tmp6Result;
-              const SvgUri = tmp(8136).SvgUri;
+              const SvgUri = tmp(8169).SvgUri;
               if (null != fallbackUrl) {
                 tmp6Result = tmp6(fallbackUrl);
               }

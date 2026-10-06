@@ -51,7 +51,7 @@ let obj = function _requestAgeVerification() {
             ({ method: c0, classificationId: c1, vendor: c2 } = closure_0);
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (method === 1) {
@@ -319,7 +319,7 @@ obj = function _initiateSuspendedUserAgeVerification() {
             token = undefined;
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (from_classification_id === 1) {
@@ -454,7 +454,7 @@ obj = function _requestIncodeSessionBootstrap() {
             }
             c3 = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c3) {
           if (arg0 === 1) {

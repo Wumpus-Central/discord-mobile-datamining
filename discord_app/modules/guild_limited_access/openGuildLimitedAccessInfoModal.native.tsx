@@ -24,7 +24,7 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
   const obj2 = {
     importer() {
       let guildId;
-      const promise = asyncRequire(13644, dependencyMap.paths);
+      const promise = asyncRequire(13660, dependencyMap.paths);
       return promise.then((result) => {
         closure_0 = result.default;
         return (arg0) => {

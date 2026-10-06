@@ -6,7 +6,7 @@ import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import _asyncToGenerator from "../../../_runtime/metro/00005__asyncToGenerator.js";
 import size_mod from "../../../_runtime/metro/00002__.js";
 
-let c2, closure_4, experiment, experiment2, originalContentType1, originalMd5;
+let c2, closure_4, originalContentType1, originalMd5;
 
 function preConversionFormat(platform) {
   let tmp3 = null;
@@ -50,17 +50,14 @@ let value = function _maybePreConvertImageItem() {
           return { value: "IconComponent", done: null };
         }
       } else {
-        let c5;
         try {
           let closure_2;
           let convertFileToJpeg;
-          let closure_7;
-          let obj9;
-          let sourceMimeType;
+          let closure_5;
+          let jxrMimeType;
           let file;
-          let obj10;
-          let closure_13;
-          let closure_14;
+          let obj8;
+          let closure_9;
           let closure_1;
           c7 = 2;
           if (0 === c6) {
@@ -75,26 +72,20 @@ let value = function _maybePreConvertImageItem() {
               closure_2 = undefined;
               originalContentType1 = undefined;
               convertFileToJpeg = undefined;
-              experiment2 = undefined;
-              closure_7 = undefined;
-              obj9 = undefined;
-              experiment = undefined;
-              sourceMimeType = undefined;
+              closure_5 = undefined;
+              jxrMimeType = undefined;
               file = undefined;
-              obj10 = undefined;
-              closure_13 = undefined;
-              closure_14 = undefined;
+              obj8 = undefined;
+              closure_9 = undefined;
               originalMd5 = undefined;
-              const tmp86 = preConversionFormat(value);
-              closure_1 = tmp86;
-              if (null != tmp86) {
+              const tmp67 = preConversionFormat(value);
+              closure_1 = tmp67;
+              if (null != tmp67) {
                 if (value.platform === UploadPlatform.UploadPlatform.WEB) {
                   c5 = 1;
                   const items = [
                     asyncRequire(dependencyMap[4], dependencyMap.paths),
                     asyncRequire(dependencyMap[6], dependencyMap.paths),
-                    asyncRequire(dependencyMap[7], dependencyMap.paths),
-                    asyncRequire(dependencyMap[8], dependencyMap.paths),
                   ];
                   c6 = 2;
                   c7 = 1;
@@ -119,20 +110,15 @@ let value = function _maybePreConvertImageItem() {
               return { value, done: true };
             } else {
               closure_2 = value;
-              originalContentType1 = closure_132_2(closure_2, 4);
+              originalContentType1 = closure_132_2(closure_2, 2);
               convertFileToJpeg = originalContentType1[0].convertFileToJpeg;
-              experiment = originalContentType1[1].HeicUploadConversionExperiment;
-              experiment2 = originalContentType1[2].JxrUploadConversionExperiment;
-              closure_7 = originalContentType1[3].default;
+              closure_5 = originalContentType1[1].default;
               if ("heic" === closure_1) {
-                obj9 = { experiment, sourceMimeType: closure_132_0(closure_132_1[3]).heicMimeType };
-                const obj8 = { experiment, sourceMimeType: closure_132_0(closure_132_1[3]).heicMimeType };
-              } else {
-                obj9 = { experiment: experiment2, sourceMimeType: closure_132_0(closure_132_1[3]).jxrMimeType };
                 originalContentType1 = closure_132_0;
+                jxrMimeType = closure_132_0(closure_132_1[3]).heicMimeType;
+              } else {
+                jxrMimeType = closure_132_0(closure_132_1[3]).jxrMimeType;
               }
-              experiment = obj9.experiment;
-              sourceMimeType = obj9.sourceMimeType;
               file = value.file;
               const compressionMetadata = value.compressionMetadata;
               originalContentType1 = compressionMetadata == null;
@@ -144,7 +130,7 @@ let value = function _maybePreConvertImageItem() {
                 if ("" !== value.compressionMetadata.originalContentType) {
                   originalContentType1 = value.compressionMetadata.originalContentType;
                 }
-                obj10 = { originalContentType: originalContentType1, preCompressionSize: size };
+                obj8 = { originalContentType: originalContentType1, preCompressionSize: size };
                 originalContentType1 = value.compressionMetadata;
                 let preCompressionSize;
                 if (originalContentType1 != null) {
@@ -154,27 +140,13 @@ let value = function _maybePreConvertImageItem() {
                 if (preCompressionSize == null) {
                   size = file.size;
                 }
-                originalContentType1 = experiment.getConfig;
-                const _HermesInternal = HermesInternal;
-                const obj11 = { location: "imagePreConvert.maybePreConvertImageItem." + closure_1 };
-                closure_13 = originalContentType1(obj11);
-                if (closure_13.enabled) {
-                  c6 = 3;
-                  c7 = 1;
-                  const obj12 = {
-                    value: convertFileToJpeg(file, closure_1, closure_13.quality, closure_13.maxFileSizeBytes),
-                    done: false,
-                  };
-                  return obj12;
-                } else {
-                  originalContentType1 = { compressionMetadata: obj10, imageConversionEvaluated: true };
-                  const merged = Object.assign(value);
-                  c5 = 0;
-                  c7 = 3;
-                  return { value: originalContentType1, done: true };
-                }
+                originalContentType1 = convertFileToJpeg;
+                c6 = 3;
+                c7 = 1;
+                const obj9 = { value: convertFileToJpeg(file, closure_1), done: false };
+                return obj9;
               }
-              originalContentType1 = sourceMimeType(file);
+              originalContentType1 = jxrMimeType(file);
             }
           } else if (3 === c6) {
             if (arg0 === 1) {
@@ -185,30 +157,30 @@ let value = function _maybePreConvertImageItem() {
               c7 = 3;
               return { value, done: true };
             } else {
-              closure_14 = value;
-              if (null != closure_14) {
-                if (null != closure_14.convertedFile) {
-                  originalContentType1 = closure_7.fromBlob(file);
+              closure_9 = value;
+              if (null != closure_9) {
+                if (null != closure_9.convertedFile) {
+                  originalContentType1 = closure_5.fromBlob(file);
                   c6 = 4;
                   c7 = 1;
-                  const obj15 = { value: originalContentType1.catch(() => null), done: false };
-                  return obj15;
+                  const obj11 = { value: originalContentType1.catch(() => null), done: false };
+                  return obj11;
                 }
               }
-              const obj16 = {
-                compressionMetadata: obj10,
+              const obj12 = {
+                compressionMetadata: obj8,
                 imageConversionEvaluated: true,
                 imageConversionAnalytics: analytics,
               };
-              const merged1 = Object.assign(value);
-              originalContentType1 = closure_14;
+              const merged = Object.assign(value);
+              originalContentType1 = closure_9;
               analytics = undefined;
-              if (closure_14 != null) {
+              if (closure_9 != null) {
                 analytics = originalContentType1.analytics;
               }
               c5 = 0;
               c7 = 3;
-              return { value: obj16, done: true };
+              return { value: obj12, done: true };
             }
           } else if (arg0 === 1) {
             c7 = 3;
@@ -224,22 +196,22 @@ let value = function _maybePreConvertImageItem() {
             }
             originalMd5 = c2;
             value = {
-              file: closure_14.convertedFile,
-              compressionMetadata: obj10,
+              file: closure_9.convertedFile,
+              compressionMetadata: obj8,
               originalMd5,
               imageConversionEvaluated: true,
-              imageConversionAnalytics: closure_14.analytics,
+              imageConversionAnalytics: closure_9.analytics,
             };
-            const merged2 = Object.assign(value);
+            const merged1 = Object.assign(value);
             originalContentType1 = originalMd5;
             c5 = 0;
             c7 = 3;
             return { value, done: true };
           }
-        } catch (tmp67) {
+        } catch (tmp50) {
           if (0 === c5) {
             c7 = 3;
-            throw tmp67;
+            throw tmp50;
           } else {
             c6 = 1;
           }

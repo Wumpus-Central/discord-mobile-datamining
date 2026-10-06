@@ -8,7 +8,7 @@ import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05612_LinearGradient.js";
 import ColorConstants from "../../../../colors/native/ColorConstants.tsx";
 import openPremiumUpsellActionSheetDefault from "../utils/openPremiumUpsellActionSheet.tsx";
 import EntitlementFeatureNames from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";

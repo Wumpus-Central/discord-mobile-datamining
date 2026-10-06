@@ -5,6 +5,7 @@ import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.t
 import TrackingConstants from "TrackingConstants.tsx";
 import SearchUtils from "../../SearchUtils.tsx";
 import SearchSessionAnalyticsManagerDefault from "../../managers/native/SearchSessionAnalyticsManager.tsx";
+import SmartSearchAnalyticsManagerDefault from "../../../intelligence_layer/search/SmartSearchAnalyticsManager.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 import Constants from "../../../../Constants.tsx";
@@ -289,8 +290,10 @@ let obj = {
   },
   trackSearchClosed(searchContext) {
     searchContext = searchContext.searchContext;
-    const obj = SearchSessionAnalyticsManagerDefault;
-    obj.terminate(searchContext);
+    const obj = SmartSearchAnalyticsManagerDefault;
+    obj.resetSession(SearchSessionAnalyticsManagerDefault);
+    const obj2 = SearchSessionAnalyticsManagerDefault;
+    obj2.terminate(searchContext);
   },
   trackSearchIndexing(searchContext) {
     let documentsIndexed;

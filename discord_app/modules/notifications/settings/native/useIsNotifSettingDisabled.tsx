@@ -1,5 +1,5 @@
 // discord_app/modules/notifications/settings/native/useIsNotifSettingDisabled.tsx
-import _modDef2819 from "../../NotificationSettings.messages.js";
+import _modDef2847 from "../../NotificationSettings.messages.js";
 import DeclarativeSystemNotifPermissionHelpersDefault from "../DeclarativeSystemNotifPermissionHelpers.android.tsx";
 import DeclarativeSystemNotifPermissionAnalytics from "../DeclarativeSystemNotifPermissionAnalytics.tsx";
 import DeclarativeSystemNotifPermissionStore from "../DeclarativeSystemNotifPermissionStore.tsx";
@@ -81,7 +81,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return DeclarativeSystemNotifPermissionStore.isDisabled(closure_0);
             }
           }
-          const stringResult = obj3.string(_modDef2819.TVZ0Fm);
+          const stringResult = obj3.string(_modDef2847.TVZ0Fm);
           cResult[5] = stringResult;
           tmp12 = stringResult;
         } else {
@@ -129,7 +129,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp7 = !tmp4;
       if (tmp7) {
         const obj2 = {
-          label: intl.string(_modDef2819.TVZ0Fm),
+          label: intl.string(_modDef2847.TVZ0Fm),
           onPress: function handleOpenSystem() {
             const obj = DeclarativeSystemNotifPermissionAnalytics;
             const result = obj.trackSystemNotifSettingsOpened(closure_0);

@@ -92,7 +92,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : () => {
       let fontScale;
       let top;
-      let obj = fontScale(5602);
+      let obj = fontScale(5609);
       fontScale = obj.useFontScale();
       top = top(1618)().top;
       const items = [fontScale, top];

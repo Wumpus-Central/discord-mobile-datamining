@@ -136,17 +136,17 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let trackUserProfileWishlistAction;
       let obj = trackUserProfileWishlistAction(576);
       const cResult = obj.c(17);
-      let obj2 = trackUserProfileWishlistAction(12939);
+      let obj2 = trackUserProfileWishlistAction(12958);
       const isMobileWishlistSuggestionsEnabled = obj2.useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
       const tmp5 = closure_26(isMobileWishlistSuggestionsEnabled);
-      let obj3 = trackUserProfileWishlistAction(4589);
+      let obj3 = trackUserProfileWishlistAction(4595);
       const theme = obj3.useThemeContext().theme;
       let str = "mobile-text-heading-primary";
-      const obj4 = trackUserProfileWishlistAction(4729);
+      const obj4 = trackUserProfileWishlistAction(4735);
       if (obj4.isThemeDark(theme)) {
         str = "text-overlay-light";
       }
-      const tmpResult = trackUserProfileWishlistAction(7861);
+      const tmpResult = trackUserProfileWishlistAction(7872);
       trackUserProfileWishlistAction = tmpResult.useUserProfileAnalyticsContext().trackUserProfileWishlistAction;
       if (cResult[0] !== trackUserProfileWishlistAction) {
         const fn = function e() {
@@ -185,7 +185,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== str) {
         const obj5 = { variant: "text-md/medium", color: str, accessibilityRole: "header", children: tmp7 };
-        const tmp11 = closure_22(trackUserProfileWishlistAction(4886).Text, obj5);
+        const tmp11 = closure_22(trackUserProfileWishlistAction(4892).Text, obj5);
         cResult[3] = str;
         cResult[4] = tmp11;
         tmp9 = tmp11;
@@ -208,7 +208,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           style: emptyStateText,
           children: tmp12,
         };
-        const tmp16 = closure_22(trackUserProfileWishlistAction(4886).Text, obj6);
+        const tmp16 = closure_22(trackUserProfileWishlistAction(4892).Text, obj6);
         cResult[6] = tmp5.emptyStateText;
         cResult[7] = tmp16;
         tmp14 = tmp16;
@@ -249,11 +249,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         obj9 = {
           size: "md",
           variant: "secondary",
-          icon: closure_22(trackUserProfileWishlistAction(10978).PlusMediumIcon, { size: "xs" }),
+          icon: closure_22(trackUserProfileWishlistAction(10991).PlusMediumIcon, { size: "xs" }),
           text: intl3.string(trackUserProfileWishlistAction(1126).t.SDUwM0),
           onPress: tmp6,
         };
-        Button = tmp(5594).Button;
+        Button = tmp(5601).Button;
         intl3 = tmp(1126).intl;
         tmp18 = closure_22(View, obj8);
       }
@@ -271,17 +271,17 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let items1;
       let obj8;
       let trackUserProfileWishlistAction;
-      let obj = trackUserProfileWishlistAction(12939);
+      let obj = trackUserProfileWishlistAction(12958);
       const isMobileWishlistSuggestionsEnabled = obj.useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
       let tmp4 = closure_26(isMobileWishlistSuggestionsEnabled);
-      let obj2 = trackUserProfileWishlistAction(4589);
+      let obj2 = trackUserProfileWishlistAction(4595);
       const theme = obj2.useThemeContext().theme;
-      let obj3 = trackUserProfileWishlistAction(4729);
+      let obj3 = trackUserProfileWishlistAction(4735);
       let str = "mobile-text-heading-primary";
       if (obj3.isThemeDark(theme)) {
         str = "text-overlay-light";
       }
-      const tmpResult = trackUserProfileWishlistAction(7861);
+      const tmpResult = trackUserProfileWishlistAction(7872);
       trackUserProfileWishlistAction = tmpResult.useUserProfileAnalyticsContext().trackUserProfileWishlistAction;
       let items = [trackUserProfileWishlistAction];
       const obj4 = { style: tmp4.emptyState, children: items1 };
@@ -310,7 +310,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "header",
         children: intl.string(trackUserProfileWishlistAction(1126).t.HGnLLT),
       };
-      const Text = tmp(4886).Text;
+      const Text = tmp(4892).Text;
       intl = tmp(1126).intl;
       items1 = [closure_22(Text, obj5), ,];
       const obj6 = {
@@ -319,7 +319,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp4.emptyStateText,
         children: intl2.string(trackUserProfileWishlistAction(1126).t["/X1ny6"]),
       };
-      const Text2 = tmp(4886).Text;
+      const Text2 = tmp(4892).Text;
       intl2 = tmp(1126).intl;
       items1[1] = closure_22(Text2, obj6);
       let tmp8Result = !isMobileWishlistSuggestionsEnabled;
@@ -328,11 +328,11 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         obj8 = {
           size: "md",
           variant: "secondary",
-          icon: closure_22(trackUserProfileWishlistAction(10978).PlusMediumIcon, { size: "xs" }),
+          icon: closure_22(trackUserProfileWishlistAction(10991).PlusMediumIcon, { size: "xs" }),
           text: intl3.string(trackUserProfileWishlistAction(1126).t.SDUwM0),
           onPress: callback,
         };
-        Button = tmp(5594).Button;
+        Button = tmp(5601).Button;
         intl3 = tmp(1126).intl;
         tmp8Result = closure_22(View, obj7);
       }
@@ -910,7 +910,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     trackUserProfileWishlistAction(obj);
     const obj2 = ActionSheetActionCreatorsDefault;
     const obj3 = { wishlistId, analyticsContext: context, analyticsLocations };
-    obj2.openLazy(asyncRequire(12942, dependencyMap.paths), "EditWishlistActionSheet", obj3, "stack");
+    obj2.openLazy(asyncRequire(12961, dependencyMap.paths), "EditWishlistActionSheet", obj3, "stack");
   }, items14);
   const callback1 = obj12.useCallback(() => {
     let items;

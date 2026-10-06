@@ -36,7 +36,7 @@ class MobileGiftIntentCardManager extends GiftIntentReconcilingManager {
             if (
               self.trySendGiftingPromptSystemMessage(id, constants2.FRIEND_ANNIVERSARY, found, constants.SEND_MESSAGE)
             ) {
-              const tmpResult = tmp(10472);
+              const tmpResult = tmp(10485);
               const result = tmpResult.logMessageGiftIntentShown(found);
               const userAffinity = self.getUserAffinity(found);
               const obj = {
@@ -44,8 +44,8 @@ class MobileGiftIntentCardManager extends GiftIntentReconcilingManager {
                 type: tmp(1260).ImpressionTypes.VIEW,
                 properties: obj2,
               };
-              const trackImpression = tmp(8422).trackImpression;
-              tmp(8422);
+              const trackImpression = tmp(8455).trackImpression;
+              tmp(8455);
               obj2 = { gift_intent_type: constants2.FRIEND_ANNIVERSARY, dm_affinity: dmProbability, channel_id: id };
               dmProbability = undefined;
               if (userAffinity != null) {

@@ -57,7 +57,7 @@ const computeEmojiItems = module_12.memoize((arr, stateFromStores) => {
   let arr3;
   let items1;
   let items4;
-  const f131800 = (emoji) => !emoji.emoji.animated;
+  const f132019 = (emoji) => !emoji.emoji.animated;
   _require = stateFromStores;
   const found = arr.filter((item) => {
     const obj = RoleSubscriptionEmojiUtils;
@@ -68,8 +68,8 @@ const computeEmojiItems = module_12.memoize((arr, stateFromStores) => {
   const obj2 = require("GuildBoostingUtils");
   const maxEmojiSlots = obj2.getMaxEmojiSlots(stateFromStores);
   const obj3 = module_12;
-  [arr2, arr3] = obj3.partition(reversed, f131800);
-  _slicedToArray(obj3.partition(reversed, f131800), 2);
+  [arr2, arr3] = obj3.partition(reversed, f132019);
+  _slicedToArray(obj3.partition(reversed, f132019), 2);
   const intl = require("intl").intl;
   const stringResult = intl.string(require("intl").t.sMOuuS);
   const bound = Math.max(maxEmojiSlots - arr2.length, 0);

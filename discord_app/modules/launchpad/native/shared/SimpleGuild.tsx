@@ -71,7 +71,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } = arg0);
       const tmp4 = undefined === animated || animated;
       if (undefined === iconSize) {
-        iconSize = guildId(5971).GuildIconSizes.LARGE;
+        iconSize = guildId(5978).GuildIconSizes.LARGE;
       }
       const tmp7 = closure_10();
       ({ iconStroke, iconBackground, iconBackgroundBrand } = useSimpleGuildDefaultColorsDefault());
@@ -130,7 +130,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult4 = guildId(504);
       const stateFromStoresObject = tmpResult4.useStateFromStoresObject(tmp14, tmp16, tmp17);
       ({ unread: unread2, badge: badge2 } = stateFromStoresObject);
-      const tmpResult5 = guildId(17393);
+      const tmpResult5 = guildId(17422);
       const tmp20 = tmp4 ? tmpResult5.SimpleGuildContainerAnimated : tmpResult5.SimpleGuildContainer;
       if (cResult[7] === size) {
         let tmp21;
@@ -189,7 +189,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             tmp23 = tmp24;
           }
         }
-        const tmpResult6 = guildId(16274);
+        const tmpResult6 = guildId(16314);
         const activityIndicatorState = tmpResult6.useActivityIndicatorState(guildId);
         if (cResult[18] === containerSize) {
           if (cResult[19] === stateFromStores) {
@@ -370,7 +370,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   if (guildId === ME) {
-                    const ChatIcon = guildId(5855).ChatIcon;
+                    const ChatIcon = guildId(5862).ChatIcon;
                     const colors = nativeDefault.colors;
                     tmp48Result = <View style={tmp7.dmsWrapper}>{null}</View>;
                   } else if (

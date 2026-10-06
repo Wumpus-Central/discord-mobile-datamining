@@ -177,7 +177,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
                   showsVerticalScrollIndicator: false,
                   importantForAccessibility: "no-hide-descendants",
                 };
-                let tmp21 = closure_5(animatedStyles(8371).FlashList, obj5);
+                let tmp21 = closure_5(animatedStyles(8404).FlashList, obj5);
                 cResult[14] = data;
                 cResult[15] = tmp5;
                 cResult[16] = tmp21;
@@ -283,7 +283,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         importantForAccessibility: "no-hide-descendants",
       };
       obj5 = { paddingVertical: nativeDefault.space.PX_16 };
-      const FlashList = animatedStyles(8371).FlashList;
+      const FlashList = animatedStyles(8404).FlashList;
       items2[1] = closure_5(FlashList, obj4);
       const obj6 = { visible: isNitroLocked, theme: themes[themeIndex] };
       items2[2] = closure_5(SettingsAppearanceChannelListPreviewNitroUpsellDefault, obj6);

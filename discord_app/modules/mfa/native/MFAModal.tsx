@@ -1,7 +1,7 @@
 // discord_app/modules/mfa/native/MFAModal.tsx
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import intl2 from "../../../intl/index.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04809_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04815_AssetRegistry.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
@@ -65,7 +65,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[5];
       }
       let tmp13 = tmp8;
-      if (!tmp(6439).hasWebAuthn) {
+      if (!tmp(6446).hasWebAuthn) {
         if (cResult[7] !== tmp8.methods) {
           const _Symbol = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
@@ -140,7 +140,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const obj3 = { name: tmp(15500).MfaScreens.SELECT, params: obj4 };
+          const obj3 = { name: tmp(15516).MfaScreens.SELECT, params: obj4 };
           obj4 = { mfaChallenge: tmp13, finish: tmp22 };
           cResult[19] = tmp22;
           cResult[20] = tmp13;
@@ -272,7 +272,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         yield "IconComponent";
         data = tmp;
         ({ mfaType: c0, data: c1 } = closure_0);
-        return "Set";
+        return "Reflect";
       });
       let items1 = [finish, memo.ticket];
       finish = useCallback(function () {

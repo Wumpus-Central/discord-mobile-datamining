@@ -223,7 +223,7 @@ class InputWatcher {
     obj.mediaEngine = mediaEngine;
     obj.mediaEngineStore = mediaEngineStore;
     mediaEngine = obj.mediaEngine;
-    mediaEngine.on(obj(4945).MediaEngineEvent.Silence, obj.handleSilence);
+    mediaEngine.on(obj(4951).MediaEngineEvent.Silence, obj.handleSilence);
     return obj;
   }
   reset() {

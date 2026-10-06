@@ -10,21 +10,21 @@ import GameIconDefault from "../../modules/game_detection/native/GameIcon.tsx";
 import ChevronSmallRightIcon2 from "../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import SlayerStorefrontUtils from "../../modules/slayer_storefront/SlayerStorefrontUtils.tsx";
 import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx";
-import _modDef10758 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef10771 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import ChevronSmallDownIcon from "../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import GiftCodeActionCreatorsDefault from "../../actions/GiftCodeActionCreators.tsx";
 import SubscriptionUtils from "../../utils/SubscriptionUtils.tsx";
-import AssetRegistryDefault from "../../../_runtime/13032_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../_runtime/13033_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../_runtime/13034_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../_runtime/13035_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../_runtime/13036_AssetRegistry.js";
-import AssetRegistryDefault6 from "../../../_runtime/13037_AssetRegistry.js";
-import AssetRegistryDefault7 from "../../../_runtime/13038_AssetRegistry.js";
-import AssetRegistryDefault8 from "../../../_runtime/13039_AssetRegistry.js";
-import AssetRegistryDefault9 from "../../../_runtime/13040_AssetRegistry.js";
-import AssetRegistryDefault10 from "../../../_runtime/13043_AssetRegistry.js";
-import AssetRegistryDefault11 from "../../../_runtime/13044_AssetRegistry.js";
+import AssetRegistryDefault from "../../../_runtime/13051_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../_runtime/13052_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../_runtime/13053_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../_runtime/13054_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../_runtime/13055_AssetRegistry.js";
+import AssetRegistryDefault6 from "../../../_runtime/13056_AssetRegistry.js";
+import AssetRegistryDefault7 from "../../../_runtime/13057_AssetRegistry.js";
+import AssetRegistryDefault8 from "../../../_runtime/13058_AssetRegistry.js";
+import AssetRegistryDefault9 from "../../../_runtime/13059_AssetRegistry.js";
+import AssetRegistryDefault10 from "../../../_runtime/13062_AssetRegistry.js";
+import AssetRegistryDefault11 from "../../../_runtime/13063_AssetRegistry.js";
 import GiftCodeRowDefault from "GiftCodeRow.tsx";
 import react from "../../../_runtime/00019_react.js";
 import react_native from "../../../_runtime/00017_react-native.js";
@@ -283,7 +283,7 @@ class EntitlementGiftGroupCard extends Component {
     } else if (map1.SEASONAL_COFFEE === giftStyle) {
       return AssetRegistryDefault8;
     } else if (map1.NITROWEEN_STANDARD === giftStyle) {
-      const obj = { uri: _modDef10758 };
+      const obj = { uri: _modDef10771 };
       return obj;
     } else if (TIER_0.TIER_0 === id) {
       return AssetRegistryDefault9;

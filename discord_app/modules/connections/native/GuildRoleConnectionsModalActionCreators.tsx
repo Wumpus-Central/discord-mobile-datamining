@@ -21,7 +21,7 @@ export const openGuildRoleConnectionsModal = function openGuildRoleConnectionsMo
       }
     },
   };
-  obj.pushLazy(onClose(1987)(11187, dependencyMap.paths), obj2, ROLE_CONNECTIONS_MODAL_KEY);
+  obj.pushLazy(onClose(1987)(11200, dependencyMap.paths), obj2, ROLE_CONNECTIONS_MODAL_KEY);
 };
 export const makeGuildRoleConnectionsConnectAccountsActionSheetKey =
   function makeGuildRoleConnectionsConnectAccountsActionSheetKey(id) {
@@ -34,6 +34,6 @@ export const openGuildRoleConnectionsConnectAccountModal = function openGuildRol
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   const obj = { role: verificationRole, guildId };
-  const tmp2 = asyncRequire(11179, dependencyMap.paths);
+  const tmp2 = asyncRequire(11192, dependencyMap.paths);
   openLazy(tmp2, "GuildRoleConnectionsConnectAccountsActionSheet-" + verificationRole.id, obj);
 };

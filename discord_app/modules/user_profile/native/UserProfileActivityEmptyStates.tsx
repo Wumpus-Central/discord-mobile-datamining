@@ -300,8 +300,8 @@ const memoResult = memo(
               }
               const obj4 = { size: "sm", variant: "secondary", text: tmp15, onPress: A };
               cResult[10] = A;
-              cResult[11] = closure_7(name(5594).Button, obj4);
-              const tmp18 = closure_7(name(5594).Button, obj4);
+              cResult[11] = closure_7(name(5601).Button, obj4);
+              const tmp18 = closure_7(name(5601).Button, obj4);
             } else {
               class A {
                 constructor() {
@@ -348,7 +348,7 @@ const memoResult = memo(
             const tmp22 = closure_7(View, obj6);
           }
         }
-        let obj2 = user(5042);
+        let obj2 = user(5048);
         name = obj2.getName(guildId, channelId, user);
         const intl = tmp(1126).intl;
         const formatToPlainStringResult = intl.formatToPlainString(name(1126).t.sjSitP, { name });
@@ -370,7 +370,7 @@ const memoResult = memo(
         let name;
         ({ guildId, channelId } = user);
         const tmp = closure_10();
-        let obj = name(5042);
+        let obj = name(5048);
         name = obj.getName(guildId, channelId, user);
         const intl = user(1126).intl;
         items = [user.id];
@@ -399,7 +399,7 @@ const memoResult = memo(
           obj3.hideAllActionSheets();
         }, items);
         obj4 = { size: "sm", variant: "secondary", text: intl2.string(user(1126).t["g33r/P"]), onPress: callback };
-        Button = user(5594).Button;
+        Button = user(5601).Button;
         intl2 = user(1126).intl;
         return closure_7(closure_11, obj2);
       },

@@ -147,19 +147,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         pendingPronouns,
       } = stateFromStoresObject);
       ({ pendingGlobalName, pendingLegacyUsernameDisabled } = stateFromStoresObject);
-      const tmp11 = set(7857)(user.id, guildId);
+      const tmp11 = set(7868)(user.id, guildId);
       if (cResult[3] === tmp11) {
         if (cResult[4] === pendingThemeColors) {
           let tmp12;
           if (cResult[5] === user) {
             tmp12 = cResult[6];
           }
-          ({ theme, primaryColor, secondaryColor } = set(7899)(tmp12));
-          set(7899)(tmp12);
+          ({ theme, primaryColor, secondaryColor } = set(7910)(tmp12));
+          set(7910)(tmp12);
           const tmp15 = null != primaryColor;
           const tmp17 = closure_12(tmp4, tmp15, maxWidth);
-          set(7913)();
-          const tmpResult5 = guildId(10826);
+          set(7924)();
+          const tmpResult5 = guildId(10839);
           const customStatusActivity = tmpResult5.useCustomStatusActivity();
           if (cResult[7] === primaryColor) {
             if (cResult[8] === secondaryColor) {
@@ -167,7 +167,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[9] === theme) {
                 tmp21 = cResult[10];
               }
-              const tmpResult6 = guildId(7910);
+              const tmpResult6 = guildId(7921);
               const userProfileColors = tmpResult6.useUserProfileColors(tmp21);
               ({ avatarBackground, containerBackground, gradientFallbackBackground } = userProfileColors);
               if (undefined !== avatarDecorationOverride) {
@@ -218,13 +218,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               tmp31 = cResult[21];
                             }
                             let skuId;
-                            const tmp10Result = set(7872);
+                            const tmp10Result = set(7883);
                             if (tmp31 != null) {
                               skuId = tmp31.skuId;
                             }
                             const tmp10ResultResult = tmp10Result(skuId);
                             if (cResult[22] === pendingAvatar) {
-                              const arr2 = set(7914)(tmp11, pendingLegacyUsernameDisabled);
+                              const arr2 = set(7925)(tmp11, pendingLegacyUsernameDisabled);
                               if (cResult[25] !== arr2) {
                                 const _Symbol = Symbol;
                                 if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
@@ -313,8 +313,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                                 }
                                 cResult[32] = tmp60.width;
                                 cResult[33] = tmp10ResultResult;
-                                cResult[34] = set(7896)(tmp10ResultResult, tmp60.width);
-                                const tmp65 = set(7896)(tmp10ResultResult, tmp60.width);
+                                cResult[34] = set(7907)(tmp10ResultResult, tmp60.width);
+                                const tmp65 = set(7907)(tmp10ResultResult, tmp60.width);
                               }
                               if (cResult[39] === undefined) {
                                 class Oe {
@@ -330,7 +330,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                               cResult[42] = items2;
                             }
                             const obj2 = { userId: user.id, image: pendingAvatar };
-                            const tmpResult7 = guildId(7840);
+                            const tmpResult7 = guildId(7851);
                             const pendingAvatarSrc = tmpResult7.getPendingAvatarSrc(obj2);
                             cResult[22] = pendingAvatar;
                             cResult[23] = user.id;
@@ -413,7 +413,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 guildValue: profileEffect1,
                 guildId,
               };
-              const tmpResult8 = guildId(7837);
+              const tmpResult8 = guildId(7848);
               const profilePreviewValue1 = tmpResult8.getProfilePreviewValue(obj4);
               cResult[11] = pendingProfileEffect;
               cResult[12] = guildId;

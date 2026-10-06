@@ -9,7 +9,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFo
 export const showGuildsBarFolderModal = function showGuildsBarFolderModal(folderId) {
   const obj = ModalActionCreatorsDefault;
   const obj2 = { folderId };
-  obj.pushLazy(asyncRequire(16229, dependencyMap.paths), obj2, GUILD_FOLDER_SETTINGS_MODAL_KEY);
+  obj.pushLazy(asyncRequire(16269, dependencyMap.paths), obj2, GUILD_FOLDER_SETTINGS_MODAL_KEY);
 };
 export const hideGuildsBarFolderModal = function hideGuildsBarFolderModal() {
   const obj = ModalActionCreatorsDefault;

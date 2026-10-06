@@ -117,7 +117,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_5(null);
       dependencyMap = tmp2;
       let tmp4 = arg1;
-      const tmp3 = flag(7181);
+      const tmp3 = flag(7194);
       if (arg1 == null) {
         tmp4 = closure_7;
       }
@@ -211,7 +211,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         flag = true;
       }
       const items = [num];
-      const tmp = num(7181)((isIntersecting) => {
+      const tmp = num(7194)((isIntersecting) => {
         closure_0(isIntersecting.isIntersecting);
       });
       return closure_8(

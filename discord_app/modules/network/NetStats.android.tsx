@@ -18,7 +18,7 @@ let c14, c2, c3, c6, c7, closure_1_11, fileOnly, nativeStats, sendMessageOptions
 
 let AppState;
 let closure_4;
-const f93792 = (arg0) => {
+const f93931 = (arg0) => {
   let obj2;
   nativeStats = arg0;
   if (null == closure_1_11) {
@@ -36,7 +36,7 @@ function receiveNetworkInfoformation(result) {
   const SystemResourceManager = React3.SystemResourceManager;
   const getNetworkUsage = SystemResourceManager.getNetworkUsage;
   if (getNetworkUsage != null) {
-    const networkUsage = getNetworkUsage(f93792);
+    const networkUsage = getNetworkUsage(f93931);
   }
 }
 function updateNetworkUsage() {
@@ -44,7 +44,7 @@ function updateNetworkUsage() {
   const SystemResourceManager = React3.SystemResourceManager;
   const getNetworkUsage = SystemResourceManager.getNetworkUsage;
   if (getNetworkUsage != null) {
-    const networkUsage = getNetworkUsage(f93792);
+    const networkUsage = getNetworkUsage(f93931);
   }
 }
 ({ NativeModules: closure_4, AppState } = react_native);

@@ -91,7 +91,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[9] = tmp18;
         tmp15 = tmp18;
       }
-      const tmp14 = jsx(channelId(7498).GenericHeaderTitle, {
+      const tmp14 = jsx(channelId(7509).GenericHeaderTitle, {
         title,
         subtitle: tmp12,
         variant: "heading-lg/semibold",
@@ -115,7 +115,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj = channelId(504);
       const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
       const tmp3 = useChannelNameDefault(stateFromStores, true);
-      const GenericHeaderTitle = channelId(7498).GenericHeaderTitle;
+      const GenericHeaderTitle = channelId(7509).GenericHeaderTitle;
       return <View style={tmp.container}>{null}</View>;
     };
 ReactCompilerGating = ReactCompilerGating_mod;

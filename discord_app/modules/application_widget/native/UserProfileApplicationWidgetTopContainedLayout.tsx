@@ -1,7 +1,7 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetTopContainedLayout.tsx
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _mod8594 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import _mod8629 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import react from "../../../../_runtime/00019_react.js";
@@ -213,7 +213,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                         cResult[32] = tmp32;
                         tmp29 = tmp32;
                       }
-                      const items3 = [_mod8594.ResolvedValueType.MEDIA];
+                      const items3 = [_mod8629.ResolvedValueType.MEDIA];
                       const fieldValue = resolveFieldValue(image, items3);
                       cResult[16] = resolveFieldValue;
                       cResult[17] = image;
@@ -221,7 +221,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       tmp15 = fieldValue;
                     }
                   }
-                  const tmpResult = _mod8594;
+                  const tmpResult = _mod8629;
                   const textComponentValues = tmpResult.resolveTextComponentValues(
                     topConfig.components.subtitle_3,
                     resolveFieldValue,
@@ -234,7 +234,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp11 = textComponentValues;
                 }
               }
-              const tmpResult4 = _mod8594;
+              const tmpResult4 = _mod8629;
               const textComponentValues1 = tmpResult4.resolveTextComponentValues(
                 topConfig.components.subtitle_2,
                 resolveFieldValue,
@@ -247,7 +247,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               tmp9 = textComponentValues1;
             }
           }
-          const tmpResult5 = _mod8594;
+          const tmpResult5 = _mod8629;
           const textComponentValues2 = tmpResult5.resolveTextComponentValues(
             topConfig.components.subtitle_1,
             resolveFieldValue,
@@ -260,7 +260,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           tmp7 = textComponentValues2;
         }
       }
-      const tmpResult6 = _mod8594;
+      const tmpResult6 = _mod8629;
       const textComponentValues3 = tmpResult6.resolveTextComponentValues(
         topConfig.components.title,
         resolveFieldValue,
@@ -285,20 +285,20 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       ({ topConfig, resolveFieldValue, numberFormat } = header);
       header = header.header;
       const tmp = closure_6();
-      const obj = _mod8594;
+      const obj = _mod8629;
       const textComponentValues = obj.resolveTextComponentValues(
         topConfig.components.title,
         resolveFieldValue,
         numberFormat,
         true,
       );
-      const obj2 = _mod8594;
+      const obj2 = _mod8629;
       const textComponentValues1 = obj2.resolveTextComponentValues(
         topConfig.components.subtitle_1,
         resolveFieldValue,
         numberFormat,
       );
-      const obj3 = _mod8594;
+      const obj3 = _mod8629;
       const textComponentValues2 = obj3.resolveTextComponentValues(
         topConfig.components.subtitle_2,
         resolveFieldValue,
@@ -306,7 +306,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const contained_image = topConfig.components.contained_image;
       let image;
-      const obj4 = _mod8594;
+      const obj4 = _mod8629;
       const textComponentValues3 = obj4.resolveTextComponentValues(
         topConfig.components.subtitle_3,
         resolveFieldValue,
@@ -315,7 +315,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (contained_image != null) {
         image = contained_image.fields.image;
       }
-      const items = [_mod8594.ResolvedValueType.MEDIA];
+      const items = [_mod8629.ResolvedValueType.MEDIA];
       const fieldValue = resolveFieldValue(image, items);
       const items1 = [header];
       const obj5 = { style: tmp.contentRow, children: items3 };

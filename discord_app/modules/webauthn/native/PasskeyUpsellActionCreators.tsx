@@ -21,7 +21,7 @@ let obj = {
   },
   openPasskeyUpsellPromoSheet() {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequire(15514, dependencyMap.paths), PASSKEY_UPSELL_KEY);
+    obj.openLazy(asyncRequire(15530, dependencyMap.paths), PASSKEY_UPSELL_KEY);
   },
   closePasskeyUpsellPromoSheet() {
     const obj = ActionSheetActionCreatorsDefault;

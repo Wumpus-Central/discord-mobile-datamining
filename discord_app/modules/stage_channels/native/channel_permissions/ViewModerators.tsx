@@ -91,7 +91,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = tmp(504);
       const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp7, S, tmp11);
       ({ guild, sortedGuildRoles } = stateFromStoresObject);
-      const tmpResult2 = tmp(5572);
+      const tmpResult2 = tmp(5579);
       const canUpdateStageChannelModerators = tmpResult2.useCanUpdateStageChannelModerators(channel.id);
       if (null != guild) {
         class S {
@@ -304,7 +304,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   const _HermesInternal = HermesInternal;
                   ActionSheetActionCreatorsDefault;
                   const obj2 = { channel, canSkip: false };
-                  const tmp8 = asyncRequire(17003, dependencyMap.paths);
+                  const tmp8 = asyncRequire(17029, dependencyMap.paths);
                   openLazy(tmp8, "channel-add-moderators-" + channel.id, obj2);
                 }
               },
@@ -367,7 +367,7 @@ function openAddModeratorsActionSheet(channel) {
   const openLazy = ActionSheetActionCreatorsDefault.openLazy;
   ActionSheetActionCreatorsDefault;
   const obj2 = { channel, canSkip: flag };
-  const tmp3 = asyncRequire(17003, dependencyMap.paths);
+  const tmp3 = asyncRequire(17029, dependencyMap.paths);
   openLazy(tmp3, "channel-add-moderators-" + channel.id, obj2);
 }
 let result = size.fileFinishedImporting("modules/stage_channels/native/channel_permissions/ViewModerators.tsx");

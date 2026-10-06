@@ -166,8 +166,8 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       [tmp8, CHANNEL_SPRING_CONFIG] = avatarSize(num2.useState(tmp6), 2);
       let num6 = 0;
       const tmp7 = avatarSize(num2.useState(tmp6), 2);
-      const useSharedValue = tmp(4612).useSharedValue;
-      tmp(4612);
+      const useSharedValue = tmp(4618).useSharedValue;
+      tmp(4618);
       if (tmp4) {
         num6 = 1;
       }
@@ -190,7 +190,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult3 = tmp(573);
       const stateFromStores = tmpResult3.useStateFromStores(tmp11, tmp12);
-      const tmpResult4 = tmp(4612);
+      const tmpResult4 = tmp(4618);
       class J {
         constructor() {
           let obj2;
@@ -204,7 +204,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         }
       }
-      let obj3 = { interpolate: tmp(4612).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
+      let obj3 = { interpolate: tmp(4618).interpolate, typingValue: sharedValue, ELLIPSIS_WIDTH: 28 };
       J.__closure = obj3;
       J.__workletHash = 14140918847743;
       J.__initData = __initData;

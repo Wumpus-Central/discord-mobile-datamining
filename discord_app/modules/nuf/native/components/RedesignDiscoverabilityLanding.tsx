@@ -8,7 +8,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/12419_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/12434_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";

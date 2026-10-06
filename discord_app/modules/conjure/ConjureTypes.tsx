@@ -1,10 +1,18 @@
 // discord_app/modules/conjure/ConjureTypes.tsx
 import size from "../../../_runtime/metro/00002__.js";
 
-const frozen = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
+const frozen = Object.freeze({
+  APP_CHANNEL: 1,
+  VOICE_CHANNEL: 2,
+  PROFILE_WIDGET: 3,
+  AUTOMOD: 4,
+  BOT: 5,
+  APPLICATION_COMMANDS: 6,
+});
+const frozen1 = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
 const set = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]);
-let c2 = 5242880;
-let c3 = 52428800;
+let c3 = 5242880;
+let c4 = 52428800;
 const items = [
   { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
   { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },
@@ -24,34 +32,44 @@ const obj2 = { main: items1, subagent: items1, thinking: obj.thinking };
 const result = size.fileFinishedImporting("modules/conjure/ConjureTypes.tsx");
 
 export const UNNAMED_PROJECT_NAME = "Untitled App";
+export const ConjureSupportedSurface = frozen;
 export const MAX_PROJECT_COLLABORATOR_ROLES = 25;
-export const ConjureProjectFlags = frozen;
+export const ConjureProjectFlags = frozen1;
 export const isProjectPublic = function isProjectPublic(flags) {
   let num = flags.flags;
   if (num == null) {
     num = 0;
   }
-  return num & frozen.PUBLIC;
+  return num & frozen1.PUBLIC;
 };
 export const isProjectShared = function isProjectShared(flags) {
   let num = flags.flags;
   if (num == null) {
     num = 0;
   }
-  return num & frozen.SHAREABLE;
+  return num & frozen1.SHAREABLE;
 };
 export const projectUsesNativeAppChannels = function projectUsesNativeAppChannels(project) {
-  let num = project.flags;
-  if (num == null) {
-    num = 0;
+  const supported_surfaces = project.supported_surfaces;
+  let hasItem;
+  if (supported_surfaces != null) {
+    hasItem = supported_surfaces.includes(frozen.APP_CHANNEL);
   }
-  return num & frozen.NATIVE_APP_CHANNELS;
+  let tmp3 = true === hasItem;
+  if (!tmp3) {
+    let num = project.flags;
+    if (num == null) {
+      num = 0;
+    }
+    tmp3 = num & frozen1.NATIVE_APP_CHANNELS;
+  }
+  return tmp3;
 };
 export const conjureCreateFlags = function conjureCreateFlags(c5) {
   let num = 0;
-  const PUBLIC = frozen.PUBLIC;
+  const PUBLIC = frozen1.PUBLIC;
   if (c5) {
-    num = frozen.NATIVE_APP_CHANNELS;
+    num = frozen1.NATIVE_APP_CHANNELS;
   }
   return PUBLIC | num;
 };
@@ -102,10 +120,10 @@ export const CONJURE_MAX_ATTACHMENT_BYTES = 52428800;
 export const CONJURE_MAX_ATTACHMENTS_PER_MESSAGE = 10;
 export const CONJURE_STAGED_ATTACHMENT_TTL_MS = 3600000;
 export const conjureAttachmentLimit = function conjureAttachmentLimit(contentType) {
-  return set.has(contentType) ? c2 : c3;
+  return set.has(contentType) ? c3 : c4;
 };
 export const isConjureAttachmentWithinLimit = function isConjureAttachmentWithinLimit(size, contentType) {
-  return size <= (set.has(contentType) ? c2 : c3);
+  return size <= (set.has(contentType) ? c3 : c4);
 };
 export const formatConjureAttachmentLimit = function formatConjureAttachmentLimit(tmpResult2) {
   return "" + Math.round(tmpResult2 / 1048576) + " MB";

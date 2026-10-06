@@ -7,7 +7,7 @@ import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import FlagUtilsAll from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import ChannelRecord from "../../records/ChannelRecord.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
-import _mod9501 from "native/UserSearch.worker.tsx";
+import _mod9514 from "native/UserSearch.worker.tsx";
 import UserRecord from "../../records/UserRecord.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
@@ -458,7 +458,7 @@ class UserSearchManager extends AutomaticLifecycleManager {
     applyArgumentsResult._handleConnectionOpenSupplemental = function _handleConnectionOpenSupplemental(guilds) {
       guilds = guilds.guilds;
       const timerId = setTimeout(() => {
-        const f152083 = (activity_instances) => {
+        const f152315 = (activity_instances) => {
           let closure_0 = activity_instances;
           const items = [];
           activity_instances = activity_instances.activity_instances;
@@ -517,8 +517,8 @@ class UserSearchManager extends AutomaticLifecycleManager {
           return items;
         });
         const obj2 = _modDef12;
-        let items = [...obj2.flatMap(guilds, f152083)];
-        obj2.flatMap(guilds, f152083);
+        let items = [...obj2.flatMap(guilds, f152315)];
+        obj2.flatMap(guilds, f152315);
         require.updateUsers(items, "connection_open_supplemental");
       }, 3000);
     };
@@ -926,7 +926,7 @@ class UserSearchManager extends AutomaticLifecycleManager {
       _worker.terminate();
       self._worker = null;
     }
-    self._worker = _mod9501;
+    self._worker = _mod9514;
   }
   updateUsers(arr, action) {
     const _worker = this._worker;

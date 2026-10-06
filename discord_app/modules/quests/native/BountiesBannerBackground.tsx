@@ -1,7 +1,7 @@
 // discord_app/modules/quests/native/BountiesBannerBackground.tsx
 import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
 import react2 from "../../../../_runtime/00576_react.js";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import common_Video from "../../../components_native/common/Video.tsx";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";

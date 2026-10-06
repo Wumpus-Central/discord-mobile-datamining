@@ -1,7 +1,7 @@
 // discord_common/js/packages/application-widget-renderer/src/schemas.tsx
 import ApplicationWidgetFieldPresentationType from "../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx";
 import ApplicationWidgetFieldValueType from "../../../shared/shared-constants/ApplicationWidgetFieldValueType.tsx";
-import z18 from "../../../../../_runtime/08601_z.js";
+import z18 from "../../../../../_runtime/08636_z.js";
 import ApplicationWidgetConfigSurface from "../../../shared/shared-constants/ApplicationWidgetConfigSurface.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 

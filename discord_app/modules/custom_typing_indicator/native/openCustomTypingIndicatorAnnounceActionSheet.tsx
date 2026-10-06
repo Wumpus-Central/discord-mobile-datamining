@@ -16,5 +16,5 @@ export const openCustomTypingIndicatorAnnounceActionSheet = function openCustomT
       return obj.hideActionSheet(CustomTypingIndicatorAnnounceActionSheet);
     },
   };
-  obj.openLazy(asyncRequire(11583, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, obj2);
+  obj.openLazy(asyncRequire(11596, dependencyMap.paths), CustomTypingIndicatorAnnounceActionSheet, obj2);
 };

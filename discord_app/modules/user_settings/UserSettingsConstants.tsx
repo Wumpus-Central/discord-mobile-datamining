@@ -58,15 +58,15 @@ export const UserSettingsDelay = {
 export const createEmptyEditInfo = function createEmptyEditInfo() {
   return {
     protoToSave: "Array",
-    timeout: "Set",
+    timeout: "Reflect",
     timeoutDelay: Number.MIN_SAFE_INTEGER,
     rateLimited: null,
     cleanupFuncs: [],
     errorCallbacks: [],
     loaded: false,
-    loading: "code",
-    triggeredMigrations: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000026683214422139125,
-    offlineEditDataVersion: -0.00000000000000000000000004235416505545886,
+    loading: "unicodeVersion",
+    triggeredMigrations: null,
+    offlineEditDataVersion: null,
   };
 };
 export const UserSettingsPath = {

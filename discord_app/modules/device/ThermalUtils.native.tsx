@@ -31,7 +31,7 @@ let closure_4 = module_570.create((arg0) => {
     const thermalState = obj3.getThermalState();
     rawThermalState = thermalState;
   } else {
-    tmp2(4866);
+    tmp2(4872);
   }
   return { rawThermalState };
 });

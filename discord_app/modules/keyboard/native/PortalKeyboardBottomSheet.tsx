@@ -5,7 +5,7 @@ import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import useIsScreenReaderEnabled from "../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import BottomSheetModal from "../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
 import native from "../../../design/components/experimental/native.tsx";
 import isChannelFocused from "../../panels/isChannelFocused.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";

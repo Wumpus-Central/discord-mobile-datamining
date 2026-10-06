@@ -135,10 +135,10 @@ const memoResult = memo(
         if (arr3 == null) {
           arr3 = NO_VOICE_STATES;
         }
-        const tmpResult3 = channel(5588);
+        const tmpResult3 = channel(5595);
         const stageParticipantsCount = tmpResult3.useStageParticipantsCount(
           channel.id,
-          tmp(5582).StageChannelParticipantNamedIndex.AUDIENCE,
+          tmp(5589).StageChannelParticipantNamedIndex.AUDIENCE,
         );
         const sum = stageParticipantsCount + arr3.length;
         if (cResult[4] !== channel) {
@@ -216,7 +216,7 @@ const memoResult = memo(
           }
         }
         const tmp21 = useChannelNameDefault(channel, false);
-        const tmpResult4 = channel(9054);
+        const tmpResult4 = channel(9090);
         const isConnectedToVoiceChannel = tmpResult4.useIsConnectedToVoiceChannel(channel);
         if (stageInstance != null) {
           class N {
@@ -305,10 +305,10 @@ const memoResult = memo(
         if (arr3 == null) {
           arr3 = NO_VOICE_STATES;
         }
-        const tmp2Result = channel(5588);
+        const tmp2Result = channel(5595);
         const stageParticipantsCount = tmp2Result.useStageParticipantsCount(
           channel.id,
-          tmp2(5582).StageChannelParticipantNamedIndex.AUDIENCE,
+          tmp2(5589).StageChannelParticipantNamedIndex.AUDIENCE,
         );
         const items2 = [channel];
         const sum = stageParticipantsCount + arr3.length;
@@ -333,7 +333,7 @@ const memoResult = memo(
         }, items3);
         let topic;
         const tmp10 = useChannelNameDefault(channel, false);
-        const tmp2Result2 = channel(9054);
+        const tmp2Result2 = channel(9090);
         const isConnectedToVoiceChannel = tmp2Result2.useIsConnectedToVoiceChannel(channel);
         if (stageInstance != null) {
           topic = stageInstance.topic;

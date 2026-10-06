@@ -289,7 +289,7 @@ obj = function _fetchStorefrontPricesForApplicationId() {
       await closure_130_18(obj5);
       await "IconComponent";
       applicationId = applicationId.applicationId;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;
@@ -308,7 +308,7 @@ obj = function _fetchStorefrontPricesForSkuIds() {
       await closure_130_18(obj5);
       await "IconComponent";
       skuIds = skuIds.skuIds;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

@@ -112,7 +112,7 @@ let closure_13 = react.memo(
             onLongPress: tmp5,
             backgroundColor: tmp3.maskStrokeStyle.backgroundColor,
           };
-          const tmp9 = closure_10(onGuildSelect(17391), obj3);
+          const tmp9 = closure_10(onGuildSelect(17420), obj3);
           cResult[5] = guildId;
           cResult[6] = tmp5;
           cResult[7] = tmp4;
@@ -140,7 +140,7 @@ let closure_13 = react.memo(
         const callback = react.useCallback(() => {
           onGuildSelect(guildId);
         }, items);
-        let obj = { style: tmp.guildWrapper, children: closure_10(onGuildSelect(17391), obj2) };
+        let obj = { style: tmp.guildWrapper, children: closure_10(onGuildSelect(17420), obj2) };
         const callback1 = react.useCallback(() => {
           const obj = transitionToGuild;
           obj.transitionToGuild(guildId);

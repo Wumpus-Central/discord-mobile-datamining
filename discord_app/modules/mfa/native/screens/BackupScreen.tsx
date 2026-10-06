@@ -294,7 +294,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         label: tmp26,
         placeholder: tmp27,
         isValidClipboardCode,
-        maxLength: finish(15508).BACKUP_CODE_MAX_LENGTH,
+        maxLength: finish(15524).BACKUP_CODE_MAX_LENGTH,
         onChangeCode: C,
         error: tmp10,
         isDisabled: tmp30,

@@ -63,7 +63,7 @@ let obj = function _joinOrStartActivityInChannel() {
             compositeInstanceId = undefined;
             referrerId = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === tmp5) {
           if (applicationId === 1) {

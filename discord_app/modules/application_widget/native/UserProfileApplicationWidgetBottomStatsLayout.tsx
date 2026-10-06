@@ -2,7 +2,7 @@
 import react_native from "../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _mod8594 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import _mod8629 from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
 import UserProfileApplicationWidgetFieldUtils from "../../user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx";
 import UserProfileApplicationWidgetSkeletons from "../../user_profile/native/UserProfileApplicationWidgetSkeletons.tsx";
 import react from "../../../../_runtime/00019_react.js";
@@ -110,8 +110,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const mapped1 = first.map((item) => {
-        const resolveStatComponentValues = _mod8594.resolveStatComponentValues;
-        _mod8594;
+        const resolveStatComponentValues = _mod8629.resolveStatComponentValues;
+        _mod8629;
         return resolveStatComponentValues(
           bottomConfig.components["stat_" + item],
           resolveFieldValue,
@@ -133,8 +133,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const stat = tmp;
       let items = [1, 2, 3, 4, 5, 6];
       const mapped = items.map((item) => {
-        const resolveStatComponentValues = _mod8594.resolveStatComponentValues;
-        _mod8594;
+        const resolveStatComponentValues = _mod8629.resolveStatComponentValues;
+        _mod8629;
         return resolveStatComponentValues(
           require.components["stat_" + item],
           dependencyMap,

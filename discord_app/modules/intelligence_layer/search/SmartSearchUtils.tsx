@@ -1,8 +1,8 @@
 // discord_app/modules/intelligence_layer/search/SmartSearchUtils.tsx
 import SearchConstants from "../../search/SearchConstants.tsx";
-import SearchUtils from "../../search/SearchUtils.tsx";
-import QueryTokenizer from "../../../lib/QueryTokenizer.tsx";
 import SmartSearchTypes from "SmartSearchTypes.tsx";
+import QueryTokenizer from "../../../lib/QueryTokenizer.tsx";
+import SearchUtils from "../../search/SearchUtils.tsx";
 import SmartSearchResultsStore from "SmartSearchResultsStore.tsx";
 import SmartSearchConstants from "SmartSearchConstants.tsx";
 import Constants from "../../../Constants.tsx";

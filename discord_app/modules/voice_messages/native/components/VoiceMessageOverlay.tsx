@@ -12,7 +12,7 @@ import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx"
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import react_native from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
-import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import VoiceMessagesUIStore from "../VoiceMessagesUIStore.tsx";
 import VoiceMessageConstants from "../../VoiceMessageConstants.tsx";
 import ChatInputConstants from "../../../chat_input/native/ChatInputConstants.tsx";

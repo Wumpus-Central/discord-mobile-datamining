@@ -463,7 +463,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 variant: "text-sm/normal",
                 children: intl.string(tmp(1126).t["1EUr/W"]),
               };
-              const Text = tmp(4886).Text;
+              const Text = tmp(4892).Text;
               intl = tmp(1126).intl;
               cResult[11] = closure_11(Text, obj3);
               const tmp19 = closure_11(Text, obj3);
@@ -715,8 +715,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[14] = tmp11.doubleTapEmojiContainer;
             cResult[15] = tmp11.doubleTapTextEmoji;
             cResult[16] = "";
-            cResult[17] = closure_11(appEntryKey(6625), obj4);
-            const tmp24 = closure_11(appEntryKey(6625), obj4);
+            cResult[17] = closure_11(appEntryKey(6632), obj4);
+            const tmp24 = closure_11(appEntryKey(6632), obj4);
           }
         }
       }
@@ -1087,7 +1087,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "text-sm/normal",
         children: intl.string(_location(1126).t["1EUr/W"]),
       };
-      const Text = _location(4886).Text;
+      const Text = _location(4892).Text;
       intl = _location(1126).intl;
       items3 = [closure_11(Text, obj4), ,];
       let obj5 = {
@@ -1098,7 +1098,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         name: str,
       };
       str = "";
-      const tmp11 = emoji(6625);
+      const tmp11 = emoji(6632);
       if (null == emoji.id) {
         str = emoji.surrogates;
       }
@@ -1110,9 +1110,9 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp5.editButton,
         children: closure_11(Text2, obj7),
       };
-      const PressableOpacity = tmp(5909).PressableOpacity;
+      const PressableOpacity = tmp(5916).PressableOpacity;
       obj7 = { color: "text-brand", variant: "text-sm/normal", children: intl2.string(tmp(1126).t.bt75uw) };
-      Text2 = tmp(4886).Text;
+      Text2 = tmp(4892).Text;
       intl2 = tmp(1126).intl;
       items3[2] = closure_11(PressableOpacity, obj6);
       return closure_12(View, obj3);

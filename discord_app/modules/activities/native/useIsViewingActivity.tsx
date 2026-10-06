@@ -17,7 +17,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = channelId;
       channelId = channelId.channelId;
       let tmp4 = useIsActivityFocusedDefault(channelId);
-      const obj2 = channelId(4736);
+      const obj2 = channelId(4742);
       const isModalOpen = obj2.useIsModalOpen(ChannelCallModalDefault);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelRTCStore];
@@ -53,7 +53,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (channelId) => {
       channelId = channelId.channelId;
       let tmp = useIsActivityFocusedDefault(channelId);
-      const obj = channelId(4736);
+      const obj = channelId(4742);
       const isModalOpen = obj.useIsModalOpen(ChannelCallModalDefault);
       const items = [ChannelRTCStore];
       const items1 = [channelId];

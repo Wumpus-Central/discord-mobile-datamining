@@ -188,7 +188,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: "[" + intl.string(benefit(1126).t.bz1PZX) + "]",
         };
-        const Text = tmp(4886).Text;
+        const Text = tmp(4892).Text;
         intl = tmp(1126).intl;
         const _HermesInternal = HermesInternal;
         const tmp14 = closure_5(Text, obj2);
@@ -201,7 +201,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp15;
         ({ channelTitle, channelIcon } = tmp4);
         if (cResult[5] !== stateFromStores) {
-          const tmpResult2 = benefit(5812);
+          const tmpResult2 = benefit(5819);
           const channelIcon1 = tmpResult2.getChannelIcon(stateFromStores);
           cResult[5] = stateFromStores;
           cResult[6] = channelIcon1;
@@ -217,7 +217,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp11) {
             const obj3 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp11 };
-            const tmp22 = closure_5(benefit(4886).Text, obj3);
+            const tmp22 = closure_5(benefit(4892).Text, obj3);
             cResult[10] = tmp11;
             cResult[11] = tmp22;
             tmp20 = tmp22;
@@ -305,7 +305,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         children: "[" + intl.string(benefit(1126).t.bz1PZX) + "]",
       };
       const tmp6 = useChannelNameDefault(stateFromStores);
-      const Text = benefit(4886).Text;
+      const Text = benefit(4892).Text;
       intl = benefit(1126).intl;
       let tmp8 = closure_5(Text, obj2);
       if (null != stateFromStores) {
@@ -316,10 +316,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           source: tmp2Result.getChannelIcon(stateFromStores),
         };
         const Icon = tmp2(1188).Icon;
-        tmp2Result = benefit(5812);
+        tmp2Result = benefit(5819);
         items2 = [closure_5(Icon, obj4)];
         const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-        items2[1] = closure_5(benefit(4886).Text, obj5);
+        items2[1] = closure_5(benefit(4892).Text, obj5);
         tmp8 = closure_6(View, obj3);
       }
       if (null != benefit.emoji_id) {

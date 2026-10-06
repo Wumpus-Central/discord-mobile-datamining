@@ -288,7 +288,7 @@ let obj = function _getCommonClickEventProperties() {
             closure_6 = undefined;
             impression_id = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === impression_id) {
           if (arg0 === 1) {
@@ -438,7 +438,7 @@ obj = function _trackQuestContentClicked() {
       trackGuildAndChannelMetadata: c7,
       sourceQuestContent: c8,
     } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };
@@ -485,7 +485,7 @@ obj = function _trackAdContentClicked() {
       trackGuildAndChannelMetadata: c8,
       sourceQuestContent: c9,
     } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

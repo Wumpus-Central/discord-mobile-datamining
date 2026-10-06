@@ -102,7 +102,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = roleId(11);
           const result = obj4.castGuildIdAsEveryoneGuildRoleId(guildId);
-          const tmp22 = roleId(6622)(guildId);
+          const tmp22 = roleId(6629)(guildId);
           class I {
             constructor() {
               const obj = SnowflakeUtilsDefault;
@@ -140,8 +140,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               let obj2 = { variant: "text-sm/semibold", style: tmp4.headerText, children: name };
               cResult[15] = tmp4.headerText;
               cResult[16] = name;
-              cResult[17] = closure_8(guildId(4886).Text, obj2);
-              closure_8(guildId(4886).Text, obj2);
+              cResult[17] = closure_8(guildId(4892).Text, obj2);
+              closure_8(guildId(4892).Text, obj2);
               class I {
                 constructor() {
                   const obj = SnowflakeUtilsDefault;
@@ -250,7 +250,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       closure_4 = tmp6;
       let obj3 = roleId(11);
       const result = obj3.castGuildIdAsEveryoneGuildRoleId(guildId);
-      const tmp11 = roleId(6622)(guildId);
+      const tmp11 = roleId(6629)(guildId);
       let tmp12 = null;
       const tmp9 = roleId;
       if (roleId !== result) {
@@ -268,7 +268,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp16Result = null;
       if (null != stateFromStores) {
         let obj4 = { scrollable: true, header: tmp14, children: closure_8(tmp9Result, obj5) };
-        BottomSheet = tmp3(6645).BottomSheet;
+        BottomSheet = tmp3(6652).BottomSheet;
         obj5 = {
           guildId,
           channelId,
@@ -278,7 +278,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           disableStickySections: true,
           disableThemedGradient: true,
         };
-        tmp9Result = tmp9(11210);
+        tmp9Result = tmp9(11223);
         if (channelId == null) {
           channelId = EVERYONE_CHANNEL_ID;
         }

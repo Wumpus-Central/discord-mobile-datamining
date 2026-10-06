@@ -1,5 +1,6 @@
 // discord_app/modules/applications/ApplicationInteractionInfoUtils.tsx
 import Server from "../../flow/Server.tsx";
+import InteractionTypes from "../../../discord_common/js/shared/shared-constants/InteractionTypes.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
@@ -13,7 +14,7 @@ export const isPrimaryEntryPointCommandMessage = function isPrimaryEntryPointCom
   if (interactionMetadata != null) {
     type = interactionMetadata.type;
   }
-  let tmp4 = type === Server.InteractionTypes.APPLICATION_COMMAND;
+  let tmp4 = type === InteractionTypes.InteractionTypes.APPLICATION_COMMAND;
   if (tmp4) {
     const interactionMetadata2 = message.interactionMetadata;
     let command_type;

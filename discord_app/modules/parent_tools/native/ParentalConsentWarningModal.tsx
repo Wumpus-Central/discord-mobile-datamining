@@ -136,7 +136,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
       });
     } else {
       const tmp2Result4 = ModalActionCreatorsDefault;
-      tmp2Result4.pushLazy(asyncRequire(17601, dependencyMap.paths));
+      tmp2Result4.pushLazy(asyncRequire(17647, dependencyMap.paths));
     }
   }, items2);
   const intl = daysRemaining(callback[15]).intl;

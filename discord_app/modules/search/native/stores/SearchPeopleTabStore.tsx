@@ -49,7 +49,7 @@ class PeopleSearchManager {
         const obj2 = _modDef12;
         const chainResult = obj2.chain(ChannelStore.getMutablePrivateChannels());
         const values = chainResult.values();
-        const found = values.filter(trimmed1(11993).filterGroupDMs);
+        const found = values.filter(trimmed1(12010).filterGroupDMs);
         const mapped = found.map((id) => {
           const items = [id, ,];
           const obj = NewMessageUserList;

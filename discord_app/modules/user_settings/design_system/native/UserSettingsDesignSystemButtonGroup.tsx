@@ -4,7 +4,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ButtonGroup4 from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06884_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06894_AssetRegistry.js";
 import IconButton4 from "../../../../design/components/Button/native/IconButton.native.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";

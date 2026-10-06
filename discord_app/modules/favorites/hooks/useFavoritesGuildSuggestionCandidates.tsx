@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx
 import get_initialized from "../../../../discord_common/js/packages/flux/index.tsx";
 import react2 from "../../../../_runtime/00576_react.js";
-import _mod9496 from "../../autocompleter/index.tsx";
+import _mod9509 from "../../autocompleter/index.tsx";
 import createAutocompleterResultForChannelIdDefault from "../../autocompleter/createAutocompleterResultForChannelId.tsx";
 import ShareConstants from "../../share/ShareConstants.tsx";
 import FavoritesGuildSuggestionsStore from "../FavoritesGuildSuggestionsStore.tsx";
@@ -219,7 +219,7 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
               let sum = tmp25 + 1;
               if (null != tmp20) {
                 let tmp24;
-                if (tmp20.type !== _mod9496.AutocompleterResultTypes.HEADER) {
+                if (tmp20.type !== _mod9509.AutocompleterResultTypes.HEADER) {
                   tmp24 = sum;
                   if (!set.has(tmp20.record.id)) {
                     break;

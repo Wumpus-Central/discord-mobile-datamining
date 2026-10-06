@@ -206,23 +206,23 @@ let obj = {
       tmp = prompts[prompts.length - 1];
     }
     const selectedOptions = GuildOnboardingPromptsStore.getSelectedOptions(guildId);
-    const obj2 = items1(6601);
+    const obj2 = items1(6608);
     const selectedRoleIds = obj2.getSelectedRoleIds(selectedOptions);
-    const obj3 = items1(6601);
+    const obj3 = items1(6608);
     const selectedChannelIds = obj3.getSelectedChannelIds(selectedOptions);
     if (GuildOnboardingPromptsStore.getEnabled(guildId)) {
       defaultChannelIds = GuildOnboardingPromptsStore.getDefaultChannelIds(guildId);
     } else {
       defaultChannelIds = [];
     }
-    const tmp2Result = items1(6601);
+    const tmp2Result = items1(6608);
     [arr3, arr4] = tmp2Result.getChannelCoverageForOnboarding(guildId, prompts, defaultChannelIds);
     const items = [...defaultChannelIds];
     _slicedToArray(tmp2Result.getChannelCoverageForOnboarding(guildId, prompts, defaultChannelIds), 2);
     const mapped = items.map((item) => channel.getChannel(item));
     const found = mapped.filter(tmp2(1375).isNotNullish);
-    const getFlattenedChannels = items1(6604).getFlattenedChannels;
-    items1(6604);
+    const getFlattenedChannels = items1(6611).getFlattenedChannels;
+    items1(6611);
     set = new Set(items);
     const length = getFlattenedChannels(guildId, set, found, true).length;
     if (null == tmp) {
@@ -232,9 +232,9 @@ let obj = {
       items1 = options.map((id) => id.id);
     }
     const connections = GuildOnboardingPromptsStore.getConnections(guildId);
-    const tmp2Result12 = items1(6601);
+    const tmp2Result12 = items1(6608);
     const providerConnectionState = tmp2Result12.getProviderConnectionState(connections);
-    const tmp2Result13 = items1(6601);
+    const tmp2Result13 = items1(6608);
     const applicationConnectionState = tmp2Result13.getApplicationConnectionState(connections);
     const obj4 = {
       step: prompts.length - 1,
@@ -251,7 +251,7 @@ let obj = {
     const track = AnalyticsUtilsDefault.track;
     const GUILD_ONBOARDING_STEP_COMPLETED = constants.GUILD_ONBOARDING_STEP_COMPLETED;
     AnalyticsUtilsDefault;
-    const tmp2Result14 = items1(5070);
+    const tmp2Result14 = items1(5076);
     const merged = Object.assign(tmp2Result14.collectGuildAnalyticsMetadata(guildId));
     num2 = 0;
     if (null != tmp) {
@@ -262,19 +262,19 @@ let obj = {
     ({ connected: obj7.application_connections_connected, notConnected: obj7.application_connections_not_connected } =
       applicationConnectionState);
     track(GUILD_ONBOARDING_STEP_COMPLETED, obj4);
-    const ackGuildFeature = items1(6605).ackGuildFeature;
+    const ackGuildFeature = items1(6612).ackGuildFeature;
     const GUILD_ONBOARDING_QUESTION = ReadStateTypes.GUILD_ONBOARDING_QUESTION;
-    items1(6605);
+    items1(6612);
     const tmp13Result = SnowflakeUtilsDefault;
     ackGuildFeature(guildId, GUILD_ONBOARDING_QUESTION, tmp13Result.fromTimestamp(Date.now()));
     _updateOnboardingResponses(guildId, true);
     if (ImpersonateStore.isFullServerPreview(guildId)) {
-      const tmp2Result16 = items1(5942);
+      const tmp2Result16 = items1(5949);
       const result = tmp2Result16.updateImpersonatedChannels(guildId, items, []);
-      const tmp2Result17 = items1(5942);
+      const tmp2Result17 = items1(5949);
       const result1 = tmp2Result17.updateImpersonatedData(guildId, { optInEnabled: true });
       const _Array = Array;
-      const tmp2Result18 = items1(5942);
+      const tmp2Result18 = items1(5949);
       const result2 = tmp2Result18.updateImpersonatedRoles(guildId, Array.from(selectedRoleIds));
       const currentUser = UserStore.getCurrentUser();
       if (null != currentUser) {
@@ -288,8 +288,8 @@ let obj = {
         }
         const obj5 = { memberOptions: obj6 };
         obj6 = { flags: tmp2Result20.setFlag(num3, GuildMemberFlags.COMPLETED_ONBOARDING, true) };
-        const updateImpersonatedData = items1(5942).updateImpersonatedData;
-        items1(5942);
+        const updateImpersonatedData = items1(5949).updateImpersonatedData;
+        items1(5949);
         tmp2Result20 = items1(1390);
         const result3 = updateImpersonatedData(guildId, obj5);
       }

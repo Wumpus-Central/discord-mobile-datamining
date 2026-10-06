@@ -82,7 +82,7 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
   let obj = function _handleJoinGuild() {
     obj = _asyncToGenerator(async () => {
       let closure_0;
-      let obj2;
+      let obj4;
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -90,8 +90,8 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
-          const obj3 = { value, done: true };
-          return obj3;
+          const obj2 = { value, done: true };
+          return obj2;
         } else {
           return { value: "IconComponent", done: null };
         }
@@ -106,71 +106,83 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
               throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj4 = { value, done: true };
-              return obj4;
+              const obj5 = { value, done: true };
+              return obj5;
             } else {
               channel2 = undefined;
               closure_2_2(true);
-              c3 = 1;
+              c3 = 2;
               if (closure_2_1) {
-                const obj5 = channel2(closure_2[11]);
-                obj5.transitionToGuild(entry.guildId);
+                const obj7 = channel2(closure_2[11]);
+                obj7.transitionToGuild(entry.guildId);
                 c3 = 0;
                 closure_2_2(false);
                 c5 = 3;
                 const obj6 = { value: undefined, done: true };
                 return obj6;
               } else {
-                const obj7 = { source: constants.DIRECTORY_ENTRY };
-                c4 = 2;
+                const obj8 = { source: constants.DIRECTORY_ENTRY };
+                c4 = 3;
                 c5 = 1;
-                const obj8 = { value: obj2.joinGuild(entry.guildId, obj7), done: false };
-                obj2 = tmp(closure_2[12]);
-                return obj8;
+                const obj9 = { value: obj4.joinGuild(entry.guildId, obj8), done: false };
+                obj4 = tmp(closure_2[12]);
+                return obj9;
               }
             }
           } else if (1 === c4) {
             c3 = 0;
             closure_129_2(false);
             throw closure_2;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw value;
-          } else if (arg0 === 2) {
+          } else {
+            if (2 === c4) {
+              c3 = 1;
+              const obj3 = channel2(closure_2[15]);
+              const result = obj3.ignoreJoinGuildRefused(tmp);
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 0;
+              closure_129_2(false);
+              c5 = 3;
+              const obj10 = { value, done: true };
+              return obj10;
+            } else {
+              channel2 = channel.getChannel(closure_129_0.channelId);
+              if (null == channel2) {
+                c3 = 0;
+                closure_129_2(false);
+                c5 = 3;
+                return { value: "IconComponent", done: null };
+              } else {
+                let guildId;
+                const setHubProgressActionComplete = channel2(closure_2[13]).setHubProgressActionComplete;
+                obj = channel2;
+                const tmp9 = channel2(closure_2[13]);
+                if (channel2 != null) {
+                  guildId = obj.getGuildId();
+                }
+                const result1 = setHubProgressActionComplete(
+                  guildId,
+                  channel2(closure_2[14]).HubProgressStep.JOIN_GUILD,
+                );
+                c3 = 1;
+              }
+            }
             c3 = 0;
             closure_129_2(false);
             c5 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            channel2 = channel.getChannel(closure_129_0.channelId);
-            if (null == channel2) {
-              c3 = 0;
-              closure_129_2(false);
-              c5 = 3;
-              return { value: "IconComponent", done: null };
-            } else {
-              let guildId;
-              const setHubProgressActionComplete = channel2(closure_2[13]).setHubProgressActionComplete;
-              const obj9 = channel2;
-              const tmp50 = channel2(closure_2[13]);
-              if (channel2 != null) {
-                guildId = obj9.getGuildId();
-              }
-              const result = setHubProgressActionComplete(guildId, channel2(closure_2[14]).HubProgressStep.JOIN_GUILD);
-              c3 = 0;
-              closure_129_2(false);
-              c5 = 3;
-              return { value: "IconComponent", done: null };
-            }
+            return { value: "IconComponent", done: null };
           }
-        } catch (tmp34) {
-          closure_2 = tmp34;
+        } catch (tmp47) {
+          closure_2 = tmp47;
           if (0 === c3) {
             c5 = 3;
-            throw tmp34;
-          } else {
+            throw tmp47;
+          } else if (1 === tmp49) {
             c4 = 1;
+          } else {
+            c4 = 2;
           }
         }
       }
@@ -199,7 +211,7 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
   obj5 = { style: tmp.guildWrapper, children: items7 };
   let obj6 = { style: tmp.headerContainer, children: items6 };
   let obj7 = { style: tmp.titleContainer, children: items1 };
-  const Card = tmp2(5995).Card;
+  const Card = tmp2(6002).Card;
   let obj8 = { style: tmp.guildIcon, icon: guildIconURL, guild: result, selected: false };
   result = undefined;
   const tmp7Result = GuildIconDefault;
@@ -210,15 +222,15 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
   items1 = [closure_10(tmp7Result, obj8)];
   let obj9 = { style: tmp.guildInfoContainer, children: items2 };
   items2 = [
-    closure_10(entry(4886).Text, {
+    closure_10(entry(4892).Text, {
       variant: "text-md/semibold",
       color: "mobile-text-heading-primary",
       lineClamp: 1,
       children: name,
     }),
   ];
+  let obj10 = { style: tmp.memberInfo, children: items4 };
   let tmp11Result = null;
-  const obj10 = { style: tmp.memberInfo, children: items4 };
   if (null != approximatePresenceCount) {
     const obj11 = { children: items3 };
     const obj12 = { style: tmp.dotOnline };
@@ -228,7 +240,7 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
       color: "text-default",
       children: intl3.format(entry(1126).t["LC+S+m"], obj14),
     };
-    const Text = tmp2(4886).Text;
+    const Text = tmp2(4892).Text;
     intl3 = tmp2(1126).intl;
     obj14 = { membersOnline: approximatePresenceCount };
     items3[1] = closure_10(Text, obj13);
@@ -245,7 +257,7 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
       color: "text-default",
       children: intl4.format(entry(1126).t.zRl6XR, obj18),
     };
-    const Text2 = tmp2(4886).Text;
+    const Text2 = tmp2(4892).Text;
     intl4 = tmp2(1126).intl;
     obj18 = { count: approximateMemberCount };
     items5[1] = closure_10(Text2, obj17);
@@ -270,7 +282,7 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
       color: "text-default",
       children: description,
     };
-    tmp10Result = closure_10(tmp2(4886).Text, obj20);
+    tmp10Result = closure_10(tmp2(4892).Text, obj20);
   }
   items7[1] = tmp10Result;
   const obj21 = { style: tmp.flex };
@@ -284,7 +296,7 @@ const memoResult = react.memo(function GuildDirectoryRow(entry) {
     text: stringResult,
   };
   str2 = "active";
-  const Button = tmp2(5594).Button;
+  const Button = tmp2(5601).Button;
   if (tmp4) {
     str2 = "secondary";
   }

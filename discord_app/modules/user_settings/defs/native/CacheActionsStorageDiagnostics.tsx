@@ -154,9 +154,9 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
   [tmp2, c1] = tmp;
   dependencyMap = react.useRef(false);
   obj = { children: items };
-  const Stack = onBusyChange(5593).Stack;
+  const Stack = onBusyChange(5600).Stack;
   let obj2 = { variant: "text-sm/normal", color: "text-subtle", children: intl.string(onBusyChange(1126).t.Fzi4HX) };
-  const Text = onBusyChange(4886).Text;
+  const Text = onBusyChange(4892).Text;
   intl = onBusyChange(1126).intl;
   items = [closure_6(Text, obj2)];
   let obj3 = {
@@ -168,7 +168,7 @@ export default function CacheActionsStorageDiagnostics(onBusyChange) {
       return obj(...arguments);
     },
   };
-  const Button = onBusyChange(5594).Button;
+  const Button = onBusyChange(5601).Button;
   intl2 = onBusyChange(1126).intl;
   items[1] = closure_6(Button, obj3);
   return closure_7(Stack, obj);

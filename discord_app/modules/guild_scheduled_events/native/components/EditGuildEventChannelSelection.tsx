@@ -63,14 +63,14 @@ export default function EditGuildEventChannelSelection(guild) {
   ({ recurrenceId: dependencyMap, onChangeChannel: View } = guild);
   const style = guild.style;
   const tmp = closure_13();
-  let obj = guild(6105);
+  let obj = guild(6112);
   const inputStyles = obj.useInputStyles({ hasLeadingIcon: true });
   let closure_5 = tmp5;
-  let obj2 = guild(9203);
+  let obj2 = guild(9238);
   let closure_6 = obj2.useGetEventChannelsByType(guild.id, channelType);
-  let obj3 = guild(9188);
+  let obj3 = guild(9223);
   const length = obj3.useChannelsUserCanStartStageIn(guild);
-  const tmp7 = channel(5043)(channel);
+  const tmp7 = channel(5049)(channel);
   const items = [closure_5];
   const obj4 = guild(504);
   let closure_8 = obj4.useStateFromStores(items, () => PermissionStore.can(constants.MANAGE_CHANNELS, guild));
@@ -83,16 +83,16 @@ export default function EditGuildEventChannelSelection(guild) {
     items2,
   );
   if (null != channel) {
-    const tmp2Result = guild(5812);
+    const tmp2Result = guild(5819);
     channelIcon = tmp2Result.getChannelIcon(channel);
   } else {
-    channelIcon = channel(9190);
+    channelIcon = channel(9225);
   }
   if (null != channel) {
-    const tmp2Result2 = guild(5812);
+    const tmp2Result2 = guild(5819);
     LocationIcon = tmp2Result2.getChannelIconComponent(channel);
   } else {
-    LocationIcon = tmp2(9191).LocationIcon;
+    LocationIcon = tmp2(9226).LocationIcon;
   }
   let intl = tmp2(1126).intl;
   let string = intl.string;
@@ -111,7 +111,7 @@ export default function EditGuildEventChannelSelection(guild) {
     color: "text-subtle",
     children: stringResult,
   };
-  items4[0] = closure_11(guild(4886).Heading, obj7);
+  items4[0] = closure_11(guild(4892).Heading, obj7);
   const obj8 = {
     accessibilityLabel: stringResult,
     accessibilityHint: intl2.string(guild(1126).t.AaXbMD),
@@ -149,7 +149,7 @@ export default function EditGuildEventChannelSelection(guild) {
       }
       const openLazy = ActionSheetActionCreatorsDefault.openLazy;
       ActionSheetActionCreatorsDefault;
-      const tmp10 = asyncRequire(8949, dependencyMap.paths);
+      const tmp10 = asyncRequire(8978, dependencyMap.paths);
       const intl = intl3.intl;
       const string = intl.string;
       const t = intl3.t;
@@ -182,7 +182,7 @@ export default function EditGuildEventChannelSelection(guild) {
     },
     children: items6,
   };
-  const PressableOpacity = tmp2(5909).PressableOpacity;
+  const PressableOpacity = tmp2(5916).PressableOpacity;
   intl2 = tmp2(1126).intl;
   items5 = [, ,];
   ({ padding: arr6[0], radius: arr6[1] } = inputStyles);
@@ -201,8 +201,8 @@ export default function EditGuildEventChannelSelection(guild) {
     color: "interactive-text-active",
     children: tmp7,
   };
-  items6[1] = closure_11(guild(4886).Text, obj11);
-  const obj12 = { source: channel(9187) };
+  items6[1] = closure_11(guild(4892).Text, obj11);
+  const obj12 = { source: channel(9222) };
   const Icon = tmp2(1188).Icon;
   items6[2] = closure_11(Icon, obj12);
   items4[1] = closure_12(PressableOpacity, obj8);

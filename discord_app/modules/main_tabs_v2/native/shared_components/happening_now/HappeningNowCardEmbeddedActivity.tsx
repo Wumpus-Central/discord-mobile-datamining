@@ -155,7 +155,7 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     }
     items1 = [userId];
     track(ACTIVITY_CARD_CLICKED, obj);
-    const promise = asyncRequire(12695, dependencyMap.paths);
+    const promise = asyncRequire(12710, dependencyMap.paths);
     promise.then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);

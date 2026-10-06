@@ -179,7 +179,11 @@ class AlertWrapper extends PureComponent {
 }
 const prototype = AlertWrapper.prototype;
 AlertWrapper.contextType = native.ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" });
+let closure_18 = Object.freeze({
+  renderAlert: "duration",
+  renderKey: "toCharArray$esjava$1",
+  props: "toCharArray$esjava$1",
+});
 const memoResult = react.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? () => {
@@ -230,7 +234,7 @@ const memoResult = react.memo(
                   return <component />;
                 };
               } else {
-                return { renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" };
+                return { renderAlert: "duration", renderKey: "toCharArray$esjava$1", props: "toCharArray$esjava$1" };
               }
             }
           };
@@ -398,7 +402,7 @@ const memoResult = react.memo(
                 return <component />;
               };
             } else {
-              return { renderAlert: "marginBottom", renderKey: "unicodeVersion", props: "Reflect" };
+              return { renderAlert: "duration", renderKey: "toCharArray$esjava$1", props: "toCharArray$esjava$1" };
             }
           }
         });

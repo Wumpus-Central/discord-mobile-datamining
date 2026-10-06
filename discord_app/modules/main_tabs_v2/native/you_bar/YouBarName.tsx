@@ -185,11 +185,11 @@ const memoResult = react.memo(
         }
         const tmpResult = userId(504);
         const stateFromStores = tmpResult.useStateFromStores(tmp5, C);
-        const tmpResult4 = userId(10826);
+        const tmpResult4 = userId(10839);
         const customStatusActivity = tmpResult4.useCustomStatusActivity();
         let state;
-        const useGameMentionsAsPlainText = userId(10613).useGameMentionsAsPlainText;
-        userId(10613);
+        const useGameMentionsAsPlainText = userId(10626).useGameMentionsAsPlainText;
+        userId(10626);
         if (customStatusActivity != null) {
           state = customStatusActivity.state;
         }
@@ -233,7 +233,7 @@ const memoResult = react.memo(
           constructor() {
             activities = closure_7.getActivities(userId);
             found = activities.filter(() => {
-              /* body not rendered: F145854 */
+              /* body not rendered: F146064 */
             });
             obj = closure_0(closure_2[21]);
             items = [,];
@@ -268,11 +268,11 @@ const memoResult = react.memo(
         let obj = userId(504);
         let items = [SelfPresenceStore];
         const stateFromStores = obj.useStateFromStores(items, () => status.getStatus());
-        let obj2 = userId(10826);
+        let obj2 = userId(10839);
         const customStatusActivity = obj2.useCustomStatusActivity();
         let state;
-        const useGameMentionsAsPlainText = userId(10613).useGameMentionsAsPlainText;
-        userId(10613);
+        const useGameMentionsAsPlainText = userId(10626).useGameMentionsAsPlainText;
+        userId(10626);
         if (customStatusActivity != null) {
           state = customStatusActivity.state;
         }
@@ -308,7 +308,7 @@ const memoResult = react.memo(
         let obj4 = { style: tmp.statusRow, children: tmp10Result };
         if (stateFromStores1) {
           let obj5 = { userId, emojiSize: 16, maxFontSizeMultiplier: 1.75 };
-          tmp10Result = closure_12(stateFromStores(10609), obj5);
+          tmp10Result = closure_12(stateFromStores(10622), obj5);
         } else {
           let emoji;
           if (customStatusActivity != null) {
@@ -317,7 +317,7 @@ const memoResult = react.memo(
           let tmp12Result2 = null;
           if (null != emoji) {
             const obj6 = { size: 16, style: tmp.statusEmoji, emoji: customStatusActivity.emoji };
-            tmp12Result2 = closure_12(stateFromStores(10629), obj6);
+            tmp12Result2 = closure_12(stateFromStores(10642), obj6);
           }
           const items3 = [tmp12Result2];
           const obj7 = {
@@ -330,9 +330,9 @@ const memoResult = react.memo(
             children: humanizeStatusResult,
           };
           humanizeStatusResult = gameMentionsAsPlainText;
-          const Text = tmp2(4886).Text;
+          const Text = tmp2(4892).Text;
           if (gameMentionsAsPlainText == null) {
-            const tmp2Result2 = userId(4722);
+            const tmp2Result2 = userId(4728);
             humanizeStatusResult = tmp2Result2.humanizeStatus(stateFromStores);
           }
           const obj8 = { children: items3 };

@@ -2,7 +2,7 @@
 import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl3 from "../../../intl/index.native.tsx";
-import _modDef3045 from "../AgeAssurance.messages.js";
+import _modDef3073 from "../AgeAssurance.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import MobilePhoneIcon2 from "../../../design/components/Icon/native/redesign/generated/MobilePhoneIcon.tsx";
@@ -49,7 +49,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (title1 == null) {
           const intl = intl3.intl;
-          title1 = intl.string(_modDef3045.MLPgsX);
+          title1 = intl.string(_modDef3073.MLPgsX);
         }
         let title2;
         if (copy != null) {
@@ -73,7 +73,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (description1 == null) {
           const intl2 = intl3.intl;
-          description1 = intl2.string(_modDef3045.VcZF1q);
+          description1 = intl2.string(_modDef3073.VcZF1q);
         }
         let description2;
         if (copy != null) {
@@ -171,7 +171,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (title == null) {
         const intl = intl3.intl;
-        title = intl.string(_modDef3045.MLPgsX);
+        title = intl.string(_modDef3073.MLPgsX);
       }
       let description;
       if (copy != null) {
@@ -179,7 +179,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (description == null) {
         const intl2 = intl3.intl;
-        description = intl2.string(_modDef3045.VcZF1q);
+        description = intl2.string(_modDef3073.VcZF1q);
       }
       const obj = { children: _false(ModalContent, obj2) };
       const ModalScreen = ModalScreen2.ModalScreen;

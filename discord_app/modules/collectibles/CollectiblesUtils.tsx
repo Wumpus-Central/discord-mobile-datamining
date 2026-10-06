@@ -27,7 +27,7 @@ let closure_12;
 let map1;
 let metroImportAll;
 let unpackModuleId;
-const f94171 = (arr, type) => {
+const f94311 = (arr, type) => {
   let closure_0 = type;
   if (null != type) {
     if (type.type === require("CollectiblesItemType").CollectiblesItemType.VARIANTS_GROUP) {
@@ -97,7 +97,7 @@ function getItemRecordsFromCategories(arr, PROFILE_EFFECT) {
   items = [...arr.values()];
   const flatMapResult = obj.flatMap(items, "products");
   obj2 = _mod12;
-  const uniqByResult = obj2.uniqBy(flatMapResult.reduce(f94171, []), "storeListingId");
+  const uniqByResult = obj2.uniqBy(flatMapResult.reduce(f94311, []), "storeListingId");
   if (PROFILE_EFFECT === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     let tmpResult = _mod12;
     const flatMapResult1 = tmpResult.flatMap(uniqByResult, "items");
@@ -572,7 +572,7 @@ export const isFreeCollectiblesProduct = function isFreeCollectiblesProduct(prod
   return 0 === amount;
 };
 export const extendVariantsProducts = function extendVariantsProducts(items) {
-  return items.reduce(f94171, []);
+  return items.reduce(f94311, []);
 };
 export const getProductsFromCategories = function getProductsFromCategories(arr, arg1) {
   items = [...arr.values()];
@@ -582,7 +582,7 @@ export const getProductsFromCategories = function getProductsFromCategories(arr,
   const uniqBy = _mod12.uniqBy;
   _mod12;
   if (arg1) {
-    reduced = flatMapResult.reduce(f94171, []);
+    reduced = flatMapResult.reduce(f94311, []);
   }
   return uniqBy(reduced, "storeListingId");
 };

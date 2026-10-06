@@ -9,7 +9,7 @@ import useThemeDefault from "../../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import TableRow2 from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import BottomSheetModal from "../../../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../../_runtime/06119_BottomSheetModal.js";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import BottomSheetTitleHeader2 from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheet2 from "../../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -48,7 +48,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] !== bot) {
           let tmp6 = null;
           if (null != bot) {
-            const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
+            const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
             const Avatar = native.Avatar;
             tmp6 = metroRequire(Avatar, obj3);
           }
@@ -97,7 +97,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp6Result = null;
         const TableRow = TableRow2.TableRow;
         if (null != bot) {
-          const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
+          const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
           const Avatar = native.Avatar;
           tmp6Result = metroRequire(Avatar, obj2);
         }
@@ -204,7 +204,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   obj2 = {
                     user: application.bot,
                     size: addConnection(excludedApplications[7]).AvatarSizes.XSMALL,
-                    guildId: "r",
+                    guildId: "Array",
                   };
                   Avatar = addConnection(excludedApplications[7]).Avatar;
                   description = undefined;
@@ -544,7 +544,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               },
             };
             const TableRow = TableRow2.TableRow;
-            obj2 = { user: application.bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
+            obj2 = { user: application.bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
             Avatar = native.Avatar;
             description = undefined;
             if ("" !== application.description) {

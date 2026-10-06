@@ -44,7 +44,7 @@ function openRewardClaimBottomSheet(arg0) {
   let sourceQuestContent;
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
   obj = ActionSheetActionCreatorsDefault;
-  return obj.openLazy(asyncRequire(10952, dependencyMap.paths), metroRequire, {
+  return obj.openLazy(asyncRequire(10965, dependencyMap.paths), metroRequire, {
     questId,
     questContent,
     questContentPosition,
@@ -64,7 +64,7 @@ function viewReward(quest) {
     const id = quest.id;
     const obj2 = { questId: id, questContent, questContentPosition, sourceQuestContent };
     const obj7 = ActionSheetActionCreatorsDefault;
-    obj7.openLazy(asyncRequire(10952, dependencyMap.paths), metroRequire, obj2);
+    obj7.openLazy(asyncRequire(10965, dependencyMap.paths), metroRequire, obj2);
   } else {
     const tmpResult = QuestRewardUtils;
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
@@ -235,7 +235,7 @@ obj = function _handleRewardClaimThenView() {
             value = undefined;
             product = 1;
             c4 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === product) {
           if (quest === 1) {
@@ -324,7 +324,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
   questId = questId.questId;
   obj = ActionSheetActionCreatorsDefault;
-  return obj.openLazy(asyncRequire(10910, dependencyMap.paths), metroImportDefault, { questId });
+  return obj.openLazy(asyncRequire(10923, dependencyMap.paths), metroImportDefault, { questId });
 };
 export { viewReward };
 export const handleRewardClaimThenView = function handleRewardClaimThenView() {

@@ -1,11 +1,11 @@
 // discord_app/utils/native/StringUtils.tsx
-import _modDef10639 from "../../../_runtime/metro/10639__.js";
+import _modDef10652 from "../../../_runtime/metro/10652__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export const splitGraphemes = function splitGraphemes(name) {
-  const obj = _modDef10639();
+  const obj = _modDef10652();
   const items = [];
   let match = obj.exec(name);
   let num = 0;

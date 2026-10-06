@@ -2,7 +2,7 @@
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl5 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureUtils from "../../shared/ConjureUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../../channel/native/ChannelPickerActionSheet.tsx";
@@ -295,7 +295,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 guild: GuildStore.getGuild(stateFromStores),
                 channels,
                 selectedChannel: found,
-                noChannelOptionLabel: intl.string(_modDef3723["jtBVV+"]),
+                noChannelOptionLabel: intl.string(_modDef3753["jtBVV+"]),
                 onSelect(id) {
                   let str;
                   if (id != null) {
@@ -348,7 +348,7 @@ export default function useConjureAppSettingsForm(projectId) {
   let notifyAgent;
   let obj10;
   let scopeKeys;
-  const f146192 = (item) => null != item;
+  const f146401 = (item) => null != item;
   projectId = projectId.projectId;
   ({ scopeKeys, note, notifyAgent } = projectId);
   if (notifyAgent === undefined) {
@@ -405,7 +405,7 @@ export default function useConjureAppSettingsForm(projectId) {
       stringResult = intl.string(notifyAgent(flag[16])["4kCM6H"]);
     }
     items[1] = stringResult;
-    found = items.filter(f146192);
+    found = items.filter(f146401);
     if (0 !== found.length) {
       joined = found.join(" ");
     }
@@ -580,7 +580,7 @@ export default function useConjureAppSettingsForm(projectId) {
       stringResult = intl.string(notifyAgent(flag[16])["4kCM6H"]);
     }
     items[1] = stringResult;
-    found = items.filter(f146192);
+    found = items.filter(f146401);
     let joined;
     if (0 !== found.length) {
       joined = found.join(" ");

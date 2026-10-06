@@ -162,14 +162,14 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[10] = S;
           cResult[11] = tmp6;
           cResult[12] = !tmp6 && !tmp4;
-          cResult[13] = jsx(id(6697).ActionSheetSwitchRow, {
+          cResult[13] = jsx(id(6704).ActionSheetSwitchRow, {
             label: tmp10,
             subLabel: tmp11,
             value: !tmp6 && !tmp4,
             onValueChange: S,
             disabled: tmp6,
           });
-          const tmp17 = jsx(id(6697).ActionSheetSwitchRow, {
+          const tmp17 = jsx(id(6704).ActionSheetSwitchRow, {
             label: tmp10,
             subLabel: tmp11,
             value: !tmp6 && !tmp4,
@@ -211,7 +211,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
         MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
       }, items);
-      const ActionSheetSwitchRow = id(6697).ActionSheetSwitchRow;
+      const ActionSheetSwitchRow = id(6704).ActionSheetSwitchRow;
       const intl = id(1126).intl;
       const intl2 = id(1126).intl;
       return (

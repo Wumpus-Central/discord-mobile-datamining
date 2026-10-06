@@ -30,16 +30,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             } else {
               allowRender = function allowRender() {
-                /* body not rendered: F145610 */
+                /* body not rendered: F145820 */
               };
               handleGatewayChange = function handleGatewayChange() {
-                /* body not rendered: F145611 */
+                /* body not rendered: F145821 */
               };
               handleCacheChange = function handleCacheChange() {
-                /* body not rendered: F145612 */
+                /* body not rendered: F145822 */
               };
               handleNavigationChange = function handleNavigationChange() {
-                /* body not rendered: F145613 */
+                /* body not rendered: F145823 */
               };
               tmp2 = closure_1_5;
               result = closure_1_5.addReactChangeListener(handleGatewayChange);
@@ -58,7 +58,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 addListenerResult = rootNavigationRef.addListener("state", handleNavigationChange);
               }
               return () => {
-                /* body not rendered: F145614 */
+                /* body not rendered: F145824 */
               };
             }
           }
@@ -76,16 +76,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             } else {
               allowRender = function allowRender() {
-                /* body not rendered: F145610 */
+                /* body not rendered: F145820 */
               };
               handleGatewayChange = function handleGatewayChange() {
-                /* body not rendered: F145611 */
+                /* body not rendered: F145821 */
               };
               handleCacheChange = function handleCacheChange() {
-                /* body not rendered: F145612 */
+                /* body not rendered: F145822 */
               };
               handleNavigationChange = function handleNavigationChange() {
-                /* body not rendered: F145613 */
+                /* body not rendered: F145823 */
               };
               tmp2 = closure_1_5;
               result = closure_1_5.addReactChangeListener(handleGatewayChange);
@@ -104,7 +104,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 addListenerResult = rootNavigationRef.addListener("state", handleNavigationChange);
               }
               return () => {
-                /* body not rendered: F145614 */
+                /* body not rendered: F145824 */
               };
             }
           }

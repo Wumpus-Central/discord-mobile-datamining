@@ -1,6 +1,6 @@
 // discord_app/modules/safety_flows/native/tasks/EnterEmailScreen.tsx
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import _modDef2787 from "../../SafetyFlows.messages.js";
+import _modDef2815 from "../../SafetyFlows.messages.js";
 import types from "../../types.tsx";
 import SafetyFlowTaskScreenDefault from "../SafetyFlowTaskScreen.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -27,9 +27,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       [first, tmp7] = react.useState("");
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef2787.bFbsV6);
+        const stringResult = intl.string(_modDef2815.bFbsV6);
         const intl2 = tmp(1126).intl;
-        const stringResult1 = intl2.string(_modDef2787.RRBNpv);
+        const stringResult1 = intl2.string(_modDef2815.RRBNpv);
         cResult[0] = stringResult;
         cResult[1] = stringResult1;
         tmp8 = stringResult;
@@ -48,7 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp13 = cResult[3];
       }
       if (cResult[4] !== first) {
-        const Stack = tmp(5593).Stack;
+        const Stack = tmp(5600).Stack;
         const tmp16 = <Stack>{null}</Stack>;
         cResult[4] = first;
         cResult[5] = tmp16;
@@ -83,8 +83,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const Stack = require("Stack/Stack").Stack;
       return (
         <tmp4
-          title={intl.string(_modDef2787.bFbsV6)}
-          action={intl2.string(_modDef2787.RRBNpv)}
+          title={intl.string(_modDef2815.bFbsV6)}
+          action={intl2.string(_modDef2815.RRBNpv)}
           onAction={function onAction() {
             closure_0.push(types.SafetyFlowScreens.VERIFY_EMAIL);
           }}

@@ -10,7 +10,7 @@ export default function handleAcceptEventInstantInvite(code) {
     const obj = code(dependencyMap[3]);
     const result = obj.transitionToEventDetailsFromInvite(guildScheduledEvent);
   }
-  let obj = code(7225);
+  let obj = code(7238);
   const tmp = code;
   if (obj.isGuildScheduledEventInviteEmbed(code)) {
     code = code.code;
@@ -33,14 +33,14 @@ export default function handleAcceptEventInstantInvite(code) {
           return obj.acceptInvite(obj2);
         }
         let obj2 = { onConfirm: acceptInvite };
-        const tmpResult = tmp(9420);
+        const tmpResult = tmp(9434);
         if (!tmpResult.handleNSFWGuildInvite(code, obj2)) {
           const obj3 = {
             inviteKey: code,
             context: { location: "Guild Scheduled Event Invite Button Embed" },
             callback,
           };
-          const obj4 = guildScheduledEvent(8054);
+          const obj4 = guildScheduledEvent(8064);
           obj4.acceptInvite(obj3);
         }
       }

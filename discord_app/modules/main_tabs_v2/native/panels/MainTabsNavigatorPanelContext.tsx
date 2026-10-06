@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsNavigatorPanelContext.tsx
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import react from "../../../../../_runtime/00019_react.js";
 import "ReanimatedHelperTypes";
 import ReanimatedHelperTypes_mod from "../../../reanimated/ReanimatedHelperTypes.tsx";

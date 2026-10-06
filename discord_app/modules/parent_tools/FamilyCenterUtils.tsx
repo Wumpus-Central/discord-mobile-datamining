@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterUtils.tsx
 import intl5 from "../../intl/index.native.tsx";
-import _modDef2493 from "FamilyCenter.messages.js";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef2521 from "FamilyCenter.messages.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators.tsx";
 import FamilyCenterStore from "FamilyCenterStore.tsx";
 import FamilyCenterConstants from "FamilyCenterConstants.tsx";
@@ -15,7 +15,7 @@ let hasOwnProperty;
 let metroImportAll;
 let metroImportDefault;
 let metroRequire;
-const f96952 = (link_status) =>
+const f97133 = (link_status) =>
   link_status.link_status === constants.ACTIVE && link_status.link_type === constants2.PARENT;
 ({
   ACTION_TO_TEXT: closure_4,
@@ -33,9 +33,9 @@ export const getEmptyActivityFormatter = function getEmptyActivityFormatter() {
   let intl;
   let intl2;
   const obj = {
-    today: intl.string(_modDef2493.VjIAQQ),
-    yesterday: intl2.string(_modDef2493["2a8xHY"]),
-    days: _modDef2493.Xt6oND,
+    today: intl.string(_modDef2521.VjIAQQ),
+    yesterday: intl2.string(_modDef2521["2a8xHY"]),
+    days: _modDef2521.Xt6oND,
   };
   intl = intl5.intl;
   intl2 = intl5.intl;
@@ -46,29 +46,29 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   const obj = { today: null, yesterday: null, days: null };
   const intl = intl5.intl;
   const string = intl.string;
-  const tmp4 = _modDef2493;
+  const tmp4 = _modDef2521;
   const tmp5 = arg0;
   if (tmp5) {
     obj.today = string(tmp4["2AtcIs"]);
     const intl3 = intl5.intl;
-    obj.yesterday = intl3.string(_modDef2493.stOECr);
-    obj.days = _modDef2493.n8n5Ba;
+    obj.yesterday = intl3.string(_modDef2521.stOECr);
+    obj.days = _modDef2521.n8n5Ba;
     tmp6 = obj;
   } else {
     obj.today = string(tmp4.g1ZX6m);
     const intl2 = intl5.intl;
-    obj.yesterday = intl2.string(_modDef2493.s3qSVt);
-    obj.days = _modDef2493.f1UJiC;
+    obj.yesterday = intl2.string(_modDef2521.s3qSVt);
+    obj.days = _modDef2521.f1UJiC;
     tmp6 = obj;
   }
   return tmp6;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
   let yesterday;
-  const obj = _modDef4461();
-  const diffResult = obj.diff(_modDef4461(time), "s");
+  const obj = _modDef4467();
+  const diffResult = obj.diff(_modDef4467(time), "s");
   const tmp3 = timestampFormatter();
-  const obj2 = _modDef4461(time);
+  const obj2 = _modDef4467(time);
   obj2.format("LL");
   if (diffResult < c10) {
     yesterday = tmp3.today;
@@ -92,10 +92,10 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
   let yesterday;
-  const obj = _modDef4461();
-  const diffResult = obj.diff(_modDef4461(arg0), "s");
+  const obj = _modDef4467();
+  const diffResult = obj.diff(_modDef4467(arg0), "s");
   const time = SENT_TIMESTAMP_FORMATTER();
-  _modDef4461(arg0);
+  _modDef4467(arg0);
   if (diffResult < 60) {
     yesterday = time.seconds;
   } else if (diffResult < 3600) {
@@ -190,11 +190,11 @@ export const getOrFetchLinkedUsers = function getOrFetchLinkedUsers() {
 };
 export const hasActiveParentLinks = function hasActiveParentLinks() {
   const values = Object.values(FamilyCenterStore.getLinkedUsers());
-  return values.some(f96952);
+  return values.some(f97133);
 };
 export const isParentallyControlled = function isParentallyControlled() {
   const values = Object.values(FamilyCenterStore.getLinkedUsers());
-  return values.some(f96952);
+  return values.some(f97133);
 };
 export const getTopUserOrGuildDescription = function getTopUserOrGuildDescription(dms_sent, call_count) {
   let formatToPlainStringResult;
@@ -202,7 +202,7 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
     if (0 === dms_sent) {
       const intl3 = intl5.intl;
       const obj2 = { callCount: call_count };
-      formatToPlainStringResult = intl3.formatToPlainString(_modDef2493["L/Cj7S"], obj2);
+      formatToPlainStringResult = intl3.formatToPlainString(_modDef2521["L/Cj7S"], obj2);
     }
     return formatToPlainStringResult;
   }
@@ -210,10 +210,10 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
     if (0 === call_count) {
       const intl2 = intl5.intl;
       const obj3 = { messageCount: dms_sent };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef2493["6X1F0i"], obj3);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef2521["6X1F0i"], obj3);
     }
   }
   const intl = intl5.intl;
   const obj = { messageCount: dms_sent, callCount: call_count };
-  formatToPlainStringResult = intl.formatToPlainString(_modDef2493.IYqGMG, obj);
+  formatToPlainStringResult = intl.formatToPlainString(_modDef2521.IYqGMG, obj);
 };

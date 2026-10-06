@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/app_channel/native/useConjureAppChannelRefreshButton.tsx
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import restartConjureAppFramesDefault from "../../preview/native/restartConjureAppFrames.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -41,7 +41,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = tmp(1126).intl;
-            const stringResult = intl.string(_modDef3723["p4B/7M"]);
+            const stringResult = intl.string(_modDef3753["p4B/7M"]);
             cResult[2] = stringResult;
             tmp10 = stringResult;
           } else {
@@ -50,7 +50,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[3] !== tmp8) {
             const obj3 = {
               source: null,
-              IconComponent: tmp(11364).RetryIcon,
+              IconComponent: tmp(11377).RetryIcon,
               onPress: tmp8,
               accessibilityLabel: tmp10,
             };
@@ -78,7 +78,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (!tmp5) {
           const obj2 = {
             source: null,
-            IconComponent: tmp(11364).RetryIcon,
+            IconComponent: tmp(11377).RetryIcon,
             onPress() {
               application_id = application_id.application_id;
               const tmp = restartConjureAppFramesDefault;
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
               }
               return tmp(application_id);
             },
-            accessibilityLabel: intl.string(_modDef3723["p4B/7M"]),
+            accessibilityLabel: intl.string(_modDef3753["p4B/7M"]),
           };
           intl = tmp(1126).intl;
           tmp6 = obj2;

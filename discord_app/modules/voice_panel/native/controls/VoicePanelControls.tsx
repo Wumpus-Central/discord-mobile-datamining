@@ -6,7 +6,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import HapticUtils from "../../../haptics/HapticUtils.native.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06147_LegacyBaseButton.js";
 import native2 from "../../../../design/components/experimental/native.tsx";
 import cheapWorkletShallowEqual2 from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import roundToNearestPixelDefault from "../utils/roundToNearestPixel.tsx";
@@ -672,16 +672,16 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp6 = isScreenReaderEnabled(11647)(first);
+      const tmp6 = isScreenReaderEnabled(11661)(first);
       dependencyMap = tmp6;
-      const context = windowDimensions.useContext(isScreenReaderEnabled(11901));
+      const context = windowDimensions.useContext(isScreenReaderEnabled(11915));
       const controlsSpecs = context.controlsSpecs;
       windowDimensions = context.windowDimensions;
       const mode = context.mode;
       const setControlsMode = context.setControlsMode;
       const safeArea = context.safeArea;
       const connected = context.connected;
-      let tmpResult = tmp(4612);
+      let tmpResult = tmp(4618);
       const fn = function h() {
         const obj = {
           connected: connected.get(),
@@ -790,17 +790,17 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
         }
       };
       let obj4 = {
-        cheapWorkletShallowEqual: tmp(9074).cheapWorkletShallowEqual,
+        cheapWorkletShallowEqual: tmp(9110).cheapWorkletShallowEqual,
         VoicePanelModes,
         wrapperSpecs,
         VoicePanelControlsModes,
-        runOnJS: tmp(4612).runOnJS,
+        runOnJS: tmp(4618).runOnJS,
         setControlsMode,
         isScreenReaderEnabled,
         EDGE_GUTTER,
-        getControlsDefaultWidth: tmp(11909).getControlsDefaultWidth,
-        getDrawerSpec: tmp(17315).getDrawerSpec,
-        getControlsDrawerOpenWidth: tmp(11909).getControlsDrawerOpenWidth,
+        getControlsDefaultWidth: tmp(11923).getControlsDefaultWidth,
+        getDrawerSpec: tmp(17343).getDrawerSpec,
+        getControlsDrawerOpenWidth: tmp(11923).getControlsDrawerOpenWidth,
       };
       fn2.__closure = obj4;
       fn2.__workletHash = 12616753127721;
@@ -813,9 +813,9 @@ let closure_40 = ReactCompilerGating.isReactCompilerEnabled()
       _require = wrapperSpecs;
       let obj = require("useIsScreenReaderEnabled");
       const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
-      const tmp2 = isScreenReaderEnabled(11647)({ ignoreKeyboard: true });
+      const tmp2 = isScreenReaderEnabled(11661)({ ignoreKeyboard: true });
       dependencyMap = tmp2;
-      const context = windowDimensions.useContext(isScreenReaderEnabled(11901));
+      const context = windowDimensions.useContext(isScreenReaderEnabled(11915));
       const controlsSpecs = context.controlsSpecs;
       windowDimensions = context.windowDimensions;
       const mode = context.mode;
@@ -1597,7 +1597,7 @@ const memoResult = react.memo(
                               const mode = closure_3.get().mode;
                               const DRAWER = constants.DRAWER;
                               chatOpen(function () {
-                                /* body not rendered: F153667 */
+                                /* body not rendered: F153907 */
                               });
                               if (!closure_3) {
                                 const obj = { mode: constants.DRAWER };
@@ -1685,7 +1685,7 @@ const memoResult = react.memo(
                             const mode = closure_3.get().mode;
                             const DRAWER = constants.DRAWER;
                             chatOpen(function () {
-                              /* body not rendered: F153667 */
+                              /* body not rendered: F153907 */
                             });
                             if (!closure_3) {
                               const obj = { mode: constants.DRAWER };
@@ -2026,7 +2026,7 @@ const memoResult = react.memo(
                               const mode = closure_3.get().mode;
                               const DRAWER = constants.DRAWER;
                               chatOpen(function () {
-                                /* body not rendered: F153667 */
+                                /* body not rendered: F153907 */
                               });
                               if (!closure_3) {
                                 const obj = { mode: constants.DRAWER };
@@ -2149,7 +2149,7 @@ const memoResult = react.memo(
                       const mode = closure_3.get().mode;
                       const DRAWER = constants.DRAWER;
                       chatOpen(function () {
-                        /* body not rendered: F153667 */
+                        /* body not rendered: F153907 */
                       });
                       if (!closure_3) {
                         const obj = { mode: constants.DRAWER };
@@ -2216,7 +2216,7 @@ const memoResult = react.memo(
                     const mode = closure_3.get().mode;
                     const DRAWER = constants.DRAWER;
                     chatOpen(function () {
-                      /* body not rendered: F153667 */
+                      /* body not rendered: F153907 */
                     });
                     if (!closure_3) {
                       const obj = { mode: constants.DRAWER };
@@ -2246,7 +2246,7 @@ const memoResult = react.memo(
                 const mode = closure_3.get().mode;
                 const DRAWER = constants.DRAWER;
                 chatOpen(function () {
-                  /* body not rendered: F153667 */
+                  /* body not rendered: F153907 */
                 });
                 if (!closure_3) {
                   const obj = { mode: constants.DRAWER };

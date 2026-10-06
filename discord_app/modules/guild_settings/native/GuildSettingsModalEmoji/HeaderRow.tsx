@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import EmojiConstants from "../../../emojis/EmojiConstants.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/11870__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/11884__objectDestructuringEmpty.js";
 import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
 import _slicedToArray_mod from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react_mod from "../../../../../_runtime/00019_react.js";
@@ -227,7 +227,7 @@ function HeaderRow(guild) {
   [tmp5, c5] = tmp4;
   [c6, c7] = _slicedToArray(react.useState(""), 2);
   const tmp6 = _slicedToArray(react.useState(""), 2);
-  obj = guild(9169);
+  obj = guild(9204);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1126).intl;
   let obj2 = { id: "GUILD_SETTINGS_EMOJI_UPLOAD_REQUIREMENTS_" + 1, text: stringResult };
@@ -248,7 +248,7 @@ function HeaderRow(guild) {
   let obj7 = { style: tmp.headerContainer, children: items1 };
   stringResult2 = intl4.string(guild(1126).t["8Vr5Qd"]);
   if (canCreateExpressions) {
-    const Button = tmp7(5594).Button;
+    const Button = tmp7(5601).Button;
     let obj8 = {
       size: "sm",
       loading: isUploading,
@@ -265,19 +265,19 @@ function HeaderRow(guild) {
   let tmp13Result = null != tmp5;
   if (tmp13Result) {
     let obj9 = { style: tmp.errorText, variant: "text-sm/medium", color: "text-feedback-critical", children: tmp5 };
-    tmp13Result = closure_15(tmp7(4886).Text, obj9);
+    tmp13Result = closure_15(tmp7(4892).Text, obj9);
   }
   let obj10 = { children: closure_14(tmp16, obj7) };
   items1[1] = tmp13Result;
   let obj11 = { style: tmp.uploadInstructionsContainer, children: items2 };
-  items2 = [closure_15(tmp7(4886).Text, { variant: "text-sm/medium", color: "text-muted", children: description }), ,];
+  items2 = [closure_15(tmp7(4892).Text, { variant: "text-sm/medium", color: "text-muted", children: description }), ,];
   const obj12 = {
     variant: "text-xs/bold",
     color: "text-muted",
     style: tmp.uploadInstructionsHeading,
     children: str.toUpperCase(),
   };
-  const Text = tmp7(4886).Text;
+  const Text = tmp7(4892).Text;
   const intl6 = tmp7(1126).intl;
   str = intl6.string(guild(1126).t.jrXfyw);
   items2[1] = closure_15(Text, obj12);

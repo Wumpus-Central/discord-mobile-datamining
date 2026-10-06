@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/ShareUtils.tsx
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04811_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04817_AssetRegistry.js";
 import MessageConstants from "../../messages/MessageConstants.tsx";
 import DraftStore from "../../../stores/DraftStore.tsx";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -55,7 +55,7 @@ let obj = function _sendShareMessage() {
             future = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {

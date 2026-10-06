@@ -41,7 +41,7 @@ function VoiceChannelAppRow(guildId) {
       const openLazy = ActionSheetActionCreatorsDefault.openLazy;
       ActionSheetActionCreatorsDefault;
       const obj = { guildId, selectedApplicationId: application_id, onChange };
-      const tmp2 = asyncRequire(16995, dependencyMap.paths);
+      const tmp2 = asyncRequire(17021, dependencyMap.paths);
       openLazy(tmp2, VoiceChannelAppActionSheet.VOICE_CHANNEL_APP_ACTION_SHEET_KEY, obj);
     },
     arrow: true,

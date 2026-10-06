@@ -6,9 +6,9 @@ import native from "../../../../design/void/native.tsx";
 import ICYMIUtils from "../../ICYMIUtils.tsx";
 import SegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/16404_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/16405_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../../_runtime/16406_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/16444_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/16445_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../_runtime/16446_AssetRegistry.js";
 import NativeICYMIActionCreatorsDefault from "../NativeICYMIActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";
@@ -69,7 +69,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       let iconSelected = null;
-      if (tmp6 === onValueUpdated(8028).ICYMICustomScore.LESS) {
+      if (tmp6 === onValueUpdated(8038).ICYMICustomScore.LESS) {
         iconSelected = tmp4.iconSelected;
       }
       if (cResult[1] === tmp4.icon) {
@@ -88,7 +88,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = cResult[4];
         }
         let iconSelected1 = null;
-        if (tmp6 === onValueUpdated(8028).ICYMICustomScore.DEFAULT) {
+        if (tmp6 === onValueUpdated(8038).ICYMICustomScore.DEFAULT) {
           iconSelected1 = tmp4.iconSelected;
         }
         if (cResult[5] === tmp4.icon) {
@@ -107,7 +107,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             tmp17 = cResult[8];
           }
           let iconSelected2 = null;
-          if (tmp6 === onValueUpdated(8028).ICYMICustomScore.MORE) {
+          if (tmp6 === onValueUpdated(8038).ICYMICustomScore.MORE) {
             iconSelected2 = tmp4.iconSelected;
           }
           if (cResult[9] === tmp4.icon) {
@@ -181,7 +181,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  if (onValueUpdated(8028).ICYMICustomScore.LESS !== tmp6) {
+                  if (onValueUpdated(8038).ICYMICustomScore.LESS !== tmp6) {
                     class V {
                       constructor(arg0) {
                         tmp = closure_0;
@@ -200,7 +200,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                         return;
                       }
                     }
-                    if (onValueUpdated(8028).ICYMICustomScore.MORE === tmp6) {
+                    if (onValueUpdated(8038).ICYMICustomScore.MORE === tmp6) {
                       class V {
                         constructor(arg0) {
                           tmp = closure_0;
@@ -443,7 +443,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = tmp(504);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp6);
       if (cResult[3] !== stateFromStores) {
-        const tmpResult2 = tmp(8028);
+        const tmpResult2 = tmp(8038);
         const numberToCustomScoreResult = tmpResult2.numberToCustomScore(stateFromStores);
         cResult[3] = stateFromStores;
         cResult[4] = numberToCustomScoreResult;
@@ -452,7 +452,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[4];
       }
       importDefault = tmp8;
-      const MUTED = tmp(8028).ICYMICustomScore.MUTED;
+      const MUTED = tmp(8038).ICYMICustomScore.MUTED;
       if (cResult[5] !== id) {
         const fn2 = function v(arg0) {
           let customScoreToNumberResult;
@@ -488,7 +488,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           let obj2 = { variant: "text-sm/semibold", color: "text-default", children: intl.string(tmp(1126).t.Clq6km) };
-          const Text = tmp(4886).Text;
+          const Text = tmp(4892).Text;
           intl = tmp(1126).intl;
           const tmp16 = closure_8(Text, obj2);
           cResult[10] = tmp16;
@@ -508,7 +508,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[13] !== tmp17) {
           const obj4 = { variant: "text-xs/normal", color: "text-default", children: tmp17 };
-          const tmp21 = closure_8(tmp(4886).Text, obj4);
+          const tmp21 = closure_8(tmp(4892).Text, obj4);
           cResult[13] = tmp17;
           cResult[14] = tmp21;
           tmp19 = tmp21;
@@ -561,7 +561,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                       style: warningText,
                       children: tmp39,
                     };
-                    const tmp43 = closure_8(tmp(4886).Text, obj5);
+                    const tmp43 = closure_8(tmp(4892).Text, obj5);
                     cResult[28] = tmp13.warningText;
                     cResult[29] = tmp43;
                     tmp41 = tmp43;
@@ -608,7 +608,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp35 = tmp38;
               }
               const obj8 = { value: tmp8 !== MUTED, onValueChange: tmp10, label: tmp29, start: true, end: true };
-              const tmp34 = closure_8(tmp(6698).TableSwitchRow, obj8);
+              const tmp34 = closure_8(tmp(6705).TableSwitchRow, obj8);
               cResult[21] = tmp10;
               cResult[22] = tmp8 !== MUTED;
               cResult[23] = tmp34;
@@ -661,10 +661,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = id(504);
       const items = [ICYMIStore];
       const stateFromStores = obj.useStateFromStores(items, () => ICYMIStore.getCustomGuildScore(id));
-      let obj2 = id(8028);
+      let obj2 = id(8038);
       const numberToCustomScoreResult = obj2.numberToCustomScore(stateFromStores);
       let c1 = numberToCustomScoreResult;
-      const tmp5 = numberToCustomScoreResult === id(8028).ICYMICustomScore.MUTED;
+      const tmp5 = numberToCustomScoreResult === id(8038).ICYMICustomScore.MUTED;
       const items1 = [id];
       const items2 = [numberToCustomScoreResult, id];
       const callback = react.useCallback((arg0) => {
@@ -695,7 +695,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       const tmp8 = closure_10();
       const obj3 = { variant: "text-sm/semibold", color: "text-default", children: intl.string(id(1126).t.Clq6km) };
-      const Text = id(4886).Text;
+      const Text = id(4892).Text;
       intl = id(1126).intl;
       const items3 = [closure_8(Text, obj3), , , ,];
       const obj4 = {
@@ -703,7 +703,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: intl2.format(id(1126).t["0DhU2P"], obj5),
       };
-      const Text2 = id(4886).Text;
+      const Text2 = id(4892).Text;
       intl2 = id(1126).intl;
       obj5 = { guildName: guild.name };
       items3[1] = closure_8(Text2, obj4);
@@ -723,7 +723,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         start: true,
         end: true,
       };
-      TableSwitchRow = tmp(6698).TableSwitchRow;
+      TableSwitchRow = tmp(6705).TableSwitchRow;
       intl3 = tmp(1126).intl;
       items3[3] = closure_8(View, obj9);
       const obj11 = {
@@ -732,7 +732,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp8.warningText,
         children: intl4.string(tmp(1126).t.vRVs07),
       };
-      const Text3 = tmp(4886).Text;
+      const Text3 = tmp(4892).Text;
       intl4 = tmp(1126).intl;
       items3[4] = closure_8(Text3, obj11);
       return closure_9(View, obj8);

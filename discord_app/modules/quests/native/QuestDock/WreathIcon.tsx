@@ -3,7 +3,7 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage2 from "../../../../design/components/Icon/native/BaseIconImage.tsx";
-import AssetRegistry from "../../../../../_runtime/14906_AssetRegistry.js";
+import AssetRegistry from "../../../../../_runtime/14922_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";

@@ -76,7 +76,7 @@ export default function HubProgressHeader(guild) {
         if (!tmp) {
           const obj2 = { guild, analyticsSource: "Directory Channel Header" };
           const obj = ActionSheetActionCreatorsDefault;
-          obj.openLazy(asyncRequire(12324, dependencyMap.paths), React3, obj2);
+          obj.openLazy(asyncRequire(12339, dependencyMap.paths), React3, obj2);
         }
       },
       iconSource: flag(nextHubProgressStep[14]),

@@ -15,7 +15,7 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import TableRow2 from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowTrailingText2 from "../../../design/components/TableRow/native/TableRowTrailingText.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/07807_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/07818_AssetRegistry.js";
 import UnknownGameIcon from "../../../design/components/Icon/native/redesign/generated/UnknownGameIcon.tsx";
 import Form from "../../../design/void/Form/native/index.tsx";
 import ApplicationCommandsConstants from "../../application_commands/native/ApplicationCommandsConstants.tsx";
@@ -203,7 +203,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                         leading: tmp17,
                         trailing: tmp21,
                       };
-                      const tmp27 = closure_9(user(8895).FormRow, obj4);
+                      const tmp27 = closure_9(user(8924).FormRow, obj4);
                       cResult[21] = onPress;
                       cResult[22] = tmp4.row;
                       cResult[23] = tmp13;
@@ -214,7 +214,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { user, usernameStyle: tmp20, discriminatorStyle: tmp4.trailing };
-                  const tmp24 = closure_9(guildId(9296), obj5);
+                  const tmp24 = closure_9(guildId(9331), obj5);
                   cResult[17] = tmp4.trailing;
                   cResult[18] = tmp20;
                   cResult[19] = user;
@@ -244,7 +244,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           name = stateFromStores;
         }
         if (name == null) {
-          const obj3 = guildId(4722);
+          const obj3 = guildId(4728);
           name = obj3.getName(user);
         }
         cResult[4] = stateFromStores;
@@ -293,14 +293,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityRole: "menuitem",
         label: closure_9(closure_12, { text: nick }),
         leading: closure_9(Avatar, obj4),
-        trailing: closure_9(guildId(9296), obj5),
+        trailing: closure_9(guildId(9331), obj5),
       };
-      const FormRow = user(8895).FormRow;
+      const FormRow = user(8924).FormRow;
       if (nick == null) {
         nick = stateFromStores;
       }
       if (nick == null) {
-        const obj3 = guildId(4722);
+        const obj3 = guildId(4728);
         nick = obj3.getName(user);
       }
       obj4 = { status, user, size: user(1188).AvatarSizes.SMALL, guildId, autoStatusCutout: true };

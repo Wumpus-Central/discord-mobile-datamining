@@ -58,7 +58,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const text = isGift.text;
       const tmp4 = closure_9();
       if (cResult[0] !== basePlanId) {
-        let obj2 = isGift(4528);
+        let obj2 = isGift(4534);
         const interval = obj2.getInterval(basePlanId);
         cResult[0] = basePlanId;
         cResult[1] = interval;

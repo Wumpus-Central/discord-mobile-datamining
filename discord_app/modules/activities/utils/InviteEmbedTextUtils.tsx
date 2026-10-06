@@ -1,7 +1,7 @@
 // discord_app/modules/activities/utils/InviteEmbedTextUtils.tsx
 import Constants from "../../../Constants.tsx";
 import intl6 from "../../../intl/index.native.tsx";
-import _modDef2979 from "../../request_to_stream/RequestToStream.messages.js";
+import _modDef3007 from "../../request_to_stream/RequestToStream.messages.js";
 import NicknameUtils from "../../../utils/NicknameUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -73,7 +73,7 @@ export const getHeaderText = function getHeaderText(name, arg1, arg2) {
     return stringResult;
   } else if (ActivityActionTypes.STREAM_REQUEST === arg1) {
     const intl2 = intl6.intl;
-    return intl2.string(_modDef2979.DKHhec);
+    return intl2.string(_modDef3007.DKHhec);
   } else {
     const JOIN_REQUEST = ActivityActionTypes.JOIN_REQUEST;
     const intl = intl6.intl;
@@ -85,12 +85,12 @@ export const getRequestToStreamText = function getRequestToStreamText(author, gu
   let stringResult;
   if (author.author.id === id) {
     const intl2 = intl6.intl;
-    stringResult = intl2.string(_modDef2979["8B3U5O"]);
+    stringResult = intl2.string(_modDef3007["8B3U5O"]);
   } else {
     const intl = intl6.intl;
     const formatToPlainString = intl.formatToPlainString;
     const obj = { username: obj2.getName(guild_id.guild_id, guild_id.id, author.author) };
-    const prop = _modDef2979["d/qbC0"];
+    const prop = _modDef3007["d/qbC0"];
     obj2 = NicknameUtils;
     stringResult = formatToPlainString(prop, obj);
   }
@@ -111,12 +111,12 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
           let stringResult;
           if (activity.author.id === id4) {
             const intl2 = intl6.intl;
-            stringResult = intl2.string(_modDef2979["8B3U5O"]);
+            stringResult = intl2.string(_modDef3007["8B3U5O"]);
           } else {
             const intl = intl6.intl;
             const formatToPlainString = intl.formatToPlainString;
             const obj = { username: obj2.getName(guild_id.guild_id, guild_id.id, activity.author) };
-            const prop = _modDef2979["d/qbC0"];
+            const prop = _modDef3007["d/qbC0"];
             obj2 = NicknameUtils;
             stringResult = formatToPlainString(prop, obj);
           }

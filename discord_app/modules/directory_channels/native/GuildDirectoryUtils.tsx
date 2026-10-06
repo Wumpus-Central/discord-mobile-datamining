@@ -44,7 +44,7 @@ let obj = function _onAddDirectoryGuildEntry() {
       category: c4,
       onClose: c5,
     } = closure_0);
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

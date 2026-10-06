@@ -11,7 +11,7 @@ let metroRequire;
 function handleActivityStateChanged(COMPLETE, JOIN, type) {
   let applicationId;
   let remotePartyId;
-  const f106482 = () => {
+  const f106634 = () => {
     obj = activityType(dependencyMap[4]);
     const obj2 = { type: "ACTIVITY_LAUNCH_FAIL", applicationId, activityType };
     return obj.dispatch(obj2);
@@ -43,7 +43,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       const self3 = this;
       const self4 = this;
       const timeout = new applicationId(2046).Timeout();
-      timeout.start(c9, f106482);
+      timeout.start(c9, f106634);
       closure_8[applicationId] = timeout;
     } else if (COMPLETE === constants.LOADING) {
       let num = 15000;
@@ -58,7 +58,7 @@ function handleActivityStateChanged(COMPLETE, JOIN, type) {
       const self = this;
       const self2 = this;
       const timeout1 = new applicationId(2046).Timeout();
-      timeout1.start(num, f106482);
+      timeout1.start(num, f106634);
       closure_8[applicationId] = timeout1;
     }
   }

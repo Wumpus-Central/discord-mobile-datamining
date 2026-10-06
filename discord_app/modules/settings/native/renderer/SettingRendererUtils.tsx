@@ -77,7 +77,7 @@ export const getSettingTitle = function getSettingTitle(id) {
 };
 export const getSettingSearchableTitles = function getSettingSearchableTitles() {
   let items;
-  const entries = Object.entries(items(14409).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14425).SETTING_RENDERER_CONFIG);
   items = [];
   const item = entries.forEach((item) => {
     let tmp2;
@@ -102,7 +102,7 @@ export const getSettingSearchableTitles = function getSettingSearchableTitles() 
 export const getSettingScreens = function getSettingScreens() {
   let items = [];
   set = new Set();
-  const entries = Object.entries(items(14409).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14425).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     let tmp;
     let tmp2;
@@ -119,7 +119,7 @@ export const getSettingScreens = function getSettingScreens() {
 };
 export const getDesignSystemScreens = function getDesignSystemScreens() {
   let items = [];
-  const entries = Object.entries(items(14409).SETTING_RENDERER_CONFIG);
+  const entries = Object.entries(items(14425).SETTING_RENDERER_CONFIG);
   const item = entries.forEach((item) => {
     let tmp;
     let tmp2;

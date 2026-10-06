@@ -12,6 +12,7 @@ let obj14;
 let obj2;
 let obj21;
 let obj23;
+let obj26;
 let obj4;
 let obj6;
 let obj8;
@@ -216,6 +217,16 @@ const obj24 = {
   variations: { 0: { enabled: false }, 1: { enabled: true } },
 };
 const apexExperiment12 = ApexExperiment.createApexExperiment(obj24);
+ApexExperiment = ApexExperiment_mod;
+const obj25 = {
+  name: "2026-09-mobile-quest-reward-button-to-secondary-button",
+  kind: "user",
+  defaultConfig: { enabled: false },
+  variations: obj26,
+};
+obj26 = { 1: null };
+obj26[1] = { enabled: true };
+const apexExperiment13 = ApexExperiment.createApexExperiment(obj25);
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -234,3 +245,4 @@ export const QuestHomeLayoutVisualTweakVariant = obj19;
 export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment10;
 export const QuestMobileBarSecondaryCtaExperiment = apexExperiment11;
 export const QuestOrbTierExperiment = apexExperiment12;
+export const MobileQuestRewardButtonToSecondaryButtonExperiment = apexExperiment13;

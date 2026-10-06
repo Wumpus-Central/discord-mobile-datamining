@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/archive/native/ConjureArchivePicker.tsx
 import intl3 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureTypes from "../../ConjureTypes.tsx";
 import FilePickerUtils from "../../../../utils/native/FilePickerUtils.tsx";
 import _asyncToGenerator from "../../../../../_runtime/metro/00005__asyncToGenerator.js";
@@ -210,7 +210,7 @@ export const describeConjureArchiveRejection = function describeConjureArchiveRe
     const intl = intl3.intl;
     const formatToPlainString = intl.formatToPlainString;
     const obj2 = { size: formatConjureAttachmentLimit(tmpResult2.conjureAttachmentLimit(bytes.contentType)) };
-    const ThxcOX = _modDef3723.ThxcOX;
+    const ThxcOX = _modDef3753.ThxcOX;
     formatConjureAttachmentLimit = ConjureTypes.formatConjureAttachmentLimit;
     ConjureTypes;
     tmpResult2 = ConjureTypes;

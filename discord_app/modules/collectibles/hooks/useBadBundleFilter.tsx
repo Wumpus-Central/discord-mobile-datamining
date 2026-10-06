@@ -86,7 +86,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                               if (null != product.bundledProducts) {
                                 const bundledProducts = product.bundledProducts;
                                 num2 = bundledProducts.reduce(() => {
-                                  /* body not rendered: F153055 */
+                                  /* body not rendered: F153288 */
                                 }, 0);
                               }
                               return result.amount < num2;
@@ -143,7 +143,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                               if (null != product.bundledProducts) {
                                 const bundledProducts = product.bundledProducts;
                                 num2 = bundledProducts.reduce(() => {
-                                  /* body not rendered: F153055 */
+                                  /* body not rendered: F153288 */
                                 }, 0);
                               }
                               return result.amount < num2;

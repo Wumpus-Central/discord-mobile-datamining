@@ -63,12 +63,12 @@ function VCButton(balance) {
   let str;
   const tmp = closure_17();
   react = tmp;
-  let obj = balance(12986);
+  let obj = balance(13005);
   const virtualCurrencyData = obj.useVirtualCurrencyData(product, flag);
   ({ price, canAfford } = virtualCurrencyData);
-  let obj2 = balance(8531);
+  let obj2 = balance(8564);
   let isDisabled = obj2.useProductDisableState(product.skuId).isDisabled;
-  let obj3 = balance(8496);
+  let obj3 = balance(8529);
   const isPartiallyOwnedBundle = obj3.useProductPurchaseState(product).isPartiallyOwnedBundle;
   if (!isDisabled) {
     isDisabled = !canAfford;
@@ -149,7 +149,7 @@ function VCButton(balance) {
         }
       },
     };
-    obj2.pushLazy(asyncRequire(12989, dependencyMap.paths), obj3, ORB_CHECKOUT_MODAL);
+    obj2.pushLazy(asyncRequire(13008, dependencyMap.paths), obj3, ORB_CHECKOUT_MODAL);
   }, items);
   if (null == price) {
     return null;
@@ -208,7 +208,7 @@ function VCButton(balance) {
       grow: true,
     };
     str2 = "primary";
-    BaseTextButton = tmp2(5595).BaseTextButton;
+    BaseTextButton = tmp2(5602).BaseTextButton;
     const tmp10 = navigation;
     if (isDisabled) {
       str2 = "secondary";

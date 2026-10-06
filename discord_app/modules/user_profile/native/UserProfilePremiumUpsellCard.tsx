@@ -185,7 +185,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = analyticsLocations(576);
       const cResult = obj.c(10);
       style = style.style;
-      let obj2 = analyticsLocations(6955);
+      let obj2 = analyticsLocations(6968);
       const nitroTrialCtaOverride = obj2.useNitroTrialCtaOverride("user_profile_premium_upsell_card");
       analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
       if (cResult[0] !== analyticsLocations) {
@@ -218,7 +218,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         items,
       ));
       usePremiumFeatureUpsellGetNitroDefault(false, tmp7, constants2.USER_SETTINGS, undefined, items);
-      const tmpResult = tmp(14477);
+      const tmpResult = tmp(14493);
       const mobileNitroPreviewDirectCheckoutEnabled = tmpResult.useMobileNitroPreviewDirectCheckoutEnabled();
       if (cResult[2] !== nitroTrialCtaOverride) {
         let stringResult = nitroTrialCtaOverride;
@@ -276,7 +276,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       let analyticsLocations;
       let tmp = analyticsLocations;
       style = style.style;
-      let obj = analyticsLocations(6955);
+      let obj = analyticsLocations(6968);
       let nitroTrialCtaOverride = obj.useNitroTrialCtaOverride("user_profile_premium_upsell_card");
       analyticsLocations = useAnalyticsLocationsDefault(items).analyticsLocations;
       items = [analyticsLocations];
@@ -303,7 +303,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         items,
       ));
       usePremiumFeatureUpsellGetNitroDefault(false, callback, constants2.USER_SETTINGS, undefined, items);
-      let obj2 = analyticsLocations(14477);
+      let obj2 = analyticsLocations(14493);
       const mobileNitroPreviewDirectCheckoutEnabled = obj2.useMobileNitroPreviewDirectCheckoutEnabled();
       if (nitroTrialCtaOverride == null) {
         const intl = tmp(1126).intl;

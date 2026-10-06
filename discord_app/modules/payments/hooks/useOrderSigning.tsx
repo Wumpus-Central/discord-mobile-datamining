@@ -118,7 +118,7 @@ export const useOrderSigning = function useOrderSigning(order) {
                 orderSigningError = undefined;
                 c5 = 1;
                 c6 = 1;
-                return { value: "Set", done: true };
+                return { value: "Reflect", done: true };
               }
             } else if (1 === c5) {
               if (loadId === 1) {

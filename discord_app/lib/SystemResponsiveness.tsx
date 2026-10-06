@@ -27,7 +27,7 @@ class SystemResponsiveness {
       }
     };
     obj.connection = connection;
-    const histogram = new obj(7233).Histogram();
+    const histogram = new obj(7246).Histogram();
     obj.pttQueueLatencyHistogram = histogram;
     return obj;
   }

@@ -399,17 +399,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         if (closure_7(focusedEmbeddedActivityParticipant)) {
           let LANDSCAPE;
           if (null == stateFromStores) {
-            LANDSCAPE = tmp3(8008).OrientationType.LANDSCAPE;
+            LANDSCAPE = tmp3(8018).OrientationType.LANDSCAPE;
           }
           return LANDSCAPE;
         }
       }
       if (activityLockOrientation === OrientationLockState.LANDSCAPE) {
-        LANDSCAPE1 = tmp3(8008).OrientationType.LANDSCAPE;
+        LANDSCAPE1 = tmp3(8018).OrientationType.LANDSCAPE;
       } else {
         LANDSCAPE1 = null;
         if (activityLockOrientation === tmp9.PORTRAIT) {
-          LANDSCAPE1 = tmp3(8008).OrientationType.PORTRAIT;
+          LANDSCAPE1 = tmp3(8018).OrientationType.PORTRAIT;
         }
       }
       LANDSCAPE = LANDSCAPE1;

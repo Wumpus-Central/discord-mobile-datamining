@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import intl6 from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import _modDef3529 from "../../partner_perks/xbox/game_pass_perks/XboxGamePassPerks.messages.js";
+import _modDef3559 from "../../partner_perks/xbox/game_pass_perks/XboxGamePassPerks.messages.js";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import NitroQuestOrbsMultiplierRive from "../../../../discord_common/js/packages/design/components/Rive/native/generated/NitroQuestOrbsMultiplierRive.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -655,7 +655,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = intl6.intl;
-          const stringResult1 = intl.string(_modDef3529.c5usUr);
+          const stringResult1 = intl.string(_modDef3559.c5usUr);
           cResult[2] = stringResult1;
           tmp8 = stringResult1;
         } else {
@@ -693,7 +693,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else if (cResult[4] !== multiplier) {
         const intl3 = intl6.intl;
         const obj4 = { bonusOrbMultiplier: multiplier };
-        const formatResult2 = intl3.format(_modDef3529.UkrcSH, obj4);
+        const formatResult2 = intl3.format(_modDef3559.UkrcSH, obj4);
         cResult[4] = multiplier;
         cResult[5] = formatResult2;
         tmp14 = formatResult2;
@@ -742,19 +742,19 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp7;
       multiplier = multiplier.multiplier;
       const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-      let obj = multiplier(10008);
+      let obj = multiplier(10021);
       const result = obj.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
       dependencyMap = result;
       const items = [orbMultiplierEligibility];
       const items1 = [result, orbMultiplierEligibility, multiplier];
       const tmp4 =
-        orbMultiplierEligibility === multiplier(10008).QuestOrbMultiplierEligibilityType.NITRO ||
-        orbMultiplierEligibility === multiplier(10008).QuestOrbMultiplierEligibilityType.UPSELL;
+        orbMultiplierEligibility === multiplier(10021).QuestOrbMultiplierEligibilityType.NITRO ||
+        orbMultiplierEligibility === multiplier(10021).QuestOrbMultiplierEligibilityType.UPSELL;
       const memo = react.useMemo(() => {
         let stringResult;
         if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
           const intl2 = intl6.intl;
-          stringResult = intl2.string(_modDef3529.c5usUr);
+          stringResult = intl2.string(_modDef3559.c5usUr);
         } else {
           const intl = intl6.intl;
           stringResult = intl.string(intl6.t.Csf5Ol);
@@ -766,7 +766,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS) {
           const intl2 = intl6.intl;
           const obj2 = { bonusOrbMultiplier: multiplier };
-          formatResult = intl2.format(_modDef3529.UkrcSH, obj2);
+          formatResult = intl2.format(_modDef3559.UkrcSH, obj2);
         } else {
           const intl = intl6.intl;
           const format = intl.format;
@@ -788,12 +788,12 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         contentStyles,
         children: closure_8(tmp7, obj3),
       };
-      BottomSheet = tmp(6645).BottomSheet;
+      BottomSheet = tmp(6652).BottomSheet;
       obj3 = {
         visible: tmp4,
         children: closure_8(closure_14, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result }),
       };
-      tmp7 = orbMultiplierEligibility(14966);
+      tmp7 = orbMultiplierEligibility(14981);
       return closure_8(BottomSheet, obj2);
     };
 let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx");

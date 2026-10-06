@@ -20,7 +20,7 @@ const memoResult = memo(
         const cResult = obj.c(8);
         itemId = itemId.itemId;
         const children = itemId.children;
-        const width = react.useContext(itemId(16395).ICYMIContext).width;
+        const width = react.useContext(itemId(16435).ICYMIContext).width;
         if (cResult[0] !== itemId) {
           const fn = function s(nativeEvent) {
             const height = nativeEvent.nativeEvent.layout.height;
@@ -65,7 +65,7 @@ const memoResult = memo(
         itemId = itemId.itemId;
         const children = itemId.children;
         const items = [itemId];
-        const width = react.useContext(itemId(16395).ICYMIContext).width;
+        const width = react.useContext(itemId(16435).ICYMIContext).width;
         return (
           <View
             onLayout={react.useCallback((nativeEvent) => {

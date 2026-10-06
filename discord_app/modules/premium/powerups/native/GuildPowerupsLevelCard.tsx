@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BoostGemIcon2 from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import ManaTypeConsolidationExperiment from "../../../design/ManaTypeConsolidationExperiment.tsx";
 import usePowerupActiveStatusDefault from "../hooks/usePowerupActiveStatus.tsx";
 import useCalculatePowerupCardStatus from "../utils/useCalculatePowerupCardStatus.tsx";

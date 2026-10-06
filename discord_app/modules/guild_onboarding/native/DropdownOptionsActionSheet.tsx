@@ -7,7 +7,7 @@ import EmojiConstants from "../../emojis/EmojiConstants.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import BottomSheetModal from "../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
 import BottomSheetTitleHeader2 from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import react from "../../../../_runtime/00019_react.js";
@@ -182,7 +182,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                               trailing: tmp30,
                               onPress: tmp14,
                             };
-                            const tmp40 = closure_8(onSelect(6631), obj3);
+                            const tmp40 = closure_8(onSelect(6638), obj3);
                             cResult[26] = tmp19;
                             cResult[27] = tmp14;
                             cResult[28] = tmp35;
@@ -240,7 +240,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               obj7 = { textEmojiStyle: null, fastImageStyle: null, src: emojiURL, name: str };
               ({ optionTextEmoji: obj4.textEmojiStyle, optionImageEmoji: obj4.fastImageStyle } = tmp4);
               emojiURL = undefined;
-              tmp25 = onSelect(6625);
+              tmp25 = onSelect(6632);
               if (null != stateFromStores) {
                 const obj8 = { id: stateFromStores.id, animated: null, size: EMOJI_URL_BASE_SIZE };
                 const tmp24Result = onSelect(1402);

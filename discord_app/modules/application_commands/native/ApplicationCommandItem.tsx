@@ -58,7 +58,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       ({ command, onPress, section } = guildId);
       guildId = guildId.guildId;
       ({ showIcon, highlighted } = guildId);
-      const tmpResult = section(5602);
+      const tmpResult = section(5609);
       const tmp6 = closure_9(tmpResult.useFontScale());
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildMemberStore];
@@ -121,7 +121,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                           color: "mobile-text-heading-primary",
                           children: text,
                         };
-                        const tmp32 = closure_7(section(4886).Text, obj2);
+                        const tmp32 = closure_7(section(4892).Text, obj2);
                         cResult[21] = text;
                         cResult[22] = tmp32;
                         tmp30 = tmp32;
@@ -135,7 +135,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                           color: "text-default",
                           children: command.displayDescription,
                         };
-                        const tmp35 = closure_7(section(4886).Text, obj3);
+                        const tmp35 = closure_7(section(4892).Text, obj3);
                         cResult[23] = command.displayDescription;
                         cResult[24] = tmp35;
                         tmp33 = tmp35;
@@ -176,7 +176,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                               children: items1,
                             };
                             items1 = [tmp25, tmp36, tmp40];
-                            const tmp45 = closure_8(section(5909).PressableOpacity, obj4);
+                            const tmp45 = closure_8(section(5916).PressableOpacity, obj4);
                             cResult[32] = onPress;
                             cResult[33] = tmp36;
                             cResult[34] = tmp40;
@@ -192,7 +192,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                             color: "text-muted",
                             children: name,
                           };
-                          const tmp42 = closure_7(section(4886).Text, obj6);
+                          const tmp42 = closure_7(section(4892).Text, obj6);
                           cResult[29] = name;
                           cResult[30] = tmp6.applicationCommandSectionName;
                           cResult[31] = tmp42;
@@ -212,7 +212,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   let tmp26 = tmp4 && null != tmp11;
                   if (tmp26) {
                     const obj8 = { style: tmp6.applicationCommandIcon, source: tmp11 };
-                    tmp26 = closure_7(guildId(5974), obj8);
+                    tmp26 = closure_7(guildId(5981), obj8);
                   }
                   cResult[17] = tmp11;
                   cResult[18] = undefined === showIcon || showIcon;
@@ -245,7 +245,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[10] = formatToPlainStringResult;
           tmp15 = formatToPlainStringResult;
         }
-        const tmpResult4 = section(11860);
+        const tmpResult4 = section(11874);
         const applicationCommandsIconSource = tmpResult4.getApplicationCommandsIconSource(section, stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = section;

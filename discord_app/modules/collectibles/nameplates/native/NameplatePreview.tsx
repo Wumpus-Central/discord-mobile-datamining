@@ -75,7 +75,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp15;
         let tmp14;
         let tmp18;
-        const tmpResult = user(7887);
+        const tmpResult = user(7898);
         let avatarDecoration = tmpResult.useAvatarDecoration(user, guildId);
         if (cResult[3] !== guildId) {
           const obj2 = { guildId };
@@ -85,7 +85,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp11 = cResult[4];
         }
-        const pendingAvatarDecoration = guildId(7830)(tmp11).pendingAvatarDecoration;
+        const pendingAvatarDecoration = guildId(7841)(tmp11).pendingAvatarDecoration;
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
@@ -154,7 +154,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[13] === user.id) {
                 tmp25 = cResult[14];
               }
-              guildId(5305)(tmp25);
+              guildId(5312)(tmp25);
               class O {
                 constructor() {
                   return useReducedMotion.useReducedMotion;
@@ -240,9 +240,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let obj = user(1977);
         nameplateData = obj.getNameplateData(nameplate);
       }
-      const obj2 = user(7887);
+      const obj2 = user(7898);
       const avatarDecoration = obj2.useAvatarDecoration(user, guildId);
-      pendingAvatarDecoration = guildId(7830)({ guildId }).pendingAvatarDecoration;
+      pendingAvatarDecoration = guildId(7841)({ guildId }).pendingAvatarDecoration;
       const items = [AccessibilityStore];
       const obj3 = user(504);
       stateFromStores = obj3.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -258,7 +258,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return member;
       });
-      const obj5 = guildId(4722);
+      const obj5 = guildId(4728);
       const name = obj5.useName(user);
       if (pendingGlobalName == null) {
         let tmp12 = name;
@@ -284,7 +284,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       pendingAvatarDecoration = tmp15;
       const obj6 = { userId: user.id, guildId, pendingDisplayNameStyles };
-      const tmp16 = guildId(5305)(obj6);
+      const tmp16 = guildId(5312)(obj6);
       const items2 = [tmp2.avatar, user, guildId, tmp15, stateFromStores];
       const obj7 = { style: tmp2.container, "aria-hidden": prop, children: items3 };
       const memo = stateFromStores.useMemo(() => {
@@ -303,7 +303,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }, items2);
       items3 = [, ,];
       const obj8 = { nameplate: nameplateData, style: tmp2.nameplate, fullOpacity: true, animate: flag2 };
-      items3[0] = closure_7(guildId(8474), obj8);
+      items3[0] = closure_7(guildId(8507), obj8);
       const obj9 = { style: tmp2.avatar, children: memo };
       items3[1] = closure_7(pendingAvatarDecoration, obj9);
       let tmp20Result = null != tmp16;
@@ -314,11 +314,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           guildId,
           userName: pendingGlobalName,
           variant: "text-md/semibold",
-          effectDisplayType: user(10634).EffectDisplayType.STATIC,
+          effectDisplayType: user(10647).EffectDisplayType.STATIC,
           lineClamp: 1,
           pendingDisplayNameStyles,
         };
-        const tmp8Result = guildId(10633);
+        const tmp8Result = guildId(10646);
         tmp20Result = closure_7(tmp8Result, obj11);
       }
       items4 = [tmp20Result];
@@ -330,7 +330,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: pendingGlobalName,
         };
-        tmp20Result2 = closure_7(user(4886).Text, obj12);
+        tmp20Result2 = closure_7(user(4892).Text, obj12);
       }
       items4[1] = tmp20Result2;
       items3[2] = closure_8(pendingAvatarDecoration, obj10);

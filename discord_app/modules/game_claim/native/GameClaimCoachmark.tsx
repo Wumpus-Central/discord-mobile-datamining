@@ -71,7 +71,7 @@ const memoResult = memo(
         const cResult = obj.c(36);
         ({ guild, markAsDismissed } = arg0);
         const tmp4 = closure_13();
-        let obj2 = markAsDismissed(16117);
+        let obj2 = markAsDismissed(16156);
         let first = obj2.useUnclaimedGameIdsForGuild(guild.id)[0];
         if (first == null) {
           first = null;
@@ -123,7 +123,7 @@ const memoResult = memo(
           }
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp17 = closure_8(markAsDismissed(6017).XSmallIcon, { size: "sm", color: "text-default" });
+            const tmp17 = closure_8(markAsDismissed(6024).XSmallIcon, { size: "sm", color: "text-default" });
             cResult[5] = tmp17;
             tmp15 = tmp17;
           } else {
@@ -179,7 +179,7 @@ const memoResult = memo(
                   if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
                     const intl4 = markAsDismissed(1126).intl;
                     const stringResult2 = intl4.string(markAsDismissed(1126).t["2u6ZlY"]);
-                    const tmp37 = closure_8(markAsDismissed(8263).LinkExternalSmallIcon, {
+                    const tmp37 = closure_8(markAsDismissed(8296).LinkExternalSmallIcon, {
                       size: "xs",
                       color: "white",
                     });
@@ -256,7 +256,7 @@ const memoResult = memo(
                         }
                       }),
                     };
-                    const Button = markAsDismissed(5594).Button;
+                    const Button = markAsDismissed(5601).Button;
                     const tmp41 = closure_8(Button, obj5);
                     cResult[24] = markAsDismissed;
                     cResult[25] = tmp41;
@@ -286,7 +286,7 @@ const memoResult = memo(
                     }
                     const obj6 = { variant: "secondary", style: card, children: items };
                     items = [tmp18, tmp21, tmp26, tmp30, tmp42];
-                    const tmp48 = closure_9(markAsDismissed(5995).Card, obj6);
+                    const tmp48 = closure_9(markAsDismissed(6002).Card, obj6);
                     cResult[29] = tmp4.card;
                     cResult[30] = tmp26;
                     cResult[31] = tmp30;
@@ -304,7 +304,7 @@ const memoResult = memo(
                   tmp42 = tmp45;
                 }
                 const obj8 = { variant: "text-sm/normal", color: "text-overlay-light", style: tmp29, children: tmp10 };
-                const tmp32 = closure_8(markAsDismissed(4886).Text, obj8);
+                const tmp32 = closure_8(markAsDismissed(4892).Text, obj8);
                 cResult[19] = tmp10;
                 cResult[20] = tmp29;
                 cResult[21] = tmp32;
@@ -323,14 +323,14 @@ const memoResult = memo(
               style: centeredText,
               children: tmp24,
             };
-            const tmp28 = closure_8(markAsDismissed(4886).Text, obj9);
+            const tmp28 = closure_8(markAsDismissed(4892).Text, obj9);
             cResult[13] = tmp4.centeredText;
             cResult[14] = tmp24;
             cResult[15] = tmp28;
             tmp26 = tmp28;
           }
           const obj10 = { accessibilityRole: "button", onPress: tmp14, style: tmp4.closeButton, children: tmp15 };
-          const tmp20 = closure_8(markAsDismissed(5909).PressableOpacity, obj10);
+          const tmp20 = closure_8(markAsDismissed(5916).PressableOpacity, obj10);
           cResult[6] = tmp4.closeButton;
           cResult[7] = tmp14;
           cResult[8] = tmp20;

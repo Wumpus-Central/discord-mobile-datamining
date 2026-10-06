@@ -83,7 +83,7 @@ let obj = function _fetchUserOffer() {
               }
               obj6 = closure_2;
               if (closure_2 === undefined) {
-                obj6 = { offerId: "Array", paymentGatewayOverride: "Set" };
+                obj6 = { offerId: "start", paymentGatewayOverride: "unicodeVersion" };
               }
               offerId = undefined;
               paymentGatewayOverride = undefined;
@@ -96,7 +96,7 @@ let obj = function _fetchUserOffer() {
               error = undefined;
               c12 = 1;
               c13 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else if (1 === c12) {
             if (arg0 === 1) {

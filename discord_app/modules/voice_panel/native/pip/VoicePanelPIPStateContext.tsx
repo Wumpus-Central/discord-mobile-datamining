@@ -11,7 +11,7 @@ let size = {
   width: false,
   height: null,
   containerHeight: "slide_from_bottom",
-  showSecondaryPIP: "_createExtraStyles",
+  showSecondaryPIP: 2392,
   scale: ReanimatedHelperTypes.createFakeSharedValue(1),
 };
 const createContext = react.createContext;

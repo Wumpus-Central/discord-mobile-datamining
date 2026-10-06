@@ -167,7 +167,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (null == subscriptionPeriodStart) {
         return null;
       } else {
-        const tmp2Result = tmp2(4528);
+        const tmp2Result = tmp2(4534);
         const billingInformationString = tmp2Result.getBillingInformationString(
           isPurchasedViaApple,
           subscriptionPeriodStart,

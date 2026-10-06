@@ -10,5 +10,5 @@ export default function showBanConfirmModal(merged) {
   const obj = ActionSheetActionCreatorsDefault;
   obj.hideActionSheet();
   const obj2 = ModalActionCreatorsDefault;
-  obj2.pushLazy(asyncRequire(11470, dependencyMap.paths), merged);
+  obj2.pushLazy(asyncRequire(11483, dependencyMap.paths), merged);
 }

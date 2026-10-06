@@ -5,7 +5,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import intl15 from "../../../../intl/index.native.tsx";
 import useNavigation from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef2883 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import _modDef2911 from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
 import openUserSettings from "../../core/native/openUserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -80,7 +80,7 @@ function getAccessibilitySettingScreen(youBarAnimationsOverridden) {
   items2 = [MobileUserSettings.OFFICIAL_MESSAGE_STYLE];
   intl2 = intl15.intl;
   items1[1] = obj4;
-  const obj5 = { settings: items3, subLabel: intl3.format(_modDef2883.L8U56h, obj6) };
+  const obj5 = { settings: items3, subLabel: intl3.format(_modDef2911.L8U56h, obj6) };
   items3 = [MobileUserSettings.DISPLAY_NAME_STYLES_ACCESSIBILITY];
   intl3 = intl15.intl;
   obj6 = {

@@ -1,17 +1,17 @@
 // discord_app/modules/conjure/model_settings/ConjureModelLabels.tsx
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/conjure/model_settings/ConjureModelLabels.tsx");
 
 export const modelTierMessage = function modelTierMessage(value) {
   if ("simple" === value) {
-    return _modDef3723["/tlOR5"];
+    return _modDef3753["/tlOR5"];
   } else if ("balanced" === value) {
-    return _modDef3723.wNhuGQ;
+    return _modDef3753.wNhuGQ;
   } else if ("complex" === value) {
-    return _modDef3723.FxoUwB;
+    return _modDef3753.FxoUwB;
   } else {
     return null;
   }
@@ -21,13 +21,13 @@ export const tierTooltip = function tierTooltip(title, arg1) {
   let obj;
   let prop;
   if ("simple" === arg1) {
-    prop = _modDef3723["/tlOR5"];
+    prop = _modDef3753["/tlOR5"];
   } else if ("balanced" === arg1) {
-    prop = _modDef3723.wNhuGQ;
+    prop = _modDef3753.wNhuGQ;
   } else {
     prop = null;
     if ("complex" === arg1) {
-      prop = _modDef3723.FxoUwB;
+      prop = _modDef3753.FxoUwB;
     }
   }
   if (null != prop) {

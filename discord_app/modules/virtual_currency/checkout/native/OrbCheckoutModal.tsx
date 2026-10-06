@@ -188,7 +188,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       const virtualCurrencyBalance = obj3.useVirtualCurrencyBalance();
       const tmp = _require;
       if (cResult[0] !== skuId) {
-        const tmpResult = tmp(9995);
+        const tmpResult = tmp(10008);
         let result = tmpResult.get1PShopApplicationIdForSKU(skuId);
         cResult[0] = skuId;
         cResult[1] = result;

@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx
 import intl5 from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
-import _modDef4461 from "../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../_runtime/metro/04467__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import GuildScheduledEventStore from "../../GuildScheduledEventStore.tsx";
 import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
@@ -193,7 +193,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           class Y {
             constructor(arg0) {
               tmp = closure_4(null);
-              obj = { entityType: guild, scheduledEndTime: "r" };
+              obj = { entityType: guild, scheduledEndTime: "Array" };
               if (guild === closure_10.EXTERNAL) {
                 tmp2 = closure_1;
                 tmp3 = closure_3;
@@ -236,7 +236,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           class Y {
             constructor(arg0) {
               tmp = closure_4(null);
-              obj = { entityType: guild, scheduledEndTime: "r" };
+              obj = { entityType: guild, scheduledEndTime: "Array" };
               if (guild === closure_10.EXTERNAL) {
                 tmp2 = closure_1;
                 tmp3 = closure_3;
@@ -293,7 +293,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             class Y {
               constructor(arg0) {
                 tmp = closure_4(null);
-                obj = { entityType: guild, scheduledEndTime: "r" };
+                obj = { entityType: guild, scheduledEndTime: "Array" };
                 if (guild === closure_10.EXTERNAL) {
                   tmp2 = closure_1;
                   tmp3 = closure_3;
@@ -339,7 +339,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           class Y {
             constructor(arg0) {
               tmp = closure_4(null);
-              obj = { entityType: guild, scheduledEndTime: "r" };
+              obj = { entityType: guild, scheduledEndTime: "Array" };
               if (guild === closure_10.EXTERNAL) {
                 tmp2 = closure_1;
                 tmp3 = closure_3;
@@ -377,7 +377,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         class Y {
           constructor(arg0) {
             tmp = closure_4(null);
-            obj = { entityType: guild, scheduledEndTime: "r" };
+            obj = { entityType: guild, scheduledEndTime: "Array" };
             if (guild === closure_10.EXTERNAL) {
               tmp2 = closure_1;
               tmp3 = closure_3;
@@ -560,11 +560,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         entityType: guildEvent.entityType,
         onChange(entityType) {
           _undefined(null);
-          const obj = { entityType, scheduledEndTime: "r" };
+          const obj = { entityType, scheduledEndTime: "Array" };
           if (entityType === constants.EXTERNAL) {
-            let obj2 = _modDef4461(guildEvent.scheduledStartTime);
+            let obj2 = _modDef4467(guildEvent.scheduledStartTime);
             if (obj2 == null) {
-              obj2 = _modDef4461();
+              obj2 = _modDef4467();
             }
             const addResult = obj2.add(1, "hour");
             obj.scheduledEndTime = addResult.toISOString();

@@ -4,7 +4,7 @@ import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord.tsx";
 import FeaturedSubblockType from "../../../../discord_common/js/shared/shared-constants/FeaturedSubblockType.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f94193 = (type) => {
+const f94333 = (type) => {
   let fromServerResult;
   if (type.type === FeaturedSubblockType.FeaturedSubblockType.CATEGORY) {
     fromServerResult = closure_1_2.fromServer(type);
@@ -20,7 +20,7 @@ class FeaturedBlockRecord {
     const obj = Object.create(new.target.prototype);
     obj.type = ShopBlockType.ShopBlockType.FEATURED;
     subblocks = subblocks.subblocks;
-    obj.subblocks = subblocks.map(f94193);
+    obj.subblocks = subblocks.map(f94333);
     return obj;
   }
   static fromServer(subblocks) {
@@ -28,7 +28,7 @@ class FeaturedBlockRecord {
       const obj = Object.create(tmp.prototype);
       obj.type = ShopBlockType.ShopBlockType.FEATURED;
       subblocks = subblocks.subblocks;
-      obj.subblocks = subblocks.map(f94193);
+      obj.subblocks = subblocks.map(f94333);
       return obj;
     } else {
       throw new TypeError("Trying to call a non-function");

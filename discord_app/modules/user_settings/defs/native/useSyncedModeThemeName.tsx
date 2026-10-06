@@ -2,7 +2,7 @@
 import intl2 from "../../../../intl/index.native.tsx";
 import ClientThemesUtils from "../../../client_themes/ClientThemesUtils.tsx";
 import ClientThemesConstants from "../../../client_themes/ClientThemesConstants.tsx";
-import _modDef2723 from "../../../client_themes/intl/ClientThemes.messages.js";
+import _modDef2751 from "../../../client_themes/intl/ClientThemes.messages.js";
 import ThemeStore from "../../ThemeStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -39,7 +39,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (null != prop) {
             const intl = intl2.intl;
-            stringResult = intl.string(_modDef2723.yl1iMm);
+            stringResult = intl.string(_modDef2751.yl1iMm);
           } else {
             let prop1;
             if (syncedClientTheme != null) {
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (null != prop) {
           const intl = intl2.intl;
-          stringResult = intl.string(_modDef2723.yl1iMm);
+          stringResult = intl.string(_modDef2751.yl1iMm);
         } else {
           let prop1;
           if (syncedClientTheme != null) {

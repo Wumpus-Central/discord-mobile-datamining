@@ -148,9 +148,9 @@ let closure_10 = memo(
         let heroMediaDimensions;
         importDefault = undefined;
         applicationId = applicationId.applicationId;
-        let obj = heroMediaDimensions(10994);
+        let obj = heroMediaDimensions(11007);
         const width = obj.useRequiredAppLauncherContext().width;
-        let obj2 = heroMediaDimensions(11708);
+        let obj2 = heroMediaDimensions(11722);
         heroMediaDimensions = obj2.useHeroMediaDimensions({ width });
         let obj3 = { applicationId, size: heroMediaDimensions.width, names: ["embedded_cover"] };
         const tmp4 = useEmbeddedActivityBackgroundDefault(obj3);

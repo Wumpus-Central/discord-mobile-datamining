@@ -68,7 +68,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const format = intl3.format;
         let obj2 = { helpArticle: tmpResult2.getSecureFramesHelpdeskArticle() };
         const wKxADe = tmp(1126).t.wKxADe;
-        tmpResult2 = channelId(9364);
+        tmpResult2 = channelId(9378);
         const formatResult = format(wKxADe, obj2);
         cResult[4] = stringResult;
         cResult[5] = stringResult1;
@@ -129,7 +129,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const format = intl3.format;
       let obj3 = { helpArticle: obj4.getSecureFramesHelpdeskArticle() };
       const wKxADe = channelId(1126).t.wKxADe;
-      obj4 = channelId(9364);
+      obj4 = channelId(9378);
       return (
         <tmp3
           title={intl.string(channelId(1126).t.cTQI5t)}

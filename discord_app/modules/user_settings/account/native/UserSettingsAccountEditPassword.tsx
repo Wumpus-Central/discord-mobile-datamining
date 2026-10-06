@@ -13,7 +13,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/14563_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/14579_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
@@ -39,7 +39,7 @@ let unpackModuleId;
 ({ Image: closure_4, View: hasOwnProperty, ScrollView: metroRequire } = react_native);
 ({ AnalyticEvents: c10, LoginRequiredActions: unpackModuleId } = Constants);
 ({ jsx: closure_12, jsxs: map1 } = Fragment);
-const authStore2 = { newPassword: "unicodeVersion", password: 17087297 };
+const authStore2 = { newPassword: "unicodeVersion", password: 17065281 };
 let obj = {
   onePass: { width: 20, height: 20 },
   unverifiedWrapper: obj2,
@@ -296,7 +296,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp8;
       let obj = flag(576);
       const cResult = obj.c(6);
-      let obj2 = flag(6490);
+      let obj2 = flag(6497);
       const params = obj2.useSettingNavigationRoute().params;
       flag = undefined;
       if (params != null) {
@@ -386,7 +386,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let flag;
-      let obj = flag(6490);
+      let obj = flag(6497);
       const params = obj.useSettingNavigationRoute().params;
       flag = undefined;
       if (params != null) {

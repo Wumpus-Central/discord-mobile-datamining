@@ -45,7 +45,7 @@ let obj = function _fetchUserEntitlements() {
       }
       await "IconComponent";
       entitlementType = withSku.entitlementType;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

@@ -115,12 +115,12 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       ({ projectId, visible, onOpenPublishedApp, children } = active);
       active = active.active;
       const tmp4 = closure_10();
-      let obj2 = conjureControlPhase(16602);
+      let obj2 = conjureControlPhase(16640);
       conjureControlPhase = obj2.useConjureControlPhase(active);
-      const obj3 = conjureControlPhase(16602);
+      const obj3 = conjureControlPhase(16640);
       const conjureControlStop = obj3.useConjureControlStop(projectId);
       ({ stop, stopping } = conjureControlStop);
-      const obj4 = conjureControlPhase(8973);
+      const obj4 = conjureControlPhase(9006);
       const conjureControlTuning = obj4.useConjureControlTuning(projectId);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         let items = [sharedValue2];
@@ -141,9 +141,9 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp12 = "controlling" === conjureControlPhase;
       }
       dependencyMap = tmp12;
-      const tmpResult7 = tmp(4612);
+      const tmpResult7 = tmp(4618);
       const sharedValue = tmpResult7.useSharedValue(0);
-      const tmpResult8 = tmp(4612);
+      const tmpResult8 = tmp(4618);
       const sharedValue1 = tmpResult8.useSharedValue(0);
       if (cResult[2] === conjureControlPhase) {
         if (cResult[3] === stateFromStores) {
@@ -155,7 +155,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const effect = sharedValue.useEffect(tmp15, tmp16);
           let num3 = 0.5;
-          const tmpResult9 = tmp(4612);
+          const tmpResult9 = tmp(4618);
           sharedValue2 = tmpResult9.useSharedValue(0.5);
           const obj8 = sharedValue;
           if (cResult[7] === tmp12) {
@@ -168,7 +168,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp20 = cResult[11];
               }
               const effect1 = obj8.useEffect(tmp19, tmp20);
-              const tmpResult10 = tmp(4612);
+              const tmpResult10 = tmp(4618);
               class U {
                 constructor() {
                   let bound;
@@ -224,7 +224,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
               U.__workletHash = 5735939888549;
               U.__initData = __initData;
               const animatedStyle = tmpResult10.useAnimatedStyle(U);
-              const tmpResult11 = tmp(4612);
+              const tmpResult11 = tmp(4618);
               class M {
                 constructor() {
                   let diff;
@@ -241,7 +241,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
               M.__workletHash = 11424550793114;
               M.__initData = __initData2;
               const animatedStyle1 = tmpResult11.useAnimatedStyle(M);
-              const tmpResult12 = tmp(4612);
+              const tmpResult12 = tmp(4618);
               class G {
                 constructor() {
                   const obj = { opacity: sharedValue2.get() };
@@ -675,7 +675,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
               }
               const intl = tmp(1126).intl;
               const string = intl.string;
-              const tmp30 = stateFromStores(3723);
+              const tmp30 = stateFromStores(3753);
               if (tmp12) {
                 prop = conjureControlTuning ? tmp30["VJW/5P"] : tmp30["+hD2Iz"];
               } else {
@@ -838,12 +838,12 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       let sharedValue2;
       ({ active, children } = arg0);
       const tmp = closure_10();
-      let obj = conjureControlPhase(16602);
+      let obj = conjureControlPhase(16640);
       conjureControlPhase = obj.useConjureControlPhase(active);
-      let obj2 = conjureControlPhase(16602);
+      let obj2 = conjureControlPhase(16640);
       const conjureControlStop = obj2.useConjureControlStop(projectId);
       ({ stop, stopping } = conjureControlStop);
-      const obj3 = conjureControlPhase(8973);
+      const obj3 = conjureControlPhase(9006);
       const conjureControlTuning = obj3.useConjureControlTuning(projectId);
       let items = [sharedValue2];
       const obj4 = conjureControlPhase(504);
@@ -853,9 +853,9 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = "controlling" === conjureControlPhase;
       }
       dependencyMap = tmp8;
-      const tmp2Result = conjureControlPhase(4612);
+      const tmp2Result = conjureControlPhase(4618);
       sharedValue = tmp2Result.useSharedValue(0);
-      const tmp2Result6 = conjureControlPhase(4612);
+      const tmp2Result6 = conjureControlPhase(4618);
       sharedValue1 = tmp2Result6.useSharedValue(0);
       const items1 = [sharedValue1, conjureControlPhase, stateFromStores];
       const effect = sharedValue.useEffect(() => {
@@ -886,7 +886,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           const result1 = sharedValue1.set(0);
         }
       }, items1);
-      const tmp2Result7 = conjureControlPhase(4612);
+      const tmp2Result7 = conjureControlPhase(4618);
       sharedValue2 = tmp2Result7.useSharedValue(0.5);
       const items2 = [tmp8, sharedValue2, stateFromStores];
       const effect1 = sharedValue.useEffect(() => {
@@ -914,7 +914,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.cancelAnimation(sharedValue2);
         const result2 = sharedValue2.set(0.5);
       }, items2);
-      const tmp2Result8 = conjureControlPhase(4612);
+      const tmp2Result8 = conjureControlPhase(4618);
       class P {
         constructor() {
           let bound;
@@ -927,7 +927,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       P.__workletHash = 10340375351296;
       P.__initData = __initData4;
       const animatedStyle = tmp2Result8.useAnimatedStyle(P);
-      const tmp2Result9 = conjureControlPhase(4612);
+      const tmp2Result9 = conjureControlPhase(4618);
       class V {
         constructor() {
           let diff;
@@ -943,7 +943,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       V.__workletHash = 13798762691965;
       V.__initData = __initData5;
       const animatedStyle1 = tmp2Result9.useAnimatedStyle(V);
-      const tmp2Result10 = conjureControlPhase(4612);
+      const tmp2Result10 = conjureControlPhase(4618);
       class L {
         constructor() {
           const obj = { opacity: sharedValue2.get() };
@@ -956,7 +956,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle2 = tmp2Result10.useAnimatedStyle(L);
       const intl = tmp2(1126).intl;
       const string = intl.string;
-      const tmp18 = stateFromStores(3723);
+      const tmp18 = stateFromStores(3753);
       if (tmp8) {
         let prop;
         let tmp22;
@@ -983,7 +983,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp40Result;
           const obj6 = { style: items3, children: null };
           items3 = [tmp.barArea, animatedStyle];
-          const View = tmp20(4612).View;
+          const View = tmp20(4618).View;
           const obj7 = {
             style: items4,
             onLayout(nativeEvent) {
@@ -993,12 +993,12 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           items4 = [tmp.bar, animatedStyle1];
-          const View2 = tmp20(4612).View;
+          const View2 = tmp20(4618).View;
           if (tmp8) {
-            tmp40Result = closure_6(tmp2(14209).AILoader, { size: 12, color: "text-overlay-light" });
+            tmp40Result = closure_6(tmp2(14227).AILoader, { size: 12, color: "text-overlay-light" });
           } else {
             const obj8 = { size: "sm", color: tmp20(587).colors.TEXT_OVERLAY_LIGHT };
-            const SparklesIcon = tmp2(16603).SparklesIcon;
+            const SparklesIcon = tmp2(16641).SparklesIcon;
             tmp40Result = closure_6(SparklesIcon, obj8);
           }
           const items5 = [tmp40Result, ,];
@@ -1011,11 +1011,11 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             children: stringResult,
           };
           combined = stringResult;
-          const Text = tmp2(4886).Text;
+          const Text = tmp2(4892).Text;
           if (tmp8) {
             const intl2 = tmp2(1126).intl;
             const _HermesInternal = HermesInternal;
-            combined = "" + stringResult + ". " + intl2.string(tmp20(3723).fg1sor);
+            combined = "" + stringResult + ". " + intl2.string(tmp20(3753).fg1sor);
           }
           items5[1] = closure_6(Text, obj9);
           if (!tmp8) {
@@ -1031,10 +1031,10 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj11 = {
               variant: "secondary-overlay",
               size: "sm",
-              text: intl3.string(tmp20(3723)["1NcO7H"]),
+              text: intl3.string(tmp20(3753)["1NcO7H"]),
               onPress: onOpenPublishedApp,
             };
-            const Button = tmp2(5594).Button;
+            const Button = tmp2(5601).Button;
             intl3 = tmp2(1126).intl;
             tmp40Result5 = closure_6(Button, obj11);
           }
@@ -1044,11 +1044,11 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             const obj12 = {
               variant: "primary-overlay",
               size: "sm",
-              text: intl4.string(tmp20(3723).oU59sU),
+              text: intl4.string(tmp20(3753).oU59sU),
               loading: stopping,
               onPress: stop,
             };
-            const Button2 = tmp2(5594).Button;
+            const Button2 = tmp2(5601).Button;
             intl4 = tmp2(1126).intl;
             tmp40Result6 = closure_6(Button2, obj12);
           }
@@ -1071,7 +1071,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
         const obj16 = { style: items9, pointerEvents: "none" };
         items9 = [tmp.glow, animatedStyle2];
         const obj15 = { children: items10 };
-        items10 = [closure_6(tmp20(4612).View, obj16)];
+        items10 = [closure_6(tmp20(4618).View, obj16)];
         const obj17 = { style: tmp.border, pointerEvents: "none" };
         items10[1] = closure_6(sharedValue1, obj17);
         tmp26Result2 = closure_7(closure_8, obj15);

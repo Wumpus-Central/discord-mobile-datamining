@@ -304,7 +304,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         children: tmp3,
       };
       items2 = [tmp12];
-      items1[1] = hasOwnProperty(tmp17(4886).Text, obj3);
+      items1[1] = hasOwnProperty(tmp17(4892).Text, obj3);
       return metroRequire(View, obj2);
     };
 tmp5.Types = BotTagTypes;

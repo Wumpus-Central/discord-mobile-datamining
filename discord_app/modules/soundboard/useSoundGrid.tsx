@@ -1439,7 +1439,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             guildIds: sortedGuildIdsForSoundboard,
             allSounds,
             potentialSoundIdsForSection: Array.from(channel),
-            sectionType: tmp14(5805).SoundboardSoundGridSectionType.FAVORITES,
+            sectionType: tmp14(5812).SoundboardSoundGridSectionType.FAVORITES,
             sortSoundsFn: sortSoundsOldestToNewestCreationDate,
           };
           _addSectionForPotentialSoundIds(obj6);
@@ -1469,15 +1469,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const push = items.push;
             const obj9 = {
-              key: tmp14(5805).SoundboardSoundGridSectionType.DEFAULTS,
+              key: tmp14(5812).SoundboardSoundGridSectionType.DEFAULTS,
               categoryInfo: obj10,
               items: result1.map((sound, index) => {
                 const obj = { type: closure_1_0(length[10]).SoundboardSoundItemType.SOUND, sound, index };
                 return obj;
               }),
             };
-            obj10 = { type: tmp14(5805).SoundboardSoundGridSectionType.DEFAULTS };
-            const sortSoundsOldestToNewestCreationDate2 = tmp14(17231).sortSoundsOldestToNewestCreationDate;
+            obj10 = { type: tmp14(5812).SoundboardSoundGridSectionType.DEFAULTS };
+            const sortSoundsOldestToNewestCreationDate2 = tmp14(17260).sortSoundsOldestToNewestCreationDate;
             result1 = value5;
             if (null != sortSoundsOldestToNewestCreationDate2) {
               result1 = sortSoundsOldestToNewestCreationDate2(value5);
@@ -1504,15 +1504,15 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const push2 = items.push;
             const obj12 = {
-              key: tmp14(5805).SoundboardSoundGridSectionType.DEFAULTS,
+              key: tmp14(5812).SoundboardSoundGridSectionType.DEFAULTS,
               categoryInfo: obj13,
               items: result2.map((sound, index) => {
                 const obj = { type: closure_1_0(length[10]).SoundboardSoundItemType.SOUND, sound, index };
                 return obj;
               }),
             };
-            obj13 = { type: tmp14(5805).SoundboardSoundGridSectionType.DEFAULTS };
-            const sortSoundsOldestToNewestCreationDate3 = tmp14(17231).sortSoundsOldestToNewestCreationDate;
+            obj13 = { type: tmp14(5812).SoundboardSoundGridSectionType.DEFAULTS };
+            const sortSoundsOldestToNewestCreationDate3 = tmp14(17260).sortSoundsOldestToNewestCreationDate;
             result2 = value6;
             if (null != sortSoundsOldestToNewestCreationDate3) {
               result2 = sortSoundsOldestToNewestCreationDate3(value6);

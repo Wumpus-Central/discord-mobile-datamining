@@ -6,7 +6,7 @@ import intl4 from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import useNavigation from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04807_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04813_AssetRegistry.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";

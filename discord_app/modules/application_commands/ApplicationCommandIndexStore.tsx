@@ -6,7 +6,7 @@ import react2 from "../../../_runtime/00576_react.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/05702_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05709_fuzzysearch.js";
 import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import ApplicationCommandUtils from "ApplicationCommandUtils.tsx";
 import ApplicationCommandTypes from "ApplicationCommandTypes.tsx";
@@ -314,11 +314,11 @@ function handleFetchSuccess(arg0) {
           }
           obj = { permissions: keyPermissionsResult, botId: tmp6.bot_id };
           let tmp19 = id;
-          let obj2 = id(7030);
+          let obj2 = id(7043);
           let merged = Object.assign(obj2.getApplicationCommandSection(toApplication(tmp6), false));
           keyPermissionsResult = undefined;
           if (null != tmp6.permissions) {
-            let tmp19Result = tmp19(7033);
+            let tmp19Result = tmp19(7046);
             keyPermissionsResult = tmp19Result.keyPermissions(toServerPermissions(tmp6.permissions, id));
           }
           let obj6 = { descriptor: obj, commands: {} };
@@ -341,7 +341,7 @@ function handleFetchSuccess(arg0) {
       const membersById = requestMembersById(guildId, items);
     }
     const application_commands = index.application_commands;
-    const obj5 = id(7030);
+    const obj5 = id(7043);
     const applicationCommands = obj5.buildApplicationCommands(
       application_commands.map((description_default) => {
         let mapped;
@@ -472,7 +472,7 @@ function queryIndex(allowApplicationCommands) {
   let userState;
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
-    builtIns = NONE(8803).BuiltInCommandFilter.ALLOW;
+    builtIns = NONE(8833).BuiltInCommandFilter.ALLOW;
   }
   let flag = allowApplicationCommands.allowApplicationCommands;
   if (flag === undefined) {
@@ -484,7 +484,7 @@ function queryIndex(allowApplicationCommands) {
   }
   NONE = allowApplicationCommands.scoreMethod;
   if (NONE === undefined) {
-    NONE = NONE(8803).ScoreMethod.NONE;
+    NONE = NONE(8833).ScoreMethod.NONE;
   }
   let sortOptions = allowApplicationCommands.sortOptions;
   if (sortOptions === undefined) {
@@ -504,11 +504,11 @@ function queryIndex(allowApplicationCommands) {
   if (formatted != null) {
     parts = formatted.split(" ");
   }
-  const ONLY_TEXT = NONE(8803).BuiltInCommandFilter.ONLY_TEXT;
+  const ONLY_TEXT = NONE(8833).BuiltInCommandFilter.ONLY_TEXT;
   const tmp9 = NONE;
-  if (builtIns !== NONE(8803).BuiltInCommandFilter.DENY) {
+  if (builtIns !== NONE(8833).BuiltInCommandFilter.DENY) {
     const tmp12 = builtIns === ONLY_TEXT;
-    const tmp9Result = tmp9(8805);
+    const tmp9Result = tmp9(8835);
     builtInCommands = tmp9Result.getBuiltInCommands(commandTypes, true, tmp12);
   } else {
     builtInCommands = [];
@@ -683,7 +683,7 @@ function queryIndex(allowApplicationCommands) {
   });
   if (builtInCommands.length > 0) {
     let num2 = 0;
-    const tmp87 = queryIndexSection(NONE(8805).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
+    const tmp87 = queryIndexSection(NONE(8835).BUILT_IN_SECTIONS[constants.BUILT_IN], builtInCommands, true, true, obj);
     if (null != tmp87) {
       items.push(tmp87);
     }
@@ -697,7 +697,7 @@ function queryIndex(allowApplicationCommands) {
     });
   });
   const tmp89 = NONE;
-  if (NONE === NONE(8803).ScoreMethod.COMMAND_ONLY) {
+  if (NONE === NONE(8833).ScoreMethod.COMMAND_ONLY) {
     const context = permissionContext.context;
     let guild_id;
     const getGuild = GuildStore.getGuild;

@@ -3,7 +3,7 @@ import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
 import Constants from "../../../../../../Constants.tsx";
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
 import PlayStationLinkConstants from "PlayStationLinkConstants.tsx";
-import _modDef8768 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
+import _modDef8800 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
@@ -44,12 +44,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = {
           label: intl2.string(navigation(1126).t["+eJP7o"]),
           subLabel: intl3.string(navigation(1126).t["+0VIUh"]),
-          icon: navigation(5885).VoiceNormalIcon,
+          icon: navigation(5892).VoiceNormalIcon,
         };
         intl2 = tmp(1126).intl;
         intl3 = tmp(1126).intl;
         const items = [obj5];
-        const obj6 = { label: intl4.string(navigation(1126).t.ZH4QFa), icon: navigation(8739).GameControllerIcon };
+        const obj6 = { label: intl4.string(navigation(1126).t.ZH4QFa), icon: navigation(8771).GameControllerIcon };
         intl4 = tmp(1126).intl;
         items[1] = obj6;
         cResult[1] = items;
@@ -81,7 +81,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp14[0] = _modDef8768;
+        tmp14[0] = _modDef8800;
         cResult[4] = tmp14;
       } else {
         class N {
@@ -125,7 +125,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = N;
       cResult[8] = platformType;
       cResult[9] = tmp4.image;
-      cResult[10] = jsx(navigation(8741).TwoWayLinkLanding, {
+      cResult[10] = jsx(navigation(8773).TwoWayLinkLanding, {
         platformType,
         img: tmp14,
         imgStyle: image,
@@ -135,7 +135,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         onNext: N,
         valueProps: tmp11,
       });
-      jsx(navigation(8741).TwoWayLinkLanding, {
+      jsx(navigation(8773).TwoWayLinkLanding, {
         platformType,
         img: tmp14,
         imgStyle: image,
@@ -181,10 +181,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         navigation.push(constants.PRE_CONNECT);
       }, items);
       const memo1 = react.useMemo(() => {
-        const obj = { uri: _modDef8768 };
+        const obj = { uri: _modDef8800 };
         return obj;
       }, []);
-      const TwoWayLinkLanding = navigation(8741).TwoWayLinkLanding;
+      const TwoWayLinkLanding = navigation(8773).TwoWayLinkLanding;
       let intl2 = navigation(1126).intl;
       let intl3 = navigation(1126).intl;
       return (

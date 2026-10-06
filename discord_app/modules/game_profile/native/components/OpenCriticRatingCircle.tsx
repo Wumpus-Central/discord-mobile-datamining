@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/native/components/OpenCriticRatingCircle.tsx
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import react from "../../../../../_runtime/00576_react.js";
-import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size_mod from "../../../../../_runtime/metro/00002__.js";
 

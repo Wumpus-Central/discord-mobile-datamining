@@ -86,7 +86,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       clientId = clientId.clientId;
       const platformType = clientId.platformType;
       const tmp4 = closure_10();
-      const tmp6 = platformType(4791)();
+      const tmp6 = platformType(4797)();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ApplicationStore];
         cResult[0] = items;
@@ -290,7 +290,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj4 = { color: platformType(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-          const MoreHorizontalIcon = tmp(7577).MoreHorizontalIcon;
+          const MoreHorizontalIcon = tmp(7588).MoreHorizontalIcon;
           const tmp35 = closure_8(MoreHorizontalIcon, obj4);
           class C {
             constructor() {
@@ -355,7 +355,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[26] = closure_9(View, obj6);
         const tmp41 = closure_9(View, obj6);
       }
-      const tmp5Result4 = platformType(5442);
+      const tmp5Result4 = platformType(5449);
       const value = tmp5Result4.get(platformType);
       let source = null;
       if (null != value) {
@@ -367,7 +367,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const makeSource = tmp20.makeSource;
         const icon = value.icon;
-        const tmpResult4 = clientId(4729);
+        const tmpResult4 = clientId(4735);
         source = makeSource(tmpResult4.isThemeLight(tmp6) ? icon.lightPNG : icon.darkPNG);
       }
       cResult[6] = platformType;
@@ -389,7 +389,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const platformType = clientId.platformType;
       const platformName = clientId.platformName;
       const tmp = closure_10();
-      const tmp4 = platformType(4791)();
+      const tmp4 = platformType(4797)();
       let obj = clientId(504);
       const items = [ApplicationStore];
       const items1 = [clientId];
@@ -403,14 +403,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return currentUser;
       });
-      const obj3 = platformType(5442);
+      const obj3 = platformType(5449);
       const value = obj3.get(platformType);
       let source = null;
       if (null != value) {
         const makeSource = clientId(1402).makeSource;
         clientId(1402);
         const icon = value.icon;
-        const tmp5Result2 = clientId(4729);
+        const tmp5Result2 = clientId(4735);
         source = makeSource(tmp5Result2.isThemeLight(tmp4) ? icon.lightPNG : icon.darkPNG);
       }
       let applicationIconSource;
@@ -444,7 +444,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const Avatar = tmp5(1188).Avatar;
       items4 = [closure_8(Avatar, obj9), ,];
       const obj10 = { color: platformType(587).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-      const MoreHorizontalIcon = tmp5(7577).MoreHorizontalIcon;
+      const MoreHorizontalIcon = tmp5(7588).MoreHorizontalIcon;
       items4[1] = closure_8(MoreHorizontalIcon, obj10);
       const obj11 = { source: userAvatarSource, size: clientId(1188).AvatarSizes.XLARGE };
       const Avatar2 = tmp5(1188).Avatar;
@@ -455,10 +455,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: intl.string(clientId(1126).t.uT1CPa),
       };
-      const Text = tmp5(4886).Text;
+      const Text = tmp5(4892).Text;
       intl = tmp5(1126).intl;
       items5[1] = closure_8(Text, obj12);
-      items5[2] = closure_8(clientId(4886).Text, {
+      items5[2] = closure_8(clientId(4892).Text, {
         variant: "heading-xl/semibold",
         color: "mobile-text-heading-primary",
         children: str,
@@ -469,7 +469,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: intl2.format(clientId(1126).t["aJRE/Q"], { applicationName: str, platformName }),
       };
-      const Text2 = tmp5(4886).Text;
+      const Text2 = tmp5(4892).Text;
       intl2 = tmp5(1126).intl;
       items6[1] = closure_8(Text2, obj13);
       let tmp16Result = null;
@@ -480,7 +480,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items7 = [tmp16Result, ,];
       const obj16 = { variant: "text-md/medium", style: tmp.cardName, color: "text-default", children: platformName };
-      items7[1] = closure_8(clientId(4886).Text, obj16);
+      items7[1] = closure_8(clientId(4892).Text, obj16);
       const obj17 = {
         variant: "primary",
         size: "sm",
@@ -490,13 +490,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         },
         text: intl3.string(clientId(1126).t.S0W8Z5),
       };
-      const Button = tmp5(5594).Button;
+      const Button = tmp5(5601).Button;
       intl3 = tmp5(1126).intl;
       items7[2] = closure_8(Button, obj17);
       items6[2] = closure_9(View, obj14);
       const obj18 = { style: tmp.infoNotice, children: items8 };
       const obj19 = { color: platformType(587).colors.ICON_FEEDBACK_INFO, size: "sm" };
-      const CircleInformationIcon = tmp5(4812).CircleInformationIcon;
+      const CircleInformationIcon = tmp5(4818).CircleInformationIcon;
       items8 = [closure_8(CircleInformationIcon, obj19)];
       const obj20 = {
         variant: "text-sm/normal",
@@ -504,7 +504,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.infoText,
         children: intl4.format(clientId(1126).t["8psEFX"], { platformName, applicationName: str }),
       };
-      const Text3 = tmp5(4886).Text;
+      const Text3 = tmp5(4892).Text;
       intl4 = tmp5(1126).intl;
       items8[1] = closure_8(Text3, obj20);
       items6[3] = closure_9(View, obj18);

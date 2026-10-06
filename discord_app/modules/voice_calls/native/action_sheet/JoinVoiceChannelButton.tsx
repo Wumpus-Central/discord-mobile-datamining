@@ -125,7 +125,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             tmp21 = tmp24;
           }
         }
-        const tmp20 = jsx(channel(5594).Button, { disabled: flag, text: tmp10, onPress: tmp16 });
+        const tmp20 = jsx(channel(5601).Button, { disabled: flag, text: tmp10, onPress: tmp16 });
         cResult[11] = tmp10;
         cResult[12] = flag;
         cResult[13] = tmp16;

@@ -275,7 +275,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       obj2 = { style: tmp2.body, children: items };
       items = [,];
       const obj3 = { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 };
-      items[0] = closure_7(tmp6(4886).Text, obj3);
+      items[0] = closure_7(tmp6(4892).Text, obj3);
       const obj4 = {
         accessibilityRole: "link",
         style: items1,
@@ -289,7 +289,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items1 = [,];
       ({ ctaLink: arr2[0], description: arr2[1] } = tmp2);
-      const Text = tmp6(4886).Text;
+      const Text = tmp6(4892).Text;
       intl7 = tmp6(1126).intl;
       items[1] = closure_7(Text, obj4);
       return closure_7(tmp12, obj);

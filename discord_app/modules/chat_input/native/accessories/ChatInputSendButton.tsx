@@ -230,11 +230,11 @@ const forwardRefResult = forwardRef(
         if (tmp4) {
           tmp4 = requireTextContent;
         }
-        const tmpResult = channel(4580);
+        const tmpResult = channel(4586);
         const token = tmpResult.useToken(nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-        const tmpResult5 = channel(4580);
+        const tmpResult5 = channel(4586);
         const token1 = tmpResult5.useToken(nativeDefault.modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
-        const tmpResult6 = channel(4580);
+        const tmpResult6 = channel(4586);
         const token2 = tmpResult6.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
         const tmp8 = closure_11(token, token1);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -389,7 +389,7 @@ const forwardRefResult = forwardRef(
                         return useReducedMotion.useReducedMotion;
                       }
                     }
-                    const tmp29 = jsx(channel(4589).TransitionGroup, {
+                    const tmp29 = jsx(channel(4595).TransitionGroup, {
                       items: tmp21,
                       renderItem: renderChatInputSendButton,
                       getItemKey: getChatInputSendButtonItemKey,
@@ -480,11 +480,11 @@ const forwardRefResult = forwardRef(
         let stateFromStores1;
         react = undefined;
         canSendVoiceMessage = undefined;
-        let obj = channel(4580);
+        let obj = channel(4586);
         const token = obj.useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-        const obj2 = channel(4580);
+        const obj2 = channel(4586);
         const token1 = obj2.useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_SEND_BUTTON_HEIGHT);
-        const obj3 = channel(4580);
+        const obj3 = channel(4586);
         const token2 = obj3.useToken(onSendMessage(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
         let items = [AccessibilityStore];
         const tmp7 = closure_11(token, token1);
@@ -539,10 +539,10 @@ const forwardRefResult = forwardRef(
           };
           const tmp19 = canSendVoiceMessage;
           if (tmp19) {
-            tmp15Result = jsx(onSendMessage(11885), { disabled: stateFromStores1, channelId: channel.id });
+            tmp15Result = jsx(onSendMessage(11899), { disabled: stateFromStores1, channelId: channel.id });
           } else {
             ({ button: obj11.style, buttonActive: obj11.activeStyle, iconActive: obj11.activeIconStyle } = tmp7);
-            onSendMessage(11868);
+            onSendMessage(11882);
             const intl = tmp(1126).intl;
             tmp15Result = (
               <tmp3Result
@@ -550,7 +550,7 @@ const forwardRefResult = forwardRef(
                 style={null}
                 activeStyle={null}
                 activeIconStyle={null}
-                IconComponent={channel(4841).SendMessageIcon}
+                IconComponent={channel(4847).SendMessageIcon}
                 accessibilityLabel={intl.string(channel(1126).t.TXNS7S)}
                 onPress={onSendMessage}
                 disabled={!tmp12}
@@ -566,7 +566,7 @@ const forwardRefResult = forwardRef(
               buttonMargin={token2}
               sendVoiceMessageEnabled={canSendVoiceMessage}
             >
-              {jsx(channel(4589).TransitionGroup, {
+              {jsx(channel(4595).TransitionGroup, {
                 items: memo,
                 renderItem: renderChatInputSendButton,
                 getItemKey: getChatInputSendButtonItemKey,

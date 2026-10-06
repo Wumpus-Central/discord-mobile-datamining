@@ -229,7 +229,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const found = items.filter(C);
       const BadgesContainer = BadgesAll.BadgesContainer;
       const badges = tmp4.badges;
-      const tmpResult = tmp(8017);
+      const tmpResult = tmp(8027);
       if (tmpResult.isTopGameEntry(entry)) {
         class C {
           constructor(arg0) {
@@ -267,7 +267,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const found = items.filter((predicate) => predicate.predicate(entry));
       let obj = { location: "user-profile", style: tmp.badges, children: mapped };
       const BadgesContainer = BadgesAll.BadgesContainer;
-      let obj2 = entry(8017);
+      let obj2 = entry(8027);
       if (obj2.isTopGameEntry(entry)) {
         const obj3 = { style: tmp.badgeCell, children: closure_6(BadgesAll.TopGameBadge, obj4) };
         obj4 = { entry };

@@ -1,6 +1,6 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2819 from "../../NotificationSettings.messages.js";
+import _modDef2847 from "../../NotificationSettings.messages.js";
 import BellIcon from "../../../../design/components/Icon/native/redesign/generated/BellIcon.tsx";
 import notifications_NotificationSettingsUtils from "../../NotificationSettingsUtils.tsx";
 import MobileNotifSettings from "../../../user_settings/notifications/native/codegen/MobileNotifSettings.tsx";
@@ -47,7 +47,7 @@ const createRoute2 = SettingBuilders.createRoute;
 const obj3 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.S5cB9e);
+    return intl.string(_modDef2847.S5cB9e);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -66,7 +66,7 @@ const createRoute3 = SettingBuilders.createRoute;
 const obj5 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819["UzRF+8"]);
+    return intl.string(_modDef2847["UzRF+8"]);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -85,7 +85,7 @@ const createRoute4 = SettingBuilders.createRoute;
 const obj7 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.zRKbpz);
+    return intl.string(_modDef2847.zRKbpz);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {
@@ -104,7 +104,7 @@ const createRoute5 = SettingBuilders.createRoute;
 const obj9 = {
   useTitle() {
     const intl = intl2.intl;
-    return intl.string(_modDef2819.q5M7HV);
+    return intl.string(_modDef2847.q5M7HV);
   },
   parent: MobileNotifSettings.MobileNotifSettings.NOTIFICATIONS_REDESIGN,
   usePredicate() {

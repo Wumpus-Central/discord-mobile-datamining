@@ -72,7 +72,7 @@ export default function DiscoverabilityLanding(onNext) {
   react = react.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     const obj2 = { allowPhone, allowEmail };
-    obj.openLazy(asyncRequire(12418, dependencyMap.paths), "Discoverability Landing", obj2);
+    obj.openLazy(asyncRequire(12433, dependencyMap.paths), "Discoverability Landing", obj2);
   }, items);
   let obj = { style: tmp.container, contentContainerStyle: obj2, children: items2 };
   obj2 = { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: bottom + 16 };

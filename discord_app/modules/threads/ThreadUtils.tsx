@@ -3,7 +3,7 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import ThreadConstants from "ThreadConstants.tsx";
 import intl2 from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx";
 import getTimestampStringDefault from "getTimestampString.tsx";
@@ -84,7 +84,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[5] !== createTimestamp) {
         let valueOfResult = null;
         if (null != createTimestamp) {
-          const obj4 = _modDef4461(createTimestamp);
+          const obj4 = _modDef4467(createTimestamp);
           valueOfResult = obj4.valueOf();
         }
         cResult[5] = createTimestamp;
@@ -133,7 +133,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let valueOfResult = null;
       if (null != createTimestamp) {
-        const obj3 = _modDef4461(createTimestamp);
+        const obj3 = _modDef4467(createTimestamp);
         valueOfResult = obj3.valueOf();
       }
       if (extractTimestampResult == null) {

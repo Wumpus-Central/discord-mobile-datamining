@@ -11,7 +11,7 @@ import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import AppAnalyticsUtils from "../../app_analytics/AppAnalyticsUtils.tsx";
 import react_native2 from "../../a11y/native/setAccessibilityFocus.android.tsx";
-import BottomSheetModal from "../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06119_BottomSheetModal.js";
 import AppLauncherContext from "AppLauncherContext.tsx";
 import PortalKeyboardConstants from "../../keyboard/native/PortalKeyboardConstants.tsx";
 import completeAppLauncherOnboardingDefault from "onboarding/utils/completeAppLauncherOnboarding.tsx";

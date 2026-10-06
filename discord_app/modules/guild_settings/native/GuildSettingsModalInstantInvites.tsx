@@ -4,7 +4,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import intl3 from "../../../intl/index.native.tsx";
 import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/04807_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/04813_AssetRegistry.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import TableCheckboxRow2 from "../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
@@ -159,7 +159,7 @@ function GuildSettingsModalInstantInvites(invites) {
         obj2 = GuildAntiRaidUtils;
         const obj4 = { guild, analyticsData: obj };
         const obj3 = ActionSheetActionCreatorsDefault;
-        obj3.openLazy(asyncRequire(11439, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
+        obj3.openLazy(asyncRequire(11452, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj4);
         closure_7(false);
       } catch (tmp16) {
         closure_7(false);
@@ -411,7 +411,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { guild: stateFromStores, invites: stateFromStores1, contentContainerStyle, showChannel: true };
-        items2 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(6536).NavScrim, {})];
+        items2 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(6543).NavScrim, {})];
         tmp13 = closure_14(closure_13, obj2);
       }
       cResult[5] = contentContainerStyle;
@@ -435,7 +435,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != stateFromStores) {
         const obj2 = { children: items1 };
         const obj3 = { guild: stateFromStores, invites: tmp5, contentContainerStyle, showChannel: true };
-        items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(tmp(6536).NavScrim, {})];
+        items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(tmp(6543).NavScrim, {})];
         tmp6 = closure_14(closure_13, obj2);
       }
       return tmp6;

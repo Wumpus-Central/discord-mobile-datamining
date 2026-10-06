@@ -68,7 +68,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === role.id) {
           tmp5 = cResult[2];
         }
-        const tmpResult = role(6685);
+        const tmpResult = role(6692);
         const roleIconProps = tmpResult.useRoleIconProps(tmp5);
         if (cResult[3] !== role.name) {
           let name = role.name;
@@ -120,7 +120,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[18] !== tmp7) {
                         let obj2 = { variant: "text-xs/semibold", color: "interactive-text-active", children: tmp7 };
-                        const tmp36 = closure_6(role(4886).Text, obj2);
+                        const tmp36 = closure_6(role(4892).Text, obj2);
                         cResult[18] = tmp7;
                         cResult[19] = tmp36;
                         tmp34 = tmp36;
@@ -152,7 +152,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
                               accessible: false,
                               children: tmp37,
                             };
-                            const tmp43 = closure_6(role(5909).PressableHighlight, obj3);
+                            const tmp43 = closure_6(role(5916).PressableHighlight, obj3);
                             cResult[25] = tmp12;
                             cResult[26] = tmp14.container;
                             cResult[27] = tmp15;
@@ -256,7 +256,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const disableInteraction = role.disableInteraction;
       const DeveloperMode = role(2028).DeveloperMode;
       const setting = DeveloperMode.useSetting();
-      let obj = role(6685);
+      let obj = role(6692);
       let obj2 = { guildId, roleId: role.id, size: 12 };
       const roleIconProps = obj.useRoleIconProps(obj2);
       let name = role.name;
@@ -277,7 +277,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp9 = closure_8();
       let tmp11 = !setting;
-      const PressableHighlight = tmp(5909).PressableHighlight;
+      const PressableHighlight = tmp(5916).PressableHighlight;
       if (setting) {
         tmp11 = disableInteraction;
       }
@@ -303,7 +303,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           size: 14,
           displayRoleIcon: false,
         };
-        const tmp16 = combined(6702);
+        const tmp16 = combined(6709);
         if (guildId == null) {
           guildId = closure_4;
         }
@@ -326,12 +326,12 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != roleIconProps) {
         const obj9 = { style: tmp9.roleIcon, children: closure_6(tmp19, obj10) };
         obj10 = {};
-        tmp19 = combined(6704);
+        tmp19 = combined(6711);
         const merged = Object.assign(roleIconProps);
         tmp10Result2 = closure_6(View, obj9);
       }
       items1[1] = tmp10Result2;
-      items1[2] = closure_6(role(4886).Text, {
+      items1[2] = closure_6(role(4892).Text, {
         variant: "text-xs/semibold",
         color: "interactive-text-active",
         children: name,

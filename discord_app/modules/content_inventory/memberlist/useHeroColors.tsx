@@ -3,7 +3,7 @@ import get_initialized from "../../../../discord_common/js/packages/flux/index.t
 import react2 from "../../../../_runtime/00576_react.js";
 import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import _modDef7063 from "../../../../_runtime/metro/07063__.js";
+import _modDef7076 from "../../../../_runtime/metro/07076__.js";
 import useAvatarColor from "../../avatar/useAvatarColor.tsx";
 import getFallbackHeroColor from "getFallbackHeroColor.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -155,9 +155,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = first(504);
       const items1 = [ThemeStore];
       const stateFromStores1 = obj2.useStateFromStores(items1, () => theme.theme);
-      let obj3 = first(7817);
+      let obj3 = first(7828);
       const fallbackHeroColor = obj3.getFallbackHeroColor(stateFromStores1, stateFromStores);
-      let obj4 = first(7815);
+      let obj4 = first(7826);
       let tmp4 = _slicedToArray(obj4.useAvatarColors(arg0, fallbackHeroColor), 2);
       first = tmp4[0];
       let closure_1 = tmp6;
@@ -228,13 +228,13 @@ export const getHeroColors = function getHeroColors(iconURL) {
   let tmp3 = dependencyMap;
   const saturation = AccessibilityStore.saturation;
   const theme = ThemeStore.theme;
-  let obj = num(7817);
+  let obj = num(7828);
   const fallbackHeroColor = obj.getFallbackHeroColor(theme, saturation);
   num = 1;
   if (AccessibilityStore.desaturateUserColors) {
     num = AccessibilityStore.saturation;
   }
-  const useColorStore = tmp2(7815).useColorStore;
+  const useColorStore = tmp2(7826).useColorStore;
   const arr = useColorStore.getState().palette[iconURL];
   let mapped;
   if (arr != null) {
@@ -246,11 +246,11 @@ export const getHeroColors = function getHeroColors(iconURL) {
       let tmp2;
       let tmp3;
       [tmp, tmp2, tmp3] = item;
-      const obj = _modDef7063({ r: tmp, g: tmp2, b: tmp3 });
+      const obj = _modDef7076({ r: tmp, g: tmp2, b: tmp3 });
       ({ h, s, l } = obj.toHsl());
       const obj2 = { h, s: s * num, l };
       obj.toHsl();
-      const obj3 = _modDef7063(obj2);
+      const obj3 = _modDef7076(obj2);
       return obj3.toHexString();
     });
   }

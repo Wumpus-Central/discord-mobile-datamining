@@ -10,7 +10,7 @@ import TextVariants from "../../../../../discord_common/js/packages/tokens/typog
 import PlainTextExperimentContext from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
 import PlainTextEligibility from "PlainTextEligibility.tsx";
-import _modDef4900 from "../../../../../_runtime/metro/04900__.js";
+import _modDef4906 from "../../../../../_runtime/metro/04906__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -252,7 +252,7 @@ const forwardRefResult = forwardRef(
           } = plainTextEligibility);
           let StringResult;
           const tmp2Result = _objectWithoutProperties(plainTextEligibility, closure_4);
-          _modDef4900;
+          _modDef4906;
           if (null != fontWeight) {
             const _String = String;
             StringResult = String(fontWeight);
@@ -406,7 +406,7 @@ const forwardRefResult = forwardRef(
           } = plainTextEligibility);
           let StringResult;
           const tmp21 = _objectWithoutProperties(plainTextEligibility, closure_5);
-          _modDef4900;
+          _modDef4906;
           if (null != fontWeight) {
             const _String = String;
             StringResult = String(fontWeight);

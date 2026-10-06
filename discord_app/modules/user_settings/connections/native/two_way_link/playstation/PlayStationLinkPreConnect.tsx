@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
 import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
 import PlayStationLinkConstants from "PlayStationLinkConstants.tsx";
-import _modDef8770 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef8802 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import react from "../../../../../../../_runtime/00019_react.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../../../react_compiler/ReactCompilerGating.tsx";
@@ -46,7 +46,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { uri: _modDef8770 };
+        const obj3 = { uri: _modDef8802 };
         cResult[4] = obj3;
         tmp8 = obj3;
       } else {
@@ -77,7 +77,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp15 = jsx(navigation(8746).TwoWayLinkPreConnect, {
+      const tmp15 = jsx(navigation(8778).TwoWayLinkPreConnect, {
         platformType,
         onError: tmp7,
         onNext: tmp6,
@@ -108,10 +108,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         navigation.push(constants.ERROR, {});
       }, items1);
       const memo = react.useMemo(() => {
-        const obj = { uri: _modDef8770 };
+        const obj = { uri: _modDef8802 };
         return obj;
       }, []);
-      const TwoWayLinkPreConnect = navigation(8746).TwoWayLinkPreConnect;
+      const TwoWayLinkPreConnect = navigation(8778).TwoWayLinkPreConnect;
       const intl = navigation(1126).intl;
       const intl2 = navigation(1126).intl;
       return (

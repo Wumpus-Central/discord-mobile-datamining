@@ -8,11 +8,11 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import PremiumAnalyticsUtils from "PremiumAnalyticsUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/13137_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/13187_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/13188_AssetRegistry.js";
-import AssetRegistryDefault4 from "../../../../_runtime/13189_AssetRegistry.js";
-import AssetRegistryDefault5 from "../../../../_runtime/13190_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/13156_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/13206_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/13207_AssetRegistry.js";
+import AssetRegistryDefault4 from "../../../../_runtime/13208_AssetRegistry.js";
+import AssetRegistryDefault5 from "../../../../_runtime/13209_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";

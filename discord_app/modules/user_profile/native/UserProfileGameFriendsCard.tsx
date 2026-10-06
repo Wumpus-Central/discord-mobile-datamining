@@ -10,7 +10,7 @@ import size from "../../../../_runtime/metro/00002__.js";
 let dependencyMap, importDefault;
 
 let tmp5;
-const UserProfileCardDefault = tmp5(6706);
+const UserProfileCardDefault = tmp5(6713);
 let jsx = Fragment.jsx;
 let closure_4 = createStyles.createStyles({ card: { flexDirection: "column" } });
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -123,7 +123,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             tmp14 = cResult[7];
           }
           if (cResult[8] !== tmp7) {
-            const tmp18 = jsx(found(4886).Text, { variant: "text-md/normal", color: "text-default", children: tmp7 });
+            const tmp18 = jsx(found(4892).Text, { variant: "text-md/normal", color: "text-default", children: tmp7 });
             cResult[8] = tmp7;
             cResult[9] = tmp18;
             tmp16 = tmp18;

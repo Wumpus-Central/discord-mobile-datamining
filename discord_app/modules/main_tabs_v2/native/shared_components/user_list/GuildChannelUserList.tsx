@@ -6,7 +6,7 @@ import UserUtilsDefault from "../../../../../utils/UserUtils.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import GuildUtilsDefault from "../../../../../utils/GuildUtils.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
-import _mod9496 from "../../../../autocompleter/index.tsx";
+import _mod9509 from "../../../../autocompleter/index.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import ChannelMemberStore_mod from "../../../../../stores/ChannelMemberStore.tsx";
@@ -20,7 +20,7 @@ import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
-const _modDef9496 = _mod9496;
+const _modDef9509 = _mod9509;
 let closure_12;
 
 let closure_15;
@@ -59,8 +59,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== guildId) {
         const fn = function l() {
           let obj2;
-          const tmp = _modDef9496;
-          const items = [_mod9496.AutocompleterResultTypes.USER];
+          const tmp = _modDef9509;
+          const items = [_mod9509.AutocompleterResultTypes.USER];
           const obj = { userFilters: obj2 };
           obj2 = { guild: guildId, strict: true };
           const tmp2 = new tmp(
@@ -347,8 +347,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const first1 = ref(
         str.useState(() => {
           let obj2;
-          const tmp = _modDef9496;
-          const items = [_mod9496.AutocompleterResultTypes.USER];
+          const tmp = _modDef9509;
+          const items = [_mod9509.AutocompleterResultTypes.USER];
           const obj = { userFilters: obj2 };
           obj2 = { guild: guildId, strict: true };
           const tmp2 = new tmp(

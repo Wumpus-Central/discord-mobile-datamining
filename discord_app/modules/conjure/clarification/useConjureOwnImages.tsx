@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/clarification/useConjureOwnImages.tsx
-import _modDef3723 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../intl/ConjureUntranslated.messages.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
@@ -65,7 +65,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
   [first1, closure_6] = first1.useState({});
   [first2, closure_8] = first1.useState({});
   let intl = require("intl").intl;
-  const stringResult = intl.string(_modDef3723.wTsP5l);
+  const stringResult = intl.string(_modDef3753.wTsP5l);
   const text = stringResult;
   let items = [first];
   const items1 = [first1, first, first2];
@@ -115,7 +115,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
       let closure_1;
       let closure_3;
       let error;
-      const f153488 = (arg0) => {
+      const f153729 = (arg0) => {
         obj = {};
         const merged = Object.assign(arg0);
         obj[obj] = true;
@@ -227,7 +227,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
                     return obj;
                   });
                   if (closure_1) {
-                    closure_1_8(f153488);
+                    closure_1_8(f153729);
                   } else {
                     _null((arg0) => {
                       let tmp2 = arg0;
@@ -287,7 +287,7 @@ export const useConjureOwnImages = function useConjureOwnImages(projectId, first
                   return obj;
                 });
                 if (closure_1) {
-                  closure_1_8(f153488);
+                  closure_1_8(f153729);
                 } else {
                   _null((arg0) => {
                     let tmp2 = arg0;

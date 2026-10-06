@@ -42,9 +42,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         const content_type = content.content_type;
-        if (content(7813).ContentInventoryEntryType.TOP_GAME !== content_type) {
-          if (content(7813).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-            if (content(7813).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+        if (content(7824).ContentInventoryEntryType.TOP_GAME !== content_type) {
+          if (content(7824).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+            if (content(7824).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
               if (visible == null) {
                 visible = false;
               }
@@ -102,9 +102,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return null;
       } else {
         const content_type = content.content_type;
-        if (content(7813).ContentInventoryEntryType.TOP_GAME !== content_type) {
-          if (content(7813).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-            if (content(7813).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+        if (content(7824).ContentInventoryEntryType.TOP_GAME !== content_type) {
+          if (content(7824).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+            if (content(7824).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
               CustomStatusEntryRowDefault;
               if (flag2 == null) {
                 flag2 = false;

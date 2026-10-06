@@ -236,7 +236,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       if (flag) {
         const obj2 = { style: tmp.header, children: items };
         const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: title };
-        items = [React3(tmp4(4886).Text, obj3)];
+        items = [React3(tmp4(4892).Text, obj3)];
         const obj4 = { style: tmp.headerTrailing, children: items1 };
         items1 = [meta];
         let tmp9Result = null;
@@ -252,7 +252,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
               children: React3(ChevronSmallRightIcon, obj7),
             };
             obj6 = { expanded: flag3 };
-            const PressableOpacity = tmp4(5909).PressableOpacity;
+            const PressableOpacity = tmp4(5916).PressableOpacity;
             if (flag3) {
               showLabel = hideLabel;
             }

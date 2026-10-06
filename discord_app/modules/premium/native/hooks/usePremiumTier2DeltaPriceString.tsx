@@ -3,8 +3,8 @@ import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import PremiumConstants from "../../PremiumConstants.tsx";
 import BillingUtils from "../../../../utils/BillingUtils.tsx";
 import PriceUtils from "../../../../utils/PriceUtils.tsx";
-import ProductIds from "../ProductIds.android.tsx";
 import PremiumBundledPlansUtils from "../PremiumBundledPlansUtils.tsx";
+import ProductIds from "../ProductIds.android.tsx";
 import NativeCheckoutStore from "../../../checkout/native/NativeCheckoutStore.tsx";
 import react from "../../../../../_runtime/00019_react.js";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
@@ -412,7 +412,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp18 = getViewerProductId(subscription);
             let tmp20 = null;
             if (null != tmp18) {
-              tmp20 = tmp(6742).AppStorePremiumProductIdsToPremiumBundledItems[tmp18];
+              tmp20 = tmp(6926).AppStorePremiumProductIdsToPremiumBundledItems[tmp18];
             }
             flag =
               null != tmp20 &&
@@ -479,7 +479,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             const tmp2Result = getViewerProductId(subscription);
             let tmp11 = null;
             if (null != tmp2Result) {
-              tmp11 = tmp4(6742).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
+              tmp11 = tmp4(6926).AppStorePremiumProductIdsToPremiumBundledItems[tmp2Result];
             }
             flag =
               null != tmp11 &&

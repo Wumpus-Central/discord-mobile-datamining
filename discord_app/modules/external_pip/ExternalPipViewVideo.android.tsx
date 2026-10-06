@@ -302,7 +302,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items = [tmp4Result];
       const obj3 = { variant: "text-md/semibold", style: tmp.unavailableText, lineClamp: 1, children: result };
-      const Text = tmp10(4886).Text;
+      const Text = tmp10(4892).Text;
       const intl = tmp10(1126).intl;
       if (wasStream) {
         result = intl.formatToMarkdownString(tmp10(1126).t["1Ww0Hi"], {});
@@ -389,7 +389,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
             return guild_id;
           }
         }
-        const tmpResult4 = userId(9122);
+        const tmpResult4 = userId(9157);
         const avatarSpeakingColor = tmpResult4.useAvatarSpeakingColor(obj3);
         if (cResult[9] === stateFromStores1) {
           class I {
@@ -457,7 +457,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return guild_id;
       });
-      userId(9122);
+      userId(9157);
       const obj3 = { style: tmp.user, children: tmp8Result };
       tmp8Result = null;
       if (null != stateFromStores) {
@@ -496,7 +496,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmpResult = tmp(9106);
+      const tmpResult = tmp(9141);
       const surfaceDirectRendererExperiment = tmpResult.useSurfaceDirectRendererExperiment(userId, first);
       ({ streamReady, streamReadLongTime, streamReadyCallback } = closure_15(streamId));
       closure_15(streamId);
@@ -518,7 +518,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === tmp8) {
           tmp9 = cResult[5];
         }
-        const tmpResult2 = tmp(4580);
+        const tmpResult2 = tmp(4586);
         const token = tmpResult2.useToken(nativeDefault.colors.TEXT_FEEDBACK_INFO);
         const tmp10 = importDefault;
         importDefault = closure_7.get();
@@ -595,8 +595,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = streamReadyCallback;
         cResult[11] = tmp9;
         cResult[12] = surfaceDirectRendererExperiment;
-        cResult[13] = closure_11(tmp10(9114), obj4);
-        const tmp16 = closure_11(tmp10(9114), obj4);
+        cResult[13] = closure_11(tmp10(9149), obj4);
+        const tmp16 = closure_11(tmp10(9149), obj4);
       }
       const items = [tmp7.video, tmp8];
       cResult[3] = tmp7.video;
@@ -611,7 +611,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       let video;
       streamId = streamId.streamId;
       const userId = streamId.userId;
-      let obj = streamId(9106);
+      let obj = streamId(9141);
       const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, {
         location: "ExternalPipViewVideoStream",
       });
@@ -630,7 +630,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         items[1] = { opacity: num };
         return items;
       }, items);
-      const obj2 = streamId(4580);
+      const obj2 = streamId(4586);
       const token = obj2.useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
       const value = closure_7.get();
       let c3 = value;
@@ -646,7 +646,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const children = [
-        closure_11(streamReady(9114), {
+        closure_11(streamReady(9149), {
           useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
           style: memo,
           streamId,

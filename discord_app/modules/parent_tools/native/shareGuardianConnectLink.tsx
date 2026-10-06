@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/shareGuardianConnectLink.tsx
 import intl2 from "../../../intl/index.native.tsx";
-import _modDef2493 from "../FamilyCenter.messages.js";
+import _modDef2521 from "../FamilyCenter.messages.js";
 import FamilyCenterConstants from "../FamilyCenterConstants.tsx";
 import showShareActionSheet2 from "../../action_sheet/native/showShareActionSheet.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -15,7 +15,7 @@ export const shareGuardianConnectLink = function shareGuardianConnectLink(stateF
   if (username == null) {
     username = stateFromStores.username;
   }
-  const obj = { message: intl.formatToPlainString(_modDef2493.lVD5Nd, { username, url: tmp }) };
+  const obj = { message: intl.formatToPlainString(_modDef2521.lVD5Nd, { username, url: tmp }) };
   const showShareActionSheet = showShareActionSheet2.showShareActionSheet;
   showShareActionSheet2;
   intl = intl2.intl;

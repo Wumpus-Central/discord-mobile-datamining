@@ -383,11 +383,11 @@ export const trackExplicitMediaScanComplete = function trackExplicitMediaScanCom
   }
 };
 export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitMediaScanTimeoutForMessage(message) {
-  const f94227 = (item) => {
+  const f94367 = (item) => {
     item.content_scan_version = -1;
     return item;
   };
-  const f94228 = (components) => {
+  const f94368 = (components) => {
     components.contentScanVersion = -1;
     components = components.components;
     const failOverComponentMedia = closure_1_0(closure_1_2[11]).failOverComponentMedia;
@@ -400,9 +400,9 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
   };
   let attachments = message.attachments;
   let embeds = message.embeds;
-  const attachments1 = attachments.map(f94227);
+  const attachments1 = attachments.map(f94367);
   let components = message.components;
-  const embeds1 = embeds.map(f94228);
+  const embeds1 = embeds.map(f94368);
   let obj = ObscuredMediaUtils;
   let result = obj.failOverComponentMedia(components);
   const messageSnapshots = message.messageSnapshots;
@@ -414,9 +414,9 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
         message = message.message;
         const attachments = message.attachments;
         const embeds = message.embeds;
-        const mapped = attachments.map(f94227);
+        const mapped = attachments.map(f94367);
         let components = message.components;
-        const mapped1 = embeds.map(f94228);
+        const mapped1 = embeds.map(f94368);
         const obj = ObscuredMediaUtils;
         let result = obj.failOverComponentMedia(components);
         const obj2 = { message: message.merge({ attachments: mapped, embeds: mapped1, components }) };

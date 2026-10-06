@@ -716,7 +716,7 @@ obj = function _refreshPublishedProject() {
       obj5.trackConjureDeployed(closure_0, obj13);
       await "IconComponent";
       isPreview = isPreview.isPreview;
-      return "Set";
+      return "Reflect";
     })();
     iter.next();
     return iter;

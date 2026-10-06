@@ -6,7 +6,7 @@ import react from "../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const f97356 = (acc, randomizedSources) => {
+const f97537 = (acc, randomizedSources) => {
   randomizedSources = randomizedSources.randomizedSources;
   let num;
   if (randomizedSources != null) {
@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const effects = cloneDeepResult.effects;
           const _Math = Math;
           const _Math2 = Math;
-          const diff = effects.reduce(f97356, 0) - 1;
+          const diff = effects.reduce(f97537, 0) - 1;
           let closure_0 = Math.floor(Math.random() * (diff + 1));
           const effects1 = cloneDeepResult.effects;
           cloneDeepResult.effects = effects1.map((randomizedSources) => {
@@ -76,7 +76,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const effects2 = cloneDeepResult1.effects;
           const _Math3 = Math;
           const _Math4 = Math;
-          const diff1 = effects2.reduce(f97356, 0) - 1;
+          const diff1 = effects2.reduce(f97537, 0) - 1;
           closure_0 = Math.floor(Math.random() * (diff1 + 1));
           const effects3 = cloneDeepResult1.effects;
           cloneDeepResult1.effects = effects3.map((randomizedSources) => {
@@ -109,7 +109,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let num = 0;
         let _Math = Math;
         const _Math2 = Math;
-        const diff = effects.reduce(f97356, 0) - 1;
+        const diff = effects.reduce(f97537, 0) - 1;
         closure_0 = Math.floor(Math.random() * (diff + 1));
         const effects1 = cloneDeepResult.effects;
         cloneDeepResult.effects = effects1.map((randomizedSources) => {
@@ -134,7 +134,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           const effects2 = cloneDeepResult1.effects;
           const _Math3 = Math;
           const _Math4 = Math;
-          const diff1 = effects2.reduce(f97356, 0) - 1;
+          const diff1 = effects2.reduce(f97537, 0) - 1;
           closure_0 = Math.floor(Math.random() * (diff1 + 1));
           const effects3 = cloneDeepResult1.effects;
           cloneDeepResult1.effects = effects3.map((randomizedSources) => {

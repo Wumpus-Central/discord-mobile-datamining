@@ -313,7 +313,7 @@ export default function UserProfileOverflowMenu(user) {
           trackUserProfileAction(obj);
           const obj2 = ModalActionCreatorsDefault;
           const obj3 = { userId: id2, showUserProfile };
-          obj2.pushLazy(asyncRequire(12806, dependencyMap.paths), obj3);
+          obj2.pushLazy(asyncRequire(12825, dependencyMap.paths), obj3);
           const obj4 = ActionSheetActionCreatorsDefault;
           obj4.hideActionSheet();
         },
@@ -399,7 +399,7 @@ export default function UserProfileOverflowMenu(user) {
               impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION,
             };
             id = undefined;
-            const tmp4 = asyncRequire(9817, dependencyMap.paths);
+            const tmp4 = asyncRequire(9830, dependencyMap.paths);
             if (channel != null) {
               id = channel.id;
             }
@@ -423,7 +423,7 @@ export default function UserProfileOverflowMenu(user) {
               trackUserProfileAction(obj);
               if (user.bot) {
                 const openLazy = ActionSheetActionCreatorsDefault.openLazy;
-                const tmp19 = asyncRequire(12807, dependencyMap.paths);
+                const tmp19 = asyncRequire(12826, dependencyMap.paths);
                 const BOT_REPORT_CHOOSER_KEY = BotReportChooser.BOT_REPORT_CHOOSER_KEY;
                 const obj4 = {
                   user,
@@ -506,7 +506,7 @@ export default function UserProfileOverflowMenu(user) {
             impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION,
           };
           id = undefined;
-          const tmp4 = asyncRequire(9818, dependencyMap.paths);
+          const tmp4 = asyncRequire(9831, dependencyMap.paths);
           if (channel != null) {
             id = channel.id;
           }

@@ -90,7 +90,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
       onDismissAutocompleteSheet: _slicedToArray,
       optionValues: ref.current,
     };
-    obj2.openLazy(asyncRequire(11795, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", obj3);
+    obj2.openLazy(asyncRequire(11809, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", obj3);
   }
   ({ style, autoFocus } = arg0);
   [initChoice, closure_9] = react.useState(() => {

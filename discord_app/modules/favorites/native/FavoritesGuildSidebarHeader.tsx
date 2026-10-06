@@ -4,7 +4,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../intl/index.native.tsx";
 import asyncRequire from "../../../../_runtime/01987_asyncRequire.js";
-import _modDef3367 from "../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../intl/FavoritesGuild.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
@@ -47,7 +47,7 @@ function EmptyBody() {
   let obj = {
     variant: "text-sm/medium",
     color: "text-muted",
-    children: intl.format(_modDef3367.Z3Hdr5, { onClick: callback }),
+    children: intl.format(_modDef3395.Z3Hdr5, { onClick: callback }),
   };
   const Text = Text_Text.Text;
   intl = intl2.intl;
@@ -308,7 +308,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { variant, color: "mobile-text-heading-primary", children: intl.string(_modDef3367["1n0TGE"]) };
+          const obj2 = { variant, color: "mobile-text-heading-primary", children: intl.string(_modDef3395["1n0TGE"]) };
           const Heading = Text_Text.Heading;
           intl = intl2.intl;
           const tmp16 = metroRequire(Heading, obj2);
@@ -395,7 +395,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items = [tmp7, ,];
       const obj3 = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: items1 };
       const Stack2 = Stack_Stack.Stack;
-      const obj4 = { variant, color: "mobile-text-heading-primary", children: intl.string(_modDef3367["1n0TGE"]) };
+      const obj4 = { variant, color: "mobile-text-heading-primary", children: intl.string(_modDef3395["1n0TGE"]) };
       const Heading = Text_Text.Heading;
       intl = intl2.intl;
       items1 = [metroRequire(Heading, obj4), metroRequire(EmptyBody, {})];

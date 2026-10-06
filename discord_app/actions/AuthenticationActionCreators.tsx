@@ -28,7 +28,7 @@ let closure_14;
 let closure_15;
 let map1;
 let unpackModuleId;
-const f91319 = (error) => {
+const f91455 = (error) => {
   logger.error("Error while dispatching LOGOUT", error);
   if (DiscordErrors != null) {
     DiscordErrors.softCrash(error);
@@ -48,7 +48,7 @@ function handleLogout(source) {
   const merged = Object.assign(undefined);
   const tmp2Result = DispatcherDefault;
   const dispatchResult = tmp2Result.dispatch(obj2);
-  dispatchResult.catch(f91319);
+  dispatchResult.catch(f91455);
   if (null != DEFAULT_LOGGED_OUT) {
     const obj8 = RootNavigationRef;
     const rootNavigationRef = obj8.getRootNavigationRef();
@@ -188,7 +188,7 @@ let obj2 = {
               const merged = Object.assign({ isSwitchingAccount: true });
               const tmp21Result = DispatcherDefault;
               const dispatchResult = tmp21Result.dispatch(obj2);
-              dispatchResult.catch(f91319);
+              dispatchResult.catch(f91455);
             }
             const body3 = body.body;
             let suspended_user_token1;
@@ -254,7 +254,7 @@ let obj2 = {
     let self = this;
     ({ isMultiAccount: require, loginInstanceId } = arg0);
     ({ code, ticket, source, giftCodeSKUId, mfaType } = arg0);
-    const tmp2 = self(5083);
+    const tmp2 = self(5089);
     const request = {
       url: closure_9.LOGIN_MFA(mfaType),
       body,
@@ -473,7 +473,7 @@ let obj2 = {
     let self = this;
     isMultiAccount = isMultiAccount.isMultiAccount;
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
-    obj = self(5083);
+    obj = self(5089);
     const request = {
       url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN,
       body: { credential, ticket, source, giftCodeSKUId },
@@ -671,7 +671,7 @@ let obj2 = {
     const merged = Object.assign(arg0);
     const tmpResult = DispatcherDefault;
     const dispatchResult = tmpResult.dispatch(obj2);
-    dispatchResult.catch(f91319);
+    dispatchResult.catch(f91455);
   },
   logout(TTI_test) {
     let Storage;
@@ -695,7 +695,7 @@ let obj2 = {
       },
       rejectWithError: tmp4Result.rejectWithMigratedError(),
     };
-    const tmp3 = DEFAULT_LOGGED_OUT(5083);
+    const tmp3 = DEFAULT_LOGGED_OUT(5089);
     body = {
       provider: closure_15(),
       token: Storage.get(closure_10),
@@ -748,7 +748,7 @@ let obj2 = {
     const merged = Object.assign(obj2);
     const tmp3Result = DispatcherDefault;
     const dispatchResult = tmp3Result.dispatch(obj4);
-    dispatchResult.catch(f91319);
+    dispatchResult.catch(f91455);
     const loginTokenResult = this.loginToken(token, true);
     return loginTokenResult.then(() => {
       const tmp = token === AuthenticationStore.getToken();

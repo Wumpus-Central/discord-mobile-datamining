@@ -117,7 +117,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = cResult[6];
         }
         if (cResult[7] !== tmp5) {
-          const tmp18 = jsx(navigation(6096), {
+          const tmp18 = jsx(navigation(6103), {
             onFormSubmit: tmp7,
             onSuccess: tmp5,
             onResend: tmp9,
@@ -170,7 +170,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           push(VerificationModalScenes.ENTER_EMAIL);
         }
       }, items);
-      navigation(6096);
+      navigation(6103);
       let closure_0 = _asyncToGenerator(async (arg0) => {
         let c1;
         closure_0 = arg0;

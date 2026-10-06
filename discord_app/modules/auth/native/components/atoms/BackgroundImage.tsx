@@ -3,8 +3,8 @@ import Fragment from "../../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../../_runtime/00576_react.js";
 import shared from "../../../../../design/shared.tsx";
 import useThemeDefault from "../../../../../hooks/useTheme.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/06464_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../_runtime/06465_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/06471_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/06472_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
@@ -79,7 +79,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (flag === undefined) {
         flag = false;
       }
-      let tmp = flag(4791)();
+      let tmp = flag(4797)();
       dependencyMap = tmp;
       let items = [backgroundImageSource, flag, tmp];
       let obj2 = {};

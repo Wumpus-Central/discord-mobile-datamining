@@ -11,7 +11,7 @@ let obj = {
     const obj2 = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     obj.dispatch(obj2);
     const obj3 = ModalActionCreatorsDefault;
-    obj3.pushLazy(asyncRequire(11498, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
+    obj3.pushLazy(asyncRequire(11511, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
   },
   close() {
     const obj = ModalActionCreatorsDefault;

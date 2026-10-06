@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import react from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import intl2 from "../../../../intl/index.native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import CircleCheckIcon2 from "../../../../design/components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
 import CircleErrorIcon2 from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
 import BoostGemIcon2 from "../../../../design/components/Icon/native/redesign/generated/BoostGemIcon.tsx";
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = intl2.intl;
         const formatToMarkdownString = intl.formatToMarkdownString;
         const obj3 = { dateString: entitlementExpirationDateToStringDefault(dateString) };
-        const prop = _modDef2525["ol/ao/"];
+        const prop = _modDef2553["ol/ao/"];
         const result = formatToMarkdownString(prop, obj3);
         cResult[1] = dateString;
         cResult[2] = result;
@@ -158,7 +158,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = intl2.intl;
       formatToMarkdownString = intl.formatToMarkdownString;
       obj4 = { dateString: entitlementExpirationDateToStringDefault(dateString) };
-      prop = _modDef2525["ol/ao/"];
+      prop = _modDef2553["ol/ao/"];
       items[1] = React3(Text, obj3);
       return hasOwnProperty(View, obj);
     };
@@ -188,7 +188,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const intl = intl2.intl;
         const formatToPlainString = intl.formatToPlainString;
         const obj3 = { dateString: getGuildPowerupFormattedDateStringDefault(removingAt) };
-        const v6e2ry1 = _modDef2525["6e2ry1"];
+        const v6e2ry1 = _modDef2553["6e2ry1"];
         const formatToPlainStringResult = formatToPlainString(v6e2ry1, obj3);
         cResult[1] = removingAt;
         cResult[2] = formatToPlainStringResult;
@@ -239,7 +239,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = intl2.intl;
       formatToPlainString = intl.formatToPlainString;
       obj4 = { dateString: getGuildPowerupFormattedDateStringDefault(removingAt) };
-      v6e2ry1 = _modDef2525["6e2ry1"];
+      v6e2ry1 = _modDef2553["6e2ry1"];
       items[1] = React3(Text, obj3);
       return hasOwnProperty(View, obj);
     };

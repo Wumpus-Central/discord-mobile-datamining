@@ -202,7 +202,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: first,
         };
-        const tmp9 = closure_5(rules(4886).Text, obj2);
+        const tmp9 = closure_5(rules(4892).Text, obj2);
         cResult[1] = tmp4.title;
         cResult[2] = tmp9;
         tmp7 = tmp9;
@@ -312,7 +312,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: intl.string(rules(1126).t.prJqwT),
       };
-      const Text = rules(4886).Text;
+      const Text = rules(4892).Text;
       intl = rules(1126).intl;
       items = [closure_5(Text, obj2)];
       const obj3 = {

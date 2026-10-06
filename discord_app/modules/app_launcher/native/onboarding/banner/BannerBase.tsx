@@ -336,7 +336,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       });
       const animatedStyle = obj5.useAnimatedStyle(fn);
       const items2 = [tmp.banner, ,];
-      View = sharedValue(4612).View;
+      View = sharedValue(4618).View;
       if (tmp3 > 0) {
         num = 1;
       }
@@ -359,14 +359,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       items2[2] = animatedStyle;
       const obj8 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: items3 };
       items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
-      items4 = [closure_7(sharedValue(5605), obj8), ,];
+      items4 = [closure_7(sharedValue(5612), obj8), ,];
       const obj9 = { style: tmp.imageContainer, children: items5 };
       const obj10 = {
         style: tmp.trinketsLottie,
-        source: require("../../../../../../_runtime/metro/11676__.js"),
+        source: require("../../../../../../_runtime/metro/11690__.js"),
         autoPlay: !stateFromStores,
       };
-      const tmp7Result = sharedValue(5920);
+      const tmp7Result = sharedValue(5927);
       items5 = [closure_7(tmp7Result, obj10), image];
       items4[1] = closure_8(View, obj9);
       const obj11 = { style: tmp.bannerTextContainer, children: closure_7(require("Text/Text").Text, obj12) };

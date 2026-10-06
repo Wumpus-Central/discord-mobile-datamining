@@ -330,12 +330,12 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = guild(504);
       const items = [GuildChannelStore];
       dependencyMap = obj.useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
-      let obj2 = guild(11935);
+      let obj2 = guild(11949);
       const obj3 = { contentContainerStyle: items1, children: items2 };
       items1 = [tmp.container];
       const obj4 = { paddingBottom: bottom + 16 };
       items1[1] = obj4;
-      const obj5 = { source: channel(12427), style: tmp.header };
+      const obj5 = { source: channel(12442), style: tmp.header };
       const canCreateOrAddGuildInDirectory = obj2.useCanCreateOrAddGuildInDirectory(channel);
       items2 = [closure_7(closure_3, obj5), , , ,];
       const obj6 = { style: tmp.title, accessibilityRole: "header", children: intl.format(guild(1126).t.vyvrpC, obj7) };
@@ -349,7 +349,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         color: "text-default",
         children: intl2.string(guild(1126).t.WypE0i),
       };
-      const Text = guild(4886).Text;
+      const Text = guild(4892).Text;
       intl2 = guild(1126).intl;
       items2[2] = closure_7(Text, obj8);
       let tmp8Result = null;
@@ -361,10 +361,10 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
             const obj2 = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id };
             return obj.open(obj2);
           },
-          iconSource: channel(12428),
+          iconSource: channel(12443),
           title: intl3.string(guild(1126).t.hyK15i),
         };
-        const FormCTA = tmp4(8895).FormCTA;
+        const FormCTA = tmp4(8924).FormCTA;
         intl3 = tmp4(1126).intl;
         tmp8Result = closure_7(FormCTA, obj9);
       }
@@ -375,10 +375,10 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           const obj = instant_invite_InstantInviteUtils;
           return obj.handleOpenInviteActionsheet(guild, channel.id, closure_2, metroRequire.HUB_EMPTY_STATE);
         },
-        iconSource: channel(12429),
+        iconSource: channel(12444),
         title: intl4.string(guild(1126).t.L4bwJ9),
       };
-      const FormCTA2 = tmp4(8895).FormCTA;
+      const FormCTA2 = tmp4(8924).FormCTA;
       intl4 = tmp4(1126).intl;
       items2[4] = closure_7(FormCTA2, obj10);
       return closure_8(closure_4, obj3);

@@ -49,7 +49,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         guild_id = null;
       }
       let guild_id1;
-      const tmp10 = guild_id(9080);
+      const tmp10 = guild_id(9116);
       if (stateFromStores != null) {
         guild_id1 = stateFromStores.guild_id;
       }
@@ -102,12 +102,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp19 = cResult[8];
       }
       let id1;
-      const tmp9Result = guild_id(9081);
+      const tmp9Result = guild_id(9117);
       if (stateFromStores != null) {
         id1 = stateFromStores.id;
       }
       const tmp9ResultResult = tmp9Result(id1);
-      const tmp23 = guild_id(6774)();
+      const tmp23 = guild_id(6784)();
       if (isConnectedToVoiceChannel) {
         isConnectedToVoiceChannel = tmp10Result;
       }
@@ -143,7 +143,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         guild_id = null;
       }
       let guild_id1;
-      const tmp6 = guild_id(9080);
+      const tmp6 = guild_id(9116);
       if (stateFromStores != null) {
         guild_id1 = stateFromStores.guild_id;
       }
@@ -170,12 +170,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       let id1;
-      const tmp5Result = guild_id(9081);
+      const tmp5Result = guild_id(9117);
       if (stateFromStores != null) {
         id1 = stateFromStores.id;
       }
       const tmp5ResultResult = tmp5Result(id1);
-      const tmp14 = guild_id(6774)();
+      const tmp14 = guild_id(6784)();
       if (isConnectedToVoiceChannel) {
         isConnectedToVoiceChannel = tmp6Result;
       }

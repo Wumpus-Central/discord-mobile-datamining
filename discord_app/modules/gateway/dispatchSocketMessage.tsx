@@ -31,7 +31,7 @@ const require = globalThis.__r;
 const ChannelStore = ChannelStore2;
 let _require, importDefault, purchase_token_hash;
 
-const f114840 = (timestamps) => {
+const f115002 = (timestamps) => {
   let obj2;
   let tmp8;
   timestamps = timestamps.timestamps;
@@ -54,14 +54,14 @@ const f114840 = (timestamps) => {
   }
   return tmp2;
 };
-const f114844 = (sessionId) => {
+const f115006 = (sessionId) => {
   let activities;
   let hidden_activities;
   const obj = {
     sessionId: sessionId.session_id,
     lastModified: sessionId.last_modified,
     status: sessionId.status,
-    activities: activities.map(f114840),
+    activities: activities.map(f115002),
     hiddenActivities: hidden_activities,
     active: sessionId.active,
     clientInfo: sessionId.client_info,
@@ -201,7 +201,7 @@ function dispatchGuildMemberAdd(guild_id, author, member) {
   const result = obj.parseServerUserCollectibles(collectibles);
   const obj2 = obj5(1394);
   const result1 = obj2.parseServerDisplayNameStyles(display_name_styles);
-  const obj3 = obj5(4497);
+  const obj3 = obj5(4503);
   const result2 = obj3.parseServerMemberGamingLeaderboardData(member_gaming_leaderboard_data);
   let isEqualResult = null != member && member.nick === nick && member.avatar === avatar;
   if (isEqualResult) {
@@ -547,7 +547,7 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
             user: activities.user,
             status: activities.status,
             clientStatus: activities.client_status,
-            activities: activities1.map(f114840),
+            activities: activities1.map(f115002),
             hiddenActivities: tmp2Result.hiddenActivities,
             guildId: id,
             processedAtTimestamp: activities.processed_at_timestamp,
@@ -576,7 +576,7 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
           user: activities.user,
           status: activities.status,
           clientStatus: activities.client_status,
-          activities: activities1.map(f114840),
+          activities: activities1.map(f115002),
           hiddenActivities: tmp2Result.hiddenActivities,
           guildId: id,
           processedAtTimestamp: activities.processed_at_timestamp,
@@ -800,7 +800,7 @@ let result1 = definePreloadableDispatch(
               apexExperiments: apex_experiments,
               requiredAction: user.required_action,
               consents: user.consents,
-              sessions: sessions.map(f114844),
+              sessions: sessions.map(f115006),
               pendingPayments: user.pending_payments,
               countryCode: country_code,
               guildJoinRequests: guild_join_requests,
@@ -920,9 +920,9 @@ defineSimpleDispatch(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (experimentName) =>
 });
 defineSimpleDispatch(["RESUMED"], () => {
   let obj;
-  const localPresenceState = obj(13439).localPresenceState;
+  const localPresenceState = obj(13458).localPresenceState;
   localPresenceState.forceUpdate();
-  const localVoiceState = obj(13439).localVoiceState;
+  const localVoiceState = obj(13458).localVoiceState;
   localVoiceState.forceUpdate();
   obj = { type: "CONNECTION_RESUMED" };
   const obj2 = DispatcherDefault;
@@ -1684,7 +1684,7 @@ defineSimpleDispatch(["GUILD_MEMBERS_CHUNK"], (arg0) => {
           user: activities.user,
           status: activities.status,
           clientStatus: activities.client_status,
-          activities: activities1.map(f114840),
+          activities: activities1.map(f115002),
           hiddenActivities: tmp2Result.hiddenActivities,
           guildId: id,
           processedAtTimestamp: activities.processed_at_timestamp,
@@ -1736,7 +1736,7 @@ defineSimpleDispatch(["THREAD_MEMBER_LIST_UPDATE"], (arg0) => {
           user: activities.user,
           status: activities.status,
           clientStatus: activities.client_status,
-          activities: activities1.map(f114840),
+          activities: activities1.map(f115002),
           hiddenActivities: tmp2Result.hiddenActivities,
           guildId: id,
           processedAtTimestamp: activities.processed_at_timestamp,
@@ -1779,7 +1779,7 @@ defineSimpleDispatch(
     obj2 = obj(1973);
     obj3 = obj(1394);
     vad_colors = guildId.vad_colors;
-    obj4 = obj(4497);
+    obj4 = obj(4503);
     if (vad_colors == null) {
       vad_colors = null;
     }
@@ -2101,7 +2101,7 @@ defineSimpleDispatch(["PRESENCE_UPDATE"], (hidden_activities) => {
     user: hidden_activities.user,
     status: hidden_activities.status,
     clientStatus: hidden_activities.client_status,
-    activities: activities1.map(f114840),
+    activities: activities1.map(f115002),
     hiddenActivities: tmpResult.hiddenActivities,
     guildId: guild_id,
     processedAtTimestamp: hidden_activities.processed_at_timestamp,
@@ -2128,7 +2128,7 @@ defineSimpleDispatch(["PRESENCES_REPLACE"], (arr) => {
         user: activities.user,
         status: activities.status,
         clientStatus: activities.client_status,
-        activities: activities1.map(f114840),
+        activities: activities1.map(f115002),
         hiddenActivities: tmp2Result.hiddenActivities,
         guildId: id,
         processedAtTimestamp: activities.processed_at_timestamp,
@@ -2147,7 +2147,7 @@ defineSimpleDispatch(["PRESENCES_REPLACE"], (arr) => {
   });
 });
 defineSimpleDispatch(["SESSIONS_REPLACE"], (arr) => {
-  const obj = { type: "SESSIONS_REPLACE", sessions: arr.map(f114844) };
+  const obj = { type: "SESSIONS_REPLACE", sessions: arr.map(f115006) };
   const obj2 = DispatcherDefault;
   const dispatchResult = obj2.dispatch(obj);
   dispatchResult.catch((error) => {
@@ -2316,7 +2316,7 @@ defineSimpleDispatch(["RECENT_MENTION_DELETE"], (id) => {
 defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
   let obj2;
   const obj = { type: "SAVED_MESSAGE_CREATE", savedMessage: obj2.savedMessageCreateObjectToClient(body) };
-  obj2 = obj(7495);
+  obj2 = obj(7506);
   const obj3 = DispatcherDefault;
   const dispatchResult = obj3.dispatch(obj);
   dispatchResult.catch((error) => {
@@ -2329,7 +2329,7 @@ defineSimpleDispatch(["SAVED_MESSAGE_CREATE"], (body) => {
 defineSimpleDispatch(["SAVED_MESSAGE_DELETE"], (channelId) => {
   let obj2;
   const obj = { type: "SAVED_MESSAGE_DELETE", savedMessageData: obj2.savedMessageDeleteObjectToClient(channelId) };
-  obj2 = obj(7495);
+  obj2 = obj(7506);
   const obj3 = DispatcherDefault;
   const dispatchResult = obj3.dispatch(obj);
   dispatchResult.catch((error) => {
@@ -2404,7 +2404,7 @@ defineSimpleDispatch(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (cha
     messageId: channelId.message_id,
     userId: channelId.user_id,
     emoji: { id: channelId.answer_id, name: "" },
-    reactionType: obj(7259).ReactionTypes.VOTE,
+    reactionType: obj(7272).ReactionTypes.VOTE,
   };
   const obj2 = DispatcherDefault;
   const dispatchResult = obj2.dispatch(obj);
@@ -2662,7 +2662,7 @@ defineSimpleDispatch(["GUILD_MEMBER_LIST_UPDATE"], (arg0) => {
             user: null,
             status: null,
             clientStatus: null,
-            activities: activities1.map(f114840),
+            activities: activities1.map(f115002),
             hiddenActivities: tmp.hiddenActivities,
             guildId: guild_id,
             processedAtTimestamp: presence.processed_at_timestamp,
@@ -3051,7 +3051,7 @@ defineSimpleDispatch(["INTERACTION_MODAL_CREATE"], (id) => {
     resolved: null,
   };
   ({ nonce: obj.nonce, resolved: obj.resolved } = id);
-  obj2 = obj(5114);
+  obj2 = obj(5120);
   const obj3 = DispatcherDefault;
   const dispatchResult = obj3.dispatch(obj);
   dispatchResult.catch((error) => {
@@ -3714,7 +3714,7 @@ defineSimpleDispatch(["NOTIFICATION_SETTINGS_UPDATE"], (flags) => {
   }
   let result;
   if (null != prop) {
-    const obj = obj2(13490);
+    const obj = obj2(13506);
     result = obj.b64ToDeclarativeSettingsProto(flags.declarative_settings_proto);
   }
   obj2 = { type: "NOTIFICATION_SETTINGS_UPDATE", settings: { flags: flags.flags, declarativeSettings: result } };
@@ -3931,7 +3931,7 @@ defineSimpleDispatch(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (intera
 defineSimpleDispatch(["GUILD_ROOM_CONNECT"], (body, type) => {
   let obj2;
   const obj = { type, room: obj2.serverGuildRoomToClient(body) };
-  obj2 = obj(5051);
+  obj2 = obj(5057);
   const obj3 = DispatcherDefault;
   const dispatchResult = obj3.dispatch(obj);
   dispatchResult.catch((error) => {
@@ -3955,7 +3955,7 @@ defineSimpleDispatch(["GUILD_ROOM_DISCONNECT"], (userId, type) => {
 defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
   let obj2;
   const obj = { type, room: obj2.serverGuildRoomToClient(body) };
-  obj2 = obj(5051);
+  obj2 = obj(5057);
   const obj3 = DispatcherDefault;
   const dispatchResult = obj3.dispatch(obj);
   dispatchResult.catch((error) => {

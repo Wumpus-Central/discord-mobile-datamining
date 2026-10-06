@@ -11,7 +11,7 @@ let c2;
 let c3;
 let closure_4;
 let hasOwnProperty;
-const f114823 = (state) => {
+const f114985 = (state) => {
   const result = closure_0._trackAppBackgrounded(state.state === AppStates.BACKGROUND);
 };
 ({
@@ -28,7 +28,7 @@ class DispatcherWorkScheduler extends BasicWorkScheduler {
     const tmp3 = new DispatcherWorkScheduler(tmp2, tmp, new.target, this, undefined);
     importDefault = tmp3;
     const obj = DispatcherDefault;
-    const subscription = obj.subscribe("APP_STATE_UPDATE", f114823);
+    const subscription = obj.subscribe("APP_STATE_UPDATE", f114985);
     return tmp3;
   }
   _queueIdleCallback() {
@@ -76,7 +76,7 @@ export const createDispatcherWorkScheduler = function createDispatcherWorkSchedu
     const tmp5 = new DispatcherWorkScheduler(tmp2, tmp, tmp3, this, undefined);
     importDefault = tmp5;
     const obj = DispatcherDefault;
-    const subscription = obj.subscribe("APP_STATE_UPDATE", f114823);
+    const subscription = obj.subscribe("APP_STATE_UPDATE", f114985);
     return tmp5;
   } else {
     throw new TypeError("Trying to call a non-function");

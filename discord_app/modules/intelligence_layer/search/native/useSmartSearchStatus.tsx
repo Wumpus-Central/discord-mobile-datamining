@@ -1,6 +1,6 @@
 // discord_app/modules/intelligence_layer/search/native/useSmartSearchStatus.tsx
-import SmartSearchTypes from "../SmartSearchTypes.tsx";
 import SmartSearchUtils from "../SmartSearchUtils.tsx";
+import SmartSearchTypes from "../SmartSearchTypes.tsx";
 import SmartSearchResultsStore from "../SmartSearchResultsStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";

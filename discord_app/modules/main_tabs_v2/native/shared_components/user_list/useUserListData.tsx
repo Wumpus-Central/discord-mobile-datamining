@@ -125,7 +125,7 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   let withFriendSuggestions;
   let withFriends;
   let withGuildMembers;
-  const f104636 = (items) => items.items;
+  const f104788 = (items) => items.items;
   ({ data, withFriends, excludeCurrentUser } = affinitySuggestionsLimit);
   ({
     withGuildMembers,
@@ -218,8 +218,8 @@ function parseUserSearchResults(affinitySuggestionsLimit) {
   } else {
     items11 = [];
   }
-  let items9 = [{ title: null, items: items11.flatMap(f104636) }];
-  const obj = { title: null, items: items11.flatMap(f104636) };
+  let items9 = [{ title: null, items: items11.flatMap(f104788) }];
+  const obj = { title: null, items: items11.flatMap(f104788) };
   const obj2 = { title: intl.string(intl6.t.HbJ7eD), items: valueResult2 };
   intl = intl6.intl;
   if (withAffinitySuggestions) {
@@ -301,7 +301,7 @@ class UserSearch {
     obj.currentQuery = "";
     obj.affinities = {};
     obj.userSearchContext = null;
-    const secondaryIndexMap = new obj(4504).SecondaryIndexMap(
+    const secondaryIndexMap = new obj(4510).SecondaryIndexMap(
       (arg0) => {
         let names;
         let type;

@@ -5,7 +5,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import intl3 from "../../../../intl/index.native.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildPowerupsActionCreators from "../GuildPowerupsActionCreators.tsx";
 import useHasAllocateBoostPermissionDefault from "../hooks/useHasAllocateBoostPermission.tsx";
@@ -76,7 +76,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = guild;
       guild = guild.guild;
       const tmp4 = closure_7();
-      arr = arr(13383)(guild.id);
+      arr = arr(13402)(guild.id);
       if (cResult[0] !== guild.id) {
         const fn = function s() {
           if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
@@ -95,7 +95,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
       }
       const effect = react.useEffect(tmp6, tmp7);
-      if (arr(12170)(guild.id)) {
+      if (arr(12185)(guild.id)) {
         let num4;
         if (arr != null) {
           num4 = arr.length;
@@ -117,7 +117,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       const intl = intl3.intl;
                       const format = intl.format;
                       const obj = { perk1: null, perk2: null };
-                      const MNO3sG = _modDef2525.MNO3sG;
+                      const MNO3sG = _modDef2553.MNO3sG;
                       formatResult = format(MNO3sG, obj);
                     }
                     return formatResult;
@@ -141,7 +141,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       const intl = intl3.intl;
                       const format = intl.format;
                       const obj = { perk1: null, perk2: null };
-                      const MNO3sG = _modDef2525.MNO3sG;
+                      const MNO3sG = _modDef2553.MNO3sG;
                       formatResult = format(MNO3sG, obj);
                     }
                     return formatResult;
@@ -165,7 +165,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       const intl = intl3.intl;
                       const format = intl.format;
                       const obj = { perk1: null, perk2: null };
-                      const MNO3sG = _modDef2525.MNO3sG;
+                      const MNO3sG = _modDef2553.MNO3sG;
                       formatResult = format(MNO3sG, obj);
                     }
                     return formatResult;
@@ -176,7 +176,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             let format = tmp12.format;
             const obj2 = { perks: F() };
-            const v7lwpzR = tmp5(2525)["7lwpzR"];
+            const v7lwpzR = tmp5(2553)["7lwpzR"];
             let formatResult = format(v7lwpzR, obj2);
             cResult[5] = F;
             cResult[6] = formatResult;
@@ -193,7 +193,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       const intl = intl3.intl;
                       const format = intl.format;
                       const obj = { perk1: null, perk2: null };
-                      const MNO3sG = _modDef2525.MNO3sG;
+                      const MNO3sG = _modDef2553.MNO3sG;
                       formatResult = format(MNO3sG, obj);
                     }
                     return formatResult;
@@ -216,7 +216,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                       const intl = intl3.intl;
                       const format = intl.format;
                       const obj = { perk1: null, perk2: null };
-                      const MNO3sG = _modDef2525.MNO3sG;
+                      const MNO3sG = _modDef2553.MNO3sG;
                       formatResult = format(MNO3sG, obj);
                     }
                     return formatResult;
@@ -238,7 +238,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                         const intl = intl3.intl;
                         const format = intl.format;
                         const obj = { perk1: null, perk2: null };
-                        const MNO3sG = _modDef2525.MNO3sG;
+                        const MNO3sG = _modDef2553.MNO3sG;
                         formatResult = format(MNO3sG, obj);
                       }
                       return formatResult;
@@ -257,8 +257,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[7] = tmp4.text;
           cResult[8] = tmp11;
-          cResult[9] = jsx(tmp(4886).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
-          const tmp17 = jsx(tmp(4886).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
+          cResult[9] = jsx(tmp(4892).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
+          const tmp17 = jsx(tmp(4892).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
         }
       }
     }
@@ -285,11 +285,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (0 !== num) {
           ({ style: tmp.text, variant: "text-sm/semibold", children: format(v7lwpzR, obj7) });
-          const Text = guild(4886).Text;
+          const Text = guild(4892).Text;
           const intl = guild(1126).intl;
           format = intl.format;
           let str2 = "";
-          v7lwpzR = _modDef2525["7lwpzR"];
+          v7lwpzR = _modDef2553["7lwpzR"];
           const tmp8 = guild;
           if (null != arr) {
             str2 = "";
@@ -301,7 +301,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 const intl2 = tmp8(1126).intl;
                 const format2 = intl2.format;
                 const obj4 = { perk1: null, perk2: null };
-                const MNO3sG = _modDef2525.MNO3sG;
+                const MNO3sG = _modDef2553.MNO3sG;
                 format2Result = format2(MNO3sG, obj4);
               }
             }

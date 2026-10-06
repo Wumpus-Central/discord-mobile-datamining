@@ -126,8 +126,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[12] = response;
         cResult[13] = C;
         cResult[14] = tmp12;
-        cResult[15] = closure_4(onChange(6072).TableRadioGroup, obj2);
-        const tmp17 = closure_4(onChange(6072).TableRadioGroup, obj2);
+        cResult[15] = closure_4(onChange(6079).TableRadioGroup, obj2);
+        const tmp17 = closure_4(onChange(6079).TableRadioGroup, obj2);
       }
       const obj3 = {
         style: tmp4.formHeader,
@@ -137,8 +137,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       };
       cResult[3] = label;
       cResult[4] = tmp4.formHeader;
-      cResult[5] = closure_4(onChange(4886).Text, obj3);
-      closure_4(onChange(4886).Text, obj3);
+      cResult[5] = closure_4(onChange(4892).Text, obj3);
+      closure_4(onChange(4892).Text, obj3);
     }
   : (hasIcons) => {
       let field;

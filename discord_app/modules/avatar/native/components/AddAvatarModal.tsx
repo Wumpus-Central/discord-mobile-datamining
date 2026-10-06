@@ -362,7 +362,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[37] !== selectedAvatar) {
                         let obj6 = { onAvatarSelect: tmp7[1], selectedAvatar };
-                        const tmp59 = closure_9(selectedAvatar(17571), obj6);
+                        const tmp59 = closure_9(selectedAvatar(17617), obj6);
                         cResult[37] = selectedAvatar;
                         cResult[38] = tmp59;
                         tmp57 = tmp59;
@@ -465,7 +465,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             tmp46 = tmp48;
           }
           const obj13 = { avatarSource: tmp20, showPendingAvatar: null != tmp15, onSelectAvatar: tmp22 };
-          const tmp43 = closure_9(tmp10(17580), obj13);
+          const tmp43 = closure_9(tmp10(17626), obj13);
           cResult[21] = tmp20;
           cResult[22] = null != tmp15;
           cResult[23] = tmp43;
@@ -652,7 +652,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           return obj(...arguments);
         },
       };
-      items3[1] = closure_9(selectedAvatar(17580), obj8);
+      items3[1] = closure_9(selectedAvatar(17626), obj8);
       let obj9 = { style: tmp.errorContainer, children: closure_9(LegacyText, obj10) };
       obj10 = { style: tmp.errorText, children: stringResult };
       LegacyText = native.LegacyText;
@@ -661,7 +661,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         stringResult = intl3.string(intl5.t.XyLlVm);
       }
       items3[2] = closure_9(View, obj9);
-      items4 = [closure_10(View, obj4), closure_9(tmp7(17571), { onAvatarSelect: tmp6, selectedAvatar })];
+      items4 = [closure_10(View, obj4), closure_9(tmp7(17617), { onAvatarSelect: tmp6, selectedAvatar })];
       const obj11 = { style: tmp.buttonContainer, children: closure_9(Button, obj12) };
       obj12 = {
         text: intl4.string(intl5.t.PDTjLN),

@@ -5,7 +5,7 @@ import react2 from "../../../../_runtime/00576_react.js";
 import intl3 from "../../../intl/index.native.tsx";
 import DismissibleContentConstants from "../../dismissible_content/DismissibleContentConstants.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import AssetRegistryDefault from "../../../../_runtime/11849_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/11863_AssetRegistry.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../_runtime/00019_react.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";

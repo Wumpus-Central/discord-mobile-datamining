@@ -82,7 +82,7 @@ class ChannelSettingsChangeRTCRegion extends PureComponent {
       c0 = null;
       tmp = null;
     }
-    let obj = self(10062);
+    let obj = self(10075);
     obj.updateChannel({ rtcRegion: tmp });
     self.setState({ submitting: true }, () => {
       const obj = ChannelSettingsActionCreatorsDefault;

@@ -16,7 +16,7 @@ import DismissibleContentUnsafeUtils from "../../dismissible_content/Dismissible
 import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import useSelectedDismissibleContent from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import ColorConstants from "../../colors/native/ColorConstants.tsx";
 import usePremiumTrialOffer from "../hooks/usePremiumTrialOffer.android.tsx";
@@ -26,7 +26,7 @@ import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.ts
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import AssetRegistryDefault from "../../../../_runtime/14791_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/14807_AssetRegistry.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../_runtime/00019_react.js";
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";

@@ -188,7 +188,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = react.useCallback(() => {
-    const promise = asyncRequire(16446, dependencyMap.paths);
+    const promise = asyncRequire(16486, dependencyMap.paths);
     promise.then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {

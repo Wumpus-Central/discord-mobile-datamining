@@ -70,7 +70,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6] = cResult;
       }
       const effect = react.useEffect(tmp5, tmp6);
-      const insets = ref(6471)().insets;
+      const insets = ref(6478)().insets;
       ref = react.useRef(null);
       if (cResult[2] !== navigation) {
         class S {
@@ -116,7 +116,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[4];
       }
       const effect1 = react.useEffect(S, tmp10);
-      const tmpResult = navigation(7507);
+      const tmpResult = navigation(7518);
       const clientThemesOverride = tmpResult.useClientThemesOverride();
       if (cResult[5] === insets.top) {
         class S {
@@ -220,7 +220,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
         obj.track(constants.FRIEND_ADD_VIEWED, obj2);
       }, []);
-      const insets = ref(6471)().insets;
+      const insets = ref(6478)().insets;
       ref = react.useRef(null);
       const items = [navigation];
       const effect1 = react.useEffect(
@@ -240,7 +240,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }),
         items,
       );
-      let obj = navigation(7507);
+      let obj = navigation(7518);
       const clientThemesOverride = obj.useClientThemesOverride();
       let obj2 = navigation(1369);
       let prop = null;
@@ -257,8 +257,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj4 = { style: items1, children: items2 };
       items1 = [tmp.content, clientThemesOverride];
       items2 = [,];
-      tmp3Result = ref(6537);
-      items2[0] = closure_8(ref(5911), { absolute: true });
+      tmp3Result = ref(6544);
+      items2[0] = closure_8(ref(5918), { absolute: true });
       const obj5 = {
         alwaysBounceVertical: false,
         keyboardShouldPersistTaps: "handled",
@@ -274,7 +274,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         ref,
       };
       ({ paddingBottom: insets.bottom + ref(587).space.PX_16 });
-      tmp3Result2 = ref(13668);
+      tmp3Result2 = ref(13684);
       intl = tmp7(1126).intl;
       items2[1] = closure_8(closure_4, obj5);
       return closure_8(closure_5, obj3);

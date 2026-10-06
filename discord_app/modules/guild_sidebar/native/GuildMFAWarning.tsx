@@ -7,7 +7,7 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import useScaledTextLineHeight from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import AssetRegistryDefault from "../../../../_runtime/16125_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/16164_AssetRegistry.js";
 import _asyncToGenerator from "../../../../_runtime/metro/00005__asyncToGenerator.js";
 import react from "../../../../_runtime/00019_react.js";
 import Constants from "../../../Constants.tsx";

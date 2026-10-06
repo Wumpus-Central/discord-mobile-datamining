@@ -14,7 +14,7 @@ import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef8479 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8512 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import react from "../../../../_runtime/00019_react.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
@@ -164,7 +164,7 @@ const memoResult = react.memo(
             let tmp34;
             const _Symbol = Symbol;
             if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-              const obj7 = { uri: _modDef8479 };
+              const obj7 = { uri: _modDef8512 };
               cResult[21] = obj7;
               tmp28 = obj7;
             } else {
@@ -325,7 +325,7 @@ const memoResult = react.memo(
           const obj7 = { style: items, children: authStore(View, obj8) };
           obj8 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: items1 };
           const obj9 = { source: obj10, style: tmp.sampleProfile, resizeMode: "cover" };
-          obj10 = { uri: _modDef8479 };
+          obj10 = { uri: _modDef8512 };
           const tmp17 = FastImageDefault;
           items1 = [React4(tmp17, obj9)];
           const obj11 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true };

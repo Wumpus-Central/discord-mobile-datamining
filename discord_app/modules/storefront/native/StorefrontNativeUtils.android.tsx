@@ -132,7 +132,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const useStateFromStores = require("get initialized").useStateFromStores;
       const items1 = [];
       require("get initialized");
-      items1[0] = stateFromStores(6739);
+      items1[0] = stateFromStores(6931);
       const items2 = [tmp2];
       stateFromStores = useStateFromStores(
         items1,

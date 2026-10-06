@@ -651,11 +651,11 @@ let closure_20 = memo2(
     : (channel) => {
         let tmp2;
         let tmp3;
-        const f128497 = () => constants.TOP_RIGHT;
+        const f128673 = () => constants.TOP_RIGHT;
         channel = channel.channel;
-        [tmp2, tmp3] = react.useState(f128497);
+        [tmp2, tmp3] = react.useState(f128673);
         const obj = { channel, preferredPosition: tmp2, onMove: tmp3, children: closure_15(closure_19, { channel }) };
-        _slicedToArray(react.useState(f128497), 2);
+        _slicedToArray(react.useState(f128673), 2);
         const tmp4 = PictureInPictureDefault;
         return closure_15(tmp4, obj);
       },

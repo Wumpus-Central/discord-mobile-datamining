@@ -2,7 +2,7 @@
 import intl8 from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import GuildScheduledEventsConstants from "../../GuildScheduledEventsConstants.tsx";
-import _modDef4461 from "../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../_runtime/metro/04467__.js";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import GuildScheduledEventStore from "../../GuildScheduledEventStore.tsx";
 import ScheduleUtils from "../../utils/ScheduleUtils.tsx";
@@ -473,7 +473,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj = { scheduledStartTime: toISOString.toISOString() };
                 const isBeforeResult = null != scheduledEndTime && before.isBefore(toISOString);
                 if (isBeforeResult) {
-                  const obj2 = _modDef4461(toISOString);
+                  const obj2 = _modDef4467(toISOString);
                   const addResult = obj2.add(1, "hour");
                   obj.scheduledEndTime = addResult.toISOString();
                 }
@@ -515,7 +515,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const fn = function x() {
           const obj = ScheduleUtils;
-          return obj.recurrenceRuleToOption(_modDef4461(scheduledStartTime), recurrenceRule);
+          return obj.recurrenceRuleToOption(_modDef4467(scheduledStartTime), recurrenceRule);
         };
         cResult[5] = recurrenceRule;
         cResult[6] = scheduledStartTime;
@@ -565,9 +565,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let name;
       let scheduledStartTime;
       let tmp12;
-      const f99997 = () => {
+      const f100175 = () => {
         const obj = ScheduleUtils;
-        return obj.recurrenceRuleToOption(_modDef4461(scheduledStartTime), recurrenceRule);
+        return obj.recurrenceRuleToOption(_modDef4467(scheduledStartTime), recurrenceRule);
       };
       guildEvent = guildEvent.guildEvent;
       const onChange = guildEvent.onChange;
@@ -583,20 +583,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [scheduledStartTime];
       const tmp = c11();
       ({ name, entityType } = guildEvent);
-      memo = memo.useMemo(() => _modDef4461(scheduledStartTime), items);
+      memo = memo.useMemo(() => _modDef4467(scheduledStartTime), items);
       const items1 = [scheduledEndTime, scheduledStartTime];
       const memo1 = memo.useMemo(() => {
         let addResult;
         if (null != scheduledEndTime) {
-          addResult = _modDef4461(tmp);
+          addResult = _modDef4467(tmp);
         } else {
-          const obj = _modDef4461(scheduledStartTime);
+          const obj = _modDef4467(scheduledStartTime);
           addResult = obj.add(1, "hour");
         }
         return addResult;
       }, items1);
-      [c7, c8] = recurrenceRule(memo.useState(f99997), 2);
-      const tmp4 = recurrenceRule(memo.useState(f99997), 2);
+      [c7, c8] = recurrenceRule(memo.useState(f100175), 2);
+      const tmp4 = recurrenceRule(memo.useState(f100175), 2);
       const memo2 = memo.useMemo(() => onChange(scheduledEndTime[9])(), []);
       const items2 = [memo];
       const memo3 = memo.useMemo(() => {
@@ -604,7 +604,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         return obj.add(guildEvent(scheduledEndTime[10]).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
       }, []);
       const memo4 = memo.useMemo(() => {
-        const obj = _modDef4461(memo);
+        const obj = _modDef4467(memo);
         return obj.add(15, "minutes");
       }, items2);
       const memo5 = memo.useMemo(() => {
@@ -676,7 +676,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             const obj = { scheduledStartTime: toISOString.toISOString() };
             const isBeforeResult = null != scheduledEndTime && memo1.isBefore(toISOString);
             if (isBeforeResult) {
-              const obj2 = _modDef4461(toISOString);
+              const obj2 = _modDef4467(toISOString);
               const addResult = obj2.add(1, "hour");
               obj.scheduledEndTime = addResult.toISOString();
             }

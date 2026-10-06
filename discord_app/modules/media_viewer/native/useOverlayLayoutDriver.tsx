@@ -24,9 +24,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let width;
       let obj = sharedValue(576);
       const cResult = obj.c(6);
-      let obj2 = sharedValue(4612);
+      let obj2 = sharedValue(4618);
       sharedValue = obj2.useSharedValue(0);
-      const obj3 = sharedValue(7968);
+      const obj3 = sharedValue(7978);
       const mediaViewerDimensions = obj3.useMediaViewerDimensions();
       ({ height, width } = mediaViewerDimensions);
       if (cResult[0] !== sharedValue) {
@@ -61,9 +61,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : () => {
       let sharedValue;
-      let obj = sharedValue(4612);
+      let obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(0);
-      let obj2 = sharedValue(7968);
+      let obj2 = sharedValue(7978);
       const mediaViewerDimensions = obj2.useMediaViewerDimensions();
       const items = [sharedValue, ,];
       ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);

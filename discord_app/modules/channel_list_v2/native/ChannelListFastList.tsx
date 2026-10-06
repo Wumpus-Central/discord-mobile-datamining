@@ -14,7 +14,6 @@ const memoResult = react.memo(
     ReactCompilerGating.isReactCompilerEnabled()
       ? (arg0, arg1) => {
           let endReachedThreshold;
-          let footerSize;
           let getItemSize;
           let getRecyclerKey;
           let getSectionFooterSize;
@@ -37,10 +36,9 @@ const memoResult = react.memo(
           let tmp5;
           let waitFor;
           const obj = react2;
-          const cResult = obj.c(26);
+          const cResult = obj.c(25);
           ({
             endReachedThreshold,
-            footerSize,
             getItemSize,
             getRecyclerKey,
             getSectionFooterSize,
@@ -72,33 +70,31 @@ const memoResult = react.memo(
             tmp5 = cResult[1];
           }
           if (cResult[2] === endReachedThreshold) {
-            if (cResult[3] === footerSize) {
-              if (cResult[4] === getItemSize) {
-                if (cResult[5] === getRecyclerKey) {
-                  if (cResult[6] === getSectionFooterSize) {
-                    if (cResult[7] === getSectionHeaderSize) {
-                      if (cResult[8] === headerSize) {
-                        if (cResult[9] === initialScrollItem) {
-                          if (cResult[10] === initialScrollSection) {
-                            if (cResult[11] === insetEnd) {
-                              if (cResult[12] === listViewportHeight) {
-                                if (cResult[13] === onEndReached) {
-                                  if (cResult[14] === onScroll) {
-                                    if (cResult[15] === onScrollWorklet) {
-                                      if (cResult[16] === renderAccessory) {
-                                        if (cResult[17] === renderHeader) {
-                                          if (cResult[18] === renderItem) {
-                                            if (cResult[19] === renderSectionFooter) {
-                                              if (cResult[20] === renderSectionHeader) {
-                                                if (cResult[21] === tmp5) {
-                                                  if (cResult[22] === sections) {
-                                                    if (cResult[23] === tmp4) {
-                                                      let tmp6;
-                                                      if (cResult[24] === waitFor) {
-                                                        tmp6 = cResult[25];
-                                                      }
-                                                      return tmp6;
+            if (cResult[3] === getItemSize) {
+              if (cResult[4] === getRecyclerKey) {
+                if (cResult[5] === getSectionFooterSize) {
+                  if (cResult[6] === getSectionHeaderSize) {
+                    if (cResult[7] === headerSize) {
+                      if (cResult[8] === initialScrollItem) {
+                        if (cResult[9] === initialScrollSection) {
+                          if (cResult[10] === insetEnd) {
+                            if (cResult[11] === listViewportHeight) {
+                              if (cResult[12] === onEndReached) {
+                                if (cResult[13] === onScroll) {
+                                  if (cResult[14] === onScrollWorklet) {
+                                    if (cResult[15] === renderAccessory) {
+                                      if (cResult[16] === renderHeader) {
+                                        if (cResult[17] === renderItem) {
+                                          if (cResult[18] === renderSectionFooter) {
+                                            if (cResult[19] === renderSectionHeader) {
+                                              if (cResult[20] === tmp5) {
+                                                if (cResult[21] === sections) {
+                                                  if (cResult[22] === tmp4) {
+                                                    let tmp6;
+                                                    if (cResult[23] === waitFor) {
+                                                      tmp6 = cResult[24];
                                                     }
+                                                    return tmp6;
                                                   }
                                                 }
                                               }
@@ -129,7 +125,6 @@ const memoResult = react.memo(
             stickyHeaderFooter: true,
             renderHeader,
             headerSize,
-            footerSize,
             endReachedThreshold,
             onEndReached,
             renderAccessory,
@@ -151,34 +146,32 @@ const memoResult = react.memo(
             onScrollWorklet,
           });
           cResult[2] = endReachedThreshold;
-          cResult[3] = footerSize;
-          cResult[4] = getItemSize;
-          cResult[5] = getRecyclerKey;
-          cResult[6] = getSectionFooterSize;
-          cResult[7] = getSectionHeaderSize;
-          cResult[8] = headerSize;
-          cResult[9] = initialScrollItem;
-          cResult[10] = initialScrollSection;
-          cResult[11] = insetEnd;
-          cResult[12] = listViewportHeight;
-          cResult[13] = onEndReached;
-          cResult[14] = onScroll;
-          cResult[15] = onScrollWorklet;
-          cResult[16] = renderAccessory;
-          cResult[17] = renderHeader;
-          cResult[18] = renderItem;
-          cResult[19] = renderSectionFooter;
-          cResult[20] = renderSectionHeader;
-          cResult[21] = tmp5;
-          cResult[22] = sections;
-          cResult[23] = tmp4;
-          cResult[24] = waitFor;
-          cResult[25] = tmp7;
+          cResult[3] = getItemSize;
+          cResult[4] = getRecyclerKey;
+          cResult[5] = getSectionFooterSize;
+          cResult[6] = getSectionHeaderSize;
+          cResult[7] = headerSize;
+          cResult[8] = initialScrollItem;
+          cResult[9] = initialScrollSection;
+          cResult[10] = insetEnd;
+          cResult[11] = listViewportHeight;
+          cResult[12] = onEndReached;
+          cResult[13] = onScroll;
+          cResult[14] = onScrollWorklet;
+          cResult[15] = renderAccessory;
+          cResult[16] = renderHeader;
+          cResult[17] = renderItem;
+          cResult[18] = renderSectionFooter;
+          cResult[19] = renderSectionHeader;
+          cResult[20] = tmp5;
+          cResult[21] = sections;
+          cResult[22] = tmp4;
+          cResult[23] = waitFor;
+          cResult[24] = tmp7;
           tmp6 = tmp7;
         }
       : (scrollIndicatorInsetBottom, arg1) => {
           let endReachedThreshold;
-          let footerSize;
           let getItemSize;
           let getRecyclerKey;
           let getSectionFooterSize;
@@ -201,7 +194,6 @@ const memoResult = react.memo(
           scrollIndicatorInsetBottom = scrollIndicatorInsetBottom.scrollIndicatorInsetBottom;
           ({
             endReachedThreshold,
-            footerSize,
             getItemSize,
             getRecyclerKey,
             getSectionFooterSize,
@@ -234,7 +226,6 @@ const memoResult = react.memo(
             stickyHeaderFooter: true,
             renderHeader,
             headerSize,
-            footerSize,
             endReachedThreshold,
             onEndReached,
             renderAccessory,

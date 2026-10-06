@@ -27,7 +27,7 @@ export default function useStartAuthorize(arg0) {
   let authorizationApp;
   const debug = obj.debug;
   const tmp = undefined !== debug && debug;
-  let obj2 = authorizationApp(6662);
+  let obj2 = authorizationApp(6669);
   authorizationApp = obj2.useAuthorizationApp(arg0);
   let prop;
   if (authorizationApp != null) {
@@ -38,8 +38,8 @@ export default function useStartAuthorize(arg0) {
     WEB = AuthorizeFlow.WEB;
   }
   let parentId;
-  const useAuthorizedAppsToken = tmp2(6664).useAuthorizedAppsToken;
-  authorizationApp(6664);
+  const useAuthorizedAppsToken = tmp2(6671).useAuthorizedAppsToken;
+  authorizationApp(6671);
   if (authorizationApp != null) {
     parentId = authorizationApp.parentId;
   }

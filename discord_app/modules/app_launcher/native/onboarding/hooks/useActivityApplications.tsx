@@ -22,7 +22,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp3 = cResult[1];
       }
-      const arr = fetchesShelf(11653)(tmp3);
+      const arr = fetchesShelf(11667)(tmp3);
       if (cResult[2] !== arr) {
         let tmp6;
         const _Symbol = Symbol;
@@ -71,7 +71,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       guildId = guildId.guildId;
       const fetchesShelf = guildId.fetchesShelf;
       const items = [fetchesShelf, guildId];
-      const arr = fetchesShelf(11653)({ guildId });
+      const arr = fetchesShelf(11667)({ guildId });
       const mapped = arr.map((application) => application.application);
       const effect = react.useEffect(() => {
         if (fetchesShelf) {

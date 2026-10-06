@@ -2,8 +2,8 @@
 import react_native from "../../../../../../../_runtime/00017_react-native.js";
 import Constants from "../../../../../../Constants.tsx";
 import intl5 from "../../../../../../intl/index.native.tsx";
-import _modDef4461 from "../../../../../../../_runtime/metro/04461__.js";
-import AssetRegistryDefault from "../../../../../../../_runtime/04804_AssetRegistry.js";
+import _modDef4467 from "../../../../../../../_runtime/metro/04467__.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/04810_AssetRegistry.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import SafetyHubConstants from "../../../../../safety_hub/SafetyHubConstants.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
@@ -76,9 +76,9 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
             formatToPlainString = intl2.formatToPlainString;
             obj3 = { daysAgo: diff(obj4.unix(parsed), "days") };
             eevFb6 = intl5.t.eevFb6;
-            diff = _modDef4461().diff;
-            _modDef4461();
-            obj4 = _modDef4461;
+            diff = _modDef4467().diff;
+            _modDef4467();
+            obj4 = _modDef4467;
             intl3 = intl5.intl;
             intl4 = intl5.intl;
             return obj;

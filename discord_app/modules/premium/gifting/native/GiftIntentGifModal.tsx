@@ -70,7 +70,7 @@ let obj = function _sendGiftIntentGif() {
               is_custom_message = undefined;
               url = 1;
               c4 = 1;
-              return { value: "Set", done: true };
+              return { value: "Reflect", done: true };
             }
           } else {
             if (1 === url) {
@@ -472,7 +472,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : (arg0) => {
       let onDismiss;
-      const f107642 = () => {
+      const f107795 = () => {
         let channelId;
         let giftIntentType;
         let intl;
@@ -501,8 +501,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           onDismiss();
         }
       }, items);
-      obj = { initialRouteName: constants.GIFT_INTENT_GIF, screens: require("useInitialValue")(f107642) };
-      require("useInitialValue")(f107642);
+      obj = { initialRouteName: constants.GIFT_INTENT_GIF, screens: require("useInitialValue")(f107795) };
+      require("useInitialValue")(f107795);
       return closure_10(require("Navigator").Navigator, obj);
     };
 const result = size.fileFinishedImporting("modules/premium/gifting/native/GiftIntentGifModal.tsx");

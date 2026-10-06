@@ -16,7 +16,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const require = globalThis.__r;
 let _require, importDefault;
 
-const f105041 = (channel) => channel.channel.id !== NULL_STRING_CHANNEL_ID;
+const f105193 = (channel) => channel.channel.id !== NULL_STRING_CHANNEL_ID;
 function areDestinationsEqual(arr, arg1) {
   let closure_0 = arg1;
   const tmp =
@@ -923,7 +923,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (listChannel.isCategory()) {
           let _categories = categories._categories;
-          found = _categories.filter(f105041);
+          found = _categories.filter(f105193);
         } else {
           const tmpResult3 = tmp(listChannel[14]);
           found = tmpResult3.getSectionSiblings(listChannel, categories);
@@ -962,7 +962,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const categoryKey = obj.getCategoryKey(listChannel.parent_id, categories);
       if (listChannel.isCategory()) {
         let _categories = categories._categories;
-        found = _categories.filter(f105041);
+        found = _categories.filter(f105193);
       } else {
         const tmp3Result = tmp3(tmp4[14]);
         found = tmp3Result.getSectionSiblings(listChannel, categories);

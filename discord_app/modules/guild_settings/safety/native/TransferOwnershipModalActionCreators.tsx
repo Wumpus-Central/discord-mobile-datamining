@@ -9,7 +9,7 @@ let obj = {
   open(guild, toUser) {
     const obj = ModalActionCreatorsDefault;
     const obj2 = { guild, toUser };
-    obj.pushLazy(asyncRequire(11457, dependencyMap.paths), obj2, TRANSFER_OWNERSHIP_MODAL_KEY);
+    obj.pushLazy(asyncRequire(11470, dependencyMap.paths), obj2, TRANSFER_OWNERSHIP_MODAL_KEY);
   },
   close() {
     let obj = DispatcherDefault;

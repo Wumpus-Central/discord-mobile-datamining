@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import AlertDefault from "../../../components_native/common/Alert.tsx";
-import AssetRegistryDefault from "../../../../_runtime/08756_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/08788_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import GameConsoleConstants from "../GameConsoleConstants.tsx";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";

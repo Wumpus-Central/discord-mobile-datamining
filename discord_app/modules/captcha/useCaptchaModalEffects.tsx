@@ -43,7 +43,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp3 = cResult[1];
       }
-      str(5590)(tmp3);
+      str(5597)(tmp3);
       if (cResult[2] !== str) {
         const fn2 = function o() {
           let ref;
@@ -89,7 +89,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         analyticsType = "Guild Join Captcha";
       }
       dependencyMap = react.useRef(true);
-      const tmp = analyticsType(5590)(() => {
+      const tmp = analyticsType(5597)(() => {
         let ref;
         return () => {
           if (ref.current) {

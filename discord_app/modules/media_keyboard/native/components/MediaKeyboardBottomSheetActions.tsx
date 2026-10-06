@@ -4,7 +4,7 @@ import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import react_mod from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -282,8 +282,8 @@ const memoResult = react.memo(
         dependencyMap = undefined;
         react = undefined;
         variant = undefined;
-        let obj = onHeightChange(4696);
-        const gradientValue = obj.useGradientValue(onHeightChange(4696).GradientPercentage.END);
+        let obj = onHeightChange(4702);
+        const gradientValue = obj.useGradientValue(onHeightChange(4702).GradientPercentage.END);
         let hexResult = null;
         if (null != gradientValue) {
           let obj2 = _modDef683(gradientValue);
@@ -291,18 +291,18 @@ const memoResult = react.memo(
           hexResult = alphaResult.hex();
         }
         const bottom = useSafeAreaInsetsDefault().bottom;
-        const tmpResult = onHeightChange(4580);
+        const tmpResult = onHeightChange(4586);
         const tmp6 = closure_8(
           bottom,
           tmpResult.useToken(nativeDefault.colors.MOBILE_FLOATINGBAR_BACKGROUND_HIGHER),
           hexResult,
         );
         importDefault = tmp6;
-        const tmpResult4 = onHeightChange(4580);
+        const tmpResult4 = onHeightChange(4586);
         dependencyMap = tmpResult4.useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_ICON_COLOR_ACTIVE);
-        const tmpResult5 = onHeightChange(4580);
+        const tmpResult5 = onHeightChange(4586);
         react = tmpResult5.useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_COLOR_ACTIVE);
-        const tmpResult6 = onHeightChange(4580);
+        const tmpResult6 = onHeightChange(4586);
         variant = tmpResult6.useToken(nativeDefault.modules.mobile.MEDIA_KEYBOARD_BUTTON_TEXT_VARIANT);
         let items = [tmp6.gradient.color];
         const memo = react.useMemo(() => {

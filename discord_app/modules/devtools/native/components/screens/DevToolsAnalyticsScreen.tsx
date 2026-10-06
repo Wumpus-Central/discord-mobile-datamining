@@ -3,7 +3,7 @@ import react_native from "../../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Constants from "../../../../../Constants.tsx";
-import _modDef4461 from "../../../../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../../../../_runtime/metro/04467__.js";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import ClipboardUtils from "../../../../../utils/ClipboardUtils.native.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
@@ -136,7 +136,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = user;
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp13 = closure_8(fingerprint(10108).AnalyticsIcon, {});
+        const tmp13 = closure_8(fingerprint(10121).AnalyticsIcon, {});
         cResult[2] = tmp13;
         tmp11 = tmp13;
       } else {
@@ -165,7 +165,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         class F {
           constructor() {
             return closure_2(() => {
-              /* body not rendered: F144711 */
+              /* body not rendered: F144917 */
             });
           }
         }
@@ -174,7 +174,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         class F {
           constructor() {
             return closure_2(() => {
-              /* body not rendered: F144711 */
+              /* body not rendered: F144917 */
             });
           }
         }
@@ -183,7 +183,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         class F {
           constructor() {
             return closure_2(() => {
-              /* body not rendered: F144711 */
+              /* body not rendered: F144917 */
             });
           }
         }
@@ -193,7 +193,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[8] = start;
       cResult[9] = !tmp6;
       cResult[10] = tmp14;
-      cResult[11] = closure_8(fingerprint(5993).TableRow, {
+      cResult[11] = closure_8(fingerprint(6000).TableRow, {
         arrow: !tmp6,
         icon: tmp11,
         label: event,
@@ -202,7 +202,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         start,
         end,
       });
-      closure_8(fingerprint(5993).TableRow, {
+      closure_8(fingerprint(6000).TableRow, {
         arrow: !tmp6,
         icon: tmp11,
         label: event,
@@ -244,7 +244,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const user = UserStore.getUser(fingerprint);
       let obj = {
         arrow: !tmp5Result2,
-        icon: closure_8(fingerprint(10108).AnalyticsIcon, {}),
+        icon: closure_8(fingerprint(10121).AnalyticsIcon, {}),
         label: event,
         subLabel: str2,
         onPress() {
@@ -253,7 +253,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         start,
         end,
       };
-      const TableRow = fingerprint(5993).TableRow;
+      const TableRow = fingerprint(6000).TableRow;
       if ("name" in properties) {
         str2 = properties.name;
       } else {
@@ -272,13 +272,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { style: tmp.commonPropertiesContainer, children: items1 };
         let obj4 = { name: "Timestamp (local)", children: closure_8(Text, obj5) };
         obj5 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: obj6.calendar() };
-        Text = fingerprint(4886).Text;
-        obj6 = _modDef4461(timestamp);
+        Text = fingerprint(4892).Text;
+        obj6 = _modDef4467(timestamp);
         items1 = [closure_8(closure_11, obj4), ,];
         let tmp7Result = null != user;
         const tmp12 = importDefault;
         if (tmp7Result) {
-          const obj7 = { name: "User ", children: closure_8(tmp12(9296), obj8) };
+          const obj7 = { name: "User ", children: closure_8(tmp12(9331), obj8) };
           obj8 = { user };
           tmp7Result = closure_8(closure_11, obj7);
         }
@@ -294,7 +294,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             },
             children: items3,
           };
-          const PressableOpacity = fingerprint(5909).PressableOpacity;
+          const PressableOpacity = fingerprint(5916).PressableOpacity;
           const obj10 = {
             variant: "text-sm/medium",
             color: "mobile-text-heading-primary",
@@ -302,11 +302,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             children: fingerprint,
           };
           items2 = [tmp.monospace, { marginRight: 4 }];
-          items3 = [closure_8(fingerprint(4886).Text, obj10), closure_8(fingerprint(4843).CopyIcon, { size: "sm" })];
+          items3 = [closure_8(fingerprint(4892).Text, obj10), closure_8(fingerprint(4849).CopyIcon, { size: "sm" })];
           tmp7Result1 = closure_9(PressableOpacity, obj9);
         } else {
           const obj11 = { variant: "text-sm/medium", color: "text-muted", style: tmp.monospace, children: "null" };
-          tmp7Result1 = closure_8(fingerprint(4886).Text, obj11);
+          tmp7Result1 = closure_8(fingerprint(4892).Text, obj11);
         }
         const obj12 = { name: "Fingerprint", children: tmp7Result1 };
         items1[2] = closure_8(closure_11, obj12);
@@ -408,7 +408,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const tmp19 = closure_8(trimmed(11775).ArrowsUpDownIcon, {});
+          const tmp19 = closure_8(trimmed(11789).ArrowsUpDownIcon, {});
           cResult[6] = tmp19;
           tmp17 = tmp19;
         } else {
@@ -416,7 +416,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[7] !== first) {
           const obj2 = { icon: tmp17, label: "Reverse Events", value: first, onValueChange: tmp11 };
-          const tmp22 = closure_8(trimmed(6698).TableSwitchRow, obj2);
+          const tmp22 = closure_8(trimmed(6705).TableSwitchRow, obj2);
           cResult[7] = first;
           cResult[8] = tmp22;
           tmp20 = tmp22;
@@ -428,11 +428,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             arrow: true,
             variant: "danger",
-            icon: closure_8(trimmed(4847).TrashIcon, { color: "text-feedback-critical" }),
+            icon: closure_8(trimmed(4853).TrashIcon, { color: "text-feedback-critical" }),
             label: "Clear Analytics Log",
-            onPress: trimmed(15404).clearAnalyticsLog,
+            onPress: trimmed(15420).clearAnalyticsLog,
           };
-          const TableRow = tmp(5993).TableRow;
+          const TableRow = tmp(6000).TableRow;
           const tmp25 = closure_8(TableRow, obj3);
           cResult[9] = tmp25;
           tmp23 = tmp25;
@@ -442,7 +442,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] !== tmp20) {
           const obj4 = { title: "Actions", hasIcons: true, children: items1 };
           items1 = [tmp20, tmp23];
-          const tmp28 = closure_9(trimmed(6074).TableRowGroup, obj4);
+          const tmp28 = closure_9(trimmed(6081).TableRowGroup, obj4);
           cResult[10] = tmp20;
           cResult[11] = tmp28;
           tmp26 = tmp28;
@@ -452,7 +452,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol3 = Symbol;
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const obj5 = { placeholder: "Search by event name", onChange: tmp13 };
-          const tmp31 = closure_8(trimmed(6547).SearchField, obj5);
+          const tmp31 = closure_8(trimmed(6554).SearchField, obj5);
           cResult[12] = tmp31;
           tmp29 = tmp31;
         } else {
@@ -475,7 +475,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[18] !== tmp36) {
             const obj7 = { title: "Analytics Events", hasIcons: false, children: tmp36 };
-            const tmp42 = closure_8(trimmed(6074).TableRowGroup, obj7);
+            const tmp42 = closure_8(trimmed(6081).TableRowGroup, obj7);
             cResult[18] = tmp36;
             cResult[19] = tmp42;
             tmp40 = tmp42;
@@ -542,7 +542,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 data: arr4,
                 renderItem: tmp46,
               };
-              const tmp49 = closure_8(trimmed(8371).FlashList, obj9);
+              const tmp49 = closure_8(trimmed(8404).FlashList, obj9);
               cResult[26] = arr4;
               cResult[27] = stateFromStores;
               cResult[28] = tmp4.contentContainer;
@@ -554,7 +554,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj10 = { spacing: 16, children: items2 };
           items2 = [tmp26, tmp32, tmp40];
-          const tmp45 = closure_9(trimmed(5593).Stack, obj10);
+          const tmp45 = closure_9(trimmed(5600).Stack, obj10);
           cResult[20] = tmp40;
           cResult[21] = tmp26;
           cResult[22] = tmp32;
@@ -562,13 +562,13 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           tmp43 = tmp45;
         }
         if (0 === loggedEvents.length) {
-          tmp37 = closure_8(tmp(5993).TableRow, { label: "No events logged." });
+          tmp37 = closure_8(tmp(6000).TableRow, { label: "No events logged." });
         } else {
           tmp37 = null;
           if (0 === arr3.length) {
             const _HermesInternal = HermesInternal;
             const obj11 = { label: 'No events match "' + str + '"' };
-            const TableRow2 = tmp(5993).TableRow;
+            const TableRow2 = tmp(6000).TableRow;
             tmp37 = closure_8(TableRow2, obj11);
           }
         }
@@ -638,42 +638,42 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         reversed = items1;
       }
       const obj2 = { style: tmp.analyticsContainer, children: closure_8(FlashList, obj8) };
-      FlashList = tmp2(8371).FlashList;
-      const Stack = tmp2(5593).Stack;
+      FlashList = tmp2(8404).FlashList;
+      const Stack = tmp2(5600).Stack;
       const obj3 = { title: "Actions", hasIcons: true, children: items2 };
-      const TableRowGroup = tmp2(6074).TableRowGroup;
+      const TableRowGroup = tmp2(6081).TableRowGroup;
       const obj4 = {
-        icon: closure_8(trimmed(11775).ArrowsUpDownIcon, {}),
+        icon: closure_8(trimmed(11789).ArrowsUpDownIcon, {}),
         label: "Reverse Events",
         value: first,
         onValueChange: tmp7,
       };
-      const TableSwitchRow = tmp2(6698).TableSwitchRow;
+      const TableSwitchRow = tmp2(6705).TableSwitchRow;
       items2 = [closure_8(TableSwitchRow, obj4)];
       const obj5 = {
         arrow: true,
         variant: "danger",
-        icon: closure_8(trimmed(4847).TrashIcon, { color: "text-feedback-critical" }),
+        icon: closure_8(trimmed(4853).TrashIcon, { color: "text-feedback-critical" }),
         label: "Clear Analytics Log",
-        onPress: trimmed(15404).clearAnalyticsLog,
+        onPress: trimmed(15420).clearAnalyticsLog,
       };
-      const TableRow = tmp2(5993).TableRow;
+      const TableRow = tmp2(6000).TableRow;
       items2[1] = closure_8(TableRow, obj5);
       const items3 = [closure_9(TableRowGroup, obj3), ,];
       const obj6 = {
         style: tmp.searchFieldContainer,
-        children: closure_8(trimmed(6547).SearchField, { placeholder: "Search by event name", onChange: tmp9 }),
+        children: closure_8(trimmed(6554).SearchField, { placeholder: "Search by event name", onChange: tmp9 }),
       };
       items3[1] = closure_8(View, obj6);
-      const TableRowGroup2 = tmp2(6074).TableRowGroup;
+      const TableRowGroup2 = tmp2(6081).TableRowGroup;
       if (0 === loggedEvents.length) {
-        tmp12Result = closure_8(tmp2(5993).TableRow, { label: "No events logged." });
+        tmp12Result = closure_8(tmp2(6000).TableRow, { label: "No events logged." });
       } else {
         tmp12Result = null;
         if (0 === found.length) {
           const _HermesInternal = HermesInternal;
           const obj7 = { label: 'No events match "' + str + '"' };
-          const TableRow2 = tmp2(5993).TableRow;
+          const TableRow2 = tmp2(6000).TableRow;
           tmp12Result = closure_8(TableRow2, obj7);
         }
       }

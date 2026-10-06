@@ -44,7 +44,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[2];
         tmp6 = cResult[3];
       }
-      const tmpResult = tmp(4612);
+      const tmpResult = tmp(4618);
       sharedValue = tmpResult.useSharedValue(0);
       if (cResult[4] !== sharedValue) {
         const fn = function h() {
@@ -109,7 +109,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       ({ source, style } = arg0);
       let sharedValue;
       const merged = Object.assign(arg0, Object.assign({ source: 0, style: 0 }));
-      let obj = sharedValue(4612);
+      let obj = sharedValue(4618);
       sharedValue = obj.useSharedValue(0);
       const Image = ReanimatedRexportDefault.Image;
       const merged1 = Object.assign(merged);

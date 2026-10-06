@@ -4,7 +4,7 @@ import react2 from "../../../../../_runtime/00576_react.js";
 import Constants from "../../../../Constants.tsx";
 import intl4 from "../../../../intl/index.native.tsx";
 import DismissibleContentConstants from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import _modDef3367 from "../../intl/FavoritesGuild.messages.js";
+import _modDef3395 from "../../intl/FavoritesGuild.messages.js";
 import LayerScope2 from "../../../../design/components/Layers/native/LayerScope.native.tsx";
 import FavoritesDismissibleContent from "../../FavoritesDismissibleContent.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -87,7 +87,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp8 = cResult[3];
       }
-      const tmpResult2 = markPopoverAsDismissed(10050);
+      const tmpResult2 = markPopoverAsDismissed(10063);
       const favoritesMenuItemPopoverDismissibleContent = tmpResult2.useFavoritesMenuItemPopoverDismissibleContent(tmp8);
       ({ shouldShowPopover, markPopoverAsDismissed } = favoritesMenuItemPopoverDismissibleContent);
       if (cResult[4] !== markPopoverAsDismissed) {
@@ -122,7 +122,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const string = tmp15.string;
-        const tmp17 = _modDef3367;
+        const tmp17 = _modDef3395;
         cResult[8] = stateFromStores;
         cResult[9] = string(stateFromStores ? tmp17.TWuDTt : tmp17["25YCHl"]);
         const stringResult = string(stateFromStores ? tmp17.TWuDTt : tmp17["25YCHl"]);
@@ -139,7 +139,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
           }
         }
-        const stringResult1 = obj4.string(_modDef3367.Ztl9ht);
+        const stringResult1 = obj4.string(_modDef3395.Ztl9ht);
         cResult[10] = stringResult1;
         tmp19 = stringResult1;
       } else {
@@ -155,7 +155,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             markPopoverAsDismissed(ContentDismissActionType.TAKE_ACTION);
           }
         }
-        const stringResult2 = obj5.string(_modDef3367["+h9aza"]);
+        const stringResult2 = obj5.string(_modDef3395["+h9aza"]);
         cResult[11] = stringResult2;
         tmp22 = stringResult2;
       } else {
@@ -224,15 +224,15 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           visible: shouldShowPopover,
           position: "bottom",
           title: string(TWuDTt),
-          description: intl2.string(tmp6(3367).Ztl9ht),
+          description: intl2.string(tmp6(3395).Ztl9ht),
           onDismiss,
           renderImgComponent: "r",
-          buttonLabel: intl3.string(tmp6(3367)["+h9aza"]),
+          buttonLabel: intl3.string(tmp6(3395)["+h9aza"]),
           onButtonPress: callback1,
         };
         const intl = intl4.intl;
         string = intl.string;
-        const tmp4 = _modDef3367;
+        const tmp4 = _modDef3395;
         if (stateFromStores) {
           TWuDTt = tmp4.TWuDTt;
           tmp6 = importDefault;

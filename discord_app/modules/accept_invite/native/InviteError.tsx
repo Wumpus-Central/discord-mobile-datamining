@@ -11,7 +11,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import GuildIcon from "../../guild/native/GuildIcon.tsx";
 import InviteErrorUtils from "../../../utils/InviteErrorUtils.tsx";
-import AssetRegistryDefault from "../../../../_runtime/12392_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/12407_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import Constants from "../../../Constants.tsx";
@@ -77,14 +77,14 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       importDefault = tmp5;
-      const tmpResult = onPressClose(4729);
-      const tmp6Result = importDefault(tmpResult.isThemeDark(useThemeDefault()) ? 12389 : 12390);
+      const tmpResult = onPressClose(4735);
+      const tmp6Result = importDefault(tmpResult.isThemeDark(useThemeDefault()) ? 12404 : 12405);
       let code;
       if (inviteError != null) {
         code = inviteError.code;
       }
       if (cResult[2] !== code) {
-        const tmpResult2 = onPressClose(12391);
+        const tmpResult2 = onPressClose(12406);
         const descriptiveInviteError = tmpResult2.getDescriptiveInviteError(code);
         cResult[2] = code;
         cResult[3] = descriptiveInviteError;
@@ -188,7 +188,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               tmp34 = tmp37;
             }
             const obj3 = { style: tmp4.expiredBody, variant: "text-sm/medium", color: "text-default", children: tmp13 };
-            const tmp31 = closure_8(onPressClose(4886).Text, obj3);
+            const tmp31 = closure_8(onPressClose(4892).Text, obj3);
             cResult[17] = tmp13;
             cResult[18] = tmp4.expiredBody;
             cResult[19] = tmp31;
@@ -200,7 +200,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp23,
           };
-          const tmp28 = closure_8(onPressClose(4886).Text, obj4);
+          const tmp28 = closure_8(onPressClose(4892).Text, obj4);
           cResult[14] = tmp4.expiredTitle;
           cResult[15] = tmp23;
           cResult[16] = tmp28;
@@ -246,7 +246,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_11();
       const obj = shared;
       let code;
-      const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12389 : 12390);
+      const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 12404 : 12405);
       const getDescriptiveInviteError = InviteErrorUtils.getDescriptiveInviteError;
       InviteErrorUtils;
       if (inviteError != null) {
@@ -406,7 +406,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[15] = closure_10(closure_4, obj5);
             const tmp21 = closure_10(closure_4, obj5);
           }
-          const obj6 = { style: tmp4.guildIcon, icon: tmp6, size: onPressClose(5971).GuildIconSizes.XLARGE };
+          const obj6 = { style: tmp4.guildIcon, icon: tmp6, size: onPressClose(5978).GuildIconSizes.XLARGE };
           const tmp16 = GuildIconDefault;
           cResult[9] = tmp6;
           cResult[10] = tmp4.guildIcon;

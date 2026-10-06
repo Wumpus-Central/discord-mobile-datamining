@@ -192,7 +192,7 @@ export default function RegisterAccountInformation() {
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = closure_19(tmp3);
   obj = react;
-  context = react.useContext(context(15864).TrackRegistrationContext);
+  context = react.useContext(context(15903).TrackRegistrationContext);
   const tmp7 = closure_13((registrationOptions) => registrationOptions.registrationOptions);
   let tmp8 = closure_13((submitting) => submitting.submitting);
   [tmp10, importDefault] = react.useState(false);
@@ -211,7 +211,7 @@ export default function RegisterAccountInformation() {
     return invite;
   });
   const ref = react.useRef(null);
-  let obj4 = context(15889);
+  let obj4 = context(15928);
   const passwordRegistrationStep = obj4.usePasswordRegistrationStep();
   ({
     password,
@@ -220,7 +220,7 @@ export default function RegisterAccountInformation() {
     passwordScore,
     preventSubmitPassword,
   } = passwordRegistrationStep);
-  let obj5 = context(15891);
+  let obj5 = context(15930);
   const usernameRegistrationStep = obj5.useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   ({
     transitionToNextStepOrSubmit: react,
@@ -239,7 +239,7 @@ export default function RegisterAccountInformation() {
   const tmp5Result = context(504);
   const stateFromStores1 = tmp5Result.useStateFromStores(items2, () => ConsentStore.getAuthenticationConsentRequired());
   let obj7 = { isConsentRequired: true === stateFromStores1 };
-  const tmp5Result3 = context(15875);
+  const tmp5Result3 = context(15914);
   const result = tmp5Result3.hasAllRegistrationFieldsCompleted(obj6, obj7);
   ConsentStore = result;
   const intl = tmp5(1126).intl;
@@ -254,7 +254,7 @@ export default function RegisterAccountInformation() {
     return obj(...arguments);
   }
   const tmpResult = useAuthFlowBackHandlerDefault;
-  const tmp5Result4 = context(15866);
+  const tmp5Result4 = context(15905);
   tmpResult(tmp5Result4.getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
@@ -275,7 +275,7 @@ export default function RegisterAccountInformation() {
   items4 = [, ,];
   const obj10 = {
     style: tmp4.container,
-    children: closure_17(context(15892).RegisterUsernameInput, {
+    children: closure_17(context(15931).RegisterUsernameInput, {
       username,
       setUsername,
       onSubmitEditing: callback,
@@ -297,7 +297,7 @@ export default function RegisterAccountInformation() {
     returnKeyType: str,
   };
   str = "next";
-  RegisterPasswordInput = tmp5(15893).RegisterPasswordInput;
+  RegisterPasswordInput = tmp5(15932).RegisterPasswordInput;
   tmp30 = obj6;
   const tmp31 = obj;
   if (result) {
@@ -307,7 +307,7 @@ export default function RegisterAccountInformation() {
   const obj13 = { style: tmp4.button, children: items5 };
   const View2 = ReanimatedRexportDefault.View;
   const merged2 = Object.assign(tmp31);
-  const Button = tmp5(5594).Button;
+  const Button = tmp5(5601).Button;
   if (!tmp8) {
     tmp8 = tmp10;
   }

@@ -69,7 +69,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp11;
           }
-          const tmp13 = jsx(guild(6644).BottomSheetTitleHeader, { title: tmp6, trailing: tmp8 });
+          const tmp13 = jsx(guild(6651).BottomSheetTitleHeader, { title: tmp6, trailing: tmp8 });
           cResult[8] = tmp6;
           cResult[9] = tmp8;
           cResult[10] = tmp13;
@@ -77,7 +77,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp9 = tmp4;
         if (tmp9) {
-          const ActionSheetHeaderPressableText = guild(9195).ActionSheetHeaderPressableText;
+          const ActionSheetHeaderPressableText = guild(9230).ActionSheetHeaderPressableText;
           const intl3 = guild(1126).intl;
           const intl4 = guild(1126).intl;
           tmp9 = (
@@ -120,7 +120,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       ({ eventCount, guild } = arg0);
       let tmp3Result = useCanCreateAnEventDefault(guild.id);
       importDefault = tmp3Result;
-      const BottomSheetTitleHeader = guild(6644).BottomSheetTitleHeader;
+      const BottomSheetTitleHeader = guild(6651).BottomSheetTitleHeader;
       if (eventCount > 0) {
         const intl2 = guild(1126).intl;
         let obj = { count: eventCount };
@@ -130,7 +130,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         formatToPlainStringResult = intl.string(guild(1126).t.tlopTM);
       }
       if (tmp3Result) {
-        const ActionSheetHeaderPressableText = guild(9195).ActionSheetHeaderPressableText;
+        const ActionSheetHeaderPressableText = guild(9230).ActionSheetHeaderPressableText;
         const intl3 = guild(1126).intl;
         const intl4 = guild(1126).intl;
         tmp3Result = (
@@ -165,7 +165,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(31);
       guild = guild.guild;
       const tmp4 = arr;
-      arr = arr(9160)(guild.id);
+      arr = arr(9195)(guild.id);
       closure_10();
       if (cResult[0] !== guild.id) {
         cResult[0] = guild.id;
@@ -211,7 +211,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === guild.id) {
             tmp16 = cResult[11];
           }
-          tmp4(5590)(tmp16);
+          tmp4(5597)(tmp16);
           if (cResult[12] !== guild.id) {
             class M {
               constructor() {
@@ -322,7 +322,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (guild) => {
       guild = guild.guild;
       let events;
-      events = events(9160)(guild.id);
+      events = events(9195)(guild.id);
       const tmp = closure_10();
       const items = [events, guild.id];
       const ref = react.useRef(ReadStateStore.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
@@ -353,7 +353,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         let result = obj.openGuildEventDetails(obj2);
       }, items1);
-      events(5590)(() => {
+      events(5597)(() => {
         const obj = AnalyticsUtilsDefault;
         const obj2 = { type, guild_id: guild.id, guild_events_count: arr.length };
         obj.track(AnalyticEvents.OPEN_MODAL, obj2);
@@ -365,7 +365,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           obj.ackGuildFeature(tmp.id, ReadStateTypes.GUILD_EVENT);
         }
       }, items2);
-      BottomSheet = guild(6645).BottomSheet;
+      BottomSheet = guild(6652).BottomSheet;
       const intl = guild(1126).intl;
       let obj2 = { eventCount: events.length, guild };
       ({
@@ -374,9 +374,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         onPressEvent: callback1,
         onCloseAction: callback,
         guild,
-        lastAckedId: events(5973)(ref),
+        lastAckedId: events(5980)(ref),
       });
-      events(9467);
+      events(9480);
       return (
         <BottomSheet
           showGradient

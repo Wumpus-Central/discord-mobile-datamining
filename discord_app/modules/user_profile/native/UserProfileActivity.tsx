@@ -1930,22 +1930,22 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
       let closure_3;
       const style = user.style;
       const tmp = closure_26();
-      const tmp4 = activity(12837)(activity);
-      const tmp5 = activity(6657);
-      const analyticsLocations = tmp5(activity(6681).USER_PROFILE_LIVE_ACTIVITY_CARD).analyticsLocations;
+      const tmp4 = activity(12856)(activity);
+      const tmp5 = activity(6664);
+      const analyticsLocations = tmp5(activity(6688).USER_PROFILE_LIVE_ACTIVITY_CARD).analyticsLocations;
       let id;
-      const tmp6 = activity(12843);
+      const tmp6 = activity(12862);
       if (voiceChannel != null) {
         id = voiceChannel.id;
       }
       const tmp6Result = tmp6({ display: "live", voiceChannelId: id, user, activity, analyticsLocations });
       dependencyMap = tmp6Result;
       const application_id = activity.application_id;
-      const tmp2Result = activity(8320);
+      const tmp2Result = activity(8353);
       let obj = {
         location: "User Profile Activity Card",
         applicationId: application_id,
-        source: user(8319).GameProfileSources.UserProfile,
+        source: user(8352).GameProfileSources.UserProfile,
         trackEntryPointImpression: true,
         sourceUserId: user.id,
       };
@@ -1958,7 +1958,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       const obj2 = { userId: user.id, onAction: tmp6Result };
-      activity(12844)(obj2);
+      activity(12863)(obj2);
       const items1 = [GuildStore, VoiceStateStore, ChannelStore];
       const obj3 = user(504);
       const stateFromStores = obj3.useStateFromStores(items1, () => {
@@ -2004,7 +2004,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
         tmp33Result8 = null;
         if (activity.type !== tmp16.HANG_STATUS) {
           const obj5 = { value: analyticsLocations, children: closure_23(PressableOpacity, obj6) };
-          const AnalyticsLocationProvider = tmp10(6657).AnalyticsLocationProvider;
+          const AnalyticsLocationProvider = tmp10(6664).AnalyticsLocationProvider;
           obj6 = {
             onPress: callback,
             disabled: null == tmp2ResultResult,
@@ -2012,7 +2012,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
             accessibilityLabel: intl.formatToPlainString(user(1126).t["9sZWVp"], obj7),
             children: closure_24(tmp2Result2, obj8),
           };
-          PressableOpacity = tmp10(5909).PressableOpacity;
+          PressableOpacity = tmp10(5916).PressableOpacity;
           intl = tmp10(1126).intl;
           obj8 = {
             style: items3,
@@ -2024,7 +2024,7 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           items3 = [tmp.card, style];
           tmp33Result = null != tmp4.platformIcon;
           obj7 = { gameName: activity.name };
-          tmp2Result2 = activity(6706);
+          tmp2Result2 = activity(6713);
           if (tmp33Result) {
             const obj9 = {
               style: tmp.cardTitleIcon,
@@ -2045,10 +2045,10 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
           const obj10 = { user, activity, application: stateFromStores1, onAction: tmp6Result };
           items4 = [closure_23(closure_29, obj10), , ,];
           let tmp33Result5 = null;
-          if (activity(12830)(activity)) {
+          if (activity(12849)(activity)) {
             ({ start, end } = activity.timestamps);
             const obj11 = { start, end };
-            tmp33Result5 = closure_23(activity(12845), obj11);
+            tmp33Result5 = closure_23(activity(12864), obj11);
           }
           items4[1] = tmp33Result5;
           let tmp33Result6 = null;
@@ -2061,22 +2061,22 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                 onAction: tmp6Result,
                 style: tmp.voiceChannelDivider,
               };
-              tmp33Result6 = closure_23(activity(12847), obj12);
+              tmp33Result6 = closure_23(activity(12866), obj12);
             }
           }
           items4[2] = tmp33Result6;
           let tmp33Result7 = null;
           if (user.id !== currentUser.id) {
-            if (activity(10625)(activity)) {
+            if (activity(10638)(activity)) {
               const obj13 = { activity, onAction: tmp6Result };
-              tmp33Result7 = closure_23(tmp10(12855).PlayOnSpotifyButton, obj13);
-            } else if (activity(7229)(activity)) {
+              tmp33Result7 = closure_23(tmp10(12874).PlayOnSpotifyButton, obj13);
+            } else if (activity(7242)(activity)) {
               const obj14 = { user, currentUser, activity, application: stateFromStores1, onAction: tmp6Result };
-              tmp33Result7 = closure_23(tmp10(12855).JoinActivityButton, obj14);
+              tmp33Result7 = closure_23(tmp10(12874).JoinActivityButton, obj14);
             } else {
-              if (activity(10619)(activity)) {
+              if (activity(10632)(activity)) {
                 let supported_platforms = activity.supported_platforms;
-                const tmp10Result2 = user(12858);
+                const tmp10Result2 = user(12877);
                 const currentActivityGamePlatform = tmp10Result2.getCurrentActivityGamePlatform();
                 const _Set = Set;
                 if (supported_platforms == null) {
@@ -2101,16 +2101,16 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                             application: stateFromStores1,
                             onAction: tmp6Result,
                           };
-                          tmp33Result7 = closure_23(tmp10(12855).JoinGameActivityButton, obj15);
+                          tmp33Result7 = closure_23(tmp10(12874).JoinGameActivityButton, obj15);
                         }
                       }
                     }
                   }
                 }
               }
-              if (activity(7931)(activity)) {
+              if (activity(7942)(activity)) {
                 const obj16 = { activity, onAction: tmp6Result };
-                tmp33Result7 = closure_23(tmp10(12855).WatchActivityButton, obj16);
+                tmp33Result7 = closure_23(tmp10(12874).WatchActivityButton, obj16);
               } else {
                 if (null != activity.buttons) {
                   if (activity.buttons.length > 0) {
@@ -2126,15 +2126,15 @@ let closure_30 = ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 tmp33Result7 = null;
-                if (!activity(4931)(activity)) {
-                  if (activity(12825)(activity)) {
+                if (!activity(4937)(activity)) {
+                  if (activity(12844)(activity)) {
                     const obj18 = { type: constants3.XBOX, onAction: tmp6Result };
-                    tmp33Result7 = closure_23(tmp10(12855).ConnectPlatformButton, obj18);
+                    tmp33Result7 = closure_23(tmp10(12874).ConnectPlatformButton, obj18);
                   } else {
                     tmp33Result7 = null;
-                    if (activity(12826)(activity)) {
+                    if (activity(12845)(activity)) {
                       const obj19 = { type: constants3.PLAYSTATION, onAction: tmp6Result };
-                      tmp33Result7 = closure_23(tmp10(12855).ConnectPlatformButton, obj19);
+                      tmp33Result7 = closure_23(tmp10(12874).ConnectPlatformButton, obj19);
                     }
                   }
                 }
@@ -2765,8 +2765,8 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = undefined;
       ({ isInChannel, style } = arg0);
       const tmp = closure_26();
-      const tmp4 = stateFromStores(12848)(channel);
-      const tmp5 = stateFromStores(5043)(channel);
+      const tmp4 = stateFromStores(12867)(channel);
+      const tmp5 = stateFromStores(5049)(channel);
       let obj = channel(504);
       const items = [GuildStore];
       stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.guild_id));
@@ -2776,9 +2776,9 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         const isPrivateResult = channel.isPrivate() || PermissionStore.can(constants.CONNECT, channel);
         return isPrivateResult;
       });
-      const tmp9 = stateFromStores(6657);
+      const tmp9 = stateFromStores(6664);
       ({ newestAnalyticsLocation: c2, analyticsLocations } = tmp9(
-        stateFromStores(6681).USER_PROFILE_VOICE_ACTIVITY_CARD,
+        stateFromStores(6688).USER_PROFILE_VOICE_ACTIVITY_CARD,
       ));
       let obj3 = {
         display: "voice",
@@ -2787,14 +2787,14 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         user,
         analyticsLocations,
       };
-      tmp9(stateFromStores(6681).USER_PROFILE_VOICE_ACTIVITY_CARD);
-      const tmp11 = stateFromStores(12843)(obj3);
+      tmp9(stateFromStores(6688).USER_PROFILE_VOICE_ACTIVITY_CARD);
+      const tmp11 = stateFromStores(12862)(obj3);
       let closure_3 = tmp11;
       const obj4 = { userId: user.id, onAction: tmp11 };
-      stateFromStores(12844)(obj4);
+      stateFromStores(12863)(obj4);
       const obj5 = { style: items2, title: null, titleStyle: null, children: null };
       items2 = [tmp.card, style];
-      const tmp14 = stateFromStores(6706);
+      const tmp14 = stateFromStores(6713);
       if (!channel.isDM()) {
         let stringResult;
         let tmp13Result;
@@ -2814,7 +2814,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = { users: tmp4, guildId: id };
         id = undefined;
         const obj6 = { style: tmp.body, children: items3 };
-        const tmp2Result = stateFromStores(12862);
+        const tmp2Result = stateFromStores(12881);
         if (stateFromStores != null) {
           id = stateFromStores.id;
         }
@@ -2823,7 +2823,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores1) {
           const obj9 = {
             accessibilityRole: "button",
-            accessibilityLabel: stateFromStores(9260)(obj10),
+            accessibilityLabel: stateFromStores(9295)(obj10),
             accessibilityHint: intl3.string(channel(1126).t["9C444m"]),
             onPress() {
               closure_3({ action: "OPEN_VOICE_CHANNEL" });
@@ -2836,19 +2836,19 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
             },
             children: closure_24(Text2, obj11),
           };
-          const PressableOpacity = channel(5909).PressableOpacity;
+          const PressableOpacity = channel(5916).PressableOpacity;
           obj10 = { channel };
           intl3 = channel(1126).intl;
           obj11 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items4 };
-          const obj12 = { style: tmp.voiceCallNameIconWrapper, children: closure_23(stateFromStores(10628), obj13) };
-          Text2 = channel(4886).Text;
+          const obj12 = { style: tmp.voiceCallNameIconWrapper, children: closure_23(stateFromStores(10641), obj13) };
+          Text2 = channel(4892).Text;
           obj13 = { channel, size: "sm", color: "mobile-text-heading-primary" };
           items4 = [closure_23(closure_9, obj12), tmp5];
           tmp13Result = closure_23(PressableOpacity, obj9);
         } else {
           const obj14 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items5 };
-          const obj15 = { style: tmp.voiceCallNameIconWrapper, children: closure_23(stateFromStores(10628), obj16) };
-          const Text = channel(4886).Text;
+          const obj15 = { style: tmp.voiceCallNameIconWrapper, children: closure_23(stateFromStores(10641), obj16) };
+          const Text = channel(4892).Text;
           obj16 = { channel, size: "sm", color: "mobile-text-heading-primary" };
           items5 = [closure_23(closure_9, obj15), tmp5];
           tmp13Result = closure_24(Text, obj14);
@@ -2870,12 +2870,12 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
             },
             children: closure_23(Text3, obj19),
           };
-          const PressableOpacity2 = channel(5909).PressableOpacity;
+          const PressableOpacity2 = channel(5916).PressableOpacity;
           intl4 = channel(1126).intl;
           intl5 = channel(1126).intl;
           obj18 = { guildName: stateFromStores.name };
           obj19 = { variant: "text-xs/medium", children: intl6.format(channel(1126).t["hq/Qze"], obj20) };
-          Text3 = channel(4886).Text;
+          Text3 = channel(4892).Text;
           intl6 = channel(1126).intl;
           obj20 = { guildName: stateFromStores.name };
           tmp18Result2 = closure_23(PressableOpacity2, obj17);
@@ -2884,7 +2884,7 @@ let closure_32 = ReactCompilerGating.isReactCompilerEnabled()
         items3[1] = closure_24(closure_9, obj8);
         const items7 = [closure_24(closure_9, obj6)];
         const obj21 = { channel, isInChannel, onAction: tmp11 };
-        items7[1] = closure_23(channel(12855).VoiceChannelButtons, obj21);
+        items7[1] = closure_23(channel(12874).VoiceChannelButtons, obj21);
         obj5.children = items7;
         return closure_24(tmp14, obj5);
       }

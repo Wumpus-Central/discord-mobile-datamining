@@ -429,7 +429,7 @@ obj2[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    let obj = socket(14299);
+    let obj = socket(14317);
     const result = obj.validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;

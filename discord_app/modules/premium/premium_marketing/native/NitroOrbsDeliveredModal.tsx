@@ -6,7 +6,7 @@ import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.t
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import CollectiblesActionCreators from "../../../collectibles/CollectiblesActionCreators.tsx";
 import useTrackImpressionDefault from "../../../app_analytics/useTrackImpression.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/13148_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/13167_AssetRegistry.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";
@@ -179,7 +179,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           accessible: false,
           accessibilityElementsHidden: true,
           importantForAccessibility: "no-hide-descendants",
-          children: closure_11(onClose(10965).OrbsRewardBackground, obj5),
+          children: closure_11(onClose(10978).OrbsRewardBackground, obj5),
         };
         obj5 = { style: tmp4.background, onReady: I };
         cResult[7] = tmp4.background;
@@ -213,8 +213,8 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const rect = { style: tmp4.main, top: true, bottom: true, left: true, right: true, children: items };
-          const obj6 = { style: tmp4.header, children: closure_11(onClose(6696).ActionSheetCloseButton, obj7) };
-          const SafeAreaPaddingView = onClose(6619).SafeAreaPaddingView;
+          const obj6 = { style: tmp4.header, children: closure_11(onClose(6703).ActionSheetCloseButton, obj7) };
+          const SafeAreaPaddingView = onClose(6626).SafeAreaPaddingView;
           obj7 = { onPress: onClose, variant: "overlay" };
           items = [closure_11(View, obj6), ,];
           const obj8 = { style: tmp4.body, children: items1 };
@@ -227,7 +227,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.title,
             children: intl.formatToPlainString(onClose(1126).t["O2/Bj8"], obj12),
           };
-          const Text = onClose(4886).Text;
+          const Text = onClose(4892).Text;
           intl = onClose(1126).intl;
           obj12 = { orbAmount: orbsAmount };
           items2 = [closure_11(Text, obj11)];
@@ -237,7 +237,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             style: tmp4.description,
             children: intl2.format(onClose(1126).t.qiZPb6, obj14),
           };
-          const Text2 = onClose(4886).Text;
+          const Text2 = onClose(4892).Text;
           intl2 = onClose(1126).intl;
           obj14 = { orbAmount: orbsAmount };
           items2[1] = closure_11(Text2, obj13);
@@ -245,7 +245,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           items[1] = closure_12(View, obj8);
           const obj15 = { style: tmp4.footer, children: items3 };
           const obj16 = { text: intl3.string(onClose(1126).t.OhOWfI), variant: "primary", size: "lg", onPress: S };
-          const Button = onClose(5594).Button;
+          const Button = onClose(5601).Button;
           intl3 = onClose(1126).intl;
           items3 = [closure_11(Button, obj16)];
           const obj17 = {
@@ -254,7 +254,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             size: "lg",
             onPress: O,
           };
-          const Button2 = onClose(5594).Button;
+          const Button2 = onClose(5601).Button;
           intl4 = onClose(1126).intl;
           items3[1] = closure_11(Button2, obj17);
           items[2] = closure_12(View, obj15);
@@ -343,7 +343,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: false,
         accessibilityElementsHidden: true,
         importantForAccessibility: "no-hide-descendants",
-        children: closure_11(onClose(10965).OrbsRewardBackground, obj4),
+        children: closure_11(onClose(10978).OrbsRewardBackground, obj4),
       };
       _slicedToArray(react.useState(false), 2);
       const callback2 = react.useCallback(() => _undefined(true), []);
@@ -357,8 +357,8 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       items2[1] = tmp14Result;
       if (tmp12Result) {
         const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: items3 };
-        const obj6 = { style: tmp.header, children: closure_11(onClose(6696).ActionSheetCloseButton, obj7) };
-        const SafeAreaPaddingView = onClose(6619).SafeAreaPaddingView;
+        const obj6 = { style: tmp.header, children: closure_11(onClose(6703).ActionSheetCloseButton, obj7) };
+        const SafeAreaPaddingView = onClose(6626).SafeAreaPaddingView;
         obj7 = { onPress: onClose, variant: "overlay" };
         items3 = [closure_11(View, obj6), ,];
         const obj8 = { style: tmp.body, children: items4 };
@@ -371,7 +371,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.title,
           children: intl.formatToPlainString(onClose(1126).t["O2/Bj8"], obj12),
         };
-        const Text = onClose(4886).Text;
+        const Text = onClose(4892).Text;
         intl = onClose(1126).intl;
         obj12 = { orbAmount: orbsAmount };
         items5 = [closure_11(Text, obj11)];
@@ -381,7 +381,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.description,
           children: intl2.format(onClose(1126).t.qiZPb6, obj14),
         };
-        const Text2 = onClose(4886).Text;
+        const Text2 = onClose(4892).Text;
         intl2 = onClose(1126).intl;
         obj14 = { orbAmount: orbsAmount };
         items5[1] = closure_11(Text2, obj13);
@@ -389,7 +389,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         items3[1] = closure_12(View, obj8);
         const obj15 = { style: tmp.footer, children: items6 };
         const obj16 = { text: intl3.string(onClose(1126).t.OhOWfI), variant: "primary", size: "lg", onPress: callback };
-        const Button = onClose(5594).Button;
+        const Button = onClose(5601).Button;
         intl3 = onClose(1126).intl;
         items6 = [closure_11(Button, obj16)];
         const obj17 = {
@@ -398,7 +398,7 @@ const tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           size: "lg",
           onPress: callback1,
         };
-        const Button2 = onClose(5594).Button;
+        const Button2 = onClose(5601).Button;
         intl4 = onClose(1126).intl;
         items6[1] = closure_11(Button2, obj17);
         items3[2] = closure_12(View, obj15);

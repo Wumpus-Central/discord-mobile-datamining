@@ -148,7 +148,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       trackAction = trackAction.trackAction;
       const tmp4 = closure_6();
       dependencyMap = tmp4;
-      const obj2 = closeModal(8535);
+      const obj2 = closeModal(8568);
       const gameProfileShopCollectionProducts = obj2.useGameProfileShopCollectionProducts(collectionId);
       const products = gameProfileShopCollectionProducts.products;
       if (cResult[0] === closeModal) {
@@ -204,7 +204,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                     }
                   }
-                  const tmp19 = jsx(trackAction(8388), {
+                  const tmp19 = jsx(trackAction(8421), {
                     style: container,
                     headerStyle: header,
                     title: tmp8,
@@ -219,12 +219,12 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp16 = tmp19;
                 }
               }
-              const FlashList = closeModal(8371).FlashList;
+              const FlashList = closeModal(8404).FlashList;
               const tmp15 = (
                 <FlashList
                   key={collectionId}
                   horizontal
-                  renderScrollComponent={trackAction(8372)}
+                  renderScrollComponent={trackAction(8405)}
                   data={products}
                   renderItem={tmp10}
                   showsHorizontalScrollIndicator={false}
@@ -233,7 +233,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                   ListFooterComponent={ListFooterComponent}
                   decelerationRate="fast"
                   snapToInterval={
-                    closeModal(8418).COLLECTIBLES_SHOP_CARD_WIDTH + closeModal(8418).COLLECTIBLES_SHOP_CARD_GAP
+                    closeModal(8451).COLLECTIBLES_SHOP_CARD_WIDTH + closeModal(8451).COLLECTIBLES_SHOP_CARD_GAP
                   }
                 />
               );
@@ -301,7 +301,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       trackAction = trackAction.trackAction;
       const tmp = closure_6();
       dependencyMap = tmp;
-      let obj = closeModal(8535);
+      let obj = closeModal(8568);
       const gameProfileShopCollectionProducts = obj.useGameProfileShopCollectionProducts(collectionId);
       const products = gameProfileShopCollectionProducts.products;
       let items = [trackAction, closeModal];
@@ -311,11 +311,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = null;
         if (0 !== products.length) {
           ({ container: obj2.style, header: obj2.headerStyle } = tmp);
-          trackAction(8388);
+          trackAction(8421);
           const intl = closeModal(1126).intl;
           ({
             horizontal: true,
-            renderScrollComponent: trackAction(8372),
+            renderScrollComponent: trackAction(8405),
             data: products,
             renderItem(item) {
               item = item.item;
@@ -347,9 +347,9 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
             ListHeaderComponent: ListFooterComponent,
             ListFooterComponent,
             decelerationRate: "fast",
-            snapToInterval: closeModal(8418).COLLECTIBLES_SHOP_CARD_WIDTH + closeModal(8418).COLLECTIBLES_SHOP_CARD_GAP,
+            snapToInterval: closeModal(8451).COLLECTIBLES_SHOP_CARD_WIDTH + closeModal(8451).COLLECTIBLES_SHOP_CARD_GAP,
           });
-          const FlashList = closeModal(8371).FlashList;
+          const FlashList = closeModal(8404).FlashList;
           tmp6 = (
             <tmp11
               style={null}

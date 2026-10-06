@@ -8,7 +8,7 @@ import useToken from "../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import Card_Card from "../../../design/components/Card/native/Card.native.tsx";
 import XSmallIcon2 from "../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
 import NitroUpsellButtonDefault from "../../premium/components/native/NitroUpsellButton.tsx";

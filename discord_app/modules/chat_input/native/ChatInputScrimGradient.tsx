@@ -5,7 +5,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useToken2 from "../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05612_LinearGradient.js";
 import react from "../../../../_runtime/00019_react.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import ReactCompilerGating_mod from "../../react_compiler/ReactCompilerGating.tsx";

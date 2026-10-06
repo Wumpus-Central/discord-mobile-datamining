@@ -6,7 +6,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import intl7 from "../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import DismissibleContentConstants from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import _modDef2589 from "../../gifting/GiftingBadge.messages.js";
+import _modDef2617 from "../../gifting/GiftingBadge.messages.js";
 import haptics_HapticFeedbackTypesDefault from "../../../haptics/HapticFeedbackTypes.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
@@ -144,10 +144,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-        const GiftIcon = tmp(10766).GiftIcon;
+        const GiftIcon = tmp(10779).GiftIcon;
         const tmp10 = closure_10(GiftIcon, obj2);
         const intl = tmp(1126).intl;
-        const stringResult = intl.string(_modDef2589.g86YiI);
+        const stringResult = intl.string(_modDef2617.g86YiI);
         cResult[3] = tmp10;
         cResult[4] = stringResult;
         tmp9 = stringResult;
@@ -180,8 +180,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj3 = { grow: true, variant: "primary", icon: tmp8, text: tmp9, onPress: tmp6 };
         cResult[5] = tmp6;
-        cResult[6] = closure_10(onSendGift(5594).Button, obj3);
-        const tmp13 = closure_10(onSendGift(5594).Button, obj3);
+        cResult[6] = closure_10(onSendGift(5601).Button, obj3);
+        const tmp13 = closure_10(onSendGift(5601).Button, obj3);
       } else {
         class T {
           constructor() {
@@ -207,8 +207,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const obj4 = { grow: true, variant: "secondary", text: intl2.string(_modDef2589["sa/cfM"]), onPress: T };
-        const Button = tmp(5594).Button;
+        const obj4 = { grow: true, variant: "secondary", text: intl2.string(_modDef2617["sa/cfM"]), onPress: T };
+        const Button = tmp(5601).Button;
         intl2 = tmp(1126).intl;
         const tmp15 = closure_10(Button, obj4);
         cResult[7] = tmp15;
@@ -275,16 +275,16 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         grow: true,
         variant: "primary",
         icon: closure_10(GiftIcon, obj3),
-        text: intl.string(_modDef2589.g86YiI),
+        text: intl.string(_modDef2617.g86YiI),
         onPress: callback,
       };
-      const Button = onSendGift(5594).Button;
+      const Button = onSendGift(5601).Button;
       obj3 = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-      GiftIcon = onSendGift(10766).GiftIcon;
+      GiftIcon = onSendGift(10779).GiftIcon;
       intl = onSendGift(1126).intl;
       items1 = [closure_10(Button, obj2)];
-      const obj4 = { grow: true, variant: "secondary", text: intl2.string(_modDef2589["sa/cfM"]), onPress: callback1 };
-      const Button2 = onSendGift(5594).Button;
+      const obj4 = { grow: true, variant: "secondary", text: intl2.string(_modDef2617["sa/cfM"]), onPress: callback1 };
+      const Button2 = onSendGift(5601).Button;
       intl2 = onSendGift(1126).intl;
       items1[1] = closure_10(Button2, obj4);
       return closure_11(View, obj);
@@ -648,7 +648,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = intl7.intl;
       format = intl.format;
       str = newTier.name;
-      k8MmO8 = _modDef2589.k8MmO8;
+      k8MmO8 = _modDef2617.k8MmO8;
       if (str == null) {
         str = "";
       }
@@ -666,7 +666,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         format2 = intl2.format;
         obj12 = { count: giftsToNextTier, nextTierName: str2 };
         str2 = nextTier.name;
-        v6QVlxw = _modDef2589["6QVlxw"];
+        v6QVlxw = _modDef2617["6QVlxw"];
         if (str2 == null) {
           str2 = "";
         }
@@ -857,9 +857,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol3 = Symbol;
               if (cResult[23] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl3 = intl7.intl;
-                const stringResult = intl3.string(_modDef2589["/rBQud"]);
+                const stringResult = intl3.string(_modDef2617["/rBQud"]);
                 const intl4 = intl7.intl;
-                const stringResult1 = intl4.string(_modDef2589.DDQMlx);
+                const stringResult1 = intl4.string(_modDef2617.DDQMlx);
                 cResult[23] = stringResult;
                 cResult[24] = stringResult1;
               }
@@ -871,7 +871,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 const intl5 = intl7.intl;
                 const formatToPlainString = intl5.formatToPlainString;
                 let name1;
-                const bwyQt8 = _modDef2589.bwyQt8;
+                const bwyQt8 = _modDef2617.bwyQt8;
                 if (tmp21 != null) {
                   name1 = tmp21.name;
                 }
@@ -885,7 +885,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const intl6 = intl7.intl;
               const formatToPlainString2 = intl6.formatToPlainString;
               let str2;
-              const KjdBPz = _modDef2589.KjdBPz;
+              const KjdBPz = _modDef2617.KjdBPz;
               if (tmp26 != null) {
                 str2 = tmp26.name;
               }
@@ -897,9 +897,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const formatToPlainString2Result = formatToPlainString2(KjdBPz, obj5);
               if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl = intl7.intl;
-                const stringResult2 = intl.string(_modDef2589.oqDrEM);
+                const stringResult2 = intl.string(_modDef2617.oqDrEM);
                 const intl2 = intl7.intl;
-                const stringResult3 = intl2.string(_modDef2589["Ka5s+Q"]);
+                const stringResult3 = intl2.string(_modDef2617["Ka5s+Q"]);
                 cResult[21] = stringResult2;
                 cResult[22] = stringResult3;
                 tmp32 = stringResult3;
@@ -997,7 +997,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const intl2 = intl7.intl;
           const formatToPlainString2 = intl2.formatToPlainString;
           let str2;
-          const KjdBPz = _modDef2589.KjdBPz;
+          const KjdBPz = _modDef2617.KjdBPz;
           if (tmp8 != null) {
             str2 = tmp8.name;
           }
@@ -1006,8 +1006,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = {
             title: formatToPlainString2(KjdBPz, obj4),
-            description: intl3.string(_modDef2589.oqDrEM),
-            progressBarTitle: intl4.string(_modDef2589["Ka5s+Q"]),
+            description: intl3.string(_modDef2617.oqDrEM),
+            progressBarTitle: intl4.string(_modDef2617["Ka5s+Q"]),
             progress: sum,
             currentTier: tmp26,
             nextTier: tmp8,
@@ -1019,8 +1019,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           obj5 = obj3;
         } else {
           obj5 = {
-            title: intl5.string(_modDef2589["/rBQud"]),
-            description: intl6.string(_modDef2589.DDQMlx),
+            title: intl5.string(_modDef2617["/rBQud"]),
+            description: intl6.string(_modDef2617.DDQMlx),
             progressBarTitle: str,
             progress: sum,
             currentTier: tmp26,
@@ -1038,7 +1038,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             const intl = intl7.intl;
             const formatToPlainString = intl.formatToPlainString;
             let name1;
-            const bwyQt8 = _modDef2589.bwyQt8;
+            const bwyQt8 = _modDef2617.bwyQt8;
             if (tmp24 != null) {
               name1 = tmp24.name;
             }

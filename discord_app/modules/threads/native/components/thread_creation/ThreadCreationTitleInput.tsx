@@ -133,7 +133,7 @@ const memoResult = react.memo(
                 }
                 let str2 = "";
                 if (null != stateFromStores) {
-                  const tmpResult = tmp(8810);
+                  const tmpResult = tmp(8840);
                   str2 = tmpResult.getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
                 }
                 cResult[18] = stateFromStores;
@@ -179,7 +179,7 @@ const memoResult = react.memo(
             cResult[7] = E;
           }
           let obj2 = { content: threadSettingsDraft.name };
-          const tmpResult2 = tmp(16783);
+          const tmpResult2 = tmp(16804);
           cResult[0] = threadNameError;
           cResult[1] = threadSettingsDraft.name;
           cResult[2] = tmpResult2.renderError(threadNameError, obj2);
@@ -195,7 +195,7 @@ const memoResult = react.memo(
           const tmp = chatInputRef;
           let tmp2 = dependencyMap;
           const threadNameError = chatInputRef.threadNameError;
-          let obj = chatInputRef(16783);
+          let obj = chatInputRef(16804);
           let obj2 = { content: threadSettingsDraft.name };
           const renderErrorResult = obj.renderError(threadNameError, obj2);
           ref = ref.useRef(threadSettingsDraft.name);
@@ -254,7 +254,7 @@ const memoResult = react.memo(
           );
           let str = "";
           if (null != stateFromStores) {
-            const tmpResult = tmp(8810);
+            const tmpResult = tmp(8840);
             str = tmpResult.getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
           }
           const intl = tmp(1126).intl;
@@ -265,7 +265,7 @@ const memoResult = react.memo(
           } else {
             stringResult = string(t.j3XWjD);
           }
-          const TextInput = tmp(6098).TextInput;
+          const TextInput = tmp(6105).TextInput;
           let stringResult1;
           if (!optional) {
             const intl2 = tmp(1126).intl;
@@ -277,7 +277,7 @@ const memoResult = react.memo(
           }
           return (
             <TextInput
-              defaultValue={threadSettingsDraft(5973)(ref)}
+              defaultValue={threadSettingsDraft(5980)(ref)}
               errorMessage={renderErrorResult}
               label={stringResult}
               accessibilityHint={stringResult1}

@@ -1,8 +1,8 @@
 // discord_app/design/void/OverlayView/native/OverlayView.tsx
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../_runtime/00576_react.js";
-import enableScreens from "../../../../../_runtime/05715_enableScreens.js";
-import react_nativeDefault from "../../../../../_runtime/05764_react-native.js";
+import enableScreens from "../../../../../_runtime/05722_enableScreens.js";
+import react_nativeDefault from "../../../../../_runtime/05771_react-native.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../_runtime/00017_react-native.js";

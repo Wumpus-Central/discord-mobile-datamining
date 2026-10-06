@@ -24,7 +24,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   const tmp = closure_6();
   let obj = {
     label: intl.string(savedMessage(1126).t["+TSRGD"]),
-    IconComponent: savedMessage(11368).ChatArrowRightIcon,
+    IconComponent: savedMessage(11381).ChatArrowRightIcon,
     action() {
       return jumpToMessage();
     },
@@ -52,7 +52,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
       channelId: savedMessage.saveData.channelId,
       messageId: savedMessage.saveData.messageId,
     };
-    return obj.openLazy(asyncRequire(11340, dependencyMap.paths), "MessageReminderDurationActionSheet", obj2);
+    return obj.openLazy(asyncRequire(11353, dependencyMap.paths), "MessageReminderDurationActionSheet", obj2);
   }, items);
   intl = savedMessage(1126).intl;
   const items1 = [obj];
@@ -65,7 +65,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }
   let obj2 = {
     label: string(SvXS1Z),
-    IconComponent: tmp3(6017).XSmallIcon,
+    IconComponent: tmp3(6024).XSmallIcon,
     action() {
       const obj = SavedMessageHelpers;
       return obj.removeSavedMessage(savedMessage.saveData);
@@ -84,9 +84,9 @@ export default function ForLaterCardActionButtons(savedMessage) {
       action: callback,
     };
     if (throttledNow > savedMessage.saveData.dueAt) {
-      PencilIcon = tmp3(13129).BellZIcon;
+      PencilIcon = tmp3(13148).BellZIcon;
     } else {
-      PencilIcon = tmp3(10058).PencilIcon;
+      PencilIcon = tmp3(10071).PencilIcon;
     }
     unshift(obj3);
   }

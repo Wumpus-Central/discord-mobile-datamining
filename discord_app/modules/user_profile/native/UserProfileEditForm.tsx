@@ -11,7 +11,7 @@ import UserProfileActionCreators from "../UserProfileActionCreators.tsx";
 import BadgeDirectoryActionCreators from "../../badges/BadgeDirectoryActionCreators.tsx";
 import PendingBadgeSettings from "../../badges/PendingBadgeSettings.tsx";
 import UserProfileEditConstants from "../../user_settings/profiles/native/UserProfileEditConstants.tsx";
-import AssetRegistryDefault from "../../../../_runtime/14415_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/14431_AssetRegistry.js";
 import react_mod from "../../../../_runtime/00019_react.js";
 import react_native from "../../../../_runtime/00017_react-native.js";
 import BadgeDirectoryStore from "../../badges/BadgeDirectoryStore.tsx";
@@ -83,7 +83,7 @@ function EditUserProfileBanner(user) {
         isTryItOut,
       };
       ActionSheetActionCreatorsDefault;
-      const tmp4 = asyncRequire(14418, dependencyMap.paths);
+      const tmp4 = asyncRequire(14434, dependencyMap.paths);
       if (isTryItOut) {
         fn = UserProfileActionCreators.setTryItOutBanner;
       } else {

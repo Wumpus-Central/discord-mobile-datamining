@@ -115,7 +115,7 @@ const memoResult = react.memo(
           if (cResult[1] === visibleTabs) {
             tmp6 = cResult[2];
           }
-          const tmp8 = expressionPickerViewType(10085)(tmp6);
+          const tmp8 = expressionPickerViewType(10098)(tmp6);
           ({ expressionPickerSelectedIndex, expressionPickerViewType } = tmp8);
           const prop = tmp8.expressionPickerTabStrings;
           if (cResult[3] !== channel) {
@@ -411,7 +411,7 @@ const memoResult = react.memo(
                 }
               }
             }
-            const tmp28 = expressionPickerViewType(10086)(tmp27);
+            const tmp28 = expressionPickerViewType(10099)(tmp27);
             const tmpResult2 = require("useIsScreenReaderEnabled");
             const isScreenReaderEnabled = tmpResult2.useIsScreenReaderEnabled();
             if (cResult[20] === tmp28) {
@@ -921,7 +921,7 @@ const memoResult = react.memo(
                         inPortalKeyboard,
                         suggestedEmojis,
                       };
-                      tmp46 = closure_9(expressionPickerViewType(10087), obj4);
+                      tmp46 = closure_9(expressionPickerViewType(10100), obj4);
                     } else {
                       class Z {
                         constructor() {

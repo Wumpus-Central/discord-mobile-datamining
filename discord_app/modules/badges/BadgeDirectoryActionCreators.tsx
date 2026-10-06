@@ -132,7 +132,7 @@ let obj = function _fetchBadgeDirectory() {
     if (closure_1 === undefined) {
       obj5 = {};
     }
-    return "Set";
+    return "Reflect";
   });
   return obj(...arguments);
 };

@@ -274,7 +274,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items[1] = token(EmojiReactionRowButton2.EmojiPickerRowButton, obj9);
       items1 = [closure_6(emojiFontSize, obj8)];
-      const obj10 = { location: channel(6681).MESSAGE_LONG_PRESS_MENU };
+      const obj10 = { location: channel(6688).MESSAGE_LONG_PRESS_MENU };
       const DoubleTapEmojiEditNudge = DoubleTapEmojiEditNudge2.DoubleTapEmojiEditNudge;
       items1[1] = token(DoubleTapEmojiEditNudge, obj10);
       return closure_6(emojiFontSize, obj7);

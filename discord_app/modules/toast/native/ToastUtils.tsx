@@ -54,7 +54,7 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
   const obj2 = {
     key: "TOAST_FRIEND_REQUEST_ACCEPTED",
     content: stringResult,
-    IconComponent: tmp3(4833).UserPlusIcon,
+    IconComponent: tmp3(4839).UserPlusIcon,
     iconColor: "status-positive",
   };
   open(obj2);
@@ -264,9 +264,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   const obj = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: XLargeIcon, iconColor: str };
   if (arg0) {
-    XLargeIcon = tmp5(4577).CheckmarkLargeIcon;
+    XLargeIcon = tmp5(4583).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp5(4795).XLargeIcon;
+    XLargeIcon = tmp5(4801).XLargeIcon;
   }
   str = "icon-feedback-critical";
   if (arg0) {

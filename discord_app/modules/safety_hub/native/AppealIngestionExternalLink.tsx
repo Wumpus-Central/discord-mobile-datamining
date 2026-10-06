@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import AssetRegistry from "../../../../_runtime/08289_AssetRegistry.js";
+import AssetRegistry from "../../../../_runtime/08322_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import Fragment from "../../../../_runtime/react/00021_Fragment.js";
 import createStyles_mod from "../../../design/components/Styles/native/createStyles.tsx";
@@ -60,7 +60,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             tmp6 = cResult[5];
           }
           if (cResult[6] !== tmp4.chevron.color) {
-            const obj2 = { source: url(8289), color: tmp4.chevron.color };
+            const obj2 = { source: url(8322), color: tmp4.chevron.color };
             const Icon = url(1188).Icon;
             const tmp11 = closure_4(Icon, obj2);
             cResult[6] = tmp4.chevron.color;
@@ -85,7 +85,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj3 = { style: tmp4.childButton, accessibilityRole: "button", onPress: tmp5, children: tmp12 };
-              const tmp18 = closure_4(url(5909).PressableHighlight, obj3);
+              const tmp18 = closure_4(url(5916).PressableHighlight, obj3);
               cResult[12] = tmp5;
               cResult[13] = tmp4.childButton;
               cResult[14] = tmp12;
@@ -108,7 +108,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: text,
         };
-        const tmp8 = closure_4(url(4886).Text, obj5);
+        const tmp8 = closure_4(url(4892).Text, obj5);
         cResult[3] = tmp4.childButtonText;
         cResult[4] = text;
         cResult[5] = tmp8;

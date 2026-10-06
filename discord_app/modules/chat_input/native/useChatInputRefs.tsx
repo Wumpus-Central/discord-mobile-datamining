@@ -49,7 +49,7 @@ export default function useChatInputRefs(chatInputProps) {
   const useRef = react.useRef;
   map = new Map();
   const chatInputTextFlushedResponses = useRef(map);
-  const tmp2 = chatInputTextFieldHeight(5984)(() => {
+  const tmp2 = chatInputTextFieldHeight(5991)(() => {
     const obj = ChatInputUtils;
     return obj.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex);
   });
@@ -80,7 +80,7 @@ export default function useChatInputRefs(chatInputProps) {
     };
   }, items2);
   const state = react.useRef(
-    chatInputTextFieldHeight(5984)(() => ({
+    chatInputTextFieldHeight(5991)(() => ({
       editId: null,
       focused: false,
       selectionStart: 0,

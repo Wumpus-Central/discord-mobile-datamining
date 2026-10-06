@@ -9,8 +9,8 @@ import SearchField2 from "../../../../../design/components/TextField/native/Sear
 import BottomSheetTitleHeader2 from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import InstantInviteUtilsDefault from "../../../../../utils/InstantInviteUtils.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/12793_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../_runtime/12794_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/12812_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/12813_AssetRegistry.js";
 import GuildInviteRowDefault from "GuildInviteRow.tsx";
 import _slicedToArray_mod from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
@@ -108,7 +108,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       const query = recipientId.query;
       const tmp4 = closure_8();
       dependencyMap = tmp4;
-      const obj2 = recipientId(12790);
+      const obj2 = recipientId(12809);
       [arr, arr2] = obj2.useServerInviteRows(recipientId, query);
       _slicedToArray(obj2.useServerInviteRows(recipientId, query), 2);
       if (cResult[0] === (0 === arr.length && 0 === arr2.length)) {
@@ -172,7 +172,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 return jsx(closure_1(closure_2[13]), obj);
               }
             }
-            const insets = source(6471)().insets;
+            const insets = source(6478)().insets;
             const tmp12 = source;
             if (0 !== arr.length) {
               class E {
@@ -293,8 +293,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[17] = tmp7;
                 cResult[18] = tmp15;
                 cResult[19] = tmp17;
-                cResult[20] = closure_6(tmp(10841).UserProfileStackedActionSheetSectionList, obj3);
-                const tmp23 = closure_6(tmp(10841).UserProfileStackedActionSheetSectionList, obj3);
+                cResult[20] = closure_6(tmp(10854).UserProfileStackedActionSheetSectionList, obj3);
+                const tmp23 = closure_6(tmp(10854).UserProfileStackedActionSheetSectionList, obj3);
               }
               class T {
                 constructor(arg0) {
@@ -374,7 +374,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = closure_8();
       let tmp = recipientId;
       let tmp2 = dependencyMap;
-      let obj = recipientId(12790);
+      let obj = recipientId(12809);
       [arr, arr2] = obj.useServerInviteRows(recipientId, query);
       _slicedToArray(obj.useServerInviteRows(recipientId, query), 2);
       if (0 === arr.length) {
@@ -382,7 +382,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           items = [];
         }
         let tmp5 = 0 === arr.length;
-        const insets = source(6471)().insets;
+        const insets = source(6478)().insets;
         const tmp4 = source;
         if (!tmp5) {
           tmp5 = 0 === arr2.length;
@@ -424,7 +424,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           },
           ListEmptyComponent,
         };
-        const UserProfileStackedActionSheetSectionList = tmp(10841).UserProfileStackedActionSheetSectionList;
+        const UserProfileStackedActionSheetSectionList = tmp(10854).UserProfileStackedActionSheetSectionList;
         if (tmp5) {
           num = 24;
         }

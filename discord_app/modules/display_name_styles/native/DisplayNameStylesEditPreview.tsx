@@ -6,7 +6,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import intl2 from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import utils from "../../collectibles/nameplates/utils.tsx";
-import _modDef2883 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2911 from "../intl/DisplayNameStyles.messages.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import usePendingAvatarSettingsDefault from "../../user_profile/hooks/usePendingAvatarSettings.tsx";
@@ -107,7 +107,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           const previewSection = tmp4.previewSection;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
             const intl = intl2.intl;
-            const stringResult = intl.string(_modDef2883.zoh6MT);
+            const stringResult = intl.string(_modDef2911.zoh6MT);
             cResult[6] = stringResult;
             tmp10 = stringResult;
           } else {
@@ -285,7 +285,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         compact: true,
         hideFrame: true,
         maxWidth: 320,
-        accessibilityLabel: intl.string(_modDef2883.zoh6MT),
+        accessibilityLabel: intl.string(_modDef2911.zoh6MT),
       };
       const tmp8 = UserProfilePreviewDefault;
       intl = intl2.intl;
@@ -430,7 +430,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                         }
                         if (tmp34 === Symbol.for("react.memo_cache_sentinel")) {
                           const intl = intl2.intl;
-                          const stringResult = intl.string(_modDef2883.h5Cuej);
+                          const stringResult = intl.string(_modDef2911.h5Cuej);
                           class I {
                             constructor() {
                               return closure_1_5.useReducedMotion;
@@ -613,7 +613,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         variant: "text-md/normal",
         color: "text-default",
         style: tmp.chatMessageText,
-        children: intl.string(_modDef2883.h5Cuej),
+        children: intl.string(_modDef2911.h5Cuej),
       };
       const Text = Text_Text.Text;
       intl = intl2.intl;

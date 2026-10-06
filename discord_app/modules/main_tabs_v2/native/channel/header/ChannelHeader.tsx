@@ -52,7 +52,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = channelId(573);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp9);
-      const tmpResult2 = channelId(5100);
+      const tmpResult2 = channelId(5106);
       const isChannelContentGated = tmpResult2.useIsChannelContentGated(stateFromStores);
       if (channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
         let tmp36;
@@ -224,7 +224,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [ChannelStore];
       const obj = channelId(573);
       const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-      const obj3 = channelId(5100);
+      const obj3 = channelId(5106);
       const isChannelContentGated = obj3.useIsChannelContentGated(stateFromStores);
       if (channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
         tmp8Result = jsx(GuildRoleSubscriptionsChannelHeaderDefault, {});

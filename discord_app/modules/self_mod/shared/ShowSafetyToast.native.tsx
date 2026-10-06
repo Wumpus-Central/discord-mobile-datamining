@@ -1,6 +1,6 @@
 // discord_app/modules/self_mod/shared/ShowSafetyToast.native.tsx
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../_runtime/08922_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/08951_AssetRegistry.js";
 import ShieldIcon from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 

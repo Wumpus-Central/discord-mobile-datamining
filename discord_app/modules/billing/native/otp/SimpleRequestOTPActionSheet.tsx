@@ -41,7 +41,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   let obj7;
   let tmp16;
   let tmp17;
-  const f120679 = () => {
+  const f120842 = () => {
     let items;
     if (null == c5) {
       items = ["Loading...", "Loading..."];
@@ -127,12 +127,12 @@ function GiftPurchaseSKUView(selectedSkuId) {
   [first, dependencyMap] = react.useState(false);
   const currentUser = memo1.getCurrentUser();
   _slicedToArray = react.useRef({});
-  let obj2 = selectedSkuId(10430);
+  let obj2 = selectedSkuId(10443);
   const giftStyle = obj2.useNativeGiftContext().giftStyle;
   let obj3 = selectedSkuId(504);
   let items = [closure_8];
   const stateFromStores = obj3.useStateFromStores(items, () => SKUStore.get(selectedSkuId));
-  let obj4 = selectedSkuId(10778);
+  let obj4 = selectedSkuId(10791);
   const fetchCollectiblesProduct = obj4.useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   react = product;
@@ -286,10 +286,10 @@ function GiftPurchaseSKUView(selectedSkuId) {
     isGift: true,
     options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
   };
-  closure_8 = tmp(10750)(obj6);
+  closure_8 = tmp(10763)(obj6);
   const items5 = [product];
-  [tmp16, tmp17] = tmp3(obj.useMemo(f120679, items5), 2);
-  tmp3(obj.useMemo(f120679, items5), 2);
+  [tmp16, tmp17] = tmp3(obj.useMemo(f120842, items5), 2);
+  tmp3(obj.useMemo(f120842, items5), 2);
   if (!isFetching) {
     isFetching = first;
   }
@@ -301,9 +301,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
     style: { paddingTop: rect.top, paddingBottom: rect.bottom, paddingHorizontal: 12 },
     children: items7,
   };
-  const Stack = tmp7(5593).Stack;
+  const Stack = tmp7(5600).Stack;
   let name;
-  const Text = tmp7(4886).Text;
+  const Text = tmp7(4892).Text;
   if (stateFromStores != null) {
     name = stateFromStores.name;
   }
@@ -333,9 +333,9 @@ function GiftPurchaseSKUView(selectedSkuId) {
   }
   items6[14] = str;
   items7 = [closure_11(Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }), ,];
-  const Card = tmp7(5995).Card;
+  const Card = tmp7(6002).Card;
   let str4 = "Send Gift";
-  const Button = tmp7(5594).Button;
+  const Button = tmp7(5601).Button;
   if (isFetching) {
     str4 = "Loading...";
   }
@@ -350,10 +350,10 @@ function GiftPurchaseSKUView(selectedSkuId) {
   };
   items7[1] = closure_12(Card, obj9);
   const obj11 = { children: items9 };
-  const Card2 = tmp7(5995).Card;
+  const Card2 = tmp7(6002).Card;
   const obj12 = { variant: "text-md/medium", color: "text-overlay-light", children: items8 };
   items8 = ["Select style: ", giftStyle];
-  items9 = [closure_11(tmp7(4886).Text, obj12), closure_12(tmp(10561), {})];
+  items9 = [closure_11(tmp7(4892).Text, obj12), closure_12(tmp(10574), {})];
   items7[2] = closure_11(Card2, obj11);
   return closure_11(Stack, obj8);
 }
@@ -494,7 +494,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               children: closure_12(GiftPurchaseSKUView, obj3),
             };
             obj3 = { selectedSkuId, giftRecipientId, giftMessage };
-            const NativeGiftContextProvider = tmp(10430).NativeGiftContextProvider;
+            const NativeGiftContextProvider = tmp(10443).NativeGiftContextProvider;
             tmp6Result = closure_12(NativeGiftContextProvider, obj2);
             tmp8 = closure_12;
           }
@@ -511,7 +511,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       ];
       let str = "none";
-      const Text = tmp(4886).Text;
+      const Text = tmp(4892).Text;
       if (null != requestType) {
         str = requestType;
       }

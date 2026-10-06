@@ -2,7 +2,7 @@
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef7952 from "../../../../../_runtime/metro/07952__.js";
+import _modDef7963 from "../../../../../_runtime/metro/07963__.js";
 import react from "../../../../../_runtime/00019_react.js";
 import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
@@ -76,7 +76,7 @@ const memoResult = react.memo(
               }
             }
           }
-          _modDef7952;
+          _modDef7963;
           const tmp15 = (
             <tmp14
               style={tmp7}
@@ -115,7 +115,7 @@ const memoResult = react.memo(
         const items = [closure_4().slider];
         let num = 1;
         closure_4();
-        _modDef7952;
+        _modDef7963;
         if (flag) {
           num = 0.5;
         }

@@ -168,8 +168,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const callback = memo.useCallback((current) => {
         isScrollingRef.current = current;
       }, []);
-      let obj2 = { title: intl.string(listings(2525)["TXY/b0"]), description: intl2.string(listings(2525).aJv4PB) };
-      const tmp3 = listings(12211);
+      let obj2 = { title: intl.string(listings(2553)["TXY/b0"]), description: intl2.string(listings(2553).aJv4PB) };
+      const tmp3 = listings(12226);
       intl = intl3.intl;
       intl2 = intl3.intl;
       items1 = [closure_5(tmp3, obj2)];

@@ -1,6 +1,6 @@
 // discord_app/modules/report_to_mod/ReportToMod.messages.js
 import AssetJsonUtils from "../asset_json/native/AssetJsonUtils.tsx";
-import AssetRegistry from "../../../_runtime/02626_AssetRegistry.js";
+import AssetRegistry from "../../../_runtime/02654_AssetRegistry.js";
 import module_1165_mod from "../../../_runtime/metro/01165__.js";
 import size from "../../../_runtime/metro/00002__.js";
 

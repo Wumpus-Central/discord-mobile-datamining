@@ -2,7 +2,7 @@
 import Fragment from "../../../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../../../_runtime/00576_react.js";
 import intl2 from "../../../../../../intl/index.native.tsx";
-import AssetRegistryDefault from "../../../../../../../_runtime/04809_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../../_runtime/04815_AssetRegistry.js";
 import Navigator2 from "../../../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton2 from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
@@ -190,13 +190,13 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : (platformType) => {
       platformType = platformType.platformType;
       const locationStack = platformType.locationStack;
-      const obj = platformType(8742);
+      const obj = platformType(8774);
       const twoWayLinkStyles = obj.useTwoWayLinkStyles();
       const items = [platformType, twoWayLinkStyles];
       const memo = react.useMemo(() => getScreens(platformType, twoWayLinkStyles), items);
-      const obj2 = platformType(8763);
+      const obj2 = platformType(8795);
       const accountLinkStepTracking = obj2.useAccountLinkStepTracking(platformType, locationStack);
-      const Navigator = platformType(6496).Navigator;
+      const Navigator = platformType(6503).Navigator;
       const intl = platformType(1126).intl;
       return (
         <Navigator

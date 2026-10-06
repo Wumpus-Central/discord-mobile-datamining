@@ -232,7 +232,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 obj.hideActionSheet();
               }
             }
-            tmp16 = closure_9(onBannerChange(8313).NitroWheelIcon, {});
+            tmp16 = closure_9(onBannerChange(8346).NitroWheelIcon, {});
           }
           cResult[8] = tmp7;
           cResult[9] = tmp16;
@@ -259,8 +259,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp6.titleContainer;
         cResult[11] = tmp6.titleWrapper;
         cResult[12] = tmp15;
-        cResult[13] = closure_9(onBannerChange(6644).BottomSheetTitleHeader, obj5);
-        const tmp19 = closure_9(onBannerChange(6644).BottomSheetTitleHeader, obj5);
+        cResult[13] = closure_9(onBannerChange(6651).BottomSheetTitleHeader, obj5);
+        const tmp19 = closure_9(onBannerChange(6651).BottomSheetTitleHeader, obj5);
       }
       let result = tmp5;
       if (!result) {
@@ -379,9 +379,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         return obj(...arguments);
       };
       let tmp = closure_12();
-      const analyticsLocations2 = obj(6657)(analyticsLocations).analyticsLocations;
+      const analyticsLocations2 = obj(6664)(analyticsLocations).analyticsLocations;
       if (!flag) {
-        const tmp2Result = obj(4528);
+        const tmp2Result = obj(4534);
         flag = tmp2Result.canUsePremiumProfileCustomization(user);
       }
       obj = { value: analyticsLocations2, children: closure_10(ActionSheet, obj13) };
@@ -442,7 +442,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       items3 = [closure_9(FormSubLabel, obj8)];
       let tmp4Result4 = !flag;
       if (tmp4Result4) {
-        const obj9 = { style: tmp.upsellButton, children: closure_9(obj(14420), obj10) };
+        const obj9 = { style: tmp.upsellButton, children: closure_9(obj(14436), obj10) };
         obj10 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
         tmp4Result4 = closure_9(View, obj9);
       }
@@ -513,15 +513,15 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp5, tmp6);
       ({ pendingAccentColor, pendingAvatar } = stateFromStoresObject);
       const obj2 = { userId: user.id, image: pendingAvatar };
-      const tmpResult6 = tmp(7840);
+      const tmpResult6 = tmp(7851);
       let pendingAvatarSrc = tmpResult6.getPendingAvatarSrc(obj2);
-      const tmp11 = pendingAccentColor(7857)(user.id);
+      const tmp11 = pendingAccentColor(7868)(user.id);
       if (pendingAvatarSrc == null) {
         pendingAvatarSrc = user.getAvatarURL(undefined, 80);
       }
-      const tmpResult7 = tmp(7920);
+      const tmpResult7 = tmp(7931);
       const memoizedImageSourceResult = tmpResult7.memoizedImageSource(pendingAvatarSrc);
-      const tmpResult8 = tmp(7920);
+      const tmpResult8 = tmp(7931);
       const dominantColorFromImage = tmpResult8.useDominantColorFromImage(pendingAvatarSrc, memoizedImageSourceResult);
       if (cResult[2] !== dominantColorFromImage) {
         const tmpResult9 = tmp(1103);
@@ -581,7 +581,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[10] !== tmp4.label) {
           const obj3 = { style: label, text: tmp19 };
-          const tmp23 = closure_9(tmp(8895).FormLabel, obj3);
+          const tmp23 = closure_9(tmp(8924).FormLabel, obj3);
           cResult[10] = tmp4.label;
           cResult[11] = tmp23;
           tmp21 = tmp23;
@@ -614,7 +614,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
               const obj4 = {
                 style: tmp4.rowArrow,
                 size: tmp(1188).Icon.Sizes.CUSTOM,
-                source: pendingAccentColor(14428),
+                source: pendingAccentColor(14444),
               };
               const Icon = tmp(1188).Icon;
               const tmp35 = closure_9(Icon, obj4);
@@ -641,7 +641,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = { label: tmp21, trailing: tmp36, onPress: tmp18 };
-                  const tmp42 = closure_9(tmp(5993).TableRow, obj5);
+                  const tmp42 = closure_9(tmp(6000).TableRow, obj5);
                   cResult[27] = tmp18;
                   cResult[28] = tmp36;
                   cResult[29] = tmp21;
@@ -666,14 +666,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             color: "interactive-text-default",
             children: tmp28,
           };
-          const tmp32 = closure_9(tmp(4886).Text, obj7);
+          const tmp32 = closure_9(tmp(4892).Text, obj7);
           cResult[17] = tmp4.selectedColorHex;
           cResult[18] = tmp28;
           cResult[19] = tmp32;
           tmp30 = tmp32;
         }
         const obj8 = { style: tmp4.bannerColor, color: pendingAccentColor };
-        const tmp27 = closure_9(pendingAccentColor(14423), obj8);
+        const tmp27 = closure_9(pendingAccentColor(14439), obj8);
         cResult[12] = pendingAccentColor;
         cResult[13] = tmp4.bannerColor;
         cResult[14] = tmp27;
@@ -712,7 +712,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = require("RecentAvatarUtils");
       const obj3 = { userId: user.id, image: pendingAvatar };
       let pendingAvatarSrc = obj2.getPendingAvatarSrc(obj3);
-      const tmp7 = pendingAccentColor(7857)(user.id);
+      const tmp7 = pendingAccentColor(7868)(user.id);
       if (pendingAvatarSrc == null) {
         pendingAvatarSrc = user.getAvatarURL(undefined, 80);
       }
@@ -753,27 +753,27 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           showCustomColorPickerActionSheetDefault(obj);
         },
       };
-      const TableRow = tmp2(5993).TableRow;
+      const TableRow = tmp2(6000).TableRow;
       obj5 = { style: tmp.label, text: intl.string(require("intl").t.xzNfPz) };
-      FormLabel = tmp2(8895).FormLabel;
+      FormLabel = tmp2(8924).FormLabel;
       intl = tmp2(1126).intl;
       obj6 = { style: tmp.selectedColor, children: items2 };
       items2 = [, ,];
       const obj7 = { style: tmp.bannerColor, color: pendingAccentColor };
-      items2[0] = closure_9(pendingAccentColor(14423), obj7);
+      items2[0] = closure_9(pendingAccentColor(14439), obj7);
       const obj8 = {
         style: tmp.selectedColorHex,
         variant: "text-md/medium",
         color: "interactive-text-default",
         children: tmp2Result6.int2hex(pendingAccentColor),
       };
-      const Text = tmp2(4886).Text;
+      const Text = tmp2(4892).Text;
       tmp2Result6 = require("utils/ColorUtils");
       items2[1] = closure_9(Text, obj8);
       const obj9 = {
         style: tmp.rowArrow,
         size: require("native").Icon.Sizes.CUSTOM,
-        source: pendingAccentColor(14428),
+        source: pendingAccentColor(14444),
       };
       const Icon = tmp2(1188).Icon;
       items2[2] = closure_9(Icon, obj9);

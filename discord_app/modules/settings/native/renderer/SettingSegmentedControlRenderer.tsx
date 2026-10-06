@@ -167,7 +167,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let settings;
       let tmp3;
       let tmp5;
-      const f117175 = () => {
+      const f117333 = () => {
         const field = UserSettingSearchStore.getField("selected");
         if (null != field) {
           const index = settings.indexOf(field);
@@ -194,9 +194,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp = closure_11();
       let tmp2 = _slicedToArray(react.useState(0), 2);
       [tmp3, c2] = tmp2;
-      [tmp5, r10021] = react.useState(f117175);
+      [tmp5, r10021] = react.useState(f117333);
       let items = [settings];
-      _slicedToArray(react.useState(f117175), 2);
+      _slicedToArray(react.useState(f117333), 2);
       const callback = react.useCallback((nativeEvent) => {
         _undefined(nativeEvent.nativeEvent.layout.width);
       }, []);

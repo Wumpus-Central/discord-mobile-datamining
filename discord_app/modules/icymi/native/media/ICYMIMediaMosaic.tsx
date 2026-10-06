@@ -301,16 +301,16 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withTiming(num, { duration: 150 }) };
         return obj;
       };
-      const obj2 = imageFinishedLoading(4612);
-      fn.__closure = { withTiming: imageFinishedLoading(4891).withTiming, imageFinishedLoading };
+      const obj2 = imageFinishedLoading(4618);
+      fn.__closure = { withTiming: imageFinishedLoading(4897).withTiming, imageFinishedLoading };
       fn.__workletHash = 7803531897566;
       fn.__initData = __initData;
-      ({ withTiming: imageFinishedLoading(4891).withTiming, imageFinishedLoading });
+      ({ withTiming: imageFinishedLoading(4897).withTiming, imageFinishedLoading });
       const animatedStyle = obj2.useAnimatedStyle(fn);
       if (null != source.placeholder) {
         let tmp9;
         if (cResult[0] !== source.placeholder) {
-          const tmpResult = tmp(16440);
+          const tmpResult = tmp(16480);
           const thumbhashImageFromPlaceholder = tmpResult.createThumbhashImageFromPlaceholder(source.placeholder);
           let num = 0;
           cResult[0] = source.placeholder;
@@ -436,7 +436,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       const isSpoiler = source.isSpoiler;
       const tmp = closure_18();
       [imageFinishedLoading, dependencyMap] = react.useState(false);
-      let obj = source(4612);
+      let obj = source(4618);
       const fn = function h() {
         let num = 1;
         const withTiming = timing.withTiming;
@@ -447,7 +447,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         const obj = { opacity: withTiming(num, { duration: 150 }) };
         return obj;
       };
-      let obj2 = { withTiming: source(4891).withTiming, imageFinishedLoading };
+      let obj2 = { withTiming: source(4897).withTiming, imageFinishedLoading };
       fn.__closure = obj2;
       fn.__workletHash = 8852576862173;
       fn.__initData = __initData2;
@@ -463,9 +463,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           return size;
         }
       }, items);
-      const obj3 = { style: items1, children: closure_15(imageFinishedLoading(5974), obj4) };
+      const obj3 = { style: items1, children: closure_15(imageFinishedLoading(5981), obj4) };
       items1 = [animatedStyle, tmp.thumbhashMedia];
-      const View = imageFinishedLoading(4612).View;
+      const View = imageFinishedLoading(4618).View;
       obj4 = { source: memo, style: items2 };
       items2 = [style, tmp.media, dimensions];
       const items3 = [closure_15(View, obj3)];
@@ -479,7 +479,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       };
       items4 = [tmp.media, style, dimensions];
       num = 0;
-      const Image = imageFinishedLoading(4612).Image;
+      const Image = imageFinishedLoading(4618).Image;
       if (isSpoiler) {
         num = 100;
       }
@@ -1116,7 +1116,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
                 class R {
                   constructor(arg0, arg1) {
                     obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-                    return jsx(f73915, obj, arg1);
+                    return jsx(f74018, obj, arg1);
                   }
                 }
                 const obj2 = { style: tmp7, children: tmp8 };
@@ -1136,7 +1136,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
               class R {
                 constructor(arg0, arg1) {
                   obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-                  return jsx(f73915, obj, arg1);
+                  return jsx(f74018, obj, arg1);
                 }
               }
               cResult[8] = handlePressMedia;
@@ -1147,7 +1147,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled()
             class R {
               constructor(arg0, arg1) {
                 obj = { handlePressMedia, initialIndex: arg1, source: end, dimensions: closure_1 };
-                return jsx(f73915, obj, arg1);
+                return jsx(f74018, obj, arg1);
               }
             }
             cResult[11] = tmp6;

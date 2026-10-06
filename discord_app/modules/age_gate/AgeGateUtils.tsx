@@ -1214,7 +1214,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult4 = require("get initialized");
       const stateFromStores1 = tmpResult4.useStateFromStores(tmp12, tmp13);
       const tmpResult5 = require("RegionalFeatureConfigUtils");
-      let isFeatureAgeGated = tmpResult5.useIsFeatureAgeGated(tmp(5581).AgeGatedFeature.AGE_GATED_SPACES);
+      let isFeatureAgeGated = tmpResult5.useIsFeatureAgeGated(tmp(5588).AgeGatedFeature.AGE_GATED_SPACES);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [];
         class S {
@@ -1534,7 +1534,7 @@ export const maybeOpenAgeGateForVoiceChannel = function maybeOpenAgeGateForVoice
   let flag = shouldShowAgeGateForVoiceChannel(id);
   if (flag) {
     const obj = AgeGateModalActionCreators;
-    obj.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL);
+    obj.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL, id);
     flag = true;
   }
   return flag;

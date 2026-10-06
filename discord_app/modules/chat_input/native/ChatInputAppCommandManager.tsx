@@ -157,7 +157,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult = tmp(6812);
+      const tmpResult = tmp(6822);
       const games = tmpResult.useGames(tmp7);
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
         class C {
@@ -361,7 +361,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         let gameById;
         return first.filter((item) => null == gameById.getGameById(item));
       }, items);
-      let obj = rawGameMentionIds(6812);
+      let obj = rawGameMentionIds(6822);
       const games = obj.useGames(memo);
       let obj2 = rawGameMentionIds(504);
       const items1 = [GameStore, UserStore, GameAutocompleteStore];

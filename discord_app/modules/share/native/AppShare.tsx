@@ -323,9 +323,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           let str = "react.memo_cache_sentinel";
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
             const obj2 = { appEntryKey: share };
-            const tmp25 = closure_9(tmp(17089).ActionSheetContainer, obj2);
+            const tmp25 = closure_9(tmp(17115).ActionSheetContainer, obj2);
             const tmp26 = closure_9(AppToastContainerDefault, { appChrome: false });
-            const tmp27 = closure_9(tmp(5713).AlertModalContainer, {});
+            const tmp27 = closure_9(tmp(5720).AlertModalContainer, {});
             cResult[9] = tmp25;
             cResult[10] = tmp26;
             cResult[11] = tmp27;
@@ -360,7 +360,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
           tmp14Result = closure_9(tmp11Result, obj4);
         } else {
-          tmp14Result = closure_9(tmp(6535).SceneLoadingIndicator, {});
+          tmp14Result = closure_9(tmp(6542).SceneLoadingIndicator, {});
         }
         cResult[6] = tmp4;
         cResult[7] = attachments;
@@ -442,9 +442,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       items1 = [
         tmp10Result,
-        tmp13(tmp11(17089).ActionSheetContainer, { appEntryKey: share }),
+        tmp13(tmp11(17115).ActionSheetContainer, { appEntryKey: share }),
         tmp13(AppToastContainerDefault, { appChrome: false }),
-        tmp13(tmp11(5713).AlertModalContainer, {}),
+        tmp13(tmp11(5720).AlertModalContainer, {}),
       ];
       return closure_10(tmp8, obj);
     };

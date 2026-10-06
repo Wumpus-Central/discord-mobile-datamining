@@ -3,8 +3,8 @@ import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import PremiumConstants from "../../../premium/PremiumConstants.tsx";
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/06941_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../_runtime/08888_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/06954_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../_runtime/08917_AssetRegistry.js";
 import react from "../../../../../_runtime/00019_react.js";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -46,7 +46,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp10;
         }
       }
-      const tmp11 = jsx(tmp6(5974), {
+      const tmp11 = jsx(tmp6(5981), {
         accessible: true,
         accessibilityLabel: tmp8,
         accessibilityRole: "header",
@@ -72,7 +72,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         tmp = importDefault;
         tmp3 = AssetRegistryDefault;
       }
-      tmp(5974);
+      tmp(5981);
       const obj2 = PremiumUtils;
       return (
         <tmpResult

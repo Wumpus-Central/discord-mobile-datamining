@@ -18,7 +18,7 @@ let items6;
 let items7;
 let items8;
 let items9;
-const f110763 = (cost) => cost.cost;
+const f110918 = (cost) => cost.cost;
 const obj = { id: "1", name: "GameServer #1", cost: 3, specifications: items };
 items = [
   { title: "2", description: "GB" },
@@ -48,7 +48,7 @@ const obj4 = {
   baseCost: Math.min.apply(items4),
   gameId: "1",
 };
-items4 = [...items1.map(f110763)];
+items4 = [...items1.map(f110918)];
 const items5 = [obj4, , , , , , , , , , ,];
 const obj5 = {
   id: "2",
@@ -58,7 +58,7 @@ const obj5 = {
   baseCost: Math.min.apply(items6),
   gameId: "1",
 };
-items6 = [...items1.map(f110763)];
+items6 = [...items1.map(f110918)];
 items5[1] = obj5;
 const obj6 = {
   id: "3",
@@ -68,7 +68,7 @@ const obj6 = {
   baseCost: Math.min.apply(items7),
   gameId: "1",
 };
-items7 = [...items1.map(f110763)];
+items7 = [...items1.map(f110918)];
 items5[2] = obj6;
 const obj7 = {
   id: "4",
@@ -78,7 +78,7 @@ const obj7 = {
   baseCost: Math.min.apply(items8),
   gameId: "1",
 };
-items8 = [...items1.map(f110763)];
+items8 = [...items1.map(f110918)];
 items5[3] = obj7;
 const obj8 = {
   id: "5",
@@ -88,7 +88,7 @@ const obj8 = {
   baseCost: Math.min.apply(items9),
   gameId: "1",
 };
-items9 = [...items1.map(f110763)];
+items9 = [...items1.map(f110918)];
 items5[4] = obj8;
 const obj9 = {
   id: "6",
@@ -98,7 +98,7 @@ const obj9 = {
   baseCost: Math.min.apply(items10),
   gameId: "1",
 };
-items10 = [...items1.map(f110763)];
+items10 = [...items1.map(f110918)];
 items5[5] = obj9;
 const obj10 = {
   id: "7",
@@ -108,7 +108,7 @@ const obj10 = {
   baseCost: Math.min.apply(items11),
   gameId: "1",
 };
-items11 = [...items1.map(f110763)];
+items11 = [...items1.map(f110918)];
 items5[6] = obj10;
 const obj11 = {
   id: "8",
@@ -118,7 +118,7 @@ const obj11 = {
   baseCost: Math.min.apply(items12),
   gameId: "1",
 };
-items12 = [...items1.map(f110763)];
+items12 = [...items1.map(f110918)];
 items5[7] = obj11;
 const obj12 = {
   id: "9",
@@ -128,7 +128,7 @@ const obj12 = {
   baseCost: Math.min.apply(items13),
   gameId: "1",
 };
-items13 = [...items1.map(f110763)];
+items13 = [...items1.map(f110918)];
 items5[8] = obj12;
 const obj13 = {
   id: "10",
@@ -138,7 +138,7 @@ const obj13 = {
   baseCost: Math.min.apply(items14),
   gameId: "1",
 };
-items14 = [...items1.map(f110763)];
+items14 = [...items1.map(f110918)];
 items5[9] = obj13;
 const obj14 = {
   id: "11",
@@ -148,7 +148,7 @@ const obj14 = {
   baseCost: Math.min.apply(items15),
   gameId: "1",
 };
-items15 = [...items1.map(f110763)];
+items15 = [...items1.map(f110918)];
 items5[10] = obj14;
 const obj15 = {
   id: "12",
@@ -158,7 +158,7 @@ const obj15 = {
   baseCost: Math.min.apply(items16),
   gameId: "1",
 };
-items16 = [...items1.map(f110763)];
+items16 = [...items1.map(f110918)];
 items5[11] = obj15;
 const items17 = [
   {

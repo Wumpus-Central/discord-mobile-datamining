@@ -2,7 +2,7 @@
 import react_native from "../../../../../_runtime/00017_react-native.js";
 import react2 from "../../../../../_runtime/00576_react.js";
 import intl3 from "../../../../intl/index.native.tsx";
-import _modDef3723 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3753 from "../../intl/ConjureUntranslated.messages.js";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import ConjureNativeMarkdownDefault from "../../chat/native/ConjureNativeMarkdown.tsx";
@@ -28,7 +28,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = obj.c(9);
       ({ style, attribution, onAsk } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: intl.string(_modDef3723.s96AWB) };
+        const obj2 = { source: intl.string(_modDef3753.s96AWB) };
         const tmp7 = ConjureNativeMarkdownDefault;
         intl = intl3.intl;
         const tmp8 = React3(tmp7, obj2);
@@ -39,7 +39,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = intl3.intl;
-        const stringResult = intl2.string(_modDef3723["U/bLzU"]);
+        const stringResult = intl2.string(_modDef3753["U/bLzU"]);
         cResult[1] = stringResult;
         tmp10 = stringResult;
       } else {
@@ -94,7 +94,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       onAsk = onAsk.onAsk;
       const obj = { style: onAsk.style, children: items };
       items = [onAsk.attribution, ,];
-      const obj2 = { source: intl.string(_modDef3723.s96AWB) };
+      const obj2 = { source: intl.string(_modDef3753.s96AWB) };
       const tmp = ConjureNativeMarkdownDefault;
       intl = intl3.intl;
       items[1] = React3(tmp, obj2);
@@ -105,7 +105,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         size: "sm",
         disabled: null == onAsk,
         onPress: onAsk,
-        text: intl2.string(_modDef3723["U/bLzU"]),
+        text: intl2.string(_modDef3753["U/bLzU"]),
       };
       Button = components_Button_Button.Button;
       intl2 = intl3.intl;

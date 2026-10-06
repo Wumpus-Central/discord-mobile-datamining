@@ -1594,7 +1594,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       items = [,];
       const obj2 = { size: "sm", color: ICON_FEEDBACK_CRITICAL, secondaryColor: tmp10(587).colors.WHITE };
       items[0] = metroImportDefault(CircleXIcon, obj2);
-      items[1] = metroImportDefault(tmp4(4886).Text, { variant: "text-sm/normal", children: label });
+      items[1] = metroImportDefault(tmp4(4892).Text, { variant: "text-sm/normal", children: label });
       return metroImportAll(View, obj);
     };
 const memo2 = react.memo;
@@ -2215,7 +2215,7 @@ let closure_16 = memo2(
           return obj(...arguments);
         };
         [first, _slicedToArray] = react.useState(false);
-        const tmp4 = guildTemplate(17822)(guildTemplate.code);
+        const tmp4 = guildTemplate(17868)(guildTemplate.code);
         react = tmp4;
         obj = { spacing: guildTemplate(587).space.PX_12, children: items };
         const Stack = Stack_Stack.Stack;

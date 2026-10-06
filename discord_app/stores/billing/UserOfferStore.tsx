@@ -92,9 +92,6 @@ function handleSubscriptionStoreUpdate() {
   }
   return flag;
 }
-function handlePaymentSourceChange() {
-  const currentUser = UserStore.getCurrentUser();
-}
 function handleReferralTrialStoreUpdate() {
   return false;
 }
@@ -112,10 +109,10 @@ let cooldownExpirationTimestamps = {
   userOffersLastFetchedAtDate: "r",
   userTrialOffers: {},
   userDiscountOffers: {},
-  userDiscounts: "\u{1F91E}\u{1F3FB}",
+  userDiscounts: "\u{1F91F}\u{1F3FD}",
   isFetching: true,
   lastFetchSuccessful: null,
-  shouldTriggerOffer: 9,
+  shouldTriggerOffer: 10,
   cooldownExpirationTimestamps: {
     [OfferTriggerTypes.CHANNEL_OPENED]: 0,
     [OfferTriggerTypes.JOIN_VOICE_CHANNEL]: 0,
@@ -668,9 +665,6 @@ let obj2 = {
     }
     return true;
   },
-  BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: handlePaymentSourceChange,
-  BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: handlePaymentSourceChange,
-  BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: handlePaymentSourceChange,
   BILLING_USER_OFFER_TRIGGER_ATTEMPT: function handleUserOfferTriggerAttempt(triggerType) {
     triggerType = triggerType.triggerType;
     const result = 3600 * (1 + Math.random());

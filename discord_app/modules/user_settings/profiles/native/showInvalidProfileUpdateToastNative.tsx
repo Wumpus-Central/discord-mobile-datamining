@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import AssetRegistryDefault from "../../../../../_runtime/04809_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../_runtime/04815_AssetRegistry.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting(

@@ -32,7 +32,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       ({ iframeId, onActivityCrash, presentation } = frame);
       const layoutMode = presentation.layoutMode;
       ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = presentation);
-      let obj2 = frame(6658);
+      let obj2 = frame(6665);
       const data = obj2.useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
       let first = _slicedToArray(react.useState(true), 2)[0];
@@ -83,7 +83,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[12] === first) {
                   tmp12 = cResult[13];
                 }
-                const tmpResult = frame(9134);
+                const tmpResult = frame(9169);
                 const baseActivityView = tmpResult.useBaseActivityView(tmp12);
                 ({ isResetting, isLandscape } = baseActivityView);
                 const applicationId = frame.applicationId;
@@ -127,7 +127,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                       return obj.leaveFrame(frame.id);
                     }
                   }
-                  const tmp18 = layoutMode(17149)(frame, ActivityPlatform.MOBILE);
+                  const tmp18 = layoutMode(17178)(frame, ActivityPlatform.MOBILE);
                   cResult[17] = frame;
                   cResult[18] = tmp18;
                   tmp16 = tmp18;
@@ -135,7 +135,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                   tmp16 = cResult[18];
                 }
                 if (cResult[19] !== data) {
-                  frame(9147);
+                  frame(9182);
                   class D {
                     constructor() {
                       const obj = FramesNativeManagerDefault;
@@ -175,12 +175,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                                     cResult[33] = isResetting;
                                     cResult[34] = first;
                                     cResult[35] = tmp24;
-                                    cResult[36] = jsx(frame(9134).BaseActivityView, {
+                                    cResult[36] = jsx(frame(9169).BaseActivityView, {
                                       showLoadingIndicator: first,
                                       isResetting,
                                       children: tmp24,
                                     });
-                                    const tmp30 = jsx(frame(9134).BaseActivityView, {
+                                    const tmp30 = jsx(frame(9169).BaseActivityView, {
                                       showLoadingIndicator: first,
                                       isResetting,
                                       children: tmp24,
@@ -195,7 +195,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                 }
-                const tmp27 = jsx(layoutMode(17152), {
+                const tmp27 = jsx(layoutMode(17181), {
                   onActivityCrash,
                   applicationId,
                   iframeId,
@@ -274,7 +274,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let portraitSafeAreasConfig = presentation.portraitSafeAreasConfig;
       ({ iframeId, onActivityCrash } = frame);
       const landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
-      let obj = frame(6658);
+      let obj = frame(6665);
       const data = obj.useApplication(frame.applicationId).data;
       const orientationLock = frame.data.orientationLock;
       [first, tmp5] = react.useState(true);
@@ -303,7 +303,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (!first) {
         first = null == data;
       }
-      const tmpResult = frame(9134);
+      const tmpResult = frame(9169);
       const baseActivityView = tmpResult.useBaseActivityView({
         orientationLockState: orientationLock,
         showLoadingIndicator: first,
@@ -312,7 +312,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         setOrientationLockState: callback1,
       });
       ({ isResetting, isLandscape } = baseActivityView);
-      const BaseActivityView = tmp(9134).BaseActivityView;
+      const BaseActivityView = tmp(9169).BaseActivityView;
       ({
         onActivityCrash,
         applicationId: frame.applicationId,
@@ -334,15 +334,15 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           return obj.leaveFrame(frame.id);
         },
         activityUrl: frame.data.url,
-        queryParams: layoutMode(17149)(frame, ActivityPlatform.MOBILE),
+        queryParams: layoutMode(17178)(frame, ActivityPlatform.MOBILE),
         onLoadError: callback,
         allowPopups: tmpResult2.allowPopups(data),
         referrerPolicy: "origin",
         isPipOrGridMode: layoutMode === FrameLayoutModes.PIP,
         safeAreasConfig: portraitSafeAreasConfig,
       });
-      layoutMode(17152);
-      tmpResult2 = frame(9147);
+      layoutMode(17181);
+      tmpResult2 = frame(9182);
       if (isLandscape) {
         portraitSafeAreasConfig = landscapeSafeAreasConfig;
       }

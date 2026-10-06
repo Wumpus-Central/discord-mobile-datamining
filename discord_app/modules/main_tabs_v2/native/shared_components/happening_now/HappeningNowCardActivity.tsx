@@ -16,10 +16,10 @@ import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPrev
 import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import AssetRegistryDefault from "../../../../../../_runtime/15999_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../../../_runtime/16000_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../../../_runtime/16038_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../../../_runtime/16039_AssetRegistry.js";
 import HappeningNowAvatarStack2 from "HappeningNowAvatarStack.tsx";
-import AssetRegistryDefault3 from "../../../../../../_runtime/16009_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../../../_runtime/16048_AssetRegistry.js";
 import react from "../../../../../../_runtime/00019_react.js";
 import react_native from "../../../../../../_runtime/00017_react-native.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
@@ -247,10 +247,10 @@ const memoResult = react.memo((userId) => {
     }
     track(ACTIVITY_CARD_CLICKED, obj);
     if (null != stream) {
-      const promise2 = asyncRequire(12695, dependencyMap.paths);
+      const promise2 = asyncRequire(12710, dependencyMap.paths);
       promise2.then((result) => result.default(channelId.channelId, true));
     } else {
-      const promise = asyncRequire(7850, dependencyMap.paths);
+      const promise = asyncRequire(7861, dependencyMap.paths);
       promise.then((result) => {
         const obj = { userId, localUser, sourceAnalyticsLocations };
         return result.default(obj);

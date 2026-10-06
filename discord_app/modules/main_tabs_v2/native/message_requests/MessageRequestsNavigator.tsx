@@ -7,7 +7,7 @@ import getNavigationModalPresentationDefault from "../utils/getNavigationModalPr
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import react from "../../../../../_runtime/00019_react.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
-import NativeStackView from "../../../../../_runtime/07556_NativeStackView.js";
+import NativeStackView from "../../../../../_runtime/07568_NativeStackView.js";
 import createStyles_mod from "../../../../design/components/Styles/native/createStyles.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
@@ -132,7 +132,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const Screen = closure_9.Screen;
               const obj3 = { title: intl.string(tmp(1126).t.e7GWjQ) };
               intl = tmp(1126).intl;
-              let merged = Object.assign(tmp9(10662)());
+              let merged = Object.assign(tmp9(10675)());
               tmp19[1] = obj3;
               tmp19[2] = function getComponent() {
                 return closure_0(dependencyMap[15]).default;
@@ -171,7 +171,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const Screen2 = closure_9.Screen;
               const obj4 = { title: intl2.string(tmp(1126).t.ulKXHp) };
               intl2 = tmp(1126).intl;
-              const merged1 = Object.assign(tmp9(10662)());
+              const merged1 = Object.assign(tmp9(10675)());
               tmp26[1] = obj4;
               tmp26[2] = function getComponent() {
                 return closure_0(dependencyMap[16]).default;
@@ -210,7 +210,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               const Screen3 = closure_9.Screen;
               const obj5 = { title: intl3.string(tmp(1126).t.iilwGH) };
               intl3 = tmp(1126).intl;
-              const merged2 = Object.assign(tmp9(10662)());
+              const merged2 = Object.assign(tmp9(10675)());
               tmp33[1] = obj5;
               tmp33[2] = function getComponent() {
                 return closure_0(dependencyMap[17]).default;

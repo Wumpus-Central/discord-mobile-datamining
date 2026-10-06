@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/RoleTierEditStore.tsx
 import react from "../../../../_runtime/00576_react.js";
 import react_native from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import _slicedToArray2 from "../../../../_runtime/metro/04492__slicedToArray.js";
+import _slicedToArray2 from "../../../../_runtime/metro/04498__slicedToArray.js";
 import GuildRoleSubscriptionsHttpApiAll from "../GuildRoleSubscriptionsHttpApi.tsx";
 import GuildRoleSubscriptionsHooks from "../GuildRoleSubscriptionsHooks.tsx";
 import _slicedToArray_mod from "../../../../_runtime/metro/00032__slicedToArray.js";
@@ -196,7 +196,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
   } else {
     first = cResult[0];
   }
-  const tmp5 = _slicedToArray(withEqualityFn(first, tmp(4492).shallow), 3);
+  const tmp5 = _slicedToArray(withEqualityFn(first, tmp(4498).shallow), 3);
   const first1 = tmp5[0];
   let closure_2 = tmp7;
   dependencyMap = tmp8;
@@ -212,7 +212,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
         if (cResult[6] === tmp9) {
           tmp10 = cResult[7];
         }
-        first1(5590)(tmp10);
+        first1(5597)(tmp10);
         class G {
           constructor() {
             closure_4(guildId);
@@ -257,7 +257,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? ((guildId) => {
     return items;
   }, require("_slicedToArray").shallow);
   let closure_2 = tmp3;
-  tiers(5590)(() => {
+  tiers(5597)(() => {
     const tmp2 = null == first && closure_2 !== obj.LOADING;
     if (tmp2) {
       closure_3(guildId);

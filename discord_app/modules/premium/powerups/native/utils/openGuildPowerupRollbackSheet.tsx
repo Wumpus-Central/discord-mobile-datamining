@@ -9,6 +9,6 @@ const GUILD_POWERUP_ROLLBACK_SHEET_KEY_export = "GUILD_POWERUP_ROLLBACK_SHEET_KE
 
 export default function openGuildPowerupRollbackSheet(arg0) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequire(12172, dependencyMap.paths), GUILD_POWERUP_ROLLBACK_SHEET_KEY, arg0);
+  obj.openLazy(asyncRequire(12187, dependencyMap.paths), GUILD_POWERUP_ROLLBACK_SHEET_KEY, arg0);
 }
 export { GUILD_POWERUP_ROLLBACK_SHEET_KEY_export as GUILD_POWERUP_ROLLBACK_SHEET_KEY };

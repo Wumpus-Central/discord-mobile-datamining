@@ -40,7 +40,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = tmp(504);
       const stateFromStoresObject = tmpResult.useStateFromStoresObject(tmp4, tmp5);
       const remoteSessionId = stateFromStoresObject.remoteSessionId;
-      const tmp8 = remoteSessionId(stateFromStoresObject.awaitingRemote ? 4809 : 9653);
+      const tmp8 = remoteSessionId(stateFromStoresObject.awaitingRemote ? 4815 : 9666);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1126).intl;
         const stringResult = intl.string(tmp(1126).t["6vrfgt"]);
@@ -110,7 +110,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = tmp(1126).intl;
       return (
         <PrimaryActionButton
-          source={remoteSessionId(awaitingRemote ? 4809 : 9653)}
+          source={remoteSessionId(awaitingRemote ? 4815 : 9666)}
           accessibilityLabel={intl.string(tmp(1126).t["6vrfgt"])}
           isSmallSize={isSmallSize}
           onPress={function onPress() {

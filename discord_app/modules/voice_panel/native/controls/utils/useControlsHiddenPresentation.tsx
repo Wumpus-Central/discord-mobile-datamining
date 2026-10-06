@@ -35,7 +35,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         obj = {};
       }
       const cleanUp = obj.cleanUp;
-      const tmp4 = obj.state === tmp(4589).TransitionStates.YEETED;
+      const tmp4 = obj.state === tmp(4595).TransitionStates.YEETED;
       HIDDEN_OPACITY_PHYSICS = tmp4;
       let fn = function l() {
         if (!closure_3) {
@@ -51,9 +51,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__closure = obj3;
       fn.__workletHash = 9921694756227;
       fn.__initData = __initData;
-      const tmpResult = tmp(4612);
+      const tmpResult = tmp(4618);
       const animatedProps = tmpResult.useAnimatedProps(fn);
-      const tmpResult2 = tmp(4612);
+      const tmpResult2 = tmp(4618);
       class S {
         constructor() {
           tmp = closure_0(closure_1[5]);
@@ -80,22 +80,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       S.__closure = {
-        withSpring: tmp(5597).withSpring,
+        withSpring: tmp(5604).withSpring,
         yeeted: tmp4,
         wrapperSpecs,
         HIDDEN_OPACITY_PHYSICS,
         cleanUp,
-        runOnJS: tmp(4612).runOnJS,
+        runOnJS: tmp(4618).runOnJS,
       };
       S.__workletHash = 6139998685483;
       S.__initData = __initData2;
       ({
-        withSpring: tmp(5597).withSpring,
+        withSpring: tmp(5604).withSpring,
         yeeted: tmp4,
         wrapperSpecs,
         HIDDEN_OPACITY_PHYSICS,
         cleanUp,
-        runOnJS: tmp(4612).runOnJS,
+        runOnJS: tmp(4618).runOnJS,
       });
       const animatedStyle = tmpResult2.useAnimatedStyle(S);
       if (cResult[0] === animatedProps) {

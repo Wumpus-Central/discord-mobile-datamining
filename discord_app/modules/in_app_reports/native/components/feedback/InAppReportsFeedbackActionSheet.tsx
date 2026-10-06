@@ -27,7 +27,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       reportId = reportId.reportId;
       const reportType = reportId.reportType;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp6 = reportType(16649)();
+        const tmp6 = reportType(17539)();
         cResult[0] = tmp6;
         first = tmp6;
       } else {
@@ -50,7 +50,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmpResult = reportId(16651);
+            const tmpResult = reportId(17541);
             const result = tmpResult.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
             cResult[7] = result;
             tmp9 = result;
@@ -95,7 +95,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp18;
           }
-          const tmp21 = jsx(reportType(11270), {
+          const tmp21 = jsx(reportType(11283), {
             headerLabel: tmp11,
             showHeaderCloseButton: true,
             hideDontShowAgainCheckbox: true,

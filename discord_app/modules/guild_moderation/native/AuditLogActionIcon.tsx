@@ -22,9 +22,9 @@ import WebhookIcon from "../../../design/components/Icon/native/redesign/generat
 import ChannelListIcon from "../../../design/components/Icon/native/redesign/generated/ChannelListIcon.tsx";
 import ListBulletsIcon from "../../../design/components/Icon/native/redesign/generated/ListBulletsIcon.tsx";
 import HomeIcon from "../../../design/components/Icon/native/redesign/generated/HomeIcon.tsx";
-import AssetRegistryDefault from "../../../../_runtime/17724_AssetRegistry.js";
-import AssetRegistryDefault2 from "../../../../_runtime/17725_AssetRegistry.js";
-import AssetRegistryDefault3 from "../../../../_runtime/17726_AssetRegistry.js";
+import AssetRegistryDefault from "../../../../_runtime/17770_AssetRegistry.js";
+import AssetRegistryDefault2 from "../../../../_runtime/17771_AssetRegistry.js";
+import AssetRegistryDefault3 from "../../../../_runtime/17772_AssetRegistry.js";
 import react from "../../../../_runtime/00019_react.js";
 import AuditLogRecord from "../../../records/AuditLogRecord.tsx";
 import Constants from "../../../Constants.tsx";

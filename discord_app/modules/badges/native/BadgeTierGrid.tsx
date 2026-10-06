@@ -301,7 +301,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.progressLabel,
           children: intl.formatToPlainString(badge(1126).t.KyTwIh, obj3),
         };
-        let Text = badge(4886).Text;
+        let Text = badge(4892).Text;
         intl = badge(1126).intl;
         obj3 = { username: targetUsername };
         isViewingOtherUser = closure_4(Text, obj2);
@@ -403,7 +403,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
       let tiers = badge.tiers;
-      const tmp9 = isViewingOtherUser(9951);
+      const tmp9 = isViewingOtherUser(9964);
       if (tiers == null) {
         tiers = [];
       }

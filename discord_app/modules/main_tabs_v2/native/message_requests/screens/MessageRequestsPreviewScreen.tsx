@@ -22,7 +22,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = channelId;
       channelId = route.route.params.channelId;
       const ref = react.useRef(null);
-      const obj3 = channelId(12083);
+      const obj3 = channelId(12098);
       const isMessageRequestRestrictedViewer = obj3.useIsMessageRequestRestrictedViewer();
       if (cResult[0] !== channelId) {
         const fn = function u() {
@@ -53,7 +53,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           }
           return tmp14;
         }
-        const tmp17 = jsx(tmp(12463).ChannelContainer, { guildId: ME, channelId, children: tmp9 });
+        const tmp17 = jsx(tmp(12478).ChannelContainer, { guildId: ME, channelId, children: tmp9 });
         cResult[6] = channelId;
         cResult[7] = tmp9;
         cResult[8] = tmp17;
@@ -79,7 +79,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp5Result;
       const channelId = route.route.params.channelId;
       const ref = react.useRef(null);
-      let obj = channelId(12083);
+      let obj = channelId(12098);
       const items = [channelId];
       const isMessageRequestRestrictedViewer = obj.useIsMessageRequestRestrictedViewer();
       const effect = react.useEffect(() => {
@@ -87,7 +87,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { channelId, messageId: ReadStateStore.lastMessageId(channelId) };
         const messages = obj.fetchMessages(obj2);
       }, items);
-      const ChannelContainer = channelId(12463).ChannelContainer;
+      const ChannelContainer = channelId(12478).ChannelContainer;
       if (isMessageRequestRestrictedViewer) {
         tmp5Result = jsx(RestrictedMessageRequestPreviewDefault, { channelId });
       } else {

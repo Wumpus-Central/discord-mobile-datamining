@@ -109,7 +109,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         }
         result = false === hasItem1;
       }
-      const tmpResult = tmp(6763);
+      const tmpResult = tmp(6773);
       if (result) {
         result = tmpResult.canManageGuildRoleSubscriptions(stateFromStores);
       }

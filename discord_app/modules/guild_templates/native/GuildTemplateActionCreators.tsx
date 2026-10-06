@@ -14,7 +14,7 @@ let obj = {
     }
     const obj = ModalActionCreatorsDefault;
     const obj2 = { code };
-    obj.pushLazy(asyncRequire(11403, dependencyMap.paths), obj2, GUILD_TEMPLATE_MODAL_KEY);
+    obj.pushLazy(asyncRequire(11416, dependencyMap.paths), obj2, GUILD_TEMPLATE_MODAL_KEY);
     const obj3 = DispatcherDefault;
     const obj4 = { type: "GUILD_TEMPLATE_MODAL_SHOW", code };
     obj3.dispatch(obj4);

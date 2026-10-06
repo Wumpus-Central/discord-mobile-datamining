@@ -349,7 +349,7 @@ obj = function _submitVerificationForm() {
             body = undefined;
             c8 = 1;
             c9 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c8) {
           if (guildId === 1) {

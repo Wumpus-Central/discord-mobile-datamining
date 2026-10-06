@@ -95,7 +95,7 @@ function syncChannelUpdates(id) {
           }
           const areChannelsLocked = PermissionUtilsAll.areChannelsLocked;
           PermissionUtilsAll;
-          const obj5 = obj4(11232);
+          const obj5 = obj4(11245);
           let closure_4 = areChannelsLocked(channel, category, obj5.getAppChannelBotUserId(channel));
           return true;
         }

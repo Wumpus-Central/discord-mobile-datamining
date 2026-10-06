@@ -4,7 +4,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import native from "../../../../../design/void/native.tsx";
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
-import LegacyBaseButton from "../../../../../../_runtime/06140_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../_runtime/06147_LegacyBaseButton.js";
 import useMessagePreviewHeight from "../../useMessagePreviewHeight.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__slicedToArray.js";
 import react from "../../../../../../_runtime/00019_react.js";
@@ -20,7 +20,7 @@ let obj2;
 const View = react_native.View;
 ({ jsx: metroRequire, jsxs: metroImportDefault } = Fragment);
 let obj = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "Boolean" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "filter" },
   drawerHeaderTab: obj2,
   drawerHeader: { backgroundColor: "r" },
   messagePreviewContainer: { marginLeft: 6 },

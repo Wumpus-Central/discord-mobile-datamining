@@ -61,12 +61,12 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         obj3 = { userId: tmp19.id, message, author: userAuthorWithProcessedColor, roleStyle };
         if (null != tmp20) {
           const obj4 = { userId: tmp20.id, message, author: userAuthorWithProcessedColor1, roleStyle };
-          tmp9 = tmp12(7621)(obj4);
+          tmp9 = tmp12(7632)(obj4);
         }
         formatToPartsResult = formatToParts(zUiZPF, obj2);
       }
       const obj5 = { content: formatToPartsResult };
-      const merged = Object.assign(tmp12(7623)(message));
+      const merged = Object.assign(tmp12(7634)(message));
       guildSpaceLeaderboardSystemMessage = obj5;
     }
     const intl = intl3.intl;

@@ -7,7 +7,7 @@ import useWindowDimensionsDefault from "../../../screen/useWindowDimensions.nati
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import inlineStyles from "../../../../../_runtime/08136_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08169_inlineStyles.js";
 import RevealProvider from "RevealProvider.tsx";
 import useGlobalStatusIndicatorState from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
 import GlobalStatusIndicator from "../../../connectivity/native/components/GlobalStatusIndicator.tsx";
@@ -54,7 +54,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       ({ header, reveal } = isTouchingLeftScreenEdge);
       isTouchingLeftScreenEdge = isTouchingLeftScreenEdge.isTouchingLeftScreenEdge;
       const tmp4 = closure_9();
-      let obj2 = reveal(4612);
+      let obj2 = reveal(4618);
       const fn = function n() {
         let num = -54;
         if (reveal) {
@@ -66,8 +66,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 15509217225804;
       fn.__initData = __initData;
       const derivedValue = obj2.useDerivedValue(fn);
-      const tmp7 = derivedValue(9606)();
-      let obj3 = reveal(4612);
+      const tmp7 = derivedValue(9619)();
+      let obj3 = reveal(4618);
       const fn2 = function o() {
         let items;
         let obj3;
@@ -77,10 +77,10 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = timing;
         return obj;
       };
-      fn2.__closure = { withTiming: reveal(4891).withTiming, offsetY: derivedValue, TIMING_CONFIG };
+      fn2.__closure = { withTiming: reveal(4897).withTiming, offsetY: derivedValue, TIMING_CONFIG };
       fn2.__workletHash = 12710345257882;
       fn2.__initData = __initData2;
-      ({ withTiming: reveal(4891).withTiming, offsetY: derivedValue, TIMING_CONFIG });
+      ({ withTiming: reveal(4897).withTiming, offsetY: derivedValue, TIMING_CONFIG });
       const animatedStyle = obj3.useAnimatedStyle(fn2);
       const tmp6 = derivedValue;
       if (cResult[0] === header) {
@@ -102,7 +102,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp15;
             }
             const obj5 = { style: animatedStyle, children: tmp12 };
-            const tmp17 = closure_7(tmp6(4612).View, obj5);
+            const tmp17 = closure_7(tmp6(4618).View, obj5);
             cResult[7] = animatedStyle;
             cResult[8] = tmp12;
             cResult[9] = tmp17;
@@ -110,7 +110,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const rect = { top: !tmp7, left: isTouchingLeftScreenEdge, right: true, children: tmp10 };
-        const tmp14 = closure_7(reveal(6619).SafeAreaPaddingView, rect);
+        const tmp14 = closure_7(reveal(6626).SafeAreaPaddingView, rect);
         let num = 3;
         cResult[3] = isTouchingLeftScreenEdge;
         cResult[4] = !tmp7;
@@ -134,7 +134,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       reveal = reveal.reveal;
       ({ header, isTouchingLeftScreenEdge } = reveal);
       const tmp = closure_9();
-      TIMING_CONFIG = reveal(4612);
+      TIMING_CONFIG = reveal(4618);
       const fn = function l() {
         let num = -54;
         if (reveal) {
@@ -146,8 +146,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       fn.__workletHash = 17020662047758;
       fn.__initData = __initData3;
       const derivedValue = TIMING_CONFIG.useDerivedValue(fn);
-      const tmp3 = derivedValue(9606)();
-      let obj2 = reveal(4612);
+      const tmp3 = derivedValue(9619)();
+      let obj2 = reveal(4618);
       const fn2 = function c() {
         let items;
         let obj3;
@@ -157,16 +157,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = timing;
         return obj;
       };
-      let obj3 = { withTiming: reveal(4891).withTiming, offsetY: derivedValue, TIMING_CONFIG };
+      let obj3 = { withTiming: reveal(4897).withTiming, offsetY: derivedValue, TIMING_CONFIG };
       fn2.__closure = obj3;
       fn2.__workletHash = 9956761529180;
       fn2.__initData = __initData4;
       const animatedStyle = obj2.useAnimatedStyle(fn2);
       const obj4 = { style: animatedStyle, children: closure_7(SafeAreaPaddingView, rect) };
-      const View = derivedValue(4612).View;
+      const View = derivedValue(4618).View;
       rect = { top: !tmp3, left: isTouchingLeftScreenEdge, right: true, children: closure_7(closure_5, obj5) };
       obj5 = { style: tmp.headerContainer, children: header };
-      SafeAreaPaddingView = reveal(6619).SafeAreaPaddingView;
+      SafeAreaPaddingView = reveal(6626).SafeAreaPaddingView;
       return closure_7(View, obj4);
     };
 ReactCompilerGating = ReactCompilerGating_mod;
@@ -333,15 +333,15 @@ const memoResult = memo(
         } = isTouchingLeftScreenEdge);
         isTouchingLeftScreenEdge = isTouchingLeftScreenEdge.isTouchingLeftScreenEdge;
         const tmp4 = undefined !== forceReveal && forceReveal;
-        const tmpResult = channel(9607);
+        const tmpResult = channel(9620);
         const globalStatusIndicatorState = tmpResult.useGlobalStatusIndicatorState();
-        const tmpResult6 = channel(9611);
+        const tmpResult6 = channel(9624);
         const globalStatusIndicatorHeightSharedValue =
           tmpResult6.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-        const tmp9 = globalStatusIndicatorHeightSharedValue(9606)();
+        const tmp9 = globalStatusIndicatorHeightSharedValue(9619)();
         dependencyMap = tmp9;
-        reveal = reveal.useContext(channel(9058).RevealContext).reveal;
-        const tmpResult7 = channel(5770);
+        reveal = reveal.useContext(channel(9094).RevealContext).reveal;
+        const tmpResult7 = channel(5777);
         const isScreenReaderEnabled = tmpResult7.useIsScreenReaderEnabled();
         if (!reveal) {
           reveal = tmp4;
@@ -359,7 +359,7 @@ const memoResult = memo(
         fn.__closure = { isInvitedToSpeak: tmp9, statusIndicatorHeight: globalStatusIndicatorHeightSharedValue };
         fn.__workletHash = 15248992035420;
         fn.__initData = __initData5;
-        const tmpResult8 = channel(4612);
+        const tmpResult8 = channel(4618);
         const derivedValue = tmpResult8.useDerivedValue(fn);
         const fn2 = function c() {
           let num = 0;
@@ -371,7 +371,7 @@ const memoResult = memo(
         fn2.__closure = { reveal };
         fn2.__workletHash = 9056569552987;
         fn2.__initData = __initData6;
-        const tmpResult9 = channel(4612);
+        const tmpResult9 = channel(4618);
         const derivedValue1 = tmpResult9.useDerivedValue(fn2);
         const fn3 = function h() {
           let obj;
@@ -382,9 +382,9 @@ const memoResult = memo(
           obj3 = timing;
           return obj;
         };
-        const tmpResult10 = channel(4612);
+        const tmpResult10 = channel(4618);
         let obj2 = {
-          withTiming: channel(4891).withTiming,
+          withTiming: channel(4897).withTiming,
           top: derivedValue,
           TIMING_CONFIG,
           revealOpacity: derivedValue1,
@@ -393,9 +393,9 @@ const memoResult = memo(
         fn3.__workletHash = 6179540517245;
         fn3.__initData = __initData7;
         const animatedStyle = tmpResult10.useAnimatedStyle(fn3);
-        const tmp8Result = globalStatusIndicatorHeightSharedValue(6657);
-        const analyticsLocations = tmp8Result(tmp8(6681).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-        const tmp15 = globalStatusIndicatorHeightSharedValue(9132)();
+        const tmp8Result = globalStatusIndicatorHeightSharedValue(6664);
+        const analyticsLocations = tmp8Result(tmp8(6688).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+        const tmp15 = globalStatusIndicatorHeightSharedValue(9167)();
         let closure_7 = tmp15;
         if (cResult[0] === analyticsLocations) {
           if (cResult[1] === channel.guild_id) {
@@ -471,7 +471,7 @@ const memoResult = memo(
                                     }
                                     let obj3 = { style: tmp26, pointerEvents: str, children: items };
                                     items = [tmp27, tmp31, tmp35];
-                                    const tmp40 = closure_8(globalStatusIndicatorHeightSharedValue(4612).View, obj3);
+                                    const tmp40 = closure_8(globalStatusIndicatorHeightSharedValue(4618).View, obj3);
                                     cResult[24] = tmp26;
                                     cResult[25] = str;
                                     cResult[26] = tmp27;
@@ -500,7 +500,7 @@ const memoResult = memo(
                             reveal,
                             children,
                           };
-                          tmp36 = closure_7(tmp8(9615), obj4);
+                          tmp36 = closure_7(tmp8(9628), obj4);
                         }
                       }
                       cResult[15] = actionBar;
@@ -608,7 +608,7 @@ const memoResult = memo(
         let obj2 = GlobalStatusIndicator;
         const globalStatusIndicatorHeightSharedValue =
           obj2.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
-        const tmp6 = globalStatusIndicatorHeightSharedValue(9606)();
+        const tmp6 = globalStatusIndicatorHeightSharedValue(9619)();
         dependencyMap = tmp6;
         reveal = reveal.useContext(RevealProvider.RevealContext).reveal;
         let obj3 = useIsScreenReaderEnabled;
@@ -667,10 +667,10 @@ const memoResult = memo(
         fn.__initData = __initData10;
         ({ withTiming: timing.withTiming, top: derivedValue, TIMING_CONFIG, revealOpacity: derivedValue1 });
         const animatedStyle = tmpResult4.useAnimatedStyle(fn);
-        const tmp5Result = globalStatusIndicatorHeightSharedValue(6657);
-        analyticsLocations = tmp5Result(tmp5(6681).FOCUSED_VOICE_CONTROLS).analyticsLocations;
-        closure_7 = tmp5(9132)();
-        const View = tmp5(4612).View;
+        const tmp5Result = globalStatusIndicatorHeightSharedValue(6664);
+        analyticsLocations = tmp5Result(tmp5(6688).FOCUSED_VOICE_CONTROLS).analyticsLocations;
+        closure_7 = tmp5(9167)();
+        const View = tmp5(4618).View;
         if (containerStyle == null) {
           containerStyle = derivedValue.absoluteFill;
         }
@@ -722,7 +722,7 @@ const memoResult = memo(
               reveal,
               children,
             };
-            tmp17Result = tmp17(tmp5(9615), obj6);
+            tmp17Result = tmp17(tmp5(9628), obj6);
           }
         }
         items1[2] = tmp17Result;

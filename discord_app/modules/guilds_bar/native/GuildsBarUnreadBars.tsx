@@ -226,7 +226,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj6 = { beforeItem: obj7, afterItem: "r" };
+            let obj6 = { beforeItem: obj7, afterItem: "Array" };
             obj7 = { section: sum, row: tmp32.item, mention: true };
             return obj6;
           }
@@ -245,8 +245,8 @@ const GuildsNodeType = SortedGuildStore2.GuildsNodeType;
 const jsx = Fragment.jsx;
 let obj = { wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } };
 let closure_15 = createStyles.createStyles(obj);
-let closure_17 = { beforeItem: "Array", afterItem: "Set" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "r" };
+let closure_17 = { beforeItem: "start", afterItem: "unicodeVersion" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
 let ReactCompilerGating = ReactCompilerGating_mod;
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
   ? () => {
@@ -401,7 +401,7 @@ const memoResult = react.memo(
                 }
                 const effect = obj2.useEffect(tmp12, tmp13);
                 const scrollPosValue = fastList.scrollPosValue;
-                const tmpResult = fastList(4612);
+                const tmpResult = fastList(4618);
                 class C {
                   constructor() {
                     return scrollPosValue.get();
@@ -420,10 +420,10 @@ const memoResult = react.memo(
                   }
                 }
                 const useAnimatedReaction = tmpResult.useAnimatedReaction;
-                B.__closure = { runOnJS: fastList(4612).runOnJS, debouncedUpdate: tmp10 };
+                B.__closure = { runOnJS: fastList(4618).runOnJS, debouncedUpdate: tmp10 };
                 B.__workletHash = 13727289405147;
                 B.__initData = __initData2;
-                const obj4 = { runOnJS: fastList(4612).runOnJS, debouncedUpdate: tmp10 };
+                const obj4 = { runOnJS: fastList(4618).runOnJS, debouncedUpdate: tmp10 };
                 const animatedReaction = useAnimatedReaction(C, B);
                 const tmp20 = closure_20();
                 ({ style, paddingStart } = tmp20);
@@ -537,7 +537,7 @@ const memoResult = react.memo(
         let c2;
         let c3;
         let tmp3;
-        const f123844 = () => {
+        const f124022 = () => {
           const tmp3 = GuildReadStateStore.getPrivateChannelMentionCount() > 0;
           let guildId = SelectedGuildStore.getGuildId();
           if (guildId == null) {
@@ -554,10 +554,10 @@ const memoResult = react.memo(
         top = top(1618)().top;
         const result = closure_11() / 2;
         dependencyMap = result;
-        [tmp3, c3] = memo.useState(f123844);
+        [tmp3, c3] = memo.useState(f124022);
         let items = [fastList, top, result];
         ({ beforeItem, afterItem } = tmp3);
-        _slicedToArray(memo.useState(f123844), 2);
+        _slicedToArray(memo.useState(f124022), 2);
         memo = memo.useMemo(
           () =>
             debounceDefault(() => {
@@ -592,7 +592,7 @@ const memoResult = react.memo(
           };
         }, items1);
         const scrollPosValue = fastList.scrollPosValue;
-        let obj = fastList(4612);
+        let obj = fastList(4618);
         class M {
           constructor() {
             return scrollPosValue.get();
@@ -609,10 +609,10 @@ const memoResult = react.memo(
             }
           }
         }
-        O.__closure = { runOnJS: fastList(4612).runOnJS, debouncedUpdate: memo };
+        O.__closure = { runOnJS: fastList(4618).runOnJS, debouncedUpdate: memo };
         O.__workletHash = 3399641848221;
         O.__initData = __initData4;
-        ({ runOnJS: fastList(4612).runOnJS, debouncedUpdate: memo });
+        ({ runOnJS: fastList(4618).runOnJS, debouncedUpdate: memo });
         const animatedReaction = obj.useAnimatedReaction(M, O);
         const tmp7 = closure_20();
         paddingStart = tmp7.paddingStart;

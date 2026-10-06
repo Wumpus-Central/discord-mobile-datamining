@@ -51,7 +51,7 @@ let obj = function _promptForRegisterCredential() {
             challenge = undefined;
             c4 = 1;
             c5 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c4) {
           if (arg0 === 1) {
@@ -146,7 +146,7 @@ obj = {
                 closure_2 = tmp;
                 c5 = 1;
                 c6 = 1;
-                return { value: "Set", done: true };
+                return { value: "Reflect", done: true };
               }
             } else {
               let self;
@@ -214,7 +214,7 @@ obj = {
   },
   registerAndroidCredentialManagerPasskey(setError) {
     let setRegistering;
-    const registerPasskey = setRegistering(6089).registerPasskey;
+    const registerPasskey = setRegistering(6096).registerPasskey;
     setError = undefined;
     setError = setError.setError;
     setRegistering = setError.setRegistering;
@@ -245,7 +245,7 @@ obj = {
   },
   registerAndroidDevicePasskey(setError) {
     let setRegistering;
-    const register = setRegistering(6089).register;
+    const register = setRegistering(6096).register;
     setError = undefined;
     setError = setError.setError;
     setRegistering = setError.setRegistering;
@@ -279,7 +279,7 @@ obj = {
     let setRegistering;
     obj = setError(1369);
     const isAndroidResult = obj.isAndroid();
-    const tmp2 = setRegistering(6089);
+    const tmp2 = setRegistering(6096);
     if (isAndroidResult) {
       const registerPasskey = tmp2.registerPasskey;
       setError = undefined;
@@ -342,7 +342,7 @@ obj = {
     let setRegistering;
     let register = fn;
     if (fn === undefined) {
-      register = setRegistering(6089).register;
+      register = setRegistering(6096).register;
     }
     setError = undefined;
     setError = setError.setError;

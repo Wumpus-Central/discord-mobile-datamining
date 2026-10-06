@@ -7,10 +7,10 @@ import useWindowDimensionsDefault from "../../../../modules/screen/useWindowDime
 import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaInsets.native.tsx";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useColorThemeBackgroundDefault from "../../../../modules/client_themes/native/useColorThemeBackground.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05605_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05612_LinearGradient.js";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import NavigatorConstants from "../../Navigator/native/NavigatorConstants.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/06112_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06119_BottomSheetModal.js";
 import NavScrim from "../../Navigator/native/NavScrim.android.tsx";
 import reactDefault from "../../../../modules/action_sheet/native/ActionSheetContext.tsx";
 import ActionSheetHeaderBar from "ActionSheetHeaderBar.native.tsx";
@@ -1200,7 +1200,7 @@ const forwardRef3Result = forwardRef3(
         transitionState(onLeave.useState(undefined !== tmp8 && tmp8), 2);
         closure_12 = onLeave.useRef(false);
         const ref = onLeave.useRef(true);
-        onLeave.useContext(tmp(4596).AccessibilityPreferencesContext).reducedMotion.enabled ? closure_14 : ref;
+        onLeave.useContext(tmp(4602).AccessibilityPreferencesContext).reducedMotion.enabled ? closure_14 : ref;
         if (cResult[25] === tmp14) {
           let tmp41;
           let tmp42;
@@ -1209,7 +1209,7 @@ const forwardRef3Result = forwardRef3(
             tmp42 = cResult[28];
           }
           const layoutEffect = obj2.useLayoutEffect(tmp41, tmp42);
-          let tmpResult = tmp(6648);
+          let tmpResult = tmp(6655);
           const bottomSheetImperativeHandle = tmpResult.useBottomSheetImperativeHandle(arg1, ref);
           if (cResult[29] === close) {
             let tmp46;
@@ -1224,7 +1224,7 @@ const forwardRef3Result = forwardRef3(
               if (cResult[34] === onLeave) {
                 tmp49 = cResult[35];
               }
-              const tmpResult4 = tmp(5590);
+              const tmpResult4 = tmp(5597);
               const unmountEffect = tmpResult4.useUnmountEffect(tmp49);
               if (cResult[36] !== close) {
                 function ie(arg0, arg1, arg2, arg3, arg4) {
@@ -1277,9 +1277,9 @@ const forwardRef3Result = forwardRef3(
               ke.__closure = obj3;
               ke.__workletHash = 4341912681188;
               ke.__initData = __initData;
-              const tmpResult5 = tmp(4612);
+              const tmpResult5 = tmp(4618);
               const derivedValue = tmpResult5.useDerivedValue(ke);
-              const tmpResult6 = tmp(4612);
+              const tmpResult6 = tmp(4618);
               class Oe {
                 constructor() {
                   return derivedValue.get();
@@ -1299,10 +1299,10 @@ const forwardRef3Result = forwardRef3(
                 }
               }
               const useAnimatedReaction = tmpResult6.useAnimatedReaction;
-              De.__closure = { transitionState, runOnJS: tmp(4612).runOnJS, onLeave };
+              De.__closure = { transitionState, runOnJS: tmp(4618).runOnJS, onLeave };
               De.__workletHash = 1921852093213;
               De.__initData = __initData3;
-              const obj5 = { transitionState, runOnJS: tmp(4612).runOnJS, onLeave };
+              const obj5 = { transitionState, runOnJS: tmp(4618).runOnJS, onLeave };
               const animatedReaction = useAnimatedReaction(Oe, De);
               if (cResult[40] !== dismissAccessibilityLabel) {
                 class He {
@@ -1546,7 +1546,7 @@ const forwardRef3Result = forwardRef3(
                             const obj6 = { children: closure_21(ref, obj7) };
                             obj7 = { style: tmp76, children: items };
                             items = [tmp77, tmp81];
-                            const LayerScope = tmp(6651).LayerScope;
+                            const LayerScope = tmp(6658).LayerScope;
                             cResult[66] = tmp76;
                             cResult[67] = tmp77;
                             const tmp89 = closure_20(LayerScope, obj6);

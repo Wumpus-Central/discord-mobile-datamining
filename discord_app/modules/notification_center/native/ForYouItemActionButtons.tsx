@@ -855,7 +855,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = tmp(573);
       const stateFromStores = tmpResult.useStateFromStores(first, tmp9);
       const message3 = other_user.message;
-      const tmpResult3 = tmp(7635);
+      const tmpResult3 = tmp(7646);
       const canReplyToMessage = tmpResult3.useCanReplyToMessage(stateFromStores, other_user.message);
       if (message3 != null) {
         const type = message3.type;
@@ -867,7 +867,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             tmp13 = cResult[6];
           }
           let closure_8 = tmp13;
-          const tmpResult4 = tmp(4612);
+          const tmpResult4 = tmp(4618);
           class T {
             constructor() {
               const message = other_user.message;
@@ -1261,7 +1261,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
         closure_4(other_user);
       }, items1);
-      const tmp2Result = tmp2(4612);
+      const tmp2Result = tmp2(4618);
       const sharedValue = tmp2Result.useSharedValue(false);
       const items2 = [arg3, sharedValue, other_user, id, arg6];
       const callback1 = notification_center_v2.useCallback(() => {
@@ -1443,10 +1443,10 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { actionButtons: [] };
         return obj3;
       } else {
-        if (other_user.type !== tmp2(7125).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
-          if (other_user.type !== tmp2(7125).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-            if (other_user.type !== tmp2(7125).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
-              if (other_user.type === tmp2(7125).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
+        if (other_user.type !== tmp2(7138).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS) {
+          if (other_user.type !== tmp2(7138).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+            if (other_user.type !== tmp2(7138).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS) {
+              if (other_user.type === tmp2(7138).NotificationCenterLocalItems.FRIEND_REQUESTS_GROUPED) {
                 let obj4 = { actionButtons: items9, accessibilityActions: items10, onAccessibilityAction: callback3 };
                 let obj5 = {
                   id: "view_friend_requests",
@@ -1461,7 +1461,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 intl15 = tmp2(1126).intl;
                 items10 = [obj6];
                 return obj4;
-              } else if (other_user.type === tmp2(7125).NotificationCenterItems.GO_LIVE_PUSH) {
+              } else if (other_user.type === tmp2(7138).NotificationCenterItems.GO_LIVE_PUSH) {
                 const obj7 = { actionButtons: items11, accessibilityActions: items12, onAccessibilityAction: onPress };
                 const obj8 = {
                   id: "join_stream",
@@ -1477,11 +1477,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                 items12 = [obj9];
                 return obj7;
               } else {
-                if (other_user.type !== tmp2(7125).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
-                  if (other_user.type !== tmp2(7125).NotificationCenterItems.DM_FRIEND_NUDGE) {
-                    if (other_user.type !== tmp2(7125).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
-                      if (other_user.type !== tmp2(7125).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
-                        if (other_user.type === tmp2(7125).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
+                if (other_user.type !== tmp2(7138).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+                  if (other_user.type !== tmp2(7138).NotificationCenterItems.DM_FRIEND_NUDGE) {
+                    if (other_user.type !== tmp2(7138).NotificationCenterItems.FRIEND_REQUEST_ACCEPTED) {
+                      if (other_user.type !== tmp2(7138).NotificationCenterItems.GAME_FRIEND_REQUEST_ACCEPTED) {
+                        if (other_user.type === tmp2(7138).NotificationCenterItems.FRIEND_SUGGESTION_CREATED) {
                           const obj10 = {
                             actionButtons: items13,
                             accessibilityActions: items14,
@@ -1501,7 +1501,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           items14 = [obj12];
                           return obj10;
                         } else if (
-                          other_user.type === tmp2(7125).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED
+                          other_user.type === tmp2(7138).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED
                         ) {
                           const obj13 = {
                             actionButtons: items15,
@@ -1521,26 +1521,26 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           intl7 = tmp2(1126).intl;
                           items16 = [obj15];
                           return obj13;
-                        } else if (other_user.type === tmp2(7125).NotificationCenterItems.LIFECYCLE_ITEM) {
+                        } else if (other_user.type === tmp2(7138).NotificationCenterItems.LIFECYCLE_ITEM) {
                           let stringResult;
                           let str;
                           const item_enum = other_user.item_enum;
-                          if (tmp2(7125).ItemEnum.UPDATE_PROFILE === item_enum) {
+                          if (tmp2(7138).ItemEnum.UPDATE_PROFILE === item_enum) {
                             const intl5 = tmp2(1126).intl;
                             stringResult = intl5.string(tmp2(1126).t.zMRcWL);
                             str = "update_profile";
-                          } else if (tmp2(7125).ItemEnum.FIND_FRIENDS === item_enum) {
+                          } else if (tmp2(7138).ItemEnum.FIND_FRIENDS === item_enum) {
                             const intl4 = tmp2(1126).intl;
                             stringResult = intl4.string(tmp2(1126).t["vwL/4s"]);
                             str = "find_friends";
-                          } else if (tmp2(7125).ItemEnum.ADD_FRIEND === item_enum) {
+                          } else if (tmp2(7138).ItemEnum.ADD_FRIEND === item_enum) {
                             const intl3 = tmp2(1126).intl;
                             stringResult = intl3.string(tmp2(1126).t["boL/YX"]);
                             str = "add_friend";
                           } else {
                             str = null;
                             stringResult = null;
-                            if (tmp2(7125).ItemEnum.FIRST_MESSAGE === item_enum) {
+                            if (tmp2(7138).ItemEnum.FIRST_MESSAGE === item_enum) {
                               const intl19 = tmp2(1126).intl;
                               stringResult = intl19.string(tmp2(1126).t["GuUH7/"]);
                               str = "send_message";
@@ -1565,9 +1565,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj19 = { actionButtons: [] };
                         } else {
                           let obj23;
-                          if (other_user.type !== tmp2(7125).NotificationCenterItems.RECENT_MENTION) {
-                            if (other_user.type !== tmp2(7125).NotificationCenterItems.REPLY_MENTION) {
-                              if (other_user.type === tmp2(7125).NotificationCenterItems.TRENDING_CONTENT) {
+                          if (other_user.type !== tmp2(7138).NotificationCenterItems.RECENT_MENTION) {
+                            if (other_user.type !== tmp2(7138).NotificationCenterItems.REPLY_MENTION) {
+                              if (other_user.type === tmp2(7138).NotificationCenterItems.TRENDING_CONTENT) {
                                 const obj20 = {
                                   actionButtons: items19,
                                   accessibilityActions: items20,
@@ -1659,7 +1659,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           },
         };
         obj32 = { onWavePress, onAccept: callback1, onIgnore: callback2, pressed: sharedValue, compactMode };
-        if (other_user.type === tmp2(7125).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
+        if (other_user.type === tmp2(7138).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED) {
           const obj33 = { name: constants3.WAVE, label: intl16.string(tmp2(1126).t.n8nU4W) };
           intl16 = tmp2(1126).intl;
           const items25 = [obj33];

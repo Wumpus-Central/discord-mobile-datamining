@@ -5,8 +5,8 @@ import Server from "../../flow/Server.tsx";
 import Constants2 from "Constants.tsx";
 import embeddedActivityLocationUtils from "utils/embeddedActivityLocationUtils.tsx";
 import ApplicationCommandTypes from "../application_commands/ApplicationCommandTypes.tsx";
-import getURLForApplicationDefault from "getURLForApplication.tsx";
 import getPlatformDefault from "utils/getPlatform.tsx";
+import getURLForApplicationDefault from "getURLForApplication.tsx";
 import isVoiceEmbeddedActivityDefault from "utils/isVoiceEmbeddedActivity.tsx";
 import ContentClassificationEmbeddedActivityFilterExperiment2 from "ContentClassificationEmbeddedActivityFilterExperiment.tsx";
 import ContentClassificationReference from "../content_classification/ContentClassificationReference.tsx";
@@ -49,7 +49,7 @@ function updateEmbeddedActivities(content_classification) {
     let arr2;
     let sessionId;
     let launchParams;
-    const obj19 = application_id(4498);
+    const obj19 = application_id(4504);
     const embeddedActivityLocationChannelId = obj19.getEmbeddedActivityLocationChannelId(_location);
     if (null != embeddedActivityLocationChannelId) {
       const value = map2.get(embeddedActivityLocationChannelId);
@@ -171,7 +171,7 @@ function updateEmbeddedActivities(content_classification) {
               }
             }
             value11.upsert(application_id, _location.id, tmp58);
-            const tmp70Result = application_id(4498);
+            const tmp70Result = application_id(4504);
             const embeddedActivityLocationChannelId1 = tmp70Result.getEmbeddedActivityLocationChannelId(_location);
             if (null != embeddedActivityLocationChannelId1) {
               let value12 = map2.get(embeddedActivityLocationChannelId1);
@@ -187,7 +187,7 @@ function updateEmbeddedActivities(content_classification) {
                 }
               }
               value12.upsert(application_id, _location.id, tmp58);
-              const tmp70Result4 = application_id(4498);
+              const tmp70Result4 = application_id(4504);
               let str5 = tmp70Result4.getEmbeddedActivityLocationGuildId(_location);
               if (str5 == null) {
                 str5 = "0";
@@ -239,7 +239,7 @@ function updateEmbeddedActivities(content_classification) {
             }
             if (id1 !== _location.id) {
               let guildId;
-              const tmp70Result5 = application_id(4498);
+              const tmp70Result5 = application_id(4504);
               const embeddedActivityLocationChannelId2 = tmp70Result5.getEmbeddedActivityLocationChannelId(_location);
               const channel = ChannelStore.getChannel(embeddedActivityLocationChannelId2);
               if (channel != null) {
@@ -279,7 +279,7 @@ function updateEmbeddedActivities(content_classification) {
                     inviterUserId,
                   };
                   ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj8);
-                  application_id(9048);
+                  application_id(9084);
                   if (true === renderInFramePool) {
                     let PIP = ActivityPanelModes.DISCONNECTED;
                   } else if (tmp46) {

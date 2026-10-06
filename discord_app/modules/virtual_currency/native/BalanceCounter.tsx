@@ -16,7 +16,7 @@ let hasOwnProperty;
 let metroImportDefault;
 let metroRequire;
 let tmp;
-const Text_Text = tmp(4886);
+const Text_Text = tmp(4892);
 let react = react_mod;
 ({ useState: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useCallback: metroImportDefault } = react);
 react = react_mod;
@@ -280,7 +280,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [tmp14];
         const obj5 = { minWidth: 7 * first };
         items1[1] = obj5;
-        const View = onValueChange(4612).View;
+        const View = onValueChange(4618).View;
         ({ variant: "text-sm/semibold", style, maxFontSizeMultiplier: 2, children: obj2.toFixed(0) });
         const Text = Text_Text.Text;
         tmp15 = <View style={items1}>{null}</View>;

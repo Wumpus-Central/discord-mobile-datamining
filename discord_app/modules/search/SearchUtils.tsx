@@ -3,13 +3,13 @@ import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import intl11 from "../../intl/index.native.tsx";
-import _modDef4461 from "../../../_runtime/metro/04461__.js";
+import _modDef4467 from "../../../_runtime/metro/04467__.js";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import SearchConstants from "SearchConstants.tsx";
+import QueryTokenizerDefault from "../../lib/QueryTokenizer.tsx";
 import SearchTokens from "tokens/SearchTokens.tsx";
 import isGuildLikeSearchContext from "isGuildLikeSearchContext.tsx";
-import QueryTokenizerDefault from "../../lib/QueryTokenizer.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__slicedToArray.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import ConsentStore from "../../stores/ConsentStore.tsx";
@@ -34,7 +34,7 @@ let closure_16;
 let closure_17;
 let closure_18;
 let closure_19;
-const f109930 = (arg0, arg1) => "\\" + arg1;
+const f110069 = (arg0, arg1) => "\\" + arg1;
 const SearchTabs = SearchConstants.SearchTabs;
 ({ SearchTypes: closure_12, SearchTokenTypes } = Constants);
 ({
@@ -113,8 +113,8 @@ export const getSearchTabFetchId = function getSearchTabFetchId(searchContext, t
   return "" + channelId + "-" + tab + "-" + searchResultsQuery;
 };
 export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(cResult) {
-  const obj = _modDef4461();
-  const diffResult = obj.diff(_modDef4461(cResult), "s");
+  const obj = _modDef4467();
+  const diffResult = obj.diff(_modDef4467(cResult), "s");
   if (diffResult > c21) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -527,7 +527,7 @@ export const quoteChannelName = function quoteChannelName(channelName) {
   let combined = channelName;
   if (null != channelName.match(/([\\" ])/g)) {
     const _HermesInternal = HermesInternal;
-    combined = '"' + channelName.replaceAll(/([\\"])/g, f109930) + '"';
+    combined = '"' + channelName.replaceAll(/([\\"])/g, f110069) + '"';
   }
   return combined;
 };
@@ -549,7 +549,7 @@ export const getFlattenedAutocompleteResults = function getFlattenedAutocomplete
               let combined = str;
               if (null != text.text.match(/([\\" ])/g)) {
                 const _HermesInternal = HermesInternal;
-                combined = '"' + str.replaceAll(/([\\"])/g, f109930) + '"';
+                combined = '"' + str.replaceAll(/([\\"])/g, f110069) + '"';
               }
               tmp = combined;
             }
@@ -680,7 +680,7 @@ export const getChannelDisplayName = function getChannelDisplayName(isDM) {
   let combined = str;
   if (null != str.match(/([\\" ])/g)) {
     const _HermesInternal = HermesInternal;
-    combined = '"' + str.replaceAll(/([\\"])/g, f109930) + '"';
+    combined = '"' + str.replaceAll(/([\\"])/g, f110069) + '"';
   }
   let combined1 = combined;
   if (flag) {

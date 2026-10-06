@@ -45,7 +45,7 @@ function fetchJoinSecret(application, arg1) {
   };
   const value = HTTP.get(request);
   return value.then(
-    (result) => f154802(result),
+    (result) => f155045(result),
     () => {
       const obj = deeplink_uri(application[7]);
       const obj2 = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };
@@ -112,7 +112,7 @@ let obj = {
           }
           return resolved;
         }
-        const f154802 = (body) => {
+        const f155045 = (body) => {
           let flag;
           let flag2;
           let flag3;
@@ -130,7 +130,7 @@ let obj = {
               embedded: flag3,
             };
             ({ id: obj4.applicationId, parent_id: obj4.parentApplicationId } = id);
-            flag3 = f154802.embedded;
+            flag3 = f155045.embedded;
             const dispatch = deeplink_uri(application[7]).dispatch;
             deeplink_uri(application[7]);
             if (flag3 == null) {
@@ -157,7 +157,7 @@ let obj = {
               embedded: flag,
             };
             ({ id: obj6.applicationId, parent_id: obj6.parentApplicationId } = id);
-            flag = f154802.embedded;
+            flag = f155045.embedded;
             const dispatch2 = deeplink_uri(application[7]).dispatch;
             deeplink_uri(application[7]);
             if (flag == null) {
@@ -192,7 +192,7 @@ let obj = {
         };
         const value = HTTP.get(request);
         resolved = value.then(
-          (result) => f154802(result),
+          (result) => f155045(result),
           () => {
             const obj = deeplink_uri(application[7]);
             const obj2 = { type: "ACTIVITY_JOIN_FAILED", applicationId: id };

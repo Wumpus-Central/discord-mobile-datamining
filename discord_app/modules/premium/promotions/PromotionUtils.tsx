@@ -20,7 +20,7 @@ let c5, c6, promotion_id, set;
 let c10;
 let c9;
 let metroImportAll;
-const f114241 = (startDate, startDate2) => {
+const f114403 = (startDate, startDate2) => {
   let num = 1;
   const date = new Date(startDate.startDate);
   const date1 = new Date(startDate2.startDate);
@@ -86,7 +86,7 @@ let obj = function _claimOutboundPromotion() {
             ANDROID = undefined;
             c5 = 1;
             c6 = 1;
-            return { value: "Set", done: true };
+            return { value: "Reflect", done: true };
           }
         } else if (1 === c5) {
           if (promotion_id === 1) {
@@ -230,7 +230,7 @@ export const getNextUnseenOutboundPromotionId = function getNextUnseenOutboundPr
   }
   let id = null;
   if (0 !== found1.length) {
-    id = found1.sort(f114241)[0].id;
+    id = found1.sort(f114403)[0].id;
   }
   return id;
 };
@@ -274,7 +274,7 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
   }
   let id = null;
   if (0 !== found1.length) {
-    id = found1.sort(f114241)[0].id;
+    id = found1.sort(f114403)[0].id;
   }
   let tmp6 = null != id;
   if (tmp6) {

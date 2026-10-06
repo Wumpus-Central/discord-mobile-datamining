@@ -95,7 +95,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               const obj3 = { tag: obj4, containerStyle: tmp4.tag, hasUnreads };
               const _HermesInternal = HermesInternal;
               obj4 = { id: "-1", name: "+" + num };
-              const AppliedForumTagPill = hasUnreads(10356).AppliedForumTagPill;
+              const AppliedForumTagPill = hasUnreads(10369).AppliedForumTagPill;
               tmp10 = closure_3(AppliedForumTagPill, obj3);
             }
             cResult[10] = num;
@@ -160,7 +160,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { tag: obj3, containerStyle: tmp.tag, hasUnreads };
         const _HermesInternal = HermesInternal;
         obj3 = { id: "-1", name: "+" + num };
-        const AppliedForumTagPill = hasUnreads(10356).AppliedForumTagPill;
+        const AppliedForumTagPill = hasUnreads(10369).AppliedForumTagPill;
         tmp4 = closure_3(AppliedForumTagPill, obj2);
       }
       items1[1] = tmp4;

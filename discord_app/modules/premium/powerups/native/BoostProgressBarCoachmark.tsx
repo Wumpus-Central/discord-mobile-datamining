@@ -3,7 +3,7 @@ import react_native from "../../../../../_runtime/00017_react-native.js";
 import Fragment from "../../../../../_runtime/react/00021_Fragment.js";
 import intl4 from "../../../../intl/index.native.tsx";
 import DismissibleContentConstants from "../../../dismissible_content/DismissibleContentConstants.tsx";
-import _modDef2525 from "../GuildPowerups.messages.js";
+import _modDef2553 from "../GuildPowerups.messages.js";
 import BoostThisServerRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/BoostThisServerRive.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
 import react from "../../../../../_runtime/00019_react.js";
@@ -48,9 +48,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const intl = tmp(1126).intl;
-          const stringResult = intl.string(markAsDismissed(2525).uwV2dH);
+          const stringResult = intl.string(markAsDismissed(2553).uwV2dH);
           const intl2 = tmp(1126).intl;
-          const stringResult1 = intl2.string(markAsDismissed(2525).MIwlcR);
+          const stringResult1 = intl2.string(markAsDismissed(2553).MIwlcR);
           cResult[5] = stringResult;
           cResult[6] = stringResult1;
           tmp9 = stringResult1;
@@ -170,8 +170,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         let intl3;
         let riveContainer;
         const obj = {
-          title: intl.string(_modDef2525.uwV2dH),
-          description: intl2.string(_modDef2525.MIwlcR),
+          title: intl.string(_modDef2553.uwV2dH),
+          description: intl2.string(_modDef2553.MIwlcR),
           visible: true,
           position: "bottom",
           offsetY: 8,
@@ -192,7 +192,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         intl3 = intl4.intl;
         return obj;
       }, items2);
-      let obj = guild(9882);
+      let obj = guild(9895);
       const coachmark = obj.useCoachmark(targetRef, memo);
       return null;
     };

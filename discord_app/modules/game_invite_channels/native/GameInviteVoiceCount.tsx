@@ -57,7 +57,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-          const VoiceNormalIcon = tmp(5885).VoiceNormalIcon;
+          const VoiceNormalIcon = tmp(5892).VoiceNormalIcon;
           const tmp14 = closure_5(VoiceNormalIcon, obj2);
           cResult[4] = tmp14;
           tmp11 = tmp14;
@@ -66,7 +66,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[5] !== stateFromStores) {
           const obj3 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-          const tmp17 = closure_5(channel(4886).Text, obj3);
+          const tmp17 = closure_5(channel(4892).Text, obj3);
           cResult[5] = stateFromStores;
           cResult[6] = tmp17;
           tmp15 = tmp17;
@@ -106,10 +106,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (0 !== stateFromStores) {
         const obj2 = { style: tmp.container, children: items2 };
         const obj3 = { size: "xs", color: nativeDefault.colors.ICON_FEEDBACK_POSITIVE };
-        const VoiceNormalIcon = tmp2(5885).VoiceNormalIcon;
+        const VoiceNormalIcon = tmp2(5892).VoiceNormalIcon;
         items2 = [closure_5(VoiceNormalIcon, obj3)];
         const obj4 = { variant: "text-sm/medium", color: "text-feedback-positive", children: stateFromStores };
-        items2[1] = closure_5(channel(4886).Text, obj4);
+        items2[1] = closure_5(channel(4892).Text, obj4);
         tmp5 = closure_6(View, obj2);
       }
       return tmp5;
