@@ -1,90 +1,165 @@
 // _runtime/metro/06288__.js
-import react from "../00019_react.js";
-import _modDef38 from "00038__.js";
+import GESTURE_SOURCE from "../06120_GESTURE_SOURCE.js";
+import LegacyBaseButton from "../06147_LegacyBaseButton.js";
 
-const useMemo = react.useMemo;
+const require = globalThis.__r;
+let dependencyMap, tmp, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8;
 
-export const usePropsValidator = (index) => {
-  index = index.index;
-  const snapPoints = index.snapPoints;
-  const enableDynamicSizing = index.enableDynamicSizing;
-  const topInset = index.topInset;
-  const bottomInset = index.bottomInset;
-  let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
-  topInset(() => {
-    let items;
-    if (snapPoints) {
-      let value = snapPoints;
-      if ("get" in snapPoints) {
-        value = snapPoints.get();
+let __initData = {
+  code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}",
+};
+let __initData2 = {
+  code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}",
+};
+let __initData3 = {
+  code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}",
+};
+let __initData4 = {
+  code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}",
+};
+
+export const useGestureHandler = (
+  CONTENT,
+  animatedContentGestureState,
+  sharedValue,
+  handleOnStart,
+  handleOnChange,
+  handleOnEnd,
+  handleOnFinalize,
+) => {
+  let items;
+  let items1;
+  let items2;
+  let items3;
+  let obj2;
+  let obj4;
+  let obj5;
+  let obj7;
+  const _require = CONTENT;
+  dependencyMap = animatedContentGestureState;
+  __initData = sharedValue;
+  __initData2 = handleOnStart;
+  __initData3 = handleOnChange;
+  __initData4 = handleOnEnd;
+  const obj = {
+    handleOnStart: obj2.useWorkletCallback(R, items),
+    handleOnChange: obj4.useWorkletCallback(U, items1),
+    handleOnEnd: obj5.useWorkletCallback(C, items2),
+    handleOnFinalize: obj7.useWorkletCallback(T, items3),
+  };
+  obj2 = require("01643__.js");
+  class R {
+    constructor(arg0) {
+      closure_1.value = closure_0(closure_1[1]).State.BEGAN;
+      closure_2.value = closure_0;
+      tmp = closure_3(closure_0, CONTENT);
+      return;
+    }
+  }
+  R.__closure = {
+    state: animatedContentGestureState,
+    State: require("LegacyBaseButton").State,
+    gestureSource: sharedValue,
+    source: CONTENT,
+    onStart: handleOnStart,
+  };
+  R.__workletHash = 16113572067379;
+  R.__initData = __initData;
+  items = [animatedContentGestureState, sharedValue, CONTENT, handleOnStart];
+  ({
+    state: animatedContentGestureState,
+    State: require("LegacyBaseButton").State,
+    gestureSource: sharedValue,
+    source: CONTENT,
+    onStart: handleOnStart,
+  });
+  obj4 = require("01643__.js");
+  class U {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp2 = CONTENT;
+        tmp3 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp4 = closure_4;
+        tmp5 = closure_4(tmp, CONTENT);
       }
-      items = value;
-    } else {
-      items = [];
+      return;
     }
-    let tmp5 = items;
-    let tmp4 = _modDef38;
-    if (!items) {
-      tmp5 = enableDynamicSizing;
-    }
-    tmp4(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
-    const mapped = items.map((item) => {
-      let parsed = item;
-      if (typeof item !== "number") {
-        const _Number = Number;
-        parsed = Number.parseInt(item.replace("%", ""), 10);
+  }
+  U.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    onChange: handleOnChange,
+  };
+  U.__workletHash = 9050442757159;
+  U.__initData = __initData2;
+  items1 = [animatedContentGestureState, sharedValue, CONTENT, handleOnChange];
+  obj5 = require("01643__.js");
+  class C {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp3 = CONTENT;
+        tmp4 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp5 = closure_0;
+        tmp6 = closure_1;
+        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
+        tmp7 = closure_5;
+        tmp8 = closure_5(tmp2, CONTENT);
       }
-      let tmp4 = parsed > 0;
-      const tmp3 = snapPoints(enableDynamicSizing[1]);
-      if (!tmp4) {
-        tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
+      return;
+    }
+  }
+  C.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE,
+    onEnd: handleOnEnd,
+  };
+  C.__workletHash = 10682034812271;
+  C.__initData = __initData3;
+  items2 = [animatedContentGestureState, sharedValue, CONTENT, handleOnEnd];
+  ({
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE,
+    onEnd: handleOnEnd,
+  });
+  obj7 = require("01643__.js");
+  class T {
+    constructor(arg0) {
+      if (closure_2.value === closure_0) {
+        tmp3 = CONTENT;
+        tmp4 = closure_1;
+        closure_1.value = CONTENT.state;
+        tmp5 = closure_0;
+        tmp6 = closure_1;
+        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
+        tmp7 = closure_6;
+        tmp8 = closure_6(tmp2, CONTENT);
       }
-      tmp3(
-        tmp4,
-        "Snap point '" +
-          item +
-          "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.",
-      );
-    });
-    let tmp9 = "value" in items;
-    const tmp2Result = _modDef38;
-    if (!tmp9) {
-      tmp9 = items.length > 0;
+      return;
     }
-    if (!tmp9) {
-      tmp9 = enableDynamicSizing;
-    }
-    tmp2Result(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
-    let tmp13 = typeof index === "number";
-    const tmp2Result5 = _modDef38;
-    if (typeof index !== "number") {
-      tmp13 = undefined === index;
-    }
-    tmp2Result5(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
-    let tmp16 = enableDynamicSizing;
-    const tmp2Result6 = _modDef38;
-    if (!enableDynamicSizing) {
-      tmp16 = typeof index !== "number";
-    }
-    if (!tmp16) {
-      tmp16 = index >= -1 && index <= items.length - 1;
-      const tmp17 = index >= -1 && index <= items.length - 1;
-    }
-    tmp2Result6(
-      tmp16,
-      `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`,
-    );
-    let tmp20 = typeof topInset === "number";
-    const tmp2Result7 = _modDef38;
-    if (typeof topInset !== "number") {
-      tmp20 = undefined === topInset;
-    }
-    tmp2Result7(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
-    let tmp23 = typeof bottomInset === "number";
-    const tmp2Result8 = _modDef38;
-    if (typeof bottomInset !== "number") {
-      tmp23 = undefined === bottomInset;
-    }
-    tmp2Result8(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
-  }, items);
+  }
+  T.__closure = {
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE,
+    onFinalize: handleOnFinalize,
+  };
+  T.__workletHash = 9696716573416;
+  T.__initData = __initData4;
+  items3 = [animatedContentGestureState, sharedValue, CONTENT, handleOnFinalize];
+  ({
+    gestureSource: sharedValue,
+    source: CONTENT,
+    state: animatedContentGestureState,
+    GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE,
+    onFinalize: handleOnFinalize,
+  });
+  return obj;
 };

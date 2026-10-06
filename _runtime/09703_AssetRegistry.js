@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls/light_theme",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "f879d4980a2e6ef68873178eb4fe3d9c",
-  name: "voice_bar_deafen_on",
+  hash: "06839429466f04b07ee5c7156e6fbf8c",
+  name: "MicrophoneIcon",
   type: "png",
 });

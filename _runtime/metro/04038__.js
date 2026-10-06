@@ -22,16 +22,34 @@ const date = {
       unit = unit.unit;
     }
     const _StringResult = _String(unit);
-    if ("minute" !== _StringResult) {
-      if ("second" !== _StringResult) {
-        if ("date" === _StringResult) {
-          return NumberResult + "\uC77C";
-        } else {
-          return NumberResult + "\uBC88\uC9F8";
-        }
-      }
+    if ("year" === _StringResult) {
+      const concat9 = "".concat;
+      return "".concat(NumberResult, "\u5E74");
+    } else if ("quarter" === _StringResult) {
+      const concat8 = "\u7B2C".concat;
+      return "\u7B2C".concat(NumberResult, "\u56DB\u534A\u671F");
+    } else if ("month" === _StringResult) {
+      const concat7 = "".concat;
+      return "".concat(NumberResult, "\u6708");
+    } else if ("week" === _StringResult) {
+      const concat6 = "\u7B2C".concat;
+      return "\u7B2C".concat(NumberResult, "\u9031");
+    } else if ("date" === _StringResult) {
+      const concat5 = "".concat;
+      return "".concat(NumberResult, "\u65E5");
+    } else if ("hour" === _StringResult) {
+      const concat4 = "".concat;
+      return "".concat(NumberResult, "\u6642");
+    } else if ("minute" === _StringResult) {
+      const concat3 = "".concat;
+      return "".concat(NumberResult, "\u5206");
+    } else if ("second" === _StringResult) {
+      const concat2 = "".concat;
+      return "".concat(NumberResult, "\u79D2");
+    } else {
+      const concat = "".concat;
+      return "".concat(NumberResult);
     }
-    return String(NumberResult);
   },
   era: obj.default(obj3),
   quarter: obj.default(obj4),
@@ -40,67 +58,76 @@ const date = {
   dayPeriod: obj.default(obj7),
 };
 obj3 = {
-  values: { narrow: ["BC", "AD"], abbreviated: ["BC", "AD"], wide: ["\uAE30\uC6D0\uC804", "\uC11C\uAE30"] },
+  values: {
+    narrow: ["BC", "AC"],
+    abbreviated: ["\u7D00\u5143\u524D", "\u897F\u66A6"],
+    wide: ["\u7D00\u5143\u524D", "\u897F\u66A6"],
+  },
   defaultWidth: "wide",
 };
 obj4 = {
   values: {
     narrow: ["1", "2", "3", "4"],
     abbreviated: ["Q1", "Q2", "Q3", "Q4"],
-    wide: ["1\uBD84\uAE30", "2\uBD84\uAE30", "3\uBD84\uAE30", "4\uBD84\uAE30"],
+    wide: [
+      "\u7B2C1\u56DB\u534A\u671F",
+      "\u7B2C2\u56DB\u534A\u671F",
+      "\u7B2C3\u56DB\u534A\u671F",
+      "\u7B2C4\u56DB\u534A\u671F",
+    ],
   },
   defaultWidth: "wide",
   argumentCallback(arg0) {
-    return arg0 - 1;
+    return Number(arg0) - 1;
   },
 };
 obj5 = {
   values: {
     narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
     abbreviated: [
-      "1\uC6D4",
-      "2\uC6D4",
-      "3\uC6D4",
-      "4\uC6D4",
-      "5\uC6D4",
-      "6\uC6D4",
-      "7\uC6D4",
-      "8\uC6D4",
-      "9\uC6D4",
-      "10\uC6D4",
-      "11\uC6D4",
-      "12\uC6D4",
+      "1\u6708",
+      "2\u6708",
+      "3\u6708",
+      "4\u6708",
+      "5\u6708",
+      "6\u6708",
+      "7\u6708",
+      "8\u6708",
+      "9\u6708",
+      "10\u6708",
+      "11\u6708",
+      "12\u6708",
     ],
     wide: [
-      "1\uC6D4",
-      "2\uC6D4",
-      "3\uC6D4",
-      "4\uC6D4",
-      "5\uC6D4",
-      "6\uC6D4",
-      "7\uC6D4",
-      "8\uC6D4",
-      "9\uC6D4",
-      "10\uC6D4",
-      "11\uC6D4",
-      "12\uC6D4",
+      "1\u6708",
+      "2\u6708",
+      "3\u6708",
+      "4\u6708",
+      "5\u6708",
+      "6\u6708",
+      "7\u6708",
+      "8\u6708",
+      "9\u6708",
+      "10\u6708",
+      "11\u6708",
+      "12\u6708",
     ],
   },
   defaultWidth: "wide",
 };
 obj6 = {
   values: {
-    narrow: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"],
-    short: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"],
-    abbreviated: ["\uC77C", "\uC6D4", "\uD654", "\uC218", "\uBAA9", "\uAE08", "\uD1A0"],
+    narrow: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"],
+    short: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"],
+    abbreviated: ["\u65E5", "\u6708", "\u706B", "\u6C34", "\u6728", "\u91D1", "\u571F"],
     wide: [
-      "\uC77C\uC694\uC77C",
-      "\uC6D4\uC694\uC77C",
-      "\uD654\uC694\uC77C",
-      "\uC218\uC694\uC77C",
-      "\uBAA9\uC694\uC77C",
-      "\uAE08\uC694\uC77C",
-      "\uD1A0\uC694\uC77C",
+      "\u65E5\u66DC\u65E5",
+      "\u6708\u66DC\u65E5",
+      "\u706B\u66DC\u65E5",
+      "\u6C34\u66DC\u65E5",
+      "\u6728\u66DC\u65E5",
+      "\u91D1\u66DC\u65E5",
+      "\u571F\u66DC\u65E5",
     ],
   },
   defaultWidth: "wide",
@@ -108,67 +135,67 @@ obj6 = {
 obj7 = {
   values: {
     narrow: {
-      am: "\uC624\uC804",
-      pm: "\uC624\uD6C4",
-      midnight: "\uC790\uC815",
-      noon: "\uC815\uC624",
-      morning: "\uC544\uCE68",
-      afternoon: "\uC624\uD6C4",
-      evening: "\uC800\uB141",
-      night: "\uBC24",
+      am: "\u5348\u524D",
+      pm: "\u5348\u5F8C",
+      midnight: "\u6DF1\u591C",
+      noon: "\u6B63\u5348",
+      morning: "\u671D",
+      afternoon: "\u5348\u5F8C",
+      evening: "\u591C",
+      night: "\u6DF1\u591C",
     },
     abbreviated: {
-      am: "\uC624\uC804",
-      pm: "\uC624\uD6C4",
-      midnight: "\uC790\uC815",
-      noon: "\uC815\uC624",
-      morning: "\uC544\uCE68",
-      afternoon: "\uC624\uD6C4",
-      evening: "\uC800\uB141",
-      night: "\uBC24",
+      am: "\u5348\u524D",
+      pm: "\u5348\u5F8C",
+      midnight: "\u6DF1\u591C",
+      noon: "\u6B63\u5348",
+      morning: "\u671D",
+      afternoon: "\u5348\u5F8C",
+      evening: "\u591C",
+      night: "\u6DF1\u591C",
     },
     wide: {
-      am: "\uC624\uC804",
-      pm: "\uC624\uD6C4",
-      midnight: "\uC790\uC815",
-      noon: "\uC815\uC624",
-      morning: "\uC544\uCE68",
-      afternoon: "\uC624\uD6C4",
-      evening: "\uC800\uB141",
-      night: "\uBC24",
+      am: "\u5348\u524D",
+      pm: "\u5348\u5F8C",
+      midnight: "\u6DF1\u591C",
+      noon: "\u6B63\u5348",
+      morning: "\u671D",
+      afternoon: "\u5348\u5F8C",
+      evening: "\u591C",
+      night: "\u6DF1\u591C",
     },
   },
   defaultWidth: "wide",
   formattingValues: {
     narrow: {
-      am: "\uC624\uC804",
-      pm: "\uC624\uD6C4",
-      midnight: "\uC790\uC815",
-      noon: "\uC815\uC624",
-      morning: "\uC544\uCE68",
-      afternoon: "\uC624\uD6C4",
-      evening: "\uC800\uB141",
-      night: "\uBC24",
+      am: "\u5348\u524D",
+      pm: "\u5348\u5F8C",
+      midnight: "\u6DF1\u591C",
+      noon: "\u6B63\u5348",
+      morning: "\u671D",
+      afternoon: "\u5348\u5F8C",
+      evening: "\u591C",
+      night: "\u6DF1\u591C",
     },
     abbreviated: {
-      am: "\uC624\uC804",
-      pm: "\uC624\uD6C4",
-      midnight: "\uC790\uC815",
-      noon: "\uC815\uC624",
-      morning: "\uC544\uCE68",
-      afternoon: "\uC624\uD6C4",
-      evening: "\uC800\uB141",
-      night: "\uBC24",
+      am: "\u5348\u524D",
+      pm: "\u5348\u5F8C",
+      midnight: "\u6DF1\u591C",
+      noon: "\u6B63\u5348",
+      morning: "\u671D",
+      afternoon: "\u5348\u5F8C",
+      evening: "\u591C",
+      night: "\u6DF1\u591C",
     },
     wide: {
-      am: "\uC624\uC804",
-      pm: "\uC624\uD6C4",
-      midnight: "\uC790\uC815",
-      noon: "\uC815\uC624",
-      morning: "\uC544\uCE68",
-      afternoon: "\uC624\uD6C4",
-      evening: "\uC800\uB141",
-      night: "\uBC24",
+      am: "\u5348\u524D",
+      pm: "\u5348\u5F8C",
+      midnight: "\u6DF1\u591C",
+      noon: "\u6B63\u5348",
+      morning: "\u671D",
+      afternoon: "\u5348\u5F8C",
+      evening: "\u591C",
+      night: "\u6DF1\u591C",
     },
   },
   defaultFormattingWidth: "wide",

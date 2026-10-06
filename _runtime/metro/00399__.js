@@ -39,11 +39,11 @@ function timing(arg0, arg1) {
           }
         };
       }
-      f81279(fn);
+      f81412(fn);
     },
   };
   const merged = Object.assign(obj);
-  const f81280 = (fn) => {
+  const f81413 = (fn) => {
     value.setValue(toValue.toValue);
     if (fn != null) {
       fn({ finished: true });
@@ -79,11 +79,11 @@ function spring(animation, arg1) {
           }
         };
       }
-      f81279(fn);
+      f81412(fn);
     },
   };
   const merged = Object.assign(obj);
-  const f81281 = (fn) => {
+  const f81414 = (fn) => {
     value.setValue(toValue.toValue);
     if (fn != null) {
       fn({ finished: true });
@@ -122,11 +122,11 @@ function sequence(arg0) {
             }
           };
         }
-        f81279(fn);
+        f81412(fn);
       },
     };
     const merged = Object.assign(obj);
-    const f81279 = (fn) => {
+    const f81412 = (fn) => {
       const item = closure_0.forEach((start) => start.start());
       if (fn != null) {
         fn({ finished: true });
@@ -165,11 +165,11 @@ function parallel(items, arg1) {
             }
           };
         }
-        f81279(fn);
+        f81412(fn);
       },
     };
     const merged = Object.assign(obj);
-    const f81279 = (fn) => {
+    const f81412 = (fn) => {
       const item = closure_0.forEach((start) => start.start());
       if (fn != null) {
         fn({ finished: true });
@@ -208,12 +208,12 @@ function stagger(arg0, arg1) {
             }
           };
         }
-        f81279(fn);
+        f81412(fn);
       },
     };
     let tmp2 = obj;
     const merged = Object.assign(obj);
-    const f81279 = (fn) => {
+    const f81412 = (fn) => {
       const item = closure_0.forEach((start) => start.start());
       if (fn != null) {
         fn({ finished: true });

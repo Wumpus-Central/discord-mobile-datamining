@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/favorites/intl",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9mYXZvcml0ZXMvaW50bA==",
   scales: [1],
-  hash: "559ed686818ca4e0179655e63a39a6f1",
-  name: "FavoritesGuild.compiled.messages",
+  hash: "98527c58229efb54d9da866d206dee88",
+  name: "da.messages.98527c58229efb54d9da866d206dee88.compiled.messages",
   type: "jsona",
 });

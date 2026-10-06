@@ -1,9 +1,9 @@
 // _runtime/metro/04422__.js
 import formatDistance from "../04423_formatDistance.js";
-import buildFormatLongFn from "../04425_buildFormatLongFn.js";
-import formatRelative from "../04426_formatRelative.js";
-import localeToNumber from "../04424_localeToNumber.js";
-import date from "04427__.js";
+import buildFormatLongFn from "../04424_buildFormatLongFn.js";
+import formatRelative from "../04425_formatRelative.js";
+import date_mod from "04426__.js";
+import date_mod2 from "04427__.js";
 
 let tmp11;
 let tmp3;
@@ -28,12 +28,14 @@ if (!formatRelative) {
 } else {
   tmp7 = formatRelative;
 }
-if (!localeToNumber) {
-  tmp9 = { default: localeToNumber };
-  const obj4 = { default: localeToNumber };
+let date = date_mod2;
+if (!date) {
+  tmp9 = { default: date };
+  const obj4 = { default: date };
 } else {
-  tmp9 = localeToNumber;
+  tmp9 = date;
 }
+date = date_mod2;
 if (!date) {
   tmp11 = { default: date };
   const obj5 = { default: date };
@@ -42,11 +44,11 @@ if (!date) {
 }
 
 export default {
-  code: "hi",
+  code: "zh-TW",
   formatDistance: tmp3.default,
   formatLong: tmp5.default,
   formatRelative: tmp7.default,
   localize: tmp9.default,
   match: tmp11.default,
-  options: { weekStartsOn: 0, firstWeekContainsDate: 4 },
+  options: { weekStartsOn: 1, firstWeekContainsDate: 4 },
 };

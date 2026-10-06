@@ -1,12 +1,4 @@
 // _runtime/metro/14126__.js
-import _mod14104 from "14104__.js";
-import _mod14105 from "14105__.js";
+import _mod14127 from "14127__.js";
 
-let tmp =
-  Object.keys ||
-  function keys(arg0) {
-    const tmp = _mod14105;
-    return tmp(arg0, _mod14104);
-  };
-
-export default tmp;
+export default (arg0) => _mod14127(arg0.length);

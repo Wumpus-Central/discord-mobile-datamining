@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9bcd40cb62b748b314b1aa933da9be99",
-  name: "HandRequestDenyIcon",
+  hash: "c00f2cf86b7ac758e128c274c6adc688",
+  name: "MicrophoneArrowRightIcon",
   type: "png",
 });

@@ -1,12 +1,23 @@
 // _runtime/metro/14062__.js
-import _mod14061 from "14061__.js";
 
-export default (arg0, value) => {
-  try {
-    const obj = { value, configurable: true, writable: true };
-    defineProperty(_mod14061, arg0, obj);
-  } catch (err) {
-    _mod14061[arg0] = value;
-  }
-  return value;
-};
+export const calendars = [
+  "buddhist",
+  "chinese",
+  "coptic",
+  "dangi",
+  "ethioaa",
+  "ethiopic",
+  "gregory",
+  "hebrew",
+  "indian",
+  "islamic",
+  "islamic-civil",
+  "islamic-rgsa",
+  "islamic-tbla",
+  "islamic-umalqura",
+  "islamicc",
+  "iso8601",
+  "japanese",
+  "persian",
+  "roc",
+];

@@ -1,7 +1,14 @@
 // _runtime/06125_react.js
 import react from "00019_react.js";
+import react2 from "06126_react.js";
 
-const context = react.createContext(null);
+const useContext = react.useContext;
 
-export const BottomSheetModalContext = context;
-export const BottomSheetModalProvider = context.Provider;
+export const useBottomSheet = () => {
+  const tmp = useContext(react2.BottomSheetContext);
+  if (null === tmp) {
+    throw "'useBottomSheet' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+};

@@ -9,7 +9,7 @@ import _slicedToArray from "metro/00032__slicedToArray.js";
 const react_mod = react2;
 let _require, assign, c4, c5, createElement, dependencyMap, record, setStatus;
 
-const f82992 = function* () {
+const f83125 = function* () {
   let closure_1;
   let value;
   function attachFrameDataToSpan(spanContext, startFrames, totalFrames2) {
@@ -546,7 +546,7 @@ function startTimeToFullDisplaySpan(arg0) {
               setStatus = setStatus.setStatus;
               setStatus(obj2);
               let closure_0 = setStatus;
-              const promise = closure_5(undefined, undefined, undefined, f82992);
+              const promise = closure_5(undefined, undefined, undefined, f83125);
               const nextPromise = promise.then(() => {
                 const debug = found(c1[2]).debug;
                 debug.log("[TimeToDisplay] span " + _undefined.spanContext().spanId + " updated with frame data.");
@@ -653,7 +653,7 @@ function updateFullDisplaySpan(arg0, span) {
           );
         } else {
           _require = tmp10;
-          const promise = closure_5(undefined, undefined, undefined, f82992);
+          const promise = closure_5(undefined, undefined, undefined, f83125);
           const nextPromise = promise.then(() => {
             let tmp3 = closure_0;
             if (timestamp > closure_0) {
@@ -864,7 +864,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
           const tmp4Result4 = require("metro/00693__.js");
           warn("[TimeToDisplay] " + tmp4Result4.spanToJSON(span).description + " span already ended.");
         } else {
-          const promise = closure_5(undefined, undefined, undefined, f82992);
+          const promise = closure_5(undefined, undefined, undefined, f83125);
           const nextPromise = promise.then(() => {
             span.end(closure_0);
             const obj2 = { code: _mod693.SPAN_STATUS_OK };
@@ -929,7 +929,7 @@ export const createTimeToFullDisplay = function createTimeToFullDisplay(useFocus
       tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
       tmp2 = useFocusEffect(() => {
-        /* body not rendered: F134718 */
+        /* body not rendered: F134935 */
       });
       tmp3 = closure_3;
       createElement = closure_3.createElement;
@@ -953,7 +953,7 @@ export const createTimeToInitialDisplay = function createTimeToInitialDisplay(us
       tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
       tmp2 = useFocusEffect(() => {
-        /* body not rendered: F134718 */
+        /* body not rendered: F134935 */
       });
       tmp3 = closure_3;
       createElement = closure_3.createElement;

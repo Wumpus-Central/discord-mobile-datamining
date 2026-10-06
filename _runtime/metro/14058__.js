@@ -1,6 +1,5 @@
 // _runtime/metro/14058__.js
-import _mod14127 from "14127__.js";
-import 14059__ from "14059__.js";
+const require = globalThis.__r;
 
-
-export default _mod14127.Object.assign;
+export const shouldPolyfill = require("14059__.js").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

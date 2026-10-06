@@ -13,7 +13,7 @@ import nullthrows from "00070_nullthrows.js";
 
 let _Map1, c7;
 
-const f80256 = () => {
+const f80389 = () => {
   c7 = null;
 };
 function _isNativeReflectConstruct() {
@@ -132,7 +132,7 @@ const obj2 = {
       const self = this;
       const self2 = this;
       _Map1 = new _Map(eventCounts);
-      global.queueMicrotask(f80256);
+      global.queueMicrotask(f80389);
       tmp = _Map1;
     }
     return tmp.size;
@@ -152,7 +152,7 @@ items1[1] = {
       const self = this;
       const self2 = this;
       _Map1 = new _Map(eventCounts);
-      global.queueMicrotask(f80256);
+      global.queueMicrotask(f80389);
       obj = _Map1;
     }
     return obj.entries();
@@ -171,7 +171,7 @@ items1[2] = {
       const self = this;
       const self2 = this;
       _Map1 = new _Map(eventCounts);
-      global.queueMicrotask(f80256);
+      global.queueMicrotask(f80389);
       arr = _Map1;
     }
     return arr.forEach(arg0);
@@ -190,7 +190,7 @@ items1[3] = {
       const self = this;
       const self2 = this;
       _Map1 = new _Map(eventCounts);
-      global.queueMicrotask(f80256);
+      global.queueMicrotask(f80389);
       obj = _Map1;
     }
     return obj.get(arg0);
@@ -209,7 +209,7 @@ items1[4] = {
       const self = this;
       const self2 = this;
       _Map1 = new _Map(eventCounts);
-      global.queueMicrotask(f80256);
+      global.queueMicrotask(f80389);
       obj = _Map1;
     }
     return obj.has(arg0);
@@ -228,7 +228,7 @@ items1[5] = {
       const self = this;
       const self2 = this;
       _Map1 = new _Map(eventCounts);
-      global.queueMicrotask(f80256);
+      global.queueMicrotask(f80389);
       obj = _Map1;
     }
     return obj.keys();
@@ -247,7 +247,7 @@ items1[6] = {
       const self = this;
       const self2 = this;
       _Map1 = new _Map(eventCounts);
-      global.queueMicrotask(f80256);
+      global.queueMicrotask(f80389);
       obj = _Map1;
     }
     return obj.values();

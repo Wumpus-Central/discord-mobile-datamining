@@ -2,8 +2,8 @@
 import formatDistance from "../04101_formatDistance.js";
 import buildFormatLongFn from "../04102_buildFormatLongFn.js";
 import formatRelative from "../04103_formatRelative.js";
-import date_mod from "04402__.js";
-import date_mod2 from "04403__.js";
+import date_mod from "04104__.js";
+import date_mod2 from "04105__.js";
 
 let tmp11;
 let tmp3;
@@ -44,7 +44,7 @@ if (!date) {
 }
 
 export default {
-  code: "uk",
+  code: "tr",
   formatDistance: tmp3.default,
   formatLong: tmp5.default,
   formatRelative: tmp7.default,

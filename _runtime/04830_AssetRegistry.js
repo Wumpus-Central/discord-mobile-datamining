@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "71edbf43dc7b4d94780b9aa2b20aeca2",
-  name: "ArrowsLeftRightIcon",
+  hash: "ae439aad7c7ee77514ad4b1f3601a8e9",
+  name: "VideoSlashIcon",
   type: "png",
 });

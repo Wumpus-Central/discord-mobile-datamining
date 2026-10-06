@@ -14,14 +14,24 @@ if (!buildLocalizeFn) {
   obj = buildLocalizeFn;
 }
 const date = {
-  ordinalNumber(arg0, arg1) {
+  ordinalNumber(arg0, unit) {
+    unit = undefined;
     const NumberResult = Number(arg0);
-    const result = NumberResult % 100;
-    if (20 < result) {
-      const result1 = result % 10;
-      return NumberResult + ":a";
+    if (null != unit) {
+      unit = unit.unit;
     }
-    return NumberResult + ":e";
+    let str = "-\u0435";
+    if ("date" !== unit) {
+      if ("week" !== unit) {
+        let str4;
+        if ("minute" !== unit) {
+          str4 = "-\u0439";
+        }
+        str = str4;
+      }
+      str4 = "-\u044F";
+    }
+    return NumberResult + str;
   },
   era: obj.default(obj3),
   quarter: obj.default(obj4),
@@ -30,14 +40,31 @@ const date = {
   dayPeriod: obj.default(obj7),
 };
 obj3 = {
-  values: { narrow: ["f.Kr.", "e.Kr."], abbreviated: ["f.Kr.", "e.Kr."], wide: ["f\u00F6re Kristus", "efter Kristus"] },
+  values: {
+    narrow: ["\u0434\u043E \u043D.\u044D.", "\u043D.\u044D."],
+    abbreviated: ["\u0434\u043E \u043D. \u044D.", "\u043D. \u044D."],
+    wide: [
+      "\u0434\u043E \u043D\u0430\u0448\u0435\u0439 \u044D\u0440\u044B",
+      "\u043D\u0430\u0448\u0435\u0439 \u044D\u0440\u044B",
+    ],
+  },
   defaultWidth: "wide",
 };
 obj4 = {
   values: {
     narrow: ["1", "2", "3", "4"],
-    abbreviated: ["Q1", "Q2", "Q3", "Q4"],
-    wide: ["1:a kvartalet", "2:a kvartalet", "3:e kvartalet", "4:e kvartalet"],
+    abbreviated: [
+      "1-\u0439 \u043A\u0432.",
+      "2-\u0439 \u043A\u0432.",
+      "3-\u0439 \u043A\u0432.",
+      "4-\u0439 \u043A\u0432.",
+    ],
+    wide: [
+      "1-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B",
+      "2-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B",
+      "3-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B",
+      "4-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B",
+    ],
   },
   defaultWidth: "wide",
   argumentCallback(arg0) {
@@ -46,98 +73,193 @@ obj4 = {
 };
 obj5 = {
   values: {
-    narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
-    abbreviated: ["jan.", "feb.", "mars", "apr.", "maj", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "dec."],
+    narrow: [
+      "\u042F",
+      "\u0424",
+      "\u041C",
+      "\u0410",
+      "\u041C",
+      "\u0418",
+      "\u0418",
+      "\u0410",
+      "\u0421",
+      "\u041E",
+      "\u041D",
+      "\u0414",
+    ],
+    abbreviated: [
+      "\u044F\u043D\u0432.",
+      "\u0444\u0435\u0432.",
+      "\u043C\u0430\u0440\u0442",
+      "\u0430\u043F\u0440.",
+      "\u043C\u0430\u0439",
+      "\u0438\u044E\u043D\u044C",
+      "\u0438\u044E\u043B\u044C",
+      "\u0430\u0432\u0433.",
+      "\u0441\u0435\u043D\u0442.",
+      "\u043E\u043A\u0442.",
+      "\u043D\u043E\u044F\u0431.",
+      "\u0434\u0435\u043A.",
+    ],
     wide: [
-      "januari",
-      "februari",
-      "mars",
-      "april",
-      "maj",
-      "juni",
-      "juli",
-      "augusti",
-      "september",
-      "oktober",
-      "november",
-      "december",
+      "\u044F\u043D\u0432\u0430\u0440\u044C",
+      "\u0444\u0435\u0432\u0440\u0430\u043B\u044C",
+      "\u043C\u0430\u0440\u0442",
+      "\u0430\u043F\u0440\u0435\u043B\u044C",
+      "\u043C\u0430\u0439",
+      "\u0438\u044E\u043D\u044C",
+      "\u0438\u044E\u043B\u044C",
+      "\u0430\u0432\u0433\u0443\u0441\u0442",
+      "\u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044C",
+      "\u043E\u043A\u0442\u044F\u0431\u0440\u044C",
+      "\u043D\u043E\u044F\u0431\u0440\u044C",
+      "\u0434\u0435\u043A\u0430\u0431\u0440\u044C",
     ],
   },
   defaultWidth: "wide",
+  formattingValues: {
+    narrow: [
+      "\u042F",
+      "\u0424",
+      "\u041C",
+      "\u0410",
+      "\u041C",
+      "\u0418",
+      "\u0418",
+      "\u0410",
+      "\u0421",
+      "\u041E",
+      "\u041D",
+      "\u0414",
+    ],
+    abbreviated: [
+      "\u044F\u043D\u0432.",
+      "\u0444\u0435\u0432.",
+      "\u043C\u0430\u0440.",
+      "\u0430\u043F\u0440.",
+      "\u043C\u0430\u044F",
+      "\u0438\u044E\u043D.",
+      "\u0438\u044E\u043B.",
+      "\u0430\u0432\u0433.",
+      "\u0441\u0435\u043D\u0442.",
+      "\u043E\u043A\u0442.",
+      "\u043D\u043E\u044F\u0431.",
+      "\u0434\u0435\u043A.",
+    ],
+    wide: [
+      "\u044F\u043D\u0432\u0430\u0440\u044F",
+      "\u0444\u0435\u0432\u0440\u0430\u043B\u044F",
+      "\u043C\u0430\u0440\u0442\u0430",
+      "\u0430\u043F\u0440\u0435\u043B\u044F",
+      "\u043C\u0430\u044F",
+      "\u0438\u044E\u043D\u044F",
+      "\u0438\u044E\u043B\u044F",
+      "\u0430\u0432\u0433\u0443\u0441\u0442\u0430",
+      "\u0441\u0435\u043D\u0442\u044F\u0431\u0440\u044F",
+      "\u043E\u043A\u0442\u044F\u0431\u0440\u044F",
+      "\u043D\u043E\u044F\u0431\u0440\u044F",
+      "\u0434\u0435\u043A\u0430\u0431\u0440\u044F",
+    ],
+  },
+  defaultFormattingWidth: "wide",
 };
 obj6 = {
   values: {
-    narrow: ["S", "M", "T", "O", "T", "F", "L"],
-    short: ["s\u00F6", "m\u00E5", "ti", "on", "to", "fr", "l\u00F6"],
-    abbreviated: ["s\u00F6n", "m\u00E5n", "tis", "ons", "tors", "fre", "l\u00F6r"],
-    wide: ["s\u00F6ndag", "m\u00E5ndag", "tisdag", "onsdag", "torsdag", "fredag", "l\u00F6rdag"],
+    narrow: ["\u0412", "\u041F", "\u0412", "\u0421", "\u0427", "\u041F", "\u0421"],
+    short: [
+      "\u0432\u0441",
+      "\u043F\u043D",
+      "\u0432\u0442",
+      "\u0441\u0440",
+      "\u0447\u0442",
+      "\u043F\u0442",
+      "\u0441\u0431",
+    ],
+    abbreviated: [
+      "\u0432\u0441\u043A",
+      "\u043F\u043D\u0434",
+      "\u0432\u0442\u0440",
+      "\u0441\u0440\u0434",
+      "\u0447\u0442\u0432",
+      "\u043F\u0442\u043D",
+      "\u0441\u0443\u0431",
+    ],
+    wide: [
+      "\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435",
+      "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A",
+      "\u0432\u0442\u043E\u0440\u043D\u0438\u043A",
+      "\u0441\u0440\u0435\u0434\u0430",
+      "\u0447\u0435\u0442\u0432\u0435\u0440\u0433",
+      "\u043F\u044F\u0442\u043D\u0438\u0446\u0430",
+      "\u0441\u0443\u0431\u0431\u043E\u0442\u0430",
+    ],
   },
   defaultWidth: "wide",
 };
 obj7 = {
   values: {
     narrow: {
-      am: "fm",
-      pm: "em",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "morg.",
-      afternoon: "efterm.",
-      evening: "kv\u00E4ll",
-      night: "natt",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u043E\u043B\u043D.",
+      noon: "\u043F\u043E\u043B\u0434.",
+      morning: "\u0443\u0442\u0440\u043E",
+      afternoon: "\u0434\u0435\u043D\u044C",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u043E\u0447\u044C",
     },
     abbreviated: {
-      am: "f.m.",
-      pm: "e.m.",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "morgon",
-      afternoon: "efterm.",
-      evening: "kv\u00E4ll",
-      night: "natt",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u043E\u043B\u043D.",
+      noon: "\u043F\u043E\u043B\u0434.",
+      morning: "\u0443\u0442\u0440\u043E",
+      afternoon: "\u0434\u0435\u043D\u044C",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u043E\u0447\u044C",
     },
     wide: {
-      am: "f\u00F6rmiddag",
-      pm: "eftermiddag",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "morgon",
-      afternoon: "eftermiddag",
-      evening: "kv\u00E4ll",
-      night: "natt",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u043E\u043B\u043D\u043E\u0447\u044C",
+      noon: "\u043F\u043E\u043B\u0434\u0435\u043D\u044C",
+      morning: "\u0443\u0442\u0440\u043E",
+      afternoon: "\u0434\u0435\u043D\u044C",
+      evening: "\u0432\u0435\u0447\u0435\u0440",
+      night: "\u043D\u043E\u0447\u044C",
     },
   },
-  defaultWidth: "wide",
+  defaultWidth: "any",
   formattingValues: {
     narrow: {
-      am: "fm",
-      pm: "em",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "p\u00E5 morg.",
-      afternoon: "p\u00E5 efterm.",
-      evening: "p\u00E5 kv\u00E4llen",
-      night: "p\u00E5 natten",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u043E\u043B\u043D.",
+      noon: "\u043F\u043E\u043B\u0434.",
+      morning: "\u0443\u0442\u0440\u0430",
+      afternoon: "\u0434\u043D\u044F",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u043E\u0447\u0438",
     },
     abbreviated: {
-      am: "fm",
-      pm: "em",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "p\u00E5 morg.",
-      afternoon: "p\u00E5 efterm.",
-      evening: "p\u00E5 kv\u00E4llen",
-      night: "p\u00E5 natten",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u043E\u043B\u043D.",
+      noon: "\u043F\u043E\u043B\u0434.",
+      morning: "\u0443\u0442\u0440\u0430",
+      afternoon: "\u0434\u043D\u044F",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u043E\u0447\u0438",
     },
     wide: {
-      am: "fm",
-      pm: "em",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "p\u00E5 morgonen",
-      afternoon: "p\u00E5 eftermiddagen",
-      evening: "p\u00E5 kv\u00E4llen",
-      night: "p\u00E5 natten",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u043E\u043B\u043D\u043E\u0447\u044C",
+      noon: "\u043F\u043E\u043B\u0434\u0435\u043D\u044C",
+      morning: "\u0443\u0442\u0440\u0430",
+      afternoon: "\u0434\u043D\u044F",
+      evening: "\u0432\u0435\u0447\u0435\u0440\u0430",
+      night: "\u043D\u043E\u0447\u0438",
     },
   },
   defaultFormattingWidth: "wide",

@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/gifting",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL2dpZnRpbmc=",
   scales: [1],
-  hash: "5eba0d3ba2b09151db8d86e1e74f473f",
-  name: "PremiumGifting.compiled.messages",
+  hash: "a08e1fd7b272217347fa267f2339bbc2",
+  name: "da.messages.a08e1fd7b272217347fa267f2339bbc2.compiled.messages",
   type: "jsona",
 });

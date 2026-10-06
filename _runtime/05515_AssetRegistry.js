@@ -4,10 +4,10 @@ import AssetRegistry from "01132_AssetRegistry.js";
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "2ebb6fd1431422af001c51b9dd778da6",
-  name: "img_account_sync_playstation_white",
-  type: "svg",
+  hash: "be629a43a1506b7ff0f25b34b78ebb11",
+  name: "img_account_sync_github_light",
+  type: "png",
 });

@@ -1,4 +1,4 @@
 // _runtime/metro/14145__.js
-import _mod14133 from "14133__.js";
+import _mod14079 from "14079__.js";
 
-export const URLSearchParams = _mod14133.URLSearchParams;
+export default _mod14079;

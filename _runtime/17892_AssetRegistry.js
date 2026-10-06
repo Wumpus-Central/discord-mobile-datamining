@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/guild_settings/welcome/images",
-  width: 87,
-  height: 61.5,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "d8d9b21fdc821b420337e07a880866f5",
-  name: "asset_role_subscription_exclusive_perks",
+  hash: "0b8a6fa235bbde823695fe5cdeccf7e4",
+  name: "channel_setup_light",
   type: "png",
 });

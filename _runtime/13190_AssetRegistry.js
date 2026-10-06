@@ -4,10 +4,10 @@ import AssetRegistry from "01132_AssetRegistry.js";
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 180,
-  height: 108,
+  width: 51,
+  height: 36,
   scales: [2, 3],
-  hash: "ff9dd208f5a022cb1483def98770bc0b",
-  name: "img_what_you_lose_profile",
+  hash: "010602d585dcc3b10c042380413a7a26",
+  name: "img_boost_error_mobile",
   type: "png",
 });

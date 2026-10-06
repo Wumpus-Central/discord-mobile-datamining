@@ -1,13 +1,7 @@
 // _runtime/metro/13867__.js
-import _mod13860 from "13860__.js";
+import _mod13866 from "13866__.js";
 
-export default function (arg0, arg1) {
-  try {
-    const self = this;
-    const self2 = this;
-    const str = new _mod13860(arg0, arg1).range || "*";
-    return str;
-  } catch (err) {
-    return null;
-  }
-}
+export default (arr, arg1) => {
+  let closure_0 = arg1;
+  return arr.sort((arg0, arg1) => _mod13866(arg0, arg1, closure_0));
+};

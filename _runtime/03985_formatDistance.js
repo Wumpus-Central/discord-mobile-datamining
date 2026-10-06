@@ -1,82 +1,101 @@
 // _runtime/03985_formatDistance.js
-let closure_0 = {
+const obj = {
   lessThanXSeconds: {
-    one: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC \u03AD\u03BD\u03B1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03BF",
-    other:
-      "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC {{count}} \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1",
+    standalone: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" },
+    withPreposition: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" },
   },
   xSeconds: {
-    one: "1 \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03BF",
-    other: "{{count}} \u03B4\u03B5\u03C5\u03C4\u03B5\u03C1\u03CC\u03BB\u03B5\u03C0\u03C4\u03B1",
+    standalone: { one: "1 Sekunde", other: "{{count}} Sekunden" },
+    withPreposition: { one: "1 Sekunde", other: "{{count}} Sekunden" },
   },
-  halfAMinute: "\u03BC\u03B9\u03C3\u03CC \u03BB\u03B5\u03C0\u03C4\u03CC",
+  halfAMinute: { standalone: "halbe Minute", withPreposition: "halben Minute" },
   lessThanXMinutes: {
-    one: "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC \u03AD\u03BD\u03B1 \u03BB\u03B5\u03C0\u03C4\u03CC",
-    other:
-      "\u03BB\u03B9\u03B3\u03CC\u03C4\u03B5\u03C1\u03BF \u03B1\u03C0\u03CC {{count}} \u03BB\u03B5\u03C0\u03C4\u03AC",
+    standalone: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" },
+    withPreposition: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" },
   },
-  xMinutes: { one: "1 \u03BB\u03B5\u03C0\u03C4\u03CC", other: "{{count}} \u03BB\u03B5\u03C0\u03C4\u03AC" },
+  xMinutes: {
+    standalone: { one: "1 Minute", other: "{{count}} Minuten" },
+    withPreposition: { one: "1 Minute", other: "{{count}} Minuten" },
+  },
   aboutXHours: {
-    one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03CE\u03C1\u03B1",
-    other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03CE\u03C1\u03B5\u03C2",
+    standalone: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" },
+    withPreposition: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" },
   },
-  xHours: { one: "1 \u03CE\u03C1\u03B1", other: "{{count}} \u03CE\u03C1\u03B5\u03C2" },
-  xDays: { one: "1 \u03B7\u03BC\u03AD\u03C1\u03B1", other: "{{count}} \u03B7\u03BC\u03AD\u03C1\u03B5\u03C2" },
+  xHours: {
+    standalone: { one: "1 Stunde", other: "{{count}} Stunden" },
+    withPreposition: { one: "1 Stunde", other: "{{count}} Stunden" },
+  },
+  xDays: {
+    standalone: { one: "1 Tag", other: "{{count}} Tage" },
+    withPreposition: { one: "1 Tag", other: "{{count}} Tagen" },
+  },
   aboutXWeeks: {
-    one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B1",
-    other:
-      "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B5\u03C2",
+    standalone: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" },
+    withPreposition: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" },
   },
   xWeeks: {
-    one: "1 \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B1",
-    other: "{{count}} \u03B5\u03B2\u03B4\u03BF\u03BC\u03AC\u03B4\u03B5\u03C2",
+    standalone: { one: "1 Woche", other: "{{count}} Wochen" },
+    withPreposition: { one: "1 Woche", other: "{{count}} Wochen" },
   },
   aboutXMonths: {
-    one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03BC\u03AE\u03BD\u03B1\u03C2",
-    other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03BC\u03AE\u03BD\u03B5\u03C2",
+    standalone: { one: "etwa 1 Monat", other: "etwa {{count}} Monate" },
+    withPreposition: { one: "etwa 1 Monat", other: "etwa {{count}} Monaten" },
   },
-  xMonths: { one: "1 \u03BC\u03AE\u03BD\u03B1\u03C2", other: "{{count}} \u03BC\u03AE\u03BD\u03B5\u03C2" },
+  xMonths: {
+    standalone: { one: "1 Monat", other: "{{count}} Monate" },
+    withPreposition: { one: "1 Monat", other: "{{count}} Monaten" },
+  },
   aboutXYears: {
-    one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03C7\u03C1\u03CC\u03BD\u03BF",
-    other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1",
+    standalone: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahre" },
+    withPreposition: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahren" },
   },
-  xYears: { one: "1 \u03C7\u03C1\u03CC\u03BD\u03BF", other: "{{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1" },
+  xYears: {
+    standalone: { one: "1 Jahr", other: "{{count}} Jahre" },
+    withPreposition: { one: "1 Jahr", other: "{{count}} Jahren" },
+  },
   overXYears: {
-    one: "\u03C0\u03AC\u03BD\u03C9 \u03B1\u03C0\u03CC 1 \u03C7\u03C1\u03CC\u03BD\u03BF",
-    other: "\u03C0\u03AC\u03BD\u03C9 \u03B1\u03C0\u03CC {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1",
+    standalone: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahre" },
+    withPreposition: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahren" },
   },
   almostXYears: {
-    one: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 1 \u03C7\u03C1\u03CC\u03BD\u03BF",
-    other: "\u03C0\u03B5\u03C1\u03AF\u03C0\u03BF\u03C5 {{count}} \u03C7\u03C1\u03CC\u03BD\u03B9\u03B1",
+    standalone: { one: "fast 1 Jahr", other: "fast {{count}} Jahre" },
+    withPreposition: { one: "fast 1 Jahr", other: "fast {{count}} Jahren" },
   },
 };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
-  let tmp2 = tmp;
-  if (typeof closure_0[arg0] !== "string") {
-    let one;
-    if (1 === arg1) {
-      one = tmp.one;
-    } else {
-      const _String = String;
-      const str = closure_0[arg0].other;
-      one = str.replace("{{count}}", String(arg1));
-    }
-    tmp2 = one;
-  }
-  let tmp4 = tmp2;
   if (null != addSuffix) {
-    tmp4 = tmp2;
+    let standalone;
     if (addSuffix.addSuffix) {
-      if (addSuffix.comparison) {
-        let text;
-        if (addSuffix.comparison > 0) {
-          text = `σε ${tmp2}`;
-        }
-        tmp4 = text;
-      }
-      text = `${tmp2} πριν`;
+      standalone = obj[arg0].withPreposition;
     }
+    let tmp2 = standalone;
+    if (typeof standalone !== "string") {
+      let one;
+      if (1 === arg1) {
+        one = standalone.one;
+      } else {
+        const _String = String;
+        const str = standalone.other;
+        one = str.replace("{{count}}", String(arg1));
+      }
+      tmp2 = one;
+    }
+    let tmp4 = tmp2;
+    if (null != addSuffix) {
+      tmp4 = tmp2;
+      if (addSuffix.addSuffix) {
+        if (addSuffix.comparison) {
+          let text;
+          if (addSuffix.comparison > 0) {
+            text = `in ${tmp2}`;
+          }
+          tmp4 = text;
+        }
+        text = `vor ${tmp2}`;
+      }
+    }
+    return tmp4;
   }
-  return tmp4;
+  standalone = obj[arg0].standalone;
 }

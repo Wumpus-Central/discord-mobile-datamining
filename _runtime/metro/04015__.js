@@ -8,7 +8,6 @@ let items2;
 let items3;
 let items4;
 let items5;
-let items6;
 let obj;
 let obj10;
 let obj11;
@@ -44,18 +43,22 @@ const date = {
 };
 obj6 = {
   matchPatterns: {
-    narrow: /^(pr\.n\.e\.|AD)/i,
-    abbreviated: /^(pr\.\s?Kr\.|po\.\s?Kr\.)/i,
-    wide: /^(Prije Krista|prije nove ere|Poslije Krista|nova era)/i,
+    narrow: /^(av\.J\.C|ap\.J\.C|ap\.J\.-C)/i,
+    abbreviated: /^(av\.J\.-C|av\.J-C|apr\.J\.-C|apr\.J-C|ap\.J-C)/i,
+    wide: /^(avant Jésus-Christ|après Jésus-Christ)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj7,
   defaultParseWidth: "any",
 };
 obj7 = { any: items };
-items = [/^pr/i, /^(po|nova)/i];
+items = [/^av/i, /^ap/i];
 obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234]\.\s?kv\.?/i, wide: /^[1234]\. kvartal/i },
+  matchPatterns: {
+    narrow: /^T?[1234]/i,
+    abbreviated: /^[1234](er|ème|e)? trim\.?/i,
+    wide: /^[1234](er|ème|e)? trimestre/i,
+  },
   defaultMatchWidth: "wide",
   parsePatterns: obj9,
   defaultParseWidth: "any",
@@ -67,60 +70,36 @@ obj9 = { any: items1 };
 items1 = [/1/i, /2/i, /3/i, /4/i];
 obj10 = {
   matchPatterns: {
-    narrow: /^(10|11|12|[123456789])\./i,
-    abbreviated: /^(sij|velj|(ožu|ozu)|tra|svi|lip|srp|kol|ruj|lis|stu|pro)/i,
-    wide: /^((siječanj|siječnja|sijecanj|sijecnja)|(veljača|veljače|veljaca|veljace)|(ožujak|ožujka|ozujak|ozujka)|(travanj|travnja)|(svibanj|svibnja)|(lipanj|lipnja)|(srpanj|srpnja)|(kolovoz|kolovoza)|(rujan|rujna)|(listopad|listopada)|(studeni|studenog)|(prosinac|prosinca))/i,
+    narrow: /^[jfmasond]/i,
+    abbreviated: /^(janv|févr|mars|avr|mai|juin|juill|juil|août|sept|oct|nov|déc)\.?/i,
+    wide: /^(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj11,
-  defaultParseWidth: "wide",
+  defaultParseWidth: "any",
 };
-obj11 = { narrow: items2, abbreviated: items3, wide: items4 };
-items2 = [/1/i, /2/i, /3/i, /4/i, /5/i, /6/i, /7/i, /8/i, /9/i, /10/i, /11/i, /12/i];
-items3 = [
-  /^sij/i,
-  /^velj/i,
-  /^(ožu|ozu)/i,
-  /^tra/i,
-  /^svi/i,
-  /^lip/i,
-  /^srp/i,
-  /^kol/i,
-  /^ruj/i,
-  /^lis/i,
-  /^stu/i,
-  /^pro/i,
-];
-items4 = [
-  /^sij/i,
-  /^velj/i,
-  /^(ožu|ozu)/i,
-  /^tra/i,
-  /^svi/i,
-  /^lip/i,
-  /^srp/i,
-  /^kol/i,
-  /^ruj/i,
-  /^lis/i,
-  /^stu/i,
-  /^pro/i,
-];
+obj11 = { narrow: items2, any: items3 };
+items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+items3 = [/^ja/i, /^f/i, /^mar/i, /^av/i, /^ma/i, /^juin/i, /^juil/i, /^ao/i, /^s/i, /^o/i, /^n/i, /^d/i];
 obj12 = {
   matchPatterns: {
-    narrow: /^[npusčc]/i,
-    short: /^(ned|pon|uto|sri|(čet|cet)|pet|sub)/i,
-    abbreviated: /^(ned|pon|uto|sri|(čet|cet)|pet|sub)/i,
-    wide: /^(nedjelja|ponedjeljak|utorak|srijeda|(četvrtak|cetvrtak)|petak|subota)/i,
+    narrow: /^[lmjvsd]/i,
+    short: /^(di|lu|ma|me|je|ve|sa)/i,
+    abbreviated: /^(dim|lun|mar|mer|jeu|ven|sam)\.?/i,
+    wide: /^(dimanche|lundi|mardi|mercredi|jeudi|vendredi|samedi)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj13,
   defaultParseWidth: "any",
 };
-obj13 = { narrow: items5, any: items6 };
-items5 = [/^s/i, /^m/i, /^t/i, /^w/i, /^t/i, /^f/i, /^s/i];
-items6 = [/^su/i, /^m/i, /^tu/i, /^w/i, /^th/i, /^f/i, /^sa/i];
+obj13 = { narrow: items4, any: items5 };
+items4 = [/^d/i, /^l/i, /^m/i, /^m/i, /^j/i, /^v/i, /^s/i];
+items5 = [/^di/i, /^lu/i, /^ma/i, /^me/i, /^je/i, /^ve/i, /^sa/i];
 obj14 = {
-  matchPatterns: { any: /^(am|pm|ponoc|ponoć|(po)?podne|navecer|navečer|noću|poslije podne|ujutro)/i },
+  matchPatterns: {
+    narrow: /^(a|p|minuit|midi|mat\.?|ap\.?m\.?|soir|nuit)/i,
+    any: /^([ap]\.?\s?m\.?|du matin|de l'après[-\s]midi|du soir|de la nuit)/i,
+  },
   defaultMatchWidth: "any",
   parsePatterns: obj15,
   defaultParseWidth: "any",
@@ -129,19 +108,19 @@ obj15 = {
   any: {
     am: /^a/i,
     pm: /^p/i,
-    midnight: /^pono/i,
-    noon: /^pod/i,
-    morning: /jutro/i,
-    afternoon: /(poslije\s|po)+podne/i,
-    evening: /(navece|naveče)/i,
-    night: /(nocu|noću)/i,
+    midnight: /^min/i,
+    noon: /^mid/i,
+    morning: /mat/i,
+    afternoon: /ap/i,
+    evening: /soir/i,
+    night: /nuit/i,
   },
 };
 obj5 = {
-  matchPattern: /^(\d+)\./i,
+  matchPattern: /^(\d+)(ième|ère|ème|er|e)?/i,
   parsePattern: /\d+/i,
   valueCallback(match) {
-    return parseInt(match, 10);
+    return parseInt(match);
   },
 };
 

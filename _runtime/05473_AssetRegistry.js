@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "2eb4a3a7eee9d2c37d6ab83a1bbe761d",
-  name: "img_account_sync_steam_light",
+  hash: "353a91a70e129c6496d346cd0dd42f3d",
+  name: "img_account_sync_skype_white",
   type: "png",
 });

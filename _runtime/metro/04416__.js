@@ -44,7 +44,7 @@ if (!date) {
 }
 
 export default {
-  code: "zh-TW",
+  code: "zh-CN",
   formatDistance: tmp3.default,
   formatLong: tmp5.default,
   formatRelative: tmp7.default,

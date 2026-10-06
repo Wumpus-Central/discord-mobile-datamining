@@ -1,29 +1,21 @@
 // _runtime/metro/07370__.js
-const f94751 = (item) => String.fromCharCode(item);
+import _mod7356 from "07356__.js";
 
-export const getStringValue = function getStringValue(value) {
-  const mapped = value.map(f94751);
-  return mapped.join("");
-};
-export const getEncodedString = function getEncodedString(arr) {
-  if (arr.length >= 8) {
-    const substr = arr.slice(0, 8);
-    const mapped = substr.map(f94751);
-    const joined = mapped.join("");
-    if ("ASCII\0\0\0" === joined) {
-      const substr1 = arr.slice(8);
-      const mapped1 = substr1.map(f94751);
-      return mapped1.join("");
-    } else if ("JIS\0\0\0\0\0" === joined) {
-      return "[JIS encoded text]";
-    } else if ("UNICODE\0" === joined) {
-      return "[Unicode encoded text]";
-    } else if ("\0\0\0\0\0\0\0\0" === joined) {
-      return "[Undefined encoding]";
+let obj = {
+  isGifFile(dataView) {
+    let hasItem = dataView;
+    if (hasItem) {
+      includes = includes.includes;
+      const obj = _mod7356;
+      hasItem = includes(obj.getStringFromDataView(dataView, 0, c2));
     }
-  }
-  return "Undefined";
+    return hasItem;
+  },
+  findOffsets() {
+    return { gifHeaderOffset: 0 };
+  },
 };
-export const getCalculatedGpsValue = function getCalculatedGpsValue(value) {
-  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
-};
+let c2 = 6;
+let includes = ["GIF87a", "GIF89a"];
+
+export default obj;

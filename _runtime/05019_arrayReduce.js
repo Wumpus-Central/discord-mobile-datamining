@@ -1,0 +1,26 @@
+// _runtime/05019_arrayReduce.js
+
+export default function arrayReduce(arg0, fn, arg2, arg3) {
+  let num = 0;
+  if (null != arg0) {
+    num = arg0.length;
+  }
+  let first = arg2;
+  let num2 = -1;
+  const tmp = arg3 && num;
+  if (tmp) {
+    first = arg0[0];
+    num2 = 0;
+  }
+  let sum = num2 + 1;
+  let tmp4 = first;
+  let tmp5 = first;
+  if (sum < num) {
+    do {
+      tmp4 = fn(tmp4, arg0[sum], sum, arg0);
+      sum = sum + 1;
+      tmp5 = tmp4;
+    } while (sum < num);
+  }
+  return tmp5;
+}

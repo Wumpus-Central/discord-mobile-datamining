@@ -14,19 +14,8 @@ if (!buildLocalizeFn) {
   obj = buildLocalizeFn;
 }
 const date = {
-  ordinalNumber(arg0, unit) {
-    let text;
-    Number(arg0);
-    unit = undefined;
-    if (null != unit) {
-      unit = unit.unit;
-    }
-    if ("week" === unit) {
-      text = `${tmp}ª`;
-    } else {
-      text = `${tmp}º`;
-    }
-    return text;
+  ordinalNumber(arg0, arg1) {
+    return String(arg0);
   },
   era: obj.default(obj3),
   quarter: obj.default(obj4),
@@ -35,14 +24,18 @@ const date = {
   dayPeriod: obj.default(obj7),
 };
 obj3 = {
-  values: { narrow: ["AC", "DC"], abbreviated: ["AC", "DC"], wide: ["antes de cristo", "depois de cristo"] },
+  values: {
+    narrow: ["p.n.e.", "n.e."],
+    abbreviated: ["p.n.e.", "n.e."],
+    wide: ["przed nasz\u0105 er\u0105", "naszej ery"],
+  },
   defaultWidth: "wide",
 };
 obj4 = {
   values: {
     narrow: ["1", "2", "3", "4"],
-    abbreviated: ["T1", "T2", "T3", "T4"],
-    wide: ["1\u00BA trimestre", "2\u00BA trimestre", "3\u00BA trimestre", "4\u00BA trimestre"],
+    abbreviated: ["I kw.", "II kw.", "III kw.", "IV kw."],
+    wide: ["I kwarta\u0142", "II kwarta\u0142", "III kwarta\u0142", "IV kwarta\u0142"],
   },
   defaultWidth: "wide",
   argumentCallback(arg0) {
@@ -51,73 +44,91 @@ obj4 = {
 };
 obj5 = {
   values: {
-    narrow: ["j", "f", "m", "a", "m", "j", "j", "a", "s", "o", "n", "d"],
-    abbreviated: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
+    narrow: ["S", "L", "M", "K", "M", "C", "L", "S", "W", "P", "L", "G"],
+    abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"],
     wide: [
-      "janeiro",
-      "fevereiro",
-      "mar\u00E7o",
-      "abril",
-      "maio",
-      "junho",
-      "julho",
-      "agosto",
-      "setembro",
-      "outubro",
-      "novembro",
-      "dezembro",
+      "stycze\u0144",
+      "luty",
+      "marzec",
+      "kwiecie\u0144",
+      "maj",
+      "czerwiec",
+      "lipiec",
+      "sierpie\u0144",
+      "wrzesie\u0144",
+      "pa\u017Adziernik",
+      "listopad",
+      "grudzie\u0144",
     ],
   },
   defaultWidth: "wide",
+  formattingValues: {
+    narrow: ["s", "l", "m", "k", "m", "c", "l", "s", "w", "p", "l", "g"],
+    abbreviated: ["sty", "lut", "mar", "kwi", "maj", "cze", "lip", "sie", "wrz", "pa\u017A", "lis", "gru"],
+    wide: [
+      "stycznia",
+      "lutego",
+      "marca",
+      "kwietnia",
+      "maja",
+      "czerwca",
+      "lipca",
+      "sierpnia",
+      "wrze\u015Bnia",
+      "pa\u017Adziernika",
+      "listopada",
+      "grudnia",
+    ],
+  },
+  defaultFormattingWidth: "wide",
 };
 obj6 = {
   values: {
-    narrow: ["D", "S", "T", "Q", "Q", "S", "S"],
-    short: ["dom", "seg", "ter", "qua", "qui", "sex", "sab"],
-    abbreviated: ["domingo", "segunda", "ter\u00E7a", "quarta", "quinta", "sexta", "s\u00E1bado"],
-    wide: [
-      "domingo",
-      "segunda-feira",
-      "ter\u00E7a-feira",
-      "quarta-feira",
-      "quinta-feira",
-      "sexta-feira",
-      "s\u00E1bado",
-    ],
+    narrow: ["N", "P", "W", "\u015A", "C", "P", "S"],
+    short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"],
+    abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."],
+    wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"],
   },
   defaultWidth: "wide",
+  formattingValues: {
+    narrow: ["n", "p", "w", "\u015B", "c", "p", "s"],
+    short: ["nie", "pon", "wto", "\u015Bro", "czw", "pi\u0105", "sob"],
+    abbreviated: ["niedz.", "pon.", "wt.", "\u015Br.", "czw.", "pt.", "sob."],
+    wide: ["niedziela", "poniedzia\u0142ek", "wtorek", "\u015Broda", "czwartek", "pi\u0105tek", "sobota"],
+  },
+  defaultFormattingWidth: "wide",
 };
 obj7 = {
   values: {
     narrow: {
       am: "a",
       pm: "p",
-      midnight: "mn",
-      noon: "md",
-      morning: "manh\u00E3",
-      afternoon: "tarde",
-      evening: "tarde",
-      night: "noite",
+      midnight: "p\u00F3\u0142n.",
+      noon: "po\u0142",
+      morning: "rano",
+      afternoon: "popo\u0142.",
+      evening: "wiecz.",
+      night: "noc",
     },
     abbreviated: {
       am: "AM",
       pm: "PM",
-      midnight: "meia-noite",
-      noon: "meio-dia",
-      morning: "manh\u00E3",
-      afternoon: "tarde",
-      evening: "tarde",
-      night: "noite",
+      midnight: "p\u00F3\u0142noc",
+      noon: "po\u0142udnie",
+      morning: "rano",
+      afternoon: "popo\u0142udnie",
+      evening: "wiecz\u00F3r",
+      night: "noc",
     },
     wide: {
-      am: "a.m.",
-      pm: "p.m.",
-      midnight: "meia-noite",
-      noon: "meio-dia",
-      morning: "manh\u00E3",
-      afternoon: "tarde",
-      evening: "tarde",
-      night: "noite",
+      am: "AM",
+      pm: "PM",
+      midnight: "p\u00F3\u0142noc",
+      noon: "po\u0142udnie",
+      morning: "rano",
+      afternoon: "popo\u0142udnie",
+      evening: "wiecz\u00F3r",
+      night: "noc",
     },
   },
   defaultWidth: "wide",
@@ -125,32 +136,32 @@ obj7 = {
     narrow: {
       am: "a",
       pm: "p",
-      midnight: "mn",
-      noon: "md",
-      morning: "da manh\u00E3",
-      afternoon: "da tarde",
-      evening: "da tarde",
-      night: "da noite",
+      midnight: "o p\u00F3\u0142n.",
+      noon: "w po\u0142.",
+      morning: "rano",
+      afternoon: "po po\u0142.",
+      evening: "wiecz.",
+      night: "w nocy",
     },
     abbreviated: {
       am: "AM",
       pm: "PM",
-      midnight: "meia-noite",
-      noon: "meio-dia",
-      morning: "da manh\u00E3",
-      afternoon: "da tarde",
-      evening: "da tarde",
-      night: "da noite",
+      midnight: "o p\u00F3\u0142nocy",
+      noon: "w po\u0142udnie",
+      morning: "rano",
+      afternoon: "po po\u0142udniu",
+      evening: "wieczorem",
+      night: "w nocy",
     },
     wide: {
-      am: "a.m.",
-      pm: "p.m.",
-      midnight: "meia-noite",
-      noon: "meio-dia",
-      morning: "da manh\u00E3",
-      afternoon: "da tarde",
-      evening: "da tarde",
-      night: "da noite",
+      am: "AM",
+      pm: "PM",
+      midnight: "o p\u00F3\u0142nocy",
+      noon: "w po\u0142udnie",
+      morning: "rano",
+      afternoon: "po po\u0142udniu",
+      evening: "wieczorem",
+      night: "w nocy",
     },
   },
   defaultFormattingWidth: "wide",

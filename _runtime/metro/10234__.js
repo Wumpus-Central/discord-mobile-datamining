@@ -1,48 +1,62 @@
 // _runtime/metro/10234__.js
-import _mod10188 from "10188__.js";
-import NUMBER from "../10231_NUMBER.js";
+import _mod10192 from "10192__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import map from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const keys = Object.keys(NUMBER.WEEKDAY_OFFSET);
-const regExp = new RegExp(
-  "((?<prefix>\u524D\u306E|\u6B21\u306E|\u4ECA\u9031))?(?<weekday>" + keys.join("|") + ")(?:\u66DC\u65E5|\u66DC)",
-  "i",
-);
-class JPWeekdayParser {
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    let tmp2;
+    const tmp = __esModule;
+    if (!tmp) {
+      tmp2 = { default: __esModule };
+      const obj = { default: __esModule };
+    } else {
+      tmp2 = __esModule;
+    }
+    return tmp2;
+  };
+}
+class FRMergeDateRangeRefiner {
   constructor() {
-    _classCallCheck(this, JPWeekdayParser);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, FRMergeDateRangeRefiner);
+    const obj = _getPrototypeOf(FRMergeDateRangeRefiner);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    return map(self, constructResult);
   }
 }
+_inherits(FRMergeDateRangeRefiner, fn(_mod10192).default);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
+  key: "patternBetween",
+  value: function patternBetween() {
+    return /^\s*(à|a|au|-)\s*$/i;
   },
 };
-const items = [
-  entry,
-  {
-    key: "extract",
-    value: function extract(reference, groups) {
-      const tmp3 = NUMBER.WEEKDAY_OFFSET[groups.groups.weekday];
-      if (undefined === tmp3) {
-        return null;
-      } else {
-        let str2 = "last";
-        if (!(groups.groups.prefix || "").match(/前の/)) {
-          str2 = "next";
-          if (!(groups.groups.prefix || "").match(/次の/)) {
-            str2 = null;
-            if ((groups.groups.prefix || "").match(/今週/)) {
-              str2 = "this";
-            }
-          }
-        }
-        return _mod10188.createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
-      }
-    },
-  },
-];
+const items = [entry];
 
-export default _createClass(JPWeekdayParser, items);
+export default _createClass(FRMergeDateRangeRefiner, items);

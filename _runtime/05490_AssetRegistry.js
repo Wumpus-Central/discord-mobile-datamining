@@ -4,10 +4,10 @@ import AssetRegistry from "01132_AssetRegistry.js";
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "e94b8b952ebeea94014c9e671ef91d08",
-  name: "img_account_sync_x_dark",
-  type: "png",
+  hash: "1c6c58beca1fec7f3c53119b27e0466a",
+  name: "img_account_sync_facebook_light_and_dark",
+  type: "svg",
 });

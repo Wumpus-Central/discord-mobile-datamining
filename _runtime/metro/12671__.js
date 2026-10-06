@@ -1,233 +1,168 @@
 // _runtime/metro/12671__.js
-import _mod12589 from "12589__.js";
-import _asyncToGenerator from "00005__asyncToGenerator.js";
-import registerSpanErrorInstrumentation from "12561__.js";
-import "module_12564";
-import CONSOLE_LEVELS from "12565__.js";
-import DEBUG_BUILD from "12593__.js";
-import _browserPerformanceTimeOriginMode from "../12579__browserPerformanceTimeOriginMode.js";
+import _mod12672 from "12672__.js";
+import 12636__ from "12636__.js";
 
-let c5, c6;
+const require = globalThis.__r;
+let _require, stacktrace;
 
-_mod12589;
-let obj = { mechanism: { handled: false, data: { function: "trpcMiddleware" } } };
 
-export const trpcMiddleware = function trpcMiddleware() {
-  obj = arg0;
+export const generateIteratee = function generateIteratee(arg0) {
+  let closure_2;
+  let require;
+  ({ isBrowser: require, root: dependencyMap, prefix: closure_2 } = arg0);
+  return (filename) => {
+    if (filename.filename) {
+      const obj = /^[a-zA-Z]:\\/;
+      let isMatch = obj.test(filename.filename);
+      if (!isMatch) {
+        filename = filename.filename;
+        let hasItem = filename.includes("\\");
+        if (hasItem) {
+          const filename2 = filename.filename;
+          hasItem = !filename2.includes("/");
+        }
+        isMatch = hasItem;
+      }
+      if (closure_0) {
+        if (root) {
+          const filename1 = filename.filename;
+          if (0 === filename1.indexOf(root)) {
+            filename.filename = filename1.replace(root, prefix);
+          }
+        }
+      } else if (isMatch) {
+        let replaced;
+        let relativeResult;
+        if (isMatch) {
+          const str5 = filename.filename.replace(/^[a-zA-Z]:/, "");
+          replaced = str5.replace(/\\/g, "/");
+        } else {
+          replaced = str3;
+        }
+        const obj2 = _mod12672;
+        if (root) {
+          relativeResult = obj2.relative(root, replaced);
+        } else {
+          relativeResult = obj2.basename(replaced);
+        }
+        const _HermesInternal = HermesInternal;
+        filename.filename = "" + prefix + relativeResult;
+      }
+      return filename;
+    } else {
+      return filename;
+    }
+  };
+};
+export const rewriteFramesIntegration = module_12636.defineIntegration(() => {
+  let closure_0;
+  let prefix;
+  let root;
+  let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let closure_0 = _asyncToGenerator(async (arg0) => {
-    let c1;
-    let fn;
-    let getRawInput;
-    let rawInput;
-    let tmp;
-    let value;
-    closure_0 = arg0;
-    if (c6 === 2) {
-      c6 = 3;
-      let str = "Generator functions may not be called on executing generators";
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj2 = { value, done: true };
-        return obj2;
-      } else {
-        return { value: "IconComponent", done: null };
-      }
-    } else {
-      let c4;
-      let closure_3;
-      try {
-        let closure_2;
-        let obj5;
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            let obj4 = { value, done: true };
-            return obj4;
-          } else {
-            closure_2 = tmp;
-            c1 = undefined;
-            closure_3 = undefined;
-            const path = closure_0.path;
-            ({ next: c1, rawInput, getRawInput } = closure_0);
-            const type = closure_0.type;
-            const obj8 = closure_0(dependencyMap[8]);
-            const client = obj8.getClient();
-            const options = client && client.getOptions();
-            obj5 = { procedure_path: path, procedure_type: type };
-            value = closure_0.attachRpcInput;
-            if (undefined !== value) {
-              value = closure_0.attachRpcInput;
-            } else {
-              value = options && options.sendDefaultPii;
-            }
-            if (value) {
-              if (undefined !== rawInput) {
-                const normalizer2 = closure_0(dependencyMap[9]);
-                value = normalizer2.normalize(rawInput);
-                obj5.input = value;
-              }
-              if (undefined !== getRawInput) {
-                if (typeof getRawInput === "function") {
-                  c4 = 1;
-                  value = getRawInput();
-                  c5 = 2;
-                  c6 = 1;
-                  let obj6 = { value, done: false };
-                  return obj6;
-                }
-              }
+  let fn;
+  ({ prefix, root } = obj);
+  if (!prefix) {
+    prefix = "app:///";
+  }
+  const tmp = _require;
+  let tmp2 = root;
+  fn = obj.iteratee;
+  const tmp3 = "window" in require("12581__.js").GLOBAL_OBJ && undefined !== tmp(tmp2[1]).GLOBAL_OBJ.window;
+  if (!fn) {
+    _require = tmp3;
+    fn = (filename) => {
+      if (filename.filename) {
+        const obj = /^[a-zA-Z]:\\/;
+        let isMatch = obj.test(filename.filename);
+        if (!isMatch) {
+          filename = filename.filename;
+          let hasItem = filename.includes("\\");
+          if (hasItem) {
+            const filename2 = filename.filename;
+            hasItem = !filename2.includes("/");
+          }
+          isMatch = hasItem;
+        }
+        if (closure_0) {
+          if (root) {
+            const filename1 = filename.filename;
+            if (0 === filename1.indexOf(root)) {
+              filename.filename = filename1.replace(root, prefix);
             }
           }
-        } else if (1 === tmp4) {
-          c4 = 0;
-        } else if (arg0 === 1) {
-          c6 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          obj = { value, done: true };
-          return obj;
-        } else {
-          let tmp6 = closure_2;
-          closure_3 = value;
-          value = obj5;
-          const normalizer = closure_0(dependencyMap[9]);
-          obj5.input = normalizer.normalize(closure_3);
-          c4 = 0;
+        } else if (isMatch) {
+          let replaced;
+          let relativeResult;
+          if (isMatch) {
+            const str5 = filename.filename.replace(/^[a-zA-Z]:/, "");
+            replaced = str5.replace(/\\/g, "/");
+          } else {
+            replaced = str3;
+          }
+          const obj2 = _mod12672;
+          if (root) {
+            relativeResult = obj2.relative(root, replaced);
+          } else {
+            relativeResult = obj2.basename(replaced);
+          }
+          const _HermesInternal = HermesInternal;
+          filename.filename = "" + prefix + relativeResult;
         }
-        let obj3 = closure_0(dependencyMap[8]);
-        value = (setContext) => {
-          setContext.setContext("trpc", closure_2);
-          const tmp2 = closure_1_0(fn[10]);
-          obj = {
-            name: "trpc/" + closure_0,
-            op: "rpc.server",
-            attributes: {
-              [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route",
-              [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc",
-            },
-          };
-          const startSpanManual = tmp2.startSpanManual;
-          closure_0 = closure_1_2(function* (arg0) {
-            let tmp;
-            let value;
-            function captureIfError(ok) {
-              let tmp = typeof ok === "object";
-              if (typeof ok === "object") {
-                tmp = null !== ok;
-              }
-              if (tmp) {
-                tmp = "ok" in ok;
-              }
-              if (tmp) {
-                tmp = !ok.ok;
-              }
-              if (tmp) {
-                tmp = "error" in ok;
-              }
-              if (tmp) {
-                obj = closure_1_0(closure_1_1[7]);
-                obj.captureException(ok.error, closure_1_3);
-              }
-            }
-            closure_0 = arg0;
-            if (c6 === 2) {
-              c6 = 3;
-              const str = "Generator functions may not be called on executing generators";
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj2 = { value, done: true };
-                return obj2;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c6 = 2;
-                if (0 === c5) {
-                  if (arg0 === 1) {
-                    c6 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c6 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  } else {
-                    closure_2 = tmp;
-                    value = undefined;
-                    c4 = 1;
-                    c5 = 2;
-                    c6 = 1;
-                    const obj5 = { value: value(), done: false };
-                    return obj5;
+        return filename;
+      } else {
+        return filename;
+      }
+    };
+  }
+  let obj2 = {
+    name: "RewriteFrames",
+    processEvent(exception) {
+      function _processExceptionsEvent(exception) {
+        let obj2;
+        let values;
+        try {
+          let obj = { exception: obj2 };
+          let merged = Object.assign(exception);
+          obj2 = {
+            values: values.map((stacktrace) => {
+                let mapped;
+                const obj = {};
+                const merged = Object.assign(stacktrace);
+                stacktrace = stacktrace.stacktrace;
+                if (stacktrace) {
+                  const stacktrace2 = stacktrace.stacktrace;
+                  const obj2 = { frames: mapped };
+                  const merged1 = Object.assign(stacktrace2);
+                  mapped = stacktrace2 && stacktrace2.frames;
+                  if (mapped) {
+                    const frames = stacktrace2.frames;
+                    mapped = frames.map((item) => closure_1_0(item));
                   }
-                } else if (1 === c5) {
-                  c4 = 0;
-                  closure_2 = closure_3;
-                  const obj3 = closure_0(fn[7]);
-                  const captureExceptionResult = obj3.captureException(closure_2, closure_2_3);
-                  closure_0.end();
-                  throw closure_2;
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c4 = 0;
-                  c6 = 3;
-                  const obj6 = { value, done: true };
-                  return obj6;
-                } else {
-                  captureIfError(value);
-                  closure_0.end();
-                  c4 = 0;
-                  c6 = 3;
-                  obj = { value, done: true };
-                  return obj;
+                  stacktrace = { stacktrace: obj2 };
+                  const obj3 = { stacktrace: obj2 };
                 }
-              } catch (tmp24) {
-                closure_3 = tmp24;
-                if (0 === c4) {
-                  c6 = 3;
-                  throw tmp24;
-                } else {
-                  c5 = 1;
-                }
-              }
-            }
-          });
-          return startSpanManual(obj, function (arg0) {
-            return closure_0(...arguments);
-          });
-        };
-        c6 = 3;
-        const obj7 = { value: obj3.withScope(value), done: true };
-        return obj7;
-      } catch (tmp18) {
-        closure_3 = tmp18;
-        if (0 === c4) {
-          c6 = 3;
-          throw tmp18;
-        } else {
-          c5 = 1;
+                const merged2 = Object.assign(stacktrace);
+                return obj;
+              })
+          };
+          let merged1 = Object.assign(exception.exception);
+          values = exception.exception.values;
+          return obj;
+        } catch (err) {
+          return exception;
         }
       }
+      exception = exception.exception;
+      if (exception) {
+        const _Array = Array;
+        exception = Array.isArray(exception.exception.values);
+      }
+      const tmp2 = exception && _processExceptionsEvent(exception);
+      return tmp2;
     }
-  });
-  return function (arg0) {
-    return closure_0(...arguments);
   };
-};
+  return obj2;
+});

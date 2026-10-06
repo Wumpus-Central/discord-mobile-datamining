@@ -1,10 +1,10 @@
 // _runtime/04055_formatRelative.js
 let closure_0 = {
-  lastWeek: "'forrige' eeee 'kl.' p",
-  yesterday: "'i g\u00E5r kl.' p",
-  today: "'i dag kl.' p",
-  tomorrow: "'i morgen kl.' p",
-  nextWeek: "EEEE 'kl.' p",
+  lastWeek: "'afgelopen' eeee 'om' p",
+  yesterday: "'gisteren om' p",
+  today: "'vandaag om' p",
+  tomorrow: "'morgen om' p",
+  nextWeek: "eeee 'om' p",
   other: "P",
 };
 

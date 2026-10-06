@@ -15,7 +15,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
   let joined;
   let tmp6;
   let traceparent;
-  const f81995 = (item) => {
+  const f82128 = (item) => {
     const trimmed = item.trim();
     return trimmed.startsWith(closure_1_0(closure_1_1[8]).SENTRY_BAGGAGE_KEY_PREFIX);
   };
@@ -63,7 +63,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
           const str10 = headers2.get("baggage");
           if (str10) {
             let parts = str10.split(",");
-            if (!parts.some(f81995)) {
+            if (!parts.some(f82128)) {
               const _HermesInternal = HermesInternal;
               const result2 = headers2.set("baggage", "" + str10 + "," + baggage);
             }
@@ -93,7 +93,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
               if (someResult) {
                 const str = item[1];
                 const parts = str.split(",");
-                someResult = parts.some(f81995);
+                someResult = parts.some(f82128);
               }
               return someResult;
             });
@@ -138,11 +138,11 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
             if (Array.isArray(baggage1)) {
               found = baggage1.find((item) => {
                 const parts = item.split(",");
-                return parts.some(f81995);
+                return parts.some(f82128);
               });
             } else {
               const parts1 = baggage1.split(",");
-              found = parts1.some(f81995);
+              found = parts1.some(f82128);
             }
             tmp21 = found;
           }

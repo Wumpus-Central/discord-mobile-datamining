@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 32,
-  height: 32,
-  scales: [2, 3],
-  hash: "4231d943574087a463ee922a711ec0bb",
-  name: "ic_mobile_device",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "98e013109b389eb9fdfad5277cb35b88",
+  name: "ic_moderator",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "b58afbfc4faaabe5f94fadb0443cc8ee",
-  name: "voice_bar_deafen_off",
+  hash: "a9eb64c7670ac900f200e86de988df53",
+  name: "voice_bar_mute_on",
   type: "png",
 });

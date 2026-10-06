@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Bvd2VydXBz",
+  httpServerLocation: "/assets/modules/parent_tools",
   scales: [1],
-  hash: "8438cd9e8c3fbd46870222d8b89f439d",
-  name: "uk.messages.8438cd9e8c3fbd46870222d8b89f439d.compiled.messages",
+  hash: "f4b4922b77620604d580b6c5d139732f",
+  name: "FamilyCenter.compiled.messages",
   type: "jsona",
 });

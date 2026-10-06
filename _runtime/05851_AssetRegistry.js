@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0f660b1a58b1b7d08f5a3d6e321f201a",
-  name: "AnnouncementsLockIcon",
+  hash: "7dca654a69aa65c531edd1e710ff1525",
+  name: "ExperimentalLfgIcon",
   type: "png",
 });

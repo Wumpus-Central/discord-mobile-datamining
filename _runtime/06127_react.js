@@ -1,14 +1,14 @@
 // _runtime/06127_react.js
 import react from "00019_react.js";
-import BottomSheetContext from "06123_BottomSheetContext.js";
+import react2 from "06128_react.js";
 
 const useContext = react.useContext;
 
-export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
-  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+export const useBottomSheetInternal = function useBottomSheetInternal(arg0) {
+  const tmp = useContext(react2.BottomSheetInternalContext);
   if (true !== arg0) {
     if (null === tmp) {
-      throw "'BottomSheetModalInternalContext' cannot be null!";
+      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
     }
   }
   return tmp;

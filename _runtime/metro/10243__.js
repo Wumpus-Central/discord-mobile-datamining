@@ -1,53 +1,68 @@
 // _runtime/metro/10243__.js
-import AbstractTimeExpressionParser from "../10175_AbstractTimeExpressionParser.js";
+import findMostLikelyADYear from "../10175_findMostLikelyADYear.js";
+import NUMBER from "../10244_NUMBER.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import map from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class PTTimeExpressionParser {
+const re3 =
+  /(?:(?:([同今本])|((昭和|平成|令和)?([0-9０-９]{1,4}|元)))年\s*)?([0-9０-９]{1,2})月\s*([0-9０-９]{1,2})日/i;
+class JPStandardParser {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, PTTimeExpressionParser);
-    const obj = _getPrototypeOf(PTTimeExpressionParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
-    } else {
-      constructResult = obj(...arguments);
-    }
-    return map(self, constructResult);
+    _classCallCheck(this, JPStandardParser);
   }
 }
-_inherits(PTTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "primaryPrefix",
-  value: function primaryPrefix() {
-    return "(?:(?:ao?|\u00E0s?|das|da|de|do)\\s*)?";
+  key: "pattern",
+  value: function pattern() {
+    return re3;
   },
 };
 const items = [
   entry,
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|a(?:o)?|\\?)\\s*";
+    key: "extract",
+    value: function extract(createParsingComponents, match) {
+      const parsed = parseInt(NUMBER.toHankaku(match[5]));
+      const parsed1 = parseInt(NUMBER.toHankaku(match[6]));
+      const parsingComponents = createParsingComponents.createParsingComponents({ day: parsed1, month: parsed });
+      match = match[1];
+      if (match) {
+        const str = match[1];
+        match = str.match("\u540C|\u4ECA|\u672C");
+      }
+      if (match) {
+        const reference = createParsingComponents.reference;
+        const assign = parsingComponents.assign;
+        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+        assign("year", dateWithAdjustedTimezone.getFullYear());
+      }
+      if (match[2]) {
+        let sum;
+        let num = 1;
+        if ("\u5143" != match[4]) {
+          const _parseInt = parseInt;
+          num = parseInt(NUMBER.toHankaku(tmp8));
+        }
+        if ("\u4EE4\u548C" == match[3]) {
+          sum = num + 2018;
+        } else if ("\u5E73\u6210" == match[3]) {
+          sum = num + 1988;
+        } else {
+          sum = num;
+          if ("\u662D\u548C" == match[3]) {
+            sum = num + 1925;
+          }
+        }
+        parsingComponents.assign("year", sum);
+      } else {
+        parsingComponents.imply(
+          "year",
+          findMostLikelyADYear.findYearClosestToRef(createParsingComponents.refDate, parsed1, parsed),
+        );
+      }
+      return parsingComponents;
     },
   },
 ];
 
-export default _createClass(PTTimeExpressionParser, items);
+export default _createClass(JPStandardParser, items);

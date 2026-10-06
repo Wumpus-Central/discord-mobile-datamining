@@ -1,72 +1,81 @@
 // _runtime/metro/07334__.js
-import _mod7335 from "07335__.js";
-import _mod7336 from "07336__.js";
-import _mod7337 from "07337__.js";
-import _mod7338 from "07338__.js";
+import _mod7328 from "07328__.js";
+import _mod7329 from "07329__.js";
 
-let hasOwnProperty;
-
-const self = this;
-let tmp = this && self.__createBinding;
-if (!tmp) {
-  let _Object = Object;
-  tmp = Object.create
-    ? (arg0, __esModule, arg2, arg3) => {
-        function get() {
-          return __esModule[closure_1];
-        }
-        closure_0 = __esModule;
-        let closure_1 = arg2;
-        let tmp = arg3;
-        if (undefined === arg3) {
-          tmp = arg2;
-        }
-        let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(__esModule, arg2);
-        let tmp3 = ownPropertyDescriptor;
-        if (tmp3) {
-          let tmp4;
-          if ("get" in ownPropertyDescriptor) {
-            tmp4 = !__esModule.__esModule;
-          } else {
-            tmp4 = ownPropertyDescriptor.writable || ownPropertyDescriptor.configurable;
-          }
-          tmp3 = !tmp4;
-        }
-        if (!tmp3) {
-          ownPropertyDescriptor = { enumerable: true, get };
-          const obj = { enumerable: true, get };
-        }
-        Object.defineProperty(arg0, tmp, ownPropertyDescriptor);
-      }
-    : (arg0, arg1, arg2, arg3) => {
-        let tmp = arg3;
-        if (undefined === arg3) {
-          tmp = arg2;
-        }
-        arg0[tmp] = arg1[arg2];
-      };
-}
-let closure_0 = tmp;
-let tmp3 =
-  (self && self.__exportStar) ||
-  ((obj, arg1) => {
-    for (const key10007 in obj) {
-      let callResult = "default" === key10007;
-      if (!callResult) {
-        let _Object = Object;
-        hasOwnProperty = Object.prototype.hasOwnProperty;
-        callResult = hasOwnProperty.call(arg1, key10007);
-      }
-      if (callResult) {
-        continue;
-      } else {
-        let tmp3 = closure_0(arg1, obj, key10007);
-        continue;
-      }
-      continue;
-    }
-  });
-tmp3(_mod7335, exports);
-tmp3(_mod7336, exports);
-tmp3(_mod7337, exports);
-tmp3(_mod7338, exports);
+export const isAVIF = function isAVIF(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  const tmp4 = FileTypes.checkByFileType(fileChunk, "avif") && _mod7328.isAvifStringIncluded(fileChunk);
+  return tmp4;
+};
+export const isBMP = function isBMP(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "bmp");
+};
+export const isBPG = function isBPG(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "bpg");
+};
+export const isCR2 = function isCR2(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "cr2");
+};
+export const isEXR = function isEXR(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exr");
+};
+export const isGIF = function isGIF(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "gif");
+};
+export const isHEIC = function isHEIC(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  const tmp4 = FileTypes.checkByFileType(fileChunk, "avif") && _mod7328.isHeicSignatureIncluded(fileChunk);
+  return tmp4;
+};
+export const isICO = function isICO(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ico");
+};
+export const isJPEG = function isJPEG(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "jpeg");
+};
+export const isPBM = function isPBM(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pbm");
+};
+export const isPGM = function isPGM(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pgm");
+};
+export const isPNG = function isPNG(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "png");
+};
+export const isPPM = function isPPM(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ppm");
+};
+export const isPSD = function isPSD(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "psd");
+};
+export const isWEBP = function isWEBP(fileChunk) {
+  fileChunk = _mod7328.getFileChunk(fileChunk);
+  const FileTypes = _mod7329.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webp");
+};

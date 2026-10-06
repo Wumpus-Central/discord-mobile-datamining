@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 420,
+  height: 112,
   scales: [2, 3],
-  hash: "6d92319c85fd42e305e389df8a64c64a",
-  name: "badge",
+  hash: "e2e6d0edbd6c916cde4ea4f22a6f794c",
+  name: "subscription_placeholder_pattern_darker",
   type: "png",
 });

@@ -7,6 +7,7 @@ let items1;
 let items2;
 let items3;
 let items4;
+let items5;
 let obj;
 let obj10;
 let obj11;
@@ -41,19 +42,15 @@ const date = {
   dayPeriod: obj.default(obj14),
 };
 obj6 = {
-  matchPatterns: {
-    narrow: /^(f\.? ?Kr\.?|fvt\.?|e\.? ?Kr\.?|evt\.?)/i,
-    abbreviated: /^(f\.? ?Kr\.?|fvt\.?|e\.? ?Kr\.?|evt\.?)/i,
-    wide: /^(før Kristus|før vår tid|etter Kristus|vår tid)/i,
-  },
+  matchPatterns: { narrow: /^([vn]\.? ?C\.?)/, abbreviated: /^([vn]\. ?Chr\.?)/, wide: /^((voor|na) Christus)/ },
   defaultMatchWidth: "wide",
   parsePatterns: obj7,
   defaultParseWidth: "any",
 };
 obj7 = { any: items };
-items = [/^f/i, /^e/i];
+items = [/^v/, /^n/];
 obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? kvartal/i },
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^K[1234]/i, wide: /^[1234]e kwartaal/i },
   defaultMatchWidth: "wide",
   parsePatterns: obj9,
   defaultParseWidth: "any",
@@ -66,8 +63,8 @@ items1 = [/1/i, /2/i, /3/i, /4/i];
 obj10 = {
   matchPatterns: {
     narrow: /^[jfmasond]/i,
-    abbreviated: /^(jan|feb|mars?|apr|mai|juni?|juli?|aug|sep|okt|nov|des)\.?/i,
-    wide: /^(januar|februar|mars|april|mai|juni|juli|august|september|oktober|november|desember)/i,
+    abbreviated: /^(jan.|feb.|mrt.|apr.|mei|jun.|jul.|aug.|sep.|okt.|nov.|dec.)/i,
+    wide: /^(januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj11,
@@ -75,43 +72,54 @@ obj10 = {
 };
 obj11 = { narrow: items2, any: items3 };
 items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-items3 = [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^jun/i, /^jul/i, /^aug/i, /^s/i, /^o/i, /^n/i, /^d/i];
+items3 = [
+  /^jan/i,
+  /^feb/i,
+  /^m(r|a)/i,
+  /^apr/i,
+  /^mei/i,
+  /^jun/i,
+  /^jul/i,
+  /^aug/i,
+  /^sep/i,
+  /^okt/i,
+  /^nov/i,
+  /^dec/i,
+];
 obj12 = {
   matchPatterns: {
-    narrow: /^[smtofl]/i,
-    short: /^(sø|ma|ti|on|to|fr|lø)/i,
-    abbreviated: /^(søn|man|tir|ons|tor|fre|lør)/i,
-    wide: /^(søndag|mandag|tirsdag|onsdag|torsdag|fredag|lørdag)/i,
+    narrow: /^[zmdwv]/i,
+    short: /^(zo|ma|di|wo|do|vr|za)/i,
+    abbreviated: /^(zon|maa|din|woe|don|vri|zat)/i,
+    wide: /^(zondag|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj13,
   defaultParseWidth: "any",
 };
-obj13 = { any: items4 };
-items4 = [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i];
+obj13 = { narrow: items4, any: items5 };
+items4 = [/^z/i, /^m/i, /^d/i, /^w/i, /^d/i, /^v/i, /^z/i];
+items5 = [/^zo/i, /^ma/i, /^di/i, /^wo/i, /^do/i, /^vr/i, /^za/i];
 obj14 = {
-  matchPatterns: {
-    narrow: /^(midnatt|middag|(på) (morgenen|ettermiddagen|kvelden|natten)|[ap])/i,
-    any: /^([ap]\.?\s?m\.?|midnatt|middag|(på) (morgenen|ettermiddagen|kvelden|natten))/i,
-  },
+  matchPatterns: { any: /^(am|pm|middernacht|het middaguur|'s (ochtends|middags|avonds|nachts))/i },
   defaultMatchWidth: "any",
   parsePatterns: obj15,
   defaultParseWidth: "any",
 };
 obj15 = {
   any: {
-    am: /^a(\.?\s?m\.?)?$/i,
-    pm: /^p(\.?\s?m\.?)?$/i,
-    midnight: /^midn/i,
-    noon: /^midd/i,
-    morning: /morgen/i,
-    afternoon: /ettermiddag/i,
-    evening: /kveld/i,
-    night: /natt/i,
+    am: /^am/i,
+    pm: /^pm/i,
+    midnight: /^middernacht/i,
+    noon: /^het middaguur/i,
+    morning: /ochtend/i,
+    afternoon: /middag/i,
+    evening: /avond/i,
+    night: /nacht/i,
   },
 };
 obj5 = {
-  matchPattern: /^(\d+)\.?/i,
+  matchPattern: /^(\d+)e?/i,
   parsePattern: /\d+/i,
   valueCallback(match) {
     return parseInt(match, 10);

@@ -1,10 +1,10 @@
 // _runtime/04037_formatRelative.js
 let closure_0 = {
-  lastWeek: "'\uC9C0\uB09C' eeee p",
-  yesterday: "'\uC5B4\uC81C' p",
-  today: "'\uC624\uB298' p",
-  tomorrow: "'\uB0B4\uC77C' p",
-  nextWeek: "'\uB2E4\uC74C' eeee p",
+  lastWeek: "\u5148\u9031\u306Eeeee\u306Ep",
+  yesterday: "\u6628\u65E5\u306Ep",
+  today: "\u4ECA\u65E5\u306Ep",
+  tomorrow: "\u660E\u65E5\u306Ep",
+  nextWeek: "\u7FCC\u9031\u306Eeeee\u306Ep",
   other: "P",
 };
 

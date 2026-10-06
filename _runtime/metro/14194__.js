@@ -1,59 +1,53 @@
 // _runtime/metro/14194__.js
-import react from "../00019_react.js";
-import module_14176_mod from "14176__.js";
-import module_14195_mod from "14195__.js";
-import Fragment from "../react/00021_Fragment.js";
+let map;
 
-let closure_0;
-
-let tmp4;
-let tmp6;
-if (react) {
-  const __esModule = react.__esModule;
-}
-let module_14176 = module_14176_mod;
-if (!module_14176) {
-  const obj = { default: module_14176 };
-  tmp4 = obj;
-} else {
-  tmp4 = module_14176;
-}
-module_14176 = tmp4;
-let module_14195 = module_14195_mod;
-if (!module_14195) {
-  let obj2 = { default: module_14195 };
-  tmp6 = obj2;
-} else {
-  tmp6 = module_14195;
-}
-module_14195 = tmp6;
-
-export default () => () => {
-  closure_0 = closure_0.default();
+export default function (arg0) {
+  map = arg0;
+  if (!map) {
+    const _Map = Map;
+    const self = this;
+    const self2 = this;
+    map = new Map();
+  }
   return {
-    onCommand(type) {
-      if ("storybook" === type.type) {
-        closure_0.emit("storybook", type.payload);
+    all: map,
+    on(arg0, arg1) {
+      const value = map.get(arg0);
+      if (value) {
+        value.push(arg1);
+      } else {
+        const items = [arg1];
+        const result = map.set(arg0, items);
       }
     },
-    features: {
-      storybookSwitcher(arg0) {
-        closure_0 = arg0;
-        return (arg0) => {
-          closure_0 = arg0;
-          return function StorybookSwitcherContainer(arg0) {
-            const jsx = React.jsx;
-            const jsx2 = React.jsx;
-            const obj2 = {};
-            const merged = Object.assign(arg0);
-            return (
-              <_default storybookUi={emitter} emitter={emitter}>
-                {jsx2(emitter, obj2)}
-              </_default>
-            );
-          };
-        };
-      },
+    off(arg0, arg1) {
+      const value = map.get(arg0);
+      if (value) {
+        const tmp = arg1;
+        if (tmp) {
+          value.splice(value.indexOf(arg1) >>> 0, 1);
+        } else {
+          const result = map.set(arg0, []);
+        }
+      }
+    },
+    emit(arg0, arg1) {
+      let closure_0 = arg0;
+      let closure_1 = arg1;
+      const value = map.get(arg0);
+      if (value) {
+        const substr = value.slice();
+        const mapped = substr.map((fn) => {
+          fn(closure_1);
+        });
+      }
+      const value2 = map.get("*");
+      if (value2) {
+        const substr1 = value2.slice();
+        const mapped1 = substr1.map((fn) => {
+          fn(closure_0, closure_1);
+        });
+      }
     },
   };
-};
+}

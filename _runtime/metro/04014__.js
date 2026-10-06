@@ -14,8 +14,28 @@ if (!buildLocalizeFn) {
   obj = buildLocalizeFn;
 }
 const date = {
-  ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    if (null != unit) {
+      unit = unit.unit;
+    }
+    if (0 === NumberResult) {
+      return "0";
+    } else {
+      let str = "\u00E8me";
+      if (1 === NumberResult) {
+        let str3 = "er";
+        if (unit) {
+          const items = ["year", "week", "hour", "minute", "second"];
+          str3 = "er";
+          if (items.includes(unit)) {
+            str3 = "\u00E8re";
+          }
+        }
+        str = str3;
+      }
+      return NumberResult + str;
+    }
   },
   era: obj.default(obj3),
   quarter: obj.default(obj4),
@@ -24,14 +44,18 @@ const date = {
   dayPeriod: obj.default(obj7),
 };
 obj3 = {
-  values: { narrow: ["pr.n.e.", "AD"], abbreviated: ["pr. Kr.", "po. Kr."], wide: ["Prije Krista", "Poslije Krista"] },
+  values: {
+    narrow: ["av. J.-C", "ap. J.-C"],
+    abbreviated: ["av. J.-C", "ap. J.-C"],
+    wide: ["avant J\u00E9sus-Christ", "apr\u00E8s J\u00E9sus-Christ"],
+  },
   defaultWidth: "wide",
 };
 obj4 = {
   values: {
-    narrow: ["1.", "2.", "3.", "4."],
-    abbreviated: ["1. kv.", "2. kv.", "3. kv.", "4. kv."],
-    wide: ["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"],
+    narrow: ["T1", "T2", "T3", "T4"],
+    abbreviated: ["1er trim.", "2\u00E8me trim.", "3\u00E8me trim.", "4\u00E8me trim."],
+    wide: ["1er trimestre", "2\u00E8me trimestre", "3\u00E8me trimestre", "4\u00E8me trimestre"],
   },
   defaultWidth: "wide",
   argumentCallback(arg0) {
@@ -40,50 +64,44 @@ obj4 = {
 };
 obj5 = {
   values: {
-    narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."],
-    abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"],
+    narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
+    abbreviated: [
+      "janv.",
+      "f\u00E9vr.",
+      "mars",
+      "avr.",
+      "mai",
+      "juin",
+      "juil.",
+      "ao\u00FBt",
+      "sept.",
+      "oct.",
+      "nov.",
+      "d\u00E9c.",
+    ],
     wide: [
-      "sije\u010Danj",
-      "velja\u010Da",
-      "o\u017Eujak",
-      "travanj",
-      "svibanj",
-      "lipanj",
-      "srpanj",
-      "kolovoz",
-      "rujan",
-      "listopad",
-      "studeni",
-      "prosinac",
+      "janvier",
+      "f\u00E9vrier",
+      "mars",
+      "avril",
+      "mai",
+      "juin",
+      "juillet",
+      "ao\u00FBt",
+      "septembre",
+      "octobre",
+      "novembre",
+      "d\u00E9cembre",
     ],
   },
   defaultWidth: "wide",
-  formattingValues: {
-    narrow: ["1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12."],
-    abbreviated: ["sij", "velj", "o\u017Eu", "tra", "svi", "lip", "srp", "kol", "ruj", "lis", "stu", "pro"],
-    wide: [
-      "sije\u010Dnja",
-      "velja\u010De",
-      "o\u017Eujka",
-      "travnja",
-      "svibnja",
-      "lipnja",
-      "srpnja",
-      "kolovoza",
-      "rujna",
-      "listopada",
-      "studenog",
-      "prosinca",
-    ],
-  },
-  defaultFormattingWidth: "wide",
 };
 obj6 = {
   values: {
-    narrow: ["N", "P", "U", "S", "\u010C", "P", "S"],
-    short: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"],
-    abbreviated: ["ned", "pon", "uto", "sri", "\u010Det", "pet", "sub"],
-    wide: ["nedjelja", "ponedjeljak", "utorak", "srijeda", "\u010Detvrtak", "petak", "subota"],
+    narrow: ["D", "L", "M", "M", "J", "V", "S"],
+    short: ["di", "lu", "ma", "me", "je", "ve", "sa"],
+    abbreviated: ["dim.", "lun.", "mar.", "mer.", "jeu.", "ven.", "sam."],
+    wide: ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"],
   },
   defaultWidth: "wide",
 };
@@ -92,68 +110,35 @@ obj7 = {
     narrow: {
       am: "AM",
       pm: "PM",
-      midnight: "pono\u0107",
-      noon: "podne",
-      morning: "ujutro",
-      afternoon: "popodne",
-      evening: "nave\u010Der",
-      night: "no\u0107u",
+      midnight: "minuit",
+      noon: "midi",
+      morning: "mat.",
+      afternoon: "ap.m.",
+      evening: "soir",
+      night: "mat.",
     },
     abbreviated: {
       am: "AM",
       pm: "PM",
-      midnight: "pono\u0107",
-      noon: "podne",
-      morning: "ujutro",
-      afternoon: "popodne",
-      evening: "nave\u010Der",
-      night: "no\u0107u",
+      midnight: "minuit",
+      noon: "midi",
+      morning: "matin",
+      afternoon: "apr\u00E8s-midi",
+      evening: "soir",
+      night: "matin",
     },
     wide: {
       am: "AM",
       pm: "PM",
-      midnight: "pono\u0107",
-      noon: "podne",
-      morning: "ujutro",
-      afternoon: "poslije podne",
-      evening: "nave\u010Der",
-      night: "no\u0107u",
+      midnight: "minuit",
+      noon: "midi",
+      morning: "du matin",
+      afternoon: "de l\u2019apr\u00E8s-midi",
+      evening: "du soir",
+      night: "du matin",
     },
   },
   defaultWidth: "wide",
-  formattingValues: {
-    narrow: {
-      am: "AM",
-      pm: "PM",
-      midnight: "pono\u0107",
-      noon: "podne",
-      morning: "ujutro",
-      afternoon: "popodne",
-      evening: "nave\u010Der",
-      night: "no\u0107u",
-    },
-    abbreviated: {
-      am: "AM",
-      pm: "PM",
-      midnight: "pono\u0107",
-      noon: "podne",
-      morning: "ujutro",
-      afternoon: "popodne",
-      evening: "nave\u010Der",
-      night: "no\u0107u",
-    },
-    wide: {
-      am: "AM",
-      pm: "PM",
-      midnight: "pono\u0107",
-      noon: "podne",
-      morning: "ujutro",
-      afternoon: "poslije podne",
-      evening: "nave\u010Der",
-      night: "no\u0107u",
-    },
-  },
-  defaultFormattingWidth: "wide",
 };
 
 export default date;

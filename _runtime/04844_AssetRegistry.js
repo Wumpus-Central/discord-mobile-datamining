@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8d98f50d9f8bc155689b81a44d8b38ff",
-  name: "CopyIcon",
+  hash: "262032a99df43d5b5fc14dd6e335ec5e",
+  name: "UserMinusIcon",
   type: "png",
 });

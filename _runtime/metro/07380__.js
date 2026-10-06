@@ -1,754 +1,531 @@
 // _runtime/metro/07380__.js
-import _wrapNativeSuperDefault from "00158__wrapNativeSuper.js";
-import _mod7345 from "07345__.js";
-import _modDef7381 from "07381__.js";
-import _mod7382 from "07382__.js";
-import _slicedToArrayDefault from "07383__slicedToArray.js";
-import _slicedToArray from "00032__slicedToArray.js";
-import _createClass from "00042__createClass.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import hasOwnProperty from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
+import _modDef7379 from "07379__.js";
+import _mod7381 from "07381__.js";
 
-let nodeName, set, set2, set3;
-
-const f94762 = (attributes) => {
-  obj = _mod7345;
-  obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
-  const tmp3 = obj;
-  if (typeof attributes.value === "object") {
-    const tmpResult = _mod7345;
-    tmpResult.objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
-  }
-};
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-function readTags(_raw, buffer, arg2) {
-  let doc;
-  let raw;
-  function getDocument(byteLength, arg1) {
-    let str4;
-    const obj = _modDef7381;
-    const value = obj.get(arg1);
-    if (value) {
-      let str2 = byteLength;
-      if (typeof byteLength !== "string") {
-        const obj3 = _mod7345;
-        str2 = obj3.getStringFromDataView(byteLength, 0, byteLength.byteLength);
-      }
-      const obj2 = { doc: parseFromString(value, str4.replace(/(<\?xpacket end=".*"\?>).+$/, "$1")), raw: str2 };
-      str4 = str2.replace(/^.+(<\?xpacket begin)/, "$1");
-      return obj2;
-    } else {
-      const _console = console;
-      console.warn("Warning: DOMParser is not available. It is needed to be able to parse XMP tags.");
-      const _Error = Error;
-      const self = this;
-      const self2 = this;
-      const error = new Error();
-      throw error;
-    }
-  }
-  try {
-    let str = _raw._raw;
-    ({ doc, raw } = getDocument(buffer, arg2));
-    getDocument(buffer, arg2);
-    if (!str) {
-      str = "";
-    }
-    _raw._raw = str + raw;
-    const tmp6 = getRDF(doc);
-    let obj = _mod7345;
-    obj.objectAssign(_raw, parseXMPObject(convertToObject(tmp6, true)));
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
-function parseFromString(parseFromString, tmp7Result, arg2) {
-  let flag = arg2;
-  if (arg2 === undefined) {
-    flag = false;
-  }
-  try {
-    const parseFromStringResult = parseFromString.parseFromString(tmp7Result, "application/xml");
-    const elements = parseFromStringResult.getElementsByTagName("parsererror");
-    if (elements.length > 0) {
-      const self = this;
-      const self2 = this;
-      const tmp4 = new closure_8(elements[0].textContent);
-      throw tmp4;
-    } else {
-      return parseFromStringResult;
-    }
-  } catch (tmp6) {
-    if ("ParseError" === tmp6.name) {
-      const obj2 = _mod7382;
-      if (obj2.isMissingNamespaceError(tmp6)) {
-        if (!flag) {
-          tmp7Result = _mod7382;
-          return parseFromString(parseFromString, tmp7Result.addMissingNamespaces(tmp7Result), true);
-        }
-      }
-    }
-    throw tmp6;
-  }
-}
-function getRDF(doc) {
-  let num = 0;
-  if (0 < doc.childNodes.length) {
-    while ("x:xmpmeta" !== doc.childNodes[num].tagName) {
-      if ("rdf:RDF" === doc.childNodes[num].tagName) {
-        return doc.childNodes[num];
-      } else {
-        num = num + 1;
-      }
-    }
-    return getRDF(doc.childNodes[num]);
-  }
-  const error = new Error();
-  throw error;
-}
-function convertToObject(childNodes, arg1) {
-  let attributes;
-  let length;
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  let items = [];
-  let num = 0;
-  if (0 < childNodes.childNodes.length) {
-    do {
-      let arr = items.push(childNodes.childNodes[num]);
-      num = num + 1;
-      length = childNodes.childNodes.length;
-    } while (num < length);
-  }
-  let tmp2 = 1 === items.length;
-  if (tmp2) {
-    tmp2 = "#text" === items[0].nodeName;
-  }
-  if (tmp2) {
-    let obj2;
-    if (flag) {
-      obj2 = {};
-    } else {
-      obj2 = items[0].nodeValue;
-    }
-    attributes = obj2;
-  } else {
-    attributes = {};
-    const item = items.forEach((nodeName) => {
-      let length;
-      nodeName = nodeName.nodeName && "#text" !== nodeName.nodeName;
-      if (nodeName) {
-        attributes = {};
-        let num3 = 0;
-        if (0 < nodeName.attributes.length) {
-          do {
-            let _decodeURIComponent = decodeURIComponent;
-            let _escape = escape;
-            attributes[nodeName.attributes[num3].nodeName] = decodeURIComponent(
-              escape(nodeName.attributes[num3].value),
-            );
-            num3 = num3 + 1;
-            length = nodeName.attributes.length;
-          } while (num3 < length);
-        }
-        const obj2 = { attributes, value: convertToObject(nodeName) };
-        if (undefined !== attributes[nodeName.nodeName]) {
-          const _Array = Array;
-          if (!Array.isArray(attributes[nodeName.nodeName])) {
-            const items = [attributes[nodeName.nodeName]];
-            attributes[nodeName.nodeName] = items;
-          }
-          const arr2 = attributes[nodeName.nodeName];
-          arr2.push(obj2);
-        } else {
-          attributes[nodeName.nodeName] = obj2;
-        }
-      }
-    });
-  }
-  return attributes;
-}
-function parseXMPObject(str) {
-  const obj = {};
-  if (typeof str === "string") {
-    return str;
-  } else {
-    for (const key10002 in str) {
-      let tmp5 = str[key10002];
-      let _Array = Array;
-      let arr2 = tmp5;
-      if (!Array.isArray(tmp5)) {
-        let items = [tmp5];
-        arr2 = items;
-      }
-      let item = arr2.forEach(f94762);
-      continue;
-    }
-    return obj;
-  }
-}
-function parseNodeAttributesAsTags(attributes) {
-  const obj = {};
-  for (const key10005 in attributes) {
-    try {
-      if (isTagAttribute(key10005)) {
-        let obj2 = {
-          value: attributes[key10005],
-          attributes: {},
-          description: getDescription(attributes[key10005], key10005),
-        };
-        let tmp3 = getLocalName(key10005);
-        obj[tmp3] = obj2;
-      }
-      continue;
-    } catch (err) {
-      continue;
-    }
-  }
-  return obj;
-}
-function isTagAttribute(key10005) {
-  const tmp = "rdf:parseType" !== key10005 && "xmlns" !== key10005.split(":")[0];
-  return tmp;
-}
-function isNamespaceDefinition(key10005) {
-  return "xmlns" === key10005.split(":")[0];
-}
-function getLocalName(key10005) {
-  let str = "RatingPercent";
-  const obj = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-  if (!obj.test(key10005)) {
-    str = key10005.split(":")[1];
-  }
-  return str;
-}
-function getDescription(arr) {
-  function getDescriptionOfArray(arr) {
-    const mapped = arr.map((value) => {
-      let tmp2;
-      if (undefined !== value.value) {
-        tmp2 = closure_1_18(value.value);
-      } else {
-        tmp2 = closure_1_18(value);
-      }
-      return tmp2;
-    });
-    return mapped.join(", ");
-  }
-  function getDescriptionOfObject(arr) {
-    const items = [];
-    for (const key10024 in arr) {
-      let str8 = "CreatorCity";
-      let push = items.push;
-      if ("CiAdrCity" !== key10024) {
-        let str = "CreatorCountry";
-        if ("CiAdrCtry" !== key10024) {
-          let str2 = "CreatorAddress";
-          if ("CiAdrExtadr" !== key10024) {
-            let str3 = "CreatorPostalCode";
-            if ("CiAdrPcode" !== key10024) {
-              let str4 = "CreatorRegion";
-              if ("CiAdrRegion" !== key10024) {
-                let str5 = "CreatorWorkEmail";
-                if ("CiEmailWork" !== key10024) {
-                  let str6 = "CreatorWorkPhone";
-                  if ("CiTelWork" !== key10024) {
-                    let str7 = "CreatorWorkUrl";
-                    if ("CiUrlWork" !== key10024) {
-                      str7 = key10024;
-                    }
-                    str6 = str7;
-                  }
-                  str5 = str6;
-                }
-                str4 = str5;
-              }
-              str3 = str4;
-            }
-            str2 = str3;
-          }
-          str = str2;
-        }
-        str8 = str;
-      }
-      let _HermesInternal = HermesInternal;
-      arr = push("" + str8 + ": " + getDescription(arr[key10024].value));
-      continue;
-    }
-    return items.join("; ");
-  }
-  if (Array.isArray(arr)) {
-    const tmp10 = getDescriptionOfArray(arr);
-    let tmp11 = tmp10;
-    if (arg1) {
-      tmp11 = tmp10;
-      if (typeof _slicedToArrayDefault[arg1] === "function") {
-        const tmp12Result = _slicedToArrayDefault;
-        tmp11 = tmp12Result[tmp](arr, tmp10);
-      }
-    }
-    return tmp11;
-  } else if (typeof arr === "object") {
-    return getDescriptionOfObject(arr);
-  } else {
-    try {
-      if (arg1) {
-        let decodeURIComponentResult;
-        if (typeof _slicedToArrayDefault[arg1] === "function") {
-          const tmp3Result = _slicedToArrayDefault;
-          decodeURIComponentResult = tmp3Result[tmp](arr);
-        }
-        return decodeURIComponentResult;
-      }
-      const _decodeURIComponent = decodeURIComponent;
-      const _escape = escape;
-      decodeURIComponentResult = decodeURIComponent(escape(arr));
-    } catch (err) {
-      return arr;
-    }
-  }
-}
-function parseNodeChildrenAsTags(value) {
-  const obj = {};
-  for (const key10005 in value) {
-    try {
-      if (!isNamespaceDefinition(key10005)) {
-        let tmp3 = getLocalName(key10005);
-        obj[tmp3] = parseNodeAsTag(value[key10005], key10005);
-      }
-      continue;
-    } catch (err) {
-      continue;
-    }
-  }
-  return obj;
-}
-function parseNodeAsTag(attributes, key10005) {
-  let tmp9;
-  if (Array.isArray(attributes)) {
-    tmp9 = parseNodeAsSimpleValue(attributes[attributes.length - 1], key10005);
-  } else {
-    let tmp = "Resource" === attributes.attributes["rdf:parseType"] && typeof attributes.value === "string";
-    if (tmp) {
-      const str2 = attributes.value;
-      tmp = "" === str2.trim();
-    }
-    if (tmp) {
-      tmp9 = { value: "", attributes: {}, description: "" };
-      const obj3 = { value: "", attributes: {}, description: "" };
-    } else {
-      let tmp2 = "Resource" === attributes.attributes["rdf:parseType"] && undefined !== attributes.value["rdf:value"];
-      if (!tmp2) {
-        const tmp3 =
-          undefined !== attributes.value["rdf:Description"] &&
-          undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-        tmp2 = tmp3;
-      }
-      if (tmp2) {
-        tmp9 = parseNodeAsSimpleRdfDescription(attributes, key10005);
-      } else {
-        let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
-        if (!tmp4) {
-          const tmp5 =
-            undefined !== attributes.value["rdf:Description"] &&
-            undefined === attributes.value["rdf:Description"].value["rdf:value"];
-          tmp4 = tmp5;
-        }
-        if (tmp4) {
-          tmp9 = parseNodeAsStructureRdfDescription(attributes, key10005);
-        } else {
-          let _Object = Object;
-          const tmp6 =
-            0 === Object.keys(attributes.value).length &&
-            undefined === attributes.attributes["xml:lang"] &&
-            undefined === attributes.attributes["rdf:resource"];
-          if (tmp6) {
-            const tmp15 = parseNodeAttributesAsTags(attributes.attributes);
-            tmp9 = { value: tmp15, attributes: {}, description: getDescription(tmp15, key10005) };
-            const obj4 = { value: tmp15, attributes: {}, description: getDescription(tmp15, key10005) };
-          } else {
-            let value = attributes.value;
-            let tmp7 = value["rdf:Bag"] || value["rdf:Seq"] || value["rdf:Alt"];
-            if (undefined !== tmp7) {
-              let items1;
-              const value2 = attributes.value;
-              const prop = (value2["rdf:Bag"] || value2["rdf:Seq"] || value2["rdf:Alt"]).value["rdf:li"];
-              const obj = {};
-              for (const key10070 in attributes.attributes) {
-                let tmp11 =
-                  "rdf:parseType" === key10070 || "rdf:resource" === key10070 || "xmlns" === key10070.split(":")[0];
-                if (tmp11) {
-                  continue;
-                } else {
-                  let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-                  let str9 = "RatingPercent";
-                  if (!obj2.test(key10070)) {
-                    str9 = key10070.split(":")[1];
-                  }
-                  obj[str9] = attributes.attributes[key10070];
-                  continue;
-                }
-                continue;
-              }
-              const items = [];
-              if (undefined === prop) {
-                items1 = [];
-              } else {
-                const _Array = Array;
-                items1 = prop;
-                if (!Array.isArray(prop)) {
-                  const items2 = [prop];
-                  items1 = items2;
-                }
-              }
-              const item = items1.forEach((attributes) => {
-                let value;
-                let tmp2 = "Resource" === attributes.attributes["rdf:parseType"];
-                const push = items.push;
-                if (tmp2) {
-                  tmp2 = undefined !== attributes.value["rdf:value"];
-                }
-                if (!tmp2) {
-                  tmp2 =
-                    undefined !== attributes.value["rdf:Description"] &&
-                    undefined !== attributes.value["rdf:Description"].value["rdf:value"];
-                }
-                if (tmp2) {
-                  value = parseNodeAsSimpleRdfDescription(attributes);
-                } else {
-                  let tmp4 = "Resource" === attributes.attributes["rdf:parseType"];
-                  if (!tmp4) {
-                    tmp4 =
-                      undefined !== attributes.value["rdf:Description"] &&
-                      undefined === attributes.value["rdf:Description"].value["rdf:value"];
-                  }
-                  if (tmp4) {
-                    value = parseNodeAsStructureRdfDescription(attributes).value;
-                  } else {
-                    const _Object = Object;
-                    const tmp7 =
-                      0 === Object.keys(attributes.value).length &&
-                      undefined === attributes.attributes["xml:lang"] &&
-                      undefined === attributes.attributes["rdf:resource"];
-                    if (tmp7) {
-                      const tmp10 = parseNodeAttributesAsTags(attributes.attributes);
-                      getDescription(tmp10, undefined);
-                      value = tmp10;
-                    } else {
-                      value = parseNodeAsSimpleValue(attributes);
-                    }
-                  }
-                }
-                push(value);
-              });
-              tmp9 = { value: items, attributes: obj, description: getDescription(items, key10005) };
-              const obj5 = { value: items, attributes: obj, description: getDescription(items, key10005) };
-            } else {
-              tmp9 = parseNodeAsSimpleValue(attributes, key10005);
-            }
-          }
-        }
-      }
-    }
-  }
-  return tmp9;
-}
-function parseNodeAsSimpleRdfDescription(attributes, key10005) {
-  const obj = {};
-  for (const key10009 in attributes.attributes) {
-    let tmp = "rdf:parseType" === key10009 || "rdf:resource" === key10009 || "xmlns" === key10009.split(":")[0];
-    if (tmp) {
-      continue;
-    } else {
-      let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str = "RatingPercent";
-      if (!obj2.test(key10009)) {
-        str = key10009.split(":")[1];
-      }
-      obj[str] = attributes.attributes[key10009];
-      continue;
-    }
-    continue;
-  }
-  let iter = attributes;
-  if (undefined !== attributes.value["rdf:Description"]) {
-    iter = attributes.value["rdf:Description"];
-  }
-  const obj3 = {};
-  const objectAssign = _mod7345.objectAssign;
-  _mod7345;
-  for (const key10035 in iter.attributes) {
-    let tmp3 = "rdf:parseType" === key10035 || "rdf:resource" === key10035 || "xmlns" === key10035.split(":")[0];
-    if (tmp3) {
-      continue;
-    } else {
-      let obj4 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str2 = "RatingPercent";
-      if (!obj4.test(key10035)) {
-        str2 = key10035.split(":")[1];
-      }
-      obj3[str2] = iter.attributes[key10035];
-      continue;
-    }
-    continue;
-  }
-  const obj5 = {};
-  for (const key10052 in iter.value) {
-    let tmp4 = "rdf:value" === key10052 || "xmlns" === key10052.split(":")[0];
-    if (tmp4) {
-      continue;
-    } else {
-      let obj6 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str3 = "RatingPercent";
-      if (!obj6.test(key10052)) {
-        str3 = key10052.split(":")[1];
-      }
-      obj5[str3] = iter.value[key10052].value;
-      continue;
-    }
-    continue;
-  }
-  objectAssign(obj, obj3, obj5);
-  const prop = iter.value["rdf:value"];
-  const obj7 = {
-    value: (prop.attributes && prop.attributes["rdf:resource"]) || iter.value["rdf:value"].value,
-    attributes: obj,
-    description: getDescription(
-      (prop.attributes && prop.attributes["rdf:resource"]) || iter.value["rdf:value"].value,
-      key10005,
-    ),
-  };
-  return obj7;
-}
-function parseNodeAsStructureRdfDescription(value, key10005) {
-  let obj;
-  obj = { value: {}, attributes: {}, description: getDescription(obj.value, key10005) };
-  let iter = value;
-  if (undefined !== value.value["rdf:Description"]) {
-    const obj4 = _mod7345;
-    obj4.objectAssign(obj.value, parseNodeAttributesAsTags(value.value["rdf:Description"].attributes));
-    const obj5 = {};
-    const objectAssign = _mod7345.objectAssign;
-    const attributes = obj.attributes;
-    _mod7345;
-    for (const key10008 in value.attributes) {
-      let tmp = "rdf:parseType" === key10008 || "rdf:resource" === key10008 || "xmlns" === key10008.split(":")[0];
-      if (tmp) {
-        continue;
-      } else {
-        let obj2 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-        let str = "RatingPercent";
-        if (!obj2.test(key10008)) {
-          str = key10008.split(":")[1];
-        }
-        obj5[str] = value.attributes[key10008];
-        continue;
-      }
-      continue;
-    }
-    objectAssign(attributes, obj5);
-    iter = value.value["rdf:Description"];
-  }
-  const obj3 = _mod7345;
-  obj3.objectAssign(obj.value, parseNodeChildrenAsTags(iter.value));
-  return obj;
-}
-function parseNodeAsSimpleValue(attributes, key10005) {
-  let obj3;
-  let tmp2 = attributes.attributes && attributes.attributes["rdf:resource"];
-  if (!tmp2) {
-    const value = attributes.value;
-    let obj = {};
-    let tmp3 = value;
-    if (typeof value !== "string") {
-      tmp3 = obj;
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        tmp3 = obj;
-        while (keys[tmp] !== undefined) {
-          let tmp11 = value[tmp4];
-          let _Array = Array;
-          let arr2 = tmp11;
-          if (!Array.isArray(tmp11)) {
-            let items = [tmp11];
-            arr2 = items;
-          }
-          let item = arr2.forEach(f94762);
-          continue;
-        }
-      }
-    }
-    tmp2 = tmp3;
-  }
-  const obj2 = { value: tmp2, attributes: obj3, description: getDescription(tmp2, key10005) };
-  obj3 = {};
-  for (const key10021 in attributes.attributes) {
-    let tmp6 = "rdf:parseType" === key10021 || "rdf:resource" === key10021 || "xmlns" === key10021.split(":")[0];
-    if (tmp6) {
-      continue;
-    } else {
-      let obj4 = /^MicrosoftPhoto(_\d+_)?:Rating$/i;
-      let str = "RatingPercent";
-      if (!obj4.test(key10021)) {
-        str = key10021.split(":")[1];
-      }
-      obj3[str] = attributes.attributes[key10021];
-      continue;
-    }
-    continue;
-  }
-  return obj2;
-}
 let obj = {
-  read(buffer, arr, arg2) {
-    let length;
-    let length2;
-    let length3;
-    const f94760 = (acc, item) => acc + item.length;
-    const obj = {};
-    if (typeof buffer === "string") {
-      readTags(obj, buffer, arg2);
-      return obj;
+  33434: null,
+  33437: null,
+  34850: null,
+  34852: "SpectralSensitivity",
+  34855: "ISOSpeedRatings",
+  34856: null,
+  34858: "TimeZoneOffset",
+  34859: "SelfTimerMode",
+  34864: null,
+  34865: "StandardOutputSensitivity",
+  34866: "RecommendedExposureIndex",
+  34867: "ISOSpeed",
+  34868: "ISOSpeedLatitudeyyy",
+  34869: "ISOSpeedLatitudezzz",
+  36864: null,
+  36867: "DateTimeOriginal",
+  36868: "DateTimeDigitized",
+  36873: "GooglePlusUploadCode",
+  36880: "OffsetTime",
+  36881: "OffsetTimeOriginal",
+  36882: "OffsetTimeDigitized",
+  37121: null,
+  37122: "CompressedBitsPerPixel",
+  37377: null,
+  37378: null,
+  37379: "BrightnessValue",
+  37380: "ExposureBiasValue",
+  37381: null,
+  37382: null,
+  37383: null,
+  37384: null,
+  37385: null,
+  37386: null,
+  37393: "ImageNumber",
+  37394: null,
+  37395: "ImageHistory",
+  37396: null,
+  37500: null,
+  37510: null,
+  37520: "SubSecTime",
+  37521: "SubSecTimeOriginal",
+  37522: "SubSecTimeDigitized",
+  37724: "ImageSourceData",
+  37888: null,
+  37889: null,
+  37890: null,
+  37891: null,
+  37892: null,
+  37893: null,
+  40960: null,
+  40961: null,
+  40962: "PixelXDimension",
+  40963: "PixelYDimension",
+  40964: "RelatedSoundFile",
+  40965: "Interoperability IFD Pointer",
+  41483: "FlashEnergy",
+  41484: null,
+  41486: "FocalPlaneXResolution",
+  41487: "FocalPlaneYResolution",
+  41488: null,
+  41492: null,
+  41493: "ExposureIndex",
+  41495: null,
+  41728: null,
+  41729: null,
+  41730: null,
+  41985: null,
+  41986: null,
+  41987: null,
+  41988: null,
+  41989: null,
+  41990: null,
+  41991: null,
+  41992: null,
+  41993: null,
+  41994: null,
+  41995: null,
+  41996: null,
+  42016: "ImageUniqueID",
+  42032: "CameraOwnerName",
+  42033: "BodySerialNumber",
+  42034: null,
+  42035: "LensMake",
+  42036: "LensModel",
+  42037: "LensSerialNumber",
+  42080: null,
+  42081: "SourceImageNumberOfCompositeImage",
+  42082: "SourceExposureTimesOfCompositeImage",
+  42240: "Gamma",
+  59932: "Padding",
+  59933: "OffsetSchema",
+  65000: "OwnerName",
+  65001: "SerialNumber",
+  65002: "Lens",
+  65100: "RawFile",
+  65101: "Converter",
+  65102: "WhiteBalance",
+  65105: "Exposure",
+  65106: "Shadows",
+  65107: "Brightness",
+  65108: "Contrast",
+  65109: "Saturation",
+  65110: "Sharpness",
+  65111: "Smoothness",
+  65112: "MoireFilter",
+};
+obj[33434] = { name: "ExposureTime", description: _modDef7379.ExposureTime };
+({ name: "ExposureTime", description: _modDef7379.ExposureTime });
+obj[33437] = { name: "FNumber", description: _modDef7379.FNumber };
+({ name: "FNumber", description: _modDef7379.FNumber });
+obj[34850] = { name: "ExposureProgram", description: _modDef7379.ExposureProgram };
+obj[34856] = {
+  name: "OECF",
+  description() {
+    return "[Raw OECF table data]";
+  },
+};
+obj[34864] = {
+  name: "SensitivityType",
+  description(arg0) {
+    return (
+      {
+        1: "Standard Output Sensitivity",
+        2: "Recommended Exposure Index",
+        3: "ISO Speed",
+        4: "Standard Output Sensitivity and Recommended Exposure Index",
+        5: "Standard Output Sensitivity and ISO Speed",
+        6: "Recommended Exposure Index and ISO Speed",
+        7: "Standard Output Sensitivity, Recommended Exposure Index and ISO Speed",
+      }[arg0] || "Unknown"
+    );
+  },
+};
+obj[36864] = {
+  name: "ExifVersion",
+  description(value) {
+    const obj = _mod7381;
+    return obj.getStringValue(value);
+  },
+};
+({ name: "ExposureProgram", description: _modDef7379.ExposureProgram });
+obj[37121] = { name: "ComponentsConfiguration", description: _modDef7379.ComponentsConfiguration };
+({ name: "ComponentsConfiguration", description: _modDef7379.ComponentsConfiguration });
+obj[37377] = { name: "ShutterSpeedValue", description: _modDef7379.ShutterSpeedValue };
+({ name: "ShutterSpeedValue", description: _modDef7379.ShutterSpeedValue });
+obj[37378] = { name: "ApertureValue", description: _modDef7379.ApertureValue };
+obj[37381] = {
+  name: "MaxApertureValue",
+  description(arg0) {
+    const powResult = Math.pow(Math.sqrt(2), arg0[0] / arg0[1]);
+    return powResult.toFixed(2);
+  },
+};
+obj[37382] = {
+  name: "SubjectDistance",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " m";
+  },
+};
+({ name: "ApertureValue", description: _modDef7379.ApertureValue });
+obj[37383] = { name: "MeteringMode", description: _modDef7379.MeteringMode };
+({ name: "MeteringMode", description: _modDef7379.MeteringMode });
+obj[37384] = { name: "LightSource", description: _modDef7379.LightSource };
+obj[37385] = {
+  name: "Flash",
+  description(arg0) {
+    let str = "Flash did not fire";
+    if (0 !== arg0) {
+      let str22 = "Flash fired";
+      if (1 !== arg0) {
+        let str21 = "Strobe return light not detected";
+        if (5 !== arg0) {
+          let str20 = "Strobe return light detected";
+          if (7 !== arg0) {
+            let str19 = "Flash fired, compulsory flash mode";
+            if (9 !== arg0) {
+              let str18 = "Flash fired, compulsory flash mode, return light not detected";
+              if (13 !== arg0) {
+                let str17 = "Flash fired, compulsory flash mode, return light detected";
+                if (15 !== arg0) {
+                  let str16 = "Flash did not fire, compulsory flash mode";
+                  if (16 !== arg0) {
+                    let str15 = "Flash did not fire, auto mode";
+                    if (24 !== arg0) {
+                      let str14 = "Flash fired, auto mode";
+                      if (25 !== arg0) {
+                        let str13 = "Flash fired, auto mode, return light not detected";
+                        if (29 !== arg0) {
+                          let str12 = "Flash fired, auto mode, return light detected";
+                          if (31 !== arg0) {
+                            let str11 = "No flash function";
+                            if (32 !== arg0) {
+                              let str10 = "Flash fired, red-eye reduction mode";
+                              if (65 !== arg0) {
+                                let str9 = "Flash fired, red-eye reduction mode, return light not detected";
+                                if (69 !== arg0) {
+                                  let str2 = "Flash fired, red-eye reduction mode, return light detected";
+                                  if (71 !== arg0) {
+                                    let str3 = "Flash fired, compulsory flash mode, red-eye reduction mode";
+                                    if (73 !== arg0) {
+                                      let str4 =
+                                        "Flash fired, compulsory flash mode, red-eye reduction mode, return light not detected";
+                                      if (77 !== arg0) {
+                                        let str5 =
+                                          "Flash fired, compulsory flash mode, red-eye reduction mode, return light detected";
+                                        if (79 !== arg0) {
+                                          let str6 = "Flash fired, auto mode, red-eye reduction mode";
+                                          if (89 !== arg0) {
+                                            let str7 =
+                                              "Flash fired, auto mode, return light not detected, red-eye reduction mode";
+                                            if (93 !== arg0) {
+                                              let str8 = "Unknown";
+                                              if (95 === arg0) {
+                                                str8 =
+                                                  "Flash fired, auto mode, return light detected, red-eye reduction mode";
+                                              }
+                                              str7 = str8;
+                                            }
+                                            str6 = str7;
+                                          }
+                                          str5 = str6;
+                                        }
+                                        str4 = str5;
+                                      }
+                                      str3 = str4;
+                                    }
+                                    str2 = str3;
+                                  }
+                                  str9 = str2;
+                                }
+                                str10 = str9;
+                              }
+                              str11 = str10;
+                            }
+                            str12 = str11;
+                          }
+                          str13 = str12;
+                        }
+                        str14 = str13;
+                      }
+                      str15 = str14;
+                    }
+                    str16 = str15;
+                  }
+                  str17 = str16;
+                }
+                str18 = str17;
+              }
+              str19 = str18;
+            }
+            str20 = str19;
+          }
+          str21 = str20;
+        }
+        str22 = str21;
+      }
+      str = str22;
+    }
+    return str;
+  },
+};
+({ name: "LightSource", description: _modDef7379.LightSource });
+obj[37386] = { name: "FocalLength", description: _modDef7379.FocalLength };
+obj[37394] = {
+  name: "SecurityClassification",
+  description(arg0) {
+    return { C: "Confidential", R: "Restricted", S: "Secret", T: "Top Secret", U: "Unclassified" }[arg0] || "Unknown";
+  },
+};
+obj[37396] = {
+  name: "SubjectArea",
+  description(arg0) {
+    let str;
+    if (2 === arg0.length) {
+      const _HermesInternal3 = HermesInternal;
+      str = "Location; X: " + arg0[0] + ", Y: " + arg0[1];
+    } else if (3 === arg0.length) {
+      const _HermesInternal2 = HermesInternal;
+      str = "Circle; X: " + arg0[0] + ", Y: " + arg0[1] + ", diameter: " + arg0[2];
     } else {
-      let items;
-      if (0 === arr.length) {
-        items = [];
-      } else {
-        const substr = arr.slice(0, 1);
-        const _Uint8Array5 = Uint8Array;
-        const self15 = this;
-        const self16 = this;
-        const uint8Array = new Uint8Array(substr.reduce(f94760, 0));
-        let num2 = 0;
-        let num = 0;
-        if (0 < substr.length) {
-          do {
-            arr = substr[num2];
-            buffer = buffer.buffer;
-            let _Uint8Array = Uint8Array;
-            let self = this;
-            let self2 = this;
-            set = uint8Array.set;
-            let uint8Array1 = new Uint8Array(buffer.slice(arr.dataOffset, arr.dataOffset + arr.length));
-            let result = set(uint8Array1, num);
-            num = num + arr.length;
-            num2 = num2 + 1;
-            length = substr.length;
-          } while (num2 < length);
-        }
-        const _DataView = DataView;
-        const self3 = this;
-        const self4 = this;
-        const dataView = new DataView(uint8Array.buffer);
-        const items1 = [dataView];
-        items = items1;
-        if (arr.length > 1) {
-          const push = items1.push;
-          const substr1 = arr.slice(1);
-          const _Uint8Array6 = Uint8Array;
-          const self17 = this;
-          const self18 = this;
-          const uint8Array2 = new Uint8Array(substr1.reduce(f94760, 0));
-          let num4 = 0;
-          let num3 = 0;
-          if (0 < substr1.length) {
-            do {
-              let arr5 = substr1[num4];
-              let buffer1 = buffer.buffer;
-              let _Uint8Array2 = Uint8Array;
-              let self5 = this;
-              let self6 = this;
-              set2 = uint8Array2.set;
-              let uint8Array3 = new Uint8Array(buffer1.slice(arr5.dataOffset, arr5.dataOffset + arr5.length));
-              let set2Result = set2(uint8Array3, num3);
-              num3 = num3 + arr5.length;
-              num4 = num4 + 1;
-              length2 = substr1.length;
-            } while (num4 < length2);
-          }
-          const _DataView2 = DataView;
-          const self7 = this;
-          const self8 = this;
-          const dataView1 = new DataView(uint8Array2.buffer);
-          push(dataView1);
-          items = items1;
-        }
+      str = "Unknown";
+      if (4 === arg0.length) {
+        const _HermesInternal = HermesInternal;
+        str = "Rectangle; X: " + arg0[0] + ", Y: " + arg0[1] + ", width: " + arg0[2] + ", height: " + arg0[3];
       }
-      const tmp13 = _slicedToArray(items, 2);
-      let tmp15Result = readTags(obj, tmp13[0], arg2);
-      if (tmp13[1]) {
-        if (!tmp15Result) {
-          tmp15Result = readTags(obj, tmp14, arg2);
-        }
-        if (!tmp15Result) {
-          delete obj["_raw"];
-          const _Uint8Array3 = Uint8Array;
-          const self9 = this;
-          const self10 = this;
-          const uint8Array4 = new Uint8Array(arr.reduce(f94760, 0));
-          let num7 = 0;
-          let num8 = 0;
-          if (0 < arr.length) {
-            do {
-              let arr7 = arr[num7];
-              let buffer2 = buffer.buffer;
-              let _Uint8Array4 = Uint8Array;
-              let self11 = this;
-              let self12 = this;
-              set3 = uint8Array4.set;
-              let uint8Array5 = new Uint8Array(buffer2.slice(arr7.dataOffset, arr7.dataOffset + arr7.length));
-              let set3Result = set3(uint8Array5, num8);
-              num8 = num8 + arr7.length;
-              num7 = num7 + 1;
-              length3 = arr.length;
-            } while (num7 < length3);
+    }
+    return str;
+  },
+};
+obj[37500] = {
+  name: "MakerNote",
+  description() {
+    return "[Raw maker note data]";
+  },
+};
+({ name: "FocalLength", description: _modDef7379.FocalLength });
+obj[37510] = { name: "UserComment", description: _mod7381.getEncodedString };
+obj[37888] = {
+  name: "AmbientTemperature",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " \u00B0C";
+  },
+};
+obj[37889] = {
+  name: "Humidity",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " %";
+  },
+};
+obj[37890] = {
+  name: "Pressure",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " hPa";
+  },
+};
+obj[37891] = {
+  name: "WaterDepth",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " m";
+  },
+};
+obj[37892] = {
+  name: "Acceleration",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " mGal";
+  },
+};
+obj[37893] = {
+  name: "CameraElevationAngle",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " \u00B0";
+  },
+};
+obj[40960] = {
+  name: "FlashpixVersion",
+  description(arr) {
+    const mapped = arr.map((item) => String.fromCharCode(item));
+    return mapped.join("");
+  },
+};
+({ name: "UserComment", description: _mod7381.getEncodedString });
+obj[40961] = { name: "ColorSpace", description: _modDef7379.ColorSpace };
+obj[41484] = {
+  name: "SpatialFrequencyResponse",
+  description() {
+    return "[Raw SFR table data]";
+  },
+};
+({ name: "ColorSpace", description: _modDef7379.ColorSpace });
+obj[41488] = { name: "FocalPlaneResolutionUnit", description: _modDef7379.FocalPlaneResolutionUnit };
+obj[41492] = {
+  name: "SubjectLocation",
+  description(arg0) {
+    let tmp;
+    let tmp2;
+    [tmp, tmp2] = arg0;
+    return "X: " + tmp + ", Y: " + tmp2;
+  },
+};
+obj[41495] = {
+  name: "SensingMethod",
+  description(arg0) {
+    let str = "Undefined";
+    if (1 !== arg0) {
+      let str2 = "One-chip color area sensor";
+      if (2 !== arg0) {
+        let str3 = "Two-chip color area sensor";
+        if (3 !== arg0) {
+          let str4 = "Three-chip color area sensor";
+          if (4 !== arg0) {
+            let str5 = "Color sequential area sensor";
+            if (5 !== arg0) {
+              let str6 = "Trilinear sensor";
+              if (7 !== arg0) {
+                let str7 = "Unknown";
+                if (8 === arg0) {
+                  str7 = "Color sequential linear sensor";
+                }
+                str6 = str7;
+              }
+              str5 = str6;
+            }
+            str4 = str5;
           }
-          const _DataView3 = DataView;
-          const self13 = this;
-          const self14 = this;
-          const dataView2 = new DataView(uint8Array4.buffer);
-          readTags(obj, dataView2, arg2);
+          str3 = str4;
         }
+        str2 = str3;
       }
-      return obj;
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[41728] = {
+  name: "FileSource",
+  description(arg0) {
+    let str = "Unknown";
+    if (3 === arg0) {
+      str = "DSC";
+    }
+    return str;
+  },
+};
+obj[41729] = {
+  name: "SceneType",
+  description(arg0) {
+    let str = "Unknown";
+    if (1 === arg0) {
+      str = "A directly photographed image";
+    }
+    return str;
+  },
+};
+obj[41730] = {
+  name: "CFAPattern",
+  description() {
+    return "[Raw CFA pattern table data]";
+  },
+};
+({ name: "FocalPlaneResolutionUnit", description: _modDef7379.FocalPlaneResolutionUnit });
+obj[41985] = { name: "CustomRendered", description: _modDef7379.CustomRendered };
+({ name: "CustomRendered", description: _modDef7379.CustomRendered });
+obj[41986] = { name: "ExposureMode", description: _modDef7379.ExposureMode };
+({ name: "ExposureMode", description: _modDef7379.ExposureMode });
+obj[41987] = { name: "WhiteBalance", description: _modDef7379.WhiteBalance };
+obj[41988] = {
+  name: "DigitalZoomRatio",
+  description(arg0) {
+    let str = "Digital zoom was not used";
+    if (0 !== arg0[0]) {
+      str = `${arg0[0] / arg0[1]}`;
+    }
+    return str;
+  },
+};
+({ name: "WhiteBalance", description: _modDef7379.WhiteBalance });
+obj[41989] = { name: "FocalLengthIn35mmFilm", description: _modDef7379.FocalLengthIn35mmFilm };
+({ name: "FocalLengthIn35mmFilm", description: _modDef7379.FocalLengthIn35mmFilm });
+obj[41990] = { name: "SceneCaptureType", description: _modDef7379.SceneCaptureType };
+obj[41991] = {
+  name: "GainControl",
+  description(arg0) {
+    let str = "None";
+    if (0 !== arg0) {
+      let str2 = "Low gain up";
+      if (1 !== arg0) {
+        let str3 = "High gain up";
+        if (2 !== arg0) {
+          let str4 = "Low gain down";
+          if (3 !== arg0) {
+            let str5 = "Unknown";
+            if (4 === arg0) {
+              str5 = "High gain down";
+            }
+            str4 = str5;
+          }
+          str3 = str4;
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+({ name: "SceneCaptureType", description: _modDef7379.SceneCaptureType });
+obj[41992] = { name: "Contrast", description: _modDef7379.Contrast };
+({ name: "Contrast", description: _modDef7379.Contrast });
+obj[41993] = { name: "Saturation", description: _modDef7379.Saturation };
+({ name: "Saturation", description: _modDef7379.Saturation });
+obj[41994] = { name: "Sharpness", description: _modDef7379.Sharpness };
+obj[41995] = {
+  name: "DeviceSettingDescription",
+  description() {
+    return "[Raw device settings table data]";
+  },
+};
+obj[41996] = {
+  name: "SubjectDistanceRange",
+  description(arg0) {
+    let str = "Macro";
+    if (1 !== arg0) {
+      let str2 = "Close view";
+      if (2 !== arg0) {
+        let str3 = "Unknown";
+        if (3 === arg0) {
+          str3 = "Distant view";
+        }
+        str2 = str3;
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[42034] = {
+  name: "LensSpecification",
+  description(arg0) {
+    const result = arg0[0][0] / arg0[0][1];
+    const parsed = parseFloat(result.toFixed(5));
+    const result1 = arg0[1][0] / arg0[1][1];
+    const combined = "" + parsed + "-" + parseFloat(result1.toFixed(5)) + " mm";
+    if (0 === arg0[3][1]) {
+      const _HermesInternal2 = HermesInternal;
+      return "" + combined + " f/?";
+    } else {
+      const result2 = 1 / (arg0[2][1] / arg0[2][1] / (arg0[3][0] / arg0[3][1]));
+      const _parseFloat = parseFloat;
+      const _HermesInternal = HermesInternal;
+      return "" + combined + " f/" + parseFloat(result2.toFixed(5));
     }
   },
 };
-class ParseError {
-  constructor(arg0) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ParseError);
-    const items = [arg0];
-    const obj = _getPrototypeOf(ParseError);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    const tmp3Result = hasOwnProperty(self, constructResult);
-    tmp3Result.name = "ParseError";
-    return tmp3Result;
-  }
-}
-_inherits(ParseError, _wrapNativeSuperDefault(Error));
-let closure_8 = _createClass(ParseError);
+obj[42080] = {
+  name: "CompositeImage",
+  description(arg0) {
+    return (
+      { 1: "Not a Composite Image", 2: "General Composite Image", 3: "Composite Image Captured While Shooting" }[
+        arg0
+      ] || "Unknown"
+    );
+  },
+};
+({ name: "Sharpness", description: _modDef7379.Sharpness });
 
 export default obj;

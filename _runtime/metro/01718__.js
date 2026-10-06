@@ -108,7 +108,7 @@ let fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "emoji",
       lastTimestamp: null,
-      startTimestamp: "row",
+      startTimestamp: "film",
       reduceMotion: tmp4Result.getReduceMotionForAnimation(obj.reduceMotion),
     };
     num = obj.velocity;

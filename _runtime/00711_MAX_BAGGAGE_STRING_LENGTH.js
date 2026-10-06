@@ -3,7 +3,7 @@ import _mod699 from "metro/00699__.js";
 import CONSOLE_LEVELS from "00700_CONSOLE_LEVELS.js";
 import _mod703 from "metro/00703__.js";
 
-const f81720 = (acc, item) => {
+const f81853 = (acc, item) => {
   let closure_0 = acc;
   const parts = item.split(",");
   const mapped = parts.map((arr) => {
@@ -42,7 +42,7 @@ const f81720 = (acc, item) => {
   });
   return acc;
 };
-const f81723 = (acc, item, index) => {
+const f81856 = (acc, item, index) => {
   let tmp;
   let tmp2;
   [tmp, tmp2] = item;
@@ -82,7 +82,7 @@ export const baggageHeaderToDynamicSamplingContext = function baggageHeaderToDyn
       let reduced;
       const _Array2 = Array;
       if (Array.isArray(arr)) {
-        reduced = arr.reduce(f81720, {});
+        reduced = arr.reduce(f81853, {});
       } else {
         const str = ",";
         let parts = arr.split(",");
@@ -161,7 +161,7 @@ export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSampl
     if (0 !== Object.keys(reduced).length) {
       const _Object3 = Object;
       const entries1 = Object.entries(reduced);
-      reduced1 = entries1.reduce(f81723, "");
+      reduced1 = entries1.reduce(f81856, "");
     }
     return reduced1;
   }
@@ -170,7 +170,7 @@ export const objectToBaggageHeader = function objectToBaggageHeader(arg0) {
   if (0 !== Object.keys(arg0).length) {
     const _Object = Object;
     const entries = Object.entries(arg0);
-    return entries.reduce(f81723, "");
+    return entries.reduce(f81856, "");
   }
 };
 export const parseBaggageHeader = function parseBaggageHeader(arr) {
@@ -183,7 +183,7 @@ export const parseBaggageHeader = function parseBaggageHeader(arr) {
     }
     const _Array2 = Array;
     if (Array.isArray(arr)) {
-      reduced = arr.reduce(f81720, {});
+      reduced = arr.reduce(f81853, {});
     } else {
       const parts = arr.split(",");
       const mapped = parts.map((arr) => {

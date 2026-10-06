@@ -1,21 +1,51 @@
 // _runtime/04095_formatDistance.js
 let closure_0 = {
-  lessThanXSeconds: { one: "bir saniyeden az", other: "{{count}} saniyeden az" },
-  xSeconds: { one: "1 saniye", other: "{{count}} saniye" },
-  halfAMinute: "yar\u0131m dakika",
-  lessThanXMinutes: { one: "bir dakikadan az", other: "{{count}} dakikadan az" },
-  xMinutes: { one: "1 dakika", other: "{{count}} dakika" },
-  aboutXHours: { one: "yakla\u015F\u0131k 1 saat", other: "yakla\u015F\u0131k {{count}} saat" },
-  xHours: { one: "1 saat", other: "{{count}} saat" },
-  xDays: { one: "1 g\u00FCn", other: "{{count}} g\u00FCn" },
-  aboutXWeeks: { one: "yakla\u015F\u0131k 1 hafta", other: "yakla\u015F\u0131k {{count}} hafta" },
-  xWeeks: { one: "1 hafta", other: "{{count}} hafta" },
-  aboutXMonths: { one: "yakla\u015F\u0131k 1 ay", other: "yakla\u015F\u0131k {{count}} ay" },
-  xMonths: { one: "1 ay", other: "{{count}} ay" },
-  aboutXYears: { one: "yakla\u015F\u0131k 1 y\u0131l", other: "yakla\u015F\u0131k {{count}} y\u0131l" },
-  xYears: { one: "1 y\u0131l", other: "{{count}} y\u0131l" },
-  overXYears: { one: "1 y\u0131ldan fazla", other: "{{count}} y\u0131ldan fazla" },
-  almostXYears: { one: "neredeyse 1 y\u0131l", other: "neredeyse {{count}} y\u0131l" },
+  lessThanXSeconds: {
+    one: "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32 1 \u0E27\u0E34\u0E19\u0E32\u0E17\u0E35",
+    other: "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32 {{count}} \u0E27\u0E34\u0E19\u0E32\u0E17\u0E35",
+  },
+  xSeconds: { one: "1 \u0E27\u0E34\u0E19\u0E32\u0E17\u0E35", other: "{{count}} \u0E27\u0E34\u0E19\u0E32\u0E17\u0E35" },
+  halfAMinute: "\u0E04\u0E23\u0E36\u0E48\u0E07\u0E19\u0E32\u0E17\u0E35",
+  lessThanXMinutes: {
+    one: "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32 1 \u0E19\u0E32\u0E17\u0E35",
+    other: "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32 {{count}} \u0E19\u0E32\u0E17\u0E35",
+  },
+  xMinutes: { one: "1 \u0E19\u0E32\u0E17\u0E35", other: "{{count}} \u0E19\u0E32\u0E17\u0E35" },
+  aboutXHours: {
+    one: "\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 1 \u0E0A\u0E31\u0E48\u0E27\u0E42\u0E21\u0E07",
+    other: "\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 {{count}} \u0E0A\u0E31\u0E48\u0E27\u0E42\u0E21\u0E07",
+  },
+  xHours: {
+    one: "1 \u0E0A\u0E31\u0E48\u0E27\u0E42\u0E21\u0E07",
+    other: "{{count}} \u0E0A\u0E31\u0E48\u0E27\u0E42\u0E21\u0E07",
+  },
+  xDays: { one: "1 \u0E27\u0E31\u0E19", other: "{{count}} \u0E27\u0E31\u0E19" },
+  aboutXWeeks: {
+    one: "\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 1 \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C",
+    other: "\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 {{count}} \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C",
+  },
+  xWeeks: {
+    one: "1 \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C",
+    other: "{{count}} \u0E2A\u0E31\u0E1B\u0E14\u0E32\u0E2B\u0E4C",
+  },
+  aboutXMonths: {
+    one: "\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 1 \u0E40\u0E14\u0E37\u0E2D\u0E19",
+    other: "\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 {{count}} \u0E40\u0E14\u0E37\u0E2D\u0E19",
+  },
+  xMonths: { one: "1 \u0E40\u0E14\u0E37\u0E2D\u0E19", other: "{{count}} \u0E40\u0E14\u0E37\u0E2D\u0E19" },
+  aboutXYears: {
+    one: "\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 1 \u0E1B\u0E35",
+    other: "\u0E1B\u0E23\u0E30\u0E21\u0E32\u0E13 {{count}} \u0E1B\u0E35",
+  },
+  xYears: { one: "1 \u0E1B\u0E35", other: "{{count}} \u0E1B\u0E35" },
+  overXYears: {
+    one: "\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32 1 \u0E1B\u0E35",
+    other: "\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32 {{count}} \u0E1B\u0E35",
+  },
+  almostXYears: {
+    one: "\u0E40\u0E01\u0E37\u0E2D\u0E1A 1 \u0E1B\u0E35",
+    other: "\u0E40\u0E01\u0E37\u0E2D\u0E1A {{count}} \u0E1B\u0E35",
+  },
 };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
@@ -25,24 +55,31 @@ export default function formatDistance(arg0, arg1, addSuffix) {
     if (1 === arg1) {
       one = tmp.one;
     } else {
+      const _String = String;
       const str = closure_0[arg0].other;
-      one = str.replace("{{count}}", arg1.toString());
+      one = str.replace("{{count}}", String(arg1));
     }
     tmp2 = one;
   }
-  let tmp3 = tmp2;
+  let tmp4 = tmp2;
   if (null != addSuffix) {
-    tmp3 = tmp2;
+    tmp4 = tmp2;
     if (addSuffix.addSuffix) {
       if (addSuffix.comparison) {
-        let text;
+        let text1;
         if (addSuffix.comparison > 0) {
-          text = `${tmp2} sonra`;
+          let text;
+          if ("halfAMinute" === arg0) {
+            text = `ใน${tmp2}`;
+          } else {
+            text = `ใน ${tmp2}`;
+          }
+          text1 = text;
         }
-        tmp3 = text;
+        tmp4 = text1;
       }
-      text = `${tmp2} önce`;
+      text1 = `${tmp2}ที่ผ่านมา`;
     }
   }
-  return tmp3;
+  return tmp4;
 }

@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 48,
-  height: 48,
-  scales: [2, 3],
-  hash: "4b534b4720ff304cea2a2b72b308859f",
-  name: "feedback-modal-happy-desaturated_darker",
+  httpServerLocation: "/assets/images/native/stream_feedback",
+  width: 72,
+  height: 72,
+  scales: [1, 2, 3],
+  hash: "4c77a93db477bc03f2ffe1ca6854a9fa",
+  name: "feedback-modal-sad",
   type: "png",
 });

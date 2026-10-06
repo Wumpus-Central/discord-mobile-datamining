@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 141,
-  height: 128,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "2d906861c73988d1392c3f207cda799f",
-  name: "empty_quick_switcher",
+  hash: "242a17e76bd7bf11bfa37a179ab55a99",
+  name: "ArrowsUpDownIcon",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "e827a9aa91787067eeb0248dd9424f71",
-  name: "img_domain_light",
+  hash: "c7326c633c855d160a4c15850754cc11",
+  name: "img_account_sync_mastodon_light_and_dark",
   type: "png",
 });

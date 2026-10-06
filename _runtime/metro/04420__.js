@@ -15,21 +15,21 @@ if (!buildLocalizeFn) {
 }
 const date = {
   ordinalNumber(arg0, unit) {
-    const NumberResult = Number(arg0);
+    const str = Number(arg0);
     unit = undefined;
     if (null != unit) {
       unit = unit.unit;
     }
     if ("date" === unit) {
-      return NumberResult + "\u65E5";
+      return str.toString() + "\u65E5";
     } else if ("hour" === unit) {
-      return NumberResult + "\u6642";
+      return str.toString() + "\u65F6";
     } else if ("minute" === unit) {
-      return NumberResult + "\u5206";
+      return str.toString() + "\u5206";
     } else if ("second" === unit) {
-      return NumberResult + "\u79D2";
+      return str.toString() + "\u79D2";
     } else {
-      return "\u7B2C " + NumberResult;
+      return "\u7B2C " + str.toString();
     }
   },
   era: obj.default(obj3),
@@ -49,12 +49,12 @@ obj3 = {
 obj4 = {
   values: {
     narrow: ["1", "2", "3", "4"],
-    abbreviated: ["\u7B2C\u4E00\u523B", "\u7B2C\u4E8C\u523B", "\u7B2C\u4E09\u523B", "\u7B2C\u56DB\u523B"],
+    abbreviated: ["\u7B2C\u4E00\u5B63", "\u7B2C\u4E8C\u5B63", "\u7B2C\u4E09\u5B63", "\u7B2C\u56DB\u5B63"],
     wide: [
-      "\u7B2C\u4E00\u523B\u9418",
-      "\u7B2C\u4E8C\u523B\u9418",
-      "\u7B2C\u4E09\u523B\u9418",
-      "\u7B2C\u56DB\u523B\u9418",
+      "\u7B2C\u4E00\u5B63\u5EA6",
+      "\u7B2C\u4E8C\u5B63\u5EA6",
+      "\u7B2C\u4E09\u5B63\u5EA6",
+      "\u7B2C\u56DB\u5B63\u5EA6",
     ],
   },
   defaultWidth: "wide",
@@ -114,13 +114,13 @@ obj6 = {
     narrow: ["\u65E5", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D"],
     short: ["\u65E5", "\u4E00", "\u4E8C", "\u4E09", "\u56DB", "\u4E94", "\u516D"],
     abbreviated: [
-      "\u9031\u65E5",
-      "\u9031\u4E00",
-      "\u9031\u4E8C",
-      "\u9031\u4E09",
-      "\u9031\u56DB",
-      "\u9031\u4E94",
-      "\u9031\u516D",
+      "\u5468\u65E5",
+      "\u5468\u4E00",
+      "\u5468\u4E8C",
+      "\u5468\u4E09",
+      "\u5468\u56DB",
+      "\u5468\u4E94",
+      "\u5468\u516D",
     ],
     wide: [
       "\u661F\u671F\u65E5",
@@ -154,7 +154,7 @@ obj7 = {
       morning: "\u65E9\u6668",
       afternoon: "\u4E2D\u5348",
       evening: "\u665A\u4E0A",
-      night: "\u591C\u9593",
+      night: "\u591C\u95F4",
     },
     wide: {
       am: "\u4E0A\u5348",
@@ -164,7 +164,7 @@ obj7 = {
       morning: "\u65E9\u6668",
       afternoon: "\u4E2D\u5348",
       evening: "\u665A\u4E0A",
-      night: "\u591C\u9593",
+      night: "\u591C\u95F4",
     },
   },
   defaultWidth: "wide",
@@ -187,7 +187,7 @@ obj7 = {
       morning: "\u65E9\u6668",
       afternoon: "\u4E2D\u5348",
       evening: "\u665A\u4E0A",
-      night: "\u591C\u9593",
+      night: "\u591C\u95F4",
     },
     wide: {
       am: "\u4E0A\u5348",
@@ -197,7 +197,7 @@ obj7 = {
       morning: "\u65E9\u6668",
       afternoon: "\u4E2D\u5348",
       evening: "\u665A\u4E0A",
-      night: "\u591C\u9593",
+      night: "\u591C\u95F4",
     },
   },
   defaultFormattingWidth: "wide",

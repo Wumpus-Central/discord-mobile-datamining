@@ -1,17 +1,7 @@
 // _runtime/metro/14088__.js
-import _mod14079 from "14079__.js";
-import _mod14087 from "14087__.js";
-import _mod14089 from "14089__.js";
-import _mod14090 from "14090__.js";
+import _mod14086 from "14086__.js";
 
-export default _mod14079
-  ? (arg0) => typeof arg0 === "symbol"
-  : (arg0) => {
-      const tmp3 = _mod14089("Symbol");
-      let tmpResultResult = _mod14087(tmp3);
-      if (tmpResultResult) {
-        const tmpResult = _mod14090;
-        tmpResultResult = tmpResult(tmp3.prototype, Object(arg0));
-      }
-      return tmpResultResult;
-    };
+let closure_0 = _mod14086({}.toString);
+let closure_1 = _mod14086("".slice);
+
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

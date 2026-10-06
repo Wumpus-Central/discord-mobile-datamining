@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
-  scales: [2, 3],
-  hash: "37f98f48a96949a6d31455f4e1803024",
-  name: "CircleInformationIcon-primary",
+  scales: [1, 2, 3],
+  hash: "d7e806908635ad007fa68ad7fb2ccc9f",
+  name: "ic_warning_24px",
   type: "png",
 });

@@ -10,7 +10,7 @@ if (!buildFormatLongFn) {
 }
 ({
   date: obj.default({
-    formats: { full: "EEEE, d 'de' MMMM 'de' y", long: "d 'de' MMMM 'de' y", medium: "d MMM y", short: "dd/MM/yyyy" },
+    formats: { full: "EEEE, do MMMM y", long: "do MMMM y", medium: "do MMM y", short: "dd.MM.y" },
     defaultWidth: "full",
   }),
   time: obj.default({
@@ -19,8 +19,8 @@ if (!buildFormatLongFn) {
   }),
   dateTime: obj.default({
     formats: {
-      full: "{{date}} '\u00E0s' {{time}}",
-      long: "{{date}} '\u00E0s' {{time}}",
+      full: "{{date}} {{time}}",
+      long: "{{date}} {{time}}",
       medium: "{{date}}, {{time}}",
       short: "{{date}}, {{time}}",
     },
@@ -30,7 +30,7 @@ if (!buildFormatLongFn) {
 
 export default {
   date: obj.default({
-    formats: { full: "EEEE, d 'de' MMMM 'de' y", long: "d 'de' MMMM 'de' y", medium: "d MMM y", short: "dd/MM/yyyy" },
+    formats: { full: "EEEE, do MMMM y", long: "do MMMM y", medium: "do MMM y", short: "dd.MM.y" },
     defaultWidth: "full",
   }),
   time: obj.default({
@@ -39,8 +39,8 @@ export default {
   }),
   dateTime: obj.default({
     formats: {
-      full: "{{date}} '\u00E0s' {{time}}",
-      long: "{{date}} '\u00E0s' {{time}}",
+      full: "{{date}} {{time}}",
+      long: "{{date}} {{time}}",
       medium: "{{date}}, {{time}}",
       short: "{{date}}, {{time}}",
     },

@@ -1,5 +1,5 @@
 // _runtime/metro/10321__.js
-import _mod10179 from "10179__.js";
+import _mod10192 from "10192__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import map from "00093__possibleConstructorReturn.js";
@@ -35,12 +35,12 @@ if (!fn) {
     return tmp2;
   };
 }
-class UKMergeDateRangeRefiner {
+class ESMergeDateRangeRefiner {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, UKMergeDateRangeRefiner);
-    const obj = _getPrototypeOf(UKMergeDateRangeRefiner);
+    _classCallCheck(this, ESMergeDateRangeRefiner);
+    const obj = _getPrototypeOf(ESMergeDateRangeRefiner);
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
       constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
@@ -50,13 +50,13 @@ class UKMergeDateRangeRefiner {
     return map(self, constructResult);
   }
 }
-_inherits(UKMergeDateRangeRefiner, fn(_mod10179).default);
+_inherits(ESMergeDateRangeRefiner, fn(_mod10192).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*(і до|і по|до|по|-)\s*$/i;
+    return /^\s*(?:-)\s*$/i;
   },
 };
 const items = [entry];
 
-export default _createClass(UKMergeDateRangeRefiner, items);
+export default _createClass(ESMergeDateRangeRefiner, items);

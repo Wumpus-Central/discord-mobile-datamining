@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "0ddefd9d8828364a18e4207ffcdf1e76",
-  name: "ic_close_circle",
+  hash: "47e53f4c1a010a8a023be6a3f87eb4e2",
+  name: "channel_setup",
   type: "png",
 });

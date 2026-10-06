@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "79308515b9134f67f900ad544808aa3a",
-  name: "img_domain_dark",
+  hash: "16b0b46c160f5dbee25bcf55b1de2e19",
+  name: "img_account_sync_mastodon_white",
   type: "svg",
 });

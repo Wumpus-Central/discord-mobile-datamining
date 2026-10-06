@@ -44,7 +44,7 @@ if (!date) {
 }
 
 export default {
-  code: "ru",
+  code: "ro",
   formatDistance: tmp3.default,
   formatLong: tmp5.default,
   formatRelative: tmp7.default,

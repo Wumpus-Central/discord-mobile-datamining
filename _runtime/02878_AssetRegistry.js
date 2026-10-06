@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25zX2luYm94",
+  httpServerLocation: "/assets/modules/notifications",
   scales: [1],
-  hash: "c7f2795d1917279dfa24dac2e9fedc0b",
-  name: "uk.messages.c7f2795d1917279dfa24dac2e9fedc0b.compiled.messages",
+  hash: "0048348a6c7e0009789fbf925b49e62d",
+  name: "NotificationSettings.compiled.messages",
   type: "jsona",
 });

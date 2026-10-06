@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/logos",
-  width: 51,
-  height: 13,
+  httpServerLocation: "/assets/modules/premium/native/images",
+  width: 375,
+  height: 199.5,
   scales: [2, 3],
-  hash: "ee96056252cac57fcc904e8f5b1f0e16",
-  name: "img_logo_basic_small_light",
+  hash: "84a21c838928df371966fa4ffd9053d1",
+  name: "nitro_home_banner",
   type: "png",
 });

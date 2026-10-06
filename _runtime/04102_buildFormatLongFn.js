@@ -10,22 +10,17 @@ if (!buildFormatLongFn) {
 }
 ({
   date: obj.default({
-    formats: {
-      full: "EEEE, do MMMM y '\u0440.'",
-      long: "do MMMM y '\u0440.'",
-      medium: "d MMM y '\u0440.'",
-      short: "dd.MM.y",
-    },
+    formats: { full: "d MMMM y EEEE", long: "d MMMM y", medium: "d MMM y", short: "dd.MM.yyyy" },
     defaultWidth: "full",
   }),
   time: obj.default({
-    formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" },
+    formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" },
     defaultWidth: "full",
   }),
   dateTime: obj.default({
     formats: {
-      full: "{{date}} '\u043E' {{time}}",
-      long: "{{date}} '\u043E' {{time}}",
+      full: "{{date}} 'saat' {{time}}",
+      long: "{{date}} 'saat' {{time}}",
       medium: "{{date}}, {{time}}",
       short: "{{date}}, {{time}}",
     },
@@ -35,22 +30,17 @@ if (!buildFormatLongFn) {
 
 export default {
   date: obj.default({
-    formats: {
-      full: "EEEE, do MMMM y '\u0440.'",
-      long: "do MMMM y '\u0440.'",
-      medium: "d MMM y '\u0440.'",
-      short: "dd.MM.y",
-    },
+    formats: { full: "d MMMM y EEEE", long: "d MMMM y", medium: "d MMM y", short: "dd.MM.yyyy" },
     defaultWidth: "full",
   }),
   time: obj.default({
-    formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" },
+    formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" },
     defaultWidth: "full",
   }),
   dateTime: obj.default({
     formats: {
-      full: "{{date}} '\u043E' {{time}}",
-      long: "{{date}} '\u043E' {{time}}",
+      full: "{{date}} 'saat' {{time}}",
+      long: "{{date}} 'saat' {{time}}",
       medium: "{{date}}, {{time}}",
       short: "{{date}}, {{time}}",
     },

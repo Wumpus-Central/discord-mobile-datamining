@@ -1,47 +1,33 @@
 // _runtime/metro/06231__.js
-import ComposedGestureName from "../06199_ComposedGestureName.js";
-import maybeExtractNativeEvent from "../06208_maybeExtractNativeEvent.js";
-import _mod6223 from "06223__.js";
+import Reanimated2 from "../06190_Reanimated.js";
+import maybeExtractNativeEvent from "../06215_maybeExtractNativeEvent.js";
+import react from "../06232_react.js";
+import _mod6234 from "06234__.js";
 
-function transformRotationProps(arg0) {
+export const useGestureCallbacks = function useGestureCallbacks(handlerTag, disableReanimated) {
   const obj = maybeExtractNativeEvent;
-  arg0.changeEventCalculator = obj.getChangeEventCalculator(diffCalculator);
-  arg0.fillInDefaultValues = fillInDefaultValues;
-  return arg0;
-}
-function diffCalculator(rotation, rotation2) {
-  let rotationChange;
-  rotation = rotation.rotation;
-  if (rotation2) {
-    rotationChange = rotation - rotation2.rotation;
-  } else {
-    rotationChange = rotation;
+  const memoizedGestureCallbacks = obj.useMemoizedGestureCallbacks(disableReanimated);
+  let reanimatedEventHandler;
+  const obj2 = react;
+  const jsEventHandler = obj2.useGestureEventHandler(handlerTag, memoizedGestureCallbacks, disableReanimated);
+  if (!disableReanimated.disableReanimated) {
+    const Reanimated = Reanimated2.Reanimated;
+    let handler;
+    if (Reanimated != null) {
+      handler = Reanimated.useHandler(memoizedGestureCallbacks);
+    }
+    const tmpResult = _mod6234;
+    reanimatedEventHandler = tmpResult.useReanimatedEventHandler(
+      handlerTag,
+      memoizedGestureCallbacks,
+      handler,
+      disableReanimated.changeEventCalculator,
+      disableReanimated.fillInDefaultValues,
+    );
   }
-  return { rotationChange };
-}
-diffCalculator.__closure = {};
-diffCalculator.__workletHash = 14071129947311;
-diffCalculator.__initData = {
-  code: "function diffCalculator_Pnpm_useRotationGestureTs1(current,previous){return{rotationChange:previous?current.rotation-previous.rotation:current.rotation};}",
-};
-function fillInDefaultValues(arg0) {
-  arg0.rotationChange = 0;
-}
-fillInDefaultValues.__closure = {};
-fillInDefaultValues.__workletHash = 2470118803733;
-fillInDefaultValues.__initData = {
-  code: "function fillInDefaultValues_Pnpm_useRotationGestureTs2(event){event.rotationChange=0;}",
-};
-const map = new Map();
-let closure_6 = {};
-
-export const useRotationGesture = function useRotationGesture() {
-  let tmp = cResult;
-  if (cResult === undefined) {
-    tmp = closure_6;
+  let animatedEventHandler;
+  if (disableReanimated.dispatchesAnimatedEvents) {
+    animatedEventHandler = disableReanimated.onUpdate;
   }
-  const obj = maybeExtractNativeEvent;
-  const clonedAndRemappedConfig = obj.useClonedAndRemappedConfig(tmp, map, transformRotationProps);
-  const obj2 = _mod6223;
-  return obj2.useGesture(ComposedGestureName.SingleGestureName.Rotation, clonedAndRemappedConfig);
+  return { jsEventHandler, reanimatedEventHandler, animatedEventHandler };
 };

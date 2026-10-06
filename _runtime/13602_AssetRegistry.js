@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "cc65a5f47aada2d48ca57f930a5ac833",
-  name: "camera",
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 23,
+  height: 45,
+  scales: [1],
+  hash: "997fd56d3361833ef80c750f0e0e48a8",
+  name: "star_purple",
   type: "png",
 });

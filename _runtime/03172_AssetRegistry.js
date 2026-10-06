@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/application_account_linking",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hcHBsaWNhdGlvbl9hY2NvdW50X2xpbmtpbmc=",
   scales: [1],
-  hash: "c975d7a27be2c5308a20f427cd08b635",
-  name: "ApplicationAccountLinking.compiled.messages",
+  hash: "0751b35513d5b5e27c24453a1a147837",
+  name: "da.messages.0751b35513d5b5e27c24453a1a147837.compiled.messages",
   type: "jsona",
 });

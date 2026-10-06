@@ -30,7 +30,7 @@ let fn = function n(toValue, userConfig, callback) {
       duration: 2000,
       dampingRatio: 0.5,
       reduceMotion: "constructor",
-      clamp: "Map",
+      clamp: "keys",
       useDuration: !tmp4,
       skipAnimation: !obj2.checkIfConfigIsValid(obj),
     };

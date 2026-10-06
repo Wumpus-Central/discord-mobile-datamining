@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "88d061a76594f03187e4bf612ecd1256",
-  name: "RecordPlayerIcon",
+  hash: "83020ea8b4c0b0d88670e8fd546ddc69",
+  name: "CompassIcon",
   type: "png",
 });

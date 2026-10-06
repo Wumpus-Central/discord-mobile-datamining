@@ -1,43 +1,29 @@
 // _runtime/metro/14081__.js
-import _mod14061 from "14061__.js";
 import _mod14082 from "14082__.js";
+import _mod14084 from "14084__.js";
+import _mod14091 from "14091__.js";
+import _mod14102 from "14102__.js";
+import _mod14112 from "14112__.js";
+import _mod14114 from "14114__.js";
+import _mod14116 from "14116__.js";
+import propertyIsEnumerable from "../14117_propertyIsEnumerable.js";
 
-let tmp4;
-let tmp = _mod14061.process && _mod14061.process.versions;
-if (!tmp) {
-  tmp = _mod14061.Deno && _mod14061.Deno.version;
-  _mod14061.Deno && _mod14061.Deno.version;
-}
-let tmp3;
-if (tmp && tmp.v8) {
-  let num3;
-  const parts = str.split(".");
-  if (parts[0] <= 0) {
-    num3 = +parts[0] + parts[1];
-  } else {
-    num3 = 1;
-  }
-  tmp3 = num3;
-  tmp4 = parts;
-}
-let match1 = !tmp3 && _mod14082;
-if (match1) {
-  const str3 = _mod14082;
-  const match = str3.match(/Edge\/(\d+)/);
-  let tmp8 = !match;
-  if (match) {
-    tmp8 = match[1] >= 74;
-  }
-  match1 = tmp8;
-  tmp4 = match;
-}
-if (match1) {
-  const str4 = _mod14082;
-  match1 = str4.match(/Chrome\/(\d+)/);
-  tmp4 = match1;
-}
-if (match1) {
-  tmp3 = +tmp4[1];
+if (!_mod14082) {
+  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
+    const tmp3 = _mod14084(arg0);
+    const tmp4 = _mod14091(arg1);
+    if (!_mod14114) {
+      if (_mod14102(tmp3, tmp4)) {
+        const tmpResult = _mod14116;
+        const tmpResult2 = _mod14112;
+        return tmpResult(!tmpResult2(propertyIsEnumerable.f, tmp3, tmp4), tmp3[tmp4]);
+      }
+    } else {
+      try {
+        return getOwnPropertyDescriptor(tmp3, tmp4);
+      } catch (err) {}
+    }
+  };
 }
 
-export default tmp3;
+export const f = getOwnPropertyDescriptor;

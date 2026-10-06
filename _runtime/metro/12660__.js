@@ -1,85 +1,116 @@
 // _runtime/metro/12660__.js
-import _mod12568 from "12568__.js";
-import 12621__ from "12621__.js";
+import DEFAULT_USER_INCLUDES from "../12661_DEFAULT_USER_INCLUDES.js";
+import _slicedToArray from "00032__slicedToArray.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import 12636__ from "12636__.js";
 
-let filterKeys;
+let closure_4 = ["ip", "user"];
+let obj = { include: { cookies: true, data: true, headers: true, ip: false, query_string: true, url: true, user: { id: true, username: true, email: true } }, transactionNamingScheme: "methodPath" };
 
-let c2 = "_sentryBundlerPluginAppKey:";
-
-export const thirdPartyErrorFilterIntegration = module_12621.defineIntegration((arg0) => {
-  const behaviour = arg0;
-  let obj = {
-    name: "ThirdPartyErrorsFilter",
-    setup(on) {
-      const options = on;
-      on.on("beforeEnvelope", (arg0) => {
-        let obj = options(closure_1_1[1]);
-        obj.forEachEnvelopeItem(arg0, (arg0, arg1) => {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp3;
-            if (Array.isArray(arg0)) {
-              tmp3 = arg0[1];
-            }
-            if (tmp3) {
-              const obj = options(closure_1_1[2]);
-              const result = obj.stripMetadataFromStackFrames(tmp3);
-              arg0[1] = tmp3;
-            }
-          }
-        });
-      });
-      on.on("applyFrameMetadata", (type) => {
-        if (!type.type) {
-          const stackParser = options.getOptions().stackParser;
-          const obj = options(dependencyMap[2]);
-          const result = obj.addMetadataToStackFrames(stackParser, type);
-        }
-      });
-    },
-    processEvent(tags) {
-      const obj = _mod12568;
-      const framesFromEvent = obj.getFramesFromEvent(tags);
-      let mapped;
-      if (framesFromEvent) {
-        let found = framesFromEvent.filter((filename) => filename.filename);
-        mapped = found.map((module_metadata) => {
-          let length;
-          let mapped;
-          if (module_metadata.module_metadata) {
-            const _Object = Object;
-            const keys = Object.keys(module_metadata.module_metadata);
-            const found = keys.filter((item) => item.startsWith(length));
-            mapped = found.map((arr) => arr.slice(length.length));
-          } else {
-            mapped = [];
-          }
-          return mapped;
-        });
-      }
-      if (mapped) {
-        let str2;
-        if ("drop-error-if-contains-third-party-frames" === behaviour.behaviour) {
-          str2 = "some";
-        } else {
-          str2 = "every";
-        }
-        if (mapped[str2]((arr) => !arr.some((item) => {
-          filterKeys = filterKeys.filterKeys;
-          return filterKeys.includes(item);
-        }))) {
-          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
-            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
-              const obj2 = { third_party_code: true };
-              const merged = Object.assign(tags.tags);
-              tags.tags = obj2;
-            }
-          }
-          return null;
-        }
-      }
-      return tags;
+export const requestDataIntegration = module_12636.defineIntegration(() => {
+  obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let obj2 = {};
+  let tmp = obj;
+  const merged = Object.assign(obj);
+  const merged1 = Object.assign(obj);
+  let obj3 = {};
+  const merged2 = Object.assign(obj.include);
+  const merged3 = Object.assign(obj.include);
+  if (obj.include) {
+    let user;
+    if (typeof obj.include.user === "boolean") {
+      user = obj.include.user;
     }
-  };
-  return obj;
+    obj3.user = user;
+    obj2.include = obj3;
+    return {
+      name: "RequestData",
+      processEvent(sdkProcessingMetadata) {
+          let normalizedRequest;
+          let request;
+          function convertReqDataIntegrationOptsToAddReqDataOpts(include) {
+            let tmp15;
+            include = include.include;
+            const user = include.user;
+            const transactionNamingScheme = include.transactionNamingScheme;
+            const ip = include.ip;
+            const items = ["method"];
+            const entries = Object.entries(closure_1_3(include, closure_1_4));
+            const tmp2 = entries[Symbol.iterator]();
+            while (tmp2 !== undefined) {
+              let tmp5 = closure_1_2(tmp3, 2);
+              let first = tmp5[0];
+              if (tmp5[1]) {
+                let arr = items.push(first);
+              }
+              continue;
+            }
+            let flag = true;
+            if (undefined !== user) {
+              flag = user;
+              if (typeof user !== "boolean") {
+                const items1 = [];
+                const _Object = Object;
+                const entries1 = Object.entries(user);
+                flag = items1;
+                for (const item10032 of entries1) {
+                  let tmp11 = closure_1_2(item10032, 2);
+                  let first1 = tmp11[0];
+                  if (tmp11[1]) {
+                    let arr2 = items1.push(first1);
+                  }
+                  continue;
+                }
+              }
+            }
+            const include2 = { ip, user: flag, request: tmp15, transaction: transactionNamingScheme };
+            tmp15 = undefined;
+            if (0 !== items.length) {
+              tmp15 = items;
+            }
+            return { include: include2 };
+          }
+          let prop = sdkProcessingMetadata.sdkProcessingMetadata;
+          if (undefined === prop) {
+            prop = {};
+          }
+          ({ request, normalizedRequest } = prop);
+          const tmp = convertReqDataIntegrationOptsToAddReqDataOpts(obj2);
+          if (normalizedRequest) {
+            let tmp5;
+            if (request) {
+              let ip = request.ip;
+              if (!ip) {
+                ip = request.socket && request.socket.remoteAddress;
+              }
+              tmp5 = ip;
+            }
+            let user;
+            if (request) {
+              user = request.user;
+            }
+            obj = { ipAddress: tmp5, user };
+            let tmp11 = sdkProcessingMetadata;
+            let tmp13 = obj;
+            const obj3 = DEFAULT_USER_INCLUDES;
+            const result = obj3.addNormalizedRequestDataToEvent(sdkProcessingMetadata, normalizedRequest, obj, tmp);
+            return sdkProcessingMetadata;
+          } else {
+            let result1 = sdkProcessingMetadata;
+            if (request) {
+              obj2 = DEFAULT_USER_INCLUDES;
+              result1 = obj2.addRequestDataToEvent(sdkProcessingMetadata, request, tmp);
+            }
+            return result1;
+          }
+        }
+    };
+  }
+  user = {};
+  const merged4 = Object.assign(tmp.include.user);
+  let tmp7 = obj.include || {};
+  const merged5 = Object.assign(tmp7.user);
 });

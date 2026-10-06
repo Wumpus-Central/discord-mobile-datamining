@@ -10,16 +10,11 @@ if (!buildFormatLongFn) {
 }
 ({
   date: obj.default({
-    formats: {
-      full: "y\uB144 M\uC6D4 d\uC77C EEEE",
-      long: "y\uB144 M\uC6D4 d\uC77C",
-      medium: "y.MM.dd",
-      short: "y.MM.dd",
-    },
+    formats: { full: "y\u5E74M\u6708d\u65E5EEEE", long: "y\u5E74M\u6708d\u65E5", medium: "y/MM/dd", short: "y/MM/dd" },
     defaultWidth: "full",
   }),
   time: obj.default({
-    formats: { full: "a H\uC2DC mm\uBD84 ss\uCD08 zzzz", long: "a H:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" },
+    formats: { full: "H\u6642mm\u5206ss\u79D2 zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" },
     defaultWidth: "full",
   }),
   dateTime: obj.default({
@@ -35,16 +30,11 @@ if (!buildFormatLongFn) {
 
 export default {
   date: obj.default({
-    formats: {
-      full: "y\uB144 M\uC6D4 d\uC77C EEEE",
-      long: "y\uB144 M\uC6D4 d\uC77C",
-      medium: "y.MM.dd",
-      short: "y.MM.dd",
-    },
+    formats: { full: "y\u5E74M\u6708d\u65E5EEEE", long: "y\u5E74M\u6708d\u65E5", medium: "y/MM/dd", short: "y/MM/dd" },
     defaultWidth: "full",
   }),
   time: obj.default({
-    formats: { full: "a H\uC2DC mm\uBD84 ss\uCD08 zzzz", long: "a H:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" },
+    formats: { full: "H\u6642mm\u5206ss\u79D2 zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" },
     defaultWidth: "full",
   }),
   dateTime: obj.default({

@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 40,
-  height: 40,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "d4d023fcd230d5f7401c0e512db37851",
-  name: "ic_checkmark",
+  hash: "c5c262e40462204afd9dba1d0529e9ea",
+  name: "AttachmentIcon",
   type: "png",
 });

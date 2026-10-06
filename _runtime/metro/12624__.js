@@ -1,307 +1,292 @@
 // _runtime/metro/12624__.js
-import _mod12561 from "12561__.js";
-import _mod12565 from "12565__.js";
-import _mod12570 from "12570__.js";
-import _mod12576 from "12576__.js";
-import _mod12587 from "12587__.js";
-import _mod12589 from "12589__.js";
-import _mod12592 from "12592__.js";
-import _mod12593 from "12593__.js";
-import _mod12601 from "12601__.js";
-import SessionFlusher from "../12618_SessionFlusher.js";
-import BaseClient from "../12620_BaseClient.js";
-import eventFromMessage2 from "../12625_eventFromMessage.js";
-import _mod12626 from "12626__.js";
+import _mod12581 from "12581__.js";
+import _mod12586 from "12586__.js";
+import _mod12625 from "12625__.js";
+import _mod12627 from "12627__.js";
 import _slicedToArray from "00032__slicedToArray.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
-import DEBUG_BUILD from "12564__.js";
-import _browserPerformanceTimeOriginMode from "../12579__browserPerformanceTimeOriginMode.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-class ServerRuntimeClient {
-  constructor(arg0) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ServerRuntimeClient);
-    const obj = _mod12561;
-    const result = obj.registerSpanErrorInstrumentation();
-    const items = [arg0];
-    const obj2 = _getPrototypeOf(ServerRuntimeClient);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj2, items, _getPrototypeOf(self).constructor);
-    } else {
-      constructResult = obj2.apply(self, items);
+let _require;
+
+function forEachEnvelopeItem(arg0, fn) {
+  const tmp = arg0[1];
+  for (const item10007 of tmp) {
+    if (fn(item10007, item10007[0].type)) {
+      obj.return();
+      let flag = true;
+      return true;
     }
-    return _possibleConstructorReturn(self, constructResult);
   }
+  return false;
 }
-_inherits(ServerRuntimeClient, BaseClient.BaseClient);
-const entry = {
-  key: "eventFromException",
-  value: function eventFromException(name, data) {
-    const obj = eventFromMessage2;
-    const result = obj.eventFromUnknownInput(this, this._options.stackParser, name, data);
-    result.level = "error";
-    const obj2 = _mod12589;
-    return obj2.resolvedSyncPromise(result);
-  },
+let closure_4 = {
+  session: "session",
+  sessions: "session",
+  attachment: "attachment",
+  transaction: "transaction",
+  event: "error",
+  client_report: "internal",
+  user_report: "default",
+  profile: "profile",
+  profile_chunk: "profile",
+  replay_event: "replay",
+  replay_recording: "replay",
+  check_in: "monitor",
+  feedback: "feedback",
+  span: "span",
+  statsd: "metric_bucket",
+  raw_security: "security",
 };
-let items = [
-  entry,
-  {
-    key: "eventFromMessage",
-    value: function eventFromMessage(value) {
-      let str = info;
-      if (info === undefined) {
-        str = "info";
-      }
-      const resolvedSyncPromise = _mod12589.resolvedSyncPromise;
-      const obj = eventFromMessage2;
-      return resolvedSyncPromise(
-        obj.eventFromMessage(this._options.stackParser, value, str, event_id, this._options.attachStacktrace),
-      );
-    },
-  },
-  {
-    key: "captureException",
-    value: function captureException(arg0, arg1, arg2) {
-      const self = this;
-      if (this._options.autoSessionTracking) {
-        if (self._sessionFlusher) {
-          const obj = _mod12592;
-          const isolationScope = obj.getIsolationScope();
-          const requestSession = isolationScope.getRequestSession();
-          const tmp4 = requestSession && "ok" === requestSession.status;
-          if (tmp4) {
-            requestSession.status = "errored";
-          }
-        }
-      }
-      let fn = _get(_getPrototypeOf(ServerRuntimeClient.prototype), "captureException", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0, arg1, arg2];
-      return fn(items);
-    },
-  },
-  {
-    key: "captureEvent",
-    value: function captureEvent(type, arg1, arg2) {
-      const self = this;
-      if (this._options.autoSessionTracking) {
-        if (self._sessionFlusher) {
-          const tmp = type.type || "exception";
-          if ("exception" === tmp) {
-            if (type.exception) {
-              if (type.exception.values) {
-                if (type.exception.values.length > 0) {
-                  const obj = _mod12592;
-                  const isolationScope = obj.getIsolationScope();
-                  const requestSession = isolationScope.getRequestSession();
-                  const tmp5 = requestSession && "ok" === requestSession.status;
-                  if (tmp5) {
-                    requestSession.status = "errored";
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      let fn = _get(_getPrototypeOf(ServerRuntimeClient.prototype), "captureEvent", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [type, arg1, arg2];
-      return fn(items);
-    },
-  },
-  {
-    key: "close",
-    value: function close(arg0) {
-      const self = this;
-      if (this._sessionFlusher) {
-        const _sessionFlusher = self._sessionFlusher;
-        _sessionFlusher.close();
-      }
-      let fn = _get(_getPrototypeOf(ServerRuntimeClient.prototype), "close", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
-    },
-  },
-  {
-    key: "initSessionFlusher",
-    value: function initSessionFlusher() {
-      const self = this;
-      const release = this._options.release;
-      if (release) {
-        const self2 = this;
-        const self3 = this;
-        const obj = { release, environment: tmp };
-        const sessionFlusher = new SessionFlusher.SessionFlusher(self, obj);
-        self._sessionFlusher = sessionFlusher;
-      } else if (_mod12593.DEBUG_BUILD) {
-        const logger = _mod12565.logger;
-        logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
-      }
-    },
-  },
-  {
-    key: "captureCheckIn",
-    value: function captureCheckIn(checkInId, arg1, arg2) {
-      let tmp10;
-      let tmp9;
-      if ("checkInId" in checkInId) {
-        if (checkInId.checkInId) {
-          checkInId = checkInId.checkInId;
-        }
-        const self = this;
-        if (this._isEnabled()) {
-          const options = self.getOptions();
-          const tunnel = options.tunnel;
-          const obj4 = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
-          ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
-          ({ release: obj2.release, environment: obj2.environment } = options);
-          if ("duration" in checkInId) {
-            obj4.duration = checkInId.duration;
-          }
-          const tmp5 = arg1;
-          if (tmp5) {
-            const obj7 = {
-              schedule: null,
-              checkin_margin: null,
-              max_runtime: null,
-              timezone: null,
-              failure_issue_threshold: null,
-              recovery_threshold: null,
-            };
-            ({
-              schedule: obj3.schedule,
-              checkinMargin: obj3.checkin_margin,
-              maxRuntime: obj3.max_runtime,
-              timezone: obj3.timezone,
-              failureIssueThreshold: obj3.failure_issue_threshold,
-              recoveryThreshold: obj3.recovery_threshold,
-            } = arg1);
-            obj4.monitor_config = obj7;
-          }
-          [tmp9, tmp10] = self._getTraceInfoFromScope(arg2);
-          _slicedToArray(self._getTraceInfoFromScope(arg2), 2);
-          if (tmp10) {
-            const obj8 = { trace: tmp10 };
-            obj4.contexts = obj8;
-          }
-          const createCheckInEnvelope = _mod12626.createCheckInEnvelope;
-          const sdkMetadata = self.getSdkMetadata();
-          const checkInEnvelope = createCheckInEnvelope(obj4, tmp9, sdkMetadata, tunnel, self.getDsn());
-          if (_mod12593.DEBUG_BUILD) {
-            const logger2 = _mod12565.logger;
-            logger2.info("Sending checkin:", checkInId.monitorSlug, checkInId.status);
-          }
-          self.sendEnvelope(checkInEnvelope);
-          return checkInId;
-        } else {
-          if (_mod12593.DEBUG_BUILD) {
-            const logger = _mod12565.logger;
-            logger.warn("SDK not enabled, will not capture checkin.");
-          }
-          return checkInId;
-        }
-      }
-      const obj = _mod12576;
-      checkInId = obj.uuid4();
-    },
-  },
-  {
-    key: "_captureRequestSession",
-    value: function _captureRequestSession() {
-      if (this._sessionFlusher) {
-        const _sessionFlusher = this._sessionFlusher;
-        const result = _sessionFlusher.incrementSessionStatusCount();
-      } else if (_mod12593.DEBUG_BUILD) {
-        const logger = _mod12565.logger;
-        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
-      }
-    },
-  },
-  {
-    key: "_prepareEvent",
-    value: function _prepareEvent(platform, arg1, arg2, arg3) {
-      let tmp3;
-      const self = this;
-      if (this._options.platform) {
-        platform.platform = platform.platform || self._options.platform;
-      }
-      if (self._options.runtime) {
-        const obj = { runtime: tmp3.runtime || self._options.runtime };
-        const merged = Object.assign(platform.contexts);
-        tmp3 = platform.contexts || {};
-        platform.contexts = obj;
-      }
-      if (self._options.serverName) {
-        platform.server_name = platform.server_name || self._options.serverName;
-      }
-      let fn = _get(_getPrototypeOf(ServerRuntimeClient.prototype), "_prepareEvent", self);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [platform, arg1, arg2, arg3];
-      return fn(items);
-    },
-  },
-  {
-    key: "_getTraceInfoFromScope",
-    value: function _getTraceInfoFromScope(self) {
-      const tmp = self;
-      if (tmp) {
-        let spanToTraceContextResult;
-        let dynamicSamplingContextFromSpan;
-        const obj = _mod12587;
-        const _getSpanForScopeResult = obj._getSpanForScope(self);
-        if (_getSpanForScopeResult) {
-          const tmp2Result = _mod12570;
-          spanToTraceContextResult = tmp2Result.spanToTraceContext(_getSpanForScopeResult);
-        } else {
-          const tmp2Result3 = _mod12592;
-          spanToTraceContextResult = tmp2Result3.getTraceContextFromScope(self);
-        }
-        const tmp2Result4 = _mod12601;
-        if (_getSpanForScopeResult) {
-          dynamicSamplingContextFromSpan = tmp2Result4.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
-        } else {
-          self = this;
-          dynamicSamplingContextFromSpan = tmp2Result4.getDynamicSamplingContextFromScope(this, self);
-        }
-        const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
-        return items;
-      } else {
-        const items1 = [undefined, undefined];
-        return items1;
-      }
-    },
-  },
-];
-const ServerRuntimeClient_export = _createClass(ServerRuntimeClient, items);
 
-export { ServerRuntimeClient_export as ServerRuntimeClient };
+export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
+  const tmp2 = _slicedToArray(arg0, 2);
+  const items = [tmp2[0]];
+  const items1 = [];
+  items1[HermesBuiltin.arraySpread(items1, tmp2[1], 0)] = arg1;
+  items[1] = items1;
+  return items;
+};
+export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
+  let data1;
+  if (typeof data.data === "string") {
+    data = data.data;
+    if (_mod12581.GLOBAL_OBJ.__SENTRY__) {
+      let encodePolyfillResult;
+      if (_mod12581.GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
+        const __SENTRY__ = _mod12581.GLOBAL_OBJ.__SENTRY__;
+        encodePolyfillResult = __SENTRY__.encodePolyfill(data);
+      }
+      data1 = encodePolyfillResult;
+    }
+    const _TextEncoder = TextEncoder;
+    const self = this;
+    const self2 = this;
+    const encoder = new TextEncoder();
+    encodePolyfillResult = encoder.encode(data);
+  } else {
+    data1 = data.data;
+  }
+  const items = [,];
+  const obj = _mod12586;
+  const obj2 = {
+    type: "attachment",
+    length: data1.length,
+    filename: data.filename,
+    content_type: data.contentType,
+    attachment_type: data.attachmentType,
+  };
+  items[0] = obj.dropUndefinedKeys(obj2);
+  items[1] = data1;
+  return items;
+};
+export function createEnvelope(eventEnvelopeHeaders) {
+  let items1;
+  let items = items1;
+  if (items1 === undefined) {
+    items = [];
+  }
+  items1 = [eventEnvelopeHeaders, items];
+  return items1;
+}
+export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, tunnel, _dsn) {
+  let date;
+  let dropUndefinedKeys;
+  let obj5;
+  let obj6;
+  const obj = { event_id: event_id.event_id, sent_at: date.toISOString() };
+  let tmp2 = sdk;
+  date = new Date();
+  if (tmp2) {
+    tmp2 = { sdk };
+    const obj2 = { sdk };
+  }
+  const merged = Object.assign(tmp2);
+  let tmp4 = tunnel && _dsn;
+  if (tmp4) {
+    const obj3 = { dsn: obj5.dsnToString(_dsn) };
+    tmp4 = obj3;
+    obj5 = _mod12627;
+  }
+  const merged1 = Object.assign(tmp4);
+  let tmp8 = tmp;
+  if (tmp8) {
+    const obj4 = { trace: dropUndefinedKeys(obj6) };
+    obj6 = {};
+    dropUndefinedKeys = _mod12586.dropUndefinedKeys;
+    _mod12586;
+    const merged2 = Object.assign(tmp);
+    tmp8 = obj4;
+  }
+  const merged3 = Object.assign(tmp8);
+  return obj;
+};
+export function createSpanEnvelopeItem(arg0) {
+  const items = [{ type: "span" }, arg0];
+  return items;
+}
+export const envelopeContainsItemType = function envelopeContainsItemType(arg0, arg1) {
+  let closure_0 = arg1;
+  return forEachEnvelopeItem(arg0, (arg0, arg1) => closure_0.includes(arg1));
+};
+export const envelopeItemTypeToDataCategory = function envelopeItemTypeToDataCategory(arg0) {
+  return closure_4[arg0];
+};
+export { forEachEnvelopeItem };
+export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelopeHeader(sdk) {
+  const tmp = sdk;
+  if (tmp) {
+    if (sdk.sdk) {
+      const obj = { name: null, version: null };
+      ({ name: obj.name, version: obj.version } = sdk.sdk);
+      return obj;
+    }
+  }
+};
+export const parseEnvelope = function parseEnvelope(arr) {
+  let tmp = arr;
+  if (typeof arr === "string") {
+    if (require("12581__.js").GLOBAL_OBJ.__SENTRY__) {
+      let encodePolyfillResult;
+      if (require("12581__.js").GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
+        let __SENTRY__ = tmp12(12581).GLOBAL_OBJ.__SENTRY__;
+        encodePolyfillResult = __SENTRY__.encodePolyfill(arr);
+      }
+      tmp = encodePolyfillResult;
+    }
+    const _TextEncoder = TextEncoder;
+    const self = this;
+    const self2 = this;
+    const encoder = new TextEncoder();
+    encodePolyfillResult = encoder.encode(arr);
+  }
+  function readJson() {
+    let length = closure_0.indexOf(10);
+    if (length < 0) {
+      length = closure_0.length;
+    }
+    const _JSON = JSON;
+    const subarrayResult = closure_0.subarray(0, length);
+    closure_0 = closure_0.subarray(length + 1);
+    if (_mod12581.GLOBAL_OBJ.__SENTRY__) {
+      let decodePolyfillResult;
+      if (_mod12581.GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
+        const __SENTRY__ = _mod12581.GLOBAL_OBJ.__SENTRY__;
+        decodePolyfillResult = __SENTRY__.decodePolyfill(subarrayResult);
+      }
+      return parse(decodePolyfillResult);
+    }
+    const decoder = new TextDecoder();
+    decodePolyfillResult = decoder.decode(subarrayResult);
+  }
+  _require = tmp;
+  const items = [];
+  const json = readJson();
+  while (_require.length) {
+    let subarrayResult;
+    let json1 = readJson();
+    let length;
+    if (typeof json1.length === "number") {
+      length = json1.length;
+    }
+    let items1 = [json1];
+    let push = items.push;
+    if (length) {
+      subarrayResult = require("Discord");
+      _require = _require.subarray(length + 1);
+    } else {
+      subarrayResult = readJson();
+    }
+    items1[1] = subarrayResult;
+    arr = push(items1);
+  }
+  const items2 = [json, items];
+  return items2;
+};
+export const serializeEnvelope = function serializeEnvelope(arg0) {
+  let sum;
+  let tmp4;
+  function concatBuffers(arr) {
+    const uint8Array = new Uint8Array(arr.reduce((acc, item) => acc + item.length, 0));
+    let num = 0;
+    const iter = arr[Symbol.iterator]();
+    const nextResult = iter.next();
+    while (iter !== undefined) {
+      let result = uint8Array.set(nextResult, num);
+      num = num + nextResult.length;
+      continue;
+    }
+    return uint8Array;
+  }
+  function append(json) {
+    let require;
+    if (typeof require === "string") {
+      if (typeof json === "string") {
+        require = arr + json;
+      } else {
+        if (_mod12581.GLOBAL_OBJ.__SENTRY__) {
+          let encodePolyfillResult;
+          if (_mod12581.GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
+            const __SENTRY__2 = tmp11(12581).GLOBAL_OBJ.__SENTRY__;
+            encodePolyfillResult = __SENTRY__2.encodePolyfill(arr);
+          }
+          require = [encodePolyfillResult, json];
+        }
+        const _TextEncoder2 = TextEncoder;
+        const self3 = this;
+        const self4 = this;
+        const encoder2 = new TextEncoder();
+        encodePolyfillResult = encoder2.encode(arr);
+      }
+    } else {
+      let tmp4 = json;
+      const push = arr.push;
+      if (typeof json === "string") {
+        if (_mod12581.GLOBAL_OBJ.__SENTRY__) {
+          let encodePolyfillResult1;
+          if (_mod12581.GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
+            const __SENTRY__ = tmp9(12581).GLOBAL_OBJ.__SENTRY__;
+            encodePolyfillResult1 = __SENTRY__.encodePolyfill(json);
+          }
+          tmp4 = encodePolyfillResult1;
+        }
+        const _TextEncoder = TextEncoder;
+        const self = this;
+        const self2 = this;
+        const encoder = new TextEncoder();
+        encodePolyfillResult1 = encoder.encode(json);
+      }
+      push(tmp4);
+    }
+  }
+  let tmp = _slicedToArray(arg0, 2);
+  const tmp2 = tmp[1];
+  let require = JSON.stringify(tmp[0]);
+  const tmp3 = tmp2[Symbol.iterator]();
+  if (tmp3 === undefined) {
+    let tmp20 = require;
+    if (typeof require !== "string") {
+      tmp20 = concatBuffers(tmp19);
+    }
+    return tmp20;
+  } else {
+    const tmp6 = _slicedToArray(tmp4, 2);
+    const _JSON = JSON;
+    const _HermesInternal = HermesInternal;
+    append("\n" + JSON.stringify(tmp6[0]) + "\n");
+    if (typeof tmp6[1] !== "string") {
+      const _Uint8Array = Uint8Array;
+      if (!(tmp6[1] instanceof Uint8Array)) {
+        let json;
+        try {
+          const _JSON2 = JSON;
+          json = JSON.stringify(tmp8);
+        } catch (err) {
+          const _JSON3 = JSON;
+          const normalizer = _mod12625;
+          json = stringify(normalizer.normalize(tmp8));
+        }
+        append(json);
+      }
+    }
+    append(tmp6[1]);
+  }
+};

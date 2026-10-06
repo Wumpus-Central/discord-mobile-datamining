@@ -1,266 +1,281 @@
 // _runtime/metro/12585__.js
-import _mod12572 from "12572__.js";
-import _mod12583 from "12583__.js";
+import _mod12580 from "12580__.js";
 import _mod12586 from "12586__.js";
-import _mod12591 from "12591__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import generatePropagationContext from "../12590_generatePropagationContext.js";
+import _mod12592 from "12592__.js";
+import _browserPerformanceTimeOriginMode from "../12594__browserPerformanceTimeOriginMode.js";
+import _mod12595 from "12595__.js";
+import _slicedToArray from "12596__slicedToArray.js";
+import _mod12597 from "12597__.js";
+import _mod12598 from "12598__.js";
+import _mod12599 from "12599__.js";
+import _mod12602 from "12602__.js";
+import _mod12607 from "12607__.js";
 
-const require = globalThis.__r;
-let _require;
+let set;
 
-function withScope(arg0) {
-  const obj = _mod12583;
-  const mainCarrier = obj.getMainCarrier();
-  const obj2 = _mod12583;
-  const sentryCarrier = obj2.getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const tmpResult = _mod12591;
-    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    const self = this;
-    const self2 = this;
-    const tmpResult2 = _mod12591;
-    stack = new c3(defaultCurrentScope, tmpResult2.getDefaultIsolationScope());
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(arg0);
-}
-function withSetScope(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  const obj = _mod12583;
-  const mainCarrier = obj.getMainCarrier();
-  const obj2 = _mod12583;
-  const sentryCarrier = obj2.getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const tmpResult = _mod12591;
-    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    const self = this;
-    const self2 = this;
-    const tmpResult2 = _mod12591;
-    stack = new c3(defaultCurrentScope, tmpResult2.getDefaultIsolationScope());
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(() => {
-    stack.getStackTop().scope = scope;
-    return closure_1(scope);
-  });
-}
-function withIsolationScope(arg0) {
-  let closure_0;
-  _require = arg0;
-  const obj = require("12583__.js");
-  const mainCarrier = obj.getMainCarrier();
-  const obj2 = require("12583__.js");
-  const sentryCarrier = obj2.getSentryCarrier(mainCarrier);
-  let stack = sentryCarrier.stack;
-  if (!stack) {
-    const tmpResult = require("12591__.js");
-    const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    const self = this;
-    const self2 = this;
-    const tmpResult2 = require("12591__.js");
-    stack = new closure_3(defaultCurrentScope, tmpResult2.getDefaultIsolationScope());
-  }
-  sentryCarrier.stack = stack;
-  return stack.withScope(function () {
-    const obj = require("12583__.js");
-    const mainCarrier = obj.getMainCarrier();
-    const obj2 = require("12583__.js");
-    const sentryCarrier = obj2.getSentryCarrier(mainCarrier);
-    let stack = sentryCarrier.stack;
-    if (!stack) {
-      const tmp2Result = require("12591__.js");
-      const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
-      const self = this;
-      const self2 = this;
-      const tmp2Result2 = require("12591__.js");
-      stack = new closure_2_3(defaultCurrentScope, tmp2Result2.getDefaultIsolationScope());
+function spanTimeInputToSeconds(getTime) {
+  let sum;
+  if (typeof getTime === "number") {
+    let result = getTime;
+    if (getTime > 9999999999) {
+      result = getTime / 1000;
     }
-    sentryCarrier.stack = stack;
-    return closure_0(stack.getIsolationScope());
-  });
-}
-class AsyncContextStack {
-  constructor(arg0, arg1) {
-    const self = this;
-    let scope = arg0;
-    _classCallCheck(this, AsyncContextStack);
-    if (!arg0) {
-      const self2 = this;
-      const self3 = this;
-      scope = new _mod12586.Scope();
-    }
-    let scope1 = arg1;
-    if (!scope1) {
-      const self4 = this;
-      const self5 = this;
-      scope1 = new _mod12586.Scope();
-    }
-    const items = [{ scope }];
-    self._stack = items;
-    self._isolationScope = scope1;
-  }
-}
-const entry = {
-  key: "withScope",
-  value: function withScope(fn) {
-    const self = this;
-    try {
-      let nextPromise;
-      const promise = fn(tmp);
-      const obj = _mod12572;
-      if (obj.isThenable(promise)) {
-        nextPromise = promise.then(
-          (result) => {
-            self._popScope();
-            return result;
-          },
-          (arg0) => {
-            self._popScope();
-            throw arg0;
-          },
-        );
-      } else {
-        self._popScope();
-        nextPromise = promise;
-      }
-      return nextPromise;
-    } catch (tmp9) {
-      self._popScope();
-      throw tmp9;
-    }
-  },
-};
-let items = [
-  entry,
-  {
-    key: "getClient",
-    value: function getClient() {
-      return this.getStackTop().client;
-    },
-  },
-  {
-    key: "getScope",
-    value: function getScope() {
-      return this.getStackTop().scope;
-    },
-  },
-  {
-    key: "getIsolationScope",
-    value: function getIsolationScope() {
-      return this._isolationScope;
-    },
-  },
-  {
-    key: "getStackTop",
-    value: function getStackTop() {
-      return this._stack[this._stack.length - 1];
-    },
-  },
-  {
-    key: "_pushScope",
-    value: function _pushScope() {
-      const scope = this.getScope();
-      const cloneResult = scope.clone();
-      const _stack = this._stack;
-      const obj = { client: this.getClient(), scope: cloneResult };
-      _stack.push(obj);
-      return cloneResult;
-    },
-  },
-  {
-    key: "_popScope",
-    value: function _popScope() {
-      let arr = this._stack.length > 1;
-      if (arr) {
-        const _stack = this._stack;
-        arr = _stack.pop();
-      }
-      return arr;
-    },
-  },
-];
-const _moduleResult = _createClass(AsyncContextStack, items);
-let c3 = _moduleResult;
-const AsyncContextStack_export = _moduleResult;
-
-export { AsyncContextStack_export as AsyncContextStack };
-export function getStackAsyncContextStrategy() {
-  let obj = {
-    withIsolationScope,
-    withScope,
-    withSetScope,
-    withSetIsolationScope(arg0, arg1) {
-      let closure_0 = arg1;
-      let obj = closure_0(closure_1[4]);
-      let mainCarrier = obj.getMainCarrier();
-      let obj2 = closure_0(closure_1[4]);
-      let sentryCarrier = obj2.getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const tmpResult = closure_0(closure_1[5]);
-        let defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        let self = this;
-        let self2 = this;
-        const tmpResult2 = closure_0(closure_1[5]);
-        stack = new closure_3(defaultCurrentScope, tmpResult2.getDefaultIsolationScope());
-      }
-      sentryCarrier.stack = stack;
-      return stack.withScope(function () {
-        const obj = require("12583__.js");
-        const mainCarrier = obj.getMainCarrier();
-        const obj2 = require("12583__.js");
-        const sentryCarrier = obj2.getSentryCarrier(mainCarrier);
-        let stack = sentryCarrier.stack;
-        if (!stack) {
-          const tmp2Result = require("12591__.js");
-          const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
-          const self = this;
-          const self2 = this;
-          const tmp2Result2 = require("12591__.js");
-          stack = new closure_2_3(defaultCurrentScope, tmp2Result2.getDefaultIsolationScope());
+    sum = result;
+  } else {
+    const _Array = Array;
+    if (Array.isArray(getTime)) {
+      sum = getTime[0] + getTime[1] / 1000000000;
+    } else {
+      const _Date = Date;
+      if (getTime instanceof Date) {
+        const time = getTime.getTime();
+        let result1 = time;
+        if (time > 9999999999) {
+          result1 = time / 1000;
         }
-        sentryCarrier.stack = stack;
-        return closure_0(stack.getIsolationScope());
-      });
-    },
-    getCurrentScope() {
-      const obj = require("12583__.js");
-      const mainCarrier = obj.getMainCarrier();
-      const obj2 = require("12583__.js");
-      const sentryCarrier = obj2.getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const tmpResult = require("12591__.js");
-        const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        const self = this;
-        const self2 = this;
-        const tmpResult2 = require("12591__.js");
-        stack = new closure_1_3(defaultCurrentScope, tmpResult2.getDefaultIsolationScope());
+        sum = result1;
+      } else {
+        const obj = _browserPerformanceTimeOriginMode;
+        sum = obj.timestampInSeconds();
       }
-      sentryCarrier.stack = stack;
-      return stack.getScope();
-    },
-    getIsolationScope() {
-      const obj = require("12583__.js");
-      const mainCarrier = obj.getMainCarrier();
-      const obj2 = require("12583__.js");
-      const sentryCarrier = obj2.getSentryCarrier(mainCarrier);
-      let stack = sentryCarrier.stack;
-      if (!stack) {
-        const tmpResult = require("12591__.js");
-        const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        const self = this;
-        const self2 = this;
-        const tmpResult2 = require("12591__.js");
-        stack = new closure_1_3(defaultCurrentScope, tmpResult2.getDefaultIsolationScope());
-      }
-      sentryCarrier.stack = stack;
-      return stack.getIsolationScope();
-    },
-  };
-  return obj;
+    }
+  }
+  return sum;
 }
+function spanToJSON(getSpanJSON) {
+  let endTime;
+  let name;
+  let parentSpanId;
+  let spanId;
+  let startTime;
+  let status;
+  let tmp5Result;
+  let traceId;
+  function spanIsSentrySpan(getSpanJSON) {
+    return typeof getSpanJSON.getSpanJSON === "function";
+  }
+  function spanIsOpenTelemetrySdkTraceBaseSpan(attributes) {
+    return attributes.attributes && attributes.startTime && attributes.name && attributes.endTime && attributes.status;
+  }
+  if (spanIsSentrySpan(getSpanJSON)) {
+    return getSpanJSON.getSpanJSON();
+  } else {
+    try {
+      ({ spanId, traceId } = getSpanJSON.spanContext());
+      getSpanJSON.spanContext();
+      if (spanIsOpenTelemetrySdkTraceBaseSpan(getSpanJSON)) {
+        const attributes = getSpanJSON.attributes;
+        ({ startTime, name, endTime, parentSpanId, status } = getSpanJSON);
+        const obj2 = {
+          span_id: spanId,
+          trace_id: traceId,
+          data: attributes,
+          description: name,
+          parent_span_id: parentSpanId,
+          start_timestamp: spanTimeInputToSeconds(startTime),
+          timestamp: spanTimeInputToSeconds(endTime),
+          status: getStatusMessage(status),
+          op: attributes[_mod12595.SEMANTIC_ATTRIBUTE_SENTRY_OP],
+          origin: attributes[_mod12595.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN],
+          _metrics_summary: tmp5Result.getMetricSummaryJsonForSpan(getSpanJSON),
+        };
+        const dropUndefinedKeys = _mod12586.dropUndefinedKeys;
+        _mod12586;
+        spanTimeInputToSeconds(endTime);
+        tmp5Result = _slicedToArray;
+        return dropUndefinedKeys(obj2);
+      } else {
+        return { span_id: spanId, trace_id: traceId };
+      }
+    } catch (err) {
+      return {};
+    }
+  }
+}
+function spanIsSampled(spanContext) {
+  return 1 === spanContext.spanContext().traceFlags;
+}
+function getStatusMessage(code) {
+  const tmp = code;
+  if (tmp) {
+    if (code.code !== _mod12597.SPAN_STATUS_UNSET) {
+      let str = "ok";
+      if (code.code !== _mod12597.SPAN_STATUS_OK) {
+        str = code.message || "unknown_error";
+      }
+      return str;
+    }
+  }
+}
+let c2 = false;
+const _sentryChildSpans = "_sentryChildSpans";
+const _sentryRootSpan = "_sentryRootSpan";
+
+export const TRACE_FLAG_NONE = 0;
+export const TRACE_FLAG_SAMPLED = 1;
+export const addChildSpanToSpan = function addChildSpanToSpan(parentSpan, sentrySpan) {
+  const tmp2 = parentSpan[_sentryRootSpan] || parentSpan;
+  const obj = _mod12586;
+  const result = obj.addNonEnumerableProperty(sentrySpan, _sentryRootSpan, tmp2);
+  if (parentSpan[_sentryChildSpans]) {
+    const obj2 = parentSpan[_sentryChildSpans];
+    obj2.add(sentrySpan);
+  } else {
+    const _Set = Set;
+    const items = [sentrySpan];
+    const self = this;
+    const self2 = this;
+    const addNonEnumerableProperty = _mod12586.addNonEnumerableProperty;
+    _mod12586;
+    set = new Set(items);
+    const result1 = addNonEnumerableProperty(parentSpan, _sentryChildSpans, set);
+  }
+};
+export const getActiveSpan = function getActiveSpan() {
+  let activeSpan;
+  const obj = _mod12598;
+  const mainCarrier = obj.getMainCarrier();
+  const obj2 = _mod12599;
+  const asyncContextStrategy = obj2.getAsyncContextStrategy(mainCarrier);
+  if (asyncContextStrategy.getActiveSpan) {
+    activeSpan = asyncContextStrategy.getActiveSpan();
+  } else {
+    const _getSpanForScope = _mod12602._getSpanForScope;
+    _mod12602;
+    const tmpResult2 = _mod12607;
+    activeSpan = _getSpanForScope(tmpResult2.getCurrentScope());
+  }
+  return activeSpan;
+};
+export const getRootSpan = function getRootSpan(activeSpan) {
+  return activeSpan[_sentryRootSpan] || activeSpan;
+};
+export const getSpanDescendants = function getSpanDescendants(c12) {
+  set = new Set();
+  function addSpanChildren(c12) {
+    if (!set.has(c12)) {
+      if (spanIsSampled(c12)) {
+        set.add(c12);
+        if (c12[_sentryChildSpans]) {
+          const _Array = Array;
+          let items = Array.from(c12[tmp3]);
+        } else {
+          items = [];
+        }
+        for (const item10019 of items) {
+          let tmp8 = addSpanChildren(item10019);
+          continue;
+        }
+      }
+    }
+  }
+  addSpanChildren(c12);
+  return Array.from(set);
+};
+export { getStatusMessage };
+export const removeChildSpanFromSpan = function removeChildSpanFromSpan(c12, isRecording) {
+  if (c12[_sentryChildSpans]) {
+    const obj = c12[tmp];
+    obj.delete(isRecording);
+  }
+};
+export const showSpanDropWarning = function showSpanDropWarning() {
+  const tmp = c2;
+  if (!tmp) {
+    const obj = _mod12580;
+    obj.consoleSandbox(() => {
+      console.warn(
+        "[Sentry] Deprecation warning: Returning null from `beforeSendSpan` will be disallowed from SDK version 9.0.0 onwards. The callback will only support mutating spans. To drop certain spans, configure the respective integrations directly.",
+      );
+    });
+    c2 = true;
+  }
+};
+export { spanIsSampled };
+export { spanTimeInputToSeconds };
+export { spanToJSON };
+export const spanToTraceContext = function spanToTraceContext(spanContext) {
+  let isRemote;
+  let spanId;
+  let span_id;
+  const spanContextResult = spanContext.spanContext();
+  ({ spanId, isRemote } = spanContextResult);
+  let parent_span_id = span_id;
+  const trace_id = spanContextResult.traceId;
+  if (!isRemote) {
+    parent_span_id = spanToJSON(spanContext).parent_span_id;
+  }
+  if (isRemote) {
+    const obj = generatePropagationContext;
+    span_id = obj.generateSpanId();
+  }
+  const obj2 = _mod12586;
+  return obj2.dropUndefinedKeys({ parent_span_id, span_id, trace_id });
+};
+export const spanToTraceHeader = function spanToTraceHeader(spanContext) {
+  let spanId;
+  let traceId;
+  ({ traceId, spanId } = spanContext.spanContext());
+  spanContext.spanContext();
+  const traceFlags = spanContext.spanContext().traceFlags;
+  const obj = _mod12592;
+  return obj.generateSentryTraceHeader(traceId, spanId, 1 === traceFlags);
+};
+export const spanToTransactionTraceContext = function spanToTransactionTraceContext(spanContext) {
+  let data;
+  let op;
+  let origin;
+  let parent_span_id;
+  let spanId;
+  let status;
+  let traceId;
+  ({ spanId, traceId } = spanContext.spanContext());
+  spanContext.spanContext();
+  ({ data, op, parent_span_id, status, origin } = spanToJSON(spanContext));
+  spanToJSON(spanContext);
+  const obj = _mod12586;
+  return obj.dropUndefinedKeys({ parent_span_id, span_id, trace_id, data, op, status, origin });
+};
+export const updateMetricSummaryOnActiveSpan = function updateMetricSummaryOnActiveSpan(
+  metricType,
+  sanitizeMetricKeyResult,
+  diff,
+  sanitizeUnitResult,
+  tags,
+  bucketKey,
+) {
+  let activeSpan;
+  const obj = _mod12598;
+  const mainCarrier = obj.getMainCarrier();
+  const obj2 = _mod12599;
+  const asyncContextStrategy = obj2.getAsyncContextStrategy(mainCarrier);
+  if (asyncContextStrategy.getActiveSpan) {
+    activeSpan = asyncContextStrategy.getActiveSpan();
+  } else {
+    const _getSpanForScope = _mod12602._getSpanForScope;
+    _mod12602;
+    const tmpResult3 = _mod12607;
+    activeSpan = _getSpanForScope(tmpResult3.getCurrentScope());
+  }
+  if (activeSpan) {
+    const tmpResult4 = _slicedToArray;
+    const result = tmpResult4.updateMetricSummaryOnSpan(
+      activeSpan,
+      metricType,
+      sanitizeMetricKeyResult,
+      diff,
+      sanitizeUnitResult,
+      tags,
+      bucketKey,
+    );
+  }
+};
+export const updateSpanName = function updateSpanName(updateName, arg1) {
+  updateName.updateName(arg1);
+  const obj = {
+    [closure_1_0(closure_1_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "custom",
+    [closure_1_0(closure_1_1[4]).SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME]: arg1,
+  };
+  updateName.setAttributes(obj);
+};

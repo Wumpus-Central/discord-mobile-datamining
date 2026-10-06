@@ -1,5 +1,5 @@
 // _runtime/metro/10245__.js
-import _mod10179 from "10179__.js";
+import _mod10192 from "10192__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import map from "00093__possibleConstructorReturn.js";
@@ -35,12 +35,12 @@ if (!fn) {
     return tmp2;
   };
 }
-class PTMergeDateRangeRefiner {
+class JPMergeDateRangeRefiner {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, PTMergeDateRangeRefiner);
-    const obj = _getPrototypeOf(PTMergeDateRangeRefiner);
+    _classCallCheck(this, JPMergeDateRangeRefiner);
+    const obj = _getPrototypeOf(JPMergeDateRangeRefiner);
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
       constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
@@ -50,13 +50,13 @@ class PTMergeDateRangeRefiner {
     return map(self, constructResult);
   }
 }
-_inherits(PTMergeDateRangeRefiner, fn(_mod10179).default);
+_inherits(JPMergeDateRangeRefiner, fn(_mod10192).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*(?:-)\s*$/i;
+    return /^\s*(から|－|ー|-|～|~)\s*$/i;
   },
 };
 const items = [entry];
 
-export default _createClass(PTMergeDateRangeRefiner, items);
+export default _createClass(JPMergeDateRangeRefiner, items);

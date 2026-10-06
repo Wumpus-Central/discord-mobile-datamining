@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ef2e4520c6c90d142994f338601f4002",
-  name: "WarningIcon",
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CircleXIcon-secondary",
   type: "png",
 });

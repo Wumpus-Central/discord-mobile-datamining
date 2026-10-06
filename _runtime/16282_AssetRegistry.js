@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 46,
-  height: 46,
-  scales: [2, 3],
-  hash: "812d0ec6cbf43741fa947b18063ae5e5",
-  name: "server-error",
+  httpServerLocation: "/assets/images/native/community",
+  width: 16,
+  height: 16,
+  scales: [1, 2, 3],
+  hash: "a57ba6ff6390c76b45de1785f93f6e88",
+  name: "ic-application-required",
   type: "png",
 });

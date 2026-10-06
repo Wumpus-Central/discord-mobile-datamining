@@ -91,7 +91,7 @@ let items = [
   {
     key: "start",
     value: function start(_fromValue, _onUpdate, arg2, arg3, __makeNative) {
-      const f149711 = () => self.onUpdate();
+      const f149944 = () => self.onUpdate();
       let closure_0 = __makeNative;
       const self = this;
       const tmp = _get(_getPrototypeOf(TimingAnimation.prototype), "start", this);
@@ -114,7 +114,7 @@ let items = [
               self.__notifyAnimationEnd({ finished: true });
             } else {
               const _requestAnimationFrame = requestAnimationFrame;
-              self._animationFrame = requestAnimationFrame(f149711);
+              self._animationFrame = requestAnimationFrame(f149944);
             }
           }
         }, self._delay);
@@ -127,7 +127,7 @@ let items = [
             self.__notifyAnimationEnd({ finished: true });
           } else {
             let _requestAnimationFrame = requestAnimationFrame;
-            self._animationFrame = requestAnimationFrame(f149711);
+            self._animationFrame = requestAnimationFrame(f149944);
           }
         }
       }

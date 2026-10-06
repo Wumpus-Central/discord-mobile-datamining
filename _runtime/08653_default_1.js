@@ -1,5 +1,5 @@
 // _runtime/08653_default_1.js
-import captureStackTrace2 from "08607_captureStackTrace.js";
+import captureStackTrace2 from "08642_captureStackTrace.js";
 
 let hasOwnProperty;
 
@@ -103,18 +103,10 @@ export default function default_1() {
             const obj = /^[A-Z]/;
             if (obj.test(code.expected)) {
               const _HermesInternal17 = HermesInternal;
-              combined =
-                "\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 instanceof " +
-                code.expected +
-                " \u0E41\u0E15\u0E48\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A " +
-                tmp48;
+              combined = "Tipus inv\u00E0lid: s'esperava instanceof " + code.expected + ", s'ha rebut " + tmp50;
             } else {
               const _HermesInternal16 = HermesInternal;
-              combined =
-                "\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 " +
-                expected +
-                " \u0E41\u0E15\u0E48\u0E44\u0E14\u0E49\u0E23\u0E31\u0E1A " +
-                tmp48;
+              combined = "Tipus inv\u00E0lid: s'esperava " + expected + ", s'ha rebut " + tmp50;
             }
             return combined;
           }
@@ -122,55 +114,39 @@ export default function default_1() {
             let combined1;
             if (1 === code.values.length) {
               const _HermesInternal15 = HermesInternal;
-              combined1 =
-                "\u0E04\u0E48\u0E32\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19 " +
-                captureStackTrace.stringifyPrimitive(code.values[0]);
+              combined1 = "Valor inv\u00E0lid: s'esperava " + captureStackTrace.stringifyPrimitive(code.values[0]);
             } else {
               const _HermesInternal14 = HermesInternal;
               combined1 =
-                "\u0E15\u0E31\u0E27\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E04\u0E27\u0E23\u0E40\u0E1B\u0E47\u0E19\u0E2B\u0E19\u0E36\u0E48\u0E07\u0E43\u0E19 " +
-                captureStackTrace.joinValues(code.values, "|");
+                "Opci\u00F3 inv\u00E0lida: s'esperava una de " + captureStackTrace.joinValues(code.values, " o ");
             }
             return combined1;
           }
           case "too_big": {
             let combined2;
-            let str27 = "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32";
+            let str29 = "menys de";
             if (code.inclusive) {
-              str27 = "\u0E44\u0E21\u0E48\u0E40\u0E01\u0E34\u0E19";
+              str29 = "com a m\u00E0xim";
             }
-            let str28 = code.origin;
+            let str30 = code.origin;
             if (obj2[code.origin] ?? null) {
-              if (str28 == null) {
-                str28 = "\u0E04\u0E48\u0E32";
+              if (str30 == null) {
+                str30 = "el valor";
               }
-              const str34 = code.maximum;
+              const str36 = code.maximum;
               const _HermesInternal13 = HermesInternal;
-              const str1 = str34.toString();
-              const str35 = (obj2[code.origin] ?? null).unit ?? "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23";
+              const str1 = str36.toString();
+              const str37 = (obj2[code.origin] ?? null).unit ?? "elements";
               combined2 =
-                "\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14: " +
-                str28 +
-                " \u0E04\u0E27\u0E23\u0E21\u0E35" +
-                str27 +
-                " " +
-                str1 +
-                " " +
-                str35;
+                "Massa gran: s'esperava que " + str30 + " contingu\u00E9s " + str29 + " " + str1 + " " + str37;
             } else {
-              let str29 = str28;
-              if (str28 == null) {
-                str29 = "\u0E04\u0E48\u0E32";
+              let str31 = str30;
+              if (str30 == null) {
+                str31 = "el valor";
               }
               const _HermesInternal12 = HermesInternal;
-              const str30 = code.maximum;
-              combined2 =
-                "\u0E40\u0E01\u0E34\u0E19\u0E01\u0E33\u0E2B\u0E19\u0E14: " +
-                str29 +
-                " \u0E04\u0E27\u0E23\u0E21\u0E35" +
-                str27 +
-                " " +
-                str30.toString();
+              const str32 = code.maximum;
+              combined2 = "Massa gran: s'esperava que " + str31 + " fos " + str29 + " " + str32.toString();
             }
             return combined2;
           }
@@ -178,32 +154,19 @@ export default function default_1() {
             let combined3;
             let minimum;
             let origin;
-            let str18 = "\u0E21\u0E32\u0E01\u0E01\u0E27\u0E48\u0E32";
+            let str20 = "m\u00E9s de";
             if (code.inclusive) {
-              str18 = "\u0E2D\u0E22\u0E48\u0E32\u0E07\u0E19\u0E49\u0E2D\u0E22";
+              str20 = "com a m\u00EDnim";
             }
             ({ origin, minimum } = code);
-            const str51 = minimum.toString();
+            const str53 = minimum.toString();
             if (obj2[code.origin] ?? null) {
               const _HermesInternal11 = HermesInternal;
               combined3 =
-                "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32\u0E01\u0E33\u0E2B\u0E19\u0E14: " +
-                origin +
-                " \u0E04\u0E27\u0E23\u0E21\u0E35" +
-                str18 +
-                " " +
-                str51 +
-                " " +
-                tmp15.unit;
+                "Massa petit: s'esperava que " + origin + " contingu\u00E9s " + str20 + " " + str53 + " " + tmp17.unit;
             } else {
               const _HermesInternal10 = HermesInternal;
-              combined3 =
-                "\u0E19\u0E49\u0E2D\u0E22\u0E01\u0E27\u0E48\u0E32\u0E01\u0E33\u0E2B\u0E19\u0E14: " +
-                origin +
-                " \u0E04\u0E27\u0E23\u0E21\u0E35" +
-                str18 +
-                " " +
-                str51;
+              combined3 = "Massa petit: s'esperava que " + origin + " fos " + str20 + " " + str53;
             }
             return combined3;
           }
@@ -211,85 +174,67 @@ export default function default_1() {
             let combined4;
             if ("starts_with" === code.format) {
               const _HermesInternal9 = HermesInternal;
-              combined4 =
-                '\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E02\u0E36\u0E49\u0E19\u0E15\u0E49\u0E19\u0E14\u0E49\u0E27\u0E22 "' +
-                code.prefix +
-                '"';
+              combined4 = 'Format inv\u00E0lid: ha de comen\u00E7ar amb "' + code.prefix + '"';
             } else if ("ends_with" === code.format) {
               const _HermesInternal8 = HermesInternal;
-              combined4 =
-                '\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E25\u0E07\u0E17\u0E49\u0E32\u0E22\u0E14\u0E49\u0E27\u0E22 "' +
-                code.suffix +
-                '"';
+              combined4 = "Format inv\u00E0lid: ha d'acabar amb \"" + code.suffix + '"';
             } else if ("includes" === code.format) {
               const _HermesInternal7 = HermesInternal;
-              combined4 =
-                '\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E15\u0E49\u0E2D\u0E07\u0E21\u0E35 "' +
-                code.includes +
-                '" \u0E2D\u0E22\u0E39\u0E48\u0E43\u0E19\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21';
+              combined4 = "Format inv\u00E0lid: ha d'incloure \"" + code.includes + '"';
             } else if ("regex" === code.format) {
               const _HermesInternal6 = HermesInternal;
-              combined4 =
-                "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E15\u0E49\u0E2D\u0E07\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14 " +
-                code.pattern;
+              combined4 = "Format inv\u00E0lid: ha de coincidir amb el patr\u00F3 " + code.pattern;
             } else {
               const format = closure_1[code.format] ?? code.format;
               const _HermesInternal5 = HermesInternal;
-              combined4 =
-                "\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: " +
-                format;
+              combined4 = "Format inv\u00E0lid per a " + format;
             }
             return combined4;
           }
           case "not_multiple_of": {
             const _HermesInternal4 = HermesInternal;
-            return (
-              "\u0E15\u0E31\u0E27\u0E40\u0E25\u0E02\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E15\u0E49\u0E2D\u0E07\u0E40\u0E1B\u0E47\u0E19\u0E08\u0E33\u0E19\u0E27\u0E19\u0E17\u0E35\u0E48\u0E2B\u0E32\u0E23\u0E14\u0E49\u0E27\u0E22 " +
-              code.divisor +
-              " \u0E44\u0E14\u0E49\u0E25\u0E07\u0E15\u0E31\u0E27"
-            );
+            return "N\u00FAmero inv\u00E0lid: ha de ser m\u00FAltiple de " + code.divisor;
           }
           case "unrecognized_keys": {
+            let str3 = "";
+            let str4 = "";
+            if (code.keys.length > 1) {
+              str4 = "s";
+            }
+            if (code.keys.length > 1) {
+              str3 = "s";
+            }
             const _HermesInternal3 = HermesInternal;
-            return (
-              "\u0E1E\u0E1A\u0E04\u0E35\u0E22\u0E4C\u0E17\u0E35\u0E48\u0E44\u0E21\u0E48\u0E23\u0E39\u0E49\u0E08\u0E31\u0E01: " +
-              captureStackTrace.joinValues(code.keys, ", ")
-            );
+            return "Clau" + str4 + " no reconeguda" + str3 + ": " + captureStackTrace.joinValues(code.keys, ", ");
           }
           case "invalid_key": {
             const _HermesInternal2 = HermesInternal;
-            return (
-              "\u0E04\u0E35\u0E22\u0E4C\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " +
-              code.origin
-            );
+            return "Clau inv\u00E0lida a " + code.origin;
           }
           case "invalid_union": {
-            return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07: \u0E44\u0E21\u0E48\u0E15\u0E23\u0E07\u0E01\u0E31\u0E1A\u0E23\u0E39\u0E1B\u0E41\u0E1A\u0E1A\u0E22\u0E39\u0E40\u0E19\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48\u0E01\u0E33\u0E2B\u0E19\u0E14\u0E44\u0E27\u0E49";
+            return "Entrada inv\u00E0lida";
           }
           case "invalid_element": {
             const _HermesInternal = HermesInternal;
-            return (
-              "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07\u0E43\u0E19 " +
-              code.origin
-            );
+            return "Element inv\u00E0lid a " + code.origin;
           }
           default: {
-            return "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E44\u0E21\u0E48\u0E16\u0E39\u0E01\u0E15\u0E49\u0E2D\u0E07";
+            return "Entrada inv\u00E0lida";
           }
         }
       },
     };
     const obj2 = {
-      string: { unit: "\u0E15\u0E31\u0E27\u0E2D\u0E31\u0E01\u0E29\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" },
-      file: { unit: "\u0E44\u0E1A\u0E15\u0E4C", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" },
-      array: { unit: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" },
-      set: { unit: "\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23", verb: "\u0E04\u0E27\u0E23\u0E21\u0E35" },
+      string: { unit: "car\u00E0cters", verb: "contenir" },
+      file: { unit: "bytes", verb: "contenir" },
+      array: { unit: "elements", verb: "contenir" },
+      set: { unit: "elements", verb: "contenir" },
     };
     closure_1 = {
-      regex: "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E17\u0E35\u0E48\u0E1B\u0E49\u0E2D\u0E19",
-      email: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48\u0E2D\u0E35\u0E40\u0E21\u0E25",
+      regex: "entrada",
+      email: "adre\u00E7a electr\u00F2nica",
       url: "URL",
-      emoji: "\u0E2D\u0E34\u0E42\u0E21\u0E08\u0E34",
+      emoji: "emoji",
       uuid: "UUID",
       uuidv4: "UUIDv4",
       uuidv6: "UUIDv6",
@@ -300,28 +245,22 @@ export default function default_1() {
       ulid: "ULID",
       xid: "XID",
       ksuid: "KSUID",
-      datetime: "\u0E27\u0E31\u0E19\u0E17\u0E35\u0E48\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO",
-      date: "\u0E27\u0E31\u0E19\u0E17\u0E35\u0E48\u0E41\u0E1A\u0E1A ISO",
-      time: "\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO",
-      duration: "\u0E0A\u0E48\u0E27\u0E07\u0E40\u0E27\u0E25\u0E32\u0E41\u0E1A\u0E1A ISO",
-      ipv4: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48 IPv4",
-      ipv6: "\u0E17\u0E35\u0E48\u0E2D\u0E22\u0E39\u0E48 IPv6",
-      cidrv4: "\u0E0A\u0E48\u0E27\u0E07 IP \u0E41\u0E1A\u0E1A IPv4",
-      cidrv6: "\u0E0A\u0E48\u0E27\u0E07 IP \u0E41\u0E1A\u0E1A IPv6",
-      base64: "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A Base64",
-      base64url:
-        "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A Base64 \u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A URL",
-      json_string: "\u0E02\u0E49\u0E2D\u0E04\u0E27\u0E32\u0E21\u0E41\u0E1A\u0E1A JSON",
-      e164: "\u0E40\u0E1A\u0E2D\u0E23\u0E4C\u0E42\u0E17\u0E23\u0E28\u0E31\u0E1E\u0E17\u0E4C\u0E23\u0E30\u0E2B\u0E27\u0E48\u0E32\u0E07\u0E1B\u0E23\u0E30\u0E40\u0E17\u0E28 (E.164)",
-      jwt: "\u0E42\u0E17\u0E40\u0E04\u0E19 JWT",
-      template_literal: "\u0E02\u0E49\u0E2D\u0E21\u0E39\u0E25\u0E17\u0E35\u0E48\u0E1B\u0E49\u0E2D\u0E19",
+      datetime: "data i hora ISO",
+      date: "data ISO",
+      time: "hora ISO",
+      duration: "durada ISO",
+      ipv4: "adre\u00E7a IPv4",
+      ipv6: "adre\u00E7a IPv6",
+      cidrv4: "rang IPv4",
+      cidrv6: "rang IPv6",
+      base64: "cadena codificada en base64",
+      base64url: "cadena codificada en base64url",
+      json_string: "cadena JSON",
+      e164: "n\u00FAmero E.164",
+      jwt: "JWT",
+      template_literal: "entrada",
     };
-    let closure_2 = {
-      nan: "NaN",
-      number: "\u0E15\u0E31\u0E27\u0E40\u0E25\u0E02",
-      array: "\u0E2D\u0E32\u0E23\u0E4C\u0E40\u0E23\u0E22\u0E4C (Array)",
-      null: "\u0E44\u0E21\u0E48\u0E21\u0E35\u0E04\u0E48\u0E32 (null)",
-    };
+    let closure_2 = { nan: "NaN" };
     return obj;
   } else {
     throw new TypeError("Trying to call a non-function");

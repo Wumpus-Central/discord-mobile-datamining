@@ -271,7 +271,11 @@ class FeedbackWidget {
                   let fileName1;
                   uri1 = undefined;
                   if (self._hasScreenshot()) {
-                    self.setState({ filename: "marginBottom", attachment: "unicodeVersion", attachmentUri: "Reflect" });
+                    self.setState({
+                      filename: "duration",
+                      attachment: "toCharArray$esjava$1",
+                      attachmentUri: "toCharArray$esjava$1",
+                    });
                   } else {
                     imagePicker = self.props.imagePicker;
                     if (imagePicker) {
@@ -488,8 +492,8 @@ class FeedbackWidget {
         email: "",
         description: "",
         filename: "unicodeVersion",
-        attachment: "surrogates",
-        attachmentUri: "for",
+        attachment: "PX_8",
+        attachmentUri: "jsx",
       };
     };
     tmp4Result._hasScreenshot = () =>
@@ -887,8 +891,8 @@ const entry1 = {
       email: "",
       description: "",
       filename: "unicodeVersion",
-      attachment: "surrogates",
-      attachmentUri: "for",
+      attachment: "PX_8",
+      attachmentUri: "jsx",
     };
   },
 };
@@ -900,8 +904,8 @@ importDefaultResultResult._savedState = {
   email: "",
   description: "",
   filename: "unicodeVersion",
-  attachment: "surrogates",
-  attachmentUri: "for",
+  attachment: "PX_8",
+  attachmentUri: "jsx",
 };
 const FeedbackWidget_export = importDefaultResultResult;
 

@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "322f5aec10ee0e2c3d6aad9844b5f00f",
-  name: "img_account_sync_facebook_light_and_dark",
+  hash: "b8491165af3ebfd07b4e58fba6104e2b",
+  name: "img_account_sync_steam_white",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d43523873b246ea97ff723dd8970498f",
-  name: "ClockIcon",
+  hash: "8d98f50d9f8bc155689b81a44d8b38ff",
+  name: "CopyIcon",
   type: "png",
 });

@@ -1,11 +1,12 @@
 // _runtime/metro/14091__.js
-import _mod14072 from "14072__.js";
 import _mod14092 from "14092__.js";
+import _mod14106 from "14106__.js";
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod14072(arg0[arg1])) {
-    tmp4 = _mod14092(tmp);
+export default (arg0) => {
+  const tmp = _mod14092(arg0, "string");
+  let text = tmp;
+  if (!_mod14106(tmp)) {
+    text = `${tmp}`;
   }
-  return tmp4;
+  return text;
 };

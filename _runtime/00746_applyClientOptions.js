@@ -6,7 +6,7 @@ import _mod750 from "metro/00750__.js";
 
 let data, integrations;
 
-const f81851 = (stacktrace) => {
+const f81984 = (stacktrace) => {
   stacktrace = stacktrace.stacktrace;
   if (stacktrace != null) {
     const frames = stacktrace.frames;
@@ -73,7 +73,7 @@ export const applyDebugIds = function applyDebugIds(exception, arg1) {
   if (exception != null) {
     const values = exception.values;
     if (values != null) {
-      const item = values.forEach(f81851);
+      const item = values.forEach(f81984);
     }
   }
 };
@@ -193,7 +193,7 @@ export const prepareEvent = function prepareEvent(normalizeDepth, event_id, even
     if (exception != null) {
       let values = exception.values;
       if (values != null) {
-        let item = values.forEach(f81851);
+        let item = values.forEach(f81984);
       }
     }
   }

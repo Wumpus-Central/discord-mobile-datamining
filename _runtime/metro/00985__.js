@@ -40,7 +40,7 @@ export const registerWebWorker = function registerWebWorker(self) {
   }
 };
 export const webWorkerIntegration = registerSpanErrorInstrumentation.defineIntegration((worker) => {
-  const f82746 = (event) => {
+  const f82879 = (event) => {
     let obj5;
     const data = event.data;
     let flag = false;
@@ -152,11 +152,11 @@ export const webWorkerIntegration = registerSpanErrorInstrumentation.defineInteg
         arr = items;
       }
       const item = arr.forEach((addEventListener) => {
-        const listener = addEventListener.addEventListener("message", f82746);
+        const listener = addEventListener.addEventListener("message", f82879);
       });
     },
     addWorker(addEventListener) {
-      const listener = addEventListener.addEventListener("message", f82746);
+      const listener = addEventListener.addEventListener("message", f82879);
     },
   };
   return obj;

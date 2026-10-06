@@ -1,13 +1,26 @@
 // _runtime/04073_formatRelative.js
 let closure_0 = {
-  lastWeek: "eeee 'trecut\u0103 la' p",
-  yesterday: "'ieri la' p",
-  today: "'ast\u0103zi la' p",
-  tomorrow: "'m\u00E2ine la' p",
-  nextWeek: "eeee 'viitoare la' p",
+  lastWeek(getUTCDay) {
+    let str;
+    const uTCDay = getUTCDay.getUTCDay();
+    if (0 === uTCDay) {
+      str = "\u00FAltimo";
+    } else {
+      str = "\u00FAltima";
+    }
+    return "'" + str + "' eeee '\u00E0s' p";
+  },
+  yesterday: "'ontem \u00E0s' p",
+  today: "'hoje \u00E0s' p",
+  tomorrow: "'amanh\u00E3 \u00E0s' p",
+  nextWeek: "eeee '\u00E0s' p",
   other: "P",
 };
 
 export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+  let tmpResult = tmp;
+  if (typeof closure_0[arg0] === "function") {
+    tmpResult = tmp(arg1);
+  }
+  return tmpResult;
 }

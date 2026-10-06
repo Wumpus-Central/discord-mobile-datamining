@@ -4,7 +4,7 @@ import ReactNativeLibraries from "../00873_ReactNativeLibraries.js";
 import _mod878 from "00878__.js";
 import fillTyped from "../01030_fillTyped.js";
 
-const f82875 = (arg0) => {
+const f83008 = (arg0) => {
   closure_0 = arg0;
   return () => {
     const items = [...arguments];
@@ -18,7 +18,7 @@ function patchAppRegistryRunApplication(arg0) {
   AppRegistry = ReactNativeLibraries.ReactNativeLibraries.AppRegistry;
   if (AppRegistry) {
     const tmpResult = fillTyped;
-    tmpResult.fillTyped(AppRegistry, "runApplication", f82875);
+    tmpResult.fillTyped(AppRegistry, "runApplication", f83008);
   }
 }
 
@@ -34,7 +34,7 @@ export const appRegistryIntegration = () => {
           AppRegistry = ReactNativeLibraries.ReactNativeLibraries.AppRegistry;
           if (AppRegistry) {
             const tmpResult = fillTyped;
-            tmpResult.fillTyped(AppRegistry, "runApplication", f82875);
+            tmpResult.fillTyped(AppRegistry, "runApplication", f83008);
           }
         } else {
           throw new TypeError("Trying to call a non-function");

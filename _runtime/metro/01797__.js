@@ -21,7 +21,7 @@ const __initData = {
 export const useAnimatedRef = module_1646
   ? function useAnimatedRefWeb() {
       let fun;
-      const f85052 = (getScrollableNode) => {
+      const f85186 = (getScrollableNode) => {
         let scrollableNode;
         if (getScrollableNode.getScrollableNode) {
           scrollableNode = getScrollableNode.getScrollableNode();
@@ -120,7 +120,7 @@ export const useAnimatedRef = module_1646
         }),
         1,
       )[0];
-      const f85055 = (viewConfig) => {
+      const f85189 = (viewConfig) => {
         let fn;
         const obj = first(first1[2]);
         if (obj.isFabric()) {
@@ -142,7 +142,7 @@ export const useAnimatedRef = module_1646
           };
         }
         current.value = fn(viewConfig);
-        if (f85055) {
+        if (f85189) {
           let str;
           if (viewConfig != null) {
             viewConfig = viewConfig.viewConfig;

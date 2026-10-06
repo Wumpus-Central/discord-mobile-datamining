@@ -1,59 +1,63 @@
 // _runtime/metro/10194__.js
+import _mod10195 from "10195__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import map from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-class OverlapRemovalRefiner {
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    let tmp2;
+    const tmp = __esModule;
+    if (!tmp) {
+      tmp2 = { default: __esModule };
+      const obj = { default: __esModule };
+    } else {
+      tmp2 = __esModule;
+    }
+    return tmp2;
+  };
+}
+class ENMergeDateTimeRefiner {
   constructor() {
-    _classCallCheck(this, OverlapRemovalRefiner);
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, ENMergeDateTimeRefiner);
+    const obj = _getPrototypeOf(ENMergeDateTimeRefiner);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    return map(self, constructResult);
   }
 }
+_inherits(ENMergeDateTimeRefiner, fn(_mod10195).default);
 const entry = {
-  key: "refine",
-  value: function refine(debug, arg1) {
-    const self = this;
-    if (arg1.length < 2) {
-      return arg1;
-    } else {
-      const items = [];
-      let first = arg1[0];
-      let num = 1;
-      let num2 = 1;
-      let tmp8 = first;
-      if (1 < arg1.length) {
-        do {
-          let tmp4;
-          let tmp = arg1[num];
-          if (tmp.index >= first.index + first.text.length) {
-            let arr = items.push(first);
-            tmp4 = tmp;
-          } else {
-            first = null;
-            let closure_1 = null;
-            if (tmp.text.length > first.text.length) {
-              first = tmp;
-              closure_1 = first;
-              tmp4 = tmp;
-            } else {
-              closure_1 = tmp;
-              tmp4 = first;
-            }
-            let debugResult = debug.debug(() => {
-              console.log("" + self.constructor.name + " remove " + closure_1 + " by " + first);
-            });
-          }
-          num = num2 + 1;
-          first = tmp4;
-          tmp8 = tmp4;
-          num2 = num;
-        } while (num < arg1.length);
-      }
-      if (null != tmp8) {
-        items.push(tmp8);
-      }
-      return items;
-    }
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(T|at|after|before|on|of|,|-|\\.|\u2219|:)?\\s*$");
+    return regExp;
   },
 };
-let items = [entry];
+const items = [entry];
 
-export default _createClass(OverlapRemovalRefiner, items);
+export default _createClass(ENMergeDateTimeRefiner, items);

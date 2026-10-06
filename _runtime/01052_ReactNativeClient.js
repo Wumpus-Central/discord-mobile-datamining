@@ -181,7 +181,7 @@ let items = [
     key: "captureUserFeedback",
     value: function captureUserFeedback(event_id) {
       const obj = header;
-      const obj2 = { metadata: this._options._metadata, dsn: this.getDsn(), tunnel: "r" };
+      const obj2 = { metadata: this._options._metadata, dsn: this.getDsn(), tunnel: "Array" };
       this.sendEnvelope(obj.createUserFeedbackEnvelope(event_id, obj2));
     },
   },

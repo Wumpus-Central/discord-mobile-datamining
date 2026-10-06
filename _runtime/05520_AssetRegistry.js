@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "eb232cce91e81121373a2c7b4cc58581",
-  name: "img_account_sync_riot_light_and_dark",
+  hash: "269225999db4429a7f3e74da6725c7b9",
+  name: "img_account_sync_playstation_white",
   type: "png",
 });

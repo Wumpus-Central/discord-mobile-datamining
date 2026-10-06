@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "30bd17a4fc8d423d981d2ea586a3ca6e",
-  name: "BoostGemIcon",
+  hash: "9c9eaf9e089e1e9ddafb13abb59b28d7",
+  name: "MicrophoneSlashIcon",
   type: "png",
 });

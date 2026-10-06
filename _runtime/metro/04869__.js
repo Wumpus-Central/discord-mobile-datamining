@@ -1,0 +1,16 @@
+// _runtime/metro/04869__.js
+import "PATTERN_CHARS";
+import PATTERN_CHARS_mod from "../04870_PATTERN_CHARS.js";
+
+let PATTERN_CHARS;
+const obj = {
+  success: PATTERN_CHARS.pattern("oO.O"),
+  error: PATTERN_CHARS.pattern("OO.OO"),
+  warning: PATTERN_CHARS.pattern("O.O"),
+  heartbeat: PATTERN_CHARS.pattern("oO--oO"),
+  tripleClick: PATTERN_CHARS.pattern("o.o.o"),
+  notification: PATTERN_CHARS.pattern("o-O=o"),
+};
+PATTERN_CHARS = PATTERN_CHARS_mod;
+
+export const Patterns = obj;

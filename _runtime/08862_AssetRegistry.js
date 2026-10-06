@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 240,
-  height: 152,
+  httpServerLocation: "/assets/images/native/custom_app_icons/MidnightPrismIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "1c56c6a8d7541177ea8c3d88699db89c",
-  name: "img_guild_cap_upsell_light",
+  hash: "44efb56cf36c8202533bcbc557ebf8e5",
+  name: "MidnightPrismIcon",
   type: "png",
 });

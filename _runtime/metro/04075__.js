@@ -9,6 +9,7 @@ let items3;
 let items4;
 let items5;
 let items6;
+let items7;
 let obj;
 let obj10;
 let obj11;
@@ -44,19 +45,19 @@ const date = {
 };
 obj6 = {
   matchPatterns: {
-    narrow: /^(Î|D)/i,
-    abbreviated: /^(Î\.?\s?d\.?\s?C\.?|Î\.?\s?e\.?\s?n\.?|D\.?\s?C\.?|e\.?\s?n\.?)/i,
-    wide: /^(Înainte de Cristos|Înaintea erei noastre|După Cristos|Era noastră)/i,
+    narrow: /^(ac|dc|a|d)/i,
+    abbreviated: /^(a\.?\s?c\.?|d\.?\s?c\.?)/i,
+    wide: /^(antes de cristo|depois de cristo)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj7,
   defaultParseWidth: "any",
 };
 obj7 = { any: items, wide: items1 };
-items = [/^ÎC/i, /^DC/i];
-items1 = [/^(Înainte de Cristos|Înaintea erei noastre)/i, /^(După Cristos|Era noastră)/i];
+items = [/^ac/i, /^dc/i];
+items1 = [/^antes de cristo/i, /^depois de cristo/i];
 obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^trimestrul [1234]/i },
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^[1234](º)? trimestre/i },
   defaultMatchWidth: "wide",
   parsePatterns: obj9,
   defaultParseWidth: "any",
@@ -68,35 +69,36 @@ obj9 = { any: items2 };
 items2 = [/1/i, /2/i, /3/i, /4/i];
 obj10 = {
   matchPatterns: {
-    narrow: /^[ifmaasond]/i,
-    abbreviated: /^(ian|feb|mar|apr|mai|iun|iul|aug|sep|oct|noi|dec)/i,
-    wide: /^(ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|octombrie|noiembrie|decembrie)/i,
+    narrow: /^[jfmajsond]/i,
+    abbreviated: /^(jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)/i,
+    wide: /^(janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj11,
   defaultParseWidth: "any",
 };
 obj11 = { narrow: items3, any: items4 };
-items3 = [/^i/i, /^f/i, /^m/i, /^a/i, /^m/i, /^i/i, /^i/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-items4 = [/^ia/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^iun/i, /^iul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
+items3 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+items4 = [/^ja/i, /^fev/i, /^mar/i, /^abr/i, /^mai/i, /^jun/i, /^jul/i, /^ago/i, /^set/i, /^out/i, /^nov/i, /^dez/i];
 obj12 = {
   matchPatterns: {
-    narrow: /^[dlmjvs]/i,
-    short: /^(d|l|ma|mi|j|v|s)/i,
-    abbreviated: /^(dum|lun|mar|mie|jo|vi|sâ)/i,
-    wide: /^(duminica|luni|marţi|miercuri|joi|vineri|sâmbătă)/i,
+    narrow: /^(dom|[23456]ª?|s[aá]b)/i,
+    short: /^(dom|[23456]ª?|s[aá]b)/i,
+    abbreviated: /^(dom|seg|ter|qua|qui|sex|s[aá]b)/i,
+    wide: /^(domingo|(segunda|ter[cç]a|quarta|quinta|sexta)([- ]feira)?|s[aá]bado)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj13,
   defaultParseWidth: "any",
 };
-obj13 = { narrow: items5, any: items6 };
-items5 = [/^d/i, /^l/i, /^m/i, /^m/i, /^j/i, /^v/i, /^s/i];
-items6 = [/^d/i, /^l/i, /^ma/i, /^mi/i, /^j/i, /^v/i, /^s/i];
+obj13 = { short: items5, narrow: items6, any: items7 };
+items5 = [/^d/i, /^2/i, /^3/i, /^4/i, /^5/i, /^6/i, /^s[aá]/i];
+items6 = [/^d/i, /^2/i, /^3/i, /^4/i, /^5/i, /^6/i, /^s[aá]/i];
+items7 = [/^d/i, /^seg/i, /^t/i, /^qua/i, /^qui/i, /^sex/i, /^s[aá]b/i];
 obj14 = {
   matchPatterns: {
-    narrow: /^(a|p|mn|a|(dimineaţa|după-amiaza|seara|noaptea))/i,
-    any: /^([ap]\.?\s?m\.?|miezul nopții|amiaza|(dimineaţa|după-amiaza|seara|noaptea))/i,
+    narrow: /^(a|p|mn|md|(da) (manhã|tarde|noite))/i,
+    any: /^([ap]\.?\s?m\.?|meia[-\s]noite|meio[-\s]dia|(da) (manhã|tarde|noite))/i,
   },
   defaultMatchWidth: "any",
   parsePatterns: obj15,
@@ -106,16 +108,16 @@ obj15 = {
   any: {
     am: /^a/i,
     pm: /^p/i,
-    midnight: /^mn/i,
-    noon: /amiaza/i,
-    morning: /dimineaţa/i,
-    afternoon: /după-amiaza/i,
-    evening: /seara/i,
-    night: /noaptea/i,
+    midnight: /^mn|^meia[-\s]noite/i,
+    noon: /^md|^meio[-\s]dia/i,
+    morning: /manhã/i,
+    afternoon: /tarde/i,
+    evening: /tarde/i,
+    night: /noite/i,
   },
 };
 obj5 = {
-  matchPattern: /^(\d+)?/i,
+  matchPattern: /^(\d+)[ºªo]?/i,
   parsePattern: /\d+/i,
   valueCallback(match) {
     return parseInt(match, 10);

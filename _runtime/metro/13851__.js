@@ -1,4 +1,13 @@
 // _runtime/metro/13851__.js
-import _mod13845 from "13845__.js";
+const tmp = Number.MAX_SAFE_INTEGER || 9007199254740991;
 
-export default (arg0, arg1, arg2) => _mod13845(arg0, arg1, arg2) > 0;
+export default {
+  MAX_LENGTH: 256,
+  MAX_SAFE_COMPONENT_LENGTH: 16,
+  MAX_SAFE_BUILD_LENGTH: 250,
+  MAX_SAFE_INTEGER: tmp,
+  RELEASE_TYPES: ["major", "premajor", "minor", "preminor", "patch", "prepatch", "prerelease"],
+  SEMVER_SPEC_VERSION: "2.0.0",
+  FLAG_INCLUDE_PRERELEASE: 1,
+  FLAG_LOOSE: 2,
+};

@@ -1,8 +1,4 @@
 // _runtime/metro/04713__.js
-const fn =
-  Array.isArray ||
-  ((arg0) => {
-    return "[object Array]" == toString.call(arg0);
-  });
+import _mod4714 from "04714__.js";
 
-export default fn;
+export default _mod4714();

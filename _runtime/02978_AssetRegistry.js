@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/game_server",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9nYW1lX3NlcnZlcg==",
   scales: [1],
-  hash: "b965678ebf8b66d4d84833f3d0cfaba0",
-  name: "GameServer.compiled.messages",
+  hash: "dc566f514e2974c4ba844a9cd3a36737",
+  name: "da.messages.dc566f514e2974c4ba844a9cd3a36737.compiled.messages",
   type: "jsona",
 });

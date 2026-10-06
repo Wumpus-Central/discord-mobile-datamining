@@ -1,0 +1,15 @@
+// _runtime/07573_processFonts.js
+import _modDef26 from "metro/00026__.js";
+
+export const processFonts = function processFonts(items3) {
+  const fontFamily = _modDef26.fontFamily;
+  let _process;
+  if (fontFamily != null) {
+    _process = fontFamily.process;
+  }
+  let mapped = items3;
+  if (typeof _process === "function") {
+    mapped = items3.map(_process);
+  }
+  return mapped;
+};

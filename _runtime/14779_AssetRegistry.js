@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "17f53f43d68e8a19fbcd8776cb4d1537",
-  name: "RefreshIcon",
+  hash: "d596d6fe17dcf89145bacf83df3826b6",
+  name: "PuzzlePieceIcon",
   type: "png",
 });

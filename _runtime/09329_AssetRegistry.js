@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/voice_calls",
-  width: 24,
-  height: 24,
-  scales: [1, 2],
-  hash: "01b615b81a2755a195f3be7dbb482eef",
-  name: "voice_bar_speaker_new",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 88,
+  height: 80,
+  scales: [2, 3],
+  hash: "cdacc9b330d74f767eb28d253e6930f0",
+  name: "stage-sparkles",
   type: "png",
 });

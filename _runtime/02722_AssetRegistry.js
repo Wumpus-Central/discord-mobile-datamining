@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/notifications/profile_updates/sender",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ub3RpZmljYXRpb25zL3Byb2ZpbGVfdXBkYXRlcy9zZW5kZXI=",
   scales: [1],
-  hash: "7f05ad73b5da2adbe55e7968cf15ccf8",
-  name: "NotifyFriendsOnProfileUpdate.compiled.messages",
+  hash: "1fa909244a7805306d257ddcd465580a",
+  name: "da.messages.1fa909244a7805306d257ddcd465580a.compiled.messages",
   type: "jsona",
 });

@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wYXJ0bmVyX3BlcmtzL3hib3gvcGFydG5lcl9wYXNz",
+  httpServerLocation: "/assets/modules/premium/rust_3pp",
   scales: [1],
-  hash: "adb637470501564d8851ee7d1cb9a9a1",
-  name: "uk.messages.adb637470501564d8851ee7d1cb9a9a1.compiled.messages",
+  hash: "354571feac5b6fb5fc9502ef0519a4c8",
+  name: "Rust3PP.compiled.messages",
   type: "jsona",
 });

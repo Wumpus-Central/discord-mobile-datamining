@@ -15,51 +15,31 @@ if (!buildLocalizeFn) {
 }
 const date = {
   ordinalNumber(arg0, unit) {
-    const NumberResult = Number(arg0);
+    let str3;
     unit = undefined;
+    const _String = String;
     if (null != unit) {
       unit = unit.unit;
     }
-    if ("quarter" === unit) {
-      if (1 === NumberResult) {
-        return "I";
-      } else if (2 === NumberResult) {
-        return "II";
-      } else if (3 === NumberResult) {
-        return "III";
-      } else if (4 === NumberResult) {
-        return "IV";
+    const _StringResult = _String(unit);
+    const NumberResult = Number(arg0);
+    if ("date" === _StringResult) {
+      let str5;
+      if (3 === NumberResult) {
+        str5 = "-\u0454";
+      } else {
+        str5 = "-\u0435";
       }
-    } else if ("day" === unit) {
-      if (1 === NumberResult) {
-        return "th\u1EE9 2";
-      } else if (2 === NumberResult) {
-        return "th\u1EE9 3";
-      } else if (3 === NumberResult) {
-        return "th\u1EE9 4";
-      } else if (4 === NumberResult) {
-        return "th\u1EE9 5";
-      } else if (5 === NumberResult) {
-        return "th\u1EE9 6";
-      } else if (6 === NumberResult) {
-        return "th\u1EE9 7";
-      } else if (7 === NumberResult) {
-        return "ch\u1EE7 nh\u1EADt";
+      str3 = str5;
+    } else {
+      if ("minute" !== _StringResult) {
+        if ("second" !== _StringResult) {
+          str3 = "-\u0439";
+        }
       }
-    } else if ("week" === unit) {
-      let str5 = "th\u1EE9 nh\u1EA5t";
-      if (1 !== NumberResult) {
-        str5 = `thứ ${tmp}`;
-      }
-      return str5;
-    } else if ("dayOfYear" === unit) {
-      let str4 = "\u0111\u1EA7u ti\u00EAn";
-      if (1 !== NumberResult) {
-        str4 = `thứ ${tmp}`;
-      }
-      return str4;
+      str3 = "-\u0430";
     }
-    return String(NumberResult);
+    return NumberResult + str3;
   },
   era: obj.default(obj3),
   quarter: obj.default(obj4),
@@ -69,108 +49,157 @@ const date = {
 };
 obj3 = {
   values: {
-    narrow: ["TCN", "SCN"],
-    abbreviated: ["tr\u01B0\u1EDBc CN", "sau CN"],
-    wide: ["tr\u01B0\u1EDBc C\u00F4ng Nguy\u00EAn", "sau C\u00F4ng Nguy\u00EAn"],
+    narrow: ["\u0434\u043E \u043D.\u0435.", "\u043D.\u0435."],
+    abbreviated: ["\u0434\u043E \u043D. \u0435.", "\u043D. \u0435."],
+    wide: [
+      "\u0434\u043E \u043D\u0430\u0448\u043E\u0457 \u0435\u0440\u0438",
+      "\u043D\u0430\u0448\u043E\u0457 \u0435\u0440\u0438",
+    ],
   },
   defaultWidth: "wide",
 };
 obj4 = {
   values: {
     narrow: ["1", "2", "3", "4"],
-    abbreviated: ["Q1", "Q2", "Q3", "Q4"],
-    wide: ["Qu\u00FD 1", "Qu\u00FD 2", "Qu\u00FD 3", "Qu\u00FD 4"],
+    abbreviated: [
+      "1-\u0439 \u043A\u0432.",
+      "2-\u0439 \u043A\u0432.",
+      "3-\u0439 \u043A\u0432.",
+      "4-\u0439 \u043A\u0432.",
+    ],
+    wide: [
+      "1-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B",
+      "2-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B",
+      "3-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B",
+      "4-\u0439 \u043A\u0432\u0430\u0440\u0442\u0430\u043B",
+    ],
   },
   defaultWidth: "wide",
-  formattingValues: {
-    narrow: ["1", "2", "3", "4"],
-    abbreviated: ["Q1", "Q2", "Q3", "Q4"],
-    wide: ["qu\u00FD I", "qu\u00FD II", "qu\u00FD III", "qu\u00FD IV"],
-  },
-  defaultFormattingWidth: "wide",
   argumentCallback(arg0) {
     return arg0 - 1;
   },
 };
 obj5 = {
   values: {
-    narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+    narrow: [
+      "\u0421",
+      "\u041B",
+      "\u0411",
+      "\u041A",
+      "\u0422",
+      "\u0427",
+      "\u041B",
+      "\u0421",
+      "\u0412",
+      "\u0416",
+      "\u041B",
+      "\u0413",
+    ],
     abbreviated: [
-      "Thg 1",
-      "Thg 2",
-      "Thg 3",
-      "Thg 4",
-      "Thg 5",
-      "Thg 6",
-      "Thg 7",
-      "Thg 8",
-      "Thg 9",
-      "Thg 10",
-      "Thg 11",
-      "Thg 12",
+      "\u0441\u0456\u0447.",
+      "\u043B\u044E\u0442.",
+      "\u0431\u0435\u0440\u0435\u0437.",
+      "\u043A\u0432\u0456\u0442.",
+      "\u0442\u0440\u0430\u0432.",
+      "\u0447\u0435\u0440\u0432.",
+      "\u043B\u0438\u043F.",
+      "\u0441\u0435\u0440\u043F.",
+      "\u0432\u0435\u0440\u0435\u0441.",
+      "\u0436\u043E\u0432\u0442.",
+      "\u043B\u0438\u0441\u0442\u043E\u043F.",
+      "\u0433\u0440\u0443\u0434.",
     ],
     wide: [
-      "Th\u00E1ng M\u1ED9t",
-      "Th\u00E1ng Hai",
-      "Th\u00E1ng Ba",
-      "Th\u00E1ng T\u01B0",
-      "Th\u00E1ng N\u0103m",
-      "Th\u00E1ng S\u00E1u",
-      "Th\u00E1ng B\u1EA3y",
-      "Th\u00E1ng T\u00E1m",
-      "Th\u00E1ng Ch\u00EDn",
-      "Th\u00E1ng M\u01B0\u1EDDi",
-      "Th\u00E1ng M\u01B0\u1EDDi M\u1ED9t",
-      "Th\u00E1ng M\u01B0\u1EDDi Hai",
+      "\u0441\u0456\u0447\u0435\u043D\u044C",
+      "\u043B\u044E\u0442\u0438\u0439",
+      "\u0431\u0435\u0440\u0435\u0437\u0435\u043D\u044C",
+      "\u043A\u0432\u0456\u0442\u0435\u043D\u044C",
+      "\u0442\u0440\u0430\u0432\u0435\u043D\u044C",
+      "\u0447\u0435\u0440\u0432\u0435\u043D\u044C",
+      "\u043B\u0438\u043F\u0435\u043D\u044C",
+      "\u0441\u0435\u0440\u043F\u0435\u043D\u044C",
+      "\u0432\u0435\u0440\u0435\u0441\u0435\u043D\u044C",
+      "\u0436\u043E\u0432\u0442\u0435\u043D\u044C",
+      "\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434",
+      "\u0433\u0440\u0443\u0434\u0435\u043D\u044C",
     ],
   },
   defaultWidth: "wide",
   formattingValues: {
-    narrow: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+    narrow: [
+      "\u0421",
+      "\u041B",
+      "\u0411",
+      "\u041A",
+      "\u0422",
+      "\u0427",
+      "\u041B",
+      "\u0421",
+      "\u0412",
+      "\u0416",
+      "\u041B",
+      "\u0413",
+    ],
     abbreviated: [
-      "thg 1",
-      "thg 2",
-      "thg 3",
-      "thg 4",
-      "thg 5",
-      "thg 6",
-      "thg 7",
-      "thg 8",
-      "thg 9",
-      "thg 10",
-      "thg 11",
-      "thg 12",
+      "\u0441\u0456\u0447.",
+      "\u043B\u044E\u0442.",
+      "\u0431\u0435\u0440\u0435\u0437.",
+      "\u043A\u0432\u0456\u0442.",
+      "\u0442\u0440\u0430\u0432.",
+      "\u0447\u0435\u0440\u0432.",
+      "\u043B\u0438\u043F.",
+      "\u0441\u0435\u0440\u043F.",
+      "\u0432\u0435\u0440\u0435\u0441.",
+      "\u0436\u043E\u0432\u0442.",
+      "\u043B\u0438\u0441\u0442\u043E\u043F.",
+      "\u0433\u0440\u0443\u0434.",
     ],
     wide: [
-      "th\u00E1ng 01",
-      "th\u00E1ng 02",
-      "th\u00E1ng 03",
-      "th\u00E1ng 04",
-      "th\u00E1ng 05",
-      "th\u00E1ng 06",
-      "th\u00E1ng 07",
-      "th\u00E1ng 08",
-      "th\u00E1ng 09",
-      "th\u00E1ng 10",
-      "th\u00E1ng 11",
-      "th\u00E1ng 12",
+      "\u0441\u0456\u0447\u043D\u044F",
+      "\u043B\u044E\u0442\u043E\u0433\u043E",
+      "\u0431\u0435\u0440\u0435\u0437\u043D\u044F",
+      "\u043A\u0432\u0456\u0442\u043D\u044F",
+      "\u0442\u0440\u0430\u0432\u043D\u044F",
+      "\u0447\u0435\u0440\u0432\u043D\u044F",
+      "\u043B\u0438\u043F\u043D\u044F",
+      "\u0441\u0435\u0440\u043F\u043D\u044F",
+      "\u0432\u0435\u0440\u0435\u0441\u043D\u044F",
+      "\u0436\u043E\u0432\u0442\u043D\u044F",
+      "\u043B\u0438\u0441\u0442\u043E\u043F\u0430\u0434\u0430",
+      "\u0433\u0440\u0443\u0434\u043D\u044F",
     ],
   },
   defaultFormattingWidth: "wide",
 };
 obj6 = {
   values: {
-    narrow: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
-    short: ["CN", "Th 2", "Th 3", "Th 4", "Th 5", "Th 6", "Th 7"],
-    abbreviated: ["CN", "Th\u1EE9 2", "Th\u1EE9 3", "Th\u1EE9 4", "Th\u1EE9 5", "Th\u1EE9 6", "Th\u1EE9 7"],
+    narrow: ["\u041D", "\u041F", "\u0412", "\u0421", "\u0427", "\u041F", "\u0421"],
+    short: [
+      "\u043D\u0434",
+      "\u043F\u043D",
+      "\u0432\u0442",
+      "\u0441\u0440",
+      "\u0447\u0442",
+      "\u043F\u0442",
+      "\u0441\u0431",
+    ],
+    abbreviated: [
+      "\u043D\u0435\u0434",
+      "\u043F\u043E\u043D",
+      "\u0432\u0456\u0432",
+      "\u0441\u0435\u0440",
+      "\u0447\u0442\u0432",
+      "\u043F\u0442\u043D",
+      "\u0441\u0443\u0431",
+    ],
     wide: [
-      "Ch\u1EE7 Nh\u1EADt",
-      "Th\u1EE9 Hai",
-      "Th\u1EE9 Ba",
-      "Th\u1EE9 T\u01B0",
-      "Th\u1EE9 N\u0103m",
-      "Th\u1EE9 S\u00E1u",
-      "Th\u1EE9 B\u1EA3y",
+      "\u043D\u0435\u0434\u0456\u043B\u044F",
+      "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A",
+      "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A",
+      "\u0441\u0435\u0440\u0435\u0434\u0430",
+      "\u0447\u0435\u0442\u0432\u0435\u0440",
+      "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044F",
+      "\u0441\u0443\u0431\u043E\u0442\u0430",
     ],
   },
   defaultWidth: "wide",
@@ -178,67 +207,67 @@ obj6 = {
 obj7 = {
   values: {
     narrow: {
-      am: "am",
-      pm: "pm",
-      midnight: "n\u1EEDa \u0111\u00EAm",
-      noon: "tr",
-      morning: "sg",
-      afternoon: "ch",
-      evening: "t\u1ED1i",
-      night: "\u0111\u00EAm",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u0456\u0432\u043D.",
+      noon: "\u043F\u043E\u043B.",
+      morning: "\u0440\u0430\u043D\u043E\u043A",
+      afternoon: "\u0434\u0435\u043D\u044C",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u0456\u0447",
     },
     abbreviated: {
-      am: "AM",
-      pm: "PM",
-      midnight: "n\u1EEDa \u0111\u00EAm",
-      noon: "tr\u01B0a",
-      morning: "s\u00E1ng",
-      afternoon: "chi\u1EC1u",
-      evening: "t\u1ED1i",
-      night: "\u0111\u00EAm",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u0456\u0432\u043D.",
+      noon: "\u043F\u043E\u043B.",
+      morning: "\u0440\u0430\u043D\u043E\u043A",
+      afternoon: "\u0434\u0435\u043D\u044C",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u0456\u0447",
     },
     wide: {
-      am: "SA",
-      pm: "CH",
-      midnight: "n\u1EEDa \u0111\u00EAm",
-      noon: "tr\u01B0a",
-      morning: "s\u00E1ng",
-      afternoon: "chi\u1EC1u",
-      evening: "t\u1ED1i",
-      night: "\u0111\u00EAm",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u0456\u0432\u043D\u0456\u0447",
+      noon: "\u043F\u043E\u043B\u0443\u0434\u0435\u043D\u044C",
+      morning: "\u0440\u0430\u043D\u043E\u043A",
+      afternoon: "\u0434\u0435\u043D\u044C",
+      evening: "\u0432\u0435\u0447\u0456\u0440",
+      night: "\u043D\u0456\u0447",
     },
   },
-  defaultWidth: "wide",
+  defaultWidth: "any",
   formattingValues: {
     narrow: {
-      am: "am",
-      pm: "pm",
-      midnight: "n\u1EEDa \u0111\u00EAm",
-      noon: "tr",
-      morning: "sg",
-      afternoon: "ch",
-      evening: "t\u1ED1i",
-      night: "\u0111\u00EAm",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u0456\u0432\u043D.",
+      noon: "\u043F\u043E\u043B.",
+      morning: "\u0440\u0430\u043D\u043A\u0443",
+      afternoon: "\u0434\u043D\u044F",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u043E\u0447\u0456",
     },
     abbreviated: {
-      am: "AM",
-      pm: "PM",
-      midnight: "n\u1EEDa \u0111\u00EAm",
-      noon: "tr\u01B0a",
-      morning: "s\u00E1ng",
-      afternoon: "chi\u1EC1u",
-      evening: "t\u1ED1i",
-      night: "\u0111\u00EAm",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u0456\u0432\u043D.",
+      noon: "\u043F\u043E\u043B.",
+      morning: "\u0440\u0430\u043D\u043A\u0443",
+      afternoon: "\u0434\u043D\u044F",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u043E\u0447\u0456",
     },
     wide: {
-      am: "SA",
-      pm: "CH",
-      midnight: "n\u1EEDa \u0111\u00EAm",
-      noon: "gi\u1EEFa tr\u01B0a",
-      morning: "v\u00E0o bu\u1ED5i s\u00E1ng",
-      afternoon: "v\u00E0o bu\u1ED5i chi\u1EC1u",
-      evening: "v\u00E0o bu\u1ED5i t\u1ED1i",
-      night: "v\u00E0o ban \u0111\u00EAm",
+      am: "\u0414\u041F",
+      pm: "\u041F\u041F",
+      midnight: "\u043F\u0456\u0432\u043D\u0456\u0447",
+      noon: "\u043F\u043E\u043B\u0443\u0434\u0435\u043D\u044C",
+      morning: "\u0440\u0430\u043D\u043A\u0443",
+      afternoon: "\u0434\u043D\u044F",
+      evening: "\u0432\u0435\u0447.",
+      night: "\u043D\u043E\u0447\u0456",
     },
   },
   defaultFormattingWidth: "wide",

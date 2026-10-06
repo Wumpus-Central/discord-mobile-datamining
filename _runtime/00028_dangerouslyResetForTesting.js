@@ -12,11 +12,11 @@ let closure_5 = tmp4;
 
 export function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg1) {
   let closure_0 = animatedShouldDebounceQueueFlush;
-  const f79905 = () => {
-    set.add(f79905);
+  const f80038 = () => {
+    set.add(f80038);
     let tmp5Result;
     if (closure_2_2 != null) {
-      if (closure_2_2[f79905] != null) {
+      if (closure_2_2[f80038] != null) {
         tmp5Result = tmp5();
       }
     }
@@ -25,7 +25,7 @@ export function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg
   let closure_1 = arg1;
   return () => {
     if (null == closure_2) {
-      let tmp2 = f79906();
+      let tmp2 = f80039();
       if (tmp2 == null) {
         tmp2 = closure_1;
       }
@@ -36,18 +36,18 @@ export function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg
 }
 export function createNativeFlagGetter(cdpInteractionMetricsEnabled, arg1) {
   let closure_0 = cdpInteractionMetricsEnabled;
-  const f79906 = () => {
-    const hasItem = cdpInteractionMetricsEnabled(dependencyMap[0]) || set.has(f79906) || !closure_2_5;
+  const f80039 = () => {
+    const hasItem = cdpInteractionMetricsEnabled(dependencyMap[0]) || set.has(f80039) || !closure_2_5;
     if (!hasItem) {
-      set.add(f79906);
+      set.add(f80039);
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.error("Could not access feature flag '" + f79906 + "' because native module method was not available");
+      console.error("Could not access feature flag '" + f80039 + "' because native module method was not available");
     }
     const tmp2Result = cdpInteractionMetricsEnabled(dependencyMap[0]);
     let tmp13Result;
     if (tmp2Result != null) {
-      if (tmp2Result[f79906] != null) {
+      if (tmp2Result[f80039] != null) {
         tmp13Result = tmp13();
       }
     }
@@ -56,7 +56,7 @@ export function createNativeFlagGetter(cdpInteractionMetricsEnabled, arg1) {
   let closure_1 = arg1;
   return () => {
     if (null == closure_2) {
-      let tmp2 = f79906();
+      let tmp2 = f80039();
       if (tmp2 == null) {
         tmp2 = closure_1;
       }

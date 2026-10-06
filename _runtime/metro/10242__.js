@@ -1,84 +1,100 @@
 // _runtime/metro/10242__.js
+import includeCommonConfiguration2 from "../10210_includeCommonConfiguration.js";
+import _mod10216 from "10216__.js";
+import _mod10243 from "10243__.js";
+import _mod10245 from "10245__.js";
+import _mod10246 from "10246__.js";
+import _mod10247 from "10247__.js";
+import _mod10248 from "10248__.js";
+import _mod10249 from "10249__.js";
+import _mod10250 from "10250__.js";
+import _mod10251 from "10251__.js";
+import _mod10252 from "10252__.js";
+import { Chrono } from "10170__.js";
 
-export const parseYear = function parseYear(match) {
-  if (match.match(/^[0-9]{1,4}$/)) {
-    const _parseInt3 = parseInt;
-    const parsed = parseInt(match);
-    let sum = parsed;
-    if (parsed < 100) {
-      let num3 = 2000;
-      if (parsed > 50) {
-        num3 = 1900;
-      }
-      sum = parsed + num3;
+const require = globalThis.__r;
+
+function createConfiguration() {
+  let items;
+  let items1;
+  const obj = { parsers: items, refiners: items1 };
+  const includeCommonConfiguration = includeCommonConfiguration2.includeCommonConfiguration;
+  items = [new module_10243.default(), , , ,];
+  new module_10243.default();
+  items[1] = new module_10247.default();
+  new module_10247.default();
+  items[2] = new module_10252.default();
+  new module_10252.default();
+  items[3] = new module_10248.default();
+  new module_10248.default();
+  items[4] = new module_10249.default();
+  new module_10249.default();
+  items1 = [new module_10251.default(), ,];
+  new module_10251.default();
+  items1[1] = new module_10250.default();
+  new module_10250.default();
+  items1[2] = new module_10245.default();
+  new module_10245.default();
+  const result = includeCommonConfiguration(obj, flag);
+  const refiners = result.refiners;
+  result.refiners = refiners.filter((item) => !(item instanceof module_10216.default));
+  return result;
+}
+const fn =
+  (this && this.__importDefault) ||
+  ((__esModule) => {
+    let tmp2;
+    const tmp = __esModule;
+    if (!tmp) {
+      tmp2 = { default: __esModule };
+      const obj = { default: __esModule };
+    } else {
+      tmp2 = __esModule;
     }
-    return sum;
-  } else if (match.match(/a\.?\s*c\.?/i)) {
-    const _parseInt2 = parseInt;
-    return -parseInt(match.replace(/a\.?\s*c\.?/i, ""));
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(match);
-  }
+    return tmp2;
+  });
+function createCasualConfiguration() {
+  const tmp = createConfiguration(false);
+  const parsers = tmp.parsers;
+  const unshift = parsers.unshift;
+  const _default = new module_10246.default();
+  unshift(_default);
+  return tmp;
+}
+const module_10243 = fn(_mod10243);
+const module_10245 = fn(_mod10245);
+const module_10246 = fn(_mod10246);
+const module_10247 = fn(_mod10247);
+const module_10248 = fn(_mod10248);
+const module_10249 = fn(_mod10249);
+const module_10250 = fn(_mod10250);
+const module_10251 = fn(_mod10251);
+const module_10252 = fn(_mod10252);
+const module_10216 = fn(_mod10216);
+const configuration = createConfiguration(false);
+let parsers = configuration.parsers;
+let unshift = parsers.unshift;
+let _default = new module_10246.default();
+unshift(_default);
+const chrono = new Chrono(configuration);
+const chrono1 = new require("10170__.js").Chrono(createConfiguration(true));
+const Chrono_export = require("10170__.js").Chrono;
+
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
 };
-export const WEEKDAY_DICTIONARY = {
-  domingo: 0,
-  dom: 0,
-  segunda: 1,
-  "segunda-feira": 1,
-  seg: 1,
-  "ter\u00e7a": 2,
-  "ter\u00e7a-feira": 2,
-  ter: 2,
-  quarta: 3,
-  "quarta-feira": 3,
-  qua: 3,
-  quinta: 4,
-  "quinta-feira": 4,
-  qui: 4,
-  sexta: 5,
-  "sexta-feira": 5,
-  sex: 5,
-  "s\u00e1bado": 6,
-  sabado: 6,
-  sab: 6,
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
 };
-export const MONTH_DICTIONARY = {
-  janeiro: 1,
-  jan: 1,
-  "jan.": 1,
-  fevereiro: 2,
-  fev: 2,
-  "fev.": 2,
-  "mar\u00e7o": 3,
-  mar: 3,
-  "mar.": 3,
-  abril: 4,
-  abr: 4,
-  "abr.": 4,
-  maio: 5,
-  mai: 5,
-  "mai.": 5,
-  junho: 6,
-  jun: 6,
-  "jun.": 6,
-  julho: 7,
-  jul: 7,
-  "jul.": 7,
-  agosto: 8,
-  ago: 8,
-  "ago.": 8,
-  setembro: 9,
-  set: 9,
-  "set.": 9,
-  outubro: 10,
-  out: 10,
-  "out.": 10,
-  novembro: 11,
-  nov: 11,
-  "nov.": 11,
-  dezembro: 12,
-  dez: 12,
-  "dez.": 12,
-};
-export const YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
+export { createCasualConfiguration };
+export { createConfiguration };
+export { Chrono_export as Chrono };
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

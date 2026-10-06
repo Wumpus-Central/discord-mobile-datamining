@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9vdmVybGF5L3dlYi92Mw==",
+  httpServerLocation: "/assets/modules/report_to_mod",
   scales: [1],
-  hash: "aed5e6f1b2825567e8fdc906d2ca521e",
-  name: "uk.messages.aed5e6f1b2825567e8fdc906d2ca521e.compiled.messages",
+  hash: "ec267ac9bfb9116e20a64f6afed5ac84",
+  name: "ReportToMod.compiled.messages",
   type: "jsona",
 });

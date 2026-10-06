@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
-  width: 88,
-  height: 80,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b14cf67ed38d1ab1d1a28d6633250b87",
-  name: "safety_check_light",
+  hash: "cbab82e40d604a026003b3db68edd6bb",
+  name: "ic_icon_upload",
   type: "png",
 });

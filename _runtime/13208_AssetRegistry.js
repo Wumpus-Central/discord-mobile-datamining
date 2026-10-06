@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300.5,
-  height: 175,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 180,
+  height: 101.5,
   scales: [2, 3],
-  hash: "767971903774f3e283939a2d77b5c958",
-  name: "server_boosts",
+  hash: "e7c47aa4983bcda8af147e4a2811c93e",
+  name: "img_what_you_lose_boost",
   type: "png",
 });

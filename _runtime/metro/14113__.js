@@ -1,13 +1,37 @@
 // _runtime/metro/14113__.js
-import _mod14086 from "14086__.js";
+import _mod14104 from "14104__.js";
+import _mod14105 from "14105__.js";
+import _mod14112 from "14112__.js";
 
-export default function (arg0) {
-  if (_mod14086(arg0)) {
-    return arg0;
-  } else {
-    const self = this;
-    const self2 = this;
-    const tmp3 = new TypeError(String(arg0) + " is not an object");
-    throw tmp3;
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod14105(toString)) {
+      const tmpResult = _mod14104;
+      const tmp4 = _mod14112(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
+      }
+    }
   }
-}
+  const valueOf = arg0.valueOf;
+  if (_mod14105(valueOf)) {
+    const tmp5Result = _mod14104;
+    const tmp8 = _mod14112(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod14105(toString2)) {
+      const tmp5Result2 = _mod14104;
+      const tmp10 = _mod14112(toString2, arg0);
+      if (!tmp5Result2(tmp10)) {
+        return tmp10;
+      }
+    }
+  }
+  const tmp11 = new TypeError("Can't convert object to primitive value");
+  throw tmp11;
+};

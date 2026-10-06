@@ -24,17 +24,17 @@ if (!RNScreensTurboModule) {
   fn.__initData = obj;
   fn2 = t;
   const obj4 = { logger: react_native.logger, defaultReturnValue: obj3 };
-  fn2.__closure = { logger: react_native.logger, defaultReturnValue: "r" };
+  fn2.__closure = { logger: react_native.logger, defaultReturnValue: "Array" };
   fn2.__workletHash = 6450550757460;
   fn2.__initData = obj;
   let c0;
   fn3 = t;
-  const obj5 = { logger: react_native.logger, defaultReturnValue: "r" };
-  fn3.__closure = { logger: react_native.logger, defaultReturnValue: "r" };
+  const obj5 = { logger: react_native.logger, defaultReturnValue: "Array" };
+  fn3.__closure = { logger: react_native.logger, defaultReturnValue: "Array" };
   fn3.__workletHash = 6450550757460;
   fn3.__initData = obj;
   RNScreensTurboModule = obj2;
-  const obj6 = { logger: react_native.logger, defaultReturnValue: "r" };
+  const obj6 = { logger: react_native.logger, defaultReturnValue: "Array" };
 }
 
 export { RNScreensTurboModule };

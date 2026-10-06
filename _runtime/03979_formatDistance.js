@@ -1,101 +1,49 @@
 // _runtime/03979_formatDistance.js
-const obj = {
-  lessThanXSeconds: {
-    standalone: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" },
-    withPreposition: { one: "weniger als 1 Sekunde", other: "weniger als {{count}} Sekunden" },
-  },
-  xSeconds: {
-    standalone: { one: "1 Sekunde", other: "{{count}} Sekunden" },
-    withPreposition: { one: "1 Sekunde", other: "{{count}} Sekunden" },
-  },
-  halfAMinute: { standalone: "halbe Minute", withPreposition: "halben Minute" },
-  lessThanXMinutes: {
-    standalone: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" },
-    withPreposition: { one: "weniger als 1 Minute", other: "weniger als {{count}} Minuten" },
-  },
-  xMinutes: {
-    standalone: { one: "1 Minute", other: "{{count}} Minuten" },
-    withPreposition: { one: "1 Minute", other: "{{count}} Minuten" },
-  },
-  aboutXHours: {
-    standalone: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" },
-    withPreposition: { one: "etwa 1 Stunde", other: "etwa {{count}} Stunden" },
-  },
-  xHours: {
-    standalone: { one: "1 Stunde", other: "{{count}} Stunden" },
-    withPreposition: { one: "1 Stunde", other: "{{count}} Stunden" },
-  },
-  xDays: {
-    standalone: { one: "1 Tag", other: "{{count}} Tage" },
-    withPreposition: { one: "1 Tag", other: "{{count}} Tagen" },
-  },
-  aboutXWeeks: {
-    standalone: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" },
-    withPreposition: { one: "etwa 1 Woche", other: "etwa {{count}} Wochen" },
-  },
-  xWeeks: {
-    standalone: { one: "1 Woche", other: "{{count}} Wochen" },
-    withPreposition: { one: "1 Woche", other: "{{count}} Wochen" },
-  },
-  aboutXMonths: {
-    standalone: { one: "etwa 1 Monat", other: "etwa {{count}} Monate" },
-    withPreposition: { one: "etwa 1 Monat", other: "etwa {{count}} Monaten" },
-  },
-  xMonths: {
-    standalone: { one: "1 Monat", other: "{{count}} Monate" },
-    withPreposition: { one: "1 Monat", other: "{{count}} Monaten" },
-  },
-  aboutXYears: {
-    standalone: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahre" },
-    withPreposition: { one: "etwa 1 Jahr", other: "etwa {{count}} Jahren" },
-  },
-  xYears: {
-    standalone: { one: "1 Jahr", other: "{{count}} Jahre" },
-    withPreposition: { one: "1 Jahr", other: "{{count}} Jahren" },
-  },
-  overXYears: {
-    standalone: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahre" },
-    withPreposition: { one: "mehr als 1 Jahr", other: "mehr als {{count}} Jahren" },
-  },
-  almostXYears: {
-    standalone: { one: "fast 1 Jahr", other: "fast {{count}} Jahre" },
-    withPreposition: { one: "fast 1 Jahr", other: "fast {{count}} Jahren" },
-  },
+let closure_0 = {
+  lessThanXSeconds: { one: "mindre end \u00E9t sekund", other: "mindre end {{count}} sekunder" },
+  xSeconds: { one: "1 sekund", other: "{{count}} sekunder" },
+  halfAMinute: "\u00E9t halvt minut",
+  lessThanXMinutes: { one: "mindre end \u00E9t minut", other: "mindre end {{count}} minutter" },
+  xMinutes: { one: "1 minut", other: "{{count}} minutter" },
+  aboutXHours: { one: "cirka 1 time", other: "cirka {{count}} timer" },
+  xHours: { one: "1 time", other: "{{count}} timer" },
+  xDays: { one: "1 dag", other: "{{count}} dage" },
+  aboutXWeeks: { one: "cirka 1 uge", other: "cirka {{count}} uger" },
+  xWeeks: { one: "1 uge", other: "{{count}} uger" },
+  aboutXMonths: { one: "cirka 1 m\u00E5ned", other: "cirka {{count}} m\u00E5neder" },
+  xMonths: { one: "1 m\u00E5ned", other: "{{count}} m\u00E5neder" },
+  aboutXYears: { one: "cirka 1 \u00E5r", other: "cirka {{count}} \u00E5r" },
+  xYears: { one: "1 \u00E5r", other: "{{count}} \u00E5r" },
+  overXYears: { one: "over 1 \u00E5r", other: "over {{count}} \u00E5r" },
+  almostXYears: { one: "n\u00E6sten 1 \u00E5r", other: "n\u00E6sten {{count}} \u00E5r" },
 };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
-  if (null != addSuffix) {
-    let standalone;
-    if (addSuffix.addSuffix) {
-      standalone = obj[arg0].withPreposition;
+  let tmp2 = tmp;
+  if (typeof closure_0[arg0] !== "string") {
+    let one;
+    if (1 === arg1) {
+      one = tmp.one;
+    } else {
+      const _String = String;
+      const str = closure_0[arg0].other;
+      one = str.replace("{{count}}", String(arg1));
     }
-    let tmp2 = standalone;
-    if (typeof standalone !== "string") {
-      let one;
-      if (1 === arg1) {
-        one = standalone.one;
-      } else {
-        const _String = String;
-        const str = standalone.other;
-        one = str.replace("{{count}}", String(arg1));
-      }
-      tmp2 = one;
-    }
-    let tmp4 = tmp2;
-    if (null != addSuffix) {
-      tmp4 = tmp2;
-      if (addSuffix.addSuffix) {
-        if (addSuffix.comparison) {
-          let text;
-          if (addSuffix.comparison > 0) {
-            text = `in ${tmp2}`;
-          }
-          tmp4 = text;
-        }
-        text = `vor ${tmp2}`;
-      }
-    }
-    return tmp4;
+    tmp2 = one;
   }
-  standalone = obj[arg0].standalone;
+  let tmp4 = tmp2;
+  if (null != addSuffix) {
+    tmp4 = tmp2;
+    if (addSuffix.addSuffix) {
+      if (addSuffix.comparison) {
+        let text;
+        if (addSuffix.comparison > 0) {
+          text = `om ${tmp2}`;
+        }
+        tmp4 = text;
+      }
+      text = `${tmp2} siden`;
+    }
+  }
+  return tmp4;
 }

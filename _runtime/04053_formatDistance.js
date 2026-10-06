@@ -1,21 +1,21 @@
 // _runtime/04053_formatDistance.js
 let closure_0 = {
-  lessThanXSeconds: { one: "mindre enn ett sekund", other: "mindre enn {{count}} sekunder" },
-  xSeconds: { one: "ett sekund", other: "{{count}} sekunder" },
-  halfAMinute: "et halvt minutt",
-  lessThanXMinutes: { one: "mindre enn ett minutt", other: "mindre enn {{count}} minutter" },
-  xMinutes: { one: "ett minutt", other: "{{count}} minutter" },
-  aboutXHours: { one: "omtrent en time", other: "omtrent {{count}} timer" },
-  xHours: { one: "en time", other: "{{count}} timer" },
-  xDays: { one: "en dag", other: "{{count}} dager" },
-  aboutXWeeks: { one: "omtrent en uke", other: "omtrent {{count}} uker" },
-  xWeeks: { one: "en uke", other: "{{count}} uker" },
-  aboutXMonths: { one: "omtrent en m\u00E5ned", other: "omtrent {{count}} m\u00E5neder" },
-  xMonths: { one: "en m\u00E5ned", other: "{{count}} m\u00E5neder" },
-  aboutXYears: { one: "omtrent ett \u00E5r", other: "omtrent {{count}} \u00E5r" },
-  xYears: { one: "ett \u00E5r", other: "{{count}} \u00E5r" },
-  overXYears: { one: "over ett \u00E5r", other: "over {{count}} \u00E5r" },
-  almostXYears: { one: "nesten ett \u00E5r", other: "nesten {{count}} \u00E5r" },
+  lessThanXSeconds: { one: "minder dan een seconde", other: "minder dan {{count}} seconden" },
+  xSeconds: { one: "1 seconde", other: "{{count}} seconden" },
+  halfAMinute: "een halve minuut",
+  lessThanXMinutes: { one: "minder dan een minuut", other: "minder dan {{count}} minuten" },
+  xMinutes: { one: "een minuut", other: "{{count}} minuten" },
+  aboutXHours: { one: "ongeveer 1 uur", other: "ongeveer {{count}} uur" },
+  xHours: { one: "1 uur", other: "{{count}} uur" },
+  xDays: { one: "1 dag", other: "{{count}} dagen" },
+  aboutXWeeks: { one: "ongeveer 1 week", other: "ongeveer {{count}} weken" },
+  xWeeks: { one: "1 week", other: "{{count}} weken" },
+  aboutXMonths: { one: "ongeveer 1 maand", other: "ongeveer {{count}} maanden" },
+  xMonths: { one: "1 maand", other: "{{count}} maanden" },
+  aboutXYears: { one: "ongeveer 1 jaar", other: "ongeveer {{count}} jaar" },
+  xYears: { one: "1 jaar", other: "{{count}} jaar" },
+  overXYears: { one: "meer dan 1 jaar", other: "meer dan {{count}} jaar" },
+  almostXYears: { one: "bijna 1 jaar", other: "bijna {{count}} jaar" },
 };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
@@ -38,11 +38,11 @@ export default function formatDistance(arg0, arg1, addSuffix) {
       if (addSuffix.comparison) {
         let text;
         if (addSuffix.comparison > 0) {
-          text = `om ${tmp2}`;
+          text = `over ${tmp2}`;
         }
         tmp4 = text;
       }
-      text = `${tmp2} siden`;
+      text = `${tmp2} geleden`;
     }
   }
   return tmp4;

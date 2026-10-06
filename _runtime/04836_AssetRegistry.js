@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "021d4551cb2e4d8e923e934b6403ea10",
-  name: "UserPlatformIcon",
+  hash: "71edbf43dc7b4d94780b9aa2b20aeca2",
+  name: "ArrowsLeftRightIcon",
   type: "png",
 });

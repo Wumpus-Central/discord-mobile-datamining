@@ -1,42 +1,24 @@
 // _runtime/metro/12638__.js
-import _mod12565 from "12565__.js";
-import _browserPerformanceTimeOriginMode from "../12579__browserPerformanceTimeOriginMode.js";
-import _mod12592 from "12592__.js";
+import _browserPerformanceTimeOriginMode from "../12594__browserPerformanceTimeOriginMode.js";
+import _mod12624 from "12624__.js";
 
-export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
-  let tmpResult;
-  let closure_0 = arg1;
-  const obj = _mod12592;
-  const client = obj.getClient();
-  const obj3 = _mod12592;
-  const isolationScope = obj3.getIsolationScope();
-  if (client) {
-    const options = client.getOptions();
-    let beforeBreadcrumb = options.beforeBreadcrumb;
-    let tmp5 = null;
-    if (undefined !== beforeBreadcrumb) {
-      tmp5 = beforeBreadcrumb;
-    }
-    beforeBreadcrumb = tmp5;
-    const maxBreadcrumbs = options.maxBreadcrumbs;
-    let num = 100;
-    if (undefined !== maxBreadcrumbs) {
-      num = maxBreadcrumbs;
-    }
-    if (num > 0) {
-      let obj2 = { timestamp: tmpResult.dateTimestampInSeconds() };
-      tmpResult = _browserPerformanceTimeOriginMode;
-      const merged = Object.assign(arg0);
-      if (tmp5) {
-        const tmpResult2 = _mod12565;
-        obj2 = tmpResult2.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
-      }
-      if (null !== obj2) {
-        if (client.emit) {
-          client.emit("beforeAddBreadcrumb", obj2, arg1);
-        }
-        isolationScope.addBreadcrumb(obj2, num);
-      }
-    }
+export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
+  let obj3;
+  let result = arg2;
+  const items = [{ type: "client_report" }];
+  if (!arg2) {
+    const obj = _browserPerformanceTimeOriginMode;
+    result = obj.dateTimestampInSeconds();
   }
+  items[1] = { timestamp: result, discarded_events };
+  const createEnvelope = _mod12624.createEnvelope;
+  _mod12624;
+  if (dsn) {
+    obj3 = { dsn };
+    const obj2 = { dsn };
+  } else {
+    obj3 = {};
+  }
+  const items1 = [items];
+  return createEnvelope(obj3, items1);
 };

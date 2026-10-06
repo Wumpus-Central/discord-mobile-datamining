@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "262032a99df43d5b5fc14dd6e335ec5e",
-  name: "UserMinusIcon",
+  hash: "b4d386a6c709f08f81d6e286fdb2ebc4",
+  name: "FriendsIcon",
   type: "png",
 });

@@ -1,224 +1,44 @@
 // _runtime/metro/14143__.js
-import _createClass from "00042__createClass.js";
-import _mod14141 from "14141__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _mod14082 from "14082__.js";
+import _mod14083 from "14083__.js";
+import _mod14085 from "14085__.js";
+import _mod14086 from "14086__.js";
+import _mod14103 from "14103__.js";
+import _mod14112 from "14112__.js";
+import _mod14132 from "14132__.js";
+import _mod14144 from "14144__.js";
 
-class URLSearchParamsImpl {
-  constructor(arg0, arg1, doNotStripQMark) {
-    let flag = doNotStripQMark.doNotStripQMark;
-    if (flag === undefined) {
-      flag = false;
-    }
-    const self = this;
-    _classCallCheck(this, URLSearchParamsImpl);
-    const first = arg1[0];
-    this._list = [];
-    this._url = null;
-    if (!flag) {
-      flag = typeof first !== "string";
-    }
-    if (!flag) {
-      flag = "?" !== first[0];
-    }
-    let substr = first;
-    if (!flag) {
-      substr = first.slice(1);
-    }
-    if (Array.isArray(substr)) {
-      const iter = substr[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        let tmp12 = nextResult;
-        if (2 !== nextResult.length) {
-          let _TypeError = TypeError;
-          let self2 = this;
-          let str2 =
-            "Failed to construct 'URLSearchParams': parameter 1 sequence's element does not contain exactly two elements.";
-          let self3 = this;
-          let typeError = new TypeError(
-            "Failed to construct 'URLSearchParams': parameter 1 sequence's element does not contain exactly two elements.",
-          );
-          throw typeError;
-        } else {
-          let _list = self._list;
-          let items = [,];
-          [arr6[0], arr6[1]] = tmp12;
-          let arr = _list.push(items);
-          continue;
+let closure_4 = _mod14086([].concat);
+if (!assign) {
+  assign = function assign(arg0, arg1) {
+    let num;
+    const tmp = _mod14103(arg0);
+    const length = arguments.length;
+    const f = _mod14132.f;
+    for (let num = 1; length > num; num = num + 1) {
+      let arr;
+      let num2;
+      let tmp5 = _mod14085(arguments[num]);
+      if (f) {
+        let tmp8 = _mod14144(tmp5);
+        arr = closure_4(tmp8, f(tmp5));
+      } else {
+        arr = _mod14144(tmp5);
+      }
+      let length2 = arr.length;
+      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
+        let tmp9 = arr[num2];
+        let tmp12 = _mod14082;
+        if (tmp12) {
+          tmp12 = !_mod14112(tmp2, tmp5, tmp9);
+        }
+        if (!tmp12) {
+          tmp[tmp9] = tmp5[tmp9];
         }
       }
-    } else {
-      if (typeof substr === "object") {
-        const _Object2 = Object;
-        if (null === Object.getPrototypeOf(substr)) {
-          const _Object = Object;
-          const keys = Object.keys(substr);
-          for (const item10033 of keys) {
-            let _list1 = self._list;
-            let items1 = [item10033, substr[item10033]];
-            let arr2 = _list1.push(items1);
-            continue;
-          }
-        }
-      }
-      const obj = _mod14141;
-      self._list = obj.parseUrlencoded(substr);
     }
-  }
+    return tmp;
+  };
 }
-const entry = {
-  key: "_updateSteps",
-  value: function _updateSteps() {
-    const self = this;
-    if (null !== this._url) {
-      const obj = _mod14141;
-      let serializeUrlencodedResult = obj.serializeUrlencoded(self._list);
-      if ("" === serializeUrlencodedResult) {
-        serializeUrlencodedResult = null;
-      }
-      self._url._url.query = serializeUrlencodedResult;
-    }
-  },
-};
-let items = [
-  entry,
-  {
-    key: "append",
-    value: function append(arg0, arg1) {
-      const _list = this._list;
-      const items = [arg0, arg1];
-      _list.push(items);
-      this._updateSteps();
-    },
-  },
-  {
-    key: "delete",
-    value: function _delete(arg0) {
-      let sum;
-      const self = this;
-      let num = 0;
-      if (0 < this._list.length) {
-        do {
-          if (self._list[num][0] === arg0) {
-            let _list = self._list;
-            let spliceResult = _list.splice(num, 1);
-            sum = num;
-          } else {
-            sum = num + 1;
-          }
-          num = sum;
-        } while (sum < self._list.length);
-      }
-      self._updateSteps();
-    },
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const _list = this._list;
-      for (const item10008 of _list) {
-        if (item10008[0] === arg0) {
-          let tmp2 = item10008[1];
-          obj.return();
-          return tmp2;
-        }
-      }
-      return null;
-    },
-  },
-  {
-    key: "getAll",
-    value: function getAll(arg0) {
-      const items = [];
-      const _list = this._list;
-      for (const item10009 of _list) {
-        if (item10009[0] === arg0) {
-          let arr = items.push(tmp[1]);
-        }
-        continue;
-      }
-      return items;
-    },
-  },
-  {
-    key: "has",
-    value: function has(arg0) {
-      const _list = this._list;
-      for (const item10007 of _list) {
-        if (item10007[0] === arg0) {
-          obj.return();
-          let flag = true;
-          return true;
-        }
-      }
-      return false;
-    },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      let sum;
-      const self = this;
-      let num = 0;
-      let flag = false;
-      let flag2 = false;
-      if (0 < this._list.length) {
-        do {
-          let flag3;
-          if (self._list[num][0] === arg0) {
-            let _list = self._list;
-            if (flag) {
-              let spliceResult = _list.splice(num, 1);
-              sum = num;
-              flag3 = flag;
-            } else {
-              _list[num][1] = arg1;
-              sum = num + 1;
-              flag3 = true;
-            }
-          } else {
-            sum = num + 1;
-            flag3 = flag;
-          }
-          num = sum;
-          flag = flag3;
-          flag2 = flag3;
-        } while (sum < self._list.length);
-      }
-      if (!flag2) {
-        const _list1 = self._list;
-        const items = [arg0, arg1];
-        _list1.push(items);
-      }
-      self._updateSteps();
-    },
-  },
-  {
-    key: "sort",
-    value: function sort() {
-      const _list = this._list;
-      const mapped = _list.map((item, index) => ({ item, index }));
-      const sorted = mapped.sort((index, index2) => index.item[0] > index2.item[0] || index.index - index2.index);
-      this._list = sorted.map((item) => item.item);
-      this._updateSteps();
-    },
-  },
-  ,
-];
-const entry1 = {
-  key: Symbol.iterator,
-  value() {
-    const _list = this._list;
-    return _list[Symbol.iterator]();
-  },
-};
-items[8] = entry1;
-items[9] = {
-  key: "toString",
-  value: function toString() {
-    const obj = _mod14141;
-    return obj.serializeUrlencoded(this._list);
-  },
-};
 
-export const implementation = _createClass(URLSearchParamsImpl, items);
+export default assign;

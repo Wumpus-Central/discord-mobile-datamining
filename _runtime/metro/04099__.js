@@ -8,9 +8,6 @@ let items2;
 let items3;
 let items4;
 let items5;
-let items6;
-let items7;
-let items8;
 let obj;
 let obj10;
 let obj11;
@@ -45,15 +42,19 @@ const date = {
   dayPeriod: obj.default(obj14),
 };
 obj6 = {
-  matchPatterns: { narrow: /^(mö|ms)/i, abbreviated: /^(mö|ms)/i, wide: /^(milattan önce|milattan sonra)/i },
+  matchPatterns: {
+    narrow: /^([bB]|[aA]|คศ)/i,
+    abbreviated: /^([bB]\.?\s?[cC]\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?|ค\.?ศ\.?)/i,
+    wide: /^(ก่อนคริสตกาล|คริสต์ศักราช|คริสตกาล)/i,
+  },
   defaultMatchWidth: "wide",
   parsePatterns: obj7,
   defaultParseWidth: "any",
 };
 obj7 = { any: items };
-items = [/(^mö|^milattan önce)/i, /(^ms|^milattan sonra)/i];
+items = [/^[bB]/i, /^(^[aA]|ค\.?ศ\.?|คริสตกาล|คริสต์ศักราช|)/i];
 obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234]ç/i, wide: /^((i|İ)lk|(i|İ)kinci|üçüncü|son) çeyrek/i },
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^ไตรมาส(ที่)? ?[1234]/i },
   defaultMatchWidth: "wide",
   parsePatterns: obj9,
   defaultParseWidth: "any",
@@ -61,61 +62,70 @@ obj8 = {
     return arg0 + 1;
   },
 };
-obj9 = { any: items1, abbreviated: items2, wide: items3 };
-items1 = [/1/i, /2/i, /3/i, /4/i];
-items2 = [/1ç/i, /2ç/i, /3ç/i, /4ç/i];
-items3 = [/^(i|İ)lk çeyrek/i, /(i|İ)kinci çeyrek/i, /üçüncü çeyrek/i, /son çeyrek/i];
+obj9 = { any: items1 };
+items1 = [/(1|แรก|หนึ่ง)/i, /(2|สอง)/i, /(3|สาม)/i, /(4|สี่)/i];
 obj10 = {
   matchPatterns: {
-    narrow: /^[oşmnhtaek]/i,
-    abbreviated: /^(oca|şub|mar|nis|may|haz|tem|ağu|eyl|eki|kas|ara)/i,
-    wide: /^(ocak|şubat|mart|nisan|mayıs|haziran|temmuz|ağustos|eylül|ekim|kasım|aralık)/i,
+    narrow:
+      /^(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?)/i,
+    abbreviated:
+      /^(ม\.?ค\.?|ก\.?พ\.?|มี\.?ค\.?|เม\.?ย\.?|พ\.?ค\.?|มิ\.?ย\.?|ก\.?ค\.?|ส\.?ค\.?|ก\.?ย\.?|ต\.?ค\.?|พ\.?ย\.?|ธ\.?ค\.?')/i,
+    wide: /^(มกราคม|กุมภาพันธ์|มีนาคม|เมษายน|พฤษภาคม|มิถุนายน|กรกฎาคม|สิงหาคม|กันยายน|ตุลาคม|พฤศจิกายน|ธันวาคม)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj11,
   defaultParseWidth: "any",
 };
-obj11 = { narrow: items4, any: items5 };
-items4 = [/^o/i, /^ş/i, /^m/i, /^n/i, /^m/i, /^h/i, /^t/i, /^a/i, /^e/i, /^e/i, /^k/i, /^a/i];
-items5 = [/^o/i, /^ş/i, /^mar/i, /^n/i, /^may/i, /^h/i, /^t/i, /^ağ/i, /^ey/i, /^ek/i, /^k/i, /^ar/i];
+obj11 = { wide: items2, any: items3 };
+items2 = [/^มก/i, /^กุม/i, /^มี/i, /^เม/i, /^พฤษ/i, /^มิ/i, /^กรก/i, /^ส/i, /^กัน/i, /^ต/i, /^พฤศ/i, /^ธ/i];
+items3 = [
+  /^ม\.?ค\.?/i,
+  /^ก\.?พ\.?/i,
+  /^มี\.?ค\.?/i,
+  /^เม\.?ย\.?/i,
+  /^พ\.?ค\.?/i,
+  /^มิ\.?ย\.?/i,
+  /^ก\.?ค\.?/i,
+  /^ส\.?ค\.?/i,
+  /^ก\.?ย\.?/i,
+  /^ต\.?ค\.?/i,
+  /^พ\.?ย\.?/i,
+  /^ธ\.?ค\.?/i,
+];
 obj12 = {
   matchPatterns: {
-    narrow: /^[psçc]/i,
-    short: /^(pz|pt|sa|ça|pe|cu|ct)/i,
-    abbreviated: /^(paz|pzt|sal|çar|per|cum|cts)/i,
-    wide: /^(pazar(?!tesi)|pazartesi|salı|çarşamba|perşembe|cuma(?!rtesi)|cumartesi)/i,
+    narrow: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i,
+    short: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i,
+    abbreviated: /^(อา\.?|จ\.?|อ\.?|พฤ\.?|พ\.?|ศ\.?|ส\.?)/i,
+    wide: /^(อาทิตย์|จันทร์|อังคาร|พุธ|พฤหัสบดี|ศุกร์|เสาร์)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj13,
   defaultParseWidth: "any",
 };
-obj13 = { narrow: items6, any: items7, wide: items8 };
-items6 = [/^p/i, /^p/i, /^s/i, /^ç/i, /^p/i, /^c/i, /^c/i];
-items7 = [/^pz/i, /^pt/i, /^sa/i, /^ça/i, /^pe/i, /^cu/i, /^ct/i];
-items8 = [/^pazar(?!tesi)/i, /^pazartesi/i, /^salı/i, /^çarşamba/i, /^perşembe/i, /^cuma(?!rtesi)/i, /^cumartesi/i];
+obj13 = { wide: items4, any: items5 };
+items4 = [/^อา/i, /^จั/i, /^อั/i, /^พุธ/i, /^พฤ/i, /^ศ/i, /^เส/i];
+items5 = [/^อา/i, /^จ/i, /^อ/i, /^พ(?!ฤ)/i, /^พฤ/i, /^ศ/i, /^ส/i];
 obj14 = {
-  matchPatterns: {
-    narrow: /^(öö|ös|gy|ö|sa|ös|ak|ge)/i,
-    any: /^(ö\.?\s?[ös]\.?|öğleden sonra|gece yarısı|öğle|(sabah|öğ|akşam|gece)(leyin))/i,
-  },
+  matchPatterns: { any: /^(ก่อนเที่ยง|หลังเที่ยง|เที่ยงคืน|เที่ยง|(ตอน.*?)?.*(เที่ยง|เช้า|บ่าย|เย็น|กลางคืน))/i },
   defaultMatchWidth: "any",
   parsePatterns: obj15,
   defaultParseWidth: "any",
 };
 obj15 = {
   any: {
-    am: /^ö\.?ö\.?/i,
-    pm: /^ö\.?s\.?/i,
-    midnight: /^(gy|gece yarısı)/i,
-    noon: /^öğ/i,
-    morning: /^sa/i,
-    afternoon: /^öğleden sonra/i,
-    evening: /^ak/i,
-    night: /^ge/i,
+    am: /^ก่อนเที่ยง/i,
+    pm: /^หลังเที่ยง/i,
+    midnight: /^เที่ยงคืน/i,
+    noon: /^เที่ยง/i,
+    morning: /เช้า/i,
+    afternoon: /บ่าย/i,
+    evening: /เย็น/i,
+    night: /กลางคืน/i,
   },
 };
 obj5 = {
-  matchPattern: /^(\d+)(\.)?/i,
+  matchPattern: /^\d+/i,
   parsePattern: /\d+/i,
   valueCallback(match) {
     return parseInt(match, 10);

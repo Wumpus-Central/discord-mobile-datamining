@@ -1,28 +1,29 @@
 // _runtime/metro/07381__.js
-let obj = {
-  get(arg0) {
-    const tmp = arg0;
-    if (tmp) {
-      return arg0;
-    } else {
-      if (typeof globalThis.DOMParser !== "undefined") {
-        const DOMParser2 = globalThis.DOMParser;
-        const self3 = this;
-        const self4 = this;
-        const dOMParser = new globalThis.DOMParser();
-        return dOMParser;
-      } else {
-        try {
-          const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
-          const self = this;
-          const self2 = this;
-          const obj = { onError: result.onErrorStopParsing };
-          const dOMParser1 = new result.DOMParser(obj);
-          return dOMParser1;
-        } catch (err) {}
-      }
-    }
-  },
-};
+const f94891 = (item) => String.fromCharCode(item);
 
-export default obj;
+export const getStringValue = function getStringValue(value) {
+  const mapped = value.map(f94891);
+  return mapped.join("");
+};
+export const getEncodedString = function getEncodedString(arr) {
+  if (arr.length >= 8) {
+    const substr = arr.slice(0, 8);
+    const mapped = substr.map(f94891);
+    const joined = mapped.join("");
+    if ("ASCII\0\0\0" === joined) {
+      const substr1 = arr.slice(8);
+      const mapped1 = substr1.map(f94891);
+      return mapped1.join("");
+    } else if ("JIS\0\0\0\0\0" === joined) {
+      return "[JIS encoded text]";
+    } else if ("UNICODE\0" === joined) {
+      return "[Unicode encoded text]";
+    } else if ("\0\0\0\0\0\0\0\0" === joined) {
+      return "[Undefined encoding]";
+    }
+  }
+  return "Undefined";
+};
+export const getCalculatedGpsValue = function getCalculatedGpsValue(value) {
+  return value[0][0] / value[0][1] + value[1][0] / value[1][1] / 60 + value[2][0] / value[2][1] / 3600;
+};

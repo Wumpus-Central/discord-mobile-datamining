@@ -1,28 +1,23 @@
 // _runtime/metro/06229__.js
-import ComposedGestureName from "../06199_ComposedGestureName.js";
-import maybeExtractNativeEvent from "../06208_maybeExtractNativeEvent.js";
-import _mod6223 from "06223__.js";
+import ComposedGestureName from "../06206_ComposedGestureName.js";
+import maybeExtractNativeEvent from "../06215_maybeExtractNativeEvent.js";
+import _mod6230 from "06230__.js";
 
-function transformLongPressProps(shouldCancelWhenOutside) {
-  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
-    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
-  }
-  return shouldCancelWhenOutside;
-}
 const items = [
-  ["minDuration", "minDurationMs"],
   ["maxDistance", "maxDist"],
+  ["maxDuration", "maxDurationMs"],
+  ["maxDelay", "maxDelayMs"],
 ];
 const map = new Map(items);
-let closure_4 = {};
+let closure_3 = {};
 
-export const useLongPressGesture = function useLongPressGesture() {
+export const useTapGesture = function useTapGesture() {
   let tmp = cResult;
   if (cResult === undefined) {
-    tmp = closure_4;
+    tmp = closure_3;
   }
   const obj = maybeExtractNativeEvent;
-  const clonedAndRemappedConfig = obj.useClonedAndRemappedConfig(tmp, map, transformLongPressProps);
-  const obj2 = _mod6223;
-  return obj2.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
+  const clonedAndRemappedConfig = obj.useClonedAndRemappedConfig(tmp, map);
+  const obj2 = _mod6230;
+  return obj2.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
 };

@@ -44,11 +44,11 @@ if (!date) {
 }
 
 export default {
-  code: "tr",
+  code: "th",
   formatDistance: tmp3.default,
   formatLong: tmp5.default,
   formatRelative: tmp7.default,
   localize: tmp9.default,
   match: tmp11.default,
-  options: { weekStartsOn: 1, firstWeekContainsDate: 1 },
+  options: { weekStartsOn: 0, firstWeekContainsDate: 1 },
 };

@@ -1,7 +1,7 @@
 // _runtime/00064_sizesDiffer.js
 let size;
 
-let closure_0 = { width: "Array", height: "Set" };
+let closure_0 = { width: "start", height: "unicodeVersion" };
 
 export default function sizesDiffer(arg0, arg1) {
   size = arg0 || closure_0;

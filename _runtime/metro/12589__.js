@@ -1,198 +1,144 @@
 // _runtime/metro/12589__.js
-import _mod12572 from "12572__.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import _mod12587 from "12587__.js";
 
-let c3;
-
-let obj = { PENDING: 0, RESOLVED: 1, REJECTED: 2 };
-obj[0] = "PENDING";
-obj[1] = "RESOLVED";
-obj[2] = "REJECTED";
-class SyncPromise {
-  constructor(fn) {
-    const self = this;
-    _classCallCheck(this, SyncPromise);
-    const __init = SyncPromise.prototype.__init;
-    __init.call(self);
-    const __init2 = SyncPromise.prototype.__init2;
-    __init2.call(self);
-    const __init3 = SyncPromise.prototype.__init3;
-    __init3.call(self);
-    const __init4 = SyncPromise.prototype.__init4;
-    __init4.call(self);
-    self._state = obj.PENDING;
-    self._handlers = [];
-    try {
-      fn(self._resolve, self._reject);
-    } catch (tmp5) {
-      self._reject(tmp5);
+export const isMatchingPattern = function isMatchingPattern(arr, test) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  const obj = _mod12587;
+  let isStringResult = obj.isString(arr);
+  if (isStringResult) {
+    let isMatch;
+    const tmpResult = _mod12587;
+    if (tmpResult.isRegExp(test)) {
+      isMatch = test.test(arr);
+    } else {
+      const tmpResult2 = _mod12587;
+      isMatch = tmpResult2.isString(test);
+      if (isMatch) {
+        let hasItem;
+        if (flag) {
+          hasItem = arr === test;
+        } else {
+          hasItem = arr.includes(test);
+        }
+        isMatch = hasItem;
+      }
+    }
+    isStringResult = isMatch;
+  }
+  return isStringResult;
+};
+export const safeJoin = function safeJoin(__isVue, arg1) {
+  if (Array.isArray(__isVue)) {
+    const items = [];
+    let num = 0;
+    if (0 < __isVue.length) {
+      try {
+        const push = items.push;
+        const obj = _mod12587;
+        if (obj.isVueViewModel(__isVue[num])) {
+          push("[VueViewModel]");
+        } else {
+          const _String = String;
+          push(String(__isVue[num]));
+        }
+      } catch (err) {
+        items.push("[value cannot be serialized]");
+      }
+      num = num + 1;
+    }
+    return items.join(arg1);
+  } else {
+    return "";
+  }
+};
+export const snipLine = function snipLine(arr, arg1) {
+  if (arr.length <= 150) {
+    return arr;
+  } else {
+    let tmp = arg1;
+    if (arg1 > arr.length) {
+      tmp = length;
+    }
+    const _Math = Math;
+    let num3 = Math.max(tmp - 60, 0);
+    if (num3 < 5) {
+      num3 = 0;
+    }
+    const _Math2 = Math;
+    let bound = Math.min(num3 + 140, length);
+    if (bound > arr.length - 5) {
+      bound = length;
+    }
+    if (bound === arr.length) {
+      const _Math3 = Math;
+      num3 = Math.max(bound - 140, 0);
+    }
+    const substr = arr.slice(num3, bound);
+    let combined = substr;
+    if (num3 > 0) {
+      const _HermesInternal = HermesInternal;
+      combined = "'{snip} " + substr;
+    }
+    let text = combined;
+    if (bound < arr.length) {
+      text = `${tmp6} {snip}`;
+    }
+    return text;
+  }
+};
+export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
+  let items;
+  if (items === undefined) {
+    items = [];
+  }
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  return items.some((test) => {
+    const obj2 = _mod12587;
+    let isStringResult = obj2.isString(transaction);
+    if (isStringResult) {
+      let isMatch;
+      const tmpResult = _mod12587;
+      if (tmpResult.isRegExp(test)) {
+        isMatch = test.test(transaction);
+      } else {
+        const tmpResult2 = _mod12587;
+        isMatch = tmpResult2.isString(test);
+        if (isMatch) {
+          let hasItem;
+          if (flag) {
+            hasItem = transaction === test;
+          } else {
+            hasItem = transaction.includes(test);
+          }
+          isMatch = hasItem;
+        }
+      }
+      isStringResult = isMatch;
+    }
+    return isStringResult;
+  });
+};
+export const truncate = function truncate(value) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 0;
+  }
+  let combined = value;
+  if (typeof value === "string") {
+    combined = value;
+    if (0 !== num) {
+      combined = value;
+      if (value.length > num) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + value.slice(0, num) + "...";
+      }
     }
   }
-}
-const entry = {
-  key: "then",
-  value: function then(arg0, arg1) {
-    const self = this;
-    let closure_1 = arg0;
-    let closure_0 = arg1;
-    obj = Object.create(SyncPromise.prototype);
-    SyncPromise((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      const _handlers = self._handlers;
-      const items = [
-        false,
-        (arg0) => {
-          if (closure_1) {
-            try {
-              closure_0(tmp(arg0));
-            } catch (tmp6) {
-              closure_1(tmp6);
-            }
-          } else {
-            closure_0(arg0);
-          }
-        },
-        (arg0) => {
-          if (closure_0) {
-            try {
-              closure_0(tmp(arg0));
-            } catch (tmp6) {
-              closure_1(tmp6);
-            }
-          } else {
-            closure_1(arg0);
-          }
-        },
-      ];
-      _handlers.push(items);
-      self._executeHandlers();
-    });
-    return obj;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "catch",
-    value: function _catch(arg0) {
-      return this.then((result) => result, arg0);
-    },
-  },
-  {
-    key: "finally",
-    value: function _finally(arg0) {
-      const self = this;
-      let closure_0 = arg0;
-      obj = Object.create(SyncPromise.prototype);
-      SyncPromise((arg0, arg1) => {
-        let closure_1;
-        closure_0 = arg0;
-        const nextPromise = arg1.then(
-          (result) => {
-            c3 = false;
-            let closure_1_2 = result;
-            if (closure_0) {
-              tmp();
-            }
-          },
-          (arg0) => {
-            c3 = true;
-            let closure_1_2 = arg0;
-            if (closure_0) {
-              tmp();
-            }
-          },
-        );
-        return nextPromise.then(() => {
-          if (c3) {
-            closure_1(closure_1_2);
-          } else {
-            closure_0(closure_1_2);
-          }
-        });
-      });
-      return obj;
-    },
-  },
-  {
-    key: "__init",
-    value: function __init() {
-      const self = this;
-      this._resolve = (arg0) => {
-        self._setResult(obj.RESOLVED, arg0);
-      };
-    },
-  },
-  {
-    key: "__init2",
-    value: function __init2() {
-      const self = this;
-      this._reject = (arg0) => {
-        self._setResult(obj.REJECTED, arg0);
-      };
-    },
-  },
-  {
-    key: "__init3",
-    value: function __init3() {
-      const self = this;
-      this._setResult = (_state, _value) => {
-        if (self._state === self.PENDING) {
-          const obj2 = _mod12572;
-          if (obj2.isThenable(_value)) {
-            _value.then(self._resolve, self._reject);
-          } else {
-            self._state = _state;
-            self._value = _value;
-            self._executeHandlers();
-          }
-        }
-      };
-    },
-  },
-  {
-    key: "__init4",
-    value: function __init4() {
-      const self = this;
-      this._executeHandlers = () => {
-        let _state;
-        if (self._state !== obj.PENDING) {
-          const _handlers = self._handlers;
-          const substr = _handlers.slice();
-          self._handlers = [];
-          const item = substr.forEach((item) => {
-            if (!item[0]) {
-              if (_state._state === constants.RESOLVED) {
-                item[1](_state._value);
-              }
-              if (_state._state === constants.REJECTED) {
-                item[2](_state._value);
-              }
-              item[0] = true;
-            }
-          });
-        }
-      };
-    },
-  },
-];
-const _moduleResult = _createClass(SyncPromise, items);
-const SyncPromise_export = _moduleResult;
-
-export { SyncPromise_export as SyncPromise };
-export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
-  let closure_0 = arg0;
-  const tmp = new _moduleResult((arg0, fn) => {
-    fn(closure_0);
-  });
-  return tmp;
-};
-export const resolvedSyncPromise = function resolvedSyncPromise(result) {
-  let closure_0 = result;
-  const tmp = new _moduleResult((fn) => {
-    fn(closure_0);
-  });
-  return tmp;
+  return combined;
 };

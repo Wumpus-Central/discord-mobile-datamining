@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "6d22344f328170a77fc1da6d56f802d8",
-  name: "img_account_sync_reddit_light_and_dark",
+  hash: "25ba997e1d3e8344c193637ad6eeccd3",
+  name: "img_account_sync_league_of_legends_white",
   type: "png",
 });

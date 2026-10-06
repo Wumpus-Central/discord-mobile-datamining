@@ -3,9 +3,9 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/slayer_storefront/intl",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9zbGF5ZXJfc3RvcmVmcm9udC9pbnRs",
   scales: [1],
-  hash: "8c60dfaae4176af2c306ea919e9c82f5",
-  name: "SlayerStorefront.compiled.messages",
+  hash: "3a2b9609479727d8cabcfb8c204fa5f7",
+  name: "bg.messages.3a2b9609479727d8cabcfb8c204fa5f7.compiled.messages",
   type: "jsona",
 });

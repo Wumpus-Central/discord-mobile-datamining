@@ -1,188 +1,235 @@
 // _runtime/metro/04480__.js
-import _mod4461 from "04461__.js";
+import _mod4467 from "04467__.js";
 
-let obj3;
-const relativeTimeWithPlural3 = function relativeTimeWithPlural(arg0, arg1, arg2) {
-  const result = arg0 % 100;
-  let tmp2 = result >= 20;
-  if (20 > result) {
-    tmp2 = arg0 >= 100 && arg0 % 100 === 0;
-    const tmp3 = arg0 >= 100 && arg0 % 100 === 0;
+let split;
+let split2;
+function ordinal(arg0, arg1) {
+  if ("d" !== arg1) {
+    if ("D" !== arg1) {
+      if ("DDD" !== arg1) {
+        if ("M" === arg1) {
+          return arg0 + "\uC6D4";
+        } else {
+          if ("w" !== arg1) {
+            if ("W" !== arg1) {
+              return arg0;
+            }
+          }
+          return arg0 + "\uC8FC";
+        }
+      }
+    }
   }
-  let str = " ";
-  if (tmp2) {
-    str = " de ";
+  return arg0 + "\uC77C";
+}
+function isPM(arg0) {
+  return "\uC624\uD6C4" === arg0;
+}
+function meridiem(arg0, arg1, arg2) {
+  let str = "\uC624\uD6C4";
+  if (arg0 < 12) {
+    str = "\uC624\uC804";
   }
-  return (
-    arg0 +
-    str +
-    { ss: "secunde", mm: "minute", hh: "ore", dd: "zile", ww: "s\u0103pt\u0103m\u00E2ni", MM: "luni", yy: "ani" }[arg2]
-  );
-};
+  return str;
+}
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      const _module = _mod4461;
-      const relativeTimeWithPlural2 = relativeTimeWithPlural3;
-      let str = "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie";
-      const split = "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie"
-        .split;
+      const _module = _mod4467;
+      let str = "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4";
+      const split3 =
+        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
       const defineLocale = _module.defineLocale;
-      const split2 = "ian._feb._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.".split;
-      const split3 = "duminic\u0103_luni_mar\u021Bi_miercuri_joi_vineri_s\u00E2mb\u0103t\u0103".split;
-      const split4 = "Dum_Lun_Mar_Mie_Joi_Vin_S\u00E2m".split;
-      const split5 = "Du_Lu_Ma_Mi_Jo_Vi_S\u00E2".split;
+      const split4 =
+        "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split;
+      const split5 =
+        "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C"
+          .split;
+      const split6 = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split;
+      const split7 = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split;
       const obj2 = {
         months:
-          "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie".split(
+          "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
             "_",
           ),
-        monthsShort: "ian._feb._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.".split("_"),
-        monthsParseExact: true,
-        weekdays: "duminic\u0103_luni_mar\u021Bi_miercuri_joi_vineri_s\u00E2mb\u0103t\u0103".split("_"),
-        weekdaysShort: "Dum_Lun_Mar_Mie_Joi_Vin_S\u00E2m".split("_"),
-        weekdaysMin: "Du_Lu_Ma_Mi_Jo_Vi_S\u00E2".split("_"),
+        monthsShort:
+          "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
+            "_",
+          ),
+        weekdays:
+          "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
+            "_",
+          ),
+        weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
+        weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
         longDateFormat: {
-          LT: "H:mm",
-          LTS: "H:mm:ss",
-          L: "DD.MM.YYYY",
-          LL: "D MMMM YYYY",
-          LLL: "D MMMM YYYY H:mm",
-          LLLL: "dddd, D MMMM YYYY H:mm",
+          LT: "A h:mm",
+          LTS: "A h:mm:ss",
+          L: "YYYY.MM.DD.",
+          LL: "YYYY\uB144 MMMM D\uC77C",
+          LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
+          LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+          l: "YYYY.MM.DD.",
+          ll: "YYYY\uB144 MMMM D\uC77C",
+          lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
+          llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
         },
         calendar: {
-          sameDay: "[azi la] LT",
-          nextDay: "[m\u00E2ine la] LT",
-          nextWeek: "dddd [la] LT",
-          lastDay: "[ieri la] LT",
-          lastWeek: "[fosta] dddd [la] LT",
+          sameDay: "\uC624\uB298 LT",
+          nextDay: "\uB0B4\uC77C LT",
+          nextWeek: "dddd LT",
+          lastDay: "\uC5B4\uC81C LT",
+          lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
           sameElse: "L",
         },
-        relativeTime: obj3,
-        week: { dow: 1, doy: 7 },
+        relativeTime: {
+          future: "%s \uD6C4",
+          past: "%s \uC804",
+          s: "\uBA87 \uCD08",
+          ss: "%d\uCD08",
+          m: "1\uBD84",
+          mm: "%d\uBD84",
+          h: "\uD55C \uC2DC\uAC04",
+          hh: "%d\uC2DC\uAC04",
+          d: "\uD558\uB8E8",
+          dd: "%d\uC77C",
+          M: "\uD55C \uB2EC",
+          MM: "%d\uB2EC",
+          y: "\uC77C \uB144",
+          yy: "%d\uB144",
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
+        ordinal,
+        meridiemParse: /오전|오후/,
+        isPM,
+        meridiem,
       };
-      obj3 = {
-        future: "peste %s",
-        past: "%s \u00EEn urm\u0103",
-        s: "c\u00E2teva secunde",
-        ss: relativeTimeWithPlural2,
-        m: "un minut",
-        mm: relativeTimeWithPlural2,
-        h: "o or\u0103",
-        hh: relativeTimeWithPlural2,
-        d: "o zi",
-        dd: relativeTimeWithPlural2,
-        w: "o s\u0103pt\u0103m\u00E2n\u0103",
-        ww: relativeTimeWithPlural2,
-        M: "o lun\u0103",
-        MM: relativeTimeWithPlural2,
-        y: "un an",
-        yy: relativeTimeWithPlural2,
-      };
-      defineLocale("ro", obj2);
+      defineLocale("ko", obj2);
     }
   }
 }
 if (typeof globalThis.define === "function") {
   const define2 = globalThis.define;
   if (globalThis.define.amd) {
-    globalThis.define(["../moment"], function n(defineLocale) {
-      const relativeTimeWithPlural = relativeTimeWithPlural3;
+    globalThis.define(["../moment"], function t(defineLocale) {
+      let split;
+      let split2;
+      ({ split, split: split2 } = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0");
       const obj = {
         months:
-          "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie".split(
+          "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
             "_",
           ),
-        monthsShort: "ian._feb._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.".split("_"),
-        monthsParseExact: true,
-        weekdays: "duminic\u0103_luni_mar\u021Bi_miercuri_joi_vineri_s\u00E2mb\u0103t\u0103".split("_"),
-        weekdaysShort: "Dum_Lun_Mar_Mie_Joi_Vin_S\u00E2m".split("_"),
-        weekdaysMin: "Du_Lu_Ma_Mi_Jo_Vi_S\u00E2".split("_"),
+        monthsShort:
+          "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
+            "_",
+          ),
+        weekdays:
+          "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
+            "_",
+          ),
+        weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
+        weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
         longDateFormat: {
-          LT: "H:mm",
-          LTS: "H:mm:ss",
-          L: "DD.MM.YYYY",
-          LL: "D MMMM YYYY",
-          LLL: "D MMMM YYYY H:mm",
-          LLLL: "dddd, D MMMM YYYY H:mm",
+          LT: "A h:mm",
+          LTS: "A h:mm:ss",
+          L: "YYYY.MM.DD.",
+          LL: "YYYY\uB144 MMMM D\uC77C",
+          LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
+          LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+          l: "YYYY.MM.DD.",
+          ll: "YYYY\uB144 MMMM D\uC77C",
+          lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
+          llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
         },
         calendar: {
-          sameDay: "[azi la] LT",
-          nextDay: "[m\u00E2ine la] LT",
-          nextWeek: "dddd [la] LT",
-          lastDay: "[ieri la] LT",
-          lastWeek: "[fosta] dddd [la] LT",
+          sameDay: "\uC624\uB298 LT",
+          nextDay: "\uB0B4\uC77C LT",
+          nextWeek: "dddd LT",
+          lastDay: "\uC5B4\uC81C LT",
+          lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
           sameElse: "L",
         },
         relativeTime: {
-          future: "peste %s",
-          past: "%s \u00EEn urm\u0103",
-          s: "c\u00E2teva secunde",
-          ss: relativeTimeWithPlural,
-          m: "un minut",
-          mm: relativeTimeWithPlural,
-          h: "o or\u0103",
-          hh: relativeTimeWithPlural,
-          d: "o zi",
-          dd: relativeTimeWithPlural,
-          w: "o s\u0103pt\u0103m\u00E2n\u0103",
-          ww: relativeTimeWithPlural,
-          M: "o lun\u0103",
-          MM: relativeTimeWithPlural,
-          y: "un an",
-          yy: relativeTimeWithPlural,
+          future: "%s \uD6C4",
+          past: "%s \uC804",
+          s: "\uBA87 \uCD08",
+          ss: "%d\uCD08",
+          m: "1\uBD84",
+          mm: "%d\uBD84",
+          h: "\uD55C \uC2DC\uAC04",
+          hh: "%d\uC2DC\uAC04",
+          d: "\uD558\uB8E8",
+          dd: "%d\uC77C",
+          M: "\uD55C \uB2EC",
+          MM: "%d\uB2EC",
+          y: "\uC77C \uB144",
+          yy: "%d\uB144",
         },
-        week: { dow: 1, doy: 7 },
+        dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
+        ordinal,
+        meridiemParse: /오전|오후/,
+        isPM,
+        meridiem,
       };
-      return defineLocale.defineLocale("ro", obj);
+      return defineLocale.defineLocale("ko", obj);
     });
   }
 }
 const moment = this.moment;
-let relativeTimeWithPlural = relativeTimeWithPlural3;
 let obj = {
-  months: "ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie".split(
+  months: "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split(
     "_",
   ),
-  monthsShort: "ian._feb._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.".split("_"),
-  monthsParseExact: true,
-  weekdays: "duminic\u0103_luni_mar\u021Bi_miercuri_joi_vineri_s\u00E2mb\u0103t\u0103".split("_"),
-  weekdaysShort: "Dum_Lun_Mar_Mie_Joi_Vin_S\u00E2m".split("_"),
-  weekdaysMin: "Du_Lu_Ma_Mi_Jo_Vi_S\u00E2".split("_"),
+  monthsShort:
+    "1\uC6D4_2\uC6D4_3\uC6D4_4\uC6D4_5\uC6D4_6\uC6D4_7\uC6D4_8\uC6D4_9\uC6D4_10\uC6D4_11\uC6D4_12\uC6D4".split("_"),
+  weekdays:
+    "\uC77C\uC694\uC77C_\uC6D4\uC694\uC77C_\uD654\uC694\uC77C_\uC218\uC694\uC77C_\uBAA9\uC694\uC77C_\uAE08\uC694\uC77C_\uD1A0\uC694\uC77C".split(
+      "_",
+    ),
+  weekdaysShort: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
+  weekdaysMin: "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0".split("_"),
   longDateFormat: {
-    LT: "H:mm",
-    LTS: "H:mm:ss",
-    L: "DD.MM.YYYY",
-    LL: "D MMMM YYYY",
-    LLL: "D MMMM YYYY H:mm",
-    LLLL: "dddd, D MMMM YYYY H:mm",
+    LT: "A h:mm",
+    LTS: "A h:mm:ss",
+    L: "YYYY.MM.DD.",
+    LL: "YYYY\uB144 MMMM D\uC77C",
+    LLL: "YYYY\uB144 MMMM D\uC77C A h:mm",
+    LLLL: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
+    l: "YYYY.MM.DD.",
+    ll: "YYYY\uB144 MMMM D\uC77C",
+    lll: "YYYY\uB144 MMMM D\uC77C A h:mm",
+    llll: "YYYY\uB144 MMMM D\uC77C dddd A h:mm",
   },
   calendar: {
-    sameDay: "[azi la] LT",
-    nextDay: "[m\u00E2ine la] LT",
-    nextWeek: "dddd [la] LT",
-    lastDay: "[ieri la] LT",
-    lastWeek: "[fosta] dddd [la] LT",
+    sameDay: "\uC624\uB298 LT",
+    nextDay: "\uB0B4\uC77C LT",
+    nextWeek: "dddd LT",
+    lastDay: "\uC5B4\uC81C LT",
+    lastWeek: "\uC9C0\uB09C\uC8FC dddd LT",
     sameElse: "L",
   },
   relativeTime: {
-    future: "peste %s",
-    past: "%s \u00EEn urm\u0103",
-    s: "c\u00E2teva secunde",
-    ss: relativeTimeWithPlural,
-    m: "un minut",
-    mm: relativeTimeWithPlural,
-    h: "o or\u0103",
-    hh: relativeTimeWithPlural,
-    d: "o zi",
-    dd: relativeTimeWithPlural,
-    w: "o s\u0103pt\u0103m\u00E2n\u0103",
-    ww: relativeTimeWithPlural,
-    M: "o lun\u0103",
-    MM: relativeTimeWithPlural,
-    y: "un an",
-    yy: relativeTimeWithPlural,
+    future: "%s \uD6C4",
+    past: "%s \uC804",
+    s: "\uBA87 \uCD08",
+    ss: "%d\uCD08",
+    m: "1\uBD84",
+    mm: "%d\uBD84",
+    h: "\uD55C \uC2DC\uAC04",
+    hh: "%d\uC2DC\uAC04",
+    d: "\uD558\uB8E8",
+    dd: "%d\uC77C",
+    M: "\uD55C \uB2EC",
+    MM: "%d\uB2EC",
+    y: "\uC77C \uB144",
+    yy: "%d\uB144",
   },
-  week: { dow: 1, doy: 7 },
+  dayOfMonthOrdinalParse: /\d{1,2}(일|월|주)/,
+  ordinal,
+  meridiemParse: /오전|오후/,
+  isPM,
+  meridiem,
 };
-moment.defineLocale("ro", obj);
+({ split, split: split2 } = "\uC77C_\uC6D4_\uD654_\uC218_\uBAA9_\uAE08_\uD1A0");
+moment.defineLocale("ko", obj);

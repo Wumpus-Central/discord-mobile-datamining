@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "06dd03fc60ccef8d12f4f7cb6c5d239c",
-  name: "XNeutralIcon",
+  hash: "8f1bbba7f556b427515687c5a1498793",
+  name: "TrophyIcon",
   type: "png",
 });

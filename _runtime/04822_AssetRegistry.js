@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons/user_profile",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c67b491c21edfc140b968b3afa5e6528",
-  name: "ic_video_disabled",
+  hash: "31fe21f79423d8afd3dcadd61d04938b",
+  name: "ic_mail",
   type: "png",
 });

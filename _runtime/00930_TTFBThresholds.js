@@ -11,7 +11,7 @@ function whenReady(arg0) {}
 export const TTFBThresholds = items;
 export const onTTFB = (tmpResult) => {
   let closure_1;
-  const f82226 = () => {
+  const f82359 = () => {
     let tmp = closure_0;
     if (typeof closure_2_3 === "function") {
       closure_0 = tmp;
@@ -23,7 +23,7 @@ export const onTTFB = (tmpResult) => {
       }
       if (prerendering) {
         let tmp2Result = closure_2_0(closure_2_1[1]);
-        let whenActivatedResult = tmp2Result.whenActivated(f82226);
+        let whenActivatedResult = tmp2Result.whenActivated(f82359);
       } else {
         let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
         let readyState;
@@ -35,7 +35,7 @@ export const onTTFB = (tmpResult) => {
           let tmp9 = globalThis;
           let flag = true;
           let str2 = "load";
-          let listener = globalThis.addEventListener("load", f82227, true);
+          let listener = globalThis.addEventListener("load", f82360, true);
         } else {
           let tmp7 = globalThis;
           let _setTimeout = setTimeout;
@@ -47,7 +47,7 @@ export const onTTFB = (tmpResult) => {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  const f82227 = () => {
+  const f82360 = () => {
     if (typeof closure_2_3 === "function") {
       let closure_0 = closure_1_0;
       let tmp2 = closure_0;
@@ -59,7 +59,7 @@ export const onTTFB = (tmpResult) => {
       }
       if (prerendering) {
         let tmp2Result = tmp2(closure_2_1[1]);
-        let whenActivatedResult = tmp2Result.whenActivated(f82226);
+        let whenActivatedResult = tmp2Result.whenActivated(f82359);
       } else {
         let _document2 = tmp2(closure_2_1[0]).WINDOW.document;
         let readyState;
@@ -71,7 +71,7 @@ export const onTTFB = (tmpResult) => {
           let tmp9 = globalThis;
           let flag = true;
           let str2 = "load";
-          let listener = globalThis.addEventListener("load", f82227, true);
+          let listener = globalThis.addEventListener("load", f82360, true);
         } else {
           let tmp7 = globalThis;
           let _setTimeout = setTimeout;
@@ -113,7 +113,7 @@ export const onTTFB = (tmpResult) => {
     }
     if (prerendering) {
       tmpResult = tmp(914);
-      tmpResult.whenActivated(f82226);
+      tmpResult.whenActivated(f82359);
     } else {
       const _document2 = tmp(915).WINDOW.document;
       let readyState;
@@ -121,7 +121,7 @@ export const onTTFB = (tmpResult) => {
         readyState = _document2.readyState;
       }
       if ("complete" !== readyState) {
-        const listener = globalThis.addEventListener("load", f82227, true);
+        const listener = globalThis.addEventListener("load", f82360, true);
       } else {
         const _setTimeout = setTimeout;
         const timerId = setTimeout(fn);

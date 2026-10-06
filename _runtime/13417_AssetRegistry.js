@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/light",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "1b5f32142ab22998fa2540426f00d327",
-  name: "tier_0_24px",
+  hash: "b0762f0f9ef3f22f62e92b1be981b656",
+  name: "ChevronLargeUpIcon",
   type: "png",
 });

@@ -4,10 +4,10 @@ import AssetRegistry from "01132_AssetRegistry.js";
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "4782ad45462ec62f2912f2f8f1ed8388",
-  name: "ic_leave_24px",
+  hash: "31757ea45ee4fb60779fd700caf7d93e",
+  name: "ic_nitro_wheel_gradient_purple",
   type: "png",
 });

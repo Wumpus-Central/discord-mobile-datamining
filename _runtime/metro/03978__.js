@@ -44,7 +44,7 @@ if (!date) {
 }
 
 export default {
-  code: "de",
+  code: "da",
   formatDistance: tmp3.default,
   formatLong: tmp5.default,
   formatRelative: tmp7.default,

@@ -15,7 +15,7 @@ if (!buildLocalizeFn) {
 }
 const date = {
   ordinalNumber(arg0, arg1) {
-    return Number(arg0) + ".";
+    return Number(arg0) + "e";
   },
   era: obj.default(obj3),
   quarter: obj.default(obj4),
@@ -24,14 +24,14 @@ const date = {
   dayPeriod: obj.default(obj7),
 };
 obj3 = {
-  values: { narrow: ["f.Kr.", "e.Kr."], abbreviated: ["f.Kr.", "e.Kr."], wide: ["f\u00F8r Kristus", "etter Kristus"] },
+  values: { narrow: ["v.C.", "n.C."], abbreviated: ["v.Chr.", "n.Chr."], wide: ["voor Christus", "na Christus"] },
   defaultWidth: "wide",
 };
 obj4 = {
   values: {
     narrow: ["1", "2", "3", "4"],
-    abbreviated: ["Q1", "Q2", "Q3", "Q4"],
-    wide: ["1. kvartal", "2. kvartal", "3. kvartal", "4. kvartal"],
+    abbreviated: ["K1", "K2", "K3", "K4"],
+    wide: ["1e kwartaal", "2e kwartaal", "3e kwartaal", "4e kwartaal"],
   },
   defaultWidth: "wide",
   argumentCallback(arg0) {
@@ -41,64 +41,64 @@ obj4 = {
 obj5 = {
   values: {
     narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
-    abbreviated: ["jan.", "feb.", "mars", "apr.", "mai", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "des."],
+    abbreviated: ["jan.", "feb.", "mrt.", "apr.", "mei", "jun.", "jul.", "aug.", "sep.", "okt.", "nov.", "dec."],
     wide: [
-      "januar",
-      "februar",
-      "mars",
+      "januari",
+      "februari",
+      "maart",
       "april",
-      "mai",
+      "mei",
       "juni",
       "juli",
-      "august",
+      "augustus",
       "september",
       "oktober",
       "november",
-      "desember",
+      "december",
     ],
   },
   defaultWidth: "wide",
 };
 obj6 = {
   values: {
-    narrow: ["S", "M", "T", "O", "T", "F", "L"],
-    short: ["s\u00F8", "ma", "ti", "on", "to", "fr", "l\u00F8"],
-    abbreviated: ["s\u00F8n", "man", "tir", "ons", "tor", "fre", "l\u00F8r"],
-    wide: ["s\u00F8ndag", "mandag", "tirsdag", "onsdag", "torsdag", "fredag", "l\u00F8rdag"],
+    narrow: ["Z", "M", "D", "W", "D", "V", "Z"],
+    short: ["zo", "ma", "di", "wo", "do", "vr", "za"],
+    abbreviated: ["zon", "maa", "din", "woe", "don", "vri", "zat"],
+    wide: ["zondag", "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag"],
   },
   defaultWidth: "wide",
 };
 obj7 = {
   values: {
     narrow: {
-      am: "a",
-      pm: "p",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "p\u00E5 morg.",
-      afternoon: "p\u00E5 etterm.",
-      evening: "p\u00E5 kvelden",
-      night: "p\u00E5 natten",
+      am: "AM",
+      pm: "PM",
+      midnight: "middernacht",
+      noon: "het middaguur",
+      morning: "'s ochtends",
+      afternoon: "'s middags",
+      evening: "'s avonds",
+      night: "'s nachts",
     },
     abbreviated: {
-      am: "a.m.",
-      pm: "p.m.",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "p\u00E5 morg.",
-      afternoon: "p\u00E5 etterm.",
-      evening: "p\u00E5 kvelden",
-      night: "p\u00E5 natten",
+      am: "AM",
+      pm: "PM",
+      midnight: "middernacht",
+      noon: "het middaguur",
+      morning: "'s ochtends",
+      afternoon: "'s middags",
+      evening: "'s avonds",
+      night: "'s nachts",
     },
     wide: {
-      am: "a.m.",
-      pm: "p.m.",
-      midnight: "midnatt",
-      noon: "middag",
-      morning: "p\u00E5 morgenen",
-      afternoon: "p\u00E5 ettermiddagen",
-      evening: "p\u00E5 kvelden",
-      night: "p\u00E5 natten",
+      am: "AM",
+      pm: "PM",
+      midnight: "middernacht",
+      noon: "het middaguur",
+      morning: "'s ochtends",
+      afternoon: "'s middags",
+      evening: "'s avonds",
+      night: "'s nachts",
     },
   },
   defaultWidth: "wide",

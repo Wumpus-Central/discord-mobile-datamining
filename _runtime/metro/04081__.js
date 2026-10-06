@@ -8,6 +8,7 @@ let items2;
 let items3;
 let items4;
 let items5;
+let items6;
 let obj;
 let obj10;
 let obj11;
@@ -43,22 +44,19 @@ const date = {
 };
 obj6 = {
   matchPatterns: {
-    narrow: /^((до )?н\.?\s?э\.?)/i,
-    abbreviated: /^((до )?н\.?\s?э\.?)/i,
-    wide: /^(до нашей эры|нашей эры|наша эра)/i,
+    narrow: /^(Î|D)/i,
+    abbreviated: /^(Î\.?\s?d\.?\s?C\.?|Î\.?\s?e\.?\s?n\.?|D\.?\s?C\.?|e\.?\s?n\.?)/i,
+    wide: /^(Înainte de Cristos|Înaintea erei noastre|După Cristos|Era noastră)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj7,
   defaultParseWidth: "any",
 };
-obj7 = { any: items };
-items = [/^д/i, /^н/i];
+obj7 = { any: items, wide: items1 };
+items = [/^ÎC/i, /^DC/i];
+items1 = [/^(Înainte de Cristos|Înaintea erei noastre)/i, /^(După Cristos|Era noastră)/i];
 obj8 = {
-  matchPatterns: {
-    narrow: /^[1234]/i,
-    abbreviated: /^[1234](-?[ыои]?й?)? кв.?/i,
-    wide: /^[1234](-?[ыои]?й?)? квартал/i,
-  },
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^trimestrul [1234]/i },
   defaultMatchWidth: "wide",
   parsePatterns: obj9,
   defaultParseWidth: "any",
@@ -66,59 +64,58 @@ obj8 = {
     return arg0 + 1;
   },
 };
-obj9 = { any: items1 };
-items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9 = { any: items2 };
+items2 = [/1/i, /2/i, /3/i, /4/i];
 obj10 = {
   matchPatterns: {
-    narrow: /^[яфмаисонд]/i,
-    abbreviated: /^(янв|фев|март?|апр|ма[йя]|июн[ья]?|июл[ья]?|авг|сент?|окт|нояб?|дек)\.?/i,
-    wide: /^(январ[ья]|феврал[ья]|марта?|апрел[ья]|ма[йя]|июн[ья]|июл[ья]|августа?|сентябр[ья]|октябр[ья]|октябр[ья]|ноябр[ья]|декабр[ья])/i,
+    narrow: /^[ifmaasond]/i,
+    abbreviated: /^(ian|feb|mar|apr|mai|iun|iul|aug|sep|oct|noi|dec)/i,
+    wide: /^(ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|octombrie|noiembrie|decembrie)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj11,
   defaultParseWidth: "any",
 };
-obj11 = { narrow: items2, any: items3 };
-items2 = [/^я/i, /^ф/i, /^м/i, /^а/i, /^м/i, /^и/i, /^и/i, /^а/i, /^с/i, /^о/i, /^н/i, /^я/i];
-items3 = [/^я/i, /^ф/i, /^мар/i, /^ап/i, /^ма[йя]/i, /^июн/i, /^июл/i, /^ав/i, /^с/i, /^о/i, /^н/i, /^д/i];
+obj11 = { narrow: items3, any: items4 };
+items3 = [/^i/i, /^f/i, /^m/i, /^a/i, /^m/i, /^i/i, /^i/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+items4 = [/^ia/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^iun/i, /^iul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
 obj12 = {
   matchPatterns: {
-    narrow: /^[впсч]/i,
-    short: /^(вс|во|пн|по|вт|ср|чт|че|пт|пя|сб|су)\.?/i,
-    abbreviated: /^(вск|вос|пнд|пон|втр|вто|срд|сре|чтв|чет|птн|пят|суб).?/i,
-    wide: /^(воскресень[ея]|понедельника?|вторника?|сред[аы]|четверга?|пятниц[аы]|суббот[аы])/i,
+    narrow: /^[dlmjvs]/i,
+    short: /^(d|l|ma|mi|j|v|s)/i,
+    abbreviated: /^(dum|lun|mar|mie|jo|vi|sâ)/i,
+    wide: /^(duminica|luni|marţi|miercuri|joi|vineri|sâmbătă)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj13,
   defaultParseWidth: "any",
 };
-obj13 = { narrow: items4, any: items5 };
-items4 = [/^в/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
-items5 = [/^в[ос]/i, /^п[он]/i, /^в/i, /^ср/i, /^ч/i, /^п[ят]/i, /^с[уб]/i];
+obj13 = { narrow: items5, any: items6 };
+items5 = [/^d/i, /^l/i, /^m/i, /^m/i, /^j/i, /^v/i, /^s/i];
+items6 = [/^d/i, /^l/i, /^ma/i, /^mi/i, /^j/i, /^v/i, /^s/i];
 obj14 = {
   matchPatterns: {
-    narrow: /^([дп]п|полн\.?|полд\.?|утр[оа]|день|дня|веч\.?|ноч[ьи])/i,
-    abbreviated: /^([дп]п|полн\.?|полд\.?|утр[оа]|день|дня|веч\.?|ноч[ьи])/i,
-    wide: /^([дп]п|полночь|полдень|утр[оа]|день|дня|вечера?|ноч[ьи])/i,
+    narrow: /^(a|p|mn|a|(dimineaţa|după-amiaza|seara|noaptea))/i,
+    any: /^([ap]\.?\s?m\.?|miezul nopții|amiaza|(dimineaţa|după-amiaza|seara|noaptea))/i,
   },
-  defaultMatchWidth: "wide",
+  defaultMatchWidth: "any",
   parsePatterns: obj15,
   defaultParseWidth: "any",
 };
 obj15 = {
   any: {
-    am: /^дп/i,
-    pm: /^пп/i,
-    midnight: /^полн/i,
-    noon: /^полд/i,
-    morning: /^у/i,
-    afternoon: /^д[ен]/i,
-    evening: /^в/i,
-    night: /^н/i,
+    am: /^a/i,
+    pm: /^p/i,
+    midnight: /^mn/i,
+    noon: /amiaza/i,
+    morning: /dimineaţa/i,
+    afternoon: /după-amiaza/i,
+    evening: /seara/i,
+    night: /noaptea/i,
   },
 };
 obj5 = {
-  matchPattern: /^(\d+)(-?(е|я|й|ое|ье|ая|ья|ый|ой|ий|ый))?/i,
+  matchPattern: /^(\d+)?/i,
   parsePattern: /\d+/i,
   valueCallback(match) {
     return parseInt(match, 10);

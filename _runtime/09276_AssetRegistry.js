@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native",
+  width: 160,
+  height: 160,
   scales: [2, 3],
-  hash: "08fd133b0b292a14ea2a09a50dd4618e",
-  name: "CalendarIcon",
+  hash: "9e9c2d9cc8f1fa482e39489caafdfd7e",
+  name: "img_no_results_dark_theme",
   type: "png",
 });

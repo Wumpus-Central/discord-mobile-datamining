@@ -45,19 +45,18 @@ const date = {
 };
 obj6 = {
   matchPatterns: {
-    narrow: /^(ac|dc|a|d)/i,
-    abbreviated: /^(a\.?\s?c\.?|d\.?\s?c\.?)/i,
-    wide: /^(antes de cristo|depois de cristo)/i,
+    narrow: /^(p\.?\s*n\.?\s*e\.?\s*|n\.?\s*e\.?\s*)/i,
+    abbreviated: /^(p\.?\s*n\.?\s*e\.?\s*|n\.?\s*e\.?\s*)/i,
+    wide: /^(przed\s*nasz(ą|a)\s*er(ą|a)|naszej\s*ery)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj7,
   defaultParseWidth: "any",
 };
-obj7 = { any: items, wide: items1 };
-items = [/^ac/i, /^dc/i];
-items1 = [/^antes de cristo/i, /^depois de cristo/i];
+obj7 = { any: items };
+items = [/^p/i, /^n/i];
 obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^[1234](º)? trimestre/i },
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^(I|II|III|IV)\s*kw\.?/i, wide: /^(I|II|III|IV)\s*kwarta(ł|l)/i },
   defaultMatchWidth: "wide",
   parsePatterns: obj9,
   defaultParseWidth: "any",
@@ -65,59 +64,71 @@ obj8 = {
     return arg0 + 1;
   },
 };
-obj9 = { any: items2 };
-items2 = [/1/i, /2/i, /3/i, /4/i];
+obj9 = { narrow: items1, any: items2 };
+items1 = [/1/i, /2/i, /3/i, /4/i];
+items2 = [/^I kw/i, /^II kw/i, /^III kw/i, /^IV kw/i];
 obj10 = {
   matchPatterns: {
-    narrow: /^[jfmajsond]/i,
-    abbreviated: /^(jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)/i,
-    wide: /^(janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)/i,
+    narrow: /^[slmkcwpg]/i,
+    abbreviated: /^(sty|lut|mar|kwi|maj|cze|lip|sie|wrz|pa(ź|z)|lis|gru)/i,
+    wide: /^(stycznia|stycze(ń|n)|lutego|luty|marca|marzec|kwietnia|kwiecie(ń|n)|maja|maj|czerwca|czerwiec|lipca|lipiec|sierpnia|sierpie(ń|n)|wrze(ś|s)nia|wrzesie(ń|n)|pa(ź|z)dziernika|pa(ź|z)dziernik|listopada|listopad|grudnia|grudzie(ń|n))/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj11,
   defaultParseWidth: "any",
 };
 obj11 = { narrow: items3, any: items4 };
-items3 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-items4 = [/^ja/i, /^fev/i, /^mar/i, /^abr/i, /^mai/i, /^jun/i, /^jul/i, /^ago/i, /^set/i, /^out/i, /^nov/i, /^dez/i];
+items3 = [/^s/i, /^l/i, /^m/i, /^k/i, /^m/i, /^c/i, /^l/i, /^s/i, /^w/i, /^p/i, /^l/i, /^g/i];
+items4 = [/^st/i, /^lu/i, /^mar/i, /^k/i, /^maj/i, /^c/i, /^lip/i, /^si/i, /^w/i, /^p/i, /^lis/i, /^g/i];
 obj12 = {
   matchPatterns: {
-    narrow: /^(dom|[23456]ª?|s[aá]b)/i,
-    short: /^(dom|[23456]ª?|s[aá]b)/i,
-    abbreviated: /^(dom|seg|ter|qua|qui|sex|s[aá]b)/i,
-    wide: /^(domingo|(segunda|ter[cç]a|quarta|quinta|sexta)([- ]feira)?|s[aá]bado)/i,
+    narrow: /^[npwścs]/i,
+    short: /^(nie|pon|wto|(ś|s)ro|czw|pi(ą|a)|sob)/i,
+    abbreviated: /^(niedz|pon|wt|(ś|s)r|czw|pt|sob)\.?/i,
+    wide: /^(niedziela|poniedzia(ł|l)ek|wtorek|(ś|s)roda|czwartek|pi(ą|a)tek|sobota)/i,
   },
   defaultMatchWidth: "wide",
   parsePatterns: obj13,
   defaultParseWidth: "any",
 };
-obj13 = { short: items5, narrow: items6, any: items7 };
-items5 = [/^d/i, /^2/i, /^3/i, /^4/i, /^5/i, /^6/i, /^s[aá]/i];
-items6 = [/^d/i, /^2/i, /^3/i, /^4/i, /^5/i, /^6/i, /^s[aá]/i];
-items7 = [/^d/i, /^seg/i, /^t/i, /^qua/i, /^qui/i, /^sex/i, /^s[aá]b/i];
+obj13 = { narrow: items5, abbreviated: items6, any: items7 };
+items5 = [/^n/i, /^p/i, /^w/i, /^ś/i, /^c/i, /^p/i, /^s/i];
+items6 = [/^n/i, /^po/i, /^w/i, /^(ś|s)r/i, /^c/i, /^pt/i, /^so/i];
+items7 = [/^n/i, /^po/i, /^w/i, /^(ś|s)r/i, /^c/i, /^pi/i, /^so/i];
 obj14 = {
   matchPatterns: {
-    narrow: /^(a|p|mn|md|(da) (manhã|tarde|noite))/i,
-    any: /^([ap]\.?\s?m\.?|meia[-\s]noite|meio[-\s]dia|(da) (manhã|tarde|noite))/i,
+    narrow:
+      /^(^a$|^p$|pó(ł|l)n\.?|o\s*pó(ł|l)n\.?|po(ł|l)\.?|w\s*po(ł|l)\.?|po\s*po(ł|l)\.?|rano|wiecz\.?|noc|w\s*nocy)/i,
+    any: /^(am|pm|pó(ł|l)noc|o\s*pó(ł|l)nocy|po(ł|l)udnie|w\s*po(ł|l)udnie|popo(ł|l)udnie|po\s*po(ł|l)udniu|rano|wieczór|wieczorem|noc|w\s*nocy)/i,
   },
   defaultMatchWidth: "any",
   parsePatterns: obj15,
   defaultParseWidth: "any",
 };
 obj15 = {
+  narrow: {
+    am: /^a$/i,
+    pm: /^p$/i,
+    midnight: /pó(ł|l)n/i,
+    noon: /po(ł|l)/i,
+    morning: /rano/i,
+    afternoon: /po\s*po(ł|l)/i,
+    evening: /wiecz/i,
+    night: /noc/i,
+  },
   any: {
-    am: /^a/i,
-    pm: /^p/i,
-    midnight: /^mn|^meia[-\s]noite/i,
-    noon: /^md|^meio[-\s]dia/i,
-    morning: /manhã/i,
-    afternoon: /tarde/i,
-    evening: /tarde/i,
-    night: /noite/i,
+    am: /^am/i,
+    pm: /^pm/i,
+    midnight: /pó(ł|l)n/i,
+    noon: /po(ł|l)/i,
+    morning: /rano/i,
+    afternoon: /po\s*po(ł|l)/i,
+    evening: /wiecz/i,
+    night: /noc/i,
   },
 };
 obj5 = {
-  matchPattern: /^(\d+)[ºªo]?/i,
+  matchPattern: /^(\d+)?/i,
   parsePattern: /\d+/i,
   valueCallback(match) {
     return parseInt(match, 10);

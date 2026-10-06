@@ -1,21 +1,21 @@
 // _runtime/04411_formatDistance.js
 let closure_0 = {
-  lessThanXSeconds: { one: "\u4E0D\u5230 1 \u79D2", other: "\u4E0D\u5230 {{count}} \u79D2" },
-  xSeconds: { one: "1 \u79D2", other: "{{count}} \u79D2" },
-  halfAMinute: "\u534A\u5206\u949F",
-  lessThanXMinutes: { one: "\u4E0D\u5230 1 \u5206\u949F", other: "\u4E0D\u5230 {{count}} \u5206\u949F" },
-  xMinutes: { one: "1 \u5206\u949F", other: "{{count}} \u5206\u949F" },
-  xHours: { one: "1 \u5C0F\u65F6", other: "{{count}} \u5C0F\u65F6" },
-  aboutXHours: { one: "\u5927\u7EA6 1 \u5C0F\u65F6", other: "\u5927\u7EA6 {{count}} \u5C0F\u65F6" },
-  xDays: { one: "1 \u5929", other: "{{count}} \u5929" },
-  aboutXWeeks: { one: "\u5927\u7EA6 1 \u4E2A\u661F\u671F", other: "\u5927\u7EA6 {{count}} \u4E2A\u661F\u671F" },
-  xWeeks: { one: "1 \u4E2A\u661F\u671F", other: "{{count}} \u4E2A\u661F\u671F" },
-  aboutXMonths: { one: "\u5927\u7EA6 1 \u4E2A\u6708", other: "\u5927\u7EA6 {{count}} \u4E2A\u6708" },
-  xMonths: { one: "1 \u4E2A\u6708", other: "{{count}} \u4E2A\u6708" },
-  aboutXYears: { one: "\u5927\u7EA6 1 \u5E74", other: "\u5927\u7EA6 {{count}} \u5E74" },
-  xYears: { one: "1 \u5E74", other: "{{count}} \u5E74" },
-  overXYears: { one: "\u8D85\u8FC7 1 \u5E74", other: "\u8D85\u8FC7 {{count}} \u5E74" },
-  almostXYears: { one: "\u5C06\u8FD1 1 \u5E74", other: "\u5C06\u8FD1 {{count}} \u5E74" },
+  lessThanXSeconds: { one: "d\u01B0\u1EDBi 1 gi\u00E2y", other: "d\u01B0\u1EDBi {{count}} gi\u00E2y" },
+  xSeconds: { one: "1 gi\u00E2y", other: "{{count}} gi\u00E2y" },
+  halfAMinute: "n\u1EEDa ph\u00FAt",
+  lessThanXMinutes: { one: "d\u01B0\u1EDBi 1 ph\u00FAt", other: "d\u01B0\u1EDBi {{count}} ph\u00FAt" },
+  xMinutes: { one: "1 ph\u00FAt", other: "{{count}} ph\u00FAt" },
+  aboutXHours: { one: "kho\u1EA3ng 1 gi\u1EDD", other: "kho\u1EA3ng {{count}} gi\u1EDD" },
+  xHours: { one: "1 gi\u1EDD", other: "{{count}} gi\u1EDD" },
+  xDays: { one: "1 ng\u00E0y", other: "{{count}} ng\u00E0y" },
+  aboutXWeeks: { one: "kho\u1EA3ng 1 tu\u1EA7n", other: "kho\u1EA3ng {{count}} tu\u1EA7n" },
+  xWeeks: { one: "1 tu\u1EA7n", other: "{{count}} tu\u1EA7n" },
+  aboutXMonths: { one: "kho\u1EA3ng 1 th\u00E1ng", other: "kho\u1EA3ng {{count}} th\u00E1ng" },
+  xMonths: { one: "1 th\u00E1ng", other: "{{count}} th\u00E1ng" },
+  aboutXYears: { one: "kho\u1EA3ng 1 n\u0103m", other: "kho\u1EA3ng {{count}} n\u0103m" },
+  xYears: { one: "1 n\u0103m", other: "{{count}} n\u0103m" },
+  overXYears: { one: "h\u01A1n 1 n\u0103m", other: "h\u01A1n {{count}} n\u0103m" },
+  almostXYears: { one: "g\u1EA7n 1 n\u0103m", other: "g\u1EA7n {{count}} n\u0103m" },
 };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
@@ -38,11 +38,11 @@ export default function formatDistance(arg0, arg1, addSuffix) {
       if (addSuffix.comparison) {
         let text;
         if (addSuffix.comparison > 0) {
-          text = `${tmp2}内`;
+          text = `${tmp2} nữa`;
         }
         tmp4 = text;
       }
-      text = `${tmp2}前`;
+      text = `${tmp2} trước`;
     }
   }
   return tmp4;

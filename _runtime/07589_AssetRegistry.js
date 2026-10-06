@@ -7,7 +7,7 @@ export default AssetRegistry.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "be0ebbe0444cf9ea073becdc22f65ec9",
-  name: "DenyIcon",
+  hash: "3badf2b48a53beb45ce4acb0a2b90dbd",
+  name: "MoreHorizontalIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import AssetRegistry from "01132_AssetRegistry.js";
 
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 88,
+  httpServerLocation: "/assets/images/native",
+  width: 121,
   height: 80,
-  scales: [2, 3],
-  hash: "d719145f0510a722efd9724a4e3cf026",
-  name: "verify-email",
+  scales: [1, 2],
+  hash: "03d3616a833b9606b61838a277c7b0cf",
+  name: "link_expired",
   type: "png",
 });

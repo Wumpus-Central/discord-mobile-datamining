@@ -4,10 +4,10 @@ import AssetRegistry from "01132_AssetRegistry.js";
 export default AssetRegistry.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 628,
-  height: 167,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "55756313f22e0871d81c45d7dcc50aec",
-  name: "img_account_sync_samsung_light_and_dark",
-  type: "svg",
+  hash: "cfcfafbb4f4daed7fd4c8d1f431ce58f",
+  name: "img_account_sync_xbox_light",
+  type: "png",
 });

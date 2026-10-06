@@ -8,7 +8,7 @@ import _inherits from "00098__inherits.js";
 
 const require = globalThis.__r;
 
-const f80160 = (nodeType) => nodeType.nodeType === require("metro/00131__.js").ELEMENT_NODE;
+const f80293 = (nodeType) => nodeType.nodeType === require("metro/00131__.js").ELEMENT_NODE;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -41,7 +41,7 @@ let obj = {
   key: "childElementCount",
   get() {
     const obj = require("metro/00131__.js");
-    return obj.getChildNodes(this, f80160).length;
+    return obj.getChildNodes(this, f80293).length;
   },
 };
 const items = [
@@ -52,7 +52,7 @@ const items = [
       const createHTMLCollection = require("metro/00129__.js").createHTMLCollection;
       require("metro/00129__.js");
       const obj = require("metro/00131__.js");
-      return createHTMLCollection(obj.getChildNodes(this, f80160));
+      return createHTMLCollection(obj.getChildNodes(this, f80293));
     },
   },
   {
@@ -111,7 +111,7 @@ const items = [
     key: "firstElementChild",
     get() {
       const obj = require("metro/00131__.js");
-      const childNodes = obj.getChildNodes(this, f80160);
+      const childNodes = obj.getChildNodes(this, f80293);
       let first = null;
       if (0 !== childNodes.length) {
         first = childNodes[0];
@@ -139,7 +139,7 @@ const items = [
     key: "lastElementChild",
     get() {
       const obj = require("metro/00131__.js");
-      const childNodes = obj.getChildNodes(this, f80160);
+      const childNodes = obj.getChildNodes(this, f80293);
       let tmp = null;
       if (0 !== childNodes.length) {
         tmp = childNodes[childNodes.length - 1];
