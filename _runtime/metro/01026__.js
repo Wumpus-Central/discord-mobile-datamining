@@ -7,7 +7,7 @@ import _mod1025 from "module_1025" /* 1025 */;
 const require = globalThis.__r;
 let _require, dependencyMap;
 
-const f82865 = (error) => {
+const f82998 = (error) => {
   if (item10034(item10008[2]).DEBUG_BUILD) {
     const debug = item10034(item10008[3]).debug;
     const _HermesInternal = HermesInternal;
@@ -70,7 +70,7 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, processResolvedRout
             closure_2(result, closure_0, closure_3, span);
           }
         });
-        nextPromise.catch(f82865);
+        nextPromise.catch(f82998);
       } else {
         const _Array = Array;
         if (Array.isArray(applyResult)) {
@@ -131,7 +131,7 @@ export const handleAsyncHandlerResult = function handleAsyncHandlerResult(promis
         closure_2(result, closure_0, closure_3, span);
       }
     });
-    nextPromise.catch(f82865);
+    nextPromise.catch(f82998);
   } else {
     const _Array = Array;
     if (Array.isArray(promise)) {

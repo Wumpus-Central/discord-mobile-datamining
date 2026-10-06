@@ -1,55 +1,24 @@
 // === Module 4025: formatRelative ===
 
 // Module 4025 (formatRelative)
-import isSameUTCWeek_mod from "isSameUTCWeek" /* 3960 */;
-
-let tmp3;
-let isSameUTCWeek = isSameUTCWeek_mod;
-if (!isSameUTCWeek) {
-  tmp3 = { default: isSameUTCWeek };
-  const obj = { default: isSameUTCWeek };
-} else {
-  tmp3 = isSameUTCWeek;
-}
-isSameUTCWeek = tmp3;
-let closure_1 = ["domenica", "luned\u00EC", "marted\u00EC", "mercoled\u00EC", "gioved\u00EC", "venerd\u00EC", "sabato"];
-let closure_2 = {
-  lastWeek(getUTCDay, arg1, arg2) {
-    let str;
-    const uTCDay = getUTCDay.getUTCDay();
-    if (isSameUTCWeek.default(getUTCDay, arg1, arg2)) {
-      str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica scorsa alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} scorso alle' p`;
-      }
-    }
-    return str;
-  },
-  yesterday: "'ieri alle' p",
-  today: "'oggi alle' p",
-  tomorrow: "'domani alle' p",
-  nextWeek(getUTCDay, arg1, arg2) {
-    let str;
-    const uTCDay = getUTCDay.getUTCDay();
-    if (isSameUTCWeek.default(getUTCDay, arg1, arg2)) {
-      str = `${"'" + closure_1[tmp]} alle' p`;
-    } else {
-      str = "'domenica prossima alle' p";
-      if (0 !== uTCDay) {
-        str = `${"'" + closure_1[tmp]} prossimo alle' p`;
-      }
-    }
-    return str;
-  },
-  other: "P"
+const f87967 = (arg0) => {
+  let str = "'m\u00FAlt' ";
+  const concat = "".concat;
+  const tmp = _true[arg0.getUTCDay(arg0)];
+  if (c0) {
+    str = "";
+  }
+  const combined = concat(str, "'");
+  return combined.concat(tmp, "' p'-kor'");
 };
+let closure_0 = ["vas\u00E1rnap", "h\u00E9tf\u0151n", "kedden", "szerd\u00E1n", "cs\u00FCt\u00F6rt\u00F6k\u00F6n", "p\u00E9nteken", "szombaton"];
+const obj = { lastWeek: f87967, yesterday: "'tegnap' p'-kor'", today: "'ma' p'-kor'", tomorrow: "'holnap' p'-kor'", nextWeek: f87967, other: "P" };
+let c0 = true;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
+export default function formatRelative(arg0, arg1) {
   let tmpResult = tmp;
-  if (typeof closure_2[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
+  if (typeof obj[arg0] === "function") {
+    tmpResult = tmp(arg1);
   }
   return tmpResult;
 };

@@ -1,18 +1,9 @@
 // === Module 14088: ? ===
 
 // Module 14088
-import _mod14079 from "module_14079" /* 14079 */;
-import _mod14087 from "module_14087" /* 14087 */;
-import _mod14089 from "module_14089" /* 14089 */;
-import _mod14090 from "module_14090" /* 14090 */;
+import _mod14086 from "module_14086" /* 14086 */;
 
+let closure_0 = _mod14086({}.toString);
+let closure_1 = _mod14086("".slice);
 
-export default _mod14079 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
-  const tmp3 = _mod14089("Symbol");
-  let tmpResultResult = _mod14087(tmp3);
-  if (tmpResultResult) {
-    const tmpResult = _mod14090;
-    tmpResultResult = tmpResult(tmp3.prototype, Object(arg0));
-  }
-  return tmpResultResult;
-});
+export default (arg0) => closure_1(closure_0(arg0), 8, -1);

@@ -4,8 +4,8 @@
 import formatDistance from "formatDistance" /* 4101 */;
 import buildFormatLongFn from "buildFormatLongFn" /* 4102 */;
 import formatRelative from "formatRelative" /* 4103 */;
-import date_mod from "module_4402" /* 4402 */;
-import date_mod2 from "module_4403" /* 4403 */;
+import date_mod from "module_4104" /* 4104 */;
+import date_mod2 from "module_4105" /* 4105 */;
 
 let tmp11;
 let tmp3;
@@ -45,4 +45,4 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "tr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };

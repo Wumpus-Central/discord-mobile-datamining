@@ -1,38 +1,44 @@
 // === Module 12605: ? ===
 
 // Module 12605
-import _mod12565 from "module_12565" /* 12565 */;
-import _mod12593 from "module_12593" /* 12593 */;
+let hasOwnProperty;
 
-
-export const parseSampleRate = function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
+function merge(arg0, obj) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = 2;
+  }
+  const tmp = obj;
+  if (tmp) {
+    if (typeof obj === "object") {
+      if (num > 0) {
+        const tmp9 = arg0;
+        if (tmp9) {
+          if (obj) {
+            const _Object = Object;
+            if (0 === Object.keys(obj).length) {
+              return arg0;
+            }
           }
         }
+        obj = {};
+        const merged = Object.assign(arg0);
+        for (const key10016 in obj) {
+          let _Object2 = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          if (!hasOwnProperty.call(obj, key10016)) {
+            continue;
+          } else {
+            obj[key10016] = merge(obj[key10016], obj[key10016], num - 1);
+            continue;
+          }
+          continue;
+        }
+        return obj;
       }
     }
-    if (_mod12593.DEBUG_BUILD) {
-      const logger = _mod12565.logger;
-      const _JSON = JSON;
-      const warn = logger.warn;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
-    }
   }
-};
+  return obj;
+}
+
+export { merge };

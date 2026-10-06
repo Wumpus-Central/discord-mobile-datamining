@@ -145,7 +145,7 @@ class RequestBase {
     return self._end();
   }
   then(arg0, arg1) {
-    const f83813 = (arg0, arg1) => {
+    const f83947 = (arg0, arg1) => {
       let closure_0;
       _self = arg0;
       let closure_1 = arg1;
@@ -184,8 +184,8 @@ class RequestBase {
       const tmp3 = globalThis;
       let self2 = this;
       const self3 = this;
-      self._fullfilledPromise = new Promise(f83813);
-      const promise = new Promise(f83813);
+      self._fullfilledPromise = new Promise(f83947);
+      const promise = new Promise(f83947);
     }
     const _fullfilledPromise = self._fullfilledPromise;
     return _fullfilledPromise.then(arg0, arg1);

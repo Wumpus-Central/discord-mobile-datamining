@@ -1,250 +1,104 @@
 // === Module 12681: ? ===
 
 // Module 12681
-import _mod12568 from "module_12568" /* 12568 */;
+import _mod12586 from "module_12586" /* 12586 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
+let hasOwnProperty;
 
-export const filenameIsInApp = function filenameIsInApp(replaced) {
-  let flag = arg1;
-  if (arg1 === undefined) {
-    flag = false;
-  }
-  if (!flag) {
-    flag = replaced && !replaced.startsWith("/") && !replaced.match(/^[A-Z]:/) && !replaced.startsWith(".") && !replaced.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-    const tmp = replaced && !replaced.startsWith("/") && !replaced.match(/^[A-Z]:/) && !replaced.startsWith(".") && !replaced.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-  }
-  const tmp2 = !flag && undefined !== replaced && !replaced.includes("node_modules/");
-  return tmp2;
+let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
+
+export const getBucketKey = function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
+  const obj = _mod12586;
+  const entries1 = entries(obj.dropUndefinedKeys(sanitizeTagsResult));
+  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries1.sort((arg0, arg1) => {
+    const first = arg0[0];
+    return first.localeCompare(arg1[0]);
+  });
 };
-export function node(arg0) {
-  let closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  return (filename) => {
-    let _parseInt;
-    let _parseInt2;
-    let str10;
-    let str9;
-    let tmp25;
-    let tmp30;
-    const match = filename.match(re2);
-    if (match) {
-      let UNKNOWN_FUNCTION;
-      let tmp3;
-      let tmp4;
-      if (match[1]) {
-        const lastIndexOfResult = match[1].lastIndexOf(".");
-        let diff = lastIndexOfResult;
-        if ("." === match[1][lastIndexOfResult - 1]) {
-          diff = lastIndexOfResult - 1;
-        }
-        let substr2 = arr;
-        let tmp9;
-        let substr3;
-        if (diff > 0) {
-          const substr = arr.slice(0, diff);
-          const substr1 = arr.slice(diff + 1);
-          const index = substr.indexOf(".Module");
-          substr2 = arr;
-          tmp9 = substr1;
-          substr3 = substr;
-          if (index > 0) {
-            substr2 = arr.slice(index + 1);
-            substr3 = substr.slice(0, index);
-            tmp9 = substr1;
-          }
-        }
-        tmp3 = substr2;
-        tmp4 = tmp9;
-      }
-      if (tmp4) {
-        UNKNOWN_FUNCTION = tmp4;
-      }
-      if (undefined === tmp3) {
-        if (!UNKNOWN_FUNCTION) {
-          UNKNOWN_FUNCTION = _mod12568.UNKNOWN_FUNCTION;
-        }
-        let combined = UNKNOWN_FUNCTION;
-        if (tmp13) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-        }
-        tmp3 = combined;
-      }
-      if (match[2]) {
-        let str7;
-        const obj2 = match[2];
-        if (obj2.startsWith("file://")) {
-          const arr3 = match[2];
-          str7 = arr3.slice(7);
-        }
-        let match1 = str7;
-        const tmp18 = match[5];
-        if (str7) {
-          match1 = str7.match(/\/[A-Z]:/);
-        }
-        let substr4 = str7;
-        if (match1) {
-          substr4 = str7.slice(1);
-        }
-        let tmp21 = substr4 || !match[5];
-        let tmp22 = "native" === tmp18;
-        if (!tmp21) {
-          tmp21 = tmp22;
-        }
-        if (!tmp21) {
-          substr4 = match[5];
-        }
-        let decodeURIResult;
-        if (substr4) {
-          const _decodeURI = decodeURI;
-          decodeURIResult = decodeURI(substr4);
-        }
-        const obj3 = { filename: decodeURIResult, module: tmp25, function: tmp3, lineno: _parseInt(str9, 10) || undefined, colno: _parseInt2(str10, 10) || undefined, in_app: tmp30 };
-        tmp25 = undefined;
-        if (closure_0) {
-          tmp25 = closure_0(substr4);
-        }
-        str9 = match[3];
-        _parseInt = parseInt;
-        if (!str9) {
-          str9 = "";
-        }
-        str10 = match[4];
-        _parseInt2 = parseInt;
-        _parseInt(str9, 10) || undefined;
-        if (!str10) {
-          str10 = "";
-        }
-        _parseInt2(str10, 10) || undefined;
-        if (!tmp22) {
-          tmp22 = str11 && !str11.startsWith("/") && !str11.match(/^[A-Z]:/) && !str11.startsWith(".") && !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-          const tmp29 = str11 && !str11.startsWith("/") && !str11.match(/^[A-Z]:/) && !str11.startsWith(".") && !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-        }
-        tmp30 = !tmp22 && undefined !== str11 && !str11.includes("node_modules/");
-        return obj3;
-      }
-      str7 = match[2];
-    } else if (filename.match(re1)) {
-      return { filename };
-    }
-  };
-}
-export function nodeStackLineParser(arg0) {
-  let closure_0 = arg0;
-  const re1 = /^\s*[-]{4,}$/;
-  const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
-  const items = [
-    90,
-    (filename) => {
-      let _parseInt;
-      let _parseInt2;
-      let str10;
-      let str9;
-      let tmp25;
-      let tmp30;
-      const match = filename.match(re2);
-      if (match) {
-        let UNKNOWN_FUNCTION;
-        let tmp3;
-        let tmp4;
-        if (match[1]) {
-          const lastIndexOfResult = match[1].lastIndexOf(".");
-          let diff = lastIndexOfResult;
-          if ("." === match[1][lastIndexOfResult - 1]) {
-            diff = lastIndexOfResult - 1;
-          }
-          let substr2 = arr;
-          let tmp9;
-          let substr3;
-          if (diff > 0) {
-            const substr = arr.slice(0, diff);
-            const substr1 = arr.slice(diff + 1);
-            const index = substr.indexOf(".Module");
-            substr2 = arr;
-            tmp9 = substr1;
-            substr3 = substr;
-            if (index > 0) {
-              substr2 = arr.slice(index + 1);
-              substr3 = substr.slice(0, index);
-              tmp9 = substr1;
+export const sanitizeMetricKey = function sanitizeMetricKey(str) {
+  return str.replace(/[^\w\-.]+/gi, "_");
+};
+export const sanitizeTags = function sanitizeTags(tags) {
+  let obj = {};
+  for (const key10007 in tags) {
+    let _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
+    if (!hasOwnProperty.call(tags, key10007)) {
+      continue;
+    } else {
+      let _String = String;
+      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
+      items = [];
+      let arraySpreadResult = HermesBuiltin.arraySpread(items, String(tags[key10007]), 0);
+      obj[replaced] = items.reduce((acc, item) => {
+        function getCharOrReplacement(item) {
+          const obj = closure_1_3[Symbol.iterator]();
+          while (obj !== undefined) {
+            let tmp4 = closure_1_2(tmp2, 2);
+            if (item === tmp4[0]) {
+              obj.return();
+              return tmp5;
             }
           }
-          tmp3 = substr2;
-          tmp4 = tmp9;
+          return item;
         }
-        if (tmp4) {
-          UNKNOWN_FUNCTION = tmp4;
-        }
-        if (undefined === tmp3) {
-          if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = _mod12568.UNKNOWN_FUNCTION;
-          }
-          let combined = UNKNOWN_FUNCTION;
-          if (tmp13) {
-            const _HermesInternal = HermesInternal;
-            combined = "" + tmp13 + "." + UNKNOWN_FUNCTION;
-          }
-          tmp3 = combined;
-        }
-        if (match[2]) {
-          let str7;
-          const obj2 = match[2];
-          if (obj2.startsWith("file://")) {
-            const arr3 = match[2];
-            str7 = arr3.slice(7);
-          }
-          let match1 = str7;
-          const tmp18 = match[5];
-          if (str7) {
-            match1 = str7.match(/\/[A-Z]:/);
-          }
-          let substr4 = str7;
-          if (match1) {
-            substr4 = str7.slice(1);
-          }
-          let tmp21 = substr4 || !match[5];
-          let tmp22 = "native" === tmp18;
-          if (!tmp21) {
-            tmp21 = tmp22;
-          }
-          if (!tmp21) {
-            substr4 = match[5];
-          }
-          let decodeURIResult;
-          if (substr4) {
-            const _decodeURI = decodeURI;
-            decodeURIResult = decodeURI(substr4);
-          }
-          const obj3 = { filename: decodeURIResult, module: tmp25, function: tmp3, lineno: _parseInt(str9, 10) || undefined, colno: _parseInt2(str10, 10) || undefined, in_app: tmp30 };
-          tmp25 = undefined;
-          if (closure_0) {
-            tmp25 = closure_0(substr4);
-          }
-          str9 = match[3];
-          _parseInt = parseInt;
-          if (!str9) {
-            str9 = "";
-          }
-          str10 = match[4];
-          _parseInt2 = parseInt;
-          _parseInt(str9, 10) || undefined;
-          if (!str10) {
-            str10 = "";
-          }
-          _parseInt2(str10, 10) || undefined;
-          if (!tmp22) {
-            tmp22 = str11 && !str11.startsWith("/") && !str11.match(/^[A-Z]:/) && !str11.startsWith(".") && !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-            const tmp29 = str11 && !str11.startsWith("/") && !str11.match(/^[A-Z]:/) && !str11.startsWith(".") && !str11.match(/^[a-zA-Z]([a-zA-Z0-9.\-+])*:\/\//);
-          }
-          tmp30 = !tmp22 && undefined !== str11 && !str11.includes("node_modules/");
-          return obj3;
-        }
-        str7 = match[2];
-      } else if (filename.match(re1)) {
-        return { filename };
-      }
+        return acc + getCharOrReplacement(item);
+      }, "");
+      continue;
     }
-  ];
-  return items;
-}
+    continue;
+  }
+  return obj;
+};
+export const sanitizeUnit = function sanitizeUnit(none) {
+  return none.replace(/[^\w]+/gi, "_");
+};
+export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
+  let str = "";
+  const iter = arg0[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let _Object = Object;
+    let entries = Object.entries(nextResult.tags);
+    let arr2 = entries;
+    let str2 = "";
+    if (entries.length > 0) {
+      let mapped = arr2.map((item) => {
+        let tmp;
+        let tmp2;
+        [tmp, tmp2] = item;
+        return "" + tmp + ":" + tmp2;
+      });
+      let _HermesInternal = HermesInternal;
+      str2 = "|#" + mapped.join(",");
+    }
+    let _HermesInternal2 = HermesInternal;
+    let str3 = "";
+    let str4 = "@";
+    let str5 = ":";
+    let str6 = "|";
+    let str7 = "|T";
+    let str8 = "\n";
+    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
+    continue;
+  }
+  return str;
+};
+export const simpleHash = function simpleHash(item) {
+  let length;
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < item.length) {
+    do {
+      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
+      num2 = sum & sum;
+      num = num + 1;
+      num3 = num2;
+      length = item.length;
+    } while (num < length);
+  }
+  return num3 >>> 0;
+};

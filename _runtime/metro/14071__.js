@@ -1,16 +1,27 @@
 // === Module 14071: ? ===
 
 // Module 14071
-import _mod14072 from "module_14072" /* 14072 */;
+const require = globalThis.__r;
+let _require;
 
 
-export default function(arg0) {
-  if (_mod14072(arg0)) {
-    const self = this;
-    const self2 = this;
-    const tmp2 = new TypeError("Can't call method on " + arg0);
-    throw tmp2;
-  } else {
-    return arg0;
-  }
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("module_14072").units;
+  return units.filter((item) => {
+    function isSupported(unit, locale) {
+      let str = locale;
+      if (undefined === locale) {
+        str = "en";
+      }
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
+      }
+    }
+    return isSupported(item, locale);
+  });
 };

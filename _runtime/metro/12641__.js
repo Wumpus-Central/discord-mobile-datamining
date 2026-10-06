@@ -1,24 +1,32 @@
 // === Module 12641: ? ===
 
 // Module 12641
-import eventFromMessage from "eventFromMessage" /* 12625 */;
-import _mod12642 from "module_12642" /* 12642 */;
-import module_12621 from "module_12621" /* 12621 */;
+import _mod12586 from "module_12586" /* 12586 */;
+import _mod12624 from "module_12624" /* 12624 */;
+import _mod12627 from "module_12627" /* 12627 */;
 
 
-export const linkedErrorsIntegration = module_12621.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, _dsn) {
+  let date;
+  const obj = { sent_at: date.toISOString() };
+  date = new Date();
+  const tmp = sdk && sdk.sdk;
+  if (tmp) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
   }
-  let closure_0 = obj.limit || 5;
-  let closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const obj = _mod12642;
-      const result = obj.applyAggregateErrorsToEvent(eventFromMessage.exceptionFromError, options.stackParser, options.maxValueLength, closure_1, closure_0, exception, originalException);
-    }
-  };
-});
+  const tmp2 = arg3 && _dsn;
+  if (tmp2) {
+    const obj4 = _mod12627;
+    obj.dsn = obj4.dsnToString(_dsn);
+  }
+  const tmp5 = contexts;
+  if (tmp5) {
+    const obj5 = _mod12586;
+    obj.trace = obj5.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const items1 = [items];
+  const obj6 = _mod12624;
+  return obj6.createEnvelope(obj, items1);
+};

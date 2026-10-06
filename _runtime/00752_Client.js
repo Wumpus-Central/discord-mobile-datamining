@@ -161,12 +161,12 @@ class Client {
   constructor(_options) {
     let envelopeEndpointWithUrlEncodedAuth;
     let recordDroppedEvent;
-    const f81866 = () => {
+    const f81999 = () => {
       sum = 0;
       clearTimeout(closure_3);
       c5 = false;
     };
-    const f81867 = (arg0) => {
+    const f82000 = (arg0) => {
       sum = sum + closure_1(arg0);
       if (sum >= 800000) {
         closure_2(self);
@@ -181,7 +181,7 @@ class Client {
         }
       }
     };
-    const f81868 = () => {
+    const f82001 = () => {
       closure_2(self);
     };
     const self = this;
@@ -242,9 +242,9 @@ class Client {
       let c3;
       c4 = 0;
       c5 = false;
-      self.on("flushLogs", f81866);
-      self.on("afterCaptureLog", f81867);
-      self.on("flush", f81868);
+      self.on("flushLogs", f81999);
+      self.on("afterCaptureLog", f82000);
+      self.on("flush", f82001);
     }
     let flag2 = self._options.enableMetrics;
     if (flag2 == null) {
@@ -264,9 +264,9 @@ class Client {
       closure_3 = undefined;
       let sum = 0;
       c5 = false;
-      self.on("flushMetrics", f81866);
-      self.on("afterCaptureMetric", f81867);
-      self.on("flush", f81868);
+      self.on("flushMetrics", f81999);
+      self.on("afterCaptureMetric", f82000);
+      self.on("flush", f82001);
     }
   }
 }

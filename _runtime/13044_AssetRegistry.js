@@ -4,4 +4,4 @@
 import AssetRegistry from "AssetRegistry" /* 1132 */;
 
 
-export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting", width: 80, height: 80, scales: [1, 2, 3], hash: "80a5ad242e4f3350ec4e12c04784e6bf", name: "img_premium_icon_80px", type: "png" });
+export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 25, height: 24, scales: [1, 2, 3], hash: "495d1e3b5fc10bbfc9830f32405f0c83", name: "ic_feedback_dark", type: "png" });

@@ -976,8 +976,8 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
       value: function render() {
         let combined1;
         let obj5;
-        const f84491 = (item) => !(item && "viewDescriptors" in item);
-        const f84492 = (viewDescriptors) => {
+        const f84625 = (item) => !(item && "viewDescriptors" in item);
+        const f84626 = (viewDescriptors) => {
           let tmp = viewDescriptors;
           if (Array.isArray(viewDescriptors)) {
             let tmp2 = viewDescriptors;
@@ -985,8 +985,8 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
               let mapped;
               const _Array = Array;
               if (Array.isArray(viewDescriptors)) {
-                const found = viewDescriptors.filter(f84491);
-                mapped = found.map(f84492);
+                const found = viewDescriptors.filter(f84625);
+                mapped = found.map(f84626);
               } else {
                 viewDescriptors = undefined;
                 if (viewDescriptors != null) {
@@ -1049,8 +1049,8 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
               let mapped;
               const _Array2 = Array;
               if (Array.isArray(style1)) {
-                let found = style1.filter(f84491);
-                mapped = found.map(f84492);
+                let found = style1.filter(f84625);
+                mapped = found.map(f84626);
               } else {
                 let viewDescriptors;
                 if (style1 != null) {

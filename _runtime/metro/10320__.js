@@ -1,13 +1,10 @@
 // === Module 10320: ? ===
 
 // Module 10320
-import EmptyDuration from "EmptyDuration" /* 10163 */;
-import ReferenceWithTimezone from "ReferenceWithTimezone" /* 10164 */;
-import _mod10315 from "module_10315" /* 10315 */;
-import _mod10317 from "module_10317" /* 10317 */;
+import _mod10195 from "module_10195" /* 10195 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import map from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -26,39 +23,46 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKTimeUnitAgoFormatParser {
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    let tmp2;
+    const tmp = __esModule;
+    if (!tmp) {
+      tmp2 = { default: __esModule };
+      const obj = { default: __esModule };
+    } else {
+      tmp2 = __esModule;
+    }
+    return tmp2;
+  };
+}
+class ESMergeDateTimeRefiner {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, UKTimeUnitAgoFormatParser);
-    const obj = _getPrototypeOf(UKTimeUnitAgoFormatParser);
+    _classCallCheck(this, ESMergeDateTimeRefiner);
+    const obj = _getPrototypeOf(ESMergeDateTimeRefiner);
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
       constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
     } else {
       constructResult = obj(...arguments);
     }
-    return c3(self, constructResult);
+    return map(self, constructResult);
   }
 }
-_inherits(UKTimeUnitAgoFormatParser, _mod10317.AbstractParserWithLeftBoundaryChecking);
+_inherits(ESMergeDateTimeRefiner, fn(_mod10195).default);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(" + _mod10315.TIME_UNITS_PATTERN + ")\\s{0,5}\u0442\u043E\u043C\u0443(?=(?:\\W|$))";
+  key: "patternBetween",
+  value: function patternBetween() {
+    const regExp = new RegExp("^\\s*(?:,|de|aslas|a)?\\s*$");
+    return regExp;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = _mod10315.parseDuration(arg1[1]);
-      const reverseDurationResult = EmptyDuration.reverseDuration(parseDurationResult);
-      const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(UKTimeUnitAgoFormatParser, items);
+export default _createClass(ESMergeDateTimeRefiner, items);

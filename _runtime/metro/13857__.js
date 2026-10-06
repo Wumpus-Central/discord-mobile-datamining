@@ -1,86 +1,26 @@
 // === Module 13857: ? ===
 
 // Module 13857
-import _mod13851 from "module_13851" /* 13851 */;
-import _mod13852 from "module_13852" /* 13852 */;
-import _mod13853 from "module_13853" /* 13853 */;
-import _mod13854 from "module_13854" /* 13854 */;
-import _mod13855 from "module_13855" /* 13855 */;
-import _mod13856 from "module_13856" /* 13856 */;
+import _mod13849 from "module_13849" /* 13849 */;
 
 
-export default function(version, arg1, version2, arg3) {
-  let tmp13;
-  let tmp13Result;
-  switch (arg1) {
-    case "===":
-    {
-      let version3 = version;
-      if (typeof version === "object") {
-        version3 = version.version;
-      }
-      let version4 = version2;
-      if (typeof version2 === "object") {
-        version4 = version2.version;
-      }
-      return version3 === version4;
+export default function(version, pre, major2, major22, major222) {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
+  }
+  try {
+    const tmp7 = _mod13849;
+    if (version instanceof _mod13849) {
+      version = version.version;
     }
-    case "!==":
-    {
-      if (typeof version === "object") {
-        const versionValue = version.version;
-      }
-      if (typeof version2 === "object") {
-        version2 = version2.version;
-      }
-      return version !== version2;
-    }
-    case "":
-    {
-      tmp13 = _mod13853;
-      tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    }
-    case "=":
-    {
-      tmp13 = _mod13853;
-      tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    }
-    case "==":
-    {
-      tmp13 = _mod13853;
-      tmp13Result = tmp13(version, version2, arg3);
-      return tmp13Result;
-    }
-    case "!=":
-    {
-      return _mod13854(version, version2, arg3);
-    }
-    case ">":
-    {
-      return _mod13851(version, version2, arg3);
-    }
-    case ">=":
-    {
-      return _mod13855(version, version2, arg3);
-    }
-    case "<":
-    {
-      return _mod13852(version, version2, arg3);
-    }
-    case "<=":
-    {
-      return _mod13856(version, version2, arg3);
-    }
-    default:
-    {
-      const _TypeError = TypeError;
-      const _HermesInternal = HermesInternal;
-      const self = this;
-      const self2 = this;
-      const typeError = new TypeError("Invalid operator: " + arg1);
-      throw typeError;
-    }
+    const self = this;
+    const self2 = this;
+    const tmp72 = new tmp7(version, major2);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
   }
 };

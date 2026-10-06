@@ -1,560 +1,269 @@
 // === Module 12586: ? ===
 
 // Module 12586
-import _mod12565 from "module_12565" /* 12565 */;
-import _mod12572 from "module_12572" /* 12572 */;
-import generatePropagationContext from "generatePropagationContext" /* 12575 */;
-import _mod12576 from "module_12576" /* 12576 */;
-import _browserPerformanceTimeOriginMode from "_browserPerformanceTimeOriginMode" /* 12579 */;
+import _mod12579 from "module_12579" /* 12579 */;
+import _mod12580 from "module_12580" /* 12580 */;
 import _mod12587 from "module_12587" /* 12587 */;
-import _mod12588 from "module_12588" /* 12588 */;
-import _mod12590 from "module_12590" /* 12590 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import htmlTreeAsString from "htmlTreeAsString" /* 12588 */;
+import _mod12589 from "module_12589" /* 12589 */;
 
-class ScopeClass {
-  constructor() {
-    let obj2;
-    let obj3;
-    _classCallCheck(this, ScopeClass);
-    this._notifyingListeners = false;
-    this._scopeListeners = [];
-    this._eventProcessors = [];
-    this._breadcrumbs = [];
-    this._attachments = [];
-    this._user = {};
-    this._tags = {};
-    this._extra = {};
-    this._contexts = {};
-    this._sdkProcessingMetadata = {};
-    const obj = { traceId: obj2.generateTraceId(), spanId: obj3.generateSpanId() };
-    obj2 = generatePropagationContext;
-    this._propagationContext = obj;
-    obj3 = generatePropagationContext;
+let hasOwnProperty;
+
+function addNonEnumerableProperty(arg0, arg1, value) {
+  try {
+    const _Object = Object;
+    const obj = { value, writable: true, configurable: true };
+    Object.defineProperty(arg0, arg1, obj);
+  } catch (err) {
+    if (_mod12579.DEBUG_BUILD) {
+      const logger = _mod12580.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Failed to add non-enumerable property \"" + arg1 + "\" to object", arg0);
+    }
   }
 }
-const entry = {
-  key: "clone",
-  value: function clone() {
-    let items1;
-    let obj2;
-    let obj3;
-    const self = this;
-    const obj4 = Object.create(ScopeClass.prototype);
-    _classCallCheck(obj4, ScopeClass);
-    obj4._notifyingListeners = false;
-    obj4._scopeListeners = [];
-    obj4._eventProcessors = [];
-    obj4._breadcrumbs = [];
-    obj4._attachments = [];
-    obj4._user = {};
-    obj4._tags = {};
-    obj4._extra = {};
-    obj4._contexts = {};
-    obj4._sdkProcessingMetadata = {};
-    const obj = { traceId: obj2.generateTraceId(), spanId: obj3.generateSpanId() };
-    obj2 = generatePropagationContext;
-    obj4._propagationContext = obj;
-    const items = [...this._breadcrumbs];
-    obj4._breadcrumbs = items;
-    obj3 = generatePropagationContext;
-    const obj5 = {};
-    const merged = Object.assign(this._tags);
-    obj4._tags = obj5;
-    const obj6 = {};
-    const merged1 = Object.assign(this._extra);
-    obj4._extra = obj6;
-    const obj7 = {};
-    const merged2 = Object.assign(this._contexts);
-    obj4._contexts = obj7;
-    if (this._contexts.flags) {
-      const obj8 = { values: items1 };
-      items1 = [];
-      const _contexts = obj4._contexts;
-      HermesBuiltin.arraySpread(items1, self._contexts.flags.values, 0);
-      _contexts.flags = obj8;
+function markFunctionWrapped(arg0, arg1) {
+  try {
+    const prototype = arg1.prototype || {};
+    arg1.prototype = prototype;
+    arg0.prototype = prototype;
+    addNonEnumerableProperty(arg0, "__sentry_original__", arg1);
+  } catch (err) {
+  }
+}
+function convertToPlainObject(type) {
+  const obj = _mod12587;
+  if (obj.isError(type)) {
+    const error = { message: null, name: null, stack: null };
+    ({ message: obj6.message, name: obj6.name, stack: obj6.stack } = type);
+    if (typeof type === "object") {
+      let obj3;
+      if (null !== type) {
+        const obj2 = {};
+        obj3 = obj2;
+        const keys = Object.keys();
+        if (keys !== undefined) {
+          obj3 = obj2;
+          while (keys[tmp] !== undefined) {
+            let _Object2 = Object;
+            let hasOwnProperty2 = Object.prototype.hasOwnProperty;
+            if (!hasOwnProperty2.call(type, tmp17)) {
+              continue;
+            } else {
+              obj2[tmp17] = type[tmp17];
+              continue;
+            }
+            continue;
+          }
+        }
+      }
+      const merged = Object.assign(obj3);
+      return error;
     }
-    ({ _user: tmp2._user, _level: tmp2._level, _session: tmp2._session, _transactionName: tmp2._transactionName, _fingerprint: tmp2._fingerprint } = self);
-    const items2 = [...self._eventProcessors];
-    obj4._eventProcessors = items2;
-    obj4._requestSession = self._requestSession;
-    obj4._attachments = [...self._attachments];
-    const obj9 = {};
-    const merged3 = Object.assign(self._sdkProcessingMetadata);
-    obj4._sdkProcessingMetadata = obj9;
-    const obj10 = {};
-    const merged4 = Object.assign(self._propagationContext);
-    obj4._propagationContext = obj10;
-    ({ _client: tmp2._client, _lastEventId: tmp2._lastEventId } = self);
-    const _setSpanForScope = _mod12587._setSpanForScope;
-    _mod12587;
-    const tmp4Result2 = _mod12587;
-    _setSpanForScope(obj4, tmp4Result2._getSpanForScope(self));
-    return obj4;
+    obj3 = {};
+  } else {
+    const tmp2Result = _mod12587;
+    if (tmp2Result.isEvent(type)) {
+      const obj4 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
+      if (typeof type === "object") {
+        let obj7;
+        if (null !== type) {
+          const obj5 = {};
+          obj7 = obj5;
+          const keys1 = Object.keys();
+          if (keys1 !== undefined) {
+            obj7 = obj5;
+            while (keys1[tmp] !== undefined) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              if (!hasOwnProperty.call(type, tmp8)) {
+                continue;
+              } else {
+                obj5[tmp8] = type[tmp8];
+                continue;
+              }
+              continue;
+            }
+          }
+        }
+        const merged1 = Object.assign(obj7);
+        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
+        if (typeof globalThis.CustomEvent !== "undefined") {
+          const CustomEvent2 = globalThis.CustomEvent;
+          const tmp2Result2 = _mod12587;
+          isInstanceOfResult = tmp2Result2.isInstanceOf(type, globalThis.CustomEvent);
+        }
+        if (isInstanceOfResult) {
+          obj4.detail = type.detail;
+        }
+        return obj4;
+      }
+      obj7 = {};
+    } else {
+      return type;
+    }
+  }
+}
+function serializeEventTarget(arg0) {
+  try {
+    let htmlTreeAsStringResult;
+    const obj = _mod12587;
+    if (obj.isElement(arg0)) {
+      const tmp2Result = htmlTreeAsString;
+      htmlTreeAsStringResult = tmp2Result.htmlTreeAsString(arg0);
+    } else {
+      const _Object = Object;
+      htmlTreeAsStringResult = toString.call(arg0);
+    }
+    return htmlTreeAsStringResult;
+  } catch (err) {
+    return "<unknown>";
+  }
+}
+function _dropUndefinedKeys(arr, map) {
+  function isPojo(arr) {
+    const obj = map(items[2]);
+    if (obj.isPlainObject(arr)) {
+      try {
+        const _Object = Object;
+        const name = Object.getPrototypeOf(arr).constructor.name;
+        return !name || "Object" === tmp2;
+      } catch (err) {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+  if (isPojo(arr)) {
+    const value = map.get(arr);
+    if (undefined !== value) {
+      return value;
+    } else {
+      let obj = {};
+      const result = map.set(arr, obj);
+      let _Object = Object;
+      const ownPropertyNames = Object.getOwnPropertyNames(arr);
+      for (const item10030 of ownPropertyNames) {
+        if (undefined !== arr[item10030]) {
+          obj[item10030] = _dropUndefinedKeys(arr[item10030], map);
+        }
+        continue;
+      }
+      return obj;
+    }
+  } else {
+    const _Array = Array;
+    if (Array.isArray(arr)) {
+      const value2 = map.get(arr);
+      if (undefined !== value2) {
+        return value2;
+      } else {
+        const items = [];
+        const result1 = map.set(arr, items);
+        const item = arr.forEach((item) => {
+          items.push(_dropUndefinedKeys(item, map));
+        });
+        return items;
+      }
+    } else {
+      return arr;
+    }
+  }
+}
+
+export { addNonEnumerableProperty };
+export { convertToPlainObject };
+export const dropUndefinedKeys = function dropUndefinedKeys(arr) {
+  map = new Map();
+  return _dropUndefinedKeys(arr, map);
+};
+export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(name) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 40;
+  }
+  const keys = Object.keys(convertToPlainObject(name));
+  const sorted = keys.sort();
+  const first = keys[0];
+  if (first) {
+    if (first.length >= num) {
+      const obj3 = _mod12589;
+      return obj3.truncate(first, num);
+    } else {
+      let length = keys.length;
+      if (length > 0) {
+        const substr = keys.slice(0, length);
+        const joined = substr.join(", ");
+        while (joined.length > num) {
+          length = length - 1;
+        }
+        let truncateResult = joined;
+        if (length !== keys.length) {
+          const obj2 = _mod12589;
+          truncateResult = obj2.truncate(joined, num);
+        }
+        return truncateResult;
+      }
+      return "";
+    }
+  } else {
+    return "[object has no keys]";
   }
 };
-let items = [
-  entry,
-  {
-    key: "setClient",
-    value: function setClient(_client) {
-      this._client = _client;
+export const fill = function fill(GLOBAL_OBJ, fetch, fn) {
+  if (fetch in GLOBAL_OBJ) {
+    const tmp3 = fn(GLOBAL_OBJ[fetch]);
+    if (typeof tmp3 === "function") {
+      markFunctionWrapped(tmp3, GLOBAL_OBJ[fetch]);
     }
-  },
-  {
-    key: "setLastEventId",
-    value: function setLastEventId(_lastEventId) {
-      this._lastEventId = _lastEventId;
-    }
-  },
-  {
-    key: "getClient",
-    value: function getClient() {
-      return this._client;
-    }
-  },
-  {
-    key: "lastEventId",
-    value: function lastEventId() {
-      return this._lastEventId;
-    }
-  },
-  {
-    key: "addScopeListener",
-    value: function addScopeListener(arg0) {
-      const _scopeListeners = this._scopeListeners;
-      _scopeListeners.push(arg0);
-    }
-  },
-  {
-    key: "addEventProcessor",
-    value: function addEventProcessor(arg0) {
-      const _eventProcessors = this._eventProcessors;
-      _eventProcessors.push(arg0);
-      return this;
-    }
-  },
-  {
-    key: "setUser",
-    value: function setUser(user) {
-      const self = this;
-      const tmp = user || { email: "Array", id: "T", ip_address: "y", username: "IconComponent" };
-      this._user = tmp;
-      if (this._session) {
-        const obj2 = { user };
-        const obj = _mod12588;
-        obj.updateSession(self._session, obj2);
-      }
-      const result = self._notifyScopeListeners();
-      return self;
-    }
-  },
-  {
-    key: "getUser",
-    value: function getUser() {
-      return this._user;
-    }
-  },
-  {
-    key: "getRequestSession",
-    value: function getRequestSession() {
-      return this._requestSession;
-    }
-  },
-  {
-    key: "setRequestSession",
-    value: function setRequestSession(_requestSession) {
-      this._requestSession = _requestSession;
-      return this;
-    }
-  },
-  {
-    key: "setTags",
-    value: function setTags(arg0) {
-      const obj = {};
-      const merged = Object.assign(this._tags);
-      const merged1 = Object.assign(arg0);
-      this._tags = obj;
-      const result = this._notifyScopeListeners();
-      return this;
-    }
-  },
-  {
-    key: "setTag",
-    value: function setTag(arg0, arg1) {
-      const obj = {};
-      const merged = Object.assign(this._tags);
-      obj[arg0] = arg1;
-      this._tags = obj;
-      const result = this._notifyScopeListeners();
-      return this;
-    }
-  },
-  {
-    key: "setExtras",
-    value: function setExtras(arg0) {
-      const obj = {};
-      const merged = Object.assign(this._extra);
-      const merged1 = Object.assign(arg0);
-      this._extra = obj;
-      const result = this._notifyScopeListeners();
-      return this;
-    }
-  },
-  {
-    key: "setExtra",
-    value: function setExtra(arg0, arg1) {
-      const obj = {};
-      const merged = Object.assign(this._extra);
-      obj[arg0] = arg1;
-      this._extra = obj;
-      const result = this._notifyScopeListeners();
-      return this;
-    }
-  },
-  {
-    key: "setFingerprint",
-    value: function setFingerprint(_fingerprint) {
-      this._fingerprint = _fingerprint;
-      const result = this._notifyScopeListeners();
-      return this;
-    }
-  },
-  {
-    key: "setLevel",
-    value: function setLevel(_level) {
-      this._level = _level;
-      const result = this._notifyScopeListeners();
-      return this;
-    }
-  },
-  {
-    key: "setTransactionName",
-    value: function setTransactionName(_transactionName) {
-      this._transactionName = _transactionName;
-      const result = this._notifyScopeListeners();
-      return this;
-    }
-  },
-  {
-    key: "setContext",
-    value: function setContext(arg0, arg1) {
-      const self = this;
-      if (null === arg1) {
-        delete self._contexts[tmp];
-      } else {
-        self._contexts[arg0] = arg1;
-      }
-      const result = self._notifyScopeListeners();
-      return self;
-    }
-  },
-  {
-    key: "setSession",
-    value: function setSession(_session) {
-      const self = this;
-      const tmp = _session;
-      if (tmp) {
-        self._session = _session;
-      } else {
-        delete self["_session"];
-      }
-      const result = self._notifyScopeListeners();
-      return self;
-    }
-  },
-  {
-    key: "getSession",
-    value: function getSession() {
-      return this._session;
-    }
-  },
-  {
-    key: "update",
-    value: function update(requestSession) {
-      let contexts;
-      let extra;
-      let fingerprint;
-      let level;
-      let obj3;
-      let obj4;
-      let tags;
-      let tmp7;
-      let user;
-      const self = this;
-      const tmp = requestSession;
-      if (tmp) {
-        let items2;
-        let obj = requestSession;
-        if (typeof requestSession === "function") {
-          obj = requestSession(self);
-        }
-        if (obj instanceof _moduleResult) {
-          const items = [obj.getScopeData(), obj.getRequestSession()];
-          items2 = items;
-        } else {
-          const obj2 = _mod12572;
-          if (obj2.isPlainObject(obj)) {
-            const items1 = [requestSession, requestSession.requestSession];
-            items2 = items1;
-          } else {
-            items2 = [];
-          }
-        }
-        [obj3, tmp7] = items2;
-        _slicedToArray(items2, 2);
-        if (!obj4) {
-          obj4 = {};
-        }
-        ({ tags, extra, user, contexts, level, fingerprint } = obj4);
-        if (undefined === fingerprint) {
-          fingerprint = [];
-        }
-        const propagationContext = obj4.propagationContext;
-        const obj5 = {};
-        const merged = Object.assign(self._tags);
-        const merged1 = Object.assign(tags);
-        self._tags = obj5;
-        const obj6 = {};
-        const merged2 = Object.assign(self._extra);
-        const merged3 = Object.assign(extra);
-        self._extra = obj6;
-        const obj10 = {};
-        const merged4 = Object.assign(self._contexts);
-        const merged5 = Object.assign(contexts);
-        self._contexts = obj10;
-        let length = user;
-        if (length) {
-          const _Object = Object;
-          length = Object.keys(user).length;
-        }
-        if (length) {
-          self._user = user;
-        }
-        if (level) {
-          self._level = level;
-        }
-        if (fingerprint.length) {
-          self._fingerprint = fingerprint;
-        }
-        if (propagationContext) {
-          self._propagationContext = propagationContext;
-        }
-        if (tmp7) {
-          self._requestSession = tmp7;
-        }
-        return self;
-      } else {
-        return self;
-      }
-    }
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      let obj4;
-      const obj = { _breadcrumbs: [], _tags: {}, _extra: {}, _user: {}, _contexts: {}, _level: undefined, _transactionName: undefined, _fingerprint: undefined, _requestSession: undefined, _session: undefined, _attachments: [] };
-      const obj2 = _mod12587;
-      obj2._setSpanForScope(obj, undefined);
-      const setPropagationContext = obj.setPropagationContext;
-      const obj3 = { traceId: obj4.generateTraceId() };
-      obj4 = generatePropagationContext;
-      const result = setPropagationContext(obj3);
-      const result1 = obj._notifyScopeListeners();
-      return obj;
-    }
-  },
-  {
-    key: "addBreadcrumb",
-    value: function addBreadcrumb(arg0, num) {
-      let obj2;
-      const self = this;
-      if (100 <= 0) {
-        return self;
-      } else {
-        const obj = { timestamp: obj2.dateTimestampInSeconds() };
-        obj2 = _browserPerformanceTimeOriginMode;
-        const merged = Object.assign(arg0);
-        const _breadcrumbs = self._breadcrumbs;
-        _breadcrumbs.push(obj);
-        if (self._breadcrumbs.length > 100) {
-          const _breadcrumbs1 = self._breadcrumbs;
-          self._breadcrumbs = _breadcrumbs1.slice(-100);
-          if (self._client) {
-            const _client = self._client;
-            _client.recordDroppedEvent("buffer_overflow", "log_item");
-          }
-        }
-        const result = self._notifyScopeListeners();
-        return self;
-      }
-    }
-  },
-  {
-    key: "getLastBreadcrumb",
-    value: function getLastBreadcrumb() {
-      return this._breadcrumbs[this._breadcrumbs.length - 1];
-    }
-  },
-  {
-    key: "clearBreadcrumbs",
-    value: function clearBreadcrumbs() {
-      this._breadcrumbs = [];
-      const result = this._notifyScopeListeners();
-      return this;
-    }
-  },
-  {
-    key: "addAttachment",
-    value: function addAttachment(arg0) {
-      const _attachments = this._attachments;
-      _attachments.push(arg0);
-      return this;
-    }
-  },
-  {
-    key: "clearAttachments",
-    value: function clearAttachments() {
-      this._attachments = [];
-      return this;
-    }
-  },
-  {
-    key: "getScopeData",
-    value: function getScopeData() {
-      let obj2;
-      const self = this;
-      const obj = { breadcrumbs: this._breadcrumbs, attachments: this._attachments, contexts: this._contexts, tags: this._tags, extra: this._extra, user: this._user, level: this._level, fingerprint: this._fingerprint || [], eventProcessors: self._eventProcessors, propagationContext: self._propagationContext, sdkProcessingMetadata: self._sdkProcessingMetadata, transactionName: self._transactionName, span: obj2._getSpanForScope(self) };
-      obj2 = _mod12587;
-      return obj;
-    }
-  },
-  {
-    key: "setSDKProcessingMetadata",
-    value: function setSDKProcessingMetadata(arg0) {
-      const obj = _mod12590;
-      this._sdkProcessingMetadata = obj.merge(this._sdkProcessingMetadata, arg0, 2);
-      return this;
-    }
-  },
-  {
-    key: "setPropagationContext",
-    value: function setPropagationContext(arg0) {
-      let obj2;
-      const obj = { spanId: obj2.generateSpanId() };
-      obj2 = generatePropagationContext;
-      const merged = Object.assign(arg0);
-      this._propagationContext = obj;
-      return this;
-    }
-  },
-  {
-    key: "getPropagationContext",
-    value: function getPropagationContext() {
-      return this._propagationContext;
-    }
-  },
-  {
-    key: "captureException",
-    value: function captureException(originalException, event_id) {
-      const tmp = event_id;
-      if (tmp) {
-        if (event_id.event_id) {
-          event_id = event_id.event_id;
-        }
-        const self = this;
-        if (this._client) {
-          const _Error = Error;
-          const self2 = this;
-          const self3 = this;
-          const error = new Error("Sentry syntheticException");
-          const _client = self._client;
-          const captureException = _client.captureException;
-          const obj2 = { originalException, syntheticException: error, event_id };
-          const merged = Object.assign(event_id);
-          captureException(originalException, obj2, self);
-          return event_id;
-        } else {
-          const logger = _mod12565.logger;
-          logger.warn("No client configured on scope - will not capture exception!");
-          return event_id;
-        }
-      }
-      const obj = _mod12576;
-      event_id = obj.uuid4();
-    }
-  },
-  {
-    key: "captureMessage",
-    value: function captureMessage(originalException, arg1, event_id) {
-      const tmp = event_id;
-      if (tmp) {
-        if (event_id.event_id) {
-          event_id = event_id.event_id;
-        }
-        const self = this;
-        if (this._client) {
-          const _Error = Error;
-          const self2 = this;
-          const self3 = this;
-          const error = new Error(originalException);
-          const _client = self._client;
-          const captureMessage = _client.captureMessage;
-          const obj2 = { originalException, syntheticException: error, event_id };
-          const merged = Object.assign(event_id);
-          captureMessage(originalException, arg1, obj2, self);
-          return event_id;
-        } else {
-          const logger = _mod12565.logger;
-          logger.warn("No client configured on scope - will not capture message!");
-          return event_id;
-        }
-      }
-      const obj = _mod12576;
-      event_id = obj.uuid4();
-    }
-  },
-  {
-    key: "captureEvent",
-    value: function captureEvent(arg0, event_id) {
-      const tmp = event_id;
-      if (tmp) {
-        if (event_id.event_id) {
-          event_id = event_id.event_id;
-        }
-        const self = this;
-        if (this._client) {
-          const _client = self._client;
-          const captureEvent = _client.captureEvent;
-          const obj2 = { event_id };
-          const merged = Object.assign(event_id);
-          captureEvent(arg0, obj2, self);
-        } else {
-          const logger = _mod12565.logger;
-          logger.warn("No client configured on scope - will not capture event!");
-        }
-        return event_id;
-      }
-      const obj = _mod12576;
-      event_id = obj.uuid4();
-    }
-  },
-  {
-    key: "_notifyScopeListeners",
-    value: function _notifyScopeListeners() {
-      const self = this;
-      if (!this._notifyingListeners) {
-        self._notifyingListeners = true;
-        const _scopeListeners = self._scopeListeners;
-        const item = _scopeListeners.forEach((fn) => {
-          fn(self);
-        });
-        self._notifyingListeners = false;
+    try {
+      GLOBAL_OBJ[fetch] = tmp3;
+    } catch (err) {
+      if (_mod12579.DEBUG_BUILD) {
+        const logger = _mod12580.logger;
+        const _HermesInternal = HermesInternal;
+        logger.log("Failed to replace method \"" + fetch + "\" in object", GLOBAL_OBJ);
       }
     }
   }
-];
-const _moduleResult = _createClass(ScopeClass, items);
-
-export const Scope = _moduleResult;
+};
+export const getOriginalFunction = function getOriginalFunction(__sentry_original__) {
+  return __sentry_original__.__sentry_original__;
+};
+export { markFunctionWrapped };
+export const objectify = function objectify(value) {
+  let string;
+  if (null == value === true) {
+    const _String = String;
+    const self3 = this;
+    const self4 = this;
+    string = new String(value);
+  } else {
+    const tmp = typeof value === "symbol" || typeof value === "bigint";
+    if (tmp === true) {
+      const _Object = Object;
+      string = Object(value);
+    } else {
+      string = value;
+      const obj = _mod12587;
+      if (obj.isPrimitive(value) === true) {
+        const self = this;
+        const self2 = this;
+        string = new value.constructor(value);
+      }
+    }
+  }
+  return string;
+};
+export const urlEncode = function urlEncode(arg0) {
+  const entries = Object.entries(arg0);
+  const mapped = entries.map((item) => {
+    let tmp;
+    let tmp2;
+    [tmp, tmp2] = item;
+    const encodeURIComponentResult = encodeURIComponent(tmp);
+    return "" + encodeURIComponentResult + "=" + encodeURIComponent(tmp2);
+  });
+  return mapped.join("&");
+};

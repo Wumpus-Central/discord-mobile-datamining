@@ -7,7 +7,7 @@ import registerSpanErrorInstrumentation from "module_693" /* 693 */;
 
 let closure_2;
 
-const f82687 = (description) => {
+const f82820 = (description) => {
   description = description.description;
   let hasItem;
   if (description != null) {
@@ -38,7 +38,7 @@ export const isSpotlightInteraction = function isSpotlightInteraction(type) {
   }
   if (spans) {
     const spans2 = type.spans;
-    spans = spans2.some(f82687);
+    spans = spans2.some(f82820);
   }
   return _Boolean(spans);
 };
@@ -75,7 +75,7 @@ export const spotlightBrowserIntegration = registerSpanErrorInstrumentation.defi
       }
       if (spans) {
         const spans2 = type.spans;
-        spans = spans2.some(f82687);
+        spans = spans2.some(f82820);
       }
       let tmp3 = null;
       if (!_Boolean(spans)) {

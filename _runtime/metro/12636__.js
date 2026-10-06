@@ -1,80 +1,134 @@
 // === Module 12636: ? ===
 
 // Module 12636
-import _mod12565 from "module_12565" /* 12565 */;
-import _mod12570 from "module_12570" /* 12570 */;
-import _mod12577 from "module_12577" /* 12577 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12578 */;
-import _mod12583 from "module_12583" /* 12583 */;
-import _mod12584 from "module_12584" /* 12584 */;
-import _mod12592 from "module_12592" /* 12592 */;
-import _mod12601 from "module_12601" /* 12601 */;
-import _mod12613 from "module_12613" /* 12613 */;
-import registerSpanErrorInstrumentation from "module_12561" /* 12561 */;
-import "module_12564";
-import DEBUG_BUILD from "module_12593" /* 12593 */;
-import _browserPerformanceTimeOriginMode from "_browserPerformanceTimeOriginMode" /* 12579 */;
+import _mod12580 from "module_12580" /* 12580 */;
+import _mod12607 from "module_12607" /* 12607 */;
+import _mod12608 from "module_12608" /* 12608 */;
+import _slicedToArray from "_slicedToArray" /* 32 */;
 
-
-export const getTraceData = function getTraceData(arg0) {
-  let sampled;
-  let spanId;
-  let traceId;
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
-  }
-  const obj2 = _mod12592;
-  const client = obj2.getClient();
-  const obj3 = _mod12613;
-  if (obj3.isEnabled()) {
-    if (client) {
-      const tmpResult = _mod12583;
-      const mainCarrier = tmpResult.getMainCarrier();
-      const tmpResult8 = _mod12584;
-      const asyncContextStrategy = tmpResult8.getAsyncContextStrategy(mainCarrier);
-      if (asyncContextStrategy.getTraceData) {
-        return asyncContextStrategy.getTraceData(obj);
-      } else {
-        let spanToTraceHeaderResult;
-        let dynamicSamplingContextFromSpan;
-        let obj5;
-        const tmpResult9 = _mod12592;
-        const currentScope = tmpResult9.getCurrentScope();
-        let span = obj.span;
-        if (!span) {
-          const tmpResult10 = _mod12570;
-          span = tmpResult10.getActiveSpan();
-        }
-        if (span) {
-          const tmpResult11 = _mod12570;
-          spanToTraceHeaderResult = tmpResult11.spanToTraceHeader(span);
-        } else {
-          const propagationContext = currentScope.getPropagationContext();
-          ({ traceId, sampled, spanId } = propagationContext);
-          const tmpResult12 = _mod12577;
-          spanToTraceHeaderResult = tmpResult12.generateSentryTraceHeader(traceId, spanId, sampled);
-        }
-        const tmpResult13 = _mod12601;
-        if (span) {
-          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
-        } else {
-          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
-        }
-        const tmpResult14 = BAGGAGE_HEADER_NAME;
-        const result = tmpResult14.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = _mod12577.TRACEPARENT_REGEXP;
-        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
-          obj5 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-        } else {
-          const logger = _mod12565.logger;
-          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
-          obj5 = {};
-        }
-        return obj5;
-      }
+function setupIntegration(on, name, arg2) {
+  let closure_0 = on;
+  if (arg2[name.name]) {
+    if (_mod12608.DEBUG_BUILD) {
+      const logger2 = _mod12580.logger;
+      const _HermesInternal2 = HermesInternal;
+      logger2.log("Integration skipped because it was already installed: " + name.name);
+    }
+  } else {
+    arg2[name.name] = name;
+    const tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
+    if (tmp) {
+      name.setupOnce();
+      items.push(name.name);
+    }
+    const tmp4 = name.setup && typeof name.setup === "function";
+    if (tmp4) {
+      name.setup(on);
+    }
+    if (typeof name.preprocessEvent === "function") {
+      const preprocessEvent = name.preprocessEvent;
+      let closure_1 = preprocessEvent.bind(name);
+      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
+    }
+    if (typeof name.processEvent === "function") {
+      const processEvent = name.processEvent;
+      let closure_2 = processEvent.bind(name);
+      const _Object = Object;
+      const obj = { id: name.name };
+      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
+    }
+    if (_mod12608.DEBUG_BUILD) {
+      const logger = _mod12580.logger;
+      const _HermesInternal = HermesInternal;
+      logger.log("Integration installed: " + name.name);
     }
   }
-  return {};
+}
+let items = [];
+
+export const addIntegration = function addIntegration(name) {
+  const obj = _mod12607;
+  const client = obj.getClient();
+  if (client) {
+    client.addIntegration(name);
+  } else if (_mod12608.DEBUG_BUILD) {
+    const logger = _mod12580.logger;
+    const _HermesInternal = HermesInternal;
+    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
+  }
+};
+export const afterSetupIntegrations = function afterSetupIntegrations(arg0, integrations) {
+  const iter = integrations[Symbol.iterator]();
+  let afterAllSetup = iter.next();
+  while (iter !== undefined) {
+    let obj = afterAllSetup;
+    if (obj) {
+      afterAllSetup = obj.afterAllSetup;
+    }
+    if (afterAllSetup) {
+      let afterAllSetupResult = obj.afterAllSetup(arg0);
+    }
+    continue;
+  }
+};
+export function defineIntegration(arg0) {
+  return arg0;
+}
+export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
+  let arr2;
+  const arr = defaultIntegrations.defaultIntegrations || [];
+  integrations = defaultIntegrations.integrations;
+  const item = arr.forEach((item) => {
+    item.isDefaultInstance = true;
+  });
+  if (Array.isArray(integrations)) {
+    items = [];
+    HermesBuiltin.arraySpread(items, integrations, HermesBuiltin.arraySpread(items, arr, 0));
+    arr2 = items;
+  } else {
+    arr2 = arr;
+    if (typeof integrations === "function") {
+      const integrationsResult = integrations(arr);
+      const _Array = Array;
+      let tmp3 = integrationsResult;
+      if (!Array.isArray(integrationsResult)) {
+        const items1 = [integrationsResult];
+        tmp3 = items1;
+      }
+      arr2 = tmp3;
+    }
+  }
+  const obj = {};
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
+    let isDefaultInstance = tmp2;
+    if (obj[name]) {
+      isDefaultInstance = !tmp2.isDefaultInstance;
+    }
+    if (isDefaultInstance) {
+      isDefaultInstance = name.isDefaultInstance;
+    }
+    if (!isDefaultInstance) {
+      obj[name] = name;
+    }
+  });
+  const values = Object.values(obj);
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
+  if (findIndexResult > -1) {
+    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  }
+  return values;
+};
+export const installedIntegrations = items;
+export { setupIntegration };
+export const setupIntegrations = function setupIntegrations(arg0, arr) {
+  let closure_0 = arg0;
+  const obj = {};
+  const item = arr.forEach((item) => {
+    const tmp = item;
+    if (tmp) {
+      setupIntegration(closure_0, item, obj);
+    }
+  });
+  return obj;
 };

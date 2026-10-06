@@ -8,7 +8,7 @@ import _mod998 from "module_998" /* 998 */;
 const require = globalThis.__r;
 let _require, c4, c5, set;
 
-const f82892 = (arg0, arg1) => {
+const f83025 = (arg0, arg1) => {
   closure_0 = arg0;
   let closure_1 = arg1;
   let c2 = false;
@@ -45,7 +45,7 @@ const f82892 = (arg0, arg1) => {
   });
 };
 function fetchNativeFrames() {
-  const promise = new Promise(f82892);
+  const promise = new Promise(f83025);
   return promise;
 }
 function isClose(arg0, arg1) {
@@ -140,7 +140,7 @@ function nativeFramesIntegration() {
     set = asyncExpiringMap.set;
     let promise = new Promise((arg0) => {
       let closure_0 = arg0;
-      const promise = new Promise(f82892);
+      const promise = new Promise(f83025);
       const nextPromise = promise.then((result) => closure_0(result));
       nextPromise.then(undefined, (arg0) => {
         const debug = closure_2_0(asyncExpiringMap[2]).debug;
@@ -208,7 +208,7 @@ function nativeFramesIntegration() {
                   set = tmp65.set;
                   let promise = new Promise((arg0) => {
                     closure_0 = arg0;
-                    const promise = new Promise(f82892);
+                    const promise = new Promise(f83025);
                     let nextPromise = promise.then((nativeFrames) => {
                       const obj = { timestamp, nativeFrames };
                       closure_0(obj);
@@ -523,7 +523,7 @@ export const createNativeFramesIntegrations = function(enableNative) {
       set = asyncExpiringMap.set;
       let promise = new Promise((arg0) => {
         let closure_0 = arg0;
-        const promise = new Promise(f82892);
+        const promise = new Promise(f83025);
         const nextPromise = promise.then((result) => closure_0(result));
         nextPromise.then(undefined, (arg0) => {
           const debug = closure_2_0(asyncExpiringMap[2]).debug;
@@ -591,7 +591,7 @@ export const createNativeFramesIntegrations = function(enableNative) {
                     set = tmp65.set;
                     let promise = new Promise((arg0) => {
                       closure_0 = arg0;
-                      const promise = new Promise(f82892);
+                      const promise = new Promise(f83025);
                       let nextPromise = promise.then((nativeFrames) => {
                         const obj = { timestamp, nativeFrames };
                         closure_0(obj);

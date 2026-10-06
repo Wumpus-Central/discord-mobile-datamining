@@ -1,73 +1,197 @@
 // === Module 12604: ? ===
 
 // Module 12604
-import _mod12565 from "module_12565" /* 12565 */;
-import _mod12592 from "module_12592" /* 12592 */;
-import _mod12593 from "module_12593" /* 12593 */;
-import _mod12597 from "module_12597" /* 12597 */;
-import _mod12605 from "module_12605" /* 12605 */;
+import _mod12587 from "module_12587" /* 12587 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
+let c3;
 
-export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
-  const obj = _mod12597;
-  if (obj.hasTracingEnabled(tracesSampler)) {
-    let num;
-    let items3;
-    const tmpResult = _mod12592;
-    const isolationScope = tmpResult.getIsolationScope();
-    const obj2 = { normalizedRequest: normalizedRequest.normalizedRequest || normalizedRequest };
-    normalizedRequest = isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
-    const merged = Object.assign(normalizedRequest);
-    if (typeof tracesSampler.tracesSampler === "function") {
-      num = tracesSampler.tracesSampler(obj2);
-    } else if (undefined !== obj2.parentSampled) {
-      num = obj2.parentSampled;
-    } else {
-      num = 1;
-      if (undefined !== tracesSampler.tracesSampleRate) {
-        num = tracesSampler.tracesSampleRate;
-      }
+let obj = { PENDING: 0, RESOLVED: 1, REJECTED: 2 };
+obj[0] = "PENDING";
+obj[1] = "RESOLVED";
+obj[2] = "REJECTED";
+class SyncPromise {
+  constructor(fn) {
+    const self = this;
+    _classCallCheck(this, SyncPromise);
+    const __init = SyncPromise.prototype.__init;
+    __init.call(self);
+    const __init2 = SyncPromise.prototype.__init2;
+    __init2.call(self);
+    const __init3 = SyncPromise.prototype.__init3;
+    __init3.call(self);
+    const __init4 = SyncPromise.prototype.__init4;
+    __init4.call(self);
+    self._state = obj.PENDING;
+    self._handlers = [];
+    try {
+      fn(self._resolve, self._reject);
+    } catch (tmp5) {
+      self._reject(tmp5);
     }
-    const tmpResult2 = _mod12605;
-    const parseSampleRateResult = tmpResult2.parseSampleRate(num);
-    if (undefined === parseSampleRateResult) {
-      if (_mod12593.DEBUG_BUILD) {
-        const logger3 = _mod12565.logger;
-        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
-      }
-      const items = [false];
-      items3 = items;
-    } else if (parseSampleRateResult) {
-      let items2;
-      const _Math = Math;
-      if (Math.random() < parseSampleRateResult) {
-        const items1 = [true, parseSampleRateResult];
-        items2 = items1;
-      } else {
-        if (_mod12593.DEBUG_BUILD) {
-          const logger2 = _mod12565.logger;
-          const _Number = Number;
-          const _HermesInternal = HermesInternal;
-          logger2.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(num) + ")");
-        }
-        items2 = [false, parseSampleRateResult];
-      }
-      items3 = items2;
-    } else {
-      if (_mod12593.DEBUG_BUILD) {
-        const logger = _mod12565.logger;
-        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
-        const log = logger.log;
-        if (typeof tracesSampler.tracesSampler === "function") {
-          str = "tracesSampler returned 0 or false";
-        }
-        log(`[Tracing] Discarding transaction because ${str}`);
-      }
-      items3 = [false, parseSampleRateResult];
-    }
-    return items3;
-  } else {
-    const items4 = [false];
-    return items4;
   }
+}
+const entry = {
+  key: "then",
+  value: function then(arg0, arg1) {
+    const self = this;
+    let closure_1 = arg0;
+    let closure_0 = arg1;
+    obj = Object.create(SyncPromise.prototype);
+    SyncPromise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const _handlers = self._handlers;
+      const items = [
+        false,
+        (arg0) => {
+          if (closure_1) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_0(arg0);
+          }
+        },
+        (arg0) => {
+          if (closure_0) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_1(arg0);
+          }
+        }
+      ];
+      _handlers.push(items);
+      self._executeHandlers();
+    });
+    return obj;
+  }
+};
+let items = [
+  entry,
+  {
+    key: "catch",
+    value: function _catch(arg0) {
+      return this.then((result) => result, arg0);
+    }
+  },
+  {
+    key: "finally",
+    value: function _finally(arg0) {
+      const self = this;
+      let closure_0 = arg0;
+      obj = Object.create(SyncPromise.prototype);
+      SyncPromise((arg0, arg1) => {
+        let closure_1;
+        closure_0 = arg0;
+        const nextPromise = arg1.then((result) => {
+          c3 = false;
+          let closure_1_2 = result;
+          if (closure_0) {
+            tmp();
+          }
+        }, (arg0) => {
+          c3 = true;
+          let closure_1_2 = arg0;
+          if (closure_0) {
+            tmp();
+          }
+        });
+        return nextPromise.then(() => {
+          if (c3) {
+            closure_1(closure_1_2);
+          } else {
+            closure_0(closure_1_2);
+          }
+        });
+      });
+      return obj;
+    }
+  },
+  {
+    key: "__init",
+    value: function __init() {
+      const self = this;
+      this._resolve = (arg0) => {
+        self._setResult(obj.RESOLVED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init2",
+    value: function __init2() {
+      const self = this;
+      this._reject = (arg0) => {
+        self._setResult(obj.REJECTED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init3",
+    value: function __init3() {
+      const self = this;
+      this._setResult = (_state, _value) => {
+        if (self._state === self.PENDING) {
+          const obj2 = _mod12587;
+          if (obj2.isThenable(_value)) {
+            _value.then(self._resolve, self._reject);
+          } else {
+            self._state = _state;
+            self._value = _value;
+            self._executeHandlers();
+          }
+        }
+      };
+    }
+  },
+  {
+    key: "__init4",
+    value: function __init4() {
+      const self = this;
+      this._executeHandlers = () => {
+        let _state;
+        if (self._state !== obj.PENDING) {
+          const _handlers = self._handlers;
+          const substr = _handlers.slice();
+          self._handlers = [];
+          const item = substr.forEach((item) => {
+            if (!item[0]) {
+              if (_state._state === constants.RESOLVED) {
+                item[1](_state._value);
+              }
+              if (_state._state === constants.REJECTED) {
+                item[2](_state._value);
+              }
+              item[0] = true;
+            }
+          });
+        }
+      };
+    }
+  }
+];
+const _moduleResult = _createClass(SyncPromise, items);
+const SyncPromise_export = _moduleResult;
+
+export { SyncPromise_export as SyncPromise };
+export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
+  let closure_0 = arg0;
+  const tmp = new _moduleResult((arg0, fn) => {
+    fn(closure_0);
+  });
+  return tmp;
+};
+export const resolvedSyncPromise = function resolvedSyncPromise(result) {
+  let closure_0 = result;
+  const tmp = new _moduleResult((fn) => {
+    fn(closure_0);
+  });
+  return tmp;
 };

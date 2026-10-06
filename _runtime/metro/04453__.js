@@ -10,11 +10,11 @@ if (Intl.ListFormat) {
   const _Intl = Intl;
   if (typeof Intl.ListFormat.__addLocaleData === "function") {
     const _Intl2 = Intl;
-    const obj2 = { data: obj3, locale: "tr" };
+    const obj2 = { data: obj3, locale: "pl" };
     obj3 = { conjunction: obj4, disjunction: obj5, unit: obj6 };
-    obj4 = { long: { end: "{0} ve {1}", middle: "{0}, {1}", pair: "{0} ve {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} ve {1}", middle: "{0}, {1}", pair: "{0} ve {1}", start: "{0}, {1}" } };
-    obj5 = { long: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" }, narrow: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" }, short: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" } };
-    obj6 = { long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } };
+    obj4 = { long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" } };
+    obj5 = { long: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" }, narrow: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" }, short: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" } };
+    obj6 = { long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" } };
     ListFormat.__addLocaleData(obj2);
   }
 }
@@ -24,6 +24,6 @@ if (!prop) {
   prop = [];
 }
 _globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-const obj = { data: obj7, locale: "tr" };
-obj7 = { conjunction: { long: { end: "{0} ve {1}", middle: "{0}, {1}", pair: "{0} ve {1}", start: "{0}, {1}" }, narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" }, short: { end: "{0} ve {1}", middle: "{0}, {1}", pair: "{0} ve {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" }, narrow: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" }, short: { end: "{0} veya {1}", middle: "{0}, {1}", pair: "{0} veya {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, narrow: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" }, short: { end: "{0} {1}", middle: "{0} {1}", pair: "{0} {1}", start: "{0} {1}" } } };
+const obj = { data: obj7, locale: "pl" };
+obj7 = { conjunction: { long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" } }, disjunction: { long: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" }, narrow: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" }, short: { end: "{0} lub {1}", middle: "{0}, {1}", pair: "{0} lub {1}", start: "{0}, {1}" } }, unit: { long: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, narrow: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" }, short: { end: "{0} i {1}", middle: "{0}, {1}", pair: "{0} i {1}", start: "{0}, {1}" } } };
 prop.push(obj);

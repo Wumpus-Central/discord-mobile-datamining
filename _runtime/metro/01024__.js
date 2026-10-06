@@ -13,8 +13,8 @@ import react from "react" /* 19 */;
 const require = globalThis.__r;
 let _require, c1, closure_4, closure_5, closure_6, closure_7, closure_8, createElement, dependencyMap;
 
-const f82850 = (children) => {
-  const f82851 = function(children) {
+const f82983 = (children) => {
+  const f82984 = function(children) {
     if (set === undefined) {
       const _Set = Set;
       const self = this;
@@ -26,7 +26,7 @@ const f82850 = (children) => {
       const tmp3 = children.children && !children.index;
       if (tmp3) {
         children = children.children;
-        const item = children.forEach(f82851);
+        const item = children.forEach(f82984);
       }
     }
     const item1 = set.forEach((item) => {
@@ -39,7 +39,7 @@ const f82850 = (children) => {
     const tmp2 = children.children && !children.index;
     if (tmp2) {
       children = children.children;
-      let item = children.forEach(f82851);
+      let item = children.forEach(f82984);
     }
   }
   let item1 = set.forEach((item) => {
@@ -457,7 +457,7 @@ function wrapPatchRoutesOnNavigation(basename, arg1) {
                   }
                   if (patch) {
                     closure_0.patch = (arg0, arr) => {
-                      let item = arr.forEach(f82850);
+                      let item = arr.forEach(f82983);
                       const obj = closure_0(path[4]);
                       activeRootSpan = obj.getActiveRootSpan();
                       let tmp6 = path && activeRootSpan;
@@ -721,7 +721,7 @@ function handleNavigation(version) {
   }
 }
 function addRoutesToAllRoutes(arr) {
-  const item = arr.forEach(f82850);
+  const item = arr.forEach(f82983);
 }
 function updatePageloadTransaction(arg0) {
   let _location;
@@ -781,7 +781,7 @@ function updatePageloadTransaction(arg0) {
           activeRootSpan.end = function patchedEnd() {
             let data;
             let description;
-            const f134647 = (arg0) => setTimeout(arg0, closure_1_11);
+            const f134864 = (arg0) => setTimeout(arg0, closure_1_11);
             const items = [...arguments];
             let first;
             let cleanupNavigationSpan;
@@ -833,8 +833,8 @@ function updatePageloadTransaction(arg0) {
                         const items1 = [nextPromise, ];
                         const self = this;
                         const self2 = this;
-                        items1[1] = new Promise(f134647);
-                        const promise = new Promise(f134647);
+                        items1[1] = new Promise(f134864);
+                        const promise = new Promise(f134864);
                         raceResult = race(items1);
                       }
                       const nextPromise1 = raceResult.then(() => {
@@ -1002,7 +1002,7 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
       result2.end = function patchedEnd() {
         let data;
         let description;
-        const f134647 = (arg0) => setTimeout(arg0, closure_1_11);
+        const f134864 = (arg0) => setTimeout(arg0, closure_1_11);
         const items = [...arguments];
         let first;
         let cleanupNavigationSpan;
@@ -1054,8 +1054,8 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
                     const items1 = [nextPromise, ];
                     const self = this;
                     const self2 = this;
-                    items1[1] = new Promise(f134647);
-                    const promise = new Promise(f134647);
+                    items1[1] = new Promise(f134864);
+                    const promise = new Promise(f134864);
                     raceResult = race(items1);
                   }
                   const nextPromise1 = raceResult.then(() => {
@@ -1228,9 +1228,9 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       }
       const result1 = initializeRouterUtils(closure_1_7, flag);
     },
-    afterAllSetup(f134637) {
+    afterAllSetup(f134854) {
       let obj2;
-      _asyncToGenerator.afterAllSetup(f134637);
+      _asyncToGenerator.afterAllSetup(f134854);
       const _location = feedbackAsyncIntegration.WINDOW.location;
       let pathname;
       if (_location != null) {
@@ -1246,10 +1246,10 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
         const _HermesInternal = HermesInternal;
         feedbackAsyncIntegration;
         obj2[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
-        _asyncToGenerator = startBrowserTracingPageLoadSpan(f134637, obj);
+        _asyncToGenerator = startBrowserTracingPageLoadSpan(f134854, obj);
       }
       if (closure_11) {
-        weakSet.add(f134637);
+        weakSet.add(f134854);
       }
     }
   };
@@ -1278,7 +1278,7 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
                 items = [, ];
                 items[0] = tmp;
                 items[1] = tmp2;
-                tmp3 = closure_1_4(() => { /* body not rendered: F134650 */ }, items);
+                tmp3 = closure_1_4(() => { /* body not rendered: F134867 */ }, items);
                 obj = {};
                 createElement = closure_1_9.createElement;
                 merged = Object.assign(arg0);
@@ -1305,7 +1305,7 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
         items = [, ];
         items[0] = tmp;
         items[1] = tmp2;
-        tmp3 = closure_1_4(() => { /* body not rendered: F134650 */ }, items);
+        tmp3 = closure_1_4(() => { /* body not rendered: F134867 */ }, items);
         obj = {};
         createElement = closure_1_9.createElement;
         merged = Object.assign(arg0);
@@ -1482,7 +1482,7 @@ export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUs
                 const obj2 = { pathname: tmp };
               }
               if (ref.current) {
-                const item = routes.forEach(f82850);
+                const item = routes.forEach(f82983);
                 const obj4 = { activeRootSpan: obj3.getActiveRootSpan(), location: tmp2, routes, allRoutes: Array.from(set) };
                 const _Array2 = Array;
                 obj3 = _mod1025;

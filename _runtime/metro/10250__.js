@@ -1,7 +1,7 @@
 // === Module 10250: ? ===
 
 // Module 10250
-import _mod10179 from "module_10179" /* 10179 */;
+import _mod10195 from "module_10195" /* 10195 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import map from "_possibleConstructorReturn" /* 93 */;
@@ -40,12 +40,12 @@ if (!fn) {
     return tmp2;
   };
 }
-class NLMergeDateRangeRefiner {
+class JPMergeDateTimeRefiner {
   constructor() {
     let constructResult;
     const self = this;
-    _classCallCheck(this, NLMergeDateRangeRefiner);
-    const obj = _getPrototypeOf(NLMergeDateRangeRefiner);
+    _classCallCheck(this, JPMergeDateTimeRefiner);
+    const obj = _getPrototypeOf(JPMergeDateTimeRefiner);
     if (_isNativeReflectConstruct()) {
       const _Reflect = Reflect;
       constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
@@ -55,13 +55,13 @@ class NLMergeDateRangeRefiner {
     return map(self, constructResult);
   }
 }
-_inherits(NLMergeDateRangeRefiner, fn(_mod10179).default);
+_inherits(JPMergeDateTimeRefiner, fn(_mod10195).default);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
-    return /^\s*(tot|-)\s*$/i;
+    return /^\s*(の)?\s*$/i;
   }
 };
 const items = [entry];
 
-export default _createClass(NLMergeDateRangeRefiner, items);
+export default _createClass(JPMergeDateTimeRefiner, items);

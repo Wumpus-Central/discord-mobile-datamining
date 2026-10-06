@@ -1,7 +1,14 @@
 // === Module 13855: ? ===
 
 // Module 13855
-import _mod13845 from "module_13845" /* 13845 */;
+import _mod13848 from "module_13848" /* 13848 */;
 
 
-export default (arg0, arg1, arg2) => _mod13845(arg0, arg1, arg2) >= 0;
+export default (arg0, arg1) => {
+  const tmp = _mod13848(arg0, arg1);
+  let version = null;
+  if (tmp) {
+    version = tmp.version;
+  }
+  return version;
+};

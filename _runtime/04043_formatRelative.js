@@ -1,7 +1,7 @@
 // === Module 4043: formatRelative ===
 
 // Module 4043 (formatRelative)
-let closure_0 = { lastWeek: "'Pra\u0117jus\u012F' eeee p", yesterday: "'Vakar' p", today: "'\u0160iandien' p", tomorrow: "'Rytoj' p", nextWeek: "eeee p", other: "P" };
+let closure_0 = { lastWeek: "'\uC9C0\uB09C' eeee p", yesterday: "'\uC5B4\uC81C' p", today: "'\uC624\uB298' p", tomorrow: "'\uB0B4\uC77C' p", nextWeek: "'\uB2E4\uC74C' eeee p", other: "P" };
 
 export default function formatRelative(arg0, arg1, arg2, arg3) {
   return closure_0[arg0];

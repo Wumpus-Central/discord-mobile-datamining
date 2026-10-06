@@ -1,77 +1,79 @@
 // === Module 12644: ? ===
 
 // Module 12644
-import _mod12566 from "module_12566" /* 12566 */;
+import _mod12604 from "module_12604" /* 12604 */;
 
-function getMetadataForUrl(fn, arg1) {
-  function ensureMetadataStacksAreParsed(fn) {
-    if (_mod12566.GLOBAL_OBJ._sentryModuleMetadata) {
-      const _Object = Object;
-      const keys = Object.keys(_mod12566.GLOBAL_OBJ._sentryModuleMetadata);
-      for (const item10026 of keys) {
-        let tmp16 = _mod12566.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        if (!set.has(item10026)) {
-          let addResult = set.add(item10026);
-          let obj2 = fn(item10026);
-          let reversed = obj2.reverse();
-          for (const item10050 of reversed) {
-            if (item10050.filename) {
-              let result = map.set(tmp22.filename, tmp16);
-              obj3.return();
-              break;
-            }
-            continue;
-          }
-        }
-        continue;
-      }
-    }
-  }
-  ensureMetadataStacksAreParsed(fn);
-  return map.get(arg1);
-}
-const map = new Map();
-const set = new Set();
+let diff;
 
-export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
+
+export function makePromiseBuffer(arg0) {
   let closure_0 = arg0;
-  try {
-    let tmp = exception;
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        for (const item10010 of tmp) {
-          if (item10010.filename) {
-            if (!item10010.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
-              if (tmp9) {
-                item10010.module_metadata = tmp10;
-              }
+  const items = [];
+  let obj = {
+    $: items,
+    add(fn) {
+      let promise;
+      const tmp2 = undefined === promise || items.length < tmp;
+      if (tmp2) {
+        promise = fn();
+        if (-1 === items.indexOf(promise)) {
+          items.push(promise);
+        }
+        const nextPromise = promise.then(() => {
+          const first = items.splice(items.indexOf(promise), 1)[0] || Promise.resolve(undefined);
+          return first;
+        });
+        nextPromise.then(null, () => {
+          const first = items.splice(items.indexOf(promise), 1)[0] || Promise.resolve(undefined);
+          return first.then(null, () => {
+
+          });
+        });
+        return promise;
+      } else {
+        const self = this;
+        const self2 = this;
+        const rejectedSyncPromise = closure_0(items[0]).rejectedSyncPromise;
+        const sentryError = new closure_0(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
+        return rejectedSyncPromise(sentryError);
+      }
+    },
+    drain(arg0) {
+      let length;
+      closure_0 = arg0;
+      const syncPromise = new closure_0(items[0]).SyncPromise((fn, arg1) => {
+        let closure_3;
+        closure_0 = fn;
+        let closure_1 = arg1;
+        const arr = length;
+        if (length.length) {
+          const tmp = globalThis;
+          const _setTimeout = setTimeout;
+          let tmp2 = closure_0;
+          const timeout = setTimeout(() => {
+            const tmp2 = closure_0 && tmp > 0;
+            if (tmp2) {
+              closure_0(false);
             }
-          }
-          continue;
+          }, closure_0);
+          const item = arr.forEach((item) => {
+            const obj = _mod12604;
+            const resolvedSyncPromiseResult = obj.resolvedSyncPromise(item);
+            resolvedSyncPromiseResult.then(() => {
+              diff = diff - 1;
+              if (!diff) {
+                const _clearTimeout = clearTimeout;
+                clearTimeout(closure_1_3);
+                fn(true);
+              }
+            }, closure_1);
+          });
+        } else {
+          return fn(true);
         }
-      }
-    });
-  } catch (err) {
-  }
-};
-export { getMetadataForUrl };
-export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
-  try {
-    let tmp = exception;
-    const values = exception.exception.values;
-    const item = values.forEach((stacktrace) => {
-      if (stacktrace.stacktrace) {
-        const tmp = stacktrace.stacktrace.frames || [];
-        const iter = tmp[Symbol.iterator]();
-        while (iter !== undefined) {
-          delete iter.next()[`module_metadata`];
-          continue;
-        }
-      }
-    });
-  } catch (err) {
-  }
-};
+      });
+      return syncPromise;
+    }
+  };
+  return obj;
+}

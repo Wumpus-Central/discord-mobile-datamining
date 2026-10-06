@@ -59,7 +59,7 @@ function hookSetter(headers, item10017, arg2, arg3) {
       set.call(this, arg0);
     }
   };
-  const f82627 = () => {
+  const f82760 = () => {
     let ownPropertyDescriptor;
     const tmp3 = ownPropertyDescriptor || {};
     let closure_0 = tmp;
@@ -69,7 +69,7 @@ function hookSetter(headers, item10017, arg2, arg3) {
     ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
     const _Object2 = window.Object;
     _Object2.defineProperty(closure_0, closure_1, tmp3);
-    return f82627;
+    return f82760;
   };
   let closure_0 = headers;
   let closure_1 = item10017;
@@ -89,7 +89,7 @@ function hookSetter(headers, item10017, arg2, arg3) {
     const obj = { set: set2 };
   }
   defineProperty(headers, item10017, tmp);
-  return f82627;
+  return f82760;
 }
 function patch(arg0, arg1, fn) {
   let obj2;
@@ -123,7 +123,7 @@ function patch(arg0, arg1, fn) {
   }
 }
 function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
-  const f82625 = (parentNode) => {
+  const f82758 = (parentNode) => {
     function elementClassMatchesRegex(classList, test) {
       let diff = tmp - 1;
       if (+classList.classList.length) {
@@ -180,7 +180,7 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
       let tmp4 = arg3;
       let closure_0 = arg1;
       let closure_1 = arg2;
-      const fn = f82625;
+      const fn = f82758;
       if (arg4) {
         let num2 = -1;
         if (obj) {
@@ -220,7 +220,7 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
             if (obj) {
               let num14 = -1;
               if (obj.nodeType === obj.ELEMENT_NODE) {
-                const fn2 = f82625;
+                const fn2 = f82758;
                 let num15 = 0;
                 if (!fn2(obj)) {
                   const parentNode2 = obj.parentNode;
@@ -1190,14 +1190,14 @@ let closure_29 = (() => {
           HermesBuiltin.arraySpread(items2, closure_28(WebGLRenderingContext.WebGL2RenderingContext.prototype, v2D.WebGL2, bindResult, arg1, arg2, arg3, 0, WebGLRenderingContext), 0);
           HermesBuiltin.apply(push, items2, items);
         }
-        const f149965 = () => {
+        const f150198 = () => {
 
         };
         const restoreHandlers = this.restoreHandlers;
         let arr = restoreHandlers.push(() => {
           closure_0();
           closure_1();
-          if (typeof f149965 === "function") {
+          if (typeof f150198 === "function") {
             const item = closure_130_0.forEach((fn) => fn());
           } else {
             throw new TypeError("Trying to call a non-function");

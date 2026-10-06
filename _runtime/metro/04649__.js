@@ -1,7 +1,7 @@
 // === Module 4649: ? ===
 
 // Module 4649
-import react2 from "react" /* 4644 */;
+import react2 from "react" /* 4650 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 import react from "react" /* 19 */;
 
@@ -11,28 +11,20 @@ let hasOwnProperty;
 let metroRequire;
 ({ useCallback: c3, useEffect: closure_4, useRef: hasOwnProperty, useState: metroRequire } = react);
 
-export const useRiveTrigger = function useRiveTrigger(arg0, arg1, cResult) {
+export const useRiveProperty = function useRiveProperty(arg0, arg1, f31263) {
+  let closure_7;
   let first;
-  let items4;
+  let first1;
   let closure_0 = arg0;
   let closure_1 = arg1;
-  let obj = cResult;
-  if (cResult == null) {
-    obj = {};
-  }
-  const onTrigger = obj.onTrigger;
+  let closure_2 = f31263;
   let tmp = hasOwnProperty(undefined);
-  let closure_2 = tmp;
-  const tmp2 = hasOwnProperty(false);
-  let c3 = tmp2;
-  const tmp3 = hasOwnProperty(onTrigger);
-  let closure_4 = tmp3;
-  tmp3.current = onTrigger;
-  const items = [arg1, arg0];
-  const obj2 = react2;
-  const disposableMemo = obj2.useDisposableMemo(() => {
-    if (closure_1) {
-      return closure_1.triggerProperty(closure_0);
+  let c3 = tmp;
+  const items = [arg0, arg1];
+  const obj = react2;
+  const disposableMemo = obj.useDisposableMemo(() => {
+    if (closure_0) {
+      return closure_2(tmp, closure_1);
     }
   }, (dispose) => {
     let disposeResult;
@@ -41,34 +33,30 @@ export const useRiveTrigger = function useRiveTrigger(arg0, arg1, cResult) {
     }
     return disposeResult;
   }, items, tmp);
-  if (tmp.current) {
-    tmp2.current = true;
-  }
-  [first, metroRequire] = metroRequire(null);
-  const items1 = [arg0, arg1];
+  [first, metroRequire] = metroRequire(undefined);
+  [first1, closure_7] = metroRequire(null);
+  const items1 = [arg1, arg0];
   React3(() => {
-    closure_6(null);
+    closure_7(null);
   }, items1);
-  const items2 = [arg1, disposableMemo, arg0];
+  const items2 = [arg0, disposableMemo, arg1];
   React3(function() {
-    const tmp = closure_1 && !disposableMemo;
+    const tmp = closure_0 && !disposableMemo;
     if (tmp) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
       const self = this;
       const self2 = this;
-      const error = new Error("Property \"" + closure_0 + "\" not found in the ViewModel instance");
-      closure_6(error);
+      const error = new Error("Property \"" + closure_1 + "\" not found in the ViewModel instance");
+      closure_7(error);
     }
   }, items2);
   const items3 = [disposableMemo];
   React3(() => {
     if (disposableMemo) {
-      closure_0 = disposableMemo.addListener(() => {
-        const current = ref.current;
-        if (current != null) {
-          current();
-        }
+      closure_6(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
+        closure_1_6(arg0);
       });
       return () => {
         try {
@@ -78,23 +66,21 @@ export const useRiveTrigger = function useRiveTrigger(arg0, arg1, cResult) {
       };
     }
   }, items3);
-  const obj3 = {
-    trigger: _false(() => {
-      if (ref.current) {
-        const current = ref.current;
-        current.trigger();
-      } else {
-        const _console = console;
-        const _HermesInternal = HermesInternal;
-        if (ref2.current) {
-          warn(concat(closure_0, "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount."));
-        } else {
-          warn(concat(closure_0, "') called but the property is not available yet. The viewModelInstance may still be loading."));
+  const items4 = [disposableMemo, first];
+  const items5 = [
+    first,
+    _false((fn) => {
+      const current = ref.current;
+      if (current) {
+        let tmp2 = fn;
+        if (typeof fn === "function") {
+          tmp2 = fn(first);
         }
+        current.value = tmp2;
       }
     }, items4),
-    error: first
-  };
-  items4 = [arg0];
-  return obj3;
+    first1,
+    disposableMemo
+  ];
+  return items5;
 };

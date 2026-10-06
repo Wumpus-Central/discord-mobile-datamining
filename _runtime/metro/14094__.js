@@ -1,15 +1,19 @@
 // === Module 14094: ? ===
 
 // Module 14094
-import _mod14069 from "module_14069" /* 14069 */;
+import _mod14095 from "module_14095" /* 14095 */;
 
-let fn;
-if (_mod14069) {
-  fn = call.bind(call);
-} else {
-  fn = function() {
-    return call(...arguments);
-  };
-}
 
-export default fn;
+export default (arg0, arg1) => {
+  let tmp3 = _mod14095[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    const tmpResult = _mod14095;
+    if (!arg1) {
+      obj = {};
+    }
+    tmpResult[arg0] = obj;
+    tmp3 = obj;
+  }
+  return tmp3;
+};

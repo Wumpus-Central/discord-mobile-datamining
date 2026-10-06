@@ -1,0 +1,133 @@
+// === Module 8708: ZodError ===
+
+// Module 8708 (ZodError)
+import util2 from "util" /* 8638 */;
+import captureStackTrace2 from "captureStackTrace" /* 8642 */;
+
+const require = globalThis.__r;
+let _require, hasOwnProperty;
+
+const self = this;
+let tmp = this && self.__createBinding;
+if (!tmp) {
+  let _Object = Object;
+  tmp = Object.create ? ((arg0, __esModule, arg2, arg3) => {
+    function get() {
+      return __esModule[closure_1];
+    }
+    let closure_0 = __esModule;
+    let closure_1 = arg2;
+    let tmp = arg3;
+    if (undefined === arg3) {
+      tmp = arg2;
+    }
+    let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(__esModule, arg2);
+    let tmp3 = ownPropertyDescriptor;
+    if (tmp3) {
+      let tmp4;
+      if ("get" in ownPropertyDescriptor) {
+        tmp4 = !__esModule.__esModule;
+      } else {
+        tmp4 = ownPropertyDescriptor.writable || ownPropertyDescriptor.configurable;
+      }
+      tmp3 = !tmp4;
+    }
+    if (!tmp3) {
+      ownPropertyDescriptor = { enumerable: true, get };
+      const obj = { enumerable: true, get };
+    }
+    Object.defineProperty(arg0, tmp, ownPropertyDescriptor);
+  }) : ((arg0, arg1, arg2, arg3) => {
+    let tmp = arg3;
+    if (undefined === arg3) {
+      tmp = arg2;
+    }
+    arg0[tmp] = arg1[arg2];
+  });
+}
+let closure_2 = tmp;
+let tmp3 = self && self.__setModuleDefault;
+if (!tmp3) {
+  let tmp4 = globalThis;
+  const _Object2 = Object;
+  tmp3 = Object.create ? ((arg0, value) => {
+    const obj = { enumerable: true, value };
+    Object.defineProperty(arg0, "default", obj);
+  }) : ((arg0, arg1) => {
+    arg0.default = arg1;
+  });
+}
+let closure_3 = tmp3;
+const tmp5 = self && self.__importStar || ((__esModule) => {
+  const tmp = __esModule;
+  if (tmp) {
+    if (__esModule.__esModule) {
+      return __esModule;
+    }
+  }
+  const obj = {};
+  if (null != __esModule) {
+    for (const key10009 in __esModule) {
+      let callResult = "default" !== key10009;
+      if (callResult) {
+        let _Object = Object;
+        hasOwnProperty = Object.prototype.hasOwnProperty;
+        callResult = hasOwnProperty.call(__esModule, key10009);
+      }
+      if (!callResult) {
+        continue;
+      } else {
+        let tmp6 = closure_2(obj, __esModule, key10009);
+        continue;
+      }
+      continue;
+    }
+  }
+  closure_3(obj, __esModule);
+  return obj;
+});
+const util = tmp5(util2);
+const captureStackTrace = tmp5(captureStackTrace2);
+function initializer(prototype, arg1) {
+  _require = prototype;
+  const $ZodError = require("util").$ZodError;
+  $ZodError.init(prototype, arg1);
+  prototype.name = "ZodError";
+  const obj = {
+    format: {
+      value(arg0) {
+        return util.formatError(prototype, arg0);
+      }
+    },
+    flatten: {
+      value(arg0) {
+        return util.flattenError(prototype, arg0);
+      }
+    },
+    addIssue: {
+      value(arg0) {
+        const issues = prototype.issues;
+        issues.push(arg0);
+        prototype.message = JSON.stringify(prototype.issues, captureStackTrace.jsonStringifyReplacer, 2);
+      }
+    },
+    addIssues: {
+      value(arg0) {
+        const issues = prototype.issues;
+        const items = [...arg0];
+        issues.push.apply(items);
+        prototype.message = JSON.stringify(prototype.issues, captureStackTrace.jsonStringifyReplacer, 2);
+      }
+    },
+    isEmpty: {
+      get() {
+        return 0 === prototype.issues.length;
+      }
+    }
+  };
+  Object.defineProperties(prototype, obj);
+}
+let obj = { Parent: Error };
+
+export const ZodError = util.$constructor("ZodError", initializer);
+export const ZodRealError = util.$constructor("ZodError", initializer, obj);

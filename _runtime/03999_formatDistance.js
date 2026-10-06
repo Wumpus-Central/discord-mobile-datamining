@@ -1,77 +1,33 @@
 // === Module 3999: formatDistance ===
 
 // Module 3999 (formatDistance)
-function futureSeconds(str) {
-  return str.replace(/sekuntia?/, "sekunnin");
-}
-function futureMinutes(str) {
-  return str.replace(/minuuttia?/, "minuutin");
-}
-function futureHours(str) {
-  return str.replace(/tuntia?/, "tunnin");
-}
-function futureWeeks(str) {
-  return str.replace(/(viikko|viikkoa)/, "viikon");
-}
-function futureMonths(str) {
-  return str.replace(/(kuukausi|kuukautta)/, "kuukauden");
-}
-function futureYears(str) {
-  return str.replace(/(vuosi|vuotta)/, "vuoden");
-}
-const obj = {
-  lessThanXSeconds: { one: "alle sekunti", other: "alle {{count}} sekuntia", futureTense: futureSeconds },
-  xSeconds: { one: "sekunti", other: "{{count}} sekuntia", futureTense: futureSeconds },
-  halfAMinute: {
-    one: "puoli minuuttia",
-    other: "puoli minuuttia",
-    futureTense(one) {
-      return "puolen minuutin";
-    }
-  },
-  lessThanXMinutes: { one: "alle minuutti", other: "alle {{count}} minuuttia", futureTense: futureMinutes },
-  xMinutes: { one: "minuutti", other: "{{count}} minuuttia", futureTense: futureMinutes },
-  aboutXHours: { one: "noin tunti", other: "noin {{count}} tuntia", futureTense: futureHours },
-  xHours: { one: "tunti", other: "{{count}} tuntia", futureTense: futureHours },
-  xDays: {
-    one: "p\u00E4iv\u00E4",
-    other: "{{count}} p\u00E4iv\u00E4\u00E4",
-    futureTense: function futureDays(str) {
-      return str.replace(/päivää?/, "p\u00E4iv\u00E4n");
-    }
-  },
-  aboutXWeeks: { one: "noin viikko", other: "noin {{count}} viikkoa", futureTense: futureWeeks },
-  xWeeks: { one: "viikko", other: "{{count}} viikkoa", futureTense: futureWeeks },
-  aboutXMonths: { one: "noin kuukausi", other: "noin {{count}} kuukautta", futureTense: futureMonths },
-  xMonths: { one: "kuukausi", other: "{{count}} kuukautta", futureTense: futureMonths },
-  aboutXYears: { one: "noin vuosi", other: "noin {{count}} vuotta", futureTense: futureYears },
-  xYears: { one: "vuosi", other: "{{count}} vuotta", futureTense: futureYears },
-  overXYears: { one: "yli vuosi", other: "yli {{count}} vuotta", futureTense: futureYears },
-  almostXYears: { one: "l\u00E4hes vuosi", other: "l\u00E4hes {{count}} vuotta", futureTense: futureYears }
-};
+let closure_0 = { lessThanXSeconds: { one: "menos de un segundo", other: "menos de {{count}} segundos" }, xSeconds: { one: "1 segundo", other: "{{count}} segundos" }, halfAMinute: "medio minuto", lessThanXMinutes: { one: "menos de un minuto", other: "menos de {{count}} minutos" }, xMinutes: { one: "1 minuto", other: "{{count}} minutos" }, aboutXHours: { one: "alrededor de 1 hora", other: "alrededor de {{count}} horas" }, xHours: { one: "1 hora", other: "{{count}} horas" }, xDays: { one: "1 d\u00EDa", other: "{{count}} d\u00EDas" }, aboutXWeeks: { one: "alrededor de 1 semana", other: "alrededor de {{count}} semanas" }, xWeeks: { one: "1 semana", other: "{{count}} semanas" }, aboutXMonths: { one: "alrededor de 1 mes", other: "alrededor de {{count}} meses" }, xMonths: { one: "1 mes", other: "{{count}} meses" }, aboutXYears: { one: "alrededor de 1 a\u00F1o", other: "alrededor de {{count}} a\u00F1os" }, xYears: { one: "1 a\u00F1o", other: "{{count}} a\u00F1os" }, overXYears: { one: "m\u00E1s de 1 a\u00F1o", other: "m\u00E1s de {{count}} a\u00F1os" }, almostXYears: { one: "casi 1 a\u00F1o", other: "casi {{count}} a\u00F1os" } };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
-  let one;
-  if (1 === arg1) {
-    one = obj.one;
-  } else {
-    const _String = String;
-    const str = obj[arg0].other;
-    one = str.replace("{{count}}", String(arg1));
-  }
-  let tmp2 = one;
-  if (null != addSuffix) {
+  let tmp2 = tmp;
+  if (typeof closure_0[arg0] !== "string") {
+    let one;
+    if (1 === arg1) {
+      one = tmp.one;
+    } else {
+      const str = closure_0[arg0].other;
+      one = str.replace("{{count}}", arg1.toString());
+    }
     tmp2 = one;
+  }
+  let tmp3 = tmp2;
+  if (null != addSuffix) {
+    tmp3 = tmp2;
     if (addSuffix.addSuffix) {
       if (addSuffix.comparison) {
         let text;
         if (addSuffix.comparison > 0) {
-          text = `${obj.futureTense(one)} kuluttua`;
+          text = `en ${tmp2}`;
         }
-        tmp2 = text;
+        tmp3 = text;
       }
-      text = `${one} sitten`;
+      text = `hace ${tmp2}`;
     }
   }
-  return tmp2;
+  return tmp3;
 };

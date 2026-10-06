@@ -1,25 +1,24 @@
 // === Module 7360: ? ===
 
 // Module 7360
-import _mod7345 from "module_7345" /* 7345 */;
+import _modDef7359 from "module_7359" /* 7359 */;
+import _modDef7361 from "module_7361" /* 7361 */;
 
-let obj = {
-  isXMLFile(dataView) {
-    let tmp = dataView;
+
+export default {
+  isTiffFile(byteLength) {
+    let tmp = byteLength && byteLength.byteLength >= 4;
     if (tmp) {
-      const obj = _mod7345;
-      tmp = obj.getStringFromDataView(dataView, c2, length.length) === length;
+      const uint16 = byteLength.getUint16(0);
+      tmp = byteLength.getUint16(2, uint16 === _modDef7361.LITTLE_ENDIAN) === 42;
     }
     return tmp;
   },
-  findOffsets(byteLength) {
-    const xmpChunks = [];
-    const obj = { dataOffset, length: byteLength.byteLength };
-    xmpChunks.push(obj);
-    return { xmpChunks };
+  findTiffOffsets() {
+    if (_modDef7359.USE_EXIF) {
+      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
+    } else {
+      return {};
+    }
   }
 };
-let c2 = 0;
-let c3 = "<?xpacket begin";
-
-export default obj;

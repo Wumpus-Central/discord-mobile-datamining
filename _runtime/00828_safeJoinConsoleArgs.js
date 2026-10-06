@@ -7,7 +7,7 @@ import normalize from "normalize" /* 741 */;
 const require = globalThis.__r;
 let _require, dependencyMap;
 
-const f82007 = (item) => {
+const f82140 = (item) => {
   let StringResult;
   const obj = _mod703;
   if (obj.isPrimitive(item)) {
@@ -46,7 +46,7 @@ export const formatConsoleArgs = function formatConsoleArgs(args, normalizeDepth
   }
   _require = normalizeDepth;
   dependencyMap = normalizeMaxBreadth;
-  const mapped = args.map(f82007);
+  const mapped = args.map(f82140);
   applyResult = mapped.join(" ");
 };
 export const hasConsoleSubstitutions = function hasConsoleSubstitutions(args) {
@@ -56,6 +56,6 @@ export const hasConsoleSubstitutions = function hasConsoleSubstitutions(args) {
 export const safeJoinConsoleArgs = function safeJoinConsoleArgs(arr, arg1, arg2) {
   let closure_0 = arg1;
   let closure_1 = arg2;
-  const mapped = arr.map(f82007);
+  const mapped = arr.map(f82140);
   return mapped.join(" ");
 };

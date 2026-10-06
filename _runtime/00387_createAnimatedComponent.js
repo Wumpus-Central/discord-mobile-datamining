@@ -35,7 +35,7 @@ export default function createAnimatedComponent(displayName) {
       items[0] = style1;
       items[1] = style;
       obj = {};
-      tmp5 = useMemo(() => { /* body not rendered: F133966 */ }, items);
+      tmp5 = useMemo(() => { /* body not rendered: F134182 */ }, items);
       merged = Object.assign(first);
       merged1 = Object.assign(passthroughAnimatedPropExplicitValues);
       obj.style = tmp5;
@@ -69,7 +69,7 @@ export const unstable_createAnimatedComponentWithAllowlist = function unstable_c
       items[0] = style1;
       items[1] = style;
       obj = {};
-      tmp5 = useMemo(() => { /* body not rendered: F133966 */ }, items);
+      tmp5 = useMemo(() => { /* body not rendered: F134182 */ }, items);
       merged = Object.assign(first);
       merged1 = Object.assign(passthroughAnimatedPropExplicitValues);
       obj.style = tmp5;

@@ -1,112 +1,74 @@
 // === Module 7393: ? ===
 
 // Module 7393
-import _mod7345 from "module_7345" /* 7345 */;
-import PNG_CHUNK_TYPE_SIZE from "PNG_CHUNK_TYPE_SIZE" /* 7352 */;
-import _modDef7362 from "module_7362" /* 7362 */;
+let closure_0 = { xmp: "http://ns.adobe.com/xap/1.0/", tiff: "http://ns.adobe.com/tiff/1.0/", exif: "http://ns.adobe.com/exif/1.0/", dc: "http://purl.org/dc/elements/1.1/", xmpMM: "http://ns.adobe.com/xap/1.0/mm/", stEvt: "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#", stRef: "http://ns.adobe.com/xap/1.0/sType/ResourceRef#", photoshop: "http://ns.adobe.com/photoshop/1.0/" };
 
-
-export default {
-  read(byteLength, arg1) {
-    let combined;
-    let combined1;
-    let combined2;
-    let combined3;
-    let combined4;
-    let items;
-    let num;
-    let str7;
-    const obj = {};
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let obj2 = _modDef7362;
-      let longAt = obj2.getLongAt(byteLength, arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_LENGTH_OFFSET);
-      let tmp5 = _mod7345;
-      let getStringFromDataView = tmp5.getStringFromDataView;
-      let sum = arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = getStringFromDataView(byteLength, sum, PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_SIZE);
-      if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_PHYS) {
-        let tmp23 = arg1[num];
-        let tmp24 = 4 <= longAt && tmp23 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
-        let tmp25;
-        if (tmp24) {
-          let tmpResult = _modDef7362;
-          let longAt1 = tmpResult.getLongAt(byteLength, tmp23 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let obj3 = { value: longAt1, description: "" + longAt1 };
-          tmp25 = obj3;
-        }
-        obj["Pixels Per Unit X"] = tmp25;
-        let tmp27 = arg1[num];
-        let tmp28 = 8 <= longAt && tmp27 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 + 4 <= byteLength.byteLength;
-        let tmp29;
-        if (tmp28) {
-          let tmpResult9 = _modDef7362;
-          let longAt2 = tmpResult9.getLongAt(byteLength, tmp27 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let obj4 = { value: longAt2, description: "" + longAt2 };
-          tmp29 = obj4;
-        }
-        obj["Pixels Per Unit Y"] = tmp29;
-        let tmp31 = arg1[num];
-        let tmp32 = 9 <= longAt && tmp31 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8 + 1 <= byteLength.byteLength;
-        let tmp33;
-        if (tmp32) {
-          let tmpResult10 = _modDef7362;
-          let byteAt = tmpResult10.getByteAt(byteLength, tmp31 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8);
-          let obj5 = { value: byteAt, description: str7 };
-          str7 = "Unknown";
-          if (1 === byteAt) {
-            str7 = "meters";
-          }
-          tmp33 = obj5;
-        }
-        obj["Pixel Units"] = tmp33;
-      } else if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_TIME) {
-        let tmp35 = arg1[num];
-        let tmp9 = 7 <= longAt && tmp35 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 7 <= byteLength.byteLength;
-        let tmp10;
-        if (tmp9) {
-          let tmpResult11 = _modDef7362;
-          let shortAt = tmpResult11.getShortAt(byteLength, tmp35 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let tmpResult12 = _modDef7362;
-          let byteAt1 = tmpResult12.getByteAt(byteLength, tmp35 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 2);
-          let tmpResult13 = _modDef7362;
-          let byteAt2 = tmpResult13.getByteAt(byteLength, tmp35 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 3);
-          let tmpResult14 = _modDef7362;
-          let byteAt3 = tmpResult14.getByteAt(byteLength, tmp35 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let tmpResult15 = _modDef7362;
-          let byteAt4 = tmpResult15.getByteAt(byteLength, tmp35 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 5);
-          let tmpResult16 = _modDef7362;
-          let byteAt5 = tmpResult16.getByteAt(byteLength, tmp35 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 6);
-          let obj6 = { value: items, description: "" + combined + "-" + combined1 + "-" + combined2 + " " + combined3 + ":" + combined4 + ":" + "" + "0".repeat(2 - ("" + byteAt5).length) + byteAt5 };
-          items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
-          let repeat = "0".repeat;
-          let _HermesInternal = HermesInternal;
-          combined = "" + "0".repeat(4 - ("" + shortAt).length) + shortAt;
-          let repeat2 = "0".repeat;
-          let _HermesInternal2 = HermesInternal;
-          let repeat3 = "0".repeat;
-          combined1 = "" + "0".repeat(2 - ("" + byteAt1).length) + byteAt1;
-          let _HermesInternal3 = HermesInternal;
-          let repeat4 = "0".repeat;
-          combined2 = "" + "0".repeat(2 - ("" + byteAt2).length) + byteAt2;
-          let _HermesInternal4 = HermesInternal;
-          let repeat5 = "0".repeat;
-          combined3 = "" + "0".repeat(2 - ("" + byteAt3).length) + byteAt3;
-          let _HermesInternal5 = HermesInternal;
-          let repeat6 = "0".repeat;
-          combined4 = "" + "0".repeat(2 - ("" + byteAt4).length) + byteAt4;
-          let _HermesInternal6 = HermesInternal;
-          let _HermesInternal7 = HermesInternal;
-          let str = "";
-          let str2 = "-";
-          let str3 = "-";
-          let str4 = " ";
-          let str5 = ":";
-          let str6 = ":";
-          tmp10 = obj6;
-        }
-        obj["Modify Date"] = tmp10;
-      }
+export const isMissingNamespaceError = function isMissingNamespaceError(message) {
+  const items = ["prefix is non-null and namespace is null", "prefix not bound to a namespace", "prefix inte bundet till en namnrymd", /Namespace prefix .+ is not defined/];
+  let num = 0;
+  if (0 < items.length) {
+    const _RegExp = RegExp;
+    const self = this;
+    const self2 = this;
+    const regExp = new RegExp(items[num]);
+    while (!regExp.test(message.message)) {
+      num = num + 1;
     }
-    return obj;
+    return true;
+  }
+  return false;
+};
+export const addMissingNamespaces = function addMissingNamespaces(tmp7Result) {
+  const match = tmp7Result.match(/<([A-Za-z_][A-Za-z0-9._-]*)([^>]*)>/);
+  if (match) {
+    const items = [];
+    const obj = /xmlns:([\w-]+)=["'][^"']+["']/g;
+    let match1 = obj.exec(tmp7Result);
+    if (null !== match1) {
+      do {
+        if (-1 === items.indexOf(match1[1])) {
+          let arr = items.push(match1[1]);
+        }
+        match1 = obj.exec(tmp7Result);
+      } while (null !== match1);
+    }
+    const items1 = [];
+    const obj2 = /\b([A-Za-z_][A-Za-z0-9._-]*):[A-Za-z_][A-Za-z0-9._-]*\b/g;
+    let match2 = obj2.exec(tmp7Result);
+    if (null !== match2) {
+      do {
+        let tmp8 = match2[1];
+        let tmp9 = "xmlns" !== tmp8 && "xml" !== tmp8;
+        if (tmp9) {
+          if (-1 === items1.indexOf(tmp8)) {
+            let arr2 = items1.push(tmp8);
+          }
+        }
+        match2 = obj2.exec(tmp7Result);
+      } while (null !== match2);
+    }
+    const found = items1.filter((item) => -1 === items.indexOf(item));
+    let replaced = tmp7Result;
+    if (0 !== found.length) {
+      let num3;
+      const items2 = [];
+      for (let num3 = 0; num3 < found.length; num3 = num3 + 1) {
+        let tmp12 = found[num3];
+        let text = closure_0[tmp12];
+        if (!text) {
+          text = `http://fallback.namespace/${tmp12}`;
+        }
+        let arr3 = items2.push(` xmlns:${tmp12}="${tmp14}"`);
+      }
+      const _RegExp = RegExp;
+      const self = this;
+      const self2 = this;
+      const joined = items2.join("");
+      const regExp = new RegExp("<" + tmp2 + "([^>]*)>");
+      replaced = tmp7Result.replace(regExp, `<${tmp2}$1${tmp17}>`);
+    }
+    return replaced;
+  } else {
+    return tmp7Result;
   }
 };

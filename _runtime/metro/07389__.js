@@ -1,73 +1,43 @@
 // === Module 7389: ? ===
 
 // Module 7389
-import _mod7345 from "module_7345" /* 7345 */;
-import _modDef7350 from "module_7350" /* 7350 */;
-import get0thIfdOffset from "get0thIfdOffset" /* 7365 */;
-import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 7366 */;
+import _modDef7390 from "module_7390" /* 7390 */;
 
-const MODEL_ID = { K3_III: 78420 };
-let obj2 = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
 
 export default {
-  read(byteLength, arg1, arg2, arg3) {
-    let str6;
-    const obj = _modDef7350;
-    const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
-    const sum = arg1 + arg2;
-    obj2 = get0thIfdOffset;
-    const ifd = obj2.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
-    const LevelInfo = ifd.PentaxModelID && ifd.PentaxModelID.value === obj.K3_III && ifd.LevelInfo;
-    let tmp8 = ifd;
-    if (LevelInfo) {
-      const sum1 = sum + ifd.LevelInfo.__offset;
-      const obj3 = {};
-      const objectAssign = _mod7345.objectAssign;
-      _mod7345;
-      if (sum1 + 7 <= byteLength.byteLength) {
-        const int8 = byteLength.getInt8(sum1 + obj2.CAMERA_ORIENTATION);
-        const obj4 = { value: int8, description: str6 };
-        str6 = "Horizontal (normal)";
-        if (0 !== int8) {
-          let str = "Rotate 270 CW";
-          if (1 !== int8) {
-            let str2 = "Rotate 180";
-            if (2 !== int8) {
-              let str3 = "Rotate 90 CW";
-              if (3 !== int8) {
-                let str4 = "Upwards";
-                if (4 !== int8) {
-                  let str5 = "Unknown";
-                  if (5 === int8) {
-                    str5 = "Downwards";
-                  }
-                  str4 = str5;
-                }
-                str3 = str4;
-              }
-              str2 = str3;
-            }
-            str = str2;
-          }
-          str6 = str;
-        }
-        obj3.CameraOrientation = obj4;
-        const sum2 = sum1 + tmp16.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef7350.LITTLE_ENDIAN);
-        const obj5 = { value: int16, description: "" + -0.5 * int16 };
-        obj3.RollAngle = obj5;
-        const sum3 = sum1 + tmp16.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef7350.LITTLE_ENDIAN);
-        const obj6 = { value: int161, description: "" + -0.5 * int161 };
-        obj3.PitchAngle = obj6;
+  decode(arg0, buffer) {
+    function decodeAsciiValue(arg0) {
+      try {
+        const _decodeURIComponent = decodeURIComponent;
+        const _escape = escape;
+        return decodeURIComponent(escape(arg0));
+      } catch (err) {
+        return arg0;
       }
-      const objectAssignResult = objectAssign({}, ifd, obj3);
-      delete tmp15["LevelInfo"];
-      tmp8 = objectAssignResult;
     }
-    return tmp8;
+    const obj = _modDef7390;
+    const value = obj.get();
+    if (undefined !== value) {
+      if (undefined !== arg0) {
+        try {
+          const self = this;
+          const self2 = this;
+          const value1 = new value(arg0);
+          const _DataView = DataView;
+          const decode = value1.decode;
+          if (buffer instanceof DataView) {
+            buffer = buffer.buffer;
+          } else {
+            const _Uint8Array = Uint8Array;
+            buffer = Uint8Array.from(buffer);
+          }
+          return decode(buffer);
+        } catch (err) {
+        }
+      }
+    }
+    const mapped = buffer.map((item) => String.fromCharCode(item));
+    return decodeAsciiValue(mapped.join(""));
   },
-  PENTAX_IFD_OFFSET: 10,
-  MODEL_ID,
-  LIK3III: obj2
+  TAG_HEADER_SIZE: 5
 };

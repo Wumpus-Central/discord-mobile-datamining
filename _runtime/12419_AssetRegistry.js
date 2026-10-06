@@ -4,4 +4,4 @@
 import AssetRegistry from "AssetRegistry" /* 1132 */;
 
 
-export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf/native/images", width: 221, height: 195, scales: [1, 2, 3], hash: "3a31ec2d5aeb0eedce9411671227bdc1", name: "discoverability-header", type: "png" });
+export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 88, height: 80, scales: [2, 3], hash: "d719145f0510a722efd9724a4e3cf026", name: "verify-email", type: "png" });

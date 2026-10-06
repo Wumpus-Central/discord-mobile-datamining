@@ -1,105 +1,93 @@
 // === Module 6281: ? ===
 
 // Module 6281
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6113 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6140 */;
+import react_native from "react-native" /* 17 */;
+import react2 from "react" /* 19 */;
+import Fragment from "Fragment" /* 21 */;
+import TOUCHABLE_STATEDefault from "TOUCHABLE_STATE" /* 6280 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const require = globalThis.__r;
-let dependencyMap, tmp, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
 
-let __initData = { code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}" };
-let __initData2 = { code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}" };
-let __initData3 = { code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}" };
-let __initData4 = { code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}" };
-
-export const useGestureHandler = (CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize) => {
-  let items;
-  let items1;
-  let items2;
-  let items3;
-  let obj2;
-  let obj4;
-  let obj5;
-  let obj7;
-  const _require = CONTENT;
-  dependencyMap = animatedContentGestureState;
-  __initData = sharedValue;
-  __initData2 = handleOnStart;
-  __initData3 = handleOnChange;
-  __initData4 = handleOnEnd;
-  const obj = { handleOnStart: obj2.useWorkletCallback(R, items), handleOnChange: obj4.useWorkletCallback(U, items1), handleOnEnd: obj5.useWorkletCallback(C, items2), handleOnFinalize: obj7.useWorkletCallback(T, items3) };
-  obj2 = require("module_1643");
-  class R {
-    constructor(arg0) {
-      closure_1.value = closure_0(closure_1[1]).State.BEGAN;
-      closure_2.value = closure_0;
-      tmp = closure_3(closure_0, CONTENT);
-      return;
-    }
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  R.__closure = { state: animatedContentGestureState, State: require("LegacyBaseButton").State, gestureSource: sharedValue, source: CONTENT, onStart: handleOnStart };
-  R.__workletHash = 16113572067379;
-  R.__initData = __initData;
-  items = [animatedContentGestureState, sharedValue, CONTENT, handleOnStart];
-  ({ state: animatedContentGestureState, State: require("LegacyBaseButton").State, gestureSource: sharedValue, source: CONTENT, onStart: handleOnStart });
-  obj4 = require("module_1643");
-  class U {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp2 = CONTENT;
-        tmp3 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp4 = closure_4;
-        tmp5 = closure_4(tmp, CONTENT);
+}
+let closure_2 = ["style"];
+const Component = react2.Component;
+const Platform = react_native.Platform;
+const jsx = Fragment.jsx;
+class TouchableNativeFeedback {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, TouchableNativeFeedback);
+    const obj = _getPrototypeOf(TouchableNativeFeedback);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    return hasOwnProperty(self, constructResult);
+  }
+}
+_inherits(TouchableNativeFeedback, Component);
+const entry = {
+  key: "getExtraButtonProps",
+  value: function getExtraButtonProps() {
+    const obj = { foreground: this.props.useForeground };
+    const background = this.props.background;
+    if (background) {
+      if ("RippleAndroid" === background.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = background);
+      } else if ("ThemeAttrAndroid" === background.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === background.attribute;
       }
-      return;
+      obj.rippleRadius = background.rippleRadius;
     }
+    return obj;
   }
-  U.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, onChange: handleOnChange };
-  U.__workletHash = 9050442757159;
-  U.__initData = __initData2;
-  items1 = [animatedContentGestureState, sharedValue, CONTENT, handleOnChange];
-  obj5 = require("module_1643");
-  class C {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp3 = CONTENT;
-        tmp4 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
-        tmp7 = closure_5;
-        tmp8 = closure_5(tmp2, CONTENT);
-      }
-      return;
-    }
-  }
-  C.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onEnd: handleOnEnd };
-  C.__workletHash = 10682034812271;
-  C.__initData = __initData3;
-  items2 = [animatedContentGestureState, sharedValue, CONTENT, handleOnEnd];
-  ({ gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onEnd: handleOnEnd });
-  obj7 = require("module_1643");
-  class T {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp3 = CONTENT;
-        tmp4 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
-        tmp7 = closure_6;
-        tmp8 = closure_6(tmp2, CONTENT);
-      }
-      return;
-    }
-  }
-  T.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onFinalize: handleOnFinalize };
-  T.__workletHash = 9696716573416;
-  T.__initData = __initData4;
-  items3 = [animatedContentGestureState, sharedValue, CONTENT, handleOnFinalize];
-  ({ gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onFinalize: handleOnFinalize });
-  return obj;
 };
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const tmp = _objectWithoutProperties(props, closure_2);
+      TOUCHABLE_STATEDefault;
+      const merged = Object.assign(tmp);
+      return <tmp2 style={style} extraButtonProps={self.getExtraButtonProps()} />;
+    }
+  }
+];
+const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+let obj = { useForeground: true, extraButtonProps: { rippleColor: null } };
+let merged = Object.assign(TOUCHABLE_STATEDefault.defaultProps);
+importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackground", rippleRadius });
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({ type: "ThemeAttrAndroid", attribute: "selectableItemBackgroundBorderless", rippleRadius });
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({ type: "RippleAndroid", color, borderless, rippleRadius });
+importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
+
+export default importDefaultResultResult;

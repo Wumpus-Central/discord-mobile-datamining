@@ -1,124 +1,53 @@
 // === Module 10514: ? ===
 
 // Module 10514
+import Fragment from "Fragment" /* 21 */;
+import _mod1643 from "module_1643" /* 1643 */;
 import react from "react" /* 19 */;
 
-const useMemo = react.useMemo;
-let closure_3 = { code: "function pnpm_usePanGestureProxyTs1(e){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onBegin)userDefinedConflictGestures.onBegin(e);}" };
-let closure_4 = { code: "function pnpm_usePanGestureProxyTs2(e){const{onGestureStart,userDefinedConflictGestures}=this.__closure;onGestureStart(e);if(userDefinedConflictGestures.onStart)userDefinedConflictGestures.onStart(e);}" };
-let closure_5 = { code: "function pnpm_usePanGestureProxyTs3(e){const{onGestureUpdate,userDefinedConflictGestures}=this.__closure;onGestureUpdate(e);if(userDefinedConflictGestures.onUpdate)userDefinedConflictGestures.onUpdate(e);}" };
-let closure_6 = { code: "function pnpm_usePanGestureProxyTs4(e,success){const{onGestureEnd,userDefinedConflictGestures}=this.__closure;onGestureEnd(e,success);if(userDefinedConflictGestures.onEnd)userDefinedConflictGestures.onEnd(e,success);}" };
-let closure_7 = { code: "function pnpm_usePanGestureProxyTs5(e,success){const{userDefinedConflictGestures}=this.__closure;if(userDefinedConflictGestures.onFinalize)userDefinedConflictGestures.onFinalize(e,success);}" };
+const jsx = Fragment.jsx;
+let context = react.createContext({});
+const __initData = { code: "function pnpm_indexTsx1(index,dimensions){const{itemDimensions}=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};}" };
+const __initData2 = { code: "function pnpm_indexTsx2(dimensions){const{containerSize}=this.__closure;containerSize.value=dimensions;}" };
 
-export const usePanGestureProxy = (onConfigurePanGesture) => {
-  onConfigurePanGesture = onConfigurePanGesture.onConfigurePanGesture;
-  const onGestureStart = onConfigurePanGesture.onGestureStart;
-  const onGestureUpdate = onConfigurePanGesture.onGestureUpdate;
-  const onGestureEnd = onConfigurePanGesture.onGestureEnd;
-  let options = onConfigurePanGesture.options;
-  if (undefined === options) {
-    options = {};
+export const GlobalStateContext = context;
+export const GlobalStateProvider = (arg0) => {
+  let children;
+  let value;
+  ({ children, value } = arg0);
+  let obj = _mod1643;
+  const sharedValue = obj.useSharedValue({ width: 0, height: 0 });
+  const obj2 = _mod1643;
+  const sharedValue1 = obj2.useSharedValue({});
+  const fn = function c(arg0, arg1) {
+    const obj = {};
+    const merged = Object.assign(sharedValue1.value);
+    obj[arg0] = arg1;
+    sharedValue1.value = obj;
+  };
+  fn.__closure = { itemDimensions: sharedValue1 };
+  fn.__workletHash = 9846581158902;
+  fn.__initData = __initData;
+  const fn2 = function _(value) {
+    sharedValue.value = value;
+  };
+  fn2.__closure = { containerSize: sharedValue };
+  fn2.__workletHash = 5978604737778;
+  fn2.__initData = __initData2;
+  const Provider = context.Provider;
+  const obj4 = { layout: { containerSize: sharedValue, itemDimensions: sharedValue1, updateItemDimensions: fn, updateContainerSize: fn2 } };
+  let merged = Object.assign(value);
+  return <Provider value={obj4}>{children}</Provider>;
+};
+export const useGlobalState = function() {
+  context = react.useContext(context);
+  if (context) {
+    return context;
+  } else {
+    const _Error = Error;
+    const self = this;
+    const self2 = this;
+    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
+    throw error;
   }
-  const items = [onGestureStart, onGestureUpdate, onGestureEnd, onConfigurePanGesture];
-  const tmp = onGestureUpdate(() => {
-    let obj;
-    let onBegin;
-    let onEnd;
-    let onFinalize;
-    let onStart;
-    let onUpdate;
-    const Gesture = onConfigurePanGesture(onGestureStart[1]).Gesture;
-    const PanResult = Gesture.Pan();
-    const withTestIdResult = PanResult.withTestId("rnrc-gesture-handler");
-    onConfigurePanGesture = withTestIdResult;
-    const userDefinedConflictGestures = { onBegin: "add", onStart: "enabled", onUpdate: "Icon", onEnd: "toCharArray$esjava$1", onFinalize: "toCharArray$esjava$1" };
-    withTestIdResult.onBegin = (onBegin) => {
-      obj.onBegin = onBegin;
-      return withTestIdResult;
-    };
-    withTestIdResult.onStart = (onStart) => {
-      obj.onStart = onStart;
-      return withTestIdResult;
-    };
-    withTestIdResult.onUpdate = (onUpdate) => {
-      obj.onUpdate = onUpdate;
-      return withTestIdResult;
-    };
-    withTestIdResult.onEnd = (onEnd) => {
-      obj.onEnd = onEnd;
-      return withTestIdResult;
-    };
-    withTestIdResult.onFinalize = (onFinalize) => {
-      obj.onFinalize = onFinalize;
-      return withTestIdResult;
-    };
-    ({ onBegin, onStart, onUpdate, onEnd, onFinalize } = withTestIdResult);
-    if (onConfigurePanGesture) {
-      onConfigurePanGesture(withTestIdResult);
-    }
-    withTestIdResult.onBegin = onBegin;
-    withTestIdResult.onStart = onStart;
-    withTestIdResult.onUpdate = onUpdate;
-    withTestIdResult.onEnd = onEnd;
-    withTestIdResult.onFinalize = onFinalize;
-    class C {
-      constructor(arg0) {
-        if (obj.onBegin) {
-          obj.onBegin(arg0);
-        }
-      }
-    }
-    C.__closure = { userDefinedConflictGestures };
-    C.__workletHash = 7286111968229;
-    C.__initData = onGestureEnd;
-    const onBeginResult = withTestIdResult.onBegin(C);
-    class D {
-      constructor(arg0) {
-        onGestureStart(arg0);
-        if (obj.onStart) {
-          obj.onStart(arg0);
-        }
-      }
-    }
-    const obj2 = { onGestureStart: userDefinedConflictGestures, userDefinedConflictGestures };
-    D.__closure = obj2;
-    D.__workletHash = 2969501037173;
-    D.__initData = __initData;
-    const fn = function p(arg0) {
-      onGestureUpdate(arg0);
-      if (obj.onUpdate) {
-        obj.onUpdate(arg0);
-      }
-    };
-    const obj3 = { onGestureUpdate, userDefinedConflictGestures };
-    fn.__closure = obj3;
-    fn.__workletHash = 14406733755860;
-    fn.__initData = __initData2;
-    const onStartResult = onBeginResult.onStart(D);
-    const fn2 = function c(arg0, arg1) {
-      onGestureEnd(arg0, arg1);
-      if (obj.onEnd) {
-        obj.onEnd(arg0, arg1);
-      }
-    };
-    const obj4 = { onGestureEnd, userDefinedConflictGestures };
-    fn2.__closure = obj4;
-    fn2.__workletHash = 3800149117372;
-    fn2.__initData = __initData3;
-    const onUpdateResult = onStartResult.onUpdate(fn);
-    const fn3 = function e(arg0, arg1) {
-      if (obj.onFinalize) {
-        obj.onFinalize(arg0, arg1);
-      }
-    };
-    fn3.__closure = { userDefinedConflictGestures };
-    fn3.__workletHash = 16525776198753;
-    fn3.__initData = __initData4;
-    const onEndResult = onUpdateResult.onEnd(fn2);
-    onEndResult.onFinalize(fn3);
-    return withTestIdResult;
-  }, items);
-  let obj2 = onConfigurePanGesture(onGestureStart[2]);
-  const updateGestureConfig = obj2.useUpdateGestureConfig(tmp, options);
-  return tmp;
 };

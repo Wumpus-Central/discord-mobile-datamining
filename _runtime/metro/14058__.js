@@ -1,8 +1,8 @@
 // === Module 14058: ? ===
 
 // Module 14058
-import _mod14127 from "module_14127" /* 14127 */;
-import module_14059 from "module_14059" /* 14059 */;
+const require = globalThis.__r;
 
 
-export default _mod14127.Object.assign;
+export const shouldPolyfill = require("module_14059").shouldPolyfill;
+export const supportedValuesOf = require("supportedValuesOf").supportedValuesOf;

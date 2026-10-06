@@ -4,4 +4,4 @@
 import AssetRegistry from "AssetRegistry" /* 1132 */;
 
 
-export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "4efa5140d546996fe7cb2ba013410d48", name: "ArrowAngleLeftUpIcon", type: "png" });
+export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/polls/native/images", width: 138, height: 130, scales: [2, 3], hash: "2b9e354438218d1560976bef68047eb2", name: "load-issue-dark", type: "png" });

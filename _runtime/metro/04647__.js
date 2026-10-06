@@ -1,36 +1,95 @@
 // === Module 4647: ? ===
 
 // Module 4647
-import react from "react" /* 576 */;
-import _mod4643 from "module_4643" /* 4643 */;
+import react2 from "react" /* 576 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
+import react from "react" /* 19 */;
 
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
-}
+let ref;
 
-export const useRiveEnum = function useRiveEnum(arg0, arg1) {
-  let tmp3;
+let c3;
+let closure_4;
+let useCallback;
+({ useRef: c3, useCallback, useState: closure_4 } = react);
+
+export const useRive = function useRive() {
+  let closure_129_1;
+  let first;
   let tmp4;
-  let tmp5;
-  const obj = react;
+  let tmp6;
+  let tmp7;
+  const obj = react2;
   const cResult = obj.c(4);
-  const obj2 = _mod4643;
-  [tmp3, tmp4, tmp5] = obj2.useRiveProperty(arg1, arg0, getEnumProperty);
-  _slicedToArray(obj2.useRiveProperty(arg1, arg0, getEnumProperty), 3);
-  if (cResult[0] === tmp5) {
-    if (cResult[1] === tmp4) {
-      let tmp6;
-      if (cResult[2] === tmp3) {
-        tmp6 = cResult[3];
+  const tmp2 = _false(null);
+  let closure_0 = tmp2;
+  [tmp4, closure_129_1] = _slicedToArray(React3(null), 2);
+  const tmp3 = _slicedToArray(React3(null), 2);
+  let closure_2 = _false(null);
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const fn = function t(current) {
+      ref = current;
+      if (ref.current !== current) {
+        ref.current = current;
+        if (ref2.current) {
+          let _clearTimeout = clearTimeout;
+          clearTimeout(tmp9.current);
+        }
+        const self = this;
+        const self2 = this;
+        let awaitViewReadyResult;
+        const promise = new Promise((arg0, arg1) => {
+          let closure_0 = arg1;
+          ref.current = setTimeout(() => {
+            const error = new Error("Rive view ready timeout");
+            closure_0(error);
+          }, 5000);
+        });
+        if (current != null) {
+          awaitViewReadyResult = current.awaitViewReady();
+        }
+        const items = [awaitViewReadyResult, promise];
+        const raceResult = race(items);
+        const nextPromise = raceResult.then((result) => {
+          if (true === result) {
+            closure_2_1(current);
+          } else {
+            const _console = console;
+            console.warn("Rive view ready check returned false");
+            closure_2_1(null);
+          }
+        });
+        const catchPromise = nextPromise.catch((error) => {
+          console.warn("Failed to initialize Rive view:", error);
+          closure_1_1(null);
+        });
+        catchPromise.finally(() => {
+          if (ref.current) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(ref.current);
+            ref.current = null;
+          }
+        });
       }
-      return tmp6;
-    }
+    };
+    cResult[0] = fn;
+    first = fn;
+  } else {
+    first = cResult[0];
   }
-  const obj3 = { value: tmp3, setValue: tmp4, error: tmp5 };
-  cResult[0] = tmp5;
-  cResult[1] = tmp4;
-  cResult[2] = tmp3;
-  cResult[3] = obj3;
-  tmp6 = obj3;
+  if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { f: first };
+    cResult[1] = obj2;
+    tmp6 = obj2;
+  } else {
+    tmp6 = cResult[1];
+  }
+  if (cResult[2] !== tmp4) {
+    const obj3 = { riveRef: tmp2, riveViewRef: tmp4, setHybridRef: tmp6 };
+    cResult[2] = tmp4;
+    cResult[3] = obj3;
+    tmp7 = obj3;
+  } else {
+    tmp7 = cResult[3];
+  }
+  return tmp7;
 };

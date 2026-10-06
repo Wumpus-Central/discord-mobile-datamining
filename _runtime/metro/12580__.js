@@ -1,19 +1,81 @@
 // === Module 12580: ? ===
 
 // Module 12580
+import GLOBAL_OBJ from "module_12581" /* 12581 */;
 
-export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
-export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";
-export const SEMANTIC_ATTRIBUTE_CACHE_KEY = "cache.key";
-export const SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME = "sentry.exclusive_time";
-export const SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD = "http.request.method";
-export const SEMANTIC_ATTRIBUTE_PROFILE_ID = "sentry.profile_id";
-export const SEMANTIC_ATTRIBUTE_SENTRY_CUSTOM_SPAN_NAME = "sentry.custom_span_name";
-export const SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON = "sentry.idle_span_finish_reason";
-export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT = "sentry.measurement_unit";
-export const SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE = "sentry.measurement_value";
-export const SEMANTIC_ATTRIBUTE_SENTRY_OP = "sentry.op";
-export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = "sentry.origin";
-export const SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE = "sentry.sample_rate";
-export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = "sentry.source";
-export const SEMANTIC_ATTRIBUTE_URL_FULL = "url.full";
+const require = globalThis.__r;
+let _require, c0, dependencyMap;
+
+function consoleSandbox(fn) {
+  let closure_1;
+  let console;
+  const f112447 = (item) => {
+    console[item] = closure_1[item];
+  };
+  const tmp = console;
+  if ("console" in console(12581).GLOBAL_OBJ) {
+    console = tmp(12581).GLOBAL_OBJ.console;
+    dependencyMap = {};
+    const _Object = Object;
+    const keys = Object.keys(obj);
+    const item = keys.forEach((item) => {
+      closure_1[item] = console[item];
+      console[item] = obj[item];
+    });
+    try {
+      const tmp6 = fn();
+      const item1 = keys.forEach(f112447);
+      return tmp6;
+    } catch (tmp8) {
+      const item2 = keys.forEach(f112447);
+      throw tmp8;
+    }
+  } else {
+    return fn();
+  }
+}
+let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
+const originalConsoleMethods = {};
+
+export const CONSOLE_LEVELS = items;
+export { consoleSandbox };
+export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
+  _require = false;
+  let obj = {
+    enable() {
+      c0 = true;
+    },
+    disable() {
+      c0 = false;
+    },
+    isEnabled() {
+      return c0;
+    }
+  };
+  const forEach = items.forEach;
+  if (require("module_12579").DEBUG_BUILD) {
+    const item = forEach((arg0) => {
+      let closure_0 = arg0;
+      obj[arg0] = () => {
+        const args = [...arguments];
+        const tmp = args;
+        if (tmp) {
+          consoleSandbox(() => {
+            const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
+            obj = _console[args];
+            items = ["Sentry Logger [" + args + "]:", ...closure_0];
+            obj.apply(items);
+          });
+        }
+      };
+    });
+  } else {
+    const item1 = forEach((arg0) => {
+      obj[arg0] = () => {
+
+      };
+    });
+  }
+  return obj;
+});
+export { originalConsoleMethods };

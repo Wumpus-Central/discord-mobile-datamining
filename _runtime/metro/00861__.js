@@ -13,7 +13,7 @@ import _asyncToGenerator from "_asyncToGenerator" /* 5 */;
 const require = globalThis.__r;
 let _require, c1, c3, c6, closure_4;
 
-const f82077 = (arg0) => {
+const f82210 = (arg0) => {
   closure_0 = arg0;
   return () => {
     let obj2;
@@ -385,7 +385,7 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
     let closure_0 = closure_5;
     {
       obj = closure_0(closure_1[4]);
-      obj.fill(closure_0(closure_1[5]).GLOBAL_OBJ, "fetch", f82077);
+      obj.fill(closure_0(closure_1[5]).GLOBAL_OBJ, "fetch", f82210);
     }
   });
 };
@@ -406,7 +406,7 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
     if (!flag) {
       let obj2 = _mod698;
       const str = "fetch";
-      obj2.fill(_mod697.GLOBAL_OBJ, "fetch", f82077);
+      obj2.fill(_mod697.GLOBAL_OBJ, "fetch", f82210);
     }
   });
 };

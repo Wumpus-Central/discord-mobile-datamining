@@ -2,10 +2,10 @@
 
 // Module 4422
 import formatDistance from "formatDistance" /* 4423 */;
-import buildFormatLongFn from "buildFormatLongFn" /* 4425 */;
-import formatRelative from "formatRelative" /* 4426 */;
-import localeToNumber from "localeToNumber" /* 4424 */;
-import date from "module_4427" /* 4427 */;
+import buildFormatLongFn from "buildFormatLongFn" /* 4424 */;
+import formatRelative from "formatRelative" /* 4425 */;
+import date_mod from "module_4426" /* 4426 */;
+import date_mod2 from "module_4427" /* 4427 */;
 
 let tmp11;
 let tmp3;
@@ -30,12 +30,14 @@ if (!formatRelative) {
 } else {
   tmp7 = formatRelative;
 }
-if (!localeToNumber) {
-  tmp9 = { default: localeToNumber };
-  const obj4 = { default: localeToNumber };
+let date = date_mod2;
+if (!date) {
+  tmp9 = { default: date };
+  const obj4 = { default: date };
 } else {
-  tmp9 = localeToNumber;
+  tmp9 = date;
 }
+date = date_mod2;
 if (!date) {
   tmp11 = { default: date };
   const obj5 = { default: date };
@@ -43,4 +45,4 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "hi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 4 } };
+export default { code: "zh-TW", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };

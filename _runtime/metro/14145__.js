@@ -1,7 +1,7 @@
 // === Module 14145: ? ===
 
 // Module 14145
-import _mod14133 from "module_14133" /* 14133 */;
+import _mod14079 from "module_14079" /* 14079 */;
 
 
-export const URLSearchParams = _mod14133.URLSearchParams;
+export default _mod14079;

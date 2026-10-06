@@ -1,11 +1,23 @@
 // === Module 6283: ? ===
 
 // Module 6283
-const fn = function n(sum1, initialPosition, value3) {
-  return Math.min(Math.max(initialPosition, sum1), value3);
-};
-fn.__closure = {};
-fn.__workletHash = 4405247003092;
-fn.__initData = { code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}" };
+import Fragment from "Fragment" /* 21 */;
+import TOUCHABLE_STATEDefault from "TOUCHABLE_STATE" /* 6280 */;
+import react from "react" /* 19 */;
 
-export const clamp = fn;
+const jsx = Fragment.jsx;
+
+export default function _default(delayLongPress) {
+  let num = delayLongPress.delayLongPress;
+  if (num === undefined) {
+    num = 600;
+  }
+  let extraButtonProps = delayLongPress.extraButtonProps;
+  if (extraButtonProps === undefined) {
+    extraButtonProps = { rippleColor: "transparent", exclusive: true };
+  }
+  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
+  TOUCHABLE_STATEDefault;
+  const merged1 = Object.assign(merged);
+  return <tmp2 delayLongPress={num} extraButtonProps={extraButtonProps} />;
+};

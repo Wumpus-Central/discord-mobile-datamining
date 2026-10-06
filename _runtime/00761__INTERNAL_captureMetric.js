@@ -13,15 +13,15 @@ import _slicedToArray2 from "_slicedToArray" /* 759 */;
 import _mod762 from "module_762" /* 762 */;
 import _slicedToArray from "_slicedToArray" /* 32 */;
 
-const f81916 = () => {
+const f82049 = () => {
   const weakMap = new WeakMap();
   return weakMap;
 };
 function _INTERNAL_captureSerializedMetric(getOptions, arg1) {
   const obj = _mod701;
-  const globalSingleton = obj.getGlobalSingleton("clientToMetricBufferMap", f81916);
+  const globalSingleton = obj.getGlobalSingleton("clientToMetricBufferMap", f82049);
   const obj3 = _mod701;
-  const globalSingleton1 = obj3.getGlobalSingleton("clientToMetricBufferMap", f81916);
+  const globalSingleton1 = obj3.getGlobalSingleton("clientToMetricBufferMap", f82049);
   const value = globalSingleton1.get(getOptions);
   if (undefined === value) {
     const items = [arg1];
@@ -42,7 +42,7 @@ function _INTERNAL_flushMetricsBuffer(getOptions, value) {
   let items = value;
   if (value == null) {
     const obj = _mod701;
-    const globalSingleton = obj.getGlobalSingleton("clientToMetricBufferMap", f81916);
+    const globalSingleton = obj.getGlobalSingleton("clientToMetricBufferMap", f82049);
     items = globalSingleton.get(getOptions);
   }
   if (items == null) {
@@ -54,7 +54,7 @@ function _INTERNAL_flushMetricsBuffer(getOptions, value) {
     const obj3 = _mod762;
     const metricEnvelope = obj3.createMetricEnvelope(items, _metadata, tunnel, getOptions.getDsn());
     const obj4 = _mod701;
-    const globalSingleton1 = obj4.getGlobalSingleton("clientToMetricBufferMap", f81916);
+    const globalSingleton1 = obj4.getGlobalSingleton("clientToMetricBufferMap", f82049);
     const result = globalSingleton1.set(getOptions, []);
     getOptions.emit("flushMetrics");
     getOptions.sendEnvelope(metricEnvelope);
@@ -266,6 +266,6 @@ export { _INTERNAL_captureSerializedMetric };
 export { _INTERNAL_flushMetricsBuffer };
 export const _INTERNAL_getMetricBuffer = function _INTERNAL_getMetricBuffer(arg0) {
   const obj = _mod701;
-  const globalSingleton = obj.getGlobalSingleton("clientToMetricBufferMap", f81916);
+  const globalSingleton = obj.getGlobalSingleton("clientToMetricBufferMap", f82049);
   return globalSingleton.get(arg0);
 };

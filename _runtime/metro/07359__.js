@@ -1,23 +1,5 @@
 // === Module 7359: ? ===
 
 // Module 7359
-import _mod7345 from "module_7345" /* 7345 */;
 
-let obj = {
-  isGifFile(dataView) {
-    let hasItem = dataView;
-    if (hasItem) {
-      includes = includes.includes;
-      const obj = _mod7345;
-      hasItem = includes(obj.getStringFromDataView(dataView, 0, c2));
-    }
-    return hasItem;
-  },
-  findOffsets() {
-    return { gifHeaderOffset: 0 };
-  }
-};
-let c2 = 6;
-let includes = ["GIF87a", "GIF89a"];
-
-export default obj;
+export default { USE_FILE: true, USE_JFIF: true, USE_PNG_FILE: true, USE_EXIF: true, USE_IPTC: true, USE_XMP: true, USE_ICC: true, USE_MPF: true, USE_PHOTOSHOP: true, USE_THUMBNAIL: true, USE_TIFF: true, USE_JPEG: true, USE_PNG: true, USE_HEIC: true, USE_AVIF: true, USE_WEBP: true, USE_GIF: true, USE_MAKER_NOTES: true };

@@ -1,13 +1,23 @@
 // === Module 14120: ? ===
 
 // Module 14120
-import _mod14068 from "module_14068" /* 14068 */;
-import _mod14077 from "module_14077" /* 14077 */;
-import module_14087 from "module_14087" /* 14087 */;
+import _mod14086 from "module_14086" /* 14086 */;
+import _mod14107 from "module_14107" /* 14107 */;
+import f2 from "f" /* 14121 */;
+import _mod14131 from "module_14131" /* 14131 */;
+import _mod14132 from "module_14132" /* 14132 */;
 
-let closure_0 = _mod14068(Function.toString);
-if (!module_14087(_mod14077.inspectSource)) {
-  _mod14077.inspectSource = (arg0) => closure_0(arg0);
+function ownKeys(arg0) {
+  const obj = f2;
+  const fResult = obj.f(_mod14131(arg0));
+  const f = _mod14132.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = closure_2(fResult, f(arg0));
+  }
+  return tmp2;
 }
+let closure_2 = _mod14086([].concat);
+_mod14107("Reflect", "ownKeys") || ownKeys;
 
-export default _mod14077.inspectSource;
+export default _mod14107("Reflect", "ownKeys") || ownKeys;

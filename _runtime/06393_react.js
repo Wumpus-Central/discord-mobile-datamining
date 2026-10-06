@@ -3,28 +3,18 @@
 // Module 6393 (react)
 import react from "react" /* 19 */;
 
+let _window;
+let map;
+({ useRef: _window, useLayoutEffect: map } = react);
 
-export const isComponentClass = (renderScrollComponent) => {
-  let _BooleanResult = typeof renderScrollComponent === "function";
-  if (typeof renderScrollComponent === "function") {
-    const prototype = renderScrollComponent.prototype;
-    let isReactComponent;
-    const _Boolean = Boolean;
-    if (prototype != null) {
-      isReactComponent = prototype.isReactComponent;
-    }
-    _BooleanResult = _Boolean(isReactComponent);
-  }
-  return _BooleanResult;
-};
-export const getValidComponent = (backdropComponent1) => {
-  let tmp = backdropComponent1;
-  if (!react.isValidElement(backdropComponent1)) {
-    let element = null;
-    if (null != backdropComponent1) {
-      element = <backdropComponent1 />;
-    }
-    tmp = element;
-  }
+export const useUnmountFlag = () => {
+  const tmp = React(false);
+  const _window = tmp;
+  map(() => {
+    closure_0.current = false;
+    return () => {
+      closure_1_0.current = true;
+    };
+  }, []);
   return tmp;
 };

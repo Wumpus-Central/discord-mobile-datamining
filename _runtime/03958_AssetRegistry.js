@@ -1,0 +1,7 @@
+// === Module 3958: AssetRegistry ===
+
+// Module 3958 (AssetRegistry)
+import AssetRegistry from "AssetRegistry" /* 1132 */;
+
+
+export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/promotions/third_party/macaron", scales: [1], hash: "79d7df9b87d3b3632219a01456e517d3", name: "MacaronPhase2.compiled.messages", type: "jsona" });

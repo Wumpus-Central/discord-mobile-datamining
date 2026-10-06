@@ -4,5 +4,6 @@
 import react_native from "react-native" /* 17 */;
 
 const StyleSheet = react_native.StyleSheet;
+const obj = { container: StyleSheet.absoluteFillObject, background: { backgroundColor: "white", borderRadius: 15 } };
 
-export const styles = StyleSheet.create({ container: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 9999, pointerEvents: "box-none" } });
+export const styles = StyleSheet.create(obj);

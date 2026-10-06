@@ -19,7 +19,7 @@ let fn = function n(toValue, userConfig, callback) {
     let obj2;
     let tmp4;
     let tmp6Result;
-    obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "constructor", clamp: "Map", useDuration: !tmp4, skipAnimation: !obj2.checkIfConfigIsValid(obj) };
+    obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "constructor", clamp: "keys", useDuration: !tmp4, skipAnimation: !obj2.checkIfConfigIsValid(obj) };
     const merged = Object.assign(userConfig);
     let duration;
     if (userConfig != null) {

@@ -1,127 +1,227 @@
 // === Module 10224: ? ===
 
 // Module 10224
-import Meridiem from "Meridiem" /* 10166 */;
+import EmptyDuration from "EmptyDuration" /* 10176 */;
+import assignSimilarDate from "assignSimilarDate" /* 10180 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10181 */;
+import now2 from "now" /* 10198 */;
+import _mod10225 from "module_10225" /* 10225 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const regExp = new RegExp("(^|\\s|T)(?:(?:[\u00E0a])\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
-const regExp1 = new RegExp("^\\s*(\\-|\\\u2013|\\~|\\\u301C|[\u00E0a]|\\?)\\s*(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)", "i");
-class FRSpecificTimeExpressionParser {
-  constructor() {
-    _classCallCheck(this, FRSpecificTimeExpressionParser);
+let hasOwnProperty;
+
+let self = this;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
+
+    }));
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (!self2) {
+  let tmp3 = globalThis;
+  let _Object = Object;
+  self2 = Object.create ? ((arg0, __esModule, arg2, arg3) => {
+    function get() {
+      return __esModule[closure_1];
+    }
+    let closure_0 = __esModule;
+    let closure_1 = arg2;
+    let tmp = arg3;
+    if (undefined === arg3) {
+      tmp = arg2;
+    }
+    let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(__esModule, arg2);
+    let tmp3 = ownPropertyDescriptor;
+    if (tmp3) {
+      let tmp4;
+      if ("get" in ownPropertyDescriptor) {
+        tmp4 = !__esModule.__esModule;
+      } else {
+        tmp4 = ownPropertyDescriptor.writable || ownPropertyDescriptor.configurable;
+      }
+      tmp3 = !tmp4;
+    }
+    if (!tmp3) {
+      ownPropertyDescriptor = { enumerable: true, get };
+      const obj = { enumerable: true, get };
+    }
+    Object.defineProperty(arg0, tmp, ownPropertyDescriptor);
+  }) : ((arg0, arg1, arg2, arg3) => {
+    let tmp = arg3;
+    if (undefined === arg3) {
+      tmp = arg2;
+    }
+    arg0[tmp] = arg1[arg2];
+  });
+}
+let tmp4 = self && self.__setModuleDefault;
+if (!tmp4) {
+  let tmp5 = globalThis;
+  const _Object2 = Object;
+  tmp4 = Object.create ? ((arg0, value) => {
+    const obj = { enumerable: true, value };
+    Object.defineProperty(arg0, "default", obj);
+  }) : ((arg0, arg1) => {
+    arg0.default = arg1;
+  });
+}
+let closure_8 = tmp4;
+let fn = self && self.__importStar;
+if (!fn) {
+  fn = function u(arg0) {
+    fn = Object.getOwnPropertyNames || ((obj) => {
+      const items = [];
+      for (const key10005 in obj) {
+        let _Object = Object;
+        hasOwnProperty = Object.prototype.hasOwnProperty;
+        if (!hasOwnProperty.call(obj, key10005)) {
+          continue;
+        } else {
+          items[items.length] = key10005;
+          continue;
+        }
+        continue;
+      }
+      return items;
+    });
+    return fn(arg0);
+  };
+  fn = (__esModule) => {
+    const tmp = __esModule;
+    if (tmp) {
+      if (__esModule.__esModule) {
+        return __esModule;
+      }
+    }
+    const obj = {};
+    if (null != __esModule) {
+      let num;
+      const arr = fn(__esModule);
+      for (let num = 0; num < arr.length; num = num + 1) {
+        if ("default" !== arr[num]) {
+          let tmp5 = self2(obj, __esModule, arr[num]);
+        }
+      }
+    }
+    closure_8(obj, __esModule);
+    return obj;
+  };
+}
+const tmp6 = self && self.__importDefault || ((__esModule) => {
+  let tmp2;
+  const tmp = __esModule;
+  if (!tmp) {
+    tmp2 = { default: __esModule };
+    const obj = { default: __esModule };
+  } else {
+    tmp2 = __esModule;
+  }
+  return tmp2;
+});
+const module_10225 = tmp6(_mod10225);
+const now = fn(now2);
+const regExp = new RegExp("(jetzt|heute|morgen|\u00FCbermorgen|uebermorgen|gestern|vorgestern|letzte\\s*nacht)(?:\\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht))?(?=\\W|$)", "i");
+class DECasualDateParser {
+  constructor() {
+    let constructResult;
+    const self = this;
+    _classCallCheck(this, DECasualDateParser);
+    const obj = _getPrototypeOf(DECasualDateParser);
+    if (_isNativeReflectConstruct()) {
+      const _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    return c3(self, constructResult);
+  }
+}
+_inherits(DECasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "pattern",
-  value: function pattern(arg0) {
+  key: "innerPattern",
+  value: function innerPattern(arg0) {
     return regExp;
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingResult, index) {
-      const sum = index.index + index[1].length;
-      const str = index[0];
-      const parsingResult = createParsingResult.createParsingResult(sum, str.substring(index[1].length));
-      const str2 = parsingResult.text;
-      if (str2.match(/^\d{4}$/)) {
-        index.index = index.index + index[0].length;
-        return null;
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      let nowResult;
+      reference = reference.reference;
+      const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+      const str = arg1[1] || "";
+      const str2 = str.toLowerCase();
+      const str3 = arg1[2] || "";
+      const formatted = str3.toLowerCase();
+      const parsingComponents = reference.createParsingComponents();
+      if ("jetzt" === str2) {
+        nowResult = now.now(reference.reference);
+      } else if ("heute" === str2) {
+        nowResult = now.today(reference.reference);
+      } else if ("morgen" === str2) {
+        const addDurationResult = EmptyDuration.addDuration(dateWithAdjustedTimezone, { day: 1 });
+        assignSimilarDate.assignSimilarDate(parsingComponents, addDurationResult);
+        assignSimilarDate.implySimilarTime(parsingComponents, addDurationResult);
+        nowResult = parsingComponents;
       } else {
-        const start = parsingResult.start;
-        parsingResult.start = FRSpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
-        if (parsingResult.start) {
-          const str3 = createParsingResult.text;
-          const match = regExp1.exec(str3.substring(index.index + index[0].length));
-          if (match) {
-            const start2 = parsingResult.start;
-            parsingResult.end = FRSpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
-            if (parsingResult.end) {
-              parsingResult.text = parsingResult.text + match[0];
+        if ("\u00FCbermorgen" !== str2) {
+          if ("uebermorgen" !== str2) {
+            if ("gestern" === str2) {
+              const addDurationResult1 = EmptyDuration.addDuration(dateWithAdjustedTimezone, { day: -1 });
+              assignSimilarDate.assignSimilarDate(parsingComponents, addDurationResult1);
+              assignSimilarDate.implySimilarTime(parsingComponents, addDurationResult1);
+              nowResult = parsingComponents;
+            } else if ("vorgestern" === str2) {
+              const addDurationResult2 = EmptyDuration.addDuration(dateWithAdjustedTimezone, { day: -2 });
+              assignSimilarDate.assignSimilarDate(parsingComponents, addDurationResult2);
+              assignSimilarDate.implySimilarTime(parsingComponents, addDurationResult2);
+              nowResult = parsingComponents;
+            } else {
+              nowResult = parsingComponents;
+              if (str2.match(/letzte\s*nacht/)) {
+                let addDurationResult3 = dateWithAdjustedTimezone;
+                if (dateWithAdjustedTimezone.getHours() > 6) {
+                  addDurationResult3 = EmptyDuration.addDuration(dateWithAdjustedTimezone, { day: -1 });
+                }
+                assignSimilarDate.assignSimilarDate(parsingComponents, addDurationResult3);
+                parsingComponents.imply("hour", 0);
+                nowResult = parsingComponents;
+              }
             }
           }
-          return parsingResult;
-        } else {
-          index.index = index.index + index[0].length;
-          return null;
         }
+        const addDurationResult4 = EmptyDuration.addDuration(dateWithAdjustedTimezone, { day: 2 });
+        assignSimilarDate.assignSimilarDate(parsingComponents, addDurationResult4);
+        assignSimilarDate.implySimilarTime(parsingComponents, addDurationResult4);
+        nowResult = parsingComponents;
       }
+      let result = nowResult;
+      if (formatted) {
+        const _default = module_10225.default;
+        result = _default.extractTimeComponents(nowResult, formatted);
+      }
+      return result;
     }
   }
 ];
-const entry1 = {
-  key: "extractTimeComponent",
-  value: function extractTimeComponent(assign, arg1) {
-    const parsed = parseInt(arg1[2]);
-    let num = 0;
-    if (null != arg1[3]) {
-      const _parseInt = parseInt;
-      num = parseInt(arg1[3]);
-    }
-    if (num < 60) {
-      if (parsed <= 24) {
-        let PM1 = null;
-        if (parsed >= 12) {
-          PM1 = Meridiem.Meridiem.PM;
-        }
-        let tmp5 = PM1;
-        let tmp6 = parsed;
-        if (null != arg1[5]) {
-          if (parsed > 12) {
-            return null;
-          } else {
-            const str8 = arg1[5][0];
-            const formatted = str8.toLowerCase();
-            let tmp9 = parsed;
-            if ("a" == formatted) {
-              let num2 = parsed;
-              const AM = Meridiem.Meridiem.AM;
-              if (12 == parsed) {
-                num2 = 0;
-              }
-              tmp9 = num2;
-              PM1 = AM;
-            }
-            tmp5 = PM1;
-            tmp6 = tmp9;
-            if ("p" == formatted) {
-              let sum = tmp9;
-              const PM = Meridiem.Meridiem.PM;
-              if (12 != tmp9) {
-                sum = tmp9 + 12;
-              }
-              tmp6 = sum;
-              tmp5 = PM;
-            }
-          }
-        }
-        assign.assign("hour", tmp6);
-        assign.assign("minute", num);
-        if (null !== tmp5) {
-          assign.assign("meridiem", tmp5);
-        } else if (tmp6 < 12) {
-          assign.imply("meridiem", Meridiem.Meridiem.AM);
-        } else {
-          assign.imply("meridiem", Meridiem.Meridiem.PM);
-        }
-        if (null != arg1[4]) {
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(arg1[4]);
-          if (parsed1 >= 60) {
-            return null;
-          } else {
-            assign.assign("second", parsed1);
-          }
-        }
-        return assign;
-      }
-    }
-    return null;
-  }
-};
-const items1 = [entry1];
 
-export default _createClass(FRSpecificTimeExpressionParser, items, items1);
+export default _createClass(DECasualDateParser, items);

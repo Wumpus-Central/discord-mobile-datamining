@@ -1,24 +1,16 @@
 // === Module 7986: ? ===
 
 // Module 7986
+const re0 = /[|\\{}()[\]^$+*?.-]/g;
 
-export default (obj) => {
-  if (obj instanceof Object) {
-    const _Array = Array;
-    if (!Array.isArray(obj)) {
-      obj = {};
-      for (const key10010 in obj) {
-        if (!obj.hasOwnProperty(key10010)) {
-          continue;
-        } else {
-          obj[key10010] = key10010;
-          continue;
-        }
-        continue;
-      }
-      return obj;
-    }
+export default function(str) {
+  if (typeof str !== "string") {
+    const _TypeError = TypeError;
+    const self = this;
+    const self2 = this;
+    const typeError = new TypeError("Expected a string");
+    throw typeError;
+  } else {
+    return str.replace(re0, "\\$&");
   }
-  const error = new Error("keyMirror(...): Argument must be an object.");
-  throw error;
 };

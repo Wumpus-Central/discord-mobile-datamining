@@ -1,46 +1,33 @@
 // === Module 4029: formatDistance ===
 
 // Module 4029 (formatDistance)
-let closure_0 = { lessThanXSeconds: { one: "1\u79D2\u672A\u6E80", other: "{{count}}\u79D2\u672A\u6E80", oneWithSuffix: "\u7D041\u79D2", otherWithSuffix: "\u7D04{{count}}\u79D2" }, xSeconds: { one: "1\u79D2", other: "{{count}}\u79D2" }, halfAMinute: "30\u79D2", lessThanXMinutes: { one: "1\u5206\u672A\u6E80", other: "{{count}}\u5206\u672A\u6E80", oneWithSuffix: "\u7D041\u5206", otherWithSuffix: "\u7D04{{count}}\u5206" }, xMinutes: { one: "1\u5206", other: "{{count}}\u5206" }, aboutXHours: { one: "\u7D041\u6642\u9593", other: "\u7D04{{count}}\u6642\u9593" }, xHours: { one: "1\u6642\u9593", other: "{{count}}\u6642\u9593" }, xDays: { one: "1\u65E5", other: "{{count}}\u65E5" }, aboutXWeeks: { one: "\u7D041\u9031\u9593", other: "\u7D04{{count}}\u9031\u9593" }, xWeeks: { one: "1\u9031\u9593", other: "{{count}}\u9031\u9593" }, aboutXMonths: { one: "\u7D041\u304B\u6708", other: "\u7D04{{count}}\u304B\u6708" }, xMonths: { one: "1\u304B\u6708", other: "{{count}}\u304B\u6708" }, aboutXYears: { one: "\u7D041\u5E74", other: "\u7D04{{count}}\u5E74" }, xYears: { one: "1\u5E74", other: "{{count}}\u5E74" }, overXYears: { one: "1\u5E74\u4EE5\u4E0A", other: "{{count}}\u5E74\u4EE5\u4E0A" }, almostXYears: { one: "1\u5E74\u8FD1\u304F", other: "{{count}}\u5E74\u8FD1\u304F" } };
+let closure_0 = { lessThanXSeconds: { one: "meno di un secondo", other: "meno di {{count}} secondi" }, xSeconds: { one: "un secondo", other: "{{count}} secondi" }, halfAMinute: "alcuni secondi", lessThanXMinutes: { one: "meno di un minuto", other: "meno di {{count}} minuti" }, xMinutes: { one: "un minuto", other: "{{count}} minuti" }, aboutXHours: { one: "circa un'ora", other: "circa {{count}} ore" }, xHours: { one: "un'ora", other: "{{count}} ore" }, xDays: { one: "un giorno", other: "{{count}} giorni" }, aboutXWeeks: { one: "circa una settimana", other: "circa {{count}} settimane" }, xWeeks: { one: "una settimana", other: "{{count}} settimane" }, aboutXMonths: { one: "circa un mese", other: "circa {{count}} mesi" }, xMonths: { one: "un mese", other: "{{count}} mesi" }, aboutXYears: { one: "circa un anno", other: "circa {{count}} anni" }, xYears: { one: "un anno", other: "{{count}} anni" }, overXYears: { one: "pi\u00F9 di un anno", other: "pi\u00F9 di {{count}} anni" }, almostXYears: { one: "quasi un anno", other: "quasi {{count}} anni" } };
 
-export default function formatDistance(arg0, arg1, arg2) {
-  const tmp = arg2 || {};
-  let tmp3 = tmp2;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  let tmp2 = tmp;
   if (typeof closure_0[arg0] !== "string") {
-    let replaced;
+    let one;
     if (1 === arg1) {
-      if (tmp.addSuffix) {
-        let one;
-        if (closure_0[arg0].oneWithSuffix) {
-          one = tmp2.oneWithSuffix;
-        }
-        replaced = one;
-      }
-      one = tmp2.one;
+      one = tmp.one;
     } else {
-      if (tmp.addSuffix) {
-        if (closure_0[arg0].otherWithSuffix) {
-          const _String2 = String;
-          const str3 = closure_0[arg0].otherWithSuffix;
-          replaced = str3.replace("{{count}}", String(arg1));
-        }
-      }
-      const _String = String;
       const str = closure_0[arg0].other;
-      replaced = str.replace("{{count}}", String(arg1));
+      one = str.replace("{{count}}", arg1.toString());
     }
-    tmp3 = replaced;
+    tmp2 = one;
   }
-  let tmp7 = tmp3;
-  if (tmp.addSuffix) {
-    if (tmp.comparison) {
-      let text;
-      if (tmp.comparison > 0) {
-        text = `${tmp3}後`;
+  let tmp3 = tmp2;
+  if (null != addSuffix) {
+    tmp3 = tmp2;
+    if (addSuffix.addSuffix) {
+      if (addSuffix.comparison) {
+        let text;
+        if (addSuffix.comparison > 0) {
+          text = `tra ${tmp2}`;
+        }
+        tmp3 = text;
       }
-      tmp7 = text;
+      text = `${tmp2} fa`;
     }
-    text = `${tmp3}前`;
   }
-  return tmp7;
+  return tmp3;
 };

@@ -23,7 +23,7 @@ import _slicedToArray from "_slicedToArray" /* 32 */;
 const require = globalThis.__r;
 let _require, dependencyMap;
 
-const f81831 = (setPropagationContext) => {
+const f81964 = (setPropagationContext) => {
   let obj2;
   let obj3;
   let withActiveSpanResult;
@@ -56,7 +56,7 @@ const f81831 = (setPropagationContext) => {
   }
   return withActiveSpanResult;
 };
-const f81833 = (fn) => fn();
+const f81966 = (fn) => fn();
 function createChildOrRootSpan(arg0) {
   let forceTransaction;
   let parentSpan;
@@ -264,7 +264,7 @@ export const continueTrace = (arg0, arg1) => {
       if (!shouldContinueTrace(client, org_id)) {
         _require = arg1;
         const tmpResult7 = require("module_724");
-        withScopeResult = tmpResult7.withScope(f81831);
+        withScopeResult = tmpResult7.withScope(f81964);
       }
       return withScopeResult;
     }
@@ -378,7 +378,7 @@ export const startInactiveSpan = function startInactiveSpan(experimental) {
 export const startNewTrace = function startNewTrace(runCallback) {
   _require = runCallback;
   const obj = require("module_724");
-  return obj.withScope(f81831);
+  return obj.withScope(f81964);
 };
 export const startSpan = function startSpan(experimental, callback) {
   let scope;
@@ -435,7 +435,7 @@ export const startSpan = function startSpan(experimental, callback) {
           });
         }
         return withActiveSpanResult;
-      }) : f81833(function() {
+      }) : f81966(function() {
         let sentryNonRecordingSpan;
         let obj = experimental(callback[1]);
         const currentScope = obj.getCurrentScope();
@@ -551,7 +551,7 @@ export const startSpanManual = function startSpanManual(experimental, arg1) {
           });
         }
         return withActiveSpanResult;
-      }) : f81833(function() {
+      }) : f81966(function() {
         let sentryNonRecordingSpan;
         let obj = experimental(closure_1_1[1]);
         const currentScope = obj.getCurrentScope();

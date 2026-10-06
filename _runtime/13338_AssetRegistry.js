@@ -1,0 +1,7 @@
+// === Module 13338: AssetRegistry ===
+
+// Module 13338 (AssetRegistry)
+import AssetRegistry from "AssetRegistry" /* 1132 */;
+
+
+export default AssetRegistry.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored", width: 24, height: 24, scales: [2, 3], hash: "81c4c8246b195a90d6f5bb90212bbc6a", name: "tier_3_32px", type: "png" });

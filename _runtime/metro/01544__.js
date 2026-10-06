@@ -37,7 +37,7 @@ function createNormalizedConfigs(arg0, arg1) {
 }
 
 export const getPathFromState = function getPathFromState(state, screens) {
-  const f84228 = function(item) {
+  const f84362 = function(item) {
     let obj4;
     let tmp2;
     let tmp3;
@@ -92,7 +92,7 @@ export const getPathFromState = function getPathFromState(state, screens) {
           const _Object = Object;
           const _Object2 = Object;
           const entries = Object.entries(tmp16);
-          fromEntriesResult = fromEntries(entries.map(f84228));
+          fromEntriesResult = fromEntries(entries.map(f84362));
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -125,7 +125,7 @@ export const getPathFromState = function getPathFromState(state, screens) {
           let _Object = Object;
           let _Object2 = Object;
           let entries = Object.entries(tmp4);
-          let fromEntriesResult = fromEntries(entries.map(f84228));
+          let fromEntriesResult = fromEntries(entries.map(f84362));
           let result = weakMap.set(screens.screens, fromEntriesResult);
           obj = fromEntriesResult;
         } else {

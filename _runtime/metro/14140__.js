@@ -1,42 +1,108 @@
 // === Module 14140: ? ===
 
 // Module 14140
-const obj = {
-  isASCIIDigit(decodeResult) {
-    return decodeResult >= 48 && decodeResult <= 57;
-  },
-  isASCIIAlpha(input) {
-    let tmp = input >= 65 && input <= 90;
-    if (!tmp) {
-      tmp = input >= 97 && input <= 122;
-      const tmp2 = input >= 97 && input <= 122;
-    }
-    return tmp;
-  },
-  isASCIIAlphanumeric(arg0) {
-    let tmp = arg0 >= 65 && arg0 <= 90;
-    if (!tmp) {
-      tmp = arg0 >= 97 && arg0 <= 122;
-      const tmp2 = arg0 >= 97 && arg0 <= 122;
-    }
-    if (!tmp) {
-      tmp = arg0 >= 48 && arg0 <= 57;
-      const tmp3 = arg0 >= 48 && arg0 <= 57;
-    }
-    return tmp;
-  },
-  isASCIIHex(decodeResult) {
-    let tmp = decodeResult >= 48 && decodeResult <= 57;
-    if (!tmp) {
-      tmp = decodeResult >= 65 && decodeResult <= 70;
-      const tmp2 = decodeResult >= 65 && decodeResult <= 70;
-    }
-    if (!tmp) {
-      tmp = decodeResult >= 97 && decodeResult <= 102;
-      const tmp3 = decodeResult >= 97 && decodeResult <= 102;
-    }
-    return tmp;
+import _mod14079 from "module_14079" /* 14079 */;
+import _mod14095 from "module_14095" /* 14095 */;
+import _mod14104 from "module_14104" /* 14104 */;
+import _mod14124 from "module_14124" /* 14124 */;
+import _mod14135 from "module_14135" /* 14135 */;
+import _mod14141 from "module_14141" /* 14141 */;
+import _mod14142 from "module_14142" /* 14142 */;
+
+const require = globalThis.__r;
+
+let fn4;
+let fn5;
+let fn6;
+if (!_mod14141) {
+  let fn;
+  let fn2;
+  let fn3;
+  if (!_mod14095.state) {
+    let tmp = _mod14142("state");
+    let closure_6 = tmp;
+    _mod14124[tmp] = true;
+    fn = function t(facade, arg1) {
+      if (require("module_14102")(facade, closure_6)) {
+        const self = this;
+        const self2 = this;
+        const typeError = new _mod14079.TypeError("Object already initialized");
+        throw typeError;
+      } else {
+        arg1.facade = facade;
+        _mod14135(facade, closure_6, arg1);
+        return arg1;
+      }
+    };
+    fn4 = fn;
+    fn2 = function n(arg0) {
+      return require("module_14102")(arg0, closure_6) ? arg0[closure_6] : {};
+    };
+    fn5 = fn2;
+    fn3 = function u(arg0) {
+      return require("module_14102")(arg0, closure_6);
+    };
+    fn6 = fn3;
+  }
+  const obj = {
+    set: fn,
+    get: fn2,
+    has: fn3,
+    enforce(toString) {
+        let tmp2;
+        if (fn6(toString)) {
+          tmp2 = fn5(toString);
+        } else {
+          tmp2 = fn4(toString, {});
+        }
+        return tmp2;
+      },
+    getterFor(arg0) {
+        let closure_0 = arg0;
+        return (arg0) => {
+          if (_mod14104(arg0)) {
+            const tmp4 = fn5(arg0);
+            if (tmp4.type === closure_0) {
+              return tmp4;
+            }
+          }
+          const typeError = new _mod14079.TypeError("Incompatible receiver, " + closure_0 + " required");
+          throw typeError;
+        };
+      }
+  };
+  module.exports = obj;
+}
+let state = _mod14095.state;
+if (!state) {
+  const _module = _mod14095;
+  let self = this;
+  let self2 = this;
+  const weakMap = new _mod14079.WeakMap();
+  let tmp4 = weakMap;
+  _module.state = weakMap;
+  state = weakMap;
+}
+({ get: state.get, has: state.has, set: state.set } = state);
+fn4 = function t(facade, arg1) {
+  if (state.has(facade)) {
+    const self = this;
+    const self2 = this;
+    const typeError = new _mod14079.TypeError("Object already initialized");
+    throw typeError;
+  } else {
+    arg1.facade = facade;
+    const result = state.set(facade, arg1);
+    return arg1;
   }
 };
-
-export default obj;
+fn5 = function n(arg0) {
+  const tmp = state.get(arg0) || {};
+  return tmp;
+};
+fn6 = function u(arg0) {
+  return state.has(arg0);
+};
+fn3 = fn6;
+fn2 = fn5;
+fn = fn4;

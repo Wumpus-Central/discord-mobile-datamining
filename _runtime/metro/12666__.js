@@ -1,104 +1,38 @@
 // === Module 12666: ? ===
 
 // Module 12666
-import _mod12571 from "module_12571" /* 12571 */;
-import _slicedToArray from "_slicedToArray" /* 32 */;
+import _mod12578 from "module_12578" /* 12578 */;
+import _mod12580 from "module_12580" /* 12580 */;
+import _mod12581 from "module_12581" /* 12581 */;
 
-let hasOwnProperty;
-
-let items = [["\n", "\\n"], ["\r", "\\r"], ["\t", "\\t"], ["\\", "\\\\"], ["|", "\\u{7c}"], [",", "\\u{2c}"]];
-
-export const getBucketKey = function getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult) {
-  const obj = _mod12571;
-  const entries1 = entries(obj.dropUndefinedKeys(sanitizeTagsResult));
-  return "" + metricType + sanitizeMetricKeyResult + sanitizeUnitResult + entries1.sort((arg0, arg1) => {
-    const first = arg0[0];
-    return first.localeCompare(arg1[0]);
-  });
-};
-export const sanitizeMetricKey = function sanitizeMetricKey(str) {
-  return str.replace(/[^\w\-.]+/gi, "_");
-};
-export const sanitizeTags = function sanitizeTags(tags) {
-  let obj = {};
-  for (const key10007 in tags) {
-    let _Object = Object;
-    hasOwnProperty = Object.prototype.hasOwnProperty;
-    if (!hasOwnProperty.call(tags, key10007)) {
-      continue;
-    } else {
-      let _String = String;
-      let replaced = key10007.replace(/[^\w\-./]+/gi, "");
-      items = [];
-      let arraySpreadResult = HermesBuiltin.arraySpread(items, String(tags[key10007]), 0);
-      obj[replaced] = items.reduce((acc, item) => {
-        function getCharOrReplacement(item) {
-          const obj = closure_1_3[Symbol.iterator]();
-          while (obj !== undefined) {
-            let tmp4 = closure_1_2(tmp2, 2);
-            if (item === tmp4[0]) {
-              obj.return();
-              return tmp5;
+function instrumentConsole() {
+  if ("console" in _mod12581.GLOBAL_OBJ) {
+    const CONSOLE_LEVELS = _mod12580.CONSOLE_LEVELS;
+    const item = CONSOLE_LEVELS.forEach((item) => {
+      let closure_0 = item;
+      if (item in closure_0(closure_1[1]).GLOBAL_OBJ.console) {
+        const tmpResult = closure_0(closure_1[3]);
+        tmpResult.fill(closure_0(closure_1[1]).GLOBAL_OBJ.console, item, (arg0) => {
+          _mod12580.originalConsoleMethods[level] = arg0;
+          return () => {
+            const items = [...arguments];
+            const obj = { args: items, level };
+            const obj2 = level(closure_2_1[0]);
+            obj2.triggerHandlers("console", obj);
+            const obj3 = level(closure_2_1[2]).originalConsoleMethods[level];
+            if (obj3) {
+              obj3.apply(level(closure_2_1[1]).GLOBAL_OBJ.console, items);
             }
-          }
-          return item;
-        }
-        return acc + getCharOrReplacement(item);
-      }, "");
-      continue;
-    }
-    continue;
+          };
+        });
+      }
+    });
   }
-  return obj;
-};
-export const sanitizeUnit = function sanitizeUnit(none) {
-  return none.replace(/[^\w]+/gi, "_");
-};
-export const serializeMetricBuckets = function serializeMetricBuckets(arg0) {
-  let str = "";
-  const iter = arg0[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let _Object = Object;
-    let entries = Object.entries(nextResult.tags);
-    let arr2 = entries;
-    let str2 = "";
-    if (entries.length > 0) {
-      let mapped = arr2.map((item) => {
-        let tmp;
-        let tmp2;
-        [tmp, tmp2] = item;
-        return "" + tmp + ":" + tmp2;
-      });
-      let _HermesInternal = HermesInternal;
-      str2 = "|#" + mapped.join(",");
-    }
-    let _HermesInternal2 = HermesInternal;
-    let str3 = "";
-    let str4 = "@";
-    let str5 = ":";
-    let str6 = "|";
-    let str7 = "|T";
-    let str8 = "\n";
-    str = str + "" + tmp2.name + "@" + tmp2.unit + ":" + tmp2.metric + "|" + tmp2.metricType + str2 + "|T" + tmp2.timestamp + "\n";
-    continue;
-  }
-  return str;
-};
-export const simpleHash = function simpleHash(item) {
-  let length;
-  let num = 0;
-  let num2 = 0;
-  let num3 = 0;
-  if (0 < item.length) {
-    do {
-      let sum = (num2 << 5) - num2 + item.charCodeAt(num);
-      num2 = sum & sum;
-      num = num + 1;
-      num3 = num2;
-      length = item.length;
-    } while (num < length);
-  }
-  return num3 >>> 0;
+}
+
+export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
+  const obj = _mod12578;
+  obj.addHandler("console", errorCallback);
+  const obj2 = _mod12578;
+  obj2.maybeInstrument("console", instrumentConsole);
 };
