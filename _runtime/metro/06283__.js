@@ -1,9 +1,8 @@
 // _runtime/metro/06283__.js
-import Fragment from "../react/00021_Fragment.js";
-import TOUCHABLE_STATEDefault from "../06280_TOUCHABLE_STATE.js";
-import react from "../00019_react.js";
+import _modDef6280 from "06280__.js";
+import noop from "00019__.js";
 
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 
 export default function _default(delayLongPress) {
   let num = delayLongPress.delayLongPress;
@@ -15,7 +14,6 @@ export default function _default(delayLongPress) {
     extraButtonProps = { rippleColor: "transparent", exclusive: true };
   }
   const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
-  TOUCHABLE_STATEDefault;
   const merged1 = Object.assign(merged);
-  return <tmp2 delayLongPress={num} extraButtonProps={extraButtonProps} />;
+  return jsx(_modDef6280, { delayLongPress: num, extraButtonProps });
 }

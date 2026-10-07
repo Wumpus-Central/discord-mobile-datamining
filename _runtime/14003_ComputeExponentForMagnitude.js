@@ -1,38 +1,34 @@
 // _runtime/14003_ComputeExponentForMagnitude.js
-import _mod13987 from "metro/13987__.js";
-import UNICODE_EXTENSION_SEQUENCE_REGEX from "13988_UNICODE_EXTENSION_SEQUENCE_REGEX.js";
-import 01172__ from "metro/01172__.js";
+import digitsToString2 from "13987_digitsToString.js";
+import _mod13988 from "metro/13988__.js";
+import e from "01172_e.js";
 
-const module_13987 = module_1172.__importDefault(_mod13987);
-let _default = module_13987.default;
-const result = _default.set({ toExpPos: 100 });
+const digitsToString = e.__importDefault(digitsToString2);
+const result = digitsToString.default.set({ toExpPos: 100 });
 
-export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(compactDisplay, floorResult) {
-  let dataLocaleData;
-  let notation;
-  let numberingSystem;
-  ({ notation, dataLocaleData, numberingSystem } = compactDisplay);
+export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(style, floorResult) {
+  ({ notation, dataLocaleData, numberingSystem } = style);
   if ("standard" === notation) {
     return 0;
   } else if ("scientific" === notation) {
     return floorResult.toNumber();
   } else if ("engineering" === notation) {
+    floorResult = floorResult.div(3).floor();
     const divResult = floorResult.div(3);
-    floorResult = divResult.floor();
-    const timesResult = floorResult.times(3);
-    return timesResult.toNumber();
+    return floorResult.times(3).toNumber();
   } else {
-    UNICODE_EXTENSION_SEQUENCE_REGEX.invariant("compact" === notation, "Invalid notation");
-    compactDisplay = compactDisplay.compactDisplay;
-    if ("currency" === compactDisplay.style) {
-      let short;
+    _mod13988.invariant("compact" === notation, "Invalid notation");
+    if ("currency" === style.style) {
       if ("name" !== tmp11) {
-        short = (dataLocaleData.numbers.currency[numberingSystem] || dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]]).short;
+        let short =
+          dataLocaleData.numbers.currency[numberingSystem] ||
+          dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]].short;
+        const tmp2 =
+          dataLocaleData.numbers.currency[numberingSystem] ||
+          dataLocaleData.numbers.currency[dataLocaleData.numbers.nu[0]];
       }
       if (short) {
-        const _default = module_13987.default;
-        const str3 = _default.pow(10, floorResult);
-        const str1 = str3.toString();
+        const str1 = digitsToString.default.pow(10, floorResult).toString();
         const _Object = Object;
         const keys = Object.keys(short);
         if (str1 < keys[0]) {
@@ -46,17 +42,19 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
           } else {
             let num4 = 0;
             if ("0" !== short[keys[index]].other) {
-              const str5 = short[keys[index]].other;
-              num4 = arr2.length - str5.match(/0+/)[0].length;
+              num4 = arr2.length - short[arr2].other.match(/0+/)[0].length;
             }
             return num4;
           }
         }
+        const _default = digitsToString.default;
+        const str3 = digitsToString.default.pow(10, floorResult);
       } else {
         return 0;
       }
     }
-    const tmp = dataLocaleData.numbers.decimal[numberingSystem] || dataLocaleData.numbers.decimal[dataLocaleData.numbers.nu[0]];
-    short = "long" === compactDisplay ? tmp.long : tmp.short;
+    const tmp =
+      dataLocaleData.numbers.decimal[numberingSystem] || dataLocaleData.numbers.decimal[dataLocaleData.numbers.nu[0]];
+    short = "long" === style.compactDisplay ? tmp.long : tmp.short;
   }
 };

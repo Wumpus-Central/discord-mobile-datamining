@@ -1,40 +1,29 @@
 // _runtime/metro/04759__.js
 import nanoid from "../01499_nanoid.js";
-import react from "../00019_react.js";
+import noop from "00019__.js";
 
-let name;
-
-let c2;
-let c3;
-let closure_4;
-let hasOwnProperty;
-({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = react);
-const memoResult = react.memo((name) => {
+({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
+const memoResult = noop.memo((name) => {
   name = name.name;
   const handleOnMount = name.handleOnMount;
   const handleOnUnmount = name.handleOnUnmount;
   const handleOnUpdate = name.handleOnUpdate;
   const children = name.children;
-  const hostName = name.hostName;
-  let obj = name(handleOnMount[1]);
-  const portal = obj.usePortal(hostName);
+  const portal = name(handleOnMount[1]).usePortal(name.hostName);
   const addPortal = portal.addPortal;
   const removePortal = portal.removePortal;
   const items = [name];
-  let closure_7 = children(() => {
+  closure_7 = children(() => {
     let nanoidResult = name;
-    if (!nanoidResult) {
-      const obj = nanoid;
-      nanoidResult = obj.nanoid();
+    if (!name) {
+      nanoidResult = nanoid.nanoid();
     }
     return nanoidResult;
   }, items);
   const tmp2 = addPortal();
-  const ref = tmp2;
   const tmp3 = addPortal();
-  let closure_9 = tmp3;
+  closure_9 = tmp3;
   const tmp4 = addPortal();
-  const ref2 = tmp4;
   const items1 = [handleOnMount, addPortal];
   tmp2.current = handleOnUnmount(() => {
     if (handleOnMount) {

@@ -1,38 +1,22 @@
 // _runtime/metro/14168__.js
-import _slicedToArray from "00032__slicedToArray.js";
-import memoize from "14169__.js";
+import _slicedToArray from "00032__.js";
 
-let set;
-
-let items;
-let obj2;
-let obj3;
 function invariant(arg0, arg1) {
-  let _Error;
   {
-    _Error = Error;
+    const _Error = Error;
   }
-  const tmp2 = arg0;
-  if (!tmp2) {
-    const self = this;
-    const self2 = this;
+  if (!arg0) {
     const _Error1 = new _Error("Expected locale to not have a Unicode locale extension");
     throw _Error1;
   }
 }
 function isMatched(region, str, arg2) {
-  let arr;
-  let tmp2;
-  let tmp3;
-  let tmp4;
-  let tmp = _slicedToArray(str.split("-"), 3);
-  [tmp2, tmp3, arr] = tmp;
+  [tmp2, tmp3, arr] = str.split("-");
   if (arr) {
     if ("$" === arr[0]) {
-      let arr2;
       const slice = arr.slice;
       if ("!" !== arr[1]) {
-        arr2 = arg2[slice(arr, 1)];
+        let arr2 = arg2[slice(arr, 1)];
       } else {
         arr2 = arg2[slice(arr, 2)];
       }
@@ -49,17 +33,17 @@ function isMatched(region, str, arg2) {
         return items;
       }, []);
       let str4 = region.region;
-      const indexOf = reduced.indexOf;
       if (!str4) {
         str4 = "";
       }
-      tmp4 = indexOf(str4) > -1 === tmp7;
+      let tmp4 = reduced.indexOf(str4) > -1 === tmp7;
     }
     if (tmp4) {
       const script = region.script;
       let tmp8 = !script;
       if (script) {
         tmp8 = "*" === tmp3 || tmp3 === region.script;
+        const tmp9 = "*" === tmp3 || tmp3 === region.script;
       }
       tmp4 = tmp8;
     }
@@ -68,6 +52,7 @@ function isMatched(region, str, arg2) {
       let tmp10 = !language;
       if (language) {
         tmp10 = "*" === tmp2 || tmp2 === region.language;
+        const tmp11 = "*" === tmp2 || tmp2 === region.language;
       }
       tmp4 = tmp10;
     }
@@ -77,6 +62,7 @@ function isMatched(region, str, arg2) {
   tmp4 = !region;
   if (region) {
     tmp4 = "*" === arr || arr === region.region;
+    const tmp5 = "*" === arr || arr === region.region;
   }
 }
 function serializeLSR(arg0) {
@@ -103,15 +89,13 @@ function findMatchingDistanceForLSR(arg0, arg1, matchVariables) {
       }
       tmp6 = tmp3Result2;
     }
-    let tmp12 = tmp6;
-    if (tmp12) {
-      let diff;
+    if (tmp6) {
       let result = 10 * nextResult.distance;
       let paradigmLocales = matchVariables.paradigmLocales;
       let paradigmLocales1 = matchVariables.paradigmLocales;
       let tmp15 = paradigmLocales.indexOf(serializeLSR(arg0)) > -1;
       if (tmp15 !== paradigmLocales1.indexOf(serializeLSR(arg1)) > -1) {
-        diff = result - 1;
+        let diff = result - 1;
       } else {
         diff = result;
       }
@@ -138,43 +122,52 @@ function getFallbackCandidates(arg0) {
   return items;
 }
 function BestFitMatcher(arr2, arr, fn) {
-  let tmp4;
-  function findBestMatch(items, arr2) {
-    let tmp18;
-    let closure_0 = arr2;
+  let items = [];
+  const reduced = arr.reduce((acc, item) => {
+    const replaced = item.replace(re3, "");
+    items.push(replaced);
+    acc[replaced] = item;
+    return acc;
+  }, {});
+  const tmp2 = (function findBestMatch(items, arr2) {
+    let tmp24;
+    closure_0 = arr2;
     let Infinity = Infinity;
     obj = { matchedDesiredLocale: "", distances: {} };
-    const value = closure_11.get(arr2);
+    value = closure_11.get(arr2);
     let mapped = value;
-    let tmp2 = value;
-    if (!tmp2) {
+    let tmp6 = value;
+    if (!value) {
       mapped = arr2.map((item) => {
         try {
           const _Intl = Intl;
           items = [item];
-          const first = Intl.getCanonicalLocales(items)[0] || item;
+          let first = Intl.getCanonicalLocales(items)[0];
+          if (!first) {
+            first = item;
+          }
           return first;
         } catch (err) {
-          return item;
+          return tmp;
         }
       });
       const result = closure_11.set(arr2, mapped);
-      tmp2 = mapped;
+      tmp6 = mapped;
     }
-    set = new Set(tmp2);
+    const set = new Set(tmp6);
     let num2 = 0;
     if (0 < items.length) {
       while (true) {
-        let tmp5 = items[num2];
-        if (set.has(tmp5)) {
+        let tmp9 = items[num2];
+        if (set.has(tmp9)) {
           let result1 = 40 * num2;
           obj3 = {};
-          obj3[tmp5] = result1;
-          obj.distances[tmp5] = obj3;
+          obj3[tmp9] = result1;
+          obj.distances[tmp9] = obj3;
           if (result1 < Infinity) {
             Infinity = result1;
-            obj.matchedDesiredLocale = tmp5;
-            obj.matchedSupportedLocale = tmp5;
+            obj.matchedDesiredLocale = tmp9;
+            obj.matchedSupportedLocale = tmp9;
           }
           if (0 === num2) {
             break;
@@ -188,21 +181,17 @@ function BestFitMatcher(arr2, arr, fn) {
     if (0 < items.length) {
       try {
         let _Intl = Intl;
-        const self = this;
-        const self2 = this;
-        const locale = new Intl.Locale(tmp9);
-        const str = locale.maximize();
-        const str1 = str.toString();
-        if (str1 !== items[num3]) {
-          const arr = closure_10(str1);
+        locale = new Intl.Locale(tmp13);
+        const str1 = locale.maximize().toString();
+        if (str1 !== tmp13) {
+          const arr = closure_10(tmp20);
           let num4 = 0;
           if (0 < arr.length) {
-            let sum1;
             while (true) {
-              let tmp17 = arr2[num4];
-              tmp18 = tmp17;
-              if (tmp17 !== tmp9) {
-                if (set.has(tmp18)) {
+              let tmp23 = arr2[num4];
+              tmp24 = tmp23;
+              if (tmp23 !== tmp13) {
+                if (set.has(tmp24)) {
                   break;
                 }
               }
@@ -210,40 +199,41 @@ function BestFitMatcher(arr2, arr, fn) {
               num4 = sum;
             }
             try {
-              let result2;
               const _Intl2 = Intl;
-              const self3 = this;
-              const self4 = this;
-              const locale1 = new Intl.Locale(tmp18);
-              const str2 = locale1.maximize();
-              if (str2.toString() === str1) {
-                result2 = 40 * num3;
+              const locale1 = new Intl.Locale(tmp24);
+              if (str2.toString() === tmp20) {
+                let result2 = 40 * num3;
               } else {
                 result2 = 10 * num4 + 40 * num3;
               }
-              sum1 = result2;
+              let sum1 = result2;
+              if (!obj.distances[tmp13]) {
+                obj.distances[tmp13] = {};
+              }
+              obj.distances[tmp13][tmp24] = sum1;
+              if (sum1 < Infinity) {
+                Infinity = sum1;
+                obj.matchedDesiredLocale = tmp13;
+                obj.matchedSupportedLocale = tmp24;
+              }
+              str2 = locale1.maximize();
             } catch (err) {
-              sum1 = 10 * num4 + 40 * num3;
-            }
-            if (!obj.distances[items[num3]]) {
-              obj.distances[items[num3]] = {};
-            }
-            obj.distances[items[num3]][tmp18] = sum1;
-            if (sum1 < Infinity) {
-              Infinity = sum1;
-              obj.matchedDesiredLocale = items[num3];
-              obj.matchedSupportedLocale = tmp18;
+              sum1 = tmp2 * tmp4 + tmp3 * tmp;
             }
           }
         }
         num3 = num3 + 1;
+        const str = locale.maximize();
       } catch (err) {}
     }
-    const matchedSupportedLocale = obj.matchedSupportedLocale && 0 === Infinity;
+    let matchedSupportedLocale = obj.matchedSupportedLocale;
+    if (matchedSupportedLocale) {
+      matchedSupportedLocale = 0 === Infinity;
+    }
     if (!matchedSupportedLocale) {
       Infinity = Infinity;
       let item = items.forEach((item, index) => {
-        let closure_1 = index;
+        closure_1 = index;
         if (!obj.distances[item]) {
           obj.distances[item] = {};
         }
@@ -253,37 +243,26 @@ function BestFitMatcher(arr2, arr, fn) {
           if (sum < Infinity) {
             Infinity = sum;
             obj.matchedDesiredLocale = item;
-            obj.matchedSupportedLocale = item[index];
+            obj.matchedSupportedLocale = tmp;
           }
         });
       });
-      if (Infinity >= 838) {
+      if (Infinity >= num) {
         obj.matchedDesiredLocale = undefined;
         obj.matchedSupportedLocale = undefined;
       }
     }
     return obj;
-  }
-  let items = [];
-  const reduced = arr.reduce((acc, item) => {
-    const replaced = item.replace(re3, "");
-    items.push(replaced);
-    acc[replaced] = item;
-    return acc;
-  }, {});
-  let tmp2 = findBestMatch(items, arr2);
-  let tmp5;
-  const tmp3 = tmp2.matchedSupportedLocale && tmp2.matchedDesiredLocale;
+  })(items, arr2);
+  let prop;
   if (tmp3) {
-    arr2 = reduced[tmp2.matchedDesiredLocale];
-    let matchedSupportedLocale = tmp2.matchedSupportedLocale;
-    let tmp6 = arr2.slice(tmp2.matchedDesiredLocale.length) || undefined;
-    tmp5 = matchedSupportedLocale;
-    tmp4 = tmp6;
+    let tmp6 = reduced[tmp2.matchedDesiredLocale].slice(tmp2.matchedDesiredLocale.length) || undefined;
+    prop = tmp2.matchedSupportedLocale;
+    const tmp4 = reduced[tmp2.matchedDesiredLocale].slice(tmp2.matchedDesiredLocale.length) || undefined;
   }
-  if (tmp5) {
-    obj = { locale: tmp5, extension: tmp4 };
-    const obj2 = { locale: tmp5, extension: tmp4 };
+  if (prop) {
+    const obj2 = { locale: prop, extension: tmp4 };
+    obj = obj2;
   } else {
     obj = { locale: fn() };
   }
@@ -293,12 +272,10 @@ function CanonicalizeUnicodeLocaleId(items) {
   return Intl.getCanonicalLocales(items)[0];
 }
 function BestAvailableLocale(items, arg1) {
-  let value = weakMap1.get(items);
+  value = weakMap1.get(items);
   if (!value) {
     const _Set = Set;
-    const self = this;
-    const self2 = this;
-    set = new Set(items);
+    const set = new Set(items);
     const result = weakMap1.set(items, set);
     value = set;
   }
@@ -306,9 +283,9 @@ function BestAvailableLocale(items, arg1) {
   while (!value.has(substr)) {
     let lastIndexOfResult = substr.lastIndexOf("-");
     if (~lastIndexOfResult) {
-      let tmp7 = lastIndexOfResult >= 2 && "-" === substr[lastIndexOfResult - 2];
+      let tmp9 = lastIndexOfResult >= 2 && "-" === substr[lastIndexOfResult - 2];
       let diff = lastIndexOfResult;
-      if (tmp7) {
+      if (tmp9) {
         diff = lastIndexOfResult - 2;
       }
       substr = substr.slice(0, diff);
@@ -318,270 +295,135 @@ function BestAvailableLocale(items, arg1) {
   return substr;
 }
 class ResolveLocale {
-  constructor(arg0, arg1, localeMatcher, arg3, arg4, fn) {
-    let closure_1;
-    let tmp3;
-    let tmp6;
-    function LookupMatcher(arg0, arg1, fn) {
-      obj = { locale: fn() };
-      const iter = arg1[Symbol.iterator]();
-      const str = iter.next();
-      while (iter !== undefined) {
-        let arr = str;
-        let replaced = str.replace(obj, "");
-        let tmp2 = replaced;
-        let tmp4 = BestAvailableLocale(arg0, replaced);
-        let tmp5 = tmp4;
-        if (tmp5) {
-          obj.locale = tmp4;
-          if (arr !== tmp2) {
-            obj.extension = arr.slice(replaced.length, arr.length);
-          }
-          iter.return();
-          return obj;
-        }
-      }
-      return obj;
-    }
-    function UnicodeExtensionComponents(extension) {
-      let _Error;
-      let iter;
-      if (extension === extension.toLowerCase()) {
-        let num = 3;
-        if ("-u-" === extension.slice(0, 3)) {
-          items = [];
-          const items1 = [];
-          if (num < extension.length) {
-            while (true) {
-              let index = extension.indexOf("-", num);
-              let tmp11 = -1 === index ? length - num : index - num;
-              let substr = extension.slice(num, num + tmp11);
-              _Error = Error;
-              if (2 > tmp11) {
-                break;
-              } else {
-                let tmp19;
-                if (undefined === iter) {
-                  if (2 !== tmp11) {
-                    tmp19 = iter;
-                    if (-1 === items.indexOf(substr)) {
-                      let arr = items.push(substr);
-                      tmp19 = iter;
-                    }
-                    num = num + (tmp11 + 1);
-                    iter = tmp19;
-                  }
-                }
-                if (2 === tmp11) {
-                  let entry = { key: substr, value: "" };
-                  tmp19 = entry;
-                  if (
-                    undefined ===
-                    items1.find((key) => {
-                      let key1;
-                      if (entry != null) {
-                        key1 = entry.key;
-                      }
-                      return key.key === key1;
-                    })
-                  ) {
-                    let arr2 = items1.push(entry);
-                    tmp19 = entry;
-                  }
-                } else {
-                  let value;
-                  if (iter != null) {
-                    value = iter.value;
-                  }
-                  if ("" === value) {
-                    iter.value = substr;
-                    tmp19 = iter;
-                  } else if (undefined !== iter) {
-                    iter.value = `${iter.value}-${tmp12}`;
-                    tmp19 = iter;
-                  } else {
-                    let self7 = this;
-                    let str7 = "Expected keyword to be defined";
-                    let self8 = this;
-                    let tmp162 = new tmp16("Expected keyword to be defined");
-                    throw tmp162;
-                  }
-                }
-              }
+  constructor(arg0, arg1, arg2, arg3, arg4, arg5) {
+    closure_0 = importDefault;
+    if ("lookup" === importDefault.localeMatcher) {
+      tmp4 = globalThis;
+      _Array2 = Array;
+      num2 = 0;
+      tmp3 = (function LookupMatcher(arg0, arg1, fn) {
+        obj = { locale: "" };
+        const iter = arg1[Symbol.iterator]();
+        const str = iter.next();
+        while (iter !== undefined) {
+          let arr = str;
+          let replaced = str.replace(closure_3, "");
+          let tmp2 = replaced;
+          let tmp4 = BestAvailableLocale(arg0, replaced);
+          if (tmp4) {
+            obj.locale = tmp4;
+            if (arr !== tmp2) {
+              obj.extension = arr.slice(replaced.length, arr.length);
             }
-            const self5 = this;
-            const self6 = this;
-            const _Error1 = new _Error("Expected a subtag to have at least 2 characters");
-            throw _Error1;
+            iter.return();
+            return obj;
           }
-          return { attributes: items, keywords: items1 };
-        } else {
-          const self3 = this;
-          const self4 = this;
-          const tmp42 = new tmp4("Expected extension to be a Unicode locale extension");
-          throw tmp42;
         }
-      } else {
-        const self = this;
-        const self2 = this;
-        const tmp2 = new tmp("Expected extension to be lowercase");
-        throw tmp2;
-      }
-    }
-    function InsertUnicodeExtensionAndCanonicalize(locale, arg1, items) {
-      items(-1 === locale.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
-      let str = "-u";
-      const tmp2 = arg1[Symbol.iterator]();
-      while (tmp2 !== undefined) {
-        let _HermesInternal = HermesInternal;
-        str = `-u${"-" + tmp3}`;
-        continue;
-      }
-      const iter = items[Symbol.iterator]();
-      const iter2 = iter.next();
-      while (iter !== undefined) {
-        let value = iter2.value;
-        let _HermesInternal2 = HermesInternal;
-        let tmp5 = value;
-        str = str + "-" + iter2.key;
-        if ("" !== value) {
-          let _HermesInternal3 = HermesInternal;
-          str = str + "-" + tmp5;
-        }
-        continue;
-      }
-      if ("-u" === str) {
-        return CanonicalizeUnicodeLocaleId(locale);
-      } else {
-        let sum;
-        const index = locale.indexOf("-x-");
-        if (-1 === index) {
-          sum = locale + str;
-        } else {
-          const sum1 = locale.slice(0, index) + str;
-          sum = sum1 + locale.slice(index);
-        }
-        return CanonicalizeUnicodeLocaleId(sum);
-      }
-    }
-    if ("lookup" === localeMatcher.localeMatcher) {
-      let tmp4 = globalThis;
-      const _Array2 = Array;
-      tmp3 = LookupMatcher(Array.from(arg0), arg1, fn);
+        obj.locale = fn();
+        return obj;
+      })(Array.from(global), fn, exports);
     } else {
-      let tmp2 = globalThis;
-      const _Array = Array;
-      let num = 0;
-      tmp3 = BestFitMatcher(Array.from(arg0), arg1, fn);
+      tmp = BestFitMatcher;
+      tmp2 = globalThis;
+      _Array = Array;
+      num = 0;
+      tmp3 = BestFitMatcher(Array.from(global), fn, exports);
     }
-    const locale = tmp3.locale;
-    let closure_2 = arg4[locale];
-    obj = { locale: tmp6, dataLocale: locale };
+    locale = tmp3.locale;
+    closure_2 = module[locale];
+    closure_3 = { locale: "en", dataLocale: locale };
     if (tmp3.extension) {
-      let keywords = UnicodeExtensionComponents(tmp3.extension).keywords;
-    } else {
-      keywords = [];
-    }
-    let items = [];
-    function _loop(iter) {
-      localeMatcher = iter;
-      items = undefined;
-      if (closure_2 != null) {
-        items = closure_2[iter];
-      }
-      if (items == null) {
-        items = [];
-      }
-      const isArray = Array.isArray(items);
-      const combined = "keyLocaleData for " + iter + " must be an array";
-      if (isArray) {
-        const first = items[0];
-        const tmp8 = undefined === first || typeof first === "string";
-        if (tmp8) {
-          let tmp13;
-          iter = closure_1.find((key) => key.key === closure_0);
-          let str2 = first;
-          if (iter) {
-            const value = iter.value;
-            if ("" !== value) {
-              str2 = first;
-              if (items.indexOf(value) > -1) {
-                const entry = { key: iter, value };
-                str2 = value;
-                tmp13 = entry;
+      num3 = 0;
+      closure_1 = (function UnicodeExtensionComponents(extension) {
+        let _Error;
+        if (extension === extension.toLowerCase()) {
+          let num = 3;
+          if ("-u-" === extension.slice(0, 3)) {
+            const items = [];
+            const items1 = [];
+            if (num < extension.length) {
+              while (true) {
+                let index = extension.indexOf("-", num);
+                let tmp15 = -1 === index ? length - num : index - num;
+                let substr = extension.slice(num, num + tmp15);
+                _Error = Error;
+                if (2 > tmp15) {
+                  break;
+                } else {
+                  if (undefined === iter) {
+                    if (2 !== tmp15) {
+                      let tmp27 = iter;
+                      if (-1 === items.indexOf(substr)) {
+                        let arr = items.push(substr);
+                        tmp27 = iter;
+                      }
+                      num = num + (tmp15 + 1);
+                      iter = tmp27;
+                    }
+                  }
+                  if (2 === tmp15) {
+                    let entry = { key: substr, value: "" };
+                    tmp27 = entry;
+                    if (
+                      undefined ===
+                      items1.find((key) => {
+                        key = undefined;
+                        if (entry != null) {
+                          key = entry.key;
+                        }
+                        return key.key === key;
+                      })
+                    ) {
+                      let arr2 = items1.push(entry);
+                      tmp27 = entry;
+                    }
+                  } else {
+                    value = undefined;
+                    if (iter != null) {
+                      value = iter.value;
+                    }
+                    if ("" === value) {
+                      iter.value = substr;
+                      tmp27 = iter;
+                    } else if (undefined !== iter) {
+                      iter.value = `${iter.value}-${tmp16}`;
+                      tmp27 = iter;
+                    } else {
+                      let tmp23 = new.target;
+                      let str7 = "Expected keyword to be defined";
+                      let tmp24 = new.target;
+                      let tmp222 = new tmp22("Expected keyword to be defined");
+                      throw tmp222;
+                    }
+                  }
+                }
               }
-            } else {
-              str2 = first;
-              if (items.indexOf("true") > -1) {
-                const entry1 = { key: iter, value: "true" };
-                str2 = "true";
-                tmp13 = entry1;
-              }
+              const _Error1 = new _Error("Expected a subtag to have at least 2 characters");
+              throw _Error1;
             }
-          }
-          const tmp15 = null == localeMatcher[iter] || typeof localeMatcher[iter] === "string";
-          if (tmp15) {
-            let tmp19 = typeof str5 === "string";
-            let str7 = str5;
-            if (typeof localeMatcher[iter] === "string") {
-              const formatted = iter.toLowerCase();
-              const formatted1 = str5.toLowerCase();
-              if (undefined !== formatted) {
-                tmp19 = "" === formatted1;
-                str7 = formatted1;
-              } else {
-                const self7 = this;
-                const self8 = this;
-                const tmp282 = new tmp28("ukey must be defined");
-                throw tmp282;
-              }
-            }
-            if (tmp19) {
-              str7 = "true";
-            }
-            const tmp22 = str7 !== str2 && items.indexOf(str7) > -1;
-            if (tmp22) {
-              str2 = str7;
-            }
-            if (tmp13) {
-              items.push(tmp13);
-            }
-            obj[iter] = str2;
+            obj = { attributes: items, keywords: items1 };
+            return obj;
           } else {
-            const self5 = this;
-            const self6 = this;
-            const tmp162 = new tmp16("optionsValue must be a string or undefined");
-            throw tmp162;
+            const tmp62 = new tmp6("Expected extension to be a Unicode locale extension");
+            throw tmp62;
           }
         } else {
-          const self3 = this;
-          const self4 = this;
-          const tmp92 = new tmp9("value must be a string or undefined");
-          throw tmp92;
+          const tmp4 = new tmp("Expected extension to be lowercase");
+          throw tmp4;
         }
-      } else {
-        const self = this;
-        const self2 = this;
-        const tmp32 = new tmp3(combined);
-        throw tmp32;
-      }
+      })(tmp3.extension).keywords;
+    } else {
+      closure_1 = [];
     }
-    let iter = arg3[Symbol.iterator]();
-    while (iter !== undefined) {
-      let _loopResult = _loop(iter.next());
-      continue;
-    }
-    tmp6 = locale;
-    if (items.length > 0) {
-      tmp6 = InsertUnicodeExtensionAndCanonicalize(locale, [], items);
-    }
-    return obj;
+    closure_4 = [];
+    tmp5 = importAll[Symbol.iterator]();
+    return;
   }
 }
-let obj = { supplemental: obj2 };
-obj2 = { languageMatching: obj3 };
-obj3 = { "written-new": items };
-items = [
+let obj = { supplemental: null };
+let obj2 = { languageMatching: null };
+let obj3 = { "written-new": null };
+let items = [
   { paradigmLocales: { _locales: "en en_GB es es_419 pt_BR pt_PT" } },
   { $enUS: { _value: "AS+CA+GU+MH+MP+PH+PR+UM+US+VI" } },
   { $cnsar: { _value: "HK+MO" } },
@@ -962,6 +804,9 @@ items = [
   { "zh-Hant-*": { _desired: "zh-Hant-*", _distance: "5" } },
   { "*-*-*": { _desired: "*-*-*", _distance: "4" } },
 ];
+obj3["written-new"] = items;
+obj2.languageMatching = obj3;
+obj.supplemental = obj2;
 let obj4 = {
   "001": [
     "001",
@@ -1563,255 +1408,10 @@ let obj4 = {
   155: null,
   202: null,
   419: null,
-  EU: [
-    "AT",
-    "BE",
-    "BG",
-    "CY",
-    "CZ",
-    "DE",
-    "DK",
-    "EE",
-    "ES",
-    "EU",
-    "FI",
-    "FR",
-    "GR",
-    "HR",
-    "HU",
-    "IE",
-    "IT",
-    "LT",
-    "LU",
-    "LV",
-    "MT",
-    "NL",
-    "PL",
-    "PT",
-    "RO",
-    "SE",
-    "SI",
-    "SK",
-  ],
-  EZ: [
-    "AT",
-    "BE",
-    "CY",
-    "DE",
-    "EE",
-    "ES",
-    "EZ",
-    "FI",
-    "FR",
-    "GR",
-    "IE",
-    "IT",
-    "LT",
-    "LU",
-    "LV",
-    "MT",
-    "NL",
-    "PT",
-    "SI",
-    "SK",
-  ],
-  QO: ["AC", "AQ", "CP", "DG", "QO", "TA"],
-  UN: [
-    "AD",
-    "AE",
-    "AF",
-    "AG",
-    "AL",
-    "AM",
-    "AO",
-    "AR",
-    "AT",
-    "AU",
-    "AZ",
-    "BA",
-    "BB",
-    "BD",
-    "BE",
-    "BF",
-    "BG",
-    "BH",
-    "BI",
-    "BJ",
-    "BN",
-    "BO",
-    "BR",
-    "BS",
-    "BT",
-    "BW",
-    "BY",
-    "BZ",
-    "CA",
-    "CD",
-    "CF",
-    "CG",
-    "CH",
-    "CI",
-    "CL",
-    "CM",
-    "CN",
-    "CO",
-    "CR",
-    "CU",
-    "CV",
-    "CY",
-    "CZ",
-    "DE",
-    "DJ",
-    "DK",
-    "DM",
-    "DO",
-    "DZ",
-    "EC",
-    "EE",
-    "EG",
-    "ER",
-    "ES",
-    "ET",
-    "FI",
-    "FJ",
-    "FM",
-    "FR",
-    "GA",
-    "GB",
-    "GD",
-    "GE",
-    "GH",
-    "GM",
-    "GN",
-    "GQ",
-    "GR",
-    "GT",
-    "GW",
-    "GY",
-    "HN",
-    "HR",
-    "HT",
-    "HU",
-    "ID",
-    "IE",
-    "IL",
-    "IN",
-    "IQ",
-    "IR",
-    "IS",
-    "IT",
-    "JM",
-    "JO",
-    "JP",
-    "KE",
-    "KG",
-    "KH",
-    "KI",
-    "KM",
-    "KN",
-    "KP",
-    "KR",
-    "KW",
-    "KZ",
-    "LA",
-    "LB",
-    "LC",
-    "LI",
-    "LK",
-    "LR",
-    "LS",
-    "LT",
-    "LU",
-    "LV",
-    "LY",
-    "MA",
-    "MC",
-    "MD",
-    "ME",
-    "MG",
-    "MH",
-    "MK",
-    "ML",
-    "MM",
-    "MN",
-    "MR",
-    "MT",
-    "MU",
-    "MV",
-    "MW",
-    "MX",
-    "MY",
-    "MZ",
-    "NA",
-    "NE",
-    "NG",
-    "NI",
-    "NL",
-    "NO",
-    "NP",
-    "NR",
-    "NZ",
-    "OM",
-    "PA",
-    "PE",
-    "PG",
-    "PH",
-    "PK",
-    "PL",
-    "PT",
-    "PW",
-    "PY",
-    "QA",
-    "RO",
-    "RS",
-    "RU",
-    "RW",
-    "SA",
-    "SB",
-    "SC",
-    "SD",
-    "SE",
-    "SG",
-    "SI",
-    "SK",
-    "SL",
-    "SM",
-    "SN",
-    "SO",
-    "SR",
-    "SS",
-    "ST",
-    "SV",
-    "SY",
-    "SZ",
-    "TD",
-    "TG",
-    "TH",
-    "TJ",
-    "TL",
-    "TM",
-    "TN",
-    "TO",
-    "TR",
-    "TT",
-    "TV",
-    "TZ",
-    "UA",
-    "UG",
-    "UN",
-    "US",
-    "UY",
-    "UZ",
-    "VC",
-    "VE",
-    "VN",
-    "VU",
-    "WS",
-    "YE",
-    "ZA",
-    "ZM",
-    "ZW",
-  ],
+  EU: null,
+  EZ: null,
+  QO: null,
+  UN: null,
 };
 obj4[142] = [
   "030",
@@ -2094,41 +1694,289 @@ obj4[419] = [
   "VG",
   "VI",
 ];
+obj4.EU = [
+  "AT",
+  "BE",
+  "BG",
+  "CY",
+  "CZ",
+  "DE",
+  "DK",
+  "EE",
+  "ES",
+  "EU",
+  "FI",
+  "FR",
+  "GR",
+  "HR",
+  "HU",
+  "IE",
+  "IT",
+  "LT",
+  "LU",
+  "LV",
+  "MT",
+  "NL",
+  "PL",
+  "PT",
+  "RO",
+  "SE",
+  "SI",
+  "SK",
+];
+obj4.EZ = [
+  "AT",
+  "BE",
+  "CY",
+  "DE",
+  "EE",
+  "ES",
+  "EZ",
+  "FI",
+  "FR",
+  "GR",
+  "IE",
+  "IT",
+  "LT",
+  "LU",
+  "LV",
+  "MT",
+  "NL",
+  "PT",
+  "SI",
+  "SK",
+];
+obj4.QO = ["AC", "AQ", "CP", "DG", "QO", "TA"];
+obj4.UN = [
+  "AD",
+  "AE",
+  "AF",
+  "AG",
+  "AL",
+  "AM",
+  "AO",
+  "AR",
+  "AT",
+  "AU",
+  "AZ",
+  "BA",
+  "BB",
+  "BD",
+  "BE",
+  "BF",
+  "BG",
+  "BH",
+  "BI",
+  "BJ",
+  "BN",
+  "BO",
+  "BR",
+  "BS",
+  "BT",
+  "BW",
+  "BY",
+  "BZ",
+  "CA",
+  "CD",
+  "CF",
+  "CG",
+  "CH",
+  "CI",
+  "CL",
+  "CM",
+  "CN",
+  "CO",
+  "CR",
+  "CU",
+  "CV",
+  "CY",
+  "CZ",
+  "DE",
+  "DJ",
+  "DK",
+  "DM",
+  "DO",
+  "DZ",
+  "EC",
+  "EE",
+  "EG",
+  "ER",
+  "ES",
+  "ET",
+  "FI",
+  "FJ",
+  "FM",
+  "FR",
+  "GA",
+  "GB",
+  "GD",
+  "GE",
+  "GH",
+  "GM",
+  "GN",
+  "GQ",
+  "GR",
+  "GT",
+  "GW",
+  "GY",
+  "HN",
+  "HR",
+  "HT",
+  "HU",
+  "ID",
+  "IE",
+  "IL",
+  "IN",
+  "IQ",
+  "IR",
+  "IS",
+  "IT",
+  "JM",
+  "JO",
+  "JP",
+  "KE",
+  "KG",
+  "KH",
+  "KI",
+  "KM",
+  "KN",
+  "KP",
+  "KR",
+  "KW",
+  "KZ",
+  "LA",
+  "LB",
+  "LC",
+  "LI",
+  "LK",
+  "LR",
+  "LS",
+  "LT",
+  "LU",
+  "LV",
+  "LY",
+  "MA",
+  "MC",
+  "MD",
+  "ME",
+  "MG",
+  "MH",
+  "MK",
+  "ML",
+  "MM",
+  "MN",
+  "MR",
+  "MT",
+  "MU",
+  "MV",
+  "MW",
+  "MX",
+  "MY",
+  "MZ",
+  "NA",
+  "NE",
+  "NG",
+  "NI",
+  "NL",
+  "NO",
+  "NP",
+  "NR",
+  "NZ",
+  "OM",
+  "PA",
+  "PE",
+  "PG",
+  "PH",
+  "PK",
+  "PL",
+  "PT",
+  "PW",
+  "PY",
+  "QA",
+  "RO",
+  "RS",
+  "RU",
+  "RW",
+  "SA",
+  "SB",
+  "SC",
+  "SD",
+  "SE",
+  "SG",
+  "SI",
+  "SK",
+  "SL",
+  "SM",
+  "SN",
+  "SO",
+  "SR",
+  "SS",
+  "ST",
+  "SV",
+  "SY",
+  "SZ",
+  "TD",
+  "TG",
+  "TH",
+  "TJ",
+  "TL",
+  "TM",
+  "TN",
+  "TO",
+  "TR",
+  "TT",
+  "TV",
+  "TZ",
+  "UA",
+  "UG",
+  "UN",
+  "US",
+  "UY",
+  "UZ",
+  "VC",
+  "VE",
+  "VN",
+  "VU",
+  "WS",
+  "YE",
+  "ZA",
+  "ZM",
+  "ZW",
+];
 const re3 = /-u(?:-[0-9a-z]{2,8})+/gi;
-let obj5 = {
-  serializer(arg0) {
-    return "" + arg0[0] + "|" + arg0[1];
-  },
-};
-let closure_9 = memoize.memoize(function findMatchingDistanceImpl(arg0, arg1) {
-  let items;
-  let substr1;
-  let locale = new Intl.Locale(arg0);
-  const maximizeResult = locale.maximize();
-  const self = this;
-  const locale1 = new Intl.Locale(arg1);
-  const maximizeResult1 = locale1.maximize();
-  obj = { language: maximizeResult.language, script: maximizeResult.script || "", region: maximizeResult.region || "" };
-  const obj2 = {
-    language: maximizeResult1.language,
-    script: maximizeResult1.script || "",
-    region: maximizeResult1.region || "",
-  };
-  let tmp3 = obj3;
-  if (!tmp3) {
-    let first = obj.supplemental.languageMatching["written-new"][0];
-    let parts;
-    if (first != null) {
-      const paradigmLocales = first.paradigmLocales;
-      if (paradigmLocales != null) {
-        let str = paradigmLocales._locales;
-        parts = str.split(" ");
+const monadic = fn(14169);
+let closure_9 = monadic.memoize(
+  function findMatchingDistanceImpl(arg0, arg1) {
+    locale = new Intl.Locale(arg0);
+    const maximizeResult = locale.maximize();
+    const locale1 = new Intl.Locale(arg1);
+    const maximizeResult1 = locale1.maximize();
+    obj = {
+      language: maximizeResult.language,
+      script: maximizeResult.script || "",
+      region: maximizeResult.region || "",
+    };
+    const obj2 = {
+      language: maximizeResult1.language,
+      script: maximizeResult1.script || "",
+      region: maximizeResult1.region || "",
+    };
+    let tmp3 = obj3;
+    if (!obj3) {
+      let first = obj.supplemental.languageMatching["written-new"][0];
+      let parts;
+      if (first != null) {
+        const paradigmLocales = first.paradigmLocales;
+        if (paradigmLocales != null) {
+          parts = paradigmLocales._locales.split(" ");
+        }
       }
-    }
-    const prop = tmp4.supplemental.languageMatching["written-new"];
-    let substr = prop.slice(1, 5);
-    obj3 = {
-      matches: substr1.map((item) => {
+      const prop = tmp4.supplemental.languageMatching["written-new"];
+      let substr = prop.slice(1, 5);
+      obj3 = { matches: null, matchVariables: null, paradigmLocales: null };
+      const prop1 = tmp4.supplemental.languageMatching["written-new"];
+      const substr1 = prop1.slice(5);
+      obj3.matches = substr1.map((item) => {
         const first = Object.keys(item)[0];
         return {
           supported: first,
@@ -2136,56 +1984,55 @@ let closure_9 = memoize.memoize(function findMatchingDistanceImpl(arg0, arg1) {
           distance: +item[first]._distance,
           oneway: "true" === item[first].oneway,
         };
-      }, {}),
-      matchVariables: substr.reduce((acc, item) => {
+      }, {});
+      obj3.matchVariables = substr.reduce((acc, item) => {
         const first = Object.keys(item)[0];
-        const str = item[first]._value;
         const substr = first.slice(1);
-        acc[substr] = str.split("+");
+        acc[substr] = item[first]._value.split("+");
         return acc;
-      }, {}),
-      paradigmLocales: items,
-    };
-    const prop1 = tmp4.supplemental.languageMatching["written-new"];
-    substr1 = prop1.slice(5);
-    items = [];
-    const arraySpreadResult = HermesBuiltin.arraySpread(items, parts, 0);
-    HermesBuiltin.arraySpread(
-      items,
-      parts.map((item) => {
-        const locale = new Intl.Locale(item.replace(/_/g, "-"));
-        const str = locale.maximize();
-        return str.toString();
-      }),
-      arraySpreadResult,
-    );
-    tmp3 = obj3;
-  }
-  let num4 = 0;
-  if (obj.language !== obj2.language) {
-    obj4 = { language: maximizeResult.language, script: "", region: "" };
-    const obj5 = { language: maximizeResult1.language, script: "", region: "" };
-    num4 = findMatchingDistanceForLSR(obj4, obj5, tmp3);
-  }
-  let sum = num4;
-  if (obj.script !== obj2.script) {
-    const obj6 = { language: maximizeResult.language, script: obj.script, region: "" };
-    const obj7 = { language: maximizeResult1.language, script: obj2.script, region: "" };
-    sum = num4 + findMatchingDistanceForLSR(obj6, obj7, tmp3);
-  }
-  let sum1 = sum;
-  if (obj.region !== obj2.region) {
-    sum1 = sum + findMatchingDistanceForLSR(obj, obj2, tmp3);
-  }
-  return sum1;
-}, obj5);
+      }, {});
+      const items = [];
+      HermesBuiltin.arraySpread(
+        parts.map((item) => {
+          locale = new Intl.Locale(item.replace(/_/g, "-"));
+          return locale.maximize().toString();
+        }),
+        HermesBuiltin.arraySpread(parts, 0),
+      );
+      obj3.paradigmLocales = items;
+      tmp3 = obj3;
+      const arraySpreadResult = HermesBuiltin.arraySpread(parts, 0);
+    }
+    let num4 = 0;
+    if (obj.language !== obj2.language) {
+      obj4 = { language: maximizeResult.language, script: "", region: "" };
+      const obj5 = { language: maximizeResult1.language, script: "", region: "" };
+      num4 = findMatchingDistanceForLSR(obj4, obj5, tmp3);
+    }
+    let sum = num4;
+    if (obj.script !== obj2.script) {
+      const obj6 = { language: maximizeResult.language, script: obj.script, region: "" };
+      const obj7 = { language: maximizeResult1.language, script: obj2.script, region: "" };
+      sum = num4 + findMatchingDistanceForLSR(obj6, obj7, tmp3);
+    }
+    let sum1 = sum;
+    if (obj.region !== obj2.region) {
+      sum1 = sum + findMatchingDistanceForLSR(obj, obj2, tmp3);
+    }
+    return sum1;
+  },
+  {
+    serializer(arg0) {
+      return "" + arg0[0] + "|" + arg0[1];
+    },
+  },
+);
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 
 export const LookupSupportedLocales = function LookupSupportedLocales(arg0, canonicalLocales) {
   const items = [];
   const iter = canonicalLocales[Symbol.iterator]();
-  const str = iter.next();
   while (iter !== undefined) {
     let tmp3 = BestAvailableLocale(arg0, str.replace(re3, ""));
     if (tmp3) {
@@ -2197,7 +2044,7 @@ export const LookupSupportedLocales = function LookupSupportedLocales(arg0, cano
 };
 export { ResolveLocale };
 export const match = function match(items, arg1, arg2, algorithm) {
-  let closure_0 = arg2;
+  closure_0 = arg2;
   const canonicalLocales = Intl.getCanonicalLocales(items);
   let str;
   if (algorithm != null) {
@@ -2206,6 +2053,5 @@ export const match = function match(items, arg1, arg2, algorithm) {
   if (!str) {
     str = "best fit";
   }
-  obj = { localeMatcher: str };
-  return ResolveLocale(arg1, canonicalLocales, obj, [], {}, () => closure_0).locale;
+  return ResolveLocale(arg1, canonicalLocales, { localeMatcher: str }, [], {}, () => closure_0).locale;
 };

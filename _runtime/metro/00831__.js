@@ -1,19 +1,15 @@
 // _runtime/metro/00831__.js
-import TRACE_FLAG_NONE from "../00695_TRACE_FLAG_NONE.js";
+import spanToJSON from "../00695_spanToJSON.js";
 import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../00715_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
 import AI_MODEL_ID_ATTRIBUTE from "../00832_AI_MODEL_ID_ATTRIBUTE.js";
-import _INTERNAL_cleanupToolCallSpan from "../00833__INTERNAL_cleanupToolCallSpan.js";
+import convertPromptToMessages from "../00833_convertPromptToMessages.js";
 import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "../00834_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
 import toolCallSpanMap2 from "../00835_toolCallSpanMap.js";
 
-let map;
-
+require = arg1;
+const dependencyMap = arg6;
 function onVercelAiSpanStart(setAttribute) {
-  let data;
-  let description;
-  const obj = TRACE_FLAG_NONE;
-  ({ data, description } = obj.spanToJSON(setAttribute));
-  obj.spanToJSON(setAttribute);
+  ({ data, description } = spanToJSON.spanToJSON(setAttribute));
   if (description) {
     if (data[AI_MODEL_ID_ATTRIBUTE.AI_TOOL_CALL_NAME_ATTRIBUTE]) {
       if (data[AI_MODEL_ID_ATTRIBUTE.AI_TOOL_CALL_ID_ATTRIBUTE]) {
@@ -29,12 +25,12 @@ function onVercelAiSpanStart(setAttribute) {
           const AI_TOOL_CALL_NAME_ATTRIBUTE = AI_MODEL_ID_ATTRIBUTE.AI_TOOL_CALL_NAME_ATTRIBUTE;
           if (null != data[AI_TOOL_CALL_NAME_ATTRIBUTE]) {
             data["gen_ai.tool.name"] = data[AI_TOOL_CALL_NAME_ATTRIBUTE];
-            delete data[AI_TOOL_CALL_NAME_ATTRIBUTE];
+            delete tmp[tmp2];
           }
           const AI_TOOL_CALL_ID_ATTRIBUTE = AI_MODEL_ID_ATTRIBUTE.AI_TOOL_CALL_ID_ATTRIBUTE;
           if (null != data[AI_TOOL_CALL_ID_ATTRIBUTE]) {
             data["gen_ai.tool.call.id"] = data[AI_TOOL_CALL_ID_ATTRIBUTE];
-            delete data[AI_TOOL_CALL_ID_ATTRIBUTE];
+            delete tmp[tmp2];
           }
           const prop = data["gen_ai.tool.call.id"];
           if (typeof prop === "string") {
@@ -52,7 +48,10 @@ function onVercelAiSpanStart(setAttribute) {
         }
       }
     }
-    const startsWithResult = data[AI_MODEL_ID_ATTRIBUTE.AI_OPERATION_ID_ATTRIBUTE] || description.startsWith("ai.");
+    let startsWithResult = data[AI_MODEL_ID_ATTRIBUTE.AI_OPERATION_ID_ATTRIBUTE];
+    if (!startsWithResult) {
+      startsWithResult = description.startsWith("ai.");
+    }
     if (startsWithResult) {
       const attr3 = setAttribute.setAttribute(
         SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
@@ -61,70 +60,71 @@ function onVercelAiSpanStart(setAttribute) {
       const replaced = description.replace("ai.", "");
       const attr4 = setAttribute.setAttribute("ai.pipeline.name", replaced);
       setAttribute.updateName(replaced);
-      const tmp9 = data[AI_MODEL_ID_ATTRIBUTE.AI_TELEMETRY_FUNCTION_ID_ATTRIBUTE];
-      const tmp10 = tmp9 && typeof tmp9 === "string";
-      if (tmp10) {
-        const _HermesInternal = HermesInternal;
-        setAttribute.updateName("" + replaced + " " + tmp9);
-        const attr5 = setAttribute.setAttribute("gen_ai.function_id", tmp9);
+      const tmp11 = data[AI_MODEL_ID_ATTRIBUTE.AI_TELEMETRY_FUNCTION_ID_ATTRIBUTE];
+      let tmp12 = tmp11;
+      if (tmp11) {
+        tmp12 = typeof tmp11 === "string";
       }
-      const tmpResult = _INTERNAL_cleanupToolCallSpan;
-      const messagesFromPrompt = tmpResult.requestMessagesFromPrompt(setAttribute, data);
-      const tmp15 =
-        data[AI_MODEL_ID_ATTRIBUTE.AI_MODEL_ID_ATTRIBUTE] &&
-        !data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE];
-      if (tmp15) {
-        setAttribute = setAttribute.setAttribute;
-        const attr6 = setAttribute(
+      if (tmp12) {
+        const _HermesInternal = HermesInternal;
+        setAttribute.updateName("" + replaced + " " + tmp11);
+        const attr5 = setAttribute.setAttribute("gen_ai.function_id", tmp11);
+      }
+      const messagesFromPrompt = convertPromptToMessages.requestMessagesFromPrompt(setAttribute, data);
+      const tmp3Result = convertPromptToMessages;
+      if (tmp17) {
+        const attr6 = setAttribute.setAttribute(
           ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE,
           data[AI_MODEL_ID_ATTRIBUTE.AI_MODEL_ID_ATTRIBUTE],
         );
       }
       const attr7 = setAttribute.setAttribute("ai.streaming", description.includes("stream"));
-      const tmpResult2 = _INTERNAL_cleanupToolCallSpan;
-      const spanOpFromName = tmpResult2.getSpanOpFromName(description);
+      tmp17 =
+        data[AI_MODEL_ID_ATTRIBUTE.AI_MODEL_ID_ATTRIBUTE] &&
+        !data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_MODEL_ATTRIBUTE];
+      const spanOpFromName = convertPromptToMessages.getSpanOpFromName(description);
       if (spanOpFromName) {
         const attr8 = setAttribute.setAttribute(
           SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP,
           spanOpFromName,
         );
       }
-      const tmp20 = data[AI_MODEL_ID_ATTRIBUTE.AI_MODEL_ID_ATTRIBUTE];
-      if (tmp20) {
+      const tmp22 = data[AI_MODEL_ID_ATTRIBUTE.AI_MODEL_ID_ATTRIBUTE];
+      if (tmp22) {
         if ("ai.generateText.doGenerate" === description) {
           const _HermesInternal6 = HermesInternal;
-          setAttribute.updateName("generate_text " + tmp20);
+          setAttribute.updateName("generate_text " + tmp22);
         } else if ("ai.streamText.doStream" === description) {
           const _HermesInternal5 = HermesInternal;
-          setAttribute.updateName("stream_text " + tmp20);
+          setAttribute.updateName("stream_text " + tmp22);
         } else if ("ai.generateObject.doGenerate" === description) {
           const _HermesInternal4 = HermesInternal;
-          setAttribute.updateName("generate_object " + tmp20);
+          setAttribute.updateName("generate_object " + tmp22);
         } else if ("ai.streamObject.doStream" === description) {
           const _HermesInternal3 = HermesInternal;
-          setAttribute.updateName("stream_object " + tmp20);
+          setAttribute.updateName("stream_object " + tmp22);
         } else if ("ai.embed.doEmbed" === description) {
           const _HermesInternal2 = HermesInternal;
-          setAttribute.updateName("embed " + tmp20);
+          setAttribute.updateName("embed " + tmp22);
         } else if ("ai.embedMany.doEmbed" === description) {
           const _HermesInternal8 = HermesInternal;
-          setAttribute.updateName("embed_many " + tmp20);
+          setAttribute.updateName("embed_many " + tmp22);
         }
       }
+      const tmp3Result2 = convertPromptToMessages;
     }
   }
+  const spanToJSONResult = spanToJSON.spanToJSON(setAttribute);
 }
 function vercelAiEventProcessor(type) {
   if ("transaction" === type.type) {
     if (type.spans) {
       const _Map = Map;
-      const self = this;
-      const self2 = this;
-      map = new Map();
+      const map = new Map();
       const spans = type.spans;
       for (const item10015 of spans) {
-        let tmp7 = processEndedVercelAiSpan(item10015);
-        let obj = _INTERNAL_cleanupToolCallSpan;
+        let tmp9 = processEndedVercelAiSpan(item10015);
+        let obj = convertPromptToMessages;
         let result = obj.accumulateTokensForParent(item10015, map);
         continue;
       }
@@ -133,8 +133,8 @@ function vercelAiEventProcessor(type) {
       const nextResult = iter.next();
       while (iter !== undefined) {
         if ("gen_ai.invoke_agent" === nextResult.op) {
-          let obj2 = _INTERNAL_cleanupToolCallSpan;
-          let result1 = obj2.applyAccumulatedTokens(tmp15, map);
+          let obj2 = convertPromptToMessages;
+          let result1 = obj2.applyAccumulatedTokens(tmp17, map);
         }
         continue;
       }
@@ -143,91 +143,18 @@ function vercelAiEventProcessor(type) {
       if (contexts != null) {
         trace = contexts.trace;
       }
-      const tmp22 = trace && "gen_ai.invoke_agent" === trace.op;
-      if (tmp22) {
-        const obj3 = _INTERNAL_cleanupToolCallSpan;
-        const result2 = obj3.applyAccumulatedTokens(trace, map);
+      let tmp24 = trace;
+      if (trace) {
+        tmp24 = "gen_ai.invoke_agent" === trace.op;
+      }
+      if (tmp24) {
+        const result2 = convertPromptToMessages.applyAccumulatedTokens(trace, map);
       }
     }
   }
   return type;
 }
 function processEndedVercelAiSpan(item10015) {
-  function addProviderMetadataToAttributes(data) {
-    const tmp3 = data[AI_MODEL_ID_ATTRIBUTE.AI_RESPONSE_PROVIDER_METADATA_ATTRIBUTE];
-    if (tmp3) {
-      try {
-        const _JSON = JSON;
-        const parsed = JSON.parse(tmp3);
-        const azure = parsed.openai ?? tmp6.azure;
-        const tmp9 = azure;
-        if (tmp9) {
-          setAttributeIfDefined(
-            data,
-            ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
-            azure.cachedPromptTokens,
-          );
-          setAttributeIfDefined(data, "gen_ai.usage.output_tokens.reasoning", azure.reasoningTokens);
-          setAttributeIfDefined(data, "gen_ai.usage.output_tokens.prediction_accepted", azure.acceptedPredictionTokens);
-          setAttributeIfDefined(data, "gen_ai.usage.output_tokens.prediction_rejected", azure.rejectedPredictionTokens);
-          setAttributeIfDefined(data, "gen_ai.conversation.id", azure.responseId);
-        }
-        if (parsed.anthropic) {
-          const usage = tmp6.anthropic.usage;
-          let prop;
-          if (usage != null) {
-            prop = usage.cache_read_input_tokens;
-          }
-          if (prop == null) {
-            prop = tmp6.anthropic.cacheReadInputTokens;
-          }
-          setAttributeIfDefined(
-            data,
-            ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
-            prop,
-          );
-          const usage2 = tmp6.anthropic.usage;
-          let prop1;
-          if (usage2 != null) {
-            prop1 = usage2.cache_creation_input_tokens;
-          }
-          if (prop1 == null) {
-            prop1 = tmp6.anthropic.cacheCreationInputTokens;
-          }
-          setAttributeIfDefined(
-            data,
-            ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHE_WRITE_ATTRIBUTE,
-            prop1,
-          );
-        }
-        const bedrock = tmp6.bedrock;
-        let usage1;
-        if (bedrock != null) {
-          usage1 = bedrock.usage;
-        }
-        if (usage1) {
-          setAttributeIfDefined(
-            data,
-            ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
-            parsed.bedrock.usage.cacheReadInputTokens,
-          );
-          setAttributeIfDefined(
-            data,
-            ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHE_WRITE_ATTRIBUTE,
-            parsed.bedrock.usage.cacheWriteInputTokens,
-          );
-        }
-        if (parsed.deepseek) {
-          setAttributeIfDefined(
-            data,
-            ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
-            parsed.deepseek.promptCacheHitTokens,
-          );
-          setAttributeIfDefined(data, "gen_ai.usage.input_tokens.cache_miss", parsed.deepseek.promptCacheMissTokens);
-        }
-      } catch (err) {}
-    }
-  }
   const data = item10015.data;
   if ("auto.vercelai.otel" === item10015.origin) {
     renameAttributeKey(
@@ -252,9 +179,7 @@ function processEndedVercelAiSpan(item10015) {
         typeof data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE] === "number";
     }
     if (tmp35) {
-      const GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE =
-        ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE;
-      data[GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+      data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
         data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] +
         data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE];
     }
@@ -274,11 +199,10 @@ function processEndedVercelAiSpan(item10015) {
       isArray = Array.isArray(data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_TOOLS_ATTRIBUTE]);
     }
     if (isArray) {
-      const AI_PROMPT_TOOLS_ATTRIBUTE = AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_TOOLS_ATTRIBUTE;
-      const tmp29Result = _INTERNAL_cleanupToolCallSpan;
-      data[AI_PROMPT_TOOLS_ATTRIBUTE] = tmp29Result.convertAvailableToolsToJsonString(
+      data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_TOOLS_ATTRIBUTE] = convertPromptToMessages.convertAvailableToolsToJsonString(
         data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_TOOLS_ATTRIBUTE],
       );
+      const tmp29Result = convertPromptToMessages;
     }
     renameAttributeKey(
       data,
@@ -302,7 +226,91 @@ function processEndedVercelAiSpan(item10015) {
       AI_MODEL_ID_ATTRIBUTE.AI_MODEL_ID_ATTRIBUTE,
       ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE,
     );
-    addProviderMetadataToAttributes(data);
+    (function addProviderMetadataToAttributes(data) {
+      const tmp3 = data[AI_MODEL_ID_ATTRIBUTE.AI_RESPONSE_PROVIDER_METADATA_ATTRIBUTE];
+      if (tmp3) {
+        try {
+          const _JSON = JSON;
+          const parsed = JSON.parse(tmp3);
+          let azure = parsed.openai;
+          if (azure == null) {
+            azure = tmp6.azure;
+          }
+          if (azure) {
+            setAttributeIfDefined(
+              data,
+              ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
+              azure.cachedPromptTokens,
+            );
+            setAttributeIfDefined(data, "gen_ai.usage.output_tokens.reasoning", azure.reasoningTokens);
+            setAttributeIfDefined(
+              data,
+              "gen_ai.usage.output_tokens.prediction_accepted",
+              azure.acceptedPredictionTokens,
+            );
+            setAttributeIfDefined(
+              data,
+              "gen_ai.usage.output_tokens.prediction_rejected",
+              azure.rejectedPredictionTokens,
+            );
+            setAttributeIfDefined(data, "gen_ai.conversation.id", azure.responseId);
+          }
+          if (parsed.anthropic) {
+            const usage = tmp6.anthropic.usage;
+            let prop;
+            if (usage != null) {
+              prop = usage.cache_read_input_tokens;
+            }
+            if (prop == null) {
+              prop = tmp6.anthropic.cacheReadInputTokens;
+            }
+            setAttributeIfDefined(
+              data,
+              ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
+              prop,
+            );
+            const usage2 = tmp6.anthropic.usage;
+            let prop1;
+            if (usage2 != null) {
+              prop1 = usage2.cache_creation_input_tokens;
+            }
+            if (prop1 == null) {
+              prop1 = tmp6.anthropic.cacheCreationInputTokens;
+            }
+            setAttributeIfDefined(
+              data,
+              ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHE_WRITE_ATTRIBUTE,
+              prop1,
+            );
+          }
+          const bedrock = tmp6.bedrock;
+          let usage1;
+          if (bedrock != null) {
+            usage1 = bedrock.usage;
+          }
+          if (usage1) {
+            setAttributeIfDefined(
+              data,
+              ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
+              tmp6.bedrock.usage.cacheReadInputTokens,
+            );
+            setAttributeIfDefined(
+              data,
+              ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHE_WRITE_ATTRIBUTE,
+              tmp6.bedrock.usage.cacheWriteInputTokens,
+            );
+          }
+          if (parsed.deepseek) {
+            setAttributeIfDefined(
+              data,
+              ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
+              parsed.deepseek.promptCacheHitTokens,
+            );
+            setAttributeIfDefined(data, "gen_ai.usage.input_tokens.cache_miss", parsed.deepseek.promptCacheMissTokens);
+          }
+        } catch (err) {}
+      }
+    })(data);
     const _Object = Object;
     const keys = Object.keys(data);
     const iter = keys[Symbol.iterator]();
@@ -320,7 +328,7 @@ function processEndedVercelAiSpan(item10015) {
 function renameAttributeKey(data, AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE, GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE) {
   if (null != data[AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE]) {
     data[GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = data[AI_USAGE_CACHED_INPUT_TOKENS_ATTRIBUTE];
-    delete tmp[tmp2];
+    delete tmp2[tmp];
   }
 }
 function setAttributeIfDefined(data, GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE, acceptedPredictionTokens) {
@@ -328,7 +336,7 @@ function setAttributeIfDefined(data, GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE,
     data[GEN_AI_USAGE_INPUT_TOKENS_CACHED_ATTRIBUTE] = acceptedPredictionTokens;
   }
 }
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const addVercelAiProcessors = function addVercelAiProcessors(on) {
   on.on("spanStart", onVercelAiSpanStart);

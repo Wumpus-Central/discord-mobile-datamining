@@ -5,23 +5,19 @@ export const utf8read = function utf8read(arg0) {
   if (arg0.length < 1) {
     return "";
   } else {
-    let joined;
     const items = [];
     const items1 = [];
     let num2 = 0;
     let num4 = 0;
     let num3 = 0;
-    const length = arg0.length;
     if (0 < length) {
       while (true) {
-        let num;
-        let sum1;
         let sum = num4 + 1;
         let tmp2 = arg0[num4];
         if (tmp2 < 128) {
-          num = num2 + 1;
+          let num = num2 + 1;
           items1[num2] = tmp2;
-          sum1 = sum;
+          let sum1 = sum;
         } else {
           if (tmp2 > 191) {
             if (tmp2 < 224) {
@@ -66,20 +62,17 @@ export const utf8read = function utf8read(arg0) {
     }
     if (items.length) {
       if (num3) {
-        const push = items.push;
         if (typeof fromCharCodes === "function") {
           const _String5 = String;
-          const fromCharCode3 = String.fromCharCode;
           const _String6 = String;
-          push(fromCharCode3.apply(String, tmp17));
+          items.push(fromCharCode3.apply(String, tmp17));
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       }
-      joined = items.join("");
+      let joined = items.join("");
     } else if (typeof fromCharCodes === "function") {
       const _String3 = String;
-      const fromCharCode2 = String.fromCharCode;
       const _String4 = String;
       joined = fromCharCode2.apply(String, tmp14);
     } else {

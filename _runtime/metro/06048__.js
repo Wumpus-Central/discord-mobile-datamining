@@ -1,9 +1,8 @@
 // _runtime/metro/06048__.js
 
 export const getHeaderTitle = function getHeaderTitle(options, name) {
-  let title;
   if (typeof options.headerTitle === "string") {
-    title = options.headerTitle;
+    let title = options.headerTitle;
   } else {
     title = name;
     if (undefined !== options.title) {

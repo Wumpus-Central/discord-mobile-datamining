@@ -1,6 +1,6 @@
 // _runtime/00061_processTransformOrigin.js
 import _modDef38 from "metro/00038__.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__.js";
 
 const re2 = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;
 
@@ -18,14 +18,13 @@ export default function processTransformOrigin(str) {
         let formatted = str.toLowerCase();
         let sum = num4 + 1;
         if ("left" !== formatted) {
-          let num;
           if ("right" !== formatted) {
             if ("top" !== formatted) {
               if ("bottom" !== formatted) {
                 if ("center" === formatted) {
                   let tmp7 = _modDef38(2 !== num4, "Transform-origin value %s cannot be used for z-position", str);
                   items[num4] = "50%";
-                  num = sum;
+                  let num = sum;
                 } else if (str.endsWith("%")) {
                   items[num4] = str;
                   num = sum;

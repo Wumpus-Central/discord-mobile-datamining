@@ -1,60 +1,40 @@
 // _runtime/metro/08003__.js
 import _mod8004 from "08004__.js";
 import _mod8012 from "08012__.js";
-import DeprecatedStyleSheetPropType_mod from "../08005_DeprecatedStyleSheetPropType.js";
-import module_4713_mod from "04713__.js";
+import flattenStyle from "08005__.js";
 import "module_4713";
+import emptyFunction_mod from "04713__.js";
 
-let DeprecatedStyleSheetPropType;
-let items;
-let items1;
-let module_4713;
-let oneOfType;
-let oneOfType2;
-const obj = {
-  style: DeprecatedStyleSheetPropType(_mod8012),
-  source: oneOfType(items),
-  blurRadius: module_4713.number,
-  defaultSource: module_4713.number,
-  loadingIndicatorSource: oneOfType2(items1),
-  progressiveRenderingEnabled: module_4713.bool,
-  fadeDuration: module_4713.number,
-  internal_analyticTag: module_4713.string,
-  onLoadStart: module_4713.func,
-  onError: module_4713.func,
-  onLoad: module_4713.func,
-  onLoadEnd: module_4713.func,
-  testID: module_4713.string,
-  resizeMethod: module_4713.oneOf(["auto", "resize", "scale"]),
-  resizeMode: module_4713.oneOf(["cover", "contain", "stretch", "repeat", "center"]),
-};
+const obj = {};
 const module_8004 = Object.assign(_mod8004);
-DeprecatedStyleSheetPropType = DeprecatedStyleSheetPropType_mod;
-module_4713 = module_4713_mod;
-oneOfType = module_4713.oneOfType;
-module_4713 = module_4713_mod;
-const shape = module_4713.shape;
-const obj2 = { uri: module_4713.string, headers: module_4713.objectOf(module_4713.string) };
-module_4713 = module_4713_mod;
-items = [shape(obj2), module_4713.number];
-module_4713 = module_4713_mod;
-const arrayOf = module_4713.arrayOf;
-module_4713 = module_4713_mod;
-const size = {
-  uri: module_4713.string,
-  width: module_4713.number,
-  height: module_4713.number,
-  headers: module_4713.objectOf(module_4713.string),
-};
-const shape2 = module_4713.shape;
-items[2] = arrayOf(shape2(size));
-module_4713 = module_4713_mod;
-oneOfType2 = module_4713.oneOfType;
-module_4713 = module_4713_mod;
-items1 = [,];
-const obj3 = { uri: module_4713.string };
-items1[0] = module_4713.shape(obj3);
-items1[1] = module_4713.number;
-module_4713 = module_4713_mod;
+obj.style = flattenStyle(_mod8012);
+let emptyFunction = emptyFunction_mod;
+const obj2 = { uri: emptyFunction.string, headers: null };
+let emptyFunction = emptyFunction_mod;
+obj2.headers = emptyFunction.objectOf(emptyFunction.string);
+const items = [emptyFunction.shape(obj2), emptyFunction.number];
+let emptyFunction = emptyFunction_mod;
+const size = { uri: emptyFunction.string, width: emptyFunction.number, height: emptyFunction.number, headers: null };
+let emptyFunction = emptyFunction_mod;
+size.headers = emptyFunction.objectOf(emptyFunction.string);
+items[2] = emptyFunction.arrayOf(emptyFunction.shape(size));
+obj.source = emptyFunction.oneOfType(items);
+obj.blurRadius = emptyFunction.number;
+obj.defaultSource = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+const items1 = [emptyFunction.shape({ uri: emptyFunction.string }), emptyFunction.number];
+obj.loadingIndicatorSource = emptyFunction.oneOfType(items1);
+obj.progressiveRenderingEnabled = emptyFunction.bool;
+obj.fadeDuration = emptyFunction.number;
+obj.internal_analyticTag = emptyFunction.string;
+obj.onLoadStart = emptyFunction.func;
+obj.onError = emptyFunction.func;
+obj.onLoad = emptyFunction.func;
+obj.onLoadEnd = emptyFunction.func;
+obj.testID = emptyFunction.string;
+let emptyFunction = emptyFunction_mod;
+obj.resizeMethod = emptyFunction.oneOf(["auto", "resize", "scale"]);
+let emptyFunction = emptyFunction_mod;
+obj.resizeMode = emptyFunction.oneOf(["cover", "contain", "stretch", "repeat", "center"]);
 
 export default obj;

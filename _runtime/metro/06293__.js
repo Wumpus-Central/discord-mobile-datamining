@@ -1,12 +1,10 @@
 // _runtime/metro/06293__.js
-import react from "../00019_react.js";
-import GESTURE_SOURCE from "../06120_GESTURE_SOURCE.js";
-import react_native from "../00017_react-native.js";
+import _mod19 from "00019__.js";
+import value22 from "../06120_value2.js";
+import get_ActivityIndicator from "00017__.js";
 
-let Platform;
-let c3;
-const useEffect = react.useEffect;
-({ Keyboard: c3, Platform } = react_native);
+const useEffect = _mod19.useEffect;
+({ Keyboard: c3, Platform } = get_ActivityIndicator);
 const keyboardDidShow = "keyboardDidShow";
 const keyboardDidHide = "keyboardDidHide";
 let closure_6 = {
@@ -22,31 +20,36 @@ const __initData = {
 export const useKeyboard = (includeBottomOffset) => {
   includeBottomOffset = includeBottomOffset.includeBottomOffset;
   let shouldHandleKeyboardEvents;
+  shouldHandleKeyboardEvents = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(false);
   let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  shouldHandleKeyboardEvents = obj.useSharedValue(false);
+  state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(
+    includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED,
+  );
   const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const state = obj2.useSharedValue(includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED);
+  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
   const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const height = obj3.useSharedValue(0);
+  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
   const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationEasing = obj4.useSharedValue("keyboard");
+  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
   const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationDuration = obj5.useSharedValue(500);
+  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
   const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const sharedValue5 = obj6.useSharedValue([]);
   const fn = function v(value, arg1, value2, value3, arg4) {
     value = arg1;
-    if (value === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
+    if (value === value22.KEYBOARD_STATE.SHOWN) {
       if (!shouldHandleKeyboardEvents.value) {
         const items = [value, value, value2, value3];
         sharedValue5.value = items;
       }
     }
-    if (value !== GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
+    if (value !== value22.KEYBOARD_STATE.SHOWN) {
       value = height.value;
     }
     height.value = value;
-    const tmp5 = arg4 && includeBottomOffset;
+    let tmp5 = arg4;
+    if (arg4) {
+      tmp5 = includeBottomOffset;
+    }
     if (tmp5) {
       height.value = height.value + arg4;
     }
@@ -68,26 +71,13 @@ export const useKeyboard = (includeBottomOffset) => {
   };
   fn.__workletHash = 7905199978020;
   fn.__initData = sharedValue5;
-  ({
-    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
-    shouldHandleKeyboardEvents,
-    temporaryCachedKeyboardEvent: sharedValue5,
-    keyboardHeight: height,
-    includeBottomOffset,
-    keyboardAnimationDuration: animationDuration,
-    keyboardAnimationEasing: animationEasing,
-    keyboardState: state,
-  });
   const workletCallback = obj7.useWorkletCallback(fn, []);
   let items = [workletCallback];
   state(() => {
-    let closure_0 = height.addListener(animationEasing, (endCoordinates) => {
-      let duration;
-      let easing;
-      ({ duration, easing } = endCoordinates);
+    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
       const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-      const runOnUIResult = obj.runOnUI(workletCallback);
-      runOnUIResult(
+      ({ duration, easing } = endCoordinates);
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
         includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN,
         endCoordinates.endCoordinates.height,
         duration,
@@ -97,10 +87,9 @@ export const useKeyboard = (includeBottomOffset) => {
           endCoordinates.endCoordinates.screenY,
       );
     });
-    let closure_1 = height.addListener(animationDuration, (endCoordinates) => {
+    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
       const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-      const runOnUIResult = obj.runOnUI(workletCallback);
-      runOnUIResult(
+      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
         includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN,
         endCoordinates.endCoordinates.height,
         endCoordinates.duration,
@@ -112,6 +101,16 @@ export const useKeyboard = (includeBottomOffset) => {
       closure_1.remove();
     };
   }, items);
+  const obj8 = {
+    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
+    shouldHandleKeyboardEvents,
+    temporaryCachedKeyboardEvent: sharedValue5,
+    keyboardHeight: height,
+    includeBottomOffset,
+    keyboardAnimationDuration: animationDuration,
+    keyboardAnimationEasing: animationEasing,
+    keyboardState: state,
+  };
   const fn2 = function b() {
     return shouldHandleKeyboardEvents.value;
   };
@@ -120,7 +119,7 @@ export const useKeyboard = (includeBottomOffset) => {
   fn2.__initData = workletCallback;
   const fn3 = function y(arg0) {
     let tmp = arg0;
-    const value = sharedValue5.value;
+    value = sharedValue5.value;
     if (arg0) {
       tmp = value.length > 0;
     }
@@ -131,7 +130,6 @@ export const useKeyboard = (includeBottomOffset) => {
   fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
   fn3.__workletHash = 16636741173520;
   fn3.__initData = __initData;
-  const obj9 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animatedReaction = obj9.useAnimatedReaction(fn2, fn3, []);
+  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
   return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
 };

@@ -10,8 +10,8 @@ export default _mod14097
       const tmp3 = _mod14107("Symbol");
       let tmpResultResult = _mod14105(tmp3);
       if (tmpResultResult) {
+        tmpResultResult = _mod14108(tmp3.prototype, Object(arg0));
         const tmpResult = _mod14108;
-        tmpResultResult = tmpResult(tmp3.prototype, Object(arg0));
       }
       return tmpResultResult;
     };

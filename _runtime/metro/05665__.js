@@ -4618,7 +4618,7 @@ const obj = {
     "puzzle",
   ],
   teddy_bear: ["jeu", "jouet", "nounours", "ours", "ours en peluche", "peluche"],
-  "pi\u00f1ata": ["5 mai", "bonbons", "cinco de mayo", "confiseries", "f\u00EAte", "mexicain", "pi\u00F1ata"],
+  piñata: ["5 mai", "bonbons", "cinco de mayo", "confiseries", "f\u00EAte", "mexicain", "pi\u00F1ata"],
   mirror_ball: ["boule \u00E0 facettes", "briller", "danse", "disco", "f\u00EAte", "soir\u00E9e"],
   nesting_dolls: [
     "embo\u00EEt\u00E9",

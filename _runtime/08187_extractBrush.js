@@ -1,8 +1,8 @@
 // _runtime/08187_extractBrush.js
-import react_native from "00017_react-native.js";
-import RGB_RGBA_PATTERN from "08188_RGB_RGBA_PATTERN.js";
+import _mod17 from "metro/00017__.js";
+import percentTo255 from "08188_percentTo255.js";
 
-const processColor = react_native.processColor;
+const processColor = _mod17.processColor;
 const re3 = /^url\(#(.+)\)$/;
 let closure_4 = { type: 2 };
 let closure_5 = { type: 3 };
@@ -23,14 +23,13 @@ export default function extractBrush(str) {
       match = str.match(re3);
     }
     if (match) {
-      return { type: 1, brushRef: match[1] };
+      const obj2 = { type: 1, brushRef: match[1] };
+      return obj2;
     } else {
-      let tmp7;
-      const obj = RGB_RGBA_PATTERN;
-      const tmp4 = processColor(obj.convertPercentageColor(str));
+      const tmp4 = processColor(percentTo255.convertPercentageColor(str));
       if (typeof tmp4 === "number") {
         const action = { type: 0, payload: tmp4 };
-        tmp7 = action;
+        let tmp7 = action;
       } else {
         const _console = console;
         const _String = String;

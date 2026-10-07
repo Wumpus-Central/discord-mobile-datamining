@@ -5,9 +5,12 @@ export default function arrayReduce(arg0, fn, arg2, arg3) {
   if (null != arg0) {
     num = arg0.length;
   }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = num;
+  }
   let first = arg2;
   let num2 = -1;
-  const tmp = arg3 && num;
   if (tmp) {
     first = arg0[0];
     num2 = 0;

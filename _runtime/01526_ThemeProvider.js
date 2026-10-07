@@ -1,13 +1,11 @@
 // _runtime/01526_ThemeProvider.js
-import Fragment from "react/00021_Fragment.js";
-import react2 from "01527_react.js";
-import react from "00019_react.js";
+import _mod1527 from "metro/01527__.js";
+import noop from "metro/00019__.js";
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 
 export const ThemeProvider = function ThemeProvider(arg0) {
-  let children;
-  let value;
   ({ value, children } = arg0);
-  return jsx(react2.ThemeContext.Provider, { value, children });
+  return jsx(_mod1527.ThemeContext.Provider, { value, children });
 };

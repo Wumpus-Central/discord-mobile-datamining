@@ -1,43 +1,21 @@
 // _runtime/metro/05761__.js
-import InnerScreenDefault from "../05739_InnerScreen.js";
-import warnOnceDefault from "../05758_warnOnce.js";
-import _modDef5763 from "05763__.js";
+import _modDef5739 from "05739__.js";
+import _modDef5758 from "05758__.js";
+import styleDefault from "../05763_style.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import react from "../00019_react.js";
-import react_native from "../00017_react-native.js";
-import Fragment from "../react/00021_Fragment.js";
+import noop from "00019__.js";
 
-let dependencyMap, importDefault;
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Platform, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const styles = StyleSheet.create({
+  container: { flex: 1 },
+  absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 },
+});
 
-let Platform;
-let StyleSheet;
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-({ Platform, StyleSheet } = react_native);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = Fragment);
-const forwardRefResult = react.forwardRef(function ScreenStackItem(arg0, arg1) {
-  let activityState;
-  let children;
-  let container;
-  let contentStyle;
-  let flag6;
-  let headerConfig;
-  let items2;
-  let obj3;
-  let onHeaderHeightChange;
-  let ref;
-  let ref2;
-  let screenId;
-  let scrollEdgeEffects;
-  let sheetAllowedDetents;
-  let shouldFreeze;
-  let stackPresentation;
-  let style;
-  let tmp12Result;
-  let tmp18Result;
-  let tmp20Result;
-  let unstable_sheetFooter;
+export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
   ({ children, headerConfig, stackPresentation, sheetAllowedDetents, screenId } = arg0);
   ({ scrollEdgeEffects, unstable_sheetFooter } = arg0);
   ({ activityState, shouldFreeze, contentStyle, style, onHeaderHeightChange } = arg0);
@@ -61,15 +39,12 @@ const forwardRefResult = react.forwardRef(function ScreenStackItem(arg0, arg1) {
   importDefault = undefined;
   dependencyMap = undefined;
   let flag5;
-  let closure_4;
+  closure_4 = undefined;
   let hidden;
   if (headerConfig != null) {
     hidden = headerConfig.hidden;
   }
   let flag;
-  const tmp3 = !hidden;
-  const useEdgeInsetApplication = screenId(5749).useEdgeInsetApplication;
-  screenId(5749);
   if (headerConfig != null) {
     flag = headerConfig.disableTopInsetApplication;
   }
@@ -97,8 +72,6 @@ const forwardRefResult = react.forwardRef(function ScreenStackItem(arg0, arg1) {
   if (flag4 == null) {
     flag4 = false;
   }
-  let obj = flag5;
-  const nextContextValue = useEdgeInsetApplication(tmp3, flag, flag2, flag3, flag4).nextContextValue;
   importDefault = flag5.useRef(null);
   dependencyMap = flag5.useContext(screenId(5759).RNSScreensRefContext);
   const imperativeHandle = flag5.useImperativeHandle(arg1, () => ref.current);
@@ -112,10 +85,10 @@ const forwardRefResult = react.forwardRef(function ScreenStackItem(arg0, arg1) {
   if (flag5 == null) {
     flag5 = false;
   }
-  closure_4 = obj.useRef(flag5);
+  closure_4 = obj2.useRef(flag5);
   const items = [flag5, stackPresentation];
-  const effect = obj.useEffect(() => {
-    warnOnceDefault(
+  const effect = obj2.useEffect(() => {
+    _modDef5758(
       false,
       "Dynamically changing header's visibility in modals will result in remounting the screen and losing all local state.",
     );
@@ -131,60 +104,58 @@ const forwardRefResult = react.forwardRef(function ScreenStackItem(arg0, arg1) {
   if (headerConfig != null) {
     blurEffect = headerConfig.blurEffect;
   }
-  let tmp11 = undefined !== blurEffect;
-  if (tmp11) {
-    tmp11 = "none" !== headerConfig.blurEffect;
+  let tmp10 = undefined !== blurEffect;
+  if (tmp10) {
+    tmp10 = "none" !== headerConfig.blurEffect;
   }
-  const tmp13 = warnOnceDefault;
+  let obj = screenId(5749);
+  const tmp3 = !hidden;
   if (isIOS26OrHigher) {
-    isIOS26OrHigher = tmp11;
+    isIOS26OrHigher = tmp10;
   }
   if (isIOS26OrHigher) {
     isIOS26OrHigher = screenId(5762).isIOS26OrHigher;
   }
-  tmp13(
+  _modDef5758(
     isIOS26OrHigher,
     "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.",
   );
   if ("formSheet" !== stackPresentation) {
-    container = closure_7.container;
+    let container = closure_7.container;
   } else if ("fitToContents" === sheetAllowedDetents) {
     container = closure_7.absoluteWithNoBottom;
   } else {
     container = closure_7.container;
   }
-  const isIOS26OrHigher2 = screenId(5762).isIOS26OrHigher;
-  const obj2 = { value: nextContextValue, children: closure_4(tmp12Result, obj3) };
-  const Provider = screenId(5749).EdgeInsetApplicationContext.Provider;
-  obj3 = { contentStyle, style: container, stackPresentation, children: tmp20Result };
-  tmp20Result = children;
-  tmp12Result = _modDef5763;
-  if (isIOS26OrHigher2) {
-    const obj4 = { edges: {}, children };
-    tmp20Result = tmp20(screenId(5766).SafeAreaView, obj4);
+  const obj3 = { value: obj.useEdgeInsetApplication(tmp3, flag, flag2, flag3, flag4).nextContextValue, children: null };
+  const obj4 = { contentStyle, style: container, stackPresentation, children: null };
+  let tmp19Result = children;
+  if (screenId(5762).isIOS26OrHigher) {
+    const obj5 = { edges: {}, children };
+    tmp19Result = tmp19(screenId(5766).SafeAreaView, obj5);
   }
-  const items1 = [closure_4(Provider, obj2), ,];
-  const obj5 = {};
-  const ScreenStackHeaderConfig = screenId(5748).ScreenStackHeaderConfig;
+  obj4.children = tmp19Result;
+  obj3.children = closure_4(styleDefault, obj4);
+  const items1 = [closure_4(screenId(5749).EdgeInsetApplicationContext.Provider, obj3), ,];
   const merged1 = Object.assign(headerConfig);
-  items1[1] = closure_4(ScreenStackHeaderConfig, obj5);
-  let tmp20Result2 = "formSheet" === stackPresentation && unstable_sheetFooter;
-  if (tmp20Result2) {
-    const obj6 = { children: unstable_sheetFooter() };
-    const FooterComponent = screenId(5768).FooterComponent;
-    tmp20Result2 = tmp20(FooterComponent, obj6);
+  items1[1] = closure_4(screenId(5748).ScreenStackHeaderConfig, {});
+  let tmp19Result2 = "formSheet" === stackPresentation && unstable_sheetFooter;
+  if (tmp19Result2) {
+    const obj7 = { children: unstable_sheetFooter() };
+    tmp19Result2 = tmp19(screenId(5768).FooterComponent, obj7);
   }
-  items1[2] = tmp20Result2;
-  const obj7 = {
+  items1[2] = tmp19Result2;
+  const obj6 = {};
+  const tmp11Result = styleDefault;
+  const obj8 = {
     ref(current) {
-      ref.current = current;
-      if (null !== ref2) {
-        current = ref2.current;
+      closure_1.current = current;
+      if (null !== closure_2) {
         if (null === current) {
-          delete current[screenId];
+          delete tmp2[tmp];
         } else {
           const obj = { current };
-          current[screenId] = obj;
+          tmp5[screenId] = obj;
         }
       } else {
         const _console = console;
@@ -199,29 +170,27 @@ const forwardRefResult = react.forwardRef(function ScreenStackItem(arg0, arg1) {
     shouldFreeze,
     screenId,
     stackPresentation,
-    hasLargeHeader: flag6,
-    sheetAllowedDetents,
-    style: items2,
-    scrollEdgeEffects,
-    onHeaderHeightChange,
-    children: tmp18Result,
+    hasLargeHeader: null,
+    sheetAllowedDetents: null,
+    style: null,
+    scrollEdgeEffects: null,
+    onHeaderHeightChange: null,
   };
-  flag6 = undefined;
-  tmp18Result = closure_6(closure_5, { children: items1 });
-  const tmp12Result2 = InnerScreenDefault;
+  let flag6;
+  const tmp17Result = closure_6(closure_5, { children: items1 });
   if (headerConfig != null) {
     flag6 = headerConfig.largeTitle;
   }
   if (flag6 == null) {
     flag6 = false;
   }
-  items2 = [style, undefined];
+  obj8.hasLargeHeader = flag6;
+  obj8.sheetAllowedDetents = sheetAllowedDetents;
+  const items2 = [style, undefined];
+  obj8.style = items2;
+  obj8.scrollEdgeEffects = scrollEdgeEffects;
+  obj8.onHeaderHeightChange = onHeaderHeightChange;
   const merged2 = Object.assign(merged);
-  return closure_4(tmp12Result2, obj7);
+  obj8.children = tmp17Result;
+  return closure_4(_modDef5739, obj8);
 });
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-  absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 },
-});
-
-export default forwardRefResult;

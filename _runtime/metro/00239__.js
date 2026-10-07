@@ -3,8 +3,7 @@ let c0 = false;
 
 export default {
   addTimespan() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -13,8 +12,7 @@ export default {
     }
   },
   append() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -23,8 +21,7 @@ export default {
     }
   },
   clear() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -33,8 +30,7 @@ export default {
     }
   },
   clearCompleted() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -43,8 +39,7 @@ export default {
     }
   },
   close() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -53,8 +48,7 @@ export default {
     }
   },
   currentTimestamp() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -64,8 +58,7 @@ export default {
     return 0;
   },
   getExtras() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -75,8 +68,7 @@ export default {
     return {};
   },
   getPoints() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -86,8 +78,7 @@ export default {
     return {};
   },
   getPointExtras() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -97,8 +88,7 @@ export default {
     return {};
   },
   getTimespans() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -108,8 +98,7 @@ export default {
     return {};
   },
   hasTimespan() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -119,8 +108,7 @@ export default {
     return false;
   },
   isClosed() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -130,8 +118,7 @@ export default {
     return false;
   },
   logEverything() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -140,8 +127,7 @@ export default {
     }
   },
   markPoint() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -150,8 +136,7 @@ export default {
     }
   },
   removeExtra() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -160,8 +145,7 @@ export default {
     }
   },
   setExtra() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -170,8 +154,7 @@ export default {
     }
   },
   startTimespan() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(
@@ -180,8 +163,7 @@ export default {
     }
   },
   stopTimespan() {
-    const tmp = c0;
-    if (!tmp) {
+    if (!c0) {
       c0 = true;
       const _console = console;
       console.warn(

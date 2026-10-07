@@ -1,18 +1,15 @@
 // _runtime/metro/06369__.js
 import RecyclerViewManager from "../06370_RecyclerViewManager.js";
-import _slicedToArray from "06349__slicedToArray.js";
-import react from "../00019_react.js";
+import _slicedToArray from "06349__.js";
 
-let c3;
-let closure_4;
-let hasOwnProperty;
-({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = react);
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
 
 export const useRecyclerViewManager = (data) => {
-  let velocityTracker;
   let recyclerViewManager = velocityTracker(
     closure_5(() => {
-      recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(data);
+      recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
       return recyclerViewManager;
     }),
     1,
@@ -25,11 +22,10 @@ export const useRecyclerViewManager = (data) => {
     1,
   )[0];
   const items = [data];
-  data = data.data;
   closure_4(() => {
-    recyclerViewManager.updateProps(data);
+    recyclerViewManager.updateProps(closure_0);
   }, items);
-  const items1 = [data];
+  const items1 = [data.data];
   closure_4(() => {
     recyclerViewManager.processDataUpdate();
   }, items1);

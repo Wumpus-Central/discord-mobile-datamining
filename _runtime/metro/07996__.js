@@ -5,8 +5,8 @@ export default (obj) => {
     const _Array = Array;
     if (!Array.isArray(obj)) {
       obj = {};
-      for (const key10010 in obj) {
-        if (!obj.hasOwnProperty(key10010)) {
+      for (const key10010 in arg0) {
+        if (!arg0.hasOwnProperty(key10010)) {
           continue;
         } else {
           obj[key10010] = key10010;

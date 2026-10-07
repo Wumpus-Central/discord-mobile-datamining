@@ -17,5 +17,12 @@ export const getFramesToPop = function getFramesToPop(syntheticException) {
   return num;
 };
 export const isErrorLike = function isErrorLike(cause) {
-  return null !== cause && typeof cause === "object" && "stack" in cause && typeof cause.stack === "string";
+  let tmp = null !== cause && typeof cause === "object";
+  if (tmp) {
+    tmp = "stack" in cause;
+  }
+  if (tmp) {
+    tmp = typeof cause.stack === "string";
+  }
+  return tmp;
 };

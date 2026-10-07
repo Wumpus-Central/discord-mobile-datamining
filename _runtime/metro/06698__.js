@@ -1,148 +1,121 @@
 // _runtime/metro/06698__.js
+import _mod17 from "00017__.js";
 import _mod6699 from "06699__.js";
-import react_native from "../00017_react-native.js";
-
-let hasOwnProperty;
 
 const self = this;
-let tmp = this && self.__createBinding;
-if (!tmp) {
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          for (const key10009 in arg0) {
+            let tmp9 = "default" !== key10009;
+            if (!tmp9) {
+              if (!tmp9) {
+                continue;
+              } else {
+                let tmp6 = self2(obj, arg0, key10009);
+                continue;
+              }
+              continue;
+            } else {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10009);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10009);
+              }
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    exports.Clipboard = undefined;
+    const Platform = _mod17;
+    let closure_3 = fn(_mod6699);
+    let obj = {
+      getString() {
+        return closure_3.default.getString();
+      },
+      getStrings() {
+        return closure_3.default.getStrings();
+      },
+      getImagePNG() {
+        return closure_3.default.getImagePNG();
+      },
+      getImageJPG() {
+        return closure_3.default.getImageJPG();
+      },
+      setImage(arg0) {
+        if ("ios" === Platform.Platform.OS) {
+          closure_3.default.setImage(arg0);
+          const _default = closure_3.default;
+        }
+      },
+      getImage() {
+        return closure_3.default.getImage();
+      },
+      setString(arg0) {
+        closure_3.default.setString(arg0);
+      },
+      setStrings(arg0) {
+        closure_3.default.setStrings(arg0);
+      },
+      hasString() {
+        return closure_3.default.hasString();
+      },
+      hasImage() {
+        return closure_3.default.hasImage();
+      },
+      hasURL() {
+        if ("ios" === Platform.Platform.OS) {
+          return closure_3.default.hasURL();
+        }
+      },
+      hasNumber() {
+        if ("ios" === Platform.Platform.OS) {
+          return closure_3.default.hasNumber();
+        }
+      },
+      hasWebURL() {
+        if ("ios" === Platform.Platform.OS) {
+          return closure_3.default.hasWebURL();
+        }
+      },
+      addListener(arg0) {
+        return closure_3.addListener(arg0);
+      },
+      removeAllListeners() {
+        closure_3.removeAllListeners();
+      },
+    };
+    exports.Clipboard = obj;
+  } else {
+    const _Object2 = Object;
+  }
+} else {
   let _Object = Object;
-  tmp = Object.create
-    ? (arg0, arg1, arg2, arg3) => {
-        closure_0 = arg1;
-        closure_1 = arg2;
-        let tmp = arg3;
-        if (undefined === arg3) {
-          tmp = arg2;
-        }
-        const obj = {
-          enumerable: true,
-          get() {
-            return closure_0[closure_1];
-          },
-        };
-        Object.defineProperty(arg0, tmp, obj);
-      }
-    : (arg0, arg1, arg2, arg3) => {
-        let tmp = arg3;
-        if (undefined === arg3) {
-          tmp = arg2;
-        }
-        arg0[tmp] = arg1[arg2];
-      };
 }
-let closure_0 = tmp;
-let tmp3 = self && self.__setModuleDefault;
-if (!tmp3) {
-  const _Object2 = Object;
-  tmp3 = Object.create
-    ? (arg0, value) => {
-        const obj = { enumerable: true, value };
-        Object.defineProperty(arg0, "default", obj);
-      }
-    : (arg0, arg1) => {
-        arg0.default = arg1;
-      };
-}
-let closure_1 = tmp3;
-const tmp5 =
-  (self && self.__importStar) ||
-  ((__esModule) => {
-    const tmp = __esModule;
-    if (tmp) {
-      if (__esModule.__esModule) {
-        return __esModule;
-      }
-    }
-    const obj = {};
-    if (null != __esModule) {
-      for (const key10009 in __esModule) {
-        let callResult = "default" !== key10009;
-        if (callResult) {
-          let _Object = Object;
-          hasOwnProperty = Object.prototype.hasOwnProperty;
-          callResult = hasOwnProperty.call(__esModule, key10009);
-        }
-        if (!callResult) {
-          continue;
-        } else {
-          let tmp6 = closure_0(obj, __esModule, key10009);
-          continue;
-        }
-        continue;
-      }
-    }
-    closure_1(obj, __esModule);
-    return obj;
-  });
-const module_6699 = tmp5(_mod6699);
-
-export const Clipboard = {
-  getString() {
-    const _default = module_6699.default;
-    return _default.getString();
-  },
-  getStrings() {
-    const _default = module_6699.default;
-    return _default.getStrings();
-  },
-  getImagePNG() {
-    const _default = module_6699.default;
-    return _default.getImagePNG();
-  },
-  getImageJPG() {
-    const _default = module_6699.default;
-    return _default.getImageJPG();
-  },
-  setImage(arg0) {
-    if ("ios" === react_native.Platform.OS) {
-      const _default = module_6699.default;
-      _default.setImage(arg0);
-    }
-  },
-  getImage() {
-    const _default = module_6699.default;
-    return _default.getImage();
-  },
-  setString(arg0) {
-    const _default = module_6699.default;
-    _default.setString(arg0);
-  },
-  setStrings(arg0) {
-    const _default = module_6699.default;
-    _default.setStrings(arg0);
-  },
-  hasString() {
-    const _default = module_6699.default;
-    return _default.hasString();
-  },
-  hasImage() {
-    const _default = module_6699.default;
-    return _default.hasImage();
-  },
-  hasURL() {
-    if ("ios" === react_native.Platform.OS) {
-      const _default = module_6699.default;
-      return _default.hasURL();
-    }
-  },
-  hasNumber() {
-    if ("ios" === react_native.Platform.OS) {
-      const _default = module_6699.default;
-      return _default.hasNumber();
-    }
-  },
-  hasWebURL() {
-    if ("ios" === react_native.Platform.OS) {
-      const _default = module_6699.default;
-      return _default.hasWebURL();
-    }
-  },
-  addListener(arg0) {
-    return module_6699.addListener(arg0);
-  },
-  removeAllListeners() {
-    module_6699.removeAllListeners();
-  },
-};

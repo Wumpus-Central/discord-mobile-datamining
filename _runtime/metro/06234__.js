@@ -1,15 +1,11 @@
 // _runtime/metro/06234__.js
-import Reanimated2 from "../06190_Reanimated.js";
+import _mod6190 from "06190__.js";
 import eventHandler from "../06233_eventHandler.js";
-import react from "../00019_react.js";
+import noop from "00019__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let c2;
-let c3;
-let closure_4;
-({ useEffect: c2, useMemo: c3, useRef: closure_4 } = react);
+({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
 let closure_5 = [
   "onGestureHandlerReanimatedEvent",
   "onGestureHandlerReanimatedStateChange",
@@ -19,13 +15,13 @@ const onUpdate = function n() {};
 onUpdate.__closure = {};
 onUpdate.__workletHash = 763644533783;
 onUpdate.__initData = { code: "function pnpm_useReanimatedEventHandlerTs1(){}" };
-let Reanimated = Reanimated2.Reanimated;
+let Reanimated = _mod6190.Reanimated;
 let mutable;
 if (Reanimated != null) {
   mutable = Reanimated.makeMutable({});
 }
 function deleteHandlerEventEntry(arg0) {
-  delete mutable.value[arg0];
+  delete tmp2[tmp];
 }
 deleteHandlerEventEntry.__closure = { lastUpdateEventMap: mutable };
 deleteHandlerEventEntry.__workletHash = 8348834805583;
@@ -45,25 +41,25 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(
 ) {
   _require = handlerTag;
   dependencyMap = memoizedGestureCallbacks;
-  let closure_2 = changeEventCalculator;
-  let closure_3 = fillInDefaultValues;
+  closure_2 = changeEventCalculator;
+  closure_3 = fillInDefaultValues;
   const items = [memoizedGestureCallbacks];
   let tmp = closure_3(() => {
-    let obj;
-    const Reanimated = Reanimated2.Reanimated;
+    const Reanimated = _mod6190.Reanimated;
     let isWorkletFunctionResult;
     if (Reanimated != null) {
       isWorkletFunctionResult = Reanimated.isWorkletFunction(memoizedGestureCallbacks.onUpdate);
     }
     if (isWorkletFunctionResult) {
-      obj = memoizedGestureCallbacks;
+      let obj = memoizedGestureCallbacks;
     } else {
-      obj = { onUpdate };
+      obj = {};
       const merged = Object.assign(memoizedGestureCallbacks);
+      obj.onUpdate = onUpdate;
     }
     return obj;
   }, items);
-  let closure_4 = tmp;
+  closure_4 = tmp;
   const fn = function h(handlerTag) {
     let tmp = mutable.value[handlerTag.handlerTag];
     if (undefined === tmp) {
@@ -71,10 +67,9 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(
       iter.value[handlerTag.handlerTag] = obj;
       tmp = obj;
     }
-    const obj2 = eventHandler;
-    obj2.eventHandler(current, handlerTag, closure_4, changeEventCalculator, tmp, false, fillInDefaultValues);
+    eventHandler.eventHandler(closure_0, handlerTag, closure_4, closure_2, tmp, false, closure_3);
   };
-  let obj = {
+  fn.__closure = {
     lastUpdateEventMap: mutable,
     eventHandler: require("eventHandler").eventHandler,
     handlerTag,
@@ -82,31 +77,27 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(
     changeEventCalculator,
     fillInDefaultValues,
   };
-  fn.__closure = obj;
   fn.__workletHash = 3272953373395;
   fn.__initData = __initData;
   const tmp2 = closure_4(handlerTag);
   closure_5 = tmp2;
   const items1 = [handlerTag];
-  const current = tmp2.current;
   closure_2(() => {
     closure_5.current = current;
     return () => {
-      const Reanimated = closure_0(memoizedGestureCallbacks[1]).Reanimated;
+      const Reanimated = closure_0(closure_1[1]).Reanimated;
       if (Reanimated != null) {
         const runOnUI = Reanimated.runOnUI;
         if (runOnUI != null) {
-          runOnUI(deleteHandlerEventEntry)(closure_1_0);
+          runOnUI(deleteHandlerEventEntry)(current);
         }
       }
     };
   }, items1);
-  let Reanimated = require("Reanimated").Reanimated;
+  let Reanimated = require("06190__.js").Reanimated;
   let event;
   if (Reanimated != null) {
-    let tmp5 = current !== handlerTag;
-    const useEvent = Reanimated.useEvent;
-    const tmp6 = closure_5;
+    let tmp5 = tmp2.current !== handlerTag;
     if (!tmp5) {
       let doDependenciesDiffer;
       if (handler != null) {
@@ -114,7 +105,7 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(
       }
       tmp5 = doDependenciesDiffer;
     }
-    event = useEvent(fn, tmp6, tmp5);
+    event = Reanimated.useEvent(fn, closure_5, tmp5);
   }
   return event;
 };

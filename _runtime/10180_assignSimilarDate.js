@@ -1,24 +1,25 @@
 // _runtime/10180_assignSimilarDate.js
 import Meridiem from "10179_Meridiem.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const assignSimilarDate = function assignSimilarDate(parsingComponents, date) {
   parsingComponents.assign("day", date.getDate());
   parsingComponents.assign("month", date.getMonth() + 1);
   parsingComponents.assign("year", date.getFullYear());
 };
 export const assignSimilarTime = function assignSimilarTime(parsingComponents, addDurationResult) {
-  let PM;
   parsingComponents.assign("hour", addDurationResult.getHours());
   parsingComponents.assign("minute", addDurationResult.getMinutes());
   parsingComponents.assign("second", addDurationResult.getSeconds());
   parsingComponents.assign("millisecond", addDurationResult.getMilliseconds());
-  const assign = parsingComponents.assign;
   if (addDurationResult.getHours() < 12) {
-    PM = Meridiem.Meridiem.AM;
+    let PM = Meridiem.Meridiem.AM;
   } else {
     PM = Meridiem.Meridiem.PM;
   }
-  assign("meridiem", PM);
+  parsingComponents.assign("meridiem", PM);
 };
 export const implySimilarDate = function implySimilarDate(end, date) {
   end.imply("day", date.getDate());
@@ -26,16 +27,14 @@ export const implySimilarDate = function implySimilarDate(end, date) {
   end.imply("year", date.getFullYear());
 };
 export const implySimilarTime = function implySimilarTime(parsingComponents, date) {
-  let PM;
   parsingComponents.imply("hour", date.getHours());
   parsingComponents.imply("minute", date.getMinutes());
   parsingComponents.imply("second", date.getSeconds());
   parsingComponents.imply("millisecond", date.getMilliseconds());
-  const imply = parsingComponents.imply;
   if (date.getHours() < 12) {
-    PM = Meridiem.Meridiem.AM;
+    let PM = Meridiem.Meridiem.AM;
   } else {
     PM = Meridiem.Meridiem.PM;
   }
-  imply("meridiem", PM);
+  parsingComponents.imply("meridiem", PM);
 };

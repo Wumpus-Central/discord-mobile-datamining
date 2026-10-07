@@ -1,47 +1,63 @@
 // _runtime/14204_assertHasStateResponsePlugin.js
 function hasStateResponsePlugin(stateActionComplete) {
-  return (
-    stateActionComplete &&
-    "stateActionComplete" in stateActionComplete &&
-    typeof stateActionComplete.stateActionComplete === "function" &&
-    "stateValuesResponse" in stateActionComplete &&
-    typeof stateActionComplete.stateValuesResponse === "function" &&
-    "stateKeysResponse" in stateActionComplete &&
-    typeof stateActionComplete.stateKeysResponse === "function" &&
-    "stateValuesChange" in stateActionComplete &&
-    typeof stateActionComplete.stateValuesChange === "function" &&
-    "stateBackupResponse" in stateActionComplete &&
-    typeof stateActionComplete.stateBackupResponse === "function"
-  );
+  let tmp = stateActionComplete;
+  if (stateActionComplete) {
+    tmp = "stateActionComplete" in stateActionComplete;
+  }
+  if (tmp) {
+    tmp = typeof stateActionComplete.stateActionComplete === "function";
+  }
+  if (tmp) {
+    tmp = "stateValuesResponse" in stateActionComplete;
+  }
+  if (tmp) {
+    tmp = typeof stateActionComplete.stateValuesResponse === "function";
+  }
+  if (tmp) {
+    tmp = "stateKeysResponse" in stateActionComplete;
+  }
+  if (tmp) {
+    tmp = typeof stateActionComplete.stateKeysResponse === "function";
+  }
+  if (tmp) {
+    tmp = "stateValuesChange" in stateActionComplete;
+  }
+  if (tmp) {
+    tmp = typeof stateActionComplete.stateValuesChange === "function";
+  }
+  if (tmp) {
+    tmp = "stateBackupResponse" in stateActionComplete;
+  }
+  if (tmp) {
+    tmp = typeof stateActionComplete.stateBackupResponse === "function";
+  }
+  return tmp;
 }
 
 export default () => (arg0) => {
-  let closure_0 = arg0;
-  let obj = {
+  closure_0 = arg0;
+  return {
     features: {
       stateActionComplete(name, action) {
         let flag = arg2;
         if (arg2 === undefined) {
           flag = false;
         }
-        const obj = { name, action };
-        return closure_0.send("state.action.complete", obj, flag);
+        return closure_0.send("state.action.complete", { name, action }, flag);
       },
       stateValuesResponse(path, value) {
         let flag = arg2;
         if (arg2 === undefined) {
           flag = true;
         }
-        const obj = { path, value, valid: flag };
-        return closure_0.send("state.values.response", obj);
+        return closure_0.send("state.values.response", { path, value, valid: flag });
       },
       stateKeysResponse(path, keys) {
         let flag = arg2;
         if (arg2 === undefined) {
           flag = true;
         }
-        const obj = { path, keys, valid: flag };
-        return closure_0.send("state.keys.response", obj);
+        return closure_0.send("state.keys.response", { path, keys, valid: flag });
       },
       stateValuesChange(changes) {
         let sendResult = changes.length > 0;
@@ -52,32 +68,47 @@ export default () => (arg0) => {
         return sendResult;
       },
       stateBackupResponse(state) {
-        const obj = { state };
-        return closure_0.send("state.backup.response", obj);
+        return closure_0.send("state.backup.response", { state });
       },
     },
   };
-  return obj;
 };
 export { hasStateResponsePlugin };
-export const assertHasStateResponsePlugin = function (stateActionComplete) {
+export const assertHasStateResponsePlugin = (stateActionComplete) => {
   if (typeof hasStateResponsePlugin === "function") {
-    const tmp2 =
-      stateActionComplete &&
-      "stateActionComplete" in stateActionComplete &&
-      typeof stateActionComplete.stateActionComplete === "function" &&
-      "stateValuesResponse" in stateActionComplete &&
-      typeof stateActionComplete.stateValuesResponse === "function" &&
-      "stateKeysResponse" in stateActionComplete &&
-      typeof stateActionComplete.stateKeysResponse === "function" &&
-      "stateValuesChange" in stateActionComplete &&
-      typeof stateActionComplete.stateValuesChange === "function" &&
-      "stateBackupResponse" in stateActionComplete &&
-      typeof stateActionComplete.stateBackupResponse === "function";
+    let tmp2 = stateActionComplete;
+    if (stateActionComplete) {
+      tmp2 = "stateActionComplete" in stateActionComplete;
+    }
+    if (tmp2) {
+      tmp2 = typeof stateActionComplete.stateActionComplete === "function";
+    }
+    if (tmp2) {
+      tmp2 = "stateValuesResponse" in stateActionComplete;
+    }
+    if (tmp2) {
+      tmp2 = typeof stateActionComplete.stateValuesResponse === "function";
+    }
+    if (tmp2) {
+      tmp2 = "stateKeysResponse" in stateActionComplete;
+    }
+    if (tmp2) {
+      tmp2 = typeof stateActionComplete.stateKeysResponse === "function";
+    }
+    if (tmp2) {
+      tmp2 = "stateValuesChange" in stateActionComplete;
+    }
+    if (tmp2) {
+      tmp2 = typeof stateActionComplete.stateValuesChange === "function";
+    }
+    if (tmp2) {
+      tmp2 = "stateBackupResponse" in stateActionComplete;
+    }
+    if (tmp2) {
+      tmp2 = typeof stateActionComplete.stateBackupResponse === "function";
+    }
     if (!tmp2) {
       const _Error = Error;
-      const self = this;
-      const self2 = this;
       const error = new Error(
         "This Reactotron client has not had the state responses plugin applied to it. Make sure that you add `use(stateResponse())` before adding this plugin.",
       );

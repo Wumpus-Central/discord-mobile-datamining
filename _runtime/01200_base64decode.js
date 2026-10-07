@@ -11,16 +11,14 @@ if (0 < parts.length) {
     length = parts.length;
   } while (num < length);
 }
+items["-".charCodeAt(0)] = parts.indexOf("+");
 const charCodeAtResult = "-".charCodeAt(0);
-items[charCodeAtResult] = parts.indexOf("+");
-const charCodeAtResult1 = "_".charCodeAt(0);
-items[charCodeAtResult1] = parts.indexOf("/");
+items["_".charCodeAt(0)] = parts.indexOf("/");
 
 export const base64decode = function base64decode(actionData) {
-  let diff;
   const result = (3 * actionData.length) / 4;
   if ("=" == actionData[actionData.length - 2]) {
-    diff = result - 2;
+    let diff = result - 2;
   } else {
     diff = result;
     if ("=" == actionData[actionData.length - 1]) {
@@ -36,16 +34,13 @@ export const base64decode = function base64decode(actionData) {
   let num7 = 0;
   if (0 < actionData.length) {
     while (true) {
-      let tmp9;
-      let num8;
-      let sum;
       let tmp4 = items[actionData.charCodeAt(actionData, num2)];
       if (undefined === tmp4) {
         let tmp11 = actionData[num2];
         if ("=" === tmp11) {
-          tmp9 = num3;
-          num8 = 0;
-          sum = num5;
+          let tmp9 = num3;
+          let num8 = 0;
+          let sum = num5;
         } else {
           tmp9 = num3;
           num8 = num4;
@@ -121,13 +116,11 @@ export const base64encode = function base64encode(NumberResult) {
   let str2 = "";
   if (0 < NumberResult.length) {
     do {
-      let text;
-      let tmp5;
       let tmp = NumberResult[num];
       let num6 = num3;
       if (0 === num3) {
-        text = `${parts[tmp >> 2]}`;
-        tmp5 = (3 & tmp) << 4;
+        let text = `${parts[tmp >> 2]}`;
+        let tmp5 = (3 & tmp) << 4;
         num6 = 1;
       } else if (1 === num6) {
         text = `${parts[num2 | (tmp >> 4)]}`;

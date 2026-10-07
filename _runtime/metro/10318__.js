@@ -10,10 +10,9 @@ const combined =
 const regExp = new RegExp(combined, "i");
 
 export const parseNumberPattern = function parseNumberPattern(str) {
-  let num3;
   str = str.toLowerCase();
   if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    num3 = exports.INTEGER_WORD_DICTIONARY[str];
+    let num3 = exports.INTEGER_WORD_DICTIONARY[str];
   } else {
     num3 = 1;
     if ("un" !== str) {
@@ -66,11 +65,10 @@ export const parseDuration = function parseDuration(arg0) {
   const obj = {};
   let match = regExp.exec(arg0);
   while (match) {
-    let num;
     let str2 = match[1];
     let str3 = str2.toLowerCase();
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      num = exports.INTEGER_WORD_DICTIONARY[str3];
+      let num = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
       num = 1;
       if ("un" !== str3) {
@@ -110,17 +108,17 @@ export const WEEKDAY_DICTIONARY = {
   lun: 1,
   martes: 2,
   mar: 2,
-  "mi\u00e9rcoles": 3,
+  miércoles: 3,
   miercoles: 3,
-  "mi\u00e9": 3,
+  mié: 3,
   mie: 3,
   jueves: 4,
   jue: 4,
   viernes: 5,
   vie: 5,
-  "s\u00e1bado": 6,
+  sábado: 6,
   sabado: 6,
-  "s\u00e1b": 6,
+  sáb: 6,
   sab: 6,
 };
 export const MONTH_DICTIONARY = {
@@ -190,16 +188,16 @@ export const TIME_UNIT_DICTIONARY = {
   hrs: "hour",
   hora: "hour",
   horas: "hour",
-  "d\u00eda": "day",
-  "d\u00edas": "day",
+  día: "day",
+  días: "day",
   semana: "week",
   semanas: "week",
   mes: "month",
   meses: "month",
   cuarto: "quarter",
   cuartos: "quarter",
-  "a\u00f1o": "year",
-  "a\u00f1os": "year",
+  año: "year",
+  años: "year",
 };
 export const NUMBER_PATTERN =
   "(?:" +

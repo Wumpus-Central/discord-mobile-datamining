@@ -7,26 +7,6 @@ import FlingNativeProperties from "06211_FlingNativeProperties.js";
 import HoverNativeProperties from "06212_HoverNativeProperties.js";
 import LongPressNativeProperties from "06213_LongPressNativeProperties.js";
 
-const items = [
-  ...new Set([
-    "enabled",
-    "shouldCancelWhenOutside",
-    "hitSlop",
-    "activeCursor",
-    "mouseButton",
-    "testID",
-    "cancelsTouchesInView",
-    "cancelsJSResponder",
-    "manualActivation",
-  ]),
-  "userSelect",
-  "enableContextMenu",
-  "touchAction",
-  "dispatchesAnimatedEvents",
-  "needsPointerData",
-];
-const sum = tmp4 + 1;
-const sum1 = sum + 1;
 const set = new Set([
   "enabled",
   "shouldCancelWhenOutside",
@@ -38,7 +18,16 @@ const set = new Set([
   "cancelsJSResponder",
   "manualActivation",
 ]);
-const set1 = new Set(["simultaneousWith", "requireToFail", "block"]);
+const items = [
+  ...set,
+  "userSelect",
+  "enableContextMenu",
+  "touchAction",
+  "dispatchesAnimatedEvents",
+  "needsPointerData",
+];
+const sum = tmp4 + 1;
+const sum1 = sum + 1;
 const set2 = new Set(items);
 const set3 = new Set([
   "onBegin",
@@ -52,7 +41,7 @@ const set3 = new Set([
   "onTouchesCancel",
 ]);
 const items1 = [
-  ...set1,
+  ...new Set(["simultaneousWith", "requireToFail", "block"]),
   "fillInDefaultValues",
   "changeEventCalculator",
   "disableReanimated",
@@ -89,14 +78,14 @@ const items7 = [ComposedGestureName.SingleGestureName.Hover, HoverNativeProperti
 items3[4] = items7;
 const items8 = [ComposedGestureName.SingleGestureName.LongPress, LongPressNativeProperties.LongPressNativeProperties];
 items3[5] = items8;
-const items9 = [...set3, "disableReanimated"];
+const set1 = new Set(["simultaneousWith", "requireToFail", "block"]);
 const map = new Map(items3);
+const items9 = [...set3, "disableReanimated"];
 const set5 = new Set();
-new Set(items9);
 
 export const allowedNativeProps = set2;
 export const HandlerCallbacks = set3;
 export const PropsToFilter = set4;
 export const PropsWhiteLists = map;
-export const EMPTY_WHITE_LIST = new Set();
+export const EMPTY_WHITE_LIST = set5;
 export const NativeWrapperProps = new Set(items9);

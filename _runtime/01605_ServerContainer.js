@@ -1,18 +1,17 @@
 // _runtime/01605_ServerContainer.js
-import Fragment from "react/00021_Fragment.js";
-import react2 from "01606_react.js";
-import react from "00019_react.js";
+import BaseNavigationContainer from "01493_BaseNavigationContainer.js";
+import ServerContext from "01606_ServerContext.js";
+import noop from "metro/00019__.js";
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 
-export const ServerContainer = react.forwardRef(function ServerContainer(arg0, fn) {
-  let _location;
-  let children;
+export const ServerContainer = noop.forwardRef(function ServerContainer(arg0, fn) {
   ({ children, location: _location } = arg0);
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     console.error("'ServerContainer' should only be used on the server with 'react-dom/server' for SSR.");
   }, []);
-  const obj = {};
+  value = {};
   if (fn) {
     const obj2 = {
       getCurrentOptions() {
@@ -25,6 +24,8 @@ export const ServerContainer = react.forwardRef(function ServerContainer(arg0, f
       fn.current = obj2;
     }
   }
-  const Provider = react2.ServerContext.Provider;
-  return <Provider value={{ location: _location }}>{null}</Provider>;
+  return jsx(ServerContext.ServerContext.Provider, {
+    value: { location: _location },
+    children: jsx(BaseNavigationContainer.CurrentRenderContext.Provider, { value, children }),
+  });
 });

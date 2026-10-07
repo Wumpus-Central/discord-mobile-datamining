@@ -6,8 +6,8 @@ export default function baseGetAllKeys(arg0, fn, fn2) {
   const tmp = fn(arg0);
   let tmp2ResultResult = tmp;
   if (!_mod514(arg0)) {
+    tmp2ResultResult = arrayPush(tmp, fn2(arg0));
     const tmp2Result = arrayPush;
-    tmp2ResultResult = tmp2Result(tmp, fn2(arg0));
   }
   return tmp2ResultResult;
 }

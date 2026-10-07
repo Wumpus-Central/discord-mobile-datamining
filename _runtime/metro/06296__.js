@@ -2,58 +2,21 @@
 import DEFAULT_HANDLE_HEIGHT from "../06123_DEFAULT_HANDLE_HEIGHT.js";
 
 const require = globalThis.__r;
-let _Math,
-  _require,
-  arr1,
-  dependencyMap,
-  diff,
-  flag,
-  items2,
-  items3,
-  iter,
-  iter2,
-  iter3,
-  iter4,
-  length,
-  mapped,
-  min,
-  sorted,
-  str,
-  sum,
-  tmp,
-  tmp2,
-  tmp3,
-  tmp4,
-  tmp8,
-  value,
-  value1,
-  value4;
 
-let __initData = {
-  code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}",
-};
-let __initData2 = {
-  code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}",
-};
+require = arg1;
+let dependencyMap = arg6;
+let __initData = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}" };
+let __initData2 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
 
-export const useAnimatedSnapPoints = (
-  snapPoints,
-  derivedValue,
-  sharedValue1,
-  reactiveSharedValue3,
-  sharedValue,
-  DEFAULT_DYNAMIC_SIZING,
-  maxDynamicContentSize,
-) => {
+export const useAnimatedSnapPoints = (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize) => {
   _require = snapPoints;
   dependencyMap = derivedValue;
   __initData = sharedValue1;
-  __initData2 = reactiveSharedValue3;
-  let closure_4 = DEFAULT_DYNAMIC_SIZING;
-  let closure_5 = maxDynamicContentSize;
-  let obj = require("01643__.js");
-  sharedValue = obj.useSharedValue(-1);
-  const obj2 = require("01643__.js");
+  __initData2 = reactiveSharedValue2;
+  closure_4 = DEFAULT_DYNAMIC_SIZING;
+  closure_5 = maxDynamicContentSize;
+  sharedValue = require("cancelAnimation").useSharedValue(-1);
+  const obj = require("cancelAnimation");
   class P {
     constructor() {
       iter = closure_1;
@@ -65,7 +28,7 @@ export const useAnimatedSnapPoints = (
         return items;
       } else {
         iter3 = closure_0;
-        if (iter3) {
+        if (closure_0) {
           str = "value";
           value = iter3;
           if ("value" in iter3) {
@@ -75,11 +38,9 @@ export const useAnimatedSnapPoints = (
         } else {
           items1 = [];
         }
-        mapped = items1.map(() => {
-          /* body not rendered: F137448 */
-        });
+        mapped = items1.map(() => { ... });
         tmp3 = closure_4;
-        if (tmp3) {
+        if (closure_4) {
           iter2 = closure_3;
           if (closure_3.value === tmp(tmp2[1]).INITIAL_HANDLE_HEIGHT) {
             items2 = [];
@@ -93,21 +54,16 @@ export const useAnimatedSnapPoints = (
               return items3;
             } else {
               tmp4 = globalThis;
-              value4 = closure_5;
-              value1 = iter.value;
-              _Math = Math;
-              min = Math.min;
+              value1 = closure_5;
               sum = iter4.value + iter2.value;
               if (undefined === closure_5) {
-                value4 = iter.value;
+                value1 = iter.value;
               }
-              diff = value1 - min(sum, value4);
+              diff = iter.value - Math.min(sum, value1);
               if (!mapped.includes(diff)) {
                 arr1 = mapped.push(diff);
               }
-              sorted = mapped.sort(() => {
-                /* body not rendered: F137449 */
-              });
+              sorted = mapped.sort(() => { ... });
               tmp8 = closure_6;
               closure_6.value = sorted.indexOf(diff);
               return sorted;
@@ -119,55 +75,21 @@ export const useAnimatedSnapPoints = (
       }
     }
   }
-  P.__closure = {
-    containerHeight: derivedValue,
-    INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT,
-    INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT,
-    snapPoints,
-    normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint,
-    enableDynamicSizing: DEFAULT_DYNAMIC_SIZING,
-    handleHeight: reactiveSharedValue3,
-    INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT,
-    contentHeight: sharedValue1,
-    maxDynamicContentSize,
-    dynamicSnapPointIndex: sharedValue,
-  };
+  const obj2 = require("cancelAnimation");
+  P.__closure = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
   P.__workletHash = 15015207820492;
   P.__initData = __initData;
-  let items = [
-    snapPoints,
-    derivedValue,
-    reactiveSharedValue3,
-    sharedValue1,
-    sharedValue,
-    DEFAULT_DYNAMIC_SIZING,
-    maxDynamicContentSize,
-    sharedValue,
-  ];
-  ({
-    containerHeight: derivedValue,
-    INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT,
-    INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT,
-    snapPoints,
-    normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint,
-    enableDynamicSizing: DEFAULT_DYNAMIC_SIZING,
-    handleHeight: reactiveSharedValue3,
-    INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT,
-    contentHeight: sharedValue1,
-    maxDynamicContentSize,
-    dynamicSnapPointIndex: sharedValue,
-  });
+  let items = [snapPoints, derivedValue, reactiveSharedValue2, sharedValue1, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize, sharedValue];
   derivedValue = obj2.useDerivedValue(P, items);
-  const obj4 = require("01643__.js");
+  const obj3 = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
   class N {
     constructor() {
-      tmp = closure_4;
-      if (tmp) {
+      if (closure_4) {
         flag = true;
         return true;
       } else {
         iter = closure_0;
-        if (iter) {
+        if (closure_0) {
           str = "value";
           value = iter;
           if ("value" in iter) {
@@ -178,19 +100,17 @@ export const useAnimatedSnapPoints = (
           items = [];
         }
         length = items.length;
-        tmp2 = !length;
+        tmp = !length;
         if (length) {
-          tmp2 = !items.find(function () {
-            /* body not rendered: F137450 */
-          });
+          tmp = !items.find(/* F137450 */ function() { ... });
         }
-        return !tmp2;
+        return !tmp;
       }
     }
   }
   N.__closure = { enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, snapPoints };
   N.__workletHash = 4816362093278;
   N.__initData = __initData2;
-  let items1 = [derivedValue, sharedValue, obj4.useDerivedValue(N)];
+  let items1 = [derivedValue, sharedValue, require("cancelAnimation").useDerivedValue(N)];
   return items1;
 };

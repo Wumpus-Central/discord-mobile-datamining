@@ -1,54 +1,42 @@
 // _runtime/metro/04410__.js
-import formatDistance from "../04411_formatDistance.js";
-import buildFormatLongFn from "../04412_buildFormatLongFn.js";
-import formatRelative from "../04413_formatRelative.js";
+import 04411__ from "04411__.js";
+import 04412__ from "04412__.js";
+import 04413__ from "04413__.js";
 import date_mod from "04414__.js";
-import date_mod2 from "04415__.js";
+import date_mod from "04415__.js";
 
-let tmp11;
-let tmp3;
-let tmp5;
-let tmp7;
-let tmp9;
-if (!formatDistance) {
-  tmp3 = { default: formatDistance };
-  const obj = { default: formatDistance };
+if (!module_4411) {
+  const obj = { default: module_4411 };
+  let tmp3 = obj;
 } else {
-  tmp3 = formatDistance;
+  tmp3 = module_4411;
 }
-if (!buildFormatLongFn) {
-  tmp5 = { default: buildFormatLongFn };
-  const obj2 = { default: buildFormatLongFn };
+if (!module_4412) {
+  const obj2 = { default: module_4412 };
+  let tmp5 = obj2;
 } else {
-  tmp5 = buildFormatLongFn;
+  tmp5 = module_4412;
 }
-if (!formatRelative) {
-  tmp7 = { default: formatRelative };
-  const obj3 = { default: formatRelative };
+if (!module_4413) {
+  const obj3 = { default: module_4413 };
+  let tmp7 = obj3;
 } else {
-  tmp7 = formatRelative;
+  tmp7 = module_4413;
 }
-let date = date_mod2;
+let date = date_mod;
 if (!date) {
-  tmp9 = { default: date };
   const obj4 = { default: date };
+  let tmp9 = obj4;
 } else {
   tmp9 = date;
 }
-date = date_mod2;
+let date = date_mod;
 if (!date) {
-  tmp11 = { default: date };
   const obj5 = { default: date };
+  let tmp11 = obj5;
 } else {
   tmp11 = date;
 }
 
-export default {
-  code: "vi",
-  formatDistance: tmp3.default,
-  formatLong: tmp5.default,
-  formatRelative: tmp7.default,
-  localize: tmp9.default,
-  match: tmp11.default,
-  options: { weekStartsOn: 1, firstWeekContainsDate: 1 },
-};
+export default { code: "vi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default exports.default;

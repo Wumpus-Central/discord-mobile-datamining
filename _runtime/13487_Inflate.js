@@ -2,235 +2,201 @@
 import _mod13478 from "metro/13478__.js";
 import ZStream from "13480_ZStream.js";
 import _mod13482 from "metro/13482__.js";
-import string2buf from "13486_string2buf.js";
-import inflateReset from "13488_inflateReset.js";
+import _mod13486 from "metro/13486__.js";
+import InflateState from "13488_InflateState.js";
 import _mod13491 from "metro/13491__.js";
 import GZheader from "13492_GZheader.js";
 
+require = arg1;
+const dependencyMap = arg6;
 class Inflate {
-  constructor(windowBits) {
-    const self = this;
+  constructor(arg0) {
+    self = this;
+    tmp = Inflate;
     if (this instanceof Inflate) {
-      let obj = windowBits;
-      const assign = _mod13478.assign;
-      _mod13478;
-      if (!windowBits) {
-        obj = {};
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj = closure_0(closure_1[0]);
+      obj1 = arg0;
+      if (!arg0) {
+        obj1 = {};
       }
-      self.options = assign({ chunkSize: 16384, windowBits: 0, to: "" }, obj);
-      const options = self.options;
-      const raw = options.raw && options.windowBits >= 0 && options.windowBits < 16;
+      self.options = obj.assign({ chunkSize: 16384, windowBits: 0, to: "" }, obj1);
+      options = self.options;
+      raw = options.raw;
+      if (raw) {
+        num = 0;
+        raw = options.windowBits >= 0;
+      }
+      if (raw) {
+        num2 = 16;
+        raw = options.windowBits < 16;
+      }
       if (raw) {
         options.windowBits = -options.windowBits;
+        num3 = 0;
         if (0 === options.windowBits) {
+          num4 = -15;
           options.windowBits = -15;
         }
       }
-      let tmp8 = !tmp7;
-      if (options.windowBits >= 0 && options.windowBits < 16) {
-        tmp8 = windowBits && windowBits.windowBits;
+      num5 = 0;
+      tmp6 = options.windowBits >= 0;
+      if (tmp6) {
+        num6 = 16;
+        tmp6 = options.windowBits < 16;
       }
-      if (!tmp8) {
+      tmp7 = !tmp6;
+      if (tmp6) {
+        windowBits = arg0;
+        if (arg0) {
+          windowBits = arg0.windowBits;
+        }
+        tmp7 = windowBits;
+      }
+      if (!tmp7) {
+        num7 = 32;
         options.windowBits = options.windowBits + 32;
       }
-      const tmp10 = options.windowBits > 15 && options.windowBits < 48;
-      if (tmp10) {
+      num8 = 15;
+      tmp8 = options.windowBits > 15;
+      if (tmp8) {
+        num9 = 48;
+        tmp8 = options.windowBits < 48;
+      }
+      if (tmp8) {
         if (!(15 & options.windowBits)) {
           options.windowBits = options.windowBits | 15;
         }
       }
       self.err = 0;
+      str = "";
       self.msg = "";
+      flag = false;
       self.ended = false;
       self.chunks = [];
-      const self2 = this;
-      const self3 = this;
-      self.strm = new ZStream();
+      tmp9 = new.target;
+      tmp10 = new.target;
+      tmp11 = new tmp4(tmp5[1])();
+      tmp12 = tmp11;
+      self.strm = tmp11;
       self.strm.avail_out = 0;
-      const tmp11 = new ZStream();
-      const tmp4Result = inflateReset;
-      const inflateInit2Result = tmp4Result.inflateInit2(self.strm, options.windowBits);
-      if (inflateInit2Result !== _mod13491.Z_OK) {
-        const _Error = Error;
-        const self6 = this;
-        const self7 = this;
-        const error = new Error(_mod13482[inflateInit2Result]);
+      tmp4Result = tmp4(tmp5[2]);
+      inflateInit2Result = tmp4Result.inflateInit2(self.strm, options.windowBits);
+      if (inflateInit2Result !== tmp4(tmp5[3]).Z_OK) {
+        tmp19 = globalThis;
+        _Error = Error;
+        tmp20 = new.target;
+        tmp21 = new.target;
+        error = new Error(tmp4(tmp5[4])[inflateInit2Result]);
+        tmp23 = error;
         throw error;
       } else {
-        const self4 = this;
-        const self5 = this;
-        self.header = new GZheader();
-        const tmp14 = new GZheader();
-        const tmp4Result2 = inflateReset;
-        tmp4Result2.inflateGetHeader(self.strm, self.header);
+        tmp14 = new.target;
+        tmp15 = new.target;
+        tmp16 = new tmp4(tmp5[5])();
+        tmp17 = tmp16;
+        self.header = tmp16;
+        tmp4Result1 = tmp4(tmp5[2]);
+        inflateGetHeaderResult = tmp4Result1.inflateGetHeader(self.strm, self.header);
+        return;
       }
     } else {
-      const tmpResult = Inflate(windowBits);
+      tmpResult = tmp(arg0);
+      tmp3 = tmpResult;
       return tmpResult;
     }
   }
-  push(input, arg1) {
-    let Z_OK;
-    const self = this;
-    const strm = this.strm;
-    const chunkSize = this.options.chunkSize;
-    const dictionary = this.options.dictionary;
+  push(arg0, arg1) {
+    strm = this.strm;
     if (this.ended) {
+      flag5 = false;
       return false;
     } else {
-      let Z_FINISH = arg1;
-      if (arg1 !== ~~arg1) {
-        let Z_NO_FLUSH;
-        if (true === arg1) {
-          Z_NO_FLUSH = _mod13491.Z_FINISH;
+      tmp = arg1;
+      tmp2 = arg1;
+      if (arg1 === ~~arg1) {
+        tmp8 = arg0;
+        if (typeof arg0 === "string") {
+          tmp15 = closure_0;
+          tmp16 = closure_1;
+          obj = closure_0(closure_1[6]);
+          strm.input = obj.binstring2buf(arg0);
+          num = 0;
+          strm.next_in = 0;
+          strm.avail_in = strm.input.length;
+          flag2 = false;
+          flag3 = true;
+          str2 = "string";
+          tmp17 = globalThis;
+          str3 = "[object ArrayBuffer]";
+          flag4 = false;
         } else {
-          Z_NO_FLUSH = _mod13491.Z_NO_FLUSH;
+          tmp18 = toString;
+          call = toString.call;
+          str = "[object ArrayBuffer]";
+          if ("[object ArrayBuffer]" !== (typeof call === "unknown" ? tmp18() : call(arg0))) {
+            strm.input = arg0;
+          }
         }
-        Z_FINISH = Z_NO_FLUSH;
-      }
-      if (typeof input === "string") {
-        const obj = string2buf;
-        strm.input = obj.binstring2buf(input);
-      } else if ("[object ArrayBuffer]" === toString.call(input)) {
-        const _Uint8Array = Uint8Array;
-        const self2 = this;
-        const self3 = this;
-        const uint8Array = new Uint8Array(input);
+        tmp9 = globalThis;
+        _Uint8Array = Uint8Array;
+        tmp10 = new.target;
+        tmp11 = new.target;
+        tmp12 = arg0;
+        uint8Array = new Uint8Array(arg0);
+        tmp14 = uint8Array;
         strm.input = uint8Array;
       } else {
-        strm.input = input;
-      }
-      strm.next_in = 0;
-      strm.avail_in = strm.input.length;
-      let flag4 = false;
-      while (true) {
-        let flag6;
-        let flag5 = flag4;
-        if (0 === strm.avail_out) {
-          let self4 = this;
-          let self5 = this;
-          let buf8 = new _mod13478.Buf8(chunkSize);
-          strm.output = buf8;
-          strm.next_out = 0;
-          strm.avail_out = chunkSize;
-        }
-        let obj2 = inflateReset;
-        Z_OK = obj2.inflate(strm, _mod13491.Z_NO_FLUSH);
-        let tmp21 = Z_OK === _mod13491.Z_NEED_DICT && dictionary;
-        if (tmp21) {
-          let string2bufResult;
-          if (typeof dictionary === "string") {
-            let tmp19Result = string2buf;
-            string2bufResult = tmp19Result.string2buf(dictionary);
-          } else {
-            string2bufResult = dictionary;
-            if ("[object ArrayBuffer]" === toString.call(dictionary)) {
-              let _Uint8Array2 = Uint8Array;
-              let self6 = this;
-              let self7 = this;
-              string2bufResult = new Uint8Array(dictionary);
-            }
-          }
-          let tmp19Result7 = inflateReset;
-          Z_OK = tmp19Result7.inflateSetDictionary(self.strm, string2bufResult);
-        }
-        let tmp24 = Z_OK === _mod13491.Z_BUF_ERROR && true === flag5;
-        if (tmp24) {
-          Z_OK = _mod13491.Z_OK;
-          flag5 = false;
-        }
-        if (Z_OK !== _mod13491.Z_STREAM_END) {
-          if (Z_OK !== _mod13491.Z_OK) {
-            break;
-          }
-        }
-        if (strm.next_out) {
-          let tmp25 = 0 !== strm.avail_out && Z_OK !== _mod13491.Z_STREAM_END;
-          if (tmp25) {
-            let tmp26 = 0 !== strm.avail_in;
-            if (!tmp26) {
-              let tmp27 = Z_FINISH !== _mod13491.Z_FINISH && Z_FINISH !== _mod13491.Z_SYNC_FLUSH;
-              tmp26 = tmp27;
-            }
-            tmp25 = tmp26;
-          }
-          if (!tmp25) {
-            if ("string" === self.options.to) {
-              let tmp19Result8 = string2buf;
-              let utf8borderResult = tmp19Result8.utf8border(strm.output, strm.next_out);
-              let diff = strm.next_out - utf8borderResult;
-              let tmp19Result9 = string2buf;
-              strm.next_out = diff;
-              strm.avail_out = chunkSize - diff;
-              let buf2stringResult = tmp19Result9.buf2string(strm.output, utf8borderResult);
-              if (diff) {
-                let tmp19Result10 = _mod13478;
-                let arraySetResult = tmp19Result10.arraySet(strm.output, strm.output, utf8borderResult, diff, 0);
-              }
-              let onDataResult = self.onData(buf2stringResult);
-            } else {
-              let onData = self.onData;
-              let tmp19Result11 = _mod13478;
-              let onDataResult1 = onData(tmp19Result11.shrinkBuf(strm.output, strm.next_out));
-            }
-          }
-        }
-        let tmp37 = 0 === strm.avail_in && 0 === strm.avail_out;
-        if (tmp37) {
-          flag5 = true;
-        }
-        if (strm.avail_in > 0) {
-          flag4 = flag5;
-        }
-        if (Z_OK === _mod13491.Z_STREAM_END) {
-          Z_FINISH = _mod13491.Z_FINISH;
-        }
-        if (Z_FINISH === _mod13491.Z_FINISH) {
-          let tmp19Result12 = inflateReset;
-          let inflateEndResult = tmp19Result12.inflateEnd(self.strm);
-          let onEndResult = self.onEnd(inflateEndResult);
-          self.ended = true;
-          flag6 = inflateEndResult === _mod13491.Z_OK;
+        flag = true;
+        if (true === arg1) {
+          tmp5 = closure_0;
+          tmp6 = closure_1;
+          Z_NO_FLUSH = closure_0(closure_1[3]).Z_FINISH;
         } else {
-          flag6 = Z_FINISH !== _mod13491.Z_SYNC_FLUSH;
-          if (!flag6) {
-            let onEndResult1 = self.onEnd(_mod13491.Z_OK);
-            strm.avail_out = 0;
-            flag6 = true;
-          }
+          tmp3 = closure_0;
+          tmp4 = closure_1;
+          Z_NO_FLUSH = closure_0(closure_1[3]).Z_NO_FLUSH;
         }
-        return flag6;
+        tmp7 = Z_NO_FLUSH;
       }
-      self.onEnd(Z_OK);
-      self.ended = true;
-      return false;
     }
+    return;
   }
   onData(arg0) {
-    const chunks = this.chunks;
-    chunks.push(arg0);
+    chunks = this.chunks;
+    arr1 = chunks.push(arg0);
+    return;
   }
-  onEnd(err) {
-    const self = this;
-    if (err === _mod13491.Z_OK) {
+  onEnd(arg0) {
+    self = this;
+    tmp = closure_0;
+    tmp2 = closure_1;
+    if (arg0 === closure_0(closure_1[3]).Z_OK) {
+      str = "string";
       if ("string" === self.options.to) {
-        const chunks = self.chunks;
+        chunks = self.chunks;
+        str2 = "";
         self.result = chunks.join("");
       } else {
-        const tmpResult = _mod13478;
+        tmpResult = tmp(tmp2[0]);
         self.result = tmpResult.flattenChunks(self.chunks);
       }
     }
     self.chunks = [];
-    self.err = err;
+    self.err = arg0;
     self.msg = self.strm.msg;
+    return;
   }
 }
 function inflate(arg0, windowBits) {
   const arr = Inflate(windowBits);
   arr.push(arg0, true);
   if (arr.err) {
-    const msg = arr.msg || _mod13482[arr.err];
+    let msg = arr.msg;
+    if (!msg) {
+      msg = _mod13482[arr.err];
+    }
     throw msg;
   } else {
     return arr.result;
@@ -239,13 +205,19 @@ function inflate(arg0, windowBits) {
 
 export { Inflate };
 export { inflate };
-export const inflateRaw = function inflateRaw(arg0, arg1) {
-  const tmp = arg1 || {};
-  tmp.raw = true;
-  const arr = Inflate(tmp);
+export const inflateRaw = function inflateRaw(arg0, windowBits) {
+  let obj = windowBits;
+  if (!windowBits) {
+    obj = {};
+  }
+  obj.raw = true;
+  const arr = Inflate(obj);
   arr.push(arg0, true);
   if (arr.err) {
-    const msg = arr.msg || _mod13482[arr.err];
+    let msg = arr.msg;
+    if (!msg) {
+      msg = _mod13482[arr.err];
+    }
     throw msg;
   } else {
     return arr.result;

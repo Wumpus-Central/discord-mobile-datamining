@@ -1,6 +1,6 @@
 // _runtime/metro/00401__.js
-import ImageDefault from "../00328_Image.js";
-import react from "../00019_react.js";
-import createAnimatedComponent from "../00387_createAnimatedComponent.js";
+import _queryCacheDefault from "../00328__queryCache.js";
+import noop from "00019__.js";
+import module_387 from "../00387_unstable_createAnimatedComponentWithAllowlist.js";
 
-export default createAnimatedComponent(ImageDefault);
+export default module_387(_queryCacheDefault);

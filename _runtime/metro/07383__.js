@@ -1,7 +1,9 @@
 // _runtime/metro/07383__.js
 import _mod7381 from "07381__.js";
 
-let obj = {
+require = arg1;
+const dependencyMap = arg6;
+const obj = {
   1: "InteroperabilityIndex",
   2: null,
   4096: "RelatedImageFileFormat",
@@ -11,8 +13,7 @@ let obj = {
 obj[2] = {
   name: "InteroperabilityVersion",
   description(value) {
-    const obj = _mod7381;
-    return obj.getStringValue(value);
+    return _mod7381.getStringValue(value);
   },
 };
 

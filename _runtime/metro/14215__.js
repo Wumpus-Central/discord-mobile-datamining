@@ -1,11 +1,15 @@
 // _runtime/metro/14215__.js
-import ArgType from "../14198_ArgType.js";
+import emptyPromise from "../14198_emptyPromise.js";
+
+require = arg1;
+const dependencyMap = arg6;
 
 export default () => (log) => {
-  const result = ArgType.assertHasLoggerPlugin(log);
-  let closure_0 = log;
+  const result = emptyPromise.assertHasLoggerPlugin(log);
+  closure_0 = log;
   return {
     onConnect() {
+      log = console.log;
       console.log = () => {
         const items = [...arguments];
         log(...items);

@@ -1,10 +1,9 @@
 // _runtime/00299_NativeText.js
-import _modDef68 from "metro/00068__.js";
+import measureDefault from "00068_measure.js";
 import _mod103 from "metro/00103__.js";
 import _modDef300 from "metro/00300__.js";
-import javaScriptFlagGetter from "00027_javaScriptFlagGetter.js";
 
-let tmp3;
+require = fn;
 let obj = {
   validAttributes: {
     isHighlighted: true,
@@ -53,22 +52,20 @@ const tmp2 = _modDef300("RCTText", () => {
   return obj.createViewConfig(obj);
 });
 if (global.RN$Bridgeless) {
-  tmp3 = _modDef300("RCTVirtualText", () => {
-    obj = _mod103;
-    return obj.createViewConfig(closure_3);
-  });
+  let tmp3 = _modDef300("RCTVirtualText", () => _mod103.createViewConfig(closure_3));
 } else {
   tmp3 = tmp2;
-  _modDef68;
+  const importDefaultResult = measureDefault;
 }
+const javaScriptFlagGetter = fn(27);
 let tmp4 = tmp2;
 if (javaScriptFlagGetter.enablePreparedTextLayout()) {
   tmp4 = _modDef300("RCTSelectableText", () => {
-    obj = { uiViewClassName: "RCTSelectableText" };
-    const createViewConfig = _mod103.createViewConfig;
-    _mod103;
+    obj = _mod103;
+    const obj2 = {};
     const merged = Object.assign(obj);
-    return createViewConfig(obj);
+    obj2.uiViewClassName = "RCTSelectableText";
+    return obj.createViewConfig(obj2);
   });
 }
 

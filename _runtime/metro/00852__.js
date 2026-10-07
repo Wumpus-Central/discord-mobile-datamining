@@ -1,28 +1,31 @@
 // _runtime/metro/00852__.js
 import SPAN_STATUS_ERROR from "../00716_SPAN_STATUS_ERROR.js";
-import _mod745 from "00745__.js";
+import captureCheckIn from "../00745_captureCheckIn.js";
 import _awaitAsyncGenerator from "../00842__awaitAsyncGenerator.js";
-import _wrapAsyncGenerator from "../00844__wrapAsyncGenerator.js";
-
-let c11, c12, closure_10;
+import AsyncGenerator from "../00844_AsyncGenerator.js";
 
 function AsyncFromSyncIterator(arg0) {
   class AsyncFromSyncIterator {
-    constructor(arg0) {}
+    constructor(arg0) {
+      return;
+    }
   }
   AsyncFromSyncIterator.prototype = {
     s: null,
     n: null,
     next() {
-      let rejectResult;
       const n = this.n;
-      const iter = n(...arguments);
+      const apply = n.apply;
+      const s = this.s;
+      if (typeof apply === "unknown") {
+        let iter = HermesBuiltin.applyArguments(s);
+      } else {
+        iter = apply(s, arguments);
+      }
       if (Object(iter) !== iter) {
         const _TypeError = TypeError;
-        const self = this;
-        const self2 = this;
         const typeError = new TypeError(iter + " is not an object.");
-        rejectResult = reject(typeError);
+        let rejectResult = Promise.reject(typeError);
       } else {
         const done = iter.done;
         const resolved = Promise.resolve(iter.value);
@@ -30,21 +33,24 @@ function AsyncFromSyncIterator(arg0) {
       }
       return rejectResult;
     },
-    return: function (value) {
-      let resolved;
+    return(value) {
       const _return = this.s.return;
       if (undefined === _return) {
-        obj = { value, done: true };
-        resolved = Promise.resolve(obj);
+        const obj = { value, done: true };
+        let resolved = Promise.resolve(obj);
       } else {
-        const iter = _return(...arguments);
+        const apply = _return.apply;
+        const s = tmp.s;
+        if (typeof apply === "unknown") {
+          let iter = HermesBuiltin.applyArguments(s);
+        } else {
+          iter = apply(s, arguments);
+        }
         const _Object = Object;
         if (Object(iter) !== iter) {
           const _TypeError = TypeError;
-          const self = this;
-          const self2 = this;
           const typeError = new TypeError(iter + " is not an object.");
-          resolved = reject(typeError);
+          resolved = Promise.reject(typeError);
         } else {
           const done = iter.done;
           const resolved1 = Promise.resolve(iter.value);
@@ -53,20 +59,23 @@ function AsyncFromSyncIterator(arg0) {
       }
       return resolved;
     },
-    throw: function (arg0) {
-      let rejectResult;
+    throw(arg0) {
       const _return = this.s.return;
       if (undefined === _return) {
-        rejectResult = Promise.reject(arg0);
+        let rejectResult = Promise.reject(arg0);
       } else {
-        const iter = _return(...arguments);
+        const apply = _return.apply;
+        const s = tmp.s;
+        if (typeof apply === "unknown") {
+          let iter = HermesBuiltin.applyArguments(s);
+        } else {
+          iter = apply(s, arguments);
+        }
         const _Object = Object;
         if (Object(iter) !== iter) {
           const _TypeError = TypeError;
-          const self = this;
-          const self2 = this;
           const typeError = new TypeError(iter + " is not an object.");
-          rejectResult = reject(typeError);
+          rejectResult = Promise.reject(typeError);
         } else {
           const done = iter.done;
           const resolved = Promise.resolve(iter.value);
@@ -76,68 +85,11 @@ function AsyncFromSyncIterator(arg0) {
       return rejectResult;
     },
   };
-  const tmp = new AsyncFromSyncIterator(arg0);
-  return tmp;
+  return new AsyncFromSyncIterator(arg0);
 }
 function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
-  function handleCandidateContent(functionCalls, toolCalls, arg2) {
-    if (Array.isArray(functionCalls.functionCalls)) {
-      toolCalls = toolCalls.toolCalls;
-      const push = toolCalls.push;
-      const items = [];
-      HermesBuiltin.arraySpread(items, functionCalls.functionCalls, 0);
-      HermesBuiltin.apply(push, items, toolCalls);
-    }
-    let candidates = functionCalls.candidates;
-    if (candidates == null) {
-      candidates = [];
-    }
-    for (const item10027 of candidates) {
-      let finishReason;
-      if (item10027 != null) {
-        finishReason = item10027.finishReason;
-      }
-      if (finishReason) {
-        let finishReasons = toolCalls.finishReasons;
-        finishReason = !finishReasons.includes(item10027.finishReason);
-      }
-      if (finishReason) {
-        let finishReasons1 = toolCalls.finishReasons;
-        let arr = finishReasons1.push(item10027.finishReason);
-      }
-      let parts;
-      if (item10027 != null) {
-        let content = item10027.content;
-        if (content != null) {
-          parts = content.parts;
-        }
-      }
-      if (parts == null) {
-        parts = [];
-      }
-      for (const item10050 of parts) {
-        let text = arg2 && item10050.text;
-        if (text) {
-          let responseTexts = toolCalls.responseTexts;
-          let arr2 = responseTexts.push(item10050.text);
-        }
-        if (item10050.functionCall) {
-          let toolCalls1 = toolCalls.toolCalls;
-          obj = {
-            type: "function",
-            id: item10050.functionCall.id,
-            name: item10050.functionCall.name,
-            arguments: item10050.functionCall.args,
-          };
-          let arr3 = toolCalls1.push(obj);
-        }
-        continue;
-      }
-      continue;
-    }
-  }
   let tmp = promptFeedback;
-  if (tmp) {
+  if (promptFeedback) {
     promptFeedback = undefined;
     if (promptFeedback != null) {
       promptFeedback = promptFeedback.promptFeedback;
@@ -152,14 +104,13 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
       if (blockReason == null) {
         blockReason = promptFeedback.blockReason;
       }
-      obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "Content blocked: " + blockReason };
-      setStatus = setStatus.setStatus;
+      let obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: null };
       const _HermesInternal = HermesInternal;
-      setStatus(obj);
+      obj.message = "Content blocked: " + blockReason;
+      setStatus.setStatus(obj);
       const _HermesInternal2 = HermesInternal;
       const obj3 = { mechanism: { handled: false, type: "auto.ai.google_genai" } };
-      const obj2 = _mod745;
-      obj2.captureException("Content blocked: " + blockReason, obj3);
+      captureCheckIn.captureException("Content blocked: " + blockReason, obj3);
       flag = true;
     }
     tmp = !flag;
@@ -183,832 +134,965 @@ function processChunk(promptFeedback, toolCalls, arg2, setStatus) {
         toolCalls.totalTokens = usageMetadata.totalTokenCount;
       }
     }
-    handleCandidateContent(promptFeedback, toolCalls, arg2);
+    (function handleCandidateContent(functionCalls, toolCalls, arg2) {
+      if (Array.isArray(functionCalls.functionCalls)) {
+        toolCalls = toolCalls.toolCalls;
+        const push = toolCalls.push;
+        const items = [];
+        HermesBuiltin.arraySpread(functionCalls.functionCalls, 0);
+        HermesBuiltin.apply(items, toolCalls);
+      }
+      let candidates = functionCalls.candidates;
+      if (candidates == null) {
+        candidates = [];
+      }
+      for (const item10027 of candidates) {
+        let finishReason;
+        if (item10027 != null) {
+          finishReason = item10027.finishReason;
+        }
+        if (finishReason) {
+          let finishReasons = arg1.finishReasons;
+          finishReason = !finishReasons.includes(item10027.finishReason);
+        }
+        if (finishReason) {
+          let finishReasons1 = arg1.finishReasons;
+          let arr = finishReasons1.push(item10027.finishReason);
+        }
+        let parts;
+        if (item10027 != null) {
+          let content = item10027.content;
+          if (content != null) {
+            parts = content.parts;
+          }
+        }
+        if (parts == null) {
+          parts = [];
+        }
+        for (const item10050 of parts) {
+          let text = arg2;
+          if (arg2) {
+            text = item10050.text;
+          }
+          if (text) {
+            let responseTexts = arg1.responseTexts;
+            let arr2 = responseTexts.push(item10050.text);
+          }
+          if (item10050.functionCall) {
+            let toolCalls1 = arg1.toolCalls;
+            let obj = {
+              type: "function",
+              id: item10050.functionCall.id,
+              name: item10050.functionCall.name,
+              arguments: item10050.functionCall.args,
+            };
+            let arr3 = toolCalls1.push(obj);
+          }
+          continue;
+        }
+        continue;
+      }
+    })(promptFeedback, toolCalls, arg2);
   }
 }
-let obj = function _instrumentStream() {
-  obj = _wrapAsyncGenerator(async (arg0, arg1, arg2) => {
-    let tmp;
-    let tmp3;
-    function _asyncIterator(arg0) {
-      let str;
-      let str2;
-      if (typeof Symbol !== "undefined") {
-        const _Symbol = Symbol;
-        str2 = Symbol.asyncIterator;
-        const _Symbol2 = Symbol;
-        str = Symbol.iterator;
-      }
-      let num = 1;
-      while (true) {
-        let tmp = num;
-        if (str2) {
-          if (null != arg0[str2]) {
-            break;
-          }
-        }
-        if (str) {
-          let obj2 = arg0[str];
-          if (null != obj2) {
-            let callResult = obj2.call(arg0);
-            let self3 = this;
-            let self4 = this;
-            let tmp62 = new value2(callResult);
-            return tmp62;
-          }
-        }
-        num = num - 1;
-        str = "@@iterator";
-        str2 = "@@asyncIterator";
-        if (tmp) {
-          continue;
-        } else {
-          let _TypeError = TypeError;
-          let self = this;
-          let str3 = "Object is not async iterable";
-          let self2 = this;
-          let typeError = new TypeError("Object is not async iterable");
-          throw typeError;
-        }
-      }
-      return obj.call(arg0);
-    }
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
+let closure_6 = async function _instrumentStream(arg0) {
+  closure_0 = arg0;
+  closure_1 = value;
+  closure_2 = arg2;
+  c11 = 0;
+  c12 = 0;
+  c9 = 0;
+  return (async (arg0, value, arg2) => {
     if (c12 === 2) {
       c12 = 3;
-      let str = "Generator functions may not be called on executing generators";
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else {
-      let str2 = "";
-      if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj2 = { value, done: true };
-          return obj2;
-        } else {
-          return { value: "IconComponent", done: null };
-        }
+    } else if (tmp15 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        let c9;
-        try {
-          let closure_7;
-          let closure_3;
-          let value4;
-          let value5;
-          let obj28;
-          let obj4;
-          let closure_4;
-          let c5;
-          let iter;
-          let num = 2;
-          c12 = 2;
-          switch (c11) {
-            case 0: {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c12 = 3;
-                const obj3 = { value, done: true };
-                return obj3;
-              } else {
-                closure_7 = tmp;
-                let closure_8 = tmp4;
-                closure_0 = closure_1;
-                closure_1 = closure_2;
-                closure_3 = undefined;
-                value4 = undefined;
-                value5 = undefined;
-                obj28 = undefined;
-                obj4 = { responseTexts: [], finishReasons: [], toolCalls: [] };
-                closure_4 = false;
-                c5 = false;
-                c9 = 4;
-                iter = _asyncIterator(closure_0);
-                c11 = 5;
-                c12 = 1;
-                const obj5 = { value: _awaitAsyncGenerator(iter.next()), done: false };
-                return obj5;
-              }
-              break;
-            }
-            case 1: {
-              c9 = 0;
-              const obj6 = {};
-              obj6[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-              obj28 = obj6;
-              const tmp682 = closure_10;
-              if (obj4.responseId) {
-                obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
-              }
-              if (obj4.responseModel) {
-                obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
-              }
-              if (undefined !== obj4.promptTokens) {
-                obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
-              }
-              if (undefined !== obj4.completionTokens) {
-                obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = obj4.completionTokens;
-              }
-              if (undefined !== obj4.totalTokens) {
-                obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
-              }
-              if (obj4.finishReasons.length) {
-                const _JSON17 = JSON;
-                obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-                  obj4.finishReasons,
-                );
-              }
-              const length17 = closure_1 && obj4.responseTexts.length;
-              if (length17) {
-                const responseTexts9 = obj4.responseTexts;
-                obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
-              }
-              const length18 = closure_1 && obj4.toolCalls.length;
-              if (length18) {
-                const _JSON18 = JSON;
-                obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                  obj4.toolCalls,
-                );
-              }
-              closure_0.setAttributes(obj28);
-              closure_0.end();
-              throw tmp682;
-            }
-            case 2: {
-              value4 = closure_10;
-              c9 = 3;
-              const tmp674 = closure_4 && null != iter.return;
-              if (!tmp674) {
-                c9 = 1;
-                const tmp756 = c5;
-                if (tmp756) {
-                  throw closure_3;
-                } else {
-                  throw value4;
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c12 = 2;
+        switch (c11) {
+          case 0:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c12 = 3;
+              const obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_7 = tmp4;
+              closure_8 = tmp16;
+              closure_136_0 = closure_1;
+              closure_136_1 = closure_2;
+              closure_136_3 = undefined;
+              closure_136_6 = undefined;
+              closure_136_7 = undefined;
+              let value4;
+              closure_136_9 = undefined;
+              const obj4 = { responseTexts: [], finishReasons: [], toolCalls: [] };
+              closure_136_2 = obj4;
+              closure_136_4 = false;
+              closure_136_5 = false;
+              c9 = 4;
+              const iter = (function _asyncIterator(arg0) {
+                if (typeof Symbol !== "undefined") {
+                  const _Symbol = Symbol;
+                  let str2 = Symbol.asyncIterator;
+                  const _Symbol2 = Symbol;
+                  let str = Symbol.iterator;
                 }
-              } else {
-                c11 = 16;
-                c12 = 1;
-                const obj7 = { value: closure_135_2(iter.return()), done: false };
-                return obj7;
-              }
-              break;
-            }
-            case 3: {
-              c9 = 1;
-              const tmp669 = c5;
-              if (tmp669) {
-                throw closure_3;
-              } else {
-                throw tmp667;
-              }
-              break;
-            }
-            case 4: {
-              c5 = true;
-              closure_3 = closure_10;
-              c9 = 8;
-              const tmp585 = closure_4 && null != iter.return;
-              if (tmp585) {
-                c11 = 15;
-                c12 = 1;
-                const obj8 = { value: closure_135_2(iter.return()), done: false };
-                return obj8;
-              } else {
-                c9 = 1;
-                const tmp588 = c5;
-                if (tmp588) {
-                  throw closure_3;
-                } else {
-                  c9 = 0;
-                  const obj9 = {};
-                  obj9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  obj28 = obj9;
-                  if (obj4.responseId) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
-                  }
-                  if (obj4.responseModel) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
-                  }
-                  if (undefined !== obj4.promptTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
-                  }
-                  if (undefined !== obj4.completionTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = obj4.completionTokens;
-                  }
-                  if (undefined !== obj4.totalTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
-                  }
-                  if (obj4.finishReasons.length) {
-                    const _JSON15 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-                      obj4.finishReasons,
-                    );
-                  }
-                  const length15 = closure_1 && obj4.responseTexts.length;
-                  if (length15) {
-                    const responseTexts8 = obj4.responseTexts;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts8.join("");
-                  }
-                  const length16 = closure_1 && obj4.toolCalls.length;
-                  if (length16) {
-                    const _JSON16 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                      obj4.toolCalls,
-                    );
-                  }
-                  closure_0.setAttributes(obj28);
-                  closure_0.end();
-                  c12 = 3;
-                  return { value: "IconComponent", done: null };
-                }
-              }
-              break;
-            }
-            case 5: {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw value;
-              } else {
-                const value3 = value;
-                if (arg0 === 2) {
-                  c9 = 5;
-                  const tmp499 = closure_4 && null != iter.return;
-                  if (tmp499) {
-                    c11 = 9;
-                    c12 = 1;
-                    const obj10 = { value: closure_135_2(iter.return()), done: false };
-                    return obj10;
-                  } else {
-                    c9 = 1;
-                    const tmp502 = c5;
-                    if (tmp502) {
-                      throw closure_3;
-                    } else {
-                      c9 = 0;
-                      const obj11 = {};
-                      obj11[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                      obj28 = obj11;
-                      if (obj4.responseId) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
-                      }
-                      if (obj4.responseModel) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
-                      }
-                      if (undefined !== obj4.promptTokens) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
-                      }
-                      if (undefined !== obj4.completionTokens) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
-                          obj4.completionTokens;
-                      }
-                      if (undefined !== obj4.totalTokens) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
-                      }
-                      if (obj4.finishReasons.length) {
-                        const _JSON13 = JSON;
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
-                          JSON.stringify(obj4.finishReasons);
-                      }
-                      const length13 = closure_1 && obj4.responseTexts.length;
-                      if (length13) {
-                        const responseTexts7 = obj4.responseTexts;
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts7.join("");
-                      }
-                      const length14 = closure_1 && obj4.toolCalls.length;
-                      if (length14) {
-                        const _JSON14 = JSON;
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                          obj4.toolCalls,
-                        );
-                      }
-                      closure_0.setAttributes(obj28);
-                      closure_0.end();
-                      c12 = 3;
-                      const obj12 = { value: value3, done: true };
-                      return obj12;
+                let num = 1;
+                while (true) {
+                  let tmp = num;
+                  if (str2) {
+                    if (null != arg0[str2]) {
+                      break;
                     }
                   }
-                } else {
-                  value4 = value;
-                  const done2 = value.done;
-                  closure_4 = !done2;
-                  if (done2) {
-                    c9 = 2;
+                  if (str) {
+                    let tmp5 = arg0[str];
+                    if (null != tmp5) {
+                      let call = tmp5.call;
+                      let tmp11 = typeof call === "unknown" ? tmp5() : call(arg0);
+                      let tmp12 = new.target;
+                      let tmp13 = new.target;
+                      let tmp102 = new value2(tmp11);
+                      return tmp102;
+                    }
+                  }
+                  num = num - 1;
+                  str = "@@iterator";
+                  str2 = "@@asyncIterator";
+                  if (tmp) {
+                    continue;
                   } else {
-                    value5 = value4.value;
-                    closure_135_5(value5, obj4, closure_1, closure_0);
-                    c11 = 6;
-                    c12 = 1;
-                    const obj13 = { value: value5, done: false };
-                    return obj13;
+                    let _TypeError = TypeError;
+                    let tmp6 = new.target;
+                    let str3 = "Object is not async iterable";
+                    let tmp7 = new.target;
+                    let typeError = new TypeError("Object is not async iterable");
+                    throw typeError;
                   }
                 }
-              }
-              break;
+                const call2 = tmp4.call;
+                return typeof call2 === "unknown" ? tmp4() : call2(arg0);
+              })(closure_0);
+              closure_136_7 = iter;
+              c11 = 5;
+              c12 = 1;
+              const obj5 = { value: _awaitAsyncGenerator(iter.next()), done: false };
+              return obj5;
             }
-            case 6: {
-              if (arg0 === 1) {
+            break;
+          case 1:
+            c9 = 0;
+            const obj6 = {};
+            obj6[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+            closure_136_9 = obj6;
+            if (closure_136_2.responseId) {
+              closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = closure_136_2.responseId;
+            }
+            if (closure_136_2.responseModel) {
+              closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                closure_136_2.responseModel;
+            }
+            if (undefined !== closure_136_2.promptTokens) {
+              closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                closure_136_2.promptTokens;
+            }
+            if (undefined !== closure_136_2.completionTokens) {
+              closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                closure_136_2.completionTokens;
+            }
+            if (undefined !== closure_136_2.totalTokens) {
+              closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                closure_136_2.totalTokens;
+            }
+            if (closure_136_2.finishReasons.length) {
+              const _JSON17 = JSON;
+              closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
+                closure_136_2.finishReasons,
+              );
+            }
+            let length17 = closure_136_1;
+            if (closure_136_1) {
+              length17 = closure_136_2.responseTexts.length;
+            }
+            if (length17) {
+              const responseTexts9 = closure_136_2.responseTexts;
+              closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts9.join("");
+            }
+            let length18 = closure_136_1;
+            if (closure_136_1) {
+              length18 = closure_136_2.toolCalls.length;
+            }
+            if (length18) {
+              const _JSON18 = JSON;
+              closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                closure_136_2.toolCalls,
+              );
+            }
+            closure_136_0.setAttributes(closure_136_9);
+            closure_136_0.end();
+            throw closure_10;
+          case 2:
+            closure_6 = closure_10;
+            c9 = 3;
+            let tmp687 = closure_136_4;
+            if (closure_136_4) {
+              tmp687 = null != closure_136_7.return;
+            }
+            if (!tmp687) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                throw closure_6;
+              }
+            } else {
+              c11 = 16;
+              c12 = 1;
+              const obj7 = { value: closure_135_2(closure_136_7.return()), done: false };
+              return obj7;
+            }
+            break;
+          case 3:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp680;
+            }
+            break;
+          case 4:
+            c9 = 2;
+            closure_136_5 = true;
+            closure_136_3 = closure_10;
+            c9 = 8;
+            let tmp598 = closure_136_4;
+            if (closure_136_4) {
+              tmp598 = null != closure_136_7.return;
+            }
+            if (tmp598) {
+              c11 = 15;
+              c12 = 1;
+              const obj8 = { value: closure_135_2(closure_136_7.return()), done: false };
+              return obj8;
+            } else {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                const obj9 = {};
+                obj9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj9;
+                if (closure_136_2.responseId) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                    closure_136_2.responseId;
+                }
+                if (closure_136_2.responseModel) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                    closure_136_2.responseModel;
+                }
+                if (undefined !== closure_136_2.promptTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.promptTokens;
+                }
+                if (undefined !== closure_136_2.completionTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.completionTokens;
+                }
+                if (undefined !== closure_136_2.totalTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                    closure_136_2.totalTokens;
+                }
+                if (closure_136_2.finishReasons.length) {
+                  const _JSON15 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                    JSON.stringify(closure_136_2.finishReasons);
+                }
+                let length15 = closure_136_1;
+                if (closure_136_1) {
+                  length15 = closure_136_2.responseTexts.length;
+                }
+                if (length15) {
+                  const responseTexts8 = closure_136_2.responseTexts;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                    responseTexts8.join("");
+                }
+                let length16 = closure_136_1;
+                if (closure_136_1) {
+                  length16 = closure_136_2.toolCalls.length;
+                }
+                if (length16) {
+                  const _JSON16 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                }
+                closure_136_0.setAttributes(closure_136_9);
+                closure_136_0.end();
                 c12 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c9 = 7;
-                const tmp406 = closure_4 && null != iter.return;
-                if (tmp406) {
-                  c11 = 13;
+                return { value: "IconComponent", done: null };
+              }
+            }
+            break;
+          case 5:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else {
+              value3 = value;
+              if (arg0 === 2) {
+                c9 = 5;
+                let tmp512 = closure_136_4;
+                if (closure_136_4) {
+                  tmp512 = null != closure_136_7.return;
+                }
+                if (tmp512) {
+                  c11 = 9;
                   c12 = 1;
-                  const obj14 = { value: closure_135_2(iter.return()), done: false };
-                  return obj14;
+                  const obj10 = { value: closure_135_2(closure_136_7.return()), done: false };
+                  return obj10;
                 } else {
                   c9 = 1;
-                  const tmp409 = c5;
-                  if (tmp409) {
-                    throw closure_3;
+                  if (closure_136_5) {
+                    throw closure_136_3;
                   } else {
                     c9 = 0;
-                    const obj15 = {};
-                    obj15[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                    obj28 = obj15;
-                    if (obj4.responseId) {
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
+                    const obj11 = {};
+                    obj11[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                    closure_136_9 = obj11;
+                    if (closure_136_2.responseId) {
+                      closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                        closure_136_2.responseId;
                     }
-                    if (obj4.responseModel) {
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
+                    if (closure_136_2.responseModel) {
+                      closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                        closure_136_2.responseModel;
                     }
-                    if (undefined !== obj4.promptTokens) {
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
+                    if (undefined !== closure_136_2.promptTokens) {
+                      closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                        closure_136_2.promptTokens;
                     }
-                    if (undefined !== obj4.completionTokens) {
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
-                        obj4.completionTokens;
+                    if (undefined !== closure_136_2.completionTokens) {
+                      closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                        closure_136_2.completionTokens;
                     }
-                    if (undefined !== obj4.totalTokens) {
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
+                    if (undefined !== closure_136_2.totalTokens) {
+                      closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                        closure_136_2.totalTokens;
                     }
-                    if (obj4.finishReasons.length) {
-                      const _JSON11 = JSON;
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-                        obj4.finishReasons,
-                      );
+                    if (closure_136_2.finishReasons.length) {
+                      const _JSON13 = JSON;
+                      closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                        JSON.stringify(closure_136_2.finishReasons);
                     }
-                    const length11 = closure_1 && obj4.responseTexts.length;
-                    if (length11) {
-                      const responseTexts6 = obj4.responseTexts;
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts6.join("");
+                    let length13 = closure_136_1;
+                    if (closure_136_1) {
+                      length13 = closure_136_2.responseTexts.length;
                     }
-                    const length12 = closure_1 && obj4.toolCalls.length;
-                    if (length12) {
-                      const _JSON12 = JSON;
-                      obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                        obj4.toolCalls,
-                      );
+                    if (length13) {
+                      const responseTexts7 = closure_136_2.responseTexts;
+                      closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                        responseTexts7.join("");
                     }
-                    closure_0.setAttributes(obj28);
-                    closure_0.end();
+                    let length14 = closure_136_1;
+                    if (closure_136_1) {
+                      length14 = closure_136_2.toolCalls.length;
+                    }
+                    if (length14) {
+                      const _JSON14 = JSON;
+                      closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                        JSON.stringify(closure_136_2.toolCalls);
+                    }
+                    closure_136_0.setAttributes(closure_136_9);
+                    closure_136_0.end();
                     c12 = 3;
-                    const obj16 = { value, done: true };
-                    return obj16;
+                    const obj12 = { value: value3, done: true };
+                    return obj12;
                   }
                 }
               } else {
-                closure_4 = false;
-                c11 = 7;
-                c12 = 1;
-                const obj17 = { value: closure_135_2(iter.next()), done: false };
-                return obj17;
-              }
-              break;
-            }
-            case 7: {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw value;
-              } else {
-                const value2 = value;
-                if (arg0 === 2) {
+                closure_136_6 = value;
+                const done2 = value.done;
+                closure_136_4 = !done2;
+                if (done2) {
+                  c9 = 2;
+                } else {
+                  value4 = closure_136_6.value;
+                  closure_135_5(value4, closure_136_2, closure_136_1, closure_136_0);
+                  c11 = 6;
+                  c12 = 1;
                   c9 = 6;
-                  const tmp319 = closure_4 && null != iter.return;
-                  if (tmp319) {
+                  let tmp331 = closure_136_4;
+                  if (closure_136_4) {
+                    tmp331 = null != closure_136_7.return;
+                  }
+                  if (tmp331) {
                     c11 = 11;
                     c12 = 1;
-                    const obj18 = { value: closure_135_2(iter.return()), done: false };
-                    return obj18;
+                    const obj13 = { value: closure_135_2(closure_136_7.return()), done: false };
+                    return obj13;
                   } else {
                     c9 = 1;
-                    const tmp322 = c5;
-                    if (tmp322) {
-                      throw closure_3;
+                    if (closure_136_5) {
+                      throw closure_136_3;
                     } else {
                       c9 = 0;
-                      const obj19 = {};
-                      obj19[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                      obj28 = obj19;
-                      if (obj4.responseId) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
+                      const obj14 = {};
+                      obj14[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                      closure_136_9 = obj14;
+                      if (closure_136_2.responseId) {
+                        closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                          closure_136_2.responseId;
                       }
-                      if (obj4.responseModel) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
+                      if (closure_136_2.responseModel) {
+                        closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                          closure_136_2.responseModel;
                       }
-                      if (undefined !== obj4.promptTokens) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
+                      if (undefined !== closure_136_2.promptTokens) {
+                        closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                          closure_136_2.promptTokens;
                       }
-                      if (undefined !== obj4.completionTokens) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
-                          obj4.completionTokens;
+                      if (undefined !== closure_136_2.completionTokens) {
+                        closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                          closure_136_2.completionTokens;
                       }
-                      if (undefined !== obj4.totalTokens) {
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
+                      if (undefined !== closure_136_2.totalTokens) {
+                        closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                          closure_136_2.totalTokens;
                       }
-                      if (obj4.finishReasons.length) {
+                      if (closure_136_2.finishReasons.length) {
                         const _JSON9 = JSON;
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
-                          JSON.stringify(obj4.finishReasons);
+                        closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                          JSON.stringify(closure_136_2.finishReasons);
                       }
-                      const length9 = closure_1 && obj4.responseTexts.length;
+                      let length9 = closure_136_1;
+                      if (closure_136_1) {
+                        length9 = closure_136_2.responseTexts.length;
+                      }
                       if (length9) {
-                        const responseTexts5 = obj4.responseTexts;
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts5.join("");
+                        const responseTexts5 = closure_136_2.responseTexts;
+                        closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                          responseTexts5.join("");
                       }
-                      const length10 = closure_1 && obj4.toolCalls.length;
+                      let length10 = closure_136_1;
+                      if (closure_136_1) {
+                        length10 = closure_136_2.toolCalls.length;
+                      }
                       if (length10) {
                         const _JSON10 = JSON;
-                        obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                          obj4.toolCalls,
-                        );
+                        closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                          JSON.stringify(closure_136_2.toolCalls);
                       }
-                      closure_0.setAttributes(obj28);
-                      closure_0.end();
+                      closure_136_0.setAttributes(closure_136_9);
+                      closure_136_0.end();
                       c12 = 3;
-                      const obj20 = { value: value2, done: true };
-                      return obj20;
+                      const obj15 = { value: value2, done: true };
+                      return obj15;
                     }
                   }
-                } else {
-                  value4 = value;
-                  const done = value.done;
-                  closure_4 = !done;
                 }
               }
-              break;
             }
-            case 8: {
-              c9 = 1;
-              const tmp315 = c5;
-              if (tmp315) {
-                throw closure_3;
+            break;
+          case 6:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 7;
+              let tmp418 = closure_136_4;
+              if (closure_136_4) {
+                tmp418 = null != closure_136_7.return;
+              }
+              if (tmp418) {
+                c11 = 13;
+                c12 = 1;
+                const obj16 = { value: closure_135_2(closure_136_7.return()), done: false };
+                return obj16;
               } else {
-                throw tmp313;
-              }
-              break;
-            }
-            case 9: {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw value;
-              } else if (arg0 === 2) {
                 c9 = 1;
-                const tmp849 = c5;
-                if (tmp849) {
-                  throw closure_3;
+                if (closure_136_5) {
+                  throw closure_136_3;
                 } else {
                   c9 = 0;
-                  const obj21 = {};
-                  obj21[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  obj28 = obj21;
-                  if (obj4.responseId) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
+                  const obj17 = {};
+                  obj17[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                  closure_136_9 = obj17;
+                  if (closure_136_2.responseId) {
+                    closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                      closure_136_2.responseId;
                   }
-                  if (obj4.responseModel) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
+                  if (closure_136_2.responseModel) {
+                    closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                      closure_136_2.responseModel;
                   }
-                  if (undefined !== obj4.promptTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
+                  if (undefined !== closure_136_2.promptTokens) {
+                    closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                      closure_136_2.promptTokens;
                   }
-                  if (undefined !== obj4.completionTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = obj4.completionTokens;
+                  if (undefined !== closure_136_2.completionTokens) {
+                    closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                      closure_136_2.completionTokens;
                   }
-                  if (undefined !== obj4.totalTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
+                  if (undefined !== closure_136_2.totalTokens) {
+                    closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                      closure_136_2.totalTokens;
                   }
-                  if (obj4.finishReasons.length) {
-                    const _JSON7 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-                      obj4.finishReasons,
-                    );
+                  if (closure_136_2.finishReasons.length) {
+                    const _JSON11 = JSON;
+                    closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                      JSON.stringify(closure_136_2.finishReasons);
                   }
-                  const length7 = closure_1 && obj4.responseTexts.length;
-                  if (length7) {
-                    const responseTexts4 = obj4.responseTexts;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts4.join("");
+                  let length11 = closure_136_1;
+                  if (closure_136_1) {
+                    length11 = closure_136_2.responseTexts.length;
                   }
-                  const length8 = closure_1 && obj4.toolCalls.length;
-                  if (length8) {
-                    const _JSON8 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                      obj4.toolCalls,
-                    );
+                  if (length11) {
+                    const responseTexts6 = closure_136_2.responseTexts;
+                    closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                      responseTexts6.join("");
                   }
-                  closure_0.setAttributes(obj28);
-                  closure_0.end();
+                  let length12 = closure_136_1;
+                  if (closure_136_1) {
+                    length12 = closure_136_2.toolCalls.length;
+                  }
+                  if (length12) {
+                    const _JSON12 = JSON;
+                    closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] =
+                      JSON.stringify(closure_136_2.toolCalls);
+                  }
+                  closure_136_0.setAttributes(closure_136_9);
+                  closure_136_0.end();
                   c12 = 3;
-                  const obj22 = { value, done: true };
-                  return obj22;
+                  const obj18 = { value, done: true };
+                  return obj18;
                 }
               }
-              break;
+            } else {
+              closure_136_4 = false;
+              c11 = 7;
+              c12 = 1;
+              const obj19 = { value: closure_135_2(closure_136_7.next()), done: false };
+              return obj19;
             }
-            case 10: {
+            break;
+          case 7:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else {
+              value2 = value;
+              if (arg0 !== 2) {
+                closure_136_6 = value;
+                const done = value.done;
+                closure_136_4 = !done;
+              }
+            }
+            break;
+          case 8:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp325;
+            }
+            break;
+          case 9:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
               c9 = 1;
-              const tmp237 = c5;
-              if (tmp237) {
-                throw closure_3;
+              if (closure_136_5) {
+                throw closure_136_3;
               } else {
-                throw tmp235;
-              }
-              break;
-            }
-            case 11: {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c9 = 1;
-                const tmp847 = c5;
-                if (tmp847) {
-                  throw closure_3;
-                } else {
-                  c9 = 0;
-                  const obj23 = {};
-                  obj23[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  obj28 = obj23;
-                  if (obj4.responseId) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
-                  }
-                  if (obj4.responseModel) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
-                  }
-                  if (undefined !== obj4.promptTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
-                  }
-                  if (undefined !== obj4.completionTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = obj4.completionTokens;
-                  }
-                  if (undefined !== obj4.totalTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
-                  }
-                  if (obj4.finishReasons.length) {
-                    const _JSON5 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-                      obj4.finishReasons,
-                    );
-                  }
-                  const length5 = closure_1 && obj4.responseTexts.length;
-                  if (length5) {
-                    const responseTexts3 = obj4.responseTexts;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts3.join("");
-                  }
-                  const length6 = closure_1 && obj4.toolCalls.length;
-                  if (length6) {
-                    const _JSON6 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                      obj4.toolCalls,
-                    );
-                  }
-                  closure_0.setAttributes(obj28);
-                  closure_0.end();
-                  c12 = 3;
-                  const obj24 = { value, done: true };
-                  return obj24;
+                c9 = 0;
+                const obj20 = {};
+                obj20[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj20;
+                if (closure_136_2.responseId) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                    closure_136_2.responseId;
                 }
+                if (closure_136_2.responseModel) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                    closure_136_2.responseModel;
+                }
+                if (undefined !== closure_136_2.promptTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.promptTokens;
+                }
+                if (undefined !== closure_136_2.completionTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.completionTokens;
+                }
+                if (undefined !== closure_136_2.totalTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                    closure_136_2.totalTokens;
+                }
+                if (closure_136_2.finishReasons.length) {
+                  const _JSON7 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                    JSON.stringify(closure_136_2.finishReasons);
+                }
+                let length7 = closure_136_1;
+                if (closure_136_1) {
+                  length7 = closure_136_2.responseTexts.length;
+                }
+                if (length7) {
+                  const responseTexts4 = closure_136_2.responseTexts;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                    responseTexts4.join("");
+                }
+                let length8 = closure_136_1;
+                if (closure_136_1) {
+                  length8 = closure_136_2.toolCalls.length;
+                }
+                if (length8) {
+                  const _JSON8 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                }
+                closure_136_0.setAttributes(closure_136_9);
+                closure_136_0.end();
+                c12 = 3;
+                const obj21 = { value, done: true };
+                return obj21;
               }
-              break;
             }
-            case 12: {
+            break;
+          case 10:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp247;
+            }
+            break;
+          case 11:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
               c9 = 1;
-              const tmp159 = c5;
-              if (tmp159) {
-                throw closure_3;
+              if (closure_136_5) {
+                throw closure_136_3;
               } else {
-                throw tmp157;
-              }
-              break;
-            }
-            case 13: {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c9 = 1;
-                const tmp845 = c5;
-                if (tmp845) {
-                  throw closure_3;
-                } else {
-                  c9 = 0;
-                  const obj25 = {};
-                  obj25[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  obj28 = obj25;
-                  if (obj4.responseId) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
-                  }
-                  if (obj4.responseModel) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
-                  }
-                  if (undefined !== obj4.promptTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
-                  }
-                  if (undefined !== obj4.completionTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = obj4.completionTokens;
-                  }
-                  if (undefined !== obj4.totalTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
-                  }
-                  if (obj4.finishReasons.length) {
-                    const _JSON3 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-                      obj4.finishReasons,
-                    );
-                  }
-                  const length3 = closure_1 && obj4.responseTexts.length;
-                  if (length3) {
-                    const responseTexts2 = obj4.responseTexts;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts2.join("");
-                  }
-                  const length4 = closure_1 && obj4.toolCalls.length;
-                  if (length4) {
-                    const _JSON4 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                      obj4.toolCalls,
-                    );
-                  }
-                  closure_0.setAttributes(obj28);
-                  closure_0.end();
-                  c12 = 3;
-                  const obj26 = { value, done: true };
-                  return obj26;
+                c9 = 0;
+                const obj22 = {};
+                obj22[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj22;
+                if (closure_136_2.responseId) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                    closure_136_2.responseId;
                 }
+                if (closure_136_2.responseModel) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                    closure_136_2.responseModel;
+                }
+                if (undefined !== closure_136_2.promptTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.promptTokens;
+                }
+                if (undefined !== closure_136_2.completionTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.completionTokens;
+                }
+                if (undefined !== closure_136_2.totalTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                    closure_136_2.totalTokens;
+                }
+                if (closure_136_2.finishReasons.length) {
+                  const _JSON5 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                    JSON.stringify(closure_136_2.finishReasons);
+                }
+                let length5 = closure_136_1;
+                if (closure_136_1) {
+                  length5 = closure_136_2.responseTexts.length;
+                }
+                if (length5) {
+                  const responseTexts3 = closure_136_2.responseTexts;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                    responseTexts3.join("");
+                }
+                let length6 = closure_136_1;
+                if (closure_136_1) {
+                  length6 = closure_136_2.toolCalls.length;
+                }
+                if (length6) {
+                  const _JSON6 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                }
+                closure_136_0.setAttributes(closure_136_9);
+                closure_136_0.end();
+                c12 = 3;
+                const obj23 = { value, done: true };
+                return obj23;
               }
-              break;
             }
-            case 14: {
+            break;
+          case 12:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp169;
+            }
+            break;
+          case 13:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
               c9 = 1;
-              const tmp81 = c5;
-              if (tmp81) {
-                throw closure_3;
+              if (closure_136_5) {
+                throw closure_136_3;
               } else {
-                throw tmp79;
-              }
-              break;
-            }
-            case 15: {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c9 = 1;
-                const tmp843 = c5;
-                if (tmp843) {
-                  throw closure_3;
-                } else {
-                  c9 = 0;
-                  let tmp5 = closure_7;
-                  obj = {};
-                  obj[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  obj28 = obj;
-                  let tmp8 = obj4;
-                  if (obj4.responseId) {
-                    let tmp10 = closure_7;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
-                  }
-                  if (obj4.responseModel) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
-                  }
-                  if (undefined !== obj4.promptTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
-                  }
-                  if (undefined !== obj4.completionTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = obj4.completionTokens;
-                  }
-                  if (undefined !== obj4.totalTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
-                  }
-                  if (obj4.finishReasons.length) {
-                    const _JSON = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-                      obj4.finishReasons,
-                    );
-                  }
-                  const length = closure_1 && obj4.responseTexts.length;
-                  if (length) {
-                    let tmp62 = obj4;
-                    const responseTexts = obj4.responseTexts;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts.join("");
-                  }
-                  const length2 = closure_1 && obj4.toolCalls.length;
-                  if (length2) {
-                    const _JSON2 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                      obj4.toolCalls,
-                    );
-                  }
-                  closure_0.setAttributes(obj28);
-                  closure_0.end();
-                  c12 = 3;
-                  const obj27 = { value, done: true };
-                  return obj27;
+                c9 = 0;
+                const obj24 = {};
+                obj24[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj24;
+                if (closure_136_2.responseId) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                    closure_136_2.responseId;
                 }
-              }
-              break;
-            }
-            default: {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw value;
-              } else if (arg0 === 2) {
-                c9 = 1;
-                const tmp760 = c5;
-                if (tmp760) {
-                  throw closure_3;
-                } else {
-                  c9 = 0;
-                  obj28 = {};
-                  obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
-                  if (obj4.responseId) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] = obj4.responseId;
-                  }
-                  if (obj4.responseModel) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] = obj4.responseModel;
-                  }
-                  if (undefined !== obj4.promptTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = obj4.promptTokens;
-                  }
-                  if (undefined !== obj4.completionTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = obj4.completionTokens;
-                  }
-                  if (undefined !== obj4.totalTokens) {
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = obj4.totalTokens;
-                  }
-                  if (obj4.finishReasons.length) {
-                    const _JSON19 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(
-                      obj4.finishReasons,
-                    );
-                  }
-                  const length19 = closure_1 && obj4.responseTexts.length;
-                  if (length19) {
-                    const responseTexts10 = obj4.responseTexts;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] = responseTexts10.join("");
-                  }
-                  const length20 = closure_1 && obj4.toolCalls.length;
-                  if (length20) {
-                    const _JSON20 = JSON;
-                    obj28[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
-                      obj4.toolCalls,
-                    );
-                  }
-                  closure_0.setAttributes(obj28);
-                  closure_0.end();
-                  c12 = 3;
-                  const obj29 = { value, done: true };
-                  return obj29;
+                if (closure_136_2.responseModel) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                    closure_136_2.responseModel;
                 }
+                if (undefined !== closure_136_2.promptTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.promptTokens;
+                }
+                if (undefined !== closure_136_2.completionTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.completionTokens;
+                }
+                if (undefined !== closure_136_2.totalTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                    closure_136_2.totalTokens;
+                }
+                if (closure_136_2.finishReasons.length) {
+                  const _JSON3 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                    JSON.stringify(closure_136_2.finishReasons);
+                }
+                let length3 = closure_136_1;
+                if (closure_136_1) {
+                  length3 = closure_136_2.responseTexts.length;
+                }
+                if (length3) {
+                  const responseTexts2 = closure_136_2.responseTexts;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                    responseTexts2.join("");
+                }
+                let length4 = closure_136_1;
+                if (closure_136_1) {
+                  length4 = closure_136_2.toolCalls.length;
+                }
+                if (length4) {
+                  const _JSON4 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                }
+                closure_136_0.setAttributes(closure_136_9);
+                closure_136_0.end();
+                c12 = 3;
+                const obj25 = { value, done: true };
+                return obj25;
               }
-              break;
             }
-          }
-        } catch (tmp834) {
-          closure_10 = tmp834;
-          if (0 === c9) {
-            c12 = 3;
-            throw tmp834;
-          } else if (1 === c9) {
-            c11 = 1;
-          } else if (2 === c9) {
-            c11 = 2;
-          } else if (3 === c9) {
-            c11 = 3;
-          } else if (4 === c9) {
-            c11 = 4;
-          } else if (5 === c9) {
-            c11 = 8;
-          } else if (6 === c9) {
-            c11 = 10;
-          } else if (7 === c9) {
-            c11 = 12;
-          } else {
-            c11 = 14;
-          }
+            break;
+          case 14:
+            c9 = 1;
+            if (closure_136_5) {
+              throw closure_136_3;
+            } else {
+              throw tmp91;
+            }
+            break;
+          case 15:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                const obj = {};
+                obj[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj;
+                if (closure_136_2.responseId) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                    closure_136_2.responseId;
+                }
+                if (closure_136_2.responseModel) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                    closure_136_2.responseModel;
+                }
+                if (undefined !== closure_136_2.promptTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.promptTokens;
+                }
+                if (undefined !== closure_136_2.completionTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.completionTokens;
+                }
+                if (undefined !== closure_136_2.totalTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                    closure_136_2.totalTokens;
+                }
+                if (closure_136_2.finishReasons.length) {
+                  const _JSON = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                    JSON.stringify(closure_136_2.finishReasons);
+                }
+                let length = closure_136_1;
+                if (closure_136_1) {
+                  length = closure_136_2.responseTexts.length;
+                }
+                if (length) {
+                  const responseTexts = closure_136_2.responseTexts;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                    responseTexts.join("");
+                }
+                let length2 = closure_136_1;
+                if (closure_136_1) {
+                  length2 = closure_136_2.toolCalls.length;
+                }
+                if (length2) {
+                  const _JSON2 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                }
+                closure_136_0.setAttributes(closure_136_9);
+                closure_136_0.end();
+                c12 = 3;
+                const obj26 = { value, done: true };
+                return obj26;
+              }
+            }
+            break;
+          default:
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 1;
+              if (closure_136_5) {
+                throw closure_136_3;
+              } else {
+                c9 = 0;
+                const obj27 = {};
+                obj27[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_STREAMING_ATTRIBUTE] = true;
+                closure_136_9 = obj27;
+                if (closure_136_2.responseId) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_ID_ATTRIBUTE] =
+                    closure_136_2.responseId;
+                }
+                if (closure_136_2.responseModel) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE] =
+                    closure_136_2.responseModel;
+                }
+                if (undefined !== closure_136_2.promptTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.promptTokens;
+                }
+                if (undefined !== closure_136_2.completionTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] =
+                    closure_136_2.completionTokens;
+                }
+                if (undefined !== closure_136_2.totalTokens) {
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] =
+                    closure_136_2.totalTokens;
+                }
+                if (closure_136_2.finishReasons.length) {
+                  const _JSON19 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] =
+                    JSON.stringify(closure_136_2.finishReasons);
+                }
+                let length19 = closure_136_1;
+                if (closure_136_1) {
+                  length19 = closure_136_2.responseTexts.length;
+                }
+                if (length19) {
+                  const responseTexts10 = closure_136_2.responseTexts;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TEXT_ATTRIBUTE] =
+                    responseTexts10.join("");
+                }
+                let length20 = closure_136_1;
+                if (closure_136_1) {
+                  length20 = closure_136_2.toolCalls.length;
+                }
+                if (length20) {
+                  const _JSON20 = JSON;
+                  closure_136_9[closure_135_0(closure_135_1[4]).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(
+                    closure_136_2.toolCalls,
+                  );
+                }
+                closure_136_0.setAttributes(closure_136_9);
+                closure_136_0.end();
+                c12 = 3;
+                const obj28 = { value, done: true };
+                return obj28;
+              }
+            }
+        }
+      } catch (tmp847) {
+        closure_10 = tmp847;
+        if (tmp5 === c9) {
+          c12 = tmp3;
+          throw tmp847;
+        } else if (tmp2 === tmp849) {
+          c11 = tmp2;
+        } else if (tmp === tmp849) {
+          c11 = tmp;
+        } else if (tmp3 === tmp849) {
+          c11 = tmp3;
+        } else if (tmp13 === tmp849) {
+          c11 = tmp13;
+        } else if (tmp6 === tmp849) {
+          c11 = tmp12;
+        } else if (tmp7 === tmp849) {
+          c11 = tmp11;
+        } else if (tmp8 === tmp849) {
+          c11 = tmp10;
+        } else {
+          c11 = tmp9;
         }
       }
     }
-  });
-  return obj(...arguments);
+  })();
 };
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const instrumentStream = function instrumentStream(arg0, arg1, arg2) {
-  return obj(...arguments);
+  const self = this;
+  const apply = closure_6.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
 };

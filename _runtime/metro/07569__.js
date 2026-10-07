@@ -1,23 +1,9 @@
 // _runtime/metro/07569__.js
-import Fragment from "../react/00021_Fragment.js";
-import react from "../00019_react.js";
-import Link from "../01491_Link.js";
+import Link2 from "../01491_Link.js";
+import noop from "00019__.js";
 
-let focused, navigation;
-
+require = fn;
 function NativeStackNavigator(arg0) {
-  let NavigationContent;
-  let UNSTABLE_routeNamesChangeBehavior;
-  let UNSTABLE_router;
-  let children;
-  let describe;
-  let descriptors;
-  let id;
-  let initialRouteName;
-  let layout;
-  let screenLayout;
-  let screenListeners;
-  let screenOptions;
   ({
     id,
     initialRouteName,
@@ -43,11 +29,10 @@ function NativeStackNavigator(arg0) {
       UNSTABLE_router: 0,
     }),
   );
-  let state;
-  navigation = undefined;
+  state = undefined;
+  let navigation;
   let context;
-  let obj = state(navigation[2]);
-  const navigationBuilder = obj.useNavigationBuilder(state(navigation[2]).StackRouter, {
+  const navigationBuilder = state(navigation[2]).useNavigationBuilder(state(navigation[2]).StackRouter, {
     id,
     initialRouteName,
     UNSTABLE_routeNamesChangeBehavior,
@@ -65,23 +50,27 @@ function NativeStackNavigator(arg0) {
   const items = [context, navigation, ,];
   ({ index: arr[2], key: arr[3] } = state);
   const effect = context.useEffect(() => {
-    let index;
     let addListenerResult;
     if (navigation != null) {
       const addListener = navigation.addListener;
       if (addListener != null) {
         addListenerResult = addListener("tabPress", (arg0) => {
-          let closure_1;
           const defaultPrevented = arg0;
-          focused = focused.isFocused();
+          closure_1 = closure_1.isFocused();
           const animationFrame = requestAnimationFrame(() => {
-            const tmp2 = index.index > 0 && closure_1 && !defaultPrevented.defaultPrevented;
+            let tmp2 = index.index > 0;
             if (tmp2) {
-              const dispatch = focused.dispatch;
-              const obj = { target: index.key };
+              tmp2 = closure_1;
+            }
+            if (tmp2) {
+              tmp2 = !defaultPrevented.defaultPrevented;
+            }
+            if (tmp2) {
+              const obj = {};
               const StackActions = state(navigation[2]).StackActions;
               const merged = Object.assign(StackActions.popToTop());
-              dispatch(obj);
+              obj.target = index.key;
+              closure_2_1.dispatch(obj);
             }
           });
         });
@@ -89,14 +78,20 @@ function NativeStackNavigator(arg0) {
     }
     return addListenerResult;
   }, items);
-  const NativeStackView = state(navigation[3]).NativeStackView;
+  const obj2 = { children: null };
+  const obj3 = {};
   const merged1 = Object.assign(merged);
+  obj3.state = state;
+  obj3.navigation = navigation;
+  obj3.descriptors = descriptors;
+  obj3.describe = describe;
+  obj2.children = jsx(state(navigation[3]).NativeStackView, {});
   return <NavigationContent>{null}</NavigationContent>;
 }
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
+const Link = fn(1491);
 
 export const createNativeStackNavigator = function createNativeStackNavigator(arg0) {
-  const obj = Link;
-  return obj.createNavigatorFactory(NativeStackNavigator)(arg0);
+  return Link2.createNavigatorFactory(NativeStackNavigator)(arg0);
 };
 export const createNativeStackScreen = Link.createScreenFactory();

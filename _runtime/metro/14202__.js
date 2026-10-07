@@ -1,12 +1,11 @@
 // _runtime/metro/14202__.js
-let size;
 
 export default () => (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return {
     features: {
       image(dependencyMap) {
-        size = {
+        const size = {
           uri: dependencyMap.uri,
           preview: dependencyMap.preview,
           filename: dependencyMap.filename,

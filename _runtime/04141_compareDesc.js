@@ -1,21 +1,19 @@
 // _runtime/04141_compareDesc.js
-import toDate_mod from "03964_toDate.js";
+import _typeof_mod from "metro/03964__.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
 
-let tmp3;
-let tmp5;
-let toDate = toDate_mod;
-if (!toDate) {
-  tmp3 = { default: toDate };
-  const obj = { default: toDate };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp3 = toDate;
+  tmp3 = _typeof;
 }
-toDate = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
@@ -23,10 +21,9 @@ requiredArgs = tmp5;
 
 export default function compareDesc(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = toDate.default(arg0);
-  const defaultResult2 = toDate.default(arg1);
+  const defaultResult1 = _typeof.default(arg0);
   const time = defaultResult1.getTime();
-  const diff = time - defaultResult2.getTime();
+  const diff = time - _typeof.default(arg1).getTime();
   let num = -1;
   if (diff <= 0) {
     let num2 = 1;
@@ -36,4 +33,5 @@ export default function compareDesc(arg0, arg1) {
     num = num2;
   }
   return num;
-}
+};
+export default exports.default;

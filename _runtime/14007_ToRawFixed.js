@@ -1,33 +1,45 @@
 // _runtime/14007_ToRawFixed.js
-import _mod13987 from "metro/13987__.js";
-import UNICODE_EXTENSION_SEQUENCE_REGEX from "13988_UNICODE_EXTENSION_SEQUENCE_REGEX.js";
+import digitsToString2 from "13987_digitsToString.js";
+import _mod13988 from "metro/13988__.js";
 import ApplyUnsignedRoundingMode from "14000_ApplyUnsignedRoundingMode.js";
-import 01172__ from "metro/01172__.js";
+import e from "01172_e.js";
 
-const module_13987 = module_1172.__importDefault(_mod13987);
-let _default = module_13987.default;
-let result = _default.set({ toExpPos: 100 });
+const digitsToString = e.__importDefault(digitsToString2);
+let result = digitsToString.default.set({ toExpPos: 100 });
 
-export const ToRawFixed = function ToRawFixed(ZERO, minimumFractionDigits, maximumFractionDigits, roundingIncrement, result) {
-  let length;
-  let text;
-  const _default = module_13987.default;
-  const timesResult = ZERO.times(_default.pow(10, maximumFractionDigits));
-  const floorResult = timesResult.floor();
-  const divResult = floorResult.div(roundingIncrement);
-  const floorResult1 = divResult.floor();
-  const timesResult1 = floorResult1.times(roundingIncrement);
-  const _default2 = module_13987.default;
-  const timesResult2 = timesResult1.times(_default2.pow(10, -maximumFractionDigits));
-  const _default3 = module_13987.default;
-  const timesResult3 = ZERO.times(_default3.pow(10, maximumFractionDigits));
-  const ceilResult = timesResult3.ceil();
-  const divResult1 = ceilResult.div(roundingIncrement);
-  const ceilResult1 = divResult1.ceil();
-  let str = ceilResult1.times(roundingIncrement);
-  const _default4 = module_13987.default;
-  let timesResult4 = str.times(_default4.pow(10, -maximumFractionDigits));
-  result = ApplyUnsignedRoundingMode.ApplyUnsignedRoundingMode(ZERO, timesResult2, timesResult4, result);
+export const ToRawFixed = function ToRawFixed(
+  ZERO,
+  minimumFractionDigits,
+  maximumFractionDigits,
+  roundingIncrement,
+  formattedString,
+) {
+  const _default = digitsToString.default;
+  const timesResult = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits));
+  const floorResult = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).floor();
+  const divResult = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).floor().div(roundingIncrement);
+  const timesResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits))
+    .floor()
+    .div(roundingIncrement)
+    .floor()
+    .times(roundingIncrement);
+  const timesResult2 = timesResult1.times(digitsToString.default.pow(10, -maximumFractionDigits));
+  const _default2 = digitsToString.default;
+  const _default3 = digitsToString.default;
+  const floorResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits))
+    .floor()
+    .div(roundingIncrement)
+    .floor();
+  const timesResult3 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits));
+  const ceilResult = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).ceil();
+  const divResult1 = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits)).ceil().div(roundingIncrement);
+  let str = ZERO.times(digitsToString.default.pow(10, maximumFractionDigits))
+    .ceil()
+    .div(roundingIncrement)
+    .ceil()
+    .times(roundingIncrement);
+  let timesResult4 = str.times(digitsToString.default.pow(10, -maximumFractionDigits));
+  const result = ApplyUnsignedRoundingMode.ApplyUnsignedRoundingMode(ZERO, timesResult2, timesResult4, formattedString);
   if (result.eq(timesResult2)) {
     timesResult4 = timesResult2;
     str = timesResult1;
@@ -40,12 +52,12 @@ export const ToRawFixed = function ToRawFixed(ZERO, minimumFractionDigits, maxim
     let sum = str2;
     let sum1 = length2;
     if (str2.length <= maximumFractionDigits) {
-      sum = UNICODE_EXTENSION_SEQUENCE_REGEX.repeat("0", maximumFractionDigits - length2 + 1) + str2;
+      sum = _mod13988.repeat("0", maximumFractionDigits - length2 + 1) + str2;
       sum1 = maximumFractionDigits + 1;
     }
     const substr = sum.slice(0, sum1 - maximumFractionDigits);
-    text = `${arr3}.${arr2.slice(arr2.length - maximumFractionDigits)}`;
-    length = substr.length;
+    let text = `${arr3}.${arr2.slice(arr2.length - maximumFractionDigits)}`;
+    let length = substr.length;
   } else {
     length = str2.length;
     text = str2;
@@ -73,5 +85,10 @@ export const ToRawFixed = function ToRawFixed(ZERO, minimumFractionDigits, maxim
   if ("." === arr4[arr4.length - 1]) {
     substr2 = arr4.slice(0, arr4.length - 1);
   }
-  return { formattedString: substr2, roundedNumber: timesResult4, integerDigitsCount: length, roundingMagnitude: -maximumFractionDigits };
+  return {
+    formattedString: substr2,
+    roundedNumber: timesResult4,
+    integerDigitsCount: length,
+    roundingMagnitude: -maximumFractionDigits,
+  };
 };

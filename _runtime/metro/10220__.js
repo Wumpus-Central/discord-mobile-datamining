@@ -3,10 +3,9 @@ import repeatedTimeunitPattern from "../10174_repeatedTimeunitPattern.js";
 import findMostLikelyADYear from "../10175_findMostLikelyADYear.js";
 
 function parseNumberPattern(str) {
-  let num6;
   str = str.toLowerCase();
   if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    num6 = exports.INTEGER_WORD_DICTIONARY[str];
+    let num6 = exports.INTEGER_WORD_DICTIONARY[str];
   } else {
     num6 = 1;
     if ("ein" !== str) {
@@ -57,26 +56,25 @@ const regExp = new RegExp(combined, "i");
 
 export { parseNumberPattern };
 export const parseYear = function parseYear(match) {
-  const obj = /v/i;
   if (obj.test(match)) {
     const _parseInt3 = parseInt;
     return -parseInt(match.replace(/[^0-9]+/gi, ""));
   } else {
-    const obj2 = /n/i;
     if (obj2.test(match)) {
       const _parseInt2 = parseInt;
       return parseInt(match.replace(/[^0-9]+/gi, ""));
     } else {
       const _parseInt = parseInt;
-      const obj3 = /z/i;
       if (obj3.test(match)) {
         return _parseInt(match.replace(/[^0-9]+/gi, ""));
       } else {
-        const _parseIntResult = _parseInt(match);
-        return findMostLikelyADYear.findMostLikelyADYear(_parseIntResult);
+        return findMostLikelyADYear.findMostLikelyADYear(_parseInt(match));
       }
+      obj3 = /z/i;
     }
+    obj2 = /n/i;
   }
+  obj = /v/i;
 };
 export const parseDuration = function parseDuration(arg0) {
   let str = arg0;
@@ -110,7 +108,7 @@ export const WEEKDAY_DICTIONARY = {
 };
 export const MONTH_DICTIONARY = {
   januar: 1,
-  "j\u00e4nner": 1,
+  jänner: 1,
   janner: 1,
   jan: 1,
   "jan.": 1,
@@ -118,10 +116,10 @@ export const MONTH_DICTIONARY = {
   feber: 2,
   feb: 2,
   "feb.": 2,
-  "m\u00e4rz": 3,
+  märz: 3,
   maerz: 3,
-  "m\u00e4r": 3,
-  "m\u00e4r.": 3,
+  mär: 3,
+  "mär.": 3,
   mrz: 3,
   "mrz.": 3,
   april: 4,
@@ -161,7 +159,7 @@ export const INTEGER_WORD_DICTIONARY = {
   zwei: 2,
   drei: 3,
   vier: 4,
-  "f\u00fcnf": 5,
+  fünf: 5,
   fuenf: 5,
   sechs: 6,
   sieben: 7,
@@ -169,7 +167,7 @@ export const INTEGER_WORD_DICTIONARY = {
   neun: 9,
   zehn: 10,
   elf: 11,
-  "zw\u00f6lf": 12,
+  zwölf: 12,
   zwoelf: 12,
 };
 export const TIME_UNIT_DICTIONARY = {

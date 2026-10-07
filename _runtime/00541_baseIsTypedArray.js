@@ -1,7 +1,7 @@
 // _runtime/00541_baseIsTypedArray.js
-import isLength from "00519_isLength.js";
-import baseGetTag from "00522_baseGetTag.js";
-import isObjectLike from "00535_isObjectLike.js";
+import _mod519 from "metro/00519__.js";
+import _mod522 from "metro/00522__.js";
+import _mod535 from "metro/00535__.js";
 
 const obj = {};
 obj["[object Uint32Array]"] = true;
@@ -30,6 +30,9 @@ obj["[object Array]"] = false;
 obj["[object Arguments]"] = false;
 
 export default function baseIsTypedArray(arg0) {
-  const tmp3 = isObjectLike(arg0) && isLength(arg0.length) && obj[baseGetTag(undefined, arg0)];
+  let tmp3 = _mod535(arg0) && _mod519(arg0.length);
+  if (tmp3) {
+    tmp3 = obj[_mod522(undefined, arg0)];
+  }
   return tmp3;
 }

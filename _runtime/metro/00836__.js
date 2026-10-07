@@ -1,14 +1,16 @@
 // _runtime/metro/00836__.js
 import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "../00834_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
-import DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT from "../00837_DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT.js";
+import truncateTextByBytes from "../00837_truncateTextByBytes.js";
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const buildMethodPath = function buildMethodPath(c0, arg1) {
+export const buildMethodPath = function buildMethodPath(arg0, arg1) {
   let combined = arg1;
-  if (c0) {
+  if (arg0) {
     const _HermesInternal = HermesInternal;
-    combined = "" + c0 + "." + arg1;
+    combined = "" + arg0 + "." + arg1;
   }
   return combined;
 };
@@ -23,7 +25,7 @@ export const getFinalOperationName = function getFinalOperationName(arr) {
         if (!arr.includes("chat")) {
           const parts = arr.split(".");
           str4 = parts.pop() || "unknown";
-          parts.pop() || "unknown";
+          const tmp = parts.pop() || "unknown";
         }
         str3 = str4;
       }
@@ -44,7 +46,7 @@ export const getSpanOperation = function getSpanOperation(arr) {
         if (!arr.includes("chat")) {
           const parts = arr.split(".");
           str4 = parts.pop() || "unknown";
-          parts.pop() || "unknown";
+          const tmp = parts.pop() || "unknown";
         }
         str3 = str4;
       }
@@ -56,14 +58,12 @@ export const getSpanOperation = function getSpanOperation(arr) {
 };
 export const getTruncatedJsonString = function getTruncatedJsonString(arr) {
   if (typeof arr === "string") {
-    const obj2 = DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT;
-    return obj2.truncateGenAiStringInput(arr);
+    return truncateTextByBytes.truncateGenAiStringInput(arr);
   } else {
     const _Array = Array;
     if (Array.isArray(arr)) {
       const _JSON2 = JSON;
-      const obj = DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT;
-      return JSON.stringify(obj.truncateGenAiMessages(arr));
+      return JSON.stringify(truncateTextByBytes.truncateGenAiMessages(arr));
     } else {
       const _JSON = JSON;
       return JSON.stringify(arr);
@@ -78,14 +78,12 @@ export const setTokenUsageAttributes = function setTokenUsageAttributes(
   cacheReadInputTokens,
 ) {
   let num = promptTokens;
-  const tmp = undefined !== promptTokens;
   if (tmp) {
     const obj = {};
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
     setAttributes.setAttributes(obj);
   }
   let num2 = completionTokens;
-  const tmp5 = undefined !== completionTokens;
   if (tmp5) {
     const obj2 = {};
     obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
@@ -109,4 +107,6 @@ export const setTokenUsageAttributes = function setTokenUsageAttributes(
   }
   const sum2 = sum1 + num4;
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE]: sum2 });
+  tmp = undefined !== promptTokens;
+  tmp5 = undefined !== completionTokens;
 };

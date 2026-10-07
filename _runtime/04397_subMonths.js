@@ -1,31 +1,28 @@
 // _runtime/04397_subMonths.js
-import toInteger_mod from "03968_toInteger.js";
-import addMonths_mod from "04113_addMonths.js";
+import module_3968_mod from "metro/03968__.js";
+import module_4113_mod from "metro/04113__.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
 
-let tmp3;
-let tmp5;
-let tmp7;
-let toInteger = toInteger_mod;
-if (!toInteger) {
-  tmp3 = { default: toInteger };
-  const obj = { default: toInteger };
+let module_3968 = module_3968_mod;
+if (!module_3968) {
+  const obj = { default: module_3968 };
+  let tmp3 = obj;
 } else {
-  tmp3 = toInteger;
+  tmp3 = module_3968;
 }
-toInteger = tmp3;
-let addMonths = addMonths_mod;
-if (!addMonths) {
-  tmp5 = { default: addMonths };
-  const obj2 = { default: addMonths };
+module_3968 = tmp3;
+let module_4113 = module_4113_mod;
+if (!module_4113) {
+  const obj2 = { default: module_4113 };
+  let tmp5 = obj2;
 } else {
-  tmp5 = addMonths;
+  tmp5 = module_4113;
 }
-addMonths = tmp5;
+module_4113 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -33,5 +30,6 @@ requiredArgs = tmp7;
 
 export default function subMonths(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addMonths.default(arg0, -toInteger.default(arg1));
-}
+  return module_4113.default(arg0, -module_3968.default(arg1));
+};
+export default exports.default;

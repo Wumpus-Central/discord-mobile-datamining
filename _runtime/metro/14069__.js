@@ -1,14 +1,16 @@
 // _runtime/metro/14069__.js
 const require = globalThis.__r;
-let _require;
+
+const require = arg1;
+const dependencyMap = arg6;
 
 export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
   _require = locale;
   const timezones = require("14070__.js").timezones;
-  return timezones.filter((item) => {
-    function isSupported(timeZone, locale) {
-      let str = locale;
-      if (undefined === locale) {
+  return timezones.filter((item) =>
+    (function isSupported(timeZone, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
         str = "en";
       }
       try {
@@ -18,7 +20,6 @@ export const getSupportedTimeZones = function getSupportedTimeZones(locale) {
       } catch (err) {
         return false;
       }
-    }
-    return isSupported(item, locale);
-  });
+    })(item, closure_0),
+  );
 };

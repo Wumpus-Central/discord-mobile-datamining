@@ -1,26 +1,20 @@
 // _runtime/metro/04652__.js
-import react from "../00576_react.js";
+import c from "../00576_c.js";
 import _mod4649 from "04649__.js";
-import _slicedToArray from "00032__slicedToArray.js";
+import _slicedToArray from "00032__.js";
 
+require = arg1;
 function getBooleanProperty(booleanProperty, arg1) {
   return booleanProperty.booleanProperty(arg1);
 }
 
 export const useRiveBoolean = function useRiveBoolean(arg0, arg1) {
-  let tmp3;
-  let tmp4;
-  let tmp5;
-  const obj = react;
-  const cResult = obj.c(4);
-  const obj2 = _mod4649;
-  [tmp3, tmp4, tmp5] = obj2.useRiveProperty(arg1, arg0, getBooleanProperty);
-  _slicedToArray(obj2.useRiveProperty(arg1, arg0, getBooleanProperty), 3);
+  const cResult = c.c(4);
+  [tmp3, tmp4, tmp5] = _mod4649.useRiveProperty(arg1, arg0, getBooleanProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
-      let tmp6;
       if (cResult[2] === tmp3) {
-        tmp6 = cResult[3];
+        let tmp6 = cResult[3];
       }
       return tmp6;
     }

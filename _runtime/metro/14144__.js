@@ -2,11 +2,7 @@
 import _mod14122 from "14122__.js";
 import _mod14123 from "14123__.js";
 
-let tmp =
-  Object.keys ||
+export default Object.keys ||
   function keys(arg0) {
-    const tmp = _mod14123;
-    return tmp(arg0, _mod14122);
+    return _mod14123(arg0, _mod14122);
   };
-
-export default tmp;

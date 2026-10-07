@@ -1,20 +1,24 @@
 // _runtime/metro/10206__.js
-import _mod10173 from "10173__.js";
-import EmptyDuration from "../10176_EmptyDuration.js";
-import ReferenceWithTimezone2 from "../10177_ReferenceWithTimezone.js";
-import _mod10193 from "10193__.js";
+import Filter from "../10193_Filter.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENMergeRelativeFollowByDateRefiner = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -23,20 +27,25 @@ function _isNativeReflectConstruct() {
 }
 class ENMergeRelativeFollowByDateRefiner {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ENMergeRelativeFollowByDateRefiner);
-    const obj = _getPrototypeOf(ENMergeRelativeFollowByDateRefiner);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = c2(this, ENMergeRelativeFollowByDateRefiner);
+    tmp2 = closure_4;
+    obj = closure_4(ENMergeRelativeFollowByDateRefiner);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return c3(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeFollowByDateRefiner, _mod10193.MergingRefiner);
+_inherits(ENMergeRelativeFollowByDateRefiner, Filter.MergingRefiner);
 const entry = {
   key: "patternBetween",
   value: function patternBetween() {
@@ -50,16 +59,15 @@ const items = [
     value: function shouldMergeResults(str, text, start) {
       let match = str.match(this.patternBetween());
       if (match) {
-        let tmp5 = null == text.text.match(/\s+(before|from)$/i);
-        null != text.text.match(/\s+(before|from)$/i);
-        if (tmp5) {
-          const str2 = text.text;
-          tmp5 = null == str2.match(/\s+(after|since)$/i);
+        const tmp4 = null != text.text.match(/\s+(before|from)$/i);
+        let tmp5 = !tmp4;
+        if (!tmp4) {
+          tmp5 = null == text.text.match(/\s+(after|since)$/i);
         }
         let tmp6 = !tmp5;
-        if (tmp6) {
+        if (!tmp5) {
           start = start.start;
-          let value = start.get("day");
+          value = start.get("day");
           if (value) {
             const start2 = start.start;
             value = start2.get("month");
@@ -78,29 +86,24 @@ const items = [
   {
     key: "mergeResults",
     value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = _mod10173.parseDuration(text.text);
+      const parseDurationResult = ENMergeRelativeFollowByDateRefiner(10173).parseDuration(text.text);
       let reverseDurationResult = parseDurationResult;
-      const str = text.text;
       if (null != str.match(/\s+(before|from)$/i)) {
-        reverseDurationResult = EmptyDuration.reverseDuration(parseDurationResult);
+        reverseDurationResult = ENMergeRelativeFollowByDateRefiner(10176).reverseDuration(parseDurationResult);
       }
-      const ParsingComponents = ReferenceWithTimezone2.ParsingComponents;
-      const createRelativeFromReference = ParsingComponents.createRelativeFromReference;
-      const ReferenceWithTimezone = ReferenceWithTimezone2.ReferenceWithTimezone;
+      const ParsingComponents = ENMergeRelativeFollowByDateRefiner(10177).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeFollowByDateRefiner(10177).ReferenceWithTimezone;
       start = start.start;
-      const relativeFromReference = createRelativeFromReference(
+      const relativeFromReference = ParsingComponents.createRelativeFromReference(
         ReferenceWithTimezone.fromDate(start.date()),
         reverseDurationResult,
       );
-      const reference = start.reference;
-      const index = text.index;
-      const parsingResult = new ReferenceWithTimezone2.ParsingResult(
-        reference,
-        index,
+      return new ENMergeRelativeFollowByDateRefiner(10177).ParsingResult(
+        start.reference,
+        text.index,
         "" + text.text + arg0 + start.text,
         relativeFromReference,
       );
-      return parsingResult;
     },
   },
 ];

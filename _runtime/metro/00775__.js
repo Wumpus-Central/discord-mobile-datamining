@@ -1,36 +1,35 @@
 // _runtime/metro/00775__.js
 import _mod776 from "00776__.js";
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
-  let dsn;
-  let tunnel;
   if (getDsn != null) {
-    dsn = getDsn.getDsn();
+    const dsn = getDsn.getDsn();
   }
   if (getDsn != null) {
-    tunnel = getDsn.getOptions().tunnel;
+    const tunnel = getDsn.getOptions().tunnel;
   }
-  const obj = _mod776;
-  const result = obj.parseStringToURLObject(arr);
+  const result = _mod776.parseStringToURLObject(arr);
   let flag = false;
   if (result) {
     flag = false;
-    const tmp2Result = _mod776;
     if (!tmp2Result.isURLObjectRelative(result)) {
       let tmp5 = dsn;
       if (tmp5) {
         const host = result.host;
         let hasItem = host.includes(dsn.host);
         if (hasItem) {
+          hasItem = /(^|&|\?)sentry_key=/.test(result.search);
           const obj3 = /(^|&|\?)sentry_key=/;
-          hasItem = obj3.test(result.search);
         }
         tmp5 = hasItem;
       }
       flag = tmp5;
     }
+    tmp2Result = _mod776;
   }
   if (!flag) {
     let flag2 = false;

@@ -1,19 +1,20 @@
 // _runtime/08074_baseMap.js
-import createBaseEach from "00516_createBaseEach.js";
-import isArrayLike from "00518_isArrayLike.js";
+import baseForOwn from "00516_baseForOwn.js";
+import _mod518 from "metro/00518__.js";
 
 export default function baseMap(arg0, arg1) {
-  let ArrayResult;
-  let closure_0 = arg1;
-  let sum = -1;
-  if (isArrayLike(arg0)) {
+  closure_0 = arg1;
+  c1 = -1;
+  if (_mod518(arg0)) {
     const _Array = Array;
-    ArrayResult = Array(arg0.length);
+    let ArrayResult = Array(arg0.length);
   } else {
     ArrayResult = [];
   }
-  createBaseEach(arg0, (arg0, arg1, arg2) => {
-    sum = sum + 1;
+  closure_2 = ArrayResult;
+  baseForOwn(arg0, (arg0, arg1, arg2) => {
+    const sum = c1 + 1;
+    c1 = sum;
     ArrayResult[sum] = closure_0(arg0, arg1, arg2);
   });
   return ArrayResult;

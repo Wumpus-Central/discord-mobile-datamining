@@ -1,7 +1,9 @@
 // _runtime/metro/10521__.js
-import _mod1643 from "01643__.js";
-import convertToSharedIndex from "../10507_convertToSharedIndex.js";
+import cancelAnimation from "../01643_cancelAnimation.js";
+import SINGLE_ITEM from "../10507_SINGLE_ITEM.js";
 
+require = arg1;
+const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_useOnProgressChangeTs1(){const{offsetX}=this.__closure;return offsetX.value;}" };
 let closure_3 = {
   code: "function pnpm_useOnProgressChangeTs2(_value){const{computedOffsetXValueWithAutoFillData,rawDataLength,size,autoFillData,loop,onProgressChange,isFunc,runOnJS}=this.__closure;let value=computedOffsetXValueWithAutoFillData({value:_value,rawDataLength:rawDataLength,size:size,autoFillData:autoFillData,loop:loop});if(!loop){value=Math.max(-((rawDataLength-1)*size),Math.min(value,0));}let absoluteProgress=Math.abs(value/size);if(value>0)absoluteProgress=rawDataLength-absoluteProgress;if(onProgressChange){if(isFunc)runOnJS(onProgressChange)(value,absoluteProgress);else onProgressChange.value=absoluteProgress;}}",
@@ -11,11 +13,10 @@ export const useOnProgressChange = function useOnProgressChange(autoFillData) {
   autoFillData = autoFillData.autoFillData;
   const loop = autoFillData.loop;
   const offsetX = autoFillData.offsetX;
-  size = autoFillData.size;
+  const size = autoFillData.size;
   const rawDataLength = autoFillData.rawDataLength;
   const onProgressChange = autoFillData.onProgressChange;
-  let closure_6 = tmp;
-  let obj = autoFillData(loop[0]);
+  closure_6 = tmp;
   const fn = function n() {
     return offsetX.value;
   };
@@ -23,9 +24,7 @@ export const useOnProgressChange = function useOnProgressChange(autoFillData) {
   fn.__workletHash = 355184931449;
   fn.__initData = offsetX;
   const fn2 = function u(value) {
-    const obj = convertToSharedIndex;
-    const obj2 = { value, rawDataLength, size, autoFillData, loop };
-    const result = obj.computedOffsetXValueWithAutoFillData(obj2);
+    const result = SINGLE_ITEM.computedOffsetXValueWithAutoFillData({ value, rawDataLength, size, autoFillData, loop });
     let bound = result;
     if (!loop) {
       const _Math = Math;
@@ -40,24 +39,25 @@ export const useOnProgressChange = function useOnProgressChange(autoFillData) {
     }
     if (onProgressChange) {
       if (closure_6) {
-        const tmpResult = _mod1643;
-        tmpResult.runOnJS(onProgressChange)(bound, diff);
+        cancelAnimation.runOnJS(onProgressChange)(bound, diff);
+        const tmpResult = cancelAnimation;
       } else {
         onProgressChange.value = diff;
       }
     }
+    const obj2 = { value, rawDataLength, size, autoFillData, loop };
   };
-  let obj2 = {
+  let obj = autoFillData(loop[0]);
+  fn2.__closure = {
     computedOffsetXValueWithAutoFillData: autoFillData(loop[1]).computedOffsetXValueWithAutoFillData,
     rawDataLength,
     size,
     autoFillData,
     loop,
     onProgressChange,
-    isFunc: tmp,
+    isFunc: typeof onProgressChange === "function",
     runOnJS: autoFillData(loop[0]).runOnJS,
   };
-  fn2.__closure = obj2;
   fn2.__workletHash = 12473781608319;
   fn2.__initData = size;
   const items = [loop, autoFillData, rawDataLength, onProgressChange, size];

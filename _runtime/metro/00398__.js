@@ -1,21 +1,19 @@
 // _runtime/metro/00398__.js
 import get_VersionDefault from "../00273_get_Version.js";
-import _modDef354 from "00354__.js";
-import _modDef399 from "00399__.js";
+import _combineCallbacksDefault from "../00354__combineCallbacks.js";
+import mockCompositeAnimationDefault from "../00399_mockCompositeAnimation.js";
 
-const require = globalThis.__r;
-
-let importDefaultResult;
+const require = arg1;
 if (get_VersionDefault.isDisableAnimations) {
-  importDefaultResult = _modDef399;
+  let importDefaultResult = mockCompositeAnimationDefault;
 } else {
-  importDefaultResult = _modDef354;
+  importDefaultResult = _combineCallbacksDefault;
 }
 const obj = {};
 Object.defineProperty(obj, "FlatList", { get: () => require("00400__.js").default, set: undefined });
 Object.defineProperty(obj, "Image", { get: () => require("00401__.js").default, set: undefined });
 Object.defineProperty(obj, "ScrollView", {
-  get: () => require("AnimatedScrollViewWithOrWithoutInvertedRefreshControl").default,
+  get: () => require("AnimatedScrollViewWithInvertedRefreshControl").default,
   set: undefined,
 });
 Object.defineProperty(obj, "SectionList", { get: () => require("00405__.js").default, set: undefined });

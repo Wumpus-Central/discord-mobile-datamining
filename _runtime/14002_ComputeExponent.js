@@ -1,10 +1,10 @@
 // _runtime/14002_ComputeExponent.js
-import _mod13987 from "metro/13987__.js";
+import digitsToString2 from "13987_digitsToString.js";
 import ComputeExponentForMagnitude from "14003_ComputeExponentForMagnitude.js";
 import FormatNumericToString from "14004_FormatNumericToString.js";
-import 01172__ from "metro/01172__.js";
+import e from "01172_e.js";
 
-const module_13987 = module_1172.__importDefault(_mod13987);
+const digitsToString = e.__importDefault(digitsToString2);
 
 export const ComputeExponent = function ComputeExponent(internalSlots, timesResult) {
   if (timesResult.isZero()) {
@@ -14,11 +14,9 @@ export const ComputeExponent = function ComputeExponent(internalSlots, timesResu
     if (timesResult.isNegative()) {
       negatedResult = timesResult.negated();
     }
-    const logResult = negatedResult.log(10);
-    const floorResult = logResult.floor();
+    const floorResult = negatedResult.log(10).floor();
     const result = ComputeExponentForMagnitude.ComputeExponentForMagnitude(internalSlots, floorResult);
-    const _default = module_13987.default;
-    timesResult = negatedResult.times(_default.pow(10, -result));
+    timesResult = negatedResult.times(digitsToString.default.pow(10, -result));
     const result1 = FormatNumericToString.FormatNumericToString(internalSlots, timesResult);
     const roundedNumber = result1.roundedNumber;
     if (roundedNumber.isZero()) {
@@ -27,16 +25,19 @@ export const ComputeExponent = function ComputeExponent(internalSlots, timesResu
     } else {
       const roundedNumber2 = result1.roundedNumber;
       const logResult1 = roundedNumber2.log(10);
-      const floorResult1 = logResult1.floor();
       if (floorResult1.eq(floorResult.minus(result))) {
         const items1 = [result, floorResult.toNumber()];
         return items1;
       } else {
-        const items2 = [ComputeExponentForMagnitude.ComputeExponentForMagnitude(internalSlots, floorResult.plus(1)), ];
-        const plusResult = floorResult.plus(1);
-        items2[1] = plusResult.toNumber();
+        const items2 = [
+          ComputeExponentForMagnitude.ComputeExponentForMagnitude(internalSlots, floorResult.plus(1)),
+          floorResult.plus(1).toNumber(),
+        ];
         return items2;
       }
+      floorResult1 = roundedNumber2.log(10).floor();
     }
+    const _default = digitsToString.default;
+    const logResult = negatedResult.log(10);
   }
 };

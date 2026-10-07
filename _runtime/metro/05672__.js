@@ -3329,17 +3329,7 @@ const obj = {
     "teddy beer",
     "teddybeer",
   ],
-  "pi\u00f1ata": [
-    "cinco de mayo",
-    "feest",
-    "Mexicaans",
-    "Mexico",
-    "pi\u00F1ata",
-    "snoep",
-    "snoepgoed",
-    "vieren",
-    "viering",
-  ],
+  piñata: ["cinco de mayo", "feest", "Mexicaans", "Mexico", "pi\u00F1ata", "snoep", "snoepgoed", "vieren", "viering"],
   mirror_ball: ["dans", "dansen", "disco", "discobal", "feest", "glitter", "spiegelbal"],
   nesting_dolls: [
     "baboesjka",

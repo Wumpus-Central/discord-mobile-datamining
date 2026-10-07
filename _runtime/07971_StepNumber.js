@@ -1,19 +1,14 @@
 // _runtime/07971_StepNumber.js
-import react2 from "00019_react.js";
-import styles from "07968_styles.js";
+import _mod19 from "metro/00019__.js";
+import _mod7968 from "metro/07968__.js";
 import 07964__ from "metro/07964__.js";
-import react_native from "00017_react-native.js";
-import Fragment from "react/00021_Fragment.js";
+import get_ActivityIndicator from "metro/00017__.js";
+import jsxProd from "react/00021_jsxProd.js";
 
-const react = module_7964(react2);
+const noop = module_7964(_mod19);
 
 export const StepNumber = function StepNumber(arg0) {
-  let i;
-  let index;
-  let style;
+  const obj = { style: _mod7968.styles.stepNumber, children: <get ActivityIndicator.Text testID={"" + index + "th-step"} style={style}>{i}</get ActivityIndicator.Text> };
   ({ i, index, style } = arg0);
-  const jsx = Fragment.jsx;
-  const View = react_native.View;
-  ({ testID: "" + index + "th-step", style, children: i });
-  return <View style={styles.styles.stepNumber}>{null}</View>;
+  return <get ActivityIndicator.View style={_mod7968.styles.stepNumber}><get ActivityIndicator.Text testID={"" + index + "th-step"} style={style}>{i}</get ActivityIndicator.Text></get ActivityIndicator.View>;
 };

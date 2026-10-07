@@ -1,71 +1,68 @@
 // _runtime/metro/12665__.js
 import _mod12607 from "12607__.js";
 import _mod12667 from "12667__.js";
-import 12636__ from "12636__.js";
+import setupIntegration from "12636__.js";
 
-
-export const captureConsoleIntegration = module_12636.defineIntegration(() => {
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let CONSOLE_LEVELS;
   let handled;
-  CONSOLE_LEVELS = obj.levels || CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  }
   handled = obj.handled;
-  let obj2 = {
+  return {
     name: "CaptureConsole",
     setup(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
-        let tmpResult = CONSOLE_LEVELS(handled[2]);
-        let result = tmpResult.addConsoleInstrumentationHandler((arg0) => {
-          let args;
-          let level;
-          let obj3;
-          let tmpResult;
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
           ({ args, level } = arg0);
-          let obj = _mod12607;
-          const hasItem = obj.getClient() === closure_0 && CONSOLE_LEVELS.includes(level);
+          let hasItem = _mod12607.getClient() === args;
           if (hasItem) {
-            let closure_2 = handled;
-            let obj2 = { level: tmpResult.severityLevelFromString(level), extra: obj3 };
-            obj3 = { arguments: args };
-            tmpResult = _mod12667;
-            const tmpResult2 = _mod12607;
-            tmpResult2.withScope((addEventProcessor) => {
+            hasItem = CONSOLE_LEVELS.includes(level);
+          }
+          if (hasItem) {
+            closure_2 = handled;
+            let obj2 = { level: _mod12667.severityLevelFromString(level), extra: null };
+            const obj3 = { arguments: args };
+            obj2.extra = obj3;
+            const tmpResult = _mod12667;
+            _mod12607.withScope((addEventProcessor) => {
               addEventProcessor.addEventProcessor((arg0) => {
                 arg0.logger = "console";
-                const obj = args(level[6]);
-                obj2 = { handled, type: "console" };
-                const result = obj.addExceptionMechanism(arg0, obj2);
+                const result = args(level[6]).addExceptionMechanism(arg0, { handled, type: "console" });
                 return arg0;
               });
               if ("assert" !== level) {
                 const found = args.find((item) => item instanceof Error);
                 if (found) {
-                  const tmp14Result = closure_2_0(closure_2_1[8]);
-                  tmp14Result.captureException(found, obj2);
+                  args(12628).captureException(found, obj2);
+                  const tmp14Result = args(12628);
                 } else {
-                  const tmp14Result2 = closure_2_0(closure_2_1[7]);
-                  const safeJoinResult = tmp14Result2.safeJoin(args, " ");
-                  const obj4 = closure_2_0(closure_2_1[8]);
-                  obj4.captureMessage(safeJoinResult, obj2);
+                  const tmp14Result2 = args(12589);
+                  const safeJoinResult = args(12589).safeJoin(args, " ");
+                  args(12628).captureMessage(safeJoinResult, obj2);
+                  const obj4 = args(12628);
                 }
               } else if (!args[0]) {
-                let obj = closure_2_0(closure_2_1[7]);
+                const obj = args(12589);
                 const _HermesInternal = HermesInternal;
-                const tmp4 = obj.safeJoin(args.slice(1), " ") || "console.assert";
-                const combined = "Assertion failed: " + tmp4;
+                const combined = "Assertion failed: " + args(12589).safeJoin(args.slice(1), " ") || "console.assert";
                 addEventProcessor.setExtra("arguments", args.slice(1));
-                obj2 = closure_2_0(closure_2_1[8]);
+                obj2 = args(12628);
                 obj2.captureMessage(combined, obj2);
+                const tmp4 = args(12589).safeJoin(args.slice(1), " ") || "console.assert";
               }
             });
+            const tmpResult2 = _mod12607;
           }
         });
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
       }
-    }
+    },
   };
-  return obj2;
 });

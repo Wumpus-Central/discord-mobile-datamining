@@ -1,5 +1,5 @@
 // _runtime/00850_CHATS_CREATE_METHOD.js
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const CHATS_CREATE_METHOD = "chats.create";
 export const CHAT_PATH = "chat";

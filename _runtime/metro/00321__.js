@@ -1,67 +1,66 @@
 // _runtime/metro/00321__.js
-import react2 from "../00019_react.js";
 import _modDef38 from "00038__.js";
-import _mod322 from "00322__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import react_native from "../00017_react-native.js";
-import Fragment from "../react/00021_Fragment.js";
+import noop from "00019__.js";
 
-const react = react2;
-
-let StyleSheet;
-let c9;
-let metroImportAll;
-let metroImportDefault;
+const CellRenderer = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const isValidElement = react2.isValidElement;
-({ StyleSheet, View: metroImportDefault } = react_native);
-({ jsx: metroImportAll, jsxs: c9 } = Fragment);
+_possibleConstructorReturnDefault;
+const isValidElement = fn(19).isValidElement;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 class CellRenderer {
   constructor() {
-    let constructResult;
-    const self = this;
-    let items = [...arguments];
-    let closure_0;
-    _classCallCheck(this, CellRenderer);
-    const items1 = [...items];
-    const obj = _getPrototypeOf(CellRenderer);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, CellRenderer);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(CellRenderer);
+    tmp3 = closure_4;
+    if (c10()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    const tmp3Result = _possibleConstructorReturn(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    const obj2 = { separatorProps: { highlighted: false, leadingItem: tmp3Result.props.item } };
-    tmp3Result.state = obj2;
+    obj1 = { separatorProps: { highlighted: false, leadingItem: tmp3Result.props.item } };
+    tmp3Result.state = obj1;
     tmp3Result._separators = {
       highlight() {
-        let props;
-        let props2;
         ({ props, props: props2 } = closure_0);
         const items = [,];
         ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
         props2.onUpdateSeparators(items, { highlighted: true });
       },
       unhighlight() {
-        let props;
-        let props2;
         ({ props, props: props2 } = closure_0);
         const items = [,];
         ({ cellKey: arr[0], prevCellKey: arr[1] } = props);
@@ -71,12 +70,11 @@ class CellRenderer {
         const props = closure_0.props;
         let prevCellKey = props.cellKey;
         const props2 = closure_0.props;
-        const onUpdateSeparators = props2.onUpdateSeparators;
         if ("leading" === arg0) {
           prevCellKey = props.prevCellKey;
         }
         const items = [prevCellKey];
-        onUpdateSeparators(items, arg1);
+        props2.onUpdateSeparators(items, arg1);
       },
     };
     tmp3Result._onLayout = (arg0) => {
@@ -96,17 +94,16 @@ class CellRenderer {
     return tmp3Result;
   }
 }
-_inherits(CellRenderer, react.PureComponent);
+_inherits(CellRenderer, noop.PureComponent);
 const entry = {
   key: "updateSeparatorProps",
   value: function updateSeparatorProps(_cellRefs) {
-    let closure_0 = _cellRefs;
+    closure_0 = _cellRefs;
     this.setState((separatorProps) => {
-      let obj2;
-      const obj = { separatorProps: obj2 };
-      obj2 = {};
+      const obj = { separatorProps: null };
       const merged = Object.assign(separatorProps.separatorProps);
-      const merged1 = Object.assign(_cellRefs);
+      const merged1 = Object.assign(closure_0);
+      obj.separatorProps = {};
       return obj;
     });
   },
@@ -123,8 +120,10 @@ let items = [
   {
     key: "_renderElement",
     value: function _renderElement(renderItem, ListItemComponent, item, index) {
-      let tmp7;
-      const tmp = renderItem && ListItemComponent;
+      let tmp = renderItem;
+      if (renderItem) {
+        tmp = ListItemComponent;
+      }
       if (tmp) {
         const _console = console;
         console.warn(
@@ -134,7 +133,7 @@ let items = [
       const self = this;
       if (ListItemComponent) {
         const obj2 = { item, index, separators: self._separators };
-        tmp7 = metroImportAll(ListItemComponent, obj2);
+        let tmp7 = closure_1_8(ListItemComponent, obj2);
       } else if (renderItem) {
         const obj = { item, index, separators: self._separators };
         tmp7 = renderItem(obj);
@@ -150,94 +149,85 @@ let items = [
   {
     key: "render",
     value: function render() {
-      let CellRendererComponent;
-      let ItemSeparatorComponent;
-      let horizontal;
-      let index;
-      let inversionStyle;
-      let item;
-      let items3;
-      let items4;
-      let onCellLayout;
-      let tmp10Result;
-      let tmp7;
       const self = this;
       const props = this.props;
       ({ CellRendererComponent, ItemSeparatorComponent, horizontal, item, index, inversionStyle, onCellLayout } =
         props);
-      const cellKey = props.cellKey;
       const _renderElementResult = this._renderElement(props.renderItem, props.ListItemComponent, item, index);
       let tmp2 = ItemSeparatorComponent;
       if (!isValidElement(ItemSeparatorComponent)) {
         let tmp3 = ItemSeparatorComponent;
-        if (tmp3) {
+        if (ItemSeparatorComponent) {
           const obj = {};
           const merged = Object.assign(self.state.separatorProps);
-          tmp3 = metroImportAll(ItemSeparatorComponent, obj);
+          tmp3 = closure_1_8(ItemSeparatorComponent, obj);
         }
         tmp2 = tmp3;
       }
       if (inversionStyle) {
-        let items1;
+        let items = row;
         if (horizontal) {
-          const items = [row.rowReverse, inversionStyle];
-          items1 = items;
+          items = [,];
+          items[0] = items.rowReverse;
+          items[1] = inversionStyle;
+          let items1 = items;
         } else {
-          items1 = [row.columnReverse, inversionStyle];
+          items1 = [items.columnReverse, inversionStyle];
         }
-        tmp7 = items1;
       } else {
-        tmp7 = inversionStyle;
+        let tmp7 = inversionStyle;
         if (horizontal) {
           const items2 = [row.row, inversionStyle];
           tmp7 = items2;
         }
-      }
-      if (CellRendererComponent) {
-        const obj2 = { cellKey, index, item, style: tmp7, onFocusCapture: self._onCellFocusCapture, children: items3 };
-        if (onCellLayout) {
-          onCellLayout = { onLayout: self._onLayout };
-          const obj3 = { onLayout: self._onLayout };
+        if (CellRendererComponent) {
+          const obj2 = { cellKey: props.cellKey, index, item, style: tmp7, onFocusCapture: self._onCellFocusCapture };
+          if (onCellLayout) {
+            const obj3 = { onLayout: self._onLayout };
+            onCellLayout = obj3;
+          }
+          const merged1 = Object.assign(onCellLayout);
+          const items3 = [_renderElementResult, tmp2];
+          obj2.children = items3;
+          let tmp10Result = options(CellRendererComponent, obj2);
+        } else {
+          const obj4 = { style: tmp7, onFocusCapture: self._onCellFocusCapture };
+          let tmp12 = onCellLayout;
+          if (onCellLayout) {
+            const obj5 = { onLayout: self._onLayout };
+            tmp12 = obj5;
+          }
+          const merged2 = Object.assign(tmp12);
+          const items4 = [_renderElementResult, tmp2];
+          obj4.children = items4;
+          tmp10Result = options(React5, obj4);
         }
-        const merged1 = Object.assign(onCellLayout);
-        items3 = [_renderElementResult, tmp2];
-        tmp10Result = React4(CellRendererComponent, obj2);
-      } else {
-        let tmp12 = onCellLayout;
-        const obj4 = { style: tmp7, onFocusCapture: self._onCellFocusCapture, children: items4 };
-        if (tmp12) {
-          tmp12 = { onLayout: self._onLayout };
-          const obj5 = { onLayout: self._onLayout };
-        }
-        const merged2 = Object.assign(tmp12);
-        items4 = [_renderElementResult, tmp2];
-        tmp10Result = React4(metroImportDefault, obj4);
+        const obj6 = { cellKey: self.props.cellKey, children: tmp10Result };
+        return closure_1_8(CellRenderer(322).VirtualizedListCellContextProvider, obj6);
       }
-      const obj6 = { cellKey: self.props.cellKey, children: tmp10Result };
-      return metroImportAll(_mod322.VirtualizedListCellContextProvider, obj6);
     },
   },
 ];
 const entry1 = {
   key: "getDerivedStateFromProps",
   value: function getDerivedStateFromProps(item, separatorProps) {
-    let obj2;
     let tmp = null;
     if (item.item !== separatorProps.separatorProps.leadingItem) {
-      const obj = { separatorProps: obj2 };
-      obj2 = { leadingItem: item.item };
+      const obj = { separatorProps: null };
+      const obj2 = {};
       const merged = Object.assign(separatorProps.separatorProps);
+      obj2.leadingItem = item.item;
+      obj.separatorProps = obj2;
       tmp = obj;
     }
     return tmp;
   },
 };
 let items1 = [entry1];
-const importDefaultResultResult = _createClass(CellRenderer, items, items1);
 const row = StyleSheet.create({
   row: { flexDirection: "row" },
   rowReverse: { flexDirection: "row-reverse" },
   columnReverse: { flexDirection: "column-reverse" },
 });
 
-export default importDefaultResultResult;
+export default _createClass(CellRenderer, items, items1);

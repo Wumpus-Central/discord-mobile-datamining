@@ -1,104 +1,84 @@
 // _runtime/metro/07963__.js
-import _slicedToArray2 from "00032__slicedToArray.js";
+import _mod32 from "00032__.js";
 import _objectWithoutProperties2 from "00109__objectWithoutProperties.js";
 import _mod7965 from "07965__.js";
-import react_native from "../07967_react-native.js";
-import styles from "../07968_styles.js";
+import _mod7967 from "07967__.js";
+import _mod7968 from "07968__.js";
 import 07964__ from "07964__.js";
-import react from "../00019_react.js";
-import react_native2 from "../00017_react-native.js";
-import Fragment from "../react/00021_Fragment.js";
+import noop from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
 
-let value;
-let weakMap;
-const _slicedToArray = module_7964(_slicedToArray2);
+const _slicedToArray = module_7964(_mod32);
 const _objectWithoutProperties = module_7964(_objectWithoutProperties2);
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
-  const self = this;
-  const self2 = this;
-  weakMap = new WeakMap();
+  const weakMap = new WeakMap();
   const _WeakMap2 = WeakMap;
-  const self3 = this;
   const weakMap1 = new WeakMap();
 }
-if (!react) {
+if (!noop) {
   const merged = Object.assign({ default: null });
-  merged[0] = react;
-  value = merged;
-  if (null !== react) {
-    if (typeof react === "object") {
+  merged[0] = noop;
+  let value = merged;
+  if (null !== noop) {
+    if (typeof noop === "object") {
       if (!weakMap) {
-        let str = "default";
         value = merged;
         const keys = Object.keys();
         if (keys !== undefined) {
           value = merged;
           while (keys[tmp] !== undefined) {
-            let callResult = "default" !== tmp11;
-            if (callResult) {
-              let hasOwnProperty = {}.hasOwnProperty;
-              callResult = hasOwnProperty.call(react, tmp11);
-            }
-            if (!callResult) {
-              continue;
-            } else {
-              let _Object = Object;
-              let ownPropertyDescriptor = defineProperty;
-              if (ownPropertyDescriptor) {
-                let _Object2 = Object;
-                ownPropertyDescriptor = Object.getOwnPropertyDescriptor(react, tmp11);
-              }
-              if (!ownPropertyDescriptor) {
-                merged[tmp11] = react[tmp11];
+            let tmp20 = "default" !== tmp11;
+            if (!tmp20) {
+              if (!tmp20) {
                 continue;
               } else {
-                let definePropertyResult1 = defineProperty(merged, tmp11, ownPropertyDescriptor);
+                let _Object = Object;
+                let ownPropertyDescriptor = defineProperty;
+                if (defineProperty) {
+                  let _Object2 = Object;
+                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp11);
+                }
+                if (!ownPropertyDescriptor) {
+                  merged[tmp11] = noop[tmp11];
+                  continue;
+                } else {
+                  let definePropertyResult1 = defineProperty(merged, tmp11, ownPropertyDescriptor);
+                  continue;
+                }
                 continue;
               }
               continue;
+            } else {
+              let hasOwnProperty = {}.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              let tmp12 = typeof call === "unknown" ? hasOwnProperty(tmp11) : call(noop, tmp11);
             }
-            continue;
           }
         }
-      } else if (weakMap.has(react)) {
-        value = weakMap.get(react);
+      } else if (weakMap.has(noop)) {
+        value = weakMap.get(noop);
       } else {
-        let result = weakMap.set(react, merged);
+        let result = weakMap.set(noop, merged);
       }
     } else {
       value = merged;
     }
   }
 } else {
-  value = react;
+  value = noop;
 }
 const __INTERNAL_VIEW_CONFIG = module_7964(_mod7965);
 let closure_8 = ["onValueChange", "onSlidingStart", "onSlidingComplete", "onAccessibilityAction", "value", "minimumValue", "maximumValue", "step", "inverted", "tapToSeek", "lowerLimit", "upperLimit"];
-const _default = value.default;
 
-export default _default.forwardRef(function SliderComponent(onSlidingComplete, ref) {
-  let accessibilityState;
-  let closure_129_0;
-  let closure_129_7;
-  let closure_129_8;
-  let defaultSlider;
-  let disabled;
-  let items4;
-  let jsxResult;
-  let onSlidingStart;
-  let onValueChangeEvent;
-  let str;
-  let thumbImage;
-  let tmp15;
-  let tmp17;
-  let tmp23;
-  ({ onValueChange: closure_129_0, onSlidingStart } = onSlidingComplete);
+export default value.default.forwardRef(function SliderComponent(onSlidingComplete, ref) {
+  ({ onValueChange: require, onSlidingStart } = onSlidingComplete);
   onSlidingComplete = onSlidingComplete.onSlidingComplete;
   const onAccessibilityAction = onSlidingComplete.onAccessibilityAction;
   let SLIDER_DEFAULT_INITIAL_VALUE = onSlidingComplete.value;
   if (undefined === SLIDER_DEFAULT_INITIAL_VALUE) {
-    SLIDER_DEFAULT_INITIAL_VALUE = react_native.constants.SLIDER_DEFAULT_INITIAL_VALUE;
+    SLIDER_DEFAULT_INITIAL_VALUE = _mod7967.constants.SLIDER_DEFAULT_INITIAL_VALUE;
   }
   const minimumValue = onSlidingComplete.minimumValue;
   let num = 0;
@@ -118,55 +98,54 @@ export default _default.forwardRef(function SliderComponent(onSlidingComplete, r
   const inverted = onSlidingComplete.inverted;
   const tapToSeek = onSlidingComplete.tapToSeek;
   let lowerLimit = onSlidingComplete.lowerLimit;
-  const tmp4 = undefined !== tapToSeek && tapToSeek;
   if (undefined === lowerLimit) {
-    const Platform = react_native2.Platform;
-    const select = Platform.select;
-    const obj = { web: num, default: react_native.constants.LIMIT_MIN_VALUE };
-    lowerLimit = select(obj);
+    const Platform = get_ActivityIndicator.Platform;
+    const obj = { web: num, default: _mod7967.constants.LIMIT_MIN_VALUE };
+    lowerLimit = Platform.select(obj);
   }
   let upperLimit = onSlidingComplete.upperLimit;
   if (undefined === upperLimit) {
-    const Platform2 = react_native2.Platform;
-    const select2 = Platform2.select;
-    const obj2 = { web: num2, default: react_native.constants.LIMIT_MAX_VALUE };
-    upperLimit = select2(obj2);
+    const Platform2 = get_ActivityIndicator.Platform;
+    const obj2 = { web: num2, default: _mod7967.constants.LIMIT_MAX_VALUE };
+    upperLimit = Platform2.select(obj2);
   }
   const defaultResult = _objectWithoutProperties.default(onSlidingComplete, closure_8);
   let SLIDER_DEFAULT_INITIAL_VALUE2 = num;
-  const useState = value.useState;
   if (null != SLIDER_DEFAULT_INITIAL_VALUE) {
     SLIDER_DEFAULT_INITIAL_VALUE2 = SLIDER_DEFAULT_INITIAL_VALUE;
   }
   if (null == SLIDER_DEFAULT_INITIAL_VALUE2) {
-    SLIDER_DEFAULT_INITIAL_VALUE2 = react_native.constants.SLIDER_DEFAULT_INITIAL_VALUE;
+    SLIDER_DEFAULT_INITIAL_VALUE2 = _mod7967.constants.SLIDER_DEFAULT_INITIAL_VALUE;
   }
-  [tmp15, closure_129_7] = _slicedToArray.default(useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
-  _slicedToArray.default(useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
-  [tmp17, closure_129_8] = _slicedToArray.default(value.useState(0), 2);
+  [tmp15, jsxProd] = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const defaultResult1 = _slicedToArray.default(value.useState(SLIDER_DEFAULT_INITIAL_VALUE2), 2);
+  const tmp4 = undefined !== tapToSeek && tapToSeek;
+  [tmp17, closure_8] = _slicedToArray.default(value.useState(0), 2);
   let DEFAULT_STEP_RESOLUTION = num3;
-  _slicedToArray.default(value.useState(0), 2);
-  if (!DEFAULT_STEP_RESOLUTION) {
-    DEFAULT_STEP_RESOLUTION = react_native.constants.DEFAULT_STEP_RESOLUTION;
+  if (!num3) {
+    DEFAULT_STEP_RESOLUTION = _mod7967.constants.DEFAULT_STEP_RESOLUTION;
   }
-  const result = (num2 - num) / DEFAULT_STEP_RESOLUTION;
-  let closure_9 = num3 || result;
-  const _Array = Array;
+  let result = (num2 - num) / DEFAULT_STEP_RESOLUTION;
+  let tmp21 = num3;
+  if (!num3) {
+    tmp21 = result;
+  }
+  result = tmp21;
   if (num3) {
     DEFAULT_STEP_RESOLUTION = result;
   }
+  const defaultResult2 = _slicedToArray.default(value.useState(0), 2);
   const obj4 = { length: DEFAULT_STEP_RESOLUTION + 1 };
-  const fromResult = from(obj4, (arg0, arg1) => num + arg1 * closure_9);
-  if ("ios" === react_native2.Platform.OS) {
-    defaultSlider = styles.styles.defaultSlideriOS;
-    tmp23 = require;
+  if ("ios" === get_ActivityIndicator.Platform.OS) {
+    let defaultSlider = _mod7968.styles.defaultSlideriOS;
+    let tmp24 = require;
   } else {
-    tmp23 = require;
-    defaultSlider = styles.styles.defaultSlider;
+    tmp24 = require;
+    defaultSlider = _mod7968.styles.defaultSlider;
   }
   const items = [defaultSlider, defaultResult.style];
   if (typeof defaultResult.disabled === "boolean") {
-    disabled = defaultResult.disabled;
+    let disabled = defaultResult.disabled;
   } else {
     const accessibilityState2 = defaultResult.accessibilityState;
     let disabled1;
@@ -178,7 +157,7 @@ export default _default.forwardRef(function SliderComponent(onSlidingComplete, r
   if (typeof defaultResult.disabled === "boolean") {
     const _Object = Object;
     const obj5 = { disabled: defaultResult.disabled };
-    accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj5);
+    let accessibilityState = Object.assign({}, defaultResult.accessibilityState, obj5);
   } else {
     accessibilityState = defaultResult.accessibilityState;
   }
@@ -200,10 +179,10 @@ export default _default.forwardRef(function SliderComponent(onSlidingComplete, r
       onAccessibilityAction(arg0);
     };
   }
-  let tmp28;
+  let tmp29;
   if (!Number.isNaN(SLIDER_DEFAULT_INITIAL_VALUE)) {
     if (SLIDER_DEFAULT_INITIAL_VALUE) {
-      tmp28 = SLIDER_DEFAULT_INITIAL_VALUE;
+      tmp29 = SLIDER_DEFAULT_INITIAL_VALUE;
     }
   }
   const items1 = [lowerLimit, upperLimit];
@@ -213,67 +192,64 @@ export default _default.forwardRef(function SliderComponent(onSlidingComplete, r
       console.warn("Invalid configuration: lower limit is supposed to be smaller than upper limit");
     }
   }, items1);
+  const obj7 = {
+    onLayout(nativeEvent) {
+      closure_1_8(nativeEvent.nativeEvent.layout.width);
+    },
+    style: null,
+    children: null
+  };
   const items2 = [items, { justifyContent: "center" }];
-  const jsxs = Fragment.jsxs;
-  const View = react_native2.View;
+  obj7.style = items2;
   if (defaultResult.StepMarker) {
+    const obj9 = { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
     ({ renderStepNumber: obj8.renderStepNumber, thumbImage: obj8.thumbImage, StepMarker: obj8.StepMarker } = defaultResult);
-    jsxResult = Fragment.jsx(tmp23(7969).StepsIndicator, { options: fromResult, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: tmp3 });
+    obj9.isLTR = tmp3;
+    let jsxResult = jsxProd.jsx(tmp24(7969).StepsIndicator, { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
   } else {
     jsxResult = null;
   }
   const items3 = [jsxResult, ];
-  const jsx = Fragment.jsx;
-  const _Object2 = Object;
-  const obj15 = {
-    minimumValue: num,
-    maximumValue: num2,
-    step: num3,
-    inverted: undefined !== inverted && inverted,
-    tapToSeek: tmp4,
-    value: tmp28,
-    lowerLimit,
-    upperLimit,
-    accessibilityState,
-    thumbImage,
-    ref,
-    style: items4,
-    onChange: onValueChangeEvent,
-    onRNCSliderSlidingStart: fn,
-    onRNCSliderSlidingComplete: fn2,
-    onRNCSliderValueChange: onValueChangeEvent,
-    disabled,
-    onStartShouldSetResponder() {
-      return true;
-    },
-    onResponderTerminationRequest() {
-      return false;
-    },
-    onRNCSliderAccessibilityAction: fn3,
-    thumbTintColor: str
-  };
-  if ("web" === react_native2.Platform.OS) {
-    thumbImage = defaultResult.thumbImage;
+  const obj15 = { minimumValue: num, maximumValue: num2, step: num3, inverted: undefined !== inverted && inverted, tapToSeek: tmp4, value: tmp29, lowerLimit, upperLimit, accessibilityState, thumbImage: null, ref: null, style: null, onChange: null, onRNCSliderSlidingStart: null, onRNCSliderSlidingComplete: null, onRNCSliderValueChange: null, disabled: null, onStartShouldSetResponder: null, onResponderTerminationRequest: null, onRNCSliderAccessibilityAction: null, thumbTintColor: null };
+  if ("web" === get_ActivityIndicator.Platform.OS) {
+    let thumbImage = defaultResult.thumbImage;
   } else if (!defaultResult.StepMarker) {
     if (defaultResult.thumbImage) {
-      const Image = react_native2.Image;
+      const Image = get_ActivityIndicator.Image;
       thumbImage = Image.resolveAssetSource(defaultResult.thumbImage);
     }
   }
-  onValueChangeEvent = function onValueChangeEvent(nativeEvent) {
-    if (closure_1_0) {
+  function onValueChangeEvent(nativeEvent) {
+    if (require) {
       tmp(nativeEvent.nativeEvent.value);
     }
-    closure_1_7(nativeEvent.nativeEvent.value);
+    jsxProd(nativeEvent.nativeEvent.value);
+  }
+  obj15.thumbImage = thumbImage;
+  obj15.ref = ref;
+  const items4 = [{ zIndex: 1, width: tmp17 }, defaultSlider, { alignContent: "center", alignItems: "center" }];
+  obj15.style = items4;
+  obj15.onChange = onValueChangeEvent;
+  obj15.onRNCSliderSlidingStart = fn;
+  obj15.onRNCSliderSlidingComplete = fn2;
+  obj15.onRNCSliderValueChange = onValueChangeEvent;
+  obj15.disabled = disabled;
+  obj15.onStartShouldSetResponder = function onStartShouldSetResponder() {
+    return true;
   };
-  items4 = [{ zIndex: 1, width: tmp17 }, defaultSlider, { alignContent: "center", alignItems: "center" }];
+  obj15.onResponderTerminationRequest = function onResponderTerminationRequest() {
+    return false;
+  };
+  obj15.onRNCSliderAccessibilityAction = fn3;
   if (!defaultResult.thumbImage) {
-    str = defaultResult.thumbTintColor;
+    let str = defaultResult.thumbTintColor;
   } else {
     str = "transparent";
   }
-  items3[1] = <_default {...assign({}, defaultResult, obj15)} />;
-  return <View onLayout={function onLayout(nativeEvent) {
+  obj15.thumbTintColor = str;
+  items3[1] = <__INTERNAL_VIEW_CONFIG.default {...Object.assign({}, defaultResult, obj15)} />;
+  obj7.children = items3;
+  return <get ActivityIndicator.View onLayout={function onLayout(nativeEvent) {
     closure_1_8(nativeEvent.nativeEvent.layout.width);
-  }} style={items2}>{items3}</View>;
+  }} style={null}>{null}</get ActivityIndicator.View>;
 });

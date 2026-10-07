@@ -2,19 +2,13 @@
 import nanoid from "../01499_nanoid.js";
 import _mod1503 from "01503__.js";
 
-export const createRouteFromAction = function createRouteFromAction(action) {
-  let obj2;
-  let obj3;
-  let routeParamList;
-  action = action.action;
+require = arg1;
+const dependencyMap = arg6;
+
+export const createRouteFromAction = function createRouteFromAction(routeParamList) {
+  const action = routeParamList.action;
   const name = action.payload.name;
-  const obj = {
-    key: "" + name + "-" + obj2.nanoid(),
-    name,
-    params: obj3.createParamsFromAction({ action, routeParamList }),
-  };
-  routeParamList = action.routeParamList;
-  obj2 = nanoid;
-  obj3 = _mod1503;
+  const obj = { key: "" + name + "-" + nanoid.nanoid(), name, params: null };
+  obj.params = _mod1503.createParamsFromAction({ action, routeParamList: routeParamList.routeParamList });
   return obj;
 };

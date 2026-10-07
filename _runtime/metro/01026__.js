@@ -1,103 +1,107 @@
 // _runtime/metro/01026__.js
-import _mod693 from "00693__.js";
-import _mod1025 from "01025__.js";
+import pickSplat from "../01025_pickSplat.js";
 
-const require = globalThis.__r;
-let _require, dependencyMap;
-
-const f82998 = (error) => {
-  if (item10034(item10008[2]).DEBUG_BUILD) {
-    const debug = item10034(item10008[3]).debug;
-    const _HermesInternal = HermesInternal;
-    debug.warn("Error resolving async handler '" + closure_1 + "' for route", closure_0, error);
-  }
-};
+require = arg1;
+let dependencyMap = arg6;
 function createAsyncHandlerProxy(arg0, item10034, item10008, processResolvedRoutes) {
   _require = item10034;
   dependencyMap = item10008;
-  let obj = {
+  const proxy = new Proxy(arg0, {
     apply(apply, arg1, arg2) {
-      let span;
-      function captureCurrentLocation() {
-        let search;
-        const obj = item10034(item10008[0]);
-        const navigationContext = obj.getNavigationContext();
+      const tmp = (function captureCurrentLocation() {
+        const navigationContext = closure_0(1025).getNavigationContext();
         let targetPath;
         if (navigationContext != null) {
           targetPath = navigationContext.targetPath;
         }
         if (targetPath) {
-          return { pathname: navigationContext.targetPath, search: "", hash: "", state: null, key: "default" };
+          const obj3 = { pathname: navigationContext.targetPath, search: "", hash: "", state: null, key: "default" };
+          return obj3;
         } else {
-          if (undefined !== item10034(item10008[1]).WINDOW) {
+          if (undefined !== closure_0(900).WINDOW) {
             try {
-              const _location = item10034(item10008[1]).WINDOW.location;
+              const _location = closure_0(900).WINDOW.location;
               if (_location) {
-                const obj5 = { pathname: null, search, hash: str, state: null, key: "default" };
-                ({ pathname: obj2.pathname, search } = _location);
+                const obj5 = { pathname: null, search: null, hash: null, state: null, key: "default" };
+                ({ pathname: obj2.pathname, search } = tmp8);
                 if (!search) {
                   search = "";
                 }
+                obj5.search = search;
+                let str = _location.hash;
+                if (!str) {
+                  str = "";
+                }
+                obj5.hash = str;
                 return obj5;
               }
+              tmp8 = _location;
             } catch (err) {
-              if (item10034(item10008[2]).DEBUG_BUILD) {
-                const debug = item10034(item10008[3]).debug;
+              if (tmp2(tmp[2]).DEBUG_BUILD) {
+                const debug = tmp2(tmp[3]).debug;
                 debug.warn("[React Router] Could not access window.location");
               }
             }
           }
           return null;
         }
-      }
-      const tmp = captureCurrentLocation();
-      let obj = _mod1025;
-      let navigationContext = obj.getNavigationContext();
+        const obj = closure_0(1025);
+      })();
+      let navigationContext = pickSplat.getNavigationContext();
       if (navigationContext) {
-        span = navigationContext.span;
+        let span = navigationContext.span;
       } else {
-        const tmp2Result = _mod1025;
-        span = tmp2Result.getActiveRootSpan();
+        span = pickSplat.getActiveRootSpan();
+        const tmp2Result = pickSplat;
       }
       const applyResult = apply.apply(arg1, arg2);
-      let closure_3 = tmp;
-      const tmp2Result2 = _mod693;
+      closure_3 = tmp;
       if (tmp2Result2.isThenable(applyResult)) {
+        applyResult
+          .then((result) => {
+            if (Array.isArray(result)) {
+              closure_2(result, closure_0, closure_3, span);
+            }
+          })
+          .catch((error) => {
+            if (closure_0(1018).DEBUG_BUILD) {
+              const debug = closure_0(693).debug;
+              const _HermesInternal = HermesInternal;
+              debug.warn("Error resolving async handler '" + dependencyMap + "' for route", closure_0, error);
+            }
+          });
         const nextPromise = applyResult.then((result) => {
           if (Array.isArray(result)) {
             closure_2(result, closure_0, closure_3, span);
           }
         });
-        nextPromise.catch(f82998);
       } else {
         const _Array = Array;
         if (Array.isArray(applyResult)) {
-          processResolvedRoutes(applyResult, item10034, tmp, span);
+          processResolvedRoutes(applyResult, closure_0, tmp, span);
         }
       }
       return applyResult;
     },
-  };
-  const proxy = new Proxy(arg0, obj);
-  const obj2 = require("00693__.js");
-  const result = obj2.addNonEnumerableProperty(proxy, "__sentry_proxied__", true);
+  });
+  const result = require("00693__.js").addNonEnumerableProperty(proxy, "__sentry_proxied__", true);
   return proxy;
 }
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 function checkRouteForAsyncHandler(item10034, processResolvedRoutes) {
   if (item10034.handle) {
     if (typeof item10034.handle === "object") {
       const _Object = Object;
       const keys = Object.keys(item10034.handle);
       for (const item10008 of keys) {
-        let tmp3 = item10034.handle[item10008];
+        let tmp3 = arg0.handle[item10008];
         let tmp4 = tmp3;
         let __sentry_proxied__ = typeof tmp3 !== "function";
-        if (!__sentry_proxied__) {
+        if (typeof tmp3 === "function") {
           __sentry_proxied__ = tmp4.__sentry_proxied__;
         }
         if (!__sentry_proxied__) {
-          item10034.handle[item10008] = createAsyncHandlerProxy(tmp4, item10034, item10008, processResolvedRoutes);
+          arg0.handle[item10008] = createAsyncHandlerProxy(tmp4, arg0, item10008, arg1);
         }
         continue;
       }
@@ -106,7 +110,7 @@ function checkRouteForAsyncHandler(item10034, processResolvedRoutes) {
   if (Array.isArray(item10034.children)) {
     const children = item10034.children;
     for (const item10034 of children) {
-      let tmp14 = checkRouteForAsyncHandler(item10034, processResolvedRoutes);
+      let tmp14 = checkRouteForAsyncHandler(item10034, arg1);
       continue;
     }
   }
@@ -115,25 +119,34 @@ function checkRouteForAsyncHandler(item10034, processResolvedRoutes) {
 export { checkRouteForAsyncHandler };
 export { createAsyncHandlerProxy };
 export const handleAsyncHandlerResult = function handleAsyncHandlerResult(promise, arg1, arg2, fn, arg4, arg5) {
-  let closure_0;
-  let closure_1;
   _require = arg1;
   dependencyMap = arg2;
-  let closure_2 = fn;
-  let closure_3 = arg4;
-  let closure_4 = arg5;
-  const obj = require("00693__.js");
+  closure_2 = fn;
+  closure_3 = arg4;
+  closure_4 = arg5;
   if (obj.isThenable(promise)) {
+    promise
+      .then((result) => {
+        if (Array.isArray(result)) {
+          closure_2(result, closure_0, closure_3, span);
+        }
+      })
+      .catch((error) => {
+        if (closure_0(1018).DEBUG_BUILD) {
+          const debug = closure_0(693).debug;
+          const _HermesInternal = HermesInternal;
+          debug.warn("Error resolving async handler '" + dependencyMap + "' for route", closure_0, error);
+        }
+      });
     const nextPromise = promise.then((result) => {
       if (Array.isArray(result)) {
         closure_2(result, closure_0, closure_3, span);
       }
     });
-    nextPromise.catch(f82998);
   } else {
     const _Array = Array;
     if (Array.isArray(promise)) {
-      fn(promise, arg1, arg4, arg5);
+      fn(promise, arg1, tmp, arg5);
     }
   }
 };

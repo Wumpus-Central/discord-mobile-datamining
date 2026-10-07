@@ -1,6 +1,4 @@
 // _runtime/01566_equal.js
-let hasOwnProperty;
-
 function equal(source, source2) {
   if (source === source2) {
     return true;
@@ -17,11 +15,11 @@ function equal(source, source2) {
                 if (source.length != source2.length) {
                   return false;
                 } else {
-                  let diff = tmp14 - 1;
-                  if (0 != +source.length) {
+                  let diff = tmp15 - 1;
+                  if (0 != +length) {
                     while (equal(source[diff], source2[diff])) {
-                      let tmp18 = +diff;
-                      diff = tmp18 - 1;
+                      let tmp19 = +diff;
+                      diff = tmp19 - 1;
                     }
                     return false;
                   }
@@ -34,13 +32,11 @@ function equal(source, source2) {
                 } else {
                   const _Object2 = Object;
                   if (source.valueOf !== Object.prototype.valueOf) {
-                    const valueOfResult = source.valueOf();
-                    return valueOfResult === source2.valueOf();
+                    return source.valueOf() === source2.valueOf();
                   } else {
                     const _Object3 = Object;
                     if (source.toString !== Object.prototype.toString) {
-                      const str = source.toString();
-                      return str === source2.toString();
+                      return source.toString() === source2.toString();
                     } else {
                       const _Object4 = Object;
                       const keys = Object.keys(source);
@@ -48,25 +44,27 @@ function equal(source, source2) {
                       if (keys.length !== Object.keys(source2).length) {
                         return false;
                       } else {
-                        let diff1 = tmp20 - 1;
-                        if (0 != +keys.length) {
+                        let diff1 = tmp21 - 1;
+                        if (0 != +length2) {
                           while (true) {
                             let _Object = Object;
                             hasOwnProperty = Object.prototype.hasOwnProperty;
-                            if (!hasOwnProperty.call(source2, keys[diff1])) {
+                            let call = hasOwnProperty.call;
+                            let tmp2 = keys[diff1];
+                            if (!(typeof call === "unknown" ? hasOwnProperty(tmp2) : call(source2, tmp2))) {
                               break;
                             } else {
-                              let tmp3 = +diff1;
-                              diff1 = tmp3 - 1;
+                              let tmp4 = +diff1;
+                              diff1 = tmp4 - 1;
                             }
                           }
                           return false;
                         }
-                        let diff2 = tmp5 - 1;
-                        if (0 != +keys.length) {
+                        let diff2 = tmp6 - 1;
+                        if (0 != +length2) {
                           while (equal(source[keys[diff2]], source2[keys[diff2]])) {
-                            let tmp10 = +diff2;
-                            diff2 = tmp10 - 1;
+                            let tmp11 = +diff2;
+                            diff2 = tmp11 - 1;
                           }
                           return false;
                         }

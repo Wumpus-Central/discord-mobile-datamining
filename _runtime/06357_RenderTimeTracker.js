@@ -1,19 +1,19 @@
 // _runtime/06357_RenderTimeTracker.js
-import _createClassDefault from "metro/06359__createClass.js";
-import AverageWindow from "06363_AverageWindow.js";
-import PlatformConfig from "06364_PlatformConfig.js";
-import _classCallCheck from "metro/06358__classCallCheck.js";
+import _modDef6359 from "metro/06359__.js";
+import _classCallCheck from "metro/06358__.js";
 
+const RenderTimeTracker = arg1;
 class RenderTimeTracker {
   constructor() {
-    _classCallCheck(this, RenderTimeTracker);
-    const averageWindow = new AverageWindow.AverageWindow(5);
+    tmp = c2(this, RenderTimeTracker);
+    averageWindow = new closure_0(closure_1[2]).AverageWindow(5);
     this.renderTimeAvgWindow = averageWindow;
     this.lastTimerStartedAt = -1;
     this.maxRenderTime = 32;
     this.defaultRenderTime = 16;
     this.rendersWithoutCommit = 0;
     this.maxRendersWithoutCommit = 40;
+    return;
   }
 }
 const entry = {
@@ -21,8 +21,11 @@ const entry = {
   value: function startTracking() {
     const self = this;
     this.rendersWithoutCommit = this.rendersWithoutCommit + 1;
-    const trackAverageRenderTimeForOffsetProjection =
-      PlatformConfig.PlatformConfig.trackAverageRenderTimeForOffsetProjection && -1 === self.lastTimerStartedAt;
+    let trackAverageRenderTimeForOffsetProjection =
+      RenderTimeTracker(6364).PlatformConfig.trackAverageRenderTimeForOffsetProjection;
+    if (trackAverageRenderTimeForOffsetProjection) {
+      trackAverageRenderTimeForOffsetProjection = -1 === self.lastTimerStartedAt;
+    }
     if (trackAverageRenderTimeForOffsetProjection) {
       const _Date = Date;
       self.lastTimerStartedAt = Date.now();
@@ -36,8 +39,11 @@ const items = [
     value: function markRenderComplete() {
       const self = this;
       this.rendersWithoutCommit = 0;
-      const trackAverageRenderTimeForOffsetProjection =
-        PlatformConfig.PlatformConfig.trackAverageRenderTimeForOffsetProjection && -1 !== self.lastTimerStartedAt;
+      let trackAverageRenderTimeForOffsetProjection =
+        RenderTimeTracker(6364).PlatformConfig.trackAverageRenderTimeForOffsetProjection;
+      if (trackAverageRenderTimeForOffsetProjection) {
+        trackAverageRenderTimeForOffsetProjection = -1 !== self.lastTimerStartedAt;
+      }
       if (trackAverageRenderTimeForOffsetProjection) {
         const renderTimeAvgWindow = self.renderTimeAvgWindow;
         const _Date = Date;
@@ -61,13 +67,12 @@ const items = [
   {
     key: "getAverageRenderTime",
     value: function getAverageRenderTime() {
-      let defaultRenderTime;
       const self = this;
-      if (PlatformConfig.PlatformConfig.trackAverageRenderTimeForOffsetProjection) {
+      if (RenderTimeTracker(6364).PlatformConfig.trackAverageRenderTimeForOffsetProjection) {
         const _Math = Math;
         const _Math2 = Math;
         const _Math3 = Math;
-        defaultRenderTime = Math.min(
+        let defaultRenderTime = Math.min(
           self.maxRenderTime,
           Math.max(Math.round(self.renderTimeAvgWindow.currentValue), 16),
         );
@@ -78,6 +83,5 @@ const items = [
     },
   },
 ];
-const RenderTimeTracker_export = _createClassDefault(RenderTimeTracker, items);
 
-export { RenderTimeTracker_export as RenderTimeTracker };
+export const RenderTimeTracker = _modDef6359(RenderTimeTracker, items);

@@ -1,8 +1,9 @@
 // _runtime/01736_prepareCurvedTransition.js
-import LayoutAnimationType from "01668_LayoutAnimationType.js";
+import _mod1668 from "metro/01668__.js";
 import WebEasings from "01702_WebEasings.js";
 
-let map;
+require = arg1;
+const dependencyMap = arg6;
 
 export const prepareCurvedTransition = function prepareCurvedTransition(
   cloneNode,
@@ -11,17 +12,15 @@ export const prepareCurvedTransition = function prepareCurvedTransition(
   dummyTransitionKeyframeName,
 ) {
   let length;
-  let obj2;
   const dummyAnimationConfig = {
     animationName: dummyTransitionKeyframeName,
-    animationType: LayoutAnimationType.LayoutAnimationType.LAYOUT,
+    animationType: _mod1668.LayoutAnimationType.LAYOUT,
     duration: duration.duration,
     delay: duration.delay,
-    easing: obj2.getEasingByName(easingY.easingY),
+    easing: WebEasings.getEasingByName(easingY.easingY),
     callback: null,
     reversed: false,
   };
-  obj2 = WebEasings;
   const dummy = cloneNode.cloneNode(true);
   dummy.isDummy = true;
   dummy.style.animationName = "";
@@ -31,14 +30,12 @@ export const prepareCurvedTransition = function prepareCurvedTransition(
   dummy.style.margin = "0px";
   dummy.style.width = "100%";
   dummy.style.height = "100%";
-  let closure_0 = cloneNode;
   let backgroundColor;
   let onFinalize;
   let animationCancelCallback;
   let animationEndCallback;
-  const obj3 = WebEasings;
-  duration.easing = obj3.getEasingByName(easingY.easingX);
-  map = new Map();
+  duration.easing = WebEasings.getEasingByName(easingY.easingX);
+  const map = new Map();
   let num = 0;
   if (0 < cloneNode.children.length) {
     do {
@@ -55,20 +52,20 @@ export const prepareCurvedTransition = function prepareCurvedTransition(
   animationCancelCallback = function animationCancelCallback() {
     let length;
     if (typeof onFinalize === "function") {
-      if (closure_0.contains(dummy)) {
-        closure_0.removeChild(dummy);
+      if (cloneNode.contains(dummy)) {
+        cloneNode.removeChild(dummy);
       }
       let num = 0;
-      if (0 < closure_0.children.length) {
+      if (0 < cloneNode.children.length) {
         do {
-          let tmp3 = closure_0.children[num];
+          let tmp3 = cloneNode.children[num];
           tmp3.style.display = map.get(tmp3);
           num = num + 1;
-          length = closure_0.children.length;
+          length = cloneNode.children.length;
         } while (num < length);
       }
-      closure_0.style.backgroundColor = backgroundColor;
-      const removed = closure_0.removeEventListener("animationcancel", animationCancelCallback);
+      cloneNode.style.backgroundColor = backgroundColor;
+      const removed = cloneNode.removeEventListener("animationcancel", animationCancelCallback);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -76,20 +73,20 @@ export const prepareCurvedTransition = function prepareCurvedTransition(
   animationEndCallback = function animationEndCallback() {
     let length;
     if (typeof onFinalize === "function") {
-      if (closure_0.contains(dummy)) {
-        closure_0.removeChild(dummy);
+      if (cloneNode.contains(dummy)) {
+        cloneNode.removeChild(dummy);
       }
       let num = 0;
-      if (0 < closure_0.children.length) {
+      if (0 < cloneNode.children.length) {
         do {
-          let tmp3 = closure_0.children[num];
+          let tmp3 = cloneNode.children[num];
           tmp3.style.display = map.get(tmp3);
           num = num + 1;
-          length = closure_0.children.length;
+          length = cloneNode.children.length;
         } while (num < length);
       }
-      closure_0.style.backgroundColor = backgroundColor;
-      const removed = closure_0.removeEventListener("animationend", animationEndCallback);
+      cloneNode.style.backgroundColor = backgroundColor;
+      const removed = cloneNode.removeEventListener("animationend", animationEndCallback);
     } else {
       throw new TypeError("Trying to call a non-function");
     }
@@ -100,24 +97,30 @@ export const prepareCurvedTransition = function prepareCurvedTransition(
   return { dummy, dummyAnimationConfig };
 };
 export const CurvedTransition = function CurvedTransition(name, name2, translateX) {
-  let items;
-  let items1;
-  let obj2;
-  let obj3;
-  let obj6;
-  let obj7;
-  const obj = { firstKeyframeObj: obj2, secondKeyframeObj: obj6 };
-  obj2 = { name, style: obj3, duration: 300 };
-  obj3 = { 0: null };
-  const obj4 = { transform: items };
-  items = [{ translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY }];
+  const obj = { firstKeyframeObj: null, secondKeyframeObj: null };
+  const obj2 = { name, style: null, duration: 300 };
+  const obj3 = { 0: null };
+  const obj4 = { transform: null };
+  const items = [
+    { translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY },
+  ];
+  obj4.transform = items;
   obj3[0] = obj4;
-  obj6 = { name: name2, style: obj7, duration: 300 };
-  obj7 = { 0: null };
-  const obj8 = { transform: items1 };
-  ({ translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY });
-  items1 = [{ translateY: "" + translateX.translateY + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY }];
+  obj2.style = obj3;
+  obj.firstKeyframeObj = obj2;
+  const obj6 = { name: name2, style: null, duration: 300 };
+  const obj7 = { 0: null };
+  const obj8 = { transform: null };
+  const obj5 = {
+    translateX: "" + translateX.translateX + "px",
+    scale: "" + translateX.scaleX + "," + translateX.scaleY,
+  };
+  const items1 = [
+    { translateY: "" + translateX.translateY + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY },
+  ];
+  obj8.transform = items1;
   obj7[0] = obj8;
-  ({ translateY: "" + translateX.translateY + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY });
+  obj6.style = obj7;
+  obj.secondKeyframeObj = obj6;
   return obj;
 };

@@ -1,18 +1,36 @@
 // _runtime/01557_NavigationIndependentTree.js
-import Fragment from "react/00021_Fragment.js";
+import NavigationIndependentTreeContext from "01509_NavigationIndependentTreeContext.js";
 import _mod1531 from "metro/01531__.js";
-import _mod1532 from "metro/01532__.js";
-import react2 from "01534_react.js";
-import react3 from "01558_react.js";
-import react from "00019_react.js";
+import context1 from "01532_context1.js";
+import NavigationContext from "01534_NavigationContext.js";
+import NavigationFocusedRouteStateContext from "01558_NavigationFocusedRouteStateContext.js";
+import noop from "metro/00019__.js";
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 
 export const NavigationIndependentTree = function NavigationIndependentTree(children) {
-  children = children.children;
-  const Provider = _mod1531.NavigationRouteContext.Provider;
-  const Provider2 = react2.NavigationContext.Provider;
-  const Provider3 = react3.NavigationFocusedRouteStateContext.Provider;
-  const Provider4 = _mod1532.IsFocusedContext.Provider;
-  return <Provider value="Array">{0}</Provider>;
+  const obj = { value: "Array", children: 0 };
+  const obj2 = { value: "Array", children: 0 };
+  const obj3 = { value: "Array", children: 0 };
+  const obj4 = {
+    value: "Array",
+    children: jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, {
+      value: true,
+      children: children.children,
+    }),
+  };
+  obj3.children = jsx(context1.IsFocusedContext.Provider, {
+    value: "Array",
+    children: jsx(NavigationIndependentTreeContext.NavigationIndependentTreeContext.Provider, {
+      value: true,
+      children: children.children,
+    }),
+  });
+  obj2.children = jsx(NavigationFocusedRouteStateContext.NavigationFocusedRouteStateContext.Provider, {
+    value: "Array",
+    children: 0,
+  });
+  obj.children = jsx(NavigationContext.NavigationContext.Provider, { value: "Array", children: 0 });
+  return jsx(_mod1531.NavigationRouteContext.Provider, { value: "Array", children: 0 });
 };

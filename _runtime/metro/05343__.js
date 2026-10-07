@@ -1,7 +1,7 @@
 // _runtime/metro/05343__.js
 import callBoundIntrinsic from "../01326_callBoundIntrinsic.js";
 import ToObject from "../05344_ToObject.js";
-import isString from "../05346_isString.js";
+import _mod5346 from "05346__.js";
 import ToUint32 from "../05347_ToUint32.js";
 import ToString from "../05359_ToString.js";
 import _mod5371 from "05371__.js";
@@ -24,32 +24,28 @@ export default function map(arg0) {
   let arr = tmp3;
   if (closure_2) {
     arr = tmp3;
-    if (isString(tmp3)) {
+    if (_mod5346(tmp3)) {
       arr = closure_3(tmp3, "");
     }
   }
   const tmp5 = ToUint32(arr.length);
   if (_mod5371(arg0)) {
-    let tmp9;
-    let num2;
     if (arguments.length > 1) {
-      tmp9 = arguments[1];
+      const tmp11 = arguments[1];
     }
-    const tmp10 = ArraySpeciesCreate(tmp3, tmp5);
+    const tmp12 = ArraySpeciesCreate(tmp3, tmp5);
     for (let num2 = 0; num2 < tmp5; num2 = num2 + 1) {
-      let tmp13 = ToString(num2);
-      if (HasProperty(tmp3, tmp13)) {
-        let tmp15 = Get(tmp3, tmp13);
-        let items = [tmp15, num2, tmp3];
-        let tmp16 = Call(arg0, tmp9, items);
-        let tmp17 = CreateDataPropertyOrThrow(tmp10, tmp13, tmp16);
+      let tmp15 = ToString(num2);
+      if (HasProperty(tmp3, tmp15)) {
+        let tmp17 = Get(tmp3, tmp15);
+        let items = [tmp17, num2, tmp3];
+        let tmp18 = Call(arg0, tmp11, items);
+        let tmp19 = CreateDataPropertyOrThrow(tmp12, tmp15, tmp18);
       }
     }
-    return tmp10;
+    return tmp12;
   } else {
     const _TypeError = TypeError;
-    const self = this;
-    const self2 = this;
     const typeError = new TypeError("Array.prototype.map callback must be a function");
     throw typeError;
   }

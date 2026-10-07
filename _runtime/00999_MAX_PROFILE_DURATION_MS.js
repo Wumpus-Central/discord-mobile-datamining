@@ -1,0 +1,3 @@
+// _runtime/00999_MAX_PROFILE_DURATION_MS.js
+
+export const MAX_PROFILE_DURATION_MS = 30000;

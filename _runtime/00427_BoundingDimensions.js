@@ -1,17 +1,17 @@
 // _runtime/00427_BoundingDimensions.js
-import 00426__ from "metro/00426__.js";
+import oneArgumentPooler from "00426_oneArgumentPooler.js";
 
 class BoundingDimensions {
   constructor(arg0, arg1) {
-
+    return;
   }
   destructor() {
-
+    return;
   }
-  static getPooledFromElement(offsetWidth) {
-  return BoundingDimensions.getPooled(offsetWidth.offsetWidth, offsetWidth.offsetHeight);
+  static getPooledFromElement(arg0) {
+    return BoundingDimensions.getPooled(global.offsetWidth, global.offsetHeight);
+  }
 }
-}
-module_426.addPoolingTo(BoundingDimensions, module_426.twoArgumentPooler);
+oneArgumentPooler.addPoolingTo(BoundingDimensions, oneArgumentPooler.twoArgumentPooler);
 
 export default BoundingDimensions;

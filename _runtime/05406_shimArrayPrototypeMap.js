@@ -1,15 +1,18 @@
 // _runtime/05406_shimArrayPrototypeMap.js
-import getPolyfill from "05341_getPolyfill.js";
-import defineProperties from "05360_defineProperties.js";
+import properlyBoxed from "05341_properlyBoxed.js";
+import _mod5360 from "metro/05360__.js";
 
 export default function shimArrayPrototypeMap() {
-  const tmp = getPolyfill();
-  let closure_0 = tmp;
-  const obj = {
-    map() {
-      return Array.prototype.map !== closure_0;
+  const tmp = properlyBoxed();
+  closure_0 = tmp;
+  _mod5360(
+    Array.prototype,
+    { map: tmp },
+    {
+      map() {
+        return Array.prototype.map !== closure_0;
+      },
     },
-  };
-  defineProperties(Array.prototype, { map: tmp }, obj);
+  );
   return tmp;
 }

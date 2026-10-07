@@ -1,8 +1,15 @@
 // _runtime/metro/07355__.js
 class MetadataMissingError {
   constructor(arg0) {
-    const str = arg0 || "No Exif data";
-    const error = new Error();
+    obj = { name: "MetadataMissingError" };
+    str = arg0;
+    if (!arg0) {
+      str = "No Exif data";
+    }
+    obj.message = str;
+    error = new Error();
+    obj.stack = error.stack;
+    return;
   }
 }
 let error = new Error();

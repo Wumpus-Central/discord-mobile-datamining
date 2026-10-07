@@ -8,7 +8,7 @@ function setEventHandlerAttributeMap(removeEventListener, map) {
 let closure_0 = Symbol("eventHandlerAttributeMap");
 
 export const getEventHandlerAttribute = function getEventHandlerAttribute(arg0, error) {
-  let value;
+  value = undefined;
   if (arg0[closure_0] != null) {
     value = obj.get(error);
   }
@@ -22,7 +22,7 @@ export const setEventHandlerAttribute = function setEventHandlerAttribute(remove
   const tmp = getEventHandlerAttributeMap(removeEventListener);
   let obj = tmp;
   if (null != tmp) {
-    const value = obj.get(error);
+    value = obj.get(error);
     if (value) {
       const removed = removeEventListener.removeEventListener(error, value);
       obj.delete(error);
@@ -35,9 +35,7 @@ export const setEventHandlerAttribute = function setEventHandlerAttribute(remove
         const listener = removeEventListener.addEventListener(error, obj2);
         if (null == obj) {
           const _Map = Map;
-          const self = this;
-          const self2 = this;
-          map = new Map();
+          const map = new Map();
           obj = map;
           setEventHandlerAttributeMap(removeEventListener, map);
         }
@@ -45,8 +43,8 @@ export const setEventHandlerAttribute = function setEventHandlerAttribute(remove
       } catch (err) {}
     }
   }
-  const tmp16 = null != obj && 0 === obj.size;
-  if (tmp16) {
+  if (tmp18) {
     setEventHandlerAttributeMap(removeEventListener, null);
   }
+  tmp18 = null != obj && 0 === obj.size;
 };

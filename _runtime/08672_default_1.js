@@ -1,21 +1,24 @@
 // _runtime/08672_default_1.js
-import default_12 from "08673_default_1.js";
+import _mod8673 from "metro/08673__.js";
 
-const fn =
-  (this && this.__importDefault) ||
-  ((__esModule) => {
-    let tmp2;
-    const tmp = __esModule;
-    if (!tmp) {
-      tmp2 = { default: __esModule };
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
       const obj = { default: __esModule };
+      let tmp = obj;
     } else {
-      tmp2 = __esModule;
+      tmp = __esModule;
     }
-    return tmp2;
-  });
-let closure_0 = fn(default_12);
+    return tmp;
+  };
+}
+const mergeDefs = fn(_mod8673);
 
 export default function default_1() {
-  return closure_0.default();
-}
+  return mergeDefs.default();
+};
+export default exports.default;

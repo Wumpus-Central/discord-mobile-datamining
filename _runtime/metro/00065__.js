@@ -1,75 +1,65 @@
 // _runtime/metro/00065__.js
 import _modDef38 from "00038__.js";
 import customBubblingEventTypesAll from "../00066_customBubblingEventTypes.js";
-import getNativeComponentAttributesDefault from "../00067_getNativeComponentAttributes.js";
-import react from "../00019_react.js";
+import mergeDefault from "../00067_merge.js";
+import _mod103 from "00103__.js";
+import accumulateDifferencesAll from "../00107_accumulateDifferences.js";
+import noop from "00019__.js";
 
-const require = globalThis.__r;
-let hasOwnProperty;
+require = arg1;
 
 export function setRuntimeConfigProvider(arg0) {
-  if (undefined === hasOwnProperty) {
-    hasOwnProperty = arg0;
+  if (undefined === global) {
+    global = arg0;
   }
 }
 export const get = function get(APNGDecorationView, arg1) {
-  let closure_0 = APNGDecorationView;
-  let closure_1 = arg1;
-  const obj = customBubblingEventTypesAll;
-  obj.register(APNGDecorationView, () => {
-    let native;
-    let tmp6;
-    let verify;
-    let viewConfig1;
+  closure_0 = APNGDecorationView;
+  closure_1 = arg1;
+  customBubblingEventTypesAll.register(APNGDecorationView, () => {
     let tmpResult;
-    if (closure_2_5 != null) {
-      tmpResult = tmp(RNBridgeless);
+    if (global != null) {
+      tmpResult = tmp(closure_0);
     }
     if (tmpResult == null) {
-      tmpResult = { native: !RNBridgeless.RN$Bridgeless, verify: false };
-      const obj = { native: !RNBridgeless.RN$Bridgeless, verify: false };
+      const obj = { native: !global.RN$Bridgeless, verify: false };
+      tmpResult = obj;
     }
     ({ native, verify } = tmpResult);
     if (native) {
-      let viewConfig = getNativeComponentAttributesDefault(RNBridgeless);
+      let viewConfig = mergeDefault(closure_0);
       if (viewConfig == null) {
-        const obj3 = closure_1(dependencyMap[3]);
-        viewConfig = obj3.createViewConfig(closure_1());
+        viewConfig = _mod103.createViewConfig(closure_1());
       }
-      viewConfig1 = viewConfig;
-      tmp6 = dependencyMap;
+      let viewConfig1 = viewConfig;
     } else {
-      tmp6 = dependencyMap;
-      const obj2 = closure_1(dependencyMap[3]);
-      viewConfig1 = obj2.createViewConfig(closure_1());
+      viewConfig1 = _mod103.createViewConfig(closure_1());
       if (viewConfig1 == null) {
-        viewConfig1 = require("getNativeComponentAttributes")(RNBridgeless);
+        viewConfig1 = mergeDefault(closure_0);
       }
     }
-    require("00038__.js")(
+    _modDef38(
       null != viewConfig1,
       'NativeComponentRegistry.get: both static and native view config are missing for native component "%s".',
-      RNBridgeless,
+      closure_0,
     );
     if (verify) {
       let tmp20 = viewConfig1;
       if (!native) {
-        tmp20 = require("getNativeComponentAttributes")(RNBridgeless);
+        tmp20 = mergeDefault(closure_0);
       }
       if (null == tmp20) {
         return viewConfig1;
       } else {
         let viewConfig2 = viewConfig1;
         if (native) {
-          const obj4 = closure_1(tmp6[3]);
-          viewConfig2 = obj4.createViewConfig(closure_1());
+          viewConfig2 = _mod103.createViewConfig(closure_1());
         }
-        const obj5 = require("00107__.js");
-        const validateResult = obj5.validate(RNBridgeless, tmp20, viewConfig2);
+        const validateResult = accumulateDifferencesAll.validate(closure_0, tmp20, viewConfig2);
         if ("invalid" === validateResult.type) {
           const _console = console;
-          const tmp24Result = require("00107__.js");
-          error(tmp24Result.stringifyValidationResult(RNBridgeless, validateResult));
+          console.error(accumulateDifferencesAll.stringifyValidationResult(closure_0, validateResult));
+          const tmp24Result = accumulateDifferencesAll;
         }
       }
     }
@@ -77,138 +67,115 @@ export const get = function get(APNGDecorationView, arg1) {
   });
   return APNGDecorationView;
 };
-export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(APNGDecorationView, arg1) {
-  let obj2;
-  if (null == closure_5) {
-    _modDef38(null == closure_5, "Unexpected invocation!");
+export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(framebus, arg1) {
+  if (null == global) {
+    _modDef38(null == global, "Unexpected invocation!");
     class FallbackNativeComponent {
       constructor(arg0) {
         return null;
       }
     }
-    if (null != obj2.getViewManagerConfig(APNGDecorationView)) {
-      let closure_0 = APNGDecorationView;
-      let closure_1 = arg1;
-      let obj3 = customBubblingEventTypesAll;
-      obj3.register(APNGDecorationView, () => {
-        let native;
-        let tmp6;
-        let verify;
-        let viewConfig1;
+    if (null != obj2.getViewManagerConfig(framebus)) {
+      closure_129_0 = framebus;
+      closure_129_1 = arg1;
+      customBubblingEventTypesAll.register(framebus, () => {
         let tmpResult;
-        if (closure_2_5 != null) {
-          tmpResult = tmp(RNBridgeless);
+        if (global != null) {
+          tmpResult = tmp(closure_0);
         }
         if (tmpResult == null) {
-          tmpResult = { native: !RNBridgeless.RN$Bridgeless, verify: false };
-          const obj = { native: !RNBridgeless.RN$Bridgeless, verify: false };
+          const obj = { native: !global.RN$Bridgeless, verify: false };
+          tmpResult = obj;
         }
         ({ native, verify } = tmpResult);
         if (native) {
-          let viewConfig = getNativeComponentAttributesDefault(RNBridgeless);
+          let viewConfig = mergeDefault(closure_0);
           if (viewConfig == null) {
-            const obj3 = closure_1(dependencyMap[3]);
-            viewConfig = obj3.createViewConfig(closure_1());
+            viewConfig = _mod103.createViewConfig(closure_1());
           }
-          viewConfig1 = viewConfig;
-          tmp6 = dependencyMap;
+          let viewConfig1 = viewConfig;
         } else {
-          tmp6 = dependencyMap;
-          const obj2 = closure_1(dependencyMap[3]);
-          viewConfig1 = obj2.createViewConfig(closure_1());
+          viewConfig1 = _mod103.createViewConfig(closure_1());
           if (viewConfig1 == null) {
-            viewConfig1 = require("getNativeComponentAttributes")(RNBridgeless);
+            viewConfig1 = mergeDefault(closure_0);
           }
         }
-        require("00038__.js")(
+        _modDef38(
           null != viewConfig1,
           'NativeComponentRegistry.get: both static and native view config are missing for native component "%s".',
-          RNBridgeless,
+          closure_0,
         );
         if (verify) {
           let tmp20 = viewConfig1;
           if (!native) {
-            tmp20 = require("getNativeComponentAttributes")(RNBridgeless);
+            tmp20 = mergeDefault(closure_0);
           }
           if (null == tmp20) {
             return viewConfig1;
           } else {
             let viewConfig2 = viewConfig1;
             if (native) {
-              const obj4 = closure_1(tmp6[3]);
-              viewConfig2 = obj4.createViewConfig(closure_1());
+              viewConfig2 = _mod103.createViewConfig(closure_1());
             }
-            const obj5 = require("00107__.js");
-            const validateResult = obj5.validate(RNBridgeless, tmp20, viewConfig2);
+            const validateResult = accumulateDifferencesAll.validate(closure_0, tmp20, viewConfig2);
             if ("invalid" === validateResult.type) {
               const _console = console;
-              const tmp24Result = require("00107__.js");
-              error(tmp24Result.stringifyValidationResult(RNBridgeless, validateResult));
+              console.error(accumulateDifferencesAll.stringifyValidationResult(closure_0, validateResult));
+              const tmp24Result = accumulateDifferencesAll;
             }
           }
         }
         return viewConfig1;
       });
-      return APNGDecorationView;
+      return framebus;
     }
-  } else if (null != closure_5(APNGDecorationView)) {
-    closure_0 = APNGDecorationView;
+  } else if (null != global(framebus)) {
+    closure_0 = framebus;
     closure_1 = arg1;
-    let obj = customBubblingEventTypesAll;
-    obj.register(APNGDecorationView, () => {
-      let native;
-      let tmp6;
-      let verify;
-      let viewConfig1;
+    customBubblingEventTypesAll.register(framebus, () => {
       let tmpResult;
-      if (closure_2_5 != null) {
-        tmpResult = tmp(RNBridgeless);
+      if (global != null) {
+        tmpResult = tmp(closure_0);
       }
       if (tmpResult == null) {
-        tmpResult = { native: !RNBridgeless.RN$Bridgeless, verify: false };
-        const obj = { native: !RNBridgeless.RN$Bridgeless, verify: false };
+        const obj = { native: !global.RN$Bridgeless, verify: false };
+        tmpResult = obj;
       }
       ({ native, verify } = tmpResult);
       if (native) {
-        let viewConfig = getNativeComponentAttributesDefault(RNBridgeless);
+        let viewConfig = mergeDefault(closure_0);
         if (viewConfig == null) {
-          const obj3 = closure_1(dependencyMap[3]);
-          viewConfig = obj3.createViewConfig(closure_1());
+          viewConfig = _mod103.createViewConfig(closure_1());
         }
-        viewConfig1 = viewConfig;
-        tmp6 = dependencyMap;
+        let viewConfig1 = viewConfig;
       } else {
-        tmp6 = dependencyMap;
-        const obj2 = closure_1(dependencyMap[3]);
-        viewConfig1 = obj2.createViewConfig(closure_1());
+        viewConfig1 = _mod103.createViewConfig(closure_1());
         if (viewConfig1 == null) {
-          viewConfig1 = require("getNativeComponentAttributes")(RNBridgeless);
+          viewConfig1 = mergeDefault(closure_0);
         }
       }
-      require("00038__.js")(
+      _modDef38(
         null != viewConfig1,
         'NativeComponentRegistry.get: both static and native view config are missing for native component "%s".',
-        RNBridgeless,
+        closure_0,
       );
       if (verify) {
         let tmp20 = viewConfig1;
         if (!native) {
-          tmp20 = require("getNativeComponentAttributes")(RNBridgeless);
+          tmp20 = mergeDefault(closure_0);
         }
         if (null == tmp20) {
           return viewConfig1;
         } else {
           let viewConfig2 = viewConfig1;
           if (native) {
-            const obj4 = closure_1(tmp6[3]);
-            viewConfig2 = obj4.createViewConfig(closure_1());
+            viewConfig2 = _mod103.createViewConfig(closure_1());
           }
-          const obj5 = require("00107__.js");
-          const validateResult = obj5.validate(RNBridgeless, tmp20, viewConfig2);
+          const validateResult = accumulateDifferencesAll.validate(closure_0, tmp20, viewConfig2);
           if ("invalid" === validateResult.type) {
             const _console = console;
-            const tmp24Result = require("00107__.js");
-            error(tmp24Result.stringifyValidationResult(RNBridgeless, validateResult));
+            console.error(accumulateDifferencesAll.stringifyValidationResult(closure_0, validateResult));
+            const tmp24Result = accumulateDifferencesAll;
           }
         }
       }
@@ -225,12 +192,12 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(AP
       return null;
     }
   }
-  FallbackNativeComponent.displayName = "Fallback(" + APNGDecorationView + ")";
+  FallbackNativeComponent.displayName = "Fallback(" + framebus + ")";
   return FallbackNativeComponent;
 };
 export const unstable_hasStaticViewConfig = function unstable_hasStaticViewConfig(arg0) {
   let obj;
-  if (hasOwnProperty != null) {
+  if (global != null) {
     obj = tmp(arg0);
   }
   if (obj == null) {

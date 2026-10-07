@@ -19,16 +19,15 @@ if (_window) {
 function performanceNow(arg0) {
   return Date.now();
 }
-if (global.nativePerformanceNow) {
-  performanceNow = global.nativePerformanceNow;
+if (nativePerformanceNow.nativePerformanceNow) {
+  performanceNow = nativePerformanceNow.nativePerformanceNow;
 } else if (_window) {
   performanceNow = function performanceNow() {
-    const tmp = _window.now && _window.now();
-    return tmp;
+    return _window.now && _window.now();
   };
 }
 
 export const start = () => {
-  let closure_0 = performanceNow();
+  closure_0 = performanceNow();
   return () => performanceNow() - closure_0;
 };

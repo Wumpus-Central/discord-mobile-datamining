@@ -1,8 +1,6 @@
 // _runtime/metro/00306__.js
 import get from "00030__.js";
 
-let constants;
-
 const enforcing = get.getEnforcing("StatusBarManager");
 let closure_1 = null;
 

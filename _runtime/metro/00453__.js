@@ -1,27 +1,26 @@
 // _runtime/metro/00453__.js
-import _modDef89 from "00089__.js";
-import _modDef209 from "00209__.js";
+import EventEmitterDefault from "../00089_EventEmitter.js";
+import NativeEventEmitterDefault from "../00209_NativeEventEmitter.js";
 import Appearance from "../00454_Appearance.js";
 
-let appearance, obj;
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
 
 export const getColorScheme = function getColorScheme() {
   if (null == obj) {
-    const self3 = this;
-    const self4 = this;
-    const tmp7 = new _modDef89();
-    let closure_0 = tmp7;
+    const tmp11 = new EventEmitterDefault();
+    closure_0 = tmp11;
     const _default = Appearance.default;
     if (null == _default) {
-      const obj3 = { NativeAppearance: null, appearance: null, eventEmitter: tmp7 };
+      const obj3 = { NativeAppearance: null, appearance: null, eventEmitter: tmp11 };
       obj = obj3;
     } else {
-      obj = { NativeAppearance: _default, appearance: null, eventEmitter: tmp7 };
-      const self = this;
-      const self2 = this;
-      const obj2 = new _modDef209(_default);
+      obj = { NativeAppearance: _default, appearance: null, eventEmitter: tmp11 };
+      const obj2 = new NativeEventEmitterDefault(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
-        appearance = { colorScheme: colorScheme.colorScheme, appearance };
+        appearance = { colorScheme: colorScheme.colorScheme };
+        appearance.appearance = appearance;
         closure_0.emit("change", appearance.appearance);
       });
     }
@@ -30,8 +29,8 @@ export const getColorScheme = function getColorScheme() {
   let colorScheme = null;
   if (null != NativeAppearance) {
     if (null == obj.appearance) {
-      obj.appearance = { colorScheme: NativeAppearance.getColorScheme() };
       const obj4 = { colorScheme: NativeAppearance.getColorScheme() };
+      obj.appearance = obj4;
     }
     colorScheme = obj.appearance.colorScheme;
   }
@@ -39,21 +38,18 @@ export const getColorScheme = function getColorScheme() {
 };
 export const setColorScheme = function setColorScheme(arg0) {
   if (null == obj) {
-    const self3 = this;
-    const self4 = this;
-    const tmp10 = new _modDef89();
-    let closure_0 = tmp10;
+    const tmp14 = new EventEmitterDefault();
+    closure_0 = tmp14;
     const _default = Appearance.default;
     if (null == _default) {
-      const obj3 = { NativeAppearance: null, appearance: null, eventEmitter: tmp10 };
+      const obj3 = { NativeAppearance: null, appearance: null, eventEmitter: tmp14 };
       obj = obj3;
     } else {
-      obj = { NativeAppearance: _default, appearance: null, eventEmitter: tmp10 };
-      const self = this;
-      const self2 = this;
-      const obj2 = new _modDef209(_default);
+      obj = { NativeAppearance: _default, appearance: null, eventEmitter: tmp14 };
+      const obj2 = new NativeEventEmitterDefault(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
-        appearance = { colorScheme: colorScheme.colorScheme, appearance };
+        appearance = { colorScheme: colorScheme.colorScheme };
+        appearance.appearance = appearance;
         closure_0.emit("change", appearance.appearance);
       });
     }
@@ -61,39 +57,36 @@ export const setColorScheme = function setColorScheme(arg0) {
   const NativeAppearance = obj.NativeAppearance;
   if (null != NativeAppearance) {
     NativeAppearance.setColorScheme(arg0);
-    let tmp6 = arg0;
+    let tmp8 = arg0;
     if ("unspecified" === arg0) {
       let colorScheme = NativeAppearance.getColorScheme();
       if (colorScheme == null) {
         colorScheme = arg0;
       }
-      tmp6 = colorScheme;
+      tmp8 = colorScheme;
     }
-    const obj4 = { colorScheme: tmp6 };
+    const obj4 = { colorScheme: tmp8 };
     obj.appearance = obj4;
   }
 };
 export const addChangeListener = function addChangeListener(onChange) {
-  if (null == obj) {
-    const self3 = this;
-    const self4 = this;
-    const tmp6 = new _modDef89();
-    let closure_0 = tmp6;
+  if (null == appearance) {
+    const tmp10 = new EventEmitterDefault();
+    closure_0 = tmp10;
     const _default = Appearance.default;
     if (null == _default) {
-      const obj3 = { NativeAppearance: null, appearance: null, eventEmitter: tmp6 };
-      obj = obj3;
+      const obj3 = { NativeAppearance: null, appearance: null, eventEmitter: tmp10 };
+      appearance = obj3;
     } else {
-      obj = { NativeAppearance: _default, appearance: null, eventEmitter: tmp6 };
-      const self = this;
-      const self2 = this;
-      const obj2 = new _modDef209(_default);
+      appearance = { NativeAppearance: _default, appearance: null, eventEmitter: tmp10 };
+      const obj2 = new NativeEventEmitterDefault(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
-        appearance = { colorScheme: colorScheme.colorScheme, appearance };
+        appearance = { colorScheme: colorScheme.colorScheme };
+        appearance.appearance = appearance;
         closure_0.emit("change", appearance.appearance);
       });
     }
   }
-  const eventEmitter = obj.eventEmitter;
+  const eventEmitter = appearance.eventEmitter;
   return eventEmitter.addListener("change", onChange);
 };

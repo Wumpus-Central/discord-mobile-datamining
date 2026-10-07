@@ -1,18 +1,14 @@
 // _runtime/00976_UIProfiler.js
-import _mod693 from "metro/00693__.js";
-import _mod948 from "metro/00948__.js";
-import MAX_PROFILE_DURATION_MS from "00977_MAX_PROFILE_DURATION_MS.js";
-import _asyncToGenerator from "metro/00005__asyncToGenerator.js";
+import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-let closure_2, closure_3, closure_5, size;
-
+const UIProfiler = dependencyMap;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_0;
 class UIProfiler {
   constructor() {
-    _classCallCheck(this, UIProfiler);
+    tmp = c2(this, UIProfiler);
     this._client = undefined;
     this._profiler = undefined;
     this._chunkTimer = undefined;
@@ -20,42 +16,39 @@ class UIProfiler {
     this._isRunning = false;
     this._sessionSampled = false;
     this._lifecycleMode = undefined;
-    this._activeRootSpanIds = new Set();
-    new Set();
-    this._rootSpanTimeouts = new Map();
-    new Map();
+    set = new Set();
+    this._activeRootSpanIds = set;
+    map = new Map();
+    this._rootSpanTimeouts = map;
+    return;
   }
 }
 const entry = {
   key: "initialize",
   value: function initialize(getOptions) {
-    let profileLifecycle;
-    let shouldProfileSessionResult;
-    let tmpResult;
-    const obj = {
-      _profilerId: tmpResult.uuid4(),
-      _client: getOptions,
-      _sessionSampled: shouldProfileSessionResult,
-      _lifecycleMode: profileLifecycle,
-    };
-    profileLifecycle = getOptions.getOptions().profileLifecycle;
-    const obj2 = MAX_PROFILE_DURATION_MS;
-    shouldProfileSessionResult = obj2.shouldProfileSession(getOptions.getOptions());
-    if (_mod948.DEBUG_BUILD) {
-      const debug = _mod693.debug;
+    const obj = {};
+    const profileLifecycle = getOptions.getOptions().profileLifecycle;
+    const shouldProfileSessionResult = closure_0(UIProfiler[3]).shouldProfileSession(getOptions.getOptions());
+    if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+      const debug = closure_0(UIProfiler[5]).debug;
       const _HermesInternal = HermesInternal;
       debug.log("[Profiling] Initializing profiler (lifecycle='" + profileLifecycle + "').");
     }
     if (!shouldProfileSessionResult) {
-      if (_mod948.DEBUG_BUILD) {
-        const debug2 = _mod693.debug;
+      if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+        const debug2 = closure_0(UIProfiler[5]).debug;
         debug2.log("[Profiling] Session not sampled. Skipping lifecycle profiler initialization.");
       }
     }
-    tmpResult = _mod693;
+    const obj2 = closure_0(UIProfiler[3]);
+    obj._profilerId = closure_0(UIProfiler[5]).uuid4();
+    obj._client = getOptions;
+    obj._sessionSampled = shouldProfileSessionResult;
+    obj._lifecycleMode = profileLifecycle;
     if ("trace" === profileLifecycle) {
       const result = obj._setupTraceLifecycleListeners(getOptions);
     }
+    const tmpResult = closure_0(UIProfiler[5]);
   },
 };
 let items = [
@@ -66,18 +59,18 @@ let items = [
       const self = this;
       if ("trace" !== this._lifecycleMode) {
         if (self._isRunning) {
-          if (_mod948.DEBUG_BUILD) {
-            const debug3 = _mod693.debug;
+          if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+            const debug3 = closure_0(UIProfiler[5]).debug;
             debug3.warn("[Profiling] Profile session is already running, `uiProfiler.start()` is a no-op.");
           }
         } else if (self._sessionSampled) {
           self._beginProfiling();
-        } else if (_mod948.DEBUG_BUILD) {
-          const debug2 = _mod693.debug;
+        } else if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+          const debug2 = closure_0(UIProfiler[5]).debug;
           debug2.warn("[Profiling] Session is not sampled, `uiProfiler.start()` is a no-op.");
         }
-      } else if (_mod948.DEBUG_BUILD) {
-        const debug = _mod693.debug;
+      } else if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+        const debug = closure_0(UIProfiler[5]).debug;
         debug.warn(
           '[Profiling] `profileLifecycle` is set to "trace". Calls to `uiProfiler.start()` are ignored in trace mode.',
         );
@@ -91,12 +84,12 @@ let items = [
       if ("trace" !== this._lifecycleMode) {
         if (self._isRunning) {
           self._endProfiling();
-        } else if (_mod948.DEBUG_BUILD) {
-          const debug2 = _mod693.debug;
+        } else if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+          const debug2 = closure_0(UIProfiler[5]).debug;
           debug2.warn("[Profiling] Profiler is not running, `uiProfiler.stop()` is a no-op.");
         }
-      } else if (_mod948.DEBUG_BUILD) {
-        const debug = _mod693.debug;
+      } else if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+        const debug = closure_0(UIProfiler[5]).debug;
         debug.warn(
           '[Profiling] `profileLifecycle` is set to "trace". Calls to `uiProfiler.stop()` are ignored in trace mode.',
         );
@@ -114,10 +107,10 @@ let items = [
             const _activeRootSpanIds = self._activeRootSpanIds;
             if (!_activeRootSpanIds.has(spanId)) {
               const result = self._registerTraceRootSpan(spanId);
-              size = self._activeRootSpanIds.size;
+              const size = self._activeRootSpanIds.size;
               if (1 === size) {
-                if (_mod948.DEBUG_BUILD) {
-                  const debug = _mod693.debug;
+                if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+                  const debug = closure_0(UIProfiler[5]).debug;
                   debug.log("[Profiling] Detected already active root span during setup. Active root spans now:", size);
                 }
                 self._beginProfiling();
@@ -134,24 +127,24 @@ let items = [
       const self = this;
       if (!this._isRunning) {
         self._isRunning = true;
-        if (_mod948.DEBUG_BUILD) {
-          const debug = _mod693.debug;
+        if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+          const debug = closure_0(UIProfiler[5]).debug;
           debug.log("[Profiling] Started profiling with profiler ID:", self._profilerId);
         }
-        const tmpResult = _mod693;
-        const globalScope = tmpResult.getGlobalScope();
+        const globalScope = closure_0(UIProfiler[5]).getGlobalScope();
         const obj = { profiler_id: self._profilerId };
         globalScope.setContext("profile", obj);
         const result = self._startProfilerInstance();
         if (self._profiler) {
           const result1 = self._startPeriodicChunking();
         } else {
-          if (_mod948.DEBUG_BUILD) {
-            const debug2 = _mod693.debug;
+          if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+            const debug2 = closure_0(UIProfiler[5]).debug;
             debug2.log("[Profiling] Failed to start JS Profiler; stopping.");
           }
           self._resetProfilerInfo();
         }
+        const tmpResult = closure_0(UIProfiler[5]);
       }
     },
   },
@@ -167,18 +160,18 @@ let items = [
           self._chunkTimer = undefined;
         }
         const result = self._clearAllRootSpanTimeouts();
-        const _collectCurrentChunkResult = self._collectCurrentChunk();
-        _collectCurrentChunkResult.catch((error) => {
-          if (_mod948.DEBUG_BUILD) {
-            const debug = _mod693.debug;
+        self._collectCurrentChunk().catch((error) => {
+          if (closure_1_0(UIProfiler[4]).DEBUG_BUILD) {
+            const debug = closure_1_0(UIProfiler[5]).debug;
             debug.error("[Profiling] Failed to collect current profile chunk on `stop()`:", error);
           }
         });
         if ("manual" === self._lifecycleMode) {
-          const obj = _mod693;
-          const globalScope = obj.getGlobalScope();
+          const globalScope = closure_0(UIProfiler[5]).getGlobalScope();
           globalScope.setContext("profile", {});
+          const obj = closure_0(UIProfiler[5]);
         }
+        const _collectCurrentChunkResult = self._collectCurrentChunk();
       }
     },
   },
@@ -188,7 +181,6 @@ let items = [
       const self = this;
       on.on("spanStart", (isRecording) => {
         if (self._sessionSampled) {
-          const tmpResult = _mod693;
           if (isRecording === tmpResult.getRootSpan(isRecording)) {
             if (isRecording.isRecording()) {
               const spanId = isRecording.spanContext().spanId;
@@ -196,10 +188,10 @@ let items = [
                 const _activeRootSpanIds = self._activeRootSpanIds;
                 if (!_activeRootSpanIds.has(spanId)) {
                   const result = self._registerTraceRootSpan(spanId);
-                  size = self._activeRootSpanIds.size;
+                  const size = self._activeRootSpanIds.size;
                   if (1 === size) {
-                    if (_mod948.DEBUG_BUILD) {
-                      const debug3 = _mod693.debug;
+                    if (_self(UIProfiler[4]).DEBUG_BUILD) {
+                      const debug3 = _self(UIProfiler[5]).debug;
                       const _HermesInternal = HermesInternal;
                       debug3.log(
                         "[Profiling] Root span " +
@@ -213,13 +205,14 @@ let items = [
                   }
                 }
               }
-            } else if (_mod948.DEBUG_BUILD) {
-              const debug2 = _mod693.debug;
+            } else if (_self(UIProfiler[4]).DEBUG_BUILD) {
+              const debug2 = _self(UIProfiler[5]).debug;
               debug2.log("[Profiling] Discarding profile because root span was not sampled.");
             }
           }
-        } else if (_mod948.DEBUG_BUILD) {
-          const debug = _mod693.debug;
+          tmpResult = _self(UIProfiler[5]);
+        } else if (_self(UIProfiler[4]).DEBUG_BUILD) {
+          const debug = _self(UIProfiler[5]).debug;
           debug.log("[Profiling] Span not profiled because of negative sampling decision for user session.");
         }
       });
@@ -231,9 +224,9 @@ let items = [
             if (_activeRootSpanIds.has(spanId)) {
               const _activeRootSpanIds2 = self._activeRootSpanIds;
               _activeRootSpanIds2.delete(spanId);
-              size = self._activeRootSpanIds.size;
-              if (_mod948.DEBUG_BUILD) {
-                let debug = _mod693.debug;
+              const size = self._activeRootSpanIds.size;
+              if (_self(UIProfiler[4]).DEBUG_BUILD) {
+                let debug = _self(UIProfiler[5]).debug;
                 const _HermesInternal = HermesInternal;
                 debug.log(
                   "[Profiling] Root span with ID " +
@@ -244,14 +237,14 @@ let items = [
                 );
               }
               if (0 === size) {
-                const _collectCurrentChunkResult = self._collectCurrentChunk();
-                _collectCurrentChunkResult.catch((error) => {
-                  if (self(closure_1_1[4]).DEBUG_BUILD) {
-                    const debug = self(closure_1_1[5]).debug;
+                self._collectCurrentChunk().catch((error) => {
+                  if (_self(dependencyMap[4]).DEBUG_BUILD) {
+                    const debug = _self(dependencyMap[5]).debug;
                     debug.error("[Profiling] Failed to collect current profile chunk on last `spanEnd`:", error);
                   }
                 });
                 self._endProfiling();
+                const _collectCurrentChunkResult = self._collectCurrentChunk();
               }
             }
           }
@@ -263,8 +256,7 @@ let items = [
     key: "_resetProfilerInfo",
     value: function _resetProfilerInfo() {
       this._isRunning = false;
-      const obj = _mod693;
-      const globalScope = obj.getGlobalScope();
+      const globalScope = closure_0(UIProfiler[5]).getGlobalScope();
       globalScope.setContext("profile", {});
     },
   },
@@ -281,13 +273,13 @@ let items = [
     key: "_registerTraceRootSpan",
     value: function _registerTraceRootSpan(spanId) {
       const self = this;
-      let closure_0 = spanId;
+      closure_0 = spanId;
       const _activeRootSpanIds = this._activeRootSpanIds;
       _activeRootSpanIds.add(spanId);
       const _rootSpanTimeouts = this._rootSpanTimeouts;
       const result = _rootSpanTimeouts.set(
         spanId,
-        setTimeout(() => self._onRootSpanTimeout(spanId), 300000),
+        setTimeout(() => self._onRootSpanTimeout(closure_0), 300000),
       );
     },
   },
@@ -300,14 +292,14 @@ let items = [
         stopped = _profiler.stopped;
       }
       if (false !== stopped) {
-        const obj = MAX_PROFILE_DURATION_MS;
-        const startJSSelfProfileResult = obj.startJSSelfProfile();
+        const startJSSelfProfileResult = closure_0(UIProfiler[3]).startJSSelfProfile();
         if (startJSSelfProfileResult) {
           this._profiler = startJSSelfProfileResult;
-        } else if (_mod948.DEBUG_BUILD) {
-          const debug = _mod693.debug;
+        } else if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+          const debug = closure_0(UIProfiler[5]).debug;
           debug.log("[Profiling] Failed to start JS Profiler.");
         }
+        const obj = closure_0(UIProfiler[3]);
       }
     },
   },
@@ -318,10 +310,9 @@ let items = [
       if (this._isRunning) {
         const _setTimeout = setTimeout;
         tmp._chunkTimer = setTimeout(() => {
-          const _collectCurrentChunkResult = self._collectCurrentChunk();
-          _collectCurrentChunkResult.catch((error) => {
-            if (self(closure_1_1[4]).DEBUG_BUILD) {
-              const debug = self(closure_1_1[5]).debug;
+          self._collectCurrentChunk().catch((error) => {
+            if (self(dependencyMap[4]).DEBUG_BUILD) {
+              const debug = self(dependencyMap[5]).debug;
               debug.error("[Profiling] Failed to collect current profile chunk during periodic chunking:", error);
             }
           });
@@ -333,31 +324,32 @@ let items = [
               self._resetProfilerInfo();
             }
           }
+          const _collectCurrentChunkResult = self._collectCurrentChunk();
         }, 60000);
       }
     },
   },
   {
     key: "_onRootSpanTimeout",
-    value: function _onRootSpanTimeout(spanId) {
+    value: function _onRootSpanTimeout(arg0) {
       const self = this;
       const _rootSpanTimeouts = this._rootSpanTimeouts;
-      if (_rootSpanTimeouts.has(spanId)) {
+      if (_rootSpanTimeouts.has(arg0)) {
         const _rootSpanTimeouts2 = self._rootSpanTimeouts;
-        _rootSpanTimeouts2.delete(spanId);
+        _rootSpanTimeouts2.delete(arg0);
         const _activeRootSpanIds = self._activeRootSpanIds;
-        if (_activeRootSpanIds.has(spanId)) {
-          if (_mod948.DEBUG_BUILD) {
-            const debug = _mod693.debug;
+        if (_activeRootSpanIds.has(arg0)) {
+          if (closure_0(UIProfiler[4]).DEBUG_BUILD) {
+            const debug = closure_0(UIProfiler[5]).debug;
             const _HermesInternal = HermesInternal;
             debug.log(
               "[Profiling] Reached 5-minute timeout for root span " +
-                spanId +
+                arg0 +
                 ". You likely started a manual root span that never called `.end()`.",
             );
           }
           const _activeRootSpanIds2 = self._activeRootSpanIds;
-          _activeRootSpanIds2.delete(spanId);
+          _activeRootSpanIds2.delete(arg0);
           if (0 === self._activeRootSpanIds.size) {
             self._endProfiling();
           }
@@ -367,32 +359,27 @@ let items = [
   },
   ,
 ];
-const entry1 = {
-  key: "_collectCurrentChunk",
-  value: function _collectCurrentChunk() {
-    return closure_0(...arguments);
-  },
-};
-closure_0 = _asyncToGenerator(async function () {
+const entry1 = { key: "_collectCurrentChunk", value: null };
+closure_0 = asyncGeneratorStep(async function () {
   const self = this;
-  let c6 = 0;
-  let c7 = 0;
-  let c4 = 0;
+  c6 = 0;
+  c7 = 0;
+  c4 = 0;
   return (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp3 === 3) {
+    } else if (tmp7 === 3) {
       if (arg0 === 1) {
         throw value;
       } else if (arg0 === 2) {
-        return { value, done: true };
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
         return { value: "IconComponent", done: null };
       }
     } else {
       try {
-        let closure_1;
         c7 = 2;
         if (0 === c6) {
           if (arg0 === 1) {
@@ -400,125 +387,136 @@ closure_0 = _asyncToGenerator(async function () {
             throw value;
           } else if (arg0 === 2) {
             c7 = 3;
-            return { value, done: true };
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
             closure_3 = self;
-            closure_2 = tmp;
-            closure_0 = undefined;
-            closure_1 = undefined;
-            debug = self._profiler;
+            closure_2 = tmp3;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            const _profiler = self._profiler;
             self._profiler = undefined;
-            if (debug) {
+            if (_profiler) {
               c4 = 1;
-              debug = debug.stop();
               c6 = 2;
               c7 = 1;
-              return { value: debug, done: false };
+              const obj4 = { value: _profiler.stop(), done: false };
+              return obj4;
             }
           }
-        } else if (1 === tmp4) {
-          c4 = 0;
-          closure_3 = closure_5;
-          debug = self;
-          if (self(debug[4]).DEBUG_BUILD) {
-            const debug3 = self(debug[5]).debug;
-            debug3.log("[Profiling] Error while stopping JS Profiler for chunk:", closure_3);
-          }
-        } else if (arg0 === 1) {
-          c7 = 3;
-          throw value;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c7 = 3;
-          return { value, done: true };
         } else {
-          closure_0 = value;
-          const obj6 = self(debug[3]);
-          closure_1 = obj6.createProfileChunkPayload(closure_0, closure_3._client, closure_3._profilerId);
-          const obj7 = self(debug[3]);
-          debug = obj7.validateProfileChunk(closure_1);
-          if ("reason" in debug) {
-            debug = self;
-            if (self(debug[4]).DEBUG_BUILD) {
-              const debug2 = self(debug[5]).debug;
-              debug2.log(
-                "[Profiling] Discarding invalid profile chunk (this is probably a bug in the SDK):",
-                debug.reason,
-              );
+          if (1 === tmp8) {
+            c4 = 0;
+            closure_129_3 = closure_5;
+            if (self(tmp5[4]).DEBUG_BUILD) {
+              const debug3 = self(tmp5[5]).debug;
+              debug3.log("[Profiling] Error while stopping JS Profiler for chunk:", closure_129_3);
             }
+          } else if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
             c4 = 0;
             c7 = 3;
-            return { value: undefined, done: true };
+            const obj5 = { value, done: true };
+            return obj5;
           } else {
-            closure_3._sendProfileChunk(closure_1);
-            debug = self;
-            if (self(debug[4]).DEBUG_BUILD) {
-              debug = self(debug[5]).debug;
-              debug.log("[Profiling] Collected browser profile chunk.");
+            closure_129_0 = value;
+            closure_129_1 = self(tmp5[3]).createProfileChunkPayload(
+              closure_129_0,
+              closure_3._client,
+              closure_3._profilerId,
+            );
+            const obj6 = self(tmp5[3]);
+            closure_129_2 = self(tmp5[3]).validateProfileChunk(closure_129_1);
+            if (!("reason" in closure_129_2)) {
+              closure_3._sendProfileChunk(closure_129_1);
+              if (self(tmp5[4]).DEBUG_BUILD) {
+                const debug = self(tmp5[5]).debug;
+                debug.log("[Profiling] Collected browser profile chunk.");
+              }
+              c4 = 0;
             }
-            c4 = 0;
+            const obj7 = self(tmp5[3]);
           }
+          if (self(tmp5[4]).DEBUG_BUILD) {
+            const debug2 = self(tmp5[5]).debug;
+            debug2.log(
+              "[Profiling] Discarding invalid profile chunk (this is probably a bug in the SDK):",
+              closure_129_2.reason,
+            );
+          }
+          c4 = 0;
+          c7 = 3;
+          const obj = { value: undefined, done: true };
+          return obj;
         }
         c7 = 3;
-        return { value: "IconComponent", done: null };
-      } catch (tmp35) {
-        closure_5 = tmp35;
-        if (0 === c4) {
-          c7 = 3;
-          throw tmp35;
+      } catch (tmp42) {
+        closure_5 = tmp42;
+        if (tmp4 === c4) {
+          c7 = tmp2;
+          throw tmp42;
         } else {
-          c6 = 1;
+          c6 = tmp;
         }
       }
     }
   })();
 });
+entry1.value = function _collectCurrentChunk() {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
 items[13] = entry1;
 items[14] = {
   key: "_sendProfileChunk",
   value: function _sendProfileChunk(arg0) {
-    let date;
-    let tmpResult3;
-    let tmpResult4;
     const _client = this._client;
     const getSdkMetadata = _client.getSdkMetadata;
     let sdkMetadata;
-    const getSdkMetadataForEnvelopeHeader = _mod693.getSdkMetadataForEnvelopeHeader;
     if (getSdkMetadata != null) {
       sdkMetadata = getSdkMetadata();
     }
-    const sdkMetadataForEnvelopeHeader = getSdkMetadataForEnvelopeHeader(sdkMetadata);
+    const sdkMetadataForEnvelopeHeader = closure_0(UIProfiler[5]).getSdkMetadataForEnvelopeHeader(sdkMetadata);
     const dsn = _client.getDsn();
-    const tunnel = _client.getOptions().tunnel;
-    const obj = { event_id: tmpResult3.uuid4(), sent_at: date.toISOString() };
-    const createEnvelope = _mod693.createEnvelope;
-    _mod693;
-    tmpResult3 = _mod693;
-    let tmp8 = sdkMetadataForEnvelopeHeader;
-    date = new Date();
+    const obj = closure_0(UIProfiler[5]);
+    const obj2 = { event_id: null, sent_at: null };
+    const tmpResult = closure_0(UIProfiler[5]);
+    obj2.event_id = closure_0(UIProfiler[5]).uuid4();
+    const tmpResult3 = closure_0(UIProfiler[5]);
+    obj2.sent_at = new Date().toISOString();
+    let tmp6 = sdkMetadataForEnvelopeHeader;
+    if (sdkMetadataForEnvelopeHeader) {
+      const obj3 = { sdk: sdkMetadataForEnvelopeHeader };
+      tmp6 = obj3;
+    }
+    const merged = Object.assign(tmp6);
+    let tmp8 = _client.getOptions().tunnel && dsn;
     if (tmp8) {
-      tmp8 = { sdk: sdkMetadataForEnvelopeHeader };
-      const obj2 = { sdk: sdkMetadataForEnvelopeHeader };
+      const obj4 = { dsn: closure_0(UIProfiler[5]).dsnToString(dsn) };
+      tmp8 = obj4;
+      const tmpResult4 = closure_0(UIProfiler[5]);
     }
-    const merged = Object.assign(tmp8);
-    let tmp10 = tunnel && dsn;
-    if (tmp10) {
-      const obj3 = { dsn: tmpResult4.dsnToString(dsn) };
-      tmp10 = obj3;
-      tmpResult4 = _mod693;
-    }
-    const merged1 = Object.assign(tmp10);
+    const merged1 = Object.assign(tmp8);
     const items = [{ type: "profile_chunk" }, arg0];
     const items1 = [items];
-    const sendEnvelopeResult = _client.sendEnvelope(createEnvelope(obj, items1));
-    sendEnvelopeResult.then(null, (arg0) => {
-      if (_mod948.DEBUG_BUILD) {
-        const debug = _mod693.debug;
+    const date = new Date();
+    _client.sendEnvelope(tmpResult.createEnvelope(obj2, items1)).then(null, (arg0) => {
+      if (closure_1_0(UIProfiler[4]).DEBUG_BUILD) {
+        const debug = closure_1_0(UIProfiler[5]).debug;
         debug.error("Error while sending profile chunk envelope:", arg0);
       }
     });
+    const sendEnvelopeResult = _client.sendEnvelope(tmpResult.createEnvelope(obj2, items1));
   },
 };
-const UIProfiler_export = _createClass(UIProfiler, items);
 
-export { UIProfiler_export as UIProfiler };
+export const UIProfiler = _createClass(UIProfiler, items);

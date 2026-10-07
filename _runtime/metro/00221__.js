@@ -1,72 +1,82 @@
 // _runtime/metro/00221__.js
-import _modDef133 from "00133__.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import EventDefault from "../00133_Event.js";
+import _classCallCheck_mod from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import map from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturnDefault;
 class CloseEvent {
-  constructor(arg0, wasClean) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, CloseEvent);
-    const items = [arg0, wasClean];
-    const obj = _getPrototypeOf(CloseEvent);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0, arg1) {
+    self = this;
+    tmp = closure_0(this, CloseEvent);
+    items = [,];
+    items[0] = global;
+    items[1] = arg1;
+    tmp2 = c2;
+    obj = c2(CloseEvent);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = map(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     wasClean = undefined;
-    const _Boolean = Boolean;
-    if (wasClean != null) {
-      wasClean = wasClean.wasClean;
+    if (arg1 != null) {
+      wasClean = arg1.wasClean;
     }
-    tmp3Result._wasClean = _Boolean(wasClean);
-    let code;
-    const _Number = Number;
-    if (wasClean != null) {
-      code = wasClean.code;
+    tmp3Result._wasClean = Boolean(wasClean);
+    code = undefined;
+    if (arg1 != null) {
+      code = arg1.code;
     }
-    tmp3Result._code = _Number(code) || 0;
-    let reason;
-    _Number(code) || 0;
-    if (wasClean != null) {
-      reason = wasClean.reason;
+    tmp9 = Number(code) || 0;
+    tmp3Result._code = tmp9;
+    reason = undefined;
+    if (arg1 != null) {
+      reason = arg1.reason;
     }
-    let str = "";
+    str = "";
     if (null != reason) {
-      const _String = String;
-      str = String(wasClean.reason);
+      _String = String;
+      str = String(arg1.reason);
     }
     tmp3Result._reason = str;
     return tmp3Result;
   }
 }
-_inherits(CloseEvent, _modDef133);
-let obj = {
-  key: "wasClean",
-  get() {
-    return this._wasClean;
-  },
-};
+_classCallCheck = CloseEvent;
+_inherits(CloseEvent, EventDefault);
 let items = [
-  obj,
+  {
+    key: "wasClean",
+    get() {
+      return this._wasClean;
+    },
+  },
   {
     key: "code",
     get() {

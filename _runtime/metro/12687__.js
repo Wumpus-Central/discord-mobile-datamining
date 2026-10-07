@@ -2,28 +2,21 @@
 import _mod12586 from "12586__.js";
 import _mod12607 from "12607__.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const captureFeedback = function captureFeedback(arg0) {
-  let associatedEventId;
-  let email;
-  let message;
-  let name;
-  let obj4;
-  let obj6;
-  let source;
-  let tags;
-  let url;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
   let currentScope = arg2;
   if (arg2 === undefined) {
-    const obj3 = _mod12607;
-    currentScope = obj3.getCurrentScope();
+    currentScope = _mod12607.getCurrentScope();
   }
-  const obj2 = { contexts: obj4, type: "feedback", level: "info", tags };
-  obj4 = {
-    feedback: obj6.dropUndefinedKeys({
+  const obj2 = { contexts: null, type: "feedback", level: "info", tags: null };
+  const obj4 = {
+    feedback: _mod12586.dropUndefinedKeys({
       contact_email: email,
       name,
       message,
@@ -33,11 +26,15 @@ export const captureFeedback = function captureFeedback(arg0) {
     }),
   };
   ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj6 = _mod12586;
-  let client = currentScope && currentScope.getClient();
+  obj2.contexts = obj4;
+  obj2.tags = tags;
+  let client = currentScope;
+  if (currentScope) {
+    client = currentScope.getClient();
+  }
   if (!client) {
+    client = _mod12607.getClient();
     const tmp3Result = _mod12607;
-    client = tmp3Result.getClient();
   }
   if (client) {
     client.emit("beforeSendFeedback", obj2, obj);

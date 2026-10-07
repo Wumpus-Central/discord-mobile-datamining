@@ -21,11 +21,10 @@ export const parseDuration = function parseDuration(arg0) {
   const obj = {};
   let match = regExp.exec(arg0);
   while (match) {
-    let parsed;
     let str2 = match[1];
     let formatted = str2.toLowerCase();
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-      parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
+      let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
     } else {
       let _parseInt = parseInt;
       parsed = parseInt(formatted);
@@ -39,10 +38,9 @@ export const parseDuration = function parseDuration(arg0) {
   return obj;
 };
 export const parseNumberPattern = function parseNumberPattern(match) {
-  let parsed;
   const formatted = match.toLowerCase();
   if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-    parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
+    let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
   } else {
     const _parseInt = parseInt;
     parsed = parseInt(formatted);
@@ -59,7 +57,6 @@ export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(matc
   }
 };
 export const parseYear = function parseYear(match) {
-  const obj = /\d+/;
   if (obj.test(match)) {
     const _parseInt2 = parseInt;
     const parsed = parseInt(match);
@@ -77,14 +74,15 @@ export const parseYear = function parseYear(match) {
       return parseInt(match);
     }
   }
+  obj = /\d+/;
 };
 export const WEEKDAY_DICTIONARY = {
-  "s\u00f6ndag": 0,
-  "s\u00f6n": 0,
+  söndag: 0,
+  sön: 0,
   so: 0,
-  "m\u00e5ndag": 1,
-  "m\u00e5n": 1,
-  "m\u00e5": 1,
+  måndag: 1,
+  mån: 1,
+  må: 1,
   tisdag: 2,
   tis: 2,
   ti: 2,
@@ -97,9 +95,9 @@ export const WEEKDAY_DICTIONARY = {
   fredag: 5,
   fre: 5,
   fr: 5,
-  "l\u00f6rdag": 6,
-  "l\u00f6r": 6,
-  "l\u00f6": 6,
+  lördag: 6,
+  lör: 6,
+  lö: 6,
 };
 export const MONTH_DICTIONARY = {
   januari: 1,
@@ -139,14 +137,14 @@ export const MONTH_DICTIONARY = {
   "dec.": 12,
 };
 export const ORDINAL_NUMBER_DICTIONARY = {
-  "f\u00f6rsta": 1,
+  första: 1,
   andra: 2,
   tredje: 3,
-  "fj\u00e4rde": 4,
+  fjärde: 4,
   femte: 5,
-  "sj\u00e4tte": 6,
+  sjätte: 6,
   sjunde: 7,
-  "\u00e5ttonde": 8,
+  åttonde: 8,
   nionde: 9,
   tionde: 10,
   elfte: 11,
@@ -159,28 +157,28 @@ export const ORDINAL_NUMBER_DICTIONARY = {
   artonde: 18,
   nittonde: 19,
   tjugonde: 20,
-  "tjugof\u00f6rsta": 21,
+  tjugoförsta: 21,
   tjugoandra: 22,
   tjugotredje: 23,
-  "tjugofj\u00e4rde": 24,
+  tjugofjärde: 24,
   tjugofemte: 25,
-  "tjugosj\u00e4tte": 26,
+  tjugosjätte: 26,
   tjugosjunde: 27,
-  "tjugo\u00e5ttonde": 28,
+  tjugoåttonde: 28,
   tjugonionde: 29,
   trettionde: 30,
-  "trettiof\u00f6rsta": 31,
+  trettioförsta: 31,
 };
 export const INTEGER_WORD_DICTIONARY = {
   en: 1,
   ett: 1,
-  "tv\u00e5": 2,
+  två: 2,
   tre: 3,
   fyra: 4,
   fem: 5,
   sex: 6,
   sju: 7,
-  "\u00e5tta": 8,
+  åtta: 8,
   nio: 9,
   tio: 10,
   elva: 11,
@@ -193,12 +191,12 @@ export const INTEGER_WORD_DICTIONARY = {
   arton: 18,
   nitton: 19,
   tjugo: 20,
-  "tretti\u043e": 30,
+  trettiо: 30,
   fyrtio: 40,
   femtio: 50,
   sextio: 60,
   sjuttio: 70,
-  "\u00e5ttio": 80,
+  åttio: 80,
   nittio: 90,
   hundra: 100,
   tusen: 1000,
@@ -217,11 +215,11 @@ export const TIME_UNIT_DICTIONARY = {
   dagar: "day",
   vecka: "week",
   veckor: "week",
-  "m\u00e5n": "month",
-  "m\u00e5nad": "month",
-  "m\u00e5nader": "month",
-  "\u00e5r": "year",
-  "kvart\u0430l": "quarter",
+  mån: "month",
+  månad: "month",
+  månader: "month",
+  år: "year",
+  kvartаl: "quarter",
   kvartal: "quarter",
 };
 export const TIME_UNIT_NO_ABBR_DICTIONARY = {
@@ -235,9 +233,9 @@ export const TIME_UNIT_NO_ABBR_DICTIONARY = {
   dagar: "day",
   vecka: "week",
   veckor: "week",
-  "m\u00e5nad": "month",
-  "m\u00e5nader": "month",
-  "\u00e5r": "year",
+  månad: "month",
+  månader: "month",
+  år: "year",
   kvartal: "quarter",
 };
 export const NUMBER_PATTERN =

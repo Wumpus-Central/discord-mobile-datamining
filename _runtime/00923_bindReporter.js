@@ -1,32 +1,35 @@
 // _runtime/00923_bindReporter.js
-let diff, value2;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-
-export const bindReporter = (tmpResult, metric, items, reportAllChanges) => {
-  let closure_0;
-  let closure_3 = reportAllChanges;
+export (tmpResult, metric, items, reportAllChanges) => {
+  closure_3 = reportAllChanges;
   return (arg0) => {
     let tmp = metric.value >= 0;
     if (tmp) {
-      tmp = arg0 || reportAllChanges;
+      let tmp2 = arg0;
+      if (!arg0) {
+        tmp2 = closure_3;
+      }
+      tmp = tmp2;
     }
     if (tmp) {
-      let num = value2;
-      const value = metric.value;
-      if (value2 == null) {
+      let num = value;
+      if (value == null) {
         num = 0;
       }
-      diff = value - num || undefined === value2;
+      diff = metric.value - num;
+      if (!diff) {
+        diff = undefined === value;
+      }
       tmp = diff;
     }
     if (tmp) {
       metric.delta = diff;
-      value2 = metric.value;
+      value = metric.value;
       let str = "poor";
-      if (value2 <= items[1]) {
+      if (value <= items[1]) {
         let str2 = "good";
-        if (value2 > items[0]) {
+        if (value > items[0]) {
           str2 = "needs-improvement";
         }
         str = str2;
@@ -35,4 +38,4 @@ export const bindReporter = (tmpResult, metric, items, reportAllChanges) => {
       tmpResult(metric);
     }
   };
-};
+}

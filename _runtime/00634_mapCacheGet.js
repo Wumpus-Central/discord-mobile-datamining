@@ -1,7 +1,6 @@
 // _runtime/00634_mapCacheGet.js
-import getMapData from "00632_getMapData.js";
+import _mod632 from "metro/00632__.js";
 
 export default function mapCacheGet(arg0) {
-  const obj = getMapData(this, arg0);
-  return obj.get(arg0);
+  return _mod632(this, arg0).get(arg0);
 }

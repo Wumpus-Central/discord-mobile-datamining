@@ -1,10 +1,9 @@
 // _runtime/14012_FormatApproximately.js
 
 export const FormatApproximately = function FormatApproximately(internalSlots, arr) {
-  const obj = {
+  arr = arr.push({
     type: "approximatelySign",
     value: internalSlots.dataLocaleData.numbers.symbols[internalSlots.numberingSystem].approximatelySign,
-  };
-  arr = arr.push(obj);
+  });
   return arr;
 };

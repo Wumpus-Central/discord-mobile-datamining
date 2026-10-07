@@ -1,5 +1,5 @@
 // _runtime/00602_baseGet.js
-import toKey from "00600_toKey.js";
+import _mod600 from "metro/00600__.js";
 import castPath from "00603_castPath.js";
 
 export default function baseGet(arg0, arg1) {
@@ -11,9 +11,9 @@ export default function baseGet(arg0, arg1) {
     let tmp2 = arg0;
     num = 0;
     tmp = arg0;
-    if (0 < arr.length) {
+    if (0 < length) {
       const sum = num3 + 1;
-      const tmp6 = tmp2[toKey(undefined, arr[num3])];
+      const tmp6 = tmp2[_mod600(undefined, arr[num3])];
       num = sum;
       tmp = tmp6;
       while (null != tmp6) {
@@ -29,7 +29,7 @@ export default function baseGet(arg0, arg1) {
   }
   let tmp7;
   if (num) {
-    if (num == arr.length) {
+    if (num == length) {
       tmp7 = tmp;
     }
   }

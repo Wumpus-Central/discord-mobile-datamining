@@ -1,6 +1,8 @@
 // _runtime/metro/01834__.js
-import _mod1643 from "01643__.js";
+import cancelAnimation from "../01643_cancelAnimation.js";
 
+require = arg1;
+const dependencyMap = arg6;
 const __initData = {
   code: 'function pnpm_reanimatedNativeTs1(event){const{handlers,context}=this.__closure;const{onKeyboardMoveStart:onKeyboardMoveStart,onKeyboardMove:onKeyboardMove,onKeyboardMoveEnd:onKeyboardMoveEnd,onKeyboardMoveInteractive:onKeyboardMoveInteractive}=handlers;if(onKeyboardMoveStart&&event.eventName.endsWith("onKeyboardMoveStart")){onKeyboardMoveStart(event,context);}if(onKeyboardMove&&event.eventName.endsWith("onKeyboardMove")){onKeyboardMove(event,context);}if(onKeyboardMoveEnd&&event.eventName.endsWith("onKeyboardMoveEnd")){onKeyboardMoveEnd(event,context);}if(onKeyboardMoveInteractive&&event.eventName.endsWith("onKeyboardMoveInteractive")){onKeyboardMoveInteractive(event,context);}}',
 };
@@ -9,19 +11,13 @@ const __initData2 = {
 };
 
 export const useAnimatedKeyboardHandler = (handlers, items10) => {
-  let closure_0 = handlers;
-  const obj = _mod1643;
-  const handler = obj.useHandler(handlers, items10);
+  closure_0 = handlers;
+  const handler = cancelAnimation.useHandler(handlers, items10);
   const context = handler.context;
-  const doDependenciesDiffer = handler.doDependenciesDiffer;
   const fn = function v(eventName) {
-    let onKeyboardMove;
-    let onKeyboardMoveEnd;
-    let onKeyboardMoveInteractive;
-    let onKeyboardMoveStart;
     ({ onKeyboardMoveStart, onKeyboardMove, onKeyboardMoveEnd, onKeyboardMoveInteractive } = closure_0);
     let endsWithResult = onKeyboardMoveStart;
-    if (endsWithResult) {
+    if (onKeyboardMoveStart) {
       eventName = eventName.eventName;
       endsWithResult = eventName.endsWith("onKeyboardMoveStart");
     }
@@ -29,7 +25,7 @@ export const useAnimatedKeyboardHandler = (handlers, items10) => {
       onKeyboardMoveStart(eventName, context);
     }
     let endsWithResult1 = onKeyboardMove;
-    if (endsWithResult1) {
+    if (onKeyboardMove) {
       const eventName2 = eventName.eventName;
       endsWithResult1 = eventName2.endsWith("onKeyboardMove");
     }
@@ -37,7 +33,7 @@ export const useAnimatedKeyboardHandler = (handlers, items10) => {
       onKeyboardMove(eventName, context);
     }
     let endsWithResult2 = onKeyboardMoveEnd;
-    if (endsWithResult2) {
+    if (onKeyboardMoveEnd) {
       const eventName3 = eventName.eventName;
       endsWithResult2 = eventName3.endsWith("onKeyboardMoveEnd");
     }
@@ -45,7 +41,7 @@ export const useAnimatedKeyboardHandler = (handlers, items10) => {
       onKeyboardMoveEnd(eventName, context);
     }
     let endsWithResult3 = onKeyboardMoveInteractive;
-    if (endsWithResult3) {
+    if (onKeyboardMoveInteractive) {
       const eventName4 = eventName.eventName;
       endsWithResult3 = eventName4.endsWith("onKeyboardMoveInteractive");
     }
@@ -56,23 +52,19 @@ export const useAnimatedKeyboardHandler = (handlers, items10) => {
   fn.__closure = { handlers, context };
   fn.__workletHash = 6092807753388;
   fn.__initData = __initData;
-  const obj2 = _mod1643;
-  return obj2.useEvent(
+  return cancelAnimation.useEvent(
     fn,
     ["onKeyboardMoveStart", "onKeyboardMove", "onKeyboardMoveEnd", "onKeyboardMoveInteractive"],
-    doDependenciesDiffer,
+    handler.doDependenciesDiffer,
   );
 };
 export const useFocusedInputLayoutHandler = (handlers, items10) => {
-  let closure_0 = handlers;
-  const obj = _mod1643;
-  const handler = obj.useHandler(handlers, items10);
+  const handler = cancelAnimation.useHandler(handlers, items10);
   const context = handler.context;
-  const doDependenciesDiffer = handler.doDependenciesDiffer;
   const fn = function v(eventName) {
-    const onFocusedInputLayoutChanged = closure_0.onFocusedInputLayoutChanged;
+    const onFocusedInputLayoutChanged = handlers.onFocusedInputLayoutChanged;
     let endsWithResult = onFocusedInputLayoutChanged;
-    if (endsWithResult) {
+    if (onFocusedInputLayoutChanged) {
       eventName = eventName.eventName;
       endsWithResult = eventName.endsWith("onFocusedInputLayoutChanged");
     }
@@ -83,6 +75,5 @@ export const useFocusedInputLayoutHandler = (handlers, items10) => {
   fn.__closure = { handlers, context };
   fn.__workletHash = 9976853307145;
   fn.__initData = __initData2;
-  const obj2 = _mod1643;
-  return obj2.useEvent(fn, ["onFocusedInputLayoutChanged"], doDependenciesDiffer);
+  return cancelAnimation.useEvent(fn, ["onFocusedInputLayoutChanged"], handler.doDependenciesDiffer);
 };

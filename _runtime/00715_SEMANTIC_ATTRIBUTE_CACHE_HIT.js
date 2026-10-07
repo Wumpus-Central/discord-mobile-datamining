@@ -1,5 +1,5 @@
 // _runtime/00715_SEMANTIC_ATTRIBUTE_CACHE_HIT.js
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
 export const SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";

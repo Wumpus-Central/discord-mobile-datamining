@@ -1,5 +1,5 @@
 // _runtime/metro/01926__.js
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "vi",
   pluralRuleFunction(arg0, arg1) {
     let str = "other";
@@ -11,5 +11,4 @@ const obj = {
     }
     return str;
   },
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});

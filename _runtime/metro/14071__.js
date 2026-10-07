@@ -1,14 +1,16 @@
 // _runtime/metro/14071__.js
 const require = globalThis.__r;
-let _require;
+
+const require = arg1;
+const dependencyMap = arg6;
 
 export const getSupportedUnits = function getSupportedUnits(locale) {
   _require = locale;
   const units = require("14072__.js").units;
-  return units.filter((item) => {
-    function isSupported(unit, locale) {
-      let str = locale;
-      if (undefined === locale) {
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
         str = "en";
       }
       try {
@@ -18,7 +20,6 @@ export const getSupportedUnits = function getSupportedUnits(locale) {
       } catch (err) {
         return false;
       }
-    }
-    return isSupported(item, locale);
-  });
+    })(item, closure_0),
+  );
 };

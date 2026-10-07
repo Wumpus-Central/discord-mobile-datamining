@@ -1,10 +1,12 @@
 // _runtime/00806__INTERNAL_FLAG_BUFFER_SIZE.js
-import TRACE_FLAG_NONE from "00695_TRACE_FLAG_NONE.js";
+import spanToJSON from "00695_spanToJSON.js";
 import _mod699 from "metro/00699__.js";
-import CONSOLE_LEVELS from "00700_CONSOLE_LEVELS.js";
+import consoleSandbox from "00700_consoleSandbox.js";
 import _mod724 from "metro/00724__.js";
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = "flag.evaluation.";
 
 export const _INTERNAL_FLAG_BUFFER_SIZE = 100;
@@ -15,11 +17,9 @@ export const _INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatur
     num = 10;
   }
   if (typeof value === "boolean") {
-    const obj2 = TRACE_FLAG_NONE;
-    const activeSpan = obj2.getActiveSpan();
+    const activeSpan = spanToJSON.getActiveSpan();
     if (activeSpan) {
-      const tmp6Result = TRACE_FLAG_NONE;
-      const data = tmp6Result.spanToJSON(activeSpan).data;
+      const data = spanToJSON.spanToJSON(activeSpan).data;
       const _HermesInternal = HermesInternal;
       if ("" + c2 + flagKey in data) {
         const _HermesInternal3 = HermesInternal;
@@ -32,24 +32,23 @@ export const _INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatur
           const attr1 = activeSpan.setAttribute("" + c2 + flagKey, value);
         }
       }
+      const tmp6Result = spanToJSON;
     }
   }
 };
 export const _INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
-  let items;
-  const obj = _mod724;
-  const currentScope = obj.getCurrentScope();
+  const currentScope = _mod724.getCurrentScope();
   const flags = currentScope.getScopeData().contexts.flags;
   const arr = flags ? flags.values : [];
   if (arr.length) {
     if (undefined === contexts.contexts) {
       contexts.contexts = {};
     }
-    const obj2 = { values: items };
-    items = [];
-    contexts = contexts.contexts;
-    HermesBuiltin.arraySpread(items, arr, 0);
-    contexts.flags = obj2;
+    const obj2 = { values: null };
+    const items = [];
+    HermesBuiltin.arraySpread(arr, 0);
+    obj2.values = items;
+    contexts.contexts.flags = obj2;
   }
   return contexts;
 };
@@ -58,19 +57,18 @@ export const _INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(
   if (arg2 === undefined) {
     num = 100;
   }
-  const obj = _mod724;
-  const currentScope = obj.getCurrentScope();
+  const currentScope = _mod724.getCurrentScope();
   const contexts = currentScope.getScopeData().contexts;
   if (!contexts.flags) {
     const obj2 = { values: [] };
     contexts.flags = obj2;
   }
   const values = contexts.flags.values;
-  let closure_0 = flagKey;
+  closure_0 = flagKey;
   if (typeof value === "boolean") {
     if (values.length > num) {
       if (_mod699.DEBUG_BUILD) {
-        const debug = CONSOLE_LEVELS.debug;
+        const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + num);
       }
@@ -88,11 +86,11 @@ export const _INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(
   }
 };
 export const _INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr, flag, result, arg3) {
-  let closure_0 = flag;
+  closure_0 = flag;
   if (typeof result === "boolean") {
     if (arr.length > arg3) {
       if (_mod699.DEBUG_BUILD) {
-        const debug = CONSOLE_LEVELS.debug;
+        const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + arg3);
       }

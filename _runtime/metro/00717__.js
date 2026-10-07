@@ -1,24 +1,22 @@
 // _runtime/metro/00717__.js
 import _mod701 from "00701__.js";
-import AsyncContextStack from "../00718_AsyncContextStack.js";
+import _mod718 from "00718__.js";
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
-  let acs;
-  const obj = _mod701;
-  const sentryCarrier = obj.getSentryCarrier(mainCarrier);
+  const sentryCarrier = _mod701.getSentryCarrier(mainCarrier);
   if (sentryCarrier.acs) {
-    acs = sentryCarrier.acs;
+    let acs = sentryCarrier.acs;
   } else {
-    const tmpResult = AsyncContextStack;
-    acs = tmpResult.getStackAsyncContextStrategy();
+    acs = _mod718.getStackAsyncContextStrategy();
+    const tmpResult = _mod718;
   }
   return acs;
 };
 export const setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
-  const obj = _mod701;
-  const mainCarrier = obj.getMainCarrier();
+  const mainCarrier = _mod701.getMainCarrier();
   _mod701.getSentryCarrier(mainCarrier).acs = acs;
-  _mod701;
 };

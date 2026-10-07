@@ -1,14 +1,14 @@
 // _runtime/metro/00258__.js
 let closure_0 = [];
-let closure_1 = { name: "default" };
+let global = { name: "default" };
 
 export default {
   setActiveScene(arg0) {
-    closure_1 = arg0;
-    const item = closure_0.forEach((fn) => fn(closure_1_1));
+    global = arg0;
+    const item = closure_0.forEach((fn) => fn(global));
   },
   getActiveScene() {
-    return closure_1;
+    return global;
   },
   addActiveSceneChangedListener(arg0) {
     closure_0 = arg0;

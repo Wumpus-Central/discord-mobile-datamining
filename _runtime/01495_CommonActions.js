@@ -1,25 +1,22 @@
 // _runtime/01495_CommonActions.js
-import _mod1496 from "metro/01496__.js";
 import goBackAll from "01497_goBack.js";
 import BaseRouter from "01498_BaseRouter.js";
-import DrawerActions from "01500_DrawerActions.js";
+import openDrawer from "01500_openDrawer.js";
 import TabActions from "01501_TabActions.js";
 import StackActions from "01504_StackActions.js";
 
-for (const key10013 in _mod1496) {
-  exports[key10013] = _mod1496[key10013];
+const require = globalThis.__r;
+
+for (const key10013 in require("metro/01496__.js")) {
+  arg5[key10013] = require("metro/01496__.js")[key10013];
   continue;
 }
-const BaseRouter_export = BaseRouter.BaseRouter;
-const DrawerActions_export = DrawerActions.DrawerActions;
-const StackActions_export = StackActions.StackActions;
-const TabActions_export = TabActions.TabActions;
 
 export const CommonActions = goBackAll;
-export { BaseRouter_export as BaseRouter };
-export { DrawerActions_export as DrawerActions };
-export const DrawerRouter = DrawerActions.DrawerRouter;
-export { StackActions_export as StackActions };
+export const BaseRouter = BaseRouter.BaseRouter;
+export const DrawerActions = openDrawer.DrawerActions;
+export const DrawerRouter = openDrawer.DrawerRouter;
+export const StackActions = StackActions.StackActions;
 export const StackRouter = StackActions.StackRouter;
-export { TabActions_export as TabActions };
+export const TabActions = TabActions.TabActions;
 export const TabRouter = TabActions.TabRouter;

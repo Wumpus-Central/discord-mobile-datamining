@@ -1,44 +1,65 @@
 // _runtime/05355_StringToNumber.js
-import GetIntrinsic from "01292_GetIntrinsic.js";
+import _mod1292 from "metro/01292__.js";
 import _mod1293 from "metro/01293__.js";
 import callBoundIntrinsic from "01326_callBoundIntrinsic.js";
 import regexTester from "01453_regexTester.js";
 import trim from "05356_trim.js";
 
-const tmp = GetIntrinsic("%RegExp%");
-const React2 = GetIntrinsic("%parseInt%");
-const _false = callBoundIntrinsic("String.prototype.slice");
-const React3 = regexTester(/^0b[01]+$/i);
+const React2 = _mod1292("%parseInt%");
+const React3 = callBoundIntrinsic("String.prototype.slice");
+const React4 = regexTester(/^0b[01]+$/i);
 const hasOwnProperty = regexTester(/^0o[0-7]+$/i);
-const metroRequire = regexTester(/^[-+]0x[0-9a-f]+$/i);
+const timestampProducer = regexTester(/^[-+]0x[0-9a-f]+$/i);
 const items = ["\u0085", "\u200B", "\uFFFE"];
-const tmp2 = new tmp("[" + items.join("") + "]", "g");
-const metroImportDefault = regexTester(tmp2);
+const tmp = _mod1292("%RegExp%");
+const React5 = regexTester(new _mod1292("%RegExp%")("[" + items.join("") + "]", "g"));
 class StringToNumber {
-  constructor(str) {
-    if (typeof str !== "string") {
-      const self = this;
-      const self2 = this;
-      const tmp15 = new _mod1293("Assertion failed: `argument` is not a String");
-      throw tmp15;
-    } else if (closure_4(str)) {
-      return +closure_2(closure_3(str, 2), 2);
-    } else if (closure_5(str)) {
-      return +closure_2(closure_3(str, 2), 8);
+  constructor(arg0) {
+    if (typeof global !== "string") {
+      tmp13 = closure_0;
+      tmp14 = closure_1;
+      tmp15 = new.target;
+      str = "Assertion failed: `argument` is not a String";
+      tmp16 = new.target;
+      tmp17 = new closure_0(closure_1[3])("Assertion failed: `argument` is not a String");
+      tmp18 = tmp17;
+      throw tmp17;
     } else {
-      if (!closure_7(str)) {
-        if (!closure_6(str)) {
-          let tmp7;
-          const tmp6 = trim(str);
-          if (tmp6 !== str) {
-            tmp7 = StringToNumber(tmp6);
-          } else {
-            tmp7 = +str;
+      tmp19 = closure_4;
+      if (closure_4(global)) {
+        tmp11 = closure_2;
+        tmp12 = closure_3;
+        num4 = 2;
+        return +closure_2(closure_3(global, 2), 2);
+      } else {
+        tmp = closure_5;
+        if (closure_5(global)) {
+          tmp9 = closure_2;
+          tmp10 = closure_3;
+          num2 = 2;
+          num3 = 8;
+          return +closure_2(closure_3(global, 2), 8);
+        } else {
+          tmp2 = closure_7;
+          if (!closure_7(global)) {
+            tmp3 = closure_6;
+            if (!closure_6(global)) {
+              tmp4 = closure_0;
+              tmp5 = closure_1;
+              tmp6 = closure_0(closure_1[4])(global);
+              if (tmp6 !== global) {
+                tmp8 = StringToNumber;
+                tmp7 = StringToNumber(tmp6);
+              } else {
+                tmp7 = +global;
+              }
+              return tmp7;
+            }
           }
-          return tmp7;
+          num = NaN;
+          return NaN;
         }
       }
-      return NaN;
     }
   }
 }

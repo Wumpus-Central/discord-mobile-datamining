@@ -1,6 +1,5 @@
 // _runtime/metro/10226__.js
 import repeatedTimeunitPattern from "../10174_repeatedTimeunitPattern.js";
-import findMostLikelyADYear from "../10175_findMostLikelyADYear.js";
 import AbstractParserWithWordBoundaryChecking from "../10181_AbstractParserWithWordBoundaryChecking.js";
 import _mod10220 from "10220__.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -9,22 +8,28 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const DEMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const matchAnyPatternResult = repeatedTimeunitPattern.matchAnyPattern(_mod10220.MONTH_DICTIONARY);
 const regExp = new RegExp(
   "(?:am\\s*?)?(?:den\\s*?)?([0-9]{1,2})\\.(?:\\s*(?:bis(?:\\s*(?:am|zum))?|\\-|\\\u2013|\\s)\\s*([0-9]{1,2})\\.?)?\\s*(" +
-    matchAnyPatternResult +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10220.MONTH_DICTIONARY) +
     ")(?:(?:-|/|,?\\s*)(" +
     _mod10220.YEAR_PATTERN +
     "(?![^\\s]\\d)))?(?=\\W|$)",
@@ -32,17 +37,22 @@ const regExp = new RegExp(
 );
 class DEMonthNameLittleEndianParser {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, DEMonthNameLittleEndianParser);
-    const obj = _getPrototypeOf(DEMonthNameLittleEndianParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = c2(this, DEMonthNameLittleEndianParser);
+    tmp2 = closure_4;
+    obj = closure_4(DEMonthNameLittleEndianParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return c3(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
 _inherits(DEMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -58,7 +68,7 @@ const items = [
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
       const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = _mod10220.MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const tmp4 = DEMonthNameLittleEndianParser(10220).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
       const parsed = parseInt(index[1]);
       if (parsed > 31) {
         index.index = index.index + index[1].length;
@@ -70,10 +80,13 @@ const items = [
         start5.assign("day", parsed);
         if (index[4]) {
           const start2 = parsingResult.start;
-          start2.assign("year", _mod10220.parseYear(index[4]));
+          start2.assign("year", DEMonthNameLittleEndianParser(10220).parseYear(index[4]));
         } else {
           const start = parsingResult.start;
-          start.imply("year", findMostLikelyADYear.findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
+          start.imply(
+            "year",
+            DEMonthNameLittleEndianParser(10175).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4),
+          );
         }
         if (index[2]) {
           const _parseInt = parseInt;

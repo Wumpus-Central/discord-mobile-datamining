@@ -1,35 +1,23 @@
 // _runtime/06402_StickyHeaders.js
-import Fragment from "react/00021_Fragment.js";
-import react_native from "06399_react-native.js";
+import CompatView from "06399_CompatView.js";
 import ViewHolder from "06403_ViewHolder.js";
-import _slicedToArray from "metro/06349__slicedToArray.js";
-import react_mod from "00019_react.js";
+import _slicedToArray from "metro/06349__.js";
+import noop_mod from "metro/00019__.js";
 
-let map;
-
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroImportAll;
-let metroImportDefault;
-let metroRequire;
-let react = react_mod;
+require = fn;
+let noop = fn(19);
 ({
   useRef: c3,
   useState: closure_4,
   useMemo: hasOwnProperty,
   useImperativeHandle: metroRequire,
-  useCallback: metroImportDefault,
-  useEffect: metroImportAll,
-} = react);
-react = react_mod;
-const jsx = Fragment.jsx;
+  useCallback: closure_7,
+  useEffect: closure_8,
+} = noop);
+let noop = noop_mod;
+const jsx = fn(21).jsx;
 
 export const StickyHeaders = (stickyHeaderIndices) => {
-  let _undefined;
-  let c10;
-  let tmp11;
-  let tmp2;
   stickyHeaderIndices = stickyHeaderIndices.stickyHeaderIndices;
   const stickyHeaderOffset = stickyHeaderIndices.stickyHeaderOffset;
   const renderItem = stickyHeaderIndices.renderItem;
@@ -40,22 +28,19 @@ export const StickyHeaders = (stickyHeaderIndices) => {
   const onChangeStickyIndex = stickyHeaderIndices.onChangeStickyIndex;
   const inverted = stickyHeaderIndices.inverted;
   let num = stickyHeaderIndices.stickyHeaderZIndex;
-  const stickyHeaderRef = stickyHeaderIndices.stickyHeaderRef;
   if (num === undefined) {
     num = 2;
   }
   c10 = undefined;
-  let closure_14;
-  let closure_15;
+  closure_14 = undefined;
+  closure_15 = undefined;
   let current;
   let translateY;
   let opacity;
-  let obj = { currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER };
-  [tmp2, c10] = renderItem(scrollY(obj), 2);
+  [tmp2, c10] = renderItem(scrollY({ currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER }), 2);
   const currentStickyIndex = tmp2.currentStickyIndex;
   const pushStartsAt = tmp2.pushStartsAt;
   let items = [stickyHeaderIndices];
-  const tmp = renderItem(scrollY(obj), 2);
   const arr2 = data(() => {
     const items = [...stickyHeaderIndices];
     return items.sort((arg0, arg1) => arg0 - arg1);
@@ -78,7 +63,6 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     let diff1;
     let sum;
     if (!closure_14) {
-      let MAX_SAFE_INTEGER;
       let diff = arr2.length - 1;
       let num5 = -1;
       let num6 = 0;
@@ -87,19 +71,19 @@ export const StickyHeaders = (stickyHeaderIndices) => {
         do {
           let _Math = Math;
           let rounded = Math.floor((num6 + diff) / 2);
-          let tmp9 = num5;
+          let tmp8 = num5;
           sum = num6;
-          if (recyclerViewManager.getLayout(arr2[rounded]).y <= tmp4) {
+          if (recyclerViewManager.getLayout(arr2[rounded]).y <= tmp3) {
             sum = rounded + 1;
-            tmp9 = rounded;
+            tmp8 = rounded;
             diff1 = diff;
           } else {
             diff1 = rounded - 1;
           }
-          num5 = tmp9;
+          num5 = tmp8;
           diff = diff1;
           num6 = sum;
-          num7 = tmp9;
+          num7 = tmp8;
         } while (sum <= diff1);
       }
       let num8 = arr2[num7];
@@ -115,7 +99,6 @@ export const StickyHeaders = (stickyHeaderIndices) => {
       }
       if (-1 === num9) {
         const _Number = Number;
-        MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER;
       } else {
         const tryGetLayoutResult = recyclerViewManager.tryGetLayout(num9);
         let num10;
@@ -136,8 +119,11 @@ export const StickyHeaders = (stickyHeaderIndices) => {
         num11 = 0;
       }
       const diff2 = MAX_SAFE_INTEGER - num11;
-      const tmp18 = num8 === currentStickyIndex && diff2 === pushStartsAt;
-      if (!tmp18) {
+      let tmp17 = num8 === currentStickyIndex;
+      if (tmp17) {
+        tmp17 = diff2 === pushStartsAt;
+      }
+      if (!tmp17) {
         const obj2 = { currentStickyIndex: num8, pushStartsAt: diff2 - stickyHeaderOffset };
         _undefined(obj2);
       }
@@ -150,12 +136,12 @@ export const StickyHeaders = (stickyHeaderIndices) => {
   }, items1);
   closure_15 = tmp5;
   let items2 = [tmp5];
-  const tmp6 = inverted(() => {
+  inverted(() => {
     closure_15();
   }, items2);
   const items3 = [tmp5];
   extraData(
-    stickyHeaderRef,
+    stickyHeaderIndices.stickyHeaderRef,
     () => ({
       reportScrollEvent() {
         closure_1_15();
@@ -163,15 +149,11 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     }),
     items3,
   );
-  map = new Map();
-  current = recyclerViewManager(map).current;
+  let obj = { currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER };
+  const tmp = renderItem(scrollY({ currentStickyIndex: -1, pushStartsAt: Number.MAX_SAFE_INTEGER }), 2);
+  current = recyclerViewManager(new Map()).current;
   const items4 = [recyclerViewManager, currentStickyIndex, scrollY, pushStartsAt, stickyHeaderOffset];
   const tmp3Result = data(() => {
-    let interpolateResult;
-    let items;
-    let items1;
-    let items2;
-    let obj3;
     const tryGetLayoutResult = recyclerViewManager.tryGetLayout(currentStickyIndex);
     num = undefined;
     if (tryGetLayoutResult != null) {
@@ -180,16 +162,22 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     if (num == null) {
       num = 0;
     }
-    const obj = { translateY: scrollY.interpolate(obj3), opacity: interpolateResult };
-    obj3 = { inputRange: items, outputRange: items1, extrapolate: "clamp" };
-    items = [pushStartsAt, pushStartsAt + num];
-    items1 = [0, -num];
-    interpolateResult = undefined;
+    const obj = { translateY: null, opacity: null };
+    const obj3 = { inputRange: null, outputRange: null, extrapolate: "clamp" };
+    const items = [pushStartsAt, pushStartsAt + num];
+    obj3.inputRange = items;
+    const items1 = [0, -num];
+    obj3.outputRange = items1;
+    obj.translateY = scrollY.interpolate(obj3);
+    let interpolateResult;
     if (stickyHeaderOffset > 0) {
-      const obj4 = { inputRange: items2, outputRange: [1, 0], extrapolate: "clamp" };
-      items2 = [pushStartsAt, pushStartsAt + num];
+      const obj4 = { inputRange: null, outputRange: null, extrapolate: "clamp" };
+      const items2 = [pushStartsAt, pushStartsAt + num];
+      obj4.inputRange = items2;
+      obj4.outputRange = [1, 0];
       interpolateResult = scrollY.interpolate(obj4);
     }
+    obj.opacity = interpolateResult;
     return obj;
   }, items4);
   translateY = tmp3Result.translateY;
@@ -206,43 +194,9 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     num,
     inverted,
   ];
-  const tmp3Result2 = data(() => {
-    let items;
-    const rect = {
-      position: "absolute",
-      top: stickyHeaderOffset,
-      left: 0,
-      right: 0,
-      zIndex: num,
-      transform: items,
-      opacity,
-    };
-    items = [];
-    const obj2 = { translateY };
-    items[0] = obj2;
-    let tmpResult = null;
-    const CompatAnimatedView = react_native.CompatAnimatedView;
-    if (-1 !== currentStickyIndex) {
-      tmpResult = null;
-      if (currentStickyIndex < data.length) {
-        tmpResult = jsx(ViewHolder.ViewHolder, {
-          index: currentStickyIndex,
-          item: tmp6[currentStickyIndex],
-          renderItem,
-          layout: { x: 0, y: 0, width: 0, height: 0 },
-          refHolder: current,
-          extraData,
-          trailingItem: "applicationId",
-          target: true,
-          hidden: true,
-          inverted,
-        });
-      }
-    }
-    return <CompatAnimatedView style={rect}>{tmpResult}</CompatAnimatedView>;
-  }, items5);
+  const map = new Map();
   if (!stickyHeaderIndices(stickyHeaderOffset[5]).PlatformConfig.isRN083OrAbove) {
-    tmp11 = tmp3Result2;
+    let tmp11 = tmp3Result2;
   } else {
     tmp11 = null;
   }

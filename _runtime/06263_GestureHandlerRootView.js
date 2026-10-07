@@ -1,22 +1,22 @@
 // _runtime/06263_GestureHandlerRootView.js
-import react_native from "00017_react-native.js";
-import Fragment from "react/00021_Fragment.js";
-import reactDefault from "06166_react.js";
+import _modDef6166 from "metro/06166__.js";
 import _modDef6264 from "metro/06264__.js";
-import react from "00019_react.js";
+import noop from "metro/00019__.js";
 
-const StyleSheet = react_native.StyleSheet;
-const jsx = Fragment.jsx;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
 let container = StyleSheet.create({ container: { flex: 1 } });
 
 export default function GestureHandlerRootView(style) {
   container = style.style;
   const merged = Object.assign(style, Object.assign({ style: 0 }));
-  reactDefault;
-  _modDef6264;
   if (container == null) {
     container = container.container;
   }
+  const obj = { value: true, children: null };
+  const obj2 = { style: container };
   const merged1 = Object.assign(merged);
+  obj2.moduleId = globalThis._RNGH_MODULE_ID;
+  obj.children = jsx(_modDef6264, { style: container });
   return <tmp3 value>{null}</tmp3>;
 }

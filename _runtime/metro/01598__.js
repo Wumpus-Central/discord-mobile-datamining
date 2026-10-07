@@ -1,14 +1,12 @@
 // _runtime/metro/01598__.js
-import _toArray from "../01599__toArray.js";
-import react from "../00019_react.js";
-import react_native from "../00017_react-native.js";
+import extractPathFromURL from "../01599_extractPathFromURL.js";
+import noop from "00019__.js";
 
 const require = globalThis.__r;
-let _require;
 
-let Platform;
-let c3;
-({ Linking: c3, Platform } = react_native);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Linking: c3, Platform } = get_ActivityIndicator);
 
 export const useLinking = function useLinking(ref, enabled) {
   _require = ref;
@@ -17,32 +15,34 @@ export const useLinking = function useLinking(ref, enabled) {
     flag = true;
   }
   const prefixes = enabled.prefixes;
-  const filter = enabled.filter;
+  let filter = enabled.filter;
   const config = enabled.config;
   let current = enabled.getInitialURL;
   if (current === undefined) {
     current = function f() {
-      const f135347 = (arg0) => {
-        const timerId = setTimeout(arg0, 150);
-      };
-      const items = [filter.getInitialURL(), new Promise(f135347)];
-      new Promise(f135347);
-      return race(items);
+      const items = [
+        filter.getInitialURL(),
+        new Promise((arg0) => {
+          const timerId = setTimeout(arg0, 150);
+        }),
+      ];
+      return Promise.race(items);
     };
   }
   let fn2 = enabled.subscribe;
   if (fn2 === undefined) {
     fn2 = function l(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       callback = function callback(event) {
         return closure_0(event.url);
       };
-      let closure_2 = filter.addEventListener("url", callback);
+      closure_2 = filter.addEventListener("url", callback);
       const removeEventListener = filter.removeEventListener;
       let bindResult;
       if (removeEventListener != null) {
         bindResult = removeEventListener.bind(filter);
       }
+      filter = bindResult;
       return () => {
         let remove;
         if (closure_2 != null) {
@@ -58,46 +58,40 @@ export const useLinking = function useLinking(ref, enabled) {
   }
   let getStateFromPath = enabled.getStateFromPath;
   if (getStateFromPath === undefined) {
-    let tmp = _require;
-    let tmp2 = flag;
     getStateFromPath = require("BaseNavigationContainer").getStateFromPath;
   }
   let getActionFromState = enabled.getActionFromState;
   if (getActionFromState === undefined) {
-    let tmp4 = flag;
     getActionFromState = require("BaseNavigationContainer").getActionFromState;
   }
-  let obj = require("BaseNavigationContainer");
-  let items = [flag, obj.useNavigationIndependentTree()];
+  let items = [flag, require("BaseNavigationContainer").useNavigationIndependentTree()];
   const effect = prefixes.useEffect(() => {}, items);
   ref = prefixes.useRef(flag);
-  const ref2 = prefixes.useRef(prefixes);
-  const ref3 = prefixes.useRef(filter);
-  const ref4 = prefixes.useRef(config);
-  const ref5 = prefixes.useRef(current);
-  const ref6 = prefixes.useRef(getStateFromPath);
-  let closure_15 = prefixes.useRef(getActionFromState);
+  prefixes.useRef(prefixes);
+  prefixes.useRef(filter);
+  prefixes.useRef(config);
+  prefixes.useRef(current);
+  prefixes.useRef(getStateFromPath);
+  closure_15 = prefixes.useRef(getActionFromState);
   const effect1 = prefixes.useEffect(() => {
-    ref.current = flag;
-    ref2.current = prefixes;
-    ref3.current = filter;
-    ref4.current = config;
-    ref5.current = current;
-    ref6.current = getStateFromPath;
+    closure_9.current = flag;
+    closure_10.current = prefixes;
+    closure_11.current = filter;
+    closure_12.current = config;
+    closure_13.current = current;
+    closure_14.current = getStateFromPath;
     closure_15.current = getActionFromState;
   });
   let callback = prefixes.useCallback((AUTO_DISMISS) => {
-    const tmp = AUTO_DISMISS;
-    if (tmp) {
+    if (AUTO_DISMISS) {
       if (!ref3.current) {
-        const obj2 = _toArray;
-        const extractPathFromURLResult = obj2.extractPathFromURL(ref2.current, AUTO_DISMISS);
+        const extractPathFromURLResult = extractPathFromURL.extractPathFromURL(ref2.current, AUTO_DISMISS);
         if (undefined !== extractPathFromURLResult) {
           try {
             return ref6.current(extractPathFromURLResult, ref4.current);
-          } catch (tmp8) {
+          } catch (tmp7) {
             const _console = console;
-            console.error(tmp8);
+            console.error(tmp7);
           }
         }
       }
@@ -108,36 +102,34 @@ export const useLinking = function useLinking(ref, enabled) {
   const getInitialState = prefixes.useCallback(() => {
     if (ref.current) {
       const currentResult = ref5.current();
-      let tmp2 = null;
       if (null != currentResult) {
         if (typeof currentResult !== "string") {
           return currentResult.then((result) => callback(result));
         }
       }
-      let closure_0 = callback(currentResult);
+      closure_0 = callback(currentResult);
     }
-    const obj = {
+    return {
       then(fn) {
-        let tmp2;
         if (fn) {
-          tmp2 = fn(closure_0);
+          let tmp2 = fn(closure_0);
         } else {
           tmp2 = closure_0;
         }
-        return resolve(tmp2);
+        return Promise.resolve(tmp2);
       },
-      catch: () => obj,
+      catch() {
+        return obj;
+      },
     };
-    return obj;
   }, items1);
   const effect2 = prefixes.useEffect(
     () =>
       fn2((arg0) => {
         if (flag) {
-          let tmp4;
           current = ref.current;
           if (current) {
-            tmp4 = callback(arg0);
+            const tmp4 = callback(arg0);
           }
           if (current) {
             if (tmp4) {
@@ -147,7 +139,6 @@ export const useLinking = function useLinking(ref, enabled) {
                   current.dispatch(currentResult);
                 } catch (tmp11) {
                   let message = tmp11;
-                  const _console = console;
                   if (typeof tmp11 === "object") {
                     message = tmp11;
                     if (null != tmp11) {
@@ -158,7 +149,7 @@ export const useLinking = function useLinking(ref, enabled) {
                     }
                   }
                   const _HermesInternal = HermesInternal;
-                  warn("An error occurred when trying to handle the link '" + arg0 + "': " + message);
+                  console.warn("An error occurred when trying to handle the link '" + tmp + "': " + message);
                 }
               } else {
                 current.resetRoot(tmp4);

@@ -1,4 +1,5 @@
 // _runtime/metro/06142__.js
+const global = arg0;
 
 export const isFabricInstalled = function isFabricInstalled() {
   let prop;

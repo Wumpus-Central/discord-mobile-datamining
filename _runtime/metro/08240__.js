@@ -1,63 +1,60 @@
 // _runtime/metro/08240__.js
-import react_native from "../00017_react-native.js";
-import Fragment from "../react/00021_Fragment.js";
-import extractViewBox from "../08182_extractViewBox.js";
-import extractProps from "../08184_extractProps.js";
-import multiplyMatricesDefault from "../08193_multiplyMatrices.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8193 from "08193__.js";
 import _modDef8241 from "08241__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import react from "../00019_react.js";
+import noop from "00019__.js";
 
-let size;
-
+const SvgImage = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const Image = react_native.Image;
-const jsx = Fragment.jsx;
+_possibleConstructorReturnDefault;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
 const re9 = /\s+/;
 class SvgImage {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, SvgImage);
-    const obj = _getPrototypeOf(SvgImage);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = closure_3(this, SvgImage);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(SvgImage);
+    tmp3 = closure_4;
+    if (closure_8()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return _possibleConstructorReturn(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
-_inherits(SvgImage, multiplyMatricesDefault);
+_inherits(SvgImage, _modDef8193);
 const entry = {
   key: "render",
   value: function render() {
-    let assetSource;
-    let height;
-    let href;
-    let parts;
-    let preserveAspectRatio;
-    let tmp2;
-    let tmp3;
-    let width;
-    let x;
-    let y;
     const self = this;
     const props = this.props;
     ({ preserveAspectRatio, href } = props);
@@ -65,39 +62,42 @@ const entry = {
     if (undefined === href) {
       href = props.xlinkHref;
     }
-    const onLoad = props.onLoad;
     if (preserveAspectRatio) {
+      let parts = preserveAspectRatio.trim().split(re9);
       const str = preserveAspectRatio.trim();
-      parts = str.split(re9);
     } else {
       parts = [];
     }
-    size = {
+    const size = {
       x,
       y,
       width,
       height,
-      onLoad,
-      meetOrSlice: extractViewBox.meetOrSliceTypes[tmp3] || 0,
-      align: extractViewBox.alignEnum[tmp2] || "xMidYMid",
-      src: assetSource,
+      onLoad: props.onLoad,
+      meetOrSlice: SvgImage(8182).meetOrSliceTypes[tmp3] || 0,
+      align: null,
+      src: null,
     };
     [tmp2, tmp3] = parts;
-    extractViewBox.meetOrSliceTypes[tmp3] || 0;
-    assetSource = null;
-    extractViewBox.alignEnum[tmp2] || "xMidYMid";
+    const tmp6 = SvgImage(8182).meetOrSliceTypes[tmp3] || 0;
+    size.align = SvgImage(8182).alignEnum[tmp2] || "xMidYMid";
+    let assetSource = null;
     if (href) {
       let tmp10 = href;
-      const resolveAssetSource = Image.resolveAssetSource;
       if (typeof href === "string") {
-        tmp10 = { uri: href };
         const obj = { uri: href };
+        tmp10 = obj;
       }
-      assetSource = resolveAssetSource(tmp10);
+      assetSource = Image.resolveAssetSource(tmp10);
     }
-    _modDef8241;
-    const tmp4Result = extractProps;
-    const merged = Object.assign(tmp4Result.withoutXY(this, props));
+    size.src = assetSource;
+    const obj2 = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const tmp7 = SvgImage(8182).alignEnum[tmp2] || "xMidYMid";
+    const merged = Object.assign(SvgImage(8184).withoutXY(this, props));
     const merged1 = Object.assign(size);
     return (
       <tmp11

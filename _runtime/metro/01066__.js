@@ -1,17 +1,16 @@
 // _runtime/metro/01066__.js
 import _mod693 from "00693__.js";
 import _mod998 from "00998__.js";
-import DEFAULT_NAVIGATION_SPAN_NAME from "../01036_DEFAULT_NAVIGATION_SPAN_NAME.js";
+import startIdleSpan from "../01036_startIdleSpan.js";
 import _mod1042 from "01042__.js";
 
-let _null, _undefined, componentId;
-
 const self = this;
+require = arg1;
+const dependencyMap = arg6;
 const ReactNativeNavigation = "ReactNativeNavigation";
 
 export const INTEGRATION_NAME = "ReactNativeNavigation";
 export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
-  let routeChangeTimeoutMs;
   ({ navigation, routeChangeTimeoutMs } = enableTabsInstrumentation);
   if (routeChangeTimeoutMs === undefined) {
     routeChangeTimeoutMs = 1000;
@@ -25,28 +24,24 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     flag2 = true;
   }
   let reactNativeTracingIntegration;
-  let c3;
-  let c4;
+  c3 = undefined;
+  c4 = undefined;
   let pushRecentComponentId;
   let discardLatestNavigationSpan;
   let clearStateChangeTimeout;
-  let closure_5 = [];
-  let obj2 = flag2(reactNativeTracingIntegration[0]).defaultIdleOptions;
-  let c7 = null;
+  closure_5 = [];
+  flag2(reactNativeTracingIntegration[0]).defaultIdleOptions;
+  enableTabsInstrumentation = null;
   function startIdleNavigationSpan() {
-    let beforeStartSpanResult;
-    let c4;
-    let closure_3;
-    let timeout;
     if (_undefined) {
       if (typeof discardLatestNavigationSpan === "function") {
         if (tmp) {
-          const obj = flag2(reactNativeTracingIntegration[5]);
           if (obj.isSentrySpan(_undefined)) {
             _undefined._sampled = false;
           }
           _undefined.end();
           _undefined = undefined;
+          obj = flag2(reactNativeTracingIntegration[5]);
         }
         if (typeof clearStateChangeTimeout === "function") {
           if (undefined !== timeout) {
@@ -61,76 +56,64 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    let beforeStartSpan1;
-    const startIdleNavigationSpan = flag2(reactNativeTracingIntegration[0]).startIdleNavigationSpan;
-    flag2(reactNativeTracingIntegration[0]);
+    obj2 = flag2(reactNativeTracingIntegration[0]);
+    let beforeStartSpan;
     if (null != reactNativeTracingIntegration) {
-      beforeStartSpan1 = reactNativeTracingIntegration.options.beforeStartSpan;
+      beforeStartSpan = reactNativeTracingIntegration.options.beforeStartSpan;
     }
-    if (beforeStartSpan1) {
-      const options = reactNativeTracingIntegration.options;
-      const beforeStartSpan = options.beforeStartSpan;
-      const obj3 = flag2(reactNativeTracingIntegration[0]);
-      beforeStartSpanResult = beforeStartSpan(obj3.getDefaultIdleNavigationSpanOptions());
+    if (beforeStartSpan) {
+      options = reactNativeTracingIntegration.options;
+      let beforeStartSpanResult = options.beforeStartSpan(
+        flag2(reactNativeTracingIntegration[0]).getDefaultIdleNavigationSpanOptions(),
+      );
+      const obj4 = flag2(reactNativeTracingIntegration[0]);
     } else {
-      obj2 = flag2(reactNativeTracingIntegration[0]);
-      beforeStartSpanResult = obj2.getDefaultIdleNavigationSpanOptions();
+      beforeStartSpanResult = flag2(reactNativeTracingIntegration[0]).getDefaultIdleNavigationSpanOptions();
+      const obj3 = flag2(reactNativeTracingIntegration[0]);
     }
-    const result = startIdleNavigationSpan(beforeStartSpanResult, obj2);
+    const result = obj2.startIdleNavigationSpan(beforeStartSpanResult, obj2);
     _undefined = result;
     if (null != result) {
-      const setAttribute = _undefined.setAttribute;
-      const attr = setAttribute(
+      const attr = _undefined.setAttribute(
         flag2(reactNativeTracingIntegration[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
         flag2(reactNativeTracingIntegration[3]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NATIVE_NAVIGATION,
       );
     }
     if (flag2) {
-      const ignoreEmptyBackNavigation = flag2(reactNativeTracingIntegration[4]).ignoreEmptyBackNavigation;
-      flag2(reactNativeTracingIntegration[4]);
-      const obj4 = flag2(reactNativeTracingIntegration[2]);
-      const result1 = ignoreEmptyBackNavigation(obj4.getClient(), _undefined);
+      const obj5 = flag2(reactNativeTracingIntegration[4]);
+      const result1 = obj5.ignoreEmptyBackNavigation(flag2(reactNativeTracingIntegration[2]).getClient(), _undefined);
+      const obj6 = flag2(reactNativeTracingIntegration[2]);
     }
-    let closure_0 = _undefined;
-    const ignoreEmptyRouteChangeTransactions = flag2(
-      reactNativeTracingIntegration[4],
-    ).ignoreEmptyRouteChangeTransactions;
-    flag2(reactNativeTracingIntegration[4]);
-    const obj5 = flag2(reactNativeTracingIntegration[2]);
-    const client = obj5.getClient();
-    const result2 = ignoreEmptyRouteChangeTransactions(
+    closure_0 = _undefined;
+    const obj7 = flag2(reactNativeTracingIntegration[4]);
+    const client = flag2(reactNativeTracingIntegration[2]).getClient();
+    const result2 = obj7.ignoreEmptyRouteChangeTransactions(
       client,
       _undefined,
       flag2(reactNativeTracingIntegration[0]).DEFAULT_NAVIGATION_SPAN_NAME,
       () => c4 === closure_0,
     );
     timeout = setTimeout(discardLatestNavigationSpan.bind(c3), closure_0);
+    const obj8 = flag2(reactNativeTracingIntegration[2]);
+  }
+  let result = navigation.events().registerCommandListener(startIdleNavigationSpan);
+  if (flag) {
+    let result1 = navigation.events().registerBottomTabPressedListener(startIdleNavigationSpan);
+    const eventsResult1 = navigation.events();
   }
   const eventsResult = navigation.events();
-  let result = eventsResult.registerCommandListener(startIdleNavigationSpan);
-  if (flag) {
-    const eventsResult1 = navigation.events();
-    let result1 = eventsResult1.registerBottomTabPressedListener(startIdleNavigationSpan);
-  }
-  const eventsResult2 = navigation.events();
-  let result2 = eventsResult2.registerComponentWillAppearListener((componentId) => {
-    let componentName;
-    let componentType;
-    let obj8;
-    const tmp = _undefined;
-    if (tmp) {
-      const tmp3 = _null;
-      if (tmp3) {
-        if (componentId.componentId === _null.componentId) {
+  let result2 = navigation.events().registerComponentWillAppearListener((componentId) => {
+    if (_undefined) {
+      if (enableTabsInstrumentation) {
+        if (componentId.componentId === enableTabsInstrumentation.componentId) {
           if (typeof discardLatestNavigationSpan === "function") {
-            const tmp54 = _undefined;
-            if (tmp54) {
-              const obj5 = _mod998;
-              if (obj5.isSentrySpan(_undefined)) {
+            if (_undefined) {
+              if (obj6.isSentrySpan(_undefined)) {
                 _undefined._sampled = false;
               }
               _undefined.end();
               _undefined = undefined;
+              obj6 = _mod998;
             }
             if (typeof clearStateChangeTimeout === "function") {
               if (undefined !== c3) {
@@ -153,64 +136,62 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
           c3 = undefined;
         }
         const hasItem = closure_5.includes(componentId.componentId);
-        const obj = _mod693;
-        if (obj.spanToJSON(_undefined).description === DEFAULT_NAVIGATION_SPAN_NAME.DEFAULT_NAVIGATION_SPAN_NAME) {
+        if (obj.spanToJSON(_undefined).description === startIdleSpan.DEFAULT_NAVIGATION_SPAN_NAME) {
           _undefined.updateName(componentId.componentName);
         }
-        const obj3 = {
+        const obj4 = {
           "route.name": null,
           "route.component_id": null,
           "route.component_type": null,
-          "route.has_been_seen": hasItem,
-          "previous_route.name": componentName,
-          "previous_route.component_id": componentId,
-          "previous_route.component_type": componentType,
+          "route.has_been_seen": null,
+          "previous_route.name": null,
+          "previous_route.component_id": null,
+          "previous_route.component_type": null,
         };
         ({
           componentName: obj2["route.name"],
           componentId: obj2["route.component_id"],
           componentType: obj2["route.component_type"],
         } = componentId);
-        componentName = undefined;
-        const setAttributes = _undefined.setAttributes;
-        if (null != _null) {
-          componentName = _null.componentName;
+        obj4["route.has_been_seen"] = hasItem;
+        let componentName;
+        if (null != enableTabsInstrumentation) {
+          componentName = enableTabsInstrumentation.componentName;
         }
+        obj4["previous_route.name"] = componentName;
         componentId = undefined;
-        if (null != _null) {
-          componentId = _null.componentId;
+        if (null != enableTabsInstrumentation) {
+          componentId = enableTabsInstrumentation.componentId;
         }
-        componentType = undefined;
-        if (null != _null) {
-          componentType = _null.componentType;
+        obj4["previous_route.component_id"] = componentId;
+        let componentType;
+        if (null != enableTabsInstrumentation) {
+          componentType = enableTabsInstrumentation.componentType;
         }
-        obj3[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
-        obj3[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
-        setAttributes(obj3);
+        obj4["previous_route.component_type"] = componentType;
+        obj4[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "component";
+        obj4[_mod693.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
+        _undefined.setAttributes(obj4);
         if (null != reactNativeTracingIntegration) {
           reactNativeTracingIntegration.setCurrentRoute(componentId.componentName);
         }
+        obj = _mod693;
+        const obj5 = { category: "navigation", type: "navigation", message: null, data: null };
         const _HermesInternal = HermesInternal;
-        const obj4 = {
-          category: "navigation",
-          type: "navigation",
-          message: "Navigation to " + componentId.componentName,
-          data: obj8,
-        };
-        const addBreadcrumb = _mod693.addBreadcrumb;
-        _mod693;
+        obj5.message = "Navigation to " + componentId.componentName;
         let componentName1;
-        if (null != _null) {
-          componentName1 = _null.componentName;
+        if (null != enableTabsInstrumentation) {
+          componentName1 = enableTabsInstrumentation.componentName;
         }
-        obj8 = { from: componentName1, to: componentId.componentName };
-        addBreadcrumb(obj4);
+        const obj9 = { from: componentName1, to: componentId.componentName };
+        obj5.data = obj9;
+        _mod693.addBreadcrumb(obj5);
         if (typeof pushRecentComponentId === "function") {
-          closure_5.push(tmp47);
+          closure_5.push(tmp45);
           if (closure_5.length > 200) {
             closure_5 = closure_5.slice(closure_5.length - 200);
           }
-          _null = componentId;
+          enableTabsInstrumentation = componentId;
           _undefined = undefined;
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -222,14 +203,13 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
   });
   pushRecentComponentId = function pushRecentComponentId(arg0) {};
   discardLatestNavigationSpan = function discardLatestNavigationSpan() {
-    const tmp = _undefined;
-    if (tmp) {
-      const obj = _mod998;
+    if (_undefined) {
       if (obj.isSentrySpan(_undefined)) {
         _undefined._sampled = false;
       }
       _undefined.end();
       _undefined = undefined;
+      obj = _mod998;
     }
     if (typeof clearStateChangeTimeout === "function") {
       if (undefined !== c3) {
@@ -242,12 +222,16 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     }
   };
   clearStateChangeTimeout = function clearStateChangeTimeout() {};
-  let obj = {
+  return {
     name: routeChangeTimeoutMs,
     afterAllSetup(getIntegrationByName) {
-      const obj = _mod1042;
-      reactNativeTracingIntegration = obj.getReactNativeTracingIntegration(getIntegrationByName);
+      reactNativeTracingIntegration = _mod1042.getReactNativeTracingIntegration(getIntegrationByName);
+      if (reactNativeTracingIntegration) {
+        obj2 = {
+          finalTimeout: reactNativeTracingIntegration.options.finalTimeoutMs,
+          idleTimeout: reactNativeTracingIntegration.options.idleTimeoutMs,
+        };
+      }
     },
   };
-  return obj;
 };

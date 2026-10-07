@@ -1,6 +1,9 @@
 // _runtime/metro/00879__.js
 import RN_GLOBAL_OBJ from "../00692_RN_GLOBAL_OBJ.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const getExpoConstants = function getExpoConstants() {
   const expo = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;
   let modules;

@@ -1,5 +1,5 @@
 // _runtime/metro/00386__.js
-import _modDef379 from "00379__.js";
+import AnimationDefault from "../00379_Animation.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c2 from "00093__possibleConstructorReturn.js";
@@ -7,12 +7,19 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
+const DecayAnimation = global;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -20,33 +27,36 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 class DecayAnimation {
-  constructor(deceleration) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, DecayAnimation);
-    const items = [deceleration];
-    const obj = _getPrototypeOf(DecayAnimation);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0) {
+    self = this;
+    tmp = closure_1(this, DecayAnimation);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_3;
+    obj = closure_3(DecayAnimation);
+    tmp3 = c2;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = c2(self, constructResult);
-    let num = deceleration.deceleration;
+    tmp3Result = tmp3(self, constructResult);
+    num = global.deceleration;
     if (num == null) {
       num = 0.998;
     }
     tmp3Result._deceleration = num;
-    ({ velocity: tmp6._velocity, platformConfig: tmp6._platformConfig } = deceleration);
+    ({ velocity: tmp6._velocity, platformConfig: tmp6._platformConfig } = global);
     return tmp3Result;
   }
 }
-_inherits(DecayAnimation, _modDef379);
+_inherits(DecayAnimation, AnimationDefault);
 const entry = {
   key: "__getNativeAnimationConfig",
   value: function __getNativeAnimationConfig() {
-    const obj = {
+    return {
       type: "decay",
       deceleration: this._deceleration,
       velocity: this._velocity,
@@ -54,28 +64,27 @@ const entry = {
       platformConfig: this._platformConfig,
       debugID: this.__getDebugID(),
     };
-    return obj;
   },
 };
 let items = [
   entry,
   {
     key: "start",
-    value: function start(_lastValue, _onUpdate, arg2, arg3, __makeNative) {
-      const self = this;
+    value: function start(_lastValue, _onUpdate, arg2, arg3, self) {
+      self = this;
       const tmp = _get(_getPrototypeOf(DecayAnimation.prototype), "start", this);
-      let closure_1 = tmp;
+      closure_1 = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [_lastValue, _onUpdate, arg2, arg3, __makeNative];
+      const items = [_lastValue, _onUpdate, arg2, arg3, self];
       fn(items);
       self._lastValue = _lastValue;
       self._fromValue = _lastValue;
       self._onUpdate = _onUpdate;
       self._startTime = Date.now();
-      if (!self.__startAnimationIfNative(__makeNative)) {
+      if (!self.__startAnimationIfNative(self)) {
         const _requestAnimationFrame = requestAnimationFrame;
         self._animationFrame = requestAnimationFrame(() => self.onUpdate());
       }
@@ -110,7 +119,7 @@ let items = [
       }
       fn([]);
       if (null != self._animationFrame) {
-        global.cancelAnimationFrame(self._animationFrame);
+        DecayAnimation.cancelAnimationFrame(self._animationFrame);
       }
       self.__notifyAnimationEnd({ finished: false });
     },

@@ -3,44 +3,35 @@ import _mod693 from "00693__.js";
 import _mod911 from "00911__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap, metric;
 
+require = arg1;
+let dependencyMap = arg6;
 function triggerHandlers(arg0, arg1) {
   let length;
   if (closure_6[arg0] != null) {
     length = arr.length;
   }
   if (length) {
-    const iter = closure_6[arg0][Symbol.iterator]();
-    const nextResult = iter.next();
+    const iter = arr[Symbol.iterator]();
     if (iter !== undefined) {
       try {
-        nextResult(arg1);
-      } catch (tmp10) {
+        tmp14(arg1);
+      } catch (tmp17) {
         if (_mod911.DEBUG_BUILD) {
           const debug = _mod693.debug;
-          const error = debug.error;
-          const _HermesInternal = HermesInternal;
-          const tmp11Result = _mod693;
-          error(
-            "Error while triggering instrumentation handler.\nType: " +
-              arg0 +
-              "\nName: " +
-              tmp11Result.getFunctionName(nextResult) +
-              "\nError:",
-            tmp10,
-          );
+          debug.error(tmp2 + tmp6 + tmp3 + _mod693.getFunctionName(tmp7) + tmp4, tmp17);
+          const tmp18Result = _mod693;
         }
       }
     }
+    const nextResult = iter.next();
   }
 }
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_6 = {};
 let closure_7 = {};
 
 export const addClsInstrumentationHandler = function addClsInstrumentationHandler(fn, arg1) {
-  let onCLSResult;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -48,24 +39,22 @@ export const addClsInstrumentationHandler = function addClsInstrumentationHandle
   if (flag === undefined) {
     flag = false;
   }
-  const tmp3 = closure_6.cls || [];
-  closure_6.cls = tmp3;
+  closure_6.cls = closure_6.cls || [];
   let cls = closure_6.cls;
   cls.push(fn);
   if (!closure_7.cls) {
-    let obj = cls(912);
+    const obj = cls(912);
     tmp5.cls = true;
-    onCLSResult = obj.onCLS(
+    const onCLSResult = cls(912).onCLS(
       (metric) => {
-        const obj = { metric };
-        triggerHandlers("cls", obj);
-        let closure_2 = metric;
+        triggerHandlers("cls", { metric });
+        closure_2 = metric;
       },
       { reportAllChanges: true },
     );
   }
-  if (metric) {
-    const obj2 = { metric };
+  if (closure_2) {
+    const obj2 = { metric: tmp };
     fn(obj2);
   }
   let tmp10;
@@ -74,32 +63,30 @@ export const addClsInstrumentationHandler = function addClsInstrumentationHandle
   }
   cls = "cls";
   dependencyMap = fn;
-  metric = tmp10;
+  closure_2 = tmp10;
   return () => {
-    if (metric) {
+    if (closure_1_2) {
       tmp();
     }
     if (closure_6[ttfb]) {
-      const index = arr.indexOf(fn);
+      const index = arr.indexOf(closure_1);
       if (-1 !== index) {
-        closure_6[ttfb].splice(index, 1);
+        arr.splice(index, 1);
       }
     }
   };
 };
 export const addInpInstrumentationHandler = function addInpInstrumentationHandler(_onInp) {
-  const tmp3 = closure_6.inp || [];
-  closure_6.inp = tmp3;
+  closure_6.inp = closure_6.inp || [];
   let inp = closure_6.inp;
   inp.push(_onInp);
   if (!closure_7.inp) {
-    let obj = inp(931);
-    obj.onINP((metric) => {
-      const obj = { metric };
-      triggerHandlers("inp", obj);
-      let closure_1_5 = metric;
+    inp(931).onINP((metric) => {
+      triggerHandlers("inp", { metric });
+      closure_5 = metric;
     });
     tmp5.inp = true;
+    const obj = inp(931);
   }
   if (metric3) {
     const obj2 = { metric: metric3 };
@@ -108,19 +95,18 @@ export const addInpInstrumentationHandler = function addInpInstrumentationHandle
   inp = "inp";
   dependencyMap = _onInp;
   return () => {
-    if (metric) {
+    if (closure_1_2) {
       tmp();
     }
     if (closure_6[ttfb]) {
-      const index = arr.indexOf(fn);
+      const index = arr.indexOf(closure_1);
       if (-1 !== index) {
-        closure_6[ttfb].splice(index, 1);
+        arr.splice(index, 1);
       }
     }
   };
 };
 export const addLcpInstrumentationHandler = function addLcpInstrumentationHandler(fn, arg1) {
-  let onLCPResult;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -128,18 +114,16 @@ export const addLcpInstrumentationHandler = function addLcpInstrumentationHandle
   if (flag === undefined) {
     flag = false;
   }
-  const tmp3 = closure_6.lcp || [];
-  closure_6.lcp = tmp3;
+  closure_6.lcp = closure_6.lcp || [];
   let lcp = closure_6.lcp;
   lcp.push(fn);
   if (!closure_7.lcp) {
-    let obj = lcp(927);
+    const obj = lcp(927);
     tmp5.lcp = true;
-    onLCPResult = obj.onLCP(
+    const onLCPResult = lcp(927).onLCP(
       (metric) => {
-        const obj = { metric };
-        triggerHandlers("lcp", obj);
-        let closure_1_3 = metric;
+        triggerHandlers("lcp", { metric });
+        closure_3 = metric;
       },
       { reportAllChanges: true },
     );
@@ -154,15 +138,15 @@ export const addLcpInstrumentationHandler = function addLcpInstrumentationHandle
   }
   lcp = "lcp";
   dependencyMap = fn;
-  let closure_2 = tmp10;
+  closure_2 = tmp10;
   return () => {
-    if (metric) {
+    if (closure_1_2) {
       tmp();
     }
     if (closure_6[ttfb]) {
-      const index = arr.indexOf(fn);
+      const index = arr.indexOf(closure_1);
       if (-1 !== index) {
-        closure_6[ttfb].splice(index, 1);
+        arr.splice(index, 1);
       }
     }
   };
@@ -171,54 +155,49 @@ export const addPerformanceInstrumentationHandler = function addPerformanceInstr
   event,
   handleEntries,
 ) {
-  const tmp2 = closure_6[event] || [];
-  closure_6[event] = tmp2;
-  const arr = closure_6[event];
-  arr.push(handleEntries);
+  closure_6[event] = closure_6[event] || [];
+  closure_6[event].push(handleEntries);
   if (!closure_7[event]) {
     _require = event;
-    let obj = {};
+    const obj = {};
     if ("event" === event) {
       obj.durationThreshold = 0;
     }
-    const obj2 = require("observe");
-    obj2.observe(
+    require("observe").observe(
       event,
       (entries) => {
-        const obj = { entries };
-        triggerHandlers(event, obj);
+        triggerHandlers(closure_0, { entries });
       },
       obj,
     );
     tmp4[event] = true;
+    const obj2 = require("observe");
   }
-  _require = event;
-  let closure_1 = handleEntries;
+  closure_129_0 = event;
+  closure_129_1 = handleEntries;
   return () => {
-    if (metric) {
+    if (closure_1_2) {
       tmp();
     }
     if (closure_6[ttfb]) {
-      const index = arr.indexOf(fn);
+      const index = arr.indexOf(closure_1);
       if (-1 !== index) {
-        closure_6[ttfb].splice(index, 1);
+        arr.splice(index, 1);
       }
     }
   };
 };
 export const addTtfbInstrumentationHandler = function addTtfbInstrumentationHandler(fn) {
-  const tmp3 = closure_6.ttfb || [];
-  closure_6.ttfb = tmp3;
+  closure_6.ttfb = closure_6.ttfb || [];
   let ttfb = closure_6.ttfb;
-  const arr = ttfb.push(fn);
+  ttfb.push(fn);
   if (!closure_7.ttfb) {
-    let obj = ttfb(930);
-    obj.onTTFB((metric) => {
-      const obj = { metric };
-      triggerHandlers("ttfb", obj);
-      let closure_1_4 = metric;
+    ttfb(930).onTTFB((metric) => {
+      triggerHandlers("ttfb", { metric });
+      closure_4 = metric;
     });
     tmp5.ttfb = true;
+    const obj = ttfb(930);
   }
   if (metric2) {
     const obj2 = { metric: metric2 };
@@ -227,13 +206,13 @@ export const addTtfbInstrumentationHandler = function addTtfbInstrumentationHand
   ttfb = "ttfb";
   dependencyMap = fn;
   return () => {
-    if (metric) {
+    if (closure_1_2) {
       tmp();
     }
     if (closure_6[ttfb]) {
-      const index = arr.indexOf(fn);
+      const index = arr.indexOf(closure_1);
       if (-1 !== index) {
-        closure_6[ttfb].splice(index, 1);
+        arr.splice(index, 1);
       }
     }
   };

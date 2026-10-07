@@ -1,30 +1,33 @@
 // _runtime/01039_AsyncExpiringMap.js
 import _createClassDefault from "metro/00042__createClass.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import _slicedToArray_mod from "metro/00032__.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 
+let _slicedToArray = _slicedToArray_mod;
 class AsyncExpiringMap {
-  constructor(arg0) {
-    let obj = arg0;
-    if (arg0 === undefined) {
+  constructor() {
+    obj = global;
+    if (global === undefined) {
       obj = {};
     }
-    let num = obj.cleanupInterval;
+    num = obj.cleanupInterval;
     if (num === undefined) {
       num = 5000;
     }
-    let num2 = obj.ttl;
+    num2 = obj.ttl;
     if (num2 === undefined) {
       num2 = 2000;
     }
-    _classCallCheck(this, AsyncExpiringMap);
+    tmp = closure_1(this, AsyncExpiringMap);
     this._ttl = num2;
-    this._map = new Map();
+    map = new Map();
+    this._map = map;
     this._cleanupIntervalMs = num;
-    new Map();
-    this.startCleanup();
+    startCleanupResult = this.startCleanup();
+    return;
   }
 }
+_slicedToArray = AsyncExpiringMap;
 const entry = {
   key: "set",
   value: function set(arg0, value) {
@@ -53,8 +56,7 @@ const entry = {
       }
     }
     const _map = self._map;
-    const obj = { value, expiresAt: Date.now() + self._ttl, promise: null };
-    const result1 = _map.set(arg0, obj);
+    const result1 = _map.set(arg0, { value, expiresAt: Date.now() + self._ttl, promise: null });
   },
 };
 const items = [
@@ -63,7 +65,7 @@ const items = [
     key: "pop",
     value: function pop(arg0) {
       const _map = this._map;
-      const value = this.get(arg0);
+      value = this.get(arg0);
       _map.delete(arg0);
       return value;
     },
@@ -74,7 +76,6 @@ const items = [
       const _map = this._map;
       const iter = _map.get(arg0);
       if (iter) {
-        let value;
         if (iter.promise) {
           value = iter.promise;
         } else {
@@ -97,7 +98,7 @@ const items = [
     key: "has",
     value: function has(arg0) {
       const _map = this._map;
-      const value = _map.get(arg0);
+      value = _map.get(arg0);
       let tmp2 = value;
       if (tmp2) {
         let promise = value.promise;
@@ -124,7 +125,7 @@ const items = [
     key: "ttl",
     value: function ttl(arg0) {
       const _map = this._map;
-      const value = _map.get(arg0);
+      value = _map.get(arg0);
       let expiresAt;
       if (null != value) {
         expiresAt = value.expiresAt;
@@ -143,17 +144,17 @@ const items = [
   {
     key: "cleanup",
     value: function cleanup() {
-      let tmp7;
-      let tmp8;
       const self = this;
       const _map = this._map;
       const timestamp = Date.now();
       const entries = _map.entries();
-      const tmp3 = entries[Symbol.iterator]();
       while (tmp3 !== undefined) {
         let tmp6 = _slicedToArray(tmp4, 2);
         [tmp7, tmp8] = tmp6;
-        let expiresAt = tmp8.expiresAt && tmp9.expiresAt <= timestamp;
+        let expiresAt = tmp8.expiresAt;
+        if (expiresAt) {
+          expiresAt = tmp9.expiresAt <= timestamp;
+        }
         if (expiresAt) {
           let _map2 = self._map;
           let deleteResult = _map2.delete(tmp7);
@@ -163,6 +164,7 @@ const items = [
       if (!self._map.size) {
         self.stopCleanup();
       }
+      tmp3 = entries[Symbol.iterator]();
     },
   },
   {
@@ -194,6 +196,5 @@ const items = [
     },
   },
 ];
-const AsyncExpiringMap_export = _createClassDefault(AsyncExpiringMap, items);
 
-export { AsyncExpiringMap_export as AsyncExpiringMap };
+export const AsyncExpiringMap = _createClassDefault(AsyncExpiringMap, items);

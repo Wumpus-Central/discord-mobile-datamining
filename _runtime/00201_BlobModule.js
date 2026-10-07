@@ -1,10 +1,10 @@
 // _runtime/00201_BlobModule.js
-import _mod202 from "metro/00202__.js";
+import _modDef202 from "metro/00202__.js";
 
-const _modDef202 = _mod202;
+const require = globalThis.__r;
 
-for (const key10016 in _mod202) {
-  exports[key10016] = _mod202[key10016];
+for (const key10016 in require("metro/00202__.js")) {
+  arg5[key10016] = require("metro/00202__.js")[key10016];
   continue;
 }
 

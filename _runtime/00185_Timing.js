@@ -1,10 +1,10 @@
 // _runtime/00185_Timing.js
-import _mod186 from "metro/00186__.js";
+import _modDef186 from "metro/00186__.js";
 
-const _modDef186 = _mod186;
+const require = globalThis.__r;
 
-for (const key10016 in _mod186) {
-  exports[key10016] = _mod186[key10016];
+for (const key10016 in require("metro/00186__.js")) {
+  arg5[key10016] = require("metro/00186__.js")[key10016];
   continue;
 }
 

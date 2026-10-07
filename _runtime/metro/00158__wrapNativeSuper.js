@@ -2,46 +2,38 @@
 import _setPrototypeOf from "../00099__setPrototypeOf.js";
 import _isNativeFunction from "../00159__isNativeFunction.js";
 
-let map;
-
 function _wrapNativeSuper(fn) {
-  map = undefined;
+  let map;
   if (typeof Map === "function") {
     const _Map = Map;
-    let self = this;
-    let self2 = this;
     map = new Map();
   }
   _wrapNativeSuper = function _wrapNativeSuper(fn) {
-    let obj2;
-    let closure_0 = fn;
     if (null !== fn) {
       if (_isNativeFunction(fn)) {
         if (typeof fn !== "function") {
           const _TypeError = TypeError;
-          const self = this;
-          const self2 = this;
           const typeError = new TypeError("Super expression must either be null or a function");
           throw typeError;
         } else {
           class Wrapper {
             constructor() {
-              tmp = closure_2_0(closure_2_2[1]);
-              return tmp(closure_0, arguments, closure_2_0(closure_2_2[2])(this).constructor);
+              tmp = closure_0(closure_2_2[1]);
+              return tmp(closure_0, arguments, closure_0(closure_2_2[2])(this).constructor);
             }
           }
           if (undefined !== map) {
             class Wrapper {
               constructor() {
-                tmp = closure_2_0(closure_2_2[1]);
-                return tmp(closure_0, arguments, closure_2_0(closure_2_2[2])(this).constructor);
+                tmp = closure_0(closure_2_2[1]);
+                return tmp(closure_0, arguments, closure_0(closure_2_2[2])(this).constructor);
               }
             }
           }
-          let tmp = globalThis;
           const _Object = Object;
-          const obj = { constructor: obj2 };
-          obj2 = { value: Wrapper, enumerable: false, writable: true, configurable: true };
+          const obj = { constructor: null };
+          const obj2 = { value: Wrapper, enumerable: false, writable: true, configurable: true };
+          obj.constructor = obj2;
           Wrapper.prototype = Object.create(fn.prototype, obj);
           return _setPrototypeOf(Wrapper, fn);
         }

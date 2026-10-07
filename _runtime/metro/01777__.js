@@ -1,19 +1,23 @@
 // _runtime/metro/01777__.js
-import BaseAnimationBuilder from "../01713_BaseAnimationBuilder.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-let size;
-
+const SequencedTransition = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -25,105 +29,102 @@ let closure_6 = {
 };
 class SequencedTransition {
   constructor() {
-    let constructResult;
-    const self = this;
-    const items = [...arguments];
-    let closure_0;
-    _classCallCheck(this, SequencedTransition);
-    const items1 = [...items];
-    let obj = _getPrototypeOf(SequencedTransition);
-    if (_isNativeReflectConstruct()) {
-      const tmp5 = globalThis;
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, SequencedTransition);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(SequencedTransition);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    let tmp3Result = c3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.reversed = false;
     tmp3Result.build = () => {
-      const delayFunction = closure_0.getDelayFunction();
-      const callbackV = closure_0.callbackV;
-      const delay = closure_0.getDelay();
-      let num = closure_0.durationV;
+      delayFunction = delayFunction.getDelayFunction();
+      const callbackV = delayFunction.callbackV;
+      const delay = delayFunction.getDelay();
+      let num = delayFunction.durationV;
       if (num == null) {
         num = 500;
       }
-      let obj = { duration: num / 2 };
-      const reversed = closure_0.reversed;
+      const config = { duration: num / 2 };
+      const reversed = delayFunction.reversed;
       const fn = function e(originX) {
-        let tmp3Result;
-        let tmp3Result12;
-        let tmp3Result15;
-        let tmp3Result18;
-        let withSequence2;
-        let withSequence3;
-        let withSequence4;
-        let withTimingResult;
-        let withTimingResult1;
-        let withTimingResult2;
-        let withTimingResult3;
-        obj = {
+        const obj = {
           initialValues: {
             originX: originX.currentOriginX,
             originY: originX.currentOriginY,
             width: originX.currentWidth,
             height: originX.currentHeight,
           },
-          animations: size,
-          callback: callbackV,
+          animations: null,
+          callback: null,
         };
-        const withSequence = closure_2_0(closure_2_1[5]).withSequence;
-        closure_2_0(closure_2_1[5]);
-        size = {
-          originX: delayFunction(
-            delay,
-            withSequence(withTimingResult, tmp3Result.withTiming(originX.targetOriginX, obj)),
-          ),
-          originY: delayFunction(
-            delay,
-            withSequence2(withTimingResult1, tmp3Result12.withTiming(originX.targetOriginY, obj)),
-          ),
-          width: delayFunction(
-            delay,
-            withSequence3(withTimingResult2, tmp3Result15.withTiming(originX.targetWidth, obj)),
-          ),
-          height: delayFunction(
-            delay,
-            withSequence4(withTimingResult3, tmp3Result18.withTiming(originX.targetHeight, obj)),
-          ),
-        };
-        const obj2 = closure_2_0(closure_2_1[5]);
-        withTimingResult = obj2.withTiming(reversed ? originX.currentOriginX : originX.targetOriginX, obj);
-        tmp3Result = closure_2_0(closure_2_1[5]);
-        withSequence2 = closure_2_0(closure_2_1[5]).withSequence;
-        closure_2_0(closure_2_1[5]);
-        const tmp3Result11 = closure_2_0(closure_2_1[5]);
-        withTimingResult1 = tmp3Result11.withTiming(reversed ? originX.targetOriginY : originX.currentOriginY, obj);
-        tmp3Result12 = closure_2_0(closure_2_1[5]);
-        withSequence3 = closure_2_0(closure_2_1[5]).withSequence;
-        closure_2_0(closure_2_1[5]);
-        const tmp3Result14 = closure_2_0(closure_2_1[5]);
-        withTimingResult2 = tmp3Result14.withTiming(reversed ? originX.currentWidth : originX.targetWidth, obj);
-        tmp3Result15 = closure_2_0(closure_2_1[5]);
-        withSequence4 = closure_2_0(closure_2_1[5]).withSequence;
-        closure_2_0(closure_2_1[5]);
-        const tmp3Result17 = closure_2_0(closure_2_1[5]);
-        withTimingResult3 = tmp3Result17.withTiming(reversed ? originX.targetHeight : originX.currentHeight, obj);
-        tmp3Result18 = closure_2_0(closure_2_1[5]);
+        const obj2 = delayFunction(1715);
+        const size = { originX: null, originY: null, width: null, height: null };
+        const obj3 = delayFunction(1715);
+        const withTimingResult = delayFunction(1715).withTiming(
+          reversed ? originX.currentOriginX : originX.targetOriginX,
+          obj,
+        );
+        size.originX = delayFunction(
+          delay,
+          obj2.withSequence(withTimingResult, delayFunction(1715).withTiming(originX.targetOriginX, obj)),
+        );
+        const tmp3Result = delayFunction(1715);
+        const tmp3Result10 = delayFunction(1715);
+        const tmp3Result11 = delayFunction(1715);
+        const withTimingResult1 = delayFunction(1715).withTiming(
+          reversed ? originX.targetOriginY : originX.currentOriginY,
+          obj,
+        );
+        size.originY = delayFunction(
+          delay,
+          tmp3Result10.withSequence(withTimingResult1, delayFunction(1715).withTiming(originX.targetOriginY, obj)),
+        );
+        const tmp3Result12 = delayFunction(1715);
+        const tmp3Result13 = delayFunction(1715);
+        const tmp3Result14 = delayFunction(1715);
+        const withTimingResult2 = delayFunction(1715).withTiming(
+          reversed ? originX.currentWidth : originX.targetWidth,
+          obj,
+        );
+        size.width = delayFunction(
+          delay,
+          tmp3Result13.withSequence(withTimingResult2, delayFunction(1715).withTiming(originX.targetWidth, obj)),
+        );
+        const tmp3Result15 = delayFunction(1715);
+        const tmp3Result16 = delayFunction(1715);
+        const tmp3Result17 = delayFunction(1715);
+        const withTimingResult3 = delayFunction(1715).withTiming(
+          reversed ? originX.targetHeight : originX.currentHeight,
+          obj,
+        );
+        size.height = delayFunction(
+          delay,
+          tmp3Result16.withSequence(withTimingResult3, delayFunction(1715).withTiming(originX.targetHeight, obj)),
+        );
+        obj.animations = size;
+        obj.callback = callbackV;
         return obj;
       };
-      let obj2 = {
+      fn.__closure = {
         delayFunction,
         delay,
-        withSequence: SequencedTransition(closure_2_1[5]).withSequence,
-        withTiming: SequencedTransition(closure_2_1[5]).withTiming,
+        withSequence: SequencedTransition(1715).withSequence,
+        withTiming: SequencedTransition(1715).withTiming,
         reverse: reversed,
-        config: obj,
+        config,
         callback: callbackV,
       };
-      fn.__closure = obj2;
       fn.__workletHash = 255577740024;
       fn.__initData = __initData;
       return fn;
@@ -131,7 +132,7 @@ class SequencedTransition {
     return tmp3Result;
   }
 }
-_inherits(SequencedTransition, BaseAnimationBuilder.BaseAnimationBuilder);
+_inherits(SequencedTransition, fn(1713).BaseAnimationBuilder);
 const entry = {
   key: "reverse",
   value: function reverse() {
@@ -143,8 +144,7 @@ let items = [entry];
 const entry1 = {
   key: "createInstance",
   value: function createInstance() {
-    const tmp = SequencedTransition();
-    return tmp;
+    return SequencedTransition();
   },
 };
 let items1 = [
@@ -159,6 +159,5 @@ let items1 = [
 ];
 const importDefaultResultResult = _createClass(SequencedTransition, items, items1);
 importDefaultResultResult.presetName = "SequencedTransition";
-const SequencedTransition_export = importDefaultResultResult;
 
-export { SequencedTransition_export as SequencedTransition };
+export const SequencedTransition = importDefaultResultResult;

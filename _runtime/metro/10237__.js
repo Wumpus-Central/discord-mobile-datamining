@@ -1,8 +1,8 @@
 // _runtime/metro/10237__.js
-import Meridiem from "../10179_Meridiem.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 
+const FRSpecificTimeExpressionParser = require;
 const regExp = new RegExp(
   "(^|\\s|T)(?:(?:[\u00E0a])\\s*)?(\\d{1,2})(?:h|:)?(?:(\\d{1,2})(?:m|:)?)?(?:(\\d{1,2})(?:s|:)?)?(?:\\s*(A\\.M\\.|P\\.M\\.|AM?|PM?))?(?=\\W|$)",
   "i",
@@ -13,7 +13,8 @@ const regExp1 = new RegExp(
 );
 class FRSpecificTimeExpressionParser {
   constructor() {
-    _classCallCheck(this, FRSpecificTimeExpressionParser);
+    tmp = c2(this, FRSpecificTimeExpressionParser);
+    return;
   }
 }
 const entry = {
@@ -28,9 +29,7 @@ const items = [
     key: "extract",
     value: function extract(createParsingResult, index) {
       const sum = index.index + index[1].length;
-      const str = index[0];
-      const parsingResult = createParsingResult.createParsingResult(sum, str.substring(index[1].length));
-      const str2 = parsingResult.text;
+      const parsingResult = createParsingResult.createParsingResult(sum, index[0].substring(index[1].length));
       if (str2.match(/^\d{4}$/)) {
         index.index = index.index + index[0].length;
         return null;
@@ -38,8 +37,7 @@ const items = [
         const start = parsingResult.start;
         parsingResult.start = FRSpecificTimeExpressionParser.extractTimeComponent(start.clone(), index);
         if (parsingResult.start) {
-          const str3 = createParsingResult.text;
-          const match = regExp1.exec(str3.substring(index.index + index[0].length));
+          const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
           if (match) {
             const start2 = parsingResult.start;
             parsingResult.end = FRSpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
@@ -53,6 +51,7 @@ const items = [
           return null;
         }
       }
+      str2 = parsingResult.text;
     },
   },
 ];
@@ -69,47 +68,44 @@ const entry1 = {
       if (parsed <= 24) {
         let PM1 = null;
         if (parsed >= 12) {
-          PM1 = Meridiem.Meridiem.PM;
+          PM1 = FRSpecificTimeExpressionParser(10179).Meridiem.PM;
         }
-        let tmp5 = PM1;
-        let tmp6 = parsed;
+        let PM = PM1;
+        let tmp5 = parsed;
         if (null != arg1[5]) {
           if (parsed > 12) {
             return null;
           } else {
-            const str8 = arg1[5][0];
-            const formatted = str8.toLowerCase();
-            let tmp9 = parsed;
+            const formatted = arg1[5][0].toLowerCase();
+            let tmp8 = parsed;
             if ("a" == formatted) {
               let num2 = parsed;
-              const AM = Meridiem.Meridiem.AM;
               if (12 == parsed) {
                 num2 = 0;
               }
-              tmp9 = num2;
-              PM1 = AM;
+              tmp8 = num2;
+              PM1 = FRSpecificTimeExpressionParser(10179).Meridiem.AM;
             }
-            tmp5 = PM1;
-            tmp6 = tmp9;
+            PM = PM1;
+            tmp5 = tmp8;
             if ("p" == formatted) {
-              let sum = tmp9;
-              const PM = Meridiem.Meridiem.PM;
-              if (12 != tmp9) {
-                sum = tmp9 + 12;
+              let sum = tmp8;
+              if (12 != tmp8) {
+                sum = tmp8 + 12;
               }
-              tmp6 = sum;
-              tmp5 = PM;
+              tmp5 = sum;
+              PM = FRSpecificTimeExpressionParser(10179).Meridiem.PM;
             }
           }
         }
-        assign.assign("hour", tmp6);
+        assign.assign("hour", tmp5);
         assign.assign("minute", num);
-        if (null !== tmp5) {
-          assign.assign("meridiem", tmp5);
-        } else if (tmp6 < 12) {
-          assign.imply("meridiem", Meridiem.Meridiem.AM);
+        if (null !== PM) {
+          assign.assign("meridiem", PM);
+        } else if (tmp5 < 12) {
+          assign.imply("meridiem", FRSpecificTimeExpressionParser(10179).Meridiem.AM);
         } else {
-          assign.imply("meridiem", Meridiem.Meridiem.PM);
+          assign.imply("meridiem", FRSpecificTimeExpressionParser(10179).Meridiem.PM);
         }
         if (null != arg1[4]) {
           const _parseInt2 = parseInt;

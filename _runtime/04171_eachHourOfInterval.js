@@ -1,31 +1,28 @@
 // _runtime/04171_eachHourOfInterval.js
-import addHours_mod from "04118_addHours.js";
-import toDate_mod from "03964_toDate.js";
+import module_4118_mod from "metro/04118__.js";
+import _typeof_mod from "metro/03964__.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
 
-let tmp3;
-let tmp5;
-let tmp7;
-let addHours = addHours_mod;
-if (!addHours) {
-  let obj = { default: addHours };
-  tmp3 = obj;
+let module_4118 = module_4118_mod;
+if (!module_4118) {
+  let obj = { default: module_4118 };
+  let tmp3 = obj;
 } else {
-  tmp3 = addHours;
+  tmp3 = module_4118;
 }
-addHours = tmp3;
-let toDate = toDate_mod;
-if (!toDate) {
-  tmp5 = { default: toDate };
-  const obj2 = { default: toDate };
+module_4118 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
-  tmp5 = toDate;
+  tmp5 = _typeof;
 }
-toDate = tmp5;
+_typeof = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -38,14 +35,12 @@ export default function eachHourOfInterval(arg0, step) {
   if (!arg0) {
     obj = {};
   }
-  let defaultResult1 = toDate.default(obj.start);
-  const defaultResult2 = toDate.default(obj.end);
+  let defaultResult1 = _typeof.default(obj.start);
   const time = defaultResult1.getTime();
-  const time1 = defaultResult2.getTime();
+  const time1 = _typeof.default(obj.end).getTime();
   if (time <= time1) {
     defaultResult1.setMinutes(0, 0, 0);
     step = undefined;
-    const _Number = Number;
     if (null != step) {
       step = step.step;
     }
@@ -56,15 +51,15 @@ export default function eachHourOfInterval(arg0, step) {
         num2 = step;
       }
     }
-    const _NumberResult = _Number(num2);
-    if (_NumberResult >= 1) {
+    const NumberResult = Number(num2);
+    if (NumberResult >= 1) {
       const _isNaN = isNaN;
-      if (!isNaN(_NumberResult)) {
+      if (!isNaN(NumberResult)) {
         const items = [];
         if (defaultResult1.getTime() <= time1) {
           do {
-            let arr = items.push(toDate.default(defaultResult1));
-            let defaultResult3 = addHours.default(defaultResult1, _NumberResult);
+            let arr = items.push(_typeof.default(defaultResult1));
+            let defaultResult3 = module_4118.default(defaultResult1, NumberResult);
             defaultResult1 = defaultResult3;
             time2 = defaultResult3.getTime();
           } while (time2 <= time1);
@@ -73,15 +68,13 @@ export default function eachHourOfInterval(arg0, step) {
       }
     }
     const _RangeError2 = RangeError;
-    const self3 = this;
-    const self4 = this;
     const rangeError = new RangeError("`options.step` must be a number greater than 1");
     throw rangeError;
   } else {
     const _RangeError = RangeError;
-    const self = this;
-    const self2 = this;
     const rangeError1 = new RangeError("Invalid interval");
     throw rangeError1;
   }
-}
+  const defaultResult2 = _typeof.default(obj.end);
+};
+export default exports.default;

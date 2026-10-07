@@ -1,16 +1,11 @@
 // _runtime/metro/01545__.js
 function getStateFromRouteParams(params) {
-  let items;
-  let path;
-  let tmp4;
   if (null != params) {
     if (typeof params === "object") {
-      let state;
       if ("state" in params) {
         if (params.state) {
           if (typeof params.state === "object") {
             if ("routes" in params.state) {
-              let tmp = globalThis;
               const _Array = Array;
               if (Array.isArray(params.state.routes)) {
                 const routes = params.state.routes;
@@ -40,7 +35,7 @@ function getStateFromRouteParams(params) {
       if ("screen" in params) {
         if (params.screen) {
           if (typeof params.screen === "string") {
-            const obj2 = { name: params.screen, params, path, state: tmp4 };
+            const obj2 = { name: params.screen, params: null, path: null, state: null };
             params = undefined;
             if ("params" in params) {
               if (typeof params.params === "object") {
@@ -49,13 +44,15 @@ function getStateFromRouteParams(params) {
                 }
               }
             }
-            path = undefined;
+            obj2.params = params;
+            let path;
             if ("path" in params) {
               if (typeof params.path === "string") {
                 path = params.path;
               }
             }
-            tmp4 = undefined;
+            obj2.path = path;
+            let tmp4;
             if ("params" in params) {
               if (typeof params.params === "object") {
                 if (null != params.params) {
@@ -63,8 +60,10 @@ function getStateFromRouteParams(params) {
                 }
               }
             }
-            const obj = { routes: items };
-            items = [obj2];
+            const obj = { routes: null };
+            obj2.state = tmp4;
+            const items = [obj2];
+            obj.routes = items;
             state = obj;
           }
         }

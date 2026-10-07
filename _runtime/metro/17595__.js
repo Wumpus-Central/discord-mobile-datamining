@@ -1,21 +1,22 @@
 // _runtime/metro/17595__.js
 
 export default (promise, arg1) => {
-  const fn = arg1 || (() => {});
+  let fn = arg1;
+  if (!arg1) {
+    fn = () => {};
+  }
   return promise.then(
     (result) => {
-      let closure_0 = result;
-      const promise = new Promise((fn) => {
-        fn(fn());
-      });
-      return promise.then(() => fn);
+      closure_0 = result;
+      return new Promise((fn) => {
+        fn(closure_0());
+      }).then(() => closure_0);
     },
     (arg0) => {
-      let closure_0 = arg0;
-      const promise = new Promise((fn) => {
+      closure_0 = arg0;
+      return new Promise((fn) => {
         fn(closure_0());
-      });
-      return promise.then(() => {
+      }).then(() => {
         throw closure_0;
       });
     },

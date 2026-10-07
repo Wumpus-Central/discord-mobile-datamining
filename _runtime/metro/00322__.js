@@ -1,13 +1,9 @@
 // _runtime/metro/00322__.js
-import Fragment from "../react/00021_Fragment.js";
-import "react";
-import react from "../00019_react.js";
+import "module_19";
 
-let _window;
-let createContext;
-let map;
-({ useContext: _window, useMemo: map, createContext } = react);
-const jsx = Fragment.jsx;
+const noop = fn(19);
+({ useContext: closure_0, useMemo: closure_1, createContext } = noop);
+const jsx = fn(21).jsx;
 const context = createContext(null);
 
 export const VirtualizedListContext = context;
@@ -15,7 +11,7 @@ export const VirtualizedListContextResetter = function VirtualizedListContextRes
   return <context.Provider value={null}>{children.children}</context.Provider>;
 };
 export const VirtualizedListContextProvider = function VirtualizedListContextProvider(children) {
-  const value = children.value;
+  value = children.value;
   const items = [, , , ,];
   ({
     getScrollMetrics: arr[0],
@@ -26,7 +22,7 @@ export const VirtualizedListContextProvider = function VirtualizedListContextPro
   } = value);
   return (
     <context.Provider
-      value={map(
+      value={framebus(
         () => ({
           cellKey: null,
           getScrollMetrics: value.getScrollMetrics,
@@ -44,23 +40,23 @@ export const VirtualizedListContextProvider = function VirtualizedListContextPro
 };
 export const VirtualizedListCellContextProvider = function VirtualizedListCellContextProvider(cellKey) {
   cellKey = cellKey.cellKey;
-  const children = cellKey.children;
   const tmp = React(context);
-  map = tmp;
+  closure_1 = tmp;
   const items = [tmp, cellKey];
   return (
     <context.Provider
-      value={map(() => {
+      value={framebus(() => {
         let tmp2 = null;
         if (null != closure_1) {
-          const obj = { cellKey };
+          const obj = {};
           const merged = Object.assign(closure_1);
+          obj.cellKey = cellKey;
           tmp2 = obj;
         }
         return tmp2;
       }, items)}
     >
-      {children}
+      {cellKey.children}
     </context.Provider>
   );
 };

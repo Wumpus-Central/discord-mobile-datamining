@@ -9,9 +9,15 @@ if (module_14087) {
 }
 if (!module_14087) {
   module_14087 = (arg0) => {
-    let closure_0 = arg0;
-    return function () {
-      return call(...arguments);
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
     };
   };
 }

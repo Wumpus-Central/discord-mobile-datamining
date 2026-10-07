@@ -2789,7 +2789,7 @@ const obj = {
   game_die: ["spil", "terning", "terningspil", "underholdning"],
   jigsaw: ["brik", "brik til puslespil", "puslespil", "sammenh\u00E6ngende", "spor"],
   teddy_bear: ["bamse", "bj\u00F8rn", "leget\u00F8j", "plys", "t\u00F8jdyr"],
-  "pi\u00f1ata": ["cinco de mayo", "fastelavn", "fejring", "fest", "pi\u00F1ata"],
+  piñata: ["cinco de mayo", "fastelavn", "fejring", "fest", "pi\u00F1ata"],
   mirror_ball: ["dans", "disko", "diskokugle", "fest", "glitter", "kugle", "spejl", "spejlkugle"],
   nesting_dolls: ["babusjka", "dukke", "matrjosjka", "russisk", "russiske dukker"],
   spades: ["es", "kort", "spar", "spil"],

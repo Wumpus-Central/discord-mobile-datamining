@@ -1,8 +1,7 @@
 // _runtime/metro/00768__.js
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const addUserAgentToTransportHeaders = function addUserAgentToTransportHeaders(_metadata) {
-  let obj3;
   _metadata = _metadata._metadata;
   let sdk;
   if (_metadata != null) {
@@ -31,14 +30,13 @@ export const addUserAgentToTransportHeaders = function addUserAgentToTransportHe
       combined = "" + name1 + "/" + version1;
     }
   }
-  const obj = { headers: obj3 };
+  const obj = {};
   const merged = Object.assign(_metadata.transportOptions);
   let tmp9 = combined;
-  if (tmp9) {
-    tmp9 = { "user-agent": combined };
+  if (combined) {
     const obj2 = { "user-agent": combined };
+    tmp9 = obj2;
   }
-  obj3 = {};
   const merged1 = Object.assign(tmp9);
   const transportOptions = _metadata.transportOptions;
   let headers;
@@ -46,5 +44,6 @@ export const addUserAgentToTransportHeaders = function addUserAgentToTransportHe
     headers = transportOptions.headers;
   }
   const merged2 = Object.assign(headers);
+  obj.headers = {};
   _metadata.transportOptions = obj;
 };

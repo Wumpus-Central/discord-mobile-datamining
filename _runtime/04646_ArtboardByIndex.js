@@ -1,14 +1,13 @@
 // _runtime/04646_ArtboardByIndex.js
 
-export const ArtboardByIndex = function (index) {
+export const ArtboardByIndex = (index) => {
   if (Number.isInteger(index)) {
-    return { type: "index", index };
+    const obj = { type: "index", index };
+    return obj;
   } else {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error("Artboard index must be an integer");
     throw error;
   }
 };
-export const ArtboardByName = (artboardName) => ({ type: "name", name: artboardName });
+export (artboardName) => ({ type: "name", name: artboardName })

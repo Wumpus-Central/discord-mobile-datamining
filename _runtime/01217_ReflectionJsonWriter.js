@@ -1,17 +1,18 @@
 // _runtime/01217_ReflectionJsonWriter.js
-import base64decode from "01200_base64decode.js";
-import PbULong2 from "01205_PbULong.js";
-import assert4 from "01207_assert.js";
-import ScalarType from "01211_ScalarType.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+const ReflectionJsonWriter = require;
 class ReflectionJsonWriter {
-  constructor(self) {
-    _classCallCheck(this, ReflectionJsonWriter);
-    const fields = self.fields ?? [];
+  constructor(arg0) {
+    tmp = closure_3(this, ReflectionJsonWriter);
+    fields = global.fields;
+    if (null === fields) {
+      fields = [];
+    }
     this.fields = fields;
+    return;
   }
 }
 const entry = {
@@ -26,19 +27,20 @@ const entry = {
       if (nextResult.oneof) {
         let tmp8 = arg0[tmp2.oneof];
         if (tmp8.oneofKind === tmp2.localName) {
-          let merged;
           if ("scalar" == tmp2.kind) {
             let _Object = Object;
             let _Object2 = Object;
-            merged = Object.assign(Object.assign({}, useProtoFieldName), { emitDefaultValues: true });
+            let merged = Object.assign(Object.assign({}, useProtoFieldName), { emitDefaultValues: true });
           } else {
             merged = useProtoFieldName;
           }
           let fieldResult = self.field(tmp2, tmp9[tmp2.localName], merged);
-          let tmp15 = fieldResult;
-          let obj2 = assert4;
+          let obj2 = ReflectionJsonWriter(1207);
           let assertResult = obj2.assert(undefined !== fieldResult);
-          obj[useProtoFieldName.useProtoFieldName ? tmp2.name : tmp2.jsonName] = tmp15;
+          let tmp19 = nextResult;
+          let tmp20 = useProtoFieldName.useProtoFieldName ? tmp19.name : tmp19.jsonName;
+          tmp19 = fieldResult;
+          obj[tmp20] = fieldResult;
         }
       } else {
         let fieldResult1 = self.field(tmp2, arg0[tmp2.localName], useProtoFieldName);
@@ -55,163 +57,154 @@ let items = [
   entry,
   {
     key: "field",
-    value: function field(kind, message, enumAsInteger) {
+    value: function field(kind, obj, enumAsInteger) {
       let length;
       let length2;
-      let scalarResult2;
-      let str6;
-      let tmp58;
       const self = this;
       if ("map" == kind.kind) {
-        let tmp51 = typeof message === "object";
-        const assert2 = assert4.assert;
-        assert4;
-        if (typeof message === "object") {
-          tmp51 = null !== message;
+        let tmp49 = typeof obj === "object";
+        if (typeof obj === "object") {
+          tmp49 = null !== obj;
         }
-        assert2(tmp51);
+        ReflectionJsonWriter(1207).assert(tmp49);
         const kind3 = kind.V.kind;
-        const obj3 = {};
+        const obj4 = {};
         if ("scalar" === kind3) {
           const _Object2 = Object;
-          const entries = Object.entries(message);
-          const tmp98 = entries[Symbol.iterator]();
-          while (tmp98 !== undefined) {
-            let tmp103 = _slicedToArray(tmp100, 2);
-            let str8 = tmp103[0];
+          const entries = Object.entries(obj);
+          const tmp95 = entries[Symbol.iterator]();
+          while (tmp95 !== undefined) {
+            let tmp100 = _slicedToArray(tmp97, 2);
+            let str8 = tmp100[0];
             let flag5 = false;
             let flag6 = true;
-            let scalarResult = self.scalar(kind.V.T, tmp103[1], kind.name, false, true);
-            let obj8 = assert4;
-            let assertResult = obj8.assert(undefined !== scalarResult);
-            obj3[str8.toString()] = scalarResult;
+            let scalarResult = self.scalar(kind.V.T, tmp100[1], kind.name, false, true);
+            let obj11 = ReflectionJsonWriter(1207);
+            let assertResult1 = obj11.assert(undefined !== scalarResult);
+            obj4[str8.toString()] = scalarResult;
             continue;
           }
         } else if ("message" === kind3) {
           const V = kind.V;
           const TResult = V.T();
           const _Object = Object;
-          const entries1 = Object.entries(message);
-          const tmp80 = entries1[Symbol.iterator]();
-          while (tmp80 !== undefined) {
-            let tmp85 = _slicedToArray(tmp82, 2);
-            let str7 = tmp85[0];
-            let messageResult = self.message(TResult, tmp85[1], kind.name, enumAsInteger);
-            let obj7 = assert4;
-            let assertResult1 = obj7.assert(undefined !== messageResult);
-            obj3[str7.toString()] = messageResult;
+          const entries1 = Object.entries(obj);
+          const tmp77 = entries1[Symbol.iterator]();
+          while (tmp77 !== undefined) {
+            let tmp82 = _slicedToArray(tmp79, 2);
+            let str7 = tmp82[0];
+            let messageResult = self.message(TResult, tmp82[1], kind.name, enumAsInteger);
+            let obj10 = ReflectionJsonWriter(1207);
+            let assertResult2 = obj10.assert(undefined !== messageResult);
+            obj4[str7.toString()] = messageResult;
             continue;
           }
         } else if ("enum" === kind3) {
           const V2 = kind.V;
           const TResult1 = V2.T();
           const _Object4 = Object;
-          const entries2 = Object.entries(message);
-          const tmp121 = entries2[Symbol.iterator]();
-          while (tmp121 !== undefined) {
-            let tmp57 = _slicedToArray(tmp54, 2);
-            [str6, tmp58] = tmp57;
-            let tmp64 = assert4;
-            let tmp65 = undefined === tmp58;
-            let assert3 = tmp64.assert;
-            if (!tmp65) {
-              tmp65 = typeof tmp58 === "number";
+          const entries2 = Object.entries(obj);
+          const tmp118 = entries2[Symbol.iterator]();
+          while (tmp118 !== undefined) {
+            let tmp55 = _slicedToArray(tmp52, 2);
+            [str6, tmp56] = tmp55;
+            let obj8 = ReflectionJsonWriter(1207);
+            let tmp62 = undefined === tmp56;
+            if (!tmp62) {
+              tmp62 = typeof tmp56 === "number";
             }
-            let assert3Result = assert3(tmp65);
+            let assertResult3 = obj8.assert(tmp62);
             let flag3 = false;
             let flag4 = true;
-            let enumResult = self.enum(TResult1, tmp58, kind.name, false, true, enumAsInteger.enumAsInteger);
-            let tmp61Result = assert4;
-            let assertResult2 = tmp61Result.assert(undefined !== enumResult);
-            obj3[str6.toString()] = enumResult;
+            let enumResult = self.enum(TResult1, tmp56, kind.name, false, true, enumAsInteger.enumAsInteger);
+            let tmp59Result = ReflectionJsonWriter(1207);
+            let assertResult4 = tmp59Result.assert(undefined !== enumResult);
+            obj4[str6.toString()] = enumResult;
             continue;
           }
         }
         let emitDefaultValues2 = enumAsInteger.emitDefaultValues;
         if (!emitDefaultValues2) {
           const _Object3 = Object;
-          emitDefaultValues2 = Object.keys(obj3).length > 0;
+          emitDefaultValues2 = Object.keys(obj4).length > 0;
         }
         if (emitDefaultValues2) {
-          scalarResult2 = obj3;
+          let scalarResult2 = obj4;
         }
+        const obj6 = ReflectionJsonWriter(1207);
       } else if (kind.repeat) {
+        obj = ReflectionJsonWriter(1207);
         const _Array = Array;
-        const obj = assert4;
-        obj.assert(Array.isArray(message));
+        obj.assert(Array.isArray(obj));
         const kind2 = kind.kind;
         const items = [];
         if ("scalar" === kind2) {
           let num4 = 0;
-          if (0 < message.length) {
+          if (0 < obj.length) {
             do {
               let flag2 = true;
-              let scalarResult1 = self.scalar(kind.T, message[num4], kind.name, kind.opt, true);
-              let obj4 = assert4;
-              let assertResult4 = obj4.assert(undefined !== scalarResult1);
+              let scalarResult1 = self.scalar(kind.T, obj[num4], kind.name, kind.opt, true);
+              let obj5 = ReflectionJsonWriter(1207);
+              let assertResult6 = obj5.assert(undefined !== scalarResult1);
               let arr = items.push(scalarResult1);
               num4 = num4 + 1;
-              length2 = message.length;
+              length2 = obj.length;
             } while (num4 < length2);
           }
         } else if ("enum" === kind2) {
-          let num2;
           const TResult2 = kind.T();
-          for (let num2 = 0; num2 < message.length; num2 = num2 + 1) {
-            let tmp27 = assert4;
-            let tmp28 = undefined === message[num2];
-            let assert = tmp27.assert;
-            if (!tmp28) {
-              tmp28 = typeof message[num2] === "number";
+          for (let num2 = 0; num2 < obj.length; num2 = num2 + 1) {
+            let obj3 = ReflectionJsonWriter(1207);
+            let tmp27 = undefined === obj[num2];
+            if (!tmp27) {
+              tmp27 = typeof obj[num2] === "number";
             }
-            let assertResult5 = assert(tmp28);
+            let assertResult7 = obj3.assert(tmp27);
             let flag = true;
-            let enumResult1 = self.enum(
-              TResult2,
-              message[num2],
-              kind.name,
-              kind.opt,
-              true,
-              enumAsInteger.enumAsInteger,
-            );
-            let tmp24Result = assert4;
-            let assertResult6 = tmp24Result.assert(undefined !== enumResult1);
+            let enumResult1 = self.enum(TResult2, obj[num2], kind.name, kind.opt, true, enumAsInteger.enumAsInteger);
+            let tmp24Result = ReflectionJsonWriter(1207);
+            let assertResult8 = tmp24Result.assert(undefined !== enumResult1);
             let arr4 = items.push(enumResult1);
           }
         } else if ("message" === kind2) {
           const TResult3 = kind.T();
           let num = 0;
-          if (0 < message.length) {
+          if (0 < obj.length) {
             do {
-              let messageResult1 = self.message(TResult3, message[num], kind.name, enumAsInteger);
-              let obj2 = assert4;
-              let assertResult7 = obj2.assert(undefined !== messageResult1);
+              let messageResult1 = self.message(TResult3, obj[num], kind.name, enumAsInteger);
+              let obj2 = ReflectionJsonWriter(1207);
+              let assertResult9 = obj2.assert(undefined !== messageResult1);
               let arr5 = items.push(messageResult1);
               num = num + 1;
-              length = message.length;
+              length = obj.length;
             } while (num < length);
           }
         }
-        const emitDefaultValues =
-          enumAsInteger.emitDefaultValues || items.length > 0 || enumAsInteger.emitDefaultValues;
+        let emitDefaultValues = enumAsInteger.emitDefaultValues;
+        if (!emitDefaultValues) {
+          emitDefaultValues = items.length > 0;
+        }
+        if (!emitDefaultValues) {
+          emitDefaultValues = enumAsInteger.emitDefaultValues;
+        }
         if (emitDefaultValues) {
           scalarResult2 = items;
         }
       } else {
         kind = kind.kind;
         if ("scalar" === kind) {
-          scalarResult2 = self.scalar(kind.T, message, kind.name, kind.opt, enumAsInteger.emitDefaultValues);
+          scalarResult2 = self.scalar(kind.T, obj, kind.name, kind.opt, enumAsInteger.emitDefaultValues);
         } else if ("enum" === kind) {
           scalarResult2 = self.enum(
             kind.T(),
-            message,
+            obj,
             kind.name,
             kind.opt,
             enumAsInteger.emitDefaultValues,
             enumAsInteger.enumAsInteger,
           );
         } else if ("message" === kind) {
-          scalarResult2 = self.message(kind.T(), message, kind.name, enumAsInteger);
+          scalarResult2 = self.message(kind.T(), obj, kind.name, enumAsInteger);
         }
       }
       return scalarResult2;
@@ -219,46 +212,44 @@ let items = [
   },
   {
     key: "enum",
-    value: function _enum(arg0, keys, arg2, opt, arg4, arg5) {
+    value: function _enum(arg0, key10009, arg2, arg3, arg4, arg5) {
+      let tmp = arg0;
       if ("google.protobuf.NullValue" == arg0[0]) {
         return null;
-      } else if (undefined !== keys) {
-        const obj2 = assert4;
-        obj2.assert(typeof keys === "number");
+      } else if (undefined !== key10009) {
+        ReflectionJsonWriter(1207).assert(typeof key10009 === "number");
+        const obj2 = ReflectionJsonWriter(1207);
         const _Number = Number;
-        const obj3 = assert4;
-        obj3.assert(Number.isInteger(keys));
-        let tmp11 = keys;
+        ReflectionJsonWriter(1207).assert(Number.isInteger(key10009));
+        let tmp12 = key10009;
         if (!arg5) {
-          tmp11 = keys;
-          const obj4 = arg0[1];
-          if (obj4.hasOwnProperty(keys)) {
-            let sum;
-            if (arg0[2]) {
-              sum = arg0[2] + arg0[1][keys];
+          tmp12 = key10009;
+          if (obj4.hasOwnProperty(key10009)) {
+            if (tmp[2]) {
+              tmp = tmp[1][key10009];
+              let sum = tmp[2] + tmp;
             } else {
-              sum = arg0[1][keys];
+              sum = tmp[1][key10009];
             }
-            tmp11 = sum;
           }
+          obj4 = tmp[1];
         }
-        return tmp11;
+        return tmp12;
       } else {
-        const obj = assert4;
-        obj.assert(opt);
+        ReflectionJsonWriter(1207).assert(arg3);
+        const obj = ReflectionJsonWriter(1207);
       }
     },
   },
   {
     key: "message",
     value: function message(internalJsonWrite, arg1, arg2, emitDefaultValues) {
-      let internalJsonWriteResult;
       if (undefined === arg1) {
         let tmp3;
         if (emitDefaultValues.emitDefaultValues) {
           tmp3 = null;
         }
-        internalJsonWriteResult = tmp3;
+        let internalJsonWriteResult = tmp3;
       } else {
         internalJsonWriteResult = internalJsonWrite.internalJsonWrite(arg1, emitDefaultValues);
       }
@@ -267,59 +258,58 @@ let items = [
   },
   {
     key: "scalar",
-    value: function scalar(arg0, NumberResult, arg2, opt, arg4) {
+    value: function scalar(arg0, NumberResult, arg2, arg3, arg4) {
       let tmp = NumberResult;
       if (undefined !== NumberResult) {
-        if (ScalarType.ScalarType.INT32 !== arg0) {
-          if (ScalarType.ScalarType.SFIXED32 !== arg0) {
-            if (ScalarType.ScalarType.SINT32 !== arg0) {
-              let tmp26;
-              if (ScalarType.ScalarType.FIXED32 !== arg0) {
-                if (ScalarType.ScalarType.UINT32 !== arg0) {
-                  let str6;
-                  if (ScalarType.ScalarType.FLOAT === arg0) {
-                    const tmp7Result = assert4;
-                    tmp7Result.assertFloat32(tmp);
-                  } else if (ScalarType.ScalarType.DOUBLE !== arg0) {
-                    if (ScalarType.ScalarType.STRING === arg0) {
-                      let tmp21;
+        let tmp5 = arg4;
+        if (!arg4) {
+          tmp5 = arg3;
+        }
+        if (ReflectionJsonWriter(1211).ScalarType.INT32 !== arg0) {
+          if (ReflectionJsonWriter(1211).ScalarType.SFIXED32 !== arg0) {
+            if (ReflectionJsonWriter(1211).ScalarType.SINT32 !== arg0) {
+              if (ReflectionJsonWriter(1211).ScalarType.FIXED32 !== arg0) {
+                if (ReflectionJsonWriter(1211).ScalarType.UINT32 !== arg0) {
+                  if (ReflectionJsonWriter(1211).ScalarType.FLOAT === arg0) {
+                    ReflectionJsonWriter(1207).assertFloat32(tmp);
+                    const tmp7Result = ReflectionJsonWriter(1207);
+                  } else if (ReflectionJsonWriter(1211).ScalarType.DOUBLE !== arg0) {
+                    if (ReflectionJsonWriter(1211).ScalarType.STRING === arg0) {
                       if ("" === tmp) {
                         let str5;
-                        if (arg4 || opt) {
+                        if (tmp5) {
                           str5 = "";
                         }
-                        tmp21 = str5;
+                        let tmp19 = str5;
                       } else {
-                        const tmp7Result10 = assert4;
-                        tmp7Result10.assert(typeof tmp === "string");
-                        tmp21 = tmp;
+                        ReflectionJsonWriter(1207).assert(typeof tmp === "string");
+                        tmp19 = tmp;
+                        const tmp7Result10 = ReflectionJsonWriter(1207);
                       }
-                      return tmp21;
-                    } else if (ScalarType.ScalarType.BOOL === arg0) {
-                      let tmp18;
+                      return tmp19;
+                    } else if (ReflectionJsonWriter(1211).ScalarType.BOOL === arg0) {
                       if (false === tmp) {
-                        tmp18 = !(arg4 || opt) && undefined;
+                        let tmp16 = !tmp5;
+                        const tmp17 = !tmp5;
                       } else {
-                        const tmp7Result11 = assert4;
-                        tmp7Result11.assert(typeof tmp === "boolean");
-                        tmp18 = tmp;
+                        ReflectionJsonWriter(1207).assert(typeof tmp === "boolean");
+                        tmp16 = tmp;
+                        const tmp7Result11 = ReflectionJsonWriter(1207);
                       }
-                      return tmp18;
+                      return tmp16;
                     } else {
-                      if (ScalarType.ScalarType.UINT64 !== arg0) {
-                        if (ScalarType.ScalarType.FIXED64 !== arg0) {
-                          if (ScalarType.ScalarType.INT64 !== arg0) {
-                            if (ScalarType.ScalarType.SFIXED64 !== arg0) {
-                              if (ScalarType.ScalarType.SINT64 !== arg0) {
-                                if (ScalarType.ScalarType.BYTES === arg0) {
-                                  let str;
+                      if (ReflectionJsonWriter(1211).ScalarType.UINT64 !== arg0) {
+                        if (ReflectionJsonWriter(1211).ScalarType.FIXED64 !== arg0) {
+                          if (ReflectionJsonWriter(1211).ScalarType.INT64 !== arg0) {
+                            if (ReflectionJsonWriter(1211).ScalarType.SFIXED64 !== arg0) {
+                              if (ReflectionJsonWriter(1211).ScalarType.SINT64 !== arg0) {
+                                if (ReflectionJsonWriter(1211).ScalarType.BYTES === arg0) {
                                   const _Uint8Array = Uint8Array;
-                                  const tmp7Result12 = assert4;
-                                  tmp7Result12.assert(tmp instanceof Uint8Array);
+                                  ReflectionJsonWriter(1207).assert(tmp instanceof Uint8Array);
                                   if (tmp.byteLength) {
-                                    const tmp7Result13 = base64decode;
-                                    str = tmp7Result13.base64encode(tmp);
-                                  } else if (arg4 || opt) {
+                                    let str = ReflectionJsonWriter(1200).base64encode(tmp);
+                                    const tmp7Result13 = ReflectionJsonWriter(1200);
+                                  } else if (tmp5) {
                                     str = "";
                                   }
                                   return str;
@@ -327,45 +317,40 @@ let items = [
                               }
                             }
                           }
-                          let tmp12 = typeof tmp === "number";
-                          const assert = assert4.assert;
-                          assert4;
+                          let tmp11 = typeof tmp === "number";
                           if (typeof tmp !== "number") {
-                            tmp12 = typeof tmp === "string";
+                            tmp11 = typeof tmp === "string";
                           }
-                          if (!tmp12) {
-                            tmp12 = typeof tmp === "bigint";
+                          if (!tmp11) {
+                            tmp11 = typeof tmp === "bigint";
                           }
-                          assert(tmp12);
-                          const PbLong = PbULong2.PbLong;
-                          const str2 = PbLong.from(tmp);
-                          return str2.toString();
+                          ReflectionJsonWriter(1207).assert(tmp11);
+                          const PbLong = ReflectionJsonWriter(1205).PbLong;
+                          const tmp7Result14 = ReflectionJsonWriter(1207);
+                          return PbLong.from(tmp).toString();
                         }
                       }
-                      let tmp15 = typeof tmp === "number";
-                      const assert2 = assert4.assert;
-                      assert4;
+                      let tmp13 = typeof tmp === "number";
                       if (typeof tmp !== "number") {
-                        tmp15 = typeof tmp === "string";
+                        tmp13 = typeof tmp === "string";
                       }
-                      if (!tmp15) {
-                        tmp15 = typeof tmp === "bigint";
+                      if (!tmp13) {
+                        tmp13 = typeof tmp === "bigint";
                       }
-                      assert2(tmp15);
-                      const PbULong = PbULong2.PbULong;
-                      const str3 = PbULong.from(tmp);
-                      return str3.toString();
+                      ReflectionJsonWriter(1207).assert(tmp13);
+                      const PbULong = ReflectionJsonWriter(1205).PbULong;
+                      const tmp7Result15 = ReflectionJsonWriter(1207);
+                      return PbULong.from(tmp).toString();
                     }
                   }
                   if (0 === tmp) {
                     let num2;
-                    if (arg4 || opt) {
+                    if (tmp5) {
                       num2 = 0;
                     }
-                    str6 = num2;
+                    let str6 = num2;
                   } else {
-                    const tmp7Result16 = assert4;
-                    tmp7Result16.assert(typeof tmp === "number");
+                    ReflectionJsonWriter(1207).assert(typeof tmp === "number");
                     const _Number = Number;
                     str6 = "NaN";
                     if (!Number.isNaN(tmp)) {
@@ -381,43 +366,43 @@ let items = [
                       }
                       str6 = str7;
                     }
+                    const tmp7Result16 = ReflectionJsonWriter(1207);
                   }
                   return str6;
                 }
               }
               if (0 === tmp) {
                 let num4;
-                if (arg4 || opt) {
+                if (tmp5) {
                   num4 = 0;
                 }
-                tmp26 = num4;
+                let tmp24 = num4;
               } else {
-                const tmp7Result17 = assert4;
-                tmp7Result17.assertUInt32(tmp);
-                tmp26 = tmp;
+                ReflectionJsonWriter(1207).assertUInt32(tmp);
+                tmp24 = tmp;
+                const tmp7Result17 = ReflectionJsonWriter(1207);
               }
-              return tmp26;
+              return tmp24;
             }
           }
         }
         if (0 === tmp) {
           let num6;
-          if (arg4 || opt) {
+          if (tmp5) {
             num6 = 0;
           }
           tmp = num6;
         } else {
-          const tmp7Result18 = assert4;
-          tmp7Result18.assertInt32(tmp);
+          ReflectionJsonWriter(1207).assertInt32(tmp);
+          const tmp7Result18 = ReflectionJsonWriter(1207);
         }
         return tmp;
       } else {
-        const obj = assert4;
-        obj.assert(opt);
+        ReflectionJsonWriter(1207).assert(arg3);
+        const obj = ReflectionJsonWriter(1207);
       }
     },
   },
 ];
-const ReflectionJsonWriter_export = _createClass(ReflectionJsonWriter, items);
 
-export { ReflectionJsonWriter_export as ReflectionJsonWriter };
+export const ReflectionJsonWriter = _createClass(ReflectionJsonWriter, items);

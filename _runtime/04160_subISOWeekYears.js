@@ -1,37 +1,35 @@
 // _runtime/04160_subISOWeekYears.js
-import addISOWeekYears_mod from "04120_addISOWeekYears.js";
+import module_4120_mod from "metro/04120__.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
-import toInteger_mod from "03968_toInteger.js";
+import module_3968_mod from "metro/03968__.js";
 
-let tmp3;
-let tmp5;
-let tmp7;
-let addISOWeekYears = addISOWeekYears_mod;
-if (!addISOWeekYears) {
-  tmp3 = { default: addISOWeekYears };
-  const obj = { default: addISOWeekYears };
+let module_4120 = module_4120_mod;
+if (!module_4120) {
+  const obj = { default: module_4120 };
+  let tmp3 = obj;
 } else {
-  tmp3 = addISOWeekYears;
+  tmp3 = module_4120;
 }
-addISOWeekYears = tmp3;
+module_4120 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let toInteger = toInteger_mod;
-if (!toInteger) {
-  tmp7 = { default: toInteger };
-  const obj3 = { default: toInteger };
+let module_3968 = module_3968_mod;
+if (!module_3968) {
+  const obj3 = { default: module_3968 };
+  let tmp7 = obj3;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3968;
 }
-toInteger = tmp7;
+module_3968 = tmp7;
 
 export default function subISOWeekYears(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addISOWeekYears.default(arg0, -toInteger.default(arg1));
-}
+  return module_4120.default(arg0, -module_3968.default(arg1));
+};
+export default exports.default;

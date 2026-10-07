@@ -1,6 +1,4 @@
 // _runtime/metro/10364__.js
-import EmptyDuration from "../10176_EmptyDuration.js";
-import ReferenceWithTimezone from "../10177_ReferenceWithTimezone.js";
 import AbstractParserWithWordBoundaryChecking from "../10181_AbstractParserWithWordBoundaryChecking.js";
 import _mod10362 from "10362__.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -9,12 +7,19 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const SVTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -35,21 +40,23 @@ const regExp1 = new RegExp(
 );
 class SVTimeUnitCasualRelativeFormatParser {
   constructor() {
-    let constructResult;
-    let flag = arg0;
-    if (arg0 === undefined) {
+    flag = global;
+    if (global === undefined) {
       flag = true;
     }
-    const self = this;
-    _classCallCheck(this, SVTimeUnitCasualRelativeFormatParser);
-    const obj = _getPrototypeOf(SVTimeUnitCasualRelativeFormatParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = c2(this, SVTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(SVTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    const tmp3Result = c3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     tmp3Result.allowAbbreviations = flag;
     return tmp3Result;
   }
@@ -69,19 +76,17 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const str = arg1[1];
-      const formatted = str.toLowerCase();
-      const parseDurationResult = _mod10362.parseDuration(arg1[2]);
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = SVTimeUnitCasualRelativeFormatParser(10362).parseDuration(arg1[2]);
       if (parseDurationResult) {
         if ("f\u00F6rra" !== formatted) {
-          let reverseDurationResult;
           if ("passerade" !== formatted) {
-            reverseDurationResult = parseDurationResult;
+            let reverseDurationResult = parseDurationResult;
           }
-          const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
+          const ParsingComponents = SVTimeUnitCasualRelativeFormatParser(10177).ParsingComponents;
           return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
         }
-        reverseDurationResult = EmptyDuration.reverseDuration(parseDurationResult);
+        reverseDurationResult = SVTimeUnitCasualRelativeFormatParser(10176).reverseDuration(parseDurationResult);
       } else {
         return null;
       }

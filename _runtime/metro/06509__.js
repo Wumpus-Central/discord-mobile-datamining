@@ -1,17 +1,19 @@
 // _runtime/metro/06509__.js
-import Fragment from "../react/00021_Fragment.js";
 import LegacyBaseButton from "../06147_LegacyBaseButton.js";
-import react2 from "../06510_react.js";
-import react from "../00019_react.js";
+import GestureHandlerRefContext from "../06510_GestureHandlerRefContext.js";
+import noop from "00019__.js";
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 
 export const PanGestureHandler = function PanGestureHandler(arg0) {
-  const ref = react.useRef(null);
-  const Provider = react2.GestureHandlerRefContext.Provider;
-  LegacyBaseButton.PanGestureHandler;
+  const ref = noop.useRef(null);
+  const obj = { value: ref, children: null };
+  const obj2 = {};
   const merged = Object.assign(arg0);
-  return <Provider value={ref}>{null}</Provider>;
+  obj2.ref = ref;
+  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
+  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
 };
-export const GestureHandlerRootView = LegacyBaseButton.GestureHandlerRootView;
-export const GestureState = LegacyBaseButton.State;
+export const GestureHandlerRootView = fn(6147).GestureHandlerRootView;
+export const GestureState = fn(6147).State;

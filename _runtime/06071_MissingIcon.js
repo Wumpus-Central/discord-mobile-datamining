@@ -1,16 +1,16 @@
 // _runtime/06071_MissingIcon.js
-import react_native from "00017_react-native.js";
-import Fragment from "react/00021_Fragment.js";
+import _mod17 from "metro/00017__.js";
+import jsxProd from "react/00021_jsxProd.js";
 import Text from "06045_Text.js";
 
-const StyleSheet = react_native.StyleSheet;
-const jsx = Fragment.jsx;
+const StyleSheet = _mod17.StyleSheet;
+const jsx = jsxProd.jsx;
 const icon = StyleSheet.create({ icon: { backgroundColor: "transparent" } });
 
 export const MissingIcon = function MissingIcon(arg0) {
-  let color;
-  let style;
   ({ color, size, style } = arg0);
+  const obj = { style: null, children: "\u23F7" };
   const items = [icon.icon, { color, fontSize: size }, style];
-  return jsx(Text.Text, { style: items, children: "\u23F7" });
+  obj.style = items;
+  return jsx(Text.Text, { style: null, children: "\u23F7" });
 };

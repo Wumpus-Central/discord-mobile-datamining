@@ -1,7 +1,7 @@
 // _runtime/00034__iterableToArrayLimit.js
 
 export default function _iterableToArrayLimit(iterable, arg1) {
-  let tmp2 = null;
+  let tmp7 = null;
   if (null != iterable) {
     const _Symbol = Symbol;
     let prop = typeof Symbol !== "undefined";
@@ -12,60 +12,60 @@ export default function _iterableToArrayLimit(iterable, arg1) {
     if (!prop) {
       prop = iterable[Symbol.iterator];
     }
-    tmp2 = prop;
+    tmp7 = prop;
   }
-  let obj = tmp2;
-  if (null != tmp2) {
-    let flag = true;
+  if (null != tmp7) {
     let flag2 = false;
     try {
       const items = [];
       try {
-        const iter = obj.call(iterable);
-        obj = iter;
+        const call = tmp10.call;
+        if (typeof call === "unknown") {
+          let iter = tmp10();
+        } else {
+          iter = call(iterable);
+        }
         const next = iter.next;
         if (0 === arg1) {
           const _Object = Object;
-          if (Object(obj) !== obj) {
+          if (Object(obj2) !== obj2) {
             try {
-              const tmp15 = flag;
-              if (!tmp15) {
-                if (null != obj.return) {
-                  const returnResult = obj.return();
-                  const _Object2 = Object;
-                  if (Object(returnResult) !== returnResult) {
-                    const tmp19 = flag2;
-                    if (tmp19) {
-                      throw tmp;
-                    }
-                  }
-                }
-              }
-              const tmp21 = flag2;
-              if (tmp21) {
-                throw tmp;
+              if (flag2) {
+                throw tmp6;
               }
             } catch (tmp23) {
-              const tmp24 = flag2;
-              if (tmp24) {
+              if (tmp2) {
                 throw tmp;
               } else {
                 throw tmp23;
               }
             }
           } else {
-            flag = false;
+            let flag3 = false;
           }
         } else {
-          flag = next.call(obj).done;
-          const iter2 = next.call(obj);
-          if (!flag) {
+          const call3 = next.call;
+          if (typeof call3 === "unknown") {
+            let iter2 = next();
+          } else {
+            iter2 = call3(obj2);
+          }
+          const done = iter2.done;
+          flag3 = done;
+          if (!done) {
             items.push(iter3.value);
             if (items.length !== arg1) {
               while (true) {
-                let iter4 = next.call(obj);
-                flag = iter4.done;
-                if (flag) {
+                let flag4 = true;
+                let call2 = next.call;
+                if (typeof call2 === "unknown") {
+                  let iter4 = next();
+                } else {
+                  iter4 = call2(obj2);
+                }
+                let done2 = iter4.done;
+                flag3 = done2;
+                if (done2) {
                   break;
                 } else {
                   let arr3 = items.push(iter5.value);
@@ -81,58 +81,54 @@ export default function _iterableToArrayLimit(iterable, arg1) {
           }
         }
         try {
-          const tmp26 = flag;
-          if (!tmp26) {
-            if (null != obj.return) {
-              const returnResult1 = obj.return();
-              const _Object3 = Object;
-              if (Object(returnResult1) !== returnResult1) {
-                const tmp31 = flag2;
-                if (tmp31) {
-                  throw tmp;
+          if (!flag3) {
+            if (null != obj2.return) {
+              const returnResult = obj2.return();
+              const _Object2 = Object;
+              if (Object(returnResult) !== returnResult) {
+                if (flag2) {
+                  throw tmp6;
                 }
               }
             }
           }
-          const tmp33 = flag2;
-          if (tmp33) {
-            throw tmp;
+          if (flag2) {
+            throw tmp6;
           } else {
             return items;
           }
         } catch (tmp35) {
-          const tmp36 = flag2;
-          if (tmp36) {
+          if (tmp2) {
             throw tmp;
           } else {
             throw tmp35;
           }
         }
-      } catch (tmp) {
+      } catch (tmp6) {
         flag2 = true;
       }
     } catch (tmp38) {
       try {
-        if (!flag) {
-          if (null != obj.return) {
-            const returnResult2 = obj.return();
-            const _Object4 = Object;
-            if (Object(returnResult2) !== returnResult2) {
-              const tmp43 = flag2;
-              if (tmp43) {
+        if (!tmp4) {
+          if (tmp5 != obj.return) {
+            const returnResult1 = obj.return();
+            const _Object3 = Object;
+            if (Object(returnResult1) !== returnResult1) {
+              if (tmp2) {
                 throw tmp;
+              } else {
+                return tmp3;
               }
             }
           }
         }
-        const tmp45 = flag2;
-        if (tmp45) {
+        if (tmp2) {
           throw tmp;
         } else {
           throw tmp38;
         }
       } catch (tmp47) {
-        if (flag2) {
+        if (tmp2) {
           throw tmp;
         } else {
           throw tmp47;

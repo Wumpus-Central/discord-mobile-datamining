@@ -1,8 +1,10 @@
 // _runtime/14027_BestFitMatcher.js
 import _mod14023 from "metro/14023__.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const BestFitMatcher = function BestFitMatcher(arg0, arr, fn) {
-  let tmp4;
   const items = [];
   const reduced = arr.reduce((acc, item) => {
     const replaced = item.replace(_mod14023.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
@@ -11,18 +13,22 @@ export const BestFitMatcher = function BestFitMatcher(arg0, arr, fn) {
     return acc;
   }, {});
   const findBestMatchResult = items(14023).findBestMatch(items, arg0);
-  let tmp5;
-  const tmp3 = findBestMatchResult.matchedSupportedLocale && findBestMatchResult.matchedDesiredLocale;
+  let prop;
   if (tmp3) {
-    const matchedSupportedLocale = findBestMatchResult.matchedSupportedLocale;
-    tmp5 = matchedSupportedLocale;
-    const arr2 = reduced[findBestMatchResult.matchedDesiredLocale];
-    tmp4 = arr2.slice(findBestMatchResult.matchedDesiredLocale.length) || undefined;
+    const tmp6 =
+      reduced[findBestMatchResult.matchedDesiredLocale].slice(findBestMatchResult.matchedDesiredLocale.length) ||
+      undefined;
+    prop = findBestMatchResult.matchedSupportedLocale;
+    const tmp4 =
+      reduced[findBestMatchResult.matchedDesiredLocale].slice(findBestMatchResult.matchedDesiredLocale.length) ||
+      undefined;
   }
-  if (tmp5) {
-    return { locale: tmp5, extension: tmp4 };
+  if (prop) {
+    const obj2 = { locale: prop, extension: tmp4 };
+    return obj2;
   } else {
     const obj = { locale: fn() };
     return obj;
   }
+  tmp3 = findBestMatchResult.matchedSupportedLocale && findBestMatchResult.matchedDesiredLocale;
 };

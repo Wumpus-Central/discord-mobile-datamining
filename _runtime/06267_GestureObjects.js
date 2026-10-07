@@ -1,67 +1,70 @@
 // _runtime/06267_GestureObjects.js
-import ComposedGesture from "06167_ComposedGesture.js";
-import HoverEffect from "06188_HoverEffect.js";
-import TapGesture from "06268_TapGesture.js";
-import PanGesture from "06269_PanGesture.js";
-import PinchGesture from "06270_PinchGesture.js";
-import RotationGesture from "06271_RotationGesture.js";
-import FlingGesture from "06272_FlingGesture.js";
-import LongPressGesture from "06273_LongPressGesture.js";
-import ForceTouchGesture from "06274_ForceTouchGesture.js";
-import NativeGesture from "06275_NativeGesture.js";
-import ManualGesture from "06276_ManualGesture.js";
+import _mod6167 from "metro/06167__.js";
+import _mod6188 from "metro/06188__.js";
+import _mod6268 from "metro/06268__.js";
+import _mod6269 from "metro/06269__.js";
+import _mod6270 from "metro/06270__.js";
+import _mod6271 from "metro/06271__.js";
+import _mod6272 from "metro/06272__.js";
+import _mod6273 from "metro/06273__.js";
+import _mod6274 from "metro/06274__.js";
+import _mod6275 from "metro/06275__.js";
+import _mod6276 from "metro/06276__.js";
+
+require = arg1;
+const dependencyMap = arg6;
 
 export const GestureObjects = {
   Tap() {
-    const tapGesture = new TapGesture.TapGesture();
+    const tapGesture = new _mod6268.TapGesture();
     return tapGesture;
   },
   Pan() {
-    const panGesture = new PanGesture.PanGesture();
+    const panGesture = new _mod6269.PanGesture();
     return panGesture;
   },
   Pinch() {
-    const pinchGesture = new PinchGesture.PinchGesture();
+    const pinchGesture = new _mod6270.PinchGesture();
     return pinchGesture;
   },
   Rotation() {
-    const rotationGesture = new RotationGesture.RotationGesture();
+    const rotationGesture = new _mod6271.RotationGesture();
     return rotationGesture;
   },
   Fling() {
-    const flingGesture = new FlingGesture.FlingGesture();
+    const flingGesture = new _mod6272.FlingGesture();
     return flingGesture;
   },
   LongPress() {
-    const longPressGesture = new LongPressGesture.LongPressGesture();
+    const longPressGesture = new _mod6273.LongPressGesture();
     return longPressGesture;
   },
   ForceTouch() {
-    const forceTouchGesture = new ForceTouchGesture.ForceTouchGesture();
+    const forceTouchGesture = new _mod6274.ForceTouchGesture();
     return forceTouchGesture;
   },
   Native() {
-    const nativeGesture = new NativeGesture.NativeGesture();
+    const nativeGesture = new _mod6275.NativeGesture();
     return nativeGesture;
   },
   Manual() {
-    const manualGesture = new ManualGesture.ManualGesture();
+    const manualGesture = new _mod6276.ManualGesture();
     return manualGesture;
   },
   Hover() {
-    const hoverGesture = new HoverEffect.HoverGesture();
+    const hoverGesture = new _mod6188.HoverGesture();
     return hoverGesture;
   },
   Race() {
     const items = [...arguments];
-    return ComposedGesture.ComposedGesture(...items);
+    return _mod6167.ComposedGesture(...items);
   },
   Simultaneous() {
     const items = [...arguments];
-    return ComposedGesture.SimultaneousGesture(...items);
+    return _mod6167.SimultaneousGesture(...items);
   },
   Exclusive() {
     const items = [...arguments];
-    return ComposedGesture.ExclusiveGesture(...items);
+    return _mod6167.ExclusiveGesture(...items);
   },
 };

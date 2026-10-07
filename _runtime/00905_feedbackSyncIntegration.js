@@ -1,14 +1,13 @@
 // _runtime/00905_feedbackSyncIntegration.js
-import 00902__ from "metro/00902__.js";
+import mergeOptions from "00902_mergeOptions.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-const obj = {
+
+export const feedbackSyncIntegration = mergeOptions.buildFeedbackIntegration({
   getModalIntegration() {
-    return module_902.feedbackModalIntegration;
+    return mergeOptions.feedbackModalIntegration;
   },
   getScreenshotIntegration() {
-    return module_902.feedbackScreenshotIntegration;
-  }
-};
-
-export const feedbackSyncIntegration = module_902.buildFeedbackIntegration(obj);
+    return mergeOptions.feedbackScreenshotIntegration;
+  },
+});

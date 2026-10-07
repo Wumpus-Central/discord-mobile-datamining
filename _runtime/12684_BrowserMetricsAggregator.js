@@ -1,28 +1,22 @@
 // _runtime/12684_BrowserMetricsAggregator.js
-import _mod12585 from "metro/12585__.js";
-import _browserPerformanceTimeOriginMode from "12594__browserPerformanceTimeOriginMode.js";
-import COUNTER_METRIC_TYPE from "12677_COUNTER_METRIC_TYPE.js";
-import _mod12681 from "metro/12681__.js";
-import CounterMetric from "12682_CounterMetric.js";
-import captureAggregateMetrics from "12683_captureAggregateMetrics.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+const BrowserMetricsAggregator = require;
 class BrowserMetricsAggregator {
-  constructor(_client) {
-    const self = this;
-    _classCallCheck(this, BrowserMetricsAggregator);
-    this._client = _client;
-    this._buckets = new Map();
-    new Map();
-    this._interval = setInterval(() => self.flush(), COUNTER_METRIC_TYPE.DEFAULT_BROWSER_FLUSH_INTERVAL);
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, BrowserMetricsAggregator);
+    this._client = global;
+    map = new Map();
+    this._buckets = map;
+    this._interval = setInterval(() => self.flush(), closure_0(closure_1[2]).DEFAULT_BROWSER_FLUSH_INTERVAL);
+    return;
   }
 }
 const entry = {
   key: "add",
   value: function add(metricType, arg1, diff) {
-    let obj7;
-    let tmp14;
     let str = none;
     if (none === undefined) {
       str = "none";
@@ -33,55 +27,56 @@ const entry = {
     }
     let timestampInSecondsResult = arg5;
     if (arg5 === undefined) {
-      const obj2 = _browserPerformanceTimeOriginMode;
-      timestampInSecondsResult = obj2.timestampInSeconds();
+      timestampInSecondsResult = BrowserMetricsAggregator(12594).timestampInSeconds();
+      const obj2 = BrowserMetricsAggregator(12594);
     }
     const rounded = Math.floor(timestampInSecondsResult);
-    const obj3 = _mod12681;
-    const sanitizeMetricKeyResult = obj3.sanitizeMetricKey(arg1);
-    const obj4 = _mod12681;
-    const sanitizeTagsResult = obj4.sanitizeTags(obj);
-    const obj5 = _mod12681;
-    const sanitizeUnitResult = obj5.sanitizeUnit(str);
-    const obj6 = _mod12681;
-    const bucketKey = obj6.getBucketKey(metricType, sanitizeMetricKeyResult, sanitizeUnitResult, sanitizeTagsResult);
+    const sanitizeMetricKeyResult = BrowserMetricsAggregator(12681).sanitizeMetricKey(arg1);
+    const obj3 = BrowserMetricsAggregator(12681);
+    const sanitizeTagsResult = BrowserMetricsAggregator(12681).sanitizeTags(obj);
+    const obj4 = BrowserMetricsAggregator(12681);
+    const sanitizeUnitResult = BrowserMetricsAggregator(12681).sanitizeUnit(str);
+    const obj5 = BrowserMetricsAggregator(12681);
+    const bucketKey = BrowserMetricsAggregator(12681).getBucketKey(
+      metricType,
+      sanitizeMetricKeyResult,
+      sanitizeUnitResult,
+      sanitizeTagsResult,
+    );
     const _buckets = this._buckets;
-    const value = _buckets.get(bucketKey);
+    value = _buckets.get(bucketKey);
     let num = 0;
     if (value) {
       num = 0;
-      if (metricType === COUNTER_METRIC_TYPE.SET_METRIC_TYPE) {
+      if (metricType === BrowserMetricsAggregator(12677).SET_METRIC_TYPE) {
         num = value.metric.weight;
       }
     }
     if (value) {
       const metric = value.metric;
       metric.add(diff);
-      obj7 = value;
+      let obj7 = value;
       if (value.timestamp < rounded) {
         value.timestamp = rounded;
         obj7 = value;
       }
     } else {
-      obj7 = {
-        metric: tmp14,
-        timestamp: rounded,
-        metricType,
-        name: sanitizeMetricKeyResult,
-        unit: sanitizeUnitResult,
-        tags: sanitizeTagsResult,
-      };
-      const self = this;
-      const self2 = this;
+      obj7 = { metric: null, timestamp: null, metricType: null, name: null, unit: null, tags: null };
+      const tmp16 = new BrowserMetricsAggregator(12682).METRIC_MAP[metricType](diff);
+      obj7.metric = tmp16;
+      obj7.timestamp = rounded;
+      obj7.metricType = metricType;
+      obj7.name = sanitizeMetricKeyResult;
+      obj7.unit = sanitizeUnitResult;
+      obj7.tags = sanitizeTagsResult;
       const _buckets2 = this._buckets;
-      tmp14 = new CounterMetric.METRIC_MAP[metricType](diff);
       const result = _buckets2.set(bucketKey, obj7);
     }
     if (typeof diff === "string") {
       diff = obj7.metric.weight - num;
     }
-    const tmp5Result = _mod12585;
-    const result1 = tmp5Result.updateMetricSummaryOnActiveSpan(
+    const obj6 = BrowserMetricsAggregator(12681);
+    const result1 = BrowserMetricsAggregator(12585).updateMetricSummaryOnActiveSpan(
       metricType,
       sanitizeMetricKeyResult,
       diff,
@@ -89,6 +84,7 @@ const entry = {
       obj,
       bucketKey,
     );
+    const tmp5Result = BrowserMetricsAggregator(12585);
   },
 };
 const items = [
@@ -101,10 +97,10 @@ const items = [
         const _Array = Array;
         const _buckets = self._buckets;
         const arr = Array.from(_buckets.values());
-        const obj = captureAggregateMetrics;
-        const result = obj.captureAggregateMetrics(self._client, arr);
+        const result = BrowserMetricsAggregator(12683).captureAggregateMetrics(self._client, arr);
         const _buckets2 = self._buckets;
         _buckets2.clear();
+        const obj = BrowserMetricsAggregator(12683);
       }
     },
   },
@@ -116,6 +112,5 @@ const items = [
     },
   },
 ];
-const BrowserMetricsAggregator_export = _createClass(BrowserMetricsAggregator, items);
 
-export { BrowserMetricsAggregator_export as BrowserMetricsAggregator };
+export const BrowserMetricsAggregator = _createClass(BrowserMetricsAggregator, items);

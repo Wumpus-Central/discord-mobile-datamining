@@ -1,5 +1,6 @@
 // _runtime/metro/00484__.js
-const obj = {
+
+export default {
   get(arg0) {
     console.warn("Settings is not yet supported on this platform.");
     return null;
@@ -15,5 +16,3 @@ const obj = {
     console.warn("Settings is not yet supported on this platform.");
   },
 };
-
-export default obj;

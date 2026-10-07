@@ -1,7 +1,7 @@
 // _runtime/metro/00376__.js
 import _modDef38 from "00038__.js";
 import _modAll378 from "00378__.js";
-import _modDef379 from "00379__.js";
+import AnimationDefault from "../00379_Animation.js";
 import _readOnlyError from "00377__readOnlyError.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -10,12 +10,19 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
+const SpringAnimation = global;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -23,146 +30,163 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 class SpringAnimation {
-  constructor(overshootClamping) {
-    let constructResult;
-    let delay;
-    const self = this;
-    _classCallCheck(this, SpringAnimation);
-    const items = [overshootClamping];
-    const obj = _getPrototypeOf(SpringAnimation);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0) {
+    self = this;
+    tmp = closure_4(this, SpringAnimation);
+    items = [];
+    items[0] = global;
+    tmp2 = metroRequire;
+    obj = metroRequire(SpringAnimation);
+    tmp3 = hasOwnProperty;
+    if (closure_8()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = hasOwnProperty(self, constructResult);
-    let flag = overshootClamping.overshootClamping;
+    tmp3Result = tmp3(self, constructResult);
+    flag = global.overshootClamping;
     if (flag == null) {
       flag = false;
     }
     tmp3Result._overshootClamping = flag;
-    let num = overshootClamping.restDisplacementThreshold;
+    num = global.restDisplacementThreshold;
     if (num == null) {
       num = 0.001;
     }
     tmp3Result._restDisplacementThreshold = num;
-    let num2 = overshootClamping.restSpeedThreshold;
+    num2 = global.restSpeedThreshold;
     if (num2 == null) {
       num2 = 0.001;
     }
     tmp3Result._restSpeedThreshold = num2;
-    let num3 = overshootClamping.velocity;
+    num3 = global.velocity;
     if (num3 == null) {
       num3 = 0;
     }
     tmp3Result._initialVelocity = num3;
-    let num4 = overshootClamping.velocity;
+    num4 = global.velocity;
     if (num4 == null) {
       num4 = 0;
     }
     tmp3Result._lastVelocity = num4;
-    ({ toValue: tmp6._toValue, delay } = overshootClamping);
+    ({ toValue: tmp6._toValue, delay } = global);
     if (delay == null) {
       delay = 0;
     }
     tmp3Result._delay = delay;
-    tmp3Result._platformConfig = overshootClamping.platformConfig;
-    if (undefined === overshootClamping.stiffness) {
-      if (undefined === overshootClamping.damping) {
-        if (undefined === overshootClamping.mass) {
-          if (undefined === overshootClamping.bounciness) {
-            if (undefined === overshootClamping.speed) {
-              let num5 = overshootClamping.tension;
-              const fromOrigamiTensionAndFriction = _modAll378.fromOrigamiTensionAndFriction;
-              _modAll378;
+    tmp3Result._platformConfig = global.platformConfig;
+    if (undefined === global.stiffness) {
+      if (undefined === global.damping) {
+        if (undefined === global.mass) {
+          if (undefined === global.bounciness) {
+            if (undefined === global.speed) {
+              tmp7 = c2;
+              tmp8 = closure_3;
+              obj2 = c2(closure_3[8]);
+              num5 = global.tension;
               if (num5 == null) {
                 num5 = 40;
               }
-              let num6 = overshootClamping.friction;
+              num6 = global.friction;
               if (num6 == null) {
                 num6 = 7;
               }
-              const result = fromOrigamiTensionAndFriction(num5, num6);
+              result = obj2.fromOrigamiTensionAndFriction(num5, num6);
               ({ stiffness: tmp6._stiffness, damping: tmp6._damping } = result);
+              num7 = 1;
               tmp3Result._mass = 1;
             }
           }
-          let tmp14 = undefined === overshootClamping.tension;
-          const tmp13 = _modDef38;
-          if (tmp14) {
-            tmp14 = undefined === overshootClamping.friction;
+          tmp10 = closure_1;
+          tmp11 = closure_3;
+          tmp13 = undefined === global.tension;
+          tmp12 = closure_1(closure_3[7]);
+          if (tmp13) {
+            tmp13 = undefined === global.friction;
           }
-          if (tmp14) {
-            tmp14 = undefined === overshootClamping.stiffness;
+          if (tmp13) {
+            tmp13 = undefined === global.stiffness;
           }
-          if (tmp14) {
-            tmp14 = undefined === overshootClamping.damping;
+          if (tmp13) {
+            tmp13 = undefined === global.damping;
           }
-          if (tmp14) {
-            tmp14 = undefined === overshootClamping.mass;
+          if (tmp13) {
+            tmp13 = undefined === global.mass;
           }
-          tmp13(
-            tmp14,
+          str =
+            "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one";
+          tmp12Result = tmp12(
+            tmp13,
             "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one",
           );
-          let num8 = overshootClamping.bounciness;
-          const fromBouncinessAndSpeed = _modAll378.fromBouncinessAndSpeed;
-          _modAll378;
+          tmp15 = c2;
+          obj3 = c2(tmp11[8]);
+          num8 = global.bounciness;
           if (num8 == null) {
             num8 = 8;
           }
-          let num9 = overshootClamping.speed;
+          num9 = global.speed;
           if (num9 == null) {
             num9 = 12;
           }
-          const result1 = fromBouncinessAndSpeed(num8, num9);
+          result1 = obj3.fromBouncinessAndSpeed(num8, num9);
           ({ stiffness: tmp6._stiffness, damping: tmp6._damping } = result1);
+          num10 = 1;
           tmp3Result._mass = 1;
+          tmp8 = tmp11;
         }
-        _modDef38(tmp3Result._stiffness > 0, "Stiffness value must be greater than 0");
-        _modDef38(tmp3Result._damping > 0, "Damping value must be greater than 0");
-        _modDef38(tmp3Result._mass > 0, "Mass value must be greater than 0");
+        tmp21 = closure_1;
+        num14 = 0;
+        str2 = "Stiffness value must be greater than 0";
+        tmp22 = closure_1(tmp8[7])(tmp3Result._stiffness > 0, "Stiffness value must be greater than 0");
+        str3 = "Damping value must be greater than 0";
+        tmp23 = closure_1(tmp8[7])(tmp3Result._damping > 0, "Damping value must be greater than 0");
+        str4 = "Mass value must be greater than 0";
+        tmp24 = closure_1(tmp8[7])(tmp3Result._mass > 0, "Mass value must be greater than 0");
         return tmp3Result;
       }
     }
-    let tmp21 = undefined === overshootClamping.bounciness;
-    const tmp20 = _modDef38;
-    if (tmp21) {
-      tmp21 = undefined === overshootClamping.speed;
+    tmp17 = closure_3;
+    tmp19 = undefined === global.bounciness;
+    tmp18 = closure_1(closure_3[7]);
+    if (tmp19) {
+      tmp19 = undefined === global.speed;
     }
-    if (tmp21) {
-      tmp21 = undefined === overshootClamping.tension;
+    if (tmp19) {
+      tmp19 = undefined === global.tension;
     }
-    if (tmp21) {
-      tmp21 = undefined === overshootClamping.friction;
+    if (tmp19) {
+      tmp19 = undefined === global.friction;
     }
-    tmp20(
-      tmp21,
+    tmp18Result = tmp18(
+      tmp19,
       "You can define one of bounciness/speed, tension/friction, or stiffness/damping/mass, but not more than one",
     );
-    let num11 = overshootClamping.stiffness;
+    num11 = global.stiffness;
     if (num11 == null) {
       num11 = 100;
     }
     tmp3Result._stiffness = num11;
-    let num12 = overshootClamping.damping;
+    num12 = global.damping;
     if (num12 == null) {
       num12 = 10;
     }
     tmp3Result._damping = num12;
-    let num13 = overshootClamping.mass;
+    num13 = global.mass;
     if (num13 == null) {
       num13 = 1;
     }
     tmp3Result._mass = num13;
+    tmp8 = tmp17;
+    return;
   }
 }
-_inherits(SpringAnimation, _modDef379);
+_inherits(SpringAnimation, AnimationDefault);
 const entry = {
   key: "__getNativeAnimationConfig",
   value: function __getNativeAnimationConfig() {
-    let _lastVelocity;
     const self = this;
     const obj = {
       type: "spring",
@@ -172,17 +196,19 @@ const entry = {
       stiffness: this._stiffness,
       damping: this._damping,
       mass: this._mass,
-      initialVelocity: _lastVelocity,
+      initialVelocity: null,
       toValue: null,
       iterations: null,
       platformConfig: null,
-      debugID: self.__getDebugID(),
+      debugID: null,
     };
-    _lastVelocity = this._initialVelocity;
+    let _lastVelocity = this._initialVelocity;
     if (_lastVelocity == null) {
       _lastVelocity = self._lastVelocity;
     }
+    obj.initialVelocity = _lastVelocity;
     ({ _toValue: obj.toValue, __iterations: obj.iterations, _platformConfig: obj.platformConfig } = self);
+    obj.debugID = self.__getDebugID();
     return obj;
   },
 };
@@ -190,16 +216,15 @@ let items = [
   entry,
   {
     key: "start",
-    value: function start(_startPosition, _onUpdate, arg2, getInternalState, __makeNative) {
-      let closure_0 = __makeNative;
-      const self = this;
-      const tmp2 = _get(_getPrototypeOf(SpringAnimation.prototype), "start", this);
-      let closure_1 = tmp2;
+    value: function start(_startPosition, _onUpdate, arg2, getInternalState, self) {
+      self = this;
+      const tmp2 = _get(metroRequire(SpringAnimation.prototype), "start", this);
+      closure_1 = tmp2;
       let fn = tmp2;
       if (typeof tmp2 === "function") {
         fn = (items) => fn.apply(self, items);
       }
-      const items = [_startPosition, _onUpdate, arg2, getInternalState, __makeNative];
+      const items = [_startPosition, _onUpdate, arg2, getInternalState, self];
       fn(items);
       self._startPosition = _startPosition;
       self._lastPosition = self._startPosition;
@@ -215,11 +240,11 @@ let items = [
       if (self._delay) {
         const _setTimeout = setTimeout;
         self._timeout = setTimeout(function start() {
-          if (!self.__startAnimationIfNative(closure_0)) {
-            self.onUpdate();
+          if (!closure_1.__startAnimationIfNative(self)) {
+            closure_1.onUpdate();
           }
         }, self._delay);
-      } else if (!self.__startAnimationIfNative(__makeNative)) {
+      } else if (!self.__startAnimationIfNative(self)) {
         self.onUpdate();
       }
     },
@@ -233,10 +258,6 @@ let items = [
   {
     key: "onUpdate",
     value: function onUpdate() {
-      let _mass;
-      let _stiffness;
-      let diff1;
-      let diff2;
       const self = this;
       let timestamp = Date.now();
       if (timestamp > this._lastTime + 64) {
@@ -253,11 +274,10 @@ let items = [
         const _Math2 = Math;
         const expResult = Math.exp(-result * sqrtResult * _frameTime);
         const _Math3 = Math;
-        const _toValue = self._toValue;
         const result2 = (tmp2 + result * sqrtResult * diff) / result1;
         const _Math4 = Math;
         const result3 = result2 * Math.sin(result1 * _frameTime);
-        diff1 = _toValue - expResult * (result3 + diff * Math.cos(result1 * _frameTime));
+        let diff1 = self._toValue - expResult * (result3 + diff * Math.cos(result1 * _frameTime));
         const _Math5 = Math;
         const result4 = result * sqrtResult * expResult;
         const _Math6 = Math;
@@ -267,7 +287,7 @@ let items = [
         const _Math8 = Math;
         const result6 = Math.cos(result1 * _frameTime) * (tmp2 + result * sqrtResult * diff);
         const result7 = result1 * diff;
-        diff2 = result4 * sum - expResult * (result6 - result7 * Math.sin(result1 * _frameTime));
+        let diff2 = result4 * sum - expResult * (result6 - result7 * Math.sin(result1 * _frameTime));
       } else {
         const _Math = Math;
         const expResult1 = Math.exp(-sqrtResult * _frameTime);
@@ -279,34 +299,33 @@ let items = [
       self._lastVelocity = diff2;
       self._onUpdate(diff1);
       if (self.__active) {
-        const _overshootClamping = self._overshootClamping && 0 !== self._stiffness;
-        let flag = false;
+        let _overshootClamping = self._overshootClamping;
         if (_overshootClamping) {
-          let tmp19;
-          if (self._startPosition < self._toValue) {
-            tmp19 = diff1 > self._toValue;
-          } else {
-            tmp19 = diff1 < self._toValue;
+          _overshootClamping = 0 !== self._stiffness;
+        }
+        if (!_overshootClamping) {
+          const _Math9 = Math;
+          let flag2 = true;
+          if (0 !== self._stiffness) {
+            const _Math10 = Math;
+            flag2 = Math.abs(self._toValue - diff1) <= self._restDisplacementThreshold;
           }
-          flag = tmp19;
+          {
+            const _requestAnimationFrame = requestAnimationFrame;
+            const onUpdate = self.onUpdate;
+            self._animationFrame = requestAnimationFrame(onUpdate.bind(self));
+          }
+          if (0 !== self._stiffness) {
+            self._lastPosition = self._toValue;
+            self._lastVelocity = 0;
+            self._onUpdate(self._toValue);
+          }
+          self.__notifyAnimationEnd({ finished: true });
+        } else if (self._startPosition < self._toValue) {
+          let tmp19 = diff1 > self._toValue;
+        } else {
+          tmp19 = diff1 < self._toValue;
         }
-        const _Math9 = Math;
-        Math.abs(diff2) <= self._restSpeedThreshold;
-        if (0 !== self._stiffness) {
-          const _Math10 = Math;
-          Math.abs(self._toValue - diff1) <= self._restDisplacementThreshold;
-        }
-        if (!flag) {
-          const _requestAnimationFrame = requestAnimationFrame;
-          const onUpdate = self.onUpdate;
-          self._animationFrame = requestAnimationFrame(onUpdate.bind(self));
-        }
-        if (0 !== self._stiffness) {
-          self._lastPosition = self._toValue;
-          self._lastVelocity = 0;
-          self._onUpdate(self._toValue);
-        }
-        self.__notifyAnimationEnd({ finished: true });
       }
     },
   },
@@ -314,14 +333,14 @@ let items = [
     key: "stop",
     value: function stop() {
       const self = this;
-      let fn = _get(_getPrototypeOf(SpringAnimation.prototype), "stop", this);
+      let fn = _get(metroRequire(SpringAnimation.prototype), "stop", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
       clearTimeout(self._timeout);
       if (null != self._animationFrame) {
-        global.cancelAnimationFrame(self._animationFrame);
+        SpringAnimation.cancelAnimationFrame(self._animationFrame);
       }
       self.__notifyAnimationEnd({ finished: false });
     },

@@ -1,5 +1,5 @@
 // _runtime/metro/00778__.js
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const addAutoIpAddressToSession = function addAutoIpAddressToSession(attrs) {
   if ("aggregates" in attrs) {
@@ -9,8 +9,9 @@ export const addAutoIpAddressToSession = function addAutoIpAddressToSession(attr
       ip_address = attrs.ip_address;
     }
     if (undefined === ip_address) {
-      const obj = { ip_address: "{{auto}}" };
+      const obj = {};
       const merged = Object.assign(attrs.attrs);
+      obj.ip_address = "{{auto}}";
       attrs.attrs = obj;
     }
   } else if (undefined === attrs.ipAddress) {
@@ -24,8 +25,9 @@ export const addAutoIpAddressToUser = function addAutoIpAddressToUser(user) {
     ip_address = user.ip_address;
   }
   if (undefined === ip_address) {
-    const obj = { ip_address: "{{auto}}" };
+    const obj = {};
     const merged = Object.assign(user.user);
+    obj.ip_address = "{{auto}}";
     user.user = obj;
   }
 };

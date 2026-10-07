@@ -1,19 +1,13 @@
 // _runtime/metro/09233__.js
 import _mod9234 from "09234__.js";
-import react_native from "../00017_react-native.js";
+import get_ActivityIndicator from "00017__.js";
 
-let RNDatePicker;
-
-let Platform;
-let c3;
-let closure_4;
-let hasOwnProperty;
 ({
   NativeModules: c3,
   Platform,
   TurboModuleRegistry: closure_4,
   requireNativeComponent: hasOwnProperty,
-} = react_native);
+} = get_ActivityIndicator);
 
 export const getNativeComponent = () => {
   try {
@@ -23,15 +17,14 @@ export const getNativeComponent = () => {
       return null;
     } else {
       const _Error = Error;
-      const obj = _mod9234;
-      throw Error(obj.getInstallationErrorMessage());
+      throw Error(_mod9234.getInstallationErrorMessage());
     }
   }
 };
 export const getNativeModule = () => {
   try {
-    if (React3) {
-      RNDatePicker = React3.get("RNDatePicker");
+    if (React4) {
+      RNDatePicker = React4.get("RNDatePicker");
     } else {
       RNDatePicker = RNDatePicker.RNDatePicker;
     }
@@ -41,8 +34,7 @@ export const getNativeModule = () => {
       return null;
     } else {
       const _Error = Error;
-      const obj2 = _mod9234;
-      throw Error(obj2.getInstallationErrorMessage());
+      throw Error(_mod9234.getInstallationErrorMessage());
     }
   }
 };

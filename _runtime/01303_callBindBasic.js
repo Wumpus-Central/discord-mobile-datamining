@@ -8,10 +8,8 @@ export default function callBindBasic(items) {
   if (items.length >= 1) {
     if (typeof items[0] === "function") {
       const tmp4 = _mod1304;
-      const tmp5 = bind;
-      return tmp4(tmp5, _mod1308, items);
+      return tmp4(bind, _mod1308, items);
     }
   }
-  const tmp = new _mod1293("a function is required");
-  throw tmp;
+  throw new _mod1293("a function is required");
 }

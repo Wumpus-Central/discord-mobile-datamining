@@ -2,8 +2,7 @@
 import cloneArrayBuffer from "04988_cloneArrayBuffer.js";
 
 export default function cloneTypedArray(buffer, arg1) {
-  const tmp = arg1;
-  if (tmp) {
+  if (arg1) {
     buffer = cloneArrayBuffer(buffer.buffer);
   } else {
     buffer = buffer.buffer;

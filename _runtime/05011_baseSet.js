@@ -1,19 +1,18 @@
 // _runtime/05011_baseSet.js
-import isObject from "00521_isObject.js";
-import isIndex from "00543_isIndex.js";
-import toKey from "00600_toKey.js";
+import _mod521 from "metro/00521__.js";
+import _mod543 from "metro/00543__.js";
+import _mod600 from "metro/00600__.js";
 import castPath from "00603_castPath.js";
 import assignValue from "04979_assignValue.js";
 
 export default function baseSet(arg0, arg1, arg2, fn) {
-  if (isObject(arg0)) {
+  if (_mod521(arg0)) {
     const arr = castPath(arg1, arg0);
-    const length = arr.length;
     if (null != arg0) {
       let num2 = 0;
-      let tmp16 = arg0;
+      let tmp17 = arg0;
       if (0 < length) {
-        const tmp8 = toKey(arr[num2]);
+        const tmp8 = _mod600(arr[num2]);
         while ("__proto__" !== tmp8) {
           if ("constructor" === tmp8) {
             break;
@@ -22,24 +21,25 @@ export default function baseSet(arg0, arg1, arg2, fn) {
           } else {
             let tmp13 = arg2;
             if (num2 !== tmp4) {
-              let tmp11 = tmp16[tmp8];
+              let tmp11 = tmp17[tmp8];
               let tmp12;
               if (fn) {
-                tmp12 = fn(tmp11, tmp8, tmp16);
+                tmp12 = fn(tmp11, tmp8, tmp17);
               }
               tmp13 = tmp12;
               if (undefined === tmp12) {
-                if (!isObject(tmp11)) {
-                  tmp11 = isIndex(arr[num2 + 1]) ? [] : {};
+                if (_mod521(tmp11)) {
+                  tmp13 = tmp11;
+                } else {
+                  let tmp14 = _mod543(arr[num2 + 1]) ? [] : {};
                 }
-                tmp13 = tmp11;
               }
             }
-            let tmp14 = assignValue(tmp16, tmp8, tmp13);
-            let tmp15 = tmp16[tmp8];
-            if (null != tmp15) {
+            let tmp15 = assignValue(tmp17, tmp8, tmp13);
+            let tmp16 = tmp17[tmp8];
+            if (null != tmp16) {
               num2 = num2 + 1;
-              tmp16 = tmp15;
+              tmp17 = tmp16;
             }
           }
         }

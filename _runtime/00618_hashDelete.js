@@ -1,18 +1,16 @@
 // _runtime/00618_hashDelete.js
-let size;
 
 export default function hashDelete(arg0) {
   const self = this;
   const hasItem = this.has(arg0);
-  const tmp = arg0;
   if (hasItem) {
-    delete self.__data__[tmp];
+    const __data__ = self.__data__;
+    delete tmp[tmp2];
   }
   let num = 0;
-  size = self.size;
   if (hasItem) {
     num = 1;
   }
-  self.size = size - num;
+  self.size = self.size - num;
   return hasItem;
 }

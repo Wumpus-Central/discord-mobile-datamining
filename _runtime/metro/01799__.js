@@ -1,16 +1,12 @@
 // _runtime/metro/01799__.js
-import setupMicrotasks from "../01650_setupMicrotasks.js";
-import LayoutAnimationType from "../01668_LayoutAnimationType.js";
-import startMapper from "../01687_startMapper.js";
-import react from "../00019_react.js";
+import runWorkletOnJS from "../01650_runWorkletOnJS.js";
+import _mod1668 from "01668__.js";
+import runOnRuntime from "../01687_runOnRuntime.js";
+import noop from "00019__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let c2;
-let c3;
-let closure_4;
-({ useEffect: c2, useMemo: c3, useRef: closure_4 } = react);
+({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
 function eulerToQuaternion(arg0, arg1, arg2) {
   const cosResult = Math.cos(arg0 / 2);
   const sinResult = Math.sin(arg0 / 2);
@@ -32,24 +28,18 @@ eulerToQuaternion.__initData = {
   code: "function eulerToQuaternion_Pnpm_useAnimatedSensorTs1(pitch,roll,yaw){const c1=Math.cos(pitch/2);const s1=Math.sin(pitch/2);const c2=Math.cos(roll/2);const s2=Math.sin(roll/2);const c3=Math.cos(yaw/2);const s3=Math.sin(yaw/2);return[s1*c2*c3-c1*s2*s3,c1*s2*c3+s1*c2*s3,c1*c2*s3+s1*s2*c3,c1*c2*c3-s1*s2*s3];}",
 };
 function adjustRotationToInterfaceOrientation(pitch) {
-  let interfaceOrientation;
-  let pitch2;
-  let roll;
-  let roll2;
-  let yaw;
-  let yaw2;
   ({ interfaceOrientation, pitch, roll, yaw } = pitch);
-  if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_90) {
+  if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_90) {
     pitch.pitch = roll;
     pitch.roll = -pitch;
     const _Math2 = Math;
     pitch.yaw = yaw - Math.PI / 2;
-  } else if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_270) {
+  } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_270) {
     pitch.pitch = -roll;
     pitch.roll = pitch;
     const _Math = Math;
     pitch.yaw = yaw + Math.PI / 2;
-  } else if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_180) {
+  } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_180) {
     pitch.pitch = pitch.pitch * -1;
     pitch.roll = pitch.roll * -1;
     pitch.yaw = pitch.yaw * -1;
@@ -80,31 +70,30 @@ function adjustRotationToInterfaceOrientation(pitch) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-let obj = { InterfaceOrientation: LayoutAnimationType.InterfaceOrientation, eulerToQuaternion };
-adjustRotationToInterfaceOrientation.__closure = obj;
+adjustRotationToInterfaceOrientation.__closure = {
+  InterfaceOrientation: _mod1668.InterfaceOrientation,
+  eulerToQuaternion,
+};
 adjustRotationToInterfaceOrientation.__workletHash = 16635654688360;
 adjustRotationToInterfaceOrientation.__initData = {
   code: "function adjustRotationToInterfaceOrientation_Pnpm_useAnimatedSensorTs2(data){const{InterfaceOrientation,eulerToQuaternion}=this.__closure;const{interfaceOrientation:interfaceOrientation,pitch:pitch,roll:roll,yaw:yaw}=data;if(interfaceOrientation===InterfaceOrientation.ROTATION_90){data.pitch=roll;data.roll=-pitch;data.yaw=yaw-Math.PI/2;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_270){data.pitch=-roll;data.roll=pitch;data.yaw=yaw+Math.PI/2;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_180){data.pitch*=-1;data.roll*=-1;data.yaw*=-1;}const q=eulerToQuaternion(data.pitch,data.roll,data.yaw);data.qx=q[0];data.qy=q[1];data.qz=q[2];data.qw=q[3];return data;}",
 };
 function adjustVectorToInterfaceOrientation(arg0) {
-  let interfaceOrientation;
-  let x;
-  let y;
   ({ interfaceOrientation, x, y } = arg0);
-  if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_90) {
+  if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_90) {
     arg0.x = -y;
     arg0.y = x;
-  } else if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_270) {
+  } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_270) {
     arg0.x = y;
     arg0.y = -x;
-  } else if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_180) {
+  } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_180) {
     arg0.x = arg0.x * -1;
     arg0.y = arg0.y * -1;
   }
   return arg0;
 }
-let obj2 = { InterfaceOrientation: LayoutAnimationType.InterfaceOrientation };
-adjustVectorToInterfaceOrientation.__closure = obj2;
+let obj = { InterfaceOrientation: _mod1668.InterfaceOrientation, eulerToQuaternion };
+adjustVectorToInterfaceOrientation.__closure = { InterfaceOrientation: _mod1668.InterfaceOrientation };
 adjustVectorToInterfaceOrientation.__workletHash = 5352466445526;
 adjustVectorToInterfaceOrientation.__initData = {
   code: "function adjustVectorToInterfaceOrientation_Pnpm_useAnimatedSensorTs3(data){const{InterfaceOrientation}=this.__closure;const{interfaceOrientation:interfaceOrientation,x:x,y:y}=data;if(interfaceOrientation===InterfaceOrientation.ROTATION_90){data.x=-y;data.y=x;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_270){data.x=y;data.y=-x;}else if(interfaceOrientation===InterfaceOrientation.ROTATION_180){data.x*=-1;data.y*=-1;}return data;}",
@@ -114,10 +103,6 @@ let closure_8 = {
 };
 
 export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterfaceOrientation) {
-  let closure_0;
-  let obj3;
-  let ref;
-  let ref2;
   _require = arg0;
   const tmp2 = closure_4(adjustToInterfaceOrientation);
   dependencyMap = tmp2;
@@ -161,31 +146,22 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
     tmp2.current = obj;
   }
   const items = [tmp2.current];
-  const tmp13 = ref2(() => {
-    const obj = {
-      interval: "auto",
-      adjustToInterfaceOrientation: true,
-      iosReferenceFrame: LayoutAnimationType.IOSReferenceFrame.Auto,
-    };
+  const tmp13 = tmpResult(() => {
     const merged = Object.assign(ref.current);
-    return obj;
+    return { interval: "auto", adjustToInterfaceOrientation: true, iosReferenceFrame: _mod1668.IOSReferenceFrame.Auto };
   }, items);
   let config = tmp13;
   let obj2 = {
-    sensor: obj3.initializeSensor(arg0, tmp13),
+    sensor: require("runOnRuntime").initializeSensor(arg0, tmp13),
     unregister() {},
     isAvailable: false,
     config: tmp13,
   };
-  obj3 = require("startMapper");
-  const tmpResult = closure_4(obj2);
-  ref2 = tmpResult;
+  tmpResult = closure_4(obj2);
   const items1 = [arg0, tmp13];
   config(() => {
-    let obj2;
-    let sensor;
     let obj = {
-      sensor: obj2.initializeSensor(sensor, config),
+      sensor: closure_0(ref[2]).initializeSensor(sensor, config),
       unregister() {},
       isAvailable: false,
       config,
@@ -193,22 +169,20 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
     ref2.current = obj;
     sensor = ref2.current.sensor;
     const adjustToInterfaceOrientation = ref2.current.config.adjustToInterfaceOrientation;
+    const obj2 = closure_0(ref[2]);
     const fn = function n(pitch) {
-      let interfaceOrientation;
-      let x;
-      let y;
       if (adjustToInterfaceOrientation) {
-        if (closure_0 === LayoutAnimationType.SensorType.ROTATION) {
+        if (closure_0 === _mod1668.SensorType.ROTATION) {
           adjustRotationToInterfaceOrientation(pitch);
         } else if (typeof adjustVectorToInterfaceOrientation === "function") {
           ({ interfaceOrientation, x, y } = pitch);
-          if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_90) {
+          if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_90) {
             pitch.x = -y;
             pitch.y = x;
-          } else if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_270) {
+          } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_270) {
             pitch.x = y;
             pitch.y = -x;
-          } else if (interfaceOrientation === LayoutAnimationType.InterfaceOrientation.ROTATION_180) {
+          } else if (interfaceOrientation === _mod1668.InterfaceOrientation.ROTATION_180) {
             pitch.x = pitch.x * -1;
             pitch.y = pitch.y * -1;
           }
@@ -217,10 +191,8 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
         }
       }
       sensor.value = pitch;
-      const obj = setupMicrotasks;
-      obj.callMicrotasks();
+      runWorkletOnJS.callMicrotasks();
     };
-    obj2 = closure_0(ref[2]);
     const obj3 = closure_0(ref[2]);
     fn.__closure = {
       adjustToInterfaceOrientation,
@@ -233,22 +205,10 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
     };
     fn.__workletHash = 6807952122364;
     fn.__initData = __initData;
-    ({
-      adjustToInterfaceOrientation,
-      sensorType: sensor,
-      SensorType: closure_0(ref[1]).SensorType,
-      adjustRotationToInterfaceOrientation,
-      adjustVectorToInterfaceOrientation,
-      sensorData: sensor,
-      callMicrotasks: closure_0(ref[3]).callMicrotasks,
-    });
     const registerSensorResult = obj3.registerSensor(sensor, config, fn);
     config = registerSensorResult;
     if (-1 !== registerSensorResult) {
-      ref2.current.unregister = () => {
-        const obj = startMapper;
-        return obj.unregisterSensor(registerSensorResult);
-      };
+      ref2.current.unregister = () => runOnRuntime.unregisterSensor(registerSensorResult);
       ref2.current.isAvailable = true;
     } else {
       ref2.current.unregister = () => {};

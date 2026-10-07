@@ -1,17 +1,16 @@
 // _runtime/metro/01567__.js
-import react2 from "../01520_react.js";
-import react3 from "../01568_react.js";
-import react from "../00019_react.js";
+import NavigationBuilderContext from "../01520_NavigationBuilderContext.js";
+import _mod1568 from "01568__.js";
+import noop from "00019__.js";
+
+require = arg1;
 
 export const useScheduleUpdate = function useScheduleUpdate(arg0) {
-  let closure_129_1;
-  let flushUpdates;
-  let closure_0 = arg0;
-  const context = react.useContext(react2.NavigationBuilderContext);
-  ({ scheduleUpdate: closure_129_1, flushUpdates } = context);
-  const insertionEffect = react.useInsertionEffect(() => {
-    closure_1_1(closure_0);
+  closure_0 = arg0;
+  const context = noop.useContext(NavigationBuilderContext.NavigationBuilderContext);
+  ({ scheduleUpdate: dependencyMap, flushUpdates } = context);
+  const insertionEffect = noop.useInsertionEffect(() => {
+    dependencyMap(closure_0);
   });
-  const obj = react3;
-  const clientLayoutEffect = obj.useClientLayoutEffect(flushUpdates);
+  const clientLayoutEffect = _mod1568.useClientLayoutEffect(flushUpdates);
 };

@@ -1,6 +1,4 @@
 // _runtime/metro/00370__.js
-import flushValueDefault from "../00356_flushValue.js";
-import _modDef363 from "00363__.js";
 import _modDef366 from "00366__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -9,12 +7,19 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
+const AnimatedMultiplication = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -22,31 +27,40 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 class AnimatedMultiplication {
-  constructor(num, num2, arg2) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, AnimatedMultiplication);
-    const items = [arg2];
-    const obj = _getPrototypeOf(AnimatedMultiplication);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+  constructor(arg0, arg1, arg2) {
+    self = this;
+    tmp = c2(this, AnimatedMultiplication);
+    items = [];
+    items[0] = importDefault;
+    tmp2 = closure_4;
+    obj = closure_4(AnimatedMultiplication);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    const tmp3Result = c3(self, constructResult);
-    let tmp7 = num;
-    if (typeof num === "number") {
-      const self2 = this;
-      const self3 = this;
-      tmp7 = new flushValueDefault(num);
+    tmp3Result = tmp3(self, constructResult);
+    tmp7 = global;
+    if (typeof global === "number") {
+      tmp9 = closure_0;
+      tmp10 = closure_1;
+      tmp11 = new.target;
+      tmp12 = new.target;
+      tmp13 = global;
+      tmp7 = new closure_0(closure_1[6])(global);
     }
     tmp3Result._a = tmp7;
-    let tmp8 = num2;
-    if (typeof num2 === "number") {
-      const self4 = this;
-      const self5 = this;
-      tmp8 = new flushValueDefault(num2);
+    tmp8 = arg1;
+    if (typeof arg1 === "number") {
+      tmp14 = closure_0;
+      tmp15 = closure_1;
+      tmp16 = new.target;
+      tmp17 = new.target;
+      tmp18 = arg1;
+      tmp8 = new closure_0(closure_1[6])(arg1);
     }
     tmp3Result._b = tmp8;
     return tmp3Result;
@@ -61,7 +75,7 @@ const entry = {
     const _b = this._b;
     _b.__makeNative(arg0);
     const self = this;
-    let fn = _get(_getPrototypeOf(AnimatedMultiplication.prototype), "__makeNative", this);
+    let fn = hasOwnProperty(_getPrototypeOf(AnimatedMultiplication.prototype), "__makeNative", this);
     if (typeof fn === "function") {
       fn = (items) => fn.apply(self, items);
     }
@@ -74,18 +88,14 @@ let items = [
   {
     key: "__getValue",
     value: function __getValue() {
-      let _a;
-      let _b;
       ({ _a, _b } = this);
-      const __getValueResult = _a.__getValue();
-      return __getValueResult * _b.__getValue();
+      return _a.__getValue() * _b.__getValue();
     },
   },
   {
     key: "interpolate",
     value: function interpolate(arg0) {
-      const tmp = new _modDef363(this, arg0);
-      return tmp;
+      return new AnimatedMultiplication(363)(this, arg0);
     },
   },
   {
@@ -96,7 +106,7 @@ let items = [
       const _b = this._b;
       _b.__addChild(this);
       const self = this;
-      let fn = _get(_getPrototypeOf(AnimatedMultiplication.prototype), "__attach", this);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedMultiplication.prototype), "__attach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -111,7 +121,7 @@ let items = [
       const _b = this._b;
       _b.__removeChild(this);
       const self = this;
-      let fn = _get(_getPrototypeOf(AnimatedMultiplication.prototype), "__detach", this);
+      let fn = hasOwnProperty(_getPrototypeOf(AnimatedMultiplication.prototype), "__detach", this);
       if (typeof fn === "function") {
         fn = (items) => fn.apply(self, items);
       }
@@ -121,12 +131,13 @@ let items = [
   {
     key: "__getNativeConfig",
     value: function __getNativeConfig() {
-      let items;
+      const obj = { type: "multiplication", input: null, debugID: null };
       const _a = this._a;
-      const obj = { type: "multiplication", input: items, debugID: this.__getDebugID() };
-      items = [_a.__getNativeTag()];
+      const items = [_a.__getNativeTag()];
       const _b = this._b;
       items[1] = _b.__getNativeTag();
+      obj.input = items;
+      obj.debugID = this.__getDebugID();
       return obj;
     },
   },

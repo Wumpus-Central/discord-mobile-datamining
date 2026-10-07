@@ -1,52 +1,43 @@
 // _runtime/metro/01760__.js
-import BounceIn from "../01761_BounceIn.js";
-import FadeIn from "../01762_FadeIn.js";
-import FlipInXUp from "../01763_FlipInXUp.js";
-import LightSpeedInRight from "../01764_LightSpeedInRight.js";
-import PinwheelIn from "../01765_PinwheelIn.js";
-import RollInLeft from "../01766_RollInLeft.js";
-import RotateInDownLeft from "../01767_RotateInDownLeft.js";
-import SlideInRight from "../01768_SlideInRight.js";
-import StretchInX from "../01769_StretchInX.js";
-import ZoomIn from "../01770_ZoomIn.js";
+const require = globalThis.__r;
 
-for (const key10013 in BounceIn) {
-  exports[key10013] = BounceIn[key10013];
+for (const key10013 in require("01761__.js")) {
+  arg5[key10013] = require("01761__.js")[key10013];
   continue;
 }
-for (const key10017 in FadeIn) {
-  exports[key10017] = FadeIn[key10017];
+for (const key10017 in require("01762__.js")) {
+  arg5[key10017] = require("01762__.js")[key10017];
   continue;
 }
-for (const key10021 in FlipInXUp) {
-  exports[key10021] = FlipInXUp[key10021];
+for (const key10021 in require("01763__.js")) {
+  arg5[key10021] = require("01763__.js")[key10021];
   continue;
 }
-for (const key10025 in LightSpeedInRight) {
-  exports[key10025] = LightSpeedInRight[key10025];
+for (const key10025 in require("01764__.js")) {
+  arg5[key10025] = require("01764__.js")[key10025];
   continue;
 }
-for (const key10029 in PinwheelIn) {
-  exports[key10029] = PinwheelIn[key10029];
+for (const key10029 in require("01765__.js")) {
+  arg5[key10029] = require("01765__.js")[key10029];
   continue;
 }
-for (const key10033 in RollInLeft) {
-  exports[key10033] = RollInLeft[key10033];
+for (const key10033 in require("01766__.js")) {
+  arg5[key10033] = require("01766__.js")[key10033];
   continue;
 }
-for (const key10037 in RotateInDownLeft) {
-  exports[key10037] = RotateInDownLeft[key10037];
+for (const key10037 in require("01767__.js")) {
+  arg5[key10037] = require("01767__.js")[key10037];
   continue;
 }
-for (const key10041 in SlideInRight) {
-  exports[key10041] = SlideInRight[key10041];
+for (const key10041 in require("01768__.js")) {
+  arg5[key10041] = require("01768__.js")[key10041];
   continue;
 }
-for (const key10045 in StretchInX) {
-  exports[key10045] = StretchInX[key10045];
+for (const key10045 in require("01769__.js")) {
+  arg5[key10045] = require("01769__.js")[key10045];
   continue;
 }
-for (const key10049 in ZoomIn) {
-  exports[key10049] = ZoomIn[key10049];
+for (const key10049 in require("01770__.js")) {
+  arg5[key10049] = require("01770__.js")[key10049];
   continue;
 }

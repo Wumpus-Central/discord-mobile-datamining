@@ -1,12 +1,10 @@
 // _runtime/05764_ScreenContentWrapper.js
-import Fragment from "react/00021_Fragment.js";
-import react_nativeDefault from "05765_react-native.js";
-import react from "00019_react.js";
+import _modDef5765 from "metro/05765__.js";
+import noop from "metro/00019__.js";
 
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
 
 export default function ScreenContentWrapper(arg0) {
-  react_nativeDefault;
   const merged = Object.assign(arg0);
-  return <tmp collapsable={false} />;
+  return jsx(_modDef5765, { collapsable: false });
 }

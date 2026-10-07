@@ -1,8 +1,8 @@
 // _runtime/00364_bezier.js
-import bezier2 from "00365_bezier.js";
+import _mod365 from "metro/00365__.js";
 
-let bezierResult;
-
+require = arg1;
+const dependencyMap = arg6;
 const obj = {
   step0(arg0) {
     let num = 0;
@@ -23,7 +23,7 @@ const obj = {
   },
   ease(arg0) {
     let tmp = bezierResult;
-    if (!tmp) {
+    if (!bezierResult) {
       bezierResult = obj.bezier(0.42, 0, 1, 1);
       tmp = bezierResult;
     }
@@ -36,7 +36,7 @@ const obj = {
     return arg0 * arg0 * arg0;
   },
   poly(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (sum) => Math.pow(sum, closure_0);
   },
   sin(arg0) {
@@ -53,17 +53,10 @@ const obj = {
     if (arg0 === undefined) {
       num = 1;
     }
-    let closure_0 = num * Math.PI;
-    return (arg0) => {
-      const powResult = Math.pow(Math.cos((arg0 * Math.PI) / 2), 3);
-      return 1 - powResult * Math.cos(arg0 * closure_0);
-    };
+    closure_0 = num * Math.PI;
+    return (arg0) => 1 - Math.pow(Math.cos((arg0 * Math.PI) / 2), 3) * Math.cos(arg0 * closure_0);
   },
   back() {
-    let num = arg0;
-    if (arg0 === undefined) {
-      num = 1.70158;
-    }
     return (arg0) => arg0 * arg0 * ((num + 1) * arg0 - num);
   },
   bounce(arg0) {
@@ -81,19 +74,20 @@ const obj = {
     }
   },
   bezier(arg0, arg1, arg2, arg3) {
-    return bezier2.default(arg0, arg1, arg2, arg3);
+    return _mod365.default(arg0, arg1, arg2, arg3);
   },
-  in: (ease) => ease,
+  in(ease) {
+    return ease;
+  },
   out(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (arg0) => 1 - closure_0(1 - arg0);
   },
   inOut(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (arg0) => {
-      let result;
       if (arg0 < 0.5) {
-        result = closure_0(2 * arg0) / 2;
+        let result = closure_0(2 * arg0) / 2;
       } else {
         result = 1 - closure_0(2 * (1 - arg0)) / 2;
       }

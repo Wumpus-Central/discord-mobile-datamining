@@ -1,10 +1,19 @@
 // _runtime/01211_ScalarType.js
 import lowerCamelCase from "01212_lowerCamelCase.js";
 
-let ScalarType = exports.ScalarType;
+require = arg1;
+const dependencyMap = arg6;
+ScalarType.ScalarType = undefined;
+ScalarType.LongType = undefined;
+ScalarType.RepeatType = undefined;
+ScalarType.normalizeFieldInfo = undefined;
+ScalarType.readFieldOptions = undefined;
+ScalarType.readFieldOption = undefined;
+ScalarType.readMessageOption = undefined;
+ScalarType = ScalarType.ScalarType;
 if (!ScalarType) {
   let obj = {};
-  exports.ScalarType = obj;
+  ScalarType.ScalarType = obj;
   ScalarType = obj;
 }
 ScalarType.DOUBLE = 1;
@@ -37,10 +46,10 @@ ScalarType.SINT32 = 17;
 ScalarType[17] = "SINT32";
 ScalarType.SINT64 = 18;
 ScalarType[18] = "SINT64";
-let LongType = exports.LongType;
+let LongType = ScalarType.LongType;
 if (!LongType) {
   let obj2 = {};
-  exports.LongType = obj2;
+  ScalarType.LongType = obj2;
   LongType = obj2;
 }
 LongType.BIGINT = 0;
@@ -49,10 +58,10 @@ LongType.STRING = 1;
 LongType[1] = "STRING";
 LongType.NUMBER = 2;
 LongType[2] = "NUMBER";
-let RepeatType = exports.RepeatType;
+let RepeatType = ScalarType.RepeatType;
 if (!RepeatType) {
   const obj3 = {};
-  exports.RepeatType = obj3;
+  ScalarType.RepeatType = obj3;
   RepeatType = obj3;
 }
 RepeatType.NO = 0;
@@ -61,39 +70,50 @@ RepeatType.PACKED = 1;
 RepeatType[1] = "PACKED";
 RepeatType.UNPACKED = 2;
 RepeatType[2] = "UNPACKED";
-
-export const normalizeFieldInfo = function normalizeFieldInfo(localName) {
+ScalarType.normalizeFieldInfo = function normalizeFieldInfo(localName) {
   localName = localName.localName;
   if (null === localName) {
-    const obj = lowerCamelCase;
-    localName = obj.lowerCamelCase(localName.name);
+    localName = lowerCamelCase.lowerCamelCase(localName.name);
   }
   localName.localName = localName;
   let jsonName = localName.jsonName;
   if (null === jsonName) {
-    const obj2 = lowerCamelCase;
-    jsonName = obj2.lowerCamelCase(localName.name);
+    jsonName = lowerCamelCase.lowerCamelCase(localName.name);
   }
   localName.jsonName = jsonName;
-  const NO = localName.repeat ?? RepeatType.NO;
+  let NO = localName.repeat;
+  if (null === NO) {
+    NO = RepeatType.NO;
+  }
   localName.repeat = NO;
   let opt = localName.opt;
   if (null === opt) {
-    let tmp6 = !localName.repeat;
-    if (tmp6) {
-      tmp6 = !localName.oneof && "message" == localName.kind;
-      const tmp7 = !localName.oneof && "message" == localName.kind;
+    const repeat = localName.repeat;
+    let tmp6 = !repeat;
+    if (!repeat) {
+      const oneof = localName.oneof;
+      let tmp7 = !oneof;
+      if (!oneof) {
+        tmp7 = "message" == localName.kind;
+      }
+      tmp6 = tmp7;
     }
     opt = tmp6;
   }
   localName.opt = opt;
   return localName;
 };
-export const readFieldOptions = function readFieldOptions(fields, arg1, arg2, fromJson) {
-  let closure_0 = arg1;
+ScalarType.readFieldOptions = function readFieldOptions(fields, arg1, arg2, fromJson) {
+  closure_0 = arg1;
   fields = fields.fields;
-  const found = fields.find((localName, index) => localName.localName == closure_0 || index == tmp);
-  let options;
+  const found = fields.find((localName, index) => {
+    let tmp2 = localName.localName == closure_0;
+    if (!tmp2) {
+      tmp2 = index == tmp;
+    }
+    return tmp2;
+  });
+  options = undefined;
   if (null !== found) {
     if (undefined !== found) {
       options = found.options;
@@ -107,11 +127,17 @@ export const readFieldOptions = function readFieldOptions(fields, arg1, arg2, fr
   }
   return fromJsonResult;
 };
-export const readFieldOption = function readFieldOption(fields, arg1, arg2, fromJson) {
-  let closure_0 = arg1;
+ScalarType.readFieldOption = function readFieldOption(fields, arg1, arg2, fromJson) {
+  closure_0 = arg1;
   fields = fields.fields;
-  const found = fields.find((localName, index) => localName.localName == closure_0 || index == tmp);
-  let options;
+  const found = fields.find((localName, index) => {
+    let tmp2 = localName.localName == closure_0;
+    if (!tmp2) {
+      tmp2 = index == tmp;
+    }
+    return tmp2;
+  });
+  options = undefined;
   if (null !== found) {
     if (undefined !== found) {
       options = found.options;
@@ -129,7 +155,7 @@ export const readFieldOption = function readFieldOption(fields, arg1, arg2, from
     return tmp5;
   }
 };
-export const readMessageOption = function readMessageOption(arg0, arg1, fromJson) {
+ScalarType.readMessageOption = function readMessageOption(arg0, arg1, fromJson) {
   let tmp2 = tmp;
   if (undefined !== arg0.options[arg1]) {
     let fromJsonResult = tmp;

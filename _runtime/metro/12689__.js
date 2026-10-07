@@ -1,14 +1,31 @@
 // _runtime/metro/12689__.js
 
 export const flatten = function flatten(arr) {
-  const f142984 = (arr) => {
-    if (Array.isArray(arr)) {
-      const item = arr.forEach(f142984);
-    } else {
-      arr = items.push(arr);
-    }
-  };
   const items = [];
-  let item = arr.forEach(f142984);
+  const item = arr.forEach((arr) => {
+    if (Array.isArray(arr)) {
+      let item = arr.forEach((arr) => {
+        if (Array.isArray(arr)) {
+          let item = arr.forEach((arr) => {
+            if (Array.isArray(arr)) {
+              let item = arr.forEach((arr) => {
+                if (Array.isArray(arr)) {
+                  let item = arr.forEach(() => { ... });
+                } else {
+                  arr = closure_1_0.push(arr);
+                }
+              });
+            } else {
+              arr = closure_1_0.push(arr);
+            }
+          });
+        } else {
+          arr = closure_1_0.push(arr);
+        }
+      });
+    } else {
+      arr = closure_1_0.push(arr);
+    }
+  });
   return items;
 };

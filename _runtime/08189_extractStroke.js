@@ -3,20 +3,13 @@ import extractOpacityDefault from "08175_extractOpacity.js";
 import extractBrushDefault from "08187_extractBrush.js";
 import extractLengthListDefault from "08190_extractLengthList.js";
 
+importDefault = arg2;
+const dependencyMap = arg6;
 let closure_2 = { butt: 0, square: 2, round: 1 };
 let closure_3 = { miter: 0, bevel: 2, round: 1 };
 let closure_4 = { none: 0, default: 0, nonScalingStroke: 1, "non-scaling-stroke": 1, inherit: 2, uri: 3 };
 
 export default function extractStroke(arg0, arg1, arr) {
-  let stroke;
-  let strokeDasharray;
-  let strokeDashoffset;
-  let strokeLinecap;
-  let strokeLinejoin;
-  let strokeMiterlimit;
-  let strokeOpacity;
-  let strokeWidth;
-  let vectorEffect;
   ({
     stroke,
     strokeOpacity,
@@ -50,7 +43,7 @@ export default function extractStroke(arg0, arg1, arr) {
       }
     }
     let combined = tmp9;
-    if (combined) {
+    if (tmp9) {
       combined = tmp9;
       if (tmp9.length % 2 === 1) {
         combined = tmp9.concat(tmp9);
@@ -65,24 +58,37 @@ export default function extractStroke(arg0, arg1, arr) {
       tmp14 = null;
       if (strokeDashoffset) {
         tmp14 = +strokeDashoffset || 0;
+        const tmp15 = +strokeDashoffset || 0;
       }
     }
     arg0.strokeDashoffset = tmp14;
   }
   if (null != strokeLinecap) {
     arr.push("strokeLinecap");
-    const num3 = (strokeLinecap && closure_2[strokeLinecap]) || 0;
+    let num3 = strokeLinecap;
+    if (strokeLinecap) {
+      num3 = closure_2[strokeLinecap];
+    }
+    if (!num3) {
+      num3 = 0;
+    }
     arg0.strokeLinecap = num3;
   }
   if (null != strokeLinejoin) {
     arr.push("strokeLinejoin");
-    const num4 = (strokeLinejoin && closure_3[strokeLinejoin]) || 0;
+    let num4 = strokeLinejoin;
+    if (strokeLinejoin) {
+      num4 = closure_3[strokeLinejoin];
+    }
+    if (!num4) {
+      num4 = 0;
+    }
     arg0.strokeLinejoin = num4;
   }
   if (null != strokeMiterlimit) {
     arr.push("strokeMiterlimit");
     let num5 = strokeMiterlimit;
-    if (num5) {
+    if (strokeMiterlimit) {
       num5 = strokeMiterlimit;
       if (typeof strokeMiterlimit !== "number") {
         const _parseFloat = parseFloat;
@@ -95,7 +101,13 @@ export default function extractStroke(arg0, arg1, arr) {
     arg0.strokeMiterlimit = num5;
   }
   if (null != vectorEffect) {
-    const num6 = (vectorEffect && closure_4[vectorEffect]) || 0;
+    let num6 = vectorEffect;
+    if (vectorEffect) {
+      num6 = closure_4[vectorEffect];
+    }
+    if (!num6) {
+      num6 = 0;
+    }
     arg0.vectorEffect = num6;
   }
 }

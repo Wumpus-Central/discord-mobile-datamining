@@ -1,29 +1,23 @@
 // _runtime/metro/01921__.js
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "ru",
   pluralRuleFunction(arg0, arg1) {
-    let arr;
-    let str6;
-    let tmp2;
-    const str = String(arg0);
-    const parts = str.split(".");
+    const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     const substr = arr.slice(-1);
     const substr1 = arr.slice(-2);
     let str2 = "other";
     if (!arg1) {
-      let str3;
-      let str5;
       if (!tmp2) {
         if (1 == substr) {
-          str3 = "one";
+          let str3 = "one";
         }
         str2 = str3;
       }
       if (!tmp2) {
         if (substr >= 2) {
           if (substr <= 4) {
-            str5 = "few";
+            let str5 = "few";
             if (substr1 >= 12) {
               str5 = "few";
             }
@@ -49,8 +43,7 @@ const obj = {
     }
     return str2;
   },
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-BY", parentLocale: "ru" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-KG", parentLocale: "ru" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "ru-KZ", parentLocale: "ru" });

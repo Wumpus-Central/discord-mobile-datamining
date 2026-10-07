@@ -1,20 +1,13 @@
 // _runtime/06334_ScrollableContainer.js
-import react2 from "00019_react.js";
-import Fragment from "react/00021_Fragment.js";
-import BottomSheetDraggableScrollable2 from "06335_BottomSheetDraggableScrollable.js";
-import BottomSheetRefreshControlDefault from "06336_BottomSheetRefreshControl.js";
-import react_native from "06338_react-native.js";
+import BottomSheetDraggableScrollable from "06335_BottomSheetDraggableScrollable.js";
+import _modDef6336 from "metro/06336__.js";
+import _mod6338 from "metro/06338__.js";
+import noop from "metro/00019__.js";
 
-const forwardRef = react2.forwardRef;
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 
-export const ScrollableContainer = forwardRef(function ScrollableContainer(arg0, ref) {
-  let ScrollableComponent;
-  let nativeGesture;
-  let onRefresh;
-  let progressViewOffset;
-  let refreshControl;
-  let refreshing;
+export const ScrollableContainer = fn(19).forwardRef(function ScrollableContainer(arg0, ref) {
   ({ nativeGesture, refreshControl, onRefresh } = arg0);
   ({ refreshing, progressViewOffset, ScrollableComponent } = arg0);
   const merged = Object.assign(
@@ -28,25 +21,31 @@ export const ScrollableContainer = forwardRef(function ScrollableContainer(arg0,
       ScrollableComponent: 0,
     }),
   );
-  const BottomSheetDraggableScrollable = BottomSheetDraggableScrollable2.BottomSheetDraggableScrollable;
+  const obj = { scrollableGesture: nativeGesture, children: null };
   const merged1 = Object.assign(merged);
-  const tmp6 = (
-    <BottomSheetDraggableScrollable scrollableGesture={nativeGesture}>{null}</BottomSheetDraggableScrollable>
-  );
+  obj.children = <ScrollableComponent ref={ref} />;
+  const tmp6 = jsx(BottomSheetDraggableScrollable.BottomSheetDraggableScrollable, {
+    scrollableGesture: nativeGesture,
+    children: null,
+  });
   let tmp2Result = tmp6;
   if (onRefresh) {
-    BottomSheetRefreshControlDefault;
-    tmp2Result = (
-      <tmp9
-        scrollableGesture={nativeGesture}
-        refreshing={refreshing}
-        progressViewOffset={progressViewOffset}
-        onRefresh={onRefresh}
-        style={react_native.styles.container}
-      >
-        {tmp6}
-      </tmp9>
-    );
+    const obj3 = {
+      scrollableGesture: nativeGesture,
+      refreshing,
+      progressViewOffset,
+      onRefresh,
+      style: _mod6338.styles.container,
+      children: tmp6,
+    };
+    tmp2Result = jsx(_modDef6336, {
+      scrollableGesture: nativeGesture,
+      refreshing,
+      progressViewOffset,
+      onRefresh,
+      style: _mod6338.styles.container,
+      children: tmp6,
+    });
   }
   return tmp2Result;
 });

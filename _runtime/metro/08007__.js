@@ -1,43 +1,41 @@
 // _runtime/metro/08007__.js
-import normalizeColor2 from "../08000_normalizeColor.js";
+import colorPropType from "../08000_colorPropType.js";
 import _mod8008 from "08008__.js";
-import normalizeColor3 from "../08009_normalizeColor.js";
+import merged12 from "../08009_merged1.js";
 import merged22 from "../08010_merged2.js";
-import "module_4713";
-import module_4713_mod from "04713__.js";
+import emptyFunction_mod from "04713__.js";
 
-let module_4713;
-const obj = {
-  backfaceVisibility: module_4713.oneOf(["visible", "hidden"]),
-  backgroundColor: normalizeColor2,
-  borderColor: normalizeColor2,
-  borderTopColor: normalizeColor2,
-  borderRightColor: normalizeColor2,
-  borderBottomColor: normalizeColor2,
-  borderLeftColor: normalizeColor2,
-  borderStartColor: normalizeColor2,
-  borderEndColor: normalizeColor2,
-  borderRadius: module_4713.number,
-  borderTopLeftRadius: module_4713.number,
-  borderTopRightRadius: module_4713.number,
-  borderTopStartRadius: module_4713.number,
-  borderTopEndRadius: module_4713.number,
-  borderBottomLeftRadius: module_4713.number,
-  borderBottomRightRadius: module_4713.number,
-  borderBottomStartRadius: module_4713.number,
-  borderBottomEndRadius: module_4713.number,
-  borderStyle: module_4713.oneOf(["solid", "dotted", "dashed"]),
-  borderWidth: module_4713.number,
-  borderTopWidth: module_4713.number,
-  borderRightWidth: module_4713.number,
-  borderBottomWidth: module_4713.number,
-  borderLeftWidth: module_4713.number,
-  opacity: module_4713.number,
-  elevation: module_4713.number,
-};
+const obj = {};
 const size = Object.assign(_mod8008);
-const normalizeColor = Object.assign(normalizeColor3);
+const merged1 = Object.assign(merged12);
 const merged2 = Object.assign(merged22);
-module_4713 = module_4713_mod;
+let emptyFunction = emptyFunction_mod;
+obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);
+obj.backgroundColor = colorPropType;
+obj.borderColor = colorPropType;
+obj.borderTopColor = colorPropType;
+obj.borderRightColor = colorPropType;
+obj.borderBottomColor = colorPropType;
+obj.borderLeftColor = colorPropType;
+obj.borderStartColor = colorPropType;
+obj.borderEndColor = colorPropType;
+obj.borderRadius = emptyFunction.number;
+obj.borderTopLeftRadius = emptyFunction.number;
+obj.borderTopRightRadius = emptyFunction.number;
+obj.borderTopStartRadius = emptyFunction.number;
+obj.borderTopEndRadius = emptyFunction.number;
+obj.borderBottomLeftRadius = emptyFunction.number;
+obj.borderBottomRightRadius = emptyFunction.number;
+obj.borderBottomStartRadius = emptyFunction.number;
+obj.borderBottomEndRadius = emptyFunction.number;
+let emptyFunction = emptyFunction_mod;
+obj.borderStyle = emptyFunction.oneOf(["solid", "dotted", "dashed"]);
+obj.borderWidth = emptyFunction.number;
+obj.borderTopWidth = emptyFunction.number;
+obj.borderRightWidth = emptyFunction.number;
+obj.borderBottomWidth = emptyFunction.number;
+obj.borderLeftWidth = emptyFunction.number;
+obj.opacity = emptyFunction.number;
+obj.elevation = emptyFunction.number;
 
 export default obj;

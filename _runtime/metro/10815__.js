@@ -1,22 +1,19 @@
 // _runtime/metro/10815__.js
-import RNIapAmazonModule from "../10807_RNIapAmazonModule.js";
-import RNIapModule from "../10808_RNIapModule.js";
-import _mod10809 from "10809__.js";
-import _mod10816 from "10816__.js";
+const require = globalThis.__r;
 
-for (const key10013 in RNIapAmazonModule) {
-  exports[key10013] = RNIapAmazonModule[key10013];
+for (const key10013 in require("RNIapAmazonModule")) {
+  arg5[key10013] = require("RNIapAmazonModule")[key10013];
   continue;
 }
-for (const key10017 in RNIapModule) {
-  exports[key10017] = RNIapModule[key10017];
+for (const key10017 in require("10808__.js")) {
+  arg5[key10017] = require("10808__.js")[key10017];
   continue;
 }
-for (const key10021 in _mod10809) {
-  exports[key10021] = _mod10809[key10021];
+for (const key10021 in require("10809__.js")) {
+  arg5[key10021] = require("10809__.js")[key10021];
   continue;
 }
-for (const key10025 in _mod10816) {
-  exports[key10025] = _mod10816[key10025];
+for (const key10025 in require("10816__.js")) {
+  arg5[key10025] = require("10816__.js")[key10025];
   continue;
 }

@@ -1,21 +1,19 @@
 // _runtime/metro/06396__.js
-import _slicedToArray2 from "06394__slicedToArray.js";
-import _slicedToArray from "06349__slicedToArray.js";
-import react from "../00019_react.js";
+import _mod6394 from "06394__.js";
+import _slicedToArray from "06349__.js";
 
-let isFirstLayoutComplete;
-
-let c3;
-let closure_4;
-let hasOwnProperty;
-let metroRequire;
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = react);
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
 function useOnLoad(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = hasOwnProperty(false);
-  _false(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete() && !ref.current;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = hasOwnProperty(false);
+  React3(() => {
+    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
+    if (isFirstLayoutComplete) {
+      isFirstLayoutComplete = !ref.current;
+    }
     if (isFirstLayoutComplete) {
       ref.current = true;
       f92235();
@@ -24,25 +22,22 @@ function useOnLoad(arg0, arg1) {
 }
 
 export const useOnListLoad = (recyclerViewManager, onLoad) => {
-  let closure_129_3;
-  let tmp3;
-  let closure_0 = recyclerViewManager;
-  let closure_1 = onLoad;
-  let closure_2 = hasOwnProperty(Date.now());
-  [tmp3, closure_129_3] = metroRequire(false);
-  _slicedToArray(metroRequire(false), 2);
+  let isFirstLayoutComplete = recyclerViewManager;
+  let f92235 = onLoad;
+  hasOwnProperty(Date.now());
+  [tmp3, closure_3] = timestampProducer(false);
   const dataLength = recyclerViewManager.getDataLength();
-  let obj = _slicedToArray2;
-  const requestAnimationFrame = obj.useUnmountAwareAnimationFrame().requestAnimationFrame;
+  const tmp2 = _slicedToArray(timestampProducer(false), 2);
+  const requestAnimationFrame = _mod6394.useUnmountAwareAnimationFrame().requestAnimationFrame;
   const items = [dataLength];
-  React3(() => {
+  React4(() => {
     closure_2.current = Date.now();
   }, items);
   if (typeof useOnLoad === "function") {
-    closure_0 = recyclerViewManager;
-    const f92235 = () => {
+    isFirstLayoutComplete = recyclerViewManager;
+    f92235 = () => {
       const elapsedTimeInMs = Date.now() - ref.current;
-      const tmp = closure_4(() => {
+      requestAnimationFrame(() => {
         elapsedTimeInMs.isFirstPaintOnUiComplete = true;
         if (f92235 != null) {
           const obj = { elapsedTimeInMs };
@@ -51,15 +46,19 @@ export const useOnListLoad = (recyclerViewManager, onLoad) => {
         closure_2_3(true);
       });
     };
-    closure_2 = hasOwnProperty(false);
-    _false(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete() && !ref.current;
+    hasOwnProperty(false);
+    React3(() => {
+      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
+      if (isFirstLayoutComplete) {
+        isFirstLayoutComplete = !ref.current;
+      }
       if (isFirstLayoutComplete) {
         ref.current = true;
         f92235();
       }
     });
-    return { isLoaded: tmp3 };
+    const obj2 = { isLoaded: tmp3 };
+    return obj2;
   } else {
     throw new TypeError("Trying to call a non-function");
   }

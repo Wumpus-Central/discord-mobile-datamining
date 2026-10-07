@@ -2,8 +2,7 @@
 import _mod4467 from "04467__.js";
 
 const fn = function _(moment) {
-  let items1;
-  let closure_0 = {
+  closure_0 = {
     1: "\u0967",
     2: "\u0968",
     3: "\u0969",
@@ -15,18 +14,7 @@ const fn = function _(moment) {
     9: "\u096F",
     0: "\u0966",
   };
-  let closure_1 = {
-    "\u0967": "1",
-    "\u0968": "2",
-    "\u0969": "3",
-    "\u096a": "4",
-    "\u096b": "5",
-    "\u096c": "6",
-    "\u096d": "7",
-    "\u096e": "8",
-    "\u096f": "9",
-    "\u0966": "0",
-  };
+  closure_1 = { "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9", "०": "0" };
   const items = [
     /^जन/i,
     /^फ़र|फर/i,
@@ -41,7 +29,6 @@ const fn = function _(moment) {
     /^नव|नवं/i,
     /^दिसं|दिस/i,
   ];
-  const defineLocale = moment.defineLocale;
   const obj = {
     months: {
       format:
@@ -76,7 +63,7 @@ const fn = function _(moment) {
     },
     monthsParse: items,
     longMonthsParse: items,
-    shortMonthsParse: items1,
+    shortMonthsParse: null,
     monthsRegex:
       /^(जनवरी|जन\.?|फ़रवरी|फरवरी|फ़र\.?|मार्च?|अप्रैल|अप्रै\.?|मई?|जून?|जुलाई|जुल\.?|अगस्त|अग\.?|सितम्बर|सितंबर|सित\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर|नव\.?|दिसम्बर|दिसंबर|दिस\.?)/i,
     monthsShortRegex:
@@ -116,7 +103,6 @@ const fn = function _(moment) {
     },
     meridiemParse: /रात|सुबह|दोपहर|शाम/,
     meridiemHour(arg0, arg1) {
-      let tmp;
       let num = arg0;
       if (12 === arg0) {
         num = 0;
@@ -126,21 +112,19 @@ const fn = function _(moment) {
         if (num >= 4) {
           sum = num + 12;
         }
-        tmp = sum;
+        let tmp = sum;
       } else {
         tmp = num;
         if ("\u0938\u0941\u092C\u0939" !== arg1) {
-          let sum2;
           if ("\u0926\u094B\u092A\u0939\u0930" === arg1) {
             let sum1 = num;
             if (num < 10) {
               sum1 = num + 12;
             }
-            sum2 = sum1;
+            let sum2 = sum1;
           } else if ("\u0936\u093E\u092E" === arg1) {
             sum2 = num + 12;
           }
-          tmp = sum2;
         }
       }
       return tmp;
@@ -166,18 +150,9 @@ const fn = function _(moment) {
     },
     week: { dow: 0, doy: 6 },
   };
-  ({
-    format:
-      "\u091C\u0928\u0935\u0930\u0940_\u092B\u093C\u0930\u0935\u0930\u0940_\u092E\u093E\u0930\u094D\u091A_\u0905\u092A\u094D\u0930\u0948\u0932_\u092E\u0908_\u091C\u0942\u0928_\u091C\u0941\u0932\u093E\u0908_\u0905\u0917\u0938\u094D\u0924_\u0938\u093F\u0924\u092E\u094D\u092C\u0930_\u0905\u0915\u094D\u091F\u0942\u092C\u0930_\u0928\u0935\u092E\u094D\u092C\u0930_\u0926\u093F\u0938\u092E\u094D\u092C\u0930".split(
-        "_",
-      ),
-    standalone:
-      "\u091C\u0928\u0935\u0930\u0940_\u092B\u0930\u0935\u0930\u0940_\u092E\u093E\u0930\u094D\u091A_\u0905\u092A\u094D\u0930\u0948\u0932_\u092E\u0908_\u091C\u0942\u0928_\u091C\u0941\u0932\u093E\u0908_\u0905\u0917\u0938\u094D\u0924_\u0938\u093F\u0924\u0902\u092C\u0930_\u0905\u0915\u094D\u091F\u0942\u092C\u0930_\u0928\u0935\u0902\u092C\u0930_\u0926\u093F\u0938\u0902\u092C\u0930".split(
-        "_",
-      ),
-  });
-  items1 = [/^जन/i, /^फ़र/i, /^मार्च/i, /^अप्रै/i, /^मई/i, /^जून/i, /^जुल/i, /^अग/i, /^सित/i, /^अक्टू/i, /^नव/i, /^दिस/i];
-  return defineLocale("hi", obj);
+  const items1 = [/^जन/i, /^फ़र/i, /^मार्च/i, /^अप्रै/i, /^मई/i, /^जून/i, /^जुल/i, /^अग/i, /^सित/i, /^अक्टू/i, /^नव/i, /^दिस/i];
+  obj.shortMonthsParse = items1;
+  return moment.defineLocale("hi", obj);
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
@@ -187,7 +162,6 @@ if (typeof exports === "object") {
   }
 }
 if (typeof globalThis.define === "function") {
-  const define2 = globalThis.define;
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], fn);
   }

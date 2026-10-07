@@ -1451,7 +1451,7 @@ const obj = {
   game_die: ["dado", "juego"],
   jigsaw: ["conectar", "pieza", "pieza de puzle", "pista", "puzle", "rompecabezas"],
   teddy_bear: ["juguete", "osito de peluche", "oso", "peluche"],
-  "pi\u00f1ata": ["caballito", "celebraci\u00F3n", "fiesta", "pi\u00F1ata"],
+  piñata: ["caballito", "celebraci\u00F3n", "fiesta", "pi\u00F1ata"],
   mirror_ball: ["bailar", "bola de espejos", "brillar", "disco", "discoteca", "fiesta"],
   nesting_dolls: ["babushka", "mamushka", "matrioska", "mu\u00F1eca rusa", "rusia"],
   spades: ["carta", "juego", "palo", "palo de picas", "picas"],

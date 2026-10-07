@@ -1,17 +1,15 @@
 // _runtime/00333_unstable_setImageComponentDecorator.js
-import react2 from "00019_react.js";
-import useMergeRefsDefault from "00334_useMergeRefs.js";
+import _modDef334 from "metro/00334__.js";
+import noop from "metro/00019__.js";
 
-let importDefault;
-
-const useRef = react2.useRef;
+const useRef = fn(19).useRef;
 const set = new Set();
 
 export function unstable_setImageComponentDecorator(_BaseImage) {
-  let closure_1_2 = _BaseImage;
+  global = _BaseImage;
 }
 export function unstable_getImageComponentDecorator() {
-  return React2;
+  return global;
 }
 export const unstable_registerImageAttachedCallback = function unstable_registerImageAttachedCallback(arg0) {
   set.add(arg0);
@@ -24,12 +22,11 @@ export const useWrapRefWithImageAttachedCallbacks = function useWrapRefWithImage
   let tmp = useRef(null);
   if (null == tmp.current) {
     tmp.current = (arg0) => {
-      ref = arg0;
       if (null == arg0) {
         if (ref.current.length > 0) {
           let current = tmp3.current;
           const item = current.forEach((fn) => fn());
-          ref.current = [];
+          tmp3.current = [];
         }
       } else {
         const item1 = set.forEach((fn) => {
@@ -42,5 +39,5 @@ export const useWrapRefWithImageAttachedCallbacks = function useWrapRefWithImage
       }
     };
   }
-  return useMergeRefsDefault(ref, tmp.current);
+  return _modDef334(ref, tmp.current);
 };

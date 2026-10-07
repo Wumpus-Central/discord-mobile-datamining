@@ -1,6 +1,4 @@
 // _runtime/07330_FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.js
-import _mod7328 from "metro/07328__.js";
-import validateFileType from "07331_validateFileType.js";
 import AudioTypes from "07337_AudioTypes.js";
 import ImageTypes from "07338_ImageTypes.js";
 import VideoTypes from "07339_VideoTypes.js";
@@ -9,17 +7,17 @@ import OtherTypes from "07341_OtherTypes.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
-let hasOwnProperty;
-
+const FileTypes = require;
 class FileTypes {
   constructor() {
-    _classCallCheck(this, FileTypes);
+    tmp = c2(this, FileTypes);
+    return;
   }
 }
 const entry = {
   key: "getInfoByName",
   value: function getInfoByName(key10027) {
-    return _mod7328.fetchFromObject(FileTypes, key10027.toUpperCase());
+    return FileTypes(7328).fetchFromObject(FileTypes, key10027.toUpperCase());
   },
 };
 let items = [
@@ -27,7 +25,7 @@ let items = [
   {
     key: "getSignaturesByName",
     value: function getSignaturesByName(item10079) {
-      return _mod7328.fetchFromObject(FileTypes, item10079.toUpperCase()).signatures;
+      return FileTypes(7328).fetchFromObject(FileTypes, item10079.toUpperCase()).signatures;
     },
   },
   {
@@ -54,8 +52,7 @@ let items = [
           } while (fileChunk[tmp4 + num2] === tmp2.sequence[num2 - num]);
           flag = false;
         }
-        let tmp17 = flag;
-        if (tmp17) {
+        if (flag) {
           iter.return();
           return nextResult;
         }
@@ -75,11 +72,11 @@ let items = [
         let str5 = "heic";
         if (!mapped.includes("heic")) {
           let str6 = "flv";
-          if (!validateFileType.isFLV(fileChunk)) {
+          if (!FileTypes(7331).isFLV(fileChunk)) {
             let str8 = "mp4";
-            if (validateFileType.isM4V(fileChunk)) {
+            if (FileTypes(7331).isM4V(fileChunk)) {
               str8 = "mp4";
-              if (!validateFileType.isHEIC(fileChunk)) {
+              if (!FileTypes(7331).isHEIC(fileChunk)) {
                 str8 = "m4v";
               }
             }
@@ -94,12 +91,12 @@ let items = [
           return items.includes(item);
         })
       ) {
-        const result = _mod7328.findMatroskaDocTypeElements(fileChunk);
+        const result = FileTypes(7328).findMatroskaDocTypeElements(fileChunk);
         let str2 = "mkv";
         if ("mkv" !== result) {
           let str4;
           if ("webm" === result) {
-            if (validateFileType.isWEBM(fileChunk)) {
+            if (FileTypes(7331).isWEBM(fileChunk)) {
               str4 = "webm";
             }
           }
@@ -114,7 +111,7 @@ let items = [
             return items.includes(item);
           })
         ) {
-          if (_mod7328.isAvifStringIncluded(fileChunk)) {
+          if (FileTypes(7328).isAvifStringIncluded(fileChunk)) {
             str = "avif";
           }
         }
@@ -128,7 +125,6 @@ let items = [
       const iter = signaturesByName[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let sum;
         let tmp2 = nextResult;
         let num = 0;
         let flag = true;
@@ -140,7 +136,7 @@ let items = [
         }
         let length = tmp2.sequence.length;
         if (skippedBytes1) {
-          sum = length + tmp2.skippedBytes.length;
+          let sum = length + tmp2.skippedBytes.length;
         } else {
           sum = length;
         }
@@ -158,8 +154,7 @@ let items = [
           } while (fileChunk[tmp4 + num2] === tmp2.sequence[num2 - num]);
           flag = false;
         }
-        let tmp22 = flag;
-        if (tmp22) {
+        if (flag) {
           iter.return();
           return nextResult;
         }
@@ -170,7 +165,9 @@ let items = [
     key: "checkByFileType",
     value: function checkByFileType(fileChunk, avif) {
       hasOwnProperty = Object.prototype.hasOwnProperty;
-      if (hasOwnProperty.call(FileTypes, avif.toUpperCase())) {
+      const call = hasOwnProperty.call;
+      const formatted = avif.toUpperCase();
+      if (typeof call === "unknown" ? hasOwnProperty(formatted) : call(FileTypes, formatted)) {
         if (FileTypes.detectSignature(fileChunk, FileTypes.getSignaturesByName(avif.toUpperCase()))) {
           return true;
         }
@@ -229,7 +226,6 @@ _moduleResult.RTF = OtherTypes.OtherTypes.RTF;
 _moduleResult.SQLITE = OtherTypes.OtherTypes.SQLITE;
 _moduleResult.STL = OtherTypes.OtherTypes.STL;
 _moduleResult.TTF = OtherTypes.OtherTypes.TTF;
-const FileTypes_export = _moduleResult;
 
 export const FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = ["m4v", "flv", "mp4", "mkv", "webm", "avif", "heic"];
-export { FileTypes_export as FileTypes };
+export const FileTypes = _moduleResult;

@@ -1,14 +1,17 @@
 // _runtime/10181_AbstractParserWithWordBoundaryChecking.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import _classCallCheck_mod from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+let _classCallCheck = _classCallCheck_mod;
 class AbstractParserWithWordBoundaryChecking {
   constructor() {
-    _classCallCheck(this, AbstractParserWithWordBoundaryChecking);
+    tmp = closure_0(this, AbstractParserWithWordBoundaryChecking);
     this.cachedInnerPattern = null;
     this.cachedPattern = null;
+    return;
   }
 }
+_classCallCheck = AbstractParserWithWordBoundaryChecking;
 const entry = {
   key: "innerPatternHasChange",
   value: function innerPatternHasChange(arg0, arg1) {
@@ -27,13 +30,10 @@ const items = [
     key: "pattern",
     value: function pattern(arg0) {
       const self = this;
-      const tmp = this.cachedInnerPattern && !self.innerPatternHasChange(arg0, self.cachedInnerPattern);
       if (!tmp) {
         self.cachedInnerPattern = self.innerPattern(arg0);
         const _RegExp = RegExp;
         const _HermesInternal = HermesInternal;
-        const self2 = this;
-        const self3 = this;
         const regExp = new RegExp(
           "" + self.patternLeftBoundary() + self.cachedInnerPattern.source,
           self.cachedInnerPattern.flags,
@@ -50,13 +50,12 @@ const items = [
       let str = "";
       if (null !== index[1]) {
         str = "";
-        if (undefined !== index[1]) {
+        if (undefined !== tmp) {
           str = tmp;
         }
       }
       index.index = index.index + str.length;
-      const str2 = index[0];
-      index[0] = str2.substring(str.length);
+      index[0] = index[0].substring(str.length);
       let num = 2;
       if (2 < index.length) {
         do {
@@ -69,6 +68,5 @@ const items = [
     },
   },
 ];
-const AbstractParserWithWordBoundaryChecking_export = _createClass(AbstractParserWithWordBoundaryChecking, items);
 
-export { AbstractParserWithWordBoundaryChecking_export as AbstractParserWithWordBoundaryChecking };
+export const AbstractParserWithWordBoundaryChecking = _createClass(AbstractParserWithWordBoundaryChecking, items);

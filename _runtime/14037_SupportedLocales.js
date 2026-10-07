@@ -3,6 +3,9 @@ import _mod13986 from "metro/13986__.js";
 import GetOption from "13993_GetOption.js";
 import LookupSupportedLocales from "14020_LookupSupportedLocales.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const SupportedLocales = function SupportedLocales(arg0, arg1, arg2) {
   let str = "best fit";
   if (undefined !== arg2) {

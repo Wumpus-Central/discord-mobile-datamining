@@ -1,17 +1,12 @@
 // _runtime/metro/01925__.js
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "uk",
   pluralRuleFunction(arg0, arg1) {
-    let arr;
-    let str2;
-    let str6;
-    let tmp2;
-    const str = String(arg0);
-    const parts = str.split(".");
+    const parts = String(arg0).split(".");
     [arr, tmp2] = parts;
     let substr1 = Number(parts[0]) == arg0;
     let substr = substr1;
-    if (substr) {
+    if (substr1) {
       const first = parts[0];
       substr = first.slice(-1);
     }
@@ -29,9 +24,8 @@ const obj = {
           str8 = "few";
         }
       }
-      str2 = str8;
+      let str2 = str8;
     } else {
-      let str4;
       if (!tmp2) {
         if (1 == substr2) {
           str2 = "one";
@@ -40,7 +34,7 @@ const obj = {
       if (!tmp2) {
         if (substr2 >= 2) {
           if (substr2 <= 4) {
-            str4 = "few";
+            let str4 = "few";
             if (substr3 >= 12) {
               str4 = "few";
             }
@@ -66,5 +60,4 @@ const obj = {
     }
     return str2;
   },
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});

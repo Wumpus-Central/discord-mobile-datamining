@@ -1,9 +1,8 @@
 // _runtime/04972_copyArray.js
 
 export default function copyArray(arg0, arg1) {
-  let num;
   let ArrayResult = arg1;
-  if (!ArrayResult) {
+  if (!arg1) {
     const _Array = Array;
     ArrayResult = Array(length);
   }

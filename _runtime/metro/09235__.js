@@ -1,17 +1,10 @@
 // _runtime/metro/09235__.js
-import react from "../00019_react.js";
-import react_native from "../00017_react-native.js";
+import noop from "00019__.js";
+import get_ActivityIndicator from "00017__.js";
 import 09233__ from "09233__.js";
 
-let closure_4;
-
-let Platform;
-let _window;
-let c2;
-let c3;
-let map;
-({ useCallback: _window, useEffect: map, useRef: c2 } = react);
-({ NativeEventEmitter: c3, Platform } = react_native);
+({ useCallback: closure_0, useEffect: closure_1, useRef: c2 } = noop);
+({ NativeEventEmitter: c3, Platform } = get_ActivityIndicator);
 const nativeModule = module_9233.getNativeModule();
 
 export const useModal = (props) => {
@@ -20,26 +13,23 @@ export const useModal = (props) => {
   props = undefined;
   closure_4 = props(false);
   const tmp = props();
-  let closure_3 = tmp;
+  closure_3 = tmp;
   id(() => {
     closure_3.current = props;
   });
   const current = tmp.current;
   const items = [id, props];
-  const tmp3 = props(function(id) {
+  const tmp3 = props((id) => {
     if (id.id === id) {
       closure_4.current = true;
       if (props.onConfirm) {
         const _Date = Date;
-        const self = this;
-        const self2 = this;
-        const onConfirm = props.onConfirm;
-        const date1 = new Date(id.date);
-        onConfirm(date1);
+        const date1 = new Date(date);
+        props.onConfirm(date1);
       }
     }
   }, items);
-  let closure_6 = tmp3;
+  closure_6 = tmp3;
   const items1 = [id, props];
   const tmp4 = props((id) => {
     id = undefined;
@@ -53,7 +43,7 @@ export const useModal = (props) => {
       }
     }
   }, items1);
-  let closure_7 = tmp4;
+  closure_7 = tmp4;
   const items2 = [tmp4, tmp3, current, props];
   id(() => {
     let flag = false;
@@ -73,7 +63,7 @@ export const useModal = (props) => {
     }
   }, items2);
   const items3 = [current, props];
-  const tmp6 = id(() => {
+  id(() => {
     let flag = false;
     if (props.modal) {
       flag = false;
@@ -83,6 +73,7 @@ export const useModal = (props) => {
           open = current.open;
         }
         flag = open && !tmp3;
+        const tmp6 = open && !tmp3;
       }
     }
     if (flag) {
@@ -92,7 +83,7 @@ export const useModal = (props) => {
   }, items3);
   const items4 = [tmp4, tmp3];
   id(() => {
-    const obj = new _false(closure_4);
+    const obj = new React3(closure_4);
     obj.addListener("onConfirm", closure_6);
     obj.addListener("onCancel", closure_7);
     return () => {

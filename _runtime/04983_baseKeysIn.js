@@ -1,19 +1,27 @@
 // _runtime/04983_baseKeysIn.js
-import isObject from "00521_isObject.js";
-import isPrototype from "00545_isPrototype.js";
+import _mod521 from "metro/00521__.js";
+import _mod545 from "metro/00545__.js";
 import nativeKeysIn from "04984_nativeKeysIn.js";
 
 export default function baseKeysIn(obj) {
-  if (isObject(obj)) {
+  if (_mod521(obj)) {
+    const tmp3 = _mod545(obj);
     const items = [];
-    const tmp3 = isPrototype(obj);
-    for (const key10017 in obj) {
-      let tmp6 = "constructor" != key10017;
-      if (!tmp6) {
-        let callResult = !tmp3 && hasOwnProperty.call(obj, key10017);
-        tmp6 = callResult;
+    for (const key10017 in arg0) {
+      let tmp8 = "constructor" != key10017;
+      if (!tmp8) {
+        if (tmp3) {
+          tmp8 = !tmp3;
+        } else {
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let callResult = hasOwnProperty(key10017);
+          } else {
+            callResult = call(arg0, key10017);
+          }
+        }
       }
-      if (!tmp6) {
+      if (!tmp8) {
         continue;
       } else {
         let arr = items.push(key10017);

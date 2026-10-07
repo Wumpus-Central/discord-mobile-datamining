@@ -24,17 +24,20 @@ function deepDiffer(name, name2, arg2, arg3) {
           flag8 = tmp.unsafelyIgnoreFunctions;
         }
         if (null == flag8) {
-          let tmp9 = !React;
-          if (React) {
-            tmp9 = !React.onDifferentFunctionsIgnored;
+          let tmp9 = !global;
+          if (global) {
+            tmp9 = !global.onDifferentFunctionsIgnored;
           }
           if (!tmp9) {
-            tmp9 = tmp && "unsafelyIgnoreFunctions" in tmp;
-            const tmp11 = tmp && "unsafelyIgnoreFunctions" in tmp;
+            let tmp11 = tmp;
+            if (tmp) {
+              tmp11 = "unsafelyIgnoreFunctions" in tmp;
+            }
+            tmp9 = tmp11;
           }
           flag8 = true;
           if (!tmp9) {
-            const result = React.onDifferentFunctionsIgnored(name.name, name2.name);
+            const result = global.onDifferentFunctionsIgnored(name.name, name2.name);
             flag8 = true;
           }
         }
@@ -54,7 +57,7 @@ function deepDiffer(name, name2, arg2, arg3) {
                   return true;
                 } else {
                   let num5 = 0;
-                  if (0 < name.length) {
+                  if (0 < length) {
                     while (!deepDiffer(name[num5], name2[num5], num2 - 1, tmp)) {
                       num5 = num5 + 1;
                     }
@@ -62,18 +65,18 @@ function deepDiffer(name, name2, arg2, arg3) {
                   }
                 }
               } else {
-                for (const key10008 in name) {
-                  if (!deepDiffer(name[key10008], name2[key10008], num2 - 1, tmp)) {
+                for (const key10008 in arg0) {
+                  if (!deepDiffer(arg0[key10008], arg1[key10008], num2 - 1, tmp)) {
                     continue;
                   } else {
                     let flag = true;
                     return true;
                   }
                 }
-                for (const key10012 in name2) {
-                  if (undefined !== name[key10012]) {
+                for (const key10012 in arg1) {
+                  if (undefined !== arg0[key10012]) {
                     continue;
-                  } else if (undefined === name2[key10012]) {
+                  } else if (undefined === arg1[key10012]) {
                     continue;
                   } else {
                     let flag2 = true;
@@ -93,7 +96,7 @@ function deepDiffer(name, name2, arg2, arg3) {
   }
 }
 deepDiffer.unstable_setLogListeners = function unstable_setLogListeners(arg0) {
-  let closure_1_0 = arg0;
+  global = arg0;
 };
 
 export default deepDiffer;

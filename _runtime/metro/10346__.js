@@ -1,6 +1,5 @@
 // _runtime/metro/10346__.js
 import repeatedTimeunitPattern from "../10174_repeatedTimeunitPattern.js";
-import findMostLikelyADYear from "../10175_findMostLikelyADYear.js";
 import AbstractParserWithWordBoundaryChecking from "../10181_AbstractParserWithWordBoundaryChecking.js";
 import _mod10343 from "10343__.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -9,22 +8,28 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ENMonthNameParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const matchAnyPatternResult = repeatedTimeunitPattern.matchAnyPattern(_mod10343.MONTH_DICTIONARY);
 const regExp = new RegExp(
   "((?:in)\\s*)?(" +
-    matchAnyPatternResult +
+    repeatedTimeunitPattern.matchAnyPattern(_mod10343.MONTH_DICTIONARY) +
     ")\\s*(?:[,-]?\\s*(" +
     _mod10343.YEAR_PATTERN +
     ")?)?(?=[^\\s\\w]|\\s+[^0-9]|\\s+$|$)",
@@ -32,17 +37,22 @@ const regExp = new RegExp(
 );
 class ENMonthNameParser {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ENMonthNameParser);
-    const obj = _getPrototypeOf(ENMonthNameParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = c2(this, ENMonthNameParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENMonthNameParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return c3(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
 _inherits(ENMonthNameParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -57,33 +67,31 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
-      const str = index[2];
-      const formatted = str.toLowerCase();
+      const formatted = index[2].toLowerCase();
       if (index[0].length <= 3) {
-        if (!_mod10343.FULL_MONTH_NAME_DICTIONARY[formatted]) {
+        if (!ENMonthNameParser(10343).FULL_MONTH_NAME_DICTIONARY[formatted]) {
           return null;
         }
       }
       let str2 = index[1];
-      index = index.index;
       if (!str2) {
         str2 = "";
       }
-      const parsingResult = createParsingResult.createParsingResult(index + str2.length, index.index + index[0].length);
+      const parsingResult = createParsingResult.createParsingResult(
+        index.index + str2.length,
+        index.index + index[0].length,
+      );
       const start = parsingResult.start;
       start.imply("day", 1);
-      const tmp9 = _mod10343.MONTH_DICTIONARY[formatted];
+      const tmp9 = ENMonthNameParser(10343).MONTH_DICTIONARY[formatted];
       const start2 = parsingResult.start;
       start2.assign("month", tmp9);
       if (index[3]) {
         const start4 = parsingResult.start;
-        start4.assign("year", _mod10343.parseYear(index[3]));
+        start4.assign("year", ENMonthNameParser(10343).parseYear(index[3]));
       } else {
         const start3 = parsingResult.start;
-        start3.imply(
-          "year",
-          findMostLikelyADYear.findYearClosestToRef(createParsingResult.createParsingResult.refDate, 1, tmp9),
-        );
+        start3.imply("year", ENMonthNameParser(10175).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
       }
       return parsingResult;
     },

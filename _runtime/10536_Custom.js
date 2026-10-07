@@ -1,24 +1,14 @@
 // _runtime/10536_Custom.js
-import react_native from "00017_react-native.js";
-import Fragment from "react/00021_Fragment.js";
-import react from "00019_react.js";
+import noop from "metro/00019__.js";
 
-const View = react_native.View;
-let jsx = Fragment.jsx;
+const require = fn;
+const View = fn(17).View;
+let jsx = fn(21).jsx;
 
 export const Custom = (activeDotStyle) => {
-  let animValue;
-  let closure_3;
-  let closure_6;
-  let closure_7;
-  let closure_8;
-  let closure_9;
-  let customReanimatedStyle;
-  let horizontal;
   activeDotStyle = activeDotStyle.activeDotStyle;
   const dotStyle = activeDotStyle.dotStyle;
   ({ progress: View, horizontal } = activeDotStyle);
-  const tmp = undefined === horizontal || horizontal;
   jsx = tmp;
   const data = activeDotStyle.data;
   let num = activeDotStyle.size;
@@ -50,8 +40,6 @@ export const Custom = (activeDotStyle) => {
           }
           if (typeof height1 !== "string") {
             let num2 = num;
-            const _Math2 = Math;
-            const max2 = Math.max;
             if (num == null) {
               num2 = 0;
             }
@@ -69,8 +57,7 @@ export const Custom = (activeDotStyle) => {
             if (num4 == null) {
               num4 = 0;
             }
-            const _Math = Math;
-            const max2Result = max2(num2, num3, num4);
+            const bound = Math.max(num2, num3, num4);
             if (num == null) {
               num = 0;
             }
@@ -91,44 +78,42 @@ export const Custom = (activeDotStyle) => {
             let obj = {
               justifyContent: "space-between",
               alignSelf: "center",
-              minWidth: max2Result,
-              minHeight: max(num, num5, num6),
+              minWidth: bound,
+              minHeight: Math.max(num, num5, num6),
             };
             const items = [obj, ,];
+            const obj2 = { style: null, children: null };
             items[1] = tmp ? { flexDirection: "row" } : { flexDirection: "column" };
             items[2] = tmp2;
-            const obj2 = {
-              style: items,
-              children: data.map((item, index) => {
-                let tmp2Result;
-                activeDotStyle = index;
-                const obj = {
-                  index,
-                  size: num,
-                  count: data.length,
-                  dotStyle,
-                  animValue,
-                  horizontal: !closure_3,
-                  activeDotStyle,
-                  customReanimatedStyle,
-                  onPress() {
-                    let tmpResult;
-                    if (closure_7 != null) {
-                      tmpResult = tmp(index);
-                    }
-                    return tmpResult;
-                  },
-                  accessibilityLabel: "Slide " + index + 1 + " of " + data.length + " - " + closure_9,
-                  children: tmp2Result,
-                };
-                const PaginationItem = activeDotStyle(dotStyle[3]).PaginationItem;
-                tmp2Result = undefined;
-                if (closure_6 != null) {
-                  tmp2Result = tmp2(item, index);
-                }
-                return closure_3(PaginationItem, obj, index);
-              }),
-            };
+            obj2.style = items;
+            obj2.children = data.map((item, index) => {
+              activeDotStyle = index;
+              const obj = {
+                index,
+                size: num,
+                count: data.length,
+                dotStyle,
+                animValue,
+                horizontal: !closure_3,
+                activeDotStyle,
+                customReanimatedStyle,
+                onPress() {
+                  let tmpResult;
+                  if (closure_2_7 != null) {
+                    tmpResult = tmp(closure_0);
+                  }
+                  return tmpResult;
+                },
+                accessibilityLabel: "Slide " + index + 1 + " of " + data.length + " - " + closure_9,
+                children: null,
+              };
+              let tmp2Result;
+              if (closure_6 != null) {
+                tmp2Result = tmp2(item, index);
+              }
+              obj.children = tmp2Result;
+              return closure_3(activeDotStyle(dotStyle[3]).PaginationItem, obj, index);
+            });
             return jsx(View, obj2);
           }
         }

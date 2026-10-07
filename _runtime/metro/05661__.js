@@ -3378,7 +3378,7 @@ const obj = {
   game_die: ["dice", "die", "entertainment", "game"],
   jigsaw: ["clue", "interlocking", "jigsaw", "piece", "puzzle"],
   teddy_bear: ["bear", "plaything", "plush", "stuffed", "teddy", "toy"],
-  "pi\u00f1ata": [
+  piñata: [
     "candy",
     "celebrate",
     "celebration",

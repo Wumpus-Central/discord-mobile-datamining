@@ -1,31 +1,27 @@
 // _runtime/metro/06367__.js
-import react2 from "../06368_react.js";
-import _slicedToArray from "06349__slicedToArray.js";
-import react from "../00019_react.js";
+import _mod6368 from "06368__.js";
+import _slicedToArray from "06349__.js";
 
-let c3;
-let closure_4;
-({ useState: c3, useCallback: closure_4 } = react);
+require = fn;
+const noop = fn(19);
+({ useState: c3, useCallback: closure_4 } = noop);
 
 export const useLayoutState = function useLayoutState(arg0) {
-  let closure_0;
-  let first;
-  [first, closure_0] = _false(arg0);
-  const obj = react2;
-  const recyclerViewContext = obj.useRecyclerViewContext();
-  const items = [first];
+  const tmp = _slicedToArray(React3(arg0), 2);
+  closure_0 = tmp[1];
+  const recyclerViewContext = _mod6368.useRecyclerViewContext();
+  const items = [tmp[0]];
   const items1 = [recyclerViewContext];
-  items[1] = React3((arg0, arg1) => {
+  items[1] = React4((arg0, arg1) => {
     closure_0 = arg0;
-    const tmp = closure_0((arg0) => {
+    closure_0((arg0) => {
       let tmpResult = closure_0;
       if (typeof closure_0 === "function") {
         tmpResult = tmp(arg0);
       }
       return tmpResult;
     });
-    const tmp2 = arg1;
-    if (!tmp2) {
+    if (!arg1) {
       if (recyclerViewContext != null) {
         recyclerViewContext.layout();
       }

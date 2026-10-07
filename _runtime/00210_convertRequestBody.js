@@ -1,26 +1,27 @@
 // _runtime/00210_convertRequestBody.js
-import _mod203 from "metro/00203__.js";
-import _mod211 from "metro/00211__.js";
+import Blob from "00203_Blob.js";
+import FormData from "00211_FormData.js";
 import binaryToBase64 from "00212_binaryToBase64.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export default function convertRequestBody(string) {
-  let tmp2;
-  let tmp3Result;
   if (typeof string === "string") {
-    tmp2 = { string };
     const obj2 = { string };
-  } else if (string instanceof _mod203.default) {
-    tmp2 = { blob: string.data };
+    let tmp2 = obj2;
+  } else if (string instanceof Blob.default) {
     const obj3 = { blob: string.data };
-  } else if (string instanceof _mod211.default) {
-    tmp2 = { formData: string.getParts() };
+    tmp2 = obj3;
+  } else if (string instanceof FormData.default) {
     const obj4 = { formData: string.getParts() };
+    tmp2 = obj4;
   } else {
     const _ArrayBuffer = ArrayBuffer;
     if (string instanceof ArrayBuffer) {
-      const obj = { base64: tmp3Result.default(string) };
+      const obj = { base64: binaryToBase64.default(string) };
       tmp2 = obj;
-      tmp3Result = binaryToBase64;
+      const tmp3Result = binaryToBase64;
     } else {
       const _ArrayBuffer2 = ArrayBuffer;
       tmp2 = string;

@@ -4853,7 +4853,7 @@ const obj = {
     "wypchany",
     "zabawka",
   ],
-  "pi\u00f1ata": ["cinco de mayo", "cukierki", "meksyk", "pinata", "piniata", "\u015Bwi\u0119to", "tradycja", "zabawa"],
+  piñata: ["cinco de mayo", "cukierki", "meksyk", "pinata", "piniata", "\u015Bwi\u0119to", "tradycja", "zabawa"],
   mirror_ball: ["dyskoteka", "kula dyskotekowa", "migotanie", "przyj\u0119cie", "taniec"],
   nesting_dolls: [
     "drewniana",

@@ -1,8 +1,6 @@
 // _runtime/01264_read.js
 
 export const read = (self, arg1, arg2, exponent, arg4) => {
-  let diff3;
-  let sum6;
   let num = 0;
   const diff = 8 * arg4 - exponent;
   if (arg2) {
@@ -43,13 +41,13 @@ export const read = (self, arg1, arg2, exponent, arg4) => {
   }
   const diff2 = (num3 << diff1) - num3;
   if (0 === tmp10 >> -tmp11) {
-    diff3 = num3 - tmp17;
-    sum6 = tmp15;
-  } else if (tmp10 >> -tmp11 === diff2) {
+    let diff3 = num3 - tmp17;
+    let sum6 = tmp15;
+  } else if (tmp18 === diff2) {
     let num6 = NaN;
     if (!tmp15) {
       let num7 = num3;
-      if (self[arg1 + num] >> 7) {
+      if (tmp6) {
         num7 = -1;
       }
       num6 = Infinity * num7;
@@ -66,14 +64,13 @@ export const read = (self, arg1, arg2, exponent, arg4) => {
   return num3 * sum6 * Math.pow(2, diff3 - exponent);
 };
 export const write = (self, arg1, arg2, arg3, exponent, arg5) => {
-  let num8;
   let num = 0;
   const diff = 8 * arg5 - exponent;
   if (23 === exponent) {
     const _Math = Math;
     const _Math2 = Math;
+    num = Math.pow(2, -24) - Math.pow(2, -77);
     const powResult = Math.pow(2, -24);
-    num = powResult - Math.pow(2, -77);
   }
   let num5 = 0;
   if (!arg3) {
@@ -84,7 +81,7 @@ export const write = (self, arg1, arg2, arg3, exponent, arg5) => {
     num7 = 1;
   }
   if (arg1 < 0) {
-    num8 = 1;
+    let num8 = 1;
   } else {
     num8 = 0;
     if (0 === arg1) {
@@ -95,10 +92,7 @@ export const write = (self, arg1, arg2, arg3, exponent, arg5) => {
   const diff2 = (1 << diff1) - 1;
   const absolute = Math.abs(arg1);
   if (!isNaN(absolute)) {
-    let num11;
-    let num12;
     if (absolute !== Infinity) {
-      let result1;
       const _Math7 = Math;
       const _Math8 = Math;
       const _Math9 = Math;
@@ -112,7 +106,7 @@ export const write = (self, arg1, arg2, arg3, exponent, arg5) => {
         result = powResult1 * 2;
       }
       if (diff3 + (diff2 >> 1) >= 1) {
-        result1 = num / result;
+        let result1 = num / result;
       } else {
         const _Math3 = Math;
         result1 = num * Math.pow(2, 1 - tmp9);
@@ -124,10 +118,10 @@ export const write = (self, arg1, arg2, arg3, exponent, arg5) => {
         sum1 = diff3 + 1;
         result2 = result / 2;
       }
-      num11 = 0;
-      num12 = diff2;
+      let num11 = 0;
+      let num12 = diff2;
       if (sum1 + (diff2 >> 1) < diff2) {
-        if (sum1 + (diff2 >> 1) >= 1) {
+        if (sum1 + tmp9 >= 1) {
           const _Math6 = Math;
           const diff4 = sum * result2 - 1;
           num11 = diff4 * Math.pow(2, exponent);

@@ -7,29 +7,28 @@ import _modDef7384 from "metro/07384__.js";
 import _modDef7385 from "metro/07385__.js";
 import _modDef7386 from "metro/07386__.js";
 import 07356__ from "metro/07356__.js";
-import 07378__ from "metro/07378__.js";
+import decodeXPValue from "07378_decodeXPValue.js";
 
-let importDefaultResult1;
-let importDefaultResult2;
-let importDefaultResult3;
-const objectAssign = module_7356.objectAssign;
-const objectAssignResult = objectAssign({}, module_7378, _modDef7380);
-const obj = { "0th": objectAssignResult, "1st": module_7378, exif: objectAssignResult, gps: _modDef7382, interoperability: _modDef7383, mpf: importDefaultResult1, canon: importDefaultResult2, pentax: importDefaultResult3 };
+const objectAssignResult = module_7356.objectAssign({}, decodeXPValue, _modDef7380);
+const obj = { "0th": objectAssignResult, "1st": decodeXPValue, exif: objectAssignResult, gps: _modDef7382, interoperability: _modDef7383, mpf: null, canon: null, pentax: null };
 if (_modDef7359.USE_MPF) {
-  importDefaultResult1 = _modDef7384;
+  let importDefaultResult1 = _modDef7384;
 } else {
   importDefaultResult1 = {};
 }
+obj.mpf = importDefaultResult1;
 if (_modDef7359.USE_MAKER_NOTES) {
-  importDefaultResult2 = _modDef7385;
+  let importDefaultResult2 = _modDef7385;
 } else {
   importDefaultResult2 = {};
 }
+obj.canon = importDefaultResult2;
 if (_modDef7359.USE_MAKER_NOTES) {
-  importDefaultResult3 = _modDef7386;
+  let importDefaultResult3 = _modDef7386;
 } else {
   importDefaultResult3 = {};
 }
+obj.pentax = importDefaultResult3;
 
 export default obj;
 export const IFD_TYPE_0TH = "0th";

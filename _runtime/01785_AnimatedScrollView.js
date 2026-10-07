@@ -1,30 +1,24 @@
 // _runtime/01785_AnimatedScrollView.js
-import react_native from "00017_react-native.js";
-import Fragment from "react/00021_Fragment.js";
-import _mod1786 from "metro/01786__.js";
+import eulerToQuaternion from "01786_eulerToQuaternion.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import react from "00019_react.js";
-import 01677__ from "metro/01677__.js";
-import module_1782 from "01782_componentWithRef.js";
+import noop from "metro/00019__.js";
 
-let scrollViewOffset;
-
+require = fn;
 let closure_2 = ["scrollViewOffset"];
-const ScrollView = react_native.ScrollView;
-const jsx = Fragment.jsx;
-let closure_5 = module_1677.createAnimatedComponent(ScrollView);
+const jsx = fn(21).jsx;
+const _isNativeReflectConstruct = fn(1677);
+let closure_5 = _isNativeReflectConstruct.createAnimatedComponent(fn(17).ScrollView);
+const module_1782 = fn(1782);
 
 export const AnimatedScrollView = module_1782.componentWithRef((scrollViewOffset, arg1) => {
   let animatedRef = arg1;
   scrollViewOffset = scrollViewOffset.scrollViewOffset;
   const tmp2 = _objectWithoutProperties(scrollViewOffset, closure_2);
   if (null === arg1) {
-    const obj = _mod1786;
-    animatedRef = obj.useAnimatedRef();
+    animatedRef = eulerToQuaternion.useAnimatedRef();
   }
   if (scrollViewOffset) {
-    const obj2 = _mod1786;
-    const scrollViewOffset1 = obj2.useScrollViewOffset(animatedRef, scrollViewOffset);
+    const scrollViewOffset1 = eulerToQuaternion.useScrollViewOffset(animatedRef, scrollViewOffset);
   }
   if (!("scrollEventThrottle" in tmp2)) {
     tmp2.scrollEventThrottle = 1;

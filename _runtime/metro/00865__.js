@@ -1,5 +1,5 @@
 // _runtime/metro/00865__.js
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export function getSDKSource() {
   return "npm";

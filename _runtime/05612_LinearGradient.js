@@ -1,10 +1,10 @@
 // _runtime/05612_LinearGradient.js
-import react_native from "00017_react-native.js";
+import _mod17 from "metro/00017__.js";
 import _modDef5614 from "metro/05614__.js";
-import 05613__ from "metro/05613__.js";
+import _isNativeReflectConstruct from "metro/05613__.js";
 
-const Platform = react_native.Platform;
+const Platform = _mod17.Platform;
 
-export default module_5613;
-export const LinearGradient = module_5613;
+export default _isNativeReflectConstruct;
+export const LinearGradient = _isNativeReflectConstruct;
 export const LinearGradientNativeComponent = _modDef5614;

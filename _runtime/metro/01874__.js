@@ -1,11 +1,11 @@
 // _runtime/metro/01874__.js
-import react_native from "../00017_react-native.js";
-import react from "../00019_react.js";
-import _mod1643 from "01643__.js";
+import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import cancelAnimation from "../01643_cancelAnimation.js";
 import _mod1873 from "01873__.js";
 
-react.useCallback;
-const Platform = react_native.Platform;
+_mod19.useCallback;
+const Platform = _mod17.Platform;
 let closure_4 = {
   code: 'function pnpm_indexTs1(target){const{contentOffsetY,IS_FABRIC,Platform,scrollTo,scrollViewRef}=this.__closure;if(contentOffsetY&&IS_FABRIC){contentOffsetY.value=target;}else if(Platform.OS==="android"){requestAnimationFrame(function(){scrollTo(scrollViewRef,0,target,false);});}else{scrollTo(scrollViewRef,0,target,false);}}',
 };
@@ -23,37 +23,41 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
   const blankSpace = scrollViewRef.blankSpace;
   const scroll = scrollViewRef.scroll;
   const layout = scrollViewRef.layout;
-  size = scrollViewRef.size;
+  const size = scrollViewRef.size;
   const contentOffsetY = scrollViewRef.contentOffsetY;
   const inverted = scrollViewRef.inverted;
   const keyboardLiftBehavior = scrollViewRef.keyboardLiftBehavior;
   const freeze = scrollViewRef.freeze;
   const fn = function u(value) {
-    let closure_0 = value;
+    closure_0 = value;
     if (contentOffsetY) {
       if (scrollViewRef(extraContentPadding[2]).IS_FABRIC) {
         tmp.value = value;
       }
     }
     const animationFrame = requestAnimationFrame(() => {
-      const obj = _mod1643;
-      obj.scrollTo(scrollViewRef, 0, closure_0, false);
+      cancelAnimation.scrollTo(scrollViewRef, 0, closure_0, false);
     });
   };
-  let obj = {
+  fn.__closure = {
     contentOffsetY,
     IS_FABRIC: scrollViewRef(extraContentPadding[2]).IS_FABRIC,
     Platform: blankSpace,
     scrollTo: scrollViewRef(extraContentPadding[3]).scrollTo,
     scrollViewRef,
   };
-  fn.__closure = obj;
   fn.__workletHash = 2925167321956;
   fn.__initData = scroll;
   const items = [scrollViewRef, contentOffsetY];
   const tmp = keyboardPadding(fn, items);
-  let closure_11 = tmp;
-  let obj2 = scrollViewRef(extraContentPadding[3]);
+  closure_11 = tmp;
+  const obj = {
+    contentOffsetY,
+    IS_FABRIC: scrollViewRef(extraContentPadding[2]).IS_FABRIC,
+    Platform: blankSpace,
+    scrollTo: scrollViewRef(extraContentPadding[3]).scrollTo,
+    scrollViewRef,
+  };
   const fn2 = function v() {
     return extraContentPadding.value;
   };
@@ -77,7 +81,6 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
               size.value.height,
               inverted,
             );
-            const tmp14Result = _mod1873;
             if (tmp14Result.shouldShiftContent(keyboardLiftBehavior, isScrollAtEndResult)) {
               const _Math = Math;
               if (inverted) {
@@ -87,11 +90,13 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
                 closure_11(Math.min(scroll.value + diff, max(size.value.height - layout.value.height + bound1, 0)));
               }
             }
+            tmp14Result = _mod1873;
           }
         }
       }
     }
   };
+  let obj2 = scrollViewRef(extraContentPadding[3]);
   fn3.__closure = {
     freeze,
     blankSpace,
@@ -108,18 +113,5 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
   fn3.__workletHash = 14660760767987;
   fn3.__initData = size;
   const items1 = [inverted, keyboardLiftBehavior];
-  ({
-    freeze,
-    blankSpace,
-    keyboardPadding,
-    isScrollAtEnd: scrollViewRef(extraContentPadding[4]).isScrollAtEnd,
-    scroll,
-    layout,
-    size,
-    inverted,
-    keyboardLiftBehavior,
-    shouldShiftContent: scrollViewRef(extraContentPadding[4]).shouldShiftContent,
-    scrollToTarget: tmp,
-  });
   const animatedReaction = obj2.useAnimatedReaction(fn2, fn3, items1);
 };

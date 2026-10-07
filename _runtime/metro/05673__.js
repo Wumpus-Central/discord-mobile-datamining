@@ -2182,7 +2182,7 @@ const obj = {
   game_die: ["spill", "terning", "terningkast", "terningspill"],
   jigsaw: ["bit", "brikke", "del", "pekepinn", "puslespill", "puslespillbrikke"],
   teddy_bear: ["bamse", "leke", "teddybj\u00F8rn"],
-  "pi\u00f1ata": [
+  piñata: [
     "cinco",
     "de",
     "feiring",

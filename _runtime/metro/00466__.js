@@ -1,6 +1,5 @@
 // _runtime/metro/00466__.js
-const obj = {
+
+export default {
   show() {},
 };
-
-export default obj;

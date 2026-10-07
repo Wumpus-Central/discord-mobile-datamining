@@ -1,35 +1,20 @@
 // _runtime/05748_ScreenStackHeaderSubview.js
-import Fragment from "react/00021_Fragment.js";
 import get_synchronousScreenUpdatesEnabledDefault from "05729_get_synchronousScreenUpdatesEnabled.js";
-import react_native from "05746_react-native.js";
 import _mod5749 from "metro/05749__.js";
-import react_native2 from "05750_react-native.js";
 import _modDef5751 from "metro/05751__.js";
-import react_nativeDefault from "05752_react-native.js";
+import _modDef5752 from "metro/05752__.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import react from "00019_react.js";
-import react_native3 from "00017_react-native.js";
+import noop from "metro/00019__.js";
 
-let Platform;
-let StyleSheet;
-let metroImportDefault;
+require = fn;
 let closure_3 = ["style"];
 let closure_4 = ["style"];
 let closure_5 = ["style"];
-({ Image: metroImportDefault, Platform, StyleSheet } = react_native3);
-const jsx = Fragment.jsx;
-const forwardRefResult = react.forwardRef((hidden, ref) => {
-  let appliesTopInset;
-  let consumeBottomInset;
-  let consumeLeftInset;
-  let consumeRightInset;
-  let headerLeftBarButtonItems;
-  let headerRightBarButtonItems;
-  let useLegacyBehavior;
-  let tmp3 = _mod5749;
-  let tmp4 = !hidden.hidden;
+get_ActivityIndicator = fn(17);
+({ Image: closure_7, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const forwardRefResult = noop.forwardRef((hidden, ref) => {
   let flag = hidden.disableTopInsetApplication;
-  const useEdgeInsetApplication = tmp3.useEdgeInsetApplication;
   if (flag == null) {
     flag = false;
   }
@@ -45,26 +30,26 @@ const forwardRefResult = react.forwardRef((hidden, ref) => {
   if (flag4 == null) {
     flag4 = false;
   }
-  const edgeInsetApplication = useEdgeInsetApplication(tmp4, flag, flag2, flag3, flag4);
+  const edgeInsetApplication = _mod5749.useEdgeInsetApplication(!hidden.hidden, flag, flag2, flag3, flag4);
   ({ headerLeftBarButtonItems, headerRightBarButtonItems } = hidden);
   let result;
   ({ appliesTopInset, useLegacyBehavior, consumeLeftInset, consumeRightInset, consumeBottomInset } =
     edgeInsetApplication);
   if (headerLeftBarButtonItems) {
-    if (react_native.isHeaderBarButtonsAvailableForCurrentPlatform) {
-      const str = "left";
-      const tmpResult = react_native2;
-      result = tmpResult.prepareHeaderBarButtonItems(headerLeftBarButtonItems, "left");
+    if (tmp(5746).isHeaderBarButtonsAvailableForCurrentPlatform) {
+      result = tmp(5750).prepareHeaderBarButtonItems(headerLeftBarButtonItems, "left");
+      const tmpResult = tmp(5750);
     }
   }
+  require = result;
   let result1;
   if (headerRightBarButtonItems) {
-    if (react_native.isHeaderBarButtonsAvailableForCurrentPlatform) {
-      const tmpResult2 = react_native2;
-      result1 = tmpResult2.prepareHeaderBarButtonItems(headerRightBarButtonItems, "right");
+    if (tmp(5746).isHeaderBarButtonsAvailableForCurrentPlatform) {
+      result1 = tmp(5750).prepareHeaderBarButtonItems(headerRightBarButtonItems, "right");
+      const tmpResult2 = tmp(5750);
     }
   }
-  let isHeaderBarButtonsAvailableForCurrentPlatform = react_native.isHeaderBarButtonsAvailableForCurrentPlatform;
+  let isHeaderBarButtonsAvailableForCurrentPlatform = tmp(5746).isHeaderBarButtonsAvailableForCurrentPlatform;
   if (isHeaderBarButtonsAvailableForCurrentPlatform) {
     let length;
     if (result != null) {
@@ -82,7 +67,7 @@ const forwardRefResult = react.forwardRef((hidden, ref) => {
   let fn;
   if (isHeaderBarButtonsAvailableForCurrentPlatform) {
     fn = (arg0) => {
-      let closure_0 = arg0;
+      const nativeEvent = arg0;
       let items = result;
       if (result == null) {
         items = [];
@@ -92,12 +77,19 @@ const forwardRefResult = react.forwardRef((hidden, ref) => {
       if (result1 == null) {
         items2 = [];
       }
-      HermesBuiltin.arraySpread(items1, items2, tmp2);
-      const found = items1.find(
-        (buttonId) => buttonId && "buttonId" in buttonId && buttonId.buttonId === nativeEvent.nativeEvent.buttonId,
-      );
+      HermesBuiltin.arraySpread(items2, tmp);
+      const found = items1.find((buttonId) => {
+        let tmp = buttonId;
+        if (buttonId) {
+          tmp = "buttonId" in buttonId;
+        }
+        if (tmp) {
+          tmp = buttonId.buttonId === nativeEvent.nativeEvent.buttonId;
+        }
+        return tmp;
+      });
       let onPress = found;
-      if (onPress) {
+      if (found) {
         onPress = "button" === found.type;
       }
       if (onPress) {
@@ -111,7 +103,6 @@ const forwardRefResult = react.forwardRef((hidden, ref) => {
   let fn2;
   if (isHeaderBarButtonsAvailableForCurrentPlatform) {
     fn2 = (nativeEvent) => {
-      let tmp2;
       function findInMenu(menu, menuId) {
         const iter = menu.items[Symbol.iterator]();
         const nextResult = iter.next();
@@ -119,8 +110,7 @@ const forwardRefResult = react.forwardRef((hidden, ref) => {
           let tmp2 = nextResult;
           if ("items" in nextResult) {
             let tmp9 = findInMenu(tmp2, menuId);
-            let tmp10 = tmp9;
-            if (tmp10) {
+            if (tmp9) {
               iter.return();
               return tmp9;
             }
@@ -142,20 +132,17 @@ const forwardRefResult = react.forwardRef((hidden, ref) => {
       if (result1 == null) {
         items2 = [];
       }
-      HermesBuiltin.arraySpread(items1, items2, tmp2);
+      HermesBuiltin.arraySpread(items2, tmp);
       let iter = items1[Symbol.iterator]();
       let nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp5 = nextResult;
-        if (tmp5) {
-          let tmp6 = nextResult;
-          if ("menu" === tmp5.type) {
-            if (tmp5.menu) {
-              let tmp8 = nextResult;
-              let findInMenuResult = findInMenu(tmp5.menu, nativeEvent.nativeEvent.menuId);
+        let tmp4 = nextResult;
+        if (nextResult) {
+          if ("menu" === tmp4.type) {
+            if (tmp4.menu) {
+              let findInMenuResult = findInMenu(tmp4.menu, nativeEvent.nativeEvent.menuId);
               let obj = findInMenuResult;
-              if (obj) {
-                let tmp10 = findInMenuResult;
+              if (findInMenuResult) {
                 let onPressResult = obj.onPress();
                 iter.return();
               }
@@ -166,28 +153,25 @@ const forwardRefResult = react.forwardRef((hidden, ref) => {
       }
     };
   }
-  let tmp10 = _modDef5751;
+  const obj2 = {};
+  let tmp3 = !hidden.hidden;
   const merged = Object.assign(hidden);
-  return (
-    <tmp10
-      userInterfaceStyle={hidden.experimental_userInterfaceStyle}
-      headerLeftBarButtonItems={result}
-      headerRightBarButtonItems={result1}
-      onPressHeaderBarButtonItem={fn}
-      onPressHeaderBarButtonMenuItem={fn2}
-      ref={ref}
-      style={closure_9.headerConfig}
-      pointerEvents="box-none"
-      synchronousShadowStateUpdatesEnabled={
-        get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderConfigUpdatesEnabled
-      }
-      consumeTopInset={appliesTopInset}
-      consumeLeftInset={consumeLeftInset}
-      consumeRightInset={consumeRightInset}
-      consumeBottomInset={consumeBottomInset}
-      legacyTopInsetBehavior={useLegacyBehavior}
-    />
-  );
+  obj2.userInterfaceStyle = hidden.experimental_userInterfaceStyle;
+  obj2.headerLeftBarButtonItems = result;
+  obj2.headerRightBarButtonItems = result1;
+  obj2.onPressHeaderBarButtonItem = fn;
+  obj2.onPressHeaderBarButtonMenuItem = fn2;
+  obj2.ref = ref;
+  obj2.style = closure_9.headerConfig;
+  obj2.pointerEvents = "box-none";
+  obj2.synchronousShadowStateUpdatesEnabled =
+    get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderConfigUpdatesEnabled;
+  obj2.consumeTopInset = appliesTopInset;
+  obj2.consumeLeftInset = consumeLeftInset;
+  obj2.consumeRightInset = consumeRightInset;
+  obj2.consumeBottomInset = consumeBottomInset;
+  obj2.legacyTopInsetBehavior = useLegacyBehavior;
+  return jsx(_modDef5751, {});
 });
 forwardRefResult.displayName = "ScreenStackHeaderConfig";
 const styles = StyleSheet.create({
@@ -202,81 +186,65 @@ const styles = StyleSheet.create({
   },
 });
 
-export const ScreenStackHeaderSubview = react_nativeDefault;
+export const ScreenStackHeaderSubview = _modDef5752;
 export const ScreenStackHeaderConfig = forwardRefResult;
 export const ScreenStackHeaderBackButtonImage = (arg0) => {
-  react_nativeDefault;
+  const element = {
+    type: "back",
+    style: closure_9.headerSubview,
+    synchronousShadowStateUpdatesEnabled:
+      get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled,
+    children: null,
+  };
   const merged = Object.assign(arg0);
-  return (
-    <tmp
-      type="back"
-      style={closure_9.headerSubview}
-      synchronousShadowStateUpdatesEnabled={
-        get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled
-      }
-    >
-      {null}
-    </tmp>
-  );
+  element.children = <React5 resizeMode="center" fadeDuration={0} />;
+  return jsx(_modDef5752, {
+    type: "back",
+    style: closure_9.headerSubview,
+    synchronousShadowStateUpdatesEnabled:
+      get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled,
+    children: null,
+  });
 };
 export const ScreenStackHeaderRightView = (style) => {
-  style = style.style;
+  const obj = {};
   const tmp = _objectWithoutProperties(style, closure_3);
-  react_nativeDefault;
   const merged = Object.assign(tmp);
-  const items = [closure_9.headerSubview, style];
-  return (
-    <tmp2
-      type="right"
-      synchronousShadowStateUpdatesEnabled={
-        get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled
-      }
-      style={items}
-    />
-  );
+  obj.type = "right";
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
+  const items = [closure_9.headerSubview, style.style];
+  obj.style = items;
+  return jsx(_modDef5752, {});
 };
 export const ScreenStackHeaderLeftView = (style) => {
-  style = style.style;
+  const obj = {};
   const tmp = _objectWithoutProperties(style, closure_4);
-  react_nativeDefault;
   const merged = Object.assign(tmp);
-  const items = [closure_9.headerSubview, style];
-  return (
-    <tmp2
-      type="left"
-      synchronousShadowStateUpdatesEnabled={
-        get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled
-      }
-      style={items}
-    />
-  );
+  obj.type = "left";
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
+  const items = [closure_9.headerSubview, style.style];
+  obj.style = items;
+  return jsx(_modDef5752, {});
 };
 export const ScreenStackHeaderCenterView = (style) => {
-  style = style.style;
+  const obj = {};
   const tmp = _objectWithoutProperties(style, closure_5);
-  react_nativeDefault;
   const merged = Object.assign(tmp);
-  const items = [closure_9.headerSubviewCenter, style];
-  return (
-    <tmp2
-      type="center"
-      synchronousShadowStateUpdatesEnabled={
-        get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled
-      }
-      style={items}
-    />
-  );
+  obj.type = "center";
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
+  const items = [closure_9.headerSubviewCenter, style.style];
+  obj.style = items;
+  return jsx(_modDef5752, {});
 };
 export const ScreenStackHeaderSearchBarView = (arg0) => {
-  react_nativeDefault;
+  const obj = {};
   const merged = Object.assign(arg0);
-  return (
-    <tmp
-      type="searchBar"
-      synchronousShadowStateUpdatesEnabled={
-        get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled
-      }
-      style={closure_9.headerSubview}
-    />
-  );
+  obj.type = "searchBar";
+  obj.synchronousShadowStateUpdatesEnabled =
+    get_synchronousScreenUpdatesEnabledDefault.experiment.synchronousHeaderSubviewUpdatesEnabled;
+  obj.style = closure_9.headerSubview;
+  return jsx(_modDef5752, {});
 };

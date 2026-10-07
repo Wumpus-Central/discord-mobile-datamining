@@ -3,9 +3,11 @@ import _mod14032 from "metro/14032__.js";
 
 const require = globalThis.__r;
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const match = function match(arg0, arg1, arg2, algorithm) {
-  let closure_0 = arg2;
-  const ResolveLocale = require("ResolveLocale").ResolveLocale;
+  closure_0 = arg2;
   const result = _mod14032.CanonicalizeLocaleList(arg0);
   let str;
   if (null != algorithm) {
@@ -14,8 +16,7 @@ export const match = function match(arg0, arg1, arg2, algorithm) {
   if (!str) {
     str = "best fit";
   }
-  const obj = { localeMatcher: str };
-  return ResolveLocale(arg1, result, obj, [], {}, () => closure_0).locale;
+  return require("ResolveLocale").ResolveLocale(arg1, result, { localeMatcher: str }, [], {}, () => closure_0).locale;
 };
 export const LookupSupportedLocales = require("metro/14033__.js").LookupSupportedLocales;
 export const ResolveLocale = require("ResolveLocale").ResolveLocale;

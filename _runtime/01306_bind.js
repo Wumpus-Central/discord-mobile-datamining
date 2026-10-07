@@ -1,6 +1,8 @@
 // _runtime/01306_bind.js
-import bind2 from "01307_bind.js";
+import concatty from "01307_concatty.js";
 
-const bind = Function.prototype.bind || bind2;
+if (!bind) {
+  bind = concatty;
+}
 
 export default bind;

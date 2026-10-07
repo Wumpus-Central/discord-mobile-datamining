@@ -1,26 +1,24 @@
 // _runtime/06164_GestureDetector.js
-import Fragment from "react/00021_Fragment.js";
+import jsxProd from "react/00021_jsxProd.js";
 import _mod6165 from "metro/06165__.js";
-import ComposedGesture from "06167_ComposedGesture.js";
-import CALLBACK_TYPE from "06168_CALLBACK_TYPE.js";
+import _mod6167 from "metro/06167__.js";
+import _mod6168 from "metro/06168__.js";
 import _mod6170 from "metro/06170__.js";
-import NativeDetector2 from "06202_NativeDetector.js";
+import NativeDetector from "06202_NativeDetector.js";
 
-const jsx = Fragment.jsx;
+const jsx = jsxProd.jsx;
 
 export const GestureDetector = function GestureDetector(gesture) {
-  const obj = _mod6165;
-  obj.useEnsureGestureHandlerRootView();
-  if (!(gesture.gesture instanceof ComposedGesture.ComposedGesture)) {
-    let tmp8;
-    if (!(gesture.gesture instanceof CALLBACK_TYPE.BaseGesture)) {
-      const NativeDetector = NativeDetector2.NativeDetector;
+  _mod6165.useEnsureGestureHandlerRootView();
+  if (!(gesture.gesture instanceof _mod6167.ComposedGesture)) {
+    if (!(gesture.gesture instanceof _mod6168.BaseGesture)) {
+      const obj2 = {};
       const merged = Object.assign(gesture);
-      tmp8 = <NativeDetector />;
+      let tmp8 = jsx(NativeDetector.NativeDetector, {});
     }
     return tmp8;
   }
-  const GestureDetector = _mod6170.GestureDetector;
   const merged1 = Object.assign(gesture);
-  tmp8 = <GestureDetector />;
+  tmp8 = jsx(_mod6170.GestureDetector, {});
+  const obj3 = {};
 };

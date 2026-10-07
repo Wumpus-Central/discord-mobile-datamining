@@ -1,53 +1,41 @@
 // _runtime/metro/06337__.js
-import react_native from "../00017_react-native.js";
-import Fragment from "../react/00021_Fragment.js";
-import GESTURE_SOURCE from "../06120_GESTURE_SOURCE.js";
+import _mod17 from "00017__.js";
+import jsxProd from "../react/00021_jsxProd.js";
+import value2 from "../06120_value2.js";
 import LegacyBaseButton from "../06147_LegacyBaseButton.js";
-import react_mod from "../00019_react.js";
-import cancelAnimation from "01643__.js";
+import noop_mod from "00019__.js";
+import cancelAnimation from "../01643_cancelAnimation.js";
 
-let dependencyMap;
-
-let c2;
-let c3;
-let memo;
-let react = react_mod;
-({ useContext: c2, useMemo: c3, memo } = react);
-react = react_mod;
-const RefreshControl = react_native.RefreshControl;
-const jsx = Fragment.jsx;
-let closure_5 = cancelAnimation.createAnimatedComponent(RefreshControl);
+let noop = noop_mod;
+({ useContext: c2, useMemo: c3, memo } = noop);
+let noop = noop_mod;
+const jsx = jsxProd.jsx;
+let closure_5 = cancelAnimation.createAnimatedComponent(_mod17.RefreshControl);
 const __initData = {
   code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}",
 };
 const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
-  let closure_1;
-  let onRefresh;
-  let scrollableGesture;
-  let tmp8Result;
   ({ onRefresh, scrollableGesture } = arg0);
   const merged = Object.assign(arg0, Object.assign({ onRefresh: 0, scrollableGesture: 0 }));
   let iter;
   const tmp4 = iter(scrollableGesture(6131).BottomSheetDraggableContext);
   dependencyMap = tmp4;
-  let obj = scrollableGesture(6124);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = scrollableGesture(6124).useBottomSheetInternal();
   iter = bottomSheetInternal.animatedScrollableState;
   if (!tmp4) {
     if (bottomSheetInternal.enableContentPanningGesture) {
       throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
     }
   }
+  const obj = scrollableGesture(6124);
   const fn = function f() {
-    const obj = { enabled: iter.value === GESTURE_SOURCE.SCROLLABLE_STATE.UNLOCKED };
-    return obj;
+    return { enabled: iter.value === value2.SCROLLABLE_STATE.UNLOCKED };
   };
   const tmp2Result = scrollableGesture(1643);
   fn.__closure = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6120).SCROLLABLE_STATE };
   fn.__workletHash = 8403038560398;
   fn.__initData = __initData;
   let items = [iter.value];
-  ({ animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6120).SCROLLABLE_STATE });
   const animatedProps = tmp2Result.useAnimatedProps(fn, items);
   const items1 = [tmp4, scrollableGesture];
   const tmp7 = closure_3(() => {
@@ -57,20 +45,30 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
       const NativeResult = Gesture.Native();
       const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
       const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(items, closure_1.toGestureArray(), 0);
-      HermesBuiltin.arraySpread(items, scrollableGesture.toGestureArray(), arraySpreadResult);
-      const applyResult = HermesBuiltin.apply(simultaneousWithExternalGesture, items, NativeResult);
-      result = applyResult.shouldCancelWhenOutside(true);
+      HermesBuiltin.arraySpread(
+        scrollableGesture.toGestureArray(),
+        HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0),
+      );
+      const arraySpreadResult = HermesBuiltin.arraySpread(closure_1.toGestureArray(), 0);
+      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
+      const applyResult = HermesBuiltin.apply(items, NativeResult);
     }
     return result;
   }, items1);
   if (tmp7) {
-    const GestureDetector = scrollableGesture(6147).GestureDetector;
+    const obj3 = { gesture: tmp7, children: null };
+    const obj4 = {};
     const merged1 = Object.assign(merged);
-    tmp8Result = <GestureDetector gesture={tmp7}>{null}</GestureDetector>;
+    obj4.onRefresh = onRefresh;
+    obj4.animatedProps = animatedProps;
+    obj3.children = <closure_5 />;
+    let tmp8Result = jsx(scrollableGesture(6147).GestureDetector, { gesture: tmp7, children: null });
   } else {
+    const obj5 = {};
     const merged2 = Object.assign(merged);
-    tmp8Result = <closure_5 onRefresh={onRefresh} animatedProps={animatedProps} />;
+    obj5.onRefresh = onRefresh;
+    obj5.animatedProps = animatedProps;
+    tmp8Result = <closure_5 />;
   }
   return tmp8Result;
 });

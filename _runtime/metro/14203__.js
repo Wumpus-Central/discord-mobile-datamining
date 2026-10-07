@@ -1,24 +1,23 @@
 // _runtime/metro/14203__.js
 
 export default () => (startTimer) => {
-  let closure_0 = startTimer;
+  closure_0 = startTimer;
   startTimer = startTimer.startTimer;
-  let obj = {
+  return {
     features: {
       benchmark(title) {
         const items = [];
-        let closure_2 = items();
+        closure_2 = items();
         function step(title) {
           let num = 0;
           if (0 !== items.length) {
             num = items[items.length - 1].time;
           }
           const tmp = closure_2();
+          items.push({ title, time: tmp, delta: tmp - num });
           const obj = { title, time: tmp, delta: tmp - num };
-          items.push(obj);
         }
-        let obj = { title, time: 0, delta: 0 };
-        items.push(obj);
+        items.push({ title, time: 0, delta: 0 });
         function stop(title) {
           if (typeof step === "function") {
             let num = 0;
@@ -38,5 +37,4 @@ export default () => (startTimer) => {
       },
     },
   };
-  return obj;
 };

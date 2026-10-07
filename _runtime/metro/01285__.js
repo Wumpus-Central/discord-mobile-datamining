@@ -1,8 +1,6 @@
 // _runtime/metro/01285__.js
 import _mod1286 from "01286__.js";
-import _mod1287 from "01287__.js";
-import _mod1289 from "01289__.js";
+import interpretNumericEntities from "../01287_interpretNumericEntities.js";
+import pushToArray from "../01289_pushToArray.js";
 
-({ formats: _mod1286, parse: _mod1287, stringify: _mod1289 });
-
-export default { formats: _mod1286, parse: _mod1287, stringify: _mod1289 };
+export default { formats: _mod1286, parse: interpretNumericEntities, stringify: pushToArray };

@@ -1,31 +1,28 @@
 // _runtime/04153_differenceInCalendarWeeks.js
 import startOfWeek_mod from "04123_startOfWeek.js";
-import getTimezoneOffsetInMilliseconds_mod from "04127_getTimezoneOffsetInMilliseconds.js";
+import module_4127_mod from "metro/04127__.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
 
-let tmp3;
-let tmp5;
-let tmp7;
 let startOfWeek = startOfWeek_mod;
 if (!startOfWeek) {
-  tmp3 = { default: startOfWeek };
   const obj = { default: startOfWeek };
+  let tmp3 = obj;
 } else {
   tmp3 = startOfWeek;
 }
 startOfWeek = tmp3;
-let getTimezoneOffsetInMilliseconds = getTimezoneOffsetInMilliseconds_mod;
-if (!getTimezoneOffsetInMilliseconds) {
-  tmp5 = { default: getTimezoneOffsetInMilliseconds };
-  const obj2 = { default: getTimezoneOffsetInMilliseconds };
+let module_4127 = module_4127_mod;
+if (!module_4127) {
+  const obj2 = { default: module_4127 };
+  let tmp5 = obj2;
 } else {
-  tmp5 = getTimezoneOffsetInMilliseconds;
+  tmp5 = module_4127;
 }
-getTimezoneOffsetInMilliseconds = tmp5;
+module_4127 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -37,7 +34,8 @@ export default function differenceInCalendarWeeks(arg0, arg1, arg2) {
   const defaultResult1 = startOfWeek.default(arg0, arg2);
   const defaultResult2 = startOfWeek.default(arg1, arg2);
   const time = defaultResult1.getTime();
-  const diff = time - getTimezoneOffsetInMilliseconds.default(defaultResult1);
+  const diff = time - module_4127.default(defaultResult1);
   const time1 = defaultResult2.getTime();
-  return Math.round((diff - (time1 - getTimezoneOffsetInMilliseconds.default(defaultResult2))) / c3);
-}
+  return Math.round((diff - (time1 - module_4127.default(defaultResult2))) / c3);
+};
+export default exports.default;

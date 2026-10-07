@@ -1,61 +1,54 @@
 // _runtime/04342_lightFormat.js
-import toDate_mod from "03964_toDate.js";
-import addLeadingZeros_mod from "04208_addLeadingZeros.js";
-import getTimezoneOffsetInMilliseconds_mod from "04127_getTimezoneOffsetInMilliseconds.js";
-import isValid_mod from "04146_isValid.js";
+import _typeof_mod from "metro/03964__.js";
+import M from "04208_M.js";
+import module_4127_mod from "metro/04127__.js";
+import module_4146_mod from "metro/04146__.js";
 import subMilliseconds_mod from "04197_subMilliseconds.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
 
-let tmp11;
-let tmp13;
-let tmp3;
-let tmp5;
-let tmp7;
-let tmp9;
-let toDate = toDate_mod;
-if (!toDate) {
-  tmp3 = { default: toDate };
-  const obj = { default: toDate };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp3 = toDate;
+  tmp3 = _typeof;
 }
-toDate = tmp3;
-let addLeadingZeros = addLeadingZeros_mod;
-if (!addLeadingZeros) {
-  tmp5 = { default: addLeadingZeros };
-  const obj2 = { default: addLeadingZeros };
+_typeof = tmp3;
+if (!M) {
+  const obj2 = { default: M };
+  let tmp5 = obj2;
 } else {
-  tmp5 = addLeadingZeros;
+  tmp5 = M;
 }
-addLeadingZeros = tmp5;
-let getTimezoneOffsetInMilliseconds = getTimezoneOffsetInMilliseconds_mod;
-if (!getTimezoneOffsetInMilliseconds) {
-  tmp7 = { default: getTimezoneOffsetInMilliseconds };
-  const obj3 = { default: getTimezoneOffsetInMilliseconds };
+let closure_1 = tmp5;
+let module_4127 = module_4127_mod;
+if (!module_4127) {
+  const obj3 = { default: module_4127 };
+  let tmp7 = obj3;
 } else {
-  tmp7 = getTimezoneOffsetInMilliseconds;
+  tmp7 = module_4127;
 }
-getTimezoneOffsetInMilliseconds = tmp7;
-let isValid = isValid_mod;
-if (!isValid) {
-  tmp9 = { default: isValid };
-  const obj4 = { default: isValid };
+module_4127 = tmp7;
+let module_4146 = module_4146_mod;
+if (!module_4146) {
+  const obj4 = { default: module_4146 };
+  let tmp9 = obj4;
 } else {
-  tmp9 = isValid;
+  tmp9 = module_4146;
 }
-isValid = tmp9;
+module_4146 = tmp9;
 let subMilliseconds = subMilliseconds_mod;
 if (!subMilliseconds) {
-  tmp11 = { default: subMilliseconds };
   const obj5 = { default: subMilliseconds };
+  let tmp11 = obj5;
 } else {
   tmp11 = subMilliseconds;
 }
 subMilliseconds = tmp11;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp13 = { default: requiredArgs };
   const obj6 = { default: requiredArgs };
+  let tmp13 = obj6;
 } else {
   tmp13 = requiredArgs;
 }
@@ -66,34 +59,28 @@ const re8 = /''/g;
 const re9 = /[a-zA-Z]/;
 
 export default function lightFormat(arg0, str) {
-  let closure_0;
   requiredArgs.default(2, arguments);
-  const defaultResult1 = toDate.default(arg0);
-  if (isValid.default(defaultResult1)) {
-    toDate = subMilliseconds.default(defaultResult1, getTimezoneOffsetInMilliseconds.default(defaultResult1));
+  const defaultResult1 = _typeof.default(arg0);
+  if (module_4146.default(defaultResult1)) {
+    _typeof = subMilliseconds.default(defaultResult1, module_4127.default(defaultResult1));
     let match = str.match(closure_6);
     let str3 = "";
     if (match) {
-      const mapped = match.map(function (item) {
+      const mapped = match.map((item) => {
         let str = item;
         if ("''" === item) {
           return "'";
         } else if ("'" === str[0]) {
           const match = str.match(re7);
           if (match) {
-            const str4 = match[1];
-            str = str4.replace(re8, "'");
+            str = match[1].replace(re8, "'");
           }
           return str;
-        } else if (addLeadingZeros.default[str[0]]) {
-          return addLeadingZeros.default[str[0]](closure_0, str);
-        } else if (str[0].match(re9)) {
+        } else if (closure_1.default[str6]) {
+          return tmp2(closure_0, str);
+        } else if (str6.match(re9)) {
           const _RangeError = RangeError;
-          const self = this;
-          const self2 = this;
-          const rangeError = new RangeError(
-            "Format string contains an unescaped latin alphabet character `" + str6 + "`",
-          );
+          const rangeError = new RangeError("Format string contains an unescaped latin alphabet character `" + str6 + "`");
           throw rangeError;
         } else {
           return str;
@@ -104,10 +91,8 @@ export default function lightFormat(arg0, str) {
     return str3;
   } else {
     let _RangeError = RangeError;
-    let self = this;
-    str = "Invalid time value";
-    let self2 = this;
     let rangeError = new RangeError("Invalid time value");
     throw rangeError;
   }
-}
+};
+export default exports.default;

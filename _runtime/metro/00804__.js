@@ -4,82 +4,80 @@ import _mod708 from "00708__.js";
 import _mod724 from "00724__.js";
 import _mod784 from "00784__.js";
 import severityLevelFromString from "../00796_severityLevelFromString.js";
-import 00763__ from "00763__.js";
+import setupIntegration from "../00763_setupIntegration.js";
 
 function addConsoleBreadcrumb(level, args) {
-  let obj2;
-  const obj = { category: "console", data: { arguments: args, logger: "console" }, level: obj2.severityLevelFromString(level), message: null };
-  obj2 = severityLevelFromString;
+  const obj = {
+    category: "console",
+    data: { arguments: args, logger: "console" },
+    level: severityLevelFromString.severityLevelFromString(level),
+    message: null,
+  };
   if ("util" in _mod697.GLOBAL_OBJ) {
-    let applyResult;
     if (typeof _mod697.GLOBAL_OBJ.util.format === "function") {
       const util = _mod697.GLOBAL_OBJ.util;
       const format = util.format;
       const items = [];
-      HermesBuiltin.arraySpread(items, args, 0);
-      applyResult = HermesBuiltin.apply(format, items, util);
+      HermesBuiltin.arraySpread(args, 0);
+      let applyResult = HermesBuiltin.apply(items, util);
     }
     obj.message = applyResult;
     if ("assert" === level) {
       if (false === args[0]) {
         const substr = args.slice(1);
-        let str4 = "Assertion failed";
-        if (substr.length > 0) {
-          if ("util" in _mod697.GLOBAL_OBJ) {
-            let applyResult1;
-            if (typeof _mod697.GLOBAL_OBJ.util.format === "function") {
-              const util2 = _mod697.GLOBAL_OBJ.util;
-              const format2 = util2.format;
-              const items1 = [];
-              HermesBuiltin.arraySpread(items1, substr, 0);
-              applyResult1 = HermesBuiltin.apply(format2, items1, util2);
-            }
+        if (substr.length <= 0) {
+          obj.message = "Assertion failed";
+          obj.data.arguments = substr;
+        } else {
+          if (!("util" in _mod697.GLOBAL_OBJ)) {
+            let safeJoinResult = _mod708.safeJoin(substr, " ");
             const _HermesInternal = HermesInternal;
-            str4 = "Assertion failed: " + applyResult1;
+            const combined = "Assertion failed: " + safeJoinResult;
+            const tmpResult = _mod708;
           }
-          const tmp2Result = _mod708;
-          applyResult1 = tmp2Result.safeJoin(substr, " ");
+          const util2 = _mod697.GLOBAL_OBJ.util;
+          const format2 = util2.format;
+          const items1 = [];
+          HermesBuiltin.arraySpread(substr, 0);
+          safeJoinResult = HermesBuiltin.apply(items1, util2);
         }
-        obj.message = str4;
-        obj.data.arguments = substr;
       }
     }
     const obj3 = { input: args, level };
-    const tmp2Result3 = _mod784;
-    tmp2Result3.addBreadcrumb(obj, obj3);
+    _mod784.addBreadcrumb(obj, obj3);
+    const tmpResult3 = _mod784;
   }
-  const tmp2Result4 = _mod708;
-  applyResult = tmp2Result4.safeJoin(args, " ");
+  applyResult = _mod708.safeJoin(args, " ");
+  const tmpResult4 = _mod708;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export { addConsoleBreadcrumb };
-export const consoleIntegration = module_763.defineIntegration(() => {
+export const consoleIntegration = setupIntegration.defineIntegration(() => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  let _Set1;
+  let set;
   let CONSOLE_LEVELS = obj.levels;
-  const _Set = Set;
   if (!CONSOLE_LEVELS) {
-    CONSOLE_LEVELS = _Set1(700).CONSOLE_LEVELS;
+    CONSOLE_LEVELS = set(700).CONSOLE_LEVELS;
   }
-  _Set1 = new _Set(CONSOLE_LEVELS);
+  set = new Set(CONSOLE_LEVELS);
   return {
     name: "Console",
     setup(arg0) {
-      let closure_0 = arg0;
-      let obj = _Set1(dependencyMap[2]);
-      const result = obj.addConsoleInstrumentationHandler((level) => {
+      closure_0 = arg0;
+      const result = set(dependencyMap[2]).addConsoleInstrumentationHandler((level) => {
         level = level.level;
-        const args = level.args;
-        const obj = _mod724;
-        const hasItem = obj.getClient() === closure_0 && _Set1.has(level);
+        let hasItem = _mod724.getClient() === closure_0;
         if (hasItem) {
-          addConsoleBreadcrumb(level, args);
+          hasItem = set.has(level);
+        }
+        if (hasItem) {
+          addConsoleBreadcrumb(level, level.args);
         }
       });
-    }
+    },
   };
 });

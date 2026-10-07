@@ -1,57 +1,44 @@
 // _runtime/10531_ItemLayout.js
-import Fragment from "react/00021_Fragment.js";
-import _mod1643 from "metro/01643__.js";
+import cancelAnimation from "01643_cancelAnimation.js";
 import _mod10514 from "metro/10514__.js";
 import _mod10532 from "metro/10532__.js";
-import react from "00019_react.js";
+import noop from "metro/00019__.js";
 
-const _modDef1643 = _mod1643;
+const cancelAnimationDefault = cancelAnimation;
 
-const jsx = Fragment.jsx;
+require = fn;
+const jsx = fn(21).jsx;
 const __initData = { code: "function pnpm_ItemLayoutTsx1(){const{x,size}=this.__closure;return x.value/size;}" };
 const __initData2 = {
   code: "function pnpm_ItemLayoutTsx2(){const{animationStyle,x,size,index}=this.__closure;return animationStyle(x.value/size,index);}",
 };
 
 export const ItemLayout = (animationStyle) => {
-  let children;
-  let customConfig;
-  let dataLength;
-  let handlerOffset;
-  let height;
-  let index;
-  let loop;
-  let modeConfig;
-  let showLength;
-  let str;
-  let visibleRanges;
-  let width;
   ({ handlerOffset, index } = animationStyle);
   animationStyle = animationStyle.animationStyle;
   ({ children, visibleRanges } = animationStyle);
-  const obj = _mod10514;
-  const props = obj.useGlobalState().props;
+  const props = _mod10514.useGlobalState().props;
   ({ loop, dataLength, width, height, customConfig, modeConfig } = props);
   let tmp3 = width;
-  const mode = props.mode;
   if (props.vertical) {
     tmp3 = height;
   }
   height = tmp3;
   let obj2 = { handlerOffset, index, size: tmp3, dataLength, loop };
-  const tmp4 = typeof customConfig === "function" ? customConfig() : {};
-  const merged = Object.assign(tmp4);
-  if ("horizontal-stack" === mode) {
-    const obj3 = { handlerOffset, index, size: tmp3, dataLength, loop, type: str, viewCount: showLength };
-    str = "positive";
-    showLength = modeConfig.showLength;
+  const merged = Object.assign(typeof customConfig === "function" ? customConfig() : {});
+  if ("horizontal-stack" === props.mode) {
+    const obj3 = { handlerOffset, index, size: tmp3, dataLength, loop, type: null, viewCount: null };
+    let str = "positive";
     if ("right" === modeConfig.snapDirection) {
       str = "negative";
     }
+    obj3.type = str;
+    obj3.viewCount = modeConfig.showLength;
     obj2 = obj3;
   }
+  const tmp4 = typeof customConfig === "function" ? customConfig() : {};
+  const offsetX = _mod10532.useOffsetX(obj2, visibleRanges);
   const tmpResult = _mod10532;
-  const offsetX = tmpResult.useOffsetX(obj2, visibleRanges);
   const fn = function k() {
     return offsetX.value / height;
   };
@@ -59,31 +46,36 @@ export const ItemLayout = (animationStyle) => {
   fn.__workletHash = 15967503186804;
   fn.__initData = __initData;
   const items = [offsetX, tmp3];
-  const tmpResult3 = _mod1643;
-  const derivedValue = tmpResult3.useDerivedValue(fn, items);
-  const tmpResult4 = _mod1643;
+  const derivedValue = cancelAnimation.useDerivedValue(fn, items);
+  const tmpResult3 = cancelAnimation;
   class E {
     constructor() {
-      return animationStyle(offsetX.value / height, index);
+      return animationStyle(closure_3.value / height, index);
     }
   }
   E.__closure = { animationStyle, x: offsetX, size: tmp3, index };
   E.__workletHash = 4560717846650;
   E.__initData = __initData2;
   const items1 = [animationStyle, index, offsetX, tmp3];
-  const animatedStyle = tmpResult4.useAnimatedStyle(E, items1);
-  const View = _modDef1643.View;
+  const animatedStyle = cancelAnimation.useAnimatedStyle(E, items1);
   if (!width) {
     width = "100%";
   }
-  size = { width, height, position: "absolute", pointerEvents: "box-none" };
+  const size = { width, height: null, position: "absolute", pointerEvents: "box-none" };
   if (!height) {
     height = "100%";
   }
+  const obj4 = {
+    style: null,
+    testID: "__CAROUSEL_ITEM_" + index + "__",
+    children: children({ animationValue: derivedValue }),
+  };
+  size.height = height;
   const items2 = [size, animatedStyle];
-  return (
-    <View style={items2} testID={"__CAROUSEL_ITEM_" + index + "__"}>
-      {children({ animationValue: derivedValue })}
-    </View>
-  );
+  obj4.style = items2;
+  return jsx(cancelAnimationDefault.View, {
+    style: null,
+    testID: "__CAROUSEL_ITEM_" + index + "__",
+    children: children({ animationValue: derivedValue }),
+  });
 };

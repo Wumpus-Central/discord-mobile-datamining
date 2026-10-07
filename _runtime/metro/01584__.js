@@ -1,33 +1,28 @@
 // _runtime/metro/01584__.js
-import _slicedToArray from "00032__slicedToArray.js";
-import react from "../00019_react.js";
+import _slicedToArray from "00032__.js";
+import noop from "00019__.js";
 
 const require = globalThis.__r;
-let _require, importDefault, navigation;
+
+const require = arg1;
 
 export const usePreventRemove = function usePreventRemove(stateFromStores, arg1) {
-  let closure_1;
-  let key;
   _require = stateFromStores;
   importDefault = arg1;
   const first = navigation(
-    key.useState(() => {
-      const obj = stateFromStores(first[2]);
-      return obj.nanoid();
-    }),
+    key.useState(() => stateFromStores(first[2]).nanoid()),
     1,
   )[0];
+  navigation = require("01533__.js").useNavigation();
   let obj = require("01533__.js");
-  navigation = obj.useNavigation();
-  const obj2 = require("react");
-  key = obj2.useRoute().key;
-  const obj3 = require("react");
-  const preventRemoveContext = obj3.usePreventRemoveContext();
+  key = require("01530__.js").useRoute().key;
+  const obj2 = require("01530__.js");
+  const preventRemoveContext = require("01585__.js").usePreventRemoveContext();
   const setPreventRemove = preventRemoveContext.setPreventRemove;
   const notifyPreventRemove = preventRemoveContext.notifyPreventRemove;
   const items = [setPreventRemove, first, key, stateFromStores];
   const insertionEffect = key.useInsertionEffect(() => {
-    setPreventRemove(first, key, stateFromStores);
+    setPreventRemove(first, key, closure_0);
     return () => {
       setPreventRemove(first, key, false);
     };
@@ -39,14 +34,14 @@ export const usePreventRemove = function usePreventRemove(stateFromStores, arg1)
       notifyPreventRemove();
     };
   }, items1);
-  const tmp6 = require("useLatestCallback")((preventDefault) => {
-    if (stateFromStores) {
+  const tmp6 = require("01512__.js")((preventDefault) => {
+    if (closure_0) {
       preventDefault.preventDefault();
       const obj = { data: preventDefault.data };
       closure_1(obj);
     }
   });
-  let closure_7 = tmp6;
+  closure_7 = tmp6;
   const items2 = [navigation, tmp6];
   const effect1 = key.useEffect(() => {
     let addListenerResult;

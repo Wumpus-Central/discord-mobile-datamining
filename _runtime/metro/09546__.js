@@ -1,11 +1,10 @@
 // _runtime/metro/09546__.js
 import _mod9542 from "09542__.js";
 import QRPolynomial from "../09547_QRPolynomial.js";
-import _mod9548 from "09548__.js";
+import array2 from "../09548_array2.js";
 
-let items;
-exports = {
-  PATTERN_POSITION_TABLE: items,
+const exports = {
+  PATTERN_POSITION_TABLE: null,
   G15: 1335,
   G18: 7973,
   G15_MASK: 21522,
@@ -17,9 +16,8 @@ exports = {
     let tmp5 = tmp;
     if (bCHDigit - obj.getBCHDigit(obj.G15) >= 0) {
       do {
-        let G15 = obj.G15;
         let bCHDigit1 = obj.getBCHDigit(tmp4);
-        let tmp8 = tmp4 ^ (G15 << (bCHDigit1 - obj.getBCHDigit(obj.G15)));
+        let tmp8 = tmp4 ^ (obj.G15 << (bCHDigit1 - obj.getBCHDigit(obj.G15)));
         let bCHDigit2 = obj.getBCHDigit(tmp8);
         tmp4 = tmp8;
         tmp5 = tmp8;
@@ -36,9 +34,8 @@ exports = {
     let tmp4 = tmp;
     if (bCHDigit - obj.getBCHDigit(obj.G18) >= 0) {
       do {
-        let G18 = obj.G18;
         let bCHDigit1 = obj.getBCHDigit(tmp3);
-        let tmp7 = tmp3 ^ (G18 << (bCHDigit1 - obj.getBCHDigit(obj.G18)));
+        let tmp7 = tmp3 ^ (obj.G18 << (bCHDigit1 - obj.getBCHDigit(obj.G18)));
         let bCHDigit2 = obj.getBCHDigit(tmp7);
         tmp3 = tmp7;
         tmp4 = tmp7;
@@ -85,8 +82,6 @@ exports = {
       return (((arg1 * diff3) % 3) + ((arg1 + diff3) % 2)) % 2 === 0;
     } else {
       const _Error = Error;
-      const self = this;
-      const self2 = this;
       const error = new Error("bad maskPattern:" + arg0);
       throw error;
     }
@@ -95,22 +90,21 @@ exports = {
     const tmp = new QRPolynomial([1], 0);
     let multiplyResult = tmp;
     let num = 0;
-    let tmp3 = tmp;
+    let tmp2 = tmp;
     if (0 < diff) {
       do {
-        let multiply = multiplyResult.multiply;
-        let tmp6 = QRPolynomial;
-        let obj = _mod9548;
-        let items = [1, obj.gexp(num)];
-        let self = this;
-        let self2 = this;
-        let tmp62 = new tmp6(items, 0);
-        multiplyResult = multiply(tmp62);
+        let tmp5 = QRPolynomial;
+        let obj2 = array2;
+        let items = [1, obj2.gexp(num)];
+        let tmp6 = new.target;
+        let tmp7 = new.target;
+        let tmp52 = new tmp5(items, 0);
+        multiplyResult = multiplyResult.multiply(tmp52);
         num = num + 1;
-        tmp3 = multiplyResult;
+        tmp2 = multiplyResult;
       } while (num < diff);
     }
-    return tmp3;
+    return tmp2;
   },
   getLengthInBits(arg0, arg1) {
     if (1 <= arg1) {
@@ -123,8 +117,6 @@ exports = {
           if (_mod9542.MODE_8BIT_BYTE !== arg0) {
             if (_mod9542.MODE_KANJI !== arg0) {
               const _Error4 = Error;
-              const self7 = this;
-              const self8 = this;
               const error = new Error("mode:" + arg0);
               throw error;
             }
@@ -144,8 +136,6 @@ exports = {
         return 10;
       } else {
         const _Error3 = Error;
-        const self5 = this;
-        const self6 = this;
         const error1 = new Error("mode:" + arg0);
         throw error1;
       }
@@ -160,22 +150,17 @@ exports = {
         return 12;
       } else {
         const _Error2 = Error;
-        const self3 = this;
-        const self4 = this;
         const error2 = new Error("mode:" + arg0);
         throw error2;
       }
     } else {
       const _Error = Error;
-      const self = this;
-      const self2 = this;
       const error3 = new Error("type:" + arg1);
       throw error3;
     }
   },
   getLostPoint(self) {
     let sum4;
-    let sum6;
     const moduleCount = self.getModuleCount();
     let num = 0;
     let num2 = 0;
@@ -189,10 +174,9 @@ exports = {
           let num5 = -1;
           let num6 = 0;
           do {
-            let tmp11;
             do {
               let sum = num + num5;
-              tmp11 = num6;
+              let tmp11 = num6;
               if (sum >= 0) {
                 let num7 = -1;
                 let tmp13 = num6;
@@ -401,7 +385,7 @@ exports = {
     return tmp46 + 10 * (Math.abs((100 * num17) / moduleCount / moduleCount - 50) / 5);
   },
 };
-items = [
+let items = [
   [],
   [6, 18],
   [6, 22],
@@ -444,4 +428,5 @@ items = [
   [6, 30, 58, 86, 114, 142, 170],
 ];
 
+export const PATTERN_POSITION_TABLE = items;
 export default exports;

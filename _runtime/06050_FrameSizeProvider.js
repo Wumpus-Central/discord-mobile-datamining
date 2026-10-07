@@ -1,46 +1,36 @@
 // _runtime/06050_FrameSizeProvider.js
-import react_native from "00017_react-native.js";
-import useLatestCallbackDefault from "01512_useLatestCallback.js";
-import react2 from "06052_react.js";
-import "react";
-import Fragment from "react/00021_Fragment.js";
-import react from "06051_react.js";
+import _modDef1512 from "metro/01512__.js";
+import _mod6052 from "metro/06052__.js";
+import noop from "metro/00019__.js";
 
-let set, size;
-
-let closure_4;
-let jsx;
-const Platform = react_native.Platform;
-({ jsx, jsxs: closure_4 } = Fragment);
-let redux = react.getNamedContext("FrameContext", undefined);
+require = fn;
+const Platform = fn(17).Platform;
+const jsxProd = fn(21);
+({ jsx, jsxs: closure_4 } = jsxProd);
+const __react_navigation__elements_contexts = fn(6051);
+let redux = __react_navigation__elements_contexts.getNamedContext("FrameContext", undefined);
 
 export const useFrameSize = function useFrameSize(arg0, arg1) {
-  const context = react.useContext(redux);
+  const context = noop.useContext(closure_5);
   if (null == context) {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error("useFrameSize must be used within a FrameSizeProvider");
     throw error;
   } else {
-    const obj = react2;
+    const obj = _mod6052;
     const tmp5 = arg1 ? context.subscribeThrottled : context.subscribe;
     return obj.useSyncExternalStoreWithSelector(tmp5, context.getCurrent, context.getCurrent, arg0);
   }
 };
 export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
-  let items2;
   initialFrame = initialFrame.initialFrame;
-  size = { width: initialFrame.width, height: initialFrame.height };
-  const render = initialFrame.render;
-  let closure_0 = react.useRef(size);
-  const useRef = react.useRef;
-  set = new Set();
-  let closure_1 = useRef(set);
-  let tmp2 = useLatestCallbackDefault(() => ref.current);
-  let closure_2 = tmp2;
-  const tmp3 = useLatestCallbackDefault((arg0) => {
-    let closure_0 = arg0;
+  let size = { width: initialFrame.width, height: initialFrame.height };
+  noop.useRef(size);
+  noop.useRef(new Set());
+  let tmp2 = _modDef1512(() => ref.current);
+  const getCurrent = tmp2;
+  const tmp3 = _modDef1512((arg0) => {
+    closure_0 = arg0;
     let current = ref2.current;
     current.add(arg0);
     return () => {
@@ -48,21 +38,18 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
       current.delete(closure_0);
     };
   });
-  let closure_3 = tmp3;
-  const tmp4 = useLatestCallbackDefault((arg0) => {
-    let closure_0 = arg0;
-    let c2 = false;
-    let c3 = false;
-    let closure_4 = subscribe(() => {
-      let timeout;
+  const subscribe = tmp3;
+  const tmp4 = _modDef1512((arg0) => {
+    closure_0 = arg0;
+    c2 = false;
+    c3 = false;
+    closure_4 = subscribe(() => {
       clearTimeout(timeout);
       c2 = true;
-      const tmp2 = c3;
-      if (tmp2) {
+      if (c3) {
         const _setTimeout2 = setTimeout;
         timeout = setTimeout(() => {
-          const tmp = c2;
-          if (tmp) {
+          if (c2) {
             c2 = false;
             closure_1_0();
           }
@@ -82,45 +69,46 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
       clearTimeout(closure_1);
     };
   });
-  let closure_4 = tmp4;
+  const subscribeThrottled = tmp4;
   const items = [tmp3, tmp4, tmp2];
-  const memo = react.useMemo(() => ({ getCurrent, subscribe, subscribeThrottled }), items);
-  const tmp6 = useLatestCallbackDefault((height) => {
-    const tmp2 = ref.current.height === height.height && ref.current.width === height.width;
+  const memo = noop.useMemo(() => ({ getCurrent, subscribe, subscribeThrottled }), items);
+  const tmp6 = _modDef1512((height) => {
     if (!tmp2) {
-      size = { width: null, height: null };
+      const size = { width: null, height: null };
       ({ width: obj.width, height: obj.height } = height);
       ref.current = size;
       const current = ref2.current;
       const item = current.forEach((fn) => fn());
     }
+    tmp2 = ref.current.height === height.height && ref.current.width === height.width;
   });
   redux = tmp6;
-  const ref = react.useRef(null);
+  const ref = noop.useRef(null);
   const items1 = [tmp6];
-  const effect = react.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const current = ref.current;
     if (current != null) {
       current.measure((arg0, arg1, width, height) => {
-        const tmp = ref.current.width > 0 && ref.current.height > 0;
         if (!tmp) {
-          size = { width, height };
+          const size = { width, height };
           closure_1_5(size);
         }
+        tmp = ref.current.width > 0 && ref.current.height > 0;
       });
     }
   }, items1);
-  const obj = { value: memo, children: items2 };
-  const Provider = redux.Provider;
-  items2 = [null];
-  const obj2 = {
-    ref,
-    onLayout(nativeEvent) {
-      const layout = nativeEvent.nativeEvent.layout;
-      size = { width: layout.width, height: layout.height };
-      closure_5(size);
-    },
-  };
-  items2[1] = render(obj2);
-  return React3(Provider, obj);
+  const obj = { value: memo, children: null };
+  const items2 = [
+    null,
+    initialFrame.render({
+      ref,
+      onLayout(nativeEvent) {
+        const layout = nativeEvent.nativeEvent.layout;
+        const size = { width: layout.width, height: layout.height };
+        closure_5(size);
+      },
+    }),
+  ];
+  obj.children = items2;
+  return React4(redux.Provider, obj);
 };

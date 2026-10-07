@@ -1,13 +1,13 @@
 // _runtime/metro/06699__.js
-import react_native from "../00017_react-native.js";
+import get_ActivityIndicator from "00017__.js";
 
-const TurboModuleRegistry = react_native.TurboModuleRegistry;
+const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 const enforcing = TurboModuleRegistry.getEnforcing("RNCClipboard");
 const RNCClipboard_TEXT_CHANGED = "RNCClipboard_TEXT_CHANGED";
-const nativeEventEmitter = new react_native.NativeEventEmitter(enforcing);
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcing);
 const listenerCount = nativeEventEmitter.listenerCount;
 let fn = listenerCount;
-if (fn) {
+if (listenerCount) {
   const listenerCount2 = nativeEventEmitter.listenerCount;
   fn = listenerCount2.bind(nativeEventEmitter);
 } else {

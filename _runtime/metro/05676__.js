@@ -6739,7 +6739,7 @@ const obj = {
     "puzzle",
   ],
   teddy_bear: ["juc\u0103rie", "plu\u0219", "urs", "ursule\u021B", "ursule\u021B de plu\u0219"],
-  "pi\u00f1ata": [
+  piñata: [
     "bomboane",
     "cinco de mayo",
     "mexican",

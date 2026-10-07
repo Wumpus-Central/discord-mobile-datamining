@@ -8,13 +8,15 @@ import _mod14125 from "14125__.js";
 let closure_2 = _mod14086([].push);
 
 export default (arg0, arg1) => {
-  let num;
   const tmp = _mod14084(arg0);
   const items = [];
   for (const key10010 in tmp) {
     let tmp14 = _mod14102;
     let tmp14Result = tmp14(_mod14124, key10010);
-    let tmp2 = !tmp14Result && _mod14102(tmp, key10010);
+    let tmp2 = !tmp14Result;
+    if (!tmp14Result) {
+      tmp2 = _mod14102(tmp, key10010);
+    }
     if (!tmp2) {
       continue;
     } else {

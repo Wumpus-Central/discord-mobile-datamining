@@ -3,14 +3,14 @@
 export default function fuzzysearch(arg0, str) {
   if (arg0.length > str.length) {
     return false;
-  } else if (arg0.length === str.length) {
+  } else if (length2 === length) {
     return arg0 === str;
   } else {
     let num = 0;
     let num3 = 0;
-    if (0 < arg0.length) {
+    if (0 < length2) {
       let tmp2 = num3;
-      label0: while (num3 < str.length) {
+      while (num3 < length) {
         let sum = tmp2 + 1;
         while (str.charCodeAt(tmp2) !== tmp) {
           tmp2 = sum;
@@ -28,4 +28,4 @@ export default function fuzzysearch(arg0, str) {
     }
     return true;
   }
-}
+};

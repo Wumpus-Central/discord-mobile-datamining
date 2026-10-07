@@ -1,6 +1,9 @@
 // _runtime/metro/01825__.js
 import configureProps from "../01742_configureProps.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const createAnimatedPropAdapter = function createAnimatedPropAdapter(arg0, arr) {
   const obj = {};
   if (arr != null) {
@@ -8,7 +11,6 @@ export const createAnimatedPropAdapter = function createAnimatedPropAdapter(arg0
       obj[item] = true;
     });
   }
-  const obj2 = configureProps;
-  const result = obj2.addWhitelistedNativeProps(obj);
+  const result = configureProps.addWhitelistedNativeProps(obj);
   return arg0;
 };

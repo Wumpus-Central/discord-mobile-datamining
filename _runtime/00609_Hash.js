@@ -7,17 +7,17 @@ import hashSet from "00621_hashSet.js";
 
 class Hash {
   constructor(arg0) {
-    let num2;
-    let num = 0;
-    if (null != arg0) {
-      num = arg0.length;
+    num = 0;
+    if (null != global) {
+      num = global.length;
     }
-    const self = this;
-    this.clear();
+    self = this;
+    clearResult = this.clear();
     for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-      let tmp2 = arg0[num2];
-      let result = self.set(tmp2[0], tmp2[1]);
+      tmp2 = global[num2];
+      result = self.set(tmp2[0], tmp2[1]);
     }
+    return;
   }
 }
 Hash.prototype.clear = hashClear;

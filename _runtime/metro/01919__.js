@@ -1,5 +1,5 @@
 // _runtime/metro/01919__.js
-const obj = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "pt",
   pluralRuleFunction(arg0, arg1) {
     String(arg0);
@@ -22,21 +22,18 @@ const obj = {
     }
     return str;
   },
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
+});
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-AO", parentLocale: "pt-PT" });
-const obj2 = {
+globalThis.IntlMessageFormat.__addLocaleData({
   locale: "pt-PT",
   parentLocale: "pt",
   pluralRuleFunction(arg0, arg1) {
     let str2 = "other";
-    const str = String(arg0);
-    const tmp = str.split(".")[1];
     if (!arg1) {
       let str3 = "other";
       if (1 == arg0) {
         str3 = "other";
-        if (!tmp) {
+        if (!str.split(".")[1]) {
           str3 = "one";
         }
       }
@@ -44,8 +41,7 @@ const obj2 = {
     }
     return str2;
   },
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj2);
+});
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-CV", parentLocale: "pt-PT" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-GW", parentLocale: "pt-PT" });
 globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-MO", parentLocale: "pt-PT" });

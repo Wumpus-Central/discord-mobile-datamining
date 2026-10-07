@@ -1,31 +1,28 @@
 // _runtime/04151_differenceInCalendarQuarters.js
-import getQuarter_mod from "04152_getQuarter.js";
-import toDate_mod from "03964_toDate.js";
+import module_4152_mod from "metro/04152__.js";
+import _typeof_mod from "metro/03964__.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
 
-let tmp3;
-let tmp5;
-let tmp7;
-let getQuarter = getQuarter_mod;
-if (!getQuarter) {
-  tmp3 = { default: getQuarter };
-  const obj = { default: getQuarter };
+let module_4152 = module_4152_mod;
+if (!module_4152) {
+  const obj = { default: module_4152 };
+  let tmp3 = obj;
 } else {
-  tmp3 = getQuarter;
+  tmp3 = module_4152;
 }
-getQuarter = tmp3;
-let toDate = toDate_mod;
-if (!toDate) {
-  tmp5 = { default: toDate };
-  const obj2 = { default: toDate };
+module_4152 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
 } else {
-  tmp5 = toDate;
+  tmp5 = _typeof;
 }
-toDate = tmp5;
+_typeof = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp7 = { default: requiredArgs };
   const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
   tmp7 = requiredArgs;
 }
@@ -33,10 +30,10 @@ requiredArgs = tmp7;
 
 export default function differenceInCalendarQuarters(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = toDate.default(arg0);
-  const defaultResult2 = toDate.default(arg1);
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = _typeof.default(arg1);
   const fullYear = defaultResult1.getFullYear();
   const diff = fullYear - defaultResult2.getFullYear();
-  const defaultResult3 = getQuarter.default(defaultResult1);
-  return 4 * diff + (defaultResult3 - getQuarter.default(defaultResult2));
-}
+  return 4 * diff + (module_4152.default(defaultResult1) - module_4152.default(defaultResult2));
+};
+export default exports.default;

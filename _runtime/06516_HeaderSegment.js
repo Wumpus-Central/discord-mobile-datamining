@@ -1,15 +1,10 @@
 // _runtime/06516_HeaderSegment.js
-import Fragment from "react/00021_Fragment.js";
 import _mod6026 from "metro/06026__.js";
 import _objectWithoutProperties from "metro/00109__objectWithoutProperties.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
-import react from "00019_react.js";
-import react_native from "00017_react-native.js";
+import _slicedToArray from "metro/00032__.js";
+import noop from "metro/00019__.js";
 
-let size;
-
-let Platform;
-let metroRequire;
+require = fn;
 let closure_2 = [
   "progress",
   "layout",
@@ -35,62 +30,19 @@ let closure_2 = [
   "headerStatusBarHeight",
   "styleInterpolator",
 ];
-({ Platform, StyleSheet: metroRequire } = react_native);
-const jsx = Fragment.jsx;
+get_ActivityIndicator = fn(17);
+({ Platform, StyleSheet: metroRequire } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 
 export const HeaderSegment = function HeaderSegment(progress) {
-  let accessibilityLabel;
-  let allowFontScaling;
-  let backImage;
-  let backgroundStyle;
-  let closure_10;
-  let closure_14;
-  let closure_15;
-  let closure_16;
-  let closure_17;
-  let closure_18;
-  let closure_19;
-  let closure_20;
-  let closure_4;
-  let direction;
-  let first1;
-  let handleTitleLayout;
-  let headerBackButtonDisplayMode;
-  let headerBackgroundContainerStyle;
-  let headerLeftContainerStyle;
-  let headerRightContainerStyle;
-  let headerStatusBarHeight;
-  let headerStyle;
-  let headerTitle;
-  let headerTitleContainerStyle;
-  let href;
-  let items1;
-  let items2;
-  let items3;
-  let items4;
-  let label;
-  let leftButtonStyle;
-  let leftLabel;
-  let modal;
-  let onGoBack;
-  let rightButtonStyle;
-  let styleInterpolator;
-  let testID;
-  let titleStyle;
-  let truncatedLabel;
-  let tmp = direction;
-  let obj = direction(leftLabel[5]);
-  direction = obj.useLocale().direction;
-  let obj2 = handleTitleLayout;
+  direction = direction(leftLabel[5]).useLocale().direction;
   [leftLabel, closure_2] = handleTitleLayout.useState(undefined);
   [first1, _slicedToArray] = handleTitleLayout.useState(undefined);
   handleTitleLayout = function handleTitleLayout(nativeEvent) {
-    let closure_129_0;
-    let closure_129_1;
-    ({ height: closure_129_0, width: closure_129_1 } = nativeEvent.nativeEvent.layout);
+    ({ height: direction, width: first } = nativeEvent.nativeEvent.layout);
     closure_4((arg0) => {
-      size = arg0;
-      if (size) {
+      let size = arg0;
+      if (arg0) {
         return size;
       }
       const size1 = { height, width };
@@ -98,10 +50,15 @@ export const HeaderSegment = function HeaderSegment(progress) {
     });
   };
   function handleLeftLabelLayout(nativeEvent) {
-    let width;
     ({ height, width } = nativeEvent.nativeEvent.layout);
-    size = first;
-    const tmp = first && height === size.height && width === size.width;
+    const size = first;
+    let tmp = first;
+    if (first) {
+      tmp = height === size.height;
+    }
+    if (tmp) {
+      tmp = width === size.width;
+    }
     if (!tmp) {
       const size1 = { height, width };
       closure_2(size1);
@@ -116,10 +73,8 @@ export const HeaderSegment = function HeaderSegment(progress) {
     let fn;
     if (onGoBack) {
       fn = (arg0) => {
-        const obj = {};
-        const HeaderBackButton = direction(first[6]).HeaderBackButton;
         const merged = Object.assign(arg0);
-        return progress(HeaderBackButton, obj);
+        return progress(direction(first[6]).HeaderBackButton, {});
       };
     }
     headerLeft = fn;
@@ -142,15 +97,15 @@ export const HeaderSegment = function HeaderSegment(progress) {
   } = progress);
   ({ headerTitleContainerStyle, headerLeftContainerStyle, headerRightContainerStyle, headerBackgroundContainerStyle } =
     progress);
+  let obj = direction(leftLabel[5]);
+  let obj2 = handleTitleLayout;
   const tmp7 = first1(progress, closure_2);
-  const tmpResult = tmp(leftLabel[6]);
-  const defaultHeaderHeight = tmpResult.getDefaultHeaderHeight(layout, modal, headerStatusBarHeight);
+  const defaultHeaderHeight = direction(leftLabel[6]).getDefaultHeaderHeight(layout, modal, headerStatusBarHeight);
   let obj3 = headerStyle;
-  const flatten = handleLeftLabelLayout.flatten;
   if (!headerStyle) {
     obj3 = {};
   }
-  let height = flatten(obj3).height;
+  let height = handleLeftLabelLayout.flatten(obj3).height;
   if (undefined === height) {
     height = defaultHeaderHeight;
   }
@@ -161,16 +116,18 @@ export const HeaderSegment = function HeaderSegment(progress) {
   height = tmp10;
   let items = [styleInterpolator, progress, direction, tmp10, layout, first1, leftLabel];
   const memo = obj2.useMemo(() => {
-    let next;
-    let obj3;
-    const obj = { current: { progress: progress.current }, next, direction, layouts: obj3 };
-    next = progress.next;
+    const obj = { current: { progress: progress.current }, next: null, direction: null, layouts: null };
+    let next = progress.next;
     if (next) {
-      next = { progress: iter.next };
       const obj2 = { progress: iter.next };
+      next = obj2;
     }
-    obj3 = { header: size, screen: layout, title: first1, leftLabel };
-    size = { height, width: layout.width };
+    obj.next = next;
+    obj.direction = direction;
+    const obj3 = { header: null, screen: layout, title: first1, leftLabel };
+    const size = { height, width: layout.width };
+    obj3.header = size;
+    obj.layouts = obj3;
     return styleInterpolator(obj);
   }, items);
   const leftLabelStyle = memo.leftLabelStyle;
@@ -178,32 +135,31 @@ export const HeaderSegment = function HeaderSegment(progress) {
   ({ titleStyle, leftButtonStyle, rightButtonStyle, backgroundStyle } = memo);
   if (headerLeft) {
     fn2 = (arg0) => {
-      let items;
-      const obj = {
-        href,
-        backImage,
-        accessibilityLabel,
-        testID,
-        allowFontScaling,
-        onPress: onGoBack,
-        label,
-        truncatedLabel,
-        labelStyle: items,
-        onLabelLayout: handleLeftLabelLayout,
-        screenLayout: layout,
-        titleLayout: first1,
-        canGoBack: Boolean(onGoBack),
-      };
+      const obj = {};
       const merged = Object.assign(arg0);
-      items = [leftLabelStyle, closure_20];
+      obj.href = href;
+      obj.backImage = backImage;
+      obj.accessibilityLabel = accessibilityLabel;
+      obj.testID = testID;
+      obj.allowFontScaling = allowFontScaling;
+      obj.onPress = onGoBack;
+      obj.label = label;
+      obj.truncatedLabel = truncatedLabel;
+      const items = [leftLabelStyle, closure_1_20];
+      obj.labelStyle = items;
+      obj.onLabelLayout = handleLeftLabelLayout;
+      obj.screenLayout = layout;
+      obj.titleLayout = first1;
+      obj.canGoBack = Boolean(onGoBack);
       return headerLeft(obj);
     };
   }
   let fn3;
   if (headerRight) {
     fn3 = (arg0) => {
-      const obj = { canGoBack: Boolean(onGoBack) };
+      const obj = {};
       const merged = Object.assign(arg0);
+      obj.canGoBack = Boolean(onGoBack);
       return headerRight(obj);
     };
   }
@@ -213,30 +169,35 @@ export const HeaderSegment = function HeaderSegment(progress) {
     headerTitle:
       typeof headerTitle !== "function"
         ? (arg0) => {
-            const HeaderTitle = _mod6026.HeaderTitle;
+            const obj = {};
             const merged = Object.assign(arg0);
-            return <HeaderTitle onLayout={handleTitleLayout} />;
+            obj.onLayout = handleTitleLayout;
+            return jsx(_mod6026.HeaderTitle, {});
           }
         : (arg0) => {
-            const obj = { onLayout: handleTitleLayout };
+            const obj = {};
             const merged = Object.assign(arg0);
+            obj.onLayout = handleTitleLayout;
             return headerTitle(obj);
           },
     headerLeft: fn2,
     headerRight: fn3,
-    headerTitleContainerStyle: items1,
-    headerLeftContainerStyle: items2,
-    headerRightContainerStyle: items3,
+    headerTitleContainerStyle: null,
+    headerLeftContainerStyle: null,
+    headerRightContainerStyle: null,
     headerBackButtonDisplayMode: str,
-    headerBackgroundContainerStyle: items4,
+    headerBackgroundContainerStyle: null,
     headerStyle,
     headerStatusBarHeight,
   };
-  items1 = [titleStyle, headerTitleContainerStyle];
-  items2 = [leftButtonStyle, headerLeftContainerStyle];
-  items3 = [rightButtonStyle, headerRightContainerStyle];
-  items4 = [backgroundStyle, headerBackgroundContainerStyle];
-  const Header = tmp(tmp2[6]).Header;
+  const items1 = [titleStyle, headerTitleContainerStyle];
+  obj4.headerTitleContainerStyle = items1;
+  const items2 = [leftButtonStyle, headerLeftContainerStyle];
+  obj4.headerLeftContainerStyle = items2;
+  const items3 = [rightButtonStyle, headerRightContainerStyle];
+  obj4.headerRightContainerStyle = items3;
+  const items4 = [backgroundStyle, headerBackgroundContainerStyle];
+  obj4.headerBackgroundContainerStyle = items4;
   let merged = Object.assign(tmp7);
-  return progress(Header, obj4);
+  return progress(direction(leftLabel[6]).Header, obj4);
 };

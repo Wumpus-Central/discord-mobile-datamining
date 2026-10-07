@@ -1,6 +1,5 @@
 // _runtime/metro/10357__.js
 import repeatedTimeunitPattern from "../10174_repeatedTimeunitPattern.js";
-import ReferenceWithTimezone from "../10177_ReferenceWithTimezone.js";
 import AbstractParserWithWordBoundaryChecking from "../10181_AbstractParserWithWordBoundaryChecking.js";
 import _mod10343 from "10343__.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -9,12 +8,19 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const ITRelativeDateFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -29,17 +35,22 @@ const regExp = new RegExp(
 );
 class ITRelativeDateFormatParser {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ITRelativeDateFormatParser);
-    const obj = _getPrototypeOf(ITRelativeDateFormatParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = c2(this, ITRelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ITRelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return c3(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
 _inherits(ITRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
@@ -54,11 +65,9 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(createParsingComponents, arg1) {
-      const str = arg1[1];
-      const formatted = str.toLowerCase();
-      const str2 = arg1[2];
-      const str3 = str2.toLowerCase();
-      const tmp3 = _mod10343.TIME_UNIT_DICTIONARY[str3];
+      const formatted = arg1[1].toLowerCase();
+      const str3 = arg1[2].toLowerCase();
+      const tmp3 = ITRelativeDateFormatParser(10343).TIME_UNIT_DICTIONARY[str3];
       if ("prossimo" != formatted) {
         if (!formatted.startsWith("dopo")) {
           if ("prima" != formatted) {
@@ -66,16 +75,13 @@ const items = [
               const parsingComponents = createParsingComponents.createParsingComponents();
               const _Date = Date;
               const instant = createParsingComponents.reference.instant;
-              const self = this;
-              const self2 = this;
               const date = new Date(instant.getTime());
               if (str3.match(/settimana/i)) {
-                const setDate = date.setDate;
-                const date1 = date.getDate();
-                setDate(date1 - date.getDay());
+                date.setDate(date.getDate() - date.getDay());
                 parsingComponents.imply("day", date.getDate());
                 parsingComponents.imply("month", date.getMonth() + 1);
                 parsingComponents.imply("year", date.getFullYear());
+                const date1 = date.getDate();
               } else if (str3.match(/mese/i)) {
                 date.setDate(1);
                 parsingComponents.imply("day", date.getDate());
@@ -93,11 +99,11 @@ const items = [
           }
           const obj4 = {};
           obj4[tmp3] = -1;
-          const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
+          const ParsingComponents = ITRelativeDateFormatParser(10177).ParsingComponents;
           return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
         }
       }
-      const ParsingComponents2 = ReferenceWithTimezone.ParsingComponents;
+      const ParsingComponents2 = ITRelativeDateFormatParser(10177).ParsingComponents;
       return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
     },
   },

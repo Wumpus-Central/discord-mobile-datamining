@@ -2,13 +2,11 @@
 import _mod14105 from "14105__.js";
 import _mod14111 from "14111__.js";
 
-export default function (arg0) {
+export default (arg0) => {
   if (_mod14105(arg0)) {
     return arg0;
   } else {
-    const self = this;
-    const self2 = this;
-    const tmp4 = new TypeError(_mod14111(arg0) + " is not a function");
-    throw tmp4;
+    const tmp6 = new TypeError(_mod14111(arg0) + " is not a function");
+    throw tmp6;
   }
-}
+};

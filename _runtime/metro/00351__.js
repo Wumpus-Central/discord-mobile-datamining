@@ -2,11 +2,14 @@
 import _mod38 from "00038__.js";
 import FrameRateLoggerDefault from "../00352_FrameRateLogger.js";
 
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
+
 export default {
   setGlobalOptions(debug) {
     if (undefined !== debug.debug) {
-      const tmp3 = _mod38;
-      tmp3(FrameRateLoggerDefault, "Trying to debug FrameRateLogger without the native module!");
+      _mod38(FrameRateLoggerDefault, "Trying to debug FrameRateLogger without the native module!");
     }
     const obj = FrameRateLoggerDefault;
     if (obj != null) {

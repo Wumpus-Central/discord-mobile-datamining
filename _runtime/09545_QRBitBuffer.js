@@ -1,7 +1,11 @@
 // _runtime/09545_QRBitBuffer.js
 class QRBitBuffer {
   constructor() {
-    const array = new Array();
+    obj = {};
+    array = new Array();
+    obj.buffer = array;
+    obj.length = 0;
+    return;
   }
 }
 QRBitBuffer.prototype = {
@@ -9,7 +13,6 @@ QRBitBuffer.prototype = {
     return 1 === ((this.buffer[Math.floor(Math, arg0 / 8)] >>> (7 - (arg0 % 8))) & 1);
   },
   put(arg0, arg1) {
-    let num;
     const self = this;
     for (let num = 0; num < arg1; num = num + 1) {
       let putBitResult = self.putBit(1 === ((arg0 >>> (arg1 - num - 1)) & 1));
@@ -25,8 +28,7 @@ QRBitBuffer.prototype = {
       const buffer1 = self.buffer;
       buffer1.push(0);
     }
-    const tmp3 = arg0;
-    if (tmp3) {
+    if (arg0) {
       const buffer = self.buffer;
       buffer[rounded] = buffer[rounded] | (128 >>> (self.length % 8));
     }

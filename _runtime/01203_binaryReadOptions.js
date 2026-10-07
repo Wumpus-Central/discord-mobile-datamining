@@ -1,35 +1,35 @@
 // _runtime/01203_binaryReadOptions.js
-import UnknownFieldHandler from "01202_UnknownFieldHandler.js";
-import varint64read from "01204_varint64read.js";
-import PbULong2 from "01205_PbULong.js";
-import _slicedToArray from "metro/00032__slicedToArray.js";
+import _slicedToArray from "metro/00032__.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+const BinaryReader = require;
 let closure_4 = {
   readUnknownField: true,
-  readerFactory(View) {
-    const tmp = new hasOwnProperty(View);
-    return tmp;
+  readerFactory(arg0) {
+    return new _moduleResult(arg0);
   },
 };
 class BinaryReader {
-  constructor(buf, textDecoder) {
-    _classCallCheck(this, BinaryReader);
-    this.varint64 = varint64read.varint64read;
-    this.uint32 = varint64read.varint32read;
-    this.buf = buf;
-    this.len = buf.length;
+  constructor(arg0, arg1) {
+    textDecoder = require;
+    tmp2 = closure_3(this, BinaryReader);
+    this.varint64 = closure_0(closure_1[3]).varint64read;
+    this.uint32 = closure_0(closure_1[3]).varint32read;
+    this.buf = global;
+    this.len = global.length;
     this.pos = 0;
-    const dataView = new DataView(buf.buffer, buf.byteOffset, buf.byteLength);
+    dataView = new DataView(global.buffer, global.byteOffset, global.byteLength);
     this.view = dataView;
-    if (null == textDecoder) {
-      const _TextDecoder = TextDecoder;
-      const self = this;
-      const self2 = this;
+    if (null == require) {
+      _TextDecoder = TextDecoder;
+      tmp4 = new.target;
+      str = "utf-8";
+      tmp5 = new.target;
       textDecoder = new TextDecoder("utf-8", { fatal: true, ignoreBOM: true });
     }
     this.textDecoder = textDecoder;
+    return;
   }
 }
 const entry = {
@@ -37,9 +37,9 @@ const entry = {
   value: function tag() {
     const uint32Result = this.uint32();
     if (uint32Result >>> 3 > 0) {
-      if ((7 & uint32Result) >= 0) {
-        if (5 >= (7 & uint32Result)) {
-          const items = [uint32Result >>> 3, 7 & uint32Result];
+      if (tmp3 >= 0) {
+        if (5 >= tmp3) {
+          const items = [tmp2, tmp3];
           return items;
         }
       }
@@ -54,37 +54,33 @@ let items = [
     key: "skip",
     value: function skip(arg0) {
       let EndGroup;
-      let tmp12;
+      let tmp14;
       const self = this;
-      const pos = this.pos;
-      if (UnknownFieldHandler.WireType.Varint === arg0) {
+      if (BinaryReader(1202).WireType.Varint === arg0) {
         self.pos = +self.pos + 1;
         if (128 & self.buf[+self.pos]) {
           do {
-            let tmp11 = +self.pos;
-            self.pos = tmp11 + 1;
-            tmp12 = 128 & self.buf[tmp11];
-          } while (tmp12);
+            let tmp13 = +self.pos;
+            self.pos = tmp13 + 1;
+            tmp14 = 128 & self.buf[tmp13];
+          } while (tmp14);
         }
       } else {
-        if (UnknownFieldHandler.WireType.Bit64 === arg0) {
+        if (BinaryReader(1202).WireType.Bit64 === arg0) {
           self.pos = self.pos + 4;
-        } else if (UnknownFieldHandler.WireType.Bit32 !== arg0) {
-          if (UnknownFieldHandler.WireType.LengthDelimited === arg0) {
+        } else if (BinaryReader(1202).WireType.Bit32 !== arg0) {
+          if (BinaryReader(1202).WireType.LengthDelimited === arg0) {
             self.pos = self.pos + self.uint32();
-          } else if (UnknownFieldHandler.WireType.StartGroup === arg0) {
-            let tmp6 = self.tag()[1];
-            if (tmp6 !== UnknownFieldHandler.WireType.EndGroup) {
+          } else if (BinaryReader(1202).WireType.StartGroup === arg0) {
+            const tmp8 = self.tag()[1];
+            if (tmp8 !== BinaryReader(1202).WireType.EndGroup) {
               do {
-                let skipResult = self.skip(tmp6);
-                tmp6 = self.tag()[1];
-                EndGroup = UnknownFieldHandler.WireType.EndGroup;
-              } while (tmp6 !== EndGroup);
+                let skipResult = self.skip(self.tag()[1]);
+                EndGroup = BinaryReader(1202).WireType.EndGroup;
+              } while (tmp8 !== EndGroup);
             }
           } else {
             const _Error = Error;
-            const self2 = this;
-            const self3 = this;
             const error = new Error("cant skip wire type " + arg0);
             throw error;
           }
@@ -93,7 +89,7 @@ let items = [
       }
       self.assertBounds();
       const buf = self.buf;
-      return buf.subarray(pos, self.pos);
+      return buf.subarray(this.pos, self.pos);
     },
   },
   {
@@ -101,8 +97,6 @@ let items = [
     value: function assertBounds() {
       if (this.pos > this.len) {
         const _RangeError = RangeError;
-        const self = this;
-        const self2 = this;
         const rangeError = new RangeError("premature EOF");
         throw rangeError;
       }
@@ -124,26 +118,20 @@ let items = [
   {
     key: "int64",
     value: function int64() {
-      return PbULong2.PbLong(...this.varint64());
+      return BinaryReader(1205).PbLong(...this.varint64());
     },
   },
   {
     key: "uint64",
     value: function uint64() {
-      return PbULong2.PbULong(...this.varint64());
+      return BinaryReader(1205).PbULong(...this.varint64());
     },
   },
   {
     key: "sint64",
     value: function sint64() {
-      let tmp2;
-      let tmp3;
       [tmp2, tmp3] = this.varint64();
-      _slicedToArray(this.varint64(), 2);
-      const tmp5 = tmp2 >>> 1;
-      const tmp6 = 1 & tmp3;
-      const tmp7 = tmp3 >>> 1;
-      const pbLong = new PbULong2.PbLong((tmp5 | (tmp6 << 31)) ^ tmp4, tmp7 ^ tmp4);
+      const pbLong = new BinaryReader(1205).PbLong(((tmp2 >>> 1) | ((1 & tmp3) << 31)) ^ tmp4, (tmp3 >>> 1) ^ tmp4);
       return pbLong;
     },
   },
@@ -175,18 +163,14 @@ let items = [
   {
     key: "fixed64",
     value: function fixed64() {
-      const PbULong = PbULong2.PbULong;
-      const sfixed32Result = this.sfixed32();
-      const pbULong = new PbULong(sfixed32Result, this.sfixed32());
+      const pbULong = new BinaryReader(1205).PbULong(this.sfixed32(), this.sfixed32());
       return pbULong;
     },
   },
   {
     key: "sfixed64",
     value: function sfixed64() {
-      const PbLong = PbULong2.PbLong;
-      const sfixed32Result = this.sfixed32();
-      const pbLong = new PbLong(sfixed32Result, this.sfixed32());
+      const pbLong = new BinaryReader(1205).PbLong(this.sfixed32(), this.sfixed32());
       return pbLong;
     },
   },
@@ -229,18 +213,15 @@ let items = [
 ];
 const _moduleResult = _createClass(BinaryReader, items);
 const hasOwnProperty = _moduleResult;
-const BinaryReader_export = _moduleResult;
 
 export const binaryReadOptions = function binaryReadOptions(BINARY_READ_OPTIONS) {
-  let merged;
-  const tmp = BINARY_READ_OPTIONS;
-  if (tmp) {
+  if (BINARY_READ_OPTIONS) {
     const _Object = Object;
     const _Object2 = Object;
-    merged = Object.assign(Object.assign({}, closure_4), BINARY_READ_OPTIONS);
+    let merged = Object.assign(Object.assign({}, closure_4), BINARY_READ_OPTIONS);
   } else {
     merged = closure_4;
   }
   return merged;
 };
-export { BinaryReader_export as BinaryReader };
+export const BinaryReader = _moduleResult;

@@ -1,11 +1,10 @@
 // _runtime/metro/01554__.js
 
 export const isArrayEqual = function isArrayEqual(arr, mapped) {
-  const f84392 = (item, index) => Object.is(item, mapped[index]);
   let tmp = arr === mapped;
   if (!tmp) {
-    tmp = arr.length === mapped.length && arr.every(f84392);
-    arr.length === mapped.length && arr.every(f84392);
+    tmp = arr.length === mapped.length && arr.every((item, index) => Object.is(item, mapped[index]));
+    const tmp2 = arr.length === mapped.length && arr.every((item, index) => Object.is(item, mapped[index]));
   }
   return tmp;
 };

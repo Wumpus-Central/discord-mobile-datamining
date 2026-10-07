@@ -1,13 +1,13 @@
 // _runtime/metro/01726__.js
-import react_native from "../01647_react-native.js";
-import _slicedToArray from "00032__slicedToArray.js";
+import _mod1647 from "01647__.js";
+import _slicedToArray from "00032__.js";
 
+require = fn;
 function checkIfConfigIsValid(duration) {
-  let closure_0 = duration;
-  let closure_1 = "";
+  closure_1 = "";
   const items = ["stiffness", "damping", "dampingRatio", "restDisplacementThreshold", "restSpeedThreshold", "mass"];
   const item = items.forEach((item) => {
-    if (closure_0[item] <= 0) {
+    if (duration[item] <= 0) {
       const _HermesInternal = HermesInternal;
       closure_1 = closure_1 + ", " + item + " must be grater than zero but got " + tmp;
     }
@@ -43,22 +43,17 @@ function checkIfConfigIsValid(duration) {
       "} ";
   }
   if ("" !== closure_1) {
-    const logger = react_native.logger;
+    const logger = _mod1647.logger;
     logger.warn(`Invalid spring config${closure_1}`);
   }
   return "" === closure_1;
 }
-let obj = { logger: react_native.logger };
-checkIfConfigIsValid.__closure = obj;
+checkIfConfigIsValid.__closure = { logger: fn(1647).logger };
 checkIfConfigIsValid.__workletHash = 16835320063819;
 checkIfConfigIsValid.__initData = {
   code: "function checkIfConfigIsValid_Pnpm_springUtilsTs1(config){const{logger}=this.__closure;var _config$clamp,_config$clamp2;let errorMessage='';['stiffness','damping','dampingRatio','restDisplacementThreshold','restSpeedThreshold','mass'].forEach(function(prop){const value=config[prop];if(value<=0){errorMessage+=\", \"+prop+\" must be grater than zero but got \"+value;}});if(config.duration<0){errorMessage+=\", duration can't be negative, got \"+config.duration;}if((_config$clamp=config.clamp)!==null&&_config$clamp!==void 0&&_config$clamp.min&&(_config$clamp2=config.clamp)!==null&&_config$clamp2!==void 0&&_config$clamp2.max&&config.clamp.min>config.clamp.max){errorMessage+=\", clamp.min should be lower than clamp.max, got clamp: {min: \"+config.clamp.min+\", max: \"+config.clamp.max+\"} \";}if(errorMessage!==''){logger.warn('Invalid spring config'+errorMessage);}return errorMessage==='';}",
 };
 function bisectRoot(arg0) {
-  let func;
-  let max;
-  let maxIterations;
-  let min;
   ({ min, max, func, maxIterations } = arg0);
   if (maxIterations === undefined) {
     maxIterations = 20;
@@ -103,10 +98,6 @@ bisectRoot.__initData = {
   code: "function bisectRoot_Pnpm_springUtilsTs2({min:min,max:max,func:func,maxIterations=20}){const ACCURACY=0.00005;let idx=maxIterations;let current=(max+min)/2;while(Math.abs(func(current))>ACCURACY&&idx>0){idx-=1;if(func(current)<0){min=current;}else{max=current;}current=(min+max)/2;}return current;}",
 };
 function initialCalculations() {
-  let mass;
-  let num4;
-  let num7;
-  let stiffness;
   let num = mass;
   if (mass === undefined) {
     num = 0;
@@ -117,12 +108,13 @@ function initialCalculations() {
     const dampingRatio = skipAnimation.dampingRatio;
     const _Math4 = Math;
     const sqrtResult = Math.sqrt(skipAnimation.stiffness / num);
-    const obj2 = { zeta: dampingRatio, omega0: sqrtResult, omega1: num7 };
-    num7 = 0;
+    const obj2 = { zeta: dampingRatio, omega0: sqrtResult, omega1: null };
+    let num7 = 0;
     if (dampingRatio < 1) {
       const _Math5 = Math;
       num7 = sqrtResult * Math.sqrt(1 - dampingRatio ** 2);
     }
+    obj2.omega1 = num7;
     return obj2;
   } else {
     ({ mass, stiffness } = skipAnimation);
@@ -130,12 +122,13 @@ function initialCalculations() {
     const result = skipAnimation.damping / (2 * Math.sqrt(stiffness * mass));
     const _Math2 = Math;
     const sqrtResult1 = Math.sqrt(stiffness / mass);
-    const obj = { zeta: result, omega0: sqrtResult1, omega1: num4 };
-    num4 = 0;
+    const obj = { zeta: result, omega0: sqrtResult1, omega1: null };
+    let num4 = 0;
     if (result < 1) {
       const _Math3 = Math;
       num4 = sqrtResult1 * Math.sqrt(1 - result ** 2);
     }
+    obj.omega1 = num4;
     return obj;
   }
 }
@@ -145,35 +138,29 @@ initialCalculations.__initData = {
   code: "function initialCalculations_Pnpm_springUtilsTs3(mass=0,config){if(config.skipAnimation){return{zeta:0,omega0:0,omega1:0};}if(config.useDuration){const{stiffness:k,dampingRatio:zeta}=config;const omega0=Math.sqrt(k/mass);const omega1=zeta<1?omega0*Math.sqrt(1-zeta**2):0;return{zeta:zeta,omega0:omega0,omega1:omega1};}else{const{damping:c,mass:m,stiffness:k}=config;const zeta=c/(2*Math.sqrt(k*m));const omega0=Math.sqrt(k/m);const omega1=zeta<1?omega0*Math.sqrt(1-zeta**2):0;return{zeta:zeta,omega0:omega0,omega1:omega1};}}",
 };
 function scaleZetaToMatchClamps(toValue, clamp) {
-  let startValue;
-  let tmp5;
-  let tmp6;
-  let zeta;
   ({ zeta, startValue } = toValue);
   const NumberResult = Number(toValue.toValue);
   if (NumberResult === startValue) {
     return zeta;
   } else {
-    let items1;
     if (NumberResult - startValue > 0) {
       const items = [,];
       ({ min: arr2[0], max: arr2[1] } = clamp);
-      items1 = items;
+      let items1 = items;
     } else {
       items1 = [,];
       ({ max: arr[0], min: arr[1] } = clamp);
     }
-    [tmp5, tmp6] = items1;
+    [tmp4, tmp5] = items1;
     let absolute;
-    _slicedToArray(items1, 2);
-    if (undefined !== tmp6) {
+    if (undefined !== tmp5) {
       const _Math = Math;
-      absolute = Math.abs((tmp6 - NumberResult) / (NumberResult - startValue));
+      absolute = Math.abs((tmp5 - NumberResult) / (NumberResult - startValue));
     }
     let absolute1;
-    if (undefined !== tmp5) {
+    if (undefined !== tmp4) {
       const _Math2 = Math;
-      absolute1 = Math.abs((tmp5 - NumberResult) / (NumberResult - startValue));
+      absolute1 = Math.abs((tmp4 - NumberResult) / (NumberResult - startValue));
     }
     let absolute2;
     if (undefined !== absolute) {
@@ -195,13 +182,12 @@ function scaleZetaToMatchClamps(toValue, clamp) {
     const items3 = [];
     items3[
       HermesBuiltin.arraySpread(
-        items3,
         items2.filter((item) => undefined !== item),
         0,
       )
     ] = zeta;
     const _Math10 = Math;
-    return HermesBuiltin.apply(max, items3, Math);
+    return HermesBuiltin.apply(items3, Math);
   }
 }
 scaleZetaToMatchClamps.__closure = {};
@@ -213,12 +199,8 @@ const __initData = {
   code: "function pnpm_springUtilsTs6(mass){const{v0,k,x0,zeta,threshold,duration}=this.__closure;const amplitude=(mass*v0*v0+k*x0*x0)/(Math.exp(1-0.5*zeta)*k);const c=zeta*2*Math.sqrt(k*mass);return 1000*(-2*mass/c)*Math.log(threshold*0.01/amplitude)-duration;}",
 };
 function calculateNewMassToMatchDuration(diff, skipAnimation, velocity) {
-  let func;
-  let max;
-  let maxIterations;
-  let min;
-  let closure_0 = diff;
-  let closure_1 = velocity;
+  closure_0 = diff;
+  closure_1 = velocity;
   if (skipAnimation.skipAnimation) {
     return 0;
   } else {
@@ -289,15 +271,10 @@ calculateNewMassToMatchDuration.__initData = {
   code: "function calculateNewMassToMatchDuration_Pnpm_springUtilsTs5(x0,config,v0){const{bisectRoot}=this.__closure;if(config.skipAnimation){return 0;}const{stiffness:k,dampingRatio:zeta,restSpeedThreshold:threshold,duration:duration}=config;const durationForMass=function(mass){'worklet';const amplitude=(mass*v0*v0+k*x0*x0)/(Math.exp(1-0.5*zeta)*k);const c=zeta*2*Math.sqrt(k*mass);return 1000*(-2*mass/c)*Math.log(threshold*0.01/amplitude)-duration;};return bisectRoot({min:0,max:100,func:durationForMass});}",
 };
 function criticallyDampedSpringCalculations(toValue, arg1) {
-  let omega0;
-  let t;
-  let v0;
-  let x0;
   ({ v0, x0, omega0, t } = arg1);
-  toValue = toValue.toValue;
   const expResult = Math.exp(-omega0 * t);
   return {
-    position: toValue - expResult * (x0 + (v0 + omega0 * x0) * t),
+    position: toValue.toValue - expResult * (x0 + (v0 + omega0 * x0) * t),
     velocity: expResult * (v0 * (t * omega0 - 1) + t * x0 * omega0 * omega0),
   };
 }
@@ -307,10 +284,6 @@ criticallyDampedSpringCalculations.__initData = {
   code: "function criticallyDampedSpringCalculations_Pnpm_springUtilsTs7(animation,precalculatedValues){const{toValue:toValue}=animation;const{v0:v0,x0:x0,omega0:omega0,t:t}=precalculatedValues;const criticallyDampedEnvelope=Math.exp(-omega0*t);const criticallyDampedPosition=toValue-criticallyDampedEnvelope*(x0+(v0+omega0*x0)*t);const criticallyDampedVelocity=criticallyDampedEnvelope*(v0*(t*omega0-1)+t*x0*omega0*omega0);return{position:criticallyDampedPosition,velocity:criticallyDampedVelocity};}",
 };
 function underDampedSpringCalculations(toValue, arg1) {
-  let omega0;
-  let omega1;
-  let t;
-  let zeta;
   toValue = toValue.toValue;
   ({ zeta, t, omega0, omega1 } = arg1);
   const diff = toValue - toValue.current;
@@ -331,25 +304,21 @@ underDampedSpringCalculations.__initData = {
   code: "function underDampedSpringCalculations_Pnpm_springUtilsTs8(animation,precalculatedValues){const{toValue:toValue,current:current,velocity:velocity}=animation;const{zeta:zeta,t:t,omega0:omega0,omega1:omega1}=precalculatedValues;const v0=-velocity;const x0=toValue-current;const sin1=Math.sin(omega1*t);const cos1=Math.cos(omega1*t);const underDampedEnvelope=Math.exp(-zeta*omega0*t);const underDampedFrag1=underDampedEnvelope*(sin1*((v0+zeta*omega0*x0)/omega1)+x0*cos1);const underDampedPosition=toValue-underDampedFrag1;const underDampedVelocity=zeta*omega0*underDampedFrag1-underDampedEnvelope*(cos1*(v0+zeta*omega0*x0)-omega1*x0*sin1);return{position:underDampedPosition,velocity:underDampedVelocity};}",
 };
 function isAnimationTerminatingCalculation(velocity, overshootClamping) {
-  let current;
-  let startValue;
-  let toValue;
   ({ toValue, startValue, current } = velocity);
   overshootClamping = overshootClamping.overshootClamping;
-  velocity = velocity.velocity;
   if (overshootClamping) {
     let tmp2 = current > toValue && startValue < toValue;
     if (!tmp2) {
       tmp2 = current < toValue && startValue > toValue;
+      const tmp3 = current < toValue && startValue > toValue;
     }
     overshootClamping = tmp2;
   }
-  const obj = {
+  return {
     isOvershooting: overshootClamping,
-    isVelocity: Math.abs(velocity) < overshootClamping.restSpeedThreshold,
+    isVelocity: Math.abs(velocity.velocity) < overshootClamping.restSpeedThreshold,
     isDisplacement: Math.abs(toValue - current) < overshootClamping.restDisplacementThreshold,
   };
-  return obj;
 }
 isAnimationTerminatingCalculation.__closure = {};
 isAnimationTerminatingCalculation.__workletHash = 3775628746247;

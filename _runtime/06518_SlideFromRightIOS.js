@@ -1,85 +1,126 @@
 // _runtime/06518_SlideFromRightIOS.js
-import react_native from "00017_react-native.js";
-import react_native2 from "06512_react-native.js";
+import _mod17 from "metro/00017__.js";
+import _mod6512 from "metro/06512__.js";
 import TransitionIOSSpec from "06519_TransitionIOSSpec.js";
 import forHorizontalIOS from "06520_forHorizontalIOS.js";
 
-const Platform = react_native.Platform;
+const Platform = _mod17.Platform;
 const obj = {
   gestureDirection: "horizontal",
   transitionSpec: { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec },
   cardStyleInterpolator: forHorizontalIOS.forHorizontalIOS,
-  headerStyleInterpolator: react_native2.forFade,
+  headerStyleInterpolator: _mod6512.forFade,
 };
-({ open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec });
 const obj3 = {
   gestureDirection: "vertical",
-  transitionSpec: { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec },
-  cardStyleInterpolator: forHorizontalIOS.forVerticalIOS,
-  headerStyleInterpolator: react_native2.forFade,
+  transitionSpec: null,
+  cardStyleInterpolator: null,
+  headerStyleInterpolator: null,
 };
-({ open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec });
+const obj2 = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
+obj3.transitionSpec = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
+obj3.cardStyleInterpolator = forHorizontalIOS.forVerticalIOS;
+obj3.headerStyleInterpolator = _mod6512.forFade;
 const obj5 = {
   gestureDirection: "vertical",
-  transitionSpec: { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec },
-  cardStyleInterpolator: forHorizontalIOS.forModalPresentationIOS,
-  headerStyleInterpolator: react_native2.forFade,
+  transitionSpec: null,
+  cardStyleInterpolator: null,
+  headerStyleInterpolator: null,
 };
-({ open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec });
+const obj4 = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
+obj5.transitionSpec = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
+obj5.cardStyleInterpolator = forHorizontalIOS.forModalPresentationIOS;
+obj5.headerStyleInterpolator = _mod6512.forFade;
 const obj7 = {
   gestureDirection: "vertical",
-  transitionSpec: {
-    open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
-    close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
-  },
-  cardStyleInterpolator: forHorizontalIOS.forFadeFromBottomAndroid,
-  headerStyleInterpolator: react_native2.forFade,
+  transitionSpec: null,
+  cardStyleInterpolator: null,
+  headerStyleInterpolator: null,
 };
-({ open: TransitionIOSSpec.FadeInFromBottomAndroidSpec, close: TransitionIOSSpec.FadeOutToBottomAndroidSpec });
+const obj6 = { open: TransitionIOSSpec.TransitionIOSSpec, close: TransitionIOSSpec.TransitionIOSSpec };
+obj7.transitionSpec = {
+  open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
+  close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
+};
+obj7.cardStyleInterpolator = forHorizontalIOS.forFadeFromBottomAndroid;
+obj7.headerStyleInterpolator = _mod6512.forFade;
 const obj9 = {
   gestureDirection: "vertical",
-  transitionSpec: {
-    open: TransitionIOSSpec.RevealFromBottomAndroidSpec,
-    close: TransitionIOSSpec.RevealFromBottomAndroidSpec,
-  },
-  cardStyleInterpolator: forHorizontalIOS.forRevealFromBottomAndroid,
-  headerStyleInterpolator: react_native2.forFade,
+  transitionSpec: null,
+  cardStyleInterpolator: null,
+  headerStyleInterpolator: null,
 };
-({ open: TransitionIOSSpec.RevealFromBottomAndroidSpec, close: TransitionIOSSpec.RevealFromBottomAndroidSpec });
+const obj8 = {
+  open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
+  close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
+};
+obj9.transitionSpec = {
+  open: TransitionIOSSpec.RevealFromBottomAndroidSpec,
+  close: TransitionIOSSpec.RevealFromBottomAndroidSpec,
+};
+obj9.cardStyleInterpolator = forHorizontalIOS.forRevealFromBottomAndroid;
+obj9.headerStyleInterpolator = _mod6512.forFade;
 const obj11 = {
   gestureDirection: "horizontal",
-  transitionSpec: {
-    open: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
-    close: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
-  },
-  cardStyleInterpolator: forHorizontalIOS.forScaleFromCenterAndroid,
-  headerStyleInterpolator: react_native2.forFade,
+  transitionSpec: null,
+  cardStyleInterpolator: null,
+  headerStyleInterpolator: null,
 };
-({ open: TransitionIOSSpec.ScaleFromCenterAndroidSpec, close: TransitionIOSSpec.ScaleFromCenterAndroidSpec });
+const obj10 = {
+  open: TransitionIOSSpec.RevealFromBottomAndroidSpec,
+  close: TransitionIOSSpec.RevealFromBottomAndroidSpec,
+};
+obj11.transitionSpec = {
+  open: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
+  close: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
+};
+obj11.cardStyleInterpolator = forHorizontalIOS.forScaleFromCenterAndroid;
+obj11.headerStyleInterpolator = _mod6512.forFade;
 const obj13 = {
   gestureDirection: "horizontal",
-  transitionSpec: {
-    open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
-    close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
-  },
-  cardStyleInterpolator: forHorizontalIOS.forFadeFromRightAndroid,
-  headerStyleInterpolator: react_native2.forFade,
+  transitionSpec: null,
+  cardStyleInterpolator: null,
+  headerStyleInterpolator: null,
 };
-({ open: TransitionIOSSpec.FadeInFromBottomAndroidSpec, close: TransitionIOSSpec.FadeOutToBottomAndroidSpec });
+const obj12 = {
+  open: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
+  close: TransitionIOSSpec.ScaleFromCenterAndroidSpec,
+};
+obj13.transitionSpec = {
+  open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
+  close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
+};
+obj13.cardStyleInterpolator = forHorizontalIOS.forFadeFromRightAndroid;
+obj13.headerStyleInterpolator = _mod6512.forFade;
 const obj15 = {
   gestureDirection: "vertical",
-  transitionSpec: { open: TransitionIOSSpec.BottomSheetSlideInSpec, close: TransitionIOSSpec.BottomSheetSlideOutSpec },
-  cardStyleInterpolator: forHorizontalIOS.forBottomSheetAndroid,
-  headerStyleInterpolator: react_native2.forFade,
+  transitionSpec: null,
+  cardStyleInterpolator: null,
+  headerStyleInterpolator: null,
 };
-({ open: TransitionIOSSpec.BottomSheetSlideInSpec, close: TransitionIOSSpec.BottomSheetSlideOutSpec });
+const obj14 = {
+  open: TransitionIOSSpec.FadeInFromBottomAndroidSpec,
+  close: TransitionIOSSpec.FadeOutToBottomAndroidSpec,
+};
+obj15.transitionSpec = {
+  open: TransitionIOSSpec.BottomSheetSlideInSpec,
+  close: TransitionIOSSpec.BottomSheetSlideOutSpec,
+};
+obj15.cardStyleInterpolator = forHorizontalIOS.forBottomSheetAndroid;
+obj15.headerStyleInterpolator = _mod6512.forFade;
 const obj17 = {
   gestureDirection: "vertical",
-  transitionSpec: { open: TransitionIOSSpec.BottomSheetSlideInSpec, close: TransitionIOSSpec.BottomSheetSlideOutSpec },
-  cardStyleInterpolator: forHorizontalIOS.forFadeFromCenter,
-  headerStyleInterpolator: react_native2.forFade,
+  transitionSpec: null,
+  cardStyleInterpolator: null,
+  headerStyleInterpolator: null,
 };
-({ open: TransitionIOSSpec.BottomSheetSlideInSpec, close: TransitionIOSSpec.BottomSheetSlideOutSpec });
+const obj16 = { open: TransitionIOSSpec.BottomSheetSlideInSpec, close: TransitionIOSSpec.BottomSheetSlideOutSpec };
+obj17.transitionSpec = {
+  open: TransitionIOSSpec.BottomSheetSlideInSpec,
+  close: TransitionIOSSpec.BottomSheetSlideOutSpec,
+};
+obj17.cardStyleInterpolator = forHorizontalIOS.forFadeFromCenter;
+obj17.headerStyleInterpolator = _mod6512.forFade;
 let tmp2 = obj13;
 if (Number(Platform.Version) < 34) {
   const _Number = Number;
@@ -94,8 +135,9 @@ if (Number(Platform.Version) < 34) {
   }
   tmp2 = tmp3;
 }
-const obj19 = { cardStyleInterpolator: forHorizontalIOS.forHorizontalIOSInverted };
+const obj19 = {};
 const merged = Object.assign(obj);
+obj19.cardStyleInterpolator = forHorizontalIOS.forHorizontalIOSInverted;
 
 export const SlideFromRightIOS = obj;
 export const ModalSlideFromBottomIOS = obj3;

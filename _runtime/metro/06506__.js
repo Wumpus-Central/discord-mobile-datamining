@@ -1,23 +1,9 @@
 // _runtime/metro/06506__.js
-import Fragment from "../react/00021_Fragment.js";
-import react from "../00019_react.js";
-import Link from "../01491_Link.js";
+import Link2 from "../01491_Link.js";
+import noop from "00019__.js";
 
-let focused, navigation;
-
+require = fn;
 function StackNavigator(arg0) {
-  let NavigationContent;
-  let UNSTABLE_routeNamesChangeBehavior;
-  let UNSTABLE_router;
-  let children;
-  let describe;
-  let descriptors;
-  let id;
-  let initialRouteName;
-  let layout;
-  let screenLayout;
-  let screenListeners;
-  let screenOptions;
   ({
     id,
     initialRouteName,
@@ -43,12 +29,10 @@ function StackNavigator(arg0) {
       UNSTABLE_router: 0,
     }),
   );
-  let state;
-  navigation = undefined;
+  state = undefined;
+  let navigation;
   let obj = state(navigation[2]);
-  const direction = obj.useLocale().direction;
-  const obj2 = state(navigation[2]);
-  const navigationBuilder = obj2.useNavigationBuilder(state(navigation[2]).StackRouter, {
+  const navigationBuilder = state(navigation[2]).useNavigationBuilder(state(navigation[2]).StackRouter, {
     id,
     initialRouteName,
     UNSTABLE_routeNamesChangeBehavior,
@@ -64,37 +48,48 @@ function StackNavigator(arg0) {
   const items = [navigation, ,];
   ({ index: arr[1], key: arr[2] } = state);
   ({ describe, descriptors, NavigationContent } = navigationBuilder);
-  const effect = react.useEffect(() => {
-    let index;
+  const effect = noop.useEffect(() => {
     const addListener = navigation.addListener;
     let addListenerResult;
     if (addListener != null) {
       addListenerResult = addListener("tabPress", (arg0) => {
-        let closure_1;
         const defaultPrevented = arg0;
-        focused = focused.isFocused();
+        closure_1 = closure_1.isFocused();
         const animationFrame = requestAnimationFrame(() => {
-          const tmp2 = index.index > 0 && closure_1 && !defaultPrevented.defaultPrevented;
+          let tmp2 = index.index > 0;
           if (tmp2) {
-            const dispatch = focused.dispatch;
-            const obj = { target: index.key };
+            tmp2 = closure_1;
+          }
+          if (tmp2) {
+            tmp2 = !defaultPrevented.defaultPrevented;
+          }
+          if (tmp2) {
+            const obj = {};
             const StackActions = state(navigation[2]).StackActions;
             const merged = Object.assign(StackActions.popToTop());
-            dispatch(obj);
+            obj.target = index.key;
+            closure_2_1.dispatch(obj);
           }
         });
       });
     }
     return addListenerResult;
   }, items);
-  const StackView = state(navigation[3]).StackView;
+  const obj3 = { children: null };
+  const obj4 = {};
   const merged1 = Object.assign(merged);
+  obj4.direction = obj.useLocale().direction;
+  obj4.state = state;
+  obj4.describe = describe;
+  obj4.descriptors = descriptors;
+  obj4.navigation = navigation;
+  obj3.children = jsx(state(navigation[3]).StackView, {});
   return <NavigationContent>{null}</NavigationContent>;
 }
-const jsx = Fragment.jsx;
+const jsx = fn(21).jsx;
+const Link = fn(1491);
 
 export const createStackNavigator = function createStackNavigator(arg0) {
-  const obj = Link;
-  return obj.createNavigatorFactory(StackNavigator)(arg0);
+  return Link2.createNavigatorFactory(StackNavigator)(arg0);
 };
 export const createStackScreen = Link.createScreenFactory();

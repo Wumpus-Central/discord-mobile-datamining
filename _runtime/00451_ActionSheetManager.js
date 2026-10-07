@@ -1,10 +1,10 @@
 // _runtime/00451_ActionSheetManager.js
-import _mod452 from "metro/00452__.js";
+import _modDef452 from "metro/00452__.js";
 
-const _modDef452 = _mod452;
+const require = globalThis.__r;
 
-for (const key10016 in _mod452) {
-  exports[key10016] = _mod452[key10016];
+for (const key10016 in require("metro/00452__.js")) {
+  arg5[key10016] = require("metro/00452__.js")[key10016];
   continue;
 }
 

@@ -18,8 +18,8 @@ export const pattern = function pattern(arg0) {
       let str = ". Allowed characters are: o O . - =";
       let str2 = '" at position ';
       let str3 = 'pattern(): invalid character "';
-      let self = this;
-      let self2 = this;
+      let tmp7 = new.target;
+      let tmp8 = new.target;
       let typeError = new TypeError(
         'pattern(): invalid character "' + tmp2 + '" at position ' + num + ". Allowed characters are: o O . - =",
       );
@@ -32,11 +32,13 @@ export const pattern = function pattern(arg0) {
   const nextResult1 = iter2.next();
   while (iter2 !== undefined) {
     if ("o" === nextResult1) {
-      let obj2 = { time: num2, type: "transient", intensity: 0.4, sharpness: 0.4 };
+      let obj2 = { time: null, type: "transient", intensity: 0.4, sharpness: 0.4 };
+      obj2.time = num2;
       let arr = items.push(obj2);
       num2 = num2 + 100;
     } else if ("O" === nextResult1) {
-      let obj = { time: num2, type: "transient", intensity: 1, sharpness: 0.8 };
+      let obj = { time: null, type: "transient", intensity: 1, sharpness: 0.8 };
+      obj.time = num2;
       let arr3 = items.push(obj);
       num2 = num2 + 100;
     } else if ("." === nextResult1) {

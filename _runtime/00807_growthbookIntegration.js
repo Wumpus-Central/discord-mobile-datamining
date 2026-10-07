@@ -1,13 +1,11 @@
 // _runtime/00807_growthbookIntegration.js
 import _mod698 from "metro/00698__.js";
 import _INTERNAL_FLAG_BUFFER_SIZE from "00806__INTERNAL_FLAG_BUFFER_SIZE.js";
-import 00763__ from "metro/00763__.js";
-
-let growthbookClass;
+import setupIntegration from "00763_setupIntegration.js";
 
 function _wrapAndCaptureBooleanResult(arg0) {
-  let closure_0 = arg0;
-  return function() {
+  closure_0 = arg0;
+  return function () {
     const items = [...arguments];
     const first = items[0];
     const applyResult = closure_0.apply(this, items);
@@ -16,35 +14,29 @@ function _wrapAndCaptureBooleanResult(arg0) {
       tmp3 = typeof applyResult === "boolean";
     }
     if (tmp3) {
-      const obj = _INTERNAL_FLAG_BUFFER_SIZE;
-      const result = obj._INTERNAL_insertFlagToScope(first, applyResult);
-      const obj2 = _INTERNAL_FLAG_BUFFER_SIZE;
-      const result1 = obj2._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);
+      const result = _INTERNAL_FLAG_BUFFER_SIZE._INTERNAL_insertFlagToScope(first, applyResult);
+      const result1 = _INTERNAL_FLAG_BUFFER_SIZE._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);
     }
     return applyResult;
   };
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const growthbookIntegration = module_763.defineIntegration((growthbookClass) => {
+export const growthbookIntegration = setupIntegration.defineIntegration((growthbookClass) => {
   growthbookClass = growthbookClass.growthbookClass;
-  let obj = {
+  return {
     name: "GrowthBook",
     setupOnce() {
       const prototype = growthbookClass.prototype;
       if (typeof prototype.isOn === "function") {
-        const obj = _mod698;
-        obj.fill(prototype, "isOn", _wrapAndCaptureBooleanResult);
+        _mod698.fill(prototype, "isOn", _wrapAndCaptureBooleanResult);
       }
       if (typeof prototype.getFeatureValue === "function") {
-        const obj2 = _mod698;
-        obj2.fill(prototype, "getFeatureValue", _wrapAndCaptureBooleanResult);
+        _mod698.fill(prototype, "getFeatureValue", _wrapAndCaptureBooleanResult);
       }
     },
     processEvent(contexts, arg1, arg2) {
-      const obj = growthbookClass(dependencyMap[2]);
-      return obj._INTERNAL_copyFlagsFromScopeToEvent(contexts);
-    }
+      return growthbookClass(dependencyMap[2])._INTERNAL_copyFlagsFromScopeToEvent(contexts);
+    },
   };
-  return obj;
 });

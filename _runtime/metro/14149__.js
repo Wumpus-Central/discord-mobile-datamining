@@ -1,5 +1,6 @@
 // _runtime/metro/14149__.js
-const obj = {
+
+export default {
   name: "react-native-url-polyfill",
   version: "2.0.0",
   description: "A lightweight and trustworthy URL polyfill for React Native",
@@ -34,5 +35,3 @@ const obj = {
   jest: { preset: "react-native", testPathIgnorePatterns: ["/node_modules/", "./platforms/"] },
   "lint-staged": { "*.js": ["eslint --fix"] },
 };
-
-export default obj;

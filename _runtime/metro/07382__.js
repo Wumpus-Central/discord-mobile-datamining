@@ -1,8 +1,24 @@
 // _runtime/metro/07382__.js
-import _mod7381 from "07381__.js";
-
-let obj = {
-  0: null,
+const obj = {
+  0: {
+    name: "GPSVersionID",
+    description(arg0) {
+      let str = "Unknown";
+      if (2 === arg0[0]) {
+        str = "Unknown";
+        if (2 === arg0[1]) {
+          str = "Unknown";
+          if (0 === arg0[2]) {
+            str = "Unknown";
+            if (0 === arg0[3]) {
+              str = "Version 2.2";
+            }
+          }
+        }
+      }
+      return str;
+    },
+  },
   1: {
     name: "GPSLatitudeRef",
     description(join) {
@@ -18,7 +34,7 @@ let obj = {
       return str;
     },
   },
-  2: { name: "GPSLatitude", description: _mod7381.getCalculatedGpsValue },
+  2: { name: "GPSLatitude", description: fn(7381).getCalculatedGpsValue },
   3: {
     name: "GPSLongitudeRef",
     description(join) {
@@ -82,9 +98,8 @@ const obj2 = {
     return str;
   },
 };
-obj[0] = obj2;
-({ name: "GPSLatitude", description: _mod7381.getCalculatedGpsValue });
-obj[4] = { name: "GPSLongitude", description: _mod7381.getCalculatedGpsValue };
+const obj3 = { name: "GPSLatitude", description: fn(7381).getCalculatedGpsValue };
+obj[4] = { name: "GPSLongitude", description: fn(7381).getCalculatedGpsValue };
 obj[5] = {
   name: "GPSAltitudeRef",
   description(arg0) {
@@ -109,12 +124,9 @@ obj[7] = {
   name: "GPSTimeStamp",
   description(arr) {
     const mapped = arr.map((item) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = item;
       const result = tmp / tmp2;
       let combined = result;
-      const obj = /^\d(\.|$)/;
       if (obj.test("" + result)) {
         const _HermesInternal = HermesInternal;
         combined = "0" + result;
@@ -279,10 +291,10 @@ obj[25] = {
     return str;
   },
 };
-({ name: "GPSLongitude", description: _mod7381.getCalculatedGpsValue });
-obj[27] = { name: "GPSProcessingMethod", description: _mod7381.getEncodedString };
-({ name: "GPSProcessingMethod", description: _mod7381.getEncodedString });
-obj[28] = { name: "GPSAreaInformation", description: _mod7381.getEncodedString };
+const obj4 = { name: "GPSLongitude", description: fn(7381).getCalculatedGpsValue };
+obj[27] = { name: "GPSProcessingMethod", description: fn(7381).getEncodedString };
+const obj5 = { name: "GPSProcessingMethod", description: fn(7381).getEncodedString };
+obj[28] = { name: "GPSAreaInformation", description: fn(7381).getEncodedString };
 obj[30] = {
   name: "GPSDifferential",
   description(arg0) {
@@ -297,6 +309,5 @@ obj[30] = {
     return str;
   },
 };
-({ name: "GPSAreaInformation", description: _mod7381.getEncodedString });
 
 export default obj;

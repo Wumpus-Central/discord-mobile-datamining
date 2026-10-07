@@ -1,13 +1,13 @@
 // _runtime/05330_allSettled.js
 import requirePromise from "05331_requirePromise.js";
-import getPolyfill from "05332_getPolyfill.js";
-import allSettled2 from "05333_allSettled.js";
+import _mod5332 from "metro/05332__.js";
+import _mod5333 from "metro/05333__.js";
 import shimAllSettled from "05408_shimAllSettled.js";
 import callBind from "01461_callBind.js";
-import defineProperties from "05360_defineProperties.js";
+import defineProperty from "metro/05360__.js";
 
 requirePromise();
-let closure_0 = callBind(getPolyfill());
+let closure_0 = callBind(_mod5332());
 function allSettled(arg0) {
   let self = this;
   if (undefined === this) {
@@ -15,7 +15,10 @@ function allSettled(arg0) {
   }
   return closure_0(self, arg0);
 }
-const obj = { getPolyfill, implementation: allSettled2, shim: shimAllSettled };
-defineProperties(allSettled, obj);
+const obj = { getPolyfill: null, implementation: null, shim: null };
+obj.getPolyfill = _mod5332;
+obj.implementation = _mod5333;
+obj.shim = shimAllSettled;
+defineProperty(allSettled, obj);
 
 export default allSettled;

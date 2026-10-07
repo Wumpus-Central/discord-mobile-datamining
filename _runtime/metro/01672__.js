@@ -1,36 +1,11 @@
 // _runtime/metro/01672__.js
 import ReactFabric from "../00116_ReactFabric.js";
-import ReanimatedError from "../01654_ReanimatedError.js";
+import _mod1654 from "01654__.js";
 
-let prop;
+require = arg1;
+const dependencyMap = arg6;
 
 export const findHostInstance = function findHostInstance(_componentRef) {
-  let tmp2;
-  function resolveFindHostInstance_DEPRECATED() {
-    if (undefined === prop) {
-      try {
-        const tmp3 = ReactFabric;
-        prop = undefined;
-        if (tmp3 != null) {
-          if (tmp3.default != null) {
-            prop = _default.findHostInstance_DEPRECATED;
-          }
-        }
-        if (prop == null) {
-          let prop1;
-          if (tmp3 != null) {
-            prop1 = tmp3.findHostInstance_DEPRECATED;
-          }
-          prop = prop1;
-        }
-      } catch (err) {
-        const self = this;
-        const self2 = this;
-        const reanimatedError = new ReanimatedError.ReanimatedError("Failed to resolve findHostInstance_DEPRECATED");
-        throw reanimatedError;
-      }
-    }
-  }
   _componentRef = _componentRef._componentRef;
   let tmp;
   if (_componentRef) {
@@ -44,7 +19,29 @@ export const findHostInstance = function findHostInstance(_componentRef) {
     }
   }
   if (undefined === tmp) {
-    let tmp3 = resolveFindHostInstance_DEPRECATED();
+    (function resolveFindHostInstance_DEPRECATED() {
+      if (undefined === prop) {
+        try {
+          const tmp4 = ReactFabric;
+          prop = undefined;
+          if (tmp4 != null) {
+            if (tmp4.default != null) {
+              prop = _default.findHostInstance_DEPRECATED;
+            }
+          }
+          if (prop == null) {
+            let prop1;
+            if (tmp4 != null) {
+              prop1 = tmp4.findHostInstance_DEPRECATED;
+            }
+            prop = prop1;
+          }
+        } catch (err) {
+          const reanimatedError = new _mod1654.ReanimatedError("Failed to resolve findHostInstance_DEPRECATED");
+          throw reanimatedError;
+        }
+      }
+    })();
     let _componentRef2 = _componentRef._componentRef;
     if (_componentRef2 == null) {
       _componentRef2 = _componentRef;

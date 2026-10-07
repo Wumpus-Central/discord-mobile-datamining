@@ -1,22 +1,19 @@
 // _runtime/metro/04622__.js
-import react_native from "../00017_react-native.js";
+import _mod17 from "00017__.js";
 import _mod4623 from "04623__.js";
-import ModuleNotFoundError from "../04624_ModuleNotFoundError.js";
+import _mod4624 from "04624__.js";
 
-let installedNitro1;
 function getInstalledNitro() {
   return global.NitroModulesProxy;
 }
-const TurboModuleRegistry = react_native.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 const installedNitro = getInstalledNitro();
 if (null != installedNitro) {
-  installedNitro1 = installedNitro;
+  let installedNitro1 = installedNitro;
   if (installedNitro.version !== _mod4623.version) {
     const _Error2 = Error;
     const version = installedNitro.version;
     const _HermesInternal2 = HermesInternal;
-    const self5 = this;
-    const self6 = this;
     const error = new Error(
       "Nitro was installed twice: once with native version " +
         version +
@@ -33,27 +30,19 @@ if (null != installedNitro) {
     if (null != installResult) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const self = this;
-      const self2 = this;
       const error1 = new Error("Failed to install Nitro: " + installResult);
       throw error1;
     } else {
       installedNitro1 = getInstalledNitro();
       if (null == installedNitro1) {
         const _Error3 = Error;
-        const self7 = this;
-        const self8 = this;
         const error2 = new Error("NitroModules was installed, but `global.NitroModulesProxy` was null!");
-        const self9 = this;
-        const self10 = this;
-        const moduleNotFoundError = new ModuleNotFoundError.ModuleNotFoundError(error2);
+        const moduleNotFoundError = new _mod4624.ModuleNotFoundError(error2);
         throw moduleNotFoundError;
       }
     }
-  } catch (tmp8) {
-    const self3 = this;
-    const self4 = this;
-    const moduleNotFoundError1 = new ModuleNotFoundError.ModuleNotFoundError(tmp8);
+  } catch (tmp13) {
+    const moduleNotFoundError1 = new tmp3(tmp[2]).ModuleNotFoundError(tmp13);
     throw moduleNotFoundError1;
   }
 }

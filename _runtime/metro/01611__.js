@@ -1,16 +1,15 @@
 // _runtime/metro/01611__.js
 import BaseNavigationContainer from "../01493_BaseNavigationContainer.js";
-import react2 from "../01590_react.js";
-import react from "../00019_react.js";
+import get_options from "../01590_get_options.js";
+import noop from "00019__.js";
+
+require = arg1;
 
 export const useRoutePath = function useRoutePath() {
-  const options = react.useContext(react2.LinkingContext).options;
-  const obj = BaseNavigationContainer;
-  const stateForPath = obj.useStateForPath();
+  options = noop.useContext(get_options.LinkingContext).options;
+  const stateForPath = BaseNavigationContainer.useStateForPath();
   if (undefined === stateForPath) {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error(
       "Couldn't find a state for the route object. Is your component inside a screen in a navigator?",
     );
@@ -24,7 +23,6 @@ export const useRoutePath = function useRoutePath() {
       getPathFromState = BaseNavigationContainer.getPathFromState;
     }
     let enabled;
-    const useMemo = react.useMemo;
     if (options != null) {
       enabled = options.enabled;
     }
@@ -36,7 +34,7 @@ export const useRoutePath = function useRoutePath() {
     items[1] = config;
     items[2] = stateForPath;
     items[3] = getPathFromState;
-    return useMemo(() => {
+    return noop.useMemo(() => {
       let enabled;
       if (options != null) {
         enabled = options.enabled;

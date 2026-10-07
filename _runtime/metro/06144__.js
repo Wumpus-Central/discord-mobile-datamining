@@ -1,13 +1,10 @@
 // _runtime/metro/06144__.js
 import normalizeSnapPoint from "../06136_normalizeSnapPoint.js";
-import react from "../00019_react.js";
+import noop from "00019__.js";
 
 const require = globalThis.__r;
-let _require, dependencyMap;
 
-let c2;
-let c3;
-({ useCallback: c2, useEffect: c3 } = react);
+({ useCallback: c2, useEffect: c3 } = noop);
 
 export const useScrollableSetter = (scrollableRef, value, scrollableContentOffsetY, value2) => {
   _require = scrollableRef;
@@ -16,8 +13,7 @@ export const useScrollableSetter = (scrollableRef, value, scrollableContentOffse
   if (focusHook === undefined) {
     tmp = value2;
   }
-  let obj = require("react");
-  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const bottomSheetInternal = require("06127__.js").useBottomSheetInternal();
   const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
   const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
   const isContentHeightFixed = bottomSheetInternal.isContentHeightFixed;
@@ -42,8 +38,7 @@ export const useScrollableSetter = (scrollableRef, value, scrollableContentOffse
       animatedScrollableType.value = value;
       isScrollableRefreshable.value = value2;
       isContentHeightFixed.value = false;
-      const obj = normalizeSnapPoint;
-      const findNodeHandleResult = obj.findNodeHandle(scrollableRef.current);
+      const findNodeHandleResult = normalizeSnapPoint.findNodeHandle(scrollableRef.current);
       if (findNodeHandleResult) {
         const obj2 = { id: findNodeHandleResult, node: scrollableRef };
         setScrollableRef(obj2);

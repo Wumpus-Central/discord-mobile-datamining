@@ -4899,7 +4899,7 @@ const obj = {
     "sevimli",
     "uyku",
   ],
-  "pi\u00f1ata": [
+  piñata: [
     "aktivite",
     "cinco de mayo",
     "etkinlik",

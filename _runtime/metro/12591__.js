@@ -3,8 +3,9 @@ import _mod12581 from "12581__.js";
 import _mod12586 from "12586__.js";
 import _mod12589 from "12589__.js";
 
-const re2 =
-  /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
+require = arg1;
+const dependencyMap = arg6;
+const re2 = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
 
 export const addContextToFrame = function addContextToFrame(arr, lineno) {
   let num = arg2;
@@ -17,26 +18,17 @@ export const addContextToFrame = function addContextToFrame(arr, lineno) {
     const bound = Math.max(Math.min(length - 1, lineno.lineno - 1), 0);
     const _Math4 = Math;
     const substr = arr.slice(Math.max(0, bound - num), bound);
-    lineno.pre_context = substr.map((item) => {
-      const obj = _mod12589;
-      return obj.snipLine(item, 0);
-    });
+    lineno.pre_context = substr.map((item) => _mod12589.snipLine(item, 0));
     const _Math5 = Math;
     const bound1 = Math.min(length - 1, bound);
     let num2 = lineno.colno;
-    const snipLine = _mod12589.snipLine;
-    _mod12589;
-    const tmp8 = arr[bound1];
     if (!num2) {
       num2 = 0;
     }
-    lineno.context_line = snipLine(tmp8, num2);
+    lineno.context_line = _mod12589.snipLine(arr[bound1], num2);
     const _Math = Math;
     const substr1 = arr.slice(Math.min(bound + 1, length), bound + 1 + num);
-    lineno.post_context = substr1.map((item) => {
-      const obj = _mod12589;
-      return obj.snipLine(item, 0);
-    });
+    lineno.post_context = substr1.map((item) => _mod12589.snipLine(item, 0));
   }
 };
 export const addExceptionMechanism = function addExceptionMechanism(exception, data) {
@@ -54,8 +46,12 @@ export const addExceptionMechanism = function addExceptionMechanism(exception, d
     first.mechanism = obj;
     if (data) {
       if ("data" in data) {
+        data = mechanism;
+        if (mechanism) {
+          data = mechanism.data;
+        }
         const obj2 = {};
-        const merged2 = Object.assign(tmp9);
+        const merged2 = Object.assign(data);
         const merged3 = Object.assign(data.data);
         first.mechanism.data = obj2;
       }
@@ -70,10 +66,18 @@ export const addExceptionTypeValue = function addExceptionTypeValue(exception, a
   const iter = tmp2[0] || {};
   tmp2[0] = iter;
   if (!iter.value) {
-    iter.value = arg1 || "";
+    let str = arg1;
+    if (!arg1) {
+      str = "";
+    }
+    iter.value = str;
   }
   if (!iter.type) {
-    iter.type = arg2 || "Error";
+    let str2 = arg2;
+    if (!arg2) {
+      str2 = "Error";
+    }
+    iter.type = str2;
   }
 };
 export const arrayify = function arrayify(arg0) {
@@ -85,87 +89,83 @@ export const arrayify = function arrayify(arg0) {
   return tmp;
 };
 export const checkOrSetAlreadyCaught = function checkOrSetAlreadyCaught(__sentry_captured__) {
-  function isAlreadyCaptured(__sentry_captured__) {
+  if ((function isAlreadyCaptured(__sentry_captured__) {
     try {
       return __sentry_captured__.__sentry_captured__;
-    } catch (err) {}
-  }
-  if (isAlreadyCaptured(__sentry_captured__)) {
+    } catch (err) {
+    }
+  })(__sentry_captured__)) {
     return true;
   } else {
     try {
-      const obj = _mod12586;
-      const result = obj.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
-    } catch (err) {}
-    return false;
+      const result = _mod12586.addNonEnumerableProperty(__sentry_captured__, "__sentry_captured__", true);
+      return false;
+    } catch (err) {
+    }
   }
 };
 export const getEventDescription = function getEventDescription(exception) {
-  let event_id;
-  let message;
   ({ message, event_id } = exception);
   if (message) {
     return message;
   } else {
-    let tmp2;
-    let first;
+    let str;
     if (exception.exception) {
       if (exception.exception.values) {
-        first = exception.exception.values[0];
+        str = exception.exception.values[0];
       }
     }
-    if (first) {
-      if (first.type) {
-        let combined;
-        if (first.value) {
-          const _HermesInternal = HermesInternal;
-          combined = "" + first.type + ": " + first.value;
-        }
-        tmp2 = combined;
+    if (str) {
+      if (!str.type) {
+        let combined = str.type || str.value || event_id || "<unknown>";
       }
-      combined = first.type || first.value || event_id || "<unknown>";
+      const _HermesInternal = HermesInternal;
+      ({ type, value } = str);
+      str = "";
+      combined = "" + type + ": " + value;
     } else {
-      tmp2 = event_id || "<unknown>";
+      let str2 = event_id;
+      if (!event_id) {
+        str2 = "<unknown>";
+      }
+      return str2;
     }
-    return tmp2;
   }
 };
 export const parseSemver = function parseSemver(str) {
-  let tmp5;
-  let tmp6;
-  let tmp7;
   const tmp = str.match(re2) || [];
   str = tmp[1];
-  const _parseInt = parseInt;
   if (!str) {
     str = "";
   }
-  const _parseIntResult = _parseInt(str, 10);
+  const parsed = parseInt(str, 10);
   let str2 = tmp[2];
-  const _parseInt2 = parseInt;
   if (!str2) {
     str2 = "";
   }
-  const _parseInt2Result = _parseInt2(str2, 10);
+  const parsed1 = parseInt(str2, 10);
   let str3 = tmp[3];
-  const _parseInt3 = parseInt;
   if (!str3) {
     str3 = "";
   }
-  const _parseInt3Result = _parseInt3(str3, 10);
-  const obj = { buildmetadata: tmp[5], major: tmp5, minor: tmp6, patch: tmp7, prerelease: tmp[4] };
-  tmp5 = undefined;
-  if (!isNaN(_parseIntResult)) {
-    tmp5 = _parseIntResult;
+  const parsed2 = parseInt(str3, 10);
+  const obj = { buildmetadata: tmp[5], major: null, minor: null, patch: null, prerelease: null };
+  let tmp5;
+  if (!isNaN(parsed)) {
+    tmp5 = parsed;
   }
-  tmp6 = undefined;
-  if (!isNaN(_parseInt2Result)) {
-    tmp6 = _parseInt2Result;
+  obj.major = tmp5;
+  let tmp6;
+  if (!isNaN(parsed1)) {
+    tmp6 = parsed1;
   }
-  tmp7 = undefined;
-  if (!isNaN(_parseInt3Result)) {
-    tmp7 = _parseInt3Result;
+  obj.minor = tmp6;
+  let tmp7;
+  if (!isNaN(parsed2)) {
+    tmp7 = parsed2;
   }
+  obj.patch = tmp7;
+  obj.prerelease = tmp[4];
   return obj;
 };
 export const uuid4 = function uuid4() {
@@ -177,11 +177,13 @@ export const uuid4 = function uuid4() {
   try {
     if (obj) {
       if (obj.randomUUID) {
-        let str = obj.randomUUID();
-        return str.replace(/-/g, "");
+        return obj.randomUUID().replace(/-/g, "");
       }
     }
-    const getRandomValues = obj && obj.getRandomValues;
+    let getRandomValues = obj;
+    if (obj) {
+      getRandomValues = obj.getRandomValues;
+    }
     if (getRandomValues) {
       getRandomByte = function getRandomByte() {
         const uint8Array = new Uint8Array(1);
@@ -190,9 +192,7 @@ export const uuid4 = function uuid4() {
       };
     }
     const replace = "10000000100040008000100000000000".replace;
-    return "10000000100040008000100000000000".replace(/[018]/g, (arg0) => {
-      const str = arg0 ^ ((15 & getRandomByte()) >> (arg0 / 4));
-      return str.toString(16);
-    });
-  } catch (err) {}
+    return "10000000100040008000100000000000".replace(/[018]/g, (arg0) => arg0 ^ (15 & getRandomByte()) >> arg0 / 4.toString(16));
+  } catch (err) {
+  }
 };

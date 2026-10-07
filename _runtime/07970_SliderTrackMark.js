@@ -1,26 +1,19 @@
 // _runtime/07970_SliderTrackMark.js
-import react2 from "00019_react.js";
-import styles from "07968_styles.js";
+import _mod19 from "metro/00019__.js";
+import _mod7968 from "metro/07968__.js";
 import 07964__ from "metro/07964__.js";
-import react_native from "00017_react-native.js";
-import Fragment from "react/00021_Fragment.js";
+import get_ActivityIndicator from "metro/00017__.js";
+import jsxProd from "react/00021_jsxProd.js";
 
-const react = module_7964(react2);
+const noop = module_7964(_mod19);
 
 export const SliderTrackMark = function SliderTrackMark(arg0) {
-  let StepMarker;
-  let currentValue;
-  let index;
-  let isTrue;
-  let max;
-  let min;
-  let thumbImage;
   ({ isTrue, thumbImage, StepMarker } = arg0);
+  const obj2 = { style: _mod7968.styles.trackMarkContainer, children: null };
   ({ index, currentValue, min, max } = arg0);
-  const jsxs = Fragment.jsxs;
-  const View = react_native.View;
   let jsxResult = null;
   if (StepMarker) {
+    const range = { stepMarked: isTrue, index, currentValue, min, max };
     jsxResult = <StepMarker stepMarked={isTrue} index={index} currentValue={currentValue} min={min} max={max} />;
   }
   const items = [jsxResult, ];
@@ -28,14 +21,13 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
   if (thumbImage) {
     jsxResult1 = null;
     if (isTrue) {
-      const jsx = Fragment.jsx;
-      const View2 = react_native.View;
-      const jsx2 = Fragment.jsx;
-      const Image = react_native.Image;
-      jsxResult1 = <View2 style={styles.styles.thumbImageContainer} testID="sliderTrackMark-thumbImage">{jsx2(Image, { source: thumbImage, style: styles.styles.thumbImage })}</View2>;
-      const obj4 = { source: thumbImage, style: styles.styles.thumbImage };
+      const obj3 = { style: _mod7968.styles.thumbImageContainer, testID: "sliderTrackMark-thumbImage", children: null };
+      const obj4 = { source: thumbImage, style: _mod7968.styles.thumbImage };
+      obj3.children = <get ActivityIndicator.Image source={thumbImage} style={_mod7968.styles.thumbImage} />;
+      jsxResult1 = <get ActivityIndicator.View style={_mod7968.styles.thumbImageContainer} testID="sliderTrackMark-thumbImage">{null}</get ActivityIndicator.View>;
     }
   }
   items[1] = jsxResult1;
-  return <View style={styles.styles.trackMarkContainer}>{items}</View>;
+  obj2.children = items;
+  return <get ActivityIndicator.View style={_mod7968.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
 };

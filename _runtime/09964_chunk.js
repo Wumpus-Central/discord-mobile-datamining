@@ -1,19 +1,18 @@
 // _runtime/09964_chunk.js
-import toInteger from "04930_toInteger.js";
-import isIterateeCall from "08072_isIterateeCall.js";
+import _mod4930 from "metro/04930__.js";
+import _mod8072 from "metro/08072__.js";
 import baseSlice from "09965_baseSlice.js";
 
 export default function chunk(arg0, arg1, arg2) {
   let sum1;
-  let tmp;
   if (arg2) {
-    tmp = isIterateeCall(arg0, arg1, arg2);
+    let tmp = _mod8072(arg0, arg1, arg2);
   } else {
     tmp = undefined === arg1;
   }
   let num = 1;
   if (!tmp) {
-    num = max(toInteger(arg1), 0);
+    num = max(_mod4930(arg1), 0);
   }
   let num3 = 0;
   if (null != arg0) {

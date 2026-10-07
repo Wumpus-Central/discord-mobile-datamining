@@ -1,7 +1,5 @@
 // _runtime/metro/10332__.js
-import Meridiem from "../10179_Meridiem.js";
 import AbstractTimeExpressionParser from "../10188_AbstractTimeExpressionParser.js";
-import _mod10328 from "10328__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
@@ -9,12 +7,19 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
 
+const UKTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -23,25 +28,28 @@ function _isNativeReflectConstruct() {
 }
 class UKTimeExpressionParser {
   constructor(arg0) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, UKTimeExpressionParser);
-    const items = [arg0];
-    const obj = _getPrototypeOf(UKTimeExpressionParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = c2(this, UKTimeExpressionParser);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_4;
+    obj = closure_4(UKTimeExpressionParser);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items);
     }
-    return c3(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
 _inherits(UKTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
   key: "patternFlags",
   value: function patternFlags() {
-    return _mod10328.REGEX_PARTS.flags;
+    return UKTimeExpressionParser(10328).REGEX_PARTS.flags;
   },
 };
 let items = [
@@ -69,7 +77,7 @@ let items = [
     value: function primarySuffix() {
       return (
         "(?:\\s*(?:\u0440\u0430\u043D\u043A\u0443|\u0432\u0435\u0447\u043E\u0440\u0430|\u043F\u043E \u043E\u0431\u0456\u0434\u0456|\u043F\u0456\u0441\u043B\u044F \u043E\u0431\u0456\u0434\u0443))?(?!\\/)" +
-        _mod10328.REGEX_PARTS.rightBoundary
+        UKTimeExpressionParser(10328).REGEX_PARTS.rightBoundary
       );
     },
   },
@@ -77,8 +85,12 @@ let items = [
     key: "extractPrimaryTimeComponents",
     value: function extractPrimaryTimeComponents(arg0, arg1) {
       const self = this;
-      const tmp = _get(_getPrototypeOf(UKTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
-      let closure_1 = tmp;
+      const tmp = hasOwnProperty(
+        _getPrototypeOf(UKTimeExpressionParser.prototype),
+        "extractPrimaryTimeComponents",
+        this,
+      );
+      dependencyMap = tmp;
       let fn = tmp;
       if (typeof tmp === "function") {
         fn = (items) => closure_1.apply(self, items);
@@ -88,22 +100,25 @@ let items = [
       if (fnResult) {
         const first = arg1[0];
         if (first.endsWith("\u0432\u0435\u0447\u043E\u0440\u0430")) {
-          const value = fnResult.get("hour");
+          value = fnResult.get("hour");
           if (value >= 6) {
             if (value < 12) {
               fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", Meridiem.Meridiem.PM);
+              fnResult.assign("meridiem", UKTimeExpressionParser(10179).Meridiem.PM);
             }
           }
           if (value < 6) {
-            fnResult.assign("meridiem", Meridiem.Meridiem.AM);
+            fnResult.assign("meridiem", UKTimeExpressionParser(10179).Meridiem.AM);
           }
         }
         const first1 = arg1[0];
         if (first1.endsWith("\u043F\u043E \u043E\u0431\u0456\u0434\u0456")) {
-          fnResult.assign("meridiem", Meridiem.Meridiem.PM);
-          const value2 = fnResult.get("hour");
-          const tmp14 = value2 >= 0 && value2 <= 6;
+          fnResult.assign("meridiem", UKTimeExpressionParser(10179).Meridiem.PM);
+          value2 = fnResult.get("hour");
+          let tmp14 = value2 >= 0;
+          if (tmp14) {
+            tmp14 = value2 <= 6;
+          }
           if (tmp14) {
             fnResult.assign("hour", fnResult.get("hour") + 12);
           }
@@ -112,7 +127,7 @@ let items = [
         }
         const first3 = arg1[0];
         if (first3.endsWith("\u0440\u0430\u043D\u043A\u0443")) {
-          fnResult.assign("meridiem", Meridiem.Meridiem.AM);
+          fnResult.assign("meridiem", UKTimeExpressionParser(10179).Meridiem.AM);
           if (fnResult.get("hour") < 12) {
             fnResult.assign("hour", fnResult.get("hour"));
           }

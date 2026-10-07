@@ -1,10 +1,10 @@
 // _runtime/00471_IntentAndroid.js
-import _mod472 from "metro/00472__.js";
+import _modDef472 from "metro/00472__.js";
 
-const _modDef472 = _mod472;
+const require = globalThis.__r;
 
-for (const key10016 in _mod472) {
-  exports[key10016] = _mod472[key10016];
+for (const key10016 in require("metro/00472__.js")) {
+  arg5[key10016] = require("metro/00472__.js")[key10016];
   continue;
 }
 

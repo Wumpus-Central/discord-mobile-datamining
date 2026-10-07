@@ -1,11 +1,14 @@
 // _runtime/14063_collations.js
 import _mod14064 from "metro/14064__.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const getSupportedCollations = function getSupportedCollations(locale) {
-  let closure_0 = locale;
+  closure_0 = locale;
   const collations = _mod14064.collations;
-  return collations.filter((item) => {
-    function isSupported(item, arg1) {
+  return collations.filter((item) =>
+    (function isSupported(item, arg1) {
       let str = arg1;
       if (undefined === arg1) {
         str = "en";
@@ -14,12 +17,10 @@ export const getSupportedCollations = function getSupportedCollations(locale) {
         const _Intl = Intl;
         const concat = "".concat;
         const combined = "".concat(str, "-u-co-");
-        const CollatorResult = Collator(combined.concat(item));
-        return CollatorResult.resolvedOptions().collation === item;
+        return Intl.Collator(combined.concat(item)).resolvedOptions().collation === item;
       } catch (err) {
         return false;
       }
-    }
-    return isSupported(item, closure_0);
-  });
+    })(item, closure_0),
+  );
 };

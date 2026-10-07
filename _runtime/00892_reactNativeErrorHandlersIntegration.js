@@ -3,21 +3,22 @@ import _mod689 from "metro/00689__.js";
 import RN_GLOBAL_OBJ from "00692_RN_GLOBAL_OBJ.js";
 import _mod693 from "metro/00693__.js";
 
-let c2, c3;
-
-const fn =
-  (this && this.__awaiter) ||
-  ((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+require = arg1;
+let dependencyMap = arg6;
+let fn = this;
+if (this) {
+  fn = this.__awaiter;
+}
+if (!fn) {
+  fn = (arg0, arg1, arg2, arg3) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
     let _Promise = arg2;
-    const Promise = arg2;
-    let closure_3 = arg3;
+    closure_3 = arg3;
     if (!arg2) {
-      let tmp = globalThis;
       _Promise = Promise;
     }
-    const _Promise1 = new _Promise(function (fn, arg1) {
+    return new _Promise((fn, arg1) => {
       closure_0 = fn;
       closure_1 = arg1;
       function fulfilled(result) {
@@ -37,13 +38,11 @@ const fn =
       let iter = rejected;
       function step(done) {
         if (done.done) {
-          fn(done.value);
+          closure_0(done.value);
         } else {
           let tmp1 = done.value;
-          const value = tmp1;
+          closure_0 = tmp1;
           if (!(tmp1 instanceof Promise)) {
-            const self = this;
-            const self2 = this;
             tmp1 = new tmp((fn) => {
               fn(value);
             });
@@ -52,22 +51,18 @@ const fn =
         }
       }
       let items = closure_1;
-      const tmp = iter;
-      const apply = iter.apply;
-      const tmp2 = closure_0;
       if (!closure_1) {
         items = [];
       }
-      iter = apply(tmp2, items);
+      iter = iter.apply(closure_0, items);
       const iter2 = iter.next();
-      let value = iter2.value;
+      value = iter2.value;
       if (iter2.done) {
-        const tmp5 = fn(value);
+        fn(value);
       } else {
+        closure_0 = value;
         let tmp32 = value;
         if (!(value instanceof fulfilled)) {
-          let self = this;
-          let self2 = this;
           tmp32 = new tmp3((fn) => {
             fn(value);
           });
@@ -75,154 +70,139 @@ const fn =
         tmp32.then(fulfilled, rejected);
       }
     });
-    return _Promise1;
-  });
+  };
+}
 let obj = {
   onUnhandled(id, originalException) {
-    let obj2;
+    const obj2 = { data: { id }, originalException, syntheticException: null, mechanism: null };
+    obj = _mod693;
+    const obj3 = { id };
     let syntheticError;
-    obj = {
-      data: obj2,
-      originalException,
-      syntheticException: syntheticError,
-      mechanism: { handled: true, type: "onunhandledrejection" },
-    };
-    obj2 = { id };
-    const captureException = _mod693.captureException;
-    _mod693;
-    syntheticError = undefined;
-    const obj3 = _mod689;
-    if (!obj3.isErrorLike(originalException)) {
+    if (!obj4.isErrorLike(originalException)) {
+      syntheticError = _mod689.createSyntheticError();
       const tmpResult = _mod689;
-      syntheticError = tmpResult.createSyntheticError();
     }
-    captureException(originalException, obj);
+    obj2.syntheticException = syntheticError;
+    obj2.mechanism = { handled: true, type: "onunhandledrejection" };
+    obj.captureException(originalException, obj2);
+    obj4 = _mod689;
   },
-  onHandled(displayId) {},
+  onHandled(displayId) {
+
+  }
 };
 
-export const reactNativeErrorHandlersIntegration = (arg0) => {
-  obj = arg0;
+export (arg0) => {
   if (arg0 === undefined) {
     obj = {};
   }
-  let obj2 = {
+  return {
     name: "ReactNativeErrorHandlers",
     setupOnce() {
-      function setupUnhandledRejectionsTracking(patchGlobalPromise) {
-        function attachUnhandledRejectionHandler() {
-          obj = closure_1_0(closure_1_1[4]);
-          const result = obj.requireRejectionTracking();
-          const obj2 = { allRejections: true, onUnhandled: closure_1_3.onUnhandled, onHandled: closure_1_3.onHandled };
-          result.enable(obj2);
-        }
-        try {
-          obj = closure_1_0(closure_1_1[0]);
-          if (obj.isHermesEnabled()) {
-            const _HermesInternal = closure_1_0(closure_1_1[1]).RN_GLOBAL_OBJ.HermesInternal;
-            let prop;
-            if (null !== _HermesInternal) {
-              if (undefined !== tmp7) {
-                prop = _HermesInternal.enablePromiseRejectionTracker;
-              }
-            }
-            if (prop) {
-              let _HermesInternal1;
-              if (null !== closure_1_0(closure_1_1[1]).RN_GLOBAL_OBJ) {
-                if (undefined !== closure_1_0(closure_1_1[1]).RN_GLOBAL_OBJ) {
-                  _HermesInternal1 = closure_1_0(closure_1_1[1]).RN_GLOBAL_OBJ.HermesInternal;
-                }
-              }
-              let hasPromise;
-              if (null !== _HermesInternal1) {
-                if (undefined !== _HermesInternal1) {
-                  hasPromise = tmp18.hasPromise;
-                }
-              }
-              let obj2 = hasPromise;
-              let callResult;
-              if (null !== hasPromise) {
-                if (undefined !== obj2) {
-                  callResult = obj2.call(_HermesInternal1);
-                }
-              }
-              if (callResult) {
-                const debug3 = closure_1_0(closure_1_1[2]).debug;
-                debug3.log("Using Hermes native promise rejection tracking");
-                const _HermesInternal2 = closure_1_0(closure_1_1[1]).RN_GLOBAL_OBJ.HermesInternal;
-                const obj3 = { allRejections: true, onUnhandled: null, onHandled: null };
-                ({ onUnhandled: obj7.onUnhandled, onHandled: obj7.onHandled } = closure_1_3);
-                let result = _HermesInternal2.enablePromiseRejectionTracker(obj3);
-                const debug4 = closure_1_0(closure_1_1[2]).debug;
-                debug4.log("Unhandled promise rejections will be caught by Sentry.");
-              }
-            }
-          }
-          const tmp2Result = closure_1_0(closure_1_1[0]);
-          if (tmp2Result.isWeb()) {
-            const debug2 = closure_1_0(closure_1_1[2]).debug;
-            debug2.log("Using Browser JS promise rejection tracking for React Native Web");
-            const tmp2Result4 = closure_1_0(closure_1_1[2]);
-            const result1 = tmp2Result4.addGlobalUnhandledRejectionInstrumentationHandler((originalException) => {
-              let syntheticError;
-              obj = {
-                originalException,
-                syntheticException: syntheticError,
-                mechanism: { handled: false, type: "onunhandledrejection" },
-              };
-              const captureException = closure_1_0(closure_1_1[2]).captureException;
-              closure_1_0(closure_1_1[2]);
-              syntheticError = undefined;
-              const obj2 = closure_1_0(closure_1_1[3]);
-              if (!obj2.isErrorLike(originalException)) {
-                const tmpResult = closure_1_0(closure_1_1[3]);
-                syntheticError = tmpResult.createSyntheticError();
-              }
-              captureException(originalException, obj);
-            });
-          } else {
-            const tmp29 = patchGlobalPromise;
-            if (tmp29) {
-              const tmp2Result5 = closure_1_0(closure_1_1[4]);
-              tmp2Result5.polyfillPromise();
-              attachUnhandledRejectionHandler();
-              const tmp2Result6 = closure_1_0(closure_1_1[4]);
-              tmp2Result6.checkPromiseAndWarn();
-            } else {
-              const debug = closure_1_0(closure_1_1[2]).debug;
-              debug.log("Unhandled promise rejections will not be caught by Sentry.");
-            }
-          }
-        } catch (err) {
-          const debug5 = closure_1_0(closure_1_1[2]).debug;
-          debug5.warn(
-            "Failed to set up promise rejection tracking. Unhandled promise rejections will not be caught by Sentry.See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.",
-          );
-        }
-      }
       const merged = Object.assign({ onerror: true, onunhandledrejection: true, patchGlobalPromise: true }, obj);
       if (merged.onunhandledrejection) {
-        setupUnhandledRejectionsTracking(merged.patchGlobalPromise);
+        (function setupUnhandledRejectionsTracking(patchGlobalPromise) {
+          try {
+            if (obj.isHermesEnabled()) {
+              const _HermesInternal = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
+              let prop;
+              if (null !== _HermesInternal) {
+                if (undefined !== tmp8) {
+                  prop = _HermesInternal.enablePromiseRejectionTracker;
+                }
+              }
+              if (prop) {
+                let _HermesInternal1;
+                if (null !== c0(_undefined[1]).RN_GLOBAL_OBJ) {
+                  if (undefined !== c0(_undefined[1]).RN_GLOBAL_OBJ) {
+                    _HermesInternal1 = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
+                  }
+                }
+                let hasPromise;
+                if (null !== _HermesInternal1) {
+                  if (undefined !== tmp19) {
+                    hasPromise = tmp19.hasPromise;
+                  }
+                }
+                if (null !== hasPromise) {
+                  if (undefined !== tmp23) {
+                    const call = tmp23.call;
+                    if (typeof call === "unknown") {
+                      let callResult = tmp23();
+                    } else {
+                      callResult = call(_HermesInternal1);
+                    }
+                  }
+                }
+                if (undefined) {
+                  const debug3 = c0(_undefined[2]).debug;
+                  debug3.log("Using Hermes native promise rejection tracking");
+                  const _HermesInternal2 = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
+                  ({ onUnhandled: obj6.onUnhandled, onHandled: obj6.onHandled } = closure_1_3);
+                  let result = _HermesInternal2.enablePromiseRejectionTracker({ allRejections: true, onUnhandled: null, onHandled: null });
+                  const debug4 = c0(_undefined[2]).debug;
+                  debug4.log("Unhandled promise rejections will be caught by Sentry.");
+                  let obj2 = { allRejections: true, onUnhandled: null, onHandled: null };
+                }
+              }
+            }
+            obj = c0(_undefined[0]);
+            if (tmp3Result.isWeb()) {
+              const debug2 = c0(_undefined[2]).debug;
+              debug2.log("Using Browser JS promise rejection tracking for React Native Web");
+              const result1 = c0(_undefined[2]).addGlobalUnhandledRejectionInstrumentationHandler((originalException) => {
+                const obj2 = { originalException, syntheticException: null, mechanism: null };
+                obj = closure_1_0(693);
+                let syntheticError;
+                if (!obj3.isErrorLike(originalException)) {
+                  syntheticError = closure_1_0(689).createSyntheticError();
+                  const tmpResult = closure_1_0(689);
+                }
+                obj2.syntheticException = syntheticError;
+                obj2.mechanism = { handled: false, type: "onunhandledrejection" };
+                obj.captureException(originalException, obj2);
+                obj3 = closure_1_0(689);
+              });
+              const tmp3Result4 = c0(_undefined[2]);
+            } else if (patchGlobalPromise) {
+              c0(_undefined[4]).polyfillPromise();
+              (function attachUnhandledRejectionHandler() {
+                const result = closure_1_0(893).requireRejectionTracking();
+                result.enable({ allRejections: true, onUnhandled: closure_1_3.onUnhandled, onHandled: closure_1_3.onHandled });
+              })();
+              const tmp3Result5 = c0(_undefined[4]);
+              c0(_undefined[4]).checkPromiseAndWarn();
+              const tmp3Result6 = c0(_undefined[4]);
+            } else {
+              const debug = c0(_undefined[2]).debug;
+              debug.log("Unhandled promise rejections will not be caught by Sentry.");
+            }
+            tmp3Result = c0(_undefined[0]);
+          } catch (err) {
+            const debug5 = c0(_undefined[2]).debug;
+            debug5.warn("Failed to set up promise rejection tracking. Unhandled promise rejections will not be caught by Sentry.See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.");
+          }
+        })(merged.patchGlobalPromise);
       }
       if (merged.onerror) {
-        let c0 = false;
+        c0 = false;
         const _ErrorUtils = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.ErrorUtils;
         if (_ErrorUtils) {
-          let callResult;
           if (null !== _ErrorUtils.getGlobalHandler) {
-            if (undefined !== _ErrorUtils.getGlobalHandler) {
-              callResult = getGlobalHandler.call(_ErrorUtils);
+            if (undefined !== getGlobalHandler) {
+              let call = getGlobalHandler.call;
+              typeof call === "unknown" ? getGlobalHandler() : call(_ErrorUtils);
             }
           }
+          c1 = tmp7;
           _ErrorUtils.setGlobalHandler((arg0, arg1) => {
-            let closure_0 = arg0;
-            let closure_1 = arg1;
-            return closure_1_2(undefined, undefined, undefined, function* () {
-              let currentScope;
+            closure_0 = arg0;
+            closure_1 = arg1;
+            return closure_1_2(undefined, undefined, undefined, function*() {
               if (c3 === 2) {
                 c3 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
-              } else if (tmp3 === 3) {
+              } else if (tmp4 === 3) {
                 if (arg0 === 1) {
                   throw value;
                 } else if (arg0 === 2) {
@@ -233,9 +213,6 @@ export const reactNativeErrorHandlersIntegration = (arg0) => {
                 }
               } else {
                 try {
-                  let client;
-                  let obj7;
-                  let closure_2;
                   c3 = 2;
                   if (0 === c2) {
                     if (arg0 === 1) {
@@ -246,15 +223,14 @@ export const reactNativeErrorHandlersIntegration = (arg0) => {
                       const obj5 = { value, done: true };
                       return obj5;
                     } else {
-                      let c1 = 0;
-                      c0 = tmp;
-                      client = undefined;
-                      obj7 = undefined;
-                      closure_2 = undefined;
-                      if (closure_1) {
-                        const tmp22 = c0;
-                        if (tmp22) {
-                          const debug2 = originalException(closure_1[2]).debug;
+                      dependencyMap = 0;
+                      c0 = tmp2;
+                      closure_128_0 = undefined;
+                      closure_128_1 = undefined;
+                      closure_128_2 = undefined;
+                      if (dependencyMap) {
+                        if (c0) {
+                          const debug2 = originalException(693).debug;
                           debug2.log("Encountered multiple fatals in a row. The latest:", originalException);
                           c3 = 3;
                           const obj6 = { value: undefined, done: true };
@@ -263,27 +239,26 @@ export const reactNativeErrorHandlersIntegration = (arg0) => {
                           c0 = true;
                         }
                       }
-                      const obj4 = originalException(closure_1[2]);
-                      client = obj4.getClient();
+                      const client = originalException(693).getClient();
+                      closure_128_0 = client;
                       if (client) {
-                        obj7 = { originalException, attachments: currentScope.getScopeData().attachments };
-                        const obj8 = originalException(closure_1[2]);
-                        currentScope = obj8.getCurrentScope();
+                        const obj7 = { originalException, attachments: null };
+                        const currentScope = originalException(693).getCurrentScope();
+                        obj7.attachments = currentScope.getScopeData().attachments;
+                        closure_128_1 = obj7;
                         c2 = 1;
                         c3 = 1;
                         const obj9 = { value: client.eventFromException(originalException, obj7), done: false };
                         return obj9;
                       } else {
-                        let debug = originalException(closure_1[2]).debug;
-                        const errorResult = debug.error(
-                          "Sentry client is missing, the error event might be lost.",
-                          originalException,
-                        );
-                        c1(originalException, closure_1);
+                        let debug = originalException(693).debug;
+                        debug.error("Sentry client is missing, the error event might be lost.", originalException);
+                        dependencyMap(originalException, dependencyMap);
                         c3 = 3;
                         const obj10 = { value: undefined, done: true };
                         return obj10;
                       }
+                      const obj4 = originalException(693);
                     }
                   } else if (arg0 === 1) {
                     c3 = 3;
@@ -293,38 +268,33 @@ export const reactNativeErrorHandlersIntegration = (arg0) => {
                     const obj11 = { value, done: true };
                     return obj11;
                   } else {
-                    closure_2 = value;
+                    closure_128_2 = value;
                     if (closure_129_1) {
-                      closure_2.level = "fatal";
-                      const obj2 = originalException(closure_1[2]);
-                      const result = obj2.addExceptionMechanism(closure_2, { handled: false, type: "onerror" });
+                      tmp48.level = "fatal";
+                      const result = originalException(693).addExceptionMechanism(closure_128_2, { handled: false, type: "onerror" });
+                      const obj2 = originalException(693);
                     } else {
-                      closure_2.level = "error";
-                      obj = originalException(closure_1[2]);
-                      const result1 = obj.addExceptionMechanism(closure_2, { handled: true, type: "generic" });
+                      tmp48.level = "error";
+                      const result1 = originalException(693).addExceptionMechanism(closure_128_2, { handled: true, type: "generic" });
+                      obj = originalException(693);
                     }
-                    client.captureEvent(closure_2, obj7);
-                    const flush = client.flush;
-                    const num3 = client.getOptions().shutdownTimeout || 2000;
-                    const flushResult = flush(num3);
-                    flushResult.then(
-                      () => {
-                        c1(originalException, closure_1_1);
-                      },
-                      (arg0) => {
-                        const debug = originalException(closure_1_1[2]).debug;
-                        debug.error(
-                          "[ReactNativeErrorHandlers] Error while flushing the event cache after uncaught error.",
-                          arg0,
-                        );
-                      },
-                    );
+                    closure_128_0.captureEvent(closure_128_2, closure_128_1);
+                    let num3 = closure_128_0.getOptions().shutdownTimeout;
+                    if (!num3) {
+                      num3 = 2000;
+                    }
+                    closure_128_0.flush(num3).then(() => {
+                      dependencyMap(originalException, closure_1_1);
+                    }, (arg0) => {
+                      const debug = originalException(693).debug;
+                      debug.error("[ReactNativeErrorHandlers] Error while flushing the event cache after uncaught error.", arg0);
+                    });
                     c3 = 3;
                     return { value: "IconComponent", done: null };
                   }
-                } catch (tmp39) {
-                  c3 = 3;
-                  throw tmp39;
+                } catch (tmp40) {
+                  c3 = tmp;
+                  throw tmp40;
                 }
               }
             });
@@ -334,7 +304,6 @@ export const reactNativeErrorHandlersIntegration = (arg0) => {
           debug.warn("ErrorUtils not found. Can be caused by different environment for example react-native-web.");
         }
       }
-    },
+    }
   };
-  return obj2;
-};
+}

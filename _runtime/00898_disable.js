@@ -1,8 +1,8 @@
 // _runtime/00898_disable.js
 import _mod895 from "metro/00895__.js";
 
-let closure_1, closure_3, dependencyMap;
-
+require = arg1;
+let dependencyMap = arg6;
 const items = [ReferenceError, TypeError, RangeError];
 let c3 = false;
 
@@ -17,25 +17,26 @@ export const enable = function enable(arg0) {
     let allRejections = obj.allRejections;
     if (!allRejections) {
       let whitelist = obj.whitelist;
-      const error = closure_3[arg0].error;
       if (!whitelist) {
         whitelist = items;
       }
+      let error = dependencyMap[arg0].error;
       allRejections = whitelist.some((item) => closure_0 instanceof item);
     }
     if (allRejections) {
       closure_2 = tmp4 + 1;
-      closure_3[arg0].displayId = +closure_2;
-      closure_3[arg0].logged = true;
+      dependencyMap[arg0].displayId = +closure_2;
+      dependencyMap[arg0].logged = true;
       if (obj.onUnhandled) {
-        obj.onUnhandled(closure_3[arg0].displayId, closure_3[arg0].error);
+        obj.onUnhandled(dependencyMap[arg0].displayId, dependencyMap[arg0].error);
       } else {
-        const error2 = closure_3[arg0].error;
+        error = dependencyMap[arg0].error;
         const _console = console;
         console.warn(`Possible Unhandled Promise Rejection (id: ${tmp2[arg0].displayId}):`);
-        let tmp7 = error2;
-        if (tmp7) {
-          tmp7 = error2.stack || error2;
+        let tmp7 = error;
+        if (error) {
+          tmp7 = error.stack || error;
+          const tmp8 = error.stack || error;
         }
         const text = `${tmp7}`;
         const parts = `${tmp7}`.split("\n");
@@ -48,59 +49,55 @@ export const enable = function enable(arg0) {
   if (!arg0) {
     obj = {};
   }
-  let tmp = closure_3;
-  if (tmp) {
-    closure_3 = false;
-    const tmp2 = obj;
-    const tmp3 = dependencyMap;
-    const tmp4 = null;
+  if (dependencyMap) {
+    dependencyMap = false;
     obj(895)._37 = null;
     obj(895)._87 = null;
   }
-  dependencyMap = 0;
-  let closure_2 = 0;
-  closure_3 = {};
+  closure_2 = 0;
+  dependencyMap = {};
   obj(895)._37 = (_65) => {
-    const tmp = 2 === _65._65 && closure_3[_65._51];
-    if (tmp) {
-      if (closure_3[_65._51].logged) {
-        const _51 = _65._51;
-        if (closure_3[_51].logged) {
+    let _51 = _65;
+    let tmp3 = 2 === _65._65;
+    if (tmp3) {
+      tmp3 = dependencyMap[_51._51];
+    }
+    if (tmp3) {
+      if (dependencyMap[_51._51].logged) {
+        const _512 = _51._51;
+        if (dependencyMap[_512].logged) {
           if (obj.onHandled) {
-            obj.onHandled(closure_3[_51].displayId, closure_3[_51].error);
-          } else if (!closure_3[_51].onUnhandled) {
+            obj.onHandled(dependencyMap[_512].displayId, dependencyMap[_512].error);
+          } else if (!dependencyMap[_512].onUnhandled) {
             const _console = console;
-            console.warn(`Promise Rejection Handled (id: ${tmp3[_51].displayId}):`);
+            console.warn(`Promise Rejection Handled (id: ${tmp5[_512].displayId}):`);
             const _console2 = console;
             console.warn(
-              `  This means you can ignore any previous messages of the form "Possible Unhandled Promise Rejection" with id ${tmp3[_51].displayId}.`,
+              `  This means you can ignore any previous messages of the form "Possible Unhandled Promise Rejection" with id ${tmp5[_512].displayId}.`,
             );
           }
         }
       } else {
         const _clearTimeout = clearTimeout;
-        clearTimeout(closure_3[_65._51].timeout);
+        clearTimeout(dependencyMap[_51._51].timeout);
       }
-      delete closure_3[_65._51];
+      _51 = _51._51;
+      delete tmp2[tmp];
     }
   };
   obj(895)._87 = (_40, error) => {
-    let _setTimeout;
-    let bindResult;
-    let num;
     if (0 === _40._40) {
       closure_1 = tmp3 + 1;
       _40._51 = +closure_1;
-      const _51 = _40._51;
-      obj = { displayId: null, error, timeout: _setTimeout(bindResult, num), logged: false };
-      _setTimeout = setTimeout;
-      let closure_0 = error;
-      num = 2000;
-      bindResult = onUnhandled.bind(null, _40._51);
+      obj = { displayId: null, error, timeout: null, logged: false };
+      closure_0 = error;
+      let num = 2000;
       if (items.some((item) => closure_0 instanceof item)) {
         num = 100;
       }
-      closure_3[_51] = obj;
+      obj.timeout = setTimeout(onUnhandled.bind(null, _40._51), num);
+      closure_3[_40._51] = obj;
+      const bindResult = onUnhandled.bind(null, _40._51);
     }
   };
 };

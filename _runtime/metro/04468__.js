@@ -2,37 +2,37 @@
 import _mod4467 from "04467__.js";
 
 const fn = function t(moment) {
-  let split;
-  let split2;
   function translate(arg0, arg1, arg2, arg3) {
     const text = `${arg0} `;
     switch (arg2) {
-      case "s": {
-        let str20;
+      case "s":
         if (arg1) {
-          str20 = "p\u00E1r sekund";
+          let str20 = "p\u00E1r sekund";
         } else {
           str20 = "p\u00E1r sekundami";
         }
         return str20;
-      }
-      case "ss": {
+      case "ss":
         if (!arg1) {
-          let text1;
           if (!arg3) {
-            text1 = `${tmp}sekundami`;
+            let text1 = `${tmp}sekundami`;
           }
           return text1;
         }
+        let tmp13 = arg0 > 1;
+        if (tmp13) {
+          tmp13 = arg0 < 5;
+        }
+        if (tmp13) {
+          tmp13 = 1 !== ~~arg0 / 10;
+        }
         let str19 = "sekund";
-        const tmp13 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
         if (tmp13) {
           str19 = "sekundy";
         }
         text1 = text + str19;
         break;
-      }
-      case "m": {
+      case "m":
         let str16 = "minuta";
         if (!arg1) {
           let str17 = "minutou";
@@ -42,24 +42,27 @@ const fn = function t(moment) {
           str16 = str17;
         }
         return str16;
-      }
-      case "mm": {
+      case "mm":
         if (!arg1) {
-          let text2;
           if (!arg3) {
-            text2 = `${tmp}minutami`;
+            let text2 = `${tmp}minutami`;
           }
           return text2;
         }
+        let tmp11 = arg0 > 1;
+        if (tmp11) {
+          tmp11 = arg0 < 5;
+        }
+        if (tmp11) {
+          tmp11 = 1 !== ~~arg0 / 10;
+        }
         let str15 = "minut";
-        const tmp11 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
         if (tmp11) {
           str15 = "minuty";
         }
         text2 = text + str15;
         break;
-      }
-      case "h": {
+      case "h":
         let str12 = "hodina";
         if (!arg1) {
           let str13 = "hodinou";
@@ -69,101 +72,108 @@ const fn = function t(moment) {
           str12 = str13;
         }
         return str12;
-      }
-      case "hh": {
+      case "hh":
         if (!arg1) {
-          let text3;
           if (!arg3) {
-            text3 = `${tmp}hodinami`;
+            let text3 = `${tmp}hodinami`;
           }
           return text3;
         }
+        let tmp9 = arg0 > 1;
+        if (tmp9) {
+          tmp9 = arg0 < 5;
+        }
+        if (tmp9) {
+          tmp9 = 1 !== ~~arg0 / 10;
+        }
         let str11 = "hodin";
-        const tmp9 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
         if (tmp9) {
           str11 = "hodiny";
         }
         text3 = text + str11;
         break;
-      }
-      case "d": {
-        let str9;
+      case "d":
         if (arg1) {
-          str9 = "den";
+          let str9 = "den";
         } else {
           str9 = "dnem";
         }
         return str9;
-      }
-      case "dd": {
+      case "dd":
         if (!arg1) {
-          let text4;
           if (!arg3) {
-            text4 = `${tmp}dny`;
+            let text4 = `${tmp}dny`;
           }
           return text4;
         }
+        let tmp7 = arg0 > 1;
+        if (tmp7) {
+          tmp7 = arg0 < 5;
+        }
+        if (tmp7) {
+          tmp7 = 1 !== ~~arg0 / 10;
+        }
         let str8 = "dn\u00ED";
-        const tmp7 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
         if (tmp7) {
           str8 = "dny";
         }
         text4 = text + str8;
         break;
-      }
-      case "M": {
-        let str6;
+      case "M":
         if (arg1) {
-          str6 = "m\u011Bs\u00EDc";
+          let str6 = "m\u011Bs\u00EDc";
         } else {
           str6 = "m\u011Bs\u00EDcem";
         }
         return str6;
-      }
-      case "MM": {
+      case "MM":
         if (!arg1) {
-          let text5;
           if (!arg3) {
-            text5 = `${tmp}měsíci`;
+            let text5 = `${tmp}měsíci`;
           }
           return text5;
         }
+        let tmp5 = arg0 > 1;
+        if (tmp5) {
+          tmp5 = arg0 < 5;
+        }
+        if (tmp5) {
+          tmp5 = 1 !== ~~arg0 / 10;
+        }
         let str5 = "m\u011Bs\u00EDc\u016F";
-        const tmp5 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
         if (tmp5) {
           str5 = "m\u011Bs\u00EDce";
         }
         text5 = text + str5;
         break;
-      }
-      case "y": {
-        let str3;
+      case "y":
         if (arg1) {
-          str3 = "rok";
+          let str3 = "rok";
         } else {
           str3 = "rokem";
         }
         return str3;
-      }
-      case "yy": {
+      case "yy":
         if (!arg1) {
-          let text6;
           if (!arg3) {
-            text6 = `${tmp}lety`;
+            let text6 = `${tmp}lety`;
           }
           return text6;
         }
+        let tmp3 = arg0 > 1;
+        if (tmp3) {
+          tmp3 = arg0 < 5;
+        }
+        if (tmp3) {
+          tmp3 = 1 !== ~~arg0 / 10;
+        }
         let str2 = "let";
-        const tmp3 = arg0 > 1 && arg0 < 5 && 1 !== ~(~arg0 / 10);
         if (tmp3) {
           str2 = "roky";
         }
         text6 = text + str2;
         break;
-      }
-      default: {
-        break;
-      }
+      default:
     }
   }
   const items = [
@@ -182,7 +192,6 @@ const fn = function t(moment) {
   ];
   const tmp =
     /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
-  ({ split, split: split2 } = "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so");
   const obj = {
     standalone:
       "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split(
@@ -194,8 +203,19 @@ const fn = function t(moment) {
       ),
     isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/,
   };
-  const obj2 = {
-    months: obj,
+  ({ split, split: split2 } = "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so");
+  return moment.defineLocale("cs", {
+    months: {
+      standalone:
+        "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split(
+          "_",
+        ),
+      format:
+        "ledna_\u00FAnora_b\u0159ezna_dubna_kv\u011Btna_\u010Dervna_\u010Dervence_srpna_z\u00E1\u0159\u00ED_\u0159\u00EDjna_listopadu_prosince".split(
+          "_",
+        ),
+      isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/,
+    },
     monthsShort: "led_\u00FAno_b\u0159e_dub_kv\u011B_\u010Dvn_\u010Dvc_srp_z\u00E1\u0159_\u0159\u00EDj_lis_pro".split(
       "_",
     ),
@@ -289,8 +309,7 @@ const fn = function t(moment) {
     dayOfMonthOrdinalParse: /\d{1,2}\./,
     ordinal: "%d.",
     week: { dow: 1, doy: 4 },
-  };
-  return moment.defineLocale("cs", obj2);
+  });
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
@@ -300,7 +319,6 @@ if (typeof exports === "object") {
   }
 }
 if (typeof globalThis.define === "function") {
-  const define2 = globalThis.define;
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], fn);
   }

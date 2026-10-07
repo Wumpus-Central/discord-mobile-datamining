@@ -1,63 +1,63 @@
 // _runtime/metro/00026__.js
 import processColorDefault from "../00050_processColor.js";
-import processFilterDefault from "../00054_processFilter.js";
-import processBoxShadowDefault from "../00055_processBoxShadow.js";
-import processBackgroundImageDefault from "../00056_processBackgroundImage.js";
-import processBackgroundSizeDefault from "../00057_processBackgroundSize.js";
-import processBackgroundPositionDefault from "../00058_processBackgroundPosition.js";
-import processBackgroundRepeatDefault from "../00059_processBackgroundRepeat.js";
-import processTransformDefault from "../00060_processTransform.js";
+import _getFilterAmountDefault from "../00054__getFilterAmount.js";
+import _modDef55 from "00055__.js";
+import processColorStopsDefault from "../00056_processColorStops.js";
+import _modDef57 from "00057__.js";
+import _modDef58 from "00058__.js";
+import _modDef59 from "00059__.js";
+import _getKeyAndValueFromCSSTransformDefault from "../00060__getKeyAndValueFromCSSTransform.js";
 import processTransformOriginDefault from "../00061_processTransformOrigin.js";
 import processFontVariantDefault from "../00062_processFontVariant.js";
 import processAspectRatioDefault from "../00063_processAspectRatio.js";
 import sizesDifferDefault from "../00064_sizesDiffer.js";
-import javaScriptFlagGetter_mod from "../00027_javaScriptFlagGetter.js";
+import javaScriptFlagGetter_mod from "00027__.js";
 
 let javaScriptFlagGetter = javaScriptFlagGetter_mod;
 javaScriptFlagGetter = javaScriptFlagGetter.enableNativeCSSParsing();
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processColorDefault };
   const obj = { process: processColorDefault };
+  javaScriptFlagGetter = obj;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processFilterDefault };
-  const obj2 = { process: processFilterDefault };
+  const obj2 = { process: _getFilterAmountDefault };
+  javaScriptFlagGetter = obj2;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processBoxShadowDefault };
-  const obj3 = { process: processBoxShadowDefault };
+  const obj3 = { process: _modDef55 };
+  javaScriptFlagGetter = obj3;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processBackgroundImageDefault };
-  const obj4 = { process: processBackgroundImageDefault };
+  const obj4 = { process: processColorStopsDefault };
+  javaScriptFlagGetter = obj4;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processBackgroundSizeDefault };
-  const obj5 = { process: processBackgroundSizeDefault };
+  const obj5 = { process: _modDef57 };
+  javaScriptFlagGetter = obj5;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processBackgroundPositionDefault };
-  const obj6 = { process: processBackgroundPositionDefault };
+  const obj6 = { process: _modDef58 };
+  javaScriptFlagGetter = obj6;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processBackgroundRepeatDefault };
-  const obj7 = { process: processBackgroundRepeatDefault };
+  const obj7 = { process: _modDef59 };
+  javaScriptFlagGetter = obj7;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processTransformDefault };
-  const obj8 = { process: processTransformDefault };
+  const obj8 = { process: _getKeyAndValueFromCSSTransformDefault };
+  javaScriptFlagGetter = obj8;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processTransformOriginDefault };
   const obj9 = { process: processTransformOriginDefault };
+  javaScriptFlagGetter = obj9;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processFontVariantDefault };
   const obj10 = { process: processFontVariantDefault };
+  javaScriptFlagGetter = obj10;
 }
 if (!javaScriptFlagGetter) {
-  javaScriptFlagGetter = { process: processAspectRatioDefault };
   const obj11 = { process: processAspectRatioDefault };
+  javaScriptFlagGetter = obj11;
 }
 const size = {
   alignContent: true,
@@ -213,7 +213,6 @@ const size = {
   tintColor: javaScriptFlagGetter,
   objectFit: true,
 };
-({ diff: sizesDifferDefault });
 
 export default size;
 export const colorAttribute = javaScriptFlagGetter;

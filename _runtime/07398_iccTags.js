@@ -1,12 +1,40 @@
 // _runtime/07398_iccTags.js
 import _mod7356 from "metro/07356__.js";
 
-let obj = {
+require = arg1;
+const dependencyMap = arg6;
+const obj = {
   4: null,
   8: null,
   12: null,
   16: null,
-  20: null,
+  20: {
+    name: "Preferred CMM type",
+    value(dataView, sum) {
+      return _mod7356.getStringFromDataView(dataView, sum, 4);
+    },
+    description(str) {
+      if (null === str) {
+        return "";
+      } else {
+        const formatted = str.toLowerCase();
+        if ("appl" === formatted) {
+          let str6 = "Apple";
+        } else if ("adbe" === formatted) {
+          str6 = "Adobe";
+        } else if ("msft" === formatted) {
+          str6 = "Microsoft";
+        } else {
+          if ("sunw" === formatted) {
+            str6 = "Sun Microsystems";
+          } else if ("sgi" !== formatted) {
+            str6 = "Taligent";
+          }
+          str6 = "Silicon Graphics";
+        }
+      }
+    }
+  },
   24: null,
   36: null,
   40: null,
@@ -17,107 +45,58 @@ let obj = {
       const text = `${str.toString(10)}.`;
       const str2 = getUint8.getUint8(sum + 1) >> 4;
       const text1 = `${str.toString(10)}.${str2.toString(10)}`;
-      const str3 = getUint8.getUint8(sum + 1) % 16;
-      return `${str.toString(10)}.${str2.toString(10)}` + "." + str3.toString(10);
-    },
+      return `${str.toString(10)}.${str2.toString(10)}` + "." + getUint8.getUint8(sum + 1) % 16.toString(10);
+    }
   },
   52: null,
   64: null,
-  80: null,
+  80: null
 };
-const obj2 = {
-  name: "Preferred CMM type",
-  value(dataView, sum) {
-    const obj = _mod7356;
-    return obj.getStringFromDataView(dataView, sum, 4);
-  },
-  description(str) {
-    str = "";
-    if (null !== str) {
-      let str7;
-      const formatted = str.toLowerCase();
-      if ("appl" === formatted) {
-        str7 = "Apple";
-      } else if ("adbe" === formatted) {
-        str7 = "Adobe";
-      } else if ("msft" === formatted) {
-        str7 = "Microsoft";
-      } else if ("sunw" === formatted) {
-        str7 = "Sun Microsystems";
-      } else if ("sgi" === formatted) {
-        str7 = "Silicon Graphics";
-      } else {
-        str7 = "Taligent";
-        if ("tgnt" !== formatted) {
-          str7 = str;
-        }
-      }
-      str = str7;
-    }
-    return str;
-  },
-};
-obj[4] = obj2;
 obj[12] = {
   name: "Profile/Device class",
   value(dataView, sum) {
-    const obj = _mod7356;
-    return obj.getStringFromDataView(dataView, sum, 4);
+    return _mod7356.getStringFromDataView(dataView, sum, 4);
   },
   description(str) {
     switch (str.toLowerCase()) {
-      case "scnr": {
+      case "scnr":
         return "Input Device profile";
-      }
-      case "mntr": {
+      case "mntr":
         return "Display Device profile";
-      }
-      case "prtr": {
+      case "prtr":
         return "Output Device profile";
-      }
-      case "link": {
+      case "link":
         return "DeviceLink profile";
-      }
-      case "abst": {
+      case "abst":
         return "Abstract profile";
-      }
-      case "spac": {
+      case "spac":
         return "ColorSpace profile";
-      }
-      case "nmcl": {
+      case "nmcl":
         return "NamedColor profile";
-      }
-      case "cenc": {
+      case "cenc":
         return "ColorEncodingSpace profile";
-      }
-      case "mid ": {
+      case "mid ":
         return "MultiplexIdentification profile";
-      }
-      case "mlnk": {
+      case "mlnk":
         return "MultiplexLink profile";
-      }
-      case "mvis": {
+      case "mvis":
         return "MultiplexVisualization profile";
-      }
-      default: {
+      default:
         return str;
-      }
     }
-  },
+  }
 };
 obj[16] = {
   name: "Color Space",
   value(dataView, sum) {
-    const obj = _mod7356;
-    return obj.getStringFromDataView(dataView, sum, 4);
-  },
+    return _mod7356.getStringFromDataView(dataView, sum, 4);
+  }
 };
 obj[20] = {
   name: "Connection Space",
   value(dataView, sum) {
-    const obj = _mod7356;
-    return obj.getStringFromDataView(dataView, sum, 4);
-  },
+    return _mod7356.getStringFromDataView(dataView, sum, 4);
+  }
 };
 obj[24] = {
   name: "ICC Profile Date",
@@ -127,30 +106,26 @@ obj[24] = {
     const uint161 = getUint16.getUint16(c5 + 4);
     const uint162 = getUint16.getUint16(c5 + 6);
     const uint163 = getUint16.getUint16(c5 + 8);
-    const date = new Date(Date.UTC(uint16, diff, uint161, uint162, uint163, getUint16.getUint16(c5 + 10)));
-    return date.toISOString();
-  },
+    return new Date(Date.UTC(uint16, diff, uint161, uint162, uint163, getUint16.getUint16(c5 + 10))).toISOString();
+  }
 };
 obj[36] = {
   name: "ICC Signature",
   value(buffer, arg1) {
     buffer = buffer.buffer;
-    const apply = fromCharCode.apply;
     const uint8Array = new Uint8Array(buffer.slice(arg1, arg1 + 4));
-    return apply(null, uint8Array);
-  },
+    return fromCharCode.apply(null, uint8Array);
+  }
 };
 obj[40] = {
   name: "Primary Platform",
   value(dataView, sum) {
-    const obj = _mod7356;
-    return obj.getStringFromDataView(dataView, sum, 4);
+    return _mod7356.getStringFromDataView(dataView, sum, 4);
   },
   description(str) {
-    let str5;
     const formatted = str.toLowerCase();
     if ("appl" === formatted) {
-      str5 = "Apple";
+      let str5 = "Apple";
     } else if ("adbe" === formatted) {
       str5 = "Adobe";
     } else if ("msft" === formatted) {
@@ -166,19 +141,17 @@ obj[40] = {
       }
     }
     return str5;
-  },
+  }
 };
 obj[48] = {
   name: "Device Manufacturer",
   value(dataView, sum) {
-    const obj = _mod7356;
-    return obj.getStringFromDataView(dataView, sum, 4);
+    return _mod7356.getStringFromDataView(dataView, sum, 4);
   },
   description(str) {
-    let str5;
     const formatted = str.toLowerCase();
     if ("appl" === formatted) {
-      str5 = "Apple";
+      let str5 = "Apple";
     } else if ("adbe" === formatted) {
       str5 = "Adobe";
     } else if ("msft" === formatted) {
@@ -194,14 +167,13 @@ obj[48] = {
       }
     }
     return str5;
-  },
+  }
 };
 obj[52] = {
   name: "Device Model Number",
   value(dataView, sum) {
-    const obj = _mod7356;
-    return obj.getStringFromDataView(dataView, sum, 4);
-  },
+    return _mod7356.getStringFromDataView(dataView, sum, 4);
+  }
 };
 obj[64] = {
   name: "Rendering Intent",
@@ -220,22 +192,14 @@ obj[64] = {
     } else {
       return arg0;
     }
-  },
+  }
 };
 obj[80] = {
   name: "Profile Creator",
   value(dataView, sum) {
-    const obj = _mod7356;
-    return obj.getStringFromDataView(dataView, sum, 4);
-  },
+    return _mod7356.getStringFromDataView(dataView, sum, 4);
+  }
 };
 
-export const iccTags = {
-  desc: { name: "ICC Description" },
-  cprt: { name: "ICC Copyright" },
-  dmdd: { name: "ICC Device Model Description" },
-  vued: { name: "ICC Viewing Conditions Description" },
-  dmnd: { name: "ICC Device Manufacturer for Display" },
-  tech: { name: "Technology" },
-};
+export const iccTags = { desc: { name: "ICC Description" }, cprt: { name: "ICC Copyright" }, dmdd: { name: "ICC Device Model Description" }, vued: { name: "ICC Viewing Conditions Description" }, dmnd: { name: "ICC Device Manufacturer for Display" }, tech: { name: "Technology" } };
 export const iccProfile = obj;

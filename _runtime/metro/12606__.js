@@ -1,18 +1,19 @@
 // _runtime/metro/12606__.js
 import _mod12581 from "12581__.js";
-import _mod12601 from "12601__.js";
+import ScopeClass from "../12601_ScopeClass.js";
+
+require = arg1;
+const dependencyMap = arg6;
 
 export const getDefaultCurrentScope = function getDefaultCurrentScope() {
-  const obj = _mod12581;
-  return obj.getGlobalSingleton("defaultCurrentScope", () => {
-    const scope = new _mod12601.Scope();
+  return _mod12581.getGlobalSingleton("defaultCurrentScope", () => {
+    const scope = new ScopeClass.Scope();
     return scope;
   });
 };
 export const getDefaultIsolationScope = function getDefaultIsolationScope() {
-  const obj = _mod12581;
-  return obj.getGlobalSingleton("defaultIsolationScope", () => {
-    const scope = new _mod12601.Scope();
+  return _mod12581.getGlobalSingleton("defaultIsolationScope", () => {
+    const scope = new ScopeClass.Scope();
     return scope;
   });
 };

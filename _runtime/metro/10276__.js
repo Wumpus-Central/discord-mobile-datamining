@@ -1,6 +1,4 @@
 // _runtime/metro/10276__.js
-import EmptyDuration from "../10176_EmptyDuration.js";
-import ReferenceWithTimezone from "../10177_ReferenceWithTimezone.js";
 import AbstractParserWithWordBoundaryChecking from "../10181_AbstractParserWithWordBoundaryChecking.js";
 import _mod10268 from "10268__.js";
 import _classCallCheck from "00041__classCallCheck.js";
@@ -9,12 +7,19 @@ import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const NLTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
@@ -27,17 +32,22 @@ const regExp = new RegExp(
 );
 class NLTimeUnitCasualRelativeFormatParser {
   constructor() {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, NLTimeUnitCasualRelativeFormatParser);
-    const obj = _getPrototypeOf(NLTimeUnitCasualRelativeFormatParser);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    self = this;
+    tmp = c2(this, NLTimeUnitCasualRelativeFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(NLTimeUnitCasualRelativeFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
       constructResult = obj(...arguments);
     }
-    return c3(self, constructResult);
+    return tmp3(self, constructResult);
   }
 }
 _inherits(
@@ -55,18 +65,16 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const str = arg1[1];
-      const formatted = str.toLowerCase();
-      const parseDurationResult = _mod10268.parseDuration(arg1[2]);
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = NLTimeUnitCasualRelativeFormatParser(10268).parseDuration(arg1[2]);
       if ("vorig" !== formatted) {
-        let reverseDurationResult;
         if ("afgelopen" !== formatted) {
-          reverseDurationResult = parseDurationResult;
+          let reverseDurationResult = parseDurationResult;
         }
-        const ParsingComponents = ReferenceWithTimezone.ParsingComponents;
+        const ParsingComponents = NLTimeUnitCasualRelativeFormatParser(10177).ParsingComponents;
         return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      reverseDurationResult = EmptyDuration.reverseDuration(parseDurationResult);
+      reverseDurationResult = NLTimeUnitCasualRelativeFormatParser(10176).reverseDuration(parseDurationResult);
     },
   },
 ];

@@ -3053,7 +3053,7 @@ const obj = {
   game_die: ["igra", "igra\u0107a kocka", "kocka"],
   jigsaw: ["dio slagalice", "komadi\u0107", "slagalica", "trag"],
   teddy_bear: ["igra\u010Dka", "medvjedi\u0107", "pli\u0161anac", "pli\u0161ani medvjedi\u0107"],
-  "pi\u00f1ata": ["Meksiko", "pinjata", "ro\u0111endan", "slatki\u0161i", "slavlje", "zabava"],
+  piñata: ["Meksiko", "pinjata", "ro\u0111endan", "slatki\u0161i", "slavlje", "zabava"],
   mirror_ball: ["disko", "disko kugla", "ogledalo", "ples", "\u0161ljokice", "zabava", "zrcalo"],
   nesting_dolls: ["babu\u0161ka", "lutka", "matrjo\u0161ka", "Rusija", "ruska lutka"],
   spades: ["igra", "karta", "pik"],

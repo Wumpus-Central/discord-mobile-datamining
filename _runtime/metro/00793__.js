@@ -1,43 +1,43 @@
 // _runtime/metro/00793__.js
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const parseCookie = function parseCookie(arr) {
   const obj = {};
   let num = 0;
   if (0 < arr.length) {
-    const index = arr.indexOf("=", num);
-    if (-1 !== index) {
+    let index = arr.indexOf("=", num);
+    while (-1 !== index) {
       let length = arr.indexOf(";", num);
       if (-1 === length) {
         length = arr.length;
-      } else {
-        let sum;
-        if (length < index) {
-          sum = arr.lastIndexOf(";", index - 1) + 1;
-        }
+      } else if (length < index) {
+        let sum = arr.lastIndexOf(";", index - 1) + 1;
         num = sum;
+        if (sum >= arr.length) {
+          break;
+        }
       }
-      const str = arr.slice(num, index);
-      const trimmed = str.trim();
+      let str = arr.slice(num, index);
+      let trimmed = str.trim();
       if (undefined === obj[trimmed]) {
-        const str2 = arr.slice(index + 1, length);
-        const trimmed1 = str2.trim();
-        let substr = trimmed1;
+        let str2 = arr.slice(index + 1, length);
+        let trimmed1 = str2.trim();
+        index = trimmed1;
         if (34 === trimmed1.charCodeAt(0)) {
-          substr = trimmed1.slice(1, -1);
+          index = trimmed1.slice(1, -1);
         }
         try {
-          let decodeURIComponentResult = substr;
-          if (-1 !== substr.indexOf("%")) {
-            const _decodeURIComponent = decodeURIComponent;
-            decodeURIComponentResult = decodeURIComponent(substr);
+          let decodeURIComponentResult = index;
+          if (-1 !== index.indexOf("%")) {
+            let _decodeURIComponent = decodeURIComponent;
+            decodeURIComponentResult = decodeURIComponent(index);
           }
           obj[trimmed] = decodeURIComponentResult;
         } catch (err) {
-          obj[trimmed] = substr;
+          obj[trimmed] = index;
         }
       }
-      sum = length + 1;
+      let sum1 = length + 1;
     }
   }
   return obj;

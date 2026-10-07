@@ -4,8 +4,6 @@ import GestureDetectorType from "06160_GestureDetectorType.js";
 import _mod6252 from "metro/06252__.js";
 import _mod6259 from "metro/06259__.js";
 
-const GestureDetectorType_export = GestureDetectorType.GestureDetectorType;
-
 export const BaseButton = _mod6157.BaseButton;
 export const BorderlessButton = _mod6157.BorderlessButton;
 export const FlatList = _mod6157.FlatList;
@@ -18,7 +16,7 @@ export const Switch = _mod6157.Switch;
 export const TextInput = _mod6157.TextInput;
 export const Touchable = _mod6157.Touchable;
 export const GestureDetector = GestureDetectorType.GestureDetector;
-export { GestureDetectorType_export as GestureDetectorType };
+export const GestureDetectorType = GestureDetectorType.GestureDetectorType;
 export const InterceptingGestureDetector = GestureDetectorType.InterceptingGestureDetector;
 export const VirtualGestureDetector = GestureDetectorType.VirtualGestureDetector;
 export const GestureStateManager = _mod6259.GestureStateManager;

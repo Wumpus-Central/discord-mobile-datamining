@@ -1,27 +1,24 @@
 // _runtime/12673_sessionTimingIntegration.js
-import _browserPerformanceTimeOriginMode from "12594__browserPerformanceTimeOriginMode.js";
-import 12636__ from "metro/12636__.js";
+import _mod12594 from "metro/12594__.js";
+import setupIntegration from "metro/12636__.js";
 
 const require = globalThis.__r;
-let _require;
 
-
-export const sessionTimingIntegration = module_12636.defineIntegration(() => {
-  let closure_0;
-  let obj = require("_browserPerformanceTimeOriginMode");
-  _require = 1000 * obj.timestampInSeconds();
-  let obj2 = {
+export const sessionTimingIntegration = setupIntegration.defineIntegration(() => {
+  _require = 1000 * require("metro/12594__.js").timestampInSeconds();
+  return {
     name: "SessionTiming",
     processEvent(extra) {
-      let obj3;
-      const obj = _browserPerformanceTimeOriginMode;
-      const result = 1000 * obj.timestampInSeconds();
-      const obj2 = { extra: obj3 };
+      const result = 1000 * _mod12594.timestampInSeconds();
+      const obj2 = {};
       const merged = Object.assign(extra);
-      obj3 = { "session:start": closure_0, "session:duration": result - closure_0, "session:end": result };
+      const obj3 = {};
       const merged1 = Object.assign(extra.extra);
+      obj3["session:start"] = closure_0;
+      obj3["session:duration"] = result - closure_0;
+      obj3["session:end"] = result;
+      obj2.extra = obj3;
       return obj2;
-    }
+    },
   };
-  return obj2;
 });

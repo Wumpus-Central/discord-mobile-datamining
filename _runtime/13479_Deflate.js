@@ -1,40 +1,50 @@
 // _runtime/13479_Deflate.js
 import _mod13478 from "metro/13478__.js";
 import ZStream from "13480_ZStream.js";
-import deflateInit from "13481_deflateInit.js";
+import flush_block_only from "13481_flush_block_only.js";
 import _mod13482 from "metro/13482__.js";
-import string2buf from "13486_string2buf.js";
+import _mod13486 from "metro/13486__.js";
 
+require = arg1;
+const dependencyMap = arg6;
 class Deflate {
   constructor(arg0) {
-    const self = this;
+    self = this;
+    tmp = Deflate;
     if (this instanceof Deflate) {
-      let obj = arg0;
-      const assign = _mod13478.assign;
-      _mod13478;
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj = closure_0(closure_1[0]);
+      obj1 = arg0;
       if (!arg0) {
-        obj = {};
+        obj1 = {};
       }
-      self.options = assign(
+      self.options = obj.assign(
         { level: -1, method: 8, chunkSize: 16384, windowBits: 15, memLevel: 8, strategy: 0, to: "" },
-        obj,
+        obj1,
       );
-      const options = self.options;
+      options = self.options;
       if (options.raw) {
+        num = 0;
         if (options.windowBits > 0) {
           options.windowBits = -options.windowBits;
         }
+        num5 = 0;
         self.err = 0;
+        str = "";
         self.msg = "";
+        flag = false;
         self.ended = false;
         self.chunks = [];
-        const self2 = this;
-        const self3 = this;
-        self.strm = new ZStream();
+        tmp6 = new.target;
+        tmp7 = new.target;
+        tmp8 = new tmp4(tmp5[1])();
+        tmp9 = tmp8;
+        self.strm = tmp8;
         self.strm.avail_out = 0;
-        const tmp7 = new ZStream();
-        const tmp4Result = deflateInit;
-        const deflateInit2Result = tmp4Result.deflateInit2(
+        tmp4Result = tmp4(tmp5[2]);
+        tmp10 = tmp4Result;
+        deflateInit2Result = tmp4Result.deflateInit2(
           self.strm,
           options.level,
           options.method,
@@ -43,196 +53,199 @@ class Deflate {
           options.strategy,
         );
         if (0 !== deflateInit2Result) {
-          const _Error2 = Error;
-          const self8 = this;
-          const self9 = this;
-          const error = new Error(_mod13482[deflateInit2Result]);
+          tmp22 = globalThis;
+          _Error2 = Error;
+          tmp23 = new.target;
+          tmp24 = new.target;
+          error = new Error(tmp4(tmp5[3])[deflateInit2Result]);
+          tmp26 = error;
           throw error;
         } else {
           if (options.header) {
-            const tmp4Result4 = deflateInit;
-            tmp4Result4.deflateSetHeader(self.strm, options.header);
+            tmp4Result1 = tmp4(tmp5[2]);
+            deflateSetHeaderResult = tmp4Result1.deflateSetHeader(self.strm, options.header);
           }
           if (options.dictionary) {
-            let dictionary;
             if (typeof options.dictionary === "string") {
-              const tmp4Result5 = string2buf;
-              dictionary = tmp4Result5.string2buf(options.dictionary);
-            } else if ("[object ArrayBuffer]" === toString.call(options.dictionary)) {
-              const _Uint8Array = Uint8Array;
-              const self4 = this;
-              const self5 = this;
-              dictionary = new Uint8Array(options.dictionary);
+              tmp4Result2 = tmp4(tmp5[4]);
+              dictionary = tmp4Result2.string2buf(options.dictionary);
             } else {
-              dictionary = options.dictionary;
+              tmp27 = toString;
+              call = toString.call;
+              dictionary2 = options.dictionary;
+              str2 = "[object ArrayBuffer]";
+              if ("[object ArrayBuffer]" === (typeof call === "unknown" ? tmp27() : call(dictionary2))) {
+                tmp13 = globalThis;
+                _Uint8Array = Uint8Array;
+                tmp14 = new.target;
+                tmp15 = new.target;
+                dictionary = new Uint8Array(options.dictionary);
+              } else {
+                dictionary = options.dictionary;
+              }
             }
-            const tmp4Result6 = deflateInit;
-            const deflateSetDictionaryResult = tmp4Result6.deflateSetDictionary(self.strm, dictionary);
+            tmp4Result3 = tmp4(tmp5[2]);
+            deflateSetDictionaryResult = tmp4Result3.deflateSetDictionary(self.strm, dictionary);
             if (0 !== deflateSetDictionaryResult) {
-              const _Error = Error;
-              const self6 = this;
-              const self7 = this;
-              const error1 = new Error(_mod13482[deflateSetDictionaryResult]);
+              tmp17 = globalThis;
+              _Error = Error;
+              tmp18 = new.target;
+              tmp19 = new.target;
+              error1 = new Error(tmp4(tmp5[3])[deflateSetDictionaryResult]);
+              tmp21 = error1;
               throw error1;
             } else {
+              flag2 = true;
               self._dict_set = true;
             }
           }
+          return;
         }
       }
-      const gzip = options.gzip && options.windowBits > 0 && options.windowBits < 16;
+      gzip = options.gzip;
       if (gzip) {
+        num2 = 0;
+        gzip = options.windowBits > 0;
+      }
+      if (gzip) {
+        num3 = 16;
+        gzip = options.windowBits < 16;
+      }
+      if (gzip) {
+        num4 = 16;
         options.windowBits = options.windowBits + 16;
       }
     } else {
-      const tmpResult = Deflate(arg0);
+      tmpResult = tmp(arg0);
+      tmp3 = tmpResult;
       return tmpResult;
     }
+    return;
   }
-  push(input, last_flush) {
-    let deflateResult;
-    const self = this;
-    const strm = this.strm;
-    const chunkSize = this.options.chunkSize;
+  push(arg0, arg1) {
+    strm = this.strm;
     if (this.ended) {
+      flag2 = false;
       return false;
     } else {
-      let tmp2 = last_flush;
-      if (last_flush !== ~~last_flush) {
-        let num = 0;
-        if (true === last_flush) {
+      tmp = arg1;
+      tmp2 = arg1;
+      if (arg1 !== ~~arg1) {
+        flag = true;
+        num = 0;
+        if (true === arg1) {
           num = 4;
         }
         tmp2 = num;
       }
-      if (typeof input === "string") {
-        const obj = string2buf;
-        strm.input = obj.string2buf(input);
-      } else if ("[object ArrayBuffer]" === toString.call(input)) {
-        const _Uint8Array = Uint8Array;
-        const self2 = this;
-        const self3 = this;
-        const uint8Array = new Uint8Array(input);
-        strm.input = uint8Array;
+      tmp3 = arg0;
+      if (typeof arg0 === "string") {
+        tmp10 = closure_0;
+        tmp11 = closure_1;
+        obj = closure_0(closure_1[4]);
+        strm.input = obj.string2buf(arg0);
+        num2 = 0;
+        strm.next_in = 0;
+        strm.avail_in = strm.input.length;
+        str2 = "string";
+        num3 = 2;
+        tmp12 = 2 !== tmp2;
+        num4 = 4;
+        tmp13 = 4 !== tmp2;
+        num5 = 1;
       } else {
-        strm.input = input;
+        tmp14 = toString;
+        call = toString.call;
+        str = "[object ArrayBuffer]";
+        if ("[object ArrayBuffer]" !== (typeof call === "unknown" ? tmp14() : call(arg0))) {
+          strm.input = arg0;
+        }
       }
-      strm.next_in = 0;
-      strm.avail_in = strm.input.length;
-      let flag2 = 2 !== tmp2;
-      const tmp10 = 4 !== tmp2;
-      while (true) {
-        if (0 === strm.avail_out) {
-          let self4 = this;
-          let self5 = this;
-          let buf8 = new _mod13478.Buf8(chunkSize);
-          strm.output = buf8;
-          strm.next_out = 0;
-          strm.avail_out = chunkSize;
-        }
-        let obj2 = deflateInit;
-        deflateResult = obj2.deflate(strm, tmp2);
-        let tmp19 = 1 !== deflateResult;
-        if (tmp19) {
-          if (0 !== deflateResult) {
-            break;
-          }
-        }
-        let tmp20 = 0 !== strm.avail_out;
-        if (tmp20) {
-          let tmp21 = 0 !== strm.avail_in;
-          if (!tmp21) {
-            let tmp22 = tmp10 && flag2;
-            tmp21 = tmp22;
-          }
-          tmp20 = tmp21;
-        }
-        if (!tmp20) {
-          if ("string" === self.options.to) {
-            let onData2 = self.onData;
-            let tmp16Result = string2buf;
-            let buf2binstring = tmp16Result.buf2binstring;
-            let tmp16Result4 = _mod13478;
-            let onData2Result = onData2(buf2binstring(tmp16Result4.shrinkBuf(strm.output, strm.next_out)));
-          } else {
-            let onData = self.onData;
-            let tmp16Result5 = _mod13478;
-            let onDataResult = onData(tmp16Result5.shrinkBuf(strm.output, strm.next_out));
-          }
-        }
-        if (4 === tmp2) {
-          let tmp16Result6 = deflateInit;
-          let deflateEndResult = tmp16Result6.deflateEnd(self.strm);
-          let onEndResult = self.onEnd(deflateEndResult);
-          let flag3 = true;
-          self.ended = true;
-          flag2 = 0 === deflateEndResult;
-        } else if (!flag2) {
-          let onEndResult1 = self.onEnd(0);
-          strm.avail_out = 0;
-          flag2 = true;
-        }
-        return flag2;
-      }
-      self.onEnd(deflateResult);
-      self.ended = true;
-      return false;
+      tmp4 = globalThis;
+      _Uint8Array = Uint8Array;
+      tmp5 = new.target;
+      tmp6 = new.target;
+      tmp7 = arg0;
+      uint8Array = new Uint8Array(arg0);
+      tmp9 = uint8Array;
+      strm.input = uint8Array;
     }
+    return;
   }
   onData(arg0) {
-    const chunks = this.chunks;
-    chunks.push(arg0);
+    chunks = this.chunks;
+    arr1 = chunks.push(arg0);
+    return;
   }
-  onEnd(err) {
-    const self = this;
-    if (0 === err) {
+  onEnd(arg0) {
+    self = this;
+    if (0 === arg0) {
+      str = "string";
       if ("string" === self.options.to) {
-        const chunks = self.chunks;
+        chunks = self.chunks;
+        str2 = "";
         self.result = chunks.join("");
       } else {
-        const obj = _mod13478;
+        tmp = closure_0;
+        tmp2 = closure_1;
+        obj = closure_0(closure_1[0]);
         self.result = obj.flattenChunks(self.chunks);
       }
     }
     self.chunks = [];
-    self.err = err;
+    self.err = arg0;
     self.msg = self.strm.msg;
+    return;
   }
 }
-const gzip_export = function gzip(arg0, arg1) {
-  const tmp = arg1 || {};
-  tmp.gzip = true;
-  const arr = Deflate(tmp);
-  arr.push(arg0, true);
-  if (arr.err) {
-    const msg = arr.msg || _mod13482[arr.err];
-    throw msg;
-  } else {
-    return arr.result;
-  }
-};
 
 export { Deflate };
-export const deflate = function deflate(arg0, arg1) {
-  const arr = Deflate(arg1);
+export const deflate = function deflate(arg0, Deflate) {
+  const arr = Deflate(Deflate);
   arr.push(arg0, true);
   if (arr.err) {
-    const msg = arr.msg || _mod13482[arr.err];
+    let msg = arr.msg;
+    if (!msg) {
+      msg = _mod13482[arr.err];
+    }
     throw msg;
   } else {
     return arr.result;
   }
 };
-export const deflateRaw = function deflateRaw(arg0, arg1) {
-  const tmp = arg1 || {};
-  tmp.raw = true;
-  const arr = Deflate(tmp);
+export const deflateRaw = function deflateRaw(arg0, Deflate) {
+  let obj = Deflate;
+  if (!Deflate) {
+    obj = {};
+  }
+  obj.raw = true;
+  const arr = Deflate(obj);
   arr.push(arg0, true);
   if (arr.err) {
-    const msg = arr.msg || _mod13482[arr.err];
+    let msg = arr.msg;
+    if (!msg) {
+      msg = _mod13482[arr.err];
+    }
     throw msg;
   } else {
     return arr.result;
   }
 };
-export { gzip_export as gzip };
+export const gzip = function gzip(arg0, Deflate) {
+  let obj = Deflate;
+  if (!Deflate) {
+    obj = {};
+  }
+  obj.gzip = true;
+  const arr = Deflate(obj);
+  arr.push(arg0, true);
+  if (arr.err) {
+    let msg = arr.msg;
+    if (!msg) {
+      msg = _mod13482[arr.err];
+    }
+    throw msg;
+  } else {
+    return arr.result;
+  }
+};

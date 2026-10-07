@@ -1,16 +1,14 @@
 // _runtime/05393_FromPropertyDescriptor.js
 import _mod1293 from "metro/01293__.js";
-import isPropertyDescriptor from "05387_isPropertyDescriptor.js";
-import fromPropertyDescriptor from "05394_fromPropertyDescriptor.js";
+import _mod5387 from "metro/05387__.js";
+import _mod5394 from "metro/05394__.js";
 
 export default function FromPropertyDescriptor(arg0) {
   if (undefined !== arg0) {
-    if (!isPropertyDescriptor(arg0)) {
-      const self = this;
-      const self2 = this;
-      const tmp3 = new _mod1293("Assertion failed: `Desc` must be a Property Descriptor");
-      throw tmp3;
+    if (!_mod5387(arg0)) {
+      const tmp5 = new _mod1293("Assertion failed: `Desc` must be a Property Descriptor");
+      throw tmp5;
     }
   }
-  return fromPropertyDescriptor(arg0);
+  return _mod5394(arg0);
 }

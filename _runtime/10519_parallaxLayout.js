@@ -1,6 +1,8 @@
 // _runtime/10519_parallaxLayout.js
-import _mod1643 from "metro/01643__.js";
+import cancelAnimation from "01643_cancelAnimation.js";
 
+require = arg1;
+const dependencyMap = arg6;
 let closure_2 = {
   code: "function pnpm_parallaxTs1(value){const{interpolate,size,parallaxScrollingOffset,Extrapolation,parallaxAdjacentItemScale,parallaxScrollingScale,vertical}=this.__closure;const translate=interpolate(value,[-1,0,1],[-size+parallaxScrollingOffset,0,size-parallaxScrollingOffset]);const zIndex=Math.round(interpolate(value,[-1,0,1],[0,size,0],Extrapolation.CLAMP));const scale=interpolate(value,[-1,0,1],[parallaxAdjacentItemScale,parallaxScrollingScale,parallaxAdjacentItemScale],Extrapolation.CLAMP);return{transform:[vertical?{translateY:translate}:{translateX:translate},{scale:scale}],zIndex:zIndex};}",
 };
@@ -30,28 +32,28 @@ export const parallaxLayout = function parallaxLayout(size) {
     parallaxAdjacentItemScale = num2 ** 2;
   }
   const fn = function o(arg0) {
-    let items3;
-    let obj5;
     const items = [-size + num, 0, size - num];
-    const obj = _mod1643;
-    const interpolateResult = obj.interpolate(arg0, [-1, 0, 1], items);
+    const interpolateResult = cancelAnimation.interpolate(arg0, [-1, 0, 1], items);
     const items1 = [0, size, 0];
-    const obj2 = _mod1643;
+    const rounded = Math.round(
+      cancelAnimation.interpolate(arg0, [-1, 0, 1], items1, cancelAnimation.Extrapolation.CLAMP),
+    );
     const items2 = [parallaxAdjacentItemScale, num2, parallaxAdjacentItemScale];
-    const roundResult = round(obj2.interpolate(arg0, [-1, 0, 1], items1, _mod1643.Extrapolation.CLAMP));
-    const obj3 = _mod1643;
-    const interpolateResult1 = obj3.interpolate(arg0, [-1, 0, 1], items2, _mod1643.Extrapolation.CLAMP);
     if (vertical) {
-      obj5 = { translateY: interpolateResult };
       const obj4 = { translateY: interpolateResult };
+      let obj5 = obj4;
     } else {
       obj5 = { translateX: interpolateResult };
     }
-    const obj6 = { transform: items3, zIndex: roundResult };
-    items3 = [obj5, { scale: interpolateResult1 }];
+    const obj6 = { transform: null, zIndex: rounded };
+    const items3 = [
+      obj5,
+      { scale: cancelAnimation.interpolate(arg0, [-1, 0, 1], items2, cancelAnimation.Extrapolation.CLAMP) },
+    ];
+    obj6.transform = items3;
     return obj6;
   };
-  let obj2 = {
+  fn.__closure = {
     interpolate: size(vertical[0]).interpolate,
     size,
     parallaxScrollingOffset: num,
@@ -60,7 +62,6 @@ export const parallaxLayout = function parallaxLayout(size) {
     parallaxScrollingScale: num2,
     vertical,
   };
-  fn.__closure = obj2;
   fn.__workletHash = 8790326555138;
   fn.__initData = num;
   return fn;

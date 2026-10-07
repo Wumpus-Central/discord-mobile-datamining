@@ -1,12 +1,12 @@
 // _runtime/metro/12698__.js
-import _mod12583 from "12583__.js";
+import stackParserFromStackParserOptions from "../12583_stackParserFromStackParserOptions.js";
 import _mod12586 from "12586__.js";
 import _mod12696 from "12696__.js";
 
-let navigation;
+require = arg1;
+const dependencyMap = arg6;
 
 export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
-  let filenameIsInAppResult;
   let replaced;
   if (str) {
     replaced = str.replace(/^file:\/\//, "");
@@ -19,37 +19,35 @@ export const callFrameToStackFrame = function callFrameToStackFrame(location, st
   if (location.location.lineNumber) {
     sum1 = location.location.lineNumber + 1;
   }
-  const tmp6 = _mod12586;
-  const dropUndefinedKeys = tmp6.dropUndefinedKeys;
-  const obj = {
-    filename: replaced,
-    module: fn(replaced),
-    function: location.functionName || _mod12583.UNKNOWN_FUNCTION,
-    colno: sum,
-    lineno: sum1,
-    in_app: filenameIsInAppResult,
-  };
-  filenameIsInAppResult = undefined;
-  location.functionName || _mod12583.UNKNOWN_FUNCTION;
+  const obj2 = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
+  const obj = _mod12586;
+  obj2.function = location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION;
+  obj2.colno = sum;
+  obj2.lineno = sum1;
+  let filenameIsInAppResult;
   if (replaced) {
+    filenameIsInAppResult = _mod12696.filenameIsInApp(replaced);
     const tmp4Result = _mod12696;
-    filenameIsInAppResult = tmp4Result.filenameIsInApp(replaced);
   }
-  return dropUndefinedKeys(obj);
+  obj2.in_app = filenameIsInAppResult;
+  return obj.dropUndefinedKeys(obj2);
 };
 export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
-  let closure_2 = arg3;
-  navigation = fn();
-  let c4 = false;
-  let c5 = true;
+  closure_0 = arg1;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  const navigation = fn();
+  c4 = false;
+  closure_5 = true;
   const timerId = setInterval(() => {
     const timeMs = navigation.getTimeMs();
-    const tmp2 = false === c4 && timeMs > closure_0 + closure_1;
+    let tmp2 = false === c4;
+    if (tmp2) {
+      tmp2 = timeMs > closure_0 + closure_1;
+    }
     if (tmp2) {
       c4 = true;
-      if (c5) {
+      if (closure_5) {
         closure_2();
       }
     }
@@ -62,7 +60,7 @@ export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
       navigation.reset();
     },
     enabled(arg0) {
-      c5 = arg0;
+      closure_5 = arg0;
     },
   };
 };

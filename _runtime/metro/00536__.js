@@ -12,7 +12,19 @@ if (tmp) {
 if (tmp) {
   tmp = exports;
 }
-const tmp2 = tmp && typeof module === "object" && module && !module.nodeType && module;
+let tmp2 = tmp;
+if (tmp) {
+  tmp2 = typeof module === "object";
+}
+if (tmp2) {
+  tmp2 = module;
+}
+if (tmp2) {
+  tmp2 = !module.nodeType;
+}
+if (tmp2) {
+  tmp2 = module;
+}
 let _Buffer;
 if (tmp2) {
   if (tmp2.exports === tmp) {

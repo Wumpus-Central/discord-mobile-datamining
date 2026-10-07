@@ -1,17 +1,18 @@
 // _runtime/00851_contentUnionToMessages.js
 import CHATS_CREATE_METHOD from "00850_CHATS_CREATE_METHOD.js";
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 function contentUnionToMessages(contents) {
-  let flatMapResult;
   let str = user;
   if (user === undefined) {
     str = "user";
   }
   if (typeof contents === "string") {
-    const items = [{ role: str, content: contents }];
-    flatMapResult = items;
     const obj2 = { role: str, content: contents };
+    const items = [obj2];
+    let flatMapResult = items;
   } else {
     const _Array = Array;
     if (Array.isArray(contents)) {
@@ -19,23 +20,20 @@ function contentUnionToMessages(contents) {
     } else {
       if (typeof contents === "object") {
         if (contents) {
-          let items3;
-          if ("role" in contents) {
-            if (typeof contents.role === "string") {
-              const items1 = [contents];
-              items3 = items1;
+          if (!("role" in contents)) {
+            if ("parts" in contents) {
+              const obj3 = {};
+              const merged = Object.assign(contents);
+              obj3.role = str;
+              const items1 = [obj3];
+              let items2 = items1;
+            } else {
+              const obj = { role: str, content: contents };
+              items2 = [obj];
             }
-            flatMapResult = items3;
           }
-          if ("parts" in contents) {
-            const obj3 = { role: str };
-            const merged = Object.assign(contents);
-            const items2 = [obj3];
-            items3 = items2;
-          } else {
-            items3 = [{ role: str, content: contents }];
-            const obj = { role: str, content: contents };
-          }
+          const items3 = [contents];
+          items2 = items3;
         }
       }
       flatMapResult = [];
@@ -54,8 +52,7 @@ export const shouldInstrument = function shouldInstrument(str) {
     return true;
   } else {
     const parts = str.split(".");
-    const arr = parts.pop();
     const GOOGLE_GENAI_INSTRUMENTED_METHODS2 = CHATS_CREATE_METHOD.GOOGLE_GENAI_INSTRUMENTED_METHODS;
-    return GOOGLE_GENAI_INSTRUMENTED_METHODS2.includes(arr);
+    return GOOGLE_GENAI_INSTRUMENTED_METHODS2.includes(parts.pop());
   }
 };

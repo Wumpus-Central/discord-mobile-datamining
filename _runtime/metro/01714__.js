@@ -1,10 +1,8 @@
 // _runtime/metro/01714__.js
 import _createClassDefault from "00042__createClass.js";
-import LayoutAnimationType from "../01668_LayoutAnimationType.js";
-import _mod1683 from "01683__.js";
-import _mod1715 from "01715__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 
+const BaseAnimationBuilder = arg1;
 const __initData = {
   code: "function pnpm_BaseAnimationBuilderTs1(delay,animation){const{withDelay,reduceMotion}=this.__closure;return withDelay(delay,animation,reduceMotion);}",
 };
@@ -13,15 +11,16 @@ const __initData2 = {
 };
 class BaseAnimationBuilder {
   constructor() {
-    _classCallCheck(this, BaseAnimationBuilder);
-    this.reduceMotionV = LayoutAnimationType.ReduceMotion.System;
+    tmp = c2(this, BaseAnimationBuilder);
+    this.reduceMotionV = closure_0(closure_1[2]).ReduceMotion.System;
     this.randomizeDelay = false;
     this.build = () => {
-      const reanimatedError = new BaseAnimationBuilder(closure_1_1[3]).ReanimatedError(
+      const reanimatedError = new BaseAnimationBuilder(dependencyMap[3]).ReanimatedError(
         "Unimplemented method in child class.",
       );
       throw reanimatedError;
     };
+    return;
   }
 }
 const entry = {
@@ -74,7 +73,6 @@ const items = [
   {
     key: "getDelay",
     value: function getDelay() {
-      let num;
       const self = this;
       if (this.randomizeDelay) {
         const _Math = Math;
@@ -83,7 +81,7 @@ const items = [
         if (num2 == null) {
           num2 = 1000;
         }
-        num = random * num2;
+        let num = random * num2;
       } else {
         num = self.delayV;
         if (num == null) {
@@ -102,27 +100,23 @@ const items = [
   {
     key: "getDelayFunction",
     value: function getDelayFunction() {
-      let fn;
       const self = this;
-      const tmp = this.randomizeDelay || self.delayV;
       const reduceMotion = self.getReduceMotion();
       if (tmp) {
-        const fn2 = function n(c10, withSpringResult) {
-          const obj = _mod1715;
-          return obj.withDelay(c10, withSpringResult, reduceMotion);
+        const fn2 = function n(c10, tmpResult) {
+          return BaseAnimationBuilder(1715).withDelay(c10, tmpResult, reduceMotion);
         };
-        fn2.__closure = { withDelay: reduceMotion(1715).withDelay, reduceMotion };
+        const obj2 = { withDelay: reduceMotion(1715).withDelay, reduceMotion };
+        fn2.__closure = obj2;
         fn2.__workletHash = 15544853359686;
         fn2.__initData = __initData;
-        fn = fn2;
-        const obj2 = { withDelay: reduceMotion(1715).withDelay, reduceMotion };
+        let fn = fn2;
       } else {
         fn = function t(arg0, arg1) {
-          const obj = _mod1683;
-          arg1.reduceMotion = obj.getReduceMotionFromConfig(reduceMotion);
+          arg1.reduceMotion = BaseAnimationBuilder(1683).getReduceMotionFromConfig(reduceMotion);
           return arg1;
         };
-        let obj = { getReduceMotionFromConfig: reduceMotion(1683).getReduceMotionFromConfig, reduceMotion };
+        const obj = { getReduceMotionFromConfig: reduceMotion(1683).getReduceMotionFromConfig, reduceMotion };
         fn.__closure = obj;
         fn.__workletHash = 8417033392474;
         fn.__initData = __initData2;
@@ -182,6 +176,5 @@ const items1 = [
     },
   },
 ];
-const BaseAnimationBuilder_export = _createClassDefault(BaseAnimationBuilder, items, items1);
 
-export { BaseAnimationBuilder_export as BaseAnimationBuilder };
+export const BaseAnimationBuilder = _createClassDefault(BaseAnimationBuilder, items, items1);

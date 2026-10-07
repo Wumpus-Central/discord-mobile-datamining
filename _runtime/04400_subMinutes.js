@@ -1,37 +1,35 @@
 // _runtime/04400_subMinutes.js
-import addMinutes_mod from "04129_addMinutes.js";
+import module_4129_mod from "metro/04129__.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
-import toInteger_mod from "03968_toInteger.js";
+import module_3968_mod from "metro/03968__.js";
 
-let tmp3;
-let tmp5;
-let tmp7;
-let addMinutes = addMinutes_mod;
-if (!addMinutes) {
-  tmp3 = { default: addMinutes };
-  const obj = { default: addMinutes };
+let module_4129 = module_4129_mod;
+if (!module_4129) {
+  const obj = { default: module_4129 };
+  let tmp3 = obj;
 } else {
-  tmp3 = addMinutes;
+  tmp3 = module_4129;
 }
-addMinutes = tmp3;
+module_4129 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-let toInteger = toInteger_mod;
-if (!toInteger) {
-  tmp7 = { default: toInteger };
-  const obj3 = { default: toInteger };
+let module_3968 = module_3968_mod;
+if (!module_3968) {
+  const obj3 = { default: module_3968 };
+  let tmp7 = obj3;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3968;
 }
-toInteger = tmp7;
+module_3968 = tmp7;
 
 export default function subMinutes(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addMinutes.default(arg0, -toInteger.default(arg1));
-}
+  return module_4129.default(arg0, -module_3968.default(arg1));
+};
+export default exports.default;

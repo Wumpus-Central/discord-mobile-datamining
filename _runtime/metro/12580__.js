@@ -2,15 +2,8 @@
 import GLOBAL_OBJ from "12581__.js";
 
 const require = globalThis.__r;
-let _require, c0, dependencyMap;
 
 function consoleSandbox(fn) {
-  let closure_1;
-  let console;
-  const f112447 = (item) => {
-    console[item] = closure_1[item];
-  };
-  const tmp = console;
   if ("console" in console(12581).GLOBAL_OBJ) {
     console = tmp(12581).GLOBAL_OBJ.console;
     dependencyMap = {};
@@ -21,16 +14,20 @@ function consoleSandbox(fn) {
       console[item] = obj[item];
     });
     try {
-      const tmp6 = fn();
-      const item1 = keys.forEach(f112447);
-      return tmp6;
+      const item1 = keys.forEach((item) => {
+        console[item] = closure_1[item];
+      });
+      return fn();
     } catch (tmp8) {
-      const item2 = keys.forEach(f112447);
+      const item2 = arr.forEach((item) => {
+        console[item] = closure_1[item];
+      });
       throw tmp8;
     }
   } else {
     return fn();
   }
+  tmp = console;
 }
 let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
 const originalConsoleMethods = {};
@@ -39,7 +36,7 @@ export const CONSOLE_LEVELS = items;
 export { consoleSandbox };
 export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogger() {
   _require = false;
-  let obj = {
+  const obj = {
     enable() {
       c0 = true;
     },
@@ -53,16 +50,14 @@ export const logger = GLOBAL_OBJ.getGlobalSingleton("logger", function makeLogge
   const forEach = items.forEach;
   if (require("12579__.js").DEBUG_BUILD) {
     const item = forEach((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       obj[arg0] = () => {
         const args = [...arguments];
-        const tmp = args;
-        if (tmp) {
+        if (args) {
           consoleSandbox(() => {
             const _console = GLOBAL_OBJ.GLOBAL_OBJ.console;
-            obj = _console[args];
             items = ["Sentry Logger [" + args + "]:", ...closure_0];
-            obj.apply(items);
+            _console[args].apply(items);
           });
         }
       };

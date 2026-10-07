@@ -5,6 +5,5 @@ import _mod1309 from "metro/01309__.js";
 
 export default function applyBind() {
   const tmp = _mod1304;
-  const tmp2 = bind;
-  return tmp(tmp2, _mod1309, arguments);
+  return tmp(bind, _mod1309, arguments);
 }

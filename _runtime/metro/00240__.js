@@ -1,5 +1,6 @@
 // _runtime/metro/00240__.js
-const obj = {
+
+export default {
   setup() {},
   enable() {
     console.error(
@@ -10,5 +11,3 @@ const obj = {
   registerBundle() {},
   log() {},
 };
-
-export default obj;

@@ -1,37 +1,40 @@
 // _runtime/00732_SentryNonRecordingSpan.js
-import TRACE_FLAG_NONE from "00695_TRACE_FLAG_NONE.js";
-import generateSpanId from "00705_generateSpanId.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+const SentryNonRecordingSpan = require;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class SentryNonRecordingSpan {
   constructor() {
-    let obj = arg0;
-    if (arg0 === undefined) {
+    obj = global;
+    if (global === undefined) {
       obj = {};
     }
-    const self = this;
-    _classCallCheck(this, SentryNonRecordingSpan);
-    let traceId = obj.traceId;
+    self = this;
+    tmp = c2(this, SentryNonRecordingSpan);
+    traceId = obj.traceId;
     if (!traceId) {
-      const obj2 = generateSpanId;
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      obj2 = closure_0(closure_1[2]);
       traceId = obj2.generateTraceId();
     }
     self._traceId = traceId;
-    let spanId = obj.spanId;
+    spanId = obj.spanId;
     if (!spanId) {
-      const obj3 = generateSpanId;
+      tmp4 = closure_0;
+      tmp5 = closure_1;
+      obj3 = closure_0(closure_1[2]);
       spanId = obj3.generateSpanId();
     }
     self._spanId = spanId;
+    return;
   }
 }
 const entry = {
   key: "spanContext",
   value: function spanContext() {
-    const obj = { spanId: this._spanId, traceId: this._traceId, traceFlags: TRACE_FLAG_NONE.TRACE_FLAG_NONE };
-    return obj;
+    return { spanId: this._spanId, traceId: this._traceId, traceFlags: SentryNonRecordingSpan(695).TRACE_FLAG_NONE };
   },
 };
 const items = [
@@ -93,6 +96,5 @@ const items = [
     value: function recordException(arg0, arg1) {},
   },
 ];
-const SentryNonRecordingSpan_export = _createClass(SentryNonRecordingSpan, items);
 
-export { SentryNonRecordingSpan_export as SentryNonRecordingSpan };
+export const SentryNonRecordingSpan = _createClass(SentryNonRecordingSpan, items);

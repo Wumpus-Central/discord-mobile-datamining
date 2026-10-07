@@ -1,24 +1,27 @@
 // _runtime/01168_dataFormatterCache.js
-import _classCallCheck from "metro/00041__classCallCheck.js";
+import _classCallCheck_mod from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+let _classCallCheck = _classCallCheck_mod;
 class FormatterCache {
   constructor() {
-    _classCallCheck(this, FormatterCache);
-    this.dateTime = new Map();
-    new Map();
-    this.duration = new Map();
-    new Map();
-    this.list = new Map();
-    new Map();
-    this.number = new Map();
-    new Map();
-    this.pluralRules = new Map();
-    new Map();
-    this.relativeTime = new Map();
-    new Map();
+    tmp = closure_0(this, FormatterCache);
+    map = new Map();
+    this.dateTime = map;
+    map1 = new Map();
+    this.duration = map1;
+    map2 = new Map();
+    this.list = map2;
+    map3 = new Map();
+    this.number = map3;
+    map4 = new Map();
+    this.pluralRules = map4;
+    map5 = new Map();
+    this.relativeTime = map5;
+    return;
   }
 }
+_classCallCheck = FormatterCache;
 const entry = {
   key: "getDateTimeFormatter",
   value: function getDateTimeFormatter() {
@@ -63,7 +66,7 @@ const items = [
     key: "_getCached",
     value: function _getCached(dateTime, arg1, fn) {
       const _getKeyResult = this._getKey(arg1);
-      const value = dateTime.get(_getKeyResult);
+      value = dateTime.get(_getKeyResult);
       if (value) {
         return value;
       } else {
@@ -80,6 +83,5 @@ const items = [
     },
   },
 ];
-const tmp3 = new _createClass(FormatterCache, items)();
 
 export const dataFormatterCache = new _createClass(FormatterCache, items)();

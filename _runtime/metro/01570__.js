@@ -1,8 +1,8 @@
 // _runtime/metro/01570__.js
 import _mod1571 from "01571__.js";
-import react from "../00019_react.js";
+import noop from "00019__.js";
 
-let set;
+require = arg1;
 
 export const useOnAction = function useOnAction(router) {
   router = router.router;
@@ -20,9 +20,9 @@ export const useOnAction = function useOnAction(router) {
   const onDispatchAction = context.onDispatchAction;
   const flushUpdates = context.flushUpdates;
   const context1 = setState.useContext(router(getState[2]).DeprecatedNavigationInChildContext);
-  const ref = setState.useRef(routerConfigOptions);
+  setState.useRef(routerConfigOptions);
   const insertionEffect = setState.useInsertionEffect(() => {
-    ref.current = routerConfigOptions;
+    closure_14.current = routerConfigOptions;
   });
   const items = [
     actionListeners,
@@ -38,44 +38,43 @@ export const useOnAction = function useOnAction(router) {
     router,
     setState,
   ];
-  const callback = setState.useCallback(function (target) {
-    set = arg1;
+  const callback = setState.useCallback((target) => {
+    let set = arg1;
     if (arg1 === undefined) {
       const _Set = Set;
-      const self = this;
-      const self2 = this;
       set = new Set();
     }
     flushUpdates();
-    const tmp4 = getState();
-    if (set.has(tmp4.key)) {
+    const tmp6 = getState();
+    if (set.has(tmp6.key)) {
       return false;
     } else {
-      set.add(tmp4.key);
+      set.add(tmp6.key);
       if (typeof target.target !== "string") {
-        const stateForAction = router.getStateForAction(tmp4, target, ref.current);
-        let tmp10 = stateForAction;
+        const stateForAction = router.getStateForAction(tmp6, target, ref.current);
+        let tmp12 = stateForAction;
         if (null === stateForAction) {
-          tmp10 = stateForAction;
-          if (target.target === tmp4.key) {
-            tmp10 = tmp4;
+          tmp12 = stateForAction;
+          if (target.target === tmp6.key) {
+            tmp12 = tmp6;
           }
         }
-        let rehydratedState = tmp10;
-        const tmp11 = null !== tmp10 && false !== tmp10.stale;
-        if (tmp11) {
-          rehydratedState = router.getRehydratedState(tmp10, ref.current);
+        let tmp13 = null !== tmp12;
+        if (tmp13) {
+          tmp13 = false !== tmp12.stale;
+        }
+        let rehydratedState = tmp12;
+        if (tmp13) {
+          rehydratedState = router.getRehydratedState(tmp12, ref.current);
         }
         if (null !== rehydratedState) {
-          if (tmp4 !== rehydratedState) {
+          if (tmp6 !== rehydratedState) {
             const obj3 = _mod1571;
-            if (obj3.shouldPreventRemove(emitter, beforeRemoveListeners, tmp4.routes, rehydratedState.routes, target)) {
+            if (obj3.shouldPreventRemove(emitter, beforeRemoveListeners, tmp6.routes, rehydratedState.routes, target)) {
               onDispatchAction(target, true);
               return true;
-            } else if (getState() !== tmp4) {
+            } else if (getState() !== tmp6) {
               const _Set2 = Set;
-              const self3 = this;
-              const self4 = this;
               const set1 = new Set();
               return callback(target, set1);
             } else {
@@ -86,9 +85,12 @@ export const useOnAction = function useOnAction(router) {
             onDispatchAction(target, true);
           }
           if (undefined !== onRouteFocus) {
-            const result = router.shouldActionChangeFocus(target) && undefined !== key;
+            let result = router.shouldActionChangeFocus(target);
             if (result) {
-              tmp30(key);
+              result = undefined !== key;
+            }
+            if (result) {
+              tmp32(key);
             }
           }
           return true;
@@ -111,8 +113,7 @@ export const useOnAction = function useOnAction(router) {
       }
     }
   }, items);
-  const obj = router(getState[3]);
-  const onPreventRemove = obj.useOnPreventRemove({ getState, emitter, beforeRemoveListeners });
+  const onPreventRemove = router(getState[3]).useOnPreventRemove({ getState, emitter, beforeRemoveListeners });
   const items1 = [addListener, callback];
   const effect = setState.useEffect(() => {
     let tmpResult;

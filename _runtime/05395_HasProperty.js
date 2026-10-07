@@ -1,22 +1,18 @@
 // _runtime/05395_HasProperty.js
 import _mod1293 from "metro/01293__.js";
-import isObject from "05336_isObject.js";
-import isPropertyKey from "05383_isPropertyKey.js";
+import _mod5336 from "metro/05336__.js";
+import _mod5383 from "metro/05383__.js";
 
 export default function HasProperty(arg0, arg1) {
-  if (isObject(arg0)) {
-    if (isPropertyKey(arg1)) {
+  if (_mod5336(arg0)) {
+    if (_mod5383(arg1)) {
       return arg1 in arg0;
     } else {
-      const self3 = this;
-      const self4 = this;
-      const tmp6 = new _mod1293("Assertion failed: `P` must be a Property Key");
-      throw tmp6;
+      const tmp10 = new _mod1293("Assertion failed: `P` must be a Property Key");
+      throw tmp10;
     }
   } else {
-    const self = this;
-    const self2 = this;
-    const tmp3 = new _mod1293("Assertion failed: `O` must be an Object");
-    throw tmp3;
+    const tmp5 = new _mod1293("Assertion failed: `O` must be an Object");
+    throw tmp5;
   }
 }

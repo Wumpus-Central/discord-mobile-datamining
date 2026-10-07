@@ -1,16 +1,17 @@
 // _runtime/06363_AverageWindow.js
-import _classCallCheck from "metro/06358__classCallCheck.js";
-import _createClass from "metro/06359__createClass.js";
+import _classCallCheck_mod from "metro/06358__.js";
+import _createClass from "metro/06359__.js";
 
+let _classCallCheck = _classCallCheck_mod;
 class AverageWindow {
   constructor(arg0, arg1) {
-    const self = this;
-    _classCallCheck(this, AverageWindow);
+    self = this;
+    tmp = closure_0(this, MultiTypeAverageWindow);
     this.nextIndex = 0;
-    let num = 1;
-    const array = new Array(Math.max(1, arg0));
+    num = 1;
+    array = new Array(Math.max(1, global));
     this.inputValues = array;
-    let num2 = arg1;
+    num2 = arg1;
     if (arg1 == null) {
       num2 = 0;
     }
@@ -21,69 +22,69 @@ class AverageWindow {
     self.currentCount = num;
     self.nextIndex = self.currentCount;
     self.inputValues[0] = arg1;
+    return;
   }
 }
-const items = [, ,];
-const obj = {
-  key: "currentValue",
-  get() {
-    return this.currentAverage;
+_classCallCheck = AverageWindow;
+const items = [
+  {
+    key: "currentValue",
+    get() {
+      return this.currentAverage;
+    },
   },
-};
-items[0] = obj;
-items[1] = {
-  key: "addValue",
-  value: function addValue(arg0) {
-    let currentCount;
-    const self = this;
-    const nextIndex = this.getNextIndex();
-    let num = this.inputValues[nextIndex];
-    if (undefined === num) {
-      currentCount = self.currentCount + 1;
-    } else {
-      currentCount = self.currentCount;
-    }
-    self.inputValues[nextIndex] = arg0;
-    const _Math = Math;
-    const result = self.currentAverage * (self.currentCount / currentCount);
-    if (num == null) {
-      num = 0;
-    }
-    self.currentAverage = max(0, result + (arg0 - num) / currentCount);
-    self.currentCount = currentCount;
+  {
+    key: "addValue",
+    value: function addValue(arg0) {
+      const self = this;
+      const nextIndex = this.getNextIndex();
+      let num = this.inputValues[nextIndex];
+      if (undefined === num) {
+        let currentCount = self.currentCount + 1;
+      } else {
+        currentCount = self.currentCount;
+      }
+      self.inputValues[nextIndex] = arg0;
+      const result = self.currentAverage * (self.currentCount / currentCount);
+      if (num == null) {
+        num = 0;
+      }
+      self.currentAverage = Math.max(0, result + (arg0 - num) / currentCount);
+      self.currentCount = currentCount;
+    },
   },
-};
-items[2] = {
-  key: "getNextIndex",
-  value: function getNextIndex() {
-    this.nextIndex = (this.nextIndex + 1) % this.inputValues.length;
-    return this.nextIndex;
+  {
+    key: "getNextIndex",
+    value: function getNextIndex() {
+      this.nextIndex = (this.nextIndex + 1) % this.inputValues.length;
+      return this.nextIndex;
+    },
   },
-};
+];
 const importDefaultResultResult = _createClass(AverageWindow, items);
-const map = importDefaultResultResult;
+let closure_1 = importDefaultResultResult;
 class MultiTypeAverageWindow {
-  constructor(windowSize, defaultValue) {
-    _classCallCheck(this, MultiTypeAverageWindow);
-    this.averageWindows = new Map();
-    this.windowSize = windowSize;
-    this.defaultValue = defaultValue;
-    new Map();
+  constructor(arg0, arg1) {
+    tmp = closure_0(this, MultiTypeAverageWindow);
+    map = new Map();
+    this.averageWindows = map;
+    this.windowSize = global;
+    this.defaultValue = arg1;
+    return;
   }
 }
+_classCallCheck = MultiTypeAverageWindow;
 const entry = {
   key: "addValue",
   value: function addValue(arg0, arg1) {
     const self = this;
     const averageWindows = this.averageWindows;
-    let value = averageWindows.get(arg1);
+    value = averageWindows.get(arg1);
     if (!value) {
-      const self2 = this;
-      const self3 = this;
-      const tmp2 = new map(self.windowSize);
+      const tmp4 = new importDefaultResultResult(self.windowSize);
       const averageWindows2 = self.averageWindows;
-      const result = averageWindows2.set(arg1, tmp2);
-      value = tmp2;
+      const result = averageWindows2.set(arg1, tmp4);
+      value = tmp4;
     }
     value.addValue(arg0);
   },
@@ -94,7 +95,7 @@ const items1 = [
     key: "getCurrentValue",
     value: function getCurrentValue(arg0) {
       const averageWindows = this.averageWindows;
-      const value = averageWindows.get(arg0);
+      value = averageWindows.get(arg0);
       let num;
       if (value != null) {
         num = value.currentValue;
@@ -116,8 +117,6 @@ const items1 = [
     },
   },
 ];
-const AverageWindow_export = importDefaultResultResult;
-const MultiTypeAverageWindow_export = _createClass(MultiTypeAverageWindow, items1);
 
-export { AverageWindow_export as AverageWindow };
-export { MultiTypeAverageWindow_export as MultiTypeAverageWindow };
+export const AverageWindow = importDefaultResultResult;
+export const MultiTypeAverageWindow = _createClass(MultiTypeAverageWindow, items1);

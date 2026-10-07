@@ -1,51 +1,61 @@
 // _runtime/metro/08183__.js
-import Fragment from "../react/00021_Fragment.js";
-import extractProps from "../08184_extractProps.js";
-import extractText from "../08191_extractText.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import appendTransformPropsDefault from "../08177_appendTransformProps.js";
+import extractPropsDefault from "../08184_extractProps.js";
 import _modDef8192 from "08192__.js";
-import multiplyMatricesDefault from "../08193_multiplyMatrices.js";
+import _modDef8193 from "08193__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import react from "../00019_react.js";
+import noop from "00019__.js";
 
-const extractPropsDefault = extractProps;
-let root;
-
+const G = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {}));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const jsx = Fragment.jsx;
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
 class G {
   constructor() {
-    let constructResult;
-    const self = this;
-    const items = [...arguments];
-    let closure_0;
-    let tmp = _classCallCheck(this, G);
-    const items1 = [...items];
-    const obj = _getPrototypeOf(G);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, _getPrototypeOf(self).constructor);
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, G);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(G);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, items1);
     }
-    const tmp3Result = _possibleConstructorReturn(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
     tmp3Result.setNativeProps = (matrix) => {
-      const tmp = !matrix.matrix && closure_2_1(closure_2_2[7])(matrix);
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
       if (tmp) {
         matrix.matrix = tmp;
       }
@@ -57,17 +67,16 @@ class G {
     return tmp3Result;
   }
 }
-_inherits(G, multiplyMatricesDefault);
+_inherits(G, _modDef8193);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const obj = extractProps;
-    const propsAndStylesResult = obj.propsAndStyles(props);
+    const propsAndStylesResult = G(8184).propsAndStyles(props);
     const tmp5 = extractPropsDefault(propsAndStylesResult, this);
-    const obj2 = extractText;
-    const extractFontResult = obj2.extractFont(propsAndStylesResult);
+    const obj = G(8184);
+    const extractFontResult = G(8191).extractFont(propsAndStylesResult);
     if (typeof hasProps === "function") {
       const keys = Object.keys();
       if (keys !== undefined) {
@@ -75,22 +84,24 @@ const entry = {
         if (flag) {
           tmp5.font = extractFontResult;
         }
-        _modDef8192;
+        const obj3 = {
+          ref(arg0) {
+            return self.refMethod(arg0);
+          },
+        };
         const merged = Object.assign(tmp5);
-        return (
-          <tmp4Result
-            ref={function ref(arg0) {
-              return self.refMethod(arg0);
-            }}
-          >
-            {props.children}
-          </tmp4Result>
-        );
+        obj3.children = props.children;
+        return jsx(_modDef8192, {
+          ref(arg0) {
+            return self.refMethod(arg0);
+          },
+        });
       }
       flag = false;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
+    const obj2 = G(8191);
   },
 };
 let items = [entry];

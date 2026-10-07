@@ -1,32 +1,31 @@
 // _runtime/01206_binaryWriteOptions.js
-import varint64read from "01204_varint64read.js";
-import PbULong2 from "01205_PbULong.js";
-import assert from "01207_assert.js";
 import _classCallCheck from "metro/00041__classCallCheck.js";
 import _createClass from "metro/00042__createClass.js";
 
+const BinaryWriter = require;
 let closure_3 = {
   writeUnknownFields: true,
   writerFactory() {
-    const tmp = new _moduleResult();
-    return tmp;
+    return new _moduleResult();
   },
 };
 class BinaryWriter {
   constructor(arg0) {
-    const self = this;
-    let textEncoder = arg0;
-    _classCallCheck(this, BinaryWriter);
+    self = this;
+    textEncoder = global;
+    tmp2 = c2(this, BinaryWriter);
     this.stack = [];
-    if (null == arg0) {
-      const _TextEncoder = TextEncoder;
-      const self2 = this;
-      const self3 = this;
+    if (null == global) {
+      tmp3 = globalThis;
+      _TextEncoder = TextEncoder;
+      tmp4 = new.target;
+      tmp5 = new.target;
       textEncoder = new TextEncoder();
     }
     self.textEncoder = textEncoder;
     self.chunks = [];
     self.buf = [];
+    return;
   }
 }
 const entry = {
@@ -36,9 +35,8 @@ const entry = {
     let length2;
     const self = this;
     const chunks = this.chunks;
-    const push = chunks.push;
     const uint8Array = new Uint8Array(this.buf);
-    push(uint8Array);
+    chunks.push(uint8Array);
     let num = 0;
     let num2 = 0;
     let num3 = 0;
@@ -71,8 +69,7 @@ const items = [
     key: "fork",
     value: function fork() {
       const stack = this.stack;
-      const obj = { chunks: this.chunks, buf: this.buf };
-      stack.push(obj);
+      stack.push({ chunks: this.chunks, buf: this.buf });
       this.chunks = [];
       this.buf = [];
       return this;
@@ -91,8 +88,6 @@ const items = [
         return self.raw(finishResult);
       } else {
         const _Error = Error;
-        const self2 = this;
-        const self3 = this;
         const error = new Error("invalid state, fork stack empty");
         throw error;
       }
@@ -111,11 +106,8 @@ const items = [
       if (this.buf.length) {
         const chunks = self.chunks;
         const _Uint8Array = Uint8Array;
-        const self2 = this;
-        const self3 = this;
-        const push = chunks.push;
         const uint8Array = new Uint8Array(self.buf);
-        push(uint8Array);
+        chunks.push(uint8Array);
         self.buf = [];
       }
       const chunks1 = self.chunks;
@@ -127,8 +119,7 @@ const items = [
     key: "uint32",
     value: function uint32(NumberResult) {
       const self = this;
-      const obj = assert;
-      obj.assertUInt32(NumberResult);
+      BinaryWriter(1207).assertUInt32(NumberResult);
       let tmp2 = NumberResult;
       let tmp3 = NumberResult;
       if (NumberResult > 127) {
@@ -147,10 +138,9 @@ const items = [
   {
     key: "int32",
     value: function int32(NumberResult) {
-      const obj = assert;
-      obj.assertInt32(NumberResult);
-      const obj2 = varint64read;
-      obj2.varint32write(NumberResult, this.buf);
+      BinaryWriter(1207).assertInt32(NumberResult);
+      const obj = BinaryWriter(1207);
+      BinaryWriter(1204).varint32write(NumberResult, this.buf);
       return this;
     },
   },
@@ -159,11 +149,10 @@ const items = [
     value: function bool(arg0) {
       const buf = this.buf;
       let num = 0;
-      const push = buf.push;
       if (arg0) {
         num = 1;
       }
-      push(num);
+      buf.push(num);
       return this;
     },
   },
@@ -186,8 +175,7 @@ const items = [
   {
     key: "float",
     value: function float(NumberResult) {
-      const obj = assert;
-      obj.assertFloat32(NumberResult);
+      BinaryWriter(1207).assertFloat32(NumberResult);
       const uint8Array = new Uint8Array(4);
       const dataView = new DataView(uint8Array.buffer);
       dataView.setFloat32(0, NumberResult, true);
@@ -206,8 +194,7 @@ const items = [
   {
     key: "fixed32",
     value: function fixed32(NumberResult) {
-      const obj = assert;
-      obj.assertUInt32(NumberResult);
+      BinaryWriter(1207).assertUInt32(NumberResult);
       const uint8Array = new Uint8Array(4);
       const dataView = new DataView(uint8Array.buffer);
       dataView.setUint32(0, NumberResult, true);
@@ -217,8 +204,7 @@ const items = [
   {
     key: "sfixed32",
     value: function sfixed32(NumberResult) {
-      const obj = assert;
-      obj.assertInt32(NumberResult);
+      BinaryWriter(1207).assertInt32(NumberResult);
       const uint8Array = new Uint8Array(4);
       const dataView = new DataView(uint8Array.buffer);
       dataView.setInt32(0, NumberResult, true);
@@ -228,12 +214,11 @@ const items = [
   {
     key: "sint32",
     value: function sint32(NumberResult) {
-      const obj = assert;
-      obj.assertInt32(NumberResult);
+      BinaryWriter(1207).assertInt32(NumberResult);
+      const obj = BinaryWriter(1207);
       const tmp2 = NumberResult << 1;
       const tmp3 = NumberResult >> 31;
-      const obj2 = varint64read;
-      obj2.varint32write((tmp2 ^ tmp3) >>> 0, this.buf);
+      BinaryWriter(1204).varint32write((tmp2 ^ tmp3) >>> 0, this.buf);
       return this;
     },
   },
@@ -242,7 +227,7 @@ const items = [
     value: function sfixed64(arg0) {
       const uint8Array = new Uint8Array(8);
       const dataView = new DataView(uint8Array.buffer);
-      const PbLong = PbULong2.PbLong;
+      const PbLong = BinaryWriter(1205).PbLong;
       const fromResult = PbLong.from(arg0);
       dataView.setInt32(0, fromResult.lo, true);
       dataView.setInt32(4, fromResult.hi, true);
@@ -254,7 +239,7 @@ const items = [
     value: function fixed64(arg0) {
       const uint8Array = new Uint8Array(8);
       const dataView = new DataView(uint8Array.buffer);
-      const PbULong = PbULong2.PbULong;
+      const PbULong = BinaryWriter(1205).PbULong;
       const fromResult = PbULong.from(arg0);
       dataView.setInt32(0, fromResult.lo, true);
       dataView.setInt32(4, fromResult.hi, true);
@@ -264,50 +249,45 @@ const items = [
   {
     key: "int64",
     value: function int64(arg0) {
-      const PbLong = PbULong2.PbLong;
+      const PbLong = BinaryWriter(1205).PbLong;
       const fromResult = PbLong.from(arg0);
-      const obj = varint64read;
-      obj.varint64write(fromResult.lo, fromResult.hi, this.buf);
+      BinaryWriter(1204).varint64write(fromResult.lo, fromResult.hi, this.buf);
       return this;
     },
   },
   {
     key: "sint64",
     value: function sint64(arg0) {
-      const PbLong = PbULong2.PbLong;
+      const PbLong = BinaryWriter(1205).PbLong;
       const fromResult = PbLong.from(arg0);
-      const tmp3 = fromResult.lo << 1;
-      const tmp4 = fromResult.hi << 1;
-      const tmp5 = fromResult.lo >>> 31;
-      const obj = varint64read;
-      obj.varint64write(tmp3 ^ (fromResult.hi >> 31), (tmp4 | tmp5) ^ (fromResult.hi >> 31), this.buf);
+      BinaryWriter(1204).varint64write(
+        (fromResult.lo << 1) ^ (fromResult.hi >> 31),
+        ((fromResult.hi << 1) | (fromResult.lo >>> 31)) ^ (fromResult.hi >> 31),
+        this.buf,
+      );
       return this;
     },
   },
   {
     key: "uint64",
     value: function uint64(arg0) {
-      const PbULong = PbULong2.PbULong;
+      const PbULong = BinaryWriter(1205).PbULong;
       const fromResult = PbULong.from(arg0);
-      const obj = varint64read;
-      obj.varint64write(fromResult.lo, fromResult.hi, this.buf);
+      BinaryWriter(1204).varint64write(fromResult.lo, fromResult.hi, this.buf);
       return this;
     },
   },
 ];
 const _moduleResult = _createClass(BinaryWriter, items);
-const BinaryWriter_export = _moduleResult;
 
 export const binaryWriteOptions = function binaryWriteOptions(arg0) {
-  let merged;
-  const tmp = arg0;
-  if (tmp) {
+  if (arg0) {
     const _Object = Object;
     const _Object2 = Object;
-    merged = Object.assign(Object.assign({}, closure_3), arg0);
+    let merged = Object.assign(Object.assign({}, closure_3), arg0);
   } else {
     merged = closure_3;
   }
   return merged;
 };
-export { BinaryWriter_export as BinaryWriter };
+export const BinaryWriter = _moduleResult;

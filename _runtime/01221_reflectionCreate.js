@@ -2,10 +2,12 @@
 import MESSAGE_TYPE from "01209_MESSAGE_TYPE.js";
 import reflectionScalarDefault from "01219_reflectionScalarDefault.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const reflectionCreate = function reflectionCreate(value) {
   const obj = {};
-  const obj2 = { enumerable: false, value };
-  Object.defineProperty(obj, MESSAGE_TYPE.MESSAGE_TYPE, obj2);
+  Object.defineProperty(obj, MESSAGE_TYPE.MESSAGE_TYPE, { enumerable: false, value });
   const iter = value.fields[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {

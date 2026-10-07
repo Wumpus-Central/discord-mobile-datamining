@@ -1,21 +1,19 @@
 // _runtime/04134_areIntervalsOverlapping.js
-import toDate_mod from "03964_toDate.js";
+import _typeof_mod from "metro/03964__.js";
 import requiredArgs_mod from "03965_requiredArgs.js";
 
-let tmp3;
-let tmp5;
-let toDate = toDate_mod;
-if (!toDate) {
-  tmp3 = { default: toDate };
-  const obj = { default: toDate };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  tmp3 = toDate;
+  tmp3 = _typeof;
 }
-toDate = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  tmp5 = { default: requiredArgs };
   const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
   tmp5 = requiredArgs;
 }
@@ -24,33 +22,28 @@ requiredArgs = tmp5;
 export default function areIntervalsOverlapping(start, start2, inclusive) {
   requiredArgs.default(2, arguments);
   start = undefined;
-  const _default = toDate.default;
   if (null != start) {
     start = start.start;
   }
-  const _defaultResult = _default(start);
-  const time = _defaultResult.getTime();
+  const time = _typeof.default(start).getTime();
   let end;
-  const _default2 = toDate.default;
   if (null != start) {
     end = start.end;
   }
-  const _default2Result = _default2(end);
-  const time1 = _default2Result.getTime();
+  const defaultResult1 = _typeof.default(start);
+  const time1 = _typeof.default(end).getTime();
   let start1;
-  const _default3 = toDate.default;
   if (null != start2) {
     start1 = start2.start;
   }
-  const _default3Result = _default3(start1);
-  const time2 = _default3Result.getTime();
+  const defaultResult2 = _typeof.default(end);
+  const time2 = _typeof.default(start1).getTime();
   let end1;
-  const _default4 = toDate.default;
   if (null != start2) {
     end1 = start2.end;
   }
-  const _default4Result = _default4(end1);
-  const time3 = _default4Result.getTime();
+  const defaultResult3 = _typeof.default(start1);
+  const time3 = _typeof.default(end1).getTime();
   if (time <= time1) {
     if (time2 <= time3) {
       if (null != inclusive) {
@@ -63,4 +56,5 @@ export default function areIntervalsOverlapping(start, start2, inclusive) {
   }
   const rangeError = new RangeError("Invalid interval");
   throw rangeError;
-}
+};
+export default exports.default;

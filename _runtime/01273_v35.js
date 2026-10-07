@@ -1,13 +1,16 @@
 // _runtime/01273_v35.js
-import stringify from "01269_stringify.js";
-import parseDefault from "01274_parse.js";
+import unsafeStringify from "01269_unsafeStringify.js";
+import _modDef1274 from "metro/01274__.js";
 
+require = arg1;
+importDefault = arg2;
+const dependencyMap = arg6;
 let c3 = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
 let c4 = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
 
 export default function v35(v3, arg1, arg2) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
+  closure_0 = arg1;
+  closure_1 = arg2;
   function generateUUID(str, str2, arg2, arg3) {
     let length;
     let arr = str;
@@ -29,7 +32,7 @@ export default function v35(v3, arg1, arg2) {
     }
     let arr2 = str2;
     if (typeof str2 === "string") {
-      arr2 = parseDefault(str2);
+      arr2 = _modDef1274(str2);
     }
     let length1;
     if (null !== arr2) {
@@ -42,34 +45,34 @@ export default function v35(v3, arg1, arg2) {
       throw TypeError("Namespace must be array-like (16 iterable integer values, 0-255)");
     } else {
       const _Uint8Array = Uint8Array;
-      const self = this;
-      const self2 = this;
       const uint8Array = new Uint8Array(16 + arr.length);
       const result = uint8Array.set(arr2);
       const result1 = uint8Array.set(arr, arr2.length);
-      const tmp16 = closure_1(uint8Array);
-      tmp16[6] = (15 & tmp16[6]) | closure_0;
-      tmp16[8] = (63 & tmp16[8]) | 128;
+      const tmp17 = closure_1(uint8Array);
+      tmp17[6] = (15 & tmp17[6]) | closure_0;
+      tmp17[8] = (63 & tmp17[8]) | 128;
       if (arg2) {
-        let num3 = 0;
-        const tmp5 = arg3 || 0;
+        let num2 = arg3;
+        if (!arg3) {
+          num2 = 0;
+        }
+        let num4 = 0;
         do {
-          arg2[tmp5 + num3] = tmp16[num3];
-          num3 = num3 + 1;
-        } while (num3 < 16);
+          arg2[num2 + num4] = tmp17[num4];
+          num4 = num4 + 1;
+        } while (num4 < 16);
         return arg2;
       } else {
-        const obj = stringify;
-        return obj.unsafeStringify(tmp16);
+        return unsafeStringify.unsafeStringify(tmp17);
       }
     }
   }
   try {
     generateUUID.name = v3;
+    generateUUID.DNS = DNS;
+    generateUUID.URL = _URL;
+    return generateUUID;
   } catch (err) {}
-  generateUUID.DNS = DNS;
-  generateUUID.URL = _URL;
-  return generateUUID;
 }
 export const DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
 export const URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";

@@ -1,51 +1,50 @@
 // _runtime/metro/00131__.js
-import _modDef132 from "00132__.js";
-import EVENT_TARGET_GET_THE_PARENT_KEY from "../00135_EVENT_TARGET_GET_THE_PARENT_KEY.js";
-import _slicedToArray from "00032__slicedToArray.js";
+import dispatchDefault from "../00132_dispatch.js";
+import _slicedToArray from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import hasOwnProperty from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import javaScriptFlagGetter from "../00027_javaScriptFlagGetter.js";
-import 00126__ from "00126__.js";
+import javaScriptFlagGetter from "00027__.js";
 
 const require = globalThis.__r;
 
-let _Object;
+const ReadOnlyNode = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
+    const call = valueOf.call;
     const _Reflect = Reflect;
     const _Boolean2 = Boolean;
-    let closure_0 = !valueOf.call(Reflect.construct(Boolean, [], () => {
-
-    }));
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
     _isNativeReflectConstruct = function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+  } catch (err) {}
 }
 function getChildNodes(parentNode, fn) {
-  const obj = require("00136__.js");
-  const nativeNodeReference = obj.getNativeNodeReference(parentNode);
+  const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(parentNode);
   if (null == nativeNodeReference) {
     return [];
   } else {
-    const obj3 = require("NativeDOMCxx");
-    const childNodes = obj3.getChildNodes(nativeNodeReference);
+    const childNodes = require("NativeDOMCxx").getChildNodes(nativeNodeReference);
     const items = [];
     for (const item10013 of childNodes) {
-      let obj2 = require("00136__.js");
+      let obj2 = ReadOnlyNode(136);
       let publicInstanceFromInstanceHandle = obj2.getPublicInstanceFromInstanceHandle(item10013);
       let tmp9 = publicInstanceFromInstanceHandle;
       let tmp10 = null == publicInstanceFromInstanceHandle;
       if (!tmp10) {
-        let tmp11 = null != fn;
+        let tmp11 = null != arg1;
         if (tmp11) {
-          tmp11 = !fn(tmp9);
+          tmp11 = !arg1(tmp9);
         }
         tmp10 = tmp11;
       }
@@ -56,38 +55,41 @@ function getChildNodes(parentNode, fn) {
     }
     return items;
   }
+  const obj = ReadOnlyNode(136);
 }
 if (javaScriptFlagGetter.enableNativeEventTargetEventDispatching()) {
-  _Object = _modDef132;
+  let _Object = dispatchDefault;
 } else {
   _Object = Object;
 }
 class ReadOnlyNode {
-  constructor(__internalInstanceHandle, arg1) {
-    let constructResult;
-    const self = this;
-    _classCallCheck(this, ReadOnlyNode);
-    const obj = _getPrototypeOf(ReadOnlyNode);
-    if (_isNativeReflectConstruct()) {
-      const _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], _getPrototypeOf(self).constructor);
+  constructor(arg0, arg1) {
+    self = this;
+    tmp = closure_4(this, ReadOnlyNode);
+    tmp2 = metroRequire;
+    obj = metroRequire(ReadOnlyNode);
+    tmp3 = hasOwnProperty;
+    if (closure_7()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    const tmp3Result = hasOwnProperty(self, constructResult);
-    const obj2 = require("00136__.js");
-    obj2.setOwnerDocument(tmp3Result, arg1);
-    const obj3 = require("00136__.js");
-    obj3.setInstanceHandle(tmp3Result, __internalInstanceHandle);
+    tmp3Result = tmp3(self, constructResult);
+    obj2 = closure_0(c2[8]);
+    setOwnerDocumentResult = obj2.setOwnerDocument(tmp3Result, fn);
+    obj3 = closure_0(c2[8]);
+    setInstanceHandleResult = obj3.setInstanceHandle(tmp3Result, global);
     return tmp3Result;
   }
 }
 _inherits(ReadOnlyNode, _Object);
 const entry = {
-  key: EVENT_TARGET_GET_THE_PARENT_KEY.EVENT_TARGET_GET_THE_PARENT_KEY,
+  key: fn(135).EVENT_TARGET_GET_THE_PARENT_KEY,
   value() {
     return this.parentNode;
-  }
+  },
 };
 let items = [
   entry,
@@ -95,9 +97,8 @@ let items = [
     key: "childNodes",
     get() {
       const tmp = getChildNodes(this);
-      const obj = require("00130__.js");
-      return obj.createNodeList(tmp);
-    }
+      return ReadOnlyNode(130).createNodeList(tmp);
+    },
   },
   {
     key: "firstChild",
@@ -108,20 +109,19 @@ let items = [
         first = arr[0];
       }
       return first;
-    }
+    },
   },
   {
     key: "isConnected",
     get() {
-      const obj = require("00136__.js");
-      const nativeNodeReference = obj.getNativeNodeReference(this);
+      const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(this);
       let isConnectedResult = null != nativeNodeReference;
       if (isConnectedResult) {
+        isConnectedResult = require("NativeDOMCxx").isConnected(nativeNodeReference);
         const obj2 = require("NativeDOMCxx");
-        isConnectedResult = obj2.isConnected(nativeNodeReference);
       }
       return isConnectedResult;
-    }
+    },
   },
   {
     key: "lastChild",
@@ -132,69 +132,64 @@ let items = [
         tmp = arr[arr.length - 1];
       }
       return tmp;
-    }
+    },
   },
   {
     key: "nextSibling",
     get() {
-      let arr5;
-      let items2;
-      let tmp7;
       const self = this;
       const parentNode = this.parentNode;
       if (null == parentNode) {
         const items = [self];
         const items1 = [items, 0];
-        items2 = items1;
+        let items2 = items1;
       } else {
         const arr = getChildNodes(parentNode);
         const index = arr.indexOf(self);
         if (-1 === index) {
           const _TypeError = TypeError;
-          const self2 = this;
-          const self3 = this;
           const typeError = new TypeError("Missing node in parent's child node list");
           throw typeError;
         } else {
           items2 = [arr, index];
         }
       }
-      [arr5, tmp7] = items2;
-      let tmp8 = null;
-      _slicedToArray(items2, 2);
-      if (tmp7 !== arr5.length - 1) {
-        tmp8 = arr5[tmp7 + 1];
+      [arr5, tmp9] = items2;
+      let tmp10 = null;
+      if (tmp9 !== arr5.length - 1) {
+        tmp10 = arr5[tmp9 + 1];
       }
-      return tmp8;
-    }
+      return tmp10;
+    },
   },
   {
     key: "nodeName",
     get() {
       const typeError = new TypeError("`nodeName` is abstract and must be implemented in a subclass of `ReadOnlyNode`");
       throw typeError;
-    }
+    },
   },
   {
     key: "nodeType",
     get() {
       const typeError = new TypeError("`nodeType` is abstract and must be implemented in a subclass of `ReadOnlyNode`");
       throw typeError;
-    }
+    },
   },
   {
     key: "nodeValue",
     get() {
-      const typeError = new TypeError("`nodeValue` is abstract and must be implemented in a subclass of `ReadOnlyNode`");
+      const typeError = new TypeError(
+        "`nodeValue` is abstract and must be implemented in a subclass of `ReadOnlyNode`",
+      );
       throw typeError;
-    }
+    },
   },
   {
     key: "ownerDocument",
     get() {
-      const obj = require("00136__.js");
-      return obj.getOwnerDocument(this);
-    }
+      return ReadOnlyNode(136).getOwnerDocument(this);
+    },
   },
   {
     key: "parentElement",
@@ -208,68 +203,66 @@ let items = [
         }
       }
       return tmp;
-    }
+    },
   },
   {
     key: "parentNode",
     get() {
-      const obj = require("00136__.js");
-      const nativeNodeReference = obj.getNativeNodeReference(this);
+      const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(this);
       if (null == nativeNodeReference) {
         return null;
       } else {
-        const obj2 = require("NativeDOMCxx");
-        const parentNode = obj2.getParentNode(nativeNodeReference);
+        const parentNode = require("NativeDOMCxx").getParentNode(nativeNodeReference);
         let tmp6 = null;
         if (null != parentNode) {
-          const tmpResult = require("00136__.js");
-          let publicInstanceFromInstanceHandle = tmpResult.getPublicInstanceFromInstanceHandle(parentNode);
+          let publicInstanceFromInstanceHandle = ReadOnlyNode(136).getPublicInstanceFromInstanceHandle(parentNode);
           if (publicInstanceFromInstanceHandle == null) {
             publicInstanceFromInstanceHandle = null;
           }
           tmp6 = publicInstanceFromInstanceHandle;
+          const tmpResult = ReadOnlyNode(136);
         }
         return tmp6;
       }
-    }
+      const obj = ReadOnlyNode(136);
+    },
   },
   {
     key: "previousSibling",
     get() {
-      let items2;
       const self = this;
       const parentNode = this.parentNode;
       if (null == parentNode) {
         const items = [self];
         const items1 = [items, 0];
-        items2 = items1;
+        let items2 = items1;
       } else {
         const arr = getChildNodes(parentNode);
         const index = arr.indexOf(self);
         if (-1 === index) {
           const _TypeError = TypeError;
-          const self2 = this;
-          const self3 = this;
           const typeError = new TypeError("Missing node in parent's child node list");
           throw typeError;
         } else {
           items2 = [arr, index];
         }
       }
-      const tmp8 = _slicedToArray(items2, 2)[1];
-      let tmp9 = null;
-      if (0 !== tmp8) {
-        tmp9 = tmp7[tmp8 - 1];
+      const tmp10 = _slicedToArray(items2, 2)[1];
+      let tmp11 = null;
+      if (0 !== tmp10) {
+        tmp11 = tmp9[tmp10 - 1];
       }
-      return tmp9;
-    }
+      return tmp11;
+    },
   },
   {
     key: "textContent",
     get() {
-      const typeError = new TypeError("`textContent` is abstract and must be implemented in a subclass of `ReadOnlyNode`");
+      const typeError = new TypeError(
+        "`textContent` is abstract and must be implemented in a subclass of `ReadOnlyNode`",
+      );
       throw typeError;
-    }
+    },
   },
   {
     key: "compareDocumentPosition",
@@ -277,29 +270,34 @@ let items = [
       if (nativeNodeReference === this) {
         return 0;
       } else {
-        const obj = require("00136__.js");
-        nativeNodeReference = obj.getNativeNodeReference(tmp);
-        const obj2 = require("00136__.js");
-        const nativeNodeReference1 = obj2.getNativeNodeReference(nativeNodeReference);
+        nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(tmp);
+        const obj = ReadOnlyNode(136);
+        const nativeNodeReference1 = ReadOnlyNode(136).getNativeNodeReference(nativeNodeReference);
         if (null != nativeNodeReference) {
-          let DOCUMENT_POSITION_DISCONNECTED;
           if (null != nativeNodeReference1) {
+            let DOCUMENT_POSITION_DISCONNECTED = require("NativeDOMCxx").compareDocumentPosition(
+              nativeNodeReference,
+              nativeNodeReference1,
+            );
             const obj3 = require("NativeDOMCxx");
-            DOCUMENT_POSITION_DISCONNECTED = obj3.compareDocumentPosition(nativeNodeReference, nativeNodeReference1);
           }
           return DOCUMENT_POSITION_DISCONNECTED;
         }
         DOCUMENT_POSITION_DISCONNECTED = ReadOnlyNode.DOCUMENT_POSITION_DISCONNECTED;
+        const obj2 = ReadOnlyNode(136);
       }
-    }
+    },
   },
   {
     key: "contains",
     value: function contains(nativeNodeReference) {
       const self = this;
-      const tmp = nativeNodeReference === this || self.compareDocumentPosition(nativeNodeReference) & ReadOnlyNode.DOCUMENT_POSITION_CONTAINED_BY;
+      let tmp = nativeNodeReference === this;
+      if (!tmp) {
+        tmp = self.compareDocumentPosition(nativeNodeReference) & ReadOnlyNode.DOCUMENT_POSITION_CONTAINED_BY;
+      }
       return tmp;
-    }
+    },
   },
   {
     key: "getRootNode",
@@ -314,14 +312,14 @@ let items = [
         self2 = ownerDocument;
       }
       return self2;
-    }
+    },
   },
   {
     key: "hasChildNodes",
     value: function hasChildNodes() {
       return getChildNodes(this).length > 0;
-    }
-  }
+    },
+  },
 ];
 const importDefaultResultResult = _createClass(ReadOnlyNode, items);
 importDefaultResultResult.ELEMENT_NODE = 1;
@@ -342,9 +340,19 @@ importDefaultResultResult.DOCUMENT_POSITION_FOLLOWING = 4;
 importDefaultResultResult.DOCUMENT_POSITION_CONTAINS = 8;
 importDefaultResultResult.DOCUMENT_POSITION_CONTAINED_BY = 16;
 importDefaultResultResult.DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC = 32;
+const module_126 = fn(126);
 module_126.setPlatformObject(importDefaultResultResult);
-tmp7.prototype = importDefaultResultResult.prototype;
-const merged = Object.assign(tmp7, importDefaultResultResult);
+class ReadOnlyNode {
+  constructor(arg0, arg1) {
+    obj = ReadOnlyNode(closure_2[8]);
+    setOwnerDocumentResult = obj.setOwnerDocument(this, fn);
+    obj2 = ReadOnlyNode(closure_2[8]);
+    setInstanceHandleResult = obj2.setInstanceHandle(this, global);
+    return;
+  }
+}
+ReadOnlyNode.prototype = importDefaultResultResult.prototype;
+const merged = Object.assign(ReadOnlyNode, importDefaultResultResult);
 
-export default tmp7;
+export default ReadOnlyNode;
 export { getChildNodes };

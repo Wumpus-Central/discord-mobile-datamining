@@ -1,52 +1,42 @@
 // _runtime/metro/04428__.js
-import formatDistance from "../04429_formatDistance.js";
-import buildFormatLongFn from "../04431_buildFormatLongFn.js";
-import formatRelative from "../04432_formatRelative.js";
-import localeToNumber from "../04430_localeToNumber.js";
+import localeToNumber_mod from "../04429_localeToNumber.js";
+import 04431__ from "04431__.js";
+import 04432__ from "04432__.js";
+import localeToNumber_mod from "04430__.js";
 import date from "04433__.js";
 
-let tmp11;
-let tmp3;
-let tmp5;
-let tmp7;
-let tmp9;
-if (!formatDistance) {
-  tmp3 = { default: formatDistance };
-  const obj = { default: formatDistance };
-} else {
-  tmp3 = formatDistance;
-}
-if (!buildFormatLongFn) {
-  tmp5 = { default: buildFormatLongFn };
-  const obj2 = { default: buildFormatLongFn };
-} else {
-  tmp5 = buildFormatLongFn;
-}
-if (!formatRelative) {
-  tmp7 = { default: formatRelative };
-  const obj3 = { default: formatRelative };
-} else {
-  tmp7 = formatRelative;
-}
+let localeToNumber = localeToNumber_mod;
 if (!localeToNumber) {
-  tmp9 = { default: localeToNumber };
+  const obj = { default: localeToNumber };
+  let tmp3 = obj;
+} else {
+  tmp3 = localeToNumber;
+}
+if (!module_4431) {
+  const obj2 = { default: module_4431 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4431;
+}
+if (!module_4432) {
+  const obj3 = { default: module_4432 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4432;
+}
+let localeToNumber = localeToNumber_mod;
+if (!localeToNumber) {
   const obj4 = { default: localeToNumber };
+  let tmp9 = obj4;
 } else {
   tmp9 = localeToNumber;
 }
 if (!date) {
-  tmp11 = { default: date };
   const obj5 = { default: date };
+  let tmp11 = obj5;
 } else {
   tmp11 = date;
 }
 
-export default {
-  code: "hi",
-  formatDistance: tmp3.default,
-  formatLong: tmp5.default,
-  formatRelative: tmp7.default,
-  localize: tmp9.default,
-  match: tmp11.default,
-  options: { weekStartsOn: 0, firstWeekContainsDate: 4 },
-};
+export default { code: "hi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 0, firstWeekContainsDate: 4 } };
+export default exports.default;

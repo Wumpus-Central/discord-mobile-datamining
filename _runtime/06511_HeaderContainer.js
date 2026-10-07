@@ -1,203 +1,189 @@
 // _runtime/06511_HeaderContainer.js
-import Fragment from "react/00021_Fragment.js";
 import Link from "01491_Link.js";
 import _mod6026 from "metro/06026__.js";
-import react_native from "06512_react-native.js";
-import _mod6513 from "metro/06513__.js";
-import react from "00019_react.js";
-import react_native2 from "00017_react-native.js";
+import noop from "metro/00019__.js";
 
-let descriptor;
+const require = globalThis.__r;
 
-let StyleSheet;
-let c3;
-({ StyleSheet, View: c3 } = react_native2);
-const jsx = Fragment.jsx;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: c3 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ absolute: { position: "absolute", top: 0, start: 0, end: 0 } });
 
-export const HeaderContainer = function HeaderContainer(style) {
-  let closure_3;
-  let layout;
-  let minHeight;
-  let scenes;
+export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
   ({
     mode: require,
     scenes,
     layout: dependencyMap,
-    getPreviousScene: react,
+    getPreviousScene: noop,
     contentHeight: closure_3,
     onContentHeightChange: jsx,
-  } = style);
-  style = style.style;
-  const focusedRoute = style.getFocusedRoute();
-  let closure_6 = react.useContext(_mod6026.HeaderBackContext);
-  let obj = Link;
-  const buildHref = obj.useLinkBuilder().buildHref;
+  } = getFocusedRoute);
+  const focusedRoute = getFocusedRoute.getFocusedRoute();
+  closure_6 = noop.useContext(_mod6026.HeaderBackContext);
+  const buildHref = Link.useLinkBuilder().buildHref;
+  let obj2 = { pointerEvents: "box-none", style: getFocusedRoute.style, children: null };
   let substr = scenes.slice(-2);
-  return (
-    <minHeight pointerEvents="box-none" style={style}>
-      {substr.map((descriptor, index, arr) => {
-        let forNoAnimation;
-        let header;
-        let headerShown;
-        let obj3;
-        const tmp = descriptor;
-        const tmp2 = "screen" === descriptor;
-        if (!tmp2) {
-          if (descriptor) {
-            let options = descriptor.descriptor.options;
-            ({ header, headerShown } = options);
-            let tmp3 = undefined === headerShown;
-            const headerMode = options.headerMode;
-            if (!tmp3) {
-              tmp3 = headerShown;
-            }
-            let headerStyleInterpolator = options.headerStyleInterpolator;
-            if (headerMode === tmp) {
-              if (tmp3) {
-                const obj = { route: descriptor.descriptor.route };
-                const tmp7 = closure_2(obj);
-                let tmp8 = closure_6;
-                let tmp9 = closure_6;
-                if (tmp7) {
-                  const route = tmp7.descriptor.route;
-                  if (tmp7) {
-                    const obj2 = {
-                      title: obj3.getHeaderTitle(tmp10, route.name),
-                      href: buildHref(route.name, route.params),
-                    };
-                    tmp8 = obj2;
-                    obj3 = _mod6026;
-                  }
-                  tmp9 = tmp8;
-                }
-                descriptor = undefined;
-                if (arr[index - 1] != null) {
-                  descriptor = tmp14.descriptor;
-                }
-                let descriptor1;
-                if (arr[index + 1] != null) {
-                  descriptor1 = tmp17.descriptor;
-                }
-                let options1;
-                if (descriptor != null) {
-                  options1 = descriptor.options;
-                }
-                if (!options1) {
-                  options1 = {};
-                }
-                const headerShown2 = options1.headerShown;
-                const headerMode2 = options1.headerMode;
-                const tmp19 = undefined === headerShown2 || headerShown2;
-                const substr = arr.slice(index + 1);
-                const found = substr.find((descriptor) => {
-                  let options;
-                  if (descriptor != null) {
-                    options = descriptor.descriptor.options;
-                  }
-                  if (!options) {
-                    options = {};
-                  }
-                  const headerShown = options.headerShown;
-                  let tmp3 = false === (undefined === headerShown || headerShown);
-                  if (!tmp3) {
-                    tmp3 = "screen" === tmp2;
-                  }
-                  return tmp3;
-                });
-                let options2;
-                if (found != null) {
-                  options2 = found.descriptor.options;
-                }
-                if (!options2) {
-                  options2 = {};
-                }
-                const gestureDirection = options2.gestureDirection;
-                const obj4 = {
-                  layout: dependencyMap,
-                  back: tmp9,
-                  progress: descriptor.progress,
-                  options: descriptor.descriptor.options,
-                  route: descriptor.descriptor.route,
-                  navigation: descriptor.descriptor.navigation,
-                  styleInterpolator: forNoAnimation,
+  obj2.children = substr.map((descriptor, index, arr) => {
+    if ("screen" !== descriptor) {
+      if (descriptor) {
+        options = descriptor.descriptor.options;
+        ({ header, headerShown } = options);
+        let tmp3 = undefined === headerShown;
+        if (!tmp3) {
+          tmp3 = headerShown;
+        }
+        if (options.headerMode === tmp) {
+          if (tmp3) {
+            const obj = { route: descriptor.descriptor.route };
+            const tmp8 = closure_2(obj);
+            let tmp9 = closure_6;
+            let tmp10 = closure_6;
+            if (tmp8) {
+              const route = tmp8.descriptor.route;
+              if (tmp8) {
+                const obj2 = {
+                  title: require("metro/06026__.js").getHeaderTitle(tmp11, route.name),
+                  href: buildHref(route.name, route.params),
                 };
-                const tmp21 = ((false === tmp19 || "screen" === headerMode2) && !descriptor1) || found;
-                if ("float" === tmp) {
-                  if (tmp21) {
-                    if ("vertical" !== gestureDirection) {
-                      let forSlideUp;
-                      if ("vertical-inverted" !== gestureDirection) {
-                        if ("horizontal-inverted" === gestureDirection) {
-                          forSlideUp = react_native.forSlideRight;
-                        } else {
-                          forSlideUp = react_native.forSlideLeft;
-                        }
-                      }
-                      headerStyleInterpolator = forSlideUp;
-                    }
-                    forSlideUp = react_native.forSlideUp;
-                  }
-                  forNoAnimation = headerStyleInterpolator;
-                } else {
-                  forNoAnimation = react_native.forNoAnimation;
-                }
-                const obj5 = {
-                  route: descriptor.descriptor.route,
-                  navigation: descriptor.descriptor.navigation,
-                  children: null,
-                };
-                let str5 = "none";
-                const NavigationProvider = Link.NavigationProvider;
-                if (closure_5.key === descriptor.descriptor.route.key) {
-                  str5 = "box-none";
-                }
-                const obj6 = {
-                  pointerEvents: str5,
-                  "aria-hidden": closure_5.key !== descriptor.descriptor.route.key,
-                  style: null,
-                  children: null,
-                };
-                if ("float" !== tmp) {
-                  let headerResult;
-                  let tmp37 = null;
-                  obj6.style = tmp37;
-                  let fn;
-                  if (jsx) {
-                    fn = (height) => {
-                      <obj />;
-                    };
-                  }
-                  if (undefined !== header) {
-                    headerResult = header(obj4);
-                  } else {
-                    const Header = _mod6513.Header;
-                    const merged = Object.assign(obj4);
-                    headerResult = <Header />;
-                  }
-                  obj6.children = (
-                    <closure_3 pointerEvents="box-none" onLayout={fn}>
-                      {headerResult}
-                    </closure_3>
-                  );
-                  obj5.children = <closure_3 {...obj6} />;
-                  return <NavigationProvider key={descriptor.descriptor.route.key} {...obj5} />;
-                }
-                const items = [closure_5.absolute];
-                let tmp39 = null;
-                if (tmp2) {
-                  tmp39 = { minHeight };
-                  const obj9 = { minHeight };
-                }
-                items[1] = tmp39;
-                tmp37 = items;
+                tmp9 = obj2;
+                const obj3 = require("metro/06026__.js");
               }
+              tmp10 = tmp9;
             }
-            return null;
+            descriptor = undefined;
+            if (arr[index - 1] != null) {
+              descriptor = tmp15.descriptor;
+            }
+            let descriptor1;
+            if (arr[index + 1] != null) {
+              descriptor1 = tmp18.descriptor;
+            }
+            let options1;
+            if (descriptor != null) {
+              options1 = descriptor.options;
+            }
+            if (!options1) {
+              options1 = {};
+            }
+            const headerShown2 = options1.headerShown;
+            const substr = arr.slice(index + 1);
+            const found = substr.find((descriptor) => {
+              options = undefined;
+              if (descriptor != null) {
+                options = descriptor.descriptor.options;
+              }
+              if (!options) {
+                options = {};
+              }
+              const headerShown = options.headerShown;
+              let tmp3 = false === (undefined === headerShown || headerShown);
+              if (!tmp3) {
+                tmp3 = "screen" === tmp2;
+              }
+              return tmp3;
+            });
+            let options2;
+            if (found != null) {
+              options2 = found.descriptor.options;
+            }
+            if (!options2) {
+              options2 = {};
+            }
+            const gestureDirection = options2.gestureDirection;
+            const obj4 = {
+              layout,
+              back: tmp10,
+              progress: descriptor.progress,
+              options: descriptor.descriptor.options,
+              route: descriptor.descriptor.route,
+              navigation: descriptor.descriptor.navigation,
+              styleInterpolator: null,
+            };
+            if ("float" === tmp) {
+              if (!tmp22) {
+                let forNoAnimation = tmp5;
+              } else {
+                if ("vertical" !== gestureDirection) {
+                  if ("vertical-inverted" !== gestureDirection) {
+                    if ("horizontal-inverted" === gestureDirection) {
+                      let forSlideUp = require("metro/06512__.js").forSlideRight;
+                    } else {
+                      forSlideUp = require("metro/06512__.js").forSlideLeft;
+                    }
+                  }
+                }
+                forSlideUp = require("metro/06512__.js").forSlideUp;
+              }
+            } else {
+              forNoAnimation = require("metro/06512__.js").forNoAnimation;
+            }
+            obj4.styleInterpolator = forNoAnimation;
+            const obj5 = {
+              route: descriptor.descriptor.route,
+              navigation: descriptor.descriptor.navigation,
+              children: null,
+            };
+            let str5 = "none";
+            if (closure_5.key === descriptor.descriptor.route.key) {
+              str5 = "box-none";
+            }
+            const obj6 = {
+              pointerEvents: str5,
+              "aria-hidden": closure_5.key !== descriptor.descriptor.route.key,
+              style: null,
+              children: null,
+            };
+            if ("float" !== tmp) {
+              let tmp39 = null;
+              obj6.style = tmp39;
+              let fn;
+              if (closure_4) {
+                fn = (height) => {
+                  jsx({ route: descriptor.descriptor.route, height: height.nativeEvent.layout.height });
+                };
+              }
+              const obj7 = { pointerEvents: "box-none", onLayout: fn, children: null };
+              if (undefined !== header) {
+                let headerResult = header(obj4);
+              } else {
+                const obj8 = {};
+                const merged = Object.assign(obj4);
+                headerResult = jsx(require("Header").Header, {});
+              }
+              obj7.children = headerResult;
+              obj6.children = (
+                <closure_1_3 pointerEvents="box-none" onLayout={fn}>
+                  {null}
+                </closure_1_3>
+              );
+              obj5.children = <closure_1_3 {...obj6} />;
+              return jsx(require("Link").NavigationProvider, obj5, descriptor.descriptor.route.key);
+            }
+            const items = [closure_5.absolute];
+            let tmp41 = null;
+            if (tmp2) {
+              const obj9 = { minHeight };
+              tmp41 = obj9;
+            }
+            items[1] = tmp41;
+            tmp39 = items;
+            const tmp20 = undefined === headerShown2 || headerShown2;
+            tmp22 =
+              ((false === (undefined === headerShown2 || headerShown2) || "screen" === options1.headerMode) &&
+                !descriptor1) ||
+              found;
           }
         }
         return null;
-      })}
+      }
+    }
+    return null;
+  });
+  return (
+    <minHeight pointerEvents="box-none" style={getFocusedRoute.style}>
+      {null}
     </minHeight>
   );
 };

@@ -1,5 +1,6 @@
 // _runtime/metro/07390__.js
-const obj = {
+
+export default {
   get() {
     if (typeof TextDecoder !== "undefined") {
       const _TextDecoder = TextDecoder;
@@ -7,5 +8,3 @@ const obj = {
     }
   },
 };
-
-export default obj;

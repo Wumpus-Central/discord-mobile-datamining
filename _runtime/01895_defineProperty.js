@@ -1,8 +1,9 @@
 // _runtime/01895_defineProperty.js
 import extend from "01896_extend.js";
 
-let defineProperty;
-const tmp = (() => {
+require = arg1;
+const dependencyMap = arg6;
+let tmp = (() => {
   try {
     const _Object = Object;
     return Object.defineProperty({}, "a", {});
@@ -14,9 +15,7 @@ if (!tmp) {
   let _Object = Object;
 }
 if (tmp) {
-  let tmp3 = globalThis;
   const _Object2 = Object;
-  defineProperty = Object.defineProperty;
 } else {
   defineProperty = (__defineGetter__, arg1, get) => {
     if ("get" in get) {
@@ -25,13 +24,19 @@ if (tmp) {
       }
     }
     const hop = extend.hop;
-    const callResult = hop.call(__defineGetter__, arg1) && !("value" in get);
-    if (!callResult) {
+    const call = hop.call;
+    let tmp = typeof call === "unknown" ? hop(arg1) : call(__defineGetter__, arg1);
+    if (tmp) {
+      tmp = !("value" in get);
+    }
+    if (!tmp) {
       __defineGetter__[arg1] = get.value;
     }
   };
 }
-const tmp4 =
+
+export { defineProperty };
+export const objCreate =
   Object.create ||
   ((arg0, obj) => {
     class F {
@@ -41,17 +46,23 @@ const tmp4 =
     }
     F.prototype = arg0;
     obj = Object.create(F.prototype);
-    for (const key10008 in obj) {
+    for (const key10008 in arg1) {
       class F {
         constructor() {
           return;
         }
       }
       let hop = extend.hop;
-      if (!hop.call(obj, key10008)) {
+      let call = hop.call;
+      if (typeof call === "unknown") {
+        let hopResult = hop(key10008);
+      } else {
+        hopResult = call(arg1, key10008);
+      }
+      if (!hopResult) {
         continue;
       } else {
-        let tmp3 = fn(obj, key10008, obj[key10008]);
+        let tmp4 = fn(obj, key10008, arg1[key10008]);
         class F {
           constructor() {
             return;
@@ -62,6 +73,3 @@ const tmp4 =
     }
     return obj;
   });
-
-export { defineProperty };
-export const objCreate = tmp4;

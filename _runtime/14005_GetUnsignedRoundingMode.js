@@ -23,8 +23,7 @@ let closure_1 = {
 };
 
 export const GetUnsignedRoundingMode = function GetUnsignedRoundingMode(roundingMode, arg1) {
-  const tmp = arg1;
-  if (tmp) {
+  if (arg1) {
     return closure_0[roundingMode];
   } else {
     return closure_1[roundingMode];

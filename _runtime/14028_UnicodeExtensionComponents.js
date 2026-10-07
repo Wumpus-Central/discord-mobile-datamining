@@ -1,8 +1,10 @@
 // _runtime/14028_UnicodeExtensionComponents.js
 import _mod14023 from "metro/14023__.js";
 
+require = arg1;
+const dependencyMap = arg6;
+
 export const UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {
-  let iter;
   _mod14023.invariant(str === str.toLowerCase(), "Expected extension to be lowercase");
   let num = 3;
   _mod14023.invariant("-u-" === str.slice(0, 3), "Expected extension to be a Unicode locale extension");
@@ -10,14 +12,13 @@ export const UnicodeExtensionComponents = function UnicodeExtensionComponents(st
   const keywords = [];
   if (3 < str.length) {
     while (true) {
-      let tmp13;
       let index = str.indexOf("-", num);
       let tmp6 = -1 === index ? length - num : index - num;
       let substr = str.slice(num, num + tmp6);
       let invariantResult2 = _mod14023.invariant(tmp6 >= 2, "Expected a subtag to have at least 2 characters");
       if (undefined === iter) {
         if (2 !== tmp6) {
-          tmp13 = iter;
+          let tmp13 = iter;
           if (-1 === attributes.indexOf(substr)) {
             let arr = attributes.push(substr);
             tmp13 = iter;
@@ -35,18 +36,18 @@ export const UnicodeExtensionComponents = function UnicodeExtensionComponents(st
         if (
           undefined ===
           keywords.find((key) => {
-            let key1;
+            key = undefined;
             if (null != entry) {
-              key1 = entry.key;
+              key = entry.key;
             }
-            return key.key === key1;
+            return key.key === key;
           })
         ) {
           let arr2 = keywords.push(entry);
           tmp13 = entry;
         }
       } else {
-        let value;
+        value = undefined;
         if (null != iter) {
           value = iter.value;
         }

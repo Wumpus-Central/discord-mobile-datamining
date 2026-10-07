@@ -1,7 +1,9 @@
 // _runtime/00779_applySdkMetadata.js
 import SDK_VERSION from "00702_SDK_VERSION.js";
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
   let arr = arg2;
@@ -15,15 +17,11 @@ export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
   }
   const tmp = _metadata._metadata || {};
   if (!tmp.sdk) {
-    let obj = {
-      name: "sentry.javascript." + arg1,
-      packages: arr.map((item) => {
-        const obj = { name: "" + str + ":@sentry/" + item, version: SDK_VERSION.SDK_VERSION };
-        return obj;
-      }),
-      version: str(702).SDK_VERSION,
-    };
+    const obj = { name: null, packages: null, version: null };
     const _HermesInternal = HermesInternal;
+    obj.name = "sentry.javascript." + arg1;
+    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: SDK_VERSION.SDK_VERSION }));
+    obj.version = str(702).SDK_VERSION;
     tmp.sdk = obj;
   }
   _metadata._metadata = tmp;

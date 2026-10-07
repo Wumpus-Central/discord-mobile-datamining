@@ -1,6 +1,8 @@
 // _runtime/00066_customBubblingEventTypes.js
 import _modDef38 from "metro/00038__.js";
 
+importDefault = arg2;
+const dependencyMap = arg6;
 const customBubblingEventTypes = {};
 const obj2 = {};
 const map = new Map();
@@ -9,14 +11,12 @@ const map1 = new Map();
 export { customBubblingEventTypes };
 export const customDirectEventTypes = obj2;
 export const register = function register(APNGDecorationView, fn) {
-  const tmp = _modDef38;
-  tmp(!map.has(APNGDecorationView), "Tried to register two views with the same name %s", APNGDecorationView);
+  _modDef38(!map.has(APNGDecorationView), "Tried to register two views with the same name %s", APNGDecorationView);
   let str = "null";
-  const tmp3 = _modDef38;
   if (null !== fn) {
     str = typeof fn;
   }
-  tmp3(
+  _modDef38(
     typeof fn === "function",
     "View config getter callback for component `%s` must be a function (received `%s`)",
     APNGDecorationView,
@@ -26,26 +26,23 @@ export const register = function register(APNGDecorationView, fn) {
   return APNGDecorationView;
 };
 export const get = function get(arg0) {
-  let bubblingEventTypes;
-  let directEventTypes;
-  let value = map1.get(arg0);
+  value = map1.get(arg0);
   if (null == value) {
-    const value2 = map.get(arg0);
+    value2 = map.get(arg0);
     if (typeof value2 !== "function") {
       let str = "null";
-      const tmp17 = _modDef38;
       if (null !== value2) {
         str = typeof value2;
       }
       let str3 = "";
       if (typeof arg0[0] === "string") {
         str3 = "";
-        const obj3 = /[a-z]/;
         if (obj3.test(arg0[0])) {
           str3 = " Make sure to start component names with a capital letter.";
         }
+        obj3 = /[a-z]/;
       }
-      tmp17(
+      _modDef38(
         false,
         "View config getter callback for component `%s` must be a function (received `%s`).%s",
         arg0,

@@ -2,7 +2,9 @@
 import _mod9544 from "metro/09544__.js";
 
 class QRRSBlock {
-  constructor(arg0, arg1) {}
+  constructor(arg0, arg1) {
+    return;
+  }
 }
 const items = [
   [1, 26, 19],
@@ -167,19 +169,15 @@ const items = [
   [20, 45, 15, 61, 46, 16],
 ];
 QRRSBlock.RS_BLOCK_TABLE = items;
-QRRSBlock.getRSBlocks = function (arg0, arg1) {
+QRRSBlock.getRSBlocks = (arg0, arg1) => {
   const rsBlockTable = QRRSBlock.getRsBlockTable(arg0, arg1);
   if (null == rsBlockTable) {
     const _Error = Error;
-    const self = this;
-    const self2 = this;
     const error = new Error("bad rs block @ typeNumber:" + arg0 + "/errorCorrectLevel:" + arg1);
     throw error;
   } else {
     const result = rsBlockTable.length / 3;
     const _Array = Array;
-    const self3 = this;
-    const self4 = this;
     const array = new Array();
     let num2 = 0;
     if (0 < result) {
@@ -187,10 +185,9 @@ QRRSBlock.getRSBlocks = function (arg0, arg1) {
         let result1 = 3 * num2;
         let tmp2 = rsBlockTable[result1];
         for (let num = 0; num < tmp2; num = num + 1) {
-          let push = array.push;
           let obj2 = Object.create(QRRSBlock.prototype);
           let obj = { totalCount: tmp3, dataCount: tmp4 };
-          let arr = push(obj);
+          let arr = array.push(obj);
         }
         num2 = num2 + 1;
       } while (num2 < result);
